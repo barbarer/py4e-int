@@ -43,7 +43,7 @@ options(
                        'downloads_enabled': 'true',
                        'enable_chatcodes': 'True',
                        'allow_pairs': 'True',
-                       'dynamic_pages': True,
+                       'dynamic_pages': False,
                        'use_services': True,
                        'basecourse': project_name,
                        # If ``dynamic_pages`` is 'True', then the following values are ignored, since they're provided by the server.
