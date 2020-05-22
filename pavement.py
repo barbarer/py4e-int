@@ -1,56 +1,59 @@
-import paver
-from paver.easy import *
-import paver.setuputils
-paver.setuputils.install_distutils_tasks()
-import os, sys
-from runestone.server import get_dburl
-from sphinxcontrib import paverutils
+import os
+import sys
 import pkg_resources
 from socket import gethostname
-from runestone import get_master_url
 
+from paver.easy import options, Bunch
+import paver.setuputils
+
+from runestone import get_master_url
+from runestone import build  # NOQA: F401 -- build is called implicitly by the paver driver.
+from runestone.server import get_dburl
+
+paver.setuputils.install_distutils_tasks()
 sys.path.append(os.getcwd())
 
 # The project name, for use below.
-project_name = os.path.basename(os.path.dirname(os.path.abspath(__file__)))
+project_name = 'py4e-int'
 
-master_url = ''
+master_url = 'http://127.0.0.1:8000'
 if not master_url:
     master_url = get_master_url()
 
 # The root directory for ``runestone serve``.
-serving_dir = "./build/" + project_name
+serving_dir = "build/" + project_name
 # The destination directory for ``runestone deploy``.
-dest = "./published"
+dest = "../../static"
 
 options(
-    sphinx = Bunch(docroot=".",),
+    sphinx=Bunch(docroot=".",),
 
-    build = Bunch(
+    build=Bunch(
         builddir=serving_dir,
         sourcedir="_sources",
         outdir=serving_dir,
         confdir=".",
-        template_args={'login_required':'true',
-                       'loglevel': 10,
-                       'course_title': project_name,
-                       'python3': 'true',
-                       'dburl': 'postgresql://user:password@localhost/runestone',
-                       'default_ac_lang': 'python',
-                       'jobe_server': 'http://jobe2.cosc.canterbury.ac.nz',
-                       'proxy_uri_runs': '/jobe/index.php/restapi/runs/',
-                       'proxy_uri_files': '/jobe/index.php/restapi/files/',
-                       'downloads_enabled': 'true',
-                       'enable_chatcodes': 'True',
-                       'allow_pairs': 'True',
-                       'dynamic_pages': False,
-                       'use_services': True,
-                       'basecourse': project_name,
-                       # If ``dynamic_pages`` is 'True', then the following values are ignored, since they're provided by the server.
-                       'course_id': project_name,
-                       'appname': 'runestone',
-                       'course_url': master_url,
-                      }
+        template_args={
+            'login_required': 'false',
+            'loglevel': 0,
+            'course_title': project_name,
+            'python3': 'false',
+            'dburl': '',
+            'default_ac_lang': 'python',
+            'jobe_server': 'http://jobe2.cosc.canterbury.ac.nz',
+            'proxy_uri_runs': '/jobe/index.php/restapi/runs/',
+            'proxy_uri_files': '/jobe/index.php/restapi/files/',
+            'downloads_enabled': 'false',
+            'enable_chatcodes': 'false',
+            'allow_pairs': 'false',
+            'dynamic_pages': False,
+            'use_services': 'false',
+            'basecourse': project_name,
+            'course_id': project_name,
+            # These are used for non-dynamic books.
+            'appname': 'runestone',
+            'course_url': master_url,
+        }
     )
 )
 
@@ -65,5 +68,3 @@ options.build.template_args['runestone_version'] = version
 
 # If DBURL is in the environment override dburl
 options.build.template_args['dburl'] = get_dburl(outer=locals())
-
-from runestone import build  # build is called implicitly by the paver driver.
