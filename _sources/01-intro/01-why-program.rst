@@ -15,7 +15,7 @@ assistants" who can take care of many things on our behalf. The hardware
 in our current-day computers is essentially built to continuously ask us
 the question, "What would you like me to do next?"
 
-.. figure:: Figures/pda.eps
+.. figure:: Figures/pda.svg
    :alt: Personal Digital Assistant
 
 
