@@ -18,7 +18,7 @@ import sys, os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('../modules'))
 
-from runestone import runestone_static_dirs, runestone_extensions
+from runestone import runestone_static_dirs, runestone_extensions, setup
 import pkg_resources
 
 # -- General configuration -----------------------------------------------------
@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Runestone Interactive Overview'
-copyright = '2017 Barbara Ericson'
+copyright = '2017 grace'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -162,7 +162,7 @@ html_theme = 'sphinx_bootstrap'
 #html_theme_options = {'nosidebar': 'true'}
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "Python for EEverybody - Interactive",
+    'navbar_title': "test",
 
     # Tab name for entire site. (Default: "Site")
     'navbar_site_name': "Chapters",
@@ -201,7 +201,6 @@ html_theme_options = {
     #'bootswatch_theme': "slate",
 }
 
-#html_style = "style.css"
 
 # This is set up to use the default runestone themes, you can override them by
 # creating your own folder and modifying this path.
