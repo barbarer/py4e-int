@@ -28,6 +28,7 @@ loop:
 
 .. activecode:: 04section5_1
    :coach:
+   :caption: The function random returns a random float between 0.0 and 1.0.
 
    import random
 
@@ -63,6 +64,7 @@ integer between ``low`` and ``high`` (including both).
 
 .. activecode:: 04section5_2
    :coach:
+   :caption: The function randint takes the parameters low and high, and returns an integer between low and high (including both).
 
    import random
 
@@ -76,6 +78,7 @@ To choose an element from a sequence at random, you can use
 
 .. activecode:: 04section5_3
    :coach:
+   :caption: To choose an element from a sequence at random, you can use choice.
 
    import random
 

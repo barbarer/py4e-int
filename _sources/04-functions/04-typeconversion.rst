@@ -8,6 +8,7 @@ converts it to an integer, if it can, or complains otherwise:
 
 .. activecode:: 04section3_1
    :coach:
+   :caption: The int function takes any value and converts it to an integer, if it can, or complains otherwise.
 
    print(int('32'))
    print(int('Hello'))
@@ -22,7 +23,12 @@ converts it to an integer, if it can, or complains otherwise:
    :feedback_b: Correct!
    :feedback_c: This is actually possible! It worked with the first line.
 
-   Why do we get an error in the above code block? Take a look at the error message for hints.
+   Why do we get an error in the code block? Take a look at the error message for hints.
+
+   .. code-block:: python
+
+    print(int('32'))
+    print(int('Hello'))
 
 
 ``int`` can convert floating-point values to integers, but it
@@ -30,6 +36,7 @@ doesn't round off; it chops off the fraction part:
 
 .. activecode:: 04section3_2
    :coach:
+   :caption: int can convert floating-point values to integers, but it doesn't round off; it chops off the fraction part
 
    print(int(3.99999))
    print(int(-2.3))
@@ -40,6 +47,7 @@ numbers:
 
 .. activecode:: 04section3_3
    :coach:
+   :caption: ``float`` converts integers and strings to floating-point numbers
 
    print(float(32))
    print(float('3.14159'))
@@ -49,6 +57,7 @@ Finally, ``str`` converts its argument to a string:
 
 .. activecode:: 04section3_4
    :coach:
+   :caption: str converts its argument to a string.
 
    print(str(32))
    print(str(3.14159))

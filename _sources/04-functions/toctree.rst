@@ -15,4 +15,6 @@ Functions
    04-parametersandargs.rst
    04-fruitfulvoid.rst
    04-debugging.rst
+   04-glossary.rst
    04-excercises.rst
+   04-excercises2.rst

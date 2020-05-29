@@ -55,6 +55,7 @@ Defining a function creates a variable with the same name.
 
 .. activecode:: 04section6_1
    :coach:
+   :caption: This example demonstrates that the value of print_lyrics is a function object, which has type "function".
 
    def print_lyrics():
        print("I'm a lumberjack, and I'm okay.")
@@ -72,6 +73,7 @@ functions:
 
 .. activecode:: 04section6_2
    :coach:
+   :caption: An example of calling a function that is not built-in.
 
    def print_lyrics():
       print("I'm a lumberjack, and I'm okay.")
@@ -87,6 +89,11 @@ function called ``repeat_lyrics``\ :
 
 .. activecode:: 04section6_3
    :coach:
+   :caption: An example of using a user-defined function inside of another user-defined function.
+
+   def print_lyrics():
+      print("I'm a lumberjack, and I'm okay.")
+      print('I sleep all night and I work all day.')
 
    def repeat_lyrics():
        print_lyrics()
@@ -94,11 +101,6 @@ function called ``repeat_lyrics``\ :
 
    repeat_lyrics()
 
-   ====
-
-   def print_lyrics():
-      print("I'm a lumberjack, and I'm okay.")
-      print('I sleep all night and I work all day.')
 
 
 And then call ``repeat_lyrics``\ :

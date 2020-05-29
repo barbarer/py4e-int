@@ -1,14 +1,10 @@
 Debugging
 ---------
 
-\index{debugging}
-
 If you are using a text editor to write your scripts, you might run into
 problems with spaces and tabs. The best way to avoid these problems is
 to use spaces exclusively (no tabs). Most text editors that know about
 Python do this by default, but some don't.
-
-\index{whitespace}
 
 Tabs and spaces are usually invisible, which makes them hard to debug,
 so try to find an editor that manages indentation for you.
@@ -25,3 +21,17 @@ Make sure that the code you are looking at is the code you are running.
 If you're not sure, put something like ``print("hello")`` at the beginning
 of the program and run it again. If you don't see ``hello``\ , you're not
 running the right program!
+
+.. fillintheblank:: 04fill11_1
+
+    The best way to avoid problems with spaces and tabs is to use ______ exclusively.
+
+    - :(?:s|S)(?:p|P)(?:a|A)(?:c|C)(?:e|E)(?:s|S): Correct!
+      :.*: Try again!
+
+.. fillintheblank:: 04fill11_2
+
+    Sometimes the program you are running can look different than the program you are looking at in the text editor if you forget to ____ your program.
+
+    - :(?:s|S)(?:a|A)(?:v|V)(?:e|E): Correct!
+      :.*: Try again!

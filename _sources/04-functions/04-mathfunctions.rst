@@ -15,6 +15,7 @@ you print the module object, you get some information about it:
 
 .. activecode:: 04section4_1
    :coach:
+   :caption: If you print the module object, which can be done using import math, you get some information about it.
 
    import math
    print(math)
@@ -27,6 +28,7 @@ as a period). This format is called *dot notation*.
 
 .. activecode:: 04section4_2
    :coach:
+   :caption: This example demonstrates the use of the math module's log and sin functions.
 
    import math
 
@@ -53,6 +55,7 @@ by 2\pi:
 
 .. activecode:: 04section4_3
    :coach:
+   :caption: This example demonstrates the use of the math module's sin and pi functions.
 
    import math
 
@@ -72,6 +75,7 @@ comparing it to the square root of two divided by two:
 
 .. activecode:: 04section4_4
    :coach:
+   :caption: An example of the use of the math module's sqrt function.
 
    import math
 
