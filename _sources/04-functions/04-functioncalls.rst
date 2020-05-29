@@ -9,6 +9,7 @@ a *function call*\ :
 
 .. activecode:: 04section1
    :coach:
+   :caption: An example of a function call.
 
    result = type(32)
    print(result)

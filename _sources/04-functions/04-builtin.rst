@@ -11,6 +11,7 @@ and smallest values in a list, respectively:
 
 .. activecode:: 04section2_1
    :coach:
+   :caption: The max and min functions give us the largest and smallest values in a list, respectively
 
    maximum = max('Hello world')
    print(maximum)
@@ -31,6 +32,13 @@ and smallest values in a list, respectively:
 
    We see that w prints as the maximum character. How come it looks like the minimum does not print?
 
+   .. code-block:: python
+
+    maximum = max('Hello world')
+    print(maximum)
+    minimum = min('Hello world')
+    print(minimum)
+
 The ``max`` function tells us the "largest character" in the
 string (which turns out to be the letter "w") and the ``min``
 function shows us the smallest character (which turns out to be a
@@ -43,6 +51,7 @@ string.
 
 .. activecode:: 04section2_2
    :coach:
+   :caption: The len function tells us how many items are in its argument.
 
    length_x = len('Hello world')
    print(length_x)
