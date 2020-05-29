@@ -31,14 +31,13 @@ The ``print`` statement also works for integers. We use the
    4
 
 
-If you are not sure what type a value has, use the type function to find out.
+If you are not sure what type a value has, the interpreter can tell you.
 
-.. activecode:: 02-ac-1-var-types
+.. activecode:: 02_type_str_int
+   :language: python
 
    type('Hello, World!')
    type(17)
-   type(3.2)
-   type(True)
 
 
 Not surprisingly, strings belong to the type ``str`` and
@@ -55,13 +54,18 @@ point*.
 \index{float type}
 \index{class!float}
 
+.. activecode:: 02_type_float
+   :language: python
+
+   type(3.2)
+   <class 'float'>
 
 What about values like "17" and "3.2"? They look like numbers, but
 they are in quotation marks like strings.
 
 \index{quotation mark}
 
-.. activecode:: 02-ac-2-num-strs
+.. activecode:: 02_type_str_nums
 
    type('17')
    type('3.2')
@@ -72,11 +76,12 @@ When you type a large integer, you might be tempted to use commas
 between groups of three digits, as in 1,000,000. This is
 not a legal integer in Python, but it is legal:
 
-.. activecode:: 02-ac-3-num-commas
+.. activecode:: 02_print_nums_with_commas
 
-   print(1,000,000)
+  print(1,000,000)
+  1 0 0
 
-Well, that's probably not what you expected! Python interprets
+Well, that's not what we expected at all! Python interprets
 1,000,000 as a comma-separated sequence of integers, which
 it prints with spaces between.
 
@@ -102,19 +107,26 @@ that refers to a value.
 An *assignment statement* creates new variables and gives
 them values:
 
-.. activecode:: 02-ac-4-assign
+.. code-block:: python
 
-   message = 'And now for something completely different'
-   n = 17
-   pi = 3.1415926535897931
-   print(message)
-   print(n)
-   print(pi)
+   >>> message = 'And now for something completely different'
+   >>> n = 17
+   >>> pi = 3.1415926535897931
 
-This example makes three assignments and then prints the value of each of the variables. The first assigns a string to a
+
+This example makes three assignments. The first assigns a string to a
 new variable named ``message``\ ; the second assigns the integer
-17 to a variable named ``n``\ ; and the third assigns the (approximate)
-value of $\pi$ to a variable named ``pi``.
+17 to ``n``\ ; the third assigns the (approximate)
+value of $\pi$ to ``pi``.
+
+To display the value of a variable, you can use a print statement:
+
+.. code-block:: python
+
+   >>> print(n)
+   17
+   >>> print(pi)
+   3.141592653589793
 
 
 The type of a variable is the type of the value it refers to.
@@ -150,18 +162,20 @@ writing library code for others to use.
 
 \index{underscore character}
 
-If you give a variable an illegal name, you get a syntax error when you try to execute the code.
+If you give a variable an illegal name, you get a syntax error:
 
-
-.. activecode:: 02-ac-5-bad-names
+.. code-block:: python
 
    76trombones = 'big parade'
-   more@ = 3
+   SyntaxError: invalid syntax
+   more@ = 1000000
+   SyntaxError: invalid syntax
    class = 'Advanced Theoretical Zymurgy'
+   SyntaxError: invalid syntax
 
-The variable name ``76trombones`` is illegal because it begins with a number.
-The name ``more@`` is illegal because it contains an illegal character,
-@. But what's wrong with ``class``?
+``76trombones`` is illegal because it begins with a number.
+``more@`` is illegal because it contains an illegal character,
+@. But what's wrong with ``class``\ ?
 
 It turns out that ``class`` is one of Python's
 *keywords*. The interpreter uses keywords to recognize
@@ -206,7 +220,7 @@ execute.
 
 For example, the script
 
-.. activecode:: 02-ac-6-print-vars
+.. activecode:: 02_print_value_and_var
 
    print(1)
    x = 2
@@ -215,7 +229,7 @@ For example, the script
 
 produces the output
 
-.. code-block:: python
+.. code-block::
 
    1
    2
@@ -239,7 +253,7 @@ The operators ``+``\ , ``-``\ , ``*``\ , ``/``\ , and
 ``**`` perform addition, subtraction, multiplication, division,
 and exponentiation, as in the following examples:
 
-.. code-block:: python
+.. activecode:: 02_simple_math
 
    20+32
    hour-1
@@ -249,15 +263,15 @@ and exponentiation, as in the following examples:
    (5+9)*(15-7)
 
 
-There was a change in the division operator between Python 2.x
+There has been a change in the division operator between Python 2.x
 and Python 3.x.  In Python 3.x, the result of this division is a
 floating point result:
 
-
-.. activecode:: 02-ac-6-print-vars
+.. activecode:: 02_change_div
 
    minute = 59
-   print(minute/60)
+   minute/60
+   0.9833333333333333
 
 
 The division operator in Python 2.0 would divide two integers and
@@ -272,10 +286,10 @@ truncate the result to an integer:
 
 To obtain the same answer in Python 3.0 use floored ( ``//`` integer) division.
 
-.. activecode:: 02-ac-6-print-vars2
+.. activecode:: 02_int_div
 
-         minute = 59
-         minute//60
+   minute = 59
+   minute//60
 
 In Python 3.0 integer division functions much more as you would expect
 if you entered the expression on a calculator.
@@ -339,7 +353,9 @@ acronym *PEMDAS* is a useful way to remember the rules:
 
 \index{parentheses!overriding precedence}
 
-* Parentheses have the highest precedence and can be
+
+*
+  *Parentheses* have the highest precedence and can be
   used to force an expression to evaluate in the order you want. Since
   expressions in parentheses are evaluated first, ``2 *
   (3-1)`` is 4, and ``(1+1)**(5-2)`` is 8. You can
@@ -347,17 +363,20 @@ acronym *PEMDAS* is a useful way to remember the rules:
   ``(minute * 100) / 60``\ , even if it doesn't change the
   result.
 
-* Exponentiation has the next highest precedence, so
+*
+  *Exponentiation* has the next highest precedence, so
   ``2**1+1`` is 3, not 4, and ``3*1**3`` is 3,
   not 27.
 
-* Multiplication and *D*\ ivision have
-  the same precedence, which is higher than *A*\ ddition
-  and *S*\ ubtraction, which also have the same
+*
+  *Multiplication* and *Division* have
+  the same precedence, which is higher than *Addition*
+  and *Subtraction*, which also have the same
   precedence. So ``2*3-1`` is 5, not 4, and
   ``6+4/2`` is 8, not 5.
 
-* Operators with the same precedence are evaluated from left to right.
+*
+  Operators with the same precedence are evaluated from left to right.
   So the expression ``5-3-1`` is 1, not 3, because the
   ``5-3`` happens first and then ``1`` is subtracted
   from 2.
@@ -376,12 +395,14 @@ remainder when the first operand is divided by the second. In Python,
 the modulus operator is a percent sign (\ ``%``\ ). The syntax is the same as
 for other operators:
 
-.. activecode:: 02-ac-7-mod
+.. code-block:: python
 
    quotient = 7 // 3
    print(quotient)
+   2
    remainder = 7 % 3
    print(remainder)
+   1
 
 So 7 divided by 3 is 2 with 1 left over.
 
@@ -461,11 +482,14 @@ be displayed to the user before pausing for input:
 
 \index{prompt}
 
-.. activecode:: 02-ac-7-print-name
+.. code-block:: python
 
-   name = input('What is your name?\n')
+   >>> name = input('What is your name?\n')
    What is your name?
-   print(name)
+   Chuck
+   >>> print(name)
+   Chuck
+
 
 The sequence ``\n`` at the end of the prompt represents a
 *newline*\ , which is a special character that causes a
@@ -569,7 +593,7 @@ program and when you write your own programs. For example, the following
 three programs are identical in terms of what they accomplish, but very
 different when you read them and try to understand them.
 
-.. code-block:: python
+.. activecode:: 02_var_names
 
    a = 35.0
    b = 12.50
@@ -577,7 +601,7 @@ different when you read them and try to understand them.
    print(c)
 
 
-.. code-block:: python
+.. activecode:: 02_better_var_names
 
    hours = 35.0
    rate = 12.50
@@ -585,7 +609,7 @@ different when you read them and try to understand them.
    print(pay)
 
 
-.. code-block:: python
+.. activecode:: 02_worse_var_names
 
    x1q3z9ahd = 35.0
    x1q3z9afd = 12.50
@@ -660,7 +684,6 @@ at you:
    <b>for</b> word <b>in</b> words<b>:</b>
        <b>print</b>(word)
    </pre>
-
 
 
 The parts of the code that are defined by Python (\ ``for``\ ,
@@ -860,7 +883,6 @@ hour to compute gross pay.**
    Enter Rate: 2.75
    Pay: 96.25
 
-
 We won't worry about making sure our pay has exactly two digits after
 the decimal place for now. If you want, you can play with the built-in
 Python ``round`` function to properly round the resulting pay
@@ -877,13 +899,25 @@ to two decimal places.
 For each of the following expressions, write the value of the expression
 and the type (of the value of the expression).
 
-* ``width//2``
+.
+=
 
-* ``width/2.0``
+   ``width//2``
 
-* ``height/3``
+.
+=
 
-* ``1 + 2 * 5``
+   ``width/2.0``
+
+.
+=
+
+   ``height/3``
+
+.
+=
+
+   ``1 + 2 * 5``
 
 Use the Python interpreter to check your answers.
 

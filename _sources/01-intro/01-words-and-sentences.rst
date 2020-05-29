@@ -1,9 +1,6 @@
 Words and sentences in Python
 -------------------------------
 
-\index{programming language}
-\index{language!programming}
-
 Unlike human languages, the Python vocabulary is actually pretty small.
 We call this "vocabulary" the "reserved words". These are words that
 have very special meaning to Python. When Python sees these words in a
@@ -20,7 +17,7 @@ a reserved word. For example, if you say, "I wish more people would walk
 to improve their overall health", what most dogs likely hear is, "blah
 blah blah *walk* blah blah blah blah." That is because
 "walk" is a reserved word in dog language. Many might suggest that the
-language between humans and cats has no reserved words^[http://xkcd.com/231/].
+language between humans and cats has no reserved words [http://xkcd.com/231/].
 
 The reserved words in the language where humans talk to Python include
 the following:
@@ -45,9 +42,10 @@ but for now we will focus on the Python equivalent of "speak" (in
 human-to-dog language). The nice thing about telling Python to speak is
 that we can even tell it what to say by giving it a message in quotes:
 
-.. activecode:: 01-intro-a-hello
+.. activecode:: 01-active-hello
+  :caption: Hello world
 
-   print('Hello world!')
+  print('Hello world!')
 
 
 And we have even written our first syntactically correct Python

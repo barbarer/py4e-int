@@ -37,4 +37,5 @@ Table of Contents
    :maxdepth: 3
 
    01-intro/toctree.rst
+   02-variables/toctree.rst
    04-functions/toctree.rst

@@ -1,6 +1,3 @@
-
-
-
 Creativity and motivation
 -------------------------
 
@@ -18,7 +15,7 @@ your choice.
 If we think of programs as the creative output of groups of programmers,
 perhaps the following figure is a more sensible version of our PDA:
 
-.. figure:: Figures/pda2.eps
+.. figure:: Figures/pda2.svg
    :alt: Programmers Talking to You
 
 
@@ -28,3 +25,7 @@ information that we will encounter in our lives. When you first start,
 you will be both the programmer and the end user of your programs. As
 you gain skill as a programmer and programming feels more creative to
 you, your thoughts may turn toward developing programs for others.
+
+.. shortanswer:: 01-sa-1-motivation
+
+   What is the primary motivation for this book? 

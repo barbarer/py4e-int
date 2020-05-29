@@ -15,8 +15,6 @@ or command window and you will type *python* and the
 Python interpreter will start executing in interactive mode and appear
 somewhat as follows:
 
-\index{interactive mode}
-
 .. code-block:: python
 
    Python 3.5.1 (v3.5.1:37a07cee5969, Dec  6 2015, 01:54:25)

@@ -1,21 +1,14 @@
-
-Variables, expressions, and statements
-======================================
-
 Values and types
 ----------------
-
-\index{value}
-\index{type}
-\index{string}
 
 A *value* is one of the basic things a program works
 with, like a letter or a number. You can print values in Python.  See what happens when you run the following code.
 
 .. activecode:: 02-ac-1-vars2
+  :caption: Printing values in Python
 
-   print(17)
-   print('Hello World!')
+  print(17)
+  print('Hello World!')
 
 These values belong to different *types*\ : 17
 is an integer, and "Hello World!" is a *string*\ , so
@@ -25,10 +18,11 @@ marks.
 If you are not sure what type a value has, use the type function to find out.
 
 .. activecode:: 02-ac-2-var-types
+  :caption: Printing types in Python
 
-   type('Hello, World!')
-   type(17)
-   type(3.2)
+  print(type('Hello, World!'))
+  print(type(17))
+  print(type(3.2))
 
 Not surprisingly, strings belong to the type ``str`` and
 integers belong to the type ``int``. Less obviously, numbers
@@ -36,24 +30,29 @@ with a decimal point belong to a type called ``float``\ , because
 these numbers are represented in a format called *floating
 point*.
 
-\index{type}
-\index{string type}
-\index{class!str}
-\index{int type}
-\index{class!int}
-\index{float type}
-\index{class!float}
-
-
 What about values like "17" and "3.2"? They look like numbers, but
 they are in quotation marks like strings.
 
-\index{quotation mark}
+.. mchoice:: 02-mc-1-types
+   :practice: T
+   :answer_a: float
+   :answer_b: integer (int)
+   :answer_c: string (str)
+   :answer_d: boolean (bool)
+   :correct: c
+   :feedback_a: "3.2" has a decimal but "17" does not, is there an option that would include both values?
+   :feedback_b: What do the quotation marks mean?
+   :feedback_c: Correct! Quotation marks imply that the value is a string.
+   :feedback_d: A boolean value represents either *True* or *False*.
+
+   The values "17" and "3.2" are what type?
+
 
 .. activecode:: 02-ac-2-num-strs
+  :caption: Printing strings of numbers in Python
 
-   type('17')
-   type('3.2')
+  print(type('17'))
+  print(type('3.2'))
 
 They're strings.
 
@@ -62,17 +61,39 @@ between groups of three digits, as in 1,000,000. This is
 not a legal integer in Python, but it is legal:
 
 .. activecode:: 02-ac-3-num-commas
+  :caption: Printing integers with commas in Python
 
-   print(1,000,000)
+  print(1,000,000)
 
 Well, that's probably not what you expected! Python interprets
 1,000,000 as a comma-separated sequence of integers, which
 it prints with spaces between.
 
-\index{semantic error}
-\index{error!semantic}
-\index{error message}
-
 This is the first example we have seen of a semantic error: the code
 runs without producing an error message, but it doesn't do the "right"
 thing.
+
+.. mchoice:: 02-mc-2-print
+   :practice: T
+   :answer_a: print("1,000,000")
+   :answer_b: print(1000000)
+   :answer_c: print(1,000,000)
+   :answer_d: print 1000000
+   :correct: b
+   :feedback_a: We are trying to print an integer, what do the quotation marks do?
+   :feedback_b: Correct, to print an integer don't use commas or quotations.
+   :feedback_c: See the example above, commas in between the digits produce spaces.
+   :feedback_d: Remember to use parentheses to print!
+
+   How would you print the *integer* ``1,000,000``?
+
+
+.. dragndrop:: 02-dnd-1-value-types
+    :feedback: See above for some examples, or try using type(x) in terminal.
+    :match_1: "Hello, World!"|||string (str)
+    :match_2: 17|||integer (int)
+    :match_3: 3.2|||float
+    :match_4: a|||character (char)
+    :match_5: True|||boolean (bool)
+
+    Drag and drop the values to match each with its type.
