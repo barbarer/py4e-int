@@ -9,27 +9,30 @@ three programs are identical in terms of what they accomplish, but very
 different when you read them and try to understand them.
 
 .. activecode:: 02-ac-10-names1
+  :caption: Variables with simple names
 
-   a = 35.0
-   b = 12.50
-   c = a * b
-   print(c)
+  a = 35.0
+  b = 12.50
+  c = a * b
+  print(c)
 
 
 .. activecode:: o2-ac-10-names2
+  :caption: Variables with mnemonic names
 
-   hours = 35.0
-   rate = 12.50
-   pay = hours * rate
-   print(pay)
+  hours = 35.0
+  rate = 12.50
+  pay = hours * rate
+  print(pay)
 
 
 .. activecode:: 02-ac-10-names3
+  :caption: Variables with obscure names
 
-   x1q3z9ahd = 35.0
-   x1q3z9afd = 12.50
-   x1q3p9afd = x1q3z9ahd * x1q3z9afd
-   print(x1q3p9afd)
+  x1q3z9ahd = 35.0
+  x1q3z9afd = 12.50
+  x1q3p9afd = x1q3z9ahd * x1q3z9afd
+  print(x1q3p9afd)
 
 
 The Python interpreter sees all three of these programs as *exactly the
@@ -57,7 +60,7 @@ Take a quick look at the following Python sample code which loops
 through some data. We will cover loops soon, but for now try to just
 puzzle through what this means:
 
-.. activecode:: 02-ac-11-for1
+.. code-block:: python
 
    for word in words:
        print(word)
@@ -72,7 +75,7 @@ programmer.
 
 The following code is equivalent to the above code:
 
-.. activecode:: 02-ac-11-for2
+.. code-block:: python
 
    for slice in pizza:
        print(slice)
@@ -111,7 +114,7 @@ clues to keep your variables and reserved words separate. After a while
 you will begin to read Python and quickly determine what is a variable
 and what is a reserved word.
 
-.. mchoice:: 02-mc-8-mnemonic1
+.. mchoice:: 02-mc-14-mnemonic1
    :answer_a: memory aid
    :answer_b: nickname
    :answer_c: remember this
@@ -124,7 +127,7 @@ and what is a reserved word.
 
    Mnemonic means:
 
-.. mchoice:: 02-mc-9-mnemonic2
+.. mchoice:: 02-mc-15-mnemonic2
    :answer_a: word
    :answer_b: chocolate_chip
    :answer_c: gelPens
@@ -137,7 +140,7 @@ and what is a reserved word.
 
    Which variable name would best be used for counting the ingredients in cookies?
 
-.. dragndrop:: 02-dnd-3-mnemonic
+.. dragndrop:: 02-dnd-4-mnemonic
    :feedback: Which items make the most sense together?
    :match_1: chocolate_chip|||Counting cookie ingredients
    :match_2: gelPens|||Rating writing utensils

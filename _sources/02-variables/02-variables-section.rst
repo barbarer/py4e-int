@@ -9,13 +9,14 @@ An *assignment statement* creates new variables and gives
 them values:
 
 .. activecode:: 02-ac-4-assign
+  :caption: Assigning values to variables
 
-   message = 'And now for something completely different'
-   n = 17
-   pi = 3.1415926535897931
-   print(message)
-   print(n)
-   print(pi)
+  message = 'And now for something completely different'
+  n = 17
+  pi = 3.1415926535897931
+  print(message)
+  print(n)
+  print(pi)
 
 This example makes three assignments and then prints the value of each of the variables. The first assigns a string to a
 new variable named ``message``\ ; the second assigns the integer

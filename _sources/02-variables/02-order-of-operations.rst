@@ -1,29 +1,34 @@
 Order of operations
 -------------------
 
-\index{order of operations}
-\index{rules of precedence}
-\index{PEMDAS}
+.. mchoice:: 02-mc-11-order
+   :answer_a: 18
+   :answer_b: -2
+   :answer_c: 6
+   :answer_d: 10
+   :correct: b
+   :feedback_a: Try running the code in your python interpreter.
+   :feedback_b: Correct!
+   :feedback_c: Which order will the operators run?
+   :feedback_d: Make sure that you are using a negative 2, not positive.
 
-.. fillintheblank:: 02-fitb-4-order
+   What is printed from the following codeblock?
 
-   What is printed when you click on the Run button in the code below?
+   ::
 
-   -    :^-2$: Correct!
-        :.*: Did you actually run the program?
+      result = 4 + -2 * 3
+      print(result)
 
 .. activecode:: Expression_Order1
-    :nocodelens:
+  :caption: Example of order of operations
 
-    result = 4 + -2 * 3
-    print(result)
+  result = 4 + -2 * 3
+  print(result)
 
 When more than one operator appears in an expression, the order of
 evaluation depends on the *rules of precedence*. For
 mathematical operators, Python follows mathematical convention. The
 acronym *PEMDAS* is a useful way to remember the rules:
-
-\index{parentheses!overriding precedence}
 
 * Parentheses have the highest precedence and can be
   used to force an expression to evaluate in the order you want. Since
@@ -48,18 +53,29 @@ acronym *PEMDAS* is a useful way to remember the rules:
   ``5-3`` happens first and then ``1`` is subtracted
   from 2.
 
-.. fillintheblank:: 02-fitb-5-parentheses
+.. mchoice:: 02-mc-12-order
+   :answer_a: 18
+   :answer_b: -2
+   :answer_c: 6
+   :answer_d: 10
+   :correct: c
+   :feedback_a: Try running the code in your python interpreter.
+   :feedback_b: Which order will the operators run?
+   :feedback_c: Correct!
+   :feedback_d: Make sure that you are using a negative 2, not positive.
 
-   What is printed when you click on the Run button in the code below?
+   What is printed from the following codeblock?
 
-   -    :^6$: Correct!
-        :.*: Did you actually run the program
+   ::
+
+      result = (4 + -2) * 3
+      print(result)
 
 .. activecode:: Expression_Order2
-    :nocodelens:
+  :caption: Using parentheses with order of operations
 
-    result = (4 + -2) * 3
-    print(result)
+  result = (4 + -2) * 3
+  print(result)
 
 When in doubt, always put parentheses in your expressions to make sure
 the computations are performed in the order you intend.

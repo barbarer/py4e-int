@@ -10,11 +10,12 @@ The operators ``+``\ , ``-``\ , ``*``\ , ``/``\ , and
 and exponentiation, as in the following examples:
 
 .. activecode:: 02-ac-6-print-operators
+  :caption: Examples of mathematical operations
 
-   print(20+32)
-   print(75-1)
-   print(5**2)
-   print((5+9)*(15-7))
+  print(20+32)
+  print(75-1)
+  print(5**2)
+  print((5+9)*(15-7))
 
 
 There was a change in the division operator between Python 2.x
@@ -23,9 +24,10 @@ floating point result:
 
 
 .. activecode:: 02-ac-6-print-vars2
+  :caption: Floating point division in Python
 
-   minute = 59
-   print(minute/60)
+  minute = 59
+  print(minute/60)
 
 
 The division operator in Python 2.0 would divide two integers and
@@ -41,14 +43,15 @@ truncate the result to an integer:
 To obtain the same answer in Python 3.0 use floored ( ``//`` integer) division.
 
 .. activecode:: 02-ac-6-print-vars3
+  :caption: Floored division in Python
 
-   minute = 59
-   print(minute//60)
+  minute = 59
+  print(minute//60)
 
 In Python 3.0 integer division functions much more as you would expect
 if you entered the expression on a calculator.
 
-.. mchoice:: 02-mc-6-division
+.. mchoice:: 02-mc-8-division
    :practice: T
    :answer_a: 0
    :answer_b: 1

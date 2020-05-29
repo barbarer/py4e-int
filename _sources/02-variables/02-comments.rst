@@ -11,7 +11,7 @@ explain in natural language what the program is doing. These notes are
 called *comments*\ , and in Python they start with the ``#``
 symbol:
 
-.. activecode:: 02-ac-9-comment1
+.. code-block:: python
 
    # compute the percentage of the hour that has elapsed
    percentage = (minute * 100) / 60
@@ -48,3 +48,57 @@ This comment contains useful information that is not in the code:
 
 Good variable names can reduce the need for comments, but long names can
 make complex expressions hard to read, so there is a trade-off.
+
+.. fillintheblank:: 02-fitb-9-comments
+
+    What is the symbol for a single line of comments?
+
+    - :"#": Correct!
+      :''' ''': Close! Three sets of quotation marks are used for multi-line comments.
+      :.*: Try again!
+
+.. mchoice:: 02-mc-11-comments
+   :answer_a: To add notes to code.
+   :answer_b: To assign names to variables.
+   :answer_c: To run code.
+   :answer_d: To keep track of how many times a loop has iterated.
+   :correct: a
+   :feedback_a: Correct!
+   :feedback_b: Comments are not read by the program when code is running, so variable assignments should not be commented out.
+   :feedback_c: Try again!
+   :feedback_d: Try again! (please do not keep track of iterations in a comment)
+
+   What are comments used for?
+
+.. mchoice:: 02-mc-12-comments
+   :answer_a: Comments start with the symbol #
+   :answer_b: Comments document the non-obvious features of the code.
+   :answer_c: Comments function like any other line of code.
+   :answer_d: Comments cause the rest of the line to be ignored.
+   :correct: c
+   :feedback_a: Try again!
+   :feedback_b: Try again!
+   :feedback_c: Correct! Comments are ignored and have no effect on the program.
+   :feedback_d: Try again!
+
+   Which of the following is **not** true about comments?
+
+.. mchoice:: 02-mc-13-comments
+   :answer_a: Milo is this many years old: 12
+   :answer_b: Milois this many years old:12
+   :answer_c: Milo + is this many years old: + 12
+   :answer_d: Nothing will print.
+   :correct: d
+   :feedback_a: Try again!
+   :feedback_b: Try again!
+   :feedback_c: Try again!
+   :feedback_d: Correct! The print statement is commented out, so this code only assigns values to each variable.
+
+   What will be printed after the following code executes?
+
+   ::
+
+      name = "Milo"
+      age = 12
+      sentence = " is this many years old: "
+      #print(name + statement + age)

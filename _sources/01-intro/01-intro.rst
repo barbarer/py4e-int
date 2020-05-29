@@ -1,4 +1,403 @@
 
+Python for Everybody 
+Exploring Data Using Python 3
+Charles R. Severance
+
+Why should you learn to write programs?
+=======================================
+
+Writing programs (or programming) is a very creative and rewarding
+activity. You can write programs for many reasons, ranging from making
+your living to solving a difficult data analysis problem to having fun
+to helping someone else solve a problem. This book assumes that
+*everyone* needs to know how to program, and that once you know how to
+program you will figure out what you want to do with your newfound
+skills.
+
+We are surrounded in our daily lives with computers ranging from laptops
+to cell phones. We can think of these computers as our "personal
+assistants" who can take care of many things on our behalf. The hardware
+in our current-day computers is essentially built to continuously ask us
+the question, "What would you like me to do next?"
+
+.. figure:: Figures/pda.eps
+   :alt: Personal Digital Assistant
+
+
+Programmers add an operating system and a set of applications to the
+hardware and we end up with a Personal Digital Assistant that is quite
+helpful and capable of helping us do many different things.
+
+Our computers are fast and have vast amounts of memory and could be very
+helpful to us if we only knew the language to speak to explain to the
+computer what we would like it to "do next". If we knew this language,
+we could tell the computer to do tasks on our behalf that were
+repetitive. Interestingly, the kinds of things computers can do best are
+often the kinds of things that we humans find boring and mind-numbing.
+
+For example, look at the first three paragraphs of this chapter and tell
+me the most commonly used word and how many times the word is used.
+While you were able to read and understand the words in a few seconds,
+counting them is almost painful because it is not the kind of problem
+that human minds are designed to solve. For a computer the opposite is
+true, reading and understanding text from a piece of paper is hard for a
+computer to do but counting the words and telling you how many times the
+most used word was used is very easy for the computer:
+
+.. code-block:: python
+
+   python words.py
+   Enter file:words.txt
+   to 16
+
+
+Our "personal information analysis assistant" quickly told us that the
+word "to" was used sixteen times in the first three paragraphs of this
+chapter.
+
+This very fact that computers are good at things that humans are not is
+why you need to become skilled at talking "computer language". Once you
+learn this new language, you can delegate mundane tasks to your partner
+(the computer), leaving more time for you to do the things that you are
+uniquely suited for. You bring creativity, intuition, and inventiveness
+to this partnership.
+
+Creativity and motivation
+-------------------------
+
+While this book is not intended for professional programmers,
+professional programming can be a very rewarding job both financially
+and personally. Building useful, elegant, and clever programs for others
+to use is a very creative activity. Your computer or Personal Digital
+Assistant (PDA) usually contains many different programs from many
+different groups of programmers, each competing for your attention and
+interest. They try their best to meet your needs and give you a great
+user experience in the process. In some situations, when you choose a
+piece of software, the programmers are directly compensated because of
+your choice.
+
+If we think of programs as the creative output of groups of programmers,
+perhaps the following figure is a more sensible version of our PDA:
+
+.. figure:: Figures/pda2.eps
+   :alt: Programmers Talking to You
+
+
+For now, our primary motivation is not to make money or please end
+users, but instead for us to be more productive in handling the data and
+information that we will encounter in our lives. When you first start,
+you will be both the programmer and the end user of your programs. As
+you gain skill as a programmer and programming feels more creative to
+you, your thoughts may turn toward developing programs for others.
+
+Computer hardware architecture
+------------------------------
+
+\index{hardware}
+\index{hardware!architecture}
+
+Before we start learning the language we speak to give instructions to
+computers to develop software, we need to learn a small amount about how
+computers are built. If you were to take apart your computer or cell
+phone and look deep inside, you would find the following parts:
+
+.. figure:: Figures/arch.eps
+   :alt: Hardware Architecture
+
+
+The high-level definitions of these parts are as follows:
+
+
+* 
+  The *Central Processing Unit* (or CPU) is the part of
+  the computer that is built to be obsessed with "what is next?" If
+  your computer is rated at 3.0 Gigahertz, it means that the CPU will
+  ask "What next?" three billion times per second. You are going to
+  have to learn how to talk fast to keep up with the CPU.
+
+* 
+  The *Main Memory* is used to store information that
+  the CPU needs in a hurry. The main memory is nearly as fast as the
+  CPU. But the information stored in the main memory vanishes when the
+  computer is turned off.
+
+* 
+  The *Secondary Memory* is also used to store
+  information, but it is much slower than the main memory. The
+  advantage of the secondary memory is that it can store information
+  even when there is no power to the computer. Examples of secondary
+  memory are disk drives or flash memory (typically found in USB
+  sticks and portable music players).
+
+* 
+  The *Input and Output Devices* are simply our screen,
+  keyboard, mouse, microphone, speaker, touchpad, etc. They are all of
+  the ways we interact with the computer.
+
+* 
+  These days, most computers also have a *Network
+  Connection* to retrieve information over a network. We can
+  think of the network as a very slow place to store and retrieve data
+  that might not always be "up". So in a sense, the network is a
+  slower and at times unreliable form of *Secondary
+  Memory*.
+
+While most of the detail of how these components work is best left to
+computer builders, it helps to have some terminology so we can talk
+about these different parts as we write our programs.
+
+As a programmer, your job is to use and orchestrate each of these
+resources to solve the problem that you need to solve and analyze the
+data you get from the solution. As a programmer you will mostly be
+"talking" to the CPU and telling it what to do next. Sometimes you will
+tell the CPU to use the main memory, secondary memory, network, or the
+input/output devices.
+
+
+.. figure:: Figures/arch2.eps
+   :alt: Where Are You?
+
+
+You need to be the person who answers the CPU's "What next?" question.
+But it would be very uncomfortable to shrink you down to 5mm tall and
+insert you into the computer just so you could issue a command three
+billion times per second. So instead, you must write down your
+instructions in advance. We call these stored instructions a
+*program* and the act of writing these instructions down
+and getting the instructions to be correct *programming*.
+
+Understanding programming
+-------------------------
+
+In the rest of this book, we will try to turn you into a person who is
+skilled in the art of programming. In the end you will be a
+*programmer* - perhaps not a professional programmer, but
+at least you will have the skills to look at a data/information analysis
+problem and develop a program to solve the problem.
+
+\index{problem solving}
+
+In a sense, you need two skills to be a programmer:
+
+
+* 
+  First, you need to know the programming language (Python) - you need
+  to know the vocabulary and the grammar. You need to be able to spell
+  the words in this new language properly and know how to construct
+  well-formed "sentences" in this new language.
+
+* 
+  Second, you need to "tell a story". In writing a story, you combine
+  words and sentences to convey an idea to the reader. There is a
+  skill and art in constructing the story, and skill in story writing
+  is improved by doing some writing and getting some feedback. In
+  programming, our program is the "story" and the problem you are
+  trying to solve is the "idea".
+
+Once you learn one programming language such as Python, you will find it
+much easier to learn a second programming language such as JavaScript or
+C++. The new programming language has very different vocabulary and
+grammar but the problem-solving skills will be the same across all
+programming languages.
+
+You will learn the "vocabulary" and "sentences" of Python pretty
+quickly. It will take longer for you to be able to write a coherent
+program to solve a brand-new problem. We teach programming much like we
+teach writing. We start reading and explaining programs, then we write
+simple programs, and then we write increasingly complex programs over
+time. At some point you "get your muse" and see the patterns on your own
+and can see more naturally how to take a problem and write a program
+that solves that problem. And once you get to that point, programming
+becomes a very pleasant and creative process.
+
+We start with the vocabulary and structure of Python programs. Be
+patient as the simple examples remind you of when you started reading
+for the first time.
+
+Words and sentences
+-------------------
+
+\index{programming language}
+\index{language!programming}
+
+Unlike human languages, the Python vocabulary is actually pretty small.
+We call this "vocabulary" the "reserved words". These are words that
+have very special meaning to Python. When Python sees these words in a
+Python program, they have one and only one meaning to Python. Later as
+you write programs you will make up your own words that have meaning to
+you called *variables*. You will have great latitude in
+choosing your names for your variables, but you cannot use any of
+Python's reserved words as a name for a variable.
+
+When we train a dog, we use special words like "sit", "stay", and
+"fetch". When you talk to a dog and don't use any of the reserved words,
+they just look at you with a quizzical look on their face until you say
+a reserved word. For example, if you say, "I wish more people would walk
+to improve their overall health", what most dogs likely hear is, "blah
+blah blah *walk* blah blah blah blah." That is because
+"walk" is a reserved word in dog language. Many might suggest that the
+language between humans and cats has no reserved words^[http://xkcd.com/231/].
+
+The reserved words in the language where humans talk to Python include
+the following:
+
+.. code-block::
+
+   and       del       global      not       with
+   as        elif      if          or        yield
+   assert    else      import      pass      
+   break     except    in          raise
+   class     finally   is          return
+   continue  for       lambda      try
+   def       from      nonlocal    while    
+
+
+
+That is it, and unlike a dog, Python is already completely trained. When
+you say "try", Python will try every time you say it without fail.
+
+We will learn these reserved words and how they are used in good time,
+but for now we will focus on the Python equivalent of "speak" (in
+human-to-dog language). The nice thing about telling Python to speak is
+that we can even tell it what to say by giving it a message in quotes:
+
+.. activecode:: 01-intro-a-hello
+
+   print('Hello world!')
+
+
+And we have even written our first syntactically correct Python
+sentence. Our sentence starts with the function *print* 
+followed by a string of text of our choosing enclosed in single quotes.
+The strings in the print statements are enclosed in quotes. Single
+quotes and double quotes do the same thing; most people use single
+quotes except in cases like this where a single quote (which is also an
+apostrophe) appears in the string.
+
+Conversing with Python
+----------------------
+
+Now that we have a word and a simple sentence that we know in Python, we
+need to know how to start a conversation with Python to test our new
+language skills.
+
+Before you can converse with Python, you must first install the Python
+software on your computer and learn how to start Python on your
+computer. That is too much detail for this chapter so I suggest that you
+consult `www.py4e.com <http://www.py4e.com>`_ where I have detailed
+instructions and screencasts of setting up and starting Python on
+Macintosh and Windows systems. At some point, you will be in a terminal
+or command window and you will type *python* and the
+Python interpreter will start executing in interactive mode and appear
+somewhat as follows:
+
+\index{interactive mode}
+
+.. code-block:: python
+
+   Python 3.5.1 (v3.5.1:37a07cee5969, Dec  6 2015, 01:54:25)
+   [MSC v.1900 64 bit (AMD64)] on win32
+   Type "help", "copyright", "credits" or "license" for more
+   information.
+   >>>
+
+
+The ``>>>`` prompt is the Python interpreter's way of asking
+you, "What do you want me to do next?" Python is ready to have a
+conversation with you. All you have to know is how to speak the Python
+language.
+
+Let's say for example that you did not know even the simplest Python
+language words or sentences. You might want to use the standard line
+that astronauts use when they land on a faraway planet and try to speak
+with the inhabitants of the planet:
+
+.. code-block:: python
+
+   >>> I come in peace, please take me to your leader
+   File "<stdin>", line 1
+     I come in peace, please take me to your leader
+          ^
+   SyntaxError: invalid syntax
+   >>>
+
+
+This is not going so well. Unless you think of something quickly, the
+inhabitants of the planet are likely to stab you with their spears, put
+you on a spit, roast you over a fire, and eat you for dinner.
+
+Luckily you brought a copy of this book on your travels, and you thumb
+to this very page and try again:
+
+.. code-block:: python
+
+   >>> print('Hello world!')
+   Hello world!
+
+
+This is looking much better, so you try to communicate some more:
+
+.. code-block:: python
+
+   >>> print('You must be the legendary god that comes from the sky')
+   You must be the legendary god that comes from the sky
+   >>> print('We have been waiting for you for a long time')
+   We have been waiting for you for a long time
+   >>> print('Our legend says you will be very tasty with mustard')
+   Our legend says you will be very tasty with mustard
+   >>> print 'We will have a feast tonight unless you say
+   File "<stdin>", line 1
+     print 'We will have a feast tonight unless you say
+                                                      ^
+   SyntaxError: Missing parentheses in call to 'print'
+   >>>
+
+
+The conversation was going so well for a while and then you made the
+tiniest mistake using the Python language and Python brought the spears
+back out.
+
+At this point, you should also realize that while Python is amazingly
+complex and powerful and very picky about the syntax you use to
+communicate with it, Python is *not* intelligent. You are
+really just having a conversation with yourself, but using proper
+syntax.
+
+In a sense, when you use a program written by someone else the
+conversation is between you and those other programmers with Python
+acting as an intermediary. Python is a way for the creators of programs
+to express how the conversation is supposed to proceed. And in just a
+few more chapters, you will be one of those programmers using Python to
+talk to the users of your program.
+
+Before we leave our first conversation with the Python interpreter, you
+should probably know the proper way to say "good-bye" when interacting
+with the inhabitants of Planet Python:
+
+.. code-block:: python
+
+   >>> good-bye
+   Traceback (most recent call last):
+   File "<stdin>", line 1, in <module>
+   NameError: name 'good' is not defined
+   >>> if you don't mind, I need to leave
+   File "<stdin>", line 1
+     if you don't mind, I need to leave
+              ^
+   SyntaxError: invalid syntax
+   >>> quit()
+
+
+You will notice that the error is different for the first two incorrect
+attempts. The second error is different because *if* is a
+reserved word and Python saw the reserved word and thought we were
+trying to say something but got the syntax of the sentence wrong.
+
+The proper way to say "good-bye" to Python is to enter
+*quit()* at the interactive chevron ``>>>``
+prompt. It would have probably taken you quite a while to guess that
+one, so having a book handy probably will turn out to be helpful.
+
 Terminology: Interpreter and compiler
 -------------------------------------
 
@@ -600,7 +999,7 @@ Exercises
 
    What is a program?
 
-.. shortanswer:: 01-intro-s-compilerVsInterpreter
+.. shortanswer:: 01-intro-s-compilerVsInterpreter 
 
    What is the difference between a compiler and an interpreter?
 
@@ -613,7 +1012,7 @@ Exercises
    :feedback_a: The interpreter translates python source code from a human readable form to machine code
    :feedback_b: The keyboard provides textual input
    :feedback_c: The Python source file contains human readable programs
-   :feedback_d: A word processing document contains text
+   :feedback_d: A word processing document contains text 
 
    Which of the following contains "machine code"?
 
@@ -636,7 +1035,7 @@ Try running the following code.  Can you tell what is wrong with it and fix it?
    :feedback_c: Secondary memory provides long-term storage.  You must write out values to secondary memory to store them long-term.
    :feedback_d: Input devices do not store data
    :feedback_e: Ouptut devices do not store data
-
+   
 
    Where in the computer is a variable such as "x" stored after the following Python line executes?
 
@@ -653,7 +1052,7 @@ Try running the following code.  Can you tell what is wrong with it and fix it?
    :feedback_a: The value of x was changed.
    :feedback_b: While x was set to 43 originally it was changed to one more than the current value.
    :feedback_c: This would be true if the code was priInput devices do not store data
-   :feedback_d: This code sets the value of x to the current value of x plus 1.
+   :feedback_d: This code sets the value of x to the current value of x plus 1.  
 
    What will the following program print out:**
 

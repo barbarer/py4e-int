@@ -1,19 +1,12 @@
-
-
-
-
 Computer hardware architecture
 ------------------------------
-
-\index{hardware}
-\index{hardware!architecture}
 
 Before we start learning the language we speak to give instructions to
 computers to develop software, we need to learn a small amount about how
 computers are built. If you were to take apart your computer or cell
 phone and look deep inside, you would find the following parts:
 
-.. figure:: Figures/arch.eps
+.. figure:: Figures/arch.svg
    :alt: Hardware Architecture
 
 
@@ -66,7 +59,7 @@ tell the CPU to use the main memory, secondary memory, network, or the
 input/output devices.
 
 
-.. figure:: Figures/arch2.eps
+.. figure:: Figures/arch2.svg
    :alt: Where Are You?
 
 
@@ -77,3 +70,21 @@ billion times per second. So instead, you must write down your
 instructions in advance. We call these stored instructions a
 *program* and the act of writing these instructions down
 and getting the instructions to be correct *programming*.
+
+
+.. mchoice:: 01-mc-4-hardware
+  :answer_a: Main Memory
+  :answer_b: Secondary Memory
+  :answer_c: Central Processing Unit
+  :answer_d: Input Devices
+  :correct: b
+  :feedback_a: Information stored in the main memory vanishes when the computer is turned off.
+  :feedback_b: Correct!
+  :feedback_c: Try again!
+  :feedback_d: Try again!
+
+  Which of the following will keep information stored without a power source?
+
+.. shortanswer:: 01-sa-2-hardware
+
+  What is a program?

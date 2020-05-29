@@ -5,9 +5,10 @@ A *value* is one of the basic things a program works
 with, like a letter or a number. You can print values in Python.  See what happens when you run the following code.
 
 .. activecode:: 02-ac-1-vars2
+  :caption: Printing values in Python
 
-   print(17)
-   print('Hello World!')
+  print(17)
+  print('Hello World!')
 
 These values belong to different *types*\ : 17
 is an integer, and "Hello World!" is a *string*\ , so
@@ -17,10 +18,11 @@ marks.
 If you are not sure what type a value has, use the type function to find out.
 
 .. activecode:: 02-ac-2-var-types
+  :caption: Printing types in Python
 
-    print(type('Hello, World!'))
-    print(type(17))
-    print(type(3.2))
+  print(type('Hello, World!'))
+  print(type(17))
+  print(type(3.2))
 
 Not surprisingly, strings belong to the type ``str`` and
 integers belong to the type ``int``. Less obviously, numbers
@@ -47,9 +49,10 @@ they are in quotation marks like strings.
 
 
 .. activecode:: 02-ac-2-num-strs
+  :caption: Printing strings of numbers in Python
 
-   print(type('17'))
-   print(type('3.2'))
+  print(type('17'))
+  print(type('3.2'))
 
 They're strings.
 
@@ -58,8 +61,9 @@ between groups of three digits, as in 1,000,000. This is
 not a legal integer in Python, but it is legal:
 
 .. activecode:: 02-ac-3-num-commas
+  :caption: Printing integers with commas in Python
 
-   print(1,000,000)
+  print(1,000,000)
 
 Well, that's probably not what you expected! Python interprets
 1,000,000 as a comma-separated sequence of integers, which

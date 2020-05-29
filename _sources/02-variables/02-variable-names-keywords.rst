@@ -69,7 +69,7 @@ this list.
    :feedback_d: You can use only uppercase letters in a variable name.
    :feedback_e: You can't use a digit as the first letter in a variable name.
 
-   Which of the following is *not* a legal variable name?
+   Which of the following is **not** a legal variable name?
 
 .. mchoice:: 02-mc-5-name2
   :practice: T
@@ -85,4 +85,4 @@ this list.
   :feedback_d: Since you can't have spaces in names, one way to make variable names easier to read is to use camel case (uppercase the first letter of each new word).
   :feedback_e: Since you can't have spaces in names, one way to make variable names easier to read is to use an underscore between two words.
 
-  Which of the following is *not* a legal variable name?
+  Which of the following is **not** a legal variable name?

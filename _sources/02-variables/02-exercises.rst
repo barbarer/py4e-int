@@ -35,30 +35,11 @@ Exercises
     Assume that width = 17 and height = 12.0. For each of the following expressions, match them up with the value of
     the expression and the type (of the value of the expression).
 
-.. activecode:: check-guess
-   :autograde: unittest
-   :nocodelens:
+Let's say that apples are $0.40 apiece, and pears are $0.65 apiece.  Modify the program below to calculate the total cost.
 
-   Complete the program which uses string operations to convert a Celsius temperature to Fahrenheit and returns the
-   temperature in Fahrenheit. The conversion formula is F = (C*9/5)+32. For example, an input of 5 should return 41.
-   ~~~~
-   def c_to_f(temperature):
-      celsius = temperature
-      fahrenheit =
-      return()
+.. activecode:: 02-ac-complete
 
-
-
-   ====
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-   def testOne(self):
-      self.assertEqual(c_to_f(5), 41, "Correct! c_to_f(5, 41)")
-      self.assertEqual(c_to_f(7), 12.6,"too low, make sure you are adding 32. c_to_f(7, 12.6)")
-      self.assertEqual(c_to_f(0), 32, "Correct! c_to_f(0, 32)")
-      self.assertEqual(c_to_f(35), 51.44444444444444, "too low, make sure you are multiplying by (9/5). c_to_f(35, 51.44444444444444)")
-
-
-    myTests().main()
+   apples = 4
+   pears = 3
+   totalCost =
+   print(totalCost)

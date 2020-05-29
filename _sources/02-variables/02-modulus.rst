@@ -7,11 +7,12 @@ the modulus operator is a percent sign (\ ``%``\ ). The syntax is the same as
 for other operators:
 
 .. activecode:: 02-ac-7-mod
+  :caption: Modulus example
 
-   quotient = 7 // 3
-   print(quotient)
-   remainder = 7 % 3
-   print(remainder)
+  quotient = 7 // 3
+  print(quotient)
+  remainder = 7 % 3
+  print(remainder)
 
 So 7 divided by 3 is 2 with 1 left over.
 
