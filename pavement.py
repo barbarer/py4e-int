@@ -1,70 +1,87 @@
-import os
-import sys
-import pkg_resources
-from socket import gethostname
-
-from paver.easy import options, Bunch
+import paver
+from paver.easy import *
 import paver.setuputils
-
-from runestone import get_master_url
-from runestone import build  # NOQA: F401 -- build is called implicitly by the paver driver.
-from runestone.server import get_dburl
-
 paver.setuputils.install_distutils_tasks()
+from socket import gethostname
+import os, sys
+from os import environ
+
+from sphinxcontrib import paverutils
+
+# new 7/2019 changes
+import pkg_resources
+from runestone import get_master_url
+
 sys.path.append(os.getcwd())
 
-# The project name, for use below.
-project_name = 'py4e-int'
+home_dir = os.getcwd()
 
-master_url = 'http://127.0.0.1:8000'
-if not master_url:
+project_name = "py4e-int"
+
+#master_url = None
+#if master_url is None:
+#    if 'RSHOST' in os.environ:
+#        master_url = environ['RSHOST']
+#    elif gethostname() in  ['web608.webfaction.com', 'rsbuilder']:
+#        master_url = 'http://interactivepython.org'
+#    elif gethostname() == 'runestone-deploy':
+#        master_url = 'https://runestone.academy'
+#    else:
+#        master_url = 'http://127.0.0.1:8000'
+
+# new 7/2019 changes
+master_url = None
+
+if master_url is None:
     master_url = get_master_url()
 
-# The root directory for ``runestone serve``.
-serving_dir = "build/" + project_name
-# The destination directory for ``runestone deploy``.
-dest = "../../static"
+master_app = 'runestone'
+serving_dir = "./build/py4e-int"
+
+#new 7/2019 changes
+# Change to False when running localhost
+dynamic_pages = False
+
+if dynamic_pages:
+    dest = './published'
+else:
+    dest = '../../static'
+
+#master_app = 'runestone'
+#serving_dir = "./build/StudentCSP"
+#dest = '../../static'
+#project_name = "StudentCSP"
 
 options(
-    sphinx=Bunch(docroot=".",),
+    sphinx = Bunch(docroot=".",),
 
-    build=Bunch(
-        builddir=serving_dir,
+    build = Bunch(
+        builddir="./build/py4e-int",
         sourcedir="_sources",
-        outdir=serving_dir,
+        outdir="./build/py4e-int",
         confdir=".",
-        template_args={
-            'login_required': 'false',
-            'loglevel': 0,
-            'course_title': project_name,
-            'python3': 'false',
-            'dburl': '',
-            'default_ac_lang': 'python',
-            'jobe_server': 'http://jobe2.cosc.canterbury.ac.nz',
-            'proxy_uri_runs': '/jobe/index.php/restapi/runs/',
-            'proxy_uri_files': '/jobe/index.php/restapi/files/',
-            'downloads_enabled': 'false',
-            'enable_chatcodes': 'false',
-            'allow_pairs': 'false',
-            'dynamic_pages': False,
-            'use_services': 'false',
-            'basecourse': project_name,
-            'course_id': project_name,
-            # These are used for non-dynamic books.
-            'appname': 'runestone',
-            'course_url': master_url,
-        }
+        project_name=project_name,
+        template_args={'course_id': project_name,
+                       'login_required':'false',
+                       'appname':master_app,
+                       'loglevel': 10,
+                       'course_url':master_url,
+                       'use_services': 'true',
+                       'python3': 'true',
+                       'dburl': 'postgresql://runestone@localhost/runestone',
+                       'basecourse': 'py4e-int',
+                        # new 7/2019 changes
+                       'dynamic_pages': dynamic_pages,
+                       'downloads_enabled': 'false',
+                       'enable_chatcodes': 'false',
+                       'allow_pairs': 'false'
+                        }
     )
 )
 
-# if we are on runestone-deploy then use the proxy server not canterbury
-if gethostname() == 'runestone-deploy':
-    del options.build.template_args['jobe_server']
-    del options.build.template_args['proxy_uri_runs']
-    del options.build.template_args['proxy_uri_files']
+# Check to see if we are building on our Jenkins build server, if so use the environment variables
+# to update the DB information for this build
+if 'DBHOST' in environ and  'DBPASS' in environ and 'DBUSER' in environ and 'DBNAME' in environ:
+    options.build.template_args['dburl'] = 'postgresql://{DBUSER}:{DBPASS}@{DBHOST}/{DBNAME}'.format(**environ)
 
-version = pkg_resources.require("runestone")[0].version
-options.build.template_args['runestone_version'] = version
-
-# If DBURL is in the environment override dburl
-options.build.template_args['dburl'] = get_dburl(outer=locals())
+from runestone import build  # build is called implicitly by the paver driver.
