@@ -53,5 +53,43 @@ sentence. Our sentence starts with the function *print*
 followed by a string of text of our choosing enclosed in single quotes.
 The strings in the print statements are enclosed in quotes. Single
 quotes and double quotes do the same thing; most people use single
-quotes except in cases like this where a single quote (which is also an
+quotes except in cases where a single quote (which is also an
 apostrophe) appears in the string.
+
+.. mchoice:: intro-words-mc-reserved
+  :practice: T
+  :multiple_answers:
+  :answer_a: number
+  :answer_b: class
+  :answer_c: pass
+  :answer_d: print
+  :answer_e: try
+  :correct: b,c,e
+  :feedback_a: Number is not a reserved word in python.
+  :feedback_b: Correct! The word class is used to create a new "class" or set of objects.
+  :feedback_c: Correct! Pass is a null operation - nothing happens when it is used, making it a great placeholder for incomplete functions.
+  :feedback_d: Print is a function in Python, but not a reserved word.
+  :feedback_e: Correct! Try allows you to test a block of code for errors.
+
+  Which of the following are reserved words?
+
+.. mchoice:: intro-words-mc-quotes
+  :practice: T
+  :answer_a: Single quotes are used for char variables, double quotes are used for string variables.
+  :answer_b: Single quotes are used at the beginning of a string, double quotes are used at the end.
+  :answer_c: Double quotes enclose a string containing single quotes.
+  :answer_d: All of the above.
+  :answer_e: None of the above.
+  :correct: e
+  :feedback_a: Python does not have a char type. Single **or** double quotes are used for strings.
+  :feedback_b: When using quotes, a single quote needs to be followed by a single quote and a double quote needs to be followed by a double quote.
+  :feedback_c: While this is common practice, it is not a rule. Single and double quotes do the same thing.
+  :feedback_d: Try again!
+  :feedback_e: Correct! You can use double and quotes interchangeably in Python.
+
+  What is the difference between single and double quotes in Python?
+
+.. shortanswer:: intro-words-sa-reserved
+  :practice: T
+
+  Why are some words reserved in Python?

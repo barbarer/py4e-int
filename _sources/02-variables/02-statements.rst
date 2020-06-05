@@ -25,7 +25,8 @@ For example, run this code to see what it does.
 The assignment statement produces no output.
 
 
-.. mchoice:: 02-mc-6-var3
+.. mchoice:: var-state-mc-var3
+   :practice: T
    :answer_a: dog
    :answer_b: fish
    :answer_c: cat
@@ -47,7 +48,8 @@ The assignment statement produces no output.
       var3 = var1
       var2 = "fish"
 
-.. mchoice:: 02-mc-7-var2
+.. mchoice:: var-state-mc-var2
+   :practice: T
    :answer_a: dog
    :answer_b: fish
    :answer_c: cat
@@ -70,14 +72,16 @@ The assignment statement produces no output.
       var2 = "fish"
 
 
-.. fillintheblank:: 02-fitb-1-statements
+.. fillintheblank:: var-state-fitb-assign
+    :practice: T
 
     The process of giving value to a variable is called a(n)
 
     - :^assignment$|^Assignment$|^ASSIGNMENT$: Correct!
-      :.*: Reread the text above!
+      :.*: Try again!
 
-.. clickablearea:: 02-ca-3-statements
+.. clickablearea:: var-state-ca-assign
+  :practice: T
   :question: Click the assignments in this codeblock.
   :iscode:
   :feedback: Remember that an assignment gives value to a variable and does not produce output.

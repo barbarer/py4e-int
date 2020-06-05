@@ -54,23 +54,28 @@ an error:
 
 We will see how to handle this kind of error later.
 
-.. fillintheblank:: 02-fitb-7-input
+.. fillintheblank:: var-input-fitb-int
+    :practice: T
 
     What function is used to convert string values to integers?
 
     - :"int()": Correct!
       :"integer": Close, but not quite!
-      :.*: Check out what is used above to convert the airspeed velocity.
+      :.*: Try again.
 
-.. fillintheblank:: 02-fitb-8-input
+.. fillintheblank:: var-input-fitb-nl
+    :practice: T
 
     What sequence is used to create a newline at the end of statements?
 
     - :"\n": Correct!
-      :"n": Close, but there is a symbol that goes with it
-      :.*: Check out what is used above to convert the airspeed velocity.
+      :"n": Close, but there is a symbol that goes with it.
+      :.*: Try again.
 
-.. parsonsprob:: 02-pp-2-input
+.. parsonsprob:: var-input-pp-prompt
+   :practice: T
+   :numbered: left
+   :adaptive:
 
    Construct a block of code that asks the user for a number and prints three times that number.
    There is an extra piece of code to watch out for.

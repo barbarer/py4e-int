@@ -33,7 +33,7 @@ point*.
 What about values like "17" and "3.2"? They look like numbers, but
 they are in quotation marks like strings.
 
-.. mchoice:: 02-mc-1-types
+.. mchoice:: var-value-mc-string
    :practice: T
    :answer_a: float
    :answer_b: integer (int)
@@ -73,7 +73,7 @@ This is the first example we have seen of a semantic error: the code
 runs without producing an error message, but it doesn't do the "right"
 thing.
 
-.. mchoice:: 02-mc-2-print
+.. mchoice:: var-value-mc-int
    :practice: T
    :answer_a: print("1,000,000")
    :answer_b: print(1000000)
@@ -88,8 +88,9 @@ thing.
    How would you print the *integer* ``1,000,000``?
 
 
-.. dragndrop:: 02-dnd-1-value-types
-    :feedback: See above for some examples, or try using type(x) in terminal.
+.. dragndrop:: var-value-dnd-type
+    :practice: T
+    :feedback: Try using type(x) in terminal or your python interpreter.
     :match_1: "Hello, World!"|||string (str)
     :match_2: 17|||integer (int)
     :match_3: 3.2|||float

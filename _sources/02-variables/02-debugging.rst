@@ -47,14 +47,16 @@ the same thing! There is no way for Python to know what you meant to
 write, so in this case you don't get an error message; you just get the
 wrong answer. *Try adding parentheses to the code above to return the correct answer.*
 
-.. fillintheblank:: 02-fitb-10-errors
+.. fillintheblank:: var-debug-fitb-fix
+    :practice: T
 
     ________ is the process of fixing errors in your code.
 
-    - :(?:d|D)(?:e|E)(?:bB)(?:u|U)(?:g|G)(?:g|G)(?:i|I)(?:n|N)(?:g|G): Is the correct answer!
+    - :[Dd]ebugging: Is the correct answer!
       :.*: Try again!
 
-.. mchoice:: 02-mc-16-errors
+.. mchoice:: var-debug-mc-name
+   :practice: T
    :answer_a: NameError
    :answer_b: SyntaxError
    :answer_c: TypeError
@@ -70,7 +72,8 @@ wrong answer. *Try adding parentheses to the code above to return the correct an
 
 
 
-.. mchoice:: 02-mc-17-errors2
+.. mchoice:: var-debug-mc-equation
+   :practice: T
    :answer_a: NameError
    :answer_b: SyntaxError
    :answer_c: TypeError

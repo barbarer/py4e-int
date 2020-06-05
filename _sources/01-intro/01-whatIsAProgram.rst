@@ -56,5 +56,27 @@ as an intermediary between you (the end user) and me (the programmer).
 Python is a way for us to exchange useful instruction sequences (i.e.,
 programs) in a common language that can be used by anyone who installs
 Python on their computer. So neither of us are talking *to
-Python*\ , instead we are communicating with each other
+Python*, instead we are communicating with each other
 *through* Python.
+
+.. fillintheblank:: intro-what-fitb-program
+  :practice: T
+
+  A(n) _______ is a sequence of statements that have been crafted to do something.
+
+  - :[Pp]rogram: Correct! A program is a sequence of statements that have been crafted to do something.
+    :[Cc]omputer: Not quite.
+    :.*: Try again.
+
+.. mchoice:: intro-what-mc-words
+  :answer_a: programmer
+  :answer_b: user
+  :correct: b
+  :feedback_a: Try again. Are you writing the program or using it?
+  :feedback_b: Correct! The program has already been written and you are using it - making you the user.
+
+  In the program *words.py* are you the programmer or the user?
+
+.. shortanswer:: intro-what-sa-program
+
+  What is a problem in your life that a program could solve?

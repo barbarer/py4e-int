@@ -51,7 +51,7 @@ To obtain the same answer in Python 3.0 use floored ( ``//`` integer) division.
 In Python 3.0 integer division functions much more as you would expect
 if you entered the expression on a calculator.
 
-.. mchoice:: 02-mc-8-division
+.. mchoice:: var-operator-mc-division
    :practice: T
    :answer_a: 0
    :answer_b: 1
@@ -66,17 +66,19 @@ if you entered the expression on a calculator.
    What is the result of ``3 / 4``?
 
 
-.. fillintheblank:: 02-fitb-2-operators
+.. fillintheblank:: var-operator-fitb-symbol
+    :practice: T
 
     What operator (*symbol*) would you use to truncate division in Python 3.0?
 
     - ://: Is the correct answer!
-      :/: Not quite, look above to see the difference between divison (/) and floored division.
+      :/: Not quite, remember the difference between divison (/) and floored division.
       :.*: Make sure you are looking at the symbols for division!
 
 
-.. dragndrop:: 02-dnd-2-operators
-    :feedback: See how these expressions worked above.
+.. dragndrop:: var-operator-dnd-operations
+    :practice: T
+    :feedback: Try assigning values to these variables and testing out the espressions in your python interpreter.
     :match_1: x + y|||addition
     :match_2: x - y|||subtraction
     :match_3: x * y|||multiplication

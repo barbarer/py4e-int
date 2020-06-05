@@ -19,7 +19,8 @@ writing library code for others to use.
 If you give a variable an illegal name, you get a syntax error when you try to execute the code.
 
 
-.. clickablearea:: 02-ca-2-bad-names
+.. clickablearea:: var-keywords-ca-error
+  :practice: T
   :question: Click the portion of the variable names that cause syntax errors.
   :iscode:
   :feedback: Remember that variables cannot start with a number. If you're stuck, look at the list of keywords below.
@@ -55,7 +56,7 @@ You might want to keep this list handy. If the interpreter complains
 about one of your variable names and you don't know why, see if it is on
 this list.
 
-.. mchoice:: 02-mc-4-name1
+.. mchoice:: var-keywords-mc-illegal
    :practice: T
    :answer_a: _a1
    :answer_b: my_name
@@ -71,7 +72,7 @@ this list.
 
    Which of the following is **not** a legal variable name?
 
-.. mchoice:: 02-mc-5-name2
+.. mchoice:: var-keywords-mc-name
   :practice: T
   :answer_a: _my_name
   :answer_b: my name

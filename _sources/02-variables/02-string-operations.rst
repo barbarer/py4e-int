@@ -27,7 +27,8 @@ of a string by an integer. For example:
   second = 3
   print(first * second)
 
-.. mchoice:: 02-mc-8-cheer
+.. mchoice:: var-string-mc-cheer
+   :practice: T
    :answer_a: Let's go Blue !!
    :answer_b: Let's go Blue!!
    :answer_c: Let's go Blue! Let's go Blue!
@@ -47,7 +48,8 @@ of a string by an integer. For example:
       print(cheer+excl*2)
 
 
-.. mchoice:: 02-mc-9-fruits
+.. mchoice:: var-string-mc-fruit
+   :practice: T
    :answer_a: print(berries + ", " + fruit + ", " + stoneFruit)
    :answer_b: print(fruits + " " + berries + " " + stonefruit)
    :answer_c: print(fruit + ", " + berries + ", " + stoneFruit)
@@ -66,7 +68,8 @@ of a string by an integer. For example:
       berries = "Blueberries, Strawberries, Raspberries"
       stoneFruit = "Peaches, Plums"
 
-.. mchoice:: 02-mc-10-strings
+.. mchoice:: var-string-mc-false
+   :practice: T
    :answer_a: You can combine strings using + (concatenation).
    :answer_b: Concatenating strings automatically adds a space between the strings.
    :answer_c: You can use * to multiply a string by an integer

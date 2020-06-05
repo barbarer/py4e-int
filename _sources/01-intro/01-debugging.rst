@@ -64,7 +64,8 @@ feel better, copy your program into another file before you start
 stripping it down. Then you can paste the pieces back in a little bit at
 a time.
 
-.. mchoice:: 01-mc-15-debugging
+.. mchoice:: intro-debug-mc-definition
+    :practice: T
     :answer_a: The process of finding the cause of the error in your code.
     :answer_b: The process of making random changes until the program does the right thing.
     :answer_c: The process of exterminating pests from your house.
@@ -77,7 +78,8 @@ a time.
 
     What is debugging?
 
-.. mchoice:: 01-mc-16-debugging2
+.. mchoice:: intro-debug-mc-randomwalk
+    :practice: T
     :answer_a: Stepping through the program to find bugs.
     :answer_b: Changing the names of variables in your code randomly.
     :answer_c: Going for a walk without a map.
@@ -91,7 +93,7 @@ a time.
     What is "random walk programming?"
 
 
-.. dragndrop:: 01-dnd-1-debugging
+.. dragndrop:: intro-debug-dnd-terms
   :feedback: Look above for these terms.
   :match_1: Reading|||Examine your code, read it back to yourself, and check that it says what you meant to say.
   :match_2: Running|||Experiment by making changes and running different versions.

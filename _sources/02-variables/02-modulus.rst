@@ -26,7 +26,7 @@ example, ``x % 10`` yields the right-most digit of
 ``x`` (in base 10). Similarly, ``x % 100`` yields the
 last two digits.
 
-.. mchoice:: 02-mc-7-mod
+.. mchoice:: var-mod-mc-18
    :practice: T
    :answer_a: 0
    :answer_b: 1
@@ -40,7 +40,8 @@ last two digits.
 
    What is the result of ``18 % 5``?
 
-.. dragndrop:: 02-dnd-3-mod
+.. dragndrop:: var-mod-dnd-division
+   :practice: T
    :feedback: Try out these expressions in terminal or review the operators and operands section.
    :match_1: 7 / 2|||division
    :match_2: 90 // 4|||floored division
@@ -50,6 +51,7 @@ last two digits.
 
 
 .. fillintheblank:: 02-fitb-6-mod
+   :practice: T
 
    What is the result of ``25 % 4``?
 

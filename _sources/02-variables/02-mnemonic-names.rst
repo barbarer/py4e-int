@@ -114,7 +114,8 @@ clues to keep your variables and reserved words separate. After a while
 you will begin to read Python and quickly determine what is a variable
 and what is a reserved word.
 
-.. mchoice:: 02-mc-14-mnemonic1
+.. mchoice:: var-mnemonic-mc-definition
+   :practice: T
    :answer_a: memory aid
    :answer_b: nickname
    :answer_c: remember this
@@ -127,7 +128,8 @@ and what is a reserved word.
 
    Mnemonic means:
 
-.. mchoice:: 02-mc-15-mnemonic2
+.. mchoice:: var-mnemonic-mc-name
+   :practice: T
    :answer_a: word
    :answer_b: chocolate_chip
    :answer_c: gelPens
@@ -140,7 +142,8 @@ and what is a reserved word.
 
    Which variable name would best be used for counting the ingredients in cookies?
 
-.. dragndrop:: 02-dnd-4-mnemonic
+.. dragndrop:: var-mnemonic-dnd-variable
+   :practice: T
    :feedback: Which items make the most sense together?
    :match_1: chocolate_chip|||Counting cookie ingredients
    :match_2: gelPens|||Rating writing utensils
