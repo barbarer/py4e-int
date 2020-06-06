@@ -4,51 +4,50 @@ Writing code problems
 
    .. tab:: Question
 
-       Let's say that apples are $0.40 apiece, and pears are $0.65 apiece.
-       Modify the program below to calculate the total cost.
+      Let's say that apples are $0.40 apiece, and pears are $0.65 apiece.
+      Modify the program below to calculate the total cost.
 
-       .. activecode:: var-wc-fruit
+      .. activecode:: var-wc-fruit
 
-          apples = 4
-          pears = 3
-          totalCost =
-          print(totalCost)
+         apples = 4
+         pears = 3
+         totalCost =
+         print(totalCost)
 
    .. tab:: Discussion
 
-       .. disqus::
-           :shortname: interactivepython
-           :identifier: var-fruitdisc
+      .. disqus::
+         :shortname: interactivepython
+         :identifier: fruitdisc
 
 .. tabbed:: var-exercise-rhyme
 
    .. tab:: Question
 
-       Take the phrase: **twinkle twinkle little star**.
-       Store each word in a separate variable, then print out the sentence on
-       one line using ``print``.
+      Take the phrase: **twinkle twinkle little star**.
+      Store each word in a separate variable, then print out the sentence on
+      one line using ``print``.
 
-       .. activecode:: var-wc-rhymeq
+      .. activecode:: var-wc-rhymeq
 
 
    .. tab:: Answer
 
-       .. activecode:: var-wc-rhymea
-           :nocanvas:
+      .. activecode:: var-wc-rhymea
 
-           word1 = "twinkle"
-           word2 = "little"
-           word3 = "star"
+         word1 = "twinkle"
+         word2 = "little"
+         word3 = "star"
 
-           print(word1, word1, word2, word3)
-           #another option is
-           #print(word1 + " " + word1 + " " + word2 + " " + word3)
+         print(word1, word1, word2, word3)
+         #another option is
+         #print(word1 + " " + word1 + " " + word2 + " " + word3)
 
    .. tab:: Discussion
 
-       .. disqus::
-           :shortname: interactivepython
-           :identifier: var-rhyme-disc
+      .. disqus::
+         :shortname: interactivepython
+         :identifier: rhymeDisc
 
 .. tabbed:: var-exercise-order
 
@@ -64,7 +63,7 @@ Writing code problems
 
        .. disqus::
            :shortname: interactivepython
-           :identifier: var-orderDisc
+           :identifier: orderDisc
 
 
 .. tabbed:: var-exercise-time
@@ -114,7 +113,7 @@ Writing code problems
 
       .. disqus::
           :shortname: interactivepython
-          :identifier: var-timediscussion
+          :identifier: timeDisc
 
 
 .. tabbed:: var-exercise-syntax
@@ -136,7 +135,7 @@ Writing code problems
 
         .. disqus::
             :shortname: interactivepython
-            :identifier: var-syntax-disc
+            :identifier: syntaxDisc
 
 
 .. tabbed:: var-exercise-feet
@@ -169,7 +168,7 @@ Writing code problems
 
       .. disqus::
           :shortname: interactivepython
-          :identifier: var-feetdiscussion
+          :identifier: feetDisc
 
 
 .. tabbed:: var-exercise-inch
@@ -186,7 +185,7 @@ Writing code problems
 
         .. disqus::
             :shortname: interactivepython
-            :identifier: var-inchdiscussion
+            :identifier: inchDisc
 
 .. tabbed:: var-exercise-madlibs
 
@@ -202,7 +201,7 @@ Writing code problems
 
         .. disqus::
             :shortname: interactivepython
-            :identifier: var-madlibs-disc
+            :identifier: madlibsDisc
 
 .. tabbed:: var-exercise-combine
 
@@ -223,7 +222,7 @@ Writing code problems
 
         .. disqus::
             :shortname: interactivepython
-            :identifier: var-combine-disc
+            :identifier: combineDisc
 
 .. tabbed:: var-exercise-dog
 
@@ -246,4 +245,4 @@ Writing code problems
 
         .. disqus::
             :shortname: interactivepython
-            :identifier: var-dog-disc
+            :identifier: dogDisc

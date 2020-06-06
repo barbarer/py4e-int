@@ -19,5 +19,3 @@ Preface and Getting Setup
    01-learning.rst
    01-glossary.rst
    01-Exercises.rst
-   01-MixedupCode.rst
-   01-WriteCode.rst

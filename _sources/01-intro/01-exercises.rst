@@ -114,3 +114,9 @@ Exercises
 .. shortanswer:: 01-intro-s-syntaxError
 
    How do you fix a "Syntax Error"?
+
+Try running the following code.  Can you tell what is wrong with it and fix it?
+
+.. activecode:: 01-intro-a-fix
+
+  primt 'Hello world!'
