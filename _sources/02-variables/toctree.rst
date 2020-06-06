@@ -19,4 +19,6 @@ Variables, expressions, and statements
    02-mnemonic-names.rst
    02-debugging.rst
    02-glossary.rst
-   02-exercises.rst
+   02-Exercises.rst
+   02-MixedupCode.rst
+   02-WriteCode.rst

@@ -72,7 +72,8 @@ instructions in advance. We call these stored instructions a
 and getting the instructions to be correct *programming*.
 
 
-.. mchoice:: 01-mc-4-hardware
+.. mchoice:: intro-hardware-mc-storage
+  :practice: T
   :answer_a: Main Memory
   :answer_b: Secondary Memory
   :answer_c: Central Processing Unit
@@ -85,6 +86,18 @@ and getting the instructions to be correct *programming*.
 
   Which of the following will keep information stored without a power source?
 
-.. shortanswer:: 01-sa-2-hardware
+.. shortanswer:: intro-hardware-sa-program
+  :practice: T
 
   What is a program?
+
+.. dragndrop:: intro-hardware-dnd-memory
+  :practice: T
+  :feedback: How is memory stored?
+  :match_1: Main Memory|||Stores information quickly for the CPU; needs power for storage.
+  :match_2: Secondary Memory|||Stores information slowly; can save information without power.
+  :match_3: Input/Output Devices|||Physical aspects beyond the internal computer.
+  :match_4: Network Connection|||Allows information to be stored on a network; very slow.
+  :match_5: Central Processing Unit|||Does the actual computing and executing of programs in the computer.
+
+  Match each term with its definition.

@@ -35,7 +35,8 @@ see what they do:
    x = 5
    x + 1
 
-.. mchoice:: 02-mc-9-multiply
+.. mchoice:: var-expressions-mc-print
+   :practice: T
    :answer_a: 4
    :answer_b: 8
    :answer_c: 2
@@ -53,22 +54,24 @@ see what they do:
       result = 2 * 2
       print(result)
 
-.. mchoice:: 02-mc-10-expressions
+.. mchoice:: var-expressions-mc-expression
+   :practice: T
    :answer_a: 5
    :answer_b: x = 5
    :answer_c: x + 1
    :answer_d: all of the above
    :answer_e: none of the above
    :correct: d
-   :feedback_a: Reread the beginning of this section, an expression is a combination of values, variables, and operators.
-   :feedback_b: Reread the beginning of this section, an expression is a combination of values, variables, and operators.
-   :feedback_c: Reread the beginning of this section, an expression is a combination of values, variables, and operators.
+   :feedback_a: An expression is a combination of values, variables, and operators.
+   :feedback_b: An expression is a combination of values, variables, and operators.
+   :feedback_c: An expression is a combination of values, variables, and operators.
    :feedback_d: Correct!
-   :feedback_e: Reread the beginning of this section, an expression is a combination of values, variables, and operators.
+   :feedback_e: An expression is a combination of values, variables, and operators.
 
    Which of the following is an expression?
 
-.. clickablearea:: 02-ca-10-expressions
+.. clickablearea:: var-expressions-mc-click
+  :practice: T
   :question: Click on the expression that will **not** return a value on its own.
   :iscode:
   :feedback: Try typing these expressions in a python interpreter to see what they do.

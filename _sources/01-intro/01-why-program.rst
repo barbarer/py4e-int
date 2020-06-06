@@ -57,7 +57,8 @@ learn this new language, you can delegate mundane tasks to your partner
 uniquely suited for. You bring creativity, intuition, and inventiveness
 to this partnership.
 
-.. mchoice:: 01-mc-1-program
+.. mchoice:: intro-whyprogram-mc-ask
+    :practice: T
     :answer_a: "How can I help you?"
     :answer_b: "Where should I store this information?"
     :answer_c: "What would you like me to do next?"
@@ -70,7 +71,8 @@ to this partnership.
 
     Hardware in today's computers is built to continuously ask what?
 
-.. mchoice:: 01-mc-2-hardware
+.. mchoice:: intro-whyprogram-mc-add
+    :practice: T
     :answer_a: an operating system and applications
     :answer_b: a computer and images
     :answer_c: images and applications
@@ -83,7 +85,7 @@ to this partnership.
 
     What does a programmer add to a computer's hardware?
 
-.. mchoice:: 01-mc-2-count
+.. mchoice:: intro-whyprogram-mc-common
     :answer_a: the, 25
     :answer_b: to, 16
     :answer_c: computer, 19

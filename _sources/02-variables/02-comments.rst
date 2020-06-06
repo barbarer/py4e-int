@@ -49,7 +49,8 @@ This comment contains useful information that is not in the code:
 Good variable names can reduce the need for comments, but long names can
 make complex expressions hard to read, so there is a trade-off.
 
-.. fillintheblank:: 02-fitb-9-comments
+.. fillintheblank:: var-comments-fitb-symbol
+    :practice: T
 
     What is the symbol for a single line of comments?
 
@@ -57,7 +58,8 @@ make complex expressions hard to read, so there is a trade-off.
       :''' ''': Close! Three sets of quotation marks are used for multi-line comments.
       :.*: Try again!
 
-.. mchoice:: 02-mc-11-comments
+.. mchoice:: var-comments-mc-use
+   :practice: T
    :answer_a: To add notes to code.
    :answer_b: To assign names to variables.
    :answer_c: To run code.
@@ -70,7 +72,8 @@ make complex expressions hard to read, so there is a trade-off.
 
    What are comments used for?
 
-.. mchoice:: 02-mc-12-comments
+.. mchoice:: var-comments-mc-false
+   :practice: T
    :answer_a: Comments start with the symbol #
    :answer_b: Comments document the non-obvious features of the code.
    :answer_c: Comments function like any other line of code.
@@ -83,7 +86,8 @@ make complex expressions hard to read, so there is a trade-off.
 
    Which of the following is **not** true about comments?
 
-.. mchoice:: 02-mc-13-comments
+.. mchoice:: var-comments-mc-print
+   :practice: T
    :answer_a: Milo is this many years old: 12
    :answer_b: Milois this many years old:12
    :answer_c: Milo + is this many years old: + 12

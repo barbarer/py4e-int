@@ -126,3 +126,36 @@ Python itself is likely in a file with a name like:
 That is more than you really need to know to be a Python programmer, but
 sometimes it pays to answer those little nagging questions right at the
 beginning.
+
+.. mchoice:: intro-terminology-mc-language
+  :practice: T
+  :answer_a: C
+  :answer_b: Ruby
+  :answer_c: JavaScript
+  :answer_d: C++
+  :correct: a
+  :feedback_a: Correct! The Python interpreter is written in C.
+  :feedback_b: Try again.
+  :feedback_c: Try again.
+  :feedback_d: Try again.
+
+  What language is the Python interpreter written in?
+
+.. dragndrop:: intro-terminology-dnd-terms
+  :practice: T
+  :feedback: What do these terms mean?
+  :match_1: Machine Language|||Programming language using binary or hexadecimal instructions that a computer can directly respond to.
+  :match_2: Interpreter|||Program that analyzes and executes each line of code.
+  :match_3: Variable|||Item that holds a value while a program is running.
+  :match_4: Compiler|||Program that converts instructions into a machine-code so that they can be read and executed by a computer.
+
+  Match each term to its definition.
+
+.. fillintheblank:: intro-terminology-fitb-translate
+  :practice: T
+
+  A(n) ________ translates a program into machine language from a file and saves it for later execution.
+
+  - :[Cc]ompiler: Correct!
+    :[Ii]nterpreter: An interpreter reads and processes code immediately.
+    :.*: Try again!

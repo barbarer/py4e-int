@@ -1,7 +1,8 @@
 Order of operations
 -------------------
 
-.. mchoice:: 02-mc-11-order
+.. mchoice:: var-order-mc-print
+   :practice: T
    :answer_a: 18
    :answer_b: -2
    :answer_c: 6
@@ -53,7 +54,8 @@ acronym *PEMDAS* is a useful way to remember the rules:
   ``5-3`` happens first and then ``1`` is subtracted
   from 2.
 
-.. mchoice:: 02-mc-12-order
+.. mchoice:: var-order-mc-parentheses
+   :practice: T
    :answer_a: 18
    :answer_b: -2
    :answer_c: 6
@@ -80,12 +82,15 @@ acronym *PEMDAS* is a useful way to remember the rules:
 When in doubt, always put parentheses in your expressions to make sure
 the computations are performed in the order you intend.
 
-.. parsonsprob:: 02-pp-1-order
+.. parsonsprob:: var-order-pp-operations
+   :practice: T
+   :numbered: left
+   :adaptive:
 
    Put these code blocks in the oder that they would run using the order of operations.
    -----
    (6 * 52 + 3)
-   3^2
+   3**2
    7 * 5
    33 / 11
    15 + 20

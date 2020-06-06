@@ -92,7 +92,8 @@ three general types of errors:
 Again in all three types of errors, Python is merely trying its hardest
 to do exactly what you have asked.
 
-.. mchoice:: 01-mc-12-errors
+.. mchoice:: intro-gowrong-mc-error
+    :practice: T
     :answer_a: Logic error
     :answer_b: Semantic error
     :answer_c: Syntax error
@@ -109,7 +110,8 @@ to do exactly what you have asked.
 
       print "Hello world!"
 
-.. mchoice:: 01-mc-13-errors2
+.. mchoice:: intro-gowrong-mc-semantic
+    :practice: T
     :answer_a: Forgetting to multiply by pi when calculating the circumference of a circle.
     :answer_b: Forgetting to use quotation marks around a string.
     :answer_c: Trying to use the string "32" in math equations.
@@ -120,13 +122,14 @@ to do exactly what you have asked.
 
     Which of the following is a semantic error?
 
-.. mchoice:: 01-mc-14-errors3
+.. mchoice:: intro-gowrong-mc-syntax
+    :practice: T
     :answer_a: The programmer
     :answer_b: The interpreter/compiler.
     :answer_c: The user.
     :correct: b
     :feedback_a: Try again!.
-    :feedback_b: Correct! 
+    :feedback_b: Correct!
     :feedback_c: Try again!
 
     Who/what finds syntax errors?

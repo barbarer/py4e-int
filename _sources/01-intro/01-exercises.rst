@@ -36,13 +36,6 @@ Exercises
 
    Which of the following contains "machine code"?
 
-
-Try running the following code.  Can you tell what is wrong with it and fix it?
-
-.. activecode:: 01-intro-a-fix-hello
-
-   primt 'Hello world!'
-
 .. mchoice:: 01-intro-m-whereStored
    :answer_a: Central processing unit
    :answer_b: Main Memory
@@ -82,6 +75,21 @@ Try running the following code.  Can you tell what is wrong with it and fix it?
       x = x + 1
       print(x)
 
+.. mchoice:: 01-intro-m-replace
+   :practice: T
+   :answer_a: 1 = a process, 2 = a function
+   :answer_b: 1 = translating an entire book, 2 = translating a line at a time
+   :answer_c: 1 = software, 2 = hardware
+   :answer_d: 1 = object code, 2 = byte code
+   :correct: b
+   :feedback_a: Compiling is a software process, and running the interpreter is invoking a function, but how is a process different than a function?
+   :feedback_b: Compilers take the entire source code and produce object code or the executable and interpreters execute the code line by line.
+   :feedback_c: Both compilers and interpreters are software.
+   :feedback_d: Compilers can produce object code or byte code depending on the language.  An interpreter produces neither.
+
+   Pick the best replacements for 1 and 2 in the following sentence: When comparing compilers and interpreters, a compiler is like 1 while an interpreter is like 2.
+
+
 .. shortanswer:: 01-intro-s-explainCPU
 
    What is the human equivalent to a Central Processing Unit?
@@ -106,3 +114,9 @@ Try running the following code.  Can you tell what is wrong with it and fix it?
 .. shortanswer:: 01-intro-s-syntaxError
 
    How do you fix a "Syntax Error"?
+
+Try running the following code.  Can you tell what is wrong with it and fix it?
+
+.. activecode:: 01-intro-a-fix
+
+  primt 'Hello world!'

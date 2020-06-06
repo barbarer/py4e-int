@@ -119,3 +119,38 @@ The proper way to say "good-bye" to Python is to enter
 *quit()* at the interactive chevron ``>>>``
 prompt. It would have probably taken you quite a while to guess that
 one, so having a book handy probably will turn out to be helpful.
+
+
+.. fillintheblank:: intro-convo-fitb-prompt
+  :practice: T
+
+  What symbol is the Python interpreter's prompt for "What do you want me to do next?"
+
+  - :>>>: Correct!
+    :.*: Try again. Open your Python interpreter using the command "python" and see what you are prompted with.
+
+.. mchoice:: intro-convo-mc-print
+  :practice: T
+  :answer_a: commas
+  :answer_b: brackets
+  :answer_c: semicolons
+  :answer_d: parentheses
+  :correct: d
+  :feedback_a: What is needed to complete a print statement?
+  :feedback_b: What symbols are needed around the text to print?
+  :feedback_c: Try again.
+  :feedback_d: Correct! Parentheses are needed around statements that are being printed.
+
+  What is missing from this print statement?
+
+  ::
+
+    print 'We will have a feast tonight unless you say'
+
+.. fillintheblank:: intro-convo-fitb-quit
+  :practice: T
+
+  How do you leave the Python interpreter?
+
+  - :quit(): Correct!
+    :.*: Try again.

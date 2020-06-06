@@ -26,7 +26,7 @@ value of pi to a variable named ``pi``.
 
 The type of a variable is the type of the value it refers to.
 
-.. dragndrop:: 02-dnd-2-types
+.. dragndrop:: var-variables-dnd-type
     :feedback: Look at the variable assignments above.
     :match_1: message|||string
     :match_2: n|||integer
@@ -35,7 +35,8 @@ The type of a variable is the type of the value it refers to.
     Using the code above, match the variables up with their type.
 
 
-.. clickablearea:: 02-ca-1-strings
+.. clickablearea:: var-variables-ca-string
+  :practice: T
   :question: Click the variables representing strings in this block.
   :iscode:
   :feedback: Remember that the type of a variable is the type of the value it refers to.
@@ -46,7 +47,7 @@ The type of a variable is the type of the value it refers to.
   :click-incorrect:pi:endclick: = :click-incorrect:3.1415926535897931:endclick:
 
 
-.. mchoice:: 02-mc-3-assignment
+.. mchoice:: var-variables-mc-assign
    :practice: T
    :answer_a: name = 'Penelope"
    :answer_b: name = "Penelope"

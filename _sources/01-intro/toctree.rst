@@ -9,6 +9,7 @@ Preface and Getting Setup
    01-creativityAndMot.rst
    01-computerHardwareArch.rst
    01-words-and-sentences.rst
+   01-conversing.rst
    01-terminology.rst
    01-writingPrograms.rst
    01-whatIsAProgram.rst
@@ -17,4 +18,4 @@ Preface and Getting Setup
    01-debugging.rst
    01-learning.rst
    01-glossary.rst
-   01-exercises.rst
+   01-Exercises.rst
