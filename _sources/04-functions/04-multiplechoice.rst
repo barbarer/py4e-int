@@ -1,5 +1,5 @@
-Exercises
----------
+Multiple choice practice
+-------------------------
 
 .. mchoice:: 04questionex_1
    :answer_a: It is slang that means "the following code is really cool"
@@ -124,7 +124,7 @@ Exercises
    :feedback_c: Notice that pow is called from within square with a base (b) of 5 and a power (p) of two.
    :feedback_d: Notice that pow is called from within square with a base (b) of 5 and a power (p) of two.
 
-   Consider the following Python code. Note that line numbers are included on the left.
+   Consider the following Python code. Note that line numbers are included on the left. What does this function print?
 
    .. code-block:: python
       :linenos:
@@ -141,90 +141,78 @@ Exercises
       result = square(n)
       print(result)
 
-.. parsonsprob:: 04questionex_9
+.. mchoice:: 04questionex_7
+   :practice: T
+   :answer_a: a
+   :answer_b: len
+   :answer_c: length
+   :answer_d: x
+   :correct: b
+   :feedback_a: Try again!
+   :feedback_b: Correct! This would not work as a variable name because it is already reserved as a built-in function name.
+   :feedback_c: Try again!
+   :feedback_d: Try again!
 
-   Put the code blocks in order below to return the middle characters from the passed string. There are four extra code blocks that are not needed in a correct solution. If the string has less than 3 characters then return the passed string. If the string has an odd length then return the middle character. If the string has an even length return the two middle characters. For example, get_middle(‘abc’) returns ‘b’ and get_middle(‘abcd’) returns ‘bc’.
-   -----
-   def get_avg_drop_lowest(num_list):
-   =====
-   def get_avg_drop_lowest(num_list) #paired
-   =====
-    total = sum(num_list)
-    lowest = min(num_list)
-    num = len(num_list)
-   =====
-      if num == 1:
-   =====
-      if num = 1: #paired
-   =====
-        return total
-   =====
-      else:
-   =====
-        return (total - lowest) / (num - 1)
-   =====
-        return (total - lowest) / (num - 1) #paired
+   Which of the following would NOT work as a variable name?
 
-.. parsonsprob:: 04questionex_7
+.. mchoice:: 04questionex_8
+   :practice: T
+   :answer_a: 34.0
+   :answer_b: 34
+   :answer_c: 33.70
+   :answer_d: 33
+   :correct: d
+   :feedback_a: Try again!
+   :feedback_b: Try again!
+   :feedback_c: Try again!
+   :feedback_d: Correct! The int function always rounds down.
 
-   Put the code blocks in order below to return the middle characters from the passed string. There are four extra code blocks that are not needed in a correct solution. If the string has less than 3 characters then return the passed string. If the string has an odd length then return the middle character. If the string has an even length return the two middle characters. For example, get_middle(‘abc’) returns ‘b’ and get_middle(‘abcd’) returns ‘bc’.
-   -----
-   def get_middle(str):
-   =====
-   Def get_middle(str): #distractor
-   =====
-    num_chars = len(str)
-   =====
-    mid = num_chars // 2
-   =====
-    mid = num_chars / 2 #distractor
-   =====
-    if num_chars < 3:
-   =====
-     return str
-   =====
-    elif num_chars % 2 == 1:
-   =====
-    elif num_chars % 2 == 1
-   =====
-      return str[mid]
-   =====
-    else:
-   =====
-      return str[mid-1:mid+1]
-   =====
-      return str[mid:mid+2]
+   Consider the code below. What prints?
 
-.. parsonsprob:: 04questionex_8
+   .. code-block:: python
+      :linenos:
 
-   Put the code blocks in order below to return the middle characters from the passed string. There are four extra code blocks that are not needed in a correct solution. If the string has less than 3 characters then return the passed string. If the string has an odd length then return the middle character. If the string has an even length return the two middle characters. For example, get_middle(‘abc’) returns ‘b’ and get_middle(‘abcd’) returns ‘bc’.
-   -----
-   def caught_speeding(speed, is_birthday):
-   =====
-    if is_birthday:
-   =====
-      if speed <= 65:
-   =====
-      if speed < 65: #distractor
-   =====
-        return 0
-   =====
-      elif speed <= 85:
-   =====
-        return 1
-   =====
-        Return 1 #distractor
-   =====
-    else:
-   =====
-      if speed <= 60:
-   =====
-        return 0
-   =====
-      elif speed <= 80:
-   =====
-        return 1
-   =====
-      else:
-   =====
-        return 2
+      print(int(33.7))
+
+.. mchoice:: 04questionex_9
+   :practice: T
+   :answer_a: the function header
+   :answer_b: the function body
+   :answer_c: the function definition
+   :correct: a
+   :feedback_a: Correct!
+   :feedback_b: Try again!
+   :feedback_c: Try again! Lines 1 and 2 collectively can be called the function definition.
+
+   Consider the code below. Line 1 can be called...
+
+   .. code-block:: python
+      :linenos:
+
+      def printWeather():
+        print("It is sunny!")
+
+.. mchoice:: 04questionex_10
+   :answer_a: The lyrics print like normal.
+   :answer_b: We get a TypeError.
+   :answer_c: We get a NameError.
+   :answer_d: The program compiles but nothing prints.
+   :correct: c
+   :feedback_a: Try again!
+   :feedback_b: Try again!
+   :feedback_c: Correct! You get a NameError when you call a function before it is defined.
+   :feedback_d: Try again!
+
+   Consider the code block below. What happens when you run this program?
+
+   .. code-block:: python
+
+    repeat_lyrics()
+
+    def repeat_lyrics():
+      print_lyrics()
+      print_lyrics()
+
+    def print_lyrics():
+      print("I'm a lumberjack, and I'm okay.")
+      print('I sleep all night and I work all day.')

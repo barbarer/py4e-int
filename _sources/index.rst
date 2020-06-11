@@ -39,3 +39,4 @@ Table of Contents
    01-intro/toctree.rst
    02-variables/toctree.rst
    04-functions/toctree.rst
+   05-iterations/toctree.rst

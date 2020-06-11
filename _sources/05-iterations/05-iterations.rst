@@ -1,8 +1,5 @@
-
 Iteration
 =========
-
-\index{iteration}
 
 Updating variables
 ------------------
@@ -238,7 +235,7 @@ because when the ``continue`` is executed, it ends the current
 iteration and jumps back to the ``while`` statement to start
 the next iteration, thus skipping the ``print`` statement.
 
-Definite loops using ``for`` 
+Definite loops using ``for``
 ---------------------------------
 
 \index{for statement}
@@ -265,7 +262,7 @@ and a loop body:
    print('Done!')
 
 
-In Python terms, the variable ``friends`` is a list^[We will examine lists 
+In Python terms, the variable ``friends`` is a list^[We will examine lists
 in more detail in a later chapter.] of
 three strings and the ``for`` loop goes through the list and
 executes the body once for each of the three strings in the list
@@ -312,14 +309,14 @@ through.
 These loops are generally constructed by:
 
 
-* 
+*
   Initializing one or more variables before the loop starts
 
-* 
+*
   Performing some computation on each item in the loop body, possibly
   changing the variables in the body of the loop
 
-* 
+*
   Looking at the resulting variables when the loop completes
 
 We will use a list of numbers to demonstrate the concepts and
