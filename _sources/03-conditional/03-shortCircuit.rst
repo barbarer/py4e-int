@@ -3,8 +3,8 @@ Short-circuit evaluation of logical expressions
 -----------------------------------------------
 
 When Python is processing a logical expression such as ``x >= 2 and
-(x/y) > 2``\ , it evaluates the expression from left to right.
-Because of the definition of ``and``\ , if ``x`` is less
+(x/y) > 2``, it evaluates the expression from left to right.
+Because of the definition of ``and``, if ``x`` is less
 than 2, the expression ``x >= 2`` is ``False`` and so
 the whole expression is ``False`` regardless of whether
 ``(x/y) > 2`` evaluates to ``True`` or
@@ -69,8 +69,9 @@ cause an error as follows:
 
 
 In the first logical expression, ``x >= 2`` is
-``False`` so the evaluation stops at the ``and``. In
-the second logical expression, ``x >= 2`` is ``True``
+``False`` so the evaluation stops at the ``and``.
+
+In the second logical expression, ``x >= 2`` is ``True``
 but ``y != 0`` is ``False`` so we never reach
 ``(x/y)``.
 
@@ -80,3 +81,41 @@ In the third logical expression, the ``y != 0`` is *after* the
 In the second expression, we say that ``y != 0`` acts as a
 *guard* to insure that we only execute ``(x/y)``
 if ``y`` is non-zero.
+
+.. mchoice:: cndtnl-sc-mc-guard
+    :practice: T
+    :answer_a: x >= 2
+    :answer_b: y != 0
+    :answer_c: (x/y) > 2
+    :answer_d: and
+    :correct: b
+    :feedback_a: Try again. This element is making sure x matches a condition.
+    :feedback_b: Correct! This element is a guard, making sure the code does not try to divide by 0.
+    :feedback_c: Try again. This element is making sure x/y matches a condition.
+    :feedback_d: Try again. This is a logical operator for the boolean expression.
+
+    Which of the following is a *guard* for the code below?
+
+    ::
+
+      x >= 2 and y != 0 and (x/y) > 2
+
+.. fillintheblank:: cndtnl-sc-fitb-guard
+    :practice: T
+
+    True or False? The guard should be placed before an expression is evaluated.
+
+    - :[Tt]rue: Correct! A guard is used to avoid runtime errors.
+      :[Ff]alse: Try again!
+      :.*: Try again!
+
+.. dragndrop:: cndtnl-sc-dnd-terms
+    :feedback: What is the purpose of each term?
+    :match_1: guardian pattern|||A logical expression with additional comparisons to take advantage
+              of the short circuit behavior.
+    :match_2: short circuit|||When Python is part-way through evaluating a logical expression and stops
+              the evaluation because Python knows the final value for the expression without needing to
+              evaluate the rest of the expression.
+    :match_3: guard||| A comparison put in place to cause short circuit behavior and avoid a runtime error.
+
+    Match each term with its meaning.

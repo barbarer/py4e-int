@@ -55,7 +55,7 @@ Exercises
    :feedback_c: The value is not numeric with a decimal point.
    :feedback_d: Strings can be enclosed in single quotes.
 
-   What is the data type of 'this is what kind of data'?
+   What is the data type of ``'this is what kind of data'``?
 
 .. mchoice:: var-ex-mc-assign
    :practice: T
@@ -154,7 +154,7 @@ Exercises
 
      street = "125 Main Street"
      print("The address is " + "street")
-     
+
 .. dragndrop:: var-ex-dnd-types
   :practice: T
   :feedback: Try running these commands in your terminal window.

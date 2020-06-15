@@ -27,21 +27,26 @@ not execute the following statement.
 Here is a sample program to convert a Fahrenheit temperature to a
 Celsius temperature:
 
-\VerbatimInput{../code3/fahren.py}
+.. code-block:: cndtnl_temp
+
+   inp = input('Enter Fahrenheit Temperature: ')
+   fahr = float(inp)
+   cel = (fahr - 32.0) * 5.0 / 9.0
+   print(cel)
+
+Example:
+
+.. code-block::
+
+   Enter Fahrenheit Temperature:72
+   22.22222222222222
+
 
 If we execute this code and give it invalid input, it simply fails with
 an unfriendly error message:
 
 .. code-block::
 
-   python fahren.py
-   Enter Fahrenheit Temperature:72
-   22.22222222222222
-
-
-.. code-block::
-
-   python fahren.py
    Enter Fahrenheit Temperature:fred
    Traceback (most recent call last):
      File "fahren.py", line 2, in <module>
@@ -61,7 +66,15 @@ Python as an "insurance policy" on a sequence of statements.
 
 We can rewrite our temperature converter as follows:
 
-\VerbatimInput{../code3/fahren2.py}
+.. code-block::
+
+    inp = input('Enter Fahrenheit Temperature:')
+    try:
+        fahr = float(inp)
+        cel = (fahr - 32.0) * 5.0 / 9.0
+        print(cel)
+    except:
+        print('Please enter a number')
 
 Python starts by executing the sequence of statements in the
 ``try`` block. If all goes well, it skips the
@@ -70,16 +83,17 @@ Python starts by executing the sequence of statements in the
 and executes the sequence of statements in the ``except``
 block.
 
+Example:
+
 .. code-block::
 
-   python fahren2.py
    Enter Fahrenheit Temperature:72
    22.22222222222222
 
+If we execute this code and give it invalid input, it executes the statements in the ``except`` block:
 
 .. code-block::
 
-   python fahren2.py
    Enter Fahrenheit Temperature:fred
    Please enter a number
 
@@ -89,3 +103,39 @@ Handling an exception with a ``try`` statement is called
 ``except`` clause prints an error message. In general, catching
 an exception gives you a chance to fix the problem, or try again, or at
 least end the program gracefully.
+
+.. fillintheblank:: cndtnl-try-fitb-equivalent
+
+    The ``try / except`` feature is more or less a(n) _______ for your code.
+
+    - :[Ii]nsurace [Pp]olicy: Correct! Try / except acts as an insurance policy to catch expected
+                              or unexpected errors in your code.
+      :.*: Try again.
+
+.. shortanswer:: cndtnl-try-sa-meaning
+    :practice: T
+
+    What is the purpose of the ``try / except`` feature?
+
+.. parsonsprob:: cndtnl-try-pp-temp
+    :numbered: left
+
+    The following program should get a temperature in Fahrenheit from the user, then print out the
+    temperature in Celsius. If the input is not a number, it should ask the user to enter a
+    number again. Be sure to indent correctly!
+    -----
+    inp = input('Enter Fahrenheit Temperature:')
+    =====
+    try:
+    =====
+        fahr = float(inp)
+    =====
+        fahr = int(inp) #paired
+    =====
+        cel = (fahr - 32.0) * 5.0 / 9.0
+    =====
+        print(cel)
+    =====
+    except:
+    =====
+        print('Please enter a number')

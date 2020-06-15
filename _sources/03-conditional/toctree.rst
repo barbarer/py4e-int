@@ -16,4 +16,5 @@ Conditional execution
    03-debugging.rst
    03-glossary.rst
    03-Exercises.rst
-   
+   03-MixedupCode.rst
+   03-WriteCode.rst
