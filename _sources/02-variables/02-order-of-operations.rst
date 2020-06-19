@@ -90,8 +90,13 @@ the computations are performed in the order you intend.
    Put these code blocks in the oder that they would run using the order of operations.
    -----
    (6 * 52 + 3)
+   =====
    3**2
+   =====
    7 * 5
+   =====
    33 / 11
+   =====
    15 + 20
+   =====
    77 - 8

@@ -4,21 +4,23 @@ Mixed-up code exercises
 .. parsonsprob:: var-mixed-hello
    :practice: T
    :numbered: left
-   :adaptive:
 
    The following program segment should prompt the user for their name and say hello to them.
    But, the blocks have been mixed up and include extra blocks that aren't correct.
    -----
    name = input('What is your name?\n')
+   =====
    name = "yourName" #distractor
+   =====
    greeting = "Hello "
+   =====
    print(greeting + name)
+   =====
    print("Hello" name) #distractor
 
 .. parsonsprob:: var-mixed-lemons
    :numbered: left
    :practice: T
-   :adaptive:
    :noindent:
 
    The following program segment should print the phrase, "Carla loves lemons.".
@@ -33,17 +35,21 @@ Mixed-up code exercises
 .. parsonsprob:: var-mixed-hours
    :practice: T
    :numbered: left
-   :adaptive:
 
    The following program segment should ask the user their hours per week and pay rate,
    then print a statement with their gross pay. But, the blocks have been mixed up and
    includes extra blocks that aren't correct.
    -----
    hours = input('How many hours do you work in a week?')
+   =====
    payRate = input('What is your hourly pay?')
+   =====
    pay rate = input('What is your hourly pay?') #distractor
+   =====
    grossPay = hours * payRate
+   =====
    print("Your gross pay is " + grossPay)
+   =====
    print("Your gross pay is" grossPay) #distractor
 
 .. parsonsprob:: var-mixed-price
@@ -66,7 +72,6 @@ Mixed-up code exercises
 .. parsonsprob:: var-mixed-tip
    :numbered: left
    :practice: T
-   :adaptive:
    :noindent:
 
    The following program segment should print out the cost per person for a dinner including the tip.
@@ -88,7 +93,6 @@ Mixed-up code exercises
 .. parsonsprob:: var-mixed-switch
    :numbered: left
    :practice: T
-   :adaptive:
    :noindent:
 
    The following program segment should swap the values of x and y after val1 and val 2 are assigned
@@ -109,7 +113,6 @@ Mixed-up code exercises
 .. parsonsprob:: var-mixed-discount
   :numbered: left
   :practice: T
-  :adaptive:
   :noindent:
 
   The following program segment should print how much you will have to pay for an item that is 60% off
@@ -121,6 +124,8 @@ Mixed-up code exercises
   =====
   savings = price * discount
   =====
+  savings = price / discount #paired
+  =====
   finalPrice = price - savings
   =====
   print(finalPrice)
@@ -130,7 +135,6 @@ Mixed-up code exercises
 .. parsonsprob:: var-mixed-cookies
    :numbered: left
    :practice: T
-   :adaptive:
    :noindent:
 
    The following program segment should print the phrase, "Baking cookies makes Chris happier than
@@ -149,7 +153,6 @@ Mixed-up code exercises
 .. parsonsprob:: var-mixed-camp
    :numbered: left
    :practice: T
-   :adaptive:
    :noindent:
 
    The following program segment should print the phrase, "It takes us 2 hours and 45 minutes to get
@@ -165,7 +168,6 @@ Mixed-up code exercises
 .. parsonsprob:: var-mixed-numbers
    :numbered: left
    :practice: T
-   :adaptive:
    :noindent:
 
    The following program segment should print the phrase, "3 + 300 + 7 = 310.". But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>

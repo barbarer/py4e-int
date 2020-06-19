@@ -75,14 +75,18 @@ We will see how to handle this kind of error later.
 .. parsonsprob:: var-input-pp-prompt
    :practice: T
    :numbered: left
-   :adaptive:
 
    Construct a block of code that asks the user for a number and prints three times that number.
-   There is an extra piece of code to watch out for.
+   There is extra code to watch out for.
    -----
    prompt = 'Please enter a number\n'
+   =====
    userNumber = input(prompt)
+   =====
    user number = input(prompt) #paired
+   =====
    print(3 * int(userNumber))
+   =====
    print(3 * userNumber) #paired
+   =====
    print(userNumber) #distractor

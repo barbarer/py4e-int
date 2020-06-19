@@ -1,67 +1,86 @@
 Glossary
 --------
 
-body
-:   The sequence of statements within a compound statement.
-\index{body}
+.. glossary::
+    Body
+      The sequence of statements within a compound statement.
 
-boolean expression
-:   An expression whose value is either ``True`` or ``False``.
-\index{boolean expression}
-\index{expression!boolean}
+    Boolean Expression
+      An expression whose value is either ``True`` or ``False``.
 
-branch
-:   One of the alternative sequences of statements in a conditional statement.
-\index{branch}
+    Branch
+      One of the alternative sequences of statements in a conditional statement.
 
-chained conditional
-:   A conditional statement with a series of alternative branches.
-\index{chained conditional}
-\index{conditional!chained}
+    Chained Conditional
+      A conditional statement with a series of alternative branches.
 
-comparison operator
-:   One of the operators that compares its operands: ``==``\ ,
-    ``!=``\ , ``>``\ , ``<``\ , ``>=``\ , and ``<=``.
+    Comparison Operator
+      One of the operators that compares its operands: ``==``, ``!=``, ``>``,
+      ``<``, ``>=``, and ``<=``.
 
-conditional statement
-:   A statement that controls the flow of execution depending on some
-    condition.
-\index{conditional statement}
-\index{statement!conditional}
+    Conditional Statement
+      A statement that controls the flow of execution depending on some condition.
 
-condition
-:   The boolean expression in a conditional statement that determines
-    which branch is executed.
-\index{condition}
+    Condition
+      The boolean expression in a conditional statement that determines which
+      branch is executed.
 
-compound statement
-:   A statement that consists of a header and a body. The header ends
-    with a colon (:). The body is indented relative to the header.
-\index{compound statement}
+    Compound Statement
+      A statement that consists of a header and a body. The header ends with a
+      colon (:). The body is indented relative to the header.
 
-guardian pattern
-:   Where we construct a logical expression with additional comparisons
-    to take advantage of the short-circuit behavior.
-\index{guardian pattern}
-\index{pattern!guardian}
+    Guardian Pattern
+      Where we construct a logical expression with additional comparisons to
+      take advantage of the short-circuit behavior.
 
-logical operator
-:   One of the operators that combines boolean expressions:
-    ``and``\ , ``or``\ , and ``not``.
+    Logical Operator
+      One of the operators that combines boolean expressions: ``and``, ``or``,
+      and ``not``.
 
-nested conditional
-:   A conditional statement that appears in one of the branches of
-    another conditional statement.
-\index{nested conditional}
-\index{conditional!nested}
+    Nested Conditional
+      A conditional statement that appears in one of the branches of another
+      conditional statement.
 
-traceback
-:   A list of the functions that are executing, printed when an
-    exception occurs.
-\index{traceback}
+    Traceback
+      A list of the functions that are executing, printed when an exception occurs.
 
-short circuit
-:   When Python is part-way through evaluating a logical expression and
-    stops the evaluation because Python knows the final value for the
-    expression without needing to evaluate the rest of the expression.
-\index{short circuit}
+    Short Circuit
+      When Python is part-way through evaluating a logical expression and stops
+      the evaluation because Python knows the final value for the expression
+      without needing to evaluate the rest of the expression.
+
+.. dragndrop:: 03-dnd-glossary1
+    :feedback: Look above for these terms.
+    :match_1: body|||The sequence of statements within a compound statement.
+    :match_2: branch|||One of the alternative sequences of statements in a conditional statement.
+    :match_3: guardian pattern|||Where we construct a logical expression with additional
+              comparisons to take advantage of the short-circuit behavior.
+    :match_4: short circuit|||When Python is part-way through evaluating a logical expression and
+              stops the evaluation because Python knows the final value for the expression without
+              needing to evaluate the rest of the expression.
+
+    Match each term with its definition.
+
+.. dragndrop:: 03-dnd-glossary2
+    :feedback: Look above for these terms.
+    :match_1: boolean expression|||An expression whose value is either ``True`` or ``False``.
+    :match_2: comparison operator|||One of the operators that compares its operands: ``==``,
+              ``!=``, ``>``, ``<``, ``>=``, and ``<=``.
+    :match_3: logical operator|||One of the operators that combines boolean expressions:
+              ``and``, ``or``, and ``not``.
+    :match_4: traceback|||A list of the functions that are executing, printed when an exception occurs.
+
+    Match each term with its definition.
+
+.. dragndrop:: 03-dnd-glossary3
+    :feedback: Look above for these terms.
+    :match_1: chained conditional|||A conditional statement with a series of alternative branches.
+    :match_2: conditional statement|||A statement that controls the flow of execution depending
+              on some condition.
+    :match_3: condition|||The boolean expression in a conditional statement that determines which
+              branch is executed.
+    :match_4: compound statement|||A statement that consists of a header and a body.
+    :match_5: nested conditional|||A conditional statement that appears in one of the branches of
+              another conditional statement.
+
+    Match each term with its definition.

@@ -16,8 +16,7 @@ The boolean expression after the ``if`` statement is called the
 *condition*. We end the ``if`` statement with a
 colon character (:) and the line(s) after the if statement are indented.
 
-.. image:: height=1.5in@../images/if
-   :target: height=1.5in@../images/if
+.. figure:: ../images/if.svg
    :alt: If Logic
 
 
@@ -27,7 +26,7 @@ executed. If the logical condition is false, the indented statement is
 skipped.
 
 ``if`` statements have the same structure as function
-definitions or ``for`` loops^[We will learn about functions in Chapter 4 and loops in Chapter 5.].
+definitions or ``for`` loops [We will learn about functions in Chapter 4 and loops in Chapter 5.].
 The statement consists of a
 header line that ends with the colon character (:) followed by an
 indented block. Statements like this are called *compound
@@ -59,7 +58,8 @@ in the middle of a block of statements, as shown below:
    >>>
 
 
-When using the Python interpreter, you must leave a blank line at the end of a block, otherwise Python will return an error:
+When using the Python interpreter, you must leave a blank line at the end of a
+block, otherwise Python will return an error:
 
 .. code-block:: python
 
@@ -73,4 +73,62 @@ When using the Python interpreter, you must leave a blank line at the end of a b
    SyntaxError: invalid syntax
 
 
-A blank line at the end of a block of statements is not necessary when writing and executing a script, but it may improve readability of your code.
+A blank line at the end of a block of statements is not necessary when writing
+and executing a script, but it may improve readability of your code.
+
+.. mchoice:: cndtnl-cndex-mc-if1
+    :practice: T
+    :answer_a: line 3
+    :answer_b: line 4
+    :correct: b
+    :feedback_a: Line 3 will only execute when x is less than 3.
+    :feedback_b: Execution continues at the next statement beyond the block following the <code>if</code> when the logical expression is false.
+
+    Given the code below, what line executes after line 2 executes?
+
+    ::
+
+      x = 4
+      if x < 3:
+          print ("x is less than 3")
+      print ("All done")
+
+.. mchoice:: cndtnl-cndex-mc-and
+    :practice: T
+    :answer_a: 1 to 10
+    :answer_b: 0 to 9
+    :answer_c: 1 to 9
+    :answer_d: all values of x
+    :correct: c
+    :feedback_a: Try again. This would be true if the second expression was x <= 10.
+    :feedback_b: Try again. This would be true if the first logical expression was x >= 0.
+    :feedback_c: Correct! The "condition true" will only be printed when x is greater than 0 and less than 10 so this is the range from 1 to 9.
+    :feedback_d: Try again. This would be true if the conditional was x > 0 <b>or</b> x < 10.
+
+    Given the code below, what describes the values of x that will cause the code to print "condition true"?
+
+    ::
+
+        if x > 0 and x < 10:
+            print ("condition true")
+        print ("All done")
+
+.. mchoice:: cndtnl-cndex-mc-or
+    :practice: T
+    :answer_a: all values of x
+    :answer_b: 1 to 9
+    :answer_c: 0 to 9
+    :answer_d: 1 to 10
+    :correct: a
+    :feedback_a: Correct! This will be true if x is greater than 0 <b>or</b> less than 10.  This covers all possible values of x.
+    :feedback_b: Try again. This would be true if the logical expressions were joined with and instead of or.
+    :feedback_c: Try again. This would be true if the logical expressions were jointed with and instead of or and if the first logical expression was x >= 0.
+    :feedback_d: Try again. This would be true if the logical expressions were jointed with and instead of or and if the first logical expression was x >= 0 and the second expression was <= 10.
+
+    Given the code below, what describes the values of x that will cause the code to print "condition true"?
+
+    ::
+
+        if x > 0 or x < 10:
+            print ("condition true")
+        print ("All done")
