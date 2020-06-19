@@ -1,4 +1,4 @@
-Exercises continued
+Exercises
 --------------------
 .. question:: functions_ex_0
 
@@ -6,7 +6,7 @@ Exercises continued
 
         .. tab:: Question
 
-            .. actex:: ex_0
+            .. activecode:: ex_0
                :practice: T
                :autograde: unittest
 
@@ -45,7 +45,7 @@ Exercises continued
 
         .. tab:: Question
 
-            .. actex:: ex_01
+            .. activecode:: ex_01
                :practice: T
                :autograde: unittest
 
@@ -82,7 +82,7 @@ Exercises continued
 
         .. tab:: Question
 
-            .. actex:: ex_02
+            .. activecode:: ex_02
                :practice: T
                :autograde: unittest
 
@@ -121,7 +121,7 @@ Exercises continued
 
         .. tab:: Question
 
-            .. actex:: ex_03
+            .. activecode:: ex_03
                :practice: T
                :autograde: unittest
 
@@ -162,7 +162,7 @@ Exercises continued
 
         .. tab:: Question
 
-            .. actex:: ex_4_1
+            .. activecode:: ex_4_1
                 :practice: T
                 :autograde: unittest
 
@@ -202,7 +202,7 @@ Exercises continued
 
         .. tab:: Question
 
-            .. actex:: ex_4_2
+            .. activecode:: ex_4_2
                 :practice: T
                 :autograde: unittest
 
@@ -243,7 +243,7 @@ Exercises continued
 
         .. tab:: Question
 
-            .. actex:: ex_4_3
+            .. activecode:: ex_4_3
                 :practice: T
                 :autograde: unittest
 
@@ -284,7 +284,7 @@ Exercises continued
 
         .. tab:: Question
 
-            .. actex:: ex_4_4
+            .. activecode:: ex_4_4
                 :practice: T
                 :autograde: unittest
 
@@ -345,7 +345,7 @@ Exercises continued
 
         .. tab:: Question
 
-            .. actex:: ex_5_13
+            .. activecode:: ex_5_13
                :practice: T
                :autograde: unittest
 
@@ -385,7 +385,7 @@ Exercises continued
 
         .. tab:: Question
 
-            .. actex:: ex_6_13
+            .. activecode:: ex_6_13
                :practice: T
                :autograde: unittest
 

@@ -109,8 +109,8 @@ What happens when you run this program?**
    .. code-block:: python
 
     def repeat_lyrics():
-    print_lyrics()
-    print_lyrics()
+      print_lyrics()
+      print_lyrics()
 
     def print_lyrics():
       print("I'm a lumberjack, and I'm okay.")
