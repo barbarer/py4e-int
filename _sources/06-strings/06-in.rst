@@ -1,0 +1,50 @@
+The ``in`` operator
+-----------------------
+The word ``in`` is a boolean operator that takes two strings
+and returns ``True`` if the first appears as a substring in the
+second:
+
+.. code-block:: python
+
+   >>> 'a' in 'banana'
+   True
+   >>> 'seed' in 'banana'
+   False
+
+.. mchoice:: str-in-mc-tf
+    :practice: T
+    :answer_a: true
+    :answer_b: false
+    :correct: a
+    :feedback_a: Correct! In is a boolean operator that takes two strings and returns true if the first is part of the second.
+    :feedback_b: Try again!
+
+    True or false? The word ``in`` is a boolean operator.
+
+.. mchoice:: str-in-mc-lime
+    :practice: T
+    :answer_a: true
+    :answer_b: false
+    :correct: a
+    :feedback_a: Correct! This returns True because there is a string 'i' in the string 'lime'.
+    :feedback_b: Try again!
+
+    True or false? The following code returns True.
+
+    ::
+
+      'i' in 'lime'
+
+.. mchoice:: str-in-mc-hat
+    :practice: T
+    :answer_a: false
+    :answer_b: true
+    :correct: b
+    :feedback_a: Try again!
+    :feedback_b: Correct! This returns False because there is a string 'hat' in the string 'chatter'.
+
+    True or false? The following code returns True.
+
+    ::
+
+      'hat' in 'chatter'
