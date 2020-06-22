@@ -40,5 +40,6 @@ Table of Contents
    02-variables/toctree.rst
    03-conditional/toctree.rst
    04-functions/toctree.rst
+   05-iterations/toctree.rst
    06-strings/toctree.rst
    07-files/toctree.rst
