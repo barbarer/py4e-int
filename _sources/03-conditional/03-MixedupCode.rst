@@ -2,8 +2,8 @@ Mixed-up code exercises
 -----------------------
 .. parsonsprob:: cndtnl-mixed-three
     :practice: T
-    :numbered: left
     :adaptive:
+    :numbered: left
 
     The following program should prints “x is less than 3” and then “All done” when x is less than 3.
     Be sure to indent correctly!
@@ -17,6 +17,7 @@ Mixed-up code exercises
     print ("All done")
 
 .. parsonsprob:: cndtnl-mixed-hi
+    :adaptive:
     :practice: T
     :numbered: left
 
@@ -47,6 +48,7 @@ Mixed-up code exercises
 
 .. parsonsprob:: cndtnl-mixed-price
    :practice: T
+   :adaptive:
    :numbered: left
 
    The following program should calculate the total price, but the lines are mixed up. The price is
@@ -71,6 +73,7 @@ Mixed-up code exercises
 
 .. parsonsprob:: cndtnl-mixed-ten
     :practice: T
+    :adaptive:
     :numbered: left
 
     The following program should print ``x is a number from 1 to 10`` if the value of x is 1-10,
@@ -97,6 +100,7 @@ Mixed-up code exercises
 
 .. parsonsprob:: cndtnl-mixed-twelve
     :practice: T
+    :adaptive:
     :numbered: left
 
     Arrange the code to calculate and print the cost of a 14 mile cab ride. If the distance traveled
@@ -125,6 +129,7 @@ Mixed-up code exercises
 
 .. parsonsprob:: cndtnl-mixed-nested
     :practice: T
+    :adaptive:
     :numbered: left
 
     Arrange the following code so that after x and y are defined, they are compared and if the value of x
@@ -151,6 +156,7 @@ Mixed-up code exercises
 
 .. parsonsprob:: cndtnl-mixed-logical
     :practice: T
+    :adaptive:
     :numbered: left
 
     Arrange the following code so that after x and y are defined, they are compared and if the value of x
@@ -176,6 +182,7 @@ Mixed-up code exercises
 
 .. parsonsprob:: cndtnl-mixed-grade
     :practice: T
+    :adaptive:
     :numbered: left
 
     Arrange the code to print the grade equivalent (string) for a score. It should return E for any value
@@ -211,6 +218,7 @@ Mixed-up code exercises
 
 .. parsonsprob:: cndtnl-mixed-even
     :practice: T
+    :adaptive:
     :numbered: left
 
     The following program should determine whether a number is odd or even, but the lines are mixed up.
@@ -232,6 +240,7 @@ Mixed-up code exercises
 
 .. parsonsprob:: cndtnl-mixed-goodJob
     :practice: T
+    :adaptive:
     :numbered: left
 
     The following program should print "Good job" when the number is between 1 and 10 (inclusive) or is 15

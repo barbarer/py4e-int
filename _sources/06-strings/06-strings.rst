@@ -538,7 +538,7 @@ can make multiple method calls in a single expression.
 the function in the previous exercise. Read the documentation of this
 method at:
 
-https://docs.python.org/library/stdtypes.html#string-methods 
+https://docs.python.org/library/stdtypes.html#string-methods
 
 Write an invocation that counts the number of times the letter a occurs
 in "banana".**
@@ -628,7 +628,7 @@ value in a sentence:
 
 
 If there is more than one format sequence in the string, the second
-argument has to be a tuple^[A tuple is a sequence of comma-separated 
+argument has to be a tuple^[A tuple is a sequence of comma-separated
 values inside a pair of parenthesis. We will cover tuples in Chapter 10].
 Each format sequence is matched with an
 element of the tuple, in order.

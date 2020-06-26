@@ -32,6 +32,20 @@ Comments are most useful when they document non-obvious features of the
 code. It is reasonable to assume that the reader can figure out *what*
 the code does; it is much more useful to explain *why*.
 
+.. mchoice:: var-comments-mc-use
+   :practice: T
+   :answer_a: To add notes to code.
+   :answer_b: To assign names to variables.
+   :answer_c: To run code.
+   :answer_d: To keep track of how many times a loop has iterated.
+   :correct: a
+   :feedback_a: Comments are used to add notes to code.
+   :feedback_b: Comments are not read by the program when code is running, so variable assignments should not be commented out.
+   :feedback_c: Try again! Comments do not run the code.
+   :feedback_d: Try again! Please do not keep track of iterations in a comment!
+
+   What are comments used for?
+
 This comment is redundant with the code and useless:
 
 .. code-block:: python
@@ -54,23 +68,10 @@ make complex expressions hard to read, so there is a trade-off.
 
     What is the symbol for a single line of comments?
 
-    - :"#": Correct!
+    - :"#": Yes, # is used to start a single line of comments.
       :''' ''': Close! Three sets of quotation marks are used for multi-line comments.
       :.*: Try again!
 
-.. mchoice:: var-comments-mc-use
-   :practice: T
-   :answer_a: To add notes to code.
-   :answer_b: To assign names to variables.
-   :answer_c: To run code.
-   :answer_d: To keep track of how many times a loop has iterated.
-   :correct: a
-   :feedback_a: Correct!
-   :feedback_b: Comments are not read by the program when code is running, so variable assignments should not be commented out.
-   :feedback_c: Try again!
-   :feedback_d: Try again! (please do not keep track of iterations in a comment)
-
-   What are comments used for?
 
 .. mchoice:: var-comments-mc-false
    :practice: T
@@ -79,10 +80,10 @@ make complex expressions hard to read, so there is a trade-off.
    :answer_c: Comments function like any other line of code.
    :answer_d: Comments cause the rest of the line to be ignored.
    :correct: c
-   :feedback_a: Try again!
-   :feedback_b: Try again!
-   :feedback_c: Correct! Comments are ignored and have no effect on the program.
-   :feedback_d: Try again!
+   :feedback_a: Try again! This is true! Which of the options is not?
+   :feedback_b: Try again! This is true! Which of the options is not?
+   :feedback_c: Comments are ignored and have no effect on the program.
+   :feedback_d: Try again! This is true! Which of the options is not?
 
    Which of the following is **not** true about comments?
 
@@ -93,10 +94,10 @@ make complex expressions hard to read, so there is a trade-off.
    :answer_c: Milo + is this many years old: + 12
    :answer_d: Nothing will print.
    :correct: d
-   :feedback_a: Try again!
-   :feedback_b: Try again!
-   :feedback_c: Try again!
-   :feedback_d: Correct! The print statement is commented out, so this code only assigns values to each variable.
+   :feedback_a: Try again! Remember that # is the symbol for comments.
+   :feedback_b: Try again! Remember that # is the symbol for comments.
+   :feedback_c: Try again! Remember that # is the symbol for comments.
+   :feedback_d: The print statement is commented out, so this code only assigns values to each variable.
 
    What will be printed after the following code executes?
 

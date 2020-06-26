@@ -27,7 +27,8 @@ not execute the following statement.
 Here is a sample program to convert a Fahrenheit temperature to a
 Celsius temperature:
 
-.. code-block:: cndtnl_temp
+.. activecode:: cndtnlTemp
+   :caption: Temperature converter
 
    inp = input('Enter Fahrenheit Temperature: ')
    fahr = float(inp)
@@ -64,9 +65,18 @@ statements (the except block) are ignored if there is no error.
 You can think of the ``try`` and ``except`` feature in
 Python as an "insurance policy" on a sequence of statements.
 
+.. fillintheblank:: cndtnl-try-fitb-equivalent
+
+    The ``try / except`` feature is more or less a(n) _______ for your code.
+
+    - :[Ii]nsurace [Pp]olicy: Try / except acts as an insurance policy to catch expected
+                              or unexpected errors in your code.
+      :.*: Try again.
+
 We can rewrite our temperature converter as follows:
 
-.. code-block::
+.. activecode:: cndtnlTempTry
+    :caption: Temperature converter using try/except
 
     inp = input('Enter Fahrenheit Temperature:')
     try:
@@ -104,20 +114,14 @@ Handling an exception with a ``try`` statement is called
 an exception gives you a chance to fix the problem, or try again, or at
 least end the program gracefully.
 
-.. fillintheblank:: cndtnl-try-fitb-equivalent
-
-    The ``try / except`` feature is more or less a(n) _______ for your code.
-
-    - :[Ii]nsurace [Pp]olicy: Correct! Try / except acts as an insurance policy to catch expected
-                              or unexpected errors in your code.
-      :.*: Try again.
-
 .. shortanswer:: cndtnl-try-sa-meaning
     :practice: T
 
     What is the purpose of the ``try / except`` feature?
 
 .. parsonsprob:: cndtnl-try-pp-temp
+    :practice: T
+    :adaptive:
     :numbered: left
 
     The following program should get a temperature in Fahrenheit from the user, then print out the

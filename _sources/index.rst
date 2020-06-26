@@ -41,3 +41,5 @@ Table of Contents
    03-conditional/toctree.rst
    04-functions/toctree.rst
    05-iterations/toctree.rst
+   06-strings/toctree.rst
+   07-files/toctree.rst

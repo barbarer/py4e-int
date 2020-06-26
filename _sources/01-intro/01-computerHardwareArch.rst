@@ -47,6 +47,20 @@ The high-level definitions of these parts are as follows:
   slower and at times unreliable form of *Secondary
   Memory*.
 
+.. mchoice:: intro-hardware-mc-storage
+  :practice: T
+  :answer_a: Main Memory
+  :answer_b: Secondary Memory
+  :answer_c: Central Processing Unit
+  :answer_d: Input Devices
+  :correct: b
+  :feedback_a: Information stored in the main memory vanishes when the computer is turned off.
+  :feedback_b: Correct! The secondary memory will hod information without power.
+  :feedback_c: Try again! The CPU is what does the computing.
+  :feedback_d: Try again! Input devices are other physical hardwares.
+
+  Which of the following will keep information stored without a power source?
+
 While most of the detail of how these components work is best left to
 computer builders, it helps to have some terminology so we can talk
 about these different parts as we write our programs.
@@ -71,20 +85,6 @@ instructions in advance. We call these stored instructions a
 *program* and the act of writing these instructions down
 and getting the instructions to be correct *programming*.
 
-
-.. mchoice:: intro-hardware-mc-storage
-  :practice: T
-  :answer_a: Main Memory
-  :answer_b: Secondary Memory
-  :answer_c: Central Processing Unit
-  :answer_d: Input Devices
-  :correct: b
-  :feedback_a: Information stored in the main memory vanishes when the computer is turned off.
-  :feedback_b: Correct!
-  :feedback_c: Try again!
-  :feedback_d: Try again!
-
-  Which of the following will keep information stored without a power source?
 
 .. shortanswer:: intro-hardware-sa-program
   :practice: T

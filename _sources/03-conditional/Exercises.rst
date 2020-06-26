@@ -10,7 +10,7 @@ Exercises
     :correct: c
     :feedback_a: Try again. True and False are both Boolean literals.
     :feedback_b: Try again. The comparison between two numbers via == results in either True or False (in this case False),  both Boolean values.
-    :feedback_c: Correct! 3 + 4 evaluates to 7, which is a number, not a Boolean value.
+    :feedback_c: 3 + 4 evaluates to 7, which is a number, not a Boolean value.
     :feedback_d: Try again. 3 + 4 evaluates to 7.  7 == 7 then evaluates to True, which is a Boolean value.
 
     Which of the following is **not** a boolean expression?
@@ -219,7 +219,7 @@ Exercises
     :answer_d: II and III
     :correct: b
     :feedback_a: Incorrect. This evaluates to False - a statement cannot be True AND False.
-    :feedback_b: Correct. The statement can be either True or False which evaluates to True.
+    :feedback_b: The statement can be either True or False which evaluates to True.
     :feedback_c: Incorrect. I evaluates to False.
     :feedback_d: Incorrect. III evaluates to False because a statement cannot be False AND True.
 
@@ -238,7 +238,7 @@ Exercises
     :feedback_a: Incorrect. The two variables can be equal to each other and still be negative integers.
     :feedback_b: Incorrect. Regardless of whether the two variables are equal or not equal to one another, they can still be negative.
     :feedback_c: Incorrect. The two variables would both be negative in this case.
-    :feedback_d: Correct. If num1 is equal to num2 and num2 is greater than 0, then both values must be positive.
+    :feedback_d: If num1 is equal to num2 and num2 is greater than 0, then both values must be positive.
 
     Given two variables, num1 and num2, which of the following would mean that both num1 and num2 are
     positive integers?
@@ -251,7 +251,7 @@ Exercises
     :correct: d
     :feedback_a: Try again! True is not a float.
     :feedback_b: Try again! True is not a string.
-    :feedback_c: Correct! True is a boolean value.
+    :feedback_c: True is a boolean value.
     :feedback_d: Try again! True is not an integer.
 
     ``True`` is what type of variable?

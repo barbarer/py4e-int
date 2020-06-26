@@ -99,9 +99,9 @@ to do exactly what you have asked.
     :answer_c: Syntax error
     :answer_d: No error
     :correct: c
-    :feedback_a: Try again!
-    :feedback_b: Try again!
-    :feedback_c: Correct! Print statements need parentheses.
+    :feedback_a: Try again! This will not cause a logic error - something is missing from the code.
+    :feedback_b: Try again! This will not cause a semantic error - something is missing from the code.
+    :feedback_c: Print statements need parentheses.
     :feedback_d: This will throw an error.
 
     What type of error would this code produce?
@@ -116,7 +116,7 @@ to do exactly what you have asked.
     :answer_b: Forgetting to use quotation marks around a string.
     :answer_c: Trying to use the string "32" in math equations.
     :correct: a
-    :feedback_a: Correct! This will produce the wrong answer because the programmer implemented the solution incorrectly. This is a semantic error.
+    :feedback_a: This will produce the wrong answer because the programmer implemented the solution incorrectly. This is a semantic error.
     :feedback_b: Try again! This will cause a syntax error and not run.
     :feedback_c: Try again!
 
@@ -128,8 +128,8 @@ to do exactly what you have asked.
     :answer_b: The interpreter/compiler.
     :answer_c: The user.
     :correct: b
-    :feedback_a: Try again!.
-    :feedback_b: Correct!
-    :feedback_c: Try again!
+    :feedback_a: Try again! The programmer might find syntax errors if they look through their code, but the interpreter/compiler will find them when the code is run. 
+    :feedback_b: The interpreter/compiler will find syntax errors.
+    :feedback_c: Try again! The user will run into syntax errors if they exist, but the interpreter/compiler will find them.
 
     Who/what finds syntax errors?

@@ -5,7 +5,7 @@ Sometimes we would like to take the value for a variable from the user
 via their keyboard. Python provides a built-in function called ``input`` that gets input from
 the keyboard (in Python 2.0, this function was named ``raw_input``). When this function is called,
 the program stops and waits for the user to type something. When the user presses ``Return`` or
-``Enter``\ , the program resumes and ``input`` returns what the user typed as a string.
+``Enter``, the program resumes and ``input`` returns what the user typed as a string.
 
 .. activecode:: 02-ac-10-input
   :caption: Using the input function
@@ -59,7 +59,7 @@ We will see how to handle this kind of error later.
 
     What function is used to convert string values to integers?
 
-    - :"int()": Correct!
+    - :"int()": int() converts values to integers 
       :"integer": Close, but not quite!
       :.*: Try again.
 
@@ -68,7 +68,7 @@ We will see how to handle this kind of error later.
 
     What sequence is used to create a newline at the end of statements?
 
-    - :"\n": Correct!
+    - :"\n": \n creates a newline.
       :"n": Close, but there is a symbol that goes with it.
       :.*: Try again.
 

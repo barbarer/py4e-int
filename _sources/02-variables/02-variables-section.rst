@@ -19,8 +19,8 @@ them values:
   print(pi)
 
 This example makes three assignments and then prints the value of each of the variables. The first assigns a string to a
-new variable named ``message``\ ; the second assigns the integer
-17 to a variable named ``n``\ ; and the third assigns the (approximate)
+new variable named ``message``; the second assigns the integer
+17 to a variable named ``n``; and the third assigns the (approximate)
 value of pi to a variable named ``pi``.
 
 
@@ -55,7 +55,7 @@ The type of a variable is the type of the value it refers to.
    :answer_d: name, "Penelope"
    :correct: b
    :feedback_a: The quotation marks on each side of the string need to be the same, either single or double, not a mix.
-   :feedback_b: Correct! An equals sign is needed to assign a variable and quotation marks tell the program that the value is a string.
+   :feedback_b: An equals sign is needed to assign a variable and quotation marks tell the program that the value is a string.
    :feedback_c: What symbols are missing to make ``Penelope`` a string?
    :feedback_d: Look at the variable assignments above, what's missing?
 

@@ -35,25 +35,6 @@ see what they do:
    x = 5
    x + 1
 
-.. mchoice:: var-expressions-mc-print
-   :practice: T
-   :answer_a: 4
-   :answer_b: 8
-   :answer_c: 2
-   :answer_d: 0
-   :correct: a
-   :feedback_a: Correct! This code prints the result of 2 * 2.
-   :feedback_b: Try again!
-   :feedback_c: Try again!
-   :feedback_d: Try again!
-
-   What will be printed after the following code executes?
-
-   ::
-
-      result = 2 * 2
-      print(result)
-
 .. mchoice:: var-expressions-mc-expression
    :practice: T
    :answer_a: 5
@@ -65,10 +46,29 @@ see what they do:
    :feedback_a: An expression is a combination of values, variables, and operators.
    :feedback_b: An expression is a combination of values, variables, and operators.
    :feedback_c: An expression is a combination of values, variables, and operators.
-   :feedback_d: Correct!
+   :feedback_d: All of the above are correct! An expression is a combination of values, variables, and operators.
    :feedback_e: An expression is a combination of values, variables, and operators.
 
    Which of the following is an expression?
+
+.. mchoice:: var-expressions-mc-print
+   :practice: T
+   :answer_a: 4
+   :answer_b: 8
+   :answer_c: 2
+   :answer_d: 0
+   :correct: a
+   :feedback_a: This code prints the result of 2 * 2.
+   :feedback_b: Try again!
+   :feedback_c: Try again!
+   :feedback_d: Try again!
+
+   What will be printed after the following code executes?
+
+   ::
+
+      result = 2 * 2
+      print(result)
 
 .. clickablearea:: var-expressions-mc-click
   :practice: T

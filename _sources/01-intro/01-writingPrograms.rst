@@ -10,6 +10,15 @@ Python instructions into a file, which is called a
 *script*. By convention, Python scripts have names that
 end with ``.py``.
 
+.. fillintheblank:: intro-write-fitb-file
+  :practice: T
+
+  A(n) ______ is a file that holds Python instructions.
+
+  - :[Ss]cript: A script is a file that holds Python instructions.
+    :[Ff]ile: What is this type of file called?
+    :.*: Try again.
+
 To execute the script, you have to tell the Python interpreter the name
 of the file. In a command window, you would type
 ``python hello.py`` as follows:
@@ -35,22 +44,12 @@ at the end of the Python program in the file. When Python is reading
 your source code from a file, it knows to stop when it reaches the end
 of the file.
 
-
-.. fillintheblank:: intro-write-fitb-file
-  :practice: T
-
-  A(n) ______ is a file that holds Python instructions.
-
-  - :[Ss]cript: Correct! A script is a file that holds Python instructions.
-    :[Ff]ile: What is this type of file called?
-    :.*: Try again.
-
 .. fillintheblank:: intro-write-fitb-end
   :practice: T
 
   Files containing Python instructions end with what two letters?
 
-  - :\.?[Pp][Yy]: Correct! .py at the end of a file implies that it is a script containing Python instructions.
+  - :\.?[Pp][Yy]: .py at the end of a file implies that it is a script containing Python instructions.
     :.*: Try again.
 
 .. mchoice:: intro-write-mc-end
@@ -62,7 +61,7 @@ of the file.
   :correct: b
   :feedback_a: Try again. You do not need to inlcude a "quit()" statement.
   :feedback_b: Correct! When Python is reading source code from a file, it knows to stop when it reaches the end of the file.
-  :feedback_c: Try again.
+  :feedback_c: Try again. $ is the operating system prompt.
   :feedback_d: Try again.
 
   How does a Python program stop when reading from a file?

@@ -15,6 +15,20 @@ assistants" who can take care of many things on our behalf. The hardware
 in our current-day computers is essentially built to continuously ask us
 the question, "What would you like me to do next?"
 
+.. mchoice:: intro-whyprogram-mc-ask
+    :practice: T
+    :answer_a: "How can I help you?"
+    :answer_b: "Where should I store this information?"
+    :answer_c: "What would you like me to do next?"
+    :answer_d: They are not built to ask anything.
+    :correct: c
+    :feedback_a: Today's computers are programmed to help, but they focus more on *doing things*.
+    :feedback_b: Computers are used to store information, but more generally do tasks that we ask them to.
+    :feedback_c: Today's computers are build to continuously ask the user "what would you like me to do next?".
+    :feedback_d: Try again! They are programmed to continuously ask us what?
+
+    Hardware in today's computers is built to continuously ask what?
+
 .. figure:: Figures/pda.svg
    :alt: Personal Digital Assistant
 
@@ -22,6 +36,20 @@ the question, "What would you like me to do next?"
 Programmers add an operating system and a set of applications to the
 hardware and we end up with a Personal Digital Assistant that is quite
 helpful and capable of helping us do many different things.
+
+.. mchoice:: intro-whyprogram-mc-add
+    :practice: T
+    :answer_a: an operating system and applications
+    :answer_b: a computer and images
+    :answer_c: images and applications
+    :answer_d: a computer and an operating system
+    :correct: a
+    :feedback_a: Programmers add an operating system and applications to the hardware.
+    :feedback_b: Try again, a computer is the machine itself.
+    :feedback_c: Try again, programmers can add images within applications.
+    :feedback_d: Try again, a computer is the machine itself.
+
+    What does a programmer add to a computer's hardware?
 
 Our computers are fast and have vast amounts of memory and could be very
 helpful to us if we only knew the language to speak to explain to the
@@ -57,43 +85,15 @@ learn this new language, you can delegate mundane tasks to your partner
 uniquely suited for. You bring creativity, intuition, and inventiveness
 to this partnership.
 
-.. mchoice:: intro-whyprogram-mc-ask
-    :practice: T
-    :answer_a: "How can I help you?"
-    :answer_b: "Where should I store this information?"
-    :answer_c: "What would you like me to do next?"
-    :answer_d: They are not built to ask anything.
-    :correct: c
-    :feedback_a: Today's computers are programmed to help, but they focus more on *doing things*.
-    :feedback_b: Computers are used to store information, but more generally do tasks that we ask them to.
-    :feedback_c: Correct!
-    :feedback_d: Try again!
-
-    Hardware in today's computers is built to continuously ask what?
-
-.. mchoice:: intro-whyprogram-mc-add
-    :practice: T
-    :answer_a: an operating system and applications
-    :answer_b: a computer and images
-    :answer_c: images and applications
-    :answer_d: a computer and an operating system
-    :correct: a
-    :feedback_a: Correct!
-    :feedback_b: Try again, a computer is the machine itself.
-    :feedback_c: Try again, programmers can add images within applications.
-    :feedback_d: Try again, a computer is the machine itself.
-
-    What does a programmer add to a computer's hardware?
-
 .. mchoice:: intro-whyprogram-mc-common
     :answer_a: the, 25
     :answer_b: to, 16
     :answer_c: computer, 19
     :answer_d: a, 21
     :correct: b
-    :feedback_a: Try again!
-    :feedback_b: Correct!
-    :feedback_c: Try again!
-    :feedback_d: Try again!
+    :feedback_a: Try again! A program has already counted the words and listed them above!
+    :feedback_b: Yes, the most common word is "to" and it appears 16 times in the first three paragraphs.
+    :feedback_c: Try again! A program has already counted the words and listed them above!
+    :feedback_d: Try again! A program has already counted the words and listed them above!
 
     What is the most commonly used word in the first three paragraphs of this page and how many times is it used?

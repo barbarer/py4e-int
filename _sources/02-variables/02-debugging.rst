@@ -13,6 +13,19 @@ without an operator:
 
   bad name = 5
 
+.. mchoice:: var-debug-mc-name
+   :practice: T
+   :answer_a: NameError
+   :answer_b: SyntaxError
+   :answer_c: TypeError
+   :answer_d: There will not be an error
+   :correct: b
+   :feedback_a: No, a NameError occurs when a variable is used before it is defined.
+   :feedback_b: This error comes from bad input.
+   :feedback_c: No, a TypeError occurs when an operation or function is applied to an object of inappropriate type.
+   :feedback_d: No, this will cause an error - see above for an example.
+
+   Which error will you get if you name a variable "bad name"?
 
 For syntax errors, the error messages don't help much. The most common
 messages are ``SyntaxError: invalid syntax`` and
@@ -52,25 +65,8 @@ wrong answer. *Try adding parentheses to the code above to return the correct an
 
     ________ is the process of fixing errors in your code.
 
-    - :[Dd]ebugging: Is the correct answer!
+    - :[Dd]ebugging: Debugging is the process of fixing errors in your code.
       :.*: Try again!
-
-.. mchoice:: var-debug-mc-name
-   :practice: T
-   :answer_a: NameError
-   :answer_b: SyntaxError
-   :answer_c: TypeError
-   :answer_d: There will not be an error
-   :correct: b
-   :feedback_a: No, a NameError occurs when a variable is used before it is defined.
-   :feedback_b: Correct, this error comes from bad input.
-   :feedback_c: No, a TypeError occurs when an operation or function is applied to an object of inappropriate type.
-   :feedback_d: No, this will cause an error - see above for an example.
-
-   Which error will you get if you name a variable "bad name"?
-
-
-
 
 .. mchoice:: var-debug-mc-equation
    :practice: T
@@ -82,6 +78,6 @@ wrong answer. *Try adding parentheses to the code above to return the correct an
    :feedback_a: No, a NameError occurs when a variable is used before it is defined.
    :feedback_b: No, a SyntaxError occurs when the program cannot understand a line of code.
    :feedback_c: No, a TypeError occurs when an operation or function is applied to an object of inappropriate type.
-   :feedback_d: Correct, this will still compute, but will not return the expected result.
+   :feedback_d: This will still compute, but will not return the expected result.
 
    Which error will you get if you use the equation 1/2*3.14 instead of 1/(2*3.14)?

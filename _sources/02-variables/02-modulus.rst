@@ -55,7 +55,7 @@ last two digits.
 
    What is the result of ``25 % 4``?
 
-   - :1: Correct!
+   - :1: 25 % 4 has a remainder of 1.
      :6: 6 is the result of 25//4, try using modulus in terminal.
      :6.25: 6.25 is the result of 25/4, try using modulus in terminal.
      :.*: Not quite, try using modulus in terminal.

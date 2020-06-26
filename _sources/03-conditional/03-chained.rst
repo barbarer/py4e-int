@@ -16,6 +16,7 @@ two branches. One way to express a computation like that is a
        print('x is greater than y')
    else:
        print('x and y are equal')
+   print('All done.')
 
 
 ``elif`` is an abbreviation of "else if." Again, exactly one
@@ -30,7 +31,7 @@ doesn't have to be one.
 
 .. codelens:: cndtnl_elif2
     :showoutput:
-    :question: After the line with the red arrow is executed, which will be next?
+    :question: After the line with the red arrow is executed, which line will be next?
     :breakline: 2
     :feedback: Remember that in an if/else statement only one block is executed.
     :correct: line
@@ -78,17 +79,16 @@ true, only the first true branch executes.
    :answer_d: D
    :answer_e: E
    :correct: a
-   :feedback_a: Correct! Because the first statement is satisfied, it does not continue to the following elif or else statements.
+   :feedback_a: Because the first statement is satisfied, it does not continue to the following elif or else statements.
    :feedback_b: Try again. This code skips the elif/else statements once an if/elif statement has been satisfied.
    :feedback_c: Try again. This code skips the elif/else statements once an if/elif statement has been satisfied.
    :feedback_d: Try again. This code skips the elif/else statements once an if/elif statement has been satisfied.
    :feedback_e: This will only be true when score does not satisfy the other if/elif statements (so it will only execute when score < 60).
 
-   What is printed when the following code executes?
+   If x = 93, what will print when the following code executes?
 
    ::
 
-     score = 93
      if score >= 90:
          grade = "A"
      elif score >= 80:
@@ -115,11 +115,10 @@ true, only the first true branch executes.
    :feedback_d: Each of the first 4 if statements will be executed. So grade will be set to A, then B then C and finally D.
    :feedback_e: This will only be true when score is less than 60.
 
-   What is printed when the following code executes?
+   If x = 93, what will print when the following code executes?
 
    ::
 
-     score = 93
      if score >= 90:
          grade = "A"
      if score >= 80:

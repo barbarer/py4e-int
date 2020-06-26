@@ -6,10 +6,12 @@ check conditions and change the behavior of the program accordingly.
 *Conditional statements* give us this ability. The
 simplest form is the ``if`` statement:
 
-.. code-block:: python
+.. codelens:: cndtnlPositive
 
+   x = 2
    if x > 0 :
        print('x is positive')
+   print('All done.')
 
 
 The boolean expression after the ``if`` statement is called the
@@ -38,10 +40,12 @@ a body with no statements (usually as a place holder for code you haven't
 written yet). In that case, you can use the ``pass`` statement,
 which does nothing.
 
-.. code-block:: python
+.. codelens:: cndtnlNegative
 
+   x = -3
    if x < 0 :
-       pass          # need to handle negative values!
+       pass # need to handle negative values!
+   print('All done.')
 
 
 If you enter an ``if`` statement in the Python interpreter, the
@@ -102,7 +106,7 @@ and executing a script, but it may improve readability of your code.
     :correct: c
     :feedback_a: Try again. This would be true if the second expression was x <= 10.
     :feedback_b: Try again. This would be true if the first logical expression was x >= 0.
-    :feedback_c: Correct! The "condition true" will only be printed when x is greater than 0 and less than 10 so this is the range from 1 to 9.
+    :feedback_c: The "condition true" will only be printed when x is greater than 0 and less than 10 so this is the range from 1 to 9.
     :feedback_d: Try again. This would be true if the conditional was x > 0 <b>or</b> x < 10.
 
     Given the code below, what describes the values of x that will cause the code to print "condition true"?
@@ -120,7 +124,7 @@ and executing a script, but it may improve readability of your code.
     :answer_c: 0 to 9
     :answer_d: 1 to 10
     :correct: a
-    :feedback_a: Correct! This will be true if x is greater than 0 <b>or</b> less than 10.  This covers all possible values of x.
+    :feedback_a: This will be true if x is greater than 0 <b>or</b> less than 10.  This covers all possible values of x.
     :feedback_b: Try again. This would be true if the logical expressions were joined with and instead of or.
     :feedback_c: Try again. This would be true if the logical expressions were jointed with and instead of or and if the first logical expression was x >= 0.
     :feedback_d: Try again. This would be true if the logical expressions were jointed with and instead of or and if the first logical expression was x >= 0 and the second expression was <= 10.

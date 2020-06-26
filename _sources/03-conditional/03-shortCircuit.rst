@@ -21,23 +21,20 @@ While this may seem like a fine point, the short-circuit behavior leads
 to a clever technique called the *guardian pattern*.
 Consider the following code sequence in the Python interpreter:
 
-.. code-block:: python
+.. activecode:: cndtnlShortCircuit
+   :caption: Errors from multiple conditionals
 
-   >>> x = 6
-   >>> y = 2
-   >>> x >= 2 and (x/y) > 2
-   True
-   >>> x = 1
-   >>> y = 0
-   >>> x >= 2 and (x/y) > 2
-   False
-   >>> x = 6
-   >>> y = 0
-   >>> x >= 2 and (x/y) > 2
-   Traceback (most recent call last):
-     File "<stdin>", line 1, in <module>
-   ZeroDivisionError: division by zero
-   >>>
+   x = 6
+   y = 2
+   print(x >= 2 and (x/y) > 2)
+
+   x = 1
+   y = 0
+   print(x >= 2 and (x/y) > 2)
+
+   x = 6
+   y = 0
+   print(x >= 2 and (x/y) > 2)
 
 
 The third calculation failed because Python was evaluating
@@ -51,21 +48,20 @@ We can construct the logical expression to strategically place a
 *guard* evaluation just before the evaluation that might
 cause an error as follows:
 
-.. code-block:: python
+.. activecode:: cndtnlGuardian
+   :caption: Using a guardian pattern with conditionals
 
-   >>> x = 1
-   >>> y = 0
-   >>> x >= 2 and y != 0 and (x/y) > 2
-   False
-   >>> x = 6
-   >>> y = 0
-   >>> x >= 2 and y != 0 and (x/y) > 2
-   False
-   >>> x >= 2 and (x/y) > 2 and y != 0
-   Traceback (most recent call last):
-     File "<stdin>", line 1, in <module>
-   ZeroDivisionError: division by zero
-   >>>
+   x = 1
+   y = 0
+   print(x >= 2 and y != 0 and (x/y) > 2)
+
+   x = 1
+   y = 0
+   print(x >= 2 and y != 0 and (x/y) > 2)
+
+   x = 6
+   y = 0
+   print(x >= 2 and (x/y) > 2 and y != 0)
 
 
 In the first logical expression, ``x >= 2`` is
@@ -90,7 +86,7 @@ if ``y`` is non-zero.
     :answer_d: and
     :correct: b
     :feedback_a: Try again. This element is making sure x matches a condition.
-    :feedback_b: Correct! This element is a guard, making sure the code does not try to divide by 0.
+    :feedback_b: This element is a guard, making sure the code does not try to divide by 0.
     :feedback_c: Try again. This element is making sure x/y matches a condition.
     :feedback_d: Try again. This is a logical operator for the boolean expression.
 
@@ -105,8 +101,8 @@ if ``y`` is non-zero.
 
     True or False? The guard should be placed before an expression is evaluated.
 
-    - :[Tt]rue: Correct! A guard is used to avoid runtime errors.
-      :[Ff]alse: Try again!
+    - :[Tt]rue: A guard is used to avoid runtime errors.
+      :[Ff]alse: Try again! A guard is used to avoid runtime errors.
       :.*: Try again!
 
 .. dragndrop:: cndtnl-sc-dnd-terms
