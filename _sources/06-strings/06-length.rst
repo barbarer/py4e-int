@@ -10,35 +10,6 @@ characters in a string:
    fruit = "banana"
    print(len(fruit))
 
-To get the last letter of a string, you might be tempted to try
-something like this:
-
-.. activecode:: string-last
-   :caption: trying to access the last character of a string
-
-   fruit = "banana"
-   length = len(fruit)
-   last = fruit[length]
-
-The reason for the ``IndexError`` is that there is no letter in
-"banana" with the index 6. Since we started counting at
-zero, the six letters are numbered 0 to 5. To get the last character,
-you have to subtract 1 from ``length``\ :
-
-.. activecode:: string-len
-   :caption: accessing the last character of a string
-
-   fruit = 'banana'
-   length = len(fruit)
-   last = fruit[length-1]
-   print(last)
-
-
-Alternatively, you can use negative indices, which count backward from
-the end of the string. The expression ``fruit[-1]`` yields the
-last letter, ``fruit[-2]`` yields the second to last, and so
-on.
-
 .. mchoice:: str-len-mc-street
    :practice: T
    :answer_a: 13
@@ -56,6 +27,36 @@ on.
 
      street = "125 Main Street"
      print(len(street))
+
+
+To get the last letter of a string, you might be tempted to try
+something like this:
+
+.. activecode:: string-last
+   :caption: trying to access the last character of a string
+
+   fruit = "banana"
+   length = len(fruit)
+   last = fruit[length]
+
+The reason for the ``IndexError`` is that there is no letter in
+"banana" with the index 6. Since we started counting at
+zero, the six letters are numbered 0 to 5. To get the last character,
+you have to subtract 1 from ``length``:
+
+.. activecode:: string-len
+   :caption: accessing the last character of a string
+
+   fruit = 'banana'
+   length = len(fruit)
+   last = fruit[length-1]
+   print(last)
+
+
+Alternatively, you can use negative indices, which count backward from
+the end of the string. The expression ``fruit[-1]`` yields the
+last letter, ``fruit[-2]`` yields the second to last, and so
+on.
 
 .. mchoice:: str-len-mc-apple
    :practice: T

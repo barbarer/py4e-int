@@ -82,7 +82,6 @@ that, it is the same as any other string.
      str = str[1:4]
      print(str)
 
-.
 .. mchoice:: test_question8_5_1
    :practice: T
    :answer_a: python

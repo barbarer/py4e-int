@@ -71,7 +71,7 @@ if you entered the expression on a calculator.
 
     What operator (*symbol*) would you use to truncate division in Python 3.0?
 
-    - ://: Is the correct answer!
+    - ://: // is the operator for floored division in Python.
       :/: Not quite, remember the difference between divison (/) and floored division.
       :.*: Make sure you are looking at the symbols for division!
 

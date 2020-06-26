@@ -44,8 +44,8 @@ https://docs.python.org/library/stdtypes.html#string-methods.
     :answer_a: true
     :answer_b: false
     :correct: b
-    :feedback_a: Try again! Parsing is used to look into a string and find a substring.
-    :feedback_b: Correct! Parsing is used to look into a string and find a substring.
+    :feedback_a: Parsing is used to look into a string and find a substring.
+    :feedback_b: Parsing is used to look into a string and find a substring.
 
     True or false? Parsing is used only to look into a string?
 
@@ -54,5 +54,5 @@ https://docs.python.org/library/stdtypes.html#string-methods.
 
     What method is used to parse through and select segments of a string?
 
-    - :[Ff]ind: Correct! find is used to search through a string and select a certain part.
+    - :[Ff]ind: find is used to search through a string and select a certain part.
       :.*: Try again! How will we *find* what we're looking for?

@@ -9,7 +9,7 @@ Order of operations
    :answer_d: 10
    :correct: b
    :feedback_a: Try running the code in your python interpreter.
-   :feedback_b: Correct!
+   :feedback_b: 4 + -2 * 3 is -2. First -2 is multiplied by 3 then 4 is added.
    :feedback_c: Which order will the operators run?
    :feedback_d: Make sure that you are using a negative 2, not positive.
 
@@ -63,7 +63,7 @@ acronym *PEMDAS* is a useful way to remember the rules:
    :correct: c
    :feedback_a: Try running the code in your python interpreter.
    :feedback_b: Which order will the operators run?
-   :feedback_c: Correct!
+   :feedback_c: With parentheses, (4 + -2) * 3 is 6.
    :feedback_d: Make sure that you are using a negative 2, not positive.
 
    What is printed from the following codeblock?

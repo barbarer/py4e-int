@@ -7,6 +7,7 @@ which compares two operands and produces ``True`` if they are
 equal and ``False`` otherwise:
 
 .. activecode:: 03_boolean_equal
+   :caption: Printing boolean expressions.
 
    print(5 == 5)
    print(5 == 6)
@@ -15,6 +16,7 @@ equal and ``False`` otherwise:
 to the class ``bool``; they are not strings:
 
 .. activecode:: 03_boolean_types
+   :caption: Type of Boolean values
 
    print(type(True))
    print(type(False))
@@ -71,7 +73,7 @@ Remember that ``=`` is an assignment operator and
    :feedback_a: Try again. This reassigns the value of y to x.
    :feedback_b: Try again. This means that x is not equal to y.
    :feedback_c: Try again. This means that x and y have the same value, but it does not mean they are the same object.
-   :feedback_d: Correct! This means that x and y are the same object, not just the same value.
+   :feedback_d: This means that x and y are the same object, not just the same value.
    :feedback_e: Try again. This means that x and y are not the same object. This can be true if x and y have the same value, but are stored in different objects.
 
    Which of the following comparison operators is used to check if x and y are the same object?
@@ -85,7 +87,7 @@ Remember that ``=`` is an assignment operator and
    :answer_d: !=
    :answer_e: is not
    :correct: a,d,e
-   :feedback_a: Correct! 783 > 206 is True.
+   :feedback_a: 783 > 206 is True.
    :feedback_b: Try again. 783 <= 206 is False.
    :feedback_c: Try again.
    :feedback_d: Correct! 783 != 206 is True.

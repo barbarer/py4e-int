@@ -76,8 +76,8 @@ functions:
    :caption: An example of calling a function that is not built-in.
 
    def print_lyrics():
-      print("I'm a lumberjack, and I'm okay.")
-      print('I sleep all night and I work all day.')
+       print("I'm a lumberjack, and I'm okay.")
+       print('I sleep all night and I work all day.')
 
    print_lyrics()
 
@@ -92,8 +92,8 @@ function called ``repeat_lyrics``\ :
    :caption: An example of using a user-defined function inside of another user-defined function.
 
    def print_lyrics():
-      print("I'm a lumberjack, and I'm okay.")
-      print('I sleep all night and I work all day.')
+       print("I'm a lumberjack, and I'm okay.")
+       print('I sleep all night and I work all day.')
 
    def repeat_lyrics():
        print_lyrics()

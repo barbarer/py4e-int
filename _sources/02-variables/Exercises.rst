@@ -9,7 +9,7 @@ Exercises
   :answer_d: 3
   :correct: b
   :feedback_a: Try again, this is the answer for 15 // 12.
-  :feedback_b: Correct! / is the operator for divison.
+  :feedback_b: / is the operator for divison.
   :feedback_c: Try running this in your python interpreter.
   :feedback_d: Try again, this is the answer for 15 % 12.
 
@@ -22,7 +22,7 @@ Exercises
   :answer_c: 1.5
   :answer_d: 3
   :correct: a
-  :feedback_a: Correct! // is the operator for floored division.
+  :feedback_a: // is the operator for floored division.
   :feedback_b: Try again, this is the answer for 15 / 12.
   :feedback_c: Try again, this is the answer for 15 % 12.
   :feedback_d: Try running this in your python interpreter.
@@ -39,7 +39,7 @@ Exercises
   :feedback_a: Try again, this is the answer for 15 // 12.
   :feedback_b: Try again, this is the answer for 15 / 12.
   :feedback_c: Try running this in your python interpreter.
-  :feedback_d: Correct! % is the operator for calculating the remainder.
+  :feedback_d: % is the operator for calculating the remainder.
 
   The equation 15 % 12 equals?
 

@@ -36,6 +36,17 @@ https://docs.python.org/library/stdtypes.html#string-methods.
         Return a capitalized version of S, i.e. make the first character
         have upper case and the rest lower case.
     >>>
+.. mchoice:: str-method-mc-dir
+   :practice: T
+   :answer_a: dir
+   :answer_b: print
+   :answer_c: list
+   :correct: a
+   :feedback_a: Correct! dir() will list all the methods that can be used with an object.
+   :feedback_b: Try again! The function print() prints whatever is within the parentheses.
+   :feedback_c: Try again. list is actually a mutable sequence type,
+
+   What function lists the methods available for an object?
 
 Calling a *method* is similar to calling a function (it
 takes arguments and returns a value) but the syntax is different. We call
@@ -134,6 +145,38 @@ use ``startswith`` to see if the resulting lowercase string
 starts with the letter "h". As long as we are careful with the order, we
 can make multiple method calls in a single expression.
 
+.. tabbed:: str-method-banana
+
+        .. tab:: Question
+
+           Fix the following function. It should use the string method ``count``
+           to count the number of times a double s (ss) appears in a word. There are 3 mistakes to fix.
+
+           .. activecode::  str-method-bananaq
+               :nocodelens:
+
+               def countSS(word):
+                   sCounter is word.count('s')
+                   return Counter
+
+               ====
+               from unittest.gui import TestCaseGui
+               class myTests(TestCaseGui):
+
+                   def testOne(self):
+                       self.assertEqual(countSS('banana'),0,"Tested countSS on input 'banana'")
+                       self.assertEqual(countSS('Mississippi'),2,"Tested countSS on input 'Mississippi'")
+                       self.assertEqual(countSS('scissors'),1,"Tested countSS on input 'scissors'")
+                       self.assertEqual(countSS('methods'),0,"Tested countSS on input 'methods'")
+
+               myTests().main()
+
+        .. tab:: Discussion
+
+            .. disqus::
+                :shortname: interactivepython
+                :identifier: strBananaDisc
+
 .. mchoice:: str-method-mc-cheer
    :practice: T
    :answer_a: 0
@@ -152,34 +195,6 @@ can make multiple method calls in a single expression.
       s = "let's go blue!"
       print(s.count("e") + s.count("b"))
 
-.. mchoice:: str-method-mc-dir
-   :practice: T
-   :answer_a: dir
-   :answer_b: print
-   :answer_c: list
-   :correct: a
-   :feedback_a: Correct! dir() will list all the methods that can be used with an object.
-   :feedback_b: Try again! The function print() prints whatever is within the parentheses.
-   :feedback_c: Try again. list is actually a mutable sequence type,
-
-   What function lists the methods available for an object?
-
-
-.. tabbed:: str-method-banana
-
-        .. tab:: Question
-
-           Use the string method ``count`` to count the number of times the letter "a" occurs in "banana".
-
-           .. activecode::  str-method-bananaq
-               :nocodelens:
-
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: strBananaDisc
 
 .. dragndrop:: str-method-dnd-use
     :practice: T

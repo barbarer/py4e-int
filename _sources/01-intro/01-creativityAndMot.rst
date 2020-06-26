@@ -33,11 +33,11 @@ you, your thoughts may turn toward developing programs for others.
   :answer_d: All of the above.
   :answer_e: None of the above.
   :correct: b
-  :feedback_a: Try again.
-  :feedback_b: Correct! This book is for learning efficient and productive programming, especially when multiple programs are competing for your attention.
-  :feedback_c: Try again.
-  :feedback_d: Not quite.
-  :feedback_e: Not quite.
+  :feedback_a: Try again. This book is not for professional programmers.
+  :feedback_b: This book is for learning efficient and productive programming, especially when multiple programs are competing for your attention.
+  :feedback_c: Try again. 
+  :feedback_d: Not quite. Only one of the above is true about this book.
+  :feedback_e: One of the above is correct.
 
   Which of the following is true about this book?
 
@@ -45,8 +45,8 @@ you, your thoughts may turn toward developing programs for others.
   :answer_a: True
   :answer_b: False
   :correct: a
-  :feedback_a: Correct! You will be both writing programs and using them in this book.
-  :feedback_b: Try again.
+  :feedback_a: You will be both writing programs and using them in this book.
+  :feedback_b: Try again. You will be working on both sides.
 
   True or False? You will be both the programmer and the user in this book.
 

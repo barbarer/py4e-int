@@ -82,6 +82,16 @@ process to translate the high-level source code into machine language
 and then the compiler puts the resulting machine language into a file
 for later execution.
 
+.. fillintheblank:: intro-terminology-fitb-translate
+  :practice: T
+
+  A(n) ________ translates a program into machine language from a file and saves it for later execution.
+
+  - :[Cc]ompiler: Correct! A compiler translates a program into machine language from a file.
+    :[Ii]nterpreter: An interpreter reads and processes code immediately.
+    :.*: Try again!
+
+
 If you have a Windows system, often these executable machine language
 programs have a suffix of ".exe" or ".dll" which stand for "executable"
 and "dynamic link library" respectively. In Linux and Macintosh, there
@@ -150,12 +160,3 @@ beginning.
   :match_4: Compiler|||Program that converts instructions into a machine-code so that they can be read and executed by a computer.
 
   Match each term to its definition.
-
-.. fillintheblank:: intro-terminology-fitb-translate
-  :practice: T
-
-  A(n) ________ translates a program into machine language from a file and saves it for later execution.
-
-  - :[Cc]ompiler: Correct!
-    :[Ii]nterpreter: An interpreter reads and processes code immediately.
-    :.*: Try again!

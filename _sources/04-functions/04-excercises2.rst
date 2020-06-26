@@ -12,7 +12,6 @@ Exercises
 
                Fix the errors so it runs and returns the perimeter of a rectangle.
                ~~~~
-
                def recPerimeter(length, width)
                perimeter = 2 * (length + width)
                Return recPerimeter
@@ -51,7 +50,6 @@ Exercises
 
                Fix the errors so the code runs and returns the area of a square.
                ~~~~
-
                Def squareArea(sideLength)
                     area = length * length
                     return squareArea
@@ -88,7 +86,6 @@ Exercises
 
                Change the code so the function takes parameters for the base and height of the triangle. Then, write code to call the function and print the result.
                ~~~~
-
                def areaTriangle():
                 base = 5
                 height = 4
@@ -125,9 +122,8 @@ Exercises
                :practice: T
                :autograde: unittest
 
-               Change the code below to create a function that calculates the cost of a trip.  It should take the ``miles``, ``milesPerGallon``, and ``pricePerGallon`` as parameters and should return the cost of the trip.
+               Change the code below to create a function ``tripCost`` that calculates the cost of a trip.  It should take the ``miles``, ``milesPerGallon``, and ``pricePerGallon`` as parameters and should return the cost of the trip.
                ~~~~
-
                miles = 500
                milesPerGallon = 26
                numGallons = miles / milesPerGallon
@@ -168,7 +164,6 @@ Exercises
 
                 Fix the errors so it prints "My name is John and I am 18 years old". The ``nameAndAge`` function should return a string.
                 ~~~~
-
                 def nameAndAge(nameString, ageInt):
                    return(My name is "nameString" and I am + "str(ageInt)" + years old)
 
@@ -210,7 +205,6 @@ Exercises
                 including `n`.   So ``sumTo(10)`` would be ``1+2+3...+10`` which would return the value 55.  Use the
                 equation  (n * (n + 1)) / 2.
                 ~~~~
-
                 def sumTo(n):
                     # your code here
 
@@ -249,7 +243,6 @@ Exercises
 
                 Write a function `areaOfCircle(r)` which returns the area of a circle of radius `r`.  Make sure you use the math module in your solution.
                 ~~~~
-
                 def areaOfCircle(r):
                     # your code here
 
@@ -299,7 +292,6 @@ Exercises
                    >= 0.6     D
                    < 0.6      F
                 ~~~~
-
                 def computegrade(r):
                     # your code here
 
@@ -352,7 +344,6 @@ Exercises
                Rewrite the function ``sumTo(n)`` that returns the sum of all integer numbers up to and
                including `n`.   This time use the accumulator pattern.
                ~~~~
-
                def sumTo(n):
                    # your code here
 
@@ -391,7 +382,6 @@ Exercises
 
                Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, …6=Sat, and a boolean indicating if we are on vacation, return a string of the form “7:00” indicating when the alarm clock should ring. Weekdays, the alarm should be “7:00” and on the weekend it should be “10:00”. Unless we are on vacation – then on weekdays it should be “10:00” and weekends it should be “off”.
                ~~~~
-
                def alarm_clock(day, vacation):
                    # your code here
 

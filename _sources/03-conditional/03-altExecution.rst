@@ -6,12 +6,14 @@ execution*, in which there are two possibilities and the
 condition determines which one gets executed. The syntax looks like
 this:
 
-.. code-block:: 03_simple_conditional
+.. codelens:: cndtnlMod
 
+   x = 8
    if x % 2 == 0 :
        print('x is even')
    else :
        print('x is odd')
+   print('All done.')
 
 
 If the remainder when ``x`` is divided by 2 is 0, then we know
@@ -105,17 +107,18 @@ because they are branches in the flow of execution.
 
 .. parsonsprob:: cndtnl-altex-pp-even
     :practice: T
+    :adaptive:
     :numbered: left
 
-   The following program should print out "x is even" if the remainder of x divided by 2 is 0 and "x is odd"
-   otherwise, but the code is mixed up. Be sure to indent correctly!
-   -----
-   x = 92
-   =====
-   if x % 2 == 0:
-   =====
-       print("x is even")
-   =====
-   else:
-   =====
-       print("x is odd")
+    The following program should print out "x is even" if the remainder of x divided by 2 is 0 and "x is odd"
+    otherwise, but the code is mixed up. Be sure to indent correctly!
+    -----
+    x = 92
+    =====
+    if x % 2 == 0:
+    =====
+        print("x is even")
+    =====
+    else:
+    =====
+        print("x is odd")

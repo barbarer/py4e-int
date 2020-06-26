@@ -37,6 +37,23 @@ the following:
 That is it, and unlike a dog, Python is already completely trained. When
 you say "try", Python will try every time you say it without fail.
 
+.. mchoice:: intro-words-mc-reserved
+  :practice: T
+  :multiple_answers:
+  :answer_a: number
+  :answer_b: class
+  :answer_c: pass
+  :answer_d: print
+  :answer_e: try
+  :correct: b,c,e
+  :feedback_a: Number is not a reserved word in python.
+  :feedback_b: The word class is used to create a new "class" or set of objects.
+  :feedback_c: Pass is a null operation - nothing happens when it is used, making it a great placeholder for incomplete functions.
+  :feedback_d: Print is a function in Python, but not a reserved word.
+  :feedback_e: Try allows you to test a block of code for errors.
+
+  Which of the following are reserved words? Select all that apply.
+
 We will learn these reserved words and how they are used in good time,
 but for now we will focus on the Python equivalent of "speak" (in
 human-to-dog language). The nice thing about telling Python to speak is
@@ -56,22 +73,6 @@ quotes and double quotes do the same thing; most people use single
 quotes except in cases where a single quote (which is also an
 apostrophe) appears in the string.
 
-.. mchoice:: intro-words-mc-reserved
-  :practice: T
-  :multiple_answers:
-  :answer_a: number
-  :answer_b: class
-  :answer_c: pass
-  :answer_d: print
-  :answer_e: try
-  :correct: b,c,e
-  :feedback_a: Number is not a reserved word in python.
-  :feedback_b: Correct! The word class is used to create a new "class" or set of objects.
-  :feedback_c: Correct! Pass is a null operation - nothing happens when it is used, making it a great placeholder for incomplete functions.
-  :feedback_d: Print is a function in Python, but not a reserved word.
-  :feedback_e: Correct! Try allows you to test a block of code for errors.
-
-  Which of the following are reserved words?
 
 .. mchoice:: intro-words-mc-quotes
   :practice: T
@@ -85,7 +86,7 @@ apostrophe) appears in the string.
   :feedback_b: When using quotes, a single quote needs to be followed by a single quote and a double quote needs to be followed by a double quote.
   :feedback_c: While this is common practice, it is not a rule. Single and double quotes do the same thing.
   :feedback_d: Try again!
-  :feedback_e: Correct! You can use double and quotes interchangeably in Python.
+  :feedback_e: You can use double and quotes interchangeably in Python.
 
   What is the difference between single and double quotes in Python?
 

@@ -7,6 +7,21 @@ in variables. When applied to integers, ``%`` is the modulus
 operator. But when the first operand is a string, ``%`` is the
 format operator.
 
+.. mchoice:: str-format-mc-operator
+    :practice: T
+    :multiple_answers:
+    :answer_a: division
+    :answer_b: modulus (remainder)
+    :answer_c: format
+    :answer_d: conversion
+    :correct: b,c
+    :feedback_a: Try again! The division operator is /
+    :feedback_b: Correct! % can be used to find the remainder.
+    :feedback_c: Correct! % can be used to specify how string is formatted.
+    :feedback_d: Try again! Conversion uses the int, str, or other functions.
+
+    The % operator is used for which purposes? Select all that apply.
+
 The first operand is the *format string*, which contains
 one or more *format sequences* that specify how the
 second operand is formatted. The result is a string.
@@ -69,41 +84,38 @@ read more about it at
 
 https://docs.python.org/library/stdtypes.html#printf-style-string-formatting.
 
-.. mchoice:: str-format-mc-operator
+.. mchoice:: str-format-mc-d
     :practice: T
-    :multiple_answers:
-    :answer_a: division
-    :answer_b: modulus (remainder)
-    :answer_c: format
-    :answer_d: conversion
-    :correct: b,c
-    :feedback_a: Try again! The division operator is /
-    :feedback_b: Correct! % can be used to find the remainder.
-    :feedback_c: Correct! % can be used to specify how string is formatted.
-    :feedback_d: Try again! Conversion uses the int, str, or other functions.
-
-    The % operator is used for which purposes?
-
-.. fillintheblank:: str-format-fitb-d
-    :practice: T
+    :answer_a: string
+    :answer_b: integer
+    :answer_c: float
+    :correct: b
+    :feedback_a: %d does not format strings.
+    :feedback_b: %d formats integers.
+    :feedback_c: %d does not format floating point numbers.
 
     What does the %d operator format?
 
-    - :[Ii]ntegers*: Correct! The %d operator is used for integers.
-      :.*: Try again!
-
-.. fillintheblank:: str-format-fitb-g
+.. mchoice:: str-format-mc-g
     :practice: T
+    :answer_a: string
+    :answer_b: integer
+    :answer_c: float
+    :correct: c
+    :feedback_a: %g does not format strings.
+    :feedback_b: %g does not format integers.
+    :feedback_c: %g formats floating point numbers.
 
     What does the %g operator format?
 
-    - :[Ff]loat(ing point numbers)*: Correct! The %g operator is used for floating point numbers.
-      :.*: Try again!
-
-.. fillintheblank:: str-format-fitb-s
+.. mchoice:: str-format-mc-s
     :practice: T
+    :answer_a: string
+    :answer_b: integer
+    :answer_c: float
+    :correct: a
+    :feedback_a: %s formats strings.
+    :feedback_b: %s does not format integers.
+    :feedback_c: %s does not format floating point numbers.
 
     What does the %s operator format?
-
-    - :[Ss]trings*: Correct! The %s operator is used for strings.
-      :.*: Try again!

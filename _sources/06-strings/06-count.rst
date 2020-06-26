@@ -48,25 +48,47 @@ r's.
 
 .. tabbed:: str-count-fix
 
-        .. tab:: Question
+    .. tab:: Question
 
-           There are three errors in the following code. Fix the function so it takes a string and a
-           character as arguments and returns the count of the character within the string.
+        There are three errors in the following code. Fix the function so it takes a string and a
+        character as arguments and returns the count of the character within the string.
 
-           .. activecode:: str-count-fixq
-               :nocodelens:
+        .. activecode:: str-count-fixq
+            :nocodelens:
 
-               def count(text, aChar):
-               lettercount = 0
-                   for c in text:
-                       if c == aChar:
-                           lettercount = lettercount + 3
-                   return text
+            def count(text, aChar):
+            lettercount = 0
+                for c in text:
+                    if c != aChar:
+                        lettercount = lettercount + 3
+            return lettercount
 
-               print(count("banana","a"))
+            ====
+            from unittest.gui import TestCaseGui
+            class myTests(TestCaseGui):
 
-        .. tab:: Discussion
+                def testOne(self):
+                    self.assertEqual(count('banana','a'),3,"Tested 'a' in 'banana'")
+                    self.assertEqual(count('pineapple','a'),1,"Tested 'a' in 'pineapple'")
+                    self.assertEqual(count('pepperoni pizza','p'),4,"Tested 'p' in 'pepperoni pizza'")
+                    self.assertEqual(count('racecar','r'),2,"Tested 'r' in 'racecar'")
 
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: strCountDisc
+            myTests().main()
+
+    .. tab:: Answer
+
+        .. activecode:: str-count-fixa
+            :nocodelens:
+
+            def count(text, aChar):
+                lettercount = 0
+                for c in text:
+                    if c == aChar:
+                        lettercount = lettercount + 1
+            return lettercount
+
+    .. tab:: Discussion
+
+        .. disqus::
+            :shortname: interactivepython
+            :identifier: strCountDisc

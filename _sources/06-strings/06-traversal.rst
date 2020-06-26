@@ -10,7 +10,7 @@ traversal is with a ``while`` loop:
 .. codelens:: stringWhileLoop
    :showoutput:
 
-   fruit = "grapefruit"
+   fruit = "fruit"
    index = 0
    while index < len(fruit):
        letter = fruit[index]
@@ -19,10 +19,10 @@ traversal is with a ``while`` loop:
 
 
 This loop traverses the string and displays each letter on a line by
-itself. The loop condition is ``index < len(fruit)``\ , so when
+itself. The loop condition is ``index < len(fruit)``, so when
 ``index`` is equal to the length of the string, the condition
 is false, and the body of the loop is not executed. The last character
-accessed is the one with the index ``len(fruit)-1``\ , which is
+accessed is the one with the index ``len(fruit)-1``, which is
 the last character in the string.
 
 .. tabbed:: str-trav-wc-backwards
@@ -31,7 +31,7 @@ the last character in the string.
 
             Write a ``while`` loop that starts at the last character in the string and works its way
             backwards to the first character in the string, printing each letter on a separate line,
-            except backwards.
+            except backwards. For reference, the codelens above shows an example of a word printed letter by letter.
 
             .. activecode::  str-trav-backwardsq
                 :nocodelens:

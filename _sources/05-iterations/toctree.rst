@@ -12,6 +12,6 @@ Iterations
    05-loops.rst
    05-debugging.rst
    05-glossary.rst
-   05-multiplechoice.rst
+   Exercises.rst
    05-mixedupcode.rst
    05-excercises.rst

@@ -18,10 +18,9 @@ Strictly speaking, the operands of the logical operators should be
 boolean expressions, but Python is not very strict. Any nonzero number
 is interpreted as "true."
 
-.. code-block:: python
+.. activecode:: strOperators
 
-   >>> 17 and True
-   True
+   print(17 and True)
 
 
 This flexibility can be useful, but there are some subtleties to it that

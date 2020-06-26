@@ -52,7 +52,7 @@ except for one.
 
   When writing content to a CD, the CD is an example of ________.
 
-  - :[Oo]utput: Correct! A CD displays the results of a program when the disc is played.
+  - :[Oo]utput: A CD displays the results of a program when the disc is played.
     :[Ii]nput: Not quite. Is the CD being read from or written to?
     :.*: Try again.
 
@@ -61,7 +61,7 @@ except for one.
 
   When reading content from a CD, the CD is an example of ________.
 
-  - :[Ii]nput: Correct! A CD holds information that the program reads.
+  - :[Ii]nput: A CD holds information that the program reads.
     :[Oo]utput: Not quite. Is the CD being read from or written to?
     :.*: Try again.
 

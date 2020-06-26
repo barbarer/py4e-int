@@ -48,6 +48,19 @@ description of the word "mnemonic".] means "memory aid". We choose mnemonic vari
 names to help us remember why we created the variable in the first
 place.
 
+.. mchoice:: var-mnemonic-mc-definition
+   :answer_a: memory aid
+   :answer_b: nickname
+   :answer_c: remember this
+   :answer_d: useful
+   :correct: a
+   :feedback_a: We choose mnemonic variable names to help us remember why we created the variable in the first place.
+   :feedback_b: No, reread above.
+   :feedback_c: No, reread above.
+   :feedback_d: No, reread above.
+
+   Mnemonic means:
+
 While this all sounds great, and it is a very good idea to use mnemonic
 variable names, mnemonic variable names can get in the way of a
 beginning programmer's ability to parse and understand code. This is
@@ -104,7 +117,6 @@ at you:
    </pre>
 
 
-
 The parts of the code that are defined by Python (\ ``for``\ ,
 ``in``\ , ``print``\ , and ``:``\ ) are in bold and
 the programmer-chosen variables (\ ``word`` and
@@ -114,19 +126,6 @@ clues to keep your variables and reserved words separate. After a while
 you will begin to read Python and quickly determine what is a variable
 and what is a reserved word.
 
-.. mchoice:: var-mnemonic-mc-definition
-   :practice: T
-   :answer_a: memory aid
-   :answer_b: nickname
-   :answer_c: remember this
-   :answer_d: useful
-   :correct: a
-   :feedback_a: Correct! We choose mnemonic variable names to help us remember why we created the variable in the first place.
-   :feedback_b: No, reread above.
-   :feedback_c: No, reread above.
-   :feedback_d: No, reread above.
-
-   Mnemonic means:
 
 .. mchoice:: var-mnemonic-mc-name
    :practice: T

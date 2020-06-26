@@ -7,6 +7,15 @@ Even our simple *hello.py* script is a program. It is a
 one-line program and is not particularly useful, but in the strictest
 definition, it is a Python program.
 
+.. fillintheblank:: intro-what-fitb-program
+  :practice: T
+
+  A(n) _______ is a sequence of statements that have been crafted to do something.
+
+  - :[Pp]rogram: A program is a sequence of statements that have been crafted to do something.
+    :[Cc]omputer: Not quite.
+    :.*: Try again.
+
 It might be easiest to understand what a program is by thinking about a
 problem that a program might be built to solve, and then looking at a
 program that would solve that problem.
@@ -66,6 +75,15 @@ saved you so much manual effort. You simply type the code into a file
 called *words.py* and run it or you download the source
 code from http://www.py4e.com/code3/ and run it.
 
+.. mchoice:: intro-what-mc-words
+  :answer_a: programmer
+  :answer_b: user
+  :correct: b
+  :feedback_a: Try again. Are you writing the program or using it?
+  :feedback_b: The program has already been written and you are using it - making you the user.
+
+  In the program *words.py* are you the programmer or the user?
+  
 This is a good example of how Python and the Python language are acting
 as an intermediary between you (the end user) and me (the programmer).
 Python is a way for us to exchange useful instruction sequences (i.e.,
@@ -73,24 +91,6 @@ programs) in a common language that can be used by anyone who installs
 Python on their computer. So neither of us are talking *to
 Python*, instead we are communicating with each other
 *through* Python.
-
-.. fillintheblank:: intro-what-fitb-program
-  :practice: T
-
-  A(n) _______ is a sequence of statements that have been crafted to do something.
-
-  - :[Pp]rogram: Correct! A program is a sequence of statements that have been crafted to do something.
-    :[Cc]omputer: Not quite.
-    :.*: Try again.
-
-.. mchoice:: intro-what-mc-words
-  :answer_a: programmer
-  :answer_b: user
-  :correct: b
-  :feedback_a: Try again. Are you writing the program or using it?
-  :feedback_b: Correct! The program has already been written and you are using it - making you the user.
-
-  In the program *words.py* are you the programmer or the user?
 
 .. shortanswer:: intro-what-sa-program
 

@@ -10,8 +10,8 @@ with, like a letter or a number. You can print values in Python.  See what happe
   print(17)
   print('Hello World!')
 
-These values belong to different *types*\ : 17
-is an integer, and "Hello World!" is a *string*\ , so
+These values belong to different *types*: 17
+is an integer, and "Hello World!" is a *string*, so
 called because it contains a "string" of letters. You can identify strings because they are enclosed in quotation
 marks.
 
@@ -26,7 +26,7 @@ If you are not sure what type a value has, use the type function to find out.
 
 Not surprisingly, strings belong to the type ``str`` and
 integers belong to the type ``int``. Less obviously, numbers
-with a decimal point belong to a type called ``float``\ , because
+with a decimal point belong to a type called ``float``, because
 these numbers are represented in a format called *floating
 point*.
 
@@ -42,7 +42,7 @@ they are in quotation marks like strings.
    :correct: c
    :feedback_a: "3.2" has a decimal but "17" does not, is there an option that would include both values?
    :feedback_b: What do the quotation marks mean?
-   :feedback_c: Correct! Quotation marks imply that the value is a string.
+   :feedback_c: Quotation marks imply that the value is a string.
    :feedback_d: A boolean value represents either *True* or *False*.
 
    The values "17" and "3.2" are what type?
@@ -81,7 +81,7 @@ thing.
    :answer_d: print 1000000
    :correct: b
    :feedback_a: We are trying to print an integer, what do the quotation marks do?
-   :feedback_b: Correct, to print an integer don't use commas or quotations.
+   :feedback_b: To print an integer don't use commas or quotations.
    :feedback_c: See the example above, commas in between the digits produce spaces.
    :feedback_d: Remember to use parentheses to print!
 

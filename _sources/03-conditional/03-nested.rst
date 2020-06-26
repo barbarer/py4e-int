@@ -4,8 +4,10 @@ Nested conditionals
 One conditional can also be nested within another. We could have written
 the three-branch example like this:
 
-.. code-block:: 03_nested_cond
+.. codelens:: cndtnlNested
 
+   x = 5
+   y = 6
    if x == y:
        print('x and y are equal')
    else:
@@ -13,41 +15,7 @@ the three-branch example like this:
            print('x is less than y')
        else:
            print('x is greater than y')
-
-
-The outer conditional contains two branches. The first branch contains a
-simple statement. The second branch contains another ``if``
-statement, which has two branches of its own. Those two branches are
-both simple statements, although they could have been conditional
-statements as well.
-
-.. image:: ../images/nested.svg
-   :alt: Nested If Statements
-
-
-Although the indentation of the statements makes the structure apparent,
-*nested conditionals* become difficult to read very
-quickly. In general, it is a good idea to avoid them when you can.
-
-Logical operators often provide a way to simplify nested conditional
-statements. For example, we can rewrite the following code using a
-single conditional:
-
-.. code-block:: 03_nested_cond_pos_digit
-
-   if 0 < x:
-       if x < 10:
-           print('x is a positive single-digit number.')
-
-
-The ``print`` statement is executed only if we make it past
-both conditionals, so we can get the same effect with the
-``and`` operator:
-
-.. code-block:: 03_cond_with_and
-
-   if 0 < x and x < 10:
-       print('x is a positive single-digit number.')
+   print('All done.')
 
 .. mchoice:: cndtnl-nest-mc-error
    :practice: T
@@ -69,6 +37,44 @@ both conditionals, so we can get the same effect with the
              print(x, " is a positive number")
          else:
              print(x," is 0")
+
+
+The outer conditional contains two branches. The first branch contains a
+simple statement. The second branch contains another ``if``
+statement, which has two branches of its own. Those two branches are
+both simple statements, although they could have been conditional
+statements as well.
+
+.. image:: ../images/nested.svg
+   :alt: Nested If Statements
+
+
+Although the indentation of the statements makes the structure apparent,
+*nested conditionals* become difficult to read very
+quickly. In general, it is a good idea to avoid them when you can.
+
+Logical operators often provide a way to simplify nested conditional
+statements. For example, we can rewrite the following code using a
+single conditional:
+
+.. activecode:: cndtnlNestedPositive
+   :caption: Using a nested conditional
+
+   x = 2
+   if 0 < x:
+       if x < 10:
+           print('x is a positive single-digit number.')
+
+
+The first ``print`` statement is executed only if we make it past
+both conditionals, so we can get the same effect with the
+``and`` operator:
+
+.. activecode:: cndtnlNestedAnd
+   :caption: Using "and" in place of a nested conditional
+
+   if 0 < x and x < 10:
+       print('x is a positive single-digit number.')
 
 .. mchoice:: cndtnl-nest-mc-chain
    :practice: T
@@ -138,7 +144,7 @@ both conditionals, so we can get the same effect with the
    :answer_a: True
    :answer_b: False
    :correct: a
-   :feedback_a: Correct! Yes, it is possible to use elif statements within nested if-else statements, just make sure you are keeping track of all the branches.
+   :feedback_a: Yes, it is possible to use elif statements within nested if-else statements, just make sure you are keeping track of all the branches.
    :feedback_b: Try again. You can have multiple branches within each branch of an if-else statement.
 
    True or False? You can use ``elif`` statements within nested if-else statements.

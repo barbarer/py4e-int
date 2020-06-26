@@ -18,4 +18,4 @@ Preface and Getting Setup
    01-debugging.rst
    01-learning.rst
    01-glossary.rst
-   01-Exercises.rst
+   Exercises.rst

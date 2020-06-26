@@ -3,17 +3,19 @@ String comparison
 The comparison operators work on strings. To see if two strings are
 equal:
 
-.. code-block:: python
+.. activecode:: strComparison
+    :caption: Comparing strings
 
-   if word == 'banana':
-       print('All right, bananas.')
+    word = 'banana'
+
+    if word == 'banana':
+        print('All right, bananas.')
 
 
 Other comparison operations are useful for putting words in alphabetical
 order:
 
-.. activecode:: str-comparison
-   :caption: Comparing strings
+.. codelens:: strComparisonCodelens
 
    word = "Pineapple"
    if word < 'banana':
