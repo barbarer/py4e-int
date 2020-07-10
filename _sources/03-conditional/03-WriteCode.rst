@@ -21,6 +21,7 @@ Writing code problems
         .. tab:: Answer
 
             .. activecode:: cndtnl-wc-fivea
+                :optional:
 
                 x = 5
                 if x == 5:
@@ -70,6 +71,7 @@ Writing code problems
             .. tab:: Answer
 
                 .. activecode:: cndtnl-wc-paya
+                    :optional:
 
                     #initializing variables
                     hours = 45
@@ -141,6 +143,7 @@ Writing code problems
             .. tab:: Answer
 
               .. activecode::  cndtnl-wc-distancea
+                  :optional:
                   :nocodelens:
 
                   distance = 14
@@ -217,6 +220,7 @@ Writing code problems
             .. tab:: Answer
 
               .. activecode::  cndtnl-wc-weighta
+                  :optional:
                   :nocodelens:
 
                   weight = 0.5
@@ -274,6 +278,7 @@ Writing code problems
             .. tab:: Answer
 
               .. activecode::  cndtnl-wc-evena
+                  :optional:
                   :nocodelens:
 
                   isEven = True
@@ -334,6 +339,7 @@ Writing code problems
         .. tab:: Answer
 
             .. activecode:: cndtnl-wc-leapYeara
+                :optional:
 
                 year = 1900 #TEST WITH ANY YEAR
                 # Initializing leapYear to False since most years are not leap years

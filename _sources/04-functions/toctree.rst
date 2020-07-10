@@ -16,6 +16,6 @@ Functions
    04-fruitfulvoid.rst
    04-debugging.rst
    04-glossary.rst
-   04-multiplechoice.rst
+   Exercises.rst
    04-mixedupcode.rst
-   04-excercises2.rst
+   04-WriteCode.rst

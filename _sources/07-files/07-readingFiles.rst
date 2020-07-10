@@ -5,13 +5,19 @@ While the *file handle* does not contain the data for the
 file, it is quite easy to construct a ``for`` loop to read
 through and count each of the lines in a file:
 
-.. code-block:: python
+.. datafile:: mbox-short2.txt
+    :fromfile: mbox-short.txt
+    :hide:
 
-    >>> fhand = open('mbox-short.txt')
-    >>> count = 0
-    >>> for line in fhand:
-    ...    count = count + 1
-    >>> print('Line Count:', count)
+.. activecode:: fileLines
+    :caption: Opening and counting the lines in a file
+    :available_files: mbox-short2.txt
+
+    fhand = open('mbox-short2.txt')
+    count = 0
+    for line in fhand:
+        count = count + 1
+    print('Line Count:', count)
 
 We can use the file handle as the sequence in our ``for`` loop.
 Our ``for`` loop simply counts the number of lines in the file
@@ -49,14 +55,14 @@ If you know the file is relatively small compared to the size of your
 main memory, you can read the whole file into one string using the
 ``read`` method on the file handle.
 
-.. code-block:: python
+.. activecode:: fileSlice
+    :caption: Using the read function with files
+    :available_files: mbox-short2.txt
 
-   >>> fhand = open('mbox-short.txt')
-   >>> inp = fhand.read()
-   >>> print(len(inp))
-   94626
-   >>> print(inp[:20])
-   From stephen.marquar
+    fhand = open('mbox-short2.txt')
+    inp = fhand.read()
+    print(len(inp))
+    print(inp[:20])
 
 
 In this example, the entire contents (all 94,626 characters) of the file

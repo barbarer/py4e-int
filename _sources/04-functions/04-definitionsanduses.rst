@@ -4,19 +4,19 @@ Definitions and uses
 Pulling together the code fragments from the previous section, the whole
 program looks like this:
 
-.. activecode:: 04section7_1
-   :coach:
-   :caption: An example of a user-defined function being called within another user-defined function.
+.. activecode:: functDef_lyrics
+    :coach:
+    :caption: An example of a user-defined function being called within another user-defined function.
 
-   def print_lyrics():
-       print("I'm a lumberjack, and I'm okay.")
-       print('I sleep all night and I work all day.')
+    def print_lyrics():
+        print("I'm a lumberjack, and I'm okay.")
+        print('I sleep all night and I work all day.')
 
-   def repeat_lyrics():
-       print_lyrics()
-       print_lyrics()
+    def repeat_lyrics():
+        print_lyrics()
+        print_lyrics()
 
-   repeat_lyrics()
+    repeat_lyrics()
 
 
 This program contains two function definitions: ``print_lyrics`` and
@@ -32,24 +32,24 @@ before the first time it is called.
 .. codelens:: codelens461
     :showoutput:
 
-   def print_lyrics():
-      print("I'm a lumberjack, and I'm okay.")
-      print('I sleep all night and I work all day.')
+    def print_lyrics():
+        print("I'm a lumberjack, and I'm okay.")
+        print('I sleep all night and I work all day.')
 
-   def repeat_lyrics():
-       print_lyrics()
-       print_lyrics()
+    def repeat_lyrics():
+        print_lyrics()
+        print_lyrics()
+
+    repeat_lyrics()
+
+
+If we move the function call above the definition we will get an error.
+
+.. activecode:: functDef_callFirst
+   :coach:
+   :caption: Calling a function before it's defined.
 
    repeat_lyrics()
-
-
-**Move the last line of this program to the top, so the
-function call appears before the definitions. Run the program and see
-what error message you get.**
-
-.. activecode:: 04section7_2
-   :coach:
-   :caption: Move the last line of this program to the top, so the function call appears before the definitions. Run the program and see what error message you get.
 
    def print_lyrics():
        print("I'm a lumberjack, and I'm okay.")
@@ -59,54 +59,25 @@ what error message you get.**
        print_lyrics()
        print_lyrics()
 
-   repeat_lyrics()
+.. mchoice:: functDef_MC_error
+    :practice: T
+    :answer_a: SyntaxError
+    :answer_b: IndexError
+    :answer_c: NameError
+    :answer_d: TypeError
+    :correct: c
+    :feedback_a: This will not cause a SyntaxError
+    :feedback_b: This will not cause an IndexError
+    :feedback_c: This will cause a NameError because the function doesn't exist yet.
+    :feedback_d: This will not cause a TypeError
 
-.. mchoice:: 04question7_1
-   :answer_a: SyntaxError
-   :answer_b: IndexError
-   :answer_c: NameError
-   :answer_d: TypeError
-   :correct: c
-   :feedback_a: Try again!
-   :feedback_b: Try again!
-   :feedback_c: Correct!
-   :feedback_d: Try again!
+    What kind of error do you get when you call a function before it is defined?
 
-   What kind of error do you get when you call a function before it is defined?
+See what happens if we move the function definitions around so that ``repeat_lyrics`` is defined before
+``print_lyrics``.
 
-
-**Move the function call back to the bottom and move the
-definition of ``print_lyrics`` after the definition of ``repeat_lyrics``.
-What happens when you run this program?**
-
-.. activecode:: 04section7_3
-   :coach:
-   :caption: Move the function call back to the bottom and move the definition of print_lyrics after the definition of ``repeat_lyrics``. What happens when you run this program?
-
-   def print_lyrics():
-       print("I'm a lumberjack, and I'm okay.")
-       print('I sleep all night and I work all day.')
-
-   def repeat_lyrics():
-       print_lyrics()
-       print_lyrics()
-
-   repeat_lyrics()
-
-.. mchoice:: 04question7_2
-   :answer_a: The lyrics print like normal.
-   :answer_b: We get a TypeError.
-   :answer_c: We get a NameError.
-   :answer_d: The program compiles but nothing prints.
-   :correct: a
-   :feedback_a: Correct!
-   :feedback_b: Try again!
-   :feedback_c: Try again!
-   :feedback_d: Try again!
-
-   Consider the code block below. What happens when you run this program?
-
-   .. code-block:: python
+.. codelens:: functDef_order
+    :showoutput:
 
     def repeat_lyrics():
         print_lyrics()
@@ -118,30 +89,60 @@ What happens when you run this program?**
 
     repeat_lyrics()
 
-.. parsonsprob:: question7_1
+.. mchoice:: functDef_MC_order
+    :answer_a: The lyrics print like normal.
+    :answer_b: We get a TypeError.
+    :answer_c: We get a NameError.
+    :answer_d: The program compiles but nothing prints.
+    :correct: a
+    :feedback_a: This doesn't cause an error because both functions are defined before repeat_lyrics is called.
+    :feedback_b: This will not cause a TypeError.
+    :feedback_c: This will not cause a NameError.
+    :feedback_d: This will print something.
 
-   Construct a block of code with two functions. The first function is called "printFlavors". The second function should call the first function. Finally. call the second function.
-   -----
-   def printFlavors():
-   =====
-    print("Vanilla")
-    print("Chocolate")
-    print("Strawberry")
-   =====
-   def printProducts():
-   =====
-    print("Ice cream")
-    print("Milkshake")
-    print("Frozen yogurt")
-    print("************")
-    print("Flavors:")
-    printFlavors()
-   =====
-    print("Ice cream")  #distractor
-    print("Milkshake")
-    print("Frozen yogurt")
-    print("************")
-    print("Flavors:")
-    print(printFlavors())
-   =====
-   printProducts()
+    Consider the code block below. What happens when you run this program?
+
+    .. code-block:: python
+
+        def repeat_lyrics():
+            print_lyrics()
+            print_lyrics()
+
+        def print_lyrics():
+            print("I'm a lumberjack, and I'm okay.")
+            print('I sleep all night and I work all day.')
+
+        repeat_lyrics()
+
+.. parsonsprob:: functDef_PP_flavors
+    :adaptive:
+    :numbered: left
+    :practice: T
+
+    Construct a block of code with two functions. The first function is called printFlavors,
+    which lists the flavors available. The second function should print the products and call the
+    first function. Finally, call the second function. Watch out for indentation and extra code pieces!
+    -----
+    def printFlavors():
+    =====
+        print("Vanilla")
+        print("Chocolate")
+        print("Strawberry")
+    =====
+    def printProducts():
+    =====
+        print("Ice cream")
+        print("Milkshake")
+        print("Frozen yogurt")
+        print("************")
+        print("Flavors:")
+        printFlavors()
+    =====
+        print("Ice cream")  #distractor
+        print("Milkshake")
+        print("Frozen yogurt")
+        print("************")
+        print("Flavors:")
+        print(printFlavors())
+    =====
+    printProducts()

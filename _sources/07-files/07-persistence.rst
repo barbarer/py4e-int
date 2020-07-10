@@ -21,7 +21,7 @@ the "thinking" happens.
     :feedback_c: Memory sources run the software in conjunction will the CPU.
     :feedback_d: The network does not run software.
 
-    Where does the software work/run on a device? Select all that apply. 
+    Where does the software work/run on a device? Select all that apply.
 
 But if you recall from our hardware architecture discussions, once the
 power is turned off, anything stored in either the CPU or main memory is

@@ -12,23 +12,19 @@ started with the prefix "From:", we could use the string method
 *startswith* to select only those lines with the desired
 prefix:
 
-\VerbatimInput{../code3/search1.py}
-\begin{trinketfiles}
-../code3/mbox-short.txt
-\end{trinketfiles}
+.. datafile:: mbox-short3.txt
+    :fromfile: mbox-short.txt
+    :hide:
 
-When this program runs, we get the following output:
+.. activecode:: fileFrom
+    :caption: Printing lines starting with "From:"
+    :available_files: mbox-short3.txt
 
-.. code-block::
-
-   From: stephen.marquard@uct.ac.za
-
-   From: louis@media.berkeley.edu
-
-   From: zqian@umich.edu
-
-   From: rjlowe@iupui.edu
-   ...
+    fhand = open('mbox-short3.txt')
+    count = 0
+    for line in fhand:
+        if line.startswith('From:'):
+            print(line)
 
 
 The output looks great since the only lines we are seeing are those
@@ -39,28 +35,43 @@ prints the string in the variable *line* which includes a
 newline and then ``print`` adds *another* newline, resulting in
 the double spacing effect we see.
 
+.. mchoice:: file-search-mc-strmethod
+    :practice: T
+    :answer_a: find
+    :answer_b: startswith
+    :answer_c: endswith
+    :answer_d: title
+    :correct: b
+    :feedback_a: This string method searches the string for a specified value and returns the position of where it was found, rather than True/False if the string contains the value.
+    :feedback_b: Yes, startswith returns true if the string starts with the specified value.
+    :feedback_c: This string method returns true is the string ends with the specified value.
+    :feedback_d: This string method converts the first character of each word to upper case.
+
+    Which of the following string methods is used to select lines from a file using the beginning of the string?
+
 We could use line slicing to print all but the last character, but a
 simpler approach is to use the *rstrip* method which
 strips whitespace from the right side of a string as follows:
 
-\VerbatimInput{../code3/search2.py}
-\begin{trinketfiles}
-../code3/mbox-short.txt
-\end{trinketfiles}
+.. activecode:: filerstrip
+    :caption: Using rstrip with lines in a file
+    :available_files: mbox-short3.txt
 
-When this program runs, we get the following output:
+    fhand = open('mbox-short3.txt')
+    for line in fhand:
+        line = line.rstrip()
+        if line.startswith('From:'):
+            print(line)
 
-.. code-block::
+.. mchoice:: file-search-mc-rstrip
+    :practice: T
+    :answer_a: True
+    :answer_b: False
+    :correct: b
+    :feedback_a: Try again.
+    :feedback_b: rstrip only removes whitespace from the right side of a string, strip removes whitespace from the left and right side of a string.
 
-   From: stephen.marquard@uct.ac.za
-   From: louis@media.berkeley.edu
-   From: zqian@umich.edu
-   From: rjlowe@iupui.edu
-   From: zqian@umich.edu
-   From: rjlowe@iupui.edu
-   From: cwen@iupui.edu
-   ...
-
+    True or False? The ``rstrip`` method removes all whitespace from a string.
 
 As your file processing programs get more complicated, you may want to
 structure your search loops using ``continue``. The basic idea
@@ -71,10 +82,18 @@ interesting line, we do something with that line.
 We can structure the loop to follow the pattern of skipping
 uninteresting lines as follows:
 
-\VerbatimInput{../code3/search3.py}
-\begin{trinketfiles}
-../code3/mbox-short.txt
-\end{trinketfiles}
+.. activecode:: fileInteresting
+    :caption: Skipping uninteresting lines in a file
+    :available_files: mbox-short3.txt
+
+    fhand = open('mbox-short3.txt')
+    for line in fhand:
+        line = line.rstrip()
+        # Skip 'uninteresting lines'
+        if not line.startswith('From:'):
+            continue
+            # Process our 'interesting' line
+        print(line)
 
 The output of the program is the same. In English, the uninteresting
 lines are those which do not start with "From:", which we skip using
@@ -89,28 +108,33 @@ the string was not found, we can write the following loop to show lines
 which contain the string "@uct.ac.za" (i.e., they come from the
 University of Cape Town in South Africa):
 
-\VerbatimInput{../code3/search4.py}
-\begin{trinketfiles}
-../code3/mbox-short.txt
-\end{trinketfiles}
+.. activecode:: fileFind
+    :caption: Finding and printing specific lines from a file
+    :available_files: mbox-short3.txt
 
-Which produces the following output:
-
-.. code-block::
-
-   From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
-   X-Authentication-Warning: set sender to stephen.marquard@uct.ac.za using -f
-   From: stephen.marquard@uct.ac.za
-   Author: stephen.marquard@uct.ac.za
-   From david.horwitz@uct.ac.za Fri Jan  4 07:02:32 2008
-   X-Authentication-Warning: set sender to david.horwitz@uct.ac.za using -f
-   From: david.horwitz@uct.ac.za
-   Author: david.horwitz@uct.ac.za
-   ...
-
+    fhand = open('mbox-short3.txt')
+    for line in fhand:
+        line = line.rstrip()
+        if line.find('@uct.ac.za') == -1:
+            continue
+        print(line)
 
 Here we also use the contracted form of the ``if`` statement
 where we put the ``continue`` on the same line as the
 ``if``. This contracted form of the ``if`` functions
 the same as if the ``continue`` were on the next line and
 indented.
+
+.. mchoice:: file-search-mc-find
+    :practice: T
+    :answer_a: The value was at the end of the string.
+    :answer_b: The value was the last element of a string.
+    :answer_c: The value was the at the beginning of the string.
+    :answer_d: The value was not found in the string.
+    :correct: d
+    :feedback_a: -1 is the last index for a slice, but find only returns positive numbers for the index of a value.
+    :feedback_b: -1 is the last index for a slice, but find only returns positive numbers for the index of a value.
+    :feedback_c: -1 is the last index for a slice, but find only returns positive numbers for the index of a value.
+    :feedback_d: If find returns -1, the value is not in the string.
+
+    When using the string method ``find``, what does a return of ``-1`` mean?

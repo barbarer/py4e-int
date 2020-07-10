@@ -5,14 +5,14 @@ In the context of programming, a *function* is a named
 sequence of statements that performs a computation. When you define a
 function, you specify the name and the sequence of statements. Later,
 you can "call" the function by name. We have already seen one example of
-a *function call*\ :
+a *function call*:
 
-.. activecode:: 04section1
-   :coach:
-   :caption: An example of a function call.
+.. activecode:: functCall_type
+    :coach:
+    :caption: An example of a function call.
 
-   result = type(32)
-   print(result)
+    result = type(32)
+    print(result)
 
 
 The name of the function is ``type``. The expression in
@@ -25,21 +25,24 @@ is the type of the argument.
 It is common to say that a function "takes" an argument and "returns" a
 result. The result is called the *return value*.
 
-.. clickablearea:: 04click1_1
+.. clickablearea:: functCall_click_name
+    :practice: T
     :question: Click on the name of the function.
     :iscode:
 
     :click-correct:addTwo:endclick:(:click-incorrect:23:endclick:)
 
-.. clickablearea:: 04click1_2
+.. clickablearea:: functCall_click_arg
+    :practice: T
     :question: Click on the argument of the function.
     :iscode:
 
     :click-incorrect:addTwo:endclick:(:click-correct:23:endclick:)
 
-.. fillintheblank:: 04fill1
+.. fillintheblank:: functCall_fill1
+    :practice: T
 
     A _________ is a named sequence of statements that performs a computation.
 
-    - :(?:f|F)(?:u|U)(?:n|N)(?:c|C)(?:t|T)(?:i|I)(?:o|O)(?:n|N): Is the correct answer!
+    - :[Ff]unction: A function is a named sequence of statements that performs a computation.
       :.*: Try again!

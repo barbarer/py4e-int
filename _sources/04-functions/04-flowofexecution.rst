@@ -8,6 +8,14 @@ the *flow of execution*.
 Execution always begins at the first statement of the program.
 Statements are executed one at a time, in order from top to bottom.
 
+.. fillintheblank:: functFlow_Fill1
+    :practice: T
+
+    The order in which statements are executed is called the __________________.
+
+    - :[Ff]low [Oo]f [Ee]xecution: The flow of execution is the order in which statements are executed.
+      :.*: Try again!
+
 Function *definitions* do not alter the flow of execution of the
 program, but remember that statements inside the function are not
 executed until the function is called.
@@ -24,21 +32,21 @@ function, the program might have to execute yet another function!
 
 Observe below, where one function calls another function, which calls another.
 
-.. codelens:: codelens481
+.. codelens:: functFlow_codelens
     :showoutput:
 
-   def firstPrint():
-      print("First")
-      secondPrint()
+    def firstPrint():
+        print("First")
+        secondPrint()
 
-   def secondPrint():
-      print("Second")
-      thirdPrint()
+    def secondPrint():
+        print("Second")
+        thirdPrint()
 
-   def thirdPrint():
-      print("Third")
+    def thirdPrint():
+        print("Third")
 
-   firstPrint()
+    firstPrint()
 
 Fortunately, Python is good at keeping track of where it is, so each
 time a function completes, the program picks up where it left off in the
@@ -49,31 +57,25 @@ What's the moral of this sordid tale? When you read a program, you don't
 always want to read from top to bottom. Sometimes it makes more sense if
 you follow the flow of execution.
 
-.. fillintheblank:: 04fill8_1
+.. mchoice:: functFlow_MC_begin
+    :practice: T
+    :answer_a: The line where the first function is called.
+    :answer_b: The first statement of the program.
+    :answer_c: The first function declaration.
+    :correct: b
+    :feedback_a: A function needs to be defined before it is called.
+    :feedback_b: The execution of a program begins at the first statement of the program.
+    :feedback_c: The program begins executing at the top of the program.
 
-    The order in which statements are executed is called the __________________.
+    Where does the execution of a program always begin?
 
-    - :(?:f|F)(?:l|L)(?:o|O)(?:w|W)\s(?:o|O)(?:F|f)\s(?:e|E)(?:x|X)(?:e|E)(?:c|C)(?:u|U)(?:t|T)(?:i|I)(?:o|O)(?:n|N): Correct!
-      :.*: Try again!
+.. mchoice:: functFlow_MC_read
+    :answer_a: ...don't always want to read from top to bottom
+    :answer_b: ...should follow the flow of execution.
+    :answer_c: Both a and b
+    :correct: c
+    :feedback_a: This is important.
+    :feedback_b: This is important.
+    :feedback_c: It is important to start reading from the beginning, but to follow the flow of execution as it continues.
 
-.. mchoice:: 04question8_1
-   :answer_a: The line where the first function is called.
-   :answer_b: The first statement of the program.
-   :answer_c: The first function declaration.
-   :correct: b
-   :feedback_a: Try again!
-   :feedback_b: Correct!
-   :feedback_c: Try again!
-
-   Where does the execution of a program always begin?
-
-.. mchoice:: 04question8_2
-   :answer_a: ...don't always want to read from top to bottom
-   :answer_b: ...should follow the flow of execution.
-   :answer_c: Both a and b
-   :correct: c
-   :feedback_a: Try again!
-   :feedback_b: Try again!
-   :feedback_c: Correct!
-
-   When you read a program, you...
+    When you read a program, you...

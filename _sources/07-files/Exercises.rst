@@ -1,69 +1,155 @@
 Exercises
 ---------
 
-**Exercise 1: Write a program to read through a file and print the
-contents of the file (line by line) all in upper case. Executing the
-program will look as follows:**
-
-.. code-block::
-
-   python shout.py
-   Enter a file name: mbox-short.txt
-   FROM STEPHEN.MARQUARD@UCT.AC.ZA SAT JAN  5 09:14:16 2008
-   RETURN-PATH: <POSTMASTER@COLLAB.SAKAIPROJECT.ORG>
-   RECEIVED: FROM MURDER (MAIL.UMICH.EDU [141.211.14.90])
-        BY FRANKENSTEIN.MAIL.UMICH.EDU (CYRUS V2.3.8) WITH LMTPA;
-        SAT, 05 JAN 2008 09:14:16 -0500
+.. mchoice:: fileEx_read
+    :practice: T
+    :answer_a: infile = open(myText.txt, “r”)
+    :answer_b: infile = open("myText.txt", “r”)
+    :answer_c: infile = open("myText.txt", “w”)
+    :correct: b
+    :feedback_a: Using the file name without quotation marks makes Python think the file name is a variable name here.
+    :feedback_b: We provide a string with file name + "r" which means read only.
+    :feedback_c: "w" opens the file in writing mode.
 
 
-**You can download the file from** `www.py4e.com/code3/mbox-short.txt <http://www.py4e.com/code3/mbox-short.txt>`_
+    Which of the following commands is used to open a file called ``myText.txt`` in Read-Only mode?
 
-**Exercise 2: Write a program to prompt for a file name, and then read
-through the file and look for lines of the form:**
-
-.. code-block::
-
-   X-DSPAM-Confidence: 0.8475
-
-
-**When you encounter a line that starts with "X-DSPAM-Confidence:" pull
-apart the line to extract the floating-point number on the line. Count
-these lines and then compute the total of the spam confidence values
-from these lines. When you reach the end of the file, print out the
-average spam confidence.**
-
-.. code-block::
-
-   Enter the file name: mbox.txt
-   Average spam confidence: 0.894128046745
-
-   Enter the file name: mbox-short.txt
-   Average spam confidence: 0.750718518519
+.. mchoice:: fileEx_write
+    :practice: T
+    :answer_a: outfile = open("myText.txt", "w")
+    :answer_b: outfile = open("myText.txt", “r”)
+    :answer_c: outfile = open(myText.txt, “w”)
+    :correct: a
+    :feedback_a: We provide a string with file name + "w" which means write only.
+    :feedback_b: "r" opens the file in reading mode.
+    :feedback_c: Using the file name without quotation marks makes Python think the file name is a variable name here
 
 
-**Test your file on the *mbox.txt* and *mbox-short.txt* files.**
+    Which of the following commands is used to open a file called ``myText.txt`` in Write-Only mode?
 
-**Exercise 3: Sometimes when programmers get bored or want to have a bit
-of fun, they add a harmless *Easter Egg* to their program
-Modify the program that prompts the user for the file name so that it
-prints a funny message when the user types in the exact file name "na na
-boo boo". The program should behave normally for all other files which
-exist and don't exist. Here is a sample execution of the program:**
+.. mchoice:: fileEx_close
+    :practice: T
+    :answer_a: "myText".close()
+    :answer_b: ref_file.close()
+    :answer_c: close(ref_file)
+    :answer_d: close("myText")
+    :correct: b
+    :feedback_a: The title of the file is a string and a string cannot be closed in Python.
+    :feedback_b: This closes the file using the variable it has been assigned to.
+    :feedback_c: The command close() needs to be called on the file's variable using dot notation.
+    :feedback_d: The command close() needs to be called on the file's variable using dot notation.
 
-.. code-block::
+    Which command below closes the already open file ``myText.txt`` if the following code has already been written?
 
-   python egg.py
-   Enter the file name: mbox.txt
-   There were 1797 subject lines in mbox.txt
+    ::
 
-   python egg.py
-   Enter the file name: missing.tyxt
-   File cannot be opened: missing.tyxt
+        ref_file = open("myText.txt", "r")
 
-   python egg.py
-   Enter the file name: na na boo boo
-   NA NA BOO BOO TO YOU - You have been punk'd!
+.. mchoice:: fileEx_writeLine
+    :practice: T
+    :answer_a: filevar.append(somestring)
+    :answer_b: filevar.write("somestring")
+    :answer_c: filevar.write(somestring)
+    :answer_d: somestring.write()
+    :correct: c
+    :feedback_a: Append is a command used for lists, not files.
+    :feedback_b: somestring is a variable and does not need quotation marks around it.
+    :feedback_c: Using dot notation, we can call the write command with the string variable inside the parentheses.
+    :feedback_d: The command write() needs to be called on the file's variable, not the string itself.
 
+    Which of the commands below is used to add the following string to the end of a file referenced with the variable ``filevar``?
 
-**We are not encouraging you to put Easter Eggs in your programs; this is
-just an exercise.**
+    ::
+
+        somestring = "my Sentence"
+
+.. mchoice:: fileEx_printNames
+    :practice: T
+    :answer_a: I
+    :answer_b: II
+    :answer_c: III
+    :answer_d: None of the above.
+    :correct: b
+    :feedback_a: Append is a command used for lists, not files.
+    :feedback_b: somestring is a variable and does not need quotation marks around it.
+    :feedback_c: Using dot notation, we can call the write command with the string variable inside the parentheses.
+
+    The contents of ``names.txt`` is listed here:
+
+    ::
+
+        Moana
+        Cinderella
+        Tiana
+
+    Which of the following code blocks will print all of the names in ``names.txt``?
+
+    ``I``
+
+    ::
+
+        names = open("names.txt", "r")
+        for line in names:
+            print(names)
+
+    ``II``
+
+    ::
+
+        names = open("names.txt", "r")
+        for line in names:
+            print(line)
+
+    ``III``
+
+    ::
+
+        names = open("names.txt", "r")
+        for line in names:
+            print("line")
+
+.. mchoice:: fileEx_loop
+    :practice: T
+    :answer_a: For loop
+    :answer_b: While loop
+    :correct: a
+    :feedback_a: A for loop is typically used to iterate through the lines in a file.
+    :feedback_b: A while loop can be used to run through lines in a file, but to iterate through, it is more common to use a for loop.
+
+    What type of loop is used to iterate through the lines in a file?
+
+.. mchoice:: fileEx_catch
+    :practice: T
+    :answer_a: True
+    :answer_b: False
+    :correct: a
+    :feedback_a: Try/except statements are used to prevent an exception from terminating a program.
+    :feedback_b: Try/except statements are a catch for programs. What does that mean?
+
+    True or False? Try and except statements are used to catch errors from terminating programs.
+
+.. fillintheblank:: fileEx_r
+    :practice: T
+
+    What letter is used to indicate that a file is opening in read only mode?
+
+    - :[Rr]: Adding "r" to the end of a file opening command will open it in reading mode.
+      :[Ww]: "w" is used to indicate writing mode.
+      :.*: Try again!
+
+.. fillintheblank:: fileEx_w
+    :practice: T
+
+    What letter is used to indicate that a file is opening in write only mode?
+
+    - :[Ww]: Adding "w" to the end of a file opening command will open it in writing mode.
+      :[Rr]: "r" is used to indicate reading mode.
+      :.*: Try again!
+
+.. fillintheblank:: fileEx_line
+    :practice: T
+
+    Lines in a file are separated by what character?
+
+    - :([Nn]ewline)|(\\n): A newline (or the symbol \n) is used to separate the lines in a file.
+      :.*: Try again!

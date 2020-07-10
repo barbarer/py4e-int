@@ -7,18 +7,18 @@ it:
 
 .. code-block:: python
 
-   >>> import math
+    >>> import math
 
 
 This statement creates a *module object* named math. If
 you print the module object, you get some information about it:
 
-.. activecode:: 04section4_1
-   :coach:
-   :caption: If you print the module object, which can be done using import math, you get some information about it.
+.. activecode:: functMath_module
+    :coach:
+    :caption: The math module object
 
-   import math
-   print(math)
+    import math
+    print(math)
 
 The module object contains the functions and variables defined in the
 module. To access one of the functions, you have to specify the name of
@@ -26,21 +26,21 @@ the module and the name of the function, separated by a dot (also known
 as a period). This format is called *dot notation*.
 
 
-.. activecode:: 04section4_2
-   :coach:
-   :caption: This example demonstrates the use of the math module's log and sin functions.
+.. activecode:: functMath_logSin
+    :coach:
+    :caption: This example demonstrates the use of the math module's log and sin functions.
 
-   import math
+    import math
 
-   signal_power = 10
-   noise_power = 10
-   ratio = signal_power / noise_power
-   decibels = 10 * math.log10(ratio)
-   print(decibels)
+    signal_power = 10
+    noise_power = 10
+    ratio = signal_power / noise_power
+    decibels = 10 * math.log10(ratio)
+    print(decibels)
 
-   radians = 0.7
-   height = math.sin(radians)
-   print(height)
+    radians = 0.7
+    height = math.sin(radians)
+    print(height)
 
 
 The first example computes the logarithm base 10 of the signal-to-noise
@@ -53,16 +53,16 @@ functions (\ ``cos``\ , ``tan``\ , etc.) take arguments in
 radians. To convert from degrees to radians, divide by 360 and multiply
 by 2\pi:
 
-.. activecode:: 04section4_3
-   :coach:
-   :caption: This example demonstrates the use of the math module's sin and pi functions.
+.. activecode:: functMath_sinPi
+    :coach:
+    :caption: This example demonstrates the use of the math module's sin and pi functions.
 
-   import math
+    import math
 
-   degrees = 45
-   radians = degrees / 360.0 * 2 * math.pi
-   result = math.sin(radians)
-   print(result)
+    degrees = 45
+    radians = degrees / 360.0 * 2 * math.pi
+    result = math.sin(radians)
+    print(result)
 
 
 The expression ``math.pi`` gets the variable ``pi``
@@ -73,52 +73,54 @@ If you know your trigonometry, you can check the previous result by
 comparing it to the square root of two divided by two:
 
 
-.. activecode:: 04section4_4
-   :coach:
-   :caption: An example of the use of the math module's sqrt function.
+.. activecode:: functMath_sqrt
+    :coach:
+    :caption: An example of the use of the math module's sqrt function.
 
-   import math
+    import math
 
-   result = math.sqrt(2) / 2.0
-   print(result)
+    result = math.sqrt(2) / 2.0
+    print(result)
 
-.. mchoice:: 04question4_1
-   :answer_a: import math
-   :answer_b: include math
-   :answer_c: add math
-   :answer_d: None. You can always use the math module.
-   :correct: a
-   :feedback_a: Correct!
-   :feedback_b: Try again!
-   :feedback_c: Try again!
-   :feedback_d: Try again!
+.. mchoice:: functMath_MC_statement
+    :practice: T
+    :answer_a: import math
+    :answer_b: include math
+    :answer_c: add math
+    :answer_d: None. You can always use the math module.
+    :correct: a
+    :feedback_a: import math allows you to use the math module by creating the module object.
+    :feedback_b: include works similarly to import but is not what we are using.
+    :feedback_c: add will not import the math module.
+    :feedback_d: Something needs to be done to bring in the math module.
 
-   Which statement allows you to use the math module in Python?
+    Which statement allows you to use the math module in Python?
 
-.. mchoice:: 04question4_2
-   :answer_a: log
-   :answer_b: module object
-   :answer_c: dot notation
-   :answer_d: function notation
-   :correct: c
-   :feedback_a: Try again!
-   :feedback_b: Try again!
-   :feedback_c: Correct!
-   :feedback_d: Try again!
+.. mchoice:: functMath_MC_access
+    :practice: T
+    :answer_a: log
+    :answer_b: module object
+    :answer_c: dot notation
+    :answer_d: function notation
+    :correct: c
+    :feedback_a: log is a function within the math module.
+    :feedback_b: The math module object is what contains the math functions.
+    :feedback_c: dot notation allows us to access a function in a module.
+    :feedback_d: function notation is the way a function is written.
 
-   To access a function in a module, we must use...
+    To access a function in a module, we must use...
 
 
-.. fillintheblank:: 04fill4_1
+.. fillintheblank:: functMath_fill1
 
     When we use the "import math" statement, a __________ called math is created.
 
-    - :(?:m|M)(?:o|O)(?:d|D)(?:u|U)(?:l|L)(?:e|E)\s(?:o|O)(?:b|B)(?:j|J)(?:e|E)(?:c|C)(?:t|T): Correct!
+    - :[Mm]odule [Oo]bject: A module object is created when we import math.
       :.*: Try again!
 
 
 
-.. codelens:: codelens_question_line_24
+.. codelens:: functMath_codelens1
     :question: What will print?
     :breakline: 3
     :feedback: Num is a floating-point number.
