@@ -9,12 +9,21 @@ find the file by name and make sure the file exists. In this example, we
 open the file *mbox.txt*, which should be stored in the same
 folder that you are in when you start Python. You can download this file
 from `www.py4e.com/code3/mbox.txt <http://www.py4e.com/code3/mbox.txt>`_
+For learning purposes, we are using the shortened version of this file
+``mbox-short.txt`` This file can be found and downloaded from
+`www.py4e.com/code3/mbox-short.txt <http://www.py4e.com/code3/mbox-short.txt>`_
 
-.. code-block:: python
 
-   >>> fhand = open('mbox.txt')
-   >>> print(fhand)
-   <_io.TextIOWrapper name='mbox.txt' mode='r' encoding='cp1252'>
+.. datafile:: mbox-short.txt
+    :fromfile: mbox-short.txt
+    :hide:
+
+.. activecode:: fileOpen
+    :caption: Opening a file
+    :available_files: mbox-short.txt
+
+    fhand = open('mbox-short.txt')
+    print(fhand)
 
 .. fillintheblank:: file-open-fitb-start
 

@@ -43,3 +43,4 @@ Table of Contents
    05-iterations/toctree.rst
    06-strings/toctree.rst
    07-files/toctree.rst
+   08-lists/toctree.rst

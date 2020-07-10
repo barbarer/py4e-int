@@ -19,19 +19,19 @@ program over and over!
 
 Make sure that the code you are looking at is the code you are running.
 If you're not sure, put something like ``print("hello")`` at the beginning
-of the program and run it again. If you don't see ``hello``\ , you're not
+of the program and run it again. If you don't see ``hello``, you're not
 running the right program!
 
-.. fillintheblank:: 04fill11_1
+.. fillintheblank:: functDebug_spacing
 
     The best way to avoid problems with spaces and tabs is to use ______ exclusively.
 
-    - :(?:s|S)(?:p|P)(?:a|A)(?:c|C)(?:e|E)(?:s|S): Correct!
+    - :[Ss]paces: The best way to avoid problems with spacing is to use spaces exclusively.
       :.*: Try again!
 
-.. fillintheblank:: 04fill11_2
+.. fillintheblank:: functDebug_look
 
     Sometimes the program you are running can look different than the program you are looking at in the text editor if you forget to ____ your program.
 
-    - :(?:s|S)(?:a|A)(?:v|V)(?:e|E): Correct!
+    - :[Ss]ave: Saving frequently will keep your code up to date. 
       :.*: Try again!

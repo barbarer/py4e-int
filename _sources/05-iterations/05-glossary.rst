@@ -27,7 +27,7 @@ iteration:
     Repeated execution of a set of statements using either a function
     that calls itself or a loop.
 
-.. dragndrop:: chapter_five_glossary_one
+.. dragndrop:: iteration_glossary_one
     :feedback: Try again!
     :match_1: accumulator|||A variable used in a loop to add up or accumulate a result.
     :match_2: counter|||A variable used in a loop to count the number of times something happened. We initialize a counter to zero and then increment the counter each time we want to "count" something.
