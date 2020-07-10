@@ -44,3 +44,5 @@ Table of Contents
    06-strings/toctree.rst
    07-files/toctree.rst
    08-lists/toctree.rst
+   09-dictionaries/toctree.rst
+   10-tuples/toctree.rst
