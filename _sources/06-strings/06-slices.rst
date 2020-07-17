@@ -1,5 +1,11 @@
 String slices
 -------------
+.. index::
+    pair: Slice; Operator
+    pair: String; Slice
+    pair: Index; Slice
+    single: Quotation Mark
+    pair: Copy; Slice
 
 A segment of a string is called a *slice*. Selecting a
 slice is similar to selecting a character:

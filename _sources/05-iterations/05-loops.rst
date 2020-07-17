@@ -1,5 +1,13 @@
 Loop patterns
 -------------
+.. index::
+    single: Iteration
+    pair: For; Loop
+    pair: While; Loop
+    pair: Accumulator; Sum
+    pair: Maximum; Loop
+    pair: Minimum; Loop
+    pair: Special Value; None
 
 Often we use a ``for`` or ``while`` loop to go through
 a list of items or the contents of a file and we are looking for

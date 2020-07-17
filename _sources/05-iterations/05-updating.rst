@@ -1,5 +1,11 @@
 Updating variables
 ------------------
+.. index::
+    single: Update
+    pair: Updating; Variable
+    pair: Initialize; Before Update
+    single: Increment
+    single: Decrement
 
 A common pattern in assignment statements is an assignment statement
 that updates a variable, where the new value of the variable depends on

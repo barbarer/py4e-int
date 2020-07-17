@@ -1,5 +1,9 @@
 Chained conditionals
 --------------------
+.. index::
+    single: Chained Conditional
+    pair: Keyword; Elif
+    
 
 Sometimes there are more than two possibilities and we need more than
 two branches. One way to express a computation like that is a

@@ -1,5 +1,10 @@
 Opening files
 -------------
+.. index::
+    pair: Function; Open
+    pair: File; Open
+    single: File Handle
+    
 
 When we want to read or write a file (say on your hard drive), we first
 must *open* the file. Opening the file communicates with

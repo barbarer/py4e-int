@@ -1,5 +1,9 @@
 Debugging
 ---------
+.. index::
+    single: Debugging
+    single: Traceback
+    single: Whitespace
 
 The traceback Python displays when an error occurs contains a lot of
 information, but it can be overwhelming. The most useful parts are

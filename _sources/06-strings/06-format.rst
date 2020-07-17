@@ -1,5 +1,10 @@
 Format operator
 ---------------
+.. index::
+    pair: Operator; Format
+    single: Format String
+    single: Format Sequence
+    single: TypeError
 
 The *format operator*, ``%`` allows us to
 construct strings, replacing parts of the strings with the data stored

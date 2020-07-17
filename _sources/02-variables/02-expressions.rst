@@ -1,5 +1,9 @@
 Expressions
 -----------
+.. index::
+    single: Expression
+    single: Evaluate
+    
 
 An *expression* is a combination of values, variables,
 and operators. A value all by itself is considered an expression, and so

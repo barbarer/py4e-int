@@ -1,5 +1,9 @@
 Debugging
 ---------
+.. index::
+    single: Debugging
+    pair: Guardian; Pattern
+
 A skill that you should cultivate as you program is always asking
 yourself, "What could go wrong here?" or alternatively, "What crazy
 thing might our user do to crash our (seemingly) perfect program?"

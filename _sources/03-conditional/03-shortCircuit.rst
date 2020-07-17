@@ -1,6 +1,9 @@
-
 Short-circuit evaluation of logical expressions
 -----------------------------------------------
+.. index::
+    single: Short Circuit
+    single: Guardian Pattern
+    single: Guard
 
 When Python is processing a logical expression such as ``x >= 2 and
 (x/y) > 2``, it evaluates the expression from left to right.

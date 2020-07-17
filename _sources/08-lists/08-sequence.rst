@@ -1,5 +1,12 @@
 A list is a sequence
 --------------------
+.. index::
+    single: Element
+    single: Sequence
+    single: Item
+    single: Assignment
+    single: Nested List
+    pair: Empty; List
 
 Like a string, a *list* is a sequence of values. In a
 string, the values are characters; in a list, they can be any type. The

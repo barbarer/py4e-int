@@ -1,5 +1,9 @@
 What could possibly go wrong?
 -----------------------------
+.. index::
+    single: Syntax Error
+    single: Semantic Error
+    single: Logic Error
 
 As we saw in our earliest conversations with Python, we must communicate
 very precisely when we write Python code. The smallest deviation or
@@ -128,7 +132,7 @@ to do exactly what you have asked.
     :answer_b: The interpreter/compiler.
     :answer_c: The user.
     :correct: b
-    :feedback_a: Try again! The programmer might find syntax errors if they look through their code, but the interpreter/compiler will find them when the code is run. 
+    :feedback_a: Try again! The programmer might find syntax errors if they look through their code, but the interpreter/compiler will find them when the code is run.
     :feedback_b: The interpreter/compiler will find syntax errors.
     :feedback_c: Try again! The user will run into syntax errors if they exist, but the interpreter/compiler will find them.
 

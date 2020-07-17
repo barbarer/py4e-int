@@ -1,5 +1,8 @@
 Text files and lines
 --------------------
+.. index::
+    single: Newline
+    single: Text File
 
 A text file can be thought of as a sequence of lines, much like a Python
 string can be thought of as a sequence of characters. For example, this

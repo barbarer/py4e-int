@@ -1,5 +1,5 @@
-Exercises
----------
+Multiple Choice Questions
+--------------------------
 
 .. mchoice:: fileEx_read
     :practice: T

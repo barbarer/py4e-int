@@ -1,5 +1,17 @@
 Math functions
 --------------
+.. index::
+    pair: Math; Function
+    pair: Module; Object
+    single: Dot Notation
+    single: Pi
+    pair: Log; Function
+    single: Radian
+    pair: Trigonometric; Function
+    pair: Sine; Function
+    pair: Sqrt; Function
+
+
 
 Python has a ``math`` module that provides most of the familiar
 mathematical functions. Before we can use the module, we have to import

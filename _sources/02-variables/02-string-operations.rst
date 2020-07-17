@@ -1,5 +1,9 @@
 String operations
 -----------------
+.. index::
+    pair: String; Operator
+    single: String Operations
+    single: Concatenation
 
 The ``+`` operator works with strings, but it is not addition
 in the mathematical sense. Instead it performs

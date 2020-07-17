@@ -1,5 +1,9 @@
 Variables
 ---------
+.. index::
+    single: Variable
+    single: Assignment
+    pair: Assignment; Statement
 
 One of the most powerful features of a programming language is the
 ability to manipulate *variables*. A variable is a name

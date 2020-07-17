@@ -1,5 +1,10 @@
 Function calls
 --------------
+.. index::
+    single: Function Call
+    pair: Parentheses; Argument In
+    single: Argument
+    single: Return Value
 
 In the context of programming, a *function* is a named
 sequence of statements that performs a computation. When you define a

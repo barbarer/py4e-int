@@ -1,7 +1,7 @@
 Exercises
 ---------
 
-.. mchoice:: 01-intro-m-secondaryMem
+.. mchoice:: intro-m-secondaryMem
    :answer_a: Execute all of the computation and logic of the program
    :answer_b: Retrieve web pages over the Internet
    :answer_c: Store information for the long term, even beyond a power cycle
@@ -15,15 +15,15 @@ Exercises
 
    What is the function of the secondary memory in a computer?
 
-.. shortanswer:: 01-intro-s-prog
+.. shortanswer:: intro-s-prog
 
    What is a program?
 
-.. shortanswer:: 01-intro-s-compilerVsInterpreter
+.. shortanswer:: intro-s-compilerVsInterpreter
 
    What is the difference between a compiler and an interpreter?
 
-.. mchoice:: 01-intro-m-machineCode
+.. mchoice:: intro-m-machineCode
    :answer_a: The Python interpreter
    :answer_b: The keyboard
    :answer_c: Python source file
@@ -36,7 +36,7 @@ Exercises
 
    Which of the following contains "machine code"?
 
-.. mchoice:: 01-intro-m-whereStored
+.. mchoice:: intro-m-whereStored
    :answer_a: Central processing unit
    :answer_b: Main Memory
    :answer_c: Secondary Memory
@@ -56,7 +56,7 @@ Exercises
 
       x = 123
 
-.. mchoice:: 01-intro-m-printVal
+.. mchoice:: intro-m-printVal
    :answer_a: 43
    :answer_b: 44
    :answer_c: x + 1
@@ -75,7 +75,7 @@ Exercises
       x = x + 1
       print(x)
 
-.. mchoice:: 01-intro-m-replace
+.. mchoice:: intro-m-replace
    :practice: T
    :answer_a: 1 = a process, 2 = a function
    :answer_b: 1 = translating an entire book, 2 = translating a line at a time
@@ -90,33 +90,33 @@ Exercises
    Pick the best replacements for 1 and 2 in the following sentence: When comparing compilers and interpreters, a compiler is like 1 while an interpreter is like 2.
 
 
-.. shortanswer:: 01-intro-s-explainCPU
+.. shortanswer:: intro-s-explainCPU
 
    What is the human equivalent to a Central Processing Unit?
 
-.. shortanswer:: 01-intro-s-MainMemory
+.. shortanswer:: intro-s-MainMemory
 
    What is the human equivalent to Main Memory?
 
 
-.. shortanswer:: 01-intro-s-SecMemory
+.. shortanswer:: intro-s-SecMemory
 
    What is the human equivalent to Secondary Memory?
 
-.. shortanswer:: 01-intro-s-Input
+.. shortanswer:: intro-s-Input
 
    What is the human equivalent to an Input Device?
 
-.. shortanswer:: 01-intro-s-Output
+.. shortanswer:: intro-s-Output
 
    What is the human equivalent to an Output Device?
 
-.. shortanswer:: 01-intro-s-syntaxError
+.. shortanswer:: intro-s-syntaxError
 
    How do you fix a "Syntax Error"?
 
 Try running the following code.  Can you tell what is wrong with it and fix it?
 
-.. activecode:: 01-intro-a-fix
+.. activecode:: intro-a-fix
 
   primt 'Hello world!'

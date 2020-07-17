@@ -1,5 +1,15 @@
 Random numbers
 --------------
+.. index::
+    pair: Random; Number
+    single: Deterministic
+    single: Pseudorandom
+    pair: Random; Module
+    pair: Random; Function
+    pair: Randint; Function
+    pair: Choice; Function
+    
+
 
 Given the same inputs, most computer programs generate the same outputs
 every time, so they are said to be *deterministic*.

@@ -1,6 +1,9 @@
 Debugging
 ---------
-
+.. index::
+    single: Debugging
+    pair: Debugging; By Bisection
+    
 As you start writing bigger programs, you might find yourself spending
 more time debugging. More code means more chances to make an error and
 more places for bugs to hide.
@@ -55,5 +58,5 @@ that the bug is before or after the check.
 
     When debugging, if the mid-point check is incorrect, the problem must be in the _______ half of the program.
 
-    - :[Ff]irst: If the mid-point check is incorrect the problem must be in the first half of the program. 
+    - :[Ff]irst: If the mid-point check is incorrect the problem must be in the first half of the program.
       :.*: Try again!

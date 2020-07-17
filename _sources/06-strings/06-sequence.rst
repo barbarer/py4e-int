@@ -1,5 +1,12 @@
 A string is a sequence
 ----------------------
+.. index::
+    single: Sequence
+    single: Character
+    pair: Operator; Bracket
+    single: Index
+    pair: Index; Starting at Zero
+    single: TypeError
 
 A string is a *sequence* of characters. You can access
 the characters one at a time with the bracket operator:

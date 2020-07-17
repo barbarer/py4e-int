@@ -1,5 +1,11 @@
 Asking the user for input
 -------------------------
+.. index::
+    single: Keyboard Input
+    single: Python 2.0
+    single: Prompt
+    single: Newline
+    single: ValueError
 
 Sometimes we would like to take the value for a variable from the user
 via their keyboard. Python provides a built-in function called ``input`` that gets input from
@@ -59,7 +65,7 @@ We will see how to handle this kind of error later.
 
     What function is used to convert string values to integers?
 
-    - :"int()": int() converts values to integers 
+    - :"int()": int() converts values to integers
       :"integer": Close, but not quite!
       :.*: Try again.
 

@@ -1,5 +1,7 @@
 Conversing with Python
 ----------------------
+.. index::
+    single: Interactive Mode
 
 Now that we have a word and a simple sentence that we know in Python, we
 need to know how to start a conversation with Python to test our new

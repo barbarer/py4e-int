@@ -1,5 +1,8 @@
 Parsing strings
 ---------------
+.. index::
+    pair: Parsing; String
+    pair: Method; Find
 
 Often, we want to look into a string and find a substring. For example
 if we were presented a series of lines formatted as follows:

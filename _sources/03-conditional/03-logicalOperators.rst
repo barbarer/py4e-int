@@ -1,5 +1,11 @@
 Logical operators
 -----------------
+.. index::
+    pair: Logical; Operator
+    pair: And; Operator
+    pair: Not; Operator
+    pair: Or; Operator
+
 
 There are three *logical operators*: ``and``,
 ``or``, and ``not``. The semantics (meaning) of these

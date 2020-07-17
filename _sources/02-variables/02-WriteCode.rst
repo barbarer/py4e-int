@@ -1,4 +1,4 @@
-Writing code problems
+Write Code Questions
 ---------------------
 #.
     .. tabbed:: var-exercise-fruit
