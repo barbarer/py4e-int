@@ -1,5 +1,7 @@
 Nested conditionals
 -------------------
+.. index::
+    single: Nested Conditional
 
 One conditional can also be nested within another. We could have written
 the three-branch example like this:

@@ -1,5 +1,13 @@
 Operators and operands
 ----------------------
+.. index::
+    single: Operators
+    pair: Operator; Arithmetic
+    single: Operand
+    single: Expression
+    single: Python 3.0
+    single: Python 2.0
+    pair: Floating-point; Division
 
 *Operators* are special symbols that represent
 computations like addition and multiplication. The values the operator

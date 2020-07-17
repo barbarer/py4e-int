@@ -1,5 +1,12 @@
 Fruitful functions and void functions
 -------------------------------------
+.. index::
+    single: Script Mode
+    single: Interactive Mode
+    pair: Function; Fruitful
+    pair: Function; Void
+    pair: Special Value; None
+    
 
 Some of the functions we are using, such as the math functions, yield
 results; for lack of a better name, I call them *fruitful

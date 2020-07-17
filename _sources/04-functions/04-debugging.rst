@@ -1,5 +1,9 @@
 Debugging
 ---------
+.. index::
+    single: Debugging
+    single: Whitespace
+    
 
 If you are using a text editor to write your scripts, you might run into
 problems with spaces and tabs. The best way to avoid these problems is
@@ -33,5 +37,5 @@ running the right program!
 
     Sometimes the program you are running can look different than the program you are looking at in the text editor if you forget to ____ your program.
 
-    - :[Ss]ave: Saving frequently will keep your code up to date. 
+    - :[Ss]ave: Saving frequently will keep your code up to date.
       :.*: Try again!

@@ -1,5 +1,10 @@
 Order of operations
 -------------------
+.. index::
+    single: Order of Operations
+    single: Rules of Precedence
+    single: PEMDAS
+    pair: Parentheses; Overriding Precedence
 
 .. mchoice:: var-order-mc-print
    :practice: T

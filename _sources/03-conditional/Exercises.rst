@@ -1,5 +1,5 @@
-Exercises
----------
+Multiple Choice Questions
+---------------------------
 
 .. mchoice:: cndtnl-ex-mc-bool
     :practice: T

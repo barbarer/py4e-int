@@ -1,5 +1,17 @@
 Boolean expressions
 -------------------
+.. index::
+    single: Boolean Expression
+    pair: Boolean; Expression
+    single: Logical Operator
+    pair: Logical; Operator
+    pair: Special Value; True
+    pair: Special Value; False
+    single: Bool Type
+    single: True
+    single: False
+    pair: Comparison; Operator
+
 
 A *boolean expression* is an expression that is either
 true or false. The following examples use the operator ``==``\ ,

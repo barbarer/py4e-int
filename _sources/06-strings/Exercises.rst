@@ -1,4 +1,4 @@
-Exercises
+Multiple Choice Questions
 --------------------------
 .. mchoice:: str-ex-mc-index
    :practice: T

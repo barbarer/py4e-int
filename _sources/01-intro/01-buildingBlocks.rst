@@ -1,5 +1,12 @@
 The building blocks of programs
 -------------------------------
+.. index::
+    single: Input
+    single: Sequential Execution
+    single: Output
+    single: Conditional Execution
+    single: Repeated Execution
+    single: Reuse
 
 In the next few chapters, we will learn more about the vocabulary,
 sentence structure, paragraph structure, and story structure of Python.

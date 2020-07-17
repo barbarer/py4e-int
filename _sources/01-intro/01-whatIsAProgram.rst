@@ -1,5 +1,7 @@
 What is a program?
 ------------------
+.. index::
+    single: Program
 
 The definition of a *program* at its most basic is a
 sequence of Python statements that have been crafted to do something.
@@ -83,7 +85,7 @@ code from http://www.py4e.com/code3/ and run it.
   :feedback_b: The program has already been written and you are using it - making you the user.
 
   In the program *words.py* are you the programmer or the user?
-  
+
 This is a good example of how Python and the Python language are acting
 as an intermediary between you (the end user) and me (the programmer).
 Python is a way for us to exchange useful instruction sequences (i.e.,

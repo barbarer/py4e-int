@@ -1,6 +1,9 @@
 Files
 :::::::::::::::::::::::::::::::::::::::::::
 
+.. index::
+    single: File
+
 .. toctree::
     :caption: Files
     :maxdepth: 3

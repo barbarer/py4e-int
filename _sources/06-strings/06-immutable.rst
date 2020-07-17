@@ -1,5 +1,14 @@
 Strings are immutable
 ---------------------
+.. index::
+    single: Mutability
+    single: Immutability
+    pair: String; Immutable
+    single: TypeError
+    single: Object
+    pair: Item; Assignment
+    single: Concatenation
+
 It is tempting to use the operator on the left side of an assignment,
 with the intention of changing a character in a string. For example:
 

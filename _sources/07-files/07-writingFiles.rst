@@ -1,5 +1,9 @@
 Writing files
 -------------
+.. index::
+    pair: File; Writing
+    single: Newline
+    pair: Method; close
 
 To write a file, you have to open it with mode "w" as a second
 parameter:
@@ -41,7 +45,7 @@ Again, the file object keeps track of where it is, so if you call
     :feedback_c: The close method closes the file.
     :feedback_d: The tell method returns the current file position.
 
-    Which of the following methods will put data into a file? 
+    Which of the following methods will put data into a file?
 
 We must make sure to manage the ends of lines as we write to the file by
 explicitly inserting the newline character when we want to end a line.

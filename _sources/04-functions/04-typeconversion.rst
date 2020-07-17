@@ -1,5 +1,10 @@
 Type conversion functions
 -------------------------
+.. index::
+    pair: Conversion; Type
+    pair: Function; Int
+    pair: Function; Float
+    pair: Function; String
 
 Python also provides built-in functions that convert values from one
 type to another. The ``int`` function takes any value and

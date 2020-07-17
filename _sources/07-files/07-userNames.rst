@@ -1,5 +1,7 @@
 Letting the user choose the file name
 -------------------------------------
+.. index::
+    pair: File; Name
 
 We really do not want to have to edit our Python code every time we want
 to process a different file. It would be more usable to ask the user to

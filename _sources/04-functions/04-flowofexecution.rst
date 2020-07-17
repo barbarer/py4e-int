@@ -1,5 +1,9 @@
 Flow of execution
 -----------------
+.. index::
+    single: Flow of Execution
+    single: Definition
+
 
 In order to ensure that a function is defined before its first use, you
 have to know the order in which statements are executed, which is called

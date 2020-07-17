@@ -1,5 +1,13 @@
 The ``while`` statement
 ---------------------------
+.. index::
+    pair: While; Statement
+    pair: While; Loop
+    single: Iteration
+    single: Flow of Execution
+    single: Condition
+    single: Loop
+    single: Body
 
 Computers are often used to automate repetitive tasks. Repeating
 identical or similar tasks without making errors is something that

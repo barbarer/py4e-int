@@ -1,5 +1,12 @@
 Terminology: Interpreter and compiler
 -------------------------------------
+.. index::
+    single: High-level Language
+    single: Machine Language
+    single: Low-level Language
+    single: Portable
+    single: Interpreter
+    single: Compiler
 
 Python is a *high-level* language intended to be
 relatively straightforward for humans to read and write and for

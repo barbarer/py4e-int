@@ -1,5 +1,8 @@
 Modulus operator
 ----------------
+.. index::
+    pair: Modulus; Operator
+    single: Divisibility
 
 The *modulus operator* works on integers and yields the
 remainder when the first operand is divided by the second. In Python,

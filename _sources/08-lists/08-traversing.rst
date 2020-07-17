@@ -1,5 +1,14 @@
 Traversing a list
 -----------------
+.. index::
+    pair: List; Traversal
+    pair: Loop; For
+    pair: For; Statement
+    single: Looping with indicies
+    pair: Index; Looping with
+    pair: Item; Update
+    single: Nested List
+
 
 The most common way to traverse the elements of a list is with a
 ``for`` loop. The syntax is the same as for strings:

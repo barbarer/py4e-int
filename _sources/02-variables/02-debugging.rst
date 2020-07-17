@@ -1,5 +1,17 @@
 Debugging
 ---------
+.. index::
+    single: Debugging
+    single: Syntax Error
+    single: Error Message
+    single: Use Before Def
+    single: Exception
+    single: Runtime Error
+    single: Semantic Error
+    pair: Case-sensitivity; Variable Names
+    single: Order of Operations
+
+
 At this point, the syntax error you are most likely to make is an
 illegal variable name, like ``class`` and ``yield``\ ,
 which are keywords, or ``odd~job`` and ``US$``\ , which contain illegal

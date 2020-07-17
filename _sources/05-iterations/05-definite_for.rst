@@ -1,5 +1,10 @@
 Definite loops using ``for``
 ---------------------------------
+.. index::
+    pair: For; Statement
+    pair: For; Loop
+    pair: Variable; Iteration
+
 
 Sometimes we want to loop through a *set* of things such
 as a list of words, the lines in a file, or a list of numbers. When we

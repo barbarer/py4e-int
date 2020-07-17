@@ -1,5 +1,11 @@
 Debugging
 ---------
+.. index::
+    single: Debugging
+    single: Typographical Error
+    single: Experimental Debugging
+    single: Random Walk Programming
+    
 
 When you Python spits out an error or even when it gives you a result that is different from
 what you had intended, then begins the hunt for the cause of the error. Debugging is the process

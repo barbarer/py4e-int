@@ -1,5 +1,13 @@
 Conditional execution
 ---------------------
+.. index::
+    pair: Conditional; Statement
+    pair: If; Statement
+    single: Conditional Executions
+    single: Condition
+    pair: Compound; Statement
+    pair: Pass; Statement
+    single: Pair
 
 In order to write useful programs, we almost always need the ability to
 check conditions and change the behavior of the program accordingly.

@@ -1,5 +1,11 @@
 Traversal through a string with a loop
 --------------------------------------
+.. index::
+    single: Traversal
+    pair: Loop; Traversal
+    pair: For; Loop
+    pair: For; Statement
+    
 
 A lot of computations involve processing a string one character at a
 time. Often they start at the beginning, select each character in turn,

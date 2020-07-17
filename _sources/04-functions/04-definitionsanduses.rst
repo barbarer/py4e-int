@@ -1,5 +1,9 @@
 Definitions and uses
 --------------------
+.. index::
+    pair: Function; Definition
+    single: Use Before Def
+    
 
 Pulling together the code fragments from the previous section, the whole
 program looks like this:

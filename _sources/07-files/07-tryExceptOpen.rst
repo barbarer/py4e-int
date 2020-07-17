@@ -1,5 +1,12 @@
 Using ``try, except,`` and ``open``
--------------------------------------------
+------------------------------------
+.. index::
+    pair: Quality; Assurance
+    pair: Statement; Try
+    pair: Open; Statement
+    pair: IOError; Exception
+    single: Pythonic
+    
 
 I told you not to peek. This is your last chance.
 

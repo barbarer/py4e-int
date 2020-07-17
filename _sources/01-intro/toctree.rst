@@ -8,6 +8,7 @@ Preface and Getting Setup
    01-why-program.rst
    01-creativityAndMot.rst
    01-computerHardwareArch.rst
+   01-understanding.rst
    01-words-and-sentences.rst
    01-conversing.rst
    01-terminology.rst
