@@ -13,6 +13,43 @@ Exercises
 
     Which of the follwing inherits the PartyAnimal class.
 
+.. clickablearea:: objects_click_name
+   :practice: T
+   :question: Click the elements where instances are created correctly.
+   :iscode:
+   :feedback:
+
+   :click-incorrect:puppy:endclick: = :click-correct:Dog("Jamie"):endclick:
+   :click-incorrect:pupper:endclick: =:click-incorrect: new Dog("Jamie"):endclick:
+   :click-incorrect:jamie:endclick: = :click-correct:Person():endclick:
+
+.. mchoice:: multipleinstances_code_output
+  :practice: T 
+  :answer_a: Sally 
+  :answer_b: Louise
+  :answer_c: Sally Louise
+  :answer_d: person1
+  :correct: a 
+  :feedback_a: This prints the 'name' of the person1 instance.
+  :feedback_b: 'Louise' is the 'name' of person2 but we are calling the person1 instance.
+  :feedback_c: person1 and person2 are two different instances.
+  :feedback_d: The output is not the name of the instace.
+
+  What is the output of the following code?
+  ::
+
+    class People():
+        name = ''
+
+        def __init__(self, name):
+          self.name = name
+        
+        def namePrint(self):
+          print("Name: " + self.name)
+
+      person1 = People("Sally")
+      person2 = People("Louise")
+      person1.namePrint()
 
 .. mchoice:: multipleinstances_mchoice1
     :practice: T
@@ -60,6 +97,7 @@ Exercises
                  and can override them if needed.
 
     Which of the following statements is not true about object-oriented programming?
+
 
 
 .. fillintheblank:: objectoriented_keyword
@@ -114,3 +152,18 @@ Exercises
      poke2 = Pokemon('Charizard', 'Fire')
      poke2.stringPokemon
      poke2.stringPokemon()
+
+.. mchoice:: tf_object_oriented
+    :practice: T
+    :answer_a: True 
+    :answer_b: False 
+    :correct: b
+    :feedback_a: The child class does not need access to the all the inner workings in parent class.
+    :feedback_b: The child class knows how to use the parent class and its functions but not its
+                 data and the inner workings.
+
+    True or False? In order to extend a class, the new class should have access to all the data and inner workings of
+    the parent class.
+
+
+
