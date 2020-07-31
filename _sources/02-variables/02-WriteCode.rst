@@ -20,7 +20,7 @@ Write Code Questions
                 class myTests(TestCaseGui):
 
                     def testOne(self):
-                        self.assertEqual(totalCost,3.55)
+                        self.assertEqual(totalCost,3.55, "totalCost should equal 3.55")
 
                 myTests().main()
 

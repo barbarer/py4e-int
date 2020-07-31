@@ -32,7 +32,7 @@ erased. So up to now, our programs have just been transient fun
 exercises to learn Python.
 
 .. figure:: ../images/arch.svg
-   :alt: Secondary Memory
+    :alt: Secondary Memory
 
 In this chapter, we start to work with *Secondary Memory*
 (or files). Secondary memory is not erased when the power is turned
