@@ -1,5 +1,9 @@
 String comparison
 -----------------
+.. index::
+    pair: String; Comparison
+    
+
 The comparison operators work on strings. To see if two strings are
 equal:
 

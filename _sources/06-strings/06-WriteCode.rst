@@ -1,4 +1,4 @@
-Write code problems
+Write Code Questions
 --------------------
 #.
     .. tabbed:: str-ex-hi

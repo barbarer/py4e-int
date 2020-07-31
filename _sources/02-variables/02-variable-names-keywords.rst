@@ -1,5 +1,9 @@
 Variable names and keywords
 ---------------------------
+.. index::
+    single: Keyword
+    single: Underscore Character
+    single: Reserved Words
 
 Programmers generally choose names for their variables that are
 meaningful and document what the variable is used for.

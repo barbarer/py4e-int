@@ -1,5 +1,9 @@
 Infinite loops
 --------------
+.. index::
+    single: Infinite Loop
+    pair: Loop; Infinite
+    pair: Break; Statement
 
 An endless source of amusement for programmers is the observation that
 the directions on shampoo, "Lather, rinse, repeat," are an infinite loop

@@ -1,6 +1,20 @@
 Lists are mutable
 -----------------
 
+.. index::
+    pair: List; Element
+    single: Access
+    single: Index
+    pair: Bracket; Operator
+    single: mutability
+    pair: Item; Assignment
+    single: IndexError
+    pair: IndexError; Exception
+    pair: List; Index
+    pair: List; Membership
+    pair: Operator; In
+
+
 The syntax for accessing the elements of a list is the same as for
 accessing the characters of a string: the bracket operator. The
 expression inside the brackets specifies the index. Remember that the
@@ -66,7 +80,7 @@ The ``in`` operator also works on lists.
 
     What is printed by the following statements?
 
-    .. code-block:: python
+    ::
 
       alist = [4, 2, 8, 6, 5]
       alist[2] = True
@@ -93,23 +107,17 @@ The ``in`` operator also works on lists.
       values[2] = values[2] + 1
       print(values)
 
-.. mchoice:: listMut_MC_items
-    :answer_a: items[0]
-    :answer_b: items[1]
-    :answer_c: items[2]
-    :answer_d: items[3]
-    :correct: d
-    :feedback_a: Originally, <code>items[0]</code> was 2, but then we set it to the string: <code>"First item"</code>
-    :feedback_b: We set <code>items[1]</code> to be the same as <code>items[0]</code>: <code>"First item"</code>
-    :feedback_c: We incremented <code>items[2]</code> in line 4.
-    :feedback_d: The value at <code>items[3]</code> doesn't change.  It still equals 8.
+.. mchoice:: listMut_MC_in
+    :practice: T
+    :answer_a: True
+    :answer_b: False
+    :correct: b
+    :feedback_a: in returns True for top level items only.  57 is in a sublist.
+    :feedback_b: Yes, 57 is not a top level item in alist.  It is in a sublist.
 
-    Of the four items in the list named ``items``, which one is not changed in the following code?
+    What is printed by the following statements?
 
     ::
 
-      items = [2,4,6,8]
-      items[0] = "First item"
-      items[1] = items[0]
-      items[2] = items[2] + 1
-      print(items)
+      alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+      print(57 in alist)

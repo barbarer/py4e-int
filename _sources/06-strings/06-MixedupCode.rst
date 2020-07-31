@@ -1,4 +1,4 @@
-Mixed-up Code Problems
+Mixed-up Code Questions
 -----------------------
 .. parsonsprob:: str-mixed-emotion
    :adaptive:

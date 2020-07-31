@@ -1,5 +1,8 @@
 Finishing iterations with ``continue``
 ------------------------------------------
+.. index::
+    pair: Continue; Statement
+    
 
 Sometimes you are in an iteration of a loop and want to finish the
 current iteration and immediately jump to the next iteration. In that

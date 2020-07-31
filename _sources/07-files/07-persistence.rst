@@ -1,5 +1,8 @@
 Persistence
 -----------
+..	index::
+	single: Secondary Memory
+	single: Primary Memory
 
 So far, we have learned how to write programs and communicate our
 intentions to the *Central Processing Unit* using

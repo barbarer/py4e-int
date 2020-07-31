@@ -1,5 +1,5 @@
-Mixed up code
---------------
+Mixed-up Code Questions
+-----------------------
 
 .. parsonsprob:: functEx1muc
     :adaptive:

@@ -1,5 +1,5 @@
-Exercises
----------
+Mulitple Choice Questions
+-------------------------
 
 .. mchoice:: var-ex-mc-division
   :practice: T

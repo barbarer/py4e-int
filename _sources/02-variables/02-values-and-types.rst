@@ -1,5 +1,17 @@
 Values and types
 ----------------
+.. index::
+    single: Value
+    single: Type
+    single: String
+    single: Quotation Mark
+    pair: Class; Str
+    pair: Class; Int
+    pair: Class; Float
+    single: Semantic Error
+    single: Error Message
+
+
 
 A *value* is one of the basic things a program works
 with, like a letter or a number. You can print values in Python.  See what happens when you run the following code.

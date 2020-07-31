@@ -1,6 +1,8 @@
 Comments
 --------
-
+.. index::
+    single: comment
+    
 
 As programs get bigger and more complicated, they get more difficult to
 read. Formal languages are dense, and it is often difficult to look at a

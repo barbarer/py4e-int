@@ -1,5 +1,10 @@
 Getting the length of a string using ``len``
-------------------------------------------------
+----------------------------------------------
+.. index::
+    pair: Function; Len
+    single: IndexError
+    pair: Index; Negative
+
 
 ``len`` is a built-in function that returns the number of
 characters in a string:

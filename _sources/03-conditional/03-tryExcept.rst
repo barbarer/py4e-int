@@ -1,5 +1,12 @@
 Catching exceptions using try and except
 ----------------------------------------
+.. index::
+    single: Traceback
+    single: Fahrenheit
+    single: Celsius
+    single: Temperature Conversion
+    single: Try
+    single: Except
 
 Earlier we saw a code segment where we used the ``input`` and
 ``int`` functions to read and parse an integer number entered

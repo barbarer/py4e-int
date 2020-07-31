@@ -1,5 +1,9 @@
 Alternative execution
 ---------------------
+.. index::
+    single: Alternative Execution
+    pair: Keyword; Else
+    single: Branch
 
 A second form of the ``if`` statement is *alternative
 execution*, in which there are two possibilities and the

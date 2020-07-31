@@ -1,5 +1,9 @@
 Reading files
 -------------
+.. index::
+    pair: Reading; File
+    single: Counter
+    pair: File; Open
 
 While the *file handle* does not contain the data for the
 file, it is quite easy to construct a ``for`` loop to read

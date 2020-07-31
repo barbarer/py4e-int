@@ -1,5 +1,11 @@
 Looping and counting
 --------------------
+.. index::
+    single: Counter
+    pair: Looping; Strings
+    pair: Looping; Counting
+    single: Encapsulation
+
 The following program counts the number of times the letter
 "r" appears in a string:
 

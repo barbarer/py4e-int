@@ -1,5 +1,14 @@
 Computer hardware architecture
 ------------------------------
+.. index::
+    single: Hardware
+    pair: Hardware; Architecture
+    single: Program
+    single: Central Processing Unit
+    single: Main Memory
+    single: Secondary Memory
+    single: Input and Output Devices
+    single: Network Connection
 
 Before we start learning the language we speak to give instructions to
 computers to develop software, we need to learn a small amount about how

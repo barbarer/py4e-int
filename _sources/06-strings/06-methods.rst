@@ -1,5 +1,13 @@
 String methods
 --------------
+.. index::
+    pair: String; Method
+    pair: Dot; Notation
+    pair: Parentheses; Empty
+    single: Invocation
+    pair: Optional; Argument
+    pair: Count; Method
+    
 
 Strings are an example of Python *objects*. An object
 contains both data (the actual string itself) and

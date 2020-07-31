@@ -1,5 +1,9 @@
 Words and sentences in Python
 -------------------------------
+.. index::
+    single: Programming Language
+    single: Reserved Words
+
 
 Unlike human languages, the Python vocabulary is actually pretty small.
 We call this "vocabulary" the "reserved words". These are words that

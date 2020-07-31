@@ -1,4 +1,4 @@
-Mixed up code practice
+Mixed-up code Questions
 -----------------------
 
 .. parsonsprob:: ch5ex1muc

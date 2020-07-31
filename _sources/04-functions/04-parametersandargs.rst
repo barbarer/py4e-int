@@ -1,5 +1,13 @@
 Parameters and arguments
 ------------------------
+.. index::
+    pair: Parameter; Function
+    single: Parameter
+    pair: Function; Argument
+    pair: Parentheses; Parameters In
+    single: Composition
+    single: Argument
+
 
 Some of the built-in functions we have seen require arguments. For
 example, when you call ``math.sin`` you pass a number as an
