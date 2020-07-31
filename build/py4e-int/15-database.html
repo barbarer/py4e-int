@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Using Databases and SQL &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/accessibility.css?v=DB047029" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="_static/runestone-custom-sphinx-bootstrap.css?v=5.0.8" />
+    <link rel="stylesheet" type="text/css" href="_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="_static/sql-wasm.js?v=44FE0709"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="_static/animationbase.js?v=A043C3A7"></script>
+    <script src="_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="_static/html4css1.css?v=4D8F3FB4"></script>
+    <script src="_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="_static/webglinteractive.js?v=2B768384"></script>
+    <script src="_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="_static/runestone.js?v=3EAD674C"></script>
+    <script src="_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="_static/jquery-fix.js?v=1226591B"></script>
+    <script src="_static/bootstrap-sphinx.js"></script>
+    <script src="_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="_static/theme.js?v=D899FB97"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = true;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'py4e-int';
+    eBookConfig.basecourse = 'py4e-int';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        
+        <a class="navbar-brand" href="index.html" aria-label="index-page">
+          
+          py4e-int
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span aria-label="Social" class="visuallyhidden">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span aria-label="User" class="visuallyhidden">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span aria-label="Help" class="visuallyhidden">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/runestone/static/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=15-database'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+  
+  <div class="section" id="using-databases-and-sql">
+<h1>Using Databases and SQL<a class="headerlink" href="#using-databases-and-sql" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-a-database">
+<h2>What is a database?<a class="headerlink" href="#what-is-a-database" title="Permalink to this headline">¶</a></h2>
+<p>index{database}</p>
+<p>A <em>database</em> is a file that is organized for storing
+data. Most databases are organized like a dictionary in the sense that
+they map from keys to values. The biggest difference is that the
+database is on disk (or other permanent storage), so it persists after
+the program ends. Because a database is stored on permanent storage, it
+can store far more data than a dictionary, which is limited to the size
+of the memory in the computer.</p>
+<p>index{database!indexes}</p>
+<p>Like a dictionary, database software is designed to keep the inserting
+and accessing of data very fast, even for large amounts of data.
+Database software maintains its performance by building
+<em>indexes</em> as data is added to the database to allow the
+computer to jump quickly to a particular entry.</p>
+<p>There are many different database systems which are used for a wide
+variety of purposes including: Oracle, MySQL, Microsoft SQL Server,
+PostgreSQL, and SQLite. We focus on SQLite in this book because it is a
+very common database and is already built into Python. SQLite is
+designed to be <em>embedded</em> into other applications to provide database
+support within the application. For example, the Firefox browser also
+uses the SQLite database internally as do many other products.</p>
+<p><a class="reference external" href="http://sqlite.org/">http://sqlite.org/</a></p>
+<p>SQLite is well suited to some of the data manipulation problems that we
+see in Informatics such as the Twitter spidering application that we
+describe in this chapter.</p>
+</div>
+<div class="section" id="database-concepts">
+<h2>Database concepts<a class="headerlink" href="#database-concepts" title="Permalink to this headline">¶</a></h2>
+<p>When you first look at a database it looks like a spreadsheet with
+multiple sheets. The primary data structures in a database are:
+<em>tables</em>, <em>rows</em>, and
+<em>columns</em>.</p>
+<a class="reference external image-reference" href="height=2.0in&#64;../images/relational"><img alt="Relational Databases" src="height=2.0in&#64;../images/relational" /></a>
+<p>In technical descriptions of relational databases the concepts of table,
+row, and column are more formally referred to as
+<em>relation</em>, <em>tuple</em>, and
+<em>attribute</em>, respectively. We will use the less formal
+terms in this chapter.</p>
+</div>
+<div class="section" id="database-browser-for-sqlite">
+<h2>Database Browser for SQLite<a class="headerlink" href="#database-browser-for-sqlite" title="Permalink to this headline">¶</a></h2>
+<p>While this chapter will focus on using Python to work with data in
+SQLite database files, many operations can be done more conveniently
+using software called the <em>Database Browser for SQLite</em> which is freely available from:</p>
+<p><a class="reference external" href="http://sqlitebrowser.org/">http://sqlitebrowser.org/</a></p>
+<p>Using the browser you can easily create tables, insert data, edit data,
+or run simple SQL queries on the data in the database.</p>
+<p>In a sense, the database browser is similar to a text editor when
+working with text files. When you want to do one or very few operations
+on a text file, you can just open it in a text editor and make the
+changes you want. When you have many changes that you need to do to a
+text file, often you will write a simple Python program. You will find
+the same pattern when working with databases. You will do simple
+operations in the database manager and more complex operations will be
+most conveniently done in Python.</p>
+</div>
+<div class="section" id="creating-a-database-table">
+<h2>Creating a database table<a class="headerlink" href="#creating-a-database-table" title="Permalink to this headline">¶</a></h2>
+<p>Databases require more defined structure than Python lists or
+dictionaries^[SQLite actually does allow some flexibility in the type of data
+stored in a column, but we will keep our data types strict in this
+chapter so the concepts apply equally to other database systems such
+as MySQL.].</p>
+<p>When we create a database <em>table</em> we must tell the
+database in advance the names of each of the <em>columns</em> in
+the table and the type of data which we are planning to store in each
+<em>column</em>. When the database software knows the type of
+data in each column, it can choose the most efficient way to store and
+look up the data based on the type of data.</p>
+<p>You can look at the various data types supported by SQLite at the
+following url:</p>
+<p><a class="reference external" href="http://www.sqlite.org/datatypes.html">http://www.sqlite.org/datatypes.html</a></p>
+<p>Defining structure for your data up front may seem inconvenient at the
+beginning, but the payoff is fast access to your data even when the
+database contains a large amount of data.</p>
+<p>The code to create a database file and a table named <code class="docutils literal notranslate"><span class="pre">Tracks</span></code>
+with two columns in the database is as follows:</p>
+<p>index{sqlite3 module}
+index{module!sqlite3}</p>
+<p>VerbatimInput{../code3/db1.py}</p>
+<p>index{connect function}
+index{function!connect}
+index{cursor function}
+index{function!cursor}</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">connect</span></code> operation makes a “connection” to the database
+stored in the file <code class="docutils literal notranslate"><span class="pre">music.sqlite3</span></code> in the current directory.
+If the file does not exist, it will be created. The reason this is
+called a “connection” is that sometimes the database is stored on a
+separate “database server” from the server on which we are running our
+application. In our simple examples the database will just be a local
+file in the same directory as the Python code we are running.</p>
+<p>A <em>cursor</em> is like a file handle that we can use to
+perform operations on the data stored in the database. Calling
+<code class="docutils literal notranslate"><span class="pre">cursor()</span></code> is very similar conceptually to calling
+<code class="docutils literal notranslate"><span class="pre">open()</span></code> when dealing with text files.</p>
+<a class="reference external image-reference" href="height=2.0in&#64;../images/cursor"><img alt="A Database Cursor" src="height=2.0in&#64;../images/cursor" /></a>
+<p>Once we have the cursor, we can begin to execute commands on the
+contents of the database using the <code class="docutils literal notranslate"><span class="pre">execute()</span></code> method.</p>
+<p>Database commands are expressed in a special language that has been
+standardized across many different database vendors to allow us to learn
+a single database language. The database language is called
+<em>Structured Query Language</em> or <em>SQL</em> for
+short.</p>
+<p><a class="reference external" href="http://en.wikipedia.org/wiki/SQL">http://en.wikipedia.org/wiki/SQL</a></p>
+<p>In our example, we are executing two SQL commands in our database. As a
+convention, we will show the SQL keywords in uppercase and the parts of
+the command that we are adding (such as the table and column names) will
+be shown in lowercase.</p>
+<p>The first SQL command removes the <code class="docutils literal notranslate"><span class="pre">Tracks</span></code> table from the
+database if it exists. This pattern is simply to allow us to run the
+same program to create the <code class="docutils literal notranslate"><span class="pre">Tracks</span></code> table over and over again
+without causing an error. Note that the <code class="docutils literal notranslate"><span class="pre">DROP</span> <span class="pre">TABLE</span></code> command
+deletes the table and all of its contents from the database (i.e., there
+is no “undo”).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;DROP TABLE IF EXISTS Tracks &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The second command creates a table named <code class="docutils literal notranslate"><span class="pre">Tracks</span></code> with a text
+column named <code class="docutils literal notranslate"><span class="pre">title</span></code> and an integer column named
+<code class="docutils literal notranslate"><span class="pre">plays</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;CREATE TABLE Tracks (title TEXT, plays INTEGER)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now that we have created a table named <code class="docutils literal notranslate"><span class="pre">Tracks</span></code>, we can put
+some data into that table using the SQL <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> operation.
+Again, we begin by making a connection to the database and obtaining the
+<code class="docutils literal notranslate"><span class="pre">cursor</span></code>. We can then execute SQL commands using the cursor.</p>
+<p>The SQL <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> command indicates which table we are using
+and then defines a new row by listing the fields we want to include
+<code class="docutils literal notranslate"><span class="pre">(title,</span> <span class="pre">plays)</span></code> followed by the <code class="docutils literal notranslate"><span class="pre">VALUES</span></code> we want
+placed in the new row. We specify the values as question marks <code class="docutils literal notranslate"><span class="pre">(?,</span>
+<span class="pre">?)</span></code> to indicate that the actual values are passed in as a tuple
+<code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">'My</span> <span class="pre">Way',</span> <span class="pre">15</span> <span class="pre">)</span></code> as the second parameter to the
+<code class="docutils literal notranslate"><span class="pre">execute()</span></code> call.</p>
+<p>VerbatimInput{../code3/db2.py}</p>
+<p>First we <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> two rows into our table and use
+<code class="docutils literal notranslate"><span class="pre">commit()</span></code> to force the data to be written to the database
+file.</p>
+<a class="reference external image-reference" href="height=1.5in&#64;../images/tracks"><img alt="Rows in a Table" src="height=1.5in&#64;../images/tracks" /></a>
+<p>Then we use the <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> command to retrieve the rows we just
+inserted from the table. On the <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> command, we indicate
+which columns we would like <code class="docutils literal notranslate"><span class="pre">(title,</span> <span class="pre">plays)</span></code> and indicate
+which table we want to retrieve the data from. After we execute the
+<code class="docutils literal notranslate"><span class="pre">SELECT</span></code> statement, the cursor is something we can loop
+through in a <code class="docutils literal notranslate"><span class="pre">for</span></code> statement. For efficiency, the cursor does
+not read all of the data from the database when we execute the
+<code class="docutils literal notranslate"><span class="pre">SELECT</span></code> statement. Instead, the data is read on demand as we
+loop through the rows in the <code class="docutils literal notranslate"><span class="pre">for</span></code> statement.</p>
+<p>The output of the program is as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Tracks</span><span class="p">:</span>
+<span class="p">(</span><span class="s1">&#39;Thunderstruck&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">&#39;My Way&#39;</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>index{Unicode}</p>
+<p>Our <code class="docutils literal notranslate"><span class="pre">for</span></code> loop finds two rows, and each row is a Python tuple
+with the first value as the <code class="docutils literal notranslate"><span class="pre">title</span></code> and the second value as
+the number of <code class="docutils literal notranslate"><span class="pre">plays</span></code>.</p>
+<p><em>Note: You may see strings starting with ``u’`` in other books or on the Internet.
+This was an indication in Python 2 that the strings are *Unicode* strings that are capable
+of storing non-Latin character sets. In Python 3, all strings are unicode
+strings by default.</em></p>
+<p>At the very end of the program, we execute an SQL command to
+<code class="docutils literal notranslate"><span class="pre">DELETE</span></code> the rows we have just created so we can run the
+program over and over. The <code class="docutils literal notranslate"><span class="pre">DELETE</span></code> command shows the use of
+a <code class="docutils literal notranslate"><span class="pre">WHERE</span></code> clause that allows us to express a selection
+criterion so that we can ask the database to apply the command to only
+the rows that match the criterion. In this example the criterion happens
+to apply to all the rows so we empty the table out so we can run the
+program repeatedly. After the <code class="docutils literal notranslate"><span class="pre">DELETE</span></code> is performed, we also
+call <code class="docutils literal notranslate"><span class="pre">commit()</span></code> to force the data to be removed from the
+database.</p>
+</div>
+<div class="section" id="structured-query-language-summary">
+<h2>Structured Query Language summary<a class="headerlink" href="#structured-query-language-summary" title="Permalink to this headline">¶</a></h2>
+<p>So far, we have been using the Structured Query Language in our Python
+examples and have covered many of the basics of the SQL commands. In
+this section, we look at the SQL language in particular and give an
+overview of SQL syntax.</p>
+<p>Since there are so many different database vendors, the Structured Query
+Language (SQL) was standardized so we could communicate in a portable
+manner to database systems from multiple vendors.</p>
+<p>A relational database is made up of tables, rows, and columns. The
+columns generally have a type such as text, numeric, or date data. When
+we create a table, we indicate the names and types of the columns:</p>
+<div class="highlight-{.sql} notranslate"><div class="highlight"><pre><span></span>CREATE TABLE Tracks (title TEXT, plays INTEGER)
+</pre></div>
+</div>
+<p>To insert a row into a table, we use the SQL <code class="docutils literal notranslate"><span class="pre">INSERT</span></code>
+command:</p>
+<div class="highlight-{.sql} notranslate"><div class="highlight"><pre><span></span>INSERT INTO Tracks (title, plays) VALUES (&#39;My Way&#39;, 15)
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> statement specifies the table name, then a list
+of the fields/columns that you would like to set in the new row, and
+then the keyword <code class="docutils literal notranslate"><span class="pre">VALUES</span></code> and a list of corresponding values
+for each of the fields.</p>
+<p>The SQL <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> command is used to retrieve rows and columns
+from a database. The <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> statement lets you specify
+which columns you would like to retrieve as well as a <code class="docutils literal notranslate"><span class="pre">WHERE</span></code>
+clause to select which rows you would like to see. It also allows an
+optional <code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span></code> clause to control the sorting of the
+returned rows.</p>
+<div class="highlight-{.sql} notranslate"><div class="highlight"><pre><span></span>SELECT * FROM Tracks WHERE title = &#39;My Way&#39;
+</pre></div>
+</div>
+<p>Using <code class="docutils literal notranslate"><span class="pre">*</span></code> indicates that you want the database to return all of the
+columns for each row that matches the <code class="docutils literal notranslate"><span class="pre">WHERE</span></code> clause.</p>
+<p>Note, unlike in Python, in a SQL <code class="docutils literal notranslate"><span class="pre">WHERE</span></code> clause we use a
+single equal sign to indicate a test for equality rather than a double
+equal sign. Other logical operations allowed in a <code class="docutils literal notranslate"><span class="pre">WHERE</span></code>
+clause include <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">!=</span></code>, as well as <code class="docutils literal notranslate"><span class="pre">AND</span></code>
+and <code class="docutils literal notranslate"><span class="pre">OR</span></code> and parentheses to build your logical expressions.</p>
+<p>You can request that the returned rows be sorted by one of the fields as
+follows:</p>
+<div class="highlight-{.sql} notranslate"><div class="highlight"><pre><span></span>SELECT title,plays FROM Tracks ORDER BY title
+</pre></div>
+</div>
+<p>To remove a row, you need a <code class="docutils literal notranslate"><span class="pre">WHERE</span></code> clause on an SQL
+<code class="docutils literal notranslate"><span class="pre">DELETE</span></code> statement. The <code class="docutils literal notranslate"><span class="pre">WHERE</span></code> clause determines
+which rows are to be deleted:</p>
+<div class="highlight-{.sql} notranslate"><div class="highlight"><pre><span></span>DELETE FROM Tracks WHERE title = &#39;My Way&#39;
+</pre></div>
+</div>
+<p>It is possible to <code class="docutils literal notranslate"><span class="pre">UPDATE</span></code> a column or columns within one or
+more rows in a table using the SQL <code class="docutils literal notranslate"><span class="pre">UPDATE</span></code> statement as
+follows:</p>
+<div class="highlight-{.sql} notranslate"><div class="highlight"><pre><span></span>UPDATE Tracks SET plays = 16 WHERE title = &#39;My Way&#39;
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">UPDATE</span></code> statement specifies a table and then a list of
+fields and values to change after the <code class="docutils literal notranslate"><span class="pre">SET</span></code> keyword and then
+an optional <code class="docutils literal notranslate"><span class="pre">WHERE</span></code> clause to select the rows that are to be
+updated. A single <code class="docutils literal notranslate"><span class="pre">UPDATE</span></code> statement will change all of the
+rows that match the <code class="docutils literal notranslate"><span class="pre">WHERE</span></code> clause. If a <code class="docutils literal notranslate"><span class="pre">WHERE</span></code>
+clause is not specified, it performs the <code class="docutils literal notranslate"><span class="pre">UPDATE</span></code> on all of
+the rows in the table.</p>
+<p>These four basic SQL commands (INSERT, SELECT, UPDATE, and DELETE) allow
+the four basic operations needed to create and maintain data.</p>
+</div>
+<div class="section" id="spidering-twitter-using-a-database">
+<h2>Spidering Twitter using a database<a class="headerlink" href="#spidering-twitter-using-a-database" title="Permalink to this headline">¶</a></h2>
+<p>In this section, we will create a simple spidering program that will go
+through Twitter accounts and build a database of them. <em>Note: Be very
+careful when running this program. You do not want to pull too much data
+or run the program for too long and end up having your Twitter access
+shut off.</em></p>
+<p>One of the problems of any kind of spidering program is that it needs to
+be able to be stopped and restarted many times and you do not want to
+lose the data that you have retrieved so far. You don’t want to always
+restart your data retrieval at the very beginning so we want to store
+data as we retrieve it so our program can start back up and pick up
+where it left off.</p>
+<p>We will start by retrieving one person’s Twitter friends and their
+statuses, looping through the list of friends, and adding each of the
+friends to a database to be retrieved in the future. After we process
+one person’s Twitter friends, we check in our database and retrieve one
+of the friends of the friend. We do this over and over, picking an
+“unvisited” person, retrieving their friend list, and adding friends we
+have not seen to our list for a future visit.</p>
+<p>We also track how many times we have seen a particular friend in the
+database to get some sense of their “popularity”.</p>
+<p>By storing our list of known accounts and whether we have retrieved the
+account or not, and how popular the account is in a database on the disk
+of the computer, we can stop and restart our program as many times as we
+like.</p>
+<p>This program is a bit complex. It is based on the code from the exercise
+earlier in the book that uses the Twitter API.</p>
+<p>Here is the source code for our Twitter spidering application:</p>
+<p>VerbatimInput{../code3/twspider.py}</p>
+<p>Our database is stored in the file <code class="docutils literal notranslate"><span class="pre">spider.sqlite3</span></code> and it
+has one table named <code class="docutils literal notranslate"><span class="pre">Twitter</span></code>. Each row in the
+<code class="docutils literal notranslate"><span class="pre">Twitter</span></code> table has a column for the account name, whether we
+have retrieved the friends of this account, and how many times this
+account has been “friended”.</p>
+<p>In the main loop of the program, we prompt the user for a Twitter
+account name or “quit” to exit the program. If the user enters a Twitter
+account, we retrieve the list of friends and statuses for that user and
+add each friend to the database if not already in the database. If the
+friend is already in the list, we add 1 to the <code class="docutils literal notranslate"><span class="pre">friends</span></code>
+field in the row in the database.</p>
+<p>If the user presses enter, we look in the database for the next Twitter
+account that we have not yet retrieved, retrieve the friends and
+statuses for that account, add them to the database or update them, and
+increase their <code class="docutils literal notranslate"><span class="pre">friends</span></code> count.</p>
+<p>Once we retrieve the list of friends and statuses, we loop through all
+of the <code class="docutils literal notranslate"><span class="pre">user</span></code> items in the returned JSON and retrieve the
+<code class="docutils literal notranslate"><span class="pre">screen_name</span></code> for each user. Then we use the <code class="docutils literal notranslate"><span class="pre">SELECT</span></code>
+statement to see if we already have stored this particular <code class="docutils literal notranslate"><span class="pre">screen_name</span></code>
+in the database and retrieve the friend count (<code class="docutils literal notranslate"><span class="pre">friends</span></code>) if
+the record exists.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">countnew</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">countold</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">js</span><span class="p">[</span><span class="s1">&#39;users&#39;</span><span class="p">]</span> <span class="p">:</span>
+    <span class="n">friend</span> <span class="o">=</span> <span class="n">u</span><span class="p">[</span><span class="s1">&#39;screen_name&#39;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">friend</span><span class="p">)</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT friends FROM Twitter WHERE name = ? LIMIT 1&#39;</span><span class="p">,</span>
+        <span class="p">(</span><span class="n">friend</span><span class="p">,</span> <span class="p">)</span> <span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;UPDATE Twitter SET friends = ? WHERE name = ?&#39;</span><span class="p">,</span>
+            <span class="p">(</span><span class="n">count</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">friend</span><span class="p">)</span> <span class="p">)</span>
+        <span class="n">countold</span> <span class="o">=</span> <span class="n">countold</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;INSERT INTO Twitter (name, retrieved, friends)</span>
+<span class="s1">            VALUES ( ?, 0, 1 )&#39;&#39;&#39;</span><span class="p">,</span> <span class="p">(</span> <span class="n">friend</span><span class="p">,</span> <span class="p">)</span> <span class="p">)</span>
+        <span class="n">countnew</span> <span class="o">=</span> <span class="n">countnew</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;New accounts=&#39;</span><span class="p">,</span><span class="n">countnew</span><span class="p">,</span><span class="s1">&#39; revisited=&#39;</span><span class="p">,</span><span class="n">countold</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Once the cursor executes the <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> statement, we must
+retrieve the rows. We could do this with a <code class="docutils literal notranslate"><span class="pre">for</span></code> statement,
+but since we are only retrieving one row (<code class="docutils literal notranslate"><span class="pre">LIMIT</span> <span class="pre">1</span></code>), we can
+use the <code class="docutils literal notranslate"><span class="pre">fetchone()</span></code> method to fetch the first (and only) row
+that is the result of the <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> operation. Since
+<code class="docutils literal notranslate"><span class="pre">fetchone()</span></code> returns the row as a <em>tuple</em>
+(even though there is only one field), we take the first value from the
+tuple using to get the current friend count into the variable
+<code class="docutils literal notranslate"><span class="pre">count</span></code>.</p>
+<p>If this retrieval is successful, we use the SQL <code class="docutils literal notranslate"><span class="pre">UPDATE</span></code>
+statement with a <code class="docutils literal notranslate"><span class="pre">WHERE</span></code> clause to add 1 to the
+<code class="docutils literal notranslate"><span class="pre">friends</span></code> column for the row that matches the friend’s
+account. Notice that there are two placeholders (i.e., question marks)
+in the SQL, and the second parameter to the <code class="docutils literal notranslate"><span class="pre">execute()</span></code> is a
+two-element tuple that holds the values to be substituted into the SQL
+in place of the question marks.</p>
+<p>If the code in the <code class="docutils literal notranslate"><span class="pre">try</span></code> block fails, it is probably because
+no record matched the <code class="docutils literal notranslate"><span class="pre">WHERE</span> <span class="pre">name</span> <span class="pre">=</span> <span class="pre">?</span></code> clause on the SELECT
+statement. So in the <code class="docutils literal notranslate"><span class="pre">except</span></code> block, we use the SQL
+<code class="docutils literal notranslate"><span class="pre">INSERT</span></code> statement to add the friend’s <code class="docutils literal notranslate"><span class="pre">screen_name</span></code> to the
+table with an indication that we have not yet retrieved the
+<code class="docutils literal notranslate"><span class="pre">screen_name</span></code> and set the friend count to zero.</p>
+<p>So the first time the program runs and we enter a Twitter account, the
+program runs as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">a</span> <span class="n">Twitter</span> <span class="n">account</span><span class="p">,</span> <span class="ow">or</span> <span class="n">quit</span><span class="p">:</span> <span class="n">drchuck</span>
+<span class="n">Retrieving</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">api</span><span class="o">.</span><span class="n">twitter</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="mf">1.1</span><span class="o">/</span><span class="n">friends</span> <span class="o">...</span>
+<span class="n">New</span> <span class="n">accounts</span><span class="o">=</span> <span class="mi">20</span>  <span class="n">revisited</span><span class="o">=</span> <span class="mi">0</span>
+<span class="n">Enter</span> <span class="n">a</span> <span class="n">Twitter</span> <span class="n">account</span><span class="p">,</span> <span class="ow">or</span> <span class="n">quit</span><span class="p">:</span> <span class="n">quit</span>
+</pre></div>
+</div>
+<p>Since this is the first time we have run the program, the database is
+empty and we create the database in the file <code class="docutils literal notranslate"><span class="pre">spider.sqlite3</span></code>
+and add a table named <code class="docutils literal notranslate"><span class="pre">Twitter</span></code> to the database. Then we
+retrieve some friends and add them all to the database since the
+database is empty.</p>
+<p>At this point, we might want to write a simple database dumper to take a
+look at what is in our <code class="docutils literal notranslate"><span class="pre">spider.sqlite3</span></code> file:</p>
+<p>VerbatimInput{../code3/twdump.py}</p>
+<p>This program simply opens the database and selects all of the columns of
+all of the rows in the table <code class="docutils literal notranslate"><span class="pre">Twitter</span></code>, then loops through
+the rows and prints out each row.</p>
+<p>If we run this program after the first execution of our Twitter spider
+above, its output will be as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="s1">&#39;opencontent&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">&#39;lhawthorn&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">&#39;steve_coppin&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">&#39;davidkocher&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">&#39;hrheingold&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="mi">20</span> <span class="n">rows</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>We see one row for each <code class="docutils literal notranslate"><span class="pre">screen_name</span></code>, that we have not retrieved the
+data for that <code class="docutils literal notranslate"><span class="pre">screen_name</span></code>, and everyone in the database has one
+friend.</p>
+<p>Now our database reflects the retrieval of the friends of our first
+Twitter account (<em>drchuck</em>). We can run the program again
+and tell it to retrieve the friends of the next “unprocessed” account by
+simply pressing enter instead of a Twitter account as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">a</span> <span class="n">Twitter</span> <span class="n">account</span><span class="p">,</span> <span class="ow">or</span> <span class="n">quit</span><span class="p">:</span>
+<span class="n">Retrieving</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">api</span><span class="o">.</span><span class="n">twitter</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="mf">1.1</span><span class="o">/</span><span class="n">friends</span> <span class="o">...</span>
+<span class="n">New</span> <span class="n">accounts</span><span class="o">=</span> <span class="mi">18</span>  <span class="n">revisited</span><span class="o">=</span> <span class="mi">2</span>
+<span class="n">Enter</span> <span class="n">a</span> <span class="n">Twitter</span> <span class="n">account</span><span class="p">,</span> <span class="ow">or</span> <span class="n">quit</span><span class="p">:</span>
+<span class="n">Retrieving</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">api</span><span class="o">.</span><span class="n">twitter</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="mf">1.1</span><span class="o">/</span><span class="n">friends</span> <span class="o">...</span>
+<span class="n">New</span> <span class="n">accounts</span><span class="o">=</span> <span class="mi">17</span>  <span class="n">revisited</span><span class="o">=</span> <span class="mi">3</span>
+<span class="n">Enter</span> <span class="n">a</span> <span class="n">Twitter</span> <span class="n">account</span><span class="p">,</span> <span class="ow">or</span> <span class="n">quit</span><span class="p">:</span> <span class="n">quit</span>
+</pre></div>
+</div>
+<p>Since we pressed enter (i.e., we did not specify a Twitter account), the
+following code is executed:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="n">acct</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="p">)</span> <span class="p">:</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT name FROM Twitter WHERE retrieved = 0 LIMIT 1&#39;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">acct</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No unretrieved twitter accounts found&#39;</span><span class="p">)</span>
+        <span class="k">continue</span>
+</pre></div>
+</div>
+<p>We use the SQL <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> statement to retrieve the name of the
+first (<code class="docutils literal notranslate"><span class="pre">LIMIT</span> <span class="pre">1</span></code>) user who still has their “have we retrieved
+this user” value set to zero. We also use the <code class="docutils literal notranslate"><span class="pre">fetchone()[0]</span></code>
+pattern within a try/except block to either extract a <code class="docutils literal notranslate"><span class="pre">screen_name</span></code> from
+the retrieved data or put out an error message and loop back up.</p>
+<p>If we successfully retrieved an unprocessed <code class="docutils literal notranslate"><span class="pre">screen_name</span></code>, we retrieve
+their data as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">url</span><span class="o">=</span><span class="n">twurl</span><span class="o">.</span><span class="n">augment</span><span class="p">(</span><span class="n">TWITTER_URL</span><span class="p">,{</span><span class="s1">&#39;screen_name&#39;</span><span class="p">:</span> <span class="n">acct</span><span class="p">,</span><span class="s1">&#39;count&#39;</span><span class="p">:</span> <span class="s1">&#39;20&#39;</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Retrieving&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+<span class="n">connection</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">js</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;UPDATE Twitter SET retrieved=1 WHERE name = ?&#39;</span><span class="p">,(</span><span class="n">acct</span><span class="p">,</span> <span class="p">))</span>
+</pre></div>
+</div>
+<p>Once we retrieve the data successfully, we use the <code class="docutils literal notranslate"><span class="pre">UPDATE</span></code>
+statement to set the <code class="docutils literal notranslate"><span class="pre">retrieved</span></code> column to 1 to indicate that
+we have completed the retrieval of the friends of this account. This
+keeps us from retrieving the same data over and over and keeps us
+progressing forward through the network of Twitter friends.</p>
+<p>If we run the friend program and press enter twice to retrieve the next
+unvisited friend’s friends, then run the dumping program, it will give
+us the following output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="s1">&#39;opencontent&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">&#39;lhawthorn&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">&#39;steve_coppin&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">&#39;davidkocher&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">&#39;hrheingold&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="p">(</span><span class="s1">&#39;cnxorg&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">&#39;knoop&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">&#39;kthanos&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">&#39;LectureTools&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="mi">55</span> <span class="n">rows</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>We can see that we have properly recorded that we have visited
+<code class="docutils literal notranslate"><span class="pre">lhawthorn</span></code> and <code class="docutils literal notranslate"><span class="pre">opencontent</span></code>. Also the accounts
+<code class="docutils literal notranslate"><span class="pre">cnxorg</span></code> and <code class="docutils literal notranslate"><span class="pre">kthanos</span></code> already have two followers.
+Since we now have retrieved the friends of three people
+(<code class="docutils literal notranslate"><span class="pre">drchuck</span></code>, <code class="docutils literal notranslate"><span class="pre">opencontent</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">lhawthorn</span></code>) our table has 55 rows of friends to retrieve.</p>
+<p>Each time we run the program and press enter it will pick the next
+unvisited account (e.g., the next account will be <code class="docutils literal notranslate"><span class="pre">steve_coppin</span></code>),
+retrieve their friends, mark them as retrieved, and for each of the
+friends of <code class="docutils literal notranslate"><span class="pre">steve_coppin</span></code> either add them to the end of the database or
+update their friend count if they are already in the database.</p>
+<p>Since the program’s data is all stored on disk in a database, the
+spidering activity can be suspended and resumed as many times as you
+like with no loss of data.</p>
+</div>
+<div class="section" id="basic-data-modeling">
+<h2>Basic data modeling<a class="headerlink" href="#basic-data-modeling" title="Permalink to this headline">¶</a></h2>
+<p>The real power of a relational database is when we create multiple
+tables and make links between those tables. The act of deciding how to
+break up your application data into multiple tables and establishing the
+relationships between the tables is called <em>data
+modeling</em>. The design document that shows the tables and their
+relationships is called a <em>data model</em>.</p>
+<p>Data modeling is a relatively sophisticated skill and we will only
+introduce the most basic concepts of relational data modeling in this
+section. For more detail on data modeling you can start with:</p>
+<p><a class="reference external" href="http://en.wikipedia.org/wiki/Relational_model">http://en.wikipedia.org/wiki/Relational_model</a></p>
+<p>Let’s say for our Twitter spider application, instead of just counting a
+person’s friends, we wanted to keep a list of all of the incoming
+relationships so we could find a list of everyone who is following a
+particular account.</p>
+<p>Since everyone will potentially have many accounts that follow them, we
+cannot simply add a single column to our <code class="docutils literal notranslate"><span class="pre">Twitter</span></code> table. So
+we create a new table that keeps track of pairs of friends. The
+following is a simple way of making such a table:</p>
+<div class="highlight-{.sql} notranslate"><div class="highlight"><pre><span></span>CREATE TABLE Pals (from_friend TEXT, to_friend TEXT)
+</pre></div>
+</div>
+<p>Each time we encounter a person who <code class="docutils literal notranslate"><span class="pre">drchuck</span></code> is following,
+we would insert a row of the form:</p>
+<div class="highlight-{.sql} notranslate"><div class="highlight"><pre><span></span>INSERT INTO Pals (from_friend,to_friend) VALUES (&#39;drchuck&#39;, &#39;lhawthorn&#39;)
+</pre></div>
+</div>
+<p>As we are processing the 20 friends from the <code class="docutils literal notranslate"><span class="pre">drchuck</span></code>
+Twitter feed, we will insert 20 records with “drchuck” as the first
+parameter so we will end up duplicating the string many times in the
+database.</p>
+<p>This duplication of string data violates one of the best practices for
+<em>database normalization</em> which basically states that we
+should never put the same string data in the database more than once. If
+we need the data more than once, we create a numeric
+<em>key</em> for the data and reference the actual data using
+this key.</p>
+<p>In practical terms, a string takes up a lot more space than an integer
+on the disk and in the memory of our computer, and takes more processor
+time to compare and sort. If we only have a few hundred entries, the
+storage and processor time hardly matters. But if we have a million
+people in our database and a possibility of 100 million friend links, it
+is important to be able to scan data as quickly as possible.</p>
+<p>We will store our Twitter accounts in a table named <code class="docutils literal notranslate"><span class="pre">People</span></code>
+instead of the <code class="docutils literal notranslate"><span class="pre">Twitter</span></code> table used in the previous example.
+The <code class="docutils literal notranslate"><span class="pre">People</span></code> table has an additional column to store the
+numeric key associated with the row for this Twitter user. SQLite has a
+feature that automatically adds the key value for any row we insert into
+a table using a special type of data column (<code class="docutils literal notranslate"><span class="pre">INTEGER</span> <span class="pre">PRIMARY</span>
+<span class="pre">KEY</span></code>).</p>
+<p>We can create the <code class="docutils literal notranslate"><span class="pre">People</span></code> table with this additional
+<code class="docutils literal notranslate"><span class="pre">id</span></code> column as follows:</p>
+<div class="highlight-{.sql} notranslate"><div class="highlight"><pre><span></span>CREATE TABLE People
+    (id INTEGER PRIMARY KEY, name TEXT UNIQUE, retrieved INTEGER)
+</pre></div>
+</div>
+<p>Notice that we are no longer maintaining a friend count in each row of
+the <code class="docutils literal notranslate"><span class="pre">People</span></code> table. When we select <code class="docutils literal notranslate"><span class="pre">INTEGER</span> <span class="pre">PRIMARY</span>
+<span class="pre">KEY</span></code> as the type of our <code class="docutils literal notranslate"><span class="pre">id</span></code> column, we are indicating
+that we would like SQLite to manage this column and assign a unique
+numeric key to each row we insert automatically. We also add the keyword
+<code class="docutils literal notranslate"><span class="pre">UNIQUE</span></code> to indicate that we will not allow SQLite to insert
+two rows with the same value for <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+<p>Now instead of creating the table <code class="docutils literal notranslate"><span class="pre">Pals</span></code> above, we create a
+table called <code class="docutils literal notranslate"><span class="pre">Follows</span></code> with two integer columns <code class="docutils literal notranslate"><span class="pre">from_id</span></code> and
+<code class="docutils literal notranslate"><span class="pre">to_id</span></code> and a constraint on the table that the <em>combination</em> of
+<code class="docutils literal notranslate"><span class="pre">from_id</span></code> and <code class="docutils literal notranslate"><span class="pre">to_id</span></code> must be unique in this table (i.e., we cannot
+insert duplicate rows) in our database.</p>
+<div class="highlight-{.sql} notranslate"><div class="highlight"><pre><span></span>CREATE TABLE Follows
+    (from_id INTEGER, to_id INTEGER, UNIQUE(from_id, to_id) )
+</pre></div>
+</div>
+<p>When we add <code class="docutils literal notranslate"><span class="pre">UNIQUE</span></code> clauses to our tables, we are
+communicating a set of rules that we are asking the database to enforce
+when we attempt to insert records. We are creating these rules as a
+convenience in our programs, as we will see in a moment. The rules both
+keep us from making mistakes and make it simpler to write some of our
+code.</p>
+<p>In essence, in creating this <code class="docutils literal notranslate"><span class="pre">Follows</span></code> table, we are
+modelling a “relationship” where one person “follows” someone else and
+representing it with a pair of numbers indicating that (a) the people
+are connected and (b) the direction of the relationship.</p>
+<a class="reference external image-reference" href="height=3.5in&#64;figs2/twitter"><img alt="Relationships Between Tables" src="height=3.5in&#64;figs2/twitter" /></a>
+</div>
+<div class="section" id="programming-with-multiple-tables">
+<h2>Programming with multiple tables<a class="headerlink" href="#programming-with-multiple-tables" title="Permalink to this headline">¶</a></h2>
+<p>We will now redo the Twitter spider program using two tables, the
+primary keys, and the key references as described above. Here is the
+code for the new version of the program:</p>
+<p>VerbatimInput{../code3/twfriends.py}</p>
+<p>This program is starting to get a bit complicated, but it illustrates
+the patterns that we need to use when we are using integer keys to link
+tables. The basic patterns are:</p>
+</div>
+</div>
+<div class="section" id="id1">
+<h1>.<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>Create tables with primary keys and constraints.</p>
+</div></blockquote>
+</div>
+<div class="section" id="id2">
+<h1>.<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>When we have a logical key for a person (i.e., account name) and we
+need the <code class="docutils literal notranslate"><span class="pre">id</span></code> value for the person, depending on whether
+or not the person is already in the <code class="docutils literal notranslate"><span class="pre">People</span></code> table we
+either need to: (1) look up the person in the <code class="docutils literal notranslate"><span class="pre">People</span></code>
+table and retrieve the <code class="docutils literal notranslate"><span class="pre">id</span></code> value for the person or (2)
+add the person to the <code class="docutils literal notranslate"><span class="pre">People</span></code> table and get the
+<code class="docutils literal notranslate"><span class="pre">id</span></code> value for the newly added row.</p>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h1>.<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>Insert the row that captures the “follows” relationship.</p>
+</div></blockquote>
+<p>We will cover each of these in turn.</p>
+<div class="system-message">
+<p class="system-message-title">System Message: SEVERE/4 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\15-database.rst</span>, line 730)</p>
+<p>Title level inconsistent:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Constraints</span> <span class="ow">in</span> <span class="n">database</span> <span class="n">tables</span>
+<span class="o">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
+</pre></div>
+</div>
+</div>
+<p>As we design our table structures, we can tell the database system that
+we would like it to enforce a few rules on us. These rules help us from
+making mistakes and introducing incorrect data into out tables. When we
+create our tables:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;CREATE TABLE IF NOT EXISTS People</span>
+<span class="s1">    (id INTEGER PRIMARY KEY, name TEXT UNIQUE, retrieved INTEGER)&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;CREATE TABLE IF NOT EXISTS Follows</span>
+<span class="s1">    (from_id INTEGER, to_id INTEGER, UNIQUE(from_id, to_id))&#39;&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We indicate that the <code class="docutils literal notranslate"><span class="pre">name</span></code> column in the <code class="docutils literal notranslate"><span class="pre">People</span></code>
+table must be <code class="docutils literal notranslate"><span class="pre">UNIQUE</span></code>. We also indicate that the combination
+of the two numbers in each row of the <code class="docutils literal notranslate"><span class="pre">Follows</span></code> table must be
+unique. These constraints keep us from making mistakes such as adding
+the same relationship more than once.</p>
+<p>We can take advantage of these constraints in the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;INSERT OR IGNORE INTO People (name, retrieved)</span>
+<span class="s1">    VALUES ( ?, 0)&#39;&#39;&#39;</span><span class="p">,</span> <span class="p">(</span> <span class="n">friend</span><span class="p">,</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>We add the <code class="docutils literal notranslate"><span class="pre">OR</span> <span class="pre">IGNORE</span></code> clause to our <code class="docutils literal notranslate"><span class="pre">INSERT</span></code>
+statement to indicate that if this particular <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> would
+cause a violation of the “<code class="docutils literal notranslate"><span class="pre">name</span></code> must be unique” rule, the
+database system is allowed to ignore the <code class="docutils literal notranslate"><span class="pre">INSERT</span></code>. We are
+using the database constraint as a safety net to make sure we don’t
+inadvertently do something incorrect.</p>
+<p>Similarly, the following code ensures that we don’t add the exact same
+<code class="docutils literal notranslate"><span class="pre">Follows</span></code> relationship twice.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;INSERT OR IGNORE INTO Follows</span>
+<span class="s1">    (from_id, to_id) VALUES (?, ?)&#39;&#39;&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">friend_id</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>Again, we simply tell the database to ignore our attempted
+<code class="docutils literal notranslate"><span class="pre">INSERT</span></code> if it would violate the uniqueness constraint that
+we specified for the <code class="docutils literal notranslate"><span class="pre">Follows</span></code> rows.</p>
+<div class="system-message">
+<p class="system-message-title">System Message: SEVERE/4 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\15-database.rst</span>, line 780)</p>
+<p>Title level inconsistent:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Retrieve</span> <span class="ow">and</span><span class="o">/</span><span class="ow">or</span> <span class="n">insert</span> <span class="n">a</span> <span class="n">record</span>
+<span class="o">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
+</pre></div>
+</div>
+</div>
+<p>When we prompt the user for a Twitter account, if the account exists, we
+must look up its <code class="docutils literal notranslate"><span class="pre">id</span></code> value. If the account does not yet
+exist in the <code class="docutils literal notranslate"><span class="pre">People</span></code> table, we must insert the record and
+get the <code class="docutils literal notranslate"><span class="pre">id</span></code> value from the inserted row.</p>
+<p>This is a very common pattern and is done twice in the program above.
+This code shows how we look up the <code class="docutils literal notranslate"><span class="pre">id</span></code> for a friend’s
+account when we have extracted a <code class="docutils literal notranslate"><span class="pre">screen_name</span></code> from a <code class="docutils literal notranslate"><span class="pre">user</span></code>
+node in the retrieved Twitter JSON.</p>
+<p>Since over time it will be increasingly likely that the account will
+already be in the database, we first check to see if the
+<code class="docutils literal notranslate"><span class="pre">People</span></code> record exists using a <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> statement.</p>
+<p>If all goes well^[In general, when a sentence starts with “if all goes well” you
+will find that the code needs to use try/except.] inside
+the <code class="docutils literal notranslate"><span class="pre">try</span></code> section, we retrieve
+the record using <code class="docutils literal notranslate"><span class="pre">fetchone()</span></code> and then retrieve the first
+(and only) element of the returned tuple and store it in <code class="docutils literal notranslate"><span class="pre">friend_id</span></code>.</p>
+<p>If the <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> fails, the <code class="docutils literal notranslate"><span class="pre">fetchone()[0]</span></code> code
+will fail and control will transfer into the <code class="docutils literal notranslate"><span class="pre">except</span></code>
+section.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">friend</span> <span class="o">=</span> <span class="n">u</span><span class="p">[</span><span class="s1">&#39;screen_name&#39;</span><span class="p">]</span>
+<span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT id FROM People WHERE name = ? LIMIT 1&#39;</span><span class="p">,</span>
+    <span class="p">(</span><span class="n">friend</span><span class="p">,</span> <span class="p">)</span> <span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">friend_id</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">countold</span> <span class="o">=</span> <span class="n">countold</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;INSERT OR IGNORE INTO People (name, retrieved)</span>
+<span class="s1">        VALUES ( ?, 0)&#39;&#39;&#39;</span><span class="p">,</span> <span class="p">(</span> <span class="n">friend</span><span class="p">,</span> <span class="p">)</span> <span class="p">)</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">cur</span><span class="o">.</span><span class="n">rowcount</span> <span class="o">!=</span> <span class="mi">1</span> <span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Error inserting account:&#39;</span><span class="p">,</span><span class="n">friend</span><span class="p">)</span>
+        <span class="k">continue</span>
+    <span class="n">friend_id</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">lastrowid</span>
+    <span class="n">countnew</span> <span class="o">=</span> <span class="n">countnew</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>If we end up in the <code class="docutils literal notranslate"><span class="pre">except</span></code> code, it simply means that the
+row was not found, so we must insert the row. We use <code class="docutils literal notranslate"><span class="pre">INSERT</span> <span class="pre">OR</span>
+<span class="pre">IGNORE</span></code> just to avoid errors and then call <code class="docutils literal notranslate"><span class="pre">commit()</span></code>
+to force the database to really be updated. After the write is done, we
+can check the <code class="docutils literal notranslate"><span class="pre">cur.rowcount</span></code> to see how many rows were
+affected. Since we are attempting to insert a single row, if the number
+of affected rows is something other than 1, it is an error.</p>
+<p>If the <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> is successful, we can look at
+<code class="docutils literal notranslate"><span class="pre">cur.lastrowid</span></code> to find out what value the database assigned
+to the <code class="docutils literal notranslate"><span class="pre">id</span></code> column in our newly created row.</p>
+<div class="system-message">
+<p class="system-message-title">System Message: SEVERE/4 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\15-database.rst</span>, line 838)</p>
+<p>Title level inconsistent:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Storing</span> <span class="n">the</span> <span class="n">friend</span> <span class="n">relationship</span>
+<span class="o">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
+</pre></div>
+</div>
+</div>
+<p>Once we know the key value for both the Twitter user and the friend in
+the JSON, it is a simple matter to insert the two numbers into the
+<code class="docutils literal notranslate"><span class="pre">Follows</span></code> table with the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;INSERT OR IGNORE INTO Follows (from_id, to_id) VALUES (?, ?)&#39;</span><span class="p">,</span>
+    <span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">friend_id</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>Notice that we let the database take care of keeping us from
+“double-inserting” a relationship by creating the table with a
+uniqueness constraint and then adding <code class="docutils literal notranslate"><span class="pre">OR</span> <span class="pre">IGNORE</span></code> to our
+<code class="docutils literal notranslate"><span class="pre">INSERT</span></code> statement.</p>
+<p>Here is a sample execution of this program:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">a</span> <span class="n">Twitter</span> <span class="n">account</span><span class="p">,</span> <span class="ow">or</span> <span class="n">quit</span><span class="p">:</span>
+<span class="n">No</span> <span class="n">unretrieved</span> <span class="n">Twitter</span> <span class="n">accounts</span> <span class="n">found</span>
+<span class="n">Enter</span> <span class="n">a</span> <span class="n">Twitter</span> <span class="n">account</span><span class="p">,</span> <span class="ow">or</span> <span class="n">quit</span><span class="p">:</span> <span class="n">drchuck</span>
+<span class="n">Retrieving</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">api</span><span class="o">.</span><span class="n">twitter</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="mf">1.1</span><span class="o">/</span><span class="n">friends</span> <span class="o">...</span>
+<span class="n">New</span> <span class="n">accounts</span><span class="o">=</span> <span class="mi">20</span>  <span class="n">revisited</span><span class="o">=</span> <span class="mi">0</span>
+<span class="n">Enter</span> <span class="n">a</span> <span class="n">Twitter</span> <span class="n">account</span><span class="p">,</span> <span class="ow">or</span> <span class="n">quit</span><span class="p">:</span>
+<span class="n">Retrieving</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">api</span><span class="o">.</span><span class="n">twitter</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="mf">1.1</span><span class="o">/</span><span class="n">friends</span> <span class="o">...</span>
+<span class="n">New</span> <span class="n">accounts</span><span class="o">=</span> <span class="mi">17</span>  <span class="n">revisited</span><span class="o">=</span> <span class="mi">3</span>
+<span class="n">Enter</span> <span class="n">a</span> <span class="n">Twitter</span> <span class="n">account</span><span class="p">,</span> <span class="ow">or</span> <span class="n">quit</span><span class="p">:</span>
+<span class="n">Retrieving</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">api</span><span class="o">.</span><span class="n">twitter</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="mf">1.1</span><span class="o">/</span><span class="n">friends</span> <span class="o">...</span>
+<span class="n">New</span> <span class="n">accounts</span><span class="o">=</span> <span class="mi">17</span>  <span class="n">revisited</span><span class="o">=</span> <span class="mi">3</span>
+<span class="n">Enter</span> <span class="n">a</span> <span class="n">Twitter</span> <span class="n">account</span><span class="p">,</span> <span class="ow">or</span> <span class="n">quit</span><span class="p">:</span> <span class="n">quit</span>
+</pre></div>
+</div>
+<p>We started with the <code class="docutils literal notranslate"><span class="pre">drchuck</span></code> account and then let the
+program automatically pick the next two accounts to retrieve and add to
+our database.</p>
+<p>The following is the first few rows in the <code class="docutils literal notranslate"><span class="pre">People</span></code> and
+<code class="docutils literal notranslate"><span class="pre">Follows</span></code> tables after this run is completed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">People</span><span class="p">:</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;drchuck&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;opencontent&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;lhawthorn&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;steve_coppin&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;davidkocher&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="mi">55</span> <span class="n">rows</span><span class="o">.</span>
+<span class="n">Follows</span><span class="p">:</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="mi">60</span> <span class="n">rows</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>You can see the <code class="docutils literal notranslate"><span class="pre">id</span></code>, <code class="docutils literal notranslate"><span class="pre">name</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">visited</span></code> fields in the <code class="docutils literal notranslate"><span class="pre">People</span></code> table and you see
+the numbers of both ends of the relationship in the <code class="docutils literal notranslate"><span class="pre">Follows</span></code>
+table. In the <code class="docutils literal notranslate"><span class="pre">People</span></code> table, we can see that the first three
+people have been visited and their data has been retrieved. The data in
+the <code class="docutils literal notranslate"><span class="pre">Follows</span></code> table indicates that <code class="docutils literal notranslate"><span class="pre">drchuck</span></code> (user
+1) is a friend to all of the people shown in the first five rows. This
+makes sense because the first data we retrieved and stored was the
+Twitter friends of <code class="docutils literal notranslate"><span class="pre">drchuck</span></code>. If you were to print more rows
+from the <code class="docutils literal notranslate"><span class="pre">Follows</span></code> table, you would see the friends of users
+2 and 3 as well.</p>
+<div class="section" id="three-kinds-of-keys">
+<h2>Three kinds of keys<a class="headerlink" href="#three-kinds-of-keys" title="Permalink to this headline">¶</a></h2>
+<p>Now that we have started building a data model putting our data into
+multiple linked tables and linking the rows in those tables using
+<em>keys</em>, we need to look at some terminology around keys.
+There are generally three kinds of keys used in a database model.</p>
+<ul class="simple">
+<li><p>A <em>logical key</em> is a key that the “real world” might
+use to look up a row. In our example data model, the
+<code class="docutils literal notranslate"><span class="pre">name</span></code> field is a logical key. It is the screen name for
+the user and we indeed look up a user’s row several times in the
+program using the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. You will often find that
+it makes sense to add a <code class="docutils literal notranslate"><span class="pre">UNIQUE</span></code> constraint to a logical
+key. Since the logical key is how we look up a row from the outside
+world, it makes little sense to allow multiple rows with the same
+value in the table.</p></li>
+<li><p>A <em>primary key</em> is usually a number that is assigned
+automatically by the database. It generally has no meaning outside
+the program and is only used to link rows from different tables
+together. When we want to look up a row in a table, usually
+searching for the row using the primary key is the fastest way to
+find the row. Since primary keys are integer numbers, they take up
+very little storage and can be compared or sorted very quickly. In
+our data model, the <code class="docutils literal notranslate"><span class="pre">id</span></code> field is an example of a primary
+key.</p></li>
+<li><p>A <em>foreign key</em> is usually a number that points to
+the primary key of an associated row in a different table. An
+example of a foreign key in our data model is the <code class="docutils literal notranslate"><span class="pre">from_id</span></code>.</p></li>
+</ul>
+<p>We are using a naming convention of always calling the primary key field
+name <code class="docutils literal notranslate"><span class="pre">id</span></code> and appending the suffix <code class="docutils literal notranslate"><span class="pre">_id</span></code> to any field name
+that is a foreign key.</p>
+</div>
+<div class="section" id="using-join-to-retrieve-data">
+<h2>Using JOIN to retrieve data<a class="headerlink" href="#using-join-to-retrieve-data" title="Permalink to this headline">¶</a></h2>
+<p>Now that we have followed the rules of database normalization and have
+data separated into two tables, linked together using primary and
+foreign keys, we need to be able to build a <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> that
+reassembles the data across the tables.</p>
+<p>SQL uses the <code class="docutils literal notranslate"><span class="pre">JOIN</span></code> clause to reconnect these tables. In the
+<code class="docutils literal notranslate"><span class="pre">JOIN</span></code> clause you specify the fields that are used to
+reconnect the rows between the tables.</p>
+<p>The following is an example of a <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> with a
+<code class="docutils literal notranslate"><span class="pre">JOIN</span></code> clause:</p>
+<div class="highlight-{.sql} notranslate"><div class="highlight"><pre><span></span>SELECT * FROM Follows JOIN People
+    ON Follows.from_id = People.id WHERE People.id = 1
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">JOIN</span></code> clause indicates that the fields we are selecting
+cross both the <code class="docutils literal notranslate"><span class="pre">Follows</span></code> and <code class="docutils literal notranslate"><span class="pre">People</span></code> tables. The
+<code class="docutils literal notranslate"><span class="pre">ON</span></code> clause indicates how the two tables are to be joined:
+Take the rows from <code class="docutils literal notranslate"><span class="pre">Follows</span></code> and append the row from
+<code class="docutils literal notranslate"><span class="pre">People</span></code> where the field <code class="docutils literal notranslate"><span class="pre">from_id</span></code> in <code class="docutils literal notranslate"><span class="pre">Follows</span></code> is
+the same the <code class="docutils literal notranslate"><span class="pre">id</span></code> value in the <code class="docutils literal notranslate"><span class="pre">People</span></code> table.</p>
+<a class="reference external image-reference" href="height=3.5in&#64;figs2/join"><img alt="Connecting Tables Using JOIN" src="height=3.5in&#64;figs2/join" /></a>
+<p>The result of the JOIN is to create extra-long “metarows” which have
+both the fields from <code class="docutils literal notranslate"><span class="pre">People</span></code> and the matching fields from
+<code class="docutils literal notranslate"><span class="pre">Follows</span></code>. Where there is more than one match between the
+<code class="docutils literal notranslate"><span class="pre">id</span></code> field from <code class="docutils literal notranslate"><span class="pre">People</span></code> and the <code class="docutils literal notranslate"><span class="pre">from_id</span></code> from
+<code class="docutils literal notranslate"><span class="pre">People</span></code>, then JOIN creates a metarow for <em>each</em> of the
+matching pairs of rows, duplicating data as needed.</p>
+<p>The following code demonstrates the data that we will have in the
+database after the multi-table Twitter spider program (above) has been
+run several times.</p>
+<p>VerbatimInput{../code3/twjoin.py}</p>
+<p>In this program, we first dump out the <code class="docutils literal notranslate"><span class="pre">People</span></code> and
+<code class="docutils literal notranslate"><span class="pre">Follows</span></code> and then dump out a subset of the data in the
+tables joined together.</p>
+<p>Here is the output of the program:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">twjoin</span><span class="o">.</span><span class="n">py</span>
+<span class="n">People</span><span class="p">:</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;drchuck&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;opencontent&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;lhawthorn&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;steve_coppin&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;davidkocher&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="mi">55</span> <span class="n">rows</span><span class="o">.</span>
+<span class="n">Follows</span><span class="p">:</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="mi">60</span> <span class="n">rows</span><span class="o">.</span>
+<span class="n">Connections</span> <span class="k">for</span> <span class="nb">id</span><span class="o">=</span><span class="mi">2</span><span class="p">:</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;drchuck&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="s1">&#39;cnxorg&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;kthanos&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="s1">&#39;SomethingGirl&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="s1">&#39;ja_Pac&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="mi">20</span> <span class="n">rows</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>You see the columns from the <code class="docutils literal notranslate"><span class="pre">People</span></code> and
+<code class="docutils literal notranslate"><span class="pre">Follows</span></code> tables and the last set of rows is the result of
+the <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> with the <code class="docutils literal notranslate"><span class="pre">JOIN</span></code> clause.</p>
+<p>In the last select, we are looking for accounts that are friends of
+“opencontent” (i.e., <code class="docutils literal notranslate"><span class="pre">People.id=2</span></code>).</p>
+<p>In each of the “metarows” in the last select, the first two columns are
+from the <code class="docutils literal notranslate"><span class="pre">Follows</span></code> table followed by columns three through
+five from the <code class="docutils literal notranslate"><span class="pre">People</span></code> table. You can also see that the
+second column (<code class="docutils literal notranslate"><span class="pre">Follows.to_id</span></code>) matches the third column
+(<code class="docutils literal notranslate"><span class="pre">People.id</span></code>) in each of the joined-up “metarows”.</p>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>This chapter has covered a lot of ground to give you an overview of the
+basics of using a database in Python. It is more complicated to write
+the code to use a database to store data than Python dictionaries or
+flat files so there is little reason to use a database unless your
+application truly needs the capabilities of a database. The situations
+where a database can be quite useful are: (1) when your application
+needs to make small many random updates within a large data set, (2)
+when your data is so large it cannot fit in a dictionary and you need to
+look up information repeatedly, or (3) when you have a long-running
+process that you want to be able to stop and restart and retain the data
+from one run to the next.</p>
+<p>You can build a simple database with a single table to suit many
+application needs, but most problems will require several tables and
+links/relationships between rows in different tables. When you start
+making links between tables, it is important to do some thoughtful
+design and follow the rules of database normalization to make the best
+use of the database’s capabilities. Since the primary motivation for
+using a database is that you have a large amount of data to deal with,
+it is important to model your data efficiently so your programs run as
+fast as possible.</p>
+</div>
+<div class="section" id="debugging">
+<h2>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h2>
+<p>One common pattern when you are developing a Python program to connect
+to an SQLite database will be to run a Python program and check the
+results using the Database Browser for SQLite. The browser allows you to
+quickly check to see if your program is working properly.</p>
+<p>You must be careful because SQLite takes care to keep two programs from
+changing the same data at the same time. For example, if you open a
+database in the browser and make a change to the database and have not
+yet pressed the “save” button in the browser, the browser “locks” the
+database file and keeps any other program from accessing the file. In
+particular, your Python program will not be able to access the file if
+it is locked.</p>
+<p>So a solution is to make sure to either close the database browser or
+use the <em>File</em> menu to close the database in the browser
+before you attempt to access the database from Python to avoid the
+problem of your Python code failing because the database is locked.</p>
+</div>
+<div class="section" id="glossary">
+<h2>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h2>
+<p>attribute
+:   One of the values within a tuple. More commonly called a “column” or</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\15-database.rst</span>, line 1094)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>“field”.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\15-database.rst</span>, line 1095)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{attribute}</p>
+<p>constraint
+:   When we tell the database to enforce a rule on a field or a row in a</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\15-database.rst</span>, line 1099)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>table. A common constraint is to insist that there can be no
+duplicate values in a particular field (i.e., all the values must be
+unique).</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\15-database.rst</span>, line 1102)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{constraint}</p>
+<p>cursor
+:   A cursor allows you to execute SQL commands in a database and</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\15-database.rst</span>, line 1106)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>retrieve data from the database. A cursor is similar to a socket or
+file handle for network connections and files, respectively.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\15-database.rst</span>, line 1108)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{cursor}</p>
+<p>database browser
+:   A piece of software that allows you to directly connect to a</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\15-database.rst</span>, line 1112)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>database and manipulate the database directly without writing a
+program.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\15-database.rst</span>, line 1114)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{database browser}</p>
+<p>foreign key
+:   A numeric key that points to the primary key of a row in another</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\15-database.rst</span>, line 1118)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>table. Foreign keys establish relationships between rows stored in
+different tables.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\15-database.rst</span>, line 1120)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{foreign key}</p>
+<p>index
+:   Additional data that the database software maintains as rows and</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\15-database.rst</span>, line 1124)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>inserts into a table to make lookups very fast.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\15-database.rst</span>, line 1125)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{index}
+index{}</p>
+<p>logical key
+:   A key that the “outside world” uses to look up a particular row. For</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\15-database.rst</span>, line 1130)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>example in a table of user accounts, a person’s email address might
+be a good candidate as the logical key for the user’s data.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\15-database.rst</span>, line 1132)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{logical key}</p>
+<p>normalization
+:   Designing a data model so that no data is replicated. We store each</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\15-database.rst</span>, line 1136)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>item of data at one place in the database and reference it elsewhere
+using a foreign key.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\15-database.rst</span>, line 1138)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{normalization}
+index{database normalization}</p>
+<p>primary key
+:   A numeric key assigned to each row that is used to refer to one row</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\15-database.rst</span>, line 1143)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>in a table from another table. Often the database is configured to
+automatically assign primary keys as rows are inserted.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\15-database.rst</span>, line 1145)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{primary key}</p>
+<p>relation
+:   An area within a database that contains tuples and attributes. More</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\15-database.rst</span>, line 1149)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>typically called a “table”.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\15-database.rst</span>, line 1150)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{relation}</p>
+<p>tuple
+:   A single entry in a database table that is a set of attributes. More</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\15-database.rst</span>, line 1154)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>typically called “row”.</p>
+</div></blockquote>
+<p>index{tuple}</p>
+</div>
+</div>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 CS Learning 4 U group.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>

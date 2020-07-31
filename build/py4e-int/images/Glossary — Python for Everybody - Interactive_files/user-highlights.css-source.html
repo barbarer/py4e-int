@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title><title><no title></title></title>
+  <meta http-equiv="content-type" content="text/html; charset=None">
+  <link rel="stylesheet" href="..\..\_static\pygments.css" type="text/css">
+</head>
+<body>
+<h2><title><no title></title></h2>
+
+<div class="highlight"><pre><span></span><span class="c">/* Variables holding theme colors */</span>
+<span class="p">:</span><span class="nd">root</span> <span class="p">{</span>
+	<span class="err">--</span><span class="n">menu</span><span class="p">:</span> <span class="mh">#FFFFFF</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cp">[</span><span class="nx">data</span><span class="na">-theme</span><span class="o">=</span><span class="s2">&quot;dark&quot;</span><span class="cp">]</span> <span class="p">{</span>
+	<span class="err">--</span><span class="n">menu</span><span class="p">:</span> <span class="mh">#000000</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">my-highlighted-text</span><span class="p">{</span>
+	<span class="k">background-color</span><span class="p">:</span><span class="mh">#FFFF99</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">social-highlighted-text</span><span class="p">{</span>
+	<span class="k">background-color</span><span class="p">:</span><span class="mh">#FFCCCC</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">highlight-option-box</span><span class="p">{</span>
+	<span class="k">position</span><span class="p">:</span><span class="kc">absolute</span><span class="p">;</span>
+	<span class="k">top</span><span class="p">:</span><span class="mi">0</span><span class="kt">px</span><span class="p">;</span>
+	<span class="k">left</span><span class="p">:</span><span class="mi">0</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">highlight-option-box</span> <span class="nt">li</span><span class="p">{</span> 
+	<span class="k">height</span><span class="p">:</span><span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">#</span><span class="nn">continue-reading</span><span class="p">{</span>
+	<span class="k">padding-top</span><span class="p">:</span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+	<span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">#</span><span class="nn">continue-reading</span> <span class="nt">a</span><span class="p">{</span>
+	<span class="k">float</span><span class="p">:</span><span class="kc">right</span><span class="p">;</span>
+	<span class="k">margin-right</span><span class="p">:</span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">li</span><span class="p">.</span><span class="nc">completed</span>
+<span class="p">{</span>
+<span class="k">list-style-image</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="s1">&#39;completed.png&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nt">li</span><span class="p">.</span><span class="nc">active</span>
+<span class="p">{</span>
+<span class="k">list-style-image</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="s1">&#39;active.png&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">infoTextCompleted</span><span class="p">{</span>
+	<span class="k">margin-left</span><span class="p">:</span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+	<span class="k">font-size</span><span class="p">:</span><span class="mf">0.9</span><span class="kt">em</span><span class="p">;</span>
+	<span class="k">color</span><span class="p">:</span><span class="mh">#3dc682</span><span class="p">;</span>
+	<span class="k">display</span><span class="p">:</span><span class="kc">none</span><span class="p">;</span>
+	<span class="k">font-style</span><span class="p">:</span><span class="kc">italic</span><span class="p">;</span>
+	<span class="k">opacity</span><span class="p">:</span> <span class="mf">0.7</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">infoTextActive</span><span class="p">{</span>
+	<span class="k">margin-left</span><span class="p">:</span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+	<span class="k">font-size</span><span class="p">:</span><span class="mf">0.9</span><span class="kt">em</span><span class="p">;</span>
+	<span class="k">color</span><span class="p">:</span><span class="mh">#ff9f19</span><span class="p">;</span>
+	<span class="k">display</span><span class="p">:</span><span class="kc">none</span><span class="p">;</span>
+	<span class="k">font-style</span><span class="p">:</span><span class="kc">italic</span><span class="p">;</span>
+	<span class="k">opacity</span><span class="p">:</span> <span class="mf">0.7</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">dropdown-menu</span><span class="p">{</span>
+	<span class="k">background-clip</span><span class="p">:</span> <span class="kc">padding-box</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">menu</span><span class="p">);</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">);</span>
+    <span class="k">border-radius</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">);</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+    <span class="k">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">list-style</span><span class="p">:</span> <span class="kc">none</span> <span class="kc">outside</span> <span class="kc">none</span><span class="p">;</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">min-width</span><span class="p">:</span> <span class="mi">160</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+    <span class="k">top</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">z-index</span><span class="p">:</span> <span class="mi">1000</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">dropdown-menu</span> <span class="nt">ul</span> <span class="p">{</span>
+    <span class="k">list-style</span><span class="p">:</span> <span class="kc">disc</span> <span class="kc">outside</span> <span class="kc">none</span><span class="p">;</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">9</span><span class="kt">px</span> <span class="mi">25</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">sidebar-highlights</span><span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span><span class="mh">#FFFF99</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">div</span><span class="p">.</span><span class="nc">documentwrapper</span> <span class="p">{</span>
+	<span class="k">border</span> <span class="p">:</span> <span class="mi">0</span> <span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">div</span><span class="p">.</span><span class="nc">bodywrapper</span> <span class="p">{</span>
+	<span class="k">border-right</span><span class="p">:</span> <span class="mi">0</span> <span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">div</span><span class="p">.</span><span class="nc">sphinxsidebar</span> <span class="p">{</span>
+	<span class="k">border-left</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#CCCCCC</span><span class="p">;</span>
+	<span class="k">padding-left</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">body</span><span class="o">&gt;</span><span class="p">.</span><span class="nc">section</span> <span class="p">.</span><span class="nc">section</span><span class="p">{</span>
+	<span class="k">padding-top</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">#</span><span class="nn">jump-to-chapter</span><span class="p">{</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#CCCCCC</span><span class="p">;</span>
+    <span class="k">letter-spacing</span><span class="p">:</span> <span class="mf">0.015</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">line-height</span><span class="p">:</span> <span class="mi">120</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mf">0.5</span><span class="kt">em</span><span class="p">;</span>
+	<span class="k">width</span><span class="p">:</span> <span class="mi">80</span><span class="kt">%</span><span class="p">;</span>
+	<span class="k">margin-left</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+	<span class="k">margin-right</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">#</span><span class="nn">navigation-links</span><span class="p">{</span>
+	<span class="k">background-color</span><span class="p">:</span> <span class="mh">#F8F8F8</span><span class="p">;</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#CCCCCC</span><span class="p">;</span>
+	<span class="k">padding</span><span class="p">:</span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+	<span class="k">margin</span><span class="p">:</span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</body>
+</html>

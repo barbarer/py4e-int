@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Write Code Exercises &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=DB047029" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.0.8" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=44FE0709"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/html4css1.css?v=4D8F3FB4"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=3EAD674C"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tuples" href="../10-tuples/toctree.html" />
+    <link rel="prev" title="Mixed-Up Code Exercises" href="09-mixedupcode.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = true;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'py4e-int';
+    eBookConfig.basecourse = 'py4e-int';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          py4e-int
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span aria-label="Social" class="visuallyhidden">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span aria-label="User" class="visuallyhidden">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span aria-label="Help" class="visuallyhidden">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/runestone/static/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=09-writecode'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - Mixed-Up Code Exercises" data-toggle="tooltip">
+    <a href="09-mixedupcode.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Tuples' data-toggle="tooltip" >              
+    <a href="../10-tuples/toctree.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+  
+  <div class="section" id="write-code-exercises">
+<h1>Write Code Exercises<a class="headerlink" href="#write-code-exercises" title="Permalink to this headline">¶</a></h1>
+<div id='writecode_question9_1' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>Write a program that reads the words in phrase and
+stores them as keys in the dictionary ‘word_dictionary’. It doesn’t matter what the values
+are. Then you can use the <code class="docutils literal notranslate"><span class="pre">in</span></code> operator as a fast way to
+check whether a string is in the dictionary.</p>
+
+<div data-childcomponent="writingcode_question9_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=writingcode_question9_1 data-lang="python" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static>
+phrase = "Writing programs or programming is a very creative and rewarding activity  You can write programs for many reasons ranging from making your living to solving a difficult data analysis problem to having fun to helping someone else solve a problem  This book assumes that {\em everyone} needs to know how to program and that once you know how to program, you will figure out what you want to do with your newfound skills"
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(len(word_dictionary), 56, "Make sure you are not confusing the key and value components")
+        self.assertEqual(word_dictionary['Writing'], 1, "Checking that 'Writing' appears once in the dictionary")
+        self.assertEqual(word_dictionary['a'], 3, "Making sure the letter 'a' appears three times as a word in the given phrase")
+
+myTests().main()
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="writtencode_question9_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=writtencode_question9_1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static>
+phrase = "Writing programs or programming is a very creative and rewarding activity  You can write programs for many reasons ranging from making your living to solving a difficult data analysis problem to having fun to helping someone else solve a problem  This book assumes that {\em everyone} needs to know how to program and that once you know how to program, you will figure out what you want to do with your newfound skills"
+
+#CREATE AN EMPTY DICTIONARY
+word_dictionary = {}
+#RUN A LOOP TO GO THROUGH EACH WORD TO SEE IF IT IS IN THE DICTIONARY
+for word in phrase.split():
+    if word not in word_dictionary.keys():
+        word_dictionary[word] = 0
+    word_dictionary[word] += 1
+print(word_dictionary)
+</textarea>
+</div>
+</div>
+    </div>
+
+<div id='writecode_question9_2' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>Perform the same task as in question 1, but this time make sure to look at words in lowercase in order to avoid any repetition.</p>
+
+<div data-childcomponent="writingcode_question9_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=writingcode_question9_2 data-lang="python" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static>
+phrase = "Writing programs or programming is a very creative and rewarding activity  You can write programs for many reasons ranging from making your living to solving a difficult data analysis problem to having fun to helping someone else solve a problem  This book assumes that {\em everyone} needs to know how to program and that once you know how to program, you will figure out what you want to do with your newfound skills"
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(len(word_dictionary), 5, "Make sure you are not confusing the key and value components")
+        self.assertEqual(word_dictionary['you'], 4, "Checking the amount of times 'you' appears in the phrase")
+        self.assertEqual(word_dictionary['writing'], 1, "Making sure 'writing' appears just once in the dictionary")
+
+myTests().main()
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="writtencode_question9_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=writtencode_question9_2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static>
+phrase = "Writing programs or programming is a very creative and rewarding activity  You can write programs for many reasons ranging from making your living to solving a difficult data analysis problem to having fun to helping someone else solve a problem  This book assumes that {\em everyone} needs to know how to program and that once you know how to program, you will figure out what you want to do with your newfound skills"
+
+#CREATE AN EMPTY DICTIONARY
+word_dictionary = {}
+#RUN A LOOP TO GO THROUGH EACH WORD TO SEE IF IT IS IN THE DICTIONARY
+for word in phrase.split():
+    word = word.lower()
+    if word not in word_dictionary.keys():
+        word_dictionary[word] = 0
+    word_dictionary[word] += 1
+print(word_dictionary)
+</textarea>
+</div>
+</div>
+    </div>
+
+<div id='writecode_question9_3' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>Write a program that categorizes each mail message by which day of the week the commit was done. To do this look for lines that start with “From”, then look for the third word and keep a running count of each of the days of the week. At the end of the program print out the contents of the dictionary ‘mail_count’ (order does not matter).</p>
+
+<div data-childcomponent="writingcode_question9_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=writingcode_question9_3 data-lang="python" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static>
+mail = ['From stephen.marquard@uct.ac.za Sat Jan  7', 'From gopal.ramasammycook@gmail.com Thurs Jan  5', 'From louis@media.berkeley.edu Tues Jan  3', 'From antranig@caret.cam.ac.uk Sat Jan  7', 'From david.horwitz@uct.ac.za Wed Jan  4', 'From ray@media.berkeley.edu Mon Jan  2', 'From stephen.marquard@uct.ac.za Mon Jan 2', 'From wagnermr@iupui.edu Fri Jan  6']
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(mail_count['Mon'], 2, "Make sure you are grabbing the third value from each item in the list in order to sort by the day of the week.")
+        self.assertEqual(mail_count['Sat'], 2, "Checking that there are 2 emails sent on Saturday")
+        self.assertEqual(mail_count['Sun'], 0, "Checking that no emails were sent on Sunday")
+
+myTests().main()
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="writtencode_question9_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=writtencode_question9_3 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static>
+mail = ['From stephen.marquard@uct.ac.za Sat Jan  7', 'From gopal.ramasammycook@gmail.com Thurs Jan  5', 'From louis@media.berkeley.edu Tues Jan  3', 'From antranig@caret.cam.ac.uk Sat Jan  7', 'From david.horwitz@uct.ac.za Wed Jan  4', 'From ray@media.berkeley.edu Mon Jan  2', 'From stephen.marquard@uct.ac.za Mon Jan 2', 'From wagnermr@iupui.edu Fri Jan  6']
+
+mail_count = {}
+for email in mail:
+    key = email.split()[2]
+    if key not in mail_count.keys():
+        mail_count[key] = 0
+    mail_count[key] += 1
+print(mail_count)
+</textarea>
+</div>
+</div>
+    </div>
+
+<div id='writecode_question9_4' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>Write a program to read through a mail log, build a histogram using the dictionary “user_count” to count how many messages have come from each email address, and print the dictionary</p>
+
+<div data-childcomponent="writingcode_question9_4" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=writingcode_question9_4 data-lang="python" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static>
+mail_log = ['From stephen.marquard@uct.ac.za Sat Jan  7', 'From gopal.ramasammycook@gmail.com Thurs Jan  5', 'From stephen.marquard@uct.ac.za Sat Feb  7', 'From louis@media.berkeley.edu Tues Jan  3', 'From stephen.marquard@uct.ac.za Sat Nov  6', 'From antranig@caret.cam.ac.uk Sat Jan  7', 'From david.horwitz@uct.ac.za Wed Jan  4', 'From ray@media.berkeley.edu Mon Jan  2', 'From stephen.marquard@uct.ac.za Mon Jan 2', 'From wagnermr@iupui.edu Fri Jan  6', 'From gopal.ramasammycook@gmail.com Thurs Dec  5', 'From louis@media.berkeley.edu Tues April  1']
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(len(user_count), 8, "Make sure you are using the correct index to grab the email address.")
+        self.assertEqual(user_count['stephen.marquard@uct.ac.za'], 4, "Checking that this email address is counted for 4 times")
+
+myTests().main()
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="writtencode_question9_4" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=writtencode_question9_4 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static>
+mail_log = ['From stephen.marquard@uct.ac.za Sat Jan  7', 'From gopal.ramasammycook@gmail.com Thurs Jan  5', 'From stephen.marquard@uct.ac.za Sat Feb  7', 'From louis@media.berkeley.edu Tues Jan  3', 'From stephen.marquard@uct.ac.za Sat Nov  6', 'From antranig@caret.cam.ac.uk Sat Jan  7', 'From david.horwitz@uct.ac.za Wed Jan  4', 'From ray@media.berkeley.edu Mon Jan  2', 'From stephen.marquard@uct.ac.za Mon Jan 2', 'From wagnermr@iupui.edu Fri Jan  6', 'From gopal.ramasammycook@gmail.com Thurs Dec  5']
+
+user_count = {}
+for email in mail_log:
+    key = email.split()[1]
+    if key not in user_count.keys():
+        user_count[key] = 0
+    user_count[key] += 1
+print(user_count)
+</textarea>
+</div>
+</div>
+    </div>
+
+<div id='writecode_question9_5' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>Add code to the program below to figure out who has the most messages in the file. After all the data has been read and the dictionary has been created, look through the dictionary using a maximum loop (see Chapter 5: Maximum and minimum loops) to find who has the most messages and print how many messages the person has.</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\09-dictionaries\09-writecode.rst</span>, line 168)</p>
+<p>Duplicate ID – see 07-files/07-openingFiles, line 21</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">datafile</span><span class="p">::</span> <span class="n">mbox</span><span class="o">-</span><span class="n">short</span><span class="o">.</span><span class="n">txt</span>
+   <span class="p">:</span><span class="n">fromfile</span><span class="p">:</span> <span class="n">mbox</span><span class="o">-</span><span class="n">short</span><span class="o">.</span><span class="n">txt</span>
+   <span class="p">:</span><span class="n">hide</span><span class="p">:</span>
+</pre></div>
+</div>
+</div>
+
+<div data-childcomponent="writingcode_question9_5" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=writingcode_question9_5 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static>
+with open("mbox-short.txt", "r") as filename:
+    message_count = {}
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(message_count['cwen@iupui.edu'], '5', "Make sure to grab the correct key and value from each entry in the file")
+        self.assertEqual(len(message_count), 11, "Checking that all the emails made it into the dictionary")
+
+myTests().main()
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="writtencode_question9_5" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=writtencode_question9_5 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static>
+with open("mbox-short.txt", "r") as filename:
+    message_count = {}
+    messages = filename.readlines()
+    for message in messages:
+        key = message.split()[0]
+        value = message.split()[1]
+        if key not in message_count.keys():
+            message_count[key] = value
+
+max_emails = 0
+for key in message_count.keys():
+    if int(message_count[key]) >= max_emails:
+        max_emails = int(message_count[key])
+print(max_emails)
+</textarea>
+</div>
+</div>
+    </div>
+
+<div id='writecode_question9_6' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>Write this program to record the domain name (instead of the address) where the message was sent from instead of who the mail came from (i.e., the whole email address). At the end of the program, print out the contents of your dictionary.</p>
+
+<div class="runestone datafile">
+<div class="datafile_caption">Data file: <code>mbox-short.txt2</code></div>
+<pre data-component="datafile" id=mbox-short.txt2 data-hidden data-edit="false" data-rows="20" data-cols="32">
+gopal.ramasammycook@gmail.com 1
+louis@media.berkeley.edu 3
+cwen@iupui.edu 5
+antranig@caret.cam.ac.uk 1
+rjlowe@iupui.edu 2
+gsilver@umich.edu 3
+david.horwitz@uct.ac.za 4
+wagnermr@iupui.edu 1
+zqian@umich.edu 4
+stephen.marquard@uct.ac.za 2
+ray@media.berkeley.edu 1
+</pre></div>
+
+<div data-childcomponent="writingcode_question9_6" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=writingcode_question9_6 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static>
+with open("mbox-short.txt", "r") as filename:
+    message_count = {}
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(message_count['iupui.edu'], '5', "Make sure to grab the correct key and value from each entry in the file")
+        self.assertEqual(len(message_count), 6, "Checking that all the emails made it into the dictionary")
+
+myTests().main()
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="writtencode_question9_6" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=writtencode_question9_6 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static>
+with open("mbox-short.txt", "r") as filename:
+    message_count = {}
+    messages = filename.readlines()
+    for message in messages:
+        email = message.split()[0]
+        key = email.split("@")[1]
+        value = message.split()[1]
+        if key not in message_count.keys():
+            message_count[key] = value
+print(message_count)
+</textarea>
+</div>
+</div>
+    </div>
+
+<div id='writecode_question9_7' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>Write a program that creates a dictionary letter_count that keeps track of the amount of times each letter appears in the given phrase. Assign the number of times “e” appears in the phrase to the variable “e_counter”. Make sure to account for each letter in its lowercase form.</p>
+
+<div data-childcomponent="writingcode_question9_7" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=writingcode_question9_7 data-lang="python" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static>
+phrase = "Exeggcute evolves into Exeggutor which are two extraordinary Pokemon"
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(len(letter_count), 21, "Make sure each letter is lowercase before adding it to the dictionary!")
+        self.assertEqual(e_counter, 10, "Making sure there are 10 e's accounted for")
+
+myTests().main()
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="writtencode_question9_7" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=writtencode_question9_7 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static>
+phrase = "Exeggcute evolves into Exeggutor which are two extraordinary Pokemon"
+
+letter_count = {}
+for word in phrase.split():
+    for letter in word:
+        letter = letter.lower()
+        if letter not in letter_count.keys():
+            letter_count[letter] = 0
+        letter_count[letter] += 1
+e_counter = letter_count['e']
+</textarea>
+</div>
+</div>
+    </div>
+
+<div id='writecode_question9_8' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>Write code that adds the key ‘two’ with a value of ‘dos’ to the dictionary eng2sp.</p>
+
+<div data-childcomponent="writingcode_question9_8" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=writingcode_question9_8 data-lang="python" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static>
+eng2sp = {'one':'uno'}
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(eng2sp['two'], 'dos', "Make sure you are not confusing the key and value components")
+
+myTests().main()
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="writtencode_question9_8" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=writtencode_question9_8 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static>
+eng2sp = {'one':'uno'}
+
+eng2sp['two'] = 'dos'
+</textarea>
+</div>
+</div>
+    </div>
+
+<div id='writecode_question9_9' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>Write code that reads in the text from the file words.txt, and uses the dictionary ‘word_count’ to count the amount of times a word appears in the file. Watch out for repetition using the .lower() function.</p>
+
+<div class="runestone datafile">
+<div class="datafile_caption">Data file: <code>words.txt</code></div>
+<pre data-component="datafile" id=words.txt data-hidden data-edit="false" data-rows="20" data-cols="61">
+Writing programs or programming is a very creative
+and rewarding activity  You can write programs for
+many reasons ranging from making your living to solving
+a difficult data analysis problem to having fun to helping
+someone else solve a problem  This book assumes that
+{\em everyone} needs to know how to program and that once
+you know how to program, you will figure out what you want
+to do with your newfound skills
+
+We are surrounded in our daily lives with computers ranging
+from laptops to cell phones  We can think of these computers
+as our personal assistants who can take care of many things
+on our behalf  The hardware in our current-day computers
+is essentially built to continuously ask us the question
+What would you like me to do next
+
+Our computers are fast and have vasts amounts of memory and
+could be very helpful to us if we only knew the language to
+speak to explain to the computer what we would like it to
+do next If we knew this language we could tell the
+computer to do tasks on our behalf that were reptitive
+Interestingly, the kinds of things computers can do best
+are often the kinds of things that we humans find boring
+and mind-numbing
+</pre></div>
+
+<div data-childcomponent="writingcode_question9_9" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=writingcode_question9_9 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static>
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(len(word_count), 119, "Make sure that words that are capitalized are counted as lowercase before adding them to the dictionary")
+        self.assertEqual(word_count['and'], 5, "Checking if 'and' is counted for 5 times")
+        self.assertEqual(word_count['what'], 3, "Checking if 'what' appears 3 times")
+
+myTests().main()
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="writtencode_question9_9" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=writtencode_question9_9 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static>
+with open("words.txt", "r") as filename:
+    word_count = {}
+    lines = filename.readlines()
+    for line in lines:
+        for word in line.split():
+            word = word.lower()
+            if word not in word_count.keys():
+                word_count[word] = 0
+            word_count[word] += 1
+print(word_count)
+</textarea>
+</div>
+</div>
+    </div>
+
+<div id='writecode_question9_10' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>Write code to read through the lines of the file, break each line into a list of words, and then loop through each of the words in the line and count each word using the dictionary “counts”.</p>
+
+<div class="runestone datafile">
+<div class="datafile_caption">Data file: <code>romeo3.txt</code></div>
+<pre data-component="datafile" id=romeo3.txt data-hidden data-edit="false" data-rows="20" data-cols="49">
+But soft what light through yonder window breaks
+It is the east and Juliet is the sun
+Arise fair sun and kill the envious moon
+Who is already sick and pale with grief
+</pre></div>
+
+<div data-childcomponent="writingcode_question9_10" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=writingcode_question9_10 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static>
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(len(counts), 26, "Make sure to count words with capital letters as lowercase")
+        self.assertEqual(counts['is'], 3, "Checking 'is' was only counted for three times")
+        self.assertEqual(counts['arise'], 1, "Check to make sure 'arise' appears once in the dictionary")
+
+myTests().main()
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div data-childcomponent="writtencode_question9_10" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=writtencode_question9_10 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static>
+with open("romeo3.txt", "r") as filename:
+    lines = filename.readlines()
+    counts = {}
+    for line in lines:
+        for word in line.split():
+            word = word.lower()
+            if word not in counts.keys():
+                counts[word] = 0
+            counts[word] += 1
+</textarea>
+</div>
+</div>
+    </div>
+
+</div>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+<ul>
+  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - Mixed-Up Code Exercises' data-toggle="tooltip">
+    <a href="09-mixedupcode.html" aria-label="Mixed-Up Code Exercises">
+        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+        </div>
+    </a>
+  </li>
+</ul>
+
+  
+<ul>
+  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - Tuples' data-toggle="tooltip" >
+    <a href="../10-tuples/toctree.html" aria-label="Tuples">
+      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+      </div>
+    </a>
+  </li>
+</ul>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 CS Learning 4 U group.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>

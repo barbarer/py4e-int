@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Dictionaries &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=DB047029" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.0.8" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=44FE0709"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/html4css1.css?v=4D8F3FB4"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=3EAD674C"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = true;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'py4e-int';
+    eBookConfig.basecourse = 'py4e-int';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          py4e-int
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span aria-label="Social" class="visuallyhidden">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span aria-label="User" class="visuallyhidden">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span aria-label="Help" class="visuallyhidden">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/runestone/static/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=09-dictionaries'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+  
+  <div class="section" id="dictionaries">
+<h1>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h1>
+<p>index{dictionary}
+index{dictionary}</p>
+<p>index{type!dict}
+index{key}
+index{key-value pair}
+index{index}
+index{}</p>
+<p>A <em>dictionary</em> is like a list, but more general. In a
+list, the index positions have to be integers; in a dictionary, the
+indices can be (almost) any type.</p>
+<p>You can think of a dictionary as a mapping between a set of indices
+(which are called <em>keys</em>) and a set of values. Each key
+maps to a value. The association of a key and a value is called a
+<em>key-value pair</em> or sometimes an <em>item</em>.</p>
+<p>As an example, we’ll build a dictionary that maps from English to
+Spanish words, so the keys and the values are all strings.</p>
+<p>The function <code class="docutils literal notranslate"><span class="pre">dict</span></code> creates a new dictionary with no items.
+Because <code class="docutils literal notranslate"><span class="pre">dict</span></code> is the name of a built-in function, you should
+avoid using it as a variable name.</p>
+<p>index{dict function}
+index{function!dict}</p>
+<p>~~~~ {.python .trinket}</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>eng2sp = dict()
+print(eng2sp)
+{}
+~~~~</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>The curly brackets, <code class="docutils literal notranslate"><span class="pre">{}</span></code>, represent an empty dictionary. To add items to
+the dictionary, you can use square brackets:</p>
+<p>index{squiggly bracket}
+index{bracket!squiggly}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">eng2sp</span><span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;uno&#39;</span>
+</pre></div>
+</div>
+<p>This line creates an item that maps from the key <code class="docutils literal notranslate"><span class="pre">'one'</span></code> to
+the value “uno”. If we print the dictionary again, we see a key-value
+pair with a colon between the key and value:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">eng2sp</span><span class="p">)</span>
+<span class="go">{&#39;one&#39;: &#39;uno&#39;}</span>
+</pre></div>
+</div>
+<p>This output format is also an input format. For example, you can create
+a new dictionary with three items.  But if you print <code class="docutils literal notranslate"><span class="pre">eng2sp</span></code>, you might be surprised:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">eng2sp</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;one&#39;</span><span class="p">:</span> <span class="s1">&#39;uno&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">:</span> <span class="s1">&#39;dos&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">:</span> <span class="s1">&#39;tres&#39;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">eng2sp</span><span class="p">)</span>
+<span class="go">{&#39;one&#39;: &#39;uno&#39;, &#39;three&#39;: &#39;tres&#39;, &#39;two&#39;: &#39;dos&#39;}</span>
+</pre></div>
+</div>
+<p>The order of the key-value pairs is not the same. In fact, if you type
+the same example on your computer, you might get a different result. In
+general, the order of items in a dictionary is unpredictable.</p>
+<p>But that’s not a problem because the elements of a dictionary are never
+indexed with integer indices. Instead, you use the keys to look up the
+corresponding values:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">eng2sp</span><span class="p">[</span><span class="s1">&#39;two&#39;</span><span class="p">])</span>
+<span class="go">&#39;dos&#39;</span>
+</pre></div>
+</div>
+<p>The key <code class="docutils literal notranslate"><span class="pre">'two'</span></code> always maps to the value “dos” so the order
+of the items doesn’t matter.</p>
+<p>If the key isn’t in the dictionary, you get an exception:</p>
+<p>index{exception!KeyError}
+index{KeyError}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">eng2sp</span><span class="p">[</span><span class="s1">&#39;four&#39;</span><span class="p">])</span>
+<span class="go">KeyError: &#39;four&#39;</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">len</span></code> function works on dictionaries; it returns the
+number of key-value pairs:</p>
+<p>index{len function}
+index{function!len}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">eng2sp</span><span class="p">)</span>
+<span class="go">3</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">in</span></code> operator works on dictionaries; it tells you whether
+something appears as a <em>key</em> in the dictionary (appearing as a value is
+not good enough).</p>
+<p>index{membership!dictionary}
+index{in operator}
+index{operator!in}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;one&#39;</span> <span class="ow">in</span> <span class="n">eng2sp</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;uno&#39;</span> <span class="ow">in</span> <span class="n">eng2sp</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<p>To see whether something appears as a value in a dictionary, you can use
+the method <code class="docutils literal notranslate"><span class="pre">values</span></code>, which returns the values as a list, and
+then use the <code class="docutils literal notranslate"><span class="pre">in</span></code> operator:</p>
+<p>index{values method}
+index{method!values}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">vals</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">eng2sp</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;uno&#39;</span> <span class="ow">in</span> <span class="n">vals</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">in</span></code> operator uses different algorithms for lists and
+dictionaries. For lists, it uses a linear search algorithm. As the list
+gets longer, the search time gets longer in direct proportion to the
+length of the list. For dictionaries, Python uses an algorithm called a
+<em>hash table</em> that has a remarkable property: the
+<code class="docutils literal notranslate"><span class="pre">in</span></code> operator takes about the same amount of time no matter
+how many items there are in a dictionary. I won’t explain why hash
+functions are so magical, but you can read more about it at
+<a class="reference external" href="https://wikipedia.org/wiki/Hash_table">wikipedia.org/wiki/Hash_table</a>.</p>
+<p>index{hash table}
+index{set membership}
+index{membership!set}</p>
+<p><strong>Exercise 1: Download a copy of the file</strong>
+<a class="reference external" href="http://www.py4e.com/code3/words.txt">www.py4e.com/code3/words.txt</a></p>
+<p><strong>Write a program that reads the words in *words.txt* and
+stores them as keys in a dictionary. It doesn’t matter what the values
+are. Then you can use the ``in`` operator as a fast way to
+check whether a string is in the dictionary.</strong></p>
+<div class="section" id="dictionary-as-a-set-of-counters">
+<h2>Dictionary as a set of counters<a class="headerlink" href="#dictionary-as-a-set-of-counters" title="Permalink to this headline">¶</a></h2>
+<p>index{counter}</p>
+<p>Suppose you are given a string and you want to count how many times each
+letter appears. There are several ways you could do it:</p>
+</div>
+</div>
+<div class="section" id="id1">
+<h1>.<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>You could create 26 variables, one for each letter of the alphabet.
+Then you could traverse the string and, for each character,
+increment the corresponding counter, probably using a chained
+conditional.</p>
+</div></blockquote>
+</div>
+<div class="section" id="id2">
+<h1>.<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>You could create a list with 26 elements. Then you could convert
+each character to a number (using the built-in function
+<code class="docutils literal notranslate"><span class="pre">ord</span></code>), use the number as an index into the list, and
+increment the appropriate counter.</p>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h1>.<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>You could create a dictionary with characters as keys and counters
+as the corresponding values. The first time you see a character, you
+would add an item to the dictionary. After that you would increment
+the value of an existing item.</p>
+</div></blockquote>
+<p>Each of these options performs the same computation, but each of them
+implements that computation in a different way.</p>
+<p>index{implementation}</p>
+<p>An <em>implementation</em> is a way of performing a computation;
+some implementations are better than others. For example, an advantage
+of the dictionary implementation is that we don’t have to know ahead of
+time which letters appear in the string and we only have to make room
+for the letters that do appear.</p>
+<p>Here is what the code might look like:</p>
+<p>~~~~ {.python .trinket}
+word = ‘brontosaurus’
+d = dict()
+for c in word:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\09-dictionaries\09-dictionaries.rst</span>, line 220)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><dl class="simple">
+<dt>if c not in d:</dt><dd><p>d[c] = 1</p>
+</dd>
+<dt>else:</dt><dd><p>d[c] = d[c] + 1</p>
+</dd>
+</dl>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\09-dictionaries\09-dictionaries.rst</span>, line 224)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>print(d)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>We are effectively computing a *histogram*, which is a
+statistical term for a set of counters (or frequencies).
+
+\index{histogram}
+\index{frequency}
+\index{traversal}
+
+The `for` loop traverses the string. Each time through the
+loop, if the character `c` is not in the dictionary, we
+create a new item with key `c` and the initial value 1 (since
+we have seen this letter once). If `c` is already in the
+dictionary we increment `d[c]`.
+
+\index{histogram}
+
+Here&#39;s the output of the program:
+</pre></div>
+</div>
+<p>{‘a’: 1, ‘b’: 1, ‘o’: 2, ‘n’: 1, ‘s’: 2, ‘r’: 2, ‘u’: 2, ‘t’: 1}</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The histogram indicates that the letters &quot;a&quot; and &quot;b&quot;
+appear once; &quot;o&quot; appears twice, and so on.
+
+\index{get method}
+\index{method!get}
+
+Dictionaries have a method called `get` that takes a key and
+a default value. If the key appears in the dictionary, `get`
+returns the corresponding value; otherwise it returns the default value.
+For example:
+
+~~~~ {.python .trinket}
+&gt;&gt;&gt; counts = { &#39;chuck&#39; : 1 , &#39;annie&#39; : 42, &#39;jan&#39;: 100}
+&gt;&gt;&gt; print(counts.get(&#39;jan&#39;, 0))
+100
+&gt;&gt;&gt; print(counts.get(&#39;tim&#39;, 0))
+0
+</pre></div>
+</div>
+<p>We can use <code class="docutils literal notranslate"><span class="pre">get</span></code> to write our histogram loop more concisely.
+Because the <code class="docutils literal notranslate"><span class="pre">get</span></code> method automatically handles the case where
+a key is not in a dictionary, we can reduce four lines down to one and
+eliminate the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;brontosaurus&#39;</span>
+<span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
+    <span class="n">d</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The use of the <code class="docutils literal notranslate"><span class="pre">get</span></code> method to simplify this counting loop
+ends up being a very commonly used “idiom” in Python and we will use it
+many times in the rest of the book. So you should take a moment and
+compare the loop using the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement and <code class="docutils literal notranslate"><span class="pre">in</span></code>
+operator with the loop using the <code class="docutils literal notranslate"><span class="pre">get</span></code> method. They do
+exactly the same thing, but one is more succinct.</p>
+<p>index{idiom}</p>
+<div class="section" id="dictionaries-and-files">
+<h2>Dictionaries and files<a class="headerlink" href="#dictionaries-and-files" title="Permalink to this headline">¶</a></h2>
+<p>One of the common uses of a dictionary is to count the occurrence of
+words in a file with some written text. Let’s start with a very simple
+file of words taken from the text of <em>Romeo and Juliet</em>.</p>
+<p>For the first set of examples, we will use a shortened and simplified
+version of the text with no punctuation. Later we will work with the
+text of the scene with punctuation included.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">But</span> <span class="n">soft</span> <span class="n">what</span> <span class="n">light</span> <span class="n">through</span> <span class="n">yonder</span> <span class="n">window</span> <span class="n">breaks</span>
+<span class="n">It</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">east</span> <span class="ow">and</span> <span class="n">Juliet</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">sun</span>
+<span class="n">Arise</span> <span class="n">fair</span> <span class="n">sun</span> <span class="ow">and</span> <span class="n">kill</span> <span class="n">the</span> <span class="n">envious</span> <span class="n">moon</span>
+<span class="n">Who</span> <span class="ow">is</span> <span class="n">already</span> <span class="n">sick</span> <span class="ow">and</span> <span class="n">pale</span> <span class="k">with</span> <span class="n">grief</span>
+</pre></div>
+</div>
+<p>We will write a Python program to read through the lines of the file,
+break each line into a list of words, and then loop through each of the
+words in the line and count each word using a dictionary.</p>
+<p>index{nested loops}
+index{loop!nested}</p>
+<p>You will see that we have two <code class="docutils literal notranslate"><span class="pre">for</span></code> loops. The outer loop is
+reading the lines of the file and the inner loop is iterating through
+each of the words on that particular line. This is an example of a
+pattern called <em>nested loops</em> because one of the loops is
+the <em>outer</em> loop and the other loop is the <em>inner</em> loop.</p>
+<p>Because the inner loop executes all of its iterations each time the
+outer loop makes a single iteration, we think of the inner loop as
+iterating “more quickly” and the outer loop as iterating more slowly.</p>
+<p>index{Romeo and Juliet}</p>
+<p>The combination of the two nested loops ensures that we will count every
+word on every line of the input file.</p>
+<p>VerbatimInput{../code3/count1.py}
+begin{trinketfiles}
+../code3/romeo.txt
+end{trinketfiles}</p>
+<p>In our <code class="docutils literal notranslate"><span class="pre">else</span></code> statement, we use the more compact alternative for incrementing a variable. <code class="docutils literal notranslate"><span class="pre">counts[word]</span> <span class="pre">+=</span> <span class="pre">1</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">counts[word]</span> <span class="pre">=</span> <span class="pre">counts[word]</span> <span class="pre">+</span> <span class="pre">1</span></code>. Either method can be used to change the value of a variable by any desired amount. Similar alternatives exist for <code class="docutils literal notranslate"><span class="pre">-=</span></code>, <code class="docutils literal notranslate"><span class="pre">*=</span></code>, and <code class="docutils literal notranslate"><span class="pre">/=</span></code>.</p>
+<p>When we run the program, we see a raw dump of all of the counts in
+unsorted hash order. (the <em>romeo.txt</em> file is available at
+<a class="reference external" href="http://www.py4e.com/code3/romeo.txt">www.py4e.com/code3/romeo.txt</a>)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">count1</span><span class="o">.</span><span class="n">py</span>
+<span class="n">Enter</span> <span class="n">the</span> <span class="n">file</span> <span class="n">name</span><span class="p">:</span> <span class="n">romeo</span><span class="o">.</span><span class="n">txt</span>
+<span class="p">{</span><span class="s1">&#39;and&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;envious&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;already&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;fair&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="s1">&#39;is&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;through&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;pale&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;yonder&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="s1">&#39;what&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;sun&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Who&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;But&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;moon&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="s1">&#39;window&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;sick&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;east&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;breaks&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="s1">&#39;grief&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;with&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;light&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;It&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Arise&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="s1">&#39;kill&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;the&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;soft&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Juliet&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>It is a bit inconvenient to look through the dictionary to find the most
+common words and their counts, so we need to add some more Python code
+to get us the output that will be more helpful.</p>
+</div>
+<div class="section" id="looping-and-dictionaries">
+<h2>Looping and dictionaries<a class="headerlink" href="#looping-and-dictionaries" title="Permalink to this headline">¶</a></h2>
+<p>index{dictionary!looping with}
+index{looping!with dictionaries}
+index{traversal}</p>
+<p>If you use a dictionary as the sequence in a <code class="docutils literal notranslate"><span class="pre">for</span></code> statement,
+it traverses the keys of the dictionary. This loop prints each key and
+the corresponding value:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">counts</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;chuck&#39;</span> <span class="p">:</span> <span class="mi">1</span> <span class="p">,</span> <span class="s1">&#39;annie&#39;</span> <span class="p">:</span> <span class="mi">42</span><span class="p">,</span> <span class="s1">&#39;jan&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">}</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">counts</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">counts</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Here’s what the output looks like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jan</span> <span class="mi">100</span>
+<span class="n">chuck</span> <span class="mi">1</span>
+<span class="n">annie</span> <span class="mi">42</span>
+</pre></div>
+</div>
+<p>Again, the keys are in no particular order.</p>
+<p>index{idiom}</p>
+<p>We can use this pattern to implement the various loop idioms that we
+have described earlier. For example if we wanted to find all the entries
+in a dictionary with a value above ten, we could write the following
+code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">counts</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;chuck&#39;</span> <span class="p">:</span> <span class="mi">1</span> <span class="p">,</span> <span class="s1">&#39;annie&#39;</span> <span class="p">:</span> <span class="mi">42</span><span class="p">,</span> <span class="s1">&#39;jan&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">}</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">counts</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">counts</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">10</span> <span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">counts</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">for</span></code> loop iterates through the <em>keys</em> of
+the dictionary, so we must use the index operator to retrieve the
+corresponding <em>value</em> for each key. Here’s what the output
+looks like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jan</span> <span class="mi">100</span>
+<span class="n">annie</span> <span class="mi">42</span>
+</pre></div>
+</div>
+<p>We see only the entries with a value above 10.</p>
+<p>index{keys method}
+index{method!keys}</p>
+<p>If you want to print the keys in alphabetical order, you first make a
+list of the keys in the dictionary using the <code class="docutils literal notranslate"><span class="pre">keys</span></code> method
+available in dictionary objects, and then sort that list and loop
+through the sorted list, looking up each key and printing out key-value
+pairs in sorted order as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">counts</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;chuck&#39;</span> <span class="p">:</span> <span class="mi">1</span> <span class="p">,</span> <span class="s1">&#39;annie&#39;</span> <span class="p">:</span> <span class="mi">42</span><span class="p">,</span> <span class="s1">&#39;jan&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">}</span>
+<span class="n">lst</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">counts</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+<span class="n">lst</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">counts</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Here’s what the output looks like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;jan&#39;</span><span class="p">,</span> <span class="s1">&#39;chuck&#39;</span><span class="p">,</span> <span class="s1">&#39;annie&#39;</span><span class="p">]</span>
+<span class="n">annie</span> <span class="mi">42</span>
+<span class="n">chuck</span> <span class="mi">1</span>
+<span class="n">jan</span> <span class="mi">100</span>
+</pre></div>
+</div>
+<p>First you see the list of keys in unsorted order that we get from the
+<code class="docutils literal notranslate"><span class="pre">keys</span></code> method. Then we see the key-value pairs in order from
+the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.</p>
+</div>
+<div class="section" id="advanced-text-parsing">
+<h2>Advanced text parsing<a class="headerlink" href="#advanced-text-parsing" title="Permalink to this headline">¶</a></h2>
+<p>index{Romeo and Juliet}</p>
+<p>In the above example using the file <em>romeo.txt</em>, we made the
+file as simple as possible by removing all punctuation by hand. The
+actual text has lots of punctuation, as shown below.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>But, soft! what light through yonder window breaks?
+It is the east, and Juliet is the sun.
+Arise, fair sun, and kill the envious moon,
+Who is already sick and pale with grief,
+</pre></div>
+</div>
+<p>Since the Python <code class="docutils literal notranslate"><span class="pre">split</span></code> function looks for spaces and treats
+words as tokens separated by spaces, we would treat the words “soft!”
+and “soft” as <em>different</em> words and create a separate dictionary entry
+for each word.</p>
+<p>Also since the file has capitalization, we would treat “who” and “Who”
+as different words with different counts.</p>
+<p>We can solve both these problems by using the string methods
+<code class="docutils literal notranslate"><span class="pre">lower</span></code>, <code class="docutils literal notranslate"><span class="pre">punctuation</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">translate</span></code>. The <code class="docutils literal notranslate"><span class="pre">translate</span></code> is the most subtle of
+the methods. Here is the documentation for <code class="docutils literal notranslate"><span class="pre">translate</span></code>:</p>
+<p><code class="docutils literal notranslate"><span class="pre">line.translate(str.maketrans(fromstr,</span> <span class="pre">tostr,</span> <span class="pre">deletestr))</span></code></p>
+<p><em>Replace the characters in ``fromstr`` with the character in the same position in ``tostr``
+and delete all characters that are in ``deletestr``.
+The ``fromstr`` and ``tostr`` can be empty strings and the ``deletestr``
+parameter can be omitted.</em></p>
+<p>We will not specify the <code class="docutils literal notranslate"><span class="pre">tostr</span></code> but we will use the
+<code class="docutils literal notranslate"><span class="pre">deletestr</span></code> parameter to delete all of the punctuation. We
+will even let Python tell us the list of characters that it considers
+“punctuation”:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">string</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">string</span><span class="o">.</span><span class="n">punctuation</span>
+<span class="go">&#39;!&quot;#$%&amp;\&#39;()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~&#39;</span>
+</pre></div>
+</div>
+<p>The parameters used by <code class="docutils literal notranslate"><span class="pre">translate</span></code> were different in Python 2.0.</p>
+<p>We make the following modifications to our program:</p>
+<p>VerbatimInput{../code3/count2.py}
+begin{trinketfiles}
+../code3/romeo-full.txt
+end{trinketfiles}</p>
+<p>Part of learning the “Art of Python” or “Thinking Pythonically” is
+realizing that Python often has built-in capabilities for many common
+data analysis problems. Over time, you will see enough example code and
+read enough of the documentation to know where to look to see if someone
+has already written something that makes your job much easier.</p>
+<p>The following is an abbreviated version of the output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">the</span> <span class="n">file</span> <span class="n">name</span><span class="p">:</span> <span class="n">romeo</span><span class="o">-</span><span class="n">full</span><span class="o">.</span><span class="n">txt</span>
+<span class="p">{</span><span class="s1">&#39;swearst&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;all&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;afeard&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;leave&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;these&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+<span class="s1">&#39;kinsmen&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;what&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;thinkst&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;love&#39;</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="s1">&#39;cloak&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="n">a</span><span class="s1">&#39;: 24, &#39;</span><span class="n">orchard</span><span class="s1">&#39;: 2, &#39;</span><span class="n">light</span><span class="s1">&#39;: 5, &#39;</span><span class="n">lovers</span><span class="s1">&#39;: 2, &#39;</span><span class="n">romeo</span><span class="s1">&#39;: 40,</span>
+<span class="s1">&#39;maiden&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;whiteupturned&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;juliet&#39;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span> <span class="s1">&#39;gentleman&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="s1">&#39;it&#39;</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span> <span class="s1">&#39;leans&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;canst&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;having&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="o">...</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Looking through this output is still unwieldy and we can use Python to
+give us exactly what we are looking for, but to do so, we need to learn
+about Python <em>tuples</em>. We will pick up this example once
+we learn about tuples.</p>
+</div>
+<div class="section" id="debugging">
+<h2>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h2>
+<p>index{debugging}</p>
+<p>As you work with bigger datasets it can become unwieldy to debug by
+printing and checking data by hand. Here are some suggestions for
+debugging large datasets:</p>
+<p>Scale down the input
+:   If possible, reduce the size of the dataset. For example if the</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\09-dictionaries\09-dictionaries.rst</span>, line 545)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>program reads a text file, start with just the first 10 lines, or
+with the smallest example you can find. You can either edit the
+files themselves, or (better) modify the program so it reads only
+the first <code class="docutils literal notranslate"><span class="pre">n</span></code> lines.</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>If there is an error, you can reduce `n` to the smallest
+value that manifests the error, and then increase it gradually as
+you find and correct errors.
+</pre></div>
+</div>
+<p>Check summaries and types
+:   Instead of printing and checking the entire dataset, consider</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\09-dictionaries\09-dictionaries.rst</span>, line 560)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>printing summaries of the data: for example, the number of items in
+a dictionary or the total of a list of numbers.</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="n">common</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">runtime</span> <span class="n">errors</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">value</span> <span class="n">that</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">the</span> <span class="n">right</span>
+<span class="nb">type</span><span class="o">.</span> <span class="n">For</span> <span class="n">debugging</span> <span class="n">this</span> <span class="n">kind</span> <span class="n">of</span> <span class="n">error</span><span class="p">,</span> <span class="n">it</span> <span class="ow">is</span> <span class="n">often</span> <span class="n">enough</span> <span class="n">to</span> <span class="nb">print</span>
+<span class="n">the</span> <span class="nb">type</span> <span class="n">of</span> <span class="n">a</span> <span class="n">value</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Write self-checks
+:   Sometimes you can write code to check for errors automatically. For</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\09-dictionaries\09-dictionaries.rst</span>, line 573)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>example, if you are computing the average of a list of numbers, you
+could check that the result is not greater than the largest element
+in the list or less than the smallest. This is called a “sanity
+check” because it detects results that are “completely illogical”.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\09-dictionaries\09-dictionaries.rst</span>, line 577)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{sanity check}
+index{consistency check}</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Another</span> <span class="n">kind</span> <span class="n">of</span> <span class="n">check</span> <span class="n">compares</span> <span class="n">the</span> <span class="n">results</span> <span class="n">of</span> <span class="n">two</span> <span class="n">different</span>
+<span class="n">computations</span> <span class="n">to</span> <span class="n">see</span> <span class="k">if</span> <span class="n">they</span> <span class="n">are</span> <span class="n">consistent</span><span class="o">.</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">called</span> <span class="n">a</span>
+<span class="s2">&quot;consistency check&quot;</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Pretty print the output
+:   Formatting debugging output can make it easier to spot an error.</p>
+<p>Again, time you spend building scaffolding can reduce the time you spend
+debugging.
+index{scaffolding}</p>
+</div>
+<div class="section" id="glossary">
+<h2>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h2>
+<p>dictionary
+:   A mapping from a set of keys to their corresponding values.
+index{dictionary}</p>
+<p>hashtable
+:   The algorithm used to implement Python dictionaries.
+index{hashtable}</p>
+<p>hash function
+:   A function used by a hashtable to compute the location for a key.
+index{hash function}</p>
+<p>histogram
+:   A set of counters.
+index{histogram}</p>
+<p>implementation
+:   A way of performing a computation.
+index{implementation}</p>
+<p>item
+:   Another name for a key-value pair.
+index{item!dictionary}</p>
+<p>key
+:   An object that appears in a dictionary as the first part of a</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\09-dictionaries\09-dictionaries.rst</span>, line 624)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>key-value pair.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\09-dictionaries\09-dictionaries.rst</span>, line 625)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{key}</p>
+<p>key-value pair
+:   The representation of the mapping from a key to a value.
+index{key-value pair}</p>
+<p>lookup
+:   A dictionary operation that takes a key and finds the corresponding</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\09-dictionaries\09-dictionaries.rst</span>, line 633)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>value.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\09-dictionaries\09-dictionaries.rst</span>, line 634)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{lookup}</p>
+<p>nested loops
+:   When there are one or more loops “inside” of another loop. The inner</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\09-dictionaries\09-dictionaries.rst</span>, line 638)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>loop runs to completion each time the outer loop runs once.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\09-dictionaries\09-dictionaries.rst</span>, line 639)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{nested loops}
+index{loop!nested}</p>
+<p>value
+:   An object that appears in a dictionary as the second part of a</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\09-dictionaries\09-dictionaries.rst</span>, line 644)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>key-value pair. This is more specific than our previous use of the
+word “value”.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\09-dictionaries\09-dictionaries.rst</span>, line 646)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{value}</p>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<p><strong>Exercise 2: Write a program that categorizes each mail message by which
+day of the week the commit was done. To do this look for lines that
+start with “From”, then look for the third word and keep a running count
+of each of the days of the week. At the end of the program print out the
+contents of your dictionary (order does not matter).</strong></p>
+<p><strong>Sample Line:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">From</span> <span class="n">stephen</span><span class="o">.</span><span class="n">marquard</span><span class="nd">@uct</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">za</span> <span class="n">Sat</span> <span class="n">Jan</span>  <span class="mi">5</span> <span class="mi">09</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">16</span> <span class="mi">2008</span>
+</pre></div>
+</div>
+<p><strong>Sample Execution:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">dow</span><span class="o">.</span><span class="n">py</span>
+<span class="n">Enter</span> <span class="n">a</span> <span class="n">file</span> <span class="n">name</span><span class="p">:</span> <span class="n">mbox</span><span class="o">-</span><span class="n">short</span><span class="o">.</span><span class="n">txt</span>
+<span class="p">{</span><span class="s1">&#39;Fri&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;Thu&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;Sat&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Exercise 3: Write a program to read through a mail log, build a
+histogram using a dictionary to count how many messages have come from
+each email address, and print the dictionary.</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">file</span> <span class="n">name</span><span class="p">:</span> <span class="n">mbox</span><span class="o">-</span><span class="n">short</span><span class="o">.</span><span class="n">txt</span>
+<span class="p">{</span><span class="s1">&#39;gopal.ramasammycook@gmail.com&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;louis@media.berkeley.edu&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+<span class="s1">&#39;cwen@iupui.edu&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;antranig@caret.cam.ac.uk&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="s1">&#39;rjlowe@iupui.edu&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;gsilver@umich.edu&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+<span class="s1">&#39;david.horwitz@uct.ac.za&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;wagnermr@iupui.edu&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="s1">&#39;zqian@umich.edu&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;stephen.marquard@uct.ac.za&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+<span class="s1">&#39;ray@media.berkeley.edu&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Exercise 4: Add code to the above program to figure out who has the most messages in the file. After all the data has been read and the dictionary has been created, look through the dictionary using a maximum loop (see Chapter 5: Maximum and minimum loops) to find who has the most messages and print how many messages the person has.</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">a</span> <span class="n">file</span> <span class="n">name</span><span class="p">:</span> <span class="n">mbox</span><span class="o">-</span><span class="n">short</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">cwen</span><span class="nd">@iupui</span><span class="o">.</span><span class="n">edu</span> <span class="mi">5</span>
+
+<span class="n">Enter</span> <span class="n">a</span> <span class="n">file</span> <span class="n">name</span><span class="p">:</span> <span class="n">mbox</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">zqian</span><span class="nd">@umich</span><span class="o">.</span><span class="n">edu</span> <span class="mi">195</span>
+</pre></div>
+</div>
+<p><strong>Exercise 5: This program records the domain name (instead of the
+address) where the message was sent from instead of who the mail came
+from (i.e., the whole email address). At the end of the program, print
+out the contents of your dictionary.</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">schoolcount</span><span class="o">.</span><span class="n">py</span>
+<span class="n">Enter</span> <span class="n">a</span> <span class="n">file</span> <span class="n">name</span><span class="p">:</span> <span class="n">mbox</span><span class="o">-</span><span class="n">short</span><span class="o">.</span><span class="n">txt</span>
+<span class="p">{</span><span class="s1">&#39;media.berkeley.edu&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;uct.ac.za&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;umich.edu&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+<span class="s1">&#39;gmail.com&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;caret.cam.ac.uk&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;iupui.edu&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 CS Learning 4 U group.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>

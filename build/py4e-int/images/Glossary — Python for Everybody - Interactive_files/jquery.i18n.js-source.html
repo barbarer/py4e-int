@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title><title><no title></title></title>
+  <meta http-equiv="content-type" content="text/html; charset=None">
+  <link rel="stylesheet" href="..\..\_static\pygments.css" type="text/css">
+</head>
+<body>
+<h2><title><no title></title></h2>
+
+<div class="highlight"><pre><span></span><span class="cm">/*!</span>
+<span class="cm"> * jQuery Internationalization library</span>
+<span class="cm"> *</span>
+<span class="cm"> * Copyright (C) 2012 Santhosh Thottingal</span>
+<span class="cm"> *</span>
+<span class="cm"> * jquery.i18n is dual licensed GPLv2 or later and MIT. You don&#39;t have to do</span>
+<span class="cm"> * anything special to choose one license or the other and you don&#39;t have to</span>
+<span class="cm"> * notify anyone which license you are using. You are free to use</span>
+<span class="cm"> * UniversalLanguageSelector in commercial projects as long as the copyright</span>
+<span class="cm"> * header is left intact. See files GPL-LICENSE and MIT-LICENSE for details.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @licence GNU General Public Licence 2.0 or later</span>
+<span class="cm"> * @licence MIT License</span>
+<span class="cm"> */</span>
+
+<span class="p">(</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">$</span> <span class="p">)</span> <span class="p">{</span>
+	<span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+
+	<span class="kd">var</span> <span class="nx">I18N</span><span class="p">,</span>
+		<span class="nx">slice</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">;</span>
+	<span class="cm">/**</span>
+<span class="cm">	 * @constructor</span>
+<span class="cm">	 * @param {Object} options</span>
+<span class="cm">	 */</span>
+	<span class="nx">I18N</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">options</span> <span class="p">)</span> <span class="p">{</span>
+		<span class="c1">// Load defaults</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">options</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span> <span class="p">{},</span> <span class="nx">I18N</span><span class="p">.</span><span class="nx">defaults</span><span class="p">,</span> <span class="nx">options</span> <span class="p">);</span>
+
+		<span class="k">this</span><span class="p">.</span><span class="nx">parser</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">parser</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">locale</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">locale</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">messageStore</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">messageStore</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">languages</span> <span class="o">=</span> <span class="p">{};</span>
+	<span class="p">};</span>
+
+	<span class="nx">I18N</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="cm">/**</span>
+<span class="cm">		 * Localize a given messageKey to a locale.</span>
+<span class="cm">		 * @param {String} messageKey</span>
+<span class="cm">		 * @return {String} Localized message</span>
+<span class="cm">		 */</span>
+		<span class="nx">localize</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">messageKey</span> <span class="p">)</span> <span class="p">{</span>
+			<span class="kd">var</span> <span class="nx">localeParts</span><span class="p">,</span> <span class="nx">localePartIndex</span><span class="p">,</span> <span class="nx">locale</span><span class="p">,</span> <span class="nx">fallbackIndex</span><span class="p">,</span>
+				<span class="nx">tryingLocale</span><span class="p">,</span> <span class="nx">message</span><span class="p">;</span>
+
+			<span class="nx">locale</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">locale</span><span class="p">;</span>
+			<span class="nx">fallbackIndex</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+			<span class="k">while</span> <span class="p">(</span> <span class="nx">locale</span> <span class="p">)</span> <span class="p">{</span>
+				<span class="c1">// Iterate through locales starting at most-specific until</span>
+				<span class="c1">// localization is found. As in fi-Latn-FI, fi-Latn and fi.</span>
+				<span class="nx">localeParts</span> <span class="o">=</span> <span class="nx">locale</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span> <span class="s1">&#39;-&#39;</span> <span class="p">);</span>
+				<span class="nx">localePartIndex</span> <span class="o">=</span> <span class="nx">localeParts</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+
+				<span class="k">do</span> <span class="p">{</span>
+					<span class="nx">tryingLocale</span> <span class="o">=</span> <span class="nx">localeParts</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">localePartIndex</span> <span class="p">).</span><span class="nx">join</span><span class="p">(</span> <span class="s1">&#39;-&#39;</span> <span class="p">);</span>
+					<span class="nx">message</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">messageStore</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span> <span class="nx">tryingLocale</span><span class="p">,</span> <span class="nx">messageKey</span> <span class="p">);</span>
+
+					<span class="k">if</span> <span class="p">(</span> <span class="nx">message</span> <span class="p">)</span> <span class="p">{</span>
+						<span class="k">return</span> <span class="nx">message</span><span class="p">;</span>
+					<span class="p">}</span>
+
+					<span class="nx">localePartIndex</span><span class="o">--</span><span class="p">;</span>
+				<span class="p">}</span> <span class="k">while</span> <span class="p">(</span> <span class="nx">localePartIndex</span> <span class="p">);</span>
+
+				<span class="k">if</span> <span class="p">(</span> <span class="nx">locale</span> <span class="o">===</span> <span class="s1">&#39;en&#39;</span> <span class="p">)</span> <span class="p">{</span>
+					<span class="k">break</span><span class="p">;</span>
+				<span class="p">}</span>
+
+				<span class="nx">locale</span> <span class="o">=</span> <span class="p">(</span> <span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">.</span><span class="nx">fallbacks</span><span class="p">[</span> <span class="k">this</span><span class="p">.</span><span class="nx">locale</span> <span class="p">]</span> <span class="o">&amp;&amp;</span>
+						<span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">.</span><span class="nx">fallbacks</span><span class="p">[</span> <span class="k">this</span><span class="p">.</span><span class="nx">locale</span> <span class="p">][</span> <span class="nx">fallbackIndex</span> <span class="p">]</span> <span class="p">)</span> <span class="o">||</span>
+						<span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">fallbackLocale</span><span class="p">;</span>
+				<span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="s1">&#39;Trying fallback locale for &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">locale</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="nx">locale</span> <span class="o">+</span> <span class="s1">&#39; (&#39;</span> <span class="o">+</span> <span class="nx">messageKey</span> <span class="o">+</span> <span class="s1">&#39;)&#39;</span> <span class="p">);</span>
+
+				<span class="nx">fallbackIndex</span><span class="o">++</span><span class="p">;</span>
+			<span class="p">}</span>
+
+			<span class="c1">// key not found</span>
+			<span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+		<span class="p">},</span>
+
+		<span class="cm">/*</span>
+<span class="cm">		 * Destroy the i18n instance.</span>
+<span class="cm">		 */</span>
+		<span class="nx">destroy</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+			<span class="nx">$</span><span class="p">.</span><span class="nx">removeData</span><span class="p">(</span> <span class="nb">document</span><span class="p">,</span> <span class="s1">&#39;i18n&#39;</span> <span class="p">);</span>
+		<span class="p">},</span>
+
+		<span class="cm">/**</span>
+<span class="cm">		 * General message loading API This can take a URL string for</span>
+<span class="cm">		 * the json formatted messages. Example:</span>
+<span class="cm">		 * &lt;code&gt;load(&#39;path/to/all_localizations.json&#39;);&lt;/code&gt;</span>
+<span class="cm">		 *</span>
+<span class="cm">		 * To load a localization file for a locale:</span>
+<span class="cm">		 * &lt;code&gt;</span>
+<span class="cm">		 * load(&#39;path/to/de-messages.json&#39;, &#39;de&#39; );</span>
+<span class="cm">		 * &lt;/code&gt;</span>
+<span class="cm">		 *</span>
+<span class="cm">		 * To load a localization file from a directory:</span>
+<span class="cm">		 * &lt;code&gt;</span>
+<span class="cm">		 * load(&#39;path/to/i18n/directory&#39;, &#39;de&#39; );</span>
+<span class="cm">		 * &lt;/code&gt;</span>
+<span class="cm">		 * The above method has the advantage of fallback resolution.</span>
+<span class="cm">		 * ie, it will automatically load the fallback locales for de.</span>
+<span class="cm">		 * For most usecases, this is the recommended method.</span>
+<span class="cm">		 * It is optional to have trailing slash at end.</span>
+<span class="cm">		 *</span>
+<span class="cm">		 * A data object containing message key- message translation mappings</span>
+<span class="cm">		 * can also be passed. Example:</span>
+<span class="cm">		 * &lt;code&gt;</span>
+<span class="cm">		 * load( { &#39;hello&#39; : &#39;Hello&#39; }, optionalLocale );</span>
+<span class="cm">		 * &lt;/code&gt;</span>
+<span class="cm">		 *</span>
+<span class="cm">		 * A source map containing key-value pair of languagename and locations</span>
+<span class="cm">		 * can also be passed. Example:</span>
+<span class="cm">		 * &lt;code&gt;</span>
+<span class="cm">		 * load( {</span>
+<span class="cm">		 * bn: &#39;i18n/bn.json&#39;,</span>
+<span class="cm">		 * he: &#39;i18n/he.json&#39;,</span>
+<span class="cm">		 * en: &#39;i18n/en.json&#39;</span>
+<span class="cm">		 * } )</span>
+<span class="cm">		 * &lt;/code&gt;</span>
+<span class="cm">		 *</span>
+<span class="cm">		 * If the data argument is null/undefined/false,</span>
+<span class="cm">		 * all cached messages for the i18n instance will get reset.</span>
+<span class="cm">		 *</span>
+<span class="cm">		 * @param {string|Object} source</span>
+<span class="cm">		 * @param {string} locale Language tag</span>
+<span class="cm">		 * @return {jQuery.Promise}</span>
+<span class="cm">		 */</span>
+		<span class="nx">load</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">source</span><span class="p">,</span> <span class="nx">locale</span> <span class="p">)</span> <span class="p">{</span>
+			<span class="kd">var</span> <span class="nx">fallbackLocales</span><span class="p">,</span> <span class="nx">locIndex</span><span class="p">,</span> <span class="nx">fallbackLocale</span><span class="p">,</span> <span class="nx">sourceMap</span> <span class="o">=</span> <span class="p">{};</span>
+			<span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="nx">source</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">locale</span> <span class="p">)</span> <span class="p">{</span>
+				<span class="nx">source</span> <span class="o">=</span> <span class="s1">&#39;i18n/&#39;</span> <span class="o">+</span> <span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">().</span><span class="nx">locale</span> <span class="o">+</span> <span class="s1">&#39;.json&#39;</span><span class="p">;</span>
+				<span class="nx">locale</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">().</span><span class="nx">locale</span><span class="p">;</span>
+			<span class="p">}</span>
+			<span class="k">if</span> <span class="p">(</span> <span class="k">typeof</span> <span class="nx">source</span> <span class="o">===</span> <span class="s1">&#39;string&#39;</span> <span class="o">&amp;&amp;</span>
+				<span class="c1">// source extension should be json, but can have query params after that.</span>
+				<span class="nx">source</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span> <span class="s1">&#39;?&#39;</span> <span class="p">)[</span> <span class="mi">0</span> <span class="p">].</span><span class="nx">split</span><span class="p">(</span> <span class="s1">&#39;.&#39;</span> <span class="p">).</span><span class="nx">pop</span><span class="p">()</span> <span class="o">!==</span> <span class="s1">&#39;json&#39;</span>
+			<span class="p">)</span> <span class="p">{</span>
+				<span class="c1">// Load specified locale then check for fallbacks when directory is</span>
+				<span class="c1">// specified in load()</span>
+				<span class="nx">sourceMap</span><span class="p">[</span> <span class="nx">locale</span> <span class="p">]</span> <span class="o">=</span> <span class="nx">source</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="nx">locale</span> <span class="o">+</span> <span class="s1">&#39;.json&#39;</span><span class="p">;</span>
+				<span class="nx">fallbackLocales</span> <span class="o">=</span> <span class="p">(</span> <span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">.</span><span class="nx">fallbacks</span><span class="p">[</span> <span class="nx">locale</span> <span class="p">]</span> <span class="o">||</span> <span class="p">[]</span> <span class="p">)</span>
+					<span class="p">.</span><span class="nx">concat</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">fallbackLocale</span> <span class="p">);</span>
+				<span class="k">for</span> <span class="p">(</span> <span class="nx">locIndex</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">locIndex</span> <span class="o">&lt;</span> <span class="nx">fallbackLocales</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">locIndex</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+					<span class="nx">fallbackLocale</span> <span class="o">=</span> <span class="nx">fallbackLocales</span><span class="p">[</span> <span class="nx">locIndex</span> <span class="p">];</span>
+					<span class="nx">sourceMap</span><span class="p">[</span> <span class="nx">fallbackLocale</span> <span class="p">]</span> <span class="o">=</span> <span class="nx">source</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="nx">fallbackLocale</span> <span class="o">+</span> <span class="s1">&#39;.json&#39;</span><span class="p">;</span>
+				<span class="p">}</span>
+				<span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span> <span class="nx">sourceMap</span> <span class="p">);</span>
+			<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+				<span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">messageStore</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span> <span class="nx">source</span><span class="p">,</span> <span class="nx">locale</span> <span class="p">);</span>
+			<span class="p">}</span>
+
+		<span class="p">},</span>
+
+		<span class="cm">/**</span>
+<span class="cm">		 * Does parameter and magic word substitution.</span>
+<span class="cm">		 *</span>
+<span class="cm">		 * @param {string} key Message key</span>
+<span class="cm">		 * @param {Array} parameters Message parameters</span>
+<span class="cm">		 * @return {string}</span>
+<span class="cm">		 */</span>
+		<span class="nx">parse</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">parameters</span> <span class="p">)</span> <span class="p">{</span>
+			<span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">localize</span><span class="p">(</span> <span class="nx">key</span> <span class="p">);</span>
+			<span class="c1">// FIXME: This changes the state of the I18N object,</span>
+			<span class="c1">// should probably not change the &#39;this.parser&#39; but just</span>
+			<span class="c1">// pass it to the parser.</span>
+			<span class="k">this</span><span class="p">.</span><span class="nx">parser</span><span class="p">.</span><span class="nx">language</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">.</span><span class="nx">languages</span><span class="p">[</span> <span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">().</span><span class="nx">locale</span> <span class="p">]</span> <span class="o">||</span> <span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">.</span><span class="nx">languages</span><span class="p">[</span> <span class="s1">&#39;default&#39;</span> <span class="p">];</span>
+			<span class="k">if</span> <span class="p">(</span> <span class="nx">message</span> <span class="o">===</span> <span class="s1">&#39;&#39;</span> <span class="p">)</span> <span class="p">{</span>
+				<span class="nx">message</span> <span class="o">=</span> <span class="nx">key</span><span class="p">;</span>
+			<span class="p">}</span>
+			<span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">parser</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span> <span class="nx">message</span><span class="p">,</span> <span class="nx">parameters</span> <span class="p">);</span>
+		<span class="p">}</span>
+	<span class="p">};</span>
+
+	<span class="cm">/**</span>
+<span class="cm">	 * Process a message from the $.I18N instance</span>
+<span class="cm">	 * for the current document, stored in jQuery.data(document).</span>
+<span class="cm">	 *</span>
+<span class="cm">	 * @param {string} key Key of the message.</span>
+<span class="cm">	 * @param {string} param1 [param...] Variadic list of parameters for {key}.</span>
+<span class="cm">	 * @return {string|$.I18N} Parsed message, or if no key was given</span>
+<span class="cm">	 * the instance of $.I18N is returned.</span>
+<span class="cm">	 */</span>
+	<span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">param1</span> <span class="p">)</span> <span class="p">{</span>
+		<span class="kd">var</span> <span class="nx">parameters</span><span class="p">,</span>
+			<span class="nx">i18n</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span> <span class="nb">document</span><span class="p">,</span> <span class="s1">&#39;i18n&#39;</span> <span class="p">),</span>
+			<span class="nx">options</span> <span class="o">=</span> <span class="k">typeof</span> <span class="nx">key</span> <span class="o">===</span> <span class="s1">&#39;object&#39;</span> <span class="o">&amp;&amp;</span> <span class="nx">key</span><span class="p">;</span>
+
+		<span class="c1">// If the locale option for this call is different then the setup so far,</span>
+		<span class="c1">// update it automatically. This doesn&#39;t just change the context for this</span>
+		<span class="c1">// call but for all future call as well.</span>
+		<span class="c1">// If there is no i18n setup yet, don&#39;t do this. It will be taken care of</span>
+		<span class="c1">// by the `new I18N` construction below.</span>
+		<span class="c1">// NOTE: It should only change language for this one call.</span>
+		<span class="c1">// Then cache instances of I18N somewhere.</span>
+		<span class="k">if</span> <span class="p">(</span> <span class="nx">options</span> <span class="o">&amp;&amp;</span> <span class="nx">options</span><span class="p">.</span><span class="nx">locale</span> <span class="o">&amp;&amp;</span> <span class="nx">i18n</span> <span class="o">&amp;&amp;</span> <span class="nx">i18n</span><span class="p">.</span><span class="nx">locale</span> <span class="o">!==</span> <span class="nx">options</span><span class="p">.</span><span class="nx">locale</span> <span class="p">)</span> <span class="p">{</span>
+			<span class="nx">i18n</span><span class="p">.</span><span class="nx">locale</span> <span class="o">=</span> <span class="nx">options</span><span class="p">.</span><span class="nx">locale</span><span class="p">;</span>
+		<span class="p">}</span>
+
+		<span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="nx">i18n</span> <span class="p">)</span> <span class="p">{</span>
+			<span class="nx">i18n</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">I18N</span><span class="p">(</span> <span class="nx">options</span> <span class="p">);</span>
+			<span class="nx">$</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span> <span class="nb">document</span><span class="p">,</span> <span class="s1">&#39;i18n&#39;</span><span class="p">,</span> <span class="nx">i18n</span> <span class="p">);</span>
+		<span class="p">}</span>
+
+		<span class="k">if</span> <span class="p">(</span> <span class="k">typeof</span> <span class="nx">key</span> <span class="o">===</span> <span class="s1">&#39;string&#39;</span> <span class="p">)</span> <span class="p">{</span>
+			<span class="k">if</span> <span class="p">(</span> <span class="nx">param1</span> <span class="o">!==</span> <span class="kc">undefined</span> <span class="p">)</span> <span class="p">{</span>
+				<span class="nx">parameters</span> <span class="o">=</span> <span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span> <span class="nx">arguments</span><span class="p">,</span> <span class="mi">1</span> <span class="p">);</span>
+			<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+				<span class="nx">parameters</span> <span class="o">=</span> <span class="p">[];</span>
+			<span class="p">}</span>
+
+			<span class="k">return</span> <span class="nx">i18n</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">parameters</span> <span class="p">);</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+			<span class="c1">// FIXME: remove this feature/bug.</span>
+			<span class="k">return</span> <span class="nx">i18n</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">};</span>
+
+	<span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">i18n</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+		<span class="kd">var</span> <span class="nx">i18n</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span> <span class="nb">document</span><span class="p">,</span> <span class="s1">&#39;i18n&#39;</span> <span class="p">);</span>
+
+		<span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="nx">i18n</span> <span class="p">)</span> <span class="p">{</span>
+			<span class="nx">i18n</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">I18N</span><span class="p">();</span>
+			<span class="nx">$</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span> <span class="nb">document</span><span class="p">,</span> <span class="s1">&#39;i18n&#39;</span><span class="p">,</span> <span class="nx">i18n</span> <span class="p">);</span>
+		<span class="p">}</span>
+
+		<span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+			<span class="kd">var</span> <span class="nx">$this</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="k">this</span> <span class="p">),</span>
+				<span class="nx">messageKey</span> <span class="o">=</span> <span class="nx">$this</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span> <span class="s1">&#39;i18n&#39;</span> <span class="p">),</span>
+				<span class="nx">lBracket</span><span class="p">,</span> <span class="nx">rBracket</span><span class="p">,</span> <span class="nx">type</span><span class="p">,</span> <span class="nx">key</span><span class="p">;</span>
+
+			<span class="k">if</span> <span class="p">(</span> <span class="nx">messageKey</span> <span class="p">)</span> <span class="p">{</span>
+				<span class="nx">lBracket</span> <span class="o">=</span> <span class="nx">messageKey</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span> <span class="s1">&#39;[&#39;</span> <span class="p">);</span>
+				<span class="nx">rBracket</span> <span class="o">=</span> <span class="nx">messageKey</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span> <span class="s1">&#39;]&#39;</span> <span class="p">);</span>
+				<span class="k">if</span> <span class="p">(</span> <span class="nx">lBracket</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">rBracket</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">lBracket</span> <span class="o">&lt;</span> <span class="nx">rBracket</span> <span class="p">)</span> <span class="p">{</span>
+					<span class="nx">type</span> <span class="o">=</span> <span class="nx">messageKey</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span> <span class="nx">lBracket</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">rBracket</span> <span class="p">);</span>
+					<span class="nx">key</span> <span class="o">=</span> <span class="nx">messageKey</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span> <span class="nx">rBracket</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">);</span>
+					<span class="k">if</span> <span class="p">(</span> <span class="nx">type</span> <span class="o">===</span> <span class="s1">&#39;html&#39;</span> <span class="p">)</span> <span class="p">{</span>
+						<span class="nx">$this</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span> <span class="nx">i18n</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span> <span class="nx">key</span> <span class="p">)</span> <span class="p">);</span>
+					<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+						<span class="nx">$this</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span> <span class="nx">type</span><span class="p">,</span> <span class="nx">i18n</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span> <span class="nx">key</span> <span class="p">)</span> <span class="p">);</span>
+					<span class="p">}</span>
+				<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+					<span class="nx">$this</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span> <span class="nx">i18n</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span> <span class="nx">messageKey</span> <span class="p">)</span> <span class="p">);</span>
+				<span class="p">}</span>
+			<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+				<span class="nx">$this</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span> <span class="s1">&#39;[data-i18n]&#39;</span> <span class="p">).</span><span class="nx">i18n</span><span class="p">();</span>
+			<span class="p">}</span>
+		<span class="p">}</span> <span class="p">);</span>
+	<span class="p">};</span>
+
+	<span class="kd">function</span> <span class="nx">getDefaultLocale</span><span class="p">()</span> <span class="p">{</span>
+		<span class="kd">var</span> <span class="nx">nav</span><span class="p">,</span> <span class="nx">locale</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;html&#39;</span> <span class="p">).</span><span class="nx">attr</span><span class="p">(</span> <span class="s1">&#39;lang&#39;</span> <span class="p">);</span>
+
+		<span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="nx">locale</span> <span class="p">)</span> <span class="p">{</span>
+			<span class="k">if</span> <span class="p">(</span> <span class="k">typeof</span> <span class="nb">window</span><span class="p">.</span><span class="nx">navigator</span> <span class="o">!==</span> <span class="kc">undefined</span> <span class="p">)</span> <span class="p">{</span>
+				<span class="nx">nav</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">navigator</span><span class="p">;</span>
+				<span class="nx">locale</span> <span class="o">=</span> <span class="nx">nav</span><span class="p">.</span><span class="nx">language</span> <span class="o">||</span> <span class="nx">nav</span><span class="p">.</span><span class="nx">userLanguage</span> <span class="o">||</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+			<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+				<span class="nx">locale</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+		<span class="k">return</span> <span class="nx">locale</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">.</span><span class="nx">languages</span> <span class="o">=</span> <span class="p">{};</span>
+	<span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">.</span><span class="nx">messageStore</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">.</span><span class="nx">messageStore</span> <span class="o">||</span> <span class="p">{};</span>
+	<span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">.</span><span class="nx">parser</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="c1">// The default parser only handles variable substitution</span>
+		<span class="nx">parse</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">message</span><span class="p">,</span> <span class="nx">parameters</span> <span class="p">)</span> <span class="p">{</span>
+			<span class="k">return</span> <span class="nx">message</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span> <span class="sr">/\$(\d+)/g</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">str</span><span class="p">,</span> <span class="nx">match</span> <span class="p">)</span> <span class="p">{</span>
+				<span class="kd">var</span> <span class="nx">index</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span> <span class="nx">match</span><span class="p">,</span> <span class="mi">10</span> <span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+				<span class="k">return</span> <span class="nx">parameters</span><span class="p">[</span> <span class="nx">index</span> <span class="p">]</span> <span class="o">!==</span> <span class="kc">undefined</span> <span class="o">?</span> <span class="nx">parameters</span><span class="p">[</span> <span class="nx">index</span> <span class="p">]</span> <span class="o">:</span> <span class="s1">&#39;$&#39;</span> <span class="o">+</span> <span class="nx">match</span><span class="p">;</span>
+			<span class="p">}</span> <span class="p">);</span>
+		<span class="p">},</span>
+		<span class="nx">emitter</span><span class="o">:</span> <span class="p">{}</span>
+	<span class="p">};</span>
+	<span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">.</span><span class="nx">fallbacks</span> <span class="o">=</span> <span class="p">{};</span>
+	<span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">.</span><span class="nx">debug</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+	<span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">.</span><span class="nx">log</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span> <span class="cm">/* arguments */</span> <span class="p">)</span> <span class="p">{</span>
+		<span class="k">if</span> <span class="p">(</span> <span class="nb">window</span><span class="p">.</span><span class="nx">console</span> <span class="o">&amp;&amp;</span> <span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">.</span><span class="nx">debug</span> <span class="p">)</span> <span class="p">{</span>
+			<span class="nb">window</span><span class="p">.</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span> <span class="nb">window</span><span class="p">.</span><span class="nx">console</span><span class="p">,</span> <span class="nx">arguments</span> <span class="p">);</span>
+		<span class="p">}</span>
+	<span class="p">};</span>
+	<span class="cm">/* Static members */</span>
+	<span class="nx">I18N</span><span class="p">.</span><span class="nx">defaults</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="nx">locale</span><span class="o">:</span> <span class="nx">getDefaultLocale</span><span class="p">(),</span>
+		<span class="nx">fallbackLocale</span><span class="o">:</span> <span class="s1">&#39;en&#39;</span><span class="p">,</span>
+		<span class="nx">parser</span><span class="o">:</span> <span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">.</span><span class="nx">parser</span><span class="p">,</span>
+		<span class="nx">messageStore</span><span class="o">:</span> <span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">.</span><span class="nx">messageStore</span>
+	<span class="p">};</span>
+
+	<span class="c1">// Expose constructor</span>
+	<span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">.</span><span class="nx">constructor</span> <span class="o">=</span> <span class="nx">I18N</span><span class="p">;</span>
+<span class="p">}(</span> <span class="nx">jQuery</span> <span class="p">)</span> <span class="p">);</span>
+</pre></div>
+</body>
+</html>

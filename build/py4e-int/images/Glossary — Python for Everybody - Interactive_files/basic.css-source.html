@@ -1,0 +1,783 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title><title><no title></title></title>
+  <meta http-equiv="content-type" content="text/html; charset=None">
+  <link rel="stylesheet" href="..\..\_static\pygments.css" type="text/css">
+</head>
+<body>
+<h2><title><no title></title></h2>
+
+<div class="highlight"><pre><span></span><span class="c">/*</span>
+<span class="c"> * basic.css</span>
+<span class="c"> * ~~~~~~~~~</span>
+<span class="c"> *</span>
+<span class="c"> * Sphinx stylesheet -- basic theme.</span>
+<span class="c"> *</span>
+<span class="c"> * :copyright: Copyright 2007-2020 by the Sphinx team, see AUTHORS.</span>
+<span class="c"> * :license: BSD, see LICENSE for details.</span>
+<span class="c"> *</span>
+<span class="c"> */</span>
+
+<span class="c">/* -- main layout ----------------------------------------------------------- */</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">clearer</span> <span class="p">{</span>
+    <span class="k">clear</span><span class="p">:</span> <span class="kc">both</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* -- relbar ---------------------------------------------------------------- */</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">related</span> <span class="p">{</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">90</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">related</span> <span class="nt">h3</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">related</span> <span class="nt">ul</span> <span class="p">{</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">list-style</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">related</span> <span class="nt">li</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">inline</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">related</span> <span class="nt">li</span><span class="p">.</span><span class="nc">right</span> <span class="p">{</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span>
+    <span class="k">margin-right</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* -- sidebar --------------------------------------------------------------- */</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">sphinxsidebarwrapper</span> <span class="p">{</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">sphinxsidebar</span> <span class="p">{</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">230</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">-100</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">90</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">word-wrap</span><span class="p">:</span> <span class="kc">break-word</span><span class="p">;</span>
+    <span class="k">overflow-wrap</span> <span class="p">:</span> <span class="kc">break-word</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">sphinxsidebar</span> <span class="nt">ul</span> <span class="p">{</span>
+    <span class="k">list-style</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">sphinxsidebar</span> <span class="nt">ul</span> <span class="nt">ul</span><span class="o">,</span>
+<span class="nt">div</span><span class="p">.</span><span class="nc">sphinxsidebar</span> <span class="nt">ul</span><span class="p">.</span><span class="nc">want-points</span> <span class="p">{</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">list-style</span><span class="p">:</span> <span class="kc">square</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">sphinxsidebar</span> <span class="nt">ul</span> <span class="nt">ul</span> <span class="p">{</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">sphinxsidebar</span> <span class="nt">form</span> <span class="p">{</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">sphinxsidebar</span> <span class="nt">input</span> <span class="p">{</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#98dbcc</span><span class="p">;</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="kc">sans-serif</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">sphinxsidebar</span> <span class="p">#</span><span class="nn">searchbox</span> <span class="nt">form</span><span class="p">.</span><span class="nc">search</span> <span class="p">{</span>
+    <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">sphinxsidebar</span> <span class="p">#</span><span class="nn">searchbox</span> <span class="nt">input</span><span class="cp">[</span><span class="k">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span><span class="cp">]</span> <span class="p">{</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">80</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mf">0.25</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">box-sizing</span><span class="p">:</span> <span class="kc">border-box</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">sphinxsidebar</span> <span class="p">#</span><span class="nn">searchbox</span> <span class="nt">input</span><span class="cp">[</span><span class="k">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span><span class="cp">]</span> <span class="p">{</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">20</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">border-left</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mf">0.25</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">box-sizing</span><span class="p">:</span> <span class="kc">border-box</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="nt">img</span> <span class="p">{</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">max-width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* -- search page ----------------------------------------------------------- */</span>
+
+<span class="nt">ul</span><span class="p">.</span><span class="nc">search</span> <span class="p">{</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">ul</span><span class="p">.</span><span class="nc">search</span> <span class="nt">li</span> <span class="p">{</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">background-image</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">file.png</span><span class="p">);</span>
+    <span class="k">background-repeat</span><span class="p">:</span> <span class="kc">no-repeat</span><span class="p">;</span>
+    <span class="k">background-position</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">7</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">ul</span><span class="p">.</span><span class="nc">search</span> <span class="nt">li</span> <span class="nt">a</span> <span class="p">{</span>
+    <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">ul</span><span class="p">.</span><span class="nc">search</span> <span class="nt">li</span> <span class="nt">div</span><span class="p">.</span><span class="nc">context</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="mh">#888</span><span class="p">;</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">ul</span><span class="p">.</span><span class="nc">keywordmatches</span> <span class="nt">li</span><span class="p">.</span><span class="nc">goodmatch</span> <span class="nt">a</span> <span class="p">{</span>
+    <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* -- index page ------------------------------------------------------------ */</span>
+
+<span class="nt">table</span><span class="p">.</span><span class="nc">contentstable</span> <span class="p">{</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">90</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+    <span class="k">margin-right</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">table</span><span class="p">.</span><span class="nc">contentstable</span> <span class="nt">p</span><span class="p">.</span><span class="nc">biglink</span> <span class="p">{</span>
+    <span class="k">line-height</span><span class="p">:</span> <span class="mi">150</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">a</span><span class="p">.</span><span class="nc">biglink</span> <span class="p">{</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mf">1.3</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">span</span><span class="p">.</span><span class="nc">linkdescr</span> <span class="p">{</span>
+    <span class="k">font-style</span><span class="p">:</span> <span class="kc">italic</span><span class="p">;</span>
+    <span class="k">padding-top</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">90</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* -- general index --------------------------------------------------------- */</span>
+
+<span class="nt">table</span><span class="p">.</span><span class="nc">indextable</span> <span class="p">{</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">table</span><span class="p">.</span><span class="nc">indextable</span> <span class="nt">td</span> <span class="p">{</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+    <span class="k">vertical-align</span><span class="p">:</span> <span class="kc">top</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">table</span><span class="p">.</span><span class="nc">indextable</span> <span class="nt">ul</span> <span class="p">{</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">list-style-type</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">table</span><span class="p">.</span><span class="nc">indextable</span> <span class="o">&gt;</span> <span class="nt">tbody</span> <span class="o">&gt;</span> <span class="nt">tr</span> <span class="o">&gt;</span> <span class="nt">td</span> <span class="o">&gt;</span> <span class="nt">ul</span> <span class="p">{</span>
+    <span class="k">padding-left</span><span class="p">:</span> <span class="mi">0</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">table</span><span class="p">.</span><span class="nc">indextable</span> <span class="nt">tr</span><span class="p">.</span><span class="nc">pcap</span> <span class="p">{</span>
+    <span class="k">height</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">table</span><span class="p">.</span><span class="nc">indextable</span> <span class="nt">tr</span><span class="p">.</span><span class="nc">cap</span> <span class="p">{</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#f2f2f2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">img</span><span class="p">.</span><span class="nc">toggler</span> <span class="p">{</span>
+    <span class="k">margin-right</span><span class="p">:</span> <span class="mi">3</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">3</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">cursor</span><span class="p">:</span> <span class="kc">pointer</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">modindex-jumpbox</span> <span class="p">{</span>
+    <span class="k">border-top</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#ddd</span><span class="p">;</span>
+    <span class="k">border-bottom</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#ddd</span><span class="p">;</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">1</span><span class="kt">em</span> <span class="mi">0</span> <span class="mi">1</span><span class="kt">em</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mf">0.4</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">genindex-jumpbox</span> <span class="p">{</span>
+    <span class="k">border-top</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#ddd</span><span class="p">;</span>
+    <span class="k">border-bottom</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#ddd</span><span class="p">;</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">1</span><span class="kt">em</span> <span class="mi">0</span> <span class="mi">1</span><span class="kt">em</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mf">0.4</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* -- domain module index --------------------------------------------------- */</span>
+
+<span class="nt">table</span><span class="p">.</span><span class="nc">modindextable</span> <span class="nt">td</span> <span class="p">{</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">border-collapse</span><span class="p">:</span> <span class="kc">collapse</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* -- general body styles --------------------------------------------------- */</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">body</span> <span class="p">{</span>
+    <span class="k">min-width</span><span class="p">:</span> <span class="mi">450</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">max-width</span><span class="p">:</span> <span class="mi">800</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">body</span> <span class="nt">p</span><span class="o">,</span> <span class="nt">div</span><span class="p">.</span><span class="nc">body</span> <span class="nt">dd</span><span class="o">,</span> <span class="nt">div</span><span class="p">.</span><span class="nc">body</span> <span class="nt">li</span><span class="o">,</span> <span class="nt">div</span><span class="p">.</span><span class="nc">body</span> <span class="nt">blockquote</span> <span class="p">{</span>
+    <span class="kp">-moz-</span><span class="k">hyphens</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+    <span class="kp">-ms-</span><span class="k">hyphens</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+    <span class="kp">-webkit-</span><span class="k">hyphens</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+    <span class="k">hyphens</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">a</span><span class="p">.</span><span class="nc">headerlink</span> <span class="p">{</span>
+    <span class="k">visibility</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">a</span><span class="p">.</span><span class="nc">brackets</span><span class="p">:</span><span class="nd">before</span><span class="o">,</span>
+<span class="nt">span</span><span class="p">.</span><span class="nc">brackets</span> <span class="o">&gt;</span> <span class="nt">a</span><span class="p">:</span><span class="nd">before</span><span class="p">{</span>
+    <span class="k">content</span><span class="p">:</span> <span class="s2">&quot;</span><span class="cp">[</span><span class="s2">&quot;;</span>
+<span class="s2">}</span>
+
+<span class="s2">a.brackets:after,</span>
+<span class="s2">span.brackets &gt; a:after {</span>
+<span class="s2">    content: &quot;</span><span class="cp">]</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h1</span><span class="p">:</span><span class="nd">hover</span> <span class="o">&gt;</span> <span class="nt">a</span><span class="p">.</span><span class="nc">headerlink</span><span class="o">,</span>
+<span class="nt">h2</span><span class="p">:</span><span class="nd">hover</span> <span class="o">&gt;</span> <span class="nt">a</span><span class="p">.</span><span class="nc">headerlink</span><span class="o">,</span>
+<span class="nt">h3</span><span class="p">:</span><span class="nd">hover</span> <span class="o">&gt;</span> <span class="nt">a</span><span class="p">.</span><span class="nc">headerlink</span><span class="o">,</span>
+<span class="nt">h4</span><span class="p">:</span><span class="nd">hover</span> <span class="o">&gt;</span> <span class="nt">a</span><span class="p">.</span><span class="nc">headerlink</span><span class="o">,</span>
+<span class="nt">h5</span><span class="p">:</span><span class="nd">hover</span> <span class="o">&gt;</span> <span class="nt">a</span><span class="p">.</span><span class="nc">headerlink</span><span class="o">,</span>
+<span class="nt">h6</span><span class="p">:</span><span class="nd">hover</span> <span class="o">&gt;</span> <span class="nt">a</span><span class="p">.</span><span class="nc">headerlink</span><span class="o">,</span>
+<span class="nt">dt</span><span class="p">:</span><span class="nd">hover</span> <span class="o">&gt;</span> <span class="nt">a</span><span class="p">.</span><span class="nc">headerlink</span><span class="o">,</span>
+<span class="nt">caption</span><span class="p">:</span><span class="nd">hover</span> <span class="o">&gt;</span> <span class="nt">a</span><span class="p">.</span><span class="nc">headerlink</span><span class="o">,</span>
+<span class="nt">p</span><span class="p">.</span><span class="nc">caption</span><span class="p">:</span><span class="nd">hover</span> <span class="o">&gt;</span> <span class="nt">a</span><span class="p">.</span><span class="nc">headerlink</span><span class="o">,</span>
+<span class="nt">div</span><span class="p">.</span><span class="nc">code-block-caption</span><span class="p">:</span><span class="nd">hover</span> <span class="o">&gt;</span> <span class="nt">a</span><span class="p">.</span><span class="nc">headerlink</span> <span class="p">{</span>
+    <span class="k">visibility</span><span class="p">:</span> <span class="kc">visible</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">body</span> <span class="nt">p</span><span class="p">.</span><span class="nc">caption</span> <span class="p">{</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">inherit</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">body</span> <span class="nt">td</span> <span class="p">{</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">first</span> <span class="p">{</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">p</span><span class="p">.</span><span class="nc">rubric</span> <span class="p">{</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">img</span><span class="p">.</span><span class="nc">align-left</span><span class="o">,</span> <span class="p">.</span><span class="nc">figure</span><span class="p">.</span><span class="nc">align-left</span><span class="o">,</span> <span class="nt">object</span><span class="p">.</span><span class="nc">align-left</span> <span class="p">{</span>
+    <span class="k">clear</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+    <span class="k">margin-right</span><span class="p">:</span> <span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">img</span><span class="p">.</span><span class="nc">align-right</span><span class="o">,</span> <span class="p">.</span><span class="nc">figure</span><span class="p">.</span><span class="nc">align-right</span><span class="o">,</span> <span class="nt">object</span><span class="p">.</span><span class="nc">align-right</span> <span class="p">{</span>
+    <span class="k">clear</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">img</span><span class="p">.</span><span class="nc">align-center</span><span class="o">,</span> <span class="p">.</span><span class="nc">figure</span><span class="p">.</span><span class="nc">align-center</span><span class="o">,</span> <span class="nt">object</span><span class="p">.</span><span class="nc">align-center</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+  <span class="k">margin-left</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+  <span class="k">margin-right</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">img</span><span class="p">.</span><span class="nc">align-default</span><span class="o">,</span> <span class="p">.</span><span class="nc">figure</span><span class="p">.</span><span class="nc">align-default</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+  <span class="k">margin-left</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+  <span class="k">margin-right</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">align-left</span> <span class="p">{</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">align-center</span> <span class="p">{</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">align-default</span> <span class="p">{</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">align-right</span> <span class="p">{</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* -- sidebars -------------------------------------------------------------- */</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">sidebar</span> <span class="p">{</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mf">0.5</span><span class="kt">em</span> <span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#ddb</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">7</span><span class="kt">px</span> <span class="mi">7</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">7</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#ffe</span><span class="p">;</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">40</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">p</span><span class="p">.</span><span class="nc">sidebar-title</span> <span class="p">{</span>
+    <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* -- topics ---------------------------------------------------------------- */</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">topic</span> <span class="p">{</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#ccc</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">7</span><span class="kt">px</span> <span class="mi">7</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">7</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">p</span><span class="p">.</span><span class="nc">topic-title</span> <span class="p">{</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mf">1.1</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* -- admonitions ----------------------------------------------------------- */</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">admonition</span> <span class="p">{</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">7</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">admonition</span> <span class="nt">dt</span> <span class="p">{</span>
+    <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">admonition</span> <span class="nt">dl</span> <span class="p">{</span>
+    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">p</span><span class="p">.</span><span class="nc">admonition-title</span> <span class="p">{</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">0</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">body</span> <span class="nt">p</span><span class="p">.</span><span class="nc">centered</span> <span class="p">{</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">25</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* -- tables ---------------------------------------------------------------- */</span>
+
+<span class="nt">table</span><span class="p">.</span><span class="nc">docutils</span> <span class="p">{</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">border-collapse</span><span class="p">:</span> <span class="kc">collapse</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">table</span><span class="p">.</span><span class="nc">align-center</span> <span class="p">{</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+    <span class="k">margin-right</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">table</span><span class="p">.</span><span class="nc">align-default</span> <span class="p">{</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+    <span class="k">margin-right</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">table</span> <span class="nt">caption</span> <span class="nt">span</span><span class="p">.</span><span class="nc">caption-number</span> <span class="p">{</span>
+    <span class="k">font-style</span><span class="p">:</span> <span class="kc">italic</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">table</span> <span class="nt">caption</span> <span class="nt">span</span><span class="p">.</span><span class="nc">caption-text</span> <span class="p">{</span>
+<span class="p">}</span>
+
+<span class="nt">table</span><span class="p">.</span><span class="nc">docutils</span> <span class="nt">td</span><span class="o">,</span> <span class="nt">table</span><span class="p">.</span><span class="nc">docutils</span> <span class="nt">th</span> <span class="p">{</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">8</span><span class="kt">px</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">border-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">border-left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">border-right</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">border-bottom</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#aaa</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">table</span><span class="p">.</span><span class="nc">footnote</span> <span class="nt">td</span><span class="o">,</span> <span class="nt">table</span><span class="p">.</span><span class="nc">footnote</span> <span class="nt">th</span> <span class="p">{</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">th</span> <span class="p">{</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+    <span class="k">padding-right</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">table</span><span class="p">.</span><span class="nc">citation</span> <span class="p">{</span>
+    <span class="k">border-left</span><span class="p">:</span> <span class="kc">solid</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">gray</span><span class="p">;</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">table</span><span class="p">.</span><span class="nc">citation</span> <span class="nt">td</span> <span class="p">{</span>
+    <span class="k">border-bottom</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">th</span> <span class="o">&gt;</span> <span class="nt">p</span><span class="p">:</span><span class="nd">first-child</span><span class="o">,</span>
+<span class="nt">td</span> <span class="o">&gt;</span> <span class="nt">p</span><span class="p">:</span><span class="nd">first-child</span> <span class="p">{</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">th</span> <span class="o">&gt;</span> <span class="nt">p</span><span class="p">:</span><span class="nd">last-child</span><span class="o">,</span>
+<span class="nt">td</span> <span class="o">&gt;</span> <span class="nt">p</span><span class="p">:</span><span class="nd">last-child</span> <span class="p">{</span>
+    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* -- figures --------------------------------------------------------------- */</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">figure</span> <span class="p">{</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mf">0.5</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mf">0.5</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">figure</span> <span class="nt">p</span><span class="p">.</span><span class="nc">caption</span> <span class="p">{</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mf">0.3</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">figure</span> <span class="nt">p</span><span class="p">.</span><span class="nc">caption</span> <span class="nt">span</span><span class="p">.</span><span class="nc">caption-number</span> <span class="p">{</span>
+    <span class="k">font-style</span><span class="p">:</span> <span class="kc">italic</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">figure</span> <span class="nt">p</span><span class="p">.</span><span class="nc">caption</span> <span class="nt">span</span><span class="p">.</span><span class="nc">caption-text</span> <span class="p">{</span>
+<span class="p">}</span>
+
+<span class="c">/* -- field list styles ----------------------------------------------------- */</span>
+
+<span class="nt">table</span><span class="p">.</span><span class="nc">field-list</span> <span class="nt">td</span><span class="o">,</span> <span class="nt">table</span><span class="p">.</span><span class="nc">field-list</span> <span class="nt">th</span> <span class="p">{</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">field-list</span> <span class="nt">ul</span> <span class="p">{</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">padding-left</span><span class="p">:</span> <span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">field-list</span> <span class="nt">p</span> <span class="p">{</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">field-name</span> <span class="p">{</span>
+    <span class="kp">-moz-</span><span class="k">hyphens</span><span class="p">:</span> <span class="kc">manual</span><span class="p">;</span>
+    <span class="kp">-ms-</span><span class="k">hyphens</span><span class="p">:</span> <span class="kc">manual</span><span class="p">;</span>
+    <span class="kp">-webkit-</span><span class="k">hyphens</span><span class="p">:</span> <span class="kc">manual</span><span class="p">;</span>
+    <span class="k">hyphens</span><span class="p">:</span> <span class="kc">manual</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* -- hlist styles ---------------------------------------------------------- */</span>
+
+<span class="nt">table</span><span class="p">.</span><span class="nc">hlist</span> <span class="nt">td</span> <span class="p">{</span>
+    <span class="k">vertical-align</span><span class="p">:</span> <span class="kc">top</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="c">/* -- other body styles ----------------------------------------------------- */</span>
+
+<span class="nt">ol</span><span class="p">.</span><span class="nc">arabic</span> <span class="p">{</span>
+    <span class="k">list-style</span><span class="p">:</span> <span class="kc">decimal</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">ol</span><span class="p">.</span><span class="nc">loweralpha</span> <span class="p">{</span>
+    <span class="k">list-style</span><span class="p">:</span> <span class="kc">lower-alpha</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">ol</span><span class="p">.</span><span class="nc">upperalpha</span> <span class="p">{</span>
+    <span class="k">list-style</span><span class="p">:</span> <span class="kc">upper-alpha</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">ol</span><span class="p">.</span><span class="nc">lowerroman</span> <span class="p">{</span>
+    <span class="k">list-style</span><span class="p">:</span> <span class="kc">lower-roman</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">ol</span><span class="p">.</span><span class="nc">upperroman</span> <span class="p">{</span>
+    <span class="k">list-style</span><span class="p">:</span> <span class="kc">upper-roman</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">li</span> <span class="o">&gt;</span> <span class="nt">p</span><span class="p">:</span><span class="nd">first-child</span> <span class="p">{</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">li</span> <span class="o">&gt;</span> <span class="nt">p</span><span class="p">:</span><span class="nd">last-child</span> <span class="p">{</span>
+    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">dl</span><span class="p">.</span><span class="nc">footnote</span> <span class="o">&gt;</span> <span class="nt">dt</span><span class="o">,</span>
+<span class="nt">dl</span><span class="p">.</span><span class="nc">citation</span> <span class="o">&gt;</span> <span class="nt">dt</span> <span class="p">{</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">dl</span><span class="p">.</span><span class="nc">footnote</span> <span class="o">&gt;</span> <span class="nt">dd</span><span class="o">,</span>
+<span class="nt">dl</span><span class="p">.</span><span class="nc">citation</span> <span class="o">&gt;</span> <span class="nt">dd</span> <span class="p">{</span>
+    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">0</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">dl</span><span class="p">.</span><span class="nc">footnote</span> <span class="o">&gt;</span> <span class="nt">dd</span><span class="p">:</span><span class="nd">after</span><span class="o">,</span>
+<span class="nt">dl</span><span class="p">.</span><span class="nc">citation</span> <span class="o">&gt;</span> <span class="nt">dd</span><span class="p">:</span><span class="nd">after</span> <span class="p">{</span>
+    <span class="k">content</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+    <span class="k">clear</span><span class="p">:</span> <span class="kc">both</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">dl</span><span class="p">.</span><span class="nc">field-list</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+    <span class="k">grid-template-columns</span><span class="p">:</span> <span class="nf">fit-content</span><span class="p">(</span><span class="mi">30</span><span class="kt">%</span><span class="p">)</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">dl</span><span class="p">.</span><span class="nc">field-list</span> <span class="o">&gt;</span> <span class="nt">dt</span> <span class="p">{</span>
+    <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
+    <span class="k">word-break</span><span class="p">:</span> <span class="kc">break-word</span><span class="p">;</span>
+    <span class="k">padding-left</span><span class="p">:</span> <span class="mf">0.5</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">padding-right</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">dl</span><span class="p">.</span><span class="nc">field-list</span> <span class="o">&gt;</span> <span class="nt">dt</span><span class="p">:</span><span class="nd">after</span> <span class="p">{</span>
+    <span class="k">content</span><span class="p">:</span> <span class="s2">&quot;:&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">dl</span><span class="p">.</span><span class="nc">field-list</span> <span class="o">&gt;</span> <span class="nt">dd</span> <span class="p">{</span>
+    <span class="k">padding-left</span><span class="p">:</span> <span class="mf">0.5</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">0</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">0</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">dl</span> <span class="p">{</span>
+    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">dd</span> <span class="o">&gt;</span> <span class="nt">p</span><span class="p">:</span><span class="nd">first-child</span> <span class="p">{</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">dd</span> <span class="nt">ul</span><span class="o">,</span> <span class="nt">dd</span> <span class="nt">table</span> <span class="p">{</span>
+    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">dd</span> <span class="p">{</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">3</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">dt</span><span class="p">:</span><span class="nd">target</span><span class="o">,</span> <span class="nt">span</span><span class="p">.</span><span class="nc">highlighted</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#fbe54e</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">rect</span><span class="p">.</span><span class="nc">highlighted</span> <span class="p">{</span>
+    <span class="n">fill</span><span class="p">:</span> <span class="mh">#fbe54e</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">dl</span><span class="p">.</span><span class="nc">glossary</span> <span class="nt">dt</span> <span class="p">{</span>
+    <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mf">1.1</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">optional</span> <span class="p">{</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mf">1.3</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">sig-paren</span> <span class="p">{</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="kc">larger</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">versionmodified</span> <span class="p">{</span>
+    <span class="k">font-style</span><span class="p">:</span> <span class="kc">italic</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">system-message</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#fda</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">3</span><span class="kt">px</span> <span class="kc">solid</span> <span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">footnote</span><span class="p">:</span><span class="nd">target</span>  <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#ffa</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">line-block</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">line-block</span> <span class="p">.</span><span class="nc">line-block</span> <span class="p">{</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mf">1.5</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">guilabel</span><span class="o">,</span> <span class="p">.</span><span class="nc">menuselection</span> <span class="p">{</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="kc">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">accelerator</span> <span class="p">{</span>
+    <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">underline</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">classifier</span> <span class="p">{</span>
+    <span class="k">font-style</span><span class="p">:</span> <span class="kc">oblique</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">classifier</span><span class="p">:</span><span class="nd">before</span> <span class="p">{</span>
+    <span class="k">font-style</span><span class="p">:</span> <span class="kc">normal</span><span class="p">;</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mf">0.5</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">content</span><span class="p">:</span> <span class="s2">&quot;:&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">abbr</span><span class="o">,</span> <span class="nt">acronym</span> <span class="p">{</span>
+    <span class="k">border-bottom</span><span class="p">:</span> <span class="kc">dotted</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">cursor</span><span class="p">:</span> <span class="kc">help</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* -- code displays --------------------------------------------------------- */</span>
+
+<span class="nt">pre</span> <span class="p">{</span>
+    <span class="k">overflow</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+    <span class="k">overflow-y</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>  <span class="c">/* fixes display issues on Chrome browsers */</span>
+<span class="p">}</span>
+
+<span class="nt">span</span><span class="p">.</span><span class="nc">pre</span> <span class="p">{</span>
+    <span class="kp">-moz-</span><span class="k">hyphens</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+    <span class="kp">-ms-</span><span class="k">hyphens</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+    <span class="kp">-webkit-</span><span class="k">hyphens</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+    <span class="k">hyphens</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">td</span><span class="p">.</span><span class="nc">linenos</span> <span class="nt">pre</span> <span class="p">{</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">0</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">transparent</span><span class="p">;</span>
+    <span class="k">color</span><span class="p">:</span> <span class="mh">#aaa</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">table</span><span class="p">.</span><span class="nc">highlighttable</span> <span class="p">{</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mf">0.5</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">table</span><span class="p">.</span><span class="nc">highlighttable</span> <span class="nt">td</span> <span class="p">{</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span> <span class="mf">0.5</span><span class="kt">em</span> <span class="mi">0</span> <span class="mf">0.5</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">code-block-caption</span> <span class="p">{</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="kc">small</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">code-block-caption</span> <span class="nt">code</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">transparent</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">code-block-caption</span> <span class="o">+</span> <span class="nt">div</span> <span class="o">&gt;</span> <span class="nt">div</span><span class="p">.</span><span class="nc">highlight</span> <span class="o">&gt;</span> <span class="nt">pre</span> <span class="p">{</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">doctest</span> <span class="o">&gt;</span> <span class="nt">div</span><span class="p">.</span><span class="nc">highlight</span> <span class="nt">span</span><span class="p">.</span><span class="nc">gp</span> <span class="p">{</span>  <span class="c">/* gp: Generic.Prompt */</span>
+    <span class="k">user-select</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">code-block-caption</span> <span class="nt">span</span><span class="p">.</span><span class="nc">caption-number</span> <span class="p">{</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mf">0.1</span><span class="kt">em</span> <span class="mf">0.3</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">font-style</span><span class="p">:</span> <span class="kc">italic</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">code-block-caption</span> <span class="nt">span</span><span class="p">.</span><span class="nc">caption-text</span> <span class="p">{</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">literal-block-wrapper</span> <span class="p">{</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">1</span><span class="kt">em</span> <span class="mi">1</span><span class="kt">em</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">literal-block-wrapper</span> <span class="nt">div</span><span class="p">.</span><span class="nc">highlight</span> <span class="p">{</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">code</span><span class="p">.</span><span class="nc">descname</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">transparent</span><span class="p">;</span>
+    <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mf">1.2</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">code</span><span class="p">.</span><span class="nc">descclassname</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">transparent</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">code</span><span class="p">.</span><span class="nc">xref</span><span class="o">,</span> <span class="nt">a</span> <span class="nt">code</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">transparent</span><span class="p">;</span>
+    <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h1</span> <span class="nt">code</span><span class="o">,</span> <span class="nt">h2</span> <span class="nt">code</span><span class="o">,</span> <span class="nt">h3</span> <span class="nt">code</span><span class="o">,</span> <span class="nt">h4</span> <span class="nt">code</span><span class="o">,</span> <span class="nt">h5</span> <span class="nt">code</span><span class="o">,</span> <span class="nt">h6</span> <span class="nt">code</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">transparent</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">viewcode-link</span> <span class="p">{</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">viewcode-back</span> <span class="p">{</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="kc">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">viewcode-block</span><span class="p">:</span><span class="nd">target</span> <span class="p">{</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">-1</span><span class="kt">px</span> <span class="mi">-10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* -- math display ---------------------------------------------------------- */</span>
+
+<span class="nt">img</span><span class="p">.</span><span class="nc">math</span> <span class="p">{</span>
+    <span class="k">vertical-align</span><span class="p">:</span> <span class="kc">middle</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">body</span> <span class="nt">div</span><span class="p">.</span><span class="nc">math</span> <span class="nt">p</span> <span class="p">{</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">span</span><span class="p">.</span><span class="nc">eqno</span> <span class="p">{</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">span</span><span class="p">.</span><span class="nc">eqno</span> <span class="nt">a</span><span class="p">.</span><span class="nc">headerlink</span> <span class="p">{</span>
+    <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+    <span class="k">left</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">z-index</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">math</span><span class="p">:</span><span class="nd">hover</span> <span class="nt">a</span><span class="p">.</span><span class="nc">headerlink</span> <span class="p">{</span>
+    <span class="k">visibility</span><span class="p">:</span> <span class="kc">visible</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* -- printout stylesheet --------------------------------------------------- */</span>
+
+<span class="p">@</span><span class="k">media</span> <span class="nt">print</span> <span class="p">{</span>
+    <span class="nt">div</span><span class="p">.</span><span class="nc">document</span><span class="o">,</span>
+    <span class="nt">div</span><span class="p">.</span><span class="nc">documentwrapper</span><span class="o">,</span>
+    <span class="nt">div</span><span class="p">.</span><span class="nc">bodywrapper</span> <span class="p">{</span>
+        <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span>
+        <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nt">div</span><span class="p">.</span><span class="nc">sphinxsidebar</span><span class="o">,</span>
+    <span class="nt">div</span><span class="p">.</span><span class="nc">related</span><span class="o">,</span>
+    <span class="nt">div</span><span class="p">.</span><span class="nc">footer</span><span class="o">,</span>
+    <span class="p">#</span><span class="nn">top-link</span> <span class="p">{</span>
+        <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</body>
+</html>

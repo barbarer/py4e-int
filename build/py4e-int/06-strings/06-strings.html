@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Strings &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=DB047029" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.0.8" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=44FE0709"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/html4css1.css?v=4D8F3FB4"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=3EAD674C"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = true;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'py4e-int';
+    eBookConfig.basecourse = 'py4e-int';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          py4e-int
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span aria-label="Social" class="visuallyhidden">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span aria-label="User" class="visuallyhidden">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span aria-label="Help" class="visuallyhidden">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/runestone/static/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=06-strings'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+  
+  <div class="section" id="strings">
+<h1>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="a-string-is-a-sequence">
+<h2>A string is a sequence<a class="headerlink" href="#a-string-is-a-sequence" title="Permalink to this headline">¶</a></h2>
+<p>index{sequence}
+index{character}
+index{bracket operator}
+index{operator!bracket}</p>
+<p>A string is a <em>sequence</em> of characters. You can access
+the characters one at a time with the bracket operator:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fruit</span> <span class="o">=</span> <span class="s1">&#39;banana&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">letter</span> <span class="o">=</span> <span class="n">fruit</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>index{index}
+index{}</p>
+<p>The second statement extracts the character at index position 1 from the
+<code class="docutils literal notranslate"><span class="pre">fruit</span></code> variable and assigns it to the <code class="docutils literal notranslate"><span class="pre">letter</span></code>
+variable.</p>
+<p>The expression in brackets is called an <em>index</em>. The
+index indicates which character in the sequence you want (hence the
+name).</p>
+<p>But you might not get what you expect:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+<span class="go">a</span>
+</pre></div>
+</div>
+<p>For most people, the first letter of “banana” is “b”, not
+“a”. But in Python, the index is an offset from the beginning
+of the string, and the offset of the first letter is zero.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">letter</span> <span class="o">=</span> <span class="n">fruit</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+<span class="go">b</span>
+</pre></div>
+</div>
+<p>So “b” is the 0th letter (“zero-th”) of “banana”,
+“a” is the 1th letter (“one-th”), and “n” is the
+2th (“two-th”) letter.</p>
+<a class="reference external image-reference" href="height=0.75in&#64;../images/string"><img alt="String Indexes" src="06-strings\height=0.75in&#64;../images/string" /></a>
+<p>index{index!starting at zero}
+index{zero, index starting at}</p>
+<p>You can use any expression, including variables and operators, as an
+index, but the value of the index has to be an integer. Otherwise you
+get:</p>
+<p>index{index}
+index{}
+index{exception!TypeError}
+index{TypeError}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">letter</span> <span class="o">=</span> <span class="n">fruit</span><span class="p">[</span><span class="mf">1.5</span><span class="p">]</span>
+<span class="go">TypeError: string indices must be integers</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getting-the-length-of-a-string-using-len">
+<h2>Getting the length of a string using <code class="docutils literal notranslate"><span class="pre">len</span></code><a class="headerlink" href="#getting-the-length-of-a-string-using-len" title="Permalink to this headline">¶</a></h2>
+<p>index{len function}
+index{function!len}</p>
+<p><code class="docutils literal notranslate"><span class="pre">len</span></code> is a built-in function that returns the number of
+characters in a string:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fruit</span> <span class="o">=</span> <span class="s1">&#39;banana&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">fruit</span><span class="p">)</span>
+<span class="go">6</span>
+</pre></div>
+</div>
+<p>To get the last letter of a string, you might be tempted to try
+something like this:</p>
+<p>index{exception!IndexError}
+index{IndexError}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">fruit</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">last</span> <span class="o">=</span> <span class="n">fruit</span><span class="p">[</span><span class="n">length</span><span class="p">]</span>
+<span class="go">IndexError: string index out of range</span>
+</pre></div>
+</div>
+<p>The reason for the <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> is that there is no letter in
+“banana” with the index 6. Since we started counting at
+zero, the six letters are numbered 0 to 5. To get the last character,
+you have to subtract 1 from <code class="docutils literal notranslate"><span class="pre">length</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">last</span> <span class="o">=</span> <span class="n">fruit</span><span class="p">[</span><span class="n">length</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">last</span><span class="p">)</span>
+<span class="go">a</span>
+</pre></div>
+</div>
+<p>Alternatively, you can use negative indices, which count backward from
+the end of the string. The expression <code class="docutils literal notranslate"><span class="pre">fruit[-1]</span></code> yields the
+last letter, <code class="docutils literal notranslate"><span class="pre">fruit[-2]</span></code> yields the second to last, and so
+on.</p>
+<p>index{index!negative}
+index{negative index}</p>
+</div>
+<div class="section" id="traversal-through-a-string-with-a-loop">
+<h2>Traversal through a string with a loop<a class="headerlink" href="#traversal-through-a-string-with-a-loop" title="Permalink to this headline">¶</a></h2>
+<p>index{traversal}
+index{loop!traversal}
+index{for loop}
+index{loop!for}
+index{statement!for}
+index{traversal}</p>
+<p>A lot of computations involve processing a string one character at a
+time. Often they start at the beginning, select each character in turn,
+do something to it, and continue until the end. This pattern of
+processing is called a <em>traversal</em>. One way to write a
+traversal is with a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">fruit</span><span class="p">):</span>
+    <span class="n">letter</span> <span class="o">=</span> <span class="n">fruit</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>This loop traverses the string and displays each letter on a line by
+itself. The loop condition is <code class="docutils literal notranslate"><span class="pre">index</span> <span class="pre">&lt;</span> <span class="pre">len(fruit)</span></code>, so when
+<code class="docutils literal notranslate"><span class="pre">index</span></code> is equal to the length of the string, the condition
+is false, and the body of the loop is not executed. The last character
+accessed is the one with the index <code class="docutils literal notranslate"><span class="pre">len(fruit)-1</span></code>, which is
+the last character in the string.</p>
+<p><strong>Exercise 1: Write a ``while`` loop that starts at the last
+character in the string and works its way backwards to the first
+character in the string, printing each letter on a separate line, except
+backwards.</strong></p>
+<p>Another way to write a traversal is with a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">fruit</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Each time through the loop, the next character in the string is assigned
+to the variable <code class="docutils literal notranslate"><span class="pre">char</span></code>. The loop continues until no
+characters are left.</p>
+</div>
+<div class="section" id="string-slices">
+<h2>String slices<a class="headerlink" href="#string-slices" title="Permalink to this headline">¶</a></h2>
+<p>index{slice operator}
+index{operator!slice}
+index{index!slice}
+index{string!slice}
+index{slice!string}</p>
+<p>A segment of a string is called a <em>slice</em>. Selecting a
+slice is similar to selecting a character:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Monty Python&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>
+<span class="go">Monty</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">6</span><span class="p">:</span><span class="mi">12</span><span class="p">])</span>
+<span class="go">Python</span>
+</pre></div>
+</div>
+<p>The operator returns the part of the string from the “n-th” character
+to the “m-th” character, including the first but excluding the last.</p>
+<p>If you omit the first index (before the colon), the slice starts at the
+beginning of the string. If you omit the second index, the slice goes to
+the end of the string:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fruit</span> <span class="o">=</span> <span class="s1">&#39;banana&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fruit</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+<span class="go">&#39;ban&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fruit</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+<span class="go">&#39;ana&#39;</span>
+</pre></div>
+</div>
+<p>If the first index is greater than or equal to the second the result is
+an <em>empty string</em>, represented by two quotation marks:</p>
+<p>index{quotation mark}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fruit</span> <span class="o">=</span> <span class="s1">&#39;banana&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fruit</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="go">&#39;&#39;</span>
+</pre></div>
+</div>
+<p>An empty string contains no characters and has length 0, but other than
+that, it is the same as any other string.</p>
+<p><strong>Exercise 2: Given that ``fruit`` is a string, what does
+``fruit[:]`` mean?</strong></p>
+<p>index{copy!slice}
+index{slice!copy}</p>
+</div>
+<div class="section" id="strings-are-immutable">
+<h2>Strings are immutable<a class="headerlink" href="#strings-are-immutable" title="Permalink to this headline">¶</a></h2>
+<p>index{mutability}
+index{immutability}
+index{string!immutable}</p>
+<p>It is tempting to use the operator on the left side of an assignment,
+with the intention of changing a character in a string. For example:</p>
+<p>index{TypeError}
+index{exception!TypeError}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">greeting</span> <span class="o">=</span> <span class="s1">&#39;Hello, world!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">greeting</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;J&#39;</span>
+<span class="go">TypeError: &#39;str&#39; object does not support item assignment</span>
+</pre></div>
+</div>
+<p>The “object” in this case is the string and the “item” is the character
+you tried to assign. For now, an <em>object</em> is the same
+thing as a value, but we will refine that definition later. An
+<em>item</em> is one of the values in a sequence.</p>
+<p>index{object}
+index{item assignment}
+index{assignment!item}
+index{immutability}</p>
+<p>The reason for the error is that strings are <em>immutable</em>,
+which means you can’t change an existing string. The best you can do is
+create a new string that is a variation on the original:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">greeting</span> <span class="o">=</span> <span class="s1">&#39;Hello, world!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">new_greeting</span> <span class="o">=</span> <span class="s1">&#39;J&#39;</span> <span class="o">+</span> <span class="n">greeting</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">new_greeting</span><span class="p">)</span>
+<span class="go">Jello, world!</span>
+</pre></div>
+</div>
+<p>This example concatenates a new first letter onto a slice of
+<code class="docutils literal notranslate"><span class="pre">greeting</span></code>. It has no effect on the original string.</p>
+<p>index{concatenation}</p>
+</div>
+<div class="section" id="looping-and-counting">
+<h2>Looping and counting<a class="headerlink" href="#looping-and-counting" title="Permalink to this headline">¶</a></h2>
+<p>index{counter}
+index{counting and looping}
+index{looping and counting}
+index{looping!with strings}</p>
+<p>The following program counts the number of times the letter
+“a” appears in a string:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;banana&#39;</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This program demonstrates another pattern of computation called a
+<em>counter</em>. The variable <code class="docutils literal notranslate"><span class="pre">count</span></code> is initialized
+to 0 and then incremented each time an “a” is found. When the
+loop exits, <code class="docutils literal notranslate"><span class="pre">count</span></code> contains the result: the total number of
+a’s.</p>
+<p>index{encapsulation}</p>
+<p><strong>Exercise 3: Encapsulate this code in a function named ``count``, and
+generalize it so that it accepts the string and the letter as arguments.</strong></p>
+</div>
+<div class="section" id="the-in-operator">
+<h2>The <code class="docutils literal notranslate"><span class="pre">in</span></code> operator<a class="headerlink" href="#the-in-operator" title="Permalink to this headline">¶</a></h2>
+<p>index{in operator}
+index{operator!in}
+index{boolean operator}
+index{operator!boolean}</p>
+<p>The word <code class="docutils literal notranslate"><span class="pre">in</span></code> is a boolean operator that takes two strings
+and returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the first appears as a substring in the
+second:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="s1">&#39;banana&#39;</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;seed&#39;</span> <span class="ow">in</span> <span class="s1">&#39;banana&#39;</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="string-comparison">
+<h2>String comparison<a class="headerlink" href="#string-comparison" title="Permalink to this headline">¶</a></h2>
+<p>index{string!comparison}
+index{comparison!string}</p>
+<p>The comparison operators work on strings. To see if two strings are
+equal:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">word</span> <span class="o">==</span> <span class="s1">&#39;banana&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All right, bananas.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Other comparison operations are useful for putting words in alphabetical
+order:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">word</span> <span class="o">&lt;</span> <span class="s1">&#39;banana&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Your word,&#39;</span> <span class="o">+</span> <span class="n">word</span> <span class="o">+</span> <span class="s1">&#39;, comes before banana.&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">word</span> <span class="o">&gt;</span> <span class="s1">&#39;banana&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Your word,&#39;</span> <span class="o">+</span> <span class="n">word</span> <span class="o">+</span> <span class="s1">&#39;, comes after banana.&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All right, bananas.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Python does not handle uppercase and lowercase letters the same way that
+people do. All the uppercase letters come before all the lowercase
+letters, so:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Your</span> <span class="n">word</span><span class="p">,</span> <span class="n">Pineapple</span><span class="p">,</span> <span class="n">comes</span> <span class="n">before</span> <span class="n">banana</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>A common way to address this problem is to convert strings to a standard
+format, such as all lowercase, before performing the comparison. Keep
+that in mind in case you have to defend yourself against a man armed
+with a Pineapple.</p>
+</div>
+<div class="section" id="string-methods">
+<h2>String methods<a class="headerlink" href="#string-methods" title="Permalink to this headline">¶</a></h2>
+<p>Strings are an example of Python <em>objects</em>. An object
+contains both data (the actual string itself) and
+<em>methods</em>, which are effectively functions that are built
+into the object and are available to any <em>instance</em> of
+the object.</p>
+<p>Python has a function called <code class="docutils literal notranslate"><span class="pre">dir</span></code> which lists the methods
+available for an object. The <code class="docutils literal notranslate"><span class="pre">type</span></code> function shows the type
+of an object and the <code class="docutils literal notranslate"><span class="pre">dir</span></code> function shows the available
+methods.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">stuff</span> <span class="o">=</span> <span class="s1">&#39;Hello world&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">stuff</span><span class="p">)</span>
+<span class="go">&lt;class &#39;str&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">dir</span><span class="p">(</span><span class="n">stuff</span><span class="p">)</span>
+<span class="go">[&#39;capitalize&#39;, &#39;casefold&#39;, &#39;center&#39;, &#39;count&#39;, &#39;encode&#39;,</span>
+<span class="go">&#39;endswith&#39;, &#39;expandtabs&#39;, &#39;find&#39;, &#39;format&#39;, &#39;format_map&#39;,</span>
+<span class="go">&#39;index&#39;, &#39;isalnum&#39;, &#39;isalpha&#39;, &#39;isdecimal&#39;, &#39;isdigit&#39;,</span>
+<span class="go">&#39;isidentifier&#39;, &#39;islower&#39;, &#39;isnumeric&#39;, &#39;isprintable&#39;,</span>
+<span class="go">&#39;isspace&#39;, &#39;istitle&#39;, &#39;isupper&#39;, &#39;join&#39;, &#39;ljust&#39;, &#39;lower&#39;,</span>
+<span class="go">&#39;lstrip&#39;, &#39;maketrans&#39;, &#39;partition&#39;, &#39;replace&#39;, &#39;rfind&#39;,</span>
+<span class="go">&#39;rindex&#39;, &#39;rjust&#39;, &#39;rpartition&#39;, &#39;rsplit&#39;, &#39;rstrip&#39;,</span>
+<span class="go">&#39;split&#39;, &#39;splitlines&#39;, &#39;startswith&#39;, &#39;strip&#39;, &#39;swapcase&#39;,</span>
+<span class="go">&#39;title&#39;, &#39;translate&#39;, &#39;upper&#39;, &#39;zfill&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">capitalize</span><span class="p">)</span>
+<span class="go">Help on method_descriptor:</span>
+
+<span class="go">capitalize(...)</span>
+<span class="go">    S.capitalize() -&gt; str</span>
+
+<span class="go">    Return a capitalized version of S, i.e. make the first character</span>
+<span class="go">    have upper case and the rest lower case.</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+<p>While the <code class="docutils literal notranslate"><span class="pre">dir</span></code> function lists the methods, and you can use
+<code class="docutils literal notranslate"><span class="pre">help</span></code> to get some simple documentation on a method, a better
+source of documentation for string methods would be
+<a class="reference external" href="https://docs.python.org/library/stdtypes.html#string-methods">https://docs.python.org/library/stdtypes.html#string-methods</a>.</p>
+<p>Calling a <em>method</em> is similar to calling a function (it
+takes arguments and returns a value) but the syntax is different. We call
+a method by appending the method name to the variable name using the
+period as a delimiter.</p>
+<p>For example, the method <code class="docutils literal notranslate"><span class="pre">upper</span></code> takes a string and returns a
+new string with all uppercase letters:</p>
+<p>index{method}
+index{string!method}</p>
+<p>Instead of the function syntax <code class="docutils literal notranslate"><span class="pre">upper(word)</span></code>, it uses the
+method syntax <code class="docutils literal notranslate"><span class="pre">word.upper()</span></code>.</p>
+<p>index{dot notation}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;banana&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">new_word</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">new_word</span><span class="p">)</span>
+<span class="go">BANANA</span>
+</pre></div>
+</div>
+<p>This form of dot notation specifies the name of the method,
+<code class="docutils literal notranslate"><span class="pre">upper</span></code>, and the name of the string to apply the method to,
+<code class="docutils literal notranslate"><span class="pre">word</span></code>. The empty parentheses indicate that this method takes
+no argument.</p>
+<p>index{parentheses!empty}</p>
+<p>A method call is called an <em>invocation</em>; in this case, we
+would say that we are invoking <code class="docutils literal notranslate"><span class="pre">upper</span></code> on the
+<code class="docutils literal notranslate"><span class="pre">word</span></code>.</p>
+<p>index{invocation}</p>
+<p>For example, there is a string method named <code class="docutils literal notranslate"><span class="pre">find</span></code> that
+searches for the position of one string within another:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;banana&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">index</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+<span class="go">1</span>
+</pre></div>
+</div>
+<p>In this example, we invoke <code class="docutils literal notranslate"><span class="pre">find</span></code> on <code class="docutils literal notranslate"><span class="pre">word</span></code> and
+pass the letter we are looking for as a parameter.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">find</span></code> method can find substrings as well as characters:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;na&#39;</span><span class="p">)</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+<p>It can take as a second argument the index where it should start:</p>
+<p>index{optional argument}
+index{argument!optional}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;na&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+<p>One common task is to remove white space (spaces, tabs, or newlines)
+from the beginning and end of a string using the <code class="docutils literal notranslate"><span class="pre">strip</span></code>
+method:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">line</span> <span class="o">=</span> <span class="s1">&#39;  Here we go  &#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="go">&#39;Here we go&#39;</span>
+</pre></div>
+</div>
+<p>Some methods such as <em>startswith</em> return boolean values.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">line</span> <span class="o">=</span> <span class="s1">&#39;Have a nice day&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;Have&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">)</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<p>You will note that <code class="docutils literal notranslate"><span class="pre">startswith</span></code> requires case to match, so
+sometimes we take a line and map it all to lowercase before we do any
+checking using the <code class="docutils literal notranslate"><span class="pre">lower</span></code> method.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">line</span> <span class="o">=</span> <span class="s1">&#39;Have a nice day&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">line</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="go">&#39;have a nice day&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">line</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>In the last example, the method <code class="docutils literal notranslate"><span class="pre">lower</span></code> is called and then we
+use <code class="docutils literal notranslate"><span class="pre">startswith</span></code> to see if the resulting lowercase string
+starts with the letter “h”. As long as we are careful with the order, we
+can make multiple method calls in a single expression.</p>
+<p>index{count method}
+index{method!count}</p>
+<p><a href="#id1"><span class="problematic" id="id2">**</span></a>Exercise 4: There is a string method called <code class="docutils literal notranslate"><span class="pre">count</span></code> that is similar to
+the function in the previous exercise. Read the documentation of this
+method at:</p>
+<div class="system-message" id="id1">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 537); <em><a href="#id2">backlink</a></em></p>
+<p>Inline strong start-string without end-string.</p>
+</div>
+<p><a class="reference external" href="https://docs.python.org/library/stdtypes.html#string-methods">https://docs.python.org/library/stdtypes.html#string-methods</a></p>
+<p>Write an invocation that counts the number of times the letter a occurs
+in “banana”.**</p>
+</div>
+<div class="section" id="parsing-strings">
+<h2>Parsing strings<a class="headerlink" href="#parsing-strings" title="Permalink to this headline">¶</a></h2>
+<p>Often, we want to look into a string and find a substring. For example
+if we were presented a series of lines formatted as follows:</p>
+<p><code class="docutils literal notranslate"><span class="pre">From stephen.marquard&#64;</span></code><a href="#id3"><span class="problematic" id="id4">*</span></a><code class="docutils literal notranslate"><span class="pre">uct.ac.za</span></code><a href="#id5"><span class="problematic" id="id6">*</span></a><code class="docutils literal notranslate"><span class="pre">Sat Jan  5 09:14:16 2008</span></code></p>
+<div class="system-message" id="id3">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 552); <em><a href="#id4">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message" id="id5">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 552); <em><a href="#id6">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<p>and we wanted to pull out only the second half of the address (i.e.,
+<code class="docutils literal notranslate"><span class="pre">uct.ac.za</span></code>) from each line, we can do this by using the
+<code class="docutils literal notranslate"><span class="pre">find</span></code> method and string slicing.</p>
+<p>First, we will find the position of the at-sign in the string. Then we
+will find the position of the first space <em>after</em> the at-sign. And then
+we will use string slicing to extract the portion of the string which we
+are looking for.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="s1">&#39;From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">atpos</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;@&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">atpos</span><span class="p">)</span>
+<span class="go">21</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sppos</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">atpos</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">sppos</span><span class="p">)</span>
+<span class="go">31</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">host</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">atpos</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">sppos</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">host</span><span class="p">)</span>
+<span class="go">uct.ac.za</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+<p>We use a version of the <code class="docutils literal notranslate"><span class="pre">find</span></code> method which allows us to
+specify a position in the string where we want <code class="docutils literal notranslate"><span class="pre">find</span></code> to
+start looking. When we slice, we extract the characters from “one beyond
+the at-sign through up to <em>but not including</em> the space character”.</p>
+<p>The documentation for the <code class="docutils literal notranslate"><span class="pre">find</span></code> method is available at</p>
+<p><a class="reference external" href="https://docs.python.org/library/stdtypes.html#string-methods">https://docs.python.org/library/stdtypes.html#string-methods</a>.</p>
+</div>
+<div class="section" id="format-operator">
+<h2>Format operator<a class="headerlink" href="#format-operator" title="Permalink to this headline">¶</a></h2>
+<p>index{format operator}
+index{operator!format}</p>
+<p>The <em>format operator</em>, <code class="docutils literal notranslate"><span class="pre">%</span></code> allows us to
+construct strings, replacing parts of the strings with the data stored
+in variables. When applied to integers, <code class="docutils literal notranslate"><span class="pre">%</span></code> is the modulus
+operator. But when the first operand is a string, <code class="docutils literal notranslate"><span class="pre">%</span></code> is the
+format operator.</p>
+<p>index{format string}</p>
+<p>The first operand is the <em>format string</em>, which contains
+one or more <em>format sequences</em> that specify how the
+second operand is formatted. The result is a string.</p>
+<p>index{format sequence}</p>
+<p>For example, the format sequence <code class="docutils literal notranslate"><span class="pre">%d</span></code> means that the second operand
+should be formatted as an integer (“d” stands for “decimal”):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">camels</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">camels</span>
+<span class="go">&#39;42&#39;</span>
+</pre></div>
+</div>
+<p>The result is the string ‘42’, which is not to be confused with the
+integer value 42.</p>
+<p>A format sequence can appear anywhere in the string, so you can embed a
+value in a sentence:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">camels</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;I have spotted </span><span class="si">%d</span><span class="s1"> camels.&#39;</span> <span class="o">%</span> <span class="n">camels</span>
+<span class="go">&#39;I have spotted 42 camels.&#39;</span>
+</pre></div>
+</div>
+<p>If there is more than one format sequence in the string, the second
+argument has to be a tuple^[A tuple is a sequence of comma-separated
+values inside a pair of parenthesis. We will cover tuples in Chapter 10].
+Each format sequence is matched with an
+element of the tuple, in order.</p>
+<p>The following example uses <code class="docutils literal notranslate"><span class="pre">%d</span></code> to format an integer, <code class="docutils literal notranslate"><span class="pre">%g</span></code> to format
+a floating-point number (don’t ask why), and <code class="docutils literal notranslate"><span class="pre">%s</span></code> to format a string:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;In </span><span class="si">%d</span><span class="s1"> years I have spotted </span><span class="si">%g</span><span class="s1"> </span><span class="si">%s</span><span class="s1">.&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="s1">&#39;camels&#39;</span><span class="p">)</span>
+<span class="go">&#39;In 3 years I have spotted 0.1 camels.&#39;</span>
+</pre></div>
+</div>
+<p>The number of elements in the tuple must match the number of format
+sequences in the string. The types of the elements also must match the
+format sequences:</p>
+<p>index{exception!TypeError}
+index{TypeError}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1"> </span><span class="si">%d</span><span class="s1"> </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go">TypeError: not enough arguments for format string</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="s1">&#39;dollars&#39;</span>
+<span class="go">TypeError: %d format: a number is required, not str</span>
+</pre></div>
+</div>
+<p>In the first example, there aren’t enough elements; in the second, the
+element is the wrong type.</p>
+<p>The format operator is powerful, but it can be difficult to use. You can
+read more about it at</p>
+<p><a class="reference external" href="https://docs.python.org/library/stdtypes.html#printf-style-string-formatting">https://docs.python.org/library/stdtypes.html#printf-style-string-formatting</a>.</p>
+</div>
+<div class="section" id="debugging">
+<h2>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h2>
+<p>index{debugging}</p>
+<p>A skill that you should cultivate as you program is always asking
+yourself, “What could go wrong here?” or alternatively, “What crazy
+thing might our user do to crash our (seemingly) perfect program?”</p>
+<p>For example, look at the program which we used to demonstrate the
+<code class="docutils literal notranslate"><span class="pre">while</span></code> loop in the chapter on iteration:</p>
+<p>VerbatimInput{../code3/copytildone2.py}</p>
+<p>Look what happens when the user enters an empty line of input:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>&gt; hello there
+hello there
+&gt; # don&#39;t print this
+&gt; print this!
+print this!
+&gt;
+Traceback (most recent call last):
+  File &quot;copytildone.py&quot;, line 3, in &lt;module&gt;
+    if line[0] == &#39;#&#39;:
+IndexError: string index out of range
+</pre></div>
+</div>
+<p>The code works fine until it is presented an empty line. Then there is
+no zero-th character, so we get a traceback. There are two solutions to
+this to make line three “safe” even if the line is empty.</p>
+<p>One possibility is to simply use the <code class="docutils literal notranslate"><span class="pre">startswith</span></code> method
+which returns <code class="docutils literal notranslate"><span class="pre">False</span></code> if the string is empty.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>index{guardian pattern}
+index{pattern!guardian}</p>
+<p>Another way is to safely write the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement using the
+<em>guardian</em> pattern and make sure the second logical
+expression is evaluated only where there is at least one character in
+the string.:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;#&#39;</span><span class="p">:</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="glossary">
+<h2>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h2>
+<p>counter
+:   A variable used to count something, usually initialized to zero and</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 728)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>then incremented.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 729)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{counter}</p>
+<p>empty string
+:   A string with no characters and length 0, represented by two</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 733)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>quotation marks.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 734)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{empty string}</p>
+<p>format operator
+:   An operator, <code class="docutils literal notranslate"><span class="pre">%</span></code>, that takes a format string and a tuple</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 738)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>and generates a string that includes the elements of the tuple
+formatted as specified by the format string.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 740)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{format operator}
+index{operator!format}</p>
+<p>format sequence
+:   A sequence of characters in a format string, like <code class="docutils literal notranslate"><span class="pre">%d</span></code>,</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 745)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>that specifies how a value should be formatted.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 746)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{format sequence}</p>
+<p>format string
+:   A string, used with the format operator, that contains format</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 750)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>sequences.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 751)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{format string}</p>
+<p>flag
+:   A boolean variable used to indicate whether a condition is true or false.
+index{flag}</p>
+<p>invocation
+:   A statement that calls a method.
+index{invocation}</p>
+<p>immutable
+:   The property of a sequence whose items cannot be assigned.
+index{immutability}</p>
+<p>index
+:   An integer value used to select an item in a sequence, such as a</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 767)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>character in a string.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 768)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{index}
+index{}</p>
+<p>item
+:   One of the values in a sequence.
+index{item}</p>
+<p>method
+:   A function that is associated with an object and called using dot</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 777)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>notation.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 778)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{method}</p>
+<p>object
+:   Something a variable can refer to. For now, you can use “object” and</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 782)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>“value” interchangeably.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 783)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{object}</p>
+<p>search
+:   A pattern of traversal that stops when it finds what it is looking</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 787)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>for.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 788)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{search pattern}
+index{pattern!search}</p>
+<p>sequence
+:   An ordered set; that is, a set of values where each value is</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 793)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>identified by an integer index.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 794)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{sequence}</p>
+<p>slice
+:   A part of a string specified by a range of indices.
+index{slice}</p>
+<p>traverse
+:   To iterate through the items in a sequence, performing a similar</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 802)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>operation on each.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 803)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{traversal}</p>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<p><strong>Exercise 5: Take the following Python code that stores a string:</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">str</span> <span class="pre">=</span> <span class="pre">'X-DSPAM-Confidence:</span></code><a href="#id7"><span class="problematic" id="id8">**</span></a><code class="docutils literal notranslate"><span class="pre">0.8475</span></code><a href="#id9"><span class="problematic" id="id10">**</span></a><code class="docutils literal notranslate"><span class="pre">'</span></code></p>
+<div class="system-message" id="id7">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 810); <em><a href="#id8">backlink</a></em></p>
+<p>Inline strong start-string without end-string.</p>
+</div>
+<div class="system-message" id="id9">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\06-strings\06-strings.rst</span>, line 810); <em><a href="#id10">backlink</a></em></p>
+<p>Inline strong start-string without end-string.</p>
+</div>
+<p><strong>Use ``find`` and string slicing to extract the portion of the
+string after the colon character and then use the ``float``
+function to convert the extracted string into a floating point number.</strong></p>
+<p>index{string method}
+index{method!string}</p>
+<p><strong>Exercise 6: Read the documentation of the string methods at
+https://docs.python.org/library/stdtypes.html#string-methods
+You might want to experiment with some of them to make sure you understand
+how they work. ``strip`` and ``replace`` are
+particularly useful.</strong></p>
+<p><strong>The documentation uses a syntax that might be confusing. For example, in
+``find(sub[, start[, end]])``, the brackets indicate optional arguments.
+So ``sub`` is required, but ``start`` is optional, and
+if you include ``start``, then ``end`` is optional.</strong></p>
+</div>
+</div>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 CS Learning 4 U group.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>

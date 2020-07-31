@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title><title><no title></title></title>
+  <meta http-equiv="content-type" content="text/html; charset=None">
+  <link rel="stylesheet" href="..\..\_static\pygments.css" type="text/css">
+</head>
+<body>
+<h2><title><no title></title></h2>
+
+<div class="highlight"><pre><span></span><span class="cm">/*!</span>
+<span class="cm"> * jQuery Internationalization library</span>
+<span class="cm"> *</span>
+<span class="cm"> * Copyright (C) 2011-2013 Santhosh Thottingal, Neil Kandalgaonkar</span>
+<span class="cm"> *</span>
+<span class="cm"> * jquery.i18n is dual licensed GPLv2 or later and MIT. You don&#39;t have to do</span>
+<span class="cm"> * anything special to choose one license or the other and you don&#39;t have to</span>
+<span class="cm"> * notify anyone which license you are using. You are free to use</span>
+<span class="cm"> * UniversalLanguageSelector in commercial projects as long as the copyright</span>
+<span class="cm"> * header is left intact. See files GPL-LICENSE and MIT-LICENSE for details.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @licence GNU General Public Licence 2.0 or later</span>
+<span class="cm"> * @licence MIT License</span>
+<span class="cm"> */</span>
+
+<span class="p">(</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">$</span> <span class="p">)</span> <span class="p">{</span>
+	<span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+
+	<span class="kd">var</span> <span class="nx">MessageParserEmitter</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">language</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">.</span><span class="nx">languages</span><span class="p">[</span> <span class="nb">String</span><span class="p">.</span><span class="nx">locale</span> <span class="p">]</span> <span class="o">||</span> <span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">.</span><span class="nx">languages</span><span class="p">[</span> <span class="s1">&#39;default&#39;</span> <span class="p">];</span>
+	<span class="p">};</span>
+
+	<span class="nx">MessageParserEmitter</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="nx">constructor</span><span class="o">:</span> <span class="nx">MessageParserEmitter</span><span class="p">,</span>
+
+		<span class="cm">/**</span>
+<span class="cm">		 * (We put this method definition here, and not in prototype, to make</span>
+<span class="cm">		 * sure it&#39;s not overwritten by any magic.) Walk entire node structure,</span>
+<span class="cm">		 * applying replacements and template functions when appropriate</span>
+<span class="cm">		 *</span>
+<span class="cm">		 * @param {Mixed} node abstract syntax tree (top node or subnode)</span>
+<span class="cm">		 * @param {Array} replacements for $1, $2, ... $n</span>
+<span class="cm">		 * @return {Mixed} single-string node or array of nodes suitable for</span>
+<span class="cm">		 *  jQuery appending.</span>
+<span class="cm">		 */</span>
+		<span class="nx">emit</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">node</span><span class="p">,</span> <span class="nx">replacements</span> <span class="p">)</span> <span class="p">{</span>
+			<span class="kd">var</span> <span class="nx">ret</span><span class="p">,</span> <span class="nx">subnodes</span><span class="p">,</span> <span class="nx">operation</span><span class="p">,</span>
+				<span class="nx">messageParserEmitter</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+
+			<span class="k">switch</span> <span class="p">(</span> <span class="k">typeof</span> <span class="nx">node</span> <span class="p">)</span> <span class="p">{</span>
+				<span class="k">case</span> <span class="s1">&#39;string&#39;</span><span class="o">:</span>
+				<span class="k">case</span> <span class="s1">&#39;number&#39;</span><span class="o">:</span>
+					<span class="nx">ret</span> <span class="o">=</span> <span class="nx">node</span><span class="p">;</span>
+					<span class="k">break</span><span class="p">;</span>
+				<span class="k">case</span> <span class="s1">&#39;object&#39;</span><span class="o">:</span>
+				<span class="c1">// node is an array of nodes</span>
+					<span class="nx">subnodes</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span> <span class="nx">node</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span> <span class="mi">1</span> <span class="p">),</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">n</span> <span class="p">)</span> <span class="p">{</span>
+						<span class="k">return</span> <span class="nx">messageParserEmitter</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span> <span class="nx">n</span><span class="p">,</span> <span class="nx">replacements</span> <span class="p">);</span>
+					<span class="p">}</span> <span class="p">);</span>
+
+					<span class="nx">operation</span> <span class="o">=</span> <span class="nx">node</span><span class="p">[</span> <span class="mi">0</span> <span class="p">].</span><span class="nx">toLowerCase</span><span class="p">();</span>
+
+					<span class="k">if</span> <span class="p">(</span> <span class="k">typeof</span> <span class="nx">messageParserEmitter</span><span class="p">[</span> <span class="nx">operation</span> <span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;function&#39;</span> <span class="p">)</span> <span class="p">{</span>
+						<span class="nx">ret</span> <span class="o">=</span> <span class="nx">messageParserEmitter</span><span class="p">[</span> <span class="nx">operation</span> <span class="p">](</span> <span class="nx">subnodes</span><span class="p">,</span> <span class="nx">replacements</span> <span class="p">);</span>
+					<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+						<span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span> <span class="s1">&#39;unknown operation &quot;&#39;</span> <span class="o">+</span> <span class="nx">operation</span> <span class="o">+</span> <span class="s1">&#39;&quot;&#39;</span> <span class="p">);</span>
+					<span class="p">}</span>
+
+					<span class="k">break</span><span class="p">;</span>
+				<span class="k">case</span> <span class="s1">&#39;undefined&#39;</span><span class="o">:</span>
+				<span class="c1">// Parsing the empty string (as an entire expression, or as a</span>
+				<span class="c1">// paramExpression in a template) results in undefined</span>
+				<span class="c1">// Perhaps a more clever parser can detect this, and return the</span>
+				<span class="c1">// empty string? Or is that useful information?</span>
+				<span class="c1">// The logical thing is probably to return the empty string here</span>
+				<span class="c1">// when we encounter undefined.</span>
+					<span class="nx">ret</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+					<span class="k">break</span><span class="p">;</span>
+				<span class="k">default</span><span class="o">:</span>
+					<span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span> <span class="s1">&#39;unexpected type in AST: &#39;</span> <span class="o">+</span> <span class="k">typeof</span> <span class="nx">node</span> <span class="p">);</span>
+			<span class="p">}</span>
+
+			<span class="k">return</span> <span class="nx">ret</span><span class="p">;</span>
+		<span class="p">},</span>
+
+		<span class="cm">/**</span>
+<span class="cm">		 * Parsing has been applied depth-first we can assume that all nodes</span>
+<span class="cm">		 * here are single nodes Must return a single node to parents -- a</span>
+<span class="cm">		 * jQuery with synthetic span However, unwrap any other synthetic spans</span>
+<span class="cm">		 * in our children and pass them upwards</span>
+<span class="cm">		 *</span>
+<span class="cm">		 * @param {Array} nodes Mixed, some single nodes, some arrays of nodes.</span>
+<span class="cm">		 * @return {string}</span>
+<span class="cm">		 */</span>
+		<span class="nx">concat</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">nodes</span> <span class="p">)</span> <span class="p">{</span>
+			<span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+
+			<span class="nx">$</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span> <span class="nx">nodes</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">node</span> <span class="p">)</span> <span class="p">{</span>
+				<span class="c1">// strings, integers, anything else</span>
+				<span class="nx">result</span> <span class="o">+=</span> <span class="nx">node</span><span class="p">;</span>
+			<span class="p">}</span> <span class="p">);</span>
+
+			<span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+		<span class="p">},</span>
+
+		<span class="cm">/**</span>
+<span class="cm">		 * Return escaped replacement of correct index, or string if</span>
+<span class="cm">		 * unavailable. Note that we expect the parsed parameter to be</span>
+<span class="cm">		 * zero-based. i.e. $1 should have become [ 0 ]. if the specified</span>
+<span class="cm">		 * parameter is not found return the same string (e.g. &quot;$99&quot; -&gt;</span>
+<span class="cm">		 * parameter 98 -&gt; not found -&gt; return &quot;$99&quot; ) TODO throw error if</span>
+<span class="cm">		 * nodes.length &gt; 1 ?</span>
+<span class="cm">		 *</span>
+<span class="cm">		 * @param {Array} nodes One element, integer, n &gt;= 0</span>
+<span class="cm">		 * @param {Array} replacements for $1, $2, ... $n</span>
+<span class="cm">		 * @return {string} replacement</span>
+<span class="cm">		 */</span>
+		<span class="nx">replace</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">nodes</span><span class="p">,</span> <span class="nx">replacements</span> <span class="p">)</span> <span class="p">{</span>
+			<span class="kd">var</span> <span class="nx">index</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span> <span class="nx">nodes</span><span class="p">[</span> <span class="mi">0</span> <span class="p">],</span> <span class="mi">10</span> <span class="p">);</span>
+
+			<span class="k">if</span> <span class="p">(</span> <span class="nx">index</span> <span class="o">&lt;</span> <span class="nx">replacements</span><span class="p">.</span><span class="nx">length</span> <span class="p">)</span> <span class="p">{</span>
+				<span class="c1">// replacement is not a string, don&#39;t touch!</span>
+				<span class="k">return</span> <span class="nx">replacements</span><span class="p">[</span> <span class="nx">index</span> <span class="p">];</span>
+			<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+				<span class="c1">// index not found, fallback to displaying variable</span>
+				<span class="k">return</span> <span class="s1">&#39;$&#39;</span> <span class="o">+</span> <span class="p">(</span> <span class="nx">index</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">);</span>
+			<span class="p">}</span>
+		<span class="p">},</span>
+
+		<span class="cm">/**</span>
+<span class="cm">		 * Transform parsed structure into pluralization n.b. The first node may</span>
+<span class="cm">		 * be a non-integer (for instance, a string representing an Arabic</span>
+<span class="cm">		 * number). So convert it back with the current language&#39;s</span>
+<span class="cm">		 * convertNumber.</span>
+<span class="cm">		 *</span>
+<span class="cm">		 * @param {Array} nodes List [ {String|Number}, {String}, {String} ... ]</span>
+<span class="cm">		 * @return {string} selected pluralized form according to current</span>
+<span class="cm">		 *  language.</span>
+<span class="cm">		 */</span>
+		<span class="nx">plural</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">nodes</span> <span class="p">)</span> <span class="p">{</span>
+			<span class="kd">var</span> <span class="nx">count</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">language</span><span class="p">.</span><span class="nx">convertNumber</span><span class="p">(</span> <span class="nx">nodes</span><span class="p">[</span> <span class="mi">0</span> <span class="p">],</span> <span class="mi">10</span> <span class="p">)</span> <span class="p">),</span>
+				<span class="nx">forms</span> <span class="o">=</span> <span class="nx">nodes</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span> <span class="mi">1</span> <span class="p">);</span>
+
+			<span class="k">return</span> <span class="nx">forms</span><span class="p">.</span><span class="nx">length</span> <span class="o">?</span> <span class="k">this</span><span class="p">.</span><span class="nx">language</span><span class="p">.</span><span class="nx">convertPlural</span><span class="p">(</span> <span class="nx">count</span><span class="p">,</span> <span class="nx">forms</span> <span class="p">)</span> <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+		<span class="p">},</span>
+
+		<span class="cm">/**</span>
+<span class="cm">		 * Transform parsed structure into gender Usage</span>
+<span class="cm">		 * </span><span class="cp">{{</span><span class="nv">gender</span><span class="o">:</span><span class="nv">gender</span><span class="o">|</span><span class="nf">masculine</span><span class="o">|</span><span class="nf">feminine</span><span class="o">|</span><span class="nf">neutral</span><span class="cp">}}</span><span class="cm">.</span>
+<span class="cm">		 *</span>
+<span class="cm">		 * @param {Array} nodes List [ {String}, {String}, {String} , {String} ]</span>
+<span class="cm">		 * @return {string} selected gender form according to current language</span>
+<span class="cm">		 */</span>
+		<span class="nx">gender</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">nodes</span> <span class="p">)</span> <span class="p">{</span>
+			<span class="kd">var</span> <span class="nx">gender</span> <span class="o">=</span> <span class="nx">nodes</span><span class="p">[</span> <span class="mi">0</span> <span class="p">],</span>
+				<span class="nx">forms</span> <span class="o">=</span> <span class="nx">nodes</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span> <span class="mi">1</span> <span class="p">);</span>
+
+			<span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">language</span><span class="p">.</span><span class="nx">gender</span><span class="p">(</span> <span class="nx">gender</span><span class="p">,</span> <span class="nx">forms</span> <span class="p">);</span>
+		<span class="p">},</span>
+
+		<span class="cm">/**</span>
+<span class="cm">		 * Transform parsed structure into grammar conversion. Invoked by</span>
+<span class="cm">		 * putting </span><span class="cp">{{</span><span class="nv">grammar</span><span class="o">:</span><span class="nv">form</span><span class="o">|</span><span class="nf">word</span><span class="cp">}}</span><span class="cm"> in a message</span>
+<span class="cm">		 *</span>
+<span class="cm">		 * @param {Array} nodes List [{Grammar case eg: genitive}, {String word}]</span>
+<span class="cm">		 * @return {string} selected grammatical form according to current</span>
+<span class="cm">		 *  language.</span>
+<span class="cm">		 */</span>
+		<span class="nx">grammar</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">nodes</span> <span class="p">)</span> <span class="p">{</span>
+			<span class="kd">var</span> <span class="nx">form</span> <span class="o">=</span> <span class="nx">nodes</span><span class="p">[</span> <span class="mi">0</span> <span class="p">],</span>
+				<span class="nx">word</span> <span class="o">=</span> <span class="nx">nodes</span><span class="p">[</span> <span class="mi">1</span> <span class="p">];</span>
+
+			<span class="k">return</span> <span class="nx">word</span> <span class="o">&amp;&amp;</span> <span class="nx">form</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="p">.</span><span class="nx">language</span><span class="p">.</span><span class="nx">convertGrammar</span><span class="p">(</span> <span class="nx">word</span><span class="p">,</span> <span class="nx">form</span> <span class="p">);</span>
+		<span class="p">}</span>
+	<span class="p">};</span>
+
+	<span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span> <span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">.</span><span class="nx">parser</span><span class="p">.</span><span class="nx">emitter</span><span class="p">,</span> <span class="k">new</span> <span class="nx">MessageParserEmitter</span><span class="p">()</span> <span class="p">);</span>
+<span class="p">}(</span> <span class="nx">jQuery</span> <span class="p">)</span> <span class="p">);</span>
+</pre></div>
+</body>
+</html>

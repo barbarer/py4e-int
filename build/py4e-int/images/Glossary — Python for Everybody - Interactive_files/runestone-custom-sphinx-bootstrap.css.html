@@ -1,0 +1,2677 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>&lt;no title&gt; &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=DB047029" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone-custom-sphinx-bootstrap.css?v=5.0.8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../../_static/sql-wasm.js?v=44FE0709"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../../_static/html4css1.css?v=4D8F3FB4"></script>
+    <script src="../../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../../_static/runestone.js?v=3EAD674C"></script>
+    <script src="../../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <script src="../../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../../_static/theme.js?v=D899FB97"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = true;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'py4e-int';
+    eBookConfig.basecourse = 'py4e-int';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("../../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        
+        <a class="navbar-brand" href="../../index.html" aria-label="index-page">
+          
+          py4e-int
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span aria-label="Social" class="visuallyhidden">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span aria-label="User" class="visuallyhidden">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span aria-label="Help" class="visuallyhidden">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/runestone/static/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=runestone-custom-sphinx-bootstrap.css'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+  
+  <p>/* Variables holding theme colors <a href="#id1"><span class="problematic" id="id2">*</span></a>/
+:root {</p>
+<div class="system-message" id="id1">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 1); <em><a href="#id2">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 3)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>–background: #ffffff;
+–outerBackground: #eeeeee;
+–links: #0645ad;
+–bodyFont: #000000;
+–tooltip: #ffffff;
+–grayToWhite: #333333;
+–navbar: #f8f8f8;
+–navbarFont: #707070;
+–navbarFontHover: #000000;
+–alerts: #d9edf7;
+–completionButton: #ffaa2b;
+–completionButtonHover: #ff9f19;
+–admonition: #fcf8e3;
+–admonitionBorder: #fbeed5;
+–codeButtons: #474949;
+–codeButtonsBorder: #474949;
+–dangerAlerts: #f2dede;
+–successAlerts: #dff0d8;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 21)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>[data-theme=”dark”] {</dt><dd><p>–background: #000000;
+–outerBackground: #3d3d3d;
+–links: #1165f0;
+–bodyFont: #ffffff;
+–tooltip: #000000;
+–grayToWhite: #ffffff;
+–navbar: #3d3d3d;
+–navbarFont: #ffffff;
+–navbarFontHover: #d6d6d6;
+–alerts: #714082;
+–completionButton: #650087;
+–completionButtonHover: #560073;
+–admonition: #3d3d3d;
+–admonitionBorder: #262626;
+–codeButtons: #2c0aa6;
+–codeButtonsBorder: #ffffff;
+–dangerAlerts: #8c2626;
+–successAlerts: #217300;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 42)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* custom modification of basic.css for color-contrast (AA compliant) <a href="#id3"><span class="problematic" id="id4">*</span></a>/
+td.linenos pre {</p>
+<div class="system-message" id="id3">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 44); <em><a href="#id4">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 46)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>color: #6b6b6b;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 47)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* custom modification of prettify.css for color-contrast (AA compliant) <a href="#id5"><span class="problematic" id="id6">*</span></a>/
+.str {</p>
+<div class="system-message" id="id5">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 49); <em><a href="#id6">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 51)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>color: #006b00;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 52)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* custom modification of parsons.css for color-contrast (AA compliant) <a href="#id7"><span class="problematic" id="id8">*</span></a>/
+.parsons .block {</p>
+<div class="system-message" id="id7">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 54); <em><a href="#id8">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 56)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>background-color: #fafafa;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 57)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* custom modification of pygments.css for color-contrast (AA compliant) <a href="#id9"><span class="problematic" id="id10">*</span></a>/
+.highlight .c1 {</p>
+<div class="system-message" id="id9">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 59); <em><a href="#id10">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 61)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>color: #376A7B;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 62)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.highlight .nn {</dt><dd><p>color: #0F6C95;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 66)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.highlight .gp {</dt><dd><p>color: #A14C08;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 70)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.highlight .si {</dt><dd><p>color: #3C773D;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 74)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.highlight .nc {</dt><dd><p>color: #0B719D;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 78)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* <cite>Search</cite> functionality’s result custom modification for color-contrast (AA compliant) <a href="#id11"><span class="problematic" id="id12">*</span></a>/
+ul.search li div.context {</p>
+<div class="system-message" id="id11">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 80); <em><a href="#id12">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 82)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>color: #6b6b6b;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 83)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>span.highlighted {</dt><dd><p>color: #4d4d4d;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 87)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* ActiveCode gutter custom modification for color-contrast (AA compliant) <a href="#id13"><span class="problematic" id="id14">*</span></a>/</p>
+<div class="system-message" id="id13">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 89); <em><a href="#id14">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<dl class="simple">
+<dt>.CodeMirror-linenumber {</dt><dd><p>color: #6b6b6b;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 93)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.alert-warning {</dt><dd><p>background-color: var(–admonition);
+border-color: var(–admonitionBorder);</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 98)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* Python code output custom modification for color-contrast (AA compliant) <a href="#id15"><span class="problematic" id="id16">*</span></a>/
+div.ExecutionVisualizer table#pyCodeOutput .lineNo {</p>
+<div class="system-message" id="id15">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 100); <em><a href="#id16">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 102)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>color: #6b6b6b;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 103)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* Runestone custom modifications <a href="#id17"><span class="problematic" id="id18">*</span></a>/</p>
+<div class="system-message" id="id17">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 105); <em><a href="#id18">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<dl class="simple">
+<dt>body {</dt><dd><p>padding-top: 60px;
+background-color: var(–outerBackground);
+counter-reset: rscomponent;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 111)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>pre {</dt><dd><p>margin: 0 0 1em;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 115)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>h5 {</dt><dd><p>font-weight: bold;
+padding: 10px 0;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 120)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* table-of-contents related styles for color-contrast (AA compliant) <a href="#id19"><span class="problematic" id="id20">*</span></a>/
+#table-of-contents a {</p>
+<div class="system-message" id="id19">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 122); <em><a href="#id20">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 124)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>color: var(–links);</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 125)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>#table-of-contents a:hover {</dt><dd><p>color: var(–links);
+text-decoration: underline;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 130)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>#table-of-contents.section {</dt><dd><p>font-size: 16px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 134)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* navbar-brand color contrast (AA compliant) <a href="#id21"><span class="problematic" id="id22">*</span></a>/
+.navbar-default {</p>
+<div class="system-message" id="id21">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 136); <em><a href="#id22">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 138)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>background-color: var(–navbar);</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 139)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.navbar-default .navbar-nav&gt;li {</dt><dd><p>color: var(–navbarFont);</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 143)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.navbar-default .navbar-nav&gt;li&gt;a {</dt><dd><p>color: var(–navbarFont);</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 147)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.navbar-default .navbar-nav&gt;li&gt;a:hover {</dt><dd><p>color: var(–navbarFontHover);</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 151)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.navbar-default .navbar-brand {</dt><dd><p>color: var(–navbarFont);</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 155)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* acknowledgement related styles for color-contrast (AA compliant) <a href="#id23"><span class="problematic" id="id24">*</span></a>/
+.toctree-wrapper {</p>
+<div class="system-message" id="id23">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 157); <em><a href="#id24">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 159)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>font-size: 16px;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 160)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.toctree-wrapper a {</dt><dd><p>color: var(–links);</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 164)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.toctree-wrapper a:hover {</dt><dd><p>color: var(–links);
+text-decoration: underline;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 169)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* index and search related styles for color-contrast (AA compliant) <a href="#id25"><span class="problematic" id="id26">*</span></a>/
+#index-and-search.section {</p>
+<div class="system-message" id="id25">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 171); <em><a href="#id26">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 173)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>font-size: 16px;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 174)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>#index-and-search.section a {</dt><dd><p>color: var(–links);</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 178)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>#index-and-search.section a:hover {</dt><dd><p>color: var(–links);
+text-decoration: underline;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 183)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* custom style for <cite>a</cite> tag for color-contrast (AA compliant) <a href="#id27"><span class="problematic" id="id28">*</span></a>/</p>
+<div class="system-message" id="id27">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 185); <em><a href="#id28">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<dl class="simple">
+<dt>a {</dt><dd><p>color: var(–links);</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 189)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* navbar and menu related styles <a href="#id29"><span class="problematic" id="id30">*</span></a>/
+&#64;media (max-width: 768px) {</p>
+<div class="system-message" id="id29">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 191); <em><a href="#id30">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<blockquote>
+<div><p>/* Remove top padding when top navbar goes collapsed in narrow viewports <a href="#id31"><span class="problematic" id="id32">*</span></a>/
+body {</p>
+<div class="system-message" id="id31">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 194); <em><a href="#id32">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 196)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>padding-top: 0;
+margin: auto auto auto 5px;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 198)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.navbar-fixed-top {</dt><dd><p>position: static;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 202)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+</div></blockquote>
+<p>}</p>
+<p>&#64;media (min-width: 768px) {</p>
+<blockquote>
+<div><p>/* when navbar is collapsed we don’t want any vertical dividers taking up space <a href="#id33"><span class="problematic" id="id34">*</span></a>/
+.navbar .divider-vertical {</p>
+<div class="system-message" id="id33">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 208); <em><a href="#id34">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 210)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>margin: 0 3px;
+border-left: 1px solid #f2f2f2;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 212)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 213)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.container {</dt><dd><p>background-color: var(–background);</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 217)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.section {</dt><dd><p>margin-left: auto;
+margin-right: auto;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 222)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.container {</dt><dd><p>padding-left: 0;
+padding-right: 0;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 227)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.container .section&gt;*:not(.section):not(.ac_section) {</dt><dd><p>max-width: 500pt;
+margin-left: auto;
+margin-right: auto;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 233)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>/* This rule is meant to override the behavior of the</dt><dd><p>previous rule since it is not possible to exclude
+more than one section in the not() part of the rule</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 238)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p><a href="#id35"><span class="problematic" id="id36">*</span></a>/
+.container .section div.full-width.container {</p>
+<div class="system-message" id="id35">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 238); <em><a href="#id36">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 240)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>margin-left: auto;
+margin-right: auto;
+max-width: 90%;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 243)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.container .section&gt;img {</dt><dd><p>display: block;
+margin-left: auto;
+margin-right: auto;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 249)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>.container .section .parsons,
+.container .section .parsons .sortable-code-container,
+.container .section .cd_section {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 254)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>max-width: none;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 255)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.navbar&gt;.container .navbar-brand {</dt><dd><p>margin-left: 0;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 259)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.navbar&gt;.container {</dt><dd><p>background-color: var(–navbar);</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 263)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.footer&gt;.container {</dt><dd><p>background-color: var(–outerBackground);</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 267)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.footer&gt;.container p&gt;a {</dt><dd><p>color: var(–links);</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 271)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.brand-logo {</dt><dd><p>float: left;
+display: block;
+background-size: 40px 40px !important;
+width: 40px;
+height: 40px;
+margin-top: 4px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 280)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.social-menu {</dt><dd><p>width: 220px;
+padding: 10px 10px 15px 20px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 285)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.fb-like {</dt><dd><p>margin-top: 7px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 289)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>.fb_iframe_widget span,
+.fb_iframe_widget iframe {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 293)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>height: 20px !important;
+width: 82px !important;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 295)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.twitter-follow-button {</dt><dd><p>margin-top: 10px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 299)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.gittip {</dt><dd><p>margin-top: 8px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 303)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.gittip-button {</dt><dd><p>margin-bottom: -6px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 307)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.dropdown-menu&gt;li&gt;span {</dt><dd><p>display: block;
+padding: 3px 20px;
+clear: both;
+font-weight: bold;
+line-height: 20px;
+color: var(–grayToWhite);
+white-space: nowrap;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 317)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.dropdown-menu&gt;li&gt;a {</dt><dd><p>color: var(–grayToWhite);</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 321)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.loggedinuser {</dt><dd><p>font-weight: bold;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 325)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* end navbar and menu related styles <a href="#id37"><span class="problematic" id="id38">*</span></a>/</p>
+<div class="system-message" id="id37">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 327); <em><a href="#id38">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<dl class="simple">
+<dt>.CodeMirror {</dt><dd><p>margin: 0 0 1em 0;
+background-color: var(–background);
+clear: both;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 333)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl>
+<dt>.CodeMirror-scroll {</dt><dd><dl>
+<dt>/* this allows CM elements to be resized to (almost) any</dt><dd><ul>
+<li><p>height while still relying on max-height (which keeps</p></li>
+<li><p>the CM editors to no more than the size needed</p></li>
+<li><p>unless resized) <a href="#id39"><span class="problematic" id="id40">*</span></a>/</p>
+<div class="system-message" id="id39">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 339); <em><a href="#id40">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 340)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>max-height: 30em;
+min-width: 30em;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 342)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.ac_section .CodeMirror pre {</dt><dd><p>-moz-border-radius: 0;
+-webkit-border-radius: 0;
+-o-border-radius: 0;
+border-radius: 0;
+border-width: 0;
+margin: 0;
+padding: 0;
+background: transparent;
+font-family: Monaco, Courier New, monospace;
+font-size: inherit;
+padding: 0;
+margin: 0;
+white-space: pre;
+word-wrap: normal;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 359)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>button.btn,
+btn.btn-sm,
+input[type=”submit”].btn.btn-sm,
+input[type=”button”].btn.btn-sm {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 365)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>font-size: 1em;
+font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 367)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.btn {</dt><dd><p>margin: 5px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 371)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl>
+<dt>.btn.disabled {</dt><dd><p>/* needed in Bootstrap 3 to allow tooltips on disabled buttons <a href="#id41"><span class="problematic" id="id42">*</span></a>/
+pointer-events: auto;</p>
+<div class="system-message" id="id41">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 374); <em><a href="#id42">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 376)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>.btn-default,
+.btn-default.disabled,
+.btn-default[disabled],
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 383)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>color: #ffffff;
+background-color: var(–codeButtons);
+border-color: var(codeButtonsBorder);</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 386)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 392)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>background-color: #3a3c3c;
+border-color: #2e2f2f;
+color: #ffffff;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 395)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>input[type=”radio”],
+input[type=”checkbox”] {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 399)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>margin-right: 5px;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 400)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.tooltip {</dt><dd><p>z-index: 2000 !important;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 404)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.tooltip.in {</dt><dd><p>opacity: 0.8;
+filter: alpha(opacity=80);</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 409)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>h2 {</dt><dd><p>margin-top: 20px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 413)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.alert form {</dt><dd><p>margin-bottom: 0;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 417)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* default bookstrap alert color is hard to read (low contrast). <a href="#id43"><span class="problematic" id="id44">*</span></a>/
+.alert {</p>
+<div class="system-message" id="id43">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 419); <em><a href="#id44">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 421)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>color: var(–grayToWhite);
+padding: 10px;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 423)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.alert-info {</dt><dd><p>background-color: var(–alerts);</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 427)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.alert-danger {</dt><dd><p>background-color: var(–dangerAlerts);</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 431)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* override the color styles applied by Skulpt to the unittest results divs <a href="#id45"><span class="problematic" id="id46">*</span></a>/
+.unittest-results.alert-danger {</p>
+<div class="system-message" id="id45">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 433); <em><a href="#id46">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 435)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><dl class="simple">
+<dt>background-color: var(–dangerAlerts);</dt><dd><p>!important;</p>
+</dd>
+</dl>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 437)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.unittest-results.alert-success {</dt><dd><p>background-color: var(–successAlerts) !important;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 441)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.alert label {</dt><dd><p>font-weight: normal;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 445)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl>
+<dt>/* These admonition styles styles are copied from the Bootstrap .alert classes.</dt><dd><p>Most of the !important declarations are to override the Sphinx basic.css styles <a href="#id47"><span class="problematic" id="id48">*</span></a>/</p>
+<div class="system-message" id="id47">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 448); <em><a href="#id48">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+</dd>
+<dt>.admonition {</dt><dd><p>padding: 8px 35px 8px 14px !important;
+margin-bottom: 20px !important;
+margin-top: 20px !important;
+text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+background-color: var(–admonition);
+border: 1px solid #fbeed5;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 459)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* .alert-danger <a href="#id49"><span class="problematic" id="id50">*</span></a>/
+.admonition.caution {</p>
+<div class="system-message" id="id49">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 461); <em><a href="#id50">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 463)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>color: #A33F3E;
+background-color: #f2dede;
+border-color: #eed3d7;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 466)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* .alert-info <a href="#id51"><span class="problematic" id="id52">*</span></a>/
+.admonition.tip,
+.admonition.note {</p>
+<div class="system-message" id="id51">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 468); <em><a href="#id52">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 471)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>color: #333;
+background-color: #d9edf7;
+border-color: #bce8f1;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 474)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* from web2py.css <a href="#id53"><span class="problematic" id="id54">*</span></a>/
+div.flash {</p>
+<div class="system-message" id="id53">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 476); <em><a href="#id54">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 478)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>font-weight: bold;
+position: fixed;
+padding: 10px;
+top: 55px;
+right: 45px;
+opacity: 0.95;
+margin: 0 0 10px 10px;
+vertical-align: middle;
+cursor: pointer;
+color: #ffffff;
+background-color: #000;
+border: 2px solid #fff;
+border-radius: 8px;
+-moz-border-radius: 8px;
+-webkit-border-radius: 8px;
+background-image: -webkit-linear-gradient(top, #222, #000);
+background-image: -o-linear-gradient(top, #222, #000);
+background-image: -moz-linear-gradient(90deg, #222, #000);
+background-image: linear-gradient(top, #222, #000);
+background-repeat: repeat-x;
+font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
+-webkit-font-smoothing: antialiased;
+z-index: 2000;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 501)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* Styles for the login, registration, and Janrain forms <a href="#id55"><span class="problematic" id="id56">*</span></a>/
+#web2py_user_form {</p>
+<div class="system-message" id="id55">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 503); <em><a href="#id56">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 505)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>margin-top: 10px;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 506)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>#web2py_user_form form {</dt><dd><p>float: left;
+margin-right: 150px;
+padding-top: 3px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 512)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>#web2py_user_form td {</dt><dd><p>padding-bottom: 15px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 516)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>#web2py_user_form td.w2p_fw {</dt><dd><p>width: 299px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 520)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>#auth-actions {</dt><dd><p>margin-top: 50px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 524)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>#sign_in_text td {</dt><dd><p>font-size: 17px;
+color: #333;
+font-family: ‘lucida grande’, Verdana, sans-serif;
+padding-bottom: 13px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 531)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>#auth_user_remember {</dt><dd><p>margin-top: -20px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 535)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* End login, registration, Janrain styles <a href="#id57"><span class="problematic" id="id58">*</span></a>/</p>
+<div class="system-message" id="id57">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 537); <em><a href="#id58">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<p>/* end-of-chapter exercises styles <a href="#id59"><span class="problematic" id="id60">*</span></a>/
+#exercises&gt;ol&gt;li,
+#programming-exercises&gt;ol&gt;li {</p>
+<div class="system-message" id="id59">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 539); <em><a href="#id60">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 542)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>margin-bottom: 30px;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 543)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>#exercises&gt;ol&gt;li:nth-child(even),
+#programming-exercises&gt;ol&gt;li:nth-child(even) {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 547)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>padding: 1.2em 1.4em;
+background: #faf7df;
+border: 1px solid #fbeed5;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 553)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* End chapter exercises styles <a href="#id61"><span class="problematic" id="id62">*</span></a>/</p>
+<div class="system-message" id="id61">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 555); <em><a href="#id62">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<p>/* Modal dialog styles (scratch activecode, compare me, etc) <a href="#id63"><span class="problematic" id="id64">*</span></a>/
+.scratch-ac-modal {</p>
+<div class="system-message" id="id63">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 557); <em><a href="#id64">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 559)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>width: 90%;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 560)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.compare-modal .progress {</dt><dd><p>margin-bottom: 0;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 564)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.compare-me-progress {</dt><dd><p>width: 100%;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 568)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>.compare-me-progress .progress-bar,
+.unittest-results-progress .progress-bar {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 572)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>color: #333;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 573)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.modal-body {</dt><dd><p>background-color: var(–background);</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 577)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.modal-header {</dt><dd><p>background-color: var(–background);</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 581)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.unittest-results-progress {</dt><dd><p>width: 25%;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 585)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.compare-modal {</dt><dd><p>width: 350px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 589)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.compare-modal table {</dt><dd><p>border-collapse: separate;
+border-spacing: 10px 5px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 594)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl>
+<dt>.codelens-modal {</dt><dd><p>/* we set some custom position styles so that the modal doesn’t obscure the codelens visualizer <a href="#id65"><span class="problematic" id="id66">*</span></a>/
+top: 20%;
+right: 20%;
+left: auto;
+bottom: auto;</p>
+<div class="system-message" id="id65">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 597); <em><a href="#id66">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 602)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>&#64;media (max-width: 768px) {</p>
+<blockquote>
+<div><p>/* remove any custom position styles when the screen is small (mobile devices)
+to prevent the modal from being partially off the screen <a href="#id67"><span class="problematic" id="id68">*</span></a>/
+.codelens-modal {</p>
+<div class="system-message" id="id67">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 606); <em><a href="#id68">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 609)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>top: 0 !important;
+right: 0 !important;
+bottom: 0 !important;
+left: 0 !important;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 613)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 614)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.codelens-modal&gt;.modal-dialog {</dt><dd><p>width: 400px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 618)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* End modal dialog styles <a href="#id69"><span class="problematic" id="id70">*</span></a>/</p>
+<div class="system-message" id="id69">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 620); <em><a href="#id70">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<dl class="simple">
+<dt>.footnote.table {</dt><dd><p>width: auto;
+margin-bottom: 10px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 625)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.footnote.table td.label {</dt><dd><p>padding: 2px 5px 2px 5px;
+background-color: #d9edf7;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 630)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.ac-canvas {</dt><dd><p>background-color: white;
+display: inline-block;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 635)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.video-play-overlay {</dt><dd><p>position: relative;
+top: -150px;
+left: 44%;
+height: 85px;
+width: 130px;
+background-position: center;
+background-repeat: no-repeat;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 645)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.video_popup video {</dt><dd><p>width: 500pt;
+cursor: pointer;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 650)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.ui-sortable-helper {</dt><dd><p>height: auto !important;
+width: auto !important;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 655)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.navLink {</dt><dd><p>z-index: 2;
+display: inline;
+bottom: 65px;
+position: fixed;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 662)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>#relations-next {</dt><dd><p>right: 35px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 666)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>#relations-prev {</dt><dd><p>left: 35px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 670)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>&#64;media (max-width: 600px) {</p>
+<blockquote>
+<div><p>/* Styling definitions for chevron function in bookfuncs.js <a href="#id71"><span class="problematic" id="id72">*</span></a>/
+.navLink {</p>
+<div class="system-message" id="id71">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 674); <em><a href="#id72">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 676)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>z-index: 2;
+display: inline;
+position: static;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 679)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>ul#top-relations-console,
+ul#bottom-relations-console {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 683)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>list-style: none;
+text-align: center;
+width: 100%;
+margin: 0 auto;
+padding: 40px 0 20px 0;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 688)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>#top-relations-next,
+#top-relations-prev,
+#bottom-relations-next,
+#bottom-relations-prev {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 694)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>width: 25%;
+padding: 0 20px;
+display: inline;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 697)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 698)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.navLink a {</dt><dd><p>color: #999;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 702)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>#completionButton {</dt><dd><p>margin-top: 25px;
+margin-bottom: 15px;
+padding-left: 70px;
+padding-right: 70px;
+color: #ffffff;
+font-weight: bold;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 711)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.buttonAskCompletion {</dt><dd><p>background-color: var(–completionButton);
+border-color: var(–completionButtonHover);
+font-weight: bold;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 717)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.buttonAskCompletion:hover {</dt><dd><p>background-color: var(–completionButtonHover);
+border-color: var(–completionButtonHover);</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 722)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.buttonConfirmCompletion {</dt><dd><p>background-color: #50d392;
+border-color: #3dc682;</p>
+</dd>
+</dl>
+<p>}</p>
+<dl class="simple">
+<dt>.buttonConfirmCompletion:hover {</dt><dd><p>background-color: #3dc682;
+border-color: #3dc682;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 733)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.navLinkBg {</dt><dd><p>height: 40px;
+background-color: #ffffff;
+z-index: 1;
+position: fixed;
+bottom: 55px;
+color: #999;
+font-weight: bold;
+-webkit-box-shadow: 0px 0px 3px rgba(50, 50, 50, 0.5);
+-moz-box-shadow: 0px 0px 3px rgba(50, 50, 50, 0.5);
+box-shadow: 0px 0px 3px rgba(50, 50, 50, 0.5);</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 746)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.navLinkBg:hover {</dt><dd><p>color: #999;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 750)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>#navLinkBgRight {</dt><dd><p>right: -1000px;
+padding: 10px 15px 0 65px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 755)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>#navLinkBgLeft {</dt><dd><p>left: -65px;
+padding-left: 15px;
+padding-right: 50px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 761)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.activehtml {</dt><dd><p>width: 100%;
+height: 400px;
+background-color: #ffffff;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 767)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.container .section&gt;div.sidebar {</dt><dd><p>margin: 0 0 0.5em 1em;
+width: auto;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 772)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>a.disqus_thread_link {</dt><dd><p>display: block;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 776)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.reveal_button {</dt><dd><p>display: block;
+margin-left: 0;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 781)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>iframe[seamless] {</dt><dd><p>display: block;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 785)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl>
+<dt>&#64;media (min-width: 768px) {</dt><dd><dl class="simple">
+<dt>.container .section&gt;div.sidebar {</dt><dd><p>margin: 0 3em 0.5em 1em;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 790)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 791)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl>
+<dt>&#64;media (min-width: 992px) {</dt><dd><dl class="simple">
+<dt>.container .section&gt;div.sidebar {</dt><dd><p>margin: 0 11em 0.5em 1em;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 796)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 797)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl>
+<dt>&#64;media (min-width: 1200px) {</dt><dd><dl class="simple">
+<dt>.container .section&gt;div.sidebar {</dt><dd><p>margin: 0 18em 0.5em 1em;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 802)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 803)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.ExecutionVisualizer table.visualizer {</dt><dd><p>width: auto;
+margin-left: auto;
+margin-right: auto;
+background-color: #ffffff;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 811)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* TIMED ASSESSMENT BUTTON STYLES <a href="#id73"><span class="problematic" id="id74">*</span></a>/
+ul#pageNums,
+ul#pageNums li {</p>
+<div class="system-message" id="id73">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 814); <em><a href="#id74">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 817)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>text-align: center;
+padding: 10px 0;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 819)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.pagination&gt;li&gt;a:hover {</dt><dd><p>background-color: #eee !important;
+color: #000 !important;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 825)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* The following override styles in Bootstrap distribution file (bootstrap.min.css) <a href="#id75"><span class="problematic" id="id76">*</span></a>/</p>
+<div class="system-message" id="id75">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 828); <em><a href="#id76">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<p>.pagination&gt;.active&gt;a,
+.pagination&gt;.active&gt;span {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 832)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>background-color: #428bca !important;
+color: #ffffff !important;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 834)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.col-md-6-override {</dt><dd><p>text-align: center !important;
+max-width: 100% !important;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 839)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* end <a href="#id77"><span class="problematic" id="id78">*</span></a>/</p>
+<div class="system-message" id="id77">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 841); <em><a href="#id78">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<p>.pagination&gt;.answered&gt;a,
+.pagination&gt;.answered&gt;span {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 847)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>background-color: #eee;
+color: #000;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 849)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>.pagination&gt;.correctCount&gt;a,
+.pagination&gt;.correctCount&gt;span {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 853)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>background-color: #dff0d8;
+color: #000000;
+border-color: #000000;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 856)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>.pagination&gt;.skippedCount&gt;a,
+.pagination&gt;.skippedCount&gt;span {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 860)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>background-color: #fcf8e3;
+color: #000000;
+border-color: #000000;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 863)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>.pagination&gt;.incorrectCount&gt;a,
+.pagination&gt;.incorrectCount&gt;span {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 867)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>background-color: #f2dede;
+color: #000000;
+border-color: #000000;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 870)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* END TIMED ASSESSMENT BUTTON STYLES <a href="#id79"><span class="problematic" id="id80">*</span></a>/</p>
+<div class="system-message" id="id79">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 872); <em><a href="#id80">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<dl class="simple">
+<dt>.sltooltip {</dt><dd><p>position: absolute;
+z-index: 1020;
+display: block;
+padding-bottom: 5px;
+font-size: 11px;
+visibility: visible;
+margin-top: -2px;
+bottom: 120%;
+margin-left: -2em;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 884)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.sltooltip .sltooltip-arrow {</dt><dd><p>bottom: 0;
+left: 50%;
+margin-left: -5px;
+border-top: 5px solid #000000;
+border-right: 5px solid transparent;
+border-left: 5px solid transparent;
+position: absolute;
+width: 0;
+height: 0;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 896)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.sltooltip-inner {</dt><dd><p>max-width: 200px;
+padding: 3px 8px;
+color: var(–tooltip);
+text-align: center;
+text-decoration: none;
+background-color: #000000;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 908)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>ul.dropdown-menu.globaltoc {</dt><dd><p>max-height: 700px;
+overflow: auto;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 913)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.globaltoc span.caption-text {</dt><dd><p>display: inline-block;
+font-weight: bold;
+font-size: large;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 920)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* Style lp textareas. <a href="#id81"><span class="problematic" id="id82">*</span></a>/
+textarea#lp-result {</p>
+<div class="system-message" id="id81">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 923); <em><a href="#id82">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 925)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>width: 100%;
+height: 10em;
+font-family: monospace;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 928)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl>
+<dt>/*</dt><dd><ul class="simple">
+<li><p>Hide only visually, but have it available for screen readers:</p></li>
+<li><p><a class="reference external" href="https://snook.ca/archives/html_and_css/hiding-content-for-accessibility">https://snook.ca/archives/html_and_css/hiding-content-for-accessibility</a></p></li>
+<li></li>
+<li><ol class="arabic simple">
+<li><p>For long content, line feeds are not interpreted as spaces and small width</p></li>
+</ol>
+</li>
+<li><p>causes content to wrap 1 word per line:</p></li>
+<li><p><a class="reference external" href="https://medium.com/&#64;jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe">https://medium.com/&#64;jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe</a></p></li>
+</ul>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 938)</p>
+<p>Bullet list ends without a blank line; unexpected unindent.</p>
+</div>
+<p><a href="#id83"><span class="problematic" id="id84">*</span></a>/</p>
+<div class="system-message" id="id83">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 938); <em><a href="#id84">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+</dd>
+<dt>.visuallyhidden {</dt><dd><p>border: 0;
+clip: rect(0 0 0 0);
+height: 1px;
+margin: -1px;
+overflow: hidden;
+padding: 0;
+position: absolute;
+width: 1px;
+white-space: nowrap;
+/* 1 <a href="#id85"><span class="problematic" id="id86">*</span></a>/</p>
+<div class="system-message" id="id85">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 941); <em><a href="#id86">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 951)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl>
+<dt>/*</dt><dd><ul class="simple">
+<li><p>Extends the .visuallyhidden class to allow the element</p></li>
+<li><p>to be focusable when navigated to via the keyboard:</p></li>
+<li><p><a class="reference external" href="https://www.drupal.org/node/897638">https://www.drupal.org/node/897638</a></p></li>
+</ul>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 957)</p>
+<p>Bullet list ends without a blank line; unexpected unindent.</p>
+</div>
+<p><a href="#id87"><span class="problematic" id="id88">*</span></a>/</p>
+<div class="system-message" id="id87">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 957); <em><a href="#id88">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+</dd>
+</dl>
+<p>.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 961)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>clip: auto;
+height: auto;
+margin: 0;
+overflow: visible;
+position: static;
+width: auto;
+white-space: inherit;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 968)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.blockquote {</dt><dd><p>text-align: center;
+font-size: large;
+font-style: italic;
+padding-left: 2em;
+padding-right: 2em;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 977)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>#scprogresscontainer {</dt><dd><p>width: 50%;
+margin-left: auto;
+margin-right: auto;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 984)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>#subchapterprogress&gt;div {</dt><dd><p>background: green;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 988)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>#subchapterprogress&gt;div.loggedout {</dt><dd><p>background: lightgray;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 992)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.runestone_caption {</dt><dd><p>text-align: center;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 996)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.runestone_caption:before {</dt><dd><p>content: “Activity: “counter(rscomponent) ” – “;
+counter-increment: rscomponent;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 1001)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>body {</dt><dd><p>color: var(–bodyFont);</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 1005)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.jupyter_container .output  {</dt><dd><p>margin-top: 10px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 1009)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.jupyter_container .output td {</dt><dd><p>padding-left: 5px;
+padding-right: 5px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 1014)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.jupyter_container .output th {</dt><dd><p>padding-left: 5px;
+padding-right: 5px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 1019)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/<em>Theme toggle</em>/
+.theme-switch-wrapper {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 1023)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>display: flex;
+align-items: center;</p>
+<dl class="simple">
+<dt>em {</dt><dd><p>margin-left: 10px;
+font-size: 1rem;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 1029)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 1030)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.theme-switch {</dt><dd><p>display: inline-block;
+height: 34px;
+position: relative;
+width: 60px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 1037)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.theme-switch input {</dt><dd><p>display: none;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 1041)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.slider {</dt><dd><p>background-color: #ccc;
+bottom: 0;
+cursor: pointer;
+left: 0;
+position: absolute;
+right: 0;
+top: 0;
+transition: .4s;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 1052)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.slider:before {</dt><dd><p>background-color: #fff;
+bottom: 4px;
+content: “”;
+height: 26px;
+left: 4px;
+position: absolute;
+transition: .4s;
+width: 26px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 1063)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>input:checked+.slider {</dt><dd><p>background-color: #66bb6a;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 1067)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>input:checked+.slider:before {</dt><dd><p>transform: translateX(26px);</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 1071)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.slider.round {</dt><dd><p>border-radius: 34px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 1075)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.slider.round:before {</dt><dd><p>border-radius: 50%;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\images\Glossary — Python for Everybody - Interactive_files\runestone-custom-sphinx-bootstrap.css</span>, line 1079)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/<em>End theme toggle</em>/</p>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 CS Learning 4 U group.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>

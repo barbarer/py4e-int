@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Variables, expressions, and statements &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=DB047029" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.0.8" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=44FE0709"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/html4css1.css?v=4D8F3FB4"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=3EAD674C"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = true;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'py4e-int';
+    eBookConfig.basecourse = 'py4e-int';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          py4e-int
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span aria-label="Social" class="visuallyhidden">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span aria-label="User" class="visuallyhidden">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span aria-label="Help" class="visuallyhidden">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/runestone/static/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=02-variables'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+  
+  <div class="section" id="variables-expressions-and-statements">
+<h1>Variables, expressions, and statements<a class="headerlink" href="#variables-expressions-and-statements" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="values-and-types">
+<h2>Values and types<a class="headerlink" href="#values-and-types" title="Permalink to this headline">¶</a></h2>
+<p>index{value}
+index{type}
+index{string}</p>
+<p>A <em>value</em> is one of the basic things a program works
+with, like a letter or a number. The values we have seen so far are
+1, 2, and “Hello, World!”</p>
+<p>These values belong to different <em>types</em>: 2
+is an integer, and “Hello, World!” is a <em>string</em>, so
+called because it contains a “string” of letters. You (and the
+interpreter) can identify strings because they are enclosed in quotation
+marks.</p>
+<p>index{quotation mark}</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">print</span></code> statement also works for integers. We use the
+<code class="docutils literal notranslate"><span class="pre">python</span></code> command to start the interpreter.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="mi">4</span>
+</pre></div>
+</div>
+<p>If you are not sure what type a value has, the interpreter can tell you.</p>
+
+<div data-childcomponent="02_type_str_int" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=02_type_str_int data-lang="python" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static>
+type('Hello, World!')
+type(17)
+</textarea>
+</div>
+<p>Not surprisingly, strings belong to the type <code class="docutils literal notranslate"><span class="pre">str</span></code> and
+integers belong to the type <code class="docutils literal notranslate"><span class="pre">int</span></code>. Less obviously, numbers
+with a decimal point belong to a type called <code class="docutils literal notranslate"><span class="pre">float</span></code>, because
+these numbers are represented in a format called <em>floating
+point</em>.</p>
+<p>index{type}
+index{string type}
+index{class!str}
+index{int type}
+index{class!int}
+index{float type}
+index{class!float}</p>
+
+<div data-childcomponent="02_type_float" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=02_type_float data-lang="python" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static>
+type(3.2)
+<class 'float'>
+</textarea>
+</div>
+<p>What about values like “17” and “3.2”? They look like numbers, but
+they are in quotation marks like strings.</p>
+<p>index{quotation mark}</p>
+
+<div data-childcomponent="02_type_str_nums" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=02_type_str_nums data-lang="python" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static>
+type('17')
+type('3.2')
+</textarea>
+</div>
+<p>They’re strings.</p>
+<p>When you type a large integer, you might be tempted to use commas
+between groups of three digits, as in 1,000,000. This is
+not a legal integer in Python, but it is legal:</p>
+
+<div data-childcomponent="02_print_nums_with_commas" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=02_print_nums_with_commas data-lang="python" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static>
+print(1,000,000)
+1 0 0
+</textarea>
+</div>
+<p>Well, that’s not what we expected at all! Python interprets
+1,000,000 as a comma-separated sequence of integers, which
+it prints with spaces between.</p>
+<p>index{semantic error}
+index{error!semantic}
+index{error message}</p>
+<p>This is the first example we have seen of a semantic error: the code
+runs without producing an error message, but it doesn’t do the “right”
+thing.</p>
+</div>
+<div class="section" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<p>index{variable}
+index{assignment statement}
+index{statement!assignment}</p>
+<p>One of the most powerful features of a programming language is the
+ability to manipulate <em>variables</em>. A variable is a name
+that refers to a value.</p>
+<p>An <em>assignment statement</em> creates new variables and gives
+them values:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;And now for something completely different&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">n</span> <span class="o">=</span> <span class="mi">17</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pi</span> <span class="o">=</span> <span class="mf">3.1415926535897931</span>
+</pre></div>
+</div>
+<p>This example makes three assignments. The first assigns a string to a
+new variable named <code class="docutils literal notranslate"><span class="pre">message</span></code>; the second assigns the integer
+17 to <code class="docutils literal notranslate"><span class="pre">n</span></code>; the third assigns the (approximate)
+value of $pi$ to <code class="docutils literal notranslate"><span class="pre">pi</span></code>.</p>
+<p>To display the value of a variable, you can use a print statement:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="go">17</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>
+<span class="go">3.141592653589793</span>
+</pre></div>
+</div>
+<p>The type of a variable is the type of the value it refers to.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+<span class="go">&lt;class &#39;str&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="go">&lt;class &#39;int&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>
+<span class="go">&lt;class &#39;float&#39;&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="variable-names-and-keywords">
+<h2>Variable names and keywords<a class="headerlink" href="#variable-names-and-keywords" title="Permalink to this headline">¶</a></h2>
+<p>index{keyword}</p>
+<p>Programmers generally choose names for their variables that are
+meaningful and document what the variable is used for.</p>
+<p>Variable names can be arbitrarily long. They can contain both letters
+and numbers, but they cannot start with a number. It is legal to use
+uppercase letters, but it is a good idea to begin variable names with a
+lowercase letter (you’ll see why later).</p>
+<p>The underscore character ( _ ) can appear in a name. It is often used in
+names with multiple words, such as <code class="docutils literal notranslate"><span class="pre">my_name</span></code> or
+<code class="docutils literal notranslate"><span class="pre">airspeed_of_unladen_swallow</span></code>. Variable names can start with an
+underscore character, but we generally avoid doing this unless we are
+writing library code for others to use.</p>
+<p>index{underscore character}</p>
+<p>If you give a variable an illegal name, you get a syntax error:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>76trombones = &#39;big parade&#39;
+SyntaxError: invalid syntax
+more@ = 1000000
+SyntaxError: invalid syntax
+class = &#39;Advanced Theoretical Zymurgy&#39;
+SyntaxError: invalid syntax
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">76trombones</span></code> is illegal because it begins with a number.
+<code class="docutils literal notranslate"><span class="pre">more&#64;</span></code> is illegal because it contains an illegal character,
+&#64;. But what’s wrong with <code class="docutils literal notranslate"><span class="pre">class</span></code>?</p>
+<p>It turns out that <code class="docutils literal notranslate"><span class="pre">class</span></code> is one of Python’s
+<em>keywords</em>. The interpreter uses keywords to recognize
+the structure of the program, and they cannot be used as variable names.</p>
+<p>index{keyword}</p>
+<p>Python reserves 33 keywords:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ow">and</span>       <span class="k">del</span>       <span class="kn">from</span>      <span class="bp">None</span>      <span class="kc">True</span>
+<span class="k">as</span>        <span class="k">elif</span>      <span class="k">global</span>    <span class="k">nonlocal</span>  <span class="k">try</span>
+<span class="k">assert</span>    <span class="k">else</span>      <span class="k">if</span>        <span class="ow">not</span>       <span class="k">while</span>
+<span class="k">break</span>     <span class="k">except</span>    <span class="kn">import</span>    <span class="nn">or</span>        <span class="k">with</span>
+<span class="k">class</span>     <span class="nc">False</span>     <span class="ow">in</span>        <span class="k">pass</span>      <span class="k">yield</span>
+<span class="k">continue</span>  <span class="k">finally</span>   <span class="ow">is</span>        <span class="k">raise</span>
+<span class="k">def</span>       <span class="nf">for</span>       <span class="k">lambda</span>    <span class="k">return</span>
+</pre></div>
+</div>
+<p>You might want to keep this list handy. If the interpreter complains
+about one of your variable names and you don’t know why, see if it is on
+this list.</p>
+</div>
+<div class="section" id="statements">
+<h2>Statements<a class="headerlink" href="#statements" title="Permalink to this headline">¶</a></h2>
+<p>A <em>statement</em> is a unit of code that the Python
+interpreter can execute. We have seen two kinds of statements: print being
+an expression statement and assignment.</p>
+<p>index{statement}
+index{interactive mode}
+index{script mode}</p>
+<p>When you type a statement in interactive mode, the interpreter executes
+it and displays the result, if there is one.</p>
+<p>A script usually contains a sequence of statements. If there is more
+than one statement, the results appear one at a time as the statements
+execute.</p>
+<p>For example, the script</p>
+
+<div data-childcomponent="02_print_value_and_var" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=02_print_value_and_var data-lang="python" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static>
+print(1)
+x = 2
+print(x)
+</textarea>
+</div>
+<p>produces the output</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
+<span class="mi">2</span>
+</pre></div>
+</div>
+<p>The assignment statement produces no output.</p>
+</div>
+<div class="section" id="operators-and-operands">
+<h2>Operators and operands<a class="headerlink" href="#operators-and-operands" title="Permalink to this headline">¶</a></h2>
+<p>index{operator, arithmetic}
+index{arithmetic operator}
+index{operand}
+index{expression}</p>
+<p><em>Operators</em> are special symbols that represent
+computations like addition and multiplication. The values the operator
+is applied to are called <em>operands</em>.</p>
+<p>The operators <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">**</span></code> perform addition, subtraction, multiplication, division,
+and exponentiation, as in the following examples:</p>
+
+<div data-childcomponent="02_simple_math" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=02_simple_math data-lang="python" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static>
+20+32
+hour-1
+hour*60+minute
+minute/60
+5**2
+(5+9)*(15-7)
+</textarea>
+</div>
+<p>There has been a change in the division operator between Python 2.x
+and Python 3.x.  In Python 3.x, the result of this division is a
+floating point result:</p>
+
+<div data-childcomponent="02_change_div" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=02_change_div data-lang="python" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static>
+minute = 59
+minute/60
+0.9833333333333333
+</textarea>
+</div>
+<p>The division operator in Python 2.0 would divide two integers and
+truncate the result to an integer:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">minute</span> <span class="o">=</span> <span class="mi">59</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">minute</span><span class="o">/</span><span class="mi">60</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+<p>To obtain the same answer in Python 3.0 use floored ( <code class="docutils literal notranslate"><span class="pre">//</span></code> integer) division.</p>
+
+<div data-childcomponent="02_int_div" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=02_int_div data-lang="python" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static>
+minute = 59
+minute//60
+</textarea>
+</div>
+<p>In Python 3.0 integer division functions much more as you would expect
+if you entered the expression on a calculator.</p>
+<p>index{Python 3.0}
+index{Python 2.0}
+index{floating-point division}
+index{division!floating-point}</p>
+</div>
+<div class="section" id="expressions">
+<h2>Expressions<a class="headerlink" href="#expressions" title="Permalink to this headline">¶</a></h2>
+<p>An <em>expression</em> is a combination of values, variables,
+and operators. A value all by itself is considered an expression, and so
+is a variable, so the following are all legal expressions (assuming that
+the variable <code class="docutils literal notranslate"><span class="pre">x</span></code> has been assigned a value):</p>
+<p>index{expression}
+index{evaluate}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">17</span>
+<span class="n">x</span>
+<span class="n">x</span> <span class="o">+</span> <span class="mi">17</span>
+</pre></div>
+</div>
+<p>If you type an expression in interactive mode, the interpreter
+<em>evaluates</em> it and displays the result:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+<p>But in a script, an expression all by itself doesn’t do anything! This
+is a common source of confusion for beginners.</p>
+<p><strong>Exercise 1: Type the following statements in the Python interpreter to
+see what they do:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="order-of-operations">
+<h2>Order of operations<a class="headerlink" href="#order-of-operations" title="Permalink to this headline">¶</a></h2>
+<p>index{order of operations}
+index{rules of precedence}
+index{PEMDAS}</p>
+<p>When more than one operator appears in an expression, the order of
+evaluation depends on the <em>rules of precedence</em>. For
+mathematical operators, Python follows mathematical convention. The
+acronym <em>PEMDAS</em> is a useful way to remember the rules:</p>
+<p>index{parentheses!overriding precedence}</p>
+<ul class="simple">
+<li><p><em>Parentheses</em> have the highest precedence and can be
+used to force an expression to evaluate in the order you want. Since
+expressions in parentheses are evaluated first, <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span>
+<span class="pre">(3-1)</span></code> is 4, and <code class="docutils literal notranslate"><span class="pre">(1+1)**(5-2)</span></code> is 8. You can
+also use parentheses to make an expression easier to read, as in
+<code class="docutils literal notranslate"><span class="pre">(minute</span> <span class="pre">*</span> <span class="pre">100)</span> <span class="pre">/</span> <span class="pre">60</span></code>, even if it doesn’t change the
+result.</p></li>
+<li><p><em>Exponentiation</em> has the next highest precedence, so
+<code class="docutils literal notranslate"><span class="pre">2**1+1</span></code> is 3, not 4, and <code class="docutils literal notranslate"><span class="pre">3*1**3</span></code> is 3,
+not 27.</p></li>
+<li><p><em>Multiplication</em> and <em>Division</em> have
+the same precedence, which is higher than <em>Addition</em>
+and <em>Subtraction</em>, which also have the same
+precedence. So <code class="docutils literal notranslate"><span class="pre">2*3-1</span></code> is 5, not 4, and
+<code class="docutils literal notranslate"><span class="pre">6+4/2</span></code> is 8, not 5.</p></li>
+<li><p>Operators with the same precedence are evaluated from left to right.
+So the expression <code class="docutils literal notranslate"><span class="pre">5-3-1</span></code> is 1, not 3, because the
+<code class="docutils literal notranslate"><span class="pre">5-3</span></code> happens first and then <code class="docutils literal notranslate"><span class="pre">1</span></code> is subtracted
+from 2.</p></li>
+</ul>
+<p>When in doubt, always put parentheses in your expressions to make sure
+the computations are performed in the order you intend.</p>
+</div>
+<div class="section" id="modulus-operator">
+<h2>Modulus operator<a class="headerlink" href="#modulus-operator" title="Permalink to this headline">¶</a></h2>
+<p>index{modulus operator}
+index{operator!modulus}</p>
+<p>The <em>modulus operator</em> works on integers and yields the
+remainder when the first operand is divided by the second. In Python,
+the modulus operator is a percent sign (<code class="docutils literal notranslate"><span class="pre">%</span></code>). The syntax is the same as
+for other operators:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">quotient</span> <span class="o">=</span> <span class="mi">7</span> <span class="o">//</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">quotient</span><span class="p">)</span>
+<span class="mi">2</span>
+<span class="n">remainder</span> <span class="o">=</span> <span class="mi">7</span> <span class="o">%</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">remainder</span><span class="p">)</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+<p>So 7 divided by 3 is 2 with 1 left over.</p>
+<p>The modulus operator turns out to be surprisingly useful. For example,
+you can check whether one number is divisible by another: if <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">%</span>
+<span class="pre">y</span></code> is zero, then <code class="docutils literal notranslate"><span class="pre">x</span></code> is divisible by <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
+<p>index{divisibility}</p>
+<p>You can also extract the right-most digit or digits from a number. For
+example, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">%</span> <span class="pre">10</span></code> yields the right-most digit of
+<code class="docutils literal notranslate"><span class="pre">x</span></code> (in base 10). Similarly, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">%</span> <span class="pre">100</span></code> yields the
+last two digits.</p>
+</div>
+<div class="section" id="string-operations">
+<h2>String operations<a class="headerlink" href="#string-operations" title="Permalink to this headline">¶</a></h2>
+<p>index{string!operation}
+index{operator!string}</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">+</span></code> operator works with strings, but it is not addition
+in the mathematical sense. Instead it performs
+<em>concatenation</em>, which means joining the strings by
+linking them end to end. For example:</p>
+<p>index{concatenation}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">first</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">second</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">first</span><span class="o">+</span><span class="n">second</span><span class="p">)</span>
+<span class="go">25</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">first</span> <span class="o">=</span> <span class="s1">&#39;100&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">second</span> <span class="o">=</span> <span class="s1">&#39;150&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">)</span>
+<span class="go">100150</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">*</span></code> operator also works with strings by multiplying the content
+of a string by an integer. For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">first</span> <span class="o">=</span> <span class="s1">&#39;Test &#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">second</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">first</span> <span class="o">*</span> <span class="n">second</span><span class="p">)</span>
+<span class="go">Test Test Test</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="asking-the-user-for-input">
+<h2>Asking the user for input<a class="headerlink" href="#asking-the-user-for-input" title="Permalink to this headline">¶</a></h2>
+<p>index{keyboard input}</p>
+<p>Sometimes we would like to take the value for a variable from the user
+via their keyboard. Python provides a built-in function called
+<code class="docutils literal notranslate"><span class="pre">input</span></code> that gets input from the keyboard^[In Python 2.0, this function was named <code class="docutils literal notranslate"><span class="pre">raw_input</span></code>.].
+When this function is
+called, the program stops and waits for the user to type something. When
+the user presses <code class="docutils literal notranslate"><span class="pre">Return</span></code> or <code class="docutils literal notranslate"><span class="pre">Enter</span></code>, the program
+resumes and <code class="docutils literal notranslate"><span class="pre">input</span></code> returns what the user typed as a string.</p>
+<p>index{Python 2.0}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">inp</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="go">Some silly stuff</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">inp</span><span class="p">)</span>
+<span class="go">Some silly stuff</span>
+</pre></div>
+</div>
+<p>Before getting input from the user, it is a good idea to print a prompt
+telling the user what to input. You can pass a string to <code class="docutils literal notranslate"><span class="pre">input</span></code> to
+be displayed to the user before pausing for input:</p>
+<p>index{prompt}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name?</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="go">What is your name?</span>
+<span class="go">Chuck</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="go">Chuck</span>
+</pre></div>
+</div>
+<p>The sequence <code class="docutils literal notranslate"><span class="pre">\n</span></code> at the end of the prompt represents a
+<em>newline</em>, which is a special character that causes a
+line break. That’s why the user’s input appears below the prompt.</p>
+<p>index{newline}</p>
+<p>If you expect the user to type an integer, you can try to convert the
+return value to <code class="docutils literal notranslate"><span class="pre">int</span></code> using the <code class="docutils literal notranslate"><span class="pre">int()</span></code> function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">prompt</span> <span class="o">=</span> <span class="s1">&#39;What...is the airspeed velocity of an unladen swallow?</span><span class="se">\n</span><span class="s1">&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">speed</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
+<span class="go">What...is the airspeed velocity of an unladen swallow?</span>
+<span class="go">17</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">int</span><span class="p">(</span><span class="n">speed</span><span class="p">)</span>
+<span class="go">17</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">int</span><span class="p">(</span><span class="n">speed</span><span class="p">)</span> <span class="o">+</span> <span class="mi">5</span>
+<span class="go">22</span>
+</pre></div>
+</div>
+<p>But if the user types something other than a string of digits, you get
+an error:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">speed</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
+<span class="go">What...is the airspeed velocity of an unladen swallow?</span>
+<span class="go">What do you mean, an African or a European swallow?</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">int</span><span class="p">(</span><span class="n">speed</span><span class="p">)</span>
+<span class="go">ValueError: invalid literal for int() with base 10:</span>
+</pre></div>
+</div>
+<p>We will see how to handle this kind of error later.</p>
+<p>index{ValueError}
+index{exception!ValueError}</p>
+</div>
+<div class="section" id="comments">
+<h2>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
+<p>index{comment}</p>
+<p>As programs get bigger and more complicated, they get more difficult to
+read. Formal languages are dense, and it is often difficult to look at a
+piece of code and figure out what it is doing, or why.</p>
+<p>For this reason, it is a good idea to add notes to your programs to
+explain in natural language what the program is doing. These notes are
+called <em>comments</em>, and in Python they start with the <code class="docutils literal notranslate"><span class="pre">#</span></code>
+symbol:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># compute the percentage of the hour that has elapsed</span>
+<span class="n">percentage</span> <span class="o">=</span> <span class="p">(</span><span class="n">minute</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="o">/</span> <span class="mi">60</span>
+</pre></div>
+</div>
+<p>In this case, the comment appears on a line by itself. You can also put
+comments at the end of a line:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">percentage</span> <span class="o">=</span> <span class="p">(</span><span class="n">minute</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="o">/</span> <span class="mi">60</span>     <span class="c1"># percentage of an hour</span>
+</pre></div>
+</div>
+<p>Everything from the <code class="docutils literal notranslate"><span class="pre">#</span></code> to the end of the line is ignored; it
+has no effect on the program.</p>
+<p>Comments are most useful when they document non-obvious features of the
+code. It is reasonable to assume that the reader can figure out <em>what</em>
+the code does; it is much more useful to explain <em>why</em>.</p>
+<p>This comment is redundant with the code and useless:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="mi">5</span>     <span class="c1"># assign 5 to v</span>
+</pre></div>
+</div>
+<p>This comment contains useful information that is not in the code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="mi">5</span>     <span class="c1"># velocity in meters/second.</span>
+</pre></div>
+</div>
+<p>Good variable names can reduce the need for comments, but long names can
+make complex expressions hard to read, so there is a trade-off.</p>
+</div>
+<div class="section" id="choosing-mnemonic-variable-names">
+<h2>Choosing mnemonic variable names<a class="headerlink" href="#choosing-mnemonic-variable-names" title="Permalink to this headline">¶</a></h2>
+<p>index{mnemonic}</p>
+<p>As long as you follow the simple rules of variable naming, and avoid
+reserved words, you have a lot of choice when you name your variables.
+In the beginning, this choice can be confusing both when you read a
+program and when you write your own programs. For example, the following
+three programs are identical in terms of what they accomplish, but very
+different when you read them and try to understand them.</p>
+
+<div data-childcomponent="02_var_names" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=02_var_names data-lang="python" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static>
+a = 35.0
+b = 12.50
+c = a * b
+print(c)
+</textarea>
+</div>
+
+<div data-childcomponent="02_better_var_names" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=02_better_var_names data-lang="python" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static>
+hours = 35.0
+rate = 12.50
+pay = hours * rate
+print(pay)
+</textarea>
+</div>
+
+<div data-childcomponent="02_worse_var_names" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=02_worse_var_names data-lang="python" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static>
+x1q3z9ahd = 35.0
+x1q3z9afd = 12.50
+x1q3p9afd = x1q3z9ahd * x1q3z9afd
+print(x1q3p9afd)
+</textarea>
+</div>
+<p>The Python interpreter sees all three of these programs as <em>exactly the
+same</em> but humans see and understand these programs quite differently.
+Humans will most quickly understand the <em>intent</em> of the
+second program because the programmer has chosen variable names that
+reflect their intent regarding what data will be stored in each
+variable.</p>
+<p>We call these wisely chosen variable names “mnemonic variable names”.
+The word <em>mnemonic</em>^[See <a class="reference external" href="https://en.wikipedia.org/wiki/Mnemonic">https://en.wikipedia.org/wiki/Mnemonic</a> for an extended
+description of the word “mnemonic”.] means “memory aid”. We choose mnemonic variable
+names to help us remember why we created the variable in the first
+place.</p>
+<p>While this all sounds great, and it is a very good idea to use mnemonic
+variable names, mnemonic variable names can get in the way of a
+beginning programmer’s ability to parse and understand code. This is
+because beginning programmers have not yet memorized the reserved words
+(there are only 33 of them) and sometimes variables with names that are
+too descriptive start to look like part of the language and not just
+well-chosen variable names.</p>
+<p>Take a quick look at the following Python sample code which loops
+through some data. We will cover loops soon, but for now try to just
+puzzle through what this means:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>What is happening here? Which of the tokens (for, word, in, etc.) are
+reserved words and which are just variable names? Does Python understand
+at a fundamental level the notion of words? Beginning programmers have
+trouble separating what parts of the code <em>must</em> be the same as this
+example and what parts of the code are simply choices made by the
+programmer.</p>
+<p>The following code is equivalent to the above code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="nb">slice</span> <span class="ow">in</span> <span class="n">pizza</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">slice</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>It is easier for the beginning programmer to look at this code and know
+which parts are reserved words defined by Python and which parts are
+simply variable names chosen by the programmer. It is pretty clear that
+Python has no fundamental understanding of pizza and slices and the fact
+that a pizza consists of a set of one or more slices.</p>
+<p>But if our program is truly about reading data and looking for words in
+the data, <code class="docutils literal notranslate"><span class="pre">pizza</span></code> and <code class="docutils literal notranslate"><span class="pre">slice</span></code> are very un-mnemonic
+variable names. Choosing them as variable names distracts from the
+meaning of the program.</p>
+<p>After a pretty short period of time, you will know the most common
+reserved words and you will start to see the reserved words jumping out
+at you:</p>
+<pre>
+<b>for</b> word <b>in</b> words<b>:</b>
+    <b>print</b>(word)
+</pre><p>The parts of the code that are defined by Python (<code class="docutils literal notranslate"><span class="pre">for</span></code>,
+<code class="docutils literal notranslate"><span class="pre">in</span></code>, <code class="docutils literal notranslate"><span class="pre">print</span></code>, and <code class="docutils literal notranslate"><span class="pre">:</span></code>) are in bold and
+the programmer-chosen variables (<code class="docutils literal notranslate"><span class="pre">word</span></code> and
+<code class="docutils literal notranslate"><span class="pre">words</span></code>) are not in bold. Many text editors are aware of
+Python syntax and will color reserved words differently to give you
+clues to keep your variables and reserved words separate. After a while
+you will begin to read Python and quickly determine what is a variable
+and what is a reserved word.</p>
+</div>
+<div class="section" id="debugging">
+<h2>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h2>
+<p>index{debugging}</p>
+<p>At this point, the syntax error you are most likely to make is an
+illegal variable name, like <code class="docutils literal notranslate"><span class="pre">class</span></code> and <code class="docutils literal notranslate"><span class="pre">yield</span></code>,
+which are keywords, or <code class="docutils literal notranslate"><span class="pre">odd~job</span></code> and <code class="docutils literal notranslate"><span class="pre">US$</span></code>, which contain illegal
+characters.</p>
+<p>index{syntax error}
+index{error!syntax}</p>
+<p>If you put a space in a variable name, Python thinks it is two operands
+without an operator:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bad</span> <span class="n">name</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="go">SyntaxError: invalid syntax</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">month</span> <span class="o">=</span> <span class="mi">09</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>
+    <span class="n">month</span> <span class="o">=</span> <span class="mi">09</span>
+             <span class="o">^</span>
+<span class="gr">SyntaxError</span>: <span class="n">invalid token</span>
+</pre></div>
+</div>
+<p>For syntax errors, the error messages don’t help much. The most common
+messages are <code class="docutils literal notranslate"><span class="pre">SyntaxError:</span> <span class="pre">invalid</span> <span class="pre">syntax</span></code> and
+<code class="docutils literal notranslate"><span class="pre">SyntaxError:</span> <span class="pre">invalid</span> <span class="pre">token</span></code>, neither of which is very
+informative.</p>
+<p>index{error message}
+index{use before def}
+index{exception}
+index{runtime error}
+index{error!runtime}</p>
+<p>The runtime error you are most likely to make is a “use before def;”
+that is, trying to use a variable before you have assigned a value. This
+can happen if you spell a variable name wrong:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">principal</span> <span class="o">=</span> <span class="mf">327.68</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">interest</span> <span class="o">=</span> <span class="n">principle</span> <span class="o">*</span> <span class="n">rate</span>
+<span class="go">NameError: name &#39;principle&#39; is not defined</span>
+</pre></div>
+</div>
+<p>Variables names are case sensitive, so <code class="docutils literal notranslate"><span class="pre">LaTeX</span></code> is not the
+same as <code class="docutils literal notranslate"><span class="pre">latex</span></code>.</p>
+<p>index{case-sensitivity, variable names}
+index{semantic error}
+index{error!semantic}</p>
+<p>At this point, the most likely cause of a semantic error is the order of
+operations. For example, to evaluate $1/2pi$, you might be
+tempted to write</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mf">1.0</span> <span class="o">/</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">pi</span>
+</pre></div>
+</div>
+<p>But the division happens first, so you would get $pi / 2$, which is not
+the same thing! There is no way for Python to know what you meant to
+write, so in this case you don’t get an error message; you just get the
+wrong answer.</p>
+<p>index{order of operations}</p>
+</div>
+<div class="section" id="glossary">
+<h2>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h2>
+<p>assignment
+:   A statement that assigns a value to a variable.
+index{assignment}</p>
+<p>concatenate
+:   To join two operands end to end.
+index{concatenation}</p>
+<p>comment
+:   Information in a program that is meant for other programmers (or</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\02-variables\02-variables.rst</span>, line 787)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>anyone reading the source code) and has no effect on the execution
+of the program.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\02-variables\02-variables.rst</span>, line 789)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{comment}</p>
+<p>evaluate
+:   To simplify an expression by performing the operations in order to</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\02-variables\02-variables.rst</span>, line 793)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>yield a single value.</p>
+</div></blockquote>
+<p>expression
+:   A combination of variables, operators, and values that represents a</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\02-variables\02-variables.rst</span>, line 797)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>single result value.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\02-variables\02-variables.rst</span>, line 798)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{expression}</p>
+<p>floating point
+:   A type that represents numbers with fractional parts.
+index{floating-point}</p>
+<p>integer
+:   A type that represents whole numbers.
+index{integer}</p>
+<p>keyword
+:   A reserved word that is used by the compiler to parse a program; you</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\02-variables\02-variables.rst</span>, line 810)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>cannot use keywords like <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">def</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">while</span></code> as variable names.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\02-variables\02-variables.rst</span>, line 812)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{keyword}</p>
+<p>mnemonic
+:   A memory aid. We often give variables mnemonic names to help us</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\02-variables\02-variables.rst</span>, line 816)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>remember what is stored in the variable.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\02-variables\02-variables.rst</span>, line 817)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{mnemonic}</p>
+<p>modulus operator
+:   An operator, denoted with a percent sign (<code class="docutils literal notranslate"><span class="pre">%</span></code>), that</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\02-variables\02-variables.rst</span>, line 821)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>works on integers and yields the remainder when one number is
+divided by another.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\02-variables\02-variables.rst</span>, line 823)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{modulus operator}
+index{operator!modulus}</p>
+<p>operand
+:   One of the values on which an operator operates.
+index{operand}</p>
+<p>operator
+:   A special symbol that represents a simple computation like addition,</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\02-variables\02-variables.rst</span>, line 832)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>multiplication, or string concatenation.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\02-variables\02-variables.rst</span>, line 833)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{operator}</p>
+<p>rules of precedence
+:   The set of rules governing the order in which expressions involving</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\02-variables\02-variables.rst</span>, line 837)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>multiple operators and operands are evaluated.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\02-variables\02-variables.rst</span>, line 838)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{rules of precedence}
+index{precedence}</p>
+<p>statement
+:   A section of code that represents a command or action. So far, the</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\02-variables\02-variables.rst</span>, line 843)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>statements we have seen are assignments and print expression statement.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\02-variables\02-variables.rst</span>, line 844)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{statement}</p>
+<p>string
+:   A type that represents sequences of characters.
+index{string}</p>
+<p>type
+:   A category of values. The types we have seen so far are integers</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\02-variables\02-variables.rst</span>, line 852)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>(type <code class="docutils literal notranslate"><span class="pre">int</span></code>), floating-point numbers (type
+<code class="docutils literal notranslate"><span class="pre">float</span></code>), and strings (type <code class="docutils literal notranslate"><span class="pre">str</span></code>).</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\02-variables\02-variables.rst</span>, line 854)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{type}</p>
+<p>value
+:   One of the basic units of data, like a number or string, that a</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\02-variables\02-variables.rst</span>, line 858)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>program manipulates.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\shrij\Runestone\py4e-int\_sources\02-variables\02-variables.rst</span>, line 859)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>index{value}</p>
+<p>variable
+:   A name that refers to a value.
+index{variable}</p>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<p><strong>Exercise 2: Write a program that uses ``input`` to prompt a user for
+their name and then welcomes them.</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">your</span> <span class="n">name</span><span class="p">:</span> <span class="n">Chuck</span>
+<span class="n">Hello</span> <span class="n">Chuck</span>
+</pre></div>
+</div>
+<p><strong>Exercise 3: Write a program to prompt the user for hours and rate per
+hour to compute gross pay.</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">Hours</span><span class="p">:</span> <span class="mi">35</span>
+<span class="n">Enter</span> <span class="n">Rate</span><span class="p">:</span> <span class="mf">2.75</span>
+<span class="n">Pay</span><span class="p">:</span> <span class="mf">96.25</span>
+</pre></div>
+</div>
+<p>We won’t worry about making sure our pay has exactly two digits after
+the decimal place for now. If you want, you can play with the built-in
+Python <code class="docutils literal notranslate"><span class="pre">round</span></code> function to properly round the resulting pay
+to two decimal places.</p>
+<p><strong>Exercise 4: Assume that we execute the following assignment statements:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">width</span> <span class="o">=</span> <span class="mi">17</span>
+<span class="n">height</span> <span class="o">=</span> <span class="mf">12.0</span>
+</pre></div>
+</div>
+<p>For each of the following expressions, write the value of the expression
+and the type (of the value of the expression).</p>
+</div>
+</div>
+<div class="section" id="id1">
+<h1>.<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">width//2</span></code></p>
+</div></blockquote>
+</div>
+<div class="section" id="id2">
+<h1>.<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">width/2.0</span></code></p>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h1>.<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">height/3</span></code></p>
+</div></blockquote>
+</div>
+<div class="section" id="id4">
+<h1>.<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">5</span></code></p>
+</div></blockquote>
+<p>Use the Python interpreter to check your answers.</p>
+<p><strong>Exercise 5: Write a program which prompts the user for a Celsius
+temperature, convert the temperature to Fahrenheit, and print out the
+converted temperature.</strong></p>
+</div>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 CS Learning 4 U group.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>

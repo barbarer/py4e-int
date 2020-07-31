@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>&lt;no title&gt; &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=DB047029" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone-custom-sphinx-bootstrap.css?v=5.0.8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../../_static/sql-wasm.js?v=44FE0709"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../../_static/html4css1.css?v=4D8F3FB4"></script>
+    <script src="../../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../../_static/runestone.js?v=3EAD674C"></script>
+    <script src="../../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <script src="../../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../../_static/theme.js?v=D899FB97"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = true;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'py4e-int';
+    eBookConfig.basecourse = 'py4e-int';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("../../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        
+        <a class="navbar-brand" href="../../index.html" aria-label="index-page">
+          
+          py4e-int
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span aria-label="Social" class="visuallyhidden">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span aria-label="User" class="visuallyhidden">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span aria-label="Help" class="visuallyhidden">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/runestone/static/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=follow_button.c4b33f07650267db9f8a72eaac551cac.en.html'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+  
+  <script type="text/javascript">function CodeChat_doStyle(element) {function walk_tree(elements,func_walk,func_child) {let walk_children = [];for (let index = 0; index < elements.length; ++index) {let that = elements[index];while (that && !func_walk(that)) {that = that.parentElement;}if (that) {that = func_walk(that);walk_children.push(that);while (that && func_child(that)) {that = func_child(that);walk_children.push(that);}}}return walk_children;};element = (typeof element !== 'undefined') ? element : document;let code = element.getElementsByClassName("fenced-code");walk_tree(code, x => x.nextElementSibling, x => x.firstElementChild).map(x =>x.classList.add('CodeChat_noTop'));walk_tree(code, x => x.previousElementSibling, x => x.lastElementChild).map(x =>x.classList.add('CodeChat_noBottom'));}document.addEventListener("DOMContentLoaded", function(event) { CodeChat_doStyle(); });</script><div class="code fenced-code highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</pre></div>
+</div>
+<p>saved from url=(0216)https://platform.twitter.com/widgets/follow_button.c4b33f07650267db9f8a72eaac551cac.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=iRunestone&amp;show_count=true&amp;show_screen_name=true&amp;size=m&amp;time=1593715208712</p>
+<div class="code fenced-code highlight-html notranslate"><div class="highlight"><pre><span></span>&lt;html data-scribe=&quot;page:button&quot; lang=&quot;en&quot; class=&quot; en&quot;&gt;&lt;head&gt;&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+
+  &lt;title&gt;Twitter Follow Button&lt;/title&gt;
+  &lt;!--&lt;base target=&quot;_blank&quot;&gt;--&gt;&lt;base href=&quot;.&quot; target=&quot;_blank&quot;&gt;
+  &lt;link rel=&quot;dns-prefetch&quot; href=&quot;https://twitter.com/&quot;&gt;
+  &lt;link rel=&quot;profile&quot; href=&quot;http://microformats.org/profile/hcard&quot;&gt;
+  &lt;style type=&quot;text/css&quot;&gt;html{margin:0;padding:0;font:normal normal normal 11px/18px &#39;Helvetica Neue&#39;,Arial,sans-serif;color:#333;-webkit-user-select:none;-ms-user-select:none;-moz-user-select:none;user-select:none}body{margin:0;padding:0;background:0 0}a{outline:0;text-decoration:none}body.rtl{direction:rtl}#widget{display:inline-block;white-space:nowrap;overflow:hidden;text-align:left}#count,.btn,.btn .label,.btn-o,.count-o{display:inline-block;vertical-align:top;zoom:1}.btn-o{max-width:100%}.btn{position:relative;height:20px;box-sizing:border-box;padding:1px 8px 1px 6px;background-color:#1b95e0;color:#fff;border-radius:3px;font-weight:500;cursor:pointer}.rtl .btn{padding:1px 6px 1px 8px}.btn:active,.btn:focus,.btn:hover{background-color:#0c7abf}.btn:active{box-shadow:inset 0 3px 5px rgba(0,0,0,.1)}.xl .btn:active{box-shadow:inset 0 3px 7px rgba(0,0,0,.1)}.btn i{position:relative;top:2px;display:inline-block;width:14px;height:14px;background:transparent 0 0 no-repeat;background-image:url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2072%2072%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h72v72H0z%22%2F%3E%3Cpath%20class%3D%22icon%22%20fill%3D%22%23fff%22%20d%3D%22M68.812%2015.14c-2.348%201.04-4.87%201.744-7.52%202.06%202.704-1.62%204.78-4.186%205.757-7.243-2.53%201.5-5.33%202.592-8.314%203.176C56.35%2010.59%2052.948%209%2049.182%209c-7.23%200-13.092%205.86-13.092%2013.093%200%201.026.118%202.02.338%202.98C25.543%2024.527%2015.9%2019.318%209.44%2011.396c-1.125%201.936-1.77%204.184-1.77%206.58%200%204.543%202.312%208.552%205.824%2010.9-2.146-.07-4.165-.658-5.93-1.64-.002.056-.002.11-.002.163%200%206.345%204.513%2011.638%2010.504%2012.84-1.1.298-2.256.457-3.45.457-.845%200-1.666-.078-2.464-.23%201.667%205.2%206.5%208.985%2012.23%209.09-4.482%203.51-10.13%205.605-16.26%205.605-1.055%200-2.096-.06-3.122-.184%205.794%203.717%2012.676%205.882%2020.067%205.882%2024.083%200%2037.25-19.95%2037.25-37.25%200-.565-.013-1.133-.038-1.693%202.558-1.847%204.778-4.15%206.532-6.774z%22%2F%3E%3C%2Fsvg%3E)}.btn .label{margin-left:3px;white-space:nowrap}.btn .label b{font-weight:500;white-space:nowrap}.rtl .btn .label{margin-right:3px}.rtl .btn .label b{display:inline-block;direction:ltr}.xl{font-size:13px;line-height:26px}.xl .btn{height:28px;border-radius:4px;padding:1px 10px 1px 9px}.rtl.xl .btn{padding:1px 9px 1px 10px}.xl .btn i{top:4px;height:18px;width:18px}.xl .btn .label{margin-left:4px}.rtl.xl .btn .label{margin-right:4px}.aria{position:absolute;left:-999em}.rtl .aria{left:auto;right:-999em}.count-o{position:relative;background:#fff;border:#8799A6 solid 1px;border-radius:3px;visibility:hidden;min-height:18px;min-width:15px;text-align:center}#count{white-space:nowrap;color:#292F33}#count:focus,#count:hover{color:#333;text-decoration:underline}.ncount .count-o{display:none}.count-ready .count-o{visibility:visible}.count-o i,.count-o u{position:absolute;zoom:1;line-height:0;width:0;height:0;left:0;top:50%;margin:-4px 0 0 -4px;border:4px transparent solid;border-right-color:#66757f;border-left:0}.count-o u{margin-left:-3px;border-right-color:#fff}.rtl .count-o i,.rtl .count-o u{left:auto;right:0;margin:-4px -4px 0 0;border:4px transparent solid;border-left-color:#66757f;border-right:0}.rtl .count-o u{margin-right:-3px;border-left-color:#fff}.hcount .count-o{margin:0 0 0 5px}.hcount.rtl .count-o{margin:0 5px 0 0}.hcount #count{padding:0 5px}.xl .count-o{font-size:11px;border-radius:4px}.xl.hcount .count-o{margin:0 0 0 6px}.xl.rtl.hcount .count-o{margin:0 6px 0 0}.xl.hcount .count-o i,.xl.hcount .count-o u{margin:-5px 0 0 -5px;border-width:5px 5px 5px 0}.xl.hcount .count-o u{margin-left:-4px}.xl.rtl.hcount .count-o i,.xl.rtl.hcount .count-o u{margin:-5px -5px 0 0;border-width:5px 0 5px 5px}.xl.rtl.hcount .count-o u{margin-right:-4px}.xl #count{padding:0 7px}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body data-scribe=&quot;section:follow&quot; class=&quot; ltr ready hcount count-ready&quot;&gt;
+&lt;div id=&quot;widget&quot;&gt;
+  &lt;div class=&quot;btn-o&quot; contextmenu=&quot;menu&quot; data-scribe=&quot;component:button&quot;&gt;&lt;a id=&quot;follow-button&quot; class=&quot;btn&quot; title=&quot;Follow RunestoneInteractive (@iRunestone) on Twitter&quot; href=&quot;https://twitter.com/intent/follow?ref_src=twsrc%5Etfw&amp;amp;region=follow_link&amp;amp;screen_name=iRunestone&amp;amp;tw_p=followbutton&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;span class=&quot;label&quot; id=&quot;l&quot;&gt;Follow &lt;b&gt;@iRunestone&lt;/b&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;count-o&quot; id=&quot;c&quot; data-scribe=&quot;component:count&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;u&gt;&lt;/u&gt;&lt;a id=&quot;count&quot; class=&quot;note&quot; href=&quot;https://twitter.com/intent/user?ref_src=twsrc%5Etfw&amp;amp;region=count_link&amp;amp;screen_name=iRunestone&amp;amp;tw_p=followbutton&quot;&gt;492 followers&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display:none&quot;&gt;
+  &lt;menu type=&quot;context&quot; id=&quot;menu&quot; data-scribe=&quot;component:contextmenu&quot;&gt;
+    &lt;menuitem id=&quot;m-follow&quot; label=&quot;Follow user&quot;&gt;&lt;/menuitem&gt;
+    &lt;menuitem id=&quot;m-profile&quot; label=&quot;View user on Twitter&quot;&gt;&lt;/menuitem&gt;
+    &lt;menuitem id=&quot;m-tweet&quot; label=&quot;Send Tweet to user&quot;&gt;&lt;/menuitem&gt;
+  &lt;/menu&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;/* eslint-disable */
+
+window.__twttr = window.__twttr || {};
+/* by pass jshint unicode warning for translations */
+var i18n = {};
+window._ = function (s, reps) {
+  s = (__twttr.lang &amp;&amp; i18n[__twttr.lang] &amp;&amp; i18n[__twttr.lang][s]) || s;
+  if (!reps) return s;
+  return s.replace(/\%\{([a-z0-9_]+)\}/gi, function (m, k) {
+    return reps[k] || m;
+  });
+};
+&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;Function&amp;&amp;Function.prototype&amp;&amp;Function.prototype.bind&amp;&amp;(/(MSIE ([6789]|10|11))|Trident/.test(navigator.userAgent)||function(t){var e={};function n(r){if(e[r])return e[r].exports;var o=e[r]={i:r,l:!1,exports:{}};return t[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}n.m=t,n.c=e,n.d=function(t,e,r){n.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:r})},n.r=function(t){&quot;undefined&quot;!=typeof Symbol&amp;&amp;Symbol.toStringTag&amp;&amp;Object.defineProperty(t,Symbol.toStringTag,{value:&quot;Module&quot;}),Object.defineProperty(t,&quot;__esModule&quot;,{value:!0})},n.t=function(t,e){if(1&amp;e&amp;&amp;(t=n(t)),8&amp;e)return t;if(4&amp;e&amp;&amp;&quot;object&quot;==typeof t&amp;&amp;t&amp;&amp;t.__esModule)return t;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,&quot;default&quot;,{enumerable:!0,value:t}),2&amp;e&amp;&amp;&quot;string&quot;!=typeof t)for(var o in t)n.d(r,o,function(e){return t[e]}.bind(null,o));return r},n.n=function(t){var e=t&amp;&amp;t.__esModule?function(){return t.default}:function(){return t};return n.d(e,&quot;a&quot;,e),e},n.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},n.p=&quot;https://platform.twitter.com/&quot;,n(n.s=36)}([function(t,e,n){var r=n(1);function o(t,e){var n;for(n in t)t.hasOwnProperty&amp;&amp;!t.hasOwnProperty(n)||e(n,t[n]);return t}function i(t){return{}.toString.call(t).match(/\s([a-zA-Z]+)/)[1].toLowerCase()}function s(t){return t===Object(t)}function c(t){var e;if(!s(t))return!1;if(Object.keys)return!Object.keys(t).length;for(e in t)if(t.hasOwnProperty(e))return!1;return!0}function u(t){return t?Array.prototype.slice.call(t):[]}t.exports={aug:function(t){return u(arguments).slice(1).forEach(function(e){o(e,function(e,n){t[e]=n})}),t},async:function(t,e){r.setTimeout(function(){t.call(e||null)},0)},compact:function t(e){return o(e,function(n,r){s(r)&amp;&amp;(t(r),c(r)&amp;&amp;delete e[n]),void 0!==r&amp;&amp;null!==r&amp;&amp;&quot;&quot;!==r||delete e[n]}),e},contains:function(t,e){return!(!t||!t.indexOf)&amp;&amp;t.indexOf(e)&gt;-1},forIn:o,isObject:s,isEmptyObject:c,toType:i,isType:function(t,e){return t==i(e)},toRealArray:u}},function(t,e){t.exports=window},function(t,e){t.exports=location},function(t,e){t.exports=document},function(t,e,n){var r=n(6),o=n(0);function i(t){return encodeURIComponent(t).replace(/\+/g,&quot;%2B&quot;).replace(/&#39;/g,&quot;%27&quot;)}function s(t){return decodeURIComponent(t)}function c(t){var e=[];return o.forIn(t,function(t,n){var s=i(t);o.isType(&quot;array&quot;,n)||(n=[n]),n.forEach(function(t){r.hasValue(t)&amp;&amp;e.push(s+&quot;=&quot;+i(t))})}),e.sort().join(&quot;&amp;&quot;)}function u(t){var e={};return t?(t.split(&quot;&amp;&quot;).forEach(function(t){var n=t.split(&quot;=&quot;),r=s(n[0]),i=s(n[1]);if(2==n.length){if(!o.isType(&quot;array&quot;,e[r]))return r in e?(e[r]=[e[r]],void e[r].push(i)):void(e[r]=i);e[r].push(i)}}),e):{}}t.exports={url:function(t,e){return c(e).length&gt;0?o.contains(t,&quot;?&quot;)?t+&quot;&amp;&quot;+c(e):t+&quot;?&quot;+c(e):t},decodeURL:function(t){var e=t&amp;&amp;t.split(&quot;?&quot;);return 2==e.length?u(e[1]):{}},decode:u,encode:c,encodePart:i,decodePart:s}},function(t,e,n){var r=n(3),o=n(11),i=n(13),s=n(1),c=n(0),u=i.userAgent;function a(t){return/(Trident|MSIE|Edge[/ ]?\d)/.test(t=t||u)}t.exports={retina:function(t){return(t=t||s).devicePixelRatio?t.devicePixelRatio&gt;=1.5:!!t.matchMedia&amp;&amp;t.matchMedia(&quot;only screen and (min-resolution: 144dpi)&quot;).matches},anyIE:a,ie9:function(t){return/MSIE 9/.test(t=t||u)},ie10:function(t){return/MSIE 10/.test(t=t||u)},ios:function(t){return/(iPad|iPhone|iPod)/.test(t=t||u)},android:function(t){return/^Mozilla\/5\.0 \(Linux; (U; )?Android/.test(t=t||u)},canPostMessage:function(t,e){return t=t||s,e=e||u,t.postMessage&amp;&amp;!(a(e)&amp;&amp;t.opener)},touch:function(t,e,n){return t=t||s,e=e||i,n=n||u,&quot;ontouchstart&quot;in t||/Opera Mini/.test(n)||e.msMaxTouchPoints&gt;0},cssTransitions:function(){var t=r.body.style;return void 0!==t.transition||void 0!==t.webkitTransition||void 0!==t.mozTransition||void 0!==t.oTransition||void 0!==t.msTransition},hasPromiseSupport:function(){return!!(s.Promise&amp;&amp;s.Promise.resolve&amp;&amp;s.Promise.reject&amp;&amp;s.Promise.all&amp;&amp;s.Promise.race&amp;&amp;(new s.Promise(function(e){t=e}),c.isType(&quot;function&quot;,t)));var t},hasIntersectionObserverSupport:function(){return!!s.IntersectionObserver},hasPerformanceInformation:function(){return s.performance&amp;&amp;s.performance.getEntriesByType},hasLocalStorageSupport:function(){try{return s.localStorage.setItem(&quot;local_storage_support_test&quot;,&quot;true&quot;),void 0!==s.localStorage}catch(t){return o.devError(&quot;window.localStorage is not supported:&quot;,t),!1}}}},function(t,e,n){var r=n(0),o=[!0,1,&quot;1&quot;,&quot;on&quot;,&quot;ON&quot;,&quot;true&quot;,&quot;TRUE&quot;,&quot;yes&quot;,&quot;YES&quot;],i=[!1,0,&quot;0&quot;,&quot;off&quot;,&quot;OFF&quot;,&quot;false&quot;,&quot;FALSE&quot;,&quot;no&quot;,&quot;NO&quot;];function s(t){return void 0!==t&amp;&amp;null!==t&amp;&amp;&quot;&quot;!==t}function c(t){return a(t)&amp;&amp;t%1==0}function u(t){return a(t)&amp;&amp;!c(t)}function a(t){return s(t)&amp;&amp;!isNaN(t)}function f(t){return r.contains(i,t)}function l(t){return r.contains(o,t)}t.exports={hasValue:s,isInt:c,isFloat:u,isNumber:a,isString:function(t){return&quot;string&quot;===r.toType(t)},isArray:function(t){return s(t)&amp;&amp;&quot;array&quot;==r.toType(t)},isTruthValue:l,isFalseValue:f,asInt:function(t){if(c(t))return parseInt(t,10)},asFloat:function(t){if(u(t))return t},asNumber:function(t){if(a(t))return t},asBoolean:function(t){return!(!s(t)||!l(t)&amp;&amp;(f(t)||!t))}}},function(t,e,n){var r=n(1),o=n(5),i=n(14);o.hasPromiseSupport()||(r.Promise=i),t.exports=r.Promise},function(t,e,n){var r=n(4),o=/(?:^|(?:https?:)?\/\/(?:www\.)?twitter\.com(?::\d+)?(?:\/intent\/(?:follow|user)\/?\?screen_name=|(?:\/#!)?\/))@?([\w]+)(?:\?|&amp;|$)/i,i=/(?:^|(?:https?:)?\/\/(?:www\.)?twitter\.com(?::\d+)?\/(?:#!\/)?[\w_]+\/status(?:es)?\/)(\d+)/i,s=/^http(s?):\/\/(\w+\.)*twitter\.com([:/]|$)/i,c=/^http(s?):\/\/(ton|pbs)\.twimg\.com/,u=/^#?([^.,&lt;&gt;!\s/#\-()&#39;&quot;]+)$/,a=/twitter\.com(?::\d{2,4})?\/intent\/(\w+)/,f=/^https?:\/\/(?:www\.)?twitter\.com\/\w+\/timelines\/(\d+)/i,l=/^https?:\/\/(?:www\.)?twitter\.com\/i\/moments\/(\d+)/i,p=/^https?:\/\/(?:www\.)?twitter\.com\/(\w+)\/(?:likes|favorites)/i,d=/^https?:\/\/(?:www\.)?twitter\.com\/(\w+)\/lists\/([\w-%]+)/i,h=/^https?:\/\/(?:www\.)?twitter\.com\/i\/live\/(\d+)/i,g=/^https?:\/\/syndication\.twitter\.com\/settings/i,m=/^https?:\/\/(localhost|platform)\.twitter\.com(?::\d+)?\/widgets\/widget_iframe\.(.+)/i,v=/^https?:\/\/(?:www\.)?twitter\.com\/search\?q=(\w+)/i;function w(t){return&quot;string&quot;==typeof t&amp;&amp;o.test(t)&amp;&amp;RegExp.$1.length&lt;=20}function y(t){if(w(t))return RegExp.$1}function _(t,e){var n=r.decodeURL(t);if(e=e||!1,n.screen_name=y(t),n.screen_name)return r.url(&quot;https://twitter.com/intent/&quot;+(e?&quot;follow&quot;:&quot;user&quot;),n)}function b(t){return&quot;string&quot;==typeof t&amp;&amp;u.test(t)}function E(t){return&quot;string&quot;==typeof t&amp;&amp;i.test(t)}t.exports={isHashTag:b,hashTag:function(t,e){if(e=void 0===e||e,b(t))return(e?&quot;#&quot;:&quot;&quot;)+RegExp.$1},isScreenName:w,screenName:y,isStatus:E,status:function(t){return E(t)&amp;&amp;RegExp.$1},intentForProfileURL:_,intentForFollowURL:function(t){return _(t,!0)},isTwitterURL:function(t){return s.test(t)},isTwimgURL:function(t){return c.test(t)},isIntentURL:function(t){return a.test(t)},isSettingsURL:function(t){return g.test(t)},isWidgetIframeURL:function(t){return m.test(t)},isSearchUrl:function(t){return v.test(t)},regexen:{profile:o},momentId:function(t){return l.test(t)&amp;&amp;RegExp.$1},collectionId:function(t){return f.test(t)&amp;&amp;RegExp.$1},intentType:function(t){return a.test(t)&amp;&amp;RegExp.$1},likesScreenName:function(t){return p.test(t)&amp;&amp;RegExp.$1},listScreenNameAndSlug:function(t){var e,n,r;if(d.test(t)){e=RegExp.$1,n=RegExp.$2;try{r=decodeURIComponent(n)}catch(t){}return{ownerScreenName:e,slug:r||n}}return!1},eventId:function(t){return h.test(t)&amp;&amp;RegExp.$1}}},function(t,e,n){var r=n(1).JSON;t.exports={stringify:r.stringify||r.encode,parse:r.parse||r.decode}},function(t,e,n){var r=n(3),o=n(2),i=n(18),s=n(20),c=n(6),u=n(21),a=!1,f=/https?:\/\/([^/]+).*/i;t.exports={setOn:function(){a=!0},enabled:function(t,e){return!!(a||c.asBoolean(u.val(&quot;dnt&quot;))||s.isUrlSensitive(e||o.host)||i.isFramed()&amp;&amp;s.isUrlSensitive(i.rootDocumentLocation())||(t=f.test(t||r.referrer)&amp;&amp;RegExp.$1)&amp;&amp;s.isUrlSensitive(t))}}},function(t,e,n){var r=n(2),o=n(1),i=n(0),s={},c=i.contains(r.href,&quot;tw_debug=true&quot;);function u(){}function a(){}function f(){return o.performance&amp;&amp;+o.performance.now()||+new Date}function l(t,e){if(o.console&amp;&amp;o.console[t])switch(e.length){case 1:o.console[t](e[0]);break;case 2:o.console[t](e[0],e[1]);break;case 3:o.console[t](e[0],e[1],e[2]);break;case 4:o.console[t](e[0],e[1],e[2],e[3]);break;case 5:o.console[t](e[0],e[1],e[2],e[3],e[4]);break;default:0!==e.length&amp;&amp;o.console.warn&amp;&amp;o.console.warn(&quot;too many params passed to logger.&quot;+t)}}t.exports={devError:u,devInfo:a,devObject:function(t,e){},publicError:function(){l(&quot;error&quot;,i.toRealArray(arguments))},publicLog:function(){l(&quot;info&quot;,i.toRealArray(arguments))},time:function(t){c&amp;&amp;(s[t]=f())},timeEnd:function(t){c&amp;&amp;s[t]&amp;&amp;(f(),s[t])}}},function(t,e,n){var r=n(28);t.exports=new r(&quot;__twttr&quot;)},function(t,e){t.exports=navigator},function(t,e,n){
+</pre></div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li><p>&#64;overview es6-promise - a tiny implementation of Promises/A+.</p></li>
+<li><p>&#64;copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)</p></li>
+<li><p>&#64;license   Licensed under MIT license</p></li>
+<li><p>See <a class="reference external" href="https://raw.githubusercontent.com/stefanpenner/es6-promise/master/LICENSE">https://raw.githubusercontent.com/stefanpenner/es6-promise/master/LICENSE</a></p></li>
+<li><p>&#64;version   v4.2.5+7f2b526d</p></li>
+</ul>
+</div></blockquote>
+<div class="code fenced-code highlight-html notranslate"><div class="highlight"><pre><span></span> */var r;r=function(){&quot;use strict&quot;;function t(t){return&quot;function&quot;==typeof t}var e=Array.isArray?Array.isArray:function(t){return&quot;[object Array]&quot;===Object.prototype.toString.call(t)},n=0,r=void 0,o=void 0,i=function(t,e){p[n]=t,p[n+1]=e,2===(n+=2)&amp;&amp;(o?o(d):w())},s=&quot;undefined&quot;!=typeof window?window:void 0,c=s||{},u=c.MutationObserver||c.WebKitMutationObserver,a=&quot;undefined&quot;==typeof self&amp;&amp;&quot;undefined&quot;!=typeof process&amp;&amp;&quot;[object process]&quot;==={}.toString.call(process),f=&quot;undefined&quot;!=typeof Uint8ClampedArray&amp;&amp;&quot;undefined&quot;!=typeof importScripts&amp;&amp;&quot;undefined&quot;!=typeof MessageChannel;function l(){var t=setTimeout;return function(){return t(d,1)}}var p=new Array(1e3);function d(){for(var t=0;t&lt;n;t+=2)(0,p[t])(p[t+1]),p[t]=void 0,p[t+1]=void 0;n=0}var h,g,m,v,w=void 0;function y(t,e){var n=this,r=new this.constructor(E);void 0===r[b]&amp;&amp;F(r);var o=n._state;if(o){var s=arguments[o-1];i(function(){return C(o,r,s,n._result)})}else U(n,r,t,e);return r}function _(t){if(t&amp;&amp;&quot;object&quot;==typeof t&amp;&amp;t.constructor===this)return t;var e=new this(E);return L(e,t),e}a?w=function(){return process.nextTick(d)}:u?(g=0,m=new u(d),v=document.createTextNode(&quot;&quot;),m.observe(v,{characterData:!0}),w=function(){v.data=g=++g%2}):f?((h=new MessageChannel).port1.onmessage=d,w=function(){return h.port2.postMessage(0)}):w=void 0===s?function(){try{var t=Function(&quot;return this&quot;)().require(&quot;vertx&quot;);return void 0!==(r=t.runOnLoop||t.runOnContext)?function(){r(d)}:l()}catch(t){return l()}}():l();var b=Math.random().toString(36).substring(2);function E(){}var T=void 0,x=1,R=2,O={error:null};function S(t){try{return t.then}catch(t){return O.error=t,O}}function I(e,n,r){n.constructor===e.constructor&amp;&amp;r===y&amp;&amp;n.constructor.resolve===_?function(t,e){e._state===x?P(t,e._result):e._state===R?j(t,e._result):U(e,void 0,function(e){return L(t,e)},function(e){return j(t,e)})}(e,n):r===O?(j(e,O.error),O.error=null):void 0===r?P(e,n):t(r)?function(t,e,n){i(function(t){var r=!1,o=function(t,e,n,r){try{t.call(e,n,r)}catch(t){return t}}(n,e,function(n){r||(r=!0,e!==n?L(t,n):P(t,n))},function(e){r||(r=!0,j(t,e))},t._label);!r&amp;&amp;o&amp;&amp;(r=!0,j(t,o))},t)}(e,n,r):P(e,n)}function L(t,e){var n,r;t===e?j(t,new TypeError(&quot;You cannot resolve a promise with itself&quot;)):(r=typeof(n=e),null===n||&quot;object&quot;!==r&amp;&amp;&quot;function&quot;!==r?P(t,e):I(t,e,S(e)))}function N(t){t._onerror&amp;&amp;t._onerror(t._result),A(t)}function P(t,e){t._state===T&amp;&amp;(t._result=e,t._state=x,0!==t._subscribers.length&amp;&amp;i(A,t))}function j(t,e){t._state===T&amp;&amp;(t._state=R,t._result=e,i(N,t))}function U(t,e,n,r){var o=t._subscribers,s=o.length;t._onerror=null,o[s]=e,o[s+x]=n,o[s+R]=r,0===s&amp;&amp;t._state&amp;&amp;i(A,t)}function A(t){var e=t._subscribers,n=t._state;if(0!==e.length){for(var r=void 0,o=void 0,i=t._result,s=0;s&lt;e.length;s+=3)r=e[s],o=e[s+n],r?C(n,r,o,i):o(i);t._subscribers.length=0}}function C(e,n,r,o){var i=t(r),s=void 0,c=void 0,u=void 0,a=void 0;if(i){if((s=function(t,e){try{return t(e)}catch(t){return O.error=t,O}}(r,o))===O?(a=!0,c=s.error,s.error=null):u=!0,n===s)return void j(n,new TypeError(&quot;A promises callback cannot return that same promise.&quot;))}else s=o,u=!0;n._state!==T||(i&amp;&amp;u?L(n,s):a?j(n,c):e===x?P(n,s):e===R&amp;&amp;j(n,s))}var M=0;function F(t){t[b]=M++,t._state=void 0,t._result=void 0,t._subscribers=[]}var k=function(){function t(t,n){this._instanceConstructor=t,this.promise=new t(E),this.promise[b]||F(this.promise),e(n)?(this.length=n.length,this._remaining=n.length,this._result=new Array(this.length),0===this.length?P(this.promise,this._result):(this.length=this.length||0,this._enumerate(n),0===this._remaining&amp;&amp;P(this.promise,this._result))):j(this.promise,new Error(&quot;Array Methods must be provided an Array&quot;))}return t.prototype._enumerate=function(t){for(var e=0;this._state===T&amp;&amp;e&lt;t.length;e++)this._eachEntry(t[e],e)},t.prototype._eachEntry=function(t,e){var n=this._instanceConstructor,r=n.resolve;if(r===_){var o=S(t);if(o===y&amp;&amp;t._state!==T)this._settledAt(t._state,e,t._result);else if(&quot;function&quot;!=typeof o)this._remaining--,this._result[e]=t;else if(n===D){var i=new n(E);I(i,t,o),this._willSettleAt(i,e)}else this._willSettleAt(new n(function(e){return e(t)}),e)}else this._willSettleAt(r(t),e)},t.prototype._settledAt=function(t,e,n){var r=this.promise;r._state===T&amp;&amp;(this._remaining--,t===R?j(r,n):this._result[e]=n),0===this._remaining&amp;&amp;P(r,this._result)},t.prototype._willSettleAt=function(t,e){var n=this;U(t,void 0,function(t){return n._settledAt(x,e,t)},function(t){return n._settledAt(R,e,t)})},t}(),D=function(){function e(t){this[b]=M++,this._result=this._state=void 0,this._subscribers=[],E!==t&amp;&amp;(&quot;function&quot;!=typeof t&amp;&amp;function(){throw new TypeError(&quot;You must pass a resolver function as the first argument to the promise constructor&quot;)}(),this instanceof e?function(t,e){try{e(function(e){L(t,e)},function(e){j(t,e)})}catch(e){j(t,e)}}(this,t):function(){throw new TypeError(&quot;Failed to construct &#39;Promise&#39;: Please use the &#39;new&#39; operator, this object constructor cannot be called as a function.&quot;)}())}return e.prototype.catch=function(t){return this.then(null,t)},e.prototype.finally=function(e){var n=this.constructor;return t(e)?this.then(function(t){return n.resolve(e()).then(function(){return t})},function(t){return n.resolve(e()).then(function(){throw t})}):this.then(e,e)},e}();return D.prototype.then=y,D.all=function(t){return new k(this,t).promise},D.race=function(t){var n=this;return e(t)?new n(function(e,r){for(var o=t.length,i=0;i&lt;o;i++)n.resolve(t[i]).then(e,r)}):new n(function(t,e){return e(new TypeError(&quot;You must pass an array to race.&quot;))})},D.resolve=_,D.reject=function(t){var e=new this(E);return j(e,t),e},D._setScheduler=function(t){o=t},D._setAsap=function(t){i=t},D._asap=i,D.polyfill=function(){var t=void 0;if(&quot;undefined&quot;!=typeof global)t=global;else if(&quot;undefined&quot;!=typeof self)t=self;else try{t=Function(&quot;return this&quot;)()}catch(t){throw new Error(&quot;polyfill failed because global object is unavailable in this environment&quot;)}var e=t.Promise;if(e){var n=null;try{n=Object.prototype.toString.call(e.resolve())}catch(t){}if(&quot;[object Promise]&quot;===n&amp;&amp;!e.cast)return}t.Promise=D},D.Promise=D,D},t.exports=r()},function(t,e,n){var r=n(7);t.exports=function(){var t=this;this.promise=new r(function(e,n){t.resolve=e,t.reject=n})}},function(t,e,n){var r,o,i,s=n(4);r=function(t){var e=t.search.substr(1);return s.decode(e)},o=function(t){var e=t.href,n=e.indexOf(&quot;#&quot;),r=n&lt;0?&quot;&quot;:e.substring(n+1);return s.decode(r)},i=function(t){var e,n={},i=r(t),s=o(t);for(e in i)i.hasOwnProperty(e)&amp;&amp;(n[e]=i[e]);for(e in s)s.hasOwnProperty(e)&amp;&amp;(n[e]=s[e]);return n},t.exports={combined:i,fromQuery:r,fromFragment:o}},function(t,e,n){var r=n(10),o=n(22),i=n(4),s=n(23),c=n(0),u=n(12).get(&quot;scribeCallback&quot;),a=2083,f=[],l=i.url(s.CLIENT_EVENT_ENDPOINT,{dnt:0,l:&quot;&quot;}),p=encodeURIComponent(l).length;function d(t,e,n,r){var o=!c.isObject(t),i=!!e&amp;&amp;!c.isObject(e);o||i||(u&amp;&amp;u(arguments),h(s.formatClientEventNamespace(t),s.formatClientEventData(e,n,r),s.CLIENT_EVENT_ENDPOINT))}function h(t,e,n){var r,u;n&amp;&amp;c.isObject(t)&amp;&amp;c.isObject(e)&amp;&amp;(o.log(t,e),r=s.flattenClientEventPayload(t,e),u={l:s.stringify(r)},s.noticeSeen(t)&amp;&amp;(u.notice_seen=!0),r.dnt&amp;&amp;(u.dnt=1),w(i.url(n,u)))}function g(t,e,n,r){var o=!c.isObject(t),i=!!e&amp;&amp;!c.isObject(e);if(!o&amp;&amp;!i)return m(s.flattenClientEventPayload(s.formatClientEventNamespace(t),s.formatClientEventData(e,n,r)))}function m(t){return f.push(t),f}function v(t){return encodeURIComponent(t).length+3}function w(t){return(new Image).src=t}t.exports={canFlushOneItem:function(t){var e=v(s.stringify(t));return p+e&lt;a},_enqueueRawObject:m,scribe:h,clientEvent:d,clientEvent2:function(t,e,n){return d(t,e,n,2)},enqueueClientEvent:g,flushClientEvents:function(){var t;return f.length&gt;1&amp;&amp;g({page:&quot;widgets_js&quot;,component:&quot;scribe_pixel&quot;,action:&quot;batch_log&quot;},{}),t=f,f=[],t.reduce(function(e,n,r){var o=e.length,i=o&amp;&amp;e[o-1];return r+1==t.length&amp;&amp;n.event_namespace&amp;&amp;&quot;batch_log&quot;==n.event_namespace.action&amp;&amp;(n.message=[&quot;entries:&quot;+r,&quot;requests:&quot;+o].join(&quot;/&quot;)),function t(e){return Array.isArray(e)||(e=[e]),e.reduce(function(e,n){var r,o=s.stringify(n),i=v(o);return p+i&lt;a?e=e.concat(o):(r=s.splitLogEntry(n)).length&gt;1&amp;&amp;(e=e.concat(t(r))),e},[])}(n).forEach(function(t){var n=v(t);(!i||i.urlLength+n&gt;a)&amp;&amp;(i={urlLength:p,items:[]},e.push(i)),i.urlLength+=n,i.items.push(t)}),e},[]).map(function(t){var e={l:t.items};return r.enabled()&amp;&amp;(e.dnt=1),w(i.url(s.CLIENT_EVENT_ENDPOINT,e))})},interaction:function(t,e,n,r){var o=s.extractTermsFromDOM(t.target||t.srcElement);o.action=r||&quot;click&quot;,d(o,e,n)}}},function(t,e,n){var r=n(2),o=n(19),i=n(0),s=o.getCanonicalURL()||r.href,c=s;t.exports={isFramed:function(){return s!==c},rootDocumentLocation:function(t){return t&amp;&amp;i.isType(&quot;string&quot;,t)&amp;&amp;(s=t),s},currentDocumentLocation:function(){return c}}},function(t,e,n){var r=n(3),o=n(2),i=n(8);function s(t,e){var n,r;return e=e||o,/^https?:\/\//.test(t)?t:/^\/\//.test(t)?e.protocol+t:(n=e.host+(e.port.length?&quot;:&quot;+e.port:&quot;&quot;),0!==t.indexOf(&quot;/&quot;)&amp;&amp;((r=e.pathname.split(&quot;/&quot;)).pop(),r.push(t),t=&quot;/&quot;+r.join(&quot;/&quot;)),[e.protocol,&quot;//&quot;,n,t].join(&quot;&quot;))}t.exports={absolutize:s,getCanonicalURL:function(){for(var t,e=r.getElementsByTagName(&quot;link&quot;),n=0;e[n];n++)if(&quot;canonical&quot;==(t=e[n]).rel)return s(t.href)},getScreenNameFromPage:function(){for(var t,e,n,o=[r.getElementsByTagName(&quot;a&quot;),r.getElementsByTagName(&quot;link&quot;)],s=0,c=0,u=/\bme\b/;t=o[s];s++)for(c=0;e=t[c];c++)if(u.test(e.rel)&amp;&amp;(n=i.screenName(e.href)))return n}}},function(t,e,n){var r=n(2),o=/^[^#?]*\.(gov|mil)(:\d+)?([#?].*)?$/i,i={};function s(t){return t in i?i[t]:i[t]=o.test(t)}t.exports={isUrlSensitive:s,isHostPageSensitive:function(){return s(r.host)}}},function(t,e,n){var r,o=n(3);function i(t){var e,n,i,s=0;for(r={},e=(t=t||o).getElementsByTagName(&quot;meta&quot;);e[s];s++){if(n=e[s],/^twitter:/.test(n.getAttribute(&quot;name&quot;)))i=n.getAttribute(&quot;name&quot;).replace(/^twitter:/,&quot;&quot;);else{if(!/^twitter:/.test(n.getAttribute(&quot;property&quot;)))continue;i=n.getAttribute(&quot;property&quot;).replace(/^twitter:/,&quot;&quot;)}r[i]=n.getAttribute(&quot;content&quot;)||n.getAttribute(&quot;value&quot;)}}i(),t.exports={init:i,val:function(t){return r[t]}}},function(t,e,n){n(11),t.exports={log:function(t,e){}}},function(t,e,n){var r=n(24),o=n(3),i=n(10),s=n(25),c=n(27),u=n(9),a=n(12),f=n(8),l=n(0),p=1,d=r.version,h=a.get(&quot;clientEventEndpoint&quot;)||&quot;https://syndication.twitter.com/i/jot&quot;;function g(t){return l.aug({client:&quot;tfw&quot;},t||{})}function m(t,e,n){return e=e||{},l.aug({},e,{_category_:t,triggered_on:e.triggered_on||+new Date,dnt:i.enabled(n)})}t.exports={extractTermsFromDOM:function t(e,n){var r;return n=n||{},e&amp;&amp;e.nodeType===Node.ELEMENT_NODE?((r=e.getAttribute(&quot;data-scribe&quot;))&amp;&amp;r.split(&quot; &quot;).forEach(function(t){var e=t.trim().split(&quot;:&quot;),r=e[0],o=e[1];r&amp;&amp;o&amp;&amp;!n[r]&amp;&amp;(n[r]=o)}),t(e.parentNode,n)):n},clickEventElement:function(t){var e=s.closest(&quot;[data-expanded-url]&quot;,t),n=e&amp;&amp;e.getAttribute(&quot;data-expanded-url&quot;);return n&amp;&amp;f.isTwitterURL(n)?&quot;twitter_url&quot;:&quot;url&quot;},flattenClientEventPayload:function(t,e){return l.aug({},e,{event_namespace:t})},formatGenericEventData:m,formatClientEventData:function(t,e,n){var r=t&amp;&amp;t.widget_origin||o.referrer;return(t=m(&quot;tfw_client_event&quot;,t,r)).client_version=d,t.format_version=void 0!==n?n:1,e||(t.widget_origin=r),t},formatClientEventNamespace:g,formatHorizonTweetData:function(t){var e={item_ids:[],item_details:{}};return e.item_ids.push(t),e.item_details[t]={item_type:c.TWEET},e},formatTweetAssociation:function(t,e){var n={};return(e=e||{}).association_namespace=g(t),n[p]=e,n},noticeSeen:function(t){return&quot;notice&quot;===t.element&amp;&amp;&quot;seen&quot;===t.action},splitLogEntry:function(t){var e,n,r,o,i;return t.item_ids&amp;&amp;t.item_ids.length&gt;1?(e=Math.floor(t.item_ids.length/2),n=t.item_ids.slice(0,e),r={},o=t.item_ids.slice(e),i={},n.forEach(function(e){r[e]=t.item_details[e]}),o.forEach(function(e){i[e]=t.item_details[e]}),[l.aug({},t,{item_ids:n,item_details:r}),l.aug({},t,{item_ids:o,item_details:i})]):[t]},stringify:function(t){var e,n=Array.prototype.toJSON;return delete Array.prototype.toJSON,e=u.stringify(t),n&amp;&amp;(Array.prototype.toJSON=n),e},AUDIENCE_ENDPOINT:&quot;https://syndication.twitter.com/i/jot/syndication&quot;,CLIENT_EVENT_ENDPOINT:h,RUFOUS_REDIRECT:&quot;https://platform.twitter.com/jot.html&quot;}},function(t){t.exports={version:&quot;9066bb2:1593540614199&quot;}},function(t,e,n){var r=n(0),o=n(26);t.exports={closest:function t(e,n,i){var s;if(n)return i=i||n&amp;&amp;n.ownerDocument,s=r.isType(&quot;function&quot;,e)?e:function(t){return function(e){return!!e.tagName&amp;&amp;o(e,t)}}(e),n===i?s(n)?n:void 0:s(n)?n:t(s,n.parentNode,i)}}},function(t,e,n){var r=n(1).HTMLElement,o=r.prototype.matches||r.prototype.matchesSelector||r.prototype.webkitMatchesSelector||r.prototype.mozMatchesSelector||r.prototype.msMatchesSelector||r.prototype.oMatchesSelector;t.exports=function(t,e){if(o)return o.call(t,e)}},function(t){t.exports={TWEET:0,RETWEET:10,CUSTOM_TIMELINE:17,LIVE_VIDEO_EVENT:28,QUOTE_TWEET:23}},function(t,e,n){var r=n(1),o=n(0);function i(t){return o.isType(&quot;string&quot;,t)?t.split(&quot;.&quot;):o.isType(&quot;array&quot;,t)?t:[]}function s(t,e){(e=e||r)[t]=e[t]||{},Object.defineProperty(this,&quot;base&quot;,{value:e[t]}),Object.defineProperty(this,&quot;name&quot;,{value:t})}o.aug(s.prototype,{get:function(t){return i(t).reduce(function(t,e){if(o.isObject(t))return t[e]},this.base)},set:function(t,e,n){var r=i(t),s=function(t,e){var n=i(e).slice(0,-1);return n.reduce(function(t,e,r){if(t[e]=t[e]||{},!o.isObject(t[e]))throw new Error(n.slice(0,r+1).join(&quot;.&quot;)+&quot; is already defined with a value.&quot;);return t[e]},t)}(this.base,t),c=r.slice(-1);return n&amp;&amp;c in s?s[c]:s[c]=e},init:function(t,e){return this.set(t,e,!0)},unset:function(t){var e=i(t),n=this.get(e.slice(0,-1));n&amp;&amp;delete n[e.slice(-1)]},aug:function(t){var e=this.get(t),n=o.toRealArray(arguments).slice(1);if(e=void 0!==e?e:{},n.unshift(e),!n.every(o.isObject))throw new Error(&quot;Cannot augment non-object.&quot;);return this.set(t,o.aug.apply(null,n))},call:function(t){var e=this.get(t),n=o.toRealArray(arguments).slice(1);if(!o.isType(&quot;function&quot;,e))throw new Error(&quot;Function &quot;+t+&quot;does not exist.&quot;);return e.apply(null,n)},fullPath:function(t){var e=i(t);return e.unshift(this.name),e.join(&quot;.&quot;)}}),t.exports=s},function(t,e){t.exports=[&quot;hi&quot;,&quot;zh-cn&quot;,&quot;fr&quot;,&quot;zh-tw&quot;,&quot;msa&quot;,&quot;fil&quot;,&quot;fi&quot;,&quot;sv&quot;,&quot;pl&quot;,&quot;ja&quot;,&quot;ko&quot;,&quot;de&quot;,&quot;it&quot;,&quot;pt&quot;,&quot;es&quot;,&quot;ru&quot;,&quot;id&quot;,&quot;tr&quot;,&quot;da&quot;,&quot;no&quot;,&quot;nl&quot;,&quot;hu&quot;,&quot;fa&quot;,&quot;ar&quot;,&quot;ur&quot;,&quot;he&quot;,&quot;th&quot;,&quot;cs&quot;,&quot;uk&quot;,&quot;vi&quot;,&quot;ro&quot;,&quot;bn&quot;,&quot;el&quot;,&quot;en-gb&quot;,&quot;gu&quot;,&quot;kn&quot;,&quot;mr&quot;,&quot;ta&quot;,&quot;bg&quot;,&quot;ca&quot;,&quot;hr&quot;,&quot;sr&quot;,&quot;sk&quot;]},function(t,e,n){var r=n(1),o=n(31),i=n(32),s=n(34),c=new o(new i.Dispatcher(r.parent,&quot;twttr.button&quot;));t.exports={triggerResize:function(t){var e=s(t),n=Math.ceil(e.width),r=Math.ceil(e.height);c.notify(&quot;twttr.private.resizeButton&quot;,{width:n,height:r})},trigger:function(t,e){c.notify(&quot;twttr.private.trigger&quot;,{type:t,region:e})}}},function(t,e,n){var r=n(7),o=&quot;2.0&quot;,i=0;function s(t){if(!t)throw new Error(&quot;JsonRpcClient requires a dispatcher&quot;);this.idIterator=0,this.dispatcher=t,this.idPrefix=String(+new Date)+i++}function c(t){var e={jsonrpc:o,method:t};return arguments.length&gt;1&amp;&amp;(e.params=[].slice.call(arguments,1)),e}s.prototype._generateId=function(){return this.idPrefix+this.idIterator++},s.prototype.notify=function(){this.dispatcher.send(c.apply(null,arguments))},s.prototype.request=function(){var t=c.apply(null,arguments);return t.id=this._generateId(),this.dispatcher.send(t).then(function(t){return&quot;result&quot;in t?t.result:r.reject(t.error)})},t.exports=s},function(t,e,n){var r=n(2),o=n(1),i=n(9),s=n(15),c=n(5),u=n(0),a=n(8),f=n(33),l=c.ie9();function p(t,e,n){var r;t&amp;&amp;t.postMessage&amp;&amp;(l?r=(n||&quot;&quot;)+i.stringify(e):n?(r={})[n]=e:r=e,t.postMessage(r,&quot;*&quot;))}function d(t){return u.isType(&quot;string&quot;,t)?t:&quot;JSONRPC&quot;}function h(t,e){return e?u.isType(&quot;string&quot;,t)&amp;&amp;0===t.indexOf(e)?t.substring(e.length):t&amp;&amp;t[e]?t[e]:void 0:t}function g(t,e){var n=t.document;this.filter=d(e),this.server=null,this.isTwitterFrame=a.isTwitterURL(n.location.href),t.addEventListener(&quot;message&quot;,f(this._onMessage,this),!1)}function m(t,e){this.pending={},this.target=t,this.isTwitterHost=a.isTwitterURL(r.href),this.filter=d(e),o.addEventListener(&quot;message&quot;,f(this._onMessage,this),!1)}u.aug(g.prototype,{_onMessage:function(t){var e,n=this;this.server&amp;&amp;(this.isTwitterFrame&amp;&amp;!a.isTwitterURL(t.origin)||(e=h(t.data,this.filter))&amp;&amp;this.server.receive(e,t.source).then(function(e){e&amp;&amp;p(t.source,e,n.filter)}))},attachTo:function(t){this.server=t},detach:function(){this.server=null}}),u.aug(m.prototype,{_processResponse:function(t){var e=this.pending[t.id];e&amp;&amp;(e.resolve(t),delete this.pending[t.id])},_onMessage:function(t){var e;if((!this.isTwitterHost||a.isTwitterURL(t.origin))&amp;&amp;(e=h(t.data,this.filter))){if(u.isType(&quot;string&quot;,e))try{e=i.parse(e)}catch(t){return}(e=u.isType(&quot;array&quot;,e)?e:[e]).forEach(f(this._processResponse,this))}},send:function(t){var e=new s;return t.id?this.pending[t.id]=e:e.resolve(),p(this.target,t,this.filter),e.promise}}),t.exports={Receiver:g,Dispatcher:m,_stringifyPayload:function(t){return arguments.length&gt;0&amp;&amp;(l=!!t),l}}},function(t,e,n){var r=n(0);t.exports=function(t,e){var n=Array.prototype.slice.call(arguments,2);return function(){var o=r.toRealArray(arguments);return t.apply(e,n.concat(o))}}},function(t,e){t.exports=function(t){var e=t.getBoundingClientRect();return{width:e.width,height:e.height}}},function(t,e){t.exports=function(t,e){return t&gt;+new Date-(e=e||3e4)}},function(t,e,n){t.exports=n(37)},function(t,e,n){var r,o,i,s,c,u,a,f,l,p,d,h,g,m,v,w,y,b,E,T,x,R,O,S,I,L,N,P,j,U,A,C,M=n(3),F=n(2),k=n(1),D=n(4),$=n(16),z=n(38),B=n(17),V=n(5),H=n(29),q=n(10),W=n(40),K=n(6),J=n(0),Y=n(12),Q=n(30),G=n(35);function Z(t,e){t.className+=&quot; &quot;+e}function X(t){return t&amp;&amp;&quot;false&quot;===t.toLowerCase()}function tt(t){return p.getElementById(t)}function et(t){return(t=t||k.event)&amp;&amp;t.preventDefault?t.preventDefault():t.returnValue=!1,t&amp;&amp;t.stopPropagation?t.stopPropagation():t.cancelBubble=!0,!1}function nt(t){var e=T&amp;&amp;T.name?T.name+&quot; (@&quot;+m+&quot;)&quot;:&quot;@&quot;+m;if(h)O.title=_(&quot;View your profile on Twitter&quot;);else{if(t)return Z(x,&quot;following&quot;),void(O.title=_(&quot;You are following %{name} on Twitter&quot;,{name:e}));x.className=x.className.replace(/ ?following/,&quot;&quot;),O.title=_(&quot;Follow %{name} on Twitter&quot;,{name:e})}}function rt(){return/following/.test(x.className)}function ot(t){return k.open(t,null)}function it(t){return{screen_name:m,original_referer:o,region:t,partner:b,tw_p:i,ref_src:&quot;twsrc^tfw&quot;}}function st(t){ot(Y.get(&quot;config.userIntentURL&quot;)+&quot;?&quot;+D.encode(it(t)))}r=$.combined(F),o=r.original_redirect_referrer||M.referrer,i=&quot;followbutton&quot;,s=&quot;follow&quot;,c=&quot;follow_link&quot;,u=&quot;following&quot;,a=&quot;count&quot;,f=&quot;count_link&quot;,l=&quot;context_menu&quot;,p=M,g=&quot;true&quot;==r.preview,m=function(t){if(t&amp;&amp;/^[\w_]{1,20}$/.test(t))return t;throw new Error(&quot;Invalid screen name&quot;)}(r.screen_name),v=!X(r.show_screen_name),w=!X(r.show_count),y=r.lang&amp;&amp;r.lang.toLowerCase(),b=r.partner,K.asBoolean(r.dnt)&amp;&amp;q.setOn(),z.forwardSSL(o)||(Y.aug(&quot;config&quot;,{cdnFollowersInfoURL:&quot;https://cdn.syndication.twimg.com/widgets/followbutton/info.json&quot;,followersInfoURL:&quot;https://syndication.twitter.com/widgets/followbutton/info.json&quot;,userIntentURL:&quot;https://twitter.com/intent/user&quot;,followURL:&quot;https://twitter.com/intent/follow&quot;,mentionIntentURL:&quot;https://twitter.com/intent/tweet&quot;,twitterHost:&quot;https://twitter.com&quot;}),x=p.body,R=tt(&quot;widget&quot;),O=tt(&quot;follow-button&quot;),S=tt(&quot;l&quot;),I=tt(&quot;count&quot;),L=tt(&quot;m-follow&quot;),N=tt(&quot;m-profile&quot;),P=tt(&quot;m-tweet&quot;),y=J.contains(H,y)?y:&quot;en&quot;,Y.set(&quot;lang&quot;,y),x.parentNode.lang=y,E=_(&quot;ltr&quot;),Z(x,E),&quot;l&quot;==r.size&amp;&amp;Z(x,&quot;xl&quot;),Y.set(&quot;setFollowersCountAndFollowing&quot;,function(t){t.error?nt(!1):t.length&amp;&amp;(T=t[0],I.innerHTML=T.formatted_followers_count||&quot;&quot;,Z(x,&quot;hcount count-ready&quot;),d=T.age_gated,T.id!==z.getUserId()||g||(h=!0,nt(!1)),nt(T.following),Q.triggerResize(R))}),A=G(K.asNumber(r.time)),C=&quot;@&quot;+m,A||B.clientEvent({page:&quot;button&quot;,section:&quot;follow&quot;,action:&quot;impression&quot;},{language:r.lang,message:[r.size,w?&quot;withcount&quot;:&quot;nocount&quot;].join(&quot;:&quot;)+&quot;:&quot;,widget_origin:o,widget_frame:p.location},!1),p.title=_(&quot;Twitter Follow Button&quot;),S.innerHTML=v?_(&quot;Follow %{screen_name}&quot;,{screen_name:&quot;&lt;b&gt;&quot;+C+&quot;&lt;/b&gt;&quot;}):_(&quot;Follow&quot;),v&amp;&amp;!r.time&amp;&amp;x.offsetWidth&lt;S.offsetWidth-10&amp;&amp;(v=!1,S.innerHTML=_(&quot;Follow&quot;)),nt(!1),N.label=_(&quot;%{name} on Twitter&quot;,{name:C}),L.label=_(&quot;Follow&quot;),P.label=_(&quot;Tweet to %{name}&quot;,{name:C}),O.href=Y.get(&quot;config.followURL&quot;)+&quot;?&quot;+D.encode(it(c)),I.href=Y.get(&quot;config.userIntentURL&quot;)+&quot;?&quot;+D.encode(it(f)),Z(x,&quot;ready&quot;),Z(x.parentNode,y),w||Z(x,&quot;ncount&quot;),Q.triggerResize(R),function(){function t(t,e){if(B.interaction(t,{},!1),Q.trigger(&quot;click&quot;,e),Q.trigger(&quot;follow&quot;,e),!(t.altKey||t.shiftKey||t.metaKey||V.ios()||V.android()))return d?k.open(Y.get(&quot;config.twitterHost&quot;)+&quot;/&quot;+m+&quot;?&quot;+D.encode(it())):h||rt()?st(e):ot(Y.get(&quot;config.followURL&quot;)+&quot;?&quot;+D.encode(it())),et(t)}function e(t,e){if(B.interaction(t,{},!1),Q.trigger(&quot;click&quot;,e),!(t.altKey||t.shiftKey||t.metaKey||V.ios()||V.android()))return st(e),et(t)}O.onclick=function(e){return t(e||k.event,rt()?u:s)},L.onclick=function(e){return t(e||k.event,l)},I.onclick=function(t){return e(t||k.event,a)},N.onclick=function(t){return e(t||k.event,l)},P.onclick=function(){return t=l,void ot(Y.get(&quot;config.mentionIntentURL&quot;)+&quot;?&quot;+D.encode(it(t)));var t},k.addEventListener(&quot;resize&quot;,W(function(){Q.triggerResize(R)},50),!1)}(),z.isLoggedIn()?U=D.url(Y.get(&quot;config.followersInfoURL&quot;),{screen_names:m,requester_id:z.getUserId(),lang:y,callback:Y.fullPath(&quot;setFollowersCountAndFollowing&quot;)}):w&amp;&amp;(U=D.url(Y.get(&quot;config.cdnFollowersInfoURL&quot;),{screen_names:m,lang:y,callback:Y.fullPath(&quot;setFollowersCountAndFollowing&quot;)})),U&amp;&amp;((j=p.createElement(&quot;script&quot;)).src=U,x.appendChild(j)))},function(t,e,n){var r=n(2),o=n(1),i=n(39),s=n(4);function c(t){var e=i(&quot;secure_session&quot;);return&quot;true&quot;==e||&quot;default&quot;==e?!t||&quot;https:&quot;===r.protocol:!!i(&quot;auth_token_session&quot;)}t.exports={isLoggedIn:c,forwardSSL:function(t){if(c()&amp;&amp;&quot;https:&quot;!==r.protocol)return o.onload=function(){r.replace(&quot;https://&quot;+r.host+r.pathname+r.search+r.hash+&quot;&amp;original_redirect_referrer=&quot;+t)},!0},getUserId:function(){var t,e,n=i(&quot;twid&quot;);if(n&amp;&amp;(t=n.split(&quot;|&quot;)[0]))return(e=s.decode(t)).c?e.c:e.u}}},function(t,e,n){var r=n(3),o=n(0);t.exports=function(t,e,n){var i,s,c,u,a=o.aug({},n);return arguments.length&gt;1&amp;&amp;&quot;[object Object]&quot;!==String(e)?(null!==e&amp;&amp;void 0!==e||(a.expires=-1),&quot;number&quot;==typeof a.expires&amp;&amp;(i=a.expires,s=new Date((new Date).getTime()+60*i*1e3),a.expires=s),e=String(e),r.cookie=[encodeURIComponent(t),&quot;=&quot;,a.raw?e:encodeURIComponent(e),a.expires?&quot;; expires=&quot;+a.expires.toUTCString():&quot;&quot;,a.path?&quot;; path=&quot;+a.path:&quot;&quot;,a.domain?&quot;; domain=&quot;+a.domain:&quot;&quot;,a.secure?&quot;; secure&quot;:&quot;&quot;].join(&quot;&quot;)):(u=(a=e||{}).raw?function(t){return t}:decodeURIComponent,(c=new RegExp(&quot;(?:^|; )&quot;+encodeURIComponent(t)+&quot;=([^;]*)&quot;).exec(r.cookie))?u(c[1]):null)}},function(t,e,n){var r=n(1);t.exports=function(t,e,n){var o,i=0;return n=n||null,function s(){var c=n||this,u=arguments,a=+new Date;if(r.clearTimeout(o),a-i&gt;e)return i=a,void t.apply(c,u);o=r.setTimeout(function(){s.apply(c,u)},e)}}}]));&lt;/script&gt;&lt;script src=&quot;./jsonp.jsonp&quot;&gt;&lt;/script&gt;
+
+&lt;/body&gt;&lt;/html&gt;
+</pre></div>
+</div>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 CS Learning 4 U group.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>
