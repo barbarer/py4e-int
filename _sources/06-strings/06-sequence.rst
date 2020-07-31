@@ -13,8 +13,8 @@ the characters one at a time with the bracket operator:
 
 .. code-block:: python
 
-   >>> fruit = 'banana'
-   >>> letter = fruit[1]
+    >>> fruit = 'banana'
+    >>> letter = fruit[1]
 
 The second statement extracts the character at index position 1 from the
 ``fruit`` variable and assigns it to the ``letter``
@@ -51,7 +51,7 @@ So "b" is the 0th letter ("zero-th") of "banana",
 2th ("two-th") letter.
 
 .. figure:: ../images/string.svg
-   :alt: String Indexes
+    :alt: String Indexes
 
 .. mchoice:: str-seq-mc-cheer
     :practice: T

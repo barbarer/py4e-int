@@ -3,7 +3,7 @@ Definitions and uses
 .. index::
     pair: Function; Definition
     single: Use Before Def
-    
+
 
 Pulling together the code fragments from the previous section, the whole
 program looks like this:
@@ -32,20 +32,6 @@ and the function definition generates no output.
 As you might expect, you have to create a function before you can
 execute it. In other words, the function definition has to be executed
 before the first time it is called.
-
-.. codelens:: codelens461
-    :showoutput:
-
-    def print_lyrics():
-        print("I'm a lumberjack, and I'm okay.")
-        print('I sleep all night and I work all day.')
-
-    def repeat_lyrics():
-        print_lyrics()
-        print_lyrics()
-
-    repeat_lyrics()
-
 
 If we move the function call above the definition we will get an error.
 
@@ -80,7 +66,7 @@ If we move the function call above the definition we will get an error.
 See what happens if we move the function definitions around so that ``repeat_lyrics`` is defined before
 ``print_lyrics``.
 
-.. codelens:: functDef_order
+.. codelens:: functDef_codelens
     :showoutput:
 
     def repeat_lyrics():

@@ -18,6 +18,6 @@ Strings
    06-format.rst
    06-debugging.rst
    06-glossary.rst
-   06-Exercises.rst
+   Exercises.rst
    06-MixedupCode.rst
    06-WriteCode.rst

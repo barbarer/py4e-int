@@ -39,7 +39,7 @@ the parameter (whatever it is) twice.
 
 This function works with any value that can be printed.
 
-.. codelens:: codelens491
+.. codelens:: functParam_codelens1
     :showoutput:
 
     import math
@@ -57,7 +57,7 @@ The same rules of composition that apply to built-in functions also
 apply to user-defined functions, so we can use any kind of expression as
 an argument for ``print_twice``:
 
-.. codelens:: codelens492
+.. codelens:: functParam_codelens2
     :showoutput:
 
     import math
@@ -76,8 +76,7 @@ are only evaluated once.
 
 You can also use a variable as an argument:
 
-.. codelens:: codelens493
-    :showoutput:
+.. codelens:: functParam_codelens3
 
     def print_twice(bruce):
         print(bruce)

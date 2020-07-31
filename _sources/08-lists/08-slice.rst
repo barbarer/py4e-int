@@ -77,7 +77,7 @@ elements:
 
     t = ['a', 'b', 'c', 'd', 'e', 'f']
     t[1:3] = ['x', 'y']
-
+    print(t)
 
 .. mchoice:: listSlice_MC_len
     :answer_a: 2

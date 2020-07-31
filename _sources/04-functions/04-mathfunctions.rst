@@ -61,7 +61,7 @@ that computes logarithms base e.
 
 The second example finds the sine of ``radians``. The name of
 the variable is a hint that ``sin`` and the other trigonometric
-functions (\ ``cos``\ , ``tan``\ , etc.) take arguments in
+functions (``cos``, ``tan``, etc.) take arguments in
 radians. To convert from degrees to radians, divide by 360 and multiply
 by 2\pi:
 
@@ -136,7 +136,7 @@ comparing it to the square root of two divided by two:
     :question: What will print?
     :breakline: 3
     :feedback: Num is a floating-point number.
-    :correct: 1.0
+    :correct: globals.result
 
     import math
     num = 2.0

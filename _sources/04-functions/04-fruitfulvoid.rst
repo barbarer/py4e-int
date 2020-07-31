@@ -6,7 +6,7 @@ Fruitful functions and void functions
     pair: Function; Fruitful
     pair: Function; Void
     pair: Special Value; None
-    
+
 
 Some of the functions we are using, such as the math functions, yield
 results; for lack of a better name, I call them *fruitful
@@ -98,7 +98,7 @@ statement in our function. For example, we could make a very simple
 function called ``addtwo`` that adds two numbers together and
 returns a result.
 
-.. codelens:: codelens4101
+.. codelens:: functFruit_codelens
     :question: What will print?
     :breakline: 8
     :feedback: Look at the function and the parameters

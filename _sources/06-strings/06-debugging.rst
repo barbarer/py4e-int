@@ -26,23 +26,23 @@ Look what happens when the user enters an empty line of input:
 
 .. code-block:: python
 
-   > hello there
-   hello there
-   > # don't print this
-   > print this!
-   print this!
-   >
-   Traceback (most recent call last):
-     File "copytildone.py", line 3, in <module>
-       if line[0] == '#':
-   IndexError: string index out of range
+    > hello there
+    hello there
+    > # don't print this
+    > print this!
+    print this!
+    >
+    Traceback (most recent call last):
+      File "copytildone.py", line 3, in <module>
+        if line[0] == '#':
+    IndexError: string index out of range
 
 .. fillintheblank:: str-debug-fitb-error
     :practice: T
 
-    What kind of error will come from trying to access a nonexistent index?
+    What kind of error will come from trying to access a nonexistent element or one that is out of range?
 
-    - :[Tt]raceback( [Ee]rror)*: Correct! Try to access an index that isn't there causes a traceback error.
+    - :[Ii]ndex([Ee]rror)*: Correct! Try to access an index that isn't there causes a index error.
       :.*: Try again!
 
 
@@ -63,7 +63,7 @@ which returns ``False`` if the string is empty.
     What string method is used to prevent errors?
 
     - :[Ss]tartswith: Correct! The string method startswith can be used as an extra check to prevent errors.
-      :.*: Try again!
+      :.*: Try again! Watch your capitalization (methods don't use camelCase).
 
 Another way is to safely write the ``if`` statement using the
 *guardian* pattern and make sure the second logical
@@ -79,5 +79,5 @@ the string.:
 
     What kind of pattern is used to prevent errors?
 
-    - :[Gg]aurdian( [Pp]attern)*: Correct! A guardian pattern can be used as an extra check to prevent errors.
+    - :[Gg]uardian( [Pp]attern)*: Correct! A guardian pattern can be used as an extra check to prevent errors.
       :.*: Try again!

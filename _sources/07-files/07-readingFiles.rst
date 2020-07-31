@@ -81,11 +81,11 @@ because each call to ``read`` exhausts the resource:
 
 .. code-block:: python
 
-   >>> fhand = open('mbox-short.txt')
-   >>> print(len(fhand.read()))
-   94626
-   >>> print(len(fhand.read()))
-   0
+    >>> fhand = open('mbox-short.txt')
+    >>> print(len(fhand.read()))
+    94626
+    >>> print(len(fhand.read()))
+    0
 
 
 Remember that this form of the ``open`` function should only be used

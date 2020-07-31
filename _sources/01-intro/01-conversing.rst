@@ -155,5 +155,5 @@ one, so having a book handy probably will turn out to be helpful.
 
   How do you leave the Python interpreter?
 
-  - :quit(): Correct!
+  - :quit(\(\))*: Correct!
     :.*: Try again.

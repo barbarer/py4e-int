@@ -1,4 +1,4 @@
-Using Web Services
+Python and Web Services
 :::::::::::::::::::::::::::::::::::::::::::
 Once it became easy to retrieve documents and parse documents over HTTP
 using programs, it did not take long to develop an approach where we
@@ -20,9 +20,11 @@ information with each other, they use JavaScript Object Notation (JSON)
     13-xml.rst
     13-parsingXML.rst
     13-loopingNodes.rst
-    13-javascript.rst
+    13-JSON.rst
     13-parsingJSON.rst
     13-applicationProg.rst
     13-securityAPI.rst
     13-glossary.rst
-    
+    Exercises.rst
+    13-google.rst
+    13-twitter.rst

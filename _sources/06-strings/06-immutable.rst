@@ -39,41 +39,41 @@ This example concatenates a new first letter onto a slice of
 ``greeting``. It has no effect on the original string.
 
 .. mchoice:: str-imm-mc-xyz
-   :practice: T
-   :answer_a: xyz
-   :answer_b: xyxyz
-   :answer_c: xy xy z
-   :answer_d: xy z
-   :answer_e: z
-   :correct: b
-   :feedback_a: s1 will equal "xy" plus another "xy" then z at the end.
-   :feedback_b: s1 contains the original value, plus itself, plus "z"
-   :feedback_c: No spaces are added during concatenation.
-   :feedback_d: No spaces are added during concatenation, and an additional "xy" should be
-                included at the beginning.
-   :feedback_e: s1 was set to "xy" initially, so the final answer will be "xyxyz"
+    :practice: T
+    :answer_a: xyz
+    :answer_b: xyxyz
+    :answer_c: xy xy z
+    :answer_d: xy z
+    :answer_e: z
+    :correct: b
+    :feedback_a: s1 will equal "xy" plus another "xy" then z at the end.
+    :feedback_b: s1 contains the original value, plus itself, plus "z"
+    :feedback_c: No spaces are added during concatenation.
+    :feedback_d: No spaces are added during concatenation, and an additional "xy" should be
+                 included at the beginning.
+    :feedback_e: s1 was set to "xy" initially, so the final answer will be "xyxyz"
 
-   Given the following code segment, what is the value of the string s1 after these are executed?
+    Given the following code segment, what is the value of the string s1 after these are executed?
 
-   ::
+    ::
 
-     s1 = "xy"
-     s2 = s1
-     s1 = s1 + s2 + "z"
+      s1 = "xy"
+      s2 = s1
+      s1 = s1 + s2 + "z"
 
 .. mchoice:: str-imm-mc-ball
-   :practice: T
-   :answer_a: Ball
-   :answer_b: Call
-   :answer_c: Error
-   :correct: c
-   :feedback_a: Assignment is not allowed with strings.
-   :feedback_b: Assignment is not allowed with strings.
-   :feedback_c: Yes, strings are immutable.
+    :practice: T
+    :answer_a: Ball
+    :answer_b: Call
+    :answer_c: Error
+    :correct: c
+    :feedback_a: Assignment is not allowed with strings.
+    :feedback_b: Assignment is not allowed with strings.
+    :feedback_c: Yes, strings are immutable.
 
-   What is printed by the following statements:
+    What is printed by the following statements:
 
-   .. code-block:: python
+    .. code-block:: python
 
       s = "Ball"
       s[0] = "C"

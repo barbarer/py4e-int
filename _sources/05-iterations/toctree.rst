@@ -14,4 +14,4 @@ Iterations
    05-glossary.rst
    Exercises.rst
    05-mixedupcode.rst
-   05-excercises.rst
+   05-WriteCode.rst

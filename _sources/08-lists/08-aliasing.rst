@@ -29,9 +29,9 @@ other:
 
 .. codelens:: listChange
     :question: What is the value of a[0] after the line with the red arrow executes?
-    :breakline: 3
+    :breakline: 4
     :feedback: Think about what it means that b is a.
-    :correct: 17
+    :correct: gobals.a[0]
 
     a = [1, 2, 3]
     b = a

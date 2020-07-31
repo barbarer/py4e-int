@@ -6,8 +6,6 @@ Debugging
     single: Idiom
     pair: Copy to Avoid; Aliasing
 
-
-
 Careless use of lists (and other mutable objects) can lead to long hours
 of debugging. Here are some common pitfalls and ways to avoid them:
 
@@ -78,6 +76,29 @@ of debugging. Here are some common pitfalls and ways to avoid them:
     runtime error; the other three are legal, but they do the wrong
     thing.
 
+.. activecode:: listDebug_ac_fix
+    :nocodelens:
+
+    Fix the following code to correctly add x, y, and z to the end of lst in that order.
+    ~~~~
+    lst = [1, 1, 2, 3, 5, 8, 13]
+    x = 21
+    y = 34
+    z = 55
+    lst.append([x])
+    lst = lst + y
+    lst = lst.append(z)
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(lst,[1,1,2,3,5,8,13,21,34,55],"Testing that x, y, and z, have been added to the end of lst")
+
+    myTests().main()
+
 * Make copies to avoid aliasing.
     If you want to use a method like ``sort`` that modifies the
     argument, but you need to keep the original list as well, you can
@@ -92,6 +113,16 @@ of debugging. Here are some common pitfalls and ways to avoid them:
     ``sorted``, which returns a new, sorted list and leaves the
     original alone. But in that case you should avoid using
     ``sorted`` as a variable name!
+
+.. mchoice:: listDebug_MC_tf
+    :practice: T
+    :answer_a: True
+    :answer_b: False
+    :correct: b
+    :feedback_a: Try again!
+    :feedback_b: Sorted returns a new, sorted list and leaves the original list as is.
+
+    True or False? The built-in function sorted affects the original list.
 
 * Lists, ``split`` , and files
     When we read and parse files, there are many opportunities to
@@ -113,9 +144,14 @@ of debugging. Here are some common pitfalls and ways to avoid them:
     can use ``continue`` to skip lines that don't have "From"
     as the first word as follows:
 
-    .. code-block:: python
+    .. datafile:: mboxShort1.txt
+        :fromfile: ../07-files/mbox-short.txt
+        :hide:
 
-        fhand = open('mbox-short.txt')
+    .. activecode:: listDebug_ac_print
+        :caption: Revisiting file access.
+
+        fhand = open('mboxShort1.txt')
         for line in fhand:
             words = line.split()
             if words[0] != 'From' : continue
@@ -125,14 +161,18 @@ of debugging. Here are some common pitfalls and ways to avoid them:
     ``rstrip`` to remove the newline at the end of the file.
     But is it better?
 
-    .. code-block::
+    .. mchoice:: listDebug_MC_error
+        :answer_a: SyntaxError
+        :answer_b: IndexError
+        :answer_c: TypeError
+        :answer_d: RuntimeError
+        :correct: b
+        :feedback_a: There isn't anything wrong with the syntax here! What will happen if the code reaches the end of the file?
+        :feedback_b: The code will cause an IndexError because it has no stop for when the file ends.
+        :feedback_c: There aren't type issues with this code, because everything is read in as a string. What will happen if the code reaches the end of the file?
+        :feedback_d: This will not cause a RuntimeError. What will happen if the code reaches the end of the file?
 
-        python search8.py
-        Sat
-        Traceback (most recent call last):
-          File "search8.py", line 5, in <module>
-            if words[0] != 'From' : continue
-        IndexError: list index out of range
+        What kind of error will caused by the code above?
 
     It kind of works and we see the day from the first line (Sat), but
     then the program fails with a traceback error. What went wrong? What
@@ -198,10 +238,6 @@ of debugging. Here are some common pitfalls and ways to avoid them:
     the first word is not there. There are many ways to protect this
     code; we will choose to check the number of words we have before we
     look at the first word:
-
-    .. datafile:: mboxShort1.txt
-        :fromfile: ../07-files/mbox-short.txt
-        :hide:
 
     .. activecode:: listDebug_file
         :available_files: mboxShort1
