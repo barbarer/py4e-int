@@ -53,11 +53,6 @@ different objects together to accomplish a task:
    tags = soup('a')
    for tag in tags:
        print(tag.get('href', None))
-.. \index{BeautifulSoup}
-.. \index{HTML}
-.. \index{parsing!HTML}
-
-.. \VerbatimInput{../code3/urllinks.py}
 
 
 We read the URL into a string and then pass that into ``urllib`` to retrieve

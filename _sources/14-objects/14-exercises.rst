@@ -107,6 +107,15 @@ Exercises
     - :class: Correct, the class keyword defines an object but does not create the object.
       :.*: Try again! Note that keywords are case-sensitive.
 
+.. fillintheblank:: word_output
+  
+   _________ is a convention that is used to represent the instance of a class and to access the attributes and methods of the class. 
+
+  - :[s]elf: Correct, 'self' is not a keyword but a convention that is used for this purpose
+    :.*: Try again! 
+
+   
+
 .. mchoice:: object_oriented_output
     :practice: T
     :answer_a: Grass type pokemon name is Bulbasaur
@@ -165,5 +174,21 @@ Exercises
     True or False? In order to extend a class, the new class should have access to all the data and inner workings of
     the parent class.
 
+.. clickablearea:: objects_correct
+    :practice: T
+    :question: Click the incorrect parts in the following code.
+    :iscode:
+    :feedback:
 
+    :click-correct:Class:endclick::click-incorrect: Book::endclick:
+
+            :click-correct:Self.title:endclick::click-incorrect: = '':endclick:
+            author = ''
+
+            :click-correct:def __init__(title, author):endclick:
+                :click-correct:title:endclick::click-incorrect: = title:endclick:
+                :click-correct:author:endclick::click-incorrect: = author:endclick:
+                print("You book is " + :click-correct:title:endclick: + " by author " + :click-correct:author:endclick:)
+        
+        :click-incorrect:book = :endclick::click-correct:new:endclick::click-incorrect: Book("The Odyssey", "Homer"):endclick:
 

@@ -24,6 +24,7 @@ Then, we can 'import' the ``PartyAnimal`` class in a new file and extend it, as 
     :hide:
 
 .. activecode:: inherit_cricketfan
+    :language: python3
     :available_files: party.py
 
     from party import PartyAnimal
