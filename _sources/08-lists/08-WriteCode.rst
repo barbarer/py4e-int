@@ -111,6 +111,7 @@ Write Code Questions
       .. tab:: Answer
 
           .. activecode:: list_writePlanta
+              :optional:
 
               data = ['bagel', 'cream cheese', 'breakfast', 'grits', 'eggs', 'bacon', [34, 9, 73, []],
                      [['willow', 'birch', 'elm'], 'apple', 'peach', 'cherry']]
@@ -150,6 +151,7 @@ Write Code Questions
       .. tab:: Answer
 
           .. activecode:: list_writeChopa
+              :optional:
 
               def chop(lst):
                   del lst[0]
@@ -208,6 +210,7 @@ Write Code Questions
         .. tab:: Answer
 
             .. activecode:: list_writeSuma
+                :optional:
 
                 import random
 

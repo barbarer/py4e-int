@@ -16,7 +16,7 @@ computers are built. If you were to take apart your computer or cell
 phone and look deep inside, you would find the following parts:
 
 .. figure:: Figures/arch.svg
-   :alt: Hardware Architecture
+    :alt: Hardware Architecture
 
 
 The high-level definitions of these parts are as follows:
@@ -57,18 +57,18 @@ The high-level definitions of these parts are as follows:
   Memory*.
 
 .. mchoice:: intro-hardware-mc-storage
-  :practice: T
-  :answer_a: Main Memory
-  :answer_b: Secondary Memory
-  :answer_c: Central Processing Unit
-  :answer_d: Input Devices
-  :correct: b
-  :feedback_a: Information stored in the main memory vanishes when the computer is turned off.
-  :feedback_b: Correct! The secondary memory will hod information without power.
-  :feedback_c: Try again! The CPU is what does the computing.
-  :feedback_d: Try again! Input devices are other physical hardwares.
+    :practice: T
+    :answer_a: Main Memory
+    :answer_b: Secondary Memory
+    :answer_c: Central Processing Unit
+    :answer_d: Input Devices
+    :correct: b
+    :feedback_a: Information stored in the main memory vanishes when the computer is turned off.
+    :feedback_b: Correct! The secondary memory will hod information without power.
+    :feedback_c: Try again! The CPU is what does the computing.
+    :feedback_d: Try again! Input devices are other physical hardwares.
 
-  Which of the following will keep information stored without a power source?
+    Which of the following will keep information stored without a power source?
 
 While most of the detail of how these components work is best left to
 computer builders, it helps to have some terminology so we can talk
@@ -83,7 +83,7 @@ input/output devices.
 
 
 .. figure:: Figures/arch2.svg
-   :alt: Where Are You?
+    :alt: Where Are You?
 
 
 You need to be the person who answers the CPU's "What next?" question.
@@ -96,17 +96,17 @@ and getting the instructions to be correct *programming*.
 
 
 .. shortanswer:: intro-hardware-sa-program
-  :practice: T
+    :practice: T
 
-  What is a program?
+    What is a program?
 
 .. dragndrop:: intro-hardware-dnd-memory
-  :practice: T
-  :feedback: How is memory stored?
-  :match_1: Main Memory|||Stores information quickly for the CPU; needs power for storage.
-  :match_2: Secondary Memory|||Stores information slowly; can save information without power.
-  :match_3: Input/Output Devices|||Physical aspects beyond the internal computer.
-  :match_4: Network Connection|||Allows information to be stored on a network; very slow.
-  :match_5: Central Processing Unit|||Does the actual computing and executing of programs in the computer.
+    :practice: T
+    :feedback: How is memory stored?
+    :match_1: Main Memory|||Stores information quickly for the CPU; needs power for storage.
+    :match_2: Secondary Memory|||Stores information slowly; can save information without power.
+    :match_3: Input/Output Devices|||Physical aspects beyond the internal computer.
+    :match_4: Network Connection|||Allows information to be stored on a network; very slow.
+    :match_5: Central Processing Unit|||Does the actual computing and executing of programs in the computer.
 
-  Match each term with its definition.
+    Match each term with its definition.

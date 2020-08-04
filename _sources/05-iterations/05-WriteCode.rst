@@ -1,5 +1,7 @@
 Write Code Questions
----------
+--------------------
+.. warning:: Be careful not to create infinite loops, as they will cause the page to freeze.
+
 #.
     .. tabbed:: itr-ex-countdown
 
@@ -13,9 +15,9 @@ Write Code Questions
 
                 def countdown():
                     counter = 10
-                    while Counter > 0:
+                    while Counter > 10:
                         Print(counter)
-                        counter = Counter + 1
+                        counter = counter + 1
 
                 countdown()
 
@@ -54,23 +56,23 @@ Write Code Questions
 
 
 #.
-    .. tabbed:: itr-ex-infLoop
+    .. tabbed:: itr-ex-100Loop
 
         .. tab:: Question
 
-            The following code will loop infinitely. Make one change that will make it loop only 5 times.
+            The following code will loop too many times. Make change one line that will to make it loop only 5 times.
 
-            .. activecode:: itr-ex-infLoopq
+            .. activecode:: itr-ex-100Loopq
                 :practice: T
 
                 x = 5
-                while x > 0:
+                while x < 100:
                     print(x)
                     x = x + 1
 
         .. tab:: Answer
 
-            .. activecode:: itr-ex-infLoopa
+            .. activecode:: itr-ex-100Loopa
 
                 x = 5
                 while x > 0:
@@ -81,7 +83,7 @@ Write Code Questions
 
             .. disqus::
                 :shortname: interactivepython
-                :identifier: itrInfLoopDisc
+                :identifier: itr100LoopDisc
 
 
 #.

@@ -22,12 +22,12 @@ and we are used to ignoring them.
 
 .. code-block:: python
 
-   >>> x = 5
-   >>>  y = 6
-     File "<stdin>", line 1
-       y = 6
-       ^
-   IndentationError: unexpected indent
+    >>> x = 5
+    >>>  y = 6
+      File "<stdin>", line 1
+        y = 6
+        ^
+    IndentationError: unexpected indent
 
 
 In this example, the problem is that the second line is indented by one
@@ -56,10 +56,10 @@ Try different values for weight in the above code and then answer the question b
 
 .. fillintheblank:: cndtnl-debug-fitb-weight
 
-   What value for weight will result in an error complaining that price is not defined?
+    What value for weight will result in an error complaining that price is not defined?
 
-   - :^1$|1\.[0]*$: The code checks for numbers greater or less than 1, but not 1 itself.
-     :.*: Which value is not tested currently?
+    - :^1$|1\.[0]*$: The code checks for numbers greater or less than 1, but not 1 itself.
+      :.*: Which value is not tested currently?
 
 .. mchoice:: cndtnl-debug-mc-error
     :practice: T

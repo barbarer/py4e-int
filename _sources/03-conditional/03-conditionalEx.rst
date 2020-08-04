@@ -16,10 +16,10 @@ simplest form is the ``if`` statement:
 
 .. codelens:: cndtnlPositive
 
-   x = 2
-   if x > 0 :
-       print('x is positive')
-   print('All done.')
+    x = 2
+    if x > 0 :
+        print('x is positive')
+    print('All done.')
 
 
 The boolean expression after the ``if`` statement is called the
@@ -27,7 +27,7 @@ The boolean expression after the ``if`` statement is called the
 colon character (:) and the line(s) after the if statement are indented.
 
 .. figure:: ../images/if.svg
-   :alt: If Logic
+    :alt: If Logic
 
 
 
@@ -50,10 +50,10 @@ which does nothing.
 
 .. codelens:: cndtnlNegative
 
-   x = -3
-   if x < 0 :
-       pass # need to handle negative values!
-   print('All done.')
+    x = -3
+    if x < 0 :
+        pass # need to handle negative values!
+    print('All done.')
 
 
 If you enter an ``if`` statement in the Python interpreter, the
@@ -62,12 +62,12 @@ in the middle of a block of statements, as shown below:
 
 .. code-block:: python
 
-   >>> x = 3
-   >>> if x < 10:
-   ...    print('Small')
-   ...
-   Small
-   >>>
+    >>> x = 3
+    >>> if x < 10:
+    ...    print('Small')
+    ...
+    Small
+    >>>
 
 
 When using the Python interpreter, you must leave a blank line at the end of a
@@ -75,14 +75,14 @@ block, otherwise Python will return an error:
 
 .. code-block:: python
 
-   >>> x = 3
-   >>> if x < 10:
-   ...    print('Small')
-   ... print('Done')
-     File "<stdin>", line 3
-       print('Done')
+    >>> x = 3
+    >>> if x < 10:
+    ...    print('Small')
+    ... print('Done')
+      File "<stdin>", line 3
+        print('Done')
            ^
-   SyntaxError: invalid syntax
+    SyntaxError: invalid syntax
 
 
 A blank line at the end of a block of statements is not necessary when writing

@@ -17,10 +17,11 @@ A *value* is one of the basic things a program works
 with, like a letter or a number. You can print values in Python.  See what happens when you run the following code.
 
 .. activecode:: 02-ac-1-vars2
-  :caption: Printing values in Python
+    :nocodelens:
+    :caption: Printing values in Python
 
-  print(17)
-  print('Hello World!')
+    print(17)
+    print('Hello World!')
 
 These values belong to different *types*: 17
 is an integer, and "Hello World!" is a *string*, so
@@ -30,11 +31,12 @@ marks.
 If you are not sure what type a value has, use the type function to find out.
 
 .. activecode:: 02-ac-2-var-types
-  :caption: Printing types in Python
+    :nocodelens:
+    :caption: Printing types in Python
 
-  print(type('Hello, World!'))
-  print(type(17))
-  print(type(3.2))
+    print(type('Hello, World!'))
+    print(type(17))
+    print(type(3.2))
 
 Not surprisingly, strings belong to the type ``str`` and
 integers belong to the type ``int``. Less obviously, numbers
@@ -46,36 +48,37 @@ What about values like "17" and "3.2"? They look like numbers, but
 they are in quotation marks like strings.
 
 .. mchoice:: var-value-mc-string
-   :practice: T
-   :answer_a: float
-   :answer_b: integer (int)
-   :answer_c: string (str)
-   :answer_d: boolean (bool)
-   :correct: c
-   :feedback_a: "3.2" has a decimal but "17" does not, is there an option that would include both values?
-   :feedback_b: What do the quotation marks mean?
-   :feedback_c: Quotation marks imply that the value is a string.
-   :feedback_d: A boolean value represents either *True* or *False*.
+    :practice: T
+    :answer_a: float
+    :answer_b: integer (int)
+    :answer_c: string (str)
+    :answer_d: boolean (bool)
+    :correct: c
+    :feedback_a: "3.2" has a decimal but "17" does not, is there an option that would include both values?
+    :feedback_b: What do the quotation marks mean?
+    :feedback_c: Quotation marks imply that the value is a string.
+    :feedback_d: A boolean value represents either *True* or *False*.
 
-   The values "17" and "3.2" are what type?
+    The values "17" and "3.2" are what type?
 
+They're strings. We can check this using the active codeblock below.
 
 .. activecode:: 02-ac-2-num-strs
-  :caption: Printing strings of numbers in Python
+    :nocodelens:
+    :caption: Printing strings of numbers in Python
 
-  print(type('17'))
-  print(type('3.2'))
-
-They're strings.
+    print(type('17'))
+    print(type('3.2'))
 
 When you type a large integer, you might be tempted to use commas
 between groups of three digits, as in 1,000,000. This is
 not a legal integer in Python, but it is legal:
 
 .. activecode:: 02-ac-3-num-commas
-  :caption: Printing integers with commas in Python
+    :nocodelens:
+    :caption: Printing integers with commas in Python
 
-  print(1,000,000)
+    print(1,000,000)
 
 Well, that's probably not what you expected! Python interprets
 1,000,000 as a comma-separated sequence of integers, which
@@ -86,18 +89,18 @@ runs without producing an error message, but it doesn't do the "right"
 thing.
 
 .. mchoice:: var-value-mc-int
-   :practice: T
-   :answer_a: print("1,000,000")
-   :answer_b: print(1000000)
-   :answer_c: print(1,000,000)
-   :answer_d: print 1000000
-   :correct: b
-   :feedback_a: We are trying to print an integer, what do the quotation marks do?
-   :feedback_b: To print an integer don't use commas or quotations.
-   :feedback_c: See the example above, commas in between the digits produce spaces.
-   :feedback_d: Remember to use parentheses to print!
+    :practice: T
+    :answer_a: print("1,000,000")
+    :answer_b: print(1000000)
+    :answer_c: print(1,000,000)
+    :answer_d: print 1000000
+    :correct: b
+    :feedback_a: We are trying to print an integer, what do the quotation marks do?
+    :feedback_b: To print an integer don't use commas or quotations.
+    :feedback_c: See the example above, commas in between the digits produce spaces.
+    :feedback_d: Remember to use parentheses to print!
 
-   How would you print the *integer* ``1,000,000``?
+    How would you print the *integer* ``1,000,000``?
 
 
 .. dragndrop:: var-value-dnd-type

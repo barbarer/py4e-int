@@ -77,7 +77,7 @@ Glossary
 .. dragndrop:: 01-dnd-glossary1
   :feedback: Look above for these terms.
   :match_1: Bug|||An error in a program.
-  :match_2: Problem Solving|||The process of formulating a problem, finding a solution, and expressing the solution.
+  :match_2: Problem Solving|||The process of formulating a problem, then finding and expressing a solution.
   :match_3: Semantics|||The meaning of a program.
   :match_4: Semantic Error|||An error in a program that makes it do something other than what the programmer intended.
 
@@ -85,10 +85,10 @@ Glossary
 
 .. dragndrop:: 01-dnd-glossary2
   :feedback: Look above for these terms.
-  :match_1: Central Processing Unit|||The heart of any computer. It is what runs the software that we write.
-  :match_2: Machine Code|||The lowest-level language for software, which is the language that is directly executed by the central processing unit (CPU).
-  :match_3: Main Memory|||Stores programs and data. Main memory loses its information when the power is turned off.
-  :match_4: Secondary Memory|||Stores programs and data and retains its information even when the power is turned off. Generally slower than main memory.
+  :match_1: Central Processing Unit|||Part of the computer that runs the software.
+  :match_2: Machine Code|||The lowest-level language for software.
+  :match_3: Main Memory|||Stores programs and data and loses its information when there isn't a power source.
+  :match_4: Secondary Memory|||Stores programs and data and retains its information even when the power is turned off.
 
   Match each term with its definition.
 
@@ -96,7 +96,7 @@ Glossary
   :feedback: Look above for these terms.
   :match_1: Compile|||To translate a program written in a high-level language into a low-level language all at once, in preparation for later execution.
   :match_2: High-level Language|||A programming language like Python that is designed to be easy for humans to read and write.
-  :match_3: Low-level Language|||A programming language that is designed to be easy for a computer to execute; also called "machine code" or "assembly language".
+  :match_3: Low-level Language|||A programming language that is designed to be easy for a computer to execute.
   :match_4: Source Code|||A program in a high-level language.
 
   Match each term with its definition.

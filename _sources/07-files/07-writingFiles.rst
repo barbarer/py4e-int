@@ -10,9 +10,9 @@ parameter:
 
 .. code-block:: python
 
-   >>> fout = open('output.txt', 'w')
-   >>> print(fout)
-   <_io.TextIOWrapper name='output.txt' mode='w' encoding='cp1252'>
+    >>> fout = open('output.txt', 'w')
+    >>> print(fout)
+    <_io.TextIOWrapper name='output.txt' mode='w' encoding='cp1252'>
 
 
 If the file already exists, opening it in write mode clears out the old
@@ -25,9 +25,9 @@ mode is text for writing (and reading) strings.
 
 .. code-block:: python
 
-   >>> line1 = "This here's the wattle,\n"
-   >>> fout.write(line1)
-   24
+    >>> line1 = "This here's the wattle,\n"
+    >>> fout.write(line1)
+    24
 
 
 Again, the file object keeps track of where it is, so if you call
@@ -54,9 +54,9 @@ the ``write`` method does not add the newline automatically.
 
 .. code-block:: python
 
-   >>> line2 = 'the emblem of our land.\n'
-   >>> fout.write(line2)
-   24
+    >>> line2 = 'the emblem of our land.\n'
+    >>> fout.write(line2)
+    24
 
 
 When you are done writing, you have to close the file to make sure that
@@ -65,7 +65,7 @@ lost if the power goes off.
 
 .. code-block:: python
 
-   >>> fout.close()
+    >>> fout.close()
 
 
 We could close the files which we open for read as well, but we can be a
