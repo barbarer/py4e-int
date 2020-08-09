@@ -1,5 +1,12 @@
-Comparing tuples
+Comparing Tuples
 ----------------
+
+.. index::
+   single: Tuple Comparison
+   single: DSU Pattern
+   single: Decorate
+   single: Sort
+   single: Undecorate
 
 The comparison operators work with tuples and other sequences. Python
 starts by comparing the first element from each sequence. If they are
@@ -46,11 +53,12 @@ Undecorate
 :   by extracting the sorted elements of the sequence
 
 .. dragndrop:: question10_2_2
-   :practice: T
    :feedback: Look above for the definitions.
    :match_1: Decorate|||A sequence by building a list of tuples with one or more sort keys preceding the elements from the sequence.
    :match_2: Sort|||The list of tuples using the Python built-in sort.
    :match_3: Undecorate|||By extracting the sorted elements of the sequence.
+
+   Match the terms with their definitions.
 
 
 For example, suppose you have a list of words and you want to sort them
@@ -102,7 +110,7 @@ Python list and sorted in descending word length order.
    :practice: T
    :adaptive:
 
-   Construct a block of code to
+   Construct a block of code to create a list containing tuples of each word from word_list paired with their lengths. Then sort the words by length from highest to lowest.
    -----
    word_list = ['pen', 'skyscraper', 'post', 'computer', 'apple', 'Hollywood']
    =====

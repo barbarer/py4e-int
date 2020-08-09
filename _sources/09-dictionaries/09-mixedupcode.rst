@@ -1,4 +1,4 @@
-Mixed-Up Code Exercises
+Mixed-Up Code Questions
 ------------------------
 
 .. parsonsprob:: mixedupcode_question9_1
@@ -264,7 +264,7 @@ Mixed-Up Code Exercises
    =====
    print(total_price)
 
-.. parsonsprob:: mixedupcode_question_9_10
+.. parsonsprob:: mixedupcode_question9_10
    :numbered: left
    :practice: T
    :adaptive:

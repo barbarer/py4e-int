@@ -1,5 +1,8 @@
-Dictionaries and files
+Dictionaries and Files
 ----------------------
+
+.. index::
+   single: Nested Loops
 
 One of the common uses of a dictionary is to count the occurrence of
 words in a file with some written text. Let's start with a very simple
@@ -26,18 +29,25 @@ words in the line and count each word using a dictionary.
    :fromfile: romeo.txt
    :hide:
 
-.. activecode:: fileOpen
+.. activecode:: dictionariesandfiles_example_1
    :available_files: romeo.txt
 
-   with open("romeo.txt", "r") as filename:
-       lines = filename.readlines()
-       counts = {}
-       for line in lines:
-           for word in line.split():
-               if word not in counts.keys():
-                   counts[word] = 1
-               else:
-                   counts[word] += 1
+   fname = input('Enter the file name: ')
+   try:
+       fhand = open(fname)
+   except:
+       print('File cannot be opened:', fname)
+       exit()
+
+   counts = dict()
+   for line in fhand:
+       words = line.split()
+       for word in words:
+           if word not in counts:
+               counts[word] = 1
+           else:
+               counts[word] += 1
+
    print(counts)
 
 You will see that we have two ``for`` loops. The outer loop is
@@ -99,7 +109,7 @@ It is a bit inconvenient to look through the dictionary to find the most
 common words and their counts, so we need to add some more Python code
 to get us the output that will be more helpful.
 
-.. parsonsprob:: question 9_3_3
+.. parsonsprob:: question9_3_3
    :numbered: left
    :practice: T
    :adaptive:

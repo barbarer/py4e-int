@@ -1,5 +1,8 @@
-Multiple assignment with dictionaries
+Multiple Assignment with Dictionaries
 -------------------------------------
+
+.. index::
+   single: Dictionary Traversal
 
 Combining ``items``\ , tuple assignment, and ``for``\ ,
 you can see a nice code pattern for traversing the keys and values of a
@@ -115,6 +118,6 @@ dictionary contents sorted by value.
    class myTests(TestCaseGui):
 
        def testOne(self):
-           self.assertEqual(l, [('rat', 10), ('rabbit', 9), ('dragon', 6), ('monkey', 5), ('snake', 3), ('rooster', 2)], "Make sure to sort by the second element of each tuple.")
+           self.assertEqual(l, [('rat', 10), ('rabbit', 9), ('dragon', 6), ('monkey', 5), ('snake', 3), ('rooster', 2)], "Making sure the list was sorted correctly.")
 
    myTests().main()

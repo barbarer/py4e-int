@@ -1,5 +1,5 @@
-Exercises
----------
+Multiple Choice Questions
+---------------------------
 
 .. mchoice:: Exercises_question9_1
   :practice: T
@@ -111,8 +111,8 @@ Exercises
 
 .. mchoice:: Exercises_question9_6
    :practice: T
-   :answer_a: 2
-   :answer_b: 0
+   :answer_a: 10
+   :answer_b: 4
    :answer_c: 6
    :correct: c
    :feedback_a: Try again!

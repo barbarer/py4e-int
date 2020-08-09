@@ -1,5 +1,13 @@
-Tuples are immutable
+Tuples are Immutable
 --------------------
+
+.. index::
+   single: Tuple
+   single: Sequence
+   single: Immutable
+   single: Slice Operator
+   single: Item Assignment
+
 
 A tuple is a sequence of values much like a list. The values stored
 in a tuple can be any type, and they are indexed by integers. The
@@ -150,6 +158,6 @@ with another:
    class myTests(TestCaseGui):
 
        def testOne(self):
-           self.assertEqual(t, ('a', 'b', 'C', 'd', 'e', 'F', 'g', 'h'), "Make sure to replace the tuple and do not modify it!")
+           self.assertEqual(t, ('a', 'b', 'C', 'd', 'e', 'F', 'g', 'h'), "Making sure 'C' and 'F' are capitalized.")
 
    myTests().main()

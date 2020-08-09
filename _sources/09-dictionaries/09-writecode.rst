@@ -1,87 +1,53 @@
-Write Code Exercises
+Write Code Questions
 ---------------------
 
-.. tabbed:: writecode_question9_1
 
-   .. tab:: Question
+.. activecode:: writingcode_question9_1
+   :practice: T
+   :nocodelens:
 
-      Write a program that reads the words in phrase and
-      stores them as keys in the dictionary 'word_dictionary'. It doesn't matter what the values
-      are. Then you can use the ``in`` operator as a fast way to
-      check whether a string is in the dictionary.
+   Write a program that reads the words in the string 'phrase' and counts how many times each word appears.
+   Store the words as keys in the dictionary 'word_dictionary', then use the ``in`` operator as a fast way to
+   check whether the string is in the dictionary.
+   ~~~~
 
-      .. activecode:: writingcode_question9_1
-         :practice: T
-         :nocodelens:
+   phrase = "Writing programs or programming is a very creative and rewarding activity  You can write programs for many reasons ranging from making your living to solving a difficult data analysis problem to having fun to helping someone else solve a problem  This book assumes that {\em everyone} needs to know how to program and that once you know how to program, you will figure out what you want to do with your newfound skills"
 
-         phrase = "Writing programs or programming is a very creative and rewarding activity  You can write programs for many reasons ranging from making your living to solving a difficult data analysis problem to having fun to helping someone else solve a problem  This book assumes that {\em everyone} needs to know how to program and that once you know how to program, you will figure out what you want to do with your newfound skills"
+   ====
+   from unittest.gui import TestCaseGui
 
-         ====
-         from unittest.gui import TestCaseGui
+   class myTests(TestCaseGui):
 
-         class myTests(TestCaseGui):
+       def testOne(self):
+           self.assertEqual(len(word_dictionary), 56, "Checking that all the words made it into the list.")
+           self.assertEqual(word_dictionary['Writing'], 1, "Checking that 'Writing' appears once in the dictionary.")
+           self.assertEqual(word_dictionary['a'], 3, "Making sure the letter 'a' appears three times as a word in the given phrase.")
 
-             def testOne(self):
-                 self.assertEqual(len(word_dictionary), 56, "Make sure you are not confusing the key and value components")
-                 self.assertEqual(word_dictionary['Writing'], 1, "Checking that 'Writing' appears once in the dictionary")
-                 self.assertEqual(word_dictionary['a'], 3, "Making sure the letter 'a' appears three times as a word in the given phrase")
+   myTests().main()
 
-         myTests().main()
 
-   .. tab:: Answer
 
-      .. activecode:: writtencode_question9_1
+.. activecode:: writingcode_question9_2
+   :nocodelens:
 
-         phrase = "Writing programs or programming is a very creative and rewarding activity  You can write programs for many reasons ranging from making your living to solving a difficult data analysis problem to having fun to helping someone else solve a problem  This book assumes that {\em everyone} needs to know how to program and that once you know how to program, you will figure out what you want to do with your newfound skills"
+   Perform the same task as in question 1, but this time make sure to look at words in lowercase in order to avoid any repetition.
+   ~~~~
 
-         #CREATE AN EMPTY DICTIONARY
-         word_dictionary = {}
-         #RUN A LOOP TO GO THROUGH EACH WORD TO SEE IF IT IS IN THE DICTIONARY
-         for word in phrase.split():
-             if word not in word_dictionary.keys():
-                 word_dictionary[word] = 0
-             word_dictionary[word] += 1
-         print(word_dictionary)
+   phrase = "Writing programs or programming is a very creative and rewarding activity  You can write programs for many reasons ranging from making your living to solving a difficult data analysis problem to having fun to helping someone else solve a problem  This book assumes that {\em everyone} needs to know how to program and that once you know how to program, you will figure out what you want to do with your newfound skills"
 
-.. tabbed:: writecode_question9_2
+   ====
+   from unittest.gui import TestCaseGui
 
-   .. tab:: Question
+   class myTests(TestCaseGui):
 
-      Perform the same task as in question 1, but this time make sure to look at words in lowercase in order to avoid any repetition.
+       def testOne(self):
+           self.assertEqual(len(word_dictionary), 55, "Checking that all the terms were accounted for in the new list.")
+           self.assertEqual(word_dictionary['you'], 4, "Checking the amount of times 'you' appears in the phrase.")
+           self.assertEqual(word_dictionary['writing'], 1, "Making sure 'writing' appears just once in the dictionary.")
+           self.assertEqual(word_dictionary.get('Writing', 0), 0, "Checking to make sure 'Writing' is no longer in the dictionary.")
 
-      .. activecode:: writingcode_question9_2
-         :practice: T
-         :nocodelens:
+   myTests().main()
 
-         phrase = "Writing programs or programming is a very creative and rewarding activity  You can write programs for many reasons ranging from making your living to solving a difficult data analysis problem to having fun to helping someone else solve a problem  This book assumes that {\em everyone} needs to know how to program and that once you know how to program, you will figure out what you want to do with your newfound skills"
-
-         ====
-         from unittest.gui import TestCaseGui
-
-         class myTests(TestCaseGui):
-
-             def testOne(self):
-                 self.assertEqual(len(word_dictionary), 5, "Make sure you are not confusing the key and value components")
-                 self.assertEqual(word_dictionary['you'], 4, "Checking the amount of times 'you' appears in the phrase")
-                 self.assertEqual(word_dictionary['writing'], 1, "Making sure 'writing' appears just once in the dictionary")
-
-         myTests().main()
-
-   .. tab:: Answer
-
-      .. activecode:: writtencode_question9_2
-
-         phrase = "Writing programs or programming is a very creative and rewarding activity  You can write programs for many reasons ranging from making your living to solving a difficult data analysis problem to having fun to helping someone else solve a problem  This book assumes that {\em everyone} needs to know how to program and that once you know how to program, you will figure out what you want to do with your newfound skills"
-
-         #CREATE AN EMPTY DICTIONARY
-         word_dictionary = {}
-         #RUN A LOOP TO GO THROUGH EACH WORD TO SEE IF IT IS IN THE DICTIONARY
-         for word in phrase.split():
-             word = word.lower()
-             if word not in word_dictionary.keys():
-                 word_dictionary[word] = 0
-             word_dictionary[word] += 1
-         print(word_dictionary)
 
 
 .. tabbed:: writecode_question9_3
@@ -102,9 +68,9 @@ Write Code Exercises
          class myTests(TestCaseGui):
 
              def testOne(self):
-                 self.assertEqual(mail_count['Mon'], 2, "Make sure you are grabbing the third value from each item in the list in order to sort by the day of the week.")
-                 self.assertEqual(mail_count['Sat'], 2, "Checking that there are 2 emails sent on Saturday")
-                 self.assertEqual(mail_count['Sun'], 0, "Checking that no emails were sent on Sunday")
+                 self.assertEqual(mail_count['Mon'], 2, "Making sure only two emails are associated with Monday.")
+                 self.assertEqual(mail_count['Sat'], 2, "Checking that there are 2 emails sent on Saturday.")
+                 self.assertEqual(mail_count.get('Sun', 0), 0, "Checking that no emails were sent on Sunday.")
 
          myTests().main()
 
@@ -123,41 +89,46 @@ Write Code Exercises
          print(mail_count)
 
 
-.. tabbed:: writecode_question9_4
 
-   .. tab:: Question
+.. activecode:: writingcode_question9_4
+   :practice: T
+   :nocodelens:
 
-      Write a program to read through a mail log, build a histogram using the dictionary "user_count" to count how many messages have come from each email address, and print the dictionary
+   Write a program to read through a mail log, build a histogram using the dictionary "user_count" to count how many messages have come from each email address, and print the dictionary.
+   ~~~~
 
-      .. activecode:: writingcode_question9_4
-         :practice: T
-         :nocodelens:
+   mail_log = ['From stephen.marquard@uct.ac.za Sat Jan  7', 'From gopal.ramasammycook@gmail.com Thurs Jan  5', 'From stephen.marquard@uct.ac.za Sat Feb  7', 'From louis@media.berkeley.edu Tues Jan  3', 'From stephen.marquard@uct.ac.za Sat Nov  6', 'From antranig@caret.cam.ac.uk Sat Jan  7', 'From david.horwitz@uct.ac.za Wed Jan  4', 'From ray@media.berkeley.edu Mon Jan  2', 'From stephen.marquard@uct.ac.za Mon Jan 2', 'From wagnermr@iupui.edu Fri Jan  6', 'From gopal.ramasammycook@gmail.com Thurs Dec  5', 'From louis@media.berkeley.edu Tues April  1']
 
-         mail_log = ['From stephen.marquard@uct.ac.za Sat Jan  7', 'From gopal.ramasammycook@gmail.com Thurs Jan  5', 'From stephen.marquard@uct.ac.za Sat Feb  7', 'From louis@media.berkeley.edu Tues Jan  3', 'From stephen.marquard@uct.ac.za Sat Nov  6', 'From antranig@caret.cam.ac.uk Sat Jan  7', 'From david.horwitz@uct.ac.za Wed Jan  4', 'From ray@media.berkeley.edu Mon Jan  2', 'From stephen.marquard@uct.ac.za Mon Jan 2', 'From wagnermr@iupui.edu Fri Jan  6', 'From gopal.ramasammycook@gmail.com Thurs Dec  5', 'From louis@media.berkeley.edu Tues April  1']
+   ====
+   from unittest.gui import TestCaseGui
 
-         ====
-         from unittest.gui import TestCaseGui
+   class myTests(TestCaseGui):
+         def testOne(self):
+             self.assertEqual(len(user_count), 7, "Making sure the amount of messages sent is correct.")
+             self.assertEqual(user_count['stephen.marquard@uct.ac.za'], 4, "Checking that this email address is counted for 4 times.")
 
-         class myTests(TestCaseGui):
-             def testOne(self):
-                 self.assertEqual(len(user_count), 8, "Make sure you are using the correct index to grab the email address.")
-                 self.assertEqual(user_count['stephen.marquard@uct.ac.za'], 4, "Checking that this email address is counted for 4 times")
+   myTests().main()
 
-         myTests().main()
 
-   .. tab:: Answer
+The next two questions are associated with the following text file.
 
-      .. activecode:: writtencode_question9_4
+.. reveal:: mbox-short-txt-file
+   :showtitle: Show
+   :hidetitle: Hide
 
-         mail_log = ['From stephen.marquard@uct.ac.za Sat Jan  7', 'From gopal.ramasammycook@gmail.com Thurs Jan  5', 'From stephen.marquard@uct.ac.za Sat Feb  7', 'From louis@media.berkeley.edu Tues Jan  3', 'From stephen.marquard@uct.ac.za Sat Nov  6', 'From antranig@caret.cam.ac.uk Sat Jan  7', 'From david.horwitz@uct.ac.za Wed Jan  4', 'From ray@media.berkeley.edu Mon Jan  2', 'From stephen.marquard@uct.ac.za Mon Jan 2', 'From wagnermr@iupui.edu Fri Jan  6', 'From gopal.ramasammycook@gmail.com Thurs Dec  5']
+   .. code-block::
 
-         user_count = {}
-         for email in mail_log:
-             key = email.split()[1]
-             if key not in user_count.keys():
-                 user_count[key] = 0
-             user_count[key] += 1
-         print(user_count)
+      gopal.ramasammycook@gmail.com 1
+      louis@media.berkeley.edu 3
+      cwen@iupui.edu 5
+      antranig@caret.cam.ac.uk 1
+      rjlowe@iupui.edu 2
+      gsilver@umich.edu 3
+      david.horwitz@uct.ac.za 4
+      wagnermr@iupui.edu 1
+      zqian@umich.edu 4
+      stephen.marquard@uct.ac.za 2
+      ray@media.berkeley.edu 1
 
 .. tabbed:: writecode_question9_5
 
@@ -165,7 +136,7 @@ Write Code Exercises
 
       Add code to the program below to figure out who has the most messages in the file. After all the data has been read and the dictionary has been created, look through the dictionary using a maximum loop (see Chapter 5: Maximum and minimum loops) to find who has the most messages and print how many messages the person has.
 
-      .. datafile:: mbox-short.txt
+      .. datafile:: mbox-short.txt3
          :fromfile: mbox-short.txt
          :hide:
 
@@ -173,7 +144,7 @@ Write Code Exercises
          :practice: T
          :available_files: mbox-short.txt
 
-         with open("mbox-short.txt", "r") as filename:
+         with open("mbox-short.txt3", "r") as filename:
              message_count = {}
 
          ====
@@ -182,21 +153,18 @@ Write Code Exercises
          class myTests(TestCaseGui):
 
              def testOne(self):
-                 self.assertEqual(message_count['cwen@iupui.edu'], '5', "Make sure to grab the correct key and value from each entry in the file")
-                 self.assertEqual(len(message_count), 11, "Checking that all the emails made it into the dictionary")
+                 self.assertEqual(message_count['cwen@iupui.edu'], '5', "Making sure 5 emails were sent from this email address.")
+                 self.assertEqual(len(message_count), 11, "Checking that all the emails made it into the dictionary.")
 
          myTests().main()
 
    .. tab:: Answer
 
-      .. datafile: mbox-short.txt
-         :fromfile: mbox-short.txt
-         :hide:
 
       .. activecode:: writtencode_question9_5
          :available_files: mbox-short.txt
 
-         with open("mbox-short.txt", "r") as filename:
+         with open("mbox-short.txt3", "r") as filename:
              message_count = {}
              messages = filename.readlines()
              for message in messages:
@@ -212,53 +180,32 @@ Write Code Exercises
          print(max_emails)
 
 
-.. tabbed:: writecode_question9_6
 
-   .. tab:: Question
+.. datafile:: mbox-short.txt2
+   :fromfile: mbox-short.txt
+   :hide:
 
-      Write this program to record the domain name (instead of the address) where the message was sent from instead of who the mail came from (i.e., the whole email address). At the end of the program, print out the contents of your dictionary.
+.. activecode:: writingcode_question9_6
+   :practice: T
+   :available_files: mbox-short.txt
 
-      .. datafile:: mbox-short.txt2
-         :fromfile: mbox-short.txt
-         :hide:
+   Write this program to record the domain name (instead of the address) where the message was sent from instead of who the mail came from (i.e., the whole email address). At the end of the program, print out the contents of your dictionary.
+   ~~~~
 
-      .. activecode:: writingcode_question9_6
-         :practice: T
-         :available_files: mbox-short.txt
+   with open("mbox-short.txt2", "r") as filename:
+       message_count = {}
 
-         with open("mbox-short.txt", "r") as filename:
-             message_count = {}
+   ====
+   from unittest.gui import TestCaseGui
 
-         ====
-         from unittest.gui import TestCaseGui
+   class myTests(TestCaseGui):
 
-         class myTests(TestCaseGui):
+       def testOne(self):
+           self.assertEqual(message_count['iupui.edu'], '5', "Making sure 'iupui.edu' sent 5 emails.")
+           self.assertEqual(len(message_count), 6, "Checking that all the emails made it into the dictionary.")
 
-             def testOne(self):
-                 self.assertEqual(message_count['iupui.edu'], '5', "Make sure to grab the correct key and value from each entry in the file")
-                 self.assertEqual(len(message_count), 6, "Checking that all the emails made it into the dictionary")
+   myTests().main()
 
-         myTests().main()
-
-   .. tab:: Answer
-
-      .. datafile: mbox-short.txt
-         :fromfile: mbox-short.txt
-         :hide:
-
-      .. activecode:: writtencode_question9_6
-         :available_files: mbox-short.txt
-
-         with open("mbox-short.txt", "r") as filename:
-             message_count = {}
-             messages = filename.readlines()
-             for message in messages:
-                 email = message.split()[0]
-                 key = email.split("@")[1]
-                 value = message.split()[1]
-                 if key not in message_count.keys():
-                     message_count[key] = value
-         print(message_count)
 
 
 .. tabbed:: writecode_question9_7
@@ -279,8 +226,8 @@ Write Code Exercises
          class myTests(TestCaseGui):
 
              def testOne(self):
-                 self.assertEqual(len(letter_count), 21, "Make sure each letter is lowercase before adding it to the dictionary!")
-                 self.assertEqual(e_counter, 10, "Making sure there are 10 e's accounted for")
+                 self.assertEqual(len(letter_count), 21, "Making sure all 21 letters were accounted for.")
+                 self.assertEqual(e_counter, 10, "Making sure there are 10 e's accounted for.")
 
          myTests().main()
 
@@ -301,37 +248,58 @@ Write Code Exercises
 
 
 
-.. tabbed:: writecode_question9_8
+.. activecode:: writingcode_question9_8
+   :practice: T
+   :nocodelens:
 
-   .. tab:: Question
+   Write code that adds the key 'two' with a value of 'dos' to the dictionary eng2sp.
+   ~~~~
 
-      Write code that adds the key 'two' with a value of 'dos' to the dictionary eng2sp.
+   eng2sp = {'one':'uno'}
 
-      .. activecode:: writingcode_question9_8
-         :practice: T
-         :nocodelens:
+   ====
+   from unittest.gui import TestCaseGui
 
-         eng2sp = {'one':'uno'}
+   class myTests(TestCaseGui):
 
-         ====
-         from unittest.gui import TestCaseGui
+       def testOne(self):
+           self.assertEqual(eng2sp['two'], 'dos', "Making sure the correct value is associated with the key 'two'.")
 
-         class myTests(TestCaseGui):
-
-             def testOne(self):
-                 self.assertEqual(eng2sp['two'], 'dos', "Make sure you are not confusing the key and value components")
-
-         myTests().main()
-
-   .. tab:: Answer
-
-      .. activecode:: writtencode_question9_8
-
-         eng2sp = {'one':'uno'}
-
-         eng2sp['two'] = 'dos'
+   myTests().main()
 
 
+Here is the words.txt file for Question 9.
+
+.. reveal:: words-txt-file
+   :showtitle: Show
+   :hidetitle: Hide
+
+   .. code-block::
+
+      Writing programs or programming is a very creative
+      and rewarding activity  You can write programs for
+      many reasons ranging from making your living to solving
+      a difficult data analysis problem to having fun to helping
+      someone else solve a problem  This book assumes that
+      {\em everyone} needs to know how to program and that once
+      you know how to program, you will figure out what you want
+      to do with your newfound skills
+
+      We are surrounded in our daily lives with computers ranging
+      from laptops to cell phones  We can think of these computers
+      as our personal assistants who can take care of many things
+      on our behalf  The hardware in our current-day computers
+      is essentially built to continuously ask us the question
+      What would you like me to do next
+
+      Our computers are fast and have vasts amounts of memory and
+      could be very helpful to us if we only knew the language to
+      speak to explain to the computer what we would like it to
+      do next If we knew this language we could tell the
+      computer to do tasks on our behalf that were reptitive
+      Interestingly, the kinds of things computers can do best
+      are often the kinds of things that we humans find boring
+      and mind-numbing
 
 .. tabbed:: writecode_question9_9
 
@@ -353,9 +321,9 @@ Write Code Exercises
          class myTests(TestCaseGui):
 
              def testOne(self):
-                 self.assertEqual(len(word_count), 119, "Make sure that words that are capitalized are counted as lowercase before adding them to the dictionary")
-                 self.assertEqual(word_count['and'], 5, "Checking if 'and' is counted for 5 times")
-                 self.assertEqual(word_count['what'], 3, "Checking if 'what' appears 3 times")
+                 self.assertEqual(len(word_count), 119, "Making sure all the words were accounted for.")
+                 self.assertEqual(word_count['and'], 5, "Checking if 'and' is counted for 5 times.")
+                 self.assertEqual(word_count['what'], 3, "Checking if 'what' appears 3 times.")
 
          myTests().main()
 
@@ -380,6 +348,19 @@ Write Code Exercises
          print(word_count)
 
 
+Below is the romeo3.txt file used in Question 10.
+
+.. reveal:: romeo3-txt-file
+   :showtitle: Show
+   :hidetitle: Hide
+
+   .. code-block::
+
+      But soft what light through yonder window breaks
+      It is the east and Juliet is the sun
+      Arise fair sun and kill the envious moon
+      Who is already sick and pale with grief
+
 .. tabbed:: writecode_question9_10
 
    .. tab:: Question
@@ -400,9 +381,9 @@ Write Code Exercises
          class myTests(TestCaseGui):
 
              def testOne(self):
-                 self.assertEqual(len(counts), 26, "Make sure to count words with capital letters as lowercase")
-                 self.assertEqual(counts['is'], 3, "Checking 'is' was only counted for three times")
-                 self.assertEqual(counts['arise'], 1, "Check to make sure 'arise' appears once in the dictionary")
+                 self.assertEqual(len(counts), 26, "Making sure all 26 words made it into the dictionary.")
+                 self.assertEqual(counts['is'], 3, "Checking 'is' was only counted for three times.")
+                 self.assertEqual(counts['arise'], 1, "Checking to make sure 'arise' appears once in the dictionary.")
 
          myTests().main()
 
