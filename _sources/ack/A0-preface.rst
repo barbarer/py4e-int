@@ -1,8 +1,8 @@
 
 \thispagestyle{empty}
 
-Credits
--------
+Credits for Python for Everybody
+---------------------------------
 
 .. code-block::
 
@@ -11,15 +11,15 @@ Credits
 
 
 
-Printing History
-----------------
+Printing History for for Python for Everybody
+----------------------------------------------
 
 
 * 2016-Jul-05 First Complete Python 3.0 version
 * 2015-Dec-20 Initial Python 3.0 rough conversion
 
-Copyright Details
------------------
+Copyright Details for for Python for Everybody
+-------------------------------------------------
 
 Copyright ~2009- Charles Severance.
 
@@ -35,8 +35,8 @@ in the Appendix titled "Copyright Detail".
 
 \cleardoublepage
 
-Preface
-=======
+Preface for Python for Everybody
+===================================
 
 Remixing an Open Book
 ---------------------
@@ -87,7 +87,7 @@ real-world uses and simple examples of Python for data analysis
 including regular expressions for searching and parsing, automating
 tasks on your computer, retrieving data across the network, scraping web
 pages for data, object-oriented programming,
-using web services, parsing XML and JSON data, 
+using web services, parsing XML and JSON data,
 creating and using databases using Structured Query Language,
 and visualizing data.
 
@@ -104,9 +104,10 @@ thinking that are covered in *Think Python*. And given that the books
 have a similar writing style, they should be able to move quickly
 through *Think Python* with a minimum of effort.
 
-\index{Creative Commons License}
-\index{CC-BY-SA}
-\index{BY-SA}
+.. index::
+    single: Creative Commons License
+    single: CC-BY-SA
+    single: BY-SA
 
 As the copyright holder of *Think Python*\ , Allen has given me permission
 to change the book's license on the material from his book that remains
@@ -128,10 +129,10 @@ I would like to thank Allen B. Downey and Lauren Cowles for their help,
 patience, and guidance in dealing with and resolving the copyright
 issues around this book.
 
-Charles Severance\
-www.dr-chuck.com\
-Ann Arbor, MI, USA\
-September 9, 2013
+| Charles Severance
+| www.dr-chuck.com
+| Ann Arbor, MI, USA
+| September 9, 2013
 
 Charles Severance is a Clinical Associate Professor at the University of
 Michigan School of Information.

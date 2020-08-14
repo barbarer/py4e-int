@@ -2,7 +2,17 @@
 Contributions
 =============
 
-Contributor List for Python for Everybody 
+Contributor List for Python for Everybody - Interactive
+--------------------------------------------------------
+- Barbara Ericson - team leader - barbarer@umich.edu
+- Grace Knitter
+- Ewelina Papiez
+- Shrijesh Siwakoti
+- Anthony Tyler Carvette (Tyler)
+
+
+
+Contributor List for Python for Everybody
 ------------------------------------------
 
 Elliott Hauser,
@@ -28,7 +38,7 @@ You can see contribution details at:
 
 https://github.com/csev/py4e/graphs/contributors
 
-Contributor List for Python for Informatics 
+Contributor List for Python for Informatics
 --------------------------------------------
 
 Bruce Shields for copy editing early drafts, Sarah Hegge, Steven Cherry,
@@ -66,20 +76,16 @@ Two weeks before the first day of classes, I decided to write my own
 book. My goals were:
 
 
-* 
-  Keep it short. It is better for students to read 10 pages than not
+- Keep it short. It is better for students to read 10 pages than not
   read 50 pages.
 
-* 
-  Be careful with vocabulary. I tried to minimize the jargon and
+- Be careful with vocabulary. I tried to minimize the jargon and
   define each term at first use.
 
-* 
-  Build gradually. To avoid trap doors, I took the most difficult
+- Build gradually. To avoid trap doors, I took the most difficult
   topics and split them into a series of small steps.
 
-* 
-  Focus on programming, not the programming language. I included the
+- Focus on programming, not the programming language. I included the
   minimum useful subset of Java and left out the rest.
 
 I needed a title, so on a whim I chose *How to Think Like a Computer
@@ -93,8 +99,9 @@ practice.
 I released the book under the GNU Free Documentation License, which
 allows users to copy, modify, and distribute the book.
 
-\index{GNU Free Documentation License}
-\index{Free Documentation License, GNU}
+.. index::
+    single: GNU Free Documentation License
+    single: Free Documentation License, GNU
 
 What happened next is the cool part. Jeff Elkner, a high school teacher
 in Virginia, adopted my book and translated it into Python. He sent me a
@@ -103,7 +110,7 @@ Python by reading my own book.
 
 Jeff and I revised the book, incorporated a case study by Chris Meyers,
 and in 2001 we released *How to Think Like a Computer Scientist:
-Learning with Python*\ , also under the GNU Free Documentation License. As
+Learning with Python* , also under the GNU Free Documentation License. As
 Green Tea Press, I published the book and started selling hard copies
 through Amazon.com and college book stores. Other books from Green Tea
 Press are available at `greenteapress.com <greenteapress.com>`_.
@@ -138,8 +145,9 @@ And I thank the Free Software Foundation for developing the GNU Free
 Documentation License, which helped make my collaboration with Jeff and
 Chris possible.
 
-\index{GNU Free Documentation License}
-\index{Free Documentation License, GNU}
+.. index::
+    single: GNU Free Documentation License
+    single: Free Documentation License, GNU
 
 I also thank the editors at Lulu who worked on *How to Think Like a
 Computer Scientist*.
@@ -160,7 +168,8 @@ Franklin W. Olin College of Engineering.
 Contributor List for "Think Python"
 -----------------------------------
 
-\index{contributors}
+.. index::
+    single: contributors
 
 (Allen B. Downey)
 

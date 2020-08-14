@@ -1,6 +1,6 @@
 
-Copyright Detail
-================
+Copyright Detail for Python for Everybody
+==========================================
 
 This work is licensed under a Creative Common
 Attribution-NonCommercial-ShareAlike 3.0 Unported License. This license
@@ -27,12 +27,12 @@ to use the material in this book in situations that some might consider
 commercial.
 
 
-* 
+*
   If you are printing a limited number of copies of all or part of
   this book for use in a course (e.g., like a coursepack), then you
   are granted CC-BY license to these materials for that purpose.
 
-* 
+*
   If you are a teacher at a university and you translate this book
   into a language other than English and teach using the translated
   book, then you can contact me and I will granted you a CC-BY-SA
@@ -50,7 +50,7 @@ this material will be granted as long as there is clear added value or
 benefit to students or teachers that will accrue as a result of the new
 work.
 
-Charles Severance\
-www.dr-chuck.com \
-Ann Arbor, MI, USA\
-September 9, 2013
+| Charles Severance
+| www.dr-chuck.com
+| Ann Arbor, MI, USA
+| September 9, 2013
