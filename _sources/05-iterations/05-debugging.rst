@@ -29,31 +29,31 @@ program where there might be errors and places where it is easy to put a
 check. Then choose a spot where you think the chances are about the same
 that the bug is before or after the check.
 
-.. mchoice:: 05question_debugging_1
-   :answer_a: debugging by bisection
-   :answer_b: write bigger programs
-   :answer_c: always writing shorter programs in general
-   :correct: a
-   :feedback_a: Correct!
-   :feedback_b: Try again!
-   :feedback_c: Try again!
+.. mchoice:: itDebug_MC_cutTime
+    :answer_a: debugging by bisection
+    :answer_b: write bigger programs
+    :answer_c: always writing shorter programs in general
+    :correct: a
+    :feedback_a: Debugging by bisection can cut down your debugging time.
+    :feedback_b: Writing bigger programs will likely increase your debugging time.
+    :feedback_c: Just because a program is shorter does not mean that it will be faster to debug.
 
-   One way to cut your debugging time is through...
+    One way to cut your debugging time is through...
 
-.. mchoice:: 05question_debugging_2
-   :answer_a: writing the entire program at once and looking at the code collectively to find the error
-   :answer_b: breaking the problem in half and doing "mid-point checks"
-   :answer_c: purposely creating errors in your code to test sections
-   :correct: b
-   :feedback_a: Try again!
-   :feedback_b: Correct!
-   :feedback_c: Try again!
+.. mchoice:: itDebug_MC_bisection
+    :answer_a: writing the entire program at once and looking at the code collectively to find the error
+    :answer_b: breaking the problem in half and doing "mid-point checks"
+    :answer_c: purposely creating errors in your code to test sections
+    :correct: b
+    :feedback_a: Debugging the entire program at once is not an example of debugging by bisection.
+    :feedback_b: Debugging by bisection means to split the program in half (or bisections) and debug those separately.
+    :feedback_c: purposefully creating errors is not an example of debugging by bisection.
 
-   An example of "debugging by bisection" is...
+    An example of "debugging by bisection" is...
 
-.. fillintheblank:: 005question_debugging_3
+.. fillintheblank:: itDebug_fill1
 
     When debugging, if the mid-point check is incorrect, the problem must be in the _______ half of the program.
 
-    - :(?:f|F)(?:i|I)(?:r|R)(?:s|S)(?:t|T): Correct!
+    - :[Ff]irst: If the mid-point check is incorrect the problem must be in the first half of the program. 
       :.*: Try again!

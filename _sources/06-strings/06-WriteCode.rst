@@ -43,6 +43,7 @@ Write code problems
         .. tab:: Answer
 
             .. activecode::  str-ex-eggsa
+                :optional:
                 :nocodelens:
 
                 # DECLARE VARIABLES
@@ -278,6 +279,7 @@ Write code problems
         .. tab:: Answer
 
             .. activecode:: str-ex-nameInputa
+                :optional:
 
                 #CREATE PROMPT
                 prompt = "What is your name?"
