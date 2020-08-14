@@ -13,15 +13,17 @@ Exercises
 
     Which of the follwing inherits the PartyAnimal class.
 
-.. clickablearea:: objects_click_name
-   :practice: T
-   :question: Click the elements where instances are created correctly.
-   :iscode:
-   :feedback:
+.. mchoice:: objects_select_name
+  :practice: T
+  :answer_a: puppy = Dog("Jamie")
+  :answer_b: pupper = new Dog("Jamie")
+  :answer_c: jamie = Dog()
+  :correct: b
+  :feedback_a: this uses the constructor function to create an object with initial values
+  :feedback_b: 'new' is not required
+  :feedback_c: this is correct and does not have initial values
 
-   :click-incorrect:puppy:endclick: = :click-correct:Dog("Jamie"):endclick:
-   :click-incorrect:pupper:endclick: =:click-incorrect: new Dog("Jamie"):endclick:
-   :click-incorrect:jamie:endclick: = :click-correct:Person():endclick:
+  Which is the incorrect way to create an object instance?
 
 .. mchoice:: multipleinstances_code_output
   :practice: T 
@@ -100,19 +102,31 @@ Exercises
 
 
 
-.. fillintheblank:: objectoriented_keyword
-    
+.. mchoice:: objectoriented_keyword
+    :practice: T
+    :answer_a: class
+    :answer_b: object
+    :answer_c: Class
+    :answer_d: instance
+    :correct: a
+    :feedback_a: the class keyword defines an object but does not create the object.
+    :feedback_b: an object is created using this template.
+    :feedback_c: the keyword is case-sensitive
+    :feedback_d: an instance is a single occurance of an object created when the object is initialized. 
+
     The _________ keyword defines a template indicating what data and code will be contained in each object of type.
 
-    - :class: Correct, the class keyword defines an object but does not create the object.
-      :.*: Try again! Note that keywords are case-sensitive.
+.. mchoice:: word_output
+    :practice: T
+    :answer_a: class
+    :answer_b: def
+    :answer_c: self
+    :correct: c
+    :feedback_a: 'class' is a keyword that defines the template of an object.
+    :feedback_b: 'def' is used to define a function
+    :feedback_c: 'self' is not a keyword but a convention that is used for this purpose
 
-.. fillintheblank:: word_output
-  
-   _________ is a convention that is used to represent the instance of a class and to access the attributes and methods of the class. 
-
-  - :[s]elf: Correct, 'self' is not a keyword but a convention that is used for this purpose
-    :.*: Try again! 
+    _________ is a convention that is used to represent the instance of a class and to access the attributes and methods of the class. 
 
    
 
@@ -174,21 +188,15 @@ Exercises
     True or False? In order to extend a class, the new class should have access to all the data and inner workings of
     the parent class.
 
-.. clickablearea:: objects_correct
+.. mchoice:: objects_correct
     :practice: T
-    :question: Click the incorrect parts in the following code.
-    :iscode:
-    :feedback:
+    :answer_a: def __init__(title, author):
+    :answer_b: def __init__(self, title, author):
+    :answer_c: def __init__(Self, title, author):
+    :correct: a
+    :feedback_a: Unless a class method is static, 'self' is explicitly used to represent current instance
+    :feedback_b: The 'self' is used to represent an instance (object) of the given class
+    :feedback_c: 'self' is not a reserved word and 'Self' will also work to represent an instance (object) of the given class
 
-    :click-correct:Class:endclick::click-incorrect: Book::endclick:
-
-            :click-correct:Self.title:endclick::click-incorrect: = '':endclick:
-            author = ''
-
-            :click-correct:def __init__(title, author):endclick:
-                :click-correct:title:endclick::click-incorrect: = title:endclick:
-                :click-correct:author:endclick::click-incorrect: = author:endclick:
-                print("You book is " + :click-correct:title:endclick: + " by author " + :click-correct:author:endclick:)
-        
-        :click-incorrect:book = :endclick::click-correct:new:endclick::click-incorrect: Book("The Odyssey", "Homer"):endclick:
+    Which of the following is the incorrect way to define a class method?
 

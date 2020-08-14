@@ -17,4 +17,6 @@ Object-oriented programming
     14-summary.rst
     14-glossary.rst
     14-exercises.rst
+    14-mixedupcode.rst
     14-writecode.rst
+
