@@ -82,7 +82,7 @@ Write Code Exercises
   
   .. tab:: Question
     
-    Correct the errors in the following code.
+    Correct the errors in the following code. There are  6 errors.
 
     .. activecode:: writingcode_question14_3
         :nocodelens:
@@ -101,11 +101,15 @@ Write Code Exercises
 
   .. tab:: Answer
 
-    Correct the errors in the following code.
+    Correct the errors in the following code. There are 6 errors.
 
     .. activecode:: writtencode_question14_3
 
         class Book:
+
+            title = ''
+            author = ''
+
             def __init__(self, title, author):
                 self.title = title
                 self.author = author
@@ -118,7 +122,7 @@ Write Code Exercises
 
   .. tab:: Question
   
-    Correct the following code.
+    Correct the following code. There are  7 errors.
 
     .. activecode:: writingcode_question14_4
       :nocodelens:
@@ -185,7 +189,7 @@ Write Code Exercises
         print(book.getTitle())
         print(book.getTitle())
 
-.. tabbed::writecode_question14_6
+.. tabbed:: writecode_question14_6
 
   .. tab:: Question
 
