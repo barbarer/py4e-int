@@ -1,5 +1,8 @@
 Choosing mnemonic variable names
 --------------------------------
+.. index::
+    single: Mnemonic
+    single: Reserved Words
 
 As long as you follow the simple rules of variable naming, and avoid
 reserved words, you have a lot of choice when you name your variables.

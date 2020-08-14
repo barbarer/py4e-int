@@ -1,5 +1,7 @@
 Built-in functions
 ------------------
+.. index::
+    pair: Built-in; Function
 
 Python provides a number of important built-in functions that we can use
 without needing to provide the function definition. The creators of

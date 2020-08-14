@@ -1,5 +1,7 @@
 Writing a program
 -----------------
+.. index::
+    single: Script
 
 Typing commands into the Python interpreter is a great way to experiment
 with Python's features, but it is not recommended for solving more

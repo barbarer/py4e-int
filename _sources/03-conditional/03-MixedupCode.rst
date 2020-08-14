@@ -1,4 +1,4 @@
-Mixed-up code exercises
+Mixed-up Code Questions
 -----------------------
 .. parsonsprob:: cndtnl-mixed-three
     :practice: T

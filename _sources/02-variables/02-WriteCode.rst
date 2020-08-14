@@ -1,34 +1,53 @@
-Writing code problems
+Write Code Questions
 ---------------------
+
 #.
-    .. tabbed:: var-exercise-fruit
+    .. tabbed:: var-exercise-syntax
 
         .. tab:: Question
 
-            Let's say that apples are $0.40 apiece, and pears are $0.65 apiece.
-            Modify the program below to calculate the total cost of 4 apples and 3 pears.
+            There are 3 syntax errors in the following code. Fix it to print correctly
+            without errors. It will print, "Her name is Molly and her favorite food is tuna".
 
-            .. activecode:: var-wc-fruit
+            .. activecode:: var-wc-syntax
+                :nocodelens:
 
-                apples = 4
-                pears = 3
-                totalCost =
-                print(totalCost)
+                food = "tuna'
+                name = 'Molly'
+                print("Her name is " + name +  and her favorite food is "  food + ".")
 
-                ====
-                from unittest.gui import TestCaseGui
-                class myTests(TestCaseGui):
+        .. tab:: Answer
 
-                    def testOne(self):
-                        self.assertEqual(totalCost,3.55)
+            .. activecode:: var-wc-syntaxA
+                :optional:
+                :nocodelens:
 
-                myTests().main()
+                food = 'tuna'
+                name = 'Molly'
+                print("Her name is " + name + " and her favorite food is " + food + ".")
 
-        .. tab:: Discussion
+#.
+    .. activecode:: var-wc-fruitq
 
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: fruitdisc
+        Let's say that apples are $0.40 apiece, and pears are $0.65 apiece.
+        Modify the program below to calculate the total cost of 4 apples and 3 pears
+
+        ~~~~
+
+        apples = 4
+        pears = 3
+        totalCost =
+        print(totalCost)
+
+        ====
+        from unittest.gui import TestCaseGui
+        class myTests(TestCaseGui):
+
+            def testOne(self):
+                self.assertEqual(totalCost,3.55, "totalCost should equal 3.55")
+
+        myTests().main()
+
 
 #.
     .. tabbed:: var-exercise-rhyme
@@ -44,7 +63,7 @@ Writing code problems
 
         .. tab:: Answer
 
-            .. activecode:: var-wc-rhymea
+            .. activecode:: var-wc-rhymeA
                 :optional:
 
                 word1 = "twinkle"
@@ -55,38 +74,25 @@ Writing code problems
                 #another option is
                 #print(word1 + " " + word1 + " " + word2 + " " + word3)
 
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: rhymeDisc
 
 #.
-    .. tabbed:: var-exercise-order
+    .. activecode:: var-wc-order
 
-        .. tab:: Question
+        Add parentheses to the following code so that the total equals 40.
 
-            Add parentheses to the following code so that the total equals 40.
+        ~~~~
 
-            .. activecode:: var-wc-order
+        total = 7 + 3 * 6 - 2
+        print(total)
 
-                total = 7 + 3 * 6 - 2
-                print(total)
+        ====
+        from unittest.gui import TestCaseGui
+        class myTests(TestCaseGui):
 
-                ====
-                from unittest.gui import TestCaseGui
-                class myTests(TestCaseGui):
+            def testOne(self):
+                self.assertEqual(total,40)
 
-                    def testOne(self):
-                        self.assertEqual(total,40)
-
-                myTests().main()
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: orderDisc
+        myTests().main()
 
 #.
     .. tabbed:: var-exercise-time
@@ -112,7 +118,7 @@ Writing code problems
 
         .. tab:: Answer
 
-            .. activecode:: var-wc-timea
+            .. activecode:: var-wc-timeA
                 :optional:
 
                 #prompt the user for the current time
@@ -133,34 +139,29 @@ Writing code problems
                 #print the time of day that the alarm will go off
                 print(timeofday)
 
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: timeDisc
 
 #.
-    .. tabbed:: var-exercise-syntax
+    .. activecode:: var-wc-dog
+        :nocodelens:
 
-        .. tab:: Question
+        Assume that you have 24 slices of pizza and 7 people that are going to share it.
+        There's been some arguments among your friends, so you've decided to only give people whole slices.
+        Your pet dog Andy loves pizza. Write a Python expression with the modulus operator that calculates
+        how many pizza slices will be left over for your dog after serving just whole slices to 7 people.
+        Assign the result of that expression to ``forAndy``.
 
-            There are 3 syntax errors in the following code. Fix it to print correctly
-            without errors. It will print, "Her name is Molly and her favorite food is tuna".
+        ~~~~
 
-            .. activecode:: var-wc-syntax
-                :optional:
-                :nocodelens:
 
-                food = "tuna'
-                name = 'Molly'
-                print("Her name is " + name +
-                      and her favorite food is" + food + ".")
 
-        .. tab:: Discussion
+        ====
+        from unittest.gui import TestCaseGui
+        class myTests(TestCaseGui):
 
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: syntaxDisc
+            def testOne(self):
+                self.assertEqual(forAndy,3)
+
+        myTests().main()
 
 #.
     .. tabbed:: var-exercise-feet
@@ -176,7 +177,7 @@ Writing code problems
 
         .. tab:: Answer
 
-            .. activecode:: var-wc-feeta
+            .. activecode:: var-wc-feetA
                 :optional:
 
                 #prompt the user for the amount of inches they would like to convert
@@ -191,46 +192,15 @@ Writing code problems
                 #print the amount of feet
                 print(feet)
 
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: feetDisc
-
 #.
-    .. tabbed:: var-exercise-inch
+    .. activecode:: var-wc-inch
 
-        .. tab:: Question
+        Write a program that will convert feet to inches from user input.
+        Reminder: there are 12 inches in a foot.
 
-            Write a program that will convert feet to inches from user input.
-            Reminder: there are 12 inches in a foot.
-
-            .. activecode:: var-wc-inch
+        ~~~~
 
 
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: inchDisc
-
-#.
-    .. tabbed:: var-exercise-madlibs
-
-        .. tab:: Question
-
-            Write code below to get at least 3 values from the user using the ``input``
-            function and output a mad lib (which will use the input to tell a silly story).
-
-            .. activecode::  var-wc-madlibs
-                :nocodelens:
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: madlibsDisc
 
 #.
     .. tabbed:: var-exercise-combine
@@ -248,39 +218,22 @@ Writing code problems
                 print(numHours)
                 print(numMinutes)
 
-        .. tab:: Discussion
+        .. tab:: Answer
 
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: combineDisc
-
-#.
-    .. tabbed:: var-exercise-dog
-
-        .. tab:: Question
-
-            Assume that you have 24 slices of pizza and 7 people that are going to share it.
-            There's been some arguments among your friends, so you've decided to only give people whole slices.
-            Your pet dog Andy loves pizza. Write a Python expression with the modulus operator that calculates
-            how many pizza slices will be left over for your dog after serving just whole slices to 7 people.
-            Assign the result of that expression to ``forAndy``.
-
-            .. activecode:: var-wc-dog
+            .. activecode::  var-wc-combineA
                 :nocodelens:
 
+                totalMinutes = 270
+                numMinutes = totalMinutes % 60
+                numHours = (totalMinutes - numMinutes) / 60
+                print(totalMinutes + " is " + numHours + " hours and " + numMinutes + " minutes.")
 
+#.
 
-                ====
-                from unittest.gui import TestCaseGui
-                class myTests(TestCaseGui):
+    .. activecode::  var-wc-madlibs
+        :nocodelens:
 
-                    def testOne(self):
-                        self.assertEqual(forAndy,3)
+        Write code below to get at least 3 values from the user using the ``input``
+        function and output a mad lib (which will use the input to tell a silly story).
 
-                myTests().main()
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: dogDisc
+        ~~~~

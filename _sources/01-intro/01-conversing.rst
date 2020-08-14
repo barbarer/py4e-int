@@ -1,5 +1,7 @@
 Conversing with Python
 ----------------------
+.. index::
+    single: Interactive Mode
 
 Now that we have a word and a simple sentence that we know in Python, we
 need to know how to start a conversation with Python to test our new
@@ -153,5 +155,5 @@ one, so having a book handy probably will turn out to be helpful.
 
   How do you leave the Python interpreter?
 
-  - :quit(): Correct!
+  - :quit(\(\))*: Correct!
     :.*: Try again.

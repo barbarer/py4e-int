@@ -1,4 +1,4 @@
-Mixed-up Code Practice
+Mixed-up Code Questions
 ------------------------
 .. parsonsprob:: file_mixed_wattle
     :numbered: left

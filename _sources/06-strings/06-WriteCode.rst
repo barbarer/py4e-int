@@ -1,4 +1,4 @@
-Write code problems
+Write Code Questions
 --------------------
 #.
     .. tabbed:: str-ex-hi
@@ -23,18 +23,42 @@ Write code problems
 
                 myTests().main()
 
-        .. tab:: Discussion
+        .. tab:: Answer
 
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: strHiDisc
+            .. activecode::  str-ex-hiA
+                :nocodelens:
+                :optional:
+
+                s1 = "hi"
+                s1 = s1.capitalize()
+                print(s1)
+
+#.
+    .. activecode::  str-ex-meowq
+        :nocodelens:
+
+        Fix the code so that only "meow" is printed.
+        ~~~~
+        sentence = "The cat goes meow."
+        s2 = [16:13]sentence
+        print(s2)
+
+        ====
+        from unittest.gui import TestCaseGui
+        class myTests(TestCaseGui):
+
+            def testOne(self):
+                self.assertEqual(s2,"meow")
+
+        myTests().main()
 
 #.
     .. tabbed:: str-ex-eggs
 
         .. tab:: Question
 
-            Write the code to evaluate the length of the string "I like green eggs" and print it. It should print "The length is 17".
+            Write the code to evaluate the length of the string "I like green eggs"
+            and print it. It should print "The length is 17".
 
             .. activecode::  str-ex-eggsq
                 :nocodelens:
@@ -51,81 +75,43 @@ Write code problems
                 # PRINT RESULT
                 print('The length is ' + str(len(sentence)))
 
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: strEggsDisc
 
 #.
-    .. tabbed:: str-ex-count
+    .. activecode::  str-ex-countq
+        :nocodelens:
 
-        .. tab:: Question
+        Create a function named ``count`` that accepts a string and a letter
+        as arguments, then returns the count of that letter in the string.
+        For example, if the function call was count("banana", "a") it would
+        return 3.
+        ~~~~
 
-            Create a function named ``count`` that accepts a string and a letter as arguments,
-            then returns the count of that letter in the string
+        ====
+        from unittest.gui import TestCaseGui
+        class myTests(TestCaseGui):
 
-            .. activecode::  str-ex-countq
-                :nocodelens:
+            def testOne(self):
+                self.assertEqual(count('banana','a'),3,"Tested 'a' in 'banana'")
+                self.assertEqual(count('pineapple','s'),0,"Tested 's' in 'pineapple'")
+                self.assertEqual(count('pepperoni pizza','p'),4,"Tested 'p' in 'pepperoni pizza'")
+                self.assertEqual(count('racecar','r'),2,"Tested 'r' in 'racecar'")
 
-                ====
-                from unittest.gui import TestCaseGui
-                class myTests(TestCaseGui):
+        myTests().main()
 
-                    def testOne(self):
-                        self.assertEqual(count('banana','a'),3,"Tested 'a' in 'banana'")
-                        self.assertEqual(count('pineapple','s'),0,"Tested 's' in 'pineapple'")
-                        self.assertEqual(count('pepperoni pizza','p'),4,"Tested 'p' in 'pepperoni pizza'")
-                        self.assertEqual(count('racecar','r'),2,"Tested 'r' in 'racecar'")
-
-                myTests().main()
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: strCountDisc
-
-#.
-    .. tabbed:: str-ex-meow
-
-        .. tab:: Question
-
-            Fix the code so that only "meow" is printed.
-
-            .. activecode::  str-ex-meowq
-                :nocodelens:
-
-                sentence = "The cat goes meow."
-                s2 = [16:13]sentence
-                print(s2)
-
-                ====
-                from unittest.gui import TestCaseGui
-                class myTests(TestCaseGui):
-
-                    def testOne(self):
-                        self.assertEqual(s2,"meow")
-
-                myTests().main()
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: strMeowDisc
 
 #.
     .. tabbed:: str-ex-float
 
         .. tab:: Question
 
-            Take the following Python code that stores a string: ``str = "X-DSPAM-Confidence: 0.8475"``
+            Take the following Python code that stores a string: ``string = "X-DSPAM-Confidence: 0.8475"``
             Use ``find`` and string slicing to extract the portion of the string after the colon character
             and then use the ``float`` function to convert the extracted string into a floating point number called ``num``.
 
             .. activecode::  str-ex-floatq
                 :nocodelens:
+
+                string = "X-DSPAM-Confidence: 0.8475"
 
 
                 ====
@@ -137,11 +123,34 @@ Write code problems
 
                 myTests().main()
 
-        .. tab:: Discussion
+        .. tab:: Answer
 
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: strFloatDisc
+            .. activecode:: str-ex-floatA
+                :optional:
+
+                string = "X-DSPAM-Confidence: 0.8475"
+                colon = string.find(':')
+                print(colon) #check value
+                digit = string[(colon+1):] # don't include the colon
+                print(digit) #check value
+                num = float(digit)
+
+
+#.
+    .. activecode::  str-ex-ducksq
+        :nocodelens:
+
+        In Robert McCloskey's book *Make Way for Ducklings*, the names of the ducklings are
+        Jack, Kack, Lack, Mack, Nack, Ouack, Pack, and Quack.
+        The following loop tries to output these names in order.
+        Of course, that's not quite right because Ouack and Quack are misspelled.
+        Can you fix it?
+        ~~~~
+        prefixes = "JKLMNOPQ"
+        suffix = "ack"
+
+        for p in prefixes:
+            print(p + suffix)
 
 #.
     .. tabbed:: str-ex-digits
@@ -177,6 +186,7 @@ Write code problems
         .. tab:: Answer
 
             .. activecode:: str_ex-digitsa
+                :optional:
 
                 def numDigits(n):
                     n_str = str(n)
@@ -187,90 +197,35 @@ Write code problems
                 print(numDigits(20000))
                 print(numDigits(1))
 
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: strDigitsDisc
 
 #.
-    .. tabbed:: str-ex-ducks
+    .. activecode::  str-ex-nameq
+        :nocodelens:
 
-        .. tab:: Question
+        Write code to print out the statement "Hi my name is Bob and I am 2" using only string methods
+        or string slicing. You must get every part of the new string from the given strings.
+        Name the final string ``statement``.
+        ~~~~
+        s1 = "hi"
+        s2 = "My namesake is Bob, and he and I love to eat ham."
 
-            In Robert McCloskey's book *Make Way for Ducklings*, the names of the ducklings are
-            Jack, Kack, Lack, Mack, Nack, Ouack, Pack, and Quack.
-            The following loop tries to output these names in order.
-            Of course, that's not quite right because Ouack and Quack are misspelled.
-            Can you fix it?
+        ====
+        from unittest.gui import TestCaseGui
+        class myTests(TestCaseGui):
 
-            .. activecode::  str-ex-ducksq
-                :nocodelens:
+            def testOne(self):
+                self.assertEqual(statement,"Hi my name is Bob and I am 2")
 
-                prefixes = "JKLMNOPQ"
-                suffix = "ack"
+        myTests().main()
 
-                for p in prefixes:
-                    print(p + suffix)
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: strDucksDisc
-
-#.
-    .. tabbed:: str-ex-lower
-
-        .. tab:: Question
-
-            Write code that gets user input and print a string that states their input in all lowercase and gives the length of their string.
-
-            .. activecode::  str-ex-lowerq
-                :nocodelens:
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: strLowerDisc
-
-#.
-    .. tabbed:: str-ex-name
-
-        .. tab:: Question
-
-            Write code to print out the statement "Hi my name is Bob and I am 2" using only string methods
-            or string slicing. You must get every part of the new string from the given strings.
-            Name the final string ``statement``.
-
-            .. activecode::  str-ex-nameq
-                :nocodelens:
-
-                s1 = "hi"
-                s2 = "My namesake is Bob, and he and I love to eat ham."
-
-                ====
-                from unittest.gui import TestCaseGui
-                class myTests(TestCaseGui):
-
-                    def testOne(self):
-                        self.assertEqual(statement,"Hi my name is Bob and I am 2")
-
-                myTests().main()
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: strNameDisc
 
 #.
     .. tabbed:: str-ex-nameInput
 
         .. tab:: Question
 
-            Write a function to get the input of a user’s first name, then get only the first letter of their name, and print that letter lowercase.
+            Write a program that asks a user for their name and from the input
+            prints the first letter of their name in lowercase.
 
             .. activecode::  str-ex-nameInputq
                 :nocodelens:
@@ -292,8 +247,10 @@ Write code problems
                 #PRINT
                 print(lowerFirst)
 
-        .. tab:: Discussion
+#.
+    .. activecode::  str-ex-lowerq
+        :nocodelens:
 
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: strNameInputDisc
+        Write a program that gets user input and print a string that states their
+        input in all lowercase and gives the length of their string.
+        ~~~~

@@ -1,5 +1,12 @@
 Catching exceptions using try and except
 ----------------------------------------
+.. index::
+    single: Traceback
+    single: Fahrenheit
+    single: Celsius
+    single: Temperature Conversion
+    single: Try
+    single: Except
 
 Earlier we saw a code segment where we used the ``input`` and
 ``int`` functions to read and parse an integer number entered
@@ -7,13 +14,13 @@ by the user. We also saw how treacherous doing this could be:
 
 .. code-block:: python
 
-   >>> prompt = "What is the air velocity of an unladen swallow?\n"
-   >>> speed = input(prompt)
-   What is the air velocity of an unladen swallow?
-   What do you mean, an African or a European swallow?
-   >>> int(speed)
-   ValueError: invalid literal for int() with base 10:
-   >>>
+    >>> prompt = "What is the air velocity of an unladen swallow?\n"
+    >>> speed = input(prompt)
+    What is the air velocity of an unladen swallow?
+    What do you mean, an African or a European swallow?
+    >>> int(speed)
+    ValueError: invalid literal for int() with base 10:
+    >>>
 
 
 When we are executing these statements in the Python interpreter, we get
@@ -28,19 +35,19 @@ Here is a sample program to convert a Fahrenheit temperature to a
 Celsius temperature:
 
 .. activecode:: cndtnlTemp
-   :caption: Temperature converter
+    :caption: Temperature converter
 
-   inp = input('Enter Fahrenheit Temperature: ')
-   fahr = float(inp)
-   cel = (fahr - 32.0) * 5.0 / 9.0
-   print(cel)
+    inp = input('Enter Fahrenheit Temperature: ')
+    fahr = float(inp)
+    cel = (fahr - 32.0) * 5.0 / 9.0
+    print(cel)
 
 Example:
 
 .. code-block::
 
-   Enter Fahrenheit Temperature:72
-   22.22222222222222
+    Enter Fahrenheit Temperature:72
+    22.22222222222222
 
 
 If we execute this code and give it invalid input, it simply fails with
@@ -48,11 +55,11 @@ an unfriendly error message:
 
 .. code-block::
 
-   Enter Fahrenheit Temperature:fred
-   Traceback (most recent call last):
-     File "fahren.py", line 2, in <module>
-       fahr = float(inp)
-   ValueError: could not convert string to float: 'fred'
+    Enter Fahrenheit Temperature:fred
+    Traceback (most recent call last):
+      File "fahren.py", line 2, in <module>
+        fahr = float(inp)
+    ValueError: could not convert string to float: 'fred'
 
 
 There is a conditional execution structure built into Python to handle
@@ -69,9 +76,9 @@ Python as an "insurance policy" on a sequence of statements.
 
     The ``try / except`` feature is more or less a(n) _______ for your code.
 
-    - :[Ii]nsurace [Pp]olicy: Try / except acts as an insurance policy to catch expected
+    - :[Ii]nsurance [Pp]olicy: Try / except acts as an insurance policy to catch expected
                               or unexpected errors in your code.
-      :.*: Try again.
+      :.*: Check the previous paragraph for some help!
 
 We can rewrite our temperature converter as follows:
 
@@ -97,15 +104,15 @@ Example:
 
 .. code-block::
 
-   Enter Fahrenheit Temperature:72
-   22.22222222222222
+    Enter Fahrenheit Temperature:72
+    22.22222222222222
 
 If we execute this code and give it invalid input, it executes the statements in the ``except`` block:
 
 .. code-block::
 
-   Enter Fahrenheit Temperature:fred
-   Please enter a number
+    Enter Fahrenheit Temperature:fred
+    Please enter a number
 
 
 Handling an exception with a ``try`` statement is called

@@ -1,5 +1,8 @@
 Parsing strings
 ---------------
+.. index::
+    pair: Parsing; String
+    pair: Method; Find
 
 Often, we want to look into a string and find a substring. For example
 if we were presented a series of lines formatted as follows:
@@ -16,18 +19,18 @@ we will use string slicing to extract the portion of the string which we
 are looking for.
 
 .. codelens:: strParsing
-   :question: What is the value of sppos after the line with the red arrow executes?
-   :breakline: 4
-   :feedback: The second argument in find() is the start position.
-   :correct: globals.sppos
+    :question: What is the value of sppos after the line with the red arrow executes?
+    :breakline: 4
+    :feedback: The second argument in find() is the start position.
+    :correct: globals.sppos
 
-   data = 'From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008'
-   atpos = data.find('@')
-   print(atpos)
-   sppos = data.find(' ',atpos)
-   print(sppos)
-   host = data[atpos+1:sppos]
-   print(host)
+    data = 'From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008'
+    atpos = data.find('@')
+    print(atpos)
+    sppos = data.find(' ',atpos)
+    print(sppos)
+    host = data[atpos+1:sppos]
+    print(host)
 
 
 We use a version of the ``find`` method which allows us to

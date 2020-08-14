@@ -1,5 +1,7 @@
 Letting the user choose the file name
 -------------------------------------
+.. index::
+    pair: File; Name
 
 We really do not want to have to edit our Python code every time we want
 to process a different file. It would be more usable to ask the user to
@@ -29,12 +31,12 @@ repeatedly on different files.
 
 .. code-block::
 
-   python search6.py # seach6.py is the file containing the above script.
-   Enter the file name: mbox.txt
-   There were 1797 subject lines in mbox.txt
+    python search6.py # seach6.py is the file containing the above script.
+    Enter the file name: mbox.txt
+    There were 1797 subject lines in mbox.txt
 
-   python search6.py
-   Enter the file name: mbox-short.txt
+    python search6.py
+     Enter the file name: mbox-short.txt
    There were 27 subject lines in mbox-short.txt
 
 .. parsonsprob:: file-user-pp-input

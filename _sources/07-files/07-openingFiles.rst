@@ -1,5 +1,10 @@
 Opening files
 -------------
+.. index::
+    pair: Function; Open
+    pair: File; Open
+    single: File Handle
+
 
 When we want to read or write a file (say on your hard drive), we first
 must *open* the file. Opening the file communicates with
@@ -39,7 +44,7 @@ read the data. You are given a handle if the requested file exists and
 you have the proper permissions to read the file.
 
 .. figure:: ../images/handle.svg
-   :alt: A File Handle
+    :alt: A File Handle
 
 .. fillintheblank:: file-open-fitb-object
     :practice: T
@@ -54,10 +59,10 @@ and you will not get a handle to access the contents of the file:
 
 .. code-block:: python
 
-   >>> fhand = open('stuff.txt')
-   Traceback (most recent call last):
-   File "<stdin>", line 1, in <module>
-   FileNotFoundError: [Errno 2] No such file or directory: 'stuff.txt'
+    >>> fhand = open('stuff.txt')
+    Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+    FileNotFoundError: [Errno 2] No such file or directory: 'stuff.txt'
 
 Later we will use ``try`` and ``except`` to deal more
 gracefully with the situation where we attempt to open a file that does

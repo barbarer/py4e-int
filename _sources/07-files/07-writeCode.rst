@@ -1,7 +1,10 @@
-Write code
------------
-The following data file is used in some of the questions in this section. Click show, to see all of the data,
-and hide, to put it away.
+Write Code Questions
+--------------------
+The following data file is used in some of the questions in this section. The data
+is ordered City/State, annual mean amounts of particulate pollution that’s 10
+micrometers in diameter (PM 10), and annual mean amounts of particulate pollution
+that’s 2.5 micrometers in diameter (PM 2.5) Click show to see all of the data
+and hide to put it away.
 
 .. reveal:: pol_Data_8_10
     :showtitle: Show
@@ -434,39 +437,36 @@ and hide, to put it away.
                 inFile.close()
 
 #.
-    .. tabbed:: file_ex_pmError
+    .. activecode::  file_ex_pmErrorq
+        :nocodelens:
+        :available_files: uspoll.txt
 
-        .. tab:: Question
+        Fix the errors in the code below so that it prints the average PM values
+        of only the cities that start with "A".
+        ~~~~
+        inFile = open("uspoll.txt","r")
+        lines = inFile.readlines()
+        inFile.close()
 
-            Fix the errors in the code below so that it prints the average PM values
-            of only the cities that start with "A".
+        total25 = 0
+        count = 1.0
+        for line in lines:
+            values = line.split(":")
+            new25 = float(values[2])
+            city = values[1]
+            if (city.find("A") == -1):
+                total25 = total25 + new25
+            count = count + 1
 
-            .. activecode::  file_ex_pmErrorq
-                :nocodelens:
-                :available_files: uspoll.txt
-
-                inFile = open("uspoll.txt","r")
-                lines = inFile.readlines()
-                inFile.close()
-
-                total25 = 0
-                count = 1.0
-                for line in lines:
-                    values = line.split(":")
-                    new25 = float(values[2])
-                    city = values[1]
-                    if (city.find("A") == -1):
-                        total25 = total25 + new25
-                    count = count + 1
-
-                print("Average PM 2.5 value for cities that start with 'A' is ", total25/count)
+        print("Average PM 2.5 value for cities that start with 'A' is ", total25/count)
 
 #.
     .. tabbed:: file_ex_AorB
 
         .. tab:: Question
 
-            The code below prints all the lines that have a city that starts with an "A". Change it so that it prints out all lines that have a city that starts with "A" or "B".
+            The code below prints all the lines that have a city that starts with an "A".
+            Change it so that it prints out all lines that have a city that starts with "A" or "B".
 
             .. activecode::  file_ex_AorBq
                 :nocodelens:
@@ -481,6 +481,23 @@ and hide, to put it away.
                 for line in lines:
                     if line[0] == "A":
                         print(line)
+        .. tab:: Answer
+
+            .. activecode:: file_ex_AorBa
+                :nocodelens:
+                :available_files: uspoll.txt
+                :optional:
+
+                # read all the lines
+                inFile = open("uspoll.txt","r")
+                lines = inFile.readlines()
+                inFile.close()
+
+                # loop through the lines
+                for line in lines:
+                    if (line[0] == "A") | (line[0] == "B"):
+                        print(line)
+
 
 #.
     .. tabbed:: file_ex_valueCity
@@ -553,44 +570,42 @@ and hide, to put it away.
 
                 f.close()
 
+The following file contains a set of emotions that will be used in the next question.
+
+
+
+.. raw:: html
+
+    <pre id="emotion_words.txt">
+    Sad upset blue down melancholy somber bitter troubled
+    Angry mad enraged irate irritable wrathful outraged infuriated
+    Happy cheerful content elated joyous delighted lively glad
+    Confused disoriented puzzled perplexed dazed befuddled
+    Excited eager thrilled delighted
+    Scared afraid fearful panicked terrified petrified startled
+    Nervous anxious jittery jumpy tense uneasy apprehensive
+    </pre>
+
 #.
+    .. activecode:: file_ex_emotionq
+       :nocodelens:
+       :available_files: emotion_words.txt
 
-    .. tabbed:: file_ex_emotion
-
-        .. tab:: Question
-
-            Create a list called ``j_emotions`` that contains every word in ``emotion_words.txt``
-            that begins with the letter "j".
-
-            This is ``emotion_words.txt``:
-
-            .. raw:: html
-
-                <pre id="emotion_words.txt">
-                Sad upset blue down melancholy somber bitter troubled
-                Angry mad enraged irate irritable wrathful outraged infuriated
-                Happy cheerful content elated joyous delighted lively glad
-                Confused disoriented puzzled perplexed dazed befuddled
-                Excited eager thrilled delighted
-                Scared afraid fearful panicked terrified petrified startled
-                Nervous anxious jittery jumpy tense uneasy apprehensive
-                </pre>
-
-            .. activecode:: file_ex_emotionq
-               :nocodelens:
-               :available_files: emotion_words.txt
+       Create a list called ``j_emotions`` that contains every word in ``emotion_words.txt``
+       that begins with the letter "j".
+       ~~~~
 
 
-               =====
+       =====
 
-               from unittest.gui import TestCaseGui
+       from unittest.gui import TestCaseGui
 
-               class myTests(TestCaseGui):
+       class myTests(TestCaseGui):
 
-                  def testOne(self):
-                     self.assertEqual(j_emotions, ['joyous', 'jittery', 'jumpy'], "Testing that j_emotions was created correctly.")
+          def testOne(self):
+             self.assertEqual(j_emotions, ['joyous', 'jittery', 'jumpy'], "Testing that j_emotions was created correctly.")
 
-               myTests().main()
+       myTests().main()
 
 The rest of the questions gather their data from the file ``stocks.txt``, which shows the monthly Dow
 Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Low, Close, Volume.
@@ -776,13 +791,34 @@ Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Lo
                   maxLoss = 0
                   lines = file.readlines()
                   for # in lines:
-                      values = line.split(#)
-                      open = float(values[#])
-                      close = float(values[4])
-                      dailyLoss = open # close
+                      values = line.split(",")
+                      opening = float(values[#])
+                      closing = float(values[4])
+                      dailyLoss = opening # closing
                       if (dailyLoss # maxLoss):
                           maxLoss = dailyLoss
                           date = values[#]
+                  print(date + " loss " + str(maxLoss))
+
+              file = open("stocks.txt", "r")
+              biggestLoss(file)
+
+      .. tab:: Answer
+
+          .. activecode:: file_ex_biggestLossA
+              :optional:
+
+              def biggestLoss(file):
+                  maxLoss = 0
+                  lines = file.readlines()
+                  for line in lines:
+                      values = line.split(",")
+                      opening = float(values[1])
+                      closing = float(values[4])
+                      dailyLoss = opening - closing
+                      if (dailyLoss < maxLoss):
+                          maxLoss = dailyLoss
+                          date = values[0]
                   print(date + " loss " + str(maxLoss))
 
               file = open("stocks.txt", "r")

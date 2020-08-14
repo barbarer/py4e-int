@@ -1,5 +1,12 @@
 Using ``try, except,`` and ``open``
--------------------------------------------
+------------------------------------
+.. index::
+    pair: Quality; Assurance
+    pair: Statement; Try
+    pair: Open; Statement
+    pair: IOError; Exception
+    single: Pythonic
+
 
 I told you not to peek. This is your last chance.
 
@@ -7,19 +14,19 @@ What if our user types something that is not a file name?
 
 .. code-block::
 
-   python search6.py
-   Enter the file name: missing.txt
-   Traceback (most recent call last):
-     File "search6.py", line 2, in <module>
-       fhand = open(fname)
-   FileNotFoundError: [Errno 2] No such file or directory: 'missing.txt'
+    python search6.py
+    Enter the file name: missing.txt
+    Traceback (most recent call last):
+      File "search6.py", line 2, in <module>
+        fhand = open(fname)
+    FileNotFoundError: [Errno 2] No such file or directory: 'missing.txt'
 
-   python search6.py
-   Enter the file name: na na boo boo
-   Traceback (most recent call last):
-     File "search6.py", line 2, in <module>
-       fhand = open(fname)
-   FileNotFoundError: [Errno 2] No such file or directory: 'na na boo boo'
+    python search6.py
+    Enter the file name: na na boo boo
+    Traceback (most recent call last):
+      File "search6.py", line 2, in <module>
+        fhand = open(fname)
+    FileNotFoundError: [Errno 2] No such file or directory: 'na na boo boo'
 
 
 Do not laugh. Users will eventually do every possible thing they can do
@@ -73,13 +80,13 @@ silliness or bad file names, we "catch" them and recover gracefully:
 
 .. code-block::
 
-   python search7.py
-   Enter the file name: mbox.txt
-   There were 1797 subject lines in mbox.txt
+    python search7.py
+    Enter the file name: mbox.txt
+    There were 1797 subject lines in mbox.txt
 
-   python search7.py
-   Enter the file name: na na boo boo
-   File cannot be opened: na na boo boo
+    python search7.py
+    Enter the file name: na na boo boo
+    File cannot be opened: na na boo boo
 
 .. fillintheblank:: file-try-fitb-close
     :practice: T

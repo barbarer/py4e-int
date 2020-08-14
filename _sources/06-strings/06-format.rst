@@ -1,5 +1,10 @@
 Format operator
 ---------------
+.. index::
+    pair: Operator; Format
+    single: Format String
+    single: Format Sequence
+    single: TypeError
 
 The *format operator*, ``%`` allows us to
 construct strings, replacing parts of the strings with the data stored
@@ -31,9 +36,9 @@ should be formatted as an integer ("d" stands for "decimal"):
 
 .. code-block:: python
 
-   >>>camels = 42
-   >>>'%d' % camels
-   42
+    >>>camels = 42
+    >>>'%d' % camels
+    42
 
 
 The result is the string '42', which is not to be confused with the
@@ -43,10 +48,10 @@ A format sequence can appear anywhere in the string, so you can embed a
 value in a sentence:
 
 .. activecode:: str-formatSent
-   :caption: Using the format operator with a string.
+    :caption: Using the format operator with a string.
 
-   camels = 42
-   print('I have spotted %d camels.' % camels)
+    camels = 42
+    print('I have spotted %d camels.' % camels)
 
 
 If there is more than one format sequence in the string, the second
@@ -60,8 +65,8 @@ a floating-point number (don't ask why), and ``%s`` to format a string:
 
 .. activecode:: str-formatMult
 
-   camels = 42
-   print('In %d years I have spotted %g %s.' % (3, 0.1, 'camels'))
+    camels = 42
+    print('In %d years I have spotted %g %s.' % (3, 0.1, 'camels'))
 
 
 The number of elements in the tuple must match the number of format
@@ -70,10 +75,10 @@ format sequences:
 
 .. code-block:: python
 
-   >>> '%d %d %d' % (1, 2)
-   TypeError: not enough arguments for format string
-   >>> '%d' % 'dollars'
-   TypeError: %d format: a number is required, not str
+    >>> '%d %d %d' % (1, 2)
+    TypeError: not enough arguments for format string
+    >>> '%d' % 'dollars'
+    TypeError: %d format: a number is required, not str
 
 
 In the first example, there aren't enough elements; in the second, the

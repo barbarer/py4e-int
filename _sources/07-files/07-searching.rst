@@ -1,5 +1,8 @@
 Searching through a file
 ------------------------
+.. index::
+    pair: Filter; Pattern
+    pair: Search; File
 
 When you are searching through data in a file, it is a very common
 pattern to read through a file, ignoring most of the lines and only

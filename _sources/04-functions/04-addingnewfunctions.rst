@@ -1,5 +1,18 @@
 Adding new functions
 --------------------
+.. index::
+    single: Function
+    pair: Function; Definition
+    pair: Def; Keyword
+    single: Argument
+    pair: Parentheses; Empty
+    single: Header
+    single: Body
+    single: Indentation
+    single: Colon
+    single: Ellipses
+    pair: Function; Object
+
 
 So far, we have only been using the functions that come with Python, but
 it is also possible to add new functions. A *function

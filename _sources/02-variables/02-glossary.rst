@@ -2,75 +2,75 @@ Glossary
 --------
 
 .. glossary::
-     Assignment
+    Assignment
         A statement that assigns a value to a variable.
 
-     Concatenate
+    Concatenate
         To join two operands end to end.
 
-     Comment
+    Comment
         Information in a program that is meant for other programmers (or
         anyone reading the source code) and has no effect on the execution
         of the program.
 
-     Evaluate
+    Evaluate
         To simplify an expression by performing the operations in order to yield a single value.
 
-     Expression
+    Expression
         A combination of variables, operators, and values that represents a
         single result value.
 
-     Floating Point
+    Floating Point
         A type that represents numbers with fractional parts.
 
-     Integer
+    Integer
         A type that represents whole numbers.
 
-     Keyword
+    Keyword
         A reserved word that is used by the compiler to parse a program; you
-        cannot use keywords like ``if``\ , ``def``\ , and
+        cannot use keywords like ``if``, ``def``, and
         ``while`` as variable names.
 
-     Mnemonic
+    Mnemonic
         A memory aid. We often give variables mnemonic names to help us
         remember what is stored in the variable.
 
-     Modulus Operator
-        An operator, denoted with a percent sign (\ ``%``\ ), that
+    Modulus Operator
+        An operator, denoted with a percent sign (``%``), that
         works on integers and yields the remainder when one number is
         divided by another.
 
-     Operand
+    Operand
         One of the values on which an operator operates.
 
-     Operator
+    Operator
         A special symbol that represents a simple computation like addition,
         multiplication, or string concatenation.
 
-     Rules of Precedence
+    Rules of Precedence
         The set of rules governing the order in which expressions involving
         multiple operators and operands are evaluated.
 
-     Statement
+    Statement
         A section of code that represents a command or action. So far, the
         statements we have seen are assignments and print expression statement.
 
-     String
+    String
         A type that represents sequences of characters.
 
-     Type
+    Type
         A category of values. The types we have seen so far are integers
-        (type ``int``\ ), floating-point numbers (type
-        ``float``\ ), and strings (type ``str``\ ).
+        (type ``int``), floating-point numbers (type
+        ``float``), and strings (type ``str``).
 
-     Value
+    Value
         One of the basic units of data, like a number or string, that a
         program manipulates.
 
-     Variable
+    Variable
         A name that refers to a value.
 
-.. dragndrop:: 02-dnd-3-glossary1
+.. dragndrop:: varGlossary1
     :feedback: Look above for these terms.
     :match_1: floating point|||A type that represents numbers with fractional parts.
     :match_2: integer|||A type that represents whole numbers.
@@ -79,7 +79,7 @@ Glossary
 
     Match each term with its definition.
 
-.. dragndrop:: 02-dnd-3-glossary2
+.. dragndrop:: varGlossary2
     :feedback: Look above for these terms.
     :match_1: assignment|||A statement that assigns a value to a variable.
     :match_2: keyword|||A reserved word that is used by the compiler to parse a program; you cannot use keywords like ``if``\ , ``def``\ , and ``while`` as variable names.
@@ -89,7 +89,7 @@ Glossary
 
     Match each term with its definition.
 
-.. dragndrop:: 02-dnd-4-glossary3
+.. dragndrop:: varGlossary3
     :feedback: Look above for these terms.
     :match_1: expression|||A combination of variables, operators, and values that represents a single result value.
     :match_2: modulus operator|||An operator, denoted with a percent sign (\ ``%``\ ), that works on integers and yields the remainder when one number is divided by another.
@@ -99,7 +99,7 @@ Glossary
 
     Match each term with its definition.
 
-.. dragndrop:: 02-dnd-4-glossary4
+.. dragndrop:: varGlossary4
     :feedback: Look above for these terms.
     :match_1: concatenate|||To join two operands end to end.
     :match_2: comment|||Information in a program that is meant for other programmers (or anyone reading the source code) and has no effect on the execution of the program.

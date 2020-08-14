@@ -16,7 +16,7 @@ Glossary
       A person or team focused on insuring the overall quality of a software product. QA is often
       involved in testing a product and identifying problems before the product is released.
 
-    Text file
+    Text File
       A sequence of characters stored in permanent storage like a hard drive.
 
 .. dragndrop:: file-glossary

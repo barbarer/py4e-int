@@ -1,5 +1,11 @@
 Debugging
 ---------
+.. index::
+    single: Debugging
+    single: Whitespace
+    pair: Repr; Function
+    single: String Representation
+    single: End of Line Character
 
 When you are reading and writing files, you might run into problems with
 whitespace. These errors can be hard to debug because spaces, tabs, and

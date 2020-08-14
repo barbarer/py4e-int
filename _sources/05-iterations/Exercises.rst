@@ -1,4 +1,4 @@
-Multiple choice practice
+Multiple Choice Questions
 -------------------------
 
 .. mchoice:: e5mc1

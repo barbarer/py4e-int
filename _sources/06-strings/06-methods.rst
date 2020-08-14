@@ -1,5 +1,13 @@
 String methods
 --------------
+.. index::
+    pair: String; Method
+    pair: Dot; Notation
+    pair: Parentheses; Empty
+    single: Invocation
+    pair: Optional; Argument
+    pair: Count; Method
+
 
 Strings are an example of Python *objects*. An object
 contains both data (the actual string itself) and
@@ -13,11 +21,11 @@ of an object and the ``dir`` function shows the available
 methods.
 
 .. activecode:: str-methods
-   :caption: String methods through Python interpreter
+    :caption: String methods through Python interpreter
 
-   stuff = 'Hello world'
-   print(type(stuff))
-   print(dir(stuff))
+    stuff = 'Hello world'
+    print(type(stuff))
+    print(dir(stuff))
 
 
 While the ``dir`` function lists the methods, and you can use
@@ -37,16 +45,16 @@ https://docs.python.org/library/stdtypes.html#string-methods.
         have upper case and the rest lower case.
     >>>
 .. mchoice:: str-method-mc-dir
-   :practice: T
-   :answer_a: dir
-   :answer_b: print
-   :answer_c: list
-   :correct: a
-   :feedback_a: Correct! dir() will list all the methods that can be used with an object.
-   :feedback_b: Try again! The function print() prints whatever is within the parentheses.
-   :feedback_c: Try again. list is actually a mutable sequence type,
+    :practice: T
+    :answer_a: dir
+    :answer_b: print
+    :answer_c: list
+    :correct: a
+    :feedback_a: Correct! dir() will list all the methods that can be used with an object.
+    :feedback_b: Try again! The function print() prints whatever is within the parentheses.
+    :feedback_c: Try again. list is actually a mutable sequence type,
 
-   What function lists the methods available for an object?
+    What function lists the methods available for an object?
 
 Calling a *method* is similar to calling a function (it
 takes arguments and returns a value) but the syntax is different. We call
@@ -60,11 +68,11 @@ Instead of the function syntax ``upper(word)``, it uses the
 method syntax ``word.upper()``.
 
 .. activecode:: str-methodUpper
-   :caption: Using the method "upper"
+    :caption: Using the method "upper"
 
-   word = 'banana'
-   new_word = word.upper()
-   print(new_word)
+    word = 'banana'
+    new_word = word.upper()
+    print(new_word)
 
 
 This form of dot notation specifies the name of the method,
@@ -80,11 +88,11 @@ For example, there is a string method named ``find`` that
 searches for the position of one string within another:
 
 .. activecode:: str-methodFind
-   :caption: Using the method "find"
+    :caption: Using the method "find"
 
-   word = 'banana'
-   index = word.find('a')
-   print(index)
+    word = 'banana'
+    index = word.find('a')
+    print(index)
 
 In this example, we invoke ``find`` on ``word`` and
 pass the letter we are looking for as a parameter.
@@ -93,16 +101,16 @@ The ``find`` method can find substrings as well as characters:
 
 .. code-block:: python
 
-   >>> word.find('na')
-   2
+    >>> word.find('na')
+    2
 
 
 It can take as a second argument the index where it should start:
 
 .. code-block:: python
 
-   >>> word.find('na', 3)
-   4
+    >>> word.find('na', 3)
+    4
 
 
 One common task is to remove white space (spaces, tabs, or newlines)
@@ -110,20 +118,20 @@ from the beginning and end of a string using the ``strip``
 method:
 
 .. activecode:: str-stripMethod
-   :caption: Using the method "strip"
+    :caption: Using the method "strip"
 
-   line = '  Here we go  '
-   line.strip()
+    line = '  Here we go  '
+    print(line.strip())
 
 
 Some methods such as *startswith* return boolean values.
 
 .. activecode:: str-startswith
-   :caption: Using the method "startswith"
+    :caption: Using the method "startswith"
 
-   line = 'Have a nice day'
-   line.startswith('Have')
-   line.startswith('h')
+    line = 'Have a nice day'
+    print(line.startswith('Have'))
+    print(line.startswith('h'))
 
 
 You will note that ``startswith`` requires case to match, so
@@ -131,13 +139,13 @@ sometimes we take a line and map it all to lowercase before we do any
 checking using the ``lower`` method.
 
 .. activecode:: str-methodStartsWith
-   :caption: Using the method "startswith" and "lower"
+    :caption: Using the method "startswith" and "lower"
 
-   line = 'Have a nice day'
-   line.startswith('h')
+    line = 'Have a nice day'
+    line.startswith('h')
 
-   print(line.lower())
-   line.lower().startswith('h')
+    print(line.lower())
+    print(line.lower().startswith('h'))
 
 
 In the last example, the method ``lower`` is called and then we
@@ -178,19 +186,19 @@ can make multiple method calls in a single expression.
                 :identifier: strBananaDisc
 
 .. mchoice:: str-method-mc-cheer
-   :practice: T
-   :answer_a: 0
-   :answer_b: 2
-   :answer_c: 3
-   :correct: c
-   :feedback_a: There are definitely e and b characters.
-   :feedback_b: There are 2 e characters but what about b?
-   :feedback_c: Yes, add the number of e characters and the number of b characters.
+    :practice: T
+    :answer_a: 0
+    :answer_b: 2
+    :answer_c: 3
+    :correct: c
+    :feedback_a: There are definitely e and b characters.
+    :feedback_b: There are 2 e characters but what about b?
+    :feedback_c: Yes, add the number of e characters and the number of b characters.
 
 
-   What is printed by the following statements?
+    What is printed by the following statements?
 
-   .. code-block:: python
+    .. code-block:: python
 
       s = "let's go blue!"
       print(s.count("e") + s.count("b"))

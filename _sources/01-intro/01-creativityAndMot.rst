@@ -27,29 +27,29 @@ you gain skill as a programmer and programming feels more creative to
 you, your thoughts may turn toward developing programs for others.
 
 .. mchoice:: intro-creativity-mc-intentions
-  :answer_a: This book intended for professional programmers.
-  :answer_b: This book is intended to create more productive programmers.
-  :answer_c: This book is intended for computers with a single program.
-  :answer_d: All of the above.
-  :answer_e: None of the above.
-  :correct: b
-  :feedback_a: Try again. This book is not for professional programmers.
-  :feedback_b: This book is for learning efficient and productive programming, especially when multiple programs are competing for your attention.
-  :feedback_c: Try again. 
-  :feedback_d: Not quite. Only one of the above is true about this book.
-  :feedback_e: One of the above is correct.
+    :answer_a: This book intended for professional programmers.
+    :answer_b: This book is intended to create more productive programmers.
+    :answer_c: This book is intended for computers with a single program.
+    :answer_d: All of the above.
+    :answer_e: None of the above.
+    :correct: b
+    :feedback_a: Try again. This book is not for professional programmers.
+    :feedback_b: This book is for learning efficient and productive programming, especially when multiple programs are competing for your attention.
+    :feedback_c: Try again.
+    :feedback_d: Not quite. Only one of the above is true about this book.
+    :feedback_e: One of the above is correct.
 
-  Which of the following is true about this book?
+    Which of the following is true about this book?
 
 .. mchoice:: intro-creativity-mc-tf
-  :answer_a: True
-  :answer_b: False
-  :correct: a
-  :feedback_a: You will be both writing programs and using them in this book.
-  :feedback_b: Try again. You will be working on both sides.
+    :answer_a: True
+    :answer_b: False
+    :correct: a
+    :feedback_a: You will be both writing programs and using them in this book.
+    :feedback_b: Try again. You will be working on both sides.
 
-  True or False? You will be both the programmer and the user in this book.
+    True or False? You will be both the programmer and the user in this book.
 
 .. shortanswer:: intro-creativity-sa-motivation
 
-   What is the primary motivation for this book?
+    What is the primary motivation for this book?

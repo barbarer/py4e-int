@@ -1,6 +1,9 @@
-
 Short-circuit evaluation of logical expressions
 -----------------------------------------------
+.. index::
+    single: Short Circuit
+    single: Guardian Pattern
+    single: Guard
 
 When Python is processing a logical expression such as ``x >= 2 and
 (x/y) > 2``, it evaluates the expression from left to right.
@@ -22,19 +25,19 @@ to a clever technique called the *guardian pattern*.
 Consider the following code sequence in the Python interpreter:
 
 .. activecode:: cndtnlShortCircuit
-   :caption: Errors from multiple conditionals
+    :caption: Errors from multiple conditionals
 
-   x = 6
-   y = 2
-   print(x >= 2 and (x/y) > 2)
+    x = 6
+    y = 2
+    print(x >= 2 and (x/y) > 2)
 
-   x = 1
-   y = 0
-   print(x >= 2 and (x/y) > 2)
+    x = 1
+    y = 0
+    print(x >= 2 and (x/y) > 2)
 
-   x = 6
-   y = 0
-   print(x >= 2 and (x/y) > 2)
+    x = 6
+    y = 0
+    print(x >= 2 and (x/y) > 2)
 
 
 The third calculation failed because Python was evaluating
@@ -49,19 +52,19 @@ We can construct the logical expression to strategically place a
 cause an error as follows:
 
 .. activecode:: cndtnlGuardian
-   :caption: Using a guardian pattern with conditionals
+    :caption: Using a guardian pattern with conditionals
 
-   x = 1
-   y = 0
-   print(x >= 2 and y != 0 and (x/y) > 2)
+    x = 1
+    y = 0
+    print(x >= 2 and y != 0 and (x/y) > 2)
 
-   x = 1
-   y = 0
-   print(x >= 2 and y != 0 and (x/y) > 2)
+    x = 1
+    y = 0
+    print(x >= 2 and y != 0 and (x/y) > 2)
 
-   x = 6
-   y = 0
-   print(x >= 2 and (x/y) > 2 and y != 0)
+    x = 6
+    y = 0
+    print(x >= 2 and (x/y) > 2 and y != 0)
 
 
 In the first logical expression, ``x >= 2`` is

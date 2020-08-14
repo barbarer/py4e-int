@@ -1,5 +1,9 @@
 Reading files
 -------------
+.. index::
+    pair: Reading; File
+    single: Counter
+    pair: File; Open
 
 While the *file handle* does not contain the data for the
 file, it is quite easy to construct a ``for`` loop to read
@@ -77,11 +81,11 @@ because each call to ``read`` exhausts the resource:
 
 .. code-block:: python
 
-   >>> fhand = open('mbox-short.txt')
-   >>> print(len(fhand.read()))
-   94626
-   >>> print(len(fhand.read()))
-   0
+    >>> fhand = open('mbox-short.txt')
+    >>> print(len(fhand.read()))
+    94626
+    >>> print(len(fhand.read()))
+    0
 
 
 Remember that this form of the ``open`` function should only be used
