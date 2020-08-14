@@ -19,4 +19,5 @@ Python and Databases
     15-debugging.rst
     15-glossary.rst
     Exercises.rst
+    15-mixedupCode.rst
     15-writeCode.rst

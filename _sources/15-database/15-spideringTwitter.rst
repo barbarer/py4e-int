@@ -19,6 +19,19 @@ restart your data retrieval at the very beginning so we want to store
 data as we retrieve it so our program can start back up and pick up
 where it left off.
 
+.. mchoice:: dbTwitter_MC1
+    :practice: T
+    :answer_a: Spidering programs need to be stopped and restarted frequently.
+    :answer_b: Spidering programs are time consuming to run.
+    :answer_c: Spidering programs cannot be restarted.
+    :correct: a
+    :feedback_a: One of the problems of any kind of spidering program is that it needs to be able to be stopped and restarted many times and you do not want to lose the data that you have retrieved so far.
+    :feedback_b: Spidering programs are usually pretty simple and able to run consecutively, but the timing depends on your data.
+    :feedback_c: Spidering programs can be restarted from where they leave off.
+
+    Which of the following is a problem with spidering programs?
+
+
 We will start by retrieving one person's Twitter friends and their
 statuses, looping through the list of friends, and adding each of the
 friends to a database to be retrieved in the future. After we process
@@ -27,6 +40,16 @@ of the friends of the friend. We do this over and over, picking an
 "unvisited" person, retrieving their friend list, and adding friends we
 have not seen to our list for a future visit.
 
+.. mchoice:: dbTwitter_MC_tf1
+    :practice: T
+    :answer_a: True
+    :answer_b: False
+    :correct: a
+    :feedback_a: By using loops, a spidering program can quickly scroll through each data entry. 
+    :feedback_b: Try again!
+
+    True or False? Spidering programs make user of loops to filter through data.
+
 We also track how many times we have seen a particular friend in the
 database to get some sense of their "popularity".
 
@@ -34,6 +57,16 @@ By storing our list of known accounts and whether we have retrieved the
 account or not, and how popular the account is in a database on the disk
 of the computer, we can stop and restart our program as many times as we
 like.
+
+.. mchoice:: dbTwitter_MC_tf2
+    :practice: T
+    :answer_a: True
+    :answer_b: False
+    :correct: b
+    :feedback_a: Try again!
+    :feedback_b: Using databases can be very helpful, as they retain run data each time a program is stopped and restarted.
+
+    True or False? Programs using databases may be stopped and restarted, but do not retain the data.
 
 This program is a bit complex. It is based on the code from the exercise
 earlier in the book that uses the Twitter API.

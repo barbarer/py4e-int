@@ -18,6 +18,16 @@ section. For more detail on data modeling you can start with:
 
 http://en.wikipedia.org/wiki/Relational_model
 
+.. fillintheblank:: dbModel_fill1
+    :practice: T
+
+    Deciding how to break up your application data into tables and creating the
+    relationships between them is called __________.
+
+    - :[Dd]ata [Mm]odeling: Data modeling is the act of deciding how to break up your application data into multiple tables and establishing the relationships between the tables.
+      :[Dd]ata [Mm]odel: Close! A data model is the design document that shows the tables and their relationships.
+      :.*: Try again.
+
 Let's say for our Twitter spider application, instead of just counting a
 person's friends, we wanted to keep a list of all of the incoming
 relationships so we could find a list of everyone who is following a
@@ -51,6 +61,16 @@ should never put the same string data in the database more than once. If
 we need the data more than once, we create a numeric
 *key* for the data and reference the actual data using
 this key.
+
+.. mchoice:: dbModel_MC_tf
+    :practice: T
+    :answer_a: True
+    :answer_b: False
+    :correct: b
+    :feedback_a: Try again!
+    :feedback_b: Database normalization says that we should never put the same string data into a database more than once.
+
+    True or False? Database normalization is the practice of inserting the same string data into a database more than once.
 
 In practical terms, a string takes up a lot more space than an integer
 on the disk and in the memory of our computer, and takes more processor
@@ -107,3 +127,17 @@ In essence, in creating this ``Follows`` table, we are
 modelling a "relationship" where one person "follows" someone else and
 representing it with a pair of numbers indicating that (a) the people
 are connected and (b) the direction of the relationship.
+
+.. mchoice:: dbModel_MC_clause
+    :practice: T
+    :answer_a: SINGULAR
+    :answer_b: UNIQUE
+    :answer_c: IS DIFFERENT
+    :answer_d: INDIVIDUAL
+    :correct: b
+    :feedback_a: This is not a SQL clause.
+    :feedback_b: UNIQUE asks the database to enforce that each entry is unique when it is added.
+    :feedback_c: This is not a SQL clause.
+    :feedback_d: This is not a SQL clause. 
+
+    Which of the following SQL clauses asks the database to keep each identifier that is unique?
