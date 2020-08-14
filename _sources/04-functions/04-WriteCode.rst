@@ -9,11 +9,11 @@ Write Code Questions
                 :practice: T
                 :autograde: unittest
 
-                Fix the errors so the following code runs and returns the perimeter of a rectangle.
+                Fix the 4 errors so the following code runs and returns the perimeter of a rectangle.
                 ~~~~
                 def recPerimeter(length, width)
                 perimeter = 2 * (length + width)
-                Return recPerimeter
+                    Return recPerimeter
 
                 ====
                 from unittest.gui import TestCaseGui
@@ -38,39 +38,26 @@ Write Code Questions
                     return perimeter
 
 #.
-    .. tabbed:: funct_ex_square
+    .. activecode:: funct_ex_squareq
+        :practice: T
+        :autograde: unittest
 
-        .. tab:: Question
-
-            .. activecode:: funct_ex_squareq
-                :practice: T
-                :autograde: unittest
-
-                Fix the errors so the following code runs and returns the area of a square.
-                ~~~~
-                Def squareArea(sideLength)
-                    area = length * length
-                    return squareArea
+        Fix the 5 errors so the following code runs and returns the area of a square.
+        ~~~~
+        Def squareArea(sideLength)
+            area = length * length
+            return squareArea
 
 
-                ====
-                from unittest.gui import TestCaseGui
-                class myTests(TestCaseGui):
+        ====
+        from unittest.gui import TestCaseGui
+        class myTests(TestCaseGui):
 
-                    def testOne(self):
-                        self.assertEqual(squareArea(10),100,"Tested squareArea on input 10")
-                        self.assertEqual(squareArea(23),529,"Tested squareArea on input 23")
+            def testOne(self):
+                self.assertEqual(squareArea(10),100,"Tested squareArea on input 10")
+                self.assertEqual(squareArea(23),529,"Tested squareArea on input 23")
 
-                myTests().main()
-
-        .. tab:: Answer
-
-            .. activecode:: funct_ex_squarea
-                :optional:
-
-                def squareArea(sideLength):
-                    area = sideLength * sideLength
-                    return area
+        myTests().main()
 
 #.
     .. tabbed:: funct_ex_triangle
@@ -112,45 +99,32 @@ Write Code Questions
                 print(areaTriangle(2, 6))
 
 #.
-    .. tabbed:: funct_ex_trip
+    .. activecode:: funct_ex_tripq
+        :practice: T
+        :autograde: unittest
 
-        .. tab:: Question
+        Change the code below to create a function ``tripCost`` that calculates the cost of a trip.
+        It should take the ``miles``, ``milesPerGallon``, and ``pricePerGallon`` as parameters and
+        should return the cost of the trip.
+        ~~~~
+        miles = 500
+        milesPerGallon = 26
+        numGallons = miles / milesPerGallon
+        pricePerGallon = 3.45
+        total = numGallons * pricePerGallon
+        print(total)
 
-            .. activecode:: funct_ex_tripq
-                :practice: T
-                :autograde: unittest
+        ====
+        from unittest.gui import TestCaseGui
+        class myTests(TestCaseGui):
 
-                Change the code below to create a function ``tripCost`` that calculates the cost of a trip.
-                It should take the ``miles``, ``milesPerGallon``, and ``pricePerGallon`` as parameters and
-                should return the cost of the trip.
-                ~~~~
-                miles = 500
-                milesPerGallon = 26
-                numGallons = miles / milesPerGallon
-                pricePerGallon = 3.45
-                total = numGallons * pricePerGallon
-                print(total)
+            def testOne(self):
+                self.assertEqual(tripCost(100, 25, 2.24),8.96,"Tested tripCost on inputs 100, 25, and 2.24")
+                self.assertEqual(tripCost(250, 20, 3.01),37.625,"Tested tripCost on inputs 250, 20, and 3.01")
 
-                ====
-                from unittest.gui import TestCaseGui
-                class myTests(TestCaseGui):
-
-                    def testOne(self):
-                        self.assertEqual(tripCost(100, 25, 2.24),8.96,"Tested tripCost on inputs 100, 25, and 2.24")
-                        self.assertEqual(tripCost(250, 20, 3.01),37.625,"Tested tripCost on inputs 250, 20, and 3.01")
-
-                myTests().main()
+        myTests().main()
 
 
-        .. tab:: Answer
-
-            .. activecode:: funct_ex_tripa
-                :optional:
-
-                def tripCost(miles, milesPerGallon, pricePerGallon):
-                    numGallons = miles / milesPerGallon
-                    cost = numGallons * pricePerGallon
-                    return cost
 
 #.
     .. tabbed:: funct_ex_name
@@ -161,13 +135,14 @@ Write Code Questions
                 :practice: T
                 :autograde: unittest
 
-                Fix the errors so it prints "My name is John and I am 18 years old". The ``nameAndAge``
-                function should return a string.
+                Fix the errors on line 2 so the function ``nameAndAge`` returns
+                the string "My name is **name** and I am **age** years old." The function
+                call below should print "My name is John and I am 18 years old."
                 ~~~~
                 def nameAndAge(nameString, ageInt):
-                    return(My name is "nameString" and I am + "str(ageInt)" + years old)
+                    return(My name is "nameString" and I am + "str(ageInt)" + years old.)
 
-                print(nameAndAge(18, "John"))
+                print(nameAndAge("John", 18))
 
                 ====
                 from unittest.gui import TestCaseGui
@@ -175,7 +150,7 @@ Write Code Questions
                 class myTests(TestCaseGui):
 
                     def testOne(self):
-                        self.assertEqual(nameAndAge("John", 18),"My name is John and I am 18 years old","Checks if the returned strings are equal.")
+                        self.assertEqual(nameAndAge("John", 18),"My name is John and I am 18 years old.","Checks if the returned strings are equal.")
 
                 myTests().main()
 
@@ -189,6 +164,42 @@ Write Code Questions
                     return("My name is "+ nameString + " and I am " + str(ageInt) + " years old")
 
                 print(nameAndAge("John", 18))
+
+#.
+    .. activecode:: funct_ex_gradeq
+        :practice: T
+        :autograde: unittest
+
+        Rewrite the grade program from the previous chapter using a function called ``computegrade``
+        that takes a score as its parameter and returns a grade as a string. If someone enters an
+        invalid score, return 'Bad score'.
+
+        .. code-block:: python
+
+            Score    Grade
+            >= 0.9     A
+            >= 0.8     B
+            >= 0.7     C
+            >= 0.6     D
+            < 0.6      F
+        ~~~~
+        def computegrade(r):
+            # your code here
+
+        ====
+        from unittest.gui import TestCaseGui
+
+        class myTests(TestCaseGui):
+
+            def testOne(self):
+                self.assertEqual(computegrade(.95),'A',"Tested input: computegrade(.95)")
+                self.assertEqual(computegrade('perfect'),'Bad score',"computegrade('perfect')")
+                self.assertEqual(computegrade(10.0),'Bad score',"Tested input: computegrade(10.0)")
+                self.assertEqual(computegrade(.75),'C',"Tested input: computegrade(.75)")
+                self.assertEqual(computegrade(.5),'F',"Tested input: computegrade(.5)")
+
+
+        myTests().main()
 
 #.
     .. tabbed:: funct_ex_sum
@@ -230,6 +241,30 @@ Write Code Questions
                     return result
 
 #.
+    .. activecode:: funct_ex_addq
+        :practice: T
+        :autograde: unittest
+
+        Rewrite the function ``sumTo(n)`` that returns the sum of all integer
+        numbers up to and including `n`. This time use the accumulator pattern.
+        ~~~~
+        def sumTo(n):
+            # your code here
+
+        ====
+        from unittest.gui import TestCaseGui
+        class myTests(TestCaseGui):
+
+            def testOne(self):
+                self.assertEqual(sumTo(15),120,"Tested sumTo on input 15")
+                self.assertEqual(sumTo(0),0,"Tested sumTo on input 0")
+                self.assertEqual(sumTo(25),325,"Tested sumTo on input 25")
+                self.assertEqual(sumTo(7),28,"Tested sumTo on input 7")
+
+        myTests().main()
+
+
+#.
    .. tabbed:: funct_ex_circle
 
         .. tab:: Question
@@ -238,8 +273,8 @@ Write Code Questions
                 :practice: T
                 :autograde: unittest
 
-                Write a function `areaOfCircle(r)` which returns the area of a circle of radius `r`.
-                Make sure you use the math module in your solution.
+                Write a function ``areaOfCircle(r)``` which returns the area of a circle of radius `r`.
+                Make sure you import the math module in your solution.
                 ~~~~
                 def areaOfCircle(r):
                     # your code here
@@ -270,154 +305,32 @@ Write Code Questions
                     a = r**2 * math.pi
                     return a
 
-#.
-   .. tabbed:: funct_ex_grade
-
-        .. tab:: Question
-
-            .. activecode:: funct_ex_gradeq
-                :practice: T
-                :autograde: unittest
-
-                Rewrite the grade program from the previous chapter using a function called ``computegrade``
-                that takes a score as its parameter and returns a grade as a string. If someone enters an
-                invalid score, return 'Bad score'.
-
-                .. code-block:: python
-
-                    Score    Grade
-                    >= 0.9     A
-                    >= 0.8     B
-                    >= 0.7     C
-                    >= 0.6     D
-                    < 0.6      F
-                ~~~~
-                def computegrade(r):
-                    # your code here
-
-                ====
-                from unittest.gui import TestCaseGui
-
-                class myTests(TestCaseGui):
-
-                    def testOne(self):
-                        self.assertEqual(computegrade(.95),'A',"Tested input: computegrade(.95)")
-                        self.assertEqual(computegrade('perfect'),'Bad score',"computegrade('perfect')")
-                        self.assertEqual(computegrade(10.0),'Bad score',"Tested input: computegrade(10.0)")
-                        self.assertEqual(computegrade(.75),'C',"Tested input: computegrade(.75)")
-                        self.assertEqual(computegrade(.5),'F',"Tested input: computegrade(.5)")
-
-
-                myTests().main()
-
-
-        .. tab:: Answer
-
-            .. activecode:: funct_ex_gradea
-                :optional:
-
-                def computegrade(r):
-                    if ((type(r) == float) and r < 1.0):
-                        if (r >= .9):
-                            return('A')
-                        elif (r >= .8):
-                            return('B')
-                        elif (r >= .7):
-                            return('C')
-                        elif (r >= .6):
-                            return('D')
-                        elif (r < .6):
-                            return('F')
-                        else:
-                            return('Bad score')
-                    return('Bad score')
 
 #.
-   .. tabbed:: funct_ex_add
+    .. activecode:: funct_ex_weekq
+        :practice: T
+        :autograde: unittest
 
-        .. tab:: Question
+        Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, …6=Sat, and a boolean indicating
+        if we are on vacation, return a string of the form “7:00” indicating when the alarm clock
+        should ring. Weekdays, the alarm should be “7:00” and on the weekend it should be “10:00”.
+        Unless we are on vacation – then on weekdays it should be “10:00” and weekends it should be
+        “off”.
+        ~~~~
+        def alarm_clock(day, vacation):
+            # your code here
 
-            .. activecode:: funct_ex_addq
-                :practice: T
-                :autograde: unittest
+        ====
+        from unittest.gui import TestCaseGui
+        class myTests(TestCaseGui):
 
-                Rewrite the function ``sumTo(n)`` that returns the sum of all integer numbers up to and
-                including `n`. This time use the accumulator pattern.
-                ~~~~
-                def sumTo(n):
-                    # your code here
+            def testOne(self):
+                self.assertEqual(alarm_clock(1, False),'7:00',"Tested alarm_clock on input 1 and False")
+                self.assertEqual(alarm_clock(5, False),'7:00',"Tested alarm_clock on input 5 and False")
+                self.assertEqual(alarm_clock(0, False),'10:00',"Tested alarm_clock on input 0 and False")
+                self.assertEqual(alarm_clock(6, False),'10:00',"Tested alarm_clock on input 6 and False")
+                self.assertEqual(alarm_clock(0, True),'off',"Tested alarm_clock on input 0 and True")
+                self.assertEqual(alarm_clock(6, True),'off',"Tested alarm_clock on input 6 and True")
+                self.assertEqual(alarm_clock(1, True),'10:00',"Tested alarm_clock on input 1 and True")
 
-                ====
-                from unittest.gui import TestCaseGui
-                class myTests(TestCaseGui):
-
-                    def testOne(self):
-                        self.assertEqual(sumTo(15),120,"Tested sumTo on input 15")
-                        self.assertEqual(sumTo(0),0,"Tested sumTo on input 0")
-                        self.assertEqual(sumTo(25),325,"Tested sumTo on input 25")
-                        self.assertEqual(sumTo(7),28,"Tested sumTo on input 7")
-
-                myTests().main()
-
-
-        .. tab:: Answer
-
-            .. activecode:: funct_ex_adda
-                :optional:
-
-                def sumTo(n):
-                    sum = 0
-                    for i in range(1,n+1):
-                        sum = sum + i
-                    return sum
-
-#.
-    .. tabbed:: funct_ex_week
-
-        .. tab:: Question
-
-            .. activecode:: funct_ex_weekq
-                :practice: T
-                :autograde: unittest
-
-                Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, …6=Sat, and a boolean indicating
-                if we are on vacation, return a string of the form “7:00” indicating when the alarm clock
-                should ring. Weekdays, the alarm should be “7:00” and on the weekend it should be “10:00”.
-                Unless we are on vacation – then on weekdays it should be “10:00” and weekends it should be
-                “off”.
-                ~~~~
-                def alarm_clock(day, vacation):
-                    # your code here
-
-                ====
-                from unittest.gui import TestCaseGui
-                class myTests(TestCaseGui):
-
-                    def testOne(self):
-                        self.assertEqual(alarm_clock(1, False),'7:00',"Tested alarm_clock on input 1 and False")
-                        self.assertEqual(alarm_clock(5, False),'7:00',"Tested alarm_clock on input 5 and False")
-                        self.assertEqual(alarm_clock(0, False),'10:00',"Tested alarm_clock on input 0 and False")
-                        self.assertEqual(alarm_clock(6, False),'10:00',"Tested alarm_clock on input 6 and False")
-                        self.assertEqual(alarm_clock(0, True),'off',"Tested alarm_clock on input 0 and True")
-                        self.assertEqual(alarm_clock(6, True),'off',"Tested alarm_clock on input 6 and True")
-                        self.assertEqual(alarm_clock(1, True),'10:00',"Tested alarm_clock on input 1 and True")
-
-                myTests().main()
-
-
-        .. tab:: Answer
-
-            .. activecode:: funct_ex_weeka
-                :optional:
-
-                def alarm_clock(day, vacation):
-                    if (vacation):
-                        if (day > 0 and day < 6):
-                            return "10:00"
-                        else:
-                            return "off"
-                    else:
-                        if (day > 0 and day < 6):
-                            return "7:00"
-                        else:
-                            return "10:00"
+        myTests().main()

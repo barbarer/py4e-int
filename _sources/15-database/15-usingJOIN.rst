@@ -28,6 +28,14 @@ Take the rows from ``Follows`` and append the row from
 ``People`` where the field ``from_id`` in ``Follows`` is
 the same the ``id`` value in the ``People`` table.
 
+.. fillintheblank:: dbJoin_fill1
+    :practice: T
+
+    Which SQL clause that connects two tables?
+
+    - :[Jj][Oo][Ii][Nn]: JOIN connects two tables based on rows selected to join them on.
+      :.*: Try again!
+
 **Connecting Tables Using JOIN**
 
 The result of the JOIN is to create extra-long "metarows" which have
@@ -36,6 +44,17 @@ both the fields from ``People`` and the matching fields from
 ``id`` field from ``People`` and the ``from_id`` from
 ``People``, then JOIN creates a metarow for *each* of the
 matching pairs of rows, duplicating data as needed.
+
+.. mchoice:: dbJoin_MC_metarow
+    :practice: T
+    :answer_a: True
+    :answer_b: False
+    :correct: b
+    :feedback_a: Try again!
+    :feedback_b: A metarow includes all data in the matching fields, regardless of how many matches there are.
+
+    True or False? A "metarow" only contains the first set of matching data.
+
 
 The following code demonstrates the data that we will have in the
 database after the multi-table Twitter spider program (above) has been
@@ -120,3 +139,13 @@ from the ``Follows`` table followed by columns three through
 five from the ``People`` table. You can also see that the
 second column (``Follows.to_id``) matches the third column
 (``People.id``) in each of the joined-up "metarows".
+
+.. mchoice:: dbJoin_MC_titles
+    :practice: T
+    :answer_a: True
+    :answer_b: False
+    :correct: a
+    :feedback_a: You can absolutely join two tables on rows that have different titles. For example, you can join on "Users" and "Followers", if you are using Twitter data.
+    :feedback_b: Try again!
+
+    True or False? When using JOIN on two tables, you can join on rows that have different titles.

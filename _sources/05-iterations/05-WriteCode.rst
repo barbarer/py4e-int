@@ -46,44 +46,17 @@ Write Code Questions
 
                 countdown()
 
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: itrCountdownDisc
-
-
-
 #.
-    .. tabbed:: itr-ex-100Loop
+    .. activecode:: itr-ex-100Loopq
+        :practice: T
 
-        .. tab:: Question
-
-            The following code will loop too many times. Make change one line that will to make it loop only 5 times.
-
-            .. activecode:: itr-ex-100Loopq
-                :practice: T
-
-                x = 5
-                while x < 100:
-                    print(x)
-                    x = x + 1
-
-        .. tab:: Answer
-
-            .. activecode:: itr-ex-100Loopa
-
-                x = 5
-                while x > 0:
-                    print(x)
-                    x = x - 1
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: itr100LoopDisc
+        The following code will loop too many times. Change one line that
+        will to make it loop only 5 times.
+        ~~~~
+        x = 5
+        while x < 100:
+            print(x)
+            x = x + 1
 
 
 #.
@@ -126,59 +99,28 @@ Write Code Questions
                 print(output)
 
 
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: itrCountDisc
-
-
 #.
-    .. tabbed:: itr-ex-allValues
+    .. activecode:: itr-ex-allValuesq
+        :practice: T
+        :autograde: unittest
 
-        .. tab:: Question
+        Finish lines 1 and 5 so that the following code correct prints all the values from -5 to -1.
+        ~~~~
+        output =
+        x = -5
+        while x < 0:
+            output = output + str(x) + " "
+            x =
+        print(output)
 
-            Finish lines 1 and 5 so that the following code correct prints all the values from -5 to -1.
+        ====
+        from unittest.gui import TestCaseGui
+        class myTests(TestCaseGui):
 
-            .. activecode:: itr-ex-allValuesq
-                :practice: T
-                :autograde: unittest
+            def testOne(self):
+                self.assertEqual(output,"-5 -4 -3 -2 -1 ")
 
-                output =
-                x = -5
-                while x < 0:
-                    output = output + str(x) + " "
-                    x =
-                print(output)
-
-                ====
-                from unittest.gui import TestCaseGui
-                class myTests(TestCaseGui):
-
-                    def testOne(self):
-                        self.assertEqual(output,"-5 -4 -3 -2 -1 ")
-
-                myTests().main()
-
-        .. tab:: Answer
-
-            .. activecode:: itr-ex-allValuesa
-
-                output = ""
-                x = -5
-                while x < 0:
-                    output = output + str(x) + " "
-                    x = x + 1
-                print(output)
-
-
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: itrAllValuesDisc
+        myTests().main()
 
 
 #.
@@ -219,52 +161,21 @@ Write Code Questions
                     i = i + 1
                 print(x)
 
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: itrSixDisc
-
-
 #.
-    .. tabbed:: itr-ex-root
+    .. activecode::  itr-ex-rootq
+        :practice: T
 
-        .. tab:: Question
-
-            The code below is supposed to print an estimate of the square root.  But, the indention is wrong on 4 lines.  Fix it.
-
-            .. activecode::  itr-ex-rootq
-                :practice: T
-
-                target = 6
-                    guess = 2
+        The code below is supposed to print an estimate of the square root. But,
+        the indention is wrong on 4 lines. Fix these errors to find the estimate.
+        ~~~~
+        target = 6
+            guess = 2
+        guessSquared = guess * guess
+        while abs(target-guessSquared) > 0.01:
+            closer = target / guess
+        guess = (guess + closer) / 2.0
                 guessSquared = guess * guess
-                while abs(target-guessSquared) > 0.01:
-                    closer = target / guess
-                guess = (guess + closer) / 2.0
-                        guessSquared = guess * guess
-                    print("Square root of", target,"is", guess)
-
-
-        .. tab:: Answer
-
-            .. activecode:: itr-ex-roota
-
-                target = 6
-                guess = 2
-                guessSquared = guess * guess
-                while abs(target-guessSquared) > 0.01:
-                    closer = target / guess
-                    guess = (guess + closer) / 2.0
-                    guessSquared = guess * guess
-                    print("Square root of", target,"is", guess)
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: intRootDisc
+            print("Square root of", target, "is", guess)
 
 
 #.
@@ -272,7 +183,9 @@ Write Code Questions
 
         .. tab:: Question
 
-            The function currently takes a start and stop argument and uses a for loop to find the sum of all the numbers between them (inclusive). Change the for loop to a while loop while still using the parameters.
+            The function currently takes a start and stop argument and uses a for
+            loop to find the sum of all the numbers between them (inclusive). Change
+            the for loop to a while loop while still using the parameters.
 
             .. activecode:: int-ex-inclusiveq
                 :practice: T
@@ -313,83 +226,65 @@ Write Code Questions
 
                 print(sumFunc(1,10))
 
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: intInclusiveDisc
-
-
 #.
-    .. tabbed:: int-ex-times
+    .. activecode::  int-ex-timesq
+        :practice: T
+        :autograde: unittest
 
-        .. tab:: Question
-
-            The program below is supposed to print the times tables for 1 to 3, but there are 5 errors.  Fix the errors.
-
-            .. activecode::  int-ex-timesq
-                :practice: T
-                :autograde: unittest
-
-                for x in range(1,3):
-                    for y in range(1,10)
-                        print(str(x) + " * " str(y) + " = " x*y)
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: intTimesDisc
+        The program below is supposed to print the times tables for 1 to 3, but
+        there are 5 errors.  Fix the errors.
+        ~~~~
+        for x in range(1,3):
+            for y in range(1,10)
+                print(str(x) + " * " str(y) + " = " x*y)
 
 #.
     .. tabbed:: int-ex-timesWhile
 
         .. tab:: Question
 
-            Rewrite the code that prints the times tables for 1 to 3 using a while loop and a for loop instead of two for loops.
-
+            The following code prints the times tables for 1 to 3 using two for loops.
+            Rewrite the program to use a while and a for loop instead.
+            
             .. activecode::  int-ex-timesWhileq
                 :nocodelens:
 
                 for x in range(1,4):
-                     for y in range(1,11):
-                         print(str(x) + " * " + str(y) + " = " + str(x*y))
+                    for y in range(1,11):
+                        print(str(x) + " * " + str(y) + " = " + str(x*y))
+        .. tab:: Answer
 
-        .. tab:: Discussion
+            .. activecode:: int-ex-timesWhileA
+                :optional:
 
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: intTimesWhileDisc
+                # There are a few different ways this can be done
+                # One is shown here
+
+                for x in range(1,4):
+                    y = 1
+                    while y < 11:
+                        print(str(x) + " * " + str(y) + " = " + str(x*y))
+                        y += 1
+
 
 #.
-    .. tabbed:: int-ex-while
+    .. activecode:: int-ex-whileq
+        :practice: T
+        :autograde: unittest
 
-        .. tab:: Question
+        Rewrite the following code to use a while loop instead of a for loop.
+        ~~~~
+        product = 1  # Start out with nothing
+        numbers = range(1,11)
+        for number in numbers:
+            product = product * number
+        print(product)
 
-            Rewrite the following code to use a while loop instead of a for loop.
+        ====
+        from unittest.gui import TestCaseGui
+        class myTests(TestCaseGui):
 
-            .. activecode:: int-ex-whileq
-                :practice: T
-                :autograde: unittest
+            def testOne(self):
+                self.assertEqual(product, 3628800)
 
-                product = 1  # Start out with nothing
-                numbers = range(1,11)
-                for number in numbers:
-                    product = product * number
-                print(product)
-
-                ====
-                from unittest.gui import TestCaseGui
-                class myTests(TestCaseGui):
-
-                    def testOne(self):
-                        self.assertEqual(product, 3628800)
-
-                myTests().main()
-
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: interactivepython
-                :identifier: intTimesDisc
+        myTests().main()
