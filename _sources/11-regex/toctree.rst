@@ -13,6 +13,6 @@ Regex
    11-bonussection.rst
    11-debugging.rst
    11-glossary.rst
-   11-Exercises.rst
+   Exercises.rst
    11-mixedupcode.rst
    11-writecode.rst

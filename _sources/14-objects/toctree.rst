@@ -16,7 +16,6 @@ Object-oriented programming
     14-inheritance.rst
     14-summary.rst
     14-glossary.rst
-    14-exercises.rst
+    Exercises.rst
     14-mixedupcode.rst
     14-writecode.rst
-

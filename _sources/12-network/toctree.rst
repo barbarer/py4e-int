@@ -3,7 +3,7 @@ Network
 
 .. toctree::
     :maxdepth: 3
-    
+
     12-networkedprograms.rst
     12-http.rst
     12-simplestwebbrowser.rst
@@ -15,4 +15,4 @@ Network
     12-parsinghtmlusingbeautifulsoup.rst
     12-bonusforunixlinux.rst
     12-glossary.rst
-    12-exercises.rst
+    Exercises.rst
