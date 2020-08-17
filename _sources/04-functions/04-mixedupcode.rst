@@ -57,7 +57,7 @@ Mixed-up Code Questions
     =====
         a = square(x)
         b = square(y)
-	      c = square(z)
+        c = square(z)
     =====
         return a + b + c
 
@@ -66,10 +66,65 @@ Mixed-up Code Questions
     :practice: T
     :adaptive:
 
-    The following code should create the function get_avg_drop_lowest, that takes a list of numbers as its
-    parameter. The function will calculate the sum of the numbers, identify the smallest number, and the
-    amount of numbers in the list; then return the average of the list, dropping the lowest number if the
-    list has multiple numbers. Watch out for extra pieces of code and indentation!
+    Create a function called add_odd, which will add up the odd numbers from 1
+    (inclusive) to num (inclusive). The function should return the_sum. For
+    example, add_odd(3) returns 4 since 1 + 3 = 4.
+    Watch out for extra pieces of code and indentation!
+    -----
+    def add_odd(num):
+    =====
+        the_sum = 0
+    =====
+        the_sum = 1     #paired
+    =====
+        for counter in range(num + 1):
+    =====
+        for counter in range(num): #paired
+    =====
+            if counter % 2 == 1:
+    =====
+            if counter % 2 == 0: #paired
+    =====
+                the_sum += counter
+    =====
+        return the_sum
+
+.. parsonsprob:: functEx5muc
+    :numbered: left
+    :practice: T
+    :adaptive:
+
+    Create a function called addByThree, which will add three to the total
+    num times. The function should return the total. for
+    example, addByThree(2) returns 6 (3 + 3) and addByThree(3) returns 9
+    (3 + 3 + 3). Watch out for
+    extra pieces of code and indentation!
+    -----
+    def addByThree(num):
+    =====
+        total = 0
+    =====
+        total = 1     #paired
+    =====
+        for counter in range(num):
+    =====
+        for counter in range(thesum): #paired
+    =====
+            total = total + 3
+    =====
+            total = total + three #paired
+    =====
+        return total
+
+.. parsonsprob:: functEx6muc
+    :numbered: left
+    :practice: T
+    :adaptive:
+
+    Create the function get_avg_drop_lowest to return the average of a list
+    of numbers, but drop the lowest value. However,
+    if the list only has one value then return that.  For example, get_avg_drop_lowest([90]) returns 90 and
+    get_avg_drop_lowest([90, 10]) also returns 90.
     -----
     def get_avg_drop_lowest(num_list):
     =====
@@ -91,7 +146,7 @@ Mixed-up Code Questions
     =====
             return (total - lowest) / (num + 1) #paired
 
-.. parsonsprob:: functEx5muc
+.. parsonsprob:: functEx7muc
     :numbered: left
     :practice: T
     :adaptive:
@@ -104,13 +159,13 @@ Mixed-up Code Questions
     -----
     def get_middle(str):
     =====
-    Def get_middle(str): #distractor
+    Def get_middle(str): #paired
     =====
         num_chars = len(str)
     =====
         mid = num_chars // 2
     =====
-        mid = num_chars / 2 #distractor
+        mid = num_chars / 2 #paired
     =====
         if num_chars < 3:
     =====
@@ -128,16 +183,18 @@ Mixed-up Code Questions
     =====
             return str[mid:mid+2] #paired
 
-.. parsonsprob:: functEx6muc
+.. parsonsprob:: functEx8muc
     :numbered: left
     :practice: T
     :adaptive:
 
-    The following code creates the function caught_speeding, which calculates the ticket you get if
-    you are caught speeding. If you are driving 60 mph or under you do not get a ticket and the function
-    returns 0, if you are driving between 61 and 80 mph, you get a ticket and the function returns 1. If you
-    are driving more than 80 mph, you get a larger ticket and the function returns 2. Luckily, if it is your
-    birthday, you can drive 5 mph above the speed limit. There are two extra code blocks and lots of
+    You are driving a little too fast, and a police officer stops you. Place
+    the code blocks to
+    compute the result, encoded as an int value: 0=no ticket, 1=small ticket,
+    2=big ticket. If speed is 60 or less, the result is 0. If speed is between 61 and
+    80 inclusive, the result is 1. If speed is 81 or more, the result is 2. Unless it is
+    your birthday -- on that day, your speed can be 5 higher in all cases.
+    There are two extra code blocks and lots of
     indentation to watch out for!
     -----
     def caught_speeding(speed, is_birthday):
@@ -174,101 +231,120 @@ Mixed-up Code Questions
     =====
                 return 2
 
-.. parsonsprob:: functEx7muc
-    :numbered: left
-    :practice: T
-    :adaptive:
-
-    Create a function called addByThree, which will add three to the total for each number within the range of
-    the parameter (num) starting from 0. The function should return the total. Watch out for
-    extra pieces of code and indentation!
-    -----
-    def addByThree(num):
-    =====
-        total = 0
-    =====
-        total = 1     #paired
-    =====
-        for counter in range(num):
-    =====
-        for counter in range(thesum): #distractor
-    =====
-            total = total + 3
-    =====
-            total = total + three #distractor
-    =====
-        return total
-
-.. parsonsprob:: functEx8muc
-    :numbered: left
-    :practice: T
-    :adaptive:
-
-    Create a function called add_odd, which will add up odd numbers within the range of the parameter (num)
-    starting from 1. The function should return thesum. Watch out for extra pieces of code and indentation!
-    -----
-    def add_odd(num):
-    =====
-        thesum = 0
-        oddnumber = 1
-    =====
-        thesum = 1     #paired
-        oddnumber = 1
-    =====
-        for counter in range(num):
-    =====
-        for counter in range(thesum): #distractor
-    =====
-            thesum = thesum + oddnumber
-            oddnumber = oddnumber + 2
-    =====
-            thesum = thesum + oddnumber #distractor
-            oddnumber = oddnumber + 1
-    =====
-        return thesum
 
 .. parsonsprob:: functEx9muc
+   :numbered: left
+   :adaptive:
+
+   Place the code blocks below to return 'too low' if the guess is less
+   than the passed target, 'correct' if they are equal, and 'too high' if the guess
+   is greater than the passed target.  For example, check_guess(5,7) returns
+   'too low', check_guess(7,7) returns 'correct', and check_guess(9,7) returns
+   'too high'. There are three extra blocks that are not needed in a correct solution.
+   -----
+   def check_guess(guess, target):
+   =====
+   def check_guess(guess, target: #paired
+   =====
+       if guess < target:
+   =====
+           return 'too low'
+   =====
+            return "too low' #paired
+   =====
+       elif guess == target:
+   =====
+           return 'correct'
+   =====
+           return 'correct #paired
+   =====
+       else:
+   =====
+           return 'too high'
+
+.. parsonsprob:: functEx10muc
+   :numbered: left
+   :adaptive:
+
+   Put the code blocks below in order to solve the following problem.  There are
+   two extra blocks that are not needed in a correct solution.
+   Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat, and a
+   boolean indicating if we are on vacation, return a string of the form "7:00"
+   indicating when the alarm clock should ring. If we are on vacation and it is
+   a weekend (0 - Saturday or 6 - Sunday) it should return "off" and otherwise return
+   "10:00". If we are not on vacation and it is a weekend it should return
+   "10:00" and otherwise "7:00"
+   -----
+   def alarm_clock(day, vacation):
+   =====
+   def alarm_clock(day, vacation)  #paired
+   =====
+       if vacation:
+   =====
+           if day == 0 or day == 6:
+   =====
+           if (day == 0) || (day == 6): #paired
+   =====
+               return 'off'
+   =====
+           else:
+   =====
+               return '10:00'
+   =====
+       else:
+   =====
+           if day == 0 or day == 6:
+   =====
+               return '10:00'
+   =====
+           else:
+   =====
+               return '7:00'
+
+
+
+.. parsonsprob:: functEx11muc
     :numbered: left
     :practice: T
     :adaptive:
 
-    The following code should create two functions. First create a function called squareit, which
-    squares the parameter n and returns the result. Then, create a function called cubeit which cubes
+    The following code should create two functions. First create a function called square_it, which
+    squares the parameter n and returns the result. Then, create a function called cube_it which cubes
     the parameter n and returns the result. Then ask the user to input a number. Lastly, print out
     the user's input squared and then cubed. Watch out for extra code blocks and indentation! There
     are lots of extra code blocks to look out for, and keep indentation in mind!
     -----
-    def squareit(n):
+    def square_it(n):
     =====
-    def squareit(n) #distractor
+    def square_it(n) #distractor
     =====
         return n * n
     =====
         return n * 2 #distractor
     =====
-    def cubeit(n):
+    def cube_it(n):
     =====
-    def cubeit(n) #distractor
+    def cube_it(n) #distractor
     =====
         return n*n*n
     =====
         return n*n*3 #distractor
     =====
-    anum = int(input("Please enter a number"))
+    a_num = int(input("Please enter a number"))
     =====
-    anum = int(input(Please enter a number)) #distractor
+    a_num = int(input(Please enter a number)) #distractor
     =====
-    anum = str(input("Please enter a number")) #distractor
+    a_num = str(input("Please enter a number")) #distractor
     =====
-    print(squareit(anum))
+    print(square_it(anum))
     =====
-    print(squareit("anum")) #distractor
+    print(square_it("anum")) #distractor
     =====
-    print(cubeit(anum))
+    print(cube_it(anum))
     =====
-    print(cubeit("anum")) #distractor
+    print(cube_it("anum")) #distractor
 
-.. parsonsprob:: functEx10muc
+.. parsonsprob:: functEx12muc
     :numbered: left
     :practice: T
     :adaptive:

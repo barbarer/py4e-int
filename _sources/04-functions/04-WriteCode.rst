@@ -305,17 +305,139 @@ Write Code Questions
                     a = r**2 * math.pi
                     return a
 
+#.
+    .. activecode:: funct_avg_drop_lowest
+       :autograde: unittest
+       :nocodelens:
+
+       Finish the function to return the average of a list of numbers, but drop the lowest value. However,
+       if the list only has one value then return that.  For example, get_avg_drop_lowest([90]) returns 90 and
+       get_avg_drop_lowest([90, 10]) also returns 90.
+       ~~~~
+       def get_avg_drop_lowest(num_list):
+
+       ====
+       from unittest.gui import TestCaseGui
+
+       class myTests(TestCaseGui):
+
+           def testOne(self):
+               self.assertEqual(get_avg_drop_lowest([90]), 90, "get_avg_drop_lowest([90])")
+               self.assertEqual(get_avg_drop_lowest([90, 10]), 90, "get_avg_drop_lowest([90, 10])")
+               self.assertEqual(get_avg_drop_lowest([20, -20, 20]), 20, "get_avg_drop_lowest([20, -20, 20])")
+               self.assertEqual(get_avg_drop_lowest([70, 80, 100]), 90, "get_avg_drop_lowest([70, 80, 100])")
+               self.assertEqual(get_avg_drop_lowest([75, 83, 90]), 86.5, "get_avg_drop_lowest([75, 83, 90])")
+
+       myTests().main()
+
+#.
+    .. activecode:: funct_get_middle
+       :autograde: unittest
+       :nocodelens:
+
+       Finish the function below to return the middle characters from the passed string.
+       If the string has less than 3 characters then return the passed string.
+       If the string has an odd length then return the middle character.  If the string has an even
+       length return the two middle characters.  For example, get_middle('abc') returns
+       'b' and get_middle('abcd') returns 'bc'.
+       ~~~~
+       def get_middle(str):
+
+       ====
+       from unittest.gui import TestCaseGui
+
+       class myTests(TestCaseGui):
+
+           def testOne(self):
+               self.assertEqual(get_middle('abc'), 'b', "get_middle('abc')")
+               self.assertEqual(get_middle('abcd'), 'bc', "get_middle('abcd')")
+               self.assertEqual(get_middle('12345'), '3', "get_middle('12345')")
+               self.assertEqual(get_middle('123456'), '34', "get_middle('123456')")
+               self.assertEqual(get_middle('ab'), 'ab', "get_middle('ab')")
+               self.assertEqual(get_middle('a'), 'a', "get_middle('a')")
+               self.assertEqual(get_middle(''), '', "get_middle('')")
+
+
+       myTests().main()
+
+#.
+    .. activecode:: funct_speeding
+       :autograde: unittest
+       :nocodelens:
+
+
+       You are driving a little too fast, and a police officer stops you. Write code to
+       compute the result, encoded as an int value: 0=no ticket, 1=small ticket,
+       2=big ticket. If speed is 60 or less, the result is 0. If speed is between 61 and
+       80 inclusive, the result is 1. If speed is 81 or more, the result is 2. Unless it is
+       your birthday -- on that day, your speed can be 5 higher in all cases.
+       ~~~~
+       def caught_speeding(speed, is_birthday):
+
+       ====
+       from unittest.gui import TestCaseGui
+
+       class myTests(TestCaseGui):
+
+           def testOne(self):
+               self.assertEqual(caught_speeding(60,False), 0, "caught_speeding(60,False)")
+               self.assertEqual(caught_speeding(65,False), 1, "caught_speeding(65,False)")
+               self.assertEqual(caught_speeding(65,True), 0, "caught_speeding(65,True)")
+               self.assertEqual(caught_speeding(80,False), 1, "caught_speeding(80,False)")
+               self.assertEqual(caught_speeding(85,False), 2, "caught_speeding(85,False)")
+               self.assertEqual(caught_speeding(85,True), 1, "caught_speeding(85,True)")
+               self.assertEqual(caught_speeding(70,False), 1, "caught_speeding(70,False)")
+               self.assertEqual(caught_speeding(75,False), 1, "caught_speeding(75,False)")
+               self.assertEqual(caught_speeding(75,True), 1, "caught_speeding(75,True)")
+               self.assertEqual(caught_speeding(40, False), 0, "caught_speeding(40, False)")
+               self.assertEqual(caught_speeding(40, True), 0, "caught_speeding(40, True)")
+               self.assertEqual(caught_speeding(90, False), 2, "caught_speeding(90, False)")
+
+       myTests().main()
+
+
+#.
+    .. activecode:: funct_check_guess
+       :autograde: unittest
+       :nocodelens:
+
+       Finish the function below to return 'too low' if the guess is less than the passed
+       target, 'correct' if they are equal, and 'too high' if the guess is greater than the
+       passed target.  For example, check_guess(5,7) returns 'too low',
+       check_guess(7,7) returns 'correct', and check_guess(9,7) returns 'too high'.
+       ~~~~
+       def check_guess(guess, target):
+
+       ====
+       from unittest.gui import TestCaseGui
+
+       class myTests(TestCaseGui):
+
+           def testOne(self):
+               self.assertEqual(check_guess(5, 7), 'too low', "check_guess(5, 7)")
+               self.assertEqual(check_guess(7, 7), 'correct', "check_guess(7, 7)")
+               self.assertEqual(check_guess(9, 7), 'too high', "check_guess(9, 7)")
+               self.assertEqual(check_guess(3, 9), 'too low', "check_guess(3, 9)")
+               self.assertEqual(check_guess(3, 3), 'correct', "check_guess(3, 3)")
+               self.assertEqual(check_guess(20, 9), 'too high', "check_guess(20, 9)")
+               self.assertEqual(check_guess(-5, 7), 'too low', "check_guess(-5, 7)")
+
+
+       myTests().main()
+
+
 
 #.
     .. activecode:: funct_ex_weekq
         :practice: T
         :autograde: unittest
 
-        Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, …6=Sat, and a boolean indicating
-        if we are on vacation, return a string of the form “7:00” indicating when the alarm clock
-        should ring. Weekdays, the alarm should be “7:00” and on the weekend it should be “10:00”.
-        Unless we are on vacation – then on weekdays it should be “10:00” and weekends it should be
-        “off”.
+        Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat, and a
+        boolean indicating if we are on vacation, return a string of the form "7:00"
+        indicating when the alarm clock should ring. If we are on vacation and it is
+        a weekend (0 - Saturday or 6 - Sunday) it should return "off" and otherwise return
+        "10:00". If we are not on vacation and it is a weekend it should return
+        "10:00" and otherwise "7:00"
         ~~~~
         def alarm_clock(day, vacation):
             # your code here
