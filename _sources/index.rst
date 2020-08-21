@@ -44,6 +44,7 @@ Table of Contents
    13-web/toctree.rst
    14-objects/toctree.rst
    15-database/toctree.rst
+   16-viz/toctree.rst
 
 Acknowledgements
 ::::::::::::::::
