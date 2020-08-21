@@ -1,5 +1,5 @@
-Exercises
----------
+Multiple Choice Questions
+--------------------------
 
 .. mchoice:: inheritance_mchoice1
     :practice: T

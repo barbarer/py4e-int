@@ -1,8 +1,6 @@
 Parsing HTML using BeautifulSoup
 --------------------------------
 
-\index{BeautifulSoup}
-
 Even though HTML looks like XML^[The XML format is described in the next chapter.]
 and some pages are carefully
 constructed to be XML, most HTML is generally broken in ways that cause
@@ -28,66 +26,32 @@ We will use ``urllib`` to read the page and then use
 ``BeautifulSoup`` to extract the ``href`` attributes
 from the anchor (\ ``a``\ ) tags.
 
-\index{BeautifulSoup}
-\index{HTML}
-\index{parsing!HTML}
+.. activecode:: urllinks
+      :language: python3
 
-\VerbatimInput{../code3/urllinks.py}
+      import urllib.request, urllib.parse, urllib.error
+      from bs4 import BeautifulSoup
+      import ssl
+
+      # Ignore SSL certificate errors
+      ctx = ssl.create_default_context()
+      ctx.check_hostname = False
+      ctx.verify_mode = ssl.CERT_NONE
+
+      url = "https://docs.python.org"
+      html = urllib.request.urlopen(url, context=ctx).read()
+      soup = BeautifulSoup(html, 'html.parser')
+
+      # Retrieve all of the anchor tags
+      tags = soup('a')
+      for tag in tags:
+         print(tag.get('href', None))
+
 
 The program prompts for a web address, then opens the web page, reads
 the data and passes the data to the BeautifulSoup parser, and then
 retrieves all of the anchor tags and prints out the ``href``
 attribute for each tag.
-
-When the program runs, it produces the following output:
-
-.. code-block::
-
-   Enter - https://docs.python.org
-   genindex.html
-   py-modindex.html
-   https://www.python.org/
-   #
-   whatsnew/3.6.html
-   whatsnew/index.html
-   tutorial/index.html
-   library/index.html
-   reference/index.html
-   using/index.html
-   howto/index.html
-   installing/index.html
-   distributing/index.html
-   extending/index.html
-   c-api/index.html
-   faq/index.html
-   py-modindex.html
-   genindex.html
-   glossary.html
-   search.html
-   contents.html
-   bugs.html
-   about.html
-   license.html
-   copyright.html
-   download.html
-   https://docs.python.org/3.8/
-   https://docs.python.org/3.7/
-   https://docs.python.org/3.5/
-   https://docs.python.org/2.7/
-   https://www.python.org/doc/versions/
-   https://www.python.org/dev/peps/
-   https://wiki.python.org/moin/BeginnersGuide
-   https://wiki.python.org/moin/PythonBooks
-   https://www.python.org/doc/av/
-   genindex.html
-   py-modindex.html
-   https://www.python.org/
-   #
-   copyright.html
-   https://www.python.org/psf/donations/
-   bugs.html
-   http://sphinx.pocoo.org/
-
 
 This list is much longer because some HTML anchor tags are relative
 paths (e.g., tutorial/index.html) or in-page references (e.g., '#')
@@ -96,17 +60,30 @@ requirement in our regular expression.
 
 You can use also BeautifulSoup to pull out various parts of each tag:
 
-\VerbatimInput{../code3/urllink2.py}
+.. activecode:: urllink2
+      :language: python3
 
-.. code-block::
+      from urllib.request import urlopen
+      from bs4 import BeautifulSoup
+      import ssl
 
-   python urllink2.py
-   Enter - http://www.dr-chuck.com/page1.htm
-   TAG: <a href="http://www.dr-chuck.com/page2.htm">
-   Second Page</a>
-   URL: http://www.dr-chuck.com/page2.htm
-   Content: ['\nSecond Page']
-   Attrs: [('href', 'http://www.dr-chuck.com/page2.htm')]
+      # Ignore SSL certificate errors
+      ctx = ssl.create_default_context()
+      ctx.check_hostname = False
+      ctx.verify_mode = ssl.CERT_NONE
+
+      url = "http://www.dr-chuck.com/page1.htm"
+      html = urlopen(url, context=ctx).read()
+      soup = BeautifulSoup(html, "html.parser")
+
+      # Retrieve all of the anchor tags
+      tags = soup('a')
+      for tag in tags:
+         # Look at the parts of a tag
+         print('TAG:', tag)
+         print('URL:', tag.get('href', None))
+         print('Contents:', tag.contents[0])
+         print('Attrs:', tag.attrs)
 
 
 ``html.parser`` is the HTML parser included in the standard Python 3 library.

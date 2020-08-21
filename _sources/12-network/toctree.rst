@@ -16,3 +16,5 @@ Network
     12-bonusforunixlinux.rst
     12-glossary.rst
     Exercises.rst
+    12-mixedupcode.rst
+    12-writecode.rst

@@ -13,7 +13,7 @@ socket, it is sent to the application at the other end of the socket. If
 you read from the socket, you are given the data which the other
 application has sent.
 
-.. fillintheblank::http_connection
+.. fillintheblank:: http_connection
 
   A ______ is much like a file, except that a single socket provides a two-way
   connection between two programs.
