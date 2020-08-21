@@ -26,5 +26,7 @@ information with each other, they use JavaScript Object Notation (JSON)
     13-securityAPI.rst
     13-glossary.rst
     Exercises.rst
+    13-MixedupCode.rst
+    13-writeCode.rst
     13-google.rst
     13-twitter.rst

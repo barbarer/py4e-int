@@ -1,5 +1,9 @@
-Looping and dictionaries
+Looping and Dictionaries
 ------------------------
+
+.. index::
+   single: Trasversal
+   single: Keys Method
 
 If you use a dictionary as the sequence in a ``for`` statement,
 it traverses the keys of the dictionary. This loop prints each key and
@@ -102,6 +106,7 @@ First you see the list of keys in unsorted order that we get from the
 the ``for`` loop.
 
 .. activecode:: question9_4_2
+   :practice: T
    :nocodelens:
 
    Write code to add the keys of dictionary wordCount into a list named MoreThan5 if the keys' value is greater than 5.
@@ -114,7 +119,7 @@ the ``for`` loop.
    class myTests(TestCaseGui):
 
        def testOne(self):
-           self.assertEqual(len(MoreThan5), 4, "Make sure you are only including values greater than 5!")
+           self.assertEqual(len(MoreThan5), 4, "Testing to make sure the length of the list changed.")
 
    myTests().main()
 

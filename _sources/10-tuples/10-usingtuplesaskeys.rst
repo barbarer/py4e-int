@@ -1,5 +1,8 @@
-Using tuples as keys in dictionaries
-------------------------------------
+Using Tuples as Keys in Dictionaries
+-------------------------------------
+
+.. index::
+   single: Tuples as Keys
 
 Because tuples are *hashable* and lists are not, if we
 want to create a *composite* key to use in a dictionary
@@ -15,7 +18,24 @@ assignment statement as follows:
 
    directory[last,first] = number
 
-.. mchoice:: question10_7_1
+.. activecode:: question10_7_1
+   :practice: T
+   :nocodelens:
+
+   Write code to create a dictionary called 'd1', and in it give the tuple (1, "a") a value of "tuple".
+   ~~~~
+
+   ====
+   from unittest.gui import TestCaseGui
+
+   class MyTests(TestCaseGui):
+
+       def testOne(self):
+           self.assertEqual(d1[(1, "a")], "tuple", "Checking to make sure the key has the correct value.")
+
+   MyTests().main()
+
+.. mchoice:: question10_7_2
    :practice: T
    :answer_a: Dictionaries
    :answer_b: Tuples
@@ -45,7 +65,7 @@ tuples. It assigns the elements of each tuple to ``last`` and
 ``first``\ , then prints the name and corresponding telephone
 number.
 
-.. mchoice:: question10_7_2
+.. mchoice:: question10_7_3
    :practice: T
    :answer_a: my_dict['Go']
    :answer_b: my_dict[Blue']

@@ -46,8 +46,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Runestone Interactive Overview'
-copyright = '2020 CS Learning 4 U group'
+project = 'Python for Everybody - Interactive'
+copyright = '2020 - Based on Python for Everybody'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

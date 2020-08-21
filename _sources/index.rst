@@ -1,10 +1,3 @@
-..  Copyright (C)  Mark Guzdial, Barbara Ericson, Briana Morrison
-    Permission is granted to copy, distribute and/or modify this document
-    under the terms of the GNU Free Documentation License, Version 1.3 or
-    any later version published by the Free Software Foundation; with
-    Invariant Sections being Forward, Prefaces, and Contributor List,
-    no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
-    is included in the section entitled "GNU Free Documentation License".
 
 =======================================
 Python for Everybody - Interactive
@@ -46,7 +39,19 @@ Table of Contents
    08-lists/toctree.rst
    09-dictionaries/toctree.rst
    10-tuples/toctree.rst
+   11-regex/toctree.rst
    12-network/toctree.rst
    13-web/toctree.rst
    14-objects/toctree.rst
    15-database/toctree.rst
+
+Acknowledgements
+::::::::::::::::
+
+.. toctree::
+   :caption: Acknowledgements, Contributors, License, and Preface
+   :maxdepth: 1
+
+   ack/AA-contrib.rst
+   ack/AB-copyright.rst
+   ack/A0-preface.rst

@@ -1,5 +1,11 @@
-Dictionary as a set of counters
+Dictionary as a Set of Counters
 -------------------------------
+
+.. index::
+   single: Counter
+   single: Implementation
+   single: Get Method
+
 
 Suppose you are given a string and you want to count how many times each
 letter appears. There are several ways you could do it:

@@ -19,4 +19,3 @@ Object-oriented programming
     Exercises.rst
     14-mixedupcode.rst
     14-writecode.rst
-

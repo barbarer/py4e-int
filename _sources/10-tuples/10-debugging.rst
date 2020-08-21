@@ -1,6 +1,10 @@
 Debugging
 ---------
 
+.. index::
+   single: Debugging Tuples
+   single: Shape Error
+
 Lists, dictionaries and tuples are known generically as *data
 structures*\ ; in this chapter we are starting to see compound
 data structures, like lists of tuples, and dictionaries that contain
@@ -30,3 +34,17 @@ data and introduce an error. For example, if you are expecting a list with one i
 
    - :[Ss]hape [Ee]rror: Correct! A shape error is likely to occur when working with compound data structures.
      :.*: Try again!
+
+.. mchoice:: question10_9_3
+   :practice: T
+   :answer_a: Lists of tuples
+   :answer_b: Lists
+   :answer_c: Tuples
+   :answer_d: Dictionaries with tuples as keys
+   :correct: a, d
+   :feedback_a: Correct! Lists of tuples are a type of compound data structure.
+   :feedback_b: Try again!
+   :feedback_c: Try again!
+   :feedback_d: Correct! A dictionary with tuples for keys are another type of compound data structure.
+
+   Which of the following are examples of Compound Data Structures? (Select all that apply)

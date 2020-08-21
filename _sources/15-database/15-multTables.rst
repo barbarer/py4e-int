@@ -174,6 +174,16 @@ Again, we simply tell the database to ignore our attempted
 ``INSERT`` if it would violate the uniqueness constraint that
 we specified for the ``Follows`` rows.
 
+.. mchoice:: dbMult_MC_tf1
+    :practice: T
+    :answer_a: True
+    :answer_b: False
+    :correct: a
+    :feedback_a: By using the command "OR IGNORE" you can instruct SQL to skip a command if it invalidates a constraint.
+    :feedback_b: Try again!
+
+    True or False? You can instruct SQL to ignore a command.
+
 Retrieve and/or insert a record
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -229,6 +239,16 @@ of affected rows is something other than 1, it is an error.
 If the ``INSERT`` is successful, we can look at
 ``cur.lastrowid`` to find out what value the database assigned
 to the ``id`` column in our newly created row.
+
+.. mchoice:: dbMult_MC_tf2
+    :practice: T
+    :answer_a: True
+    :answer_b: False
+    :correct: b
+    :feedback_a: Try again!
+    :feedback_b: Before adding new data to table, you should check if it already exists. This pattern of checking is very common before adding data.
+
+    True or False? SQL will automatically check if something already exists in your data.
 
 Storing the friend relationship
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -1,5 +1,5 @@
-Exercises
----------
+Multiple Choice Questions
+--------------------------
 .. mchoice:: networks_ex1
         :practice: T
         :answer_a: urllib

@@ -1,6 +1,9 @@
 Debugging
 ---------
 
+.. index::
+   single: Debugging Dictionaries
+
 As you work with bigger datasets it can become unwieldy to debug by
 printing and checking data by hand. Here are some suggestions for
 debugging large datasets:

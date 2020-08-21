@@ -3,7 +3,7 @@ Network
 
 .. toctree::
     :maxdepth: 3
-    
+
     12-networkedprograms.rst
     12-http.rst
     12-simplestwebbrowser.rst

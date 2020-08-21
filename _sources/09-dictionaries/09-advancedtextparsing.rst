@@ -1,5 +1,8 @@
-Advanced text parsing
----------------------
+Advanced Text Parsing
+----------------------
+
+.. index::
+   single: Translate Method
 
 .. datafile:: romeo2.txt
    :fromfile: romeo.txt
@@ -101,6 +104,19 @@ We make the following modifications to our program:
                else:
                    counts[stripped] += 1
    print(counts)
+
+.. mchoice:: question9_5_2
+   :answer_a: line 7
+   :answer_b: line 8
+   :answer_c: line 9
+   :answer_d: line 10
+   :correct: b, c
+   :feedback_a: Try again!
+   :feedback_b: Correct! This line creates the table, which tells the translate method what to change/remove.
+   :feedback_c: Correct! This line runs the translate method, which is where the punctuation is filtered out.
+   :feedback_d: Try again!
+
+   Which line(s) in the above activecode remove the punctuation from the text?
 
 Part of learning the "Art of Python" or "Thinking Pythonically" is
 realizing that Python often has built-in capabilities for many common

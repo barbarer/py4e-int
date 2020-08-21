@@ -2,6 +2,17 @@
 Dictionaries
 ============
 
+.. index::
+   single: Dictionary
+   single: Key
+   single: Index
+   single: Key-Value Pair
+   single: KeyError
+   single: Len function
+   single: In operator
+   single: Values operator
+   single: Hash Table
+
 A *dictionary* is like a list, but more general. In a
 list, the index positions have to be integers; in a dictionary, the
 indices can be (almost) any type.
@@ -46,7 +57,7 @@ the dictionary, you can use square brackets:
    class myTests(TestCaseGui):
 
       def testOne(self):
-          self.assertEqual(eng2sp['two'], 'dos', "Make sure you are not confusing the key and value components")
+          self.assertEqual(eng2sp['two'], 'dos', "Testing if the key 'two' maps to 'dos'.")
 
    myTests().main()
 
@@ -123,7 +134,7 @@ not good enough).
   :feedback_a: Try again!
   :feedback_b: Correct! 'Water' is a value in the dictionary, therefore the in operator will not be able to determine if this is in the dictionary.
 
-  What does the following code print?
+  What is printed after the following code is run?
 
   .. code-block:: python
 

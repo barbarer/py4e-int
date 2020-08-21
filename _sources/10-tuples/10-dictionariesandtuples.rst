@@ -1,5 +1,9 @@
-Dictionaries and tuples
+Dictionaries and Tuples
 -----------------------
+
+.. index::
+   single: Item Method
+   single: Key-Value Pairs
 
 Dictionaries have a method called ``items`` that returns a list
 of tuples, where each tuple is a key-value pair:
@@ -82,7 +86,7 @@ The new list is sorted in ascending alphabetical order by the key value.
    class myTests(TestCaseGui):
 
        def testOne(self):
-           self.assertEqual(tup_list, [('e', 30), ('c', 27), ('d', 15), ('a', 10), ('f', 3), ('b', 2)], "To help, make sure to use the .items() method!")
+           self.assertEqual(tup_list, [('e', 30), ('c', 27), ('d', 15), ('a', 10), ('f', 3), ('b', 2)], "Checking to make sure the list was sorted correctly.")
            self.assertEqual(len(tup_list), 6, "Test to make sure no values were added or deleted.")
 
    myTests().main()

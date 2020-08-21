@@ -11,6 +11,6 @@ Dictionaries
    09-advancedtextparsing.rst
    09-debugging.rst
    09-glossary.rst
-   09-Exercises.rst
+   Exercises.rst
    09-mixedupcode.rst
    09-writecode.rst

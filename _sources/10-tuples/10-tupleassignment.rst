@@ -1,5 +1,9 @@
-Tuple assignment
+Tuple Assignment
 ----------------
+
+.. index::
+   single: Tuple Assignment
+   single: Swap Pattern
 
 One of the unique syntactic features of the Python language is the
 ability to have a tuple on the left side of an assignment statement.
@@ -98,7 +102,7 @@ right must be the same:
    class myTests(TestCaseGui):
 
        def testOne(self):
-           self.assertEqual(t, ('Giannis', 'Antetokounmpo'), "Use the application of tuple assignment shown above.")
+           self.assertEqual(t, ('Giannis', 'Antetokounmpo'), "Checking that the two values of the tuple were swapped.")
 
    myTests().main()
 

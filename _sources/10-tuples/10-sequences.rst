@@ -1,5 +1,11 @@
-Sequences: strings, lists, and tuples - Oh My!
+Sequences: Strings, Lists, and Tuples - Oh My!
 ----------------------------------------------
+
+.. index::
+   single: Sequence
+   single: Mutability
+   single: Sorted Function
+   single: Reversed Function
 
 I have focused on lists of tuples, but almost all of the examples in
 this chapter also work with lists of lists, tuples of tuples, and tuples
@@ -27,7 +33,6 @@ If you want to use a sequence as a dictionary key, you have to use an immutable 
 If you are passing a sequence as an argument to a function, using tuples reduces the potential for unexpected behavior due to aliasing.
 
 .. fillintheblank:: question10_8_1
-   :practice: T
 
    When using a sequence as a dictionary key, it is best to use a ______ because it is immutable.
 
@@ -56,10 +61,10 @@ a new sequence with the same elements in a different order.
 
 .. mchoice:: question10_8_3
    :practice: T
-   :answer_a: Iterable
-   :answer_b: Key
+   :answer_a: iterable
+   :answer_b: key
    :answer_c: lambda
-   :answer_d: Reverse
+   :answer_d: reverse
    :correct: b, d
    :feedback_a: Try again! The iterable is necessary to use sorted(). It is not optional.
    :feedback_b: Correct! The key can be used to sort the iterable in a specific manner, but is not required to use this function.

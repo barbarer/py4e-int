@@ -14,6 +14,6 @@ Tuples
    10-sequences.rst
    10-debugging.rst
    10-glossary.rst
-   10-Exercises.rst
+   Exercises.rst
    10-mixedupcode.rst
    10-writecode.rst

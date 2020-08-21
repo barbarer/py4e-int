@@ -1,4 +1,4 @@
-The most common words
+The Most Common Words
 ----------------------
 
 
@@ -55,7 +55,7 @@ good choice as a language for exploring information.
    :feedback_c: Try again!
    :feedback_d: Try again!
 
-   Which of the following correctly uses the slice operator to grab the first 5 items of list l? Select all that apply.
+   Which of the following correctly uses the slice operator to grab the first 5 items of a list 'l'? Select all that apply.
 
 
 .. mchoice:: question10_6_2
@@ -69,6 +69,8 @@ good choice as a language for exploring information.
    :feedback_b: Try again!
    :feedback_c: Try again!
    :feedback_d: Try again!
+
+   How will the following code be sorted once this code is run?
 
    .. code-block:: python
 

@@ -19,23 +19,30 @@ Write Code Questions
               mySecondList = myFirstList + [321.4
               print(mySecondList
 
+      .. tab:: Answer
+
+          .. activecode:: list_writeMyListA
+              :optional:
+
+              myFirstList = [12,"ape",13]
+              print(len(myFirstList))
+              print(myFirstList * 3)
+              mySecondList = myFirstList + [321.4]
+              print(mySecondList)
+
 #.
-  .. tabbed:: list_writeItems
+    .. activecode::  list_writeItemsq
+        :nocodelens:
 
-      .. tab:: Question
+        Fix 5 syntax errors in the code below so that it runs and prints the contents of ``items``.
+        ~~~~
+        def itemLister(items):
+            items[0] = "First item'
+            items[1] = items0]
+            items[2] = items[2] + 1
+           print items
 
-          Fix 5 syntax errors in the code below so that it runs and prints the contents of ``items``.
-
-          .. activecode::  list_writeItemsq
-              :nocodelens:
-
-              def itemLister(items):
-                  items[0] = "First item'
-                  items[1] = items0]
-                  items[2] = items[2] + 1
-                 print items
-
-              itemLister([2,4,6 8])
+        itemLister([2,4,6 8])
 
 #.
     .. tabbed:: list_writeAvg
@@ -43,7 +50,7 @@ Write Code Questions
         .. tab:: Question
 
             Complete the code on lines 4 and 5 so that the function returns the average of
-             a list of integers.
+            a list of integers.
 
             .. activecode::  list_writeAvgq
                 :nocodelens:
@@ -58,31 +65,42 @@ Write Code Questions
                 aList = [99, 100, 74, 63, 100, 100]
                 print(gradeAverage(aList))
 
+        .. tab:: Answer
+
+            .. activecode:: list_writeAvgA
+                :optional:
+
+                def gradeAverage(aList):
+                    sum = 0
+                    for num in aList:
+                        sum += num
+                    average = sum/len(aList)
+                    return average
+
+                aList = [99, 100, 74, 63, 100, 100]
+                print(gradeAverage(aList))
+
 #.
-  .. tabbed:: list_write23
+    .. activecode:: list_write23q
 
-      .. tab:: Question
+        Assign the value of the 23rd element of ``l`` to the variable ``checking``.
+        ~~~~
+        l = ("hi", "goodbye", "python", "106", "506", 91, ['all', 'Paul', 'Jackie',
+             "UMSI", 1, "Stephen", 4.5], 109, "chair", "pizza", "wolverine", 2017,
+             3.92, 1817, "account", "readings", "papers", 12, "facebook", "twitter",
+             193.2, "snapchat", "leaders and the best", "social", "1986", 9, 29, "holiday",
+             ["women", "olympics", "gold", "rio", 21, "2016", "men"], "26trombones")
 
-          Assign the value of the 23rd element of ``l`` to the variable ``checking``.
+        =====
 
-          .. activecode:: list_write23q
+        from unittest.gui import TestCaseGui
 
-              l = ("hi", "goodbye", "python", "106", "506", 91, ['all', 'Paul', 'Jackie',
-                   "UMSI", 1, "Stephen", 4.5], 109, "chair", "pizza", "wolverine", 2017,
-                   3.92, 1817, "account", "readings", "papers", 12, "facebook", "twitter",
-                   193.2, "snapchat", "leaders and the best", "social", "1986", 9, 29, "holiday",
-                   ["women", "olympics", "gold", "rio", 21, "2016", "men"], "26trombones")
+        class myTests(TestCaseGui):
 
-              =====
+           def testOne(self):
+              self.assertEqual(checking, "leaders and the best", "Testing that checking was assigned to the 23rd element.")
 
-              from unittest.gui import TestCaseGui
-
-              class myTests(TestCaseGui):
-
-                 def testOne(self):
-                    self.assertEqual(checking, "leaders and the best", "Testing that checking was assigned to the 23rd element.")
-
-              myTests().main()
+        myTests().main()
 
 #.
   .. tabbed:: list_writePlant
@@ -126,6 +144,27 @@ Write Code Questions
               plant = trees[0]
 
 #.
+    .. activecode:: list_write5q
+
+        Count how many words in a list have length 5.
+        ~~~~
+        def countWords(lst):
+
+        ====
+        from unittest.gui import TestCaseGui
+
+        class myTests(TestCaseGui):
+
+            def testOne(self):
+                self.assertEqual(countWords(["hello", "hi", "good morning", "three", "kitty"]),3,"Tested countWords on input ["hello", "hi", "good morning", "three", "kitty"]")
+                self.assertEqual(countWords(["two", "three", "four", "five", "six", "seven"]),2,"Tested countWords on input ["two", "three", "four", "five", "six", "seven"]")
+                self.assertEqual(countWords(["these", "those", "there"]),3,"Tested countWords on input ["these", "those", "there"]")
+                self.assertEqual(countWords(["the", "an", "a"]),0,"Tested countWords on input ["the", "an", "a"]")
+
+
+        myTests().main()
+
+#.
   .. tabbed:: list_writeChop
 
       .. tab:: Question
@@ -159,28 +198,24 @@ Write Code Questions
                   return(lst)
 
 #.
-  .. tabbed:: list_writeMiddle
+    .. activecode:: list_writeMiddleq
 
-      .. tab:: Question
+        Write a function called ``middle`` that takes a list as its argument and
+        returns a new list that contains all but the first and last elements.
+        ~~~~
+        def middle():
 
-          Write a function called ``middle`` that takes a lsit and returns a new list that contains
-          all but the first and last elements.
+        ====
+        from unittest.gui import TestCaseGui
 
-          .. activecode:: list_writeMiddleq
+        class myTests(TestCaseGui):
 
-              def middle():
+            def testOne(self):
+                self.assertEqual(middle([1,2,3,4,5]),[2,3,4],"Tested middle on input [1,2,3,4.5]")
+                self.assertEqual(middle([1,3,5,7,9,10]),[2,3,5,7,9],"Tested middle on input [1,3,5,7,9,10]")
+                self.assertEqual(middle([2,9]),[],"Tested middle on input [2,9]")
 
-              ====
-              from unittest.gui import TestCaseGui
-
-              class myTests(TestCaseGui):
-
-                  def testOne(self):
-                      self.assertEqual(middle([1,2,3,4,5]),[2,3,4],"Tested middle on input [1,2,3,4.5]")
-                      self.assertEqual(middle([1,3,5,7,9,10]),[2,3,5,7,9],"Tested middle on input [1,3,5,7,9,10]")
-                      self.assertEqual(middle([2,9]),[],"Tested middle on input [2,9]")
-
-              myTests().main()
+        myTests().main()
 
 #.
   .. tabbed:: list_writeSum
@@ -192,7 +227,6 @@ Write Code Questions
             .. activecode:: list_writeSumq
 
                 def sumUntilEven(lst):
-                  # your code here
 
                 ====
                 from unittest.gui import TestCaseGui
@@ -226,51 +260,22 @@ Write Code Questions
                 for i in range(100):
                     lst.append(random.randint(0,1000))
 
-#.
-  .. tabbed:: list_write5
-
-      .. tab:: Question
-
-          Count how many words in a list have length 5.
-
-          .. activecode:: list_write5q
-
-              def countWords(lst):
-                  # your code here
-
-              ====
-              from unittest.gui import TestCaseGui
-
-              class myTests(TestCaseGui):
-
-                  def testOne(self):
-                      self.assertEqual(countWords(["hello", "hi", "good morning", "three", "kitty"]),3,"Tested countWords on input ["hello", "hi", "good morning", "three", "kitty"]")
-                      self.assertEqual(countWords(["two", "three", "four", "five", "six", "seven"]),2,"Tested countWords on input ["two", "three", "four", "five", "six", "seven"]")
-                      self.assertEqual(countWords(["these", "those", "there"]),3,"Tested countWords on input ["these", "those", "there"]")
-                      self.assertEqual(countWords(["the", "an", "a"]),0,"Tested countWords on input ["the", "an", "a"]")
-
-
-              myTests().main()
 
 #.
-  .. tabbed:: list_writeReverse2
-
-    .. tab:: Question
+    .. activecode::  list_writeReverseq
+        :nocodelens:
 
         Write a function called ``reverse`` that returns the reverse of a list.
+        ~~~~
+        ====
+        from unittest.gui import TestCaseGui
 
-        .. activecode::  list_writeReverseq
-            :nocodelens:
+        class myTests(TestCaseGui):
 
-            ====
-            from unittest.gui import TestCaseGui
-
-            class myTests(TestCaseGui):
-
-                def testOne(self):
-                      self.assertEqual(reverse([1,2,3,4,5]),[5,4,3,2,1],"Tested reverse on input [1,2,3,4.5]")
-                      self.assertEqual(reverse([1,3,5,7,9]),[9,7,5,3,1],"Tested reverse on input [1,3,5,7,9]")
-                      self.assertEqual(reverse([2,4,6,7,9]),[9,7,6,4,2],"Tested reverse on input [2,4,6,7,9]")
+            def testOne(self):
+                  self.assertEqual(reverse([1,2,3,4,5]),[5,4,3,2,1],"Tested reverse on input [1,2,3,4.5]")
+                  self.assertEqual(reverse([1,3,5,7,9]),[9,7,5,3,1],"Tested reverse on input [1,3,5,7,9]")
+                  self.assertEqual(reverse([2,4,6,7,9]),[9,7,6,4,2],"Tested reverse on input [2,4,6,7,9]")
 
 
-            myTests().main()
+        myTests().main()
