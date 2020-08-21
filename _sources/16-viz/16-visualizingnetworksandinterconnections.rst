@@ -1,10 +1,6 @@
 Visualizing networks and interconnections
 -----------------------------------------
 
-\index{Google!page rank}
-\index{Visualization!networks}
-\index{Visualization!page rank}
-
 In this application, we will perform some of the functions of a search
 engine. We will first spider a small subset of the web and run a
 simplified version of the Google page rank algorithm to determine which
@@ -17,11 +13,10 @@ You can download and extract this application from:
 
 `www.py4e.com/code3/pagerank.zip <http://www.py4e.com/code3/pagerank.zip>`_
 
-.. image:: height=3.5in@../images/pagerank
-   :target: height=3.5in@../images/pagerank
+.. image:: ../images/pagerank.png
+   :align: center
+   :scale: 70%
    :alt: A Page Ranking
-
-
 
 The first program (\ *spider.py*\ ) program crawls a web site
 and pulls a series of pages into the database

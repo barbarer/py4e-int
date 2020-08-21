@@ -1,18 +1,14 @@
 Building a Google map from geocoded data
 ----------------------------------------
 
-\index{Google!map}
-\index{Visualization!map}
-
 In this project, we are using the Google geocoding API to clean up some
 user-entered geographic locations of university names and then placing
 the data on a Google map.
 
-.. image:: ../images/google-map
-   :target: ../images/google-map
-   :alt: A Google Map
-
-
+.. image:: ../images/google-map.png
+   :align: center
+   :scale: 60%
+   :alt: A Google map
 
 To get started, download the application from:
 
@@ -23,7 +19,6 @@ rate-limited to a certain number of requests per day. If you have a lot
 of data, you might need to stop and restart the lookup process several
 times. So we break the problem into two phases.
 
-\index{cache}
 
 In the first phase we take our input "survey" data in the file
 *where.data* and read it one line at a time, and retrieve

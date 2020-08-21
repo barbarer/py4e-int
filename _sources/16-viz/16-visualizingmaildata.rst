@@ -12,11 +12,10 @@ inconsistent, error-filled, and need a lot of cleanup or adjustment. In
 this section, we work with an application that is the most complex so
 far and pull down nearly a gigabyte of data and visualize it.
 
-.. image:: height=3.5in@../images/wordcloud
-   :target: height=3.5in@../images/wordcloud
+.. image:: ../images/wordcloud.png
+   :align: center
+   :scale: 70%
    :alt: A Word Cloud from the Sakai Developer List
-
-
 
 You can download this application from:
 
@@ -250,10 +249,10 @@ computes email participation by organizations over time.
 Its output is written to *gline.js* which is visualized
 using *gline.htm*.
 
-.. image:: ../images/mailorg
-   :target: ../images/mailorg
+.. image:: ../images/mailorg.png
+   :align: center
+   :scale: 70%
    :alt: Sakai Mail Activity by Organization
-
 
 
 This is a relatively complex and sophisticated application and has
