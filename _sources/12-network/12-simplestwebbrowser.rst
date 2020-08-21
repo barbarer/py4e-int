@@ -6,7 +6,23 @@ a very simple Python program that makes a connection to a web server and
 follows the rules of the HTTP protocol to request a document and
 display what the server sends back.
 
-\VerbatimInput{../code3/socket1.py}
+.. activecode:: simplewebbrowser
+     :language: python3
+     
+     import socket
+
+     mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+     mysock.connect(('data.pr4e.org', 80))
+     cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
+     mysock.send(cmd)
+
+     while True:
+       data = mysock.recv(512)
+       if len(data) < 1:
+         break
+       print(data.decode(),end='')
+
+     mysock.close()
 
 First the program makes a connection to port 80 on the server
 `www.py4e.com <http://www.py4e.com>`_. Since our program is playing the role
@@ -15,8 +31,9 @@ command followed by a blank line. ``\r\n`` signifies an EOL (end of line),
 so ``\r\n\r\n`` signifies nothing between two EOL sequences. That is the
 equivalent of a blank line.
 
-.. image:: height=2.0in@../images/socket
-   :target: height=2.0in@../images/socket
+.. image:: ../images/socket.svg
+   :align: center
+   :scale: 7%
    :alt: A Socket Connection
 
 
@@ -81,3 +98,16 @@ be stored as a bytes object. ``encode()`` and ``b''`` are equivalent.
    b'Hello world'
    >>> 'Hello world'.encode()
    b'Hello world'
+
+.. mchoice:: http_protocol
+    :practice: T
+    :answer_a: HTTP protocol sends and recieves data as string types over sockets.
+    :answer_b: Sockets can be used to connect with many kinds of servers using different protocols.
+    :answer_c: Python does not support HTTP so we made a simple web browser to connect with web servers.
+    :correct: b
+    :feedback_a: HTTP only supports byte objects, that's why they are encoded to be byte objects and decoded as strings.
+    :feedback_b: Sockets support different types of servers with codes describing the protocol used and required send and recive data.
+    :feedback_c: HTTP is a commonly used protocol for web servers, python has its own library for http protocols.
+    :feedback_d:
+  
+    Which of the following statements is correct?

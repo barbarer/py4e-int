@@ -6,14 +6,20 @@ image or video file. The data in these files is generally not useful to
 print out, but you can easily make a copy of a URL to a local file on
 your hard disk using ``urllib``.
 
-\index{binary file}
-
 The pattern is to open the URL and use ``read`` to download the
 entire contents of the document into a string variable
 (\ ``img``\ ) then write that information to a local file as
 follows:
 
-\VerbatimInput{../code3/curl1.py}
+.. activecode:: curl1
+      :language: python3
+
+      import urllib.request, urllib.parse, urllib.error
+
+      img = urllib.request.urlopen('http://data.pr4e.org/cover3.jpg').read()
+      fhand = open('cover3.jpg', 'wb')
+      fhand.write(img)
+      fhand.close()
 
 This program reads all of the data in at once across the network and
 stores it in the variable ``img`` in the main memory of your
@@ -29,15 +35,23 @@ In order to avoid running out of memory, we retrieve the data in blocks
 the next block. This way the program can read any size file without
 using up all of the memory you have in your computer.
 
-\VerbatimInput{../code3/curl2.py}
+.. activecode:: curl2
+      :language: python3
+
+      import urllib.request, urllib.parse, urllib.error
+
+      img = urllib.request.urlopen('http://data.pr4e.org/cover3.jpg')
+      fhand = open('cover3.jpg', 'wb')
+      size = 0
+      while True:
+         info = img.read(100000)
+         if len(info) < 1: break
+         size = size + len(info)
+         fhand.write(info)
+
+      print(size, 'characters copied.')
+      fhand.close()
 
 In this example, we read only 100,000 characters at a time and then
 write those characters to the ``cover.jpg`` file before
 retrieving the next 100,000 characters of data from the web.
-
-This program runs as follows:
-
-.. code-block::
-
-   python curl2.py
-   230210 characters copied.

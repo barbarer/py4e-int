@@ -6,8 +6,6 @@ commands built in to your operating system that retrieves both plain
 text and binary files using the HTTP or File Transfer (FTP) protocols.
 One of these commands is ``curl``\ :
 
-\index{curl}
-
 .. code-block:: {.bash}
 
    $ curl -O http://www.py4e.com/cover.jpg
@@ -23,8 +21,6 @@ a little more effectively, in case you actually want to use this pattern
 in a program you are writing.
 
 A second command that functions very similarly is ``wget``\ :
-
-\index{wget}
 
 .. code-block:: {.bash}
 
