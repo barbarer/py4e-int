@@ -36,15 +36,15 @@ Table of Contents
 .. toctree::
    :maxdepth: 3
 
-   01-intro/toctree.rst
-   02-variables/toctree.rst
-   03-conditional/toctree.rst
-   04-functions/toctree.rst
-   05-iterations/toctree.rst
-   06-strings/toctree.rst
-   07-files/toctree.rst
-   08-lists/toctree.rst
-   09-dictionaries/toctree.rst
-   10-tuples/toctree.rst
-   13-web/toctree.rst
-   15-database/toctree.rst
+   intro/toctree.rst
+   variables/toctree.rst
+   conditional/toctree.rst
+   functions/toctree.rst
+   iterations/toctree.rst
+   strings/toctree.rst
+   files/toctree.rst
+   lists/toctree.rst
+   dictionaries/toctree.rst
+   tuples/toctree.rst
+   web/toctree.rst
+   database/toctree.rst
