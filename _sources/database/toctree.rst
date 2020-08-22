@@ -1,4 +1,4 @@
-Python and Databases
+Databases
 :::::::::::::::::::::::::::::::::::::::::::
 
 .. toctree::

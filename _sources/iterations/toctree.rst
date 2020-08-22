@@ -1,5 +1,5 @@
-Iterations
-::::::::::
+Loops and Iterations
+::::::::::::::::::::::::::::::
 
 .. toctree::
    :maxdepth: 3

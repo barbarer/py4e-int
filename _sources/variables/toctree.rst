@@ -1,4 +1,4 @@
-Variables, expressions, and statements
+Variables, Expressions, and Statements
 :::::::::::::::::::::::::::::::::::::::::::
 
 .. toctree::

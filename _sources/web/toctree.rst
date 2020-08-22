@@ -1,5 +1,6 @@
-Python and Web Services
+Using Web Services
 :::::::::::::::::::::::::::::::::::::::::::
+
 Once it became easy to retrieve documents and parse documents over HTTP
 using programs, it did not take long to develop an approach where we
 started producing documents that were specifically designed to be
