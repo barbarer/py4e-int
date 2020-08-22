@@ -20,7 +20,7 @@ the line starts with "From ", ``split`` those lines, and then
 print out the third word in the line:
 
 .. datafile:: mboxShort.txt
-    :fromfile: ../07-files/mbox-short.txt
+    :fromfile: ../files/mbox-short.txt
     :hide:
 
 .. activecode:: listParsing

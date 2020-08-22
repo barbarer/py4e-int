@@ -17,16 +17,16 @@ information with each other, they use JavaScript Object Notation (JSON)
     :caption: Using Web Services
     :maxdepth: 3
 
-    13-xml.rst
-    13-parsingXML.rst
-    13-loopingNodes.rst
-    13-JSON.rst
-    13-parsingJSON.rst
-    13-applicationProg.rst
-    13-securityAPI.rst
-    13-glossary.rst
+    xml.rst
+    parsingXML.rst
+    loopingNodes.rst
+    JSON.rst
+    parsingJSON.rst
+    applicationProg.rst
+    securityAPI.rst
+    glossary.rst
     Exercises.rst
-    13-MixedupCode.rst
-    13-writeCode.rst
-    13-google.rst
-    13-twitter.rst
+    MixedupCode.rst
+    writeCode.rst
+    google.rst
+    twitter.rst

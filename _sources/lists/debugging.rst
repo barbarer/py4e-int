@@ -145,7 +145,7 @@ of debugging. Here are some common pitfalls and ways to avoid them:
     as the first word as follows:
 
     .. datafile:: mboxShort1.txt
-        :fromfile: ../07-files/mbox-short.txt
+        :fromfile: ../files/mbox-short.txt
         :hide:
 
     .. activecode:: listDebug_ac_print
