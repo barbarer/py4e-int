@@ -27,24 +27,25 @@ Table of Contents
 :::::::::::::::::::::::::::::::
 
 .. toctree::
+   :numbered:
    :maxdepth: 3
 
-   01-intro/toctree.rst
-   02-variables/toctree.rst
-   03-conditional/toctree.rst
-   04-functions/toctree.rst
-   05-iterations/toctree.rst
-   06-strings/toctree.rst
-   07-files/toctree.rst
-   08-lists/toctree.rst
-   09-dictionaries/toctree.rst
-   10-tuples/toctree.rst
-   11-regex/toctree.rst
-   12-network/toctree.rst
-   13-web/toctree.rst
-   14-objects/toctree.rst
-   15-database/toctree.rst
-   16-viz/toctree.rst
+   intro/toctree.rst
+   variables/toctree.rst
+   conditional/toctree.rst
+   functions/toctree.rst
+   iterations/toctree.rst
+   strings/toctree.rst
+   files/toctree.rst
+   lists/toctree.rst
+   dictionaries/toctree.rst
+   tuples/toctree.rst
+   regex/toctree.rst
+   network/toctree.rst
+   web/toctree.rst
+   objects/toctree.rst
+   database/toctree.rst
+   viz/toctree.rst
 
 Acknowledgements
 ::::::::::::::::
@@ -56,3 +57,9 @@ Acknowledgements
    ack/AA-contrib.rst
    ack/AB-copyright.rst
    ack/A0-preface.rst
+
+Indices
+::::::::::::::::::
+
+* :ref:`genindex`
+* :ref:`search`
