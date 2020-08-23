@@ -56,28 +56,9 @@ see what they do:
 
     Which of the following is an expression?
 
-.. mchoice:: var-expressions-mc-print
-    :practice: T
-    :answer_a: 4
-    :answer_b: 8
-    :answer_c: 2
-    :answer_d: 0
-    :correct: a
-    :feedback_a: This code prints the result of 2 * 2.
-    :feedback_b: Try again!
-    :feedback_c: Try again!
-    :feedback_d: Try again!
-
-    What will be printed after the following code executes?
-
-    ::
-
-      result = 2 * 2
-      print(result)
-
 .. clickablearea:: var-expressions-mc-click
     :practice: T
-    :question: Click on the expression that will **not** return a value on its own.
+    :question: Click on the expression(s) that will **not** return a value when typed in an interpreter.
     :iscode:
     :feedback: Try typing these expressions in a python interpreter to see what they do.
 

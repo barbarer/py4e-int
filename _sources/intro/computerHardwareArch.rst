@@ -94,12 +94,6 @@ instructions in advance. We call these stored instructions a
 *program* and the act of writing these instructions down
 and getting the instructions to be correct *programming*.
 
-
-.. shortanswer:: intro-hardware-sa-program
-    :practice: T
-
-    What is a program?
-
 .. dragndrop:: intro-hardware-dnd-memory
     :practice: T
     :feedback: How is memory stored?

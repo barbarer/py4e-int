@@ -29,7 +29,7 @@ example, ``x % 10`` yields the right-most digit of
 ``x`` (in base 10). Similarly, ``x % 100`` yields the
 last two digits.
 
-.. mchoice:: var-mod-mc-18
+.. mchoice:: var-mod-mc-18-mod-5
     :practice: T
     :answer_a: 0
     :answer_b: 1
@@ -42,6 +42,20 @@ last two digits.
     :feedback_d: The reminder is 3 since 5 goes into 18 three times (15) and 18 - 15 = 3.
 
     What is the result of ``18 % 5``?
+
+.. mchoice:: var-mod-mc-2-mod-3
+    :practice: T
+    :answer_a: 2
+    :answer_b: 8
+    :answer_c: 1
+    :answer_d: 0.66666
+    :correct: a
+    :feedback_a: The remainder when a smaller number is divided by a larger number is the smaller number.
+    :feedback_b: This would be true if it was 2 raised to the 3rd power, but it is modulus.
+    :feedback_c: This would be true if it was <code>3 % 2</code>.
+    :feedback_d: This would be true if it was floating point division, but it is modulus.
+
+    What is the result of ``2 % 3``?
 
 .. dragndrop:: var-mod-dnd-division
     :practice: T

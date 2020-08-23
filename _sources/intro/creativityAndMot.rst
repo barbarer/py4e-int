@@ -50,6 +50,6 @@ you, your thoughts may turn toward developing programs for others.
 
     True or False? You will be both the programmer and the user in this book.
 
-.. shortanswer:: intro-creativity-sa-motivation
+.. shortanswer:: intro-sa-learn
 
-    What is the primary motivation for this book?
+    Why do you want to learn from this book?

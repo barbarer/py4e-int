@@ -36,6 +36,13 @@ Exercises
 
    Which of the following contains "machine code"?
 
+.. activecode:: intro-AC-fix
+    :nocodelens:
+
+    Try running the following code.  Can you tell what is wrong with it and fix it?
+    ~~~~
+    primt 'Hello world!'
+
 .. mchoice:: intro-MC-whereStored
    :answer_a: Central processing unit
    :answer_b: Main Memory
@@ -48,7 +55,6 @@ Exercises
    :feedback_c: Secondary memory provides long-term storage.  You must write out values to secondary memory to store them long-term.
    :feedback_d: Input devices do not store data
    :feedback_e: Ouptut devices do not store data
-
 
    Where in the computer is a variable such as "x" stored after the following Python line executes?
 
@@ -98,7 +104,6 @@ Exercises
 
    What is the human equivalent to Main Memory?
 
-
 .. shortanswer:: intro-SA-SecMemory
 
    What is the human equivalent to Secondary Memory?
@@ -114,10 +119,3 @@ Exercises
 .. shortanswer:: intro-SA-syntaxError
 
    How do you fix a "Syntax Error"?
-
-.. activecode:: intro-AC-fix
-    :nocodelens:
-
-    Try running the following code.  Can you tell what is wrong with it and fix it?
-    ~~~~
-    primt 'Hello world!'
