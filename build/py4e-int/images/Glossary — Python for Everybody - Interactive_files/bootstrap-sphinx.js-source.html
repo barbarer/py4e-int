@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title><title><no title></title></title>
+  <meta http-equiv="content-type" content="text/html; charset=None">
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css">
+</head>
+<body>
+<h2><title><no title></title></h2>
+
+<div class="highlight"><pre><span></span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
+  <span class="cm">/**</span>
+<span class="cm">   * Patch TOC list.</span>
+<span class="cm">   *</span>
+<span class="cm">   * Will mutate the underlying span to have a correct ul for nav.</span>
+<span class="cm">   *</span>
+<span class="cm">   * @param $span: Span containing nested UL&#39;s to mutate.</span>
+<span class="cm">   * @param minLevel: Starting level for nested lists. (1: global, 2: local).</span>
+<span class="cm">   */</span>
+  <span class="kd">var</span> <span class="nx">patchToc</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">$ul</span><span class="p">,</span> <span class="nx">minLevel</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">findA</span><span class="p">,</span>
+      <span class="nx">patchTables</span><span class="p">,</span>
+      <span class="nx">$localLi</span><span class="p">;</span>
+
+    <span class="c1">// Find all a &quot;internal&quot; tags, traversing recursively.</span>
+    <span class="nx">findA</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">$elem</span><span class="p">,</span> <span class="nx">level</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">level</span> <span class="o">=</span> <span class="nx">level</span> <span class="o">||</span> <span class="mi">0</span><span class="p">;</span>
+      <span class="kd">var</span> <span class="nx">$items</span> <span class="o">=</span> <span class="nx">$elem</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;&gt; li &gt; a.internal, &gt; ul, &gt; li &gt; ul&quot;</span><span class="p">);</span>
+
+      <span class="c1">// Iterate everything in order.</span>
+      <span class="nx">$items</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">$item</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">item</span><span class="p">),</span>
+          <span class="nx">tag</span> <span class="o">=</span> <span class="nx">item</span><span class="p">.</span><span class="nx">tagName</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">(),</span>
+          <span class="nx">$childrenLi</span> <span class="o">=</span> <span class="nx">$item</span><span class="p">.</span><span class="nx">children</span><span class="p">(</span><span class="s1">&#39;li&#39;</span><span class="p">),</span>
+          <span class="nx">$parentLi</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">$item</span><span class="p">.</span><span class="nx">parent</span><span class="p">(</span><span class="s1">&#39;li&#39;</span><span class="p">),</span> <span class="nx">$item</span><span class="p">.</span><span class="nx">parent</span><span class="p">().</span><span class="nx">parent</span><span class="p">(</span><span class="s1">&#39;li&#39;</span><span class="p">));</span>
+
+        <span class="c1">// Add dropdowns if more children and above minimum level.</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">tag</span> <span class="o">===</span> <span class="s1">&#39;ul&#39;</span> <span class="o">&amp;&amp;</span> <span class="nx">level</span> <span class="o">&gt;=</span> <span class="nx">minLevel</span> <span class="o">&amp;&amp;</span> <span class="nx">$childrenLi</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">$parentLi</span>
+            <span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;dropdown-submenu&#39;</span><span class="p">)</span>
+            <span class="p">.</span><span class="nx">children</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">).</span><span class="nx">first</span><span class="p">().</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;tabindex&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+
+          <span class="nx">$item</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;dropdown-menu&#39;</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="nx">findA</span><span class="p">(</span><span class="nx">$item</span><span class="p">,</span> <span class="nx">level</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+      <span class="p">});</span>
+    <span class="p">};</span>
+
+    <span class="nx">findA</span><span class="p">(</span><span class="nx">$ul</span><span class="p">);</span>
+  <span class="p">};</span>
+
+  <span class="cm">/**</span>
+<span class="cm">   * Patch all tables to remove ``docutils`` class and add Bootstrap base</span>
+<span class="cm">   * ``table`` class.</span>
+<span class="cm">   */</span>
+  <span class="nx">patchTables</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;table.docutils&quot;</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="s2">&quot;docutils&quot;</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;table&quot;</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;border&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+  <span class="p">};</span>
+
+  <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+
+    <span class="cm">/*</span>
+<span class="cm">     * Scroll the window to avoid the topnav bar</span>
+<span class="cm">     * https://github.com/twitter/bootstrap/issues/1768</span>
+<span class="cm">     */</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#navbar.navbar-fixed-top&quot;</span><span class="p">).</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">navHeight</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#navbar&quot;</span><span class="p">).</span><span class="nx">height</span><span class="p">(),</span>
+        <span class="nx">shiftWindow</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">scrollBy</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="nx">navHeight</span> <span class="o">-</span> <span class="mi">10</span><span class="p">);</span> <span class="p">};</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="nx">location</span><span class="p">.</span><span class="nx">hash</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">shiftWindow</span><span class="p">();</span>
+      <span class="p">}</span>
+
+      <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;hashchange&quot;</span><span class="p">,</span> <span class="nx">shiftWindow</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Add styling, structure to TOC&#39;s.</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.dropdown-menu&quot;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+      <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;ul&quot;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="nx">item</span><span class="p">){</span>
+        <span class="kd">var</span> <span class="nx">$item</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
+        <span class="nx">$item</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;unstyled&#39;</span><span class="p">);</span>
+      <span class="p">});</span>
+    <span class="p">});</span>
+
+    <span class="c1">// Global TOC.</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;ul.globaltoc li&quot;</span><span class="p">).</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">patchToc</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;ul.globaltoc&quot;</span><span class="p">),</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="c1">// Remove Global TOC.</span>
+      <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.globaltoc-container&quot;</span><span class="p">).</span><span class="nx">remove</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Local TOC.</span>
+    <span class="nx">patchToc</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;ul.localtoc&quot;</span><span class="p">),</span> <span class="mi">2</span><span class="p">);</span>
+
+    <span class="c1">// Mutate sub-lists (for bs-2.3.0).</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.dropdown-menu ul&quot;</span><span class="p">).</span><span class="nx">not</span><span class="p">(</span><span class="s2">&quot;.dropdown-menu&quot;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">$ul</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">),</span>
+        <span class="nx">$parent</span> <span class="o">=</span> <span class="nx">$ul</span><span class="p">.</span><span class="nx">parent</span><span class="p">(),</span>
+        <span class="nx">tag</span> <span class="o">=</span> <span class="nx">$parent</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">tagName</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">(),</span>
+        <span class="nx">$kids</span> <span class="o">=</span> <span class="nx">$ul</span><span class="p">.</span><span class="nx">children</span><span class="p">().</span><span class="nx">detach</span><span class="p">();</span>
+
+      <span class="c1">// Replace list with items if submenu header.</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">tag</span> <span class="o">===</span> <span class="s2">&quot;ul&quot;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$ul</span><span class="p">.</span><span class="nx">replaceWith</span><span class="p">(</span><span class="nx">$kids</span><span class="p">);</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">tag</span> <span class="o">===</span> <span class="s2">&quot;li&quot;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Insert into previous list.</span>
+        <span class="nx">$parent</span><span class="p">.</span><span class="nx">after</span><span class="p">(</span><span class="nx">$kids</span><span class="p">);</span>
+        <span class="nx">$ul</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+
+    <span class="c1">// Add divider in page TOC.</span>
+    <span class="nx">$localLi</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;ul.localtoc li&quot;</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">$localLi</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">$localLi</span><span class="p">.</span><span class="nx">first</span><span class="p">().</span><span class="nx">after</span><span class="p">(</span><span class="s1">&#39;&lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Enable dropdown.</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.dropdown-toggle&#39;</span><span class="p">).</span><span class="nx">dropdown</span><span class="p">();</span>
+
+    <span class="c1">// Patch tables.</span>
+    <span class="nx">patchTables</span><span class="p">();</span>
+
+    <span class="c1">// Add Note, Warning styles.</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;div.note&#39;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;alert&#39;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;alert-info&#39;</span><span class="p">);</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;div.warning&#39;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;alert&#39;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;alert-warning&#39;</span><span class="p">);</span>
+
+    <span class="c1">// Inline code styles to Bootstrap style.</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;tt.docutils.literal&#39;</span><span class="p">).</span><span class="nx">not</span><span class="p">(</span><span class="s2">&quot;.xref&quot;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// ignore references</span>
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">$</span><span class="p">(</span><span class="nx">e</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">hasClass</span><span class="p">(</span><span class="s2">&quot;reference&quot;</span><span class="p">))</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="nx">e</span><span class="p">).</span><span class="nx">replaceWith</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;&lt;code /&gt;&quot;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">text</span><span class="p">());</span>
+        <span class="p">});</span>
+      <span class="p">}});</span>
+  <span class="p">});</span>
+<span class="p">}(</span><span class="nx">$jqTheme</span> <span class="o">||</span> <span class="nb">window</span><span class="p">.</span><span class="nx">jQuery</span><span class="p">));</span>
+</pre></div>
+</body>
+</html>

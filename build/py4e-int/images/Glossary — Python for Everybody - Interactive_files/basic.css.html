@@ -1,0 +1,1981 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>&lt;no title&gt; &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=DB047029" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone-custom-sphinx-bootstrap.css?v=5.0.8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../../_static/sql-wasm.js?v=44FE0709"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../../_static/html4css1.css?v=4D8F3FB4"></script>
+    <script src="../../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../../_static/runestone.js?v=3EAD674C"></script>
+    <script src="../../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <script src="../../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../../_static/theme.js?v=D899FB97"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = true;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'py4e-int';
+    eBookConfig.basecourse = 'py4e-int';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("../../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        
+        <a class="navbar-brand" href="../../index.html" aria-label="index-page">
+          
+          py4e-int
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span aria-label="Social" class="visuallyhidden">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span aria-label="User" class="visuallyhidden">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span aria-label="Help" class="visuallyhidden">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/runestone/static/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=basic.css'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+  
+  <dl>
+<dt>/*</dt><dd><ul>
+<li><p>basic.css</p></li>
+<li><div class="system-message">
+<p class="system-message-title">System Message: SEVERE/4 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 3)</p>
+<p>Unexpected section title or transition.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">~~~~~~~~~</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li></li>
+<li><p>Sphinx stylesheet – basic theme.</p></li>
+<li></li>
+<li><dl class="field-list simple">
+<dt class="field-odd">copyright</dt>
+<dd class="field-odd"><p>Copyright 2007-2020 by the Sphinx team, see AUTHORS.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="field-list simple">
+<dt class="field-odd">license</dt>
+<dd class="field-odd"><p>BSD, see LICENSE for details.</p>
+</dd>
+</dl>
+</li>
+<li></li>
+</ul>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 10)</p>
+<p>Bullet list ends without a blank line; unexpected unindent.</p>
+</div>
+<p><a href="#id1"><span class="problematic" id="id2">*</span></a>/</p>
+<div class="system-message" id="id1">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 10); <em><a href="#id2">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+</dd>
+</dl>
+<p>/* – main layout ———————————————————– <a href="#id3"><span class="problematic" id="id4">*</span></a>/</p>
+<div class="system-message" id="id3">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 12); <em><a href="#id4">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<dl class="simple">
+<dt>div.clearer {</dt><dd><p>clear: both;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 16)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* – relbar —————————————————————- <a href="#id5"><span class="problematic" id="id6">*</span></a>/</p>
+<div class="system-message" id="id5">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 18); <em><a href="#id6">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<dl class="simple">
+<dt>div.related {</dt><dd><p>width: 100%;
+font-size: 90%;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 23)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.related h3 {</dt><dd><p>display: none;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 27)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.related ul {</dt><dd><p>margin: 0;
+padding: 0 0 0 10px;
+list-style: none;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 33)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.related li {</dt><dd><p>display: inline;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 37)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.related li.right {</dt><dd><p>float: right;
+margin-right: 5px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 42)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* – sidebar ————————————————————— <a href="#id7"><span class="problematic" id="id8">*</span></a>/</p>
+<div class="system-message" id="id7">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 44); <em><a href="#id8">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<dl class="simple">
+<dt>div.sphinxsidebarwrapper {</dt><dd><p>padding: 10px 5px 0 10px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 48)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.sphinxsidebar {</dt><dd><p>float: left;
+width: 230px;
+margin-left: -100%;
+font-size: 90%;
+word-wrap: break-word;
+overflow-wrap : break-word;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 57)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.sphinxsidebar ul {</dt><dd><p>list-style: none;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 61)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>div.sphinxsidebar ul ul,
+div.sphinxsidebar ul.want-points {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 65)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>margin-left: 20px;
+list-style: square;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 67)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.sphinxsidebar ul ul {</dt><dd><p>margin-top: 0;
+margin-bottom: 0;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 72)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.sphinxsidebar form {</dt><dd><p>margin-top: 10px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 76)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.sphinxsidebar input {</dt><dd><p>border: 1px solid #98dbcc;
+font-family: sans-serif;
+font-size: 1em;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 82)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.sphinxsidebar #searchbox form.search {</dt><dd><p>overflow: hidden;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 86)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.sphinxsidebar #searchbox input[type=”text”] {</dt><dd><p>float: left;
+width: 80%;
+padding: 0.25em;
+box-sizing: border-box;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 93)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.sphinxsidebar #searchbox input[type=”submit”] {</dt><dd><p>float: left;
+width: 20%;
+border-left: none;
+padding: 0.25em;
+box-sizing: border-box;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 101)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>img {</dt><dd><p>border: 0;
+max-width: 100%;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 107)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* – search page ———————————————————– <a href="#id9"><span class="problematic" id="id10">*</span></a>/</p>
+<div class="system-message" id="id9">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 109); <em><a href="#id10">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<dl class="simple">
+<dt>ul.search {</dt><dd><p>margin: 10px 0 0 20px;
+padding: 0;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 114)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>ul.search li {</dt><dd><p>padding: 5px 0 5px 20px;
+background-image: url(file.png);
+background-repeat: no-repeat;
+background-position: 0 7px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 121)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>ul.search li a {</dt><dd><p>font-weight: bold;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 125)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>ul.search li div.context {</dt><dd><p>color: #888;
+margin: 2px 0 0 30px;
+text-align: left;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 131)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>ul.keywordmatches li.goodmatch a {</dt><dd><p>font-weight: bold;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 135)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* – index page ———————————————————— <a href="#id11"><span class="problematic" id="id12">*</span></a>/</p>
+<div class="system-message" id="id11">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 137); <em><a href="#id12">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<dl class="simple">
+<dt>table.contentstable {</dt><dd><p>width: 90%;
+margin-left: auto;
+margin-right: auto;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 143)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>table.contentstable p.biglink {</dt><dd><p>line-height: 150%;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 147)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>a.biglink {</dt><dd><p>font-size: 1.3em;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 151)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>span.linkdescr {</dt><dd><p>font-style: italic;
+padding-top: 5px;
+font-size: 90%;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 157)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* – general index ——————————————————— <a href="#id13"><span class="problematic" id="id14">*</span></a>/</p>
+<div class="system-message" id="id13">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 159); <em><a href="#id14">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<dl class="simple">
+<dt>table.indextable {</dt><dd><p>width: 100%;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 163)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>table.indextable td {</dt><dd><p>text-align: left;
+vertical-align: top;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 168)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>table.indextable ul {</dt><dd><p>margin-top: 0;
+margin-bottom: 0;
+list-style-type: none;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 174)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>table.indextable &gt; tbody &gt; tr &gt; td &gt; ul {</dt><dd><p>padding-left: 0em;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 178)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>table.indextable tr.pcap {</dt><dd><p>height: 10px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 182)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>table.indextable tr.cap {</dt><dd><p>margin-top: 10px;
+background-color: #f2f2f2;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 187)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>img.toggler {</dt><dd><p>margin-right: 3px;
+margin-top: 3px;
+cursor: pointer;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 193)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.modindex-jumpbox {</dt><dd><p>border-top: 1px solid #ddd;
+border-bottom: 1px solid #ddd;
+margin: 1em 0 1em 0;
+padding: 0.4em;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 200)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.genindex-jumpbox {</dt><dd><p>border-top: 1px solid #ddd;
+border-bottom: 1px solid #ddd;
+margin: 1em 0 1em 0;
+padding: 0.4em;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 207)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* – domain module index ————————————————— <a href="#id15"><span class="problematic" id="id16">*</span></a>/</p>
+<div class="system-message" id="id15">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 209); <em><a href="#id16">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<dl class="simple">
+<dt>table.modindextable td {</dt><dd><p>padding: 2px;
+border-collapse: collapse;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 214)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* – general body styles ————————————————— <a href="#id17"><span class="problematic" id="id18">*</span></a>/</p>
+<div class="system-message" id="id17">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 216); <em><a href="#id18">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<dl class="simple">
+<dt>div.body {</dt><dd><p>min-width: 450px;
+max-width: 800px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 221)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.body p, div.body dd, div.body li, div.body blockquote {</dt><dd><p>-moz-hyphens: auto;
+-ms-hyphens: auto;
+-webkit-hyphens: auto;
+hyphens: auto;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 228)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>a.headerlink {</dt><dd><p>visibility: hidden;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 232)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>a.brackets:before,
+span.brackets &gt; a:before{</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 236)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>content: “[“;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 237)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>a.brackets:after,
+span.brackets &gt; a:after {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 241)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>content: “]”;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 242)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>h1:hover &gt; a.headerlink,
+h2:hover &gt; a.headerlink,
+h3:hover &gt; a.headerlink,
+h4:hover &gt; a.headerlink,
+h5:hover &gt; a.headerlink,
+h6:hover &gt; a.headerlink,
+dt:hover &gt; a.headerlink,
+caption:hover &gt; a.headerlink,
+p.caption:hover &gt; a.headerlink,
+div.code-block-caption:hover &gt; a.headerlink {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 254)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>visibility: visible;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 255)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.body p.caption {</dt><dd><p>text-align: inherit;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 259)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.body td {</dt><dd><p>text-align: left;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 263)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.first {</dt><dd><p>margin-top: 0 !important;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 267)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>p.rubric {</dt><dd><p>margin-top: 30px;
+font-weight: bold;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 272)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>img.align-left, .figure.align-left, object.align-left {</dt><dd><p>clear: left;
+float: left;
+margin-right: 1em;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 278)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>img.align-right, .figure.align-right, object.align-right {</dt><dd><p>clear: right;
+float: right;
+margin-left: 1em;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 284)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>img.align-center, .figure.align-center, object.align-center {</dt><dd><p>display: block;
+margin-left: auto;
+margin-right: auto;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 290)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>img.align-default, .figure.align-default {</dt><dd><p>display: block;
+margin-left: auto;
+margin-right: auto;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 296)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.align-left {</dt><dd><p>text-align: left;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 300)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.align-center {</dt><dd><p>text-align: center;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 304)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.align-default {</dt><dd><p>text-align: center;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 308)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.align-right {</dt><dd><p>text-align: right;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 312)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* – sidebars ————————————————————– <a href="#id19"><span class="problematic" id="id20">*</span></a>/</p>
+<div class="system-message" id="id19">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 314); <em><a href="#id20">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<dl class="simple">
+<dt>div.sidebar {</dt><dd><p>margin: 0 0 0.5em 1em;
+border: 1px solid #ddb;
+padding: 7px 7px 0 7px;
+background-color: #ffe;
+width: 40%;
+float: right;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 323)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>p.sidebar-title {</dt><dd><p>font-weight: bold;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 327)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* – topics —————————————————————- <a href="#id21"><span class="problematic" id="id22">*</span></a>/</p>
+<div class="system-message" id="id21">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 329); <em><a href="#id22">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<dl class="simple">
+<dt>div.topic {</dt><dd><p>border: 1px solid #ccc;
+padding: 7px 7px 0 7px;
+margin: 10px 0 10px 0;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 335)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>p.topic-title {</dt><dd><p>font-size: 1.1em;
+font-weight: bold;
+margin-top: 10px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 341)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* – admonitions ———————————————————– <a href="#id23"><span class="problematic" id="id24">*</span></a>/</p>
+<div class="system-message" id="id23">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 343); <em><a href="#id24">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<dl class="simple">
+<dt>div.admonition {</dt><dd><p>margin-top: 10px;
+margin-bottom: 10px;
+padding: 7px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 349)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.admonition dt {</dt><dd><p>font-weight: bold;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 353)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.admonition dl {</dt><dd><p>margin-bottom: 0;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 357)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>p.admonition-title {</dt><dd><p>margin: 0px 10px 5px 0px;
+font-weight: bold;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 362)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.body p.centered {</dt><dd><p>text-align: center;
+margin-top: 25px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 367)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* – tables —————————————————————- <a href="#id25"><span class="problematic" id="id26">*</span></a>/</p>
+<div class="system-message" id="id25">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 369); <em><a href="#id26">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<dl class="simple">
+<dt>table.docutils {</dt><dd><p>border: 0;
+border-collapse: collapse;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 374)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>table.align-center {</dt><dd><p>margin-left: auto;
+margin-right: auto;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 379)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>table.align-default {</dt><dd><p>margin-left: auto;
+margin-right: auto;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 384)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>table caption span.caption-number {</dt><dd><p>font-style: italic;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 388)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>table caption span.caption-text {
+}</p>
+<dl class="simple">
+<dt>table.docutils td, table.docutils th {</dt><dd><p>padding: 1px 8px 1px 5px;
+border-top: 0;
+border-left: 0;
+border-right: 0;
+border-bottom: 1px solid #aaa;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 399)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>table.footnote td, table.footnote th {</dt><dd><p>border: 0 !important;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 403)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>th {</dt><dd><p>text-align: left;
+padding-right: 5px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 408)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>table.citation {</dt><dd><p>border-left: solid 1px gray;
+margin-left: 1px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 413)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>table.citation td {</dt><dd><p>border-bottom: none;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 417)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>th &gt; p:first-child,
+td &gt; p:first-child {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 421)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>margin-top: 0px;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 422)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>th &gt; p:last-child,
+td &gt; p:last-child {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 426)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>margin-bottom: 0px;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 427)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* – figures ————————————————————— <a href="#id27"><span class="problematic" id="id28">*</span></a>/</p>
+<div class="system-message" id="id27">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 429); <em><a href="#id28">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<dl class="simple">
+<dt>div.figure {</dt><dd><p>margin: 0.5em;
+padding: 0.5em;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 434)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.figure p.caption {</dt><dd><p>padding: 0.3em;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 438)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.figure p.caption span.caption-number {</dt><dd><p>font-style: italic;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 442)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>div.figure p.caption span.caption-text {
+}</p>
+<p>/* – field list styles —————————————————– <a href="#id29"><span class="problematic" id="id30">*</span></a>/</p>
+<div class="system-message" id="id29">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 447); <em><a href="#id30">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<dl class="simple">
+<dt>table.field-list td, table.field-list th {</dt><dd><p>border: 0 !important;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 451)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.field-list ul {</dt><dd><p>margin: 0;
+padding-left: 1em;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 456)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.field-list p {</dt><dd><p>margin: 0;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 460)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.field-name {</dt><dd><p>-moz-hyphens: manual;
+-ms-hyphens: manual;
+-webkit-hyphens: manual;
+hyphens: manual;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 467)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* – hlist styles ———————————————————- <a href="#id31"><span class="problematic" id="id32">*</span></a>/</p>
+<div class="system-message" id="id31">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 469); <em><a href="#id32">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<dl class="simple">
+<dt>table.hlist td {</dt><dd><p>vertical-align: top;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 473)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* – other body styles —————————————————– <a href="#id33"><span class="problematic" id="id34">*</span></a>/</p>
+<div class="system-message" id="id33">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 476); <em><a href="#id34">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<dl class="simple">
+<dt>ol.arabic {</dt><dd><p>list-style: decimal;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 480)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>ol.loweralpha {</dt><dd><p>list-style: lower-alpha;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 484)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>ol.upperalpha {</dt><dd><p>list-style: upper-alpha;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 488)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>ol.lowerroman {</dt><dd><p>list-style: lower-roman;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 492)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>ol.upperroman {</dt><dd><p>list-style: upper-roman;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 496)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>li &gt; p:first-child {</dt><dd><p>margin-top: 0px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 500)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>li &gt; p:last-child {</dt><dd><p>margin-bottom: 0px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 504)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>dl.footnote &gt; dt,
+dl.citation &gt; dt {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 508)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>float: left;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 509)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>dl.footnote &gt; dd,
+dl.citation &gt; dd {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 513)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>margin-bottom: 0em;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 514)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>dl.footnote &gt; dd:after,
+dl.citation &gt; dd:after {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 518)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>content: “”;
+clear: both;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 520)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>dl.field-list {</dt><dd><p>display: grid;
+grid-template-columns: fit-content(30%) auto;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 525)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>dl.field-list &gt; dt {</dt><dd><p>font-weight: bold;
+word-break: break-word;
+padding-left: 0.5em;
+padding-right: 5px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 532)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>dl.field-list &gt; dt:after {</dt><dd><p>content: “:”;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 536)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>dl.field-list &gt; dd {</dt><dd><p>padding-left: 0.5em;
+margin-top: 0em;
+margin-left: 0em;
+margin-bottom: 0em;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 543)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>dl {</dt><dd><p>margin-bottom: 15px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 547)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>dd &gt; p:first-child {</dt><dd><p>margin-top: 0px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 551)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>dd ul, dd table {</dt><dd><p>margin-bottom: 10px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 555)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>dd {</dt><dd><p>margin-top: 3px;
+margin-bottom: 10px;
+margin-left: 30px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 561)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>dt:target, span.highlighted {</dt><dd><p>background-color: #fbe54e;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 565)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>rect.highlighted {</dt><dd><p>fill: #fbe54e;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 569)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>dl.glossary dt {</dt><dd><p>font-weight: bold;
+font-size: 1.1em;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 574)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.optional {</dt><dd><p>font-size: 1.3em;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 578)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.sig-paren {</dt><dd><p>font-size: larger;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 582)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.versionmodified {</dt><dd><p>font-style: italic;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 586)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.system-message {</dt><dd><p>background-color: #fda;
+padding: 5px;
+border: 3px solid red;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 592)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.footnote:target  {</dt><dd><p>background-color: #ffa;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 596)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.line-block {</dt><dd><p>display: block;
+margin-top: 1em;
+margin-bottom: 1em;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 602)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.line-block .line-block {</dt><dd><p>margin-top: 0;
+margin-bottom: 0;
+margin-left: 1.5em;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 608)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.guilabel, .menuselection {</dt><dd><p>font-family: sans-serif;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 612)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.accelerator {</dt><dd><p>text-decoration: underline;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 616)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.classifier {</dt><dd><p>font-style: oblique;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 620)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.classifier:before {</dt><dd><p>font-style: normal;
+margin: 0.5em;
+content: “:”;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 626)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>abbr, acronym {</dt><dd><p>border-bottom: dotted 1px;
+cursor: help;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 631)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* – code displays ——————————————————— <a href="#id35"><span class="problematic" id="id36">*</span></a>/</p>
+<div class="system-message" id="id35">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 633); <em><a href="#id36">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<dl>
+<dt>pre {</dt><dd><p>overflow: auto;
+overflow-y: hidden;  /* fixes display issues on Chrome browsers <a href="#id37"><span class="problematic" id="id38">*</span></a>/</p>
+<div class="system-message" id="id37">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 636); <em><a href="#id38">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 638)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>span.pre {</dt><dd><p>-moz-hyphens: none;
+-ms-hyphens: none;
+-webkit-hyphens: none;
+hyphens: none;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 645)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>td.linenos pre {</dt><dd><p>padding: 5px 0px;
+border: 0;
+background-color: transparent;
+color: #aaa;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 652)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>table.highlighttable {</dt><dd><p>margin-left: 0.5em;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 656)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>table.highlighttable td {</dt><dd><p>padding: 0 0.5em 0 0.5em;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 660)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.code-block-caption {</dt><dd><p>padding: 2px 5px;
+font-size: small;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 665)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.code-block-caption code {</dt><dd><p>background-color: transparent;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 669)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.code-block-caption + div &gt; div.highlight &gt; pre {</dt><dd><p>margin-top: 0;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 673)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl>
+<dt>div.doctest &gt; div.highlight span.gp {  /* gp: Generic.Prompt <a href="#id39"><span class="problematic" id="id40">*</span></a>/</dt><dd><div class="system-message" id="id39">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 675); <em><a href="#id40">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<p>user-select: none;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 677)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.code-block-caption span.caption-number {</dt><dd><p>padding: 0.1em 0.3em;
+font-style: italic;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 682)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>div.code-block-caption span.caption-text {
+}</p>
+<dl class="simple">
+<dt>div.literal-block-wrapper {</dt><dd><p>padding: 1em 1em 0;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 689)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.literal-block-wrapper div.highlight {</dt><dd><p>margin: 0;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 693)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>code.descname {</dt><dd><p>background-color: transparent;
+font-weight: bold;
+font-size: 1.2em;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 699)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>code.descclassname {</dt><dd><p>background-color: transparent;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 703)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>code.xref, a code {</dt><dd><p>background-color: transparent;
+font-weight: bold;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 708)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {</dt><dd><p>background-color: transparent;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 712)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.viewcode-link {</dt><dd><p>float: right;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 716)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>.viewcode-back {</dt><dd><p>float: right;
+font-family: sans-serif;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 721)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.viewcode-block:target {</dt><dd><p>margin: -1px -10px;
+padding: 0 10px;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 726)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* – math display ———————————————————- <a href="#id41"><span class="problematic" id="id42">*</span></a>/</p>
+<div class="system-message" id="id41">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 728); <em><a href="#id42">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<dl class="simple">
+<dt>img.math {</dt><dd><p>vertical-align: middle;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 732)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.body div.math p {</dt><dd><p>text-align: center;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 736)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>span.eqno {</dt><dd><p>float: right;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 740)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>span.eqno a.headerlink {</dt><dd><p>position: relative;
+left: 0px;
+z-index: 1;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 746)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<dl class="simple">
+<dt>div.math:hover a.headerlink {</dt><dd><p>visibility: visible;</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 750)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>/* – printout stylesheet ————————————————— <a href="#id43"><span class="problematic" id="id44">*</span></a>/</p>
+<div class="system-message" id="id43">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 752); <em><a href="#id44">backlink</a></em></p>
+<p>Inline emphasis start-string without end-string.</p>
+</div>
+<dl>
+<dt>&#64;media print {</dt><dd><p>div.document,
+div.documentwrapper,
+div.bodywrapper {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 758)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>margin: 0 !important;
+width: 100%;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 760)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+<p>div.sphinxsidebar,
+div.related,
+div.footer,
+#top-link {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 766)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote>
+<div><p>display: none;</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 767)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/barbarer/Documents/GitHub/py4e-int/_sources/images/Glossary — Python for Everybody - Interactive_files/basic.css</span>, line 768)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<p>}</p>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 - Based on Python for Everybody.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>language_data.js &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/accessibility.css?v=DB047029" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone-custom-sphinx-bootstrap.css?v=5.0.8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../../_static/sql-wasm.js?v=44FE0709"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../../_static/html4css1.css?v=4D8F3FB4"></script>
+    <script src="../../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../../_static/runestone.js?v=3EAD674C"></script>
+    <script src="../../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
+    <script src="../../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../../_static/theme.js?v=D899FB97"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = true;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'py4e-int';
+    eBookConfig.basecourse = 'py4e-int';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("../../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        
+        <a class="navbar-brand" href="../../index.html" aria-label="index-page">
+          
+          py4e-int
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span aria-label="Social" class="visuallyhidden">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span aria-label="User" class="visuallyhidden">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span aria-label="Help" class="visuallyhidden">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/runestone/static/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=language_data.js'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+  
+  <script type="text/javascript">function CodeChat_doStyle(element) {function walk_tree(elements,func_walk,func_child) {let walk_children = [];for (let index = 0; index < elements.length; ++index) {let that = elements[index];while (that && !func_walk(that)) {that = that.parentElement;}if (that) {that = func_walk(that);walk_children.push(that);while (that && func_child(that)) {that = func_child(that);walk_children.push(that);}}}return walk_children;};element = (typeof element !== 'undefined') ? element : document;let code = element.getElementsByClassName("fenced-code");walk_tree(code, x => x.nextElementSibling, x => x.firstElementChild).map(x =>x.classList.add('CodeChat_noTop'));walk_tree(code, x => x.previousElementSibling, x => x.lastElementChild).map(x =>x.classList.add('CodeChat_noBottom'));}document.addEventListener("DOMContentLoaded", function(event) { CodeChat_doStyle(); });</script><div class="section" id="language-data-js">
+<h1>language_data.js<a class="headerlink" href="#language-data-js" title="Permalink to this headline">¶</a></h1>
+<p>This script contains the language-specific data used by searchtools.js,
+namely the list of stopwords, stemmer, scorer and splitter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">copyright</dt>
+<dd class="field-odd"><p>Copyright 2007-2020 by the Sphinx team, see AUTHORS.</p>
+</dd>
+<dt class="field-even">license</dt>
+<dd class="field-even"><p>BSD, see LICENSE for details.</p>
+</dd>
+</dl>
+<div class="code fenced-code highlight-js notranslate"><div class="highlight"><pre><span></span> 
+<span class="kd">var</span> <span class="nx">stopwords</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;and&quot;</span><span class="p">,</span><span class="s2">&quot;are&quot;</span><span class="p">,</span><span class="s2">&quot;as&quot;</span><span class="p">,</span><span class="s2">&quot;at&quot;</span><span class="p">,</span><span class="s2">&quot;be&quot;</span><span class="p">,</span><span class="s2">&quot;but&quot;</span><span class="p">,</span><span class="s2">&quot;by&quot;</span><span class="p">,</span><span class="s2">&quot;for&quot;</span><span class="p">,</span><span class="s2">&quot;if&quot;</span><span class="p">,</span><span class="s2">&quot;in&quot;</span><span class="p">,</span><span class="s2">&quot;into&quot;</span><span class="p">,</span><span class="s2">&quot;is&quot;</span><span class="p">,</span><span class="s2">&quot;it&quot;</span><span class="p">,</span><span class="s2">&quot;near&quot;</span><span class="p">,</span><span class="s2">&quot;no&quot;</span><span class="p">,</span><span class="s2">&quot;not&quot;</span><span class="p">,</span><span class="s2">&quot;of&quot;</span><span class="p">,</span><span class="s2">&quot;on&quot;</span><span class="p">,</span><span class="s2">&quot;or&quot;</span><span class="p">,</span><span class="s2">&quot;such&quot;</span><span class="p">,</span><span class="s2">&quot;that&quot;</span><span class="p">,</span><span class="s2">&quot;the&quot;</span><span class="p">,</span><span class="s2">&quot;their&quot;</span><span class="p">,</span><span class="s2">&quot;then&quot;</span><span class="p">,</span><span class="s2">&quot;there&quot;</span><span class="p">,</span><span class="s2">&quot;these&quot;</span><span class="p">,</span><span class="s2">&quot;they&quot;</span><span class="p">,</span><span class="s2">&quot;this&quot;</span><span class="p">,</span><span class="s2">&quot;to&quot;</span><span class="p">,</span><span class="s2">&quot;was&quot;</span><span class="p">,</span><span class="s2">&quot;will&quot;</span><span class="p">,</span><span class="s2">&quot;with&quot;</span><span class="p">];</span>
+ 
+ 
+</pre></div>
+</div>
+<p>Non-minified version JS is _stemmer.js if file is provided</p>
+<div class="code fenced-code highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Porter Stemmer</span>
+<span class="cm"> */</span>
+<span class="kd">var</span> <span class="nx">Stemmer</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="kd">var</span> <span class="nx">step2list</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">ational</span><span class="o">:</span> <span class="s1">&#39;ate&#39;</span><span class="p">,</span>
+    <span class="nx">tional</span><span class="o">:</span> <span class="s1">&#39;tion&#39;</span><span class="p">,</span>
+    <span class="nx">enci</span><span class="o">:</span> <span class="s1">&#39;ence&#39;</span><span class="p">,</span>
+    <span class="nx">anci</span><span class="o">:</span> <span class="s1">&#39;ance&#39;</span><span class="p">,</span>
+    <span class="nx">izer</span><span class="o">:</span> <span class="s1">&#39;ize&#39;</span><span class="p">,</span>
+    <span class="nx">bli</span><span class="o">:</span> <span class="s1">&#39;ble&#39;</span><span class="p">,</span>
+    <span class="nx">alli</span><span class="o">:</span> <span class="s1">&#39;al&#39;</span><span class="p">,</span>
+    <span class="nx">entli</span><span class="o">:</span> <span class="s1">&#39;ent&#39;</span><span class="p">,</span>
+    <span class="nx">eli</span><span class="o">:</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span>
+    <span class="nx">ousli</span><span class="o">:</span> <span class="s1">&#39;ous&#39;</span><span class="p">,</span>
+    <span class="nx">ization</span><span class="o">:</span> <span class="s1">&#39;ize&#39;</span><span class="p">,</span>
+    <span class="nx">ation</span><span class="o">:</span> <span class="s1">&#39;ate&#39;</span><span class="p">,</span>
+    <span class="nx">ator</span><span class="o">:</span> <span class="s1">&#39;ate&#39;</span><span class="p">,</span>
+    <span class="nx">alism</span><span class="o">:</span> <span class="s1">&#39;al&#39;</span><span class="p">,</span>
+    <span class="nx">iveness</span><span class="o">:</span> <span class="s1">&#39;ive&#39;</span><span class="p">,</span>
+    <span class="nx">fulness</span><span class="o">:</span> <span class="s1">&#39;ful&#39;</span><span class="p">,</span>
+    <span class="nx">ousness</span><span class="o">:</span> <span class="s1">&#39;ous&#39;</span><span class="p">,</span>
+    <span class="nx">aliti</span><span class="o">:</span> <span class="s1">&#39;al&#39;</span><span class="p">,</span>
+    <span class="nx">iviti</span><span class="o">:</span> <span class="s1">&#39;ive&#39;</span><span class="p">,</span>
+    <span class="nx">biliti</span><span class="o">:</span> <span class="s1">&#39;ble&#39;</span><span class="p">,</span>
+    <span class="nx">logi</span><span class="o">:</span> <span class="s1">&#39;log&#39;</span>
+  <span class="p">};</span>
+
+  <span class="kd">var</span> <span class="nx">step3list</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">icate</span><span class="o">:</span> <span class="s1">&#39;ic&#39;</span><span class="p">,</span>
+    <span class="nx">ative</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="nx">alize</span><span class="o">:</span> <span class="s1">&#39;al&#39;</span><span class="p">,</span>
+    <span class="nx">iciti</span><span class="o">:</span> <span class="s1">&#39;ic&#39;</span><span class="p">,</span>
+    <span class="nx">ical</span><span class="o">:</span> <span class="s1">&#39;ic&#39;</span><span class="p">,</span>
+    <span class="nx">ful</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="nx">ness</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>
+  <span class="p">};</span>
+
+  <span class="kd">var</span> <span class="nx">c</span> <span class="o">=</span> <span class="s2">&quot;[^aeiou]&quot;</span><span class="p">;</span>          <span class="c1">// consonant</span>
+  <span class="kd">var</span> <span class="nx">v</span> <span class="o">=</span> <span class="s2">&quot;[aeiouy]&quot;</span><span class="p">;</span>          <span class="c1">// vowel</span>
+  <span class="kd">var</span> <span class="nx">C</span> <span class="o">=</span> <span class="nx">c</span> <span class="o">+</span> <span class="s2">&quot;[^aeiouy]*&quot;</span><span class="p">;</span>    <span class="c1">// consonant sequence</span>
+  <span class="kd">var</span> <span class="nx">V</span> <span class="o">=</span> <span class="nx">v</span> <span class="o">+</span> <span class="s2">&quot;[aeiou]*&quot;</span><span class="p">;</span>      <span class="c1">// vowel sequence</span>
+
+  <span class="kd">var</span> <span class="nx">mgr0</span> <span class="o">=</span> <span class="s2">&quot;^(&quot;</span> <span class="o">+</span> <span class="nx">C</span> <span class="o">+</span> <span class="s2">&quot;)?&quot;</span> <span class="o">+</span> <span class="nx">V</span> <span class="o">+</span> <span class="nx">C</span><span class="p">;</span>                      <span class="c1">// [C]VC... is m&gt;0</span>
+  <span class="kd">var</span> <span class="nx">meq1</span> <span class="o">=</span> <span class="s2">&quot;^(&quot;</span> <span class="o">+</span> <span class="nx">C</span> <span class="o">+</span> <span class="s2">&quot;)?&quot;</span> <span class="o">+</span> <span class="nx">V</span> <span class="o">+</span> <span class="nx">C</span> <span class="o">+</span> <span class="s2">&quot;(&quot;</span> <span class="o">+</span> <span class="nx">V</span> <span class="o">+</span> <span class="s2">&quot;)?$&quot;</span><span class="p">;</span>    <span class="c1">// [C]VC[V] is m=1</span>
+  <span class="kd">var</span> <span class="nx">mgr1</span> <span class="o">=</span> <span class="s2">&quot;^(&quot;</span> <span class="o">+</span> <span class="nx">C</span> <span class="o">+</span> <span class="s2">&quot;)?&quot;</span> <span class="o">+</span> <span class="nx">V</span> <span class="o">+</span> <span class="nx">C</span> <span class="o">+</span> <span class="nx">V</span> <span class="o">+</span> <span class="nx">C</span><span class="p">;</span>              <span class="c1">// [C]VCVC... is m&gt;1</span>
+  <span class="kd">var</span> <span class="nx">s_v</span>   <span class="o">=</span> <span class="s2">&quot;^(&quot;</span> <span class="o">+</span> <span class="nx">C</span> <span class="o">+</span> <span class="s2">&quot;)?&quot;</span> <span class="o">+</span> <span class="nx">v</span><span class="p">;</span>                         <span class="c1">// vowel in stem</span>
+
+  <span class="k">this</span><span class="p">.</span><span class="nx">stemWord</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">w</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">stem</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">suffix</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">firstch</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">origword</span> <span class="o">=</span> <span class="nx">w</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">w</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span>
+      <span class="k">return</span> <span class="nx">w</span><span class="p">;</span>
+
+    <span class="kd">var</span> <span class="nx">re</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">re2</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">re3</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">re4</span><span class="p">;</span>
+
+    <span class="nx">firstch</span> <span class="o">=</span> <span class="nx">w</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">firstch</span> <span class="o">==</span> <span class="s2">&quot;y&quot;</span><span class="p">)</span>
+      <span class="nx">w</span> <span class="o">=</span> <span class="nx">firstch</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">()</span> <span class="o">+</span> <span class="nx">w</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+ 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:2.0em;"><p>Step 1a</p>
+</div><div class="code fenced-code highlight-js notranslate"><div class="highlight"><pre><span></span>    <span class="nx">re</span> <span class="o">=</span> <span class="sr">/^(.+?)(ss|i)es$/</span><span class="p">;</span>
+    <span class="nx">re2</span> <span class="o">=</span> <span class="sr">/^(.+?)([^s])s$/</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">re</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">w</span><span class="p">))</span>
+      <span class="nx">w</span> <span class="o">=</span> <span class="nx">w</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">re</span><span class="p">,</span><span class="s2">&quot;$1$2&quot;</span><span class="p">);</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">re2</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">w</span><span class="p">))</span>
+      <span class="nx">w</span> <span class="o">=</span> <span class="nx">w</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">re2</span><span class="p">,</span><span class="s2">&quot;$1$2&quot;</span><span class="p">);</span>
+ 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:2.0em;"><p>Step 1b</p>
+</div><div class="code fenced-code highlight-js notranslate"><div class="highlight"><pre><span></span>    <span class="nx">re</span> <span class="o">=</span> <span class="sr">/^(.+?)eed$/</span><span class="p">;</span>
+    <span class="nx">re2</span> <span class="o">=</span> <span class="sr">/^(.+?)(ed|ing)$/</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">re</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">w</span><span class="p">))</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">fp</span> <span class="o">=</span> <span class="nx">re</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">w</span><span class="p">);</span>
+      <span class="nx">re</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="nx">mgr0</span><span class="p">);</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">re</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">fp</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="p">{</span>
+        <span class="nx">re</span> <span class="o">=</span> <span class="sr">/.$/</span><span class="p">;</span>
+        <span class="nx">w</span> <span class="o">=</span> <span class="nx">w</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">re</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">re2</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">w</span><span class="p">))</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">fp</span> <span class="o">=</span> <span class="nx">re2</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">w</span><span class="p">);</span>
+      <span class="nx">stem</span> <span class="o">=</span> <span class="nx">fp</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+      <span class="nx">re2</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="nx">s_v</span><span class="p">);</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">re2</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">stem</span><span class="p">))</span> <span class="p">{</span>
+        <span class="nx">w</span> <span class="o">=</span> <span class="nx">stem</span><span class="p">;</span>
+        <span class="nx">re2</span> <span class="o">=</span> <span class="sr">/(at|bl|iz)$/</span><span class="p">;</span>
+        <span class="nx">re3</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="s2">&quot;([^aeiouylsz])\\1$&quot;</span><span class="p">);</span>
+        <span class="nx">re4</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="s2">&quot;^&quot;</span> <span class="o">+</span> <span class="nx">C</span> <span class="o">+</span> <span class="nx">v</span> <span class="o">+</span> <span class="s2">&quot;[^aeiouwxy]$&quot;</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">re2</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">w</span><span class="p">))</span>
+          <span class="nx">w</span> <span class="o">=</span> <span class="nx">w</span> <span class="o">+</span> <span class="s2">&quot;e&quot;</span><span class="p">;</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">re3</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">w</span><span class="p">))</span> <span class="p">{</span>
+          <span class="nx">re</span> <span class="o">=</span> <span class="sr">/.$/</span><span class="p">;</span>
+          <span class="nx">w</span> <span class="o">=</span> <span class="nx">w</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">re</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">re4</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">w</span><span class="p">))</span>
+          <span class="nx">w</span> <span class="o">=</span> <span class="nx">w</span> <span class="o">+</span> <span class="s2">&quot;e&quot;</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+ 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:2.0em;"><p>Step 1c</p>
+</div><div class="code fenced-code highlight-js notranslate"><div class="highlight"><pre><span></span>    <span class="nx">re</span> <span class="o">=</span> <span class="sr">/^(.+?)y$/</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">re</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">w</span><span class="p">))</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">fp</span> <span class="o">=</span> <span class="nx">re</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">w</span><span class="p">);</span>
+      <span class="nx">stem</span> <span class="o">=</span> <span class="nx">fp</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+      <span class="nx">re</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="nx">s_v</span><span class="p">);</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">re</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">stem</span><span class="p">))</span>
+        <span class="nx">w</span> <span class="o">=</span> <span class="nx">stem</span> <span class="o">+</span> <span class="s2">&quot;i&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+ 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:2.0em;"><p>Step 2</p>
+</div><div class="code fenced-code highlight-js notranslate"><div class="highlight"><pre><span></span>    <span class="nx">re</span> <span class="o">=</span> <span class="sr">/^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$/</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">re</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">w</span><span class="p">))</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">fp</span> <span class="o">=</span> <span class="nx">re</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">w</span><span class="p">);</span>
+      <span class="nx">stem</span> <span class="o">=</span> <span class="nx">fp</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+      <span class="nx">suffix</span> <span class="o">=</span> <span class="nx">fp</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+      <span class="nx">re</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="nx">mgr0</span><span class="p">);</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">re</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">stem</span><span class="p">))</span>
+        <span class="nx">w</span> <span class="o">=</span> <span class="nx">stem</span> <span class="o">+</span> <span class="nx">step2list</span><span class="p">[</span><span class="nx">suffix</span><span class="p">];</span>
+    <span class="p">}</span>
+ 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:2.0em;"><p>Step 3</p>
+</div><div class="code fenced-code highlight-js notranslate"><div class="highlight"><pre><span></span>    <span class="nx">re</span> <span class="o">=</span> <span class="sr">/^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">re</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">w</span><span class="p">))</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">fp</span> <span class="o">=</span> <span class="nx">re</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">w</span><span class="p">);</span>
+      <span class="nx">stem</span> <span class="o">=</span> <span class="nx">fp</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+      <span class="nx">suffix</span> <span class="o">=</span> <span class="nx">fp</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+      <span class="nx">re</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="nx">mgr0</span><span class="p">);</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">re</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">stem</span><span class="p">))</span>
+        <span class="nx">w</span> <span class="o">=</span> <span class="nx">stem</span> <span class="o">+</span> <span class="nx">step3list</span><span class="p">[</span><span class="nx">suffix</span><span class="p">];</span>
+    <span class="p">}</span>
+ 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:2.0em;"><p>Step 4</p>
+</div><div class="code fenced-code highlight-js notranslate"><div class="highlight"><pre><span></span>    <span class="nx">re</span> <span class="o">=</span> <span class="sr">/^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$/</span><span class="p">;</span>
+    <span class="nx">re2</span> <span class="o">=</span> <span class="sr">/^(.+?)(s|t)(ion)$/</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">re</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">w</span><span class="p">))</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">fp</span> <span class="o">=</span> <span class="nx">re</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">w</span><span class="p">);</span>
+      <span class="nx">stem</span> <span class="o">=</span> <span class="nx">fp</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+      <span class="nx">re</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="nx">mgr1</span><span class="p">);</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">re</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">stem</span><span class="p">))</span>
+        <span class="nx">w</span> <span class="o">=</span> <span class="nx">stem</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">re2</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">w</span><span class="p">))</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">fp</span> <span class="o">=</span> <span class="nx">re2</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">w</span><span class="p">);</span>
+      <span class="nx">stem</span> <span class="o">=</span> <span class="nx">fp</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="nx">fp</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+      <span class="nx">re2</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="nx">mgr1</span><span class="p">);</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">re2</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">stem</span><span class="p">))</span>
+        <span class="nx">w</span> <span class="o">=</span> <span class="nx">stem</span><span class="p">;</span>
+    <span class="p">}</span>
+ 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:2.0em;"><p>Step 5</p>
+</div><div class="code fenced-code highlight-js notranslate"><div class="highlight"><pre><span></span>    <span class="nx">re</span> <span class="o">=</span> <span class="sr">/^(.+?)e$/</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">re</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">w</span><span class="p">))</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">fp</span> <span class="o">=</span> <span class="nx">re</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">w</span><span class="p">);</span>
+      <span class="nx">stem</span> <span class="o">=</span> <span class="nx">fp</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+      <span class="nx">re</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="nx">mgr1</span><span class="p">);</span>
+      <span class="nx">re2</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="nx">meq1</span><span class="p">);</span>
+      <span class="nx">re3</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="s2">&quot;^&quot;</span> <span class="o">+</span> <span class="nx">C</span> <span class="o">+</span> <span class="nx">v</span> <span class="o">+</span> <span class="s2">&quot;[^aeiouwxy]$&quot;</span><span class="p">);</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">re</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">stem</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="nx">re2</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">stem</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="p">(</span><span class="nx">re3</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">stem</span><span class="p">))))</span>
+        <span class="nx">w</span> <span class="o">=</span> <span class="nx">stem</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nx">re</span> <span class="o">=</span> <span class="sr">/ll$/</span><span class="p">;</span>
+    <span class="nx">re2</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="nx">mgr1</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">re</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">w</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">re2</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">w</span><span class="p">))</span> <span class="p">{</span>
+      <span class="nx">re</span> <span class="o">=</span> <span class="sr">/.$/</span><span class="p">;</span>
+      <span class="nx">w</span> <span class="o">=</span> <span class="nx">w</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">re</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+ 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:2.0em;"><p>and turn initial Y back to y</p>
+</div><div class="code fenced-code highlight-js notranslate"><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">firstch</span> <span class="o">==</span> <span class="s2">&quot;y&quot;</span><span class="p">)</span>
+      <span class="nx">w</span> <span class="o">=</span> <span class="nx">firstch</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span> <span class="o">+</span> <span class="nx">w</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">w</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+
+
+
+
+<span class="kd">var</span> <span class="nx">splitChars</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">{};</span>
+    <span class="kd">var</span> <span class="nx">singles</span> <span class="o">=</span> <span class="p">[</span><span class="mi">96</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">187</span><span class="p">,</span> <span class="mi">191</span><span class="p">,</span> <span class="mi">215</span><span class="p">,</span> <span class="mi">247</span><span class="p">,</span> <span class="mi">749</span><span class="p">,</span> <span class="mi">885</span><span class="p">,</span> <span class="mi">903</span><span class="p">,</span> <span class="mi">907</span><span class="p">,</span> <span class="mi">909</span><span class="p">,</span> <span class="mi">930</span><span class="p">,</span> <span class="mi">1014</span><span class="p">,</span> <span class="mi">1648</span><span class="p">,</span>
+         <span class="mi">1748</span><span class="p">,</span> <span class="mi">1809</span><span class="p">,</span> <span class="mi">2416</span><span class="p">,</span> <span class="mi">2473</span><span class="p">,</span> <span class="mi">2481</span><span class="p">,</span> <span class="mi">2526</span><span class="p">,</span> <span class="mi">2601</span><span class="p">,</span> <span class="mi">2609</span><span class="p">,</span> <span class="mi">2612</span><span class="p">,</span> <span class="mi">2615</span><span class="p">,</span> <span class="mi">2653</span><span class="p">,</span> <span class="mi">2702</span><span class="p">,</span>
+         <span class="mi">2706</span><span class="p">,</span> <span class="mi">2729</span><span class="p">,</span> <span class="mi">2737</span><span class="p">,</span> <span class="mi">2740</span><span class="p">,</span> <span class="mi">2857</span><span class="p">,</span> <span class="mi">2865</span><span class="p">,</span> <span class="mi">2868</span><span class="p">,</span> <span class="mi">2910</span><span class="p">,</span> <span class="mi">2928</span><span class="p">,</span> <span class="mi">2948</span><span class="p">,</span> <span class="mi">2961</span><span class="p">,</span> <span class="mi">2971</span><span class="p">,</span>
+         <span class="mi">2973</span><span class="p">,</span> <span class="mi">3085</span><span class="p">,</span> <span class="mi">3089</span><span class="p">,</span> <span class="mi">3113</span><span class="p">,</span> <span class="mi">3124</span><span class="p">,</span> <span class="mi">3213</span><span class="p">,</span> <span class="mi">3217</span><span class="p">,</span> <span class="mi">3241</span><span class="p">,</span> <span class="mi">3252</span><span class="p">,</span> <span class="mi">3295</span><span class="p">,</span> <span class="mi">3341</span><span class="p">,</span> <span class="mi">3345</span><span class="p">,</span>
+         <span class="mi">3369</span><span class="p">,</span> <span class="mi">3506</span><span class="p">,</span> <span class="mi">3516</span><span class="p">,</span> <span class="mi">3633</span><span class="p">,</span> <span class="mi">3715</span><span class="p">,</span> <span class="mi">3721</span><span class="p">,</span> <span class="mi">3736</span><span class="p">,</span> <span class="mi">3744</span><span class="p">,</span> <span class="mi">3748</span><span class="p">,</span> <span class="mi">3750</span><span class="p">,</span> <span class="mi">3756</span><span class="p">,</span> <span class="mi">3761</span><span class="p">,</span>
+         <span class="mi">3781</span><span class="p">,</span> <span class="mi">3912</span><span class="p">,</span> <span class="mi">4239</span><span class="p">,</span> <span class="mi">4347</span><span class="p">,</span> <span class="mi">4681</span><span class="p">,</span> <span class="mi">4695</span><span class="p">,</span> <span class="mi">4697</span><span class="p">,</span> <span class="mi">4745</span><span class="p">,</span> <span class="mi">4785</span><span class="p">,</span> <span class="mi">4799</span><span class="p">,</span> <span class="mi">4801</span><span class="p">,</span> <span class="mi">4823</span><span class="p">,</span>
+         <span class="mi">4881</span><span class="p">,</span> <span class="mi">5760</span><span class="p">,</span> <span class="mi">5901</span><span class="p">,</span> <span class="mi">5997</span><span class="p">,</span> <span class="mi">6313</span><span class="p">,</span> <span class="mi">7405</span><span class="p">,</span> <span class="mi">8024</span><span class="p">,</span> <span class="mi">8026</span><span class="p">,</span> <span class="mi">8028</span><span class="p">,</span> <span class="mi">8030</span><span class="p">,</span> <span class="mi">8117</span><span class="p">,</span> <span class="mi">8125</span><span class="p">,</span>
+         <span class="mi">8133</span><span class="p">,</span> <span class="mi">8181</span><span class="p">,</span> <span class="mi">8468</span><span class="p">,</span> <span class="mi">8485</span><span class="p">,</span> <span class="mi">8487</span><span class="p">,</span> <span class="mi">8489</span><span class="p">,</span> <span class="mi">8494</span><span class="p">,</span> <span class="mi">8527</span><span class="p">,</span> <span class="mi">11311</span><span class="p">,</span> <span class="mi">11359</span><span class="p">,</span> <span class="mi">11687</span><span class="p">,</span> <span class="mi">11695</span><span class="p">,</span>
+         <span class="mi">11703</span><span class="p">,</span> <span class="mi">11711</span><span class="p">,</span> <span class="mi">11719</span><span class="p">,</span> <span class="mi">11727</span><span class="p">,</span> <span class="mi">11735</span><span class="p">,</span> <span class="mi">12448</span><span class="p">,</span> <span class="mi">12539</span><span class="p">,</span> <span class="mi">43010</span><span class="p">,</span> <span class="mi">43014</span><span class="p">,</span> <span class="mi">43019</span><span class="p">,</span> <span class="mi">43587</span><span class="p">,</span>
+         <span class="mi">43696</span><span class="p">,</span> <span class="mi">43713</span><span class="p">,</span> <span class="mi">64286</span><span class="p">,</span> <span class="mi">64297</span><span class="p">,</span> <span class="mi">64311</span><span class="p">,</span> <span class="mi">64317</span><span class="p">,</span> <span class="mi">64319</span><span class="p">,</span> <span class="mi">64322</span><span class="p">,</span> <span class="mi">64325</span><span class="p">,</span> <span class="mi">65141</span><span class="p">];</span>
+    <span class="kd">var</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">j</span><span class="p">,</span> <span class="nx">start</span><span class="p">,</span> <span class="nx">end</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">singles</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">result</span><span class="p">[</span><span class="nx">singles</span><span class="p">[</span><span class="nx">i</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">var</span> <span class="nx">ranges</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">47</span><span class="p">],</span> <span class="p">[</span><span class="mi">58</span><span class="p">,</span> <span class="mi">64</span><span class="p">],</span> <span class="p">[</span><span class="mi">91</span><span class="p">,</span> <span class="mi">94</span><span class="p">],</span> <span class="p">[</span><span class="mi">123</span><span class="p">,</span> <span class="mi">169</span><span class="p">],</span> <span class="p">[</span><span class="mi">171</span><span class="p">,</span> <span class="mi">177</span><span class="p">],</span> <span class="p">[</span><span class="mi">182</span><span class="p">,</span> <span class="mi">184</span><span class="p">],</span> <span class="p">[</span><span class="mi">706</span><span class="p">,</span> <span class="mi">709</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">722</span><span class="p">,</span> <span class="mi">735</span><span class="p">],</span> <span class="p">[</span><span class="mi">741</span><span class="p">,</span> <span class="mi">747</span><span class="p">],</span> <span class="p">[</span><span class="mi">751</span><span class="p">,</span> <span class="mi">879</span><span class="p">],</span> <span class="p">[</span><span class="mi">888</span><span class="p">,</span> <span class="mi">889</span><span class="p">],</span> <span class="p">[</span><span class="mi">894</span><span class="p">,</span> <span class="mi">901</span><span class="p">],</span> <span class="p">[</span><span class="mi">1154</span><span class="p">,</span> <span class="mi">1161</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">1318</span><span class="p">,</span> <span class="mi">1328</span><span class="p">],</span> <span class="p">[</span><span class="mi">1367</span><span class="p">,</span> <span class="mi">1368</span><span class="p">],</span> <span class="p">[</span><span class="mi">1370</span><span class="p">,</span> <span class="mi">1376</span><span class="p">],</span> <span class="p">[</span><span class="mi">1416</span><span class="p">,</span> <span class="mi">1487</span><span class="p">],</span> <span class="p">[</span><span class="mi">1515</span><span class="p">,</span> <span class="mi">1519</span><span class="p">],</span> <span class="p">[</span><span class="mi">1523</span><span class="p">,</span> <span class="mi">1568</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">1611</span><span class="p">,</span> <span class="mi">1631</span><span class="p">],</span> <span class="p">[</span><span class="mi">1642</span><span class="p">,</span> <span class="mi">1645</span><span class="p">],</span> <span class="p">[</span><span class="mi">1750</span><span class="p">,</span> <span class="mi">1764</span><span class="p">],</span> <span class="p">[</span><span class="mi">1767</span><span class="p">,</span> <span class="mi">1773</span><span class="p">],</span> <span class="p">[</span><span class="mi">1789</span><span class="p">,</span> <span class="mi">1790</span><span class="p">],</span> <span class="p">[</span><span class="mi">1792</span><span class="p">,</span> <span class="mi">1807</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">1840</span><span class="p">,</span> <span class="mi">1868</span><span class="p">],</span> <span class="p">[</span><span class="mi">1958</span><span class="p">,</span> <span class="mi">1968</span><span class="p">],</span> <span class="p">[</span><span class="mi">1970</span><span class="p">,</span> <span class="mi">1983</span><span class="p">],</span> <span class="p">[</span><span class="mi">2027</span><span class="p">,</span> <span class="mi">2035</span><span class="p">],</span> <span class="p">[</span><span class="mi">2038</span><span class="p">,</span> <span class="mi">2041</span><span class="p">],</span> <span class="p">[</span><span class="mi">2043</span><span class="p">,</span> <span class="mi">2047</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">2070</span><span class="p">,</span> <span class="mi">2073</span><span class="p">],</span> <span class="p">[</span><span class="mi">2075</span><span class="p">,</span> <span class="mi">2083</span><span class="p">],</span> <span class="p">[</span><span class="mi">2085</span><span class="p">,</span> <span class="mi">2087</span><span class="p">],</span> <span class="p">[</span><span class="mi">2089</span><span class="p">,</span> <span class="mi">2307</span><span class="p">],</span> <span class="p">[</span><span class="mi">2362</span><span class="p">,</span> <span class="mi">2364</span><span class="p">],</span> <span class="p">[</span><span class="mi">2366</span><span class="p">,</span> <span class="mi">2383</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">2385</span><span class="p">,</span> <span class="mi">2391</span><span class="p">],</span> <span class="p">[</span><span class="mi">2402</span><span class="p">,</span> <span class="mi">2405</span><span class="p">],</span> <span class="p">[</span><span class="mi">2419</span><span class="p">,</span> <span class="mi">2424</span><span class="p">],</span> <span class="p">[</span><span class="mi">2432</span><span class="p">,</span> <span class="mi">2436</span><span class="p">],</span> <span class="p">[</span><span class="mi">2445</span><span class="p">,</span> <span class="mi">2446</span><span class="p">],</span> <span class="p">[</span><span class="mi">2449</span><span class="p">,</span> <span class="mi">2450</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">2483</span><span class="p">,</span> <span class="mi">2485</span><span class="p">],</span> <span class="p">[</span><span class="mi">2490</span><span class="p">,</span> <span class="mi">2492</span><span class="p">],</span> <span class="p">[</span><span class="mi">2494</span><span class="p">,</span> <span class="mi">2509</span><span class="p">],</span> <span class="p">[</span><span class="mi">2511</span><span class="p">,</span> <span class="mi">2523</span><span class="p">],</span> <span class="p">[</span><span class="mi">2530</span><span class="p">,</span> <span class="mi">2533</span><span class="p">],</span> <span class="p">[</span><span class="mi">2546</span><span class="p">,</span> <span class="mi">2547</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">2554</span><span class="p">,</span> <span class="mi">2564</span><span class="p">],</span> <span class="p">[</span><span class="mi">2571</span><span class="p">,</span> <span class="mi">2574</span><span class="p">],</span> <span class="p">[</span><span class="mi">2577</span><span class="p">,</span> <span class="mi">2578</span><span class="p">],</span> <span class="p">[</span><span class="mi">2618</span><span class="p">,</span> <span class="mi">2648</span><span class="p">],</span> <span class="p">[</span><span class="mi">2655</span><span class="p">,</span> <span class="mi">2661</span><span class="p">],</span> <span class="p">[</span><span class="mi">2672</span><span class="p">,</span> <span class="mi">2673</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">2677</span><span class="p">,</span> <span class="mi">2692</span><span class="p">],</span> <span class="p">[</span><span class="mi">2746</span><span class="p">,</span> <span class="mi">2748</span><span class="p">],</span> <span class="p">[</span><span class="mi">2750</span><span class="p">,</span> <span class="mi">2767</span><span class="p">],</span> <span class="p">[</span><span class="mi">2769</span><span class="p">,</span> <span class="mi">2783</span><span class="p">],</span> <span class="p">[</span><span class="mi">2786</span><span class="p">,</span> <span class="mi">2789</span><span class="p">],</span> <span class="p">[</span><span class="mi">2800</span><span class="p">,</span> <span class="mi">2820</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">2829</span><span class="p">,</span> <span class="mi">2830</span><span class="p">],</span> <span class="p">[</span><span class="mi">2833</span><span class="p">,</span> <span class="mi">2834</span><span class="p">],</span> <span class="p">[</span><span class="mi">2874</span><span class="p">,</span> <span class="mi">2876</span><span class="p">],</span> <span class="p">[</span><span class="mi">2878</span><span class="p">,</span> <span class="mi">2907</span><span class="p">],</span> <span class="p">[</span><span class="mi">2914</span><span class="p">,</span> <span class="mi">2917</span><span class="p">],</span> <span class="p">[</span><span class="mi">2930</span><span class="p">,</span> <span class="mi">2946</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">2955</span><span class="p">,</span> <span class="mi">2957</span><span class="p">],</span> <span class="p">[</span><span class="mi">2966</span><span class="p">,</span> <span class="mi">2968</span><span class="p">],</span> <span class="p">[</span><span class="mi">2976</span><span class="p">,</span> <span class="mi">2978</span><span class="p">],</span> <span class="p">[</span><span class="mi">2981</span><span class="p">,</span> <span class="mi">2983</span><span class="p">],</span> <span class="p">[</span><span class="mi">2987</span><span class="p">,</span> <span class="mi">2989</span><span class="p">],</span> <span class="p">[</span><span class="mi">3002</span><span class="p">,</span> <span class="mi">3023</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">3025</span><span class="p">,</span> <span class="mi">3045</span><span class="p">],</span> <span class="p">[</span><span class="mi">3059</span><span class="p">,</span> <span class="mi">3076</span><span class="p">],</span> <span class="p">[</span><span class="mi">3130</span><span class="p">,</span> <span class="mi">3132</span><span class="p">],</span> <span class="p">[</span><span class="mi">3134</span><span class="p">,</span> <span class="mi">3159</span><span class="p">],</span> <span class="p">[</span><span class="mi">3162</span><span class="p">,</span> <span class="mi">3167</span><span class="p">],</span> <span class="p">[</span><span class="mi">3170</span><span class="p">,</span> <span class="mi">3173</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">3184</span><span class="p">,</span> <span class="mi">3191</span><span class="p">],</span> <span class="p">[</span><span class="mi">3199</span><span class="p">,</span> <span class="mi">3204</span><span class="p">],</span> <span class="p">[</span><span class="mi">3258</span><span class="p">,</span> <span class="mi">3260</span><span class="p">],</span> <span class="p">[</span><span class="mi">3262</span><span class="p">,</span> <span class="mi">3293</span><span class="p">],</span> <span class="p">[</span><span class="mi">3298</span><span class="p">,</span> <span class="mi">3301</span><span class="p">],</span> <span class="p">[</span><span class="mi">3312</span><span class="p">,</span> <span class="mi">3332</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">3386</span><span class="p">,</span> <span class="mi">3388</span><span class="p">],</span> <span class="p">[</span><span class="mi">3390</span><span class="p">,</span> <span class="mi">3423</span><span class="p">],</span> <span class="p">[</span><span class="mi">3426</span><span class="p">,</span> <span class="mi">3429</span><span class="p">],</span> <span class="p">[</span><span class="mi">3446</span><span class="p">,</span> <span class="mi">3449</span><span class="p">],</span> <span class="p">[</span><span class="mi">3456</span><span class="p">,</span> <span class="mi">3460</span><span class="p">],</span> <span class="p">[</span><span class="mi">3479</span><span class="p">,</span> <span class="mi">3481</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">3518</span><span class="p">,</span> <span class="mi">3519</span><span class="p">],</span> <span class="p">[</span><span class="mi">3527</span><span class="p">,</span> <span class="mi">3584</span><span class="p">],</span> <span class="p">[</span><span class="mi">3636</span><span class="p">,</span> <span class="mi">3647</span><span class="p">],</span> <span class="p">[</span><span class="mi">3655</span><span class="p">,</span> <span class="mi">3663</span><span class="p">],</span> <span class="p">[</span><span class="mi">3674</span><span class="p">,</span> <span class="mi">3712</span><span class="p">],</span> <span class="p">[</span><span class="mi">3717</span><span class="p">,</span> <span class="mi">3718</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">3723</span><span class="p">,</span> <span class="mi">3724</span><span class="p">],</span> <span class="p">[</span><span class="mi">3726</span><span class="p">,</span> <span class="mi">3731</span><span class="p">],</span> <span class="p">[</span><span class="mi">3752</span><span class="p">,</span> <span class="mi">3753</span><span class="p">],</span> <span class="p">[</span><span class="mi">3764</span><span class="p">,</span> <span class="mi">3772</span><span class="p">],</span> <span class="p">[</span><span class="mi">3774</span><span class="p">,</span> <span class="mi">3775</span><span class="p">],</span> <span class="p">[</span><span class="mi">3783</span><span class="p">,</span> <span class="mi">3791</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">3802</span><span class="p">,</span> <span class="mi">3803</span><span class="p">],</span> <span class="p">[</span><span class="mi">3806</span><span class="p">,</span> <span class="mi">3839</span><span class="p">],</span> <span class="p">[</span><span class="mi">3841</span><span class="p">,</span> <span class="mi">3871</span><span class="p">],</span> <span class="p">[</span><span class="mi">3892</span><span class="p">,</span> <span class="mi">3903</span><span class="p">],</span> <span class="p">[</span><span class="mi">3949</span><span class="p">,</span> <span class="mi">3975</span><span class="p">],</span> <span class="p">[</span><span class="mi">3980</span><span class="p">,</span> <span class="mi">4095</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">4139</span><span class="p">,</span> <span class="mi">4158</span><span class="p">],</span> <span class="p">[</span><span class="mi">4170</span><span class="p">,</span> <span class="mi">4175</span><span class="p">],</span> <span class="p">[</span><span class="mi">4182</span><span class="p">,</span> <span class="mi">4185</span><span class="p">],</span> <span class="p">[</span><span class="mi">4190</span><span class="p">,</span> <span class="mi">4192</span><span class="p">],</span> <span class="p">[</span><span class="mi">4194</span><span class="p">,</span> <span class="mi">4196</span><span class="p">],</span> <span class="p">[</span><span class="mi">4199</span><span class="p">,</span> <span class="mi">4205</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">4209</span><span class="p">,</span> <span class="mi">4212</span><span class="p">],</span> <span class="p">[</span><span class="mi">4226</span><span class="p">,</span> <span class="mi">4237</span><span class="p">],</span> <span class="p">[</span><span class="mi">4250</span><span class="p">,</span> <span class="mi">4255</span><span class="p">],</span> <span class="p">[</span><span class="mi">4294</span><span class="p">,</span> <span class="mi">4303</span><span class="p">],</span> <span class="p">[</span><span class="mi">4349</span><span class="p">,</span> <span class="mi">4351</span><span class="p">],</span> <span class="p">[</span><span class="mi">4686</span><span class="p">,</span> <span class="mi">4687</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">4702</span><span class="p">,</span> <span class="mi">4703</span><span class="p">],</span> <span class="p">[</span><span class="mi">4750</span><span class="p">,</span> <span class="mi">4751</span><span class="p">],</span> <span class="p">[</span><span class="mi">4790</span><span class="p">,</span> <span class="mi">4791</span><span class="p">],</span> <span class="p">[</span><span class="mi">4806</span><span class="p">,</span> <span class="mi">4807</span><span class="p">],</span> <span class="p">[</span><span class="mi">4886</span><span class="p">,</span> <span class="mi">4887</span><span class="p">],</span> <span class="p">[</span><span class="mi">4955</span><span class="p">,</span> <span class="mi">4968</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">4989</span><span class="p">,</span> <span class="mi">4991</span><span class="p">],</span> <span class="p">[</span><span class="mi">5008</span><span class="p">,</span> <span class="mi">5023</span><span class="p">],</span> <span class="p">[</span><span class="mi">5109</span><span class="p">,</span> <span class="mi">5120</span><span class="p">],</span> <span class="p">[</span><span class="mi">5741</span><span class="p">,</span> <span class="mi">5742</span><span class="p">],</span> <span class="p">[</span><span class="mi">5787</span><span class="p">,</span> <span class="mi">5791</span><span class="p">],</span> <span class="p">[</span><span class="mi">5867</span><span class="p">,</span> <span class="mi">5869</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">5873</span><span class="p">,</span> <span class="mi">5887</span><span class="p">],</span> <span class="p">[</span><span class="mi">5906</span><span class="p">,</span> <span class="mi">5919</span><span class="p">],</span> <span class="p">[</span><span class="mi">5938</span><span class="p">,</span> <span class="mi">5951</span><span class="p">],</span> <span class="p">[</span><span class="mi">5970</span><span class="p">,</span> <span class="mi">5983</span><span class="p">],</span> <span class="p">[</span><span class="mi">6001</span><span class="p">,</span> <span class="mi">6015</span><span class="p">],</span> <span class="p">[</span><span class="mi">6068</span><span class="p">,</span> <span class="mi">6102</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">6104</span><span class="p">,</span> <span class="mi">6107</span><span class="p">],</span> <span class="p">[</span><span class="mi">6109</span><span class="p">,</span> <span class="mi">6111</span><span class="p">],</span> <span class="p">[</span><span class="mi">6122</span><span class="p">,</span> <span class="mi">6127</span><span class="p">],</span> <span class="p">[</span><span class="mi">6138</span><span class="p">,</span> <span class="mi">6159</span><span class="p">],</span> <span class="p">[</span><span class="mi">6170</span><span class="p">,</span> <span class="mi">6175</span><span class="p">],</span> <span class="p">[</span><span class="mi">6264</span><span class="p">,</span> <span class="mi">6271</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">6315</span><span class="p">,</span> <span class="mi">6319</span><span class="p">],</span> <span class="p">[</span><span class="mi">6390</span><span class="p">,</span> <span class="mi">6399</span><span class="p">],</span> <span class="p">[</span><span class="mi">6429</span><span class="p">,</span> <span class="mi">6469</span><span class="p">],</span> <span class="p">[</span><span class="mi">6510</span><span class="p">,</span> <span class="mi">6511</span><span class="p">],</span> <span class="p">[</span><span class="mi">6517</span><span class="p">,</span> <span class="mi">6527</span><span class="p">],</span> <span class="p">[</span><span class="mi">6572</span><span class="p">,</span> <span class="mi">6592</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">6600</span><span class="p">,</span> <span class="mi">6607</span><span class="p">],</span> <span class="p">[</span><span class="mi">6619</span><span class="p">,</span> <span class="mi">6655</span><span class="p">],</span> <span class="p">[</span><span class="mi">6679</span><span class="p">,</span> <span class="mi">6687</span><span class="p">],</span> <span class="p">[</span><span class="mi">6741</span><span class="p">,</span> <span class="mi">6783</span><span class="p">],</span> <span class="p">[</span><span class="mi">6794</span><span class="p">,</span> <span class="mi">6799</span><span class="p">],</span> <span class="p">[</span><span class="mi">6810</span><span class="p">,</span> <span class="mi">6822</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">6824</span><span class="p">,</span> <span class="mi">6916</span><span class="p">],</span> <span class="p">[</span><span class="mi">6964</span><span class="p">,</span> <span class="mi">6980</span><span class="p">],</span> <span class="p">[</span><span class="mi">6988</span><span class="p">,</span> <span class="mi">6991</span><span class="p">],</span> <span class="p">[</span><span class="mi">7002</span><span class="p">,</span> <span class="mi">7042</span><span class="p">],</span> <span class="p">[</span><span class="mi">7073</span><span class="p">,</span> <span class="mi">7085</span><span class="p">],</span> <span class="p">[</span><span class="mi">7098</span><span class="p">,</span> <span class="mi">7167</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">7204</span><span class="p">,</span> <span class="mi">7231</span><span class="p">],</span> <span class="p">[</span><span class="mi">7242</span><span class="p">,</span> <span class="mi">7244</span><span class="p">],</span> <span class="p">[</span><span class="mi">7294</span><span class="p">,</span> <span class="mi">7400</span><span class="p">],</span> <span class="p">[</span><span class="mi">7410</span><span class="p">,</span> <span class="mi">7423</span><span class="p">],</span> <span class="p">[</span><span class="mi">7616</span><span class="p">,</span> <span class="mi">7679</span><span class="p">],</span> <span class="p">[</span><span class="mi">7958</span><span class="p">,</span> <span class="mi">7959</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">7966</span><span class="p">,</span> <span class="mi">7967</span><span class="p">],</span> <span class="p">[</span><span class="mi">8006</span><span class="p">,</span> <span class="mi">8007</span><span class="p">],</span> <span class="p">[</span><span class="mi">8014</span><span class="p">,</span> <span class="mi">8015</span><span class="p">],</span> <span class="p">[</span><span class="mi">8062</span><span class="p">,</span> <span class="mi">8063</span><span class="p">],</span> <span class="p">[</span><span class="mi">8127</span><span class="p">,</span> <span class="mi">8129</span><span class="p">],</span> <span class="p">[</span><span class="mi">8141</span><span class="p">,</span> <span class="mi">8143</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">8148</span><span class="p">,</span> <span class="mi">8149</span><span class="p">],</span> <span class="p">[</span><span class="mi">8156</span><span class="p">,</span> <span class="mi">8159</span><span class="p">],</span> <span class="p">[</span><span class="mi">8173</span><span class="p">,</span> <span class="mi">8177</span><span class="p">],</span> <span class="p">[</span><span class="mi">8189</span><span class="p">,</span> <span class="mi">8303</span><span class="p">],</span> <span class="p">[</span><span class="mi">8306</span><span class="p">,</span> <span class="mi">8307</span><span class="p">],</span> <span class="p">[</span><span class="mi">8314</span><span class="p">,</span> <span class="mi">8318</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">8330</span><span class="p">,</span> <span class="mi">8335</span><span class="p">],</span> <span class="p">[</span><span class="mi">8341</span><span class="p">,</span> <span class="mi">8449</span><span class="p">],</span> <span class="p">[</span><span class="mi">8451</span><span class="p">,</span> <span class="mi">8454</span><span class="p">],</span> <span class="p">[</span><span class="mi">8456</span><span class="p">,</span> <span class="mi">8457</span><span class="p">],</span> <span class="p">[</span><span class="mi">8470</span><span class="p">,</span> <span class="mi">8472</span><span class="p">],</span> <span class="p">[</span><span class="mi">8478</span><span class="p">,</span> <span class="mi">8483</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">8506</span><span class="p">,</span> <span class="mi">8507</span><span class="p">],</span> <span class="p">[</span><span class="mi">8512</span><span class="p">,</span> <span class="mi">8516</span><span class="p">],</span> <span class="p">[</span><span class="mi">8522</span><span class="p">,</span> <span class="mi">8525</span><span class="p">],</span> <span class="p">[</span><span class="mi">8586</span><span class="p">,</span> <span class="mi">9311</span><span class="p">],</span> <span class="p">[</span><span class="mi">9372</span><span class="p">,</span> <span class="mi">9449</span><span class="p">],</span> <span class="p">[</span><span class="mi">9472</span><span class="p">,</span> <span class="mi">10101</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">10132</span><span class="p">,</span> <span class="mi">11263</span><span class="p">],</span> <span class="p">[</span><span class="mi">11493</span><span class="p">,</span> <span class="mi">11498</span><span class="p">],</span> <span class="p">[</span><span class="mi">11503</span><span class="p">,</span> <span class="mi">11516</span><span class="p">],</span> <span class="p">[</span><span class="mi">11518</span><span class="p">,</span> <span class="mi">11519</span><span class="p">],</span> <span class="p">[</span><span class="mi">11558</span><span class="p">,</span> <span class="mi">11567</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">11622</span><span class="p">,</span> <span class="mi">11630</span><span class="p">],</span> <span class="p">[</span><span class="mi">11632</span><span class="p">,</span> <span class="mi">11647</span><span class="p">],</span> <span class="p">[</span><span class="mi">11671</span><span class="p">,</span> <span class="mi">11679</span><span class="p">],</span> <span class="p">[</span><span class="mi">11743</span><span class="p">,</span> <span class="mi">11822</span><span class="p">],</span> <span class="p">[</span><span class="mi">11824</span><span class="p">,</span> <span class="mi">12292</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">12296</span><span class="p">,</span> <span class="mi">12320</span><span class="p">],</span> <span class="p">[</span><span class="mi">12330</span><span class="p">,</span> <span class="mi">12336</span><span class="p">],</span> <span class="p">[</span><span class="mi">12342</span><span class="p">,</span> <span class="mi">12343</span><span class="p">],</span> <span class="p">[</span><span class="mi">12349</span><span class="p">,</span> <span class="mi">12352</span><span class="p">],</span> <span class="p">[</span><span class="mi">12439</span><span class="p">,</span> <span class="mi">12444</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">12544</span><span class="p">,</span> <span class="mi">12548</span><span class="p">],</span> <span class="p">[</span><span class="mi">12590</span><span class="p">,</span> <span class="mi">12592</span><span class="p">],</span> <span class="p">[</span><span class="mi">12687</span><span class="p">,</span> <span class="mi">12689</span><span class="p">],</span> <span class="p">[</span><span class="mi">12694</span><span class="p">,</span> <span class="mi">12703</span><span class="p">],</span> <span class="p">[</span><span class="mi">12728</span><span class="p">,</span> <span class="mi">12783</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">12800</span><span class="p">,</span> <span class="mi">12831</span><span class="p">],</span> <span class="p">[</span><span class="mi">12842</span><span class="p">,</span> <span class="mi">12880</span><span class="p">],</span> <span class="p">[</span><span class="mi">12896</span><span class="p">,</span> <span class="mi">12927</span><span class="p">],</span> <span class="p">[</span><span class="mi">12938</span><span class="p">,</span> <span class="mi">12976</span><span class="p">],</span> <span class="p">[</span><span class="mi">12992</span><span class="p">,</span> <span class="mi">13311</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">19894</span><span class="p">,</span> <span class="mi">19967</span><span class="p">],</span> <span class="p">[</span><span class="mi">40908</span><span class="p">,</span> <span class="mi">40959</span><span class="p">],</span> <span class="p">[</span><span class="mi">42125</span><span class="p">,</span> <span class="mi">42191</span><span class="p">],</span> <span class="p">[</span><span class="mi">42238</span><span class="p">,</span> <span class="mi">42239</span><span class="p">],</span> <span class="p">[</span><span class="mi">42509</span><span class="p">,</span> <span class="mi">42511</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">42540</span><span class="p">,</span> <span class="mi">42559</span><span class="p">],</span> <span class="p">[</span><span class="mi">42592</span><span class="p">,</span> <span class="mi">42593</span><span class="p">],</span> <span class="p">[</span><span class="mi">42607</span><span class="p">,</span> <span class="mi">42622</span><span class="p">],</span> <span class="p">[</span><span class="mi">42648</span><span class="p">,</span> <span class="mi">42655</span><span class="p">],</span> <span class="p">[</span><span class="mi">42736</span><span class="p">,</span> <span class="mi">42774</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">42784</span><span class="p">,</span> <span class="mi">42785</span><span class="p">],</span> <span class="p">[</span><span class="mi">42889</span><span class="p">,</span> <span class="mi">42890</span><span class="p">],</span> <span class="p">[</span><span class="mi">42893</span><span class="p">,</span> <span class="mi">43002</span><span class="p">],</span> <span class="p">[</span><span class="mi">43043</span><span class="p">,</span> <span class="mi">43055</span><span class="p">],</span> <span class="p">[</span><span class="mi">43062</span><span class="p">,</span> <span class="mi">43071</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">43124</span><span class="p">,</span> <span class="mi">43137</span><span class="p">],</span> <span class="p">[</span><span class="mi">43188</span><span class="p">,</span> <span class="mi">43215</span><span class="p">],</span> <span class="p">[</span><span class="mi">43226</span><span class="p">,</span> <span class="mi">43249</span><span class="p">],</span> <span class="p">[</span><span class="mi">43256</span><span class="p">,</span> <span class="mi">43258</span><span class="p">],</span> <span class="p">[</span><span class="mi">43260</span><span class="p">,</span> <span class="mi">43263</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">43302</span><span class="p">,</span> <span class="mi">43311</span><span class="p">],</span> <span class="p">[</span><span class="mi">43335</span><span class="p">,</span> <span class="mi">43359</span><span class="p">],</span> <span class="p">[</span><span class="mi">43389</span><span class="p">,</span> <span class="mi">43395</span><span class="p">],</span> <span class="p">[</span><span class="mi">43443</span><span class="p">,</span> <span class="mi">43470</span><span class="p">],</span> <span class="p">[</span><span class="mi">43482</span><span class="p">,</span> <span class="mi">43519</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">43561</span><span class="p">,</span> <span class="mi">43583</span><span class="p">],</span> <span class="p">[</span><span class="mi">43596</span><span class="p">,</span> <span class="mi">43599</span><span class="p">],</span> <span class="p">[</span><span class="mi">43610</span><span class="p">,</span> <span class="mi">43615</span><span class="p">],</span> <span class="p">[</span><span class="mi">43639</span><span class="p">,</span> <span class="mi">43641</span><span class="p">],</span> <span class="p">[</span><span class="mi">43643</span><span class="p">,</span> <span class="mi">43647</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">43698</span><span class="p">,</span> <span class="mi">43700</span><span class="p">],</span> <span class="p">[</span><span class="mi">43703</span><span class="p">,</span> <span class="mi">43704</span><span class="p">],</span> <span class="p">[</span><span class="mi">43710</span><span class="p">,</span> <span class="mi">43711</span><span class="p">],</span> <span class="p">[</span><span class="mi">43715</span><span class="p">,</span> <span class="mi">43738</span><span class="p">],</span> <span class="p">[</span><span class="mi">43742</span><span class="p">,</span> <span class="mi">43967</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">44003</span><span class="p">,</span> <span class="mi">44015</span><span class="p">],</span> <span class="p">[</span><span class="mi">44026</span><span class="p">,</span> <span class="mi">44031</span><span class="p">],</span> <span class="p">[</span><span class="mi">55204</span><span class="p">,</span> <span class="mi">55215</span><span class="p">],</span> <span class="p">[</span><span class="mi">55239</span><span class="p">,</span> <span class="mi">55242</span><span class="p">],</span> <span class="p">[</span><span class="mi">55292</span><span class="p">,</span> <span class="mi">55295</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">57344</span><span class="p">,</span> <span class="mi">63743</span><span class="p">],</span> <span class="p">[</span><span class="mi">64046</span><span class="p">,</span> <span class="mi">64047</span><span class="p">],</span> <span class="p">[</span><span class="mi">64110</span><span class="p">,</span> <span class="mi">64111</span><span class="p">],</span> <span class="p">[</span><span class="mi">64218</span><span class="p">,</span> <span class="mi">64255</span><span class="p">],</span> <span class="p">[</span><span class="mi">64263</span><span class="p">,</span> <span class="mi">64274</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">64280</span><span class="p">,</span> <span class="mi">64284</span><span class="p">],</span> <span class="p">[</span><span class="mi">64434</span><span class="p">,</span> <span class="mi">64466</span><span class="p">],</span> <span class="p">[</span><span class="mi">64830</span><span class="p">,</span> <span class="mi">64847</span><span class="p">],</span> <span class="p">[</span><span class="mi">64912</span><span class="p">,</span> <span class="mi">64913</span><span class="p">],</span> <span class="p">[</span><span class="mi">64968</span><span class="p">,</span> <span class="mi">65007</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">65020</span><span class="p">,</span> <span class="mi">65135</span><span class="p">],</span> <span class="p">[</span><span class="mi">65277</span><span class="p">,</span> <span class="mi">65295</span><span class="p">],</span> <span class="p">[</span><span class="mi">65306</span><span class="p">,</span> <span class="mi">65312</span><span class="p">],</span> <span class="p">[</span><span class="mi">65339</span><span class="p">,</span> <span class="mi">65344</span><span class="p">],</span> <span class="p">[</span><span class="mi">65371</span><span class="p">,</span> <span class="mi">65381</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">65471</span><span class="p">,</span> <span class="mi">65473</span><span class="p">],</span> <span class="p">[</span><span class="mi">65480</span><span class="p">,</span> <span class="mi">65481</span><span class="p">],</span> <span class="p">[</span><span class="mi">65488</span><span class="p">,</span> <span class="mi">65489</span><span class="p">],</span> <span class="p">[</span><span class="mi">65496</span><span class="p">,</span> <span class="mi">65497</span><span class="p">]];</span>
+    <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">ranges</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">start</span> <span class="o">=</span> <span class="nx">ranges</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+        <span class="nx">end</span> <span class="o">=</span> <span class="nx">ranges</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span>
+        <span class="k">for</span> <span class="p">(</span><span class="nx">j</span> <span class="o">=</span> <span class="nx">start</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;=</span> <span class="nx">end</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">result</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">})();</span>
+
+<span class="kd">function</span> <span class="nx">splitQuery</span><span class="p">(</span><span class="nx">query</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="kd">var</span> <span class="nx">start</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">query</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">splitChars</span><span class="p">[</span><span class="nx">query</span><span class="p">.</span><span class="nx">charCodeAt</span><span class="p">(</span><span class="nx">i</span><span class="p">)])</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">start</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">query</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">start</span><span class="p">,</span> <span class="nx">i</span><span class="p">));</span>
+                <span class="nx">start</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">start</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">start</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">start</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">query</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">start</span><span class="p">));</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 - Based on Python for Everybody.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>

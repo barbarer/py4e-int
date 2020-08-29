@@ -1,0 +1,513 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title><title><no title></title></title>
+  <meta http-equiv="content-type" content="text/html; charset=None">
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css">
+</head>
+<body>
+<h2><title><no title></title></h2>
+
+<div class="highlight"><pre><span></span><span class="cm">/* global pluralRuleParser */</span>
+<span class="p">(</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">$</span> <span class="p">)</span> <span class="p">{</span>
+	<span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+
+	<span class="c1">// jscs:disable</span>
+	<span class="kd">var</span> <span class="nx">language</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="c1">// CLDR plural rules generated using</span>
+		<span class="c1">// libs/CLDRPluralRuleParser/tools/PluralXML2JSON.html</span>
+		<span class="nx">pluralRules</span><span class="o">:</span> <span class="p">{</span>
+			<span class="nx">ak</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 0..1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">am</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;i = 0 or n = 1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">ar</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">zero</span><span class="o">:</span> <span class="s1">&#39;n = 0&#39;</span><span class="p">,</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 1&#39;</span><span class="p">,</span>
+				<span class="nx">two</span><span class="o">:</span> <span class="s1">&#39;n = 2&#39;</span><span class="p">,</span>
+				<span class="nx">few</span><span class="o">:</span> <span class="s1">&#39;n % 100 = 3..10&#39;</span><span class="p">,</span>
+				<span class="nx">many</span><span class="o">:</span> <span class="s1">&#39;n % 100 = 11..99&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">ars</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">zero</span><span class="o">:</span> <span class="s1">&#39;n = 0&#39;</span><span class="p">,</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 1&#39;</span><span class="p">,</span>
+				<span class="nx">two</span><span class="o">:</span> <span class="s1">&#39;n = 2&#39;</span><span class="p">,</span>
+				<span class="nx">few</span><span class="o">:</span> <span class="s1">&#39;n % 100 = 3..10&#39;</span><span class="p">,</span>
+				<span class="nx">many</span><span class="o">:</span> <span class="s1">&#39;n % 100 = 11..99&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">as</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;i = 0 or n = 1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">be</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n % 10 = 1 and n % 100 != 11&#39;</span><span class="p">,</span>
+				<span class="nx">few</span><span class="o">:</span> <span class="s1">&#39;n % 10 = 2..4 and n % 100 != 12..14&#39;</span><span class="p">,</span>
+				<span class="nx">many</span><span class="o">:</span> <span class="s1">&#39;n % 10 = 0 or n % 10 = 5..9 or n % 100 = 11..14&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">bh</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 0..1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">bn</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;i = 0 or n = 1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">br</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n % 10 = 1 and n % 100 != 11,71,91&#39;</span><span class="p">,</span>
+				<span class="nx">two</span><span class="o">:</span> <span class="s1">&#39;n % 10 = 2 and n % 100 != 12,72,92&#39;</span><span class="p">,</span>
+				<span class="nx">few</span><span class="o">:</span> <span class="s1">&#39;n % 10 = 3..4,9 and n % 100 != 10..19,70..79,90..99&#39;</span><span class="p">,</span>
+				<span class="nx">many</span><span class="o">:</span> <span class="s1">&#39;n != 0 and n % 1000000 = 0&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">bs</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 10 = 1 and i % 100 != 11 or f % 10 = 1 and f % 100 != 11&#39;</span><span class="p">,</span>
+				<span class="nx">few</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 10 = 2..4 and i % 100 != 12..14 or f % 10 = 2..4 and f % 100 != 12..14&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">cs</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;i = 1 and v = 0&#39;</span><span class="p">,</span>
+				<span class="nx">few</span><span class="o">:</span> <span class="s1">&#39;i = 2..4 and v = 0&#39;</span><span class="p">,</span>
+				<span class="nx">many</span><span class="o">:</span> <span class="s1">&#39;v != 0&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">cy</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">zero</span><span class="o">:</span> <span class="s1">&#39;n = 0&#39;</span><span class="p">,</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 1&#39;</span><span class="p">,</span>
+				<span class="nx">two</span><span class="o">:</span> <span class="s1">&#39;n = 2&#39;</span><span class="p">,</span>
+				<span class="nx">few</span><span class="o">:</span> <span class="s1">&#39;n = 3&#39;</span><span class="p">,</span>
+				<span class="nx">many</span><span class="o">:</span> <span class="s1">&#39;n = 6&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">da</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 1 or t != 0 and i = 0,1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">dsb</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 100 = 1 or f % 100 = 1&#39;</span><span class="p">,</span>
+				<span class="nx">two</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 100 = 2 or f % 100 = 2&#39;</span><span class="p">,</span>
+				<span class="nx">few</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 100 = 3..4 or f % 100 = 3..4&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">fa</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;i = 0 or n = 1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">ff</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;i = 0,1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">fil</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i = 1,2,3 or v = 0 and i % 10 != 4,6,9 or v != 0 and f % 10 != 4,6,9&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">fr</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;i = 0,1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">ga</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 1&#39;</span><span class="p">,</span>
+				<span class="nx">two</span><span class="o">:</span> <span class="s1">&#39;n = 2&#39;</span><span class="p">,</span>
+				<span class="nx">few</span><span class="o">:</span> <span class="s1">&#39;n = 3..6&#39;</span><span class="p">,</span>
+				<span class="nx">many</span><span class="o">:</span> <span class="s1">&#39;n = 7..10&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">gd</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 1,11&#39;</span><span class="p">,</span>
+				<span class="nx">two</span><span class="o">:</span> <span class="s1">&#39;n = 2,12&#39;</span><span class="p">,</span>
+				<span class="nx">few</span><span class="o">:</span> <span class="s1">&#39;n = 3..10,13..19&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">gu</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;i = 0 or n = 1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">guw</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 0..1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">gv</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 10 = 1&#39;</span><span class="p">,</span>
+				<span class="nx">two</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 10 = 2&#39;</span><span class="p">,</span>
+				<span class="nx">few</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 100 = 0,20,40,60,80&#39;</span><span class="p">,</span>
+				<span class="nx">many</span><span class="o">:</span> <span class="s1">&#39;v != 0&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">he</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;i = 1 and v = 0&#39;</span><span class="p">,</span>
+				<span class="nx">two</span><span class="o">:</span> <span class="s1">&#39;i = 2 and v = 0&#39;</span><span class="p">,</span>
+				<span class="nx">many</span><span class="o">:</span> <span class="s1">&#39;v = 0 and n != 0..10 and n % 10 = 0&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">hi</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;i = 0 or n = 1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">hr</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 10 = 1 and i % 100 != 11 or f % 10 = 1 and f % 100 != 11&#39;</span><span class="p">,</span>
+				<span class="nx">few</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 10 = 2..4 and i % 100 != 12..14 or f % 10 = 2..4 and f % 100 != 12..14&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">hsb</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 100 = 1 or f % 100 = 1&#39;</span><span class="p">,</span>
+				<span class="nx">two</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 100 = 2 or f % 100 = 2&#39;</span><span class="p">,</span>
+				<span class="nx">few</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 100 = 3..4 or f % 100 = 3..4&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">hy</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;i = 0,1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">is</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;t = 0 and i % 10 = 1 and i % 100 != 11 or t != 0&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">iu</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 1&#39;</span><span class="p">,</span>
+				<span class="nx">two</span><span class="o">:</span> <span class="s1">&#39;n = 2&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">iw</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;i = 1 and v = 0&#39;</span><span class="p">,</span>
+				<span class="nx">two</span><span class="o">:</span> <span class="s1">&#39;i = 2 and v = 0&#39;</span><span class="p">,</span>
+				<span class="nx">many</span><span class="o">:</span> <span class="s1">&#39;v = 0 and n != 0..10 and n % 10 = 0&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">kab</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;i = 0,1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">kn</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;i = 0 or n = 1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">kw</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 1&#39;</span><span class="p">,</span>
+				<span class="nx">two</span><span class="o">:</span> <span class="s1">&#39;n = 2&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">lag</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">zero</span><span class="o">:</span> <span class="s1">&#39;n = 0&#39;</span><span class="p">,</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;i = 0,1 and n != 0&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">ln</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 0..1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">lt</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n % 10 = 1 and n % 100 != 11..19&#39;</span><span class="p">,</span>
+				<span class="nx">few</span><span class="o">:</span> <span class="s1">&#39;n % 10 = 2..9 and n % 100 != 11..19&#39;</span><span class="p">,</span>
+				<span class="nx">many</span><span class="o">:</span> <span class="s1">&#39;f != 0&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">lv</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">zero</span><span class="o">:</span> <span class="s1">&#39;n % 10 = 0 or n % 100 = 11..19 or v = 2 and f % 100 = 11..19&#39;</span><span class="p">,</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n % 10 = 1 and n % 100 != 11 or v = 2 and f % 10 = 1 and f % 100 != 11 or v != 2 and f % 10 = 1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">mg</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 0..1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">mk</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 10 = 1 or f % 10 = 1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">mo</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;i = 1 and v = 0&#39;</span><span class="p">,</span>
+				<span class="nx">few</span><span class="o">:</span> <span class="s1">&#39;v != 0 or n = 0 or n != 1 and n % 100 = 1..19&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">mr</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;i = 0 or n = 1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">mt</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 1&#39;</span><span class="p">,</span>
+				<span class="nx">few</span><span class="o">:</span> <span class="s1">&#39;n = 0 or n % 100 = 2..10&#39;</span><span class="p">,</span>
+				<span class="nx">many</span><span class="o">:</span> <span class="s1">&#39;n % 100 = 11..19&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">naq</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 1&#39;</span><span class="p">,</span>
+				<span class="nx">two</span><span class="o">:</span> <span class="s1">&#39;n = 2&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">nso</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 0..1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">pa</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 0..1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">pl</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;i = 1 and v = 0&#39;</span><span class="p">,</span>
+				<span class="nx">few</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 10 = 2..4 and i % 100 != 12..14&#39;</span><span class="p">,</span>
+				<span class="nx">many</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i != 1 and i % 10 = 0..1 or v = 0 and i % 10 = 5..9 or v = 0 and i % 100 = 12..14&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">prg</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">zero</span><span class="o">:</span> <span class="s1">&#39;n % 10 = 0 or n % 100 = 11..19 or v = 2 and f % 100 = 11..19&#39;</span><span class="p">,</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n % 10 = 1 and n % 100 != 11 or v = 2 and f % 10 = 1 and f % 100 != 11 or v != 2 and f % 10 = 1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">pt</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;i = 0..1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">ro</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;i = 1 and v = 0&#39;</span><span class="p">,</span>
+				<span class="nx">few</span><span class="o">:</span> <span class="s1">&#39;v != 0 or n = 0 or n != 1 and n % 100 = 1..19&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">ru</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 10 = 1 and i % 100 != 11&#39;</span><span class="p">,</span>
+				<span class="nx">few</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 10 = 2..4 and i % 100 != 12..14&#39;</span><span class="p">,</span>
+				<span class="nx">many</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 10 = 0 or v = 0 and i % 10 = 5..9 or v = 0 and i % 100 = 11..14&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">se</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 1&#39;</span><span class="p">,</span>
+				<span class="nx">two</span><span class="o">:</span> <span class="s1">&#39;n = 2&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">sh</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 10 = 1 and i % 100 != 11 or f % 10 = 1 and f % 100 != 11&#39;</span><span class="p">,</span>
+				<span class="nx">few</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 10 = 2..4 and i % 100 != 12..14 or f % 10 = 2..4 and f % 100 != 12..14&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">shi</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;i = 0 or n = 1&#39;</span><span class="p">,</span>
+				<span class="nx">few</span><span class="o">:</span> <span class="s1">&#39;n = 2..10&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">si</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 0,1 or i = 0 and f = 1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">sk</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;i = 1 and v = 0&#39;</span><span class="p">,</span>
+				<span class="nx">few</span><span class="o">:</span> <span class="s1">&#39;i = 2..4 and v = 0&#39;</span><span class="p">,</span>
+				<span class="nx">many</span><span class="o">:</span> <span class="s1">&#39;v != 0&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">sl</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 100 = 1&#39;</span><span class="p">,</span>
+				<span class="nx">two</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 100 = 2&#39;</span><span class="p">,</span>
+				<span class="nx">few</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 100 = 3..4 or v != 0&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">sma</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 1&#39;</span><span class="p">,</span>
+				<span class="nx">two</span><span class="o">:</span> <span class="s1">&#39;n = 2&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">smi</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 1&#39;</span><span class="p">,</span>
+				<span class="nx">two</span><span class="o">:</span> <span class="s1">&#39;n = 2&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">smj</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 1&#39;</span><span class="p">,</span>
+				<span class="nx">two</span><span class="o">:</span> <span class="s1">&#39;n = 2&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">smn</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 1&#39;</span><span class="p">,</span>
+				<span class="nx">two</span><span class="o">:</span> <span class="s1">&#39;n = 2&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">sms</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 1&#39;</span><span class="p">,</span>
+				<span class="nx">two</span><span class="o">:</span> <span class="s1">&#39;n = 2&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">sr</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 10 = 1 and i % 100 != 11 or f % 10 = 1 and f % 100 != 11&#39;</span><span class="p">,</span>
+				<span class="nx">few</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 10 = 2..4 and i % 100 != 12..14 or f % 10 = 2..4 and f % 100 != 12..14&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">ti</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 0..1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">tl</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i = 1,2,3 or v = 0 and i % 10 != 4,6,9 or v != 0 and f % 10 != 4,6,9&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">tzm</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 0..1 or n = 11..99&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">uk</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 10 = 1 and i % 100 != 11&#39;</span><span class="p">,</span>
+				<span class="nx">few</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 10 = 2..4 and i % 100 != 12..14&#39;</span><span class="p">,</span>
+				<span class="nx">many</span><span class="o">:</span> <span class="s1">&#39;v = 0 and i % 10 = 0 or v = 0 and i % 10 = 5..9 or v = 0 and i % 100 = 11..14&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">wa</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;n = 0..1&#39;</span>
+			<span class="p">},</span>
+			<span class="nx">zu</span><span class="o">:</span> <span class="p">{</span>
+				<span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;i = 0 or n = 1&#39;</span>
+			<span class="p">}</span>
+		<span class="p">},</span>
+		<span class="c1">// jscs:enable</span>
+
+		<span class="cm">/**</span>
+<span class="cm">		 * Plural form transformations, needed for some languages.</span>
+<span class="cm">		 *</span>
+<span class="cm">		 * @param {integer} count</span>
+<span class="cm">		 *            Non-localized quantifier</span>
+<span class="cm">		 * @param {Array} forms</span>
+<span class="cm">		 *            List of plural forms</span>
+<span class="cm">		 * @return {string} Correct form for quantifier in this language</span>
+<span class="cm">		 */</span>
+		<span class="nx">convertPlural</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">count</span><span class="p">,</span> <span class="nx">forms</span> <span class="p">)</span> <span class="p">{</span>
+			<span class="kd">var</span> <span class="nx">pluralRules</span><span class="p">,</span>
+				<span class="nx">pluralFormIndex</span><span class="p">,</span>
+				<span class="nx">index</span><span class="p">,</span>
+				<span class="nx">explicitPluralPattern</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span> <span class="s1">&#39;\\d+=&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span> <span class="p">),</span>
+				<span class="nx">formCount</span><span class="p">,</span>
+				<span class="nx">form</span><span class="p">;</span>
+
+			<span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="nx">forms</span> <span class="o">||</span> <span class="nx">forms</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>
+				<span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+			<span class="p">}</span>
+
+			<span class="c1">// Handle for Explicit 0= &amp; 1= values</span>
+			<span class="k">for</span> <span class="p">(</span> <span class="nx">index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">index</span> <span class="o">&lt;</span> <span class="nx">forms</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">index</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+				<span class="nx">form</span> <span class="o">=</span> <span class="nx">forms</span><span class="p">[</span> <span class="nx">index</span> <span class="p">];</span>
+				<span class="k">if</span> <span class="p">(</span> <span class="nx">explicitPluralPattern</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span> <span class="nx">form</span> <span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+					<span class="nx">formCount</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span> <span class="nx">form</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">form</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span> <span class="s1">&#39;=&#39;</span> <span class="p">)</span> <span class="p">),</span> <span class="mi">10</span> <span class="p">);</span>
+					<span class="k">if</span> <span class="p">(</span> <span class="nx">formCount</span> <span class="o">===</span> <span class="nx">count</span> <span class="p">)</span> <span class="p">{</span>
+						<span class="k">return</span> <span class="p">(</span> <span class="nx">form</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span> <span class="nx">form</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span> <span class="s1">&#39;=&#39;</span> <span class="p">)</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">)</span> <span class="p">);</span>
+					<span class="p">}</span>
+					<span class="nx">forms</span><span class="p">[</span> <span class="nx">index</span> <span class="p">]</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
+				<span class="p">}</span>
+			<span class="p">}</span>
+
+			<span class="nx">forms</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span> <span class="nx">forms</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">form</span> <span class="p">)</span> <span class="p">{</span>
+				<span class="k">if</span> <span class="p">(</span> <span class="nx">form</span> <span class="o">!==</span> <span class="kc">undefined</span> <span class="p">)</span> <span class="p">{</span>
+					<span class="k">return</span> <span class="nx">form</span><span class="p">;</span>
+				<span class="p">}</span>
+			<span class="p">}</span> <span class="p">);</span>
+
+			<span class="nx">pluralRules</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">pluralRules</span><span class="p">[</span> <span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">().</span><span class="nx">locale</span> <span class="p">];</span>
+
+			<span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="nx">pluralRules</span> <span class="p">)</span> <span class="p">{</span>
+				<span class="c1">// default fallback.</span>
+				<span class="k">return</span> <span class="p">(</span> <span class="nx">count</span> <span class="o">===</span> <span class="mi">1</span> <span class="p">)</span> <span class="o">?</span> <span class="nx">forms</span><span class="p">[</span> <span class="mi">0</span> <span class="p">]</span> <span class="o">:</span> <span class="nx">forms</span><span class="p">[</span> <span class="mi">1</span> <span class="p">];</span>
+			<span class="p">}</span>
+
+			<span class="nx">pluralFormIndex</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">getPluralForm</span><span class="p">(</span> <span class="nx">count</span><span class="p">,</span> <span class="nx">pluralRules</span> <span class="p">);</span>
+			<span class="nx">pluralFormIndex</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span> <span class="nx">pluralFormIndex</span><span class="p">,</span> <span class="nx">forms</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span> <span class="p">);</span>
+
+			<span class="k">return</span> <span class="nx">forms</span><span class="p">[</span> <span class="nx">pluralFormIndex</span> <span class="p">];</span>
+		<span class="p">},</span>
+
+		<span class="cm">/**</span>
+<span class="cm">		 * For the number, get the plural for index</span>
+<span class="cm">		 *</span>
+<span class="cm">		 * @param {integer} number</span>
+<span class="cm">		 * @param {Object} pluralRules</span>
+<span class="cm">		 * @return {integer} plural form index</span>
+<span class="cm">		 */</span>
+		<span class="nx">getPluralForm</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">number</span><span class="p">,</span> <span class="nx">pluralRules</span> <span class="p">)</span> <span class="p">{</span>
+			<span class="kd">var</span> <span class="nx">i</span><span class="p">,</span>
+				<span class="nx">pluralForms</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;zero&#39;</span><span class="p">,</span> <span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;few&#39;</span><span class="p">,</span> <span class="s1">&#39;many&#39;</span><span class="p">,</span> <span class="s1">&#39;other&#39;</span> <span class="p">],</span>
+				<span class="nx">pluralFormIndex</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+			<span class="k">for</span> <span class="p">(</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">pluralForms</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+				<span class="k">if</span> <span class="p">(</span> <span class="nx">pluralRules</span><span class="p">[</span> <span class="nx">pluralForms</span><span class="p">[</span> <span class="nx">i</span> <span class="p">]</span> <span class="p">]</span> <span class="p">)</span> <span class="p">{</span>
+					<span class="k">if</span> <span class="p">(</span> <span class="nx">pluralRuleParser</span><span class="p">(</span> <span class="nx">pluralRules</span><span class="p">[</span> <span class="nx">pluralForms</span><span class="p">[</span> <span class="nx">i</span> <span class="p">]</span> <span class="p">],</span> <span class="nx">number</span> <span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+						<span class="k">return</span> <span class="nx">pluralFormIndex</span><span class="p">;</span>
+					<span class="p">}</span>
+
+					<span class="nx">pluralFormIndex</span><span class="o">++</span><span class="p">;</span>
+				<span class="p">}</span>
+			<span class="p">}</span>
+
+			<span class="k">return</span> <span class="nx">pluralFormIndex</span><span class="p">;</span>
+		<span class="p">},</span>
+
+		<span class="cm">/**</span>
+<span class="cm">		 * Converts a number using digitTransformTable.</span>
+<span class="cm">		 *</span>
+<span class="cm">		 * @param {number} num Value to be converted</span>
+<span class="cm">		 * @param {boolean} integer Convert the return value to an integer</span>
+<span class="cm">		 * @return {string} The number converted into a String.</span>
+<span class="cm">		 */</span>
+		<span class="nx">convertNumber</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">num</span><span class="p">,</span> <span class="nx">integer</span> <span class="p">)</span> <span class="p">{</span>
+			<span class="kd">var</span> <span class="nx">tmp</span><span class="p">,</span> <span class="nx">item</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span>
+				<span class="nx">transformTable</span><span class="p">,</span> <span class="nx">numberString</span><span class="p">,</span> <span class="nx">convertedNumber</span><span class="p">;</span>
+
+			<span class="c1">// Set the target Transform table:</span>
+			<span class="nx">transformTable</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">digitTransformTable</span><span class="p">(</span> <span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">().</span><span class="nx">locale</span> <span class="p">);</span>
+			<span class="nx">numberString</span> <span class="o">=</span> <span class="nb">String</span><span class="p">(</span> <span class="nx">num</span> <span class="p">);</span>
+			<span class="nx">convertedNumber</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+
+			<span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="nx">transformTable</span> <span class="p">)</span> <span class="p">{</span>
+				<span class="k">return</span> <span class="nx">num</span><span class="p">;</span>
+			<span class="p">}</span>
+
+			<span class="c1">// Check if the restore to Latin number flag is set:</span>
+			<span class="k">if</span> <span class="p">(</span> <span class="nx">integer</span> <span class="p">)</span> <span class="p">{</span>
+				<span class="k">if</span> <span class="p">(</span> <span class="nb">parseFloat</span><span class="p">(</span> <span class="nx">num</span><span class="p">,</span> <span class="mi">10</span> <span class="p">)</span> <span class="o">===</span> <span class="nx">num</span> <span class="p">)</span> <span class="p">{</span>
+					<span class="k">return</span> <span class="nx">num</span><span class="p">;</span>
+				<span class="p">}</span>
+
+				<span class="nx">tmp</span> <span class="o">=</span> <span class="p">[];</span>
+
+				<span class="k">for</span> <span class="p">(</span> <span class="nx">item</span> <span class="k">in</span> <span class="nx">transformTable</span> <span class="p">)</span> <span class="p">{</span>
+					<span class="nx">tmp</span><span class="p">[</span> <span class="nx">transformTable</span><span class="p">[</span> <span class="nx">item</span> <span class="p">]</span> <span class="p">]</span> <span class="o">=</span> <span class="nx">item</span><span class="p">;</span>
+				<span class="p">}</span>
+
+				<span class="nx">transformTable</span> <span class="o">=</span> <span class="nx">tmp</span><span class="p">;</span>
+			<span class="p">}</span>
+
+			<span class="k">for</span> <span class="p">(</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">numberString</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+				<span class="k">if</span> <span class="p">(</span> <span class="nx">transformTable</span><span class="p">[</span> <span class="nx">numberString</span><span class="p">[</span> <span class="nx">i</span> <span class="p">]</span> <span class="p">]</span> <span class="p">)</span> <span class="p">{</span>
+					<span class="nx">convertedNumber</span> <span class="o">+=</span> <span class="nx">transformTable</span><span class="p">[</span> <span class="nx">numberString</span><span class="p">[</span> <span class="nx">i</span> <span class="p">]</span> <span class="p">];</span>
+				<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+					<span class="nx">convertedNumber</span> <span class="o">+=</span> <span class="nx">numberString</span><span class="p">[</span> <span class="nx">i</span> <span class="p">];</span>
+				<span class="p">}</span>
+			<span class="p">}</span>
+
+			<span class="k">return</span> <span class="nx">integer</span> <span class="o">?</span> <span class="nb">parseFloat</span><span class="p">(</span> <span class="nx">convertedNumber</span><span class="p">,</span> <span class="mi">10</span> <span class="p">)</span> <span class="o">:</span> <span class="nx">convertedNumber</span><span class="p">;</span>
+		<span class="p">},</span>
+
+		<span class="cm">/**</span>
+<span class="cm">		 * Grammatical transformations, needed for inflected languages.</span>
+<span class="cm">		 * Invoked by putting </span><span class="cp">{{</span><span class="nv">grammar</span><span class="o">:</span><span class="nv">form</span><span class="o">|</span><span class="nf">word</span><span class="cp">}}</span><span class="cm"> in a message.</span>
+<span class="cm">		 * Override this method for languages that need special grammar rules</span>
+<span class="cm">		 * applied dynamically.</span>
+<span class="cm">		 *</span>
+<span class="cm">		 * @param {string} word</span>
+<span class="cm">		 * @param {string} form</span>
+<span class="cm">		 * @return {string}</span>
+<span class="cm">		 */</span>
+		<span class="c1">// eslint-disable-next-line no-unused-vars</span>
+		<span class="nx">convertGrammar</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">word</span><span class="p">,</span> <span class="nx">form</span> <span class="p">)</span> <span class="p">{</span>
+			<span class="k">return</span> <span class="nx">word</span><span class="p">;</span>
+		<span class="p">},</span>
+
+		<span class="cm">/**</span>
+<span class="cm">		 * Provides an alternative text depending on specified gender. Usage</span>
+<span class="cm">		 * </span><span class="cp">{{</span><span class="nv">gender</span><span class="o">:[</span><span class="nv">gender</span><span class="o">|</span><span class="nf">user</span> <span class="nv">object</span><span class="o">]|</span><span class="nf">masculine</span><span class="o">|</span><span class="nf">feminine</span><span class="o">|</span><span class="nf">neutral</span><span class="cp">}}</span><span class="cm">. If second</span>
+<span class="cm">		 * or third parameter are not specified, masculine is used.</span>
+<span class="cm">		 *</span>
+<span class="cm">		 * These details may be overriden per language.</span>
+<span class="cm">		 *</span>
+<span class="cm">		 * @param {string} gender</span>
+<span class="cm">		 *      male, female, or anything else for neutral.</span>
+<span class="cm">		 * @param {Array} forms</span>
+<span class="cm">		 *      List of gender forms</span>
+<span class="cm">		 *</span>
+<span class="cm">		 * @return {string}</span>
+<span class="cm">		 */</span>
+		<span class="nx">gender</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">gender</span><span class="p">,</span> <span class="nx">forms</span> <span class="p">)</span> <span class="p">{</span>
+			<span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="nx">forms</span> <span class="o">||</span> <span class="nx">forms</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>
+				<span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+			<span class="p">}</span>
+
+			<span class="k">while</span> <span class="p">(</span> <span class="nx">forms</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="p">)</span> <span class="p">{</span>
+				<span class="nx">forms</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span> <span class="nx">forms</span><span class="p">[</span> <span class="nx">forms</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span> <span class="p">]</span> <span class="p">);</span>
+			<span class="p">}</span>
+
+			<span class="k">if</span> <span class="p">(</span> <span class="nx">gender</span> <span class="o">===</span> <span class="s1">&#39;male&#39;</span> <span class="p">)</span> <span class="p">{</span>
+				<span class="k">return</span> <span class="nx">forms</span><span class="p">[</span> <span class="mi">0</span> <span class="p">];</span>
+			<span class="p">}</span>
+
+			<span class="k">if</span> <span class="p">(</span> <span class="nx">gender</span> <span class="o">===</span> <span class="s1">&#39;female&#39;</span> <span class="p">)</span> <span class="p">{</span>
+				<span class="k">return</span> <span class="nx">forms</span><span class="p">[</span> <span class="mi">1</span> <span class="p">];</span>
+			<span class="p">}</span>
+
+			<span class="k">return</span> <span class="p">(</span> <span class="nx">forms</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">3</span> <span class="p">)</span> <span class="o">?</span> <span class="nx">forms</span><span class="p">[</span> <span class="mi">2</span> <span class="p">]</span> <span class="o">:</span> <span class="nx">forms</span><span class="p">[</span> <span class="mi">0</span> <span class="p">];</span>
+		<span class="p">},</span>
+
+		<span class="cm">/**</span>
+<span class="cm">		 * Get the digit transform table for the given language</span>
+<span class="cm">		 * See http://cldr.unicode.org/translation/numbering-systems</span>
+<span class="cm">		 *</span>
+<span class="cm">		 * @param {string} language</span>
+<span class="cm">		 * @return {Array|boolean} List of digits in the passed language or false</span>
+<span class="cm">		 * representation, or boolean false if there is no information.</span>
+<span class="cm">		 */</span>
+		<span class="nx">digitTransformTable</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">language</span> <span class="p">)</span> <span class="p">{</span>
+			<span class="kd">var</span> <span class="nx">tables</span> <span class="o">=</span> <span class="p">{</span>
+				<span class="nx">ar</span><span class="o">:</span> <span class="s1">&#39;٠١٢٣٤٥٦٧٨٩&#39;</span><span class="p">,</span>
+				<span class="nx">fa</span><span class="o">:</span> <span class="s1">&#39;۰۱۲۳۴۵۶۷۸۹&#39;</span><span class="p">,</span>
+				<span class="nx">ml</span><span class="o">:</span> <span class="s1">&#39;൦൧൨൩൪൫൬൭൮൯&#39;</span><span class="p">,</span>
+				<span class="nx">kn</span><span class="o">:</span> <span class="s1">&#39;೦೧೨೩೪೫೬೭೮೯&#39;</span><span class="p">,</span>
+				<span class="nx">lo</span><span class="o">:</span> <span class="s1">&#39;໐໑໒໓໔໕໖໗໘໙&#39;</span><span class="p">,</span>
+				<span class="nx">or</span><span class="o">:</span> <span class="s1">&#39;୦୧୨୩୪୫୬୭୮୯&#39;</span><span class="p">,</span>
+				<span class="nx">kh</span><span class="o">:</span> <span class="s1">&#39;០១២៣៤៥៦៧៨៩&#39;</span><span class="p">,</span>
+				<span class="nx">pa</span><span class="o">:</span> <span class="s1">&#39;੦੧੨੩੪੫੬੭੮੯&#39;</span><span class="p">,</span>
+				<span class="nx">gu</span><span class="o">:</span> <span class="s1">&#39;૦૧૨૩૪૫૬૭૮૯&#39;</span><span class="p">,</span>
+				<span class="nx">hi</span><span class="o">:</span> <span class="s1">&#39;०१२३४५६७८९&#39;</span><span class="p">,</span>
+				<span class="nx">my</span><span class="o">:</span> <span class="s1">&#39;၀၁၂၃၄၅၆၇၈၉&#39;</span><span class="p">,</span>
+				<span class="nx">ta</span><span class="o">:</span> <span class="s1">&#39;௦௧௨௩௪௫௬௭௮௯&#39;</span><span class="p">,</span>
+				<span class="nx">te</span><span class="o">:</span> <span class="s1">&#39;౦౧౨౩౪౫౬౭౮౯&#39;</span><span class="p">,</span>
+				<span class="nx">th</span><span class="o">:</span> <span class="s1">&#39;๐๑๒๓๔๕๖๗๘๙&#39;</span><span class="p">,</span> <span class="c1">// FIXME use iso 639 codes</span>
+				<span class="nx">bo</span><span class="o">:</span> <span class="s1">&#39;༠༡༢༣༤༥༦༧༨༩&#39;</span> <span class="c1">// FIXME use iso 639 codes</span>
+			<span class="p">};</span>
+
+			<span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="nx">tables</span><span class="p">[</span> <span class="nx">language</span> <span class="p">]</span> <span class="p">)</span> <span class="p">{</span>
+				<span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+			<span class="p">}</span>
+
+			<span class="k">return</span> <span class="nx">tables</span><span class="p">[</span> <span class="nx">language</span> <span class="p">].</span><span class="nx">split</span><span class="p">(</span> <span class="s1">&#39;&#39;</span> <span class="p">);</span>
+		<span class="p">}</span>
+	<span class="p">};</span>
+
+	<span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span> <span class="nx">$</span><span class="p">.</span><span class="nx">i18n</span><span class="p">.</span><span class="nx">languages</span><span class="p">,</span> <span class="p">{</span>
+		<span class="s1">&#39;default&#39;</span><span class="o">:</span> <span class="nx">language</span>
+	<span class="p">}</span> <span class="p">);</span>
+<span class="p">}(</span> <span class="nx">jQuery</span> <span class="p">)</span> <span class="p">);</span>
+</pre></div>
+</body>
+</html>
