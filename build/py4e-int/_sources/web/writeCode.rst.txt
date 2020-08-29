@@ -1,2 +1,0 @@
-Write Code Questions - INCOMPLETE
---------------------------------------
