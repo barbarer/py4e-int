@@ -83,13 +83,9 @@ Write Code Questions
 #.
     .. activecode:: list_write23q
 
-        Assign the value of the 23rd element of ``l`` to the variable ``checking``.
+        Assign the value of the item at index 3 of ``l`` to "200"
         ~~~~
-        l = ("hi", "goodbye", "python", "106", "506", 91, ['all', 'Paul', 'Jackie',
-             "UMSI", 1, "Stephen", 4.5], 109, "chair", "pizza", "wolverine", 2017,
-             3.92, 1817, "account", "readings", "papers", 12, "facebook", "twitter",
-             193.2, "snapchat", "leaders and the best", "social", "1986", 9, 29, "holiday",
-             ["women", "olympics", "gold", "rio", 21, "2016", "men"], "26trombones")
+        l = ["hi", "goodbye", "python", "106", "506"]
 
         =====
 
@@ -98,7 +94,7 @@ Write Code Questions
         class myTests(TestCaseGui):
 
            def testOne(self):
-              self.assertEqual(checking, "leaders and the best", "Testing that checking was assigned to the 23rd element.")
+              self.assertEqual(l[3], "200", "Testing that l[3] is 200")
 
         myTests().main()
 
@@ -146,7 +142,7 @@ Write Code Questions
 #.
     .. activecode:: list_write5q
 
-        Count how many words in a list have length 5.
+        Write a function called ``countWords`` that returns a count of how many words in the pased list, ``lst``, have length 5.
         ~~~~
         def countWords(lst):
 
@@ -156,10 +152,10 @@ Write Code Questions
         class myTests(TestCaseGui):
 
             def testOne(self):
-                self.assertEqual(countWords(["hello", "hi", "good morning", "three", "kitty"]),3,"Tested countWords on input ["hello", "hi", "good morning", "three", "kitty"]")
-                self.assertEqual(countWords(["two", "three", "four", "five", "six", "seven"]),2,"Tested countWords on input ["two", "three", "four", "five", "six", "seven"]")
-                self.assertEqual(countWords(["these", "those", "there"]),3,"Tested countWords on input ["these", "those", "there"]")
-                self.assertEqual(countWords(["the", "an", "a"]),0,"Tested countWords on input ["the", "an", "a"]")
+                self.assertEqual(countWords(["hello", "hi", "good morning", "three", "kitty"]),3,'Tested countWords on input ["hello", "hi", "good morning", "three", "kitty"]')
+                self.assertEqual(countWords(["two", "three", "four", "five", "six", "seven"]),2,'Tested countWords on input ["two", "three", "four", "five", "six", "seven"]')
+                self.assertEqual(countWords(["these", "those", "there"]),3,'Tested countWords on input ["these", "those", "there"]')
+                self.assertEqual(countWords(["the", "an", "a"]),0,'Tested countWords on input ["the", "an", "a"]')
 
 
         myTests().main()
@@ -169,11 +165,11 @@ Write Code Questions
 
       .. tab:: Question
 
-          Write a function called ``chop`` that takes a list and modifies it, removing the first and last elements.
+          Write a function called ``chop`` that takes a list ``lst`` and modifies it, removing the first and last elements.
 
           .. activecode:: list_writeChopq
 
-              def chop():
+              def chop(lst):
 
               ====
               from unittest.gui import TestCaseGui
@@ -200,10 +196,10 @@ Write Code Questions
 #.
     .. activecode:: list_writeMiddleq
 
-        Write a function called ``middle`` that takes a list as its argument and
+        Write a function called ``middle`` that takes a list ``lst`` as its argument and
         returns a new list that contains all but the first and last elements.
         ~~~~
-        def middle():
+        def middle(lst):
 
         ====
         from unittest.gui import TestCaseGui
@@ -212,7 +208,7 @@ Write Code Questions
 
             def testOne(self):
                 self.assertEqual(middle([1,2,3,4,5]),[2,3,4],"Tested middle on input [1,2,3,4.5]")
-                self.assertEqual(middle([1,3,5,7,9,10]),[2,3,5,7,9],"Tested middle on input [1,3,5,7,9,10]")
+                self.assertEqual(middle([1,3,5,7,9,10]),[3,5,7,9],"Tested middle on input [1,3,5,7,9,10]")
                 self.assertEqual(middle([2,9]),[],"Tested middle on input [2,9]")
 
         myTests().main()
@@ -222,7 +218,7 @@ Write Code Questions
 
         .. tab:: Question
 
-            Sum all the elements in a list up to but not including the first even number.
+            Sum all the elements in the list ``lst`` up to but not including the first even number.
 
             .. activecode:: list_writeSumq
 
@@ -265,7 +261,7 @@ Write Code Questions
     .. activecode::  list_writeReverseq
         :nocodelens:
 
-        Write a function called ``reverse`` that returns the reverse of a list.
+        Write a function called ``reverse`` that returns the reverse of a passed list.
         ~~~~
         ====
         from unittest.gui import TestCaseGui

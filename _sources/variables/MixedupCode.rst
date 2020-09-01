@@ -46,9 +46,9 @@ Mixed-up Code Questions
    =====
    pay rate = input('What is your hourly pay?') #distractor
    =====
-   grossPay = hours * payRate
+   grossPay = float(hours) * float(payRate)
    =====
-   print("Your gross pay is " + grossPay)
+   print("Your gross pay is ", grossPay)
    =====
    print("Your gross pay is" grossPay) #distractor
 
