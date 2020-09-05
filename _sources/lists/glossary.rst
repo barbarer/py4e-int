@@ -2,6 +2,7 @@ Glossary
 --------
 
 .. glossary::
+
     Aliasing
       A circumstance where two or more variables refer to the same object.
 
@@ -53,4 +54,4 @@ Glossary
     :match_2: Index|||An integer value that indicates an element in a list.
     :match_3: List|||A sequence of values.
     :match_4: List Traversal||| The sequential accessing of each element in a list.
-    :match_5: Nested List|||A list that is an element of another list. 
+    :match_5: Nested List|||A list that is an element of another list.

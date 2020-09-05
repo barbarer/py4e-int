@@ -8,6 +8,7 @@ Why Program?
    why-program.rst
    creativityAndMot.rst
    computerHardwareArch.rst
+   understanding.rst
    words-and-sentences.rst
    conversing.rst
    terminology.rst

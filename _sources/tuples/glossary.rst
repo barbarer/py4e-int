@@ -2,6 +2,7 @@ Glossary
 --------
 
 .. glossary::
+
     Comparable
       A type where one value can be checked to see if it is greater than, less than, or equal to another value of the same type. Types which are comparable can be put in a list and sorted.
 

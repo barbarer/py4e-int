@@ -2,6 +2,7 @@ Glossary
 --------
 
 .. glossary::
+
     Counter
       A variable used to count something, usually initialized to zero and then incremented.
 
@@ -26,8 +27,8 @@ Glossary
     Immutable
       The property of a sequence whose items cannot be assigned.
 
-    Index
-      An integer value used to select and item in a sequence, such as a character in a string.
+    String Index
+      An integer value used to select a character in a string.
 
     Item
       One of the values in a sequence.
@@ -35,7 +36,7 @@ Glossary
     Method
       A function that is associated with an object and called using dot notation.
 
-    Object
+    String Object
       Something a variable can refer to. For now, you can use "object" and "value" interchangeably.
 
     Search

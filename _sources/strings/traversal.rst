@@ -111,12 +111,12 @@ characters are left.
     :answer_a: 1
     :answer_b: 2
     :answer_c: 4
-    :answer_d: Error, the for statement cannot have an if inside.
-    :correct: c
-    :feedback_a: The for loop visits each index but the selection only prints some of them.
-    :feedback_b: Yes, it will print all the characters in even index positions and the i character appears twice in an even location.
+    :answer_d: Error, the for statement cannot have an if in its body.
+    :correct: b
+    :feedback_a: The for loop visits each index but the selection (conditional) only prints some of them.
+    :feedback_b: Yes, it will print all the characters at even index positions and the i character appears twice in an even location.
     :feedback_c: i is at positions 1, 4, 7, and 10.
-    :feedback_d: The for statement can have any statements inside, including if as well as for.
+    :feedback_d: The for statement can have any statements in its body, including if as well as for.
 
 
     How many times is the letter i printed by the following statements?

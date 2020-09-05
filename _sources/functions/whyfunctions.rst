@@ -1,7 +1,8 @@
 Why functions?
 --------------
 
-\index{function, reasons for}
+.. index::
+    pair: function; reasons for
 
 It may not be clear why it is worth the trouble to divide a program into
 functions. There are several reasons:

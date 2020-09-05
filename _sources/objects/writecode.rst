@@ -242,7 +242,7 @@ Write Code Exercises
 
           .. activecode:: obj_writecode7a
             :nocodelens:
-            :optional
+            :optional:
 
             class Book:
 

@@ -23,7 +23,7 @@ Glossary
       A numeric key that points to the primary key of a row in another table. Foreign
       keys establish relationships between rows stored in different tables.
 
-    Index
+    Database Index
       Additional data that the database software maintains as rows and inserts into
       a tables to make lookups very fast.
 
@@ -45,7 +45,7 @@ Glossary
       An area within a database that contains tuples and attributes. More
       typically called a "table".
 
-    Tuple
+    Database Tuple
       A single entry in a database table that is a set of attributes. More typically
       called a "row".
 

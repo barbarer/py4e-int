@@ -48,13 +48,6 @@ Exercises
 
    Which of the following contains "machine code"?
 
-.. activecode:: intro-AC-fix
-    :nocodelens:
-
-    Try running the following code.  Can you tell what is wrong with it and fix it?
-    ~~~~
-    primt 'Hello world!'
-
 .. mchoice:: intro-MC-whereStored
    :answer_a: Central processing unit
    :answer_b: Main Memory
@@ -140,6 +133,7 @@ Exercises
       :[Ll]ogic: Try again! Logic Errors will not trigger an error message.
 
 .. tabbed:: intro_writeEx
+
     .. tab:: Question
 
         Try running the following code.  Can you tell what is wrong with it and fix it?
@@ -155,5 +149,5 @@ Exercises
             :nocodelens:
 
             # The print function is spelled incorrectly
-            # and needs parenthese around its contents
+            # and needs parentheses around its contents
             print('Hello world!')

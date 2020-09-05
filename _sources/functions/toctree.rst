@@ -14,6 +14,7 @@ Functions
    flowofexecution.rst
    parametersandargs.rst
    fruitfulvoid.rst
+   whyfunctions.rst
    debugging.rst
    glossary.rst
    Exercises.rst

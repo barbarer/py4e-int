@@ -8,7 +8,7 @@ Glossary
       A value provided to a function when the function is called. This value is assigned to the
       corresponding parameter in the function.
 
-    Body
+    Function Body
       The sequence of statements inside a function definition.
 
     Composition

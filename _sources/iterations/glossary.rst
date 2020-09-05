@@ -4,7 +4,7 @@ Glossary
     Accumulator
       A variable used in a loop to add up or accumulate a result.
 
-    Counter
+    Loop Counter
       A variable used in a loop to count the number of times something happened. We initialize
       a counter to zero then increment the counter each time we want to "count" something.
 
@@ -32,7 +32,7 @@ Glossary
     :match_3: decrement|||An update that decreases the value of a variable.
     :match_4: initialize|||An update that increases the value of a variable (often by one).
 
-    
+
 .. dragndrop:: iteration_glossary_two
     :feedback: Try again!
     :match_1: increment|||An update that increases the value of a variable (often by one).

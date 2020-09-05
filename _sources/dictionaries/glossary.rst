@@ -2,38 +2,39 @@ Glossary
 --------
 
 .. glossary::
-    Dictionary
-      A mapping from a set of keys to their corresponding values.
 
-    Hashtable
-      The algorithm used to implement Python dictionaries.
+   Dictionary
+       A mapping from a set of keys to their corresponding values.
 
-    Hash function
-      A function used by a hashtable to compute the location for a key.
+   Hashtable
+       The algorithm used to implement Python dictionaries.
 
-    Histogram
-      A set of counters.
+   Hash function
+       A function used by a hashtable to compute the location for a key.
 
-    Implementation
-      A way of performing a computation.
+   Histogram
+       A set of counters.
 
-    Item
-      Another name for a key-value pair.
+   Implementation
+       A way of performing a computation.
 
-    Key
-      An object that appears in a dictionary as the first part of a key-value pair.
+   Dictionary Item
+       Another name for a key-value pair.
 
-    Key-value pair
-      The representation of the mapping from a key to a value.
+   Key
+       An object that appears in a dictionary as the first part of a key-value pair.
+
+   Key-value pair
+       The representation of the mapping from a key to a value.
 
    Lookup
-      A dictionary operation that takes a key and finds the corresponding value.
+       A dictionary operation that takes a key and finds the corresponding value.
 
-    Nested loops
-      When there are one or more loops "inside" of another loop. The inner loop runs to completion each time the outer loop runs once.
+   Nested loops
+       When there are one or more loops "inside" of another loop. The inner loop runs to completion each time the outer loop runs once.
 
-    Value
-      An object that appears in a dictionary as the second part of a key-value pair. This is more specific than our previous use of the word "value".
+   Dictionary Value
+       An object that appears in a dictionary as the second part of a key-value pair. This is more specific than our previous use of the word "value".
 
 .. dragndrop:: chapter_nine_glossary_one
    :feedback: Look above for the definitions of these terms.
