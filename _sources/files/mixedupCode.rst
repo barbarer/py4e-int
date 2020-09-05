@@ -530,6 +530,7 @@ you can hide it again by clicking on the Hide button.
 .. parsonsprob:: file_mixed_pollution
     :numbered: left
     :adaptive:
+    :practice: T
 
     The following program prints the pollution information for all cities that start with a ``D``,
     but the code is mixed up. Drag the blocks of statements from the left column to the right column
@@ -564,6 +565,7 @@ you can hide it again by clicking on the Hide button.
 .. parsonsprob:: file_mixed_largest
     :numbered: left
     :adaptive:
+    :practice: T
 
     PM 2.5 is an air pollutant that is harmful at high levels. The following program
     prints the maximum PM 2.5 pollution found, but the code is mixed up. Drag the blocks
@@ -601,6 +603,7 @@ you can hide it again by clicking on the Hide button.
 .. parsonsprob:: file_mixed_lowest
     :numbered: left
     :adaptive:
+    :practice: T
 
     The following program prints the minimum PM 2.5 pollution found, but the code is mixed up.
     Drag the blocks of statements from the left column to the right column and put them in the
@@ -637,6 +640,7 @@ you can hide it again by clicking on the Hide button.
 .. parsonsprob:: file_mixed_average
     :numbered: left
     :adaptive:
+    :practice: T
 
     The following program prints the average PM 2.5 pollution found, but the code is
     mixed up. Drag the blocks of statements from the left column to the right column
@@ -670,6 +674,7 @@ you can hide it again by clicking on the Hide button.
 .. parsonsprob:: file_mixed_stateav
     :numbered: left
     :adaptive:
+    :practice: T
 
     The following program prints the average PM 2.5 pollution for a state, but the code is
     mixed up. Drag the blocks of statements from the left column to the right column and put

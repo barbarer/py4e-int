@@ -213,6 +213,8 @@ database.
 
 .. parsonsprob:: dbCreate_PP
     :practice: T
+    :adaptive:
+    :numbered: left
 
     Put the following code in order to create a cursor, make a table called "Cats" with
     two text columns ("Name" and "Breed"). Then add the rows for Whiskers, Ruby, and Milo in

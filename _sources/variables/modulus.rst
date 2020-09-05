@@ -67,7 +67,7 @@ last two digits.
     Match each expression with the type of division the operator performs.
 
 
-.. fillintheblank:: 02-fitb-6-mod
+.. fillintheblank:: var-fitb-6-mod
     :practice: T
 
     What is the result of ``25 % 4``?

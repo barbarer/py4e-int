@@ -44,10 +44,13 @@ an *empty string*, represented by two quotation marks:
 An empty string contains no characters and has length 0, but other than
 that, it is the same as any other string.
 
-.. shortanswer:: str-slice-sa-fruit
+.. fillintheblank:: str-slice-fitb-fruit
     :practice: T
 
-    Given that ``fruit`` is a string, what does ``fruit[:]`` mean?
+    Given that ``fruit`` is a string, how many characters does ``fruit[:]`` select?
+
+    - :([Aa]ll)|5|([Ff]ive): [:] selects the entire string
+      :.*: Try again! It could be helpful to run this in an activecode block.
 
 .. mchoice:: str-slice-mc-hello
     :practice: T

@@ -33,8 +33,14 @@ Write Code Questions
             .. activecode:: funct-ex-perimetera
                 :optional:
 
+                # Function headers end with a colon (:)
                 def recPerimeter(length, width):
+
+                    # Indent four spaces after the header
                     perimeter = 2 * (length + width)
+
+                    # Keyword return is lowercase
+                    # Return the variable, not the function name
                     return perimeter
 
 #.
@@ -92,10 +98,13 @@ Write Code Questions
             .. activecode:: funct_ex_trianglea
                 :optional:
 
+                # Give function base and height arguments
                 def areaTriangle(base, height):
+                    # Set area variable to the formula using arguments
                     area = (base * height) / 2
+                    # Return the calculated area
                     return area
-
+                # Call the function with arguments
                 print(areaTriangle(2, 6))
 
 #.
@@ -161,6 +170,8 @@ Write Code Questions
                 :optional:
 
                 def nameAndAge(nameString, ageInt):
+                    # Use quotes around strings, keep variables outside of quotes
+                    # Include spacing so variables are not connected to words
                     return("My name is "+ nameString + " and I am " + str(ageInt) + " years old")
 
                 print(nameAndAge("John", 18))
@@ -237,7 +248,9 @@ Write Code Questions
                 :optional:
 
                 def sumTo(n):
+                    # Set result variable to given equation
                     result = (n * (n + 1)) / 2
+                    # return the variable
                     return result
 
 #.
@@ -299,10 +312,13 @@ Write Code Questions
             .. activecode:: funct_ex_circlea
                 :optional:
 
+                # Import the math module
                 import math
 
                 def areaOfCircle(r):
+                    # Use ** to square r, then multiply by pi
                     a = r**2 * math.pi
+                    # Return the area
                     return a
 
 #.

@@ -23,10 +23,17 @@ Write Code Questions
             .. activecode:: cndtnl-wc-fivea
                 :optional:
 
+                # Initialize x and set condition for when x = 5
                 x = 5
                 if x == 5:
+
+                # Indent the body of if statement
                     print("The number is 5")
+
+                # Use else for the secondary condition
                 else:
+
+                # Indent the body of else statement
                     print("The number is NOT 5")
 
 #.
@@ -77,22 +84,30 @@ Write Code Questions
             .. activecode:: cndtnl-wc-paya
                 :optional:
 
-                #initializing variables
+                # Initializing variables
                 hours = 45
                 rate = 10
+
+                # overtimeRate is 1.5 the rate amount
                 overtimeRate = rate * 1.5
                 grossPay = 0
 
-                #starting if statement to see if hours are within regular pay
+                # Begin conditional to see if hours are within regular pay
                 if hours <= 40:
+
                     #if within 40 hours, pay will be hours * rate
                     grossPay = hours * rate
-                #else statement if hours are greater than 40
+
+                # Else statement for when hours are greater than 40
                 else:
-                    #creating a variable for overtime hours
+
+                    # Create variable for overtime hours
                     overTime = hours % 40
-                    #pay will equal the regular rate for 40 hours, plus the overtime rate for the extra hours
+
+                    # Pay will equal the regular rate for 40 hours,
+                    # plus the overtime rate for the extra hours
                     grossPay = (rate * 40) + (overTime * overtimeRate)
+
                 print(grossPay)
 
 #.
@@ -149,14 +164,21 @@ Write Code Questions
               :optional:
               :nocodelens:
 
+              # distance variable given
               distance = 14
-              # SET CONDITIONS
+
+              # Set conditions
               if distance <= 12:
+                  # rate will be 2 if the distance is less than or equal to 12
                   rate = 2.00
               if distance > 12:
+                  # rate will be 1.5 if the distance is greater than 12
                   rate = 1.50
-              # CALCULATE TRIP COST
+
+              # Calculate trip cost
               total = distance * rate
+
+              # Print final statement
               print("Total cost of trip: " + str(total))
 
 #.
@@ -191,17 +213,17 @@ Write Code Questions
            Fix the example such that the cost of frozen yogurt is 0 if you pour exactly 1 lb. in your cup.
 
            .. activecode::  cndtnl-wc-weightq
-               :nocodelens:
+                :nocodelens:
 
-               weight = 0.5
-               if weight < 1:
-                   price = 1.45
-               if weight > 1:
-                   price = 1.15
-               total = weight * price
-               print(weight)
-               print(price)
-               print(total)
+                weight = 0.5
+                if weight < 1:
+                    price = 1.45
+                if weight > 1:
+                    price = 1.15
+                total = weight * price
+                print(weight)
+                print(price)
+                print(total)
 
 
         .. tab:: Answer
@@ -210,14 +232,26 @@ Write Code Questions
               :optional:
               :nocodelens:
 
+              # Initial weight is given
               weight = 0.5
+
+              # Set conditionals
               if weight < 1:
+                  # Set price to 1.45 when weight is less than 1
                   price = 1.45
+
+              # Create condition for when weight is 1
               if weight == 1:
+                  # Set price to 0 when weight is 1
                   price = 0
+
               if weight > 1:
+                  # Set price to 1.15 when weight is greater than 1
                   price = 1.15
+
+              # calculate total using newly assigned variables
               total = weight * price
+              # Print variables
               print(weight)
               print(price)
               print(total)

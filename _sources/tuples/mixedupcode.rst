@@ -92,6 +92,7 @@ Mixed-Up Code Questions
 .. parsonsprob:: mixedupcode_question10_5
    :numbered: left
    :adaptive:
+   :practice: T
 
    Construct a block of code that uses tuples to keep track of the word count in the file 'heineken.txt'. Then print out the 10 most occuring words from the file.
    -----
@@ -125,6 +126,7 @@ Mixed-Up Code Questions
 .. parsonsprob:: mixedupcode_question10_6
    :numbered: left
    :adaptive:
+   :practice: T
 
    Construct a block of code to iterate through the items in dictionary d and print out its key-value pairs.
    -----
@@ -204,6 +206,7 @@ Mixed-Up Code Questions
 .. parsonsprob:: mixedupcode_question10_9
    :numbered: left
    :adaptive:
+   :practice: T
 
    Construct a block of code to capitalize all the words in the given tuple.
    -----

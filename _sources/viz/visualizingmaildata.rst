@@ -31,10 +31,9 @@ read gmane's terms and conditions at this page:
 
 http://gmane.org/export.php
 
-*It is very important that you make use of the gmane.org data
-responsibly by adding delays to your access of their services and
-spreading long-running jobs over a longer period of time. Do not abuse
-this free service and ruin it for the rest of us.*
+.. note:: It is very important that you make use of the gmane.org data responsibly by adding
+          delays to your access of their services and spreading long-running jobs over a longer
+          period of time. Do not abuse this free service and ruin it for the rest of us.
 
 When the Sakai email data was spidered using this software, it produced
 nearly a Gigabyte of data and took a number of runs on several days. The
@@ -44,6 +43,15 @@ as to how you can download a pre-spidered copy of the
 corpus so you don't have to spider for five days just to run the
 programs. If you download the pre-spidered content, you should still run
 the spidering process to catch up with more recent messages.
+
+.. mchoice:: viz-mail-MC-tf
+    :answer_a: True
+    :answer_b: False
+    :correct: b
+    :feedback_a: Try again! In the README.txt file, there are instructions to download a pre-spidered file.
+    :feedback_b: In the README.txt file, there are instructions to download a pre-spidered file. It is useful to spider after this, to stay up to date on new messages. 
+
+    True or False? When running the following program, it is required to spider the Sakai email data.
 
 The first step is to spider the gmane repository. The base URL is
 hard-coded in the *gmane.py* and is hard-coded to the

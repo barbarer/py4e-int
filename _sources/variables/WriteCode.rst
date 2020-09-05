@@ -22,8 +22,12 @@ Write Code Questions
                 :optional:
                 :nocodelens:
 
+                # Each set of quotes needs to be matching
                 food = 'tuna'
                 name = 'Molly'
+
+                # Place full sets of quotes around strings to be printed
+                # Include spaces before and after where variables are printed
                 print("Her name is " + name + " and her favorite food is " + food + ".")
 
 #.
@@ -66,11 +70,15 @@ Write Code Questions
             .. activecode:: var-wc-rhymeA
                 :optional:
 
+                # Set each word to its own variable
                 word1 = "twinkle"
                 word2 = "little"
                 word3 = "star"
 
+                # Print each word in succession
+                # Using commas automaticallly inserts spaces
                 print(word1, word1, word2, word3)
+
                 #another option is
                 #print(word1 + " " + word1 + " " + word2 + " " + word3)
 
@@ -226,6 +234,7 @@ Write Code Questions
                 totalMinutes = 270
                 numMinutes = totalMinutes % 60
                 numHours = (totalMinutes - numMinutes) / 60
+                # Use + and correctly spaced " " to write the variables out together
                 print(totalMinutes + " is " + numHours + " hours and " + numMinutes + " minutes.")
 
 #.

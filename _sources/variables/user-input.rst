@@ -79,6 +79,7 @@ We will see how to handle this kind of error later.
       :.*: Try again.
 
 .. parsonsprob:: var-input-pp-prompt
+   :adaptive:
    :practice: T
    :numbered: left
 

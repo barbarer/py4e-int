@@ -53,6 +53,8 @@ as the ``x`` attribute from the ``user`` node.
 
 .. parsonsprob:: webLoop_pp
     :adaptive:
+    :numbered: left
+    :practice: T
 
     Put the following blocks in order to use a loop to process nodes in an XML program, like the one seen above.
     -----
@@ -122,4 +124,4 @@ the top level ``stuff`` element where there are none.
     level elements in the ``findall`` statement expect for the top level element.
 
     - :[Pp]arent: It is important to include all parent level elements. These are the outside elements that contain the other elements.
-      :.*: Not the children but the _______. 
+      :.*: Not the children but the _______.

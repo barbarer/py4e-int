@@ -37,7 +37,7 @@ a self-closing tag (e.g., ``<email />``).
     :feedback_b: A pair of tags in XML can represent a node.
     :feedback_c: A pair of tags in XML does not represent a string outright.
     :feedback_d: A pair of tags in XML does not represent methods.
-    
+
     In XML, a pair of opening and closing tags (<> and <\\>) represent what? Select all that apply.
 
 Often it is helpful to think of an XML document as a tree structure

@@ -16,3 +16,5 @@ Network Programming
     bonusforunixlinux.rst
     glossary.rst
     Exercises.rst
+    mixedupcode.rst
+    writecode.rst

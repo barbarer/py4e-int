@@ -18,9 +18,9 @@ You can download and extract this application from:
    :scale: 70%
    :alt: A Page Ranking
 
-The first program (\ *spider.py*\ ) program crawls a web site
+The first program (*spider.py*) program crawls a web site
 and pulls a series of pages into the database
-(\ *spider.sqlite*\ ), recording the links between pages. You
+(*spider.sqlite*), recording the links between pages. You
 can restart the process at any time by removing the
 *spider.sqlite* file and rerunning
 *spider.py*.

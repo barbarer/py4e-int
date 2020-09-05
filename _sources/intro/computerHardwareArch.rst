@@ -94,6 +94,16 @@ instructions in advance. We call these stored instructions a
 *program* and the act of writing these instructions down
 and getting the instructions to be correct *programming*.
 
+
+.. fillintheblank:: intro-hardware-fitb-program
+    :practice: T
+
+    A set of stored instructions used to direct your computer's central processing unit is called a ________.
+
+    - :[Pp]rogram: A program holds the instructions that answer the CPU's "What next" question.
+      :[Pp]rogramming: Programming is the process of creating and editing these instructions.
+      :.*: Try again!
+
 .. dragndrop:: intro-hardware-dnd-memory
     :practice: T
     :feedback: How is memory stored?

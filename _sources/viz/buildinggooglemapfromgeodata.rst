@@ -1,6 +1,8 @@
 Building a Google map from geocoded data
 ----------------------------------------
 
+.. warning:: The Google API requires an account created with a credit card number, though it is free to use up to a certain number of requests.
+
 In this project, we are using the Google geocoding API to clean up some
 user-entered geographic locations of university names and then placing
 the data on a Google map.
@@ -19,6 +21,13 @@ rate-limited to a certain number of requests per day. If you have a lot
 of data, you might need to stop and restart the lookup process several
 times. So we break the problem into two phases.
 
+.. fillintheblank:: viz-google-fitb-phases
+
+    How many phases do we break the first problem of this project into?
+
+    - :2|([Two]): We break this problem into two phases.
+      :.*: Try again!
+
 
 In the first phase we take our input "survey" data in the file
 *where.data* and read it one line at a time, and retrieve
@@ -28,6 +37,13 @@ each user-entered location, we simply check to see if we already have
 the data for that particular line of input. The database is functioning
 as a local "cache" of our geocoding data to make sure we never ask
 Google for the same data twice.
+
+.. fillintheblank:: viz-google-fitb-db
+
+    The database in this program functions as a local ______ of our geocoding data.
+
+    - :[Cc]ache: The database acts as a local cache of that data to make sure we never ask Google for repeat data.
+      :.*: Try again!
 
 You can restart the process at any time by removing the file
 *geodata.sqlite*.
@@ -75,6 +91,15 @@ rate limit, but if you had more data it might take several runs over
 several days to get your database to have all of the geocoded data for
 your input.
 
+.. mchoice:: viz-google-mc-tf
+    :answer_a: True
+    :answer_b: False
+    :correct: a
+    :feedback_a: The geoload.py program <b>can</b> be stopped at any time. There is also a counter that can be used to limit the number of calls.
+    :feedback_b: Try again!
+
+    True or False? The geoload.py program can be stopped.
+
 Once you have some data loaded into *geodata.sqlite*\ , you
 can visualize the data using the *geodump.py* program.
 This program reads the database and writes the file
@@ -120,3 +145,17 @@ locations. You can hover over each map pin to find the location that the
 geocoding API returned for the user-entered input. If you cannot see any
 data when you open the *where.html* file, you might want
 to check the JavaScript or developer console for your browser.
+
+.. mchoice:: viz-google-mc-language
+    :multiple_answers:
+    :answer_a: HTML
+    :answer_b: Python
+    :answer_c: C++
+    :answer_d: JavaScript
+    :correct: a,b,d
+    :feedback_a: This program uses HTML in the where.html file.
+    :feedback_b: This program uses Python in the geodata.py file.
+    :feedback_c: Nope! This program does not use C++. 
+    :feedback_d: This program uses JavaScript in the where.html file.
+
+    Which of the following languages are used or produced by this program? Select all that apply.

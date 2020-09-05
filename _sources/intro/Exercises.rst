@@ -2,26 +2,38 @@ Exercises
 ---------
 
 .. mchoice:: intro-MC-secondaryMem
-   :answer_a: Execute all of the computation and logic of the program
-   :answer_b: Retrieve web pages over the Internet
-   :answer_c: Store information for the long term, even beyond a power cycle
-   :answer_d: Take input from the user
-   :correct: c
-   :feedback_a: This would be correct if we asked what the CPU does.
-   :feedback_b: This would be correct if we asked what the client does.
-   :feedback_c: The secondary memory provides long term storage, even if you turn off the computer.
-   :feedback_d: The secondary memory does not ask users for input.
+    :answer_a: Execute all of the computation and logic of the program
+    :answer_b: Retrieve web pages over the Internet
+    :answer_c: Store information for the long term, even beyond a power cycle
+    :answer_d: Take input from the user
+    :correct: c
+    :feedback_a: This would be correct if we asked what the CPU does.
+    :feedback_b: This would be correct if we asked what the client does.
+    :feedback_c: The secondary memory provides long term storage, even if you turn off the computer.
+    :feedback_d: The secondary memory does not ask users for input.
 
+    What is the function of the secondary memory in a computer?
 
-   What is the function of the secondary memory in a computer?
+.. mchoice:: intro-MC-prog
+    :answer_a: A set of instructions for your computer and CPU.
+    :answer_b: The process of creating and editing code.
+    :answer_c: An event that teaches you to write code.
+    :answer_d: A question you ask your computer.
+    :correct: a
+    :feedback_a: A program holds the instructions that answer the CPU's "What next" question.
+    :feedback_b: Programming is the process of creating and editing these instructions.
+    :feedback_c: This can be a program, but not the kind we're talking about here.
+    :feedback_d: While a program can ask your computer or the user a question, it typically answers the question of "what next" from your CPU.
 
-.. shortanswer:: intro-SA-prog
+    When talking about computers and code, which of the following is a program?
 
-   What is a program?
+.. fillintheblank:: intro-fitb-compilerVsInterpreter
 
-.. shortanswer:: intro-SA-compilerVsInterpreter
+   A __________ is a program that can analyze and execute a program line by line.
 
-   What is the difference between a compiler and an interpreter?
+   - :[Ii]nterpreter: An interpreter is a program that can analyze and execute a program line by line.
+     :[Cc]ompiler: A compiler translates a program into machine language from a file and saves it for later execution.
+     :.*: Try again!
 
 .. mchoice:: intro-MC-machineCode
    :answer_a: The Python interpreter
@@ -96,26 +108,52 @@ Exercises
    Pick the best replacements for 1 and 2 in the following sentence: When comparing compilers and interpreters, a compiler is like 1 while an interpreter is like 2.
 
 
-.. shortanswer:: intro-SA-explainCPU
+.. fillintheblank:: intro-fitb-explainCPU
 
-   What is the human equivalent to a Central Processing Unit?
+    A brain is the human equivalent to what in your computer?
 
-.. shortanswer:: intro-SA-MainMemory
+    - :(CPU)|([Cc]entral [Pp]rocessing [Uu]nit): The Central Processing Unit is very similar to a brain for your computer.
+      :.*: Try again!
 
-   What is the human equivalent to Main Memory?
+.. fillintheblank:: intro-fitb-keyboard
 
-.. shortanswer:: intro-SA-SecMemory
+    A keyboard is an example of an Input or Output device?
 
-   What is the human equivalent to Secondary Memory?
+    - :[Ii]nput: A keyboard connects to your computer and provides information that your computer reads <b>in</b>.
+      :[Oo]utput: Try again!
+      :.*: Try again!
 
-.. shortanswer:: intro-SA-Input
+.. fillintheblank:: intro-fitb-speaker
 
-   What is the human equivalent to an Input Device?
+    A speaker is an example of an Input or Output device?
 
-.. shortanswer:: intro-SA-Output
-
-   What is the human equivalent to an Output Device?
+    - :[Oo]utput: A speaker connects to your computer, which provides information that the speaker sends <b>out</b>.
+      :[Ii]nput: Try again!
+      :.*: Try again!
 
 .. shortanswer:: intro-SA-syntaxError
 
-   How do you fix a "Syntax Error"?
+    Python will tell you if your code has a __________ Error.
+
+    - :[Ss]yntax: If your code doesn't follow the "grammar rules" of Python, it will let you know.
+      :[Ss]emantic: Try again! Semantic Errors will not trigger an error message.
+      :[Ll]ogic: Try again! Logic Errors will not trigger an error message.
+
+.. tabbed:: intro_writeEx
+    .. tab:: Question
+
+        Try running the following code.  Can you tell what is wrong with it and fix it?
+
+        .. activecode:: intro-AC-fix
+            :nocodelens:
+
+            primt 'Hello world!'
+
+    .. tab:: Answer
+
+        .. activecode:: intro-AC-answer
+            :nocodelens:
+
+            # The print function is spelled incorrectly
+            # and needs parenthese around its contents
+            print('Hello world!')

@@ -106,8 +106,3 @@ Remember that ``=`` is an assignment operator and
     :feedback_e: Correct! 783 is not 206 is True.
 
     What operator makes ``783 ___ 206`` true? Select all that apply.
-
-.. shortanswer:: cndtnl-bool-sa-is
-    :practice: T
-
-    What is the difference between ``is`` and ``==``?

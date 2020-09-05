@@ -4,6 +4,7 @@ Mixed-up Code Questions
 .. parsonsprob:: var-mixed-hello
    :practice: T
    :numbered: left
+   :adaptive:
 
    The following program segment should prompt the user for their name and say hello to them.
    But, the blocks have been mixed up and include extra blocks that aren't correct.
@@ -35,6 +36,7 @@ Mixed-up Code Questions
 .. parsonsprob:: var-mixed-hours
    :practice: T
    :numbered: left
+   :adaptive:
 
    The following program segment should ask the user their hours per week and pay rate,
    then print a statement with their gross pay. But, the blocks have been mixed up and
@@ -70,6 +72,7 @@ Mixed-up Code Questions
    print(pricePerShirt)
 
 .. parsonsprob:: var-mixed-tip
+   :adaptive:
    :numbered: left
    :practice: T
    :noindent:
@@ -91,6 +94,7 @@ Mixed-up Code Questions
    print(perpersoncost) #distractor
 
 .. parsonsprob:: var-mixed-switch
+   :adaptive:
    :numbered: left
    :practice: T
    :noindent:
@@ -111,6 +115,7 @@ Mixed-up Code Questions
    temp = y #distractor
 
 .. parsonsprob:: var-mixed-discount
+  :adaptive:
   :numbered: left
   :practice: T
   :noindent:
@@ -133,6 +138,7 @@ Mixed-up Code Questions
   finalPrice = price - discount #distractor
 
 .. parsonsprob:: var-mixed-cookies
+   :adaptive:
    :numbered: left
    :practice: T
    :noindent:
@@ -151,6 +157,7 @@ Mixed-up Code Questions
    print("Baking " + var1 + " makes Chris happier than anything else.")
 
 .. parsonsprob:: var-mixed-camp
+   :adaptive:
    :numbered: left
    :practice: T
    :noindent:
@@ -166,6 +173,7 @@ Mixed-up Code Questions
    print("It takes us " + numHours + " hours and " + numMinutes + " minutes to get home from camp.") #paired
 
 .. parsonsprob:: var-mixed-numbers
+   :adaptive:
    :numbered: left
    :practice: T
    :noindent:
