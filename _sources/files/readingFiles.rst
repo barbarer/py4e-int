@@ -95,6 +95,8 @@ program to read the file in chunks using a ``for`` or ``while`` loop.
 
 .. parsonsprob:: file-read-pp-code
     :practice: T
+    :numbered: left
+    :adaptive:
 
     Put the following code in order so that it uses a while loop to read the file and find out how many lines it has.
     -----

@@ -14,7 +14,8 @@ Values and types
 
 
 A *value* is one of the basic things a program works
-with, like a letter or a number. You can print values in Python.  See what happens when you run the following code.
+with, like a letter or a number. You can print values in Python.  See what happens
+when you run the following code.
 
 .. activecode:: 02-ac-1-vars2
     :nocodelens:
@@ -25,8 +26,8 @@ with, like a letter or a number. You can print values in Python.  See what happe
 
 These values belong to different *types*: 17
 is an integer, and "Hello World!" is a *string*, so
-called because it contains a "string" of letters. You can identify strings because they are enclosed in quotation
-marks.
+called because it contains a "string" of letters. You can identify strings because
+they are enclosed in quotation marks.
 
 If you are not sure what type a value has, use the type function to find out.
 

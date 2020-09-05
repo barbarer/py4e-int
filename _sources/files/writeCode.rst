@@ -424,14 +424,19 @@ and hide to put it away.
                 :optional:
                 :available_files: uspoll.txt
 
+                # Close quotations around "r"
                 inFile = open("uspoll.txt","r")
+                # Separate lines using readline() (this method is Case Sensitive!!)
                 line = inFile.readline()
+                # While loops need colons to start the body
                 while line:
                     values = line.split(":")
                     city = values[0]
                     if (city.find("A") == 0):
+                        # "+" is needed to concatenate strings and variables
                         print('City: ' + city)
                         print("Pollution values:",values[1],values[2])
+                    # File name is case sensitive
                     line = inFile.readline()
 
                 inFile.close()
@@ -495,6 +500,8 @@ and hide to put it away.
 
                 # loop through the lines
                 for line in lines:
+                    # Set condition for lines starting with A or B
+                    # Be sure to close parentheses to separate phrases
                     if (line[0] == "A") | (line[0] == "B"):
                         print(line)
 
@@ -561,13 +568,19 @@ and hide to put it away.
                 :nocodelens:
                 :optional:
 
+                # Open the file in "read" mode
                 f = open("studentdata.txt", "r")
 
+                # iterate through lines in the file
                 for aline in f:
+                    # Split each item of the line
                     items = aline.split()
+                    # Set condition for student that have 6 or more quiz scores
+                    # Element 0 is the name, so start with element 1
                     if len(items[1:]) >= 6:
+                        # Print the name (element 0) if the condition is met
                         print(items[0])
-
+                # Close the file
                 f.close()
 
 The following file contains a set of emotions that will be used in the next question.
@@ -790,7 +803,7 @@ Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Lo
               def biggestLoss(file):
                   maxLoss = 0
                   lines = file.readlines()
-                  for # in lines:
+                  for line in #:
                       values = line.split(",")
                       opening = float(values[#])
                       closing = float(values[4])
@@ -811,13 +824,18 @@ Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Lo
               def biggestLoss(file):
                   maxLoss = 0
                   lines = file.readlines()
+                  # Use line to iterate through lines
                   for line in lines:
                       values = line.split(",")
+                      # Element 1 in values accesses the opening values
                       opening = float(values[1])
                       closing = float(values[4])
+                      # dailyLoss is the difference between opening and closing
                       dailyLoss = opening - closing
+                      # Set condition if the dailyLoss is greater than the overall highest loss
                       if (dailyLoss < maxLoss):
                           maxLoss = dailyLoss
+                          # Element 0 is the date
                           date = values[0]
                   print(date + " loss " + str(maxLoss))
 
@@ -825,27 +843,23 @@ Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Lo
               biggestLoss(file)
 
 #.
-    .. tabbed:: file_ex_300
+    .. activecode:: file_ex_300
+        :nocodelens:
+        :available_files: stocks.txt
 
-        .. tab:: Question
-
-            Fix the errors below so that the procedure prints all the dates where the Dow
-            Jones gained more than 300 points from open to close.
-
-            .. activecode::  ch18ex14q
-                :nocodelens:
-                :available_files: stocks.txt
-
-                def pointGain(file):
-                    lines = file.readlines()
-                    for lines in lines:
-                    values = line.split()
-                    open = str(values[2])
-                    close = float(values[4])
-                    if (close - open) < 300:
-                        print(values[0])
-                file = open("stocks.txt", "r")
-                pointGain(file)
+        Fix the errors below so that the procedure prints all the dates where the Dow
+        Jones gained more than 300 points from open to close.
+        ~~~~
+        def pointGain(file):
+            lines = file.readlines()
+            for lines in lines:
+            values = line.split()
+            opening = str(values[2])
+            closing = float(values[4])
+            if (closing - opening) < 300:
+                print(values[0])
+        file = open("stocks.txt", "r")
+        pointGain(file)
 
 #.
     .. tabbed:: file_ex_June
@@ -878,18 +892,19 @@ Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Lo
                 for line in lines:
                     values = line.split(",")
                     date = values[0]
+                    # date[2:5] accesses the 3 characters that express the month
+                    # if these are the letters for June, print the statement
                     if date[2:5] == "Jun":
                         print(date + " had a low value of " + values[3])
 
 
 #.
-    .. tabbed:: file_ex_abbr
+    .. activecode:: file_ex_abbrq
+        :practice: T
+        :available_files: stocks.txt
 
-        .. tab:: Question
+        Write a function that takes the stocks file and the abbreviation for a month
+        (i.e. Jan, Feb) as parameters and returns the average value of all the closing
+        prices during that month from all the years given (Hint: Use a counter variable).
 
-            Write a function that takes the stocks file and the abbreviation for a month
-            (i.e. Jan, Feb) as parameters and returns the average value of all the closing
-            prices during that month from all the years given (Hint: Use a counter variable).
-
-            .. activecode::  file_ex_abbrq
-                :nocodelens:
+        ~~~~

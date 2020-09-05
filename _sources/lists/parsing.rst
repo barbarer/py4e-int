@@ -50,6 +50,8 @@ bit of information we are looking for.
 
 .. parsonsprob:: listPars_PP_file
     :practice: T
+    :adaptive:
+    :numbered: left
 
     The following code should open a file and read through the lines, splitting them when a line starts
     with "Hello", then printing the second word in the line. Watch out for extra pieces of code and

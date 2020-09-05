@@ -7,7 +7,7 @@ Write Code Questions
 
         .. tab:: Question
 
-            Fix the 5 syntax errors in the code below to print a countdown of the numbers from 10 to 0.
+            Fix the 5 errors in the code below to print a countdown of the numbers from 10 to 0.
 
             .. activecode:: itr-ex-countdownq
                 :practice: T
@@ -15,11 +15,11 @@ Write Code Questions
 
                 def countdown():
                     counter = 10
-                    while Counter > 10:
+                    while Counter > 0:
                         Print(counter)
                         counter = counter + 1
 
-                countdown()
+                countDown()
 
                 ====
                 from unittest.gui import TestCaseGui
@@ -40,10 +40,14 @@ Write Code Questions
 
                 def countdown():
                     counter = 10
+                    # Keep running loop until counter equals 0 (use <=)
+                    # Use correct variable name (counter is lowercase)
                     while counter >= 0:
+                        # Keyword print is lowercase
                         print(counter)
+                        # Decrement to lower the counter
                         counter = counter - 1
-
+                # Call correct function name (countdown)
                 countdown()
 
 #.
@@ -75,7 +79,7 @@ Write Code Questions
                 while x < 0
                     x = x - 1
                 output = output + str(x) + " "
-                print(output)
+                print(output
 
                 ====
                 from unittest.gui import TestCaseGui
@@ -92,10 +96,15 @@ Write Code Questions
             .. activecode:: itr-ex-counta
 
                 output = ""
+                # Start x at -11 so it stays under 0
                 x = -11
+                # First line of a loop ends with a colon (:)
                 while x < 0:
+                    # Since the iteration variable is negative, increase the count
                     x = x + 1
+                    # Output reassignment is within the loop
                     output = output + str(x) + " "
+                # Close print parentheses
                 print(output)
 
 
@@ -157,8 +166,10 @@ Write Code Questions
                 x = 3
                 i = 0
                 while i < 3:
+                    # Increase x by 1 for each run of the loop
                     x = x + 1
                     i = i + 1
+                # Print the x variable
                 print(x)
 
 #.
@@ -201,6 +212,7 @@ Write Code Questions
 
                 ====
                 from unittest.gui import TestCaseGui
+                
                 class myTests(TestCaseGui):
 
                     def testOne(self):
@@ -218,10 +230,16 @@ Write Code Questions
 
                 def sumFunc(start, stop):
                     sum = 0
+                    # Create an iteration variable, initialized to the start argument
                     num = start
+                    # Use while loop until iteration variable is less than
+                    # or equal to stop argument
                     while num <= stop:
+                        # Add number to sum
                         sum = sum + num
+                        # Increase iteration variable
                         num += 1
+                    # Return the sum
                     return sum
 
                 print(sumFunc(1,10))
@@ -245,13 +263,14 @@ Write Code Questions
 
             The following code prints the times tables for 1 to 3 using two for loops.
             Rewrite the program to use a while and a for loop instead.
-            
+
             .. activecode::  int-ex-timesWhileq
                 :nocodelens:
 
                 for x in range(1,4):
                     for y in range(1,11):
                         print(str(x) + " * " + str(y) + " = " + str(x*y))
+
         .. tab:: Answer
 
             .. activecode:: int-ex-timesWhileA
@@ -261,11 +280,14 @@ Write Code Questions
                 # One is shown here
 
                 for x in range(1,4):
+                    # Create an iteration variable, starting in the range
                     y = 1
+                    # Use while loop if the iteration variable is less than 11
                     while y < 11:
+                        # Print the string
                         print(str(x) + " * " + str(y) + " = " + str(x*y))
+                        # Increment the iteration variable
                         y += 1
-
 
 #.
     .. activecode:: int-ex-whileq

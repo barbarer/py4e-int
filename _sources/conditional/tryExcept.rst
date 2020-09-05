@@ -121,10 +121,13 @@ Handling an exception with a ``try`` statement is called
 an exception gives you a chance to fix the problem, or try again, or at
 least end the program gracefully.
 
-.. shortanswer:: cndtnl-try-sa-meaning
+.. fillintheblank:: cndtnl-try-fitb-meaning
     :practice: T
 
-    What is the purpose of the ``try / except`` feature?
+    The ``try/except`` feature is used to catch ________.
+
+    - :[Ee]xception: When using try/except you are trying to catch an exception and give the computer a different way to handle it.
+      :.*: Try again. 
 
 .. parsonsprob:: cndtnl-try-pp-temp
     :practice: T

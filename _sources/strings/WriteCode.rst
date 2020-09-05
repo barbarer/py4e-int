@@ -30,6 +30,7 @@ Write Code Questions
                 :optional:
 
                 s1 = "hi"
+                # Reassign s1 to the capitalization method
                 s1 = s1.capitalize()
                 print(s1)
 
@@ -70,9 +71,9 @@ Write Code Questions
                 :optional:
                 :nocodelens:
 
-                # DECLARE VARIABLES
+                # Declare variables
                 sentence = 'I like green eggs'
-                # PRINT RESULT
+                # Print result
                 print('The length is ' + str(len(sentence)))
 
 
@@ -129,10 +130,16 @@ Write Code Questions
                 :optional:
 
                 string = "X-DSPAM-Confidence: 0.8475"
+                # Create variable where colon is in string
                 colon = string.find(':')
-                print(colon) #check value
-                digit = string[(colon+1):] # don't include the colon
-                print(digit) #check value
+                # Print variable to check the value
+                print(colon)
+                # Create variable for everything past the colon
+                digit = string[(colon+1):]
+                # Print the variable to check the value
+                print(digit)
+                # Convert digit variable to float
+                # Assign num variable to the float
                 num = float(digit)
 
 
@@ -189,10 +196,12 @@ Write Code Questions
                 :optional:
 
                 def numDigits(n):
+                    # Convert numeric argument to string and assign to variable
                     n_str = str(n)
+                    # Return the length of that string
                     return len(n_str)
 
-
+                # Check the function
                 print(numDigits(50))
                 print(numDigits(20000))
                 print(numDigits(1))
@@ -236,15 +245,15 @@ Write Code Questions
             .. activecode:: str-ex-nameInputa
                 :optional:
 
-                #CREATE PROMPT
+                # Create prompt
                 prompt = "What is your name?"
-                #GET INPUT
+                # Get input
                 name = input(prompt)
-                #ACCESS FIRST LETTER (INDEX 0)
+                # Access first letter (index 0)
                 first = name[0]
                 #MAKE LOWERCASE
                 lowerFirst = lower(first)
-                #PRINT
+                # Print
                 print(lowerFirst)
 
 #.

@@ -235,6 +235,7 @@ Mixed-up Code Questions
 .. parsonsprob:: functEx9muc
    :numbered: left
    :adaptive:
+   :practice: T
 
    Place the code blocks below to return 'too low' if the guess is less
    than the passed target, 'correct' if they are equal, and 'too high' if the guess
@@ -265,6 +266,7 @@ Mixed-up Code Questions
 .. parsonsprob:: functEx10muc
    :numbered: left
    :adaptive:
+   :practice: T
 
    Put the code blocks below in order to solve the following problem.  There are
    two extra blocks that are not needed in a correct solution.

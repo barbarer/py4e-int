@@ -50,6 +50,12 @@ you, your thoughts may turn toward developing programs for others.
 
     True or False? You will be both the programmer and the user in this book.
 
-.. shortanswer:: intro-creativity-sa-motivation
+.. mchoice:: intro-creativity-mc-tf2
+    :answer_a: True
+    :answer_b: False
+    :correct: b
+    :feedback_a: Try again!
+    :feedback_b: The primary motivation of this book is for us to be more productive in handling the data and information that we will encounter in our lives.
 
-    What is the primary motivation for this book?
+
+    True or False? The primary motivation of this book is to please end users and make money.
