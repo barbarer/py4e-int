@@ -1,54 +1,51 @@
 Write Code Exercises
 ---------------------
+#.
+    .. tabbed:: network_writecode1
 
-.. tabbed:: writecode_question12_1
+      .. tab:: Question
 
-    .. tab:: Question
+          .. activecode:: network_writecode1q
+              :language: python3
 
-        .. activecode:: writingcode_question12_1
-                :language: python3
+              Complete the following code that retrieves the file 'romeo.txt' from. Make changes to line 4 and 5.
+              ~~~~
+              import socket
 
-                Complete the following code that retrieves the file 'romeo.txt' from. Make changes to line 4 and 5.
-                ~~~~
+              mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+              mysock.connect(('____', __))
+              cmd = '____ ________________________ HTTP/1.0\r\n\r\n'.encode()
+              mysock.send(cmd)
 
-                import socket
+              while True:
+                  data = mysock.recv(512)
+                  if len(data) < 1:
+                      break
+                  print(data.decode(),end='')
 
-                mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                mysock.connect(('____', __))
-                cmd = '____ ________________________ HTTP/1.0\r\n\r\n'.encode()
-                mysock.send(cmd)
+              mysock.close()
 
-                while True:
-                    data = mysock.recv(512)
-                    if len(data) < 1:
-                        break
-                    print(data.decode(),end='')
+      .. tab:: Answer
 
-                mysock.close()
+          .. activecode:: network_writecode1a
+              :language: python3
 
+              Complete the following code that retrieves the file 'romeo.txt' from. Make changes to line 4 and 5.
+              ~~~~
+              import socket
 
-    .. tab:: Answer
+              mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+              mysock.connect(('data.pr4e.org', 80))
+              cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
+              mysock.send(cmd)
 
-        .. activecode:: writtencode_question12_1
-                :language: python3
+              while True:
+                  data = mysock.recv(512)
+                  if len(data) < 1:
+                      break
+                  print(data.decode(),end='')
 
-                Complete the following code that retrieves the file 'romeo.txt' from. Make changes to line 4 and 5.
-                ~~~~
-
-                import socket
-
-                mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                mysock.connect(('data.pr4e.org', 80))
-                cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
-                mysock.send(cmd)
-
-                while True:
-                    data = mysock.recv(512)
-                    if len(data) < 1:
-                        break
-                    print(data.decode(),end='')
-
-                    mysock.close()
+                  mysock.close()
 
 
 
@@ -217,8 +214,8 @@ Write Code Exercises
 
 .. tabbed:: writecode_question12_9
 
-    .. tab:: Question 
-       
+    .. tab:: Question
+
         .. activecode:: writingcode_question12_9
                 :language: python3
 
@@ -239,7 +236,7 @@ Write Code Exercises
 
                 Complete the following code to print all the image sources from the webpage. Use 'img' and 'src' as tags.
                 ~~~~
-                
+
                 import urllib.request
                 from bs4 import BeautifulSoup
 

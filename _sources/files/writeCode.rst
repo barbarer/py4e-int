@@ -477,12 +477,10 @@ and hide to put it away.
                 :nocodelens:
                 :available_files: uspoll.txt
 
-                # read all the lines
                 inFile = open("uspoll.txt","r")
                 lines = inFile.readlines()
                 inFile.close()
 
-                # loop through the lines
                 for line in lines:
                     if line[0] == "A":
                         print(line)
@@ -493,12 +491,12 @@ and hide to put it away.
                 :available_files: uspoll.txt
                 :optional:
 
-                # read all the lines
+                # Read all the lines
                 inFile = open("uspoll.txt","r")
                 lines = inFile.readlines()
                 inFile.close()
 
-                # loop through the lines
+                # Loop through the lines
                 for line in lines:
                     # Set condition for lines starting with A or B
                     # Be sure to close parentheses to separate phrases
@@ -507,29 +505,25 @@ and hide to put it away.
 
 
 #.
-    .. tabbed:: file_ex_valueCity
+    .. activecode:: file_ex_valueCity
+        :nocodelens:
+        :available_files: uspoll.txt
 
-        .. tab:: Question
+        Fix the indention below for the code to correctly find and print the lowest 2.5 value and city.
+        ~~~~
+        inFile = open("uspoll.txt","r")
+        lines = inFile.readlines()
+        inFile.close()
 
-           Fix the indention below for the code to correctly find and print the lowest 2.5 value and city.
-
-           .. activecode::  file_ex_valueCityq
-                :nocodelens:
-                :available_files: uspoll.txt
-
-                inFile = open("uspoll.txt","r")
-                lines = inFile.readlines()
-                inFile.close()
-
-                minCity = ''
-                min25 = 500
-                for line in lines:
-                values = line.split(":")
-                new25 = float(values[2]) # set the value for new25 to be the current PM 2.5 value
-                if new25 < min25:
-                minCity = values[0] # Save the minimum city and state
-                min25 = new25 # save the minimum PM 2.5 value
-                print("Smallest PM 2.5 ",min25," in ",minCity)
+        minCity = ''
+        min25 = 500
+        for line in lines:
+        values = line.split(":")
+        new25 = float(values[2])
+        if new25 < min25:
+        minCity = values[0]
+        min25 = new25 
+        print("Smallest PM 2.5 ",min25," in ",minCity)
 
 #.
     .. tabbed:: file_ex_test

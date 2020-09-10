@@ -31,6 +31,8 @@ Write Code Questions
 
                 s1 = "hi"
                 # Reassign s1 to the capitalization method
+                # capitalize returns a new version of the string
+                # it does not edit the existing string (strings are immutable)
                 s1 = s1.capitalize()
                 print(s1)
 
@@ -251,7 +253,7 @@ Write Code Questions
                 name = input(prompt)
                 # Access first letter (index 0)
                 first = name[0]
-                #MAKE LOWERCASE
+                # Make lowercase
                 lowerFirst = lower(first)
                 # Print
                 print(lowerFirst)

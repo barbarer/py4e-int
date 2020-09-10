@@ -24,10 +24,16 @@ Write Code Questions
           .. activecode:: list_writeMyListA
               :optional:
 
+              # List elements are separated by commas
               myFirstList = [12,"ape",13]
+              # Parentheses need to be in pairs ()
+              # The print statement is missing its closing parenthesis
               print(len(myFirstList))
+              # Python is case sensitive - myFirstList
               print(myFirstList * 3)
+              # Brackets need to be in pairs []
               mySecondList = myFirstList + [321.4]
+              # Parentheses need to be in pairs ()
               print(mySecondList)
 
 #.
@@ -73,7 +79,10 @@ Write Code Questions
                 def gradeAverage(aList):
                     sum = 0
                     for num in aList:
-                        sum += num
+                        # Add num to the sum
+                        sum = sum + num
+                    # The average is the sum of the elements divided by the number of elements
+                    # Use len() to find the length of the list
                     average = sum/len(aList)
                     return average
 
@@ -130,13 +139,14 @@ Write Code Questions
               data = ['bagel', 'cream cheese', 'breakfast', 'grits', 'eggs', 'bacon', [34, 9, 73, []],
                      [['willow', 'birch', 'elm'], 'apple', 'peach', 'cherry']]
 
-              # ACCESS LAST ELEMENT OF DATA
+              # willow is in the last element of data
+              # Access the last element in data
               dataLast = data[-1]
-
-              # ACCESS FIRST ELEMENT IN LIST
+              # willow is in the first element of dataLast
+              # Access the first element in dataLast
               trees = dataLast[0]
-
-              # ACCESS FIRST ELEMENT IN TREES
+              # willow is the first element in trees
+              # Access first element in trees and assign to 'plant'
               plant = trees[0]
 
 #.
@@ -189,8 +199,11 @@ Write Code Questions
               :optional:
 
               def chop(lst):
+                  # Use del to remove the first (0th) element
                   del lst[0]
+                  # Use del to remove the last (-1st) element
                   del lst[-1]
+                  # Return list
                   return(lst)
 
 #.
@@ -242,19 +255,21 @@ Write Code Questions
             .. activecode:: list_writeSuma
                 :optional:
 
-                import random
-
-                def sum(lst):
-                    sum = 0
-                    index = 0
-                    while index < len(lst) and lst[index] % 2 != 0:
-                        sum = sum + lst[index]
-                        index = index + 1
-                    return sum
-
-                lst = []
-                for i in range(100):
-                    lst.append(random.randint(0,1000))
+                def sumUntilEven(lst):
+                    # Create total variable to keep sum
+                    # sum is a built-in function cannot be used as a variable name
+                    total = 0
+                    # Create variable to iterate through elements
+                    element = 0
+                    # Run the loop if the element is not the last in the list
+                    # and if the element is not even (%2 will return 0 if it is even)
+                    while element < len(lst) and lst[element] % 2 != 0:
+                        # If the element is not even, add it to the total
+                        total = total + lst[element]
+                        # increment element to access the next
+                        element += 1
+                    # the while loop will stop when the element does not satisfy the condidions
+                    return total
 
 
 #.

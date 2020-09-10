@@ -59,7 +59,6 @@ Write Code Questions
 
         Write a program to read through a mail log, build a histogram using the dictionary "user_count" to count how many messages have come from each email address, and print the dictionary.
         ~~~~
-
         mail_log = ['From stephen.marquard@uct.ac.za Sat Jan  7', 'From gopal.ramasammycook@gmail.com Thurs Jan  5', 'From stephen.marquard@uct.ac.za Sat Feb  7', 'From louis@media.berkeley.edu Tues Jan  3', 'From stephen.marquard@uct.ac.za Sat Nov  6', 'From antranig@caret.cam.ac.uk Sat Jan  7', 'From david.horwitz@uct.ac.za Wed Jan  4', 'From ray@media.berkeley.edu Mon Jan  2', 'From stephen.marquard@uct.ac.za Mon Jan 2', 'From wagnermr@iupui.edu Fri Jan  6', 'From gopal.ramasammycook@gmail.com Thurs Dec  5', 'From louis@media.berkeley.edu Tues April  1']
 
         ====
@@ -133,7 +132,6 @@ Write Code Questions
         Store the words as keys in the dictionary 'word_dictionary', then use the ``in`` operator as a fast way to
         check whether the string is in the dictionary.
         ~~~~
-
         phrase = "Writing programs or programming is a very creative and rewarding activity  You can write programs for many reasons ranging from making your living to solving a difficult data analysis problem to having fun to helping someone else solve a problem  This book assumes that {\em everyone} needs to know how to program and that once you know how to program, you will figure out what you want to do with your newfound skills"
 
         ====
@@ -186,7 +184,9 @@ Here is the words.txt file for Question 5.
 
         .. tab:: Question
 
-            Write code that reads in the text from the file words.txt, and uses the dictionary 'word_count' to count the amount of times a word appears in the file. Watch out for repetition using the .lower() function.
+            Write code that reads in the text from the file words.txt, and uses
+            the dictionary 'word_count' to count the amount of times a word appears
+            in the file. Watch out for repetition using the .lower() function.
 
             .. datafile:: words.txt
                 :fromfile: words.txt
@@ -244,7 +244,6 @@ Here is the words.txt file for Question 5.
         Perform the same task as in question 4, but this time make sure to look at words in
         lowercase in order to avoid any repetition.
         ~~~~
-
         phrase = "Writing programs or programming is a very creative and rewarding activity  You can write programs for many reasons ranging from making your living to solving a difficult data analysis problem to having fun to helping someone else solve a problem  This book assumes that {\em everyone} needs to know how to program and that once you know how to program, you will figure out what you want to do with your newfound skills"
 
         ====
@@ -337,7 +336,6 @@ Below is the romeo3.txt file used in Question 7.
 
         Write code that adds the key 'two' with a value of 'dos' to the dictionary eng2sp.
         ~~~~
-
         eng2sp = {'one':'uno'}
 
         ====
@@ -401,23 +399,34 @@ The next two questions are associated with the following text file.
                 myTests().main()
 
         .. tab:: Answer
-        
+
             .. activecode:: dict_writecode9a
                 :available_files: mbox-short.txt
                 :optional:
 
+                # Open file in read mode
                 with open("mbox-short.txt3", "r") as filename:
+                    # Create message_count dictionary
                     message_count = {}
+                    # Create variable for lines of the file
                     messages = filename.readlines()
+                    # Iterate through each message (each line)
                     for message in messages:
-                    key = message.split()[0]
-                    value = message.split()[1]
-                    if key not in message_count.keys():
-                        message_count[key] = value
-
+                        # Assign the key to the first (0th) element of the message
+                        key = message.split()[0]
+                        # Assign the value to the second element of the message
+                        value = message.split()[1]
+                        # Check if key is already in dictionary
+                        if key not in message_count.keys():
+                            # if not, add key/value pair to dictionary
+                            message_count[key] = value
+                # Create variable to count emails
                 max_emails = 0
+                # Iterate through keys in dictionary
                 for key in message_count.keys():
+                    # Check if key is larger than the max emails
                     if int(message_count[key]) >= max_emails:
+                        # If so, reassign max_emails to that key
                         max_emails = int(message_count[key])
                 print(max_emails)
 
@@ -432,7 +441,6 @@ The next two questions are associated with the following text file.
 
         Write this program to record the domain name (instead of the address) where the message was sent from instead of who the mail came from (i.e., the whole email address). At the end of the program, print out the contents of your dictionary.
         ~~~~
-
         with open("mbox-short.txt2", "r") as filename:
             message_count = {}
 
