@@ -37,7 +37,6 @@ Write Code Questions
         Modify the program below to calculate the total cost of 4 apples and 3 pears
 
         ~~~~
-
         apples = 4
         pears = 3
         totalCost =
@@ -89,7 +88,6 @@ Write Code Questions
         Add parentheses to the following code so that the total equals 40.
 
         ~~~~
-
         total = 7 + 3 * 6 - 2
         print(total)
 
@@ -230,6 +228,7 @@ Write Code Questions
 
             .. activecode::  var-wc-combineA
                 :nocodelens:
+                :optional:
 
                 totalMinutes = 270
                 numMinutes = totalMinutes % 60

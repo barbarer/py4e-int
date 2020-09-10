@@ -26,14 +26,11 @@ Write Code Questions
                 # Initialize x and set condition for when x = 5
                 x = 5
                 if x == 5:
-
-                # Indent the body of if statement
+                    # Indent the body of if statement
                     print("The number is 5")
-
                 # Use else for the secondary condition
                 else:
-
-                # Indent the body of else statement
+                    # Indent the body of else statement
                     print("The number is NOT 5")
 
 #.
@@ -87,31 +84,24 @@ Write Code Questions
                 # Initializing variables
                 hours = 45
                 rate = 10
-
                 # overtimeRate is 1.5 the rate amount
                 overtimeRate = rate * 1.5
                 grossPay = 0
-
                 # Begin conditional to see if hours are within regular pay
                 if hours <= 40:
-
                     #if within 40 hours, pay will be hours * rate
                     grossPay = hours * rate
-
                 # Else statement for when hours are greater than 40
                 else:
-
                     # Create variable for overtime hours
                     overTime = hours % 40
-
                     # Pay will equal the regular rate for 40 hours,
                     # plus the overtime rate for the extra hours
                     grossPay = (rate * 40) + (overTime * overtimeRate)
-
+                # Print the final pay
                 print(grossPay)
 
 #.
-
     .. activecode::  cndtnl-wc-pay2q
 
         Rewrite your pay program using ``try`` and ``except`` so that your program handles non-numeric
@@ -166,7 +156,6 @@ Write Code Questions
 
               # distance variable given
               distance = 14
-
               # Set conditions
               if distance <= 12:
                   # rate will be 2 if the distance is less than or equal to 12
@@ -174,10 +163,8 @@ Write Code Questions
               if distance > 12:
                   # rate will be 1.5 if the distance is greater than 12
                   rate = 1.50
-
               # Calculate trip cost
               total = distance * rate
-
               # Print final statement
               print("Total cost of trip: " + str(total))
 
@@ -234,21 +221,17 @@ Write Code Questions
 
               # Initial weight is given
               weight = 0.5
-
               # Set conditionals
               if weight < 1:
                   # Set price to 1.45 when weight is less than 1
                   price = 1.45
-
               # Create condition for when weight is 1
               if weight == 1:
                   # Set price to 0 when weight is 1
                   price = 0
-
               if weight > 1:
                   # Set price to 1.15 when weight is greater than 1
                   price = 1.15
-
               # calculate total using newly assigned variables
               total = weight * price
               # Print variables
