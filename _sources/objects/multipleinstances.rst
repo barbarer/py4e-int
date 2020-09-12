@@ -12,26 +12,25 @@ pass data to the constructors to give each object a different initial
 value:
 
 .. codelens:: partyanimal_multipleinstances
-   :showoutput:
+    :showoutput:
 
-   class PartyAnimal:
-      x = 0
-      name = ''
-      
-      def __init__(self, nam):
-         self.name = nam
-         print(self.name,'constructed')
+    class PartyAnimal:
 
-      def party(self) :
-         self.x = self.x + 1
-         print(self.name,'party count',self.x)
+        def __init__(self, nam):
+            self.name = nam
+            print(self.name,'constructed')
 
-   s = PartyAnimal('Sally')
-   j = PartyAnimal('Jim')
+        def party(self, x) :
+            self.x = x
+            self.x = self.x + 1
+            print(self.name,'party count',self.x)
 
-   s.party()
-   j.party()
-   s.party()
+    s = PartyAnimal('Sally')
+    j = PartyAnimal('Jim')
+
+    s.party(0)
+    j.party(0)
+    s.party(1)
 
 The constructor has both a ``self`` parameter that points to the object instance
 and additional parameters that are passed into the constructor as the
@@ -61,10 +60,10 @@ independent copies of ``x`` and ``nam``\ :
    Jim party count 1
    Sally party count 2
 
-.. fillintheblank:: multipleinstances 
+.. fillintheblank:: multipleinstances
 
   When using multiple instances, we can set different initial values for the instances by using a
-  |blank|. 
+  |blank|.
 
   - :[Cc]onstructor: Yes, constructors can be used to initialize objects with initial values.
     :.*: Try again!

@@ -1,17 +1,15 @@
 Mixed-Up Code Exercises
 ------------------------
 
-.. parsonsprob:: mixedupcode_14_1
+.. parsonsprob:: obj_mixedupcode_1
     :numbered: left
     :practice: T
     :adaptive:
 
     Construct a block of code that creates a class named Dog that takes 'name' as an initial value and
-    returns it when 'getName' function is called.
+    returns it when 'getName' method is called.
     -----
     class Dog:
-    =====
-     name = ''
     =====
      def __init__(self, name):
     =====
@@ -21,13 +19,13 @@ Mixed-Up Code Exercises
     =====
       return ("Dog name: " + self.name)
 
-.. parsonsprob:: mixedupcode_14_2
+.. parsonsprob:: obj_mixedupcode_2
     :numbered: left
-    :practice: T 
+    :practice: T
     :adaptive:
 
-    Construct a class named  Dog that takes 'name' and 'age' as initial values and a function named 'updateAge' that adds the
-    age by 1.
+    Construct a class named  Dog that takes 'name' and 'age' as initial values and
+    has a method named 'updateAge' that increases the age by 1. Then update the age of Lark.
     -----
     Class Dog: #distractor
     =====
@@ -54,13 +52,14 @@ Mixed-Up Code Exercises
     lark = Dog("Lark", 10)
     lark.updateAge()
 
-.. parsonsprob:: mixedupcode_14_3
+.. parsonsprob:: obj_mixedupcode_3
     :numbered: left
     :practice: T
     :adaptive:
 
-    Construct a block of code that create a class named  'Cat'  that  takes 'name' and 'age' as initial value
-    and returns cat info when 'info' is classed and returns meow when 'make_sound' function is called.
+    Construct a block of code that create a class named  'Cat'  that  takes 'name'
+    and 'age' as initial values. Cat then returns the cat's information when 'info'
+    is called and returns meow when 'make_sound' method is called.
     -----
     class Cat:
     =====
@@ -69,7 +68,7 @@ Mixed-Up Code Exercises
       self.name = name
       self.age = age
     =====
-     def info(self):   
+     def info(self):
     =====
       return(f"I am a cat. My name is {self.name}. I am {self.age} years old.")
     =====
@@ -77,12 +76,13 @@ Mixed-Up Code Exercises
     =====
       return("Meow")
 
-.. parsonsprob:: mixedupcode_14_4
+.. parsonsprob:: obj_mixedupcode_4
     :numbered: left
-    :practice: T 
+    :practice: T
     :adaptive:
 
-    Construct a class named 'Book' that takes title and author as initial values. Also create an object of 'Book' class
+    Construct a class named 'Book' that takes a title and author as initial values.
+    Then create an object of 'Book' class
     named newbook.
     -----
     Class Book: #distractor
@@ -99,54 +99,48 @@ Mixed-Up Code Exercises
     =====
     newbook = Book("The Odyssey", "Homer")
 
-.. parsonsprob:: mixedupcode_14_5
+.. parsonsprob:: obj_mixedupcode_5
     :numbered: left
-    :practice: T 
+    :practice: T
     :adaptive:
 
-    Construct a class named 'Dog' that takes name as the initial value, and has a function called updateTricks to update tricks to a list
-    and the getString function to get info of the Dog.
+    Construct a class named 'Dog' that takes name as the initial value, and has
+    a method called updateTricks to update tricks to a list and the string
+    method to get information of the Dog. Print both the tricks and the string for
+    spot at the end.
     -----
     class Dog:
     =====
-     name = ''
-     tricks = []
+    def __init__(self, name):
     =====
-     def __init__(name): #distractor
+        self.name = name
+        self.tricks = []
     =====
-     def __init__(self.name):
+    def updateTrick(self, trick):
     =====
-      name = name #distractor
+        self.tricks.append(trick)
     =====
-      self.name = name
+    def __str__(self):
     =====
-     def updateTricks(self.trick): #distractor
+        return 'Dog(name = ' + self.name +  ', tricks = ' + str(self.tricks) + ')'
     =====
-     def updateTricks(self, trick):
+    spot = Dog('Spot')
     =====
-      self.tricks.append(trick)
+    spot.updateTrick('spin')
+    spot.updateTrick('sit')
     =====
-     def getString(self):
-    =====
-      return("Name: " + self.name + " Tricks: " + str(self.tricks))
-    =====
-     dog = new Dog("Fido")  #distractor
-    =====
-     dog = Dog("Fido")
-    =====
-     dog.updateTricks("Spin")
-     dog.updateTricks("Sit")
-    =====
-     print(dog.getString)
+    print(spot.tricks)
+    print(spot)
 
-.. parsonsprob:: mixedupcode_14_6
+.. parsonsprob:: obj_mixedupcode_6
     :numbered: left
-    :practice: T 
+    :practice: T
     :adaptive:
 
-    Construct a class named "Book" that takes the title and author as initial values. Construct a class named "Bookinfo"
-    that extends the "Book" class and contains a function "__str__" that  returns the string representation of the 
-    class.
+    Construct a class named "Book" that takes the title and author as initial values.
+    Construct a second class named "Bookinfo" that extends the "Book" class and
+    contains a method "__str__" that  returns the string representation of the class.
+    Create an object "iliad" for that book and print the string associated with it.
     -----
     class Book:
     =====
@@ -165,13 +159,14 @@ Mixed-Up Code Exercises
     =====
     print(iliad)
 
-.. parsonsprob:: mixedupcode_14_7
+.. parsonsprob:: obj_mixedupcode_7
     :numbered: left
-    :practice: T 
+    :practice: T
     :adaptive:
 
-    Construct a class named "Dog" that takes  name and age as initial values and a class named "GoldenRetriever"
-    which contains a function named "__str__" that returns the string representation of the class.
+    Construct a class named "Dog" that takes  name and age as initial values and
+    a class named "GoldenRetriever" which contains a method named "__str__"
+    that returns the string representation of the class.
     -----
     class Dog:
     =====
@@ -196,14 +191,14 @@ Mixed-Up Code Exercises
     =====
     print(lark)
 
-.. parsonsprob:: mixedupcode_14_8
+.. parsonsprob:: obj_mixedupcode_8
     :numbered: left
-    :practice: T 
+    :practice: T
     :adaptive:
 
-    Construct a class named "Dog"  that takes name and age as initial values and a class named "DogBreed"
-    which takes in breed as an initial values and a function named "__str__" that returns teh string 
-    representation of the class.
+    Construct a class named "Dog"  that takes name and age as initial values and
+    a class named "DogBreed" which takes in breed as name, age, and breed as initial values
+    and a method named "__str__" that returns the string representation of the class.
     -----
     class Dog:
     =====
@@ -228,14 +223,15 @@ Mixed-Up Code Exercises
     =====
     print("lark")
 
-.. parsonsprob:: mixedupcode_14_9
+.. parsonsprob:: obj_mixedupcode_9
     :numbered: left
-    :practice: T 
+    :practice: T
     :adaptive:
 
-    Construct a class named "Book" that contains title, author and format as initial values. Create a class named
-    "Library" that extends "Book" and has available as initial value, a function named updateAvailability to update
-    availability and a function named "__str__" that returns the string representation of the class.
+    Construct a class named "Book" that contains title, author and format as initial values.
+    Create a class named "Library" that extends "Book" and has available as initial value,
+    a method named updateAvailability to update availability and a method named "__str__"
+    that returns the string representation of the class.
     -----
     class Book:
     =====
@@ -272,15 +268,17 @@ Mixed-Up Code Exercises
     print(iliad)
 
 
-.. parsonsprob:: mixedupcode_14_10
+.. parsonsprob:: obj_mixedupcode_10
     :numbered: left
-    :practice: T 
+    :practice: T
     :adaptive:
 
-    Construct a class named "Apple" that contains type and color as initial value  and a function named "__repr__" that
-    returns the string representation of the "Apple" class. Construct a class named "Farmer" that contains name as initial value
-    with a function named updateItems that updates a list called 'items' which is a list of objects of Apple class and a function
-    called "__str__" that returns the string representation of the class.
+    Construct a class named "Apple" that contains type and color as initial value
+    and a method named "__repr__" that returns the string representation of the
+    "Apple" class. Construct a class named "Farmer" that contains name as initial value
+    with a method named updateItems that updates a list called 'items' which is a list
+    of objects of Apple class and a method called "__str__" that returns the string
+    representation of the class.
     -----
     class Apple:
     =====
@@ -295,21 +293,17 @@ Mixed-Up Code Exercises
     =====
     class Farmer:
     =====
-     items = []
-    =====
      def __init__(self, name):
       self.name = name
+      self.items = []
     =====
      def updateItems(self, type, color):
-      items.append(Apple(type, color)
+      self.items.append(Apple(type, color))
     =====
      def __str__(self):
-      return("Farmer " + self.name + "has " + str(items)
+      return("Farmer " + self.name + " has " + str(self.items))
     =====
     josh = Farmer("Josh")
     =====
     josh.updateItems("Granny Smith", "Green")
     print(josh)
-
-
-

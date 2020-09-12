@@ -9,16 +9,14 @@ Write Code Exercises
                 :nocodelens:
 
                 Complete the following code to create an object 'spot' from the Dog class
-                with the instance "Spot" and tricks "spin" and "sit". You can use a print statement to
+                with the name "Spot" and tricks "spin" and "sit". You can use print(spot) to
                 print the string representation of the object.
                 ~~~~
-
                 class Dog:
-                    name = ''
-                    tricks = []
 
                     def __init__(self, name):
                         self.name = name
+                        self.tricks = []
 
                     def updateTricks(trick)
                         self.tricks.append(trick)
@@ -32,41 +30,40 @@ Write Code Exercises
                 :optional:
 
                 class Dog:
-                    name = ''
-                    tricks = []
 
                     def __init__(self, name):
                         self.name = name
+                        self.tricks = []    # creates a new empty list for each dog
 
-                    # Each method needs the parameter "self"
-                    def updateTricks(self, trick):
+                    def updateTrick(self, trick):
                         self.tricks.append(trick)
 
                     def __str__(self):
                         return 'Dog(name = ' + self.name +  ', tricks = ' + str(self.tricks) + ')'
-
                 # Create the object spot
-                spot = Dog("Spot")
-                # Update spot's tricks to include spin and sit
-                spot.updateTricks("spin")
-                spot.updateTricks("sit")
-                # Print the statement
+                spot = Dog('Spot')
+                # Update trick "spin"
+                spot.updateTrick('spin')
+                # Update trick "sit"
+                spot.updateTrick('sit')
+                # Printing list of tricks
+                print(spot.tricks)
+                # Printing spot's information
                 print(spot)
 
 #.
     .. activecode:: obj_writecode2
         :nocodelens:
 
-        Complete the following code to include a list named 'attacks' and a function named
+        Complete the following code to include a list named 'attacks' and a method named
         updateAttacks() which updates the 'attacks' list to include the attacks of the pokemon.
         ~~~~
         class Pokemon:
-            name = ''
-            type = ''
 
             def __init__(self, name, type):
                 self.name = name
                 self.type = type
+                self.attacks = []
 
             def stringPokemon(self):
                 print("Pokemon name is {} and type is {}".format(self.name, self.type))
@@ -84,12 +81,10 @@ Write Code Exercises
           .. activecode:: obj_writecode3q
               :nocodelens:
 
-              Correct the errors in the following code. There are  6 errors.
+              Correct the 6 errors in the following code. The program should create
+              a class that prints the title and author of a book.
               ~~~~
               Class Book:
-
-                  title = ''
-                  author = ''
 
                   def __init__(title, author):
                       title = title
@@ -109,12 +104,12 @@ Write Code Exercises
                   title = ''
                   author = ''
 
-                  # Class methods need to include the self parameter
+                  # Class methods need to include the self instance
                   def __init__(self, title, author):
-                      # Use the self reference when using these attributes
+                      # Use the self instance when using these attributes
                       self.title = title
                       self.author = author
-                      # Use the self reference to select the correct instance
+                      # Use the self instance to select the author and title
                       print("Your book is " + self.title + " by author " + self.author)
               # Use correct class name!
               book = Book("The Odyssey", "Homer")
@@ -126,16 +121,15 @@ Write Code Exercises
         Correct the following code. There are  7 errors.
         ~~~~
         class Dog:
-          self.name = ''
-          self.tricks = []
 
-          def init(self.name):
-            name  = self.name
-            print('New dog's name is " + Self.name
+            def init(self.name):
+                name  = self.name
+                self.tricks = []
+                print('New dog's name is " + Self.name
 
-          def updateTricks(self.tricks):
-              tricks.append = self.tricks
-              print("Tricks: " + str(Self.tricks)
+            def updateTricks(self.tricks):
+                tricks.append = self.tricks
+                print("Tricks: " + str(Self.tricks)
 
         dog = new Dog('Toby')
         Dog.updateTricks('catch')
@@ -149,8 +143,8 @@ Write Code Exercises
           .. activecode:: obj_writecode5q
               :nocodelens:
 
-              Complete the following code to include a function named 'getTitle' that returns a
-              the 'title' and a function named 'getAuthor' that returns the 'author'.
+              Complete the following code to include a method named 'getTitle' that returns
+              the 'title' and a method named 'getAuthor' that returns the 'author'.
               ~~~~
               class Book:
 
@@ -175,7 +169,7 @@ Write Code Exercises
                       self.title = title
                       self.author = author
 
-                  # Create the functions using self to access the attributes
+                  # Create the methods using self to access the attributes
                   def getTitle(self):
                       return self.title
 
@@ -185,20 +179,19 @@ Write Code Exercises
 
               book = Book("The Odyssey", "Homer")
               print(book.getTitle())
-              print(book.getTitle())
+              print(book.getAuthor())
 
 #.
     .. activecode:: obj_writecode6
 
-      Complete the following code to include a function named 'getTricks' that returns the 'tricks'
-      list and a function named 'getName' that returns the 'name' when called.
+      Complete the following code to include a method named 'getTricks' that returns the 'tricks'
+      list and a method named 'getName' that returns the 'name' when called.
       ~~~~
       class Dog:
-          name = ''
-          tricks = []
 
           def __init__(self, name):
               self.name = name
+              self.tricks = []
 
           def updateTricks(self, trick):
               self.tricks.append(trick)
@@ -217,21 +210,21 @@ Write Code Exercises
           .. activecode:: obj_writecode7q
               :nocodelens:
 
-              Add a new class named Paperback that extends the Book class. Add a function named "__str__" within Paperback
-              that sends a string representation for the Paperback book.
+              Add a new class named Paperback that extends the Book class. Add a
+              method named "__str__" within Paperback that sends a string representation
+              for the Paperback book.
               ~~~~
-
               class Book:
 
-                def __init__(self, title, author):
-                    self.title = title
-                    self.author = author
+                  def __init__(self, title, author):
+                      self.title = title
+                      self.author = author
 
-                def getTitle(self):
-                    return self.title
+                  def getTitle(self):
+                      return self.title
 
-                def getAuthor(self):
-                    return self.author
+                  def getAuthor(self):
+                      return self.author
 
               book = Paperback("The Odyssey", "Homer")
               print(book)
@@ -268,11 +261,11 @@ Write Code Exercises
 #.
     .. activecode:: obj_writecode8
 
-      Add a new class named WaterType which would extend the Pokemon class. Include a list named 'attacks' in
-      the WaterType class and write functions named 'updateAttacks', 'getName' and'getAttacks' class in the WaterType class
-      that appends the 'attacks' list, returns the 'name' and returns the 'attacks' list respectively when called.
+      Add a new class named WaterType which would extend the Pokemon class. Include
+      a list named 'attacks' in the WaterType class and add 3 methods. 'updateAttacks'
+      appends the 'attacks' list with a new attack, 'getName' returns the name, and
+      'getAttacks' returns the attacks when called.
       ~~~~
-
       class Pokemon:
           name = ''
 
@@ -292,26 +285,27 @@ Write Code Exercises
           .. activecode:: obj_writecode9q
               :nocodelens:
 
-              Add a new class named Library that takes 'title' and 'author' as initial values, creates an instance of Book
-              and stores the instance in a list named 'current_books'. Also create a function called 'addBooks' which takes 'title'
-              and 'author' as arguments, creates an instance of Book and stores it in 'current_books' when called. Also create '__str__' that
-              returns the string representation of the object that includes the 'current_books' list.
+              Add a new class named Library that takes 'title' and 'author' as initial
+              values, creates an instance of Book and stores the instance in a list named
+              'current_books'. Also create a method called 'addBooks' which takes 'title'
+              and 'author' as arguments, creates an instance of Book and stores it in
+              'current_books' when called. Also create '__str__' that returns the string
+              representation of the object that includes the 'current_books' list.
               ~~~~
-
               class Book:
 
-                def __init__(self, title, author):
-                    self.title = title
-                    self.author = author
+                  def __init__(self, title, author):
+                      self.title = title
+                      self.author = author
 
-                def getTitle(self):
-                    return self.title
+                  def getTitle(self):
+                      return self.title
 
-                def getAuthor(self):
-                    return self.author
+                  def getAuthor(self):
+                      return self.author
 
-                def __repr__(self):
-                    return (self.title + " was written by " + self.author)
+                  def __repr__(self):
+                      return (self.title + " was written by " + self.author)
 
               newBook = Library("The Odyssey", "Homer")
               newBook.addBooks("Pride and Prejudice", "Jane Austen")
@@ -359,15 +353,14 @@ Write Code Exercises
 #.
     .. activecode:: obj_writecode10
 
-      Add a new class named WaterType that takes 'name' as initial values, creates an instance of Pokemon with type as 'water' by
-      default and stores the instance in a list named 'watertypes'. Also create a function called 'addPokemons' which takes 'name'
-      as arguments, creates an instance of Pokemon and stores it in 'watertypes' when Also create '__str__' that
-      returns the string representation of the object that includes the 'watertypes' list.
+      Add a new class named WaterType that takes 'name' as initial values, creates
+      an instance of Pokemon with type as 'water' by default and stores the instance
+      in a list named 'watertypes'. Also create a method called 'addPokemons' which
+      takes 'name' as arguments, creates an instance of Pokemon and stores it in
+      'watertypes'. Also create '__str__' that returns the string representation
+      of the object that includes the 'watertypes' list.
       ~~~~
-
       class Pokemon:
-          name = ''
-          type = ''
 
           def __init__(self,name):
               self.name = name
