@@ -16,7 +16,7 @@ an indented block of code where we include the attributes (data)
 and methods (code).
 
 .. fillintheblank:: object_contents
-   
+
    An object can contain a number of functions as well as _______ that is used by
    those functions.
 
@@ -36,18 +36,19 @@ and methods (code).
 .. activecode:: partyanimal
   :coach:
 
-  class PartyAnimal:
-      x = 0
+    class PartyAnimal:
 
-      def party(self) :
-         self.x = self.x + 1
-         print("So far",self.x)
+        def party(self, x):
+            self.x = x
+            self.x += 1
+            print("So far",self.x)
 
-  an = PartyAnimal()
-  an.party()
-  an.party()
-  an.party()
-  PartyAnimal.party(an)
+    an = PartyAnimal()
+    an.party(1)
+    an.party(2)
+    an.party(3)
+    PartyAnimal.party(an, 12)
+
 
 
 Each method looks like a function, starting with the ``def`` keyword and
@@ -149,7 +150,7 @@ incrementing and printing the value for ``x`` within the ``an`` object.
   :practice: T
   :answer_a: 'PartyAnimal.party(an)' creates a new object while 'an.party()' calls
               the 'party()' function within the 'an' object.
-  :answer_b: Calling 'an.party()' creates a new 'PartyAnimal' instance everytime hence 
+  :answer_b: Calling 'an.party()' creates a new 'PartyAnimal' instance everytime hence
              value of x is changed to 1 everytime the 'party' function is called.
   :answer_c: The word 'self' to be mentioned explicitly to make 'party' a static function.
   :answer_d: 'PartyAnimal.party(an)' and 'an.party()' are both valid ways to call the
@@ -160,23 +161,23 @@ incrementing and printing the value for ``x`` within the ``an`` object.
   :feedback_b: 'an.party()' does not create new object instance, it calls the 'party()' function
                within the object.
   :feedback_c: 'self' is used to represent the instance of a class and to access the attributes and
-               methods of the class. The only time 'self' is not mentioned explicitly is within static 
+               methods of the class. The only time 'self' is not mentioned explicitly is within static
                methods.
   :feedback_d: This is correct!
 
   What is true about the following code?
 
   ::
-  
-    class PartyAnimal:
-      x = 0
 
-      def party(self) :
-         self.x = self.x + 1
-         print("So far",self.x)
+    class PartyAnimal:
+
+        def party(self, x) :
+        self.x = x
+            self.x = self.x + 1
+            print("So far",self.x)
 
     an = PartyAnimal()
-    an.party()
-    an.party()
-    an.party()
-    PartyAnimal.party(an)
+    an.party(1)
+    an.party(2)
+    an.party(3)
+    PartyAnimal.party(an, 12)
