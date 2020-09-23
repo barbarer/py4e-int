@@ -35,10 +35,6 @@ the lines which start with "From:" are part of the messages. For more
 information about the mbox format, see
 https://en.wikipedia.org/wiki/Mbox.
 
-.. shortanswer:: file-text-sa-from
-
-    What is the difference between "From " and "From:" in the previous codeblock?
-
 To break the file into lines, there is a special character that
 represents the "end of the line" called the *newline*
 character.

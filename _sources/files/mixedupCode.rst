@@ -9,19 +9,15 @@ Mixed-up Code Questions
     the code is mixed up. Drag the blocks of statements from the left column to the right column
     and put them in the right order. Watch out for extra pieces of code and indentation!
     -----
-    fout = open('output.txt', 'r') #distractor
+    fout = open('output.txt', 'r') #paired
     =====
     fout = open('ouptut.txt', 'w')
     =====
-    line1 = "This here's the wattle,\n"
-    =====
-    file.write(line1)
-    =====
-    file.write('line1') #distractor
+    file.write("This here's the wattle,\n")
     =====
     fout.close()
     =====
-    fout.close #distractor
+    fout.close #paired
 
 .. parsonsprob:: file_mixed_travel
     :numbered: left
@@ -30,58 +26,28 @@ Mixed-up Code Questions
 
     The following program counts the number of characters in the file "travel_plans.txt", but
     the code is mixed up. Drag the blocks of statements from the left column to the right column
-    and put them in the right order. Watch out for extra pieces of code and indentation!
+    and put them in the right order.  First create a variable num and initialize it.  Then open the
+    file. Loop reading a line from the file and add the length of each line to num.  Then print the result.
+     Watch out for extra pieces of code and indentation!
     -----
-    travelFile = open("travel_plans.txt", "r")
-    =====
-    travelFile = open("travel_plans.txt","w") #distractor
-    =====
     num = 0
     =====
     num = 1 #paired
     =====
+    travelFile = open("travel_plans.txt", "r")
+    =====
+    travelFile = open("travel_plans.txt","w") #paired
+    =====
     for line in travelFile:
     =====
     for line in "travelFile": #paired
     =====
-        lineCharacters = len(line)
+        num = num + len(line)
     =====
-        num = num + lineCharacters
-    =====
-    print(lineCharacters) #distractor
+    print(lineCharacters) #paired
     =====
     print(num)
 
-.. parsonsprob:: file_mixed_lineCount
-    :numbered: left
-    :adaptive:
-    :practice: T
-
-    The following program counts the number of lines in the file "travel_plans.txt", but
-    the code is mixed up. Drag the blocks of statements from the left column to the right column
-    and put them in the right order. Watch out for extra pieces of code and indentation!
-    -----
-    travelFile = open("travel_plans.txt", "r")
-    =====
-    travelFile = open("travel_plans.txt","w") #distractor
-    =====
-    num_lines = 0
-    =====
-    num_lines = 1 #paired
-    =====
-    for line in travelFile:
-    =====
-    for line in "travelFile": #paired
-    =====
-        count = count + 1 #distractor
-    =====
-        num_lines = num_lines + line #distractor
-    =====
-        num_lines = num_lines + 1
-    =====
-    print(count) #distractor
-    =====
-    print(num_lines)
 
 .. parsonsprob:: file_mixed_write
     :adaptive:
@@ -94,15 +60,13 @@ Mixed-up Code Questions
     -----
     outfile = open("squared_numbers.txt", "w")
     =====
-    outfile = open("squared_number.txt", "r") #distractor
-    =====
-    outfile = open("squared_number.txt, w") #distractor
+    outfile = open("squared_number.txt", "r") #paired
     =====
     for number in range(1, 13):
     =====
         square = number * number
     =====
-        square = number * 2 #distractor
+        square = number * 2 #paired
     =====
         outfile.write(str(square) + "\n")
     =====
@@ -538,12 +502,9 @@ you can hide it again by clicking on the Hide button.
     -----
     # open the file for reading
     inFile = open("uspoll.txt","r")
-
-    # read a line from the file
-    line = inFile.readline()
     =====
     # while there is another line
-    while line:
+    for line in inFile:
     =====
         # split at the :
         v = line.split(":")
@@ -555,9 +516,6 @@ you can hide it again by clicking on the Hide button.
         if (city.find("D") == 0):
             print('City: ', city)
             print("Pollution values:",v[1],v[2])
-    =====
-        # read the next line
-        line = inFile.readline()
     =====
     # close the file
     inFile.close()

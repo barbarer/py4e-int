@@ -43,17 +43,21 @@ the programmer's best friend.
 
 .. mchoice:: file-try-mc-qa
     :practice: T
-    :answer_a: Try to break the software.
-    :answer_b: Finding flaws in programs.
-    :answer_c: Purchase software.
-    :answer_d: Help with quality tests on software.
-    :correct: c
-    :feedback_a: The quality assurance team tries to break the software, so the developers can fix it.
-    :feedback_b: The quality assurance team tries to find flaws in the software, so the users don't run into them.
-    :feedback_c: The quality assurance team does not purchase software.
-    :feedback_d: The quality assurance team helps with quality tests on software before users get it.
 
-    Which of the following is something that
+    Which of the following is something that the Quality Assurance (QT) team does (pick all that apply)?
+
+    - Try to break the software.
+
+      + The quality assurance team tries to break the software, so the developers can fix it.
+
+    - Find flaws in programs.
+
+      + The quality assurance team tries to find flaws in the software, so the users don't run into them.
+
+    - Purchase software.
+
+      - The quality assurance team does not purchase software.
+
 
 So now that we see the flaw in the program, we can elegantly fix it
 using the ``try``/``except`` structure. We need to

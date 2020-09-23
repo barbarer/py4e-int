@@ -8,10 +8,6 @@ to process a different file. It would be more usable to ask the user to
 enter the file name string each time the program runs so they can use
 our program on different files without changing the Python code.
 
-.. shortanswer:: fileInputWhy
-
-    Why is it important to let users enter their own file name?
-
 This is quite simple to do by reading the file name from the user using
 ``input`` as follows:
 
@@ -47,13 +43,10 @@ repeatedly on different files.
     Put the following code in order to open and count the lines of a file from the user.
     Watch out for indentation and extra code blocks!
     -----
+    count = 0
     fname = input('Enter the file name: ')
     =====
     fhand = open(fname)
-    =====
-    count = 0
-    =====
-    count = 1 #paired
     =====
     for line in fhand:
     =====
@@ -84,9 +77,9 @@ eyes of our users?"
         .. activecode:: fileOpenInputq
             :practice: T
 
+            count = 1
             fname = input('Enter the file name: '
             fhand = open(file)
-            count = 1
             for line in fhand:
                 if line.endswith('Received:'):
                 count = count + 1
@@ -105,9 +98,10 @@ eyes of our users?"
 
         .. activecode:: fileOpenInputa
 
+            count = 0 # Start counting from zero
             fname = input('Enter the file name: ') # Close parentheses
             fhand = open(fname) # Open the correct file name
-            count = 0 # Start counting from zero
+
             for line in fhand:
                 if line.startswith('Received:'):
                 # Check at the beginning of the line, not the end

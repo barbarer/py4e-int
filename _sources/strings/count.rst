@@ -48,7 +48,7 @@ r's.
       s = "peanut butter"
       count = 1
       for char in s:
-          if char is t:
+          if char == "t":
           count += 1
       print(count)
 
@@ -67,7 +67,7 @@ r's.
                 for c in text:
                     if c != aChar:
                         lettercount = lettercount + 3
-            return lettercount
+                return lettercount
 
             ====
             from unittest.gui import TestCaseGui

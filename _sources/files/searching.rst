@@ -24,7 +24,6 @@ prefix:
     :available_files: mbox-short3.txt
 
     fhand = open('mbox-short3.txt')
-    count = 0
     for line in fhand:
         if line.startswith('From:'):
             print(line)
@@ -37,20 +36,6 @@ of the lines ends with a newline, so the ``print`` statement
 prints the string in the variable *line* which includes a
 newline and then ``print`` adds *another* newline, resulting in
 the double spacing effect we see.
-
-.. mchoice:: file-search-mc-strmethod
-    :practice: T
-    :answer_a: find
-    :answer_b: startswith
-    :answer_c: endswith
-    :answer_d: title
-    :correct: b
-    :feedback_a: This string method searches the string for a specified value and returns the position of where it was found, rather than True/False if the string contains the value.
-    :feedback_b: Yes, startswith returns true if the string starts with the specified value.
-    :feedback_c: This string method returns true is the string ends with the specified value.
-    :feedback_d: This string method converts the first character of each word to upper case.
-
-    Which of the following string methods is used to select lines from a file using the beginning of the string?
 
 We could use line slicing to print all but the last character, but a
 simpler approach is to use the *rstrip* method which

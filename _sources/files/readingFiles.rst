@@ -98,13 +98,12 @@ program to read the file in chunks using a ``for`` or ``while`` loop.
     :numbered: left
     :adaptive:
 
-    Put the following code in order so that it uses a while loop to read the file and find out how many lines it has.
+    Put the following code in order so that it uses a for each loop to read the file and print out the total number of lines.
     -----
-    text = open('textFile.txt')
-    =====
     count = 0
+    file_handler = open('textFile.txt')
     =====
-    for line in text:
+    for line in file_handler:
     =====
         count = count + 1
     =====

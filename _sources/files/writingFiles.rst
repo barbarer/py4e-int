@@ -79,8 +79,9 @@ nothing to chance.
     :adaptive:
     :numbered: left
 
-    Put the following pieces of code in order so a file is opened, two lines are
-    written to it, and it is closed. Watch out for extra code blocks.
+    Put the following pieces of code in order so a file is opened for writing,
+    two lines are defined, two lines are
+    written to the file, and the file is closed. Watch out for extra code blocks.
     -----
     fout = open("myfile.txt", "w")
     =====
@@ -108,4 +109,4 @@ nothing to chance.
     :click-incorrect:fout:endclick: = open(:click-incorrect:'output.txt':endclick:, :click-correct:'r':endclick:)
     :click-incorrect:line1:endclick: = :click-incorrect:"This here's the wattle,\n":endclick:
     :click-correct:file:endclick::click-incorrect:.write:endclick:(:click-correct:line2:endclick:)
-    :click-incorrect:fout.close:endclick::click-correct:  :endclick:
+    :click-incorrect:fout.close:endclick::click-correct:[]:endclick:

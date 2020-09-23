@@ -406,14 +406,13 @@ and hide to put it away.
                 :available_files: uspoll.txt
 
                 inFile = open("uspoll.txt","r)
-                line = inFile.readLine()
-                while line
+                
+                for line in inFile
                     values = line.split(":")
                     city = values[0]
                     if (city.find("A") == 0):
                         print('City: ' city)
                         print("Pollution values:",values[1],values[2])
-                    line = infile.readline()
 
                 inFile.close()
 
@@ -426,18 +425,15 @@ and hide to put it away.
 
                 # Close quotations around "r"
                 inFile = open("uspoll.txt","r")
-                # Separate lines using readline() (this method is Case Sensitive!!)
-                line = inFile.readline()
-                # While loops need colons to start the body
-                while line:
+
+                # Add a colon at the end
+                for line in inFile:
                     values = line.split(":")
                     city = values[0]
                     if (city.find("A") == 0):
                         # "+" is needed to concatenate strings and variables
                         print('City: ' + city)
                         print("Pollution values:",values[1],values[2])
-                    # File name is case sensitive
-                    line = inFile.readline()
 
                 inFile.close()
 
@@ -522,7 +518,7 @@ and hide to put it away.
         new25 = float(values[2])
         if new25 < min25:
         minCity = values[0]
-        min25 = new25 
+        min25 = new25
         print("Smallest PM 2.5 ",min25," in ",minCity)
 
 #.
