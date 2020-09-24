@@ -18,7 +18,7 @@ Look the code below.
 
 .. fillintheblank:: obj_fitb_book_l1
 
-    What is the first line that will be printed when the code below runs?
+    When you run the following code it will print multiple lines, what is the first thing that will be printed when the code below runs?
 
     - :title\: A Wrinkle in Time author\: M. L'Engle: Yes, it will print the result of calling __str__ b2.
       :A: It will print what is returned from the __str__ method.

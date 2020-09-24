@@ -82,7 +82,7 @@ elements, we would say it has the same value.
 .. dragndrop:: listOb_dnd
     :practice: T
     :feedback: Try again.
-    :match_1: Identical||| a = [1, 2, 3] b = [1, 2, 3]
-    :match_2: Equivalent||| a = [1, 2, 3] b = a
+    :match_1: Equivalent||| a = [1, 2, 3] b = [1, 2, 3]
+    :match_2: Identical||| a = [1, 2, 3] b = a
 
     Match the terms to the code examples.

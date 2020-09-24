@@ -24,16 +24,16 @@ Write Code Questions
           .. activecode:: list_writeMyListA
               :optional:
 
-              # List elements are separated by commas
+              1. List elements are separated by commas
+              2. Parentheses need to be in pairs (the print statement is missing the closing ")")
+              3. Python is case sensitive, use myFirstList
+              4. Brackets also need to be in pairs
+              5. Parentheses again need to be in pairs.
+              ~~~~
               myFirstList = [12,"ape",13]
-              # Parentheses need to be in pairs ()
-              # The print statement is missing its closing parenthesis
               print(len(myFirstList))
-              # Python is case sensitive - myFirstList
               print(myFirstList * 3)
-              # Brackets need to be in pairs []
               mySecondList = myFirstList + [321.4]
-              # Parentheses need to be in pairs ()
               print(mySecondList)
 
 #.
@@ -76,13 +76,13 @@ Write Code Questions
             .. activecode:: list_writeAvgA
                 :optional:
 
+                After the for loop is initialized, add ``num`` to the ``sum``.
+                Outside of the loop, calculate the average by dividing ``sum`` by the length of the list.
+                ~~~~
                 def gradeAverage(aList):
                     sum = 0
                     for num in aList:
-                        # Add num to the sum
                         sum = sum + num
-                    # The average is the sum of the elements divided by the number of elements
-                    # Use len() to find the length of the list
                     average = sum/len(aList)
                     return average
 
@@ -136,17 +136,16 @@ Write Code Questions
           .. activecode:: list_writePlanta
               :optional:
 
+              Since ``willow`` is in the last element of ``data``, access that last element using [-1].
+              Now ``willow`` is in the first element of ``dataLast``, use [0] to access the first element.
+              Finally, ``willow`` is the first element in ``trees``. Access the first element [0] and
+              assign to ``plant``.
+              ~~~~
               data = ['bagel', 'cream cheese', 'breakfast', 'grits', 'eggs', 'bacon', [34, 9, 73, []],
                      [['willow', 'birch', 'elm'], 'apple', 'peach', 'cherry']]
 
-              # willow is in the last element of data
-              # Access the last element in data
               dataLast = data[-1]
-              # willow is in the first element of dataLast
-              # Access the first element in dataLast
               trees = dataLast[0]
-              # willow is the first element in trees
-              # Access first element in trees and assign to 'plant'
               plant = trees[0]
 
 #.
@@ -198,12 +197,12 @@ Write Code Questions
           .. activecode:: list_writeChopa
               :optional:
 
+              Use del to remove the first (0th) element and to remove the last (-1st) element.
+              Then return the list.
+              ~~~~
               def chop(lst):
-                  # Use del to remove the first (0th) element
                   del lst[0]
-                  # Use del to remove the last (-1st) element
                   del lst[-1]
-                  # Return list
                   return(lst)
 
 #.
@@ -255,20 +254,17 @@ Write Code Questions
             .. activecode:: list_writeSuma
                 :optional:
 
+                First, create a total variable to keep the sum, since sum is a built-in function and cannot be used as a variable name.
+                Then, create a variable to iterate through elements. Use a while loop to filter the list, checking that
+                the element is not beyond the list's capacity and that it is not even. If the element meets those conditions,
+                increment the total and the iterator to move on to the next element. Finally, return the total.
+                ~~~~
                 def sumUntilEven(lst):
-                    # Create total variable to keep sum
-                    # sum is a built-in function cannot be used as a variable name
                     total = 0
-                    # Create variable to iterate through elements
                     element = 0
-                    # Run the loop if the element is not the last in the list
-                    # and if the element is not even (%2 will return 0 if it is even)
                     while element < len(lst) and lst[element] % 2 != 0:
-                        # If the element is not even, add it to the total
                         total = total + lst[element]
-                        # increment element to access the next
                         element += 1
-                    # the while loop will stop when the element does not satisfy the condidions
                     return total
 
 

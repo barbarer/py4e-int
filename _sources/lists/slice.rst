@@ -86,7 +86,7 @@ elements:
     :answer_d: 5
     :correct: b
     :feedback_a: The list begins with the second item of L and includes everything up to but not including the last item.
-    :feedback_b: Yes, there are 3 items in this list.
+    :feedback_b: Yes, there are 3 items in this slice.
     :feedback_c: The list begins with the second item of L and includes everything up to but not including the last item.
     :feedback_d: The list begins with the second item of L and includes everything up to but not including the last item.
     :practice: T
