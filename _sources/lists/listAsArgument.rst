@@ -91,7 +91,7 @@ that was passed as an argument.
     :feedback_a: The slice operator creates a new list called "t", but that will not affect the list it was passed.
     :feedback_b: The slice operator creates a new list called "t", so it will not modify the original list.
 
-    True or False. The following code block will not remove the first element from the list argument.
+    True or False. The following code block will **not** remove the first element from the list argument.
 
     ::
 
@@ -122,4 +122,4 @@ of a list and leaves the original list unmodified. Here's how it is used:
     :feedback_b: The append method modifies the original list, rather than creating a new one.
     :feedback_c: The slice operator creates a new list, rather than modifying the original.
 
-    Which of the following list methods or operators will **not** create a new list when used.  
+    Which of the following list methods or operators will **not** create a new list when used.

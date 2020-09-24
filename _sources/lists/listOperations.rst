@@ -31,9 +31,13 @@ list three times.
     :practice: T
     :answer_a: [4, 2, 8, 6, 5, 999]
     :answer_b: Error, you cannot concatenate a list with an integer.
+    :answer_c: [[4, 2, 8, 6, 5], 999]
+    :answer_d: [4, 2, 8, 6, 5]
     :correct: b
     :feedback_a: You cannot concatenate a list with an integer.
     :feedback_b: Yes, in order to perform concatenation you would need to write alist+[999].  You must have two lists.
+    :feedback_c: You cannot concatenate a list with an integer. This would cause an error, not create a new list.
+    :feedback_d: This will cause an error, but alist will remain unchanged.
 
     What is printed by the following statements?
 

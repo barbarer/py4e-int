@@ -95,7 +95,7 @@ the numbers in the list to come up with the average.
     :feedback_b: Unfortuantely, avg is not a function in Python.
     :feedback_c: append is a list method. It may be used to add elements to a list that are then averaged together, but not to compute the average itself.
     :feedback_d: The len function is used to count the elements in a list to get the denominator of the average.
-    :feedback_e: The max function is not used in averaging. It returns the largest element in a list. 
+    :feedback_e: The max function is not used in averaging. It returns the largest element in a list.
 
     Which of the following built-in functions can be used on lists to compute the average of the list?
     Select all that apply.
@@ -104,10 +104,14 @@ the numbers in the list to come up with the average.
     :practice: T
     :answer_a: 7
     :answer_b: 8
+    :answer_c: 9
+    :answer_d: 3
     :correct: a
     :feedback_a: Yes, there are 7 items in this list even though two of them happen to also be lists.
     :feedback_b: len returns the number of top level items in the list.  It does not count items in sublists.
-
+    :feedback_c: len returns the number of top level items in the list.  It does not count items in sublists.
+    :feedback_d: len returns the number of top level items in the list, not the number of brackets.
+    
     What is printed by the following statements?
 
 
