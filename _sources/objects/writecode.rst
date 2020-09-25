@@ -400,11 +400,11 @@ Write Code Exercises
           .. activecode:: obj_writecode9q
               :nocodelens:
 
-              Add a new class named ``Library`` that inherits all methods of from ``Book``
-              and stores the book in a list named ``current_books``. Also create a method
-              called ``addBooks`` which adds the book to ``current_books`` with both the
-              title and author ``(title, author)``. Also create the ``__str__`` method
-              that returns the string representation of the object, including the current_books list.
+              Add a new class named ``Library`` that inherits the ``Book`` class.
+              ``Library`` should have an initializer method that creates the list
+              ``current_books``, where current books are stored, and a string method
+              that returns the list. Also create a method called ``addBooks`` which
+              adds a new book to ``current_books`` with both the title and author ``(title, author)``.
               ~~~~
               class Book:
 
@@ -421,9 +421,16 @@ Write Code Exercises
                   def __repr__(self):
                       return (self.title + " was written by " + self.author)
 
-              newBook = Library("The Odyssey", "Homer")
-              newBook.addBooks("Pride and Prejudice", "Jane Austen")
-              print(newBook)
+              ====
+              from unittest.gui import TestCaseGui
+
+              class myTests(TestCaseGui):
+                  def testOne(self):
+                      lib1 = Library()
+                      lib1.add_book(Book("Pride and Prejudice", "Jane Austen"))
+                      lib1.add_book(Book("The Great Gatsby","F. Scott Fitzgerald"))
+                      self.assertEqual(lib1.__str__(), "[Pride and Prejudice was written by Jane Austen, The Great Gatsby was written by F. Scott Fitzgerald]", "Testing Pride and Prejudice and the Great Gatsby")
+              myTests().main()
 
         .. tab:: Answer
 
@@ -431,7 +438,10 @@ Write Code Exercises
               :nocodelens:
               :optional:
 
-              FIX THIS ONE PLEASE
+              First, define the ``Library`` class so that it inherits ``Book``. Then
+              use the initializer method to create the ``current_books`` list and the
+              string method to return the list. Create a third method ``add_books`` to
+              add new books to the list.
               ~~~~
               class Book:
 
@@ -446,24 +456,22 @@ Write Code Exercises
                       return self.author
 
                   def __repr__(self):
-                      return ( self.title + " was written by " + self.author)
+                      return (self.title + " was written by " + self.author)
 
-              # Create Library class
               class Library(Book):
-                  # Create current_books list
 
                   def __init__(self):
                       self.current_books = []
-                  def __str__(self):
-                      return(str(self.current_books))
-                  # Create addBooks method
-                  def addBooks(self, title, author):
-                      self.current_books.append(book)
-                  
 
-              newBook = Library("The Odyssey", "Homer")
-              newBook.addBooks("Pride and Prejudice", "Jane Austen")
-              print(newBook)
+                  def __str__(self):
+                      return str(self.current_books)
+
+                  def add_book(self, book):
+                      self.current_books.append(book)
+
+              lib1 = Library()
+              lib1.add_book(Book("Pride and Prejudice", "Jane Austen"))
+              print(lib1)
 
 #.
     .. activecode:: obj_writecode10
