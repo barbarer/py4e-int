@@ -449,18 +449,17 @@ Write Code Exercises
                       return ( self.title + " was written by " + self.author)
 
               # Create Library class
-              class Library:
+              class Library(Book):
                   # Create current_books list
-                  current_books = []
-                  # Set init method
-                  def __init__(self, title, author):
-                      self.current_books.append(Book(title, author))
-                  # Create addBooks method
-                  def addBooks(self, title, author):
-                      self.current_books.append(Book(title, author))
-                  # Create str method
+
+                  def __init__(self):
+                      self.current_books = []
                   def __str__(self):
                       return(str(self.current_books))
+                  # Create addBooks method
+                  def addBooks(self, title, author):
+                      self.current_books.append(book)
+                  
 
               newBook = Library("The Odyssey", "Homer")
               newBook.addBooks("Pride and Prejudice", "Jane Austen")

@@ -13,7 +13,7 @@ Multiple Choice Questions
     :feedback_c: This only creates an instance of the PartyAnimal class.
     :feedback_d: This would create a global variable instance of the PartyAnimal class.
 
-    In which of the following does the CricketFan class inherit the PartyAnimal class?
+    In which of the following does the CricketFan class inherit from the PartyAnimal class?
 
 .. mchoice:: objects_select_name
   :practice: T
@@ -27,7 +27,7 @@ Multiple Choice Questions
   :feedback_c: This is correct and does not have arguments.
   :feedback_d: 'new' is not required
 
-  Which of the following does <b>not</b> create an object instance?
+  Which of the following does **not** create an object instance?
 
 .. mchoice:: multipleinstances_code_output
   :practice: T
@@ -99,7 +99,7 @@ Multiple Choice Questions
     :feedback_d: This is true, we can extend a 'parent' class to create a new 'child' class and the new class has access to its functions
                  and can override them if needed.
 
-    Which of the following statements is <b>not</b> true about object-oriented programming?
+    Which of the following statements is **not** true about object-oriented programming?
 
 
 .. mchoice:: objectoriented_keyword
@@ -202,4 +202,4 @@ Multiple Choice Questions
     :feedback_c: At minimum, the "self" parameter is needed to represent an instance of the given class.
     :feedback_d: The reserved word "def" is necessary to define a method.
 
-    Which of the following is the correct way to define a class method?
+    Which of the following is the correct way to define an initializer  method?
