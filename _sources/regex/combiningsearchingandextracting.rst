@@ -19,18 +19,20 @@ We can construct the following regular expression to select the lines:
 
    ^X-.*: [0-9.]+
 
-.. mchoice:: question11_4_1
-   :answer_a: X-DSPAM-Probability: Accurate
-   :answer_b: X-DSPAM-Confidence: 0.8475
-   :answer_c: X-Wolverine-Confidence: 1
-   :answer_d: X Wolverine-Confidence: 0.53
-   :correct: b, c
-   :feedback_a: Try again!
-   :feedback_b: Correct! This matches the given regex equation.
-   :feedback_c: Correct! This line matches with the given regex equation.
-   :feedback_d: Try again!
+.. mchoice:: re-combo-mc-match
+    :practice: T
+    :multiple_answers:
+    :answer_a: X-DSPAM-Probability: Accurate
+    :answer_b: X-DSPAM-Confidence: 0.8475
+    :answer_c: X-Wolverine-Confidence: 1
+    :answer_d: X Wolverine-Confidence: 0.53
+    :correct: b, c
+    :feedback_a: This regex equation will not match "Accurate" at the end, it is looking for numbers.
+    :feedback_b: This matches the given regex equation.
+    :feedback_c: This line matches with the given regex equation.
+    :feedback_d: This equation will not match the decimal number at the end of the phrase.
 
-   Which of the following options will the regular expression ^X-.*: [0-9.]+ match with?
+    Which of the following options will the regular expression ``^X-.*: [0-9.]+`` match with? Select all that apply.
 
 Translating this, we are saying, we want lines that start with ``X-``\ ,
 followed by zero or more characters (\ ``.*``\ ), followed by a colon (\ ``:``\ )
@@ -42,28 +44,26 @@ that inside the square brackets, the period matches an actual period
 This is a very tight expression that will pretty much match only the
 lines we are interested in as follows:
 
-.. code-block:: python
+.. datafile:: mbox-short-re4.txt
+    :fromfile: ../files/mbox-short.txt
+    :hide:
 
-   # Search for lines that start with 'X', followed by any non-whitespace characters
-   # and ':', followed by a space and any number, where the number can include a
-   # decimal
-   import re
-   hand = open('mbox-short.txt')
-   for line in hand:
-       line = line.rstrip()
-       if re.search('^X\S*: [0-9.]+', line):
-           print(line)
+.. activecode:: re_combo_ac1
+    :available_files: mbox-short-re4.txt
+    :nocodelens:
+
+    Search for lines that start with 'X', followed by any non-whitespace characters
+    and ':', followed by a space and any number, where the number can include a decimal
+    ~~~~
+    import re
+    hand = open('mbox-short-re4.txt')
+    for line in hand:
+        line = line.rstrip()
+        if re.search('^X\S*: [0-9.]+', line):
+            print(line)
 
 When we run the program, we see the data nicely filtered to show only
 the lines we are looking for.
-
-.. code-block::
-
-   X-DSPAM-Confidence: 0.8475
-   X-DSPAM-Probability: 0.0000
-   X-DSPAM-Confidence: 0.6178
-   X-DSPAM-Probability: 0.0000
-
 
 But now we have to solve the problem of extracting the numbers. While it
 would be simple enough to use ``split``\ , we can use another
@@ -81,35 +81,25 @@ matches the regular expression.
 
 So we make the following change to our program:
 
-.. activecode:: combiningsearchingandextracting_example_1
-   :nocodelens:
+.. activecode:: re_combo_ac2
+    :nocodelens:
 
-   # Search for lines that start with 'X', followed by any non-whitespace characters
-   # and ':', followed by a space and any number. The number can contain a
-   # decimal
-   import re
-   s = ['X-DSPAM-Confidence: 0.8475', 'X-DSPAM-Probability: 0.0000', 'X-DSPAM-Confidence: 0.6178', 'X-DSPAM-Probability: 0.0000']
-   for item in s:
-       x = re.findall('^X\S*: ([0-9.]+)', item)
-       if len(x) > 0:
-           print(x)
+    Search for lines that start with 'X', followed by any non-whitespace characters
+    and ':', followed by a space and any number. The number can contain a decimal
+    ~~~~
+    import re
+    s = ['X-DSPAM-Confidence: 0.8475', 'X-DSPAM-Probability: 0.0000', 'X-DSPAM-Confidence: 0.6178', 'X-DSPAM-Probability: 0.0000']
+    for item in s:
+        x = re.findall('^X\S*: ([0-9.]+)', item)
+        if len(x) > 0:
+            print(x)
 
 Instead of calling ``search()``\ , we add parentheses around the
 part of the regular expression that represents the floating-point number
 to indicate we only want ``findall()`` to give us back the
 floating-point number portion of the matching string.
 
-The output from this program is as follows:
-
-.. code-block::
-
-   ['0.8475']
-   ['0.0000']
-   ['0.6178']
-   ['0.0000']
-
-
-The numbers are still in a list and need to be converted from strings to
+The numbers in the output are still in a list and need to be converted from strings to
 floating point, but we have used the power of regular expressions to
 both search and extract the information we found interesting.
 
@@ -125,18 +115,20 @@ If we wanted to extract all of the revision numbers (the integer number
 at the end of these lines) using the same technique as above, we could
 write the following program:
 
-.. code-block:: python
+.. activecode:: re_combo_ac3
+    :available_files: mbox-short-re4.txt
+    :nocodelens:
 
-   # Search for lines that start with 'Details: rev=' followed by numbers
-   # and '.'
-   # Then print the number if it is greater than zero
-   import re
-   hand = open('mbox-short.txt')
-   for line in hand:
-       line = line.rstrip()
-       x = re.findall('^Details:.*rev=([0-9.]+)', line)
-       if len(x) > 0:
-           print(x)
+    Search for lines that start with 'Details: rev=' followed by numbers
+    and '.' Then print the number if it is greater than zero
+    ~~~~
+    import re
+    hand = open('mbox-short-re4.txt')
+    for line in hand:
+        line = line.rstrip()
+        x = re.findall('^Details:.*rev=([0-9.]+)', line)
+        if len(x) > 0:
+            print(x)
 
 Translating our regular expression, we are looking for lines that start
 with ``Details:``\ , followed by any number of characters (\ ``.*``\ ), followed
@@ -144,34 +136,26 @@ by ``rev=``\ , and then by one or more digits. We want to find lines that
 match the entire expression but we only want to extract the integer
 number at the end of the line, so we surround ``[0-9]+`` with parentheses.
 
-When we run the program, we get the following output:
-
-.. code-block::
-
-   ['39772']
-   ['39771']
-   ['39770']
-   ['39769']
-   ...
-
-
 Remember that the ``[0-9]+`` is "greedy" and it tries to make as large a
 string of digits as possible before extracting those digits. This
 "greedy" behavior is why we get all five digits for each number. The
 regular expression library expands in both directions until it
 encounters a non-digit, or the beginning or the end of a line.
 
-.. mchoice:: question11_4_2
-   :practice: T
-   :answer_a: 'aa'
-   :answer_b: 'aaaaaa'
-   :answer_c: 'aaaaa'
-   :correct: b
-   :feedback_a: Try again!
-   :feedback_b: Correct! + is greedy in regex and will obtain the most 'a's as possible.
-   :feedback_c: Try again!
+.. mchoice:: re-combo-mc-a
+    :practice: T
+    :multiple_answers:
+    :answer_a: 'aa'
+    :answer_b: 'aaaaaa'
+    :answer_c: 'aaaaa'
+    :answer_d: 'a+'
+    :correct: a,b,c
+    :feedback_a: + is greedy so it will match as many 'a's as it can.
+    :feedback_b: + is greedy in regex and will obtain the most 'a's as possible.
+    :feedback_c: + is greedy so it will match as many 'a's as it can.
+    :feedback_d: + is a symbol used to select one or more of the previous element, it will not match a '+' in a string, unless it is used with a forward slash '\+'
 
-   Which of these options will the regex equation 'a+' match with when given the string 'aaaaaa'?
+    Which of these options will the regex equation 'a+' match? Select all that apply. 
 
 
 Now we can use regular expressions to redo an exercise from earlier in
@@ -219,34 +203,29 @@ parentheses around the two digits as follows:
 
 This results in the following program:
 
-.. code-block:: python
+.. activecode:: re_combo_ac4
+    :available_files: mbox-short-re4.txt
+    :nocodelens:
 
-   # Search for lines that start with From and a character followed by a two
-   # digit number between 00 and 99, followed by ':'
-   import re
-   hand = open('mbox-short.txt')
-   for line in hand:
-       line = line.rstrip()
-       x = re.findall('^From .* ([0-9][0-9]):', line)
-       if len(x) > 0:
-           print(x)
+    Search for lines that start with From and a character followed by a two
+    digit number between 00 and 99, followed by ':'
+    ~~~~
+    import re
+    hand = open('mbox-short-re4.txt')
+    for line in hand:
+        line = line.rstrip()
+        x = re.findall('^From .* ([0-9][0-9]):', line)
+        if len(x) > 0:
+            print(x)
 
-When the program runs, it produces the following output:
+.. dragndrop:: re-combo-dnd
+    :practice: T
+    :feedback: Look above for references.
+    :match_1: ^|||Matches with the beginning of the line.
+    :match_2: .|||Matches any character (a wildcard).
+    :match_3: \S|||Matches a non-whitespace character.
+    :match_4: *|||Match the previous character(s) zero or more times (greedy).
+    :match_5: +|||Match the previous character(s) one or more times (greedy).
+    :match_6: ()|||Allow you to extract a particular subset of the matched string rather than the whole string.
 
-.. code-block::
-
-   ['09']
-   ['18']
-   ['16']
-   ['15']
-   ...
-
-.. dragndrop:: question11_4_3
-   :practice: T
-   :feedback: Look above for references.
-   :match_1: ^|||Matches with the beginning of the line.
-   :match_2: .|||Matches any character (a wildcard).
-   :match_3: \S|||Matches a non-whitespace character.
-   :match_4: *|||Applies to the immediately preceding character(s) and indicates to match zero or more times (greedy).
-   :match_5: +|||Applies to the immediately preceding character(s) and indicates to match one or more times (greedy).
-   :match_6: ()|||When added to a regular expression, they are ignored for the purpose of matching, but allow you to extract a particular subset of the matched string rather than the whole string when using findall().
+     Match the following symbols with their function in a regular expression equation.

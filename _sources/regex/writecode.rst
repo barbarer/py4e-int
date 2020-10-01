@@ -33,16 +33,17 @@ Write Code Questions
             .. activecode:: regex_writecode1a
                 :optional:
 
-                # Import regex
+                1. import regex
+                2. [A-Z] matches uppercase letter characters
+                3. [a-z] matches lowercase letter characters
+                4. Use the patterns variable to search the text
+                5. Include the else statement
+                ~~~~
                 import re
                 def text_match(text):
-                    # ^[a-z] matches non-lowercase characters
-                    # [a-z] matches lowercase characters
                     patterns = '^[a-z]+_[a-z]+$'
-                    # search with the pattern variable
                     if not re.search(patterns,  text):
                             return('Found a match!')
-                    # include an else statement!
                     else:
                             return('Not matched!')
 
@@ -80,34 +81,35 @@ Write Code Questions
             Define the function "match_four" that uses regex to return True if a
             string of numbers starts with 4 and False if it does not.
 
-            ..activecode:: regex_writecode3q
+            .. activecode:: regex_writecode3q
 
-            ====
-            from unittest.gui import TestCaseGui
+                ====
+                from unittest.gui import TestCaseGui
 
-            class MyTests(TestCaseGui):
-                def testOne(self):
-                    self.assertEqual(match_four("468653892"), True, "Testing a string that starts with 4.")
-                    self.assertEqual(match_four("786328042"), False, "Testing a string that does not start with 4.")
+                class MyTests(TestCaseGui):
+                    def testOne(self):
+                        self.assertEqual(match_four("468653892"), True, "Testing a string that starts with 4.")
+                        self.assertEqual(match_four("786328042"), False, "Testing a string that does not start with 4.")
+                MyTests().main()
 
         .. tab:: Answer
 
             .. activecode:: regex_writecode3a
                 :optional:
 
-                # Import regex
+                First import regex library, then define the match_four function.
+                Within the function, create the regex pattern to match '4' and use
+                an if statement to check for a match in the string. Return true if
+                the match is made, return false if not.
+                ~~~~
                 import re
-                # Define match_four function
                 def match_four(string):
-                    # Create regex pattern to find 4
                     text = re.compile(r"^4")
-                    # Condition if 4 is included
                     if text.match(string):
-                        # Return True if starts with 4
                         return True
                     else:
-                        # Return False if does not start with 4
                         return False
+
 #.
     .. activecode:: regex_writecode4
 
@@ -144,18 +146,16 @@ Write Code Questions
             .. activecode:: regex_writecode5a
                 :optional:
 
-                # Import regex
+                In the function definition, create a regex pattern to find 'z' and
+                search the string with that pattern using re.search(). If found,
+                return "Found a match!", return "Not matched!" if not.
+                ~~~~
                 import re
-                # Define match_z
                 def match_z(text):
-                    # Create regex pattern to find z
                     patterns = '\w*z.\w*'
-                    # Search the string with the pattern
                     if re.search(patterns,  text):
-                        # If found, return positive
                         return 'Found a match!'
                     else:
-                        # If not included, return negative
                         return('Not matched!')
 
 #.
@@ -204,7 +204,8 @@ The last four questions are associated with the following text file.
 
         .. tab:: Question
 
-            Use a regex equation to match all the emails in mbox-short.txt4. Append all of these emails to the list 'email_list'.
+            Use a regex equation to match all the emails in mbox-short.txt4. Append all of
+            these emails to the list 'email_list'.
 
             .. datafile:: mbox-short.txt4
                 :fromfile: mbox-short.txt
@@ -229,23 +230,19 @@ The last four questions are associated with the following text file.
                 :available_files: mbox-short.txt
                 :optional:
 
-                # Import regex
+                First import regex and create a handle for the file. Then initialize a list to hold the emails.
+                Iterate through each line in the file, using rstrip() to remove whitespace and findall()
+                with a regex expression to find the emails. Add each email to the list, individually, then
+                print the email list after each loop has completed.
+                ~~~~
                 import re
-                # Open file
                 hand = open('mbox-short.txt4')
-                # Create list for emails
                 email_list = []
-                # Iterate through lines in the file
                 for line in hand:
-                    # Remove trailing whitespace
                     line = line.rstrip()
-                    # Use findall and regex to create list of all items matching email format
                     x = re.findall('[a-zA-Z0-9]\S+@\S+[a-zA-Z]', line)
-                    # Access each element of the findall email_list
                     for email in x:
-                        # Add email item to the list
                         email_list.append(x)
-                # Print list of emails
                 print(email_list)
 
 #.
@@ -302,24 +299,19 @@ The last four questions are associated with the following text file.
                 :available_files: mbox-short.txt
                 :optional:
 
-                # Import regex
+                First, import regex, create variable for number of emails, and create a handle to access the file.
+                Then, iterate through lines in the file, remove trailing whitespace with rstrip(), and create a
+                regex expression to use with findall() to return a list of email matches. Finally, increment the
+                total_emails variable for each email in the list and print the variable after each loop has completed.
+                ~~~~
                 import re
-                # Create variable for number of emails
                 total_emails = 0
-                # Open file
                 hand = open('mbox-short.txt5')
-                # Iterate through lines in the file
                 for line in hand:
-                    # Remove trailing whitespace from line
                     line = line.rstrip()
-                    # Use regex to find all incidents of digits at the end of a line
-                    # finall creates a list of all matches
                     x = re.findall('[a-zA-Z0-9]\S+@\S+[a-zA_Z]\s?(\d)', line)
-                    # Access each element of the list
                     for item in x:
-                        # Add the number of emails to the total
                         total_emails += int(item)
-                # Print final total
                 print(total_emails)
 
 #.
