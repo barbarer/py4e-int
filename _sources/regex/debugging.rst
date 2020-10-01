@@ -26,17 +26,17 @@ If you know what module you want to use, you can use the
    'finditer', 'match', 'purge', 'search', 'split', 'sre_compile',
    'sre_parse', 'sub', 'subn', 'sys', 'template']
 
-.. mchoice:: question11_8_1
-   :practice: T
-   :answer_a: dir(time)
-   :answer_b: import time
-   :answer_c: help(time)
-   :correct: a
-   :feedback_a: Correct! The dir() command helps to find the methods of a given module.
-   :feedback_b: Try again!
-   :feedback_c: Try again!
+.. mchoice:: re-debug-mc1
+    :practice: T
+    :answer_a: dir(time)
+    :answer_b: import time
+    :answer_c: help(time)
+    :correct: a
+    :feedback_a: Correct! The dir() command helps to find the methods of a given module.
+    :feedback_b: This will import the time module.
+    :feedback_c: Try again!
 
-   Which of these options will find the methods of the time library?
+    Which of these options will find the methods of the time library?
 
 You can also get a small amount of documentation on a particular method
 using the dir command.
@@ -56,22 +56,22 @@ The built-in documentation is not very extensive, but it can be helpful
 when you are in a hurry or don't have access to a web browser or search
 engine.
 
-.. activecode:: question11_8_2
-   :practice: T
-   :nocodelens:
+.. activecode:: re-debug-ac1
+    :practice: T
+    :nocodelens:
 
-   Fix the regex equation so that the code matches any dollar sign ($) followed by an integer or float.
-   ~~~~
-   import re
-   x = 'The apples cost $9.99, whereas the bananas were only $5 and the oranges were $2.50 each.'
-   y = re.findall('$[0_9\.]', x)
+    Fix the regex equation so that the code matches any dollar sign ($) followed by an integer or float.
+    ~~~~
+    import re
+    x = 'The apples cost $9.99, whereas the bananas were only $5 and the oranges were $2.50 each.'
+    y = re.findall('$[0_9\.]', x)
 
-   ====
-   from unittest.gui import TestCaseGui
+    ====
+    from unittest.gui import TestCaseGui
 
-   class MyTests(TestCaseGui):
+    class MyTests(TestCaseGui):
 
-       def testOne(self):
-           self.assertEqual(y, ['$9.99', '$5', '$2.50'], "Testing that the regex equation matches the proper parts of the string.")
+        def testOne(self):
+            self.assertEqual(y, ['$9.99', '$5', '$2.50'], "Testing that the regex equation matches the proper parts of the string.")
 
-   MyTests().main()
+    MyTests().main()

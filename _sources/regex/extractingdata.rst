@@ -45,19 +45,19 @@ The output of the program would be:
 
    ['csev@umich.edu', 'cwen@iupui.edu']
 
-.. mchoice:: question_11_3_1
-   :practice: T
-   :answer_a: Whitespace characters
-   :answer_b: It matches '\' and 'S'
-   :answer_c: Non-whitespace characters
-   :answer_d: This is not a part of the regular expression library
-   :correct: c
-   :feedback_a: Try again!
-   :feedback_b: Try again!
-   :feedback_c: Correct! \S matches all non-whitespace characters.
-   :feedback_d: Try again!
+.. mchoice:: re_data_mc_s
+    :practice: T
+    :answer_a: Whitespace characters
+    :answer_b: It matches '\' and 'S'
+    :answer_c: Non-whitespace characters
+    :answer_d: This is not a part of the regular expression library
+    :correct: c
+    :feedback_a: Whitespace characters are matched by \s
+    :feedback_b: \ is used as an escape for some characters, so \S is seen as one character.
+    :feedback_c: Correct! \S matches all non-whitespace characters.
+    :feedback_d: This is part of the regex library!
 
-   What does \\S match with when using regular expressions?
+    What does \\S match with when using regular expressions?
 
 Translating the regular expression, we are looking for substrings that
 have at least one non-whitespace character, followed by an at-sign,
@@ -71,38 +71,28 @@ are no non-blank characters *before* the at-sign. We can
 use this regular expression in a program to read all the lines in a file
 and print out anything that looks like an email address as follows:
 
-.. code-block:: python
+.. datafile:: mbox-short-re3.txt
+    :fromfile: ../files/mbox-short.txt
+    :hide:
 
-   # Search for lines that have an at sign (@) between characters
-   import re
-   hand = open('mbox-short.txt')
-   for line in hand:
-       line = line.rstrip()
-       x = re.findall('\S+@\S+', line)
-       if len(x) > 0:
-           print(x)
+.. activecode:: re_data_ac1
+    :available_files: mbox-short-re3.txt
+
+    This code searches for lines that have an at-sign (@) between characters.
+    ~~~~
+    import re
+    hand = open('mbox-short-re3.txt')
+    for line in hand:
+        line = line.rstrip()
+        x = re.findall('\S+@\S+', line)
+        if len(x) > 0:
+            print(x)
 
 We read each line and then extract all the substrings that match our
 regular expression. Since ``findall()`` returns a list, we
 simply check if the number of elements in our returned list is more than
 zero to print only lines where we found at least one substring that
 looks like an email address.
-
-If we run the program on *mbox.txt* we get the following
-output:
-
-.. code-block::
-
-   ['wagnermr@iupui.edu']
-   ['cwen@iupui.edu']
-   ['<postmaster@collab.sakaiproject.org>']
-   ['<200801032122.m03LMFo4005148@nakamura.uits.iupui.edu>']
-   ['<source@collab.sakaiproject.org>;']
-   ['<source@collab.sakaiproject.org>;']
-   ['<source@collab.sakaiproject.org>;']
-   ['apache@localhost)']
-   ['source@collab.sakaiproject.org;']
-
 
 Some of our email addresses have incorrect characters like "<" or ";"
 at the beginning or end. Let's declare that we are only interested in
@@ -122,13 +112,13 @@ Here is our new regular expression:
    [a-zA-Z0-9]\S*@\S*[a-zA-Z]
 
 
-.. fillintheblank:: question11_3_2
-   :practice: T
+.. fillintheblank:: re_data_fitb
+    :practice: T
 
-   _________ are used to indicate a set of multiple acceptable characters we are willing to consider matching.
+    _________ are used to indicate a set of multiple acceptable characters we are willing to consider matching.
 
-   - :[Ss]quare [Bb]rackets: Correct! Square brackets are used when matching multiple sets of characters.
-     :.*: Try again!
+    - :[Ss]quare [Bb]rackets: Correct! Square brackets are used when matching multiple sets of characters.
+      :.*: Try again!
 
 
 This is getting a little complicated and you can begin to see why
@@ -143,33 +133,20 @@ zero or more non-blank characters since ``[a-zA-Z0-9]`` is already one
 non-blank character. Remember that the ``*`` or ``+`` applies to the single
 character immediately to the left of the plus or asterisk.
 
-
 If we use this expression in our program, our data is much cleaner:
 
-.. code-block:: python
+.. activecode:: re_data_ac2
+    :available_files: mbox-short-re3.txt
 
-   # Search for lines that have an at sign (@) between characters
-   # The characters must be a letter or number
-   import re
-   hand = open('mbox-short.txt')
-   for line in hand:
-       line = line.rstrip()
-       x = re.findall('[a-zA-Z0-9]\S+@\S+[a-zA-Z]', line)
-       if len(x) > 0
-           print(x)
-
-.. code-block::
-
-   ...
-   ['wagnermr@iupui.edu']
-   ['cwen@iupui.edu']
-   ['postmaster@collab.sakaiproject.org']
-   ['200801032122.m03LMFo4005148@nakamura.uits.iupui.edu']
-   ['source@collab.sakaiproject.org']
-   ['source@collab.sakaiproject.org']
-   ['source@collab.sakaiproject.org']
-   ['apache@localhost']
-
+    This code searches for lines that have an at-sign (@) between letter or number characters.
+    ~~~~
+    import re
+    hand = open('mbox-short-re3.txt')
+    for line in hand:
+        line = line.rstrip()
+        x = re.findall('[a-zA-Z0-9]\S+@\S+[a-zA-Z]', line)
+        if len(x) > 0:
+            print(x)
 
 Notice that on the ``source@collab.sakaiproject.org`` lines, our regular
 expression eliminated two letters at the end of the string (">;").
@@ -179,17 +156,19 @@ parser finds must end with a letter. So when it sees the ">" at the end of
 "sakaiproject.org>;" it simply stops at the last "matching" letter it
 found (i.e., the "g" was the last good match).
 
-.. mchoice:: question11_3_3
-   :practice: T
-   :answer_a: All letters (capitalized and uncapitalized) and numbers 0 through 9
-   :answer_b: Matches a, zA, Z0, and 9
-   :answer_c: This is an invalid command in the regex library
-   :correct: a
-   :feedback_a: Correct! This will match all letters, uppercase and lowercase, and will match all numbers 0 through 9.
-   :feedback_b: Try again!
-   :feedback_c: Try again!
+.. mchoice:: re_data_mc_findall
+    :practice: T
+    :answer_a: All letters (capitalized and uncapitalized) and numbers 0 through 9
+    :answer_b: Matches a, zA, Z0, and 9
+    :answer_c: This is an invalid command in the regex library
+    :answer_d: A lowercase letter, an uppercase letter, and a number, all at once
+    :correct: a
+    :feedback_a: This will match all letters, uppercase and lowercase, and will match all numbers 0 through 9.
+    :feedback_b: This will match more characters than that.
+    :feedback_c: This is a valid command.
+    :feedback_d: This will only match one character at a time.
 
-   What does [a-zA-Z0-9] match with when used in the findall() method?
+    What does [a-zA-Z0-9] match with when used in the findall() method?
 
 Also note that the output of the program is a Python list that has a
 string as the single element in the list.

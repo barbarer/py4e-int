@@ -1,7 +1,7 @@
 Mixed-Up Code Questions
 ------------------------
 
-.. parsonsprob:: mixedupcode_question11_1
+.. parsonsprob:: re-mixed1
    :numbered: left
    :practice: T
    :adaptive:
@@ -25,7 +25,7 @@ Mixed-Up Code Questions
    =====
      print(greetings) #distractor
 
-.. parsonsprob:: mixedupcode_question11_2
+.. parsonsprob:: re-mixed2
    :numbered: left
    :practice: T
    :adaptive:
@@ -49,7 +49,7 @@ Mixed-Up Code Questions
    =====
      print(item)
 
-.. parsonsprob:: mixedupcode_question11_3
+.. parsonsprob:: re-mixed3
     :numbered: left
     :practice: T
     :adaptive:
@@ -73,7 +73,7 @@ Mixed-Up Code Questions
             print(item)
 
 
-.. parsonsprob:: mixedupcode_question11_4
+.. parsonsprob:: re-mixed4
     :numbered: left
     :practice: T
     :adaptive:
@@ -100,7 +100,7 @@ Mixed-Up Code Questions
     =====
         print("Not a match!")
 
-.. parsonsprob:: mixedupcode_question11_5
+.. parsonsprob:: re-mixed5
     :numbered: left
     :practice: T
     :adaptive:
@@ -130,7 +130,7 @@ Mixed-Up Code Questions
     =====
         print("Not a match!")
 
-.. parsonsprob:: mixedupcode_question11_6
+.. parsonsprob:: re-mixed6
     :numbered: left
     :practice: T
     :adaptive:
@@ -149,7 +149,7 @@ Mixed-Up Code Questions
     =====
     y = re.findall('$[0-9]+',x) #distractor
 
-.. parsonsprob:: mixedupcode_question11_7
+.. parsonsprob:: re-mixed7
     :numbered: left
     :practice: T
     :adaptive:
@@ -176,7 +176,7 @@ Mixed-Up Code Questions
     =====
             print(x)
 
-.. parsonsprob:: mixedupcode_question11_8
+.. parsonsprob:: re-mixed8
     :numbered: left
     :practice: T
     :adaptive:
@@ -202,7 +202,7 @@ Mixed-Up Code Questions
     =====
             print(hand) #distractor
 
-.. parsonsprob:: mixedupcode_question11_9
+.. parsonsprob:: re-mixed9
     :numbered: left
     :practice: T
     :adaptive:
@@ -230,7 +230,7 @@ Mixed-Up Code Questions
     =====
             print(x)
 
-.. parsonsprob:: mixedupcode_question11_10
+.. parsonsprob:: re-mixed10
     :numbered: left
     :practice: T
     :adaptive:

@@ -63,34 +63,34 @@ subset of the matched string rather than the whole string when using
 
 
 
-.. dragndrop:: chapter_eleven_glossary_one
-   :feedback: Look above for the definitions of these special characters.
-   :match_1: ^|||Matches the beginning of the line.
-   :match_2: $|||Matches the end of the line.
-   :match_3: .|||Matches any character (a wildcard).
-   :match_4: \s|||Matches a whitespace character.
-   :match_5: \S|||Matches a non-whitespace character.
+.. dragndrop:: re-summary-dnd1
+    :feedback: Look above for the definitions of these special characters.
+    :match_1: ^|||Matches the beginning of the line.
+    :match_2: $|||Matches the end of the line.
+    :match_3: .|||Matches any character (a wildcard).
+    :match_4: \s|||Matches a whitespace character.
+    :match_5: \S|||Matches a non-whitespace character.
 
-   Match each character with its regex definition.
+    Match each character with its regex definition.
 
-.. dragndrop:: chapter_eleven_glossary_two
-   :feedback: Look above for the definitions of these special characters.
-   :match_1: *|||Applies to the immediately preceding character(s) and indicates to match zero or more times.
-   :match_2: *?|||Applies to the immediately preceding character(s) and indicates to match zero or more times in "non-greedy mode".
-   :match_3: +|||Applies to the immediately preceding character(s) and indicates to match one or more times.
-   :match_4: +?|||Applies to the immediately preceding character(s) and indicates to match one or more times in "non-greedy mode".
-   :match_5: ?|||Applies to the immediately preceding character(s) and indicates to match zero or one time.
-   :match_6: ??|||Applies to the immediately preceding character(s) and indicates to match zero or one time in "non-greedy mode".
+.. dragndrop:: re-summary-dnd2
+    :feedback: Look above for the definitions of these special characters.
+    :match_1: *|||Match the previous character(s) zero or more times (greedy).
+    :match_2: *?|||Match the previous character(s) zero or more times in "non-greedy mode".
+    :match_3: +|||Match the previous character(s) one or more times (greedy).
+    :match_4: +?|||Match the previous character(s) zero or more times in "non-greedy mode".
+    :match_5: ?|||Match the previous character(s) zero or one time.
+    :match_6: ??|||Match the previous character(s) zero or one time in "non-greedy mode".
 
-   Match each character with its regex definition.
+    Match each character with its regex definition.
 
-.. dragndrop:: chapter_eleven_glossary_three
-   :feedback: Look above for the definitions of these special characters.
-   :match_1: [aeiou]|||Matches a single character as long as that character is in the specified set.
-   :match_2: ()|||When these are added to a regular expression, they are ignored for the purpose of matching, but allow you to extract a particular subset of the matched string rather than the whole string when using findall().
-   :match_3: \b|||Matches the empty string, but only at the start or end of a word.
-   :match_4: \B|||Matches the empty string, but not at the start or end of a word.
-   :match_5: \d|||Matches any decimal digit; equivalent to the set [0-9].
-   :match_6: \D|||Matches any non-digit character; equivalent to the set [^0-9].
+.. dragndrop:: re-summary-dnd3
+    :feedback: Look above for the definitions of these special characters.
+    :match_1: [aeiou]|||Matches a single character as long as that character is in the specified set.
+    :match_2: ()|||Used to extract a particular subset of the matched string rather than the whole string when using findall().
+    :match_3: \b|||Matches the empty string, but only at the start or end of a word.
+    :match_4: \B|||Matches the empty string, but not at the start or end of a word.
+    :match_5: \d|||Matches any decimal digit; equivalent to the set [0-9].
+    :match_6: \D|||Matches any non-digit character; equivalent to the set [^0-9].
 
-   Match each character with its regex definition.
+    Match each character with its regex definition.
