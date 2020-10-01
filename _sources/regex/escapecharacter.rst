@@ -57,6 +57,6 @@ or the period character.
     :feedback_a: This will trigger the wild-card function.
     :feedback_b: This will not work.
     :feedback_c: This is the correct usage of the backslash.
-    :feedback_d: Try again!
+    :feedback_d: Try again! In regex, | is used to match the expression on the left or the expression on the right
 
     How do we match a period (and not a wild-card) in a string using regex?

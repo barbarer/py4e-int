@@ -60,10 +60,10 @@ expressions, since we could have just as easily used
     :answer_c: import re
     :answer_d: import regular_expressions
     :correct: c
-    :feedback_a: Try again!
-    :feedback_b: Try again!
+    :feedback_a: regex is a little shorter when we import it.
+    :feedback_b: We are not importing a specific regex function.
     :feedback_c: Correct! This is the proper way to import the regular expression library.
-    :feedback_d: Not quite!
+    :feedback_d: regular_expressions gets shortened when we import it. 
 
     Which method correctly imports the regex library?
 

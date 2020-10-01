@@ -34,7 +34,7 @@ If you know what module you want to use, you can use the
     :correct: a
     :feedback_a: Correct! The dir() command helps to find the methods of a given module.
     :feedback_b: This will import the time module.
-    :feedback_c: Try again!
+    :feedback_c: This will not work.
 
     Which of these options will find the methods of the time library?
 

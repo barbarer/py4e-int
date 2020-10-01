@@ -12,8 +12,8 @@ Write Code Questions
 
                 ### re
                 def text_match(text):
-                    patterns = '^[###]+_[###]+$'
-                    if not re.search(###,  text):
+                    patterns = '[###]_[###]+'
+                    if re.search(###,  text):
                             return('Found a match!')
                     ###:
                             return('Not matched!')
@@ -24,25 +24,25 @@ Write Code Questions
 
                 class MyTests(TestCaseGui):
                     def testOne(self):
-                        self.assertEqual(text_match("aab_cbbc"), "Not matched!", "Testing with all lowercase.")
-                        self.assertEqual(text_match("aab_Abbbc"), "Found a match!", "Testing with pattern in middle.")
-                        self.assertEqual(text_match("Aaab_abbbc"), "Found a match!", "Testing with pattern at start.")
+                        self.assertEqual(text_match("aab_cbbc"), "Not matched!", "Testing without pattern.")
+                        self.assertEqual(text_match("aaA_bbbc"), "Found a match!", "Testing with pattern in middle.")
+                        self.assertEqual(text_match("A_abbbc"), "Found a match!", "Testing with pattern at start.")
+                MyTests().main()
 
         .. tab:: Answer
 
             .. activecode:: regex_writecode1a
                 :optional:
 
-                1. import regex
-                2. [A-Z] matches uppercase letter characters
-                3. [a-z] matches lowercase letter characters
-                4. Use the patterns variable to search the text
-                5. Include the else statement
+                Line 1: import regex
+                Line 3: [A-Z] matches uppercase letter characters and [a-z] matches lowercase letter characters
+                Line 4: Use the patterns variable to search the text
+                Line 6: Include the else statement
                 ~~~~
                 import re
                 def text_match(text):
-                    patterns = '^[a-z]+_[a-z]+$'
-                    if not re.search(patterns,  text):
+                    patterns = '[A-Z]_[a-z]+'
+                    if re.search(patterns,  text):
                             return('Found a match!')
                     else:
                             return('Not matched!')
@@ -53,7 +53,7 @@ Write Code Questions
     .. activecode:: regex_writecode2
 
         Complete the code below to check if a string begins with a word. If it does,
-        return "Found a match!", if not return "Not matched." Replace the ### with your code.
+        return "Found a match!", if not return "Not matched!" Replace the ### with your code.
         ~~~~
         import ###
         def text_match(text):
@@ -104,8 +104,8 @@ Write Code Questions
                 ~~~~
                 import re
                 def match_four(string):
-                    text = re.compile(r"^4")
-                    if text.match(string):
+                    pattern = "^4.+"
+                    if re.search(pattern,  string):
                         return True
                     else:
                         return False
@@ -113,10 +113,19 @@ Write Code Questions
 #.
     .. activecode:: regex_writecode4
 
-        Write a Python program that matches a string containing the phrase cat,
-        Cat, CAT, cAt, and the like.
+        Define the function "match_cat" that uses regex to return True if a
+        string matches cat, Cat, CAT, cAt, etc and False if it does not.
         ~~~~
 
+        ====
+        from unittest.gui import TestCaseGui
+
+        class MyTests(TestCaseGui):
+            def testOne(self):
+                self.assertEqual(match_cat("cAt"), True, "Testing cAt.")
+                self.assertEqual(match_cat("cat"), True, "Testing cat.")
+                self.assertEqual(match_cat("dog"), False, "Testing dog.")
+        MyTests().main()
 #.
     .. tabbed:: regex_writecode5
 
@@ -221,7 +230,7 @@ The last four questions are associated with the following text file.
 
                 class MyTests(TestCaseGui):
                     def testOne(self):
-                        self.assertEqual(email_list, ['gopal.ramasammycook@gmail.com', 'louis@media.berkeley.edu', 'cwen@iupui.edu', 'antranig@caret.cam.ac.uk', 'rjlowe@iupui.edu', 'gsilver@umich.edu', 'david.horwitz@uct.ac.za', 'wagnermr@iupui.edu', 'zqian@umich.edu', 'stephen.marquard@uct.ac.za', 'ray@media.berkeley.edu'], "Testing that all the emails were matched.")
+                        self.assertEqual(email_list, [['gopal.ramasammycook@gmail.com'], ['louis@media.berkeley.edu'], ['cwen@iupui.edu'], ['antranig@caret.cam.ac.uk'], ['rjlowe@iupui.edu'], ['gsilver@umich.edu'], ['david.horwitz@uct.ac.za'], ['wagnermr@iupui.edu'], ['zqian@umich.edu'], ['stephen.marquard@uct.ac.za'], ['ray@media.berkeley.edu']], "Testing that all the emails were matched.")
                 MyTests().main()
 
         .. tab:: Answer
@@ -254,7 +263,7 @@ The last four questions are associated with the following text file.
         this would locate the string "umich.edu".
         ~~~~
         import re
-        hand = open('mbox-short.txt')
+        hand = open('mbox-short.txt4')
         domains = []
 
         ====
@@ -262,7 +271,7 @@ The last four questions are associated with the following text file.
 
         class MyTests(TestCaseGui):
             def testOne(self):
-                self.assertEqual(domains, ['@gmail.com', '@media.berkeley.edu', '@iupui.edu', '@caret.cam.ac.uk', '@iupui.edu', '@umich.edu', '@uct.ac.za', '@iupui.edu', '@umich.edu', '@uct.ac.za', '@media.berkeley.edu'], "Testing that all domains were matched.")
+                self.assertEqual(domains, [['@gmail.com'], ['@media.berkeley.edu'], ['@iupui.edu'], ['@caret.cam.ac.uk'], ['@iupui.edu'], ['@umich.edu'], ['@uct.ac.za'], ['@iupui.edu'], ['@umich.edu'], ['@uct.ac.za'], ['@media.berkeley.edu']], "Testing that all domains were matched.")
         MyTests().main()
 
 #.
@@ -328,5 +337,5 @@ The last four questions are associated with the following text file.
 
         class MyTests(TestCaseGui):
             def testOne(self):
-                self.assertEqual(usernames, ['gopal.ramasammycook', 'louis', 'cwen', 'antranig', 'rjlowe', 'gsilver', 'david.horwitz', 'wagnermr', 'zqian', 'stephen.marquard', 'ray'], "Testing that all usernames were matched.")
+                self.assertEqual(usernames, [['gopal.ramasammycook'], ['louis'], ['cwen'], ['antranig'], ['rjlowe'], ['gsilver'], ['david.horwitz'], ['wagnermr'], ['zqian'], ['stephen.marquard'], ['ray']], "Testing that all usernames were matched.")
         MyTests().main()
