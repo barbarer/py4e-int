@@ -124,9 +124,9 @@ on turning off the greedy behavior.
     :answer_c: From: stephen.marquard@uct.ac.za, csev@umich.edu, and cwen @
     :answer_d: All of the above
     :correct: c
-    :feedback_a: Try again!
-    :feedback_b: Try again!
+    :feedback_a: '^From:.+@' will match this. 
+    :feedback_b: Remember the + and * characters in regex are pushy!
     :feedback_c: Correct! The + and * characters are pushy, so this will capture the entire statement and not just to the first @ sign.
-    :feedback_d: Try again! Remeber the + and * characters in regex are pushy!
+    :feedback_d: Try again! Remember the + and * characters in regex are pushy!
 
     Looking at the code-block above, what parts of it will be matched by the regex equation ``re.search('From:.+@')``?

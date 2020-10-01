@@ -44,8 +44,8 @@ other than a space.
     :answer_d: $ grep '$[0-9.]+' mbox-short.txt
     :correct: a,c
     :feedback_a: Correct! This is the correct way to use grep to find prices in a file.
-    :feedback_b: Try again!
+    :feedback_b: Make sure to include the file!
     :feedback_c: Correct! This uses the /d regex character to find prices in mbox-short.txt.
-    :feedback_d: Try again!
+    :feedback_d: You're missing a character. 
 
-    Which option(s) properly uses the grep command-line to search for prices? Select all that apply. 
+    Which option(s) properly uses the grep command-line to search for prices? Select all that apply.

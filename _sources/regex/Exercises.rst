@@ -31,9 +31,9 @@ Multiple Choice Questions
     :answer_c: import Regex
     :answer_d: import Re
     :correct: b
-    :feedback_a: Try again!
+    :feedback_a: We shorten regex a little more!
     :feedback_b: This is how to import the regex library.
-    :feedback_c: Try again!
+    :feedback_c: Try shortening regex and using all lowercase. 
     :feedback_d: Close, but Python is case sensitive.
 
     Which of the following options is the correct way to import the regex library?
@@ -162,6 +162,6 @@ Multiple Choice Questions
     :feedback_a: This will trigger the interactive help system, but not the methods of regex.
     :feedback_b: We shorten regex to something shorter.
     :feedback_c: This will return a list containing all the methods of the regex library.
-    :feedback_d: This will import the regular expression module. 
+    :feedback_d: This will import the regular expression module.
 
     If you are having trouble remembering what methods the regex library contains, which command can you use to find said methods?
