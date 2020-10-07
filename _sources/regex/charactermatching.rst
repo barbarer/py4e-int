@@ -94,7 +94,7 @@ characters between the colon character and the at-sign.
     :feedback_c: Correct. The dollar sign in this line is followed by more than one character.
     :feedback_d: Try again! There needs to be at least a $ in the line.
 
-    Select **all** of the lines that will be matched when the following code is run.
+    Select **all** of the lines that will be printed when the following code is run.
     (\\$ is used to match the character '$')
 
     .. code-block:: python
@@ -106,13 +106,13 @@ characters between the colon character and the at-sign.
             if re.search('\$.+', line):
                 print(line)
 
-It is good to think of the plus and asterisk characters as "pushy". For
+It is good to think of the plus and asterisk characters as "pushy" or "greedy". For
 example, the following string would match the last at-sign in the string
 as the ``.+`` pushes outwards, as shown below:
 
 .. code-block::
 
-   From: stephen.marquard@uct.ac.za, csev@umich.edu, and cwen @iupui.edu
+
 
 It is possible to tell an asterisk or plus sign not to be so "greedy" by
 adding another character. See the detailed documentation for information
@@ -122,11 +122,15 @@ on turning off the greedy behavior.
     :answer_a: From: stephen.marquard@
     :answer_b: From: stephen.marquard@uct.ac.za, csev@
     :answer_c: From: stephen.marquard@uct.ac.za, csev@umich.edu, and cwen @
-    :answer_d: All of the above
+    :answer_d: From: stephen.marquard@uct.ac.za, csev@umich.edu, and cwen @iupui.edu
     :correct: c
-    :feedback_a: '^From:.+@' will match this. 
+    :feedback_a: '^From:.+@' will match this.
     :feedback_b: Remember the + and * characters in regex are pushy!
     :feedback_c: Correct! The + and * characters are pushy, so this will capture the entire statement and not just to the first @ sign.
-    :feedback_d: Try again! Remember the + and * characters in regex are pushy!
+    :feedback_d: It stops at the last @
 
-    Looking at the code-block above, what parts of it will be matched by the regex equation ``re.search('From:.+@')``?
+    Looking at the code-block below, what parts of it will be matched by the regex equation ``re.search('From:.+@')``?
+
+    .. code-block:: python
+
+        From: stephen.marquard@uct.ac.za, csev@umich.edu, and cwen @iupui.edu

@@ -106,21 +106,19 @@ Mixed-Up Code Questions
     :adaptive:
 
     The following code should use create a regular expression pattern that can match
-    the following phrases: <br>
-    "Sincerely, Molly" <br>"Sincerely, &nbsp; Molly" <br>"Sincerely,<br>Molly" <br> and
-    test it on the sequence. If they are the same, it should print "Match!", if not it
+    "Sincerely, Molly" where there is at least one space after the comma, but can be many.
+    Test it on the sequence. If they are the same, it should print "Match!", if not it
     should print "Not a match!". The blocks have been mixed up, and include two extra
     blocks that are not correct. Watch out for the extra blocks and indentation!
     -----
     import re
-    =====
-    pattern = r"Sincerely,\Molly"
-    =====
-    pattern = r"Sincerely, *Molly" #distractor
-    =====
-    pattern = r"Sincerely, .* Molly" #distractor
-    =====
     sequence = "Sincerely,       Molly"
+    =====
+    pattern = r"Sincerely,\s+Molly"
+    =====
+    pattern = r"Sincerely, Molly" #distractor
+    =====
+    pattern = r"Sincerely,\s*Molly" #distractor
     =====
     if re.match(pattern, sequence):
     =====
@@ -135,7 +133,7 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    The following code should create a new string "y" from the price included
+    The following code should create a new string "y" from the first price found
     in the string "x". The blocks have been mixed up, and include two extra
     blocks that are not correct.
     -----
@@ -143,18 +141,18 @@ Mixed-Up Code Questions
     =====
     x = 'We just received $10.00 for cookies.'
     =====
-    y = re.findall('\$[0-9.]+',x)
+    y = re.findall('\$\d+(?:\.\d{2})?',x)[0]
     =====
-    y = re.find('\$[0-9]+',x) #distractor
+    y = re.findall('\$\d*(?:\.\d{2})?',x)[0] #distractor
     =====
-    y = re.findall('$[0-9]+',x) #distractor
+    y = re.findall('\$\d+(\.\d{2})?',x)[0] #distractor
 
 .. parsonsprob:: re-mixed7
     :numbered: left
     :practice: T
     :adaptive:
 
-    The following code should read all the lines in a file, remove whitespace, and
+    The following code should read all the lines in a file, remove whitespace from the end of the line, and
     use regular expressions to find and print out anything that looks like an email
     address. The blocks have been mixed up, and include two extra blocks that are not correct.
     -----
@@ -172,16 +170,16 @@ Mixed-Up Code Questions
     =====
         x = re.findall('[A-Z]+@.*', line) #distractor
     =====
-        if len(x) > 0:
+        for item in x:
     =====
-            print(x)
+            print(item)
 
 .. parsonsprob:: re-mixed8
     :numbered: left
     :practice: T
     :adaptive:
 
-    The following code should read all the lines in a file, remove whitespace, and
+    The following code should read all the lines in a file, remove whitespace from the right side of the line, and
     use regular expressions to find and print out anything lines that start with “From:”,
     followed by one or more characters, followed by an at-sign. The blocks have been
     mixed up, and include two extra blocks that are not correct.
@@ -207,10 +205,9 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    The following code should read all the lines in a file, remove whitespace, and
+    The following code should read all the lines in a file, remove whitespace from the right side of the line, and
     use regular expressions to search for lines that start with 'Details: rev='
-    followed by numbers and '.'. Then print the number of occurrences if it is greater
-    than zero. The blocks have been mixed up, and include two extra blocks that are not correct.
+    followed by numbers and '.'. Then print the number of occurrences. The blocks have been mixed up, and include two extra blocks that are not correct.
     -----
     import re
     =====
@@ -220,24 +217,22 @@ Mixed-Up Code Questions
     =====
         line = line.rstrip()
     =====
-        x = re.findall('^Details:.*rev=([0-9.]+)', line)
+        x = re.findall('^Details:.*rev=([0-9]+\.)', line)
     =====
-        x = re.findall('^X\S*: ([0-9.]+)', line) #distractor
+        x = re.findall('^X\S*: ([0-9]+\.)', line) #distractor
     =====
-        if len(x) > 0:
+        print(len(x))
     =====
-        if len(x) < 0: #distractor
-    =====
-            print(x)
+        print(x) #distractor
 
 .. parsonsprob:: re-mixed10
     :numbered: left
     :practice: T
     :adaptive:
 
-    The following code should search for lines that start with 'X' followed by any
-    non whitespace characters and ':' followed by a space and any number (that can be a float)
-    then print the number if it is greater than zero. The blocks have been mixed up, and include
+    The following code should search for lines that start with 'X' followed by at least one
+    non whitespace character then ':' followed by one space and at least one digit
+    then print the number of items found. The blocks have been mixed up, and include
     two extra blocks that are not correct. Watch out for the extra blocks and indentation!
     -----
     import re
@@ -250,10 +245,6 @@ Mixed-Up Code Questions
     =====
         line = line.rstrip()
     =====
-        x = re.findall('^X\S*: ([0-9.]+)', line)
+        x = re.findall('^X\S+: [0-9]+', line)
     =====
-        if len(x) > 0:
-    =====
-        if len(hand) > 0: #distractor
-    =====
-            print(x)
+        print(len(x))

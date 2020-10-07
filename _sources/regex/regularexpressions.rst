@@ -60,12 +60,12 @@ expressions, since we could have just as easily used
     :answer_c: import re
     :answer_d: import regular_expressions
     :correct: c
-    :feedback_a: regex is a little shorter when we import it.
+    :feedback_a: The module name is not regex.
     :feedback_b: We are not importing a specific regex function.
     :feedback_c: Correct! This is the proper way to import the regular expression library.
-    :feedback_d: regular_expressions gets shortened when we import it. 
+    :feedback_d: This is not the module name.  It is much shorter.
 
-    Which method correctly imports the regex library?
+    Which of the following correctly imports the regex library?
 
 The power of the regular expressions comes when we add special
 characters to the search string that allow us to more precisely control
@@ -81,6 +81,7 @@ lines where "From:" was at the beginning of the line as follows:
     :available_files: mbox-short-re.txt
 
     Using regular expressions to print lines that contain "From:" at the beginning of the line.
+    ~~~~
     import re
     hand = open('mbox-short-re.txt')
     for line in hand:
@@ -98,8 +99,8 @@ will match the regular expression.
 .. mchoice:: re_mc_startswith
     :practice: T
     :answer_a: Any line that contains a 'B'
-    :answer_b: Any line containing 'b'
-    :answer_c: Lines starting with the letter 'b'
+    :answer_b: Any line containing a 'b'
+    :answer_c: Lines that start with the letter 'b'
     :answer_d: Lines that contain 'B' or 'b'
     :correct: b
     :feedback_a: Regular expressions are case sensitive for individual characters.
@@ -124,7 +125,7 @@ will match the regular expression.
     :practice: T
     :adaptive:
 
-    Construct a block of code that sorts through a file and prints out any line starting with 'Wolverines'.
+    Construct a block of code that loops reading lines from a file, removes whitespace on the right of the line, and prints out any line starting with 'Wolverines'.
     -----
     import re
     =====

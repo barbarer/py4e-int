@@ -52,7 +52,7 @@ Write Code Questions
 #.
     .. activecode:: regex_writecode2
 
-        Complete the code below to check if a string begins with a word. If it does,
+        Complete the code below to check if a string begins with a word (non space characters). If it does,
         return "Found a match!", if not return "Not matched!" Replace the ### with your code.
         ~~~~
         import ###
@@ -124,7 +124,11 @@ Write Code Questions
             def testOne(self):
                 self.assertEqual(match_cat("cAt"), True, "Testing cAt.")
                 self.assertEqual(match_cat("cat"), True, "Testing cat.")
+                self.assertEqual(match_cat("Cat"), True, "Testing Cat.")
+                self.assertEqual(match_cat("CAT"), True, "Testing CAT.")
                 self.assertEqual(match_cat("dog"), False, "Testing dog.")
+                self.assertEqual(match_cat("caT"), False, "Testing caT.")
+                self.assertEqual(match_cat("Cats"), False, "Testing Cats.")
         MyTests().main()
 #.
     .. tabbed:: regex_writecode5
