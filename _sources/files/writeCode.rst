@@ -398,7 +398,7 @@ and hide to put it away.
 
         .. tab:: Question
 
-            Fix 5 errors in the code below so that the code runs correctly and prints
+            Fix errors in the code below so that the code runs correctly and prints
             the pollution for all cities that start with the letter A.
 
             .. activecode:: file_ex_pollErrorq
@@ -406,7 +406,7 @@ and hide to put it away.
                 :available_files: uspoll.txt
 
                 inFile = open("uspoll.txt","r)
-                
+
                 for line in inFile
                     values = line.split(":")
                     city = values[0]
@@ -417,6 +417,9 @@ and hide to put it away.
                 inFile.close()
 
         .. tab:: Answer
+
+            It was missing a close double quote after the r on line 1.  It was missing a colon 
+            at the end of line 3.  It was missing a comma or plus sign between the values on line 7.
 
             .. activecode:: file_ex_pollErrora
                 :nocodelens:

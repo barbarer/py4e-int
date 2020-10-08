@@ -1,18 +1,23 @@
 Write Code Questions
 ----------------------
+
+.. datafile:: mbox-short4.txt
+    :fromfile: mbox-short.txt
+    :hide:
+
 #.
     .. tabbed:: regex_writecode1
 
         .. tab:: Question
 
-            Complete the code at the ### to find sequences of one uppercase letter
-            followed by lowercase letters.
+            Modify the ### to find sequences with one uppercase letter
+            followed by an underscore followed by one or more lowercase letters.
 
             .. activecode:: regex_writecode1q
 
                 ### re
                 def text_match(text):
-                    patterns = '[###]_[###]+'
+                    pattern = '[###]_[###]+'
                     if re.search(###,  text):
                             return('Found a match!')
                     ###:
@@ -24,9 +29,11 @@ Write Code Questions
 
                 class MyTests(TestCaseGui):
                     def testOne(self):
-                        self.assertEqual(text_match("aab_cbbc"), "Not matched!", "Testing without pattern.")
-                        self.assertEqual(text_match("aaA_bbbc"), "Found a match!", "Testing with pattern in middle.")
-                        self.assertEqual(text_match("A_abbbc"), "Found a match!", "Testing with pattern at start.")
+                        self.assertEqual(text_match("aab_cbbc"), "Not matched!", 'text_match("aab_cbbc")')
+                        self.assertEqual(text_match("aaA_bbbc"), "Found a match!", 'text_match("aaA_bbbc")')
+                        self.assertEqual(text_match("A_abbbc"), "Found a match!", 'text_match("A_abbbc")')
+                        self.assertEqual(text_match("word_A"), "Not matched!", 'text_match("word_A")')
+                        self.assertEqual(text_match("myZ_oo"), "Found a match!", 'text_match("myZ_oo")')
                 MyTests().main()
 
         .. tab:: Answer
@@ -34,30 +41,41 @@ Write Code Questions
             .. activecode:: regex_writecode1a
                 :optional:
 
-                Line 1: import regex
+                Line 1: import re
                 Line 3: [A-Z] matches uppercase letter characters and [a-z] matches lowercase letter characters
-                Line 4: Use the patterns variable to search the text
+                Line 4: Use the pattern variable to search the text
                 Line 6: Include the else statement
                 ~~~~
                 import re
                 def text_match(text):
-                    patterns = '[A-Z]_[a-z]+'
-                    if re.search(patterns,  text):
+                    pattern = '[A-Z]_[a-z]+'
+                    if re.search(pattern,  text):
                             return('Found a match!')
                     else:
                             return('Not matched!')
 
                 print(text_match("aab_cbbbc"))
+                ====
+                from unittest.gui import TestCaseGui
+
+                class MyTests(TestCaseGui):
+                    def testOne(self):
+                        self.assertEqual(text_match("aab_cbbc"), "Not matched!", 'text_match("aab_cbbc")')
+                        self.assertEqual(text_match("aaA_bbbc"), "Found a match!", 'text_match("aaA_bbbc")')
+                        self.assertEqual(text_match("A_abbbc"), "Found a match!", 'text_match("A_abbbc")')
+                        self.assertEqual(text_match("word_A"), "Not matched!", 'text_match("word_A")')
+                        self.assertEqual(text_match("myZ_oo"), "Found a match!", 'text_match("myZ_oo")')
+                MyTests().main()
 
 #.
     .. activecode:: regex_writecode2
 
-        Complete the code below to check if a string begins with a word (non space characters). If it does,
+        Complete the code below to check if a string begins with a word (at least one non space character). If it does,
         return "Found a match!", if not return "Not matched!" Replace the ### with your code.
         ~~~~
         import ###
         def text_match(text):
-            patterns = ### Your regex pattern here
+            pattern = ###    # Your regex pattern here
             if re.search(###):
                 return(###)
             else:
@@ -68,8 +86,12 @@ Write Code Questions
 
         class MyTests(TestCaseGui):
             def testOne(self):
-                self.assertEqual(text_match("The quick brown fox jumps over the lazy dog."), "Found a match!", "Testing a string that starts with a word.")
-                self.assertEqual(text_match("   The quick brown fox jumps over the lazy dog."), "Not matched", "Testing a string that does not start with a word.")
+                self.assertEqual(text_match("The quick fox jumps."), "Found a match!", 'text_match("The quick fox jumps.")')
+                self.assertEqual(text_match("   The quick fox jumps."), "Not matched!", 'text_match("   The quick fox jumps.")')
+                self.assertEqual(text_match("9 years ago"), "Not matched!", 'text_match("9 years ago")')
+                self.assertEqual(text_match("Nine years ago"), "Found a match!", 'text_match("Nine years ago")')
+                self.assertEqual(text_match("#run"), "Not matched!", 'text_match("#run")')
+
 
         MyTests().main()
 
@@ -88,8 +110,11 @@ Write Code Questions
 
                 class MyTests(TestCaseGui):
                     def testOne(self):
-                        self.assertEqual(match_four("468653892"), True, "Testing a string that starts with 4.")
-                        self.assertEqual(match_four("786328042"), False, "Testing a string that does not start with 4.")
+                        self.assertEqual(match_four("468653892"), True, 'match_four("468653892")')
+                        self.assertEqual(match_four("648653892"), False, 'match_four("648653892")')
+                        self.assertEqual(match_four("41"), True, 'match_four("41")')
+                        self.assertEqual(match_four("4"), True, 'match_four("4")')
+                        self.assertEqual(match_four("786328042"), False, 'match_four("786328042")')
                 MyTests().main()
 
         .. tab:: Answer
@@ -97,18 +122,29 @@ Write Code Questions
             .. activecode:: regex_writecode3a
                 :optional:
 
-                First import regex library, then define the match_four function.
-                Within the function, create the regex pattern to match '4' and use
+                First import the regex library (re), then define the match_four function.
+                Within the function, create the regex pattern to match if the string starts with '4' and use
                 an if statement to check for a match in the string. Return true if
                 the match is made, return false if not.
                 ~~~~
                 import re
                 def match_four(string):
-                    pattern = "^4.+"
+                    pattern = "^4.*"
                     if re.search(pattern,  string):
                         return True
                     else:
                         return False
+                ====
+                from unittest.gui import TestCaseGui
+
+                class MyTests(TestCaseGui):
+                    def testOne(self):
+                        self.assertEqual(match_four("468653892"), True, 'match_four("468653892")')
+                        self.assertEqual(match_four("648653892"), False, 'match_four("648653892")')
+                        self.assertEqual(match_four("41"), True, 'match_four("41")')
+                        self.assertEqual(match_four("4"), True, 'match_four("4")')
+                        self.assertEqual(match_four("786328042"), False, 'match_four("786328042")')
+                MyTests().main()
 
 #.
     .. activecode:: regex_writecode4
@@ -149,8 +185,11 @@ Write Code Questions
 
                 class MyTests(TestCaseGui):
                     def testOne(self):
-                        self.assertEqual(match_z("The quick brown fox jumps over the lazy dog."), "Found a match!", "Testing string with z.")
-                        self.assertEqual(match_z("Python rocks!"), "Not matched!", "Testing string without z.")
+                        self.assertEqual(match_z("The lazy dog."), "Found a match!", 'match_z("The lazy dog.")')
+                        self.assertEqual(match_z("Python rocks!"), "Not matched!", 'match_z("Python rocks!")')
+                        self.assertEqual(match_z("Zippers"), "Not matched!", 'match_z("Zippers")')
+                        self.assertEqual(match_z("pez"), "Found a match!", 'match_z("pez")')
+                        self.assertEqual(match_z("abc"), "Not matched!", 'match_z("abc")')
 
                 MyTests().main()
 
@@ -165,11 +204,23 @@ Write Code Questions
                 ~~~~
                 import re
                 def match_z(text):
-                    patterns = '\w*z.\w*'
+                    patterns = '\w*z\w*'
                     if re.search(patterns,  text):
                         return 'Found a match!'
                     else:
                         return('Not matched!')
+                ====
+                from unittest.gui import TestCaseGui
+
+                class MyTests(TestCaseGui):
+                    def testOne(self):
+                        self.assertEqual(match_z("The lazy dog."), "Found a match!", 'match_z("The lazy dog.")')
+                        self.assertEqual(match_z("Python rocks!"), "Not matched!", 'match_z("Python rocks!")')
+                        self.assertEqual(match_z("Zippers"), "Not matched!", 'match_z("Zippers")')
+                        self.assertEqual(match_z("pez"), "Found a match!", 'match_z("pez")')
+                        self.assertEqual(match_z("abc"), "Not matched!", 'match_z("abc")')
+
+                MyTests().main()
 
 #.
     .. activecode:: regex_writecode6
@@ -186,49 +237,27 @@ Write Code Questions
 
         class MyTests(TestCaseGui):
             def testOne(self):
-                self.assertEqual(matchMiddle_z("Buzzing bee"), "Found a match!", "Testing string with z in the middle.")
-                self.assertEqual(matchMiddle_z("zippers"), "Not matched!", "Testing string with z at the beginning.")
-                self.assertEqual(matchMiddle_z("pez"), "Not matched!", "Testing string with z at the end.")
+                self.assertEqual(matchMiddle_z("Buzzing bee"), "Found a match!", 'matchMiddle_z("Buzzing bee")')
+                self.assertEqual(matchMiddle_z("zippers"), "Not matched!", 'matchMiddle_z("zippers")')
+                self.assertEqual(matchMiddle_z("pez"), "Not matched!", 'matchMiddle_z("pez")')
+                self.assertEqual(matchMiddle_z("abc"), "Not matched!", 'matchMiddle_z("abc")')
+                self.assertEqual(matchMiddle_z("buzz"), "Found a match!", 'matchMiddle_z("buzz")')
 
         MyTests().main()
-
-The last four questions are associated with the following text file.
-
-.. reveal:: mbox-short-txt-file1
-   :showtitle: Show
-   :hidetitle: Hide
-
-   .. code-block::
-
-      gopal.ramasammycook@gmail.com 1
-      louis@media.berkeley.edu 3
-      cwen@iupui.edu 5
-      antranig@caret.cam.ac.uk 1
-      rjlowe@iupui.edu 2
-      gsilver@umich.edu 3
-      david.horwitz@uct.ac.za 4
-      wagnermr@iupui.edu 1
-      zqian@umich.edu 4
-      stephen.marquard@uct.ac.za 2
-      ray@media.berkeley.edu 1
 
 #.
     .. tabbed:: regex_writecode7
 
         .. tab:: Question
 
-            Use a regex equation to match all the emails in mbox-short.txt4. Append all of
-            these emails to the list 'email_list'.
-
-            .. datafile:: mbox-short.txt4
-                :fromfile: mbox-short.txt
-                :hide:
-
             .. activecode:: regex_writecode7q
                 :practice: T
-                :available_files: mbox-short.txt
+                :datafile: mbox-short4.txt
 
-                hand = open('mbox-short.txt4')
+                Finish the code below to find all of the emails in "mbox-short4.txt" and add them to a list and return the list.  An email starts with an alphanumeric character followed by one or more non white space characters and then "@" followed by one or more non white space characters with one alphabetic character at the end.
+                ~~~~
+                import re
+                hand = open('mbox-short4.txt')
                 ====
                 from unittest.gui import TestCaseGui
 
@@ -240,16 +269,16 @@ The last four questions are associated with the following text file.
         .. tab:: Answer
 
             .. activecode:: regex_writecode7a
-                :available_files: mbox-short.txt
+                :datafile: mbox-short4.txt
                 :optional:
 
-                First import regex and create a handle for the file. Then initialize a list to hold the emails.
+                First import regex (re) and create a handle for the file. Then initialize a list to hold the emails.
                 Iterate through each line in the file, using rstrip() to remove whitespace and findall()
                 with a regex expression to find the emails. Add each email to the list, individually, then
                 print the email list after each loop has completed.
                 ~~~~
                 import re
-                hand = open('mbox-short.txt4')
+                hand = open('mbox-short4.txt')
                 email_list = []
                 for line in hand:
                     line = line.rstrip()
@@ -257,17 +286,24 @@ The last four questions are associated with the following text file.
                     for email in x:
                         email_list.append(x)
                 print(email_list)
+                ====
+                from unittest.gui import TestCaseGui
+
+                class MyTests(TestCaseGui):
+                    def testOne(self):
+                        self.assertEqual(email_list, [['gopal.ramasammycook@gmail.com'], ['louis@media.berkeley.edu'], ['cwen@iupui.edu'], ['antranig@caret.cam.ac.uk'], ['rjlowe@iupui.edu'], ['gsilver@umich.edu'], ['david.horwitz@uct.ac.za'], ['wagnermr@iupui.edu'], ['zqian@umich.edu'], ['stephen.marquard@uct.ac.za'], ['ray@media.berkeley.edu']], "Testing that all the emails were matched.")
+                MyTests().main()
 
 #.
     .. activecode:: regex_writecode8
         :available_files: mbox-short.txt
 
-        Using the same datafile, extract the email domains from each email address
+        Using "mbox-short4.txt", extract the email domains from each email address
         using regex and add them to the list "domains". For the email noname@umich.edu,
         this would locate the string "umich.edu".
         ~~~~
         import re
-        hand = open('mbox-short.txt4')
+        hand = open('mbox-short4.txt')
         domains = []
 
         ====
@@ -283,20 +319,16 @@ The last four questions are associated with the following text file.
 
         .. tab:: Question
 
-            Using the same datafile, extract the number next to each email (the
+            Using "mbox-short4.txt", extract the number next to each email (the
             amount of emails each person has sent) using a regex equation, and
             calculate the total amount of emails sent. Save this to the variable
             'total_emails'. Use the () character to capture and return the number.
 
-            .. datafile:: mbox-short.txt5
-                :fromfile: mbox-short.txt
-                :hide:
-
             .. activecode:: regex_writecode9q
                 :practice: T
-                :available_files: mbox-short.txt
+                :available_files: mbox-short4.txt
 
-                hand = open('mbox-short.txt5')
+                hand = open('mbox-short4.txt')
                 ====
                 from unittest.gui import TestCaseGui
 
@@ -309,29 +341,38 @@ The last four questions are associated with the following text file.
         .. tab:: Answer
 
             .. activecode:: regex_writecode9a
-                :available_files: mbox-short.txt
+                :available_files: mbox-short4.txt
                 :optional:
 
-                First, import regex, create variable for number of emails, and create a handle to access the file.
+                First, import regex (re), create a variable for the total numberof emails, and create a handle to access the file.
                 Then, iterate through lines in the file, remove trailing whitespace with rstrip(), and create a
                 regex expression to use with findall() to return a list of email matches. Finally, increment the
                 total_emails variable for each email in the list and print the variable after each loop has completed.
                 ~~~~
                 import re
                 total_emails = 0
-                hand = open('mbox-short.txt5')
+                hand = open('mbox-short4.txt')
                 for line in hand:
                     line = line.rstrip()
                     x = re.findall('[a-zA-Z0-9]\S+@\S+[a-zA_Z]\s?(\d)', line)
                     for item in x:
                         total_emails += int(item)
                 print(total_emails)
+                ====
+                from unittest.gui import TestCaseGui
+
+                class MyTests(TestCaseGui):
+                    def testOne(self):
+                        self.assertEqual(total_emails, 27, "Testing that the average was calculated properly.")
+
+                MyTests().main()
+
 
 #.
     .. activecode:: regex_writecode10
-        :available_files: mbox-short.txt
+        :available_files: mbox-short4.txt
 
-        Using the same datafile, extract the usernames from each email address
+        Using "mbox-short4.txt", extract the usernames from each email address
         using regex and add them to the list "usernames". For the email noname@umich.edu,
         this would locate the string "noname".
         ~~~~
