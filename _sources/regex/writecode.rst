@@ -70,7 +70,7 @@ Write Code Questions
 #.
     .. activecode:: regex_writecode2
 
-        Complete the code below to check if a string begins with a word (at least one non space character). If it does,
+        Complete the code below to check if a string begins with a word (at least one word character). If it does,
         return "Found a match!", if not return "Not matched!" Replace the ### with your code.
         ~~~~
         import ###
@@ -88,7 +88,7 @@ Write Code Questions
             def testOne(self):
                 self.assertEqual(text_match("The quick fox jumps."), "Found a match!", 'text_match("The quick fox jumps.")')
                 self.assertEqual(text_match("   The quick fox jumps."), "Not matched!", 'text_match("   The quick fox jumps.")')
-                self.assertEqual(text_match("9 years ago"), "Not matched!", 'text_match("9 years ago")')
+                self.assertEqual(text_match("+ years ago"), "Not matched!", 'text_match("+ years ago")')
                 self.assertEqual(text_match("Nine years ago"), "Found a match!", 'text_match("Nine years ago")')
                 self.assertEqual(text_match("#run"), "Not matched!", 'text_match("#run")')
 
