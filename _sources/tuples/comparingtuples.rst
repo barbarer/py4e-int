@@ -8,11 +8,11 @@ Comparing Tuples
    single: Sort
    single: Undecorate
 
-The comparison operators work with tuples and other sequences. Python
+The comparison operators can be used with tuples and other sequences. Python
 starts by comparing the first element from each sequence. If they are
-equal, it goes on to the next element, and so on, until it finds
+equal, it compares the next element of each, and so on, until it finds
 elements that differ. Subsequent elements are not considered (even if
-they are really big).
+they're really big).
 
 .. code-block:: python
 
@@ -27,9 +27,9 @@ they are really big).
    :answer_b: False
    :answer_c: An error message will occur
    :correct: a
-   :feedback_a: Correct! The comparison operator will look up to the first pair of elements that differ from each other. In this case it is the first element, so all preceding elements are ignored.
-   :feedback_b: Try again!
-   :feedback_c: Try again!
+   :feedback_a: Correct! The comparison operator looks at the first pair of elements that differ from each other. In this case, it is the first elements, so all following elements are ignored.
+   :feedback_b: Incorrect! Remember, the comparison operator starts by comparing just the first element of the two tuples, and only moves on if they're equal. Try again.
+   :feedback_c: Incorrect! The comparison operator works fine with tuples. Try again.
 
    What is returned when the following code is run?
 
@@ -37,28 +37,27 @@ they are really big).
 
       (5, 7, 3) < (7, 4, 2)
 
-The ``sort`` function works the same way. It sorts primarily by
-first element, but in the case of a tie, it sorts by second element, and
+
+``sort()`` is a list method that can be helpful when managing a list of tuples. When sorting, it compares the
+first element of each tuple, but in the case of a tie, it compares their second elements, and
 so on.
 
-This feature lends itself to a pattern called *DSU* for:
+Combining these tools leads to a very common, and widely applicable sorting process called *DSU*.
+*DSU* is short for:
 
-Decorate
-:   a sequence by building a list of tuples with one or more sort keys preceding the elements from the sequence
+**Decorate** a sequence by building a list of tuples with one or more sort metrics preceding the elements from the sequence.
 
-Sort
-:   the list of tuples using the Python built-in ``sort``
+**Sort** the list of tuples using the Python built-in ``sort``.
 
-Undecorate
-:   by extracting the sorted elements of the sequence
+**Undecorate** by extracting the sorted elements of the sequence.
 
 .. dragndrop:: question10_2_2
-   :feedback: Look above for the definitions.
-   :match_1: Decorate|||A sequence by building a list of tuples with one or more sort keys preceding the elements from the sequence.
+   :feedback: Something's wrong! Look up for the definitions.
+   :match_1: Decorate|||A sequence by building a list of tuples with one or more sort metrics preceding the elements from the sequence.
    :match_2: Sort|||The list of tuples using the Python built-in sort.
    :match_3: Undecorate|||By extracting the sorted elements of the sequence.
 
-   Match the terms with their definitions.
+   Match the steps of DSU with their definitions.
 
 
 For example, suppose you have a list of words and you want to sort them
@@ -69,31 +68,31 @@ from longest to shortest:
 
    txt = 'but soft what light in yonder window breaks'
    words = txt.split()
-   t = []
+   tupleList = []
    for word in words:
-       t.append((len(word), word))
+       tupleList.append((len(word), word))
 
-   t.sort(reverse = True)
+   tupleList.sort(reverse = True)
 
-   res = []
-   for length, word in t:
-       res.append(word)
+   sortedWordsList = []
+   for length, word in tupleList:
+       sortedWordsList.append(word)
 
-   print(res)
+   print(sortedWordsList)
 
-The first loop builds a list of tuples, where each tuple is a word
+Let's walk through the *DSU* process:
+
+The first loop **decorates** by building a list of tuples, where each tuple is a word
 preceded by its length.
 
-``sort`` compares the first element, length, first, and only
-considers the second element to break ties. The keyword argument
+``sort`` **sorts** by comparing the first element of each tuple (length) first. It only
+considers the second element, alphabetical order, to break ties. The keyword argument
 ``reverse=True`` tells ``sort`` to go in decreasing
-order.
+order, meaning that longer words will be first in the sorted list and that if two words are 
+the same length, the one that comes last in alphabetical order will appear before the other.
 
+Finally, the second loop **undecorates** by traversing the list of tuples and adding the sorted words to a list.
 
-The second loop traverses the list of tuples and builds a list of words
-in descending order of length. The four-character words are sorted in
-*reverse* alphabetical order, so "what" appears before
-"soft" in the following list.
 
 The output of the program is as follows:
 
@@ -102,7 +101,7 @@ The output of the program is as follows:
    ['yonder', 'window', 'breaks', 'light', 'what', 'soft', 'but', 'in']
 
 
-Of course the line loses much of its poetic impact when turned into a
+Of course, the line loses much of its poetic impact when turned into a
 Python list and sorted in descending word length order.
 
 .. parsonsprob:: question10_2_3
@@ -110,22 +109,20 @@ Python list and sorted in descending word length order.
    :practice: T
    :adaptive:
 
-   Construct a block of code to create a list containing tuples of each word from word_list paired with their lengths. Then sort the words by length from highest to lowest.
+   Move the code blocks around to create a program that sorts the words in word_list by length from longest to shortest and adds them to sorted_word_list. Hint: remember DSU!
    -----
    word_list = ['pen', 'skyscraper', 'post', 'computer', 'apple', 'Hollywood']
-   =====
    tup_list = []
+   sorted_word_list = []
    =====
    for word in word_list:
    =====
-   for word in tup_list: #distractor
+      tup = len(word), word
    =====
-    tup = word, len(word)
+      tup_list.append(tup)
    =====
-    tup_list.append(tup)
+   tup_list.sort(reverse = True)
    =====
-    word_list.append(tup) #distractor
+   for length, word in tup_list:
    =====
-   tup_list.sort(key = lambda x: x[1], reverse = True)
-   =====
-   tup_list.sort(x[1], reverse = True) #distractor
+      sorted_word_list.append(word)
