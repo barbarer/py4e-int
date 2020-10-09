@@ -1,6 +1,8 @@
 Write Code Questions
 ----------------------
 
+Some of the questions use the following data file.
+
 .. datafile:: mbox-short4.txt
     :fromfile: mbox-short.txt
     :hide:

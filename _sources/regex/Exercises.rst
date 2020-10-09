@@ -72,7 +72,7 @@ Multiple Choice Questions
       hand = open('mbox-short.txt')
       for line in hand:
           line = line.rstrip()
-          if re.search('$.+', line):
+          if re.search('\$.+', line):
               print(line)
 
 
