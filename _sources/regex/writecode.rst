@@ -70,7 +70,7 @@ Write Code Questions
 #.
     .. activecode:: regex_writecode2
 
-        Complete the code below to check if a string begins with a word (at least one word character). If it does,
+        Complete the code below to check if a string begins with a word character. If it does,
         return "Found a match!", if not return "Not matched!" Replace the ### with your code.
         ~~~~
         import ###
@@ -100,8 +100,8 @@ Write Code Questions
 
         .. tab:: Question
 
-            Define the function "match_four" that uses regex to return True if a
-            string of numbers starts with 4 and False if it does not.
+            Define the function "match_four" that takes a string and uses regex to return True if the
+            string starts with 4 followed by zero to many other digits and False if it does not.
 
             .. activecode:: regex_writecode3q
 
@@ -129,7 +129,7 @@ Write Code Questions
                 ~~~~
                 import re
                 def match_four(string):
-                    pattern = "^4.*"
+                    pattern = "^4\d*"
                     if re.search(pattern,  string):
                         return True
                     else:
@@ -163,8 +163,8 @@ Write Code Questions
                 self.assertEqual(match_cat("Cat"), True, "Testing Cat.")
                 self.assertEqual(match_cat("CAT"), True, "Testing CAT.")
                 self.assertEqual(match_cat("dog"), False, "Testing dog.")
-                self.assertEqual(match_cat("caT"), False, "Testing caT.")
-                self.assertEqual(match_cat("Cats"), False, "Testing Cats.")
+                self.assertEqual(match_cat("caT"), True, "Testing caT.")
+                self.assertEqual(match_cat("Cats"), True, "Testing Cats.")
         MyTests().main()
 #.
     .. tabbed:: regex_writecode5
@@ -311,7 +311,7 @@ Write Code Questions
 
         class MyTests(TestCaseGui):
             def testOne(self):
-                self.assertEqual(domains, [['@gmail.com'], ['@media.berkeley.edu'], ['@iupui.edu'], ['@caret.cam.ac.uk'], ['@iupui.edu'], ['@umich.edu'], ['@uct.ac.za'], ['@iupui.edu'], ['@umich.edu'], ['@uct.ac.za'], ['@media.berkeley.edu']], "Testing that all domains were matched.")
+                self.assertEqual(domains, ['@gmail.com', '@media.berkeley.edu', '@iupui.edu', '@caret.cam.ac.uk', '@iupui.edu', '@umich.edu', '@uct.ac.za', '@iupui.edu', '@umich.edu', '@uct.ac.za', '@media.berkeley.edu'], "Testing that all domains were matched.")
         MyTests().main()
 
 #.
@@ -382,5 +382,5 @@ Write Code Questions
 
         class MyTests(TestCaseGui):
             def testOne(self):
-                self.assertEqual(usernames, [['gopal.ramasammycook'], ['louis'], ['cwen'], ['antranig'], ['rjlowe'], ['gsilver'], ['david.horwitz'], ['wagnermr'], ['zqian'], ['stephen.marquard'], ['ray']], "Testing that all usernames were matched.")
+                self.assertEqual(usernames, ['gopal.ramasammycook', 'louis', 'cwen', 'antranig', 'rjlowe', 'gsilver', 'david.horwitz', 'wagnermr', 'zqian', 'stephen.marquard', 'ray'], "Testing that all usernames were matched.")
         MyTests().main()
