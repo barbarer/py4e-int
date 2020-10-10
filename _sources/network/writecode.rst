@@ -8,7 +8,8 @@ Write Code Exercises
           .. activecode:: network_writecode1q
               :language: python3
 
-              Complete the following code that retrieves the file 'romeo.txt' from. Make changes to line 4 and 5.
+              Complete the following code that retrieves the file 'romeo.txt' from.
+              Make changes to line 4 and 5.
               ~~~~
               import socket
 
@@ -30,7 +31,8 @@ Write Code Exercises
           .. activecode:: network_writecode1a
               :language: python3
 
-              Complete the following code that retrieves the file 'romeo.txt' from. Make changes to line 4 and 5.
+              Complete the following code that retrieves the file 'romeo.txt' from.
+              Make changes to line 4 and 5.
               ~~~~
               import socket
 
@@ -49,12 +51,12 @@ Write Code Exercises
 
 
 
-.. activecode:: writingcode_question12_2
+.. activecode:: writingcode_network_2
         :language: python3
 
-        Complete the following code to extract an image 'cover3.jpg' from the URL 'http://data.pr4e.org/cover3.jpg' and host 'data.pr4e.org'. There are 5 empty spaces.
+        Complete the following code to extract an image 'cover3.jpg' from the URL
+        'http://data.pr4e.org/cover3.jpg' and host 'data.pr4e.org'. There are 5 empty spaces.
         ~~~~
-
         import socket
 
         HOST = '________'
@@ -80,16 +82,17 @@ Write Code Exercises
         fhand.write(picture)
         fhand.close()
 
-.. tabbed:: writecode_question12_3
+.. tabbed:: writecode_network_3
 
     .. tab:: Question
 
-        .. activecode:: writingcode_question12_3
+        .. activecode:: writingcode_network_3
                 :language: python3
 
-                Complete the following code that retrieves the text from 'http://data.pr4e.org/clown.txt', prints it and also prints the frequency of each word.
+                Complete the following code that retrieves the text from
+                'http://data.pr4e.org/clown.txt', prints it and also prints the
+                frequency of each word.
                 ~~~~
-
                 import urllib.request
 
                 fhand = urllib.request.urlopen('_________________')
@@ -97,12 +100,12 @@ Write Code Exercises
 
     .. tab:: Answer
 
-        .. activecode:: writtencode_question12_3
+        .. activecode:: writtencode_network_3
                 :language: python3
 
-                Complete the following code that retrieves the text from 'http://data.pr4e.org/clown.txt' and prints the frequency of each word.
+                Complete the following code that retrieves the text from
+                'http://data.pr4e.org/clown.txt' and prints the frequency of each word.
                 ~~~~
-
                 import urllib.request
 
                 fhand = urllib.request.urlopen('http://data.pr4e.org/clown.txt')
@@ -113,34 +116,34 @@ Write Code Exercises
                         counts[word] = counts.get(word, 0) + 1
                 print(counts)
 
-.. activecode:: writingcode_question12_4
+.. activecode:: writingcode_network_4
         :language: python3
 
-        Write a program to retrieve and print text from 'http://data.pr4e.org/intro-short.txt" and print it.
+        Write a program to retrieve and print text from 'http://data.pr4e.org/intro-short.txt"
+        and print it.
         ~~~~
-
         import urllib.request
 
-.. tabbed:: writecode_question12_5
+.. tabbed:: writecode_network_5
 
     .. tab:: Question
 
-        .. activecode:: writingcode_question12_5
+        .. activecode:: writingcode_network_5
                 :language: python3
 
-                Write a program to store image file from 'http://data.pr4e.org/cover.jpg'to your disk.
+                Write a program to store image file from 'http://data.pr4e.org/cover.jpg'
+                to your disk.
                 ~~~~
-
                 import urllib.request, urllib.parse, urllib.error
 
     .. tab:: Answer
 
-        .. activecode:: writtencode_question12_5
+        .. activecode:: writtencode_network_5
                 :language: python3
 
-                Write a program to store image file from 'http://data.pr4e.org/cover.jpg'to your disk.
+                Write a program to store image file from 'http://data.pr4e.org/cover.jpg'
+                to your disk.
                 ~~~~
-
                 import urllib.request, urllib.parse, urllib.error
 
                 img = urllib.request.urlopen('http://data.pr4e.org/cover.jpg').read()
@@ -148,12 +151,11 @@ Write Code Exercises
                 fhand.write(img)
                 fhand.close()
 
-.. activecode:: writingcode_question12_6
+.. activecode:: writingcode_network_6
         :language: python3
 
         Complete the following program to extract all url from the webpage using regex.
         ~~~~
-
         import urllib.request, urllib.parse, urllib.error
         import re
 
@@ -162,16 +164,18 @@ Write Code Exercises
         links = _______(b'href="(http[s]?://.*?)"', html)
 
 
-.. tabbed:: writecode_question12_7
+.. tabbed:: writecode_network_7
 
     .. tab:: Question
 
-        .. activecode:: writingcode_question12_7
+        .. activecode:: writingcode_network_7
                 :language: python3
 
-                Write a program that retrives a txt file from 'https://www.gutenberg.org/files/1342/1342-0.txt' in several blocks of 100,000 characters, joins them and saves as 'prideandprejudice.txt' to disk and prints number of characters.
+                Write a program that retrives a txt file from
+                'https://www.gutenberg.org/files/1342/1342-0.txt' in several blocks
+                of 100,000 characters, joins them and saves as 'prideandprejudice.txt'
+                to disk and prints number of characters.
                 ~~~~
-
                 import urllib.request, urllib.parse, urllib.error
 
                 txt = urllib.request.urlopen('___________________')
@@ -184,12 +188,12 @@ Write Code Exercises
 
     .. tab:: Answer
 
-        .. activecode:: writtencode_question12_7
+        .. activecode:: writtencode_network_7
                 :language: python3
 
-                Write a program that retrives a txt file from 'https://www.gutenberg.org/files/1342/1342-0.txt' in several blocks of 100,000 characters, joins them and saves as 'prideandprejudice.txt' to disk and prints number of characters.
+                Write a program that retrives a txt file from
+                'https://www.gutenberg.org/files/1342/1342-0.txt' in several blocks of 100,000 characters, joins them and saves as 'prideandprejudice.txt' to disk and prints number of characters.
                 ~~~~
-
                 import urllib.request, urllib.parse, urllib.error
 
                 txt = urllib.request.urlopen('https://www.gutenberg.org/files/1342/1342-0.txt')
@@ -204,24 +208,26 @@ Write Code Exercises
                 print(size, 'characters copied.')
                 fhand.close()
 
-.. activecode:: writingcode_question12_8
+.. activecode:: writingcode_network_8
         :language: python3
 
-        Write a program that retrives a txt file from 'https://www.gutenberg.org/files/16/16-0.txt' in several blocks of 100,000 characters, joins them and saves as 'peterpan.txt' to disk and prints number of characters.
+        Write a program that retrives a txt file from
+        'https://www.gutenberg.org/files/16/16-0.txt' in several blocks of 100,000
+        characters, joins them and saves as 'peterpan.txt' to disk and prints number
+        of characters.
         ~~~~
-
         import urllib.request, urllib.parse, urllib.error
 
-.. tabbed:: writecode_question12_9
+.. tabbed:: writecode_network_9
 
     .. tab:: Question
 
-        .. activecode:: writingcode_question12_9
+        .. activecode:: writingcode_network_9
                 :language: python3
 
-                Complete the following code to print all the image sources from the webpage. Use 'img' and 'src' as tags.
+                Complete the following code to print all the image sources from
+                the webpage. Use 'img' and 'src' as tags.
                 ~~~~
-
                 import urllib.request
                 from bs4 import BeautifulSoup
 
@@ -231,12 +237,11 @@ Write Code Exercises
 
     .. tab:: Answer
 
-        .. activecode:: writtencode_question12_9
+        .. activecode:: writtencode_network_9
                 :language: python3
 
                 Complete the following code to print all the image sources from the webpage. Use 'img' and 'src' as tags.
                 ~~~~
-
                 import urllib.request
                 from bs4 import BeautifulSoup
 
@@ -249,12 +254,12 @@ Write Code Exercises
                     print(tag.get('src', None))
 
 
-.. activecode:: writingcode_question12_10
+.. activecode:: writingcode_network_10
         :language: python3
 
-        Write a code that extracts data from several parts of the 'a' tag from "http://www.dr-chuck.com/page1.htm" using BeautifulSoup and html.parser and
-        print the tag, href, contents as well as all the attrs.
+        Write code that extracts data from several parts of the 'a' tag from
+        "http://www.dr-chuck.com/page1.htm" using BeautifulSoup and html.parser and
+        print the tag, href, contents as well as all the attributes.
         ~~~~
-
         import urllib.request
         from bs4 import BeautifulSoup
