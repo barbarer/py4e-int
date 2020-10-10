@@ -1,10 +1,12 @@
 Parsing HTML using BeautifulSoup
 --------------------------------
 
-Even though HTML looks like XML^[The XML format is described in the next chapter.]
-and some pages are carefully
+Even though HTML looks like XML and some pages are carefully
 constructed to be XML, most HTML is generally broken in ways that cause
 an XML parser to reject the entire page of HTML as improperly formed.
+
+.. note::
+    The XML format is described in the next chapter.
 
 There are a number of Python libraries which can help you parse HTML and
 extract data from the pages. Each of the libraries has its strengths and
@@ -24,28 +26,28 @@ https://packaging.python.org/tutorials/installing-packages/
 
 We will use ``urllib`` to read the page and then use
 ``BeautifulSoup`` to extract the ``href`` attributes
-from the anchor (\ ``a``\ ) tags.
+from the anchor (``a``) tags.
 
 .. activecode:: urllinks
-      :language: python3
+    :language: python3
 
-      import urllib.request, urllib.parse, urllib.error
-      from bs4 import BeautifulSoup
-      import ssl
+    import urllib.request, urllib.parse, urllib.error
+    from bs4 import BeautifulSoup
+    import ssl
 
-      # Ignore SSL certificate errors
-      ctx = ssl.create_default_context()
-      ctx.check_hostname = False
-      ctx.verify_mode = ssl.CERT_NONE
+    # Ignore SSL certificate errors
+    ctx = ssl.create_default_context()
+    ctx.check_hostname = False
+    ctx.verify_mode = ssl.CERT_NONE
 
-      url = "https://docs.python.org"
-      html = urllib.request.urlopen(url, context=ctx).read()
-      soup = BeautifulSoup(html, 'html.parser')
+    url = "https://docs.python.org"
+    html = urllib.request.urlopen(url, context=ctx).read()
+    soup = BeautifulSoup(html, 'html.parser')
 
-      # Retrieve all of the anchor tags
-      tags = soup('a')
-      for tag in tags:
-         print(tag.get('href', None))
+    # Retrieve all of the anchor tags
+    tags = soup('a')
+    for tag in tags:
+       print(tag.get('href', None))
 
 
 The program prompts for a web address, then opens the web page, reads
@@ -61,30 +63,29 @@ requirement in our regular expression.
 You can use also BeautifulSoup to pull out various parts of each tag:
 
 .. activecode:: urllink2
-      :language: python3
+    :language: python3
 
-      from urllib.request import urlopen
-      from bs4 import BeautifulSoup
-      import ssl
+    from urllib.request import urlopen
+    from bs4 import BeautifulSoup
+    import ssl
 
-      # Ignore SSL certificate errors
-      ctx = ssl.create_default_context()
-      ctx.check_hostname = False
-      ctx.verify_mode = ssl.CERT_NONE
+    # Ignore SSL certificate errors
+    ctx = ssl.create_default_context()
+    ctx.check_hostname = False
+    ctx.verify_mode = ssl.CERT_NONE
 
-      url = "http://www.dr-chuck.com/page1.htm"
-      html = urlopen(url, context=ctx).read()
-      soup = BeautifulSoup(html, "html.parser")
+    url = "http://www.dr-chuck.com/page1.htm"
+    html = urlopen(url, context=ctx).read()
+    soup = BeautifulSoup(html, "html.parser")
 
-      # Retrieve all of the anchor tags
-      tags = soup('a')
-      for tag in tags:
-         # Look at the parts of a tag
-         print('TAG:', tag)
-         print('URL:', tag.get('href', None))
-         print('Contents:', tag.contents[0])
-         print('Attrs:', tag.attrs)
-
+    # Retrieve all of the anchor tags
+    tags = soup('a')
+    for tag in tags:
+        # Look at the parts of a tag
+        print('TAG:', tag)
+        print('URL:', tag.get('href', None))
+        print('Contents:', tag.contents[0])
+        print('Attrs:', tag.attrs)
 
 ``html.parser`` is the HTML parser included in the standard Python 3 library.
 Information on other HTML parsers is available at:

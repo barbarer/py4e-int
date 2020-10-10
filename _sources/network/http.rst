@@ -40,7 +40,7 @@ making sure not to step on each other's toes.
   what they are to do, and then what the responses are to that message, and
   who sends next, and so on.
 
-  - :[Pp]rotocol: Correct!
+  - :[Pp]rotocol: A protocol is a set of rules that determines order and responses. 
     :.*: Try again!
 
 There are many documents that describe these network protocols. The
