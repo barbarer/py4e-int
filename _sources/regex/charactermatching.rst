@@ -55,12 +55,12 @@ We can further narrow down the lines that we match using a repeated
 *wild card* character in the following example:
 
 .. activecode:: re_char_ac2
-    :available_files: mbox-short-re.txt
+    :available_files: mbox-short-re2.txt
 
     This code searches for lines that start with 'From:' and have an '@' symbol.
     ~~~~
     import re
-    hand = open('mbox-short-re.txt')
+    hand = open('mbox-short-re2.txt')
     for line in hand:
         line = line.rstrip()
         if re.search('^From:.+@', line):
@@ -100,7 +100,7 @@ characters between the colon character and the at-sign.
     .. code-block:: python
 
         import re
-        hand = open('mbox-short.txt')
+        hand = open('mbox-short-re2.txt')
         for line in hand:
             line = line.rstrip()
             if re.search('\$.+', line):
@@ -126,7 +126,7 @@ on turning off the greedy behavior.
     :correct: c
     :feedback_a: '^From:.+@' will match this.
     :feedback_b: Remember the + and * characters in regex are pushy!
-    :feedback_c: Correct! The + and * characters are pushy, so this will capture the entire statement and not just to the first @ sign.
+    :feedback_c: Correct! The + and * characters are greedy, so this will capture the entire statement and not just to the first @ sign.
     :feedback_d: It stops at the last @
 
     Looking at the code-block below, what parts of it will be matched by the regex equation ``re.search('From:.+@')``?

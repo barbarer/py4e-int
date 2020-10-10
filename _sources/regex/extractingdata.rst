@@ -29,6 +29,8 @@ and extract one or more addresses from each of those lines.
 .. activecode:: extractingdata_exercise_1
    :nocodelens:
 
+   Use findall to find the lines with email addresses in them and print them.
+   ~~~~
    import re
    s = 'A message from csev@umich.edu to cwen@iupui.edu about meeting @2PM'
    lst = re.findall('\S+@\S+', s)
@@ -39,7 +41,7 @@ argument and returns a list of all of the strings that look like email
 addresses. We are using a two-character sequence that matches a
 non-whitespace character (\ ``\S``\ ).
 
-The output of the program would be:
+The output of the program is:
 
 .. code-block::
 

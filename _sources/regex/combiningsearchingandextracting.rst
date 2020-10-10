@@ -30,7 +30,7 @@ We can construct the following regular expression to select the lines:
     :feedback_a: This regex equation will not match "Accurate" at the end, it is looking for numbers.
     :feedback_b: This matches the given regex equation.
     :feedback_c: This line matches with the given regex equation.
-    :feedback_d: This equation will not match the decimal number at the end of the phrase.
+    :feedback_d: This equation will not match the "-" after the X.
 
     Which of the following options will the regular expression ``^X-.*: [0-9.]+`` match with? Select all that apply.
 
@@ -153,9 +153,9 @@ encounters a non-digit, or the beginning or the end of a line.
     :feedback_a: + is greedy so it will match as many 'a's as it can.
     :feedback_b: + is greedy in regex and will obtain the most 'a's as possible.
     :feedback_c: + is greedy so it will match as many 'a's as it can.
-    :feedback_d: + is a symbol used to select one or more of the previous element, it will not match a '+' in a string, unless it is used with a forward slash '\+'
+    :feedback_d: findall would only return the 'a'
 
-    Which of these options will the regex equation 'a+' match? Select all that apply. 
+    Which of these strings would be returned by re.findall('a+', string)? Select all that apply.
 
 
 Now we can use regular expressions to redo an exercise from earlier in
