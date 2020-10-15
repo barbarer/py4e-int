@@ -47,7 +47,7 @@ Combining these tools leads to a very common, and widely applicable sorting proc
 
 **Decorate** a sequence by building a list of tuples with one or more sort metrics preceding the elements from the sequence.
 
-**Sort** the list of tuples using the Python built-in ``sort``.
+**Sort** the list of tuples using Python's built-in ``sort`` method.
 
 **Undecorate** by extracting the sorted elements of the sequence.
 
@@ -122,6 +122,8 @@ Python list and sorted in descending word length order.
       tup_list.append(tup)
    =====
    tup_list.sort(reverse = True)
+   =====
+   tup_list.sort() #paired
    =====
    for length, word in tup_list:
    =====
