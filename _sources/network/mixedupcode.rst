@@ -24,8 +24,8 @@ Mixed-Up Code Exercises
     :practice: T
     :adaptive:
 
-    Write a program to retrive a file from 'http://data.pr4e.org/clown.txt' and
-    save it to disk using urllib.
+    Write a program to retrieve a file from 'http://data.pr4e.org/clown.txt' using urllib and
+    then write it to your local computer as 'clown.txt'.
     -----
     import urllib.request, urllib.parse, urllib.error
     =====
@@ -42,14 +42,14 @@ Mixed-Up Code Exercises
     :practice: T
     :adaptive:
 
-    Write a program that retrieves a file from 'http://data.pr4e.org/romeo.txt',
-    saves it to disk first and then displays word count using urllib.
+    Write a program that retrieves a file from 'http://data.pr4e.org/romeo.txt' using urllib and
+    then write it to your local computer, close the file, and display the word count.
     -----
     import urllib.request
     =====
-    text = urllib.Requests('http://data.pr4e.org/romeo.txt') #distractor
-    =====
     text = urllib.request.urlopen('http://data.pr4e.org/romeo.txt')
+    =====
+    text = urllib.Requests('http://data.pr4e.org/romeo.txt') #distractor
     =====
     fhand = open('romeo.txt', wb)
     =====
@@ -73,7 +73,7 @@ Mixed-Up Code Exercises
     :adaptive:
 
     Write a program that retrieves an image file from 'http://data.pr4e.org/cover3.jpg'
-    using urllib and save it to disk.
+    using urllib and then save it to your local computer.
     -----
     import urllib.request, urllib.parse, urllib.error
     =====
@@ -91,7 +91,7 @@ Mixed-Up Code Exercises
     :adaptive:
 
     Write a program that retrieves a text file from 'http://data.pr4e.org/romeo-full.txt'
-    using urllib as several blocks of 100,000 characters, saves it to disk and prints the
+    using urllib in blocks of 100,000 characters, then save the file to the local computer, and print the
     number of characters.
     -----
     import urllib.request, urllib.parse, urllib.error

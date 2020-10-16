@@ -47,7 +47,7 @@ from the anchor (``a``) tags.
     # Retrieve all of the anchor tags
     tags = soup('a')
     for tag in tags:
-       print(tag.get('href', None))
+        print(tag.get('href', None))
 
 
 The program prompts for a web address, then opens the web page, reads

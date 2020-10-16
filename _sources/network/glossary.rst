@@ -32,10 +32,10 @@ Glossary
 .. dragndrop:: networks_glossary
     :feedback: Look above for the definitions.
     :match_1: BeautifulSoup|||A Python library for parsing and extracting data from HTML documents.
-    :match_2: port|||A number that indicating which application you are contacting when you make a connection to a server.
+    :match_2: port|||A number that indicates which application you are contacting when you make a connection to a server.
     :match_3: scrape|||When a program pretends to be a web browser and retrieves a web page, then looks at the web page content.
     :match_4: socket|||A network connection between two applications where the applications can send and receive data in either direction.
     :match_5: spider|||The act of a web search engine retrieving a page and then all the pages linked from a page and so on until they have
               nearly all of the pages on the Internet which they use to build their search index.
 
-    Match each term with its definition. 
+    Match each term with its definition.
