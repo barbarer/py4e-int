@@ -13,6 +13,8 @@ Network Programming
     parsinghtmlandscrapingtheweb.rst
     parsinghtmlusingregex.rst
     parsinghtmlusingbeautifulsoup.rst
+    html.rst
+    beautifulSoup.rst
     bonusforunixlinux.rst
     glossary.rst
     Exercises.rst
