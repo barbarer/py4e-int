@@ -39,7 +39,7 @@ analysis.
 
 
 The fact that this complex data parsing and analysis can be done with an
-easy-to-understand 15-line Python program is one reason why Python is a
+easy-to-understand 13-line Python program is one reason why Python is a
 good choice as a language for exploring information.
 
 .. mchoice:: question10_6_1
@@ -97,11 +97,7 @@ good choice as a language for exploring information.
    =====
      for word in lines: #paired
    =====
-      if word not in word_counter.keys():
-   =====
-       word_counter[word] = 0
-   =====
-      word_counter[word] += 1
+      word_counter[word] = word_counter.get(word, 0) + 1
    =====
     for key, value in word_counter.items():
    =====
@@ -115,6 +111,6 @@ good choice as a language for exploring information.
    =====
     sliced_list = list_of_tuples[:10]
    =====
-    for value, key in sliced_list:
+    for key, value in sliced_list:
    =====
      print(value, key)

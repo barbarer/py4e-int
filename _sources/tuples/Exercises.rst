@@ -8,9 +8,9 @@ Multiple Choice Questions
    :answer_c: aTuple[1:2](1)
    :answer_d: aTuple[1][1]
    :correct: d
-   :feedback_a: Try again!
-   :feedback_b: Try again!
-   :feedback_c: Try again!
+   :feedback_a: Incorrect! Running this code would result in an error. Try again.
+   :feedback_b: Incorrect! This would access the value 15. Try again.
+   :feedback_c: Incorrect! Running this code would result in an error. Try again.
    :feedback_d: Correct! This first goes to the second item in the tuple, then grabs the second item from the list, which is 20.
 
    Choose the correct way to access the value 20 from the following tuple.
@@ -25,7 +25,7 @@ Multiple Choice Questions
    :answer_b: False
    :correct: a
    :feedback_a: Correct! You can create tuples using tuple packing which requires no parentheses.
-   :feedback_b: Try again!
+   :feedback_b: Incorrect! Parentheses are not always necessary. Try again.
 
    True or False? A python tuple can be created without using any parentheses.
 
@@ -37,9 +37,9 @@ Multiple Choice Questions
    :answer_c: array
    :answer_d: str
    :correct: d
-   :feedback_a: Try again!
-   :feedback_b: Try again!
-   :feedback_c: Try again!
+   :feedback_a: Incorrect! A list would use []. Try again.
+   :feedback_b: Incorrect! To create a tuple with a single item, there must be a comma after the first item. Try again.
+   :feedback_c: Incorrect! Arrays do not exist in Python. Try again.
    :feedback_d: Correct! To create a tuple with a single item, there must be a comma after the first item.
 
    What is the type of the following variable?
@@ -56,10 +56,10 @@ Multiple Choice Questions
    :answer_c: 20
    :answer_d: Red
    :correct: b
-   :feedback_a: Try again!
-   :feedback_b: Correct! The tuple packing makes the first value of the tuple equal to a.
-   :feedback_c: Try again!
-   :feedback_d: Try again!
+   :feedback_a: Incorrect! Hint: think about how tuple assignment works. Try again.
+   :feedback_b: Correct! Tuple assignment makes the first value of the tuple equal to a.
+   :feedback_c: Incorrect! Hint: think about how tuple assignment works. Try again.
+   :feedback_d: Incorrect! Hint: think about how tuple assignment works. Try again.
 
    What is the output of the following code?
 
@@ -77,9 +77,9 @@ Multiple Choice Questions
    :answer_d: (100, 200, 800, 300, 400, 500)
    :correct: a
    :feedback_a: Correct! A tuple is immutable, therefore you cannot change its values.
-   :feedback_b: Try again!
-   :feedback_c: Try again!
-   :feedback_d: Try again!
+   :feedback_b: Incorrect! Remember, tuples are immutable. Try again.
+   :feedback_c: Incorrect! Remember, tuples are immutable. Try again.
+   :feedback_d: Incorrect! Remember, tuples are immutable. Try again.
 
    What is printed when the following code is run?
 
@@ -96,9 +96,9 @@ Multiple Choice Questions
    :answer_c: i, iv
    :answer_d: i, iii
    :correct: d
-   :feedback_a: Try again!
-   :feedback_b: Try again!
-   :feedback_c: Try again!
+   :feedback_a: Incorrect! ii will cause an error because the highest index in tupl1 is 4. Try again.
+   :feedback_b: Incorrect! ii will cause an error because the highest index in tupl1 is 4. Try again.
+   :feedback_c: Incorrect! i will output all items besides the last, whereas iv will output all items besides the first. Try again.
    :feedback_d: Correct! These two options will both output all the items in the tuple except for the last one.
 
    Which of the following two Python codes will produce the same output?
@@ -117,7 +117,7 @@ Multiple Choice Questions
    :answer_a: True
    :answer_b: False
    :correct: a
-   :feedback_a: Try again!
+   :feedback_a: Incorrect! When the first numbers in both tuples are equal, the comparison operator will move on to the next pair of numbers. Try again.
    :feedback_b: Correct! The compiler will look at the first pair of different numbers, then decide whether it is true or false depending on that pair.
 
    What is returned when the following code is run?
@@ -133,9 +133,9 @@ Multiple Choice Questions
    :answer_c: (2, 3, 4)
    :answer_d: (2, 3)
    :correct: d
-   :feedback_a: Try again!
-   :feedback_b: Try again!
-   :feedback_c: Try again!
+   :feedback_a: Incorrect! Tuple slicing does exist. Try again.
+   :feedback_b: Incorrect! The output will be in the form of a tuple. Try again.
+   :feedback_c: Incorrect! The value of -1 means to stop after the second to last item. Try again.
    :feedback_d: Correct! This tuple slicing grabs the second item all the way to the second to last item.
 
    What is the value of a[1:-1] if it exists?
@@ -151,8 +151,8 @@ Multiple Choice Questions
    :answer_b: TypeError
    :answer_c: Shape Error
    :correct: c
-   :feedback_a: Try again!
-   :feedback_b: Try again!
+   :feedback_a: Incorrect! A KeyError is raised when you try to access a dictionary with a key that doesn't yet exist. Try again.
+   :feedback_b: Incorrect! A TypeError is raised when you attempt to call a function or use an operator on something of the incorrect type. Try again.
    :feedback_c: Correct! Shape errors are more likely to occur when working with compound data structures.
 
    What is the name of an error caused when a data structure has the wrong type, size, or composition?
@@ -164,8 +164,8 @@ Multiple Choice Questions
    :answer_b: ['have', 'fun']
    :answer_c: fun
    :correct: c
-   :feedback_a: Try again!
-   :feedback_b: Try again!
+   :feedback_a: Incorrect! This would be printed if in line 3 we called print(x) instead. Try again.
+   :feedback_b: Incorrect! Hint: think about how tuple assignment works and apply that knowledge to lists. Try again.
    :feedback_c: Correct! y is associated with the last value of tuple m.
 
    What is printed when the following code is written?
