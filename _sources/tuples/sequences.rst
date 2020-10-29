@@ -18,7 +18,7 @@ over the others?
 
 
 To start with the obvious, strings are more limited than other sequences
-because the elements have to be characters. They are also immutable. If
+because the elements have to be characters. They are also (with the exception of lists) immutable. If
 you need the ability to change the characters in a string (as opposed to
 creating a new string), you might want to use a list of characters
 instead.
@@ -37,7 +37,7 @@ If you are passing a sequence as an argument to a function, using tuples reduces
    When using a sequence as a dictionary key, it is best to use a ______ because it is immutable.
 
    - :[Tt]uple: Correct! A tuple is perfect for this scenario. One could also use a string.
-     :.*: Try again!
+     :.*: Incorrect! Hint: what is this chapter about? Try again.
 
 Because tuples are immutable, they don't provide methods like
 ``sort`` and ``reverse``\ , which modify existing lists.
@@ -52,24 +52,22 @@ a new sequence with the same elements in a different order.
    :answer_c: Lists
    :answer_d: Dictionaries
    :correct: c, d
-   :feedback_a: Try again!
-   :feedback_b: Try again!
-   :feedback_c: Correct! Lists are mutable, meaning you can do more with them which is why they are more appealing to use.
-   :feedback_d: Correct! Dictionaries are also mutable, making them easier to use than immutable objects.
+   :feedback_a: Incorrect! Tuples are immutable (there was even a whole section of this chapter titled that!). Try again.
+   :feedback_b: Incorrect! Strings are immutable. Try again.
+   :feedback_c: Correct! Lists are mutable, which makes them easier to use than immutable objects.
+   :feedback_d: Correct! Dictionaries are also mutable.
 
    Which of the following objects are mutable? Select all that apply.
 
 .. mchoice:: question10_8_3
    :practice: T
-   :answer_a: iterable
+   :answer_a: iterable (i.e. the sequence that will be sorted)
    :answer_b: key
-   :answer_c: lambda
-   :answer_d: reverse
-   :correct: b, d
-   :feedback_a: Try again! The iterable is necessary to use sorted(). It is not optional.
+   :answer_c: reverse
+   :correct: b, c
+   :feedback_a: Incorrect! The iterable is necessary to use sorted(). Try again.
    :feedback_b: Correct! The key can be used to sort the iterable in a specific manner, but is not required to use this function.
-   :feedback_c: Try again!
-   :feedback_d: Correct! Reverse is an optional parameter that, when set true, will sort the iterable in reverse (descending) order.
+   :feedback_c: Correct! Reverse is an optional parameter that, when set true, will sort the iterable in reverse (descending) order.
 
 
-   Which of the following are the optional parameters for the sorted() function?
+   The following are the parameters for the sorted() function. Which are optional?

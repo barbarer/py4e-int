@@ -42,8 +42,8 @@ assignment statement as follows:
    :answer_c: Strings
    :answer_d: Integers
    :answer_e: Lists
-   :correct: a, b, c, d
-   :feedback_a: Correct! Dictionaries can be the keys of other dictionaries.
+   :correct: b, c, d
+   :feedback_a: Incorrect! Dictionaries cannot be the keys of other dictionaries. Try again.
    :feedback_b: Correct! It is fine to use tuples as keys in a dictionary.
    :feedback_c: Correct! Strings are used as keys of dictionaries all the time!
    :feedback_d: Correct! Integers are perfectly acceptable to be keys of dictionaries.
