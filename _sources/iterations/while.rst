@@ -40,10 +40,10 @@ to 0, exit the ``while`` statement and display the word ``Blastoff!``
     :answer_c: The program compiles and prints "1 2 3 4 5 Blastoff!" where each space is a new line.
     :answer_d: The program compiles and prints "5 4 3 2 1 Blastoff!" where each space is a new line.
     :correct: b
-    :feedback_a: The program doesn't print anything, but has more than 5 iterations.
-    :feedback_b: Because the loop is incrementing, rather than decrementing, n will always be greater than 0 and the loop will never end.
-    :feedback_c: The program will compile, but will not start with 1 and will print a lot more than that.
-    :feedback_d: The program will compile, but will print a lot more than "5 4 3 2 1 Blastoff!"
+    :feedback_a: Incorrect! The program both prints things and has more than five iterations. Try again.
+    :feedback_b: Correct! Because the loop is incrementing, rather than decrementing, n will always be greater than 0 and the loop will never end.
+    :feedback_c: Incorrect! The program will compile, but will not start with 1 and won't ever reach "Blastoff!". Try again.
+    :feedback_d: Incorrect! The program will compile, but it won't ever reach "Blastoff!". Try again.
 
     Consider the code block below. What happens when you run this program?
 
@@ -79,7 +79,7 @@ executed five times.
     We call each time we execute the body of the loop an ________.
 
     - :[Ii]teration: Each time we execute the body of a loop, we are completing an iteration.
-      :.*: Try again!
+      :.*: Incorrect! Read the text above this to find the answer. Try again!
 
 The body of the loop should change the value of one or more variables so
 that eventually the condition becomes false and the loop terminates. We
@@ -95,10 +95,10 @@ is no iteration variable, the loop will repeat forever, resulting in an
     :answer_c: x = 4; y = 3
     :answer_d: x = 4; y = 2
     :correct: c
-    :feedback_a: The values of x and y will change.
-    :feedback_b: The conditions of the while loop will not allow this combination to occur.
-    :feedback_c: The loop will terminate at x = 4 and y = 3 because at this point, x is not less than y.
-    :feedback_d: This loop will terminate before x = 4 and y = 2 because x has already been greater than y.
+    :feedback_a: Incorrect! These were the values of x and y at first, but they changed by the time the loop finished executing. Try again.
+    :feedback_b: Incorrect! The while loop will finish executing before x and y reach these values. Try again.
+    :feedback_c: Correct! The loop will terminate at x = 4 and y = 3 because at this point, x is not less than y.
+    :feedback_d: Incorrect! The way the loop modifies x and y, it is impossible for y to be 2 while x is 4. Try again.
 
     Consider the code block below. What are the values of x and y when this while loop finishes executing?
 
