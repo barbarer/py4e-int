@@ -1,6 +1,6 @@
 Write Code Questions
 --------------------
-The following data file is used in some of the questions in this section. The data
+The following data file ``uspoll.txt`` is used in some of the questions in this section. The data
 is ordered City/State, annual mean amounts of particulate pollution that’s 10
 micrometers in diameter (PM 10), and annual mean amounts of particulate pollution
 that’s 2.5 micrometers in diameter (PM 2.5) Click show to see all of the data
@@ -393,6 +393,10 @@ and hide to put it away.
        Yuma, AZ :14 :9
        </pre>
 
+.. datafile:: uspoll.txt
+    :fromfile: uspoll.txt
+    :hide:
+
 #.
     .. tabbed:: file_ex_pollError
 
@@ -403,7 +407,7 @@ and hide to put it away.
 
             .. activecode:: file_ex_pollErrorq
                 :nocodelens:
-                :available_files: uspoll.txt
+                :datafile: uspoll.txt
 
                 inFile = open("uspoll.txt","r)
 
@@ -418,13 +422,13 @@ and hide to put it away.
 
         .. tab:: Answer
 
-            It was missing a close double quote after the r on line 1.  It was missing a colon 
+            It was missing a close double quote after the r on line 1.  It was missing a colon
             at the end of line 3.  It was missing a comma or plus sign between the values on line 7.
 
             .. activecode:: file_ex_pollErrora
                 :nocodelens:
                 :optional:
-                :available_files: uspoll.txt
+                :datafile: uspoll.txt
 
                 # Close quotations around "r"
                 inFile = open("uspoll.txt","r")
@@ -443,7 +447,7 @@ and hide to put it away.
 #.
     .. activecode::  file_ex_pmErrorq
         :nocodelens:
-        :available_files: uspoll.txt
+        :datafile: uspoll.txt
 
         Fix the errors in the code below so that it prints the average PM values
         of only the cities that start with "A".
@@ -474,7 +478,7 @@ and hide to put it away.
 
             .. activecode::  file_ex_AorBq
                 :nocodelens:
-                :available_files: uspoll.txt
+                :datafile: uspoll.txt
 
                 inFile = open("uspoll.txt","r")
                 lines = inFile.readlines()
@@ -487,7 +491,7 @@ and hide to put it away.
 
             .. activecode:: file_ex_AorBa
                 :nocodelens:
-                :available_files: uspoll.txt
+                :datafile: uspoll.txt
                 :optional:
 
                 # Read all the lines
@@ -506,7 +510,7 @@ and hide to put it away.
 #.
     .. activecode:: file_ex_valueCity
         :nocodelens:
-        :available_files: uspoll.txt
+        :datafile: uspoll.txt
 
         Fix the indention below for the code to correctly find and print the lowest 2.5 value and city.
         ~~~~
@@ -781,6 +785,10 @@ Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Lo
       3-Jan-89,2168.39,2350.18,2127.14,2342.32
       </pre>
 
+.. datafile:: stocks.txt
+    :fromfile: stocks.txt
+    :hide:
+
 #.
     .. tabbed:: file_ex_biggestLoss
 
@@ -791,7 +799,7 @@ Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Lo
 
           .. activecode::  file_ex_biggestLossq
               :nocodelens:
-              :available_files: stocks.txt
+              :datafile: stocks.txt
 
               def biggestLoss(file):
                   maxLoss = 0
@@ -812,6 +820,7 @@ Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Lo
       .. tab:: Answer
 
           .. activecode:: file_ex_biggestLossA
+              :datafile: stocks.txt
               :optional:
 
               def biggestLoss(file):
@@ -838,7 +847,7 @@ Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Lo
 #.
     .. activecode:: file_ex_300
         :nocodelens:
-        :available_files: stocks.txt
+        :datafile: stocks.txt
 
         Fix the errors below so that the procedure prints all the dates where the Dow
         Jones gained more than 300 points from open to close.
@@ -864,6 +873,7 @@ Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Lo
             so that it prints the date and low price for all the dates that occur in June.
 
             .. activecode::  file_ex_Juneq
+                :datafile: stocks.txt
                 :nocodelens:
 
                 file = open("stocks.txt", "r")
@@ -877,6 +887,7 @@ Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Lo
         .. tab:: Answer
 
             .. activecode:: file_ex_Junea
+                :datafile: stocks.txt
                 :nocodelens:
                 :optional:
 
@@ -894,7 +905,7 @@ Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Lo
 #.
     .. activecode:: file_ex_abbrq
         :practice: T
-        :available_files: stocks.txt
+        :datafile: stocks.txt
 
         Write a function that takes the stocks file and the abbreviation for a month
         (i.e. Jan, Feb) as parameters and returns the average value of all the closing

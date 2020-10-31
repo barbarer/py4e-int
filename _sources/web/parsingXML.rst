@@ -6,8 +6,12 @@ Parsing XML
 Here is a simple application that parses some XML and extracts some data
 elements from the XML:
 
-.. code-block::
+.. activecode:: net_parse_person_ac1
+    :language: python3
 
+    What do you think this code will print?  Run it to see what it actually
+    prints.
+    ~~~~
     import xml.etree.ElementTree as ET
 
     data = '''

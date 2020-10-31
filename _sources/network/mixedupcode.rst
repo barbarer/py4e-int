@@ -6,7 +6,7 @@ Mixed-Up Code Exercises
     :practice: T
     :adaptive:
 
-    Write a program to retrieve a file from 'http://data.pr4e.org/clown.txt' and
+    Put the code in order to retrieve a file from 'http://data.pr4e.org/clown.txt' and
     print its contents using urllib.
     -----
     import urllib.request
@@ -24,7 +24,7 @@ Mixed-Up Code Exercises
     :practice: T
     :adaptive:
 
-    Write a program to retrieve a file from 'http://data.pr4e.org/clown.txt' using urllib and
+    Put the code in order to retrieve a file from 'http://data.pr4e.org/clown.txt' using urllib and
     then write it to your local computer as 'clown.txt'.
     -----
     import urllib.request, urllib.parse, urllib.error
@@ -42,7 +42,7 @@ Mixed-Up Code Exercises
     :practice: T
     :adaptive:
 
-    Write a program that retrieves a file from 'http://data.pr4e.org/romeo.txt' using urllib and
+    Put the code in order to retrieve a file from 'http://data.pr4e.org/romeo.txt' using urllib and
     then write it to your local computer, close the file, and display the word count.
     -----
     import urllib.request
@@ -72,7 +72,7 @@ Mixed-Up Code Exercises
     :practice: T
     :adaptive:
 
-    Write a program that retrieves an image file from 'http://data.pr4e.org/cover3.jpg'
+    Put the code in order to retrieve an image file from 'http://data.pr4e.org/cover3.jpg'
     using urllib and then save it to your local computer.
     -----
     import urllib.request, urllib.parse, urllib.error
@@ -90,7 +90,7 @@ Mixed-Up Code Exercises
     :practice: T
     :adaptive:
 
-    Write a program that retrieves a text file from 'http://data.pr4e.org/romeo-full.txt'
+    Put the code in order to retrieve a text file from 'http://data.pr4e.org/romeo-full.txt'
     using urllib in blocks of 100,000 characters, then save the file to the local computer, and print the
     number of characters.
     -----
@@ -119,7 +119,7 @@ Mixed-Up Code Exercises
     :practice: T
     :adaptive:
 
-    Write a program to retrieve a file from 'http://data.pr4e.org/romeo.txt' and
+    Put the code in order to retrieve a file from 'http://data.pr4e.org/romeo.txt' and
     print its contents using sockets.
     -----
     import socket
@@ -147,7 +147,7 @@ Mixed-Up Code Exercises
     :practice: T
     :adaptive:
 
-    Write a program to retrieve all url links from 'www.nytimes.com' using
+    Put the code in order to retrieve all url links from 'www.nytimes.com' using
     regex and print them.
     -----
     import urllib.request, urllib.parse, urllib.error
@@ -168,18 +168,19 @@ Mixed-Up Code Exercises
     :practice: T
     :adaptive:
 
-    Write a program to retrieve all url links from 'www.nytimes.com' using
+    Put the code in order to retrieve all url links from 'www.nytimes.com' using
     BeautifulSoup and print them.
     -----
-    import urllib.request
+    import requests
     from bs4 import BeautifulSoup
     =====
     url = "https://www.nytimes.com/"
     =====
-    html = urllib.request.urlopen(url).read()
-    soup = BeautifulSoup(html, 'html.parser')
+    resp = requests.get(url)
+
+    soup = BeautifulSoup(resp.content, 'html.parser')
     =====
-    tags = soup('a')
+    tags = soup.find_all('a')
     =====
     for tag in tags:
     =====
@@ -190,18 +191,18 @@ Mixed-Up Code Exercises
     :practice: T
     :adaptive:
 
-    Write a program to retrieve all url links for images from 'www.nytimes.com'
+    Put the code in order to retrieve all url links for images from 'www.nytimes.com'
     using BeautifulSoup and print them.
     -----
-    import urllib.request
+    import requests
     from bs4 import BeautifulSoup
     =====
     url = "https://www.nytimes.com/"
     =====
-    html = urllib.request.urlopen(url).read()
-    soup = BeautifulSoup(html, 'html.parser')
+    resp = requests.get(url)
+    soup = BeautifulSoup(resp.content, 'html.parser')
     =====
-    tags = soup('img')
+    tags = soup.find_all('img')
     =====
     for tag in tags:
     =====
@@ -212,19 +213,19 @@ Mixed-Up Code Exercises
     :practice: T
     :adaptive:
 
-    Write a code that extracts data from several parts of the ‘a’ tag from
+    Put the code in order to extract data from several parts of the ‘a’ tag from
     “http://www.dr-chuck.com/page1.htm” using BeautifulSoup and print the tag,
     href, contents as well as all the attribute tags.
     -----
-    from urllib.request import urlopen
+    from requests
     from bs4 import BeautifulSoup
     =====
     url = "http://www.dr-chuck.com/page1.htm"
     =====
-    html = urlopen(url).read()
-    soup = BeautifulSoup(html, "html.parser")
+    resp = requests.get(url)
+    soup = BeautifulSoup(resp.content, "html.parser")
     =====
-    tags = soup('a')
+    tags = soup.find_all('a')
     =====
     for tag in tags:
     =====

@@ -25,7 +25,7 @@ For learning purposes, we are using the shortened version of this file
 
 .. activecode:: fileOpen
     :caption: Opening a file
-    :available_files: mbox-short.txt
+    :datafile: mbox-short.txt
 
     fhand = open('mbox-short.txt')
     print(fhand)

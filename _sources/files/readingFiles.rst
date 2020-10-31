@@ -9,15 +9,11 @@ While the *file handle* does not contain the data for the
 file, it is quite easy to construct a ``for`` loop to read
 through and count each of the lines in a file:
 
-.. datafile:: mbox-short2.txt
-    :fromfile: mbox-short.txt
-    :hide:
-
 .. activecode:: fileLines
     :caption: Opening and counting the lines in a file
-    :available_files: mbox-short2.txt
+    :datafile: mbox-short.txt
 
-    fhand = open('mbox-short2.txt')
+    fhand = open('mbox-short.txt')
     count = 0
     for line in fhand:
         count = count + 1
@@ -61,9 +57,9 @@ main memory, you can read the whole file into one string using the
 
 .. activecode:: fileSlice
     :caption: Using the read function with files
-    :available_files: mbox-short2.txt
+    :datafile: mbox-short.txt
 
-    fhand = open('mbox-short2.txt')
+    fhand = open('mbox-short.txt')
     inp = fhand.read()
     print(len(inp))
     print(inp[:20])

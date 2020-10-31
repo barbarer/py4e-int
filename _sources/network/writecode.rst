@@ -228,12 +228,12 @@ Write Code Exercises
                 Complete the following code to print all the image sources from
                 the webpage. Use 'img' and 'src' as tags.
                 ~~~~
-                import urllib.request
+                import requests
                 from bs4 import BeautifulSoup
 
                 url = "https://www.nytimes.com/"
-                html = urllib.request.urlopen(url).read()
-                soup = BeautifulSoup(html, 'html.parser')
+                resp = requests.get(url)
+                soup = BeautifulSoup(resp.content, 'html.parser')
 
     .. tab:: Answer
 
@@ -242,12 +242,12 @@ Write Code Exercises
 
                 Complete the following code to print all the image sources from the webpage. Use 'img' and 'src' as tags.
                 ~~~~
-                import urllib.request
+                import requests
                 from bs4 import BeautifulSoup
 
                 url = "https://www.nytimes.com/"
-                html = urllib.request.urlopen(url).read()
-                soup = BeautifulSoup(html, 'html.parser')
+                resp = requests.get(url)
+                soup = BeautifulSoup(resp.content, 'html.parser')
 
                 tags = soup('img')
                 for tag in tags:
@@ -261,5 +261,5 @@ Write Code Exercises
         "http://www.dr-chuck.com/page1.htm" using BeautifulSoup and html.parser and
         print the tag, href, contents as well as all the attributes.
         ~~~~
-        import urllib.request
+        import requests
         from bs4 import BeautifulSoup

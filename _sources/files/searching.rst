@@ -15,15 +15,11 @@ started with the prefix "From:", we could use the string method
 *startswith* to select only those lines with the desired
 prefix:
 
-.. datafile:: mbox-short3.txt
-    :fromfile: mbox-short.txt
-    :hide:
-
 .. activecode:: fileFrom
     :caption: Printing lines starting with "From:"
-    :available_files: mbox-short3.txt
+    :datafile: mbox-short.txt
 
-    fhand = open('mbox-short3.txt')
+    fhand = open('mbox-short.txt')
     for line in fhand:
         if line.startswith('From:'):
             print(line)
@@ -43,9 +39,9 @@ strips whitespace from the right side of a string as follows:
 
 .. activecode:: filerstrip
     :caption: Using rstrip with lines in a file
-    :available_files: mbox-short3.txt
+    :datafile: mbox-short.txt
 
-    fhand = open('mbox-short3.txt')
+    fhand = open('mbox-short.txt')
     for line in fhand:
         line = line.rstrip()
         if line.startswith('From:'):
@@ -72,9 +68,9 @@ uninteresting lines as follows:
 
 .. activecode:: fileInteresting
     :caption: Skipping uninteresting lines in a file
-    :available_files: mbox-short3.txt
+    :datafile: mbox-short.txt
 
-    fhand = open('mbox-short3.txt')
+    fhand = open('mbox-short.txt')
     for line in fhand:
         line = line.rstrip()
         # Skip 'uninteresting lines'
@@ -98,9 +94,9 @@ University of Cape Town in South Africa):
 
 .. activecode:: fileFind
     :caption: Finding and printing specific lines from a file
-    :available_files: mbox-short3.txt
+    :datafile: mbox-short.txt
 
-    fhand = open('mbox-short3.txt')
+    fhand = open('mbox-short.txt')
     for line in fhand:
         line = line.rstrip()
         if line.find('@uct.ac.za') == -1:
