@@ -4,8 +4,8 @@ Using Tuples as Keys in Dictionaries
 .. index::
    single: Tuples as Keys
 
-Because tuples are *hashable* and lists are not, if we
-want to create a *composite* key to use in a dictionary
+Because tuples are hashable and lists are not, if we
+want to create a composite key to use in a dictionary
 we must use a tuple as the key.
 
 We would encounter a composite key if we wanted to create a telephone
@@ -16,13 +16,13 @@ assignment statement as follows:
 
 .. code-block:: python
 
-   directory[last,first] = number
+   directory[last, first] = number
 
 .. activecode:: question10_7_1
    :practice: T
    :nocodelens:
 
-   Write code to create a dictionary called 'd1', and in it give the tuple (1, "a") a value of "tuple".
+   Write code to create a dictionary called 'd1', and in it give the tuple (1, 'a') a value of "tuple".
    ~~~~
 
    ====
@@ -41,11 +41,13 @@ assignment statement as follows:
    :answer_b: Tuples
    :answer_c: Strings
    :answer_d: Integers
-   :correct: a, b, c, d
-   :feedback_a: Correct! Dictionaries can be the keys of other dictionaries.
+   :answer_e: Lists
+   :correct: b, c, d
+   :feedback_a: Incorrect! Dictionaries cannot be the keys of other dictionaries. Try again.
    :feedback_b: Correct! It is fine to use tuples as keys in a dictionary.
    :feedback_c: Correct! Strings are used as keys of dictionaries all the time!
    :feedback_d: Correct! Integers are perfectly acceptable to be keys of dictionaries.
+   :feedback_e: Incorrect! Lists cannot be used as the keys of dictionaries. Try again.
 
    Which of these options can be keys of a dictionary? Select all that apply.
 
@@ -57,7 +59,7 @@ a ``for`` loop to traverse this dictionary.
 .. code-block:: python
 
    for last, first in directory:
-       print(first, last, directory[last,first])
+       print(first, last, directory[last, first])
 
 
 This loop traverses the keys in ``directory``\ , which are
@@ -68,14 +70,14 @@ number.
 .. mchoice:: question10_7_3
    :practice: T
    :answer_a: my_dict['Go']
-   :answer_b: my_dict[Blue']
+   :answer_b: my_dict['Blue']
    :answer_c: my_dict['Go', 'Blue']
    :answer_d: my_dict[('Go', 'Blue')]
    :correct: c, d
-   :feedback_a: Try again!
-   :feedback_b: Try again!
-   :feedback_c: Correct! The parentheses of the tuple are not required in order to properly call its value.
-   :feedback_d: Correct! This is how to grab the value associated with the tuple.s
+   :feedback_a: Incorrect! You need both values in the tuple for the dictionary to recognize it as the correct key. Try again.
+   :feedback_b: Incorrect! You need both values in the tuple for the dictionary to recognize it as the correct key. Try again.
+   :feedback_c: Correct! In this case, the parentheses of the tuple are not required in order to properly call its value.
+   :feedback_d: Correct! This is one way to grab the value associated with the tuple.
 
    Which of the following lines of code correctly prints the value associated with ('Go', 'Blue')? Select all that apply.
 

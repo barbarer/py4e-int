@@ -33,7 +33,7 @@ Write Code Questions
         :practice: T
         :nocodelens:
 
-        Provided is a list of tuples. Create another list called t_check that contains the third element of every tuple.
+        Provided is a list of tuples. Create another list called ``t_check`` that contains the third element of each tuple.
         ~~~~
 
         lst_tups = [('Articuno', 'Moltres', 'Zapdos'), ('Beedrill', 'Metapod', 'Charizard', 'Venasaur', 'Squirtle'), ('Oddish', 'Poliwag', 'Diglett', 'Bellsprout'), ('Ponyta', "Farfetch'd", 'Tauros', 'Dragonite'), ('Hoothoot', 'Chikorita', 'Lanturn', 'Flaaffy', 'Teddiursa', 'Phanpy'), ('Loudred', 'Volbeat', 'Seviper', 'Wailord', 'Sealeo')]
@@ -54,13 +54,13 @@ Write Code Questions
 
         .. tab:: Question
 
-            The dictionary 'majors' contains major codes as keys and major names as
-            the value. Write a function named find_major() that takes one parameter,
+            The dictionary 'majors' contains college major codes as keys and college major
+            names as values. Write a function named ``find_major()`` that takes one parameter,
             a major code. If the major code exists in 'majors', your function should
             return a tuple where the first value is the major code and the second is
             the name of the major. If the major code doesn't exist, return a tuple where
-            the first value is None and the second is a string containing 'Error'. Print
-            the name of the major with code 3084.
+            the first value is None and the second is a string containing 'Error'.
+            Finally, test your function by printing the name of the major with code 3084.
 
             .. activecode:: tup_writecode3q
                 :practice: T
@@ -102,7 +102,7 @@ Write Code Questions
         :practice: T
         :nocodelens:
 
-        Write code to interchange the values of tuple 't'.
+        Write code to interchange the values of tuple ``t``.
         ~~~~
         t = ("LeBron", "James")
 
@@ -111,7 +111,8 @@ Write Code Questions
 
         class MyTests(TestCaseGui):
             def testOne(self):
-                self.assertEqual(t, ("James, LeBron"), "Testing that the tuple's values are properly interchanged.")
+                self.assertEqual(t[0], 'James', "Testing that the tuple's first item is correct.")
+                self.assertEqual(t[1], 'LeBron', "Testing that the tuple's second item is correct.")
 
         MyTests().main()
 
@@ -120,10 +121,10 @@ Write Code Questions
 
         .. tab:: Question
 
-            If you remember, the .items() dictionary method produces a sequence
+            If you remember, the ``items()`` dictionary method produces a sequence
             of tuples. Keeping this in mind, we have provided you a dictionary called
-            'pokemon'. For every key-value pair, append the key to the list 'p_names',
-            and append the value to the list 'p_number'. Do not use the .keys() or .values() method.
+            ``pokemon``. For each key-value pair, append the key to the list ``p_names``,
+            and append the value to the list ``p_number``. Do not use the ``keys()`` or ``values()`` methods.
 
             .. activecode:: tup_writecode5q
                 :nocodelens:
@@ -162,7 +163,7 @@ Write Code Questions
         :practice: T
         :nocodelens:
 
-        Create a tuple called my_data that contains one element, the integer 99.
+        Create a tuple called ``my_data`` that contains one element, the integer 99.
         ~~~~
 
         ====
@@ -179,7 +180,7 @@ Write Code Questions
 
         .. tab:: Question
 
-            Write code to print list_of_tuples where the last value of each tuple is 100. Assign this new list of tuples to the variable 'updated_list'.
+            Write code to print ``list_of_tuples`` where the last value of each tuple is 100. Assign this new list of tuples to the variable ``updated_list``.
 
             .. activecode:: tup_writecode7q
                 :practice: T
@@ -213,7 +214,7 @@ Write Code Questions
         :practice: T
         :nocodelens:
 
-        Define a function called 'info' with the following required parameters: name, age, birth_year, year_in_college, and hometown. The function should return a tuple that contains all the inputted information.
+        Define a function called ``info`` with the following required parameters: name, age, birth_year, year_in_college, and hometown. The function should return a tuple that contains all the inputted information.
         ~~~~
 
         ====
@@ -230,9 +231,9 @@ Write Code Questions
 
         .. tab:: Question
 
-            Write a function list_link that accepts two lists and returns a dictionary
+            Write a function ``list_link`` that accepts two lists and returns a dictionary
             with the first list as the key and the second list as the value. For example,
-            list_link(['what', 'do', 'you', 'do'], [1,2,3,4]) should return {'what': 1, 'do': 4, 'you': 3}.
+            ``list_link(['what', 'do', 'you', 'do'], [1,2,3,4])`` should return ``{'what': 1, 'do': 4, 'you': 3}``.
 
             .. activecode:: tup_writecode9q
                 :practice: T
@@ -280,7 +281,7 @@ Write Code Questions
         :nocodelens:
         :practice: T
 
-        Create a function tuplize that accepts two inputs and returns them in a tuple. The first input and then the second.
+        Create a function ``tuplize()`` that accepts two inputs and returns a tuple containing those inputs in order.
         ~~~~
 
         ====

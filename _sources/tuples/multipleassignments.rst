@@ -4,8 +4,8 @@ Multiple Assignment with Dictionaries
 .. index::
    single: Dictionary Traversal
 
-Combining ``items``\ , tuple assignment, and ``for``\ ,
-you can see a nice code pattern for traversing the keys and values of a
+By combining ``items``\ , tuple assignment, and ``for``\ ,
+you can make a nice code pattern for traversing the keys and values of a
 dictionary in a single loop:
 
 .. code-block:: python
@@ -14,7 +14,7 @@ dictionary in a single loop:
        print(val, key)
 
 
-This loop has two *iteration variables* because
+This loop has two iteration variables because
 ``items`` returns a list of tuples and ``key, val`` is
 a tuple assignment that successively iterates through each of the
 key-value pairs in the dictionary.
@@ -40,19 +40,19 @@ Again, it is in hash key order (i.e., no particular order).
    :answer_b: [('a', 10), ('b', 15), ('c', 17), ('d', 4)]
    :answer_c: There will be no particular order
    :correct: c
-   :feedback_a: Try again!
-   :feedback_b: Try again!
+   :feedback_a: Incorrect! Remember, key-value pairs aren't in any particular order. Try again.
+   :feedback_b: Incorrect! Remember, key-value pairs aren't in any particular order. Try again.
    :feedback_c: Correct! When running this type of iteration, we are left with a hash key order, meaning there is no particular order.
 
-   How will the contents of list l be ordered after the following code is run?
+   How will the contents of list "lst" be ordered after the following code is run?
 
    .. code-block:: python
 
       d = {'a': 10, 'b': 15, 'c': 17, 'd': 4}
-      l = []
+      lst = []
       for key, val in d.items():
-          l.append(val, key)
-      print(l)
+          lst.append(val, key)
+      print(lst)
 
 If we combine these two techniques, we can print out the contents of a
 dictionary sorted by the *value* stored in each key-value pair.
@@ -68,17 +68,17 @@ print out the new, sorted list.
    :nocodelens:
 
    d = {'a':10, 'b':1, 'c':22}
-   l = list()
+   lst = list()
    for key, val in d.items():
-       l.append((val, key))
-   print(l) #should print [(10, 'a'), (1, 'b'), (22, 'c')]
-   l.sort(reverse=True)
-   print(l) #should print [(22, 'c'), (10, 'a'), (1, 'b')]
+       lst.append((val, key))
+   print(lst) #should print [(10, 'a'), (1, 'b'), (22, 'c')]
+   lst.sort(reverse=True)
+   print(lst) #should print [(22, 'c'), (10, 'a'), (1, 'b')]
 
 
-By carefully constructing the list of tuples to have the value as the
-first element of each tuple, we can sort the list of tuples and get our
-dictionary contents sorted by value.
+By carefully constructing the list of tuples so that the value is the
+first element of each tuple and the key is the second element, we can sort
+our dictionary contents by value.
 
 .. parsonsprob:: question10_5_2
    :numbered: left
@@ -88,18 +88,16 @@ dictionary contents sorted by value.
    Construct a block of code to iterate through the items in dictionary d and print out its key-value pairs.
    -----
    d = {'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10}
-   =====
    list_for_kv_pairs = []
    =====
-   list_for_kv_pairs = list #distractor
+   d = {'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10}
+   list_for_kv_pairs = list #paired
    =====
    for (key, val) in d.items():
    =====
-   for key, val in d.items: #distractor
+   for key, val in d.items: #paired
    =====
     list_for_kv_pairs.append((key, val))
-   =====
-    list_for_kv_pairs.append(d.items()) #distractor
    =====
    print(list_for_kv_pairs)
 
@@ -108,7 +106,7 @@ dictionary contents sorted by value.
    :nocodelens:
    :practice: T
 
-   Write code to create a list called 'l' and add the key-value pairs of dictionary d to list l as tuples. Sort list l by the value in descending order.
+   Write code to create a list called 'lst' and add the key-value pairs of dictionary d to list lst as tuples. Sort list lst by the values in descending order.
    ~~~~
    d = {'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10}
 
@@ -118,6 +116,6 @@ dictionary contents sorted by value.
    class myTests(TestCaseGui):
 
        def testOne(self):
-           self.assertEqual(l, [('rat', 10), ('rabbit', 9), ('dragon', 6), ('monkey', 5), ('snake', 3), ('rooster', 2)], "Making sure the list was sorted correctly.")
+           self.assertEqual(lst, [('rat', 10), ('rabbit', 9), ('dragon', 6), ('monkey', 5), ('snake', 3), ('rooster', 2)], "Making sure the list was sorted correctly.")
 
    myTests().main()
