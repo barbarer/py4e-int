@@ -84,7 +84,6 @@ xml tags to define news stories.
     .. raw:: html
 
        <pre id="news.xml">
-
        &#60;?xml version="1.0" encoding="UTF-8"?&#62;
        &#60;nitf&#62;
            &#60;head&#62;
@@ -137,7 +136,6 @@ xml tags to define weather observations.
     .. raw:: html
 
        <pre id="weather.xml">
-
        &#60;?xml version="1.0" encoding="UTF-8"?&#62;
        &#60;current_observation&#62;
 
@@ -192,13 +190,16 @@ and email address.
 .. activecode:: web_email_json_write
     :language: python3
     :nocodelens:
-    :datafile: weather.xml
+    :datafile: email.json
 
     Finish the code below so that it prints the first name, last name and email
-    address for each person in the list of dictionaries.
+    address for each person in the list of dictionaries returned from ``json.loads(data).``
     ~~~~
     import json
-    info = json.loads('email.json')
+    fh = open("email.json")
+    data = fh.read()
+    fh.close()
+    person_list = json.loads(data)
 
 The file ``person.json`` below contains JSON data for a person in a dictionary including their first name,
 last name, address, and phone numbers.
@@ -209,7 +210,7 @@ last name, address, and phone numbers.
 .. activecode:: web_email_person_write
     :language: python3
     :nocodelens:
-    :datafile: weather.xml
+    :datafile: person.json
 
     Finish the code below so that it prints the first name, last name, the
     state the person lives in, and their mobile phone number.
