@@ -47,7 +47,7 @@ following ``for`` loop:
 
 We set the variable ``count`` to zero before the loop starts,
 then we write a ``for`` loop to run through the list of
-numbers. Our *iteration* variable is named
+numbers. Our *iteration variable* is named
 ``itervar`` and while we do not use ``itervar`` in the
 loop, it does control the loop and cause the loop body to be executed
 once for each of the values in the list.
@@ -55,13 +55,13 @@ once for each of the values in the list.
 .. mchoice:: inLoops_MC_itVar
     :answer_a: itervar
     :answer_b: count
-    :answer_c: Count
+    :answer_c: [3, 41, 12, 9, 74, 15]
     :answer_d: list
     :correct: a
-    :feedback_a: iterver is the iteration variable.
-    :feedback_b: count is just a variable counting the iterations.
-    :feedback_c: Count is a string printed after the loop.
-    :feedback_d: This loop iterates through a list, but that is not the iteration variable.
+    :feedback_a: Correct! itervar is the iteration variable.
+    :feedback_b: Incorrect! count is just a variable counting the iterations. Try again.
+    :feedback_c: Incorrect! This is a list. The program is counting the number of values it contains, but it is not the iteration variable. Try again.
+    :feedback_d: Incorrect! This loop iterates through a list, but that is not the iteration variable. Try again.
 
     Which variable is the iteration variable in the code block?
 
@@ -111,10 +111,10 @@ elements; a variable used this way is sometimes called an
 .. fillintheblank:: itLoops_fill1
     :practice: T
 
-    The variable that counts the sum of elements (iteration variables) in a loop is called a(n) ________
+    The variable that counts the sum of elements in a loop is called a(n) ________
 
     - :[Aa]ccumulator: An accumulator is a variable used to keep track of the sum of elements in a loop.
-      :.*: Try again.
+      :.*: Incorrect! Reread the text above this question if you need help. Try again.
 
 Neither the counting loop nor the summing loop are particularly useful
 in practice because there are built-in functions ``len()`` and
@@ -154,8 +154,8 @@ When the program executes, the output is as follows:
     Largest: 74
 
 
-The variable ``largest`` is best thought of as the "largest
-value we have seen so far". Before the loop, we set ``largest``
+The variable ``largest`` is best thought of as "the largest
+value we have seen so far." Before the loop, we set ``largest``
 to the constant ``None``. ``None`` is a special
 constant value which we can store in a variable to mark the variable as
 "empty".
@@ -164,13 +164,13 @@ constant value which we can store in a variable to mark the variable as
     :practice: T
     :answer_a: It is a constant value.
     :answer_b: It is a constant variable.
-    :answer_c: It marks a variable as empty
-    :answer_d: The value cannot be changed.
+    :answer_c: It marks a variable as empty.
+    :answer_d: The value of a variable it's assigned to cannot be changed.
     :correct: b
-    :feedback_a: None is a constant value.
-    :feedback_b: None is a constant value that can be assigned to a variable.
-    :feedback_c: None marks a variable as empty.
-    :feedback_d: The value of None only means that the variable is empty. The variable can then be updated or reassigned.
+    :feedback_a: Incorrect! None is a constant value. Try again.
+    :feedback_b: Correct! None is a constant value that can be assigned to a variable, not a variable itself.
+    :feedback_c: Incorrect! None marks a variable as empty. Try again.
+    :feedback_d: Incorrect! The value of None only means that the variable is empty. The variable can then be updated or reassigned. Try again.
 
     Which of the following is *not* true about ``None``?
 
@@ -236,6 +236,6 @@ The following is a simple version of the Python built-in
     print(min(nums))
 
 
-In the function version of the smallest code, we removed all of the
+In the function version of the "smallest" code, we removed all of the
 ``print`` statements so as to be equivalent to the
 ``min`` function which is already built in to Python.

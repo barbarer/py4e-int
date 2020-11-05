@@ -7,9 +7,8 @@ Updating variables
     single: Increment
     single: Decrement
 
-A common pattern in assignment statements is an assignment statement
-that updates a variable, where the new value of the variable depends on
-the old.
+Commonly, assignment statements are used to update a variable, where the
+new value of the variable depends on the old.
 
 .. code-block:: python
 
@@ -43,7 +42,7 @@ Before you can update a variable, you have to
     print(x)
 
 
-Updating a variable by adding 1 is called an *increment*\ ;
+When you update a variable by adding 1 it's called an *increment*\ ;
 subtracting 1 is called a *decrement*.
 
 .. fillintheblank:: itUpdate_fill1
@@ -52,15 +51,15 @@ subtracting 1 is called a *decrement*.
     Before you can update a variable, you have to ________ it.
 
     - :[Ii]nitialize: Before updating a variable, you need to initialize the variable.
-      :.*: Try again!
+      :.*: Incorrect! Hint: what are you doing to variable 'x' when you say 'x = 0'? Try again!
 
 .. fillintheblank:: itUpdate_fill2
     :practice: T
 
-    Subtracting 1 from a variable is called a ________.
+    When you subtract 1 from a variable, you ________ it.
 
-    - :[Dd]ecrement: Subtracting 1 from a varaible is called a decrement, the opposite of adding 1 (an increment).
-      :.*: Try again!
+    - :[Dd]ecrement: Subtracting 1 from a varaible is called decrementing, the opposite of adding 1 (incrementing).
+      :.*: Incorrect! Hint: the answer is the opposite of "increment". Try again!
 
 .. mchoice:: itUpdate_MC_y
     :practice: T
@@ -69,10 +68,10 @@ subtracting 1 is called a *decrement*.
     :answer_c: We get a NameError.
     :answer_d: The program compiles with no errors but nothing prints.
     :correct: c
-    :feedback_a: Take another look at the second line.
-    :feedback_b: This will not cause a TypeError because x and y are both integers.
-    :feedback_c: This will cause a NameError because x has not been initialized yet.
-    :feedback_d: This program will not compile.
+    :feedback_a: Incorrect! Take another look at the second line. Try again!
+    :feedback_b: Incorrect! This will not cause a TypeError because x, y, and 1 are all integers. Try again!
+    :feedback_c: Correct! This will cause a NameError because x has not been initialized yet.
+    :feedback_d: Incorrect! This program will not compile. Try again!
 
     Consider the code block below. What happens when you run this program?
 

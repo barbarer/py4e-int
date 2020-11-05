@@ -4,9 +4,9 @@ Finishing iterations with ``continue``
     pair: Continue; Statement
     
 
-Sometimes you are in an iteration of a loop and want to finish the
-current iteration and immediately jump to the next iteration. In that
-case you can use the ``continue`` statement to skip to the next
+Sometimes, you are in a loop and want to finish the
+current iteration and immediately jump to the next. In that
+case, you can use the ``continue`` statement to skip to the next
 iteration without finishing the body of the loop for the current
 iteration.
 
@@ -54,12 +54,12 @@ the next iteration, thus skipping the ``print`` statement.
     :answer_a: nothing prints
     :answer_b: 'Done!'
     :answer_c: '#'
-    :answer_d: 'break'
-    :correct: b
-    :feedback_a: Something will print, regardless of what is inputted.
-    :feedback_b: "#" will break the loop, causing "Done!" to print, because it is outside of the loop.
-    :feedback_c: This will not print "#"
-    :feedback_d: This will not print "break"
+    :answer_d: '> '
+    :correct: d
+    :feedback_a: Incorrect! Something will print, regardless of what is inputted. Try again.
+    :feedback_b: Incorrect! '#' does not 'break' the loop, it 'continue's. Try again.
+    :feedback_c: Incorrect! This will not print "#". Try again.
+    :feedback_d: Correct! 'continue' will cause a new iteration of the loop to start, which will always print '> ' to prompt the user.
 
     What prints if the user's input is '#'?
 
@@ -68,32 +68,12 @@ the next iteration, thus skipping the ``print`` statement.
         while True:
             line = raw_input('> ')
             if line[0] == '#' :
-                break
+                continue
             if line == 'done':
                 break
             else:
                 print(line)
         print ('Done!')
-
-.. mchoice:: itContinue_MC_letter
-    :answer_a: Current Letter : P
-    :answer_b: Current Letter : y
-    :answer_c: Current Letter : t
-    :answer_d: Current Letter : h
-    :correct: d
-    :feedback_a: This will print.
-    :feedback_b: This will print.
-    :feedback_c: This will print.
-    :feedback_d: Because continue sends the loop to the next iteration at h, it will not print "Current Letter: h"
-
-    Which of the following statements does not print?
-
-    .. code-block:: python
-
-        for letter in 'Python':
-            if letter == 'h':
-                continue
-            print ('Current Letter : ' + letter)
 
 .. parsonsprob:: itContinue_PP_not8
     :numbered: left
@@ -101,8 +81,8 @@ the next iteration, thus skipping the ``print`` statement.
     :adaptive:
 
     Construct a block of code that prints the numbers 1 through 10, but skips the number 8.
-    The loop will start by incrementing n, before doing anything else. Look out for extra code pieces
-    and watch your indentation!
+    The loop will start by incrementing n, before doing anything else. Look out for the
+    three extra code pieces and watch your indentation!
     -----
     n = 0
     =====
