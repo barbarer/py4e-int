@@ -45,11 +45,11 @@ There are generally three kinds of keys used in a database model.
       :practice: T
       :answer_a: True
       :answer_b: False
-      :correct: b
-      :feedback_a: Try again!
-      :feedback_b: Primary kets are integer numbers, automatically assigned by the database. 
+      :correct: a
+      :feedback_a: Integers take up less space than strings, so they are usually used for primary keys
+      :feedback_b: Try again. 
 
-      True or False? A primary key can be made of any data type.
+      True or False? A primary key is usually a number
 
 *
   A *foreign key* is usually a number that points to

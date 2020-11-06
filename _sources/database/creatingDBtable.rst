@@ -84,6 +84,14 @@ perform operations on the data stored in the database. Calling
 Once we have the cursor, we can begin to execute commands on the
 contents of the database using the ``execute()`` method.
 
+.. dragndrop:: db_connection_vs_cursor_dd
+    :practice: T
+    :feedback: Read the section above to determine what a connection and cursor are used for.
+    :match_1: Connection|||Handles establishing communication with the database, which may be on another server.
+    :match_2: Cursor|||Handles executing commands on the database such as getting data from the database.
+
+    Match the term to its definition
+
 Database commands are expressed in a special language that has been
 standardized across many different database vendors to allow us to learn
 a single database language. The database language is called
@@ -95,14 +103,14 @@ http://en.wikipedia.org/wiki/SQL
 .. mchoice:: dbCreate_MC_SQL
     :practice:
     :answer_a: Structured Query Language
-    :answer_b: Salted Quail Livers
-    :answer_c: Synchronized Query Loops
-    :answer_d: Synchronized Quality Language
-    :correct: b
+    :answer_b: Simple Query Language
+    :answer_c: Synchronized Query Language
+    :answer_d: Simple Query Lingua
+    :correct: a
     :feedback_a: SQL is the acronym for <b>S</b>tructured <b>Q</b>uery <b>L</b>anguage.
-    :feedback_b: I suppose it could... but not in this context! Try again!!
-    :feedback_c: Nope! It's a language.
-    :feedback_d: It is a language, but not a synchronized quality language.
+    :feedback_b: Not quite.
+    :feedback_c: Try again.
+    :feedback_d: Not quite.
 
     SQL stands for ___________.
 
@@ -132,8 +140,8 @@ column named ``title`` and an integer column named
 
 Now that we have created a table named ``Tracks``, we can put
 some data into that table using the SQL ``INSERT`` operation.
-Again, we begin by making a connection to the database and obtaining the
-``cursor``. We can then execute SQL commands using the cursor.
+Again, we begin by making a connection to the database and getting a
+``cursor`` object. We can then execute SQL commands using the cursor.
 
 The SQL ``INSERT`` command indicates which table we are using
 and then defines a new row by listing the fields we want to include

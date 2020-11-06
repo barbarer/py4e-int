@@ -246,7 +246,7 @@ to the ``id`` column in our newly created row.
     :answer_b: False
     :correct: b
     :feedback_a: Try again!
-    :feedback_b: Before adding new data to table, you should check if it already exists. This pattern of checking is very common before adding data.
+    :feedback_b: Before adding new data to a table, you should check if it already exists or use INSERT OR IGNORE.
 
     True or False? SQL will automatically check if something already exists in your data.
 

@@ -2,17 +2,17 @@ Multiple Choice Questions
 --------------------------
 .. mchoice:: dbEx_MC1
     :practice: T
-    :answer_a: Add a Tuple to Cats with the name "Petunia" and breed "American Shorthair".
-    :answer_b: Add an Attribute to Cats with the name "Petunia" and breed "American Shorthair".
-    :answer_c: Create the Relation Cats.
-    :answer_d: Add a database for the American Shorthair, Petunia.
+    :answer_a: Add a table to the Cats database with the name "Petunia" and breed "American Shorthair".
+    :answer_b: Add a row to the Cats table with the name "Petunia" and the breed "American Shorthair".
+    :answer_c: Create the table Cats.
+    :answer_d: Add a row to the Cats table with the name "American Shorthair" and the breed "Petunia".
     :correct: b
-    :feedback_a: This line would add the tuple (row) for Petunia, American Shorthair, to the table Cats.
-    :feedback_b: This line wouldn't add an attribute (column).
-    :feedback_c: This line wouldn't create a new relation (table) for Petunia.
-    :feedback_d: This line wouldn't create a new database for Petunia.
+    :feedback_a: Inserts adds a row to a table.
+    :feedback_b: This will insert a row in the table Cats with the name "Petunia" and the breed "American Shorthair".
+    :feedback_c: This line wouldn't create a new table.
+    :feedback_d: Check the order of the columns and values.
 
-    Looking at the code below, what would this line do to the table ``Cats``?
+    Looking at the code below, what would this line do?
 
     ::
 
@@ -20,10 +20,10 @@ Multiple Choice Questions
 
 .. mchoice:: dbEx_MC2
     :practice: T
-    :answer_a: It will remove the Tuple "Cats".
+    :answer_a: It will remove the row "Cats".
     :answer_b: It will move "Cats" to the end of the database.
-    :answer_c: It will remove the Attribute "Cats".
-    :answer_d: It will remove the Relation "Cats".
+    :answer_c: It will remove the column "Cats".
+    :answer_d: It will remove the table "Cats".
     :correct: d
     :feedback_a: "Cats" is not a tuple (row).
     :feedback_b: That's not quite what drop means in SQL.
@@ -48,36 +48,23 @@ Multiple Choice Questions
     :feedback_c: The BETWEEN operator selects values within a given range.
     :feedback_d: The SELECT INTO statement copies data from one table into a new table.
 
-    Which word is used to combine rows from two tables in a database?
+    Which SQL keyword is used to combine rows from two tables in a database?
 
 .. mchoice:: dbEx_MC4
     :practice: T
     :answer_a: DELETE FROM Cats WHERE name = 'Ruby'
     :answer_b: DELETE name='Ruby' FROM Cats
     :answer_c: DELETE ROW name='Ruby' FROM Cats
+    :answer_d: DELETE FROM Cats WHERE name == 'Ruby'
     :correct: a
-    :feedback_a: This tells the program to remove the entry for "Ruby" from the "Cats" table.
+    :feedback_a: This tells the program to remove all rows with a name equal to "Ruby" from the "Cats" table.
     :feedback_b: The table should be called first.
     :feedback_c: You do not need to use the command "ROW". It will already delete the data associated with Ruby's entry.
+    :feedback_d: You do not use == in SQL
 
+    How can you delete all of the rows where the "name" is "Ruby" in the Cats Table?
 
-    How can you delete the records where the "FirstName" is "Peter" in the Persons Table?
-
-.. mchoice:: dbEx_MC5
-    :practice: T
-    :answer_a: DELETE
-    :answer_b: REMOVE
-    :answer_c: COLLAPSE
-    :answer_d: DROP
-    :correct: a
-    :feedback_a: The JSON format was inspired by the object and array format used in the JavaScript language, but was influenced and looks nearly identical to Python lists and dictionaries.
-    :feedback_b: JSON is text, written with JavaScript object notation, but the format is nearly identical to one of the other options.
-    :feedback_c: JSON and XML are used for similar purposes, but JSON is written with simpler structures.
-    :feedback_d: Python’s syntax for dictionaries and lists influenced the syntax of JSON. So the format of JSON is nearly identical to a combination of Python lists and dictionaries
-
-    Which command will delete data from a database?
-
-.. mchoice:: dbEx_MC6
+.. mchoice:: dbEx_MC5_new
     :practice: T
     :answer_a: UNIQUE
     :answer_b: PRIMARY KEY
@@ -91,6 +78,20 @@ Multiple Choice Questions
 
     Which of the following is **not** a SQL constraint?
 
+.. mchoice:: dbEx_MC6_new
+    :practice: T
+    :answer_a: DELETE
+    :answer_b: REMOVE
+    :answer_c: COLLAPSE
+    :answer_d: DROP
+    :correct: a
+    :feedback_a: Delete will try to remove data from a database.
+    :feedback_b: Not quite.
+    :feedback_c: Nope.
+    :feedback_d: This is used to delete a table from a database.
+
+    Which command will try to remove data from a table in a database?
+
 .. mchoice:: dbEx_MC7
     :practice: T
     :answer_a: SELECT FROM Breed,Cats
@@ -98,12 +99,12 @@ Multiple Choice Questions
     :answer_c: SELECT Breed FROM Cats
     :answer_d: FROM Cats SELECT Breed
     :correct: c
-    :feedback_a: This has all the correct words, but they are quite mixed up. No commas necessary here!
+    :feedback_a: This has all the correct words, but they are quite mixed up. No commas are necessary here!
     :feedback_b: This uses the right order, but the wrong commands.
     :feedback_c: This command is very straight forward! It <i>selects</i> the <i>breed</i> <i>from</i> the table <i>cats</i>
     :feedback_d: This uses the right commands in the wrong order.
 
-    Which is the correct command for a statement that will select the Breed column from the Cats table?
+    Which is the correct command for a statement that will select data from the Breed column in the Cats table?
 
 .. mchoice:: dbEx_MC8
     :practice: T

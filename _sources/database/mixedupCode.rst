@@ -26,15 +26,16 @@ Mixed-Up Code Questions
     :numbered: left
     :adaptive:
 
-    The following program inserts 2 tracks into the table, prints them, then deletes
-    a track if it meets a certain condition. Remember to make a connection to the
+    The following program inserts 2 tracks into the table, commits that change,
+    prints the track data, deletes a track if it meets a certain condition,
+    and commits that change. Remember to make a connection to the
     database and create the cursor, first! Drag the blocks of statements from the
     left column to the right column and put them in the right order.
     -----
     import sqlite3
     =====
     conn = sqlite3.connect('music.sqlite')
-    ======
+    =====
     cur = conn.cursor()
     =====
     cur.execute('INSERT INTO Tracks (title, plays) VALUES (?, ?)',
@@ -88,15 +89,17 @@ Mixed-Up Code Questions
     :numbered: left
     :adaptive:
 
-    The following program inserts 2 dogs into the table, prints them, then deletes
-    a dog if it meets a certain condition. Remember to make a connection to the
-    database and create the cursor, first! Drag the blocks of statements from the
-    left column to the right column and put them in the right order.
+    The following program inserts 2 dogs into the table, commits that change,
+    prints them, then deletes a dog if it meets a certain condition, and
+    commits that change. Remember
+    to make a connection to the database and create the cursor, first! Drag
+    the blocks of statements from the left column to the right column and put
+    them in the right order.
     -----
     import sqlite3
     =====
     conn = sqlite3.connect('pets.sqlite')
-    ======
+    =====
     cur = conn.cursor()
     =====
     cur.execute('INSERT INTO Dogs (name, breed) VALUES (?, ?)',
@@ -194,28 +197,28 @@ Mixed-Up Code Questions
     :adaptive:
     :numbered: left
 
-    This program simply opens the database and selects all of the columns of all
-    of the rows in the table "Pants" and in the table "Shirts". It then joins the
-    two tables on the column "fabric". Watch out for extra blocks!
+    This program simply opens the database and selects all pants and shirts
+    with the same fabric and prints them. Watch out for extra blocks!
     -----
     import sqlite3
     =====
     conn = sqlite3.connect('clothes.sqlite')
     =====
-    cur = conn.cursor #distractor
-    =====
     cur = conn.cursor()
     =====
-    cur.execute('SELECT * FROM Pants')
-    =====
-    cur.execute('SELECT all FROM Pants') #distractor
-    =====
-    cur.execute('SELECT * FROM Shirts')
-    =====
-    cur.execute('SELECT * FROM Shirts') #distractor
+    cur = conn.cursor #paired
     =====
     cur.execute('''SELECT * FROM Pants JOIN Shirts
                 ON Pants.fabric = Shirts.fabric''')
+    =====
+    cur.execute('''SELECT * FROM Pants JOIN Shirts
+                ON Pants.fabric == Shirts.fabric''') #paired
+    =====
+    for row in cur:
+    =====
+    for row in conn: #paired
+    =====
+        print(row)
     =====
     cur.close()
 
@@ -224,38 +227,29 @@ Mixed-Up Code Questions
     :adaptive:
     :numbered: left
 
-    This program simply opens the database and selects all of the columns of all
-    of the rows in the table "Cupcakes" and in the table "Cakes". It then joins the
-    two tables on the columns "icing" and "frosting", where the topping is chocolate.
-    It will then print the first 5 rows featuring a chocolate topping, then list
-    the total number of rows after the join. Watch out for extra blocks!
+    This program simply opens the database and selects all of the Cupcakes and
+    Cakes where the Cupcake icing and Cake frosting are chocolate.
+    It will then print the rows.  Watch out for extra blocks!
     -----
     import sqlite3
     =====
     conn = sqlite3.connect('desserts.sqlite')
     =====
-    cur = conn.cursor( #distractor
-    =====
     cur = conn.cursor()
     =====
-    cur.execute('SELECT * FROM Cupcakes')
-    =====
-    cur.execute('SELECT all FROM Cupcakes') #distractor
-    =====
-    cur.execute('SELECT * FROM Cakes')
-    =====
-    cur.execute('SELECT * FROM Cakes') #distractor
+    cur = cursor() #paired
     =====
     cur.execute('''SELECT * FROM Cupcakes JOIN Cakes
                 ON Cupcakes.icing = Cakes.frosting
                 WHERE Cupcakes.icing = "chocolate"''')
     =====
-    count = 0
-    print('Connections for icing="chocolate":')
+    cur.execute('''SELECT * FROM Cupcakes JOIN Cakes
+                   ON Cake.icing = Cupcake.frosting
+                   WHERE Cupcakes.icing = "chocolate"''') #paired
+    =====
     for row in cur:
-      if count < 5: print(row)
-      count = count + 1
-    print(count, 'rows.')
+    =====
+      print(row)
     =====
     cur.close()
 
@@ -273,13 +267,13 @@ Mixed-Up Code Questions
     =====
     conn = sqlite3.connect('lunch.sqlite')
     =====
-    conn = sql.connect('lunch.sqlite') #distractor
+    conn = sql.connect('lunch.sqlite') #paired
     =====
     cur = conn.cursor()
     =====
     cur.execute('SELECT * FROM Tacos')
     =====
-    cur.exectute('SELECT Tacos FROM lunch') #distractor
+    cur.exectute('SELECT Tacos FROM lunch') #paired
     =====
     count = 0
     =====
@@ -291,37 +285,4 @@ Mixed-Up Code Questions
     =====
     cur.close()
     =====
-    cur.close #distractor
-
-.. parsonsprob:: db-mixed10
-    :practice: T
-    :adaptive:
-    :numbered: left
-
-    This program opens the clothes database and inserts a chambray smock into the
-    "dress" table. At the end it will print the total count of rows, before closing
-    the cursor. Watch out for extra blocks and your indentation!
-    -----
-    import sqlite3
-    conn = sqlite3.connect('clothes.sqlite')
-    cur = conn.cursor()
-    =====
-    cur.execute('INSERT INTO Dresses (style, fabric) VALUES (?, ?)',
-        ('smock', 'chambray'))
-    =====
-    conn.commit()
-    =====
-    count = 0
-    =====
-    for row in cur:
-    =====
-    for row in cur #distractor
-    =====
-        print(row)
-        count = count + 1
-    =====
-    print(count, 'rows.')
-    =====
-    print(row, 'rows.') #distractor
-    =====
-    cur.close()
+    cur.close #paired

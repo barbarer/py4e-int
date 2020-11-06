@@ -145,7 +145,7 @@ second column (``Follows.to_id``) matches the third column
     :answer_a: True
     :answer_b: False
     :correct: a
-    :feedback_a: You can absolutely join two tables on rows that have different titles. For example, you can join on "Users" and "Followers", if you are using Twitter data.
+    :feedback_a: You can absolutely join two tables on columns that have different names. For example, you can join on Follows.to_id = People.id
     :feedback_b: Try again!
 
-    True or False? When using JOIN on two tables, you can join on rows that have different titles.
+    True or False? When using JOIN on two tables, you can join on columns that have different names.
