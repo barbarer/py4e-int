@@ -37,9 +37,9 @@ that the bug is before or after the check.
     :answer_b: write bigger programs
     :answer_c: always writing shorter programs in general
     :correct: a
-    :feedback_a: Debugging by bisection can cut down your debugging time.
-    :feedback_b: Writing bigger programs will likely increase your debugging time.
-    :feedback_c: Just because a program is shorter does not mean that it will be faster to debug.
+    :feedback_a: Correct! Debugging by bisection can cut down your debugging time.
+    :feedback_b: Incorrect! Writing bigger programs will likely increase your debugging time. Try again.
+    :feedback_c: Incorrect! Just because a program is shorter does not mean that it will be faster to debug. Try again.
 
     One way to cut your debugging time is through...
 
@@ -48,9 +48,9 @@ that the bug is before or after the check.
     :answer_b: breaking the problem in half and doing "mid-point checks"
     :answer_c: purposely creating errors in your code to test sections
     :correct: b
-    :feedback_a: Debugging the entire program at once is not an example of debugging by bisection.
-    :feedback_b: Debugging by bisection means to split the program in half (or bisections) and debug those separately.
-    :feedback_c: purposefully creating errors is not an example of debugging by bisection.
+    :feedback_a: Incorrect! Debugging the entire program at once is not an example of debugging by bisection. Try again.
+    :feedback_b: Correct! Debugging by bisection means to split the program in half (or bisections) and debug those separately.
+    :feedback_c: Incorrect! Purposefully creating errors is not an example of debugging by bisection (nor is it useful). Try again.
 
     An example of "debugging by bisection" is...
 
@@ -58,5 +58,5 @@ that the bug is before or after the check.
 
     When debugging, if the mid-point check is incorrect, the problem must be in the _______ half of the program.
 
-    - :[Ff]irst: If the mid-point check is incorrect the problem must be in the first half of the program.
-      :.*: Try again!
+    - :[Ff]irst: Correct! If the mid-point check is incorrect the problem must be in the first half of the program.
+      :.*: Incorrect! Hint: the problem won't be in the second half. Try again.
