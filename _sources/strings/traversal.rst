@@ -8,7 +8,7 @@ Traversal through a string with a loop
 
 
 A lot of computations involve processing a string one character at a
-time. Often they start at the beginning, select each character in turn,
+time. Often, they start at the beginning, select each character in turn,
 do something to it, and continue until the end. This pattern of
 processing is called a *traversal*. One way to write a
 traversal is with a ``while`` loop:
@@ -36,8 +36,8 @@ the last character in the string.
         .. tab:: Question
 
             Write a ``while`` loop that starts at the last character in the string and works its way
-            backwards to the first character in the string, printing each letter on a separate line,
-            except backwards. For reference, the codelens above shows an example of a word printed letter by letter.
+            backwards to the first character in the string, printing each letter on a separate line.
+            For reference, the CodeLens above shows an example of a word printed letter by letter.
 
             .. activecode::  str-trav-backwardsq
                 :nocodelens:
@@ -70,12 +70,12 @@ characters are left.
     :answer_b: 2
     :answer_c: 3
     :correct: a
-    :feedback_a: Yes, idx goes through the odd numbers starting at 1. r is at position 2, 7, and 8.
-    :feedback_b: r is at positions 2, 7, and 8. idx starts at 1, not 0.
-    :feedback_c: There are 3 r characters but idx does not take on the correct index values.
+    :feedback_a: Correct! idx starts at 1 and continue to the next odd number. There is only one 'r' whose index is an odd number.
+    :feedback_b: Incorrect! This would be true if idx started at 0. Try again.
+    :feedback_c: Incorrect! This would be true if idx incremented by 1 each loop. Try again.
 
 
-    How many times is the letter r printed by the following statements?
+    How many times is the letter 'r' printed by the following statements?
 
     .. code-block:: python
 
@@ -92,10 +92,10 @@ characters are left.
     :answer_c: 12
     :answer_d: Error, the for statement needs to use the range function.
     :correct: c
-    :feedback_a: Iteration by item will process once for each item in the sequence.
-    :feedback_b: The blank is part of the sequence.
-    :feedback_c: Yes, there are 12 characters, including the blank.
-    :feedback_d: The for statement can iterate over a sequence item by item.
+    :feedback_a: Incorrect! Iteration by item will print "HELLO" once for each character in the string. Try again.
+    :feedback_b: Incorrect! The space is part of the string, so "HELLO" will be printed for it as well. Try again.
+    :feedback_c: Correct! There are 12 characters in the string, including the space, and "HELLO" is printed once for each character.
+    :feedback_d: Incorrect! The for statement can iterate over a sequence item by item. Try again.
 
 
     How many times is the word HELLO printed by the following statements?
@@ -113,10 +113,10 @@ characters are left.
     :answer_c: 4
     :answer_d: Error, the for statement cannot have an if in its body.
     :correct: b
-    :feedback_a: The for loop visits each index but the selection (conditional) only prints some of them.
-    :feedback_b: Yes, it will print all the characters at even index positions and the i character appears twice in an even location.
-    :feedback_c: i is at positions 1, 4, 7, and 10.
-    :feedback_d: The for statement can have any statements in its body, including if as well as for.
+    :feedback_a: Incorrect! This program only prints the characters at even index positions. Try again.
+    :feedback_b: Correct! It will print all the characters at even index positions and the i character appears twice in an even location.
+    :feedback_c: Incorrect! The for loop visits each index but the if statement means only some of their values are printed. Try again.
+    :feedback_d: Incorrect! for statements can have any kind of statements in their bodies, including if statements. Try again.
 
 
     How many times is the letter i printed by the following statements?
