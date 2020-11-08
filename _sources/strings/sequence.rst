@@ -21,8 +21,7 @@ The second statement extracts the character at index position 1 from the
 variable.
 
 The expression in brackets is called an *index*. The
-index indicates which character in the sequence you want (hence the
-name).
+index indicates which character in the sequence you want.
 
 But you might not get what you expect:
 
@@ -35,8 +34,9 @@ But you might not get what you expect:
 
 
 For most people, the first letter of "banana" is "b", not
-"a". But in Python, the index is an offset from the beginning
-of the string, and the offset of the first letter is zero.
+"a". But in Python, the index of a sequence is equal to its
+offset from the beginning of the string, and the offset of
+the first letter is zero.
 
 .. activecode:: strFirst
     :caption: Accessing first character of a string
@@ -60,10 +60,10 @@ So "b" is the 0th letter ("zero-th") of "banana",
     :answer_c: "B"
     :answer_d: "l"
     :correct: c
-    :feedback_a: Remember that in Python, counting starts at zero; so "o" is actually cheer[1].
-    :feedback_b: Remember that in Python, counting starts at zero; so " " is actually cheer[2].
+    :feedback_a: Incorrect! Remember that in Python, counting starts at zero; so "o" is actually cheer[1]. Try again.
+    :feedback_b: Incorrect! Remember that in Python, counting starts at zero; so " " is actually cheer[2]. Try again.
     :feedback_c: Correct! In Python, counting starts with zero; so cheer[3] is "B".
-    :feedback_d: Remember that in Python, counting starts at zero; so "l" is actually cheer[4].
+    :feedback_d: Incorrect! Remember that in Python, counting starts at zero; so "l" is actually cheer[4]. Try again.
 
     What is printed by the following statements?
 
@@ -89,9 +89,9 @@ get:
     :answer_b: TypeError
     :answer_c: SyntaxError
     :correct: b
-    :feedback_a: You will get an IndexError if you try to access a string beyond its range. For example, if string = "hi", calling string[2] would cause an IndexError.
-    :feedback_b: A TypeError would occur because the program is expecting an integer as the index, not a float.
-    :feedback_c: A SyntaxError is caused when there are issues with the code as it is written, rather than the values it is given.
+    :feedback_a: Incorrect! You will get an IndexError if you try to access a string beyond its range. For example, if string = "hi", calling string[2] would cause an IndexError. Try again.
+    :feedback_b: Correct! A TypeError would occur because the program is expecting an integer as the index, not a float.
+    :feedback_c: Incorrect! A SyntaxError is caused when there are issues with the code as it is written, rather than the values it is given. Try again.
 
     The following code would cause what kind of error?
 
@@ -102,28 +102,27 @@ get:
 
 .. mchoice:: str-seq-mc-name
     :practice: T
-    :answer_a: "s"
+    :answer_a: "O"
     :answer_b: " "
     :answer_c: "Olivia"
     :correct: a
-    :feedback_a: Correct! In Python, counting starts with zero; so after the reassignment hello the 12th
-                 character from the original string, "s".
-    :feedback_b: Remember that in Python, counting starts at zero! And watch out for the reassignment.
-    :feedback_c: Remember that in Python, counting starts at zero! And watch out for the reassignment.
+    :feedback_a: Correct! In Python, counting starts with zero, so hello[15] = 'O'. Then, the asignment statement sets hello equal to 'O'.
+    :feedback_b: Incorrect! Remember that in Python, counting starts at zero! Try again.
+    :feedback_c: Incorrect! hello[15] = 'O', not 'Olivia'. Try again.
 
     What is printed by the following statements?
 
     ::
 
-        hello = "Hi my name is Olivia."
-        hello = hello[12]
+        hello = "Hi, my name is Olivia."
+        hello = hello[15]
         print(hello)
 
 .. fillintheblank:: str-seq-fitb-index
     :practice: T
 
-    The expression in brackets that indicates which characters you want is called a(n) ______.
+    The expression in brackets that indicates which character you want to get from a sequence is called a(n) ______.
 
     - :[Ii]ndex: Correct! An index is an integer value used to select an item in a sequence, such as a
         character in a string.
-      :.*: Try again! This piece selects an item in a sequence.
+      :.*: Incorrect! Hint: its value has to be an integer. Try again.
