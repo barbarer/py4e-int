@@ -18,13 +18,13 @@ with the intention of changing a character in a string. For example:
     greeting = 'Hello, world!'
     greeting[0] = 'J'
 
-The "object" in this case is the string and the "item" is the character
-you tried to assign. For now, an *object* is the same
-thing as a value, but we will refine that definition later. An
-*item* is one of the values in a sequence.
+The ``greeting`` string is an example of an **object** and the character
+you tried to assign is an example of an **item**. For now, think of an object as a
+special virtual construction. Objects have special properties. Strings, for example,
+are objects that hold a sequence of characters. An item is one of the values in a sequence.
 
-The reason for the error is that strings are *immutable*,
-which means you can't change an existing string. The best you can do is
+The reason for the error is that strings are **immutable**,
+which means that you can't modify an existing string. The best you can do is
 create a new string that is a variation on the original:
 
 .. activecode:: str-newString
@@ -34,42 +34,52 @@ create a new string that is a variation on the original:
     new_greeting = 'J' + greeting[1:]
     print(new_greeting)
 
-
 This example concatenates a new first letter onto a slice of
 ``greeting``. It has no effect on the original string.
+
+Or, you can completely redefine an existing string:
+
+.. activecode:: str-redefineString
+    :caption: Completely redefining a string
+
+    greeting = 'Hello, world!'
+    greeting = 'Hola, mundo!'
+    print(greeting)
+
+This example redefines the entire ``greeting`` object.
+A new ``greeting`` is created and the old ``greeting`` is discarded.
 
 .. mchoice:: str-imm-mc-xyz
     :practice: T
     :answer_a: xyz
     :answer_b: xyxyz
     :answer_c: xy xy z
-    :answer_d: xy z
-    :answer_e: z
+    :answer_d: There is an error
     :correct: b
-    :feedback_a: s1 will equal "xy" plus another "xy" then z at the end.
-    :feedback_b: s1 contains the original value, plus itself, plus "z"
-    :feedback_c: No spaces are added during concatenation.
-    :feedback_d: No spaces are added during concatenation, and an additional "xy" should be
-                 included at the beginning.
-    :feedback_e: s1 was set to "xy" initially, so the final answer will be "xyxyz"
+    :feedback_a: Incorrect! Think about the values of s1 and s2 before line 3, then use those to determine the value of s1 in line 3. Try again.
+    :feedback_b: Correct! The right side of the assignment statement is evaluated, then s1 is redefined to be equal to that, so s1 becomes xyxyz.
+    :feedback_c: Incorrect! No spaces are added during concatenation. Try again.
+    :feedback_d: Incorrect! The right side of the assignment statement is evaluated, then s1 is redefined to be equal to that. Try again.
 
-    Given the following code segment, what is the value of the string s1 after these are executed?
+    Given the following code segment, what is the value of the string s1 after the code is executed?
 
     ::
 
-      s1 = "xy"
+      s1 = 'xy'
       s2 = s1
-      s1 = s1 + s2 + "z"
+      s1 = s1 + s2 + 'z'
 
 .. mchoice:: str-imm-mc-ball
     :practice: T
     :answer_a: Ball
     :answer_b: Call
-    :answer_c: Error
-    :correct: c
-    :feedback_a: Assignment is not allowed with strings.
-    :feedback_b: Assignment is not allowed with strings.
-    :feedback_c: Yes, strings are immutable.
+    :answer_c: C
+    :answer_d: Nothing, there is an error
+    :correct: d
+    :feedback_a: Incorrect! Assignment is not allowed with strings. Try again.
+    :feedback_b: Incorrect! Assignment is not allowed with strings. Try again.
+    :feedback_c: Incorrect! Assignment is not allowed with strings. Try again.
+    :feedback_d: Correct! Strings are immutable.
 
     What is printed by the following statements:
 
@@ -85,4 +95,4 @@ This example concatenates a new first letter onto a slice of
     You cannot change an existing string because it is ________.
 
     - :[Ii]mmutable: Correct! Strings are immutable, meaning you cannot change the object itself once it has been defined.
-      :.*: Try again!
+      :.*: Incorrect! Try reading the chapter again. Try again!

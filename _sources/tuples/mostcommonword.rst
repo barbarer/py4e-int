@@ -87,30 +87,30 @@ good choice as a language for exploring information.
    -----
    with open("heineken.txt", "r") as filename:
    =====
-    lines = filename.readlines()
-    word_counter = {}
-    list_of_tuples = []
+   	lines = filename.readlines()
+   	word_counter = {}
+   	list_of_tuples = []
    =====
-    for line in lines.split():
+   	for line in lines.split():
    =====
-     for word in line:
+   		for word in line:
    =====
-     for word in lines: #paired
+   		for word in lines: #paired
    =====
-      word_counter[word] = word_counter.get(word, 0) + 1
+   			word_counter[word] = word_counter.get(word, 0) + 1
    =====
-    for key, value in word_counter.items():
+   	for key, value in word_counter.items():
    =====
-    for value, key in word_counter.items(): #paired
+   	for value, key in word_counter.items(): #paired
    =====
-     list_of_tuples.append((value, key))
+   		list_of_tuples.append((value, key))
    =====
-    list_of_tuples.sort(reverse = True)
+   	list_of_tuples.sort(reverse = True)
+   	sliced_list = list_of_tuples[:10]
    =====
-    list_of_tuples.sort() #paired
+   	list_of_tuples.sort()
+   	sliced_list = list_of_tuples[:10] #paired
    =====
-    sliced_list = list_of_tuples[:10]
+   	for key, value in sliced_list:
    =====
-    for key, value in sliced_list:
-   =====
-     print(value, key)
+   		print(value, key)

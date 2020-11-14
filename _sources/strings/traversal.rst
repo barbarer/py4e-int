@@ -66,13 +66,15 @@ characters are left.
 
 .. mchoice:: str-trav-mc-plus2
     :practice: T
-    :answer_a: 1
-    :answer_b: 2
-    :answer_c: 3
-    :correct: a
-    :feedback_a: Correct! idx starts at 1 and continue to the next odd number. There is only one 'r' whose index is an odd number.
-    :feedback_b: Incorrect! This would be true if idx started at 0. Try again.
-    :feedback_c: Incorrect! This would be true if idx incremented by 1 each loop. Try again.
+    :answer_a: 0
+    :answer_b: 1
+    :answer_c: 2
+    :answer_d: 3
+    :correct: b
+    :feedback_a: Incorrect! "strawberry" has two consecutive r's, so the way the loop is set up, this answer is impossible. Try again.
+    :feedback_b: Correct! idx starts at 1 and continues to the next odd number. There is only one 'r' whose index is an odd number.
+    :feedback_c: Incorrect! This would be true if idx started at 0. Try again.
+    :feedback_d: Incorrect! This would be true if idx incremented by 1 each loop. Try again.
 
 
     How many times is the letter 'r' printed by the following statements?

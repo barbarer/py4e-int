@@ -97,7 +97,7 @@ our dictionary contents by value.
    =====
    for key, val in d.items: #paired
    =====
-    list_for_kv_pairs.append((key, val))
+   	list_for_kv_pairs.append((key, val))
    =====
    print(list_for_kv_pairs)
 

@@ -88,10 +88,12 @@ get:
     :answer_a: IndexError
     :answer_b: TypeError
     :answer_c: SyntaxError
+    :answer_d: This code is correct and would cause no errors
     :correct: b
     :feedback_a: Incorrect! You will get an IndexError if you try to access a string beyond its range. For example, if string = "hi", calling string[2] would cause an IndexError. Try again.
     :feedback_b: Correct! A TypeError would occur because the program is expecting an integer as the index, not a float.
     :feedback_c: Incorrect! A SyntaxError is caused when there are issues with the code as it is written, rather than the values it is given. Try again.
+    :feedback_d: Incorrect! You cannot use a float as the value of an index. Try again.
 
     The following code would cause what kind of error?
 
@@ -105,10 +107,12 @@ get:
     :answer_a: "O"
     :answer_b: " "
     :answer_c: "Olivia"
+    :answer_d: "l"
     :correct: a
     :feedback_a: Correct! In Python, counting starts with zero, so hello[15] = 'O'. Then, the asignment statement sets hello equal to 'O'.
     :feedback_b: Incorrect! Remember that in Python, counting starts at zero! Try again.
     :feedback_c: Incorrect! hello[15] = 'O', not 'Olivia'. Try again.
+    :feedback_d: Incorrect! Make sure you're counting correctly, starting from 0. Try again.
 
     What is printed by the following statements?
 

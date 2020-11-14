@@ -16,9 +16,9 @@ Mixed-Up Code Questions
    =====
    for word in words:
    =====
-    t.append((len(word), word))
+   	t.append((len(word), word))
    =====
-    t.append(len(word)) #paired
+   	t.append(len(word)) #paired
    =====
    t.sort(reverse = True)
    =====
@@ -37,11 +37,11 @@ Mixed-Up Code Questions
    =====
    for word in tup_list: #distractor
    =====
-    tup = word, len(word)
+   	tup = word, len(word)
    =====
-    tup_list.append(tup)
+   	tup_list.append(tup)
    =====
-    word_list.append(tup) #distractor
+   	word_list.append(tup) #distractor
    =====
    tup_list.sort(key = lambda x: x[1], reverse = True)
 
@@ -92,25 +92,25 @@ Mixed-Up Code Questions
    word_counter = {}
    with open("heineken.txt", "r") as filename:
    =====
-    lines = filename.readlines()
+   	lines = filename.readlines()
    =====
-    for line in lines.split():
+   	for line in lines.split():
    =====
-    for line in line.split(): #paired
+   	for line in line.split(): #paired
    =====
-     for word in line:
+   		for word in line:
    =====
-      word_counter[word] = word_counter.get(word, 0) + 1
+   			word_counter[word] = word_counter.get(word, 0) + 1
    =====
-    list_of_tuples = list(word_counter.items())
+   	list_of_tuples = list(word_counter.items())
    =====
-    list_of_tuples = list(word_counter.items) #paired
+   	list_of_tuples = list(word_counter.items) #paired
    =====
-    list_of_tuples.sort(key = lambda x: x[1], reverse = True)
+   	list_of_tuples.sort(key = lambda x: x[1], reverse = True)
    =====
-    for i in range(10):
+   	for i in range(10):
    =====
-     print(list_of_tuples[i][0])
+   		print(list_of_tuples[i][0])
 
 .. parsonsprob:: mixedupcode_question10_6
    :numbered: left
@@ -124,9 +124,9 @@ Mixed-Up Code Questions
    =====
    for key, val in d.items():
    =====
-    list_for_kv_pairs.append((key, val))
+   	list_for_kv_pairs.append((key, val))
    =====
-    list_for_kv_pairs.append(key, val) #paired
+   	list_for_kv_pairs.append(key, val) #paired
    =====
    print(list_for_kv_pairs)
 
@@ -141,21 +141,21 @@ Mixed-Up Code Questions
    dict = {}
    with open(mbox-short.txt) as filename:
    =====
-    lines = filename.readlines()
+   	lines = filename.readlines()
    =====
-    for line in lines.split():
+   	for line in lines.split():
    =====
-     for word in line:
+   		for word in line:
    =====
-      dict[word] = dict.get(word, len(word))
+   			dict[word] = dict.get(word, len(word))
    =====
-      dict[word] = dict.get(word, 0) + len(word) #paired
+   			dict[word] = dict.get(word, 0) + len(word) #paired
    =====
-    dict = sorted(dict.items())
+   	dict = sorted(dict.items())
    =====
-    dict.sort() #paired
+   	dict.sort() #paired
    =====
-    print(dict)
+   	print(dict)
 
 .. parsonsprob:: mixedupcode_question10_8
    :numbered: left
@@ -169,19 +169,19 @@ Mixed-Up Code Questions
    =====
    for tup in list_of_tuples:
    =====
-    longest_word = ''
+   	longest_word = ''
    =====
-    longest_word = 0 #paired
+   	longest_word = 0 #paired
    =====
-    for item in tup:
+   	for item in tup:
    =====
-     if len(item) > len(longest_word):
+   		if len(item) > len(longest_word):
    =====
-      longest_word = item
+   			longest_word = item
    =====
-      longest_word = len(item) #paired
+   			longest_word = len(item) #paired
    =====
-    lst.append(longest_word)
+   	lst.append(longest_word)
 
 .. parsonsprob:: mixedupcode_question10_9
    :numbered: left
