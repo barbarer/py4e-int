@@ -1,4 +1,4 @@
-Getting the length of a string using ``len``
+Getting the length of a string using ``len()``
 ----------------------------------------------
 .. index::
     pair: Function; Len
@@ -6,7 +6,7 @@ Getting the length of a string using ``len``
     pair: Index; Negative
 
 
-``len`` is a built-in function that returns the number of
+``len()`` is a built-in function that returns the number of
 characters in a string:
 
 .. activecode:: string-fruit
@@ -21,9 +21,9 @@ characters in a string:
     :answer_b: 15
     :answer_c: 10
     :correct: b
-    :feedback_a: Don't forget to include the spaces in the count.
-    :feedback_b: The len function returns the number of elements in the string including spaces.
-    :feedback_c: This would be true if the len function only returned the number of alphabetic characters, but it includes all including spaces.
+    :feedback_a: Incorrect! Don't forget to include the spaces in the count. Try again.
+    :feedback_b: Correct! The len function returns the number of characters in the string, including spaces.
+    :feedback_c: Incorrect! This would be true if the len function only returned the number of alphabetic characters, but it includes all including spaces. Try again.
 
 
     What is printed by the following statements?
@@ -70,10 +70,10 @@ on.
     :answer_c: a
     :answer_d: Error, len(s) is 12 and there is no index 12.
     :correct: b
-    :feedback_a: Take a look at the index calculation again, len(s)-5.
-    :feedback_b: Yes, len(s) is 12 and 12-5 is 7.  Use 7 as index and remember to start counting with 0.
-    :feedback_c: a is at index 6
-    :feedback_d: You subtract 5 before using the index operator so it will work.
+    :feedback_a: Incorrect! Take a look at the index calculation again. Try again.
+    :feedback_b: Correct! Yes, len(s) is 12 and 12-5 is 7. Index 7 of s is 'l'.
+    :feedback_c: Incorrect! 'a' is at index 6. Try again.
+    :feedback_d: Incorrect! You subtract 5 before using the index operator, so there isn't an error. Try again.
 
 
     What is printed by the following statements?
@@ -91,10 +91,10 @@ on.
     :answer_c: s
     :answer_d: Error, negative indices are illegal.
     :correct: a
-    :feedback_a: Yes, 3 characters from the end.
-    :feedback_b: Count backward 3 characters.
-    :feedback_c: When expressed with a negative index the last character s is at index -1.
-    :feedback_d: Python does use negative indices to count backward from the end.
+    :feedback_a: Correct! 'c' is three characters from the end of the string.
+    :feedback_b: Incorrect! s[-3] means to use the third to last character. Try again.
+    :feedback_c: Incorrect! When expressed with a negative index, 's' is at index -1. Try again.
+    :feedback_d: Incorrect! Python uses negative indices to count backwards from the end. Try again.
 
 
     What is printed by the following statements?

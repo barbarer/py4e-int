@@ -7,7 +7,7 @@ Write Code Questions
 
         .. tab:: Question
 
-            Fix the 5 errors in the code below to print a countdown of the numbers from 10 to 0.
+            Fix the 5 errors in the code below to print a countdown of the numbers from 10 to 0, including 0.
 
             .. activecode:: itr-ex-countdownq
                 :practice: T
@@ -54,8 +54,8 @@ Write Code Questions
     .. activecode:: itr-ex-100Loopq
         :practice: T
 
-        The following code will loop too many times. Change one line that
-        will to make it loop only 5 times.
+        The following code will loop way too many times. Change one line to
+        make the loop only have five iterations.
         ~~~~
         x = 5
         while x < 100:
@@ -68,7 +68,7 @@ Write Code Questions
 
         .. tab:: Question
 
-            Make 5 changes to the code below to correctly print a count up from -10 to 0.
+            Make 5 changes to the code below to correctly print a count up from -10 to 0, including 0.
 
             .. activecode:: itr-ex-countq
                 :practice: T
@@ -113,7 +113,7 @@ Write Code Questions
         :practice: T
         :autograde: unittest
 
-        Finish lines 1 and 5 so that the following code correct prints all the values from -5 to -1.
+        Finish lines 1 and 5 so that the following code correctly prints every integer from -5 to -1, including -1.
         ~~~~
         output =
         x = -5
@@ -176,7 +176,7 @@ Write Code Questions
     .. activecode::  itr-ex-rootq
         :practice: T
 
-        The code below is supposed to print an estimate of the square root. But,
+        The code below is supposed to print an estimate of the square root of a number, but
         the indention is wrong on 4 lines. Fix these errors to find the estimate.
         ~~~~
         target = 6
@@ -194,9 +194,9 @@ Write Code Questions
 
         .. tab:: Question
 
-            The function currently takes a start and stop argument and uses a for
+            This function currently takes a start and stop argument and uses a for
             loop to find the sum of all the numbers between them (inclusive). Change
-            the for loop to a while loop while still using the parameters.
+            the for loop to a while loop while still using the same parameters.
 
             .. activecode:: int-ex-inclusiveq
                 :practice: T
@@ -249,12 +249,12 @@ Write Code Questions
         :practice: T
         :autograde: unittest
 
-        The program below is supposed to print the times tables for 1 to 3, but
+        The program below is supposed to print the times tables from 1 to 3, but
         there are 5 errors.  Fix the errors.
         ~~~~
-        for x in range(1,3):
-            for y in range(1,10)
-                print(str(x) + " * " str(y) + " = " x*y)
+        for x in range(1, 3):
+            for y in range(1, 4)
+                print(str(x) + " * " str(y) + " = " x * y)
 
 #.
     .. tabbed:: int-ex-timesWhile
@@ -267,9 +267,9 @@ Write Code Questions
             .. activecode::  int-ex-timesWhileq
                 :nocodelens:
 
-                for x in range(1,4):
-                    for y in range(1,11):
-                        print(str(x) + " * " + str(y) + " = " + str(x*y))
+                for x in range(1, 4):
+                    for y in range(1, 4):
+                        print(str(x) + " * " + str(y) + " = " + str(x * y))
 
         .. tab:: Answer
 
@@ -279,15 +279,15 @@ Write Code Questions
                 # There are a few different ways this can be done
                 # One is shown here
 
-                for x in range(1,4):
+                for x in range(1, 4):
                     # Create an iteration variable, starting in the range
                     y = 1
-                    # Use while loop if the iteration variable is less than 11
-                    while y < 11:
+                    # Use while loop if the iteration variable is less than 4
+                    while y < 4:
                         # Print the string
-                        print(str(x) + " * " + str(y) + " = " + str(x*y))
+                        print(str(x) + " * " + str(y) + " = " + str(x * y))
                         # Increment the iteration variable
-                        y += 1
+                        y = y + 1
 
 #.
     .. activecode:: int-ex-whileq

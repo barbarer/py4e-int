@@ -49,20 +49,20 @@ that, it is the same as any other string.
 
     Given that ``fruit`` is a string, how many characters does ``fruit[:]`` select?
 
-    - :([Aa]ll)|5|([Ff]ive): [:] selects the entire string
-      :.*: Try again! It could be helpful to run this in an activecode block.
+    - :([Aa]ll)|5|([Ff]ive): [:] Correct! It selects the entire string.
+      :.*: Incorrect! It could be helpful to run this in an activecode block. Try again.
 
 .. mchoice:: str-slice-mc-hello
     :practice: T
     :answer_a: 4
     :answer_b: 5
     :answer_c: 6
-    :answer_d: Error, the for statement cannot use slice.
+    :answer_d: Error, the for statement cannot use string slices.
     :correct: b
-    :feedback_a: Slice returns a sequence that can be iterated over.
-    :feedback_b: Yes, The blank is part of the sequence returned by slice
-    :feedback_c: Check the result of s[3:8].  It does not include the item at index 8.
-    :feedback_d: Slice returns a sequence.
+    :feedback_a: Incorrect! Slicing includes the first index but excludes the last. Try again.
+    :feedback_b: Correct! s[3:8] is "egran", which is five characters long, so "HELLO" is printed five times.
+    :feedback_c: Incorrect! Slicing includes the first index but excludes the last. Try again.
+    :feedback_d: Incorrect! Slicing returns a sequence that can be iterated over with a for loop. Try again.
 
 
     How many times is the word HELLO printed by the following statements?
@@ -79,9 +79,9 @@ that, it is the same as any other string.
     :answer_b: This
     :answer_c: his
     :correct: c
-    :feedback_a: This would be true if we were printing the value of str and we hand't changed it on line 2.
-    :feedback_b: This would be true if the first position was 1 and the substring included the character at the end position, but the first character in a string is at position 0 and the substring won't include the character at the last position.
-    :feedback_c: This will return a string that starts at position 1 and ends at position 3.
+    :feedback_a: Incorrect! The string slicing on line 2 takes out part of the original str. Try again.
+    :feedback_b: Incorrect! The slice operator includes the first index and excludes the last. Try again.
+    :feedback_c: Correct! str[1:4] starts with the character at index 1 and ends after the character at index 3.
 
     What will be printed when the following executes?
 
@@ -95,12 +95,12 @@ that, it is the same as any other string.
     :answer_a: python
     :answer_b: rocks
     :answer_c: hon r
-    :answer_d: Error, you cannot have two numbers inside the [ ].
+    :answer_d: Error, you cannot have two numbers inside the [].
     :correct: c
-    :feedback_a: That would be s[0:6].
-    :feedback_b: That would be s[7:].
-    :feedback_c: Yes, start with the character at index 3 and go up to but not include the character at index 8.
-    :feedback_d: This is called slicing, not indexing.  It requires a start and an end.
+    :feedback_a: Incorrect! That would be s[0:6]. Try again.
+    :feedback_b: Incorrect! That would be s[7:]. Try again.
+    :feedback_c: Correct! The space is considered a character.
+    :feedback_d: Incorrect! String slicing requires a starting index and an ending index. Try again.
 
 
     What is printed by the following statements?
