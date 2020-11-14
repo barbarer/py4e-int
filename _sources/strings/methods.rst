@@ -15,10 +15,9 @@ contains both data (the actual string itself) and
 into the object and are available to any *instance* of
 the object.
 
-Python has a function called ``dir`` which lists the methods
-available for an object. The ``type`` function shows the type
-of an object and the ``dir`` function shows the available
-methods.
+Python has a function called ``dir`` which lists all the methods
+available for an object. The ``type`` function returns the type
+of an object.
 
 .. activecode:: str-methods
     :caption: String methods through Python interpreter
@@ -44,15 +43,18 @@ https://docs.python.org/library/stdtypes.html#string-methods.
         Return a capitalized version of S, i.e. make the first character
         have upper case and the rest lower case.
     >>>
+
 .. mchoice:: str-method-mc-dir
     :practice: T
-    :answer_a: dir
-    :answer_b: print
-    :answer_c: list
+    :answer_a: dir()
+    :answer_b: print()
+    :answer_c: type()
+    :answer_d: object()
     :correct: a
     :feedback_a: Correct! dir() will list all the methods that can be used with an object.
-    :feedback_b: Try again! The function print() prints whatever is within the parentheses.
-    :feedback_c: Try again. list is actually a mutable sequence type,
+    :feedback_b: Incorrect! print() prints whatever is within the parentheses. Try again.
+    :feedback_c: Incorrect! type() returns the type of the object within its parentheses. Try again.
+    :feedback_d: Incorrect! object() returns a new featureless object. Try again.
 
     What function lists the methods available for an object?
 
@@ -62,10 +64,8 @@ a method by appending the method name to the variable name using the
 period as a delimiter.
 
 For example, the method ``upper`` takes a string and returns a
-new string with all uppercase letters:
-
-Instead of the function syntax ``upper(word)``, it uses the
-method syntax ``word.upper()``.
+new string with all uppercase letters. Instead of the function
+syntax, ``upper(word)``, it uses the method syntax, ``word.upper()``.
 
 .. activecode:: str-methodUpper
     :caption: Using the method "upper"
@@ -105,7 +105,7 @@ The ``find`` method can find substrings as well as characters:
     2
 
 
-It can take as a second argument the index where it should start:
+It can also take as a second argument the index where it should start:
 
 .. code-block:: python
 
@@ -124,7 +124,7 @@ method:
     print(line.strip())
 
 
-Some methods such as *startswith* return boolean values.
+Some methods, such as ``startswith``, return boolean values:
 
 .. activecode:: str-startswith
     :caption: Using the method "startswith"
@@ -135,8 +135,8 @@ Some methods such as *startswith* return boolean values.
 
 
 You will note that ``startswith`` requires case to match, so
-sometimes we take a line and map it all to lowercase before we do any
-checking using the ``lower`` method.
+sometimes we'll convert a line to lowercase using the ``lower``
+method before we do any checking:
 
 .. activecode:: str-methodStartsWith
     :caption: Using the method "startswith" and "lower"
@@ -145,6 +145,7 @@ checking using the ``lower`` method.
     line.startswith('h')
 
     print(line.lower())
+
     print(line.lower().startswith('h'))
 
 
@@ -164,8 +165,8 @@ can make multiple method calls in a single expression.
                :nocodelens:
 
                def countSS(word):
-                   sCounter is word.count('s')
-                   return Counter
+                   counter == count(word, 'ss'):
+                   return counter
 
                ====
                from unittest.gui import TestCaseGui
@@ -188,12 +189,14 @@ can make multiple method calls in a single expression.
 .. mchoice:: str-method-mc-cheer
     :practice: T
     :answer_a: 0
-    :answer_b: 2
-    :answer_c: 3
-    :correct: c
-    :feedback_a: There are definitely e and b characters.
-    :feedback_b: There are 2 e characters but what about b?
-    :feedback_c: Yes, add the number of e characters and the number of b characters.
+    :answer_b: 1
+    :answer_c: 2
+    :answer_d: 3
+    :correct: d
+    :feedback_a: Incorrect! Both 'e' and 'b' are present in the string. Try again.
+    :feedback_b: Incorrect! There is only one 'b', but there are multiple e's as well. Try again.
+    :feedback_c: Incorrect! There are two e's, but there is a 'b' as well. Try again.
+    :feedback_d: Correct! There are two e's and one b, so added together, this will print "3".
 
 
     What is printed by the following statements?
@@ -206,12 +209,12 @@ can make multiple method calls in a single expression.
 
 .. dragndrop:: str-method-dnd-use
     :practice: T
-    :feedback: Many of the names of these methods are hints to what they do!
-    :match_1: capitalize|||Return a copy of the string with its first character capitalized and the rest lowercased.
-    :match_2: count|||Return the number of non-overlapping occurrences of substring sub in the range [start, end].
-    :match_3: endswith|||Return True if the string ends with the specified suffix, otherwise return False.
-    :match_4: find|||Return the lowest index in the string where substring sub is found within the slice s[start:end].
-    :match_5: strip|||Return a copy of the string with the leading and trailing characters removed.
-    :match_6: upper|||Return a copy of the string with all the cased character converted to uppercase.
+    :feedback: If you need help, try looking online for the effects of these methods.
+    :match_1: capitalize()|||Returns a copy of a string with its first character capitalized and the rest lowercased.
+    :match_2: count()|||Returns the number of non-overlapping occurrences of a substring in the range [start, end].
+    :match_3: endswith()|||Returns True if a string ends with the specified suffix. Otherwise, it returns False.
+    :match_4: find()|||Returns the lowest index in a string where a substring is found. An optional parameter restricts the search to a slice of the string.
+    :match_5: strip()|||Returns a copy of a string with the leading and trailing whitespace characters removed.
+    :match_6: upper()|||Returns a copy of a string with all characters converted to uppercase.
 
-    Match these common string methods with their function.
+    Match these common string methods with their function. Hint: many of the names of these methods are hints to what they do!

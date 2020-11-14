@@ -20,10 +20,12 @@ characters in a string:
     :answer_a: 13
     :answer_b: 15
     :answer_c: 10
+    :answer_d: 6
     :correct: b
     :feedback_a: Incorrect! Don't forget to include the spaces in the count. Try again.
     :feedback_b: Correct! The len function returns the number of characters in the string, including spaces.
-    :feedback_c: Incorrect! This would be true if the len function only returned the number of alphabetic characters, but it includes all including spaces. Try again.
+    :feedback_c: Incorrect! This would be true if the len function only returned the number of different characters present, but it includes all characters, including spaces. Try again.
+    :feedback_d: Incorrect! This is the length of the word "street", not the length of the string named street. Try again.
 
 
     What is printed by the following statements?

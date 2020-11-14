@@ -75,19 +75,21 @@ that, it is the same as any other string.
 
 .. mchoice:: str-slice-mc-end
     :practice: T
-    :answer_a: This is the end
-    :answer_b: This
-    :answer_c: his
+    :answer_a: Python is cool
+    :answer_b: Pyt
+    :answer_c: yth
+    :answer_d: ytho
     :correct: c
     :feedback_a: Incorrect! The string slicing on line 2 takes out part of the original str. Try again.
-    :feedback_b: Incorrect! The slice operator includes the first index and excludes the last. Try again.
+    :feedback_b: Incorrect! Indices in Python start at 0. Try again.
     :feedback_c: Correct! str[1:4] starts with the character at index 1 and ends after the character at index 3.
+    :feedback_d: Incorrect! The slice operator includes the first index and excludes the last. Try again.
 
     What will be printed when the following executes?
 
     ::
 
-      str = "This is the end"
+      str = "Python is cool"
       str = str[1:4]
       print(str)
 

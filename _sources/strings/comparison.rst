@@ -31,27 +31,25 @@ order:
 
 
 Python does not handle uppercase and lowercase letters the same way that
-people do. All the uppercase letters come before all the lowercase
-letters, so "Pineapple" comes before "banana".
+people do. All uppercase letters come before all lowercase letters, so
+"Pineapple" is less than "banana", even though "pineapple" is greater than "banana".
 
 A common way to address this problem is to convert strings to a standard
-format, such as all lowercase, before performing the comparison. Keep
-that in mind in case you have to defend yourself against a man armed
-with a Pineapple.
+format, such as all lowercase, before performing the comparison.
 
 .. mchoice:: str-comp-mc-dog1
     :practice: T
     :answer_a: True
     :answer_b: False
     :correct: a
-    :feedback_a: Both match up to the g but Dog is shorter than Doghouse so it comes first in the dictionary.
-    :feedback_b: Strings are compared character by character.
+    :feedback_a: Correct! 'a' comes before 's'
+    :feedback_b: Incorrect! Letters earlier in the alphabet are treated as less than letters later in the alphabet. Try again.
 
     Evaluate the following comparison:
 
     .. code-block:: python
 
-      "Dog" < "Doghouse"
+      "dog" < "shark"
 
 
 
@@ -59,17 +57,15 @@ with a Pineapple.
     :practice: T
     :answer_a: True
     :answer_b: False
-    :answer_c: They are the same word
     :correct: b
-    :feedback_a: d is greater than D according to the ord function (68 versus 100).
-    :feedback_b: Yes, upper case is less than lower case according to the ordinal values of the characters.
-    :feedback_c: Python is case sensitive meaning that upper case and lower case characters are different.
+    :feedback_a: Incorrect! Strings are compared character by character. Try again.
+    :feedback_b: Correct! Both strings match until the 'g', but Dog is shorter than Doghouse so it comes first in the dictionary.
 
     Evaluate the following comparison:
 
     .. code-block:: python
 
-      "dog" < "Dog"
+      "Dog" > "Doghouse"
 
 
 
@@ -77,12 +73,15 @@ with a Pineapple.
     :practice: T
     :answer_a: True
     :answer_b: False
+    :answer_c: They are the same word
     :correct: b
-    :feedback_a: d is greater than D.
-    :feedback_b: The length does not matter.  Lower case d is greater than upper case D.
+    :feedback_a: Incorrect! Remember, uppercase letters come before lowercase letters. Try again.
+    :feedback_b: Correct! In Python, uppercase letters are less than lowercase letters.
+    :feedback_c: Incorrect! Python is case sensitive, meaning that uppercase characters and lowercase characters are treated as different. Try again.
 
     Evaluate the following comparison:
 
     .. code-block:: python
 
-      "dog" < "Doghouse"
+      "dog" < "Dog"
+

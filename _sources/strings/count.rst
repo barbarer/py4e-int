@@ -31,43 +31,43 @@ r's.
 
 .. mchoice:: str-count-mc-t
     :practice: T
-    :answer_a: 1
-    :answer_b: 2
-    :answer_c: 3
-    :answer_d: 4
-    :correct: d
-    :feedback_a: This is the value count starts at.
-    :feedback_b: The letter t appears more than 2 times in "peanut butter".
-    :feedback_c: Keep in mind the value count starts at.
-    :feedback_d: Correct! Count starts at 1 and then increases 3 times - 1 for each t in "peanut butter".
+    :answer_a: 0
+    :answer_b: 3
+    :answer_c: 4
+    :answer_d: Nothing, this is an infinite loop
+    :correct: b
+    :feedback_a: Incorrect! count is initialized to 0, but is then incremented by the for loop. Try again.
+    :feedback_b: Correct! The letter t appears 3 times in "peanut butter".
+    :feedback_c: Incorrect! The value of count is initially 0, not 1. Try again.
+    :feedback_d: Incorrect! This for loop will eventually terminate because string s has a finite number of characters. Try again.
 
-    What is printed by the following statements:
+    What is printed by the following:
 
     .. code-block:: python
 
       s = "peanut butter"
-      count = 1
+      count = 0
       for char in s:
           if char == "t":
-          count += 1
+          	count = count + 1
       print(count)
 
 .. tabbed:: str-count-fix
 
     .. tab:: Question
 
-        There are three errors in the following code. Fix the function so it takes a string and a
+        There are four errors in the following code. Fix the function so it takes a string and a
         character as arguments and returns the count of the character within the string.
 
         .. activecode:: str-count-fixq
             :nocodelens:
 
             def count(text, aChar):
-            lettercount = 0
+            	lettercount = 1
                 for c in text:
-                    if c != aChar:
-                        lettercount = lettercount + 3
-                return lettercount
+                    if c = aChar:
+                        count = count + 1
+            return lettercount
 
             ====
             from unittest.gui import TestCaseGui
@@ -91,7 +91,7 @@ r's.
                 for c in text:
                     if c == aChar:
                         lettercount = lettercount + 1
-            return lettercount
+            	return lettercount
 
     .. tab:: Discussion
 
