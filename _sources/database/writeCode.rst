@@ -114,3 +114,116 @@ Write Code Questions
       assert 3,1 == 85318
       assert 7,0 == W00202
       assert 7,1 == 85102
+
+#.
+
+   .. activecode:: db_select_bike_join_all_cols
+      :language: sql
+      :autograde: unittest
+      :dburl: https://runestone.academy/runestone/books/published/overview/_static/bikeshare.db
+
+      Given a database of bike share information write a SELECT statement to
+      retrieve all the columns from tables ``trip_data`` and ``bikeshare_stations``
+      where the ``start_station`` in ``trip_data`` is the same as the ``station_id`` in ``bikeshare_stations``.
+      Limit the results to 5 rows.
+      ~~~~
+
+      ====
+      assert 0,0 == 513639
+      assert 0,4 == 31104
+      assert 0,6 == W00058
+      assert 1,0 == 718494
+      assert 1,1 == 1978
+      assert 1,11 == open
+      assert 4,0 == 578726
+      assert 4,1 == 1008
+      assert 4,11 == open
+
+
+#.
+
+   .. activecode:: db_select_bike_join_three_cols
+      :language: sql
+      :autograde: unittest
+      :dburl: https://runestone.academy/runestone/books/published/overview/_static/bikeshare.db
+
+      Given a database of bike share information write a SELECT statement to
+      retrieve the ``duration`` and ``bike_number`` from ``trip_data`` and the ``name`` from ``bikeshare_stations``
+      where the ``start_station`` in ``trip_data`` is the same as the ``station_id`` in ``bikeshare_stations``.
+      Limit the results to 5 rows.
+      ~~~~
+
+      ====
+      assert 0,0 == 332
+      assert 0,1 == W00058
+      assert 0,2 == "Adams Mill & Columbia Rd NW"
+      assert 1,0 == 1978
+      assert 1,1 == W00775
+      assert 4,0 == 1008
+      assert 4,1 == W00392
+      assert 4,2 == "14th St & Spring Rd NW"
+
+#.
+
+   .. activecode:: db_select_bike_join_four_cols
+      :language: sql
+      :autograde: unittest
+      :dburl: https://runestone.academy/runestone/books/published/overview/_static/bikeshare.db
+
+      Given a database of bike share information write a SELECT statement to
+      retrieve the ``duration`` and ``bike_number`` from ``trip_data`` and the ``name``, `latitude` and ``longitude`` from ``bikeshare_stations``
+      where the ``start_station`` in ``trip_data`` is the same as the ``station_id`` in ``bikeshare_stations``.
+      Limit the results to 5 rows.
+      ~~~~
+
+      ====
+      assert 0,0 == 332
+      assert 0,1 == W00058
+      assert 0,3 == 38.9226377090252
+      assert 1,0 == 1978
+      assert 1,1 == W00775
+      assert 4,0 == 1008
+      assert 4,1 == W00392
+      assert 4,4 == -77.0327126210449
+
+#.
+
+   .. activecode:: db_select_bike_join_four_cols_where_station
+      :language: sql
+      :autograde: unittest
+      :dburl: https://runestone.academy/runestone/books/published/overview/_static/bikeshare.db
+
+      Given a database of bike share information write a SELECT statement to
+      retrieve the ``bike_number``, ``start_data``, and ``end_date`` from ``trip_data`` and the ``station_id`` and ``name`` from ``bikeshare_stations``
+      where the ``start_station`` in ``trip_data`` is the same as the ``station_id`` in ``bikeshare_stations``
+      and where the ``station_id`` equals 31101.  Limit the results to 5 rows.
+      ~~~~
+
+      ====
+      assert 0,0 == W00013
+      assert 0,3 == 31101
+      assert 1,0 == W00719
+      assert 1,3 == 31101
+      assert 4,0 == W00821
+      assert 4,3 == 31101
+
+#.
+
+   .. activecode:: db_select_bike_join_five_cols_where_member
+      :language: sql
+      :autograde: unittest
+      :dburl: https://runestone.academy/runestone/books/published/overview/_static/bikeshare.db
+
+      Given a database of bike share information write a SELECT statement to
+      retrieve the ``bike_number``, ``start_data``, and ``end_date`` from ``trip_data`` and the ``station_id`` and ``name`` from ``bikeshare_stations``
+      where the ``start_station`` in ``trip_data`` is the same as the ``station_id`` in ``bikeshare_stations``
+      and where the ``member_type`` equals "Casual".  Limit the results to 5 rows.
+      ~~~~
+
+      ====
+      assert 0,0 == W00775
+      assert 0,3 == 31230
+      assert 1,0 == W00204
+      assert 1,3 == 31604
+      assert 4,0 == W00568
+      assert 4,3 == 31216
