@@ -171,7 +171,7 @@ Write Code Questions
       :dburl: https://runestone.academy/runestone/books/published/overview/_static/bikeshare.db
 
       Given a database of bike share information write a SELECT statement to
-      retrieve the ``duration`` and ``bike_number`` from ``trip_data`` and the ``name``, `latitude` and ``longitude`` from ``bikeshare_stations``
+      retrieve the ``duration`` and ``bike_number`` from ``trip_data`` and the ``name``, ``latitude``, and ``longitude`` from ``bikeshare_stations``
       where the ``start_station`` in ``trip_data`` is the same as the ``station_id`` in ``bikeshare_stations``.
       Limit the results to 5 rows.
       ~~~~
