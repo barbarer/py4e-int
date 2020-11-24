@@ -20,10 +20,10 @@ format operator.
     :answer_c: format
     :answer_d: conversion
     :correct: b,c
-    :feedback_a: Try again! The division operator is /
+    :feedback_a: Incorrect! The division operator is '/'. Try again. 
     :feedback_b: Correct! % can be used to find the remainder.
     :feedback_c: Correct! % can be used to specify how string is formatted.
-    :feedback_d: Try again! Conversion uses the int, str, or other functions.
+    :feedback_d: Incorrect! Conversion uses "int", "str", or other functions. Try again. 
 
     The % operator is used for which purposes? Select all that apply.
 
@@ -37,11 +37,11 @@ should be formatted as an integer ("d" stands for "decimal"):
 .. code-block:: python
 
     >>>camels = 42
-    >>>'%d' % camels
+    >>>print('%d' % camels)
     42
 
 
-The result is the string '42', which is not to be confused with the
+The result is the string "42", which is not to be confused with the
 integer value 42.
 
 A format sequence can appear anywhere in the string, so you can embed a
@@ -56,9 +56,8 @@ value in a sentence:
 
 If there is more than one format sequence in the string, the second
 argument has to be a tuple [A tuple is a sequence of comma-separated
-values inside a pair of parenthesis. We will cover tuples in Chapter 10].
-Each format sequence is matched with an
-element of the tuple, in order.
+values inside a pair of parentheses. We will cover tuples in Chapter 10].
+Each format sequence is matched with an element of the tuple, in order.
 
 The following example uses ``%d`` to format an integer, ``%g`` to format
 a floating-point number (don't ask why), and ``%s`` to format a string:
@@ -95,9 +94,9 @@ https://docs.python.org/library/stdtypes.html#printf-style-string-formatting.
     :answer_b: integer
     :answer_c: float
     :correct: b
-    :feedback_a: %d does not format strings.
-    :feedback_b: %d formats integers.
-    :feedback_c: %d does not format floating point numbers.
+    :feedback_a: Incorrect! %s formats strings. Try again.
+    :feedback_b: Correct! %d formats integers.
+    :feedback_c: Incorrect! %g formats floating point numbers. Try again.
 
     What does the %d operator format?
 
@@ -107,9 +106,9 @@ https://docs.python.org/library/stdtypes.html#printf-style-string-formatting.
     :answer_b: integer
     :answer_c: float
     :correct: c
-    :feedback_a: %g does not format strings.
-    :feedback_b: %g does not format integers.
-    :feedback_c: %g formats floating point numbers.
+    :feedback_a: Incorrect! %s formats strings. Try again.
+    :feedback_b: Incorrect! %d formats integers. Try again.
+    :feedback_c: Correct! %g formats floating point numbers.
 
     What does the %g operator format?
 
@@ -119,8 +118,8 @@ https://docs.python.org/library/stdtypes.html#printf-style-string-formatting.
     :answer_b: integer
     :answer_c: float
     :correct: a
-    :feedback_a: %s formats strings.
-    :feedback_b: %s does not format integers.
-    :feedback_c: %s does not format floating point numbers.
+    :feedback_a: Correct! %s formats strings.
+    :feedback_b: Incorrect! %d formats integers. Try again.
+    :feedback_c: Incorrect! %g formats floating point numbers. Try again.
 
     What does the %s operator format?

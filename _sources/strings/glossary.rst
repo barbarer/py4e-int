@@ -4,7 +4,7 @@ Glossary
 .. glossary::
 
     Counter
-      A variable used to count something, usually initialized to zero and then incremented.
+      A variable used to count something. It's usually initialized to zero and then incremented.
 
     Empty String
       A string with no characters and length 0, represented by two quotation marks.
@@ -25,7 +25,7 @@ Glossary
       A statement that calls a method.
 
     Immutable
-      The property of a sequence whose items cannot be assigned.
+      A property of sequences whose items cannot be reassigned.
 
     String Index
       An integer value used to select a character in a string.
@@ -37,7 +37,7 @@ Glossary
       A function that is associated with an object and called using dot notation.
 
     String Object
-      Something a variable can refer to. For now, you can use "object" and "value" interchangeably.
+      A string that a variable can refer to. For now, you can use "object" and "value" interchangeably.
 
     Search
       A pattern of traversal that stops when it finds what it is looking for.
@@ -54,10 +54,10 @@ Glossary
 
 .. dragndrop:: str-glossary1
       :feedback: Look above for the definitions of these terms.
-      :match_1: counter|||A variable used to count something, usually initialized to zero and then incremented.
+      :match_1: counter|||A variable used to count something. It's usually initialized to zero and then incremented.
       :match_2: empty string|||A string with no characters and length 0, represented by two quotation marks.
       :match_3: index|||An integer value used to select an item in a sequence, such as a character in a string.
-      :match_4: object|||Something a variable can refer to.
+      :match_4: string object|||A string that a variable can refer to.
 
       Match each term with its definition.
 
@@ -81,7 +81,7 @@ Glossary
 
 .. dragndrop:: str-glossary4
     :feedback: Look above for the definitions of these terms.
-    :match_1: immutable||| The property of a sequence whose items cannot be assigned.
+    :match_1: immutable||| A property of sequences whose items cannot be reassigned.
     :match_2: method|||A function that is associated with an object and called using dot notation.
     :match_3: search|||A pattern of traversal that stops when it finds what it is looking for.
     :match_4: traverse|||To iterate through the items in a sequence, performing a similar operation on each.

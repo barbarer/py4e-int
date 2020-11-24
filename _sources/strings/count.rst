@@ -83,6 +83,9 @@ r's.
 
     .. tab:: Answer
 
+	In line 2, ``lettercount`` should be initialized to 0. In line 4, there should be a ``==``, not a ``=``.
+	In line 5, the variable name should be changed to ``lettercount``. In line 6, the return statement should be indented.
+
         .. activecode:: str-count-fixa
             :nocodelens:
 

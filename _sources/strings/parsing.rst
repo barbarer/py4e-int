@@ -13,8 +13,8 @@ and we wanted to pull out only the second half of the address (i.e.,
 ``uct.ac.za``) from each line, we can do this by using the
 ``find`` method and string slicing.
 
-First, we will find the position of the at-sign in the string. Then we
-will find the position of the first space *after* the at-sign. And then
+First, we will find the position of the at-sign in the string. Then, we
+will find the position of the first space *after* the at-sign. Finally,
 we will use string slicing to extract the portion of the string which we
 are looking for.
 
@@ -27,16 +27,16 @@ are looking for.
     data = 'From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008'
     atpos = data.find('@')
     print(atpos)
-    sppos = data.find(' ',atpos)
-    print(sppos)
-    host = data[atpos+1:sppos]
+    spacepos = data.find(' ', atpos)
+    print(spacepos)
+    host = data[atpos + 1:spacepos]
     print(host)
 
 
 We use a version of the ``find`` method which allows us to
 specify a position in the string where we want ``find`` to
-start looking. When we slice, we extract the characters from "one beyond
-the at-sign through up to *but not including* the space character".
+start looking. When we slice, we extract the characters from one beyond
+the at-sign through *up to but not including* the space character.
 
 The documentation for the ``find`` method is available at
 
@@ -44,18 +44,18 @@ https://docs.python.org/library/stdtypes.html#string-methods.
 
 .. mchoice:: str-parse-mc-return
     :practice: T
-    :answer_a: true
-    :answer_b: false
+    :answer_a: True
+    :answer_b: False
     :correct: b
-    :feedback_a: Parsing is used to look into a string and find a substring.
-    :feedback_b: Parsing is used to look into a string and find a substring.
+    :feedback_a: Incorrect! That's not all that's included in the definition of parsing. Try again.
+    :feedback_b: Correct! Parsing refers to looking into a string and finding a substring.
 
-    True or false? Parsing is used only to look into a string?
+    True or false? "Parsing" refers to the process of looking into a string.
 
 .. fillintheblank:: str-parse-fitb-select
     :practice: T
 
-    What method is used to parse through and select segments of a string?
+    What string method is used to parse through and select segments of a string?
 
-    - :[Ff]ind: find is used to search through a string and select a certain part.
-      :.*: Try again! How will we *find* what we're looking for?
+    - :[Ff]ind: Correct! ``find`` is used to search through a string and select a specific substring.
+      :.*: Incorrect! You can *find* the answer by rereading this section. Try again.

@@ -37,17 +37,17 @@ create a new string that is a variation on the original:
 This example concatenates a new first letter onto a slice of
 ``greeting``. It has no effect on the original string.
 
-Or, you can completely redefine an existing string:
+Or, you can reassign an existing variable to a completely new string:
 
 .. activecode:: str-redefineString
-    :caption: Completely redefining a string
+    :caption: Completely reassigning a variable
 
     greeting = 'Hello, world!'
     greeting = 'Hola, mundo!'
     print(greeting)
 
-This example redefines the entire ``greeting`` object.
-A new ``greeting`` is created and the old ``greeting`` is discarded.
+This example assigns the ``greeting`` variable to represent a new string object.
+The old string object is deleted in the process.
 
 .. mchoice:: str-imm-mc-xyz
     :practice: T
@@ -95,4 +95,4 @@ A new ``greeting`` is created and the old ``greeting`` is discarded.
     You cannot change an existing string because it is ________.
 
     - :[Ii]mmutable: Correct! Strings are immutable, meaning you cannot change the object itself once it has been defined.
-      :.*: Incorrect! Try reading the chapter again. Try again!
+      :.*: Incorrect! Check your spelling. Try again.
