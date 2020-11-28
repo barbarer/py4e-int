@@ -23,14 +23,14 @@ Mixed-up Code Questions
     :practice: T
     :noindent:
 
-    The following program segment should print the phrase, "My new book cost $12.". But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+    The following program segment should print the phrase, "My new book cost $12". But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
     -----
     item = "new book"
     price = "12"
     =====
-    print("My " + item + " cost $" + price + ".")
+    print("My " + item + " cost $" + price)
     =====
-    print("My " item " cost $" price ".") #paired
+    print("My " item " cost $" price) #paired
 
 
 .. parsonsprob:: str-mixed-code
@@ -39,10 +39,10 @@ Mixed-up Code Questions
     :practice: T
     :noindent:
 
-    The following program segment should print the phrase, "Sam likes to code.". But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+    The following program segment should print the phrase, "Sam likes to code". But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
     -----
     person = "Sam "
-    thing = "likes to code."
+    thing = "likes to code"
     =====
     print(person + thing)
     =====
@@ -57,15 +57,16 @@ Mixed-up Code Questions
     :practice: T
     :noindent:
 
-    The following program segment should print the phrase, "It takes us 2 hours and 45 minutes to get home from camp.". But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+    The following program segment should print the phrase, "It takes us 2 hours and 45 minutes to get home from camp". But, the blocks have been mixed up and include two extra blocks that aren't correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
     -----
     numHours = 2
     numMinutes = 45.0
     =====
-    print("It takes us " + str(numHours) + " hours and " + str(numMinutes) + " minutes to get home from camp.")
+    print("It takes us " + str(numHours) + " hours and " + str(int(numMinutes)) + " minutes to get home from camp")
     =====
-    print("It takes us " + numHours + " hours and " + numMinutes + " minutes to get home from camp.") #paired
-
+    print("It takes us " + numHours + " hours and " + numMinutes + " minutes to get home from camp") #paired
+    =====
+    print("It takes us " + str(numHours) + " hours and " + str(numMinutes) + " minutes to get home from camp") #paired
 
 .. parsonsprob:: str-mixed-feeling
     :adaptive:
@@ -73,13 +74,13 @@ Mixed-up Code Questions
     :practice: T
     :noindent:
 
-    The following program segment should print the phrase, "Grace loves grapes.". But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+    The following program segment should print the phrase, "Grace loves grapes". But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
     -----
     feeling = "loves"
     =====
-    print("Grace" + feeling + "grapes.") #distractor
+    print("Grace" + feeling + "grapes") #distractor
     =====
-    print("Grace " + feeling + " grapes.")
+    print("Grace " + feeling + " grapes")
 
 
 .. parsonsprob:: str-mixed-animal
@@ -88,7 +89,7 @@ Mixed-up Code Questions
     :practice: T
     :noindent:
 
-    The following program segment should print the phrase, "My sheepdog looks like a Muppet.". But, the blocks have been mixed up and include two extra blocks that are not correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+    The following program segment should print the phrase, "My sheepdog looks like a Muppet". But, the blocks have been mixed up and include two extra blocks that are not correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
     -----
     animal = "sheepdog"
     =====
@@ -96,7 +97,7 @@ Mixed-up Code Questions
     =====
     animal = "sheepdog #distractor
     =====
-    print("My " + animal + " looks like a Muppet.")
+    print("My " + animal + " looks like a Muppet")
 
 
 .. parsonsprob:: str-mixed-add
@@ -105,7 +106,7 @@ Mixed-up Code Questions
     :practice: T
     :noindent:
 
-    The following program segment should print the phrase, "3 + 300 + 7 = 310.". But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+    The following program segment should print the phrase, "3 + 300 + 7 = 310". But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
     -----
     num1 = 3
     num2 = 300
@@ -125,12 +126,12 @@ Mixed-up Code Questions
 
     The following program segment should print the phrase, "I am a CS wizard". But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
     -----
-    var1 = "I am a"
-    var2 = "CS wizard."
+    var1 = "I am a "
+    var2 = "CS wizard"
     =====
-    print(var1 + " " + var2)
+    print(var1 + var2)
     =====
-    print(var1 + var2) #paired
+    print(var1 + " " + var2) #paired
 
 
 .. parsonsprob:: str-mixed-colors
@@ -139,7 +140,7 @@ Mixed-up Code Questions
     :practice: T
     :noindent:
 
-    The following program segment should print the phrase, "'Red' is a primary color. So is 'blue'.". But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+    The following program segment should print the phrase, "'Red' is a primary color, and so is 'blue'". But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
     -----
     col1 = "'Red'"
     col2 = "'blue'"
@@ -147,7 +148,7 @@ Mixed-up Code Questions
     col1 = "Red"
     col2 = "blue" #distractor
     =====
-    print(col1 + " is a primary color. So is " + col2 + ".")
+    print(col1 + " is a primary color, and so is " + col2)
 
 
 .. parsonsprob:: str-mixed-dogs
@@ -156,7 +157,7 @@ Mixed-up Code Questions
     :practice: T
     :noindent:
 
-    The following program segment should print the phrase, "Petting dogs makes me happier than anything else.". But, the blocks have been mixed up and include several extra blocks that are not correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+    The following program segment should print the phrase, "Petting dogs makes me happier than anything else". But, the blocks have been mixed up and include several extra blocks that are not correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
     -----
     var1 = "dogs"
     =====
@@ -166,4 +167,4 @@ Mixed-up Code Questions
     =====
     var1 = [dogs] #distractor
     =====
-    print("Petting " + var1 + " makes me happier than anything else.")
+    print("Petting " + var1 + " makes me happier than anything else")
