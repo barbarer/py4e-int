@@ -4,13 +4,13 @@ Multiple Choice Questions
     :practice: T
     :answer_a: yyyyy
     :answer_b: 55555
-    :answer_c: n
-    :answer_d: Error, you cannot combine all those things together.
+    :answer_c: y5
+    :answer_d: TypeError
     :correct: a
-    :feedback_a: Yes, s[1] is y and the index of n is 5, so 5 y characters.  It is important to realize that the index method has precedence over the repetition operator.  Repetition is done last.
-    :feedback_b: Close.  5 is not repeated, it is the number of times to repeat.
-    :feedback_c: This expression uses the index of n
-    :feedback_d: This is fine, the repetition operator used the result of indexing and the index method.
+    :feedback_a: Correct! s[1] = y and the index of n is 5, so y * 5 prints 5 y characters.
+    :feedback_b: Incorrect! s.index("n") = 5, but it is multiplying something else. Try again.
+    :feedback_c: Incorrect! The print statement contains multiplication. Try again.
+    :feedback_d: Incorrect! Multiplying a string by an int is allowed. Try again.
 
 
     What is printed by the following statements?
@@ -24,11 +24,13 @@ Multiple Choice Questions
     :practice: T
     :answer_a: 1
     :answer_b: 9
-    :answer_c: 10
+    :answer_c: 2
+    :answer_d: pos
     :correct: a
-    :feedback_a: The find function returns the index of the first position that contains the given string.
-    :feedback_b: This would be true if it was pos = str.find(" is").
-    :feedback_c: This would be true if it was pos = str.find(" is") and the first position was 1, but it is 0.
+    :feedback_a: Correct! The find function returns the index of the first position that contains the given string.
+    :feedback_b: Incorrect! The find function returns the index of the FIRST position that contains the given string. Try again.
+    :feedback_c: Incorrect! Remember, indices start at 0, not 1. Try again.
+    :feedback_d: Incorrect! pos is a variable, so print will print its value. Try again.
 
     What will be printed when the following executes?
 
@@ -41,38 +43,42 @@ Multiple Choice Questions
 .. mchoice:: str-ex-mc-end
     :practice: T
     :answer_a: i
-    :answer_b: s
-    :answer_c: is the end
+    :answer_b: ' '
+    :answer_c: is fun
+    :answer_d: This is fun
     :correct: a
-    :feedback_a: This will print the character at position 5 in the string which is i.  Remember that the first character is at position 0.
-    :feedback_b: This would be true if the first character was at position 1 instead of 0.
-    :feedback_c: This would be true if it returned from the given position to the end of the string, but that isn't what it does.
+    :feedback_a: Correct! This will print the character at position 5 in the string, which is i.
+    :feedback_b: Incorrect! Remember, indices start at 0. Try again.
+    :feedback_c: Incorrect! str[5] equals one specific character of the larger string. Try again.
+    :feedback_d: Incorrect! Line 2 permanently changes the value that the variable str is assigned to. Try again.
 
     What will be printed when the following executes?
 
     ::
 
-      str = "This is the end"
+      str = "This is fun"
       str = str[5]
       print(str)
 
 .. mchoice:: str-ex-mc-hey
     :practice: T
-    :answer_a: Hey
+    :answer_a: heY
     :answer_b: hey
     :answer_c: HEY
-    :correct: c
-    :feedback_a: This would be correct if we had asked what the value of s3 was. What is the value of s1?
-    :feedback_b: This would be true if we asked what the value of s2 was after the code executes.  What is the value of s1?
-    :feedback_c: Strings are immutable, meaning they don't change.  Any function that changes a string returns a new string.  So s1 never changes unless you set it to a different string.
+    :answer_d: Hey
+    :correct: d
+    :feedback_a: Incorrect! Although strings are immutable, s1 gets reassigned to a different value than it begins with. Try again.
+    :feedback_b: Incorrect! Strings are immutable, so line 3 just returns a new string and doesn't modify the original. Try again.
+    :feedback_c: Incorrect! The capitalize method doesn't capitalize the entire word. Try again.
+    :feedback_d: Correct! The capitalize method capitalizes the first letter of the word and lowercases the rest. Then, line 3 returns a new string without modifying the original.
 
     What is the value of s1 after the following code executes?
 
     ::
 
-      s1 = "HEY"
-      s2 = s1.lower()
-      s3 = s2.capitalize()
+      s1 = "heY"
+      s1 = s1.capitalize()
+      s1.lower()
 
 .. mchoice:: str-ex-mc-name
     :practice: T
@@ -81,10 +87,10 @@ Multiple Choice Questions
     :answer_c: 5 is Mali
     :answer_d: 5 is 5
     :correct: b
-    :feedback_a: There are no double quotes around the last Mali so it will use the value of the variable Mali.
-    :feedback_b: The first Mali is in double quotes so it will print the string Mali and the second Mali is not in double quotes so it will print the value of the variable Mali.
-    :feedback_c: The first Mali is in double quotes and the second is not.
-    :feedback_d: The first Mali is in double quotes so it is a string and the characters in the string will be printed.
+    :feedback_a: Incorrect! There are no quotes around the last Mali, so str() will use the value of the variable Mali. Try again.
+    :feedback_b: Correct! The first Mali is in quotes, so it will print the string "Mali". The second Mali is not in quotes, so it will print the value of the variable Mali.
+    :feedback_c: Incorrect! The first Mali is in quotes and the second is not. Try again.
+    :feedback_d: Incorrect! The first Mali is in quotes, so it is a string, not a variable. Try again.
 
     What would the following code print?
 
@@ -100,10 +106,10 @@ Multiple Choice Questions
     :answer_c: c
     :answer_d: Error, you cannot use the [ ] operator with a string.
     :correct: b
-    :feedback_a: Index locations do not start with 1, they start with 0.
-    :feedback_b: Yes, index locations start with 0.
-    :feedback_c: s[-3] would return c, counting from right to left.
-    :feedback_d: [ ] is the index operator
+    :feedback_a: Incorrect! Indices start at 0, not 1. Try again.
+    :feedback_b: Correct! Indices start with 0.
+    :feedback_c: Incorrect! s[-3] would count from right to left and return c. Try again.
+    :feedback_d: Incorrect! [ ] is the index operator and works with strings. Try again.
 
 
     What is printed by the following statements?
@@ -115,31 +121,35 @@ Multiple Choice Questions
 
 .. mchoice:: str-ex-mc-add
     :practice: T
-    :answer_a: tr
-    :answer_b: ps
-    :answer_c: nn
+    :answer_a: te
+    :answer_b: tw
+    :answer_c: o
     :answer_d: Error, you cannot use the [ ] operator with the + operator.
     :correct: a
-    :feedback_a: Yes, indexing operator has precedence over concatenation.
-    :feedback_b: p is at location 0, not 2.
-    :feedback_c: n is at location 5, not 2.
-    :feedback_d: [ ] operator returns a string that can be concatenated with another string.
+    :feedback_a: Correct! The indexing operator has precedence over concatenation.
+    :feedback_b: Incorrect! s[-1] is the last character of the string, so what is s[-5]? Try again.
+    :feedback_c: Incorrect! The indexing operator happens before the two strings are concatenated. Try again.
+    :feedback_d: Incorrect! [ ] operator returns a string that can be concatenated with another string. Try again.
 
 
     What is printed by the following statements?
 
     .. code-block:: python
 
-      s = "python rocks"
+      s = "python is awesome"
       print(s[2] + s[-5])
 
 .. mchoice:: str-ex-mc-len
     :practice: T
     :answer_a: 11
     :answer_b: 12
+    :answer_c: 1
+    :answer_d: Error, missing quotes around s
     :correct: b
-    :feedback_a: The blank counts as a character.
-    :feedback_b: Yes, there are 12 characters in the string.
+    :feedback_a: Incorrect! The space counts as a character. Try again.
+    :feedback_b: Correct! len() returns the number of characters in the string, including spaces.
+    :feedback_c: Incorrect! s is a variable, not a character. Try again.
+    :feedback_d: Incorrect! Because s is the name of a string variable, len() can be used on it. Try again.
 
 
     What is printed by the following statements?
@@ -154,11 +164,13 @@ Multiple Choice Questions
     :practice: T
     :answer_a: Rose
     :answer_b: Rise
-    :answer_c: Error
-    :correct: c
-    :feedback_a: Assignment is not allowed with strings.
-    :feedback_b: Assignment is not allowed with strings.
-    :feedback_c: Yes, strings are immutable.
+    :answer_c: s
+    :answer_d: TypeError
+    :correct: d
+    :feedback_a: Incorrect! Assignment is not allowed with strings. Try again.
+    :feedback_b: Incorrect! Assignment is not allowed with strings. Try again.
+    :feedback_c: Incorrect! Assignment is not allowed with strings. Try again.
+    :feedback_d: Correct! Strings are immutable, so you cannot change an existing string.
 
     What is printed by the following statements:
 
@@ -174,10 +186,12 @@ Multiple Choice Questions
     :answer_a: Ball
     :answer_b: BALL
     :answer_c: LLAB
+    :answer_d: TypeError
     :correct: c
-    :feedback_a: Each item is converted to upper case before concatenation.
-    :feedback_b: Each character is converted to upper case but the order is wrong.
-    :feedback_c: Yes, the order is reversed due to the order of the concatenation.
+    :feedback_a: Incorrect! Each item is converted to upper case before concatenation. Try again.
+    :feedback_b: Incorrect! Pay close attention to the order the characters will be in. Try again.
+    :feedback_c: Correct! The order is reversed due to the order of the concatenation.
+    :feedback_d: Incorrect! String concatenation is allowed. Try again.
 
     What is printed by the following statements:
 
@@ -192,14 +206,14 @@ Multiple Choice Questions
 .. mchoice:: str-ex-mc-rock
     :practice: T
     :answer_a: rockrockrock
-    :answer_b: rock rock rock
+    :answer_b:  rock rock rock
     :answer_c: rocksrocksrocks
-    :answer_d: Error, you cannot use repetition with slicing.
+    :answer_d: TypeError, you cannot use multiplication with slicing.
     :correct: a
-    :feedback_a: Yes, rock starts at 7 and goes through 10.  Repeat it 3 times.
-    :feedback_b: Repetition does not add a space.
-    :feedback_c: Slicing will not include the character at index 11.  Just up to it (10 in this case).
-    :feedback_d: The slice will happen first, then the repetition.  So it is ok.
+    :feedback_a: Correct! s[7:11] = "rock", which is then repeated 3 times.
+    :feedback_b: Incorrect! s[7:11] is "rock", not " rock". Try again.
+    :feedback_c: Incorrect! Slicing will not include the character at index 11, just the characters up to it. Try again.
+    :feedback_d: Incorrect! Multiplying a string by an int is okay. Try again.
 
 
     What is printed by the following statements?

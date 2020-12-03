@@ -42,8 +42,8 @@ Look what happens when the user enters an empty line of input:
 
     What kind of error will come from trying to access a nonexistent element or one that is out of range?
 
-    - :[Ii]ndex([Ee]rror)*: Correct! Try to access an index that isn't there causes a index error.
-      :.*: Try again!
+    - :[Ii]ndex([Ee]rror)?: Correct! Try to access an index that isn't there causes a index error.
+      :.*: Incorrect! Read the error message above for the answer. Try again.
 
 
 The code works fine until it is presented an empty line. Then there is
@@ -62,8 +62,8 @@ which returns ``False`` if the string is empty.
 
     What string method is used to prevent errors?
 
-    - :[Ss]tartswith: Correct! The string method startswith can be used as an extra check to prevent errors.
-      :.*: Try again! Watch your capitalization (methods don't use camelCase).
+    - :(\.)?startswith(\(\))?: Correct! The string method startswith can be used as an extra check to prevent errors.
+      :.*: Incorrect! Watch your capitalization (methods don't use camelCase). Try again.
 
 Another way is to safely write the ``if`` statement using the
 *guardian* pattern and make sure the second logical
@@ -79,5 +79,5 @@ the string.:
 
     What kind of pattern is used to prevent errors?
 
-    - :[Gg]uardian( [Pp]attern)*: Correct! A guardian pattern can be used as an extra check to prevent errors.
-      :.*: Try again!
+    - :[Gg]uardian( [Pp]attern)?: Correct! A guardian pattern can be used as an extra check to prevent errors.
+      :.*: Incorrect! Make sure you spelled it correctly. Try again.
