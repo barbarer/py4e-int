@@ -65,9 +65,9 @@ will even let Python tell us the list of characters that it considers
    :answer_b: line.translate(fromstr, tostr, deletestr)
    :answer_c: line.translate(str.translate(fromstr, tostr, deletestr))
    :correct: a
-   :feedback_a: Correct! In order to use .translate(), you have to map the translationusing the .maketrans() method.
-   :feedback_b: Try again!
-   :feedback_c: Try again!
+   :feedback_a: Correct! In order to use .translate(), you have to map the translation using the .maketrans() method.
+   :feedback_b: Try again! In order to use .translate(), you have to map the translation
+   :feedback_c: Try again! You have to map the translation using the .maketrans() method.
 
    Which line of code correctly uses the .translate() method?
 
@@ -111,10 +111,10 @@ We make the following modifications to our program:
    :answer_c: line 9
    :answer_d: line 10
    :correct: b, c
-   :feedback_a: Try again!
+   :feedback_a: Try again! This line iterate line.split
    :feedback_b: Correct! This line creates the table, which tells the translate method what to change/remove.
    :feedback_c: Correct! This line runs the translate method, which is where the punctuation is filtered out.
-   :feedback_d: Try again!
+   :feedback_d: Try again! This line translates the punctuation, but does not remove them.
 
    Which line(s) in the above activecode remove the punctuation from the text?
 

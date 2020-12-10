@@ -121,10 +121,10 @@ For example:
     :answer_c: print(names.get('Russell', 0)
     :answer_d: names.get('Russell', 0)
     :correct: c
-    :feedback_a: Try again!
-    :feedback_b: Try again!
+    :feedback_a: Try again! There is no default value, so it will not print out anything
+    :feedback_b: Try again! There is no default value, so it will not return anything. The statement is also not being printed out.
     :feedback_c: Correct! This line of code uses print so that the number is printed and not just returned, and it makes sure to include the default value in case 'Russell' does not appear in the dictionary.
-    :feedback_d: Try again!
+    :feedback_d: Try again! This statement does not print out the number, just returns the number.
 
     Which use of the get method correctly returns the amount of times the name "Russell" appears in the dictionary names?
 
@@ -161,8 +161,8 @@ exactly the same thing, but one is more succinct.
    :answer_c: None
    :correct: a
    :feedback_a: Correct! Since there isn't a "d" in word, the code returns the default value.
-   :feedback_b: Try again!
-   :feedback_c: Try again!
+   :feedback_b: Try again! The letter is not in the word so it will not enter the for loop.
+   :feedback_c: Try again! If the letter does not appear in the word, it should print out the default value.
 
    What does the following code print?
 

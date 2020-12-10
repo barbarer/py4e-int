@@ -84,7 +84,7 @@ In our ``else`` statement, we use the more compact alternative for incrementing 
    :correct: d
    :feedback_a: Almost...try again!
    :feedback_b: Almost...try again!
-   :feedback_c: Try again!
+   :feedback_c: Try again! Remember you can increment by either adding 1 or doing += 1.
    :feedback_d: Correct! Both of these methods are correct ways to increment a key's value by 1.
 
    Which of these answers (if any) will increment a key's value in the dictionary counts by 1?
