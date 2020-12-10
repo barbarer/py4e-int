@@ -59,9 +59,9 @@ We see only the entries with a value above 10.
    :answer_b: ['NBA Champ', 'Finals MVP', 'MVP', 'All-Star', 'ROTY']
    :answer_c: ['MVP', 'All-Star']
    :correct: b
-   :feedback_a: Try again!
+   :feedback_a: Try again! This list does not inlude all the values that are greater than or equal to one.
    :feedback_b: Correct! This code takes the keys with values greater than or equal to one and puts them into a list. If any of you are wondering, these are some of LeBron James' accolades.
-   :feedback_c: Try again!
+   :feedback_c: Try again! This list does not inlude all the values that are greater than or equal to one.
 
    What is printed after the following code is run?
 
