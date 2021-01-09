@@ -31,9 +31,19 @@ the same the ``id`` value in the ``People`` table.
 .. fillintheblank:: dbJoin_fill1
     :practice: T
 
-    Which SQL clause that connects two tables?
+    Which SQL clause can be used to return data from two tables?
 
-    - :[Jj][Oo][Ii][Nn]: JOIN connects two tables based on rows selected to join them on.
+    - :[Jj][Oo][Ii][Nn]: JOIN returns data from two tables based on rows selected to join them on.
+      :.*: Try again!
+
+
+.. fillintheblank:: dbJoin_on_fill1
+    :practice: T
+    :casei:
+
+    Fill in the blank in the following: SELECT * FROM Follows JOIN People |blank| Follows.from_id = People.id LIMIT 5
+
+    - :ON: Use ON to specify what column to join the data on.
       :.*: Try again!
 
 **Connecting Tables Using JOIN**
@@ -149,3 +159,50 @@ second column (``Follows.to_id``) matches the third column
     :feedback_b: Try again!
 
     True or False? When using JOIN on two tables, you can join on columns that have different names.
+
+You can use ``table_name.field_name`` to specify the column that you want from each table.
+
+
+.. activecode:: db_select_bike_join_ex1
+   :language: sql
+   :autograde: unittest
+   :dburl: https://runestone.academy/runestone/books/published/overview/_static/bikeshare.db
+
+   The following code will select the ``bike_number`` from ``trip_data``
+   and ``name`` from ``bikeshare_stations``
+   where the ``start_station`` in ``trip_data`` is the same as the ``station_id`` in ``bikeshare_stations``.
+   It will also limit the results to 5 rows.
+   ~~~~
+   SELECT trip_data.bike_number, bikeshare_stations.name
+   FROM trip_data JOIN bikeshare_stations
+   ON trip_data.start_station = bikeshare_stations.station_id
+   LIMIT 5
+   ====
+   assert 0,0 == W00058
+   assert 1,0 == W00775
+   assert 4,0 == W00392
+   assert 3,1 == 3rd & H St NE
+
+You can still add a ``WHERE`` clause.
+
+.. activecode:: db_select_bike_join_with_where_ex1
+   :language: sql
+   :autograde: unittest
+   :dburl: https://runestone.academy/runestone/books/published/overview/_static/bikeshare.db
+
+   The following code will select the ``bike_number`` and ``duration`` from ``trip_data``
+   and ``name`` from ``bikeshare_stations``
+   where the ``start_station`` in ``trip_data`` is the same as the ``station_id`` in ``bikeshare_stations``
+   and where the duration is greater than 85,000.
+   ~~~~
+   SELECT trip_data.bike_number, trip_data.duration, bikeshare_stations.name
+   FROM trip_data JOIN bikeshare_stations
+   ON trip_data.start_station = bikeshare_stations.station_id
+   WHERE trip_data.duration > 85000
+   ====
+   assert 0,0 == W00837
+   assert 0,1 == 85168
+   assert 1,0 == W00930
+   assert 3,0 == W00202
+   assert 3,1 == 85102
+   assert 3,2 == 14th & G St NW

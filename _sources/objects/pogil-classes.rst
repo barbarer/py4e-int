@@ -87,6 +87,7 @@ Look at the class definition.  It starts with the keyword ``class``.  Then answe
     What is the name of the method that is called when the object is printed?
 
     - :__str__: Good job!  This method is called when you print an object of this class.
+      :str: Not quite, the name of the method includes underscores.
       :.*: This method returns a string with the values of the attributes
 
 
@@ -140,7 +141,7 @@ Now look at the main function in the code above and answer the following questio
 
     How many objects were created in the main function?
 
-    - :2: Two book objects were created.
+    - :2|two|Two|TWO: Two book objects were created.
       :.*: Each call to Book() creates a new object
 
 

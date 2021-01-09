@@ -25,3 +25,4 @@ Lists
     Exercises.rst
     MixedupCode.rst
     WriteCode.rst
+    pogil.rst

@@ -4,7 +4,7 @@ Statements
     single: Statement
     single: Interactive Mode
     single: Script Mode
-    
+
 
 A *statement* is a unit of code that the Python
 interpreter can execute. We have seen two kinds of statements: print being
@@ -94,4 +94,4 @@ The assignment statement produces no output.
   :click-correct:minutes = 60:endclick:
   :click-incorrect:print(minutes):endclick:
   :click-correct:seconds = minutes * 60:endclick:
-  :click-incorrect:print("There are " + seconds + " in " + minutes + "."):endclick:
+  :click-incorrect:print(seconds):endclick:

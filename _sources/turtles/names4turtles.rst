@@ -1,0 +1,163 @@
+..  Copyright (C)  Mark Guzdial, Barbara Ericson, Briana Morrison
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3 or
+    any later version published by the Free Software Foundation; with
+    Invariant Sections being Forward, Prefaces, and Contributor List,
+    no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
+    is included in the section entitled "GNU Free Documentation License".
+
+
+History of Turtles
+=========================
+
+The idea of a virtual turtle, dates back to the 1960's.  Seymour Papert and his group at MIT created the programming language LOGO which could control a robot turtle with a physical pen in it.  Kids would steer the robot around, and it would draw as it moved. Seymour said that the Turtle was, "an object to think with".  Many modern programming languages support Turtles including Python.
+
+.. figure:: Figures/mindstorms_turtle.jpg
+    :width: 200px
+    :align: center
+    :alt: Children playing with a Logo turtle robot that can draw with a pen
+    :figclass: align-center
+
+    Figure 3: Children playing with a Logo turtle robot that could draw with a pen
+
+..	index::
+	single: comment
+	single: library
+	single: screen
+	pair: turtle; screen
+	pair: turtle; library
+	pair: programming; comment
+	pair: program; comment
+
+Today, we can play with virtual turtles in a fully-graphical and non-robotic way. Below is a Python program that first creates a Screen object for the turtle to draw on and then creates a turtle.
+The program asks the turtle to perform some of its behaviors (methods) like moving forward a set amount and turning.
+
+.. activecode:: Turtle_ex_1
+    :tour_1: "Line-by-line Tour"; 1: first-turtle-line-1; 2: first-turtle-line-2; 3: first-turtle-line-3; 4: first-turtle-line-4; 5: first-turtle-line-5; 6: first-turtle-line-6;
+    :nocodelens:
+
+    Click the Run button to see what this code does.  The drawing will happen below the code.
+    ~~~~
+    from turtle import *	# use the turtle library
+    space = Screen()		  # create a turtle space
+    alex = Turtle()   		# create a turtle named alex
+    alex.forward(150)		  # move forward by 150 units
+    alex.left(90)   		  # turn by 90 degrees
+    alex.forward(75)		  # move forward by 75 units
+
+.. mchoice:: Turtle_Init_Dir_mc_q1
+   :practice: T
+   :answer_a: North
+   :answer_b: South
+   :answer_c: East
+   :answer_d: West
+   :correct: c
+   :feedback_a: Some systems start with the turtle facing North, but not this one.
+   :feedback_b: Which way does the turtle first move in the example above?  North is at the top of the page.
+   :feedback_c: Turtles start off facing east which is toward the right side of the page.
+   :feedback_d: Which way does the turtle first move in the example above?   North is at the top of the page.
+
+   Which way does a turtle face when it is first created?
+
+..	index::
+	single: dot notation
+
+.. Note::
+   Notice that we tell ``alex`` the turtle what to do in the code above using **dot notation**: ``alex.forward(150)``, 	``alex.left(90)``, and ``alex.forward(75)``.  That is how you communicate with a turtle.  You use the name of the turtle followed by a ``.`` and then the name of the method that you want to execute.
+
+Just by going forward and turning we can have a turtle draw many things.
+
+What does a left turn of 90 mean?
+----------------------------------
+
+When we ask a turtle to turn left, it will turn left based on the direction it is currently heading. A turtle object keeps track of its heading (direction it is facing). Use the figure below to help you understand how much the turtle will turn if asked to turn left 90 degrees and it is currently heading east (0 degrees).
+
+.. figure:: Figures/turnDegrees.png
+    :width: 600px
+    :align: center
+    :alt: shows what a turn of each degrees means for left and right turns
+    :figclass: align-center
+
+    Figure 1: The amount of turn for specified degrees for left and right turns
+
+**Mixed up programs**
+
+
+.. note::
+
+   The following problems have a *Help Me* button.  You can click on the *Help Me* button after you have made at least 3 full and distinct attempts to solve the problem to make the problem easier.
+
+.. parsonsprob:: 5_1_1_Turtle_L
+   :numbered: left
+   :adaptive:
+
+   The following program uses a turtle to draw a capital L as shown to the left, <img src="../_images/TurtleL4.png" width="150" align="left" hspace="10" vspace="5" /> but the lines are mixed up.  The program should do all necessary set-up: import the turtle module, get the space to draw on, and create the turtle.  The turtle should turn to face south, draw a line that is 150 pixels long, then turn to face east, and draw a line that is 75 pixels long.  We have added a compass to the picture to indicate the directions north, south, west, and east. <br /><br /><p>Drag the needed blocks of statements from the left column to the right column and put them in the right order.  There may be additional blocks that are not needed in a correct solution.  Then click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order or are the wrong blocks.  </p>
+   -----
+   from turtle import *
+   =====
+   from turtle Import * #paired
+   =====
+   space = Screen()
+   =====
+   space = screen() #paired
+   =====
+   ella = Turtle()
+   =====
+   ella.right(90)
+   =====
+   ella.turn(90) #paired
+   =====
+   ella.forward(150)
+   =====
+   ella.left(90)
+   =====
+   ella.forward(75)
+   =====
+   ella.go(75) #paired
+
+.. parsonsprob:: 5_1_2_Turtle_Check
+   :numbered: left
+   :adaptive:
+
+   The following program uses a turtle to draw a checkmark as shown to the left, <img src="../_images/checkMark.png" width="150" align="left" hspace="10" vspace="5" /> but the lines are mixed up.  The program should do all necessary set-up: import the turtle module, get the space to draw on, and create the turtle.  The turtle should turn to face southeast, draw a line that is 75 pixels long, then turn to face northeast, and draw a line that is 150 pixels long.  We have added a compass to the picture to indicate the directions north, south, west, and east.  Northeast is between north and east. Southeast is between south and east. <br /><br /><p>Drag the needed blocks of statements from the left column to the right column and put them in the right order.  There may be additional blocks that are not needed in a correct solution.  Then click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order or are the wrong blocks.  </p>
+   -----
+   from turtle import *
+   =====
+   space = Screen()
+   =====
+   maria = Turtle()
+   =====
+   maria = Turtle #paired
+   =====
+   maria.right(45)
+   =====
+   maria.left(45) #paired
+   =====
+   maria.forward(75)
+   =====
+   maria.Forward(75) #paired
+   =====
+   maria.left(90)
+   =====
+   maria.right(90) #paired
+   =====
+   maria.forward(150)
+
+.. fillintheblank:: Turtle_Pred_Shape_fitb
+
+   What shape will the program below draw when you click on the Run button?
+
+   -    :^square$|^Square$|^SQUARE$: Correct!
+        :.*: Try to be the turtle.  Walk the course and imagine the shape that is being drawn.
+
+.. activecode:: Turtle_Square_With_For_Ex_ac
+    :tour_1: "Line-by-line Tour"; 1: t1-line1; 2: t1-line2; 3: t1-line3; 4: t1-line4; 5: t1-line5; 6: t1-line6; 7: t1-for100-1; 8: t1-right90-1; 9: t1-for100-2; 10: t1-right90-2; 11: t1-for100-3; 12: t1-right90-3;
+    :nocodelens:
+
+    from turtle import *	# use the turtle library
+    space = Screen()    	# create a turtle screen (space)
+    zari = Turtle()   		# create a turtle named zari
+    zari.setheading(90) 	# Point due north
+    for i in range(4):
+        zari.forward(100)   	# tell zari to move forward by 100 units
+        zari.left(90)       	# turn by 90 degrees

@@ -20,4 +20,8 @@ Functions
    Exercises.rst
    mixedupcode.rst
    WriteCode.rst
-   pogil.rst
+   func-group.rst
+   func-string.rst
+   funcWithCond.rst
+   funcWithLists.rst
+   funcWithLoops.rst

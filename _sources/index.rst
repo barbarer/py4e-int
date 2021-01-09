@@ -44,6 +44,8 @@ Table of Contents
    network/toctree.rst
    web/toctree.rst
    objects/toctree.rst
+   turtles/toctree.rst
+   pictures/toctree.rst
    database/toctree.rst
    viz/toctree.rst
 
