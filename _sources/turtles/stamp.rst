@@ -23,6 +23,8 @@ Here is an example that shows off these new features.
    :tour_1: "Line-by-line Tour"; 1: stamp1-line1; 2: stamp1-line2; 3: stamp1-line3; 4: stamp1-line4; 5: stamp1-line5; 7: stamp1-line7; 8: stamp1-line8; 9: stamp1-line9; 10: stamp1-line10; 11: stamp1-line11; 12: stamp1-line12;
    :nocodelens:
 
+   Run the code to see what it draws.
+   ~~~~
    from turtle import *
    space = Screen()
    tess = Turtle()
@@ -47,7 +49,7 @@ not sure, write a new line of code after the ``for`` loop to change tess' color,
    :numbered: left
    :adaptive:
 
-   The following program uses the stamp method to create a line of turtle shapes as shown to the left, <img src="../_static/Turtle3Stamp.png" width="150" align="left" hspace="10" vspace="5" /> but the lines are mixed up.  The program should do all necessary set-up, create the turtle, set the shape to "turtle", and pick up the pen.  Then the turtle should repeat the following three times: go forward 50 pixels and leave a copy of the turtle at the current position.  <br /><br /><p>Drag the needed blocks of statements from the left column to the right column and put them in the right order with the correct indention.  Click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order or are the wrong blocks.</p>
+   The following program uses the stamp method to create a line of turtle shapes as shown below, <img src="https://i.postimg.cc/g2JQ8JD8/Turtle3-Stamp.png" width="150" align="left" hspace="10" vspace="5" /> but the lines are mixed up.  The program should do all necessary set-up, create the turtle, set the shape to "turtle", and pick up the pen.  Then the turtle should repeat the following three times: go forward 50 pixels and leave a copy of the turtle at the current position.  <br /><br /><p>Drag the needed blocks of statements from the left column to the right column and put them in the right order with the correct indention.  Click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order or are the wrong blocks.</p>
    -----
    from turtle import *
    space = Screen()
@@ -77,7 +79,7 @@ not sure, write a new line of code after the ``for`` loop to change tess' color,
    :numbered: left
    :adaptive:
 
-   The following program uses the stamp method to create a circle of turtle shapes as shown to the left, <img src="../_static/TurtleCircle.png" width="150" align="left" hspace="10" vspace="5"/> but the lines are mixed up.  The program should do all necessary set-up, create the turtle, set the shape to "turtle", and pick up the pen.  Then the turtle should repeat the following ten times: go forward 50 pixels, leave a copy of the turtle at the current position, reverse for 50 pixels, and then turn right 36 degrees.  <br /><br /><p>Drag the needed blocks of statements from the left column to the right column and put them in the right order with the correct indention.  Click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order or are the wrong blocks.</p>
+   The following program uses the stamp method to create a circle of turtle shapes as shown to the left, <img src="https://i.postimg.cc/Znx2Fv2F/Turtle-Circle.png" width="150" align="left" hspace="10" vspace="5"/> but the lines are mixed up.  The program should do all necessary set-up, create the turtle, set the shape to "turtle", and pick up the pen.  Then the turtle should repeat the following ten times: go forward 50 pixels, leave a copy of the turtle at the current position, reverse for 50 pixels, and then turn right 36 degrees.  <br /><br /><p>Drag the needed blocks of statements from the left column to the right column and put them in the right order with the correct indention.  Click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order or are the wrong blocks.</p>
    -----
    from turtle import *
    space = Screen()
@@ -106,11 +108,3 @@ not sure, write a new line of code after the ``for`` loop to change tess' color,
        jose.right(36)
    =====
        jose.right(20) #paired
-
-.. note::
-
-    Discuss topics in this section with classmates.
-
-      .. disqus::
-          :shortname: cslearn4u
-          :identifier: studentcsp_10_4

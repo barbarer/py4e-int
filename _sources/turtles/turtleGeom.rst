@@ -37,13 +37,15 @@ That last piece of code is actually a **pattern** for a wide variety of geometri
     :tour_1: "Lines of code"; 1: tR3-line1; 2: tR3-line2; 3: tR3-line3; 4: tR3-line4; 5: tR3-line5; 6: tR3-line6; 7: tR3-line7;
     :nocodelens:
 
-    from turtle import *   	# use the turtle library
-    space = Screen()    	# create a turtle space
-    avery = Turtle()   		# create a turtle named avery
-    avery.setheading(90)   	# point due north
-    for sides in range(3):	# repeat the indented lines 3 times
-      	avery.forward(100)    	# move forward by 100 units
-      	avery.right(120)         	# turn by 120 degrees
+    Run the code to see what it draws.
+    ~~~~
+    from turtle import *    # use the turtle library
+    space = Screen()        # create a turtle space
+    avery = Turtle()        # create a turtle named avery
+    avery.setheading(90)    # point due north
+    for sides in range(3):  # repeat the indented lines 3 times
+      	avery.forward(100)  # move forward by 100 units
+      	avery.right(120)    # turn by 120 degrees
 
 And here's a pentagon.
 
@@ -51,13 +53,15 @@ And here's a pentagon.
     :tour_1: "Lines of code"; 1: tR3-line1; 2: tR3-line2; 3: tR4-line3; 4: tR4-line4; 5: tR4-line5; 6: tR4-line6; 7: tR4-line7;
     :nocodelens:
 
-    from turtle import *   	# use the turtle library
-    space = Screen()    	# create a turtle space
-    will = Turtle()   		# create a turtle named will
-    will.setheading(90)    	# point due north
-    for sides in range(5):	# repeat the indented lines 5 times
-      	will.forward(100)      	# move forward by 100 units
-      	will.right(72)          	# turn by 72 degrees
+    Run the code to see what it draws.
+    ~~~~
+    from turtle import *    # use the turtle library
+    space = Screen()        # create a turtle space
+    will = Turtle()         # create a turtle named will
+    will.setheading(90)     # point due north
+    for sides in range(5):  # repeat the indented lines 5 times
+      	will.forward(100)   # move forward by 100 units
+      	will.right(72)      # turn by 72 degrees
 
 The **Total Turtle Trip Theorem** states that the turtle will draw a closed figure with *n* sides when the sum of the angles turned is a multiple of 360.  In the triangle example ``3 * 120 = 360`` and in the pentagon example ``5 * 72 = 360``.
 
@@ -67,13 +71,15 @@ Change the ``??`` in line 7 below to the amount to turn each time to draw a 12 s
     :tour_1: "Lines of code"; 1: tR3-line1; 2: tR3-line2; 3: tR5-line3; 4: tR5-line4; 5: tR5-line5; 6: tR5-line6; 7: tR5-line7;
     :nocodelens:
 
-    from turtle import * 	# use the turtle library
-    space = Screen()   		# create a turtle space
-    mia = Turtle()   		# create a turtle named maria
-    mia.setheading(90)     	# point due north
-    for sides in range(12):	# repeat the indented lines 12 times
-      	mia.forward(40)       	# move forward by 40 units
-      	mia.right(??)          	# change ?? to the amount to turn
+    You will need to replace the '??' on line 7 to have the code correctly draw a dodecagon (a polygon with 12 sides).
+    ~~~~
+    from turtle import *  # use the turtle library
+    space = Screen()      # create a turtle space
+    mia = Turtle()        # create a turtle named maria
+    mia.setheading(90)    # point due north
+    for sides in range(12):  # repeat the indented lines 12 times
+      	mia.forward(40)      # move forward by 40 units
+      	mia.right(??)        # change ?? to the amount to turn
 
 .. mchoice:: 10_2_1_Turtle_Dodecagon_Q1
    :answer_a: 15
@@ -86,13 +92,13 @@ Change the ``??`` in line 7 below to the amount to turn each time to draw a 12 s
    :feedback_c: No, 12 * 12 is 144, which is not a multiple of 360
    :feedback_d: This one will generate a square, three times. 12 * 90 = 1080 = 360 * 3
 
-   How much does ``mia`` need turn in the program above to create a closed dodecagon (12-sided figure)?  Only one of these works.
+   How much does ``mia`` need to turn in the program above to create a closed dodecagon (12-sided figure)?  Only one of these works.
 
 .. parsonsprob:: 10_2_2_Triangle
    :numbered: left
    :adaptive:
 
-   The following program uses a turtle to draw a triangle as shown to the left, <img src="../_static/TurtleTriangle.png" width="150" align="left" hspace="10" vspace="5"/> but the lines are mixed up.  The program should do all necessary set-up and create the turtle.  After that, iterate (loop) 3 times, and each time through the loop the turtle should go forward 100 pixels, and then turn left 120 degrees.<br /><br /><p>Drag the needed blocks of statements from the left column to the right column and put them in the right order with the correct indention.  There may be additional blocks that are not needed in a correct solution.  Click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order or are the wrong blocks.</p>
+   The following program uses a turtle to draw a triangle as shown below, <img src="https://i.postimg.cc/28S8s9VF/Turtle-Triangle.png" width="150" align="left" hspace="10" vspace="5"/> but the lines are mixed up.  The program should do all necessary set-up and create the turtle.  After that, iterate (loop) 3 times, and each time through the loop the turtle should go forward 100 pixels, and then turn left 120 degrees.<br /><br /><p>Drag the needed blocks of statements from the left column to the right column and put them in the right order with the correct indention.  There may be additional blocks that are not needed in a correct solution.  Click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order or are the wrong blocks.</p>
    -----
    from turtle import *
    =====
@@ -121,7 +127,7 @@ Change the ``??`` in line 7 below to the amount to turn each time to draw a 12 s
 
    .. tab:: Question
 
-      Write a procedure which takes in a turtle and the number of sides as parameters to draw a polygon. Call the function to test it.
+      Write a function which takes in a turtle object and the number of sides as parameters to draw a polygon. Call the function to test it.
 
       .. activecode:: 10_2_3_WSq
          :nocodelens:
@@ -131,32 +137,20 @@ Change the ``??`` in line 7 below to the amount to turn each time to draw a 12 s
       .. activecode:: 10_2_3_WSa
          :nocodelens:
 
-         # DEFINE THE PROCEDURE
+         Run the code to see what it draws.
+         ~~~~
+         # Define the function
          def polygon(turtle, sides):
              degree = 360 / sides
              for side in range(sides):
                  mia.forward(40)
                  mia.right(degree)
 
-         # CREATE THE TURTLE WORLD
+         # Do the set-up
          from turtle import *
          space = Screen()
          mia = Turtle()
          mia.setheading(90)
 
-         # CALL THE PROCEDURE
+         # Execute the function
          polygon(mia,5)
-
-   .. tab:: Discussion
-
-      .. disqus::
-         :shortname: cslearn4u
-         :identifier: studentcsp_10_2_3_WSq
-
-.. note::
-
-   Discuss topics in this section with classmates.
-
-   .. disqus::
-      :shortname: cslearn4u
-      :identifier: studentcsp_10_2

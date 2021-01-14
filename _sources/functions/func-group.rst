@@ -29,13 +29,14 @@ Print and Function Basics
     What is the first line that will be printed when the code below runs?
 
     - :Hello!: This will print before the function call to print_message
+      :Welcome: Execution starts in the main method, so this won't be the first thing that is printed.
       :.*: Execution starts in the main method
 
 .. fillintheblank:: funct_fitb_print_test_last_line
 
     What is the last line that will be printed when the code below runs?
 
-    - :1: Prints the remainder of 5 divided by 2 which is one.
+    - :1: Prints the value returned from the function test which is the remainder of 5 divided by 2 which is one.
       :.*: What is the remainder of 5 divided by 2?
 
 
@@ -46,7 +47,7 @@ Print and Function Basics
     ~~~~
     # function definition
     def test():
-        print("Welcome to Python.")
+        print("Welcome")
         print("Learn the power of functions!")
         a = 3
         b = 2
@@ -192,7 +193,7 @@ Parts of a Function and Function Calls
 .. activecode:: funct_ac_pogil_add_line
     :caption: Modify the code below to print the last two lines twice
 
-    Modify the code below to print the last two lines twice by only adding one line.  That line can't contain the keyword print in it.
+    Modify the code below to print the last two lines twice by only adding one line.  That line can't call the print function.
     ~~~~
     # function definition
     def print_message():
@@ -213,7 +214,7 @@ Parts of a Function and Function Calls
 .. activecode:: funct_ac_pogil_add_function_call
     :caption: Modify the code to print "Hello students".
 
-    Modify the code below to print "Hello students" by adding one line and without using print.
+    Modify the code below to print "Hello students" by adding one line and without calling the print function in that line.
     ~~~~
     # function definition
     def print_message():

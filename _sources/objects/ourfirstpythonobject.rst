@@ -17,7 +17,7 @@ and methods (code).
 
 .. fillintheblank:: object_contents
 
-   An object can contain a number of functions as well as _______ that is used by
+   An object can contain a number of functions as well as |blank| that is used by
    those functions.
 
    - :[Dd]ata: Correct, these data can be initialized within the class or when object
@@ -27,27 +27,28 @@ and methods (code).
 
 .. fillintheblank:: keyword_object
 
- _____ keyword is used to define the data and code that will make up each of the
+ The |blank| keyword is used to define the data and code that will make up each of the
  objects.
 
  - :[c]lass: Correct, we use the keyword 'class'.
    :.*: Try again! Note that keywords are case-sensitive.
 
 .. activecode:: partyanimal
-  :coach:
 
-    class PartyAnimal:
+   Run the code below.
+   ~~~~
+   class PartyAnimal:
 
-        def party(self, x):
-            self.x = x
-            self.x += 1
-            print("So far",self.x)
+       def party(self, x):
+           self.x = x
+           self.x += 1
+           print("So far",self.x)
 
-    an = PartyAnimal()
-    an.party(1)
-    an.party(2)
-    an.party(3)
-    PartyAnimal.party(an, 12)
+   an = PartyAnimal()
+   an.party(1)
+   an.party(2)
+   an.party(3)
+   PartyAnimal.party(an, 12)
 
 
 
@@ -61,8 +62,7 @@ Just as the ``def`` keyword does not cause function code to be executed, the
 keyword defines a template indicating what data and code will be contained
 in each object of type ``PartyAnimal``.  The class is like a cookie cutter
 and the objects created using the class are the
-cookies^[Cookie image copyright CC-BY
-https://www.flickr.com/photos/dinnerseries/23570475099].
+cookies.
 You don't put frosting on the cookie cutter;
 you put frosting on the cookies, and you can put different frosting
 on each cookie.
@@ -145,39 +145,3 @@ When the program executes, it produces the following output:
 
 The object is constructed, and the ``party`` method is called four times, both
 incrementing and printing the value for ``x`` within the ``an`` object.
-
-.. mchoice:: partyanimal_code
-  :practice: T
-  :answer_a: 'PartyAnimal.party(an)' creates a new object while 'an.party()' calls
-              the 'party()' function within the 'an' object.
-  :answer_b: Calling 'an.party()' creates a new 'PartyAnimal' instance everytime hence
-             value of x is changed to 1 everytime the 'party' function is called.
-  :answer_c: The word 'self' to be mentioned explicitly to make 'party' a static function.
-  :answer_d: 'PartyAnimal.party(an)' and 'an.party()' are both valid ways to call the
-             'party()' function within the 'an' object.
-  :correct: d
-  :feedback_a: The object instance is created when 'an = PartyAnimal()' is executed, the following
-               statements call the 'party()' function within the instance.
-  :feedback_b: 'an.party()' does not create new object instance, it calls the 'party()' function
-               within the object.
-  :feedback_c: 'self' is used to represent the instance of a class and to access the attributes and
-               methods of the class. The only time 'self' is not mentioned explicitly is within static
-               methods.
-  :feedback_d: This is correct!
-
-  What is true about the following code?
-
-  ::
-
-    class PartyAnimal:
-
-        def party(self, x) :
-        self.x = x
-            self.x = self.x + 1
-            print("So far",self.x)
-
-    an = PartyAnimal()
-    an.party(1)
-    an.party(2)
-    an.party(3)
-    PartyAnimal.party(an, 12)

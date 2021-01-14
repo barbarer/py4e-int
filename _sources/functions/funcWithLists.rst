@@ -22,7 +22,7 @@ Students will know and be able to do the following.
 Lists
 ============================
 
-A list holds items in order and you can get the value at an index.
+A list holds items in order and you can get the value at an index, just like you can with strings.
 
 .. fillintheblank:: funct_ll_list_check_first_line
 
@@ -91,8 +91,8 @@ There are several built-in functions in Python that work on lists.
 
     What is the first value that will be printed when the code below runs?
 
-    - :1: It will print the minimum value in the first list.
-      :.*: What is the minimum value in the first list that is passed to the function?
+    - :3: It will print the maximum value in the first list, which is 3.
+      :.*: What is the maximum value in the first list that is passed to the function?
 
 .. fillintheblank:: funct_ll_list_func_last
 
@@ -109,8 +109,8 @@ There are several built-in functions in Python that work on lists.
     ~~~~
     # function definition
     def list_func(my_list):
-        print(min(my_list))
         print(max(my_list))
+        print(min(my_list))
         print(len(my_list))
         print(sum(my_list))
         print(sum(my_list) / len(my_list))
@@ -175,18 +175,9 @@ Lists are objects of the ``list`` class and have methods that operate on list ob
     # function call
     main()
 
-.. mchoice:: funct_mc_list_immutable
-   :practice: T
+.. Note::
 
-   Are lists mutable (changeable)?
-
-   -   Yes
-
-       +   List methods change the current list.
-
-   -   No
-
-       -   Strings are immutable, but lists are not.
+   Lists are mutable (changeable).  List methods like append and pop change the current list.
 
 .. activecode:: func_ll_ac_list_methods2
     :caption: More list methods
@@ -228,7 +219,7 @@ Using the Slice Operator
 ============================
 
 You can use the slice operator[n:m] with lists to make a copy of the list with all items
-from n to m - 1.
+from n to m - 1, just like you can with strings.
 
 .. fillintheblank:: funct_ll_fitb_slice_first
     :practice: T
@@ -271,6 +262,10 @@ from n to m - 1.
 
     # function call
     main()
+
+.. note::
+
+   The slice operator always returns a new object.  It doesn't change the current object (list or string). 
 
 .. activecode:: fuct_ac_list_first_half
    :autograde: unittest

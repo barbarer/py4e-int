@@ -18,19 +18,20 @@ Students will know and be able to do the following.
 *Process Objectives:*
 
 * Predict the outcome of code with lists and loops.
-* Write code that processes a list with loops.
+* Modify code with loops.
+* Fix code that processes a list with loops.
 
 The For-Each Loop
 ============================
 
-A for-each loop in Python will loop though a list starting with the item at index 0, then index 1, and so on till the last item in the list.
+A for-each loop in Python will loop though the items in a list starting with the item at index 0, then index 1, and so on till the last item in the list.
 
 .. fillintheblank:: funct_ll_fitb_count_odd_first
     :practice: T
 
     What is the first thing that will be printed by the code below?
 
-    - :1: It will print the number of values that are odd in the first list.
+    - :1: It will print the number of values that are odd in the first list, which is one.
       :.*: Run the code to check.
 
 .. fillintheblank:: funct_ll_fitb_count_odd_last
@@ -42,7 +43,7 @@ A for-each loop in Python will loop though a list starting with the item at inde
       :.*: Run the code to check.
 
 .. activecode:: func_ll_ac_count_odd
-    :caption: Add tests
+    :caption: Count odd numbers
 
     Run this code to see what it prints.
     ~~~~
@@ -100,3 +101,277 @@ A for-each loop in Python will loop though a list starting with the item at inde
        return total
    =====
        Return total #paired
+
+.. activecode:: fuct_ac_ll_sum67_fix
+   :autograde: unittest
+   :nocodelens:
+
+   Fix the ``sum67`` function below that takes a list and should return the total of the items in the list except for all the numbers between a 6 and 7 (inclusive).   For example, sum67([1,2]) should return 3, but sum67([2, 6, 8, 7, 2]) should return 4.
+   ~~~~
+   def sum67(nums):
+       total = 0               # initialize the total
+       found_6 = True          # initialize a Boolean flag
+       for num in nums:        # loop through the items in a list
+           if found_6 && num == 7:
+               found_6 = False # set the Boolean flag to false
+           elif num = 6:
+               found_6 = True  # set the Boolean flag to True
+           elif found_6:
+               continue        # go back to the top of the loop
+           else:
+               total += num    # add num to total
+           return total        # return the total
+
+   ====
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+       def testOne(self):
+           self.assertEqual(sum67([1,2]), 3, 'sum67([1,2])')
+           self.assertEqual(sum67([2, 6, 8, 7, 2]), 4, 'sum67([2, 6, 8, 7, 2])')
+           self.assertEqual(sum67([6, 2, 7]), 0, 'sum67([6, 2, 7])')
+           self.assertEqual(sum67([6, 2, 7, 5]), 5, 'sum67([6, 2, 7, 5])')
+           self.assertEqual(sum67([7, 2, 6]), 9, 'sum67([7, 2, 6])')
+           self.assertEqual(sum67([4, 6, 7]), 4, 'sum67([4, 6, 7])')
+           self.assertEqual(sum67([]), 0, 'sum67([])')
+
+   myTests().main()
+
+
+
+Range and For
+============================
+
+How do you loop just a set number of times?  You can use
+the built-in ``range`` function to do this.
+
+.. fillintheblank:: funct_ll_fitb_print_to_first
+    :practice: T
+
+    What is first value that that following code prints?
+
+    - :0: The code prints from 0 to the passed end.
+      :.*: Run the code and see.
+
+.. fillintheblank:: funct_ll_fitb_print_to_last
+    :practice: T
+
+    What is last value that that following code prints?
+
+    - :2: The code prints from 0 to the passed end (exclusive).  The end is 3 which means the last value is 2.
+      :.*: What is the parameter in the second call to count_to?
+
+.. activecode:: func_ll_ac_count_to
+    :caption: Range example with end
+
+    Run this code to see what it prints.
+    ~~~~
+    # function definition
+    def print_to(end):
+        for x in range(end):
+            print(x)
+
+    # function definition
+    def main():
+        print_to(5)
+        print()
+        print_to(3)
+
+    # function call
+    main()
+
+.. note::
+
+   The ``range(end)`` function will produce values from 0 to end - 1.
+
+.. fillintheblank:: funct_ll_fitb_print_from_to_first
+    :practice: T
+
+    What is first value that that following code prints?
+
+    - :1: The code prints from start (inclusive) to the passed end (exclusive) and the start is one.
+      :.*: Run the code and see.
+
+.. fillintheblank:: funct_ll_fitb_print_from_to_last
+    :practice: T
+
+    What is last value that that following code prints?
+
+    - :9: The code prints from start (inclusive) to the passed end (exclusive) so it ends with 9.
+      :.*: Run the code and see.
+
+
+.. activecode:: func_ll_ac_print_from_to
+    :caption: Range example with start and end
+
+    Run this code to see what it prints.
+    ~~~~
+    # function definition
+    def print_from_to(start, end):
+        for x in range(start, end):
+            print(x)
+
+    # function definition
+    def main():
+        print_from_to(1,5)
+        print()
+        print_from_to(5,10)
+
+    # function call
+    main()
+
+.. note::
+
+   The function range(start, end) will return a range object (an iterator) that allows you to loop from start (inclusive) to end (exclusive).
+
+.. fillintheblank:: funct_ll_fitb_print_from_to_by_first
+    :practice: T
+
+    What is first value that that following code prints?
+
+    - :10: The code prints from start (inclusive) to the passed end (exclusive) and the start is ten.
+      :.*: Run the code and see.
+
+.. fillintheblank:: funct_ll_fitb_print_from_to_by_last
+    :practice: T
+
+    What is last value that that following code prints?
+
+    - :9: The code prints from start (inclusive) which is 1 to the passed end (exclusive) which is 10 and changes by 2 each time so the end is 9.
+      :.*: Run the code and see.
+
+.. activecode:: func_ll_ac_print_from_to_by
+    :caption: Range example with start, end, and by
+
+    Run this code to see what it prints.
+    ~~~~
+    # function definition
+    def print_from_to_by(start, end, by):
+        for x in range(start, end, by):
+            print(x)
+
+    # function definition
+    def main():
+        print_from_to_by(10,0,-1)
+        print()
+        print_from_to_by(1,10,2)
+
+    # function call
+    main()
+
+.. parsonsprob:: func_ll_pp_total_at_odd_indices
+   :numbered: left
+   :adaptive:
+   :practice: T
+
+   Drag the blocks from the left and put them in the correct order on the right to define a function <code>total_at_odd_indices</code> that returns the total of the numbers at odd indices in the passed list.
+   -----
+   def total_at_odd_indices(alist):
+   =====
+   def total_at_odd_indices(alist) #paired
+   =====
+        total = 0
+   =====
+        for i in range(1,len(alist),2):
+   =====
+        for i in range(1,len(alist)): #paired
+   =====
+            total += alist[i]
+   =====
+            total += i #paired
+   =====
+        return total
+
+While Loops
+===============
+
+A while loop repeats while a Boolean expression is True.
+
+.. activecode:: func_ll_ac_inifite
+    :caption: Example infinite loop
+
+    Try running the code below.
+    ~~~~
+    def example():
+        count = 0
+        while (True):
+            print("This is the song that never ends", count)
+            count += 1
+            if (count > 100):
+                break
+
+    def main():
+        example()
+
+    main()
+
+.. fillintheblank:: funct_ll_fitb_while_break
+    :practice: T
+
+    What keyword is used to stop the loop in the above code?
+
+    - :break: The break keyword will stop the enclosing loop.
+      :.*: How does the code stop above?
+
+What do you think would happen if you deleted lines 6 and 7 in the above code?
+
+.. note ::
+
+   A loop that never ends is called an infinite loop.  A while loop should have some way to end.  If you have an infinite loop you may need to refresh the page to stop it.
+
+.. activecode:: func_ll_ac_while
+    :caption: While Example
+
+    Run this code to see what it prints.
+    ~~~~
+    import random
+    def check_value(target, actual):
+        if target == actual:
+            return("Correct")
+        elif (actual < target):
+            return("Too Low")
+        else:
+            return("Too High")
+
+    # function definition
+    def main():
+        # pick a random number
+        target = random.randint(1,10)
+
+        # get the user's guess
+        num = int(input("Enter a number from 1 to 10 (inclusive)"))
+
+        # get the result
+        result = check_value(target, num)
+
+        # loop while the guess is not correct
+        while result != "Correct":
+
+            # Tell the result and get a new number
+            num = int(input(result , ".  Enter a number from 1 to 10"))
+
+            # get the result
+            result = check_value(target, num)
+
+        # Tell the user the number
+        print("You guessed it!  It was", target)
+
+    # function call
+    main()
+
+Modify the code above to keep a count of the number of guesses and print the number of guesses it took to guess the correct value.
+
+.. activecode:: func_ll_ac_blastoff
+    :caption: Fixing a while loop
+
+    Fix the code below to print from start (inclusive) to 0 and then "Blastoff"
+    ~~~~
+    def countdown(start):
+        value = start
+        while value > 0:
+            print(value)
+        print(Blastoff)
+
+    def main():
+        countdown(5)

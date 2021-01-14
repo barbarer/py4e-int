@@ -14,19 +14,27 @@
 .. 	qnum::
 	:start: 1
 	:prefix: csp-5-4-
-	
+
 .. highlight:: java
    :linenothreshold: 4
-    
+
 Single and Multiple Turtles
 =================================
 
-You may remember this example as well.
+.. fillintheblank:: turtle_shape_square_fitb
+   :casei:
 
-.. activecode:: Turtle_Names1
+   What shape will the following code draw?
+
+   -    :square: Correct!
+        :.*: Try to follow the directions as if you are the turtle
+
+.. activecode:: Turtle_shape_1_ac
     :tour_1: "Line-by-line Tour"; 1: t1-line1; 2: t1-line2; 3: t1-line3; 4: t1-line4; 5: t1-line5; 6: t1-line6; 7: t1-for100-1; 8: t1-right90-1; 9: t1-for100-2; 10: t1-right90-2; 11: t1-for100-3; 12: t1-right90-3;
     :nocodelens:
-	
+
+    Run the code to see what it draws.
+    ~~~~
     from turtle import *	# use the turtle library
     space = Screen()		# create a turtle screen (space)
     zari = Turtle() 		# create a turtle named zari
@@ -41,16 +49,19 @@ You may remember this example as well.
     zari.right(90)    		# turn right by 90 degrees
 
 .. fillintheblank:: 5_4_1_triangle_fill
+   :casei:
 
    What shape will the program below draw when you click on the Run button?
-   
-   -    :^triangle$|^Triangle$|^TRIANGLE$: Correct!
+
+   -    :triangle: Correct!
         :.*: Try to follow the directions as if you are the turtle
 
 .. activecode:: Turtle_Names2
     :tour_1: "Line-by-line Tour"; 1: tri-line1; 2: tri-line2; 3: tri-line3; 4: tri-line4; 5: tri-line5; 6: tri-line6; 7: tri-line7; 8: tri-line8; 9: tri-line9; 10: tri-line10;
     :nocodelens:
-	
+
+    Run the code to see what it draws.
+    ~~~~
     from turtle import *   	# use the turtle library
     space = Screen()     	# create a turtle screen (space)
     zari = Turtle()      	# create a turtle named zari
@@ -67,7 +78,9 @@ This works because ``zari`` is a turtle, and each statement gets executed, one r
 .. activecode:: Two_Turtles
     :tour_1: "Line-by-line Tour"; 1: tt-line1; 2: tt-line2; 3: tt-line3; 4: tt-line4; 5: tt-line5; 6: tt-line6; 7: tt-line7; 8: tt-line8; 9: tt-line9; 10: tt-line10; 11: tt-line11; 12: tt-line12;
     :nocodelens:
-	
+
+    Run the code to see what it draws.
+    ~~~~
     from turtle import * 	# use the turtle library
     space = Screen()     	# create a turtle screen (space)
     zari = Turtle()     	# create a turtle named zari
@@ -80,9 +93,9 @@ This works because ``zari`` is a turtle, and each statement gets executed, one r
     chad.color("orange")  	# change the color chad draws with
     chad.forward(100)     	# tell chad to move forward by 100 units
     chad.right(120)     	# turn chad by 120 degrees
-    
+
 Every turtle object has its own attributes like its current position and color.  So, when we created chad his position was different from zari's.  Turtles start off in the center of the drawing space when they are first created.
-    
+
 **Mixed up programs**
 
 .. parsonsprob:: 5_4_2_JandT
@@ -93,20 +106,20 @@ Every turtle object has its own attributes like its current position and color. 
    -----
    from turtle import *
    wn = Screen()
-   =====    	
+   =====
    jamal = Turtle()
    jamal.pensize(10)
-   jamal.color("blue") 
-   =====              	               
+   jamal.color("blue")
+   =====
    jamal.right(90)
    jamal.forward(150)
-   =====              	               
+   =====
    jamal.left(90)
    jamal.forward(150) #paired
-   ===== 
+   =====
    jamal.left(90)
    jamal.forward(75)
-   ===== 
+   =====
    jamal.right(90)
    jamal.forward(75) #paired
    =====
@@ -125,42 +138,28 @@ Every turtle object has its own attributes like its current position and color. 
    :numbered: left
    :adaptive:
 
-   The following program has one turtle, "jamal", draw a line to the north in blue and then another, "tina", draw a line to the east in orange as shown to the left <img src="../_static/TwoTurtlesLN.png" width="150" align="left" hspace="10" vspace="5" />.  The program should import the turtle module, get the window to draw on, create the turtle "jamal", have it draw a line to the north, then create the turtle "tina", and have it draw a line to the east.  <br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order or are the wrong blocks.</p> 
+   The following program has one turtle, "jamal", draw a line to the north in blue and then another, "tina", draw a line to the east in orange as shown to the left <img src="../_static/TwoTurtlesLN.png" width="150" align="left" hspace="10" vspace="5" />.  The program should import the turtle module, get the window to draw on, create the turtle "jamal", have it draw a line to the north, then create the turtle "tina", and have it draw a line to the east.  <br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order.  Then click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order or are the wrong blocks.</p>
    -----
    from turtle import *
    =====
    from turtle #paired
    =====
    wn = Screen()
-   =====   	
+   =====
    jamal = Turtle()
    =====
    jamal = turtle() #paired
    =====
-   jamal.color("blue") 
-   jamal.pensize(10)             	               
+   jamal.color("blue")
+   jamal.pensize(10)
    jamal.left(90)
    jamal.forward(150)
    =====
    tina = Turtle()
-   tina.pensize(10) 
-   ===== 
+   tina.pensize(10)
+   =====
    tina.color("orange")
    tina.forward(150)
-   ===== 
+   =====
    tina.color("orange")
    tina.Forward(150) #paired
-   
-.. note::
-
-    Discuss topics in this section with classmates. 
-
-      .. disqus::
-          :shortname: cslearn4u
-          :identifier: studentcsp_5_4
-
-
-
-
-
-

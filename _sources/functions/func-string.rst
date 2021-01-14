@@ -57,29 +57,29 @@ String Indices
 
    Use [index] to get a character from a string.  The first character in a string is at index 0 and the last is at the length of the string minus 1 (also know as index -1 in Python).
 
+Fix the function ``get_initials`` above to return a string with the first letter of the first name followed by the first letter of the last name.
+
 .. fillintheblank:: funct_fitb_string_type
 
-    What type of thing is "Hello"?
+    What type of thing is "Hello", i.e. what class does it belong to?
 
     - :'?str'?: A string in Python is an object of the str class.
       :.*: What is the class name printed by print(type("Hello"))?
 
 .. fillintheblank:: funct_fitb_int_type
 
-    What type of thing is 42?
+    What type of thing is 42, i.e. what class does it belong to?
 
     - :'?int'?: An integer in Python is an object of the int class.
       :.*: What is the class name printed by print(type(42))?
 
 .. fillintheblank:: funct_fitb_add_strings
 
-    What is symbol that is used to add (concatenate) strings together?
+    What is symbol that is used to append (concatenate) strings together?
 
     - :\+: Use + to append one string after another in Python.
       :.*: Check the code above and try again.
 
-
-Fix the function ``get_initials`` above to return a string with the first letter of the first followed by the first letter of the last.
 
 String Slices
 ==================
@@ -112,7 +112,7 @@ String Slices
 
 .. note::
 
-   Use a slice [start:end] to get a slice (substring) from a string. It will return a new string starting at the start and including all the characters up to just before the end (end - 1).
+   Use the slice [start:end] operator to get a slice (substring) from a string. It will return a new string starting at the start and including all the characters up to just before the end (end - 1).
 
 .. fillintheblank:: funct_fitb_three_char_slice
     :practice: T
@@ -164,6 +164,31 @@ String Slices
     - :len: The len function takes a string and returns the number of characters in it.
       :.*: Look at the example code above.
 
+.. activecode:: fuct_ac_list_join_strings_withtout_first
+   :autograde: unittest
+   :nocodelens:
+
+
+   Write a function ``join_no_first`` that takes two strings ``a`` and ``b`` and returns a new string with all the characters in string ``a`` except the first one followed by all the characters in ``b`` except the first one.  For example, join_no_first('hi', 'bye') would return 'iye'.
+   ~~~~
+   def join_no_first(a, b):
+
+   ====
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+       def testOne(self):
+           self.assertEqual(join_no_first('hi', 'bye'), 'iye', "join_no_first('hi', 'bye')")
+           self.assertEqual(join_no_first('abc', 'cba'), 'bcba', "join_no_first('abc', 'cba')")
+           self.assertEqual(join_no_first('Watch out', 'bye'), 'atch outye', "join_no_first('Watch out', 'bye')")
+           self.assertEqual(join_no_first('123', '456'), '2356', "join_no_first('123', '456')")
+           self.assertEqual(join_no_first('!Hi', 'Bye!'), 'Hiye!', "join_no_first('!Hi', 'Bye!')")
+           self.assertEqual(join_no_first('a', 'x'), '', "join_no_first('a', 'x')")
+
+
+   myTests().main()
+
 Input and Converting Between Strings and Numbers
 =================================================
 
@@ -206,7 +231,7 @@ Input and Converting Between Strings and Numbers
 String Methods
 ================
 
-Strings have methods (functions) that operate on a string using **dot-notation** as shown in the example code below.
+Strings have methods (functions) that operate on a string object using **dot-notation** as shown in the example code below.
 
 .. fillintheblank:: funct_fitb_string_method_pred
     :practice: T
@@ -238,18 +263,9 @@ Strings have methods (functions) that operate on a string using **dot-notation**
     # function call
     main()
 
-.. mchoice:: funct_mc_string_immutable
-   :practice: T
+.. note ::
 
-   Do string methods like lower and replace modify the original string?
-
-   -   Yes
-
-       -   Check what was printed above.
-
-   -   No
-
-       +   Strings are immutable, which means they do not change.
+   Strings are immutable, which means that they do not change.  String methods that appear to change a string return a new string.
 
 .. dragndrop:: funct_string_methods_dnd
     :practice: T
@@ -265,7 +281,7 @@ Strings have methods (functions) that operate on a string using **dot-notation**
 
     What is the last line that will be printed when the code below runs?
 
-    - :2: It will print the index of the first match
+    - :2: It will print the index of the first match, which is at index 2 after two spaces.
       :.*: Run it and see what it does
 
 .. activecode:: funct_ac_pogil_strip_methods

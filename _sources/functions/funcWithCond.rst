@@ -111,10 +111,10 @@ Basic Conditionals and Tests
    :numbered: left
    :adaptive:
 
-   Put the blocks in order to define the function ``check_guess`` which will return 'too low' if the guess is less
+   Put the blocks in order to define the function <code>check_guess</code> which will return 'too low' if the guess is less
    than the passed target, 'correct' if they are equal, and 'too high' if the guess
-   is greater than the passed target.  For example, check_guess(5,7) returns
-   'too low', check_guess(7,7) returns 'correct', and check_guess(9,7) returns
+   is greater than the passed target.  For example, <code>check_guess(5,7)</code> returns
+   'too low', <code>check_guess(7,7)</code> returns 'correct', and <code>check_guess(9,7)</code> returns
    'too high'. There are three extra blocks that are not needed in a correct solution.
    -----
    def check_guess(guess, target):
