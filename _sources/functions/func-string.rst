@@ -117,7 +117,7 @@ String Slices
 .. fillintheblank:: funct_fitb_three_char_slice
     :practice: T
 
-    What will return a new string with just the first three characters from the string ``dna``?
+    What will return a new string with just the first three characters from the variable named ``dna``?
 
     - :dna\[0\:3\]|\[:3\]: This will return a new string with the characters from index 0 to 2.
       :.*: Look at the note above and try again.
@@ -125,7 +125,7 @@ String Slices
 .. fillintheblank:: funct_fitb_last_three_char_slice
     :practice: T
 
-    What will return a new string with just the last three characters from the string ``dna`` using a negative index?
+    What will return a new string with just the last three characters from the variable named ``dna`` using a negative index?
 
     - :dna\[-3\:\]: This will return a new string with the last three characters in it.
       :.*: Read about negative indicies in Python and try again.
