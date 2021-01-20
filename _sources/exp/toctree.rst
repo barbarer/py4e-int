@@ -11,6 +11,7 @@ SECTION 1: Pretest
 :::::::::::::::::::::::
 
 .. toctree::
+   :hidden:
    :maxdepth: 2
 
    pre1.rst
