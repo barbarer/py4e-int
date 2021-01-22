@@ -39,11 +39,11 @@ The program asks the turtle object to perform some of its behaviors (methods) li
     Click the Run button to see what this code does.  The drawing will happen below the code.
     ~~~~
     from turtle import *  # use the turtle library
-    space = Screen()      # create a turtle space
-    alex = Turtle()       # create a turtle named alex
-    alex.forward(150)     # move forward by 150 units
-    alex.left(90)         # turn by 90 degrees
-    alex.forward(75)      # move forward by 75 units
+    space = Screen()      # create a Screen object named space
+    alex = Turtle()       # create a Turtle object named alex
+    alex.forward(150)     # ask alex to move forward by 150 units
+    alex.left(90)         # ask alex to turn by 90 degrees
+    alex.forward(75)      # ask alex to move forward by 75 units
 
 .. mchoice:: Turtle_Init_Dir_mc_q1
    :practice: T
@@ -57,15 +57,15 @@ The program asks the turtle object to perform some of its behaviors (methods) li
    :feedback_c: Turtles start off facing east which is toward the right side of the page.
    :feedback_d: Which way does the turtle first move in the example above?   North is at the top of the page.
 
-   Which way does a turtle face when it is first created?
+   Which way does a turtle (object of the Turtle class) face when it is first created?
 
 ..	index::
 	single: dot notation
 
 .. Note::
-   Notice that we tell ``alex`` the turtle what to do in the code above using **dot notation**: ``alex.forward(150)``, 	``alex.left(90)``, and ``alex.forward(75)``.  That is how you communicate with a turtle.  You use the name of the turtle followed by a ``.`` and then the name of the method that you want to execute.
+   Notice that we tell ``alex`` the turtle what to do in the code above using **dot notation**: ``alex.forward(150)``, 	``alex.left(90)``, and ``alex.forward(75)``.  That is how you communicate with an object.  You use the name of the turtle object followed by a ``.`` and then the name of the method that you want to execute.
 
-Just by going forward and turning we can have a turtle draw many things.
+Just by going forward and turning we can have a turtle object draw many things.
 
 What does a left turn of 90 mean?
 ----------------------------------
@@ -156,8 +156,8 @@ Practice with Turtles
     Click the Run button to see what this code does.  The drawing will happen below the code.
     ~~~~
     from turtle import *    # use the turtle library
-    space = Screen()        # create a turtle space
-    alex = Turtle()         # create a turtle named alex
+    space = Screen()        # create a Screen object named space
+    alex = Turtle()         # create a Turtle object named alex
     alex.left(180)          # turn alex by 180 degrees
     alex.forward(75)        # move forward by 75 units
     alex.left(90)           # turn left 90 degrees
@@ -173,8 +173,8 @@ The following example has 4 errors.  Can you fix the errors so that the code run
     Fix the code below.  Error messages will shown up below the code.  The drawing will also happen below the code.
     ~~~~
     from turtle import *    # use the turtle library
-    space = screen()        # create a turtle space
-    alisha = Turtle         # create a turtle named alisha
+    space = screen()        # create a Screen object named space
+    alisha = Turtle         # create a Turtle object named alisha
     alisha.right(90)        # turn alisha south
     alisha.forward          # move forward by 150 units
     alisha.left(90)         # turn to face east
@@ -189,8 +189,8 @@ The following example has 4 errors.  Can you fix the errors so that the code run
     ~~~~
 
     from turtle Import *    # use the turtle library
-    space = Screen()        # create a turtle space
-    alex = Turtle           # create a turtle named alex
+    space = Screen()        # create a Screen object named space
+    alex = Turtle           # create a Turtle object named alex
     alex.left(180)          # turn alex by 180 degrees
     alex.forward(75)        # move forward by 75 units
     alex.turn(90)           # turn left 90 degrees

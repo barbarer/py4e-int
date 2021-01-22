@@ -4,17 +4,19 @@ Contributions
 
 Contributor List for Python for Everybody - Interactive
 --------------------------------------------------------
-- Barbara Ericson - team leader - barbarer@umich.edu
+- Dr. Barbara Ericson - team leader - barbarer@umich.edu
 - Grace Knitter
 - Ewelina Papiez
 - Shrijesh Siwakoti
 - Anthony Tyler Carvette (Tyler)
+- Robert Miner
+- Enoch Ameyaw
 
 
 
 Contributor List for Python for Everybody
 ------------------------------------------
-
+Dr. Charles Severance,
 Elliott Hauser,
 Stephen Catto,
 Sue Blumenberg,
