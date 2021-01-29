@@ -46,11 +46,11 @@ Look what happens when the user enters an empty line of input:
       :.*: Incorrect! Read the error message above for the answer. Try again.
 
 
-The code works fine until it is presented an empty line. Then there is
+The code works fine until it is presented with an empty line. In that case, there is
 no zero-th character, so we get a traceback. There are two solutions to
-this to make line three "safe" even if the line is empty.
+make line three "safe," even if the line is empty.
 
-One possibility is to simply use the ``startswith`` method
+One possibility is to simply use the ``startswith`` method,
 which returns ``False`` if the string is empty.
 
 .. code-block:: python
@@ -68,7 +68,7 @@ which returns ``False`` if the string is empty.
 Another way is to safely write the ``if`` statement using the
 *guardian* pattern and make sure the second logical
 expression is evaluated only where there is at least one character in
-the string.:
+the string:
 
 .. code-block:: python
 

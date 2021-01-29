@@ -49,5 +49,5 @@ result. The result is called the *return value*.
 
     A _________ is a named sequence of statements that performs a computation.
 
-    - :[Ff]unction: A function is a named sequence of statements that performs a computation.
-      :.*: Try again!
+    - :[Ff]unction: Correct! A function is a named sequence of statements that performs a computation.
+      :.*: Incorrect! ``type`` is an example of one of these. Try again.
