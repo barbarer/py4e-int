@@ -13,10 +13,10 @@
 	:prefix: csp-5-7-
 
 
-Chapter 5 - Summary
+Summary
 ============================
 
-Chapter 5 included the following concepts from computing.
+This chapter included the following concepts from computing.
 
 ..	index::
     single: body syntonic

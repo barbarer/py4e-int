@@ -19,4 +19,5 @@ Object-Oriented Programming
     Exercises.rst
     mixedupcode.rst
     writecode.rst
-    pogil-classes.rst
+    group-classes.rst
+    group-mult-classes.rst

@@ -1,4 +1,4 @@
-POGIL Activity - Classes, constructors, attributes, and methods
+Group Activity - Classes, constructors, attributes, and methods
 -----------------------------------------------------------------
 
 **Learning Objectives**
