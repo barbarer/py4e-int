@@ -47,7 +47,7 @@ Table of Contents
    turtles/toctree.rst
    pictures/toctree.rst
    classes-basics/toctree.rst
-   classes-advanced/toctree.rst
+   inheritance/toctree.rst
    database/toctree.rst
    viz/toctree.rst
 

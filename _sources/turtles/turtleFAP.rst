@@ -106,7 +106,11 @@ The program below uses the ``goto(x,y)`` to move to the top left corner before d
    :numbered: left
    :adaptive:
 
-   The following program uses a turtle to draw a capital F as shown in the picture below, <img src="https://i.postimg.cc/br7K6vMv/DrawFwGT.png" width="200" align="left" hspace="10" vspace="5" /> but the lines are mixed up.  The program should do all necessary set-up: import the turtle module, get the space to draw on, and create the turtle.  It should draw the lines in the order shown by the numbers in the picture on the left.<br /><br /><p>Drag the needed blocks of statements from the left column to the right column and put them in the right order.  There may be extra blocks that are not needed in a correct solution.  Then click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order or are the wrong blocks.</p>
+   The following program uses a turtle to draw a capital F as shown in the picture below, but the lines are mixed up.  The program should do all necessary set-up: import the turtle module, get the screen/space to draw on, and create the turtle.  It should draw the lines in the order shown by the numbers in the picture on the left. Drag the needed blocks of statements from the left column to the right column and put them in the right order.  There may be extra blocks that are not needed in a correct solution.  Then click on *Check* to see if you are right. You will be told if any of the lines are in the wrong order or are the wrong blocks.
+
+   .. image:: Figures/DrawFwGT.png
+      :width: 240px
+      :align: center
    -----
    from turtle import *
    space = Screen()
@@ -139,7 +143,11 @@ The program below uses the ``goto(x,y)`` to move to the top left corner before d
    :numbered: left
    :adaptive:
 
-   The following program uses a turtle to draw a capital A as shown in the picture below, <img src="https://i.postimg.cc/XYCv7G3s/DrawABig.png" width="200" align="left" hspace="10" vspace="5" /> but the lines are mixed up.  The program should do all necessary set-up: import the turtle module, get the space to draw on, and create the turtle.  It should draw the lines in the order shown by the numbers in the picture on the left. <br /><br /><p>Drag the needed blocks of statements from the left column to the right column and put them in the right order. There may be additional blocks that are not needed in a correct solution. Then click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order or are the wrong blocks.</p>
+   The following program uses a turtle to draw a capital A as shown in the picture below, but the lines are mixed up.  The program should do all necessary set-up: import the turtle module, get the screen/space to draw on, and create the turtle.  It should draw the lines in the order shown by the numbers in the picture on the left. Drag the needed blocks of statements from the left column to the right column and put them in the right order. There may be additional blocks that are not needed in a correct solution. Then click on *Check* to see if you are right. You will be told if any of the lines are in the wrong order or are the wrong blocks.
+
+   .. image:: Figures/DrawABig.png
+      :width: 240px
+      :align: center
    -----
    from turtle import *
    =====

@@ -5,7 +5,7 @@
     Invariant Sections being Forward, Prefaces, and Contributor List,
     no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
     is included in the section entitled "GNU Free Documentation License".
-    
+
 .. |audiobutton| image:: Figures/start-audio-tour.png
     :height: 20px
     :align: top
@@ -36,20 +36,19 @@ Pictures on a computer are broken up into little bits called **pixels**, for *pi
 
 .. figure:: Figures/grid.png
     :align: center
-    :alt: A grid with horizontal (x) and vertical (y) dimensions 
+    :alt: A grid with horizontal (x) and vertical (y) dimensions
     :figclass: align-center
-    
+
     Figure: A grid with horizontal (x) and vertical (y) dimensions
 
 Pixels are quite small.  Even this small picture below has 180 columns and 240 rows of pixels:
 
 .. raw:: html
 
-    <img src="../_static/arch.jpg" id="arch.jpg">
+    <img src="../_images/puppy.jpg" id="puppy.jpg">
 
 Each pixel has a color associated with it: An amount of redness, an amount of greenness, and an amount of blueness.
-Let's remove the red from this picture.  Now, there are lot of lines in the program below, but fortunately, you can ignore most of them. The Audio Tour explains the important lines.  Press |audiobutton| to hear the audio tour explanation.  When you run this program it may take several minutes to show the changed picture. 
-
+Let's remove the red from this picture.  Now, there are lot of lines in the program below, but fortunately, you can ignore most of them. The Audio Tour explains the important lines.  Press |audiobutton| to hear the audio tour explanation.  When you run this program it may take several minutes to show the changed picture.
 
 
 .. activecode:: Image_Remove_Red
@@ -57,20 +56,20 @@ Let's remove the red from this picture.  Now, there are lot of lines in the prog
     :nocodelens:
 
     from image import *
-    
+
     # CREATE AN IMAGE FROM A FILE
-    img = Image("arch.jpg")
-    
+    img = Image("puppy.jpg")
+
     # LOOP THROUGH THE PIXELS
     pixelList = img.getPixels()
     for p in pixelList:
-    
+
     	# SET THE RED TO 0
         p.setRed(0)
-            
+
         # UPDATE THE IMAGE
         img.updatePixel(p)
-            
+
     # SHOW THE RESULT
     win = ImageWin(img.getWidth(),img.getHeight())
     img.draw(win)
@@ -80,33 +79,86 @@ The program above can take several minutes to execute on the ``arch.jpg`` pictur
 A Library of Images
 =====================
 
-Here are some other small images that you can use.  Modify the program above to try out the code on some of these other images by changing line 4 above. 
+Here are some other small images that you can use.  Modify the program above to try out the code on some of these other images by changing line 4 above.
 
 You can actually run this code on any image on the web by specifying the image url.  We recommend using small images since larger images will take more time to process.
 
-.. raw:: html
+.. list-table:: Sample Images
 
-   <table>
-   <tr><td>beach.jpg</td><td>baby.jpg</td><td>vangogh.jpg</td><td>swan.jpg</td></tr>
-   <tr><td><img src="../_static/beach.jpg" id="beach.jpg"></td><td><img src="../_static/baby.jpg" id="baby.jpg"></td><td><img src="../_static/vangogh.jpg" id="vangogh.jpg"></td><td><img src="../_static/swan.jpg" id="swan.jpg"></td></tr>
-   </table>
-   <table>
-   <tr><td>puppy.jpg</td><td>kitten.jpg</td><td>girl.jpg</td><td>motorcycle.jpg</td></tr>
-   <tr><td><img src="../_static/puppy.jpg" id="puppy.jpg"></td><td><img src="../_static/kitten.jpg" id="kitten.jpg"></td><td><img src="../_static/girl.jpg" id="girl.jpg"></td><td><img src="../_static/motorcycle.jpg" id="motorcycle.jpg"></td></tr>
-   </table>
-   <table>
-   <tr><td>gal1.jpg</td><td>guy1.jpg</td><td>gal2.jpg</td></tr>
-   <tr><td><img src="../_static/gal1.jpg" id="gal1.jpg"></td><td><img src="../_static/guy1.jpg" id="guy1.jpg"></td><td><img src="../_static/gal2.jpg" id="gal2.jpg"></td></tr>
-   </table>
-   
+    * - beach.jpg
+
+        .. raw:: html
+
+            <img src="../_images/beach.jpg" id="beach.jpg">
+
+      - baby.jpg
+
+        .. raw:: html
+
+           <img src="../_images/baby.jpg" id="baby.jpg">
+
+      - vangogh.jpg
+
+        .. raw:: html
+
+           <img src="../_images/vangogh.jpg" id="vangogh.jpg">
+
+
+      - swan.jpg
+
+        .. raw:: html
+
+           <img src="../_images/swan.jpg" id="swan.jpg">
+
+    * - puppy.jpg
+
+        .. raw:: html
+
+           <img src="../_images/puppy.jpg" id="puppy.jpg">
+
+      - kitten.jpg
+
+        .. raw:: html
+
+           <img src="../_images/kitten.jpg" id="kitten.jpg">
+
+      - girl.jpg
+
+        .. raw:: html
+
+           <img src="../_images/girl.jpg" id="girl.jpg">
+
+      - motorcycle.jpg
+
+        .. raw:: html
+
+           <img src="../_images/motorcycle.jpg" id="motorcycle.jpg">
+
+    * - gal1.jpg
+
+        .. raw:: html
+
+           <img src="../_images/gal1.jpg" id="gal1.jpg">
+
+      - guy1.jpg
+
+        .. raw:: html
+
+           <img src="../_images/guy1.jpg" id="guy1.jpg">
+
+      - gal2.jpg
+
+        .. raw:: html
+
+           <img src="../_images/gal2.jpg" id="gal2.jpg">
+
+      - 
+
+
 .. note::
 
-    Discuss topics in this section with classmates. 
+    Discuss topics in this section with classmates.
 
       .. disqus::
           :shortname: cslearn4u
           :identifier: studentcsp_11_1
-
-
-
-
