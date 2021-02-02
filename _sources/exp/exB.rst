@@ -9,7 +9,7 @@ problem.  After you solve each problem, please answer the poll as well.
    :adaptive:
    :numbered: left
 
-   Put the code blocks in order to return the sum of the numbers in the list ``nums``, returning ``0`` for an empty list. Except the number 13 is very unlucky, so  it does not count and a number that comes immediately after a 13 also does not count.  For example, ``sum13([13,1,2])`` returns ``2`` and `` sum13([1,13])`` returns ``1``.
+   Put the code blocks in order to return the sum of the numbers in the list ``nums``, returning ``0`` for an empty list. Except the number 13 is very unlucky, so  it does not count and a number that comes immediately after a 13 also does not count.  For example, ``sum13([13,1,2])`` returns ``2`` and ``sum13([1,13])`` returns ``1``.
    -----
    def sum_13(nums):
    =====
