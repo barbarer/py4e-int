@@ -9,7 +9,7 @@ problem.  After you solve each problem, please answer the poll as well.
    :adaptive:
    :numbered: left
 
-   Put the code blocks in order to return the sum of the numbers in the list <code>nums</code>, returning <code>0</code> for an empty list. Except the number 13 is very unlucky, so  it does not count and a number that comes immediately after a 13 also does not count.  For example, <code>sum13([13,1,2])</code> returns <code>2</code> and <code> sum13([1,13])</code> returns <code>1</code>.
+   Put the code blocks in order to return the sum of the numbers in the list ``nums``, returning ``0`` for an empty list. Except the number 13 is very unlucky, so  it does not count and a number that comes immediately after a 13 also does not count.  For example, ``sum13([13,1,2])`` returns ``2`` and `` sum13([1,13])`` returns ``1``.
    -----
    def sum_13(nums):
    =====
@@ -42,7 +42,7 @@ problem.  After you solve each problem, please answer the poll as well.
    :adaptive:
    :numbered: left
 
-   Put the code blocks in order to create a function that takes two numbers as arguments (<code>num</code>, <code>length</code>) and returns a list of multiples of <code>num</code> [<code>num * 1</code>, <code>num * 2</code>, etc] until the list contains <code>length</code> elements. For example, <code>list_of_multiples(8, 4)</code> returns <code>[8, 16, 24, 32]</code> and <code>list_of_multiples (11, 8)</code> returns <code>[11, 22, 33, 44, 55, 66, 77, 88]</code>.
+   Put the code blocks in order to create a function that takes two numbers as arguments (``num``, ``length``) and returns a list of multiples of ``num`` [``num * 1``, ``num * 2``, etc] until the list contains ``length`` elements. For example, ``list_of_multiples(8, 4)`` returns ``[8, 16, 24, 32]`` and ``list_of_multiples (11, 8)`` returns ``[11, 22, 33, 44, 55, 66, 77, 88]``.
    -----
    def list_of_multiples (num, length):
    =====
@@ -67,7 +67,7 @@ problem.  After you solve each problem, please answer the poll as well.
    :adaptive:
    :numbered: left
 
-   Put the code in order to define a function called grammarly that checks whether a word is spelled correctly using the rule "i before e except after c". For example, it should return <code>False</code> for <code>grammarly('beleive')</code> since the 'ei' does not follow a 'c', it should return <code>True</code> for <code>grammarly ('receive')</code> since the 'ei' follows a 'c'.
+   Put the code in order to define a function called grammarly that checks whether a word is spelled correctly using the rule "i before e except after c". For example, it should return ``False`` for ``grammarly('beleive')`` since the 'ei' does not follow a 'c', it should return ``True`` for ``grammarly ('receive')`` since the 'ei' follows a 'c'.
    -----
    def grammarly(word):
    =====
@@ -104,8 +104,8 @@ problem.  After you solve each problem, please answer the poll as well.
    :adaptive:
    :numbered: left
 
-   Put the code blocks in order to remove all values from a list of numbers equal to the passed <code>target</code> value and return the modified list.  For example,
-   <code>remove_target([5, 2, 5])</code> returns <code>[2]</code>.
+   Put the code blocks in order to remove all values from a list of numbers equal to the passed ``target`` value and return the modified list.  For example,
+   ``remove_target([5, 2, 5])`` returns ``[2]``.
    -----
    def remove_target(nums, target):
    =====
