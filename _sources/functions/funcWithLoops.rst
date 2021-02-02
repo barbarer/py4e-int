@@ -80,7 +80,7 @@ A for-each loop in Python will loop though the items in a list starting with the
    :adaptive:
    :practice: T
 
-   Drag the blocks from the left and put them in the correct order on the right to define a function <code>total_even</code> that returns the total of the even numbers in the passed list.
+   Drag the blocks from the left and put them in the correct order on the right to define a function ``total_even`` that returns the total of the even numbers in the passed list.
    -----
    def total_even(alist):
    =====
@@ -265,7 +265,7 @@ the built-in ``range`` function to do this.
    :adaptive:
    :practice: T
 
-   Drag the blocks from the left and put them in the correct order on the right to define a function <code>total_at_odd_indices</code> that returns the total of the numbers at odd indices in the passed list.
+   Drag the blocks from the left and put them in the correct order on the right to define a function ``total_at_odd_indices`` that returns the total of the numbers at odd indices in the passed list.
    -----
    def total_at_odd_indices(alist):
    =====

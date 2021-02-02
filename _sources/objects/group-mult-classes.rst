@@ -100,7 +100,7 @@ Look at the classes defined above. Then answer the following questions.
    :adaptive:
    :practice: T
 
-   Drag the blocks from the left and put them in the correct order on the right to define two classes: Car and SportsCar that inherits from Car. Add and __init__ method to the Car class that takes a make and sets the current object's make.  Add an __str__ method to the Car class and return a string with the make.  Add a __int__ method to the SportsCar class that calls the parent class __init__ method.
+   Drag the blocks from the left and put them in the correct order on the right to define two classes: ``Car`` and ``SportsCar`` that inherits from ``Car``. Add an ``__init__`` method to the ``Car`` class that takes a ``make`` and sets the current object's ``make``.  Add a ``__str__`` method to the ``Car`` class and return a string with the ``make``.  Add an ``__init__`` method to the ``SportsCar`` class that calls the parent class ``__init__`` method.
    -----
    class Car:
    =====

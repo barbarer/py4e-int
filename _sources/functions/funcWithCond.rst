@@ -111,11 +111,11 @@ Basic Conditionals and Tests
    :numbered: left
    :adaptive:
 
-   Put the blocks in order to define the function <code>check_guess</code> which will return 'too low' if the guess is less
-   than the passed target, 'correct' if they are equal, and 'too high' if the guess
-   is greater than the passed target.  For example, <code>check_guess(5,7)</code> returns
-   'too low', <code>check_guess(7,7)</code> returns 'correct', and <code>check_guess(9,7)</code> returns
-   'too high'. There are three extra blocks that are not needed in a correct solution.
+   Put the blocks in order to define the function ``check_guess`` which will return ``'too low'`` if the guess is less
+   than the passed target, ``'correct'`` if they are equal, and ``'too high'`` if the guess
+   is greater than the passed target.  For example, ``check_guess(5,7)`` returns
+   ``'too low'``, ``check_guess(7,7)`` returns ``'correct'``, and ``check_guess(9,7)`` returns
+   ``'too high'``. There are three extra blocks that are not needed in a correct solution.
    -----
    def check_guess(guess, target):
    =====
@@ -428,7 +428,7 @@ The logical operators in Python are ``and``, ``or``, and ``not``. These can be u
    :adaptive:
    :practice: T
 
-   Drag the blocks from the left and put them in the correct order on the right to define a function <code>squirrel_play</code> that takes a temp (the temperature) and Boolean that indicates if it is summer or not and returns true if it is summer and the temperature is between 60 and 100 (inclusive).  It also returns true if it isn't summer and the temperature is between 60 and 90 (inclusive).  Otherwise, it returns false.
+   Drag the blocks from the left and put them in the correct order on the right to define a function ``squirrel_play`` that takes a ``temp`` (the temperature) and Boolean ``is_summer`` that indicates if it is summer or not and returns ``True`` if it is summer and the temperature is between 60 and 100 (inclusive).  It also returns ``True`` if it isn't summer and the temperature is between 60 and 90 (inclusive).  Otherwise, it returns ``False``.
    -----
    def squirrel_play(temp, is_summer):
    =====

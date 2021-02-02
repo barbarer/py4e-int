@@ -164,9 +164,9 @@ Now look at the main function in the code above and answer the following questio
    :numbered: left
    :adaptive:
 
-   Put the code blocks in order below to create a class Person with a
-   constructor (__init__) method that takes a first and last name and a
-   __str__ method to return a string with the first and last name separated
+   Put the code blocks in order below to create a class ``Person`` with a
+   constructor (``__init__``) method that takes a first and last name and a
+   ``__str__`` method to return a string with the first and last name separated
    with a space.
    -----
    class Person:

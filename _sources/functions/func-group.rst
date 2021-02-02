@@ -271,7 +271,7 @@ Function Order
    :adaptive:
    :practice: T
 
-   Drag the blocks from the left and put them in the correct order on the right to define a function <code>print_greeting</code> that asks for your name and prints "Hello Name". Then define a <code>main</code> function that calls <code>print_greeting</code>.  Be sure to also call the <code>main</code> function. Note that you will have to indent the lines that are in the body of each function.  Click the <i>Check Me</i> button to check your solution.</p>
+   Drag the blocks from the left and put them in the correct order on the right to define a function ``print_greeting`` that asks for your name and prints "Hello Name". Then define a ``main`` function that calls ``print_greeting``.  Be sure to also call the ``main`` function. Note that you will have to indent the lines that are in the body of each function.  Click the *Check* button to check your solution.</p>
    -----
    def print_greeting():
    =====
