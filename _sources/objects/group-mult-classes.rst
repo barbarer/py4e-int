@@ -122,9 +122,9 @@ Look at the classes defined above. Then answer the following questions.
    =====
        def __init__(self, make):
    =====
-           super()__init__(make)
+           super().__init__(make)
    =====
-           super()__init__(self, make) #paired
+           super().__init__(self, make) #paired
 
 
 
