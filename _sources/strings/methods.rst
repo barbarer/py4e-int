@@ -59,9 +59,9 @@ https://docs.python.org/library/stdtypes.html#string-methods.
     What function lists the methods available for an object?
 
 Calling a *method* is similar to calling a function (it
-takes arguments and returns a value) but the syntax is different. We call
-a method by appending the method name to the variable name using the
-period as a delimiter.
+takes arguments and returns a value), but the syntax is different. We call
+a method by typing the variable name, adding a period, and then adding the
+method call.
 
 For example, the method ``upper`` takes a string and returns a
 new string with all uppercase letters. Instead of the function
@@ -105,7 +105,7 @@ The ``find`` method can find substrings as well as characters:
     2
 
 
-It can also take as a second argument the index where it should start:
+It can also take as a second argument the index where it should start looking:
 
 .. code-block:: python
 
@@ -149,7 +149,7 @@ method before we do any checking:
     print(line.lower().startswith('h'))
 
 
-In the last example, the method ``lower`` is called and then we
+In the last example, the method ``lower`` is called. Then, we
 use ``startswith`` to see if the resulting lowercase string
 starts with the letter "h". As long as we are careful with the order, we
 can make multiple method calls in a single expression.
