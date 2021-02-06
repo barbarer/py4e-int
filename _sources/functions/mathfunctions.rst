@@ -101,24 +101,24 @@ comparing it to the square root of two divided by two:
     :answer_c: add math
     :answer_d: None. You can always use the math module.
     :correct: a
-    :feedback_a: import math allows you to use the math module by creating the module object.
-    :feedback_b: include works similarly to import but is not what we are using.
-    :feedback_c: add will not import the math module.
-    :feedback_d: Something needs to be done to bring in the math module.
+    :feedback_a: Correct! import math allows you to use the math module by creating the "math" module object.
+    :feedback_b: Incorrect! include works similarly to import, but it's not what we're using. Try again.
+    :feedback_c: Incorrect! add will not import the math module. Try again.
+    :feedback_d: Incorrect! Something needs to be done to allow the math module to be used. Try again.
 
     Which statement allows you to use the math module in Python?
 
 .. mchoice:: functMath_MC_access
     :practice: T
     :answer_a: log
-    :answer_b: module object
+    :answer_b: quotation marks or single quotes
     :answer_c: dot notation
     :answer_d: function notation
     :correct: c
-    :feedback_a: log is a function within the math module.
-    :feedback_b: The math module object is what contains the math functions.
-    :feedback_c: dot notation allows us to access a function in a module.
-    :feedback_d: function notation is the way a function is written.
+    :feedback_a: Incorrect! log is a function within the math module. Try again.
+    :feedback_b: Incorrect! You need these to create a string. Try again.
+    :feedback_c: Correct! Dot notation allows us to access a function in a module.
+    :feedback_d: Incorrect! Function notation is the way a function is written. Try again.
 
     To access a function in a module, we must use...
 
@@ -128,15 +128,15 @@ comparing it to the square root of two divided by two:
     When we use the "import math" statement, a __________ called math is created.
 
     - :[Mm]odule [Oo]bject: A module object is created when we import math.
-      :.*: Try again!
+      :.*: Incorrect! What type of object is created? Try again.
 
 
 
 .. codelens:: functMath_codelens1
     :question: What will print?
     :breakline: 3
-    :feedback: Num is a floating-point number.
-    :correct: globals.result
+    :feedback: num is a floating-point number, so result will be too.
+    :correct: 1.0
 
     import math
     num = 2.0

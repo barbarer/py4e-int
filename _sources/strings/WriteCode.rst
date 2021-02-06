@@ -25,7 +25,7 @@ Write Code Questions
 
         .. tab:: Answer
 
-	    The ``capitalize()`` method returns a new string; it doesn't modify the original because strings are immutable. As a result, you need to reassign s1 to the new string object created in line 2.
+	    The ``capitalize()`` method returns a new string; it doesn't modify the original because strings are immutable. As a result, you need to assign the value of s1.capitalize() to s1. 
 
             .. activecode::  str-ex-hiA
                 :nocodelens:
@@ -36,30 +36,47 @@ Write Code Questions
                 print(s1)
 
 #.
-    .. activecode::  str-ex-meowq
-        :nocodelens:
+    .. tabbed:: str-ex-meow
 
-        Fix the code so that only "meow" is printed.
-        ~~~~
-        sentence = "The cat goes meow."
-        s2 = [16:13]sentence
-        print(s2)
+	.. tab:: Question
 
-        ====
-        from unittest.gui import TestCaseGui
-        class myTests(TestCaseGui):
+            Fix the code so that only "meow" is printed.
 
-            def testOne(self):
-                self.assertEqual(s2,"meow")
+   	    .. activecode::  str-ex-meowq
+        	:nocodelens:
 
-        myTests().main()
+
+        	sentence = "The cat goes meow."
+       		s2 = [16:13]sentence
+        	print(s2)
+
+        	====
+        	from unittest.gui import TestCaseGui
+        	class myTests(TestCaseGui):
+
+            	    def testOne(self):
+                        self.assertEqual(s2,"meow")
+
+        	myTests().main()
+
+	.. tab:: Answer
+
+	    The string slicing syntax in line 2 was incorrect. Remember, the final number in the slice is the index of the character after the final one you want in the string. 
+
+            .. activecode::  str-ex-meowa
+                :nocodelens:
+                :optional:
+
+        	sentence = "The cat goes meow."
+       		s2 = sentence[13:17]
+        	print(s2)
 
 #.
     .. tabbed:: str-ex-eggs
 
         .. tab:: Question
 
-            Write the code to evaluate the length of the string "I like green eggs"
+            Write code to evaluate the length of the string "I like green eggs"
             and print it. It should print "The length is 17".
 
             .. activecode::  str-ex-eggsq
@@ -68,7 +85,7 @@ Write Code Questions
 
         .. tab:: Answer
 
-	    Use the ``len()`` method to find the length of a string.
+	    You can use the ``len()`` method to find the length of a string.
 
             .. activecode::  str-ex-eggsa
                 :optional:
@@ -85,7 +102,7 @@ Write Code Questions
         Create a function named ``count`` that accepts a string and a letter
         as arguments, then returns the count of that letter in the string.
         For example, if the function call was ``count("banana", "a")`` it would
-        return ``3``.
+        return ``3``. *Hint: use the* ``count`` *method.*
         ~~~~
 
         ====

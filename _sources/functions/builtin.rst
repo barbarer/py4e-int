@@ -15,42 +15,41 @@ and smallest values in a list, respectively:
     :coach:
     :caption: The max and min functions give us the largest and smallest values in a list, respectively
 
-    maximum = max('Hello world')
+    maximum = max(1, 0, -2, 4, 3)
     print(maximum)
-    minimum = min('Hello world')
+    minimum = min(1, 0, -2, 4, 3)
     print(minimum)
+
+
+The ``max`` function gives us the value 4 because it is the largest value
+in the list. The ``min`` function, inversely, give us the value -2 because
+it is the smallest value in the list.
 
 
 .. mchoice:: functBuiltin_MC_min
     :practice: T
-    :answer_a: There is no minimum character because there are no numbers in this string.
-    :answer_b: We named the variable a reserved keyword (minimum).
-    :answer_c: The minimum character is a space. It prints but we just can't tell.
-    :answer_d: 'Hello world' needs to be put in double quotes.
-    :correct: c
-    :feedback_a: Try again! There is a minimum character.
-    :feedback_b: Minimum is not a reserved keyword.
-    :feedback_c: The minimum character is a space, we cannot see it because the character was printed without quotes.
-    :feedback_d: Strings can be in either single quotes ('') or double quotes ("").
+    :answer_a: 5
+    :answer_b: fish
+    :answer_c: True
+    :answer_d: There is an error
+    :correct: d
+    :feedback_a: Incorrect! You cannot use the max function to compare different data types. Try again.
+    :feedback_b: Incorrect! You cannot use the max function to compare different data types. Try again.
+    :feedback_c: Incorrect! You cannot use the max function to compare different data types. Try again.
+    :feedback_d: Correct! This code causes a TypeError because the max function cannot be used to compare different data types.
 
-    We see that w prints as the maximum character. How come it looks like the minimum does not print?
+    What will be printed as the output of this code?
 
     .. code-block:: python
 
-        maximum = max('Hello world')
+        maximum = max(5, 'fish', True)
         print(maximum)
-        minimum = min('Hello world')
-        print(minimum)
 
-The ``max`` function tells us the "largest character" in the
-string (which turns out to be the letter "w") and the ``min``
-function shows us the smallest character (which turns out to be a
-space).
 
-Another very common built-in function is the ``len`` function
+Another very common built-in function is the ``len`` function,
 which tells us how many items are in its argument. If the argument to
-``len`` is a string, it returns the number of characters in the
-string.
+``len`` is a string, it returns the number of characters in the string.
+
 
 .. activecode:: functBuiltin_len
     :coach:
@@ -60,12 +59,11 @@ string.
     print(length_x)
 
 
-These functions are not limited to looking at strings. They can operate
-on any set of values, as we will see in later chapters.
+These functions can operate on any set of values, as we will see in
+later chapters.
 
 You should treat the names of built-in functions as reserved words
 (i.e., avoid using "max" as a variable name).
-
 
 
 .. codelens:: functBuiltin_codelens_line2
@@ -89,10 +87,10 @@ You should treat the names of built-in functions as reserved words
     :answer_c: 12
     :answer_d: 13
     :correct: d
-    :feedback_a: Spaces and punctuation characters count in the length!
-    :feedback_b: Punctuation characters count in the length!
-    :feedback_c: Spaces count in the length!
-    :feedback_d: 13 is the length of all characters in the string.
+    :feedback_a: Incorrect! Spaces and punctuation characters count in the length. Try again.
+    :feedback_b: Incorrect! Punctuation characters count in the length. Try again.
+    :feedback_c: Incorrect! Spaces count in the length. Try again.
+    :feedback_d: Correct! 13 is the length of all characters in the string, including spaces and punctuation.
 
     Consider the code block below. What prints?
 
@@ -102,6 +100,7 @@ You should treat the names of built-in functions as reserved words
         length_sentence_a = len(sentence_a)
         print(length_sentence_a)
 
+
 .. mchoice:: functBuiltin_MC_name
     :practice: T
     :answer_a: max
@@ -109,9 +108,9 @@ You should treat the names of built-in functions as reserved words
     :answer_c: built_in
     :answer_d: len
     :correct: c
-    :feedback_a: This is a reserved keyword because it is a built-in function in Python.
-    :feedback_b: This is a reserved keyword because it is a built-in function in Python.
-    :feedback_c: built_in is a valid variable name because it is not a built-in Python function.
-    :feedback_d: This is a reserved keyword because it is a built-in function in Python.
+    :feedback_a: Incorrect! This is a reserved keyword because it is a built-in function in Python. Try again.
+    :feedback_b: Incorrect! This is a reserved keyword because it is a built-in function in Python. Try again.
+    :feedback_c: Correct! built_in is a valid variable name because it is not a built-in Python function.
+    :feedback_d: Incorrect! This is a reserved keyword because it is a built-in function in Python. Try again.
 
     Which of the following would work as a variable name?
