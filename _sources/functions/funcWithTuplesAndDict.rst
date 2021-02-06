@@ -21,7 +21,7 @@ Students will know and be able to do the following.
 Tuples
 ============================
 
-A tuple is like a list in that holds items in order and those items are separated by commas.
+A tuple is like a list in that holds items in order and those items are separated by commas.  They can be enclosed in ``()``, but don't have to be.
 
 .. fillintheblank:: funct_tup_test_first
 
@@ -137,6 +137,10 @@ The ``range`` function also returns an iterator.
     print(l3[0][1])
     print(l3)
 
+.. note::
+
+   The ``zip`` function takes two lists and returns an ``iterator``. You can convert this iterator to a list of tuples using the ``list`` function.  Each tuple has an element from list1 and an element from list2 in order.
+
 
 Dictionaries
 ============================
@@ -216,7 +220,7 @@ There is another way to update the value for a key that works even if the key is
 .. note::
 
    The better way to increment a count at a key is to use
-   ``dict[key] = dict.get(key,0) + 1``.  This will avoid key errors.
+   ``dict[key] = dict.get(key,0) + 1``.  This will avoid a key error if the key isn't in the dictionary and the code is shorter.
 
 .. dragndrop:: funct_dict_symbol_dnd
     :practice: T

@@ -42,7 +42,47 @@ start writing any code. That way you will know when your code works.
 This type of test is better than just printing out actual output because
 then you have to think about what the correct value should be.  It lets you
 quickly compare the expected value and the actual value.  However, you have
-to visually compare the two.
+to visually compare the two, which takes some time and you could miss something that doesn't match.
+
+.. index:: f-string
+
+.. note::
+
+   The tests above are using a f-string which is an easier way to create a string
+   with expression results in the string.  Just add ``f`` before the start of the string and ``{expression}`` in the string.
+
+.. index:: list comprehension
+
+Another way to write the code above would be to use a **list comprehension**.  These are a quick way to return
+a new list by applying some logic to each element of the list.
+
+.. code-block::
+
+   result_list = [returned_value for item in list logic]
+
+.. activecode:: ut_example_test_total_even_listc
+    :caption: Total even using a list comprehension
+
+    Run the code below to see what it prints.
+    ~~~~
+    # Return the total of the even numbers in a list of numbers called nums
+    def total_even(nums):
+        evens = [num for num in nums if num % 2 == 0]
+        return sum(evens)
+
+    # Test cases for total_even
+    def test():
+        print(f"Testing total_even([1, 2]) should return 2 and returns {total_even([1, 2])}")
+        print(f"Testing total_even([1, 3]) should return 0 and returns {total_even([1, 3])}")
+        print(f"Testing total_even([2, 6]) should return 8 and returns {total_even([2, 6])}")
+        print(f"Testing total_even([2, 3, 4]) should return 6 and returns {total_even([2, 3, 4])}")
+        print(f"Testing total_even([]) should return 0 and returns {total_even([])}")
+        print(f"Testing total_even([1]) should return 0 and returns {total_even([1])}")
+        print(f"Testing total_even([2]) should return 2 and returns {total_even([2])}")
+
+    # function call
+    test()
+
 
 Creating Test Cases
 ---------------------
@@ -145,6 +185,37 @@ Look at the unit tests above and answer the questions below.
 
     myTests().main()
 
+.. activecode:: ut_get_middle_ac_add_test
+   :autograde: unittest
+
+   Fix the function below to return the middle characters from the passed string.
+   If the string has an odd length then return the middle character.  If the string has an even
+   length return the two middle characters.  For example, ``get_middle('abc')`` returns
+   ``'b'`` and ``get_middle('abcd')`` returns ``'bc'``.  Also add tests cases to
+   test the result when ``str`` has only one or two characters in it.
+   ~~~~
+   def get_middle(str):
+       len_s = len(str)
+       mid = len_s // 2
+       if len_s % 2 == 0:
+           return str[mid - 1: mid + 1]
+       else:
+           return str
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+       def testOne(self):
+           self.assertEqual(get_middle('abc'), 'b', "get_middle('abc')")
+           self.assertEqual(get_middle('abcd'), 'bc', "get_middle('abcd')")
+           self.assertEqual(get_middle('12345'), '3', "get_middle('12345')")
+           self.assertEqual(get_middle('123456'), '34', "get_middle('123456')")
+
+   myTests().main()
+
+Add tests to check the result when ``str`` has one or two letters.
+
 .. note::
 
    Unit tests in this ebook must include the line ``from unittest.gui import TestCaseGui``
@@ -187,7 +258,7 @@ To write a unit test you need to do the following.
 
 #. Optionally create a ``tearDown`` method which is called after *every* test method is run
 
-#. Run the tests using ``*ClassName*.main()`` in the ebook and otherwise ``unittest.main()``
+#. Run the tests using ``ClassName.main()`` in the ebook and otherwise ``unittest.main()``
 
 .. activecode:: ut-ex-car-class-unit-tests
     :autograde: unittest
