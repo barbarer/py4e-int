@@ -116,7 +116,7 @@ Multiple Choice Questions
    :practice: T
    :answer_a: True
    :answer_b: False
-   :correct: a
+   :correct: b
    :feedback_a: Incorrect! When the first numbers in both tuples are equal, the comparison operator will move on to the next pair of numbers. Try again.
    :feedback_b: Correct! The compiler will look at the first pair of different numbers, then decide whether it is true or false depending on that pair.
 
