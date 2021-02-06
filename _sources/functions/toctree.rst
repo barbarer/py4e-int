@@ -25,3 +25,4 @@ Functions
    funcWithCond.rst
    funcWithLists.rst
    funcWithLoops.rst
+   funcWithTuplesAndDict.rst

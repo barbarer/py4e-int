@@ -32,6 +32,7 @@ Table of Contents
 
    intro/toctree.rst
    variables/toctree.rst
+   debugging/toctree.rst
    conditional/toctree.rst
    functions/toctree.rst
    iterations/toctree.rst
