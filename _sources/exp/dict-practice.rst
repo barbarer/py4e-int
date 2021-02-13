@@ -19,4 +19,4 @@ Dictionary and Tuple Practice
 
 .. selectquestion:: str-count-selq
    :ab: dictTupP
-   :fromid: dp_get_counts_dict, dp_get_counts_dict_pp
+   :fromid: dp_get_counts_dict_pp, dp_get_counts_dict 
