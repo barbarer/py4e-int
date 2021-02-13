@@ -116,7 +116,7 @@ Multiple Choice Questions
     :feedback_a: A for loop is typically used to iterate through the lines in a file.
     :feedback_b: A while loop can be used to run through lines in a file, but to iterate through, it is more common to use a for loop.
 
-    What type of loop is used to iterate through the lines in a file?
+    What type of loop was used in this chapter to iterate through the lines in a file?
 
 .. mchoice:: fileEx_catch
     :practice: T
@@ -126,7 +126,7 @@ Multiple Choice Questions
     :feedback_a: Try/except statements are used to prevent an exception from terminating a program.
     :feedback_b: Try/except statements are a catch for programs. What does that mean?
 
-    True or False? Try and except statements are used to catch errors from terminating programs.
+    True or False? Try and except statements are used to catch errors.
 
 .. fillintheblank:: fileEx_r
     :practice: T

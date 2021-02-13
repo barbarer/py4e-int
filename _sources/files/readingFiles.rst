@@ -5,7 +5,7 @@ Reading files
     single: Counter
     pair: File; Open
 
-While the *file handle* does not contain the data for the
+While the *file handle* object does not contain the actual data in the
 file, it is quite easy to construct a ``for`` loop to read
 through and count each of the lines in a file:
 
@@ -19,11 +19,11 @@ through and count each of the lines in a file:
         count = count + 1
     print('Line Count:', count)
 
-We can use the file handle as the sequence in our ``for`` loop.
+We can use the file handle object in a ``for`` loop.
 Our ``for`` loop simply counts the number of lines in the file
 and prints them out. The rough translation of the ``for`` loop
 into English is, "for each line in the file represented by the file
-handle, add one to the ``count`` variable."
+handle object, add one to the ``count`` variable."
 
 The reason that the ``open`` function does not read the entire
 file is that the file might be quite large with many gigabytes of data.

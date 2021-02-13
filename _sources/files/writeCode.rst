@@ -1,9 +1,9 @@
 Write Code Questions
 --------------------
 The following data file ``uspoll.txt`` is used in some of the questions in this section. The data
-is ordered City/State, annual mean amounts of particulate pollution that’s 10
-micrometers in diameter (PM 10), and annual mean amounts of particulate pollution
-that’s 2.5 micrometers in diameter (PM 2.5) Click show to see all of the data
+is ``City, State: PM10: PM2.5``.  PM 10 is annual mean amounts of particulate pollution that’s over 2.5 and less than 10
+micrometers in diameter, and PM2.5 is the  annual mean amounts of particulate pollution
+that’s 2.5 micrometers or less in diameter. Click show to see all of the data
 and hide to put it away.
 
 .. reveal:: pol_Data_8_10

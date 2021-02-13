@@ -32,13 +32,13 @@ For learning purposes, we are using the shortened version of this file
 
 .. fillintheblank:: file-open-fitb-start
 
-    Complete this line: fhand = ____('mbox.txt')
+    Complete this line to open the file for reading: fhand = ______('mbox-short.txt')
 
-    - :[Oo]pen: Yes, the command "open" is used to open a file.
+    - :open: Yes, "open" is used to open a file.
       :.*: Try again.
 
-If the ``open`` is successful, the operating system returns us
-a *file handle*. The file handle is not the actual data
+If the ``open`` is successful, the operating system returns
+a *file handle* object. The file handle object is not the actual data
 contained in the file, but instead it is a "handle" that we can use to
 read the data. You are given a handle if the requested file exists and
 you have the proper permissions to read the file.
@@ -49,13 +49,13 @@ you have the proper permissions to read the file.
 .. fillintheblank:: file-open-fitb-object
     :practice: T
 
-    A file _______ is a file object that is used to read or modify a file, not the actual data in a file.
+    A file |blank| is an object that is used to read or modify a file, not the actual data in a file.
 
     - :[Hh]andle: A file handle is used to read the data of a file.
       :.*: Try again.
 
 If the file does not exist, ``open`` will fail with a traceback
-and you will not get a handle to access the contents of the file:
+and you will not get a file handle object.
 
 .. code-block:: python
 
