@@ -17,8 +17,8 @@ Statements are executed one at a time, in order from top to bottom.
 
     The order in which statements are executed is called the __________________.
 
-    - :[Ff]low [Oo]f [Ee]xecution: The flow of execution is the order in which statements are executed.
-      :.*: Try again!
+    - :[Ff]low [Oo]f [Ee]xecution: Correct! The flow of execution is the order in which statements are executed.
+      :.*: Incorrect! Hint: it's the name of this section. Try again.
 
 Function *definitions* do not alter the flow of execution of the
 program, but remember that statements inside the function are not
@@ -57,9 +57,9 @@ time a function completes, the program picks up where it left off in the
 function that called it. When it gets to the end of the program, it
 terminates.
 
-What's the moral of this sordid tale? When you read a program, you don't
-always want to read from top to bottom. Sometimes it makes more sense if
-you follow the flow of execution.
+So what's the moral of the story? When you read a program, you don't
+always want to read strictly from top to bottom. Sometimes, it makes more sense if
+you follow the flow of execution and read functions as they are called.
 
 .. mchoice:: functFlow_MC_begin
     :practice: T
@@ -67,9 +67,9 @@ you follow the flow of execution.
     :answer_b: The first statement of the program.
     :answer_c: The first function declaration.
     :correct: b
-    :feedback_a: A function needs to be defined before it is called.
+    :feedback_a: Incorrect! The flow of execution begins at the very top of the program. Try again.
     :feedback_b: The execution of a program begins at the first statement of the program.
-    :feedback_c: The program begins executing at the top of the program.
+    :feedback_c: Incorrect! The flow of execution begins at the very top of the program. Try again.
 
     Where does the execution of a program always begin?
 
@@ -78,8 +78,8 @@ you follow the flow of execution.
     :answer_b: ...should follow the flow of execution.
     :answer_c: Both a and b
     :correct: c
-    :feedback_a: This is important.
-    :feedback_b: This is important.
-    :feedback_c: It is important to start reading from the beginning, but to follow the flow of execution as it continues.
+    :feedback_a: Incorrect! This is important, but so is B. Try again.
+    :feedback_b: Incorrect! This is important, but so is A. Try again.
+    :feedback_c: Correct! It is important to start reading from the beginning, but also to follow the flow of execution as it continues.
 
     When you read a program, you...
