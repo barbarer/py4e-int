@@ -23,6 +23,8 @@ problem.  After you solve each problem, please answer the poll as well.
            self.assertEqual(make_dir(['a', 'c'], [5, 0]), {'a': 5, 'c': 0}, "make_dir(['a', 'c'], [5, 0])")
            self.assertEqual(make_dir(['gray', 'blue'], [-3, 2]), {'gray': -3, 'blue': 2}, "make_dir(['gray', 'blue'], [-3, 2])")
 
+   myTests().main()
+
 
 .. activecode:: dp_list_of_tuples_to_dict
    :autograde: unittest
