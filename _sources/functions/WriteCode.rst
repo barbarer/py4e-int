@@ -74,8 +74,8 @@ Write Code Questions
                 :practice: T
                 :autograde: unittest
 
-                Change the code so the function takes parameters for the base and height of the triangle.
-                Then, write code to call the function and print the result.
+                Change the code so that ``areaTriangle`` takes parameters for the base and height of a triangle
+                and computes its area. Then, write code to call the function and print the result.
                 ~~~~
                 def areaTriangle():
                     base = 5
@@ -145,7 +145,7 @@ Write Code Questions
                 :autograde: unittest
 
                 Fix the errors on line 2 so the function ``nameAndAge`` returns
-                the string "My name is **name** and I am **age** years old." The function
+                the string "My name is ``nameString`` and I am ``ageInt`` years old." The function
                 call below should print "My name is John and I am 18 years old."
                 ~~~~
                 def nameAndAge(nameString, ageInt):
@@ -182,8 +182,8 @@ Write Code Questions
         :autograde: unittest
 
         Rewrite the grade program from the previous chapter using a function called ``computegrade``
-        that takes a score as its parameter and returns a grade as a string. If someone enters an
-        invalid score, return 'Bad score'.
+        that takes a score as its parameter and returns a string representing a grade. If someone
+        enters a string or a score greater than 1, return ``'Bad score'``.
 
         .. code-block:: python
 
@@ -194,7 +194,7 @@ Write Code Questions
             >= 0.6     D
             < 0.6      F
         ~~~~
-        def computegrade(r):
+        def computegrade(score):
             # your code here
 
         ====
@@ -222,8 +222,8 @@ Write Code Questions
                 :autograde: unittest
 
                 Write a fruitful function ``sumTo(n)`` that returns the sum of all integer numbers up to and
-                including `n`. So ``sumTo(10)`` would be ``1+2+3...+10`` which would return the value 55.
-                Use the equation  (n * (n + 1)) / 2.
+                including ``n``. For example, ``sumTo(10)`` would compute 1 + 2 + 3 + ... + 10 and return the value ``55``.
+                Use this equation to find this sum: (n * (n + 1)) / 2.
                 ~~~~
                 def sumTo(n):
                     # your code here
@@ -248,10 +248,12 @@ Write Code Questions
                 :optional:
 
                 def sumTo(n):
-                    # Set result variable to given equation
+                    # set result variable to given equation
                     result = (n * (n + 1)) / 2
                     # return the variable
                     return result
+                    # alternatively, you can accomplish this on one line:
+                    # return (n * (n + 1)) / 2
 
 #.
     .. activecode:: funct_ex_addq
@@ -259,7 +261,7 @@ Write Code Questions
         :autograde: unittest
 
         Rewrite the function ``sumTo(n)`` that returns the sum of all integer
-        numbers up to and including `n`. This time use the accumulator pattern.
+        numbers up to and including ``n``. This time, print your answer before you return it.
         ~~~~
         def sumTo(n):
             # your code here
@@ -286,8 +288,8 @@ Write Code Questions
                 :practice: T
                 :autograde: unittest
 
-                Write a function ``areaOfCircle(r)``` which returns the area of a circle of radius `r`.
-                Make sure you import the math module in your solution.
+                Write a function ``areaOfCircle(r)`` which returns the area of a circle of radius ``r``.
+                Make sure you import the math module in your solution to obtain an accurate value of pi.
                 ~~~~
                 def areaOfCircle(r):
                     # your code here
@@ -326,11 +328,11 @@ Write Code Questions
        :autograde: unittest
        :nocodelens:
 
-       Finish the function to return the average of a list of numbers, but drop the lowest value. However,
-       if the list only has one value then return that.  For example, get_avg_drop_lowest([90]) returns 90 and
-       get_avg_drop_lowest([90, 10]) also returns 90.
+       Finish the function to return the average of three numbers, but drop the lowest value.
+       For example, ``get_avg_drop_lowest(100, 10, 0)`` returns ``55``
+       and ``get_avg_drop_lowest(4, 3, 10)`` returns ``7``.
        ~~~~
-       def get_avg_drop_lowest(num_list):
+       def get_avg_drop_lowest(num1, num2, num3):
 
        ====
        from unittest.gui import TestCaseGui
@@ -338,41 +340,11 @@ Write Code Questions
        class myTests(TestCaseGui):
 
            def testOne(self):
-               self.assertEqual(get_avg_drop_lowest([90]), 90, "get_avg_drop_lowest([90])")
-               self.assertEqual(get_avg_drop_lowest([90, 10]), 90, "get_avg_drop_lowest([90, 10])")
-               self.assertEqual(get_avg_drop_lowest([20, -20, 20]), 20, "get_avg_drop_lowest([20, -20, 20])")
-               self.assertEqual(get_avg_drop_lowest([70, 80, 100]), 90, "get_avg_drop_lowest([70, 80, 100])")
-               self.assertEqual(get_avg_drop_lowest([75, 83, 90]), 86.5, "get_avg_drop_lowest([75, 83, 90])")
-
-       myTests().main()
-
-#.
-    .. activecode:: funct_get_middle
-       :autograde: unittest
-       :nocodelens:
-
-       Finish the function below to return the middle characters from the passed string.
-       If the string has less than 3 characters then return the passed string.
-       If the string has an odd length then return the middle character.  If the string has an even
-       length return the two middle characters.  For example, get_middle('abc') returns
-       'b' and get_middle('abcd') returns 'bc'.
-       ~~~~
-       def get_middle(str):
-
-       ====
-       from unittest.gui import TestCaseGui
-
-       class myTests(TestCaseGui):
-
-           def testOne(self):
-               self.assertEqual(get_middle('abc'), 'b', "get_middle('abc')")
-               self.assertEqual(get_middle('abcd'), 'bc', "get_middle('abcd')")
-               self.assertEqual(get_middle('12345'), '3', "get_middle('12345')")
-               self.assertEqual(get_middle('123456'), '34', "get_middle('123456')")
-               self.assertEqual(get_middle('ab'), 'ab', "get_middle('ab')")
-               self.assertEqual(get_middle('a'), 'a', "get_middle('a')")
-               self.assertEqual(get_middle(''), '', "get_middle('')")
-
+               self.assertEqual(get_avg_drop_lowest(100, 10, 0), 55, "get_avg_drop_lowest(100, 10, 0)")
+               self.assertEqual(get_avg_drop_lowest(4, 3, 10), 7, "get_avg_drop_lowest(4, 3, 10)")
+               self.assertEqual(get_avg_drop_lowest(20, -20, 20), 20, "get_avg_drop_lowest(20, -20, 20)")
+               self.assertEqual(get_avg_drop_lowest(0, 0, 0), 0, "get_avg_drop_lowest(0, 0, 0)")
+               self.assertEqual(get_avg_drop_lowest(75, 83, 90), 86.5, "get_avg_drop_lowest(75, 83, 90)")
 
        myTests().main()
 
@@ -383,10 +355,10 @@ Write Code Questions
 
 
        You are driving a little too fast, and a police officer stops you. Write code to
-       compute the result, encoded as an int value: 0=no ticket, 1=small ticket,
-       2=big ticket. If speed is 60 or less, the result is 0. If speed is between 61 and
-       80 inclusive, the result is 1. If speed is 81 or more, the result is 2. Unless it is
-       your birthday -- on that day, your speed can be 5 higher in all cases.
+       compute the kind of ticke you'll receive, encoded as an int value: 0 = no ticket, 1 =
+       small ticket, and 2 = big ticket. If ``speed`` is 60 or less, return ``0``. If ``speed``
+       is between 61 and 80 inclusive, return ``1``. If ``speed`` is 81 or more, return ``2``.
+       If it is your birthday, your speed can be 5 higher in all cases.
        ~~~~
        def caught_speeding(speed, is_birthday):
 
@@ -417,10 +389,10 @@ Write Code Questions
        :autograde: unittest
        :nocodelens:
 
-       Finish the function below to return 'too low' if the guess is less than the passed
-       target, 'correct' if they are equal, and 'too high' if the guess is greater than the
-       passed target.  For example, check_guess(5,7) returns 'too low',
-       check_guess(7,7) returns 'correct', and check_guess(9,7) returns 'too high'.
+       Write the ``check_guess`` function below which computes if a guess is too low, too high, or correct.
+       Return ``'too low'`` if ``guess`` is less than ``target``, ``'correct'`` if they are equal, and
+       ``'too high'`` if ``guess`` is greater than ``target``.  For example, ``check_guess(5, 7)`` returns
+       ``'too low'``, ``check_guess(7, 7)`` returns ``'correct'``, and ``check_guess(9, 7)`` returns ``'too high'``.
        ~~~~
        def check_guess(guess, target):
 
@@ -448,12 +420,12 @@ Write Code Questions
         :practice: T
         :autograde: unittest
 
-        Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat, and a
-        boolean indicating if we are on vacation, return a string of the form "7:00"
-        indicating when the alarm clock should ring. If we are on vacation and it is
-        a weekend (0 - Saturday or 6 - Sunday) it should return "off" and otherwise return
-        "10:00". If we are not on vacation and it is a weekend it should return
-        "10:00" and otherwise "7:00"
+        Given a day of the week encoded as 0 = Sun, 1 = Mon, 2 = Tue, ... 6 = Sat and a
+        boolean indicating if we are on vacation, return a string indicating when the
+        alarm clock should ring. If we are on vacation and it is a weekend (0 = Saturday
+        or 6 = Sunday), it should return ``"off"``, and otherwise return ``"10:00"``. If
+        we are not on vacation and it is a weekend, it should return ``"10:00"``, and
+        otherwise return ``"7:00"``.
         ~~~~
         def alarm_clock(day, vacation):
             # your code here

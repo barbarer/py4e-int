@@ -25,10 +25,9 @@ functions. There are several reasons:
   Well-designed functions are often useful for many programs. Once you
   write and debug one, you can reuse it.
 
-Throughout the rest of the book, often we will use a function definition
-to explain a concept. Part of the skill of creating and using functions
-is to have a function properly capture an idea such as "find the
-smallest value in a list of values". Later we will show you code that
-finds the smallest in a list of values and we will present it to you as
-a function named ``min`` which takes a list of values as its
-argument and returns the smallest value in the list.
+Part of the skill of creating and using functions is to have a function
+properly capture an idea, so throughout the rest of the book, we will
+often use a function definition to explain a concept. For example, later,
+we will show you code that finds the smallest value in a list of values
+and we will present it to you as a function named ``min``, which takes a
+list of values as its argument and returns the list's smallest value.

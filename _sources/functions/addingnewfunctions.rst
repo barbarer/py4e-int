@@ -15,11 +15,10 @@ Adding new functions
 
 
 So far, we have only been using the functions that come with Python, but
-it is also possible to add new functions. A *function
-definition* specifies the name of a new function and the
-sequence of statements that execute when the function is called. Once we
-define a function, we can reuse the function over and over throughout
-our program.
+it is also possible to add new functions. A *function definition* specifies
+the name of a new function and the sequence of statements that execute when
+the function is called. Once we define a function, we can reuse the function
+over and over throughout our program.
 
 Here is an example:
 
@@ -48,18 +47,17 @@ their inputs.
     :answer_c: It lets you know that nothing will print.
     :answer_d: It indicates that a function doesn't take any arguments.
     :correct: d
-    :feedback_a: Empty parentheses do not tell if a function is built-in, but you can see them all with a quick search.
-    :feedback_b: Close. Empty parentheses do not indicate if a function returns something, but a return statement will.
-    :feedback_c: Close. Empty parentheses do not indicate if a function print something, but a print statement will.
-    :feedback_d: Empty parentheses indicate that the function doesn't take any arguments.
+    :feedback_a: Incorrect! You can find all built-in functions with a quick search. Try again.
+    :feedback_b: Incorrect! Return statements indicate what a function returns. Try again.
+    :feedback_c: Incorrect! A print statement indicates if a function prints something. Try again.
+    :feedback_d: Correct! Empty parentheses indicate that the function doesn't take any arguments.
 
     What does it means when there are empty parentheses after a function name?
 
-The first line of the function definition is called the
-*header*; the rest is called the *body*.
-The header has to end with a colon and the body has to be indented. By
-convention, the indentation is always four spaces. The body can contain
-any number of statements.
+The first line of the function definition is called the *header*; the rest
+is called the *body*. The header has to end with a colon and the body has
+to be indented. By convention, the indentation is always four spaces. The
+body can contain any number of statements.
 
 .. mchoice:: functAdd_MC_firstLine
     :practice: T
@@ -68,10 +66,10 @@ any number of statements.
     :answer_c: header; body
     :answer_d: initialization; body
     :correct: c
-    :feedback_a: Close, but the order is off. Where does a header typically go?
-    :feedback_b: Body is correct, but title is not.
-    :feedback_c: The header is the first line of a function definition and the rest is the body.
-    :feedback_d: We initialize variables, but functions are defined.
+    :feedback_a: Incorrect! The order is off. Where does a header typically go? Try again.
+    :feedback_b: Incorrect! Body is correct, but title is not. Try again.
+    :feedback_c: Correct! The header is the first line of a function definition and the rest is the body.
+    :feedback_d: Incorrect! We initialize variables, but functions are defined. Try again.
 
     What is the first line of a function definition called? What is every line after the first line called?
 
@@ -94,7 +92,7 @@ Defining a function creates a variable with the same name.
 
 .. activecode:: functAdd_lyrics
     :coach:
-    :caption: This example demonstrates that the value of print_lyrics is a function object, which has type "function".
+    :caption: Function definitions creats function objects, which have type "function".
 
     def print_lyrics():
         print("I'm a lumberjack, and I'm okay.")
@@ -114,10 +112,10 @@ has type "function".
     :answer_c: The value of printWeather is a def object, which has type "def".
     :answer_d: The value of printWeather is a function object, which has type "funct".
     :correct: a
-    :feedback_a: The value of printWeather is a function object, meaning it has the type "function".
-    :feedback_b: The codeblock shows a function definition, but that is not the object/type of printWeather.
-    :feedback_c: The codeblock shows a function definition, but that is not the object/type of printWeather.
-    :feedback_d: The value of printWeather is a function object, but the type is not "funct".
+    :feedback_a: Correct! The value of printWeather is a function object, meaning it has the type "function".
+    :feedback_b: Incorrect! The codeblock shows a function definition, but that is not the object/type of printWeather. Try again.
+    :feedback_c: Incorrect! Function definitions use the ``def`` keyword, but that is not the object/type of printWeather. Try again.
+    :feedback_d: Incorrect! The value of printWeather is a function object, but its type is not "funct". Try again.
 
     Consider the code below. Which statement is true?
 
@@ -131,7 +129,7 @@ functions:
 
 .. activecode:: functAdd_call
     :coach:
-    :caption: An example of calling a function that is not built-in.
+    :caption: Calling a function that is not built-in.
 
     def print_lyrics():
         print("I'm a lumberjack, and I'm okay.")
@@ -146,7 +144,7 @@ function called ``repeat_lyrics`` and then call that function:
 
 .. activecode:: functAdd_repeat
     :coach:
-    :caption: An example of using a user-defined function inside of another user-defined function.
+    :caption: Using a user-defined function inside of another user-defined function.
 
     def print_lyrics():
         print("I'm a lumberjack, and I'm okay.")
@@ -165,27 +163,26 @@ But that's not really how the song goes.
     :numbered: left
     :practice: T
 
-    Construct a block of code that correctly creates a function called "printMenu",
-    that prints the menu and prices, then call the function. Watch out for extra pieces
-    of code and indentation!
+    Construct a block of code that correctly creates a function called "printMenu"
+    that prints the menu and prices, then call the function. Watch your indentation!
     -----
     def printMenu():
     =====
-    def printMenu() #distractor
+    def printMenu() #paired
     =====
-    definition printMenu(): #distractor
+    definition printMenu(): #paired
     =====
         print("Pizza, $5")
         print("Hamburger, $6")
         print("Soda, $1")
     =====
-        print(Pizza, $5) #distractor
+        print(Pizza, $5) #paired
         print(Hamburger, $6)
         print(Soda, $1)
     =====
     printMenu()
     =====
-    printMenu(): #distractor
+    printMenu(): #paired
 
 .. parsonsprob:: functAdd_PP_price
     :adaptive:
@@ -194,37 +191,32 @@ But that's not really how the song goes.
 
     The following code should define the function printPrice, that prints items and their prices,
     and define a second function printReceipt, that uses  printPrice to print a receipt. Then,
-    the code should call printPrice to see what the user bought. Watch out for extra pieces of code
-    and be sure to indent correctly!
+    the code should call printReceipt. Watch your indentation!
     -----
     def printPrice():
     =====
-    def printPrice() #distractor
+    def printPrice() #paired
     =====
-    definition printPrice(): #distractor
+    definition printPrice(): #paired
     =====
         print("Pencils, $1")
         print("Pens, $2")
         print("Notebook, $1")
     =====
-        print(Pencils, $1) #distractor
+        print(Pencils, $1) #paired
         print(Pens, $2)
         print(Notebook, $1)
     =====
     def printReceipt():
     =====
-    def printReceipt() #distractor
-    =====
-    definition printReceipt(): #distractor
-    =====
         print("Here is your receipt: ")
         printPrice()
         print("Thanks for shopping!")
     =====
-        print(Here is your receipt: ) #distractor
+        print(Here is your receipt: ) #paired
         printPrice():
         print(Thanks for shopping!)
     =====
     printReceipt()
     =====
-    printReceipt(): #distractor
+    printReceipt(): #paired
