@@ -208,7 +208,7 @@ Write Code Questions
 
         Write code to print out the statement "Hi my name is Bob and I am 2" using only string methods
         or string slicing. You must get every part of the new string from the given strings, not by using
-	string literals.
+        string literals.
         Name the final string ``statement``.
         ~~~~
         s1 = "hi"
