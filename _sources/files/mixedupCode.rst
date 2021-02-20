@@ -9,9 +9,9 @@ Mixed-up Code Questions
     the code is mixed up. Drag the blocks of statements from the left column to the right column
     and put them in the right order. Watch out for extra pieces of code and indentation!
     -----
-    fout = open('output.txt', 'r') #paired
-    =====
     fout = open('ouptut.txt', 'w')
+    =====
+    fout = open('output.txt', 'r') #paired
     =====
     file.write("This here's the wattle,\n")
     =====
@@ -44,9 +44,9 @@ Mixed-up Code Questions
     =====
         num = num + len(line)
     =====
-    print(lineCharacters) #paired
-    =====
     print(num)
+    =====
+    print(lineCharacters) #paired
 
 
 .. parsonsprob:: file_mixed_write
@@ -71,6 +71,8 @@ Mixed-up Code Questions
         outfile.write(str(square) + "\n")
     =====
     outfile.close()
+    =====
+    close(outfile) #paired
 
 .. parsonsprob:: file_mixed_olympics
     :adaptive:
@@ -84,18 +86,18 @@ Mixed-up Code Questions
     -----
     olypmicsfile = open("olypmics.txt", "r")
     =====
-    olympicsfile = open(olympics.txt, "r") #distractor
+    olympicsfile = open(olympics.txt, "r") #paired
     =====
     for line in olympicsfile:
     =====
-    for line in olympicsfile #distractor
+    for line in olympicsfile #paired
     =====
         values = line.split(",")
         print(values[0], "is from", values[3], "and is on the roster for", values[4])
     =====
     olympicsfile.close()
     =====
-    olypmicsfile.close #distractor
+    olypmicsfile.close #paired
 
 
 The next 5 questions refer to pollution data in the US from the following file. It
@@ -507,7 +509,7 @@ you can hide it again by clicking on the Hide button.
     # open the file for reading
     inFile = open("uspoll.txt","r")
     =====
-    # while there is another line
+    # for each line in the file
     for line in inFile:
     =====
         # split at the :
