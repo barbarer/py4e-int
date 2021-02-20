@@ -6,7 +6,7 @@ Mixed-up Code Questions
     :numbered: left
     :practice: T
 
-    Use a built-in function to print out the length of sentence_a. Watch out for extra code blocks.
+    Use a built-in function to print out the length of ``sentence_a``. Note: there are three extra code blocks.
     -----
     sentence_a = "I love Python!"
     =====
@@ -18,7 +18,7 @@ Mixed-up Code Questions
     =====
     print(length_sentence_a)
     =====
-    print("length_sentence_a") #distractor
+    print(sentence_a) #distractor
 
 
 .. parsonsprob:: functEx2muc
@@ -26,8 +26,8 @@ Mixed-up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called bmi that takes height and weight as parameters. It should return BMImetric.
-    Watch your indentation.
+    Create a function called ``bmi`` that takes ``height`` and ``weight`` as parameters. It should return ``BMImetric``.
+    Watch your indentation!
     -----
     def bmi(height, weight):
     =====
@@ -44,8 +44,8 @@ Mixed-up Code Questions
     :practice: T
     :adaptive:
 
-    Create two functions. The first is called square, which returns a number squared. The second is called
-    sum_of_squares, which returns the sum of the squares of three numbers. Watch your indentation.
+    Create two functions. The first is called ``square``, which returns a number squared. The second is called
+    ``sum_of_squares``, which returns the sum of the squares of three numbers. Watch your indentation!
     -----
     def square(x):
     =====
@@ -66,65 +66,56 @@ Mixed-up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called add_odd, which will add up the odd numbers from 1
-    (inclusive) to num (inclusive). The function should return the_sum. For
-    example, add_odd(3) returns 4 since 1 + 3 = 4.
-    Watch out for extra pieces of code and indentation!
+    Create a function called ``average``, which finds the average of two numbers.
+    Note: there are two extra code blocks, and watch your indentation!
     -----
-    def add_odd(num):
+    def average(num1, num2):
     =====
-        the_sum = 0
+    def average(num): #distractor
     =====
-        the_sum = 1     #paired
+        sum = num1 + num2
     =====
-        for counter in range(num + 1):
+        sum = sum / 2
     =====
-        for counter in range(num): #paired
+        sum = num1 + num2 / 2 #distractor
     =====
-            if counter % 2 == 1:
-    =====
-            if counter % 2 == 0: #paired
-    =====
-                the_sum += counter
-    =====
-        return the_sum
+        return sum
 
 .. parsonsprob:: functEx5muc
     :numbered: left
     :practice: T
     :adaptive:
 
-    Create a function called addByThree, which will add three to the total
-    num times. The function should return the total. for
-    example, addByThree(2) returns 6 (3 + 3) and addByThree(3) returns 9
-    (3 + 3 + 3). Watch out for
-    extra pieces of code and indentation!
+    Create a function called ``swapValues``, which takes two values and swaps them.
+    It then prints both new values. Note: there are two extra code blocks, and
+    watch your indentation!
     -----
-    def addByThree(num):
+    def swapValues(val1, val2):
     =====
-        total = 0
+        val1 = val2 #distractor
+        val2 = val1
     =====
-        total = 1     #paired
+        temp = val2
     =====
-        for counter in range(num):
+        val2 = val1
     =====
-        for counter in range(thesum): #paired
+        val1 = temp
     =====
-            total = total + 3
+        print(val1)
+        print(val2)
     =====
-            total = total + three #paired
-    =====
-        return total
+        return (val1, val2) #distractor
 
 .. parsonsprob:: functEx6muc
     :numbered: left
     :practice: T
     :adaptive:
 
-    Create the function get_avg_drop_lowest to return the average of a list
-    of numbers, but drop the lowest value. However,
-    if the list only has one value then return that.  For example, get_avg_drop_lowest([90]) returns 90 and
-    get_avg_drop_lowest([90, 10]) also returns 90.
+    Create a function called ``get_avg_drop_lowest`` which returns the average of a list
+    of numbers, ignoring the lowest value. However, if the list only contains one value,
+    then return that. For example, ``get_avg_drop_lowest([90])`` returns ``90``,
+    ``get_avg_drop_lowest([90, 10])`` also returns ``90``, and ``get_avg_drop_lowest([90, 10, 0])``
+    returns ``50``. Watch your indentation!
     -----
     def get_avg_drop_lowest(num_list):
     =====
@@ -151,51 +142,35 @@ Mixed-up Code Questions
     :practice: T
     :adaptive:
 
-    Put the code blocks in order below to return the middle characters from the passed string. If the
-    string has less than 3 characters then return the passed string. If the string has an odd length then
-    return the middle character. If the string has an even length return the two middle characters. For
-    example, get_middle(‘abc’) returns ‘b’ and get_middle(‘abcd’) returns ‘bc’. Watch out for extra code
-    blocks and indentation!
+    Create a function called ``compare`` which returns whichever is greater of
+    its two parameters. If they are equal, it returns ``param2``. Note:
+    there are two unused code blocks.
     -----
-    def get_middle(str):
+    def compare(param1, param2):
     =====
-    Def get_middle(str): #paired
+    Def compare(param1, param2): #distractor
     =====
-        num_chars = len(str)
+        if param1 > param2:
     =====
-        mid = num_chars // 2
+            return param1
     =====
-        mid = num_chars / 2 #paired
-    =====
-        if num_chars < 3:
-    =====
-            return str
-    =====
-        elif num_chars % 2 == 1:
-    =====
-        elif num_chars % 2 == 1 #paired
-    =====
-            return str[mid]
+        if param1 == param2: #distractor
     =====
         else:
     =====
-            return str[mid-1:mid+1]
-    =====
-            return str[mid:mid+2] #paired
+            return param2
 
 .. parsonsprob:: functEx8muc
     :numbered: left
     :practice: T
     :adaptive:
 
-    You are driving a little too fast, and a police officer stops you. Place
-    the code blocks to
-    compute the result, encoded as an int value: 0=no ticket, 1=small ticket,
-    2=big ticket. If speed is 60 or less, the result is 0. If speed is between 61 and
-    80 inclusive, the result is 1. If speed is 81 or more, the result is 2. Unless it is
-    your birthday -- on that day, your speed can be 5 higher in all cases.
-    There are two extra code blocks and lots of
-    indentation to watch out for!
+    You are driving a little too fast, and a police officer stops you. Create a function
+    called ``caught_speeding`` which returns the type of ticket the police officer will give you.
+    If ``speed`` is 60 or less, the result is ``"no ticket"``. If speed is between 61 and 80 inclusive,
+    the result is ``"minor ticket"``. If speed is 81 or more, the result is ``"major ticket"``. All this
+    is true, unless it is your birthday -- on that day, your speed can be 5 higher in all cases.
+    Note: there are two extra code blocks and lots of indentation to watch out for!
     -----
     def caught_speeding(speed, is_birthday):
     =====
@@ -205,31 +180,31 @@ Mixed-up Code Questions
     =====
             if speed < 65: #distractor
     =====
-                return 0
+                return "no ticket"
     =====
             elif speed <= 85:
     =====
-                return 1
+                return "minor ticket"
     =====
-                Return 1 #distractor
+                return minor ticket #distractor
     =====
             else:
     =====
-                return 2
+                return "major ticket"
     =====
         else:
     =====
             if speed <= 60:
     =====
-                return 0
+                return "no ticket"
     =====
             elif speed <= 80:
     =====
-                return 1
+                return "minor ticket"
     =====
             else:
     =====
-                return 2
+                return "major ticket"
 
 
 .. parsonsprob:: functEx9muc
@@ -237,27 +212,28 @@ Mixed-up Code Questions
    :adaptive:
    :practice: T
 
-   Place the code blocks below to return 'too low' if the guess is less
-   than the passed target, 'correct' if they are equal, and 'too high' if the guess
-   is greater than the passed target.  For example, check_guess(5,7) returns
-   'too low', check_guess(7,7) returns 'correct', and check_guess(9,7) returns
-   'too high'. There are three extra blocks that are not needed in a correct solution.
+
+   Create a ``check_guess`` function which computes if a guess is too low, too high, or correct.
+   Return ``'too low'`` if ``guess`` is less than ``target``, ``'correct'`` if they are equal, and
+   ``'too high'`` if ``guess`` is greater than ``target``.  For example, ``check_guess(5, 7)`` returns
+   ``'too low'``, ``check_guess(7, 7)`` returns ``'correct'``, and ``check_guess(9, 7)`` returns ``'too high'``.
+   Note: there are three extra code blocks, and watch your indentation!
    -----
    def check_guess(guess, target):
    =====
-   def check_guess(guess, target: #paired
+   def check_guess(guess), (target): #paired
    =====
        if guess < target:
    =====
            return 'too low'
    =====
-            return "too low' #paired
+           return "too low' #paired
    =====
        elif guess == target:
    =====
            return 'correct'
    =====
-           return 'correct #paired
+           return correct #paired
    =====
        else:
    =====
@@ -268,14 +244,13 @@ Mixed-up Code Questions
    :adaptive:
    :practice: T
 
-   Put the code blocks below in order to solve the following problem.  There are
-   two extra blocks that are not needed in a correct solution.
-   Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat, and a
-   boolean indicating if we are on vacation, return a string of the form "7:00"
-   indicating when the alarm clock should ring. If we are on vacation and it is
-   a weekend (0 - Saturday or 6 - Sunday) it should return "off" and otherwise return
-   "10:00". If we are not on vacation and it is a weekend it should return
-   "10:00" and otherwise "7:00"
+   Put the code blocks below in order to solve the following problem.
+   Given a day of the week encoded as 0 = Sun, 1 = Mon, 2 = Tue, ...6 = Sat, and a
+   boolean indicating if we are on vacation, return a string indicating when the alarm
+   clock should ring. If we are on vacation and it is a weekend (0 = Saturday or 6 =
+   Sunday), it should return ``"off"``, and otherwise return ``"10:00"``. If we are not
+   on vacation and it is a weekend, it should return ``"10:00"``, and otherwise return
+   ``"7:00"``. Note: there are two extra code blocks, and watch your indentation!
    -----
    def alarm_clock(day, vacation):
    =====
@@ -310,15 +285,13 @@ Mixed-up Code Questions
     :practice: T
     :adaptive:
 
-    The following code should create two functions. First create a function called square_it, which
-    squares the parameter n and returns the result. Then, create a function called cube_it which cubes
-    the parameter n and returns the result. Then ask the user to input a number. Lastly, print out
-    the user's input squared and then cubed. Watch out for extra code blocks and indentation! There
-    are lots of extra code blocks to look out for, and keep indentation in mind!
+    The following code should create two functions. First create a function called ``square_it`` which
+    squares the parameter ``n`` and returns the result. Then, create a function called ``cube_it`` which cubes
+    the parameter ``n`` and returns the result. Finally, ask the user to input a number and print out
+    the user's input squared and then cubed. Watch out for extra code blocks and indentation! Note: there
+    are four extra code blocks, and watch your indentation!
     -----
     def square_it(n):
-    =====
-    def square_it(n) #distractor
     =====
         return n * n
     =====
@@ -328,50 +301,46 @@ Mixed-up Code Questions
     =====
     def cube_it(n) #distractor
     =====
-        return n*n*n
+        return n * n * n
     =====
-        return n*n*3 #distractor
+        return n * n * 3 #distractor
     =====
     a_num = int(input("Please enter a number"))
-    =====
-    a_num = int(input(Please enter a number)) #distractor
-    =====
-    a_num = str(input("Please enter a number")) #distractor
     =====
     print(square_it(anum))
     =====
     print(square_it("anum")) #distractor
     =====
     print(cube_it(anum))
-    =====
-    print(cube_it("anum")) #distractor
 
 .. parsonsprob:: functEx12muc
     :numbered: left
     :practice: T
     :adaptive:
 
-    The following code creates three functions that calculate geometric equations. First create a function
-    called distance, which finds and returns the distance between two coordinates, using the distance formula
-    where d = √((x_2-x_1)²+(y_2-y_1)²). Then, create a function called area, which returns the area of a
-    circle given the radius, using the formula A = πr². Finally, create a function called area2, which uses
-    the previous two functions to return the area of a given circle. Remember that ** is exponent notation
-    in Python and watch your indentation!
+    The following code creates three functions that use Python's math module to calculate geometric equations.
+    First, create a function called ``distance`` which finds and returns the distance between two coordinates using
+    the distance formula: d = √((x_2 - x_1)² + (y_2 - y_1)²). Then, create a function called ``area`` which returns
+    the area of a circle given its radius using the formula: A = πr². Finally, create a function called ``area2``
+    which uses the ``distance`` function to find the radius and the ``area`` function to find the circle's area.
+    Watch your indentation!
     -----
+    import math
+    =====
     def distance(x1, y1, x2, y2):
     =====
         dx = x2 - x1
         dy = y2 - y1
     =====
-        dsquared = dx**2 + dy**2
+        dsquared = math.pow(dx, 2) + math.pow(dy, 2)
     =====
-        result = dsquared**0.5
+        result = math.sqrt(dsquared)
     =====
         return result
     =====
     def area(radius):
     =====
-        b = 3.14159 * radius**2
+        b = math.pi * math.pow(radius, 2)
     =====
         return b
     =====
