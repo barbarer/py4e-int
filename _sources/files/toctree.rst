@@ -21,3 +21,4 @@ Files
     Exercises.rst
     mixedupCode.rst
     writeCode.rst
+    file-group.rst
