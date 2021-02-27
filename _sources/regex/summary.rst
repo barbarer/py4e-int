@@ -8,9 +8,9 @@ the regular expression system as to what defines "matching" and what is
 extracted from the matched strings. Here are some of those special
 characters and character sequences:
 
-``^`` Matches the beginning of the line.
+``^`` Matches the beginning of the string.
 
-``$`` Matches the end of the line.
+``$`` Matches the end of the string.
 
 ``.`` Matches any character (a wildcard).
 
@@ -53,14 +53,11 @@ for the purpose of matching, but allow you to extract a particular
 subset of the matched string rather than the whole string when using
 ``findall()``.
 
-``\b`` Matches the empty string, but only at the start or end of a word.
-
-``\B`` Matches the empty string, but not at the start or end of a word.
+``\b`` Matches a word boundary.  Must be used in a raw string (r"string") so that it isn't changed to a backspace.
 
 ``\d`` Matches any decimal digit; equivalent to the set [0-9].
 
 ``\D`` Matches any non-digit character; equivalent to the set [^0-9].
-
 
 
 .. dragndrop:: re-summary-dnd1

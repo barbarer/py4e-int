@@ -6,7 +6,7 @@
     no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
     is included in the section entitled "GNU Free Documentation License".
 
-    
+
 .. |audiobutton| image:: Figures/start-audio-tour.png
     :height: 20px
     :align: top
@@ -19,48 +19,32 @@
 Changing Step 5: Increasing and decreasing color values
 ========================================================
 
-Below is a selection of images that you can use in the programs in this section.
-	
-.. raw:: html
-
-   <table>
-   <tr><td>beach.jpg</td><td>baby.jpg</td><td>vangogh.jpg</td><td>swan.jpg</td></tr>
-   <tr><td><img src="../_static/beach.jpg" id="beach.jpg"></td><td><img src="../_static/baby.jpg" id="baby.jpg"></td><td><img src="../_static/vangogh.jpg" id="vangogh.jpg"></td><td><img src="../_static/swan.jpg" id="swan.jpg"></td></tr>
-   </table>
-   <table>
-   <tr><td>puppy.jpg</td><td>kitten.jpg</td><td>girl.jpg</td><td>motorcycle.jpg</td></tr>
-   <tr><td><img src="../_static/puppy.jpg" id="puppy.jpg"></td><td><img src="../_static/kitten.jpg" id="kitten.jpg"></td><td><img src="../_static/girl.jpg" id="girl.jpg"></td><td><img src="../_static/motorcycle.jpg" id="motorcycle.jpg"></td></tr>
-   </table>
-   <table>
-   <tr><td>gal1.jpg</td><td>guy1.jpg</td><td>gal2.jpg</td></tr>
-   <tr><td><img src="../_static/gal1.jpg" id="gal1.jpg"></td><td><img src="../_static/guy1.jpg" id="guy1.jpg"></td><td><img src="../_static/gal2.jpg" id="gal2.jpg"></td></tr>
-   </table>
-
 First example: Let's change STEP 5, so that we decrease the red by 50%.
 
 .. activecode:: Image_Decrease_Red
     :tour_1: "Important Lines Tour"; 2: timg5-line2; 5: timg5-line5; 8-9: timg5-line8-9; 12: timg5-line12; 15: timg5-line15; 18: timg5-line18; 21-22: timg5-line21-22;
-    :nocodelens: 
+    :nocodelens:
+    :datafile: beach.jpg
 
-    # STEP 1: USE THE IMAGE LIBRARY 
+    # STEP 1: USE THE IMAGE LIBRARY
     from image import *
-    
+
     # STEP 2: PICK THE IMAGE
     img = Image("beach.jpg")
 
     # STEP 3: LOOP THROUGH THE PIXELS
     pixels = img.getPixels();
     for p in pixels:
-        
+
     	# STEP 4: GET THE DATA
         r = p.getRed()
-            
+
         # STEP 5: MODIFY THE COLOR
         p.setRed(r * 0.5);
-            
-        # STEP 6: UPDATE THE IMAGE 
+
+        # STEP 6: UPDATE THE IMAGE
         img.updatePixel(p)
-            
+
     # STEP 7: SHOW THE RESULT
     win = ImageWin(img.getWidth(),img.getHeight())
     img.draw(win)
@@ -70,28 +54,29 @@ Try the program above on some of the other images by changing the name of the im
 We can *increase* the red in a similar way. Let's change STEP 5, so that we increase the red by 150%.
 
 .. activecode:: Image_Increase_Red
-    :tour_1: "Important Lines Tour"; 2: timg5-line2; 5: timg5-line5; 8-9: timg5-line8-9; 12: timg5-line12; 15: timg6-line15; 18: timg5-line18; 21-22: timg5-line21-22; 
+    :tour_1: "Important Lines Tour"; 2: timg5-line2; 5: timg5-line5; 8-9: timg5-line8-9; 12: timg5-line12; 15: timg6-line15; 18: timg5-line18; 21-22: timg5-line21-22;
     :nocodelens:
+    :datafile: beach.jpg
 
-    # STEP 1: USE THE IMAGE LIBRARY 
+    # STEP 1: USE THE IMAGE LIBRARY
     from image import *
-    
+
     # STEP 2: PICK THE IMAGE
     img = Image("beach.jpg")
 
     # STEP 3: LOOP THROUGH THE PIXELS
     pixels = img.getPixels()
     for p in pixels:
-        
+
     	# STEP 4: GET THE DATA
         r = p.getRed()
-            
+
         # STEP 5: MODIFY THE COLOR
         p.setRed(r * 1.5)
-            
+
         # STEP 6: UPDATE THE IMAGE
         img.updatePixel(p)
-            
+
     # STEP 7: SHOW THE RESULT
     win = ImageWin(img.getWidth(),img.getHeight())
     img.draw(win)
@@ -102,7 +87,7 @@ Try the program above on some of the other images by changing the name of the im
    :numbered: left
    :adaptive:
 
-   Another way to get a similar effect to increasing the red, is to decrease the green and blue.  Figure out how to do that in the program above and then use that information to drag the code blocks below from the left to the right in the correct order with the correct indention. 
+   Another way to get a similar effect to increasing the red, is to decrease the green and blue.  Figure out how to do that in the program above and then use that information to drag the code blocks below from the left to the right in the correct order with the correct indention.
    -----
    from image import *
    =====
@@ -113,7 +98,7 @@ Try the program above on some of the other images by changing the name of the im
    =====
        g = p.getGreen()
        b = p.getBlue()
-   =====       
+   =====
        p.setGreen(g * 0.75)
        p.setBlue(b * 0.75)
    =====
@@ -126,15 +111,21 @@ Try the program above on some of the other images by changing the name of the im
 
         .. tab:: Question
 
-           Decrease the red by .5 and increase the blue and green by .5 in puppy.jpg. 
-           
+           Decrease the red by .5 and increase the blue and green by .5 in puppy.jpg.
+
            .. activecode::  11_4_1_WSq
                :nocodelens:
 
         .. tab:: Answer
-            
+
+          .. datafile:: puppy.jpg
+             :image:
+             :fromfile: Figures/puppy.jpg
+             :hide:
+
           .. activecode::  11_4_1_WSa
               :nocodelens:
+              :datafile: puppy.jpg
 
               # STEP 1: USE THE IMAGE LIBRARY
               from image import *
@@ -163,8 +154,8 @@ Try the program above on some of the other images by changing the name of the im
               win = ImageWin(img.getWidth(),img.getHeight())
               img.draw(win)
 
-                                
-        .. tab:: Discussion 
+
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -172,7 +163,7 @@ Try the program above on some of the other images by changing the name of the im
 
 .. note::
 
-    Discuss topics in this section with classmates. 
+    Discuss topics in this section with classmates.
 
       .. disqus::
           :shortname: cslearn4u

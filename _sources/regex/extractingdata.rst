@@ -116,10 +116,12 @@ Here is our new regular expression:
 
 .. fillintheblank:: re_data_fitb
     :practice: T
+    :casei:
 
-    _________ are used to indicate a set of multiple acceptable characters we are willing to consider matching.
+    |blank| are used to indicate a set of multiple acceptable characters we are willing to consider matching.
 
-    - :[Ss]quare [Bb]rackets: Correct! Square brackets are used when matching multiple sets of characters.
+    - :(?:square brackets|\[\]): Correct! Square brackets are used when matching multiple sets of characters.
+      :brackets: What type?
       :.*: Try again!
 
 

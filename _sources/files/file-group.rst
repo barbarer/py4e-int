@@ -162,7 +162,6 @@ if you just want to see what type of data is in a file, but don't need to see th
     # function definition
     def print_contents(file, num):
         file_obj = open(file)
-        print(type(file_obj))
         for i in range(num):
             line = file_obj.readline()
             line = line.rstrip()
@@ -199,6 +198,10 @@ Modify the code above to print 4 lines and run it again.
 
     print_contents("unknown.txt")
 
+.. note::
+
+   If the file that you try to open is not found, you will get an error.
+
 .. activecode:: file_pogil_read_lines_try_and_catch
     :caption: Reading lines from a file.
     :datafile: dogs.txt
@@ -228,6 +231,8 @@ Modify the code above to print 4 lines and run it again.
             print(line)
 
     print_contents("unknown.txt")
+
+You can use ``try`` and ``except`` to handle code that can cause exceptions.  
 
 
 .. fillintheblank:: line_file_open_except_fitb
