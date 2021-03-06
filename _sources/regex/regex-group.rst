@@ -10,7 +10,7 @@ Students will know and be able to do the following.
 
 *Content Objectives:*
 
-* Learn about``search`` and ``findall`` and what they return
+* Learn about ``search`` and ``findall`` and what they return
 * Learn about some common quantifiers (\*, +, ?, {n})
 * Learn about character classes (\\d, \\w, \\s, \\b, .)
 * Learn how to escape a special character to match it

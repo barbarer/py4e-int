@@ -36,8 +36,8 @@ from the anchor (``a``) tags. Anchor tags are also known as link tags.
 
 
 The program reads the HTML page from "http://www.dr-chuck.com/page1.htm",
-creates a BeautifulSoup object from the content of that HTML page, gets the first
-'a' tag.  Then prints the 'href' attribute
+creates a BeautifulSoup object from the content of that HTML page, gets a list of the
+'a' tags. It then loops through the list of 'a' tags and prints the 'href' attribute
 for it or 'None' if there isn't an 'href' attribute.
 
 You can use also BeautifulSoup to pull out various parts of each tag:
@@ -55,7 +55,7 @@ You can use also BeautifulSoup to pull out various parts of each tag:
     soup = BeautifulSoup(resp.content, 'html.parser')
 
     # Retrieve all of the anchor tags
-    tags = soup.find('a')
+    tags = soup.find_all('a')
     for tag in tags:
         # Look at the parts of a tag
         print('TAG:', tag)
