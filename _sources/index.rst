@@ -43,6 +43,7 @@ Table of Contents
    tuples/toctree.rst
    regex/toctree.rst
    network/toctree.rst
+   bsoup/toctree.rst
    web/toctree.rst
    objects/toctree.rst
    turtles/toctree.rst
