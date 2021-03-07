@@ -17,22 +17,38 @@
 Chapter 11 Exercises
 ---------------------
 
-Below is a selection of images that you can use in the programs in this section.
+The picture below are used in the following exercises.
 
-.. raw:: html
+.. datafile:: gal2.jpg
+   :image:
+   :fromfile: Figures/gal2.jpg
+   :hide:
 
-   <table>
-   <tr><td>beach.jpg</td><td>baby.jpg</td><td>vangogh.jpg</td><td>swan.jpg</td></tr>
-   <tr><td><img src="../_static/beach.jpg" id="beach.jpg"></td><td><img src="../_static/baby.jpg" id="baby.jpg"></td><td><img src="../_static/vangogh.jpg" id="vangogh.jpg"></td><td><img src="../_static/swan.jpg" id="swan.jpg"></td></tr>
-   </table>
-   <table>
-   <tr><td>puppy.jpg</td><td>kitten.jpg</td><td>girl.jpg</td><td>motorcycle.jpg</td></tr>
-   <tr><td><img src="../_static/puppy.jpg" id="puppy.jpg"></td><td><img src="../_static/kitten.jpg" id="kitten.jpg"></td><td><img src="../_static/girl.jpg" id="girl.jpg"></td><td><img src="../_static/motorcycle.jpg" id="motorcycle.jpg"></td></tr>
-   </table>
-   <table>
-   <tr><td>gal1.jpg</td><td>guy1.jpg</td><td>gal2.jpg</td></tr>
-   <tr><td><img src="../_static/gal1.jpg" id="gal1.jpg"></td><td><img src="../_static/guy1.jpg" id="guy1.jpg"></td><td><img src="../_static/gal2.jpg" id="gal2.jpg"></td></tr>
-   </table>
+.. datafile:: kitten.jpg
+   :image:
+   :fromfile: Figures/kitten.jpg
+   :hide:
+
+.. datafile:: swan.jpg
+   :image:
+   :fromfile: Figures/swan.jpg
+   :hide:
+
+
+.. datafile:: motorcycle.jpg
+   :image:
+   :fromfile: Figures/motorcycle.jpg
+   :hide:
+
+.. datafile:: baby.jpg
+   :image:
+   :fromfile: Figures/baby.jpg
+   :hide:
+
+.. datafile:: guy1.jpg
+   :image:
+   :fromfile: Figures/guy1.jpg
+   :hide:
 
 .. note::
 
@@ -165,7 +181,7 @@ Below is a selection of images that you can use in the programs in this section.
                 # STEP 1: USE THE IMAGE LIBRARY
 		from image import *
                 # STEP 2: PICK THE IMAGE
-                img = Image("kitten")
+                img = Image("kitten.jpg")
                 # STEP 3: LOOP THROUGH THE PIXELS
                 pixels = img.getPixels()
                 for p in pixel:
