@@ -108,7 +108,7 @@ Plan 2: Exercises
       
         .. raw:: html
 
-           <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/example1.html" >Click here to go back to the Cottage Inn example</a>
+           <a href="example1.html" >Click here to go back to the Cottage Inn example</a>
 
 
  

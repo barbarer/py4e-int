@@ -186,5 +186,5 @@ Check out the image below, that inspects the description of the North Quad dinin
       
         .. raw:: html
 
-           <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/example2.html" >Click here to go back to the Faculty Pages example</a>
+           <a href="example2.html" >Click here to go back to the Faculty Pages example</a>
 

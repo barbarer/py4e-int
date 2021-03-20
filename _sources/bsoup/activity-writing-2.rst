@@ -60,23 +60,23 @@ The comments all have the same tag name, which is ``'div'`` tag with ``class='Co
 
     .. |plan_2| raw:: html
 
-        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan2.html" target="_blank">Plan 2: Get a soup from a URL</a>
+        <a href="plan2.html" target="_blank">Plan 2: Get a soup from a URL</a>
 
     .. |plan_3| raw:: html
 
-        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan3.html" target="_blank">Plan 3: Get a soup from multiple URLs</a> 
+        <a href="plan3.html" target="_blank">Plan 3: Get a soup from multiple URLs</a> 
 
     .. |plan_4| raw:: html
 
-        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan4.html" target="_blank">Plan 4: Get info from a single tag</a>
+        <a href="plan4.html" target="_blank">Plan 4: Get info from a single tag</a>
 
     .. |plan_5| raw:: html
 
-        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan5.html" target="_blank">Plan 5: Get info from all tags of a certain type</a> 
+        <a href="plan5.html" target="_blank">Plan 5: Get info from all tags of a certain type</a> 
    
     .. |plan_9| raw:: html
 
-        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan9.html" target="_blank">Plan 9: Print info</a> 
+        <a href="plan9.html" target="_blank">Plan 9: Print info</a> 
 
 
 .. parsonsprob:: write_code_order_plans_code

@@ -66,7 +66,7 @@ This code probably seems a bit complicated. In this ebook, we will break down we
 .. raw:: html
 
    <pre><strong>Plan 2: Get a soup from a URL</strong>
-   <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan2.html"><pre style="background-color:#FCF3CF;">
+   <a href="plan2.html"><pre style="background-color:#FCF3CF;">
    # Load libraries for web scraping
    from bs4 import BeautifulSoup
    import requests
@@ -75,7 +75,7 @@ This code probably seems a bit complicated. In this ebook, we will break down we
    r = requests.get(url)
    soup = BeautifulSoup(r.content, 'html.parser')</pre></a></pre>
    
-   <pre><strong>Plan 5: Get info from all tags of a certain type</strong><a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan5.html"><pre style="background-color:#D5F5E3;">
+   <pre><strong>Plan 5: Get info from all tags of a certain type</strong><a href="plan5.html"><pre style="background-color:#D5F5E3;">
    # Get all tags of a certain type from the soup
    tags = soup.find_all('h3')
    # Collect info from the tags
@@ -85,7 +85,7 @@ This code probably seems a bit complicated. In this ebook, we will break down we
        info = tag.text
        collect_info.append(info)</pre></a></pre>
 
-   <pre><strong>Plan 9: Print the info</strong><a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan9.html"><pre style="background-color:#D6EAF8;">
+   <pre><strong>Plan 9: Print the info</strong><a href="plan9.html"><pre style="background-color:#D6EAF8;">
    # Print the info
    print(collect_info)</pre></a></pre>
 

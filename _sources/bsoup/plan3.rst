@@ -113,5 +113,5 @@ Change the code and run it to see if you're right!
       
         .. raw:: html
 
-           <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/example2.html" >Click here to go back to the Faculty Pages example</a>
+           <a href="example2.html" >Click here to go back to the Faculty Pages example</a>
 

@@ -186,7 +186,7 @@ Plan 5: Exercises
       
        ``collect_info.append(info)``
 
-   -    :['"]div['"], class_=['"]headline['"]: Correct.  
+   -    :['"]div['"],\s?class_\s?=\s?['"]headline['"]: Correct.  
         :['"]div['"], class=['"]headline['"]: Very close--but class should be class_!
         :div: Good start, but you need more. 
         :.*: Incorrect. 
@@ -229,5 +229,5 @@ Plan 5: Exercises
       
         .. raw:: html
 
-           <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/example1.html" >Click here to go back to the Cottage Inn example</a>
+           <a href="example1.html" >Click here to go back to the Cottage Inn example</a>
 

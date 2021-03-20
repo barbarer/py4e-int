@@ -25,7 +25,7 @@ Here's the relevant tag from ``https://www.si.umich.edu/people/barbara-ericson``
 
 .. raw:: html
 
-  <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan2.html"><pre style="background-color:#FCF3CF;">
+  <a href="plan2.html"><pre style="background-color:#FCF3CF;">
   <strong># Load libraries for web scraping</strong>
   from bs4 import BeautifulSoup
   import requests
@@ -33,7 +33,7 @@ Here's the relevant tag from ``https://www.si.umich.edu/people/barbara-ericson``
   url = <mark style="background-color:#F1948A">'https://www.si.umich.edu/people/barbara-ericson'</mark>
   r = requests.get(url)
   soup = BeautifulSoup(r.content, 'html.parser')</pre></a>
-  <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan5.html"><pre style="background-color:#D5F5E3;">
+  <a href="plan5.html"><pre style="background-color:#D5F5E3;">
   <strong># Get all tags of <mark>a certain type</mark> from the soup</strong>
   tags = soup.find_all(<mark>'a', class_='item-teaser--more'</mark>)
   <strong># Collect info from the tags</strong>
@@ -42,7 +42,7 @@ Here's the relevant tag from ``https://www.si.umich.edu/people/barbara-ericson``
       <strong># Get <mark>info</mark> from tag</strong>
       info = tag.<mark>get('href')</mark>
       collect_info.append(info)</pre></a>
-  <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan3.html"><pre style="background-color:#FDEBD0;">
+  <a href="plan3.html"><pre style="background-color:#FDEBD0;">
   <strong># Get a soup from multiple URLs</strong>
   base_url = <mark>'https://www.si.umich.edu/'</mark>
   endings = <mark>collect_info</mark>
@@ -50,7 +50,7 @@ Here's the relevant tag from ``https://www.si.umich.edu/people/barbara-ericson``
        url = base_url + ending
        r = requests.get(url)
        soup = BeautifulSoup(r.content, 'html.parser')</pre></a>
-       <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan5.html"><pre style="background-color:#D5F5E3;">
+       <a href="plan5.html"><pre style="background-color:#D5F5E3;">
        <strong># Get all tags of <mark>a certain type</mark> from the soup</strong>
        tags = soup.find_all(<mark>'p'</mark>)
        # Collect info from the tags
@@ -59,7 +59,7 @@ Here's the relevant tag from ``https://www.si.umich.edu/people/barbara-ericson``
            <strong># Get <mark>info</mark> from tag</strong>
            info = tag.<mark>text</mark>
            collect_info.append(info)</pre></a>
-           <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan9.html"><pre style="background-color:#D6EAF8;">
+           <a href="plan9.html"><pre style="background-color:#D6EAF8;">
            <strong># Print the <mark>info</mark></strong>
            print(<mark>collect_info</mark>)</pre></a>
            
@@ -82,23 +82,23 @@ Here's the relevant tag from ``https://www.si.umich.edu/people/barbara-ericson``
 
     .. |plan_2| raw:: html
 
-        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan2.html" target="_blank">Plan 2: Get a soup from a URL</a>
+        <a href="plan2.html" target="_blank">Plan 2: Get a soup from a URL</a>
 
     .. |plan_3| raw:: html
 
-        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan3.html" target="_blank">Plan 3: Get a soup from multiple URLs</a> 
+        <a href="plan3.html" target="_blank">Plan 3: Get a soup from multiple URLs</a> 
 
     .. |plan_4| raw:: html
 
-        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan4.html" target="_blank">Plan 4: Get info from a single tag</a>
+        <a href="plan4.html" target="_blank">Plan 4: Get info from a single tag</a>
 
     .. |plan_5| raw:: html
 
-        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan5.html" target="_blank">Plan 5: Get info from all tags of a certain type</a> 
+        <a href="plan5.html" target="_blank">Plan 5: Get info from all tags of a certain type</a> 
    
     .. |plan_9| raw:: html
 
-        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan9.html" target="_blank">Plan 9: Print info</a> 
+        <a href="plan9.html" target="_blank">Plan 9: Print info</a> 
 
 
 
