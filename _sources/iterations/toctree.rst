@@ -15,3 +15,4 @@ Loops and Iterations
    Exercises.rst
    mixedupcode.rst
    WriteCode.rst
+   pogil.rst
