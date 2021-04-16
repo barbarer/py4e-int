@@ -48,7 +48,7 @@ Write Code Questions
         class myTests(TestCaseGui):
 
             def testOne(self):
-                self.assertEqual(totalCost,3.55, "totalCost should equal 3.55")
+                self.assertAlmostEqual(totalCost,3.55, 2, "totalCost should equal 3.55", 0.2)
 
         myTests().main()
 

@@ -49,11 +49,12 @@ describe in this chapter.
 
 .. fillintheblank:: db_fill_what
     :practice: T
+    :casei:
 
     Database software uses _________ to keep track of data as it is added and allow the computer to
     jump to a particular entry.
 
-    - :[Ii]ndex(es)*: Much like dictionaries, databases use indexes to locate and keep track of data as it is inserted.
+    - :indexes|indices: Much like dictionaries, databases use indexes to locate and keep track of data as it is inserted.
       :.*: Try again! Databases function similarly to dictionaries in this way!
 
 .. mchoice:: db_MC_what_dbSystem
@@ -64,7 +65,7 @@ describe in this chapter.
     :correct: b
     :feedback_a: We are using a database system that uses Structured Query Language based syntax, but not MySQL.
     :feedback_b: SQLite is designed to be embedded into other applications, so we're focusing on it in this book.
-    :feedback_c: Oracle is commonly used for running online transaction processing, data warehousing and mixed database workloads - not really what we're focusing on here. 
+    :feedback_c: Oracle is commonly used for running online transaction processing, data warehousing and mixed database workloads - not really what we're focusing on here.
     :feedback_d: We are using a database system that uses Structured Query Language based syntax, but not PostgreSQL.
 
     Which database system are we using in this book?

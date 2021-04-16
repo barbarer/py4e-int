@@ -56,11 +56,13 @@ returned rows.
 Using ``*`` indicates that you want the database to return all of the
 columns for each row that matches the ``WHERE`` clause.
 
-Note, unlike in Python, in a SQL ``WHERE`` clause we use a
-single equal sign to indicate a test for equality rather than a double
-equal sign. Other logical operations allowed in a ``WHERE``
-clause include ``<``, ``>``, ``<=``, ``>=``, ``!=``, as well as ``AND``
-and ``OR`` and parentheses to build your logical expressions.
+.. note::
+
+   Note, unlike in Python, in a SQL ``WHERE`` clause we use a single equal sign to indicate a test for equality rather than a double equal sign.
+
+Other logical operations allowed in a ``WHERE``
+   clause include ``<``, ``>``, ``<=``, ``>=``, ``!=``, as well as ``AND``
+   and ``OR`` and parentheses to build your logical expressions.
 
 .. fillintheblank:: dbSQL_fill2
     :practice: T
@@ -108,7 +110,7 @@ the four basic operations needed to create and maintain data.
     :practice: T
     :feedback: Check above to see what each command does.
     :match_1: INSERT||| Tries to add a new row of information to a table
-    :match_2: SELECT||| Tries to information from a database
+    :match_2: SELECT||| Tries to get information from a database
     :match_3: UPDATE||| Tries to change information in a database
     :match_4: DELETE||| Tries to remove information from a database
 

@@ -156,7 +156,7 @@ Mixed-Up Code Questions
     =====
         &#60;to&#62;Tove&#60;/to&#62;
     =====
-        &#60;from&#62;Jani&#60;&#60;/from&#62;
+        &#60;from&#62;Jani&#60;/from&#62;
     =====
         &#60;heading&#62;Reminder&#60;/heading&#62;
     =====
