@@ -78,6 +78,7 @@ Putting it together
    activity-writing-3.rst
    activity-debugging.rst
    activity-explaining.rst
+   Exercises.rst
 
 Download the plans
 ::::::::::::::::::
@@ -86,4 +87,3 @@ Download the plans
    :maxdepth: 1
 
    downloads.rst
-
