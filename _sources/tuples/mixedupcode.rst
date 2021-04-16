@@ -6,7 +6,7 @@ Mixed-Up Code Questions
    :practice: T
    :adaptive:
 
-   Construct a block of code that sorts the string 'txt' into a list of tuples (the first element is the length of the word, the second is the word itself). Sort the list in terms of word length from longest to shortest. Note: there is one block that won't be used in the solution!
+   Construct a block of code below to create a list of tuples, ``tup_list``, where the first element is the length of each word in ``txt`` and the second is the word itself. Sort the list in terms of word length from longest to shortest. For example, if ``txt="hi bye"``, ``tup_list`` would be ``[(3, 'bye'), (2, 'hi')]`` after this code executes. Note: there is one block that won't be used in the solution!
    -----
    txt = 'but soft what light in yonder window breaks'
    words = txt.split()
@@ -16,9 +16,9 @@ Mixed-Up Code Questions
    =====
    for word in words:
    =====
-   	t.append((len(word), word))
+       t.append((len(word), word))
    =====
-   	t.append(len(word)) #paired
+       t.append(len(word)) #paired
    =====
    t.sort(reverse = True)
    =====
@@ -28,7 +28,7 @@ Mixed-Up Code Questions
    :numbered: left
    :adaptive:
 
-   Reorder the blocks of code to create a list containing tuples of each word from word_list paired with their lengths. Then sort the words by length from highest to lowest. Note: there are two blocks that won't be used in the solution!
+   Reorder the blocks of code to create a list, ``tup_list``, containing tuples of each word from ``word_list`` paired with their lengths. Then sort the words by length from highest to lowest.  For example, if ``word_list = ['hi', 'bye']`` then ``tup_list`` would be ``[('bye', 3), ('hi', 2)]`` Note: there are two blocks that won't be used in the solution!
    -----
    word_list = ['pen', 'skyscraper', 'post', 'computer', 'apple', 'Hollywood']
    tup_list = []
@@ -37,11 +37,11 @@ Mixed-Up Code Questions
    =====
    for word in tup_list: #distractor
    =====
-   	tup = word, len(word)
+       tup = word, len(word)
    =====
-   	tup_list.append(tup)
+   	   tup_list.append(tup)
    =====
-   	word_list.append(tup) #distractor
+   	   word_list.append(tup) #distractor
    =====
    tup_list.sort(key = lambda x: x[1], reverse = True)
 
@@ -92,25 +92,25 @@ Mixed-Up Code Questions
    word_counter = {}
    with open("heineken.txt", "r") as filename:
    =====
-   	lines = filename.readlines()
+       lines = filename.readlines()
    =====
-   	for line in lines.split():
+   	   for line in lines.split():
    =====
-   	for line in line.split(): #paired
+   	   for line in line.split(): #paired
    =====
-   		for word in line:
+   		     for word in line:
    =====
-   			word_counter[word] = word_counter.get(word, 0) + 1
+   			       word_counter[word] = word_counter.get(word, 0) + 1
    =====
-   	list_of_tuples = list(word_counter.items())
+   	   list_of_tuples = list(word_counter.items())
    =====
-   	list_of_tuples = list(word_counter.items) #paired
+   	   list_of_tuples = list(word_counter.items) #paired
    =====
-   	list_of_tuples.sort(key = lambda x: x[1], reverse = True)
+   	   list_of_tuples.sort(key = lambda x: x[1], reverse = True)
    =====
-   	for i in range(10):
+   	   for i in range(10):
    =====
-   		print(list_of_tuples[i][0])
+   		     print(list_of_tuples[i][0])
 
 .. parsonsprob:: mixedupcode_question10_6
    :numbered: left
