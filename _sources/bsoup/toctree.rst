@@ -79,6 +79,7 @@ Putting it together
    activity-debugging.rst
    activity-explaining.rst
    Exercises.rst
+   bs4_mixedupcode.rst
 
 Download the plans
 ::::::::::::::::::
