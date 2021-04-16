@@ -10,7 +10,7 @@ Multiple Choice Questions
    :correct: d
    :feedback_a: Incorrect! Remember what are necessary things required before creating a turtle object. Try again.
    :feedback_b: Incorrect! Remember what are necessary things required before creating a turtle object. Try again.
-   :feedback_c: Incorrect! Remember what are necessary things required before creating a turtle object. Try again
+   :feedback_c: Incorrect! Remember what are necessary things required before creating a turtle object. Try again.
    :feedback_d: Correct! A turtle objects needs to be first imported and then a screen needs to be created before initializing a turtle.
 
    What order do these four statements need to appear in to not give nay errors
