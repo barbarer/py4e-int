@@ -11,8 +11,12 @@ Contributor List for Python for Everybody - Interactive
 - Anthony Tyler Carvette (Tyler)
 - Robert Miner
 - Enoch Ameyaw
-
-
+- Orli Forster
+- Karen Lin
+- Mehul Goel
+- Kathryn Cunningham
+- Carl Haynes
+- Dr. Eric Reed of Foothill College 
 
 Contributor List for Python for Everybody
 ------------------------------------------
