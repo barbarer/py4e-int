@@ -28,6 +28,7 @@ Write Code Questions
 
                 # Place full sets of quotes around strings to be printed
                 # Include spaces before and after where variables are printed
+                # Add + between strings 
                 print("Her name is " + name + " and her favorite food is " + food + ".")
 
 #.
@@ -47,7 +48,7 @@ Write Code Questions
         class myTests(TestCaseGui):
 
             def testOne(self):
-                self.assertEqual(totalCost,3.55, "totalCost should equal 3.55")
+                self.assertAlmostEqual(totalCost,3.55, 2, "totalCost should equal 3.55", 0.2)
 
         myTests().main()
 
@@ -213,7 +214,7 @@ Write Code Questions
 
         .. tab:: Question
 
-            Combine lines 4 and 5 in the code below to print: "270 is 4.0 hours and 30 minutes."
+            Combine lines 4 and 5 in the code below to print: "270 is 4.0 hours and 30 minutes.".
 
             .. activecode::  var-wc-combine
                 :nocodelens:
@@ -234,7 +235,7 @@ Write Code Questions
                 numMinutes = totalMinutes % 60
                 numHours = (totalMinutes - numMinutes) / 60
                 # Use + and correctly spaced " " to write the variables out together
-                print(totalMinutes + " is " + numHours + " hours and " + numMinutes + " minutes.")
+                print(str(totalMinutes) + " is " + str(numHours) + " hours and " + str(numMinutes) + " minutes.")
 
 #.
 

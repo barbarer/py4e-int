@@ -28,11 +28,3 @@ row, and column are more formally referred to as *relation*, *tuple*, and
     :match_3: Relation|||Table
 
     Match each data structure used in databases to its formal counterpart.
-
-.. fillintheblank:: db_fill_concepts
-    :practice: T
-
-    Tables, rows, and columns are __________ data structures in a database.
-
-    - :[Pp]rimary: Tables, rows, and columns (relations, tuples, and attributes) are <b>primary</b> data structures in a database.
-      :.*: Not secondary, but _______. 

@@ -46,20 +46,23 @@ returned rows.
 
 .. fillintheblank:: dbSQL_fill
     :practice: T
+    :casei:
 
-    What is the word that is used to add new data to a table?
+    What is the SQL command that is used to add new data to a table?
 
-    - :[Ii][Nn][Ss][Ee][Rr][Tt]: INSERT is used to add a new row of values to a table.
+    - :INSERT: INSERT is used to add a new row of values to a table.
       :.*: Try again!
 
 Using ``*`` indicates that you want the database to return all of the
 columns for each row that matches the ``WHERE`` clause.
 
-Note, unlike in Python, in a SQL ``WHERE`` clause we use a
-single equal sign to indicate a test for equality rather than a double
-equal sign. Other logical operations allowed in a ``WHERE``
-clause include ``<``, ``>``, ``<=``, ``>=``, ``!=``, as well as ``AND``
-and ``OR`` and parentheses to build your logical expressions.
+.. note::
+
+   Note, unlike in Python, in a SQL ``WHERE`` clause we use a single equal sign to indicate a test for equality rather than a double equal sign.
+
+Other logical operations allowed in a ``WHERE``
+   clause include ``<``, ``>``, ``<=``, ``>=``, ``!=``, as well as ``AND``
+   and ``OR`` and parentheses to build your logical expressions.
 
 .. fillintheblank:: dbSQL_fill2
     :practice: T
@@ -103,13 +106,12 @@ the rows in the table.
 These four basic SQL commands (INSERT, SELECT, UPDATE, and DELETE) allow
 the four basic operations needed to create and maintain data.
 
-.. dragndrop:: db_dnd_SQLcommands
+.. dragndrop:: db_SQLcommands_defs_dd
     :practice: T
-    :feedback: What keywords make sense with each command?
-    :match_1: INSERT||| INTO; VALUES
-    :match_2: SELECT||| FROM
-    :match_3: UPDATE||| SET; WHERE
-    :match_4: DELETE||| FROM; WHERE
+    :feedback: Check above to see what each command does.
+    :match_1: INSERT||| Tries to add a new row of information to a table
+    :match_2: SELECT||| Tries to get information from a database
+    :match_3: UPDATE||| Tries to change information in a database
+    :match_4: DELETE||| Tries to remove information from a database
 
-    Match each SQL command with the keywords needed for it to run. **Note** Some commands
-    are optional, but omitting them tends to have unintended consequences.
+    Match each SQL command with what it does.

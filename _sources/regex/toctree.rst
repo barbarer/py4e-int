@@ -16,3 +16,4 @@ Regular Expressions
    Exercises.rst
    mixedupcode.rst
    writecode.rst
+   regex-group.rst

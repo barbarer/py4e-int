@@ -59,7 +59,7 @@ see the string broken into two lines by the newline character.
 You can also see that the length of the string ``X\nY`` is *three*
 characters because the newline character is a single character.
 
-So when we look at the lines in a file, we need to *imagine* that there
+So when we look at the lines in a file, we need to remember that there
 is a special invisible character called the newline at the end of each
 line that marks the end of the line.
 
@@ -68,10 +68,11 @@ lines.
 
 .. fillintheblank:: file-text-fitb-lines
     :practice: T
+    :casei:
 
-    A(n) _________ character separates charaters of a file into lines.
+    A(n) |blank| character separates characters of a file into lines.
 
-    - :[Nn]ewline: The newline character separates the characters in the file into lines.
+    - :newline: The newline character separates the characters in the file into lines.
       :.*: Try again.
 
 .. mchoice:: file-text-mc-char

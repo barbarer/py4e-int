@@ -143,7 +143,7 @@ Multiple Choice Questions
     :answer_c: 5
     :answer_d: 20
     :answer_e: This is an infinite loop, so nothing will be printed
-    :correct: c
+    :correct: d
     :feedback_a: Incorrect! Each loop will iterate as many times as there are elements in its list. Try again.
     :feedback_b: Incorrect! The print statement is inside of both loops. Try again.
     :feedback_c: Incorrect! The print statement is inside of both loops. Try again.

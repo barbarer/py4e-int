@@ -30,11 +30,11 @@ Then, we can 'import' the ``PartyAnimal`` class in a new file and extend it, as 
     from party import PartyAnimal
 
     class CricketFan(PartyAnimal):
-      points = 0
-      def six(self):
-         self.points = self.points + 6
-         self.party()
-         print(self.name,"points",self.points)
+        points = 0
+        def six(self):
+            self.points = self.points + 6
+            self.party()
+            print(self.name,"points",self.points)
 
     s = PartyAnimal("Sally")
     s.party()
@@ -46,7 +46,7 @@ Then, we can 'import' the ``PartyAnimal`` class in a new file and extend it, as 
 When we define the ``CricketFan`` class, we indicate that we are extending
 the ``PartyAnimal`` class.  This means that all of the variables (\ ``x``\ ) and methods
 (\ ``party``\ ) from the ``PartyAnimal`` class are *inherited* by the ``CricketFan`` class.
-For example, within the ``six`` method in the ``CricketFan`` class, we 
+For example, within the ``six`` method in the ``CricketFan`` class, we
 call the ``party`` method from the ``PartyAnimal`` class.
 
 As the program executes, we create ``s`` and ``j`` as independent instances

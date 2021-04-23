@@ -1,9 +1,9 @@
 Write Code Questions
 --------------------
-The following data file is used in some of the questions in this section. The data
-is ordered City/State, annual mean amounts of particulate pollution that’s 10
-micrometers in diameter (PM 10), and annual mean amounts of particulate pollution
-that’s 2.5 micrometers in diameter (PM 2.5) Click show to see all of the data
+The following data file ``uspoll.txt`` is used in some of the questions in this section. The data
+is ``City, State: PM10: PM2.5``.  PM 10 is annual mean amounts of particulate pollution that’s over 2.5 and less than 10
+micrometers in diameter, and PM2.5 is the  annual mean amounts of particulate pollution
+that’s 2.5 micrometers or less in diameter. Click show to see all of the data
 and hide to put it away.
 
 .. reveal:: pol_Data_8_10
@@ -393,6 +393,10 @@ and hide to put it away.
        Yuma, AZ :14 :9
        </pre>
 
+.. datafile:: uspoll.txt
+    :fromfile: uspoll.txt
+    :hide:
+
 #.
     .. tabbed:: file_ex_pollError
 
@@ -402,8 +406,7 @@ and hide to put it away.
             the pollution for all cities that start with the letter A.
 
             .. activecode:: file_ex_pollErrorq
-                :nocodelens:
-                :available_files: uspoll.txt
+                :datafile: uspoll.txt
 
                 inFile = open("uspoll.txt","r)
 
@@ -418,13 +421,12 @@ and hide to put it away.
 
         .. tab:: Answer
 
-            It was missing a close double quote after the r on line 1.  It was missing a colon 
+            It was missing a close double quote after the r on line 1.  It was missing a colon
             at the end of line 3.  It was missing a comma or plus sign between the values on line 7.
 
             .. activecode:: file_ex_pollErrora
-                :nocodelens:
                 :optional:
-                :available_files: uspoll.txt
+                :datafile: uspoll.txt
 
                 # Close quotations around "r"
                 inFile = open("uspoll.txt","r")
@@ -442,27 +444,35 @@ and hide to put it away.
 
 #.
     .. activecode::  file_ex_pmErrorq
-        :nocodelens:
-        :available_files: uspoll.txt
+        :datafile: uspoll.txt
 
-        Fix the errors in the code below so that it prints the average PM values
-        of only the cities that start with "A".
+        Fix the errors in the code below so that it returns the average PM 2.5 value
+        for the passed state (using the two letter abbreviation).   It should
+        print 11.33333333333333.
         ~~~~
-        inFile = open("uspoll.txt","r")
-        lines = inFile.readlines()
-        inFile.close()
+        def avg_PM25(state)
 
-        total25 = 0
-        count = 1.0
-        for line in lines:
-            values = line.split(":")
-            new25 = float(values[2])
-            city = values[1]
-            if (city.find("A") == -1):
-                total25 = total25 + new25
-            count = count + 1
+            # get the lines from the file
+            inFile = open("uspoll.txt","r")
+            lines = inFile.readlines()
+            inFile.close()
 
-        print("Average PM 2.5 value for cities that start with 'A' is ", total25/count)
+            # calculate the average
+            total = 0
+            count = 0
+            for line in lines:
+                values = line.split(":")
+                curr25 = float(values[2])
+                cityState = values[1]
+                values = cityState.split(",")
+                curr_state = values[0]
+                if curr_state.find(state) >= 0:
+                    total += curr25
+                    count += 1
+
+                return total / count
+
+        print(avg_PM25('OH'))
 
 #.
     .. tabbed:: file_ex_AorB
@@ -473,8 +483,7 @@ and hide to put it away.
             Change it so that it prints out all lines that have a city that starts with "A" or "B".
 
             .. activecode::  file_ex_AorBq
-                :nocodelens:
-                :available_files: uspoll.txt
+                :datafile: uspoll.txt
 
                 inFile = open("uspoll.txt","r")
                 lines = inFile.readlines()
@@ -486,8 +495,7 @@ and hide to put it away.
         .. tab:: Answer
 
             .. activecode:: file_ex_AorBa
-                :nocodelens:
-                :available_files: uspoll.txt
+                :datafile: uspoll.txt
                 :optional:
 
                 # Read all the lines
@@ -505,10 +513,10 @@ and hide to put it away.
 
 #.
     .. activecode:: file_ex_valueCity
-        :nocodelens:
-        :available_files: uspoll.txt
+        :datafile: uspoll.txt
 
         Fix the indention below for the code to correctly find and print the lowest 2.5 value and city.
+        It should print ``Smallest PM 2.5  4.0  in  Bellingham, WA``.
         ~~~~
         inFile = open("uspoll.txt","r")
         lines = inFile.readlines()
@@ -558,7 +566,6 @@ and hide to put it away.
         .. tab:: Answer
 
             .. activecode:: file_ex_testa
-                :nocodelens:
                 :optional:
 
                 # Open the file in "read" mode
@@ -594,11 +601,10 @@ The following file contains a set of emotions that will be used in the next ques
 
 #.
     .. activecode:: file_ex_emotionq
-       :nocodelens:
        :available_files: emotion_words.txt
 
        Create a list called ``j_emotions`` that contains every word in ``emotion_words.txt``
-       that begins with the letter "j".
+       that begins with the letter "j".  After the code executes ``j_emotions`` should be ``['joyous', 'jittery', 'jumpy']``
        ~~~~
 
 
@@ -614,7 +620,9 @@ The following file contains a set of emotions that will be used in the next ques
        myTests().main()
 
 The rest of the questions gather their data from the file ``stocks.txt``, which shows the monthly Dow
-Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Low, Close, Volume.
+Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Low, Close, Volume. The first
+line is ``3-Dec-01,9848.93,10220.78,9651.87,10021.57``.  The Date is in the format ``d-Month-yy``.  The month
+is the first three letters of the month.
 
 .. reveal:: pol_Data_8_10_2
    :showtitle: Show
@@ -781,17 +789,21 @@ Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Lo
       3-Jan-89,2168.39,2350.18,2127.14,2342.32
       </pre>
 
+.. datafile:: stocks.txt
+    :fromfile: stocks.txt
+    :hide:
+
 #.
     .. tabbed:: file_ex_biggestLoss
 
       .. tab:: Question
 
           Complete the code at the ``#`` so that it prints out the date with the biggest
-          loss from open to close.
+          loss from open to close.  Each line has: Date, Open, High, Low, Close, Volume
+          It should print ``3-Aug-98 loss 1329.030000000001``.
 
           .. activecode::  file_ex_biggestLossq
-              :nocodelens:
-              :available_files: stocks.txt
+              :datafile: stocks.txt
 
               def biggestLoss(file):
                   maxLoss = 0
@@ -812,6 +824,7 @@ Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Lo
       .. tab:: Answer
 
           .. activecode:: file_ex_biggestLossA
+              :datafile: stocks.txt
               :optional:
 
               def biggestLoss(file):
@@ -826,7 +839,7 @@ Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Lo
                       # dailyLoss is the difference between opening and closing
                       dailyLoss = opening - closing
                       # Set condition if the dailyLoss is greater than the overall highest loss
-                      if (dailyLoss < maxLoss):
+                      if (dailyLoss > maxLoss):
                           maxLoss = dailyLoss
                           # Element 0 is the date
                           date = values[0]
@@ -837,22 +850,44 @@ Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Lo
 
 #.
     .. activecode:: file_ex_300
-        :nocodelens:
-        :available_files: stocks.txt
+        :datafile: stocks.txt
 
-        Fix the errors below so that the procedure prints all the dates where the Dow
-        Jones gained more than 300 points from open to close.
+        Fix the errors below so that the ``pointGain`` function returns a list of all the dates where the Dow
+        Jones gained more than 300 points from open to close.  Each line has: Date, Open, High, Low, Close, Volume.
+        There should be 22 dates.
         ~~~~
-        def pointGain(file):
-            lines = file.readlines()
+        def pointGain(lines):
+            date_list = []
             for lines in lines:
             values = line.split()
             opening = str(values[2])
             closing = float(values[4])
             if (closing - opening) < 300:
-                print(values[0])
+                date_list.append(values[0])
+            return date_list
+
+        # read the data
         file = open("stocks.txt", "r")
-        pointGain(file)
+        lines = file.readlines()
+        file.close()
+        pointGain(lines)
+
+        from unittest.gui import TestCaseGui
+
+        class myTests(TestCaseGui):
+
+            def setUp(self):
+                file = open("stocks.txt", "r")
+                self.lines = file.readlines()
+                file.close()
+
+            def testOne(self):
+                res = pointGain(self.lines)
+                self.assertEqual(len(res),22,"Length(list) == 22")
+                self.assertEqual(res[0],"1-Nov-01")
+                self.assertEqual(res[1],"2-Apr-01")
+
+        myTests().main()
 
 #.
     .. tabbed:: file_ex_June
@@ -860,11 +895,12 @@ Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Lo
         .. tab:: Question
 
             The code below prints all the dates and high price for dates that occur
-            on the first day of the month (i.e. January 1, February 1...). Change it
+            on the first day of the month (i.e. January 1, February 1...).
+            Each line has: Date, Open, High, Low, Close, Volume Change it
             so that it prints the date and low price for all the dates that occur in June.
 
             .. activecode::  file_ex_Juneq
-                :nocodelens:
+                :datafile: stocks.txt
 
                 file = open("stocks.txt", "r")
                 lines = file.readlines()
@@ -877,7 +913,7 @@ Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Lo
         .. tab:: Answer
 
             .. activecode:: file_ex_Junea
-                :nocodelens:
+                :datafile: stocks.txt
                 :optional:
 
                 file = open("stocks.txt", "r")
@@ -894,10 +930,32 @@ Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Lo
 #.
     .. activecode:: file_ex_abbrq
         :practice: T
-        :available_files: stocks.txt
+        :datafile: stocks.txt
 
-        Write a function that takes the stocks file and the abbreviation for a month
-        (i.e. Jan, Feb) as parameters and returns the average value of all the closing
-        prices during that month from all the years given (Hint: Use a counter variable).
+        Write a function ``avg_month_close(lines, month)`` that takes the ``lines``
+        from the stocks file in a list and the abbreviation for a ``month``
+        (i.e. "Jan", "Feb") as parameters and returns the average value of the closing
+        prices during that month for all the years in the file.
+        Each line has: Date, Open, High, Low, Close, Volume
 
         ~~~~
+
+
+        =====
+
+        from unittest.gui import TestCaseGui
+
+        class myTests(TestCaseGui):
+            def setUp(self):
+                file = open("stocks.txt", "r")
+                self.lines = file.readlines()
+                file.close()
+
+            def testOne(self):
+                self.assertEqual(int(avg_month_close(self.lines,"Jan")), 5640, "Testing Jan = 5640")
+                self.assertEqual(int(avg_month_close(self.lines,"Feb")), 5622, "Testing Feb = 5622=")
+                self.assertEqual(int(avg_month_close(self.lines,"Jun")), 5957, "Testing Jun = 5957")
+                self.assertEqual(int(avg_month_close(self.lines,"Sep")), 5778, "Testing Jun = 5778")
+                self.assertEqual(int(avg_month_close(self.lines,"Nov")), 6043, "Testing Jun = 6043")
+
+        myTests().main()

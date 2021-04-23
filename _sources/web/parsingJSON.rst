@@ -14,9 +14,9 @@ dictionaries.
     :answer_b: dictionaries and lists
     :answer_c: strings and lists
     :correct: b
-    :feedback_a: Dictionaries are used in our JSON, but strings only contain one element, so they are not as useful.
-    :feedback_b: Our JSON is constructed by nesting dictionaries and lists as needed.
-    :feedback_c: Lists are used in our JSON, but strings only contain one element, so they are not as useful.
+    :feedback_a: Dictionaries are used in JSON, but strings only contain one element, so they are not as useful.
+    :feedback_b: JSON is constructed by nesting dictionaries and lists as needed.
+    :feedback_c: Lists are used in JSON, but strings only contain one element, so they are not as useful.
 
     JSON is constructed nesting which pair of variable types?
 

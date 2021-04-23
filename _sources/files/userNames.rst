@@ -70,9 +70,9 @@ eyes of our users?"
 
     .. tab:: Question
 
-        The file ``mbox-mini.txt`` is loaded onto this page. There are five errors in the code below.
-        Fix the code to ask a user for a file, open the file, and count the lines that start with
-        ``Received:``. When prompted for a file to open, use ``mbox-mini.txt``.
+        The file ``mbox-mini.txt`` is loaded on this page. There are five errors in the code below.
+        Fix the code to ask a user for a file, open "mbox-mini.txt", and count the lines that start with
+        ``Received:``.
 
         .. activecode:: fileOpenInputq
             :practice: T
