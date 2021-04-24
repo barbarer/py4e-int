@@ -131,6 +131,7 @@ can take up to three numbers as arguments.
 
     Run this code to see what it prints.
     ~~~~
+    print(type(range(5)))
     print(range(5))
     print(list(range(5)))
     x = range(3) #this line prints nothing
