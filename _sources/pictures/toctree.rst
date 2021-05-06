@@ -11,4 +11,5 @@ Picture Class and Methods
    changeColorLoc.rst
    changeData.rst
    summary.rst
+   MCQs.rst
    Exercises.rst
