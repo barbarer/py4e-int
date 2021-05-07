@@ -13,11 +13,11 @@ Multiple Choice Questions
    :feedback_c: Incorrect! Remember what are necessary things required before creating a turtle object. Try again.
    :feedback_d: Correct! A turtle objects needs to be first imported and then a screen needs to be created before initializing a turtle.
 
-   What order do these four statements need to appear in to not give nay errors
+   What order do these four statements need to appear in to not give any errors
 
    .. code-block:: python
 
-      Statement 1 : alex = Turtle()
+      Statement 1 : Alex = Turtle()
       Statement 2 : from turtle import *
       Statement 3 : space = Screen()
       Statement 4 : Alex.forward(50)
@@ -294,7 +294,6 @@ Multiple Choice Questions
           turtle.goto(xpos, ypos)
           turtle.setheading(heading)
           turtle.pendown()
-          turtle.pencolor(color)
           turtle.color(color)
           turtle.begin_fill()
           for side in range(3):

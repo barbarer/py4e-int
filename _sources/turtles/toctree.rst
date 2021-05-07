@@ -13,4 +13,5 @@ Turtles: An Introduction to Objects and Classes
    stamp.rst
    summary.rst
    Exercises.rst
+   mixedupcode.rst
    WriteCode.rst
