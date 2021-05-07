@@ -80,6 +80,7 @@ Putting it together
    activity-explaining.rst
    Exercises.rst
    bs4_mixedupcode.rst
+   writecode.rst
 
 Download the plans
 ::::::::::::::::::
