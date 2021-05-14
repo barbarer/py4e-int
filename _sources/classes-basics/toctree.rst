@@ -16,3 +16,4 @@ Classes and Objects - the Basics
    InstancesasReturnValues.rst
    Glossary.rst
    Exercises.rst
+   WriteCode.rst
