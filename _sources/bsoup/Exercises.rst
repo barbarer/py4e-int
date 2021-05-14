@@ -50,7 +50,7 @@ Multiple Choice Questions
    :answer_b: soup = BeautifulSoup(response.content, 'html.parser')
    :answer_c: soup = BeautifulSoup(response.string, 'html.parser')
    :correct: a, b
-   :feedback_a: Correct
+   :feedback_a: Correct!
    :feedback_b: Correct! 
    :feedback_c: Try again!
 
