@@ -78,6 +78,7 @@ Multiple Choice Questions
    :feedback_b: Correct! 
    :feedback_c: Try again!
    :feedback_d: Correct! 
+   :feedback_e: Correct! 
 
    What phrases represent inheritance?
 
