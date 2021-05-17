@@ -12,4 +12,5 @@ Picture Class and Methods
    changeData.rst
    summary.rst
    MCQs.rst
+   mixedupcode.rst
    Exercises.rst
