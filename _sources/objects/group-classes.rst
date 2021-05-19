@@ -1,4 +1,4 @@
-Group Activity - Classes, constructors, attributes, and methods
+Group Work - Classes, constructors, attributes, and methods
 -----------------------------------------------------------------
 
 **Learning Objectives**

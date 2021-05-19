@@ -10,11 +10,11 @@ Students will know and be able to do the following.
 
 *Content Objectives:*
 
-* Learn how to display a value in Python.
-* Recognize a function definition, function header, function body, function name, and function call in a program.
+* Learn how to display a value in Python using print.
+* Recognize a function definition, function header, function body, function name, default value for a function parameter, and function call in a program.
 * Predict output from functions.
-* Recognize common symbols (:, #) and keywords (def, return) in Python.
-* Recongize that indentation is important in Python
+* Recognize common symbols (:, #), operators (+, -, /), and keywords (def, return) in Python.
+* Recognize that indentation is important in Python
 
 *Process Objectives:*
 
@@ -24,9 +24,11 @@ Students will know and be able to do the following.
 Print and Function Basics
 ===============================
 
+Look at the Python code below and then answer the following questions.
+
 .. fillintheblank:: funct_fitb_print_test_first_line
 
-    What is the first line that will be printed when the code below runs?
+    What is the first thing that will be printed when the code below runs?
 
     - :Hello!: This will print before the function call to print_message
       :Welcome: Execution starts in the main method, so this won't be the first thing that is printed.
@@ -34,23 +36,27 @@ Print and Function Basics
 
 .. fillintheblank:: funct_fitb_print_test_last_line
 
-    What is the last line that will be printed when the code below runs?
+    What is the last thing that will be printed when the code below runs?
 
     - :1: Prints the value returned from the function test which is the remainder of 5 divided by 2 which is one.
       :.*: What is the remainder of 5 divided by 2?
 
+.. fillintheblank:: funct_fitb_print_test_value_b
 
-.. activecode:: func_ac_pogil_print_message
+    What is the value of ``b`` when the function ``test`` is executed?
+
+    - :2: Since the value of b was not specified it defaults to 2 (it was set to 2 as a default in the function definition)
+      :.*: What is the default value specified for b in the function definition?
+
+.. activecode:: func_ac_pogil_print_message_v2
     :caption: An example with several functions
 
     Run the code below to see what it prints.
     ~~~~
     # function definition
-    def test():
+    def test(a, b = 2):
         print("Welcome")
         print("Learn the power of functions!")
-        a = 3
-        b = 2
         print(a + b)
         print(a - b)
         print(a * b)
@@ -64,14 +70,14 @@ Print and Function Basics
         print("Hello!")
 
         # function call
-        print(test())
+        print(test(3))
 
     # function call
     main()
 
 .. note::
 
-   You do not declare the type of a variable in Python.
+   You do not declare the type of a variable in Python. Python requires that all statements that are part of the body of a function must be indented. Use four spaces to indent.
 
 .. fillintheblank:: funct_fitb_return
     :practice: T
@@ -102,7 +108,7 @@ Delete the last line of the test function above and run the code again.
 Parts of a Function and Function Calls
 =========================================
 
-.. dragndrop:: function_def_dnd
+.. dragndrop:: function_def_dnd_v2
     :practice: T
     :feedback: Read the chapter on functions and try again.
     :match_1: function|||A segment of code that performs a single task
@@ -110,7 +116,7 @@ Parts of a Function and Function Calls
     :match_3: function header|||The first line of a function definition
     :match_4: function body|||All of the lines in the function after the function header
     :match_5: function call|||The name of the function followed by an argument list in ().
-    :match_6: function name|||Follows the def keyword and is before the argument list.
+    :match_6: function name|||Follows the def keyword and is before the list of arguments in ().
 
     Drag each term to its definition
 
@@ -156,18 +162,6 @@ Parts of a Function and Function Calls
 
     # function call
     :click-incorrect:main():endclick:
-
-
-.. clickablearea:: funct_ca_click_def
-    :practice: T
-    :question: Click on all of the lines that define the function print_message
-    :iscode:
-    :feedback: The header and body make up the function definition.
-
-    # function definition
-    :click-correct:def print_message()::endclick:
-        :click-correct:print("Welcome to Python."):endclick:
-        :click-correct:print("Learn the power of functions!"):endclick:
 
 .. clickablearea:: funct_ca_click_names
     :practice: T
@@ -266,12 +260,13 @@ Function Order
    first line to the last line.
    All functions must be defined before they are called.
 
-.. parsonsprob:: func_pp_print_name
+.. parsonsprob:: func_pp_print_name_v2
    :numbered: left
    :adaptive:
    :practice: T
+   :order: 6, 7, 2, 1, 0, 8, 3, 4, 5
 
-   Drag the blocks from the left and put them in the correct order on the right to define a function ``print_greeting`` that asks for your name and prints "Hello Name". Then define a ``main`` function that calls ``print_greeting``.  Be sure to also call the ``main`` function. Note that you will have to indent the lines that are in the body of each function.  Click the *Check* button to check your solution.</p>
+   Drag the blocks from the left and put them in the correct order on the right to define a function ``print_greeting`` that asks for your name and prints "Hello Name". Then define a ``main`` function that calls ``print_greeting``.  Be sure to also call the ``main`` function. Note that you will have to indent the lines that are in the body of each function.  Click the *Check* button to check your solution.
    -----
    def print_greeting():
    =====
@@ -290,10 +285,6 @@ Function Order
        print_greeting #paired
    =====
    main()
-
-.. note::
-
-   Python requires that all statements that are part of the body of a function must be indented. Use four spaces to indent.
 
 
 Special Characters and Keywords

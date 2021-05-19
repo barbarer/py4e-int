@@ -1,4 +1,4 @@
-POGIL Activity - Conditionals and Logic
+Group Work - Conditionals and Logic
 --------------------------------------------------------
 
 **Content Learning Objectives**
@@ -135,7 +135,7 @@ or inconsistently, a ``SyntaxError: unexpected indent`` may be in your future.
     ~~~~
     number = int(input("Enter an integer: "))
     # add your code here
-    
+
 .. mchoice:: cond_MC_pogil_mandatoryelse
     :practice: T
     :answer_a: True

@@ -1,20 +1,27 @@
 Multiple Choice Questions
 -------------------------
 
-.. mchoice:: functEx_1
-    :answer_a: It is slang that means "the following code is really cool"
-    :answer_b: It indicates the start of a function
-    :answer_c: It indicates that the following indented section of code is to be stored for later
-    :answer_d: b and c are both true
-    :answer_e: None of the above
-    :correct: d
-    :feedback_a: Incorrect! Unfortunately, def is not a cool slang word. Try again.
-    :feedback_b: Incorrect! This is true, but something else is too. Try again.
-    :feedback_c: Incorrect! This is true, but something else is too. Try again.
-    :feedback_d: Correct! def indicates the start of a function and that the following code is to be stored for later as a function object.
-    :feedback_e: Incorrect! At least one of the above is true. Try again.
+.. mchoice:: functEx_1_v2
+    :answer_a: a, b
+    :answer_b: -3, b
+    :answer_c: a, 5
+    :answer_d: -3, 5
+    :answer_e: -3 5
+    :correct: e
+    :feedback_a: It will print the value of a and b.
+    :feedback_b: It will print -3 and the value of b.
+    :feedback_c: It will print the value of a and 5.
+    :feedback_d: It looks like it will print this, but it will actually print the values with a space between them.
+    :feedback_e: It prints the values of a and b with a space between them.  The default value of b is 5.
 
-    What is the purpose of the "def" keyword in Python?
+    What will be printed when the following code executes?
+
+    .. code-block:: python
+
+        def test(a, b = 5):
+            print(a, b)
+
+        test(-3)
 
 .. mchoice:: functEx_2
     :answer_a: Zap ABC jane fred jane
@@ -29,7 +36,7 @@ Multiple Choice Questions
     :feedback_d: Correct! jane() fred() jane() will print ABC Zap ABC.
     :feedback_e: Incorrect! This would be correct if the call was fred() fred() fred(). Try again.
 
-    What will the following Python program print out? (Given that each word is on its own line)
+    What will the following Python program print out? (Given that each word will actually print on a new line)
 
     .. code-block:: python
 
@@ -51,7 +58,7 @@ Multiple Choice Questions
     :answer_e: Jane Doe
     :correct: b
     :feedback_a: Incorrect! "value" is the name of a variable. This code will print what "value" is assigned to. Try again.
-    :feedback_b: Correct! "value" is assigned to the parameter "Second", so that's what will print.
+    :feedback_b: Correct! "value" is assigned to the value of parameter which is "Second", so that's what will print.
     :feedback_c: Incorrect! "parameter" is equal to the function call's argument. Try again.
     :feedback_d: Incorrect! Although the variable value is assigned to "First" initially, it is then reassigned to be equal to the parameter. Try again.
     :feedback_e: Incorrect! The "name" variable is unused in the function call, so it does not affect what is printed. Try again.
@@ -68,37 +75,36 @@ Multiple Choice Questions
 
         myFunction("Second")
 
-.. mchoice:: functEx_4
+.. mchoice:: functEx_4_v2
     :answer_a: definition
-    :answer_b: procedure
+    :answer_b: method
     :answer_c: turtle
     :answer_d: module
     :answer_e: function
     :correct: e
     :feedback_a: Incorrect! A definition is used to create functions. Try again.
-    :feedback_b: Incorrect! Procedures exist in Python, but they are less common than functions. Try again.
+    :feedback_b: Incorrect! A method is a function that is defined in a class.
     :feedback_c: Incorrect! "turtle" is a specific Python module that lets you draw lines and shapes. Try again.
     :feedback_d: Incorrect! A module is a file that contains Python statements and definitions. Try again.
-    :feedback_e: Correct! A function is a named sequence of statements that returns a result.
+    :feedback_e: Correct! A function is a named sequence of statements in Python.
 
-    A named sequence of statements that returns a result is known as which of the following?
+    A named sequence of statements is known as which of the following?
 
-.. mchoice:: functEx_5
+.. mchoice:: functEx_5_v2
     :practice: T
-    :answer_a: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
-    :answer_b: 1, 2, 3, 5, 6, 7, 9, 10, 11
-    :answer_c: 9, 10, 11, 1, 2, 3, 5, 6, 7
-    :answer_d: 9, 10, 5, 6, 1, 2, 3, 6, 7, 10, 11
-    :answer_e: 1, 5, 9, 10, 5, 6, 1, 2, 3, 6, 7, 10, 11
-    :correct: e
-    :feedback_a: Incorrect! Although Python typically processes lines in order from top to bottom, function definitions and calls are an exception to this rule. Try again.
-    :feedback_b: Incorrect! Although Python typically processes lines in order from top to bottom, function definitions and calls are an exception to this rule.  Although this order skips blank lines, it still lists the lines of code in order. Try again.
-    :feedback_c: Incorrect! This is close, in that Python will not execute functions until after they are called, but there are two problems here.  First, Python does not know which lines are function definitions until it processes them, so it must at least process the function headers before skipping over the functions. Second, notice that line 10 involves a function call. Python must execute "square" before moving on to line 11. Try again.
-    :feedback_d: Incorrect! This is close, in that Python will not execute the functions until after they are called, but there is one problem here.  Python does not know which lines are function definitions until it processes them, so it must at least process the function headers before skipping over the functions. Try again.
-    :feedback_e: Correct! Python starts at line 1, notices that it is a function definition and skips over all of the lines in the function definition until it finds a non-empty line that it no longer included in the function (line 5). It then notices line 5 is also a function definition and again skips over the function body to line 9. On line 10, it notices it has a function to execute, so it goes back and executes that function. That function includes another function call. It returns from the function call and completes the assignment in line 6. Then, it returns the result of line 7 and completes the assignment in line 10. Finally, it will go to line 11 after "square" and the assignment are complete.
+    :answer_a: 5
+    :answer_b: 10
+    :answer_c: 25
+    :answer_d: 32
+    :answer_e: 3125
+    :correct: c
+    :feedback_a: This would be true if it first printed the value of x.
+    :feedback_b: This would be true if it printed 5 * 2 but it is 5 ** 2 which is 5 * 5.
+    :feedback_c: It prints the value of 5 raised to the 2nd power which is 5 * 5 = 25.
+    :feedback_d: This would be true if it was 2 raised to the 5th power (2 * 2 * 2 * 2 * 2) = 32.
+    :feedback_e: This would be ture if it was 5 raised to the 5th power (5 * 5 * 5 * 5 * 5) = 3125.
 
-    Consider the following Python code. Which of the following best reflects the order in which these
-    lines of code are processed in Python? Note that line numbers are included on the left.
+    What will the following code print?
 
     .. code-block:: python
         :linenos:
@@ -115,35 +121,27 @@ Multiple Choice Questions
         result = square(n)
         print(result)
 
-.. mchoice:: functEx_6
+.. mchoice:: functEx_6_v2
     :practice: T
-    :answer_a: 25
-    :answer_b: 5
-    :answer_c: 125
-    :answer_d: 10
-    :correct: a
-    :feedback_a: Correct! The function "square" returns the square of its input (via a call of the "pow" function).
-    :feedback_b: Incorrect! This is the value of n, but result is equal to the return value of "square" with n as its input. Try again.
-    :feedback_c: Incorrect! Notice that "pow" is called from within "square" with a base (b) of 5 and a power (p) of two. Try again.
-    :feedback_d: Incorrect! Notice that "pow" is called from within "square" with a base (b) of 5 and a power (p) of two. Try again.
+    :answer_a: 0
+    :answer_b: 3
+    :answer_c: 7
+    :answer_d: 1
+    :correct: b
+    :feedback_a: This would be true if it was rem(3,3).  The value 3 would go into 3 one time with 0 remainder.
+    :feedback_b: The value 7 goes into 3 zero times, so the remainder is 3.
+    :feedback_c: How many times does 7 go evenly into 3 and what is the remainder?
+    :feedback_d: This would be true if it was rem(7,3)
 
-    Consider the following Python code. What does this function print?
-    Note that line numbers are included on the left.
+    Consider the following Python code. What does this code print?
 
     .. code-block:: python
         :linenos:
 
-        def pow(b, p):
-            y = b ** p
-            return y
+        def rem(a, b):
+            return a % b
 
-        def square(x):
-            a = pow(x, 2)
-            return a
-
-        n = 5
-        result = square(n)
-        print(result)
+        print(rem(3,7))
 
 .. mchoice:: functEx_7
     :practice: T
@@ -183,10 +181,12 @@ Multiple Choice Questions
     :answer_a: the function header
     :answer_b: the function body
     :answer_c: the function definition
+    :answer_d: the function named
     :correct: a
     :feedback_a: Correct! The first line of a function definition is the header.
     :feedback_b: Incorrect! Everything but the first line of a function definition is the function body. Try again.
     :feedback_c: Incorrect! Lines 1 and 2 collectively are the function definition. Try again.
+    :feedback_d: Incorrect! The name is printWeather.
 
     Consider the code below. Line 1 is called...
 

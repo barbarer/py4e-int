@@ -41,16 +41,7 @@ Pictures on a computer are broken up into little bits called **pixels**, for *pi
 
     Figure: A grid with horizontal (x) and vertical (y) dimensions
 
-Pixels are quite small.  Even this small picture below has 180 columns and 240 rows of pixels:
-
-.. figure:: Figures/arch.png
-    :align: center
-    :alt: an arch from Oxford University
-    :figclass: align-center
-
-    Figure 1: Arch from Oxford University
-
-Each pixel has a color associated with it: An amount of redness, an amount of greenness, and an amount of blueness.
+Pixels are quite small.  Even the small picture below has 180 columns and 240 rows of pixels.  Each pixel has a color associated with it: An amount of redness, an amount of greenness, and an amount of blueness.
 Let's remove the red from this picture.  Now, there are lot of lines in the program below, but fortunately, you can ignore most of them. The Audio Tour explains the important lines.  Press |audiobutton| to hear the audio tour explanation.  When you run this program it may take several minutes to show the changed picture.
 
 .. datafile:: arch.jpg

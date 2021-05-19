@@ -1,4 +1,4 @@
-POGIL Activity - Strings
+Group Work - Strings
 --------------------------------------------------------
 
 Many interesting problems involve manipulating sequences of data.

@@ -1,4 +1,4 @@
-Group Activity - Working with Multiple Classes
+Group Work - Working with Multiple Classes
 -----------------------------------------------------------------
 
 **Learning Objectives**

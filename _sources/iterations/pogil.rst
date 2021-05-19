@@ -1,4 +1,4 @@
-POGIL Activity - Conditionals and Logic
+Group Work - Loops (For, Range, While)
 --------------------------------------------------------
 
 A loop allows you to execute hte same statements multiple times. Python has two
@@ -181,7 +181,7 @@ whole number.
 
     - :range\(1, 8, 2\)|range\(1, 9, 2\)|range\(1,8,2\)|range\(1,9,2\): Correct! With three parameters, the sequence will start at 1 and increment by 2 until it lists 7.
       :.*: Incorrect! Make sure you use three parameters and write your answer in the form "range(x, y, z)". Try again.
-    
+
 .. mchoice:: loops_MC_pogil_whichtype1
     :practice: T
     :answer_a: for i in range(x)
