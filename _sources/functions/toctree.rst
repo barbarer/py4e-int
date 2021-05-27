@@ -22,6 +22,7 @@ Functions
    WriteCode.rst
    func-group.rst
    func-string.rst
+   function_string_exercises.rst
    funcWithCond.rst
    funcWithLists.rst
    funcWithLoops.rst
