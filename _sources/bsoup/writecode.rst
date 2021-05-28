@@ -85,7 +85,7 @@ Write Code Questions
 
         .. tab:: Question
 
-            Create a BeautifulSoup object named soup using the url https://en.wikipedia.org/wiki/Massive_open_online_course. Using BeautifulSoup, web scrape the Coursera enrollees table, and create and print a dictionary called coursera_enrollees with Country as keys and Percentage as values.
+            Create a BeautifulSoup object named soup using the url https://en.wikipedia.org/wiki/Massive_open_online_course. Using BeautifulSoup, web scrape the Coursera enrollees table, and create and print a dictionary called coursera_enrollees with Country as keys and Percentage as values. Sample Output: {'United States': '27.7%', 'India':...}
 
             .. activecode:: bsoup_writecode3q
                 :practice: T
@@ -339,7 +339,7 @@ Write Code Questions
 
         .. tab:: Question
 
-            Create a BeautifulSoup object named soup using the url https://www.si.umich.edu/people/directory/faculty/e. Using BeautifulSoup, web scrape the names and email addresses. Create a name_email_dict with the names as keys and the email addresses as values. Use the string replace method while web scraping.
+            Create a BeautifulSoup object named soup using the url https://www.si.umich.edu/people/directory/faculty/e. Using BeautifulSoup, web scrape the names and email addresses. Create a name_email_dict with the names as keys and the email addresses as values. Use the string replace method while web scraping. Sample Output: {'Paul Edwards': 'pne@umich.edu', 'Ron Eglash':...}
 
             .. activecode:: bsoup_writecode9q
                 :practice: T

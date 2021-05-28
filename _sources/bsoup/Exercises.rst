@@ -111,7 +111,7 @@ Multiple Choice Questions
    :feedback_a: Try again!
    :feedback_b: Try again!
    :feedback_c: Try again!
-   :feedback_d: Correct! This is the correct way to find all link tags. In HTML, link tags are a tags. For Beautiful Soup, find_all requires an underscore.
+   :feedback_d: Correct! This is the correct way to find all link tags. In HTML, link tags are 'a' tags. For Beautiful Soup, find_all requires an underscore.
    :feedback_e: Try again!
 
    Which of the following finds all link tags?
@@ -126,7 +126,7 @@ Multiple Choice Questions
    :correct: c
    :feedback_a: Try again!
    :feedback_b: Try again!
-   :feedback_c: Correct! This is the correct way to find all paragraph tags. In HTML, paragraph tags are p tags. For Beautiful Soup, to find a class, class requires an underscore (class_).
+   :feedback_c: Correct! This is the correct way to find all paragraph tags. In HTML, paragraph tags are 'p' tags. For Beautiful Soup, to find a class, class requires an underscore (class_).
    :feedback_d: Try again!
 
    Which of the following finds all paragraph tags with class b-soup?
@@ -138,15 +138,13 @@ Multiple Choice Questions
    :answer_b: loop through the elements of the list and do dictionary[link_tag.text] = a['href']
    :answer_c: loop through the elements of the list and do dictionary[link_tag.text] = link_tag.get('href', None)
    :answer_d: loop through the elements of the list and do dictionary[link_tag.text] = link_tag[href]
-   :answer_e: loop through the elements of the list and do dictionary[link_tag.href] = link_tag.get('text', None)
    :correct: c
-   :feedback_a: Try again!
-   :feedback_b: Try again!
-   :feedback_c: Correct! This is the correct way to create a dictionary with link tag text as keys and href as values.
-   :feedback_d: Try again!
-   :feedback_e: Try again!
+   :feedback_a: Try again! Although the 'a' tag is the link tag, the variable that contains the href attribute is link_tag.
+   :feedback_b: Try again! Although the 'a' tag is the link tag, the variable that contains the href attribute is link_tag. Also, using the format tag['attribute_name'] will cause an error if the tag is not there.
+   :feedback_c: Correct! This is the correct way to create a dictionary with link tag text as keys and href as values. Using .get('attribute_name', None) will not cause an error. It will set None as default and grab the value if there is one.
+   :feedback_d: Try again! The attribute name is missing quotation marks, and using the format tag['attribute_name'] will cause an error if the tag is not there.
 
-   After creating an empty dictionary and getting a list of all link tags, how does one put the link tag text as keys and the href as values for the dictionary?
+   After creating an empty dictionary and getting a list of all link tags, how does one put the link_tag text as keys and the link_tag href attribute as values for the dictionary?
 
 
 .. mchoice:: Exercises_bsoup_mc10
