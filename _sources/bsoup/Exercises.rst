@@ -7,13 +7,11 @@ Multiple Choice Questions
    :answer_b: h1, class='sports'
    :answer_c: h1, class_='sports'
    :answer_d: 'h1', class_='sports'
-   :answer_e: <h1 class='sports'>
    :correct: d
    :feedback_a: Try again!
    :feedback_b: Try again!
    :feedback_c: Try again!
    :feedback_d: Correct! Both the tag and attribute are important. The h1 tag needs to be in quotes, and class has to be followed by an underscore.
-   :feedback_e: Try again!
    
    Given the below html, how would this tag type be described in web scraping code?
 
