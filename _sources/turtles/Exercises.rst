@@ -13,7 +13,7 @@ Multiple Choice Questions
    :feedback_c: Incorrect! Remember what are necessary things required before creating a turtle object. Try again.
    :feedback_d: Correct! A turtle objects needs to be first imported and then a screen needs to be created before initializing a turtle.
 
-   What order do these four statements need to appear in to not give any errors
+   What order do these four statements need to appear in to not give any errors?
 
    .. code-block:: python
 
@@ -26,12 +26,12 @@ Multiple Choice Questions
    :practice: T
    :answer_a: L
    :answer_b: A
-   :answer_c: I
+   :answer_c: T
    :answer_d: H
    :correct: c
    :feedback_a: Incorrect! Follow every step and try to recreate the shape. Try again.
    :feedback_b: Incorrect! Follow every step and try to recreate the shape. Try again.
-   :feedback_c: Correct! The given code would create an I shape.
+   :feedback_c: Correct! The given code would create an T shape.
    :feedback_d: Incorrect! Follow every step and try to recreate the shape. Try again.
 
    What letter will this code make?
@@ -46,10 +46,6 @@ Multiple Choice Questions
       alex.forward(50)
       alex.left(90)
       alex.forward(150)
-      alex.right(90)
-      alex.forward(50)
-      alex.left(180)
-      alex.forward(100)
 
 
 .. mchoice:: Exercises_question10_3
@@ -106,10 +102,10 @@ Multiple Choice Questions
    :answer_c: 4 lines
    :answer_d: 5 lines
    :correct: b
-   :feedback_a: Incorrect! Hint: What does penup() and pendown() do? Try again.
+   :feedback_a: Incorrect! Hint: What do penup() and pendown() do? Try again.
    :feedback_b: Correct! Remember, that due to penup() some lines won't be printed.
-   :feedback_c: Incorrect! Hint: What does penup() and pendown() do? Try again.
-   :feedback_d: Incorrect! Hint: What does penup() and pendown() do? Try again.
+   :feedback_c: Incorrect! Hint: What do penup() and pendown() do? Try again.
+   :feedback_d: Incorrect! Hint: What do penup() and pendown() do? Try again.
 
    Based on the given code, how many lines will be printed on the screen?
 
@@ -137,23 +133,24 @@ Multiple Choice Questions
 
 .. mchoice:: Exercises_question10_6
    :practice: T
-   :answer_a: 4, "Green"
-   :answer_b: 2, "Red"
-   :answer_c: 10, "Blue"
-   :answer_d: 2, "Green"
+   :answer_a: alex : 5, "Red", james : 4, "Green"
+   :answer_b: alex : 10, "Blue", james : 10, "Red"
+   :answer_c: alex : 2, "Green", james : 10, "Blue"
+   :answer_d: alex : 10, "Red", james : 2, "Green"
    :correct: d
    :feedback_a: Incorrect! Follow every step and try to recreate the shape. Try again.
    :feedback_b: Incorrect! Follow every step and try to recreate the shape. Try again.
    :feedback_c: Incorrect! Follow every step and try to recreate the shape. Try again.
    :feedback_d: Correct! The given code would have the turtle with these values at the end of the code.
 
-   What would be the final pensize and pencolor at the end of this code?
+   What would be the final pensize and pencolor at the end of this code for both the turtles?
 
    .. code-block:: python
 
       from turtle import *
       space = Screen()
       alex = Turtle()
+      james = Turtle()
       alex.forward(30)
       alex.left(90)
       alex.color("blue")
@@ -163,15 +160,15 @@ Multiple Choice Questions
       alex.color("red")
       alex.forward(20)
       alex.right(90)
-      alex.pensize(5)
-      alex.forward(50)
-      alex.left(180)
-      alex.forward(10)
-      alex.right(30)
-      alex.pensize(2)
-      alex.right(90)
-      alex.color("green")
-      alex.forward(50)
+      james.pensize(5)
+      james.forward(50)
+      james.left(180)
+      james.forward(10)
+      james.right(30)
+      james.pensize(2)
+      james.right(90)
+      james.color("green")
+      james.forward(50)
 
 .. mchoice:: Exercises_question10_7
    :practice: T
@@ -213,7 +210,7 @@ Multiple Choice Questions
    :feedback_c: Incorrect! Look at the height and width parameters of the function. Try again.
    :feedback_d: Correct! This is the correct shape that will be printed from this code.
 
-   What shape would the following code print Using for loop?
+   What shape would the following code print using for loop?
 
    .. code-block:: python
 

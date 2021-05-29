@@ -1,12 +1,12 @@
 Mixed-Up Code Questions
 ------------------------
 
-.. parsonsprob:: mixedupcode_turtles_question10_1
+.. parsonsprob:: mixed_up_code_turtles_question10_1
    :numbered: left
    :practice: T
    :adaptive:
 
-   Construct a block of code that creates a turtle object successfully and asks it to move 50 steps in forward direction. Note: there is one block that won't be used in the solution!
+   Construct a block of code that creates a turtle object successfully and asks it to move 50 steps in forward direction. Note: there are two blocks that won't be used in the solution!
    -----
    from turtle import *
    =====
@@ -20,11 +20,11 @@ Mixed-Up Code Questions
    =====
    James.turtle(forward(50)) #paired
 
-.. parsonsprob:: mixedupcode_turtles_question10_2
+.. parsonsprob:: mixed_up_code_turtles_question10_2
    :numbered: left
    :adaptive:
 
-   Reorder the blocks of code to create a turtle object that will print out the letter T The width of the letter should be 100 and the height of the letter should be 150. Note: there is one blocks that won't be used in the solution!
+   Reorder the blocks of code to create a turtle object that will print out the letter T. The width of the letter should be 100 and the height of the letter should be 150. Note: there are two blocks that won't be used in the solution!
    -----
    from turtle import *
    =====
@@ -45,7 +45,7 @@ Mixed-Up Code Questions
    alex.forward(250) #distractor
 
 
-.. parsonsprob:: mixedupcode_turtles_question10_3
+.. parsonsprob:: mixed_up_code_turtles_question10_3
    :numbered: left
    :practice: T
    :adaptive:
@@ -70,7 +70,7 @@ Mixed-Up Code Questions
     alex.left(90)
 
 
-.. parsonsprob:: mixedupcode_turtles_question10_4
+.. parsonsprob:: mixed_up_code_turtles_question10_4
    :numbered: left
    :practice: T
    :adaptive:
@@ -94,12 +94,12 @@ Mixed-Up Code Questions
    =====
    alex.forward(50)
 
-.. parsonsprob:: mixedupcode_turtles_question10_5
+.. parsonsprob:: mixed_up_code_turtles_question10_5
    :numbered: left
    :adaptive:
    :practice: T
 
-   Reorder the blocks of code to create a V using a turtle object. First create the fight side of the V and then create the left side. Note: there is one block that won't be used in the solution!
+   Reorder the blocks of code to create a V using a turtle object. First create the right side of the V and then create the left side. Note: there is one block that won't be used in the solution!
    -----
    from turtle import *
    space = Screen()
@@ -120,12 +120,12 @@ Mixed-Up Code Questions
    =====
    alex.forward(100)
 
-.. parsonsprob:: mixedupcode_turtles_question10_6
+.. parsonsprob:: mixed_up_code_turtles_question10_6
    :numbered: left
    :adaptive:
    :practice: T
 
-   Construct a block of code to create a turtle object that draws a hexagon of width 50. Note: there is one block that won't be used in the solution!
+   Construct a block of code to create a turtle object that draws a hexagon of width 50. Note: there are two blocks that won't be used in the solution!
    -----
    from turtle import *
    space = Screen()
@@ -137,12 +137,12 @@ Mixed-Up Code Questions
    =====
     alex.forward(50)
    =====
-    alex.left(120)
+    alex.left(60)
    =====
-    alex.left(108) #paired
+    alex.left(80) #paired
 
 
-.. parsonsprob:: mixedupcode_turtles_question10_7
+.. parsonsprob:: mixed_up_code_turtles_question10_7
    :numbered: left
    :practice: T
    :adaptive:
@@ -167,35 +167,33 @@ Mixed-Up Code Questions
    =====
      turtle.forward(50) #distractor
 
-.. parsonsprob:: mixedupcode_turtles_question10_8
+.. parsonsprob:: mixed_up_code_turtles_question10_8
    :numbered: left
    :practice: T
    :adaptive:
 
-   Reorder the code blocks to create a turtle function draw_triangle that creates a triangle of length 50 and in which the pen size and pen color changes for each side. First the pen size is "5" with pen color 'Blue'. Then the pen size is "7" with a pen color "Red". Finally the last one is with pen size "10" and with pen color "Yellow".
+   Reorder the code blocks to create a turtle function draw_triangle that creates a triangle of length 50 and in which the pen color changes for each side.
    -----
    from turtle import *
    =====
-   def draw_triangle(turtle, length, color, size):
+   def draw_triangle(turtle, length):
    =====
-    for side in range(3):
+    colors = ["blue", "green", "yellow"]
+    for side in colors:
    =====
-      turtle.color("Blue")
-      turtle.pensize(5)
+     turtle.color(side)
    =====
-      turtle.color("Red")
-      turtle.pensize(7)
+     turtle.forward(length)
    =====
-      turtle.color("Yellow")
-      turtle.pensize(10)
+     turtle.right(120)
 
 
-.. parsonsprob:: mixedupcode_turtles_question10_9
+.. parsonsprob:: mixed_up_code_turtles_question10_9
    :numbered: left
    :adaptive:
    :practice: T
 
-   Construct an hourglass from a turtle object by reordering the blocks provided. Note: there is 1 block that won't be used in the solution!
+   Construct an hourglass from a turtle object by reordering the blocks provided. Note: there are two blocks that won't be used in the solution!
    -----
    from turtle import *
    =====
@@ -226,12 +224,12 @@ Mixed-Up Code Questions
    draw_triangle(alex, -120,30,60, 'green', 60)
    draw_triangle(alex, -120,30,60, 'green', 240)
 
-.. parsonsprob:: mixedupcode_turtles_question10_10
+.. parsonsprob:: mixed_up_code_turtles_question10_10
    :numbered: left
    :practice: T
    :adaptive:
 
-   Construct a block of code to create a function that produces turtle drawing of a diamond at any given position. Fill the diamond with green color. Note: there is 1 block that won't be used in the solution!
+   Construct a block of code to create a function that produces turtle drawing of a diamond at any given position. Fill the diamond with green color. Note: there are two blocks that won't be used in the solution!
    -----
    def draw_diamond(turtle, xpos, ypos, width, color):
    =====
