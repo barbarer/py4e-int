@@ -21,9 +21,12 @@ Functions
    mixedupcode.rst
    WriteCode.rst
    func-group.rst
+   functions_writecode.rst
    func-string.rst
    function_string_exercises.rst
    funcWithCond.rst
+   function_conditional_mixedupcode.rst
    funcWithLists.rst
+   function_list_writecode.rst
    funcWithLoops.rst
    funcWithTuplesAndDict.rst
