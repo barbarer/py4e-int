@@ -9,7 +9,7 @@ Functions Write Code Questions
                 :practice: T
                 :autograde: unittest
 
-                Fix the 4 errors in following code for the function ``test`` so that it takes in two numbers as parameters (x and y), 
+                Fix the 5 errors in following code for the function ``remainder`` so that it takes in two numbers as parameters (x and y), 
                 where x is required but y is optional and defaults to 4. The function should return the remainder of x divided by y.  
                 ~~~~
                 def remainder(x, y)
@@ -21,10 +21,9 @@ Functions Write Code Questions
                 class myTests(TestCaseGui):
 
                     def testOne(self):
-                        self.assertEqual(remainder(5, 0),5,"Tested remainder on inputs 5 and 0")
+                        self.assertEqual(remainder(5, 1),0,"Tested remainder on inputs 5 and 1")
                         self.assertEqual(remainder(0, 4),0,"Tested remainder on inputs 0 and 4")
-                        self.assertEqual(remainder(5),1,"Tested remainder on input 4")
-                        self.assertEqual(remainder(3.6, 1.6),0.00,"Tested remainder on inputs 3.6 and 1.6")
+                        self.assertEqual(remainder(5),1,"Tested remainder on input 5 with default y = 4")
 
                 myTests().main()
 
@@ -35,7 +34,7 @@ Functions Write Code Questions
                 :optional:
 
                 # Function headers end with a colon (:) and a default value for y
-                def recPerimeter(x, y = 4):
+                def remainder(x, y = 4):
 
                     # Indent four spaces after the header
                     # Use modulus division (%) instead of double slashes (//) to get the remainder
@@ -66,7 +65,7 @@ Functions Write Code Questions
 
                     def testOne(self):
                         self.assertEqual(area_of_rectangle(1,7),7,"Tested area_of_rectangle on inputs 1 and 7")
-                        self.assertEqual(areaTriangle(5,4),20,"Tested areaTriangle on inputs 5 and 4")
+                        self.assertEqual(area_of_rectangle(5,4),20,"Tested area_of_rectangle on inputs 5 and 4")
 
                 myTests().main()
 
@@ -128,7 +127,7 @@ Functions Write Code Questions
                 Create a function called birthday that takes in three parameters (month, day, and year) and returns it in the format MM/DD/YYYY. 
                 ~~~~
                 def birthday(month, day, year):
-                	# write code here
+                    # write code here
 
                 ====
                 from unittest.gui import TestCaseGui
@@ -162,7 +161,7 @@ Functions Write Code Questions
                 :practice: T
                 :autograde: unittest
 
-                Write a function ``address`` which combines 3 different address parameters to print a user's address. 
+                Write a function ``address`` which combines 3 different string address parameters (city, state, and pin) to print a user's address. 
                 After every address input, add a comma and a space (e.g., final string = "address1, address2, address3").
                 ~~~~
                 def address(city, state, pin):
@@ -174,10 +173,10 @@ Functions Write Code Questions
                 class myTests(TestCaseGui):
 
                     def testOne(self):
-                        self.assertEqual(len(address("Seattle", "WA", "98105").split(",")),3,"Tested input: address("Seattle", "WA", "98105")")
-                        self.assertEqual(address("Seattle", "WA", "98105"),"Seattle, WA, 98105","Tested input: address("Seattle", "WA", "98105")")
-                        self.assertEqual(address("Ann Arbor", "MI", "48105")","Ann Arbor, MI, 48105","Tested input: address("Ann Arbor", "MI", "48105")")
-                        self.assertEqual(address("Los Angeles", "CA", "90005"),"Los Angeles, CA, 90005","Tested input: address("Los Angeles", "CA", "90005")")
+                        self.assertEqual(len(address("Seattle", "WA", "98105").split(",")),3,"Tested input: address('Seattle', 'WA', '98105')")
+                        self.assertEqual(address("Seattle", "WA", "98105"),"Seattle, WA, 98105","Tested input: address('Seattle', 'WA', '98105')")
+                        self.assertEqual(address("Ann Arbor", "MI", "48105"),"Ann Arbor, MI, 48105","Tested input: address('Ann Arbor', 'MI', '48105')")
+                        self.assertEqual(address("Los Angeles", "CA", "90005"),"Los Angeles, CA, 90005","Tested input: address('Los Angeles', 'CA', '90005')")
 
 
                 myTests().main()
@@ -233,11 +232,11 @@ Functions Write Code Questions
 
 
 #.
-   .. tabbed:: funct_writecode6
+   .. tabbed:: funct_writecode7
 
         .. tab:: Question
 
-            .. activecode:: funct_writecode6q
+            .. activecode:: funct_writecode7q
                 :practice: T
                 :autograde: unittest
 
@@ -249,12 +248,12 @@ Functions Write Code Questions
                 ~~~~
                 def addNumbers(x, y):
                     # your code here
-                
+
                 def subtractNumbers(x, y):
-                	# your code here
-                
+                    # your code here
+
                 def calculate(a, b, c):
-                	# your code here
+                    # your code here
 
                 ====
                 from unittest.gui import TestCaseGui
@@ -274,20 +273,20 @@ Functions Write Code Questions
 
         .. tab:: Answer
 
-            .. activecode:: funct_writecode6a
+            .. activecode:: funct_writecode7a
                 :optional:
 
                 def addNumbers(x, y):
-                		
+                    
                     # Return the value of adding x and y together
                     return x + y
-                
+
                 def subtractNumbers(x, y):
-                		# Return the value of subtracting y from x
+                    # Return the value of subtracting y from x
                     return x - y
 
                 def calculate(a, b, c):
-                
+
                     # Call addNumbers, passing in a and b as parameters, and set the answer equal to the variable result
                     result = addNumbers(a, b)
                     # Call subtractNumbers on the result of the addition and c, the un
