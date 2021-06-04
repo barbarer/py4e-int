@@ -23,6 +23,7 @@ Functions
    func-group.rst
    func-string.rst
    function_string_exercises.rst
+   function_string_mixedUpCode.rst
    funcWithCond.rst
    funcWithLists.rst
    funcWithLoops.rst
