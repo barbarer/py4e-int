@@ -24,6 +24,7 @@ Functions
    functions_writecode.rst
    func-string.rst
    function_string_exercises.rst
+   function_string_mixedUpCode.rst
    funcWithCond.rst
    function_conditional_mixedupcode.rst
    funcWithLists.rst
