@@ -15,7 +15,7 @@ Multiple Choice Questions
    :feedback_d: Correct! Since Employee inherited from Person, the food method works for the Employee class as well.
    :feedback_e: Try again!
    
-   Given the below code, what would be printed (ignore newlines)?
+   Given the below code, what would be printed (ignore newlines and spacing between sentences)?
 
    .. code-block:: python
 
@@ -40,51 +40,6 @@ Multiple Choice Questions
 
 .. mchoice:: Exercises_inheritance_mc2
    :practice: T
-   :answer_a: Keyboard inherits from Computer.
-   :answer_b: Student inherits from Person.
-   :answer_c: Encyclopedia inherits from Book. 
-   :answer_d: Person inherits House.
-   :correct: b, c
-   :feedback_a: Try again!
-   :feedback_b: Correct! 
-   :feedback_c: Correct!
-   :feedback_d: Try again!
-
-   For which of the following can inheritance be used?
-
-
-.. mchoice:: Exercises_inheritance_mc3
-   :practice: T
-   :answer_a: Yes, a class can only inherit from another class if it is a type of the class.
-   :answer_b: No, a class can inherit from another class if they're associated.
-   :answer_c: Yes and no. A class can inherit from another class if they're associated or if it is a type of the class.
-   :correct: a
-   :feedback_a: Correct! A class can only inherit from another class if it is a type of the class. For example, an encyclopedia is a type of book.
-   :feedback_b: Try again!
-   :feedback_c: Try again!
-
-   Can a class only inherit from another class if it is a type of the class? 
-
-
-.. mchoice:: Exercises_inheritance_mc4
-   :practice: T
-   :answer_a: A (class) has a (class).
-   :answer_b: A (class) can be substituted with (another class).
-   :answer_c: A (class) can be associated with (another class).
-   :answer_d: A (class) is a type of (other class).
-   :answer_e: A (class) is a specialization of (other class).
-   :correct: b, d, e
-   :feedback_a: Try again!
-   :feedback_b: Correct! 
-   :feedback_c: Try again!
-   :feedback_d: Correct! 
-   :feedback_e: Correct! 
-
-   What phrases represent inheritance?
-
-
-.. mchoice:: Exercises_inheritance_mc5
-   :practice: T
    :answer_a: A person can work. None. A person eats food. None.
    :answer_b: A person can work. A person can work. A person eats food. A person eats food.
    :answer_c: The code won't compile.
@@ -95,7 +50,7 @@ Multiple Choice Questions
    :feedback_c: Try again!
    :feedback_d: Try again!
    
-   Given the below code, what would be printed (ignore newlines)?
+   Given the below code, what would be printed (ignore newlines and spacing between sentences)?
 
    .. code-block:: python
 
@@ -117,34 +72,19 @@ Multiple Choice Questions
       p2.food()
 
 
-.. mchoice:: Exercises_inheritance_mc6
-   :practice: T
-   :answer_a: class Parent(Child)
-   :answer_b: class Child(Parent)
-   :answer_c: super()
-   :answer_d: __init__
-   :correct: c
-   :feedback_a: Try again!
-   :feedback_b: Try again!
-   :feedback_c: Correct! Use super() to call parent class methods or constructors.
-   :feedback_d: Try again!
-
-   How does the child class or subclass call methods and constructors from the parent class or superclass?
-
-
-.. mchoice:: Exercises_inheritance_mc7
+.. mchoice:: Exercises_inheritance_mc3
    :practice: T
    :answer_a: A person can work. I can work. A person eats food. I can eat.
    :answer_b: A person can work. None. I can work. A person eats food. None. I can eat.
    :answer_c: The code won't compile.
    :answer_d: A person can work. A person can work. I can work. A person eats food. A person eats food. I can eat.
    :correct: d
-   :feedback_a: Try again!
-   :feedback_b: Try again!
-   :feedback_c: Try again!
+   :feedback_a: Try again! There are 2 sentences missing: "A person can work." and "A person eats food.".
+   :feedback_b: Try again! Using super().method in the child class Employee method inherits the method (print statements, in this case) from the parent class Person. 
+   :feedback_c: Try again! The code compiles.
    :feedback_d: Correct! Using super() reduces code duplication, and the child class method can duplicate the functionality of the parent class method. 
    
-   Given the below code, what would be printed (ignore newlines)?
+   Given the below code, what would be printed (ignore newlines and spacing between sentences)?
 
    .. code-block:: python
 
@@ -172,6 +112,66 @@ Multiple Choice Questions
       p2.food()
 
 
+.. mchoice:: Exercises_inheritance_mc4
+   :practice: T
+   :answer_a: Keyboard inherits from Computer.
+   :answer_b: Student inherits from Person.
+   :answer_c: Encyclopedia inherits from Book. 
+   :answer_d: Person inherits House.
+   :correct: b, c
+   :feedback_a: Try again! Keyboard isn't a type of Computer, so inheritance can't be used.
+   :feedback_b: Correct! Student is a type of Person, so inheritance can be used.
+   :feedback_c: Correct! Encyclopedia is a type of Book, so inheritance can be used.
+   :feedback_d: Try again! Person isn't a type of House, so inheritance can't be used.
+
+   For which of the following can inheritance be used?
+
+
+.. mchoice:: Exercises_inheritance_mc5
+   :practice: T
+   :answer_a: Yes, a class can only inherit from another class if it is a type of the class.
+   :answer_b: No, a class can inherit from another class if they're associated.
+   :answer_c: Yes and no. A class can inherit from another class if they're associated or if it is a type of the class.
+   :correct: a
+   :feedback_a: Correct! A class can only inherit from another class if it is a type of the class. For example, an encyclopedia is a type of book.
+   :feedback_b: Try again!
+   :feedback_c: Try again!
+
+   Can a class only inherit from another class if it is a type of the class? 
+
+
+.. mchoice:: Exercises_inheritance_mc6
+   :practice: T
+   :answer_a: A (class) has a (class).
+   :answer_b: A (class) can be substituted with (another class).
+   :answer_c: A (class) can be associated with (another class).
+   :answer_d: A (class) is a type of (other class).
+   :answer_e: A (class) is a specialization of (other class).
+   :correct: b, d, e
+   :feedback_a: Try again! Classes that are associated can't use inheritance.
+   :feedback_b: Correct! Classes that can be substituted can use inheritance.
+   :feedback_c: Try again! Classes that are associated can't use inheritance.
+   :feedback_d: Correct! Classes that can be substituted can use inheritance.
+   :feedback_e: Correct! Classes that can be substituted can use inheritance.
+
+   What phrases represent inheritance?
+
+
+.. mchoice:: Exercises_inheritance_mc7
+   :practice: T
+   :answer_a: class Parent(Child)
+   :answer_b: class Child(Parent)
+   :answer_c: super()
+   :answer_d: __init__
+   :correct: c
+   :feedback_a: Try again!
+   :feedback_b: Try again!
+   :feedback_c: Correct! Use super() to call parent class methods or constructors.
+   :feedback_d: Try again!
+
+   How does the child class or subclass call methods and constructors from the parent class or superclass?
+
+
 .. mchoice:: Exercises_inheritance_mc8
    :practice: T
    :answer_a: Book.__init__(self)
@@ -180,9 +180,9 @@ Multiple Choice Questions
    :answer_d: Book.super().__init__(self)
    :answer_e: Book.__init__(Dictionary)
    :correct: a, c
-   :feedback_a: Correct!
+   :feedback_a: Correct! Using ParentClass.method is one way to invoke a method in the ParentClass to the ChildClass.
    :feedback_b: Try again!
-   :feedback_c: Correct! 
+   :feedback_c: Correct! Using super().method is one way to invoke a method in the ParentClass to the ChildClass.
    :feedback_d: Try again!
    :feedback_e: Try again!
 
@@ -196,10 +196,10 @@ Multiple Choice Questions
    :answer_c: The code won't compile.
    :answer_d: None
    :correct: a
-   :feedback_a: Correct!
+   :feedback_a: Correct! p2 is assigned to an Employee object, and the Employee object inherits from Person. Therefore, p2 is an instance of Person.
    :feedback_b: Try again!
-   :feedback_c: Try again!
-   :feedback_d: Try again!
+   :feedback_c: Try again! The code compiles even with the pass statements.
+   :feedback_d: Try again! Printing isinstance() will print either True or False if it compiles.
    
    What will be printed?
 
@@ -217,15 +217,15 @@ Multiple Choice Questions
 
 .. mchoice:: Exercises_inheritance_mc10
    :practice: T
-   :answer_a: Inheritance is a key idea of OOP.
+   :answer_a: Inheritance is a key idea of Object-oriented programming (OOP).
    :answer_b: The child class is also called a subclass or a derived class.
    :answer_c: Private members of a class can be inherited.
    :answer_d: Protected members of a class can be inherited.
    :correct: c
-   :feedback_a: Try again!
-   :feedback_b: Try again!
-   :feedback_c: Correct!
-   :feedback_d: Try again!
+   :feedback_a: Try again! This statement about inheritance is correct.
+   :feedback_b: Try again! This statement about inheritance is correct.
+   :feedback_c: Correct! This statement about inheritance is incorrect. Private members of a class can't be inherited. 
+   :feedback_d: Try again! This statement about inheritance is correct.
 
    Which statement about inheritance is incorrect?
 
