@@ -31,3 +31,4 @@ Functions
    function_list_writecode.rst
    funcWithLoops.rst
    funcWithTuplesAndDict.rst
+   functions_tups_dicts_writecode.rst
