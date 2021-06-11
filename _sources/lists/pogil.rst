@@ -16,7 +16,7 @@ After completing this activity, Students should be able to:
 * Identify elements of a list
 * Explain the purpose of positive and negative indexes in a list
 * Explain how to access individual elements of a list
-* Explain how following list functions:append(), insert(), remove(), len(), index()
+* Define the following list functions: append(), insert(), remove(), len(), index(), count()
 * Explain how to replace an item
 
 **Process Skill Goals**
@@ -121,7 +121,7 @@ During the activity, students should make progress toward:
 
 .. parsonsprob:: par_ex_group2
 
-   Construct a function that returns the max value from a list.
+   Construct a function that returns the max value from a list. If there are no items in ``alist``return ``None``.
    -----
    def getMax(alist):
    =====
@@ -149,17 +149,9 @@ During the activity, students should make progress toward:
     print()
 
 
-.. fillintheblank:: list_count_not_found_fitb
-
-    What is the output of the second line of the code?
-
-    - :['Chicago', 'Detroit', 'Houston', 'New York']: It prints the list in the exact format
-      :.*: It does not just print out the items in the list
-
-
 .. fillintheblank:: list_print_out
 
-    How many items are in the list?
+    How many items are in the list ``bigCities``?
 
     - :4: Yes! there are four items in this list.
       :.*: Try Again! use len() to find the size of the list.
@@ -176,7 +168,7 @@ During the activity, students should make progress toward:
     :feedback_c: Try Again! Use index("Detroit") to find the index.
     :feedback_d: Try Again! Use index("Detroit") to find the index.
 
-    What is the index of "Detroit" in the list?
+    What is the index of "Detroit" in the list ``bigCities``?
 
 .. parsonsprob:: par_ex_group5
 
