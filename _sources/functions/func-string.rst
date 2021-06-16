@@ -35,10 +35,11 @@ String Indices
     - :Jk: It prints the first letter of the first name and last letter of the last name.
       :.*: String indices start with 0 and -1 is the index of the last letter in a string.
 
-.. activecode:: funct_ac_pogil_initials
+.. activecode:: funct_ac_pogil_initials_v2
     :caption: get_initials
 
-    Run the code below to see what it prints.
+    Run the code below to see what it prints.  Then fix it to pass the given test.  It should return a string with the
+    first character of the first name and first character of the last name.
     ~~~~
     # function definition
     def get_initials(first, last):
@@ -46,16 +47,29 @@ String Indices
 
     # function definition
     def main():
-        print(get_initials("J'Quan",'Alik'))
         print(type("Hello"))
+        print(type('Class'))
         print(type(42))
+
+        print(get_initials("J'Quan",'Alik'))
+
 
     # function call
     main()
 
+    from unittest.gui import TestCaseGui
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(get_initials("J'Quan",'Alik'),"JA",'''get_initials("J'Quan",'Alik')''')
+
+    myTests().main()
+
+
+
 .. note::
 
-   Use [index] to get a character from a string.  The first character in a string is at index 0 and the last is at the length of the string minus 1 (also know as index -1 in Python).
+   Use [index] to get a character from a string.  The first character in a string is at index 0 and the last is at the length of the string minus 1 (also know as index -1 in Python).  Also note that you can use pairs of single quotes or double quotes to create a string.  This is useful when the string includes a single quote.
 
 Fix the function ``get_initials`` above to return a string with the first letter of the first name followed by the first letter of the last name.
 
@@ -75,7 +89,7 @@ Fix the function ``get_initials`` above to return a string with the first letter
 
 .. fillintheblank:: funct_fitb_add_strings
 
-    What is symbol that is used to append (concatenate) strings together?
+    What is the symbol that is used to append (concatenate) strings together?
 
     - :\+: Use + to append one string after another in Python.
       :.*: Check the code above and try again.
@@ -117,7 +131,7 @@ String Slices
 .. fillintheblank:: funct_fitb_three_char_slice
     :practice: T
 
-    What will return a new string with just the first three characters from the variable named ``dna``?
+    Use the slice operator to return the first three characters from the variable ``dna``?
 
     - :dna\[0\:3\]|\[:3\]: This will return a new string with the characters from index 0 to 2.
       :.*: Look at the note above and try again.
@@ -125,7 +139,7 @@ String Slices
 .. fillintheblank:: funct_fitb_last_three_char_slice
     :practice: T
 
-    What will return a new string with just the last three characters from the variable named ``dna`` using a negative index?
+    Use the slice operator to return a new string with just the last three characters from the variable named ``dna`` using a negative index?
 
     - :dna\[-3\:\]: This will return a new string with the last three characters in it.
       :.*: Read about negative indicies in Python and try again.
@@ -284,7 +298,7 @@ Strings have methods (functions) that operate on a string object using **dot-not
     - :2: It will print the index of the first match, which is at index 2 after two spaces.
       :.*: Run it and see what it does
 
-.. activecode:: funct_ac_pogil_strip_methods
+.. activecode:: funct_ac_pogil_strip_methods_v2
     :caption: Example with strip, rstrip, lstrip, and find
 
     Run the code below to see what it prints.
@@ -292,17 +306,20 @@ Strings have methods (functions) that operate on a string object using **dot-not
     # function definition
     def test(the_string):
         print(len(the_string))
-        print(the_string.strip())
-        print(len(the_string.strip()))
-        print(the_string.rstrip())
-        print(len(the_string.rstrip()))
-        print(the_string.lstrip())
-        print(len(the_string.lstrip()))
+        s1 = the_string.strip()
+        print(s1)
+        print(len(s1))
+        s2 = the_string.rstrip()
+        print(s2)
+        print(len(s2))
+        s3 = the_string.lstrip()
+        print(s3)
+        print(s3)
         print(the_string.find('H'))
 
     # function definition
     def main():
-        test("  Help!  ")
+        test(" Help! ")
 
     # function call
     main()

@@ -32,3 +32,4 @@ Functions
    funcWithLoops.rst
    functions_loops_mixedupcode.rst
    funcWithTuplesAndDict.rst
+   functions_tups_dicts_writecode.rst

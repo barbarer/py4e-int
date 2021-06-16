@@ -307,11 +307,11 @@ Mixed-up Code Questions
     =====
     a_num = int(input("Please enter a number"))
     =====
-    print(square_it(anum))
+    print(square_it(a_num))
     =====
-    print(square_it("anum")) #distractor
+    print(square_it("a_num")) #distractor
     =====
-    print(cube_it(anum))
+    print(cube_it(a_num))
 
 .. parsonsprob:: functEx12muc
     :numbered: left

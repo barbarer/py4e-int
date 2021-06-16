@@ -43,7 +43,7 @@ Look at the Python code below and then answer the following questions.
 
 .. fillintheblank:: funct_fitb_print_test_value_b
 
-    What is the value of ``b`` when the function ``test`` is executed?
+    What is the value of ``b`` when function ``test`` starts executing?
 
     - :2: Since the value of b was not specified it defaults to 2 (it was set to 2 as a default in the function definition)
       :.*: What is the default value specified for b in the function definition?
