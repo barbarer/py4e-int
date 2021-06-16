@@ -30,4 +30,5 @@ Functions
    funcWithLists.rst
    function_list_writecode.rst
    funcWithLoops.rst
+   functions_loops_mixedupcode.rst
    funcWithTuplesAndDict.rst
