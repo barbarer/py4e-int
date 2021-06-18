@@ -27,6 +27,7 @@ Functions
    function_string_mixedUpCode.rst
    funcWithCond.rst
    function_conditional_mixedupcode.rst
+   function_conditional_writecode.rst
    funcWithLists.rst
    function_list_writecode.rst
    funcWithLoops.rst
