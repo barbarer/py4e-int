@@ -226,18 +226,18 @@ Mixed-up Code Questions
     =====
     def countOdd() #distractor
     =====
-    odd = 0
+        odd = 0
     =====
-    odd = 1 #distractor
+        odd = 1 #distractor
     =====
-    for e in lst:
+        for e in lst:
     =====
-        if e % 2 != 0:
+            if e % 2 != 0:
     =====
-        if e % 2 == 0: #paired
+            if e % 2 == 0: #paired
     =====
-            odd = odd + 1
+                odd = odd + 1
     =====
-    return odd
+        return odd
     =====
-    return countOdd #distractor
+        return countOdd #distractor
