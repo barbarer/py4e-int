@@ -128,12 +128,12 @@ Function and String Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Reorder th following code to create a function passwordDifficulty(), that makes a password
-    more difficult. It takes in a string password and replaces all 's' in the string with '$'.
+    Reorder the following code to create a function ``passwordDifficulty()``, that makes a password
+    more difficult. It takes in a string ``password`` and replaces all ``'s'`` in the string with ``'$'``.
     It returns the new password.
     Watch out for indentation and extra pieces of code.
     -----
-    passwordDifficulty(password):
+    def passwordDifficulty(password):
     =====
       new_password = password.replace('s', '$')
     =====

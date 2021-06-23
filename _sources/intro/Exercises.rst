@@ -38,7 +38,7 @@ Exercises
 .. mchoice:: intro-MC-machineCode
    :answer_a: The Python interpreter
    :answer_b: The keyboard
-   :answer_c: Python source file
+   :answer_c: A Python source file
    :answer_d: A word processing document
    :correct: a
    :feedback_a: The interpreter translates python source code from a human readable form to machine code
@@ -46,7 +46,7 @@ Exercises
    :feedback_c: The Python source file contains human readable programs
    :feedback_d: A word processing document contains text
 
-   Which of the following contains "machine code"?
+   Which of the following creates or contains "machine code"?
 
 .. mchoice:: intro-MC-whereStored
    :answer_a: Central processing unit
@@ -124,9 +124,9 @@ Exercises
       :[Ii]nput: Try again!
       :.*: Try again!
 
-.. shortanswer:: intro-SA-syntaxError
+.. fillintheblank:: intro-SA-syntaxError_v2
 
-    Python will tell you if your code has a __________ Error.
+    The Python interpreter or complier will tell you if your code has a __________ Error.
 
     - :[Ss]yntax: If your code doesn't follow the "grammar rules" of Python, it will let you know.
       :[Ss]emantic: Try again! Semantic Errors will not trigger an error message.

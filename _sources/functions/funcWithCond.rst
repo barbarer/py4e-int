@@ -25,7 +25,7 @@ Basic Conditionals and Tests
 
 .. fillintheblank:: funct_fitb_return_temp_first_line
 
-    What is the first line that will be printed when the code below runs?
+    What is the first thing (first line of text) that will be printed when the code below runs?
 
     - :Baby, its cold outside!: Since temp < 32 this will print.
       :.*: Which conditional is true when temp < 32?
@@ -110,6 +110,7 @@ Basic Conditionals and Tests
 .. parsonsprob:: funct_pogil_check-guess-Parsons-v2
    :numbered: left
    :adaptive:
+   :order: 5, 6, 7, 3, 4, 8, 9, 0, 2, 1
 
    Put the blocks in order to define the function ``check_guess`` which will return ``'too low'`` if the guess is less
    than the passed target, ``'correct'`` if they are equal, and ``'too high'`` if the guess
@@ -142,12 +143,12 @@ Basic Conditionals and Tests
    :nocodelens:
 
 
-   Finish the function ``get_middle`` which will
-   return the middle characters from the passed string.
+   Finish the function ``get_middle`` which
+   returns the middle characters from the passed string.
    If the string has less than 3 characters then return the passed string.
    If the string has an odd length, then return the middle character.  If the string has an even
-   length, return the two middle characters.  For example, get_middle('abc') returns
-   'b' and get_middle('abcd') returns 'bc'.
+   length, return the two middle characters.  For example, ``get_middle('abc')`` returns
+   ``'b'`` and ``get_middle('abcd')`` returns ``'bc'``.
    ~~~~
    def get_middle(str):
 
@@ -172,7 +173,7 @@ Basic Conditionals and Tests
 
 .. fillintheblank:: funct_fitb_cond_predict_grade
 
-    What is the first line that will be printed when the code below runs?
+    What is the first thing that will be printed when the code below runs?
 
     - :D: Since every if will execute it will print D.
       :.*: Remember that every if will execute.  What is the final value of grade?
@@ -346,17 +347,12 @@ The logical operators in Python are ``and``, ``or``, and ``not``. These can be u
    :numbered: left
    :adaptive:
    :practice: T
+   :order: 1, 10, 4, 5, 14, 8, 11, 3, 2, 9, 0, 12, 6, 7, 13, 16, 15
 
 
-   Put the code below in order to solve the following problem. You are driving a little
-   too fast, and a police officer stops you. Write code to
-   compute the result, encoded as an int value: 0=no ticket, 1=small ticket,
-   2=big ticket. If speed is 60 or less, the result is 0. If speed is between 61 and
-   80 inclusive, the result is 1. If speed is 81 or more, the result is 2. Unless it is
-   your birthday -- on that day, your speed can be 5 higher in all cases.
-   First check if it is your birthday and if so then if the speed is less than or equal 65
-   return 0, less than or equal 85 return 1 and otherwise return 2.  If it isn't your
-   birthday then if the speed is less than or equal 60 return 0, less than or equal 80
+   Put the code below in order to first check if it is your birthday and if so then if the speed is less than or equal 65
+   return 0, else if it is less than or equal 85 return 1 and otherwise return 2.  If it isn't your
+   birthday then if the speed is less than or equal 60 return 0, else if it is less than or equal 80
    return 1 and otherwise return 2.
    -----
    def caught_speeding(speed, is_birthday):
@@ -427,6 +423,7 @@ The logical operators in Python are ``and``, ``or``, and ``not``. These can be u
    :numbered: left
    :adaptive:
    :practice: T
+   :order: 9, 10, 0, 1, 2, 3, 8, 7, 5, 4, 6
 
    Drag the blocks from the left and put them in the correct order on the right to define a function ``squirrel_play`` that takes a ``temp`` (the temperature) and Boolean ``is_summer`` that indicates if it is summer or not and returns ``True`` if it is summer and the temperature is between 60 and 100 (inclusive).  It also returns ``True`` if it isn't summer and the temperature is between 60 and 90 (inclusive).  Otherwise, it returns ``False``.
    -----

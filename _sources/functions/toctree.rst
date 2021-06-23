@@ -27,10 +27,12 @@ Functions
    function_string_mixedUpCode.rst
    funcWithCond.rst
    function_conditional_mixedupcode.rst
+   function_conditional_writecode.rst
    funcWithLists.rst
    function_list_writecode.rst
    funcWithLoops.rst
    functions_loops_exercises.rst
+   functions_loops_mixedupcode.rst
    funcWithTuplesAndDict.rst
    functions_tups_dicts_writecode.rst
 
