@@ -1,12 +1,79 @@
 Mixed-up Code Questions
 -----------------------
-.. selectquestion:: str-mixed-emotion-sq
-   :fromid: str-mixed-emotion, str-mixed-emotion-ac
-   :toggle:
+.. parsonsprob:: str-mixed-emotion
+    :adaptive:
+    :numbered: left
+    :practice: T
+    :noindent:
 
-.. selectquestion:: str-mixed-book-sq
-   :fromid: str-mixed-book, str-mixed-book-ac
-   :toggle:
+    The following segment should print the statement, "So happy 4 you!". The blocks have been mixed up, and include two extra blocks that are not correct.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+    -----
+    emotion = "So happy "
+    =====
+    emotion = "So happy ' #distractor
+    =====
+    print(emotion + 4 + " you!") #distractor
+    =====
+    print(emotion + str(4) + " you!")
+
+
+.. activecode::  str-mixed-emotion-ac
+
+    Finish the code below to print "So happy 4 you!" using the variable emotion.
+    ~~~~
+    emotion = "So happy "
+    feeling = 
+    print(feeling)
+   
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(feeling, "So happy 4 you!", "Testing feeling with correct string output")
+            self.assertEqual(emotion,"So happy ", "Testing emotion to be equal to 'So happy '")
+        
+    myTests().main()
+
+
+
+.. parsonsprob:: str-mixed-book
+    :adaptive:
+    :numbered: left
+    :practice: T
+    :noindent:
+
+    The following program segment should print the phrase, "My new book cost $12". But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+    -----
+    item = "new book"
+    price = "12"
+    =====
+    print("My " + item + " cost $" + price)
+    =====
+    print("My " item " cost $" price) #paired
+
+
+.. activecode::  str-mixed-book-ac
+
+    Finish the code below to print "My new book cost $12" using the variables item and price.
+    ~~~~
+    item = "new book"
+    price = "12"
+    total =
+
+    print(total)
+    
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(total, "My new book cost $12")
+            self.assertEqual(item,"new book")
+            self.assertEqual(price, "12")
+
+    myTests().main()
 
 
 
