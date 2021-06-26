@@ -14,5 +14,4 @@ Inheritance
    CaseStudy.rst
    UnitTests.rst
    Exercises.rst
-   mixedupcode.rst
    writecode.rst
