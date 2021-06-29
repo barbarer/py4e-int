@@ -171,7 +171,7 @@ Uncomment line 1 and you are back to the ParseError.  Another track is to elimin
 TypeError
 ^^^^^^^^^
 
-TypeErrors occur when you you try to combine two objects that are not compatible.  For example you try to add together an integer and a string.  Usually type errors can be isolated to lines that are using mathematical operators, and usually the line number given by the error message is an accurate indication of the line.
+TypeErrors occur when you try to combine two objects that are not compatible.  For example you try to add together an integer and a string.  Usually type errors can be isolated to lines that are using mathematical operators, and usually the line number given by the error message is an accurate indication of the line.
 
 Here's an example of a type error created by a Polish learner.  See if you can find and fix the error.
 
