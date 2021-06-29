@@ -39,9 +39,9 @@ Mixed-Up Code Questions
    =====
        tup = word, len(word)
    =====
-   	   tup_list.append(tup)
+       tup_list.append(tup)
    =====
-   	   word_list.append(tup) #distractor
+       word_list.append(tup) #distractor
    =====
    tup_list.sort(key = lambda x: x[1], reverse = True)
 

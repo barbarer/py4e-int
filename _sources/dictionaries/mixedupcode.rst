@@ -158,7 +158,7 @@ Mixed-Up Code Questions
    =====
    combination = dict()
    =====
-   for i in len(keys):
+   for i in range(len(keys)):
    =====
    for i in keys(): #distractor
    =====
