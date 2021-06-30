@@ -1,599 +1,65 @@
 Mixed-up Code Questions
 -----------------------
-
-.. parsonsprob:: functEx1muc
-    :adaptive:
-    :numbered: left
-    :practice: T
-
-    Use a built-in function to print out the length of ``sentence_a``. Note: there are three extra code blocks.
-    -----
-    sentence_a = "I love Python!"
-    =====
-    sentence_a = I love Python! #distractor
-    =====
-    length_sentence_a = len(sentence_a)
-    =====
-    length_sentence_a = length(sentence_a) #distractor
-    =====
-    print(length_sentence_a)
-    =====
-    print(sentence_a) #distractor
-
-.. activecode:: functEx1muc_ac
-   
-   Write a function called ``sentence_a``. It should calculate the length of ``sentence_a``. 
-   ~~~~
-   sentence_a = "I love Python!"
-    
-   ====
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-       def testOne(self):
-           self.assertEqual(len(sentence_a),14, "len(sentence_a)")
-           
+.. selectquestion:: functEx1muc_sq
+   :fromid: functEx1muc, functEx1muc_ac
+   :toggle: 
+  
 
 
-   myTests().main()
+.. selectquestion:: functEx2muc_sq
+   :fromid: functEx2muc, functEx2muc_ac
+   :toggle: 
+
+
+.. selectquestion:: functEx3muc_sq
+   :fromid: functEx3muc, functEx3muc_ac
+   :toggle: 
+
+
+.. selectquestion:: functEx4muc_sq
+   :fromid: functEx4muc, functEx4muc_ac
+   :toggle: 
 
 
 
-.. parsonsprob:: functEx2muc
-    :numbered: left
-    :practice: T
-    :adaptive:
-
-    Create a function called ``bmi`` that takes ``height`` and ``weight`` as parameters. It should return ``BMImetric``.
-    Watch your indentation!
-    -----
-    def bmi(height, weight):
-    =====
-        heightSquared = height * height
-    =====
-        BMI = weight / heightSquared
-    =====
-        BMImetric = BMI * 703
-    =====
-        return BMImetric
-
-.. activecode:: functEx2muc_ac
-   
-   Write a function called ``bmi`` that takes ``height`` (in inches) and ``weight`` (in pounds) as parameters. It should calculate the ''bmi'' by squaring the height then divding the weight by the height squared and then converting to metric by multipling by 703. Watch your indentation!
-   ~~~~
-   def bmi(height, weight):
-    
-   ====
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-       def testOne(self):
-           self.assertAlmostEqual(bmi(60,140),27.33888888888889,1,"bmi(60,140)")
-           self.assertAlmostEqual(bmi(72,164),22.23996913580247,1,"bmi(72,164)")
-           self.assertAlmostEqual(bmi(32,100),68.65234375,1,"bmi(32,100)")
-           self.assertAlmostEqual(bmi(84,230),22.91524943310657,1,"bmi(84,230)")
-           self.assertAlmostEqual(bmi(24,89),108.6232638888889,1,"bmi(24,89)")
-
-
-   myTests().main()
-
-
-.. parsonsprob:: functEx3muc
-    :numbered: left
-    :practice: T
-    :adaptive:
-
-    Create two functions. The first is called ``square``, which returns a number squared. The second is called
-    ``sum_of_squares``, which returns the sum of the squares of three numbers. Watch your indentation!
-    -----
-    def square(x):
-    =====
-        y = x * x
-    =====
-        return y
-    =====
-    def sum_of_squares(x, y, z):
-    =====
-        a = square(x)
-        b = square(y)
-        c = square(z)
-    =====
-        return a + b + c
-
-
-.. activecode:: functEx3muc_ac
-   
-   Write two functions. The first is called ``square``, which returns a number squared. The second function is called ``sum_of_squares``, which returns the sum of the squares of three numbers.
-   ~~~~
-    
-   ====
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-       def testOne(self):
-           x = 2
-           y = 4
-           z = 6
-           self.assertEqual(square(x), 4, "square(x),4")
-           self.assertEqual(sum_of_squares(x,y,z), 56, "sum_of_squares(x,y,z),56")
+.. selectquestion:: functEx5muc_sq
+   :fromid: functEx5muc, functEx5muc_ac
+   :toggle: 
 
            
 
-   myTests().main()
+.. selectquestion:: functEx6muc_sq
+   :fromid: functEx6muc, functEx6muc_ac
+   :toggle: 
 
 
-.. parsonsprob:: functEx4muc
-    :numbered: left
-    :practice: T
-    :adaptive:
-
-    Create a function called ``average``, which finds the average of two numbers.
-    Note: there are two extra code blocks, and watch your indentation!
-    -----
-    def average(num1, num2):
-    =====
-    def average(num): #distractor
-    =====
-        sum = num1 + num2
-    =====
-        sum = sum / 2
-    =====
-        sum = num1 + num2 / 2 #distractor
-    =====
-        return sum
-
-.. activecode:: functEx4muc_ac
    
-   Write a function called ``average``, which finds the average of two numbers. 
-   ~~~~
-   def average():
-    
-   ====
-   from unittest.gui import TestCaseGui
+.. selectquestion:: functEx7muc_sq
+   :fromid: functEx7muc, functEx7muc_ac
+   :toggle: 
 
-   class myTests(TestCaseGui):
 
-       def testOne(self):
-           self.assertAlmostEqual(average(32,3),17.5,0, "average(32,3)")
-           self.assertAlmostEqual(average(5,20),12.5,0, "average(5,20)")
-           self.assertAlmostEqual(average(10,4),7,0, "average(10,4)")
-           self.assertAlmostEqual(average(8,120),64,0, "average(8,120)")
-           self.assertAlmostEqual(average(3,19),11,0, "average(3,19)")
+.. selectquestion:: functEx8muc_sq
+   :fromid: functEx8muc, functEx8muc_ac
+   :toggle: 
 
-           
 
-   myTests().main()
+.. selectquestion:: functEx9muc_sq
+   :fromid: functEx9muc, functEx9muc_ac
+   :toggle: 
 
-.. parsonsprob:: functEx5muc
-    :numbered: left
-    :practice: T
-    :adaptive:
 
-    Create a function called ``swapValues``, which takes two values and swaps them.
-    It then returns val1. Note: there is an extra code block, and
-    watch your indentation!
-    -----
-    def swapValues(val1, val2):
-    =====
-        val1 = val2 #distractor
-        val2 = val1
-    =====
-        temp = val2
-    =====
-        val2 = val1
-    =====
-        val1 = temp
-    =====
-        return val1
+.. selectquestion:: functEx10muc_sq
+   :fromid: functEx10muc, functEx10muc_ac
+   :toggle: 
 
-.. activecode:: functEx5muc_ac
-   
-   Write a function called ``swapValues`` , which takes two values and swaps them. It then returns val1. 
-   ~~~~
-   def swapValues(val1, val2):
-    
-   ====
-   from unittest.gui import TestCaseGui
 
-   class myTests(TestCaseGui):
+.. selectquestion:: functEx11muc_sq
+   :fromid: functEx11muc, functEx11muc_ac
+   :toggle: 
 
-       def testOne(self):
-           self.assertEqual(swapValues(5,20), 5, "swapValues(5,20)")
-           self.assertEqual(swapValues(8,2), 8, "swapValues(8,2)")
-           
 
-
-   myTests().main()
-
-
-.. parsonsprob:: functEx6muc
-    :numbered: left
-    :practice: T
-    :adaptive:
-
-    Create a function called ``get_avg_drop_lowest`` which returns the average of a list
-    of numbers, ignoring the lowest value. However, if the list only contains one value,
-    then return that. For example, ``get_avg_drop_lowest([90])`` returns ``90``,
-    ``get_avg_drop_lowest([90, 10])`` also returns ``90``, and ``get_avg_drop_lowest([90, 10, 0])``
-    returns ``50``. Watch your indentation!
-    -----
-    def get_avg_drop_lowest(num_list):
-    =====
-    def get_avg_drop_lowest(num_list) #paired
-    =====
-        total = sum(num_list)
-        lowest = min(num_list)
-        num = len(num_list)
-    =====
-        if num == 1:
-    =====
-        if num = 1: #paired
-    =====
-            return total
-    =====
-        else:
-    =====
-            return (total - lowest) / (num - 1)
-    =====
-            return (total - lowest) / (num + 1) #paired
-
-
-.. activecode:: functEx6muc_ac
-   
-   Write a function called ``get_avg_drop_lowest`` which returns the average of a list of numbers, ignoring the lowest value. However, if the list only contains one value, then return that. For example, ``get_avg_drop_lowest([90])`` returns ``90``, ``get_avg_drop_lowest([90, 10])`` also returns ``90``, and ``get_avg_drop_lowest([90, 10, 0])`` returns ``50``.
-   ~~~~
-    
-    
-   ====
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-       def testOne(self):
-           self.assertEqual(get_avg_drop_lowest([40]), 40, "get_avg_drop_lowest([40])")
-           self.assertEqual(get_avg_drop_lowest([80,10]), 80, "get_avg_drop_lowest([80,10])")
-           self.assertEqual(get_avg_drop_lowest([74,25,6]), 49.5, "get_avg_drop_lowest([74,25,6])")
-           
-           
-
-
-   myTests().main()
-
-.. parsonsprob:: functEx7muc
-    :numbered: left
-    :practice: T
-    :adaptive:
-
-    Create a function called ``compare`` which returns whichever is greater of
-    its two parameters. If they are equal, it returns ``param2``. Note:
-    there are two unused code blocks.
-    -----
-    def compare(param1, param2):
-    =====
-    Def compare(param1, param2): #distractor
-    =====
-        if param1 > param2:
-    =====
-            return param1
-    =====
-        if param1 == param2: #distractor
-    =====
-        else:
-    =====
-            return param2
-    
-
-.. activecode:: functEx7muc_ac
-   
-   Write a function called ``compare`` which returns whichever is greater of its two parameters. If they are equal, it returns ``param2``.
-   ~~~~
-    
-    
-   ====
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-       def testOne(self):
-           self.assertEqual(compare(20,15), 20, "compare(20,15)")
-           self.assertEqual(compare(8,2), 8, "compare(8,2)")
-           
-
-
-   myTests().main()
-
-
-
-.. parsonsprob:: functEx8muc
-    :numbered: left
-    :practice: T
-    :adaptive:
-
-    You are driving a little too fast, and a police officer stops you. Create a function
-    called ``caught_speeding`` which returns the type of ticket the police officer will give you.
-    If ``speed`` is 60 or less, the result is ``"no ticket"``. If speed is between 61 and 80 inclusive,
-    the result is ``"minor ticket"``. If speed is 81 or more, the result is ``"major ticket"``. All this
-    is true, unless it is your birthday -- on that day, your speed can be 5 higher in all cases.
-    Note: there are two extra code blocks and lots of indentation to watch out for!
-    -----
-    def caught_speeding(speed, is_birthday):
-    =====
-        if is_birthday is True:
-    =====
-            if speed <= 65:
-    =====
-            if speed < 65: #distractor
-    =====
-                return "no ticket"
-    =====
-            elif speed <= 85:
-    =====
-                return "minor ticket"
-    =====
-                return minor ticket #distractor
-    =====
-            else:
-    =====
-                return "major ticket"
-    =====
-        else:
-    =====
-            if speed <= 60:
-    =====
-                return "no ticket"
-    =====
-            elif speed <= 80:
-    =====
-                return "minor ticket"
-    =====
-            else:
-    =====
-                return "major ticket"
-
-
-.. activecode:: functEx8muc_ac
-   
-   You are driving a little too fast, and a police officer stops you. Write a function called ``caught_speeding`` which returns the type of ticket the police officer will give you. If ``speed`` is 60 or less, the result is ``"no ticket"``. If speed is between 61 and 80 inclusive, the result is ``"minor ticket"``. If speed is 81 or more, the result is ``"major ticket"``. All this is true, unless it is your birthday -- on that day, your speed can be 5 higher in all cases.
-   ~~~~
-    
-    
-   ====
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-       def testOne(self):
-           self.assertEqual(caught_speeding(50, False), "no ticket", "caught_speeding(50, False)")
-           self.assertEqual(caught_speeding(73,False), "minor ticket", "caught_speeding(73,False)")
-           self.assertEqual(caught_speeding(97,True), "major ticket", "caught_speeding(97,True)")
-           
-
-
-   myTests().main()
-
-.. parsonsprob:: functEx9muc
-   :numbered: left
-   :adaptive:
-   :practice: T
-
-
-   Create a ``check_guess`` function which computes if a guess is too low, too high, or correct.
-   Return ``'too low'`` if ``guess`` is less than ``target``, ``'correct'`` if they are equal, and
-   ``'too high'`` if ``guess`` is greater than ``target``.  For example, ``check_guess(5, 7)`` returns
-   ``'too low'``, ``check_guess(7, 7)`` returns ``'correct'``, and ``check_guess(9, 7)`` returns ``'too high'``.
-   Note: there are three extra code blocks, and watch your indentation!
-   -----
-   def check_guess(guess, target):
-   =====
-   def check_guess(guess), (target): #paired
-   =====
-       if guess < target:
-   =====
-           return 'too low'
-   =====
-           return "too low' #paired
-   =====
-       elif guess == target:
-   =====
-           return 'correct'
-   =====
-           return correct #paired
-   =====
-       else:
-   =====
-           return 'too high'
-
-.. activecode:: functEx9muc_ac
-   
-   Write a function called ``check_guess`` which computes if a guess is too low, too high, or correct. It should return ``'too low'`` if ``guess`` is less than ``target``, ``'correct'`` if they are equal, and ``'too high'`` if ``guess`` is greater than ``target``.  For example, ``check_guess(5, 7)`` returns  ``'too low'``, ``check_guess(7, 7)`` returns ``'correct'``, and ``check_guess(9, 7)`` returns ``'too high'``.
-   ~~~~
-   def 
-    
-   ====
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-       def testOne(self):
-           self.assertEqual(check_guess(4, 6), 'too low', "check_guess(4,6)")
-           self.assertEqual(check_guess(3,3), 'correct', "check_guess(3,3)")
-           self.assertEqual(check_guess(7,5), 'too high', "check_guess(7,5)")
-           
-
-
-   myTests().main()
-
-.. parsonsprob:: functEx10muc
-   :numbered: left
-   :adaptive:
-   :practice: T
-
-   Put the code blocks below in order to solve the following problem.
-   Given a day of the week encoded as 0 = Sun, 1 = Mon, 2 = Tue, ...6 = Sat, and a
-   boolean indicating if we are on vacation, return a string indicating when the alarm
-   clock should ring. If we are on vacation and it is a weekend (0 = Saturday or 6 =
-   Sunday), it should return ``"off"``, and otherwise return ``"10:00"``. If we are not
-   on vacation and it is a weekend, it should return ``"10:00"``, and otherwise return
-   ``"7:00"``. Note: there are two extra code blocks, and watch your indentation!
-   -----
-   def alarm_clock(day, vacation):
-   =====
-   def alarm_clock(day, vacation)  #paired
-   =====
-       if vacation:
-   =====
-           if day == 0 or day == 6:
-   =====
-           if (day == 0) || (day == 6): #paired
-   =====
-               return 'off'
-   =====
-           else:
-   =====
-               return '10:00'
-   =====
-       else:
-   =====
-           if day == 0 or day == 6:
-   =====
-               return '10:00'
-   =====
-           else:
-   =====
-               return '7:00'
-
-.. activecode:: functEx10muc_ac
-   
-   Given a day of the week encoded as 0 = Sun, 1 = Mon, 2 = Tue, ...6 = Sat, and a boolean indicating if we are on vacation, write a function ``alarm_clock`` and return a string indicating when the alarm clock should ring. If we are on vacation and it is a weekend (0 = Saturday or 6 = Sunday), it should return ``"off"``, and otherwise return ``"10:00"``. If we are not on vacation and it is a weekend, it should return ``"10:00"``, and otherwise return ``"7:00"``.Write a function called  ``square_it`` which squares the parameter ``n`` and returns the result. Then, write a function called ``cube_it`` which cubes the parameter ``n`` and returns the result. Finally, ask the user to input a number and print out the user's input squared and then cubed. 
-   ~~~~
-   def alarm_clock(day, vacation):
-    
-   ====
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-       def testOne(self):
-           self.assertEqual(alarm_clock(2,False), '7:00', "alarm_clock(2,False)")
-           self.assertEqual(alarm_clock(0,True), 'off', "alarm_clock(0,True)")
-           self.assertEqual(alarm_clock(6,False), '10:00', "alarm_clock(6,False)")
-           
-
-
-   myTests().main()
-
-.. parsonsprob:: functEx11muc
-    :numbered: left
-    :practice: T
-    :adaptive:
-
-    The following code should create two functions. First create a function called ``square_it`` which
-    squares the parameter ``n`` and returns the result. Then, create a function called ``cube_it`` which cubes
-    the parameter ``n`` and returns the result. Note : there are three extra code blocks, and watch your indentation!
-    -----
-    def square_it(n):
-    =====
-        return n * n
-    =====
-        return n * 2 #distractor
-    =====
-    def cube_it(n):
-    =====
-    def cube_it(n) #distractor
-    =====
-        return n * n * n
-    =====
-        return n * n * 3 #distractor
-
-    
-
-.. activecode:: functEx11muc_ac
-   
-   Write a function called  ``square_it`` which squares the parameter ``n`` and returns the result. Then, write a function called ``cube_it`` which cubes the parameter ``n`` and returns the result. 
-   ~~~~
-   
-    
-   ====
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-       def testOne(self):
-           self.assertEqual(square_it(4),16, "square_it(4)")
-           self.assertEqual(square_it(2),4, "square_it(2)")
-           self.assertEqual(cube_it(5),125, "cube_it(5)")
-           self.assertEqual(cube_it(3),27, "cube_it(3)")
-           
-
-
-   myTests().main()
-
-
-
-
-.. parsonsprob:: functEx12muc
-    :numbered: left
-    :practice: T
-    :adaptive:
-
-    The following code creates three functions that use Python's math module to calculate geometric equations.
-    First, create a function called ``distance`` which finds and returns the distance between two coordinates using
-    the distance formula: d = √((x_2 - x_1)² + (y_2 - y_1)²). Then, create a function called ``area`` which returns
-    the area of a circle given its radius using the formula: A = πr². Finally, create a function called ``area2``
-    which uses the ``distance`` function to find the radius and the ``area`` function to find the circle's area.
-    Watch your indentation!
-    -----
-    import math
-    =====
-    def distance(x1, y1, x2, y2):
-    =====
-        dx = x2 - x1
-        dy = y2 - y1
-    =====
-        dsquared = math.pow(dx, 2) + math.pow(dy, 2)
-    =====
-        result = math.sqrt(dsquared)
-    =====
-        return result
-    =====
-    def area(radius):
-    =====
-        b = math.pi * math.pow(radius, 2)
-    =====
-        return b
-    =====
-    def area2(xc, yc, xp, yp):
-    =====
-        radius = distance(xc, yc, xp, yp)
-    =====
-        result2 = area(radius)
-    =====
-        return result2
-
-
-.. activecode:: functEx12muc_ac
-   
-   Write a function called ``distance`` which finds and returns the distance between two coordinates using the distance formula: d = √((x_2 - x_1)² + (y_2 - y_1)²). Then, create a function called ``area`` which returns the area of a circle given its radius using the formula: A = πr². Finally, create a function called ``area2`` which uses the ``distance`` function to find the radius and the ``area`` function to find the circle's area. 
-   ~~~~
-   import math
-
-   def distance():
-
-   def area():
-    
-   ====
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-       def testOne(self):
-           self.assertAlmostEqual(distance(1,2,1,2), 1.4142135624, 1, "distance(1.0,1.0,2.0,2.0)")
-           self.assertAlmostEqual(area(2), 12.5663706, 1, "area(2)")
-           
-           
-
-
-   myTests().main()
+.. selectquestion:: functEx12muc_sq
+   :fromid: functEx12muc, functEx12muc_ac
+   :toggle: 
+ 
