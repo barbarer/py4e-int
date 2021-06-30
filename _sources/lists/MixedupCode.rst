@@ -198,11 +198,12 @@ Mixed-up Code Questions
     Finish the code below to iterate through the list of prices and discount them by 50%.
 
     ~~~~
-    price_lst = [21.99, 25.99, 19.99, 10.99, 15.99]
-    discounts = []
+    def discount():
+        price_lst = [21.99, 25.99, 19.99, 10.99, 15.99]
+        discounts = []
   
-    for price in price_lst:
-        new_price = 
+        for price in price_lst:
+            new_price = 
 
     ====
     from unittest.gui import TestCaseGui
@@ -384,8 +385,6 @@ Mixed-up Code Questions
     =====
         for x in range(0, list(oldList)): #distractor
     =====
-            newList.insert(0, oldList[x]) 
-            CHECK
             newList = oldList[x] + newList
     =====
             newList = x[oldList] + newList #distractor
@@ -421,42 +420,37 @@ Mixed-up Code Questions
     :adaptive:
 
     The following program segment should first print out the program's instructions. Next it should
-    continuously ask the user if it wants to add a word to a list <i>vocabulary</i> and then append it
-    to the end the list IF the word is not already in the list. The blocks have been mixed up and
+    continuously have the user add a word to a new list <i>vocabulary</i> if they choose and then append it
+    to the end the list IF the word is not already in the original list. The blocks have been mixed up and
     include extra blocks that aren't needed in the solution.
     -----
-    def instructions(response, stopword):
+    def instructions(response):
     =====
-        print("Enter a word to add it to the vocabulary list or type in 'quit' to end the program.")
-        wordList = ["hello", "day", "1982", "green", "quit"]
-        CHECK
+        wordList = ["hello", "day", "1982", "green", "water"]
         vocabulary = []
     =====
-        while wordList not in vocabulary:
+        while response != "quit":
     =====
-        while wordList in vocabulary: #distractor
+        while response == "quit": #distractor
     =====
-            if stopword != "quit":
+            if response not in wordList:
     =====
-                vocabulary.append(wordList)
+                vocabulary.append(response)
     =====
         return vocabulary
 
 
 .. activecode::  str-listMixed_instructions-ac
 
-    Finish the code below to first print out the program’s instructions. Next it should continuously 
-    ask the user if it wants to add a word to a list <i>vocabulary</i> and then append it to the end 
-    the list IF the word is not already in the list.
+    Finish the code below to first print out the program's instructions. Next it should
+    continuously have the user add a word to a new list <i>vocabulary</i> if they choose and then append it
+    to the end the list IF the word is not already in the original list. 
 
     ~~~~
-    def instructions():
-        print("Enter a word to add it to the vocabulary list or type in 'quit' to end the program.")
-        response = 0
+    def instructions(response):
+        wordList = ["hello", "day", "1982", "green", "water"]
         vocabulary = []
 
-        while response != "quit":
-            response = 
 
         return vocabulary
 
@@ -465,7 +459,8 @@ Mixed-up Code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertNotEqual(instructions(), [""], "Ensures the list is not empty")
+            self.assertEqual(instructions("hello"), "[""]", "Hello is already a word in the wordList, so vocabulary should be empty")
+            self.assertEqual(instructions("maple"), "["maple"]"), "Checks if maple is added correctly")
 
 
     myTests().main()
