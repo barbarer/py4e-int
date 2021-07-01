@@ -78,7 +78,9 @@ will even let Python tell us the list of characters that it considers
    '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
 
 
-The parameters used by ``translate`` were different in Python 2.0.
+.. note::
+
+   The parameters used by ``translate`` were different in Python 2.0.
 
 We make the following modifications to our program:
 
@@ -88,7 +90,7 @@ We make the following modifications to our program:
 
 .. activecode:: fileOpen3
    :language: python3
-   :available_files: romeo-full.txt
+   :datafile: romeo-full.txt
 
    import string
 
