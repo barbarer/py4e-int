@@ -1,5 +1,5 @@
-Functions and Lists Write Code Questions
------------------------------------------
+Functions and Conditionals Write Code Questions
+------------------------------------------------
 #.
     .. tabbed:: funct_conditional_writecode1
 

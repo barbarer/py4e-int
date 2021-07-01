@@ -90,7 +90,7 @@ Try running the code below as is, then add parentheses around ``4 + -2`` to see 
 When in doubt, always put parentheses in your expressions to make sure
 the computations are performed in the order you intend.
 
-.. parsonsprob:: var-order-pp-operations
+.. parsonsprob:: var-order-pp-operations_v2
     :practice: T
     :numbered: left
     :adaptive:
@@ -101,10 +101,6 @@ the computations are performed in the order you intend.
     =====
     3**2
     =====
-    7 * 5
-    =====
     33 / 11
     =====
     15 + 20
-    =====
-    77 - 8

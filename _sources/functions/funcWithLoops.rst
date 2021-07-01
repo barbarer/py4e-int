@@ -104,7 +104,6 @@ A for-each loop in Python will loop though the items in a list starting with the
 
 .. activecode:: fuct_ac_ll_sum67_fix
    :autograde: unittest
-   :nocodelens:
 
    Fix the ``sum67`` function below that takes a list and should return the total of the items in the list except for all the numbers between a 6 and 7 (inclusive).   For example, sum67([1,2]) should return 3, but sum67([2, 6, 8, 7, 2]) should return 4.
    ~~~~
@@ -349,7 +348,7 @@ What do you think would happen if you deleted lines 6 and 7 in the above code?
         while result != "Correct":
 
             # Tell the result and get a new number
-            num = int(input(result , ".  Enter a number from 1 to 10"))
+            num = int(input(result + ".  Enter a number from 1 to 10"))
 
             # get the result
             result = check_value(target, num)

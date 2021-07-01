@@ -110,12 +110,12 @@ During the activity, students should make progress toward:
     :answer_c: areaCode += 7
     :answer_d: areaCode.extend([7])
     :answer_e: areaCode.extend(7)
-    :correct: a,d,e
+    :correct: a,d
     :feedback_a: Yes! You can add the item directly to the list using append
     :feedback_b: Try again! You cannot append a list even if it has one element
     :feedback_c: Try Again! You cannot concatenate a list and an integer, only two lists.
     :feedback_d: Yes! You can add a list to the end of another list using extend.
-    :feedback_e: Yes! You can add the item directly to the list using extend.
+    :feedback_e: Try again!  You cannot extend a list with a number.
 
      Which of the following lines could you use to add 7 to the list to become [3, 1, 2, 7,]?
 

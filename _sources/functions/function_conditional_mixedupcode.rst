@@ -49,7 +49,7 @@ Functions and Conditionals Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called even_or_odd that takes in a parameter num. If num is odd, print "This is odd.", and if num is even, print "This is even." 
+    Create a function called even_or_odd that takes in a parameter num. If num is odd, return "This is odd.", and if num is even, return "This is even." 
     -----
     def even_or_odd(num):
     =====
@@ -61,11 +61,11 @@ Functions and Conditionals Mixed-Up Code Questions
     =====
         if num % 2 = 0: #paired
     =====
-            print("This is even.")
+            return "This is even."
     =====
         else:
     =====
-            print("This is odd.")
+            return "This is odd."
 
 
 .. parsonsprob:: funct_conditional_muc3
@@ -73,9 +73,9 @@ Functions and Conditionals Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called which_quadrant that takes in parameters x and y and returns its corresponding quadrants in increasing order (1, 2, 3, 4). 
-    Refer to https://en.wikipedia.org/wiki/Quadrant_(plane_geometry) for quadrants on a coordinate plane if needed. 
-    If coordinate is on the x or y axis, return "It's not in a quadrant.".
+    Create a function called which_quadrant that takes in parameters x and y and returns its corresponding quadrants in increasing order 
+    ("Quadrant 1", "Quadrant 2", etc.). Refer to https://en.wikipedia.org/wiki/Quadrant_(plane_geometry) for quadrants on a coordinate 
+    plane if needed. If coordinate is on the x or y axis, return "It's not in a quadrant.".
     -----
     def which_quadrant(x, y):
     =====
@@ -116,9 +116,9 @@ Functions and Conditionals Mixed-Up Code Questions
     :adaptive:
 
     Create a function called which_axis_or_is_origin that takes in parameters x and y. If both coordinates aren't 0, 
-    print "This coordinate is not on an axis. It's in a quadrant.". If both coordinates are 0, print "This coordinate is the origin.". 
-    Lastly, if the coordinate isn't in a quadrant and isn't the origin, determine if the coordinate is on the x or y axis. 
-    Refer to https://www.math.net/x-and-y-axis for information on axes if needed.
+    return "This coordinate is not on an axis. It's in a quadrant.". If both coordinates are 0, return "This coordinate is the origin.". 
+    Lastly, if the coordinate isn't in a quadrant and isn't the origin, determine if the coordinate is on the x or y axis by returning
+    "This coordinate is on the (y-axis or x-axis).". Refer to https://www.math.net/x-and-y-axis for information on axes if needed.
     -----
     def which_axis_or_is_origin(x, y):
     =====
@@ -128,11 +128,11 @@ Functions and Conditionals Mixed-Up Code Questions
     =====
         if (x != 0) or (y != 0): #paired
     =====
-            print("This coordinate is not on an axis. It's in a quadrant.")
+            return "This coordinate is not on an axis. It's in a quadrant."
     =====
         elif (x == 0) and (y == 0):
     =====
-            print("This coordinate is the origin.")
+            return "This coordinate is the origin."
     =====
         elif x == 0:
     =====
@@ -140,11 +140,11 @@ Functions and Conditionals Mixed-Up Code Questions
     =====
         elif x = 0: #paired
     =====
-            print("This coordinate is on the y-axis.")
+            return "This coordinate is on the y-axis."
     =====
         else:
     =====
-            print("This coordinate is on the x-axis.")
+            return "This coordinate is on the x-axis."
 
 
 .. parsonsprob:: funct_conditional_muc5
@@ -153,57 +153,53 @@ Functions and Conditionals Mixed-Up Code Questions
     :adaptive:
 
     Create a function called num_to_strings_weekdays_and_weekends that takes in a parameter num. If num is between 1-5 inclusive, 
-    print "This is a weekday.". Create a nested conditional statement that prints Monday if num is 1, Tuesday if num is 2, and so on. 
-    Outside the nested conditional statement, if num is 6 or 7, print "It is the weekend.".  In another nested conditional statement, 
-    print Saturday if num is 6 and Sunday otherwise. Outside the nested conditional, if none of the other conditions have been met, 
-    print "The number does not correspond to a day of the week.". 
+    create a nested conditional statement that returns "This is a weekday, and it's (insert day here).", 1 being Monday through 5 being Friday.
+    If num is 6 or 7, create a nested conditional statement that returns "It is the weekend, and it's (insert day here).", 
+    6 being Saturday and 7 being Sunday. If none of the other conditions have been met, return "The number does not correspond to a day of the week.". 
     -----
     def num_to_strings_weekdays_and_weekends(num):
     =====
         if (num >= 1) and (num <= 5):
-    =====    
+    =====
         if (num > 1) and (num < 5): #paired
-    =====    
-            print("This is a weekday.")
-    =====    
+    =====
             if num == 1:
-    =====    
-                print("It is Monday.")
-    =====    
+    =====
+                return "This is a weekday, and it's Monday."
+    =====
             elif num == 2:
-    =====    
-                print("It is Tuesday.")
-    =====    
+    =====
+                return "This is a weekday, and it's Tuesday."
+    =====
             elif num == 3:
-    =====    
-                print("It is Wednesday.")
-    =====    
+    =====
+                return "This is a weekday, and it's Wednesday."
+    =====
             elif num == 4:
-    =====    
-                print("It is Thursday.")
-    =====    
+    =====
+                return "This is a weekday, and it's Thursday."
+    =====
             else:
-    =====    
-                print("It is Friday.")
-    =====    
-        elif (num > 5) and (num <= 7):
-    =====    
+    =====
+                return "This is a weekday, and it's Friday."
+    =====
+        elif (num > 5) and (num <= 7): 
+    =====
         elif num <= 7: #paired
-    =====    
+    =====
         elif (num > 5) or (num <= 7): #paired
-    =====    
+    =====
         elif (num >= 5) or (num <= 7): #paired
-    =====    
-            print("It is the weekend.")
-    =====    
+    =====
             if num == 6:
-    =====    
-                print("It is Saturday.")
-    =====    
+    =====
+                return "It is the weekend, and it's Saturday."
+    =====
             else:
-    =====    
-                print("It is Sunday.")
-    =====    
+    =====            
+                return "It is the weekend, and it's Sunday."
+    =====
         else:
-    =====    
-            print("The number does not correspond to a day of the week.")
+    =====
+            return "The number does not correspond to a day of the week."
+

@@ -5,7 +5,6 @@ Mixed-up Code Questions
    :toggle: 
   
 
-
 .. selectquestion:: functEx2muc_sq
    :fromid: functEx2muc, functEx2muc_ac
    :toggle: 
