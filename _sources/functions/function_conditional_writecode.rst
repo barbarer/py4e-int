@@ -10,7 +10,7 @@ Functions and Conditionals Write Code Questions
                 :autograde: unittest
 
                 Create a function called cropped_photo that takes in the height and width of a photo.
-                If the height and width are equal then the function retursn "Cropped Photo", otherwise
+                If the height and width are equal then the function returns "Cropped Photo", otherwise
                 it returns "The photo needs to be cropped."
                 ~~~~
                 def cropped_photo(height, width):
@@ -100,8 +100,8 @@ Functions and Conditionals Write Code Questions
 
                 Create a function called move_elevator to move elevator from one floor to another.
                 The method takes two parameters current_floor and nex_floor. If the elevator moves
-                to a floor above then it should return "Up", otherwise it should return "Down".
-                Also if the next_floor is negative or if it is the same as current_floor it should
+                to a floor above, then it should return "Up". Otherwise, it should return "Down".
+                Also, if the next_floor is negative or if it is the same as current_floor it should
                 return 0.
                 ~~~~
                 def move_elevator(current_floor, next_floor):
@@ -199,7 +199,7 @@ Functions and Conditionals Write Code Questions
                 Create a function called pay_rent. The function takes in one parameter,
                 units that is the units of area of a property. If the property is less than 200 units, pay $100.
                 If it is less than 500 units pay $200. If it is more than 500 units then
-                pay $200 + 0.1 for every extra unit.Return the rent value.
+                pay $200 + 0.1 for every extra unit. Return the rent value.
                 ~~~~
                 def pay_rent(units):
                     # write code here
