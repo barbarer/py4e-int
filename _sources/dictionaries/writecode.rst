@@ -67,7 +67,7 @@ Write Code Questions
         class myTests(TestCaseGui):
             def testOne(self):
                 self.assertEqual(len(user_count), 7, "Making sure the amount of messages sent is correct.")
-                self.assertEqual(user_count['stephen.marquard@uct.ac.za'], 4, "Checking that this email address is counted for 4 times.")
+                self.assertEqual(user_count['stephen.marquard@uct.ac.za'], 4, "Checking that 'stephen.marquard@uct.ac.za' is counted for 4 times.")
 
         myTests().main()
 
