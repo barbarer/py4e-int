@@ -210,7 +210,7 @@ Mixed-up Code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(discount(), [10.995, 12.995, 9.994999999999999, 5.495, 7.995], "Returns discounted prices of prices in the list")
+            self.assertEqual(discount(), [11.0, 13.0, 9.99, 5.5, 8.0], "Returns discounted prices of prices in the list")
 
     myTests().main()
 
@@ -385,7 +385,7 @@ Mixed-up Code Questions
     =====
         for x in range(0, list(oldList)): #distractor
     =====
-            newList = oldList[x] + newList
+            newList.insert(0,oldList[x])
     =====
             newList = x[oldList] + newList #distractor
     =====
@@ -429,7 +429,7 @@ Mixed-up Code Questions
         wordList = ["hello", "day", "1982", "green", "water"]
         vocabulary = []
     =====
-        while response != "quit":
+        for x in range(len(wordList))
     =====
         while response == "quit": #distractor
     =====
@@ -459,8 +459,8 @@ Mixed-up Code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(instructions("hello"), "[""]", "Hello is already a word in the wordList, so vocabulary should be empty")
-            self.assertEqual(instructions("maple"), "["maple"]"), "Checks if maple is added correctly")
+            self.assertEqual(instructions("hello"), "", "Hello is already a word in the wordList, so vocabulary should be empty")
+            self.assertEqual(instructions("maple"), "[maple]"), "Checks if maple is added correctly")
 
 
     myTests().main()
