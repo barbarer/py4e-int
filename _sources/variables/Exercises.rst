@@ -1,4 +1,4 @@
-Mulitple Choice Questions
+Multiple Choice Questions
 -------------------------
 
 .. mchoice:: var-ex-mc-division

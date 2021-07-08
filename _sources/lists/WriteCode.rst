@@ -148,6 +148,16 @@ Write Code Questions
               trees = dataLast[0]
               plant = trees[0]
 
+              =====
+              from unittest.gui import TestCaseGui
+
+              class myTests(TestCaseGui):
+
+                 def testOne(self):
+                    self.assertEqual(plant, "willow", "Testing that plant was assigned to the willow.")
+
+              myTests().main()
+
 #.
     .. activecode:: list_write5q
 
@@ -187,7 +197,7 @@ Write Code Questions
 
                   def testOne(self):
                       self.assertEqual(chop([1,2,3,4,5]),[2,3,4],"Tested chop on input [1,2,3,4.5]")
-                      self.assertEqual(chop([1,3,5,7,9,10]),[2,3,5,7,9],"Tested chop on input [1,3,5,7,9,10]")
+                      self.assertEqual(chop([1,3,5,7,9,10]),[3,5,7,9],"Tested chop on input [1,3,5,7,9,10]")
                       self.assertEqual(chop([2,9]),[],"Tested chop on input [2,9]")
 
               myTests().main()
@@ -197,31 +207,41 @@ Write Code Questions
           .. activecode:: list_writeChopa
               :optional:
 
-              Use del to remove the first (0th) element and to remove the last (-1st) element.
+              Use ``pop`` to remove the first (0th) element and to remove the last (-1st) element.
               Then return the list.
               ~~~~
               def chop(lst):
-                  del lst[0]
-                  del lst[-1]
+                  lst.pop(0)
+                  lst.pop(-1)
                   return(lst)
 
+              ====
+              from unittest.gui import TestCaseGui
+
+              class myTests(TestCaseGui):
+
+                  def testOne(self):
+                      self.assertEqual(chop([1,2,3,4,5]),[2,3,4],"Tested chop on input [1,2,3,4.5]")
+                      self.assertEqual(chop([1,3,5,7,9,10]),[3,5,7,9],"Tested chop on input [1,3,5,7,9,10]")
+                      self.assertEqual(chop([2,9]),[],"Tested chop on input [2,9]")
+
+              myTests().main()
 #.
-    .. activecode:: list_writeMiddleq
+    .. activecode::  list_writeReverseq
+        :nocodelens:
 
-        Write a function called ``middle`` that takes a list ``lst`` as its argument and
-        returns a new list that contains all but the first and last elements.
+        Write a function called ``reverse`` that returns the reverse of a passed list.  For example, ``reverse[1,2,3]`` should return [3, 2, 1].
         ~~~~
-        def middle(lst):
-
         ====
         from unittest.gui import TestCaseGui
 
         class myTests(TestCaseGui):
 
             def testOne(self):
-                self.assertEqual(middle([1,2,3,4,5]),[2,3,4],"Tested middle on input [1,2,3,4.5]")
-                self.assertEqual(middle([1,3,5,7,9,10]),[3,5,7,9],"Tested middle on input [1,3,5,7,9,10]")
-                self.assertEqual(middle([2,9]),[],"Tested middle on input [2,9]")
+                  self.assertEqual(reverse([1,2,3,4,5]),[5,4,3,2,1],"Tested reverse on input [1,2,3,4.5]")
+                  self.assertEqual(reverse([1,3,5,7,9]),[9,7,5,3,1],"Tested reverse on input [1,3,5,7,9]")
+                  self.assertEqual(reverse([2,4,6,7,9]),[9,7,6,4,2],"Tested reverse on input [2,4,6,7,9]")
+
 
         myTests().main()
 
@@ -267,22 +287,14 @@ Write Code Questions
                         element += 1
                     return total
 
+                ====
+                from unittest.gui import TestCaseGui
 
-#.
-    .. activecode::  list_writeReverseq
-        :nocodelens:
+                class myTests(TestCaseGui):
 
-        Write a function called ``reverse`` that returns the reverse of a passed list.
-        ~~~~
-        ====
-        from unittest.gui import TestCaseGui
+                    def testOne(self):
+                        self.assertEqual(sumUntilEven([1,2,3,4,5]),1,"Tested sumUntilEven on input [1,2,3,4.5]")
+                        self.assertEqual(sumUntilEven([1,3,5,7,9]),25,"Tested sumUntilEven on input [1,3,5,7,9]")
+                        self.assertEqual(sumUntilEven([2,4,6,7,9]),0,"Tested sumUntilEven on input [2,4,6,7,9]")
 
-        class myTests(TestCaseGui):
-
-            def testOne(self):
-                  self.assertEqual(reverse([1,2,3,4,5]),[5,4,3,2,1],"Tested reverse on input [1,2,3,4.5]")
-                  self.assertEqual(reverse([1,3,5,7,9]),[9,7,5,3,1],"Tested reverse on input [1,3,5,7,9]")
-                  self.assertEqual(reverse([2,4,6,7,9]),[9,7,6,4,2],"Tested reverse on input [2,4,6,7,9]")
-
-
-        myTests().main()
+                myTests().main()

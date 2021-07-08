@@ -2,7 +2,7 @@ Finishing iterations with ``continue``
 ------------------------------------------
 .. index::
     pair: Continue; Statement
-    
+
 
 Sometimes, you are in a loop and want to finish the
 current iteration and immediately jump to the next. In that
@@ -22,7 +22,7 @@ added:
     :caption: A sample run of this new program with ``continue`` added.
 
     while True:
-        line = raw_input('> ')
+        line = input('> ')
         if line[0] == '#' :
             continue
         if line == 'done':
@@ -50,23 +50,23 @@ because when the ``continue`` is executed, it ends the current
 iteration and jumps back to the ``while`` statement to start
 the next iteration, thus skipping the ``print`` statement.
 
-.. mchoice:: itContinue_MC_line
+.. mchoice:: itContinue_MC_line_v2
     :answer_a: nothing prints
     :answer_b: 'Done!'
     :answer_c: '#'
-    :answer_d: '> '
-    :correct: d
+    :answer_d: it will prompt the user for input with '> '
+    :correct: b
     :feedback_a: Incorrect! Something will print, regardless of what is inputted. Try again.
-    :feedback_b: Incorrect! '#' does not 'break' the loop, it 'continue's. Try again.
+    :feedback_b: Entering 'done' will print 'Done!'.
     :feedback_c: Incorrect! This will not print "#". Try again.
-    :feedback_d: Correct! 'continue' will cause a new iteration of the loop to start, which will always print '> ' to prompt the user.
+    :feedback_d: Incorrect! This would be true if the user entered '#'.
 
-    What prints if the user's input is '#'?
+    What prints if the user's input is 'done'?
 
     .. code-block:: python
 
         while True:
-            line = raw_input('> ')
+            line = input('> ')
             if line[0] == '#' :
                 continue
             if line == 'done':
@@ -75,7 +75,7 @@ the next iteration, thus skipping the ``print`` statement.
                 print(line)
         print ('Done!')
 
-.. parsonsprob:: itContinue_PP_not8
+.. parsonsprob:: itContinue_PP_not8_v2
     :numbered: left
     :practice: T
     :adaptive:
@@ -86,17 +86,15 @@ the next iteration, thus skipping the ``print`` statement.
     -----
     n = 0
     =====
-    n = 1 #distractor
-    =====
     while (n < 10):
     =====
-    while (n < 10) #distractor
-    =====
-    while (n <= 10): #distractor
+    while (n <= 10): #paired
     =====
         n = n + 1
     =====
         if n == 8:
+    =====
+        if n = 8: #paired
     =====
             continue
     =====

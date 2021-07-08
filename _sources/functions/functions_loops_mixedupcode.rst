@@ -6,7 +6,7 @@ Functions and Loops Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called nums_one_to_ten_list that uses a for loop to create and return a list with numbers 1 to 10.
+    Create a function called ``nums_one_to_ten_list`` that uses a for loop to create and return a list with numbers 1 to 10.
     -----
     def nums_one_to_ten_list():
     =====
@@ -29,7 +29,7 @@ Functions and Loops Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function count_by_5_to_20_list that uses a for loop to create and return a list with numbers 5, 10, 15, and 20.
+    Create a function ``count_by_5_to_20_list`` that uses a for loop to create and return a list with numbers 5, 10, 15, and 20.
     -----
     def count_by_5_to_20_list():
     =====
@@ -52,7 +52,7 @@ Functions and Loops Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called countdown_to_go that initializes a parameter seconds to 3 and 
+    Create a function called ``countdown_to_go`` that initializes a parameter ``seconds`` to 3 and 
     counts down to 1 while printing out the numbers and then prints 'Go!'.
     -----
     def countdown_to_go(seconds = 3):
@@ -74,9 +74,10 @@ Functions and Loops Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function add_odds_floor_division_all_else that takes in a parameter num_list. 
-    It loops through the num_list, and if the number in num_list is odd, it gets added to result. 
-    Otherwise, it gets divided from the result, having the result be the floor value. In the end, the result is returned.
+    Create a function ``add_odds_floor_division_all_else`` that takes in a parameter ``num_list``. 
+    It loops through the ``num_list``, and if the number in ``num_list`` is odd, it gets added to ``result``. 
+    Otherwise, it gets divided from the ``result``, having the ``result`` be the floor value. In the end, the ``result`` is returned.
+    For example, ``add_odds_floor_division_all_else([-3, -5, -2, -9, 7.5, 10001, -5.3])`` would return -1887.0.
     -----
     def add_odds_floor_division_all_else(num_list):
     =====
@@ -105,8 +106,9 @@ Functions and Loops Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function strings_with_chars_less_than_len_of_list that takes in a list of strings 
+    Create a function ``strings_with_chars_less_than_len_of_list`` that takes in a ``strings_list`` 
     and returns a sorted new list with strings that are shorter in length than the original list.
+    For example, ``strings_with_chars_less_than_len_of_list(['hello', 'bye', 'me', 'mississippi', 'miss'])`` would return ['bye', 'me', 'miss'].
     -----
     def strings_with_chars_less_than_len_of_list(strings_list):
     =====

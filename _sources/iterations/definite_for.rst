@@ -107,12 +107,12 @@ steps successively through the three strings stored in the
     =====
     for name in names:
     =====
-    for names in names: #distractor
+    for names in names: #paired
     =====
         print("Hello,", name)
     =====
-        print("Hello", name) #distractor
+        print("Hello", name) #paired
     =====
     print("All done!")
     =====
-    print(All done!) #distractor
+    print(All done!) #paired
