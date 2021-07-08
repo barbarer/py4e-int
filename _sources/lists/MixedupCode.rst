@@ -419,23 +419,20 @@ Mixed-up Code Questions
     :practice: T
     :adaptive:
 
-    The following program segment should first print out the program's instructions. Next it should
-    continuously have the user add a word to a new list <i>vocabulary</i> if they choose and then append it
-    to the end the list IF the word is not already in the original list. The blocks have been mixed up and
-    include extra blocks that aren't needed in the solution.
+    The following program segment should have the user add a word to a new list <i>vocabulary</i> IF the word 
+    is not already in the original list. The blocks have been mixed up and include extra blocks that aren't 
+    needed in the solution.
     -----
     def instructions(response):
     =====
         wordList = ["hello", "day", "1982", "green", "water"]
         vocabulary = []
     =====
-        for x in range(len(wordList))
+        if response in wordList: #distractor
     =====
-        while response == "quit": #distractor
+        if response not in wordList:
     =====
-            if response not in wordList:
-    =====
-                vocabulary.append(response)
+            vocabulary.append(response)
     =====
         return vocabulary
 
@@ -443,7 +440,7 @@ Mixed-up Code Questions
 .. activecode::  str-listMixed_instructions-ac
 
     Finish the code below to first print out the program's instructions. Next it should
-    continuously have the user add a word to a new list <i>vocabulary</i> if they choose and then append it
+    have the user add a word to a new list <i>vocabulary</i> if they choose and then append it
     to the end the list IF the word is not already in the original list. 
 
     ~~~~
@@ -459,8 +456,10 @@ Mixed-up Code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(instructions("hello"), "", "Hello is already a word in the wordList, so vocabulary should be empty")
-            self.assertEqual(instructions("maple"), "[maple]"), "Checks if maple is added correctly")
+            self.assertEqual(instructions("hello"), [], "Hello is already a word in the wordList, so vocabulary should be empty")
+            self.assertEqual(instructions("maple"), ['maple'], "Checks if maple is added correctly")
+            
+            
 
 
     myTests().main()
