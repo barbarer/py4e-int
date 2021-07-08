@@ -173,9 +173,9 @@ Some of the questions use the following data file.
 
         .. tab:: Question
 
-            Define the function match_z to match a word containing the letter z.
-            Return "Found a match!" if z is in the string and "Not matched!" if
-            there is not a z.
+            Define the function ``match_z`` to match a word containing a lowercase letter ``z``.
+            Return ``"Found a match!"`` if ``z`` is in the string and ``"Not matched!"`` if
+            there is not a ``z``.
 
             .. activecode:: regex_writecode5q
 
