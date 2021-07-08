@@ -275,7 +275,7 @@ Mixed-Up Code Questions
    =====
    characters = {}
    =====
-   characters = dictioanry #distractor
+   characters = dictionary() #distractor
    =====
    for character in sentence:
    =====
