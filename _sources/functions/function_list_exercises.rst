@@ -95,11 +95,11 @@ Functions with Lists Multiple Choice Questions
 
 
 .. mchoice:: funct_lists_5
-    :answer_a: line 1: lst_reverse = lst.reverse(), line 2: return lst
-    :answer_b: line 1: lst.reverse(), line 2: return lst
-    :answer_c: line 1: lst_reverse = lst.reverse(), line 2: return lst_reverse
+    :answer_a: lst_reverse = lst.reverse(), return lst
+    :answer_b: lst.reverse(), return lst
+    :answer_c: lst_reverse = lst.reverse(), return lst_reverse
     :answer_d: return lst.reverse()
-    :answer_e: line 1: lst_reverse = lst_reverse.reverse(), line 2: return lst
+    :answer_e: lst_reverse = lst_reverse.reverse(), return lst
     :correct: a, b
     :feedback_a: Correct! Although it properly returns a reversed list, it is unnecessary to assign the reverse method to a variable.
     :feedback_b: Correct! 
@@ -107,7 +107,7 @@ Functions with Lists Multiple Choice Questions
     :feedback_d: Incorrect! The built-in python function, reverse, has to be used on the list before the list can be returned.
     :feedback_e: Incorrect! This code does not modify lst, the passed in parameter. 
 
-    Which of the following line(s) of code would properly return a reversed list? (Note: commas represent line breaks)
+    Which of the following line(s) of code would properly return a reversed list? (Note: Commas represent line breaks)
 
     .. code-block:: python
 
