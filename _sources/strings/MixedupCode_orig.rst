@@ -290,10 +290,10 @@ Mixed-up Code Questions
 
 .. activecode::  str-mixed-wizard-ac
 
-    Finish the code below to print "Sam likes to code" using the variables var1 and var2.
+    Finish the code below to print "I am a CS wizard" by fixing the variables var1 and var2 and combining them in var3.
     ~~~~
-    var1 = "I am a "
-    var2 = 
+    var1 = I am a 
+    var2 = CS wizard
     var3 =
 
     print(var3)
@@ -329,10 +329,10 @@ Mixed-up Code Questions
 
 .. activecode::  str-mixed-colors-ac
 
-    Write the code below to print "'Red' is a primary color, and so is 'blue'" using the variables col1 and col2.
+    Write the code below to print "'Red' is a primary color, and so is 'blue'" by fixing the variables col1 and col2 and then combining them in the variables colors.
     ~~~~
-    col1 =
-    col2 =
+    col1 = Red
+    col2 = blue
     colors = 
 
     print(colors)
