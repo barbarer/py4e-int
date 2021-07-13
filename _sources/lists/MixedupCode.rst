@@ -1,24 +1,50 @@
 Mixed-up Code Questions
 -----------------------
-.. parsonsprob:: listMixed_weather
+.. parsonsprob:: listPassword_creator
     :practice: T
     :adaptive:
     :numbered: left
 
-    Write a program that will print out the length of each item in the list as well as
-    the first and last characters of the item. Watch out for extra code blocks and indentation!
+    Write a program that will take the first and last character of each word in a list to create
+    a password. Watch out for extra code blocks and indentation!
     -----
-    weather = ["sunny", "cloudy", "partially sunny", "rainy", "storming", "windy", "foggy", "snowy", "hailing"]
+    def password_maker():
     =====
-    for condition in weather:
+    words = ["sunshine", "grapes", "magic", "serendipity", "unicorns", "bubbles", "card", "yellow", "candle"]
+    password = ""
     =====
-        print("The word is", len(condition), "characters")
+    for letter in words:
     =====
-        first_char = condition[0]
-        last_char = condition[-1]
+        first_char = letter[0]
+        last_char = letter[-1]
     =====
-        print("The first character is: " + first_char)
-        print("The last character is: " + last_char)
+        password += first_char
+        password += last_char
+    =====
+    return password
+
+.. activecode::  str-listPassword_creator-ac
+
+    Finish the code below to take the first and last character of each word in a list to create
+    a password.
+
+    ~~~~
+    def password_maker():
+        words = ["sunshine", "grapes", "magic", "serendipity", "unicorns", "Bubbles", "card", "yellow", "candle"]
+        password = ""
+
+        
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        
+        def testOne(self):
+            self.assertEqual(password_maker(), "segsmcsyusBscdywce", "Takes the first and last letter of each word and appends them together to a single string")
+
+    myTests().main()
+
+
 
 .. parsonsprob:: listMixed_rainfall
     :numbered: left
@@ -34,29 +60,70 @@ Mixed-up Code Questions
     print "No rain". Construct a program that correctly solves the rainfall problem. Watch out for extra
     code blocks and indentation!
     -----
-    rain = [0,5,1,0,-1,6,7,-2,0]
-    sumRain = 0
-    count = 0
+    def rainfall():
     =====
-    for day in rain:
+        rain = [0,5,1,0,-1,6,7,-2,0]
+        sumRain = 0
+        count = 0
     =====
-    for day in rain #distractor
+        for day in rain:
     =====
-        if day >= 0:
+        for day in rain #distractor
     =====
-            sumRain = sumRain + day
-            count = count + 1.0
+            if day >= 0:
     =====
-    if count > 0:
+                sumRain = sumRain + day
+                count = count + 1.0
     =====
-        ave = sumRain / count
-        print("Average",ave)
+        if count > 0:
     =====
-    else:
+            ave = sumRain / count
+            print("Average:")
+            return str(ave)
     =====
-    else #distractor
+        else:
     =====
-        print("No rain")
+        else #distractor
+    =====
+            return "No rain"
+
+
+.. activecode::  str-listMixed_rainfall-ac
+
+    Let’s imagine that you have a list that contains amounts of rainfall for each day, collected by a 
+    meteorologist. Her rain gathering equipment occasionally makes a mistake and reports a negative amount
+    for that day. We have to ignore those. Finish to code to (a) calculate the total rainfall by adding up 
+    all the positive integers (and only the positive integers), (b) count the number of positive integers 
+    (we will count with “1.0” so that our average can have a decimal point), and (c) print out the average 
+    rainfall at the end. Only print the average if there was some rainfall, otherwise print “No rain”. 
+
+    ~~~~
+    def rainfall():
+        rain = [0,5,1,0,-1,6,7,-2,0]
+        sumRain = 0
+        count = 0
+   
+        for day in rain:
+            if day >= 0:
+                sumRain = 
+                count = 
+        if count > 0:
+            ave = 
+            print("Average: " + str(ave))
+            return str(ave)
+        else:
+            return "No rain"
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(rainfall(), "2.714285714285714", "Calculates the average rainfall from the list rain")
+
+    myTests().main()
+
+
 
 .. parsonsprob:: listMixed_numbers
     :numbered: left
@@ -68,6 +135,7 @@ Mixed-up Code Questions
     indexing. But, the blocks have been mixed up and include an extra block that isn't needed in the
     solution. Drag the needed blocks from the left and put them in the correct order on the right.
     -----
+    def mixed():
     numbers = [3, 2, 1, 4]
     =====
     first = numbers[0]
@@ -76,8 +144,29 @@ Mixed-up Code Questions
     numbers[0] = last
     numbers[-1] = first
     =====
-    first = numbers[1]
-    last = numbers[4] #distractor
+    return numbers
+
+
+.. activecode::  str-listMixed_numbers-ac
+
+    Finish the code below to swap the first and last values of the list “numbers” using indexing.
+
+    ~~~~
+    def mixed():
+        numbers = [3, 2, 1, 4]
+
+        first = 
+        last =
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(mixed_numbers(), [4,2,1,3], "Swapping first and last element")
+
+    myTests().main()
+
 
 .. parsonsprob:: listMixed_discount
     :numbered: left
@@ -87,18 +176,44 @@ Mixed-up Code Questions
     The following program segment should iterate through the list of prices and discount them by
     50%. But, the blocks have been mixed up and include an extra block that isn't needed in the solution.
     -----
-    price_lst = [21.99, 25.99, 19.99, 10.99, 15.99]
-    discounts = []
+    def discount():
     =====
-    for price in price_lst:
+        price_lst = [21.99, 25.99, 19.99, 10.99, 15.99]
+        discounts = []
     =====
-        new_price = price * .50
+        for price in price_lst:
     =====
-        discounts.append(new_price)
+            new_price = round((price * .50), 2)
+            discounts.append(new_price)
     =====
-    for price in discounts: #distractor
+        for price in discounts: #distractor
     =====
-        price.append(price_lst) #distractor
+            price.append(price_lst) #distractor
+    =====
+        return discounts
+
+
+.. activecode::  str-listMixed_discount-ac
+
+    Finish the code below to iterate through the list of prices and discount them by 50%.
+
+    ~~~~
+    def discount():
+        price_lst = [21.99, 25.99, 19.99, 10.99, 15.99]
+        discounts = []
+  
+        for price in price_lst:
+            new_price = 
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(discount(), [11.0, 13.0, 9.99, 5.5, 8.0], "Returns discounted prices of prices in the list")
+
+    myTests().main()
+
 
 .. parsonsprob:: listMixed_append
     :numbered: left
@@ -109,16 +224,44 @@ Mixed-up Code Questions
     to <i>long_list</i> if the length is greater than 4. But, the blocks have been mixed up and
     include an extra block that isn't needed in the solution.
     -----
-    list = ["four", "Michigan", "yellow", "at", "blue"]
-    long_list = []
+    def michigan():
     =====
-    for each item in list:
+        list = ["four", "Michigan", "yellow", "at", "blue", "go blue"]
+        long_list = []
     =====
-        if len(item) > 4:
+        for item in list:
     =====
-            long_list.append(item)
+            if len(item) > 4:
     =====
-            item.append(long_list) #distractor
+                long_list.append(item)
+    =====
+                item.append(long_list) #distractor
+    =====
+        return long_list
+
+
+.. activecode::  str-listMixed_append-ac
+
+    Finish the code below to iterate through the strings in <i>list</i> and append them to <i>long_list</i> 
+    if the length is greater than 4.
+
+    ~~~~
+    def michigan():
+        list = ["four", "Michigan", "yellow", "at", "blue", "go blue"]
+        long_list = []
+
+        return long_list
+        
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(michigan(), ["Michigan", "yellow", "go blue"], "All words longer than 4 characters")
+
+    myTests().main()
+
 
 .. parsonsprob:: listMixed_months
     :numbered: left
@@ -129,16 +272,42 @@ Mixed-up Code Questions
     "November" then append "December" to the end of the list. But, the blocks have been mixed up and
     include extra blocks that aren't needed in the solution.
     -----
-    months = ["January", "March", "June", "August", "October"]
-    new_month = "November"
+    def mixed_months():
     =====
-    months[4] = new_month
+        months = ["January", "March", "June", "August", "October"]
+        new_month = "November"
     =====
-    months.append("December")
+        months[4] = new_month
     =====
-    months[5] = new_month #distractor
+        months.append("December")
     =====
-    months[-1] = "December" #distractor
+        months[5] = new_month #distractor
+    =====
+        months[-1] = "December" #distractor
+    =====
+        return months
+
+
+.. activecode::  str-listMixed_months-ac
+
+    Finish the code below to replace the last item of the list <i>months</i> with “November” then 
+    append “December” to the end of the list
+
+    ~~~~
+    def mixed_months():
+        months = ["January", "March", "June", "August", "October"]
+
+        return months
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(mixed_months(), ["January", "March", "June", "August", "November", "December"], "Exchanges October for November then adds December")
+
+    myTests().main()
+
 
 .. parsonsprob:: ch16ex5muc
     :numbered: left
@@ -150,23 +319,53 @@ Mixed-up Code Questions
     <i>vocab</i>, then the program should add 1 to the variable "counter". But the blocks have been
     mixed up and include extra blocks that aren't needed in the solution.
     -----
-    terms = ["accent", "vertigo", "libra", "illusion"]
-    vocab = ["hereditary", "illusion", "vertigo", "velocity", "fallacy"]
-    counter = 0
+    def vocab_list():
     =====
-    for word in terms:
+        terms = ["accent", "vertigo", "libra", "illusion"]
+        vocab = ["hereditary", "illusion", "vertigo", "velocity", "fallacy"]
+        counter = 0
     =====
-        if word NOT in vocab:
+        for word in terms:
     =====
-            vocab.append(word)
+            if word NOT in vocab:
     =====
-            word.append(vocab) #distractor
+                vocab.append(word)
     =====
-        elif word in vocab:
+                word.append(vocab) #distractor
     =====
-            counter += 1
+            elif word in vocab:
     =====
-            counter + 1 #distractor
+                counter += 1
+    =====
+                counter + 1 #distractor
+    =====
+        return vocab
+
+
+.. activecode::  str-ch16ex5muc-ac
+
+    Finish the code below to iterate through the list <i>terms</i> and then add each item to the 
+    list <i>vocab</i> if it is not already in the list. If the word is already in <i>vocab</i>, 
+    then the program should add 1 to the variable “counter”.
+
+    ~~~~
+    def vocab_list():
+        terms = ["accent", "vertigo", "libra", "illusion"]
+        vocab = ["hereditary", "illusion", "vertigo", "velocity", "fallacy"]
+        counter = 0
+
+        return vocab
+    
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(vocab_list(), ["hereditary", "illusion", "vertigo", "velocity", "fallacy", "accent", "libra"], "Tests to see if new words have been added correctly and old words not added")
+
+    myTests().main()
+
 
 .. parsonsprob:: listMixed_oldNew
     :numbered: left
@@ -174,45 +373,97 @@ Mixed-up Code Questions
     :adaptive:
 
     The following program segment should reverse the order of the list <i>oldList</i>, by storing
-    it in the list <i>soFar</i>. Print the result at the end. The blocks have been mixed up and
+    it in the list <i>newList</i>. Print the result at the end. The blocks have been mixed up and
     include extra blocks that aren't needed in the solution.
     -----
-    oldList= [“this”, “is”, “a”, “list”]
-    newList=[]
+    def reverse():
     =====
-    for x in range(0, len(oldList)):
+        oldList= [“this”, “is”, “a”, “list”]
+        newList=[]
     =====
-    for x in range(0, list(oldList)): #distractor
+        for x in range(0, len(oldList)):
     =====
-        newList = oldList[x] + newList
+        for x in range(0, list(oldList)): #distractor
     =====
-        newList = x[oldList] + newList #distractor
+            newList.insert(0,oldList[x])
     =====
-    print(newList)
+            newList = x[oldList] + newList #distractor
+    =====
+        return newList
+
+
+.. activecode::  str-listMixed_oldNew-ac
+
+    Finish the code below to reverse the order of the list <i>oldList</i>, by storing it in the 
+    list <i>newList</i>. Print the result at the end.
+
+    ~~~~
+    def reverse():
+        oldList= ['this', 'is', 'a', 'list']
+        newList=[]
+  
+        return newList
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(reverse(), ["list", "a", "is", "this"], "Checks if the oldListhas been reversed properly")
+
+    myTests().main()
+
 
 .. parsonsprob:: listMixed_instructions
     :numbered: left
     :practice: T
     :adaptive:
 
-    The following program segment should first print out the program's instructions. Next it should
-    continuously ask the user if it wants to add a word to a list <i>vocabulary</i> and then append it
-    to the end the list IF the word is not already in the list. The blocks have been mixed up and
-    include extra blocks that aren't needed in the solution.
+    The following program segment should have the user add a word to a new list <i>vocabulary</i> IF the word 
+    is not already in the original list. The blocks have been mixed up and include extra blocks that aren't 
+    needed in the solution.
     -----
-    print("Enter a word to add it to the vocabulary list or type in 'quit' to end the program.")
-    response = 0
-    vocabulary = []
+    def instructions(response):
     =====
-    while response != "quit":
+        wordList = ["hello", "day", "1982", "green", "water"]
+        vocabulary = []
     =====
-    while response == "quit": #distractor
+        if response in wordList: #distractor
     =====
-        response = input("Enter a vocabulary word:")
-    =====
-        if response not in vocabulary:
+        if response not in wordList:
     =====
             vocabulary.append(response)
+    =====
+        return vocabulary
+
+
+.. activecode::  str-listMixed_instructions-ac
+
+    Finish the code below to first print out the program's instructions. Next it should
+    have the user add a word to a new list <i>vocabulary</i> if they choose and then append it
+    to the end the list IF the word is not already in the original list. 
+
+    ~~~~
+    def instructions(response):
+        wordList = ["hello", "day", "1982", "green", "water"]
+        vocabulary = []
+
+
+        return vocabulary
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(instructions("hello"), [], "Hello is already a word in the wordList, so vocabulary should be empty")
+            self.assertEqual(instructions("maple"), ['maple'], "Checks if maple is added correctly")
+            
+            
+
+
+    myTests().main()
+
 
 .. parsonsprob:: listMixed_Odd
     :practice: T
@@ -241,3 +492,28 @@ Mixed-up Code Questions
     return odd
     =====
     return countOdd #distractor
+
+
+.. activecode::  str-listMixed_Odd-ac
+
+    Finish the code below to create a definition countOdd that takes in a list as its argument 
+    and returns how many odd numbers are in the list.
+
+    ~~~~
+    def countOdd(lst):
+        odd = 0
+            
+
+        return odd
+
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(countOdd([7,3,2,4,0]),2, "Out of 5 numbers counts the number of odds))
+            self.assertEqual(countOdd([5,3,2,6,78,31,2,3]), 4, "Out of 8 numbers, counts the number of odds")
+
+
+    myTests().main()

@@ -226,7 +226,7 @@ database.
 
     Put the following code in order to create a cursor, make a table called "Cats" with
     two text columns ("Name" and "Breed"). Then add the rows for Whiskers, Ruby, and Milo in
-    the table and print all the rows before exiting the table.
+    the table and commit that change.  Finally select all the rows and print them before closing the cursor.
     -----
     import sqlite3
 

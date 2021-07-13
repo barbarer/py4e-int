@@ -95,9 +95,9 @@ silliness or bad file names, we "catch" them and recover gracefully:
 .. fillintheblank:: file-try-fitb-close
     :practice: T
 
-    The _____ function terminates or ends the program.
+    The |blank| function terminates or ends the program.
 
-    - :[Ee]xit: The exit function does not return anything and closes the program.
+    - :exit: The exit function does not return anything and closes the program.
       :.*: Try again. Which function will close or end a program without returning anything?
 
 Protecting the ``open`` call is a good example of the proper
@@ -115,7 +115,7 @@ solution to be elegant and to be appreciated as elegant by our peers.
 .. fillintheblank:: file-try-fitb-python
     :practice: T
 
-    The term _________ describes something done the "Python way".
+    The term |blank| describes something done the "Python way".
 
     - :[Pp]ythonic: A pythonic technique is a technique that works elegantly in Python.
       :.*: Try again.

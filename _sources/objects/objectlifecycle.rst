@@ -14,27 +14,26 @@ we add specially named methods to our object:
 
 
 .. activecode:: partyanimal_lifecycle
-    :coach:
 
-    class PartyAnimal:
+   class PartyAnimal:
 
-    def __init__(self):
-        print('I am constructed')
+       def __init__(self):
+           print('I am constructed')
 
-    def party(self, x):
-        self.x = x
-        self.x = self.x + 1
-        print('So far',self.x)
+       def party(self, x):
+           self.x = x
+           self.x = self.x + 1
+           print('So far',self.x)
 
-    def __del__(self, x):
-        self.x = x
-        print('I am destructed', self.x)
+       def __del__(self, x):
+           self.x = x
+           print('I am destructed', self.x)
 
-    an = PartyAnimal()
-    an.party(1)
-    an.party(2)
-    an = 42
-    print('an contains',an)
+   an = PartyAnimal()
+   an.party(1)
+   an.party(2)
+   an = 42
+   print('an contains',an)
 
 
 

@@ -6,7 +6,7 @@ Mixed-Up Code Questions
    :practice: T
    :adaptive:
 
-   Construct a block of code that sorts the string 'txt' into a list of tuples (the first element is the length of the word, the second is the word itself). Sort the list in terms of word length from longest to shortest. Note: there is one block that won't be used in the solution!
+   Construct a block of code below to create a list of tuples, ``tup_list``, where the first element is the length of each word in ``txt`` and the second is the word itself. Sort the list in terms of word length from longest to shortest. For example, if ``txt="hi bye"``, ``tup_list`` would be ``[(3, 'bye'), (2, 'hi')]`` after this code executes. Note: there is one block that won't be used in the solution!
    -----
    txt = 'but soft what light in yonder window breaks'
    words = txt.split()
@@ -16,9 +16,9 @@ Mixed-Up Code Questions
    =====
    for word in words:
    =====
-   	t.append((len(word), word))
+       t.append((len(word), word))
    =====
-   	t.append(len(word)) #paired
+       t.append(len(word)) #paired
    =====
    t.sort(reverse = True)
    =====
@@ -28,20 +28,20 @@ Mixed-Up Code Questions
    :numbered: left
    :adaptive:
 
-   Reorder the blocks of code to create a list containing tuples of each word from word_list paired with their lengths. Then sort the words by length from highest to lowest. Note: there are two blocks that won't be used in the solution!
+   Reorder the blocks of code to create a list, ``tup_list``, containing tuples of each word from ``word_list`` paired with their lengths. Then sort the words by length from highest to lowest.  For example, if ``word_list = ['hi', 'bye']`` then ``tup_list`` would be ``[('bye', 3), ('hi', 2)]`` Note: there are two blocks that won't be used in the solution!
    -----
    word_list = ['pen', 'skyscraper', 'post', 'computer', 'apple', 'Hollywood']
    tup_list = []
    =====
    for word in word_list:
    =====
-   for word in tup_list: #distractor
+   for word in tup_list: #paired
    =====
-   	tup = word, len(word)
+       tup = word, len(word)
    =====
-   	tup_list.append(tup)
+       tup_list.append(tup)
    =====
-   	word_list.append(tup) #distractor
+   	   word_list.append(tup) #paired
    =====
    tup_list.sort(key = lambda x: x[1], reverse = True)
 
@@ -51,7 +51,7 @@ Mixed-Up Code Questions
    :practice: T
    :adaptive:
 
-   Construct a block of code that swaps the second and fourth values of tuple t with one another.
+   Construct a block of code that swaps the second and fourth values of tuple ``t`` with one another.
    -----
    t = ('Apple', 'Banana', 'Grapefruit', 'Pear', 'Peach')
    =====
@@ -68,7 +68,7 @@ Mixed-Up Code Questions
    :practice: T
    :adaptive:
 
-   Reorder the blocks of code to transform the dictionary 'd' into a list of tuples called tup_list, and sort it by the dictionary's keys in ascending order.
+   Reorder the blocks of code to transform the dictionary ``d`` into a list of tuples called ``tup_list``, and sort it by the dictionary's keys in ascending order.
    -----
    d = {'a': 10, 'b': 2, 'c': 27, 'd': 15, 'e': 30, 'f': 3}
    =====
@@ -82,42 +82,44 @@ Mixed-Up Code Questions
    =====
    tup_list.sort(key = lambda x: x[1]) #paired
 
-.. parsonsprob:: mixedupcode_question10_5
+.. parsonsprob:: mixedupcode_question10_5_v2
    :numbered: left
    :adaptive:
    :practice: T
 
-   Construct a block of code that uses tuples to keep track of the word count in the file 'heineken.txt'. Then print out the 10 most frequently occurring words from the file.
+   Construct a block of code that uses tuples to keep track of the word count in the file ``heineken.txt``. Then print out the 10 most frequently occurring words from the file.
    -----
    word_counter = {}
-   with open("heineken.txt", "r") as filename:
+   with open("heineken.txt", "r") as file_h:
    =====
-   	lines = filename.readlines()
+       lines = file_h.readlines()
    =====
-   	for line in lines.split():
+   for line in lines:
    =====
-   	for line in line.split(): #paired
+       words = line.split()
    =====
-   		for word in line:
+       words = lines.split() #paired
    =====
-   			word_counter[word] = word_counter.get(word, 0) + 1
+   		     for word in words:
    =====
-   	list_of_tuples = list(word_counter.items())
+   			       word_counter[word] = word_counter.get(word, 0) + 1
    =====
-   	list_of_tuples = list(word_counter.items) #paired
+   list_of_tuples = list(word_counter.items())
    =====
-   	list_of_tuples.sort(key = lambda x: x[1], reverse = True)
+   list_of_tuples = list(word_counter.items) #paired
    =====
-   	for i in range(10):
+   list_of_tuples.sort(key = lambda x: x[1], reverse = True)
    =====
-   		print(list_of_tuples[i][0])
+   for i in range(10):
+   =====
+       print(list_of_tuples[i][0])
 
 .. parsonsprob:: mixedupcode_question10_6
    :numbered: left
    :adaptive:
    :practice: T
 
-   Construct a block of code to add the key-value pairs of dictionary d to a list and then print them.
+   Construct a block of code to add the key-value pairs of dictionary ``d`` to a list and then print them.
    -----
    d = {'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10}
    list_for_kv_pairs = []
@@ -131,76 +133,74 @@ Mixed-Up Code Questions
    print(list_for_kv_pairs)
 
 
-.. parsonsprob:: mixedupcode_question10_7
+.. parsonsprob:: mixedupcode_question10_7_v2
    :numbered: left
    :practice: T
    :adaptive:
 
-   Reorder the code blocks to put the words in the mbox-short.txt file into a dictionary, where the keys are words and the values are their lengths. Then, print a list of the dictionary's key-value pairs in alphabetical order.
+   Reorder the code blocks to put the words in the ``mbox-short.txt`` file into a dictionary, where the keys are words and the values are their lengths. Then, print a list of the dictionary's key-value pairs in alphabetical order.
    -----
    dict = {}
-   with open(mbox-short.txt) as filename:
+   with open(mbox-short.txt) as fhand:
    =====
-   	lines = filename.readlines()
+       lines = fhand.readlines()
    =====
-   	for line in lines.split():
+   for line in lines:
    =====
-   		for word in line:
+       for word in line.split()
    =====
-   			dict[word] = dict.get(word, len(word))
+   		     dict[word] = dict.get(word, len(word))
    =====
-   			dict[word] = dict.get(word, 0) + len(word) #paired
+   			   dict[word] = dict.get(word, 0) + len(word) #paired
    =====
-   	dict = sorted(dict.items())
+   print(sorted(dict.items()))
    =====
-   	dict.sort() #paired
-   =====
-   	print(dict)
+   print(dict.sort()) #paired
 
 .. parsonsprob:: mixedupcode_question10_8
    :numbered: left
    :practice: T
    :adaptive:
 
-   Construct a block of code that takes the longest item in each tuple, and adds it to the list 'longest_words'.
+   Construct a block of code that takes the longest item in each tuple, and adds it to the list ``longest_words``.
    -----
    list_of_tuples = [('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')]
    lst = []
    =====
    for tup in list_of_tuples:
    =====
-   	longest_word = ''
+       longest_word = ''
    =====
-   	longest_word = 0 #paired
+   	   longest_word = 0 #paired
    =====
-   	for item in tup:
+   	   for item in tup:
    =====
-   		if len(item) > len(longest_word):
+   		     if len(item) > len(longest_word):
    =====
-   			longest_word = item
+   			       longest_word = item
    =====
-   			longest_word = len(item) #paired
+   			       longest_word = len(item) #paired
    =====
-   	lst.append(longest_word)
+       lst.append(longest_word)
 
 .. parsonsprob:: mixedupcode_question10_9
    :numbered: left
    :adaptive:
    :practice: T
 
-   Construct a block of code that capitalizes every item in tuple 'tup'. Note: there are four blocks that won't be used in the solution!
+   Construct a block of code that capitalizes every item in tuple ``tup``. Note: there are four blocks that won't be used in the solution!
    -----
    tup = ('wolverine', 'Ann Arbor', 'Winter', 'Fall', 'michigan')
    =====
-   tup[0] = 'Wolverine' #distractor
+   tup[0] = 'Wolverine' #paired
    =====
-   tup[4] = 'Michigan' #distractor
+   tup[4] = 'Michigan' #paired
    =====
    tup = ('Wolverine',) + tup[1:4] + ('Michigan',)
    =====
-   tup = ('Wolverine') + tup[1:4] + ('Michigan') #distractor
+   tup = ('Wolverine') + tup[1:4] + ('Michigan') #paired
    =====
-   tup = ('Wolverine',) + tup[1:3] + ('Michigan',) #distractor
+   tup = ('Wolverine',) + tup[1:3] + ('Michigan',) #paired
    =====
    print(tup)
 
@@ -209,7 +209,7 @@ Mixed-Up Code Questions
    :practice: T
    :adaptive:
 
-   Construct a block of code to transform the grocery_dictionary into a list of tuples, then sort the list by the dictionary's values in ascending order.
+   Construct a block of code to transform the ``grocery_dictionary`` into a list of tuples, then sort the list by the dictionary's values in ascending order.
    -----
    grocery_dictionary = {'chicken': 5, 'lettuce': 3, 'orange juice': 4, 'bagels': 2.50, 'bacon': 4.25, 'bread': 8}
    =====

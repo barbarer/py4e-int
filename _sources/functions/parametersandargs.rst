@@ -10,7 +10,7 @@ Parameters and arguments
 
 
 Some of the built-in functions we have seen require arguments. For
-example, when you call ``math.sin`` you pass a number as an
+example, when you call ``math.sin``, you pass a number as an
 argument. Some functions take more than one argument:
 ``math.pow`` takes two, the base and the exponent.
 
@@ -35,7 +35,7 @@ the parameter (whatever it is) twice.
     Inside the function, the arguments are assigned to variables called ___________.
 
     - :[Pp]arameters*: Inside the function, the arguments are assigned to variables called parameters.
-      :.*: Try again!
+      :.*: Incorrect! Reread the beginning of this section and try again.
 
 This function works with any value that can be printed.
 
@@ -82,7 +82,7 @@ You can also use a variable as an argument:
         print(bruce)
         print(bruce)
 
-    michael = 'Eric, the half a bee.'
+    michael = 'Python is cool.'
     print_twice(michael)
 
 The name of the variable we pass as an argument (``michael``)
@@ -93,14 +93,14 @@ here in ``print_twice``, we call everybody ``bruce``.
 .. mchoice:: functParam_MC_add
     :practice: T
     :answer_a: 67 (on the same line)
-    :answer_b: 6 7 (on two separate lines)
-    :answer_c: 6 9 (on two separate lines)
+    :answer_b: 67 (on two separate lines)
+    :answer_c: 69 (on two separate lines)
     :answer_d: 69 (on the same line)
     :correct: b
-    :feedback_a: In Python, you do not need to specify a new line like in some other languages. The print statements themselves just need to be on two separate lines.
-    :feedback_b: Since the functions are separate, the results will print on different lines.
-    :feedback_c: The value of "hi" does not change outside of the function unless specified.
-    :feedback_d: In Python, you do not need to specify a new line like in some other languages. The print statements themselves just need to be on two separate lines.
+    :feedback_a: Incorrect! In Python, each print statement automatically adds a new line after printing whatever is inside the print statement. Try again.
+    :feedback_b: Correct! Even though the variable "hi" was changed in the functions, its value outside the functions remains the same, and print statements automatically add a new line.
+    :feedback_c: Incorrect! Even though the variable "hi" was changed in the functions, its value outside the functions remains the same unless specified. Try again.
+    :feedback_d: Incorrect! In Python, each print statement automatically adds a new line after printing whatever is inside the print statement. Try again.
 
     Consider the code block below. What prints?
 
@@ -123,7 +123,7 @@ here in ``print_twice``, we call everybody ``bruce``.
     :numbered: left
     :practice: T
 
-    Construct a block of code with four functions, defined in this order: printName, printGrade,
+    Construct a block of code with four functions, defined in this order: printName, printGPA,
     printAttendance, printStudentInfo. printStudentInfo should call the other three functions
     which will print all of the student's information. Be mindful of indentation!
     -----
@@ -131,7 +131,7 @@ here in ``print_twice``, we call everybody ``bruce``.
     =====
         print("Name: " + name)
     =====
-    def printGrade(gpa):
+    def printGPA(gpa):
     =====
         print("GPA: " + gpa)
     =====
@@ -139,10 +139,10 @@ here in ``print_twice``, we call everybody ``bruce``.
     =====
         print("Days absent: " + daysAbsent)
     =====
-    def printStudentInfo(stuName, stuGpa, stuDaysAbsent):
+    def printStudentInfo(stuName, stuGPA, stuDaysAbsent):
     =====
         printName(stuName)
-        printGrade(stuGpa)
+        printGPA(stuGPA)
         printAttendance(stuDaysAbsent)
     =====
     printStudentInfo("John", 3.6, 2)

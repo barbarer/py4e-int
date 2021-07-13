@@ -8,9 +8,9 @@ the regular expression system as to what defines "matching" and what is
 extracted from the matched strings. Here are some of those special
 characters and character sequences:
 
-``^`` Matches the beginning of the line.
+``^`` Matches the beginning of the string.
 
-``$`` Matches the end of the line.
+``$`` Matches the end of the string.
 
 ``.`` Matches any character (a wildcard).
 
@@ -53,14 +53,13 @@ for the purpose of matching, but allow you to extract a particular
 subset of the matched string rather than the whole string when using
 ``findall()``.
 
-``\b`` Matches the empty string, but only at the start or end of a word.
+``\b`` Matches an empty string, but only at a word boundary.  Must be used in a raw string (r"string") so that it isn't changed to a backspace.
 
-``\B`` Matches the empty string, but not at the start or end of a word.
+``\B`` Matches an empty string, but only when it is not at the beginning or end of a word.
 
 ``\d`` Matches any decimal digit; equivalent to the set [0-9].
 
 ``\D`` Matches any non-digit character; equivalent to the set [^0-9].
-
 
 
 .. dragndrop:: re-summary-dnd1
@@ -78,7 +77,7 @@ subset of the matched string rather than the whole string when using
     :match_1: *|||Match the previous character(s) zero or more times (greedy).
     :match_2: *?|||Match the previous character(s) zero or more times in "non-greedy mode".
     :match_3: +|||Match the previous character(s) one or more times (greedy).
-    :match_4: +?|||Match the previous character(s) zero or more times in "non-greedy mode".
+    :match_4: +?|||Match the previous character(s) one or more times in "non-greedy mode".
     :match_5: ?|||Match the previous character(s) zero or one time.
     :match_6: ??|||Match the previous character(s) zero or one time in "non-greedy mode".
 
@@ -88,8 +87,8 @@ subset of the matched string rather than the whole string when using
     :feedback: Look above for the definitions of these special characters.
     :match_1: [aeiou]|||Matches a single character as long as that character is in the specified set.
     :match_2: ()|||Used to extract a particular subset of the matched string rather than the whole string when using findall().
-    :match_3: \b|||Matches the empty string, but only at the start or end of a word.
-    :match_4: \B|||Matches the empty string, but not at the start or end of a word.
+    :match_3: \b|||Matches an empty string, but only at the start or end of a word.
+    :match_4: \B|||Matches an empty string, but not at the start or end of a word.
     :match_5: \d|||Matches any decimal digit; equivalent to the set [0-9].
     :match_6: \D|||Matches any non-digit character; equivalent to the set [^0-9].
 

@@ -1,4 +1,4 @@
-Mulitple Choice Questions
+Multiple Choice Questions
 -------------------------
 
 .. mchoice:: var-ex-mc-division
@@ -9,11 +9,11 @@ Mulitple Choice Questions
     :answer_d: 3
     :correct: b
     :feedback_a: Try again, this is the answer for 15 // 12.
-    :feedback_b: / is the operator for divison.
+    :feedback_b: 15 / 12 will result in 1.25.  The / operator returns a floating point result.
     :feedback_c: Try running this in your python interpreter.
     :feedback_d: Try again, this is the answer for 15 % 12.
 
-    The equation 15 / 12 equals?
+    What is the value of ``15 / 12``?
 
 .. mchoice:: var-ex-mc-floored
     :practice: T
@@ -22,12 +22,12 @@ Mulitple Choice Questions
     :answer_c: 1.5
     :answer_d: 3
     :correct: a
-    :feedback_a: // is the operator for floored division.
+    :feedback_a: The // operator returns an integer result (the floor).
     :feedback_b: Try again, this is the answer for 15 / 12.
-    :feedback_c: Try again, this is the answer for 15 % 12.
-    :feedback_d: Try running this in your python interpreter.
+    :feedback_c: Try running this in your python interpreter.
+    :feedback_d: Try again, this is the answer for 15 % 12.
 
-    The equation 15 // 12 equals?
+    What is the value of ``15 // 12``?
 
 .. mchoice:: var-ex-mc-mod
     :practice: T
@@ -39,9 +39,9 @@ Mulitple Choice Questions
     :feedback_a: Try again, this is the answer for 15 // 12.
     :feedback_b: Try again, this is the answer for 15 / 12.
     :feedback_c: Try running this in your python interpreter.
-    :feedback_d: % is the operator for calculating the remainder.
+    :feedback_d: The % (modulo) operator returns the remainder and 12 goes into 15 one time with a remainder of 3.
 
-    The equation 15 % 12 equals?
+    What is the value of ``15 % 12``?
 
 .. mchoice:: var-ex-mc-type
     :practice: T
@@ -65,9 +65,9 @@ Mulitple Choice Questions
     :answer_d: 19
     :correct: d
     :feedback_a: It is legal to change the type of data that a variable holds in Python.
-    :feedback_b: This is the first value assigned to the variable day, but the next statements reassign that variable to new values.
-    :feedback_c: This is the second value assigned to the variable day, but the next statement reassigns that variable to a new value.
-    :feedback_d: The variable day will contain the last value assigned to it when it is printed.
+    :feedback_b: This is the first value assigned to the variable day, but the value is changed.
+    :feedback_c: This is the second value assigned to the variable day, but the value is changed.
+    :feedback_d: The current value of the variable day will be printed.
 
     What is printed when the following statements execute?
 

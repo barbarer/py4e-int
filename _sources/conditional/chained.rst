@@ -89,7 +89,7 @@ true, only the first true branch executes.
     :feedback_d: Try again. This code skips the elif/else statements once an if/elif statement has been satisfied.
     :feedback_e: This will only be true when score does not satisfy the other if/elif statements (so it will only execute when score < 60).
 
-    If x = 93, what will print when the following code executes?
+    If score = 93, what will print when the following code executes?
 
     ::
 

@@ -32,6 +32,7 @@ Table of Contents
 
    intro/toctree.rst
    variables/toctree.rst
+   debugging/toctree.rst
    conditional/toctree.rst
    functions/toctree.rst
    iterations/toctree.rst
@@ -42,8 +43,13 @@ Table of Contents
    tuples/toctree.rst
    regex/toctree.rst
    network/toctree.rst
+   bsoup/toctree.rst
    web/toctree.rst
    objects/toctree.rst
+   turtles/toctree.rst
+   pictures/toctree.rst
+   classes-basics/toctree.rst
+   inheritance/toctree.rst
    database/toctree.rst
    viz/toctree.rst
 

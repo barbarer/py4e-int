@@ -134,7 +134,6 @@ Write Code Questions
       assert 0,6 == W00058
       assert 1,0 == 718494
       assert 1,1 == 1978
-      assert 1,11 == open
       assert 4,0 == 578726
       assert 4,1 == 1008
       assert 4,11 == open
@@ -156,12 +155,11 @@ Write Code Questions
       ====
       assert 0,0 == 332
       assert 0,1 == W00058
-      assert 0,2 == "Adams Mill & Columbia Rd NW"
       assert 1,0 == 1978
       assert 1,1 == W00775
       assert 4,0 == 1008
       assert 4,1 == W00392
-      assert 4,2 == "14th St & Spring Rd NW"
+      assert 4,2 == 14th St & Spring Rd NW
 
 #.
 
@@ -194,7 +192,7 @@ Write Code Questions
       :dburl: https://runestone.academy/runestone/books/published/overview/_static/bikeshare.db
 
       Given a database of bike share information write a SELECT statement to
-      retrieve the ``bike_number``, ``start_data``, and ``end_date`` from ``trip_data`` and the ``station_id`` and ``name`` from ``bikeshare_stations``
+      retrieve the ``bike_number``, ``start_date``, and ``end_date`` from ``trip_data`` and the ``station_id`` and ``name`` from ``bikeshare_stations``
       where the ``start_station`` in ``trip_data`` is the same as the ``station_id`` in ``bikeshare_stations``
       and where the ``station_id`` equals 31101.  Limit the results to 5 rows.
       ~~~~
@@ -215,7 +213,7 @@ Write Code Questions
       :dburl: https://runestone.academy/runestone/books/published/overview/_static/bikeshare.db
 
       Given a database of bike share information write a SELECT statement to
-      retrieve the ``bike_number``, ``start_data``, and ``end_date`` from ``trip_data`` and the ``station_id`` and ``name`` from ``bikeshare_stations``
+      retrieve the ``bike_number``, ``start_date``, and ``end_date`` from ``trip_data`` and the ``station_id`` and ``name`` from ``bikeshare_stations``
       where the ``start_station`` in ``trip_data`` is the same as the ``station_id`` in ``bikeshare_stations``
       and where the ``member_type`` equals "Casual".  Limit the results to 5 rows.
       ~~~~

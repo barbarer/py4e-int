@@ -103,11 +103,6 @@ University of Cape Town in South Africa):
             continue
         print(line)
 
-Here we also use the contracted form of the ``if`` statement
-where we put the ``continue`` on the same line as the
-``if``. This contracted form of the ``if`` functions
-the same as if the ``continue`` were on the next line and
-indented.
 
 .. mchoice:: file-search-mc-find
     :practice: T

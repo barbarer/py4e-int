@@ -1,7 +1,7 @@
 Multiple Choice Questions
 --------------------------
 
-.. mchoice:: Exercises_question10_1
+.. mchoice:: TupleExquestion10_1
    :practice: T
    :answer_a: aTuple[1:2][1]
    :answer_b: aTuple[2][1]
@@ -19,7 +19,7 @@ Multiple Choice Questions
 
       aTuple = ("Orange", [10, 20, 30], (5, 15, 25))
 
-.. mchoice:: Exercises_question10_2
+.. mchoice:: TupleExquestion10_2
    :practice: T
    :answer_a: True
    :answer_b: False
@@ -30,7 +30,7 @@ Multiple Choice Questions
    True or False? A python tuple can be created without using any parentheses.
 
 
-.. mchoice:: Exercises_question10_3
+.. mchoice:: TupleExquestion10_3
    :practice: T
    :answer_a: list
    :answer_b: tuple
@@ -49,7 +49,7 @@ Multiple Choice Questions
       aTuple = ("Orange")
       print(type(aTuple))
 
-.. mchoice:: Exercises_question10_4
+.. mchoice:: TupleExquestion10_4
    :practice: T
    :answer_a: ("Yellow", 20, "Red")
    :answer_b: Yellow
@@ -69,7 +69,7 @@ Multiple Choice Questions
       a, b, c = aTuple
       print(a)
 
-.. mchoice:: Exercises_question10_5
+.. mchoice:: TupleExquestion10_5
    :practice: T
    :answer_a: TypeError
    :answer_b: (100, 800, 200, 300, 400, 500)
@@ -89,7 +89,7 @@ Multiple Choice Questions
       aTuple[1] = 800
       print(aTuple)
 
-.. mchoice:: Exercises_question10_6
+.. mchoice:: TupleExquestion10_6
    :practice: T
    :answer_a: i, ii
    :answer_b: ii, iv
@@ -112,11 +112,11 @@ Multiple Choice Questions
       iii) print(tupl1[0:4])
       iv) print(tupl1[-4:])
 
-.. mchoice:: Exercises_question10_7
+.. mchoice:: TupleExquestion10_7
    :practice: T
    :answer_a: True
    :answer_b: False
-   :correct: a
+   :correct: b
    :feedback_a: Incorrect! When the first numbers in both tuples are equal, the comparison operator will move on to the next pair of numbers. Try again.
    :feedback_b: Correct! The compiler will look at the first pair of different numbers, then decide whether it is true or false depending on that pair.
 
@@ -126,7 +126,7 @@ Multiple Choice Questions
 
       (66, 4, 17, 4) < (66, 4, 16, 5)
 
-.. mchoice:: Exercises_question10_8
+.. mchoice:: TupleExquestion10_8
    :practice: T
    :answer_a: Error, tuple slicing doesn't exist
    :answer_b: [2, 3, 4]
@@ -145,7 +145,7 @@ Multiple Choice Questions
       a = (1, 2, 3, 4)
 
 
-.. mchoice:: Exercises_question10_9
+.. mchoice:: TupleExquestion10_9
    :practice: T
    :answer_a: KeyError
    :answer_b: TypeError
@@ -158,7 +158,7 @@ Multiple Choice Questions
    What is the name of an error caused when a data structure has the wrong type, size, or composition?
 
 
-.. mchoice:: Exercises_question10_10
+.. mchoice:: TupleExquestion10_10
    :practice: T
    :answer_a: have
    :answer_b: ['have', 'fun']

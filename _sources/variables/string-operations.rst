@@ -28,7 +28,7 @@ linking them end to end. For example:
     :answer_d: print(fruit + berries + stoneFruit)
     :correct: c
     :feedback_a: Are they in the correct order?
-    :feedback_b: Make sure you are calling the right variables.
+    :feedback_b: Make sure you are using the right variable names.
     :feedback_c: This will print Apples, Oranges, Blueberries, Strawberries, Raspberries, Peaches, Plums
     :feedback_d: Don't forget the commas and spaces!
 

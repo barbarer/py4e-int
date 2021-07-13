@@ -15,28 +15,28 @@ action but don't return a value. They are called *void
 functions*.
 
 .. mchoice:: functFruit_MC_fruitful
-    :answer_a: ...yield results
-    :answer_b: ...not return a value
-    :answer_c: ...print something
-    :answer_d: ...display something on the screen
+    :answer_a: return a value
+    :answer_b: not return a value
+    :answer_c: print something
+    :answer_d: display something on the screen
     :correct: a
-    :feedback_a: Fruitful functions yield results in the form of a return.
-    :feedback_b: Fruitful functions do return a value.
-    :feedback_c: Fruitful functions may print something, but they also do something else.
-    :feedback_d: Fruitful functions may display something on the screen, but that is not their notable function.
+    :feedback_a: Correct! Fruitful functions yield results in the form of a return value.
+    :feedback_b: Incorrect! Fruitful functions do return a value. Try again.
+    :feedback_c: Incorrect! Fruitful functions may print something, but they also must do something else. Try again.
+    :feedback_d: Incorrect! Fruitful functions may display something on the screen, but they must also do something else. Try again.
 
     "Fruitful functions" are functions that must...
 
 .. mchoice:: functFruit_MC_void
-    :answer_a: ...yield results
-    :answer_b: ...do not return a value
-    :answer_c: ...return a variable
-    :answer_d: ...must take parameters
+    :answer_a: return a value
+    :answer_b: do not return a value
+    :answer_c: return a variable
+    :answer_d: must take parameters
     :correct: b
-    :feedback_a: Void functions don't yield results.
-    :feedback_b: Void functions don't return a value.
-    :feedback_c: Void functions don't return a variable.
-    :feedback_d: Void functions may take parameters, but not always.
+    :feedback_a: Incorrect! Void functions don't return a value. Try again.
+    :feedback_b: Correct! Void functions don't return a value.
+    :feedback_c: Incorrect! Void functions don't return a variable -- a variable is a kind of value. Try again.
+    :feedback_d: Incorrect! Void functions may take parameters, but not always. Try again.
 
     "Void functions" are functions that...
 
@@ -120,4 +120,4 @@ as arguments. Within the function, the parameters ``a`` and
 of the two numbers and placed it in the local function variable named
 ``added``. Then it used the ``return`` statement to
 send the computed value back to the calling code as the function result,
-which was assigned to the variable ``x`` and printed out.
+which was then assigned to the variable ``x`` and printed out.

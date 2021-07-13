@@ -25,7 +25,7 @@ telling the user what to input. You can pass a string to ``input`` to
 be displayed to the user before pausing for input:
 
 .. activecode:: 02-ac-11-print-name
-  :caption: Using the input fuction with a prompt
+  :caption: Using the input function with a prompt
 
   name = input('What is your name?\n')
   print(name)
@@ -38,7 +38,7 @@ If you expect the user to type an integer, you can try to convert the
 return value to ``int`` using the ``int()`` function:
 
 .. activecode:: 02-ac-11-swallow
-  :caption: Converting input to an integer
+  :caption: Converting an input to an integer
 
   prompt = 'What...is the airspeed velocity of an unladen swallow?\n'
   speed = input(prompt)
@@ -97,3 +97,17 @@ We will see how to handle this kind of error later.
    print(3 * userNumber) #paired
    =====
    print(userNumber) #distractor
+
+One limitation in Python is that you can't add (concatenate) a number and a string. You
+must first convert the number to a string using the built-in ``str`` method.
+
+.. activecode:: 02-ac-12-birth-year-with-str
+  :caption: Using the str function
+
+  from datetime import datetime
+  today = datetime.today()
+  age_str = input('What is your age?\n')
+  age = int(age_str)
+  birth_year = today.year - age
+  print("You were born in " + str(birth_year) + " or " + str(birth_year - 1))
+  

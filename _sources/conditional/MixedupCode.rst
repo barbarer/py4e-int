@@ -98,6 +98,7 @@ Mixed-up Code Questions
     =====
     else x < 1: #distractor
 
+
 .. parsonsprob:: cndtnl-mixed-twelve
     :practice: T
     :adaptive:
@@ -127,6 +128,7 @@ Mixed-up Code Questions
     =====
     print("Total cost of trip: " + str(total))
 
+
 .. parsonsprob:: cndtnl-mixed-nested
     :practice: T
     :adaptive:
@@ -153,6 +155,8 @@ Mixed-up Code Questions
         else:
     =====
             print("x and y must be equal")
+
+
 
 .. parsonsprob:: cndtnl-mixed-logical
     :practice: T
@@ -215,6 +219,8 @@ Mixed-up Code Questions
         elif grade >= 90: #distractor
     =====
         score = "c" #distractor
+
+
 
 .. parsonsprob:: cndtnl-mixed-even
     :practice: T

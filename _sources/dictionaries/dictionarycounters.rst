@@ -116,9 +116,9 @@ For example:
 
 .. mchoice:: question9_2_2
     :practice: T
-    :answer_a: print(names.get('Russell')
+    :answer_a: print(names.get('Russell'))
     :answer_b: names.get('Russell')
-    :answer_c: print(names.get('Russell', 0)
+    :answer_c: print(names.get('Russell', 0))
     :answer_d: names.get('Russell', 0)
     :correct: c
     :feedback_a: Try again! There is no default value, so it will not print out anything

@@ -72,7 +72,7 @@ Multiple Choice Questions
     :answer_a: Output a
     :answer_b: Output b
     :answer_c: Output c
-    :answer_d: It will cause an error because every if must have an else clause.
+    :answer_d: It will cause an error because every if statement must have an else statement.
     :correct: b
     :feedback_a: Because -10 is less than 0, Python will execute the body of the if-statement here.
     :feedback_b: Python executes the body of the if-block as well as the statement that follows the if-block.
