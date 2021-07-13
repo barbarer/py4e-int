@@ -113,6 +113,8 @@ Functions and Loops Write Code Questions
                         else: 
                             string1 += "*" * num 
                     return string1
+                    
+                print(draw_square(4))
 
 
 #.
