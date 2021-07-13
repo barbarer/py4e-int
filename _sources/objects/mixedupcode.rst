@@ -8,7 +8,7 @@ Mixed-Up Code Exercises
 
     Construct a block of code that creates a ``Dog`` class and defines the ``__init__`` method
     with one parameter, ``name``. Then define the ``getName`` method, which returns the
-    name when the method is called. Watch out for indentation and extra pieces of code.
+    ``name`` when the method is called. Watch out for indentation and extra pieces of code.
     -----
     class Dog:
     =====
@@ -29,7 +29,8 @@ Mixed-Up Code Exercises
 
 .. activecode:: obj_mixedupcode_1_ac
 
-    Write code to create a ``Dog`` class and define the ``__init__`` method that has one parameter, ``name``. Then define the ``getName`` method, which returns the name when the method is called. 
+    Write code to create a ``Dog`` class and define the ``__init__`` method that has one parameter, ``name``. Then define the 
+    ``getName`` method, which returns the ``name`` when the method is called. 
     ~~~~
 
     ====
@@ -59,7 +60,7 @@ Mixed-Up Code Exercises
     :adaptive:
 
     Construct a class named ``Dog``. The ``__init__`` method that has two parameters, ``name`` and ``age``.
-    Also create the method ``updateAge``, that increases the age by 1. Then update the age of Lark.
+    Also create the method ``updateAge``, that increases the ``age`` by 1 and returns age. Then update the age of Lark.
     Watch out for indentation and extra pieces of code.
     -----
     Class Dog: #distractor
@@ -89,7 +90,7 @@ Mixed-Up Code Exercises
 .. activecode:: obj_mixedupcode_2_ac
 
     Write a class named ``Dog``. Define the ``__init__`` method, it has two parameters, ``name`` and ``age``.
-    Also create the method ``updateAge``, that increases the age by 1 and returns the age. Then create a variable 
+    Also create the method ``updateAge``, that increases the ``age`` by 1 and returns the age. Then create a variable 
     named ``Lark`` with the age ``10`` and update Lark's age. 
     ~~~~
 
@@ -148,7 +149,8 @@ Mixed-Up Code Exercises
 
     Write code to create the class ``Cat``. Define the ``__init__`` method, it has two parameters,
     ``name`` and ``age``. Then define the ``make_sound`` method, which should return
-    the cat's meow and the ``__str__`` method returns a string of the cat's introduction.
+    the string "Meow" and the ``__str__`` method should return returns a string of the cat's introduction: 
+    "I am a cat. My name is ``name``. I am ``age`` years old.".
     
     ~~~~
 
@@ -233,15 +235,15 @@ Mixed-Up Code Exercises
     -----
     class Dog:
     =====
-    def __init__(self, name):
+      def __init__(self, name):
     =====
         self.name = name
         self.tricks = []
     =====
-    def updateTrick(self, trick):
+      def updateTrick(self, trick):
         self.tricks.append(trick)
     =====
-    def __str__(self):
+      def __str__(self):
         return 'Dog(name = ' + self.name +  ', tricks = ' + str(self.tricks) + ')'
     =====
     spot = Dog('Spot')
@@ -255,9 +257,10 @@ Mixed-Up Code Exercises
 
 .. activecode:: obj_mixedupcode_5_ac
 
-    Construct a class named ``Dog`` with the ``__init__`` method taking ``name`` as its parameter.
-    Then create a method, ``updateTricks``, that adds a new trick to the list. Then create a ``__str__``
-    method that returns all information for the dog. Create a variable named ``Spot`` and update the tricks for spin and sit.
+    Construct a class named ``Dog`` with the ``__init__`` method taking ``name`` as its parameter
+    and setting ``self.tricks`` to an empty list. Then create a method, ``updateTricks``, that adds 
+    a new trick to the list. Then create a ``__str__`` method that returns all information for the dog.
+    Create a variable named ``Spot`` and update the tricks for "spin" and "sit".
     Print both the tricks and the string for ``Spot`` at the end.
     
     ~~~~
@@ -290,10 +293,10 @@ Mixed-Up Code Exercises
     :practice: T
     :adaptive:
 
-    Construct a class named ``Book`` that assigns values to the title and author object properties.
+    Construct a class named ``Book`` with the ``__init__`` method taking ``title`` and ``author`` as its parameters.
     Then, construct a second class named ``Bookinfo`` that extends the ``Book`` class and
     contains a method ``__str__`` that returns the string representation of the class.
-    Create an object ``iliad`` for that book and print the string associated with it.
+    Create an object ``iliad`` for the book Iliad by Hoover and print the string associated with it.
     -----
     class Book:
     =====
@@ -314,10 +317,10 @@ Mixed-Up Code Exercises
 
 .. activecode:: obj_mixedupcode_6_ac
 
-    Construct a class named ``Book`` that assigns values to the title and author object properties.
+    Construct a class named ``Book`` with the ``__init__`` method taking ``title`` and ``author`` as its parameters.
     Then, construct a second class named ``Bookinfo`` that extends the ``Book`` class and
     contains a method ``__str__`` that returns the string representation of the class.
-    Create an object ``iliad`` for that book and print the string associated with it.
+    Create an object ``iliad`` for the book Iliad by Hoover and print the string associated with it.
     
     ~~~~
 
@@ -348,16 +351,16 @@ Mixed-Up Code Exercises
     :practice: T
     :adaptive:
 
-    Construct a class named ``Dog`` assigns the name and age values. Then, create a second class
-    ``GoldenRetriever`` that extends the ``Dog`` class. This method uses the ``__str__`` method
-    to return the string representation of the class.
+    Construct a class named ``Dog`` with the ``__init__`` method taking ``name`` and ``age`` as its parameters. 
+    Then, create a second class ``GoldenRetriever`` that extends the ``Dog`` class. This method uses the 
+    ``__str__`` method to return the string representation of the class: "Name: ``name`` Age: ``age`` Breed: Golden Retriever".
     -----
     class Dog:
     =====
-     def __init__(self, name, age):
+      def __init__(self, name, age):
     =====
-      self.name = name
-      self.age = age
+        self.name = name
+        self.age = age
     =====
     class GoldenRetriever extends Dog: #distractor
     =====
@@ -377,9 +380,9 @@ Mixed-Up Code Exercises
 
 .. activecode:: obj_mixedupcode_7_ac
 
-    Construct a class named ``Dog`` assigns the name and age values. Then, create a second class
-    ``GoldenRetriever`` that extends the ``Dog`` class. This method uses the ``__str__`` method
-    to return the string representation of the class.
+    Construct a class named ``Dog`` with the ``__init__`` method taking ``name`` and ``age`` as its parameters. 
+    Then, create a second class ``GoldenRetriever`` that extends the ``Dog`` class. This method uses the 
+    ``__str__`` method to return the string representation of the class: "Name: ``name`` Age: ``age`` Breed: Golden Retriever".
     
     ~~~~
 
@@ -410,10 +413,10 @@ Mixed-Up Code Exercises
     :practice: T
     :adaptive:
 
-    Construct a class named ``Dog`` that assigns the name and age values. Then create a
-    class named ``DogBreed`` which uses the name and age values from ``Dog`` and assigns a
-    value to breed in the ``__init__`` method. The ``__str__`` method returns the string representation
-    of the class. Create an object of the DogBreed class at the end.
+    Construct a class named ``Dog`` with the ``__init__`` method taking ``name`` and ``age`` as its parameters. 
+    Then create a class named ``DogBreed`` which uses the ``__init`` values ``name`` and ``age`` from the ``Dog`` class
+    and assigns a value to ``breed`` in the ``__init__`` method. Also create the ``__str__`` method that returns the string representation
+    of the class: "Name: " + ``name`` + " Age: " + ``age`` + " Breed:" + ``breed``" Create an object of the DogBreed class at the end.
     -----
     class Dog:
     =====
@@ -430,9 +433,9 @@ Mixed-Up Code Exercises
     =====
         self.breed = breed
     =====
-     def __str__(self):
+      def __str__(self):
     =====
-      return ("Name: " + self.name  + " Age: " + self.age + " Breed:" + self.breed)
+        return ("Name: " + self.name  + " Age: " + self.age + " Breed:" + self.breed)
     =====
     lark = DogBreed("Lark", 10, "Golden Retriever")
     =====
@@ -440,10 +443,10 @@ Mixed-Up Code Exercises
 
 .. activecode:: obj_mixedupcode_8_ac
 
-    Construct a class named ``Dog`` that assigns the name and age values. Then create a
-    class named ``DogBreed`` which uses the name and age values from ``Dog`` and assigns a
-    value to breed in the ``__init__`` method. The ``__str__`` method returns the string representation
-    of the class. Create an object of the DogBreed class at the end.
+    Construct a class named ``Dog`` with the ``__init__`` method taking ``name`` and ``age`` as its parameters. 
+    Then create a class named ``DogBreed`` which uses the ``__init`` values ``name`` and ``age`` from the ``Dog`` class
+    and assigns a value to ``breed`` in the ``__init__`` method. Also create the ``__str__`` method that returns the string representation
+    of the class: "Name: " + ``name`` + " Age: " + ``age`` + " Breed:" + ``breed``". 
     
     ~~~~
 
@@ -477,11 +480,12 @@ Mixed-Up Code Exercises
     Construct a class named ``Book`` that assigns title, author and format as initial values in the ``__init__`` function.
     Create a class named ``Library`` that extends ``Book`` and assigns the availability of the book as an initial value in the ``__init__`` function.
     Then create a method named updateAvailability that updates the availability of the book. Finally, create a method named ``__str__``
-    that returns the string representation of the class. 
+    that returns the string representation of the class: "Author: " + ``author`` + " Title: " + ``title`` + " Format: " + ``format`` + " Availability: " + ``availability``".
+    Then create an instance of the book ``iliad`` that is titled Iliad by Homer, it is initially available, but use ``updateAvailability`` to change it to not available. 
     -----
     class Book:
     =====
-     def __init__(self, title, author, format):
+      def __init__(self, title, author, format):
     =====
         self.tite = title
         self.author = author
@@ -518,7 +522,8 @@ Mixed-Up Code Exercises
     Construct a class named ``Book`` that assigns title, author and format as initial values in the ``__init__`` function.
     Create a class named ``Library`` that extends ``Book`` and assigns the availability of the book as an initial value in the ``__init__`` function.
     Then create a method named updateAvailability that updates the availability of the book. Finally, create a method named ``__str__``
-    that returns the string representation of the class. 
+    that returns the string representation of the class: "Author: " + ``author`` + " Title: " + ``title`` + " Format: " + ``format`` + " Availability: " + ``availability``".
+    Then create an instance of the book ``iliad`` that is titled Iliad by Homer, it is initially available, but use ``updateAvailability`` to change it to not available. 
     
     ~~~~
 
@@ -550,12 +555,11 @@ Mixed-Up Code Exercises
     :practice: T
     :adaptive:
 
-    Construct a class named ``Apple`` that assigns kind and color as initial values
-    and a method named ``__repr__`` that returns the string representation of the
-    ``Apple`` class. Construct a class named ``Farmer`` that assigns name as the initial value
-    with a method named ``updateItems``. ``updateItems`` adds each item to a list called "items",
-    which is a list of objects of ``Apple`` class. Finally, create a method called ``__str__`` that
-    returns the string representation of the class.
+    Construct a class named ``Apple`` that assigns ``kind`` and ``color`` as initial values in the ``__init__`` function. 
+    and a method named ``__repr__`` that returns the string representation of the ``Apple`` class: "Apple type: " + ``kind`` + " color: " + ``color``. 
+    Construct a class named ``Farmer`` that assigns ``name`` to the ``__init__`` function and ``item`` to an empty list within the ``__init__`` function. 
+    Also create a method named ``updateItems`` that adds each item to a list called ``items``. Finally, create a method called ``__str__`` that
+    returns the string representation of the class: "Farmer " + ``name`` + " has " + str(``items``). 
     -----
     class Apple:
     =====
@@ -587,12 +591,11 @@ Mixed-Up Code Exercises
 
 .. activecode:: obj_mixedupcode_10_ac
 
-    Construct a class named ``Apple`` that assigns kind and color as initial values
-    and a method named ``__repr__`` that returns the string representation of the
-    ``Apple`` class. Construct a class named ``Farmer`` that assigns name as the initial value
-    with a method named ``updateItems``. ``updateItems`` adds each item to a list called "items",
-    which is a list of objects of ``Apple`` class. Finally, create a method called ``__str__`` that
-    returns the string representation of the class.
+    Construct a class named ``Apple`` that assigns ``kind`` and ``color`` as initial values in the ``__init__`` function. 
+    and a method named ``__repr__`` that returns the string representation of the ``Apple`` class: "Apple type: " + ``kind`` + " color: " + ``color``. 
+    Construct a class named ``Farmer`` that assigns ``name`` to the ``__init__`` function and ``item`` to an empty list within the ``__init__`` function. 
+    Also create a method named ``updateItems`` that adds each item to a list called ``items``. Finally, create a method called ``__str__`` that
+    returns the string representation of the class: "Farmer " + ``name`` + " has " + str(``items``). 
     
     ~~~~
 
