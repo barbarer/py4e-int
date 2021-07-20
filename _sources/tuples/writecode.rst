@@ -179,20 +179,24 @@ Write Code Questions
 
         .. tab:: Question
 
-            Write code to print ``list_of_tuples`` where the last value of each tuple is 100. Assign this new list of tuples to the variable ``updated_list``.
+            Write the function ``mod_tuples`` which takes a list of tuples, ``tup_list`` and returns a copy where the last element in each tuple is modified to be 100. For example, ``mod_tuples([(3,4), (20, -3, 2)])`` returns [(3,100), (20, -3, 100)]``.
 
-            .. activecode:: tup_writecode7q
+            .. activecode:: tup_writecode7q_v2
                 :practice: T
                 :nocodelens:
 
-                list_of_tuples = [(10, 20, 40), (40, 50, 60), (70, 80, 90)]
+                def mod_tuples(tup_list):
 
                 ====
                 from unittest.gui import TestCaseGui
 
                 class MyTests(TestCaseGui):
                     def testOne(self):
-                        self.assertEqual(updated_list, [(10, 20, 100), (40, 50, 100), (70, 80, 100)], "Testing to make sure the last value of each tuple is 100.")
+                        self.assertEqual(mod_tuples([(3, 4), (20, -3, 2)]),[(3, 100), (20, -3, 100)] "mod_tuples([(3, 4), (20, -3, 2)]")
+                        self.assertEqual(mod_tuples([(3, ), (20, -3, 2)]),[(100, ), (20, -3, 100)] "mod_tuples([(3, ), (20, -3, 2)]")
+                        self.assertEqual(mod_tuples([(3, 4), (-3, )]),[(3, 100), (100,)] "mod_tuples([(3, 4), (-3, )]),[(3, 100), (100,)]")
+                        self.assertEqual(mod_tuples([(20, )]),[(100, )] "mod_tuples([(20, )])")
+                        self.assertEqual(mod_tuples([(20, 1, 80, 2 )]),[(20, 1, 80, 100)] "mod_tuples([(20, 1, 80, 2 )])")
 
                 MyTests().main()
 
@@ -272,7 +276,7 @@ Write Code Questions
                             counter += 1
                     # Return the dictionary
                     return diction
-            
+
                 print(list_link(['what', 'do', 'you', 'do'], [1,2,3,4]))
 
 #.
