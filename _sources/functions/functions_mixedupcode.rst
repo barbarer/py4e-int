@@ -1,12 +1,12 @@
-Functions Mixed-Up Code Questions
----------------------------------
+Functions Toggle Questions
+---------------------------
 
 .. parsonsprob:: Functions_MixedUpCode_1
     :numbered: left
     :practice: T
     :adaptive:
 
-    Create a function called ``exponentiate`` that takes in two parameters, ``num1`` and ``num2`` that raises ``num`` to the 
+    Create a function called ``exponentiate`` that takes in two parameters, ``num1`` and ``num2`` that raises ``num1`` to the 
     power of ``num2`` and returns that value. For example, ``exponentiate(2,3)`` should return ``8``.
     
     -----
@@ -24,7 +24,7 @@ Functions Mixed-Up Code Questions
    :practice: T
    :autograde: unittest
 
-   Create a function called ``exponentiate`` that takes in two parameters, ``num1`` and ``num2`` that raises ``num`` to the 
+   Create a function called ``exponentiate`` that takes in two parameters, ``num1`` and ``num2`` that raises ``num1`` to the 
    power of ``num2`` and returns that value. For example, ``exponentiate(2,3)`` should return ``8``.
    ~~~~
 
@@ -47,7 +47,7 @@ Functions Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``perimeter_of_polygon`` that takes in two parameters, ``len_of_side`` and ``num_of_sides`` that 
+    Create a function called ``perimeter_of_polygon`` that takes in two parameters, ``len_of_side`` and ``num_of_sides``, and 
     returns the perimeter of the polygon. The polygon can be determined by ``num_of_sides``. Ignore values of ``len_of_side`` 
     and ``num_of_sides`` that are not greater than 0. (Note: ``num_of_sides`` will be 10,000 at most.)  For example, ``perimeter_of_polygon(4,5)`` 
     should return ``20``.
@@ -69,7 +69,7 @@ Functions Mixed-Up Code Questions
    :practice: T
    :autograde: unittest
 
-   Create a function called ``perimeter_of_polygon`` that takes in two parameters, ``len_of_side`` and ``num_of_sides`` that 
+   Create a function called ``perimeter_of_polygon`` that takes in two parameters, ``len_of_side`` and ``num_of_sides``, and 
    returns the perimeter of the polygon. The polygon can be determined by ``num_of_sides``. Ignore values of ``len_of_side`` and 
    ``num_of_sides`` that are not greater than 0. (Note: ``num_of_sides`` will be between 3 and 10,000.)  For example, ``perimeter_of_polygon(4,5)`` 
    should return ``20``.
@@ -92,7 +92,7 @@ Functions Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``volume_of_sphere`` that takes in one parameter, ``radius`` that 
+    Create a function called ``volume_of_sphere`` that takes in one parameter ``radius`` and 
     returns the volume of a sphere with the given radius. (Note: a radius must be greater than 0.)
     For example, ``volume_of_sphere(3)`` should return ``113.04``.
 
@@ -113,7 +113,7 @@ Functions Mixed-Up Code Questions
    :practice: T
    :autograde: unittest
 
-   Create a function called ``volume_of_sphere`` that takes in one parameter, ``radius`` that 
+   Create a function called ``volume_of_sphere`` that takes in one parameter ``radius`` and 
    returns the volume of a sphere with the given radius. (Note: a radius must be greater than 0.)
    For example, ``volume_of_sphere(3)`` should return ``113.04``.
    ~~~~
@@ -123,10 +123,10 @@ Functions Mixed-Up Code Questions
    class myTests(TestCaseGui):
 
        def testOne(self):
-           self.assertEqual(volume_of_sphere(3),226.07999999999998,"Tested volume_of_sphere on input 3.")
-           self.assertEqual(volume_of_sphere(0.1),7.5360000000000005,"Tested volume_of_sphere on input 0.1.")
-           self.assertEqual(volume_of_sphere(5),376.8,"Tested volume_of_sphere on input 5.")
-           self.assertEqual(volume_of_sphere(10),753.6,"Tested volume_of_sphere on input 10.")
+           self.assertEqual(volume_of_sphere(3),113.03999999999998,"Tested volume_of_sphere on input 3.")
+           self.assertEqual(volume_of_sphere(0.1),0.0041866666666666675,"Tested volume_of_sphere on input 0.1.")
+           self.assertEqual(volume_of_sphere(5),523.3333333333334,"Tested volume_of_sphere on input 5.")
+           self.assertEqual(volume_of_sphere(10),4186.666666666667,"Tested volume_of_sphere on input 10.")
 
    myTests().main()
 
@@ -135,7 +135,7 @@ Functions Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``circumference_of_circle`` that takes in one parameter, ``radius`` that returns the 
+    Create a function called ``circumference_of_circle`` that takes in one parameter, ``radius``, and returns the 
     circumference of a circle with the given radius. (Note: a radius must be greater than 0.) For example, 
     ``circumference_of_circle(3)`` should return ``18.84``.
 
@@ -156,7 +156,7 @@ Functions Mixed-Up Code Questions
    :practice: T
    :autograde: unittest
 
-   Create a function called ``circumference_of_circle`` that takes in one parameter, ``radius`` that returns the 
+   Create a function called ``circumference_of_circle`` that takes in one parameter, ``radius``, and returns the 
    circumference of a circle with the given radius. (Note: a radius must be greater than 0.) For example, 
    ``circumference_of_circle(3)`` should return ``18.84``.
    ~~~~
@@ -179,7 +179,7 @@ Functions Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``slope`` that takes in four parameters, ``x1``, ``x2``, ``y1``, and ``y2``that 
+    Create a function called ``slope`` that takes in four parameters, ``x1``, ``x2``, ``y1``, and ``y2`` and 
     returns the slope of a line formed by the four points. (Note: Disregard any scenario where``x2`` - ``x1`` = 0.) 
     For example, ``slope(4,3,7,8)`` should return ``-1``.
 
@@ -204,7 +204,7 @@ Functions Mixed-Up Code Questions
    :practice: T
    :autograde: unittest
 
-   Create a function called ``slope`` that takes in four parameters, ``x1``, ``x2``, ``y1``, and ``y2``that 
+   Create a function called ``slope`` that takes in four parameters, ``x1``, ``x2``, ``y1``, and ``y2`` and 
    returns the slope of a line formed by the four points. (Note: Disregard any scenario where``x2`` - ``x1`` = 0.) 
    For example, ``slope(4,3,7,8)`` should return ``-1``.
    ~~~~
@@ -214,7 +214,7 @@ Functions Mixed-Up Code Questions
    class myTests(TestCaseGui):
 
        def testOne(self):
-           self.assertEqual(slope(4,3,7,8), 1.0,"Tested slope on inputs 4, 3, 7, 8.")
+           self.assertEqual(slope(4,3,7,8), -1.0,"Tested slope on inputs 4, 3, 7, 8.")
            self.assertEqual(slope(1,2,0,0), 0.0,"Tested slope on inputs 1, 2, 0, 0.")
            self.assertEqual(slope(0,1,1,1), 0.0,"Tested slope on inputs 0, 1, 1, 1.")
            self.assertEqual(slope(-1,2,3,4.4), 0.4666666666666668,"Tested slope on inputs -1, 2, 3, 4.4.")
