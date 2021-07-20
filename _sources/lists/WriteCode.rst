@@ -8,16 +8,17 @@ Write Code Questions
           Fix the 5 syntax errors in the code below so that it runs. It should print the length
           of ``myFirstList`` and print the result of ``myFirstList * 3``. Then it should set
           ``mySecondList`` to the concatenation of ``myFirstList`` and a list containing ``321.4``.
-          Then it should print the value of ``mySecondList``.
+          Then it should return the value of ``mySecondList``.
 
           .. activecode:: list_writeMyListq
               :nocodelens:
 
-              myFirstList = [12,"ape"13]
-              print(len(myFirstList)
-              print(myfirstList * 3)
-              mySecondList = myFirstList + [321.4
-              print(mySecondList
+              def fix_errors_list():
+                  myFirstList = [12,"ape"13]
+                  print(len(myFirstList)
+                  print(myfirstList * 3)
+                  mySecondList = myFirstList + [321.4
+                  return (mySecondList
 
       .. tab:: Answer
 
@@ -25,30 +26,31 @@ Write Code Questions
               :optional:
 
               1. List elements are separated by commas
-              2. Parentheses need to be in pairs (the print statement is missing the closing ")")
+              2. Parentheses need to be in pairs (however, the return statement does not need parenthesis)
               3. Python is case sensitive, use myFirstList
               4. Brackets also need to be in pairs
               5. Parentheses again need to be in pairs.
               ~~~~
-              myFirstList = [12,"ape",13]
-              print(len(myFirstList))
-              print(myFirstList * 3)
-              mySecondList = myFirstList + [321.4]
-              print(mySecondList)
+              def fix_errors_list():
+                  myFirstList = [12,"ape",13]
+                  print(len(myFirstList))
+                  print(myFirstList * 3)
+                  mySecondList = myFirstList + [321.4]
+                  return mySecondList
 
 #.
     .. activecode::  list_writeItemsq
         :nocodelens:
 
-        Fix 5 syntax errors in the code below so that it runs and prints the contents of ``items``.
+        Fix 5 syntax errors in the code below so that it runs and returns the contents of ``items``.
         ~~~~
         def itemLister(items):
             items[0] = "First item'
             items[1] = items0]
             items[2] = items[2] + 1
-           print items
+           return items
 
-        itemLister([2,4,6 8])
+        print(itemLister([2,4,6 8]))
 
 #.
     .. tabbed:: list_writeAvg
@@ -64,8 +66,8 @@ Write Code Questions
                 def gradeAverage(aList):
                     sum = 0
                     for num in aList:
-
-                    average =
+                        # write code here
+                    average = # write code here
                     return average
 
                 aList = [99, 100, 74, 63, 100, 100]
@@ -92,9 +94,11 @@ Write Code Questions
 #.
     .. activecode:: list_write23q
 
-        Assign the value of the item at index 3 of ``l`` to "200"
+        Complete the function ``change_index3`` by assigning the value of the item at index 3 of ``l`` to "200" and then returning ``l``.
         ~~~~
-        l = ["hi", "goodbye", "python", "106", "506"]
+        def change_index3():
+            l = ["hi", "goodbye", "python", "106", "506"]
+
 
         =====
 
@@ -103,7 +107,7 @@ Write Code Questions
         class myTests(TestCaseGui):
 
            def testOne(self):
-              self.assertEqual(l[3], "200", "Testing that l[3] is 200")
+              self.assertEqual(change_index3(), ["hi", "goodbye", "python", "200", "506"], "Testing change_index3() to see if l[3] is '200'.")
 
         myTests().main()
 
@@ -112,12 +116,15 @@ Write Code Questions
 
       .. tab:: Question
 
-          Using indexing, retrieve the string ‘willow’ from the list and assign that to the variable plant.
+          Using indexing, retrieve the string ``‘willow’`` from the list and create a new variable, ``plant`` and assign that to ``'willow'``. 
+          Return ``plant``.
 
           .. activecode:: list_writePlantq
 
-              data = ['bagel', 'cream cheese', 'breakfast', 'grits', 'eggs', 'bacon', [34, 9, 73, []],
-                     [['willow', 'birch', 'elm'], 'apple', 'peach', 'cherry']]
+              def practice_with_indexing():
+                  data = ['bagel', 'cream cheese', 'breakfast', 'grits', 'eggs', 'bacon', [34, 9, 73, []],
+                         [['willow', 'birch', 'elm'], 'apple', 'peach', 'cherry']]
+                  
 
 
               =====
@@ -127,7 +134,7 @@ Write Code Questions
               class myTests(TestCaseGui):
 
                  def testOne(self):
-                    self.assertEqual(plant, "willow", "Testing that plant was assigned to the willow.")
+                    self.assertEqual(practice_with_indexing(), "willow", "Testing that plant was assigned to the 'willow'.")
 
               myTests().main()
 
@@ -141,12 +148,13 @@ Write Code Questions
               Finally, ``willow`` is the first element in ``trees``. Access the first element [0] and
               assign to ``plant``.
               ~~~~
-              data = ['bagel', 'cream cheese', 'breakfast', 'grits', 'eggs', 'bacon', [34, 9, 73, []],
-                     [['willow', 'birch', 'elm'], 'apple', 'peach', 'cherry']]
-
-              dataLast = data[-1]
-              trees = dataLast[0]
-              plant = trees[0]
+              def practice_with_indexing():
+                  data = ['bagel', 'cream cheese', 'breakfast', 'grits', 'eggs', 'bacon', [34, 9, 73, []],
+                         [['willow', 'birch', 'elm'], 'apple', 'peach', 'cherry']]
+                  dataLast = data[-1]
+                  trees = dataLast[0]
+                  plant = trees[0]
+                  return plant
 
               =====
               from unittest.gui import TestCaseGui
@@ -161,7 +169,8 @@ Write Code Questions
 #.
     .. activecode:: list_write5q
 
-        Write a function called ``countWords`` that returns a count of how many words in the pased list, ``lst``, have length 5.
+        Write a function called ``countWords`` that returns a count of how many words in the passed list, ``lst``, have a length of 5.
+        For example, ``countWords(["hello", "hi", "good morning", "three", "kitty"]`` should return ``3``. 
         ~~~~
         def countWords(lst):
 
@@ -185,6 +194,7 @@ Write Code Questions
       .. tab:: Question
 
           Write a function called ``chop`` that takes a list ``lst`` and modifies it, removing the first and last elements.
+          For example, ``chop([1,2,3,4,5]`` should return ``[2,3,4]``.
 
           .. activecode:: list_writeChopq
 
@@ -207,8 +217,7 @@ Write Code Questions
           .. activecode:: list_writeChopa
               :optional:
 
-              Use ``pop`` to remove the first (0th) element and to remove the last (-1st) element.
-              Then return the list.
+              Use ``pop`` to remove the first (0th) element and to remove the last (-1st) element. Then return the list.
               ~~~~
               def chop(lst):
                   lst.pop(0)
@@ -230,7 +239,7 @@ Write Code Questions
     .. activecode::  list_writeReverseq
         :nocodelens:
 
-        Write a function called ``reverse`` that returns the reverse of a passed list.  For example, ``reverse[1,2,3]`` should return [3, 2, 1].
+        Write a function called ``reverse`` that returns the reverse of a passed list.  For example, ``reverse[1,2,3]`` should return ``[3, 2, 1]``.
         ~~~~
         ====
         from unittest.gui import TestCaseGui
@@ -250,7 +259,9 @@ Write Code Questions
 
         .. tab:: Question
 
-            Sum all the elements in the list ``lst`` up to but not including the first even number.
+            Write a function called ``sumUntilEven`` that takes in one parameter, ``lst``. Returns the sum of all the 
+            elements in the ``lst`` up to but not including the first even number. For example, ``sumUntilEven([1,2,3,4,5]``
+            should return ``1`` and ``sumUntilEven([1,3,5,7,9]`` should return ``25``.
 
             .. activecode:: list_writeSumq
 
