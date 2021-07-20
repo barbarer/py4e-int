@@ -1,5 +1,6 @@
-Function and String Mixed-Up Code Questions
---------------------------------------------
+Functions and Strings Mixed-Up Code Questions
+----------------------------------------------
+
 .. selectquestion:: Function_String_MixedUpCode_1_v2_sq
    :fromid: Function_String_MixedUpCode_1_v2, Function_String_MixedUpCode_1_v2_ac
    :toggle:
