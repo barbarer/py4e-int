@@ -1,5 +1,5 @@
-Functions Toggle Questions
----------------------------
+Functions Mixed-Up Code Questions
+----------------------------------
 
 .. selectquestion:: Functions_MixedUpCode_1_sq
    :fromid: Functions_MixedUpCode_1P_v2, Functions_MixedUpCode_1P_v2_ac
