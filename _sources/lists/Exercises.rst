@@ -10,12 +10,13 @@ Multiple Choice Questions
     :feedback_b: "cat" is at index 2 and [56, 57, "dog"] is what you get when index 4 is exclusive.
     :feedback_c: Remember that index values start at 0!
 
-    What is printed by the following statements?
+    What is returned by the following function?
 
-    ::
+    .. code-block:: python
 
-      alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
-      print(alist[2:4])
+      def slice_exercise():
+          alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+          print(alist[2:4])
 
 .. mchoice:: listEx_MC2
     :practice: T
@@ -25,12 +26,13 @@ Multiple Choice Questions
     :feedback_a: len returns the actual number of items in the list, not the maximum index value.
     :feedback_b: Yes, there are 5 items in this list.
 
-    What is printed by the following statements?
+    What is returned by the following function?
 
     .. code-block:: python
 
-      alist = [3, 67, "cat", 3.14, False]
-      print(len(alist))
+      def len_of_list():
+          alist = [3, 67, "cat", 3.14, False]
+          return len(alist)
 
 .. mchoice:: listEx_MC3
     :practice: T
@@ -42,12 +44,13 @@ Multiple Choice Questions
     :feedback_b: 2 is the index.  We want the item at that index.
     :feedback_c: Yes, the string cat is upper cased to become CAT.
 
-    What is printed by the following statements?
+    What is returned by the following function?
 
-    ::
+    .. code-block:: python
 
-      alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
-      print(alist[2].upper())
+      def indexing_and_upper():
+          alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+          return alist[2].upper()
 
 
 .. mchoice:: listEx_MC4
@@ -62,12 +65,13 @@ Multiple Choice Questions
     :feedback_c: cat is the item at index 2 but then we index into it further.
     :feedback_d: Using more than one index is fine.  You read it from left to right.
 
-    What is printed by the following statements?
+    What is returned by the following function?
 
-    ::
+    .. code-block:: python
 
-      alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
-      print(alist[2][0])
+      def list_within_list():
+          alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+          return alist[2][0]
 
 .. mchoice:: listEx_MC5
     :practice: T
@@ -81,14 +85,15 @@ Multiple Choice Questions
     :feedback_c: print(blist)
     :feedback_d: blist contains two references, both to alist so changes to alist appear both times.
 
-    What is printed by the following statements?
+    What is returned by the following function?
 
-    ::
+    .. code-block:: python
 
-      alist = [4, 2, 8, 6, 5]
-      blist = [alist] * 2
-      alist[3] = 999
-      print(blist)
+      def list_transformation():
+          alist = [4, 2, 8, 6, 5]
+          blist = [alist] * 2
+          alist[3] = 999
+          return blist
 
 .. mchoice:: listEx_MC6
     :practice: T
@@ -102,15 +107,16 @@ Multiple Choice Questions
     :feedback_c: Yes, the for loop processes each item of the list.  5 is added before it is appended to blist.
     :feedback_d: 5 is added to each item before the append is performed.
 
-    What is printed by the following statements?
+    What is returned by the following function?
 
-    ::
+    .. code-block:: python
 
-      alist = [4, 2, 8, 6, 5]
-      blist = [ ]
-      for item in alist:
-          blist.append(item+5)
-      print(blist)
+      def list_transformation():
+          alist = [4, 2, 8, 6, 5]
+          blist = [ ]
+          for item in alist:
+              blist.append(item+5)
+          return blist
 
 
 .. mchoice:: listEx_MC7
@@ -159,28 +165,34 @@ Multiple Choice Questions
 
     .. sourcecode:: python
 
-        nums = [4, 5, 2, 93, 3, 5]
-        s = 0
-        for n in nums:
-            s = s + 1
+        def find_sum():
+            nums = [4, 5, 2, 93, 3, 5]
+            s = 0
+            for n in nums:
+                s = s + 1
+            return s
 
     II.
 
     .. sourcecode:: python
 
-        nums = [4, 5, 2, 93, 3, 5]
-        s = 0
-        for n in nums:
-            s = n + n
+        def find_sum():
+            nums = [4, 5, 2, 93, 3, 5]
+            s = 0
+            for n in nums:
+                s = n + n
+            return s
 
     III.
 
     .. sourcecode:: python
 
-        nums = [4, 5, 2, 93, 3, 5]
-        s = 0
-        for n in nums:
-            s = s + n
+        def find_sum():
+            nums = [4, 5, 2, 93, 3, 5]
+            s = 0
+            for n in nums:
+                s = s + n
+            return s
 
 .. mchoice:: assess_question5_2_1_2
     :answer_a: 1.
@@ -202,36 +214,44 @@ Multiple Choice Questions
 
     .. sourcecode:: python
 
-        lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
-        s = 0
-        for n in lst:
-            s = s + n
+        def num_of_strings():
+            lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
+            s = 0
+            for n in lst:
+                s = s + n
+            return s
 
     2.
 
     .. sourcecode:: python
 
-        lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
-        for item in lst:
-            s = 0
-            if type(item) == type("string"):
-                s = s + 1
+        def num_of_strings():
+            lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
+            for item in lst:
+                s = 0
+                if type(item) == type("string"):
+                    s = s + 1
+            return s
 
     3.
 
     .. sourcecode:: python
 
-        lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
-        s = ""
-        for n in lst:
-            s = s + n
+        def num_of_strings():
+            lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
+            s = ""
+            for n in lst:
+                s = s + n
+            return s
 
     4.
 
     .. sourcecode:: python
 
-        lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
-        s = 0
-        for item in lst:
-            if type(item) == type("string"):
-                s = s + 1
+        def num_of_strings():
+            lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
+            s = 0
+            for item in lst:
+                if type(item) == type("string"):
+                    s = s + 1
+            return s
