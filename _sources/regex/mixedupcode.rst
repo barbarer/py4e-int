@@ -6,24 +6,22 @@ Mixed-Up Code Questions
    :practice: T
    :adaptive:
 
-   The following code should use regular expressions to find and print the phrase
-   "Good morning!" from the list "greetings", if it is included in the list.
-   The blocks have been mixed up, and include two extra blocks that are not correct.
-   Watch out for the extra blocks and indentation!
+   The following code should use a regular expression to find and print the phrase
+   ``Good morning!`` in the list ``greetings``, if it is included in the list.
    -----
    import re
    =====
-   greetings = ["Hello!", "hello.", "Good Morning!", "good morning!", "Good morning!", "hi"]
+   greetings = ["Hello!", "Good Morning!", "good morning!"]
    =====
    for item in greetings:
    =====
-    if re.search('Good morning!', item):
+       if re.search('Good morning!', item):
    =====
-    if re('Good Morning!', item): #distractor
+       if re('Good Morning!', item): #paired
    =====
-     print(item)
+           print(item)
    =====
-     print(greetings) #distractor
+           print(greetings) #paired
 
 .. parsonsprob:: re-mixed2
    :numbered: left
@@ -31,23 +29,19 @@ Mixed-Up Code Questions
    :adaptive:
 
    The following code should use regular expressions to print each item in the list
-   "greetings", if it starts with an "H" or an "h". The blocks have been mixed
-   up, and include two extra blocks that are not correct. Watch out for the extra
-   blocks and indentation!
+   ``greetings``, if it starts with an ``H`` or an ``h``.
    -----
    import re
    =====
-   greetings = ["Hello!", "hello.", "Good Morning!", "good morning!", "Good morning!", "hi"]
+   greetings = ["Hello!", "hello.", "Morning!", "hi"]
    =====
    for item in greetings:
    =====
-    if re.search('^[Hh]', item):
+       if re.search('^[Hh]', item):
    =====
-    if re('[Hh]', item): #distractor
+       if re('^H,h'), item): #paired
    =====
-    if re('^H,h'), item): #distractor
-   =====
-     print(item)
+           print(item)
 
 .. parsonsprob:: re-mixed3
     :numbered: left
@@ -55,20 +49,17 @@ Mixed-Up Code Questions
     :adaptive:
 
     The following code should use regular expressions to print each item in the list
-    "greetings", if it includes an "o". The blocks have been mixed up, and include
-    two extra blocks that are not correct. Watch out for the extra blocks and indentation!
+    ``greetings``, if it includes an ``o``.
     -----
     import re
     =====
-    greetings = ["Hello!", "hello.", "Good Morning!", "good morning!", "Good morning!", "hi"]
+    greetings = ["Hello!", "Good Morning!", "hi"]
     =====
     for item in greetings:
     =====
         if re.search('o', item):
     =====
-        if re('0', item): #distractor
-    =====
-        if re('^o', item): #distractor
+        if re('^o', item): #paired
     =====
             print(item)
 
@@ -78,21 +69,20 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    The following code should use create a regular expression pattern for the word "Puppy"
-    and test it on the sequence. If they are the same, it should print "Match!", if not it
-    should print "Not a match!". The blocks have been mixed up, and include two extra blocks
-    that are not correct. Watch out for the extra blocks and indentation!
+    The following code should use create a regular expression pattern for the word ``Puppy``
+    and test it on the sequence. If they are the same, it should print ``Match!``, if not it
+    should print ``Not a match!``.
     -----
-    import regEx #distractor
-    =====
     import re
     =====
-    pattern = r"Puppy"
+    import regEx #paired
+    =====
+    pattern = "Puppy"
     sequence = "Puppies"
     =====
     if re.match(pattern, sequence):
     =====
-    if re.match(sequence, pattern): #distractor
+    if re.match(sequence, pattern): #paired
     =====
         print("Match!")
     =====
@@ -106,19 +96,16 @@ Mixed-Up Code Questions
     :adaptive:
 
     The following code should use create a regular expression pattern that can match
-    "Sincerely, Molly" where there is at least one space after the comma, but can be many.
-    Test it on the sequence. If they are the same, it should print "Match!", if not it
-    should print "Not a match!". The blocks have been mixed up, and include two extra
-    blocks that are not correct. Watch out for the extra blocks and indentation!
+    ``Sincerely, Molly`` where there is at least one space after the comma, but there can be many spaces.
+    Test it on the sequence. If they are the same, it should print ``Match!``, if not it
+    should print ``Not a match!``.
     -----
     import re
     sequence = "Sincerely,       Molly"
     =====
     pattern = r"Sincerely,\s+Molly"
     =====
-    pattern = r"Sincerely, Molly" #distractor
-    =====
-    pattern = r"Sincerely,\s*Molly" #distractor
+    pattern = r"Sincerely,\s*Molly" #paired
     =====
     if re.match(pattern, sequence):
     =====
@@ -133,9 +120,8 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    The following code should create a new string "y" from the first price found
-    in the string "x". The blocks have been mixed up, and include two extra
-    blocks that are not correct.
+    The following code should create a new string ``y`` from the first price found
+    in the string ``x``. A price must have at least one digit after a '$' and can optionally have a period followed by two digits.
     -----
     import re
     =====
@@ -143,9 +129,7 @@ Mixed-Up Code Questions
     =====
     y = re.findall('\$\d+(?:\.\d{2})?',x)[0]
     =====
-    y = re.findall('\$\d*(?:\.\d{2})?',x)[0] #distractor
-    =====
-    y = re.findall('\$\d+(\.\d{2})?',x)[0] #distractor
+    y = re.findall('\$\d*(?:\.\d{2})?',x)[0] #paired
 
 .. parsonsprob:: re-mixed7
     :numbered: left
@@ -207,7 +191,7 @@ Mixed-Up Code Questions
 
     The following code should read all the lines in a file, remove whitespace from the right side of the line, and
     use regular expressions to search for lines that start with 'Details: rev='
-    followed by numbers and '.'. Then print the number of occurrences. The blocks have been mixed up, and include two extra blocks that are not correct.
+    followed by numbers and '.'. Then print the number of occurrences of that pattern in each line.
     -----
     import re
     =====
@@ -232,8 +216,7 @@ Mixed-Up Code Questions
 
     The following code should search for lines that start with 'X' followed by at least one
     non whitespace character then ':' followed by one space and at least one digit
-    then print the number of items found. The blocks have been mixed up, and include
-    two extra blocks that are not correct. Watch out for the extra blocks and indentation!
+    then print the number of items found on each line.
     -----
     import re
     =====

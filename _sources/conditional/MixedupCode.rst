@@ -5,7 +5,7 @@ Mixed-up Code Questions
     :adaptive:
     :numbered: left
 
-    The following program should prints “x is less than 3” and then “All done” when x is less than 3.
+    The following program should print ``x is less than 3`` and then ``All done`` when ``x`` is less than ``3``.
     Be sure to indent correctly!
     -----
     x = 0
@@ -21,8 +21,8 @@ Mixed-up Code Questions
     :practice: T
     :numbered: left
 
-    The following program should prints “Hello” if x is less than 2, "Hey" if x is greater than 2,
-    and "Hi" if x is 2. Be sure to indent correctly and look out for extra code blocks!
+    The following program should prints ``Hello`` if ``x`` is less than ``2``, ``Hey`` if ``x`` is greater than ``2``,
+    and ``Hi`` if ``x`` is ``2``. Be sure to indent correctly and look out for extra code blocks!
     -----
     x = 2
     =====
@@ -52,8 +52,8 @@ Mixed-up Code Questions
    :numbered: left
 
    The following program should calculate the total price, but the lines are mixed up. The price is
-   based on the weight. Items that weigh less than 2 pounds should cost 1.5. Items that weigh more
-   than 2 pounds should cost 1.3. Be sure to indent correctly!
+   based on the weight. Items that weigh less than ``2`` pounds should cost ``1.5``. Items that weigh more
+   than ``2`` pounds should cost ``1.3``. Be sure to indent correctly!
    -----
    weight = 0.5
    numItems = 5
@@ -76,9 +76,9 @@ Mixed-up Code Questions
     :adaptive:
     :numbered: left
 
-    The following program should print ``x is a number from 1 to 10`` if the value of x is 1-10,
-    ``x is a number less than 1`` if the value of x is zero or below, and ``x is a number greater than 10``
-    if the value of x is more than 10. Be sure to indent correctly and look out for extra code blocks!
+    The following program should print ``x is a number from 1 to 10`` if the value of ``x`` is ``1-10``,
+    ``x is a number less than 1`` if the value of ``x`` is zero or below, and ``x is a number greater than 10``
+    if the value of ``x`` is more than ``10``. Be sure to indent correctly and look out for extra code blocks!
     -----
     x = 3
     =====
@@ -105,8 +105,8 @@ Mixed-up Code Questions
     :numbered: left
 
     Arrange the code to calculate and print the cost of a 14 mile cab ride. If the distance traveled
-    is less than or equal to 12 miles the cost is $2.00 a mile, and if the distance traveled is more
-    than 12 miles the cost is $1.50 a mile. Be sure to indent correctly and look out for extra code blocks!
+    is less than or equal to ``12`` miles the cost is ``$2.00`` a mile, and if the distance traveled is more
+    than ``12`` miles the cost is ``$1.50 a mile``. Be sure to indent correctly and look out for extra code blocks!
     -----
     distance = 14
     =====
@@ -134,8 +134,8 @@ Mixed-up Code Questions
     :adaptive:
     :numbered: left
 
-    Arrange the following code so that after x and y are defined, they are compared and if the value of x
-    is less than y it prints ``"x is less than y"``; if x is greater than y it prints ``"x is greater
+    Arrange the following code so that after ``x`` and ``y`` are defined, they are compared and if the value of ``x``
+    is less than ``y`` it prints ``"x is less than y"``; if x is greater than ``y`` it prints ``"x is greater
     than y"``; and prints ``"x and y must be equal"`` if the values are equal. Be sure to indent correctly!
     -----
     x = 10
@@ -163,9 +163,9 @@ Mixed-up Code Questions
     :adaptive:
     :numbered: left
 
-    Arrange the following code so that after x and y are defined, they are compared and if the value of x
-    and y are the same object it prints ``"x and y are the same"``; if x and y have the same value it
-    prints ``"x and y have the same value"``; and prints ``"x and y are not similar"`` if x and y do not
+    Arrange the following code so that after ``x`` and ``y`` are defined, they are compared and if the value of ``x``
+    and ``y`` are the same object it prints ``"x and y are the same object"``; if ``x`` and ``y`` have the same value it
+    prints ``x and y have the same value``; and prints ``x and y are not similar`` if ``x`` and ``y`` do not
     fit the other conditionals. Be sure to indent correctly!
     -----
     x = 12
@@ -174,7 +174,7 @@ Mixed-up Code Questions
     =====
     if x is y:
     =====
-        print("x and y are the same")
+        print("x and y are the same object")
     =====
     elif x == y:
     =====
@@ -189,8 +189,8 @@ Mixed-up Code Questions
     :adaptive:
     :numbered: left
 
-    Arrange the code to print the grade equivalent (string) for a score. It should return E for any value
-    below 60, D for 61 to 69, C for 70 to 79, B for 80 to 89 and A for 90 and above.
+    Arrange the code to print the grade equivalent (string) for a score. It should return ``E`` for any value
+    below ``60``, ``D`` for ``61 to 69``, ``C`` for ``70 to 79``, ``B`` for ``80 to 89`` and ``A`` for ``90`` and above.
     -----
     score = 93
     =====
@@ -249,8 +249,8 @@ Mixed-up Code Questions
     :adaptive:
     :numbered: left
 
-    The following program should print "Good job" when the number is between 1 and 10 (inclusive) or is 15
-    and "Fail" when it is not. Be sure to indent correctly and watch out for extra pieces of code!
+    The following program should print ``Good job`` when the number is between ``1`` and ``10`` (inclusive) or is ``15``
+    and ``Fail`` when it is not. Be sure to indent correctly and watch out for extra pieces of code!
     -----
     x = 8
     =====

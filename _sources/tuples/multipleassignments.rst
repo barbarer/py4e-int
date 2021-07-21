@@ -51,7 +51,7 @@ Again, it is in hash key order (i.e., no particular order).
       d = {'a': 10, 'b': 15, 'c': 17, 'd': 4}
       lst = []
       for key, val in d.items():
-          lst.append(val, key)
+          lst.append( (val, key) )
       print(lst)
 
 If we combine these two techniques, we can print out the contents of a
@@ -70,7 +70,7 @@ print out the new, sorted list.
    d = {'a':10, 'b':1, 'c':22}
    lst = list()
    for key, val in d.items():
-       lst.append((val, key))
+       lst.append( (val, key) )
    print(lst) #should print [(10, 'a'), (1, 'b'), (22, 'c')]
    lst.sort(reverse=True)
    print(lst) #should print [(22, 'c'), (10, 'a'), (1, 'b')]
@@ -97,7 +97,7 @@ our dictionary contents by value.
    =====
    for key, val in d.items: #paired
    =====
-   	list_for_kv_pairs.append((key, val))
+   	list_for_kv_pairs.append( (key, val) )
    =====
    print(list_for_kv_pairs)
 
