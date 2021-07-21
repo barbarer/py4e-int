@@ -126,9 +126,9 @@ Mixed-Up Code Questions
    =====
    for key, val in d.items():
    =====
-   	list_for_kv_pairs.append((key, val))
+       list_for_kv_pairs.append((key, val))
    =====
-   	list_for_kv_pairs.append(key, val) #paired
+       list_for_kv_pairs.append(key, val) #paired
    =====
    print(list_for_kv_pairs)
 
@@ -188,21 +188,22 @@ Mixed-Up Code Questions
    :adaptive:
    :practice: T
 
-   Construct a block of code that capitalizes every item in tuple ``tup``. Note: there are four blocks that won't be used in the solution!
+   Construct a block of code that creates a new list with every item in ``tup`` capitalized and then print the list.
    -----
-   tup = ('wolverine', 'Ann Arbor', 'Winter', 'Fall', 'michigan')
+   tup = ('wolverine', 'Ann Arbor', 'michigan')
+   t_list = []
    =====
-   tup[0] = 'Wolverine' #paired
+   for item in tup:
    =====
-   tup[4] = 'Michigan' #paired
+       t_list = t_list.append(item.capitalized())
    =====
-   tup = ('Wolverine',) + tup[1:4] + ('Michigan',)
+       t_list = t_list.add(item.capitalized()) #paired
    =====
-   tup = ('Wolverine') + tup[1:4] + ('Michigan') #paired
+   print(t_list)
    =====
-   tup = ('Wolverine',) + tup[1:3] + ('Michigan',) #paired
-   =====
-   print(tup)
+   print(tup) #paired
+
+
 
 .. parsonsprob:: mixedupcode_question10_10
    :numbered: left

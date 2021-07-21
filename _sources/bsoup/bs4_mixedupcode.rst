@@ -21,10 +21,10 @@ Mixed-Up Code Exercises
 	=====
 	for tag in tags:
 	=====
-		print(tag.get('src', None))
+	    print(tag.get('src', None))
 	=====
-		print(tag.get('href', None)) #paired
-        
+		  print(tag.get('href', None)) #paired
+
 .. parsonsprob:: mixedupcode_bs4_shapiro
 	:numbered: left
 	:practice: T
@@ -54,7 +54,7 @@ Mixed-Up Code Exercises
 	:practice: T
 	:adaptive:
 
-	Use Beautiful Soup to find all of the "a" tags in the div tag with the "column" class and "news-items" id. Then, print the link associated with each "a" tag or "None" if there isn't one. 
+	Use Beautiful Soup to find all of the "a" tags in the div tag with the "column" class and "news-items" id. Then, print the link associated with each "a" tag or "None" if there isn't one.
 	-----
 	from bs4 import BeautifulSoup
 	import requests
@@ -71,45 +71,44 @@ Mixed-Up Code Exercises
 	=====
 	tags = div.find_all('a')
 	=====
-	tags = div.find('a') #distractor
+	tags = div.find('a') #paired
 	=====
 	for tag in tags:
 	=====
-		print(tag.get('href', None))
+      print(tag.get('href', None))
 	=====
-		print(tag.get('href', None)) #distractor
+      print(tag.get(href, None)) #paired
 
 .. parsonsprob:: mixedupcode_bs4_courses
     :numbered: left
     :practice: T
     :adaptive:
-    
+
     We want to find a description of 3 SI courses by getting a soup from multiple URLs, extracting information from each div tag with class = 'body wysiwyg-content' and then printing the text. Put the code blocks in order.
     -----
     from bs4 import BeautifulSoup
-	import requests
-	=====
+	  import requests
+	  =====
     base_url = 'https://www.si.umich.edu/programs/courses/'
+	  endings = ['106', '206', '330']
+	  =====
+	  for ending in endings:
+	  =====
+        url = base_url + ending
     =====
-	endings = ['106', '206', '330']
-	=====
-	for ending in endings:
-	=====
-    	url = base_url + ending
-    	=====
-    	resp = requests.get(url)
-    	=====
-    	soup = BeautifulSoup(resp.content, 'html.parser')
-    	=====
-    	div = soup.find('div', class_='body wysiwyg-content')
-    	=====
-    	p = div.find('p')
-    	=====
-    	info = p.text
-    	=====
-    	print(info)
+    	  resp = requests.get(url)
+    =====
+    	  soup = BeautifulSoup(resp.content, 'html.parser')
+    =====
+    	  div = soup.find('div', class_='body wysiwyg-content')
+    =====
+    	  p = div.find('p')
+    =====
+    	  info = p.text
+    =====
+    	  print(info)
 
-.. parsonsprob:: mixedupcode_bs4_umsi
+.. parsonsprob:: mixedupcode_bs4_umsi_v2
     :numbered: left
     :practice: T
     :adaptive:
@@ -122,7 +121,7 @@ Mixed-Up Code Exercises
     url = 'https://www.si.umich.edu/programs/student-life-umsi'
     =====
     r = requests.get(url)
-	soup = BeautifulSoup(r.content, 'html.parser')
+	  soup = BeautifulSoup(r.content, 'html.parser')
     =====
     tags = soup.find_all('a')
     =====
@@ -133,5 +132,3 @@ Mixed-Up Code Exercises
         print(tag.get('href', None))
     =====
         print(tag.get('src', None)) #paired
-    =====
-        print(tag.text) #distractor

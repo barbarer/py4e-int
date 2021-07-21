@@ -9,11 +9,11 @@ Function and String Write Code Questions
                 :practice: T
                 :autograde: unittest
 
-                Create a function called ``starts_with_lowercase_a`` that takes in ``string`` as a parameter and 
+                Create a function called ``starts_with_lowercase_a`` that takes in ``string`` as a parameter and
                 returns ``True`` if the ``string`` starts with a lowercase a and ``False`` otherwise. For example,
                 ``starts_with_lowercase_a('apple')`` should return ``True``.
                 ~~~~
-                
+
                 ====
                 from unittest.gui import TestCaseGui
                 class myTests(TestCaseGui):
@@ -44,10 +44,10 @@ Function and String Write Code Questions
         :practice: T
         :autograde: unittest
 
-        Create a function called ``side_length_square`` that takes in ``area_num`` as a parameter and 
-        returns ``A square with an area of (insert area_num) square feet has a side length of (insert side length) feet.``.
-        For example, ``side_length_square(36)`` should return ``"A square with an area of 36 square feet has a side length of 6.0 feet."``. 
-        (Note: Areas can't be negative.)
+        Create a function called ``side_length_square`` that takes in ``area`` as a parameter and
+        returns ``A square with an area of (area) square feet has a side length of (side length) feet.``. The side length is
+        the square root of the area.  Use ``math.sqrt(num)`` to get the square root of ``num``.
+        For example, ``side_length_square(36)`` should return ``A square with an area of 36 square feet has a side length of 6.0 feet.``.
         ~~~~
         import math
 
@@ -71,10 +71,10 @@ Function and String Write Code Questions
                 :practice: T
                 :autograde: unittest
 
-                Create a function called ``join_sentences_with_semicolon`` that takes in ``sentence1`` and ``sentence2`` as parameters and 
-                returns both sentences joined by a semicolon with the correct grammar. This means that ``sentence1`` shouldn't have a terminal punctuation mark, 
+                Create a function called ``join_sentences_with_semicolon`` that takes in ``sentence1`` and ``sentence2`` as parameters and
+                returns both sentences joined by a semicolon with the correct grammar. This means that ``sentence1`` shouldn't have a terminal punctuation mark,
                 there should be a space after the semicolon, and ``sentence2`` should start with a lowercase letter.
-                For example, ``join_sentences_with_semicolon('The sun is bright.', "Let's go outside.")`` should return ``"The sun is bright; let's go outside."``. 
+                For example, ``join_sentences_with_semicolon('The sun is bright.', "Let's go outside.")`` should return ``"The sun is bright; let's go outside."``.
                 (Note: Assume both ``sentence1`` and ``sentence2`` are simple and complete sentences with proper grammar.)
                 ~~~~
 
@@ -97,16 +97,16 @@ Function and String Write Code Questions
                 def join_sentences_with_semicolon(sentence1, sentence2):
                     return sentence1[:-1] + '; ' + sentence2[0].lower() + sentence2[1:]
 
-                print(join_sentences_with_semicolon('The sun is bright.', "Let's go outside.")) 
+                print(join_sentences_with_semicolon('The sun is bright.', "Let's go outside."))
 
 #.
     .. activecode:: funct-strings-writecode4
         :practice: T
         :autograde: unittest
 
-        
-        Create a function called ``scramble_and_change`` that takes in ``string`` as a parameter and 
-        returns a new string with the first two characters uppercased, the last two characters lowercased, 
+
+        Create a function called ``scramble_and_change`` that takes in ``string`` as a parameter and
+        returns a new string with the first two characters uppercased, the last two characters lowercased,
         and the remaining characters in the middle moved to the front of the string with the first letter capitalized.
         For example, ``scramble_and_change('hello')`` should return ``"LHElo"``, and ``scramble_and_change('pumpkin')`` should return ``"MpkPUin"``.
         (Note: Don't worry about accounting for strings that are 4 characters or less.)
@@ -135,9 +135,9 @@ Function and String Write Code Questions
             .. activecode:: funct-strings-writecode5q
                 :practice: T
                 :autograde: unittest
-                
-                Create a function called ``find_and_remove_first_a`` that takes in ``string`` as a parameter and 
-                returns a new string without the first 'a'. For example, ``find_and_remove_first_a('australia')`` should return ``"ustralia"``. 
+
+                Create a function called ``find_and_remove_first_a`` that takes in ``string`` as a parameter and
+                returns a new string without the first 'a'. For example, ``find_and_remove_first_a('australia')`` should return ``"ustralia"``.
                 (Note: Don't worry about accounting for strings that don't have an 'a'.)
                 ~~~~
 
@@ -161,11 +161,9 @@ Function and String Write Code Questions
 
             .. activecode:: funct-strings-writecode5a
                 :optional:
-                
+
                 def find_and_remove_first_a(string):
                     capture_a = string.find('a')
                     return string[:capture_a] + string[capture_a + 1:]
-                
+
                 print(find_and_remove_first_a('australia'))
-
-
