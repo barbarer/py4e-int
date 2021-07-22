@@ -353,7 +353,7 @@ Below is the romeo3.txt file used in Question 7.
         myTests().main()
 
 
-The next two questions are associated with the following text file.
+The next two questions are associated with the following text file which has an email address followed by the number of messages from that address.
 
 .. reveal:: mbox-short-txt-file
    :showtitle: Show
@@ -444,8 +444,8 @@ The next two questions are associated with the following text file.
         :practice: T
         :available_files: mbox-short.txt
 
-        Write this program to record the domain name (instead of the address) where the message was sent from instead of who the mail came from (i.e., the whole email address). At the end of the program, print out the contents of your dictionary ``message_count``.
-        The domains should be the keys of the dictionary, and the counts of the domains should be the values of the dictionary. For example, ``message_count['iupui.edu']`` should be ``5``.
+        Write a program to record in the dictionary ``message_count`` the total number of messages from each domain name (not the whole address, just the part after the @ and before the space). At the end of the program, print out the contents of your dictionary. 
+        The domains should be the keys of the dictionary, and the counts of the domains should be the values of the dictionary. For example, ``message_count['iupui.edu']`` should be ``8``.
         ~~~~
         with open("mbox-short.txt2", "r") as filename:
             message_count = {}
@@ -456,7 +456,7 @@ The next two questions are associated with the following text file.
         class myTests(TestCaseGui):
 
             def testOne(self):
-                self.assertEqual(message_count['iupui.edu'], '5', "message_count['iupui.edu']")
+                self.assertEqual(message_count['iupui.edu'], '8', "message_count['iupui.edu']")
                 self.assertEqual(len(message_count), 6, "len(message_count)")
 
         myTests().main()
