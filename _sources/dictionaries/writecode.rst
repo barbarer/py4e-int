@@ -5,11 +5,11 @@ Write Code Questions
 
         .. tab:: Question
 
-            Write a program that categorizes each mail message by which day of the week
-             the commit was done. To do this look for lines that start with "From", then
-             look for the third word and keep a running count of each of the days of the week.
-             At the end of the program print out the contents of the dictionary 'mail_count'
-             (order does not matter).
+            Write a program that categorizes each mail message by which day of the week 
+            the commit was done. To do this, look for lines that start with "From". Then, 
+            look for the third word, and keep a running count of each of the days of the week. 
+            At the end of the program, print out the contents of the dictionary ``mail_count``
+            (order does not matter). For example, ``mail_count['Mon']`` should be ``2``.
 
             .. activecode:: dict_writecode1q
                 :practice: T
@@ -23,9 +23,9 @@ Write Code Questions
                 class myTests(TestCaseGui):
 
                     def testOne(self):
-                        self.assertEqual(mail_count['Mon'], 2, "Making sure only two emails are associated with Monday.")
-                        self.assertEqual(mail_count['Sat'], 2, "Checking that there are 2 emails sent on Saturday.")
-                        self.assertEqual(mail_count.get('Sun', 0), 0, "Checking that no emails were sent on Sunday.")
+                        self.assertEqual(mail_count['Mon'], 2, "mail_count['Mon']")
+                        self.assertEqual(mail_count['Sat'], 2, "mail_count['Sat']")
+                        self.assertEqual(mail_count.get('Sun', 0), 0, "mail_count.get('Sun', 0)")
 
                 myTests().main()
 
@@ -57,7 +57,7 @@ Write Code Questions
         :practice: T
         :nocodelens:
 
-        Write a program to read through a mail log, build a histogram using the dictionary "user_count" to count how many messages have come from each email address, and print the dictionary.
+        Write a program to read through a mail log, build the dictionary ``user_count`` to count how many messages have come from each email address, and print the dictionary. For example, ``user_count['stephen.marquard@uct.ac.za']`` should be ``4``.
         ~~~~
         mail_log = ['From stephen.marquard@uct.ac.za Sat Jan  7', 'From gopal.ramasammycook@gmail.com Thurs Jan  5', 'From stephen.marquard@uct.ac.za Sat Feb  7', 'From louis@media.berkeley.edu Tues Jan  3', 'From stephen.marquard@uct.ac.za Sat Nov  6', 'From antranig@caret.cam.ac.uk Sat Jan  7', 'From david.horwitz@uct.ac.za Wed Jan  4', 'From ray@media.berkeley.edu Mon Jan  2', 'From stephen.marquard@uct.ac.za Mon Jan 2', 'From wagnermr@iupui.edu Fri Jan  6', 'From gopal.ramasammycook@gmail.com Thurs Dec  5', 'From louis@media.berkeley.edu Tues April  1']
 
@@ -66,8 +66,8 @@ Write Code Questions
 
         class myTests(TestCaseGui):
             def testOne(self):
-                self.assertEqual(len(user_count), 7, "Making sure the amount of messages sent is correct.")
-                self.assertEqual(user_count['stephen.marquard@uct.ac.za'], 4, "Checking that 'stephen.marquard@uct.ac.za' is counted for 4 times.")
+                self.assertEqual(len(user_count), 7, "len(user_count)")
+                self.assertEqual(user_count['stephen.marquard@uct.ac.za'], 4, "user_count['stephen.marquard@uct.ac.za']")
 
         myTests().main()
 
@@ -76,10 +76,10 @@ Write Code Questions
 
         .. tab:: Question
 
-            Write a program that creates a dictionary letter_count that keeps track
+            Write a program that creates a dictionary ``letter_count`` that keeps track
             of the amount of times each letter appears in the given phrase. Assign the
-            number of times "e" appears in the phrase to the variable "e_counter". Make
-            sure to account for each letter in its lowercase form.
+            number of times "e" appears in the phrase to the variable ``e_counter``. Make
+            sure to account for each letter in its lowercase form. For example, ``e_counter`` should be ``10``, and ``letter_count['e']`` should be ``10``.
 
             .. activecode:: dict_writecode3q
                 :practice: T
@@ -93,8 +93,9 @@ Write Code Questions
                 class myTests(TestCaseGui):
 
                     def testOne(self):
-                        self.assertEqual(len(letter_count), 21, "Making sure all 21 letters were accounted for.")
-                        self.assertEqual(e_counter, 10, "Making sure there are 10 e's accounted for.")
+                        self.assertEqual(len(letter_count), 21, "len(letter_count)")
+                        self.assertEqual(e_counter, 10, "e_counter")
+                        self.assertEqual(letter_count['e'], 10, "letter_count['e']")
 
                 myTests().main()
 
@@ -128,9 +129,10 @@ Write Code Questions
         :practice: T
         :nocodelens:
 
-        Write a program that reads the words in the string 'phrase' and counts how many times each word appears.
-        Store the words as keys in the dictionary 'word_dictionary', then use the ``in`` operator as a fast way to
-        check whether the string is in the dictionary.
+        Write a program that reads the words in the string ``phrase`` and counts how many times each word appears.
+        Store the words as keys in the dictionary ``word_dictionary``, and then use the in operator as a fast way to
+        check whether the string is in the dictionary. For example, ``word_dictionary['Writing']`` should be ``1``. (Note: 'Writing' and 'writing' would be counted as two separate words for this question.)
+
         ~~~~
         phrase = "Writing programs or programming is a very creative and rewarding activity  You can write programs for many reasons ranging from making your living to solving a difficult data analysis problem to having fun to helping someone else solve a problem  This book assumes that {\em everyone} needs to know how to program and that once you know how to program, you will figure out what you want to do with your newfound skills"
 
@@ -140,9 +142,9 @@ Write Code Questions
         class myTests(TestCaseGui):
 
             def testOne(self):
-                self.assertEqual(len(word_dictionary), 56, "Checking that all the words made it into the list.")
-                self.assertEqual(word_dictionary['Writing'], 1, "Checking that 'Writing' appears once in the dictionary.")
-                self.assertEqual(word_dictionary['a'], 3, "Making sure the letter 'a' appears three times as a word in the given phrase.")
+                self.assertEqual(len(word_dictionary), 56, "len(word_dictionary)")
+                self.assertEqual(word_dictionary['Writing'], 1, "word_dictionary['Writing']")
+                self.assertEqual(word_dictionary['a'], 3, "word_dictionary['a']")
 
         myTests().main()
 
@@ -184,9 +186,9 @@ Here is the words.txt file for Question 5.
 
         .. tab:: Question
 
-            Write code that reads in the text from the file words.txt, and uses
-            the dictionary 'word_count' to count the amount of times a word appears
-            in the file. Watch out for repetition using the .lower() function.
+            Write code that reads in the text from the file words.txt and uses
+            the dictionary ``word_count`` to count the amount of times a word appears
+            in the file. Watch out for repetition using the .lower() function. For example, ``word_count['and']`` should be ``5``.
 
             .. datafile:: words.txt
                 :fromfile: words.txt
@@ -202,9 +204,9 @@ Here is the words.txt file for Question 5.
                 class myTests(TestCaseGui):
 
                     def testOne(self):
-                        self.assertEqual(len(word_count), 119, "Making sure all the words were accounted for.")
-                        self.assertEqual(word_count['and'], 5, "Checking if 'and' is counted for 5 times.")
-                        self.assertEqual(word_count['what'], 3, "Checking if 'what' appears 3 times.")
+                        self.assertEqual(len(word_count), 119, "len(word_count)")
+                        self.assertEqual(word_count['and'], 5, "word_count['and']")
+                        self.assertEqual(word_count['what'], 3, "word_count['what']")
 
                 myTests().main()
 
@@ -241,8 +243,10 @@ Here is the words.txt file for Question 5.
     .. activecode:: dict_writecode6
         :nocodelens:
 
-        Perform the same task as in question 4, but this time make sure to look at words in
-        lowercase in order to avoid any repetition.
+        Write a program that reads the words in the string ``phrase`` and counts how many times each word appears.
+        Store the words as keys in the dictionary ``word_dictionary``, and then use the in operator as a fast way to
+        check whether the string is in the dictionary. Make sure to turn all letters in words into lowercase letters in order to avoid any repetition. 
+        For example, ``word_dictionary.get('Writing', 0)`` should be ``0``, and ``word_dictionary['writing']`` should be ``1``.
         ~~~~
         phrase = "Writing programs or programming is a very creative and rewarding activity  You can write programs for many reasons ranging from making your living to solving a difficult data analysis problem to having fun to helping someone else solve a problem  This book assumes that {\em everyone} needs to know how to program and that once you know how to program, you will figure out what you want to do with your newfound skills"
 
@@ -252,10 +256,10 @@ Here is the words.txt file for Question 5.
         class myTests(TestCaseGui):
 
             def testOne(self):
-                self.assertEqual(len(word_dictionary), 55, "Checking that all the terms were accounted for in the new list.")
-                self.assertEqual(word_dictionary['you'], 4, "Checking the amount of times 'you' appears in the phrase.")
-                self.assertEqual(word_dictionary['writing'], 1, "Making sure 'writing' appears just once in the dictionary.")
-                self.assertEqual(word_dictionary.get('Writing', 0), 0, "Checking to make sure 'Writing' is no longer in the dictionary.")
+                self.assertEqual(len(word_dictionary), 55, "len(word_dictionary)")
+                self.assertEqual(word_dictionary['you'], 4, "word_dictionary['you']")
+                self.assertEqual(word_dictionary['writing'], 1, "word_dictionary['writing']")
+                self.assertEqual(word_dictionary.get('Writing', 0), 0, "word_dictionary.get('Writing', 0)")
 
         myTests().main()
 
@@ -279,7 +283,7 @@ Below is the romeo3.txt file used in Question 7.
 
             Write code to read through the lines of the file, break each line into a list of
             words, and then loop through each of the words in the line and count each word using
-            the dictionary "counts".
+            the dictionary ``counts``. For example, ``counts['is']`` should be ``3``.
 
             .. datafile:: romeo3.txt
                 :fromfile: romeo.txt
@@ -295,9 +299,9 @@ Below is the romeo3.txt file used in Question 7.
                 class myTests(TestCaseGui):
 
                     def testOne(self):
-                        self.assertEqual(len(counts), 26, "Making sure all 26 words made it into the dictionary.")
-                        self.assertEqual(counts['is'], 3, "Checking 'is' was only counted for three times.")
-                        self.assertEqual(counts['arise'], 1, "Checking to make sure 'arise' appears once in the dictionary.")
+                        self.assertEqual(len(counts), 26, "len(counts)")
+                        self.assertEqual(counts['is'], 3, "counts['is']")
+                        self.assertEqual(counts['arise'], 1, "counts['arise']")
 
                 myTests().main()
 
@@ -334,7 +338,7 @@ Below is the romeo3.txt file used in Question 7.
         :practice: T
         :nocodelens:
 
-        Write code that adds the key 'two' with a value of 'dos' to the dictionary eng2sp.
+        Write code that adds the key 'two' with a value of 'dos' to the dictionary ``eng2sp``. For example, ``eng2sp['two']`` should be ``'dos'``.
         ~~~~
         eng2sp = {'one':'uno'}
 
@@ -344,7 +348,7 @@ Below is the romeo3.txt file used in Question 7.
         class myTests(TestCaseGui):
 
             def testOne(self):
-                self.assertEqual(eng2sp['two'], 'dos', "Making sure the correct value is associated with the key 'two'.")
+                self.assertEqual(eng2sp['two'], 'dos', "eng2sp['two']")
 
         myTests().main()
 
@@ -374,7 +378,8 @@ The next two questions are associated with the following text file which has an 
 
         .. tab:: Question
 
-            Add code to the program below to figure out who has the most messages in the file. After all the data has been read and the dictionary has been created, look through the dictionary using a maximum loop (see Chapter 5: Maximum and minimum loops) to find who has the most messages and print how many messages the person has.
+            Add code to the program below to figure out who has the most messages in the file. After all the data has been read and the dictionary ``message_count`` has been created, look through the dictionary using a maximum loop (see Chapter 5: Maximum and minimum loops) to find who has the most messages, 
+            and print how many messages the person has. For example, ``message_count['cwen@iupui.edu']`` should be ``5``.
 
             .. datafile:: mbox-short.txt3
                 :fromfile: mbox-short.txt
@@ -393,8 +398,8 @@ The next two questions are associated with the following text file which has an 
                 class myTests(TestCaseGui):
 
                     def testOne(self):
-                        self.assertEqual(message_count['cwen@iupui.edu'], '5', "Making sure 5 emails were sent from this email address.")
-                        self.assertEqual(len(message_count), 11, "Checking that all the emails made it into the dictionary.")
+                        self.assertEqual(message_count['cwen@iupui.edu'], '5', "message_count['cwen@iupui.edu']")
+                        self.assertEqual(len(message_count), 11, "len(message_count)")
 
                 myTests().main()
 
@@ -439,7 +444,8 @@ The next two questions are associated with the following text file which has an 
         :practice: T
         :available_files: mbox-short.txt
 
-        Write a program to record in the dictionary ``message_count`` the total number of messages from each domain name (not the whole address just the part after the @ and before the space). At the end of the program, print out the contents of your dictionary.
+        Write a program to record in the dictionary ``message_count`` the total number of messages from each domain name (not the whole address, just the part after the @ and before the space). At the end of the program, print out the contents of your dictionary. 
+        The domains should be the keys of the dictionary, and the counts of the domains should be the values of the dictionary. For example, ``message_count['iupui.edu']`` should be ``8``.
         ~~~~
         with open("mbox-short.txt2", "r") as filename:
             message_count = {}
@@ -450,7 +456,7 @@ The next two questions are associated with the following text file which has an 
         class myTests(TestCaseGui):
 
             def testOne(self):
-                self.assertEqual(message_count['iupui.edu'], '8', "Making sure 'iupui.edu' sent 8 emails.")
-                self.assertEqual(len(message_count), 6, "Checking that all the emails made it into the dictionary.")
+                self.assertEqual(message_count['iupui.edu'], '8', "message_count['iupui.edu']")
+                self.assertEqual(len(message_count), 6, "len(message_count)")
 
         myTests().main()
