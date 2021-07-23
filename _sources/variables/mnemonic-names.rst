@@ -130,26 +130,16 @@ you will begin to read Python and quickly determine what is a variable
 and what is a reserved word.
 
 
-.. mchoice:: var-mnemonic-mc-name
+.. mchoice:: var-mnemonic-mc-name-v2
    :practice: T
    :answer_a: word
-   :answer_b: chocolate_chip
+   :answer_b: ingredients
    :answer_c: gelPens
    :answer_d: pizza
    :correct: b
-   :feedback_a: No, which variable name would be useful when talking about cookies?
-   :feedback_b: Yes, the variable chocolate_chip would be handy for counting the chocolate chips in a cookie.
-   :feedback_c: No, which variable name would be useful when talking about cookies?
-   :feedback_d: While this could be useful for comparing cookies to pizza, which variable name best relates to ingredients in cookies?
+   :feedback_a: No, which variable name would be useful when talking about the number of ingredients?
+   :feedback_b: Yes, the variable ingredients would be handy for counting the ingredients in a cookie.
+   :feedback_c: No, which variable name would be useful when talking about the number of ingredients?
+   :feedback_d: No, which variable name would be useful when talking about the number of ingredients?
 
    Which variable name would best be used for counting the ingredients in cookies?
-
-.. dragndrop:: var-mnemonic-dnd-variable
-   :practice: T
-   :feedback: Which items make the most sense together?
-   :match_1: chocolate_chip|||Counting cookie ingredients
-   :match_2: gelPens|||Rating writing utensils
-   :match_3: pizza|||Taking lunch orders
-   :match_4: word|||Counting how many times "the" appears in a paragraph
-
-   Match each variable name with the program it would be most useful with.

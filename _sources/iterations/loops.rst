@@ -160,12 +160,12 @@ to the constant ``None``. ``None`` is a special
 constant value which we can store in a variable to mark the variable as
 "empty".
 
-.. mchoice:: inLoops_MC_none
+.. mchoice:: inLoops_MC_none_v2
     :practice: T
     :answer_a: It is a constant value.
-    :answer_b: It is a constant variable.
+    :answer_b: It is a variable.
     :answer_c: It marks a variable as empty.
-    :answer_d: The value of a variable it's assigned to cannot be changed.
+    :answer_d: The value of a variable that starts off as ``None`` can change.
     :correct: b
     :feedback_a: Incorrect! None is a constant value. Try again.
     :feedback_b: Correct! None is a constant value that can be assigned to a variable, not a variable itself.

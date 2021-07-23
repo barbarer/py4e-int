@@ -1,12 +1,12 @@
 Mixed-up Code Questions
 -----------------------
 
-.. parsonsprob:: var-mixed-hello
+.. parsonsprob:: var-mixed-hello-v2
    :practice: T
    :numbered: left
    :adaptive:
 
-   The following program segment should prompt the user for their name and say hello to them.
+   The following program segment should prompt the user for their name, assign a value to ``greeting``, and then say hello using the name.
    But, the blocks have been mixed up and include extra blocks that aren't correct.
    -----
    name = input('What is your name?\n')
@@ -178,7 +178,7 @@ Mixed-up Code Questions
    :practice: T
    :noindent:
 
-   The following program segment should print the phrase, "3 + 300 + 7 = 310.". But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   The following program segment should print the phrase, "3 + 300 + 7 = 310.". But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the *Check Me* button to check your solution.
    -----
    num1 = 3
    num2 = 300

@@ -3,7 +3,7 @@ Debugging
 .. index::
     single: Debugging
     pair: Debugging; By Bisection
-    
+
 As you start writing bigger programs, you might find yourself spending
 more time debugging. More code means more chances to make an error and
 more places for bugs to hide.
@@ -31,17 +31,6 @@ lines and find the exact midpoint. Instead, think about places in the
 program where there might be errors and places where it is easy to put a
 check. Then choose a spot where you think the chances are about the same
 that the bug is before or after the check.
-
-.. mchoice:: itDebug_MC_cutTime
-    :answer_a: debugging by bisection
-    :answer_b: write bigger programs
-    :answer_c: always writing shorter programs in general
-    :correct: a
-    :feedback_a: Correct! Debugging by bisection can cut down your debugging time.
-    :feedback_b: Incorrect! Writing bigger programs will likely increase your debugging time. Try again.
-    :feedback_c: Incorrect! Just because a program is shorter does not mean that it will be faster to debug. Try again.
-
-    One way to cut your debugging time is through...
 
 .. mchoice:: itDebug_MC_bisection
     :answer_a: writing the entire program at once and looking at the code collectively to find the error

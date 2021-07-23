@@ -158,7 +158,7 @@ Mixed-Up Code Questions
    =====
    combination = dict()
    =====
-   for i in len(keys):
+   for i in range(len(keys)):
    =====
    for i in keys(): #distractor
    =====
@@ -275,7 +275,7 @@ Mixed-Up Code Questions
    =====
    characters = {}
    =====
-   characters = dictioanry #distractor
+   characters = dictionary() #distractor
    =====
    for character in sentence:
    =====
