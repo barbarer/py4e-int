@@ -10,7 +10,7 @@ Mixed-up Code Questions
     -----
     def password_maker():
     =====
-    words = ["sunshine", "grapes", "magic", "serendipity", "unicorns", "bubbles", "card", "yellow", "candle"]
+    words = ["sunshine", "grapes", "magic", "serendipity", "unicorns", "Bubbles", "card", "yellow", "candle"]
     password = ""
     =====
     for letter in words:
@@ -33,12 +33,12 @@ Mixed-up Code Questions
         words = ["sunshine", "grapes", "magic", "serendipity", "unicorns", "Bubbles", "card", "yellow", "candle"]
         password = ""
 
-        
+
     ====
     from unittest.gui import TestCaseGui
 
     class myTests(TestCaseGui):
-        
+
         def testOne(self):
             self.assertEqual(password_maker(), "segsmcsyusBscdywce", "Takes the first and last letter of each word and appends them together to a single string")
 
@@ -68,7 +68,7 @@ Mixed-up Code Questions
     =====
         for day in rain:
     =====
-        for day in rain #distractor
+        for day in rain #paired
     =====
             if day >= 0:
     =====
@@ -83,33 +83,33 @@ Mixed-up Code Questions
     =====
         else:
     =====
-        else #distractor
+        else #paired
     =====
             return "No rain"
 
 
 .. activecode::  str-listMixed_rainfall-ac
 
-    Let’s imagine that you have a list that contains amounts of rainfall for each day, collected by a 
+    Let’s imagine that you have a list that contains amounts of rainfall for each day, collected by a
     meteorologist. Her rain gathering equipment occasionally makes a mistake and reports a negative amount
-    for that day. We have to ignore those. Finish to code to (a) calculate the total rainfall by adding up 
-    all the positive integers (and only the positive integers), (b) count the number of positive integers 
-    (we will count with “1.0” so that our average can have a decimal point), and (c) print out the average 
-    rainfall at the end. Only print the average if there was some rainfall, otherwise print “No rain”. 
+    for that day. We have to ignore those. Finish to code to (a) calculate the total rainfall by adding up
+    all the positive integers (and only the positive integers), (b) count the number of positive integers
+    (we will count with “1.0” so that our average can have a decimal point), and (c) print out the average
+    rainfall at the end. Only print the average if there was some rainfall, otherwise print “No rain”.
 
     ~~~~
     def rainfall():
         rain = [0,5,1,0,-1,6,7,-2,0]
         sumRain = 0
         count = 0
-   
+
         for day in rain:
             if day >= 0:
-                sumRain = 
-                count = 
+                sumRain =
+                count =
         if count > 0:
-            ave = 
-            print("Average: " + str(ave))
+            ave =
+            print("Average: " )
             return str(ave)
         else:
             return "No rain"
@@ -155,7 +155,7 @@ Mixed-up Code Questions
     def mixed():
         numbers = [3, 2, 1, 4]
 
-        first = 
+        first =
         last =
 
     ====
@@ -163,7 +163,7 @@ Mixed-up Code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(mixed_numbers(), [4,2,1,3], "Swapping first and last element")
+            self.assertEqual(mixed(), [4,2,1,3], "Swapping first and last element")
 
     myTests().main()
 
@@ -186,9 +186,9 @@ Mixed-up Code Questions
             new_price = round((price * .50), 2)
             discounts.append(new_price)
     =====
-        for price in discounts: #distractor
+        for price in discounts: #paired
     =====
-            price.append(price_lst) #distractor
+            price.append(price_lst) #paired
     =====
         return discounts
 
@@ -201,9 +201,9 @@ Mixed-up Code Questions
     def discount():
         price_lst = [21.99, 25.99, 19.99, 10.99, 15.99]
         discounts = []
-  
+
         for price in price_lst:
-            new_price = 
+            new_price =
 
     ====
     from unittest.gui import TestCaseGui
@@ -220,8 +220,8 @@ Mixed-up Code Questions
     :practice: T
     :adaptive:
 
-    The following program segment should iterate through the strings in <i>list</i> and append them
-    to <i>long_list</i> if the length is greater than 4. But, the blocks have been mixed up and
+    The following program segment should iterate through the strings in "list" and append them
+    to "long_list" if the length is greater than 4. But, the blocks have been mixed up and
     include an extra block that isn't needed in the solution.
     -----
     def michigan():
@@ -235,14 +235,14 @@ Mixed-up Code Questions
     =====
                 long_list.append(item)
     =====
-                item.append(long_list) #distractor
+                item.append(long_list) #paired
     =====
         return long_list
 
 
 .. activecode::  str-listMixed_append-ac
 
-    Finish the code below to iterate through the strings in <i>list</i> and append them to <i>long_list</i> 
+    Finish the code below to iterate through the strings in "list" and append them to "long_list"
     if the length is greater than 4.
 
     ~~~~
@@ -251,7 +251,7 @@ Mixed-up Code Questions
         long_list = []
 
         return long_list
-        
+
 
     ====
     from unittest.gui import TestCaseGui
@@ -268,7 +268,7 @@ Mixed-up Code Questions
     :practice: T
     :adaptive:
 
-    The following program segment should first replace the last item of the list <i>months</i> with
+    The following program segment should first replace the last item of the list "months" with
     "November" then append "December" to the end of the list. But, the blocks have been mixed up and
     include extra blocks that aren't needed in the solution.
     -----
@@ -281,16 +281,16 @@ Mixed-up Code Questions
     =====
         months.append("December")
     =====
-        months[5] = new_month #distractor
+        months[5] = new_month #paired
     =====
-        months[-1] = "December" #distractor
+        months[-1] = "December" #paired
     =====
         return months
 
 
 .. activecode::  str-listMixed_months-ac
 
-    Finish the code below to replace the last item of the list <i>months</i> with “November” then 
+    Finish the code below to replace the last item of the list "months" with “November” then
     append “December” to the end of the list
 
     ~~~~
@@ -314,9 +314,9 @@ Mixed-up Code Questions
     :practice: T
     :adaptive:
 
-    The following program segment should iterate through the list <i>terms</i> and then add each
-    item to the list <i>vocab</i> if it is not already in the list. If the word is already in
-    <i>vocab</i>, then the program should add 1 to the variable "counter". But the blocks have been
+    The following program segment should iterate through the list "terms" and then add each
+    item to the list "vocab" if it is not already in the list. If the word is already in
+    "vocab", then the program should add 1 to the variable "counter". But the blocks have been
     mixed up and include extra blocks that aren't needed in the solution.
     -----
     def vocab_list():
@@ -331,21 +331,21 @@ Mixed-up Code Questions
     =====
                 vocab.append(word)
     =====
-                word.append(vocab) #distractor
+                word.append(vocab) #paired
     =====
             elif word in vocab:
     =====
                 counter += 1
     =====
-                counter + 1 #distractor
+                counter + 1 #paired
     =====
         return vocab
 
 
 .. activecode::  str-ch16ex5muc-ac
 
-    Finish the code below to iterate through the list <i>terms</i> and then add each item to the 
-    list <i>vocab</i> if it is not already in the list. If the word is already in <i>vocab</i>, 
+    Finish the code below to iterate through the list "terms" and then add each item to the
+    list "vocab" if it is not already in the list. If the word is already in "vocab",
     then the program should add 1 to the variable “counter”.
 
     ~~~~
@@ -355,7 +355,7 @@ Mixed-up Code Questions
         counter = 0
 
         return vocab
-    
+
 
     ====
     from unittest.gui import TestCaseGui
@@ -372,8 +372,8 @@ Mixed-up Code Questions
     :practice: T
     :adaptive:
 
-    The following program segment should reverse the order of the list <i>oldList</i>, by storing
-    it in the list <i>newList</i>. Print the result at the end. The blocks have been mixed up and
+    The following program segment should reverse the order of the list "oldList", by storing
+    it in the list "newList". Print the result at the end. The blocks have been mixed up and
     include extra blocks that aren't needed in the solution.
     -----
     def reverse():
@@ -383,25 +383,25 @@ Mixed-up Code Questions
     =====
         for x in range(0, len(oldList)):
     =====
-        for x in range(0, list(oldList)): #distractor
+        for x in range(0, list(oldList)): #paired
     =====
             newList.insert(0,oldList[x])
     =====
-            newList = x[oldList] + newList #distractor
+            newList = x[oldList] + newList #paired
     =====
         return newList
 
 
 .. activecode::  str-listMixed_oldNew-ac
 
-    Finish the code below to reverse the order of the list <i>oldList</i>, by storing it in the 
-    list <i>newList</i>. Print the result at the end.
+    Finish the code below to reverse the order of the list "oldList", by storing it in the
+    list "newList". Print the result at the end.
 
     ~~~~
     def reverse():
         oldList= ['this', 'is', 'a', 'list']
         newList=[]
-  
+
         return newList
 
     ====
@@ -419,20 +419,23 @@ Mixed-up Code Questions
     :practice: T
     :adaptive:
 
-    The following program segment should have the user add a word to a new list <i>vocabulary</i> IF the word 
-    is not already in the original list. The blocks have been mixed up and include extra blocks that aren't 
+    The following program segment should have the user add a word to a new list ``vocabulary`` If the word
+    is not already in the original list. The blocks have been mixed up and include extra blocks that aren't
     needed in the solution.
     -----
     def instructions(response):
     =====
         wordList = ["hello", "day", "1982", "green", "water"]
+    =====
         vocabulary = []
     =====
-        if response in wordList: #distractor
+        if response in wordList: #paired
     =====
         if response not in wordList:
     =====
             vocabulary.append(response)
+    =====
+            response.append(vocabulary) #paired
     =====
         return vocabulary
 
@@ -440,8 +443,8 @@ Mixed-up Code Questions
 .. activecode::  str-listMixed_instructions-ac
 
     Finish the code below to first print out the program's instructions. Next it should
-    have the user add a word to a new list <i>vocabulary</i> if they choose and then append it
-    to the end the list IF the word is not already in the original list. 
+    have the user add a word to a new list "vocabulary" if they choose and then append it
+    to the end the list IF the word is not already in the original list.
 
     ~~~~
     def instructions(response):
@@ -458,8 +461,8 @@ Mixed-up Code Questions
         def testOne(self):
             self.assertEqual(instructions("hello"), [], "Hello is already a word in the wordList, so vocabulary should be empty")
             self.assertEqual(instructions("maple"), ['maple'], "Checks if maple is added correctly")
-            
-            
+
+
 
 
     myTests().main()
@@ -475,11 +478,11 @@ Mixed-up Code Questions
     -----
     def countOdd(lst):
     =====
-    def countOdd() #distractor
+    def countOdd() #paired
     =====
     odd = 0
     =====
-    odd = 1 #distractor
+    odd = 1 #paired
     =====
     for e in lst:
     =====
@@ -491,18 +494,18 @@ Mixed-up Code Questions
     =====
     return odd
     =====
-    return countOdd #distractor
+    return countOdd #paired
 
 
 .. activecode::  str-listMixed_Odd-ac
 
-    Finish the code below to create a definition countOdd that takes in a list as its argument 
+    Finish the code below to create a definition countOdd that takes in a list as its argument
     and returns how many odd numbers are in the list.
 
     ~~~~
     def countOdd(lst):
-        odd = 0
-            
+        odd =
+
 
         return odd
 
@@ -512,8 +515,9 @@ Mixed-up Code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(countOdd([7,3,2,4,0]),2, "Out of 5 numbers counts the number of odds))
+            self.assertEqual(countOdd([7,3,2,4,0]),2, "Out of 5 numbers counts the number of odds")
             self.assertEqual(countOdd([5,3,2,6,78,31,2,3]), 4, "Out of 8 numbers, counts the number of odds")
+            self.assertEqual(countOdd([2,4]), 0, "Out of 2 numbers, counts the number of odds")
 
 
     myTests().main()
