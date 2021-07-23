@@ -185,7 +185,7 @@ Mixed-up code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertAlmostEqual(sum/6, 88.667)
+            self.assertAlmostEqual(sum/6, 88.66666666666667)
 
     myTests().main()
 
@@ -332,7 +332,7 @@ Mixed-up code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertAlmostEqual(average, 7.433)
+            self.assertAlmostEqual(average, 7.433333333333334)
 
     myTests().main()
 
@@ -367,6 +367,6 @@ Mixed-up code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(counter, 1)
+            self.assertEqual(counter, 0)
 
     myTests().main()
