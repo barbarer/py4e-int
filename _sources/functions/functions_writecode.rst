@@ -9,8 +9,9 @@ Functions Write Code Questions
                 :practice: T
                 :autograde: unittest
 
-                Fix the 5 errors in following code for the function ``remainder`` so that it takes in two numbers as parameters (x and y), 
-                where x is required but y is optional and defaults to 4. The function should return the remainder of x divided by y.  
+                Fix the 5 errors in following code for the function ``remainder`` so that it takes in two numbers as parameters (``x`` and ``y``), 
+                where ``x`` is required but ``y`` is optional and defaults to 4. The function should return the remainder of ``x`` divided by ``y``.
+                For example, ``remainder(5)`` should return ``1``.  
                 ~~~~
                 def remainder(x, y)
                 z = x // y
@@ -23,6 +24,7 @@ Functions Write Code Questions
                     def testOne(self):
                         self.assertEqual(remainder(5, 1),0,"Tested remainder on inputs 5 and 1")
                         self.assertEqual(remainder(0, 4),0,"Tested remainder on inputs 0 and 4")
+                        self.assertEqual(remainder(2, 3),2,"Tested remainder on inputs 2 and 3")
                         self.assertEqual(remainder(5),1,"Tested remainder on input 5 with default y = 4")
 
                 myTests().main()
@@ -53,8 +55,8 @@ Functions Write Code Questions
                 :practice: T
                 :autograde: unittest
 
-                Create a function called area_of_rectangle that takes in parameters width and length and 
-                returns the area (of the rectangle).
+                Create a function called ``area_of_rectangle`` that takes in parameters ``width`` and ``length`` and 
+                returns the area (of the rectangle). For example, ``area_of_rectangle(5,4)`` should return ``20``.
                 ~~~~
                 def area_of_rectangle(width, length):
                     # write code here
@@ -70,16 +72,6 @@ Functions Write Code Questions
                 myTests().main()
 
 
-        .. tab:: Answer
-
-            .. activecode:: funct_writecode2a
-                :optional:
-
-                def area_of_rectangle(width, length):
-                    area = width * length
-                    return area
-
-
 #.
     .. tabbed:: funct_writecode3
 
@@ -89,8 +81,9 @@ Functions Write Code Questions
                 :practice: T
                 :autograde: unittest
 
-                Create a function with a function name welcome_message that takes in a parameter name and 
-                returns "Hello (name)! We hope that you will enjoy this course. :)".
+                Create a function called ``welcome_message`` that takes in a parameter ``name`` and 
+                returns ``"Hello (name)! We hope that you will enjoy this course. :)"``. For example, 
+                ``welcome_message('Aurora')`` should return ``"Hello Aurora! We hope that you will enjoy this course. :)"``.
                 ~~~~
                 def welcome_message(name):
                     # write code here
@@ -124,7 +117,8 @@ Functions Write Code Questions
                 :practice: T
                 :autograde: unittest
 
-                Create a function called birthday that takes in three parameters (month, day, and year) and returns it in the format MM/DD/YYYY. 
+                Create a function called ``birthday`` that takes in three parameters (``month``, ``day``, and ``year``) and returns it in the format MM/DD/YYYY. 
+                For example, ``birthday(5, 17, 1990)`` should return ``"5/17/1990"``. 
                 ~~~~
                 def birthday(month, day, year):
                     # write code here
@@ -143,15 +137,6 @@ Functions Write Code Questions
                 myTests().main()
 
 
-        .. tab:: Answer
-
-            .. activecode:: funct_writecode4a
-                :optional:
-
-                def birthday(month, day, year):
-                    return str(month) + "/" + str(day) + "/" + str(year)
-
-
 #.
    .. tabbed:: funct_writecode5
 
@@ -161,10 +146,10 @@ Functions Write Code Questions
                 :practice: T
                 :autograde: unittest
 
-                Write a function ``address`` which combines 3 different string address parameters (city, state, and pin) to print a user's address. 
-                After every address input, add a comma and a space (e.g., final string = "address1, address2, address3").
+                Write a function called ``address`` that combines 3 different string address parameters (``city``, ``state``, and ``zip``) and returns a user's address. 
+                After every address input, add a comma and a space.
                 ~~~~
-                def address(city, state, pin):
+                def address(city, state, zip):
                     # your code here
 
                 ====
@@ -187,8 +172,8 @@ Functions Write Code Questions
             .. activecode:: funct_writecode5a
                 :optional:
 
-                def address(city, state, pin):
-                    user_address = city + ", " + state + ", " + pin
+                def address(city, state, zip):
+                    user_address = city + ", " + state + ", " + zip
                     return user_address
 
 
@@ -219,16 +204,6 @@ Functions Write Code Questions
 
                 myTests().main()
 
-
-        .. tab:: Answer
-
-            .. activecode:: funct_writecode6a
-                :optional:
-
-                def squareArea(length):
-                    total_area = length * length
-                    answer = "The total area of the square with length " + str(length) + " is " + str(total_area) + "."
-                    return answer
 
 
 #.

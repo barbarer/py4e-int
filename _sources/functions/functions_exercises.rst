@@ -30,7 +30,7 @@ Functions Multiple Choice Questions
     :feedback_d: Incorrect! When you do a larger number % a smaller number, the answer will be the remainder of the larger number divided by the smaller number. When you do a smaller number % a larger number, the answer will always be the smaller number.
     :feedback_e: Incorrect! When you do a smaller number % a larger number, the answer will always be the smaller number. When you do a number % the same number, the answer will always be 0.
 
-    What will be returned after calling funcwithmodulus(100,95) and funcwithmodulus(95.3,100.5) and funcwithmodulus(12,12)?
+    What will be returned after calling ``funcwithmodulus(100,95)`` and ``funcwithmodulus(95.3,100.5)`` and ``funcwithmodulus(12,12)``?
 
     .. code-block:: python
 
@@ -51,7 +51,7 @@ Functions Multiple Choice Questions
     :feedback_d: Incorrect! Single division is floating point division. Double division is integer division, and it outputs the floor of the value.
     :feedback_e: Correct! 
 
-    What will be printed after calling single_double_division(100, 95) and single_double_division(5, 7) and single_double_division(7, 5)? (Note: Ignore whitespaces.)
+    What will be printed after calling ``single_double_division(100, 95)`` and ``single_double_division(5, 7)`` and ``single_double_division(7, 5)``? (Note: Ignore whitespaces.)
 
     .. code-block:: python
 
