@@ -3,21 +3,23 @@ Multiple Choice Questions
 
 .. mchoice:: TupleExquestion10_1
    :practice: T
-   :answer_a: aTuple[1:2][1]
-   :answer_b: aTuple[2][1]
-   :answer_c: aTuple[1:2](1)
-   :answer_d: aTuple[1][1]
+   :answer_a: return aTuple[1:2][1]
+   :answer_b: return aTuple[2][1]
+   :answer_c: return aTuple[1:2](1)
+   :answer_d: return aTuple[1][1]
    :correct: d
    :feedback_a: Incorrect! Running this code would result in an error. Try again.
    :feedback_b: Incorrect! This would access the value 15. Try again.
    :feedback_c: Incorrect! Running this code would result in an error. Try again.
    :feedback_d: Correct! This first goes to the second item in the tuple, then grabs the second item from the list, which is 20.
 
-   Choose the correct way to access the value 20 from the following tuple.
+   Choose the correct way to make the function ``practice_with_slicing`` return the value 20.
 
    .. code-block:: python
 
-      aTuple = ("Orange", [10, 20, 30], (5, 15, 25))
+      def practice_with_slicing():
+          aTuple = ("Orange", [10, 20, 30], (5, 15, 25))
+          # return statement
 
 .. mchoice:: TupleExquestion10_2
    :practice: T
@@ -42,12 +44,13 @@ Multiple Choice Questions
    :feedback_c: Incorrect! Arrays do not exist in Python. Try again.
    :feedback_d: Correct! To create a tuple with a single item, there must be a comma after the first item.
 
-   What is the type of the following variable?
+   What is the type of the following ``aTuple``?
 
    .. code-block:: python
 
-      aTuple = ("Orange")
-      print(type(aTuple))
+      def practice_with_var_types():
+          aTuple = ("Orange")
+          return type(aTuple)
 
 .. mchoice:: TupleExquestion10_4
    :practice: T
@@ -65,9 +68,10 @@ Multiple Choice Questions
 
    .. code-block:: python
 
-      aTuple = "Yellow", 20, "Red"
-      a, b, c = aTuple
-      print(a)
+      def practice_with_var_assignment():
+          aTuple = "Yellow", 20, "Red"
+          a, b, c = aTuple
+          return a
 
 .. mchoice:: TupleExquestion10_5
    :practice: T
@@ -81,13 +85,14 @@ Multiple Choice Questions
    :feedback_c: Incorrect! Remember, tuples are immutable. Try again.
    :feedback_d: Incorrect! Remember, tuples are immutable. Try again.
 
-   What is printed when the following code is run?
+   What is returned when the following code is run?
 
    .. code-block:: python
 
-      aTuple = (100, 200, 300, 400, 500)
-      aTuple[1] = 800
-      print(aTuple)
+      def tuple_indexing():
+          aTuple = (100, 200, 300, 400, 500)
+          aTuple[1] = 800
+          return aTuple
 
 .. mchoice:: TupleExquestion10_6
    :practice: T
@@ -105,12 +110,15 @@ Multiple Choice Questions
 
    .. code-block:: python
 
-      tupl1 = (5, 3, 1, 9, 0)
+      def practice_with_slicing():
+          tupl1 = (5, 3, 1, 9, 0)
+          # options i, ii, iii, or iv
 
-      i) print(tup1[:-1])
-      ii) print(tup1[0:5])
-      iii) print(tupl1[0:4])
-      iv) print(tupl1[-4:])
+
+      i) return tup1[:-1]
+      ii) return tup1[0:5]
+      iii) return tupl1[0:4]
+      iv) return tupl1[-4:]
 
 .. mchoice:: TupleExquestion10_7
    :practice: T
@@ -124,7 +132,8 @@ Multiple Choice Questions
 
    .. code-block:: python
 
-      (66, 4, 17, 4) < (66, 4, 16, 5)
+      def tuple_comparison():
+          return (66, 4, 17, 4) < (66, 4, 16, 5)
 
 .. mchoice:: TupleExquestion10_8
    :practice: T
@@ -138,11 +147,13 @@ Multiple Choice Questions
    :feedback_c: Incorrect! The value of -1 means to stop after the second to last item. Try again.
    :feedback_d: Correct! This tuple slicing grabs the second item all the way to the second to last item.
 
-   What is the value of a[1:-1] if it exists?
+   What is returned when the following code is run?
 
    .. code-block:: python
 
-      a = (1, 2, 3, 4)
+      def slice_practice():
+          a = (1, 2, 3, 4)
+          return a[1:-1]
 
 
 .. mchoice:: TupleExquestion10_9
@@ -168,10 +179,12 @@ Multiple Choice Questions
    :feedback_b: Incorrect! Hint: think about how tuple assignment works and apply that knowledge to lists. Try again.
    :feedback_c: Correct! y is associated with the last value of tuple m.
 
-   What is printed when the following code is written?
+   What is returned when the following code is run?
 
    .. code-block:: python
 
-      m = ['have', 'fun']
-      x, y = m
-      print(y)
+      def tuple_assignment_practice():
+          m = ('have', 'fun')
+          m = list(m)
+          x, y = m
+          return y
