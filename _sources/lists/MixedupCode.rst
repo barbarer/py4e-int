@@ -1,4 +1,4 @@
-Mixed-up Code Questions
+Mixed-Up Code Questions
 -----------------------
 
 .. selectquestion:: list_MUC_Password_creator_sq
