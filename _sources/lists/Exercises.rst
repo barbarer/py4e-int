@@ -182,7 +182,7 @@ Multiple Choice Questions
         for n in nums:
             s = s + n
 
-.. mchoice:: assess_question5_2_1_2
+.. mchoice:: listEx_MC10
     :answer_a: 1.
     :answer_b: 2.
     :answer_c: 3.
@@ -235,3 +235,137 @@ Multiple Choice Questions
         for item in lst:
             if type(item) == type("string"):
                 s = s + 1
+
+
+.. mchoice:: listEx_MC11
+    :practice: T
+    :answer_a: [3, 0, 2, 0, 0]
+    :answer_b: [3, 0, 2]
+    :answer_c: [3, 2]
+    :answer_d: [3, 2, 0]
+    :correct: d
+    :feedback_a: The list is modified by the pop.
+    :feedback_b: It will pop 0's except for the last one.
+    :feedback_c: This would be true if it didn't always increment the index.
+    :feedback_d: Since it always increments the index it will miss the last zero.
+
+    What will the following code print?
+
+    ::
+
+        def mystery(num_list):
+            index = 0
+            while index < len(num_list):
+                num = num_list[index]
+                if num == 0:
+                    num_list.pop(index)
+                index += 1
+
+        list1 = [3, 0, 2, 0, 0]
+        mystery(list1)
+        print(list1)
+
+.. mchoice:: listEx_MC12
+    :practice: T
+    :answer_a: 1
+    :answer_b: 9
+    :answer_c: 15
+    :answer_d: None
+    :correct: a
+    :feedback_a: It adds 1 to the sum and then returns.
+    :feedback_b: This would be true if it didn't return until after the loop finished
+    :feedback_c: This would be true if it didn't return until after the loop finished and the range incremented by 1 rather than 2
+    :feedback_d: This would be true if there wasn't a return statement
+
+    What will the following code print?
+
+    ::
+
+        def mystery(num_list):
+            sum = 0
+            for i in range(0, len(num_list), 2):
+                num = num_list[i]
+                sum += num
+                return sum
+
+        list1 = [1, 2, 3, 4, 5]
+        print(mystery(list1))
+
+.. mchoice:: listEx_MC13
+    :practice: T
+    :answer_a: True
+    :answer_b: False
+    :answer_c: None
+    :answer_d: It will not compile
+    :correct: a
+    :feedback_a: It returns true after checking the first num.
+    :feedback_b: This would be true if the first number in the list was negative.
+    :feedback_c: This would be true if there wasn't a return statement.
+    :feedback_d: This would be true if there was a syntax error.
+
+    What will the following code print?
+
+    ::
+
+        def mystery(num_list):
+            for num in num_list:
+                if num < 0:
+                    return False
+                else:
+                    return True
+
+        print(mystery([3, -1, 2]))
+
+
+.. mchoice:: listEx_MC14
+    :practice: T
+    :answer_a: [10, 15, 20]
+    :answer_b: [20, 15]
+    :answer_c: [15, 20]
+    :answer_d: [20, 15, 10]
+    :correct: c
+    :feedback_a: It only adds numbers that are greater than 10
+    :feedback_b: This would be true if append added at the front, but it adds at the end
+    :feedback_c: It adds all numbers greater than 10 in order.
+    :feedback_d: This would be true if append added at the front, but it adds at the end and it won't add the 10
+
+    What will the following code print?
+
+    ::
+
+        def mystery(num_list):
+            out = []
+            for num in num_list:
+                if num > 10:
+                    out.append(num)
+            return out
+
+
+        print(mystery([5, 10, 15, 20]))
+
+
+.. mchoice:: listEx_MC15
+    :practice: T
+    :answer_a: [5, 10, 15, 20]
+    :answer_b: [20, 15, 10, 5]
+    :answer_c: [5, 10, 15]
+    :answer_d: [20, 15, 10]
+    :correct: d
+    :feedback_a: It adds the numbers in reverse order
+    :feedback_b: This would be true if the end for range was less than 0
+    :feedback_c: It adds the numbers in reverse order
+    :feedback_d: It adds the numbers in reverse order, but stops before the item at index 0.
+
+    What will the following code print?
+
+    ::
+
+        def mystery(num_list):
+            out = []
+            for i in range(len(num_list) - 1,0,-1):
+                num = num_list[i]
+                    out.append(num)
+            return out
+
+
+        print(mystery([5, 10, 15, 20]))
