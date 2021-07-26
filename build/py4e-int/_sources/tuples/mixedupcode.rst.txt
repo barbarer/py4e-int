@@ -6,15 +6,15 @@ Mixed-Up Code Questions
    :practice: T
    :adaptive:
 
-   Construct a block of code below to create a list of tuples, ``tup_list``, where the first element is the length of each word in ``txt`` and the second is the word itself. Sort the list in terms of word length from longest to shortest. For example, if ``txt="hi bye"``, ``tup_list`` would be ``[(3, 'bye'), (2, 'hi')]`` after this code executes. Note: there is one block that won't be used in the solution!
+   Construct a block of code below to create a list of tuples, ``t``, where the first element is the length of each word in ``txt`` and the second is the word itself. Sort the list in terms of word length from longest to shortest. For example, if ``txt="hi bye"``, ``tup_list`` would be ``[(3, 'bye'), (2, 'hi')]`` after this code executes.
    -----
    txt = 'but soft what light in yonder window breaks'
    words = txt.split()
    t = []
    =====
-   for word in words.split(): #distractor
-   =====
    for word in words:
+   =====
+   for word in words.split(): #paired
    =====
        t.append((len(word), word))
    =====
@@ -28,7 +28,7 @@ Mixed-Up Code Questions
    :numbered: left
    :adaptive:
 
-   Reorder the blocks of code to create a list, ``tup_list``, containing tuples of each word from ``word_list`` paired with their lengths. Then sort the words by length from highest to lowest.  For example, if ``word_list = ['hi', 'bye']`` then ``tup_list`` would be ``[('bye', 3), ('hi', 2)]`` Note: there are two blocks that won't be used in the solution!
+   Reorder the blocks of code to create a list, ``tup_list``, containing tuples of each word from ``word_list`` paired with its length. Then sort the words by length from highest to lowest.  For example, if ``word_list = ['hi', 'bye']`` then ``tup_list`` would be ``[('bye', 3), ('hi', 2)]`` 
    -----
    word_list = ['pen', 'skyscraper', 'post', 'computer', 'apple', 'Hollywood']
    tup_list = []

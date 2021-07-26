@@ -287,7 +287,7 @@
         <div class="runestone" style="max-width: none;">
         <div data-component="parsons" id="mixedupcode_question10_1" class="alert alert-warning parsons" >
         <div class="parsons_question parsons-text" >
-    <p>Construct a block of code below to create a list of tuples, <code class="docutils literal notranslate"><span class="pre">tup_list</span></code>, where the first element is the length of each word in <code class="docutils literal notranslate"><span class="pre">txt</span></code> and the second is the word itself. Sort the list in terms of word length from longest to shortest. For example, if <code class="docutils literal notranslate"><span class="pre">txt=&quot;hi</span> <span class="pre">bye&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">tup_list</span></code> would be <code class="docutils literal notranslate"><span class="pre">[(3,</span> <span class="pre">'bye'),</span> <span class="pre">(2,</span> <span class="pre">'hi')]</span></code> after this code executes. Note: there is one block that won’t be used in the solution!</p>
+    <p>Construct a block of code below to create a list of tuples, <code class="docutils literal notranslate"><span class="pre">t</span></code>, where the first element is the length of each word in <code class="docutils literal notranslate"><span class="pre">txt</span></code> and the second is the word itself. Sort the list in terms of word length from longest to shortest. For example, if <code class="docutils literal notranslate"><span class="pre">txt=&quot;hi</span> <span class="pre">bye&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">tup_list</span></code> would be <code class="docutils literal notranslate"><span class="pre">[(3,</span> <span class="pre">'bye'),</span> <span class="pre">(2,</span> <span class="pre">'hi')]</span></code> after this code executes.</p>
 
         </div>
         <pre  class="parsonsblocks" data-question_label="11.12.1"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
@@ -295,9 +295,9 @@
 words = txt.split()
 t = []
 ---
-for word in words.split(): #distractor
----
 for word in words:
+---
+for word in words.split(): #paired
 ---
     t.append((len(word), word))
 ---
@@ -313,7 +313,7 @@ t.sort(reverse = False) #paired
         <div class="runestone" style="max-width: none;">
         <div data-component="parsons" id="mixedupcode_question10_2" class="alert alert-warning parsons" >
         <div class="parsons_question parsons-text" >
-    <p>Reorder the blocks of code to create a list, <code class="docutils literal notranslate"><span class="pre">tup_list</span></code>, containing tuples of each word from <code class="docutils literal notranslate"><span class="pre">word_list</span></code> paired with their lengths. Then sort the words by length from highest to lowest.  For example, if <code class="docutils literal notranslate"><span class="pre">word_list</span> <span class="pre">=</span> <span class="pre">['hi',</span> <span class="pre">'bye']</span></code> then <code class="docutils literal notranslate"><span class="pre">tup_list</span></code> would be <code class="docutils literal notranslate"><span class="pre">[('bye',</span> <span class="pre">3),</span> <span class="pre">('hi',</span> <span class="pre">2)]</span></code> Note: there are two blocks that won’t be used in the solution!</p>
+    <p>Reorder the blocks of code to create a list, <code class="docutils literal notranslate"><span class="pre">tup_list</span></code>, containing tuples of each word from <code class="docutils literal notranslate"><span class="pre">word_list</span></code> paired with its length. Then sort the words by length from highest to lowest.  For example, if <code class="docutils literal notranslate"><span class="pre">word_list</span> <span class="pre">=</span> <span class="pre">['hi',</span> <span class="pre">'bye']</span></code> then <code class="docutils literal notranslate"><span class="pre">tup_list</span></code> would be <code class="docutils literal notranslate"><span class="pre">[('bye',</span> <span class="pre">3),</span> <span class="pre">('hi',</span> <span class="pre">2)]</span></code></p>
 
         </div>
         <pre  class="parsonsblocks" data-question_label="11.12.2"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">

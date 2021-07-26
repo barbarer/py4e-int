@@ -4,7 +4,7 @@ Write Code for Mixed-Up Code Questions
 .. activecode:: mixedupcode_question10_1_write
    :autograde: unittest
 
-   Finish the code below to create a list of tuples, ``tup_list``, where the first element is the length of each word in ``txt`` and the second is the word itself. Sort the list in terms of word length from longest to shortest. For example, if ``txt="hi bye"`` then ``tup_list`` would be ``[(3, 'bye'), (2, 'hi')]`` after this code executes.
+   Finish the code below to create a list of tuples, ``t``, where the first element is the length of each word in ``txt`` and the second is the word itself. Sort the list in terms of word length from longest to shortest. For example, if ``txt="hi bye"`` then ``tup_list`` would be ``[(3, 'bye'), (2, 'hi')]`` after this code executes.
    ~~~~
    txt = 'but soft what light in yonder window breaks'
 
