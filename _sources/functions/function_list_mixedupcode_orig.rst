@@ -7,7 +7,8 @@ Functions and Lists Mixed-Up Code Questions
     :practice: T
 
     Create a function called ``second_half`` that takes in ``lst`` as a parameter and returns the second half of ``lst``.
-    For example, ``second_half([1])`` should return ``[1]``, ``second_half([1, 2, 3])`` should return ``[2, 3]``, and ``second_half([1, 2, 3, 4])`` should return ``[3, 4]``.
+    For example, ``second_half([1])`` should return ``[1]``, ``second_half([1, 2, 3])`` should return ``[2, 3]``, and ``second_half([1, 2, 3, 4])`` 
+    should return ``[3, 4]``.
     -----
     def second_half(lst):
     =====
@@ -26,8 +27,9 @@ Functions and Lists Mixed-Up Code Questions
    :practice: T
    :autograde: unittest
 
-   Create a function called ``second_half`` that takes in ``lst`` as a parameter and returns the second half of ``lst``.
-   For example, ``second_half([1])`` should return ``[1]``, ``second_half([1, 2, 3])`` should return ``[2, 3]``, and ``second_half([1, 2, 3, 4])`` should return ``[3, 4]``.
+   Write a function called ``second_half`` that takes in ``lst`` as a parameter and returns the second half of ``lst``.
+   For example, ``second_half([1])`` should return ``[1]``, ``second_half([1, 2, 3])`` should return ``[2, 3]``, and ``second_half([1, 2, 3, 4])`` 
+   should return ``[3, 4]``.
    ~~~~
 
    ====
@@ -49,16 +51,17 @@ Functions and Lists Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``sum_of_split_number`` that takes in ``string_number_with_hyphens`` as a parameter and returns the sum of the integers that are split up by hyphens.
-    For example, ``sum_of_split_number('978-876-4908')`` should return ``6762`` because 978 + 876 + 4908 = 6762. (Note: Integers are 0 or greater.)
+    Create a function called ``sum_of_split_num`` that takes in ``str_num_with_hyphens`` as a parameter and returns the sum of the integers that 
+    are split up by hyphens. For example, ``sum_of_split_num('978-876-4908')`` should return ``6762`` because 978 + 876 + 4908 = 6762. 
+    (Note: Integers are 0 or greater.)
     -----
-    def sum_of_split_number(string_number_with_hyphens):
+    def sum_of_split_num(str_num_with_hyphens):
     =====
-        number_without_hyphens = string_number_with_hyphens.split('-')
+        num_without_hyphens = str_num_with_hyphens.split('-')
     =====
-        number_without_hyphens = string_number_with_hyphens.split() #paired
+        num_without_hyphens = str_num_with_hyphens.split() #paired
     =====
-        map_object_to_ints = map(int, number_without_hyphens)
+        map_object_to_ints = map(int, num_without_hyphens)
     =====
         lst_of_ints = list(map_object_to_ints)
     =====
@@ -73,8 +76,9 @@ Functions and Lists Mixed-Up Code Questions
    :practice: T
    :autograde: unittest
 
-   Create a function called ``sum_of_split_number`` that takes in ``string_number_with_hyphens`` as a parameter and returns the sum of the integers that are split up by hyphens.
-   For example, ``sum_of_split_number('978-876-4908')`` should return ``6762`` because 978 + 876 + 4908 = 6762. (Note: Integers are 0 or greater.)
+   Write a function called ``sum_of_split_num`` that takes in ``str_num_with_hyphens`` as a parameter and returns the sum of the integers that 
+   are split up by hyphens. For example, ``sum_of_split_num('978-876-4908')`` should return ``6762`` because 978 + 876 + 4908 = 6762. (Note: Integers 
+   are 0 or greater.)
    ~~~~
 
    ====
@@ -82,8 +86,8 @@ Functions and Lists Mixed-Up Code Questions
    class myTests(TestCaseGui):
 
        def testOne(self):
-           self.assertEqual(sum_of_split_number('978-876-4908'),6762,"Tested sum_of_split_number('978-876-4908')")
-           self.assertEqual(sum_of_split_number('000-05746-28736'),34482,"Tested sum_of_split_number('000-05746-28736')")
+           self.assertEqual(sum_of_split_num('978-876-4908'),6762,"sum_of_split_num('978-876-4908')")
+           self.assertEqual(sum_of_split_num('000-05746-28736'),34482,"sum_of_split_num('000-05746-28736')")
 
 
    myTests().main()
@@ -120,7 +124,7 @@ Functions and Lists Mixed-Up Code Questions
    :practice: T
    :autograde: unittest
 
-   Create a function called ``sort_descending`` that takes in ``lst_of_nums`` as a parameter and returns ``lst_of_nums`` in descending order.
+   Write a function called ``sort_descending`` that takes in ``lst_of_nums`` as a parameter and returns ``lst_of_nums`` in descending order.
    For example, ``sort_descending([100, 2000, -50])`` should return ``[2000, 100, -50]``.
    ~~~~
 
@@ -129,9 +133,9 @@ Functions and Lists Mixed-Up Code Questions
    class myTests(TestCaseGui):
 
        def testOne(self):
-           self.assertEqual(sort_descending([100, 2000, -50]),[2000, 100, -50],"Tested sort_descending([100, 2000, -50])")
-           self.assertEqual(sort_descending([83, 0, -2000]),[83, 0, -2000],"Tested sort_descending([83, 0, -2000])")
-           self.assertEqual(sort_descending([-83]),[-83],"Tested sort_descending([-83])")
+           self.assertEqual(sort_descending([100, 2000, -50]),[2000, 100, -50],"sort_descending([100, 2000, -50])")
+           self.assertEqual(sort_descending([83, 0, -2000]),[83, 0, -2000],"sort_descending([83, 0, -2000])")
+           self.assertEqual(sort_descending([-83]),[-83],"sort_descending([-83])")
 
 
    myTests().main()
@@ -172,7 +176,7 @@ Functions and Lists Mixed-Up Code Questions
    :practice: T
    :autograde: unittest
 
-   Create a function called ``extend_two_lists_sort`` that takes in ``lst1`` and ``lst2`` as parameters, sorts both lists, and extends ``lst1`` with ``lst2``.
+   Write a function called ``extend_two_lists_sort`` that takes in ``lst1`` and ``lst2`` as parameters, sorts both lists, and extends ``lst1`` with ``lst2``.
    For example, ``extend_two_lists_sort(['string', 'hello'], ['my', 'goodness'])`` should return ``['hello', 'string', 'goodness', 'my']``.
    ~~~~
 
@@ -181,9 +185,9 @@ Functions and Lists Mixed-Up Code Questions
    class myTests(TestCaseGui):
 
        def testOne(self):
-           self.assertEqual(extend_two_lists_sort(['string', 'hello'], ['my', 'goodness']),['hello', 'string', 'goodness', 'my'],"Tested extend_two_lists_sort(['string', 'hello'], ['my', 'goodness'])")
-           self.assertEqual(extend_two_lists_sort([1, -5, 0], ['my', 'hello']),[-5, 0, 1, 'hello', 'my'],"Tested extend_two_lists_sort([1, -5, 0], ['my', 'hello'])")
-           self.assertEqual(extend_two_lists_sort([1, -5, 0], [8000, -23, -1, 0]),[-5, 0, 1, -23, -1, 0, 8000],"Tested extend_two_lists_sort([1, -5, 0], [8000, -23, -1, 0])")
+           self.assertEqual(extend_two_lists_sort(['string', 'hello'], ['my', 'goodness']),['hello', 'string', 'goodness', 'my'],"extend_two_lists_sort(['string', 'hello'], ['my', 'goodness'])")
+           self.assertEqual(extend_two_lists_sort([1, -5, 0], ['my', 'hello']),[-5, 0, 1, 'hello', 'my'],"extend_two_lists_sort([1, -5, 0], ['my', 'hello'])")
+           self.assertEqual(extend_two_lists_sort([1, -5, 0], [8000, -23, -1, 0]),[-5, 0, 1, -23, -1, 0, 8000],"extend_two_lists_sort([1, -5, 0], [8000, -23, -1, 0])")
 
    myTests().main()
 
@@ -193,8 +197,9 @@ Functions and Lists Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``sort_and_get_median_num`` that takes in ``lst_of_nums`` as a parameter, sorts ``lst_of_nums``, and returns the median of ``lst_of_nums``.
-    For example, ``sort_and_get_median_num([200, -5, 0, 75, 80, 60])`` should return ``67.5``, and ``sort_and_get_median_num([200, -5, 0, 75, 80])`` should return ``75``.
+    Create a function called ``sort_and_get_median_num`` that takes in ``lst_of_nums`` as a parameter, sorts ``lst_of_nums``, and returns the median 
+    of ``lst_of_nums``. For example, ``sort_and_get_median_num([200, -5, 0, 75, 80, 60])`` should return ``67.5``, and 
+    ``sort_and_get_median_num([200, -5, 0, 75, 80])`` should return ``75``.
     -----
     def sort_and_get_median_num(lst_of_nums):
     =====
@@ -227,7 +232,7 @@ Functions and Lists Mixed-Up Code Questions
    :practice: T
    :autograde: unittest
 
-   Create a function called ``sort_and_get_median_num`` that takes in ``lst_of_nums`` as a parameter, sorts ``lst_of_nums``, and returns the median of ``lst_of_nums``.
+   Write a function called ``sort_and_get_median_num`` that takes in ``lst_of_nums`` as a parameter, sorts ``lst_of_nums``, and returns the median of ``lst_of_nums``.
    For example, ``sort_and_get_median_num([200, -5, 0, 75, 80, 60])`` should return ``67.5``, and ``sort_and_get_median_num([200, -5, 0, 75, 80])`` should return ``75``.
    ~~~~
 
@@ -236,10 +241,10 @@ Functions and Lists Mixed-Up Code Questions
    class myTests(TestCaseGui):
 
        def testOne(self):
-           self.assertEqual(sort_and_get_median_num([200, -5, 0, 75, 80]),75,"Tested sort_and_get_median_num([200, -5, 0, 75, 80])")
-           self.assertEqual(sort_and_get_median_num([200, -5, 0, 75, 80, 60]),67.5,"Tested sort_and_get_median_num([200, -5, 0, 75, 80, 60])")
-           self.assertEqual(sort_and_get_median_num([200]),200,"Tested sort_and_get_median_num([200])")
-           self.assertEqual(sort_and_get_median_num([200, -5]),97.5,"Tested sort_and_get_median_num([200, -5])")
+           self.assertEqual(sort_and_get_median_num([200, -5, 0, 75, 80]),75,"sort_and_get_median_num([200, -5, 0, 75, 80])")
+           self.assertEqual(sort_and_get_median_num([200, -5, 0, 75, 80, 60]),67.5,"sort_and_get_median_num([200, -5, 0, 75, 80, 60])")
+           self.assertEqual(sort_and_get_median_num([200]),200,"sort_and_get_median_num([200])")
+           self.assertEqual(sort_and_get_median_num([200, -5]),97.5,"sort_and_get_median_num([200, -5])")
             
 
    myTests().main()
