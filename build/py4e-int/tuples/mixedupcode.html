@@ -285,52 +285,56 @@
 <h1><span class="section-number">11.12. </span>Mixed-Up Code Questions<a class="headerlink" href="#mixed-up-code-questions" title="Permalink to this headline">¶</a></h1>
 
         <div class="runestone" style="max-width: none;">
-        <div data-component="parsons" id="mixedupcode_question10_1" class="alert alert-warning parsons" >
+        <div data-component="parsons" id="mixedupcode_question10_1_v2" class="alert alert-warning parsons" >
         <div class="parsons_question parsons-text" >
-    <p>Construct a block of code below to create a list of tuples, <code class="docutils literal notranslate"><span class="pre">t</span></code>, where the first element is the length of each word in <code class="docutils literal notranslate"><span class="pre">txt</span></code> and the second is the word itself. Sort the list in terms of word length from longest to shortest. For example, if <code class="docutils literal notranslate"><span class="pre">txt=&quot;hi</span> <span class="pre">bye&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">tup_list</span></code> would be <code class="docutils literal notranslate"><span class="pre">[(3,</span> <span class="pre">'bye'),</span> <span class="pre">(2,</span> <span class="pre">'hi')]</span></code> after this code executes.</p>
+    <p>Create a function <code class="docutils literal notranslate"><span class="pre">create_tup(str)</span></code> that takes a string, <code class="docutils literal notranslate"><span class="pre">str</span></code>, and returns a list of tuples where the first element is the length of each word in <code class="docutils literal notranslate"><span class="pre">str</span></code> and the second is the word itself. Sort the list in terms of word length from longest to shortest. For example, <code class="docutils literal notranslate"><span class="pre">create_tup(&quot;hi</span> <span class="pre">bye&quot;)</span></code> would return <code class="docutils literal notranslate"><span class="pre">[(3,</span> <span class="pre">'bye'),</span> <span class="pre">(2,</span> <span class="pre">'hi')]</span></code>.</p>
 
         </div>
         <pre  class="parsonsblocks" data-question_label="11.12.1"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
-        txt = 'but soft what light in yonder window breaks'
-words = txt.split()
-t = []
+        def create_tup(str):
 ---
-for word in words:
+    words = str.split()
+    t_list = []
 ---
-for word in words.split(): #paired
+    for word in words:
 ---
-    t.append((len(word), word))
+        t_list.append((len(word), word))
 ---
-    t.append(len(word)) #paired
+        t_list.append(len(word)) #paired
 ---
-t.sort(reverse = True)
+    t_list.sort(reverse = True)
 ---
-t.sort(reverse = False) #paired
+    t_list.sort(reverse = False) #paired
+---
+    return t_list
         </pre>
         </div>
         </div>
     
         <div class="runestone" style="max-width: none;">
-        <div data-component="parsons" id="mixedupcode_question10_2" class="alert alert-warning parsons" >
+        <div data-component="parsons" id="mixedupcode_question10_2_v2" class="alert alert-warning parsons" >
         <div class="parsons_question parsons-text" >
-    <p>Reorder the blocks of code to create a list, <code class="docutils literal notranslate"><span class="pre">tup_list</span></code>, containing tuples of each word from <code class="docutils literal notranslate"><span class="pre">word_list</span></code> paired with its length. Then sort the words by length from highest to lowest.  For example, if <code class="docutils literal notranslate"><span class="pre">word_list</span> <span class="pre">=</span> <span class="pre">['hi',</span> <span class="pre">'bye']</span></code> then <code class="docutils literal notranslate"><span class="pre">tup_list</span></code> would be <code class="docutils literal notranslate"><span class="pre">[('bye',</span> <span class="pre">3),</span> <span class="pre">('hi',</span> <span class="pre">2)]</span></code></p>
+    <p>Create a function <code class="docutils literal notranslate"><span class="pre">create_tup(word_list)</span></code> that takes a list of words, <code class="docutils literal notranslate"><span class="pre">word_list</span></code>, and returns a list of tuples where the first element is a word from <code class="docutils literal notranslate"><span class="pre">str</span></code> and the second is the length of the word. Sort the list in terms of word length from longest to shortest.  For example, if <code class="docutils literal notranslate"><span class="pre">create_tup(['hi',</span> <span class="pre">'bye'])</span></code> should return <code class="docutils literal notranslate"><span class="pre">[('bye',</span> <span class="pre">3),</span> <span class="pre">('hi',</span> <span class="pre">2)]</span></code>.</p>
 
         </div>
         <pre  class="parsonsblocks" data-question_label="11.12.2"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
-        word_list = ['pen', 'skyscraper', 'post', 'computer', 'apple', 'Hollywood']
-tup_list = []
+        def create_tup(word_list):
 ---
-for word in word_list:
+    t_list = []
 ---
-for word in tup_list: #paired
+    for word in word_list:
 ---
-    tup = word, len(word)
+    for word in t_list: #paired
 ---
-    tup_list.append(tup)
+        tup = word, len(word)
 ---
-        word_list.append(tup) #paired
+        t_list.append(tup)
 ---
-tup_list.sort(key = lambda x: x[1], reverse = True)
+            word_list.append(tup) #paired
+---
+    t_list.sort(key = lambda x: x[1], reverse = True)
+---
+    return t_list
         </pre>
         </div>
         </div>
