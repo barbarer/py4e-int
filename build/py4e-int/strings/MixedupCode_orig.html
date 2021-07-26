@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mixed-up Code Questions &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.css?v=bddd2011b20db76a20ea" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.css?v=5b1dc1bb539ccf7c69f7" />
+
+
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/runtime.bundle.js?v=f3c8dd9e2667ee8dc613"></script>
+    <script src="../_static/637.bundle.js?v=1123ad75f9b821cdd636"></script>
+    <script src="../_static/runestone.bundle.js?v=ef2d58494168454a1d6a"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = true;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'py4e-int';
+    eBookConfig.basecourse = 'py4e-int';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          py4e-int
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span class="visuallyhidden" aria-label="User">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="runestoneComponents.switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/runestone/static/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=MixedupCode_orig'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  document.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="mixed-up-code-questions">
+<h1>Mixed-up Code Questions<a class="headerlink" href="#mixed-up-code-questions" title="Permalink to this headline">¶</a></h1>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="str-mixed-emotion" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The following segment should print the statement, “So happy 4 you!”. The blocks have been mixed up, and include two extra blocks that are not correct.  Drag the blocks from the left and put them in the correct order on the right.  Click the &lt;i&gt;Check Me&lt;/i&gt; button to check your solution.&lt;/p&gt;</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="1"   data-adaptive="true"    data-noindent="true"   data-numbered="left"  style="visibility: hidden;">
+        emotion = "So happy "
+---
+emotion = "So happy ' #distractor
+---
+print(emotion + 4 + " you!") #distractor
+---
+print(emotion + str(4) + " you!")
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=str-mixed-emotion-ac data-question_label="2">
+<div id=str-mixed-emotion-ac_question class="ac_question col-md-12">
+<p>Finish the code below to print “So happy 4 you!” using the variable emotion.</p>
+
+</div>
+<textarea data-lang="python" id="str-mixed-emotion-ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+emotion = "So happy "
+feeling =
+print(feeling)
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(feeling, "So happy 4 you!", "Testing feeling with correct string output")
+        self.assertEqual(emotion,"So happy ", "Testing emotion to be equal to 'So happy '")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="str-mixed-book" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The following program segment should print the phrase, “My new book cost $12”. But, the blocks have been mixed up and include an extra block that isn’t correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the &lt;i&gt;Check Me&lt;/i&gt; button to check your solution.&lt;/p&gt;</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="3"   data-adaptive="true"    data-noindent="true"   data-numbered="left"  style="visibility: hidden;">
+        item = "new book"
+price = "12"
+---
+print("My " + item + " cost $" + price)
+---
+print("My " item " cost $" price) #paired
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=str-mixed-book-ac data-question_label="4">
+<div id=str-mixed-book-ac_question class="ac_question col-md-12">
+<p>Finish the code below to print “My new book cost $12” using the variables item and price.</p>
+
+</div>
+<textarea data-lang="python" id="str-mixed-book-ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+item = "new book"
+price = "12"
+total =
+
+print(total)
+
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(total, "My new book cost $12")
+        self.assertEqual(item,"new book")
+        self.assertEqual(price, "12")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="str-mixed-code" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The following program segment should print the phrase, “Sam likes to code”. But, the blocks have been mixed up and include an extra block that isn’t correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the &lt;i&gt;Check Me&lt;/i&gt; button to check your solution.&lt;/p&gt;</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="5"   data-adaptive="true"    data-noindent="true"   data-numbered="left"  style="visibility: hidden;">
+        person = "Sam "
+thing = "likes to code"
+---
+print(person + thing)
+---
+print(person thing) #paired
+---
+print("person + thing") #paired
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=str-mixed-code-ac data-question_label="6">
+<div id=str-mixed-code-ac_question class="ac_question col-md-12">
+<p>Finish the code below to print “Sam likes to code” using the variables var1 and var2.</p>
+
+</div>
+<textarea data-lang="python" id="str-mixed-code-ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+person = "Sam"
+thing = "likes to code"
+sentence =
+print(sentence)
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(sentence, "Sam likes to code")
+        self.assertEqual(person, "Sam")
+        self.assertEqual(thing, "likes to code")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="str-mixed-time" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The following program segment should print the phrase, “It takes us 2 hours and 45 minutes to get home from camp”. But, the blocks have been mixed up and include two extra blocks that aren’t correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the &lt;i&gt;Check Me&lt;/i&gt; button to check your solution.&lt;/p&gt;</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="7"   data-adaptive="true"    data-noindent="true"   data-numbered="left"  style="visibility: hidden;">
+        numHours = 2
+numMinutes = 45.0
+---
+print("It takes us " + str(numHours) + " hours and " + str(int(numMinutes)) + " minutes to get home from camp")
+---
+print("It takes us " + numHours + " hours and " + numMinutes + " minutes to get home from camp") #paired
+---
+print("It takes us " + str(numHours) + " hours and " + str(numMinutes) + " minutes to get home from camp") #paired
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=str-mixed-time-ac data-question_label="8">
+<div id=str-mixed-time-ac_question class="ac_question col-md-12">
+<p>Finish the code below to print “It takes us 2 hours and 45 minutes to get home from camp” using the variables numHours and numMinutes.</p>
+
+</div>
+<textarea data-lang="python" id="str-mixed-time-ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+numHours = 2
+numMinutes = 45.0
+numTotal =
+
+print(numTotal)
+
+====
+from unittest.gui import TestCaseGui
+
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(numTotal, "It takes us 2 hours and 45 minutes to get home from camp")
+        self.assertEqual(numHours, 2)
+        self.assertEqual(numMinutes, 45.0)
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="str-mixed-feeling" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The following program segment should print the phrase, “Grace loves grapes”. But, the blocks have been mixed up and include an extra block that isn’t correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the &lt;i&gt;Check Me&lt;/i&gt; button to check your solution.&lt;/p&gt;</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="9"   data-adaptive="true"    data-noindent="true"   data-numbered="left"  style="visibility: hidden;">
+        feeling = "loves"
+---
+print("Grace" + feeling + "grapes") #distractor
+---
+print("Grace " + feeling + " grapes")
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=str-mixed-feeling-ac data-question_label="10">
+<div id=str-mixed-feeling-ac_question class="ac_question col-md-12">
+<p>Finish the code below to print “Grace loves grapes” using the variable feeling.</p>
+
+</div>
+<textarea data-lang="python" id="str-mixed-feeling-ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+feeling = "loves"
+phrase =
+
+print(phrase)
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(phrase, "Grace loves grapes")
+        self.assertEqual(feeling, "loves")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="str-mixed-animal" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The following program segment should print the phrase, “My sheepdog looks like a Muppet”. But, the blocks have been mixed up and include two extra blocks that are not correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the &lt;i&gt;Check Me&lt;/i&gt; button to check your solution.&lt;/p&gt;</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="11"   data-adaptive="true"    data-noindent="true"   data-numbered="left"  style="visibility: hidden;">
+        animal = "sheepdog"
+---
+animal = [sheepdog] #distractor
+---
+animal = "sheepdog #distractor
+---
+print("My " + animal + " looks like a Muppet")
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=str-mixed-animal-ac data-question_label="12">
+<div id=str-mixed-animal-ac_question class="ac_question col-md-12">
+<p>Finish the code below to print “My sheepdog looks like a Muppet” using the variable animal.</p>
+
+</div>
+<textarea data-lang="python" id="str-mixed-animal-ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+animal =
+comparison =
+
+print(comparison)
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(comparison, "My sheepdog looks like a Muppet")
+        self.assertEqual(animal, "sheepdog")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="str-mixed-add" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The following program segment should print the phrase, “3 + 300 + 7 = 310”. But, the blocks have been mixed up and include an extra block that isn’t correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the &lt;i&gt;Check Me&lt;/i&gt; button to check your solution.&lt;/p&gt;</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="13"   data-adaptive="true"    data-noindent="true"   data-numbered="left"  style="visibility: hidden;">
+        num1 = 3
+num2 = 300
+num3 = 7
+ans = 310
+---
+print(str(num1) + " + " + str(num2) + " + " + str(num3) + " = " + str(ans))
+---
+print(str(num1) + str(num2) + str(num3) = str(ans)) #distractor
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=str-mixed-add-ac data-question_label="14">
+<div id=str-mixed-add-ac_question class="ac_question col-md-12">
+<p>Finish the code below to print “3 + 300 + 7 = 310” using the variables num1, num2, num3, and ans.</p>
+
+</div>
+<textarea data-lang="python" id="str-mixed-add-ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+num1 =
+num2 =
+num3 =
+ans =
+total =
+
+print(total)
+====
+from unittest.gui import TestCaseGui
+
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(total, "3 + 300 + 7 = 310")
+        self.assertEqual(num1, 3)
+        self.assertEqual(num2, 300)
+        self.assertEqual(num3, 7)
+        self.assertEqual(ans, 310)
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="str-mixed-wizard" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The following program segment should print the phrase, “I am a CS wizard”. But, the blocks have been mixed up and include an extra block that isn’t correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the &lt;i&gt;Check Me&lt;/i&gt; button to check your solution.&lt;/p&gt;</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="15"   data-adaptive="true"    data-noindent="true"   data-numbered="left"  style="visibility: hidden;">
+        var1 = "I am a "
+var2 = "CS wizard"
+---
+print(var1 + var2)
+---
+print(var1 + " " + var2) #paired
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=str-mixed-wizard-ac data-question_label="16">
+<div id=str-mixed-wizard-ac_question class="ac_question col-md-12">
+<p>Finish the code below to print “I am a CS wizard” by fixing the variables var1 and var2 and combining them in var3.</p>
+
+</div>
+<textarea data-lang="python" id="str-mixed-wizard-ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+var1 = I am a
+var2 = CS wizard
+var3 =
+
+print(var3)
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(var1, "I am a ")
+        self.assertEqual(var2, "CS wizard")
+        self.assertEqual(var3, "Sam likes to code")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="str-mixed-colors" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The following program segment should print the phrase, “‘Red’ is a primary color, and so is ‘blue’”. But, the blocks have been mixed up and include an extra block that isn’t correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the &lt;i&gt;Check Me&lt;/i&gt; button to check your solution.&lt;/p&gt;</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="17"   data-adaptive="true"    data-noindent="true"   data-numbered="left"  style="visibility: hidden;">
+        col1 = "'Red'"
+col2 = "'blue'"
+---
+col1 = "Red"
+col2 = "blue" #distractor
+---
+print(col1 + " is a primary color, and so is " + col2)
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=str-mixed-colors-ac data-question_label="18">
+<div id=str-mixed-colors-ac_question class="ac_question col-md-12">
+<p>Write the code below to print “‘Red’ is a primary color, and so is ‘blue’” by fixing the variables col1 and col2 and then combining them in the variables colors.</p>
+
+</div>
+<textarea data-lang="python" id="str-mixed-colors-ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+col1 = Red
+col2 = blue
+colors =
+
+print(colors)
+
+====
+from unittest.gui import TestCaseGui
+
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(colors, "'Red' is a primary color, and so is 'blue'")
+        self.assertEqual(col1, "'Red'")
+        self.assertEqual(col2, "'blue'")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="str-mixed-dogs" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The following program segment should print the phrase, “Petting dogs makes me happier than anything else”. But, the blocks have been mixed up and include several extra blocks that are not correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the &lt;i&gt;Check Me&lt;/i&gt; button to check your solution.&lt;/p&gt;</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="19"   data-adaptive="true"    data-noindent="true"   data-numbered="left"  style="visibility: hidden;">
+        var1 = "dogs"
+---
+var1 = dogs #distractor
+---
+var1 = "dogs' #distractor
+---
+var1 = [dogs] #distractor
+---
+print("Petting " + var1 + " makes me happier than anything else")
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=str-mixed-dogs-ac data-question_label="20">
+<div id=str-mixed-dogs-ac_question class="ac_question col-md-12">
+<p>Finish the code below to print “Petting dogs makes me happier than anything else” using the variable var1.</p>
+
+</div>
+<textarea data-lang="python" id="str-mixed-dogs-ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+var1 = "dogs"
+doggo =
+
+print(doggo)
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(doggo, "Petting dogs makes me happier than anything else")
+        self.assertEqual(var1, "dogs")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</div>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+
+<script>
+document.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 - Based on Python for Everybody.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> 
+  document.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch(); 
+  });
+</script>
+
+
+  </body>
+</html>
