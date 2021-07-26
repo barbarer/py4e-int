@@ -195,3 +195,60 @@ Multiple Choice Questions
 
       m = ('have', 'fun')
       print(practice(m))
+
+.. mchoice:: TupleExquestion10_11
+   :practice: T
+   :answer_a: ['2', '3', '30', '8']
+   :answer_b: ['2', '3', '8', '30']
+   :answer_c:  ['30', '8', '3', '2']
+   :answer_d: ['8', '30', '3', '2']
+   :correct: a
+   :feedback_a: This returns a list with the strings sorted in ascending order.
+   :feedback_b: Incorrect, this would be the right order for numbers, but not for strings.
+   :feedback_c: This would be correct if it was sorting numbers in descending order.
+   :feedback_d: This would be correct if it was sorting in descending order.
+
+   What is printed when the following code is run?
+
+   .. code-block:: python
+
+      tup = ('30', '3', '2', '8')
+      print(sorted(tup))
+
+.. mchoice:: TupleExquestion10_12
+   :practice: T
+   :answer_a: ['2', '3', '30', '8']
+   :answer_b: ['2', '3', '8', '30']
+   :answer_c:  ['30', '8', '3', '2']
+   :answer_d: ['8', '30', '3', '2']
+   :correct: d
+   :feedback_a: This would be true if it sorted the strings in ascending order.
+   :feedback_b: This would be correct if if was sorting numbers in ascending order.
+   :feedback_c: This would be correct if it was sorting numbers in descending order.
+   :feedback_d: It sorts the strings in descending order.
+
+   What is printed when the following code is run?
+
+   .. code-block:: python
+
+      tup = ('30', '3', '2', '8')
+      print(sorted(tup), reverse = True)
+
+.. mchoice:: TupleExquestion10_13
+   :practice: T
+   :answer_a: [2, 3, 30, 8]
+   :answer_b: [2, 3, 8, 30]
+   :answer_c:  [30, 8, 3, 2]
+   :answer_d: [8, 30, 3, 2]
+   :correct: c
+   :feedback_a: This would be true if the values were strings and it sorted in ascending order.
+   :feedback_b: This would be correct if the values were sorted in ascending order.
+   :feedback_c: It sorts the numbers in descending order.
+   :feedback_d: This would be correcdt if the values were strings.
+
+   What is printed when the following code is run?
+
+   .. code-block:: python
+
+      tup = (30, 3, 2, 8)
+      print(sorted(tup), reverse = True)
