@@ -1,6 +1,8 @@
 Write Code Questions
 ---------------------
+
 #.
+
     .. tabbed:: list_writeMyList
 
         .. tab:: Question
@@ -12,7 +14,6 @@ Write Code Questions
 
                 def add_to_new_list(lst):
                     # write code here
-
                 =====
 
                 from unittest.gui import TestCaseGui
@@ -20,12 +21,13 @@ Write Code Questions
                 class myTests(TestCaseGui):
 
                     def testOne(self):
-                        self.assertEqual(add_to_new_list(["1","2","3"]), [3, '111'], "add_to_new_list(["1","2","3"])")
-                        self.assertEqual(add_to_new_list(["0","0","0","0"]), [4, '000'], "add_to_new_list(["0","0","0","0"])")
-                        self.assertEqual(add_to_new_list(["10.2","0.0","100","-2"]), [4, '10.210.210.2'], "add_to_new_list(["10.2","0.0","100","-2"])")
+                        self.assertEqual(add_to_new_list(['1','2','3']), [3, '111'], "add_to_new_list(['1','2','3'])")
+                        self.assertEqual(add_to_new_list(['0','0','0','0']), [4, '000'], "add_to_new_list(['0','0','0','0'])")
+                        self.assertEqual(add_to_new_list(['10.2','0.0','100','-2']), [4, '10.210.210.2'], "add_to_new_list(['10.2','0.0','100','-2'])")
 
 
                 myTests().main()
+
 
         .. tab:: Answer
 
@@ -57,9 +59,9 @@ Write Code Questions
 
             def testOne(self):
                 self.assertEqual(itemLister([2,4,6,8]), ['First item', 'First item', 7, 8], "itemLister([2,4,6,8])")
-                self.assertEqual(itemLister([2.2,"hi",0]), ['First item', 'First item', 1], "itemLister([2.2,"hi",0])")
+                self.assertEqual(itemLister([2.2,'hi',0]), ['First item', 'First item', 1], "itemLister([2.2,'hi',0])")
                 self.assertEqual(itemLister([2.2,True,0]), ['First item', 'First item', 1], "itemLister([2.2,True,0])")
-                self.assertEqual(itemLister([-2.2,"hi",-2.2]), ['First item', 'First item', -1.2], "itemLister([-2.2,"hi",-2.2])")
+                self.assertEqual(itemLister([-2.2,'hi',-2.2]), ['First item', 'First item', -1.2], "itemLister([-2.2,'hi',-2.2])")
 
         myTests().main()
 
@@ -84,9 +86,9 @@ Write Code Questions
                 class myTests(TestCaseGui):
 
                     def testOne(self):
-                        self.assertEqual(average([99, 100, 74, 63, 100, 100]), 89.3, 1, "average([99, 100, 74, 63, 100, 100])")
-                        self.assertEqual(average([0, 2, -3, 1.2, 2000]), 400.0, 2, "average([0, 2, -3, 1.2, 2000])")
-                        self.assertEqual(average([-2]), -2.0, 1, "average([-2])")
+                        self.assertAlmostEqual(average([99, 100, 74, 63, 100, 100]), 89.3, 1, "average([99, 100, 74, 63, 100, 100])")
+                        self.assertAlmostEqual(average([0, 2, -3, 1.2, 2000]), 400.0, 1, "average([0, 2, -3, 1.2, 2000])")
+                        self.assertAlmostEqual(average([-2]), -2.0, 1, "average([-2])")
 
 
                 myTests().main()
@@ -107,9 +109,9 @@ Write Code Questions
 #.
     .. activecode:: list_write23q
 
-        Write the function ``change_index3`` that takes in one parameter, ``lst``, and assigns the value at index 3 of ``lst`` to "200" and then returns ``lst``.
-        For example, ``change_index3(["hi", "goodbye", "python", "106", "506"])`` would return ``["hi", "goodbye", "python", "200", "506"]`` and 
-        ``change_index3([1, 2, 0, -5, 4])`` would return ``[1, 2, 0, "200", 4]``.
+        Write the function ``change_index3`` that takes in one parameter, ``lst``, and assigns the value at index 3 of ``lst`` to '200' and then returns ``lst``.
+        For example, ``change_index3(['hi', 'goodbye', 'python', '106', '506'])`` would return ``['hi', 'goodbye', 'python', '200', '506']`` and 
+        ``change_index3([1, 2, 0, -5, 4])`` would return ``[1, 2, 0, '200', 4]``.
         ~~~~
         def change_index3(lst):
             # write code here
@@ -122,9 +124,9 @@ Write Code Questions
         class myTests(TestCaseGui):
 
             def testOne(self):
-                elf.assertEqual(change_index3(["hi", "goodbye", "python", "106", "506"]), ["hi", "goodbye", "python", "200", "506"], "change_index3(["hi", "goodbye", "python", "106", "506"])")
-                self.assertEqual(change_index3([1, 2, 0, -5, 4]), [1, 2, 0, "200", 4], "change_index3([1, 2, 0, -5, 4])")
-                self.assertEqual(change_index3([False, "2", 2.5, "200", -4]), [False, "2", 2.5, "200", -4], "change_index3([False, "2", 2.5, "200", -4]")
+                self.assertEqual(change_index3(['hi', 'goodbye', 'python', '106', '506']), ['hi', 'goodbye', 'python', '200', '506'], "change_index3(['hi', 'goodbye', 'python', '106', '506'])")
+                self.assertEqual(change_index3([1, 2, 0, -5, 4]), [1, 2, 0, '200', 4], "change_index3([1, 2, 0, -5, 4])")
+                self.assertEqual(change_index3([False, '2', 2.5, '200', -4]), [False, '2', 2.5, '200', -4], "change_index3([False, '2', 2.5, '200', -4]")
 
 
         myTests().main()
@@ -150,9 +152,9 @@ Write Code Questions
                 class myTests(TestCaseGui):
 
                     def testOne(self):
-                        self.assertEqual(capitalize([["hi"],["hello", "hey"]]), ['Hi', 'Hello', 'Hey'], "capitalize([["hi"],["hello", "hey"]])")
-                        self.assertEqual(capitalize([["HI"],["HELLO", "HEY"]]), ['Hi', 'Hello', 'Hey'], "capitalize([["HI"],["HELLO", "HEY"]])")
-                        self.assertEqual(capitalize([["go", "blue"],["python", "IS", "The", "Best"]]), ['Go', 'Blue', 'Python', 'Is', 'The', 'Best'], "capitalize([["go", "blue"],["python", "IS", "The", "Best"]])")
+                        self.assertEqual(capitalize([['hi'],['hello', 'hey']]), ['Hi', 'Hello', 'Hey'], "capitalize([['hi'],['hello', 'hey']])")
+                        self.assertEqual(capitalize([['HI'],['HELLO', 'HEY']]), ['Hi', 'Hello', 'Hey'], "capitalize([['HI'],['HELLO', 'HEY']])")
+                        self.assertEqual(capitalize([['go', 'blue'],['python', 'IS', 'The', 'Best']]), ['Go', 'Blue', 'Python', 'Is', 'The', 'Best'], "capitalize([['go', 'blue'],['python', 'IS', 'The', 'Best']])")
 
                 myTests().main()
 
@@ -173,9 +175,10 @@ Write Code Questions
     .. activecode:: list_write5q
 
         Write a function called ``countWords`` that returns a count of how many words in the passed list, ``lst``, have a length of 5.
-        For example, ``countWords(["hello", "hi", "good morning", "three", "kitty"]`` should return ``3``. 
+        For example, ``countWords(['hello', 'hi', 'good morning', 'three', 'kitty']`` should return ``3``. 
         ~~~~
         def countWords(lst):
+            # write code here
 
         ====
         from unittest.gui import TestCaseGui
@@ -183,10 +186,10 @@ Write Code Questions
         class myTests(TestCaseGui):
 
             def testOne(self):
-                self.assertEqual(countWords(["hello", "hi", "good morning", "three", "kitty"]),3,'countWords(["hello", "hi", "good morning", "three", "kitty"])')
-                self.assertEqual(countWords(["two", "three", "four", "five", "six", "seven"]),2,'countWords(["two", "three", "four", "five", "six", "seven"])')
-                self.assertEqual(countWords(["these", "those", "there"]),3,'countWords(["these", "those", "there"])')
-                self.assertEqual(countWords(["the", "an", "a"]),0,'countWords(["the", "an", "a"])')
+                self.assertEqual(countWords(['hello', 'hi', 'good morning', 'three', 'kitty']),3,"countWords(['hello', 'hi', 'good morning', 'three', 'kitty'])")
+                self.assertEqual(countWords(['two', 'three', 'four', 'five', 'six', 'seven']),2,"countWords(['two', 'three', 'four', 'five', 'six', 'seven'])")
+                self.assertEqual(countWords(['these', 'those', 'there']),3,"countWords(['these', 'those', 'there'])")
+                self.assertEqual(countWords(['the', 'an', 'a']),0,"countWords(['the', 'an', 'a'])")
 
 
         myTests().main()
@@ -201,19 +204,22 @@ Write Code Questions
 
             .. activecode:: list_writeChopq
 
-            def chop(lst):
+                def chop(lst):
+                    # write code here
 
-            ====
-            from unittest.gui import TestCaseGui
 
-            class myTests(TestCaseGui):
+                =====
 
-                def testOne(self):
-                    self.assertEqual(chop([1,2,3,4,5]),[2,3,4],"chop([1,2,3,4,5])")
-                    self.assertEqual(chop([1,3,5,7,9,10]),[3,5,7,9],"chop([1,3,5,7,9,10])")
-                    self.assertEqual(chop([2,9]),[],"chop([2,9])")
+                from unittest.gui import TestCaseGui
 
-            myTests().main()
+                class myTests(TestCaseGui):
+
+                    def testOne(self):
+                        self.assertEqual(chop([1,2,3,4,5]),[2,3,4],"chop([1,2,3,4,5])")
+                        self.assertEqual(chop([1,3,5,7,9,10]),[3,5,7,9],"chop([1,3,5,7,9,10])")
+                        self.assertEqual(chop([2,9]),[],"chop([2,9])")
+
+                myTests().main()
 
         .. tab:: Answer
 
@@ -286,3 +292,26 @@ Write Code Questions
                         total = total + lst[element]
                         element += 1
                     return total
+
+#.
+    .. activecode::  list_sortByLen
+        :nocodelens:
+
+        Write a function called ``sort_by_length`` that takes in one parameter, a list of strings, ``lst``, and returns the list sorted
+        by the length of the strings. For example, ``sort_by_length(["hello", "hi", "hey", "greetings"])`` would return ``['hi', 'hey', 'hello', 'greetings']``.
+        ~~~~
+        def sort_by_length(lst):
+            # write code here
+
+        ====
+
+        from unittest.gui import TestCaseGui
+
+        class myTests(TestCaseGui):
+
+            def testOne(self):
+                  self.assertEqual(sort_by_length(['hello', 'hi', 'hey', 'greetings']),['hi', 'hey', 'hello', 'greetings'],"sort_by_length(['hello', 'hi', 'hey', 'greetings'])")
+                  self.assertEqual(sort_by_length(['hello', 'hello']),['hello', 'hello'],"sort_by_length(['hello', 'hello'])")
+                  self.assertEqual(sort_by_length(['I', 'have', 'four', 'apples']),['I', 'have', 'four', 'apples'],"sort_by_length(['I', 'have', 'four', 'apples'])")
+
+        myTests().main()
