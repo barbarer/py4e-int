@@ -65,15 +65,6 @@ Functions and Lists Write Code Questions
                 myTests().main()
 
 
-        .. tab:: Answer
-
-            .. activecode:: funct_list_writecode2a
-                :optional:
-
-                def names(name_list):
-                    name_list.sort()
-                    return name_list
-
 
 #.
     .. tabbed:: funct_list_writecode3
@@ -143,16 +134,6 @@ Functions and Lists Write Code Questions
 
                 myTests().main()
 
-        .. tab:: Answer
-
-            .. activecode:: funct_list_writecode4a
-                :optional:
-
-                def range_given_list(list_of_nums):
-                    list_of_nums.sort()
-                    # Another way to get range_value: range_value = list_of_nums[len(list_of_nums) - 1] - list_of_nums[0]
-                    range_value = list_of_nums[-1] - list_of_nums[0]
-                    return range_value
 
 
 #.
@@ -205,12 +186,13 @@ Functions and Lists Write Code Questions
                 :practice: T
                 :autograde: unittest
 
-                Write a function called ``transformed_and_combined_list`` that takes in two parameters, ``list_one`` and ``list_two``.
-                Given that ``list_one`` will be ``[5, 20, 3, 15, 200, 0, 17]`` and ``list_two`` will be ``['Hello', 'Bye', 'How are you?']``, 
-                how would you would transform them into ``['Bye', 'Hello', 'How are you?', 0, 200, 15, 3, 20, 5]``?
-                Hint: Use list methods (e.g., pop, sort, append, reverse, and extend). 
+                Write a function called ``transform_and_combine`` that takes in two parameters, ``list_one``, which must have at least one element, and ``list_two``. 
+                Remove the last element from ``list_one``, then reverse the list. Sort ``list_two``, then extend ``list_two`` with ``list_one``, and return ``list_two``. 
+                Hint: Use list methods (e.g., pop, sort, append, reverse, and extend). For example, ``transform_and_combine([5, 20, 3, 15, 200, 0, 17], ['Hello', 'Bye', 'How are you?'])`` 
+                would return ``['Bye', 'Hello', 'How are you?', 0, 200, 15, 3, 20, 5]``.
+
                 ~~~~
-                def transformed_and_combined_list(list_one, list_two):
+                def transform_and_combine(list_one, list_two):
                     # write code here
 
                 ====
@@ -219,27 +201,12 @@ Functions and Lists Write Code Questions
                 class myTests(TestCaseGui):
 
                     def testOne(self):
-                        self.assertEqual(transformed_and_combined_list([5, 20, 3, 15, 200, 0, 17], ['Hello', 'Bye', 'How are you?']),['Bye', 'Hello', 'How are you?', 0, 200, 15, 3, 20, 5],"transformed_and_combined_list([5, 20, 3, 15, 200, 0, 17], ['Hello', 'Bye', 'How are you?'])")
+                        self.assertEqual(transform_and_combine([5, 20, 3, 15, 200, 0, 17], ['Hello', 'Bye', 'How are you?']),['Bye', 'Hello', 'How are you?', 0, 200, 15, 3, 20, 5],"transform_and_combine([5, 20, 3, 15, 200, 0, 17], ['Hello', 'Bye', 'How are you?'])")
+                        self.assertEqual(transform_and_combine(['Susan', 'Sara', 'Sammy', 'Sarah'], ['Hello', 'Bye', 'How are you?']),['Bye', 'Hello', 'How are you?', 'Sammy', 'Sara', 'Susan'],"transform_and_combine(['Susan', 'Sara', 'Sammy', 'Sarah'], ['Hello', 'Bye', 'How are you?'])")
+                        self.assertEqual(transform_and_combine([5, 13, 0, -201, 200, 10, 5, 200], [200, 10, 5, 200]),[5, 10, 200, 200, 5, 10, 200, -201, 0, 13, 5],"transform_and_combine([5, 13, 0, -201, 200, 10, 5, 200], [200, 10, 5, 200])")
+                        self.assertEqual(transform_and_combine([1], [4]),[4],"transform_and_combine([1], [4]")
+                        self.assertEqual(transform_and_combine([1], []),[],"transform_and_combine([1], []")
+
+
 
                 myTests().main()
-
-
-        .. tab:: Answer
-
-            .. activecode:: funct_list_writecode6a
-                :optional:
-
-                def transformed_and_combined_list(list_one, list_two):
-                    #removes 17 from list_one
-                    list_one.pop(-1)
-                    #removes 0 from list_one and assigns it to a variable
-                    returned_value = list_one.pop(-1)
-                    #sorts list_two alphabetically
-                    list_two.sort()
-                    #adds popped and saved value to list_two
-                    list_two.append(returned_value)
-                    #reverses the order of list_one
-                    list_one.reverse()
-                    #adds contents of list_one to the end of list_two
-                    list_two.extend(list_one)
-                    return list_two
