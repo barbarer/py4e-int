@@ -174,7 +174,7 @@ Write Code Questions
 #.
     .. activecode:: list_write5q
 
-        Write a function called ``countWords`` that returns a count of how many words in the passed list, ``lst``, have a length of 5.
+        Write a function called ``countWords`` that takes in a list, ``lst``, as a parameter, and returns the amount of words that have a length of 5.
         For example, ``countWords(['hello', 'hi', 'good morning', 'three', 'kitty']`` should return ``3``. 
         ~~~~
         def countWords(lst):
