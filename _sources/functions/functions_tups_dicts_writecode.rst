@@ -182,3 +182,38 @@ Functions, Tuples, and Dictionaries Write Code Questions
                             triple_values_dict[key] = 0
 
                     return triple_values_dict
+
+                ====
+                from unittest.gui import TestCaseGui
+
+                class myTests(TestCaseGui):
+
+                    def testOne(self):
+                        self.assertEqual(triple_values([1, 2]), {1: 3, 2: 0}, "triple_values([1, 2])")
+                        self.assertEqual(triple_values([1,2,3.5,4.0,5,6]),{1: 3, 2: 0, 3.5: 10.5, 4.0: 0, 5: 15, 6: 0},"triple_values([1,2,3.5,4.0,5,6])")
+                        self.assertEqual(triple_values([0,2,15,-2,11,12]),{0: 0, 2: 0, 15: 45, -2: 0, 11: 33, 12: 0},"triple_values([0,2,15,-2,11,12])")
+
+
+                myTests().main()
+
+
+
+#.
+    .. activecode:: funct-tups-dicts-writecode6
+        :practice: T
+        :autograde: unittest
+
+
+        Write a function ``count_chars(str)`` that takes a string, ``str``, and returns a list of tuples ordered by the number of times each character appears in the string in descending order.  For example, ``count_chars("babby")`` should return ``[('b': 3), ('a':1), ('y': 1)]``.
+        ~~~~
+
+        ====
+        from unittest.gui import TestCaseGui
+        class myTests(TestCaseGui):
+
+            def testOne(self):
+                self.assertEqual(count_chars("babby"),[('b', 3), ('a', 1), ('y', 1)], 'count_chars("babby")')
+                self.assertEqual(count_chars("cheeses"),[('e', 3), ('s', 2), ('c', 1), ('h', 1)], 'count_chars("cheeses")')
+                self.assertEqual(count_chars("a"),[('a', 1)], 'count_chars("a")')
+
+        myTests().main()

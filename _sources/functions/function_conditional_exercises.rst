@@ -30,7 +30,7 @@ Functions and Conditionals Multiple Choice Questions
     :feedback_d: Try again! The and operator comes before the or operator in operator precedence.
     :feedback_e: Correct! Note that z >= 5**4 is the same as 5**4 <= z.
 
-    Which of the following tests if 5 exponentiated to the 4th power is greater than y and less than or equal to z?
+    Which of the following tests if ``5 exponentiated to the 4th power`` is greater than ``y`` and less than or equal to ``z``?
 
 
 .. mchoice:: functions_conditionals_mcqs_q3
@@ -46,7 +46,7 @@ Functions and Conditionals Multiple Choice Questions
     :feedback_d: Try again! To convert days to age, you divide days by 365.
     :feedback_e: Try again! One's age can't be 16 and greater than 16.
 
-    Which of the following statements completes the function and returns True if one's age is greater than or equal to 16?
+    Which of the following statements completes the function and returns ``True`` if one's age is greater than or equal to 16?
 
     .. code-block:: python
 
@@ -86,11 +86,11 @@ Functions and Conditionals Multiple Choice Questions
     :feedback_d: Try again! "Done." is missing twice.
     :feedback_e: Try again! RE is incorrect, "Done." is missing twice, and in is missing a character.
 
-    What would be the outputs for string_transformation('green'), string_transformation('door'), and string_transformation('mountains') in order? (Note: Ignore whitespaces.)
+    What would be the outputs for ``transform_string('green')``, ``transform_string('door')``, and ``transform_string('mountains')`` in order? (Note: Ignore whitespaces.)
 
     .. code-block:: python
 
-        def string_transformation(word):
+        def transform_string(word):
             if len(word) <= 5:
                 new_letters = word[1:3].upper()
                 if new_letters[0] == new_letters[1]:

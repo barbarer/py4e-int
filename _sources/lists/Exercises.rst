@@ -247,6 +247,7 @@ Multiple Choice Questions
     4.
 
     .. sourcecode:: python
+    
         def num_of_strings():
             lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
             s = 0
