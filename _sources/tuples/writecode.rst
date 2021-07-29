@@ -5,12 +5,14 @@ Write Code Questions
 
         .. tab:: Question
 
-            Create a function called ``tup_creation`` that returns a tuple named ``tup1`` that has three elements: 'a', 'b', and 'c'.
+            Write a function called ``tup_creation`` that takes in two integer parameter, ``start`` and ``end``, and returns a tuple with all the values between 
+            ``start`` (inclusive) and ``end`` (non-inclusive). For example, ``tup_creation(-8,3)`` would return  ``(-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2)`` and ``tup_creation(10,3)`` would
+            return ``(10, 9, 8, 7, 6, 5, 4)``.
 
             .. activecode:: tup_writecode1q
                 :nocodelens:
 
-                def tup_creation():
+                def tup_creation(start, end):
                     # write code here
                 
                 ====
@@ -19,7 +21,13 @@ Write Code Questions
                 class MyTests(TestCaseGui):
 
                     def testOne(self):
-                        self.assertEqual(tup_creation(), ('a', 'b', 'c'), "Checking to make tup_creation() returns a tuple with the correct elements.")
+                        self.assertEqual(tup_creation(-8,3), (-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2), "tup_creation(-8,-3)")
+                        self.assertEqual(tup_creation(3,10), (3, 4, 5, 6, 7, 8, 9), "tup_creation(3,10)")
+                        self.assertEqual(tup_creation(10,3), (10, 9, 8, 7, 6, 5, 4), "tup_creation(10,3)")
+                        self.assertEqual(tup_creation(-2,-1), (-2,), "tup_creation(-2,-1)")
+                        self.assertEqual(tup_creation(0,0), (), "tup_creation(0,0)")
+                        self.assertEqual(tup_creation(10,10), (), "tup_creation(10,10)")
+
 
                 MyTests().main()
 
@@ -28,22 +36,27 @@ Write Code Questions
             .. activecode:: tup_writecode1a
                 :optional:
 
-                # Parentheses indicate a tuple
-                def tup_creation():
-                    tup1 = ("a","b","c")
-                    return tup1
+                def tup_creation(start, end):
+                    lst = []
+                    if start > end:
+                        for i in range(start,end,-1):
+                            lst.append(i)
+                    else:
+                        for i in range(start,end):
+                            lst.append(i)
+                    lst = tuple(lst)
+                    return lst
 
 #.
     .. activecode:: tup_writecode2
         :practice: T
         :nocodelens:
 
-        Provided is a list of tuples. Create a function called ``check_third_element`` that returns a new list 
-        called ``t_check`` that contains the third element of each tuple.
+        Write a function called ``check_third_element`` that takes in a list of tuples, ``lst_tups`` as a parameter. Tuples must have at least 3 items. 
+        Return a new list that contains the third element of each tuple. For example, ``check_third_element([(1,2.2,3.3),(-1,-2,-3),(0,0,0)])``
+        would return ``[3.3, -3, 0]``.
         ~~~~
-
-        def check_third_element():
-            lst_tups = [('Articuno', 'Moltres', 'Zapdos'), ('Beedrill', 'Metapod', 'Charizard', 'Venasaur', 'Squirtle'), ('Oddish', 'Poliwag', 'Diglett', 'Bellsprout'), ('Ponyta', "Farfetch'd", 'Tauros', 'Dragonite'), ('Hoothoot', 'Chikorita', 'Lanturn', 'Flaaffy', 'Teddiursa', 'Phanpy'), ('Loudred', 'Volbeat', 'Seviper', 'Wailord', 'Sealeo')]
+        def check_third_element(lst_tups):
             # write code here
 
         ====
@@ -52,8 +65,12 @@ Write Code Questions
         class MyTests(TestCaseGui):
 
             def testOne(self):
-                self.assertEqual(check_third_element(), ['Zapdos', 'Charizard', 'Diglett', 'Tauros', 'Lanturn', 'Seviper'], "Checking that the correct entries made it into t_check.")
+                self.assertEqual(check_third_element([(1,2.2,3.3),(-1,-2,-3),(0,0,0)]), [3.3, -3, 0], "check_third_element([(1,2.2,3.3),(-1,-2,-3),(0,0,0)])")
+                self.assertEqual(check_third_element([(1,2,3),(1,2,3),(1,2,3),(1,2,3)]), [3, 3, 3, 3], "check_third_element([(1,2,3),(1,2,3),(1,2,3),(1,2,3)])")
+                self.assertEqual(check_third_element([('hi','hello','how are you'),('bye','goodbye','farewell')]), ['how are you', 'farewell'], "check_third_element([('hi','hello','how are you'),('bye','goodbye','farewell')])")
 
+
+        
         MyTests().main()
 
 #.
@@ -61,21 +78,17 @@ Write Code Questions
 
         .. tab:: Question
 
-            The dictionary 'majors' contains college major codes as keys and college major
-            names as values. Write a function named ``find_major()`` that takes one parameter,
-            ``major code``. If the major code exists in 'majors', your function should
-            return a tuple where the first value is the major code and the second is
-            the name of the major. If the major code doesn't exist, return a tuple where
-            the first value is None and the second is a string containing 'Error'.
-            Finally, test your function by printing the name of the major with code 3084.
+            Write a function called ``find_majors`` that takes in a dictionary as a parameter, ``majors``, that has a major code as the key and 
+            the name of a major as the value. Return a list of tuples of size two, in which the first element of the tuple is the major code and 
+            the second element of the tuple is the name of the major. For example,
+            ``find_major({3084: 'Computer Science', 3025: 'Electrical Engineering', 3020: 'Computer Engineering', 3027: 'Cybersecurity', 3068: 'Biometric Systems Engineering'})``
+            would return ``[(3084, 'Computer Science'), (3025, 'Electrical Engineering'), (3020, 'Computer Engineering'), (3027, 'Cybersecurity'), (3068, 'Biometric Systems Engineering')]``.
 
             .. activecode:: tup_writecode3q
                 :practice: T
                 :nocodelens:
 
-                
-                majors = {3084: 'Computer Science', 3025: 'Electrical Engineering', 3020: 'Computer Engineering', 3027: 'Cybersecurity', 3068: 'Biometric Systems Engineering'}
-                def find_major(major_code):
+                def find_major(dictionary_val):
                     # write code here
 
                 ====
@@ -83,39 +96,37 @@ Write Code Questions
 
                 class MyTests(TestCaseGui):
                     def testOne(self):
-                        self.assertEqual(find_major(3084),(3084, 'Computer Science'), "Checking that 'Computer Science' is associated with 3084.")
-                        self.assertEqual(find_major(0), (None, 'Error'), "Making sure that major code 0 returns Error.")
+                        self.assertEqual(find_major({3084: 'Computer Science', 3025: 'Electrical Engineering', 3020: 'Computer Engineering', 3027: 'Cybersecurity', 3068: 'Biometric Systems Engineering'}),[(3084,'Computer Science'), (3025, 'Electrical Engineering'),(3020, 'Computer Engineering'), (3027,'Cybersecurity'), (3068,'Biometric Systems Engineering')], "find_major({3084: 'Computer Science', 3025: 'Electrical Engineering', 3020: 'Computer Engineering', 3027: 'Cybersecurity', 3068: 'Biometric Systems Engineering'})")
+                        self.assertEqual(find_major({0: 'Business', -1: 'Food Science', -3: 'Women’s Studies'}),[(0, 'Business'), (-1, 'Food Science'), (-3, 'Women’s Studies')], "find_major({0: 'Business', -1: 'Food Science', -3: 'Women’s Studies'})")
+                        self.assertEqual(find_major({0: 'Business', 0: 'Food Science', 0:'Women’s Studies'}),[(0, 'Women’s Studies')], "find_major({0: 'Business', 0: 'Food Science', 0:'Women’s Studies'})")
+                        self.assertEqual(find_major({0.1: 'Business', 10: 'Food Science', -9: 'Women’s Studies'}),[(0.1, 'Business'), (10, 'Food Science'), (-9, 'Women’s Studies')], "find_major({0.1: 'Business', 10: 'Food Science', -9: 'Women’s Studies'})")
+
 
                 MyTests().main()
 
         .. tab:: Answer
 
-          .. activecode:: tup_writecode3a
-              :nocodelens:
-              :optional:
+            .. activecode:: tup_writecode3a
+                :nocodelens:
+                :optional:
 
-              majors = {3084: 'Computer Science', 3025: 'Electrical Engineering', 3020: 'Computer Engineering', 3027: 'Cybersecurity', 3068: 'Biometric Systems Engineering'}
-              # Define find_major function with one parameter
-              def find_major(major_code):
-                  # if the parameter is in the keys of the dictionary above
-                  if major_code in majors.keys():
-                      # return the parameter and the name from the dictionary
-                      return (major_code, majors[major_code])
-                  # Create an else statement
-                  else:
-                      # Return an error if not found
-                      return (None, 'Error')
-              # Test your function!
-              print(find_major(3084))
+                def find_major(dictionary_val):
+                    ls1 = []
+                    ls2 = []
+                    for key, val in dictionary_val.items():
+                        ls1.append(key)
+                        ls2.append(val)
+                    list_of_tup = list(zip(ls1, ls2))
+                    return list_of_tup
 #.
     .. activecode:: tup_writecode4
         :practice: T
         :nocodelens:
 
-        Create a function called ``interchange_values`` which returns a tuple which the values of ``t`` interchanged. 
+        Create a function called ``interchange_values`` that takes in a tuple with two values as a parameter, ``t`` and returns a tuple which interchanges the values of ``t``.
+        For example, ``interchange_values(("LeBron", "James"))`` would return ``("James", "LeBron")``.
         ~~~~
-        def interchange_values():
-            t = ("LeBron", "James")
+        def interchange_values(t):
             # write code here
 
         ====
@@ -123,7 +134,10 @@ Write Code Questions
 
         class MyTests(TestCaseGui):
             def testOne(self):
-                self.assertEqual(interchange_values, ("James", "LeBron"), "Testing interchange_values() returns the correct tuple.")
+                self.assertEqual(interchange_values(('LeBron', 'James')), ('James', 'LeBron'), "interchange_values(('LeBron', 'James'))")
+                self.assertEqual(interchange_values(('Hi', 'Hello')), ('Hello', 'Hi'), "interchange_values(('Hi', 'Hello'))")
+                self.assertEqual(interchange_values((1, 2)), (2, 1), "interchange_values((1, 2))")
+                self.assertEqual(interchange_values((True, False)), (False, True), "interchange_values((True, False))")
 
         MyTests().main()
 
@@ -132,19 +146,17 @@ Write Code Questions
 
         .. tab:: Question
 
-            If you remember, the ``items()`` dictionary method produces a sequence
-            of tuples. Keeping this in mind, we have provided you a dictionary called
-            ``pokemon``. Write a function called ``pokemon_transformation`` that appends 
-            the key to the list ``p_names`` and appends the value to the list ``p_number``, 
-            for each key-value pair. Then, zip these two lists together, and return that list.
-            Do not use the ``keys()`` or ``values()`` methods.
+            Write a function called ``dict_transform`` that takes in one dictionary parameter, ``dict``, which returns a tuple of tuples. The inner tuple should 
+            have the first element as the key of the ``dict`` and the second element should have the value of the ``dict``. Do not use the ``keys()`` or ``values()`` 
+            methods. For example, ``dict_transform({'Rattata': 19, 'Machop': 66, 'Seel': 86, 'Volbeat': 86, 'Solrock': 126})`` should return ``(('Rattata', 19), ('Machop', 66), ('Seel', 86), ('Volbeat', 86), ('Solrock', 126))``.
+
+
 
             .. activecode:: tup_writecode5q
                 :nocodelens:
                 :practice: T
 
-                def pokemon_transformation():
-                    pokemon = {'Rattata': 19, 'Machop': 66, 'Seel': 86, 'Volbeat': 86, 'Solrock': 126}
+                def dict_transform(dict):
                     # write code here
 
                 ====
@@ -152,8 +164,10 @@ Write Code Questions
 
                 class MyTests(TestCaseGui):
                     def testOne(self):
-                        self.assertEqual(p_names, ['Rattata', 'Machop', 'Seel', 'Volbeat', 'Solrock'], "Testing that p_name has the correct values.")
-                        self.assertEqual(p_number, [19, 66, 86, 86, 126], "Testing that p_number has the correct values.")
+                        self.assertEqual(dict_transform({'Rattata': 19, 'Machop': 66, 'Seel': 86, 'Volbeat': 86, 'Solrock': 126}), (('Rattata', 19), ('Machop', 66), ('Seel', 86), ('Volbeat', 86), ('Solrock', 126)), "dict_transform({'Rattata': 19, 'Machop': 66, 'Seel': 86, 'Volbeat': 86, 'Solrock': 126})")
+                        self.assertEqual(dict_transform({0: 'Business', -1: 'Food Science', -3: 'Women’s Studies'}), ((0, 'Business'), (-1, 'Food Science'), (-3, 'Women’s Studies')), "dict_transform({0: 'Business', -1: 'Food Science', -3: 'Women’s Studies'})")
+                        self.assertEqual(dict_transform({0: 'Business', 0: 'Food Science', 0:'Women’s Studies'}), ((0, 'Women’s Studies'),), "dict_transform({0: 'Business', 0: 'Food Science', 0:'Women’s Studies'})")
+                        self.assertEqual(dict_transform({0.1: 'Business', 10: 'Food Science', -9: 'Women’s Studies'}),((0.1, 'Business'), (10, 'Food Science'), (-9, 'Women’s Studies')), "dict_transform({0.1: 'Business', 10: 'Food Science', -9: 'Women’s Studies'})")
 
                 MyTests().main()
 
@@ -162,36 +176,35 @@ Write Code Questions
             .. activecode:: tup_writecode5a
                 :nocodelens:
                 :optional:
-
-                def pokemon_transformation():
-                    pokemon = {'Rattata': 19, 'Machop': 66, 'Seel': 86, 'Volbeat': 86, 'Solrock': 126}
-                    # Create lists to hold names and numbers for each Pokemon
-                    p_names = []
-                    p_number = []
-                    # Use a for loop to iterate through the key, value pairs from pokemon dictionary
-                    for key, val in pokemon.items():
-                        # Add the keys and values to their respective lists
-                        p_names.append(key)
-                        p_number.append(val)
-                    # Zip the two lists
-                    zipped_list = list(zip(p_names, p_number))
-                    return zipped_list
+                
+                def dict_transform(dict):
+                    lst_keys = []
+                    lst_vals = []
+                    for key, val in dict.items():
+                        lst_keys.append(key)
+                        lst_vals.append(val)
+                    zipped_tup= tuple(zip(lst_keys, lst_vals))
+                    return zipped_tup
 
 #.
     .. activecode:: tup_writecode6
         :practice: T
         :nocodelens:
 
-        Create a function called ``my_data`` that returns a tuple that contains one element, the integer 99.
+        Write a function called ``my_data`` that takes in an integer, ``int_value`` as a parameter. Return tuple that contains one elements,
+        the integer in the parameter. For example, ``my_data(99)`` would return ``(99,)``.
         ~~~~
-        def my_data():
+        def my_data(int_value):
             # write code here
+
         ====
         from unittest.gui import TestCaseGui
 
         class MyTests(TestCaseGui):
             def testOne(self):
-                self.assertEqual(my_data(), (99,), "Testing that my_data() returns a tuple that has one element, 99.")
+                self.assertEqual(my_data(99), (99,), "my_data(99)")
+                self.assertEqual(my_data(0), (0,), "my_data(0)")
+                self.assertEqual(my_data(-1), (-1,), "my_data(-1)")
 
         MyTests().main()
 
@@ -209,17 +222,18 @@ Write Code Questions
                 :nocodelens:
 
                 def mod_tuples(tup_list):
+                    # write code here
 
                 ====
                 from unittest.gui import TestCaseGui
 
                 class MyTests(TestCaseGui):
                     def testOne(self):
-                        self.assertEqual(mod_tuples([(3, 4), (20, -3, 2)]),[(3, 100), (20, -3, 100)] "mod_tuples([(3, 4), (20, -3, 2)]")
-                        self.assertEqual(mod_tuples([(3, ), (20, -3, 2)]),[(100, ), (20, -3, 100)] "mod_tuples([(3, ), (20, -3, 2)]")
-                        self.assertEqual(mod_tuples([(3, 4), (-3, )]),[(3, 100), (100,)] "mod_tuples([(3, 4), (-3, )]),[(3, 100), (100,)]")
-                        self.assertEqual(mod_tuples([(20, )]),[(100, )] "mod_tuples([(20, )])")
-                        self.assertEqual(mod_tuples([(20, 1, 80, 2 )]),[(20, 1, 80, 100)] "mod_tuples([(20, 1, 80, 2 )])")
+                        self.assertEqual(mod_tuples([(3, 4), (20, -3, 2)]),[(3, 100), (20, -3, 100)], "mod_tuples([(3, 4), (20, -3, 2)]")
+                        self.assertEqual(mod_tuples([(3, ), (20, -3, 2)]),[(100, ), (20, -3, 100)], "mod_tuples([(3, ), (20, -3, 2)]")
+                        self.assertEqual(mod_tuples([(3, 4), (-3, )]),[(3, 100), (100,)], "mod_tuples([(3, 4), (-3, )]),[(3, 100), (100,)]")
+                        self.assertEqual(mod_tuples([(20, )]),[(100, )], "mod_tuples([(20, )])")
+                        self.assertEqual(mod_tuples([(20, 1, 80, 2 )]),[(20, 1, 80, 100)], "mod_tuples([(20, 1, 80, 2 )])")
 
                 MyTests().main()
 
@@ -232,18 +246,20 @@ Write Code Questions
                 def mod_tuples(tup_list):
                     # Access the last element of each list (-1) and replace with 100 in each element of the tuple
                     updated_list = [tup[:-1] + (100,) for tup in tup_list]
-                # return the updated list
-                return updated_list
+                    # return the updated list
+                    return updated_list
 
 #.
     .. activecode:: tup_writecode8
         :practice: T
         :nocodelens:
 
-        Define a function called ``info`` with the following required parameters: name, age, birth_year, year_in_college, and hometown. The 
+        Write a function called ``info`` with the following required parameters: name, age, birth_year, year_in_college, and hometown. The 
         function should return a tuple that contains all the inputted information. For example, ``info('Troy', 24, 1996, 'Sophomore', 'Ann Arbor')``
         would return ``('Troy', 24, 1996, 'Sophomore', 'Ann Arbor')``.
         ~~~~
+        def info(name, age, birth_year, year_in_college, hometown):
+            # write code here
 
         ====
         from unittest.gui import TestCaseGui
@@ -260,7 +276,7 @@ Write Code Questions
 
         .. tab:: Question
 
-            Write a function ``list_link`` that accepts two lists and returns a dictionary
+            Write a function ``list_link`` that accepts two lists, ``lst1`` and ``lst2`` and returns a dictionary
             with the first list as the key and the second list as the value. For example,
             ``list_link(['what', 'do', 'you', 'do'], [1,2,3,4])`` should return ``{'what': 1, 'do': 4, 'you': 3}``.
 
@@ -270,8 +286,6 @@ Write Code Questions
 
                 def list_link(lst1, lst2):
                     #write your code here
-
-                print(list_link(['what', 'do', 'you', 'do'], [1,2,3,4]))
 
                 ====
                 from unittest.gui import TestCaseGui
@@ -296,17 +310,15 @@ Write Code Questions
                     # Create counter variable to count iterations
                     counter = 0
                     # Create condition for when lists are the same length
-                    if len(list1) == len(list2):
+                    if len(lst1) == len(lst2):
                         # iterate through item in list1
-                        for i in list1:
+                        for i in lst1:
                             # Add that item to dictionary with its place in list2
-                            diction[i] = list2[counter]
+                            diction[i] = lst2[counter]
                             # Increment counter
                             counter += 1
                     # Return the dictionary
                     return diction
-
-                print(list_link(['what', 'do', 'you', 'do'], [1,2,3,4]))
 
 #.
     .. activecode:: tup_writecode10
@@ -316,7 +328,8 @@ Write Code Questions
         Create a function ``tuplize()`` that accepts two inputs and returns a tuple containing those inputs in order.
         For example, ``tuplize('Stephen', 'Curry')`` would return ``('Stephen', 'Curry')``.
         ~~~~
-
+        def tuplize(val1, val2):
+            # write code here
         ====
         from unittest.gui import TestCaseGui
 
