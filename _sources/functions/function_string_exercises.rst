@@ -35,7 +35,7 @@ Function and String Multiple Choice Questions
    :feedback_b: Correct! By using str, the integer variable is converted into a string.
    :feedback_c: Try again! This doesn't use the variable num_of_apples.
    :feedback_d: Try again! To convert an integer to a string, the built-in function str is used, not string.
-   :feedback_e: Correct! This converts the integer variable to a string on two seperate lines.
+   :feedback_e: Correct! This converts the integer variable to a string on two separate lines.
    
    Which of the following choices correctly prints a sentence using the variable ``num_of_apples``?
 
