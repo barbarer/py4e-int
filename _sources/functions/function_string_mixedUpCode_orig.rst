@@ -6,8 +6,8 @@ Function and String Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function ``joinStrings(str1,str2)`` that takes two different strings
-    as parameters, ``str1`` and ``str2`` and returns them as one string with ``str1`` before ``str2``.
+    Create a function ``joinStrings(str1, str2)`` that takes two different strings
+    as parameters, ``str1`` and ``str2``, and returns them as one string with ``str1`` before ``str2``.
     For example, ``joinStrings('he','llo')`` returns ``hello``.
     -----
     def joinStrings(str1, str2):
@@ -26,8 +26,8 @@ Function and String Mixed-Up Code Questions
     :practice: T
     :autograde: unittest
 
-    Write a function ``joinStrings(str1,str2)`` that takes two different strings
-    as parameters, ``str1`` and ``str2`` and returns them as one string with ``str1`` before ``str2``.
+    Write a function ``joinStrings(str1, str2)`` that takes two different strings
+    as parameters, ``str1`` and ``str2``, and returns them as one string with ``str1`` before ``str2``.
     For example, ``joinStrings('he','llo')`` returns ``hello``.
     ~~~~
 
@@ -47,7 +47,7 @@ Function and String Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function ``rect_per(w,h)``, that takes two variables the width, ``w``,  and the height, ``h``. Calculate the perimeter, which is the width plus the height times two,
+    Create a function ``rect_per(w, h)`` that takes the width, ``w``, and the height, ``h``, as parameters. Calculate the perimeter, which is the width plus the height times two,
     and return a string in the form - ``Perimeter of rectangle with width of (w) and height of (h) is (perimeter)``.  For example, ``rect_per(5,10)``
     returns ``Perimeter of rectangle with width of 5 and height of 10 is 30``.
     -----
@@ -69,7 +69,7 @@ Function and String Mixed-Up Code Questions
     :practice: T
     :autograde: unittest
 
-    Write a function ``rect_per(w,h)``, that takes two variables the width, ``w``,  and the height, ``h``. Calculate the perimeter, which is the width plus the height times two,
+    Write a function ``rect_per(w, h)`` that takes the width, ``w``, and the height, ``h``, as parameters. Calculate the perimeter, which is the width plus the height times two,
     and return a string in the form - ``Perimeter of rectangle with width of (w) and height of (h) is (perimeter)``.  For example, ``rect_per(5,10)``
     returns ``Perimeter of rectangle with width of 5 and height of 10 is 30``.
     ~~~~
@@ -82,6 +82,7 @@ Function and String Mixed-Up Code Questions
             self.assertEqual(rect_per(5, 10),"Perimeter of rectangle with width of 5 and height of 10 is 30","rect_per(5, 10)")
             self.assertEqual(rect_per(2, 3),"Perimeter of rectangle with width of 2 and height of 3 is 10","rect_per(2, 3)")
             self.assertEqual(rect_per(2.5, 3.5),"Perimeter of rectangle with width of 2.5 and height of 3.5 is 12.0","rect_per(2.5, 3.5)")
+            self.assertEqual(rect_per(1.3, 2.6),"Perimeter of rectangle with width of 1.3 and height of 2.6 is 7.8","rect_per(1.3, 2.6)")
 
     myTests().main()
 
@@ -90,7 +91,7 @@ Function and String Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function ``cube(n)`` that takes a number, ``n`` and cubes it and returns a string in the form
+    Create a function ``cube(n)`` that takes a number, ``n``, and cubes it and returns a string in the form
     ``Cube of (n) is (n cubed)``.  For example, ``cube(4)`` returns ``Cube of 4 is 64``.
     -----
     def cube(n):
@@ -109,7 +110,7 @@ Function and String Mixed-Up Code Questions
     :practice: T
     :autograde: unittest
 
-    Write a function ``cube(n)`` that takes a number, ``n`` and cubes it and returns a string in the form
+    Write a function ``cube(n)`` that takes a number, ``n``, and cubes it and returns a string in the form
     ``Cube of (n) is (n cubed)``.  For example, ``cube(4)`` returns ``Cube of 4 is 64``.
     ~~~~
 
@@ -122,6 +123,7 @@ Function and String Mixed-Up Code Questions
             self.assertEqual(cube(4),"Cube of 4 is 64","cube(4)")
             self.assertEqual(cube(5),"Cube of 5 is 125","cube(5)")
             self.assertEqual(cube(1),"Cube of 1 is 1","cube(1)")
+            self.assertEqual(cube(1.5),"Cube of 1.5 is 3.375","cube(1.5)")
 
     myTests().main()
 
@@ -131,7 +133,7 @@ Function and String Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function ``atlas(c_name)`` that takes a country name, ``c_name``
+    Create a function ``atlas(c_name)`` that takes a country name, ``c_name``, 
     as a parameter and returns a string in the form of
     ``The last letter of (c_name) is (last)``.  For example, ``atlas('Germany')`` returns
     ``The last letter of Germany is y``.
@@ -150,7 +152,7 @@ Function and String Mixed-Up Code Questions
     :practice: T
     :autograde: unittest
 
-    Write a function ``atlas(c_name)`` that takes a country name, ``c_name``
+    Write a function ``atlas(c_name)`` that takes a country name, ``c_name``, 
     as a parameter and returns a string in the form of
     ``The last letter of (c_name) is (last)``.  For example, ``atlas('Germany')`` returns
     ``The last letter of Germany is y``.
@@ -174,7 +176,7 @@ Function and String Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function ``dateYear(date)`` that takes a string, ``date`` in the format MM/DD/YYYY and returns the year.
+    Create a function ``dateYear(date)`` that takes a string, ``date``, in the format MM/DD/YYYY and returns the year.
     For example, ``dateYear(11/07/2000)`` should return ``2000``.
     -----
     def dateYear(date):
@@ -189,7 +191,7 @@ Function and String Mixed-Up Code Questions
     :practice: T
     :autograde: unittest
 
-    Write a function ``dateYear(date)`` that takes a string, ``date`` in the format MM/DD/YYYY and returns the year.
+    Write a function ``dateYear(date)`` that takes a string, ``date``, in the format MM/DD/YYYY and returns the year.
     For example, ``dateYear(11/07/2000)`` should return ``2000``.
     ~~~~
 
@@ -285,7 +287,7 @@ Function and String Mixed-Up Code Questions
     :adaptive:
 
     Create a function ``first_last(str)``, that takes a string, ``str``, and returns a new string with the first two characters of the word
-    followed by the last two characters.
+    followed by the last two characters. Assume ``str`` is four characters or more. 
     For example, ``first_last('wander')`` returns ``waer``.
     -----
     def first_last(str):
@@ -301,7 +303,7 @@ Function and String Mixed-Up Code Questions
     :autograde: unittest
 
     Write a function ``first_last(str)``, that takes a string, ``str``, and returns a new string with the first two characters of the word
-    followed by the last two characters.
+    followed by the last two characters. Assume ``str`` is four characters or more. 
     For example, ``first_last('wander')`` returns ``waer``.
     ~~~~
 
