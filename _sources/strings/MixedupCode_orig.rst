@@ -6,32 +6,40 @@ Mixed-up Code Questions
     :practice: T
     :noindent:
 
-    The following segment should print the statement, "So happy 4 you!". The blocks have been mixed up, and include two extra blocks that are not correct.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+    The following segment should print your feelings by using the variable 
+    "emotion" in the variable "feeling". For example, if you're feeling
+    "So happy" the statement should print "So happy 4 you!" The blocks 
+    have been mixed up, and include two extra blocks that are not correct.  
+    Drag the blocks from the left and put them in the correct order on the 
+    right.  Click the "Check Me" button to check your solution.
     -----
-    emotion = "So happy "
+    def mood(emotion):
     =====
-    emotion = "So happy ' #distractor
+    feeling = emotion + str(4) + " you!"
     =====
-    print(emotion + 4 + " you!") #distractor
+    feeling = emotion + 4 + " you!" #paired
     =====
-    print(emotion + str(4) + " you!")
+    print(feeling)
+    =====
+    return feeling
 
 
 .. activecode::  str-mixed-emotion-ac
 
-    Finish the code below to print "So happy 4 you!" using the variable emotion.
+    Finish the code below to print how you're feeling by using the variable emotion 
+    in the variable "feeling". For example, if you're feeling "So happy" the statement 
+    should print "So happy 4 you!"
     ~~~~
-    emotion = "So happy "
-    feeling = 
-    print(feeling)
-   
+    def mood(emotion):
+        feeling = 4 you!
+        print(feeling)
+    
     ====
     from unittest.gui import TestCaseGui
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(feeling, "So happy 4 you!", "Testing feeling with correct string output")
-            self.assertEqual(emotion,"So happy ", "Testing emotion to be equal to 'So happy '")
+            self.assertEqual(mood("So happy"), "So happy 4 you!", "Testing mood() with correct string output")
         
     myTests().main()
 
@@ -43,25 +51,33 @@ Mixed-up Code Questions
     :practice: T
     :noindent:
 
-    The following program segment should print the phrase, "My new book cost $12". But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+    The following program segment should print the object purchased and the price of it by using 
+    the variable "statement". For example, if the object is a "new book" and costed 12 dollars, 
+    then the statement should be "My new book cost $12". But, the blocks have been mixed up and 
+    include an extra block that isn't correct.  Drag the needed blocks from the left and put them 
+    in the correct order on the right.  Click the "Check Me" button to check your solution.
     -----
-    item = "new book"
-    price = "12"
+    def item_purchase(item, price):
     =====
-    print("My " + item + " cost $" + price)
+        statement = "My " + item + " cost $" + price
     =====
-    print("My " item " cost $" price) #paired
+        statement = "My " item " cost $" price # paired
+    =====
+        print(statement)
+    =====
+        return statement
 
 
 .. activecode::  str-mixed-book-ac
 
-    Finish the code below to print "My new book cost $12" using the variables item and price.
+    Finish the code below to print the object purchased and the price of it by using 
+    the variable "statement". For example, if the object is a "new book" and costed 12 dollars, 
+    then the statement should be "My new book cost $12".
     ~~~~
-    item = "new book"
-    price = "12"
-    total =
+    def item_purchase(item, price):
+        statement = 
 
-    print(total)
+        print(statement)
     
 
     ====
@@ -69,9 +85,7 @@ Mixed-up Code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(total, "My new book cost $12")
-            self.assertEqual(item,"new book")
-            self.assertEqual(price, "12")
+            self.assertEqual(item_purchase("new book", "12"), "My new book cost $12")
 
     myTests().main()
 
@@ -83,35 +97,37 @@ Mixed-up Code Questions
     :practice: T
     :noindent:
 
-    The following program segment should print the phrase, "Sam likes to code". But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+    The following program segment should print a phrase about a person and what they like to do combining the variables
+    "person" and "thing". For example, if the "person" is called "Sam" and they like to code, thing must be "likes
+    to code", resulting in "Sam likes to code". But, the blocks have been mixed up and include an extra block that isn't correct.  
+    Drag the needed blocks from the left and put them in the correct order on the right.  Click the "Check Me"
+    button to check your solution.
     -----
-    person = "Sam "
-    thing = "likes to code"
+    def phrase(person, thing):
     =====
-    print(person + thing)
+        print(person + thing)
     =====
-    print(person thing) #paired
+        print(person thing) #paired
     =====
-    print("person + thing") #paired
+        print("person + thing") #paired
+    =====
+        return person + thing
 
 
 .. activecode::  str-mixed-code-ac
 
-    Finish the code below to print "Sam likes to code" using the variables var1 and var2.
+    Finish the code below to print a phrase about a person and what they like to do combining the variables
+    "person" and "thing". For example, if the "person" is called "Sam" and they like to code, thing must be "likes
+    to code", resulting in "Sam likes to code".
     ~~~~
-    person = "Sam"
-    thing = "likes to code"
-    sentence = 
-    print(sentence)
+    def phrase(person, thing):
 
     ====
     from unittest.gui import TestCaseGui
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(sentence, "Sam likes to code")
-            self.assertEqual(person, "Sam")
-            self.assertEqual(thing, "likes to code")
+            self.assertEqual(phrase("Sam", " likes to code"), "Sam likes to code")
 
     myTests().main()
 
@@ -122,27 +138,38 @@ Mixed-up Code Questions
     :practice: T
     :noindent:
 
-    The following program segment should print the phrase, "It takes us 2 hours and 45 minutes to get home from camp". But, the blocks have been mixed up and include two extra blocks that aren't correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+    Let's imagine that last weekend you went on a camping trip with your family. Now you're
+    writing a program segment that says how long it took you to get home from camp. Using the variables
+    numHours and numMinutes, print a phrase with the variable "phrase" that says how long it took you to 
+    get home from camp. For example, if numHours was 3 hours and numMinutes was 13 minutes, the phrase 
+    should be, "It takes us 3 hours and 13 minutes to get home from camp". But, the blocks have been mixed 
+    up and include two extra blocks that aren't correct.  Drag the needed blocks from the left and put them 
+    in the correct order on the right.  Click the "Check Me" button to check your solution.
     -----
-    numHours = 2
-    numMinutes = 45.0
+    def timeFromCamp(numHours, numMinutes):
     =====
-    print("It takes us " + str(numHours) + " hours and " + str(int(numMinutes)) + " minutes to get home from camp")
+        phrase = "It takes us " + str(numHours) + " hours and " + str(int(numMinutes)) + " minutes to get home from camp"
     =====
-    print("It takes us " + numHours + " hours and " + numMinutes + " minutes to get home from camp") #paired
+        phrase = "It takes us " + numHours + " hours and " + numMinutes + " minutes to get home from camp" #paired
     =====
-    print("It takes us " + str(numHours) + " hours and " + str(numMinutes) + " minutes to get home from camp") #paired
+        phrase = "It takes us " + str(numHours) + " hours and " + str(numMinutes) + " minutes to get home from camp" #paired
+    ====
+        print(phrase)
+    ====
+        return phrase
 
 
 .. activecode::  str-mixed-time-ac
 
-    Finish the code below to print "It takes us 2 hours and 45 minutes to get home from camp" using the variables numHours and numMinutes.
+    Let's imagine that last weekend you went on a camping trip with your family. Now you're
+    writing a program segment that says how long it took you to get home from camp. Using the variables
+    numHours and numMinutes, print a phrase with the variable "phrase" that says how long it took you to 
+    get home from camp. For example, if numHours was 3 hours and numMinutes was 13 minutes, the phrase 
+    should be, "It takes us 3 hours and 13 minutes to get home from camp".
     ~~~~
-    numHours = 2
-    numMinutes = 45.0
-    numTotal = 
+    def timeFromCamp(numHours, numMinutes):
 
-    print(numTotal)
+        return phrase
 
     ====
     from unittest.gui import TestCaseGui
@@ -150,9 +177,7 @@ Mixed-up Code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(numTotal, "It takes us 2 hours and 45 minutes to get home from camp")
-            self.assertEqual(numHours, 2)
-            self.assertEqual(numMinutes, 45.0)
+            self.assertEqual(timeFromCamp(2, 45.0), "It takes us 2 hours and 45 minutes to get home from camp")
 
     myTests().main()
 
@@ -163,31 +188,37 @@ Mixed-up Code Questions
     :practice: T
     :noindent:
 
-    The following program segment should print the phrase, "Grace loves grapes". But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+    The following program segment should print your favorite and least favorite food using the variables "fave" and
+    "unfave" in the variable "feeling". For example, if your fave food is pizza but your unfave is broccoli, you 
+    should print, "My favorite food is pizza but I don't like broccoli". But, the blocks have been mixed up and include 
+    an extra block that isn't correct. Drag the needed blocks from the left and put them in the correct order on the right. 
+    Click the "Check Me" button to check your solution.
     -----
-    feeling = "loves"
+    def food(fave, unfave):
     =====
-    print("Grace" + feeling + "grapes") #distractor
+        feeling = "My favorite food is " + fave " but I don't like " + unfave
     =====
-    print("Grace " + feeling + " grapes")
+        feeling = "My favorite food is" + fave "but I don't like " + unfave #paired
+    =====
+        print(feeling)
+    =====
+        return feeling
 
 
 .. activecode::  str-mixed-feeling-ac
 
-    Finish the code below to print "Grace loves grapes" using the variable feeling.
+    Finish the code below to print your favorite and least favorite food using the variables "fave" and
+    "unfave" in the variable "feeling". For example, if your fave food is pizza but your unfave is broccoli, you 
+    should print, "My favorite food is pizza but I don't like broccoli".
     ~~~~
-    feeling = "loves"
-    phrase =
-
-    print(phrase)
+    def food(fave, unfave):
 
     ====
     from unittest.gui import TestCaseGui
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(phrase, "Grace loves grapes")
-            self.assertEqual(feeling, "loves")
+            self.assertEqual(food("pizza", "broccoli"), "My favorite food is pizza but I don't like broccoli")
 
     myTests().main()
 
@@ -198,7 +229,9 @@ Mixed-up Code Questions
     :practice: T
     :noindent:
 
-    The following program segment should print the phrase, "My sheepdog looks like a Muppet". But, the blocks have been mixed up and include two extra blocks that are not correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+    The following program segment should print the phrase, "My sheepdog looks like a Muppet". But, the blocks have 
+    been mixed up and include two extra blocks that are not correct.  Drag the needed blocks from the left and put 
+    them in the correct order on the right.  Click the "Check Me" button to check your solution.
     -----
     animal = "sheepdog"
     =====
@@ -211,7 +244,8 @@ Mixed-up Code Questions
 
 .. activecode::  str-mixed-animal-ac
 
-    Finish the code below to print "My sheepdog looks like a Muppet" using the variable animal.
+    Finish the code below to print "My sheepdog looks like a Muppet" using the variable animal in the variable "comparison".
+    For example, if the animal is sheepdog, comparison should be "My sheepdog looks like a Muppet".
     ~~~~
     animal = 
     comparison = 
@@ -235,40 +269,43 @@ Mixed-up Code Questions
     :practice: T
     :noindent:
 
-    The following program segment should print the phrase, "3 + 300 + 7 = 310". But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+    Let's imagine you went on a huge shopping spree. To double-check how much you spent, you are adding up 
+    how much money you used at each store. In the following program segment, print how much you spent at the first 
+    three stores and then the total using the variables "store1", "store2", "store3", and "ans" in the "total" variable. 
+    For example, if you spent $30 in the first store, $13 in the second store, and $56 in the last store, you should 
+    print, "$30 + $13 + $56 = $99". But, the blocks have been mixed up and include an extra block that isn't correct.  
+    Drag the needed blocks from the left and put them in the correct order on the right. Click the Check Me button to 
+    check your solution.
     -----
-    num1 = 3
-    num2 = 300
-    num3 = 7
-    ans = 310
+    def addition(store1, store2, store3, ans):
     =====
-    print(str(num1) + " + " + str(num2) + " + " + str(num3) + " = " + str(ans))
+        total = "$" + str(store1) + " + " + "$" + str(store2) + " + " + "$" + str(store3) + " = " + "$" + str(ans)
     =====
-    print(str(num1) + str(num2) + str(num3) = str(ans)) #distractor
+        total = "$" + str(num1) + "$" + str(num2) + "$" + str(num3) = "$" + str(ans) #paired
+    =====
+        print(total)
+    =====
+        return total
 
 
 .. activecode::  str-mixed-add-ac
 
-    Finish the code below to print "3 + 300 + 7 = 310" using the variables num1, num2, num3, and ans.
+    Let's imagine you went on a huge shopping spree. To double-check how much you spent, you are adding up 
+    how much money you used at each store. In the following program segment, print how much you spent at the first 
+    three stores and then the total using the variables "store1", "store2", "store3", and "ans" in the "total" variable. 
+    For example, if you spent $30 in the first store, $13 in the second store, and $56 in the last store, you should 
+    print, "$30 + $13 + $56 = $99".
     ~~~~
-    num1 = 
-    num2 = 
-    num3 = 
-    ans = 
-    total = 
+    def addition(store1, store2, store3, ans):
 
-    print(total)
+
     ====
     from unittest.gui import TestCaseGui
 
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(total, "3 + 300 + 7 = 310")
-            self.assertEqual(num1, 3)
-            self.assertEqual(num2, 300)
-            self.assertEqual(num3, 7)
-            self.assertEqual(ans, 310)
+            self.assertEqual(addition(30,13,56,99), "$30 + $13 + $56 = $99")
     myTests().main()
 
 
@@ -278,25 +315,28 @@ Mixed-up Code Questions
     :practice: T
     :noindent:
 
-    The following program segment should print the phrase, "I am a CS wizard". But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+    The following program segment should print any phrase by combining the two variables "var1" and "var2" in
+    the variable var3. For example, if var1 is "I am a " and var2 is "CS wizard", var3 should be "I am a CS wizard".
+    But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed blocks from 
+    the left and put them in the correct order on the right.  Click the "Check Me" button to check your solution.
     -----
-    var1 = "I am a "
-    var2 = "CS wizard"
+    def combination(var1, var2):
     =====
-    print(var1 + var2)
+        var3 = var1 + var2
     =====
-    print(var1 + " " + var2) #paired
+        var3 = var1 + " " + var2 #paired
+    =====
+        print(var3)
+    =====
+        return var3
 
 
 .. activecode::  str-mixed-wizard-ac
 
-    Finish the code below to print "I am a CS wizard" by fixing the variables var1 and var2 and combining them in var3.
+    Finish the code below to print any phrase by combining the two variables "var1" and "var2" in
+    the variable var3. For example, if var1 is "I am a " and var2 is "CS wizard", var3 should be "I am a CS wizard".
     ~~~~
-    var1 = I am a 
-    var2 = CS wizard
-    var3 =
-
-    print(var3)
+    def combination(var1, var2):
 
     ====
     from unittest.gui import TestCaseGui
@@ -305,7 +345,7 @@ Mixed-up Code Questions
         def testOne(self):
             self.assertEqual(var1, "I am a ")
             self.assertEqual(var2, "CS wizard")
-            self.assertEqual(var3, "Sam likes to code")
+            self.assertEqual(combination("I am a ", "CS wizard"), "I am a CS wizard")
 
     myTests().main()
 
@@ -322,14 +362,14 @@ Mixed-up Code Questions
     col2 = "'blue'"
     =====
     col1 = "Red"
-    col2 = "blue" #distractor
+    col2 = "blue" #paired
     =====
     print(col1 + " is a primary color, and so is " + col2)
 
 
 .. activecode::  str-mixed-colors-ac
 
-    Write the code below to print "'Red' is a primary color, and so is 'blue'" by fixing the variables col1 and col2 and then combining them in the variables colors.
+    Fix and complete the code below to print "'Red' is a primary color, and so is 'blue'" by fixing the variables col1 and col2 and then combining them in the variables colors.
     ~~~~
     col1 = Red
     col2 = blue
