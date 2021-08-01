@@ -15,9 +15,9 @@ Mixed-up Code Questions
     -----
     def mood(emotion):
     =====
-    feeling = emotion + str(4) + " you!"
+    feeling = emotion + " " +  str(4) + " you!"
     =====
-    feeling = emotion + 4 + " you!" #paired
+    feeling = emotion + " " + 4 + " you!" #paired
     =====
     print(feeling)
     =====
