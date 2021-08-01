@@ -31,8 +31,7 @@ Mixed-up Code Questions
     should print "So happy 4 you!"
     ~~~~
     def mood(emotion):
-        feeling = 4 you!
-        print(feeling)
+
     
     ====
     from unittest.gui import TestCaseGui
@@ -75,9 +74,6 @@ Mixed-up Code Questions
     then the statement should be "My new book cost $12".
     ~~~~
     def item_purchase(item, price):
-        statement = 
-
-        print(statement)
     
 
     ====
@@ -168,8 +164,6 @@ Mixed-up Code Questions
     should be, "It takes us 3 hours and 13 minutes to get home from camp".
     ~~~~
     def timeFromCamp(numHours, numMinutes):
-
-        return phrase
 
     ====
     from unittest.gui import TestCaseGui
