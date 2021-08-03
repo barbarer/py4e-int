@@ -6,83 +6,96 @@ Functions and Loops Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``nums_one_to_ten_list`` that uses a for loop to create and return a list with numbers 1 to 10.
+    Create a function called ``nums_x_to_y`` that takes in two integer parameter, ``x`` and ``y`` and uses a for loop to create and 
+    return a list with numbers ``x`` to ``y``. Note: ignore cases for then ``y`` is not larger than ``x``. For example, ``nums_x_to_y(1,10)`` 
+    would return ``[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]``.
     -----
-    def nums_one_to_ten_list():
+    def nums_x_to_y(x,y):
     =====
-    def nums_one_to_ten_list: #paired
+    def nums_x_to_y: #paired
     =====
-        one_to_ten_list = []
+        x_to_y_list = []
     =====
-        for num in range(1,11):
+        for num in range(x,y+1):
     =====
-        for num in range(10): #paired
+        for num in range(y): #paired
     =====
-        for num in range(1,10): #paired
+        for num in range(x,y): #paired
     =====
-            one_to_ten_list.append(num)
+            x_to_y_list.append(num)
     =====
-        return one_to_ten_list
+        return x_to_y_list
 
 .. activecode:: Functions_Loops_MixedUpCode_1_ac
-   :practice: T
-   :autograde: unittest
+    :practice: T
+    :autograde: unittest
 
-   Create a function called ``nums_one_to_ten_list`` that uses a for loop to create and return a list with numbers 1 to 10.
-   ~~~~
-   def nums_one_to_ten_list():
-       # write code here
+    Write a function called ``nums_x_to_y`` that takes in two integer parameter, ``x`` and ``y`` and uses a for loop to create and 
+    return a list with numbers ``x`` to ``y``. Note: ignore cases for then ``y`` is not larger than ``x``. For example, ``nums_x_to_y(1,10)`` 
+    would return ``[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]``.
+    ~~~~
+    def nums_x_to_y():
+        # write code here
 
-   ====
-   from unittest.gui import TestCaseGui
-   class myTests(TestCaseGui):
+    ====
+    from unittest.gui import TestCaseGui
+    class myTests(TestCaseGui):
 
-       def testOne(self):
-           self.assertEqual(nums_one_to_ten_list(),[1, 2, 3, 4, 5, 6, 7, 8, 9, 10],"Tested creates list with nums 1 through 10")
+        def testOne(self):
+            self.assertEqual(nums_x_to_y(1,10),[1, 2, 3, 4, 5, 6, 7, 8, 9, 10],"nums_x_to_y(1,10)")
+            self.assertEqual(nums_x_to_y(3,4),[3, 4],"nums_x_to_y(3,4)")
+            self.assertEqual(nums_x_to_y(2,9),[2, 3, 4, 5, 6, 7, 8, 9],"nums_x_to_y(2,9)")
 
-   myTests().main()
+    myTests().main()
 
 .. parsonsprob:: Functions_Loops_MixedUpCode_2
     :numbered: left
     :practice: T
     :adaptive:
 
-    Create a function ``count_by_5_to_20_list`` that uses a for loop to create and return a list with numbers 5, 10, 15, and 20.
+    Create a function ``count_by_x_to_y`` that takes in two integer parameter, ``x`` and ``y`` and uses a for loop to create and return 
+    a list with numbers ``x`` to ``y``. Note: ignore cases for then ``y`` is not larger than ``x``. Use a for loop to create and return a 
+    list with numbers up to ``y`` by skip counting by ``x``. For example, ``count_by_x_to_y(5,20)`` should return ``[0, 5, 10, 15, 20]``.
     -----
-    def count_by_5_to_20_list():
+    def count_by_x_to_y(x,y):
     =====
-    def count_by_5_to_20_list: #paired
+    def count_by_x_to_y: #paired
     =====
-        five_to_twenty_list = []
+        x_to_y_lst = []
     =====
-        for num in range (5, 21, 5):
+        for num in range (0, y+1, x):
     =====
-        for num in range (5, 20, 5): #paired
+        for num in range (0, y, x+1): #paired
     =====
-            five_to_twenty_list.append(num)
+            x_to_y_lst.append(num)
     =====
-            five_to_twenty_list += num #paired
+            x_to_y_lst += num #paired
     =====
-        return five_to_twenty_list
+        return x_to_y_lst
 
 
 .. activecode:: Functions_Loops_MixedUpCode_2_ac
-   :practice: T
-   :autograde: unittest
+    :practice: T
+    :autograde: unittest
 
-   Create a function ``count_by_5_to_20_list`` that uses a for loop to create and return a list with numbers 5, 10, 15, and 20.
-   ~~~~
-   def count_by_5_to_20_list():
-       # write code here
+    Write a function ``count_by_x_to_y`` that takes in two integer parameter, ``x`` and ``y`` and uses a for loop to create and return 
+    a list with numbers ``x`` to ``y``. Note: ignore cases for then ``y`` is not larger than ``x``. Use a for loop to create and return a 
+    list with numbers up to ``y`` by skip counting by ``x``. For example, ``count_by_x_to_y(5,20)`` should return ``[0, 5, 10, 15, 20]``.
+    ~~~~
+    def count_by_x_to_y():
+        # write code here
 
-   ====
-   from unittest.gui import TestCaseGui
-   class myTests(TestCaseGui):
+    ====
+    from unittest.gui import TestCaseGui
+    class myTests(TestCaseGui):
 
-       def testOne(self):
-           self.assertEqual(count_by_5_to_20_list(),[5, 10, 15, 20],"Tested creates list with nums 5, 10, 15, 20")
+        def testOne(self):
+            self.assertEqual(count_by_x_to_y(5,20),[0, 5, 10, 15, 20],"count_by_x_to_y(5,20)")
+            self.assertEqual(count_by_x_to_y(2,10),[0, 2, 4, 6, 8, 10],"count_by_x_to_y(2,10)")
+            self.assertEqual(count_by_x_to_y(1,10),[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],"count_by_x_to_y(1,10)")
+            self.assertEqual(count_by_x_to_y(5,6),[0, 5],"count_by_x_to_y(5,6)")
 
-   myTests().main()
+    myTests().main()
 
 
 
@@ -91,32 +104,43 @@ Functions and Loops Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``countdown_to_go`` that initializes a parameter ``seconds`` to 3 and 
-    counts down to 1 while printing out the numbers and then prints 'Go!'.
+    Create a function called ``countdown`` that takes in one integer parameter ``seconds`` and creates a list of numbers that counts down from 
+    seconds to 1, and then returns that list. Note: ``seconds`` must be greater than or equal to 1. For example, ``countdown(3)`` would return ``[3, 2, 1]``.
     -----
-    def countdown_to_go(seconds = 3):
+    def countdown(seconds):
     =====
-    def countdown_to_go(): #paired
+    def countdown(): #paired
+    =====
+        countdown_lst = []
     =====
         while seconds > 0:
     =====
-        while seconds = 3: #paired
-    =====
-            print(seconds)
+            countdown_lst.append(seconds)
     =====
             seconds -= 1
     =====
-        print('Go!')
+        return countdown_lst
 
 
 .. activecode:: Functions_Loops_MixedUpCode_3_ac
-   :practice: T
-   :autograde: unittest
+    :practice: T
+    :autograde: unittest
 
-   Create a function called ``countdown_to_go`` that initializes a parameter ``seconds`` to 3 and 
-   counts down to 1 while printing out the numbers and then prints 'Go!'.
-   ~~~~
-   # write code here
+    Write a function called ``countdown`` that takes in one integer parameter ``seconds`` and creates a list of numbers that counts down from 
+    seconds to 1, and then returns that list. Note: ``seconds`` must be greater than or equal to 1. For example, ``countdown(3)`` would return ``[3, 2, 1]``.
+    ~~~~
+    # write code here
+
+    ====
+    from unittest.gui import TestCaseGui
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(countdown(3),[3, 2, 1],countdown(3)")
+            self.assertEqual(countdown(11),[11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],"countdown(11)")
+            self.assertEqual(countdown(4),[4, 3, 2, 1],"countdown(4)")
+
+    myTests().main()
 
 
 .. parsonsprob:: Functions_Loops_MixedUpCode_4
@@ -124,14 +148,13 @@ Functions and Loops Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function ``add_odds_floor_division_all_else`` that takes in a parameter ``num_list``. 
-    It loops through the ``num_list``, and if the number in ``num_list`` is odd, it gets added to ``result``. 
-    Otherwise, it gets divided from the ``result``, having the ``result`` be the floor value. In the end, the ``result`` is returned.
-    For example, ``add_odds_floor_division_all_else([-3, -5, -2, -9, 7.5, 10001, -5.3])`` would return -1887.0.
+    Create a function ``add_odds_or_floor_division`` that takes in a parameter ``num_list`` and loops through the ``num_list``. 
+    If the number in ``num_list`` is odd, it gets added to ``result``. Otherwise, it gets divided from the ``result``, having the ``result`` be the floor value. 
+    Then, return ``result``. For example, ``add_odds_or_floor_division([-3, -5, -2, -9, 7.5, 10001, -5.3])`` would return -1887.0.
     -----
-    def add_odds_floor_division_all_else(num_list):
+    def add_odds_or_floor_division(num_list):
     =====
-    def add_odds_floor_division_all_else(): #paired
+    def add_odds_or_floor_division(): #paired
     =====
         result = 0
     =====
@@ -153,26 +176,25 @@ Functions and Loops Mixed-Up Code Questions
 
 
 .. activecode:: Functions_Loops_MixedUpCode_4_ac
-   :practice: T
-   :autograde: unittest
+    :practice: T
+    :autograde: unittest
 
-   Create a function ``add_odds_floor_division_all_else`` that takes in a parameter ``num_list``. 
-   It loops through the ``num_list``, and if the number in ``num_list`` is odd, it gets added to ``result``. 
-   Otherwise, it gets divided from the ``result``, having the ``result`` be the floor value. In the end, the ``result`` is returned.
-   For example, ``add_odds_floor_division_all_else([-3, -5, -2, -9, 7.5, 10001, -5.3])`` would return -1887.0.
-   ~~~~
-   # write code here
+    Write a function ``add_odds_or_floor_division`` that takes in a parameter ``num_list`` and loops through the ``num_list``. 
+    If the number in ``num_list`` is odd, it gets added to ``result``. Otherwise, it gets divided from the ``result``, having the ``result`` be the floor value. 
+    Then, return ``result``. For example, ``add_odds_or_floor_division([-3, -5, -2, -9, 7.5, 10001, -5.3])`` would return -1887.0.
+    ~~~~
+    # write code here
 
-   ====
-   from unittest.gui import TestCaseGui
-   class myTests(TestCaseGui):
+    ====
+    from unittest.gui import TestCaseGui
+    class myTests(TestCaseGui):
 
-       def testOne(self):
-           self.assertEqual(add_odds_floor_division_all_else([3, 5, 10, 8, 20, 15]),15,"Tested on [3, 5, 10, 8, 20, 15]")
-           self.assertEqual(add_odds_floor_division_all_else([3, 5, 2, 9, 7, 10, 2, 1, 15]),17,"Tested on [3, 5, 2, 9, 7, 10, 2, 1, 15]")
-           self.assertEqual(add_odds_floor_division_all_else([-3, -5, -2, -9, 7.5, 10001, -5.3]),-1887.0,"Tested on [-3, -5, -2, -9, 7.5, 10001, -5.3]")
+        def testOne(self):
+            self.assertEqual(add_odds_or_floor_division([3, 5, 10, 8, 20, 15]),15,"add_odds_or_floor_division([3, 5, 10, 8, 20, 15])")
+            self.assertEqual(add_odds_or_floor_division([3, 5, 2, 9, 7, 10, 2, 1, 15]),17,"add_odds_or_floor_division([3, 5, 2, 9, 7, 10, 2, 1, 15])")
+            self.assertAlmostEqual(add_odds_or_floor_division([-3, -5, -2, -9, 7.5, 10001, -5.3]),-1887.0,1,"add_odds_or_floor_division([-3, -5, -2, -9, 7.5, 10001, -5.3])")
 
-   myTests().main()
+    myTests().main()
 
 
 .. parsonsprob:: Functions_Loops_MixedUpCode_5
@@ -180,13 +202,13 @@ Functions and Loops Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function ``strings_with_chars_less_than_len_of_list`` that takes in a ``strings_list`` 
+    Create a function ``strings_chars_less_than_len`` that takes in a ``strings_list`` 
     and returns a sorted new list with strings that are shorter in length than the original list.
-    For example, ``strings_with_chars_less_than_len_of_list(['hello', 'bye', 'me', 'mississippi', 'miss'])`` would return ['bye', 'me', 'miss'].
+    For example, ``strings_chars_less_than_len(['hello', 'bye', 'me', 'mississippi', 'miss'])`` would return ['bye', 'me', 'miss'].
     -----
-    def strings_with_chars_less_than_len_of_list(strings_list):
+    def strings_chars_less_than_len(strings_list):
     =====
-    def strings_with_chars_less_than_len_of_list(string_list): #paired
+    Def strings_chars_less_than_len(string_list): #paired
     =====
         new_strings_list = []
     =====
@@ -210,20 +232,22 @@ Functions and Loops Mixed-Up Code Questions
 
 
 .. activecode:: Functions_Loops_MixedUpCode_5_ac
-   :practice: T
-   :autograde: unittest
+    :practice: T
+    :autograde: unittest
 
-   Create a function ``strings_with_chars_less_than_len_of_list`` that takes in a ``strings_list`` 
-   and returns a sorted new list with strings that are shorter in length than the original list.
-   For example, ``strings_with_chars_less_than_len_of_list(['hello', 'bye', 'me', 'mississippi', 'miss'])`` would return ['bye', 'me', 'miss'].
-   ~~~~
-   # write code here
+    Create a function ``strings_chars_less_than_len`` that takes in a ``strings_list`` 
+    and returns a sorted new list with strings that are shorter in length than the original list.
+    For example, ``strings_chars_less_than_len(['hello', 'bye', 'me', 'mississippi', 'miss'])`` would return ['bye', 'me', 'miss'].
+    ~~~~
+    # write code here
 
-   ====
-   from unittest.gui import TestCaseGui
-   class myTests(TestCaseGui):
+    ====
+    from unittest.gui import TestCaseGui
+    class myTests(TestCaseGui):
 
-       def testOne(self):
-           self.assertEqual(strings_with_chars_less_than_len_of_list(['hello', 'bye', 'me', 'mississippi', 'miss']),['bye', 'me', 'miss'],"Tested on ['hello', 'bye', 'me', 'mississippi', 'miss']")
+        def testOne(self):
+            self.assertEqual(strings_chars_less_than_len(['hello', 'bye', 'me', 'mississippi', 'miss']),['bye', 'me', 'miss'],"strings_chars_less_than_len(['hello', 'bye', 'me', 'mississippi', 'miss'])")
+            self.assertEqual(strings_chars_less_than_len(["hi", "bye", "Run", "When", "Win", "compare", "python"]),['Run', 'When', 'Win', 'bye', 'hi', 'python'],"strings_chars_less_than_len(["hi", "bye", "Run", "When", "Win", "compare", "python"])")
 
-   myTests().main()
+
+    myTests().main()
