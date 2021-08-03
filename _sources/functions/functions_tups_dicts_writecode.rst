@@ -1,5 +1,5 @@
-Functions, Tuples, and Dictionaries Write Code Questions
----------------------------------------------------------
+Functions with Tuples and Dictionaries Write Code Questions
+------------------------------------------------------------
 #.
     .. tabbed:: funct-tups-dicts-writecode1
 
@@ -204,7 +204,7 @@ Functions, Tuples, and Dictionaries Write Code Questions
         :autograde: unittest
 
 
-        Write a function ``count_chars(str)`` that takes a string, ``str``, and returns a list of tuples ordered by the number of times each character appears in the string in descending order.  For example, ``count_chars("babby")`` should return ``[('b': 3), ('a':1), ('y': 1)]``.
+        Write a function ``count_chars`` that takes a string, ``str1``, and returns a list of tuples ordered by the number of times each character appears in the string in descending order.  For example, ``count_chars("babby")`` should return ``[('b': 3), ('a':1), ('y': 1)]``.
         ~~~~
 
         ====
