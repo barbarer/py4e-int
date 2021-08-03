@@ -37,10 +37,10 @@ Functions and Lists Mixed-Up Code Questions
    class myTests(TestCaseGui):
 
        def testOne(self):
-           self.assertEqual(second_half([1, 2, 3]),[2, 3],"Tested second_half([1, 2, 3])")
-           self.assertEqual(second_half([1]),[1],"Tested second_half([1])")
-           self.assertEqual(second_half([1, 2, 3, 4]),[3, 4],"Tested second_half([1, 2, 3, 4])")
-           self.assertEqual(second_half(['hello', 'many', False, True, 2, 3, 'happy']),[True, 2, 3, 'happy'],"Tested second_half(['hello', 'many', False, True, 2, 3, 'happy'])")
+           self.assertEqual(second_half([1, 2, 3]),[2, 3],"second_half([1, 2, 3])")
+           self.assertEqual(second_half([1]),[1],"second_half([1])")
+           self.assertEqual(second_half([1, 2, 3, 4]),[3, 4],"second_half([1, 2, 3, 4])")
+           self.assertEqual(second_half(['hello', 'many', False, True, 2, 3, 'happy']),[True, 2, 3, 'happy'],"second_half(['hello', 'many', False, True, 2, 3, 'happy'])")
 
 
    myTests().main()
