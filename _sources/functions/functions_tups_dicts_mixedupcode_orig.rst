@@ -7,8 +7,9 @@ Functions with Tuples and Dictionaries Mixed-Up Code Questions
     :adaptive:
 
     Create a function called ``addition_tup`` that takes in parameters ``lst`` and ``num`` and returns a tuple that contains tuples with the first
-    value being a number from the ``lst`` and the second value being the number from the ``lst`` plus ``num``.  For example, ``addition_tup([1,2,3], 5)``
-    should return ``((1, 6), (2, 7), (3, 8))``.
+    value being a number from the ``lst`` and the second value being the number from the ``lst`` plus ``num``. Round each value within the tuple to two decimal places.
+    For example, ``addition_tup([1,2,3], 5)`` should return ``((1, 6), (2, 7), (3, 8))`` and ``addition_tup([-1,-2, -3, 0, 5], -5.2)`` should return 
+    ``((-1, -6.2), (-2, -7.2), (-3, -8.2), (0, -5.2), (5, -0.2))``.
     -----
     def addition_tup(lst, num):
     =====
@@ -18,9 +19,9 @@ Functions with Tuples and Dictionaries Mixed-Up Code Questions
     =====
         for i in lst:
     =====
-            lst_of_tups.append((i, i + num))
+            lst_of_tups.append((round(i,2), round(i + num,2)))
     =====
-            lst_of_tups.append(i, (i + num)) #paired
+            lst_of_tups.append(round(i,2), round(i + num,2))) #paired
     =====
         return tuple(lst_of_tups)
     =====
@@ -31,8 +32,9 @@ Functions with Tuples and Dictionaries Mixed-Up Code Questions
     :autograde: unittest
 
     Write a function called ``addition_tup`` that takes in parameters ``lst`` and ``num`` and returns a list that contains tuples with the first
-    value being a number from the ``lst`` and the second value being the number from the ``lst`` plus ``num``. For example, ``addition_tup([1,2,3], 5)``
-    should return ``((1, 6), (2, 7), (3, 8))``.
+    value being a number from the ``lst`` and the second value being the number from the ``lst`` plus ``num``. Round each value within the tuple to two decimal places.
+    For example, ``addition_tup([1,2,3], 5)`` should return ``((1, 6), (2, 7), (3, 8))`` and ``addition_tup([-1,-2, -3, 0, 5], -5.2)`` should return 
+    ``((-1, -6.2), (-2, -7.2), (-3, -8.2), (0, -5.2), (5, -0.2))``.
     ~~~~
 
     ====
@@ -41,7 +43,7 @@ Functions with Tuples and Dictionaries Mixed-Up Code Questions
 
         def testOne(self):
             self.assertEqual(addition_tup([1,2,3], 5),((1, 6), (2, 7), (3, 8)),"addition_tup([1,2,3], 5)")
-            self.assertEqual(addition_tup([-1,-2, -3, 0, 5], -5.2),((-1, -6.2), (-2, -7.2), (-3, -8.2), (0, -5.2), (5, -0.20000000000000018)),"addition_tup([-1,-2, -3, 0, 5], -5.2)")
+            self.assertEqual(addition_tup([-1,-2, -3, 0, 5], -5.2),((-1, -6.2), (-2, -7.2), (-3, -8.2), (0, -5.2), (5, -0.2)),"addition_tup([-1,-2, -3, 0, 5], -5.2)")
             self.assertEqual(addition_tup([-1,-2.5, -3, 0.5, 5], 0),((-1, -1), (-2.5, -2.5), (-3, -3), (0.5, 0.5), (5, 5)),"addition_tup([-1,-2.5, -3, 0.5, 5], 0)")
 
 
@@ -156,7 +158,8 @@ Functions with Tuples and Dictionaries Mixed-Up Code Questions
     :adaptive:
 
     Create a function called ``swap_keys_values`` that takes in ``dictionary`` as a parameter and returns ``swapped_dictionary`` that
-    swaps the keys and values of the passed in ``dictionary``.
+    swaps the keys and values of the passed in ``dictionary``. For example, ``swap_keys_values({'a':1, 'b': 2, 'c':7})`` would return
+    ``{1: 'a', 2: 'b', 7: 'c'}``.
     -----
     def swap_keys_values(dictionary):
     =====
