@@ -15,7 +15,7 @@ Function and String Multiple Choice Questions
    :feedback_d: Try again! This would assign final_string to "yelin".
    :feedback_e: Try again! String objects do not have the attribute "append".
    
-   Given the below code snippet, which of the following options would create a variable called final_string that is assigned to the word "yelling"?
+   Given the below code snippet, which of the following options would create a variable called ``final_string`` that is assigned to the word "yelling"?
 
    .. code-block:: python
 
@@ -35,9 +35,9 @@ Function and String Multiple Choice Questions
    :feedback_b: Correct! By using str, the integer variable is converted into a string.
    :feedback_c: Try again! This doesn't use the variable num_of_apples.
    :feedback_d: Try again! To convert an integer to a string, the built-in function str is used, not string.
-   :feedback_e: Correct! This converts the integer variable to a string on two seperate lines.
+   :feedback_e: Correct! This converts the integer variable to a string on two separate lines.
    
-   Which of the following choices correctly prints a sentence using the variable num_of_apples?
+   Which of the following choices correctly prints a sentence using the variable ``num_of_apples``?
 
    .. code-block:: python
 
@@ -75,7 +75,7 @@ Function and String Multiple Choice Questions
    :feedback_d: Try again! The number 14 is the amount of characters in the string, but it is not code. 
    :feedback_e: Try again! Instead of length, it should be len, because length is not a built-in python function.
 
-   Which of the following code corresponds to the amount of characters in the following string variable?
+   Which of the following code corresponds to the amount of characters in the following ``string`` variable?
    
    .. code-block:: python
 
@@ -118,7 +118,7 @@ Function and String Multiple Choice Questions
    :feedback_c: Try again! There shouldn't be a space between the first and last name.
    :feedback_d: Try again! The E should not be capitalized. The upper() method would capitalize the E, but not the capitalize() method.
 
-   After running this code, what would be the output if the input was first_name = "Katie" and last_name = "perkins"?
+   After running this code, what would be the output if the input was ``first_name = "Katie"`` and ``last_name = "perkins"``?
 
    .. code-block:: python
 
@@ -147,7 +147,7 @@ Function and String Multiple Choice Questions
    :feedback_d: Try again! This would print "eboo".
    :feedback_e: Try again! This would print "eboo".
 
-   Given the variable item, how would you grab the letters "tebo"?
+   Given the variable ``item``, how would you grab the letters "tebo"?
 
    .. code-block:: python
 

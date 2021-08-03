@@ -8,10 +8,10 @@ Functions with Tuples and Dictionaries Multiple Choice Questions
     :answer_d: items()
     :answer_e: index()
     :correct: a, b, d
-    :feedback_a: Correct!
-    :feedback_b: Correct!
-    :feedback_c: Try again! 
-    :feedback_d: Correct! 
+    :feedback_a: Correct! Both keys() and get() are dictionary methods.
+    :feedback_b: Correct, values() is a dictionary method.
+    :feedback_c: Try again! These are list methods.
+    :feedback_d: Correct, items() is a dictionary method.
     :feedback_e: Try again!
 
     Which of following are python dictionary methods?
@@ -48,8 +48,8 @@ Functions with Tuples and Dictionaries Multiple Choice Questions
     :feedback_a: Try again! Be careful not to sort in place of reverse. Also, by using zip, each tuple will have an element from list_tup1 and an element from list_tup2 in order.
     :feedback_b: Try again! By using zip, each tuple will have an element from list_tup1 and an element from list_tup2 in order.
     :feedback_c: Try again! Be careful not to sort in place of reverse.
-    :feedback_d: Correct! 
-    :feedback_e: Try again! While it's true that tuples are immutable, tuples can be changed into data types that are mutable in order to be changed (e.g., lists). 
+    :feedback_d: Correct! This converts the tuples to lists and reverses list_tup1 and zips list_tup1 and list_tup2 together.
+    :feedback_e: Try again! While it's true that tuples are immutable, tuples can be changed into data types that are mutable in order to be changed (e.g., lists).
 
     What would the output be if ``tup1`` = (16, 7, 100, 0, 27) and ``tup2`` = (84, 99, 78, 200, -7)?
 
@@ -68,14 +68,14 @@ Functions with Tuples and Dictionaries Multiple Choice Questions
     :answer_c: return dictionary.get('one')
     :answer_d: return dictionary.get(8)
     :answer_e: return dictionary.get('ten', 5)
-    :correct: b, c, e
-    :feedback_a: Try again! Dictionaries are indexed by keys.
-    :feedback_b: Correct! Dictionaries are indexed by keys.
-    :feedback_c: Correct! The get() method gets the value for the key.
-    :feedback_d: Try again! The default value for the get() method is None. Also, the get() method takes in a key and not a value.
-    :feedback_e: Correct! If the key is not present in a dictionary, the get() method can be used to set a default value for that key.
+    :correct: a
+    :feedback_a: Correct! This will cause a key error since 1 is not a key.
+    :feedback_b: This will return 8.
+    :feedback_c: This will return 8.
+    :feedback_d: This will return None which is the default value to return from get if the key isn't found.
+    :feedback_e: This will return 5 since 'ten' is not a key.
 
-    Which of the following return statements do not return a value for the function call ``transform_dict({'one': 8, 'two': 10, 'three': 0})``?
+    Which of the following return statements will *not* return a value for the function call ``transform_dict({'one': 8, 'two': 10, 'three': 0})``?
 
     .. code-block:: python
 
@@ -87,21 +87,41 @@ Functions with Tuples and Dictionaries Multiple Choice Questions
     :answer_a: dictionary[tup[0]] = dictionary[tup[1]]
     :answer_b: dictionary(tup[0]) = tup[1]
     :answer_c: dictionary[tup[0]] = tup[1]
-    :answer_d: dictionary[tup[1]] = tup[2]
+    :answer_d: dictionary[tup[1]] = tup[0]
     :answer_e: dictionary[tup[0]] = dictionary.get(tup[1])
     :correct: c
-    :feedback_a: Try again! There is no tup[1] value in the dictionary. 
+    :feedback_a: Try again! There is no tup[1] value in the dictionary.
     :feedback_b: Try again! Setting up the key for a dictionary requires square brackets.
-    :feedback_c: Correct!
-    :feedback_d: Try again! Tuples start indexing from 0.
+    :feedback_c: Correct! This will set the key to the first item in the tuple and the value to the second item.
+    :feedback_d: Try again! This would set the key to the 2nd item and the value to the first.
     :feedback_e: Try again! There is no tup[1] key in the dictionary, and the default value for the get() method is None.
 
-    Which of the following code snippets would finish the function and change ``tup_of_tuples`` = ((1, 'one'), (5, 'five')) to ``dictionary`` = {1: 'one', 5: 'five'}?
+    Which of the following code snippets would cause ``tup_of_tuples_to_dict((1, 'one'), (5, 'five'))`` to return ``{1: 'one', 5: 'five'}``?
 
     .. code-block:: python
 
         def tup_of_tuples_to_dict(tup_of_tuples):
             dictionary = {}
-            for tup in tup_of_tuples: 
+            for tup in tup_of_tuples:
                 # insert code snippet here
             return dictionary
+
+
+.. mchoice:: functions_tups_dicts_mcqs_q6
+    :answer_a: {3:4, 5:8, 4:9}
+    :answer_b: {3:4, 5:8, 4:4}
+    :answer_c: {3:4, 5:4, 4:3}
+    :answer_d: There will be an error
+    :correct: b
+    :feedback_a: This would be true if the key 3 wasn't in the dictionary, but it is.
+    :feedback_b: It sets the value for key 4 to the value of key 3.
+    :feedback_c: This would be true if get set the value to the first item rather than the second.  The first item is the key to look for.
+    :feedback_d: This code will run without any errors.
+
+    What are the contents of ``d`` after this code executes?
+
+    .. code-block:: python
+
+        d = {3:4}
+        d[5] = d.get(4, 8)
+        d[4] = d.get(3, 9)
