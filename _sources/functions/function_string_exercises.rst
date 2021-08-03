@@ -1,5 +1,5 @@
-Function and String Multiple Choice Questions
-----------------------------------------------
+Functions and Strings Multiple Choice Questions
+------------------------------------------------
 
 .. mchoice:: Exercises_function_string_mc1
    :practice: T
