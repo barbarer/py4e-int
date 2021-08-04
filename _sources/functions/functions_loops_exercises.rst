@@ -2,31 +2,30 @@ Functions with Loops Multiple Choice Questions
 -----------------------------------------------
 
 .. mchoice:: functions_with_loops_mc1
-   :practice: T
-   :answer_a: 1
-   :answer_b: 2
-   :answer_c: 3
-   :answer_d: 4
-   :answer_e: 5
-   :correct: c
-   :feedback_a: Try again! This function uses modulus to find the amount of odd numbers in the list that is passed in.
-   :feedback_b: Try again! This function uses modulus to find the amount of odd numbers in the list that is passed in.
-   :feedback_c: Correct!
-   :feedback_d: Try again! This function uses modulus to find the amount of odd numbers in the list that is passed in.
-   :feedback_e: Try again! This function uses modulus to find the amount of odd numbers in the list that is passed in.
+    :answer_a: 1
+    :answer_b: 2
+    :answer_c: 3
+    :answer_d: 4
+    :answer_e: 5
+    :correct: c
+    :feedback_a: Try again! This function uses modulus to find the amount of odd numbers in the list that is passed in.
+    :feedback_b: Try again! This function uses modulus to find the amount of odd numbers in the list that is passed in.
+    :feedback_c: Correct!
+    :feedback_d: Try again! This function uses modulus to find the amount of odd numbers in the list that is passed in.
+    :feedback_e: Try again! This function uses modulus to find the amount of odd numbers in the list that is passed in.
 
-   Given the code below, what would the function print?
+    Given the code below, what would the function print?
 
-   .. code-block:: python
+    .. code-block:: python
 
       def countodd(lst):
-        num_of_odd = 0
-        for item in lst:
-            if item % 2 == 1:
-                num_of_odd += 1
+         num_of_odd = 0
+            for item in lst:
+               if item % 2 == 1:
+                  num_of_odd += 1
 
-        return num_of_odd
-
+         return num_of_odd
+         
       print(countodd([1,2,3,4,5]))
 
 
