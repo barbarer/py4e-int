@@ -77,6 +77,7 @@ Write Code Exercises
 
         mysock.close()
 
+        pos = picture.find(b"\r\n\r\n")
         picture = picture[pos+4:]
         fhand = open("stuff.jpg", "wb")
         fhand.write(picture)

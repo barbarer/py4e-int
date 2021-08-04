@@ -229,18 +229,18 @@ Multiple Choice Questions
        | II. False or True
        | III. False AND (True or False)
 
-.. mchoice:: cndtnl-ex-mc-equal
-    :answer_a: (num1 = num2)
-    :answer_b: (num1 = num2) OR (num1 ≠ num2)
-    :answer_c: (num1 = num2) AND (num1<0)
-    :answer_d: (num1 = num2) AND (num2>0)
+.. mchoice:: cndtnl-ex-mc-equal_v2
+    :answer_a: (num1 == num2)
+    :answer_b: (num1 == num2) or (num1 > 0)
+    :answer_c: (num1 == num2) and (num1 < 0)
+    :answer_d: (num1 == num2) and (num1 > 0)
     :correct: d
     :feedback_a: Incorrect. The two variables can be equal to each other and still be negative integers.
-    :feedback_b: Incorrect. Regardless of whether the two variables are equal or not equal to one another, they can still be negative.
+    :feedback_b: Incorrect. This is true if the two numbers are equal or num1 is greater than 0.
     :feedback_c: Incorrect. The two variables would both be negative in this case.
-    :feedback_d: If num1 is equal to num2 and num2 is greater than 0, then both values must be positive.
+    :feedback_d: If num1 is equal to num2 and num1 is greater than 0, then both values must be positive.
 
-    Given two variables, num1 and num2, which of the following would mean that both num1 and num2 are
+    Given two variables, ``num1`` and ``num2``, which of the following would mean that both ``num1`` and ``num2`` are
     positive integers?
 
 .. mchoice:: cndtnl-ex-mc-true
@@ -255,3 +255,41 @@ Multiple Choice Questions
     :feedback_d: Try again! True is not an integer.
 
     ``True`` is what type of variable?
+
+.. mchoice:: cndtnl-ex-mc-not-equal-test
+    :practice: T
+    :answer_a: True
+    :answer_b: False
+    :answer_c: 0
+    :answer_d: 3
+    :answer_e: Syntax error
+    :correct: b
+    :feedback_a: This would be true if a was not equal to 3, but it is.
+    :feedback_b: A is equal to three so this statement is false.
+    :feedback_c: Some languages use 0 for false, but Python will print False.
+    :feedback_d: This does not set b to the value of a.
+    :feedback_e: This code is legal.
+
+    What is the output from the following code?
+
+    ::
+
+      a = 3
+      b = (a != 3)
+      print(b)
+
+.. mchoice:: cndtnl-ex-mc-which-for-or
+    :practice: T
+    :answer_a: a == b == 5
+    :answer_b: a = b or a = 5
+    :answer_c: a == b or a == 5
+    :answer_d: a = b and a = 5
+    :answer_e: a == b and a = 5
+    :correct: c
+    :feedback_a: You can not join conditionals in this way.
+    :feedback_b: You must use == to test for equality.
+    :feedback_c: This will be true if a is equal to b or a is equal to 5.
+    :feedback_d: You must use == to test for equality.
+    :feedback_e: This will only be true when a and b both equal 5.
+
+    Which of the following evaluates to True when ``a`` is equal to ``b`` or when ``a`` is equal to ``5``?

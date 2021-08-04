@@ -1,20 +1,20 @@
 Functions with Lists Multiple Choice Questions
 -----------------------------------------------
 
-.. mchoice:: funct_lists_1
+.. mchoice:: funct_lists_1_v2
     :answer_a: [-2, 0, 1, 4.2, 5.2]
     :answer_b: [-2, 0, 1, 5.2, 4.2]
-    :answer_c: [-2, 0, 1, 5.2, 1.05]
-    :answer_d: [4.2, -2, 0, 1, 5.2]
-    :answer_e: [-2, 0, 1, 1.05, 5.2]
+    :answer_c: [4.2, -2, 0, 1, 5.2]
+    :answer_d: [0, -2, 5.2, 1, 4.2]
+    :answer_e: [5.2, 1, 0, -2, 4.2]
     :correct: b
-    :feedback_a: Incorrect. This function will sort the list in order from lowest to highest, and then add the sum value to the end of the list.
-    :feedback_b: Correct!
-    :feedback_c: Incorrect. This function will sort the list in order from lowest to highest, and then add the sum value to the end of the list.
-    :feedback_d: Incorrect. This function will sort the list in order from lowest to highest, and then add the sum value to the end of the list.
-    :feedback_e: Incorrect. This function will sort the list in order from lowest to highest, and then add the sum value to the end of the list.
+    :feedback_a: Incorrect. This function will sort the list in order from lowest to highest, and then add the sum to the end of the list.
+    :feedback_b: Correct! It sorts the list in ascending order and then adds the sum at the end.
+    :feedback_c: Incorrect. This function will sort the list in order from lowest to highest, and then add the sum to the end of the list.
+    :feedback_d: Incorrect. This function will sort the list in order from lowest to highest, and then add the sum to the end of the list.
+    :feedback_e: Incorrect. This function will sort the list in order from lowest to highest, and then add the sum to the end of the list.
 
-    What would the function output if lst = [0, -2, 5.2, 1]?
+    What would ``list_transformation([0, -2, 5.2, 1])`` return?
 
     .. code-block:: python
 
@@ -31,13 +31,13 @@ Functions with Lists Multiple Choice Questions
     :answer_d: -5
     :answer_e: -4
     :correct: a, e
-    :feedback_a: Correct! 
+    :feedback_a: Correct!
     :feedback_b: Incorrect! The built-in function, pop, removes the value from a list, lst, at a specified index, num.
     :feedback_c: Incorrect! The built-in function, pop, removes the value from a list, lst, at a specified index, num.
     :feedback_d: Incorrect! The built-in function, pop, removes the value from a list, lst, at a specified index, num.
-    :feedback_e: Correct! 
+    :feedback_e: Correct!
 
-    Which values of num would not return an error if lst = [0, 4, -4, 2.5]?
+    Which values of ``num`` would not return an error if ``lst`` were ``[0, 4, -4, 2.5]``?
 
     .. code-block:: python
 
@@ -58,7 +58,7 @@ Functions with Lists Multiple Choice Questions
     :feedback_d: Incorrect! The built-in function append adds a list to the end of a list. The built-in function extend adds the values of a list to the end of a list.
     :feedback_e: Incorrect! The built-in function append adds a list to the end of a list. The built-in function extend adds the values of a list to the end of a list.
 
-    What would the function output if lst = [0, 200, 5.6, -2, 4, 5]?
+    What would the function ``extend_and_append`` output if ``lst`` were ``[0, 200, 5.6, -2, 4, 5]``?
 
     .. code-block:: python
 
@@ -76,10 +76,10 @@ Functions with Lists Multiple Choice Questions
     :answer_e: elif not(len(lst1) is not len(lst2)):
     :correct: b, c, e
     :feedback_a: Incorrect! A single equal sign is the assignment operator.
-    :feedback_b: Correct! 
-    :feedback_c: Correct! 
-    :feedback_d: Incorrect! When an or operator is used with two statements, only one of the statements has to be true in order for the entire statement to pass as true. 
-    :feedback_e: Correct! 
+    :feedback_b: Correct!
+    :feedback_c: Correct!
+    :feedback_d: Incorrect! When an or operator is used with two statements, only one of the statements has to be true in order for the entire statement to pass as true.
+    :feedback_e: Correct!
 
     Which of the following would correctly replace the else statement?
 
@@ -90,7 +90,7 @@ Functions with Lists Multiple Choice Questions
                 return "The length of lst1 is greater than the length of lst1"
             elif len(lst1) < len(lst2):
                 return "The length of lst2 is greater than the length of lst1"
-            else: 
+            else:
                 return "The length of lst1 and the length of lst2 are equal"
 
 
@@ -102,10 +102,10 @@ Functions with Lists Multiple Choice Questions
     :answer_e: lst_reverse = lst_reverse.reverse(), return lst
     :correct: a, b
     :feedback_a: Correct! Although it properly returns a reversed list, it is unnecessary to assign the reverse method to a variable.
-    :feedback_b: Correct! 
+    :feedback_b: Correct!
     :feedback_c: Incorrect! The built-in python function, reverse, does not need to be assigned to a new variable.
     :feedback_d: Incorrect! The built-in python function, reverse, has to be used on the list before the list can be returned.
-    :feedback_e: Incorrect! This code does not modify lst, the passed in parameter. 
+    :feedback_e: Incorrect! This code does not modify lst, the passed in parameter.
 
     Which of the following line(s) of code would properly return a reversed list? (Note: Commas represent line breaks)
 
@@ -113,4 +113,3 @@ Functions with Lists Multiple Choice Questions
 
         def reverse_list(lst):
             # line(s)
-        

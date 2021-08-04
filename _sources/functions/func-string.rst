@@ -265,6 +265,8 @@ Strings have methods (functions) that operate on a string object using **dot-not
     def get_user_name(first, last):
         print(first.lower())
         print(last.upper())
+        print(first.find('a'))
+        print(first.find('z'))
         print(last.replace("f", "1"))
         print(first.split("a"))
         user = first.lower() + "_" + last.lower()
@@ -272,22 +274,31 @@ Strings have methods (functions) that operate on a string object using **dot-not
 
     # function definition
     def main():
+        print("run away!".capitalize())
         print(get_user_name("Malana", "Coffy"))
 
     # function call
     main()
 
+.. fillintheblank:: funct_fitb_pogil_find_return
+
+    What does the function ``find`` return if the character is not found in the string?
+
+    - :-1: If the character isn't in the string find returns -1.
+      :.*: Check the output of find('z') above
+
 .. note ::
 
    Strings are immutable, which means that they do not change.  String methods that appear to change a string return a new string.
 
-.. dragndrop:: funct_string_methods_dnd
+.. dragndrop:: funct_string_methods_dnd_v2
     :practice: T
     :feedback: Read the chapter on strings and try again
     :match_1: replace|||Returns a new string with all instances of the first specified character replaced with the second specified character.
     :match_2: lower|||Returns a new string with all of the characters in lowercase.
     :match_3: upper|||Returns a new string with all of the characters in uppercase.
     :match_4: split|||Returns a list of strings created by splitting the original string at the specified character.
+    :match_5: capitalize|||Returns a new string with the first letter capitalized (uppercase).
 
     Drag each string method to the description of what it does.
 

@@ -3,21 +3,22 @@ Multiple Choice Questions
 
 .. mchoice:: TupleExquestion10_1
    :practice: T
-   :answer_a: aTuple[1:2][1]
-   :answer_b: aTuple[2][1]
-   :answer_c: aTuple[1:2](1)
-   :answer_d: aTuple[1][1]
+   :answer_a: val = aTuple[1:2][1]
+   :answer_b: val = aTuple[2][1]
+   :answer_c: val = aTuple[1:2](1)
+   :answer_d: val = aTuple[1][1]
    :correct: d
    :feedback_a: Incorrect! Running this code would result in an error. Try again.
    :feedback_b: Incorrect! This would access the value 15. Try again.
    :feedback_c: Incorrect! Running this code would result in an error. Try again.
    :feedback_d: Correct! This first goes to the second item in the tuple, then grabs the second item from the list, which is 20.
 
-   Choose the correct way to access the value 20 from the following tuple.
+   Which of the following would complete ``val =`` to set ``val`` to 20 by slicing ``aTuple``.
 
    .. code-block:: python
 
-      aTuple = ("Orange", [10, 20, 30], (5, 15, 25))
+       aTuple = ("Orange", (10, 20, 30), (5, 15, 25))
+       val =
 
 .. mchoice:: TupleExquestion10_2
    :practice: T
@@ -42,12 +43,12 @@ Multiple Choice Questions
    :feedback_c: Incorrect! Arrays do not exist in Python. Try again.
    :feedback_d: Correct! To create a tuple with a single item, there must be a comma after the first item.
 
-   What is the type of the following variable?
+   What type will be printed when the following code executes?
 
    .. code-block:: python
 
-      aTuple = ("Orange")
-      print(type(aTuple))
+       aTuple = ("Orange")
+       print type(aTuple)
 
 .. mchoice:: TupleExquestion10_4
    :practice: T
@@ -61,17 +62,19 @@ Multiple Choice Questions
    :feedback_c: Incorrect! Hint: think about how tuple assignment works. Try again.
    :feedback_d: Incorrect! Hint: think about how tuple assignment works. Try again.
 
-   What is the output of the following code?
+   What will the following code return?
 
    .. code-block:: python
 
+      def practice(tup):
+          a, b, c = tup
+          return a
       aTuple = "Yellow", 20, "Red"
-      a, b, c = aTuple
-      print(a)
+      practice(aTuple)
 
 .. mchoice:: TupleExquestion10_5
    :practice: T
-   :answer_a: TypeError
+   :answer_a: Nothing, it will cause an error.
    :answer_b: (100, 800, 200, 300, 400, 500)
    :answer_c: (800, 100, 200, 300, 400, 500)
    :answer_d: (100, 200, 800, 300, 400, 500)
@@ -81,13 +84,16 @@ Multiple Choice Questions
    :feedback_c: Incorrect! Remember, tuples are immutable. Try again.
    :feedback_d: Incorrect! Remember, tuples are immutable. Try again.
 
-   What is printed when the following code is run?
+   What will the following code return?
 
    .. code-block:: python
 
+      def tuple_indexing(tup):
+          tup[1] = 800
+          return tup
+
       aTuple = (100, 200, 300, 400, 500)
-      aTuple[1] = 800
-      print(aTuple)
+      print(tuple_indexing(aTuple))
 
 .. mchoice:: TupleExquestion10_6
    :practice: T
@@ -101,11 +107,13 @@ Multiple Choice Questions
    :feedback_c: Incorrect! i will output all items besides the last, whereas iv will output all items besides the first. Try again.
    :feedback_d: Correct! These two options will both output all the items in the tuple except for the last one.
 
-   Which of the following two Python codes will produce the same output?
+   Which of the following options will produce the same output?
 
    .. code-block:: python
 
-      tupl1 = (5, 3, 1, 9, 0)
+          tupl1 = (5, 3, 1, 9, 0)
+          # options i, ii, iii, or iv
+
 
       i) print(tup1[:-1])
       ii) print(tup1[0:5])
@@ -124,7 +132,12 @@ Multiple Choice Questions
 
    .. code-block:: python
 
-      (66, 4, 17, 4) < (66, 4, 16, 5)
+      def tuple_comparison(tup1, tup2):
+          return tup1 < tup2
+
+      tup1 = (66, 4, 17, 4)
+      tup2 = (66, 4, 16, 5)
+      tuple_comarison(tup1, tup2)
 
 .. mchoice:: TupleExquestion10_8
    :practice: T
@@ -138,11 +151,12 @@ Multiple Choice Questions
    :feedback_c: Incorrect! The value of -1 means to stop after the second to last item. Try again.
    :feedback_d: Correct! This tuple slicing grabs the second item all the way to the second to last item.
 
-   What is the value of a[1:-1] if it exists?
+   What is printed when the following code is run?
 
    .. code-block:: python
 
-      a = (1, 2, 3, 4)
+          a = (1, 2, 3, 4)
+          print(a[1:-1])
 
 
 .. mchoice:: TupleExquestion10_9
@@ -163,15 +177,78 @@ Multiple Choice Questions
    :answer_a: have
    :answer_b: ['have', 'fun']
    :answer_c: fun
+   :answer_d: ('have', 'fun')
    :correct: c
    :feedback_a: Incorrect! This would be printed if in line 3 we called print(x) instead. Try again.
    :feedback_b: Incorrect! Hint: think about how tuple assignment works and apply that knowledge to lists. Try again.
    :feedback_c: Correct! y is associated with the last value of tuple m.
+   :feedback_d: Incorrect! This is the original tuple, but the function returns the second element of the tuple.
 
-   What is printed when the following code is written?
+   What is printed when the following code is run?
 
    .. code-block:: python
 
-      m = ['have', 'fun']
-      x, y = m
-      print(y)
+      def practice(m):
+          m = list(m)
+          x, y = m
+          return y
+
+      m = ('have', 'fun')
+      print(practice(m))
+
+.. mchoice:: TupleExquestion10_11
+   :practice: T
+   :answer_a: ['2', '3', '30', '8']
+   :answer_b: ['2', '3', '8', '30']
+   :answer_c:  ['30', '8', '3', '2']
+   :answer_d: ['8', '30', '3', '2']
+   :correct: a
+   :feedback_a: This returns a list with the strings sorted in ascending order.
+   :feedback_b: Incorrect, this would be the right order for numbers, but not for strings.
+   :feedback_c: This would be correct if it was sorting numbers in descending order.
+   :feedback_d: This would be correct if it was sorting in descending order.
+
+   What is printed when the following code is run?
+
+   .. code-block:: python
+
+      tup = ('30', '3', '2', '8')
+      print(sorted(tup))
+
+.. mchoice:: TupleExquestion10_12
+   :practice: T
+   :answer_a: ['2', '3', '30', '8']
+   :answer_b: ['2', '3', '8', '30']
+   :answer_c:  ['30', '8', '3', '2']
+   :answer_d: ['8', '30', '3', '2']
+   :correct: d
+   :feedback_a: This would be true if it sorted the strings in ascending order.
+   :feedback_b: This would be correct if if was sorting numbers in ascending order.
+   :feedback_c: This would be correct if it was sorting numbers in descending order.
+   :feedback_d: It sorts the strings in descending order.
+
+   What is printed when the following code is run?
+
+   .. code-block:: python
+
+      tup = ('30', '3', '2', '8')
+      print(sorted(tup), reverse = True)
+
+.. mchoice:: TupleExquestion10_13
+   :practice: T
+   :answer_a: [2, 3, 30, 8]
+   :answer_b: [2, 3, 8, 30]
+   :answer_c:  [30, 8, 3, 2]
+   :answer_d: [8, 30, 3, 2]
+   :correct: c
+   :feedback_a: This would be true if the values were strings and it sorted in ascending order.
+   :feedback_b: This would be correct if the values were sorted in ascending order.
+   :feedback_c: It sorts the numbers in descending order.
+   :feedback_d: This would be correcdt if the values were strings.
+
+   What is printed when the following code is run?
+
+   .. code-block:: python
+
+      tup = (30, 3, 2, 8)
+      print(sorted(tup), reverse = True)

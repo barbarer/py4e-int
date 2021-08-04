@@ -1,49 +1,54 @@
 Mixed-Up Code Questions
 ------------------------
 
-.. parsonsprob:: mixedupcode_question10_1
+.. parsonsprob:: mixedupcode_question10_1_v2
    :numbered: left
    :practice: T
    :adaptive:
 
-   Construct a block of code below to create a list of tuples, ``tup_list``, where the first element is the length of each word in ``txt`` and the second is the word itself. Sort the list in terms of word length from longest to shortest. For example, if ``txt="hi bye"``, ``tup_list`` would be ``[(3, 'bye'), (2, 'hi')]`` after this code executes. Note: there is one block that won't be used in the solution!
+   Create a function ``create_tup(str)`` that takes a string, ``str``, and returns a list of tuples where the first element is the length of each word in ``str`` and the second is the word itself. Sort the list in terms of word length from longest to shortest. For example, ``create_tup("hi bye")`` would return ``[(3, 'bye'), (2, 'hi')]``.
    -----
-   txt = 'but soft what light in yonder window breaks'
-   words = txt.split()
-   t = []
+   def create_tup(str):
    =====
-   for word in words.split(): #distractor
+       words = str.split()
+       t_list = []
    =====
-   for word in words:
+       for word in words:
    =====
-       t.append((len(word), word))
+           t_list.append((len(word), word))
    =====
-       t.append(len(word)) #paired
+           t_list.append(len(word)) #paired
    =====
-   t.sort(reverse = True)
+       t_list.sort(reverse = True)
    =====
-   t.sort(reverse = False) #paired
+       t_list.sort(reverse = False) #paired
+   =====
+       return t_list
 
-.. parsonsprob:: mixedupcode_question10_2
+
+.. parsonsprob:: mixedupcode_question10_2_v2
    :numbered: left
    :adaptive:
 
-   Reorder the blocks of code to create a list, ``tup_list``, containing tuples of each word from ``word_list`` paired with their lengths. Then sort the words by length from highest to lowest.  For example, if ``word_list = ['hi', 'bye']`` then ``tup_list`` would be ``[('bye', 3), ('hi', 2)]`` Note: there are two blocks that won't be used in the solution!
+   Create a function ``create_tup(word_list)`` that takes a list of words, ``word_list``, and returns a list of tuples where the first element is a word from ``str`` and the second is the length of the word. Sort the list in terms of word length from longest to shortest.  For example, if ``create_tup(['hi', 'bye'])`` should return ``[('bye', 3), ('hi', 2)]``.
    -----
-   word_list = ['pen', 'skyscraper', 'post', 'computer', 'apple', 'Hollywood']
-   tup_list = []
+   def create_tup(word_list):
    =====
-   for word in word_list:
+       t_list = []
    =====
-   for word in tup_list: #paired
+       for word in word_list:
    =====
-       tup = word, len(word)
+       for word in t_list: #paired
    =====
-       tup_list.append(tup)
+           tup = word, len(word)
    =====
-   	   word_list.append(tup) #paired
+           t_list.append(tup)
    =====
-   tup_list.sort(key = lambda x: x[1], reverse = True)
+   	       word_list.append(tup) #paired
+   =====
+       t_list.sort(key = lambda x: x[1], reverse = True)
+   =====
+       return t_list
 
 
 .. parsonsprob:: mixedupcode_question10_3
@@ -126,9 +131,9 @@ Mixed-Up Code Questions
    =====
    for key, val in d.items():
    =====
-   	list_for_kv_pairs.append((key, val))
+       list_for_kv_pairs.append((key, val))
    =====
-   	list_for_kv_pairs.append(key, val) #paired
+       list_for_kv_pairs.append(key, val) #paired
    =====
    print(list_for_kv_pairs)
 
@@ -188,21 +193,22 @@ Mixed-Up Code Questions
    :adaptive:
    :practice: T
 
-   Construct a block of code that capitalizes every item in tuple ``tup``. Note: there are four blocks that won't be used in the solution!
+   Construct a block of code that creates a new list with every item in ``tup`` capitalized and then print the list.
    -----
-   tup = ('wolverine', 'Ann Arbor', 'Winter', 'Fall', 'michigan')
+   tup = ('wolverine', 'Ann Arbor', 'michigan')
+   t_list = []
    =====
-   tup[0] = 'Wolverine' #paired
+   for item in tup:
    =====
-   tup[4] = 'Michigan' #paired
+       t_list = t_list.append(item.capitalized())
    =====
-   tup = ('Wolverine',) + tup[1:4] + ('Michigan',)
+       t_list = t_list.add(item.capitalized()) #paired
    =====
-   tup = ('Wolverine') + tup[1:4] + ('Michigan') #paired
+   print(t_list)
    =====
-   tup = ('Wolverine',) + tup[1:3] + ('Michigan',) #paired
-   =====
-   print(tup)
+   print(tup) #paired
+
+
 
 .. parsonsprob:: mixedupcode_question10_10
    :numbered: left
