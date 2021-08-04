@@ -60,7 +60,7 @@ Mixed-up Code Questions
     =====
         statement = "My " + item + " cost $" + price
     =====
-        statement = "My " item " cost $" price # paired
+        statement = "My " item " cost $" price #paired
     =====
         print(statement)
     =====
@@ -149,9 +149,9 @@ Mixed-up Code Questions
         phrase = "It takes us " + numHours + " hours and " + numMinutes + " minutes to get home from camp" #paired
     =====
         phrase = "It takes us " + str(numHours) + " hours and " + str(numMinutes) + " minutes to get home from camp" #paired
-    ====
+    =====
         print(phrase)
-    ====
+    =====
         return phrase
 
 
@@ -190,7 +190,7 @@ Mixed-up Code Questions
     -----
     def food(fave, unfave):
     =====
-        feeling = "My favorite food is " + fave " but I don't like " + unfave
+        feeling = "My favorite food is " + fave + " but I don't like " + unfave
     =====
         feeling = "My favorite food is" + fave "but I don't like " + unfave #paired
     =====
@@ -337,8 +337,6 @@ Mixed-up Code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(var1, "I am a ")
-            self.assertEqual(var2, "CS wizard")
             self.assertEqual(combination("I am a ", "CS wizard"), "I am a CS wizard")
 
     myTests().main()
