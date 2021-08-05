@@ -1,26 +1,26 @@
 Multiple Choice Questions
 --------------------------
 
-.. mchoice:: Exercises_question10_1
+.. mchoice:: Exercises_question10_1_v2
    :practice: T
    :answer_a: 1234
    :answer_b: 2341
    :answer_c: 3142
    :answer_d: 2314
    :correct: d
-   :feedback_a: Incorrect! Remember what are necessary things required before creating a turtle object. Try again.
-   :feedback_b: Incorrect! Remember what are necessary things required before creating a turtle object. Try again.
-   :feedback_c: Incorrect! Remember what are necessary things required before creating a turtle object. Try again.
-   :feedback_d: Correct! A turtle objects needs to be first imported and then a screen needs to be created before initializing a turtle.
+   :feedback_a: You must first import the turtle module.
+   :feedback_b: You must create a turtle object before you ask it to do things using dot notation.
+   :feedback_c: You must first import the turtle module.
+   :feedback_d: Correct! The turtle module needs to be imported and then a screen needs to be created before creating a turtle object.
 
    What order do these four statements need to appear in to not give any errors?
 
    .. code-block:: python
 
-      Statement 1 : Alex = Turtle()
+      Statement 1 : alex = Turtle()
       Statement 2 : from turtle import *
       Statement 3 : space = Screen()
-      Statement 4 : Alex.forward(50)
+      Statement 4 : alex.forward(50)
 
 .. mchoice:: Exercises_question10_2
    :practice: T
@@ -31,10 +31,10 @@ Multiple Choice Questions
    :correct: c
    :feedback_a: Incorrect! Follow every step and try to recreate the shape. Try again.
    :feedback_b: Incorrect! Follow every step and try to recreate the shape. Try again.
-   :feedback_c: Correct! The given code would create an T shape.
+   :feedback_c: Correct! The code would create an T shape.
    :feedback_d: Incorrect! Follow every step and try to recreate the shape. Try again.
 
-   What letter will this code make?
+   What letter will this code draw?
 
    .. code-block:: python
 
@@ -58,9 +58,9 @@ Multiple Choice Questions
    :feedback_a: Incorrect! Remember where the turtle initially faces when it is created. Try again.
    :feedback_b: Incorrect! Remember where the turtle initially faces when it is created. Try again
    :feedback_c: Incorrect! Remember where the turtle initially faces when it is created. Try again.
-   :feedback_d: Correct! The turtle always start from facing the East side by default.
+   :feedback_d: Correct! The turtle always start from facing east by default.
 
-   Which way does a turtle (object of the Turtle class) face at the end of this code?
+   Which way does a turtle (object of the Turtle class) face after this code executes?
 
    .. code-block:: python
 
@@ -107,7 +107,7 @@ Multiple Choice Questions
    :feedback_c: Incorrect! Hint: What do penup() and pendown() do? Try again.
    :feedback_d: Incorrect! Hint: What do penup() and pendown() do? Try again.
 
-   Based on the given code, how many lines will be printed on the screen?
+   Based on the given code, how many lines will be drawn on the screen?
 
    .. code-block:: python
 
@@ -143,7 +143,7 @@ Multiple Choice Questions
    :feedback_c: Incorrect! Follow every step and try to recreate the shape. Try again.
    :feedback_d: Correct! The given code would have the turtle with these values at the end of the code.
 
-   What would be the final pensize and pencolor at the end of this code for both the turtles?
+   What would be the final pensize and pencolor after this code executes for both the turtles?
 
    .. code-block:: python
 
@@ -178,7 +178,7 @@ Multiple Choice Questions
    :answer_d: (50, 30)
    :correct: b
    :feedback_a: Incorrect! Follow every step and try to recreate the shape. Also see what goto() does. Try again.
-   :feedback_b: Correct! The given code would have the turtle's final coordinates be these values at the end of the code.
+   :feedback_b: Correct! The turtle is facing west at (30,30) when it goes forward 20 which decreases x to 10.
    :feedback_c: Incorrect! Follow every step and try to recreate the shape. Also see what goto() does. Try again.
    :feedback_d: Incorrect! Follow every step and try to recreate the shape. Also see what goto() does. Try again.
 
@@ -200,17 +200,17 @@ Multiple Choice Questions
 
 .. mchoice:: Exercises_question10_8
    :practice: T
-   :answer_a: A blue square with only outline
-   :answer_b: A blue rectangle with only outline
-   :answer_c: A blue square filled with blue color
-   :answer_d: A blue rectangle filled with blue color.
+   :answer_a: The outline of a square in blue
+   :answer_b: The outline of a rectangle in blue
+   :answer_c: A blue square
+   :answer_d: A blue rectangle
    :correct: d
    :feedback_a: Incorrect! Think what the .begin_fill() method does. Try again.
    :feedback_b: Incorrect! Think what the .begin_fill() method does. Try again.
    :feedback_c: Incorrect! Look at the height and width parameters of the function. Try again.
-   :feedback_d: Correct! This is the correct shape that will be printed from this code.
+   :feedback_d: It will draw a filled blue rectangle.
 
-   What shape would the following code print using for loop?
+   What shape would the following code draw?
 
    .. code-block:: python
 
@@ -239,15 +239,15 @@ Multiple Choice Questions
    :practice: T
    :answer_a: draw_rectangle(alex, 80, 50, -100, 80, 'green', 7)
    :answer_b: draw_rectangle(alex, -100, 80, 80, 50, 'green', 7)
-   :answer_c: draw_rectangle(alex, 'green', -100, 80, 80, 50, 7)
-   :answer_d: draw_rectangle(alex, 'green', 7, 80, 50, -100, 80)
+   :answer_c: draw_rectangle(alex, -100, 80, 80, 50, green, 7)
+   :answer_d: draw_rectangle(alex, 80, 100, 80, 50, 'green', 7)
    :correct: b
-   :feedback_a: Incorrect! See that parameters are correctly assigned. Try again.
-   :feedback_b: Correct! The printed shape follows the question requirements.
-   :feedback_c: Incorrect! See that parameters are correctly assigned. Try again.
-   :feedback_d: Incorrect! See that parameters are correctly assigned. Try again.
+   :feedback_a: Incorrect! The parameters are assigned in order. Try again.
+   :feedback_b: This assigns the parameters correctly.
+   :feedback_c: Incorrect! The color must be a string.
+   :feedback_d: Incorrect! The xpos is before the ypos.
 
-   Given the function. What parameters would you choose to create a green rectangle of pen size 7 with a width 80 and height 50 from location (-100, 80)?
+   Given the function below. What parameters would you use to create a green rectangle of pen size 7 with a width 80 and height 50 at location (-100, 80)?
 
    .. code-block:: python
 
@@ -276,12 +276,14 @@ Multiple Choice Questions
    :answer_a: Tree
    :answer_b: Hourglass
    :answer_c: Diamond
+   :answer_d: Rectangle
    :correct: b
    :feedback_a: Incorrect! Think of what the heading would be for each triangle. Try again.
    :feedback_b: Correct! This is the correct shape that will be printed from this code.
    :feedback_c: Incorrect! Think of what the heading would be for each triangle. Try again.
+   :feedback_d: Incorrect! Try to draw it yourself.
 
-   What is printed when this code is run. output of combining two different shape funtions?
+   What is drawn when the following code runs?
 
    .. code-block:: python
 
@@ -300,5 +302,5 @@ Multiple Choice Questions
 
       space = Screen()
       alex = Turtle()
-      draw_triangle(alex, -120,30,60, 'green', 60)
-      draw_triangle(alex, -120,30,60, 'green', 240)
+      draw_triangle(alex, -120, 30, 60, 'green', 60)
+      draw_triangle(alex, -120, 30, 60, 'green', 240)

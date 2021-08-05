@@ -5,12 +5,12 @@ Write Code Questions
 
         .. tab:: Question
 
-            Fix the errors in the code, and change it to use only **one** if statement. The code should print
-            "The number is 5" when the number is 5, and should print "The number is NOT 5" when it is not.
-
             .. activecode::  cndtnl-wc-fiveq
                 :nocodelens:
 
+                Fix the errors in the code, and change it to use only **one** if statement. The code should print
+                "The number is 5" when the number is 5, and should print "The number is NOT 5" when it is not.
+                ~~~~
                 x = 5
                 if x == 5:
                 print("The number is 5")
@@ -23,6 +23,9 @@ Write Code Questions
             .. activecode:: cndtnl-wc-fivea
                 :optional:
 
+                Fix the errors in the code, and change it to use only **one** if statement. The code should print
+                "The number is 5" when the number is 5, and should print "The number is NOT 5" when it is not.
+                ~~~~
                 # Initialize x and set condition for when x = 5
                 x = 5
                 if x == 5:
@@ -38,7 +41,6 @@ Write Code Questions
 
         Complete the conditional below so the word "Hi" is printed if x does not
         equal 3 and "Hello" is printed otherwise.
-
         ~~~~
         x = 4
         if x
@@ -48,13 +50,13 @@ Write Code Questions
 
         .. tab:: Question
 
-            Complete the pay computation to give the employee 1.5 times the hourly rate for hours worked
-            above 40 hours, if the regular pay rate is $10 an hour. Then set ``grossPay`` equal to the
-            amount an employee would be paid for working 45 hours.
-
             .. activecode::  cndtnl-wc-payq
                 :nocodelens:
 
+                Complete the pay computation to give the employee 1.5 times the hourly rate for hours worked
+                above 40 hours, if the regular pay rate is $10 an hour. Then set ``grossPay`` equal to the
+                amount an employee would be paid for working 45 hours.
+                ~~~~
                 hours = 45
                 rate = 10
                 overtimeRate =  #your code here
@@ -81,6 +83,10 @@ Write Code Questions
             .. activecode:: cndtnl-wc-paya
                 :optional:
 
+                Complete the pay computation to give the employee 1.5 times the hourly rate for hours worked
+                above 40 hours, if the regular pay rate is $10 an hour. Then set ``grossPay`` equal to the
+                amount an employee would be paid for working 45 hours.
+                ~~~~
                 # Initializing variables
                 hours = 45
                 rate = 10
@@ -129,13 +135,15 @@ Write Code Questions
 
         .. tab:: Question
 
-            Write the code to calculate and print the cost of a 14 mile cab ride. If the distance traveled
-            is less than or equal to 12 miles the cost is $2.00 a mile, and if the distance traveled is more
-            than 12 miles the cost is $1.50 a mile. Assign the final cost to the variable ``total``.
+
 
             .. activecode::  cndtnl-wc-distanceq
                 :nocodelens:
 
+                Write the code to calculate and print the cost of a 14 mile cab ride. If the distance traveled
+                is less than or equal to 12 miles the cost is $2.00 a mile, and if the distance traveled is more
+                than 12 miles the cost is $1.50 a mile. Assign the final cost to the variable ``total``.
+                ~~~~
                 distance = 14
 
                 ====
@@ -154,6 +162,10 @@ Write Code Questions
               :optional:
               :nocodelens:
 
+              Write the code to calculate and print the cost of a 14 mile cab ride. If the distance traveled
+              is less than or equal to 12 miles the cost is $2.00 a mile, and if the distance traveled is more
+              than 12 miles the cost is $1.50 a mile. Assign the final cost to the variable ``total``.
+              ~~~~
               # distance variable given
               distance = 14
               # Set conditions
@@ -184,7 +196,6 @@ Write Code Questions
            >= 0.6     D
             < 0.6     F
 
-
         .. code-block::
 
            Enter score: 0.95
@@ -197,11 +208,13 @@ Write Code Questions
 
         .. tab:: Question
 
-           Fix the example such that the cost of frozen yogurt is 0 if you pour exactly 1 lb. in your cup.
+
 
            .. activecode::  cndtnl-wc-weightq
                 :nocodelens:
 
+                Fix the example such that the cost of frozen yogurt is 0 if you pour exactly 1 lb. in your cup.
+                ~~~~
                 weight = 0.5
                 if weight < 1:
                     price = 1.45
@@ -219,6 +232,8 @@ Write Code Questions
               :optional:
               :nocodelens:
 
+              Fix the example such that the cost of frozen yogurt is 0 if you pour exactly 1 lb. in your cup.
+              ~~~~
               # Initial weight is given
               weight = 0.5
               # Set conditionals
@@ -246,7 +261,6 @@ Write Code Questions
         Write a procedure that takes 2 ints, total price, and amount in wallet. Print "You have enough
         money" if the difference between the wallet and price is 0 or greater; otherwise,
         print "Get more money".
-
         ~~~~
 
 
@@ -256,19 +270,20 @@ Write Code Questions
 
         .. tab:: Question
 
-            3 criteria must be taken into account to identify leap years:
-
-            - The year is evenly divisible by 4;
-
-            - If the year can be evenly divided by 100, it is NOT a leap year, unless;
-
-            - The year is also evenly divisible by 400. Then it is a leap year.
-
-            Write a program that takes a year as a parameter and sets ``leapYear`` equal to ``True`` if the year is a
-            leap year, ``False`` otherwise. (use a few different years to test your work)
-
             .. activecode::  cndtnl-wc-leapYearq
                 :nocodelens:
+
+                3 criteria must be taken into account to identify leap years:
+
+                - The year is evenly divisible by 4;
+
+                - If the year can be evenly divided by 100, it is NOT a leap year, unless;
+
+                - The year is also evenly divisible by 400. Then it is a leap year.
+
+                Write a program that takes a year as a parameter and sets ``leapYear`` equal to ``True`` if the year is a
+                leap year, ``False`` otherwise. (use a few different years to test your work)
+                ~~~~
 
 
 
@@ -277,6 +292,17 @@ Write Code Questions
             .. activecode:: cndtnl-wc-leapYeara
                 :optional:
 
+                3 criteria must be taken into account to identify leap years:
+
+                - The year is evenly divisible by 4;
+
+                - If the year can be evenly divided by 100, it is NOT a leap year, unless;
+
+                - The year is also evenly divisible by 400. Then it is a leap year.
+
+                Write a program that takes a year as a parameter and sets ``leapYear`` equal to ``True`` if the year is a
+                leap year, ``False`` otherwise. (use a few different years to test your work)
+                ~~~~
                 year = 1900 #TEST WITH ANY YEAR
                 # Initializing leapYear to False since most years are not leap years
                 leapYear = False
@@ -309,7 +335,6 @@ Write Code Questions
 
         Write a program that takes an integer and sets ``isEven`` to ``True`` if the argument
         is an **even number** and ``False`` if it is **odd**. (the mod operator could be useful!
-
         ~~~~
 
         def is_even(n):
