@@ -15,13 +15,13 @@ Mixed-up Code Questions
     -----
     def mood(emotion):
     =====
-    feeling = emotion + " " +  str(4) + " you!"
+        feeling = emotion + " " +  str(4) + " you!"
     =====
-    feeling = emotion + " " + 4 + " you!" #paired
+        feeling = emotion + " " + 4 + " you!" #paired
     =====
-    print(feeling)
+        print(feeling)
     =====
-    return feeling
+        return feeling
 
 
 .. activecode::  str-mixed-emotion-ac
@@ -39,6 +39,11 @@ Mixed-up Code Questions
     class myTests(TestCaseGui):
         def testOne(self):
             self.assertEqual(mood("So happy"), "So happy 4 you!", "Testing mood() with correct string output")
+            self.assertEqual(mood("So HaPpY"), "So HaPpY 4 you!", "Testing mood() with correct string output")
+            self.assertEqual(mood("HAPPY"), "HAPPY 4 you!", "Testing mood() with correct string output")
+            self.assertEqual(mood("happy"), "happy 4 you!", "Testing mood() with correct string output")
+            self.assertEqual(mood("Happy"), "Happy 4 you!", "Testing mood() with correct string output")
+            self.assertEqual(mood("So glad"), "So glad 4 you!", "Testing mood() with correct string output")
         
     myTests().main()
 
@@ -82,6 +87,9 @@ Mixed-up Code Questions
     class myTests(TestCaseGui):
         def testOne(self):
             self.assertEqual(item_purchase("new book", "12"), "My new book cost $12")
+            self.assertEqual(item_purchase("makeup", "14"), "My makeup cost $14")
+            self.assertEqual(item_purchase("new bag", "12.31"), "My new bag cost $12.31")
+            self.assertEqual(item_purchase("backpack", "0"), "My backpack cost $0")
 
     myTests().main()
 
@@ -124,6 +132,9 @@ Mixed-up Code Questions
     class myTests(TestCaseGui):
         def testOne(self):
             self.assertEqual(phrase("Sam", " likes to code"), "Sam likes to code")
+            self.assertEqual(phrase("mary-anne", " likes to sing"), "mary-anne likes to sing")
+            self.assertEqual(phrase("ANNA", " likes to dance"), "ANNA likes to dance")
+
 
     myTests().main()
 
@@ -172,6 +183,8 @@ Mixed-up Code Questions
     class myTests(TestCaseGui):
         def testOne(self):
             self.assertEqual(timeFromCamp(2, 45.0), "It takes us 2 hours and 45 minutes to get home from camp")
+            self.assertEqual(timeFromCamp(2, 45), "It takes us 2 hours and 45 minutes to get home from camp")
+            self.assertEqual(timeFromCamp(1, 23), "It takes us 1 hours and 23 minutes to get home from camp")
 
     myTests().main()
 
@@ -213,6 +226,8 @@ Mixed-up Code Questions
     class myTests(TestCaseGui):
         def testOne(self):
             self.assertEqual(food("pizza", "broccoli"), "My favorite food is pizza but I don't like broccoli")
+            self.assertEqual(food("pizza", "pizza"), "My favorite food is pizza but I don't like pizza")
+            self.assertEqual(food("HAMBURGER", "caRrOts"), "My favorite food is HAMBURGER but I don't like caRrOts")
 
     myTests().main()
 
@@ -223,36 +238,40 @@ Mixed-up Code Questions
     :practice: T
     :noindent:
 
-    The following program segment should print the phrase, "My sheepdog looks like a Muppet". But, the blocks have 
-    been mixed up and include two extra blocks that are not correct.  Drag the needed blocks from the left and put 
-    them in the correct order on the right.  Click the "Check Me" button to check your solution.
+    The following program segment should print the phrase, "My 'type_animal' looks like a Muppet" with 'animal' being
+    any animal of your choosing in the variable "statement". For example, if your 'type_animal' is "sheepdog", then the
+    "statement" should be "My sheepdog looks like a Muppet". But, the blocks have been mixed up and include two extra 
+    blocks that are not correct.  Drag the needed blocks from the left and put them in the correct order on the right.  
+    Click the "Check Me" button to check your solution.
     -----
-    animal = "sheepdog"
+    def animal(type_animal):
     =====
-    animal = [sheepdog] #distractor
+        statement = "My " + type_animal + " looks like a Muppet"
     =====
-    animal = "sheepdog #distractor
+        statement = "My + type_animal + looks like a Muppet" #paired
     =====
-    print("My " + animal + " looks like a Muppet")
+        print(statement)
+    =====
+        return statement
 
 
 .. activecode::  str-mixed-animal-ac
 
-    Finish the code below to print "My sheepdog looks like a Muppet" using the variable animal in the variable "comparison".
-    For example, if the animal is sheepdog, comparison should be "My sheepdog looks like a Muppet".
+    Finish the code below to print the phrase, "My 'type_animal' looks like a Muppet" with 'animal' being
+    any animal of your choosing in the variable "statement". For example, if your 'type_animal' is "sheepdog", then the
+    "statement" should be "My sheepdog looks like a Muppet".
     ~~~~
-    animal = 
-    comparison = 
+    def animal(type_animal):
 
-    print(comparison)
 
     ====
     from unittest.gui import TestCaseGui
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(comparison, "My sheepdog looks like a Muppet")
-            self.assertEqual(animal, "sheepdog")
+            self.assertEqual(animal("sheepdog"), "My sheepdog looks like a Muppet")
+            self.assertEqual(animal("FROG"), "My FROG looks like a Muppet")
+            self.assertEqual(animal("c a t"), "My c a t looks like a Muppet")
 
     myTests().main()
 
@@ -300,6 +319,10 @@ Mixed-up Code Questions
     class myTests(TestCaseGui):
         def testOne(self):
             self.assertEqual(addition(30,13,56,99), "$30 + $13 + $56 = $99")
+            self.assertEqual(addition(1.5,3.5,13,17), "$1.5 + $3.5 + $13 = $17")
+            self.assertEqual(addition(1,1,1,3), "$1 + $1 + $1 = $3")
+
+
     myTests().main()
 
 
@@ -338,6 +361,9 @@ Mixed-up Code Questions
     class myTests(TestCaseGui):
         def testOne(self):
             self.assertEqual(combination("I am a ", "CS wizard"), "I am a CS wizard")
+            self.assertEqual(combination("Potatos ", "are cool"), "Potatos are cool")
+            self.assertEqual(combination("I am a ", "meatloaf"), "I am a meatloaf")
+            self.assertEqual(combination("I like", " bubbles"), "I like bubbles")
 
     myTests().main()
 
@@ -348,26 +374,32 @@ Mixed-up Code Questions
     :practice: T
     :noindent:
 
-    The following program segment should print the phrase, "'Red' is a primary color, and so is 'blue'". But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+    The following program segment should print two primary colors using the variables col1 and col2 in the variable col3
+    and print the two colors. For example, if col1 and col2 is "'Red'" and "'blue'", then col3 
+    should print "'Red' is a primary color and so is 'blue'". But, the blocks have been mixed up and include an extra 
+    block that isn't correct.  Drag the needed blocks from the left and put them in the correct order on the right.  
+    Click the "Check Me" button to check your solution.
     -----
-    col1 = "'Red'"
-    col2 = "'blue'"
+    def colors(col1, col2):
     =====
-    col1 = "Red"
-    col2 = "blue" #paired
+        col3 = col1 + " is a primary color, and so is " + col2
     =====
-    print(col1 + " is a primary color, and so is " + col2)
+        col3 = col1 is a primary color, and so is col2 #paired
+    =====
+        print(col3)
+    =====
+        return col3
 
 
 .. activecode::  str-mixed-colors-ac
 
-    Fix and complete the code below to print "'Red' is a primary color, and so is 'blue'" by fixing the variables col1 and col2 and then combining them in the variables colors.
+    Fix and complete the code below to print two primary colors using the variables col1 and col2 in the variable col3
+    and print the two colors. For example, if col1 and col2 is "'Red'" and "'blue'", then col3 
+    should print "'Red' is a primary color, and so is 'blue'".
     ~~~~
-    col1 = Red
-    col2 = blue
-    colors = 
+    def colors(col1, col2):
+        col3 =
 
-    print(colors)
 
     ====
     from unittest.gui import TestCaseGui
@@ -375,9 +407,11 @@ Mixed-up Code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(colors, "'Red' is a primary color, and so is 'blue'")
-            self.assertEqual(col1, "'Red'")
-            self.assertEqual(col2, "'blue'")
+            self.assertEqual(colors("'Red'", "'blue'"), "'Red' is a primary color, and so is 'blue'")
+            self.assertEqual(colors("'Yellow'", "'Blue'"), "'Yellow' is a primary color, and so is 'Blue'")
+            self.assertEqual(colors("'Yellow'", "'red'"), "'Yellow' is a primary color, and so is 'red'")
+            self.assertEqual(colors("'Red'", "'yellow'"), "'Red' is a primary color, and so is 'yellow'")
+            self.assertEqual(colors("'blue'", "'red'"), "'blue' is a primary color, and so is 'red'")
 
     myTests().main()
 
@@ -388,32 +422,38 @@ Mixed-up Code Questions
     :practice: T
     :noindent:
 
-    The following program segment should print the phrase, "Petting dogs makes me happier than anything else". But, the blocks have been mixed up and include several extra blocks that are not correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+    The following program segment should print, "Petting 'animal' makes me happier than anything else" where 'animal' is any animal
+    of your choice in the variable "sentence". For example, if 'animal' is "dogs", then "sentence" should be "Petting dogs makes me
+    happier than anything else". But, the blocks have been mixed up and include several extra blocks that are not correct.  
+    Drag the needed blocks from the left and put them in the correct order on the right.  Click the "Check Me" button to check your solution.
     -----
-    var1 = "dogs"
+    def fave_animal(animal):
     =====
-    var1 = dogs #distractor
+        sentence = "Petting " + animal + " makes me happier than anything else"
     =====
-    var1 = "dogs' #distractor
+        sentence = "Petting animal makes me happier than anything else" #paired
     =====
-    var1 = [dogs] #distractor
+        sentence = "Petting  + animal +  makes me happier than anything else" #paired
     =====
-    print("Petting " + var1 + " makes me happier than anything else")
+        print(sentence)
+    =====
+        return sentence
 
 .. activecode::  str-mixed-dogs-ac
 
-    Finish the code below to print "Petting dogs makes me happier than anything else" using the variable var1.
+    Finish the code below to print "Petting 'animal' makes me happier than anything else" where 'animal' is any animal
+    of your choice in the variable "sentence". For example, if 'animal' is "dogs", then "sentence" should be "Petting dogs makes me
+    happier than anything else".
     ~~~~
-    var1 = "dogs"
-    doggo =
+    def fave_animal(animal):
 
-    print(doggo)
     ====
     from unittest.gui import TestCaseGui
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(doggo, "Petting dogs makes me happier than anything else")
-            self.assertEqual(var1, "dogs")
+            self.assertEqual(fave_animal("dogs"), "Petting dogs makes me happier than anything else")
+            self.assertEqual(fave_animal("ca ts"), "Petting ca ts makes me happier than anything else")
+            self.assertEqual(fave_animal("Horses"), "Petting Horses makes me happier than anything else")
 
     myTests().main()
