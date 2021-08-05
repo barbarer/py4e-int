@@ -30,7 +30,7 @@ Functions with Tuples and Dictionaries Multiple Choice Questions
     :feedback_d: Try again! Tuples are immutable.
     :feedback_e: Correct! Tuples are immutable, so (90, 103, 54, 45) can't be changed to (5, 45, 54, 90).
 
-    Which of the following would change ``tup`` from (90, 103, 54, 45) to (5, 45, 54, 90)? (Note: Commas represent line breaks.)
+    Which of the following would change ``tup_transformation(90, 103, 54, 45)`` into ``tup_transformation(5, 45, 54, 90)``? (Note: Commas represent line breaks.)
 
     .. code-block:: python
 
@@ -43,7 +43,7 @@ Functions with Tuples and Dictionaries Multiple Choice Questions
     :answer_b: (27, 0, 100, 7, 16, 84, 99, 78, 200, -7)
     :answer_c: ((0, 84), (7, 99), (16, 78), (27, 200), (100, -7))
     :answer_d: ((27, 84), (0, 99), (100, 78), (7, 200), (16, -7))
-    :answer_e: The function call tup_and_list_transformations((16, 7, 100, 0, 27), (84, 99, 78, 200, -7)) would cause an error because tuples are immutable.
+    :answer_e: The function call tup_and_list_transform((16, 7, 100, 0, 27), (84, 99, 78, 200, -7)) would cause an error because tuples are immutable.
     :correct: d
     :feedback_a: Try again! Be careful not to sort in place of reverse. Also, by using zip, each tuple will have an element from list_tup1 and an element from list_tup2 in order.
     :feedback_b: Try again! By using zip, each tuple will have an element from list_tup1 and an element from list_tup2 in order.
@@ -51,11 +51,11 @@ Functions with Tuples and Dictionaries Multiple Choice Questions
     :feedback_d: Correct! This converts the tuples to lists and reverses list_tup1 and zips list_tup1 and list_tup2 together.
     :feedback_e: Try again! While it's true that tuples are immutable, tuples can be changed into data types that are mutable in order to be changed (e.g., lists).
 
-    What would the output be if ``tup1`` = (16, 7, 100, 0, 27) and ``tup2`` = (84, 99, 78, 200, -7)?
+    What would the output when ``tup_and_list_transform((16, 7, 100, 0, 27),(84, 99, 78, 200, -7))`` is called?
 
     .. code-block:: python
 
-        def tup_and_list_transformations(tup1, tup2):
+        def tup_and_list_transform(tup1, tup2):
             list_tup1 = list(tup1)
             list_tup2 = list(tup2)
             list_tup1.reverse()
