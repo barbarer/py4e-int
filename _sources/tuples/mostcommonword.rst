@@ -6,6 +6,32 @@ Coming back to our running example of the text from *Romeo and Juliet*
 Act 2, Scene 2, we can write a program using last section's technique to
 print the ten most common words in the text as follows:
 
+.. activecode:: most_common_words_sort
+   :language: python3
+   :datafile: romeo-full.txt
+
+   import string
+
+   # Count the words in the file
+   with open("romeo-full.txt", "r") as fhand:
+       lines = fhand.readlines()
+   counts = {}
+   table = str.maketrans("", "", string.punctuation)
+   for line in lines:
+       line = line.translate(table)
+       for word in line.split():
+           if word not in counts.keys():
+               counts[word] = 1
+           else:
+               counts[word] += 1
+
+   # Sort the dictionary by value
+   sorted_counts = sorted(counts.items(), key = lambda t: t[1], reverse = True)
+
+   # print the top ten
+   for t in sorted_counts[:10]:
+       print(t)
+
 The first part of the program reads the file and creates/fills in the
 dictionary that maps each word to the amount of times it appears in the document.
 For this program, instead of simply printing out counts and
@@ -39,7 +65,7 @@ analysis.
 
 
 The fact that this complex data parsing and analysis can be done with an
-easy-to-understand 13-line Python program is one reason why Python is a
+easy-to-understand Python program is one reason why Python is a
 good choice as a language for exploring information.
 
 .. mchoice:: question10_6_1
@@ -78,39 +104,32 @@ good choice as a language for exploring information.
       weather = {'Reykjavik': 60, 'Buenos Aires': 55, 'Cairo': 96, 'Berlin': 89, 'Caloocan': 78}
       sorted_weather = weather.sort()
 
-.. parsonsprob:: question10_6_3
+.. parsonsprob:: question10_6_3_v2
    :numbered: left
    :practice: T
    :adaptive:
 
    Construct a block of code that uses tuples to keep track of the word count in the file 'heineken.txt'. Then, print out the 10 most frequently appearing words preceded by how many times they appear.
    -----
+   counter = {}
+   list_of_tuples = []
+   =====
    with open("heineken.txt", "r") as filename:
    =====
-   	lines = filename.readlines()
-   	word_counter = {}
-   	list_of_tuples = []
+       lines = filename.readlines()
    =====
-   	for line in lines.split():
+   for line in lines:
    =====
-   		for word in line:
+       for word in line.split():
    =====
-   		for word in lines: #paired
+   		 for word in lines.split(): #paired
    =====
-   			word_counter[word] = word_counter.get(word, 0) + 1
+   		     counter[word] = counter.get(word, 0) + 1
    =====
-   	for key, value in word_counter.items():
+   sorted_counts = sorted(counter.items(), key = lambda t: t[1], reverse = True)
    =====
-   	for value, key in word_counter.items(): #paired
+   sorted_counts = sorted(counter.items(), key = lambda t: t[1]) #paired
    =====
-   		list_of_tuples.append((value, key))
+   for t in sorted_counts[:10]:
    =====
-   	list_of_tuples.sort(reverse = True)
-   	sliced_list = list_of_tuples[:10]
-   =====
-   	list_of_tuples.sort()
-   	sliced_list = list_of_tuples[:10] #paired
-   =====
-   	for key, value in sliced_list:
-   =====
-   		print(value, key)
+       print(t)

@@ -1,41 +1,27 @@
-Mixed-up Code Questions
+Mixed-Up Code Questions
 -----------------------
-.. selectquestion:: listPassword_creator-sq
-   :fromid: listPassword_creator, listPassword_creator-ac
+
+.. selectquestion:: list_MUC_Password_creator_sq
+   :fromid: list_MUC_Password_creator, list_MUC_discount_ac
    :toggle:
 
-.. selectquestion:: listMixed_rainfall-sq
-   :fromid: listMixed_rainfall, listMixed_rainfall-ac
+.. selectquestion:: list_MUC_rainfall_v2_sq
+   :fromid: list_MUC_rainfall_v2, list_MUC_rainfall_v2_ac
    :toggle:
 
-.. selectquestion:: listMixed_numbers-sq
-   :fromid: listMixed_numbers, listMixed_numbers-ac
+.. selectquestion:: list_MUC_mix_items_sq
+   :fromid: list_MUC_mix_items, list_MUC_mix_items_ac
    :toggle:
 
-.. selectquestion:: listMixed_discount-sq
-   :fromid: listMixed_discount, listMixed_discount-ac
+.. selectquestion:: list_MUC_discount_sq
+   :fromid: list_MUC_discount, list_MUC_mix_items_ac
    :toggle:
 
-.. selectquestion:: listMixed_append-sq
-   :fromid: listMixed_append, listMixed_append-ac
+.. selectquestion:: list_MUC_append_if_a_sq
+   :fromid: list_MUC_append_if_a, list_MUC_append_if_a_ac
    :toggle:
 
-.. selectquestion:: listMixed_months-sq
-   :fromid: listMixed_months, listMixed_months-ac
+.. selectquestion:: list_MUC_add_vocab_sq
+   :fromid: list_MUC_add_vocab, list_MUC_add_vocab_ac
    :toggle:
 
-.. selectquestion:: ch16ex5muc-sq
-   :fromid: ch16ex5muc, ch16ex5muc-ac
-   :toggle:
-
-.. selectquestion:: listMixed_oldNew-sq
-   :fromid: listMixed_oldNew, listMixed_oldNew-ac
-   :toggle:
-
-.. selectquestion:: listMixed_instructions-sq
-   :fromid: listMixed_instructions, listMixed_instructions-ac
-   :toggle:
-
-.. selectquestion:: listMixed_Odd-sq
-   :fromid: listMixed_Odd, listMixed_Odd-ac
-   :toggle:

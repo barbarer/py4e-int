@@ -78,7 +78,9 @@ will even let Python tell us the list of characters that it considers
    '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
 
 
-The parameters used by ``translate`` were different in Python 2.0.
+.. note::
+
+   The parameters used by ``translate`` were different in Python 2.0.
 
 We make the following modifications to our program:
 
@@ -86,23 +88,23 @@ We make the following modifications to our program:
    :fromfile: romeo-full.txt
    :hide:
 
-.. activecode:: fileOpen3
+.. activecode:: fileOpen3_v2
    :language: python3
-   :available_files: romeo-full.txt
+   :datafile: romeo-full.txt
 
    import string
 
-   with open("romeo-full.txt", "r") as filename:
-       lines = filename.readlines()
-       counts = {}
-       for line in lines:
-           for word in line.split():
-               table = str.maketrans("", "", string.punctuation)
-               stripped = word.translate(table)
-               if stripped not in counts.keys():
-                   counts[stripped] = 1
-               else:
-                   counts[stripped] += 1
+   with open("romeo-full.txt", "r") as fhand:
+       lines = fhand.readlines()
+   counts = {}
+   table = str.maketrans("", "", string.punctuation)
+   for line in lines:
+       line = line.translate(table)
+       for word in line.split():
+           if word not in counts.keys():
+               counts[word] = 1
+           else:
+               counts[word] += 1
    print(counts)
 
 .. mchoice:: question9_5_2
