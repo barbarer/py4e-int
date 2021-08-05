@@ -37,7 +37,7 @@ Functions with Lists Multiple Choice Questions
     :feedback_d: Incorrect! The built-in function, pop, removes the value from a list, lst, at a specified index, num.
     :feedback_e: Correct! This will remove the number at index 0.
 
-    Which values of ``num`` would not return an error if ``lst = [0, 4, -4, 2.5]``?
+    Which values of ``num`` would not return an error if ``lst`` were ``[0, 4, -4, 2.5]``?
 
     .. code-block:: python
 
@@ -58,7 +58,7 @@ Functions with Lists Multiple Choice Questions
     :feedback_d: Incorrect! The built-in function append adds a list to the end of a list. The built-in function extend adds the values of a list to the end of a list.
     :feedback_e: Incorrect! The built-in function append adds a list to the end of a list. The built-in function extend adds the values of a list to the end of a list.
 
-    What would the function ``extend_and_append`` output if ``lst = [0, 200, 5.6, -2, 4, 5]``?
+    What would the function ``extend_and_append`` output if ``lst`` were ``[0, 200, 5.6, -2, 4, 5]``?
 
     .. code-block:: python
 
@@ -81,7 +81,7 @@ Functions with Lists Multiple Choice Questions
     :feedback_d: Incorrect! When an or operator is used with two statements, only one of the statements has to be true in order for the entire statement to pass as true.
     :feedback_e: Correct! This checks if it is not true that the len of lst1 is not the same as the length of lst2.
 
-    Which of the following would correctly replace the ``else`` statement?
+    Which of the following would correctly replace the else statement?
 
     .. code-block:: python
 

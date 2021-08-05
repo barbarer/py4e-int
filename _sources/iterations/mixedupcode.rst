@@ -12,11 +12,28 @@ Mixed-up code Questions
    =====
    while n < 5:
    =====
-   while n > 5: #distractor
+   while n > 5: #paired
    =====
        print(n)
    =====
        n = n + 1
+
+.. activecode::  ch5ex1muc-ac
+
+    Finish the following program segment so that as long as n is less than 5, print n and then increment it by 1.
+    ~~~~
+    n = 0
+
+    ====
+    from unittest.gui import TestCaseGui
+
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(n, 5)
+
+    myTests().main()
+
 
 .. parsonsprob:: ch5ex2muc
    :numbered: left
@@ -27,13 +44,32 @@ Mixed-up code Questions
    -----
    accum = 0
    =====
-   while accum < 7:
+   while accum < 7: 
+   =====
+   while accum < 6: #paired
    =====
        print(accum)
    =====
        accum = accum + 2
-   =====
-   while accum < 6 #distractor
+   
+
+
+.. activecode::  ch5ex2muc-ac
+
+    Finish the following program segment so that it should print "0 2 4 6" on separate lines by using a while loop. Arrange the code so that "accum" prints before increasing its value. 
+    ~~~~
+    accum = 0
+
+    ====
+    from unittest.gui import TestCaseGui
+
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(accum, 8)
+
+    myTests().main()
+
 
 
 .. parsonsprob:: ch5ex3muc
@@ -57,7 +93,26 @@ Mixed-up code Questions
    =====
    print(skipCount(0,2,9))
    =====
-   print(skipCount(0,2,8)) #distractor
+   print(skipCount(0,2,8)) #paired
+
+
+.. activecode::  ch5ex3muc-ac
+
+    Finish the following program segment so that it should print all even numbers from 0 to 8 (this includes 0 and 8).
+    ~~~~
+    def skipCount(start, increment, stop):
+        counter = start
+
+    ====
+    from unittest.gui import TestCaseGui
+
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(skipCount(0,2,8), 8)
+
+    myTests().main()
+
 
 .. parsonsprob:: ch5ex4muc
    :numbered: left
@@ -70,7 +125,7 @@ Mixed-up code Questions
    =====
        while first > second:
    =====
-       while first == second: #distractor
+       while first == second: #paired
    =====
            print('Am I infinitely looping?')
    =====
@@ -78,7 +133,25 @@ Mixed-up code Questions
    =====
    loopMe(7, 4)
    =====
-   loopMe(1, 3) #distractor
+   loopMe(1, 3) #paired
+
+
+.. activecode::  ch5ex4muc-ac
+
+    Write the following program segment so that it should infinitely loop. The first parameter should be greater than the second.
+    ~~~~
+    def loopMe(first,second):
+
+    ====
+    from unittest.gui import TestCaseGui
+
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(loopMe(4,3), 'True')
+
+    myTests().main()
+
 
 .. parsonsprob:: ch5ex5muc
    :numbered: left
@@ -96,7 +169,26 @@ Mixed-up code Questions
    =====
    print(sum / 6)
    =====
-   print(sum / 5) #distractor
+   print(sum / 5) #paired
+
+
+.. activecode::  ch5ex5muc-ac
+
+    Write the following program segment so that it should calculate and print the average of a list of numbers using a for loop.
+    ~~~~
+    numbers = [90, 94, 85, 78, 87, 98]
+    sum = 0
+
+    ====
+    from unittest.gui import TestCaseGui
+
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertAlmostEqual(sum/6, 88.66666666666667)
+
+    myTests().main()
+
 
 .. parsonsprob:: ch5ex6muc
    :numbered: left
@@ -112,9 +204,28 @@ Mixed-up code Questions
    =====
        sum = sum + number
    =====
-       sum = sum + numbers #distractor
+       sum = sum + numbers #paired
    =====
    print(sum)
+
+
+.. activecode::  ch5ex6muc-ac
+
+    Complete the following program segment so that it should calculate and print the sum of all numbers between 0 and 30.
+    ~~~~
+    sum = 0
+    numbers = range(31)
+
+    ====
+    from unittest.gui import TestCaseGui
+
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(sum, 465)
+
+    myTests().main()
+
 
 .. parsonsprob:: ch5ex7muc
    :numbered: left
@@ -128,11 +239,30 @@ Mixed-up code Questions
    =====
    for number in numbers:
    =====
-   for numbers in numbers: #distractor
+   for numbers in numbers: #paired
    =====
        sum = sum + number
    =====
    print(sum)
+
+
+.. activecode::  ch5ex7muc-ac
+
+    Finish the following program segment so that it should calculate the sum of all odd numbers between 0 and 30.
+    ~~~~
+    sum = 0
+    numbers = range(1,30,2)
+
+    ====
+    from unittest.gui import TestCaseGui
+
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(sum, 225)
+
+    myTests().main()
+
 
 .. parsonsprob:: ch5ex8muc
    :numbered: left
@@ -150,7 +280,24 @@ Mixed-up code Questions
    =====
        print(sum)
    =====
-       print(number) #distractor
+       print(number) #paired
+
+.. activecode::  ch5ex8muc-ac
+
+    Complete the following program segment so that it should find the sum of every multiple of 3 between 3 and 36 and print the sum after each addition.
+    ~~~~
+    sum = 0
+    numbers = range(3, 37, 3)
+
+    ====
+    from unittest.gui import TestCaseGui
+
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(sum, 234)
+
+    myTests().main()
 
 .. parsonsprob:: ch5ex9muc
    :numbered: left
@@ -166,11 +313,29 @@ Mixed-up code Questions
    =====
        total = total + number
    =====
-       total = total * number #distractor
+       total = total * number #paired
    =====
    average = total / 6
    =====
    print(average)
+
+.. activecode::  ch5ex9muc-ac
+
+    Write the following program segment so that it should find the average pH of 6 water samples.
+    ~~~~
+    total = 0
+    pHvalues =  [7.0, 8.2, 6.7, 7.5, 8.0, 7.2]
+
+    ====
+    from unittest.gui import TestCaseGui
+
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertAlmostEqual(average, 7.433333333333334)
+
+    myTests().main()
+
 
 .. parsonsprob:: ch5ex10muc
    :numbered: left
@@ -187,4 +352,21 @@ Mixed-up code Questions
    =====
        counter = counter - 1
    =====
-       counter = counter + 1 #distractor
+       counter = counter + 1 #paired
+
+
+.. activecode::  ch5ex10muc-ac
+
+    Write the following program segment so that it should print the numbers 5 through 1, starting with 5.
+    ~~~~
+    counter = 5
+
+    ====
+    from unittest.gui import TestCaseGui
+
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(counter, 0)
+
+    myTests().main()

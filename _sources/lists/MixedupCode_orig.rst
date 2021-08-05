@@ -1,5 +1,6 @@
 Mixed-up Code Questions
 -----------------------
+
 .. parsonsprob:: list_MUC_Password_creator
     :practice: T
     :adaptive:
@@ -38,20 +39,20 @@ Mixed-up Code Questions
     class myTests(TestCaseGui):
 
         def testOne(self):
+
             self.assertEqual(password_maker(["show", "me", "the", "money"]), "swmetemy", 'password_maker("show", "me", "the", "money")')
             self.assertEqual(password_maker(["Bye", "Now"]), "BeNw", 'password_maker(["Bye", "Now"])')
             self.assertEqual(password_maker(["Beautiful"]), "Bl", 'password_maker(["Beautiful"])')
             self.assertEqual(password_maker(["You", "complete", "me"]), "Yuceme", 'password_maker(["You", "complete", "me"])')
 
-
     myTests().main()
-
 
 
 .. parsonsprob:: list_MUC_rainfall_v2
     :numbered: left
     :adaptive:
     :practice: T
+
 
     Create a function ``avg_rainfall(day_list)`` that takes a list with the amount of rain for each day.
     There are some problems with the equipment, so ignore days that have a negative number for the amount of rain. Calculate the average rainfall as the sum of the non-negative values divided by the number of non-negative values. If at least one day has a non-negative rainfall return ``Average: (average)`` and otherwise return ``No rain``.  For example,  ``avg_rainfall([30,-2, 0])`` should return ``Average: 15`` and ``avg_rainfall([-3, -2])`` should return ``No rain``.
@@ -83,6 +84,7 @@ Mixed-up Code Questions
             return "No rain"
 
 
+
 .. activecode::  list_MUC_rainfall_v2_ac
 
     Write a function ``avg_rainfall(day_list)`` that takes a list with the amount of rain for each day.
@@ -99,10 +101,7 @@ Mixed-up Code Questions
             self.assertEqual(avg_rainfall([4, 0, -3, 20]), "Average: 8.0", "avg_rainfall([4, 0, -3, 20])")
             self.assertEqual(avg_rainfall([20, 4]), "Average: 12.0", "rainfall([20, 4])")
 
-
     myTests().main()
-
-
 
 .. parsonsprob:: list_MUC_mix_items
     :numbered: left
@@ -141,6 +140,7 @@ Mixed-up Code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
+
             self.assertEqual(mix([3, 2, 1, 4]), [4, 2, 1, 3], "mix([3, 2, 1, 4])")
             self.assertEqual(mix(['a', 'b', 'c']), ['c', 'b', 'a'], "mix(['a', 'b', 'c'])")
             self.assertEqual(mix(['a', 'b']), ['b', 'a'], "mix(['a', 'b'])")
@@ -186,13 +186,13 @@ Mixed-up Code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
+
             self.assertEqual(discount([20.00, 15.60, 22.99]), [10.00, 7.80, 11.50], "discount([20.00, 15.60, 22.99])")
             self.assertEqual(discount([14.50]), [7.25], "discount([14.50])")
             self.assertEqual(discount([12.22]), [6.11], "discount([12.22])")
             self.assertEqual(discount([12.31]), [6.16], "discount([12.31])")
 
     myTests().main()
-
 
 .. parsonsprob:: list_MUC_append_if_a
     :numbered: left
@@ -230,6 +230,7 @@ Mixed-up Code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
+
             self.assertEqual(filter_a(['a', 'bye', 'above']), ['a', 'above'], "filter_a(['a', 'bye', 'above'])")
             self.assertEqual(filter_a(['bye']), [], "filter_a(['bye'])")
             self.assertEqual(filter_a(['bye', 'a', 'around']), ['a', 'around'], "filter_a(['bye', 'a', 'around'])")
@@ -268,17 +269,16 @@ Mixed-up Code Questions
     ``vocab`` if it is not already in that list. It should return the list ``vocab``.
     ~~~~
 
-
     ====
     from unittest.gui import TestCaseGui
 
     class myTests(TestCaseGui):
         def testOne(self):
+
             self.assertEqual(vocab_list(['hi', 'bye'], ['hi', 'bye']), ['hi', 'bye'], "vocab_list(['hi', 'bye'], ['hi', 'bye'])")
             self.assertEqual(vocab_list(['hi', 'bye', 'run'], ['hi', 'bye']), ['hi', 'bye', 'run'], "vocab_list(['hi', 'bye', 'run'], ['hi', 'bye'])")
             self.assertEqual(vocab_list(['hi', 'bye'], []), ['hi', 'bye'], "vocab_list(['hi', 'bye'], [])")
             self.assertEqual(vocab_list(['an', 'anniversary'], ['anniversary']), ['anniversary', 'an'] , "vocab_list(['an', 'anniversary'], ['anniversary'])")
-
 
 
     myTests().main()

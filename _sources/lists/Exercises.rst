@@ -5,10 +5,12 @@ Multiple Choice Questions
     :answer_a: [ [ ], 3.14, False]
     :answer_b: ["cat", [56, 57, "dog"]]
     :answer_c: [ [56, 57, "dog"], [ ], 3.14, False]
+    :answer_d: [27, "cat"]
     :correct: b
-    :feedback_a: No, this slice starts at index 4 and goes up to and including the last item.
-    :feedback_b: "cat" is at index 2 and [56, 57, "dog"] is what you get when index 4 is exclusive.
-    :feedback_c: Remember that index values start at 0!
+    :feedback_a: Incorrect! This slice starts at index 4 and goes up to and includes the last item.
+    :feedback_b: Correct! The word "cat" is at index 2 and [56, 57, "dog"] is what you get when index 4 is exclusive.
+    :feedback_c: Incorrect! Remember that index values start at 0!
+    :feedback_d: Incorrect! This slice starts at index 4 and goes up to and includes the last item.
 
     What is returned by the following function?
 
@@ -22,9 +24,13 @@ Multiple Choice Questions
     :practice: T
     :answer_a: 4
     :answer_b: 5
+    :answer_c: False
+    :answer_d: 3.14
     :correct: b
-    :feedback_a: len returns the actual number of items in the list, not the maximum index value.
-    :feedback_b: Yes, there are 5 items in this list.
+    :feedback_a: Incorrect! The built in function, len, returns the actual number of items in the list, not the maximum index value.
+    :feedback_b: Correct! There are 5 items in this list.
+    :feedback_c: Incorrect! The built in function, len, returns the actual number of items in the list.
+    :feedback_d: Incorrect! The built in function, len, returns the actual number of items in the list.
 
     What is returned by the following function?
 
@@ -39,10 +45,12 @@ Multiple Choice Questions
     :answer_a: Error, you cannot use the upper method on a list.
     :answer_b: 2
     :answer_c: CAT
+    :answer_d: FALSE
     :correct: c
-    :feedback_a: alist[2] is the string cat so the upper method is legal
-    :feedback_b: 2 is the index.  We want the item at that index.
-    :feedback_c: Yes, the string cat is upper cased to become CAT.
+    :feedback_a: Incorrect! alist[2] is the string cat so the upper method is legal
+    :feedback_b: Incorrect! 2 is the index.  We want the item at that index.
+    :feedback_c: Correct! The string cat is upper cased to become CAT.
+    :feedback_d: Incorrect! False is at the maximum index, not the second index.
 
     What is returned by the following function?
 
