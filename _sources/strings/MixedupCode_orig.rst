@@ -23,7 +23,7 @@ Mixed-up Code Questions
 .. activecode::  str-mixed-emotion-ac
 
     Finish the function below to return how you're feeling by using the variable emotion. 
-    For example, if you're feeling "So happy" the statement should print "So happy 4 you!"
+    For example, if you're feeling "So happy" the statement should return "So happy 4 you!"
     ~~~~
     def mood(emotion):
 
@@ -386,7 +386,7 @@ Mixed-up Code Questions
     :practice: T
     :noindent:
 
-    The following function should print, "Petting 'animal' makes me happier than anything else" where 'animal' is any animal
+    The following function should return, "Petting 'animal' makes me happier than anything else" where 'animal' is any animal
     of your choice. For example, if 'animal' is "dogs", then the function should return "Petting dogs makes me happier than 
     anything else". But, the blocks have been mixed up and include several extra blocks that are not correct. Drag the needed 
     blocks from the left and put them in the correct order on the right.  Click the "Check Me" button to check your solution.
@@ -401,7 +401,7 @@ Mixed-up Code Questions
 
 .. activecode::  str-mixed-dogs-ac
 
-    Finish the code below to print, "Petting 'animal' makes me happier than anything else" where 'animal' is any animal
+    Finish the code below to return, "Petting 'animal' makes me happier than anything else" where 'animal' is any animal
     of your choice. For example, if 'animal' is "dogs", then the function should return "Petting dogs makes me happier than 
     anything else".
     ~~~~
