@@ -33,6 +33,8 @@ Write Code Questions
             .. activecode:: funct-ex-perimetera
                 :optional:
 
+                Fix the 4 errors so the following code runs and returns the perimeter of a rectangle.
+                ~~~~
                 # Function headers end with a colon (:)
                 def recPerimeter(length, width):
 
@@ -97,6 +99,10 @@ Write Code Questions
 
             .. activecode:: funct_ex_trianglea
                 :optional:
+
+                Change the code so that ``areaTriangle`` takes parameters for the base and height of a triangle
+                and computes its area. Then, write code to call the function and print the result.
+                ~~~~
 
                 # Give function base and height arguments
                 def areaTriangle(base, height):
@@ -169,6 +175,10 @@ Write Code Questions
             .. activecode:: funct_ex_namea
                 :optional:
 
+                Fix the errors on line 2 so the function ``nameAndAge`` returns
+                the string "My name is ``nameString`` and I am ``ageInt`` years old." The function
+                call below should print "My name is John and I am 18 years old."
+                ~~~~
                 def nameAndAge(nameString, ageInt):
                     # Use quotes around strings, keep variables outside of quotes
                     # Include spacing so variables are not connected to words
@@ -247,6 +257,10 @@ Write Code Questions
             .. activecode:: funct_ex_suma
                 :optional:
 
+                Write a fruitful function ``sumTo(n)`` that returns the sum of all integer numbers up to and
+                including ``n``. For example, ``sumTo(10)`` would compute 1 + 2 + 3 + ... + 10 and return the value ``55``.
+                Use this equation to find this sum: (n * (n + 1)) / 2.
+                ~~~~
                 def sumTo(n):
                     # set result variable to given equation
                     result = (n * (n + 1)) / 2
@@ -314,6 +328,9 @@ Write Code Questions
             .. activecode:: funct_ex_circlea
                 :optional:
 
+                Write a function ``areaOfCircle(r)`` which returns the area of a circle of radius ``r``.
+                Make sure you import the math module in your solution to obtain an accurate value of pi.
+                ~~~~
                 # Import the math module
                 import math
 
