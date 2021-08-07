@@ -1,12 +1,11 @@
 Write Code for Mixed-Up Code Questions
 ----------------------------------------
 
-.. activecode:: mixedupcode_question10_1_write
+.. activecode:: mixedupcode_question10_1_v2_ac
    :autograde: unittest
 
-   Finish the code below to create a list of tuples, ``tup_list``, where the first element is the length of each word in ``txt`` and the second is the word itself. Sort the list in terms of word length from longest to shortest. For example, if ``txt="hi bye"`` then ``tup_list`` would be ``[(3, 'bye'), (2, 'hi')]`` after this code executes.
+   Write a function ``create_tup(str)`` that takes a string, ``str``, and returns a list of tuples where the first element is the length of each word in ``str`` and the second is the word itself. Sort the list in terms of word length from longest to shortest. For example, ``create_tup("hi bye")`` would return ``[(3, 'bye'), (2, 'hi')]``.
    ~~~~
-   txt = 'but soft what light in yonder window breaks'
 
    ====
    from unittest.gui import TestCaseGui
@@ -14,26 +13,19 @@ Write Code for Mixed-Up Code Questions
    class myTests(TestCaseGui):
 
        def testOne(self):
-           self.assertEqual(len(tup_list), 8, 'len(tup_list)')
-           self.assertEqual(type(tup_list[0][0]), int, 'Type of first item is int')
-           self.assertEqual(tup_list[0][0], 6, 'tup_list[0][0]'')
-           self.assertEqual(tup_list[0][1], 'yonder', 'tup_list[0][1]')
-           self.assertEqual(tup_list[1][0], 6, 'tup_list[1][0]')
-           self.assertEqual(tup_list[1][1], 'window', 'tup_list[1][1]')
-           self.assertEqual(tup_list[3][0], 5, 'tup_list[3][0]')
-           self.assertEqual(tup_list[3][1], 'light', 'tup_list[3][1]')
-           self.assertEqual(tup_list[-1][0], 2, 'tup_list[-1][0]')
-           self.assertEqual(tup_list[-1][1], 'in', 'tup_list[-1][1]')
+           self.assertEqual(create_tup("hi bye"),[(3, 'bye'), (2, 'hi')],'create_tup("hi bye")')
+           self.assertEqual(create_tup("Run away"),[(4, 'away'), (3, 'Run')],'create_tup("Run away")')
+           self.assertEqual(create_tup("When I win"),[(4, 'When'), (3, 'win'), (1, 'I')],'create_tup("When I win")')
+           self.assertEqual(create_tup("Shall I compare thee"),[(7, 'compare'), (5, 'Shall'), (4, 'thee'), (1, 'I')],'create_tup("Shall I compare thee")')
 
    myTests().main()
 
 
-.. activecode:: mixedupcode_question10_2_write
+.. activecode:: mixedupcode_question10_2_v2_ac
    :autograde: unittest
 
-   Finish the code below to to create a list, ``tup_list`` containing tuples of each word from ``word_list`` paired with their lengths. Then sort the words by length from highest to lowest.  For example, if ``word_list = ['hi', 'bye']`` then ``tup_list`` would be ``[('bye', 3), ('hi', 2)]``
+   Create a function ``create_tup(word_list)`` that takes a list of words, ``word_list``, and returns a list of tuples where the first element is a word from ``str`` and the second is the length of the word. Sort the list in terms of word length from longest to shortest.  For example, if ``create_tup(['hi', 'bye'])`` should return ``[('bye', 3), ('hi', 2)]``.
    ~~~~
-   word_list = ['pen', 'skyscraper', 'post', 'computer', 'apple', 'Hollywood']
 
    ====
    from unittest.gui import TestCaseGui
@@ -41,15 +33,10 @@ Write Code for Mixed-Up Code Questions
    class myTests(TestCaseGui):
 
        def testOne(self):
-           self.assertEqual(len(tup_list), 6, 'len(tup_list)')
-           self.assertEqual(type(tup_list[0][1]), int, 'Type of second item is int')
-           self.assertEqual(tup_list[0][0], 'skyscraper', 'tup_list[0][0]')
-           self.assertEqual(tup_list[0][1], 10, 'tup_list[0][1]')
-           self.assertEqual(tup_list[1][0], 'Hollywood', 'tup_list[1][0]')
-           self.assertEqual(tup_list[1][1], 9, 'tup_list[1][1]')
-           self.assertEqual(tup_list[3][0], 'apple', 'tup_list[3][0]')
-           self.assertEqual(tup_list[3][1], 5, 'tup_list[3][1]')
-           self.assertEqual(tup_list[-1][0],'pen', 'tup_list[-1][0]')
-           self.assertEqual(tup_list[-1][1], 3, 'tup_list[-1][1]')
+           self.assertEqual(create_tup(["hi", "bye"]),[('bye', 3), ('hi', 2)],'create_tup(["hi", "bye"])')
+           self.assertEqual(create_tup(["Run", "away"]),[('away', 4), ('Run', 3)],'create_tup(["Run", "away"])')
+           self.assertEqual(create_tup(["When", "I", "win"]),[('When', 4), ('win', 3), ('I', 1)],'create_tup(["When", "I", "win"])')
+           self.assertEqual(create_tup(["Shall", "I", "compare", "thee"]),[('compare', 7), ('Shall', 5), ('thee', 4), ('I', 1)],'create_tup(["Shall", "I", "compare", "thee"])')
+
 
    myTests().main()
