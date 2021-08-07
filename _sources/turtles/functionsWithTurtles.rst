@@ -47,11 +47,11 @@ Here is code that draws a square with a turtle using a ``for`` loop with ``range
 
 We can create a function out of the code that draws the square.
 
-- Move the import to the top of the code
+- Keep the import at the top of the code
 - Move the code that draws the square after the import
-- Add a function definition and pass in a turtle object.  You can call it anything, but ``turtle`` is a good name for a ``turtle`` object.
+- Add a function definition and pass in a turtle object.  You can call it anything, but ``turtle`` is a good name for an object of the  ``Turtle`` class.
 - Modify the code in the function to  use the local name (``turtle``).
-- Add a call to the function after you create the ``turtle`` and pass in the ``turtle`` object. The name can be different from the name in the function.
+- Add a call to the function after you create the ``turtle`` and pass in the ``turtle`` object. Use whatever name you gave the turtle when you created it.
 
 When we execute ``square(alisha)`` the local variable ``turtle`` is set to
 the same object as ``alisha``.  Notice that we still need to import the library, create the screen object,
@@ -65,7 +65,7 @@ create the turtle object, and call the function.
     from turtle import *     # use the turtle library
 
     def square(turtle):
-        turtle.setheading(90)    # set the heading to north
+        turtle.setheading(0)     # set the heading to east
         for sides in range(4):   # repeat the indented lines 4 times
             turtle.forward(100)    # move forward by 100 units
             turtle.right(90)       # turn by 90 degrees
@@ -85,7 +85,7 @@ change the ``length`` when we call the function to draw different squares. We ca
     from turtle import *     # use the turtle library
 
     def square(turtle, length = 100):
-        turtle.setheading(90)    # set the heading point due north
+        turtle.setheading(0)    # set the heading to east
         for sides in range(4):   # repeat the indented lines 4 times
             turtle.forward(length)    # move forward by 100 units
             turtle.right(90)          # turn by 90 degrees
@@ -129,7 +129,7 @@ We can add even more parameters to set the fill color.  We can make the default 
     from turtle import *       # use the turtle library
 
     def square(turtle, length = 100, color = 'green'):
-        turtle.setheading(90)    # set the heading point due north
+        turtle.setheading(0)    # set the heading to east
         turtle.fillcolor(color)
         turtle.begin_fill()
         for sides in range(4):   # repeat the indented lines 4 times
@@ -159,7 +159,7 @@ You can change the size of the screen object, set a background color for the scr
     from turtle import *       # use the turtle library
 
     def square(turtle, length = 100, color = 'green'):
-        turtle.setheading(90)    # set the heading point due north
+        turtle.setheading(0)    # set the heading to east
         turtle.fillcolor(color)
         turtle.begin_fill()
         for sides in range(4):   # repeat the indented lines 4 times
@@ -185,13 +185,13 @@ You can change the size of the screen object, set a background color for the scr
 .. activecode:: Turtle_draw_house
     :nocodelens:
 
-    Write a function to draw an equilateral triangle and then write a function
-    to draw a simple house by calling the functions to draw a triangle and square.
+    Add a function to draw an equilateral triangle and then write a function
+    to draw a simple house by calling the functions to draw a triangle and a square.
     ~~~~
     from turtle import *       # use the turtle library
 
     def square(turtle, length = 100, color = 'green'):
-        turtle.setheading(90)    # set the heading point due north
+        turtle.setheading(0)    # set the heading to east
         turtle.fillcolor(color)
         turtle.begin_fill()
         for sides in range(4):   # repeat the indented lines 4 times
