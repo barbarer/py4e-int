@@ -452,9 +452,9 @@ Mixed-up Code Questions
     =====
         vocabulary = []
     =====
-        if response in wordList: #paired
-    =====
         if response not in wordList:
+    =====
+        if response in wordList: #paired
     =====
             vocabulary.append(response)
     =====
