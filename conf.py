@@ -235,3 +235,10 @@ html_show_sourcelink = False
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'PythonCoursewareProjectdoc'
+
+
+
+# key_words
+key_words = "Python, Python 3, novice, intermediate, data science, data processing"
+shelf_section = "Intro to Data Science, Intro to Computer Science"
+course_description = "This interactive ebook was created by a team led by Dr. Barbara Ericson.  That team started with a static version of this ebook created by Dr. Charles Severance for his Python for Everybody course.  He built that ebook by starting with Allen B. Downey's *Think Python* book.  This ebook is a data-oriented introduction to Pyton 3 and covers both novice and intermediate levels of programming. Use code py4e-int"
