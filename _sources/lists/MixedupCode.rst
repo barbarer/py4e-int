@@ -2,7 +2,7 @@ Mixed-Up Code Questions
 -----------------------
 
 .. selectquestion:: list_MUC_Password_creator_sq
-   :fromid: list_MUC_Password_creator, list_MUC_discount_ac
+   :fromid: list_MUC_Password_creator, list_MUC_Password_creator_ac
    :toggle:
 
 .. selectquestion:: list_MUC_rainfall_v2_sq
@@ -14,7 +14,7 @@ Mixed-Up Code Questions
    :toggle:
 
 .. selectquestion:: list_MUC_discount_sq
-   :fromid: list_MUC_discount, list_MUC_mix_items_ac
+   :fromid: list_MUC_discount, list_MUC_discount_ac
    :toggle:
 
 .. selectquestion:: list_MUC_append_if_a_sq
@@ -24,4 +24,3 @@ Mixed-Up Code Questions
 .. selectquestion:: list_MUC_add_vocab_sq
    :fromid: list_MUC_add_vocab, list_MUC_add_vocab_ac
    :toggle:
-

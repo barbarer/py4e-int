@@ -7,11 +7,13 @@ Write Code Questions
 
         .. tab:: Question
 
-            Fix the 5 errors in the code below to print a countdown of the numbers from 10 to 0, including 0.
+
 
             .. activecode:: itr-ex-countdownq
                 :practice: T
-                
+
+                Fix the 5 errors in the code below to print a countdown of the numbers from 10 to 0, including 0.
+                ~~~~
                 def countdown():
                     counter = 10
                     while Counter > 0:
@@ -23,6 +25,9 @@ Write Code Questions
         .. tab:: Answer
 
             .. activecode:: itr-ex-countdowna
+
+                Fix the 5 errors in the code below to print a countdown of the numbers from 10 to 0, including 0.
+                ~~~~
 
                 def countdown():
                     counter = 10
@@ -198,7 +203,7 @@ Write Code Questions
 
                 ====
                 from unittest.gui import TestCaseGui
-                
+
                 class myTests(TestCaseGui):
 
                     def testOne(self):
