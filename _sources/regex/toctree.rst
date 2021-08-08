@@ -15,5 +15,6 @@ Regular Expressions
    glossary.rst
    Exercises.rst
    mixedupcode.rst
+   mixedupcode_orig.rst
    writecode.rst
    regex-group.rst
