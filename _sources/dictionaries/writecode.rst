@@ -5,16 +5,16 @@ Write Code Questions
 
         .. tab:: Question
 
-            Write a program that categorizes each mail message by which day of the week 
-            the commit was done. To do this, look for lines that start with "From". Then, 
-            look for the third word, and keep a running count of each of the days of the week. 
-            At the end of the program, print out the contents of the dictionary ``mail_count``
-            (order does not matter). For example, ``mail_count['Mon']`` should be ``2``.
-
             .. activecode:: dict_writecode1q
                 :practice: T
                 :nocodelens:
 
+                Write a program that categorizes each mail message by which day of the week 
+                the commit was done. To do this, look for lines that start with "From". Then, 
+                look for the third word, and keep a running count of each of the days of the week. 
+                At the end of the program, print out the contents of the dictionary ``mail_count`` 
+                (order does not matter). For example, ``mail_count['Mon']`` should be ``2``. 
+                ~~~~
                 mail = ['From stephen.marquard@uct.ac.za Sat Jan  7', 'From gopal.ramasammycook@gmail.com Thurs Jan  5', 'From louis@media.berkeley.edu Tues Jan  3', 'From antranig@caret.cam.ac.uk Sat Jan  7', 'From david.horwitz@uct.ac.za Wed Jan  4', 'From ray@media.berkeley.edu Mon Jan  2', 'From stephen.marquard@uct.ac.za Mon Jan 2', 'From wagnermr@iupui.edu Fri Jan  6']
 
                 ====
@@ -34,6 +34,12 @@ Write Code Questions
             .. activecode:: dict_writecode1a
                 :optional:
 
+                Write a program that categorizes each mail message by which day of the week 
+                the commit was done. To do this, look for lines that start with "From". Then, 
+                look for the third word, and keep a running count of each of the days of the week. 
+                At the end of the program, print out the contents of the dictionary ``mail_count`` 
+                (order does not matter). For example, ``mail_count['Mon']`` should be ``2``. 
+                ~~~~
                 # mail list was given
                 mail = ['From stephen.marquard@uct.ac.za Sat Jan  7', 'From gopal.ramasammycook@gmail.com Thurs Jan  5', 'From louis@media.berkeley.edu Tues Jan  3', 'From antranig@caret.cam.ac.uk Sat Jan  7', 'From david.horwitz@uct.ac.za Wed Jan  4', 'From ray@media.berkeley.edu Mon Jan  2', 'From stephen.marquard@uct.ac.za Mon Jan 2', 'From wagnermr@iupui.edu Fri Jan  6']
 
@@ -76,15 +82,15 @@ Write Code Questions
 
         .. tab:: Question
 
-            Write a program that creates a dictionary ``letter_count`` that keeps track
-            of the amount of times each letter appears in the given phrase. Assign the
-            number of times "e" appears in the phrase to the variable ``e_counter``. Make
-            sure to account for each letter in its lowercase form. For example, ``e_counter`` should be ``10``, and ``letter_count['e']`` should be ``10``.
-
             .. activecode:: dict_writecode3q
                 :practice: T
                 :nocodelens:
 
+                Write a program that creates a dictionary ``letter_count`` that keeps track 
+                of the amount of times each letter appears in the given phrase. Assign the 
+                number of times "e" appears in the phrase to the variable ``e_counter``. Make 
+                sure to account for each letter in its lowercase form. For example, ``e_counter`` should be ``10``, and ``letter_count['e']`` should be ``10``.
+                ~~~~
                 phrase = "Exeggcute evolves into Exeggutor which are two extraordinary Pokemon"
 
                 ====
@@ -104,6 +110,11 @@ Write Code Questions
             .. activecode:: dict_writecode3a
                 :optional:
 
+                Write a program that creates a dictionary ``letter_count`` that keeps track 
+                of the amount of times each letter appears in the given phrase. Assign the 
+                number of times "e" appears in the phrase to the variable ``e_counter``. Make 
+                sure to account for each letter in its lowercase form. For example, ``e_counter`` should be ``10``, and ``letter_count['e']`` should be ``10``.
+                ~~~~
                 # phrase string is given
                 phrase = "Exeggcute evolves into Exeggutor which are two extraordinary Pokemon"
 
@@ -132,7 +143,6 @@ Write Code Questions
         Write a program that reads the words in the string ``phrase`` and counts how many times each word appears.
         Store the words as keys in the dictionary ``word_dictionary``, and then use the in operator as a fast way to
         check whether the string is in the dictionary. For example, ``word_dictionary['Writing']`` should be ``1``. (Note: 'Writing' and 'writing' would be counted as two separate words for this question.)
-
         ~~~~
         phrase = "Writing programs or programming is a very creative and rewarding activity  You can write programs for many reasons ranging from making your living to solving a difficult data analysis problem to having fun to helping someone else solve a problem  This book assumes that {\em everyone} needs to know how to program and that once you know how to program, you will figure out what you want to do with your newfound skills"
 
@@ -186,10 +196,6 @@ Here is the words.txt file for Question 5.
 
         .. tab:: Question
 
-            Write code that reads in the text from the file words.txt and uses
-            the dictionary ``word_count`` to count the amount of times a word appears
-            in the file. Watch out for repetition using the .lower() function. For example, ``word_count['and']`` should be ``5``.
-
             .. datafile:: words.txt
                 :fromfile: words.txt
                 :hide:
@@ -197,6 +203,11 @@ Here is the words.txt file for Question 5.
             .. activecode:: dict_writecode5q
                 :practice: T
                 :available_files: words.txt
+
+                Write code that reads in the text from the file words.txt and uses 
+                the dictionary ``word_count`` to count the amount of times a word appears 
+                in the file. Watch out for repetition using the .lower() function. For example, ``word_count['and']`` should be ``5``.
+                ~~~~
 
                 ====
                 from unittest.gui import TestCaseGui
@@ -220,6 +231,10 @@ Here is the words.txt file for Question 5.
                 :optional:
                 :available_files: words.txt
 
+                Write code that reads in the text from the file words.txt and uses 
+                the dictionary ``word_count`` to count the amount of times a word appears 
+                in the file. Watch out for repetition using the .lower() function. For example, ``word_count['and']`` should be ``5``.
+                ~~~~
                 # Open the file in "read" mode
                 with open("words.txt", "r") as filename:
                     # Create dictionary to count words
@@ -281,10 +296,6 @@ Below is the romeo3.txt file used in Question 7.
 
         .. tab:: Question
 
-            Write code to read through the lines of the file, break each line into a list of
-            words, and then loop through each of the words in the line and count each word using
-            the dictionary ``counts``. For example, ``counts['is']`` should be ``3``.
-
             .. datafile:: romeo3.txt
                 :fromfile: romeo.txt
                 :hide:
@@ -292,6 +303,11 @@ Below is the romeo3.txt file used in Question 7.
             .. activecode:: dict_writecode7q
                 :practice: T
                 :available_files: romeo.txt
+
+                Write code to read through the lines of the file, break each line into a list of 
+                words, and then loop through each of the words in the line and count each word using 
+                the dictionary ``counts``. For example, ``counts['is']`` should be ``3``.
+                ~~~~
 
                 ====
                 from unittest.gui import TestCaseGui
@@ -315,6 +331,10 @@ Below is the romeo3.txt file used in Question 7.
                 :available_files: romeo.txt
                 :optional:
 
+                Write code to read through the lines of the file, break each line into a list of 
+                words, and then loop through each of the words in the line and count each word using 
+                the dictionary ``counts``. For example, ``counts['is']`` should be ``3``.
+                ~~~~
                 # Open file in "read" mode
                 with open("romeo3.txt", "r") as filename:
                     # Separate and read lines
@@ -378,9 +398,6 @@ The next two questions are associated with the following text file which has an 
 
         .. tab:: Question
 
-            Add code to the program below to figure out who has the most messages in the file. After all the data has been read and the dictionary ``message_count`` has been created, look through the dictionary using a maximum loop (see Chapter 5: Maximum and minimum loops) to find who has the most messages, 
-            and print how many messages the person has. For example, ``message_count['cwen@iupui.edu']`` should be ``5``.
-
             .. datafile:: mbox-short.txt3
                 :fromfile: mbox-short.txt
                 :hide:
@@ -389,6 +406,9 @@ The next two questions are associated with the following text file which has an 
                 :practice: T
                 :available_files: mbox-short.txt
 
+                Add code to the program below to figure out who has the most messages in the file. After all the data has been read and the dictionary ``message_count`` has been created, look through the dictionary using a maximum loop (see Chapter 5: Maximum and minimum loops) to find who has the most messages, 
+                and print how many messages the person has. For example, ``message_count['cwen@iupui.edu']`` should be ``5``.
+                ~~~~
                 with open("mbox-short.txt3", "r") as filename:
                     message_count = {}
 
@@ -409,6 +429,9 @@ The next two questions are associated with the following text file which has an 
                 :available_files: mbox-short.txt
                 :optional:
 
+                Add code to the program below to figure out who has the most messages in the file. After all the data has been read and the dictionary ``message_count`` has been created, look through the dictionary using a maximum loop (see Chapter 5: Maximum and minimum loops) to find who has the most messages, 
+                and print how many messages the person has. For example, ``message_count['cwen@iupui.edu']`` should be ``5``.
+                ~~~~
                 # Open file in read mode
                 with open("mbox-short.txt3", "r") as filename:
                     # Create message_count dictionary
