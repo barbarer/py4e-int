@@ -6,8 +6,8 @@ Mixed-up Code Questions
     :adaptive:
     :numbered: left
 
-    Create a function ``password_maker(word_list)`` that takes a list of words, ``word_list`` and returns a string with the first and last character of each word in a list.
-    For example, ``password_maker("show", "me", "the", "money")`` would return ``swmetemy``.
+    Create a function ``password_maker(word_list)`` that takes a list of words, ``word_list`` and returns a string with the first and last character of 
+    each word in a list. For example, ``password_maker("show", "me", "the", "money")`` would return ``swmetemy``.
     -----
     def password_maker(word_list):
     =====
@@ -16,6 +16,7 @@ Mixed-up Code Questions
         for word in word_list:
     =====
             first_char = word[0]
+    =====
             last_char = word[-1]
     =====
             password += first_char
@@ -28,8 +29,8 @@ Mixed-up Code Questions
 
 .. activecode::  list_MUC_Password_creator_ac
 
-    Write a function ``password_maker(word_list)`` that takes a a list of words, ``word_list`` and returns a string with the first and last character of each word in a list.
-    For example, ``password_maker(["show", "me", "the", "money"])`` would return ``swmetemy``.
+    Write a function ``password_maker(word_list)`` that takes a a list of words, ``word_list`` and returns a string with the first and last character of each 
+    word in a list. For example, ``password_maker(["show", "me", "the", "money"])`` would return ``swmetemy``.
 
     ~~~~
 
