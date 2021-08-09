@@ -6,31 +6,29 @@ Mixed-Up Code Exercises
     :practice: T
     :adaptive:
 
-    Construct a block of code that creates a ``Dog`` class and defines the ``__init__`` method
-    with one parameter, ``name``. Then define the ``getName`` method, which returns the
-    ``name`` when the method is called. Watch out for indentation and extra pieces of code.
+    Create a ``Dog`` class and define the ``__init__`` method
+    that has one parameter, ``name``. Then define the ``getName`` method, which returns the
+    ``name`` when the method is called.
     -----
     class Dog:
     =====
     class Dog #paired
     =====
-      def __init__(self, name):
+        def __init__(self, name):
     =====
-        self.name = name
+            self.name = name
     =====
-        name = self.name #paired
+            name = self.name #paired
     =====
-        self.age = age #distractor
+        def getName(self):
     =====
-      def getName(self):
-    =====
-        return (self.name)
+            return self.name
 
 
 .. activecode:: obj_mixedupcode_1_ac
 
-    Write code to create a ``Dog`` class and define the ``__init__`` method that has one parameter, ``name``. Then define the 
-    ``getName`` method, which returns the ``name`` when the method is called. 
+    Write a ``Dog`` class and define the ``__init__`` method that has one parameter, ``name``. Then define the
+    ``getName`` method, which returns the ``name`` when the method is called.
     ~~~~
 
     ====
@@ -52,37 +50,37 @@ Mixed-Up Code Exercises
             self.assertEqual(self.Lovey.getName(), "Lovey" ,"self.Lovey.getName()")
             self.assertEqual(self.Brownie.getName(), "Brownie" ,"self.Brownie.getName()")
 
-    myTests().main()       
+    myTests().main()
 
 .. parsonsprob:: obj_mixedupcode_2
     :numbered: left
     :practice: T
     :adaptive:
 
-    Construct a class named ``Dog``. The ``__init__`` method that has two parameters, ``name`` and ``age``.
-    Also create the method ``updateAge``, that increases the ``age`` by 1 and returns age. Then update the age of Lark.
-    Watch out for indentation and extra pieces of code.
+    Create a class named ``Dog``. Define the ``__init__`` method, it has two parameters, ``name`` and ``age``.
+    Also create the method ``updateAge``, that increases the ``age`` by 1 and returns the age. Then create a variable
+    named ``Lark`` with the age ``10`` and update Lark's age.
     -----
-    Class Dog: #distractor
-    =====
     class Dog:
     =====
-      def __init__(name, age): #distractor
+    Class Dog: #paired
     =====
-      def __init__(self, name, age):
+        def __init__(self, name, age):
     =====
-        self.name = name
-        self.age = age
+        def __init__(name, age): #paired
     =====
-        name = self.name
-        age = self.age #paired
+            self.name = name
+            self.age = age
     =====
-      def updateAge(age): #distractor
+            name = self.name
+            age = self.age #paired
     =====
-      def updateAge(self):
+        def updateAge(self):
     =====
-        self.age += 1
-        return self.age
+        def updateAge(age): #paired
+    =====
+            self.age += 1
+            return self.age
     =====
     lark = Dog("Lark", 10)
     lark.updateAge()
@@ -90,8 +88,8 @@ Mixed-Up Code Exercises
 .. activecode:: obj_mixedupcode_2_ac
 
     Write a class named ``Dog``. Define the ``__init__`` method, it has two parameters, ``name`` and ``age``.
-    Also create the method ``updateAge``, that increases the ``age`` by 1 and returns the age. Then create a variable 
-    named ``Lark`` with the age ``10`` and update Lark's age. 
+    Also create the method ``updateAge``, that increases the ``age`` by 1 and returns the age. Then create a variable
+    named ``Lark`` with the age ``10`` and update Lark's age.
     ~~~~
 
     ====
@@ -115,7 +113,7 @@ Mixed-Up Code Exercises
             self.assertEqual(self.Terry.updateAge(), 30 ,"self.Terry.updateAge()")
             self.assertEqual(self.Tina.updateAge(), 18 ,"self.Tina.updateAge()")
 
-    myTests().main()       
+    myTests().main()
 
 
 .. parsonsprob:: obj_mixedupcode_3
@@ -123,35 +121,35 @@ Mixed-Up Code Exercises
     :practice: T
     :adaptive:
 
-    Construct a block of code to create the class ``Cat``. The ``__init__`` method has
-    ``name`` and ``age`` as parameters. Then define the ``make_sound`` method, returning
-    the cat's meow and the ``__str__`` method returns a string of the cat's introduction.
-    Watch out for indentation and extra pieces of code.
+    Create the class ``Cat``. Define the ``__init__`` method, it has two parameters,
+    ``name`` and ``age``. Next define the the ``__str__`` method to return a string with the cat's information:
+    ``"Name: name, Age: age"``. Then define the ``make_sound`` method, which should return
+    the string ``"Meow"``.
     -----
     class Cat:
     =====
-      def __init__(self, name, age):
+        def __init__(self, name, age):
     =====
-        self.name = name
-        self.age = age
+            self.name = name
+            self.age = age
     =====
-      def make_sound(self):
+        def __str__(self):
     =====
-      def make_sound(sound): #distractor
+            return (f"Name: {self.name}, Age: {self.age}")
     =====
-        return("Meow")
+        def make_sound(self):
     =====
-      def __str__(self):
+        def make_sound(sound): #paired
     =====
-        return ("I am a cat. My name is {}. I am {} years old.".format(self.name, self.age))
+            return("Meow")
 
 .. activecode:: obj_mixedupcode_3_ac
 
-    Write code to create the class ``Cat``. Define the ``__init__`` method, it has two parameters,
-    ``name`` and ``age``. Then define the ``make_sound`` method, which should return
-    the string "Meow" and the ``__str__`` method should return returns a string of the cat's introduction: 
-    "I am a cat. My name is ``name``. I am ``age`` years old.".
-    
+    Write the class ``Cat``. Define the ``__init__`` method, it has two parameters,
+    ``name`` and ``age``. Next define the the ``__str__`` method to return a string with the cat's information:
+    ``"Name: name, Age: age"``. Then define the ``make_sound`` method, which should return
+    the string ``"Meow"``.
+
     ~~~~
 
     ====
@@ -165,15 +163,17 @@ Mixed-Up Code Exercises
             self.Chip = Cat("Chip", 22)
             self.Tink = Cat("Tink", 18)
             self.Pinky = Cat("Pinky", 29)
-            
+
 
         def testOne(self):
-            self.assertEqual(self.Lucky.__str__(), "I am a cat. My name is Lucky. I am 10 years old." ,"self.Lucky.__str__()")
-            self.assertEqual(self.Jack.__str__(), "I am a cat. My name is Jack. I am 10 years old." ,"self.Jack.__str__()")
-            self.assertEqual(self.Chip.__str__(), "I am a cat. My name is Chip. I am 22 years old." ,"self.Chip.__str__()")
-            self.assertEqual(self.Tink.__str__(), "I am a cat. My name is Tink. I am 18 years old." ,"self.Tink.__str__()")
-            self.assertEqual(self.Pinky.__str__(), "I am a cat. My name is Pinky. I am 29 years old." ,"self.Pinky.__str__()")
-    myTests().main()      
+            self.assertEqual(self.Lucky.__str__(), "Name: Lucky, Age: 10" ,"self.Lucky.__str__()")
+            self.assertEqual(self.Lucky.make_sound(), "Meow", 'self.Lucky.make_sound()')
+            self.assertEqual(self.Jack.__str__(), "Name: Jack, Age: 10" ,"self.Jack.__str__()")
+            self.assertEqual(self.Jack.make_sound(), "Meow", 'self.Jack.make_sound()')
+            self.assertEqual(self.Chip.__str__(), "Name: Chip, Age: 22" ,"self.Chip.__str__()")
+            self.assertEqual(self.Tink.__str__(), "Name: Tink, Age: 18" ,"self.Tink.__str__()")
+            self.assertEqual(self.Pinky.__str__(), "Name: Pinky. Age: 29" ,"self.Pinky.__str__()")
+    myTests().main()
 
 
 .. parsonsprob:: obj_mixedupcode_4
@@ -181,20 +181,20 @@ Mixed-Up Code Exercises
     :practice: T
     :adaptive:
 
-    Construct a class named ``Book`` that has an ``__init__`` method with the parameters ``title``
+    Create a class named ``Book`` that has an ``__init__`` method with the parameters ``title``
     and ``author``. Then create an instance of the ``Book`` class named ``newbook``.
     -----
     class Book:
     =====
     Class Book: #paired
     =====
-      def __init__(self, title, author):
+        def __init__(self, title, author):
     =====
-        title = self.title #distractor
-        author = self.author
+            self.title = title
+            self.author = author
     =====
-        self.tite = title
-        self.author = author
+            title = self.title #paired
+            author = self.author
     =====
     newbook = Book("The Odyssey", "Homer")
 
@@ -202,7 +202,6 @@ Mixed-Up Code Exercises
 
     Write a class named ``Book`` that has an ``__init__`` method with two parameters, title
     and author. Then create an instance of the ``Book`` class named ``newbook``.
-    
     ~~~~
 
     ====
@@ -213,38 +212,40 @@ Mixed-Up Code Exercises
         def setUp(self):
             self.newbook = Book("The Odyssey", "Homer")
             self.newbook2 = Book("The Fault in Our Stars", "John Green")
-            
+
 
         def testOne(self):
             self.assertEqual(self.newbook.title, "The Odyssey", "Testing title")
             self.assertEqual(self.newbook.author, "Homer", "Testing author")
             self.assertEqual(self.newbook2.title, "The Fault in Our Stars", "Testing title")
-            self.assertEqual(self.newbook2.author, "John Green", "Testing author")            
-          
-    myTests().main()      
+            self.assertEqual(self.newbook2.author, "John Green", "Testing author")
+
+    myTests().main()
 
 .. parsonsprob:: obj_mixedupcode_5
     :numbered: left
     :practice: T
     :adaptive:
 
-    Construct a class named ``Dog`` with the ``__init__`` method taking ``name`` as its parameter.
-    Then create a method, ``updateTricks``, that adds a new trick to the list. Then create a ``__str__``
-    method that returns all information for the dog. Create a variable named ``Spot`` and update the tricks for spin and sit.
-    Print both the tricks and the string for "spot" at the end.
+    Create a class named ``Dog`` with the ``__init__`` method taking ``name`` as its parameter
+    and setting ``self.tricks`` to an empty list.  Then create a ``__str__`` method that returns a string
+    with ``"Name: name"``.  Then create a method, ``updateTricks``, that adds
+    a new trick to the list.
+    Create a variable named ``Spot`` and update the tricks for "spin" and "sit".
+    Print both the tricks and the string for ``Spot`` at the end.
     -----
     class Dog:
     =====
-      def __init__(self, name):
+        def __init__(self, name):
     =====
-        self.name = name
-        self.tricks = []
+            self.name = name
+            self.tricks = []
     =====
-      def updateTrick(self, trick):
-        self.tricks.append(trick)
+        def __str__(self):
+            return f'Name: {self.name}'
     =====
-      def __str__(self):
-        return 'Dog(name = ' + self.name +  ', tricks = ' + str(self.tricks) + ')'
+        def updateTrick(self, trick):
+            self.tricks.append(trick)
     =====
     spot = Dog('Spot')
     =====
@@ -253,16 +254,17 @@ Mixed-Up Code Exercises
     =====
     updateTrick('spin')
     updateTrick('sit') #paired
-    
+
 
 .. activecode:: obj_mixedupcode_5_ac
 
-    Construct a class named ``Dog`` with the ``__init__`` method taking ``name`` as its parameter
-    and setting ``self.tricks`` to an empty list. Then create a method, ``updateTricks``, that adds 
-    a new trick to the list. Then create a ``__str__`` method that returns all information for the dog.
+    Write a class named ``Dog`` with the ``__init__`` method taking ``name`` as its parameter
+    and setting ``self.tricks`` to an empty list.   Then create a ``__str__`` method that returns a string
+    with ``"Name: name"``. Then create a method, ``updateTricks``, that adds
+    a new trick to the list.
     Create a variable named ``Spot`` and update the tricks for "spin" and "sit".
     Print both the tricks and the string for ``Spot`` at the end.
-    
+
     ~~~~
 
     ====
@@ -276,16 +278,16 @@ Mixed-Up Code Exercises
             self.Chip = Dog("Chip")
             self.Tink = Dog("Tink")
             self.Pinky = Dog("Pinky")
-            
+
 
         def testOne(self):
-            self.assertEqual(self.Spot.__str__(), "Dog(name = Spot, tricks = [])" ,"self.Spot.__str__()")
+            self.assertEqual(self.Spot.__str__(), "Name: Spot" ,"self.Spot.__str__()")
             self.Spot.updateTrick("jump")
-            self.assertEqual(self.Spot.tricks, ['jump'])
+            self.assertEqual(self.Spot.tricks, ['jump'], "Testing self.Spot.tricks after add 'jump'")
             self.Spot.updateTrick("sit")
-            self.assertEqual(self.Spot.tricks, ['jump', 'sit'])
-            
-    myTests().main()      
+            self.assertEqual(self.Spot.tricks, ['jump', 'sit'], "Testing self.Spot.trick after add 'sit'")
+
+    myTests().main()
 
 
 .. parsonsprob:: obj_mixedupcode_6
@@ -293,23 +295,23 @@ Mixed-Up Code Exercises
     :practice: T
     :adaptive:
 
-    Construct a class named ``Book`` with the ``__init__`` method taking ``title`` and ``author`` as its parameters.
+    Create a class named ``Book`` with an ``__init__`` method that takes ``title`` and ``author``.
     Then, construct a second class named ``Bookinfo`` that extends the ``Book`` class and
-    contains a method ``__str__`` that returns the string representation of the class.
-    Create an object ``iliad`` for the book Iliad by Hoover and print the string associated with it.
+    contains a method ``__str__`` that returns ``"title by author"``.
+    Create an object ``iliad`` for the book "Iliad" by Hoover and print the string associated with it.
     -----
     class Book:
     =====
-      def __init__(self, title, author):
+        def __init__(self, title, author):
     =====
-        self.title = title
-        self.author = author
+            self.title = title
+            self.author = author
     =====
     class Bookinfo(Book):
     =====
-      def __str__(self):
+        def __str__(self):
     =====
-        return (self.title + " was written by " + self.author)
+            return f"{self.title} by {self.author}"
     =====
     iliad = Bookinfo("Iliad", "Homer")
     =====
@@ -317,11 +319,10 @@ Mixed-Up Code Exercises
 
 .. activecode:: obj_mixedupcode_6_ac
 
-    Construct a class named ``Book`` with the ``__init__`` method taking ``title`` and ``author`` as its parameters.
+    Write a class named ``Book`` with an ``__init__`` method that takes ``title`` and ``author``.
     Then, construct a second class named ``Bookinfo`` that extends the ``Book`` class and
-    contains a method ``__str__`` that returns the string representation of the class.
-    Create an object ``iliad`` for the book Iliad by Hoover and print the string associated with it.
-    
+    contains a method ``__str__`` that returns ``"title by author"``.
+    Create an object ``iliad`` for the book "Iliad" by Hoover and print the string associated with it.
     ~~~~
 
     ====
@@ -335,44 +336,45 @@ Mixed-Up Code Exercises
             self.Book3 = Bookinfo("The Coldest Winter Ever", "Sister Souljah")
             self.Book4 = Bookinfo("Midnight", "Sister Souljah")
             self.Book5 = Bookinfo("If Beale Street Could Talk", "James Baldwin")
-            
+
 
         def testOne(self):
-            self.assertEqual(self.Book1.__str__(), "Oh, the Places You'll Go! was written by Dr. Suess" ,"self.Book1.__str__()")
-            self.assertEqual(self.Book2.__str__(), "The Fault in Our Stars was written by John Green" ,"self.Book2.__str__()")
-            self.assertEqual(self.Book3.__str__(), "The Coldest Winter Ever was written by Sister Souljah" ,"self.Book3.__str__()")
-            self.assertEqual(self.Book4.__str__(), "Midnight was written by Sister Souljah" ,"self.Book4.__str__()")
-            self.assertEqual(self.Book5.__str__(), "If Beale Street Could Talk was written by James Baldwin" ,"self.Book5.__str__()")
-            
-    myTests().main()      
+            self.assertEqual(self.Book1.__str__(), "Oh, the Places You'll Go! by Dr. Suess" ,"self.Book1.__str__()")
+            self.assertEqual(self.Book2.__str__(), "The Fault in Our Stars by John Green" ,"self.Book2.__str__()")
+            self.assertEqual(self.Book3.__str__(), "The Coldest Winter Ever by Sister Souljah" ,"self.Book3.__str__()")
+            self.assertEqual(self.Book4.__str__(), "Midnight by Sister Souljah" ,"self.Book4.__str__()")
+            self.assertEqual(self.Book5.__str__(), "If Beale Street Could Talk by James Baldwin" ,"self.Book5.__str__()")
+
+    myTests().main()
 
 .. parsonsprob:: obj_mixedupcode_7
     :numbered: left
     :practice: T
     :adaptive:
 
-    Construct a class named ``Dog`` with the ``__init__`` method taking ``name`` and ``age`` as its parameters. 
-    Then, create a second class ``GoldenRetriever`` that extends the ``Dog`` class. This method uses the 
+    Create a class named ``Dog`` with an ``__init__`` method that takes ``name`` and ``age``.
+    Then, create a second class ``GoldenRetriever`` that extends the ``Dog`` class. This class uses the
     ``__str__`` method to return the string representation of the class: "Name: ``name`` Age: ``age`` Breed: Golden Retriever".
     -----
     class Dog:
     =====
-      def __init__(self, name, age):
+        def __init__(self, name, age):
     =====
-        self.name = name
-        self.age = age
-    =====
-    class GoldenRetriever extends Dog: #distractor
+            self.name = name
+            self.age = age
     =====
     class GoldenRetriever(Dog):
     =====
-      def __str__(super): #distractor
+    class GoldenRetriever extends Dog: #paired
     =====
-      def __str__(self):
+        def __str__(self):
     =====
-        return ("Name: " + super.name  + " Age: " + super.age + " Breed: "  + self.breed) #distractor
+        def __str__(super): #paired
+
     =====
-        return ("Name: " + self.name  + " Age: " + str(self.age) + " Breed: Golden Retriever")
+            return ("Name: " + self.name  + " Age: " + str(self.age) + " Breed: Golden Retriever")
+    =====
+            return ("Name: " + super.name  + " Age: " + super.age + " Breed: "  + self.breed) #paired
     =====
     lark = GoldenRetriever("Lark", 10)
     =====
@@ -380,10 +382,10 @@ Mixed-Up Code Exercises
 
 .. activecode:: obj_mixedupcode_7_ac
 
-    Construct a class named ``Dog`` with the ``__init__`` method taking ``name`` and ``age`` as its parameters. 
-    Then, create a second class ``GoldenRetriever`` that extends the ``Dog`` class. This method uses the 
+    Construct a class named ``Dog`` with an ``__init__`` method that takes ``name`` and ``age``.
+    Then, create a second class ``GoldenRetriever`` that extends the ``Dog`` class. This class uses the
     ``__str__`` method to return the string representation of the class: "Name: ``name`` Age: ``age`` Breed: Golden Retriever".
-    
+
     ~~~~
 
     ====
@@ -397,7 +399,7 @@ Mixed-Up Code Exercises
             self.Dom = GoldenRetriever("Dom", 6)
             self.Tink = GoldenRetriever("Tink", 7)
             self.Pinky = GoldenRetriever("Pinky", 9)
-            
+
 
         def testOne(self):
             self.assertEqual(self.Sam.__str__(), "Name: Sam Age: 10 Breed: Golden Retriever" ,"self.Sam.__str__()")
@@ -405,37 +407,37 @@ Mixed-Up Code Exercises
             self.assertEqual(self.Dom.__str__(), "Name: Dom Age: 6 Breed: Golden Retriever" ,"self.Dom.__str__()")
             self.assertEqual(self.Tink.__str__(), "Name: Tink Age: 7 Breed: Golden Retriever" ,"self.Tink.__str__()")
             self.assertEqual(self.Pinky.__str__(), "Name: Pinky Age: 9 Breed: Golden Retriever" ,"self.Pinky.__str__()")
-            
-    myTests().main()      
+
+    myTests().main()
 
 .. parsonsprob:: obj_mixedupcode_8
     :numbered: left
     :practice: T
     :adaptive:
 
-    Construct a class named ``Dog`` with the ``__init__`` method taking ``name`` and ``age`` as its parameters. 
+    Create a class named ``Dog`` with the ``__init__`` method taking ``name`` and ``age`` as its parameters.
     Then create a class named ``DogBreed`` which uses the ``__init`` values ``name`` and ``age`` from the ``Dog`` class
     and assigns a value to ``breed`` in the ``__init__`` method. Also create the ``__str__`` method that returns the string representation
-    of the class: "Name: " + ``name`` + " Age: " + ``age`` + " Breed:" + ``breed``" Create an object of the DogBreed class at the end.
+    of the class: "Name: name, Breed: breed".
     -----
     class Dog:
     =====
-      def __init__(self, name, age):
+        def __init__(self, name, age):
     =====
-        self.name = name
-        self.age = age
+            self.name = name
+            self.age = age
     =====
     class DogBreed(Dog):
     =====
-      def __init__(self, name ,age, breed):
+        def __init__(self, name ,age, breed):
     =====
-        Dog.__init__(name, age)
+            Dog.__init__(name, age)
     =====
-        self.breed = breed
+            self.breed = breed
     =====
-      def __str__(self):
+        def __str__(self):
     =====
-        return ("Name: " + self.name  + " Age: " + self.age + " Breed:" + self.breed)
+            return ("Name: " + self.name  + " Breed:" + self.breed)
     =====
     lark = DogBreed("Lark", 10, "Golden Retriever")
     =====
@@ -443,11 +445,11 @@ Mixed-Up Code Exercises
 
 .. activecode:: obj_mixedupcode_8_ac
 
-    Construct a class named ``Dog`` with the ``__init__`` method taking ``name`` and ``age`` as its parameters. 
+    Write a class named ``Dog`` with the ``__init__`` method taking ``name`` and ``age`` as its parameters.
     Then create a class named ``DogBreed`` which uses the ``__init`` values ``name`` and ``age`` from the ``Dog`` class
     and assigns a value to ``breed`` in the ``__init__`` method. Also create the ``__str__`` method that returns the string representation
-    of the class: "Name: " + ``name`` + " Age: " + ``age`` + " Breed:" + ``breed``". 
-    
+    of the class: "Name: name, Breed: breed".
+
     ~~~~
 
     ====
@@ -461,70 +463,69 @@ Mixed-Up Code Exercises
             self.Dom = DogBreed("Dom", 6, "Pitbull")
             self.Tink = DogBreed("Tink", 7, "Poodle")
             self.Pinky = DogBreed("Pinky", 9, "American Bulldog")
-            
+
 
         def testOne(self):
-            self.assertEqual(self.Sam.__str__(), "Name: Sam Age: 10 Breed: Golden Retriever" ,"self.Sam.__str__()")
-            self.assertEqual(self.Jack.__str__(), "Name: Jack Age: 2 Breed: Husky" ,"self.Jack.__str__()")
-            self.assertEqual(self.Dom.__str__(), "Name: Dom Age: 6 Breed: Pitbull" ,"self.Dom.__str__()")
-            self.assertEqual(self.Tink.__str__(), "Name: Tink Age: 7 Breed: Poodle" ,"self.Tink.__str__()")
-            self.assertEqual(self.Pinky.__str__(), "Name: Pinky Age: 9 Breed: American Bulldog" ,"self.Pinky.__str__()")
-            
-    myTests().main()      
+            self.assertEqual(self.Sam.__str__(), "Name: Sam, Breed: Golden Retriever" ,"self.Sam.__str__()")
+            self.assertEqual(self.Jack.__str__(), "Name: Jack, Breed: Husky" ,"self.Jack.__str__()")
+            self.assertEqual(self.Dom.__str__(), "Name: Dom, Breed: Pitbull" ,"self.Dom.__str__()")
+            self.assertEqual(self.Tink.__str__(), "Name: Tink, Breed: Poodle" ,"self.Tink.__str__()")
+            self.assertEqual(self.Pinky.__str__(), "Name: Pinky, Breed: American Bulldog" ,"self.Pinky.__str__()")
+
+    myTests().main()
 
 .. parsonsprob:: obj_mixedupcode_9
     :numbered: left
     :practice: T
     :adaptive:
 
-    Construct a class named ``Book`` that assigns title, author and format as initial values in the ``__init__`` function.
-    Create a class named ``Library`` that extends ``Book`` and assigns the availability of the book as an initial value in the ``__init__`` function.
-    Then create a method named updateAvailability that updates the availability of the book. Finally, create a method named ``__str__``
-    that returns the string representation of the class: "Author: " + ``author`` + " Title: " + ``title`` + " Format: " + ``format`` + " Availability: " + ``availability``".
-    Then create an instance of the book ``iliad`` that is titled Iliad by Homer, it is initially available, but use ``updateAvailability`` to change it to not available. 
+    Create a class named ``Book`` that assigns the ``title`` and ``author`` in the ``__init__`` function.
+    Create a class named ``Library`` that extends ``Book`` and sets the availability, ``avail``, of the book to True in the ``__init__`` function.
+    Then create a method named ``updateAvail`` that updates the ``avail`` of the book to the opposite. Finally, create a method named ``__str__``
+    that returns the string representation of the object: ``"Title: " title, Avail: avail"``.
+    Then create an instance of the book ``iliad`` that is
+    titled "Iliad" by Homer, it is initially available (True), but use ``updateAvail`` to change it to not available (False).
     -----
     class Book:
     =====
-      def __init__(self, title, author, format):
+        def __init__(self, title, author):
     =====
-        self.tite = title
-        self.author = author
-        self.format = format
+            self.tite = title
+            self.author = author
     =====
     class Library(Book):
     =====
-      def __init__(Book(title, author, format), availability): #distractor
+        def __init__(self, title, author, avail):
     =====
-      def __init__(self, title, author, format, availability):
+        def __init__(Book(title, author), avail): #paired
     =====
-        self.book = Book(title, author, format) #distractor
+            Book.__init__(title, author)
     =====
-        Book.__init__(title, author, format)
+            self.book = Book(title, author) #paired
     =====
-        self.format = format
-        self.availability = availability
+            self.avail = avail
     =====
-      def updateAvailability(self, availability)
+        def updateAvail(self, avail)
     =====
-        self.availability = availability
+            self.avail = avail
     =====
-      def __str__(self):
+        def __str__(self):
     =====
-        return ("Author: " + self.author + " Title: " + self.title + " Format: " + self.format + " Availability: " + self.availability)
+            return (f" Title: {self.title}, Avail: {self.avail}")
     =====
-    iliad = Library("Iliad", "Homer", "Paperback" , "Yes")
+    iliad = Library("Iliad", "Homer", "Yes")
     =====
-    iliad.updateAvailability("No")
+    iliad.updateAvail("No")
     print(iliad)
 
 .. activecode:: obj_mixedupcode_9_ac
 
-    Construct a class named ``Book`` that assigns title, author and format as initial values in the ``__init__`` function.
-    Create a class named ``Library`` that extends ``Book`` and assigns the availability of the book as an initial value in the ``__init__`` function.
-    Then create a method named updateAvailability that updates the availability of the book. Finally, create a method named ``__str__``
-    that returns the string representation of the class: "Author: " + ``author`` + " Title: " + ``title`` + " Format: " + ``format`` + " Availability: " + ``availability``".
-    Then create an instance of the book ``iliad`` that is titled Iliad by Homer, it is initially available, but use ``updateAvailability`` to change it to not available. 
-    
+    Write a class named ``Book`` that assigns the ``title`` and ``author`` in the ``__init__`` function.
+    Write a class named ``Library`` that extends ``Book`` and sets the availability, ``avail``, of the book to True in the ``__init__`` function.
+    Then create a method named ``updateAvail`` that updates the ``avail`` of the book to the opposite. Finally, create a method named ``__str__``
+    that returns the string representation of the object: ``"Title: " title, Avail: avail"``.
+    Then create an instance of the book ``iliad`` that is
+    titled "Iliad" by Homer, it is initially available (True), but use ``updateAvail`` to change it to not available (False).
     ~~~~
 
     ====
@@ -533,21 +534,21 @@ Mixed-Up Code Exercises
 
     class myTests(TestCaseGui):
         def setUp(self):
-            self.Book1 = Library("Oh, the Places You'll Go!", "Dr. Suess", "Paperback", "Available")
-            self.Book2 = Library("The Fault in Our Stars", "John Green", "Paperback", "Not Available")
-            self.Book3 = Library("The Coldest Winter Ever", "Sister Souljah", "Paperback", "Available")
-            self.Book4 = Library("Midnight", "Sister Souljah", "Paperback", "Not Available")
-            self.Book5 = Library("If Beale Street Could Talk", "James Baldwin", "Paperback", "Available")
-            
+            self.Book1 = Library("Oh, the Places You'll Go!", "Dr. Suess")
+            self.Book2 = Library("The Fault in Our Stars", "John Green")
+            self.Book3 = Library("The Coldest Winter Ever", "Sister Souljah")
+            self.Book4 = Library("Midnight", "Sister Souljah")
+            self.Book5 = Library("If Beale Street Could Talk", "James Baldwin")
+
 
         def testOne(self):
-            self.assertEqual(self.Book1.__str__(), "Author: Dr. Suess Title: Oh, the Places You'll Go! Format: Paperback Availability: Available","self.Book1.__str__()")
-            self.assertEqual(self.Book2.__str__(), "Author: John Green Title: The Fault in Our Stars Format: Paperback Availability: Not Available" ,"self.Book2.__str__()")
-            self.assertEqual(self.Book3.__str__(), "Author: Sister Souljah Title: The Coldest Winter Ever Format: Paperback Availability: Available" ,"self.Book3.__str__()")
-            self.assertEqual(self.Book4.__str__(), "Author: Sister Souljah Title: Midnight Format: Paperback Availability: Not Available","self.Book4.__str__()")
-            self.assertEqual(self.Book5.__str__(), "Author: James Baldwin Title: If Beale Street Could Talk Format: Paperback Availability: Available" ,"self.Book5.__str__()")
-            
-    myTests().main()      
+            self.assertEqual(self.Book1.__str__(), "Title: Oh, the Places You'll Go!, Avail: True","self.Book1.__str__()")
+            self.assertEqual(self.Book2.__str__(), "Title: The Fault in Our Stars, Avail: True" ,"self.Book2.__str__()")
+            self.assertEqual(self.Book3.__str__(), "Title: The Coldest Winter Ever, Avail: True" ,"self.Book3.__str__()")
+            self.assertEqual(self.Book4.__str__(), "Title: Midnight, Avail: False","self.Book4.__str__()")
+            self.assertEqual(self.Book5.__str__(), "Title: If Beale Street Could Talk, Avail: True" ,"self.Book5.__str__()")
+
+    myTests().main()
 
 
 .. parsonsprob:: obj_mixedupcode_10
@@ -555,34 +556,34 @@ Mixed-Up Code Exercises
     :practice: T
     :adaptive:
 
-    Construct a class named ``Apple`` that assigns ``kind`` and ``color`` as initial values in the ``__init__`` function. 
-    and a method named ``__repr__`` that returns the string representation of the ``Apple`` class: "Apple type: " + ``kind`` + " color: " + ``color``. 
-    Construct a class named ``Farmer`` that assigns ``name`` to the ``__init__`` function and ``item`` to an empty list within the ``__init__`` function. 
+    Create a class named ``Apple`` that assigns ``kind`` and ``color`` as initial values in the ``__init__`` function.
+    and a method named ``__repr__`` that returns the string representation of the ``Apple`` class: "Apple type: " + ``kind`` + " color: " + ``color``.
+    Create a class named ``Farmer`` that assigns ``name`` to the ``__init__`` function and ``item`` to an empty list within the ``__init__`` function.
     Also create a method named ``updateItems`` that adds each item to a list called ``items``. Finally, create a method called ``__str__`` that
-    returns the string representation of the class: "Farmer " + ``name`` + " has " + str(``items``). 
+    returns the string representation of the class: "Farmer " + ``name`` + " has " + str(``items``).
     -----
     class Apple:
     =====
-      def __init__(self, kind, color):
+        def __init__(self, kind, color):
     =====
-        self.kind = kind
-        self.color = color
+            self.kind = kind
+            self.color = color
     =====
-      def __repr__(self):
+        def __repr__(self):
     =====
-        return ("Apple type: " + self.kind + " color: " + self.color)
+            return ("Apple type: " + self.kind + " color: " + self.color)
     =====
     class Farmer:
     =====
-      def __init__(self, name):
-        self.name = name
-        self.items = []
+        def __init__(self, name):
+            self.name = name
+            self.items = []
     =====
-      def updateItems(self, kind, color):
-        self.items.append(Apple(kind, color))
+        def updateItems(self, kind, color):
+            self.items.append(Apple(kind, color))
     =====
-      def __str__(self):
-        return("Farmer " + self.name + " has " + str(self.items))
+        def __str__(self):
+            return("Farmer " + self.name + " has " + str(self.items))
     =====
     josh = Farmer("Josh")
     =====
@@ -591,12 +592,12 @@ Mixed-Up Code Exercises
 
 .. activecode:: obj_mixedupcode_10_ac
 
-    Construct a class named ``Apple`` that assigns ``kind`` and ``color`` as initial values in the ``__init__`` function. 
-    and a method named ``__repr__`` that returns the string representation of the ``Apple`` class: "Apple type: " + ``kind`` + " color: " + ``color``. 
-    Construct a class named ``Farmer`` that assigns ``name`` to the ``__init__`` function and ``item`` to an empty list within the ``__init__`` function. 
+    Write a class named ``Apple`` that assigns ``kind`` and ``color`` as initial values in the ``__init__`` function.
+    and a method named ``__repr__`` that returns the string representation of the ``Apple`` class: "Apple type: " + ``kind`` + " color: " + ``color``.
+    Write a class named ``Farmer`` that assigns ``name`` to the ``__init__`` function and ``item`` to an empty list within the ``__init__`` function.
     Also create a method named ``updateItems`` that adds each item to a list called ``items``. Finally, create a method called ``__str__`` that
-    returns the string representation of the class: "Farmer " + ``name`` + " has " + str(``items``). 
-    
+    returns the string representation of the class: "Farmer " + ``name`` + " has " + str(``items``).
+
     ~~~~
 
     ====
@@ -608,11 +609,11 @@ Mixed-Up Code Exercises
             self.Apple1 = Apple("Granny Smith", "Green")
             self.Apple2 = Apple("Fuji", "Red")
             self.Apple3 = Apple("Honey Crisp", "Red")
-            
+
 
         def testOne(self):
             self.assertEqual(self.Apple1.__repr__(), "Apple type: Granny Smith color: Green", "self.Apple1.__repr__()")
             self.assertEqual(self.Apple2.__repr__(), "Apple type: Fuji color: Red", "self.Apple3.__repr__()")
             self.assertEqual(self.Apple3.__repr__(), "Apple type: Honey Crisp color: Red", "self.Apple3.__repr__()")
-            
-    myTests().main()      
+
+    myTests().main()
