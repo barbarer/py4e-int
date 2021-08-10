@@ -1,7 +1,7 @@
 Mixed-up Code Questions
 -----------------------
 
-.. parsonsprob:: list_MUC_Password_creator
+.. parsonsprob:: list_MUC_password_creator
     :practice: T
     :adaptive:
     :numbered: left
@@ -27,7 +27,7 @@ Mixed-up Code Questions
     =====
         return word_list #paired
 
-.. activecode::  list_MUC_Password_creator_ac
+.. activecode::  list_MUC_password_creator_ac
 
     Write a function ``password_maker(word_list)`` that takes a a list of words, ``word_list`` and returns a string with the first and last character of each 
     word in a list. For example, ``password_maker(["show", "me", "the", "money"])`` would return ``swmetemy``.
