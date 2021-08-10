@@ -5,22 +5,24 @@ Mixed-up Code Questions
     :adaptive:
     :numbered: left
 
-    The following program should prints “x is less than 3” and then “All done” when x is less than 3.
+    The following code should set the variable ``result`` equal to “x is less than 3” when ``x`` is less than 3. Otherwise, set it to “All done”.
     Be sure to indent correctly!
     -----
     x = 0
     =====
     if x < 3:
     =====
-        print ("x is less than 3")
+        result = "x is less than 3"
     =====
-    print ("All done")
+    else:
+    =====
+        result = "All done"
 
 .. activecode:: cndtnl-mixed-three_write
    
-   Write a function that prints "x is less than 3" if 'x' is less than 3 and then "All done" when x is less than 3. 
+   Write code that sets the variable ``result`` equal to “x is less than 3” when ``x`` is less than 3. Otherwise, set it to “All done”.
    ~~~~
-   
+   x = 0
     
    ====
    from unittest.gui import TestCaseGui
@@ -28,7 +30,7 @@ Mixed-up Code Questions
    class myTests(TestCaseGui):
 
        def testOne(self):
-           self.assertEqual()
+           self.assertEqual(result, "x is less than 3", "Testing result when the value of x is less than 3")
            
            
 
@@ -40,36 +42,34 @@ Mixed-up Code Questions
     :practice: T
     :numbered: left
 
-    The following program should prints “Hello” if x is less than 2, "Hey" if x is greater than 2,
+    The following program should set the variable ``message`` to “Hello” if x is less than 2, "Hey" if x is greater than 2,
     and "Hi" if x is 2. Be sure to indent correctly and look out for extra code blocks!
     -----
     x = 2
     =====
     if x < 2:
     =====
-    if x < 2 #paired
+    if x < 2: #paired
     =====
-        print ("Hello")
+        message = "Hello"
     =====
     elif x > 2:
     =====
     else x > 2: #paired
     =====
-        print ("Hey")
+        message = "Hey"
     =====
     else:
     =====
-        print ("Hi")
+        message = "Hi"
     =====
-        print "Hi" #paired
-    =====
-    elif x >= 2: #distractor
+        message == "Hi" #paired
 
 .. activecode:: cndtnl-mixed-hi_write
    
-   Write a function that should print “Hello” if x is less than 2, "Hey" if x is greater than 2, and "Hi" if x is 2. 
+   Write code that sets the variable ``message`` to “Hello” if ``x`` is less than ``2``, "Hey" if ``x`` is greater than ``2``, and "Hi" if ``x`` is ``2``. 
    ~~~~
-   
+   x = 2
     
    ====
    from unittest.gui import TestCaseGui
@@ -77,7 +77,8 @@ Mixed-up Code Questions
    class myTests(TestCaseGui):
 
        def testOne(self):
-           self.assertEqual()
+           self.assertEqual(message,"Hi", "Testing that the value of message when 'x' equals 2")
+          
            
 
 
@@ -88,9 +89,7 @@ Mixed-up Code Questions
    :adaptive:
    :numbered: left
 
-   The following program should calculate the total price, but the lines are mixed up. The price is
-   based on the weight. Items that weigh less than 2 pounds should cost 1.5. Items that weigh more
-   than 2 pounds should cost 1.3. Be sure to indent correctly!
+   The following code should set ``price`` to 1.5 if ``weight`` is less than 2, otherwise set ``price`` to 1.3, then set ``total`` to the ``weight`` times ``price``. For example, if ``weight`` is 0.5 then ``price`` should be set to 1.5 and ``total`` will be 0.75. Be sure to indent correctly!
    -----
    weight = 0.5
    numItems = 5
@@ -104,15 +103,14 @@ Mixed-up Code Questions
    =====
    total = weight * price
    =====
-   print(weight)
-   print(price)
-   print(total)
+  
 
 .. activecode:: cndtnl-mixed-price_write
    
-   Write a function ``weight`` that should calculate the total price. The price is based on the weight. Items that weigh less than 2 pounds should cost 1.5. Items that weigh more than 2 pounds should cost 1.3. 
+   Write code that sets ``price`` to 1.5 if ``weight`` is less than 2, otherwise set ``price`` to 1.3, then set ``total`` to the ``weight`` times ``price``. For example, if ``weight`` is 0.5 then ``price`` should be set to 1.5 and ``total`` will be 0.75.
    ~~~~
-   
+   weight = 0.5
+   numItems = 5
     
    ====
    from unittest.gui import TestCaseGui
@@ -120,9 +118,8 @@ Mixed-up Code Questions
    class myTests(TestCaseGui):
 
        def testOne(self):
-           self.assertEqual()
-           self.assertEqual()
-           self.assertEqual()
+           self.assertEqual(price,1.5, "Testing that the price is 1.5")
+           self.assertEqual(total,0.75, "Testing that the total is 0.75")
            
 
 
@@ -201,16 +198,17 @@ Mixed-up Code Questions
     =====
     total = distance * rate
     =====
-    total = distance / rate #distractor
+    total = distance / rate #paired
     =====
     print("Total cost of trip: " + str(total))
 
 
 .. activecode:: cndtnl-mixed-twelve_write
    
-   Write a function to calculate and print the cost of a 14 mile cab ride. If the distance traveled is less than or equal to 12 miles, the cost is $2.00 a mile, and if the distance traveled is more than 12 miles the cost is $1.50 a mile. 
+   Write code to calculate and print the cost of a 14 mile cab ride. If the distance traveled is less than or equal to 12 miles, the cost is $2.00 a mile, and if the distance traveled is more than 12 miles the cost is $1.50 a mile. Assign the final cost to the variable ``total``.
+
    ~~~~
-   
+   distance = 14
     
    ====
    from unittest.gui import TestCaseGui
@@ -218,10 +216,8 @@ Mixed-up Code Questions
    class myTests(TestCaseGui):
 
        def testOne(self):
-           self.assertEqual()
-           self.assertEqual()
-           self.assertEqual()
-           
+           self.assertEqual(total, 21.0, "Testing total is equal to 21.0")
+
 
 
    myTests().main()
@@ -256,7 +252,7 @@ Mixed-up Code Questions
 
 .. activecode:: cndtnl-mixed-nested_write
    
-   Write a function that . 
+   Write code so that  after x and y are defined, they are compared and if the value of x is less than y it prints ``"x is less than y"``; if x is greater than y it prints ``"x is greater than y"``; and prints ``"x and y must be equal"`` if the values are equal. 
    ~~~~
    
     
@@ -281,8 +277,7 @@ Mixed-up Code Questions
     :numbered: left
 
     Arrange the following code so that after x and y are defined, they are compared and if the value of x
-    and y are the same object it prints ``"x and y are the same"``; if x and y have the same value it
-    prints ``"x and y have the same value"``; and prints ``"x and y are not similar"`` if x and y do not
+    and y are the same object then the variable ``value`` will be set to ``"x and y are the same"``; if x and y have the same value then ``value`` will be ``"x and y have the same value"``; and ``value`` is ``"x and y are not similar"`` if x and y do not
     fit the other conditionals. Be sure to indent correctly!
     -----
     x = 12
@@ -291,15 +286,35 @@ Mixed-up Code Questions
     =====
     if x is y:
     =====
-        print("x and y are the same")
+        value = "x and y are the same"
     =====
     elif x == y:
     =====
-        print("x and y have the same value")
+        value = "x and y have the same value"
     =====
     else:
     =====
-        print("x and y have different values")
+        value = "x and y have different values"
+
+
+.. activecode:: cndtnl-mixed-logical_write
+   
+   Write code so that after x and y are defined, they are compared and if the value of x and y are the same object the variable ``value`` will be set to ``"x and y are the same"``; if x and y have the same value then ``value`` is ``"x and y have the same value"``; and ``value`` is ``"x and y are not similar"`` if x and y do not fit the other conditionals. 
+   ~~~~
+   x = 12
+    
+   ====
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+       def testOne(self):
+           self.assertEqual(value, "x and y are the same", "Testing value when the x and y are the same")
+           
+           
+
+
+   myTests().main()
 
 .. parsonsprob:: cndtnl-mixed-grade
     :practice: T
@@ -340,9 +355,9 @@ Mixed-up Code Questions
 
 .. activecode:: cndtnl-mixed-grade_write
    
-   Write a function that . 
+   Write code that will print the grade equivalent (string) for a score. It should return E for any value below 60, D for 61 to 69, C for 70 to 79, B for 80 to 89 and A for 90 and above.
    ~~~~
-   
+   score = 93
     
    ====
    from unittest.gui import TestCaseGui
@@ -350,9 +365,12 @@ Mixed-up Code Questions
    class myTests(TestCaseGui):
 
        def testOne(self):
-           self.assertEqual()
-           self.assertEqual()
-           self.assertEqual()
+           self.assertEqual(score(95),'A',"Tested input: score(95)")
+           self.assertEqual(score(85),'B',"Tested input: score(85)")
+           self.assertEqual(score(75),'C',"Tested input: score(75)")
+           self.assertEqual(score(63),'D',"Tested input: score(63)")
+           self.assertEqual(score(55),'E',"Tested input: score(55)")
+           
            
 
 
@@ -364,7 +382,7 @@ Mixed-up Code Questions
     :adaptive:
     :numbered: left
 
-    The following program should determine whether a number is odd or even, but the lines are mixed up.
+    The following program should set the variale ``result`` to determine whether a number is odd or even, but the lines are mixed up.
     Be sure to indent correctly and watch out for extra pieces of code!
     -----
     x = 3
@@ -373,20 +391,20 @@ Mixed-up Code Questions
     =====
     if x / 2 == 0: #paired
     =====
-    print("x is even!")
+        result = "x is even!"
     =====
     else:
     =====
-    print("x is odd")
+        result = "x is odd"
     =====
-    elif x % 2 == 1: #distractor
+    elif x % 2 == 1: #paired
 
 
 .. activecode:: cndtnl-mixed-even_write
    
-   Write a function that . 
+   Write code that should set the variable ``result`` to determine whether a number is odd or even. 
    ~~~~
-   
+   x = 3
     
    ====
    from unittest.gui import TestCaseGui
@@ -394,9 +412,8 @@ Mixed-up Code Questions
    class myTests(TestCaseGui):
 
        def testOne(self):
-           self.assertEqual()
-           self.assertEqual()
-           self.assertEqual()
+           self.assertEqual(result, "x is odd", "Testing result when the value of x is odd")
+        
            
 
 
@@ -407,27 +424,27 @@ Mixed-up Code Questions
     :adaptive:
     :numbered: left
 
-    The following program should print "Good job" when the number is between 1 and 10 (inclusive) or is 15
-    and "Fail" when it is not. Be sure to indent correctly and watch out for extra pieces of code!
+    The following program should set the variable ``result`` equal to "Good job" when the number is between 1 and 10 (inclusive) or is 15
+    and ``result`` should be set to "Fail" when it is not. Be sure to indent correctly and watch out for extra pieces of code!
     -----
     x = 8
     =====
     if x >= 1 and x <= 10 or x == 15:
     =====
-    print("Good job")
+        result = "Good job"
     =====
     else:
     =====
-    print("Fail")
+        result = "Fail"
     =====
-    elif x == 15: #distractor
+    elif x == 15: #paired
 
 
 .. activecode:: cndtnl-mixed-goodJob_write
    
-   Write a function that . 
+   Write code that should set the variable ``result`` equal to "Good job" when the number is between 1 and 10 (inclusive) or is 15 and ``result`` should be set to "Fail" when it is not. 
    ~~~~
-   
+   x = 8
     
    ====
    from unittest.gui import TestCaseGui
@@ -435,9 +452,8 @@ Mixed-up Code Questions
    class myTests(TestCaseGui):
 
        def testOne(self):
-           self.assertEqual(alarm_clock()
-           self.assertEqual(alarm_clock()
-           self.assertEqual(alarm_clock()
+           self.assertEqual(result, "Good job", "Testing result when the value of x is between 1 and 10")
+          
            
 
 
