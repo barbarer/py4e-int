@@ -37,6 +37,11 @@ Functions and Conditionals Write Code Questions
             .. activecode:: funct_conditional_writecode1a
                 :optional:
 
+                Write a function called ``cropped_photo`` that takes the ``height`` and ``width`` of a photo. 
+                If the ``height`` and ``width`` are equal, then the function returns ``"Cropped Photo"``. Otherwise, 
+                it returns ``"The photo needs to be cropped."`` Assume ``height`` and ``width`` are positive. For example, 
+                ``cropped_photo(23.2, 23.2)`` should return ``"Cropped Photo"``.
+                ~~~~
                 def cropped_photo(height, width):
                     if height == width:
                         return "Cropped Photo"
@@ -112,6 +117,10 @@ Functions and Conditionals Write Code Questions
             .. activecode:: funct_conditional_writecode3a
                 :optional:
 
+                Write a function called ``move_elevator`` that takes two parameters, ``current_floor`` and ``next_floor``. If the elevator moves 
+                to a floor above, then it should return ``"Up"``. Otherwise, it should return ``"Down"``. Also, if ``next_floor`` is the same as ``current_floor``, it should return 0. 
+                Assume there are no 0 or negative floors. For example, ``move_elevator(5, 8)`` should return ``"Up"``.
+                ~~~~
                 def move_elevator(current_floor, next_floor):
                     if next_floor < current_floor:
                         return "Down"
@@ -191,6 +200,11 @@ Functions and Conditionals Write Code Questions
             .. activecode:: funct_conditional_writecode5a
                 :optional:
 
+                Write a function called ``pay_rent`` that takes in one parameter, 
+                ``units``. If ``units`` is less than 200, return ``"$100"``. 
+                If ``units`` is less than 500 and greater than or equal to 200, return ``"$200"``. Otherwise, return ``"$300"``. 
+                For example, ``pay_rent(175)`` should return ``"$100"``. 
+                ~~~~
                 def pay_rent(units):
                     if units < 200:
                         return "$100"
