@@ -85,7 +85,7 @@ Mixed-Up Code Questions
     class myTests(TestCaseGui):
 
         def testOne(self):
-            self.assertEqual(search_h(['Hello!', 'hello.', 'Morning!', 'hi']), [(3, 'bye'), (2, 'hi')], "search_h(['Hello!', 'hello.', 'Morning!', 'hi'])")
+            self.assertEqual(search_h(['Hello!', 'hello.', 'Morning!', 'hi']), ['Hello!', 'hello.', 'hi'], "search_h(['Hello!', 'hello.', 'Morning!', 'hi'])")
             self.assertEqual(search_h(['Morning!']), [], "search_h(['Morning!'])")
             self.assertEqual(search_h(['fresh', 'Kahoot']), [], "search_h(['fresh', 'Kahoot'])")
 
@@ -179,12 +179,12 @@ Mixed-Up Code Questions
     class myTests(TestCaseGui):
 
         def testOne(self):
-            self.assertEqual(test_match('Puppy', 'Puppies'), Not a match!, "test_match('Puppy', 'Puppies')")
-            self.assertEqual(test_match('Puppy', 'Puppy'), Match!, "test_match('Puppy', 'Puppy')")
-            self.assertEqual(test_match(' ', ''), Not a match!, "test_match(' ', '')")
-            self.assertEqual(test_match('', ''), Match!, "ltest_match('', '')")
-            self.assertEqual(test_match('Good Morning!', 'Good Morning!'), Match!, "test_match('Good Morning!', 'Good Morning!')")
-            self.assertEqual(test_match('Good Morning!', 'Good morning!'), Not a match!, "test_match('Good Morning!', 'Good morning!')")
+            self.assertEqual(test_match('Puppy', 'Puppies'), 'Not a match!', "test_match('Puppy', 'Puppies')")
+            self.assertEqual(test_match('Puppy', 'Puppy'), 'Match!', "test_match('Puppy', 'Puppy')")
+            self.assertEqual(test_match(' ', ''), 'Not a match!', "test_match(' ', '')")
+            self.assertEqual(test_match('', ''), 'Match!', "ltest_match('', '')")
+            self.assertEqual(test_match('Good Morning!', 'Good Morning!'), 'Match!', "test_match('Good Morning!', 'Good Morning!')")
+            self.assertEqual(test_match('Good Morning!', 'Good morning!'), 'Not a match!', "test_match('Good Morning!', 'Good morning!')")
 
     myTests().main()
 
@@ -228,19 +228,19 @@ Mixed-Up Code Questions
     class myTests(TestCaseGui):
 
         def testOne(self):
-            self.assertEqual(test_pattern('Sincerely       Molly'), Match!, "test_pattern('Sincerely       Molly')")
-            self.assertEqual(test_pattern('Sincerely1       Molly'), Match!, "test_pattern('Sincerely1       Molly')")
-            self.assertEqual(test_pattern('Sincerely   Molly'), Match!, "test_pattern('Sincerely   Molly')")
-            self.assertEqual(test_pattern('1 M'), Match!, "test_pattern('1 M')")
-            self.assertEqual(test_pattern('1 1'), Match!, "test_pattern('1 1')")
-            self.assertEqual(test_pattern('S M'), Match!, "test_pattern('S M')")
-            self.assertEqual(test_pattern('1S 1M'), Match!, "test_pattern('1S 1M')")
-            self.assertEqual(test_pattern('_ M_9'), Match!, "test_pattern('_ M_9')")
-            self.assertEqual(test_pattern('SM'), Not a Match!, "test_pattern('SM')")
-            self.assertEqual(test_pattern(' SM '), Not a Match!, "test_pattern(' SM ')")
-            self.assertEqual(test_pattern(' SM'), Not a Match!, "test_pattern(' SM')")
-            self.assertEqual(test_pattern('S, M'), Not a Match!, "test_pattern('S, M')")
-            self.assertEqual(test_pattern('SM '), Not a Match!, "test_pattern('SM ')")
+            self.assertEqual(test_pattern('Sincerely       Molly'), 'Match!', "test_pattern('Sincerely       Molly')")
+            self.assertEqual(test_pattern('Sincerely1       Molly'), 'Match!', "test_pattern('Sincerely1       Molly')")
+            self.assertEqual(test_pattern('Sincerely   Molly'), 'Match!', "test_pattern('Sincerely   Molly')")
+            self.assertEqual(test_pattern('1 M'), 'Match!', "test_pattern('1 M')")
+            self.assertEqual(test_pattern('1 1'), 'Match!', "test_pattern('1 1')")
+            self.assertEqual(test_pattern('S M'), 'Match!', "test_pattern('S M')")
+            self.assertEqual(test_pattern('1S 1M'), 'Match!', "test_pattern('1S 1M')")
+            self.assertEqual(test_pattern('_ M_9'), 'Match!', "test_pattern('_ M_9')")
+            self.assertEqual(test_pattern('SM'), 'Not a match!', "test_pattern('SM')")
+            self.assertEqual(test_pattern(' SM '),'Not a match!', "test_pattern(' SM ')")
+            self.assertEqual(test_pattern(' SM'), 'Not a match!', "test_pattern(' SM')")
+            self.assertEqual(test_pattern('S, M'), 'Not a match!', "test_pattern('S, M')")
+            self.assertEqual(test_pattern('SM '), 'Not a match!', "test_pattern('SM ')")
             
 
     myTests().main()
@@ -288,13 +288,13 @@ Mixed-Up Code Questions
     class myTests(TestCaseGui):
 
         def testOne(self):
-            self.assertEqual(first_price('We just received $10.00 for cookies.'), "$10.00", "first_price('We just received $10.00 for cookies.')")
-            self.assertEqual(first_price('We just received $2098.10 for cookies and $209 for brownies.'), "$2098.10", "first_price('We just received $2098.10 for cookies and $209 for brownies.')")
-            self.assertEqual(first_price('We just received $5.00 for cookies.'), "$5.00", "first_price('We just received $5.00 for cookies.')")
-            self.assertEqual(first_price('$5.35 for cookies'), "$5.35", "first_price('$5.35 for cookies')")
-            self.assertEqual(first_price('cookies for $5.05'), "$5.05", "first_price('cookies for $5.05')")
-            self.assertEqual(first_price('cookies for $5'), "$5", "first_price('cookies for $5')")
-            self.assertEqual(first_price('cookies'), "No price", "first_price('cookies')")
+            self.assertEqual(first_price('We just received $10.00 for cookies.'), '$10.00', "first_price('We just received $10.00 for cookies.')")
+            self.assertEqual(first_price('We just received $2098.10 for cookies and $209 for brownies.'), '$2098.10', "first_price('We just received $2098.10 for cookies and $209 for brownies.')")
+            self.assertEqual(first_price('We just received $5.00 for cookies.'), '$5.00', "first_price('We just received $5.00 for cookies.')")
+            self.assertEqual(first_price('$5.35 for cookies'), '$5.35', "first_price('$5.35 for cookies')")
+            self.assertEqual(first_price('cookies for $5.05'), '$5.05', "first_price('cookies for $5.05')")
+            self.assertEqual(first_price('cookies for $5'), '$5', "first_price('cookies for $5')")
+            self.assertEqual(first_price('cookies'), 'No price', "first_price('cookies')")
 
 
     myTests().main()
@@ -360,11 +360,11 @@ Mixed-Up Code Questions
     =====
         for item in lst:
     =====
-        if re.search('^From:.+@', item):
+            if re.search('^From:.+@', item):
     =====
-        if re.search('^F..m:', item): #paired
+            if re.search('^F..m:', item): #paired
     =====
-            new_list.append(item)
+                new_list.append(item)
     =====
         return new_list
 
@@ -421,8 +421,7 @@ Mixed-Up Code Questions
     Write a function called ``grab_domain`` that takes in a list of strings, ``lst``, as a parameter and returns a new list with the domains of the emails, if they exist. 
     For example, ``grab_domain(['python@umich.edu','This is Kelly@umich.gov','123','java@css','jav12a@css.com'])`` would return ``['umich.edu', 'umich.gov', 'css.com']``.
     ~~~~
-    def length_word(txt):
-        # write code here
+    import re
 
     ====
     from unittest.gui import TestCaseGui
@@ -474,10 +473,10 @@ Mixed-Up Code Questions
 
         def testOne(self):
             self.assertEqual(vowels_in_mid('chErry'), 'Does not exist', "vowels_in_mid('chErry')")
-            self.assertEqual(vowels_in_mid('chEErry'), chEErry, "vowels_in_mid('chEErry')")
-            self.assertEqual(vowels_in_mid('chEEErry'), chEEErry, "vowels_in_mid('chEEErry')")
-            self.assertEqual(vowels_in_mid('chEEEErry'), chEEEErry, "vowels_in_mid('chEEEErry')")
+            self.assertEqual(vowels_in_mid('chEErry'), 'chEErry', "vowels_in_mid('chEErry')")
+            self.assertEqual(vowels_in_mid('chEEErry'), 'chEEErry', "vowels_in_mid('chEEErry')")
+            self.assertEqual(vowels_in_mid('chEEEErry'), 'chEEEErry', "vowels_in_mid('chEEEErry')")
             self.assertEqual(vowels_in_mid('chEEEEErry'), 'Does not exist', "vowels_in_mid('chEEEEErry')")
-            self.assertEqual(vowels_in_mid('chEEEEEYYEErry'), chEEEEEYYEErry, "vowels_in_mid('chEEEEEYYEErry')")
+            self.assertEqual(vowels_in_mid('chEEEEEYYEErry'), 'chEEEEEYYEErry', "vowels_in_mid('chEEEEEYYEErry')")
 
     myTests().main()
