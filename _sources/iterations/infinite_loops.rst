@@ -53,7 +53,7 @@ type ``done``. You could write:
 .. code-block:: 05section3
 
     while True:
-        line = raw_input('Word: ')
+        line = input('Word: ')
         if line == 'done':
             break
         print(line)

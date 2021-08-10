@@ -81,6 +81,18 @@ characters between the colon character and the at-sign.
 
     From:.+@
 
+It is good to think of the plus and asterisk characters as "pushy" or "greedy". For
+example, the following string would match the last at-sign in the string
+as the ``.+`` pushes outwards, as shown below:
+
+.. code-block::
+
+   From: stephen.marquard@uct.ac.za, csev@umich.edu, and cwen @iupui.edu
+
+It is possible to tell an asterisk or plus sign not to be so "greedy" by
+adding another character. See the detailed documentation for information
+on turning off the greedy behavior.
+
 .. mchoice:: re_char_mc_match
     :practice: T
     :multiple_answers:
@@ -105,18 +117,6 @@ characters between the colon character and the at-sign.
             line = line.rstrip()
             if re.search('\$.+', line):
                 print(line)
-
-It is good to think of the plus and asterisk characters as "pushy" or "greedy". For
-example, the following string would match the last at-sign in the string
-as the ``.+`` pushes outwards, as shown below:
-
-.. code-block::
-
-
-
-It is possible to tell an asterisk or plus sign not to be so "greedy" by
-adding another character. See the detailed documentation for information
-on turning off the greedy behavior.
 
 .. mchoice:: re_char_mc_matchAbove
     :answer_a: From: stephen.marquard@

@@ -5,49 +5,60 @@ Multiple Choice Questions
     :answer_a: [ [ ], 3.14, False]
     :answer_b: ["cat", [56, 57, "dog"]]
     :answer_c: [ [56, 57, "dog"], [ ], 3.14, False]
+    :answer_d: [27, "cat"]
     :correct: b
-    :feedback_a: No, this slice starts at index 4 and goes up to and including the last item.
-    :feedback_b: "cat" is at index 2 and [56, 57, "dog"] is what you get when index 4 is exclusive.
-    :feedback_c: Remember that index values start at 0!
+    :feedback_a: Incorrect! This slice starts at index 4 and goes up to and includes the last item.
+    :feedback_b: Correct! The word "cat" is at index 2 and [56, 57, "dog"] is what you get when index 4 is exclusive.
+    :feedback_c: Incorrect! Remember that index values start at 0!
+    :feedback_d: Incorrect! This slice starts at index 4 and goes up to and includes the last item.
 
-    What is printed by the following statements?
+    What is returned by the following function?
 
-    ::
+    .. code-block:: python
 
-      alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
-      print(alist[2:4])
+      def slice_exercise():
+          alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+          print(alist[2:4])
 
 .. mchoice:: listEx_MC2
     :practice: T
     :answer_a: 4
     :answer_b: 5
+    :answer_c: False
+    :answer_d: 3.14
     :correct: b
-    :feedback_a: len returns the actual number of items in the list, not the maximum index value.
-    :feedback_b: Yes, there are 5 items in this list.
+    :feedback_a: Incorrect! The built in function, len, returns the actual number of items in the list, not the maximum index value.
+    :feedback_b: Correct! There are 5 items in this list.
+    :feedback_c: Incorrect! The built in function, len, returns the actual number of items in the list.
+    :feedback_d: Incorrect! The built in function, len, returns the actual number of items in the list.
 
-    What is printed by the following statements?
+    What is returned by the following function?
 
     .. code-block:: python
 
-      alist = [3, 67, "cat", 3.14, False]
-      print(len(alist))
+      def len_of_list():
+          alist = [3, 67, "cat", 3.14, False]
+          return len(alist)
 
 .. mchoice:: listEx_MC3
     :practice: T
     :answer_a: Error, you cannot use the upper method on a list.
     :answer_b: 2
     :answer_c: CAT
+    :answer_d: FALSE
     :correct: c
-    :feedback_a: alist[2] is the string cat so the upper method is legal
-    :feedback_b: 2 is the index.  We want the item at that index.
-    :feedback_c: Yes, the string cat is upper cased to become CAT.
+    :feedback_a: Incorrect! alist[2] is the string cat so the upper method is legal
+    :feedback_b: Incorrect! 2 is the index.  We want the item at that index.
+    :feedback_c: Correct! The string cat is upper cased to become CAT.
+    :feedback_d: Incorrect! False is at the maximum index, not the second index.
 
-    What is printed by the following statements?
+    What is returned by the following function?
 
-    ::
+    .. code-block:: python
 
-      alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
-      print(alist[2].upper())
+      def indexing_and_upper():
+          alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+          return alist[2].upper()
 
 
 .. mchoice:: listEx_MC4
@@ -62,12 +73,13 @@ Multiple Choice Questions
     :feedback_c: cat is the item at index 2 but then we index into it further.
     :feedback_d: Using more than one index is fine.  You read it from left to right.
 
-    What is printed by the following statements?
+    What is returned by the following function?
 
-    ::
+    .. code-block:: python
 
-      alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
-      print(alist[2][0])
+      def list_within_list():
+          alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+          return alist[2][0]
 
 .. mchoice:: listEx_MC5
     :practice: T
@@ -81,14 +93,15 @@ Multiple Choice Questions
     :feedback_c: print(blist)
     :feedback_d: blist contains two references, both to alist so changes to alist appear both times.
 
-    What is printed by the following statements?
+    What is returned by the following function?
 
-    ::
+    .. code-block:: python
 
-      alist = [4, 2, 8, 6, 5]
-      blist = [alist] * 2
-      alist[3] = 999
-      print(blist)
+      def list_transformation():
+          alist = [4, 2, 8, 6, 5]
+          blist = [alist] * 2
+          alist[3] = 999
+          return blist
 
 .. mchoice:: listEx_MC6
     :practice: T
@@ -102,15 +115,16 @@ Multiple Choice Questions
     :feedback_c: Yes, the for loop processes each item of the list.  5 is added before it is appended to blist.
     :feedback_d: 5 is added to each item before the append is performed.
 
-    What is printed by the following statements?
+    What is returned by the following function?
 
-    ::
+    .. code-block:: python
 
-      alist = [4, 2, 8, 6, 5]
-      blist = [ ]
-      for item in alist:
-          blist.append(item+5)
-      print(blist)
+      def list_transformation():
+          alist = [4, 2, 8, 6, 5]
+          blist = [ ]
+          for item in alist:
+              blist.append(item+5)
+          return blist
 
 
 .. mchoice:: listEx_MC7
@@ -159,30 +173,36 @@ Multiple Choice Questions
 
     .. sourcecode:: python
 
-        nums = [4, 5, 2, 93, 3, 5]
-        s = 0
-        for n in nums:
-            s = s + 1
+        def find_sum():
+            nums = [4, 5, 2, 93, 3, 5]
+            s = 0
+            for n in nums:
+                s = s + 1
+            return s
 
     II.
 
     .. sourcecode:: python
 
-        nums = [4, 5, 2, 93, 3, 5]
-        s = 0
-        for n in nums:
-            s = n + n
+        def find_sum():
+            nums = [4, 5, 2, 93, 3, 5]
+            s = 0
+            for n in nums:
+                s = n + n
+            return s
 
     III.
 
     .. sourcecode:: python
 
-        nums = [4, 5, 2, 93, 3, 5]
-        s = 0
-        for n in nums:
-            s = s + n
+        def find_sum():
+            nums = [4, 5, 2, 93, 3, 5]
+            s = 0
+            for n in nums:
+                s = s + n
+            return s
 
-.. mchoice:: assess_question5_2_1_2
+.. mchoice:: listEx_MC10
     :answer_a: 1.
     :answer_b: 2.
     :answer_c: 3.
@@ -202,36 +222,177 @@ Multiple Choice Questions
 
     .. sourcecode:: python
 
-        lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
-        s = 0
-        for n in lst:
-            s = s + n
+        def num_of_strings():
+            lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
+            s = 0
+            for n in lst:
+                s = s + n
+            return s
 
     2.
 
     .. sourcecode:: python
 
-        lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
-        for item in lst:
-            s = 0
-            if type(item) == type("string"):
-                s = s + 1
+        def num_of_strings():
+            lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
+            for item in lst:
+                s = 0
+                if isinstance(item, str):
+                    s = s + 1
+            return s
 
     3.
 
     .. sourcecode:: python
 
-        lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
-        s = ""
-        for n in lst:
-            s = s + n
+        def num_of_strings():
+            lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
+            s = ""
+            for n in lst:
+                s = s + n
+            return s
 
     4.
 
     .. sourcecode:: python
+    
+        def num_of_strings():
+            lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
+            s = 0
+            for item in lst:
+                if isinstance(item, str):
+                    s = s + 1
 
-        lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
-        s = 0
-        for item in lst:
-            if type(item) == type("string"):
-                s = s + 1
+
+.. mchoice:: listEx_MC11
+    :practice: T
+    :answer_a: [3, 0, 2, 0, 0]
+    :answer_b: [3, 0, 2]
+    :answer_c: [3, 2]
+    :answer_d: [3, 2, 0]
+    :correct: d
+    :feedback_a: The list is modified by the pop.
+    :feedback_b: It will pop 0's except for the last one.
+    :feedback_c: This would be true if it didn't always increment the index.
+    :feedback_d: Since it always increments the index it will miss the last zero.
+
+    What will the following code print?
+
+    ::
+
+        def mystery(num_list):
+            index = 0
+            while index < len(num_list):
+                num = num_list[index]
+                if num == 0:
+                    num_list.pop(index)
+                index += 1
+
+        list1 = [3, 0, 2, 0, 0]
+        mystery(list1)
+        print(list1)
+
+.. mchoice:: listEx_MC12
+    :practice: T
+    :answer_a: 1
+    :answer_b: 9
+    :answer_c: 15
+    :answer_d: None
+    :correct: a
+    :feedback_a: It adds 1 to the sum and then returns.
+    :feedback_b: This would be true if it didn't return until after the loop finished
+    :feedback_c: This would be true if it didn't return until after the loop finished and the range incremented by 1 rather than 2
+    :feedback_d: This would be true if there wasn't a return statement
+
+    What will the following code print?
+
+    ::
+
+        def mystery(num_list):
+            sum = 0
+            for i in range(0, len(num_list), 2):
+                num = num_list[i]
+                sum += num
+                return sum
+
+        list1 = [1, 2, 3, 4, 5]
+        print(mystery(list1))
+
+.. mchoice:: listEx_MC13
+    :practice: T
+    :answer_a: True
+    :answer_b: False
+    :answer_c: None
+    :answer_d: It will not compile
+    :correct: a
+    :feedback_a: It returns true after checking the first num.
+    :feedback_b: This would be true if the first number in the list was negative.
+    :feedback_c: This would be true if there wasn't a return statement.
+    :feedback_d: This would be true if there was a syntax error.
+
+    What will the following code print?
+
+    ::
+
+        def mystery(num_list):
+            for num in num_list:
+                if num < 0:
+                    return False
+                else:
+                    return True
+
+        print(mystery([3, -1, 2]))
+
+
+.. mchoice:: listEx_MC14
+    :practice: T
+    :answer_a: [10, 15, 20]
+    :answer_b: [20, 15]
+    :answer_c: [15, 20]
+    :answer_d: [20, 15, 10]
+    :correct: c
+    :feedback_a: It only adds numbers that are greater than 10
+    :feedback_b: This would be true if append added at the front, but it adds at the end
+    :feedback_c: It adds all numbers greater than 10 in order.
+    :feedback_d: This would be true if append added at the front, but it adds at the end and it won't add the 10
+
+    What will the following code print?
+
+    ::
+
+        def mystery(num_list):
+            out = []
+            for num in num_list:
+                if num > 10:
+                    out.append(num)
+            return out
+
+
+        print(mystery([5, 10, 15, 20]))
+
+
+.. mchoice:: listEx_MC15
+    :practice: T
+    :answer_a: [5, 10, 15, 20]
+    :answer_b: [20, 15, 10, 5]
+    :answer_c: [5, 10, 15]
+    :answer_d: [20, 15, 10]
+    :correct: d
+    :feedback_a: It adds the numbers in reverse order
+    :feedback_b: This would be true if the end for range was less than 0
+    :feedback_c: It adds the numbers in reverse order
+    :feedback_d: It adds the numbers in reverse order, but stops before the item at index 0.
+
+    What will the following code print?
+
+    ::
+
+        def mystery(num_list):
+            out = []
+            for i in range(len(num_list) - 1,0,-1):
+                num = num_list[i]
+                    out.append(num)
+            return out
+
+
+        print(mystery([5, 10, 15, 20]))

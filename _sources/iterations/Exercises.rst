@@ -212,3 +212,181 @@ Multiple Choice Questions
             if letter == 'h':
                 continue
             print('Current Letter : ' + letter)
+
+
+.. mchoice:: e5mc11
+    :practice: T
+    :answer_a: walking
+    :answer_b: wlking
+    :answer_c: wlk
+    :answer_d: wlkng
+    :correct: c
+    :feedback_a: Not all of the characters will be added to the output string.
+    :feedback_b: This would be true if it didn't break when it sound an 'i'
+    :feedback_c: It will not all the 'a' and will stop when it reaches the 'i'
+    :feedback_d: This would be true if when it found an 'i' it did a continue rather than a break
+
+    What will the following code print?
+
+    ::
+
+        def mystery(str):
+            out = ""
+            for char in str:
+                if char == "i":
+                    break
+                if char == 'a':
+                    continue
+                out += char
+            return out
+
+        print(mystery("walking"))
+
+
+.. mchoice:: e5mc12
+    :answer_a: 1.
+    :answer_b: 2.
+    :answer_c: 3.
+    :answer_d: 4.
+    :answer_e: 5.
+    :correct: e
+    :feedback_a: This will loop from 1 to 3 and reset sum to 0 at the start of each iteration.
+    :feedback_b: This will loop from 1 to 3.
+    :feedback_c: This will loop from 1 to 4, but will reset the sum to 0 at the start of each iteration.
+    :feedback_d: This will loop from 1 to 4, but adds sum to itself.
+    :feedback_e: This will loop from 1 to 4 and calculate the sum of those values.
+    :practice: T
+
+    Which of the following will add up the numbers from 1 to 4?
+
+    1.
+
+    .. sourcecode:: python
+
+        for i in range(1,4):
+            sum = 0
+            sum = sum + i
+
+    2.
+
+    .. sourcecode:: python
+
+        sum = 0
+        for i in range(1,4):
+            sum = sum + i
+
+    3.
+
+    .. sourcecode:: python
+
+        for i in range(1,5):
+            sum = 0
+            sum = sum + i
+
+    4.
+
+    .. sourcecode:: python
+
+        sum = 0
+        for i in range(1,5):
+            sum = sum + sum
+
+    5.
+
+    .. sourcecode:: python
+
+        sum = 0
+        for i in range(1,5):
+            sum = sum + i
+
+
+.. mchoice:: e5mc13
+    :practice: T
+    :answer_a: [3, 1]
+    :answer_b: [3, -2, 1]
+    :answer_c: [3]
+    :answer_d: [3, -3, -2, 1]
+    :correct: a
+    :feedback_a: This adds any non negative values to the out list.
+    :feedback_b: This will not add any non
+    :feedback_c: This would be true if the continue was a break
+    :feedback_d: This would be true if when it found an 'i' it did a continue rather than a break
+
+    What will the following code print?
+
+    ::
+
+        def mystery(nums):
+            out = []
+            for num in nums:
+                if num < 0:
+                    continue
+                else:
+                    out += num
+            return out
+
+        print(mystery([3, -3, -2, 1]))
+
+
+.. mchoice:: e5mc14
+    :answer_a: 1.
+    :answer_b: 2.
+    :answer_c: 3.
+    :answer_d: 4.
+    :correct: b
+    :feedback_a: This will loop 5 times (0 to 4) and print 0 "*" on the first row, 1 on the second, etc.
+    :feedback_b: This will loop 5 times (0 to 4) and print five "*" on each row.
+    :feedback_c: This will loop 4 times (1 to 4) and print 0 "*" on the first row, 1 on the second, etc.
+    :feedback_d: This will loop 4 times (1 to 4) and print five "*" on each row.
+    :practice: T
+
+    Which of the following will print five rows with five '*' in each row?
+
+    1.
+
+    .. sourcecode:: python
+
+        for i in range(0,5):
+            print("*" * i)
+
+    2.
+
+    .. sourcecode:: python
+
+        for i in range(0,5):
+            print("*" * 5)
+
+    3.
+
+    .. sourcecode:: python
+
+        for i range(1,5):
+            print("*" * i)
+
+    4.
+
+    .. sourcecode:: python
+
+        for i in range(1,5):
+            print("*" * 5)
+
+
+.. mchoice:: e5mc15
+    :practice: T
+    :answer_a: 1 1 2 2 3 3
+    :answer_b: 1 2 3 1 2 3 1 2 3
+    :answer_c: 1 1 1 2 1 3 2 1 2 2 2 3 3 1 3 2 3 3
+    :answer_d: 1 1 2 1 3 1 2 1 2 2 2 3 3 1 3 2 3 3
+    :correct: c
+    :feedback_a: It prints both i and j each time through the loop.
+    :feedback_b: This would be true if it only printed j each time through the loop.
+    :feedback_c: It prints both i and j each time through the loop. The value of i starts at 1 and j changes from 1 to 3 before i changes.
+    :feedback_d: Remember that i starts at 1 and j will change from 1 to 3 before i changes.
+
+    What will the following code print?
+
+    ::
+
+        for i in range(1,4):
+            for j in range(1,4):
+                print(i, j, end=' ')

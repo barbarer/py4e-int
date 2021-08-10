@@ -6,12 +6,14 @@ Write Code Questions
 
         .. tab:: Question
 
-            There are 3 syntax errors in the following code. Fix it to print correctly
-            without errors. It will print, "Her name is Molly and her favorite food is tuna".
+
 
             .. activecode:: var-wc-syntax
                 :nocodelens:
 
+                There are 3 syntax errors in the following code. Fix it to print correctly
+                without errors. It will print, "Her name is Molly and her favorite food is tuna".
+                ~~~~
                 food = "tuna'
                 name = 'Molly'
                 print("Her name is " + name +  and her favorite food is "  food + ".")
@@ -22,13 +24,16 @@ Write Code Questions
                 :optional:
                 :nocodelens:
 
+                There are 3 syntax errors in the following code. Fix it to print correctly
+                without errors. It will print, "Her name is Molly and her favorite food is tuna".
+                ~~~~
                 # Each set of quotes needs to be matching
                 food = 'tuna'
                 name = 'Molly'
 
                 # Place full sets of quotes around strings to be printed
                 # Include spaces before and after where variables are printed
-                # Add + between strings 
+                # Add + between strings
                 print("Her name is " + name + " and her favorite food is " + food + ".")
 
 #.
@@ -36,7 +41,6 @@ Write Code Questions
 
         Let's say that apples are $0.40 apiece, and pears are $0.65 apiece.
         Modify the program below to calculate the total cost of 4 apples and 3 pears
-
         ~~~~
         apples = 4
         pears = 3
@@ -58,11 +62,12 @@ Write Code Questions
 
         .. tab:: Question
 
-            Take the phrase: **twinkle twinkle little star**.
-            Store each word in a separate variable, then print out the sentence on
-            one line using ``print``.
-
             .. activecode:: var-wc-rhymeq
+
+               Take the phrase: **twinkle twinkle little star**.
+               Store each word in a separate variable, then print out the sentence on
+               one line using ``print``.
+               ~~~~
 
 
         .. tab:: Answer
@@ -70,6 +75,10 @@ Write Code Questions
             .. activecode:: var-wc-rhymeA
                 :optional:
 
+                Take the phrase: **twinkle twinkle little star**.
+                Store each word in a separate variable, then print out the sentence on
+                one line using ``print``.
+                ~~~~
                 # Set each word to its own variable
                 word1 = "twinkle"
                 word2 = "little"
@@ -87,7 +96,6 @@ Write Code Questions
     .. activecode:: var-wc-order
 
         Add parentheses to the following code so that the total equals 40.
-
         ~~~~
         total = 7 + 3 * 6 - 2
         print(total)
@@ -106,14 +114,15 @@ Write Code Questions
 
         .. tab:: Question
 
-            Many people keep time using a 24 hour clock (11 is 11am and 23 is 11pm, 0 is midnight).
-            If it is currently 13 and you set your alarm to go off in 50 hours, it will be 15 (3pm).
-            Write a Python program to solve the general version of the above problem. Ask the user
-            for the time now (in hours), and then ask for the number of hours to wait for the alarm.
-            Your program should output what the time will be on the clock when the alarm goes off.
-            *Using the int() function and modulus operator could come in handy!*
-
             .. activecode:: var-wc-timeq
+
+                Many people keep time using a 24 hour clock (11 is 11am and 23 is 11pm, 0 is midnight).
+                If it is currently 13 and you set your alarm to go off in 50 hours, it will be 15 (3pm).
+                Write a Python program to solve the general version of the above problem. Ask the user
+                for the time now (in hours), and then ask for the number of hours to wait for the alarm.
+                Your program should output what the time will be on the clock when the alarm goes off.
+                *Using the ``int()`` function and modulus operator ``%`` could come in handy!*
+                ~~~~
 
                 current_time =
                 waiting_time =
@@ -127,6 +136,14 @@ Write Code Questions
 
             .. activecode:: var-wc-timeA
                 :optional:
+
+                Many people keep time using a 24 hour clock (11 is 11am and 23 is 11pm, 0 is midnight).
+                If it is currently 13 and you set your alarm to go off in 50 hours, it will be 15 (3pm).
+                Write a Python program to solve the general version of the above problem. Ask the user
+                for the time now (in hours), and then ask for the number of hours to wait for the alarm.
+                Your program should output what the time will be on the clock when the alarm goes off.
+                *Using the ``int()`` function and modulus operator ``%`` could come in handy!*
+                ~~~~
 
                 #prompt the user for the current time
                 current_time_string = input("What is the current time (in hours)?")
@@ -175,17 +192,24 @@ Write Code Questions
 
         .. tab:: Question
 
-            Write a program that will convert inches to feet from user input.
-            Reminder: there are 12 inches in a foot.
+
 
 
             .. activecode:: var-wc-feetq
+
+               Write a program that will convert inches to feet from user input.
+               Reminder: there are 12 inches in a foot.
+               ~~~~
 
 
         .. tab:: Answer
 
             .. activecode:: var-wc-feetA
                 :optional:
+
+                Write a program that will convert inches to feet from user input.
+                Reminder: there are 12 inches in a foot.
+                ~~~~
 
                 #prompt the user for the amount of inches they would like to convert
                 inches = input("How many inches would you like to convert?")
@@ -214,11 +238,11 @@ Write Code Questions
 
         .. tab:: Question
 
-            Combine lines 4 and 5 in the code below to print: "270 is 4.0 hours and 30 minutes.".
-
             .. activecode::  var-wc-combine
                 :nocodelens:
 
+                Combine lines 4 and 5 in the code below to print: "270 is 4.0 hours and 30 minutes.".
+                ~~~~
                 totalMinutes = 270
                 numMinutes = totalMinutes % 60
                 numHours = (totalMinutes - numMinutes) / 60
@@ -231,6 +255,8 @@ Write Code Questions
                 :nocodelens:
                 :optional:
 
+                Combine lines 4 and 5 in the code below to print: "270 is 4.0 hours and 30 minutes.".
+                ~~~~
                 totalMinutes = 270
                 numMinutes = totalMinutes % 60
                 numHours = (totalMinutes - numMinutes) / 60
