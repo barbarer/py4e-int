@@ -33,6 +33,10 @@ Functions and Strings Write Code Questions
             .. activecode:: funct-strings-writecode1a
                 :optional:
 
+                Write a function called ``start_a`` that takes in ``string`` as a parameter and
+                returns ``True`` if the ``string`` starts with a lowercase a and ``False`` otherwise. For example,
+                ``start_a('apple')`` should return ``True``.
+                ~~~~
                 def start_a(string):
                     return string.startswith('a')
 
@@ -92,6 +96,12 @@ Functions and Strings Write Code Questions
             .. activecode:: funct-strings-writecode3a
                 :optional:
 
+                Write a function called ``use_semicolon`` that takes in ``sentence1`` and ``sentence2`` as parameters and
+                returns both sentences joined by a semicolon with the correct grammar. This means that ``sentence1`` shouldn't have a terminal punctuation mark,
+                there should be a space after the semicolon, and ``sentence2`` should start with a lowercase letter.
+                For example, ``use_semicolon('The sun is bright.', "Let's go outside.")`` should return ``"The sun is bright; let's go outside."``.
+                (Note: Assume both ``sentence1`` and ``sentence2`` are simple and complete sentences with proper grammar.)
+                ~~~~
                 def use_semicolon(sentence1, sentence2):
                     return sentence1[:-1] + '; ' + sentence2[0].lower() + sentence2[1:]
 
@@ -160,6 +170,10 @@ Functions and Strings Write Code Questions
             .. activecode:: funct-strings-writecode5a
                 :optional:
 
+                Write a function called ``first_a_gone`` that takes in ``string`` as a parameter and
+                returns a new string without the first lowercase 'a'. For example, ``first_a_gone('australia')`` should return ``"ustralia"``.
+                (Note: Don't worry about accounting for strings that don't have a lowercase 'a'.)
+                ~~~~
                 def first_a_gone(string):
                     capture_a = string.find('a')
                     return string[:capture_a] + string[capture_a + 1:]
