@@ -353,15 +353,11 @@ Mixed-Up Code Questions
     =====
             longest_word = ''
     =====
-    	    longest_word = 0 #paired
+            for item in tup:
     =====
-    	    for item in tup:
+                    if len(item) > len(longest_word):
     =====
-    		     if len(item) > len(longest_word):
-    =====
-    			       longest_word = item
-    =====
-    			       longest_word = len(item) #paired
+                        longest_word = item
     =====
             lst.append(longest_word)
     =====
@@ -383,11 +379,11 @@ Mixed-Up Code Questions
     class myTests(TestCaseGui):
 
         def testOne(self):
-            self.assertEqual(longest_word([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')]), ['apples', 'combining', 'twenty-four', 'tmobile'], "longest_word([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')])")
-            self.assertEqual(longest_word([(),()]), ['', ''], "longest_word([(),()])")
-            self.assertEqual(longest_word([('twice', 'twice'),('rabbit','dragon','rooster')]), ['twice', 'rooster'], "longest_word([('twice', 'twice'),('rabbit','dragon','rooster')])")
-            self.assertEqual(longest_word((('2','22'), ('1'))), ['22', '1'], "longest_word((('2','22'), ('1')))")
-            self.assertEqual(longest_word((('2 0 2 0 2','22'), ('1'))), ['2 0 2 0 2', '1'], "longest_word((('2 0 2 0 2','22'), ('1')))")
+            self.assertEqual(longest_word_lst([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')]), ['apples', 'combining', 'twenty-four', 'tmobile'], "longest_word_lst([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')])")
+            self.assertEqual(longest_word_lst([(),()]), ['', ''], "longest_word_lst([(),()])")
+            self.assertEqual(longest_word_lst([('twice', 'twice'),('rabbit','dragon','rooster')]), ['twice', 'rooster'], "longest_word_lst([('twice', 'twice'),('rabbit','dragon','rooster')])")
+            self.assertEqual(longest_word_lst((('2','22'), ('1'))), ['22', '1'], "longest_word_lst((('2','22'), ('1')))")
+            self.assertEqual(longest_word_lst((('2 0 2 0 2','22'), ('1'))), ['2 0 2 0 2', '1'], "longest_word_lst((('2 0 2 0 2','22'), ('1')))")
 
     myTests().main()
 
