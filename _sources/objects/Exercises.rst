@@ -8,12 +8,12 @@ Multiple Choice Questions
     :answer_c: an = PartyAnimal()
     :answer_d: CricketFan = PartyAnimal()
     :correct: b
-    :feedback_a: This is a necessary  step to import PartyAnimal class but it is not inherited by CricketFan class.
-    :feedback_b: Correct! PartyAnimal class is inherited by CricketFan in the class definition.
-    :feedback_c: This only creates an instance of the PartyAnimal class.
-    :feedback_d: This would create a global variable instance of the PartyAnimal class.
+    :feedback_a: This is a necessary  step to import the PartyAnimal class, but it does not define a class CricketFan that inherits from PartyAnimal
+    :feedback_b: Correct! CricketFan inherits from PartyAnimal.
+    :feedback_c: This only creates an instance of the PartyAnimal class called an.
+    :feedback_d: This would create an instance of the PartyAnimal class called CricketFan.
 
-    In which of the following does the CricketFan class inherit from the PartyAnimal class?
+    In which of the following does the ``CricketFan`` class correctly inherit from the ``PartyAnimal`` class?
 
 .. mchoice:: objects_select_name
   :practice: T
@@ -25,9 +25,9 @@ Multiple Choice Questions
   :feedback_a: This uses the constructor function to create an object with arguments.
   :feedback_b: The instance can have a similar name to the class. This uses the constructor function to create an object with arguments.
   :feedback_c: This is correct and does not have arguments.
-  :feedback_d: 'new' is not required
+  :feedback_d: The 'new' is incorrect
 
-  Which of the following does **not** create an object instance?
+  Which of the following does **not** correctly create an object instance?
 
 .. mchoice:: multipleinstances_code_output
   :practice: T
@@ -36,12 +36,12 @@ Multiple Choice Questions
   :answer_c: Sally Louise
   :answer_d: person1
   :correct: a
-  :feedback_a: This prints the 'name' of the person1 instance.
+  :feedback_a: This prints the value of the name attribute for person1.
   :feedback_b: 'Louise' is the 'name' of person2 but we are calling the person1 instance.
-  :feedback_c: person1 and person2 are two different instances.
+  :feedback_c: It only prints the value of name for one instance.
   :feedback_d: The output is not the name of the instance.
 
-  What is the output of the following code?
+  What does the following code output?
   ::
 
     class People():
@@ -50,7 +50,7 @@ Multiple Choice Questions
           self.name = name
 
         def namePrint(self):
-          print("Name: " + self.name)
+          print(self.name)
 
       person1 = People("Sally")
       person2 = People("Louise")
@@ -59,9 +59,9 @@ Multiple Choice Questions
 .. mchoice:: multipleinstances_mchoice1
     :practice: T
     :answer_a: person1 and person2 are two different instances of the People class.
-    :answer_b: The __init__ class is used to create instances and set initial values for its attributes.
-    :answer_c: As we are not updating any values, 'self' is not needed in def namePrint(self):
-    :answer_d: person2 cannot access the 'name' of person1.
+    :answer_b: The __init__ method is used to set initial values for attributes.
+    :answer_c: 'self' is not needed in def namePrint(self):
+    :answer_d: person2 has a different value for 'name' than person1.
     :correct: c
     :feedback_a: Since two different objects were created, this is correct.
     :feedback_b: __init__ is an optional method in classes that is used to set initial values for objects.
@@ -77,7 +77,7 @@ Multiple Choice Questions
           self.name = name
 
         def namePrint(self):
-          print("Name: " + self.name)
+          print(self.name)
 
       person1 = People("Sally")
       person2 = People("Louise")
@@ -86,15 +86,15 @@ Multiple Choice Questions
 .. mchoice:: objectoriented_subdividing
     :practice: T
     :answer_a: One of the benefits of object-oriented programming is that it can hide complexity.
-    :answer_b: An object class contains a number of functions as well as the data that is used by those functions.
+    :answer_b: A class contains functions as well as the data that is used by those functions.
     :answer_c: Constructor methods are required to initialize an object and destructor methods are required to destroy the
                object when no longer required.
     :answer_d: A powerful feature of object-oriented programming is the ability to create a new class by extending an existing class.
     :correct: c
     :feedback_a: This is true, while using an object, we need to know how to use the object class but
                  not how it works internally.
-    :feedback_b: This is true  as an object can contain a number of functions as well as data that is used by those functions.
-    :feedback_c: This is false, a constructor is optional can be used to set initial values for an object and  python automatically
+    :feedback_b: This is true  as an class can contain functions as well as data that is used by those functions.
+    :feedback_c: This is false, a constructor is optional can be used to set initial values for an object and python automatically
                  destroys any object if its reference count changes to a zero without needing a destructor.
     :feedback_d: This is true, we can extend a 'parent' class to create a new 'child' class and the new class has access to its functions
                  and can override them if needed.
@@ -109,13 +109,12 @@ Multiple Choice Questions
     :answer_c: Class
     :answer_d: instance
     :correct: a
-    :feedback_a: the class keyword defines an object but does not create the object.
-    :feedback_b: an object is created using this template.
-    :feedback_c: the keyword is case-sensitive
-    :feedback_d: an instance is a single occurrence of an object created when the object is initialized.
+    :feedback_a: The class keyword defines the data that is in an object of a class and the functions that can be called on an object of the class.
+    :feedback_b: An object is created using this template.
+    :feedback_c: The keyword is case-sensitive
+    :feedback_d: An instance is a single occurrence of an object created when the object is initialized.
 
-    The _________ keyword defines a template indicating what data and code will
-    be contained in each object of type.
+    The _________ keyword defines a template indicating the data that will be in an object of the class and the functions that can be called on an object of the class.
 
 .. mchoice:: word_output
     :practice: T
@@ -124,13 +123,12 @@ Multiple Choice Questions
     :answer_c: self
     :answer_d: init
     :correct: c
-    :feedback_a: 'class' is a keyword that defines the template of an object.
+    :feedback_a: 'class' is a keyword that defines the template for objects of the class.
     :feedback_b: 'def' is used to define a function
-    :feedback_c: 'self' is not a keyword but a convention that is used for this purpose
-    :feedback_d: 'init' not a convention, but the __init__ method is created to initialize class variables.
+    :feedback_c: 'self' is not a keyword, but by convention is used to refer to the current object
+    :feedback_d: 'init' is not a keyword, but the __init__ method is created to initialize class variables.
 
-    _________ is a convention that is used to represent the instance of a class
-    and to access the attributes and methods of the class.
+    _________ is not a keyword, but by convention it is used to refer to the current instance (object) of a class.
 
 
 
@@ -163,13 +161,13 @@ Multiple Choice Questions
             self.type = type
 
         def stringPokemon(self):
-            print("Pokemon name is {} and type is {}".format(self.name, self.type))
+            print(f"Pokemon name is {self.name} and type is {self.type}")
 
       class GrassType(Pokemon):
 
         # overrides the stringPokemon() function on 'Pokemon' class
         def stringPokemon(self):
-            print("Grass type pokemon name is {}".format(self.name))
+            print(f"Grass type pokemon name is {self.name}")
 
      poke1 = GrassType('Bulbasaur', 'Grass')
      poke1.stringPokemon

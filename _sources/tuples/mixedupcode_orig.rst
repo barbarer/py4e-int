@@ -49,8 +49,8 @@ Mixed-Up Code Questions
 
         def testOne(self):
             self.assertEqual(length_word('but soft what light in yonder window breaks'), [(6, 'yonder'), (6, 'window'), (6, 'breaks'), (5, 'light'), (4, 'what'), (4, 'soft'), (3, 'but'), (2, 'in')], "length_word('but soft what light in yonder window breaks')")
-            self.assertEqual(length_word("hi bye"), [(3, 'bye'), (2, 'hi')], "length_word("hi bye")")
-            self.assertEqual(length_word("Hello"), [(5, 'Hello')], "length_word("Hello")")
+            self.assertEqual(length_word('hi bye'), [(3, 'bye'), (2, 'hi')], "length_word('hi bye')")
+            self.assertEqual(length_word('Hello'), [(5, 'Hello')], "length_word('Hello')")
 
     myTests().main()
 
@@ -71,13 +71,13 @@ Mixed-Up Code Questions
     =====
         for word in tup_list: #paired
     =====
-       	    tup = word, len(word)
+            tup = word, len(word)
     =====
-        	   tup_list.append(tup)
+            tup_list.append(tup)
     =====
-   	    	   word_list.append(tup) #paired
+            word_list.append(tup) #paired
     =====
-    	   tup_list.sort(key = lambda x: x[1], reverse = True)
+        tup_list.sort(key = lambda x: x[1], reverse = True)
     =====
    	    return tup_list
 
@@ -210,9 +210,9 @@ Mixed-Up Code Questions
     =====
             if isinstance(item,str):
     =====
-    		if item.isinstance(str): #paired
+            if item.isinstance(str): #paired
     =====
-    			count += 1
+                count += 1
     =====
                 count += item #paired
     =====
@@ -235,8 +235,8 @@ Mixed-Up Code Questions
 
         def testOne(self):
             self.assertEqual(count_strs((1, 2, 'hi')), 1, "count_strs((1, 2, 'hi'))")
-            self.assertEqual(count_words(('1', 2, 'hi')), 2, "count_words(('1', 2, 'hi'))")
-            self.assertEqual(count_words((1, 2)), 0, "count_words((1, 2))")
+            self.assertEqual(count_strs(('1', 2, 'hi')), 2, "count_strs(('1', 2, 'hi'))")
+            self.assertEqual(count_strs((1, 2)), 0, "count_strs((1, 2))")
 
 
     myTests().main()
@@ -449,11 +449,9 @@ Mixed-Up Code Questions
     -----
     def grocery(d):
     =====
-        grocery_dictionary = {'chicken': 5, 'lettuce': 3, 'orange juice': 4, 'bagels': 2.50, 'bacon': 4.25, 'bread': 8}
+        grocery_list = list(d.items())
     =====
-        grocery_list = list(grocery_dictionary.items())
-    =====
-        grocery_list = items(grocery_dictionary) #paired
+        grocery_list = items(d) #paired
     =====
         grocery_list.sort(key = lambda x: x[1])
     =====
