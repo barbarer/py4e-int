@@ -79,7 +79,7 @@ Mixed-Up Code Questions
     =====
         tup_list.sort(key = lambda x: x[1], reverse = True)
     =====
-   	    return tup_list
+        return tup_list
 
 .. activecode:: tup_mixedupcode_2_ac
     :autograde: unittest
@@ -342,8 +342,8 @@ Mixed-Up Code Questions
     :adaptive:
 
     Create a function called ``longest_word_lst`` that takes in a list of tuples, ``list_tup``, as a parameter and adds the longest word in each tuple and adds it to a list. Return this 
-    list. For example, ``longest_word_lst([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')])`` should return 
-    ``['apples', 'combining', 'twenty-four', 'tmobile']``.
+    list. For example, ``longest_word_lst([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')])`` 
+    should return``['apples', 'combining', 'twenty-four', 'tmobile']``.
     -----
     def longest_word_lst(lst_tup):
     =====
@@ -355,9 +355,9 @@ Mixed-Up Code Questions
     =====
             for item in tup:
     =====
-                    if len(item) > len(longest_word):
+                if len(item) > len(longest_word):
     =====
-                        longest_word = item
+                    longest_word = item
     =====
             lst.append(longest_word)
     =====
@@ -367,8 +367,8 @@ Mixed-Up Code Questions
     :autograde: unittest
 
     Write a function called ``longest_word_lst`` that takes in a list of tuples, ``list_tup``, as a parameter and adds the longest word in each tuple and adds it to a list. Return this 
-    list. For example, ``longest_word_lst([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')])`` should return 
-    ``['apples', 'combining', 'twenty-four', 'tmobile']``.
+    list. For example, ``longest_word_lst([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')])``
+    should return ``['apples', 'combining', 'twenty-four', 'tmobile']``.
     ~~~~
     def longest_word_lst(lst_tup):
         #write code here
@@ -440,7 +440,7 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``grocery`` that takes in a dictionary, ``d``, and changes ``d`` into a list of tuples, then sort the list by the dictionary's values in ascending order.
+    Create a function called ``grocery`` that takes in a dictionary, ``d``, changes ``d`` into a list of tuples, and then sorts the list by the dictionary's values in ascending order. 
     For example, ``grocery({'chicken': 5, 'lettuce': 3, 'orange juice': 4, 'bagels': 2.50, 'bacon': 4.25, 'bread': 8})`` should return ``[('bagels', 2.5), ('lettuce', 3), ('orange juice', 4), ('bacon', 4.25), ('chicken', 5), ('bread', 8)]``.
     -----
     def grocery(d):
