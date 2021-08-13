@@ -2,7 +2,7 @@ Mixed-Up Code Questions
 -----------------------
 
 .. selectquestion:: list_MUC_Password_creator_sq
-   :fromid: list_MUC_Password_creator, list_MUC_Password_creator_ac
+   :fromid: list_MUC_password_creator, list_MUC_password_creator_ac
    :toggle:
 
 .. selectquestion:: list_MUC_rainfall_v2_sq
