@@ -49,8 +49,8 @@ Mixed-Up Code Questions
 
         def testOne(self):
             self.assertEqual(length_word('but soft what light in yonder window breaks'), [(6, 'yonder'), (6, 'window'), (6, 'breaks'), (5, 'light'), (4, 'what'), (4, 'soft'), (3, 'but'), (2, 'in')], "length_word('but soft what light in yonder window breaks')")
-            self.assertEqual(length_word("hi bye"), [(3, 'bye'), (2, 'hi')], "length_word("hi bye")")
-            self.assertEqual(length_word("Hello"), [(5, 'Hello')], "length_word("Hello")")
+            self.assertEqual(length_word('hi bye'), [(3, 'bye'), (2, 'hi')], "length_word('hi bye')")
+            self.assertEqual(length_word('Hello'), [(5, 'Hello')], "length_word('Hello')")
 
     myTests().main()
 
@@ -71,15 +71,15 @@ Mixed-Up Code Questions
     =====
         for word in tup_list: #paired
     =====
-       	    tup = word, len(word)
+            tup = word, len(word)
     =====
-        	   tup_list.append(tup)
+            tup_list.append(tup)
     =====
-   	    	   word_list.append(tup) #paired
+            word_list.append(tup) #paired
     =====
-    	   tup_list.sort(key = lambda x: x[1], reverse = True)
+        tup_list.sort(key = lambda x: x[1], reverse = True)
     =====
-   	    return tup_list
+        return tup_list
 
 .. activecode:: tup_mixedupcode_2_ac
     :autograde: unittest
@@ -210,9 +210,9 @@ Mixed-Up Code Questions
     =====
             if isinstance(item,str):
     =====
-    		if item.isinstance(str): #paired
+            if item.isinstance(str): #paired
     =====
-    			count += 1
+                count += 1
     =====
                 count += item #paired
     =====
@@ -235,8 +235,8 @@ Mixed-Up Code Questions
 
         def testOne(self):
             self.assertEqual(count_strs((1, 2, 'hi')), 1, "count_strs((1, 2, 'hi'))")
-            self.assertEqual(count_words(('1', 2, 'hi')), 2, "count_words(('1', 2, 'hi'))")
-            self.assertEqual(count_words((1, 2)), 0, "count_words((1, 2))")
+            self.assertEqual(count_strs(('1', 2, 'hi')), 2, "count_strs(('1', 2, 'hi'))")
+            self.assertEqual(count_strs((1, 2)), 0, "count_strs((1, 2))")
 
 
     myTests().main()
@@ -342,8 +342,8 @@ Mixed-Up Code Questions
     :adaptive:
 
     Create a function called ``longest_word_lst`` that takes in a list of tuples, ``list_tup``, as a parameter and adds the longest word in each tuple and adds it to a list. Return this 
-    list. For example, ``longest_word_lst([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')])`` should return 
-    ``['apples', 'combining', 'twenty-four', 'tmobile']``.
+    list. For example, ``longest_word_lst([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')])`` 
+    should return``['apples', 'combining', 'twenty-four', 'tmobile']``.
     -----
     def longest_word_lst(lst_tup):
     =====
@@ -353,15 +353,11 @@ Mixed-Up Code Questions
     =====
             longest_word = ''
     =====
-    	    longest_word = 0 #paired
+            for item in tup:
     =====
-    	    for item in tup:
+                if len(item) > len(longest_word):
     =====
-    		     if len(item) > len(longest_word):
-    =====
-    			       longest_word = item
-    =====
-    			       longest_word = len(item) #paired
+                    longest_word = item
     =====
             lst.append(longest_word)
     =====
@@ -371,8 +367,8 @@ Mixed-Up Code Questions
     :autograde: unittest
 
     Write a function called ``longest_word_lst`` that takes in a list of tuples, ``list_tup``, as a parameter and adds the longest word in each tuple and adds it to a list. Return this 
-    list. For example, ``longest_word_lst([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')])`` should return 
-    ``['apples', 'combining', 'twenty-four', 'tmobile']``.
+    list. For example, ``longest_word_lst([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')])``
+    should return ``['apples', 'combining', 'twenty-four', 'tmobile']``.
     ~~~~
     def longest_word_lst(lst_tup):
         #write code here
@@ -383,11 +379,11 @@ Mixed-Up Code Questions
     class myTests(TestCaseGui):
 
         def testOne(self):
-            self.assertEqual(longest_word([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')]), ['apples', 'combining', 'twenty-four', 'tmobile'], "longest_word([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')])")
-            self.assertEqual(longest_word([(),()]), ['', ''], "longest_word([(),()])")
-            self.assertEqual(longest_word([('twice', 'twice'),('rabbit','dragon','rooster')]), ['twice', 'rooster'], "longest_word([('twice', 'twice'),('rabbit','dragon','rooster')])")
-            self.assertEqual(longest_word((('2','22'), ('1'))), ['22', '1'], "longest_word((('2','22'), ('1')))")
-            self.assertEqual(longest_word((('2 0 2 0 2','22'), ('1'))), ['2 0 2 0 2', '1'], "longest_word((('2 0 2 0 2','22'), ('1')))")
+            self.assertEqual(longest_word_lst([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')]), ['apples', 'combining', 'twenty-four', 'tmobile'], "longest_word_lst([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')])")
+            self.assertEqual(longest_word_lst([(),()]), ['', ''], "longest_word_lst([(),()])")
+            self.assertEqual(longest_word_lst([('twice', 'twice'),('rabbit','dragon','rooster')]), ['twice', 'rooster'], "longest_word_lst([('twice', 'twice'),('rabbit','dragon','rooster')])")
+            self.assertEqual(longest_word_lst((('2','22'), ('1'))), ['22', '1'], "longest_word_lst((('2','22'), ('1')))")
+            self.assertEqual(longest_word_lst((('2 0 2 0 2','22'), ('1'))), ['2 0 2 0 2', '1'], "longest_word_lst((('2 0 2 0 2','22'), ('1')))")
 
     myTests().main()
 
@@ -444,16 +440,14 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``grocery`` that takes in a dictionary, ``d``, and changes ``d`` into a list of tuples, then sort the list by the dictionary's values in ascending order.
+    Create a function called ``grocery`` that takes in a dictionary, ``d``, changes ``d`` into a list of tuples, and then sorts the list by the dictionary's values in ascending order. 
     For example, ``grocery({'chicken': 5, 'lettuce': 3, 'orange juice': 4, 'bagels': 2.50, 'bacon': 4.25, 'bread': 8})`` should return ``[('bagels', 2.5), ('lettuce', 3), ('orange juice', 4), ('bacon', 4.25), ('chicken', 5), ('bread', 8)]``.
     -----
     def grocery(d):
     =====
-        grocery_dictionary = {'chicken': 5, 'lettuce': 3, 'orange juice': 4, 'bagels': 2.50, 'bacon': 4.25, 'bread': 8}
+        grocery_list = list(d.items())
     =====
-        grocery_list = list(grocery_dictionary.items())
-    =====
-        grocery_list = items(grocery_dictionary) #paired
+        grocery_list = items(d) #paired
     =====
         grocery_list.sort(key = lambda x: x[1])
     =====
