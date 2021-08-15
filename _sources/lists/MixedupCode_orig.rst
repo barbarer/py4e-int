@@ -253,11 +253,19 @@ Mixed-up Code Questions
     =====
         for word in terms:
     =====
+<<<<<<< HEAD
+        if response not in wordList:
+    =====
+        if response in wordList: #paired
+    =====
+            vocabulary.append(response)
+=======
             if word not in vocab:
     =====
             if word !in vocab: #paired
     =====
                 vocab.append(word)
+>>>>>>> upstream/master
     =====
                 word.append(vocab) #paired
     =====
