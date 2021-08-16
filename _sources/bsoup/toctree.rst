@@ -78,9 +78,6 @@ Putting it together
    activity-writing-3.rst
    activity-debugging.rst
    activity-explaining.rst
-   Exercises.rst
-   bs4_mixedupcode.rst
-   writecode.rst
 
 Download the plans
 ::::::::::::::::::
@@ -89,3 +86,13 @@ Download the plans
    :maxdepth: 1
 
    downloads.rst
+
+Practice problems
+::::::::::::::::::::::
+
+.. toctree::
+   :maxdepth: 1
+   
+   Exercises.rst
+   mixedupcode.rst
+   writecode.rst
