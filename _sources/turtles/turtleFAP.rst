@@ -29,7 +29,7 @@ Turtles can do more than go forward, turn left, and turn right.  The table below
 Name        Input       Description
 ==========  ==========  =========================
 backward    amount        Moves the turle backward by the specified amount
-color       colorname     Sets the color for drawing.  Use 'red', 'black', etc
+color       colorname     Sets the pen color for drawing.  Use 'red', 'black', etc
 forward     amount        Moves the turtle forward by the specified amount
 goto        x,y           Moves the turtle to position x,y
 left        angle         Turns the turtle counter clockwise by the specified angle
@@ -86,13 +86,13 @@ The program below uses the ``goto(x,y)`` to move to the top left corner before d
     space = Screen()      # create a turtle space
     anu = Turtle()        # create a turtle named anu
     anu.penup()           # pick up the pen (don't draw)
-    anu.goto(-150,150)    # go to the top left corner
+    anu.goto(-75,150)     # go to a location
     anu.pendown()         # put down the pen
     anu.right(180)        # turn to face west
     anu.forward(75)       # move forward by 75 units
-    anu.right(90)         # turn right 90 degrees
+    anu.left(90)          # turn right 90 degrees
     anu.forward(100)      # more forward by 90 units
-    anu.right(90)         # turn right 90 degrees
+    anu.left(90)          # turn right 90 degrees
     anu.forward(75)       # move forward by 75 units
 
 
@@ -123,19 +123,19 @@ The program below uses the ``goto(x,y)`` to move to the top left corner before d
    anu.forward(50)
    =====
    anu.left(90)
-   anu.forward(50) #distractor
+   anu.forward(50) #paired
    =====
    anu.penup()
    =====
-   anu.penUp() #distractor
+   anu.penUp() #paired
    =====
    anu.goto(0,60)
    =====
-   anu.goTo(0,60) #distractor
+   anu.goTo(0,60) #paired
    =====
    anu.pendown()
    =====
-   anu.penDown() #distractor
+   anu.penDown() #paired
    =====
    anu.forward(50)
 
@@ -153,17 +153,17 @@ The program below uses the ``goto(x,y)`` to move to the top left corner before d
    =====
    space = Screen()
    =====
-   space = screen() #distractor
+   space = screen() #paired
    =====
    ella = Turtle()
    =====
-   ella = Turtle #distractor
+   ella = Turtle #paired
    =====
    ella.left(60)
    ella.forward(100)
    =====
    ella.left(60)
-   ella.forward() #distractor
+   ella.forward() #paired
    =====
    ella.right(120)
    ella.forward(100)
@@ -176,7 +176,7 @@ The program below uses the ``goto(x,y)`` to move to the top left corner before d
    ella.forward(40)
    =====
    ella.Left(60)
-   ella.forward(40) #distractor
+   ella.forward(40) #paired
 
 You can change the color and pensize that you draw with as well.
 
@@ -188,12 +188,12 @@ You can change the color and pensize that you draw with as well.
     from turtle import *   # use the turtle library
     space = Screen()       # create a turtle space
     anu = Turtle()         # create a turtle named anu
-    anu.color('red')       # set the color to red
+    anu.color('red')       # set the pen color to red
     anu.pensize(25)        # set the size of the pen
     anu.right(180)         # turn right by 180 degrees
     anu.forward(75)        # move forward by 75 units
     anu.right(90)          # turn right 90 degrees
-    anu.color('blue')      # set the color to blue
+    anu.color('blue')      # set the pen color to blue
     anu.pensize(50)        # set the pen size to 10
     anu.forward(100)       # move forward by 100 units
 

@@ -7,28 +7,22 @@ Students will know and be able to do the following.
 
 *Content Objectives:*
 
-* Read a class definition
-* Learn what a constructor is and what it does
-* Learn what the __str__ method does
-* Identify class attributes and methods
+* Identify the parts of a class
+* Explain what a constructor is and what it does
+* Explain what the __str__ method does
+* Explain the difference(s) between a function and method.
 * Create new objects and name them
 * Create new methods
 
-Look the code below.
-
-.. fillintheblank:: obj_fitb_book_l1
-
-    When you run the following code it will print multiple lines, what is the first thing that will be printed when the code below runs?
-
-    - :title\: A Wrinkle in Time author\: M. L'Engle: Yes, it will print the result of calling __str__ b2.
-      :A: It will print what is returned from the __str__ method.
-      :.*: Execution starts in the main method.  Printing an object will call __str__ on the object and print the returned string.
+Look the code below.  It defines a class.  it also declares *methods* which are functions that are defined inside of a class.
+One of the methods is automatically called when a new object is created by the class.  One of the methods is automatically
+called when you print an object of the class.
 
 
 A Book Class
 ======================================================
 
-.. activecode:: class_book_ac1
+.. activecode:: class_book_ac1_v2
     :caption: A class to represent a book
 
     Run the following code
@@ -43,22 +37,8 @@ A Book Class
         def __str__(self):
             return "title: " + self.title + " author: " + self.author
 
-        def get_title(self):
-            return self.title
-
-        def get_author(self):
-            return self.get_author
-
-        def set_author(self, author):
-            self.author = author
-
-        def set_title(self, title):
-            self.title = title
-
     def main():
          b2 = Book("A Wrinkle in Time", "M. L'Engle")
-         print(b2)
-         b2.set_author("Madeleine L'Engle")
          print(b2)
          b1 = Book("Goodnight Moon", "Margaret Wise Brown")
          print(b1)
@@ -79,23 +59,31 @@ Look at the class definition.  It starts with the keyword ``class``.  Then answe
 
     What is the name of the method that is called when the object is created?
 
-    - :__init__: Good job!  This is called the constructor, but it actually initializes the object's attributes.
+    - :__init__: Good job!  The __init__ method is called when an object is created.
+      :init: Almost.  The method name includes underscores.
       :.*: This method initializes the object's attributes
+
+.. shortanswer:: class_what_is_init
+
+   Describe in your own words what the ``__init__`` method does.
 
 .. fillintheblank:: class_fitb_book_str
 
     What is the name of the method that is called when the object is printed?
 
-    - :__str__: Good job!  This method is called when you print an object of this class.
+    - :__str__: Good job!  This method is called when you print an object of a class.
       :str: Not quite, the name of the method includes underscores.
       :.*: This method returns a string with the values of the attributes
 
+.. shortanswer:: class_what_is_str
+
+   Describe in your own words what the ``__str__`` method does.
 
 .. fillintheblank:: class_fitb_attribute_num
 
     How many attributes does an object of the Book class have?
 
-    - :2|two|Two: Good Job!  The attributes are initialized in the __init__ method (also known as the constructor).
+    - :2|two|Two|TWO: Good Job!  The attributes are initialized in the __init__ method (also known as the constructor).
       :.*: Attributes are initialized in the __init__ method
 
 
@@ -103,7 +91,7 @@ Look at the class definition.  It starts with the keyword ``class``.  Then answe
     :practice: T
     :question: Click on all of the method names in the code below.
     :iscode:
-    :feedback: The method name in a class is the name of the function.
+    :feedback: Method names are the names of functions that are defined in a class.
 
     :click-incorrect:class:endclick: :click-incorrect:Book::endclick:
         :click-incorrect:""" Represents a book object """:endclick:
@@ -115,17 +103,20 @@ Look at the class definition.  It starts with the keyword ``class``.  Then answe
         :click-incorrect:def:endclick: :click-correct:__str__:endclick::click-incorrect:(self)::endclick:
             :click-incorrect:return "title: " + self.title + " author: " + self.author:endclick:
 
-        :click-incorrect:def:endclick: :click-correct:get_title:endclick::click-incorrect:(self)::endclick:
-            :click-incorrect:return self.title:endclick:
-
         :click-incorrect:def:endclick: :click-correct:get_author:endclick::click-incorrect:(self)::endclick:
-            :click-incorrect:return self.get_author:endclick:
+            :click-incorrect:return self.author:endclick:
 
-        :click-incorrect:def:endclick: :click-correct:set_author:endclick::click-incorrect:(self, author)::endclick:
-            :click-incorrect:self.author = author:endclick:
+    :click-incorrect:def:endclick: :click-incorrect:main()::endclick:
+         :click-incorrect:b2 = Book("A Wrinkle in Time", "M. L'Engle"):endclick:
+         :click-incorrect:print(b2):endclick:
+         :click-incorrect:b1 = Book("Goodnight Moon", "Margaret Wise Brown"):endclick:
+         :click-incorrect:print(b1):endclick:
 
-        :click-incorrect:def:endclick: :click-correct:set_title:endclick::click-incorrect:(self, title)::endclick:
-            :click-incorrect:self.title = title:endclick:
+    :click-incorrect:main():endclick:
+
+.. shortanswer:: class_diff_function_method
+
+   Describe in your own words what is/are the difference(s) between a function and a method.
 
 .. fillintheblank:: class_fitb_first_parameter
 
@@ -133,32 +124,6 @@ Look at the class definition.  It starts with the keyword ``class``.  Then answe
 
     - :self: Good job!
       :.*: The parameters are in () after the method name
-
-
-Now look at the main function in the code above and answer the following questions.
-
-.. fillintheblank:: class_fitb_book_num_objs
-
-    How many objects were created in the main function?
-
-    - :2|two|Two|TWO: Two book objects were created.
-      :.*: Each call to Book() creates a new object
-
-
-.. fillintheblank:: class_fitb_book_first_name
-
-    What name was assigned to the first Book object that was created?
-
-    - :b2: The first book object that was created was called b2.
-      :.*: Each call to Book() creates a new object and returns it
-
-.. fillintheblank:: class_fitb_book_second_name
-
-    What name was assigned to the second Book object that was created?
-
-    - :b1: The second book object that was created was called b1.
-      :.*: Each call to Book() creates a new object and returns it
-
 
 .. parsonsprob:: class-pp-person
    :numbered: left
@@ -188,10 +153,14 @@ Now look at the main function in the code above and answer the following questio
    =====
            return first + " " + last #paired
 
+.. shortanswer:: class_what_is_self
+
+   Describe in your own words what ``self`` means.
+
 Create More Book Objects
 ======================================================
 
-.. activecode:: class_book_ac2
+.. activecode:: class_book_ac2_v2
     :caption: A class to represent a book
 
     Change the following main function to create a third book object called b3 with a title of "1984" and author "George Orwell".  Print out the values using the print function in the main.
@@ -206,22 +175,8 @@ Create More Book Objects
         def __str__(self):
             return "title: " + self.title + " author: " + self.author
 
-        def get_title(self):
-            return self.title
-
-        def get_author(self):
-            return self.get_author
-
-        def set_author(self, author):
-            self.author = author
-
-        def set_title(self, title):
-            self.title = title
-
     def main():
         b2 = Book("A Wrinkle in Time", "M. L'Engle")
-        print(b2)
-        b2.set_author("Madeleine L'Engle")
         print(b2)
         b1 = Book("Goodnight Moon", "Margaret Wise Brown")
         print(b1)
@@ -250,15 +205,15 @@ Create More Book Objects
     main()
 
 
-Add Methods to Classes
+Add a Method to a Class
 ======================================================
 
 .. activecode:: class_person_init_ac1
     :caption: A class to represent a Person
 
-    Change the following Person class to add an initials method that returns
+    Change the following Person class to add an ``initials`` method that returns
     a string with the first letter in the first name and the first letter in
-    the last name
+    the last name in lowercase.
     ~~~~
     class Person:
         """ Represents a person object """

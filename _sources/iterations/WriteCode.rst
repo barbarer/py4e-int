@@ -7,9 +7,11 @@ Write Code Questions
 
         .. tab:: Question
 
+
+
             .. activecode:: itr-ex-countdownq
                 :practice: T
-                
+
                 Fix the 5 errors in the code below to print a countdown of the numbers from 10 to 0, including 0.
                 ~~~~
                 def countdown():
@@ -26,6 +28,7 @@ Write Code Questions
 
                 Fix the 5 errors in the code below to print a countdown of the numbers from 10 to 0, including 0.
                 ~~~~
+
                 def countdown():
                     counter = 10
                     # Keep running loop until counter equals 0 (use <=)
@@ -50,17 +53,18 @@ Write Code Questions
             print(x)
             x = x + 1
 
+
 #.
     .. tabbed:: itr-ex-count
 
         .. tab:: Question
 
+            Make 5 changes to the code below to correctly print a count up from -10 to 0, including 0.
+
             .. activecode:: itr-ex-countq
                 :practice: T
                 :autograde: unittest
 
-                Make 5 changes to the code below to correctly print a count up from -10 to 0, including 0.
-                ~~~~
                 output = ""
                 x = -10
                 while x < 0
@@ -82,8 +86,6 @@ Write Code Questions
 
             .. activecode:: itr-ex-counta
 
-                Make 5 changes to the code below to correctly print a count up from -10 to 0, including 0.
-                ~~~~
                 output = ""
                 # Start x at -11 so it stays under 0
                 x = -11
@@ -126,12 +128,12 @@ Write Code Questions
 
         .. tab:: Question
 
+            Complete the code on lines 4 and 6 so that it prints the number 6.
+
             .. activecode:: itr-ex-sixq
                 :practice: T
                 :autograde: unittest
 
-                Complete the code on lines 4 and 6 so that it prints the number 6.
-                ~~~~
                 x = 3
                 i = 0
                 while i < 3:
@@ -152,8 +154,6 @@ Write Code Questions
 
             .. activecode:: itr-ex-sixa
 
-                Complete the code on lines 4 and 6 so that it prints the number 6.
-                ~~~~
                 x = 3
                 i = 0
                 while i < 3:
@@ -185,14 +185,14 @@ Write Code Questions
 
         .. tab:: Question
 
+            This function currently takes a start and stop argument and uses a for
+            loop to find the sum of all the numbers between them (inclusive). Change
+            the for loop to a while loop while still using the same parameters.
+
             .. activecode:: int-ex-inclusiveq
                 :practice: T
                 :autograde: unittest
 
-                This function currently takes a start and stop argument and uses a for
-                loop to find the sum of all the numbers between them (inclusive). Change
-                the for loop to a while loop while still using the same parameters.
-                ~~~~
                 def sumFunc(start, stop):
                     sum = 0
                     for num in range(start, stop + 1):
@@ -203,7 +203,7 @@ Write Code Questions
 
                 ====
                 from unittest.gui import TestCaseGui
-                
+
                 class myTests(TestCaseGui):
 
                     def testOne(self):
@@ -219,10 +219,6 @@ Write Code Questions
 
             .. activecode:: int-ex-inclusivea
 
-                This function currently takes a start and stop argument and uses a for
-                loop to find the sum of all the numbers between them (inclusive). Change
-                the for loop to a while loop while still using the same parameters.
-                ~~~~
                 def sumFunc(start, stop):
                     sum = 0
                     # Create an iteration variable, initialized to the start argument
@@ -256,13 +252,12 @@ Write Code Questions
 
         .. tab:: Question
 
+            The following code prints the times tables for 1 to 3 using two for loops.
+            Rewrite the program to use a while and a for loop instead.
 
             .. activecode::  int-ex-timesWhileq
                 :nocodelens:
 
-                The following code prints the times tables for 1 to 3 using two for loops.
-                Rewrite the program to use a while and a for loop instead.
-                ~~~~
                 for x in range(1, 4):
                     for y in range(1, 4):
                         print(str(x) + " * " + str(y) + " = " + str(x * y))
@@ -272,9 +267,6 @@ Write Code Questions
             .. activecode:: int-ex-timesWhileA
                 :optional:
 
-                The following code prints the times tables for 1 to 3 using two for loops.
-                Rewrite the program to use a while and a for loop instead.
-                ~~~~
                 # There are a few different ways this can be done
                 # One is shown here
 

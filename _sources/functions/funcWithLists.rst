@@ -10,33 +10,50 @@ Students will know and be able to do the following.
 
 *Content Objectives:*
 
-* Learn how to access items in a list with positive and negative indices.
-* Recognize built-in functions that work on lists (len, max, min, sum).
-* Recognize list methods (append, pop, extend, sort, reverse, index).
-* Learn how to use the slice operator to copy parts of a list.
+* Use positive and negative indices to access elements of a list.
+* Identify the purpose of common list methods and common methods that take lists as parameters
+* Use the slice operator to copy parts of a list.
 
 *Process Objectives:*
 
-* Predict the outcome of code with lists
+* Predict the output of code with lists (Information Processing)
+* Write code using the slice operator (Assessment)
 
-Lists
+List Indexing
 ============================
 
 A list holds items in order and you can get the value at an index, just like you can with strings.
 
-.. fillintheblank:: funct_ll_list_check_first_line
+.. activecode:: func_ll_ac_list_check_start
+    :caption: Accessing list values at indices
 
-    What is the first thing that will be printed when the code below runs?
+    Run this code to see what it prints.
+    ~~~~
+    # function definition
+    def list_check(alist):
+        print(alist[0])
+
+    # function definition
+    def main():
+        list_check([1, 2, 5])
+        list_check(['hi', 'bye'])
+
+    # function call
+    main()
+
+.. fillintheblank:: funct_ll_list_check_start_first_line
+
+    What is the first thing that is printed when the code above runs?
 
     - :1: It will print the item at index 0 in alist.
       :.*: What is the item at index 0 in the passed list?
 
-.. fillintheblank:: funct_ll_list_check_last_line
+.. fillintheblank:: funct_ll_list_check_start_last_line
 
-    What is the last thing that will be printed when the code below runs?
+    What is the last thing that is printed when the code above runs?
 
-    - :'?bye'?: It will print the item at the end of the list in the second call to the function.
-      :.*: What is the last item in the list in the second call?
+    - :'?hi'?: It will print the first item in the second list.
+      :.*: What is the first item in the list in the second call?
 
 .. activecode:: func_ll_ac_list_check
     :caption: Accessing list values at indices
@@ -45,15 +62,14 @@ A list holds items in order and you can get the value at an index, just like you
     ~~~~
     # function definition
     def list_check(alist):
-        print(alist[0])
         print(alist[1])
         print(len(alist))
         print(alist[-1])
 
     # function definition
     def main():
-        list_check([1, 2, 5])
-        list_check(['hi', 'bye'])
+        list_check([4, 5, 6])
+        list_check(['blue', 'red'])
 
     # function call
     main()
@@ -82,25 +98,40 @@ A list holds items in order and you can get the value at an index, just like you
     - :-1: The last item in a list is at index -1, which is the length of the list - 1.
       :.*: Try again!
 
+.. mchoice:: list_neg_2_result
+    :answer_a: hi
+    :answer_b: 3
+    :answer_c: buy
+    :answer_d: 4
+    :answer_e: Nothing, there will be an error.
+    :correct: c
+    :feedback_a: This would be true if it was returning the item at index 0 or -4.
+    :feedback_b: This would be true if it was returning the item at index 1 or -3.
+    :feedback_c: This is returning the second to the last item, the one at index -2.
+    :feedback_d: This would be true if it was returning the item at index 3 or -1.
+    :feedback_e: This code will run without any errors.
+
+    What will the following code print?
+
+    .. code-block:: python
+
+        def list_get(lst):
+            return lst[-2]
+        l = ["hi", 3, 'buy', 4]
+        print(list_get(l))
+
+.. shortanswer:: list_index_negative_indices
+
+   Describe in your own words how negative indices work.
+
+.. shortanswer:: list_index_of_len_of_list_sa
+
+   What happens if you modify the code above to use an index that is larger than the length of the list?  What happens if you modify the code above to use an index that is equal to the length of list?  Why does this happen?
+
 Built-in Functions That Work on Lists
 ========================================
 
 There are several built-in functions in Python that work on lists.
-
-.. fillintheblank:: funct_ll_list_func_first
-
-    What is the first value that will be printed when the code below runs?
-
-    - :3: It will print the maximum value in the first list, which is 3.
-      :.*: What is the maximum value in the first list that is passed to the function?
-
-.. fillintheblank:: funct_ll_list_func_last
-
-    What is the last value that will be printed when the code below runs?
-
-    - :95\.0: It will print the average of the values in the last list that is passed to the function.
-      :95: This will print a floating point (will have a decimal and at least one digit after the decimal) result not an integer result.
-      :.*: What is the average of the items in the last list that is passed to the function?
 
 .. activecode:: func_ll_ac_list_func
     :caption: List methods
@@ -123,6 +154,29 @@ There are several built-in functions in Python that work on lists.
     # function call
     main()
 
+.. activecode:: avg_drop_high_and_low
+   :autograde: unittest
+   :nocodelens:
+
+
+   Write a function ``avg_with_drop`` that takes a list, ``num_list`` and returns the average of the values in the list, but it does not include the highest or lowest value in the average. For example, ``avg_with_drop([1,2,3,4])`` should return ``2.5``.
+   ~~~~
+   def avg_with_drop(num_list):
+
+   ====
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+       def testOne(self):
+           self.assertEqual(avg_with_drop([1,2,3,4]), 2.5, 'avg_with_drop([1,2,3,4])')
+           self.assertEqual(avg_with_drop([2,4,6,8]), 5, 'avg_with_drop([2,4,6,8])')
+           self.assertEqual(avg_with_drop([10, 80, 100, 60]), 70, 'avg_with_drop([10, 80, 100, 60])')
+           self.assertEqual(avg_with_drop([-10, 80, 120, 60]), 70, 'avg_with_drop([-10, 80, 120, 60])')
+           self.assertEqual(avg_with_drop([5, 10, 15, 20]), 12.5, 'avg_with_drop([5, 10, 15, 20])')
+
+   myTests().main()
+
 .. dragndrop:: func_ll_dnd_funct
     :practice: T
     :feedback: Read the chapter on functions and try again.
@@ -133,17 +187,12 @@ There are several built-in functions in Python that work on lists.
 
     Drag each built-in function name to what it does.
 
+
+
 List Methods
 ===============
 
 Lists are objects of the ``list`` class and have methods that operate on list objects.
-
-.. fillintheblank:: funct_ll_list_methods_first
-
-    What is the second thing that will be printed when the code below runs?
-
-    - :\[1\]: It will print the contents of the passed list
-      :.*: What does alist equal at the start of the function the first time the function is called?
 
 .. activecode:: func_ll_ac_list_methods
     :caption: List methods
@@ -175,6 +224,49 @@ Lists are objects of the ``list`` class and have methods that operate on list ob
     # function call
     main()
 
+.. fillintheblank:: funct_ll_list_type
+
+    What class (type) is a list?
+
+    - :list: A list is of the class ``list``.
+      :.*: What is the first thing printed from the code above?
+
+.. shortanswer:: list_what_does_pop_do
+
+   Describe in your own words what ``pop`` does.
+
+.. shortanswer:: list_what_does_append
+
+   Describe in your own words what ``append`` does.
+
+.. shortanswer:: list_what_does_extend
+
+   Describe in your own words what ``extend`` does. How is it different from ``append``?
+
+.. mchoice:: funct_list_append_pop_predict
+    :answer_a: [2, 5, 7, 3]
+    :answer_b: [5, 7, 3]
+    :answer_c: [2, 7, 3]
+    :answer_d: [2, 5, 7]
+    :answer_e: [2, 5, 3]
+    :correct: e
+    :feedback_a: This is what the list looks like before the pop exeuctes.
+    :feedback_b: This would be true if pop removed the first value that was passed in, but it takes an index and removes the item at that index.
+    :feedback_c: This would be true if pop removed the item at index 1, but it removes the item at index 2 and the first item is at index 0.
+    :feedback_d: This would be true if pop removed the last item, but it removes the one at index 2.
+    :feedback_e: Correct.  This adds 3 at the end and then removes the item at index 2.
+
+    What would the following code print?
+
+    .. code-block:: python
+
+        def list_trans(lst):
+            lst.append(3)
+            lst.pop(2)
+            return lst
+        l1 = [2, 5, 7]
+        print(list_trans(l1))
+
 .. Note::
 
    Lists are mutable (changeable).  List methods like append and pop change the current list.
@@ -191,6 +283,8 @@ Lists are objects of the ``list`` class and have methods that operate on list ob
         print(alist)
         alist.sort()
         print(alist)
+        alist.sort(reverse = True)
+        print(alist)
 
     # function definition
     def main():
@@ -204,38 +298,47 @@ Lists are objects of the ``list`` class and have methods that operate on list ob
     # function call
     main()
 
+
+.. mchoice:: funct_list_result_of_reverse
+    :answer_a: None
+    :answer_b: [2, 5, 7]
+    :answer_c: [7, 5, 2]]
+    :answer_d: Nothing, there will be an error.
+    :correct: a
+    :feedback_a: It prints the return value from the reverse method which is None.
+    :feedback_b: This would be true if it printed the value of
+    :feedback_c: This would be true if pop removed the item at index 1, but it removes the item at index 2 and the first item is at index 0.
+    :feedback_d: This would be true if pop removed the last item, but it removes the one at index 2.
+    :feedback_e: Correct.  This adds 3 at the end and then removes the item at index 2.
+
+    What is the last thing the following code prints?
+
+    .. code-block:: python
+
+        def list_trans(lst):
+            r = lst.reverse()
+            print(lst)
+            print(r)
+
+        l1 = [2, 5, 7]
+        list_trans(l1)
+
 .. dragndrop:: func_ll_dnd_func_methods
     :practice: T
     :feedback: Read the chapter on functions and try again.
-    :match_1: pop|||Removes the value at the specified index.
-    :match_2: append|||Adds the value or list at the end of the current list.
-    :match_3: extend|||Adds the contents of the passed list to the end of the current list.
-    :match_4: sort|||Sort the contents of the list in ascending order.
-    :match_5: reverse|||Reverse the contents of the list.
+    :match_1: pop(index)|||Removes the value at the specified index.
+    :match_2: append(item)|||Adds the items (value or list) to the end of the current list.
+    :match_3: extend(list)|||Adds all the contents of the passed list to the end of the current list.
+    :match_4: sort()|||Sort the contents of the list in ascending order.
+    :match_5: reverse()|||Reverse the contents of the list.
 
     Drag each built-in function name to what it does.
 
 Using the Slice Operator
 ============================
 
-You can use the slice operator[n:m] with lists to make a copy of the list with all items
-from n to m - 1, just like you can with strings.
+You can use the slice operator[n:m] with lists to get a new list just like you can with strings.
 
-.. fillintheblank:: funct_ll_fitb_slice_first
-    :practice: T
-
-    How many items will be in the first list that is printed below?
-
-    - :4: It will print the result of copying the first list which has 4 items.
-      :.*: Run the code to check.
-
-.. fillintheblank:: funct_ll_fitb_slice_last
-    :practice: T
-
-    How many items will be in the last list that is printed below?
-
-    - :4: The slice operator does not change the original list.  It makes a new list.
-      :.*: Run the code to check.
 
 .. activecode:: func_ll_ac_list_slice
     :caption: Add tests
@@ -263,9 +366,44 @@ from n to m - 1, just like you can with strings.
     # function call
     main()
 
+
+.. fillintheblank:: funct_ll_fitb_slice_def_first
+    :practice: T
+
+    In ``[:2]`` what is the start index?
+
+    - :0: If the start index isn't specified it is 0.
+      :.*: Run the code above to check.
+
+.. shortanswer:: list_def_end_index_sa
+
+   In ``[2:]`` what is the end index?
+
 .. note::
 
-   The slice operator always returns a new object.  It doesn't change the current object (list or string). 
+   The slice operator always returns a new object.  It doesn't change the current object (list or string).
+
+
+.. mchoice:: funct_list_neg_slice
+    :answer_a: [2, 3, 4, 5]
+    :answer_b: [2, 3, 4]
+    :answer_c: [3, 4, 5]
+    :answer_d: [3, 4]
+    :answer_e: Nothing, there will be an error.
+    :correct: d
+    :feedback_a: It returns items starting from the 3rd from the right and ending before the last.
+    :feedback_b: It returns items starting from the 3rd from the right and ending before the last.
+    :feedback_c: It returns items starting from the 3rd from the right and ending before the last.
+    :feedback_d: It returns items starting from the 3rd from the right and ending before the last.
+    :feedback_e: The code will run withtout an error.
+
+    What does the following code print?
+
+    .. code-block:: python
+
+        alist = [1, 2, 3, 4, 5]
+        l2 = alist[-3: -1]
+        print(l2)
 
 .. activecode:: fuct_ac_list_first_half
    :autograde: unittest

@@ -31,11 +31,11 @@ Functions with Lists Multiple Choice Questions
     :answer_d: -5
     :answer_e: -4
     :correct: a, e
-    :feedback_a: Correct!
+    :feedback_a: Correct! This will remove the number at index 0.
     :feedback_b: Incorrect! The built-in function, pop, removes the value from a list, lst, at a specified index, num.
     :feedback_c: Incorrect! The built-in function, pop, removes the value from a list, lst, at a specified index, num.
     :feedback_d: Incorrect! The built-in function, pop, removes the value from a list, lst, at a specified index, num.
-    :feedback_e: Correct!
+    :feedback_e: Correct! This will remove the number at index 0.
 
     Which values of ``num`` would not return an error if ``lst`` were ``[0, 4, -4, 2.5]``?
 
@@ -54,7 +54,7 @@ Functions with Lists Multiple Choice Questions
     :correct: c
     :feedback_a: Incorrect! The built-in function append adds a list to the end of a list. The built-in function extend adds the values of a list to the end of a list.
     :feedback_b: Incorrect! The built-in function append adds a list to the end of a list. The built-in function extend adds the values of a list to the end of a list.
-    :feedback_c: Correct!
+    :feedback_c: Correct! If the item you are appending is a list it is added as a list, while extend adds the values in the list.
     :feedback_d: Incorrect! The built-in function append adds a list to the end of a list. The built-in function extend adds the values of a list to the end of a list.
     :feedback_e: Incorrect! The built-in function append adds a list to the end of a list. The built-in function extend adds the values of a list to the end of a list.
 
@@ -76,10 +76,10 @@ Functions with Lists Multiple Choice Questions
     :answer_e: elif not(len(lst1) is not len(lst2)):
     :correct: b, c, e
     :feedback_a: Incorrect! A single equal sign is the assignment operator.
-    :feedback_b: Correct!
-    :feedback_c: Correct!
+    :feedback_b: Correct! This checks if they are the same length.
+    :feedback_c: Correct! This checks that the length of lst1 is not greater or less than lst2.
     :feedback_d: Incorrect! When an or operator is used with two statements, only one of the statements has to be true in order for the entire statement to pass as true.
-    :feedback_e: Correct!
+    :feedback_e: Correct! This checks if it is not true that the len of lst1 is not the same as the length of lst2.
 
     Which of the following would correctly replace the else statement?
 
@@ -101,8 +101,8 @@ Functions with Lists Multiple Choice Questions
     :answer_d: return lst.reverse()
     :answer_e: lst_reverse = lst_reverse.reverse(), return lst
     :correct: a, b
-    :feedback_a: Correct! Although it properly returns a reversed list, it is unnecessary to assign the reverse method to a variable.
-    :feedback_b: Correct!
+    :feedback_a: Correct! Although it properly returns a reversed list, it is unnecessary to assign the reverse method to a variable. Reverse returns None.
+    :feedback_b: Correct! This will reverse the list and then return it.  Reverse returns None.
     :feedback_c: Incorrect! The built-in python function, reverse, does not need to be assigned to a new variable.
     :feedback_d: Incorrect! The built-in python function, reverse, has to be used on the list before the list can be returned.
     :feedback_e: Incorrect! This code does not modify lst, the passed in parameter.

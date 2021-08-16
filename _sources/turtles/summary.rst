@@ -34,13 +34,17 @@ This chapter included the following concepts from computing.
 Summary of Turtle Methods
 --------------------------------------------
 
-The table below shows the turtle methods that we have covered so far.
+The table below shows some of the turtle methods that you might find useful.  See https://docs.python.org/3/library/turtle.html for a complete list.
 
-==========  ==========  =========================
-Name        Input       Description
-==========  ==========  =========================
+==========  ==========    =========================
+Name        Input         Description
+==========  ==========    =========================
 backward    amount        Moves the turle backward by the specified amount
-color       colorname     Sets the color for drawing.  Use 'red', 'black', etc
+begin_fill  None          Starts a shape to fill
+circle      radius        Draws a circle with the specified radius 
+color       colorname     Sets the color for the pen.  Use 'red', 'black', etc. If you give it two colors the second is the fill color.
+end_fill    None          Ends a shape to fill
+fillcolor   colorname     Sets the fill color to the specified color.  Use 'red', 'black', etc.
 forward     amount        Moves the turtle forward by the specified amount
 goto        x,y           Moves the turtle to position x,y
 left        angle         Turns the turtle counter clockwise by the specified angle
@@ -50,4 +54,17 @@ pensize     width         Sets the width of the pen for drawing
 right       angle         Turns the turtle clockwise by the specified angle
 setheading  angle         Turns the turtle to face the given heading.  East is 0, north is 90, west is 180, and south is 270.
 Turtle      None          Creates and returns a new turtle object
-==========  ==========  =========================
+==========  ==========    =========================
+
+Summary of Screen Methods
+--------------------------------------------
+
+The table below shows the screen methods that you might find useful.
+
+============  ==============  =============================================================================================================
+Name          Input           Description
+============  ==============  =============================================================================================================
+bgcolor       color           Sets the color for the screen background
+bgpic         file_name       Save a picture of the screen to the file_name
+exitonclick   none            Stops the program from exiting until you click the window - use if running turtle code outside of the ebook
+============  ==============  =============================================================================================================

@@ -11,6 +11,7 @@ Turtles: An Introduction to Objects and Classes
    turtleGeom.rst
    patterns.rst
    stamp.rst
+   functionsWithTurtles.rst
    summary.rst
    Exercises.rst
    mixedupcode.rst
