@@ -5,11 +5,11 @@ Write Code Questions
 
         .. tab:: Question
 
-            Fix line 2 so that it prints "Hi" instead of "hi".
-
             .. activecode::  str-ex-hiq
                 :nocodelens:
 
+                Fix line 2 so that it prints "Hi" instead of "hi".
+                ~~~~
                 s1 = "hi"
                 s1.capitalize()
                 print(s1)
@@ -25,12 +25,14 @@ Write Code Questions
 
         .. tab:: Answer
 
-	    The ``capitalize()`` method returns a new string; it doesn't modify the original because strings are immutable. As a result, you need to assign the value of s1.capitalize() to s1. 
+            The ``capitalize()`` method returns a new string; it doesn't modify the original because strings are immutable. As a result, you need to assign the value of s1.capitalize() to s1. 
 
             .. activecode::  str-ex-hiA
                 :nocodelens:
                 :optional:
 
+                Fix line 2 so that it prints "Hi" instead of "hi".
+                ~~~~
                 s1 = "hi"
                 s1 = s1.capitalize()
                 print(s1)
@@ -38,59 +40,63 @@ Write Code Questions
 #.
     .. tabbed:: str-ex-meow
 
-	.. tab:: Question
+        .. tab:: Question
 
-            Fix the code so that only "meow" is printed.
+            .. activecode::  str-ex-meowq
+                :nocodelens:
 
-   	    .. activecode::  str-ex-meowq
-        	:nocodelens:
+                Fix the code so that only "meow" is printed.
+                ~~~~
+                sentence = "The cat goes meow."
+                s2 = [16:13]sentence
+                print(s2)
 
+                ====
+                from unittest.gui import TestCaseGui
+                class myTests(TestCaseGui):
 
-        	sentence = "The cat goes meow."
-       		s2 = [16:13]sentence
-        	print(s2)
+                        def testOne(self):
+                            self.assertEqual(s2,"meow")
 
-        	====
-        	from unittest.gui import TestCaseGui
-        	class myTests(TestCaseGui):
+                myTests().main()
 
-            	    def testOne(self):
-                        self.assertEqual(s2,"meow")
+        .. tab:: Answer
 
-        	myTests().main()
-
-	.. tab:: Answer
-
-	    The string slicing syntax in line 2 was incorrect. Remember, the final number in the slice is the index of the character after the final one you want in the string. 
+            The string slicing syntax in line 2 was incorrect. Remember, the final number in the slice is the index of the character after the final one you want in the string. 
 
             .. activecode::  str-ex-meowa
                 :nocodelens:
                 :optional:
 
-        	sentence = "The cat goes meow."
-       		s2 = sentence[13:17]
-        	print(s2)
+                Fix the code so that only "meow" is printed.
+                ~~~~
+                sentence = "The cat goes meow."
+                s2 = sentence[13:17]
+                print(s2)
 
 #.
     .. tabbed:: str-ex-eggs
 
         .. tab:: Question
 
-            Write code to evaluate the length of the string "I like green eggs"
-            and print it. It should print "The length is 17".
-
             .. activecode::  str-ex-eggsq
                 :nocodelens:
 
+                Write code to evaluate the length of the string "I like green eggs"
+                and print it. It should print "The length is 17".
+                ~~~~
 
         .. tab:: Answer
 
-	    You can use the ``len()`` method to find the length of a string.
+            You can use the ``len()`` method to find the length of a string.
 
             .. activecode::  str-ex-eggsa
                 :optional:
                 :nocodelens:
 
+                Write code to evaluate the length of the string "I like green eggs"
+                and print it. It should print "The length is 17".
+                ~~~~
                 sentence = 'I like green eggs'
                 print('The length is ' + str(len(sentence)))
 
@@ -123,13 +129,13 @@ Write Code Questions
 
         .. tab:: Question
 
-            Take the following Python code that stores this string: ``string = "X-DSPAM-Confidence: 0.8475"``.
-            Use ``find`` and string slicing to extract the portion of the string after the colon character
-            and then use the ``float`` function to convert the extracted string into a floating point number called ``num``.
-
             .. activecode::  str-ex-floatq
                 :nocodelens:
 
+                Take the following Python code that stores this string: ``string = "X-DSPAM-Confidence: 0.8475"``.
+                Use ``find`` and string slicing to extract the portion of the string after the colon character
+                and then use the ``float`` function to convert the extracted string into a floating point number called ``num``.
+                ~~~~
                 string = "X-DSPAM-Confidence: 0.8475"
 
 
@@ -144,11 +150,15 @@ Write Code Questions
 
         .. tab:: Answer
 
-	    The ``float()`` function ignores whitespace, so you can begin the slice at the space character after the colon or at the 0 -- your choice!
+            The ``float()`` function ignores whitespace, so you can begin the slice at the space character after the colon or at the 0 -- your choice!
 
             .. activecode:: str-ex-floatA
                 :optional:
 
+                Take the following Python code that stores this string: ``string = "X-DSPAM-Confidence: 0.8475"``.
+                Use ``find`` and string slicing to extract the portion of the string after the colon character
+                and then use the ``float`` function to convert the extracted string into a floating point number called ``num``.
+                ~~~~
                 string = "X-DSPAM-Confidence: 0.8475"
                 colonpos = string.find(':')
                 digit = string[colonpos + 1:]
@@ -176,12 +186,12 @@ Write Code Questions
 
         .. tab:: Question
 
-            Write a function ``numDigits`` that will return the number of digits in an integer ``n``.
-
             .. activecode:: str-ex-digitsq
                 :practice: T
                 :autograde: unittest
 
+                Write a function ``numDigits`` that will return the number of digits in an integer ``n``.
+                ~~~~
                 def numDigits(n):
                     # your code here
 
@@ -204,11 +214,13 @@ Write Code Questions
 
         .. tab:: Answer
 
-	    Convert the integer to a string, then use the ``len()`` method.
+            Convert the integer to a string, then use the ``len()`` method.
 
             .. activecode:: str_ex-digitsa
                 :optional:
 
+                Write a function ``numDigits`` that will return the number of digits in an integer ``n``.
+                ~~~~
                 def numDigits(n):
                     n_str = str(n)
                     return len(n_str)
@@ -246,20 +258,23 @@ Write Code Questions
 
         .. tab:: Question
 
-            Write a program that asks a user for their name and from the input
-            prints the first letter of their name in lowercase.
-
             .. activecode::  str-ex-nameInputq
                 :nocodelens:
 
+                Write a program that asks a user for their name and from the input
+                prints the first letter of their name in lowercase.
+                ~~~~
 
         .. tab:: Answer
 
-	    Use the ``input()`` function to get the user's input, then use indexing and the ``lower()`` method to print the first letter of their name in lowercase.
+            Use the ``input()`` function to get the user's input, then use indexing and the ``lower()`` method to print the first letter of their name in lowercase.
 
             .. activecode:: str-ex-nameInputa
                 :optional:
 
+                Write a program that asks a user for their name and from the input
+                prints the first letter of their name in lowercase.
+                ~~~~
                 prompt = "What is your name?"
                 name = input(prompt)
                 first = name[0]

@@ -5,13 +5,13 @@ Write Code Questions
 
         .. tab:: Question
 
-            Create a BeautifulSoup object named soup using the url https://umich.edu/. Using BeautifulSoup, print the URL that links to Current Students in the Navigation Bar.
-
             .. activecode:: bsoup_writecode1q
                 :practice: T
                 :nocodelens:
                 :language: python3
 
+                Create a BeautifulSoup object named soup using the url https://umich.edu/. Using BeautifulSoup, print the URL that links to Current Students in the Navigation Bar.
+                ~~~~
                 from bs4 import BeautifulSoup
                 import requests
 
@@ -23,6 +23,8 @@ Write Code Questions
                 :optional:
                 :language: python3
 
+                Create a BeautifulSoup object named soup using the url https://umich.edu/. Using BeautifulSoup, print the URL that links to Current Students in the Navigation Bar.
+                ~~~~
                 from bs4 import BeautifulSoup
                 import requests
 
@@ -41,13 +43,13 @@ Write Code Questions
 
         .. tab:: Question
 
-            Create a BeautifulSoup object named soup using the url https://en.wikipedia.org/wiki/Massive_open_online_course. Using BeautifulSoup, web scrape all heading names (not subheadings) from the Contents box (History, Emergence of MOOC providers, Student experience and pedagogy, etc.) into a heading_list.
-
             .. activecode:: bsoup_writecode2q
                 :practice: T
                 :nocodelens:
                 :language: python3
 
+                Create a BeautifulSoup object named soup using the url https://en.wikipedia.org/wiki/Massive_open_online_course. Using BeautifulSoup, web scrape all heading names (not subheadings) from the Contents box (History, Emergence of MOOC providers, Student experience and pedagogy, etc.) into a heading_list.
+                ~~~~
                 from bs4 import BeautifulSoup
                 import requests
 
@@ -59,6 +61,8 @@ Write Code Questions
                 :optional:
                 :language: python3
 
+                Create a BeautifulSoup object named soup using the url https://en.wikipedia.org/wiki/Massive_open_online_course. Using BeautifulSoup, web scrape all heading names (not subheadings) from the Contents box (History, Emergence of MOOC providers, Student experience and pedagogy, etc.) into a heading_list.
+                ~~~~
                 from bs4 import BeautifulSoup
                 import requests
 
@@ -85,13 +89,13 @@ Write Code Questions
 
         .. tab:: Question
 
-            Create a BeautifulSoup object named soup using the url https://en.wikipedia.org/wiki/Massive_open_online_course. Using BeautifulSoup, web scrape the Coursera enrollees table, and create and print a dictionary called coursera_enrollees with Country as keys and Percentage as values. Sample Output: {'United States': '27.7%', 'India':...}
-
             .. activecode:: bsoup_writecode3q
                 :practice: T
                 :nocodelens:
                 :language: python3
 
+                Create a BeautifulSoup object named soup using the url https://en.wikipedia.org/wiki/Massive_open_online_course. Using BeautifulSoup, web scrape the Coursera enrollees table, and create and print a dictionary called coursera_enrollees with Country as keys and Percentage as values. Sample Output: {'United States': '27.7%', 'India':...}
+                ~~~~
                 from bs4 import BeautifulSoup
                 import requests
 
@@ -103,6 +107,8 @@ Write Code Questions
                 :optional:
                 :language: python3
 
+                Create a BeautifulSoup object named soup using the url https://en.wikipedia.org/wiki/Massive_open_online_course. Using BeautifulSoup, web scrape the Coursera enrollees table, and create and print a dictionary called coursera_enrollees with Country as keys and Percentage as values. Sample Output: {'United States': '27.7%', 'India':...}
+                ~~~~
                 from bs4 import BeautifulSoup
                 import requests
 
@@ -130,13 +136,13 @@ Write Code Questions
 
         .. tab:: Question
 
-            Create a BeautifulSoup object named soup using the url https://en.wikipedia.org/wiki/Python_(programming_language). Using BeautifulSoup, web scrape the Summary of Python 3's built-in types table, and create and print a list called types (which should contain bool, bytearray, etc.).
-
             .. activecode:: bsoup_writecode4q
                 :practice: T
                 :nocodelens:
                 :language: python3
 
+                Create a BeautifulSoup object named soup using the url https://en.wikipedia.org/wiki/Python_(programming_language). Using BeautifulSoup, web scrape the Summary of Python 3's built-in types table, and create and print a list called types (which should contain bool, bytearray, etc.).
+                ~~~~
                 from bs4 import BeautifulSoup
                 import requests
 
@@ -148,6 +154,8 @@ Write Code Questions
                 :optional:
                 :language: python3
 
+                Create a BeautifulSoup object named soup using the url https://en.wikipedia.org/wiki/Python_(programming_language). Using BeautifulSoup, web scrape the Summary of Python 3's built-in types table, and create and print a list called types (which should contain bool, bytearray, etc.).
+                ~~~~
                 from bs4 import BeautifulSoup
                 import requests
 
@@ -175,13 +183,13 @@ Write Code Questions
 
         .. tab:: Question
 
-            Create a BeautifulSoup object named soup using the url "https://detroit.eater.com/maps/best-ann-arbor-restaurants". Using BeautifulSoup, web scrape the 12 essential Ann Arbor restaurants' names, and create and print a list called ann_arbor_2019_restaurants_list (which should contain 1. Knight's Steakhouse, 2. The Last Word, etc.).
-
             .. activecode:: bsoup_writecode5q
                 :practice: T
                 :nocodelens:
                 :language: python3
 
+                Create a BeautifulSoup object named soup using the url "https://detroit.eater.com/maps/best-ann-arbor-restaurants". Using BeautifulSoup, web scrape the 12 essential Ann Arbor restaurants' names, and create and print a list called ann_arbor_2019_restaurants_list (which should contain 1. Knight's Steakhouse, 2. The Last Word, etc.).
+                ~~~~
                 from bs4 import BeautifulSoup
                 import requests
 
@@ -193,6 +201,8 @@ Write Code Questions
                 :optional:
                 :language: python3
 
+                Create a BeautifulSoup object named soup using the url "https://detroit.eater.com/maps/best-ann-arbor-restaurants". Using BeautifulSoup, web scrape the 12 essential Ann Arbor restaurants' names, and create and print a list called ann_arbor_2019_restaurants_list (which should contain 1. Knight's Steakhouse, 2. The Last Word, etc.).
+                ~~~~
                 from bs4 import BeautifulSoup
                 import requests
 
@@ -215,13 +225,13 @@ Write Code Questions
 
         .. tab:: Question
 
-            Create a BeautifulSoup object named soup using the url https://www.si.umich.edu/programs/bachelor-science-information. Using BeautifulSoup, web scrape the section names and subsection names under Programs Bachelor of Science in Information into a bsi_list (which should contain 'How do I apply?', 'Current U-M students', 'Transfer students', 'High school students', 'New transfers', etc.). Make sure extraneous section names aren't included.
-
             .. activecode:: bsoup_writecode6q
                 :practice: T
                 :nocodelens:
                 :language: python3
 
+                Create a BeautifulSoup object named soup using the url https://www.si.umich.edu/programs/bachelor-science-information. Using BeautifulSoup, web scrape the section names and subsection names under Programs Bachelor of Science in Information into a bsi_list (which should contain 'How do I apply?', 'Current U-M students', 'Transfer students', 'High school students', 'New transfers', etc.). Make sure extraneous section names aren't included.
+                ~~~~
                 from bs4 import BeautifulSoup
                 import requests
                 import re
@@ -234,6 +244,8 @@ Write Code Questions
                 :optional:
                 :language: python3
 
+                Create a BeautifulSoup object named soup using the url https://www.si.umich.edu/programs/bachelor-science-information. Using BeautifulSoup, web scrape the section names and subsection names under Programs Bachelor of Science in Information into a bsi_list (which should contain 'How do I apply?', 'Current U-M students', 'Transfer students', 'High school students', 'New transfers', etc.). Make sure extraneous section names aren't included.
+                ~~~~
                 from bs4 import BeautifulSoup
                 import requests
                 import re
@@ -256,13 +268,13 @@ Write Code Questions
 
         .. tab:: Question
 
-            Like the previous question, create a BeautifulSoup object named soup using the url https://www.si.umich.edu/programs/bachelor-science-information. Using BeautifulSoup, web scrape the section names and subsection names under Programs Bachelor of Science in Information into a bsi_list (which should contain 'How do I apply?', 'Current U-M students', 'Transfer students', 'High school students', 'New transfers', etc.). Make sure extraneous section names aren't included. In addition, create a href_list that contains the full urls of all sections in the bsi_list. Then, create a bsi_dict that contains the bsi_list elements as keys in the bsi_dict and has their full urls (from the href_list) as values. 
-
             .. activecode:: bsoup_writecode7q
                 :practice: T
                 :nocodelens:
                 :language: python3
 
+                Like the previous question, create a BeautifulSoup object named soup using the url https://www.si.umich.edu/programs/bachelor-science-information. Using BeautifulSoup, web scrape the section names and subsection names under Programs Bachelor of Science in Information into a bsi_list (which should contain 'How do I apply?', 'Current U-M students', 'Transfer students', 'High school students', 'New transfers', etc.). Make sure extraneous section names aren't included. In addition, create a href_list that contains the full urls of all sections in the bsi_list. Then, create a bsi_dict that contains the bsi_list elements as keys in the bsi_dict and has their full urls (from the href_list) as values. 
+                ~~~~
                 from bs4 import BeautifulSoup
                 import requests
                 import re
@@ -275,6 +287,8 @@ Write Code Questions
                 :optional:
                 :language: python3
 
+                Like the previous question, create a BeautifulSoup object named soup using the url https://www.si.umich.edu/programs/bachelor-science-information. Using BeautifulSoup, web scrape the section names and subsection names under Programs Bachelor of Science in Information into a bsi_list (which should contain 'How do I apply?', 'Current U-M students', 'Transfer students', 'High school students', 'New transfers', etc.). Make sure extraneous section names aren't included. In addition, create a href_list that contains the full urls of all sections in the bsi_list. Then, create a bsi_dict that contains the bsi_list elements as keys in the bsi_dict and has their full urls (from the href_list) as values. 
+                ~~~~
                 from bs4 import BeautifulSoup
                 import requests
                 import re
@@ -305,13 +319,13 @@ Write Code Questions
 
         .. tab:: Question
 
-            Create a BeautifulSoup object named soup using the url https://www.si.umich.edu/programs/bachelor-science-information. Using BeautifulSoup, web scrape the address text in the footer and strip newlines.
-
             .. activecode:: bsoup_writecode8q
                 :practice: T
                 :nocodelens:
                 :language: python3
 
+                Create a BeautifulSoup object named soup using the url https://www.si.umich.edu/programs/bachelor-science-information. Using BeautifulSoup, web scrape the address text in the footer and strip newlines.
+                ~~~~
                 from bs4 import BeautifulSoup
                 import requests
 
@@ -323,6 +337,8 @@ Write Code Questions
                 :optional:
                 :language: python3
 
+                Create a BeautifulSoup object named soup using the url https://www.si.umich.edu/programs/bachelor-science-information. Using BeautifulSoup, web scrape the address text in the footer and strip newlines.
+                ~~~~
                 from bs4 import BeautifulSoup
                 import requests
 
@@ -339,13 +355,13 @@ Write Code Questions
 
         .. tab:: Question
 
-            Create a BeautifulSoup object named soup using the url https://www.si.umich.edu/people/directory/faculty/e. Using BeautifulSoup, web scrape the names and email addresses. Create a name_email_dict with the names as keys and the email addresses as values. Use the string replace method while web scraping. Sample Output: {'Paul Edwards': 'pne@umich.edu', 'Ron Eglash':...}
-
             .. activecode:: bsoup_writecode9q
                 :practice: T
                 :nocodelens:
                 :language: python3
 
+                Create a BeautifulSoup object named soup using the url https://www.si.umich.edu/people/directory/faculty/e. Using BeautifulSoup, web scrape the names and email addresses. Create a name_email_dict with the names as keys and the email addresses as values. Use the string replace method while web scraping. Sample Output: {'Paul Edwards': 'pne@umich.edu', 'Ron Eglash':...}
+                ~~~~
                 from bs4 import BeautifulSoup
                 import requests
 
@@ -357,6 +373,8 @@ Write Code Questions
                 :optional:
                 :language: python3
 
+                Create a BeautifulSoup object named soup using the url https://www.si.umich.edu/people/directory/faculty/e. Using BeautifulSoup, web scrape the names and email addresses. Create a name_email_dict with the names as keys and the email addresses as values. Use the string replace method while web scraping. Sample Output: {'Paul Edwards': 'pne@umich.edu', 'Ron Eglash':...}
+                ~~~~
                 from bs4 import BeautifulSoup
                 import requests
 
@@ -390,13 +408,13 @@ Write Code Questions
 
         .. tab:: Question
 
-            Create a BeautifulSoup object named soup using the url https://www.si.umich.edu/about-umsi/contact-us. Using BeautifulSoup, web scrape the 5 program names under Email Addresses and Admissions (BSI program, MSI program, etc.) and their associated email addresses. Create a program_email_dict with the program names as keys and the email addresses as values. 
-
             .. activecode:: bsoup_writecode10q
                 :practice: T
                 :nocodelens:
                 :language: python3
 
+                Create a BeautifulSoup object named soup using the url https://www.si.umich.edu/about-umsi/contact-us. Using BeautifulSoup, web scrape the 5 program names under Email Addresses and Admissions (BSI program, MSI program, etc.) and their associated email addresses. Create a program_email_dict with the program names as keys and the email addresses as values. 
+                ~~~~
                 from bs4 import BeautifulSoup
                 import requests
 
@@ -408,6 +426,8 @@ Write Code Questions
                 :optional:
                 :language: python3
 
+                Create a BeautifulSoup object named soup using the url https://www.si.umich.edu/about-umsi/contact-us. Using BeautifulSoup, web scrape the 5 program names under Email Addresses and Admissions (BSI program, MSI program, etc.) and their associated email addresses. Create a program_email_dict with the program names as keys and the email addresses as values. 
+                ~~~~
                 from bs4 import BeautifulSoup
                 import requests
 

@@ -7,11 +7,11 @@ Write Code Questions
 
         .. tab:: Question
 
-            Write a function called ``add_to_new_list`` that takes in a list of strings, ``lst``, as a parameter and creates a new list with the length 
-            of ``lst`` and the first element of ``lst`` three times. For example, ``add_to_new_list(["1","2","3"])`` would return ``[3, '111']``.
-
             .. activecode:: list_writeMyListq
 
+                Write a function called ``add_to_new_list`` that takes in a list of strings, ``lst``, as a parameter and creates a new list with the length 
+                of ``lst`` and the first element of ``lst`` three times. For example, ``add_to_new_list(["1","2","3"])`` would return ``[3, '111']``.
+                ~~~~
                 def add_to_new_list(lst):
                     # write code here
                 =====
@@ -34,6 +34,9 @@ Write Code Questions
             .. activecode:: list_writeMyListA
                 :optional:
 
+                Write a function called ``add_to_new_list`` that takes in a list of strings, ``lst``, as a parameter and creates a new list with the length 
+                of ``lst`` and the first element of ``lst`` three times. For example, ``add_to_new_list(["1","2","3"])`` would return ``[3, '111']``.
+                ~~~~
                 def add_to_new_list(lst):
                     new_list = []
                     new_list.append(len(lst))
@@ -70,12 +73,12 @@ Write Code Questions
 
         .. tab:: Question
 
-            Write a function called ``average`` that takes in a list of integers, ``aList``, as a parameter and returns the average of
-            all of the integers, rounded to one decimal place. For example, ``average([99, 100, 74, 63, 100, 100])`` would return ``89.33``.
-
             .. activecode::  list_writeAvgq
                 :nocodelens:
 
+                Write a function called ``average`` that takes in a list of integers, ``aList``, as a parameter and returns the average of
+                all of the integers, rounded to one decimal place. For example, ``average([99, 100, 74, 63, 100, 100])`` would return ``89.33``.
+                ~~~~
                 def average(aList):
                     # write code here 
              
@@ -99,6 +102,9 @@ Write Code Questions
             .. activecode:: list_writeAvgA
                 :optional:
 
+                Write a function called ``average`` that takes in a list of integers, ``aList``, as a parameter and returns the average of
+                all of the integers, rounded to one decimal place. For example, ``average([99, 100, 74, 63, 100, 100])`` would return ``89.33``.
+                ~~~~
                 def average(aList):
                     sum = 0
                     for num in aList:
@@ -136,11 +142,11 @@ Write Code Questions
 
         .. tab:: Question
 
-            Write a function called ``capitalize`` that takes in a list of lists of strings, ``lst``, and makes the first letter of each element capitalized and adds 
-            it to a new list and returns that new list. For example, ``capitalize([["hi"],["hello", "hey"]])`` would return ``['Hi', 'Hello', 'Hey']``.
-
             .. activecode:: list_capitalize_q
 
+                Write a function called ``capitalize`` that takes in a list of lists of strings, ``lst``, and makes the first letter of each element capitalized and adds 
+                it to a new list and returns that new list. For example, ``capitalize([["hi"],["hello", "hey"]])`` would return ``['Hi', 'Hello', 'Hey']``.
+                ~~~~
                 def capitalize(lst):
                     # write code here
                   
@@ -163,6 +169,9 @@ Write Code Questions
             .. activecode:: list_capitalize_a
                 :optional:
 
+                Write a function called ``capitalize`` that takes in a list of lists of strings, ``lst``, and makes the first letter of each element capitalized and adds 
+                it to a new list and returns that new list. For example, ``capitalize([["hi"],["hello", "hey"]])`` would return ``['Hi', 'Hello', 'Hey']``.
+                ~~~~
                 def capitalize(lst):
                     new_list = []
                     for i in lst:
@@ -199,11 +208,11 @@ Write Code Questions
 
         .. tab:: Question
 
-            Write a function called ``chop`` that takes a list, ``lst``, and modifies it, removing the first and last elements.
-            For example, ``chop([1,2,3,4,5]`` should return ``[2,3,4]``.
-
             .. activecode:: list_writeChopq
 
+                Write a function called ``chop`` that takes a list, ``lst``, and modifies it, removing the first and last elements.
+                For example, ``chop([1,2,3,4,5]`` should return ``[2,3,4]``.
+                ~~~~
                 def chop(lst):
                     # write code here
 
@@ -226,6 +235,9 @@ Write Code Questions
             .. activecode:: list_writeChopa
                 :optional:
                 
+                Write a function called ``chop`` that takes a list, ``lst``, and modifies it, removing the first and last elements.
+                For example, ``chop([1,2,3,4,5]`` should return ``[2,3,4]``.
+                ~~~~
                 def chop(lst):
                     lst.pop(0)
                     lst.pop(-1)
@@ -258,12 +270,12 @@ Write Code Questions
 
         .. tab:: Question
 
-            Write a function called ``sumUntilEven`` that takes in one parameter, ``lst``, and returns the sum of all the 
-            elements in the ``lst`` up to but not including the first even number. For example, ``sumUntilEven([1,2,3,4,5]``
-            should return ``1`` and ``sumUntilEven([1,3,5,7,9]`` should return ``25``.
-
             .. activecode:: list_writeSumq
 
+                Write a function called ``sumUntilEven`` that takes in one parameter, ``lst``, and returns the sum of all the 
+                elements in the ``lst`` up to but not including the first even number. For example, ``sumUntilEven([1,2,3,4,5]``
+                should return ``1`` and ``sumUntilEven([1,3,5,7,9]`` should return ``25``.
+                ~~~~
                 def sumUntilEven(lst):
                     # write code here
 
@@ -285,6 +297,10 @@ Write Code Questions
             .. activecode:: list_writeSuma
                 :optional:
 
+                Write a function called ``sumUntilEven`` that takes in one parameter, ``lst``, and returns the sum of all the 
+                elements in the ``lst`` up to but not including the first even number. For example, ``sumUntilEven([1,2,3,4,5]``
+                should return ``1`` and ``sumUntilEven([1,3,5,7,9]`` should return ``25``.
+                ~~~~
                 def sumUntilEven(lst):
                     total = 0
                     element = 0
