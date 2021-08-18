@@ -27,8 +27,6 @@ Mixed-Up Code Exercises
         super().eye_color()
    =====
    lil_child = Child()
-   =====
-   lil_child.eye_color()
 
 ..activecode:: inheritance_mixedupcode_1-ac
 
@@ -49,4 +47,5 @@ Mixed-Up Code Exercises
    class myTests(TestCaseGui):
        def testOne(self):
            self.assertEqual(lil_child.eye_color(), "I have hazel eyes")
+
    myTests().main()
