@@ -4,31 +4,29 @@ Mixed-up Code Questions
     :adaptive:
     :numbered: left
     :practice: T
-    :noindent:
 
-    The following function , ``mood(emotion)``, should return a string with the ``emotion``
-    felt. For example, if ``emotion`` is "So happy" the statement should 
-    return ``"So happy 4 you!"``. The blocks have been mixed up, and include an 
-    extra block that are not correct. Drag the blocks from the left and put 
-    them in the correct order on the right.  Click the ``Check Me`` button to 
-    check your solution.
+    Create the function, ``mood(emotion)``, to return a string with the ``emotion``
+    followed by ``" 4 you"``. For example, if ``emotion`` is "So happy" it should
+    return ``"So happy 4 you!"``.
     -----
     def mood(emotion):
     =====
-        return emotion + " " +  str(4) + " you!"
+        out = emotion + " 4 you!"
     =====
-        return emotion + " " + 4 + " you!" #paired
+        out = emotion + "4 you!" #paired
+    =====
+        return out
+    =====
+        return emotion #paired
 
 
 .. activecode::  str-mixed-emotion-ac
 
     Write the function, ``mood(emotion)``, to return a string with the ``emotion``
-    felt. For example, if ``emotion`` is "So happy" the statement should 
+    followed by ``" 4 you"``. For example, if ``emotion`` is "So happy" it should
     return ``"So happy 4 you!"``.
     ~~~~
-    def mood(emotion):
-        # write code here
-    
+
     ====
     from unittest.gui import TestCaseGui
 
@@ -40,7 +38,7 @@ Mixed-up Code Questions
             self.assertEqual(mood("happy"), "happy 4 you!", 'mood("happy")')
             self.assertEqual(mood("Happy"), "Happy 4 you!", 'mood("Happy")')
             self.assertEqual(mood("So glad"), "So glad 4 you!", 'mood("So glad")')
-        
+
     myTests().main()
 
 
@@ -49,27 +47,29 @@ Mixed-up Code Questions
     :adaptive:
     :numbered: left
     :practice: T
-    :noindent:
 
-    The following function, ``item_purchase(item, price)``, should return a string with the ``item`` purchased followed by the ``price``.  
-    For example if ``item`` is "new book" and price is 12 the function should return ``"My new book cost $12"``.
-    But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed blocks from 
-    the left and put them in the correct order on the right.  Click the ``Check Me`` button to check your solution.
+    Create the function, ``item_purchase(item, price)``, to return a string with the ``item`` purchased followed by the ``price``.
+    For example if ``item`` is "new book" and price is ``12`` the function should return ``"My new book cost $12"``.
     -----
     def item_purchase(item, price):
     =====
-        return "My " + item + " cost $" + price
+    def item_purchase(price, item): #paired
     =====
-        return "My " item " cost $" price #paired
+        out = "My " + item + " cost $" + str(price)
+    =====
+        out = "My " + item + " cost $" + price #paired
+    =====
+        return out
+    =====
+        Return out #paired
+
 
 
 .. activecode::  str-mixed-book-ac
 
-    Finish the function, ``item_purchase(item, price)``, to return a string with the ``item`` purchased followed by the ``price``.  
-    For example if ``item`` is "new book" and price is 12 the function should return ``"My new book cost $12"``.
+    Write the function, ``item_purchase(item, price)``, to return a string with the ``item`` purchased followed by the ``price``.
+    For example if ``item`` is "new book" and price is ``12`` the function should return ``"My new book cost $12"``.
     ~~~~
-    def item_purchase(item, price):
-        # write code here
 
     ====
     from unittest.gui import TestCaseGui
@@ -89,39 +89,41 @@ Mixed-up Code Questions
     :adaptive:
     :numbered: left
     :practice: T
-    :noindent:
 
-    The following function, ``phrase(person, thing)``, should return a string with a ``person`` of your choosing followed by a ``thing``
-    of what that person likes to do. For example, if the ``person`` is called "Sam" and ``thing`` is "likes to code", the
-    returned string must be ``"Sam likes to code"``. But, the blocks have been mixed up and include two extra blocks that isn't correct.  
-    Drag the needed blocks from the left and put them in the correct order on the right.  Click the ``Check Me``
-    button to check your solution.
+    Create the function ``phrase(person, thing)``, to return a string with a ``person`` of your choosing followed by a ``thing``
+    of what that person likes to do. For example, if the ``person`` is ``sam`` and ``thing`` is ``Likes to code``, the
+    returned string should be ``"Sam likes to code"``. Make sure that ``person`` is capitalized and ``thing`` is lowercase.
     -----
     def phrase(person, thing):
     =====
-        return person + thing
+    def phrase(person, thing) #paired
     =====
-        return person thing #paired
+        person = person.capitalized()
+        thing = thing.lower()
     =====
-        return "person + thing" #paired
+        person.capitalized() #paired
+        thing.lower()
+    =====
+        return person + " " + thing
+    =====
+        return person + thing #paired
 
 
 .. activecode::  str-mixed-code-ac
 
-    Finish the function, ``phrase(person, thing)``, to return a string with a ``person`` of your choosing followed by a ``thing``
-    of what that person likes to do. For example, if the ``person`` is called "Sam" and ``thing`` is "likes to code", the
-    returned string must be ``"Sam likes to code"``.
+    Write the function, ``phrase(person, thing)``, to return a string with a ``person`` of your choosing followed by a ``thing``
+    of what that person likes to do. For example, if the ``person`` is ``Sam`` and ``thing`` is ``Likes to code``, the
+    returned string should be ``"Sam likes to code"``.  Make sure that ``person`` is capitalized and ``thing`` is lowercase.
     ~~~~
-    def phrase(person, thing):
-        # write code here
+
     ====
     from unittest.gui import TestCaseGui
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(phrase("Sam", " likes to code"), "Sam likes to code", 'phrase("Sam", " likes to code")')
-            self.assertEqual(phrase("mary-anne", " likes to sing"), "mary-anne likes to sing", 'phrase("mary-anne", " likes to sing")')
-            self.assertEqual(phrase("ANNA", " likes to dance"), "ANNA likes to dance", 'phrase("ANNA", " likes to dance")')
+            self.assertEqual(phrase("sam", "Likes to code"), "Sam likes to code", 'phrase("sam", " Likes to code")')
+            self.assertEqual(phrase("mary-anne", "likes to sing"), "Mary-anne likes to sing", 'phrase("mary-anne", " likes to sing")')
+            self.assertEqual(phrase("ANNA", "likes to dance"), "Anna likes to dance", 'phrase("ANNA", " likes to dance")')
 
 
     myTests().main()
@@ -131,36 +133,32 @@ Mixed-up Code Questions
     :adaptive:
     :numbered: left
     :practice: T
-    :noindent:
 
-    Let's imagine that last weekend you went on a camping trip with your family. Now you're writing a function, 
-    ``timeFromCamp(numHours, numMinutes)``, that says how long it took you to get home from camp. Using the variables 
-    ``numHours`` and ``numMinutes``, return a string that says how long it took you to get home from camp. For example, 
-    if ``numHours`` was 3 and ``numMinutes`` was 13, the returned string should be, ``"It takes us 3 hours and 13 minutes 
-    to get home from camp"``. But, the blocks have been mixed up and include two extra blocks that aren't correct.  Drag 
-    the needed blocks from the left and put them in the correct order on the right.  Click the ``Check Me`` button to 
-    check your solution.
+    Let's imagine that last weekend you went on a camping trip with your family. Create a function
+    ``time(hours, minutes)``. Return a string that says how long it took you to get home in minutes. For example,
+    if ``hours`` was ``3`` and ``minutes`` was ``13``, the returned string should be, ``"It took us 193 minutes to get home"``.
     -----
-    def timeFromCamp(numHours, numMinutes):
+    def time(hours, minutes):
     =====
-        return "It takes us " + str(numHours) + " hours and " + str(int(numMinutes)) + " minutes to get home from camp"
+    def time(hours, minutes) #paired
     =====
-        return "It takes us " + numHours + " hours and " + numMinutes + " minutes to get home from camp" #paired
+        total = hours * 60 + minutes
     =====
-        return "It takes us " + str(numHours) + " hours and " + str(numMinutes) + " minutes to get home from camp" #paired
-
+        total = hours + 60 * minutes #paired
+    =====
+        return "It took us " + str(total) + " minutes to get home"
+    =====
+        return "It took us " + str(total) " minutes to get home"  #paired
 
 
 .. activecode::  str-mixed-time-ac
 
-    Let's imagine that last weekend you went on a camping trip with your family. Now you're writing a function, 
-    ``timeFromCamp(numHours, numMinutes)``, that says how long it took you to get home from camp. Using the variables 
-    ``numHours`` and ``numMinutes``, return a string that says how long it took you to get home from camp. For example, 
-    if ``numHours`` was 3 and ``numMinutes`` was 13, the returned string should be, ``"It takes us 3 hours and 13 minutes 
-    to get home from camp"``.
+    Let's imagine that last weekend you went on a camping trip with your family. Write a function
+    ``time(hours, minutes)``.  Return a string that says how long it took you to get home in minutes. For example,
+    if ``hours`` was ``3`` and ``minutes`` was ``13``, the returned string should be, ``"It took us 193 minutes to get home"``.
+
     ~~~~
-    def timeFromCamp(numHours, numMinutes):
-        # write code here
+
 
     ====
     from unittest.gui import TestCaseGui
@@ -168,9 +166,9 @@ Mixed-up Code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(timeFromCamp(2, 45.0), "It takes us 2 hours and 45 minutes to get home from camp", 'timeFromCamp(2, 45.0)')
-            self.assertEqual(timeFromCamp(2, 45), "It takes us 2 hours and 45 minutes to get home from camp", 'timeFromCamp(2, 45)')
-            self.assertEqual(timeFromCamp(1, 23), "It takes us 1 hours and 23 minutes to get home from camp", 'timeFromCamp(1, 23)')
+            self.assertEqual(time(2, 45), "It took us 165 minutes to get home", 'time(2, 45)')
+            self.assertEqual(time(2, 15), "It took us 135 minutes to get home", 'time(2, 15)')
+            self.assertEqual(time(1, 23), "It took us 83 minutes to get home", 'time(1, 23)')
 
     myTests().main()
 
@@ -179,38 +177,43 @@ Mixed-up Code Questions
     :adaptive:
     :numbered: left
     :practice: T
-    :noindent:
 
-    The following function, ``food(fave, least_fave)``, should return a string with your ``fave`` food followed by your ``least_fave`` food. 
-    For example, if your ``fave`` food is "pizza" but your ``least_fave`` is "broccoli", the returned string
-    must be, ``"My favorite food is pizza but I don't like broccoli"``. But, the blocks have been mixed up and include 
-    an extra block that isn't correct. Drag the needed blocks from the left and put them in the correct order on the right. 
-    Click the ``Check Me`` button to check your solution.
+    Create the function, ``food(fave, least_fave)``, to return a string with your ``fave`` food followed by your ``least_fave`` food both in lowercase.
+    For example, if your ``fave`` food is "PIZZA" and your ``least_fave`` is "broccoli", return
+    ``"My favorite food is pizza, but I don't like broccoli"``. Be sure to change ``fave`` and ``least_fave`` to lowercase.
     -----
-    def food(fave, least_faave):
+    def food(fave, least_fave):
     =====
-        return "My favorite food is " + fave + " but I don't like " + least_fave
+        fave_l = fave.lower()
+        least_l = least_fave.lower()
+        start = "My favorite food is "
+        end = ", but I don't like "
     =====
-        return "My favorite food is" + fave "but I don't like " + least_fave #paired
+        fave.lower() #paired
+        least_fave.lower()
+        start = "My favorite food is "
+        end = ", but I don't like "
+    =====
+        return start + fave_l + end + least_l
+    =====
+        return start + fave_l + least_l + end #paired
 
 
 .. activecode::  str-mixed-feeling-ac
 
-    Finish the function, ``food(fave, least_fave)``, to return a string with your ``fave`` food followed by your ``least_fave`` food. 
-    For example, if your ``fave`` food is "pizza" but your ``least_fave`` is "broccoli", the returned string
-    must be, ``"My favorite food is pizza but I don't like broccoli"``.
+    Write the function, ``food(fave, least_fave)``, to return a string with your ``fave`` food followed by your ``least_fave`` food both in lowercase.
+    For example, if your ``fave`` food is "PIZZA" and your ``least_fave`` is "broccoli", return
+    ``"My favorite food is pizza, but I don't like broccoli"``. Be sure to change ``fave`` and ``least_fave`` to lowercase.
     ~~~~
-    def food(fave, least_fave):
-        # write code here
 
     ====
     from unittest.gui import TestCaseGui
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(food("pizza", "broccoli"), "My favorite food is pizza but I don't like broccoli", 'food("pizza", "broccoli")')
-            self.assertEqual(food("pizza", "pizza"), "My favorite food is pizza but I don't like pizza", 'food("pizza", "pizza")')
-            self.assertEqual(food("HAMBURGER", "caRrOts"), "My favorite food is HAMBURGER but I don't like caRrOts", 'food("HAMBURGER", "caRrOts")')
+            self.assertEqual(food("pizza", "broccoli"), "My favorite food is pizza, but I don't like broccoli", 'food("pizza", "broccoli")')
+            self.assertEqual(food("pizza", "pizza"), "My favorite food is pizza, but I don't like pizza", 'food("pizza", "pizza")')
+            self.assertEqual(food("HAMBURGER", "caRrOts"), "My favorite food is hamburger, but I don't like carrots", 'food("HAMBURGER", "caRrOts")')
 
     myTests().main()
 
@@ -219,29 +222,28 @@ Mixed-up Code Questions
     :adaptive:
     :numbered: left
     :practice: T
-    :noindent:
 
-    The following function, ``animal(type_animal)``, should return the string, "My ``type_animal`` looks like a Muppet" with ``type_animal`` being
-    any animal of your choosing. For example, if your ``type_animal`` is "sheepdog", then the returned string should 
-    be ``"My sheepdog looks like a Muppet"``. But, the blocks have been mixed up and include an extra block that are not 
-    correct.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the ``Check Me`` 
-    button to check your solution.
+    Create the function, ``animal(type)``, to return the string, "My ``type_animal`` looks like a Muppet" with ``type`` being
+    any animal of your choosing. For example, if your ``type`` is "sheepdog", then the returned string should
+    be ``"My sheepdog looks like a Muppet"``.
     -----
-    def animal(type_animal):
+    def animal(type):
     =====
-        return "My " + type_animal + " looks like a Muppet"
+        end = " looks like a Muppet"
     =====
-        return "My + type_animal + looks like a Muppet" #paired
+        end = "looks like a Muppet" #paired
+    =====
+        return "My " + type + end
+    =====
+        return "My" + type + end #paired
 
 
 .. activecode::  str-mixed-animal-ac
 
-    Finish the function, ``animal(type_animal)``, to return the string, "My ``type_animal`` looks like a Muppet" with ``type_animal`` being
-    any animal of your choosing. For example, if your ``type_animal`` is "sheepdog", then the returned string should 
+    Finish the function, ``animal(type)``, to return the string, "My ``type_animal`` looks like a Muppet" with ``type`` being
+    any animal of your choosing. For example, if your ``type`` is "sheepdog", then the returned string should
     be ``"My sheepdog looks like a Muppet"``.
     ~~~~
-    def animal(type_animal):
-        # write code here
 
     ====
     from unittest.gui import TestCaseGui
@@ -259,33 +261,32 @@ Mixed-up Code Questions
     :adaptive:
     :numbered: left
     :practice: T
-    :noindent:
 
-    Let's imagine you went on a huge shopping spree. To double-check how much you spent, you are adding up 
-    how much money you used at each store. In the following function, ``addition(store1, store2, store3, ans)``,
-    return how much you spent at the first three stores and then the total using the variables ``store1``, ``store2``,
-    ``store3``, and ``ans``. For example, if you spent 30 in ``store1``, $13 in ``store2``, and 56 in ``store3``, 
-    ``ans`` must be 99 and the function should the string, ``"$30 + $13 + $56 = $99"``. But, the blocks have been
-    mixed up and include an extra block that isn't correct.  Drag the needed blocks from the left and put them in the 
-    correct order on the right. Click the ``Check Me`` button to check your solution.
+    Let's imagine you went on a huge shopping spree. Create the function, ``total(store1, store2, store3)``,
+    to return the total of how much you spent at the three stores. For example, if you spent ``30`` in ``store1``, ``13`` in ``store2``, and ``56`` in ``store3``,
+    ``ans`` return ``"$30 + $13 + $56 = $99"``.
     -----
-    def addition(store1, store2, store3, ans):
+    def total(store1, store2, store3):
     =====
-        return "$" + str(store1) + " + " + "$" + str(store2) + " + " + "$" + str(store3) + " = " + "$" + str(ans)
+        total = store1 + store2 + store3
     =====
-        return "$" + str(num1) + "$" + str(num2) + "$" + str(num3) = "$" + str(ans) #paired
+        s1 = "$" + str(store1)
+        s2 = "$" + str(store2)
+        s3 = "$" + str(store3)
+        t = "$" + str(total)
+    =====
+        return s1 + " + " + s2 + " + " + s3 + " = " + t
+    =====
+        return s1 + s2 + s3 + t #paired
 
 
 .. activecode::  str-mixed-add-ac
 
-    Let's imagine you went on a huge shopping spree. To double-check how much you spent, you are adding up 
-    how much money you used at each store. In the following function, ``addition(store1, store2, store3, ans)``,
-    return how much you spent at the first three stores and then the total using the variables ``store1``, ``store2``,
-    ``store3``, and ``ans``. For example, if you spent 30 in ``store1``, $13 in ``store2``, and 56 in ``store3``, 
-    ``ans`` must be 99 and the function should the string, ``"$30 + $13 + $56 = $99"``.
+    Let's imagine you went on a huge shopping spree. Write the function, ``total(store1, store2, store3)``,
+    to return the total of how much you spent at the three stores. For example, if you spent ``30`` in ``store1``, ``13`` in ``store2``, and ``56`` in ``store3``,
+    ``ans`` return ``"$30 + $13 + $56 = $99"``.
     ~~~~
-    def addition(store1, store2, store3, ans):
-        # write code here
+
 
     ====
     from unittest.gui import TestCaseGui
@@ -293,9 +294,9 @@ Mixed-up Code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(addition(30,13,56,99), "$30 + $13 + $56 = $99", 'addition(30,13,56,99)')
-            self.assertEqual(addition(1.5,3.5,13,17), "$1.5 + $3.5 + $13 = $17", 'addition(1.5,3.5,13,17)')
-            self.assertEqual(addition(1,1,1,3), "$1 + $1 + $1 = $3", 'addition(1,1,1,3)')
+            self.assertEqual(total(30,13,56), "$30 + $13 + $56 = $99", 'total(30,13,56,99)')
+            self.assertEqual(total(1.5,3.5,13), "$1.5 + $3.5 + $13 = $18.0", 'total(1.5,3.5,13,17)')
+            self.assertEqual(total(1,1,1), "$1 + $1 + $1 = $3", 'total(1,1,1,3)')
 
 
     myTests().main()
@@ -305,37 +306,39 @@ Mixed-up Code Questions
     :adaptive:
     :numbered: left
     :practice: T
-    :noindent:
 
-    The following function, ``combination(var1, var2)``, should return a string by combining the two variables ``var1`` and ``var2``. 
-    For example, if ``var1`` is "I am a " and ``var2`` is "CS wizard", the function should return the string, ``"I am a CS wizard"``.
-    But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed blocks from the left and put 
-    them in the correct order on the right.  Click the ``Check Me`` button to check your solution.
+    Create the function ``combine(var1, var2)``, to return a string by combining the two variables ``var1`` and ``var2``.
+    For example, if ``var1`` is "i am a" and ``var2`` is "CS wizard", the function should return the string, ``"I am a cs wizard"``.
+    Make sure ``var1`` is capitalized and ``var2`` is lowercase.
     -----
-    def combination(var1, var2):
+    def combine(var1, var2):
     =====
-        return var1 + var2
+        var1 = var1.capitalize()
+        var2 = var2.lower()
     =====
-        return var1 + " " + var2 #paired
+        var1.capitalize() #paired
+        var2.lower()
+    =====
+        return var1 + " " + var2
+    =====
+        return var1 + var2 #paired
 
 
 .. activecode::  str-mixed-wizard-ac
 
-    Finish the function, ``combination(var1, var2)``, to return a string by combining the two variables ``var1`` and ``var2``. 
-    For example, if ``var1`` is "I am a " and ``var2`` is "CS wizard", the function should return the string, ``"I am a CS wizard"``.
+    Write the function, ``combine(var1, var2)``, to return a string by combining the two variables ``var1`` and ``var2``.
+    For example, if ``var1`` is "i am a " and ``var2`` is "CS wizard", the function should return the string, ``"I am a cs wizard"``.
     ~~~~
-    def combination(var1, var2):
-        # write code here
 
     ====
     from unittest.gui import TestCaseGui
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(combination("I am a ", "CS wizard"), "I am a CS wizard", 'combination("I am a ", "CS wizard")')
-            self.assertEqual(combination("Potatos", " are cool"), "Potatos are cool", 'combination("Potatos", " are cool")')
-            self.assertEqual(combination("I am a ", "meatloaf"), "I am a meatloaf", 'combination("I am a ", "meatloaf")')
-            self.assertEqual(combination("I like", " bubbles"), "I like bubbles", 'combination("I like", " bubbles")')
+            self.assertEqual(combine("i am a", "CS wizard"), "I am a cs wizard", 'combine("i am a", "CS wizard")')
+            self.assertEqual(combine("Potatos", "are cool"), "Potatos are cool", 'combine("Potatos", "are cool")')
+            self.assertEqual(combine("i am a", "Meatloaf"), "I am a meatloaf", 'combine("i am a", "Meatloaf")')
+            self.assertEqual(combine("I like", "bubbles"), "I like bubbles", 'combine("I like", "bubbles")')
 
     myTests().main()
 
@@ -344,29 +347,34 @@ Mixed-up Code Questions
     :adaptive:
     :numbered: left
     :practice: T
-    :noindent:
 
-    The following function, ``colors(col1, col2)``, should return a string combining the variables ``col1`` and ``col2``. For example, 
-    if ``col1`` and ``col2`` is "'Red'" and "'blue'", then the function should return ``"'Red' is a primary color and 
-    so is 'blue'"``. But, the blocks have been mixed up and include an extra block that isn't correct.  Drag the needed 
-    blocks from the left and put them in the correct order on the right. Click the ``Check Me`` button to check your solution.
+    Create the function, ``colors(col1, col2)``, should return a string combining the variables ``col1`` and ``col2``. For example,
+    if ``col1`` and ``col2`` is "'red'" and "'blue'", then the function should return ``Red is a primary color and
+    so is blue``.  Be sure to capitalize the first color and lowercase at second.
     -----
     def colors(col1, col2):
     =====
-        return col1 + " is a primary color, and so is " + col2
+        mid = " is a primary color, and so is "
     =====
-        return col1 is a primary color, and so is col2 #paired
+        mid = "is a primary color, and so is" #paired
+    =====
+        col1 = col1.capitalize() + mid
+        col2 = col2.lower()
+    =====
+        col1 = col1.lower() + mid #paired
+        col2 = col2.capitalize()
+    =====
+        return col1 + col2
+    =====
+        return col1 + " " + col2 #paired
 
 
 .. activecode::  str-mixed-colors-ac
 
-    Fix and complete the function, ``colors(col1, col2)``, to return a string combining the variables ``col1`` and ``col2``. 
-    For example, if ``col1`` and ``col2`` is "'Red'" and "'blue'", then the function should return ``"'Red' is a primary color and 
-    so is 'blue'"``.
+    Write the function, ``colors(col1, col2)``, to return a string combining the variables ``col1`` and ``col2``.
+    For example, if ``col1`` and ``col2`` is "'Red'" and "'blue'", then the function should return ``Red is a primary color and
+    so is blue``.  Be sure to capitalize the first color and lowercase the second.
     ~~~~
-    def colors(col1, col2):
-        # write code here
-
 
     ====
     from unittest.gui import TestCaseGui
@@ -374,11 +382,11 @@ Mixed-up Code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(colors("'Red'", "'blue'"), "'Red' is a primary color, and so is 'blue'", "colors("'Red'", "'blue'")")
-            self.assertEqual(colors("'Yellow'", "'Blue'"), "'Yellow' is a primary color, and so is 'Blue'", "colors("'Yellow'", "'Blue'")")
-            self.assertEqual(colors("'Yellow'", "'red'"), "'Yellow' is a primary color, and so is 'red'", "colors("'Yellow'", "'red'")")
-            self.assertEqual(colors("'Red'", "'yellow'"), "'Red' is a primary color, and so is 'yellow'", "colors("'Red'", "'yellow'")")
-            self.assertEqual(colors("'blue'", "'red'"), "'blue' is a primary color, and so is 'red'", "colors("'blue'", "'red'")")
+            self.assertEqual(colors("red", "blue"), "Red is a primary color, and so is blue", "colors('red', 'blue')")
+            self.assertEqual(colors("yellow", "Blue"), "Yellow is a primary color, and so is blue", "colors('yellow', 'Blue')")
+            self.assertEqual(colors("Yellow", "red"), "Yellow is a primary color, and so is red", "colors('Yellow', 'red')")
+            self.assertEqual(colors("Red", "Yellow"), "Red is a primary color, and so is yellow", "colors('Red', 'Yellow')")
+            self.assertEqual(colors("blue", "RED"), "Blue is a primary color, and so is red", "colors('blue', 'RED')")
 
     myTests().main()
 
@@ -387,31 +395,28 @@ Mixed-up Code Questions
     :adaptive:
     :numbered: left
     :practice: T
-    :noindent:
 
-    The following function, ``fave_animal(animal)``, should return the string, "Petting ``animal`` makes me happier than anything else" where ``animal``
-    is any animal of your choice. For example, if ``animal`` is "dogs", then the function should return, ``"Petting dogs makes 
-    me happier than anything else"``. But, the blocks have been mixed up and include several extra blocks that are not correct. 
-    Drag the needed blocks from the left and put them in the correct order on the right.  Click the ``Check Me`` button to check 
-    your solution.
+    Create the function, ``fave_animal(animal)``, to return the string, "Petting ``animal`` makes me happier than anything else" where ``animal``
+    is any animal of your choice. For example, if ``animal`` is "dogs", then the function should return, ``"Petting dogs makes
+    me happier than anything else"``.
     -----
     def fave_animal(animal):
     =====
-        return "Petting " + animal + " makes me happier than anything else"
+        end = " makes me happier than anything else"
     =====
-        return "Petting animal makes me happier than anything else" #paired
+        end = "makes me happier than anything else" #paired
     =====
-        return "Petting  + animal +  makes me happier than anything else" #paired
+        return "Petting " + animal + end
+    =====
+        return "Petting " + "animal" + end #paired
 
 .. activecode::  str-mixed-dogs-ac
 
     Finish the function, ``fave_animal(animal)``, to return the string, "Petting ``animal`` makes me happier than anything else" where ``animal``
-    is any animal of your choice. For example, if ``animal`` is "dogs", then the function should return, ``"Petting dogs makes 
+    is any animal of your choice. For example, if ``animal`` is "dogs", then the function should return, ``"Petting dogs makes
     me happier than anything else"``.
     ~~~~
-    def fave_animal(animal):
-        # write code here
-        
+
     ====
     from unittest.gui import TestCaseGui
 
