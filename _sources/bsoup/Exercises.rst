@@ -34,7 +34,7 @@ Multiple Choice Questions
    :feedback_d: Try again!
    :feedback_e: Try again!
    
-   Which line of code correctly gets the first item in items and makes the most sense following the below code snippet?
+   Which line of code correctly gets the first item in ``items`` and makes the most sense following the below code snippet?
 
    .. code-block:: python
 
@@ -52,7 +52,7 @@ Multiple Choice Questions
    :feedback_b: Correct! 
    :feedback_c: Try again!
 
-   How does one parse the HTML into a Beautiful Soup object given a response object?
+   How does one parse the HTML into a ``BeautifulSoup`` object given a ``response`` object?
 
 
 .. mchoice:: Exercises_bsoup_mc4
@@ -67,7 +67,7 @@ Multiple Choice Questions
    :feedback_c: Try again!
    :feedback_d: Try again!
 
-   Which of the following gets the value for the id in the first p tag?
+   Which of the following gets the value for the ``id`` in the first ``p`` tag?
 
 
 .. mchoice:: Exercises_bsoup_mc5
@@ -82,7 +82,7 @@ Multiple Choice Questions
    :feedback_c: Try again!
    :feedback_d: Try again!
 
-   How does one get the first header 1 tag after creating a soup object?
+   How does one get the first header 1 tag after creating a ``soup`` object?
 
 
 .. mchoice:: Exercises_bsoup_mc6
@@ -129,7 +129,7 @@ Multiple Choice Questions
    :feedback_c: Correct! This is the correct way to find all paragraph tags. In HTML, paragraph tags are 'p' tags. For Beautiful Soup, to find a class, class requires an underscore (class_).
    :feedback_d: Try again!
 
-   Which of the following finds all paragraph tags with class b-soup?
+   Which of the following finds all paragraph tags with ``class b-soup``?
 
 
 .. mchoice:: Exercises_bsoup_mc9
@@ -141,10 +141,10 @@ Multiple Choice Questions
    :correct: c
    :feedback_a: Try again! Although the 'a' tag is the link tag, the variable that contains the href attribute is link_tag.
    :feedback_b: Try again! Although the 'a' tag is the link tag, the variable that contains the href attribute is link_tag. Also, using the format tag['attribute_name'] will cause an error if the tag is not there.
-   :feedback_c: Correct! This is the correct way to create a dictionary with link tag text as keys and href as values. Using .get('attribute_name', None) will not cause an error. It will set None as default and grab the value if there is one.
+   :feedback_c: Correct! This is the correct way to create a dictionary with link_tag text as keys and href as values. Using .get('attribute_name', None) will not cause an error. It will set None as the default value and grab the value if there is one.
    :feedback_d: Try again! The attribute name is missing quotation marks, and using the format tag['attribute_name'] will cause an error if the tag is not there.
 
-   After creating an empty dictionary and getting a list of all link tags, how does one put the link_tag text as keys and the link_tag href attribute as values for the dictionary?
+   After creating an empty dictionary and getting a list of all link tags, how does one put the ``link_tag`` text as keys and the ``link_tag`` ``href`` attribute as values for the dictionary?
 
 
 .. mchoice:: Exercises_bsoup_mc10
@@ -159,7 +159,7 @@ Multiple Choice Questions
    :feedback_c: Try again! 'Site' is not a tag.
    :feedback_d: Try again! It isn't a tag.
 
-   Given the below html, after importing re, what will be returned after "for tag in soup.find_all(re.compile("t")): print(tag.name)" is run?
+   Given the below html, after importing re, what will be returned after ``for tag in soup.find_all(re.compile("t")): print(tag.name)`` is run?
 
    .. code-block:: python
 
