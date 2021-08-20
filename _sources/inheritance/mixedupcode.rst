@@ -1,51 +1,52 @@
-Mixed-Up Code Exercises
-------------------------
-.. parsonsprob:: inheritance_mixedupcode_1
-    :numbered: left
-    :practice: T
-    :adaptive:
 
-   The following program should have a subclass of the ``Parent`` class named ``Child``, and put a pass statement in the subclass. 
-   Then, create a ``Child`` object named ``lil_child``, and call the ``Parent`` method on the ``Child`` object to see what color 
-   eyes the ``lil_child`` has. The blocks have been mixed up and include a few extra blocks that aren't needed in the solution. Drag 
-   the needed blocks from the left and put them in the correct order on the right, indenting them correctly.
-   ----
-   class Parent:
-   =====
-   class Parent #paired
-   =====
-     def eye_color(self):
-   =====
-        return "I have hazel eyes."
-   =====
-   class Child(Parent):
-   =====
-   class Child(): #paired
-   =====
-     def eye_color(self):
-   =====
-        super().eye_color()
-   =====
-   lil_child = Child()
+Mixed-Up Code Questions
+-----------------------
 
-..activecode:: inheritance_mixedupcode_1-ac
+.. selectquestion:: Inheritance_MixedUpCode_1_sq
+   :fromid: inheritance_mixed1, inheritance_mixed1_ac
+   :toggle: 
 
-   Write the following program should have a subclass of the ``Parent`` class named ``Child``, and put a pass statement in the subclass. 
-   Then, create a ``Child`` object named ``lil_child``, and call the ``Parent`` method on the ``Child`` object to see what color 
-   eyes the ``lil_child`` has.
-   ----
-   class Parent:
-        # write code here
-  
-  
-   class Child:
-        # write code here
-      
-   ====
-   from unittest.gui import TestCaseGui
 
-   class myTests(TestCaseGui):
-       def testOne(self):
-           self.assertEqual(lil_child.eye_color(), "I have hazel eyes")
+.. selectquestion:: Inheritance_MixedUpCode_2_sq
+   :fromid: inheritance_mixed2, inheritance_mixed2_ac
+   :toggle: 
 
-   myTests().main()
+
+.. selectquestion:: Inheritance_MixedUpCode_3_sq
+   :fromid: inheritance_mixed3, inheritance_mixed3_ac
+   :toggle: 
+
+
+.. selectquestion:: Inheritance_MixedUpCode_4_sq
+   :fromid: inheritance_mixed4, inheritance_mixed4_ac
+   :toggle: 
+
+
+.. selectquestion:: Inheritance_MixedUpCode_5_sq
+   :fromid: inheritance_mixed5, inheritance_mixed5_ac
+   :toggle: 
+
+
+.. selectquestion:: Inheritance_MixedUpCode_6_sq
+   :fromid: inheritance_mixed6, inheritance_mixed6_ac
+   :toggle: 
+
+
+.. selectquestion:: Inheritance_MixedUpCode_7_sq
+   :fromid: inheritance_mixed7, inheritance_mixed7_ac
+   :toggle: 
+
+
+.. selectquestion:: Inheritance_MixedUpCode_8_sq
+   :fromid: inheritance_mixed8, inheritance_mixed8_ac
+   :toggle: 
+
+
+.. selectquestion:: Inheritance_MixedUpCode_9_sq
+   :fromid: inheritance_mixed9, inheritance_mixed9_ac
+   :toggle: 
+
+
+.. selectquestion:: Inheritance_MixedUpCode_10_sq
+   :fromid: inheritance_mixed10, inheritance_mixed10_ac
+   :toggle: 
