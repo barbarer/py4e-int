@@ -18,6 +18,10 @@ Network Programming
     bonusforunixlinux.rst
     glossary.rst
     Exercises.rst
+    html_exercises.rst
     mixedupcode.rst
     mixedupcode_orig.rst
+    html_mixedupcode.rst
+    html_mixedupcode_orig.rst
     writecode.rst
+    html_writecode.rst
