@@ -10,12 +10,24 @@ Write Code Questions
                 :nocodelens:
                 :language: python3
 
-                Create a BeautifulSoup object named soup using the url https://umich.edu/. Using BeautifulSoup, print the URL that links to Current Students in the Navigation Bar.
+                Create a function called ``cur_stud_link`` that takes in a parameter ``url`` 
+                and uses BeautifulSoup to return the URL that links to Current Students in the Navigation Bar.
+                For example, ``cur_stud_link('https://umich.edu/')`` should return ``"https://umich.edu/current-students/"``.
                 ~~~~
                 from bs4 import BeautifulSoup
                 import requests
 
-                url = "https://umich.edu/"
+                def cur_stud_link(url):
+
+                ====
+                from unittest.gui import TestCaseGui
+
+                class myTests(TestCaseGui):
+
+                    def testOne(self):
+                        self.assertEqual(cur_stud_link('https://umich.edu/'), "https://umich.edu/current-students/", "cur_stud_link('https://umich.edu/')")
+
+                myTests().main()
 
         .. tab:: Answer
 
@@ -23,66 +35,50 @@ Write Code Questions
                 :optional:
                 :language: python3
 
-                Create a BeautifulSoup object named soup using the url https://umich.edu/. Using BeautifulSoup, print the URL that links to Current Students in the Navigation Bar.
+                Create a function called ``cur_stud_link`` that takes in a parameter ``url`` 
+                and uses BeautifulSoup to return the URL that links to Current Students in the Navigation Bar.
+                For example, ``cur_stud_link('https://umich.edu/')`` should return ``"https://umich.edu/current-students/"``.
                 ~~~~
                 from bs4 import BeautifulSoup
                 import requests
 
-                url = "https://umich.edu/"
-                r = requests.get(url)
-                soup = BeautifulSoup(r.text, 'html.parser')
+                def cur_stud_link(url):
+                    r = requests.get(url)
+                    soup = BeautifulSoup(r.text, 'html.parser')
 
-                # inspect Current Students to get the details
-                text = soup.find('a', text = "Current Students")
-                info = text.get('href')
-                all_info = "https://umich.edu" + info
-                print(all_info)
+                    # inspect Current Students to get the details
+                    text = soup.find('a', text = "Current Students")
+                    info = text.get('href')
+                    all_info = "https://umich.edu" + info
+                    return all_info
+
+                print(cur_stud_link('https://umich.edu/'))
 
 #.
-    .. tabbed:: bsoup_writecode2
+    .. activecode:: bsoup_writecode2q
+        :practice: T
+        :nocodelens:
+        :language: python3
 
-        .. tab:: Question
+        Create a function called ``headings`` that takes in a parameter ``url`` and uses BeautifulSoup to return a list of all heading names (not subheadings) from the 
+        Contents box (History, Emergence of MOOC providers, Student experience and pedagogy, etc.). For example, ``headings('https://en.wikipedia.org/wiki/Massive_open_online_course')`` 
+        should return ``['History', 'Emergence of MOOC providers', 'Student experience and pedagogy', 'Information architecture', 'Industry', 'Benefits', 'Challenges and criticisms', 'See also', 'References', 'Sources', 'Further reading']``.
+        ~~~~
+        from bs4 import BeautifulSoup
+        import requests
 
-            .. activecode:: bsoup_writecode2q
-                :practice: T
-                :nocodelens:
-                :language: python3
+        def headings(url):
 
-                Create a BeautifulSoup object named soup using the url https://en.wikipedia.org/wiki/Massive_open_online_course. Using BeautifulSoup, web scrape all heading names (not subheadings) from the Contents box (History, Emergence of MOOC providers, Student experience and pedagogy, etc.) into a heading_list.
-                ~~~~
-                from bs4 import BeautifulSoup
-                import requests
+        ====
+        from unittest.gui import TestCaseGui
 
-                url = "https://en.wikipedia.org/wiki/Massive_open_online_course"
+        class myTests(TestCaseGui):
 
-        .. tab:: Answer
+            def testOne(self):
+                self.assertEqual(headings('https://en.wikipedia.org/wiki/Massive_open_online_course'), ['History', 'Emergence of MOOC providers', 'Student experience and pedagogy', 'Information architecture', 'Industry', 'Benefits', 'Challenges and criticisms', 'See also', 'References', 'Sources', 'Further reading'], "headings('https://en.wikipedia.org/wiki/Massive_open_online_course')")
 
-            .. activecode:: bsoup_writecode2a
-                :optional:
-                :language: python3
+        myTests().main()
 
-                Create a BeautifulSoup object named soup using the url https://en.wikipedia.org/wiki/Massive_open_online_course. Using BeautifulSoup, web scrape all heading names (not subheadings) from the Contents box (History, Emergence of MOOC providers, Student experience and pedagogy, etc.) into a heading_list.
-                ~~~~
-                from bs4 import BeautifulSoup
-                import requests
-
-                url = "https://en.wikipedia.org/wiki/Massive_open_online_course"
-                r = requests.get(url)
-                soup = BeautifulSoup(r.text, 'html.parser')
-
-                a_tags = []
-                heading_list = []
-
-                # inspect the Contents box
-                headings = soup.find_all('li', class_ = 'toclevel-1')
-                for tag in headings: 
-                    a_tag = tag.find('a')
-                    a_tags.append(a_tag)
-                for tag in a_tags:
-                    heading = tag.find(class_ = 'toctext').text
-                    heading_list.append(heading)
-
-                print(heading_list)
 
 #.
     .. tabbed:: bsoup_writecode3
@@ -94,12 +90,24 @@ Write Code Questions
                 :nocodelens:
                 :language: python3
 
-                Create a BeautifulSoup object named soup using the url https://en.wikipedia.org/wiki/Massive_open_online_course. Using BeautifulSoup, web scrape the Coursera enrollees table, and create and print a dictionary called coursera_enrollees with Country as keys and Percentage as values. Sample Output: {'United States': '27.7%', 'India':...}
+                Create a function called ``coursera_dict`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the Coursera enrollees table, 
+                and returns a dictionary with Country as keys and Percentage as values. For example, ``coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course')`` 
+                should return ``{'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', 'United Kingdom': '4.4%', 'Spain': '4.0%', 'Canada': '3.6%', 'Australia': '2.3%', 'Russia': '2.2%', 'Rest of world': '41.9%'}``.
                 ~~~~
                 from bs4 import BeautifulSoup
                 import requests
 
-                url = "https://en.wikipedia.org/wiki/Massive_open_online_course"
+                def coursera_dict(url): 
+
+                ====
+                from unittest.gui import TestCaseGui
+
+                class myTests(TestCaseGui):
+
+                    def testOne(self):
+                        self.assertEqual(coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course'), {'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', 'United Kingdom': '4.4%', 'Spain': '4.0%', 'Canada': '3.6%', 'Australia': '2.3%', 'Russia': '2.2%', 'Rest of world': '41.9%'}, "coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course')")
+
+                myTests().main()
 
         .. tab:: Answer
 
@@ -107,76 +115,57 @@ Write Code Questions
                 :optional:
                 :language: python3
 
-                Create a BeautifulSoup object named soup using the url https://en.wikipedia.org/wiki/Massive_open_online_course. Using BeautifulSoup, web scrape the Coursera enrollees table, and create and print a dictionary called coursera_enrollees with Country as keys and Percentage as values. Sample Output: {'United States': '27.7%', 'India':...}
+                Create a function called ``coursera_dict`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the Coursera enrollees table, 
+                and returns a dictionary with Country as keys and Percentage as values. For example, ``coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course')`` 
+                should return ``{'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', 'United Kingdom': '4.4%', 'Spain': '4.0%', 'Canada': '3.6%', 'Australia': '2.3%', 'Russia': '2.2%', 'Rest of world': '41.9%'}``.
                 ~~~~
                 from bs4 import BeautifulSoup
                 import requests
 
-                url = "https://en.wikipedia.org/wiki/Massive_open_online_course"
-                r = requests.get(url)
-                soup = BeautifulSoup(r.text, 'html.parser')
+                def coursera_dict(url): 
+                    r = requests.get(url)
+                    soup = BeautifulSoup(r.text, 'html.parser')
 
-                coursera_enrollees = {}
+                    coursera_enrollees = {}
 
-                table = soup.find('table', class_ = 'wikitable')
-                rows = table.find_all('tr')
-                
-                # The first tr (table row) tag with th (table heading) tags, index 0, doesn't have td tags, so it'd return an empty list. That's why we do rows[1:].
-                for row in rows[1:]:
-                    both_columns = row.find_all("td")
-                    key = both_columns[0].text
-                    # Remember to strip the newlines from the percentages
-                    value = both_columns[1].text.rstrip("\n")
-                    coursera_enrollees[key] = value
+                    table = soup.find('table', class_ = 'wikitable')
+                    rows = table.find_all('tr')
 
-                print(coursera_enrollees)
+                    # The first tr (table row) tag with th (table heading) tags, index 0, doesn't have td tags, so it'd return an empty list. That's why we do rows[1:].
+                    for row in rows[1:]:
+                        both_columns = row.find_all("td")
+                        key = both_columns[0].text
+                        # Remember to strip the newlines from the percentages
+                        value = both_columns[1].text.rstrip("\n")
+                        coursera_enrollees[key] = value
+
+                    return coursera_enrollees
+
+                print(coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course'))
 
 #.
-    .. tabbed:: bsoup_writecode4
+    .. activecode:: bsoup_writecode4q
+        :practice: T
+        :nocodelens:
+        :language: python3
 
-        .. tab:: Question
+        Create a BeautifulSoup object named soup using the url https://en.wikipedia.org/wiki/Python_(programming_language). Using BeautifulSoup, web scrape the Summary of Python 3's built-in types table, and create and print a list called types (which should contain bool, bytearray, etc.).
+        ~~~~
+        from bs4 import BeautifulSoup
+        import requests
 
-            .. activecode:: bsoup_writecode4q
-                :practice: T
-                :nocodelens:
-                :language: python3
+        url = "https://en.wikipedia.org/wiki/Python_(programming_language)"
 
-                Create a BeautifulSoup object named soup using the url https://en.wikipedia.org/wiki/Python_(programming_language). Using BeautifulSoup, web scrape the Summary of Python 3's built-in types table, and create and print a list called types (which should contain bool, bytearray, etc.).
-                ~~~~
-                from bs4 import BeautifulSoup
-                import requests
+        ====
+        from unittest.gui import TestCaseGui
 
-                url = "https://en.wikipedia.org/wiki/Python_(programming_language)"
+        class myTests(TestCaseGui):
 
-        .. tab:: Answer
+            def testOne(self):
+                self.assertEqual(types, ['bool', 'bytearray', 'bytes', 'complex', 'dict', 'ellipsis', 'float', 'frozenset', 'int', 'list', 'NoneType', 'NotImplementedType', 'range', 'set', 'str', 'tuple'], "Making sure list is correct.")
 
-            .. activecode:: bsoup_writecode4a
-                :optional:
-                :language: python3
+        myTests().main()
 
-                Create a BeautifulSoup object named soup using the url https://en.wikipedia.org/wiki/Python_(programming_language). Using BeautifulSoup, web scrape the Summary of Python 3's built-in types table, and create and print a list called types (which should contain bool, bytearray, etc.).
-                ~~~~
-                from bs4 import BeautifulSoup
-                import requests
-
-                url = "https://en.wikipedia.org/wiki/Python_(programming_language)"
-                r = requests.get(url)
-                soup = BeautifulSoup(r.text, 'html.parser')
-
-                types = []
-
-                table = soup.find('table', class_ = 'wikitable')
-                rows = table.find_all('tr')
-                                
-                # The first tr (table row) tag with th (table heading) tags, index 0, doesn't have td tags, so it'd return an empty list. That's why we do rows[1:].
-                for row in rows[1:]:
-                    all_columns = row.find_all("td")
-                    python_type = all_columns[0]
-                    # Have to find the code tags or else the superscript a will be included for some of the types (e.g., look at ellipsis in the table). 
-                    one_type = python_type.find('code').text.rstrip("\n")
-                    types.append(one_type)
-
-                print(types)
 
 #.
     .. tabbed:: bsoup_writecode5
@@ -194,6 +183,16 @@ Write Code Questions
                 import requests
 
                 url = "https://detroit.eater.com/maps/best-ann-arbor-restaurants"
+
+                ====
+                from unittest.gui import TestCaseGui
+
+                class myTests(TestCaseGui):
+
+                    def testOne(self):
+                        self.assertEqual(ann_arbor_2019_restaurants_list, ["1. Knight's Steakhouse", '2. The Last Word', "3. Krazy Jim's Blimpy Burger", '4. Dessous', '5. Spencer', '6. Miss Kim', "7. Zingerman's Delicatessen", '8. Mani Osteria and Bar', '9. Tomukun Noodle Bar', '10. Ricewood', '11. Seoul Street', "12. Ma Lou's Fried Chicken"], "Making sure list is correct.")
+
+                myTests().main()
 
         .. tab:: Answer
 
@@ -221,47 +220,29 @@ Write Code Questions
                 print(ann_arbor_2019_restaurants_list)
 
 #.
-    .. tabbed:: bsoup_writecode6
+    .. activecode:: bsoup_writecode6q
+        :practice: T
+        :nocodelens:
+        :language: python3
 
-        .. tab:: Question
+        Create a BeautifulSoup object named soup using the url https://www.si.umich.edu/programs/bachelor-science-information. Using BeautifulSoup, web scrape the section names and subsection names under Programs Bachelor of Science in Information into a bsi_list (which should contain 'How do I apply?', 'Current U-M students', 'Transfer students', 'High school students', 'New transfers', etc.). Make sure extraneous section names aren't included.
+        ~~~~
+        from bs4 import BeautifulSoup
+        import requests
+        import re
 
-            .. activecode:: bsoup_writecode6q
-                :practice: T
-                :nocodelens:
-                :language: python3
+        url = "https://www.si.umich.edu/programs/bachelor-science-information"
 
-                Create a BeautifulSoup object named soup using the url https://www.si.umich.edu/programs/bachelor-science-information. Using BeautifulSoup, web scrape the section names and subsection names under Programs Bachelor of Science in Information into a bsi_list (which should contain 'How do I apply?', 'Current U-M students', 'Transfer students', 'High school students', 'New transfers', etc.). Make sure extraneous section names aren't included.
-                ~~~~
-                from bs4 import BeautifulSoup
-                import requests
-                import re
+        ====
+        from unittest.gui import TestCaseGui
 
-                url = "https://www.si.umich.edu/programs/bachelor-science-information"
+        class myTests(TestCaseGui):
 
-        .. tab:: Answer
+            def testOne(self):
+                self.assertEqual(bsi_list, ['How do I apply?', 'Current U-M students', 'Transfer students', 'High school students', 'New transfers', 'UMSI Community College Summer Institute', 'Curriculum', 'Career outcomes', 'Internships', 'F-1 visa holders', 'Career development resources', 'Engaged learning', 'Tuition and funding', 'Connect with us', 'Study abroad for undergraduates', 'Exchange student information'], "Making sure list is correct.")
 
-            .. activecode:: bsoup_writecode6a
-                :optional:
-                :language: python3
+        myTests().main()
 
-                Create a BeautifulSoup object named soup using the url https://www.si.umich.edu/programs/bachelor-science-information. Using BeautifulSoup, web scrape the section names and subsection names under Programs Bachelor of Science in Information into a bsi_list (which should contain 'How do I apply?', 'Current U-M students', 'Transfer students', 'High school students', 'New transfers', etc.). Make sure extraneous section names aren't included.
-                ~~~~
-                from bs4 import BeautifulSoup
-                import requests
-                import re
-
-                url = "https://www.si.umich.edu/programs/bachelor-science-information"
-                r = requests.get(url)
-                soup = BeautifulSoup(r.text, 'html.parser')
-
-                bsi_list = []
-
-                sections = soup.find_all('a', href = re.compile("/programs/bachelor-science-information/"))
-
-                for section in sections[:-2]:
-                    bsi_list.append(section.text.strip("\n").strip())
-
-                print(bsi_list)
 
 #.
     .. tabbed:: bsoup_writecode7
@@ -280,6 +261,16 @@ Write Code Questions
                 import re
 
                 url = "https://www.si.umich.edu/programs/bachelor-science-information"
+
+                ====
+                from unittest.gui import TestCaseGui
+
+                class myTests(TestCaseGui):
+
+                    def testOne(self):
+                        self.assertEqual(bsi_dict, {'How do I apply?': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply', 'Current U-M students': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/cross-campus-transfer', 'Transfer students': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/new-transfer-students-bsi', 'High school students': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/preferred-admissions', 'New transfers': 'https://www.si.umich.edu/programs/bachelor-science-information/new-transfers', 'UMSI Community College Summer Institute': 'https://www.si.umich.edu/programs/bachelor-science-information/new-transfers/umsi-community-college-summer-institute', 'Curriculum': 'https://www.si.umich.edu/programs/bachelor-science-information/curriculum', 'Career outcomes': 'https://www.si.umich.edu/programs/bachelor-science-information/career-outcomes', 'Internships': 'https://www.si.umich.edu/programs/bachelor-science-information/internships', 'F-1 visa holders': 'https://www.si.umich.edu/programs/bachelor-science-information/internships/f-1-visa-holders', 'Career development resources': 'https://www.si.umich.edu/programs/bachelor-science-information/career-development-resources', 'Engaged learning': 'https://www.si.umich.edu/programs/bachelor-science-information/engaged-learning', 'Tuition and funding': 'https://www.si.umich.edu/programs/bachelor-science-information/tuition-and-funding', 'Connect with us': 'https://www.si.umich.edu/programs/bachelor-science-information/connect-us', 'Study abroad for undergraduates': 'https://www.si.umich.edu/programs/bachelor-science-information/study-abroad-undergraduates', 'Exchange student information': 'https://www.si.umich.edu/programs/bachelor-science-information/exchange-student-information'}, "Making sure dictionary is correct.")
+
+                myTests().main()
 
         .. tab:: Answer
 
@@ -315,40 +306,32 @@ Write Code Questions
                 print(bsi_dict)
 
 #.
-    .. tabbed:: bsoup_writecode8
+    .. activecode:: bsoup_writecode8q
+        :practice: T
+        :nocodelens:
+        :language: python3
+        
+        Create a BeautifulSoup object named soup using the url https://www.si.umich.edu/programs/bachelor-science-information. Using BeautifulSoup, web scrape the address text in the footer and strip newlines.
+        ~~~~
+        from bs4 import BeautifulSoup
+        import requests
 
-        .. tab:: Question
+        url = "https://www.si.umich.edu/programs/bachelor-science-information"
 
-            .. activecode:: bsoup_writecode8q
-                :practice: T
-                :nocodelens:
-                :language: python3
+        ====
+        from unittest.gui import TestCaseGui
 
-                Create a BeautifulSoup object named soup using the url https://www.si.umich.edu/programs/bachelor-science-information. Using BeautifulSoup, web scrape the address text in the footer and strip newlines.
-                ~~~~
-                from bs4 import BeautifulSoup
-                import requests
+        class myTests(TestCaseGui):
 
-                url = "https://www.si.umich.edu/programs/bachelor-science-information"
+            def testOne(self):
+                self.assertEqual(envelope_address, 
+                    School of Information
+                    University of Michigan
+                    105 S State St.
+                    Ann Arbor, MI 48109-1285, "Making sure address is correct.")
 
-        .. tab:: Answer
-
-            .. activecode:: bsoup_writecode8a
-                :optional:
-                :language: python3
-
-                Create a BeautifulSoup object named soup using the url https://www.si.umich.edu/programs/bachelor-science-information. Using BeautifulSoup, web scrape the address text in the footer and strip newlines.
-                ~~~~
-                from bs4 import BeautifulSoup
-                import requests
-
-                url = "https://www.si.umich.edu/programs/bachelor-science-information"
-                r = requests.get(url)
-                soup = BeautifulSoup(r.text, 'html.parser')
-
-                envelope_address = soup.find('div', class_ = 'footer--address').text.strip("\n")
-
-                print(envelope_address)
+        myTests().main()       
+                
 
 #.
     .. tabbed:: bsoup_writecode9
@@ -366,6 +349,16 @@ Write Code Questions
                 import requests
 
                 url = "https://www.si.umich.edu/people/directory/faculty/e"
+
+                ====
+                from unittest.gui import TestCaseGui
+
+                class myTests(TestCaseGui):
+
+                    def testOne(self):
+                        self.assertEqual(name_email_dict, {'Paul Edwards': 'pne@umich.edu', 'Ron Eglash': 'eglash@umich.edu', 'Nicole Ellison': 'enicole@umich.edu', 'Barbara Ericson': 'barbarer@umich.edu'}, "Making sure dictionary is correct.")
+
+                myTests().main()
 
         .. tab:: Answer
 
@@ -404,46 +397,24 @@ Write Code Questions
                 print(name_email_dict)
 
 #.
-    .. tabbed:: bsoup_writecode10
+    .. activecode:: bsoup_writecode10q
+        :practice: T
+        :nocodelens:
+        :language: python3
 
-        .. tab:: Question
+        Create a BeautifulSoup object named soup using the url https://www.si.umich.edu/about-umsi/contact-us. Using BeautifulSoup, web scrape the 5 program names under Email Addresses and Admissions (BSI program, MSI program, etc.) and their associated email addresses. Create a program_email_dict with the program names as keys and the email addresses as values. 
+        ~~~~
+        from bs4 import BeautifulSoup
+        import requests
 
-            .. activecode:: bsoup_writecode10q
-                :practice: T
-                :nocodelens:
-                :language: python3
+        url = "https://www.si.umich.edu/about-umsi/contact-us"
 
-                Create a BeautifulSoup object named soup using the url https://www.si.umich.edu/about-umsi/contact-us. Using BeautifulSoup, web scrape the 5 program names under Email Addresses and Admissions (BSI program, MSI program, etc.) and their associated email addresses. Create a program_email_dict with the program names as keys and the email addresses as values. 
-                ~~~~
-                from bs4 import BeautifulSoup
-                import requests
+        ====
+        from unittest.gui import TestCaseGui
 
-                url = "https://www.si.umich.edu/about-umsi/contact-us"
+        class myTests(TestCaseGui):
 
-        .. tab:: Answer
+            def testOne(self):
+                self.assertEqual(program_email_dict, {'BSI program': 'umsi.undergrad@umich.edu', 'MSI program': 'umsi.admissions@umich.edu', 'MHI program': 'hi.inquiries@umich.edu', 'MADS program': 'umsi.mads@umich.edu', 'Doctoral program': 'umsi.phd.admissions@umich.edu'}, "Making sure dictionary is correct.")
 
-            .. activecode:: bsoup_writecode10a
-                :optional:
-                :language: python3
-
-                Create a BeautifulSoup object named soup using the url https://www.si.umich.edu/about-umsi/contact-us. Using BeautifulSoup, web scrape the 5 program names under Email Addresses and Admissions (BSI program, MSI program, etc.) and their associated email addresses. Create a program_email_dict with the program names as keys and the email addresses as values. 
-                ~~~~
-                from bs4 import BeautifulSoup
-                import requests
-
-                url = "https://www.si.umich.edu/about-umsi/contact-us"
-                r = requests.get(url)
-                soup = BeautifulSoup(r.text, 'html.parser')
-
-                program_email_dict = {}
-
-                programs_section = soup.find("ul", dir="ltr")
-                programs = programs_section.find_all("li")
-
-                for program in programs:
-                    split_name_email = program.text.split(":")
-                    program_name = split_name_email[0]
-                    program_email = split_name_email[1].replace("\xa0", "")
-                    program_email_dict[program_name] = program_email
-
-                print(program_email_dict)
+        myTests().main()
