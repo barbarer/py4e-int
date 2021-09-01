@@ -176,7 +176,7 @@ Multiple Choice Questions
    :practice: T
    :answer_a: Book.__init__(self)
    :answer_b: Dictionary.__init__(self)
-   :answer_c: super().__init__(self)
+   :answer_c: super().__init__()
    :answer_d: Book.super().__init__(self)
    :answer_e: Book.__init__(Dictionary)
    :correct: a, c

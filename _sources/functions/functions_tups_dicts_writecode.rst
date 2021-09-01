@@ -35,6 +35,12 @@ Functions with Tuples and Dictionaries Write Code Questions
             .. activecode:: funct-tups-dicts-writecode1a
                 :optional:
 
+                Write a function called ``index_tup`` that takes in a tuple of strings, ``tup_strings``, as a parameter and returns a string consisting of the characters at the 
+                zeroth index from the first string, the first index from the second string, the second index from the third string, etc. Add on to the string until the length 
+                of the current word is less than or equal to the current index. For example, ``index_tup(("peppermint", "athlete", "business", "everyone", "rhyme", "athlete"))`` 
+                should return ``ptsret``.
+                ~~~~
+
                 def index_tup(tup):
                     str1 = ''
                     index = 0
@@ -104,7 +110,10 @@ Functions with Tuples and Dictionaries Write Code Questions
 
             .. activecode:: funct-tups-dicts-writecode3a
                 :optional:
-
+                
+                Write a function ``squared_converter`` that takes in a list of numbers, ``num_list``, and returns a dictionary with the numbers as keys
+                and their squared value as values.  For example, ``squared_converter([1,2])`` should return ``{1: 1, 2: 4}``.
+                ~~~~
                 def squared_converter(num_list):
                     squared_dict = {}
                     for num in num_list:
@@ -116,7 +125,6 @@ Functions with Tuples and Dictionaries Write Code Questions
     .. activecode:: funct-tups-dicts-writecode4
         :practice: T
         :autograde: unittest
-
 
         Write a function ``ordered_nums_tup()`` that takes a tuple, ``tup``, that contains various items such as strings and numbers and returns a sorted list of the numeric values (type int and float) sorted in ascending order. For example,
         ``ordered_nums_tup(("hello", 5, 1))`` should return ``[1, 5]``. Hint: you can use ``isinstance(var, type)`` to check if a variable is of the given type.
@@ -171,6 +179,10 @@ Functions with Tuples and Dictionaries Write Code Questions
             .. activecode:: funct-tups-dicts-writecode5a
                 :optional:
 
+                Write a function ``triple_values`` that takes in a list of numbers, ``num_list``,
+                which adds every number in the list to a dictionary as the key and adds three times the number as the value. Then, change every
+                even value (not the keys) in the dictionary to zero.  For example, ``triple_values([1, 2])`` should return ``{1: 3, 2: 0}``.
+                ~~~~
                 def triple_values(num_list):
                     triple_values_dict = {}
 
@@ -202,8 +214,7 @@ Functions with Tuples and Dictionaries Write Code Questions
     .. activecode:: funct-tups-dicts-writecode6
         :practice: T
         :autograde: unittest
-
-
+        
         Write a function ``count_chars`` that takes a string, ``str1``, and returns a list of tuples ordered by the number of times each character appears in the string in descending order.  For example, ``count_chars("babby")`` should return ``[('b': 3), ('a':1), ('y': 1)]``.
         ~~~~
 

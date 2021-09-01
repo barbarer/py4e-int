@@ -10,17 +10,17 @@
 Converting an Object to a String
 --------------------------------
 
- 
+
 When we're working with classes and objects, it is often necessary to print an object (that is to print the state of an object).
 Consider the example below.
 
 .. activecode:: chp13_classesstr1
-    
+
     class Point:
         """ Point class for representing and manipulating x,y coordinates. """
-        
+
         def __init__(self, initX, initY):
-            """ Create a new point at the given coordinates. """ 
+            """ Create a new point at the given coordinates. """
             self.x = initX
             self.y = initY
 
@@ -33,7 +33,7 @@ Consider the example below.
         def distanceFromOrigin(self):
             return ((self.x ** 2) + (self.y ** 2)) ** 0.5
 
-    
+
     p = Point(7, 6)
     print(p)
 
@@ -66,25 +66,28 @@ is required that the ``__str__`` method create and *return* a string.
 
         def distanceFromOrigin(self):
             return ((self.x ** 2) + (self.y ** 2)) ** 0.5
-          
+
         def __str__(self):
-            return "x=" + str(self.x) + ", y=" + str(self.y)
+            return f"x= {self.x}, y={self.y}"
 
     p = Point(7, 6)
     print(p)
 
+.. note ::
+
+   We can use an f-string in Python 3 to make it easy to return a formatted string as shown in the ``__str__`` method above.  Use ``f"string {var1} stuff {var2}"``.  You do not have to explicity convert numeric values to strings when you use an f-string.
+
 
 When we run the program above you can see that the ``print`` function now shows the string that we chose.
 
-Now, you ask, don't we already have an ``str`` type converter that can 
-turn our object into a string?  Yes we do!  
+Now, you ask, don't we already have an ``str`` type converter that can
+turn our object into a string?  Yes we do!
 
 And doesn't ``print``
-automatically use this when printing things?  Yes again! 
+automatically use this when printing things?  Yes again!
 
 
 But, as we saw earlier, these automatic mechanisms do not do exactly what we want.  Python provides many default implementations for
 methods that we as programmers will probably want to change.  When a programmer changes the meaning of a special method we
 say that we **override** the method.  Note also that the ``str`` type converter function uses whatever ``__str__`` method we
 provide.
-

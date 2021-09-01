@@ -27,12 +27,9 @@ be displayed to the user before pausing for input:
 .. activecode:: 02-ac-11-print-name
   :caption: Using the input function with a prompt
 
-  name = input('What is your name?\n')
+  name = input('What is your name?')
   print(name)
 
-The sequence ``\n`` at the end of the prompt represents a
-*newline*\ , which is a special character that causes a
-line break. That's why the user's input appears below the prompt.
 
 If you expect the user to type an integer, you can try to convert the
 return value to ``int`` using the ``int()`` function:
@@ -40,22 +37,26 @@ return value to ``int`` using the ``int()`` function:
 .. activecode:: 02-ac-11-swallow
   :caption: Converting an input to an integer
 
-  prompt = 'What...is the airspeed velocity of an unladen swallow?\n'
+  prompt = 'What...is the airspeed velocity of an unladen swallow?'
   speed = input(prompt)
   print(int(speed))
   print(int(speed) + 5)
-
 
 But if the user types something other than a string of digits, you get
 an error:
 
 .. code-block:: python
 
+   >>> prompt = 'What...is the airspeed velocity of an unladen swallow?\n'
    >>> speed = input(prompt)
    What...is the airspeed velocity of an unladen swallow?
    What do you mean, an African or a European swallow?
    >>> int(speed)
    ValueError: invalid literal for int() with base 10:
+
+.. note ::
+
+   If you are typing Python code in interpreter you might want to add the new line character "\n" as shown above.
 
 
 We will see how to handle this kind of error later.
@@ -110,4 +111,3 @@ must first convert the number to a string using the built-in ``str`` method.
   age = int(age_str)
   birth_year = today.year - age
   print("You were born in " + str(birth_year) + " or " + str(birth_year - 1))
-  

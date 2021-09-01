@@ -5,13 +5,13 @@ Write Code Questions
 
         .. tab:: Question
 
-            Create a subclass of the Parent class named Child, and create a method eye_color() to override the parent method and print "I have green eyes." Then, create a Child object named lil_child, and call the method on the Child object.
-
             .. activecode:: inheritance_writecode1q
                 :practice: T
                 :nocodelens:
                 :language: python3
 
+                Create a subclass of the Parent class named Child, and create a method eye_color() to override the parent method and print "I have green eyes." Then, create a Child object named lil_child, and call the method on the Child object.
+                ~~~~
                 class Parent:
                     def eye_color(self):
                         print("I have blue eyes, and my spouse has green eyes.")
@@ -32,6 +32,8 @@ Write Code Questions
                 :optional:
                 :language: python3
 
+                Create a subclass of the Parent class named Child, and create a method eye_color() to override the parent method and print "I have green eyes." Then, create a Child object named lil_child, and call the method on the Child object.
+                ~~~~
                 class Parent:
                     def eye_color(self):
                         print("I have blue eyes, and my spouse has green eyes.")
@@ -48,13 +50,13 @@ Write Code Questions
 
         .. tab:: Question
 
-            Create a subclass of the Parent class named Child, and put a pass statement in the subclass. Then, create a Child object named lil_child, and call the Parent method on the Child object to see what color eyes the lil_child has.
-
             .. activecode:: inheritance_writecode2q
                 :practice: T
                 :nocodelens:
                 :language: python3
 
+                Create a subclass of the Parent class named Child, and put a pass statement in the subclass. Then, create a Child object named lil_child, and call the Parent method on the Child object to see what color eyes the lil_child has.
+                ~~~~
                 class Parent:
                     def eye_color(self):
                         print("I have hazel eyes.")
@@ -75,6 +77,8 @@ Write Code Questions
                 :optional:
                 :language: python3
 
+                Create a subclass of the Parent class named Child, and put a pass statement in the subclass. Then, create a Child object named lil_child, and call the Parent method on the Child object to see what color eyes the lil_child has.
+                ~~~~
                 class Parent:
                     def eye_color(self):
                         print("I have hazel eyes.")
@@ -91,13 +95,13 @@ Write Code Questions
 
         .. tab:: Question
 
-            Create a subclass of the Parent class named Child, and use super() to inherit the eye_color method. Then, create a Child object named lil_child, and call the eye_color method on the Child object to see what color eyes the lil_child has.
-
             .. activecode:: inheritance_writecode3q
                 :practice: T
                 :nocodelens:
                 :language: python3
 
+                Create a subclass of the Parent class named Child, and use super() to inherit the eye_color method. Then, create a Child object named lil_child, and call the eye_color method on the Child object to see what color eyes the lil_child has.
+                ~~~~
                 class Parent:
                     def eye_color(self):
                         print("I have hazel eyes.")
@@ -118,6 +122,8 @@ Write Code Questions
                 :optional:
                 :language: python3
 
+                Create a subclass of the Parent class named Child, and use super() to inherit the eye_color method. Then, create a Child object named lil_child, and call the eye_color method on the Child object to see what color eyes the lil_child has.
+                ~~~~
                 class Parent:
                     def eye_color(self):
                         print("I have hazel eyes.")
@@ -134,13 +140,13 @@ Write Code Questions
 
         .. tab:: Question
 
-            Create a subclass of the Parent class named Child, and use the format Parent_Class.method to inherit the eye_color method. Then, create a Child object named lil_child, and call the eye_color method on the Child object to see what color eyes the lil_child has.
-
             .. activecode:: inheritance_writecode4q
                 :practice: T
                 :nocodelens:
                 :language: python3
 
+                Create a subclass of the Parent class named Child, and use the format Parent_Class.method to inherit the eye_color method. Then, create a Child object named lil_child, and call the eye_color method on the Child object to see what color eyes the lil_child has.
+                ~~~~
                 class Parent:
                     def eye_color(self):
                         print("I have hazel eyes.")
@@ -161,6 +167,8 @@ Write Code Questions
                 :optional:
                 :language: python3
 
+                Create a subclass of the Parent class named Child, and use the format Parent_Class.method to inherit the eye_color method. Then, create a Child object named lil_child, and call the eye_color method on the Child object to see what color eyes the lil_child has.
+                ~~~~
                 class Parent:
                     def eye_color(self):
                         print("I have hazel eyes.")

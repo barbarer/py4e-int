@@ -6,23 +6,26 @@ Mixed-up code Questions
    :practice: T
    :adaptive:
 
-   The following program segment should, as long as n is less than 5, print n and then increment it by 1. The blocks have been mixed up and include an extra block that isn't needed in the solution. Drag the needed blocks from the left and put them in the correct order on the right, indenting them correctly.
+   Create the function, ``incrementing(n)``, so that as long as the integer ``n`` is less than 5, increment ``n`` by 1. 
+   Then return the integer ``n``. For example, if ``n`` is 0, then the function should increment by 1 then return 5.
    -----
-   n = 0
+   def incrementing(n):
    =====
-   while n < 5:
+       while n < 5:
    =====
-   while n > 5: #paired
+       while n > 5: #paired
    =====
-       print(n)
+           n = n + 1
    =====
-       n = n + 1
+       return n
 
 .. activecode::  ch5ex1muc-ac
 
-    Finish the following program segment so that as long as n is less than 5, print n and then increment it by 1.
+    Write the function, ``incrementing(n)``, so that as long as the integer ``n`` is less than 5, increment ``n`` by 1. 
+    Then return the integer ``n``. For example, if ``n`` is 0, then the function should increment by 1 then return 5.
     ~~~~
-    n = 0
+    def incrementing(n):
+        # write code here
 
     ====
     from unittest.gui import TestCaseGui
@@ -30,7 +33,9 @@ Mixed-up code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(n, 5)
+            self.assertEqual(incrementing(2), 5, 'incrementing(2)')
+            self.assertEqual(incrementing(6), 6, 'incrementing(6)')
+            self.assertEqual(incrementing(4), 5, 'incrementing(4)')
 
     myTests().main()
 
@@ -40,25 +45,28 @@ Mixed-up code Questions
    :practice: T
    :adaptive:
 
-   The following program segment should print "0 2 4 6" on separate lines by using a while loop. Arrange the code so that "accum" prints before increasing its value. The blocks have been mixed up and include an extra block that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right, indenting them correctly.
+   Create the function, ``numbers(accum)``, so that ``accum``, with ``accum`` being any integer less than 6, increases its
+   value by 2. Then, return ``accum``. For example, if ``accum`` is 0, the function should increase its value by 2 and return 6. 
    -----
-   accum = 0
+   def numbers(accum):
    =====
-   while accum < 7: 
+       while accum < 6: 
    =====
-   while accum < 6: #paired
+       while accum < 7: #paired
    =====
-       print(accum)
+           accum = accum + 2
    =====
-       accum = accum + 2
+       return accum
    
 
 
 .. activecode::  ch5ex2muc-ac
 
-    Finish the following program segment so that it should print "0 2 4 6" on separate lines by using a while loop. Arrange the code so that "accum" prints before increasing its value. 
+    Write the function, ``numbers(accum)``, so that ``accum``, with ``accum`` being any integer less than 6, increases its
+    value by 2. Then, return ``accum``. For example, if ``accum`` is 0, the function should increase its value by 2 and return 6. 
     ~~~~
-    accum = 0
+    def numbers(accum):
+        # write code here
 
     ====
     from unittest.gui import TestCaseGui
@@ -66,10 +74,12 @@ Mixed-up code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(accum, 8)
+            self.assertEqual(numbers(4), 6, 'numbers(4)')
+            self.assertEqual(numbers(6), 6, 'numbers(6)')
+            self.assertEqual(numbers(7), 7, 'numbers(7)')
+            self.assertEqual(numbers(0), 6, 'numbers(0)')
 
     myTests().main()
-
 
 
 .. parsonsprob:: ch5ex3muc
@@ -77,7 +87,10 @@ Mixed-up code Questions
    :practice: T
    :adaptive:
 
-   The following program segment should print all even numbers from 0 to 8 (this includes 0 and 8). The blocks have been mixed up and include an extra block that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right, indenting them correctly.
+   Create the following function, ``skipCount(start, increment, stop)``, to be arranged so that ``start`` is increaesed by ``increment`` until it hits
+   ``stop`` with ``start`` being the starting integer, ``increment`` being the number the integers are incrementing by, and ``stop`` being the ending integer. 
+   Then return an integer for the last number. For example, if ``start`` is 0, ``increment`` is 2, and ``stop`` is 8, the function should increase by 2 and 
+   then return 8.
    -----
    def skipCount(start, increment, stop):
    =====
@@ -85,23 +98,22 @@ Mixed-up code Questions
    =====
        while counter < stop:
    =====
-           print(counter)
-   =====
            counter += increment
    =====
        return counter
-   =====
-   print(skipCount(0,2,9))
-   =====
-   print(skipCount(0,2,8)) #paired
 
 
 .. activecode::  ch5ex3muc-ac
 
-    Finish the following program segment so that it should print all even numbers from 0 to 8 (this includes 0 and 8).
+    Write the following function, ``skipCount(start, increment, stop)``, to be arranged so that ``start`` is increaesed by ``increment`` until it hits
+    ``stop`` with ``start`` being the starting integer, ``increment`` being the number the integers are incrementing by, and ``stop`` being the ending integer. 
+    Then return an integer for the last number. For example, if ``start`` is 0, ``increment`` is 2, and ``stop`` is 8, the function should increase by 2 and 
+    then return 8.
     ~~~~
     def skipCount(start, increment, stop):
         counter = start
+
+        # write code here
 
     ====
     from unittest.gui import TestCaseGui
@@ -109,7 +121,9 @@ Mixed-up code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(skipCount(0,2,8), 8)
+            self.assertEqual(skipCount(0,2,8), 8, 'skipCount(0,2,8)')
+            self.assertEqual(skipCount(0,2,9), 8, 'skipCount(0,2,9)')
+            self.assertEqual(skipCount(0,2,7), 6, 'skipCount(0,2,7)')
 
     myTests().main()
 
@@ -119,7 +133,9 @@ Mixed-up code Questions
    :practice: T
    :adaptive:
 
-   The following program segment should infinitely loop, but the blocks have been mixed up and include two extra blocks that aren't needed in the solution. Drag the needed blocks from the left and put them in the correct order on the right, indenting them correctly.
+   Create the following function, ``loopMe(first, second)``, to infinitely loop using the variables ``first`` and ``second`` with one being greater 
+   than the other and then return a boolean, 'True'. For example, if ``first`` is 4 and ``second`` is 3, then the function should infintely loop 
+   and return 'True'.
    -----
    def loopMe(first, second):
    =====
@@ -127,9 +143,7 @@ Mixed-up code Questions
    =====
        while first == second: #paired
    =====
-           print('Am I infinitely looping?')
-   =====
-       return True
+           return True
    =====
    loopMe(7, 4)
    =====
@@ -138,9 +152,12 @@ Mixed-up code Questions
 
 .. activecode::  ch5ex4muc-ac
 
-    Write the following program segment so that it should infinitely loop. The first parameter should be greater than the second.
+    Write the following function, ``loopMe(first, second)``, to infinitely loop using the variables ``first`` and ``second`` with one being greater 
+    than the other and then return a boolean, 'True'. For example, if ``first`` is 4 and ``second`` is 3, then the function should infintely loop 
+    and return 'True'.
     ~~~~
     def loopMe(first,second):
+        # write code here
 
     ====
     from unittest.gui import TestCaseGui
@@ -148,7 +165,7 @@ Mixed-up code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(loopMe(4,3), 'True')
+            self.assertEqual(loopMe(4,3), 'True', 'loopMe(4,3)')
 
     myTests().main()
 
@@ -158,26 +175,31 @@ Mixed-up code Questions
    :practice: T
    :adaptive:
 
-   The following program segment should calculate and print the average of a list of numbers using a for loop. The blocks have been mixed up and include an extra block that ins't needed in the solution. Drag the needed blocks from the left and put them in the correct order on the right, indenting them correctly.
+   Create the following function, ``calculation(numbers)``, to return a float of the average of the list of numbers by taking a list ``numbers``, 
+   adding the numbers, and then dividing the sum by the length of the list, using a for loop. For example, if ``numbers`` is [90, 94, 85, 78, 87, 98], then the 
+   function should return the float 88.66666666666667.
    -----
-   numbers = [90, 94, 85, 78, 87, 98]
-   sum = 0
+   def calculation(numbers):
    =====
-   for number in numbers:
+       sum = 0
    =====
-       sum = sum + number
+       for number in numbers:
    =====
-   print(sum / 6)
+           sum = sum + number
    =====
-   print(sum / 5) #paired
-
+           sum = sum - number #paired
+   =====
+       return sum/len(numbers)
 
 .. activecode::  ch5ex5muc-ac
 
-    Write the following program segment so that it should calculate and print the average of a list of numbers using a for loop.
+    Write the following function, ``calculation(numbers)``, to return a float of the average of the list of numbers by taking a list ``numbers``, 
+    adding the numbers, and then dividing the sum by the length of the list, using a for loop. For example, if ``numbers`` is [90, 94, 85, 78, 87, 98], then the 
+    function should return the float 88.66666666666667.
     ~~~~
-    numbers = [90, 94, 85, 78, 87, 98]
-    sum = 0
+    def calculation(numbers):
+        sum = 0
+        # write code here
 
     ====
     from unittest.gui import TestCaseGui
@@ -185,7 +207,8 @@ Mixed-up code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertAlmostEqual(sum/6, 88.66666666666667)
+            self.assertAlmostEqual(calculation([90, 94, 85, 78, 87, 98]), 88.66666666666667, 2, 'calculation([90, 94, 85, 78, 87, 98])')
+            self.assertAlmostEqual(calculation([65, 69, 84, 99, 88, 98]), 83.8333333333333, 2, 'calculation([65, 69, 84, 99, 88, 98])')
 
     myTests().main()
 
@@ -195,34 +218,39 @@ Mixed-up code Questions
    :practice: T
    :adaptive:
 
-   The following program segment should calculate and print the sum of all numbers between 0 and 30. The blocks have been mixed up and include an extra block that ins't needed in the solution. Drag the needed blocks from the left and put them in the correct order on the right, indenting them correctly.
+   Create the following function, ``sum_of_range(start, end)``, to return an integer for the sum of all numbers between two numbers of your choosing using by using the 
+   variables ``start`` followed by ``end``. For example, if ``start`` is 0 and ``end`` is 31, the returned sum should be 465.
    -----
-   sum = 0
-   numbers = range(31)
+   def sum_of_range(start, end):
    =====
-   for number in numbers:
+       sum = 0
    =====
-       sum = sum + number
+       for number in range(start, end):
    =====
-       sum = sum + numbers #paired
+           sum = sum + number
    =====
-   print(sum)
+           sum = sum + numbers #paired
+   =====
+       return(sum)
 
 
 .. activecode::  ch5ex6muc-ac
 
-    Complete the following program segment so that it should calculate and print the sum of all numbers between 0 and 30.
+    Write the following function, ``sum_of_range(start, end)``, to return an integer for the sum of all numbers between two numbers of your choosing using by using the 
+    variables ``start`` followed by ``end``. For example, if ``start`` is 0 and ``end`` is 31, the returned sum should be 465.
     ~~~~
-    sum = 0
-    numbers = range(31)
-
+    def sum_of_range(start, end):
+        sum = 0
+        # write code here
     ====
     from unittest.gui import TestCaseGui
 
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(sum, 465)
+            self.assertEqual(sum_of_range(0,31), 465, 'sum_of_range(0,31)')
+            self.assertEqual(sum_of_range(0,20), 190, 'sum_of_range(0,20)')
+            self.assertEqual(sum_of_range(0,101), 5050, 'sum_of_range(0,101)')
 
     myTests().main()
 
@@ -232,34 +260,41 @@ Mixed-up code Questions
    :practice: T
    :adaptive:
 
-   The following program segment should calculate the sum of all odd numbers between 0 and 30. The blocks have been mixed up and include an extra block that isn't needed in the solution. Drag the needed blocks from the left and put them in the correct order on the right, indenting them correctly.
+   Create the following function, ``odd_sum(start, increment, end)``, to return an integer for the sum of all odd numbers between two numbers of your choosing 
+   by using the variables ``start``, ``increment``, and ``end``. For example, if ``start`` is 1, ``increment`` is 2, and ``end`` is 30, the returned sum
+   must be 225.
    -----
-   sum = 0
-   numbers = range(1,30,2)
+   def odd_sum(start, increment, end):
    =====
-   for number in numbers:
+       sum = 0
    =====
-   for numbers in numbers: #paired
+       for number in range(start, end, increment):
    =====
-       sum = sum + number
+       for numbers in range(start, increment, end): #paired
    =====
-   print(sum)
+           sum = sum + number
+   =====
+       return sum
 
 
 .. activecode::  ch5ex7muc-ac
 
-    Finish the following program segment so that it should calculate the sum of all odd numbers between 0 and 30.
+    Write the following function, ``odd_sum(start, increment, end)``, to return an integer for the sum of all odd numbers between two numbers of your choosing 
+    by using the variables ``start``, ``increment``, and ``end``. For example, if ``start`` is 1, ``increment`` is 2, and ``end`` is 30, the returned sum
+    must be 225.
     ~~~~
-    sum = 0
-    numbers = range(1,30,2)
-
+    def odd_sum(start, increment, end):
+        sum = 0
+        # write code here
     ====
     from unittest.gui import TestCaseGui
 
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(sum, 225)
+            self.assertEqual(odd_sum(1, 2, 30), 225, 'odd_sum(1, 2, 30)')
+            self.assertEqual(odd_sum(2, 3, 100), 1650, 'odd_sum(2, 3, 100)')
+            self.assertEqual(odd_sum(-1, 4, 30), 104, 'odd_sum(-1, 4, 30)')
 
     myTests().main()
 
@@ -269,33 +304,39 @@ Mixed-up code Questions
    :practice: T
    :adaptive:
 
-   The following program should find the sum of every multiple of 3 between 3 and 36 and print the sum after each addition. The blocks have been mixed up and include an extra block that isn't needed in the solution. Drag the needed blocks from the left and put them in the correct order on the right, indenting them correctly.
+   Create the following function, ``multiple_three(num)``, to find the sum of every multiple of 3 between 3 and and a number of your choosing using ``num`` and 
+   return an integer for the sum. For example, if ``num`` is 37, the function should return ``234``.
    -----
-   sum = 0
-   numbers = range(3, 37, 3)
+   def multiple_three(num):
    =====
-   for number in numbers:
+       sum = 0
+       numbers = range(3, num, 3)
    =====
-       sum = sum + number
+       for number in numbers:
    =====
-       print(sum)
+           sum = sum + number
    =====
-       print(number) #paired
+           sum = sum - number #paired
+   =====
+       return sum
 
 .. activecode::  ch5ex8muc-ac
 
-    Complete the following program segment so that it should find the sum of every multiple of 3 between 3 and 36 and print the sum after each addition.
+    Write the following function, ``multiple_three(num)``, to find the sum of every multiple of 3 between 3 and and a number of your choosing using ``num`` and 
+    return an integer for the sum. For example, if ``num`` is 37, the function should return ``234``.
     ~~~~
-    sum = 0
-    numbers = range(3, 37, 3)
-
+    def multiple_three(num):
+        sum = 0
+        # write code here
     ====
     from unittest.gui import TestCaseGui
 
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(sum, 234)
+            self.assertEqual(multiple_three(37), 234, 'multiple_three(37)')
+            self.assertEqual(multiple_three(101), 1683, 'multiple_three(101)')
+            self.assertEqual(multiple_three(19), 63, 'multiple_three(19)')
 
     myTests().main()
 
@@ -304,35 +345,40 @@ Mixed-up code Questions
    :practice: T
    :adaptive:
 
-   The following program should find the average pH of 6 water samples. The blocks have been mixed up and include an extra block that isn't needed in the solution. Drag the needed blocks from the left and put them in the correct order on the right, indenting them correctly.
+   Create the following function, ``water_quality(pHvalues)``, to return a float for the average pH of water samples by using a list 
+   ``pHvalues``. For example, if ``pHvalues`` is [7.0, 8.2, 6.7, 7.5, 8.0, 7.2], then the function should return 7.433333333333334.
    -----
-   total = 0
-   pHvalues =  [7.0, 8.2, 6.7, 7.5, 8.0, 7.2]
+   def water_quality(pHvalues):
    =====
-   for number in pHValues:
+       total = 0 
    =====
-       total = total + number
+       for number in pHvalues:
    =====
-       total = total * number #paired
+           total = total + number
    =====
-   average = total / 6
+           total = total * number #paired
    =====
-   print(average)
+       average = total / len(pHvalues)
+   =====
+       return average
 
 .. activecode::  ch5ex9muc-ac
 
-    Write the following program segment so that it should find the average pH of 6 water samples.
+    Write the following function, ``water_quality(pHvalues)``, to return a float for the average pH of water samples by using a list 
+    ``pHvalues``. For example, if ``pHvalues`` is [7.0, 8.2, 6.7, 7.5, 8.0, 7.2], then the function should return 7.433333333333334.
     ~~~~
-    total = 0
-    pHvalues =  [7.0, 8.2, 6.7, 7.5, 8.0, 7.2]
-
+    def water_quality(pHvalues):
+        total = 0 
+        # write code here
     ====
     from unittest.gui import TestCaseGui
 
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertAlmostEqual(average, 7.433333333333334)
+            self.assertAlmostEqual(water_quality([7.0, 8.2, 6.7, 7.5, 8.0, 7.2]), 7.433333333333334, 2, 'water_quality([7.0, 8.2, 6.7, 7.5, 8.0, 7.2], 6)')
+            self.assertAlmostEqual(water_quality([7, 8, 6, 7, 8, 7]), 7.166666666667, 2, 'water_quality([7, 8, 6, 7, 8, 7])')
+  
 
     myTests().main()
 
@@ -342,31 +388,37 @@ Mixed-up code Questions
    :practice: T
    :adaptive:
 
-   The following program should print the numbers 5 through 1, starting with 5. The blocks have been mixed up and include an extra block that isn't needed in the solution. Drag the needed blocks from the left and put them in the correct order on the right, indenting them correctly.
+   Create the following function, ``countdown(counter)``, to start with a number of your choosing using the variable
+   ``counter``, decrement it, and then return the last number. For example, if ``counter`` is 5, then the function 
+   should countdown from 5 and return 0.
    -----
-   counter = 5
+   def countdown(counter):
    =====
-   while counter > 0:
+       while counter > 0:
    =====
-       print(counter)
+           counter = counter - 1
    =====
-       counter = counter - 1
+           counter = counter + 1 #paired
    =====
-       counter = counter + 1 #paired
+       return counter
 
 
 .. activecode::  ch5ex10muc-ac
 
-    Write the following program segment so that it should print the numbers 5 through 1, starting with 5.
+    Write the following function, ``countdown(counter)``, to start with a number of your choosing using the variable
+    ``counter``, decrement it, and then return the last number. For example, if ``counter`` is 5, then the function 
+    should countdown from 5 and return 0.
     ~~~~
-    counter = 5
-
+    def countdown(counter):
+        # write code here
     ====
     from unittest.gui import TestCaseGui
 
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(counter, 0)
+            self.assertEqual(countdown(5), 0, 'countdown(5)')
+            self.assertEqual(countdown(3), 0, 'countdown(3)')
+            self.assertEqual(countdown(7), 0, 'countdown(7)')
 
     myTests().main()

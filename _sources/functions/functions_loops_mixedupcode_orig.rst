@@ -136,7 +136,7 @@ Functions and Loops Mixed-Up Code Questions
     class myTests(TestCaseGui):
 
         def testOne(self):
-            self.assertEqual(countdown(3),[3, 2, 1],countdown(3)")
+            self.assertEqual(countdown(3),[3, 2, 1],"countdown(3)")
             self.assertEqual(countdown(11),[11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],"countdown(11)")
             self.assertEqual(countdown(4),[4, 3, 2, 1],"countdown(4)")
 
@@ -247,7 +247,7 @@ Functions and Loops Mixed-Up Code Questions
 
         def testOne(self):
             self.assertEqual(strings_chars_less_than_len(['hello', 'bye', 'me', 'mississippi', 'miss']),['bye', 'me', 'miss'],"strings_chars_less_than_len(['hello', 'bye', 'me', 'mississippi', 'miss'])")
-            self.assertEqual(strings_chars_less_than_len(["hi", "bye", "Run", "When", "Win", "compare", "python"]),['Run', 'When', 'Win', 'bye', 'hi', 'python'],"strings_chars_less_than_len(["hi", "bye", "Run", "When", "Win", "compare", "python"])")
+            self.assertEqual(strings_chars_less_than_len(['hi', 'bye', 'Run', 'When', 'Win', 'compare', 'python']),['Run', 'When', 'Win', 'bye', 'hi', 'python'],"strings_chars_less_than_len(['hi', 'bye', 'Run', 'When', 'Win', 'compare', 'python'])")
 
 
     myTests().main()
