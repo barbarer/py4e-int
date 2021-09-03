@@ -4,6 +4,9 @@ Group Work: Reading from Files
 It is best to use a POGIL approach with the following. In POGIL students work
 in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
 
+.. groupsub:: read_files_groupsub
+   :limit: 3
+
 **Learning Objectives**
 
 Students will know and be able to do the following.
@@ -232,7 +235,7 @@ Modify the code above to print 4 lines and run it again.
 
     print_contents("unknown.txt")
 
-You can use ``try`` and ``except`` to handle code that can cause exceptions.  
+You can use ``try`` and ``except`` to handle code that can cause exceptions.
 
 
 .. fillintheblank:: line_file_open_except_fitb

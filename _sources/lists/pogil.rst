@@ -1,7 +1,11 @@
 Group Work: Lists
 --------------------------------------------------------
 
-It is best to use a POGIL approach with the following.
+It is best to use a POGIL approach with the following. In POGIL students work
+in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
+
+.. groupsub:: lists_intro_groupsub
+   :limit: 3
 
 Many interesting problems involve manipulating sequences of data.  This
 activity should help you learn about two types of sequences in Python:

@@ -4,6 +4,11 @@ Group Work: Functions and Conditionals
 It is best to use a POGIL approach with the following. In POGIL students work
 in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
 
+If you do work in a group you can copy the answers from this page to the other group members.
+
+.. groupsub:: func_cond_groupsub
+   :limit: 3
+
 **Learning Objectives**
 
 Students will know and be able to do the following.

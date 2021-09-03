@@ -1,7 +1,13 @@
 Group Work - Loops (For, Range, While)
 --------------------------------------------------------
 
-A loop allows you to execute hte same statements multiple times. Python has two
+It is best to use a POGIL approach with the following. In POGIL students work
+in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
+
+.. groupsub:: loops-for-range-while_groupsub
+   :limit: 3
+
+A loop allows you to execute the same statements multiple times. Python has two
 kinds of loop structures: ``for`` loops, which iterate over the items of a
 sequence, and ``while`` loops, which continue to execute as long as a condition is true.
 

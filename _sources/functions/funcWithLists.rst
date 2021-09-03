@@ -4,6 +4,9 @@ Group Work: Functions and Lists
 It is best to use a POGIL approach with the following. In POGIL students work
 in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
 
+.. groupsub:: func_list_groupsub
+   :limit: 3
+
 **Learning Objectives**
 
 Students will know and be able to do the following.
