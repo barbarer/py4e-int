@@ -1,6 +1,12 @@
 Group Work - Conditionals and Logic
 --------------------------------------------------------
 
+It is best to use a POGIL approach with the following. In POGIL students work
+in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
+
+.. groupsub:: cond_logic_groupsub
+   :limit: 3
+
 **Content Learning Objectives**
 
 *After completing this activity, students should be able to:*
