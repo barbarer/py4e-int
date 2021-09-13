@@ -6,7 +6,7 @@ in groups on activities and each member has an assigned role.  For more informat
 
 .. groupsub:: class_basics_groupsub
    :limit: 3
-   
+
 **Learning Objectives**
 
 Students will know and be able to do the following.
@@ -144,16 +144,16 @@ Look at the class definition.  It starts with the keyword ``class``.  Then answe
    =====
    Class Person: #paired
    =====
-       __init__(self, first, last):
+       def __init__(self, first, last):
    =====
-       __init__(first, last): #paired
+       def __init__(first, last): #paired
    =====
            self.first = first
            self.last = last
    =====
-       __str__(self):
+       def __str__(self):
    =====
-       __str__(): #paired
+       def __str__(): #paired
    =====
            return self.first + " " + self.last
    =====
