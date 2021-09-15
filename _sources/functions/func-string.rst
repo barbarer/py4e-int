@@ -8,7 +8,7 @@ If you do work in a group you can copy the answers from this page to the other g
 
 .. groupsub:: func_string_groupsub
    :limit: 3
-   
+
 **Learning Objectives**
 
 Students will know and be able to do the following.
@@ -33,9 +33,9 @@ a string covers more than one line.
 String Indices
 ==================
 
-.. fillintheblank:: funct_fitb_pogil_initials
+.. fillintheblank:: funct_fitb_pogil_initials_v2
 
-    What is the first thing that will be printed when the code below runs?
+    What is the last thing that will be printed when the code below runs?
 
     - :Jk: It prints the first letter of the first name and last letter of the last name.
       :.*: String indices start with 0 and -1 is the index of the last letter in a string.
@@ -306,13 +306,6 @@ Strings have methods (functions) that operate on a string object using **dot-not
     :match_5: capitalize|||Returns a new string with the first letter capitalized (uppercase).
 
     Drag each string method to the description of what it does.
-
-.. fillintheblank:: funct_fitb_last_print_strip
-
-    What is the last line that will be printed when the code below runs?
-
-    - :2: It will print the index of the first match, which is at index 2 after two spaces.
-      :.*: Run it and see what it does
 
 .. activecode:: funct_ac_pogil_strip_methods_v2
     :caption: Example with strip, rstrip, lstrip, and find
