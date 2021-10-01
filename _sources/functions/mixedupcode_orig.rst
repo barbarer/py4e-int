@@ -6,7 +6,7 @@ Mixed-up Code Questions
     :numbered: left
     :practice: T
 
-    Create a function ``len_str`` that uses a built-in function to return the number of characters in the passed string ``str``. Then print the result of a call to ``len_str`` passing in the string ``I love Python!``.  It should print 14.
+    Create a function ``len_str`` that uses a built-in function to return the number of characters in the passed string ``str``. Then print the result of a call to ``len_str`` passing in the string ``I love Python!``.  It should return 14.
     -----
     def len_str(str):
     =====
@@ -23,7 +23,7 @@ Mixed-up Code Questions
 
 .. activecode:: functEx1muc_v2_ac
 
-    Write  a function ``len_str`` that uses a built-in function to return the number of characters in the passed string ``str``. Then print the result of a call to ``len_str`` passing in the string ``I love Python!``.  It should print 14.
+    Write  a function ``len_str`` that uses a built-in function to return the number of characters in the passed string ``str``. Then print the result of a call to ``len_str`` passing in the string ``I love Python!``.  It should return 14.
     ~~~~
 
 

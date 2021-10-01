@@ -4,8 +4,10 @@ Group Work: Functions and Lists
 It is best to use a POGIL approach with the following. In POGIL students work
 in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
 
-.. groupsub:: func_list_groupsub
-   :limit: 3
+.. note::
+
+   If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.
+
 
 **Learning Objectives**
 
@@ -431,3 +433,8 @@ You can use the slice operator[n:m] with lists to get a new list just like you c
            self.assertEqual(first_half([1,2,3,4,5,6]), [1,2,3], 'first_half([1,2,3,4,5,6])')
 
    myTests().main()
+
+If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.
+
+.. groupsub:: func_list_groupsub
+   :limit: 4
