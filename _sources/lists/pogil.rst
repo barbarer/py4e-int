@@ -4,8 +4,9 @@ Group Work: Lists
 It is best to use a POGIL approach with the following. In POGIL students work
 in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
 
-.. groupsub:: lists_intro_groupsub
-   :limit: 3
+.. note::
+
+   If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.
 
 Many interesting problems involve manipulating sequences of data.  This
 activity should help you learn about two types of sequences in Python:
@@ -206,3 +207,8 @@ During the activity, students should make progress toward:
     :match_5: type|||Returns the class name (type) of the current object.
 
     Drag each term to its definition
+
+If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.
+
+.. groupsub:: lists_intro_groupsub
+   :limit: 3

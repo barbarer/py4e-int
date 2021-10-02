@@ -333,9 +333,7 @@ Write Code Questions
 #.
     .. activecode::  cndtnl-wc-evenq
 
-        Write a program that takes an integer and sets ``isEven`` to ``True`` if the argument
-        is an **even number** and ``False`` if it is **odd**. (the mod operator could be useful!
+        Finish the following code. It first sets ``n`` to a number input by a user.  Convert the number from a string to an integer and set ``result`` to ``True`` if the
+        number is an **even number** (evenly divisible by two) and ``False`` if it is **odd**. Note: use the modulo operator.
         ~~~~
-
-        def is_even(n):
-            # your code here
+        n = input("Enter a number")

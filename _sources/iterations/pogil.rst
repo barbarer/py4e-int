@@ -4,8 +4,9 @@ Group Work - Loops (For, Range, While)
 It is best to use a POGIL approach with the following. In POGIL students work
 in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
 
-.. groupsub:: loops-for-range-while_groupsub
-   :limit: 3
+.. note::
+
+   If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.
 
 A loop allows you to execute the same statements multiple times. Python has two
 kinds of loop structures: ``for`` loops, which iterate over the items of a
@@ -160,8 +161,8 @@ will be x numbers in the list.
 
     Use the ``range`` function with one parameter to generate the sequence 0, 1, 2, 3.
 
-    - :range\(4\): Correct! With one parameter, the sequence will start at 0 and increment by 1 until it lists 3.
-      :range\(3\): Incorrect! The last number of the sequence is equal to the parameter - 1. Try again.
+    - :range\(4\): Correct! With one parameter, the sequence will start at 0 and end at one less than the specified value.
+      :range\(3\): Incorrect! The last number of the sequence is equal to the specified value - 1. Try again.
       :.*: Incorrect! Make sure you only use one parameter and write your answer in the form "range(x)". Try again.
 
 If the argument of the ``range`` function specifies two numbers, like ``range(x, y)``,
@@ -172,7 +173,8 @@ be y - x numbers in the list.
 
     Use the ``range`` function with two parameters to generate the sequence 1, 2, 3, 4.
 
-    - :range\(1, 5\)|range\(1,5\): Correct! The sequence will start at 1 and increment until it lists 4.
+    - :range\(1, 5\)|range\(1,5\): Correct! The sequence will start at 1 and end at one less than the second value.
+      :range\(1, 5\)|range\(1,4\): Incorrect! Remember that the range starts at the first value but ends before the second value.
       :.*: Incorrect! Make sure you use two parameters and write your answer in the form "range(x, y)". Try again.
 
 If the argument of the ``range`` function specifies three numbers, like ``range(x, y, z)``,
@@ -354,3 +356,8 @@ so we include the statement ``i = i + 1``.
 
 Making sure you answer these questions helps you write better
 (and less buggy) ``while`` loops.
+
+If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.
+
+.. groupsub:: loops-for-range-while_groupsub
+   :limit: 3

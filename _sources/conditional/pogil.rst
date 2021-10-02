@@ -4,8 +4,9 @@ Group Work - Conditionals and Logic
 It is best to use a POGIL approach with the following. In POGIL students work
 in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
 
-.. groupsub:: cond_logic_groupsub
-   :limit: 3
+.. note::
+
+   If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.
 
 **Content Learning Objectives**
 
@@ -271,3 +272,8 @@ evaluated from left to right.
     x = int(input("Enter an integer: "))
     y = int(input("Enter an integer: "))
     # add your code here
+
+If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.
+
+.. groupsub:: cond_logic_groupsub
+   :limit: 3

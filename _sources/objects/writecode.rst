@@ -22,7 +22,7 @@ Write Code Exercises
                         self.tricks.append(trick)
 
                     def __str__(self):
-                        return 'Dog(name = ' + self.name +  ', tricks = ' + str(self.tricks) + ')'
+                        return f'Dog(name = {self.name}, tricks = {str(self.tricks)})'
 
                 ====
 
@@ -55,7 +55,7 @@ Write Code Exercises
                         self.tricks.append(trick)
 
                     def __str__(self):
-                        return 'Dog(name = ' + self.name +  ', tricks = ' + str(self.tricks) + ')'
+                        return f'Dog(name = {self.name}, tricks = {str(self.tricks)})'
 
                 spot = Dog('Spot')
                 spot.updateTricks('spin')
@@ -63,11 +63,22 @@ Write Code Exercises
                 print(spot.tricks)
                 print(spot)
 
+                ====
+
+                from unittest.gui import TestCaseGui
+
+                class myTests(TestCaseGui):
+
+                    def testOne(self):
+                        self.assertEqual(spot.tricks, ['spin', 'sit'], 'Checking that sit and spin are added to the list of tricks.')
+                        self.assertEqual(spot.__str__(), "Dog(name = Spot, tricks = ['spin', 'sit'])", 'Checking that a Spot prints correctly.')
+                myTests().main()
+
 #.
     .. activecode:: obj_writecode2
 
-        Complete the following code to include a method named ``updateAttacks()``
-        which updates the ``attacks`` list with the attacks of the pokemon.
+        Complete the following code to include a method named ``updateAttacks(attack)``
+        which appends the ``attack`` to the list of attacks.
         ~~~~
         class Pokemon:
 
@@ -77,7 +88,7 @@ Write Code Exercises
                 self.attacks = []
 
             def __str__(self):
-                return("Pokemon name is {} and type is {}. Attacks include: {}.".format(self.name, self.type, str(self.attacks)))
+                return f"Pokemon name is {self.name} and type is {self.type}. Attacks include: {str(self.attacks)}"
 
         bulbasaur = Pokemon('Bulbasaur', 'Grass')
         bulbasaur.updateAttacks('Vine Whip')
@@ -91,7 +102,7 @@ Write Code Exercises
             def testOne(self):
                 pikachu = Pokemon('Pikachu','Electric')
                 pikachu.updateAttacks('Quick Attack')
-                self.assertEqual(pikachu.__str__(), "Pokemon name is Pikachu and type is Electric. Attacks include: ['Quick Attack'].", "Testing with Pikachu and Quick Attack")
+                self.assertEqual(pikachu.__str__(), "Pokemon name is Pikachu and type is Electric. Attacks include: ['Quick Attack']", "Testing with Pikachu and Quick Attack")
 
         myTests().main()
 
@@ -113,7 +124,7 @@ Write Code Exercises
                       title = title
                       author = author
                   def __str__(self):
-                      return("Your book is " + title + " by " + author)
+                      return f"Your book is {title} by {author}"
 
               book = new Book("The Odyssey", "Homer")
               print(book)
@@ -149,17 +160,27 @@ Write Code Exercises
                       self.author = author
 
                   def __str__(self):
-                      return("Your book is " + self.title + " by " + self.author)
+                      return f"Your book is {self.title} by {self.author}"
 
               book = Book("The Odyssey", "Homer")
               print(book)
+
+              ====
+              from unittest.gui import TestCaseGui
+
+              class myTests(TestCaseGui):
+                  def testOne(self):
+                      gatsby = Book("The Great Gatsby", "F. Scott Fitzgerald")
+                      self.assertEqual(gatsby.__str__(), "Your book is The Great Gatsby by F. Scott Fitzgerald", "Testing Great Gatsby")
+
+              myTests().main()
 
 #.
     .. activecode:: obj_writecode4
         :nocodelens:
 
-        Correct the 7 errors in the following code. The program should create
-        a class that prints the name and tricks of a dog.
+        Correct all the errors in the following code. The program should create
+        a class that prints the name the tricks the dog knows.
         ~~~~
         class Dog
 
@@ -171,7 +192,7 @@ Write Code Exercises
                 self.tricks.append = trick
 
             def __str__():
-                return("The new dog is named { and his tricks are {}".format(self.name, str(self.tricks)))
+                return f"The new dog is named {self.name} and his tricks are {str(self.tricks)}"
 
         dog = new Dog('Toby')
         dog.updateTricks('catch')
@@ -184,8 +205,8 @@ Write Code Exercises
         class myTests(TestCaseGui):
 
             def testOne(self):
-                self.assertEqual(dog.tricks, ['catch', 'sit'], 'Checking that catch and spin are added to the list of tricks.')
-                self.assertEqual(dog.__str__(), "The new dog is named Toby and his tricks are ['catch', 'sit']", 'Checking that a Toby prints correctly.')
+                self.assertEqual(dog.tricks, ['catch', 'spin'], 'Checking that catch and spin are added to the list of tricks.')
+                self.assertEqual(dog.__str__(), "The new dog is named Toby and his tricks are ['catch', 'spin']", 'Checking that a Toby prints correctly.')
         myTests().main()
 
 #.
@@ -352,7 +373,7 @@ Write Code Exercises
             class Paperback(Book):
 
                 def __str__(self):
-                    return ("Paperback book " + self.title + " was written by " + self.author)
+                    return f"Paperback book {self.title} was written by {self.author}"
 
             book = Paperback("The Odyssey", "Homer")
             print(book)
@@ -393,87 +414,6 @@ Write Code Exercises
       myTests().main()
 
 #.
-    .. tabbed:: obj_writecode9
-
-        .. tab:: Question
-
-          .. activecode:: obj_writecode9q
-              :nocodelens:
-
-              Add a new class named ``Library`` that inherits the ``Book`` class.
-              ``Library`` should have an initializer method that creates the list
-              ``current_books``, where current books are stored, and a string method
-              that returns the list. Also create a method called ``addBooks`` which
-              adds a new book to ``current_books`` with both the title and author ``(title, author)``.
-              ~~~~
-              class Book:
-
-                  def __init__(self, title, author):
-                      self.title = title
-                      self.author = author
-
-                  def getTitle(self):
-                      return self.title
-
-                  def getAuthor(self):
-                      return self.author
-
-                  def __repr__(self):
-                      return (self.title + " was written by " + self.author)
-
-              ====
-              from unittest.gui import TestCaseGui
-
-              class myTests(TestCaseGui):
-                  def testOne(self):
-                      lib1 = Library()
-                      lib1.add_book(Book("Pride and Prejudice", "Jane Austen"))
-                      lib1.add_book(Book("The Great Gatsby","F. Scott Fitzgerald"))
-                      self.assertEqual(lib1.__str__(), "[Pride and Prejudice was written by Jane Austen, The Great Gatsby was written by F. Scott Fitzgerald]", "Testing Pride and Prejudice and the Great Gatsby")
-              myTests().main()
-
-        .. tab:: Answer
-
-          .. activecode:: obj_writecode9a
-              :nocodelens:
-              :optional:
-
-              First, define the ``Library`` class so that it inherits ``Book``. Then
-              use the initializer method to create the ``current_books`` list and the
-              string method to return the list. Create a third method ``add_books`` to
-              add new books to the list.
-              ~~~~
-              class Book:
-
-                  def __init__(self, title, author):
-                      self.title = title
-                      self.author = author
-
-                  def getTitle(self):
-                      return self.title
-
-                  def getAuthor(self):
-                      return self.author
-
-                  def __repr__(self):
-                      return (self.title + " was written by " + self.author)
-
-              class Library(Book):
-
-                  def __init__(self):
-                      self.current_books = []
-
-                  def __str__(self):
-                      return str(self.current_books)
-
-                  def add_book(self, book):
-                      self.current_books.append(book)
-
-              lib1 = Library()
-              lib1.add_book(Book("Pride and Prejudice", "Jane Austen"))
-              print(lib1)
-
-#.
     .. activecode:: obj_writecode10
 
       Add a new class named ``WaterType`` that inherits from Pokemon class. that takes 'name' as initial values, creates
@@ -490,7 +430,7 @@ Write Code Exercises
               self.type = type
 
           def __repr__(self)
-              return ( "Pokemon " self.name + " is of type" + self.type)
+              return f"Pokemon {self.name} is of type {self.type}"
 
       newWater = WaterType("Magikarp")
       newWater.addPokemons("Krabby")

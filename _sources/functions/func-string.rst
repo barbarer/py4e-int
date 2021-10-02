@@ -4,10 +4,9 @@ Group Work: Functions and Strings
 It is best to use a POGIL approach with the following. In POGIL students work
 in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
 
-If you do work in a group you can copy the answers from this page to the other group members.
+.. note::
 
-.. groupsub:: func_string_groupsub
-   :limit: 3
+   If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.
 
 **Learning Objectives**
 
@@ -344,3 +343,8 @@ Strings have methods (functions) that operate on a string object using **dot-not
     Drag each string method to the description of what it does.
 
 For more information on string methods see `https://www.w3schools.com/python/python_ref_string.asp <https://www.w3schools.com/python/python_ref_string.asp>`_.
+
+If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.
+
+.. groupsub:: func_string_groupsub
+   :limit: 4

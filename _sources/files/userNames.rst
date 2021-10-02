@@ -75,6 +75,7 @@ eyes of our users?"
         ``Received:``.
 
         .. activecode:: fileOpenInputq
+            :autograde: unittest
             :practice: T
 
             count = 1

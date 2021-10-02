@@ -14,6 +14,7 @@ Classes and Objects - the Basics
    ObjectsasArgumentsandParameters.rst
    ConvertinganObjecttoaString.rst
    InstancesasReturnValues.rst
+   MultipleClasses.rst
    Glossary.rst
    Exercises.rst
    MixedUpCode.rst
