@@ -12,9 +12,6 @@
     :align: top
     :alt: audio tour button
 
-.. 	qnum::
-	:start: 1
-	:prefix: csp-11-4-
 
 Changing Step 5: Increasing and decreasing color values
 ========================================================
@@ -49,7 +46,7 @@ First example: Let's change STEP 5, so that we decrease the red by 50%.
     win = ImageWin(img.getWidth(),img.getHeight())
     img.draw(win)
 
-Try the program above on some of the other images by changing the name of the image file on line 5.  What effect does it always have?  Is this what you expected when we decrease the red?
+Try the program above on some of the other images, like "arch.jpg" or "puppy.jpg", by changing the name of the image file on line 5.  What effect does it always have?  Is this what you expected when we decrease the red?
 
 We can *increase* the red in a similar way. Let's change STEP 5, so that we increase the red by 150%.
 
@@ -94,6 +91,7 @@ Try the program above on some of the other images by changing the name of the im
    img = Image("beach.jpg")
    =====
    pixels = img.getPixels()
+   =====
    for p in pixels:
    =====
        g = p.getGreen()
@@ -153,18 +151,3 @@ Try the program above on some of the other images by changing the name of the im
               # STEP 7: SHOW THE RESULT
               win = ImageWin(img.getWidth(),img.getHeight())
               img.draw(win)
-
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: cslearn4u
-                :identifier: studentcsp_11_4_1_WSq
-
-.. note::
-
-    Discuss topics in this section with classmates.
-
-      .. disqus::
-          :shortname: cslearn4u
-          :identifier: studentcsp_11_4

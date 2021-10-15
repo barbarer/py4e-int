@@ -8,13 +8,13 @@ Write Code Questions
             .. activecode:: tup_writecode1q
                 :nocodelens:
 
-                Write a function called ``tup_creation`` that takes in two integer parameter, ``start`` and ``end``, and returns a tuple with all the values between 
+                Write a function called ``tup_creation`` that takes in two integer parameter, ``start`` and ``end``, and returns a tuple with all the values between
                 ``start`` (inclusive) and ``end`` (non-inclusive). For example, ``tup_creation(-8,3)`` would return  ``(-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2)`` and ``tup_creation(10,3)`` would
                 return ``(10, 9, 8, 7, 6, 5, 4)``.
                 ~~~~
                 def tup_creation(start, end):
                     # write code here
-                
+
                 ====
                 from unittest.gui import TestCaseGui
 
@@ -36,7 +36,7 @@ Write Code Questions
             .. activecode:: tup_writecode1a
                 :optional:
 
-                Write a function called ``tup_creation`` that takes in two integer parameter, ``start`` and ``end``, and returns a tuple with all the values between 
+                Write a function called ``tup_creation`` that takes in two integer parameter, ``start`` and ``end``, and returns a tuple with all the values between
                 ``start`` (inclusive) and ``end`` (non-inclusive). For example, ``tup_creation(-8,3)`` would return  ``(-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2)`` and ``tup_creation(10,3)`` would
                 return ``(10, 9, 8, 7, 6, 5, 4)``.
                 ~~~~
@@ -56,7 +56,7 @@ Write Code Questions
         :practice: T
         :nocodelens:
 
-        Write a function called ``check_third_element`` that takes in a list of tuples, ``lst_tups`` as a parameter. Tuples must have at least 3 items. 
+        Write a function called ``check_third_element`` that takes in a list of tuples, ``lst_tups`` as a parameter. Tuples must have at least 3 items.
         Return a new list that contains the third element of each tuple. For example, ``check_third_element([(1,2.2,3.3),(-1,-2,-3),(0,0,0)])``
         would return ``[3.3, -3, 0]``.
         ~~~~
@@ -74,7 +74,7 @@ Write Code Questions
                 self.assertEqual(check_third_element([('hi','hello','how are you'),('bye','goodbye','farewell')]), ['how are you', 'farewell'], "check_third_element([('hi','hello','how are you'),('bye','goodbye','farewell')])")
 
 
-        
+
         MyTests().main()
 
 #.
@@ -86,8 +86,8 @@ Write Code Questions
                 :practice: T
                 :nocodelens:
 
-                Write a function called ``find_majors`` that takes in a dictionary as a parameter, ``majors``, that has a major code as the key and 
-                the name of a major as the value. Return a list of tuples of size two, in which the first element of the tuple is the major code and 
+                Write a function called ``find_majors`` that takes in a dictionary as a parameter, ``majors``, that has a major code as the key and
+                the name of a major as the value. Return a list of tuples of size two, in which the first element of the tuple is the major code and
                 the second element of the tuple is the name of the major. For example,
                 ``find_major({3084: 'Computer Science', 3025: 'Electrical Engineering', 3020: 'Computer Engineering', 3027: 'Cybersecurity', 3068: 'Biometric Systems Engineering'})``
                 would return ``[(3084, 'Computer Science'), (3025, 'Electrical Engineering'), (3020, 'Computer Engineering'), (3027, 'Cybersecurity'), (3068, 'Biometric Systems Engineering')]``.
@@ -114,8 +114,8 @@ Write Code Questions
                 :nocodelens:
                 :optional:
 
-                Write a function called ``find_majors`` that takes in a dictionary as a parameter, ``majors``, that has a major code as the key and 
-                the name of a major as the value. Return a list of tuples of size two, in which the first element of the tuple is the major code and 
+                Write a function called ``find_majors`` that takes in a dictionary as a parameter, ``majors``, that has a major code as the key and
+                the name of a major as the value. Return a list of tuples of size two, in which the first element of the tuple is the major code and
                 the second element of the tuple is the name of the major. For example,
                 ``find_major({3084: 'Computer Science', 3025: 'Electrical Engineering', 3020: 'Computer Engineering', 3027: 'Cybersecurity', 3068: 'Biometric Systems Engineering'})``
                 would return ``[(3084, 'Computer Science'), (3025, 'Electrical Engineering'), (3020, 'Computer Engineering'), (3027, 'Cybersecurity'), (3068, 'Biometric Systems Engineering')]``.
@@ -160,8 +160,8 @@ Write Code Questions
                 :nocodelens:
                 :practice: T
 
-                Write a function called ``dict_transform`` that takes in one dictionary parameter, ``dict``, which returns a tuple of tuples. The inner tuple should 
-                have the first element as the key of the ``dict`` and the second element should have the value of the ``dict``. Do not use the ``keys()`` or ``values()`` 
+                Write a function called ``dict_transform`` that takes in one dictionary parameter, ``dict``, which returns a tuple of tuples. The inner tuple should
+                have the first element as the key of the ``dict`` and the second element should have the value of the ``dict``. Do not use the ``keys()`` or ``values()``
                 methods. For example, ``dict_transform({'Rattata': 19, 'Machop': 66, 'Seel': 86, 'Volbeat': 86, 'Solrock': 126})`` should return ``(('Rattata', 19), ('Machop', 66), ('Seel', 86), ('Volbeat', 86), ('Solrock', 126))``.
                 ~~~~
                 def dict_transform(dict):
@@ -184,9 +184,9 @@ Write Code Questions
             .. activecode:: tup_writecode5a
                 :nocodelens:
                 :optional:
-                
-                Write a function called ``dict_transform`` that takes in one dictionary parameter, ``dict``, which returns a tuple of tuples. The inner tuple should 
-                have the first element as the key of the ``dict`` and the second element should have the value of the ``dict``. Do not use the ``keys()`` or ``values()`` 
+
+                Write a function called ``dict_transform`` that takes in one dictionary parameter, ``dict``, which returns a tuple of tuples. The inner tuple should
+                have the first element as the key of the ``dict`` and the second element should have the value of the ``dict``. Do not use the ``keys()`` or ``values()``
                 methods. For example, ``dict_transform({'Rattata': 19, 'Machop': 66, 'Seel': 86, 'Volbeat': 86, 'Solrock': 126})`` should return ``(('Rattata', 19), ('Machop', 66), ('Seel', 86), ('Volbeat', 86), ('Solrock', 126))``.
                 ~~~~
                 def dict_transform(dict):
@@ -229,8 +229,8 @@ Write Code Questions
                 :practice: T
                 :nocodelens:
 
-                Write the function ``mod_tuples`` which takes a list of tuples, ``tup_list`` and returns a copy where the 
-                last element in each tuple is modified to be 100. For example, ``mod_tuples([(3,4), (20, -3, 2)])`` returns 
+                Write the function ``mod_tuples`` which takes a list of tuples, ``tup_list`` and returns a copy where the
+                last element in each tuple is modified to be 100. For example, ``mod_tuples([(3,4), (20, -3, 2)])`` returns
                 [(3,100), (20, -3, 100)].
                 ~~~~
                 def mod_tuples(tup_list):
@@ -255,8 +255,8 @@ Write Code Questions
                 :nocodelens:
                 :optional:
 
-                Write the function ``mod_tuples`` which takes a list of tuples, ``tup_list`` and returns a copy where the 
-                last element in each tuple is modified to be 100. For example, ``mod_tuples([(3,4), (20, -3, 2)])`` returns 
+                Write the function ``mod_tuples`` which takes a list of tuples, ``tup_list`` and returns a copy where the
+                last element in each tuple is modified to be 100. For example, ``mod_tuples([(3,4), (20, -3, 2)])`` returns
                 [(3,100), (20, -3, 100)].
                 ~~~~
                 def mod_tuples(tup_list):
@@ -270,9 +270,9 @@ Write Code Questions
         :practice: T
         :nocodelens:
 
-        Write a function called ``info`` with the following required parameters: name, age, birth_year, year_in_college, and hometown. The 
-        function should return a tuple that contains all the inputted information. For example, ``info('Troy', 24, 1996, 'Sophomore', 'Ann Arbor')``
-        would return ``('Troy', 24, 1996, 'Sophomore', 'Ann Arbor')``.
+        Write a function called ``info`` with the following required parameters: name, age, birth_year, year_in_college, and hometown. The
+        function should return a tuple that contains all the passed information. For example, ``info('Troy', 24, 1996, 'Sophomore', 'Ann Arbor')``
+        should return ``('Troy', 24, 1996, 'Sophomore', 'Ann Arbor')``.
         ~~~~
         def info(name, age, birth_year, year_in_college, hometown):
             # write code here

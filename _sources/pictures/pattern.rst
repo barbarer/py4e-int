@@ -11,10 +11,6 @@
     :align: top
     :alt: audio tour button
 
-.. 	qnum::
-	:start: 1
-	:prefix: csp-11-3-
-
 A Pattern for Image Processing
 ================================
 
@@ -64,18 +60,9 @@ The image processing pattern is shown in the program below.  This program change
 Here are our six steps:
 
 1. STEP 1: USE THE IMAGE LIBRARY.  We need to import the image library.
-2. STEP 2: PICK THE IMAGE. We pick a particular image from our library by specifying it inside of the parentheses and double quotes.
-3. STEP 3: LOOP THROUGH THE PIXELS This example gets *every* pixel in the image and loops through them all one at a time.
+2. STEP 2: CREATE THE IMAGE OBJECT. We create an image object from a file in our library by specifying the filename inside of the parentheses and double quotes.
+3. STEP 3: LOOP THROUGH THE PIXELS This example gets *every* pixel object in the image and loops through them all one at a time.
 4. STEP 4: GET THE DATA.  You could *always* use the STEP 4 lines just as they are above, but you might be able to make it shorter if you wanted.  If you only needed red and were going to set the green and blue to zero, you don't have to get the green and blue.
 5. STEP 5: MODIFY THE COLOR. This is the part that you will most often change.  Here's where you change the red, green, and/or blue.  You don't have to change all of them.
-6. STEP 6: UPDATE THE IMAGE.  This will update the image at the original pixel location to the new color.
+6. STEP 6: UPDATE THE IMAGE.  This will update the image object at the original pixel location to the new color.
 7. STEP 7: SHOW THE RESULT.  This will draw the changed image in a window.
-
-
-.. note::
-
-    Discuss topics in this section with classmates.
-
-      .. disqus::
-          :shortname: cslearn4u
-          :identifier: studentcsp_11_3

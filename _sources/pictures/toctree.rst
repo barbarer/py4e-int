@@ -1,4 +1,4 @@
-Picture Class and Methods
+Image and Pixel Classes and Methods
 :::::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
@@ -11,6 +11,6 @@ Picture Class and Methods
    changeColorLoc.rst
    changeData.rst
    summary.rst
-   MCQs.rst
-   mixedupcode.rst
    Exercises.rst
+   mixedupcode.rst
+   writeCode.rst
