@@ -11,28 +11,27 @@
     :align: top
     :alt: audio tour button
 
-.. 	qnum::
-	:start: 1
-	:prefix: csp-11-1-
 
 Using Repetition with Images
 ============================================
 
 *Learning Objectives:*
 
-- Use ``for`` loops to repeat actions on all pixels in a picture.
-- Understand the pattern (the steps) used in modifying all the pixels in a picture.
+- Use ``for`` loops and nested ``for`` loops to repeat actions on pixels in an image.
+- Understand the pattern (the steps) used in modifying all the pixels in an image.
+- Describe how multiple classes (Image and Pixel) interact.
 
-..	index::
-	single: images
-	pair: statements; for
+..  index::
+    single: images
+    pair: statements; for
 
 .. index::
    single: pixel
-	 single: picture
-	 single: color
+   single: picture
+   single: image
+   single: color
 
-Pictures on a computer are broken up into little bits called **pixels**, for *picture* (pix) *elements* (els).  These are laid out on a grid, from left to right (horizontal or **x** dimension) and top to bottom (vertical or **y** dimension).
+Images (pictures) on a computer are broken up into little bits called **pixels**, for *picture* (pix) *elements* (els).  These are laid out on a grid, from left to right (horizontal or **x** dimension) and top to bottom (vertical or **y** dimension).
 
 .. figure:: Figures/grid.png
     :align: center
@@ -41,8 +40,8 @@ Pictures on a computer are broken up into little bits called **pixels**, for *pi
 
     Figure: A grid with horizontal (x) and vertical (y) dimensions
 
-Pixels are quite small.  Even the small picture below has 180 columns and 240 rows of pixels.  Each pixel has a color associated with it: An amount of redness, an amount of greenness, and an amount of blueness.
-Let's remove the red from this picture.  Now, there are lot of lines in the program below, but fortunately, you can ignore most of them. The Audio Tour explains the important lines.  Press |audiobutton| to hear the audio tour explanation.  When you run this program it may take several minutes to show the changed picture.
+Pixels are quite small.  Even the small image below has 180 columns and 240 rows of pixels.  Each pixel has a color associated with it: an amount of redness, an amount of greenness, and an amount of blueness.
+Let's remove the red from this picture.  Now, there are lot of lines in the program below, but fortunately, you can ignore most of them. The Audio Tour explains the important lines.  Press |audiobutton| to hear the audio tour explanation.  When you run this program it may take several minutes to show the changed image.
 
 .. datafile:: arch.jpg
    :image:
@@ -63,7 +62,7 @@ Let's remove the red from this picture.  Now, there are lot of lines in the prog
     pixelList = img.getPixels()
     for p in pixelList:
 
-    	# SET THE RED TO 0
+        # SET THE RED TO 0
         p.setRed(0)
 
         # UPDATE THE IMAGE
@@ -76,10 +75,35 @@ Let's remove the red from this picture.  Now, there are lot of lines in the prog
 The program above can take several minutes to execute on the ``arch.jpg`` picture.  But we're not stuck using just the arch image.  You can
 change the file name in the program above to the URL for any small photo that is on the internet.
 
-.. note::
+.. mchoice:: Image_set_all_to_0_mcq
+   :answer_a: You still see the picture, but it is all in shades of gray.
+   :answer_b: The picture is all white.
+   :answer_c: The picture is all black.
+   :correct: c
+   :feedback_a: Not if you set all the color values to 0.
+   :feedback_b: Did you try it?  This would be true if you set all the values to 255 instead of 0.
+   :feedback_c: Black is the absence of light so setting all colors to 0 results in an all black image since there is no light.
 
-    Discuss topics in this section with classmates.
+   What happens when you set all the colors to 0?  Try adding ``p.setBlue(0)`` and ``p.setGreen(0)`` to the program above after the ``p.setRed(0)`` and run it to check.
 
-      .. disqus::
-          :shortname: cslearn4u
-          :identifier: studentcsp_11_1
+.. mchoice:: Image_save_only_green
+   :answer_a: Yes
+   :answer_b: No
+   :correct: a
+   :feedback_a: It shows all the green values from none to lots so it looks like a greenish version of a grayscale image.
+   :feedback_b: Did you try it?
+
+   What happens when you keep only the original green color?   Will you still be able to see the arch?
+
+.. mchoice:: Image_negate
+   :answer_a: It is all black.
+   :answer_b: Shows as a grayscale image.
+   :answer_c: Shows as a negative of the original image.
+   :answer_d: It is all white.
+   :correct: c
+   :feedback_a: No, this would happen if you set every value to 0.
+   :feedback_b: Did you try it?
+   :feedback_c: It is a negative of the original image.
+   :feedback_d: No, this would happen if you set every value to 255.
+
+   What happens if set every color value to 255 minus the original value?

@@ -292,3 +292,312 @@ Mixed-Up Code Exercises
             self.assertEqual(self.Spot.tricks, ['jump', 'sit'], "Testing self.Spot.trick after add 'sit'")
 
     myTests().main()
+
+
+.. parsonsprob:: obj_mixedupcode_6
+    :numbered: left
+    :practice: T
+    :adaptive:
+
+    Create a class named ``Square`` with the ``__init__`` method taking the length, ``len``, with a default of ``10`` if it is not specified.  Then create a ``__str__`` method that returns a string
+    with ``"Length: length"``.  Then create an ``area`` method that returns the area (``length`` times ``length``).
+    -----
+    class Square:
+    =====
+    def Square: #paired
+    =====
+        def __init__(self, len = 10):
+    =====
+        def __init__(len = 10): #paired
+    =====
+            self.len = len
+    =====
+        def __str__(self):
+    =====
+            return f'Length: {self.len}'
+    =====
+            return f'Length: {len}' #paired
+    =====
+        def area(self):
+    =====
+        def __area__(self): #paired
+    =====
+            return self.len * self.len
+    =====
+            return len * len #paired
+
+.. activecode:: obj_mixedupcode_6_ac
+
+    Write a class named ``Square`` with the ``__init__`` method taking the length, ``len``, with a default of ``10`` if it is not specified.  Then create a ``__str__`` method that returns a string
+    with ``"Length: length"``.  Then create an ``area`` method that returns the area (``length`` times ``length``).
+    ~~~~
+
+    ====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+
+        def testOne(self):
+            s1 = Square()
+            self.assertEqual(s1.len, 10, "Testing the default length")
+            self.assertEqual(s1.area(), 100, "Testing s1.area() with length 10")
+            s2 = Square(5)
+            self.assertEqual(s2.area(), 25, "Testing s2.area() with length 5")
+            s3 = Square(8)
+            self.assertEqual(s3.area(), 64, "Testing s3.area() with length 8")
+            self.assertEqual(s1.__str__(), "Length: 10", "Testing s1 __str__ method")
+
+    myTests().main()
+
+.. parsonsprob:: obj_mixedupcode_7_v2
+    :numbered: left
+    :practice: T
+    :adaptive:
+
+    Create a class named ``Rectangle`` with the ``__init__`` method taking a ``length``, and ``width``.  Then create a ``__str__`` method that returns a string
+    with ``"l: length, w: width"``.  Then create an ``area`` method that returns the area (``length`` times ``width``).
+    -----
+    class Rectangle:
+    =====
+    Class Rectangle: #paired
+    =====
+        def __init__(self, length, width):
+    =====
+        def __init__(Length, width): #paired
+    =====
+            self.length = length
+            self.width = width
+    =====
+        def __str__(self):
+    =====
+            return f'l: {self.length}, w: {self.width}'
+    =====
+            return f'l: {len}, w: {width}' #paired
+    =====
+        def area(self):
+    =====
+        def __area__(self): #paired
+    =====
+            return self.length * self.width
+    =====
+            return length * width #paired
+
+.. activecode:: obj_mixedupcode_7_v2_ac
+
+    Create a class named ``Rectangle`` with the ``__init__`` method taking a ``length``, and ``width``.  Then create a ``__str__`` method that returns a string
+    with ``"l: length, w: width"``.  Then create an ``area`` method that returns the area (``length`` times ``width``).
+    ~~~~
+
+    ====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+
+        def testOne(self):
+            r1 = Rectangle(10,5)
+            self.assertEqual(r1.length, 10, "Testing that length is 10")
+            self.assertEqual(r1.width, 5, "Testing that width is 5")
+            self.assertEqual(r1.area(), 50, "Testing area with a length of 10 and width of 5")
+            self.assertEqual(r1.__str__(), "l: 10, w: 5", "Testing __str__")
+            r1 = Rectangle(2,3)
+            self.assertEqual(r1.length, 2, "Testing that length is 2")
+            self.assertEqual(r1.width, 3, "Testing that width is 3")
+            self.assertEqual(r1.area(), 6, "Testing area with a length of 2 and width of 3")
+            self.assertEqual(r1.__str__(), "l: 2, w: 3", "Testing __str__")
+
+
+    myTests().main()
+
+.. parsonsprob:: obj_mixedupcode_8
+    :numbered: left
+    :practice: T
+    :adaptive:
+
+    Given a class ``Point`` with a method ``distance_from_point(point)``, create a class named ``Triangle`` with the ``__init__`` method taking three ``Point`` objects and creating an attribute ``points``.
+    Then create an ``base`` method that returns length of the longest side.
+    The length of a side is the distance between two points.  For example, ``t = Triangle(Point(0,0), Point(1,0), Point(0,2))`` would return ``2.23`` from ``base``.
+    -----
+    class Triangle:
+    =====
+        def __init__(self, p1, p2, p3):
+    =====
+            self.points = [p1, p2, p3]
+    =====
+        def base(self):
+    =====
+            dist = []
+    =====
+            for i in range(len(self.points)):
+    =====
+            for i in range(len(points)): #paired
+    =====
+                curr = self.points[i]
+    =====
+                prev = self.points[i-1]
+    =====
+                d = curr.distance_from_point(prev)
+    =====
+                dist.append(d)
+    =====
+                self.dist.append(d) #paired
+    =====
+            return max(dist)
+
+.. activecode:: obj_mixedupcode_8_ac
+
+    Given a class ``Point`` with a method ``distance_from_point(point)``, write a class named ``Triangle`` with the ``__init__`` method taking three ``Point`` objects and creating an attribute ``points``.
+    Then create an ``base`` method that returns length of the longest side.
+    The length of a side is the distance between two points.  For example, ``t = Triangle(Point(0,0), Point(1,0), Point(0,2))`` would return ``2.23`` from ``base``.
+    ~~~~
+
+    ====
+
+    import math
+    from unittest.gui import TestCaseGui
+
+    class Point:
+        def __init__(self, x, y):
+            self.x = x
+            self.y = y
+
+        def __str__(self):
+            return f"({self.y}, {self.y})"
+
+        def distance_from_point(self, p):
+            return math.sqrt((p.x - self.x) ** 2 + (p.y - self.y) ** 2)
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            t1 = Triangle(Point(0,0), Point(1,0), Point(0,2))
+            self.assertAlmostEqual(t1.base(), 2.23, 1, "Testing base of 2.2")
+            t1 = Triangle(Point(0,0), Point(1,0), Point(0,3))
+            self.assertAlmostEqual(t1.base(), 3.16, 1, "Testing base of 3.1")
+            t1 = Triangle(Point(-3,-3), Point(0,0), Point(0,3))
+            self.assertAlmostEqual(t1.base(), 6.70, 1, "Testing base of 6.7")
+    myTests().main()
+
+
+.. parsonsprob:: obj_mixedupcode_9
+    :numbered: left
+    :practice: T
+    :adaptive:
+
+    Create a class named ``PickItem`` with the ``__init__`` method taking a list of items.
+    Then create an ``pick`` method that returns one of the items at random.  You can use the ``random`` module's ``choice`` method for this.  Next create ``add(item)`` that adds the item to the list of items.
+    -----
+    import random
+    class PickItem:
+    =====
+        def __init__(self, item_list):
+    =====
+        def __init__(item_list): #paired
+    =====
+            self.item_list = item_list
+    =====
+        def pick(self):
+    =====
+            return random.choice(self.item_list)
+    =====
+            return random.choice(item_list) #paired
+    =====
+        def add(self,item):
+    =====
+        def add(item): #paired
+    =====
+            self.item_list.append(item)
+    =====
+            self.item_list.append(self.item) #paired
+
+.. activecode:: obj_mixedupcode_9_ac
+
+    Create a class named ``PickItem`` with the ``__init__`` method taking a list of items.
+    Then create an ``pick`` method that returns one of the items at random.  You can use the ``random`` module's ``choice`` method for this.  Next create ``add(item)`` that adds the item to the list of items.
+    ~~~~
+
+    ====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            l = ['red', 'green', 'blue']
+            p = PickItem(l)
+            self.assertEqual(p.item_list, l, "Testing item list")
+            self.assertIn(p.pick(), l, "Testing pick")
+            p.add('yellow')
+            self.assertIn('yellow', p.item_list, "Testing add yellow")
+            l = [1, 2, 3]
+            p = PickItem(l)
+            self.assertEqual(p.item_list, l, "Testing item list")
+            self.assertIn(p.pick(), l, "Testing pick")
+            p.add(4)
+            self.assertIn(4, p.item_list, "Testing add 4")
+
+    myTests().main()
+
+.. parsonsprob:: obj_mixedupcode_10
+    :numbered: left
+    :practice: T
+    :adaptive:
+
+    Create a class ``Dice`` with an ``__init__`` method that takes the number of sides, ``num_sides``.  Use a default of 6 if ``num_sides`` isn't passed in. Also set an attribute ``history`` to an empty list in the ``__init__`` method.
+    Then create a ``__str__`` method that returns ``"Dice with num_sides sides"`` when ``num_sides`` is the number of sides.
+    Next create an ``roll`` method that picks a random value from one to the number of sides, adds the value to the end of the ``history`` list, and returns it.
+    You can use the ``random`` module's ``randint(start,end)`` method to return a random number from start to end inclusvie.
+    -----
+    import random
+    =====
+    class Dice:
+    =====
+        def __init__(self, num_sides = 6):
+    =====
+        def __init__(self, num_sides): #paired
+    =====
+            self.num_sides = num_sides
+            self.history = []
+    =====
+        def __str__(self):
+    =====
+            return f"Dice with {self.num_sides} sides"
+    =====
+        def roll(self):
+    =====
+            value = random.randint(1, self.num_sides)
+            self.history.append(value)
+    =====
+            return value
+
+.. activecode:: obj_mixedupcode_10_ac
+
+    Write a class ``Dice`` with an ``__init__`` method that takes the number of sides, ``num_sides``.  Use a default of 6 if ``num_sides`` isn't passed in. Also set an attribute ``history`` to an empty list in the ``__init__`` method.
+    Then create a ``__str__`` method that returns ``"Dice with num_sides sides"`` when ``num_sides`` is the number of sides.
+    Next create an ``roll`` method that picks a random value from one to the number of sides, adds the value to the end of the ``history`` list, and returns it.
+    You can use the ``random`` module's ``randint(start,end)`` method to return a random number from start to end inclusvie.
+    ~~~~
+
+    ====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            d = Dice(4)
+            values = [1, 2, 3, 4]
+            self.assertIn(d.roll(), values, "Testing roll value with 4 sides")
+            x = d.roll()
+            self.assertEqual(len(d.history), 2, "Testing history length")
+            self.assertEqual(d.history[-1], x, "Testing save last roll")
+            self.assertEqual(d.__str__(), "Dice with 4 sides", "Testing __str__ with 4 sides")
+            d = Dice()
+            values = [1, 2, 3, 4, 5, 6]
+            self.assertIn(d.roll(), values, "Testing roll values with 6 sides")
+            self.assertEqual(d.__str__(), "Dice with 6 sides", "Testing __str__ with 6 sides")
+
+    myTests().main()

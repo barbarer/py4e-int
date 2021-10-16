@@ -60,7 +60,7 @@ Mixed-Up Code Exercises
 	:numbered: left
 	:practice: T
 	:adaptive:
-	
+
 	Arrange the code to reduce the green in all pixels by 75%. Be sure to indent correctly and look out for extra code blocks!
 	-----
 	from image import *
@@ -75,9 +75,9 @@ Mixed-Up Code Exercises
 	=====
 		g = p.getGreen()
 	=====
-		p.setGreen(g * 0.75)
+		p.setGreen(g * 0.25)
 	=====
-		p.setGreen(g * 75) #paired
+		p.setGreen(g * 0.75) #paired
 	=====
 		img.updatePixel(p)
 	=====
@@ -296,16 +296,3 @@ Mixed-Up Code Exercises
 	=====
 	win = ImageWin(img.getWidth(), img.getHeight())
 	img.draw(win)
-
-
-
-	
-
-
-
-
-
-
-	
-
-
