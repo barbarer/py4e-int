@@ -32,8 +32,10 @@ Mixed-Up Code Questions
 
 
 .. activecode:: bsoup_mixedupcode_1_ac
-   :language: python3
-   :nocodelens:
+    :practice: T
+    :nocodelens:
+    :language: python3
+    :autograde: unittest
 
     Write a function called ``img_links`` that takes in a parameter ``url`` and returns a list of all urls for images.
     Since websites are frequently updated, the returned list of image links may change as image links get added and deleted.
@@ -85,8 +87,10 @@ Mixed-Up Code Questions
         return 'https://en.wikipedia.org' + tag.text #paired
 
 .. activecode:: bsoup_mixedupcode_2_ac
-   :language: python3
-   :nocodelens:
+    :practice: T
+    :nocodelens:
+    :language: python3
+    :autograde: unittest
 
     Write a function called ``shapiro_link`` that takes in a parameter ``url``
     and returns the URL from the University of Michigan wikipedia page that links to the Shapiro Undergraduate Library.
@@ -143,8 +147,10 @@ Mixed-Up Code Questions
         return lst
 
 .. activecode:: bsoup_mixedupcode_3_ac
-   :language: python3
-   :nocodelens:
+    :practice: T
+    :nocodelens:
+    :language: python3
+    :autograde: unittest
 
     Write a function called ``link_or_none`` that takes in a parameter ``url`` and returns a list of all the links in the ``a tags``
     that are in a ``div tag`` with the class ``column`` and id ``news-items``. If there isn't a link in the ``a tag`` that's in a ``div tag``
@@ -214,8 +220,10 @@ Mixed-Up Code Questions
 
 
 .. activecode:: bsoup_mixedupcode_4_ac
-   :language: python3
-   :nocodelens:
+    :practice: T
+    :nocodelens:
+    :language: python3
+    :autograde: unittest
 
     Write a function called ``descriptions`` that takes in parameters ``base_url`` and ``endings``
     and returns a dictionary with each ending as keys and their description as values. For this question,
@@ -278,8 +286,10 @@ Mixed-Up Code Questions
         return lst
 
 .. activecode:: bsoup_mixedupcode_5_ac
-   :language: python3
-   :nocodelens:
+    :practice: T
+    :nocodelens:
+    :language: python3
+    :autograde: unittest
 
     Write a function called ``url_links`` that takes in a parameter ``url`` and returns a list of all url links from the ``url``.
     Since websites are frequently updated, the returned list of links may change as links get added and deleted.
@@ -299,5 +309,203 @@ Mixed-Up Code Questions
             for tag in tags:
                 lst.append(tag.get('href', None))
             self.assertEqual(url_links('https://www.si.umich.edu/programs/student-life-umsi'),lst,"url_links('https://www.si.umich.edu/programs/student-life-umsi')")
+
+    myTests().main()
+
+
+.. parsonsprob:: bsoup_mixedupcode_6
+    :numbered: left
+    :practice: T
+    :adaptive:
+
+    Create a function called ``bsoup_num_links`` that takes in a parameter ``url`` and returns the number of 'href'
+    attributes that start with 'http' using BeautifulSoup. Since websites are frequently updated,
+    the returned number may change as links get added and deleted.
+    -----
+    import requests
+    from bs4 import BeautifulSoup
+    =====
+    def bsoup_num_links(url):
+    =====
+        list1 = []
+    =====
+        resp = requests.get(url)
+    =====
+        soup = BeautifulSoup(resp.content, 'html.parser')
+    =====
+        tags = soup.find_all(href=True)
+    =====
+        tags = soup.find_all(href) #paired
+    =====
+        tags = soup.find_all('href'=True) #paired
+    =====
+        tags = soup.find_all('href') #paired
+    =====
+        for tag in tags:
+    =====
+            if tag.get('href', None).startswith('http'):
+    =====
+            if tag.startswith('http'): #paired
+    =====
+                list1.append((tag.get('href', None)))
+    =====
+        return len(list1)
+
+.. activecode:: bsoup_mixedupcode_6_ac
+    :practice: T
+    :nocodelens:
+    :language: python3
+    :autograde: unittest
+
+    Write a function called ``bsoup_num_links`` that takes in a parameter ``url`` and returns the number of 'href'
+    attributes that start with 'http' using BeautifulSoup. Since websites are frequently updated,
+    the returned number may change as links get added and deleted.
+    ~~~~
+
+    ====
+    from unittest.gui import TestCaseGui
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            list1 = ['https://www.nytimes.com/', 'https://www.washingtonpost.com/']
+            for link in list1:
+                list2 = []
+                resp = requests.get(link)
+                soup = BeautifulSoup(resp.content, 'html.parser')
+                tags = soup.find_all(href=True)
+                for tag in tags:
+                    if tag.get('href', None).startswith('http'):
+                        list2.append((tag.get('href', None)))
+                length = len(list2)
+                self.assertEqual(bsoup_num_links(link),length,"bsoup_num_links(link)")
+
+    myTests().main()
+
+.. parsonsprob:: bsoup_mixedupcode_7
+    :numbered: left
+    :practice: T
+    :adaptive:
+
+    Create a function called ``img_links`` that takes in a parameter ``url`` and returns a list that contains all image links
+    using BeautifulSoup. Since websites are frequently updated, the returned list of image links may change as image links get added and deleted.
+    -----
+    import requests
+    from bs4 import BeautifulSoup
+    =====
+    def img_links(url):
+    =====
+        list1 = []
+    =====
+        resp = requests.get(url)
+    =====
+        soup = BeautifulSoup(resp.content, 'html.parser')
+    =====
+        tags = soup.find_all('img')
+    =====
+        tags = soup.findall('img') #paired
+    =====
+        for tag in tags:
+    =====
+            list1.append(tag.get('src', None))
+    =====
+            list1.append(tag) #paired
+    =====
+        return list1
+
+.. activecode:: bsoup_mixedupcode_7_ac
+    :practice: T
+    :nocodelens:
+    :language: python3
+    :autograde: unittest
+
+    Write a function called ``img_links`` that takes in a parameter ``url`` and returns a list that contains all image links
+    using BeautifulSoup. Since websites are frequently updated, the returned list of image links may change as image links get added and deleted.
+    ~~~~
+
+    ====
+    from unittest.gui import TestCaseGui
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            lst = ['https://www.nytimes.com/', 'https://canvas.it.umich.edu/']
+            for link in lst:
+                list1 = []
+                resp = requests.get(link)
+                soup = BeautifulSoup(resp.content, 'html.parser')
+                tags = soup.find_all('img')
+                for tag in tags:
+                    list1.append(tag.get('src', None))
+                self.assertEqual(img_links(link),list1,"img_links(link)")
+
+    myTests().main()
+
+.. parsonsprob:: bsoup_mixedupcode_8
+    :numbered: left
+    :practice: T
+    :adaptive:
+
+    Create a function called ``span_attrs`` that takes in a parameter ``url`` and returns a list of dictionaries using BeautifulSoup.
+    Each dictionary is equivalent to each span tag. The keys of the dictionary are the attributes of the span tag,
+    and the values of the dictionary are the values of the attributes. Since websites are frequently updated,
+    the returned list of dictionaries may change as span tags, attributes, and values get added, deleted, or modified.
+    -----
+    import requests
+    from bs4 import BeautifulSoup
+    =====
+    def span_attrs(url):
+    =====
+        list1 = []
+    =====
+        resp = requests.get(url)
+    =====
+        soup = BeautifulSoup(resp.content, "html.parser")
+    =====
+        tags = soup.find_all('span')
+    =====
+        tags = soup.find_all(span) #paired
+    =====
+        for tag in tags:
+    =====
+            list1.append(tag.attrs)
+    =====
+            list1.append(tag.attributes) #paired
+    =====
+            list1.append({tag.attrs: tag.values}) #paired
+    =====
+            list1.append({tag.attrs(): tag.values()}) #paired
+    =====
+            list1.append({tag.attributes: tag.values}) #paired
+    =====
+            list1.append({tag.attributes(): tag.values()}) #paired
+    =====
+        return list1
+
+
+.. activecode:: bsoup_mixedupcode_8_ac
+    :practice: T
+    :nocodelens:
+    :language: python3
+    :autograde: unittest
+
+    Write a function called ``span_attrs`` that takes in a parameter ``url`` and returns a list of dictionaries using BeautifulSoup.
+    Each dictionary is equivalent to each span tag. The keys of the dictionary are the attributes of the span tag,
+    and the values of the dictionary are the values of the attributes. Since websites are frequently updated,
+    the returned list of dictionaries may change as span tags, attributes, and values get added, deleted, or modified.
+    ~~~~
+
+    ====
+    from unittest.gui import TestCaseGui
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            lst = ['https://www.nytimes.com/', 'https://www.w3schools.com/TAGS/default.ASP']
+            for link in lst:
+                list1 = []
+                resp = requests.get(link)
+                soup = BeautifulSoup(resp.content, "html.parser")
+                tags = soup.find_all('span')
+                for tag in tags:
+                    list1.append(tag.attrs)
+                self.assertEqual(span_attrs(link),list1,"span_attrs(link)")
 
     myTests().main()
