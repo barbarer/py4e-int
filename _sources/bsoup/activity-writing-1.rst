@@ -1,12 +1,6 @@
 ..  shortname:: Writing
 ..  description:: Writing activity.
 
-.. setup for automatic question numbering.
-
-.. qnum::
-   :start: 1
-   :prefix: writing1-
-
 
 Code writing activity part 1
 :::::::::::::::::::::::::::::

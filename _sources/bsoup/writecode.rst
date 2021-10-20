@@ -10,7 +10,7 @@ Write Code Questions
                 :nocodelens:
                 :language: python3
 
-                Write a function called ``cur_stud_link`` that takes in a parameter ``url`` 
+                Write a function called ``cur_stud_link`` that takes in a parameter ``url``
                 and uses BeautifulSoup to return the URL that links to Current Students in the Navigation Bar.
                 For example, ``cur_stud_link('https://umich.edu/')`` should return ``"https://umich.edu/current-students/"``.
                 ~~~~
@@ -34,8 +34,9 @@ Write Code Questions
             .. activecode:: bsoup_writecode1a
                 :optional:
                 :language: python3
+                :nocodelens:
 
-                Write a function called ``cur_stud_link`` that takes in a parameter ``url`` 
+                Write a function called ``cur_stud_link`` that takes in a parameter ``url``
                 and uses BeautifulSoup to return the URL that links to Current Students in the Navigation Bar.
                 For example, ``cur_stud_link('https://umich.edu/')`` should return ``"https://umich.edu/current-students/"``.
                 ~~~~
@@ -60,8 +61,8 @@ Write Code Questions
         :nocodelens:
         :language: python3
 
-        Write a function called ``headings`` that takes in a parameter ``url`` and uses BeautifulSoup to return a list of all heading names (not subheadings) from the 
-        Contents box (History, Emergence of MOOC providers, Student experience and pedagogy, etc.). For example, ``headings('https://en.wikipedia.org/wiki/Massive_open_online_course')`` 
+        Write a function called ``headings`` that takes in a parameter ``url`` and uses BeautifulSoup to return a list of all heading names (not subheadings) from the
+        Contents box (History, Emergence of MOOC providers, Student experience and pedagogy, etc.). For example, ``headings('https://en.wikipedia.org/wiki/Massive_open_online_course')``
         should return ``['History', 'Emergence of MOOC providers', 'Student experience and pedagogy', 'Information architecture', 'Industry', 'Benefits', 'Challenges and criticisms', 'See also', 'References', 'Sources', 'Further reading']``.
         ~~~~
         from bs4 import BeautifulSoup
@@ -90,14 +91,14 @@ Write Code Questions
                 :nocodelens:
                 :language: python3
 
-                Write a function called ``coursera_dict`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the Coursera enrollees table, 
-                and returns a dictionary with Country as keys and Percentage as values. For example, ``coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course')`` 
+                Write a function called ``coursera_dict`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the Coursera enrollees table,
+                and returns a dictionary with Country as keys and Percentage as values. For example, ``coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course')``
                 should return ``{'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', 'United Kingdom': '4.4%', 'Spain': '4.0%', 'Canada': '3.6%', 'Australia': '2.3%', 'Russia': '2.2%', 'Rest of world': '41.9%'}``.
                 ~~~~
                 from bs4 import BeautifulSoup
                 import requests
 
-                def coursera_dict(url): 
+                def coursera_dict(url):
 
                 ====
                 from unittest.gui import TestCaseGui
@@ -114,15 +115,16 @@ Write Code Questions
             .. activecode:: bsoup_writecode3a
                 :optional:
                 :language: python3
+                :nocodelens:
 
-                Write a function called ``coursera_dict`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the Coursera enrollees table, 
-                and returns a dictionary with Country as keys and Percentage as values. For example, ``coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course')`` 
+                Write a function called ``coursera_dict`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the Coursera enrollees table,
+                and returns a dictionary with Country as keys and Percentage as values. For example, ``coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course')``
                 should return ``{'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', 'United Kingdom': '4.4%', 'Spain': '4.0%', 'Canada': '3.6%', 'Australia': '2.3%', 'Russia': '2.2%', 'Rest of world': '41.9%'}``.
                 ~~~~
                 from bs4 import BeautifulSoup
                 import requests
 
-                def coursera_dict(url): 
+                def coursera_dict(url):
                     r = requests.get(url)
                     soup = BeautifulSoup(r.text, 'html.parser')
 
@@ -149,8 +151,8 @@ Write Code Questions
         :nocodelens:
         :language: python3
 
-        Write a function called ``types`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the Summary of Python 3's built-in types table, 
-        and returns a list of the types. For example, ``types('https://en.wikipedia.org/wiki/Python_(programming_language)')`` 
+        Write a function called ``types`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the Summary of Python 3's built-in types table,
+        and returns a list of the types. For example, ``types('https://en.wikipedia.org/wiki/Python_(programming_language)')``
         should return ``['bool', 'bytearray', 'bytes', 'complex', 'dict', 'ellipsis', 'float', 'frozenset', 'int', 'list', 'NoneType', 'NotImplementedType', 'range', 'set', 'str', 'tuple']``.
         ~~~~
         from bs4 import BeautifulSoup
@@ -179,8 +181,8 @@ Write Code Questions
                 :nocodelens:
                 :language: python3
 
-                Write a function called ``restaurants_list`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the 12 essential Ann Arbor restaurants' names, 
-                and returns a list of the 12 best Ann Arbor restaurants in 2019. For example, ``restaurants_list('https://detroit.eater.com/maps/best-ann-arbor-restaurants')`` 
+                Write a function called ``restaurants_list`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the 12 essential Ann Arbor restaurants' names,
+                and returns a list of the 12 best Ann Arbor restaurants in 2019. For example, ``restaurants_list('https://detroit.eater.com/maps/best-ann-arbor-restaurants')``
                 should return ``["1. Knight's Steakhouse", '2. The Last Word', "3. Krazy Jim's Blimpy Burger", '4. Blue Llama Jazz Club', '5. Spencer', '6. Miss Kim', "7. Zingerman's Delicatessen", '8. Tomukun Noodle Bar', '9. Seoul Street', '10. Ricewood', '11. Bellflower', "12. Ma Lou's Fried Chicken"]``.
                 ~~~~
                 from bs4 import BeautifulSoup
@@ -203,9 +205,10 @@ Write Code Questions
             .. activecode:: bsoup_writecode5a
                 :optional:
                 :language: python3
+                :nocodelens:
 
-                Write a function called ``restaurants_list`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the 12 essential Ann Arbor restaurants' names, 
-                and returns a list of the 12 best Ann Arbor restaurants in 2019. For example, ``restaurants_list('https://detroit.eater.com/maps/best-ann-arbor-restaurants')`` 
+                Write a function called ``restaurants_list`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the 12 essential Ann Arbor restaurants' names,
+                and returns a list of the 12 best Ann Arbor restaurants in 2019. For example, ``restaurants_list('https://detroit.eater.com/maps/best-ann-arbor-restaurants')``
                 should return ``["1. Knight's Steakhouse", '2. The Last Word', "3. Krazy Jim's Blimpy Burger", '4. Blue Llama Jazz Club', '5. Spencer', '6. Miss Kim', "7. Zingerman's Delicatessen", '8. Tomukun Noodle Bar', '9. Seoul Street', '10. Ricewood', '11. Bellflower', "12. Ma Lou's Fried Chicken"]``.
                 ~~~~
                 from bs4 import BeautifulSoup
@@ -233,8 +236,8 @@ Write Code Questions
         :nocodelens:
         :language: python3
 
-        Write a function called ``bsi_list`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the section names and subsection names under Programs Bachelor of Science in Information, 
-        and returns a list of the section names and subsection names under Programs Bachelor of Science in Information. For example, ``bsi_list('https://www.si.umich.edu/programs/bachelor-science-information')`` 
+        Write a function called ``bsi_list`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the section names and subsection names under Programs Bachelor of Science in Information,
+        and returns a list of the section names and subsection names under Programs Bachelor of Science in Information. For example, ``bsi_list('https://www.si.umich.edu/programs/bachelor-science-information')``
         should return ``['How do I apply?', 'Current U-M students', 'Transfer students', 'High school students', 'New transfers', 'UMSI Community College Summer Institute', 'Curriculum', 'Career outcomes', 'Internships', 'F-1 visa holders', 'Career development resources', 'Engaged learning', 'Tuition and funding', 'Connect with us', 'Study abroad for undergraduates', 'Exchange student information']``.
         ~~~~
         from bs4 import BeautifulSoup
@@ -264,8 +267,8 @@ Write Code Questions
                 :nocodelens:
                 :language: python3
 
-                Write a function called ``bsi_dict`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape and create a list of the section names and subsection names under Programs Bachelor of Science in Information, 
-                and creates another list that contains the full urls of the named sections and subsections. Then, return a dictionary that contains the names as keys and their full urls as values. For example, ``bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information')`` 
+                Write a function called ``bsi_dict`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape and create a list of the section names and subsection names under Programs Bachelor of Science in Information,
+                and creates another list that contains the full urls of the named sections and subsections. Then, return a dictionary that contains the names as keys and their full urls as values. For example, ``bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information')``
                 should return ``{'How do I apply?': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply', 'Current U-M students': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/cross-campus-transfer', 'Transfer students': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/new-transfer-students-bsi', 'High school students': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/preferred-admissions', 'New transfers': 'https://www.si.umich.edu/programs/bachelor-science-information/new-transfers', 'UMSI Community College Summer Institute': 'https://www.si.umich.edu/programs/bachelor-science-information/new-transfers/umsi-community-college-summer-institute', 'Curriculum': 'https://www.si.umich.edu/programs/bachelor-science-information/curriculum', 'Career outcomes': 'https://www.si.umich.edu/programs/bachelor-science-information/career-outcomes', 'Internships': 'https://www.si.umich.edu/programs/bachelor-science-information/internships', 'F-1 visa holders': 'https://www.si.umich.edu/programs/bachelor-science-information/internships/f-1-visa-holders', 'Career development resources': 'https://www.si.umich.edu/programs/bachelor-science-information/career-development-resources', 'Engaged learning': 'https://www.si.umich.edu/programs/bachelor-science-information/engaged-learning', 'Tuition and funding': 'https://www.si.umich.edu/programs/bachelor-science-information/tuition-and-funding', 'Connect with us': 'https://www.si.umich.edu/programs/bachelor-science-information/connect-us', 'Study abroad for undergraduates': 'https://www.si.umich.edu/programs/bachelor-science-information/study-abroad-undergraduates', 'Exchange student information': 'https://www.si.umich.edu/programs/bachelor-science-information/exchange-student-information'}``.
                 ~~~~
                 from bs4 import BeautifulSoup
@@ -289,9 +292,10 @@ Write Code Questions
             .. activecode:: bsoup_writecode7a
                 :optional:
                 :language: python3
+                :nocodelens:
 
-                Write a function called ``bsi_dict`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape and create a list of the section names and subsection names under Programs Bachelor of Science in Information, 
-                and creates another list that contains the full urls of the named sections and subsections. Then, return a dictionary that contains the names as keys and their full urls as values. For example, ``bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information')`` 
+                Write a function called ``bsi_dict`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape and create a list of the section names and subsection names under Programs Bachelor of Science in Information,
+                and creates another list that contains the full urls of the named sections and subsections. Then, return a dictionary that contains the names as keys and their full urls as values. For example, ``bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information')``
                 should return ``{'How do I apply?': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply', 'Current U-M students': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/cross-campus-transfer', 'Transfer students': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/new-transfer-students-bsi', 'High school students': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/preferred-admissions', 'New transfers': 'https://www.si.umich.edu/programs/bachelor-science-information/new-transfers', 'UMSI Community College Summer Institute': 'https://www.si.umich.edu/programs/bachelor-science-information/new-transfers/umsi-community-college-summer-institute', 'Curriculum': 'https://www.si.umich.edu/programs/bachelor-science-information/curriculum', 'Career outcomes': 'https://www.si.umich.edu/programs/bachelor-science-information/career-outcomes', 'Internships': 'https://www.si.umich.edu/programs/bachelor-science-information/internships', 'F-1 visa holders': 'https://www.si.umich.edu/programs/bachelor-science-information/internships/f-1-visa-holders', 'Career development resources': 'https://www.si.umich.edu/programs/bachelor-science-information/career-development-resources', 'Engaged learning': 'https://www.si.umich.edu/programs/bachelor-science-information/engaged-learning', 'Tuition and funding': 'https://www.si.umich.edu/programs/bachelor-science-information/tuition-and-funding', 'Connect with us': 'https://www.si.umich.edu/programs/bachelor-science-information/connect-us', 'Study abroad for undergraduates': 'https://www.si.umich.edu/programs/bachelor-science-information/study-abroad-undergraduates', 'Exchange student information': 'https://www.si.umich.edu/programs/bachelor-science-information/exchange-student-information'}``.
                 ~~~~
                 from bs4 import BeautifulSoup
@@ -326,8 +330,8 @@ Write Code Questions
         :practice: T
         :nocodelens:
         :language: python3
-        
-        Write a function called ``envelope_address`` that takes in a parameter ``url`` and uses BeautifulSoup to web scrape and return the address text in the footer with the newlines stripped. For example, ``envelope_address('https://www.si.umich.edu/programs/bachelor-science-information')`` 
+
+        Write a function called ``envelope_address`` that takes in a parameter ``url`` and uses BeautifulSoup to web scrape and return the address text in the footer with the newlines stripped. For example, ``envelope_address('https://www.si.umich.edu/programs/bachelor-science-information')``
         should return first line: ``'School of Information'``, second line: ``'University of Michigan'``, third line: ``'105 S State St.'``, and last line: ``'Ann Arbor, MI 48109-1285'``.
         ~~~~
         from bs4 import BeautifulSoup
@@ -346,8 +350,8 @@ Write Code Questions
                 address = soup.find('div', class_ = 'footer--address').text.strip("\n")
                 self.assertEqual(envelope_address('https://www.si.umich.edu/programs/bachelor-science-information'), address, "envelope_address('https://www.si.umich.edu/programs/bachelor-science-information')")
 
-        myTests().main()       
-                
+        myTests().main()
+
 
 #.
     .. tabbed:: bsoup_writecode9
@@ -359,8 +363,8 @@ Write Code Questions
                 :nocodelens:
                 :language: python3
 
-                Write a function called ``name_email`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the names and email addresses, 
-                and returns a dictionary with the names as keys and the email addresses as values. Use the string replace method while web scraping. For example, ``name_email('https://www.si.umich.edu/people/directory/faculty/e')`` 
+                Write a function called ``name_email`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the names and email addresses,
+                and returns a dictionary with the names as keys and the email addresses as values. Use the string replace method while web scraping. For example, ``name_email('https://www.si.umich.edu/people/directory/faculty/e')``
                 should return ``{'Paul Edwards': 'pne@umich.edu', 'Ron Eglash': 'eglash@umich.edu', 'Nicole Ellison': 'enicole@umich.edu', 'Barbara Ericson': 'barbarer@umich.edu'}``.
                 ~~~~
                 from bs4 import BeautifulSoup
@@ -383,9 +387,10 @@ Write Code Questions
             .. activecode:: bsoup_writecode9a
                 :optional:
                 :language: python3
+                :nocodelens:
 
-                Write a function called ``name_email`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the names and email addresses, 
-                and returns a dictionary with the names as keys and the email addresses as values. Use the string replace method while web scraping. For example, ``name_email('https://www.si.umich.edu/people/directory/faculty/e')`` 
+                Write a function called ``name_email`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the names and email addresses,
+                and returns a dictionary with the names as keys and the email addresses as values. Use the string replace method while web scraping. For example, ``name_email('https://www.si.umich.edu/people/directory/faculty/e')``
                 should return ``{'Paul Edwards': 'pne@umich.edu', 'Ron Eglash': 'eglash@umich.edu', 'Nicole Ellison': 'enicole@umich.edu', 'Barbara Ericson': 'barbarer@umich.edu'}``.
                 ~~~~
                 from bs4 import BeautifulSoup
@@ -424,8 +429,8 @@ Write Code Questions
         :nocodelens:
         :language: python3
 
-        Write a function called ``program_email`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the 5 program names under Email Addresses 
-        and Admissions (BSI program, MSI program, etc.) and their associated email addresses, and returns a dictionary with the program names as keys and the email addresses as values. 
+        Write a function called ``program_email`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the 5 program names under Email Addresses
+        and Admissions (BSI program, MSI program, etc.) and their associated email addresses, and returns a dictionary with the program names as keys and the email addresses as values.
         For example, ``program_email('https://www.si.umich.edu/about-umsi/contact-us')`` should return ``{'BSI program': 'umsi.undergrad@umich.edu', 'MSI program': 'umsi.admissions@umich.edu', 'MHI program': 'hi.admissions@umich.edu', 'MADS program': 'umsi.mads@umich.edu', 'Doctoral program': 'umsi.phd.admissions@umich.edu'}``.
         ~~~~
         from bs4 import BeautifulSoup

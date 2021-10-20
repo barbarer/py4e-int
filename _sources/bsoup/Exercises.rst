@@ -3,7 +3,7 @@ Multiple Choice Questions
 
 .. mchoice:: Exercises_bsoup_mc1
    :practice: T
-   :answer_a: h1 
+   :answer_a: h1
    :answer_b: h1, class='sports'
    :answer_c: h1, class_='sports'
    :answer_d: 'h1', class_='sports'
@@ -12,7 +12,7 @@ Multiple Choice Questions
    :feedback_b: Try again!
    :feedback_c: Try again!
    :feedback_d: Correct! Both the tag and attribute are important. The h1 tag needs to be in quotes, and class has to be followed by an underscore.
-   
+
    Given the below html, how would this tag type be described in web scraping code?
 
    .. code-block:: python
@@ -33,7 +33,7 @@ Multiple Choice Questions
    :feedback_c: Try again!
    :feedback_d: Try again!
    :feedback_e: Try again!
-   
+
    Which line of code correctly gets the first item in ``items`` and makes the most sense following the below code snippet?
 
    .. code-block:: python
@@ -49,7 +49,7 @@ Multiple Choice Questions
    :answer_c: soup = BeautifulSoup(response.string, 'html.parser')
    :correct: a, b
    :feedback_a: Correct!
-   :feedback_b: Correct! 
+   :feedback_b: Correct!
    :feedback_c: Try again!
 
    How does one parse the HTML into a ``BeautifulSoup`` object given a ``response`` object?
@@ -63,11 +63,11 @@ Multiple Choice Questions
    :answer_d: soup.p['id']
    :correct: b
    :feedback_a: Try again!
-   :feedback_b: Correct! This is the correct way to get the first p tag and get the value for the id in the p tag.
+   :feedback_b: Correct! This is the best way to get the first p tag and get the value for the id in the p tag.
    :feedback_c: Try again!
    :feedback_d: Try again!
 
-   Which of the following gets the value for the ``id`` in the first ``p`` tag?
+   Which of the following is the best way to get the value for the ``id`` in the first ``p`` tag?
 
 
 .. mchoice:: Exercises_bsoup_mc5
@@ -77,7 +77,7 @@ Multiple Choice Questions
    :answer_c: soup.h1[0]
    :answer_d: soup.h1[1]
    :correct: a
-   :feedback_a: Correct! The header 1 tag is h1, and this is the correct way to get the first header 1 tag after creating a soup object. 
+   :feedback_a: Correct! The header 1 tag is h1, and this is the correct way to get the first header 1 tag after creating a soup object.
    :feedback_b: Try again!
    :feedback_c: Try again!
    :feedback_d: Try again!
@@ -92,7 +92,7 @@ Multiple Choice Questions
    :answer_c: soup.a.attrs
    :answer_d: soup.link.attributes
    :correct: c
-   :feedback_a: Try again! 
+   :feedback_a: Try again!
    :feedback_b: Try again!
    :feedback_c: Correct! This is the correct way to get the first link tag (soup.a) and get a dictionary of all attributes and values for that link tag (.attrs).
    :feedback_d: Try again!

@@ -10,17 +10,11 @@
 ..  shortname:: Plan1
 ..  description:: Worked examples plus practice for Plan 1.
 
-.. setup for automatic question numbering.
-
-.. qnum::
-   :start: 1
-   :prefix: ex2-
-   
 
 Get news links from faculty webpages
 #####################################
 
-Let's say that you want to get the link to the first news article on your favorite umsi faculty's webpages. 
+Let's say that you want to get the link to the first news article on your favorite umsi faculty's webpages.
 
 .. image:: _static/faculty_pages.gif
     :scale: 70%
@@ -28,7 +22,7 @@ Let's say that you want to get the link to the first news article on your favori
     :alt: News articles on faculty pages
 
 
-But clicking through to gather all those links would be a pain. Fortunately, we can do that task with BeautifulSoup! 
+But clicking through to gather all those links would be a pain. Fortunately, we can do that task with BeautifulSoup!
 
 Run the code below to see what it collects.
 
@@ -50,9 +44,9 @@ Run the code below to see what it collects.
 
        #Extract info from the page
        # Get first tag of a certain type from the soup
-       tag = soup.find('a', class_='item-teaser--more')
+       tag = soup.find('a', class_='item-teaser--heading-link')
        # Get info from tag
-       info = tag.get('href')  
+       info = tag.get('href')
 
        #Do something with the info
        # Print the info
@@ -76,9 +70,9 @@ This code is made up of three plans. Click on each of the plans below to learn m
        soup = BeautifulSoup(r.content, 'html.parser')</pre></a></pre>
        <pre><strong>Plan 4: Get info from a single tag</strong><a href="plan4.html"><pre style="background-color:#A9DFBF;">
        # Get first tag of a certain type from the soup
-       tag = soup.find('a', class_='item-teaser--more')
+       tag = soup.find('a', class_='item-teaser--heading-link')
        # Get info from tag
-       info = tag.get('href')</pre></a></pre>  
+       info = tag.get('href')</pre></a></pre>
        <pre><strong>Plan 9: Print info</strong><a href="plan9.html"><pre style="background-color:#D6EAF8;">
        # Print the info
        print(info)</pre></a></pre>
