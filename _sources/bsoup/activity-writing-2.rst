@@ -1,12 +1,6 @@
 ..  shortname:: Writing 2
 ..  description:: Writing activity 2.
 
-.. setup for automatic question numbering.
-
-.. qnum::
-   :start: 1
-   :prefix: writing2-
-
 
 Code writing activity part 2
 :::::::::::::::::::::::::::::
@@ -25,7 +19,7 @@ Here is |oney_link|.
 
 .. |oney_link| raw:: html
 
-   <a href="https://www.ratemyprofessors.com/ShowRatings.jsp?tid=2239751" target="_blank">the link to Prof. Oney's Rate My Professor page</a> 
+   <a href="https://www.ratemyprofessors.com/ShowRatings.jsp?tid=2239751" target="_blank">the link to Prof. Oney's Rate My Professor page</a>
 
 You can see that both the pages have the same layout.
 
@@ -64,7 +58,7 @@ The comments all have the same tag name, which is ``'div'`` tag with ``class='Co
 
     .. |plan_3| raw:: html
 
-        <a href="plan3.html" target="_blank">Plan 3: Get a soup from multiple URLs</a> 
+        <a href="plan3.html" target="_blank">Plan 3: Get a soup from multiple URLs</a>
 
     .. |plan_4| raw:: html
 
@@ -72,36 +66,36 @@ The comments all have the same tag name, which is ``'div'`` tag with ``class='Co
 
     .. |plan_5| raw:: html
 
-        <a href="plan5.html" target="_blank">Plan 5: Get info from all tags of a certain type</a> 
-   
+        <a href="plan5.html" target="_blank">Plan 5: Get info from all tags of a certain type</a>
+
     .. |plan_9| raw:: html
 
-        <a href="plan9.html" target="_blank">Plan 9: Print info</a> 
+        <a href="plan9.html" target="_blank">Plan 9: Print info</a>
 
 
 .. parsonsprob:: write_code_order_plans_code
 
-   Choose which of the following plans you will use, and put them in the correct order.   
+   Choose which of the following plans you will use, and put them in the correct order.
 
    -----
    # Load libraries for web scraping
    from bs4 import BeautifulSoup
    import requests
-   # Get a soup from multiple URLs 
+   # Get a soup from multiple URLs
    base_url = ________________________________
    endings =  ________________________________
    for ending in endings:
-       url = base_url + ending 
-       r = requests.get(url) 
+       url = base_url + ending
+       r = requests.get(url)
        soup = BeautifulSoup(r.content, 'html.parser')
    =====
    # Load libraries for web scraping
    from bs4 import BeautifulSoup
    import requests
-   # Get a soup from a URL 
+   # Get a soup from a URL
    url = _________________________
    r = requests.get(url)
-   soup = BeautifulSoup(r.content, 'html.parser')#paired  
+   soup = BeautifulSoup(r.content, 'html.parser')#paired
    =====
    # Get all tags of a certain type from the soup
    tags = soup.find_all(___________)
@@ -122,7 +116,7 @@ The comments all have the same tag name, which is ``'div'`` tag with ``class='Co
    tags = first_tag.find_all(____________)
    # Collect info from the tags
    collect_info = []
-   for tag in tags: 
+   for tag in tags:
        info = tag.____________
        collect_info.append(info)#paired
    =====
@@ -135,7 +129,7 @@ The comments all have the same tag name, which is ``'div'`` tag with ``class='Co
    f = open(____________, 'w')
    json.dump(____________, f)
    f.close()#paired
-           
+
 .. reveal:: write_code_cl_reveal_2
         :showtitle: After you've done the activity, click here.
         :hidetitle: Hide question.
@@ -151,6 +145,5 @@ The comments all have the same tag name, which is ``'div'`` tag with ``class='Co
            :option_8: Very high mental effort
            :option_9: Very, very high mental effort
            :results: instructor
-           
-           In solving the preceding problem I invested:
 
+           In solving the preceding problem I invested:

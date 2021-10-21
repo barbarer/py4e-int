@@ -67,7 +67,7 @@ Multiple Choice Questions
    :feedback_c: Try again! The correct way to find a tag is to use the get method().
    :feedback_d: Try again! The correct way to find a tag is to use the get method().
 
-   Which of the following gets the value for the ``id`` in the first ``p`` tag?
+   Which of the following is the best way to get the value for the ``id`` in the first ``p`` tag?
 
 
 .. mchoice:: Exercises_bsoup_mc5

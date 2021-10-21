@@ -11,12 +11,6 @@
 ..  shortname:: Plan2
 ..  description:: Worked examples plus practice for Plan 2.
 
-.. setup for automatic question numbering.
-
-.. qnum::
-   :start: 1
-   :prefix: p2-
-
 .. _plan_2:
 
 Plan 2: Get a soup from a URL
@@ -25,7 +19,7 @@ Plan 2: Get a soup from a URL
 Plan 2: Example
 ====================================
 
-The first step in web scraping is getting information from a webpage. 
+The first step in web scraping is getting information from a webpage.
 To use the BeautifulSoup web scraping library, we have to put the webpage into something called a *soup*.
 
 Here is the code for getting a **soup** from the **Cottage Inn location page**.
@@ -52,8 +46,8 @@ Plan 2: How to use this plan
 
 **Replace the URL with the URL of the website you want to scrape.**
 
-A URL is a web address, like you see in your web browser. 
-It should be complete (starting with http:// or https://). 
+A URL is a web address, like you see in your web browser.
+It should be complete (starting with http:// or https://).
 In this plan, a URL should be surrounded by quotes (:code:`' '`).
 
 .. image:: _static/cottageinn_URL.gif
@@ -74,7 +68,7 @@ Plan 2: Exercises
     :click-incorrect:from bs4 import BeautifulSoup:endclick:
     :click-incorrect:import requests:endclick:
 
-    :click-incorrect:# Get a soup from a URL:endclick: 
+    :click-incorrect:# Get a soup from a URL:endclick:
     :click-incorrect:url =:endclick: :click-correct:'https://cottageinn.com/pick-a-location/':endclick:
     :click-incorrect:r = requests.get(url):endclick:
     :click-incorrect:soup = BeautifulSoup(r.content, 'html.parser')::endclick:
@@ -89,7 +83,7 @@ Plan 2: Exercises
 
    ``import requests``
 
-   ``# Get a soup from a URL`` 
+   ``# Get a soup from a URL``
 
    ``url =`` |blank|
 
@@ -98,17 +92,14 @@ Plan 2: Exercises
    ``soup = BeautifulSoup(r.content, 'html.parser')``
 
 
-   -    :['"]https://en.wikipedia.org/wiki/University_of_Michigan['"]: Correct.  
+   -    :['"]https://en.wikipedia.org/wiki/University_of_Michigan['"]: Correct.
         :https://en.wikipedia.org/wiki/University_of_Michigan: Remember that URLs in this plan should have quotes around them.
         :en.wikipedia.org/wiki/University_of_Michigan: Remember that URLs in this plan should start with https:// or http://
-        :.*: Incorrect. 
-        
+        :.*: Incorrect.
 
-.. note:: 
-      
+
+.. note::
+
         .. raw:: html
 
            <a href="example1.html" >Click here to go back to the Cottage Inn example</a>
-
-
- 

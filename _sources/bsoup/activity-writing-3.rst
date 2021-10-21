@@ -1,12 +1,6 @@
 ..  shortname:: Writing 2
 ..  description:: Writing activity 2.
 
-.. setup for automatic question numbering.
-
-.. qnum::
-   :start: 1
-   :prefix: writing3-
-
 
 Code writing activity part 3
 :::::::::::::::::::::::::::::
@@ -25,7 +19,7 @@ Here is |oney_link|.
 
 .. |oney_link| raw:: html
 
-   <a href="https://www.ratemyprofessors.com/ShowRatings.jsp?tid=2239751" target="_blank">the link to Prof. Oney's Rate My Professor page</a> 
+   <a href="https://www.ratemyprofessors.com/ShowRatings.jsp?tid=2239751" target="_blank">the link to Prof. Oney's Rate My Professor page</a>
 
 You can see that both the pages have the same layout.
 
@@ -64,7 +58,7 @@ The comments all have the same tag name, which is ``'div'`` tag with ``class='Co
 
     .. |plan_3| raw:: html
 
-        <a href="plan3.html" target="_blank">Plan 3: Get a soup from multiple URLs</a> 
+        <a href="plan3.html" target="_blank">Plan 3: Get a soup from multiple URLs</a>
 
     .. |plan_4| raw:: html
 
@@ -72,14 +66,14 @@ The comments all have the same tag name, which is ``'div'`` tag with ``class='Co
 
     .. |plan_5| raw:: html
 
-        <a href="plan5.html" target="_blank">Plan 5: Get info from all tags of a certain type</a> 
-   
+        <a href="plan5.html" target="_blank">Plan 5: Get info from all tags of a certain type</a>
+
     .. |plan_9| raw:: html
 
-        <a href="plan9.html" target="_blank">Plan 9: Print info</a> 
+        <a href="plan9.html" target="_blank">Plan 9: Print info</a>
 
-    
-Here is the code that you assembled from the plans. 
+
+Here is the code that you assembled from the plans.
 Now that you've assembled the correct plans, fill in the blanks to complete the code.
 
 .. activecode:: write_code_fill_in
@@ -126,8 +120,5 @@ Now that you've assembled the correct plans, fill in the blanks to complete the 
            :option_8: Very high mental effort
            :option_9: Very, very high mental effort
            :results: instructor
-           
+
            In solving the preceding problem I invested:
-
-
-

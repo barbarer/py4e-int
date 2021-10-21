@@ -9,11 +9,9 @@ Mixed-Up Code Questions
     Since websites are frequently updated, the returned list of image links may change as image links get added and deleted.
     -----
     import requests
-    =====
     from bs4 import BeautifulSoup
     =====
     def img_links(url):
-    =====
         lst = []
     =====
         r = requests.get(url)

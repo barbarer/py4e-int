@@ -1,17 +1,12 @@
 ..  shortname:: Explaining
 ..  description:: Explaining activity.
 
-.. setup for automatic question numbering.
-
-.. qnum::
-   :start: 1
-   :prefix: explaining-
 
 Code explaining activity
 :::::::::::::::::::::::::
 
 
-Look at the code below, and try to determine what it does. 
+Look at the code below, and try to determine what it does.
 
 Relevant tags
 **********************
@@ -35,7 +30,7 @@ Here's the relevant tag from ``https://www.si.umich.edu/people/barbara-ericson``
   soup = BeautifulSoup(r.content, 'html.parser')</pre></a>
   <a href="plan5.html"><pre style="background-color:#D5F5E3;">
   <strong># Get all tags of <mark>a certain type</mark> from the soup</strong>
-  tags = soup.find_all(<mark>'a', class_='item-teaser--more'</mark>)
+  tags = soup.find_all(<mark>'a', class_='item-teaser--heading-link'</mark>)
   <strong># Collect info from the tags</strong>
   collect_info = []
   for tag in tags:
@@ -62,7 +57,7 @@ Here's the relevant tag from ``https://www.si.umich.edu/people/barbara-ericson``
            <a href="plan9.html"><pre style="background-color:#D6EAF8;">
            <strong># Print the <mark>info</mark></strong>
            print(<mark>collect_info</mark>)</pre></a>
-           
+
 .. shortanswer:: explain_answer
 
    Write down your best guess of what the code does.
@@ -86,7 +81,7 @@ Here's the relevant tag from ``https://www.si.umich.edu/people/barbara-ericson``
 
     .. |plan_3| raw:: html
 
-        <a href="plan3.html" target="_blank">Plan 3: Get a soup from multiple URLs</a> 
+        <a href="plan3.html" target="_blank">Plan 3: Get a soup from multiple URLs</a>
 
     .. |plan_4| raw:: html
 
@@ -94,11 +89,11 @@ Here's the relevant tag from ``https://www.si.umich.edu/people/barbara-ericson``
 
     .. |plan_5| raw:: html
 
-        <a href="plan5.html" target="_blank">Plan 5: Get info from all tags of a certain type</a> 
-   
+        <a href="plan5.html" target="_blank">Plan 5: Get info from all tags of a certain type</a>
+
     .. |plan_9| raw:: html
 
-        <a href="plan9.html" target="_blank">Plan 9: Print info</a> 
+        <a href="plan9.html" target="_blank">Plan 9: Print info</a>
 
 
 
@@ -116,14 +111,14 @@ Here's the relevant tag from ``https://www.si.umich.edu/people/barbara-ericson``
         # Load libraries for web scraping
         from bs4 import BeautifulSoup
         import requests
-        # Get a soup from a URL 
+        # Get a soup from a URL
         url = 'https://www.si.umich.edu/people/barbara-ericson'
         r = requests.get(url)
         soup = BeautifulSoup(r.content, 'html.parser')
 
         #Extract info from the webpage
         # Get all tags of a certain type from the soup
-        tags = soup.find_all('a', class_='item-teaser--more')
+        tags = soup.find_all('a', class_='item-teaser--heading-link')
         # Collect info from the tags
         collect_info = []
         for tag in tags:
@@ -132,12 +127,12 @@ Here's the relevant tag from ``https://www.si.umich.edu/people/barbara-ericson``
           collect_info.append(info)
 
         #Do something with the info
-        # Get a soup from multiple URLs 
+        # Get a soup from multiple URLs
         base_url = 'https://www.si.umich.edu/'
         endings = collect_info
         for ending in endings:
-            url = base_url + ending 
-            r = requests.get(url) 
+            url = base_url + ending
+            r = requests.get(url)
             soup = BeautifulSoup(r.content, 'html.parser')
 
             # Get all tags of a certain type from the soup
@@ -148,7 +143,7 @@ Here's the relevant tag from ``https://www.si.umich.edu/people/barbara-ericson``
                 # Get text from tag
                 info = tag.text
                 collect_info.append(info)
-            
+
             # Print the info
             print(collect_info)
 
@@ -167,6 +162,5 @@ Here's the relevant tag from ``https://www.si.umich.edu/people/barbara-ericson``
            :option_8: Very high mental effort
            :option_9: Very, very high mental effort
            :results: instructor
-           
-           In solving the preceding problem I invested:
 
+           In solving the preceding problem I invested:

@@ -11,12 +11,6 @@
 ..  shortname:: Plan9
 ..  description:: Worked examples plus practice for Plan 9.
 
-.. setup for automatic question numbering.
-
-.. qnum::
-   :start: 1
-   :prefix: p9-
-
 .. _plan_9:
 
 Plan 9: Print info
@@ -51,17 +45,17 @@ Plan 9: Exercises
 
 .. fillintheblank:: plan9_fill_in
 
-   Here is the code to collect all the locations from the Cottage Inn locations page. 
-   
+   Here is the code to collect all the locations from the Cottage Inn locations page.
+
    What should fill the slot in Plan 9 below?
 
-   .. code-block:: python 
+   .. code-block:: python
 
            #Get one webpage
            # Load libraries for web scraping
            from bs4 import BeautifulSoup
            import requests
-           # Get a soup from a URL 
+           # Get a soup from a URL
            url = 'https://cottageinn.com/pick-a-location/'
            r = requests.get(url)
            soup = BeautifulSoup(r.content, 'html.parser')
@@ -83,20 +77,18 @@ Plan 9: Exercises
 
    ___________ should be |blank|
 
-   -    :collect_info: Correct.  
+   -    :collect_info: Correct.
         :info: Remember that the variable that goes in this plan depends on the plan above.
-        :.*: Incorrect. 
+        :.*: Incorrect.
 
-.. note:: 
-      
+.. note::
+
         .. raw:: html
 
            <a href="example1.html" >Click here to go back to the Cottage Inn example</a>
 
-.. note:: 
-      
+.. note::
+
         .. raw:: html
 
            <a href="example2.html" >Click here to go back to the Faculty Pages example</a>
- 
-

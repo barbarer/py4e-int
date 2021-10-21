@@ -11,12 +11,6 @@
 ..  shortname:: Plan4
 ..  description:: Worked examples plus practice for Plan 4.
 
-.. setup for automatic question numbering.
-
-.. qnum::
-   :start: 1
-   :prefix: p4-
-
 .. _plan_4:
 
 Plan 4: Get info from a single tag
@@ -28,13 +22,13 @@ Plan 4: Example
 
 Maybe we want to get just one piece of information from a webpage. In this example, we want to get the first link to a news story from a professor's page.
 
-Here's what we see when we use the "inspect" function in the browser. 
+Here's what we see when we use the "inspect" function in the browser.
 
-.. image:: _static/news_ericson.png
+.. image:: _static/ericson-more-info.png
     :scale: 70%
     :align: center
     :alt: The tag that has a link to the news article
-   
+
 Since that tag is the first of its type on the page, we can use the plan **Get info from a single tag**.
 
 .. raw:: html
@@ -42,9 +36,9 @@ Since that tag is the first of its type on the page, we can use the plan **Get i
        <pre>Goal: Get info from a single tag
        <pre style="background-color:#A9DFBF;">
        <strong># Get first <mark>tag of a certain type</mark> from the soup</strong>
-       tag = soup.find(<mark>'a', class_='item-teaser--more'</mark>)
+       tag = soup.find(<mark>'a', class_='item-teaser--heading-link'</mark>)
        <strong># Get <mark>info</mark> from tag</strong>
-       info = tag.<mark>get('href')</mark></pre></pre>  
+       info = tag.<mark>get('href')</mark></pre></pre>
 
 
 Plan 4: When to use it
@@ -61,27 +55,27 @@ Once you've found the tag you want to get information from, do two things:
 
 How do you do that? Here are some examples:
 
-==================================== === ===========================  
+==================================== === ===========================
 What you see when you inspect            Tag description in the code
-==================================== === ===========================  
+==================================== === ===========================
 ``<p>``                              ->  ``'p'``
 ``<h3>``                             ->  ``'h3'``
 ``<div class="comment">``            ->  ``'div', class_='comment'``
 ``<span style="X5e72;">``            ->  ``'span', style='X5e72;'``
 ``<a class="css4z" href="/orders">`` ->  ``'a', class_='css4z'``
-==================================== === ===========================  
+==================================== === ===========================
 
 2. Determine if you want to get **text** from a tag, or a **link** from a tag
 
-================= === ===========================  
+================= === ==========================================
 The info you want     What you put in the code
-================= === ===========================  
+================= === ==========================================
 The tag's text    ->  ``text``
-The tag's link    ->  ``get('href')``
-================= === ===========================  
+The tag's link    ->  ``get('href')`` or ``get('href', None)``
+================= === ==========================================
 
 
-One type of tag, the ``a`` tag, holds a link. 
+One type of tag, the ``a`` tag, holds a link.
 
 Here is the tag that creates the link to the North Quad dining hall page. It is an 'a' tag.
 
@@ -104,10 +98,10 @@ Plan 4: Exercises
     .. image:: _static/barb_link.png
         :align: center
         :alt: Link to Barb's page
-    
+
     -   https://www.si.umich.edu/people/barbara-ericson
 
-        -   No, this is the full link, but there is a relative link in the tag. 
+        -   No, this is the full link, but there is a relative link in the tag.
 
     -   /people/barbara-ericson
 
@@ -129,7 +123,7 @@ Plan 4: Exercises
 
     :click-incorrect:# Get first tag of a certain type from the soup:endclick:
     :click-incorrect:tag = soup.find(:endclick::click-correct:'div':endclick::click-correct:, class_='Comments_StyledComments-dzzyvm-0 dvnRbr':endclick:)
-   
+
     :click-incorrect:# Get info from tag:endclick:
     :click-incorrect:info = tag.:endclick::click-correct:text:endclick:
 
@@ -140,10 +134,10 @@ Check out the image below, that inspects the description of the North Quad dinin
     :scale: 70%
     :align: center
     :alt: The tag that creates the description of North Quad
-        
+
 .. parsonsprob:: plan4_parsons
 
-   Choose the subgoals that get the text from the tag that has the description of the North Quad dining hall, and put them in the right order. 
+   Choose the subgoals that get the text from the tag that has the description of the North Quad dining hall, and put them in the right order.
    You do not need to use all the blocks.
 
    -----
@@ -154,9 +148,9 @@ Check out the image below, that inspects the description of the North Quad dinin
    tag = soup.find('span') #paired
    =====
    # Get info from tag
-   info = tag.text 
+   info = tag.text
    =====
-   # Get info from tag 
+   # Get info from tag
    info = tag.get('href') #distractor
    =====
    # Get all tags of a certain type from the soup
@@ -176,15 +170,14 @@ Check out the image below, that inspects the description of the North Quad dinin
 
     ``info = tag.`` |blank|
 
-    -    :get\(['"]href['"]\): Correct. 
-         :get\(href\): Almost! Don't forget the quotes around 'href'. 
-         :href: Good start! But there is another part to it. 
+    -    :get\(['"]href['"](?:, None)?\): Correct.
+         :get\(href\): Almost! Don't forget the quotes around 'href'.
+         :href: Good start! But there is another part to it.
          :.*: Check out the highlighted parts of the example for help.
 
 
-.. note:: 
-      
+.. note::
+
         .. raw:: html
 
            <a href="example2.html" >Click here to go back to the Faculty Pages example</a>
-

@@ -11,15 +11,9 @@
 ..  shortname:: Plan10
 ..  description:: Worked examples plus practice for Plan 10.
 
-.. setup for automatic question numbering.
-
-.. qnum::
-   :start: 1
-   :prefix: p10-
-
 .. _plan_10:
 
-Plan 10: Store info in a json file 
+Plan 10: Store info in a json file
 ####################################
 
 Plan 10: Outline
