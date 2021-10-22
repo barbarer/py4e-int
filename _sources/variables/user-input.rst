@@ -56,7 +56,7 @@ an error:
 
 .. note ::
 
-   If you are typing Python code in interpreter you might want to add the new line character "\n" as shown above.
+   If you are typing Python code in interpreter you might want to add a new line using "\\n" as shown above.
 
 
 We will see how to handle this kind of error later.

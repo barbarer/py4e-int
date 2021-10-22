@@ -11,12 +11,6 @@
 ..  shortname:: Plan3
 ..  description:: Worked examples plus practice for Plan 3.
 
-.. setup for automatic question numbering.
-
-.. qnum::
-   :start: 1
-   :prefix: p3-
-
 .. _plan_3:
 
 Plan 3: Get a soup from multiple URLs
@@ -37,7 +31,7 @@ Sometimes we want to get information from multiple web pages that have the same 
     :align: center
     :alt: Plan 3 outline
 
-We are interested in getting information about mutliple UMSI professors: Dr. Barb Ericson, Dr. Steve Oney, and Dr. Paul Resnick. 
+We are interested in getting information about mutliple UMSI professors: Dr. Barb Ericson, Dr. Steve Oney, and Dr. Paul Resnick.
 
 Their webpages are:
 
@@ -102,16 +96,15 @@ Change the code and run it to see if you're right!
        # Get first tag of a certain type from the soup
        tag = soup.find('a', class_='item-teaser--heading-link')
        # Get link from tag
-       info = tag.get('href')  
+       info = tag.get('href')
 
        #Do something with the info
        # Print the info
        print(info)
 
 
-.. note:: 
-      
+.. note::
+
         .. raw:: html
 
            <a href="example2.html" >Click here to go back to the Faculty Pages example</a>
-

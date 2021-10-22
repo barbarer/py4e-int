@@ -12,24 +12,20 @@
 
 .. setup for automatic question numbering.
 
-.. qnum::
-   :start: 1
-   :prefix: ex1-
-   
-
+  
 .. _plan_1:
 
 Scrape all the Cottage Inn Pizza locations
 ###########################################
 
-Let's say that you want to make a list of all the Cottage Inn Pizza locations. When you go to their website, it turns out that there are a *lot* of locations. 
+Let's say that you want to make a list of all the Cottage Inn Pizza locations. When you go to their website, it turns out that there are a *lot* of locations.
 
 .. image:: _static/cottageinn_scroll.gif
     :scale: 70%
     :align: center
     :alt: Scrolling around the Cottage Inn locations page to see that there are a lot of locations
 
-If only you could write a little Python to easily collect them all... 
+If only you could write a little Python to easily collect them all...
 
 It turns out that you can! Run the code below to see what it collects.
 
@@ -41,7 +37,7 @@ It turns out that you can! Run the code below to see what it collects.
    # Load libraries for web scraping
    from bs4 import BeautifulSoup
    import requests
-   # Get a soup from a URL 
+   # Get a soup from a URL
    url = 'https://web.archive.org/web/20200427175705/https://cottageinn.com/pick-a-location/'
    r = requests.get(url)
    soup = BeautifulSoup(r.content, 'html.parser')
@@ -70,11 +66,11 @@ This code probably seems a bit complicated. In this ebook, we will break down we
    # Load libraries for web scraping
    from bs4 import BeautifulSoup
    import requests
-   # Get a soup from a URL 
+   # Get a soup from a URL
    url = 'https://web.archive.org/web/20200427175705/https://cottageinn.com/pick-a-location/'
    r = requests.get(url)
    soup = BeautifulSoup(r.content, 'html.parser')</pre></a></pre>
-   
+
    <pre><strong>Plan 5: Get info from all tags of a certain type</strong><a href="plan5.html"><pre style="background-color:#D5F5E3;">
    # Get all tags of a certain type from the soup
    tags = soup.find_all('h3')
@@ -88,4 +84,3 @@ This code probably seems a bit complicated. In this ebook, we will break down we
    <pre><strong>Plan 9: Print the info</strong><a href="plan9.html"><pre style="background-color:#D6EAF8;">
    # Print the info
    print(collect_info)</pre></a></pre>
-

@@ -447,7 +447,7 @@ and hide to put it away.
         :datafile: uspoll.txt
 
         Fix the errors in the code below so that it returns the average PM 2.5 value
-        for the passed state (using the two letter abbreviation).   It should
+        for the passed state (using the two letter abbreviation).  Each line of the file is in the format ``City, State: PM10: PM2.5``. For example, the first line is "Aberdeen, SD :13 :8". It should
         print 11.33333333333333.
         ~~~~
         def avg_PM25(state)
@@ -853,36 +853,30 @@ is the first three letters of the month.
         :datafile: stocks.txt
 
         Fix the errors below so that the ``pointGain`` function returns a list of all the dates where the Dow
-        Jones gained more than 300 points from open to close.  Each line has: Date, Open, High, Low, Close, Volume.
+        Jones gained more than 300 points from open to close.  Each line has: Date, Open, High, Low, Close.
         There should be 22 dates.
         ~~~~
-        def pointGain(lines):
+        def pointGain():
+            file = open("stocks.txt", "r")
             date_list = []
-            for lines in lines:
+            for lines in file:
             values = line.split()
             opening = str(values[2])
             closing = float(values[4])
             if (closing - opening) < 300:
                 date_list.append(values[0])
+            file.close()
             return date_list
 
         # read the data
-        file = open("stocks.txt", "r")
-        lines = file.readlines()
-        file.close()
-        pointGain(lines)
+        pointGain()
 
         from unittest.gui import TestCaseGui
 
         class myTests(TestCaseGui):
 
-            def setUp(self):
-                file = open("stocks.txt", "r")
-                self.lines = file.readlines()
-                file.close()
-
             def testOne(self):
-                res = pointGain(self.lines)
+                res = pointGain()
                 self.assertEqual(len(res),22,"Length(list) == 22")
                 self.assertEqual(res[0],"1-Nov-01")
                 self.assertEqual(res[1],"2-Apr-01")

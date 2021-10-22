@@ -4,6 +4,10 @@ Group Work: Functions
 It is best to use a POGIL approach with the following. In POGIL students work
 in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
 
+.. note::
+
+   If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.
+
 **Learning Objectives**
 
 Students will know and be able to do the following.
@@ -11,47 +15,24 @@ Students will know and be able to do the following.
 *Content Objectives:*
 
 * Learn how to display a value in Python using print.
-* Recognize a function definition, function header, function body, function name, default value for a function parameter, and function call in a program.
-* Predict output from functions.
+* Math terms for functions to their definitiions.
 * Recognize common symbols (:, #), operators (+, -, /), and keywords (def, return) in Python.
-* Recognize that indentation is important in Python
 
 *Process Objectives:*
 
 * Modify code that includes function definitions and function calls
 * Learn how to properly indent the body of a function
+* Predict output from functions.
 
 Print and Function Basics
 ===============================
 
-Look at the Python code below and then answer the following questions.
-
-.. fillintheblank:: funct_fitb_print_test_first_line
-
-    What is the first thing that will be printed when the code below runs?
-
-    - :Hello!: This will print before the function call to print_message
-      :Welcome: Execution starts in the main method, so this won't be the first thing that is printed.
-      :.*: Execution starts in the main method
-
-.. fillintheblank:: funct_fitb_print_test_last_line
-
-    What is the last thing that will be printed when the code below runs?
-
-    - :1: Prints the value returned from the function test which is the remainder of 5 divided by 2 which is one.
-      :.*: What is the remainder of 5 divided by 2?
-
-.. fillintheblank:: funct_fitb_print_test_value_b
-
-    What is the value of ``b`` when function ``test`` starts executing?
-
-    - :2: Since the value of b was not specified it defaults to 2 (it was set to 2 as a default in the function definition)
-      :.*: What is the default value specified for b in the function definition?
+Run the Python code below and then answer the following questions.
 
 .. activecode:: func_ac_pogil_print_message_v2
     :caption: An example with several functions
 
-    Run the code below to see what it prints.
+    Run the code below to see what it prints and then use it to answer the following questions.
     ~~~~
     # function definition
     def test(a, b = 2):
@@ -79,6 +60,58 @@ Look at the Python code below and then answer the following questions.
 
    You do not declare the type of a variable in Python. Python requires that all statements that are part of the body of a function must be indented. Use four spaces to indent.
 
+
+.. fillintheblank:: funct_fitb_print_test_first_line_v2
+
+    What is the first thing that was printed when the code above ran?
+
+    - :Hello!: The main function prints this before it calls the test function.
+      :Welcome: Execution starts in the main method, so this won't be the first thing that is printed.
+      :.*: Execution starts in the main method
+
+
+.. fillintheblank:: funct_fitb_print_test_first_line_num
+
+    What line number caused that first line to print?
+
+    - :15: Line 15 prints "Hello!"
+      :.*: Which line has "Hello!" in it?  Line numbers are shown on the left side of the code.
+
+.. fillintheblank:: funct_fitb_print_test_second_line_v2
+
+    What is the second thing that was printed when the code above ran?
+
+    - :Welcome: This is the first thing printed in the test function.
+      :.*: Run the code and check.
+
+.. fillintheblank:: funct_fitb_print_test_second_line_num
+
+    What line number caused that second line to print?
+
+    - :3: Line 3 prints "Welcome"
+      :.*: Which line has "Welcome" in it?  Line numbers are shown on the left side of the code.
+
+.. fillintheblank:: funct_fitb_print_test_last_line_v2
+
+    What is the last thing that was printed when the code above ran?
+
+    - :1: Prints the value returned from the function test which is the remainder of 5 divided by 2 which is one.
+      :.*: What is the remainder of 5 divided by 2?
+
+.. fillintheblank:: funct_fitb_print_test_last_line_num
+
+    What line number caused the last line to print?
+
+    - :18: Line 18 prints the value returned from the call to the test function
+      :.*: Which line has prints the result of the call to test? Line numbers are shown on the left side of the code.
+
+.. fillintheblank:: funct_fitb_print_test_value_b
+
+    What is the value of ``b`` when function ``test`` starts executing?
+
+    - :2: Since the value of b was not specified it defaults to 2 (it was set to 2 as a default in the function definition)
+      :.*: What is the default value specified for b in the function definition?
+
 .. fillintheblank:: funct_fitb_return
     :practice: T
 
@@ -105,20 +138,25 @@ Delete the last line of the test function above and run the code again.
     - :None: A function without a return still returns the keyword None
       :.*: What is the last thing that is printed when you run the code above after deleting the return from the test function?
 
+
+.. parsonsprob:: funct_order_first_example
+   :numbered: left
+   :adaptive:
+   :practice: T
+   :order: 3, 1, 2, 0
+
+   Drag the blocks from the left and put them in the correct order on the right to describe the order the function calls and functions execute.
+   -----
+   Call to main function on line 21
+   =====
+   main function defined on line 14
+   =====
+   call to test function on line 18
+   =====
+   test function defined on line 2
+
 Parts of a Function and Function Calls
 =========================================
-
-.. dragndrop:: function_def_dnd_v2
-    :practice: T
-    :feedback: Read the chapter on functions and try again.
-    :match_1: function|||A segment of code that performs a single task
-    :match_2: function definition|||All of the code that tells the program what to do when the function is executed.  It includes the header and body.
-    :match_3: function header|||The first line of a function definition
-    :match_4: function body|||All of the lines in the function after the function header
-    :match_5: function call|||The name of the function followed by an argument list in ().
-    :match_6: function name|||Follows the def keyword and is before the list of arguments in ().
-
-    Drag each term to its definition
 
 .. clickablearea:: funct_ca_click_headers
     :practice: T
@@ -137,28 +175,6 @@ Parts of a Function and Function Calls
 
         # function call
         :click-incorrect:print_message():endclick:
-
-    # function call
-    :click-incorrect:main():endclick:
-
-
-.. clickablearea:: funct_ca_click_body
-    :practice: T
-    :question: Click on all of the lines of code in the bodies of the functions below.
-    :iscode:
-    :feedback: The body is all of the lines after the header.
-
-    # function definition
-    :click-incorrect:def print_message()::endclick:
-        :click-correct:print("Welcome to Python."):endclick:
-        :click-correct:print("Learn the power of functions!"):endclick:
-
-    # function definition
-    :click-incorrect:def main()::endclick:
-        :click-correct:print("Hello Programmer!"):endclick:
-
-        # function call
-        :click-correct:print_message():endclick:
 
     # function call
     :click-incorrect:main():endclick:
@@ -183,6 +199,20 @@ Parts of a Function and Function Calls
 
     # function call
     :click-incorrect:main():endclick:
+
+.. dragndrop:: function_def_dnd_v3
+    :practice: T
+    :feedback: Read the chapter on functions and try again.
+    :match_1: function definition|||All of the code that tells the program what to do when the function is executed.  It includes the header and body.
+    :match_2: function header|||The first line of a function definition
+    :match_3: function body|||All of the lines in the function after the function header
+    :match_4: function call|||The name of the function followed by an argument list in ().
+    :match_5: function name|||Follows the def keyword and is before the list of arguments in ().
+
+    Drag each term to its definition
+
+Writing Function Calls
+=========================================
 
 .. activecode:: funct_ac_pogil_add_line
     :caption: Modify the code below to print the last two lines twice
@@ -314,3 +344,8 @@ Special Characters and Keywords
     - :def: Use def to start a function definition.
       :Def: Remember that case matters in Python.  All keywords start with a lower case letter.
       :.*: Try again!
+
+If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.
+
+.. groupsub:: func_basics_groupsub
+   :limit: 4

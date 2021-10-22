@@ -11,10 +11,6 @@
     :align: top
     :alt: audio tour button
 
-.. 	qnum::
-	:start: 1
-	:prefix: csp-11-6-
-
 Changing Step 3: Changing which data we use
 ============================================
 
@@ -182,17 +178,3 @@ Let's try side-to-side copying.
               # SHOW THE RESULT
               win = ImageWin(img.getWidth(),img.getHeight())
               img.draw(win)
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: cslearn4u
-                :identifier: studentcsp_11_6_1_WSq
-
-.. note::
-
-    Discuss topics in this section with classmates.
-
-      .. disqus::
-          :shortname: cslearn4u
-          :identifier: studentcsp_11_6

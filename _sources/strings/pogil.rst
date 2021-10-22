@@ -4,8 +4,9 @@ Group Work - Strings
 It is best to use a POGIL approach with the following. In POGIL students work
 in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
 
-.. groupsub:: strings_groupsub
-   :limit: 3
+.. note::
+
+   If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.
 
 Many interesting problems involve manipulating sequences of data.
 You've learned about strings before, but this activity
@@ -268,3 +269,8 @@ There are dozens of other string methods not shown in this
 section of the ebook. Read Python's online documentation at
 https://docs.python.org/3/library/stdtypes.html#string-methods
 to learn about more! They can be *very* helpful.
+
+If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.
+
+.. groupsub:: strings_groupsub
+   :limit: 3

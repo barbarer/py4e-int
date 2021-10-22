@@ -1,11 +1,7 @@
 ..  shortname:: Debugging
 ..  description:: Debugging activity.
 
-.. setup for automatic question numbering.
 
-.. qnum::
-   :start: 1
-   :prefix: debugging-
 
 Code debugging activity
 :::::::::::::::::::::::::
@@ -33,7 +29,7 @@ Can you fix it? Here is the buggy code:
    # Load libraries for web scraping
    from bs4 import BeautifulSoup
    import requests
-   # Get a soup from <mark>a URL</mark> 
+   # Get a soup from <mark>a URL</mark>
    url = <mark style="border:2px; border-style:solid; border-color:#1A5276; "background-color:#FCF3CF;">'https://www.hshv.org/petsoftheweek/'</mark>
    r = requests.get(url)
    soup = BeautifulSoup(r.content, 'html.parser')</pre></a></pre>
@@ -60,7 +56,7 @@ Try to fix the buggy code below. Run the code to save your progress.
         # Load libraries for web scraping
         from bs4 import BeautifulSoup
         import requests
-        # Get a soup from a URL 
+        # Get a soup from a URL
         url = 'https://www.hshv.org/petsoftheweek/'
         r = requests.get(url)
         soup = BeautifulSoup(r.content, 'html.parser')
@@ -90,7 +86,7 @@ Try to fix the buggy code below. Run the code to save your progress.
            :option_8: Very high mental effort
            :option_9: Very, very high mental effort
            :results: instructor
-           
+
            In solving the preceding problem I invested:
 
 .. sidebar:: Links to plans
@@ -111,7 +107,7 @@ Try to fix the buggy code below. Run the code to save your progress.
 
     .. |plan_3| raw:: html
 
-        <a href="plan3.html" target="_blank">Plan 3: Get a soup from multiple URLs</a> 
+        <a href="plan3.html" target="_blank">Plan 3: Get a soup from multiple URLs</a>
 
     .. |plan_4| raw:: html
 
@@ -119,10 +115,8 @@ Try to fix the buggy code below. Run the code to save your progress.
 
     .. |plan_5| raw:: html
 
-        <a href="plan5.html" target="_blank">Plan 5: Get info from all tags of a certain type</a> 
-   
+        <a href="plan5.html" target="_blank">Plan 5: Get info from all tags of a certain type</a>
+
     .. |plan_9| raw:: html
 
-        <a href="plan9.html" target="_blank">Plan 9: Print info</a> 
-
-
+        <a href="plan9.html" target="_blank">Plan 9: Print info</a>

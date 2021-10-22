@@ -2,20 +2,36 @@ BeautifulSoup with Requests
 ----------------------------
 
 BeautifulSoup makes it easy to extract
-the data you need from an HTML or XML page. You can download and
-install the BeautifulSoup library from:
-
-https://pypi.python.org/pypi/beautifulsoup4
-
-Information on installing BeautifulSoup with the Python Package Index tool ``pip``
-is available at:
-
-https://packaging.python.org/tutorials/installing-packages/
+the data you need from an HTML or XML page.
 
 We will use the ``requests`` library to get a response object from a URL,
 create a ``BeautifulSoup`` object from the HTML in the response, then
-extract the ``href`` attributes
-from the anchor (``a``) tags. Anchor tags are also known as link tags.
+print the first paragraph from the New York Times site.
+
+.. activecode:: bs_get_href_1
+    :language: python3
+
+    This will find and print the first paragraph from the New York Times site.
+    ~~~~
+    import requests
+    from bs4 import BeautifulSoup
+
+    # get the response from the URL
+    url = "https://nytimes.com"
+    resp = requests.get(url)
+
+    # create the soup object
+    soup = BeautifulSoup(resp.content, 'html.parser')
+
+    # Print the first paragraph in the soup
+    print(soup.p)
+
+
+We can also print all of the URLs on that page.
+Again, we will use the ``requests`` library to get a response object from a URL,
+create a ``BeautifulSoup`` object from the HTML in the response, get a list of all of the
+anchor (``a``) tags, then loop through the tags and
+extract the ``href`` attribute. Anchor tags are also known as link tags.
 
 .. activecode:: bs_get_href_1
     :language: python3

@@ -1,711 +1,296 @@
-..  Copyright (C)  Brad Miller, David Ranum, Jeffrey Elkner, Peter Wentworth, Allen B. Downey, Chris
-    Meyers, and Dario Mitchell.  Permission is granted to copy, distribute
-    and/or modify this document under the terms of the GNU Free Documentation
-    License, Version 1.3 or any later version published by the Free Software
-    Foundation; with Invariant Sections being Forward, Prefaces, and
-    Contributor List, no Front-Cover Texts, and no Back-Cover Texts.  A copy of
-    the license is included in the section entitled "GNU Free Documentation
-    License".
+Multiple Choice Questions
+---------------------------
+
+.. mchoice:: pictures-mc-q1
+    :practice: T
+    :answer_a: red, blue and yellow
+    :answer_b: red, green and blue
+    :answer_c: red, white and blue
+    :answer_d: blue, black and red
+    :correct: b
+    :feedback_a: These are the primary colors for paint, but computers use light.
+    :feedback_b: Correct. Computers use red, green, and blue light to make all of the colors.
+    :feedback_c: Try again.
+    :feedback_d: Try again.
+
+    What are the three colors parts that make up each pixel?
+
+.. mchoice:: pictures-mc-q2_v2
+    :practice: T
+    :answer_a: Sets the green value in every pixel to the red value.
+    :answer_b: Switches the green and red values in every pixel.
+    :answer_c: Creates a green filter on the image.
+    :answer_d: The code has no effect on pixel color.
+    :correct: a
+    :feedback_a: Correct. It sets the green value to the red value.
+    :feedback_b: It only sets the green value, not the red value.
+    :feedback_c: What does it set the green value to?
+    :feedback_d: It does change the pixel color.
+
+    What does the following code block do?
+
+    .. code-block:: python
+
+       from image import *
+       img = Image('beach.jpg')
+       pixels = img.getPixels()
+       for p in pixels:
+           r = p.getRed()
+           p.setGreen(r)
+           img.updatePixel(p)
+
+.. mchoice:: pictures-mc-q3-v2
+    :practice: T
+    :answer_a: 0 to 100
+    :answer_b: 0 to 255
+    :answer_c: 1 to 10
+    :answer_d: 1 to 255
+    :correct: b
+    :feedback_a: The maximum value is not 100.
+    :feedback_b: Correct.  The minimum value is 0 and the maximum is 255.
+    :feedback_c: Neither of these is correct.
+    :feedback_d: The minimum value is not 1.
+
+    Every pixel has a color with a red value, a green value and a blue value. What is the range (minimum value and maximum value)?
+
+.. mchoice:: pictures-mc-q4-v2
+    :practice: T
+    :answer_a: Red
+    :answer_b: Green
+    :answer_c: Black
+    :answer_d: Blue
+    :answer_e: White
+    :correct: b
+    :feedback_a: Try again. If red equals 0, there will be no red color in the resulting pixel.
+    :feedback_b: Correct. Since green equals 255 and the other two values equal 0, the resulting pixel color will be green.
+    :feedback_c: Try again. All values must be 0 for the pixel to be black.
+    :feedback_d: Try again. If blue equals 0, there will be no blue color in the resulting pixel.
+    :feedback_e: Try again. All values must be 255 for the pixel to be white.
+
+    If a pixel has red=0, green=255, and blue=0, what color will it be?
+
+.. mchoice:: pictures-mc-q5-v2
+    :practice: T
+    :answer_a: I
+    :answer_b: II
+    :answer_c: III
+    :answer_d: IV
+    :correct: b
+    :feedback_a: No, this code would increase red, not blue, by 180%.
+    :feedback_b: Correct.
+    :feedback_c: No, you have to convert the percentage you want to increase by into a decimal. If you want to increase a color by 180%, you would multiply by 1.8.
+    :feedback_d: No, you have to get the blue value first in order to increase it by a certain amount.
+
+    Which code block should you insert in the for loop below to correctly increase the blue by 180%?
+
+    .. code-block:: python
+
+       from image import *
+
+       img = Image("motorcycle.jpg")
+       pixels = img.getPixels()
+
+       for p in pixels:
+           #INSERT LINES HERE
+           img.updatePixel(p)
+       win = ImageWin(img.getWidth(), img.getHeight())
+       img.draw(win)
+
+    .. code-block:: python
+
+       I.
 
+       r = p.getRed()
+       p.setRed(r * 180)
 
-.. setup for automatic question numbering.
 
-.. 	qnum::
-	:start: 1
-	:prefix: 11-8-
+    .. code-block:: python
 
-Chapter 11 Exercises
----------------------
+       II.
 
-The picture below are used in the following exercises.
+       b = p.getBlue()
+       p.setBlue(b * 1.8)
 
-.. datafile:: gal2.jpg
-   :image:
-   :fromfile: Figures/gal2.jpg
-   :hide:
 
-.. datafile:: kitten.jpg
-   :image:
-   :fromfile: Figures/kitten.jpg
-   :hide:
+    .. code-block:: python
 
-.. datafile:: swan.jpg
-   :image:
-   :fromfile: Figures/swan.jpg
-   :hide:
+       III.
 
+       b = p.getBlue()
+       p.setBlue(b * 180)
 
-.. datafile:: motorcycle.jpg
-   :image:
-   :fromfile: Figures/motorcycle.jpg
-   :hide:
+    .. code-block:: python
 
-.. datafile:: baby.jpg
-   :image:
-   :fromfile: Figures/baby.jpg
-   :hide:
+       IV.
 
-.. datafile:: guy1.jpg
-   :image:
-   :fromfile: Figures/guy1.jpg
-   :hide:
+       p.setBlue(b * 1.8)
 
-.. note::
+.. mchoice:: pictures-mc-reduce-25-percent-q6-v2
+    :practice: T
+    :answer_a: multiply the green value by 25
+    :answer_b: multiply the green value by 0.25
+    :answer_c: multiply the green value by 0.5
+    :answer_d: multiply the green value by 0.75
+    :correct: d
+    :feedback_a: To reduce the green value you must multiply by a value that is less than 1.
+    :feedback_b: This would reduce it by 75%.
+    :feedback_c: This would reduce it by 50%.
+    :feedback_d: This would reduce it by 25%.
 
-   Remember that it can take a bit of time to process all the pixels in a picture!  Check for errors below the code if it is taking a long time, but if you don't see any errors just wait.
+    Which of the following would reduce the green value by 25%?
 
-#.
+.. mchoice:: pictures-mc-q7
+    :practice: T
+    :answer_a: I
+    :answer_b: II
+    :answer_c: III
+    :answer_d: IV
+    :correct: a
+    :feedback_a: Correct. This code block copies from the bottom half of the image to the top half.
+    :feedback_b: Try again. This code block copies from the left half to the right half.
+    :feedback_c: Try again. This code block copies the top left quadrant to the bottom left quadrant.
+    :feedback_d: Try again. This code block copies the top half of the image onto the bottom of the image.
 
-    .. tabbed:: ch11ex1t
+    Which code block would allow you to copy the bottom half of the image onto the top half?
 
-        .. tab:: Question
+    .. code-block:: python
 
-            Fix 4 syntax errors in the code below so that it correctly sets the red in all pixels to 0.
+       I.
 
-            .. activecode:: ch11ex1q
-                :nocodelens:
+       from image import *
+       img = Image("vangogh.jpg")
 
-                from image import
+       halfway = (int) (img.getHeight() / 2)
+       for x in range(img.getWidth()):
+           for y in range(halfway, img.getHeight()):
+               p = img.getPixel(x, y)
+               r = p.getRed()
+               g = p.getGreen()
+               b = p.getBlue()
+               newPixel = Pixel(r, g, b)
+               img.setPixel(x, y - halfway, newPixel)
 
-                # CREATE AN IMAGE FROM A FILE
-                img = Image("gal2.jpg"
+       win = ImageWin(img.getWidth(),img.getHeight())
+       img.draw(win)
 
-                # LOOP THROUGH THE PIXELS
-                pixelList = img.getPixels()
-                for p in pixelList:
 
-                    # SET THE RED TO 0
-                    p.setRed()
+    .. code-block:: python
 
-                    # UPDATE THE IMAGE
-                    img.updatePixel()
+       II.
 
-                # SHOW THE RESULT
-                win = ImageWin(img.getWidth(),img.getHeight())
-                img.draw(win)
+       from image import *
+       img = Image("vangogh.jpg")
 
-        .. tab:: Discussion
+       halfway = (int) (img.getWidth() / 2)
+       for x in range(halfway):
+           for y in range(img.getHeight()):
+               p = img.getPixel(x, y)
+               r = p.getRed()
+               g = p.getGreen()
+               b = p.getBlue()
+               newPixel = Pixel(r, g, b)
+               img.setPixel(halfway + x, y, newPixel)
 
-            .. disqus::
-                :shortname: cslearn4u
-                :identifier: teachercsp_ch11ex1q
+       win = ImageWin(img.getWidth(),img.getHeight())
+       img.draw(win)
 
-#.
 
-    .. tabbed:: ch11ex2t
+    .. code-block:: python
 
-        .. tab:: Question
+       III.
 
-    	    The code below makes the image have a green-blue tint. Change 1 thing in order to make it have a red tint instead.
+       from image import *
+       img = Image("vangogh.jpg")
 
-            .. activecode::  ch11ex2q
-                :nocodelens:
-
-                # USE THE IMAGE LIBRARY
-        	from image import *
-                # PICK THE IMAGE
-        	img = Image("puppy.jpg")
-                # LOOP THROUGH THE PIXELS
-        	pixelList = img.getPixels()
-    	        for p in pixelList:
-                    # SET THE COLOR
-    		    p.setRed(0)
-                    # UPDATE THE PIXEL
-    	            img.updatePixel(p)
+       halfway_x = (int) (img.getWidth() / 2)
+       halfway_y = (int) (img.getHeight() / 2)
+       for x in range(halfway_x):
+           for y in range(halfway_y):
+               p = img.getPixel(x, y)
+               r = p.getRed()
+               g = p.getGreen()
+               b = p.getBlue()
+               newPixel = Pixel(r, g, b)
+               img.setPixel(x, halfway_y + y, newPixel)
 
-                # SHOW THE RESULT
-        	win = ImageWin(img.getWidth(),img.getHeight())
-                img.draw(win)
+       win = ImageWin(img.getWidth(),img.getHeight())
+       img.draw(win)
 
-        .. tab:: Discussion
 
-            .. disqus::
-                :shortname: teachercsp
-                :identifier: teachercsp_ch11ex2q
+    .. code-block:: python
 
-#.
+       IV.
 
-    .. tabbed:: ch11ex3t
+       from image import *
+       img = Image("vangogh.jpg")
 
-        .. tab:: Question
+       halfway = (int) (img.getHeight() / 2)
+       for x in range(img.getWidth()):
+           for y in range(halfway):
+               p = img.getPixel(x, y)
+               r = p.getRed()
+               g = p.getGreen()
+               b = p.getBlue()
+               newPixel = Pixel(r, g, b)
+               img.setPixel(x, halfway + y, newPixel)
 
-           Fix the indention below to correctly set the red to the green, the green to the blue, and the blue to the red.
+       win = ImageWin(img.getWidth(),img.getHeight())
+       img.draw(win)
 
-           .. activecode::  ch11ex3q
-                :nocodelens:
+.. mchoice:: pictures-make-white-q8
+    :practice: T
+    :answer_a: r = 255, g = 0, b = 0
+    :answer_b: r = 0, g = 0, b = 0
+    :answer_c: r = 0, g = 255, b = 0
+    :answer_d: r = 255, g = 255, b = 255
+    :correct: d
+    :feedback_a: This would be red.
+    :feedback_b: This would be black (no light).
+    :feedback_c: This would be green
+    :feedback_d: Correct.  To make white set all values to 255.
 
-                # STEP 1: USE THE IMAGE LIBRARY
-                from image import *
+    Which of the following combinations of red (r), green (g), and blue (b) values makes white?
 
-                # STEP 2: PICK THE IMAGE
-                img = Image("beach.jpg")
+.. mchoice:: pictures-mc-q9
+    :practice: T
+    :answer_a: The image is rotated 90 degree to the right.
+    :answer_b: The image is mirrored around a diagonal line from the top left to the bottom right.
+    :answer_c: The image is mirrored vertically.
+    :answer_d: The image is mirrored around a diagonal line from the top right to the bottom left.
+    :correct: d
+    :feedback_a: We would have to create a new image and set the values in the new image from the old pixel values for this to be true.
+    :feedback_b: Close, try again!
+    :feedback_c: This would be true if the pixels were copied to the same row.
+    :feedback_d: Correct.
 
-                # STEP 3: LOOP THROUGH THE PIXELS
-                pixels = img.getPixels()
-                for p in pixels:
+    What happens when we run the following code?
 
-                # STEP 4: GET THE DATA
-                r = p.getRed()
-                g = p.getGreen()
-                b = p.getBlue()
+    .. code-block:: python
 
-                # STEP 5: MODIFY THE COLOR
-                p.setRed(g)
-                p.setGreen(b)
-                p.setBlue(r)
+       from image import *
+       img = Image("vangogh.jpg")
 
-                # STEP 6: UPDATE THE IMAGE
-                img.updatePixel(p)
+       for x in range(img.getWidth()):
+           for y in range(img.getHeight()):
+               p = img.getPixel(x, y)
+               img.setPixel(img.getWidth() - 1 - y,
+                            img.getHeight() - 1 - x,
+                            p)
 
-                # STEP 7: SHOW THE RESULT
-                win = ImageWin(img.getWidth(),img.getHeight())
-                img.draw(win)
+       win = ImageWin(img.getWidth(),img.getHeight())
+       img.draw(win)
 
-        .. tab:: Discussion
 
-            .. disqus::
-                :shortname: teachercsp
-                :identifier: teachercsp_ch11ex3q
+.. mchoice:: pictures-mc-q10-v2
+    :practice: T
+    :answer_a: setPixel(r, g, b)
+    :answer_b: Pixel(r, g, b)
+    :answer_c: setAll(r, g, b)
+    :answer_d: This cannot be accomplished using a single line of code.
+    :correct: b
+    :feedback_a: There is no setPixel method.
+    :feedback_b: Correct. You can set the red, blue, and green when you create a Pixel.
+    :feedback_c: There is no setAll method.
+    :feedback_d: You can actually set the red, blue, and green at the same time.
 
-#.
-
-    .. tabbed:: ch11ex4t
-
-        .. tab:: Question
-
-    	    Fix the 5 errors in the code, so that the Red pixels get the value of the green, the green get the value of blue, and the blue get the value of the red. (The cat should look purple and gray)
-
-            .. activecode::  ch11ex4q
-                :nocodelens:
-
-                # STEP 1: USE THE IMAGE LIBRARY
-		from image import *
-                # STEP 2: PICK THE IMAGE
-                img = Image("kitten.jpg")
-                # STEP 3: LOOP THROUGH THE PIXELS
-                pixels = img.getPixels()
-                for p in pixel:
-                    # STEP 4: GET THE DATA
-                    r = p.getred()
-                    b = p.getGreen()
-                    g = p.getBlue()
-                    # STEP 5: MODIFY THE COLOR
-                    p.setRed(g)
-                    p.setGreen(b)
-                    p.setBlue(r)
-                    # STEP 6: UPDATE THE IMAGE
-                    img.updatePixel(p)
-                # STEP 7: SHOW THE RESULT
-                win = ImageWin(img.getWidth(),img.getHeight())
-                img.draw(win)
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: teachercsp
-                :identifier: teachercsp_ch11ex4q
-
-#.
-
-    .. tabbed:: ch11ex5t
-
-        .. tab:: Question
-
-           Fill in the missing code on lines 9, 12, and 18 below to set the red to half the original value in all pixels in the picture.
-
-           .. activecode::  ch11ex5q
-                :nocodelens:
-
-                # STEP 1: USE THE IMAGE LIBRARY
-                from image import *
-
-                # STEP 2: PICK THE IMAGE
-                img = Image("beach.jpg")
-
-                # STEP 3: LOOP THROUGH THE PIXELS
-                pixels = img.getPixels();
-                for p
-
-                    # STEP 4: GET THE DATA
-                    r = p.
-
-                    # STEP 5: MODIFY THE COLOR
-                    p.setRed(r * 0.5);
-
-                    # STEP 6: UPDATE THE IMAGE
-                    img.
-
-                # STEP 7: SHOW THE RESULT
-                win = ImageWin(img.getWidth(),img.getHeight())
-                img.draw(win)
-
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: cslearn4u
-                :identifier: teachercsp_ch11ex5q
-
-#.
-
-    .. tabbed:: ch11ex6t
-
-        .. tab:: Question
-
-            Complete the code in order to set the blue value to an eighth of the green value plus an eighth of the red value.
-
-            .. activecode::  ch11ex6q
-                :nocodelens:
-
-                # STEP 1: USE THE IMAGE LIBRARY
-		from image import *
-                # STEP 2: PICK THE IMAGE
-                img = Image("swan.jpg")
-                # STEP 3: LOOP THROUGH THE PIXELS
-                pixels = img.getPixels()
-                for
-                    # STEP 4: GET THE DATA
-                    b = p.get
-                    g = p.get
-		            r = p.get
-                    # STEP 5: MODIFY THE COLOR
-                    p.set
-                    # STEP 6: UPDATE THE IMAGE
-                    img.updatePixel(p)
-                # STEP 7: SHOW THE RESULT
-                win = ImageWin(img.getWidth(),img.getHeight())
-                img.draw(win)
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: teachercsp
-                :identifier: teachercsp_ch11ex6q
-
-#.
-
-    .. tabbed:: ch11ex7t
-
-        .. tab:: Question
-
-           Fix the indention in the code below so that it correctly increases the red in each pixel in the picture by 1.5.
-
-           .. activecode::  ch11ex7q
-                :nocodelens:
-
-                # STEP 1: USE THE IMAGE LIBRARY
-                from image import *
-
-                    # STEP 2: PICK THE IMAGE
-                    img = Image("beach.jpg")
-
-                # STEP 3: LOOP THROUGH THE PIXELS
-                pixels = img.getPixels();
-                for p in pixels:
-
-                    # STEP 4: GET THE DATA
-                    r = p.getRed()
-
-                # STEP 5: MODIFY THE COLOR
-                p.setRed(r * 1.5);
-
-                    # STEP 6: UPDATE THE IMAGE
-                    img.updatePixel(p)
-
-                # STEP 7: SHOW THE RESULT
-                win = ImageWin(img.getWidth(),img.getHeight())
-                img.draw(win)
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: teachercsp
-                :identifier: teachercsp_ch11ex7q
-
-#.
-
-    .. tabbed:: ch11ex8t
-
-        .. tab:: Question
-
-            This code is supposed to make the picture completely black; however, it is taking forever when it should only take a few seconds. Fix the code (without adding anything new) so that it runs in a few seconds.
-
-            .. activecode::  ch11ex8q
-                :nocodelens:
-
-                # STEP 1: USE THE IMAGE LIBRARY
-		        from image import *
-                # STEP 2: PICK THE IMAGE
-                img = Image("motorcycle.jpg")
-
-                # STEP 3: LOOP THROUGH THE PIXELS
-                pixels = img.getPixels()
-                for p in pixels:
-                    # STEP 4: GET THE DATA
-                    r = p.getRed()
-                    b = p.getBlue()
-                    g = p.getGreen()
-                    # STEP 5: MODIFY THE COLOR
-                    p.setRed(0)
-                    p.setGreen(0)
-                    p.setBlue(0)
-                    # STEP 6: UPDATE THE IMAGE
-                    img.updatePixel(p)
-                    # STEP 7: SHOW THE RESULT
-                    win = ImageWin(img.getWidth(),img.getHeight())
-                    img.draw(win)
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: teachercsp
-                :identifier: teachercsp_ch11ex8q
-
-#.
-
-    .. tabbed:: ch11ex9t
-
-        .. tab:: Question
-
-           Fix the code below to correctly set the green and blue values to 0.75 times their current values.
-
-           .. activecode::  ch11ex9q
-                :nocodelens:
-
-                # STEP 1: USE THE IMAGE LIBRARY
-                from image import *
-
-                # STEP 2: PICK THE IMAGE
-                img = Image("beach.jpg")
-
-                # STEP 3: LOOP THROUGH THE PIXELS
-                pixels = img.getPixels();
-                for p in pixels:
-
-                    p.setGreen(g * 0)
-                    p.setBlue(b * 0)
-                    g = p.getGreen()
-                    b = p.getBlue()
-
-                    # STEP 6: UPDATE THE IMAGE
-                    img.updatePixel(p)
-
-                # STEP 7: SHOW THE RESULT
-                win = ImageWin(img.getWidth(),img.getHeight())
-                img.draw(win)
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: teachercsp
-                :identifier: teachercsp_ch11ex9q
-
-#.
-
-    .. tabbed:: ch11ex10t
-
-        .. tab:: Question
-
-    	    The code below sets all the pixels to half their original values with one for loop. Change the code so it uses 2 for loops that utilize the range function (1 for loop should be nested in the other).
-
-            .. activecode::  ch11ex10q
-                :nocodelens:
-
-                # STEP 1: USE THE IMAGE LIBRARY
-		        from image import *
-                # STEP 2: PICK THE IMAGE
-                img = Image("baby.jpg")
-                # STEP 3: LOOP THROUGH THE PIXELS
-                pixels = img.getPixels()
-                for p in pixels:
-                    # STEP 4: GET THE DATA
-                    r = p.getRed()
-                    b = p.getBlue()
-                    g = p.getGreen()
-                    # STEP 5: MODIFY THE COLOR
-                    p.setRed(r/2)
-                    p.setGreen(g/2)
-                    p.setBlue(b/2)
-                    # STEP 6: UPDATE THE IMAGE
-                    img.updatePixel(p)
-                # STEP 7: SHOW THE RESULT
-                win = ImageWin(img.getWidth(),img.getHeight())
-                img.draw(win)
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: teachercsp
-                :identifier: teachercsp_ch11ex10q
-
-#.
-
-    .. tabbed:: ch11ex11t
-
-        .. tab:: Question
-
-           Change the following code to set the red to 0 for all pixels in the left half of the picture.
-
-           .. activecode::  ch11ex11q
-                :nocodelens:
-
-                from image import *
-
-                # CREATE AN IMAGE FROM A FILE
-                img = Image("gal2.jpg")
-
-                # LOOP THROUGH THE PIXELS
-                for x in range(img.getWidth()):
-    	            for y in range(img.getHeight()):
-
-    	                # GET THE DATA
-    	                p = img.getPixel(x, y)
-
-                        # SET THE RED TO 0
-                        p.setRed(0)
-
-                        # UPDATE THE IMAGE
-                        img.updatePixel(p)
-
-                # SHOW THE RESULT
-                win = ImageWin(img.getWidth(),img.getHeight())
-                img.draw(win)
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: teachercsp
-                :identifier: teachercsp_ch11ex11q
-
-#.
-
-    .. tabbed:: ch11ex12t
-
-        .. tab:: Question
-
-        	   The code below makes the whole image have a blue-green tint. Change the code so that it makes an only blue tint in the bottom left corner.
-
-            .. activecode::  ch11ex12q
-                :nocodelens:
-
-		from image import *
-                # CREATE AN IMAGE FROM A FILE
-		img = Image("vangogh.jpg")
-                # LOOP THROUGH THE PIXELS
-        	for x in range(int(img.getWidth())):
-        	    for y in range(int(img.getHeight())):
-                        # GET THE DATA
-        	        p = img.getPixel(x, y)
-                        # SET THE PIXEL
-        		p.setRed(0)
-                        # UPDATE THE PIXEL
-        		img.updatePixel(p)
-                # SHOW THE RESULT
-        	win = ImageWin(img.getWidth(),img.getHeight())
-        	img.draw(win)
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: teachercsp
-                :identifier: teachercsp_ch11ex12q
-
-#.
-
-    .. tabbed:: ch11ex13t
-
-        .. tab:: Question
-
-           Change the code below to set the red value in the pixels in the bottom half of the picture to 0.
-
-           .. activecode::  ch11ex13q
-                :nocodelens:
-
-                from image import *
-
-                # CREATE AN IMAGE FROM A FILE
-                img = Image("gal2.jpg")
-
-                # LOOP THROUGH THE PIXELS
-                for x in range(img.getWidth()):
-    	            for y in range(img.getHeight()):
-
-    	                # GET THE DATA
-    	                p = img.getPixel(x, y)
-
-                        # SET THE RED TO 0
-                        p.setRed(0)
-
-                        # UPDATE THE IMAGE
-                        img.updatePixel(p)
-
-                # SHOW THE RESULT
-                win = ImageWin(img.getWidth(),img.getHeight())
-                img.draw(win)
-
-
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: teachercsp
-                :identifier: teachercsp_ch11ex13q
-
-#.
-
-    .. tabbed:: ch11ex14t
-
-        .. tab:: Question
-
-    	    The code below makes the whole image seem red. Change it, so that only every 5 pixels get changed, so that it will look like a red grid.
-
-            .. activecode::  ch11ex14q
-                :nocodelens:
-
-                from image import *
-                # CREATE AN IMAGE FROM A FILE
-        		img = Image("guy1.jpg")
-                # LOOP THROUGH THE PIXELS
-        		for x in range(int(img.getWidth())):
-        		    for y in range(img.getHeight()):
-                    # GET THE DATA
-        		    p = img.getPixel(x, y)
-                    # SET THE PIXEL
-        		    p.setGreen(0)
-        		    p.setBlue(0)
-                    # UPDATE THE IMAGE
-        		    img.updatePixel(p)
-                # SHOW THE RESULT
-    		    win = ImageWin(img.getWidth(),img.getHeight())
-    		    img.draw(win)
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: teachercsp
-                :identifier: teachercsp_ch11ex14q
-
-#.
-
-    .. tabbed:: ch11ex15t
-
-        .. tab:: Question
-
-           Change the following code into a procedure to keep only the green values in all pixels in a picture.
-
-           .. activecode::  ch11ex15q
-                :nocodelens:
-
-                # STEP 1: USE THE IMAGE LIBRARY
-                from image import *
-
-                # STEP 2: PICK THE IMAGE
-                img = Image("beach.jpg")
-
-                # STEP 3: LOOP THROUGH THE PIXELS
-                pixels = img.getPixels();
-                for p in pixels:
-
-                    # STEP 5: MODIFY THE COLOR
-                    p.setRed(0)
-                    p.setBlue(0)
-
-                    # STEP 6: UPDATE THE IMAGE
-                    img.updatePixel(p)
-
-                # STEP 7: SHOW THE RESULT
-                win = ImageWin(img.getWidth(),img.getHeight())
-                img.draw(win)
-
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: teachercsp
-                :identifier: teachercsp_ch11ex15q
-
-#.
-
-    .. tabbed:: ch11ex16t
-
-        .. tab:: Question
-
-            A grayscale picture is when the red, green, and blue value of a pixel are all equal to the average of the original pixel value. Write the code to turn the left half of an image into gray scale.
-
-            .. activecode::  ch11ex16q
-                :nocodelens:
-
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: teachercsp
-                :identifier: teachercsp_ch11ex16q
-
-#.
-
-    .. tabbed:: ch11ex17t
-
-        .. tab:: Question
-
-           Define a procedure to negate an image.  See Image_Negate_Quarter from Chapter 11 section 7 for how to create a negative of an image.  Pass the image to the procedure.  Do the import, create the image, call the prodecure, and show the result.
-
-           .. activecode::  ch11ex17q
-                :nocodelens:
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: teachercsp
-                :identifier: teachercsp_ch11ex17q
-
-#.
-
-    .. tabbed:: ch11ex18t
-
-        .. tab:: Question
-
-    	   Write code that takes the top half of an image and replicates it in the bottom half.
-
-            .. activecode::  ch11ex18q
-                :nocodelens:
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: teachercsp
-                :identifier: teachercsp_ch11ex18q
-
-#.
-
-    .. tabbed:: ch11ex19t
-
-        .. tab:: Question
-
-           Write a procedure to mirror an image from left to right around a vertical line in the middle of the image.  Pass the image to the procedure.  Do the import, create the image, call the prodecure, and show the result.
-
-           .. activecode::  ch11ex19q
-               :nocodelens:
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: teachercsp
-                :identifier: teachercsp_ch11ex19q
-
-#.
-
-    .. tabbed:: ch11ex20t
-
-        .. tab:: Question
-
-            Write code that flips the image across a horizontal line.
-
-            .. activecode::  ch11ex20q
-                :nocodelens:
-
-        .. tab:: Discussion
-
-            .. disqus::
-                :shortname: teachercsp
-                :identifier: teachercsp_ch11ex20q
+  	What line of code sets the red, green and blue values simultaneously?

@@ -11,20 +11,14 @@
 ..  shortname:: Plan5
 ..  description:: Worked examples plus practice for Plan 5.
 
-.. setup for automatic question numbering.
-
-.. qnum::
-   :start: 1
-   :prefix: p5-
-
 .. _plan_5:
 
 Plan 5: Get info from all tags of a certain type
 #################################################
 
-To get information from the Cottage Inn locations page, we need to figure out which tags we should get from the soup, and what information we should get from the tags. 
+To get information from the Cottage Inn locations page, we need to figure out which tags we should get from the soup, and what information we should get from the tags.
 
-A great way to figure this out is to use the "inspect" function on your browser. 
+A great way to figure this out is to use the "inspect" function on your browser.
 
 .. image:: _static/cottageinn_inspect.gif
     :scale: 90%
@@ -77,24 +71,24 @@ Once you've found the tags you want to get information from, do two things:
 
 How do you do that? Here are some examples:
 
-==================================== === ===========================  
+==================================== === ===========================
 What you see when you inspect            Tag description in the code
-==================================== === ===========================  
+==================================== === ===========================
 ``<p>``                              ->  ``'p'``
 ``<h3>``                             ->  ``'h3'``
 ``<div class="comment">``            ->  ``'div', class_='comment'``
 ``<span style="X5e72;">``            ->  ``'span', style='X5e72;'``
 ``<a class="css4z" href="/orders">`` ->  ``'a', class_='css4z'``
-==================================== === ===========================  
+==================================== === ===========================
 
 2. Determine if you want to get **text** from a tag, or a **link** from a tag
 
-================= === ===========================  
+================= === ========================================
 The info you want     What you put in the code
-================= === ===========================  
+================= === ========================================
 The tag's text    ->  ``text``
-The tag's link    ->  ``get('href')``
-================= === ===========================  
+The tag's link    ->  ``get('href')`` or ``get('href', None)``
+================= === ========================================
 
 
 Plan 5: Exercises
@@ -107,7 +101,7 @@ Plan 5: Exercises
     .. image:: _static/dining_h2_text.png
         :align: center
         :alt: h2 tag on dining page
-    
+
     -   Today's Menu
 
         +   Correct! This text is between the <h2 class="menuItem"> and </h2>
@@ -133,7 +127,7 @@ Plan 5: Exercises
     .. image:: _static/dining_h2_text.png
         :align: center
         :alt: h2 tag on dining page
-    
+
     -   'h2', class_='menuTitle'
 
         +   Correct! This is how you would describe the tag type in our web scraping code.
@@ -157,7 +151,7 @@ Plan 5: Exercises
 
     # Get all tags of a certain type from the soup
     :click-incorrect:tags = soup.find_all(:endclick::click-correct:'h3':endclick::click-incorrect:):endclick:
-   
+
     # Collect info from the tags
     :click-incorrect:collect_info = []:endclick:
     :click-incorrect:for tag in tags::endclick:
@@ -173,7 +167,7 @@ Plan 5: Exercises
    ``# Get all tags of a certain type from the soup``
 
    ``tags = soup.find_all(`` |blank| ``)``
-   
+
    ``# Collect info from the tags``
 
    ``collect_info = []``
@@ -183,17 +177,17 @@ Plan 5: Exercises
        ``# Get info from tag``
 
        ``info = tag.`` |blank|
-      
+
        ``collect_info.append(info)``
 
-   -    :['"]div['"],\s?class_\s?=\s?['"]headline['"]: Correct.  
+   -    :['"]div['"],\s?class_\s?=\s?['"]headline['"]: Correct.
         :['"]div['"], class=['"]headline['"]: Very close--but class should be class_!
-        :div: Good start, but you need more. 
-        :.*: Incorrect. 
+        :div: Good start, but you need more.
+        :.*: Incorrect.
    -    :text: Correct.
         :get('href'): Remember that you are trying to get the text.
         :.text: Incorrect, the . is already there.
-        :.*: Incorrect.   
+        :.*: Incorrect.
 
 
 
@@ -225,9 +219,8 @@ Plan 5: Exercises
         -   No, style is an attribute
 
 
-.. note:: 
-      
+.. note::
+
         .. raw:: html
 
            <a href="example1.html" >Click here to go back to the Cottage Inn example</a>
-
