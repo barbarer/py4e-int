@@ -1,49 +1,41 @@
 Write Code Questions
-------------------------
+---------------------
+#.
+    .. tabbed:: bsoup_writecode1
 
-.. selectquestion:: bsoup_writecode_1_sq
-   :fromid: bsoup_writecode1q, bsoup_writecode1q_mu
-   :toggle:
+        .. tab:: Question
 
+            .. activecode:: bsoup_writecode1q
+                :practice: T
+                :nocodelens:
+                :language: python3
+                :autograde: unittest
 
-<<<<<<< HEAD
-.. selectquestion:: bsoup_writecode_2_sq
-   :fromid: bsoup_writecode2q, bsoup_writecode2q_mu
-   :toggle:
-=======
                 Write a function called ``cur_stud_link`` that takes in a parameter ``url``
                 and uses BeautifulSoup to return the URL that links to Current Students in the Navigation Bar.
                 For example, ``cur_stud_link('https://umich.edu/')`` should return ``"https://umich.edu/current-students/"``.
                 ~~~~
                 from bs4 import BeautifulSoup
                 import requests
->>>>>>> upstream/master
 
+                def cur_stud_link(url):
 
-.. selectquestion:: bsoup_writecode_3_sq
-   :fromid: bsoup_writecode3q, bsoup_writecode3q_mu
-   :toggle:
+                ====
+                from unittest.gui import TestCaseGui
 
+                class myTests(TestCaseGui):
 
-.. selectquestion:: bsoup_writecode_4_sq
-   :fromid: bsoup_writecode4q, bsoup_writecode4q_mu
-   :toggle:
+                    def testOne(self):
+                        self.assertEqual(cur_stud_link('https://umich.edu/'), "https://umich.edu/current-students/", "cur_stud_link('https://umich.edu/')")
 
+                myTests().main()
 
-.. selectquestion:: bsoup_writecode_5_sq
-   :fromid: bsoup_writecode5q, bsoup_writecode5q_mu
-   :toggle:
+        .. tab:: Answer
 
-<<<<<<< HEAD
-.. selectquestion:: bsoup_writecode_6_sq
-  :fromid: bsoup_writecode6q, bsoup_writecode6q_mu
-  :toggle:
-
-=======
             .. activecode:: bsoup_writecode1a
                 :optional:
                 :language: python3
-                :nocodelens:
+                :autograde: unittest
 
                 Write a function called ``cur_stud_link`` that takes in a parameter ``url``
                 and uses BeautifulSoup to return the URL that links to Current Students in the Navigation Bar.
@@ -51,27 +43,26 @@ Write Code Questions
                 ~~~~
                 from bs4 import BeautifulSoup
                 import requests
->>>>>>> upstream/master
 
-.. selectquestion:: bsoup_writecode_7_sq
-  :fromid: bsoup_writecode7q, bsoup_writecode7q_mu
-  :toggle:
+                def cur_stud_link(url):
+                    r = requests.get(url)
+                    soup = BeautifulSoup(r.text, 'html.parser')
 
+                    # inspect Current Students to get the details
+                    text = soup.find('a', text = "Current Students")
+                    info = text.get('href')
+                    all_info = "https://umich.edu" + info
+                    return all_info
 
-.. selectquestion:: bsoup_writecode_8_sq
-  :fromid: bsoup_writecode8q, bsoup_writecode8q_mu
-  :toggle:
-  
-.. selectquestion:: bsoup_writecode_9_sq
-  :fromid: bsoup_writecode9q, bsoup_writecode9q_mu
-  :toggle:
+                print(cur_stud_link('https://umich.edu/'))
+              
+#.
+    .. activecode:: bsoup_writecode2q
+        :practice: T
+        :nocodelens:
+        :language: python3
+        :autograde: unittest
 
-
-<<<<<<< HEAD
-.. selectquestion:: bsoup_writecode_10_sq
-  :fromid: bsoup_writecode10q, bsoup_writecode10q_mu
-  :toggle:  
-=======
         Write a function called ``headings`` that takes in a parameter ``url`` and uses BeautifulSoup to return a list of all heading names (not subheadings) from the
         Contents box (History, Emergence of MOOC providers, Student experience and pedagogy, etc.). For example, ``headings('https://en.wikipedia.org/wiki/Massive_open_online_course')``
         should return ``['History', 'Emergence of MOOC providers', 'Student experience and pedagogy', 'Information architecture', 'Industry', 'Benefits', 'Challenges and criticisms', 'See also', 'References', 'Sources', 'Further reading']``.
@@ -101,6 +92,7 @@ Write Code Questions
                 :practice: T
                 :nocodelens:
                 :language: python3
+                :autograde: unittest
 
                 Write a function called ``coursera_dict`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the Coursera enrollees table,
                 and returns a dictionary with Country as keys and Percentage as values. For example, ``coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course')``
@@ -126,7 +118,7 @@ Write Code Questions
             .. activecode:: bsoup_writecode3a
                 :optional:
                 :language: python3
-                :nocodelens:
+                :autograde: unittest
 
                 Write a function called ``coursera_dict`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the Coursera enrollees table,
                 and returns a dictionary with Country as keys and Percentage as values. For example, ``coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course')``
@@ -161,6 +153,7 @@ Write Code Questions
         :practice: T
         :nocodelens:
         :language: python3
+        :autograde: unittest
 
         Write a function called ``types`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the Summary of Python 3's built-in types table,
         and returns a list of the types. For example, ``types('https://en.wikipedia.org/wiki/Python_(programming_language)')``
@@ -191,6 +184,7 @@ Write Code Questions
                 :practice: T
                 :nocodelens:
                 :language: python3
+                :autograde: unittest
 
                 Write a function called ``restaurants_list`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the 12 essential Ann Arbor restaurants' names,
                 and returns a list of the 12 best Ann Arbor restaurants in 2019. For example, ``restaurants_list('https://detroit.eater.com/maps/best-ann-arbor-restaurants')``
@@ -216,7 +210,7 @@ Write Code Questions
             .. activecode:: bsoup_writecode5a
                 :optional:
                 :language: python3
-                :nocodelens:
+                :autograde: unittest
 
                 Write a function called ``restaurants_list`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the 12 essential Ann Arbor restaurants' names,
                 and returns a list of the 12 best Ann Arbor restaurants in 2019. For example, ``restaurants_list('https://detroit.eater.com/maps/best-ann-arbor-restaurants')``
@@ -246,6 +240,7 @@ Write Code Questions
         :practice: T
         :nocodelens:
         :language: python3
+        :autograde: unittest
 
         Write a function called ``bsi_list`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the section names and subsection names under Programs Bachelor of Science in Information,
         and returns a list of the section names and subsection names under Programs Bachelor of Science in Information. For example, ``bsi_list('https://www.si.umich.edu/programs/bachelor-science-information')``
@@ -277,6 +272,7 @@ Write Code Questions
                 :practice: T
                 :nocodelens:
                 :language: python3
+                :autograde: unittest
 
                 Write a function called ``bsi_dict`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape and create a list of the section names and subsection names under Programs Bachelor of Science in Information,
                 and creates another list that contains the full urls of the named sections and subsections. Then, return a dictionary that contains the names as keys and their full urls as values. For example, ``bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information')``
@@ -303,7 +299,7 @@ Write Code Questions
             .. activecode:: bsoup_writecode7a
                 :optional:
                 :language: python3
-                :nocodelens:
+                :autograde: unittest
 
                 Write a function called ``bsi_dict`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape and create a list of the section names and subsection names under Programs Bachelor of Science in Information,
                 and creates another list that contains the full urls of the named sections and subsections. Then, return a dictionary that contains the names as keys and their full urls as values. For example, ``bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information')``
@@ -341,6 +337,7 @@ Write Code Questions
         :practice: T
         :nocodelens:
         :language: python3
+        :autograde: unittest
 
         Write a function called ``envelope_address`` that takes in a parameter ``url`` and uses BeautifulSoup to web scrape and return the address text in the footer with the newlines stripped. For example, ``envelope_address('https://www.si.umich.edu/programs/bachelor-science-information')``
         should return first line: ``'School of Information'``, second line: ``'University of Michigan'``, third line: ``'105 S State St.'``, and last line: ``'Ann Arbor, MI 48109-1285'``.
@@ -373,6 +370,7 @@ Write Code Questions
                 :practice: T
                 :nocodelens:
                 :language: python3
+                :autograde: unittest
 
                 Write a function called ``name_email`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the names and email addresses,
                 and returns a dictionary with the names as keys and the email addresses as values. Use the string replace method while web scraping. For example, ``name_email('https://www.si.umich.edu/people/directory/faculty/e')``
@@ -398,7 +396,7 @@ Write Code Questions
             .. activecode:: bsoup_writecode9a
                 :optional:
                 :language: python3
-                :nocodelens:
+                :autograde: unittest
 
                 Write a function called ``name_email`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the names and email addresses,
                 and returns a dictionary with the names as keys and the email addresses as values. Use the string replace method while web scraping. For example, ``name_email('https://www.si.umich.edu/people/directory/faculty/e')``
@@ -439,6 +437,7 @@ Write Code Questions
         :practice: T
         :nocodelens:
         :language: python3
+        :autograde: unittest
 
         Write a function called ``program_email`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the 5 program names under Email Addresses
         and Admissions (BSI program, MSI program, etc.) and their associated email addresses, and returns a dictionary with the program names as keys and the email addresses as values.
@@ -458,4 +457,3 @@ Write Code Questions
                 self.assertEqual(program_email('https://www.si.umich.edu/about-umsi/contact-us'), {'BSI program': 'umsi.undergrad@umich.edu', 'MSI program': 'umsi.admissions@umich.edu', 'MHI program': 'hi.admissions@umich.edu', 'MADS program': 'umsi.mads@umich.edu', 'Doctoral program': 'umsi.phd.admissions@umich.edu'}, "program_email('https://www.si.umich.edu/about-umsi/contact-us')")
 
         myTests().main()
->>>>>>> upstream/master
