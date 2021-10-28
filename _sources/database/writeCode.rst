@@ -2,7 +2,7 @@ Write Code Questions
 -----------------------
 #.
 
-   .. activecode:: db_select_bike_number__dur_where_bike_ac1
+   .. activecode:: db_writecode_bike1
       :language: sql
       :autograde: unittest
       :dburl: https://runestone.academy/runestone/books/published/overview/_static/bikeshare.db
@@ -26,7 +26,7 @@ Write Code Questions
 
 #.
 
-   .. activecode:: db_select_bike_number_dur_where_dur_ac1
+   .. activecode:: db_writecode_bike2
       :language: sql
       :autograde: unittest
       :dburl: https://runestone.academy/runestone/books/published/overview/_static/bikeshare.db
@@ -49,13 +49,13 @@ Write Code Questions
 
 #.
 
-   .. activecode:: db_select_start_station_limit_5_ac1
+   .. activecode:: db_writecode_bike3
       :language: sql
       :autograde: unittest
       :dburl: https://runestone.academy/runestone/books/published/overview/_static/bikeshare.db
 
       Given a database of bike share information write a SELECT statement below that
-      retrieves the ``bike_number``, ``duration``, and ``start_date`` for all of
+      retrieves the ``bike_number``, ``duration``, and ``start_date`` from table ``trip_data`` for all of
       the rentals from ``start_station`` 31105 and limit the results to 5.
       ~~~~
 
@@ -63,23 +63,23 @@ Write Code Questions
       assert 0,0 == W01066
       assert 0,1 == 392
       assert 0,2 == 2011-11-29 07:25:16.000000
-      assert 2,0 == W00462
-      assert 2,1 == 430
-      assert 4,0 == W01066
-      assert 4,1 == 1210
-      assert 5,0 == W00208
-      assert 5,1 == 422
+      assert 2,0 == W01102
+      assert 2,1 == 1063
+      assert 3,0 == W01066
+      assert 3,1 == 1210
+      assert 4,0 == W00208
+      assert 4,1 == 422
 
 #.
 
-   .. activecode:: db_select_start_station_order_by_bike_num_ac1
+   .. activecode:: db_writecode_bike4
       :language: sql
       :autograde: unittest
       :dburl: https://runestone.academy/runestone/books/published/overview/_static/bikeshare.db
 
       Given a database of bike share information write a SELECT statement below that
-      retrieves the ``bike_number`` and ``member_type``, for all of
-      the rentals from ``end_station`` 31200 and limit the results to 5.
+      retrieves the ``bike_number`` and ``member_type`` for all of
+      the rentals from table ``trip_data`` where ``end_station`` 31200 and limit the results to 5.
       ~~~~
 
       ====
@@ -94,7 +94,7 @@ Write Code Questions
 
 #.
 
-   .. activecode:: db_select_bike_number_dur_where_dur_orderby_ac1
+   .. activecode:: db_writecode_bike5
       :language: sql
       :autograde: unittest
       :dburl: https://runestone.academy/runestone/books/published/overview/_static/bikeshare.db
@@ -117,13 +117,13 @@ Write Code Questions
 
 #.
 
-   .. activecode:: db_select_bike_join_all_cols
+   .. activecode:: db_writecode_bike6
       :language: sql
       :autograde: unittest
       :dburl: https://runestone.academy/runestone/books/published/overview/_static/bikeshare.db
 
       Given a database of bike share information write a SELECT statement to
-      retrieve all the columns from tables ``trip_data`` and ``bikeshare_stations``
+      retrieve all the rows from tables ``trip_data`` and ``bikeshare_stations``
       where the ``start_station`` in ``trip_data`` is the same as the ``station_id`` in ``bikeshare_stations``.
       Limit the results to 5 rows.
       ~~~~
@@ -141,7 +141,7 @@ Write Code Questions
 
 #.
 
-   .. activecode:: db_select_bike_join_three_cols
+   .. activecode:: db_writecode_bike7
       :language: sql
       :autograde: unittest
       :dburl: https://runestone.academy/runestone/books/published/overview/_static/bikeshare.db
@@ -163,7 +163,7 @@ Write Code Questions
 
 #.
 
-   .. activecode:: db_select_bike_join_four_cols
+   .. activecode:: db_writecode_bike8
       :language: sql
       :autograde: unittest
       :dburl: https://runestone.academy/runestone/books/published/overview/_static/bikeshare.db
@@ -186,7 +186,7 @@ Write Code Questions
 
 #.
 
-   .. activecode:: db_select_bike_join_four_cols_where_station
+   .. activecode:: db_writecode_bike9
       :language: sql
       :autograde: unittest
       :dburl: https://runestone.academy/runestone/books/published/overview/_static/bikeshare.db
@@ -207,7 +207,7 @@ Write Code Questions
 
 #.
 
-   .. activecode:: db_select_bike_join_five_cols_where_member
+   .. activecode:: db_writecode_bike10
       :language: sql
       :autograde: unittest
       :dburl: https://runestone.academy/runestone/books/published/overview/_static/bikeshare.db
