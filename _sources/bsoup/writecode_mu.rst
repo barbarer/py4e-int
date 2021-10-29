@@ -15,7 +15,7 @@ Write Code Questions
 	from bs4 import BeautifulSoup
 	=====
 	def cur_stud_link(url):
-	====
+	=====
 	  r = requests.get(url)
 	=====
 	  soup = BeautifulSoup(r.text, 'html.parser')
@@ -46,10 +46,10 @@ Write Code Questions
 	from bs4 import BeautifulSoup
 	=====
 	def headings(url):
-	====
+	=====
 	  a_tags = []
 	  heading_list = []
-	====
+	=====
 		r = requests.get(url)
 	=====
 		soup = BeautifulSoup(r.text, 'html.parser')
@@ -88,7 +88,7 @@ Write Code Questions
 		import requests
 	=====
 	def coursera_dict(url):
-	====
+	=====
 	r = requests.get(url)
 	=====
 	soup = BeautifulSoup(r.text, 'html.parser')
@@ -129,9 +129,9 @@ Write Code Questions
 	from bs4 import BeautifulSoup
 	=====
 	def types(url):
-	====
+	=====
 	types = []
-	====
+	=====
 	r = requests.get(url)
 	=====
 	soup = BeautifulSoup(r.text, 'html.parser')
@@ -169,7 +169,7 @@ Write Code Questions
 		import requests
 	=====
 	def restaurants_list(url):
-	====
+	=====
 	r = requests.get(url)
 	=====
 	soup = BeautifulSoup(r.text, 'html.parser')
@@ -202,9 +202,9 @@ Write Code Questions
 	from bs4 import BeautifulSoup
 	=====
 	def bsi_list(url):
-	====
+	=====
 	  list1 = []
-	====
+	=====
 	  r = requests.get(url)
 	=====
 	  soup = BeautifulSoup(r.text, 'html.parser')
@@ -235,7 +235,7 @@ Write Code Questions
 	import re
 	=====
 	def bsi_dict(url):
-	====
+	=====
 	  r = requests.get(url)
 	  soup = BeautifulSoup(r.text, 'html.parser')
 	=====
@@ -281,7 +281,7 @@ Write Code Questions
 	from bs4 import BeautifulSoup
 	=====
 	def envelope_address(url):
-	====
+	=====
 	  r = requests.get(url)
 	=====
 	  soup = BeautifulSoup(r.text, 'html.parser')
@@ -312,7 +312,7 @@ Write Code Questions
 	import re #distractor
 	=====
 	def name_email(url):
-	====
+	=====
 	  r = requests.get(url)
 	  soup = BeautifulSoup(r.text, 'html.parser')
 	=====
@@ -361,9 +361,9 @@ Write Code Questions
 	from bs4 import BeautifulSoup
 	=====
 	def program_email(url):
-	====
+	=====
 	  program_email_dict = {}
-	====
+	=====
 	  r = requests.get(url)
 	=====
 	  soup = BeautifulSoup(r.text, 'html.parser')
