@@ -8,9 +8,9 @@ Inheritance
    PillarsOfOop.rst
    IntroToInheritance.rst
    Extending.rst
-   ReuseThroughComposition.rst
+   ReuseThroughAssociation.rst
    ClassDiagrams.rst
-   CompositionVsInheritance.rst
+   AssociationVsInheritance.rst
    CaseStudy.rst
    UnitTests.rst
    Exercises.rst

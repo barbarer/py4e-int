@@ -6,8 +6,8 @@ Functions and Loops Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``nums_x_to_y`` that takes in two integer parameter, ``x`` and ``y`` and uses a for loop to create and 
-    return a list with numbers ``x`` to ``y``. Note: ignore cases for then ``y`` is not larger than ``x``. For example, ``nums_x_to_y(1,10)`` 
+    Create a function called ``nums_x_to_y`` that takes in two integer parameter, ``x`` and ``y`` and uses a for loop to create and
+    return a list with numbers ``x`` to ``y``. Note: ignore cases when ``y`` is not larger than ``x``. For example, ``nums_x_to_y(1,10)``
     would return ``[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]``.
     -----
     def nums_x_to_y(x,y):
@@ -16,11 +16,11 @@ Functions and Loops Mixed-Up Code Questions
     =====
         x_to_y_list = []
     =====
-        for num in range(x,y+1):
+        for num in range(x, y + 1):
     =====
         for num in range(y): #paired
     =====
-        for num in range(x,y): #paired
+        for num in range(x, y): #paired
     =====
             x_to_y_list.append(num)
     =====
@@ -30,8 +30,8 @@ Functions and Loops Mixed-Up Code Questions
     :practice: T
     :autograde: unittest
 
-    Write a function called ``nums_x_to_y`` that takes in two integer parameter, ``x`` and ``y`` and uses a for loop to create and 
-    return a list with numbers ``x`` to ``y``. Note: ignore cases for then ``y`` is not larger than ``x``. For example, ``nums_x_to_y(1,10)`` 
+    Write a function called ``nums_x_to_y`` that takes in two integer parameter, ``x`` and ``y`` and uses a for loop to create and
+    return a list with numbers ``x`` to ``y``. Note: ignore cases when ``y`` is not larger than ``x``. For example, ``nums_x_to_y(1,10)``
     would return ``[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]``.
     ~~~~
     def nums_x_to_y():
@@ -53,8 +53,8 @@ Functions and Loops Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function ``count_by_x_to_y`` that takes in two integer parameter, ``x`` and ``y`` and uses a for loop to create and return 
-    a list with numbers ``x`` to ``y``. Note: ignore cases for then ``y`` is not larger than ``x``. Use a for loop to create and return a 
+    Create a function ``count_by_x_to_y`` that takes in two integer parameter, ``x`` and ``y`` and uses a for loop to create and return
+    a list with numbers ``x`` to ``y``. Note: ignore cases when ``y`` is not larger than ``x``. Use a for loop to create and return a
     list with numbers up to ``y`` by skip counting by ``x``. For example, ``count_by_x_to_y(5,20)`` should return ``[0, 5, 10, 15, 20]``.
     -----
     def count_by_x_to_y(x,y):
@@ -63,7 +63,7 @@ Functions and Loops Mixed-Up Code Questions
     =====
         x_to_y_lst = []
     =====
-        for num in range (0, y+1, x):
+        for num in range (0, y + 1, x):
     =====
         for num in range (0, y, x+1): #paired
     =====
@@ -78,8 +78,8 @@ Functions and Loops Mixed-Up Code Questions
     :practice: T
     :autograde: unittest
 
-    Write a function ``count_by_x_to_y`` that takes in two integer parameter, ``x`` and ``y`` and uses a for loop to create and return 
-    a list with numbers ``x`` to ``y``. Note: ignore cases for then ``y`` is not larger than ``x``. Use a for loop to create and return a 
+    Write a function ``count_by_x_to_y`` that takes in two integer parameter, ``x`` and ``y`` and uses a for loop to create and return
+    a list with numbers ``x`` to ``y``. Note: ignore cases when ``y`` is not larger than ``x``. Use a for loop to create and return a
     list with numbers up to ``y`` by skip counting by ``x``. For example, ``count_by_x_to_y(5,20)`` should return ``[0, 5, 10, 15, 20]``.
     ~~~~
     def count_by_x_to_y():
@@ -104,7 +104,7 @@ Functions and Loops Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``countdown`` that takes in one integer parameter ``seconds`` and creates a list of numbers that counts down from 
+    Create a function called ``countdown`` that takes in one integer parameter ``seconds`` and creates a list of numbers that counts down from
     seconds to 1, and then returns that list. Note: ``seconds`` must be greater than or equal to 1. For example, ``countdown(3)`` would return ``[3, 2, 1]``.
     -----
     def countdown(seconds):
@@ -126,7 +126,7 @@ Functions and Loops Mixed-Up Code Questions
     :practice: T
     :autograde: unittest
 
-    Write a function called ``countdown`` that takes in one integer parameter ``seconds`` and creates a list of numbers that counts down from 
+    Write a function called ``countdown`` that takes in one integer parameter ``seconds`` and creates a list of numbers that counts down from
     seconds to 1, and then returns that list. Note: ``seconds`` must be greater than or equal to 1. For example, ``countdown(3)`` would return ``[3, 2, 1]``.
     ~~~~
     # write code here
@@ -148,8 +148,8 @@ Functions and Loops Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function ``add_odds_or_floor_division`` that takes in a parameter ``num_list`` and loops through the ``num_list``. 
-    If the number in ``num_list`` is odd, it gets added to ``result``. Otherwise, it gets divided from the ``result``, having the ``result`` be the floor value. 
+    Create a function ``add_odds_or_floor_division`` that takes in a parameter ``num_list`` and loops through the ``num_list``.
+    If the number in ``num_list`` is odd, it gets added to ``result``. Otherwise, it gets divided from the ``result``, having the ``result`` be the floor value.
     Then, return ``result``. For example, ``add_odds_or_floor_division([-3, -5, -2, -9, 7.5, 10001, -5.3])`` would return -1887.0.
     -----
     def add_odds_or_floor_division(num_list):
@@ -179,8 +179,8 @@ Functions and Loops Mixed-Up Code Questions
     :practice: T
     :autograde: unittest
 
-    Write a function ``add_odds_or_floor_division`` that takes in a parameter ``num_list`` and loops through the ``num_list``. 
-    If the number in ``num_list`` is odd, it gets added to ``result``. Otherwise, it gets divided from the ``result``, having the ``result`` be the floor value. 
+    Write a function ``add_odds_or_floor_division`` that takes in a parameter ``num_list`` and loops through the ``num_list``.
+    If the number in ``num_list`` is odd, it gets added to ``result``. Otherwise, it gets divided from the ``result``, having the ``result`` be the floor value.
     Then, return ``result``. For example, ``add_odds_or_floor_division([-3, -5, -2, -9, 7.5, 10001, -5.3])`` would return -1887.0.
     ~~~~
     # write code here
@@ -202,7 +202,7 @@ Functions and Loops Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function ``strings_chars_less_than_len`` that takes in a ``strings_list`` 
+    Create a function ``strings_chars_less_than_len`` that takes in a ``strings_list``
     and returns a sorted new list with strings that are shorter in length than the original list.
     For example, ``strings_chars_less_than_len(['hello', 'bye', 'me', 'mississippi', 'miss'])`` would return ['bye', 'me', 'miss'].
     -----
@@ -235,7 +235,7 @@ Functions and Loops Mixed-Up Code Questions
     :practice: T
     :autograde: unittest
 
-    Create a function ``strings_chars_less_than_len`` that takes in a ``strings_list`` 
+    Create a function ``strings_chars_less_than_len`` that takes in a ``strings_list``
     and returns a sorted new list with strings that are shorter in length than the original list.
     For example, ``strings_chars_less_than_len(['hello', 'bye', 'me', 'mississippi', 'miss'])`` would return ['bye', 'me', 'miss'].
     ~~~~
@@ -248,6 +248,113 @@ Functions and Loops Mixed-Up Code Questions
         def testOne(self):
             self.assertEqual(strings_chars_less_than_len(['hello', 'bye', 'me', 'mississippi', 'miss']),['bye', 'me', 'miss'],"strings_chars_less_than_len(['hello', 'bye', 'me', 'mississippi', 'miss'])")
             self.assertEqual(strings_chars_less_than_len(['hi', 'bye', 'Run', 'When', 'Win', 'compare', 'python']),['Run', 'When', 'Win', 'bye', 'hi', 'python'],"strings_chars_less_than_len(['hi', 'bye', 'Run', 'When', 'Win', 'compare', 'python'])")
+
+
+    myTests().main()
+
+
+.. parsonsprob:: Functions_Loops_MixedUpCode_6
+    :numbered: left
+    :practice: T
+    :adaptive:
+
+    Create a function ``print_lists(nums1, nums2)`` that takes two lists of numbers with the same length, ``nums1`` and ``nums2``,
+    and returns a list of strings in the form: "Num1: num1, Num2: num2" for each pair of items in the two lists.
+    For example, ``print_lists([3, 2], [8, 4])`` would return ``["Num1: 3, Num2: 8", "Num1: 2, Num2: 4"]``.
+    -----
+    def print_lists(nums1, nums2):
+    =====
+        out_list = []
+    =====
+        for i in range(len(nums1)):
+    =====
+        for i in range(nums1): #paired
+    =====
+        for val1 in nums1:
+            for val2 in nums2: #paired
+    =====
+            val1 = nums1[i]
+            val2 = nums2[i]
+    =====
+            out = "Num1: " + str(val1) + ", Num2: " + str(val2)
+    =====
+            out = "Num1: " + val1 + ", Num2: " + val2 #paired
+    =====
+            out_list.append(out)
+    =====
+        return out_list
+
+.. activecode:: Functions_Loops_MixedUpCode_6_ac
+    :practice: T
+    :autograde: unittest
+
+    Write a function ``print_lists(nums1, nums2)`` that takes two lists of numbers with the same length, ``nums1`` and ``nums2``,
+    and returns a list of strings in the form: "Num1: num1, Num2: num2" for each pair of items in the two lists.
+    For example, ``print_lists([3, 2], [8, 4])`` would return ``["Num1: 3, Num2: 8", "Num1: 2, Num2: 4"]``.
+    ~~~~
+    # write code here
+
+    ====
+    from unittest.gui import TestCaseGui
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(print_lists([3, 2], [8, 4]),["Num1: 3, Num2: 8", "Num1: 2, Num2: 4"],"print_lists([3, 2], [8, 4])")
+            self.assertEqual(print_lists([1], [2]),["Num1: 1, Num2: 2"],"print_lists([1], [2])")
+            self.assertEqual(print_lists([3, 2, 1], [9, 8, 7]),["Num1: 3, Num2: 9", "Num1: 2, Num2: 8", "Num1: 1, Num2: 7"],"print_lists([3, 2, 1], [9, 8, 7])")
+
+
+    myTests().main()
+
+.. parsonsprob:: Functions_Loops_MixedUpCode_7
+    :numbered: left
+    :practice: T
+    :adaptive:
+
+    Create a function ``sum_lists(nums1, nums2)`` that takes two lists of numbers with the same length, ``nums1`` and ``nums2``,
+    and returns a list of the totals of the two numbers for each pair of items in the two lists.
+    For example, ``sum_lists([3, 2], [8, 4])`` would return ``[11, 6]``.
+    -----
+    def sum_lists(nums1, nums2):
+    =====
+        out_list = []
+    =====
+        for i in range(len(nums1)):
+    =====
+        for i in range(nums1): #paired
+    =====
+        for val1 in nums1:
+            for val2 in nums2: #paired
+    =====
+            val1 = nums1[i]
+            val2 = nums2[i]
+    =====
+            total = val1 + val2
+    =====
+            out_list.append(total)
+    =====
+            out_list += total #paired
+    =====
+        return out_list
+
+.. activecode:: Functions_Loops_MixedUpCode_7_ac
+    :practice: T
+    :autograde: unittest
+
+    Write a function ``sum_lists(nums1, nums2)`` that takes two lists of numbers with the same length, ``nums1`` and ``nums2``,
+    and returns a list of the totals of the two numbers for each pair of items in the two lists.
+    For example, ``sum_lists([3, 2], [8, 4])`` would return ``[11, 6]``.
+    ~~~~
+    # write code here
+
+    ====
+    from unittest.gui import TestCaseGui
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(sum_lists([3, 2], [8, 4]),[11, 6],"sum_lists([3, 2]")
+            self.assertEqual(sum_lists([1], [2]),[3],"sum_lists([1], [2])")
+            self.assertEqual(sum_lists([3, 2, 1], [9, 8, 7]),[12, 10, 8],"sum_lists([3, 2, 1], [9, 8, 7])")
 
 
     myTests().main()

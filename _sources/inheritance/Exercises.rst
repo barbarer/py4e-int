@@ -14,7 +14,7 @@ Multiple Choice Questions
    :feedback_c: Try again!
    :feedback_d: Correct! Since Employee inherited from Person, the food method works for the Employee class as well.
    :feedback_e: Try again!
-   
+
    Given the below code, what would be printed (ignore newlines and spacing between sentences)?
 
    .. code-block:: python
@@ -49,7 +49,7 @@ Multiple Choice Questions
    :feedback_b: Correct! Since Employee inherited from Person, the methods work and food work for Employee as well.
    :feedback_c: Try again!
    :feedback_d: Try again!
-   
+
    Given the below code, what would be printed (ignore newlines and spacing between sentences)?
 
    .. code-block:: python
@@ -80,10 +80,10 @@ Multiple Choice Questions
    :answer_d: A person can work. A person can work. I can work. A person eats food. A person eats food. I can eat.
    :correct: d
    :feedback_a: Try again! There are 2 sentences missing: "A person can work." and "A person eats food.".
-   :feedback_b: Try again! Using super().method in the child class Employee method inherits the method (print statements, in this case) from the parent class Person. 
+   :feedback_b: Try again! Using super().method in the child class Employee method inherits the method (print statements, in this case) from the parent class Person.
    :feedback_c: Try again! The code compiles.
-   :feedback_d: Correct! Using super() reduces code duplication, and the child class method can duplicate the functionality of the parent class method. 
-   
+   :feedback_d: Correct! Using super() reduces code duplication, and the child class method can duplicate the functionality of the parent class method.
+
    Given the below code, what would be printed (ignore newlines and spacing between sentences)?
 
    .. code-block:: python
@@ -116,7 +116,7 @@ Multiple Choice Questions
    :practice: T
    :answer_a: Keyboard inherits from Computer.
    :answer_b: Student inherits from Person.
-   :answer_c: Encyclopedia inherits from Book. 
+   :answer_c: Encyclopedia inherits from Book.
    :answer_d: Person inherits House.
    :correct: b, c
    :feedback_a: Try again! Keyboard isn't a type of Computer, so inheritance can't be used.
@@ -137,7 +137,7 @@ Multiple Choice Questions
    :feedback_b: Try again!
    :feedback_c: Try again!
 
-   Can a class only inherit from another class if it is a type of the class? 
+   Can a class only inherit from another class if it is a type of the class?
 
 
 .. mchoice:: Exercises_inheritance_mc6
@@ -157,19 +157,19 @@ Multiple Choice Questions
    What phrases represent inheritance?
 
 
-.. mchoice:: Exercises_inheritance_mc7
+.. mchoice:: Exercises_inheritance_mc7_v2
    :practice: T
-   :answer_a: class Parent(Child)
-   :answer_b: class Child(Parent)
-   :answer_c: super()
-   :answer_d: __init__
+   :answer_a: parent().method
+   :answer_b: parent.method
+   :answer_c: super().method
+   :answer_d: super.method
    :correct: c
-   :feedback_a: Try again!
-   :feedback_b: Try again!
-   :feedback_c: Correct! Use super() to call parent class methods or constructors.
-   :feedback_d: Try again!
+   :feedback_a: Do not use parent.
+   :feedback_b: Do not use parent. Do use ().
+   :feedback_c: Correct! Use super().method to call parent class methods.
+   :feedback_d: You need the ()
 
-   How does the child class or subclass call methods and constructors from the parent class or superclass?
+   How do you call a method in a parent class?
 
 
 .. mchoice:: Exercises_inheritance_mc8
@@ -200,7 +200,7 @@ Multiple Choice Questions
    :feedback_b: Try again!
    :feedback_c: Try again! The code compiles even with the pass statements.
    :feedback_d: Try again! Printing isinstance() will print either True or False if it compiles.
-   
+
    What will be printed?
 
    .. code-block:: python
@@ -224,8 +224,7 @@ Multiple Choice Questions
    :correct: c
    :feedback_a: Try again! This statement about inheritance is correct.
    :feedback_b: Try again! This statement about inheritance is correct.
-   :feedback_c: Correct! This statement about inheritance is incorrect. Private members of a class can't be inherited. 
+   :feedback_c: Correct! This statement about inheritance is incorrect. Private members of a class can't be inherited.
    :feedback_d: Try again! This statement about inheritance is correct.
 
    Which statement about inheritance is incorrect?
-

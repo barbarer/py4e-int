@@ -43,9 +43,9 @@ Mixed-Up Code Questions
 
 
     ====
-    from unittest.gui import TestCaseGui
+    import unittest
 
-    class myTests(TestCaseGui):
+    class myTests(unittest.TestCase):
 
         def testOne(self):
             list1 = []
@@ -99,9 +99,9 @@ Mixed-Up Code Questions
 
 
     ====
-    from unittest.gui import TestCaseGui
+    import unittest
 
-    class myTests(TestCaseGui):
+    class myTests(unittest.TestCase):
 
         def testOne(self):
             self.assertEqual(shapiro_link('https://en.wikipedia.org/wiki/University_of_Michigan'),"https://en.wikipedia.org/wiki/Shapiro_Undergraduate_Library","shapiro_link('https://en.wikipedia.org/wiki/University_of_Michigan')")
@@ -160,9 +160,9 @@ Mixed-Up Code Questions
 
 
     ====
-    from unittest.gui import TestCaseGui
+    import unittest
 
-    class myTests(TestCaseGui):
+    class myTests(unittest.TestCase):
 
         def testOne(self):
             lst = []
@@ -234,10 +234,11 @@ Mixed-Up Code Questions
     ~~~~
 
 
-    ====
-    from unittest.gui import TestCaseGui
 
-    class myTests(TestCaseGui):
+    ====
+    import unittest
+
+    class myTests(unittest.TestCase):
 
         def testOne(self):
             endings = ['106', '206', '330']
@@ -297,9 +298,9 @@ Mixed-Up Code Questions
 
 
     ====
-    from unittest.gui import TestCaseGui
+    import unittest
 
-    class myTests(TestCaseGui):
+    class myTests(unittest.TestCase):
 
         def testOne(self):
             lst = []
@@ -363,8 +364,9 @@ Mixed-Up Code Questions
     ~~~~
 
     ====
-    from unittest.gui import TestCaseGui
-    class myTests(TestCaseGui):
+    import unittest
+
+    class myTests(unittest.TestCase):
 
         def testOne(self):
             list1 = ['https://www.nytimes.com/', 'https://www.washingtonpost.com/']
@@ -423,8 +425,9 @@ Mixed-Up Code Questions
     ~~~~
 
     ====
-    from unittest.gui import TestCaseGui
-    class myTests(TestCaseGui):
+    import unittest
+
+    class myTests(unittest.TestCase):
 
         def testOne(self):
             lst = ['https://www.nytimes.com/', 'https://canvas.it.umich.edu/']
@@ -494,8 +497,9 @@ Mixed-Up Code Questions
     ~~~~
 
     ====
-    from unittest.gui import TestCaseGui
-    class myTests(TestCaseGui):
+    import unittest
+
+    class myTests(unittest.TestCase):
 
         def testOne(self):
             lst = ['https://www.nytimes.com/', 'https://www.w3schools.com/TAGS/default.ASP']
