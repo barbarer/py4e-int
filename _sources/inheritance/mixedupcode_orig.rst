@@ -1,12 +1,12 @@
 Mixed-Up Code Questions
 ------------------------
 
-.. parsonsprob:: re_mixed1
+.. parsonsprob:: inheritance_mixed1
     :numbered: left
     :practice: T
     :adaptive:
 
-    Create a class called ``Fruit`` with a ``constructor`` that takes in a parameter ``size``. Next, create a class called ``Orange`` with a 
+    Create a class called ``Fruit`` with a ``constructor`` that takes in a parameter ``size``. Next, create a class called ``Orange`` with a
     ``constructor`` that inherits from the ``Fruit`` constructor and additionally has a parameter ``flavor``. For example, ``Fruit(10).size`` would be ``10``,
     and ``Orange(10, 'sweet').flavor`` would be ``"sweet"``.
     -----
@@ -28,10 +28,10 @@ Mixed-Up Code Questions
     =====
             self.flavor = flavor
 
-.. activecode:: re_mixed1_ac
+.. activecode:: inheritance_mixed1_ac
     :autograde: unittest
 
-    Write a class called ``Fruit`` with a ``constructor`` that takes in a parameter ``size``. Next, create a class called ``Orange`` with a 
+    Write a class called ``Fruit`` with a ``constructor`` that takes in a parameter ``size``. Next, create a class called ``Orange`` with a
     ``constructor`` that inherits from the ``Fruit`` constructor and additionally has a parameter ``flavor``. For example, ``Fruit(10).size`` would be ``10``,
     and ``Orange(10, 'sweet').flavor`` would be ``"sweet"``.
     ~~~~
@@ -49,15 +49,15 @@ Mixed-Up Code Questions
             self.assertEqual(f.size, size, "Fruit(10).size")
             self.assertEqual(f2.size, size, "Orange(10, 'sweet').size")
             self.assertEqual(f2.flavor, flavor, "Orange(10, 'sweet').flavor")
-        
+
     myTests().main()
 
-.. parsonsprob:: re_mixed2
+.. parsonsprob:: inheritance_mixed2
     :numbered: left
     :practice: T
     :adaptive:
 
-    Create a class called ``Person`` with a ``constructor`` that takes in parameters ``name`` and ``age``. Next, create a class called ``Student`` with a 
+    Create a class called ``Person`` with a ``constructor`` that takes in parameters ``name`` and ``age``. Next, create a class called ``Student`` with a
     ``constructor`` that inherits from the ``Person`` constructor and additionally has parameters ``grade`` and ``gpa``. For example, ``Person('Susan', 13).name`` would be ``"Susan"``
     and ``Student('Sally', 16, 11, 3.7).gpa`` would be ``3.7``.
     -----
@@ -68,7 +68,6 @@ Mixed-Up Code Questions
         def init(self, name, age): #paired
     =====
             self.name = name
-    =====
             self.age = age
     =====
     class Student(Person):
@@ -88,10 +87,10 @@ Mixed-Up Code Questions
     =====
             self.gpa = gpa
 
-.. activecode:: re_mixed2_ac
+.. activecode:: inheritance_mixed2_ac
     :autograde: unittest
 
-    Write a class called ``Person`` with a ``constructor`` that takes in parameters ``name`` and ``age``. Next, create a class called ``Student`` with a 
+    Write a class called ``Person`` with a ``constructor`` that takes in parameters ``name`` and ``age``. Next, create a class called ``Student`` with a
     ``constructor`` that inherits from the ``Person`` constructor and additionally has parameters ``grade`` and ``gpa``. For example, ``Person('Susan', 13).name`` would be ``"Susan"``
     and ``Student('Sally', 16, 11, 3.7).gpa`` would be ``3.7``.
     ~~~~
@@ -113,12 +112,12 @@ Mixed-Up Code Questions
 
     myTests().main()
 
-.. parsonsprob:: re_mixed3
+.. parsonsprob:: inheritance_mixed3
     :numbered: left
     :practice: T
     :adaptive:
 
-    Create a class called ``Building`` with a ``constructor`` that takes in parameters ``floors``, ``sqft``, and ``num_doors``. Next, create a class called ``House`` with a 
+    Create a class called ``Building`` with a ``constructor`` that takes in parameters ``floors``, ``sqft``, and ``num_doors``. Next, create a class called ``House`` with a
     ``constructor`` that inherits from the ``Building`` constructor and additionally has parameters ``bedrooms``, ``bathrooms``, and ``acres``. For example, ``Building(15, 10000, 70).num_doors`` would be ``70``
     and ``House(3, 2000, 10, 4, 4, 0.5).acres`` would be ``0.5``.
     -----
@@ -129,9 +128,7 @@ Mixed-Up Code Questions
         def __init__(floors, sqft, num_doors):
     =====
             self.floors = floors
-    =====
             self.sqft = sqft
-    =====
             self.num_doors = num_doors
     =====
     class House(Building):
@@ -145,16 +142,14 @@ Mixed-Up Code Questions
             super().__init__(floors, sqft, num_doors)
     =====
             self.bedrooms = bedrooms
-    =====
             self.bathrooms = bathrooms
-    =====
             self.acres = acres
 
 
-.. activecode:: re_mixed3_ac
+.. activecode:: inheritance_mixed3_ac
     :autograde: unittest
 
-    Write a class called ``Building`` with a ``constructor`` that takes in parameters ``floors``, ``sqft``, and ``num_doors``. Next, create a class called ``House`` with a 
+    Write a class called ``Building`` with a ``constructor`` that takes in parameters ``floors``, ``sqft``, and ``num_doors``. Next, create a class called ``House`` with a
     ``constructor`` that inherits from the ``Building`` constructor and additionally has parameters ``bedrooms``, ``bathrooms``, and ``acres``. For example, ``Building(15, 10000, 70).num_doors`` would be ``70``
     and ``House(3, 2000, 10, 4, 4, 0.5).acres`` would be ``0.5``.
     ~~~~
@@ -182,28 +177,27 @@ Mixed-Up Code Questions
 
     myTests().main()
 
-.. parsonsprob:: re_mixed4
+.. parsonsprob:: inheritance_mixed4
     :numbered: left
     :practice: T
     :adaptive:
 
-    Create a class called ``Sport`` with a ``constructor`` that takes in parameters ``teamsize`` and ``equipment`` and a ``__str__`` method that returns 
-    ``"teamsize: (teamsize), equipment: (equipment)"``. Next, create a class called ``Tennis`` with a ``constructor`` that inherits from the ``Sport`` 
-    constructor and additionally has a parameter ``type_court``. For example, ``Sport(20, 'football').__str__()`` would return 
-    ``"teamsize: 20, equipment: football"``, and ``Tennis(2, 'racquet', 'clay').type_court`` would be ``'clay'``.
+    Create a class called ``Sport`` with a ``constructor`` that takes in parameters ``teamsize`` and ``equipment`` and a ``__str__`` method that returns
+    ``"teamsize: (teamsize), equipment: (equipment)"``. Next, create a class called ``Tennis`` with a ``constructor`` that inherits from the ``Sport``
+    constructor and additionally has a parameter ``type_court``. For example, ``Sport(20, 'football').__str__()`` would return
+    ``"teamsize: 20, equipment: football"``, and ``Tennis(2, 'racquet', 'clay').type_court`` would be ``'clay'``.  In the constructor for ``Tennis`` first call the parent constructor to set the ``teamsize`` and ``equipment``.  Then set the ``type_court``.
     -----
     class Sport:
     =====
         def __init__(self, teamsize, equipment):
     =====
             self.teamsize = teamsize
-    =====
             self.equipment = equipment
     =====
         def __str__(self):
     =====
             return "teamsize: " + str(self.teamsize) + ", equipment: " + str(self.equipment)
-    =====  
+    =====
     class Tennis(Sport):
     =====
         def __init__(self, teamsize, equipment, type_court):
@@ -212,15 +206,15 @@ Mixed-Up Code Questions
     =====
             self.type_court = type_court
 
-.. activecode:: re_mixed4_ac
+.. activecode:: inheritance_mixed4_ac
     :autograde: unittest
 
-    Write a class called ``Sport`` with a ``constructor`` that takes in parameters ``teamsize`` and ``equipment`` and a ``__str__`` method that returns 
-    ``"teamsize: (teamsize), equipment: (equipment)"``. Next, create a class called ``Tennis`` with a ``constructor`` that inherits from the ``Sport`` 
-    constructor and additionally has a parameter ``type_court``. For example, ``Sport(20, 'football').__str__()`` would return 
+    Write a class called ``Sport`` with a ``constructor`` that takes in parameters ``teamsize`` and ``equipment`` and a ``__str__`` method that returns
+    ``"teamsize: (teamsize), equipment: (equipment)"``. Next, create a class called ``Tennis`` with a ``constructor`` that inherits from the ``Sport``
+    constructor and additionally has a parameter ``type_court``. For example, ``Sport(20, 'football').__str__()`` would return
     ``"teamsize: 20, equipment: football"``, and ``Tennis(2, 'racquet', 'clay').type_court`` would be ``'clay'``.
     ~~~~
-        
+
 
     ====
     from unittest.gui import TestCaseGui
@@ -241,24 +235,23 @@ Mixed-Up Code Questions
 
     myTests().main()
 
-.. parsonsprob:: re_mixed5
+.. parsonsprob:: inheritance_mixed5
     :numbered: left
     :practice: T
     :adaptive:
 
-    Create a class called ``Animal`` with a ``constructor`` that takes in parameters ``name`` and ``age`` and a ``__str__`` method that returns 
-    ``"name: (name), age: (age)"``. Next, create a class called ``Dog`` with a ``constructor`` that inherits from the ``Animal`` 
-    ``constructor`` and additionally has parameters ``swim``, which is assigned to ``True`` if the ``Dog`` can swim and ``False`` otherwise, and ``trained``, 
-    which is assigned to an integer that rates how trained the ``Dog`` is on a scale from 1 to 10. Additionally, the ``Dog`` class has a ``__str__`` method that 
-    inherits from the ``Animal`` ``__str__`` method and returns "name: (name), age: (age), swim: (swim), trained: (trained)". For example, 
-    ``Animal('charlie', 4).__str__()`` would return ``"name: charlie, age: 4"``, and ``Dog('coco', 2, True, 7).trained`` would be ``7``.   
+    Create a class called ``Animal`` with a ``constructor`` that takes in parameters ``name`` and ``age`` and a ``__str__`` method that returns
+    ``"name: (name), age: (age)"``. Next, create a class called ``Dog`` with a ``constructor`` that inherits from the ``Animal``
+    ``constructor`` and additionally has parameters ``swim``, which is assigned to ``True`` if the ``Dog`` can swim and ``False`` otherwise, and ``trained``,
+    which is assigned to an integer that rates how trained the ``Dog`` is on a scale from 1 to 10. Additionally, the ``Dog`` class has a ``__str__`` method that
+    inherits from the ``Animal`` ``__str__`` method and returns "name: (name), age: (age), swim: (swim), trained: (trained)". For example,
+    ``Animal('charlie', 4).__str__()`` would return ``"name: charlie, age: 4"``, and ``Dog('coco', 2, True, 7).trained`` would be ``7``.
     -----
     class Animal:
     =====
         def __init__(self, name, age):
     =====
             self.name = name
-    =====
             self.age = age
     =====
         def __str__(self):
@@ -272,21 +265,20 @@ Mixed-Up Code Questions
             super().__init__(name, age)
     =====
             self.swim = swim
-    =====
             self.trained = trained
     =====
         def __str__(self):
     =====
             return super().__str__() + ", swim: " + str(self.swim) + ", trained: " + str(self.trained)
 
-.. activecode:: re_mixed5_ac
+.. activecode:: inheritance_mixed5_ac
     :autograde: unittest
 
-    Write a class called ``Animal`` with a ``constructor`` that takes in parameters ``name`` and ``age`` and a ``__str__`` method that returns 
-    ``"name: (name), age: (age)"``. Next, create a class called ``Dog`` with a ``constructor`` that inherits from the ``Animal`` 
-    ``constructor`` and additionally has parameters ``swim``, which is assigned to ``True`` if the ``Dog`` can swim and ``False`` otherwise, and ``trained``, 
-    which is assigned to an integer that rates how trained the ``Dog`` is on a scale from 1 to 10. Additionally, the ``Dog`` class has a ``__str__`` method that 
-    inherits from the ``Animal`` ``__str__`` method and returns "name: (name), age: (age), swim: (swim), trained: (trained)". For example, 
+    Write a class called ``Animal`` with a ``constructor`` that takes in parameters ``name`` and ``age`` and a ``__str__`` method that returns
+    ``"name: (name), age: (age)"``. Next, create a class called ``Dog`` with a ``constructor`` that inherits from the ``Animal``
+    ``constructor`` and additionally has parameters ``swim``, which is assigned to ``True`` if the ``Dog`` can swim and ``False`` otherwise, and ``trained``,
+    which is assigned to an integer that rates how trained the ``Dog`` is on a scale from 1 to 10. Additionally, the ``Dog`` class has a ``__str__`` method that
+    inherits from the ``Animal`` ``__str__`` method and returns "name: (name), age: (age), swim: (swim), trained: (trained)". For example,
     ``Animal('charlie', 4).__str__()`` would return ``"name: charlie, age: 4"``, and ``Dog('coco', 2, True, 7).trained`` would be ``7``.
     ~~~~
 
@@ -295,7 +287,7 @@ Mixed-Up Code Questions
 
     class myTests(TestCaseGui):
 
-        def testOne(self):            
+        def testOne(self):
             a = Animal('charlie', 4)
             d = Dog('coco', 2, True, 7)
 
@@ -311,15 +303,15 @@ Mixed-Up Code Questions
 
     myTests().main()
 
-.. parsonsprob:: re_mixed6
+.. parsonsprob:: inheritance_mixed6
     :numbered: left
     :practice: T
     :adaptive:
 
-    Create a class called ``Book`` with a ``constructor`` that takes in parameters ``pages``, ``table_contents``, and ``author``, and a ``__str__`` 
-    method that returns ``"pages: (pages), table_contents: (table_contents), author: (author)"``. Next, create a class called ``Encyclopedia`` with 
-    a ``constructor`` that inherits from the ``Book`` constructor and additionally has parameters ``volumes`` and ``subject``. For example, 
-    ``Book(200, True, 'JK Rowling').__str__()`` would return ``"pages: 200, table_contents: True, author: JK Rowling"``, and 
+    Create a class called ``Book`` with a ``constructor`` that takes in parameters ``pages``, ``table_contents``, and ``author``, and a ``__str__``
+    method that returns ``"pages: (pages), table_contents: (table_contents), author: (author)"``. Next, create a class called ``Encyclopedia`` with
+    a ``constructor`` that inherits from the ``Book`` constructor and additionally has parameters ``volumes`` and ``subject``. For example,
+    ``Book(200, True, 'JK Rowling').__str__()`` would return ``"pages: 200, table_contents: True, author: JK Rowling"``, and
     ``Encyclopedia(800, True, 'Denis Diderot', 28, 'science').subject`` would be ``'science'``.
     -----
     class Book:
@@ -327,9 +319,7 @@ Mixed-Up Code Questions
         def __init__(self, pages, table_contents, author):
     =====
             self.pages = pages
-    =====
             self.table_contents = table_contents
-    =====
             self.author = author
     =====
         def __str__(self):
@@ -343,17 +333,16 @@ Mixed-Up Code Questions
             super().__init__(pages, table_contents, author)
     =====
             self.volumes = volumes
-    =====
             self.subject = subject
 
 
-.. activecode:: re_mixed6_ac
+.. activecode:: inheritance_mixed6_ac
     :autograde: unittest
 
-    Write a class called ``Book`` with a ``constructor`` that takes in parameters ``pages``, ``table_contents``, and ``author``, and a ``__str__`` 
-    method that returns ``"pages: (pages), table_contents: (table_contents), author: (author)"``. Next, create a class called ``Encyclopedia`` with 
-    a ``constructor`` that inherits from the ``Book`` constructor and additionally has parameters ``volumes`` and ``subject``. For example, 
-    ``Book(200, True, 'JK Rowling').__str__()`` would return ``"pages: 200, table_contents: True, author: JK Rowling"``, and 
+    Write a class called ``Book`` with a ``constructor`` that takes in parameters ``pages``, ``table_contents``, and ``author``, and a ``__str__``
+    method that returns ``"pages: (pages), table_contents: (table_contents), author: (author)"``. Next, create a class called ``Encyclopedia`` with
+    a ``constructor`` that inherits from the ``Book`` constructor and additionally has parameters ``volumes`` and ``subject``. For example,
+    ``Book(200, True, 'JK Rowling').__str__()`` would return ``"pages: 200, table_contents: True, author: JK Rowling"``, and
     ``Encyclopedia(800, True, 'Denis Diderot', 28, 'science').subject`` would be ``'science'``.
     ~~~~
 
@@ -380,16 +369,16 @@ Mixed-Up Code Questions
 
     myTests().main()
 
-.. parsonsprob:: re_mixed7
+.. parsonsprob:: inheritance_mixed7
     :numbered: left
     :practice: T
     :adaptive:
 
-    Create a class called ``Hat`` with a ``constructor`` that takes in parameters ``size``, ``cost``, and ``material``, and a ``__str__`` method that returns 
-    ``"size: (size), cost: (cost), material: (material)"``. Next, create a class called ``Fedora`` with a ``constructor`` that inherits from the ``Hat`` 
-    ``constructor`` and additionally has a parameter ``basketweave``, which is assigned to ``True`` if the ``Fedora`` is made with a ``basketweave``` and 
-    ``False`` otherwise. Additionally, the ``Fedora`` class has a ``__str__`` method that inherits from the ``Hat`` ``__str__`` method and returns 
-    ``"size: (size), cost: (cost), material: (material), basketweave: (basketweave)"``. For example, ``Hat('small', 30, 'Cotton').__str__()`` would 
+    Create a class called ``Hat`` with a ``constructor`` that takes in parameters ``size``, ``cost``, and ``material``, and a ``__str__`` method that returns
+    ``"size: (size), cost: (cost), material: (material)"``. Next, create a class called ``Fedora`` with a ``constructor`` that inherits from the ``Hat``
+    ``constructor`` and additionally has a parameter ``basketweave``, which is assigned to ``True`` if the ``Fedora`` is made with a ``basketweave``` and
+    ``False`` otherwise. Additionally, the ``Fedora`` class has a ``__str__`` method that inherits from the ``Hat`` ``__str__`` method and returns
+    ``"size: (size), cost: (cost), material: (material), basketweave: (basketweave)"``. For example, ``Hat('small', 30, 'Cotton').__str__()`` would
     return ``"size: small, cost: 30, material: Cotton"``, and ``Fedora('large', 50, 'Polyester', True).material`` would be ``'Polyester'``.
     -----
     class Hat:
@@ -397,15 +386,13 @@ Mixed-Up Code Questions
         def __init__(self, size, cost, material):
     =====
             self.size = size
-    =====
             self.cost = cost
-    =====
             self.material = material
     =====
         def __str__(self):
     =====
             return "size: " + str(self.size) + ", cost: " + str(self.cost) + ", material: " + str(self.material)
-    =====    
+    =====
     class Fedora(Hat):
     =====
         def __init__(self, size, cost, material, basketweave):
@@ -413,19 +400,19 @@ Mixed-Up Code Questions
             super().__init__(size, cost, material)
     =====
             self.basketweave = basketweave
-    =====    
+    =====
         def __str__(self):
     =====
             return "size: " + str(self.size) + ", cost: " + str(self.cost) + ", material: " + str(self.material) + ", basketweave: " + str(self.basketweave)
 
-.. activecode:: re_mixed7_ac
+.. activecode:: inheritance_mixed7_ac
     :autograde: unittest
 
-    Write a class called ``Hat`` with a ``constructor`` that takes in parameters ``size``, ``cost``, and ``material``, and a ``__str__`` method that returns 
-    ``"size: (size), cost: (cost), material: (material)"``. Next, create a class called ``Fedora`` with a ``constructor`` that inherits from the ``Hat`` 
-    ``constructor`` and additionally has a parameter ``basketweave``, which is assigned to ``True`` if the ``Fedora`` is made with a ``basketweave``` and 
-    ``False`` otherwise. Additionally, the ``Fedora`` class has a ``__str__`` method that inherits from the ``Hat`` ``__str__`` method and returns 
-    ``"size: (size), cost: (cost), material: (material), basketweave: (basketweave)"``. For example, ``Hat('small', 30, 'Cotton').__str__()`` would 
+    Write a class called ``Hat`` with a ``constructor`` that takes in parameters ``size``, ``cost``, and ``material``, and a ``__str__`` method that returns
+    ``"size: (size), cost: (cost), material: (material)"``. Next, create a class called ``Fedora`` with a ``constructor`` that inherits from the ``Hat``
+    ``constructor`` and additionally has a parameter ``basketweave``, which is assigned to ``True`` if the ``Fedora`` is made with a ``basketweave``` and
+    ``False`` otherwise. Additionally, the ``Fedora`` class has a ``__str__`` method that inherits from the ``Hat`` ``__str__`` method and returns
+    ``"size: (size), cost: (cost), material: (material), basketweave: (basketweave)"``. For example, ``Hat('small', 30, 'Cotton').__str__()`` would
     return ``"size: small, cost: 30, material: Cotton"``, and ``Fedora('large', 50, 'Polyester', True).material`` would be ``'Polyester'``.
     ~~~~
 
@@ -451,14 +438,14 @@ Mixed-Up Code Questions
 
     myTests().main()
 
-.. parsonsprob:: re_mixed8
+.. parsonsprob:: inheritance_mixed8
     :numbered: left
     :practice: T
     :adaptive:
 
-    Create a class called ``Vehicle`` with a ``constructor`` that takes in parameters ``mph``, ``color``, and ``weight``. Next, create a class called ``Car`` with a 
-    ``constructor`` that inherits from the ``Vehicle`` constructor and additionally has a parameter ``electric``. Lastly, create a class called ``ElectricCar`` with a 
-    ``constructor`` that inherits from the ``Car`` constructor and additionally has a parameter ``cost``. For example, ``Vehicle(3.5, 'grey', 2000).weight`` would be ``2000``, 
+    Create a class called ``Vehicle`` with a ``constructor`` that takes in parameters ``mph``, ``color``, and ``weight``. Next, create a class called ``Car`` with a
+    ``constructor`` that inherits from the ``Vehicle`` constructor and additionally has a parameter ``electric``. Lastly, create a class called ``ElectricCar`` with a
+    ``constructor`` that inherits from the ``Car`` constructor and additionally has a parameter ``cost``. For example, ``Vehicle(3.5, 'grey', 2000).weight`` would be ``2000``,
     ``Car(40, 'blue', 4000, False).electric`` would be ``False``, and ``ElectricCar(40, 'red', 3000, True, 30000).cost`` would be ``30000``.
     -----
     class Vehicle:
@@ -468,19 +455,17 @@ Mixed-Up Code Questions
         def init(self, mph, color, weight): #paired
     =====
             self.mph = mph
-    =====
             self.color = color
-    =====
             self.weight = weight
     =====
     class Car(Vehicle):
-    =====    
+    =====
         def __init__(self, mph, color, weight, electric):
     =====
             super().__init__(mph, color, weight)
     =====
             self.electric = electric
-    =====   
+    =====
     class ElectricCar(Car):
     =====
     class ElectricCar(Vehicle): #paired
@@ -493,12 +478,12 @@ Mixed-Up Code Questions
     =====
             self.cost = cost
 
-.. activecode:: re_mixed8_ac
+.. activecode:: inheritance_mixed8_ac
     :autograde: unittest
 
-    Write a class called ``Vehicle`` with a ``constructor`` that takes in parameters ``mph``, ``color``, and ``weight``. Next, create a class called ``Car`` with a 
-    ``constructor`` that inherits from the ``Vehicle`` constructor and additionally has a parameter ``electric``. Lastly, create a class called ``ElectricCar`` with a 
-    ``constructor`` that inherits from the ``Car`` constructor and additionally has a parameter ``cost``. For example, ``Vehicle(3.5, 'grey', 2000).weight`` would be ``2000``, 
+    Write a class called ``Vehicle`` with a ``constructor`` that takes in parameters ``mph``, ``color``, and ``weight``. Next, create a class called ``Car`` with a
+    ``constructor`` that inherits from the ``Vehicle`` constructor and additionally has a parameter ``electric``. Lastly, create a class called ``ElectricCar`` with a
+    ``constructor`` that inherits from the ``Car`` constructor and additionally has a parameter ``cost``. For example, ``Vehicle(3.5, 'grey', 2000).weight`` would be ``2000``,
     ``Car(40, 'blue', 4000, False).electric`` would be ``False``, and ``ElectricCar(40, 'red', 3000, True, 30000).cost`` would be ``30000``.
     ~~~~
 
@@ -515,7 +500,7 @@ Mixed-Up Code Questions
             self.assertEqual(v.mph, 3.5, "Vehicle(3.5, 'grey', 2000).mph")
             self.assertEqual(v.color, 'grey', "Vehicle(3.5, 'grey', 2000).color")
             self.assertEqual(v.weight, 2000, "Vehicle(3.5, 'grey', 2000).weight")
-            
+
             self.assertEqual(c.mph, 40, "Car(40, 'blue', 4000, False).mph")
             self.assertEqual(c.color, 'blue', "Car(40, 'blue', 4000, False).color")
             self.assertEqual(c.weight, 4000, "Car(40, 'blue', 4000, False).weight")
@@ -529,18 +514,18 @@ Mixed-Up Code Questions
 
     myTests().main()
 
-.. parsonsprob:: re_mixed9
+.. parsonsprob:: inheritance_mixed9
     :numbered: left
     :practice: T
     :adaptive:
 
-    Create a class called ``SchoolSupplies`` with a ``constructor`` that takes in parameters ``size``, ``cost``, and ``material``, and a ``__str__`` method 
-    that returns ``"size: (size), cost: (cost), material: (material)"``. Next, create a class called ``WritingUtensils`` with a ``constructor`` that inherits 
-    from the ``SchoolSupplies`` constructor and additionally has a parameter ``count``, and a ``__str__`` method that returns ``"size: (size), cost: (cost), 
-    material: (material), count: (count)"``. Lastly, create a class called ``Pencil`` with a ``constructor`` that inherits from the ``WritingUtensils`` 
-    constructor and additionally has parameters ``mechanical`` and ``lead``. If a ``Pencil`` is ``mechanical``, it will have a float ``lead`` size. Otherwise, ``lead`` will be ``None``. 
-    Additionally, the ``Pencil`` class should have a ``__str__`` method that returns ``"size: (size), cost: (cost), material: (material), count: (count), 
-    mechanical: (mechanical), lead: (lead)"``. For example, ``WritingUtensils('medium', 20, 'wood', 12).__str__()`` should return ``"size: medium, cost: 20, material: 
+    Create a class called ``SchoolSupplies`` with a ``constructor`` that takes in parameters ``size``, ``cost``, and ``material``, and a ``__str__`` method
+    that returns ``"size: (size), cost: (cost), material: (material)"``. Next, create a class called ``WritingUtensils`` with a ``constructor`` that inherits
+    from the ``SchoolSupplies`` constructor and additionally has a parameter ``count``, and a ``__str__`` method that returns ``"size: (size), cost: (cost),
+    material: (material), count: (count)"``. Lastly, create a class called ``Pencil`` with a ``constructor`` that inherits from the ``WritingUtensils``
+    constructor and additionally has parameters ``mechanical`` and ``lead``. If a ``Pencil`` is ``mechanical``, it will have a float ``lead`` size. Otherwise, ``lead`` will be ``None``.
+    Additionally, the ``Pencil`` class should have a ``__str__`` method that returns ``"size: (size), cost: (cost), material: (material), count: (count),
+    mechanical: (mechanical), lead: (lead)"``. For example, ``WritingUtensils('medium', 20, 'wood', 12).__str__()`` should return ``"size: medium, cost: 20, material:
     wood, count: 12"`` and ``Pencil('large', 30, 'wood', 24, True, 0.7).mechanical`` would be ``True``.
     -----
     class SchoolSupplies:
@@ -548,11 +533,9 @@ Mixed-Up Code Questions
         def __init__(self, size, cost, material):
     =====
             self.size = size
-    =====
             self.cost = cost
-    =====
             self.material = material
-    =====    
+    =====
         def __str__(self):
     =====
             return "size: " + str(self.size) + ", cost: " + str(self.cost) + ", material: " + str(self.material)
@@ -564,7 +547,7 @@ Mixed-Up Code Questions
             super().__init__(size, cost, material)
     =====
             self.count = count
-    ===== 
+    =====
         def __str__(self):
     =====
             return "size: " + str(self.size) + ", cost: " + str(self.cost) + ", material: " + str(self.material) + ", count: " + str(self.count)
@@ -584,21 +567,21 @@ Mixed-Up Code Questions
             else:
     =====
                 self.lead = None
-    =====   
+    =====
         def __str__(self):
     =====
             return "size: " + str(self.size) + ", cost: " + str(self.cost) + ", material: " + str(self.material) + ", count: " + str(self.count) + ", mechanical: " + str(self.mechanical) + ", lead: " + str(self.lead)
 
-.. activecode:: re_mixed9_ac
+.. activecode:: inheritance_mixed9_ac
     :autograde: unittest
 
-    Write a class called ``SchoolSupplies`` with a ``constructor`` that takes in parameters ``size``, ``cost``, and ``material``, and a ``__str__`` method 
-    that returns ``"size: (size), cost: (cost), material: (material)"``. Next, create a class called ``WritingUtensils`` with a ``constructor`` that inherits 
-    from the ``SchoolSupplies`` constructor and additionally has a parameter ``count``, and a ``__str__`` method that returns ``"size: (size), cost: (cost), 
-    material: (material), count: (count)"``. Lastly, create a class called ``Pencil`` with a ``constructor`` that inherits from the ``WritingUtensils`` 
-    constructor and additionally has parameters ``mechanical`` and ``lead``. If a ``Pencil`` is ``mechanical``, it will have a float ``lead`` size. Otherwise, ``lead`` will be ``None``. 
-    Additionally, the ``Pencil`` class should have a ``__str__`` method that returns ``"size: (size), cost: (cost), material: (material), count: (count), 
-    mechanical: (mechanical), lead: (lead)"``. For example, ``WritingUtensils('medium', 20, 'wood', 12).__str__()`` should return ``"size: medium, cost: 20, material: 
+    Write a class called ``SchoolSupplies`` with a ``constructor`` that takes in parameters ``size``, ``cost``, and ``material``, and a ``__str__`` method
+    that returns ``"size: (size), cost: (cost), material: (material)"``. Next, create a class called ``WritingUtensils`` with a ``constructor`` that inherits
+    from the ``SchoolSupplies`` constructor and additionally has a parameter ``count``, and a ``__str__`` method that returns ``"size: (size), cost: (cost),
+    material: (material), count: (count)"``. Lastly, create a class called ``Pencil`` with a ``constructor`` that inherits from the ``WritingUtensils``
+    constructor and additionally has parameters ``mechanical`` and ``lead``. If a ``Pencil`` is ``mechanical``, it will have a float ``lead`` size. Otherwise, ``lead`` will be ``None``.
+    Additionally, the ``Pencil`` class should have a ``__str__`` method that returns ``"size: (size), cost: (cost), material: (material), count: (count),
+    mechanical: (mechanical), lead: (lead)"``. For example, ``WritingUtensils('medium', 20, 'wood', 12).__str__()`` should return ``"size: medium, cost: 20, material:
     wood, count: 12"`` and ``Pencil('large', 30, 'wood', 24, True, 0.7).mechanical`` would be ``True``.
     ~~~~
 
@@ -642,19 +625,19 @@ Mixed-Up Code Questions
 
     myTests().main()
 
-.. parsonsprob:: re_mixed10
+.. parsonsprob:: inheritance_mixed10
     :numbered: left
     :practice: T
     :adaptive:
 
-    Create a class called ``FederalCourts`` with a ``constructor`` that takes in parameters ``size`` and ``location``, a ``__str__`` method 
-    that returns ``"size: (size), location: (location)"``, and a method called ``judgment`` that takes in a string parameter ``decision``. 
-    If ``decision`` is ``'guilty'``, return ``'Conviction needed'``. If ``decision`` is ``'not guilty'``, return ``'Conviction not needed'``. 
-    Otherwise, return ``'Inconclusive'``. Next, create a class called ``SupremeCourt`` with a ``constructor`` that inherits 
-    from the ``FederalCourts`` constructor and additionally has a parameter ``leaning_party``, and a ``__str__`` method that returns ``"size: (size), location: (location), leaning_party: (leaning_party)"``. 
-    Lastly, create a class called ``CourtsOfAppeals`` with a ``constructor`` that inherits from the ``FederalCourts`` 
-    constructor and additionally has a parameter ``divisions``. Additionally, the ``CourtsOfAppeals`` class should have a ``__str__`` method that returns 
-    ``"size: (size), location: (location), divisions: (divisions)"``. For example, ``FederalCourts(94, 'New York').__str__()`` should return ``"size: 94, location: New York"``,  
+    Create a class called ``FederalCourts`` with a ``constructor`` that takes in parameters ``size`` and ``location``, a ``__str__`` method
+    that returns ``"size: (size), location: (location)"``, and a method called ``judgment`` that takes in a string parameter ``decision``.
+    If ``decision`` is ``'guilty'``, return ``'Conviction needed'``. If ``decision`` is ``'not guilty'``, return ``'Conviction not needed'``.
+    Otherwise, return ``'Inconclusive'``. Next, create a class called ``SupremeCourt`` with a ``constructor`` that inherits
+    from the ``FederalCourts`` constructor and additionally has a parameter ``leaning_party``, and a ``__str__`` method that returns ``"size: (size), location: (location), leaning_party: (leaning_party)"``.
+    Lastly, create a class called ``CourtsOfAppeals`` with a ``constructor`` that inherits from the ``FederalCourts``
+    constructor and additionally has a parameter ``divisions``. Additionally, the ``CourtsOfAppeals`` class should have a ``__str__`` method that returns
+    ``"size: (size), location: (location), divisions: (divisions)"``. For example, ``FederalCourts(94, 'New York').__str__()`` should return ``"size: 94, location: New York"``,
     ``CourtsOfAppeals(179, 'Pennsylvania', 23).divisions`` would be ``23``, and ``FederalCourts(94, 'New York').judgment('Not Guilty')`` would be ``"Conviction not needed"``.
     -----
     class FederalCourts:
@@ -662,13 +645,12 @@ Mixed-Up Code Questions
         def __init__(self, size, location):
     =====
             self.size = size
-    =====
             self.location = location
-    =====    
+    =====
         def __str__(self):
     =====
             return "size: " + str(self.size) + ", location: " + str(self.location)
-    =====    
+    =====
         def judgment(self, decision):
     =====
             if decision.lower() == 'guilty':
@@ -694,10 +676,10 @@ Mixed-Up Code Questions
             super().__init__(size, location)
     =====
             self.leaning_party = leaning_party
-    =====    
+    =====
         def __str__(self):
     =====
-            return "size: " + str(self.size) + ", location: " + str(self.location) + ", leaning_party: " + str(self.leaning_party) 
+            return "size: " + str(self.size) + ", location: " + str(self.location) + ", leaning_party: " + str(self.leaning_party)
     =====
     class CourtsOfAppeals(FederalCourts):
     =====
@@ -706,22 +688,22 @@ Mixed-Up Code Questions
             super().__init__(size, location)
     =====
             self.divisions = divisions
-    =====    
+    =====
         def __str__(self):
     =====
             return "size: " + str(self.size) + ", location: " + str(self.location) + ", divisions: " + str(self.divisions)
 
-.. activecode:: re_mixed10_ac
+.. activecode:: inheritance_mixed10_ac
     :autograde: unittest
 
-    Write a class called ``FederalCourts`` with a ``constructor`` that takes in parameters ``size`` and ``location``, a ``__str__`` method 
-    that returns ``"size: (size), location: (location)"``, and a method called ``judgment`` that takes in a string parameter ``decision``. 
-    If ``decision`` is ``'guilty'``, return ``'Conviction needed'``. If ``decision`` is ``'not guilty'``, return ``'Conviction not needed'``. 
-    Otherwise, return ``'Inconclusive'``. Next, create a class called ``SupremeCourt`` with a ``constructor`` that inherits 
-    from the ``FederalCourts`` constructor and additionally has a parameter ``leaning_party``, and a ``__str__`` method that returns ``"size: (size), location: (location), leaning_party: (leaning_party)"``. 
-    Lastly, create a class called ``CourtsOfAppeals`` with a ``constructor`` that inherits from the ``FederalCourts`` 
-    constructor and additionally has a parameter ``divisions``. Additionally, the ``CourtsOfAppeals`` class should have a ``__str__`` method that returns 
-    ``"size: (size), location: (location), divisions: (divisions)"``. For example, ``FederalCourts(94, 'New York').__str__()`` should return ``"size: 94, location: New York"``,  
+    Write a class called ``FederalCourts`` with a ``constructor`` that takes in parameters ``size`` and ``location``, a ``__str__`` method
+    that returns ``"size: (size), location: (location)"``, and a method called ``judgment`` that takes in a string parameter ``decision``.
+    If ``decision`` is ``'guilty'``, return ``'Conviction needed'``. If ``decision`` is ``'not guilty'``, return ``'Conviction not needed'``.
+    Otherwise, return ``'Inconclusive'``. Next, create a class called ``SupremeCourt`` with a ``constructor`` that inherits
+    from the ``FederalCourts`` constructor and additionally has a parameter ``leaning_party``, and a ``__str__`` method that returns ``"size: (size), location: (location), leaning_party: (leaning_party)"``.
+    Lastly, create a class called ``CourtsOfAppeals`` with a ``constructor`` that inherits from the ``FederalCourts``
+    constructor and additionally has a parameter ``divisions``. Additionally, the ``CourtsOfAppeals`` class should have a ``__str__`` method that returns
+    ``"size: (size), location: (location), divisions: (divisions)"``. For example, ``FederalCourts(94, 'New York').__str__()`` should return ``"size: 94, location: New York"``,
     ``CourtsOfAppeals(179, 'Pennsylvania', 23).divisions`` would be ``23``, and ``FederalCourts(94, 'New York').judgment('Not Guilty')`` would be ``"Conviction not needed"``.
     ~~~~
 

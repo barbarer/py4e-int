@@ -21,3 +21,13 @@ code using the object. Python, like many languages, provides mechanisms
 to achieve information hiding, but we do not cover them in this book.
 **Inheritance** and **polymorphism** are mechanisms that help to enable
 code reuse and contract-based programming, and are the subject of this chapter.
+
+.. dragndrop:: pillars_of_oop_dnd
+    :practice: T
+    :feedback: Read the chapter on functions and try again.
+    :match_1: encapsulation||| Packaging data and methods together
+    :match_2: information hiding||| protecting state (data) in objects
+    :match_3: inheritance||| allows code reuse 
+    :match_4: polymorphism||| contract-based programming
+
+    Drag each item to its location in a class diagram

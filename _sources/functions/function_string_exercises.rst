@@ -14,7 +14,7 @@ Functions and Strings Multiple Choice Questions
    :feedback_c: Try again! This would assign final_string to "yeling".
    :feedback_d: Try again! This would assign final_string to "yelin".
    :feedback_e: Try again! String objects do not have the attribute "append".
-   
+
    Given the below code snippet, which of the following options would create a variable called ``final_string`` that is assigned to the word "yelling"?
 
    .. code-block:: python
@@ -23,20 +23,18 @@ Functions and Strings Multiple Choice Questions
       string2 = "screaming"
 
 
-.. mchoice:: Exercises_function_string_mc2
+.. mchoice:: Exercises_function_string_mc2_v4
    :practice: T
    :answer_a: print("I have " + num_of_apples + " apples.")
-   :answer_b: print("I have " + str(num_of_apples) + " apples.")
+   :answer_b: print("I have " + str("num_of_apples") + " apples.")
    :answer_c: print("I have 4 apples.")
-   :answer_d: print("I have " + string(num_of_apples) + " apples.")
-   :answer_e: line 1: num_of_apples = str(num_of_apples), line 2: print("I have " + num_of_apples + " apples.")
-   :correct: b, e
+   :answer_d: print("I have " + str(num_of_apples) + " apples.")
+   :correct: d
    :feedback_a: Try again! You can't concatenate a string and an integer together.
-   :feedback_b: Correct! By using str, the integer variable is converted into a string.
+   :feedback_b: Try again! Do not enclose the variable name in a string or you will get just those characters.
    :feedback_c: Try again! This doesn't use the variable num_of_apples.
-   :feedback_d: Try again! To convert an integer to a string, the built-in function str is used, not string.
-   :feedback_e: Correct! This converts the integer variable to a string on two separate lines.
-   
+   :feedback_d: Correct! By using str, the integer variable is converted into a string.
+
    Which of the following choices correctly prints a sentence using the variable ``num_of_apples``?
 
    .. code-block:: python
@@ -53,30 +51,28 @@ Functions and Strings Multiple Choice Questions
    :answer_e: sort()
    :correct: a, b, d
    :feedback_a: Correct!
-   :feedback_b: Correct! 
+   :feedback_b: Correct!
    :feedback_c: Try again! This is a list method, not a string method.
-   :feedback_d: Correct! 
+   :feedback_d: Correct!
    :feedback_e: Try again! This is a list method, not a string method.
 
    Which of the following are string methods?
 
 
-.. mchoice:: Exercises_function_string_mc4
+.. mchoice:: Exercises_function_string_mc4_v2
    :practice: T
    :answer_a: count(string)
    :answer_b: len(string)
    :answer_c: int(string)
-   :answer_d: 14
-   :answer_e: length(string)
+   :answer_d: length(string)
    :correct: b
    :feedback_a: Try again! Count is a python string method that counts the amount of occurrences of a substring.
-   :feedback_b: Correct! 
+   :feedback_b: Correct!
    :feedback_c: Try again! String with words cannot be converted to ints.
-   :feedback_d: Try again! The number 14 is the amount of characters in the string, but it is not code. 
-   :feedback_e: Try again! Instead of length, it should be len, because length is not a built-in python function.
+   :feedback_d: Try again! Instead of length, it should be len, because length is not a built-in python function.
 
    Which of the following code corresponds to the amount of characters in the following ``string`` variable?
-   
+
    .. code-block:: python
 
       string = "I love coding!"
@@ -86,14 +82,14 @@ Functions and Strings Multiple Choice Questions
    :practice: T
    :answer_a: J. Weathers
    :answer_b: Jo. Weathers
-   :answer_c: oa. Weathers 
+   :answer_c: oa. Weathers
    :answer_d: J. weathers
    :answer_e: j. weathers
    :correct: d
-   :feedback_a: Try again! The first letter in the last name should be lowercase. 
+   :feedback_a: Try again! The first letter in the last name should be lowercase.
    :feedback_b: Try again! The end of a slice operator is exclusive (e.g., 1 is exclusive in this example).
    :feedback_c: Try again! Strings are indexed starting at 0.
-   :feedback_d: Correct! 
+   :feedback_d: Correct!
    :feedback_e: Try again! Only the last name should be lowercase.
 
    What does the following code output?
@@ -102,7 +98,7 @@ Functions and Strings Multiple Choice Questions
 
       def abbrev(first_name, last_name):
          print(first_name[0:1] + ". " + last_name.lower())
-      
+
       abbrev("Joanne", "Weathers")
 
 
@@ -113,7 +109,7 @@ Functions and Strings Multiple Choice Questions
    :answer_c: Hello Katie Pe.
    :answer_d: Hello KatiePE.
    :correct: b
-   :feedback_a: Try again! This would be correct if there was a print statement. 
+   :feedback_a: Try again! This would be correct if there was a print statement.
    :feedback_b: Correct! Nothing would be outputted because there is no print statement.
    :feedback_c: Try again! There shouldn't be a space between the first and last name.
    :feedback_d: Try again! The E should not be capitalized. The upper() method would capitalize the E, but not the capitalize() method.
@@ -131,7 +127,7 @@ Functions and Strings Multiple Choice Questions
          abbrev()
 
       main()
-      
+
 
 .. mchoice:: Exercises_function_string_mc7
    :practice: T
@@ -142,8 +138,8 @@ Functions and Strings Multiple Choice Questions
    :answer_e: print(item[3:7])
    :correct: b, c
    :feedback_a: Try again! This would print "teboo".
-   :feedback_b: Correct! 
-   :feedback_c: Correct! 
+   :feedback_b: Correct!
+   :feedback_c: Correct!
    :feedback_d: Try again! This would print "eboo".
    :feedback_e: Try again! This would print "eboo".
 
@@ -153,6 +149,6 @@ Functions and Strings Multiple Choice Questions
 
       def notebook():
          item = "notebook"
-         # What goes here? 
-      
+         # What goes here?
+
       notebook()

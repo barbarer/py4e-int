@@ -8,7 +8,7 @@ We will use the ``requests`` library to get a response object from a URL,
 create a ``BeautifulSoup`` object from the HTML in the response, then
 print the first paragraph from the New York Times site.
 
-.. activecode:: bs_get_href_1
+.. activecode:: bs_get_print_first_para
     :language: python3
 
     This will find and print the first paragraph from the New York Times site.
@@ -33,7 +33,7 @@ create a ``BeautifulSoup`` object from the HTML in the response, get a list of a
 anchor (``a``) tags, then loop through the tags and
 extract the ``href`` attribute. Anchor tags are also known as link tags.
 
-.. activecode:: bs_get_href_1
+.. activecode:: bs_get_all_a_tags_and_print_hrefs
     :language: python3
 
     This will find all of the 'a' tags and print the href for each of them.
