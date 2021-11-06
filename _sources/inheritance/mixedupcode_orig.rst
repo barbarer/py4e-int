@@ -6,8 +6,7 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a class called ``Fruit`` with a ``constructor`` that takes in a parameter ``size``. Next, create a class called ``Orange`` with a
-    ``constructor`` that inherits from the ``Fruit`` constructor and additionally has a parameter ``flavor``. For example, ``Fruit(10).size`` would be ``10``,
+    Create a class called ``Fruit`` with a ``constructor`` that takes a parameter ``size``. Next, create a class called ``Orange`` that inherits from ``Fruit``.  Create a constructor for ``Orange`` that takes ``size`` and ``flavor`` and call the  ``Fruit`` constructor to initialze the ``size``.  For example, ``Fruit(10).size`` would be ``10``,
     and ``Orange(10, 'sweet').flavor`` would be ``"sweet"``.
     -----
     class Fruit:
@@ -31,8 +30,7 @@ Mixed-Up Code Questions
 .. activecode:: inheritance_mixed1_ac
     :autograde: unittest
 
-    Write a class called ``Fruit`` with a ``constructor`` that takes in a parameter ``size``. Next, create a class called ``Orange`` with a
-    ``constructor`` that inherits from the ``Fruit`` constructor and additionally has a parameter ``flavor``. For example, ``Fruit(10).size`` would be ``10``,
+    Write a class called ``Fruit`` with a ``constructor`` that takes a parameter ``size``. Next, create a class called ``Orange`` that inherits from ``Fruit``.  Create a constructor for ``Orange`` that takes ``size`` and ``flavor`` and call the  ``Fruit`` constructor to initialze the ``size``.  For example, ``Fruit(10).size`` would be ``10``,
     and ``Orange(10, 'sweet').flavor`` would be ``"sweet"``.
     ~~~~
 
@@ -57,8 +55,8 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a class called ``Person`` with a ``constructor`` that takes in parameters ``name`` and ``age``. Next, create a class called ``Student`` with a
-    ``constructor`` that inherits from the ``Person`` constructor and additionally has parameters ``grade`` and ``gpa``. For example, ``Person('Susan', 13).name`` would be ``"Susan"``
+    Create a class called ``Person`` with a ``constructor`` that takes ``name`` and ``age``. Next, create a class called ``Student`` that inherits from ``Person``.
+    The constructor for ``Stuent`` takes ``name``, ``age``, ``grade``, and ``gpa``. Have the constructor for the ``Student`` class call the constructor for the ``Person`` class to initialize the ``name`` and ``age``.  For example, ``Person('Susan', 13).name`` would be ``"Susan"``
     and ``Student('Sally', 16, 11, 3.7).gpa`` would be ``3.7``.
     -----
     class Person:
@@ -80,18 +78,16 @@ Mixed-Up Code Questions
     =====
             super().__init__(name, age)
     =====
-            super().__init__(age) #paired
-            super().__init__(name)
+            super.__init__(name,age) #paired
     =====
             self.grade = grade
-    =====
             self.gpa = gpa
 
 .. activecode:: inheritance_mixed2_ac
     :autograde: unittest
 
-    Write a class called ``Person`` with a ``constructor`` that takes in parameters ``name`` and ``age``. Next, create a class called ``Student`` with a
-    ``constructor`` that inherits from the ``Person`` constructor and additionally has parameters ``grade`` and ``gpa``. For example, ``Person('Susan', 13).name`` would be ``"Susan"``
+    Write a class called ``Person`` with a ``constructor`` that takes ``name`` and ``age``. Next, create a class called ``Student`` that inherits from ``Person``.
+    The constructor for ``Stuent`` takes ``name``, ``age``, ``grade``, and ``gpa``. Have the constructor for the ``Student`` class call the constructor for the ``Person`` class to initialize the ``name`` and ``age``.  For example, ``Person('Susan', 13).name`` would be ``"Susan"``
     and ``Student('Sally', 16, 11, 3.7).gpa`` would be ``3.7``.
     ~~~~
 
