@@ -1,12 +1,12 @@
-Mixed-Up Code Questions
-------------------------
+Mixed-Up Code Questions Original
+-----------------------------------
 
 .. parsonsprob:: mixedupcode_network_1
     :numbered: left
     :practice: T
     :adaptive:
 
-    Create a function called ``decode`` that takes in a parameter ``link`` and returns a string that contains 
+    Create a function called ``decode`` that takes in a parameter ``link`` and returns a string that contains
     the contents of the ``link`` using urllib. Between each word, there should be a space. Also, a space at the end is okay.
     For example, ``decode('http://data.pr4e.org/romeo.txt')`` should return ``'But soft what light through yonder window breaks It is the east and Juliet is the sun Arise fair sun and kill the envious moon Who is already sick and pale with grief '``.
     -----
@@ -24,7 +24,7 @@ Mixed-Up Code Questions
     =====
             string += line.decode().strip() #paired
     =====
-        return string 
+        return string
     =====
         return fhand.decode().strip() #paired
 
@@ -33,7 +33,7 @@ Mixed-Up Code Questions
     :practice: T
     :autograde: unittest
 
-    Write a function called ``decode`` that takes in a parameter ``link`` and returns a string that contains 
+    Write a function called ``decode`` that takes in a parameter ``link`` and returns a string that contains
     the contents of the ``link`` using urllib. Between each word, there should be a space. Also, a space at the end is okay.
     For example, ``decode('http://data.pr4e.org/romeo.txt')`` should return ``'But soft what light through yonder window breaks It is the east and Juliet is the sun Arise fair sun and kill the envious moon Who is already sick and pale with grief '``.
     ~~~~
@@ -53,8 +53,8 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``write_txt`` that takes in a parameter ``link``, retrieves a file from the ``link`` using urllib, 
-    and writes the contents of the ``link`` to a file called ``'clown.txt'``. For example, ``write_txt('http://data.pr4e.org/clown.txt')`` should create 
+    Create a function called ``write_txt`` that takes in a parameter ``link``, retrieves a file from the ``link`` using urllib,
+    and writes the contents of the ``link`` to a file called ``'clown.txt'``. For example, ``write_txt('http://data.pr4e.org/clown.txt')`` should create
     a file called ``'clown.txt'`` that has the string ``'the clown ran after the car and the car ran into the tent and the tent fell down on the clown and the car'``.
     -----
     import urllib.request
@@ -76,8 +76,8 @@ Mixed-Up Code Questions
     :practice: T
     :autograde: unittest
 
-    Write a function called ``write_txt`` that takes in a parameter ``link``, retrieves a file from the ``link`` using urllib, 
-    and writes the contents of the ``link`` to a file called ``'clown.txt'``. For example, ``write_txt('http://data.pr4e.org/clown.txt')`` should create 
+    Write a function called ``write_txt`` that takes in a parameter ``link``, retrieves a file from the ``link`` using urllib,
+    and writes the contents of the ``link`` to a file called ``'clown.txt'``. For example, ``write_txt('http://data.pr4e.org/clown.txt')`` should create
     a file called ``'clown.txt'`` that has the string ``'the clown ran after the car and the car ran into the tent and the tent fell down on the clown and the car'``.
     ~~~~
 
@@ -98,8 +98,8 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``count_words`` that takes in a parameter ``link``, retrieves a file from the ``link`` using urllib, and 
-    returns a dictionary with words as keys and the number of times they appear in the ``link`` as values. For example, ``count_words('http://data.pr4e.org/romeo.txt')`` 
+    Create a function called ``count_words`` that takes in a parameter ``link``, retrieves a file from the ``link`` using urllib, and
+    returns a dictionary with words as keys and the number of times they appear in the ``link`` as values. For example, ``count_words('http://data.pr4e.org/romeo.txt')``
     should return ``{'But': 1, 'soft': 1, 'what': 1, 'light': 1, 'through': 1, 'yonder': 1, 'window': 1, 'breaks': 1, 'It': 1, 'is': 3, 'the': 3, 'east': 1, 'and': 3, 'Juliet': 1, 'sun': 2, 'Arise': 1, 'fair': 1, 'kill': 1, 'envious': 1, 'moon': 1, 'Who': 1, 'already': 1, 'sick': 1, 'pale': 1, 'with': 1, 'grief': 1}``.
     -----
     import urllib.request
@@ -130,8 +130,8 @@ Mixed-Up Code Questions
     :practice: T
     :autograde: unittest
 
-    Write a function called ``count_words`` that takes in a parameter ``link``, retrieves a file from the ``link`` using urllib, and 
-    returns a dictionary with words as keys and the number of times they appear in the ``link`` as values. For example, ``count_words('http://data.pr4e.org/romeo.txt')`` 
+    Write a function called ``count_words`` that takes in a parameter ``link``, retrieves a file from the ``link`` using urllib, and
+    returns a dictionary with words as keys and the number of times they appear in the ``link`` as values. For example, ``count_words('http://data.pr4e.org/romeo.txt')``
     should return ``{'But': 1, 'soft': 1, 'what': 1, 'light': 1, 'through': 1, 'yonder': 1, 'window': 1, 'breaks': 1, 'It': 1, 'is': 3, 'the': 3, 'east': 1, 'and': 3, 'Juliet': 1, 'sun': 2, 'Arise': 1, 'fair': 1, 'kill': 1, 'envious': 1, 'moon': 1, 'Who': 1, 'already': 1, 'sick': 1, 'pale': 1, 'with': 1, 'grief': 1}``.
     ~~~~
 
@@ -150,8 +150,8 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``write_jpg`` that takes in a parameter ``img_link``, retrieves a file from the ``img_link`` using urllib, 
-    and writes the contents of the ``img_link`` to a file called ``'cover.jpg'``. For example, ``write_jpg('http://data.pr4e.org/cover3.jpg')`` should create 
+    Create a function called ``write_jpg`` that takes in a parameter ``img_link``, retrieves a file from the ``img_link`` using urllib,
+    and writes the contents of the ``img_link`` to a file called ``'cover.jpg'``. For example, ``write_jpg('http://data.pr4e.org/cover3.jpg')`` should create
     a file called ``'cover.jpg'`` that has an image of the cover for ``"PYTHON FOR EVERYBODY"``.
     -----
     import urllib.request
@@ -175,8 +175,8 @@ Mixed-Up Code Questions
     :practice: T
     :autograde: unittest
 
-    Write a function called ``write_jpg`` that takes in a parameter ``img_link``, retrieves a file from the ``img_link`` using urllib, 
-    and writes the contents of the ``img_link`` to a file called ``'cover.jpg'``. For example, ``write_jpg('http://data.pr4e.org/cover3.jpg')`` should create 
+    Write a function called ``write_jpg`` that takes in a parameter ``img_link``, retrieves a file from the ``img_link`` using urllib,
+    and writes the contents of the ``img_link`` to a file called ``'cover.jpg'``. For example, ``write_jpg('http://data.pr4e.org/cover3.jpg')`` should create
     a file called ``'cover.jpg'`` that has an image of the cover for ``"PYTHON FOR EVERYBODY"``.
     ~~~~
 
@@ -186,8 +186,8 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``num_chars`` that takes in a parameter ``link``, retrieves a file from the ``link`` using urllib, and 
-    returns the number of characters in ``link`` in the format ``"(num) characters"``. For example, ``num_chars('http://data.pr4e.org/romeo-full.txt')`` 
+    Create a function called ``num_chars`` that takes in a parameter ``link``, retrieves a file from the ``link`` using urllib, and
+    returns the number of characters in ``link`` in the format ``"(num) characters"``. For example, ``num_chars('http://data.pr4e.org/romeo-full.txt')``
     should return ``"8864 characters"``.
     -----
     import urllib.request
@@ -210,8 +210,8 @@ Mixed-Up Code Questions
     :practice: T
     :autograde: unittest
 
-    Write a function called ``num_chars`` that takes in a parameter ``link``, retrieves a file from the ``link`` using urllib, and 
-    returns the number of characters in ``link`` in the format ``"(num) characters"``. For example, ``num_chars('http://data.pr4e.org/romeo-full.txt')`` 
+    Write a function called ``num_chars`` that takes in a parameter ``link``, retrieves a file from the ``link`` using urllib, and
+    returns the number of characters in ``link`` in the format ``"(num) characters"``. For example, ``num_chars('http://data.pr4e.org/romeo-full.txt')``
     should return ``"8864 characters"``.
     ~~~~
 
@@ -230,8 +230,8 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``contents`` that takes in a parameter ``link``, retrieves a file from the ``link`` using sockets, and returns as a string 
-    the contents of the ``link`` (specifically 10000 characters). For example, ``contents('http://data.pr4e.org/clown.txt')`` should return 
+    Create a function called ``contents`` that takes in a parameter ``link``, retrieves a file from the ``link`` using sockets, and returns as a string
+    the contents of the ``link`` (specifically 10000 characters). For example, ``contents('http://data.pr4e.org/clown.txt')`` should return
     ``"HTTP/1.1 200 OK\nDate: Thu, 12 Aug 2021 01:24:15 GMT\nServer: Apache/2.4.18 (Ubuntu)\nLast-Modified: Sat, 13 May 2017 11:22:22 GMT\nETag: '6a-54f6609240717'\nAccept-Ranges: bytes\nContent-Length: 106\nCache-Control: max-age=0, no-cache, no-store, must-revalidate\nPragma: no-cache\nExpires: Wed, 11 Jan 1984 05:00:00 GMT\nConnection: close\nContent-Type: text/plain\n\nthe clown ran after the car and the car ran into the tent and the tent fell down on the clown and the car\n"``.
     -----
     import socket
@@ -264,8 +264,8 @@ Mixed-Up Code Questions
     :practice: T
     :autograde: unittest
 
-    Write a function called ``contents`` that takes in a parameter ``link``, retrieves a file from the ``link`` using sockets, and returns as a string 
-    the contents of the ``link`` (specifically 10000 characters). For example, ``contents('http://data.pr4e.org/clown.txt')`` should return 
+    Write a function called ``contents`` that takes in a parameter ``link``, retrieves a file from the ``link`` using sockets, and returns as a string
+    the contents of the ``link`` (specifically 10000 characters). For example, ``contents('http://data.pr4e.org/clown.txt')`` should return
     ``"HTTP/1.1 200 OK\nDate: Thu, 12 Aug 2021 01:24:15 GMT\nServer: Apache/2.4.18 (Ubuntu)\nLast-Modified: Sat, 13 May 2017 11:22:22 GMT\nETag: '6a-54f6609240717'\nAccept-Ranges: bytes\nContent-Length: 106\nCache-Control: max-age=0, no-cache, no-store, must-revalidate\nPragma: no-cache\nExpires: Wed, 11 Jan 1984 05:00:00 GMT\nConnection: close\nContent-Type: text/plain\n\nthe clown ran after the car and the car ran into the tent and the tent fell down on the clown and the car\n"``.
     ~~~~
 
@@ -284,8 +284,8 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``reg_num_links`` that takes in a parameter ``url`` and returns the number of 'href' 
-    attributes that start with 'http' using regular expressions. Since websites are frequently updated, 
+    Create a function called ``reg_num_links`` that takes in a parameter ``url`` and returns the number of 'href'
+    attributes that start with 'http' using regular expressions. Since websites are frequently updated,
     the returned number may change as links get added and deleted.
     -----
     import urllib.request
@@ -307,8 +307,8 @@ Mixed-Up Code Questions
     :practice: T
     :autograde: unittest
 
-    Write a function called ``reg_num_links`` that takes in a parameter ``url`` and returns the number of 'href' 
-    attributes that start with 'http' using regular expressions. Since websites are frequently updated, 
+    Write a function called ``reg_num_links`` that takes in a parameter ``url`` and returns the number of 'href'
+    attributes that start with 'http' using regular expressions. Since websites are frequently updated,
     the returned number may change as links get added and deleted.
     ~~~~
 
@@ -331,8 +331,8 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``bsoup_num_links`` that takes in a parameter ``url`` and returns the number of 'href' 
-    attributes that start with 'http' using BeautifulSoup. Since websites are frequently updated, 
+    Create a function called ``bsoup_num_links`` that takes in a parameter ``url`` and returns the number of 'href'
+    attributes that start with 'http' using BeautifulSoup. Since websites are frequently updated,
     the returned number may change as links get added and deleted.
     -----
     import requests
@@ -368,8 +368,8 @@ Mixed-Up Code Questions
     :practice: T
     :autograde: unittest
 
-    Write a function called ``bsoup_num_links`` that takes in a parameter ``url`` and returns the number of 'href' 
-    attributes that start with 'http' using BeautifulSoup. Since websites are frequently updated, 
+    Write a function called ``bsoup_num_links`` that takes in a parameter ``url`` and returns the number of 'href'
+    attributes that start with 'http' using BeautifulSoup. Since websites are frequently updated,
     the returned number may change as links get added and deleted.
     ~~~~
 
@@ -397,7 +397,7 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``img_links`` that takes in a parameter ``url`` and returns a list that contains all image links 
+    Create a function called ``img_links`` that takes in a parameter ``url`` and returns a list that contains all image links
     using BeautifulSoup. Since websites are frequently updated, the returned list of image links may change as image links get added and deleted.
     -----
     import requests
@@ -427,7 +427,7 @@ Mixed-Up Code Questions
     :practice: T
     :autograde: unittest
 
-    Write a function called ``img_links`` that takes in a parameter ``url`` and returns a list that contains all image links 
+    Write a function called ``img_links`` that takes in a parameter ``url`` and returns a list that contains all image links
     using BeautifulSoup. Since websites are frequently updated, the returned list of image links may change as image links get added and deleted.
     ~~~~
 
@@ -453,9 +453,9 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``span_attrs`` that takes in a parameter ``url`` and returns a list of dictionaries using BeautifulSoup. 
-    Each dictionary is equivalent to each span tag. The keys of the dictionary are the attributes of the span tag, 
-    and the values of the dictionary are the values of the attributes. Since websites are frequently updated, 
+    Create a function called ``span_attrs`` that takes in a parameter ``url`` and returns a list of dictionaries using BeautifulSoup.
+    Each dictionary is equivalent to each span tag. The keys of the dictionary are the attributes of the span tag,
+    and the values of the dictionary are the values of the attributes. Since websites are frequently updated,
     the returned list of dictionaries may change as span tags, attributes, and values get added, deleted, or modified.
     -----
     import requests
@@ -494,9 +494,9 @@ Mixed-Up Code Questions
     :practice: T
     :autograde: unittest
 
-    Write a function called ``span_attrs`` that takes in a parameter ``url`` and returns a list of dictionaries using BeautifulSoup. 
-    Each dictionary is equivalent to each span tag. The keys of the dictionary are the attributes of the span tag, 
-    and the values of the dictionary are the values of the attributes. Since websites are frequently updated, 
+    Write a function called ``span_attrs`` that takes in a parameter ``url`` and returns a list of dictionaries using BeautifulSoup.
+    Each dictionary is equivalent to each span tag. The keys of the dictionary are the attributes of the span tag,
+    and the values of the dictionary are the values of the attributes. Since websites are frequently updated,
     the returned list of dictionaries may change as span tags, attributes, and values get added, deleted, or modified.
     ~~~~
 
@@ -514,5 +514,5 @@ Mixed-Up Code Questions
                 for tag in tags:
                     list1.append(tag.attrs)
                 self.assertEqual(span_attrs(link),list1,"span_attrs(link)")
-            
+
     myTests().main()
