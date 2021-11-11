@@ -1,37 +1,41 @@
 Mixed-Up Code Questions
 ------------------------
 
-.. parsonsprob:: inheritance_mixed1
+.. parsonsprob:: inheritance_mixed1_v3
     :numbered: left
     :practice: T
     :adaptive:
 
-    Create a class called ``Fruit`` with a ``constructor`` that takes a parameter ``size``. Next, create a class called ``Orange`` that inherits from ``Fruit``.  Create a constructor for ``Orange`` that takes ``size`` and ``flavor`` and call the  ``Fruit`` constructor to initialze the ``size``.  For example, ``Fruit(10).size`` would be ``10``,
-    and ``Orange(10, 'sweet').flavor`` would be ``"sweet"``.
+    Create a class ``Person`` with a ``constructor`` that takes ``first_name`` and ``last_name`` and inititalize those attributes in the current object. Next, create a class called ``Customer`` that inherits from ``Person`` with a constructor that takes ``first_name``, ``last_name``, and ``id``.  Call the constructor in ``Person`` to initialize ``first_name`` and ``last_name`` and then also set the ``id`` attribute in the ``Customer`` object.  For example, ``Person("Barb", "Ericson").last_name == "Ericson"`` and ``Customer("Barb", "Ericson", "a1").id == ``"a1"``.
     -----
-    class Fruit:
+    class Person:
     =====
-        def __init__(self, size):
+        def __init__(self, first_name, last_name):
     =====
-        def init(self, size): #paired
+        def init(first_name, last_name): #paired
     =====
-            self.size = size
+            self.first_name = first_name
+            self.last_name = last_name
     =====
-    class Orange(Fruit):
+    class Customer(Person):
     =====
-    class Orange(): #paired
+    class Customer extends Person: #paired
     =====
-        def __init__(self, size, flavor):
+        def __init__(self, first_name, last_name, id):
     =====
-            super().__init__(size)
+        def __init__(first_name, last_name, id): #paired
     =====
-            self.flavor = flavor
+            super().__init__(first_name, last_name)
+    =====
+            super.__init__(first_name, last_name) #paired
+    =====
+            self.id = id
 
-.. activecode:: inheritance_mixed1_ac
+
+.. activecode:: inheritance_mixed1_ac_v3
     :autograde: unittest
 
-    Write a class called ``Fruit`` with a ``constructor`` that takes a parameter ``size``. Next, create a class called ``Orange`` that inherits from ``Fruit``.  Create a constructor for ``Orange`` that takes ``size`` and ``flavor`` and call the  ``Fruit`` constructor to initialze the ``size``.  For example, ``Fruit(10).size`` would be ``10``,
-    and ``Orange(10, 'sweet').flavor`` would be ``"sweet"``.
+    Write a class ``Person`` with a ``constructor`` that takes ``first_name`` and ``last_name`` and inititalize those attributes in the current object. Next, create a class called ``Customer`` that inherits from ``Person`` with a constructor that takes ``first_name``, ``last_name``, and ``id``.  Call the constructor in ``Person`` to initialize ``first_name`` and ``last_name`` and then also set the ``id`` attribute in the ``Customer`` object.  For example, ``Person("Barb", "Ericson").last_name == "Ericson"`` and ``Customer("Barb", "Ericson", "a1").id == ``"a1"``.
     ~~~~
 
     ====
@@ -40,24 +44,25 @@ Mixed-Up Code Questions
     class myTests(TestCaseGui):
 
         def testOne(self):
-            size = 10
-            flavor = 'sweet'
-            f = Fruit(10)
-            f2 = Orange(10, 'sweet')
-            self.assertEqual(f.size, size, "Fruit(10).size")
-            self.assertEqual(f2.size, size, "Orange(10, 'sweet').size")
-            self.assertEqual(f2.flavor, flavor, "Orange(10, 'sweet').flavor")
+            p = Person("Barb", "Ericson")
+            c = Customer("Barb", "Ericson", "a1")
+            self.assertEqual(p.first_name, "Barb", 'Person("Barb", "Ericson").first_name')
+            self.assertEqual(p.last_name, "Ericson", 'Person("Barb", "Ericson").last_name')
+            self.assertEqual(c.first_name, "Barb", 'Customer("Barb", "Ericson", "a1").first_name')
+            self.assertEqual(c.last_name, "Ericson", 'Customer("Barb", "Ericson", "a1").last_name')
+            self.assertEqual(c.id, "a1", 'Customer("Barb", "Ericson", "a1").id')
+
 
     myTests().main()
 
-.. parsonsprob:: inheritance_mixed2
+.. parsonsprob:: inheritance_mixed2_v3
     :numbered: left
     :practice: T
     :adaptive:
 
     Create a class called ``Person`` with a ``constructor`` that takes ``name`` and ``age``. Next, create a class called ``Student`` that inherits from ``Person``.
-    The constructor for ``Stuent`` takes ``name``, ``age``, ``grade``, and ``gpa``. Have the constructor for the ``Student`` class call the constructor for the ``Person`` class to initialize the ``name`` and ``age``.  For example, ``Person('Susan', 13).name`` would be ``"Susan"``
-    and ``Student('Sally', 16, 11, 3.7).gpa`` would be ``3.7``.
+    The constructor for ``Student`` takes ``name``, ``age``, and ``gpa``. Have the constructor for the ``Student`` class call the constructor for the ``Person`` class to initialize the ``name`` and ``age`` and then set the value for the ``gpa``.  For example, ``Person('Susan', 13).name`` would be ``"Susan"``
+    and ``Student('Sally', 16, 3.7).gpa`` would be ``3.7``.
     -----
     class Person:
     =====
@@ -72,23 +77,22 @@ Mixed-Up Code Questions
     =====
     class Student(): #paired
     =====
-        def __init__(self, name, age, grade, gpa):
+        def __init__(self, name, age, gpa):
     =====
-        def __init__(name, age, grade, gpa): #paired
+        def __init__(name, age, gpa): #paired
     =====
             super().__init__(name, age)
     =====
             super.__init__(name,age) #paired
     =====
-            self.grade = grade
             self.gpa = gpa
 
-.. activecode:: inheritance_mixed2_ac
+.. activecode:: inheritance_mixed2_ac_v3
     :autograde: unittest
 
     Write a class called ``Person`` with a ``constructor`` that takes ``name`` and ``age``. Next, create a class called ``Student`` that inherits from ``Person``.
-    The constructor for ``Stuent`` takes ``name``, ``age``, ``grade``, and ``gpa``. Have the constructor for the ``Student`` class call the constructor for the ``Person`` class to initialize the ``name`` and ``age``.  For example, ``Person('Susan', 13).name`` would be ``"Susan"``
-    and ``Student('Sally', 16, 11, 3.7).gpa`` would be ``3.7``.
+    The constructor for ``Student`` takes ``name``, ``age``, and ``gpa``. Have the constructor for the ``Student`` class call the constructor for the ``Person`` class to initialize the ``name`` and ``age`` and then set the value for the ``gpa``.  For example, ``Person('Susan', 13).name`` would be ``"Susan"``
+    and ``Student('Sally', 16, 3.7).gpa`` would be ``3.7``.
     ~~~~
 
     ====
@@ -98,56 +102,52 @@ Mixed-Up Code Questions
 
         def testOne(self):
             p = Person('Susan', 13)
-            s = Student('Sally', 16, 11, 3.7)
+            s = Student('Sally', 16, 3.7)
             self.assertEqual(p.name, 'Susan', "Person('Susan', 13).name")
             self.assertEqual(p.age, 13, "Person('Susan', 13).age")
-            self.assertEqual(s.name, 'Sally', "Student('Sally', 16, 11, 3.7).name")
-            self.assertEqual(s.age, 16, "Student('Sally', 16, 11, 3.7).age")
-            self.assertEqual(s.grade, 11, "Student('Sally', 16, 11, 3.7).grade")
-            self.assertEqual(s.gpa, 3.7, "Student('Sally', 16, 11, 3.7).gpa")
+            self.assertEqual(s.name, 'Sally', "Student('Sally', 16, 3.7).name")
+            self.assertEqual(s.age, 16, "Student('Sally', 16, 3.7).age")
+            self.assertEqual(s.gpa, 3.7, "Student('Sally', 16, 3.7).gpa")
 
     myTests().main()
 
-.. parsonsprob:: inheritance_mixed3
+.. parsonsprob:: inheritance_mixed3_v3
     :numbered: left
     :practice: T
     :adaptive:
 
-    Create a class called ``Building`` with a ``constructor`` that takes in parameters ``floors``, ``sqft``, and ``num_doors``. Next, create a class called ``House`` with a
-    ``constructor`` that inherits from the ``Building`` constructor and additionally has parameters ``bedrooms``, ``bathrooms``, and ``acres``. For example, ``Building(15, 10000, 70).num_doors`` would be ``70``
-    and ``House(3, 2000, 10, 4, 4, 0.5).acres`` would be ``0.5``.
+    Create a class called ``Building`` with a ``constructor`` that inititalizes the attributes ``floors`` and ``sqft``. Next, create a class called ``House`` that inherits from ``Building``. The constructor for ``House`` should take ``floors``, ``sqft``, and ``bedrooms`` and call the construtor in ``Building`` to initialze the ``floors`` and ``sqft`` before setting the attribute ``bedrooms``. For example, ``Building(15, 10000).floors`` would be ``15``
+    and ``House(3, 2000, 3).bedrooms`` would be ``3``.
     -----
     class Building:
     =====
-        def __init__(self, floors, sqft, num_doors):
+        def __init__(self, floors, sqft):
     =====
-        def __init__(floors, sqft, num_doors):
+        def __init__(floors, sqft): #paired
     =====
             self.floors = floors
             self.sqft = sqft
-            self.num_doors = num_doors
     =====
     class House(Building):
     =====
     class House: #paired
     =====
-        def __init__(self, floors, sqft, num_doors, bedrooms, bathrooms, acres):
+        def __init__(self, floors, sqft, bedrooms):
     =====
-        def __init__(self, floors, sqft, bedrooms, bathrooms, acres): #paired
+        def __init__(floors, sqft, bedrooms): #paired
     =====
-            super().__init__(floors, sqft, num_doors)
+            super().__init__(floors, sqft)
+    =====
+            super.__init__(floors, sqft) #paired
     =====
             self.bedrooms = bedrooms
-            self.bathrooms = bathrooms
-            self.acres = acres
 
 
-.. activecode:: inheritance_mixed3_ac
+.. activecode:: inheritance_mixed3_ac_v3
     :autograde: unittest
 
-    Write a class called ``Building`` with a ``constructor`` that takes in parameters ``floors``, ``sqft``, and ``num_doors``. Next, create a class called ``House`` with a
-    ``constructor`` that inherits from the ``Building`` constructor and additionally has parameters ``bedrooms``, ``bathrooms``, and ``acres``. For example, ``Building(15, 10000, 70).num_doors`` would be ``70``
-    and ``House(3, 2000, 10, 4, 4, 0.5).acres`` would be ``0.5``.
+    Write a class called ``Building`` with a ``constructor`` that inititalizes the attributes ``floors`` and ``sqft``. Next, create a class called ``House`` that inherits from ``Building``. The constructor for ``House`` should take ``floors``, ``sqft``, and ``bedrooms`` and call the construtor in ``Building`` to initialze the ``floors`` and ``sqft`` before setting the attribute ``bedrooms``. For example, ``Building(15, 10000).floors`` would be ``15``
+    and ``House(3, 2000, 3).bedrooms`` would be ``3``.
     ~~~~
 
     ====
@@ -156,59 +156,52 @@ Mixed-Up Code Questions
     class myTests(TestCaseGui):
 
         def testOne(self):
-            b = Building(15, 10000, 70)
-            h = House(3, 2000, 10, 4, 4, 0.5)
+            b = Building(15, 10000)
+            h = House(3, 2000, 4)
 
-            self.assertEqual(b.floors, 15, "Building(15, 10000, 70).floors")
-            self.assertEqual(b.sqft, 10000, "Building(15, 10000, 70).sqft")
-            self.assertEqual(b.num_doors, 70, "Building(15, 10000, 70).num_doors")
-
-            self.assertEqual(h.floors, 3, "House(3, 2000, 10, 4, 4, 0.5).floors")
-            self.assertEqual(h.sqft, 2000, "House(3, 2000, 10, 4, 4, 0.5).sqft")
-            self.assertEqual(h.num_doors, 10, "House(3, 2000, 10, 4, 4, 0.5).num_doors")
-            self.assertEqual(h.bedrooms, 4, "House(3, 2000, 10, 4, 4, 0.5).bedrooms")
-            self.assertEqual(h.bathrooms, 4, "House(3, 2000, 10, 4, 4, 0.5).bathrooms")
-            self.assertEqual(h.acres, 0.5, "House(3, 2000, 10, 4, 4, 0.5).acres")
+            self.assertEqual(b.floors, 15, "Building(15, 10000).floors")
+            self.assertEqual(b.sqft, 10000, "Building(15, 10000).sqft")
+            self.assertEqual(h.floors, 3, "House(3, 2000, 4).floors")
+            self.assertEqual(h.sqft, 2000, "House(3, 2000, 4).sqft")
+            self.assertEqual(h.bedrooms, 4, "House(3, 2000, 4).bedrooms")
 
 
     myTests().main()
 
-.. parsonsprob:: inheritance_mixed4
+.. parsonsprob:: inheritance_mixed4_v3
     :numbered: left
     :practice: T
     :adaptive:
 
-    Create a class called ``Sport`` with a ``constructor`` that takes in parameters ``teamsize`` and ``equipment`` and a ``__str__`` method that returns
-    ``"teamsize: (teamsize), equipment: (equipment)"``. Next, create a class called ``Tennis`` with a ``constructor`` that inherits from the ``Sport``
-    constructor and additionally has a parameter ``type_court``. For example, ``Sport(20, 'football').__str__()`` would return
-    ``"teamsize: 20, equipment: football"``, and ``Tennis(2, 'racquet', 'clay').type_court`` would be ``'clay'``.  In the constructor for ``Tennis`` first call the parent constructor to set the ``teamsize`` and ``equipment``.  Then set the ``type_court``.
+    Create a class ``Account`` with an attribute of ``balance`` and methods of ``deposit`` and ``withdraw`` that both take an ``amount``. For example, ``Account(200).withdraw(50)`` should set the balance to ``150`` and ``Account(200).deposit(100)`` should set the balance to ``300``.
     -----
-    class Sport:
+    class Account:
     =====
-        def __init__(self, teamsize, equipment):
+        def __init__(self, balance):
     =====
-            self.teamsize = teamsize
-            self.equipment = equipment
+            self.balance = balance
     =====
-        def __str__(self):
+        def deposit(self, amount):
     =====
-            return "teamsize: " + str(self.teamsize) + ", equipment: " + str(self.equipment)
+        def deposit(amount): #paired
     =====
-    class Tennis(Sport):
+            self.balance += amount
     =====
-        def __init__(self, teamsize, equipment, type_court):
+            balance += amount #paired
     =====
-            super().__init__(teamsize, equipment)
+        def withdraw(self, amount):
     =====
-            self.type_court = type_court
+        def withdraw(amount): #paired
+    =====
+            self.balance -= amount
+    =====
+            balance -= amount #paired
 
-.. activecode:: inheritance_mixed4_ac
+
+.. activecode:: inheritance_mixed4_ac_v3
     :autograde: unittest
 
-    Write a class called ``Sport`` with a ``constructor`` that takes in parameters ``teamsize`` and ``equipment`` and a ``__str__`` method that returns
-    ``"teamsize: (teamsize), equipment: (equipment)"``. Next, create a class called ``Tennis`` with a ``constructor`` that inherits from the ``Sport``
-    constructor and additionally has a parameter ``type_court``. For example, ``Sport(20, 'football').__str__()`` would return
-    ``"teamsize: 20, equipment: football"``, and ``Tennis(2, 'racquet', 'clay').type_court`` would be ``'clay'``.
+    Write a class ``Account`` with an attribute of ``balance`` and methods of ``deposit`` and ``withdraw`` that both take an ``amount``. For example, ``Account(200).withdraw(50)`` should set the balance to ``150`` and ``Account(200).deposit(100)`` should set the balance to ``300``.
     ~~~~
 
 
@@ -218,64 +211,64 @@ Mixed-Up Code Questions
     class myTests(TestCaseGui):
 
         def testOne(self):
-            s = Sport(20, 'football')
-            t = Tennis(2, 'racquet', 'clay')
-
-            self.assertEqual(s.teamsize, 20, "Sport(20, 'football').teamsize")
-            self.assertEqual(s.equipment, "football", "Sport(20, 'football').equipment")
-            self.assertEqual(s.__str__(), "teamsize: 20, equipment: football", "Sport(20, 'football').__str__()")
-
-            self.assertEqual(t.teamsize, 2, "Tennis(2, 'racquet', 'clay').teamsize")
-            self.assertEqual(t.equipment, 'racquet', "Tennis(2, 'racquet', 'clay').equipment")
-            self.assertEqual(t.type_court, 'clay', "Tennis(2, 'racquet', 'clay').type_court")
+            a = Account(200)
+            b = Account(200)
+            c = Account(50)
+            d = Account(50)
+            e = Account(-50)
+            a.withdraw(50)
+            self.assertEqual(a.balance, 150, 'Account(200).withdraw(50)')
+            b.deposit(100)
+            self.assertEqual(b.balance, 300, 'Account(200).deposit(100)')
+            c.withdraw(75)
+            self.assertEqual(c.balance, -25, 'Account(50).withdraw(75)')
+            d.deposit(50)
+            self.assertEqual(d.balance, 100, 'Account(50).deposit(50)')
+            e.deposit(50)
+            self.assertEqual(e.balance, 0, 'Account(-50).deposit(50)')
 
     myTests().main()
 
-.. parsonsprob:: inheritance_mixed5
+.. parsonsprob:: inheritance_mixed5_v3
     :numbered: left
     :practice: T
     :adaptive:
 
-    Create a class called ``Animal`` with a ``constructor`` that takes in parameters ``name`` and ``age`` and a ``__str__`` method that returns
-    ``"name: (name), age: (age)"``. Next, create a class called ``Dog`` with a ``constructor`` that inherits from the ``Animal``
-    ``constructor`` and additionally has parameters ``swim``, which is assigned to ``True`` if the ``Dog`` can swim and ``False`` otherwise, and ``trained``,
-    which is assigned to an integer that rates how trained the ``Dog`` is on a scale from 1 to 10. Additionally, the ``Dog`` class has a ``__str__`` method that
-    inherits from the ``Animal`` ``__str__`` method and returns "name: (name), age: (age), swim: (swim), trained: (trained)". For example,
-    ``Animal('charlie', 4).__str__()`` would return ``"name: charlie, age: 4"``, and ``Dog('coco', 2, True, 7).trained`` would be ``7``.
+    Create a class ``Animal`` with an attribute of ``name`` and a method ``make_noise`` that returns ``"Noise"``.  Then create a ``Dog`` class that inherits from ``Animal``.  Have the constructor in ``Dog`` call the constructor in ``Animal`` to initialze the ``name``. In ``Dog`` also override the ``make_noise`` method inherited from ``Animal`` to return ``"Bark"``.   For example, ``Animal("Diana").make_noise()`` returns ``"Noise"`` and ``Dog("Percy").make_noise()`` returns ``"Bark"``.
     -----
     class Animal:
     =====
-        def __init__(self, name, age):
+    def class Animal: #paired
+    =====
+        def __init__(self, name):
     =====
             self.name = name
-            self.age = age
     =====
-        def __str__(self):
+        def make_noise(self):
     =====
-            return "name: " + str(self.name) + ", age: " + str(self.age)
+        def make_noise(): #paired
+    =====
+            return "Noise"
     =====
     class Dog(Animal):
     =====
-        def __init__(self, name, age, swim, trained):
+    class Dog: #paired
     =====
-            super().__init__(name, age)
+        def __init__(self, name):
     =====
-            self.swim = swim
-            self.trained = trained
+            super().__init__(name)
     =====
-        def __str__(self):
+        def make_noise(self):
     =====
-            return super().__str__() + ", swim: " + str(self.swim) + ", trained: " + str(self.trained)
+        def make_noise(): #paired
+    =====
+            return "Bark"
 
-.. activecode:: inheritance_mixed5_ac
+
+.. activecode:: inheritance_mixed5_ac_v3
     :autograde: unittest
 
-    Write a class called ``Animal`` with a ``constructor`` that takes in parameters ``name`` and ``age`` and a ``__str__`` method that returns
-    ``"name: (name), age: (age)"``. Next, create a class called ``Dog`` with a ``constructor`` that inherits from the ``Animal``
-    ``constructor`` and additionally has parameters ``swim``, which is assigned to ``True`` if the ``Dog`` can swim and ``False`` otherwise, and ``trained``,
-    which is assigned to an integer that rates how trained the ``Dog`` is on a scale from 1 to 10. Additionally, the ``Dog`` class has a ``__str__`` method that
-    inherits from the ``Animal`` ``__str__`` method and returns "name: (name), age: (age), swim: (swim), trained: (trained)". For example,
-    ``Animal('charlie', 4).__str__()`` would return ``"name: charlie, age: 4"``, and ``Dog('coco', 2, True, 7).trained`` would be ``7``.
+    Write a class ``Animal`` with an attribute of ``name`` and a method ``make_noise`` that returns ``"Noise"``.  Then create a ``Dog`` class that inherits from ``Animal``.  Have the constructor in ``Dog`` call the constructor in ``Animal`` to initialze the ``name``. In ``Dog`` also override the ``make_noise`` method inherited from ``Animal`` to return ``"Bark"``.   For example, ``Animal("Diana").make_noise()`` returns ``"Noise"`` and ``Dog("Percy").make_noise()`` returns ``"Bark"``.
     ~~~~
 
     ====
@@ -284,132 +277,57 @@ Mixed-Up Code Questions
     class myTests(TestCaseGui):
 
         def testOne(self):
-            a = Animal('charlie', 4)
-            d = Dog('coco', 2, True, 7)
+            a = Animal('Diana')
+            d = Dog('Percy')
+            self.assertEqual(a.make_noise(),"Noise", 'Animal("Diana").make_noise()')
+            self.assertEqual(a.name,"Diana", 'Animal("Diana").name')
+            self.assertEqual(d.make_noise(),"Bark", 'Dog("Percy").make_noise()')
+            self.assertEqual(d.name,"Percy", 'Dog("Percy").name')
 
-            self.assertEqual(a.name, 'charlie', "Animal('charlie', 4).name")
-            self.assertEqual(a.age, 4, "Animal('charlie', 4).age")
-            self.assertEqual(a.__str__(), "name: charlie, age: 4", "Animal('charlie', 4).__str__()")
-
-            self.assertEqual(d.name, 'coco', "Dog('coco', 2, True, 7).name")
-            self.assertEqual(d.age, 2, "Dog('coco', 2, True, 7).age")
-            self.assertEqual(d.swim, True, "Dog('coco', 2, True, 7).swim")
-            self.assertEqual(d.trained, 7, "Dog('coco', 2, True, 7).trained")
-            self.assertEqual(d.__str__(), "name: coco, age: 2, swim: True, trained: 7", "Dog('coco', 2, True, 7).__str__()")
-
-    myTests().main()
-
-.. parsonsprob:: inheritance_mixed6
-    :numbered: left
-    :practice: T
-    :adaptive:
-
-    Create a class called ``Book`` with a ``constructor`` that takes in parameters ``pages``, ``table_contents``, and ``author``, and a ``__str__``
-    method that returns ``"pages: (pages), table_contents: (table_contents), author: (author)"``. Next, create a class called ``Encyclopedia`` with
-    a ``constructor`` that inherits from the ``Book`` constructor and additionally has parameters ``volumes`` and ``subject``. For example,
-    ``Book(200, True, 'JK Rowling').__str__()`` would return ``"pages: 200, table_contents: True, author: JK Rowling"``, and
-    ``Encyclopedia(800, True, 'Denis Diderot', 28, 'science').subject`` would be ``'science'``.
-    -----
-    class Book:
-    =====
-        def __init__(self, pages, table_contents, author):
-    =====
-            self.pages = pages
-            self.table_contents = table_contents
-            self.author = author
-    =====
-        def __str__(self):
-    =====
-            return "pages: " + str(self.pages) + ", table_contents: " + str(self.table_contents) + ", author: " + str(self.author)
-    =====
-    class Encyclopedia(Book):
-    =====
-        def __init__(self, pages, table_contents, author, volumes, subject):
-    =====
-            super().__init__(pages, table_contents, author)
-    =====
-            self.volumes = volumes
-            self.subject = subject
-
-
-.. activecode:: inheritance_mixed6_ac
-    :autograde: unittest
-
-    Write a class called ``Book`` with a ``constructor`` that takes in parameters ``pages``, ``table_contents``, and ``author``, and a ``__str__``
-    method that returns ``"pages: (pages), table_contents: (table_contents), author: (author)"``. Next, create a class called ``Encyclopedia`` with
-    a ``constructor`` that inherits from the ``Book`` constructor and additionally has parameters ``volumes`` and ``subject``. For example,
-    ``Book(200, True, 'JK Rowling').__str__()`` would return ``"pages: 200, table_contents: True, author: JK Rowling"``, and
-    ``Encyclopedia(800, True, 'Denis Diderot', 28, 'science').subject`` would be ``'science'``.
-    ~~~~
-
-    ====
-    from unittest.gui import TestCaseGui
-
-    class myTests(TestCaseGui):
-
-        def testOne(self):
-            b = Book(200, True, 'JK Rowling')
-            e = Encyclopedia(800, True, 'Denis Diderot', 28, 'science')
-
-            self.assertEqual(b.pages, 200, "Book(200, True, 'JK Rowling').pages")
-            self.assertEqual(b.table_contents, True, "Book(200, True, 'JK Rowling').table_contents")
-            self.assertEqual(b.author, 'JK Rowling', "Book(200, True, 'JK Rowling').author")
-            self.assertEqual(b.__str__(), "pages: 200, table_contents: True, author: JK Rowling", "Book(200, True, 'JK Rowling').__str__()")
-
-            self.assertEqual(e.pages, 800, "Encyclopedia(800, True, 'Denis Diderot', 28, 'science').pages")
-            self.assertEqual(e.table_contents, True, "Encyclopedia(800, True, 'Denis Diderot', 28, 'science').table_contents")
-            self.assertEqual(e.author, 'Denis Diderot', "Encyclopedia(800, True, 'Denis Diderot', 28, 'science').author")
-            self.assertEqual(e.volumes, 28, "Encyclopedia(800, True, 'Denis Diderot', 28, 'science').volumes")
-            self.assertEqual(e.subject, 'science', "Encyclopedia(800, True, 'Denis Diderot', 28, 'science').subject")
 
 
     myTests().main()
 
-.. parsonsprob:: inheritance_mixed7
+.. parsonsprob:: inheritance_mixed6_v3
     :numbered: left
     :practice: T
     :adaptive:
 
-    Create a class called ``Hat`` with a ``constructor`` that takes in parameters ``size``, ``cost``, and ``material``, and a ``__str__`` method that returns
-    ``"size: (size), cost: (cost), material: (material)"``. Next, create a class called ``Fedora`` with a ``constructor`` that inherits from the ``Hat``
-    ``constructor`` and additionally has a parameter ``basketweave``, which is assigned to ``True`` if the ``Fedora`` is made with a ``basketweave``` and
-    ``False`` otherwise. Additionally, the ``Fedora`` class has a ``__str__`` method that inherits from the ``Hat`` ``__str__`` method and returns
-    ``"size: (size), cost: (cost), material: (material), basketweave: (basketweave)"``. For example, ``Hat('small', 30, 'Cotton').__str__()`` would
-    return ``"size: small, cost: 30, material: Cotton"``, and ``Fedora('large', 50, 'Polyester', True).material`` would be ``'Polyester'``.
+    Create a class ``Animal`` with an attribute of ``name`` and a method ``make_noise`` that returns ``"Noise"``.  Then create a ``Cat`` class that inherits from ``Animal``.  Have the constructor in ``Cat`` call the constructor in ``Animal`` to initialze the ``name``. In ``Cat`` also override the ``make_noise`` method inherited from ``Animal`` to return ``"Meow"``.   For example, ``Animal("Spike").make_noise()`` returns ``"Noise"`` and ``Cat("Diana").make_noise()`` returns ``"Meow"``.
     -----
-    class Hat:
+    class Animal:
     =====
-        def __init__(self, size, cost, material):
+    def class Animal: #paired
     =====
-            self.size = size
-            self.cost = cost
-            self.material = material
+        def __init__(self, name):
     =====
-        def __str__(self):
+            self.name = name
     =====
-            return "size: " + str(self.size) + ", cost: " + str(self.cost) + ", material: " + str(self.material)
+        def make_noise(self):
     =====
-    class Fedora(Hat):
+        def make_noise(): #paired
     =====
-        def __init__(self, size, cost, material, basketweave):
+            return "Noise"
     =====
-            super().__init__(size, cost, material)
+    class Cat(Animal):
     =====
-            self.basketweave = basketweave
+    class Cat: #paired
     =====
-        def __str__(self):
+        def __init__(self, name):
     =====
-            return "size: " + str(self.size) + ", cost: " + str(self.cost) + ", material: " + str(self.material) + ", basketweave: " + str(self.basketweave)
+            super().__init__(name)
+    =====
+        def make_noise(self):
+    =====
+        def make_noise(): #paired
+    =====
+            return "Meow"
 
-.. activecode:: inheritance_mixed7_ac
+
+.. activecode:: inheritance_mixed6_ac_v3
     :autograde: unittest
 
-    Write a class called ``Hat`` with a ``constructor`` that takes in parameters ``size``, ``cost``, and ``material``, and a ``__str__`` method that returns
-    ``"size: (size), cost: (cost), material: (material)"``. Next, create a class called ``Fedora`` with a ``constructor`` that inherits from the ``Hat``
-    ``constructor`` and additionally has a parameter ``basketweave``, which is assigned to ``True`` if the ``Fedora`` is made with a ``basketweave``` and
-    ``False`` otherwise. Additionally, the ``Fedora`` class has a ``__str__`` method that inherits from the ``Hat`` ``__str__`` method and returns
-    ``"size: (size), cost: (cost), material: (material), basketweave: (basketweave)"``. For example, ``Hat('small', 30, 'Cotton').__str__()`` would
-    return ``"size: small, cost: 30, material: Cotton"``, and ``Fedora('large', 50, 'Polyester', True).material`` would be ``'Polyester'``.
+    Write a class ``Animal`` with an attribute of ``name`` and a method ``make_noise`` that returns ``"Noise"``.  Then create a ``Cat`` class that inherits from ``Animal``.  Have the constructor in ``Cat`` call the constructor in ``Animal`` to initialze the ``name``. In ``Cat`` also override the ``make_noise`` method inherited from ``Animal`` to return ``"Meow"``.   For example, ``Animal("Spike").make_noise()`` returns ``"Noise"`` and ``Cat("Diana").make_noise()`` returns ``"Meow"``.
     ~~~~
 
     ====
@@ -418,70 +336,53 @@ Mixed-Up Code Questions
     class myTests(TestCaseGui):
 
         def testOne(self):
-            h = Hat('small', 30, 'Cotton')
-            f = Fedora('large', 50, 'Polyester', True)
-
-            self.assertEqual(h.size, 'small', "Hat('small', 30, 'Cotton').size")
-            self.assertEqual(h.cost, 30, "Hat('small', 30, 'Cotton').cost")
-            self.assertEqual(h.material, 'Cotton', "Hat('small', 30, 'Cotton').material")
-            self.assertEqual(h.__str__(), "size: small, cost: 30, material: Cotton", "Hat('small', 30, 'Cotton').__str__()")
-
-            self.assertEqual(f.size, 'large', "Fedora('large', 50, 'Polyester', True).size")
-            self.assertEqual(f.cost, 50, "Fedora('large', 50, 'Polyester', True).cost")
-            self.assertEqual(f.material, 'Polyester', "Fedora('large', 50, 'Polyester', True).material")
-            self.assertEqual(f.basketweave, True, "Fedora('large', 50, 'Polyester', True).basketweave")
-            self.assertEqual(f.__str__(), "size: large, cost: 50, material: Polyester, basketweave: True", "Fedora('large', 50, 'Polyester', True).__str__()")
+            a = Animal('Spike')
+            c = Cat('Diana')
+            self.assertEqual(a.make_noise(),"Noise", 'Animal("Spike").make_noise()')
+            self.assertEqual(a.name,"Spike", 'Animal("Spike").name')
+            self.assertEqual(c.make_noise(),"Meow", 'Cat("Diana").make_noise()')
+            self.assertEqual(c.name,"Diana", 'Cat("Diana").name')
 
     myTests().main()
 
-.. parsonsprob:: inheritance_mixed8
+.. parsonsprob:: inheritance_mixed7_v3
     :numbered: left
     :practice: T
     :adaptive:
 
-    Create a class called ``Vehicle`` with a ``constructor`` that takes in parameters ``mph``, ``color``, and ``weight``. Next, create a class called ``Car`` with a
-    ``constructor`` that inherits from the ``Vehicle`` constructor and additionally has a parameter ``electric``. Lastly, create a class called ``ElectricCar`` with a
-    ``constructor`` that inherits from the ``Car`` constructor and additionally has a parameter ``cost``. For example, ``Vehicle(3.5, 'grey', 2000).weight`` would be ``2000``,
-    ``Car(40, 'blue', 4000, False).electric`` would be ``False``, and ``ElectricCar(40, 'red', 3000, True, 30000).cost`` would be ``30000``.
+    Given a class ``Point`` that has attributes of ``x`` and ``y`` and a method ``distance_to(self, other)`` that returns the distance between the current point (self) and the other point, create a ``MyCircle`` class that has a constructor that takes two attibutes ``p1`` and ``p2`` both objects of the class ``Point``.  Also create a ``radius`` method that returns the radius of the circle (half the distance between the two points that define circle).
     -----
-    class Vehicle:
+    class MyCircle:
     =====
-        def __init__(self, mph, color, weight):
+    class MyCircle(Point): #paired
     =====
-        def init(self, mph, color, weight): #paired
+        def __init__(self, p1, p2):
     =====
-            self.mph = mph
-            self.color = color
-            self.weight = weight
+        def __init__(p1, p2): #paired
     =====
-    class Car(Vehicle):
+            self.p1 = p1
+            self.p2 = p2
     =====
-        def __init__(self, mph, color, weight, electric):
+        def radius(self):
     =====
-            super().__init__(mph, color, weight)
+        def radius(): #paired
     =====
-            self.electric = electric
+            return self.p1.distance_to(self.p2) / 2
     =====
-    class ElectricCar(Car):
-    =====
-    class ElectricCar(Vehicle): #paired
-    =====
-        def __init__(self, mph, color, weight, electric, cost):
-    =====
-            super().__init__(mph, color, weight, electric)
-    =====
-            super().__init__(mph, color, weight, electric, cost) #paired
-    =====
-            self.cost = cost
+            return p1.distance_to(p2) / 2 #paired
 
-.. activecode:: inheritance_mixed8_ac
+
+.. activecode:: inheritance_mixed7_ac_v3
     :autograde: unittest
 
-    Write a class called ``Vehicle`` with a ``constructor`` that takes in parameters ``mph``, ``color``, and ``weight``. Next, create a class called ``Car`` with a
-    ``constructor`` that inherits from the ``Vehicle`` constructor and additionally has a parameter ``electric``. Lastly, create a class called ``ElectricCar`` with a
-    ``constructor`` that inherits from the ``Car`` constructor and additionally has a parameter ``cost``. For example, ``Vehicle(3.5, 'grey', 2000).weight`` would be ``2000``,
-    ``Car(40, 'blue', 4000, False).electric`` would be ``False``, and ``ElectricCar(40, 'red', 3000, True, 30000).cost`` would be ``30000``.
+    Given a class ``Point`` defined below that has attributes of ``x`` and ``y`` and a method ``distance_to(self, other)`` that returns the distance between the current point (self) and the other point, write a ``MyCircle`` class that that has a constructor that takes two attibutes ``p1`` and ``p2`` both objects of the class ``Point``.  Also create a ``radius`` method that returns the radius of the circle (half the distance between the two points that define circle).
     ~~~~
+    class Point:
+        def __init__(self, x, y):
+            self.x = x
+            self.y = y
+        def distance_to(self, other):
+            return (((self.x - other.x) ** 2) + ((self.y - other.y) ** 2)) ** 0.5
 
     ====
     from unittest.gui import TestCaseGui
@@ -489,97 +390,68 @@ Mixed-Up Code Questions
     class myTests(TestCaseGui):
 
         def testOne(self):
-            v = Vehicle(3.5, 'grey', 2000)
-            c = Car(40, 'blue', 4000, False)
-            e = ElectricCar(40, 'red', 3000, True, 30000)
+            p1 = Point(5,5)
+            p2 = Point(5, 10)
+            p3 = Point(5, 15)
+            c = MyCircle(p1, p2)
+            c2 = MyCircle(p1, p3)
 
-            self.assertEqual(v.mph, 3.5, "Vehicle(3.5, 'grey', 2000).mph")
-            self.assertEqual(v.color, 'grey', "Vehicle(3.5, 'grey', 2000).color")
-            self.assertEqual(v.weight, 2000, "Vehicle(3.5, 'grey', 2000).weight")
-
-            self.assertEqual(c.mph, 40, "Car(40, 'blue', 4000, False).mph")
-            self.assertEqual(c.color, 'blue', "Car(40, 'blue', 4000, False).color")
-            self.assertEqual(c.weight, 4000, "Car(40, 'blue', 4000, False).weight")
-            self.assertEqual(c.electric, False, "Car(40, 'blue', 4000, False).electric")
-
-            self.assertEqual(e.mph, 40, "ElectricCar(40, 'red', 3000, True, 30000).mph")
-            self.assertEqual(e.color, 'red', "ElectricCar(40, 'red', 3000, True, 30000).color")
-            self.assertEqual(e.weight, 3000, "ElectricCar(40, 'red', 3000, True, 30000).weight")
-            self.assertEqual(e.electric, True, "ElectricCar(40, 'red', 3000, True, 30000).electric")
-            self.assertEqual(e.cost, 30000, "ElectricCar(40, 'red', 3000, True, 30000).cost")
+            self.assertEqual(c.p1, p1, "test of MyCircle p1 for first circle")
+            self.assertEqual(c.p2, p2, "test of MyCircle p2 for first circle")
+            self.assertEqual(c.radius(), p1.distance_to(p2) /  2, "test of MyCircle radius for first circle")
+            self.assertEqual(c2.p2, p3, "test of MyCircle p2 for second circle")
+            self.assertEqual(c2.radius(), p1.distance_to(p3) /  2, "test of MyCircle radius for second circle")
 
     myTests().main()
 
-.. parsonsprob:: inheritance_mixed9
+.. parsonsprob:: inheritance_mixed8_v3
     :numbered: left
     :practice: T
     :adaptive:
 
-    Create a class called ``SchoolSupplies`` with a ``constructor`` that takes in parameters ``size``, ``cost``, and ``material``, and a ``__str__`` method
-    that returns ``"size: (size), cost: (cost), material: (material)"``. Next, create a class called ``WritingUtensils`` with a ``constructor`` that inherits
-    from the ``SchoolSupplies`` constructor and additionally has a parameter ``count``, and a ``__str__`` method that returns ``"size: (size), cost: (cost),
-    material: (material), count: (count)"``. Lastly, create a class called ``Pencil`` with a ``constructor`` that inherits from the ``WritingUtensils``
-    constructor and additionally has parameters ``mechanical`` and ``lead``. If a ``Pencil`` is ``mechanical``, it will have a float ``lead`` size. Otherwise, ``lead`` will be ``None``.
-    Additionally, the ``Pencil`` class should have a ``__str__`` method that returns ``"size: (size), cost: (cost), material: (material), count: (count),
-    mechanical: (mechanical), lead: (lead)"``. For example, ``WritingUtensils('medium', 20, 'wood', 12).__str__()`` should return ``"size: medium, cost: 20, material:
-    wood, count: 12"`` and ``Pencil('large', 30, 'wood', 24, True, 0.7).mechanical`` would be ``True``.
+    Given a class ``Item`` with an attributes of ``name`` and ``price``, create an ``Order`` class that has an attribute ``item_list`` that is intitialized to the empty list in the constructor.  Then add an ``add_item`` method that takes an ``item`` and appends it to the ``item_list`` attribute.   Then create a ``get_total`` method that returns the total price for all the items in ``item_list`` attribute.
     -----
-    class SchoolSupplies:
+    class Order:
     =====
-        def __init__(self, size, cost, material):
+    class Order(Item): #paired
     =====
-            self.size = size
-            self.cost = cost
-            self.material = material
+        def __init__(self):
     =====
-        def __str__(self):
+            self.item_list = []
     =====
-            return "size: " + str(self.size) + ", cost: " + str(self.cost) + ", material: " + str(self.material)
+            self.item_list = () #paired
     =====
-    class WritingUtensils(SchoolSupplies):
+        def add_item(self, item):
     =====
-        def __init__(self, size, cost, material, count):
+            self.item_list.appand(item)
     =====
-            super().__init__(size, cost, material)
+            item_list.appand(item) #paired
     =====
-            self.count = count
+        def get_total(self):
     =====
-        def __str__(self):
+            total = 0
     =====
-            return "size: " + str(self.size) + ", cost: " + str(self.cost) + ", material: " + str(self.material) + ", count: " + str(self.count)
+            for item in self.item_list:
     =====
-    class Pencil(WritingUtensils):
+            for item in item_list: #paired
     =====
-        def __init__(self, size, cost, material, count, mechanical, lead):
+                total += item.price
     =====
-            super().__init__(size, cost, material, count)
-    =====
-            self.mechanical = mechanical
-    =====
-            if self.mechanical == True:
-    =====
-                self.lead = lead
-    =====
-            else:
-    =====
-                self.lead = None
-    =====
-        def __str__(self):
-    =====
-            return "size: " + str(self.size) + ", cost: " + str(self.cost) + ", material: " + str(self.material) + ", count: " + str(self.count) + ", mechanical: " + str(self.mechanical) + ", lead: " + str(self.lead)
+            return total
 
-.. activecode:: inheritance_mixed9_ac
+
+
+
+.. activecode:: inheritance_mixed8_ac_v3
     :autograde: unittest
 
-    Write a class called ``SchoolSupplies`` with a ``constructor`` that takes in parameters ``size``, ``cost``, and ``material``, and a ``__str__`` method
-    that returns ``"size: (size), cost: (cost), material: (material)"``. Next, create a class called ``WritingUtensils`` with a ``constructor`` that inherits
-    from the ``SchoolSupplies`` constructor and additionally has a parameter ``count``, and a ``__str__`` method that returns ``"size: (size), cost: (cost),
-    material: (material), count: (count)"``. Lastly, create a class called ``Pencil`` with a ``constructor`` that inherits from the ``WritingUtensils``
-    constructor and additionally has parameters ``mechanical`` and ``lead``. If a ``Pencil`` is ``mechanical``, it will have a float ``lead`` size. Otherwise, ``lead`` will be ``None``.
-    Additionally, the ``Pencil`` class should have a ``__str__`` method that returns ``"size: (size), cost: (cost), material: (material), count: (count),
-    mechanical: (mechanical), lead: (lead)"``. For example, ``WritingUtensils('medium', 20, 'wood', 12).__str__()`` should return ``"size: medium, cost: 20, material:
-    wood, count: 12"`` and ``Pencil('large', 30, 'wood', 24, True, 0.7).mechanical`` would be ``True``.
+    Given a class ``Item`` define below with attributes of ``name`` and ``price``, write an ``Order`` class that has an attribute ``item_list`` that is intitialized to the empty list in the constructor.  Then add an ``add_item`` method that takes an ``item`` and appends it to the ``item_list`` attribute.   Then create a ``get_total`` method that returns the total price for all the items in ``item_list`` attribute.
     ~~~~
+    class Item:
+        def __init__(self, name, price):
+            self.name = name
+            self.price = price
+
 
     ====
     from unittest.gui import TestCaseGui
@@ -587,121 +459,78 @@ Mixed-Up Code Questions
     class myTests(TestCaseGui):
 
         def testOne(self):
-            s = SchoolSupplies('small', 10, 'plastic')
-            w = WritingUtensils('medium', 20, 'wood', 12)
-            p1 = Pencil('large', 30, 'wood', 24, True, 0.7)
-            p2 = Pencil('large', 30, 'wood', 24, False, 0.5)
+            i1 = Item('hamburger', 6.99)
+            i2 = Item('fries', 2.99)
+            i3 = Item('drink', 1.99)
+            i4 = Item("dessert", 1.99)
+            o1 = Order()
+            o1.add_item(i1)
+            o1.add_item(i2)
+            o1.add_item(i3)
+            self.assertEqual(o1.get_total(), 11.97, 'get_total on order 1')
+            o1.add_item(i4)
+            self.assertEqual(o1.get_total(), 13.96, 'get total on order 2')
+            o2 = Order()
+            o2.add_item(i1)
+            o2.add_item(i4)
+            self.assertEqual(o2.get_total(), 8.98, 'get_total on order 3')
+            o2.add_item(i2)
+            self.assertEqual(o2.get_total(), 11.97, 'get_total on order 4')
+            o2.add_item(i3)
+            self.assertEqual(o2.get_total(), 13.96, 'get_total on order 5')
 
-            self.assertEqual(s.size, 'small', "SchoolSupplies('small', 10, 'plastic').size")
-            self.assertEqual(s.cost, 10, "SchoolSupplies('small', 10, 'plastic').cost")
-            self.assertEqual(s.material, 'plastic', "SchoolSupplies('small', 10, 'plastic').material")
-            self.assertEqual(s.__str__(), "size: small, cost: 10, material: plastic", "SchoolSupplies('small', 10, 'plastic').__str__()")
 
-            self.assertEqual(w.size, 'medium', "WritingUtensils('medium', 20, 'wood', 12).size")
-            self.assertEqual(w.cost, 20, "WritingUtensils('medium', 20, 'wood', 12).cost")
-            self.assertEqual(w.material, 'wood', "WritingUtensils('medium', 20, 'wood', 12).material")
-            self.assertEqual(w.count, 12, "WritingUtensils('medium', 20, 'wood', 12).count")
-            self.assertEqual(w.__str__(), "size: medium, cost: 20, material: wood, count: 12", "WritingUtensils('medium', 20, 'wood', 12).__str__()")
-
-            self.assertEqual(p1.size, 'large', "Pencil('large', 30, 'wood', 24, True, 0.7).size")
-            self.assertEqual(p1.cost, 30, "Pencil('large', 30, 'wood', 24, True, 0.7).cost")
-            self.assertEqual(p1.material, 'wood', "Pencil('large', 30, 'wood', 24, True, 0.7).material")
-            self.assertEqual(p1.count, 24, "Pencil('large', 30, 'wood', 24, True, 0.7).count")
-            self.assertEqual(p1.mechanical, True, "Pencil('large', 30, 'wood', 24, True, 0.7).mechanical")
-            self.assertEqual(p1.lead, 0.7, "Pencil('large', 30, 'wood', 24, True, 0.7).lead")
-            self.assertEqual(p1.__str__(), "size: large, cost: 30, material: wood, count: 24, mechanical: True, lead: 0.7", "Pencil('large', 30, 'wood', 24, True, 0.7).__str__()")
-
-            self.assertEqual(p2.size, 'large', "Pencil('large', 30, 'wood', 24, False, 0.5).size")
-            self.assertEqual(p2.cost, 30, "Pencil('large', 30, 'wood', 24, False, 0.5).cost")
-            self.assertEqual(p2.material, 'wood', "Pencil('large', 30, 'wood', 24, False, 0.5).material")
-            self.assertEqual(p2.count, 24, "Pencil('large', 30, 'wood', 24, False, 0.5).count")
-            self.assertEqual(p2.mechanical, False, "Pencil('large', 30, 'wood', 24, False, 0.5).mechancial")
-            self.assertEqual(p2.lead, None, "Pencil('large', 30, 'wood', 24, False, 0.5).lead")
-            self.assertEqual(p2.__str__(), "size: large, cost: 30, material: wood, count: 24, mechanical: False, lead: None", "Pencil('large', 30, 'wood', 24, False, 0.5).__str__()")
 
     myTests().main()
 
-.. parsonsprob:: inheritance_mixed10
+
+.. parsonsprob:: inheritance_mixed9_v3
     :numbered: left
     :practice: T
     :adaptive:
 
-    Create a class called ``FederalCourts`` with a ``constructor`` that takes in parameters ``size`` and ``location``, a ``__str__`` method
-    that returns ``"size: (size), location: (location)"``, and a method called ``judgment`` that takes in a string parameter ``decision``.
-    If ``decision`` is ``'guilty'``, return ``'Conviction needed'``. If ``decision`` is ``'not guilty'``, return ``'Conviction not needed'``.
-    Otherwise, return ``'Inconclusive'``. Next, create a class called ``SupremeCourt`` with a ``constructor`` that inherits
-    from the ``FederalCourts`` constructor and additionally has a parameter ``leaning_party``, and a ``__str__`` method that returns ``"size: (size), location: (location), leaning_party: (leaning_party)"``.
-    Lastly, create a class called ``CourtsOfAppeals`` with a ``constructor`` that inherits from the ``FederalCourts``
-    constructor and additionally has a parameter ``divisions``. Additionally, the ``CourtsOfAppeals`` class should have a ``__str__`` method that returns
-    ``"size: (size), location: (location), divisions: (divisions)"``. For example, ``FederalCourts(94, 'New York').__str__()`` should return ``"size: 94, location: New York"``,
-    ``CourtsOfAppeals(179, 'Pennsylvania', 23).divisions`` would be ``23``, and ``FederalCourts(94, 'New York').judgment('Not Guilty')`` would be ``"Conviction not needed"``.
+    Given a class ``Account`` with an attribute ``balance`` and methods of ``deposit`` and ``withdraw``, create a ``SavingsAccount`` class that inherits from ``Account``.  Create a constructor that takes ``balance`` and ``interest``.  In the ``SavingsAccount`` constructor call the ``Account`` constructor to intitialze the ``balance`` and then initialize the ``interest``.   Then create a ``pay_interest`` method that adds the interest to the balance (divide the interest rate by 100 and multiply it by the balance to determine the amount to add).
     -----
-    class FederalCourts:
+    class SavingsAccount(Account):
     =====
-        def __init__(self, size, location):
+    class SavingsAccount: #paired
     =====
-            self.size = size
-            self.location = location
+        def __init__(self, balance, interest):
     =====
-        def __str__(self):
+        def __init__(balance, interest): #paired
     =====
-            return "size: " + str(self.size) + ", location: " + str(self.location)
+            super().__init__(balance)
     =====
-        def judgment(self, decision):
+            super.__init__(balance) #paired
     =====
-            if decision.lower() == 'guilty':
+            self.interest = interest
     =====
-            if decision == 'Guilty'.lower(): #paired
+        def pay_interest(self):
     =====
-                return 'Conviction needed'
+        def pay_interest(): #paired
     =====
-            elif decision.lower() == 'not guilty':
+            amount = self.interest / 100
     =====
-            elif decision == 'Not Guilty'.lower(): #paired
+            self.balance += amount * self.balance
     =====
-                return 'Conviction not needed'
-    =====
-            else:
-    =====
-                return 'Inconclusive'
-    =====
-    class SupremeCourt(FederalCourts):
-    =====
-        def __init__(self, size, location, leaning_party):
-    =====
-            super().__init__(size, location)
-    =====
-            self.leaning_party = leaning_party
-    =====
-        def __str__(self):
-    =====
-            return "size: " + str(self.size) + ", location: " + str(self.location) + ", leaning_party: " + str(self.leaning_party)
-    =====
-    class CourtsOfAppeals(FederalCourts):
-    =====
-        def __init__(self, size, location, divisions):
-    =====
-            super().__init__(size, location)
-    =====
-            self.divisions = divisions
-    =====
-        def __str__(self):
-    =====
-            return "size: " + str(self.size) + ", location: " + str(self.location) + ", divisions: " + str(self.divisions)
+            self.balance += self.amount * self.balance #paired
 
-.. activecode:: inheritance_mixed10_ac
+
+
+.. activecode:: inheritance_mixed9_ac_v3
     :autograde: unittest
 
-    Write a class called ``FederalCourts`` with a ``constructor`` that takes in parameters ``size`` and ``location``, a ``__str__`` method
-    that returns ``"size: (size), location: (location)"``, and a method called ``judgment`` that takes in a string parameter ``decision``.
-    If ``decision`` is ``'guilty'``, return ``'Conviction needed'``. If ``decision`` is ``'not guilty'``, return ``'Conviction not needed'``.
-    Otherwise, return ``'Inconclusive'``. Next, create a class called ``SupremeCourt`` with a ``constructor`` that inherits
-    from the ``FederalCourts`` constructor and additionally has a parameter ``leaning_party``, and a ``__str__`` method that returns ``"size: (size), location: (location), leaning_party: (leaning_party)"``.
-    Lastly, create a class called ``CourtsOfAppeals`` with a ``constructor`` that inherits from the ``FederalCourts``
-    constructor and additionally has a parameter ``divisions``. Additionally, the ``CourtsOfAppeals`` class should have a ``__str__`` method that returns
-    ``"size: (size), location: (location), divisions: (divisions)"``. For example, ``FederalCourts(94, 'New York').__str__()`` should return ``"size: 94, location: New York"``,
-    ``CourtsOfAppeals(179, 'Pennsylvania', 23).divisions`` would be ``23``, and ``FederalCourts(94, 'New York').judgment('Not Guilty')`` would be ``"Conviction not needed"``.
+    Given a class ``Account`` with an attribute ``balance`` and methods of ``deposit`` and ``withdraw``, create a ``SavingsAccount`` class hat inherits from ``Account``.  Write a constructor that takes ``balance`` and ``interest``.  In the ``SavingsAccount`` constructor call the ``Account`` constructor to intitialze the ``balance`` and then initialize the ``interest``.   Then create a ``pay_interest`` method that adds the interest to the balance (divide the interest rate by 100 and multiply it by the balance to determine the amount to add).
     ~~~~
+    class Account:
+        def __init__(self, balance):
+            self.balance = balance
+        def deposit(self, amount):
+            self.balance += amount
+        def withdraw(self, amount):
+            self.balance -= amount
+
+
 
     ====
     from unittest.gui import TestCaseGui
@@ -709,25 +538,97 @@ Mixed-Up Code Questions
     class myTests(TestCaseGui):
 
         def testOne(self):
-            fc = FederalCourts(94, 'New York')
-            sc = SupremeCourt(9, 'Washington DC', 'Republican')
-            coa = CourtsOfAppeals(179, 'Pennsylvania', 23)
+            s = SavingsAccount(200, 1.5)
+            s.withdraw(50)
+            self.assertEqual(s.balance, 150, "test of withdraw")
+            s.deposit(75)
+            self.assertEqual(s.balance, 225, "test of deposit")
+            s.pay_interest()
+            self.assertAlmostEqual(s.balance, 228.375, 3, "test of pay_interest")
 
-            self.assertEqual(fc.size, 94, "FederalCourts(94, 'New York').size")
-            self.assertEqual(fc.location, 'New York', "FederalCourts(94, 'New York').location")
-            self.assertEqual(fc.__str__(), "size: 94, location: New York", "FederalCourts(94, 'New York').__str__()")
-            self.assertEqual(fc.judgment('Guilty'), 'Conviction needed', "FederalCourts(94, 'New York').judgment('Guilty')")
-            self.assertEqual(fc.judgment('Not Guilty'), "Conviction not needed", "FederalCourts(94, 'New York').judgment('Not Guilty')")
-            self.assertEqual(fc.judgment('DO NOT KNOW'), "Inconclusive", "FederalCourts(94, 'New York').judgment('DO NOT KNOW')")
 
-            self.assertEqual(sc.size, 9, "SupremeCourt(9, 'Washington DC', 'Republican').size")
-            self.assertEqual(sc.location, 'Washington DC', "SupremeCourt(9, 'Washington DC', 'Republican').location")
-            self.assertEqual(sc.leaning_party, 'Republican', "SupremeCourt(9, 'Washington DC', 'Republican').leaning_party")
-            self.assertEqual(sc.__str__(), "size: 9, location: Washington DC, leaning_party: Republican", "SupremeCourt(9, 'Washington DC', 'Republican').__str__()")
 
-            self.assertEqual(coa.size, 179, "CourtsOfAppeals(179, 'Pennsylvania', 23).size")
-            self.assertEqual(coa.location, 'Pennsylvania', "CourtsOfAppeals(179, 'Pennsylvania', 23).location")
-            self.assertEqual(coa.divisions, 23, "CourtsOfAppeals(179, 'Pennsylvania', 23).divisions")
-            self.assertEqual(coa.__str__(), "size: 179, location: Pennsylvania, divisions: 23", "CourtsOfAppeals(179, 'Pennsylvania', 23).__str__()")
+
+    myTests().main()
+
+.. parsonsprob:: inheritance_mixed10_v3
+    :numbered: left
+    :practice: T
+    :adaptive:
+
+    Given a class ``Treasure`` that has attributes of ``name`` and ``points``, create a class ``Room`` that has attributes of ``name`` and ``treasures``.  Initialize ``treasures`` to the empty list in the constructor.  Create a ``add_treasure`` method in ``Room`` that adds a passed ``Treasure`` object to ``treasures``.  Next create a ``get_points`` method in ``Room`` that returns the total of all of the points for the ``Treasure`` in ``treasures``.
+    -----
+    class Room:
+    =====
+    class Room (Treasure): #paired
+    =====
+        def __init__(self, name):
+    =====
+            self.name = name
+            self.treasures = []
+    =====
+        def add_treasure(self, treasure):
+    =====
+            self.treasures.append(treasure)
+    =====
+            treasures.append(treasure) #paired
+    =====
+        def get_points(self):
+    =====
+            total = 0
+    =====
+            for treasure in self.treasures:
+    =====
+            for treasure in treasures: #paired
+    =====
+                total += treasure.points
+    =====
+            return total
+
+
+
+
+
+
+
+.. activecode:: inheritance_mixed10_ac_v3
+    :autograde: unittest
+
+    Given a class ``Treasure`` below that has attributes of ``name`` and ``points``, create a class ``Room`` that has attributes of ``name`` and ``treasures``.  Initialize ``treasures`` to the empty list in the constructor.  Create a ``add_treasure`` method in ``Room`` that adds a passed ``Treasure`` object to ``treasures``.  Next create a ``get_points`` method in ``Room`` that returns the total of all of the points for the ``Treasure`` in ``treasures``.
+    ~~~~
+    class Treasure:
+        def __init__(self, name, points):
+            self.name = name
+            self.points = points
+
+
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            t1 = Treasure("Ring", 100)
+            t2 = Treasure("Lamp", 300)
+            t3 = Treasure("Necklace", 200)
+            t4 = Treasure("Shoes", 150)
+            r1 = Room("Kitchen")
+            r1.add_treasure(t1)
+            r1.add_treasure(t2)
+            self.assertEqual(r1.get_points(), 400, "test of get_points on room 1")
+            r2 = Room("Billards")
+            r2.add_treasure(t3)
+            r2.add_treasure(t4)
+            self.assertEqual(r2.get_points(), 350, "test of get_points on room 2")
+            r3 = Room("Living Room")
+            r3.add_treasure(t1)
+            self.assertEqual(r3.get_points(), 100, "test of get_points on room 3")
+            r4 = Room("Pantry")
+            r4.add_treasure(t2)
+            self.assertEqual(r4.get_points(), 300, "test of get_points on room 4")
+
+
+
 
     myTests().main()
