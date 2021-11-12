@@ -9,7 +9,7 @@ Write Code Questions
 
             .. activecode:: list_writeMyListq
 
-                Write a function called ``add_to_new_list`` that takes in a list of strings, ``lst``, as a parameter and creates a new list with the length 
+                Write a function called ``add_to_new_list`` that takes in a list of strings, ``lst``, as a parameter and creates a new list with the length
                 of ``lst`` and the first element of ``lst`` three times. For example, ``add_to_new_list(["1","2","3"])`` would return ``[3, '111']``.
                 ~~~~
                 def add_to_new_list(lst):
@@ -34,7 +34,7 @@ Write Code Questions
             .. activecode:: list_writeMyListA
                 :optional:
 
-                Write a function called ``add_to_new_list`` that takes in a list of strings, ``lst``, as a parameter and creates a new list with the length 
+                Write a function called ``add_to_new_list`` that takes in a list of strings, ``lst``, as a parameter and creates a new list with the length
                 of ``lst`` and the first element of ``lst`` three times. For example, ``add_to_new_list(["1","2","3"])`` would return ``[3, '111']``.
                 ~~~~
                 def add_to_new_list(lst):
@@ -44,12 +44,12 @@ Write Code Questions
                     return new_list
 
 #.
-    .. activecode::  list_writeItemsq
+    .. activecode::  list_writeItemsq_v2
         :nocodelens:
 
-        Write a function called ``item_lister`` that takes in a list of at least three values, ``items``, as a parameter. Set the first value to "First item", set 
-        the second value to the first value previously set, and set the third value to its current value plus one (rounded to two decimals). (Note: the third value of ``items`` 
-        will only be numerical.) Then, return the modified list. For example, ``itemLister([2,4,6,8])`` would return ``['First item', 'First item', 7, 8]``.
+        Write a function called ``item_lister`` that takes in a list of at least three values, ``items``, as a parameter. Set the first value to "First item", set
+        the second value to the original first value, and set the third value to its current value plus one (rounded to two decimals). (Note: the third value of ``items``
+        will only be numerical.) Then, return the modified list. For example, ``itemLister([2,4,6.222,8])`` would return ``['First item', 2, 7.22, 8]``.
         ~~~~
         def itemLister(items):
             # write code here
@@ -61,10 +61,10 @@ Write Code Questions
         class myTests(TestCaseGui):
 
             def testOne(self):
-                self.assertEqual(itemLister([2,4,6,8]), ['First item', 'First item', 7, 8], "itemLister([2,4,6,8])")
-                self.assertEqual(itemLister([2.2,'hi',0]), ['First item', 'First item', 1], "itemLister([2.2,'hi',0])")
-                self.assertEqual(itemLister([2.2,True,0]), ['First item', 'First item', 1], "itemLister([2.2,True,0])")
-                self.assertEqual(itemLister([-2.2,'hi',-2.2]), ['First item', 'First item', -1.2], "itemLister([-2.2,'hi',-2.2])")
+                self.assertAlmostEqual(itemLister([2,4,6.222,8]), ['First item', 2, 7.22, 8], 2, "itemLister([2,4,6,8])")
+                self.assertAlmostEqual(itemLister([2.2,'hi',0]), ['First item', 2.2, 1], 2, "itemLister([2.2,'hi',0])")
+                self.assertAlmostEqual(itemLister([2.2,True,0]), ['First item', 2.2, 1], 2, "itemLister([2.2,True,0])")
+                self.assertAlmostEqual(itemLister([-2.2,'hi',-2.222]), ['First item', -2.2, -1.22], "itemLister([-2.2,'hi',-2.222])")
 
         myTests().main()
 
@@ -80,8 +80,8 @@ Write Code Questions
                 all of the integers, rounded to one decimal place. For example, ``average([99, 100, 74, 63, 100, 100])`` would return ``89.33``.
                 ~~~~
                 def average(aList):
-                    # write code here 
-             
+                    # write code here
+
                 =====
 
                 from unittest.gui import TestCaseGui
@@ -116,7 +116,7 @@ Write Code Questions
     .. activecode:: list_write23q
 
         Write the function ``change_index3`` that takes in one parameter, ``lst``, and assigns the value at index 3 of ``lst`` to '200' and then returns ``lst``.
-        For example, ``change_index3(['hi', 'goodbye', 'python', '106', '506'])`` would return ``['hi', 'goodbye', 'python', '200', '506']`` and 
+        For example, ``change_index3(['hi', 'goodbye', 'python', '106', '506'])`` would return ``['hi', 'goodbye', 'python', '200', '506']`` and
         ``change_index3([1, 2, 0, -5, 4])`` would return ``[1, 2, 0, '200', 4]``.
         ~~~~
         def change_index3(lst):
@@ -144,12 +144,12 @@ Write Code Questions
 
             .. activecode:: list_capitalize_q
 
-                Write a function called ``capitalize`` that takes in a list of lists of strings, ``lst``, and makes the first letter of each element capitalized and adds 
+                Write a function called ``capitalize`` that takes in a list of lists of strings, ``lst``, and makes the first letter of each element capitalized and adds
                 it to a new list and returns that new list. For example, ``capitalize([["hi"],["hello", "hey"]])`` would return ``['Hi', 'Hello', 'Hey']``.
                 ~~~~
                 def capitalize(lst):
                     # write code here
-                  
+
 
                 =====
 
@@ -169,7 +169,7 @@ Write Code Questions
             .. activecode:: list_capitalize_a
                 :optional:
 
-                Write a function called ``capitalize`` that takes in a list of lists of strings, ``lst``, and makes the first letter of each element capitalized and adds 
+                Write a function called ``capitalize`` that takes in a list of lists of strings, ``lst``, and makes the first letter of each element capitalized and adds
                 it to a new list and returns that new list. For example, ``capitalize([["hi"],["hello", "hey"]])`` would return ``['Hi', 'Hello', 'Hey']``.
                 ~~~~
                 def capitalize(lst):
@@ -184,7 +184,7 @@ Write Code Questions
     .. activecode:: list_write5q
 
         Write a function called ``countWords`` that takes in a list, ``lst``, as a parameter, and returns the amount of words that have a length of 5.
-        For example, ``countWords(['hello', 'hi', 'good morning', 'three', 'kitty']`` should return ``3``. 
+        For example, ``countWords(['hello', 'hi', 'good morning', 'three', 'kitty']`` should return ``3``.
         ~~~~
         def countWords(lst):
             # write code here
@@ -234,7 +234,7 @@ Write Code Questions
 
             .. activecode:: list_writeChopa
                 :optional:
-                
+
                 Write a function called ``chop`` that takes a list, ``lst``, and modifies it, removing the first and last elements.
                 For example, ``chop([1,2,3,4,5]`` should return ``[2,3,4]``.
                 ~~~~
@@ -247,7 +247,7 @@ Write Code Questions
     .. activecode::  list_writeReverseq
         :nocodelens:
 
-        Write a function called ``reverse`` that takes in one parameter, ``lst``, and returns the reverse of a passed list.  
+        Write a function called ``reverse`` that takes in one parameter, ``lst``, and returns the reverse of a passed list.
         For example, ``reverse[1,2,3]`` should return ``[3, 2, 1]``.
         ~~~~
         def reverse(lst):
@@ -272,7 +272,7 @@ Write Code Questions
 
             .. activecode:: list_writeSumq
 
-                Write a function called ``sumUntilEven`` that takes in one parameter, ``lst``, and returns the sum of all the 
+                Write a function called ``sumUntilEven`` that takes in one parameter, ``lst``, and returns the sum of all the
                 elements in the ``lst`` up to but not including the first even number. For example, ``sumUntilEven([1,2,3,4,5]``
                 should return ``1`` and ``sumUntilEven([1,3,5,7,9]`` should return ``25``.
                 ~~~~
@@ -297,7 +297,7 @@ Write Code Questions
             .. activecode:: list_writeSuma
                 :optional:
 
-                Write a function called ``sumUntilEven`` that takes in one parameter, ``lst``, and returns the sum of all the 
+                Write a function called ``sumUntilEven`` that takes in one parameter, ``lst``, and returns the sum of all the
                 elements in the ``lst`` up to but not including the first even number. For example, ``sumUntilEven([1,2,3,4,5]``
                 should return ``1`` and ``sumUntilEven([1,3,5,7,9]`` should return ``25``.
                 ~~~~

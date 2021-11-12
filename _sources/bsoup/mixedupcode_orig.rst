@@ -5,7 +5,7 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``img_links`` that takes in a parameter ``url`` and returns a list of all urls for images.
+    Create a function called ``img_links`` that takes in a parameter ``url`` and returns a list of all urls for all the images on the page.
     Since websites are frequently updated, the returned list of image links may change as image links get added and deleted.
     -----
     import requests
@@ -37,7 +37,7 @@ Mixed-Up Code Questions
     :language: python3
     :autograde: unittest
 
-    Write a function called ``img_links`` that takes in a parameter ``url`` and returns a list of all urls for images.
+    Write a function called ``img_links`` that takes in a parameter ``url`` and returns a list of all urls for all the images on the page.
     Since websites are frequently updated, the returned list of image links may change as image links get added and deleted.
     ~~~~
 
