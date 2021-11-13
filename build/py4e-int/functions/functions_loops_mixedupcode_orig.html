@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions and Loops Mixed-Up Code Questions &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.css?v=bddd2011b20db76a20ea" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.css?v=7c5388ad4389eae1a318" />
+
+
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/runtime.bundle.js?v=aa7c717c38c5405af9e6"></script>
+    <script src="../_static/637.bundle.js?v=1123ad75f9b821cdd636"></script>
+    <script src="../_static/runestone.bundle.js?v=9c8e466e8cbed4a3af5a"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = true;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'py4e-int';
+    eBookConfig.basecourse = 'py4e-int';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/logo_small.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          py4e-int
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span class="visuallyhidden" aria-label="User">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="runestoneComponents.switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/runestone/static/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=functions_loops_mixedupcode_orig'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+  
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="functions-and-loops-mixed-up-code-questions">
+<h1>Functions and Loops Mixed-Up Code Questions<a class="headerlink" href="#functions-and-loops-mixed-up-code-questions" title="Permalink to this headline">¶</a></h1>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="Functions_Loops_MixedUpCode_1" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Create a function called <code class="docutils literal notranslate"><span class="pre">nums_x_to_y</span></code> that takes in two integer parameter, <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> and uses a for loop to create and
+return a list with numbers <code class="docutils literal notranslate"><span class="pre">x</span></code> to <code class="docutils literal notranslate"><span class="pre">y</span></code>. Note: ignore cases when <code class="docutils literal notranslate"><span class="pre">y</span></code> is not larger than <code class="docutils literal notranslate"><span class="pre">x</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">nums_x_to_y(1,10)</span></code>
+would return <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8,</span> <span class="pre">9,</span> <span class="pre">10]</span></code>.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="1"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        def nums_x_to_y(x,y):
+---
+def nums_x_to_y: #paired
+---
+    x_to_y_list = []
+---
+    for num in range(x, y + 1):
+---
+    for num in range(y): #paired
+---
+    for num in range(x, y): #paired
+---
+        x_to_y_list.append(num)
+---
+    return x_to_y_list
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=Functions_Loops_MixedUpCode_1_ac data-question_label="2">
+<div id=Functions_Loops_MixedUpCode_1_ac_question class="ac_question col-md-12">
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">nums_x_to_y</span></code> that takes in two integer parameter, <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> and uses a for loop to create and
+return a list with numbers <code class="docutils literal notranslate"><span class="pre">x</span></code> to <code class="docutils literal notranslate"><span class="pre">y</span></code>. Note: ignore cases when <code class="docutils literal notranslate"><span class="pre">y</span></code> is not larger than <code class="docutils literal notranslate"><span class="pre">x</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">nums_x_to_y(1,10)</span></code>
+would return <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8,</span> <span class="pre">9,</span> <span class="pre">10]</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="Functions_Loops_MixedUpCode_1_ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def nums_x_to_y():
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(nums_x_to_y(1,10),[1, 2, 3, 4, 5, 6, 7, 8, 9, 10],"nums_x_to_y(1,10)")
+        self.assertEqual(nums_x_to_y(3,4),[3, 4],"nums_x_to_y(3,4)")
+        self.assertEqual(nums_x_to_y(2,9),[2, 3, 4, 5, 6, 7, 8, 9],"nums_x_to_y(2,9)")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="Functions_Loops_MixedUpCode_2" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Create a function <code class="docutils literal notranslate"><span class="pre">count_by_x_to_y</span></code> that takes in two integer parameter, <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> and uses a for loop to create and return
+a list with numbers <code class="docutils literal notranslate"><span class="pre">x</span></code> to <code class="docutils literal notranslate"><span class="pre">y</span></code>. Note: ignore cases when <code class="docutils literal notranslate"><span class="pre">y</span></code> is not larger than <code class="docutils literal notranslate"><span class="pre">x</span></code>. Use a for loop to create and return a
+list with numbers up to <code class="docutils literal notranslate"><span class="pre">y</span></code> by skip counting by <code class="docutils literal notranslate"><span class="pre">x</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">count_by_x_to_y(5,20)</span></code> should return <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">5,</span> <span class="pre">10,</span> <span class="pre">15,</span> <span class="pre">20]</span></code>.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="3"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        def count_by_x_to_y(x,y):
+---
+def count_by_x_to_y: #paired
+---
+    x_to_y_lst = []
+---
+    for num in range (0, y + 1, x):
+---
+    for num in range (0, y, x+1): #paired
+---
+        x_to_y_lst.append(num)
+---
+        x_to_y_lst += num #paired
+---
+    return x_to_y_lst
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=Functions_Loops_MixedUpCode_2_ac data-question_label="4">
+<div id=Functions_Loops_MixedUpCode_2_ac_question class="ac_question col-md-12">
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">count_by_x_to_y</span></code> that takes in two integer parameter, <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> and uses a for loop to create and return
+a list with numbers <code class="docutils literal notranslate"><span class="pre">x</span></code> to <code class="docutils literal notranslate"><span class="pre">y</span></code>. Note: ignore cases when <code class="docutils literal notranslate"><span class="pre">y</span></code> is not larger than <code class="docutils literal notranslate"><span class="pre">x</span></code>. Use a for loop to create and return a
+list with numbers up to <code class="docutils literal notranslate"><span class="pre">y</span></code> by skip counting by <code class="docutils literal notranslate"><span class="pre">x</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">count_by_x_to_y(5,20)</span></code> should return <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">5,</span> <span class="pre">10,</span> <span class="pre">15,</span> <span class="pre">20]</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="Functions_Loops_MixedUpCode_2_ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def count_by_x_to_y():
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(count_by_x_to_y(5,20),[0, 5, 10, 15, 20],"count_by_x_to_y(5,20)")
+        self.assertEqual(count_by_x_to_y(2,10),[0, 2, 4, 6, 8, 10],"count_by_x_to_y(2,10)")
+        self.assertEqual(count_by_x_to_y(1,10),[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],"count_by_x_to_y(1,10)")
+        self.assertEqual(count_by_x_to_y(5,6),[0, 5],"count_by_x_to_y(5,6)")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="Functions_Loops_MixedUpCode_3" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Create a function called <code class="docutils literal notranslate"><span class="pre">countdown</span></code> that takes in one integer parameter <code class="docutils literal notranslate"><span class="pre">seconds</span></code> and creates a list of numbers that counts down from
+seconds to 1, and then returns that list. Note: <code class="docutils literal notranslate"><span class="pre">seconds</span></code> must be greater than or equal to 1. For example, <code class="docutils literal notranslate"><span class="pre">countdown(3)</span></code> would return <code class="docutils literal notranslate"><span class="pre">[3,</span> <span class="pre">2,</span> <span class="pre">1]</span></code>.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="5"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        def countdown(seconds):
+---
+def countdown(): #paired
+---
+    countdown_lst = []
+---
+    while seconds > 0:
+---
+        countdown_lst.append(seconds)
+---
+        seconds -= 1
+---
+    return countdown_lst
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=Functions_Loops_MixedUpCode_3_ac data-question_label="6">
+<div id=Functions_Loops_MixedUpCode_3_ac_question class="ac_question col-md-12">
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">countdown</span></code> that takes in one integer parameter <code class="docutils literal notranslate"><span class="pre">seconds</span></code> and creates a list of numbers that counts down from
+seconds to 1, and then returns that list. Note: <code class="docutils literal notranslate"><span class="pre">seconds</span></code> must be greater than or equal to 1. For example, <code class="docutils literal notranslate"><span class="pre">countdown(3)</span></code> would return <code class="docutils literal notranslate"><span class="pre">[3,</span> <span class="pre">2,</span> <span class="pre">1]</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="Functions_Loops_MixedUpCode_3_ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# write code here
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(countdown(3),[3, 2, 1],"countdown(3)")
+        self.assertEqual(countdown(11),[11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],"countdown(11)")
+        self.assertEqual(countdown(4),[4, 3, 2, 1],"countdown(4)")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="Functions_Loops_MixedUpCode_4" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Create a function <code class="docutils literal notranslate"><span class="pre">add_odds_or_floor_division</span></code> that takes in a parameter <code class="docutils literal notranslate"><span class="pre">num_list</span></code> and loops through the <code class="docutils literal notranslate"><span class="pre">num_list</span></code>.
+If the number in <code class="docutils literal notranslate"><span class="pre">num_list</span></code> is odd, it gets added to <code class="docutils literal notranslate"><span class="pre">result</span></code>. Otherwise, it gets divided from the <code class="docutils literal notranslate"><span class="pre">result</span></code>, having the <code class="docutils literal notranslate"><span class="pre">result</span></code> be the floor value.
+Then, return <code class="docutils literal notranslate"><span class="pre">result</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">add_odds_or_floor_division([-3,</span> <span class="pre">-5,</span> <span class="pre">-2,</span> <span class="pre">-9,</span> <span class="pre">7.5,</span> <span class="pre">10001,</span> <span class="pre">-5.3])</span></code> would return -1887.0.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="7"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        def add_odds_or_floor_division(num_list):
+---
+def add_odds_or_floor_division(): #paired
+---
+    result = 0
+---
+    for num in num_list:
+---
+        if num % 2 == 1:
+---
+        if num / 2 == 1: #paired
+---
+            result += num
+---
+        else:
+---
+            result //= num
+---
+            result /= num #paired
+---
+    return result
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=Functions_Loops_MixedUpCode_4_ac data-question_label="8">
+<div id=Functions_Loops_MixedUpCode_4_ac_question class="ac_question col-md-12">
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">add_odds_or_floor_division</span></code> that takes in a parameter <code class="docutils literal notranslate"><span class="pre">num_list</span></code> and loops through the <code class="docutils literal notranslate"><span class="pre">num_list</span></code>.
+If the number in <code class="docutils literal notranslate"><span class="pre">num_list</span></code> is odd, it gets added to <code class="docutils literal notranslate"><span class="pre">result</span></code>. Otherwise, it gets divided from the <code class="docutils literal notranslate"><span class="pre">result</span></code>, having the <code class="docutils literal notranslate"><span class="pre">result</span></code> be the floor value.
+Then, return <code class="docutils literal notranslate"><span class="pre">result</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">add_odds_or_floor_division([-3,</span> <span class="pre">-5,</span> <span class="pre">-2,</span> <span class="pre">-9,</span> <span class="pre">7.5,</span> <span class="pre">10001,</span> <span class="pre">-5.3])</span></code> would return -1887.0.</p>
+
+</div>
+<textarea data-lang="python" id="Functions_Loops_MixedUpCode_4_ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# write code here
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(add_odds_or_floor_division([3, 5, 10, 8, 20, 15]),15,"add_odds_or_floor_division([3, 5, 10, 8, 20, 15])")
+        self.assertEqual(add_odds_or_floor_division([3, 5, 2, 9, 7, 10, 2, 1, 15]),17,"add_odds_or_floor_division([3, 5, 2, 9, 7, 10, 2, 1, 15])")
+        self.assertAlmostEqual(add_odds_or_floor_division([-3, -5, -2, -9, 7.5, 10001, -5.3]),-1887.0,1,"add_odds_or_floor_division([-3, -5, -2, -9, 7.5, 10001, -5.3])")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="Functions_Loops_MixedUpCode_5" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Create a function <code class="docutils literal notranslate"><span class="pre">strings_chars_less_than_len</span></code> that takes in a <code class="docutils literal notranslate"><span class="pre">strings_list</span></code>
+and returns a sorted new list with strings that are shorter in length than the original list.
+For example, <code class="docutils literal notranslate"><span class="pre">strings_chars_less_than_len(['hello',</span> <span class="pre">'bye',</span> <span class="pre">'me',</span> <span class="pre">'mississippi',</span> <span class="pre">'miss'])</span></code> would return [‘bye’, ‘me’, ‘miss’].</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="9"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        def strings_chars_less_than_len(strings_list):
+---
+Def strings_chars_less_than_len(string_list): #paired
+---
+    new_strings_list = []
+---
+    for string in strings_list:
+---
+        if len(string) < len(strings_list):
+---
+        if string < len(strings_list): #paired
+---
+            new_strings_list.append(string)
+---
+        else:
+---
+            continue
+---
+            break #paired
+---
+    return sorted(new_strings_list)
+---
+    return new_strings_list.sort() #paired
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=Functions_Loops_MixedUpCode_5_ac data-question_label="10">
+<div id=Functions_Loops_MixedUpCode_5_ac_question class="ac_question col-md-12">
+<p>Create a function <code class="docutils literal notranslate"><span class="pre">strings_chars_less_than_len</span></code> that takes in a <code class="docutils literal notranslate"><span class="pre">strings_list</span></code>
+and returns a sorted new list with strings that are shorter in length than the original list.
+For example, <code class="docutils literal notranslate"><span class="pre">strings_chars_less_than_len(['hello',</span> <span class="pre">'bye',</span> <span class="pre">'me',</span> <span class="pre">'mississippi',</span> <span class="pre">'miss'])</span></code> would return [‘bye’, ‘me’, ‘miss’].</p>
+
+</div>
+<textarea data-lang="python" id="Functions_Loops_MixedUpCode_5_ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# write code here
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(strings_chars_less_than_len(['hello', 'bye', 'me', 'mississippi', 'miss']),['bye', 'me', 'miss'],"strings_chars_less_than_len(['hello', 'bye', 'me', 'mississippi', 'miss'])")
+        self.assertEqual(strings_chars_less_than_len(['hi', 'bye', 'Run', 'When', 'Win', 'compare', 'python']),['Run', 'When', 'Win', 'bye', 'hi', 'python'],"strings_chars_less_than_len(['hi', 'bye', 'Run', 'When', 'Win', 'compare', 'python'])")
+
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="Functions_Loops_MixedUpCode_6" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Create a function <code class="docutils literal notranslate"><span class="pre">print_lists(nums1,</span> <span class="pre">nums2)</span></code> that takes two lists of numbers with the same length, <code class="docutils literal notranslate"><span class="pre">nums1</span></code> and <code class="docutils literal notranslate"><span class="pre">nums2</span></code>,
+and returns a list of strings in the form: “Num1: num1, Num2: num2” for each pair of items in the two lists.
+For example, <code class="docutils literal notranslate"><span class="pre">print_lists([3,</span> <span class="pre">2],</span> <span class="pre">[8,</span> <span class="pre">4])</span></code> would return <code class="docutils literal notranslate"><span class="pre">[&quot;Num1:</span> <span class="pre">3,</span> <span class="pre">Num2:</span> <span class="pre">8&quot;,</span> <span class="pre">&quot;Num1:</span> <span class="pre">2,</span> <span class="pre">Num2:</span> <span class="pre">4&quot;]</span></code>.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="11"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        def print_lists(nums1, nums2):
+---
+    out_list = []
+---
+    for i in range(len(nums1)):
+---
+    for i in range(nums1): #paired
+---
+    for val1 in nums1:
+        for val2 in nums2: #paired
+---
+        val1 = nums1[i]
+        val2 = nums2[i]
+---
+        out = "Num1: " + str(val1) + ", Num2: " + str(val2)
+---
+        out = "Num1: " + val1 + ", Num2: " + val2 #paired
+---
+        out_list.append(out)
+---
+    return out_list
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=Functions_Loops_MixedUpCode_6_ac data-question_label="12">
+<div id=Functions_Loops_MixedUpCode_6_ac_question class="ac_question col-md-12">
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">print_lists(nums1,</span> <span class="pre">nums2)</span></code> that takes two lists of numbers with the same length, <code class="docutils literal notranslate"><span class="pre">nums1</span></code> and <code class="docutils literal notranslate"><span class="pre">nums2</span></code>,
+and returns a list of strings in the form: “Num1: num1, Num2: num2” for each pair of items in the two lists.
+For example, <code class="docutils literal notranslate"><span class="pre">print_lists([3,</span> <span class="pre">2],</span> <span class="pre">[8,</span> <span class="pre">4])</span></code> would return <code class="docutils literal notranslate"><span class="pre">[&quot;Num1:</span> <span class="pre">3,</span> <span class="pre">Num2:</span> <span class="pre">8&quot;,</span> <span class="pre">&quot;Num1:</span> <span class="pre">2,</span> <span class="pre">Num2:</span> <span class="pre">4&quot;]</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="Functions_Loops_MixedUpCode_6_ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# write code here
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(print_lists([3, 2], [8, 4]),["Num1: 3, Num2: 8", "Num1: 2, Num2: 4"],"print_lists([3, 2], [8, 4])")
+        self.assertEqual(print_lists([1], [2]),["Num1: 1, Num2: 2"],"print_lists([1], [2])")
+        self.assertEqual(print_lists([3, 2, 1], [9, 8, 7]),["Num1: 3, Num2: 9", "Num1: 2, Num2: 8", "Num1: 1, Num2: 7"],"print_lists([3, 2, 1], [9, 8, 7])")
+
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="Functions_Loops_MixedUpCode_7" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Create a function <code class="docutils literal notranslate"><span class="pre">sum_lists(nums1,</span> <span class="pre">nums2)</span></code> that takes two lists of numbers with the same length, <code class="docutils literal notranslate"><span class="pre">nums1</span></code> and <code class="docutils literal notranslate"><span class="pre">nums2</span></code>,
+and returns a list of the totals of the two numbers for each pair of items in the two lists.
+For example, <code class="docutils literal notranslate"><span class="pre">sum_lists([3,</span> <span class="pre">2],</span> <span class="pre">[8,</span> <span class="pre">4])</span></code> would return <code class="docutils literal notranslate"><span class="pre">[11,</span> <span class="pre">6]</span></code>.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="13"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        def sum_lists(nums1, nums2):
+---
+    out_list = []
+---
+    for i in range(len(nums1)):
+---
+    for i in range(nums1): #paired
+---
+    for val1 in nums1:
+        for val2 in nums2: #paired
+---
+        val1 = nums1[i]
+        val2 = nums2[i]
+---
+        total = val1 + val2
+---
+        out_list.append(total)
+---
+        out_list += total #paired
+---
+    return out_list
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=Functions_Loops_MixedUpCode_7_ac data-question_label="14">
+<div id=Functions_Loops_MixedUpCode_7_ac_question class="ac_question col-md-12">
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">sum_lists(nums1,</span> <span class="pre">nums2)</span></code> that takes two lists of numbers with the same length, <code class="docutils literal notranslate"><span class="pre">nums1</span></code> and <code class="docutils literal notranslate"><span class="pre">nums2</span></code>,
+and returns a list of the totals of the two numbers for each pair of items in the two lists.
+For example, <code class="docutils literal notranslate"><span class="pre">sum_lists([3,</span> <span class="pre">2],</span> <span class="pre">[8,</span> <span class="pre">4])</span></code> would return <code class="docutils literal notranslate"><span class="pre">[11,</span> <span class="pre">6]</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="Functions_Loops_MixedUpCode_7_ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# write code here
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(sum_lists([3, 2], [8, 4]),[11, 6],"sum_lists([3, 2]")
+        self.assertEqual(sum_lists([1], [2]),[3],"sum_lists([1], [2])")
+        self.assertEqual(sum_lists([3, 2, 1], [9, 8, 7]),[12, 10, 8],"sum_lists([3, 2, 1], [9, 8, 7])")
+
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</div>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 - Based on Python for Everybody.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> 
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch(); 
+  });
+</script>
+
+
+  </body>
+</html>

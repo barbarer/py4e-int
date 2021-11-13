@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9.18. Write Code Questions &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.css?v=bddd2011b20db76a20ea" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.css?v=7c5388ad4389eae1a318" />
+
+
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/runtime.bundle.js?v=aa7c717c38c5405af9e6"></script>
+    <script src="../_static/637.bundle.js?v=1123ad75f9b821cdd636"></script>
+    <script src="../_static/runestone.bundle.js?v=9c8e466e8cbed4a3af5a"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9.19. Group Work: Lists" href="pogil.html" />
+    <link rel="prev" title="9.17. Mixed-Up Code Questions" href="MixedupCode.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = true;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'py4e-int';
+    eBookConfig.basecourse = 'py4e-int';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/logo_small.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          py4e-int
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span class="visuallyhidden" aria-label="User">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="runestoneComponents.switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/runestone/static/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=WriteCode'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">9.17. </span>Mixed-Up Code Questions" data-toggle="tooltip">
+    <a href="MixedupCode.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">9.19. </span>Group Work: Lists' data-toggle="tooltip" >              
+    <a href="pogil.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+  
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="write-code-questions">
+<h1><span class="section-number">9.18. </span>Write Code Questions<a class="headerlink" href="#write-code-questions" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic">
+<li><div id='list_writeMyList' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_writeMyListq data-question_label="9.18.1">
+<div id=list_writeMyListq_question class="ac_question col-md-12">
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">add_to_new_list</span></code> that takes in a list of strings, <code class="docutils literal notranslate"><span class="pre">lst</span></code>, as a parameter and creates a new list with the length
+of <code class="docutils literal notranslate"><span class="pre">lst</span></code> and the first element of <code class="docutils literal notranslate"><span class="pre">lst</span></code> three times. For example, <code class="docutils literal notranslate"><span class="pre">add_to_new_list([&quot;1&quot;,&quot;2&quot;,&quot;3&quot;])</span></code> would return <code class="docutils literal notranslate"><span class="pre">[3,</span> <span class="pre">'111']</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="list_writeMyListq_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def add_to_new_list(lst):
+    # write code here
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(add_to_new_list(['1','2','3']), [3, '111'], "add_to_new_list(['1','2','3'])")
+        self.assertEqual(add_to_new_list(['0','0','0','0']), [4, '000'], "add_to_new_list(['0','0','0','0'])")
+        self.assertEqual(add_to_new_list(['10.2','0.0','100','-2']), [4, '10.210.210.2'], "add_to_new_list(['10.2','0.0','100','-2'])")
+
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_writeMyListA data-question_label="9.18.2">
+<div id=list_writeMyListA_question class="ac_question col-md-12">
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">add_to_new_list</span></code> that takes in a list of strings, <code class="docutils literal notranslate"><span class="pre">lst</span></code>, as a parameter and creates a new list with the length
+of <code class="docutils literal notranslate"><span class="pre">lst</span></code> and the first element of <code class="docutils literal notranslate"><span class="pre">lst</span></code> three times. For example, <code class="docutils literal notranslate"><span class="pre">add_to_new_list([&quot;1&quot;,&quot;2&quot;,&quot;3&quot;])</span></code> would return <code class="docutils literal notranslate"><span class="pre">[3,</span> <span class="pre">'111']</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="list_writeMyListA_editor" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def add_to_new_list(lst):
+    new_list = []
+    new_list.append(len(lst))
+    new_list.append(lst[0] * 3)
+    return new_list
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(add_to_new_list(['1','2','3']), [3, '111'], "add_to_new_list(['1','2','3'])")
+        self.assertEqual(add_to_new_list(['0','0','0','0']), [4, '000'], "add_to_new_list(['0','0','0','0'])")
+        self.assertEqual(add_to_new_list(['10.2','0.0','100','-2']), [4, '10.210.210.2'], "add_to_new_list(['10.2','0.0','100','-2'])")
+
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</li>
+<li>
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_writeItemsq_v2 data-question_label="9.18.3">
+<div id=list_writeItemsq_v2_question class="ac_question col-md-12">
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">item_lister</span></code> that takes in a list of at least three values, <code class="docutils literal notranslate"><span class="pre">items</span></code>, as a parameter. Set the first value to “First item”, set
+the second value to the original first value, and set the third value to its current value plus one (rounded to two decimals). (Note: the third value of <code class="docutils literal notranslate"><span class="pre">items</span></code>
+will only be numerical.) Then, return the modified list. For example, <code class="docutils literal notranslate"><span class="pre">itemLister([2,4,6.222,8])</span></code> would return <code class="docutils literal notranslate"><span class="pre">['First</span> <span class="pre">item',</span> <span class="pre">2,</span> <span class="pre">7.22,</span> <span class="pre">8]</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="list_writeItemsq_v2_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def itemLister(items):
+    # write code here
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertAlmostEqual(itemLister([2,4,6.222,8]), ['First item', 2, 7.22, 8], 2, "itemLister([2,4,6,8])")
+        self.assertAlmostEqual(itemLister([2.2,'hi',0]), ['First item', 2.2, 1], 2, "itemLister([2.2,'hi',0])")
+        self.assertAlmostEqual(itemLister([2.2,True,0]), ['First item', 2.2, 1], 2, "itemLister([2.2,True,0])")
+        self.assertAlmostEqual(itemLister([-2.2,'hi',-2.222]), ['First item', -2.2, -1.22], "itemLister([-2.2,'hi',-2.222])")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</li>
+<li><div id='list_writeAvg' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_writeAvgq data-question_label="9.18.4">
+<div id=list_writeAvgq_question class="ac_question col-md-12">
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">average</span></code> that takes in a list of integers, <code class="docutils literal notranslate"><span class="pre">aList</span></code>, as a parameter and returns the average of
+all of the integers, rounded to one decimal place. For example, <code class="docutils literal notranslate"><span class="pre">average([99,</span> <span class="pre">100,</span> <span class="pre">74,</span> <span class="pre">63,</span> <span class="pre">100,</span> <span class="pre">100])</span></code> would return <code class="docutils literal notranslate"><span class="pre">89.3</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="list_writeAvgq_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def average(aList):
+    # write code here
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertAlmostEqual(average([99, 100, 74, 63, 100, 100]), 89.3, 1, "average([99, 100, 74, 63, 100, 100])")
+        self.assertAlmostEqual(average([0, 2, -3, 1.2, 2000]), 400.0, 1, "average([0, 2, -3, 1.2, 2000])")
+        self.assertAlmostEqual(average([-2]), -2.0, 1, "average([-2])")
+
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_writeAvgA data-question_label="9.18.5">
+<div id=list_writeAvgA_question class="ac_question col-md-12">
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">average</span></code> that takes in a list of integers, <code class="docutils literal notranslate"><span class="pre">aList</span></code>, as a parameter and returns the average of
+all of the integers, rounded to one decimal place. For example, <code class="docutils literal notranslate"><span class="pre">average([99,</span> <span class="pre">100,</span> <span class="pre">74,</span> <span class="pre">63,</span> <span class="pre">100,</span> <span class="pre">100])</span></code> would return <code class="docutils literal notranslate"><span class="pre">89.33</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="list_writeAvgA_editor" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def average(aList):
+    sum = 0
+    for num in aList:
+        sum += num
+    avg = round(sum / len(aList),2)
+    return avg
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertAlmostEqual(average([99, 100, 74, 63, 100, 100]), 89.3, 1, "average([99, 100, 74, 63, 100, 100])")
+        self.assertAlmostEqual(average([0, 2, -3, 1.2, 2000]), 400.0, 1, "average([0, 2, -3, 1.2, 2000])")
+        self.assertAlmostEqual(average([-2]), -2.0, 1, "average([-2])")
+
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</li>
+<li>
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_write23q data-question_label="9.18.6">
+<div id=list_write23q_question class="ac_question col-md-12">
+<p>Write the function <code class="docutils literal notranslate"><span class="pre">change_index3</span></code> that takes in one parameter, <code class="docutils literal notranslate"><span class="pre">lst</span></code>, and assigns the value at index 3 of <code class="docutils literal notranslate"><span class="pre">lst</span></code> to ‘200’ and then returns <code class="docutils literal notranslate"><span class="pre">lst</span></code>.
+For example, <code class="docutils literal notranslate"><span class="pre">change_index3(['hi',</span> <span class="pre">'goodbye',</span> <span class="pre">'python',</span> <span class="pre">'106',</span> <span class="pre">'506'])</span></code> would return <code class="docutils literal notranslate"><span class="pre">['hi',</span> <span class="pre">'goodbye',</span> <span class="pre">'python',</span> <span class="pre">'200',</span> <span class="pre">'506']</span></code> and
+<code class="docutils literal notranslate"><span class="pre">change_index3([1,</span> <span class="pre">2,</span> <span class="pre">0,</span> <span class="pre">-5,</span> <span class="pre">4])</span></code> would return <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">0,</span> <span class="pre">'200',</span> <span class="pre">4]</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="list_write23q_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def change_index3(lst):
+    # write code here
+
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(change_index3(['hi', 'goodbye', 'python', '106', '506']), ['hi', 'goodbye', 'python', '200', '506'], "change_index3(['hi', 'goodbye', 'python', '106', '506'])")
+        self.assertEqual(change_index3([1, 2, 0, -5, 4]), [1, 2, 0, '200', 4], "change_index3([1, 2, 0, -5, 4])")
+        self.assertEqual(change_index3([False, '2', 2.5, '200', -4]), [False, '2', 2.5, '200', -4], "change_index3([False, '2', 2.5, '200', -4]")
+
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</li>
+<li><div id='list_capitalize' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_capitalize_q data-question_label="9.18.7">
+<div id=list_capitalize_q_question class="ac_question col-md-12">
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">capitalize</span></code> that takes in a list of lists of strings, <code class="docutils literal notranslate"><span class="pre">lst</span></code>, and makes the first letter of each element capitalized and adds
+it to a new list and returns that new list. For example, <code class="docutils literal notranslate"><span class="pre">capitalize([[&quot;hi&quot;],[&quot;hello&quot;,</span> <span class="pre">&quot;hey&quot;]])</span></code> would return <code class="docutils literal notranslate"><span class="pre">['Hi',</span> <span class="pre">'Hello',</span> <span class="pre">'Hey']</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="list_capitalize_q_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def capitalize(lst):
+    # write code here
+
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(capitalize([['hi'],['hello', 'hey']]), ['Hi', 'Hello', 'Hey'], "capitalize([['hi'],['hello', 'hey']])")
+        self.assertEqual(capitalize([['HI'],['HELLO', 'HEY']]), ['Hi', 'Hello', 'Hey'], "capitalize([['HI'],['HELLO', 'HEY']])")
+        self.assertEqual(capitalize([['go', 'blue'],['python', 'IS', 'The', 'Best']]), ['Go', 'Blue', 'Python', 'Is', 'The', 'Best'], "capitalize([['go', 'blue'],['python', 'IS', 'The', 'Best']])")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_capitalize_a data-question_label="9.18.8">
+<div id=list_capitalize_a_question class="ac_question col-md-12">
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">capitalize</span></code> that takes in a list of lists of strings, <code class="docutils literal notranslate"><span class="pre">lst</span></code>, and makes the first letter of each element capitalized and adds
+it to a new list and returns that new list. For example, <code class="docutils literal notranslate"><span class="pre">capitalize([[&quot;hi&quot;],[&quot;hello&quot;,</span> <span class="pre">&quot;hey&quot;]])</span></code> would return <code class="docutils literal notranslate"><span class="pre">['Hi',</span> <span class="pre">'Hello',</span> <span class="pre">'Hey']</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="list_capitalize_a_editor" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def capitalize(lst):
+    new_list = []
+    for i in lst:
+        for j in i:
+            new_list.append(j.capitalize())
+    return new_list
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(capitalize([['hi'],['hello', 'hey']]), ['Hi', 'Hello', 'Hey'], "capitalize([['hi'],['hello', 'hey']])")
+        self.assertEqual(capitalize([['HI'],['HELLO', 'HEY']]), ['Hi', 'Hello', 'Hey'], "capitalize([['HI'],['HELLO', 'HEY']])")
+        self.assertEqual(capitalize([['go', 'blue'],['python', 'IS', 'The', 'Best']]), ['Go', 'Blue', 'Python', 'Is', 'The', 'Best'], "capitalize([['go', 'blue'],['python', 'IS', 'The', 'Best']])")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</li>
+<li>
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_write5q data-question_label="9.18.9">
+<div id=list_write5q_question class="ac_question col-md-12">
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">countWords</span></code> that takes in a list, <code class="docutils literal notranslate"><span class="pre">lst</span></code>, as a parameter, and returns the amount of words that have a length of 5.
+For example, <code class="docutils literal notranslate"><span class="pre">countWords(['hello',</span> <span class="pre">'hi',</span> <span class="pre">'good</span> <span class="pre">morning',</span> <span class="pre">'three',</span> <span class="pre">'kitty']</span></code> should return <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="list_write5q_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def countWords(lst):
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(countWords(['hello', 'hi', 'good morning', 'three', 'kitty']),3,"countWords(['hello', 'hi', 'good morning', 'three', 'kitty'])")
+        self.assertEqual(countWords(['two', 'three', 'four', 'five', 'six', 'seven']),2,"countWords(['two', 'three', 'four', 'five', 'six', 'seven'])")
+        self.assertEqual(countWords(['these', 'those', 'there']),3,"countWords(['these', 'those', 'there'])")
+        self.assertEqual(countWords(['the', 'an', 'a']),0,"countWords(['the', 'an', 'a'])")
+
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</li>
+<li><div id='list_writeChop' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_writeChopq data-question_label="9.18.10">
+<div id=list_writeChopq_question class="ac_question col-md-12">
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">chop</span></code> that takes a list, <code class="docutils literal notranslate"><span class="pre">lst</span></code>, and modifies it, removing the first and last elements.
+For example, <code class="docutils literal notranslate"><span class="pre">chop([1,2,3,4,5]</span></code> should return <code class="docutils literal notranslate"><span class="pre">[2,3,4]</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="list_writeChopq_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def chop(lst):
+    # write code here
+
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(chop([1,2,3,4,5]),[2,3,4],"chop([1,2,3,4,5])")
+        self.assertEqual(chop([1,3,5,7,9,10]),[3,5,7,9],"chop([1,3,5,7,9,10])")
+        self.assertEqual(chop([2,9]),[],"chop([2,9])")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_writeChopa data-question_label="9.18.11">
+<div id=list_writeChopa_question class="ac_question col-md-12">
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">chop</span></code> that takes a list, <code class="docutils literal notranslate"><span class="pre">lst</span></code>, and modifies it, removing the first and last elements.
+For example, <code class="docutils literal notranslate"><span class="pre">chop([1,2,3,4,5]</span></code> should return <code class="docutils literal notranslate"><span class="pre">[2,3,4]</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="list_writeChopa_editor" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def chop(lst):
+    lst.pop(0)
+    lst.pop(-1)
+    return(lst)
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(chop([1,2,3,4,5]),[2,3,4],"chop([1,2,3,4,5])")
+        self.assertEqual(chop([1,3,5,7,9,10]),[3,5,7,9],"chop([1,3,5,7,9,10])")
+        self.assertEqual(chop([2,9]),[],"chop([2,9])")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</li>
+<li>
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_writeReverseq data-question_label="9.18.12">
+<div id=list_writeReverseq_question class="ac_question col-md-12">
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">reverse</span></code> that takes in one parameter, <code class="docutils literal notranslate"><span class="pre">lst</span></code>, and returns the reverse of a passed list.
+For example, <code class="docutils literal notranslate"><span class="pre">reverse[1,2,3]</span></code> should return <code class="docutils literal notranslate"><span class="pre">[3,</span> <span class="pre">2,</span> <span class="pre">1]</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="list_writeReverseq_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def reverse(lst):
+    # write code here
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+          self.assertEqual(reverse([1,2,3,4,5]),[5,4,3,2,1],"reverse([1,2,3,4,5])")
+          self.assertEqual(reverse([1,3,5,7,9]),[9,7,5,3,1],"reverse([1,3,5,7,9])")
+          self.assertEqual(reverse([2,4,6,7,9]),[9,7,6,4,2],"reverse([2,4,6,7,9])")
+
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</li>
+<li><div id='list_writeSum' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_writeSumq data-question_label="9.18.13">
+<div id=list_writeSumq_question class="ac_question col-md-12">
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">sumUntilEven</span></code> that takes in one parameter, <code class="docutils literal notranslate"><span class="pre">lst</span></code>, and returns the sum of all the
+elements in the <code class="docutils literal notranslate"><span class="pre">lst</span></code> up to but not including the first even number. For example, <code class="docutils literal notranslate"><span class="pre">sumUntilEven([1,2,3,4,5]</span></code>
+should return <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">sumUntilEven([1,3,5,7,9]</span></code> should return <code class="docutils literal notranslate"><span class="pre">25</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="list_writeSumq_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def sumUntilEven(lst):
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(sumUntilEven([1,2,3,4,5]),1,"sumUntilEven([1,2,3,4,5])")
+        self.assertEqual(sumUntilEven([1,3,5,7,9]),25,"sumUntilEven([1,3,5,7,9])")
+        self.assertEqual(sumUntilEven([2,4,6,7,9]),0,"sumUntilEven([2,4,6,7,9])")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_writeSuma data-question_label="9.18.14">
+<div id=list_writeSuma_question class="ac_question col-md-12">
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">sumUntilEven</span></code> that takes in one parameter, <code class="docutils literal notranslate"><span class="pre">lst</span></code>, and returns the sum of all the
+elements in the <code class="docutils literal notranslate"><span class="pre">lst</span></code> up to but not including the first even number. For example, <code class="docutils literal notranslate"><span class="pre">sumUntilEven([1,2,3,4,5]</span></code>
+should return <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">sumUntilEven([1,3,5,7,9]</span></code> should return <code class="docutils literal notranslate"><span class="pre">25</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="list_writeSuma_editor" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def sumUntilEven(lst):
+    total = 0
+    element = 0
+    while element < len(lst) and lst[element] % 2 != 0:
+        total = total + lst[element]
+        element += 1
+    return total
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(sumUntilEven([1,2,3,4,5]),1,"sumUntilEven([1,2,3,4,5])")
+        self.assertEqual(sumUntilEven([1,3,5,7,9]),25,"sumUntilEven([1,3,5,7,9])")
+        self.assertEqual(sumUntilEven([2,4,6,7,9]),0,"sumUntilEven([2,4,6,7,9])")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</li>
+<li>
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_sortByLen data-question_label="9.18.15">
+<div id=list_sortByLen_question class="ac_question col-md-12">
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">sort_by_length</span></code> that takes in one parameter, a list of strings, <code class="docutils literal notranslate"><span class="pre">lst</span></code>, and returns the list sorted
+by the length of the strings. For example, <code class="docutils literal notranslate"><span class="pre">sort_by_length([&quot;hello&quot;,</span> <span class="pre">&quot;hi&quot;,</span> <span class="pre">&quot;hey&quot;,</span> <span class="pre">&quot;greetings&quot;])</span></code> would return <code class="docutils literal notranslate"><span class="pre">['hi',</span> <span class="pre">'hey',</span> <span class="pre">'hello',</span> <span class="pre">'greetings']</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="list_sortByLen_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def sort_by_length(lst):
+    # write code here
+
+====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+          self.assertEqual(sort_by_length(['hello', 'hi', 'hey', 'greetings']),['hi', 'hey', 'hello', 'greetings'],"sort_by_length(['hello', 'hi', 'hey', 'greetings'])")
+          self.assertEqual(sort_by_length(['hello', 'hello']),['hello', 'hello'],"sort_by_length(['hello', 'hello'])")
+          self.assertEqual(sort_by_length(['I', 'have', 'four', 'apples']),['I', 'have', 'four', 'apples'],"sort_by_length(['I', 'have', 'four', 'apples'])")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</li>
+<li>
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=list_loop_two_lists data-question_label="9.18.16">
+<div id=list_loop_two_lists_question class="ac_question col-md-12">
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">combine(names,</span> <span class="pre">ages)</span></code> that takes in two lists, <code class="docutils literal notranslate"><span class="pre">names</span></code> and <code class="docutils literal notranslate"><span class="pre">ages</span></code> and returns a list of strings in the format “Name: name, age: age”.  For example,
+<code class="docutils literal notranslate"><span class="pre">combine([&quot;Claire&quot;,</span> <span class="pre">&quot;Jennifer&quot;],[23,</span> <span class="pre">19])</span> <span class="pre">would</span> <span class="pre">return</span> <span class="pre">``[&quot;Name:</span> <span class="pre">Claire,</span> <span class="pre">age:</span> <span class="pre">23&quot;,</span> <span class="pre">&quot;Name:</span> <span class="pre">Jennfier,</span> <span class="pre">age:</span> <span class="pre">19&quot;]</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="list_loop_two_lists_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def combine(names, ages):
+
+====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+          self.assertEqual(sort_by_length(['hello', 'hi', 'hey', 'greetings']),['hi', 'hey', 'hello', 'greetings'],"sort_by_length(['hello', 'hi', 'hey', 'greetings'])")
+          self.assertEqual(sort_by_length(['hello', 'hello']),['hello', 'hello'],"sort_by_length(['hello', 'hello'])")
+          self.assertEqual(sort_by_length(['I', 'have', 'four', 'apples']),['I', 'have', 'four', 'apples'],"sort_by_length(['I', 'have', 'four', 'apples'])")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</li>
+</ol>
+</div>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 9.17. Mixed-Up Code Questions' data-toggle="tooltip">
+  <a href="MixedupCode.html" aria-label="Previous - 9.17. Mixed-Up Code Questions">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 9.19. Group Work: Lists' data-toggle="tooltip" >
+    <a href="pogil.html" aria-label="Next - 9.19. Group Work: Lists">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 - Based on Python for Everybody.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> 
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch(); 
+  });
+</script>
+
+
+  </body>
+</html>

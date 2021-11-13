@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7.17. Group Work - Strings &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.css?v=bddd2011b20db76a20ea" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.css?v=7c5388ad4389eae1a318" />
+
+
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/runtime.bundle.js?v=aa7c717c38c5405af9e6"></script>
+    <script src="../_static/637.bundle.js?v=1123ad75f9b821cdd636"></script>
+    <script src="../_static/runestone.bundle.js?v=9c8e466e8cbed4a3af5a"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="8. Files" href="../files/toctree.html" />
+    <link rel="prev" title="7.16. Write Code Questions" href="WriteCode.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = true;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'py4e-int';
+    eBookConfig.basecourse = 'py4e-int';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/logo_small.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          py4e-int
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span class="visuallyhidden" aria-label="User">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="runestoneComponents.switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/runestone/static/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=pogil'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">7.16. </span>Write Code Questions" data-toggle="tooltip">
+    <a href="WriteCode.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">8. </span>Files' data-toggle="tooltip" >              
+    <a href="../files/toctree.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+  
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="group-work-strings">
+<h1><span class="section-number">7.17. </span>Group Work - Strings<a class="headerlink" href="#group-work-strings" title="Permalink to this headline">¶</a></h1>
+<p>It is best to use a POGIL approach with the following. In POGIL students work
+in groups on activities and each member has an assigned role.  For more information see <a class="reference external" href="https://cspogil.org/Home">https://cspogil.org/Home</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.</p>
+</div>
+<p>Many interesting problems involve manipulating sequences of data.
+You’ve learned about strings before, but this activity
+provides a more in-depth look at what they can do.</p>
+<p><strong>Content Learning Objectives</strong></p>
+<p><em>After completing this activity, students should be able to:</em></p>
+<ul class="simple">
+<li><p>Explain the syntax and meaning of slice operations, with and without indexes.</p></li>
+<li><p>Name four methods that strings provide, and describe what each method does.</p></li>
+</ul>
+<p><strong>Process Skill Goals:</strong></p>
+<p><em>During the activity, students should make progress toward:</em></p>
+<ul class="simple">
+<li><p>Gaining insight about data structures from many examples (Information Processing).</p></li>
+</ul>
+<div class="section" id="indexing-and-slicing">
+<h2><span class="section-number">7.17.1. </span>Indexing and Slicing<a class="headerlink" href="#indexing-and-slicing" title="Permalink to this headline">¶</a></h2>
+<p>A string is a sequence of characters in single quotes(‘) or double
+quotes (“). Depending on the application, we can treat a string as
+a single value (e.g., <code class="docutils literal notranslate"><span class="pre">sentence</span></code>), or we can access individual
+characters using square brackets (e.g., <code class="docutils literal notranslate"><span class="pre">sentence[0]</span></code>). We can also
+use <strong>slice notation</strong> (e.g., <code class="docutils literal notranslate"><span class="pre">sentece[4:8]</span></code>) to refer to a range of
+characters. In fact, all types of sequences (including <code class="docutils literal notranslate"><span class="pre">list</span></code>
+and <code class="docutils literal notranslate"><span class="pre">tuple</span></code>) support indexing and slicing.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=strings_ac_pogil_output_indexingandslicing data-question_label="7.17.1.1">
+<div id=strings_ac_pogil_output_indexingandslicing_question class="ac_question col-md-12">
+<p>Run this code to see what it prints. Its output will help you answer the questions below.</p>
+
+</div>
+<textarea data-lang="python" id="strings_ac_pogil_output_indexingandslicing_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Exploring string indexing and slicing'  data-wasm=/_static
+     style="visibility: hidden;">
+sentence = 'I_am_smart' # This line prints nothing
+print(type(sentence))
+print(len(sentence))
+print(sentence[5])
+print(sentence[9])
+print(sentence[:5])
+print(sentence[5:])
+print(sentence[5:10])
+triplet = sentence[2:5] # This line prints nothing
+print(triplet)
+print(sentence[-5])
+print(sentence[-10])
+print(sentence[:-5])
+print(sentence[-5:])
+triplet = sentence[-4:-1] # This line prints nothing
+print(triplet)
+</textarea>
+</div>
+</div>
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="7.17.1.2" data-multipleanswers="false"  id="strings_MC_pogil_positiveindex"  style="visibility: hidden;">
+            <p>11-9-2: What is the <em>positive</em> index of the first character in the <code class="docutils literal notranslate"><span class="pre">sentence</span></code> string? What about the last?</p>
+
+            <li data-component="answer" data-correct id="strings_MC_pogil_positiveindex_opt_a">0, 9</li><li data-component="feedback">Correct! Indices begin at 0 and increment by 1 for each following character.</li>
+            
+            <li data-component="answer"  id="strings_MC_pogil_positiveindex_opt_b">0, 10</li><li data-component="feedback">Incorrect! There are 10 characters in the string, and the first character is index 0, so what is the index of the last character? Try again.</li>
+            
+            <li data-component="answer"  id="strings_MC_pogil_positiveindex_opt_c">1, 9</li><li data-component="feedback">Incorrect! Indices begin at 0. Try again.</li>
+            
+            <li data-component="answer"  id="strings_MC_pogil_positiveindex_opt_d">1, 10</li><li data-component="feedback">Incorrect! Indices begin at 0. Try again.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="7.17.1.3" data-multipleanswers="false"  id="strings_MC_pogil_negativeindex"  style="visibility: hidden;">
+            <p>11-9-3: What is the <em>negative</em> index of the first character in the <code class="docutils literal notranslate"><span class="pre">sentence</span></code> string? What about the last?</p>
+
+            <li data-component="answer"  id="strings_MC_pogil_negativeindex_opt_a">-9, 0</li><li data-component="feedback">Incorrect! 0 is the index of the first character in the string, not the last. Try again.</li>
+            
+            <li data-component="answer"  id="strings_MC_pogil_negativeindex_opt_b">-9, -1</li><li data-component="feedback">Incorrect! There are 10 characters in the string, so if the last one has an index of -1, what is the negative index of the first? Try again.</li>
+            
+            <li data-component="answer"  id="strings_MC_pogil_negativeindex_opt_c">-10, 0</li><li data-component="feedback">Incorrect! 0 is the index of the first character in the string, not the last. Try again.</li>
+            
+            <li data-component="answer" data-correct id="strings_MC_pogil_negativeindex_opt_d">-10, -1</li><li data-component="feedback">Correct! Negative indices start at the length of the string times -1. Then, they increment by 1 for each following character.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="7.17.1.4" data-multipleanswers="false"  id="strings_MC_pogil_posandneg"  style="visibility: hidden;">
+            <p>11-9-4: What is <code class="docutils literal notranslate"><span class="pre">sentence[2]</span></code>? What about <code class="docutils literal notranslate"><span class="pre">sentence[-2]</span></code>?</p>
+
+            <li data-component="answer" data-correct id="strings_MC_pogil_posandneg_opt_a">a, r</li><li data-component="feedback">Correct! 'a' is the third character in the string (so its index is 2) and 'r' is the second-to-last character in the string.</li>
+            
+            <li data-component="answer"  id="strings_MC_pogil_posandneg_opt_b">a, a</li><li data-component="feedback">Incorrect! "sentence[-2]" is the second-to-last character in the string. Try again.</li>
+            
+            <li data-component="answer"  id="strings_MC_pogil_posandneg_opt_c">_, r</li><li data-component="feedback">Incorrect! "sentence[2]" is the third character in the string. Try again.</li>
+            
+            <li data-component="answer"  id="strings_MC_pogil_posandneg_opt_d">_, a</li><li data-component="feedback">Incorrect! "sentence[2]" is the third character in the string and "sentence[-2]" is the second-to-last character in the string. Try again.</li>
+            
+
+            </ul>
+            </div>
+            <p>Let’s take a look at how the <code class="docutils literal notranslate"><span class="pre">:</span></code> operator works for slicing
+a string. Consider the example <code class="docutils literal notranslate"><span class="pre">sentence[m:n]</span></code>. The value at
+<code class="docutils literal notranslate"><span class="pre">m</span></code> is the first character in the slice. It is the same value
+as <code class="docutils literal notranslate"><span class="pre">sentence[m]</span></code>. However, the value at <code class="docutils literal notranslate"><span class="pre">n</span></code> is not the same
+value as <code class="docutils literal notranslate"><span class="pre">sentence[n]</span></code>. <code class="docutils literal notranslate"><span class="pre">n</span></code> is the index <em>after</em> the last
+character included in the slice.</p>
+<p>You can also reference only a single number when creating a
+slice. The slice <code class="docutils literal notranslate"><span class="pre">[m:]</span></code> means “from the index <code class="docutils literal notranslate"><span class="pre">m</span></code> to the
+end.” The slice <code class="docutils literal notranslate"><span class="pre">[:n]</span></code> means “from the beginning to the index
+just before <code class="docutils literal notranslate"><span class="pre">n</span></code>” (i.e., the first <code class="docutils literal notranslate"><span class="pre">n</span></code> characters).</p>
+
+        <div class="runestone">
+        <div data-component="fillintheblank" data-question_label="7.17.1.5" id="strings_fitb_pogil_smarpos"  style="visibility: hidden;">
+            <p>11-9-5: Write a Python expression that slices “smar” from <code class="docutils literal notranslate"><span class="pre">sentence</span></code> using only <em>positive</em> indexes. Reminder: <code class="docutils literal notranslate"><span class="pre">sentence</span></code> = “I_am_smart”.</p>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^\\s*sentence\\[5:9\\]\\s*$", "regexFlags": "", "feedback": "<p>Correct! This slice starts at \u2018s\u2019, which is index 5, and stops after including \u2018r\u2019 at index 8, which is one index before 9.</p>\n"}, {"regex": "^\\s*sentence\\[5:8\\]\\s*$", "regexFlags": "", "feedback": "<p>Incorrect! The second number in the slice is the index after the index of the last character you want to include. Try again.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Incorrect! Write your answer in the form \u201csentence[m:n]\u201d. Try again.</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            
+        <div class="runestone">
+        <div data-component="fillintheblank" data-question_label="7.17.1.6" id="strings_fitb_pogil_smarneg"  style="visibility: hidden;">
+            <p>11-9-6: Write a Python expression that slices “smar” from <code class="docutils literal notranslate"><span class="pre">sentence</span></code> using only <em>negative</em> indexes. Reminder: <code class="docutils literal notranslate"><span class="pre">sentence</span></code> = “I_am_smart”.</p>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^\\s*sentence\\[-5:-1\\]\\s*$", "regexFlags": "", "feedback": "<p>Correct! This slice starts at \u2018s\u2019, which is index -5, and stops after including \u2018r\u2019 at index -2, which is one index before -1.</p>\n"}, {"regex": "^\\s*sentence\\[-5:0\\]\\s*$", "regexFlags": "", "feedback": "<p>Incorrect! Remember, the last character in the string has the index -1. Try again.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Incorrect! Write your answer in the form \u201csentence[-m:-n]\u201d. Try again.</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            </div>
+<div class="section" id="common-string-methods">
+<h2><span class="section-number">7.17.2. </span>Common String Methods<a class="headerlink" href="#common-string-methods" title="Permalink to this headline">¶</a></h2>
+<p>Strings have <strong>methods</strong> (built-in functions) that can be called
+using dot notation. See <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#string-methods">https://docs.python.org/3/library/stdtypes.html#string-methods</a>
+for a list of Python string methods.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=strings_ac_pogil_output_methods data-question_label="7.17.2.1">
+<div id=strings_ac_pogil_output_methods_question class="ac_question col-md-12">
+<p>Run this code to see what it prints. Its output will help you answer the questions below.</p>
+
+</div>
+<textarea data-lang="python" id="strings_ac_pogil_output_methods_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Exploring various string methods'  data-wasm=/_static
+     style="visibility: hidden;">
+dna = 'CTGACGACCT' # This line prints nothing
+print(dna.lower())
+print(dna)
+lowercase = dna.lower() # This line prints nothing
+print(lowercase)
+dnalist = list(dna) # This line prints nothing
+print(dnalist)
+print(type(dna))
+dna = dna.split('A') # This line prints nothing
+print(dna)
+print(type(dna))
+# dna.replace('C', 'g')
+# The line above would cause an error with the text:
+# AttributeError: 'list' object has no attribute 'replace'
+print(dna[0])
+print(type(dna[0]))
+print(dna[0].replace('C', 'g'))
+print(dna)
+</textarea>
+</div>
+</div>
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="7.17.2.2" data-multipleanswers="false"  id="strings_MC_pogil_lower"  style="visibility: hidden;">
+            <p>11-9-8: True or false: the <code class="docutils literal notranslate"><span class="pre">lower</span></code> method changes the contents of the string it is called on.</p>
+
+            <li data-component="answer"  id="strings_MC_pogil_lower_opt_a">True</li><li data-component="feedback">Incorrect! Take a closer look at the code above. Try again.</li>
+            
+            <li data-component="answer" data-correct id="strings_MC_pogil_lower_opt_b">False</li><li data-component="feedback">Correct! When line 3 of the code above prints(dna), it is still capitalized, even though in the previous line, "lower" was called on dna.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="7.17.2.3" data-multipleanswers="false"  id="strings_MC_pogil_replace"  style="visibility: hidden;">
+            <p>11-9-9: What does the <code class="docutils literal notranslate"><span class="pre">replace</span></code> method do? Assume it is called with two arguments.</p>
+
+            <li data-component="answer"  id="strings_MC_pogil_replace_opt_a">Finds and replaces the first instance of a substring in a larger string with a different string, changing the original string.</li><li data-component="feedback">Incorrect! Strings are "immutable", which means that their value is unchanged by methods. Try again.</li>
+            
+            <li data-component="answer"  id="strings_MC_pogil_replace_opt_b">Finds and replaces the first instance of a substring in a larger string with a different string, returning a changed version of the string but without changing the original string.</li><li data-component="feedback">Incorrect! replace() replaces all occurrences of the substring, not just the first one. Try again.</li>
+            
+            <li data-component="answer"  id="strings_MC_pogil_replace_opt_c">Finds and replaces every instance of a substring in a larger string with a different string, changing the original string.</li><li data-component="feedback">Incorrect! Strings are "immutable", which means that their value is unchanged by methods. Try again.</li>
+            
+            <li data-component="answer" data-correct id="strings_MC_pogil_replace_opt_d">Finds and replaces every instance of a substring in a larger string with a different string, returning a changed version of the string but without changing the original string.</li><li data-component="feedback">Correct! replace() replaces all occurrences of the substring, not just the first one. However, it doesn't change the original string.</li>
+            
+
+            </ul>
+            </div>
+            <p>You may have noticed that it isn’t possible to call the
+<code class="docutils literal notranslate"><span class="pre">replace</span></code> method on <code class="docutils literal notranslate"><span class="pre">dna</span></code>, but calling it on <code class="docutils literal notranslate"><span class="pre">dna[0]</span></code>
+is okay. This is because the “list” data type does not
+include a replace method. However, strings allow you to
+“find and replace” any text. Keep in mind, however, that
+string variables don’t change after applying a method.
+For this reason, strings are referred to as <strong>immutable</strong>
+(i.e., the value never changes).</p>
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="7.17.2.4" data-multipleanswers="false"  id="strings_MC_pogil_capitalize"  style="visibility: hidden;">
+            <p>11-9-10: The <code class="docutils literal notranslate"><span class="pre">capitalize</span></code> method capitalizes the first character of a string. If I wanted to capitalize the first letter of the string <code class="docutils literal notranslate"><span class="pre">name</span> <span class="pre">=</span> <span class="pre">&quot;robby&quot;</span></code>, <em>and change the value of</em> <code class="docutils literal notranslate"><span class="pre">name</span></code>, what line of code would I write?</p>
+
+            <li data-component="answer"  id="strings_MC_pogil_capitalize_opt_a">name.capitalize()</li><li data-component="feedback">Incorrect! Because strings are immutable, the value of "name" would remain unchanged. Try again.</li>
+            
+            <li data-component="answer" data-correct id="strings_MC_pogil_capitalize_opt_b">name = name.capitalize()</li><li data-component="feedback">Correct! Because strings are immutable, the value of "name" must be changed to equal the string returned by "name.capitalize()".</li>
+            
+            <li data-component="answer"  id="strings_MC_pogil_capitalize_opt_c">name = name.capitalize(name)</li><li data-component="feedback">Incorrect! The "capitalize" method has no parameters, just like the "lower" method. Try again.</li>
+            
+            <li data-component="answer"  id="strings_MC_pogil_capitalize_opt_d">capitalize(name)</li><li data-component="feedback">Incorrect! "capitalize" is a method, so it must be called using dot notation. Try again.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="7.17.2.5" data-multipleanswers="false"  id="strings_MC_pogil_capitalizesubstr"  style="visibility: hidden;">
+            <p>11-9-11: If I wanted to create a new string, <code class="docutils literal notranslate"><span class="pre">nofirst</span></code>, whose value equals “Obby”, what line of code would I write? Reminder: <code class="docutils literal notranslate"><span class="pre">name</span> <span class="pre">=</span> <span class="pre">&quot;robby&quot;</span></code>.</p>
+
+            <li data-component="answer" data-correct id="strings_MC_pogil_capitalizesubstr_opt_a">nofirst = name[1:].capitalize()</li><li data-component="feedback">Correct! This creates the slice "obby" and then capitalizes the first letter of it.</li>
+            
+            <li data-component="answer"  id="strings_MC_pogil_capitalizesubstr_opt_b">nofirst = name[1:4].capitalize()</li><li data-component="feedback">Incorrect! This would make "nofirst" = "Obb", not "Obby". Try again.</li>
+            
+            <li data-component="answer"  id="strings_MC_pogil_capitalizesubstr_opt_c">nofirst = name.capitalize()[1:]</li><li data-component="feedback">Incorrect! This would make "nofirst" = "obby" because "capitalize" was called before the slice. Try again.</li>
+            
+            <li data-component="answer"  id="strings_MC_pogil_capitalizesubstr_opt_d">nofirst = name[1:].capitalize</li><li data-component="feedback">Incorrect! This would cause a SyntaxError, as "capitalize" needs to be called with parentheses. Try again.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="7.17.2.6" data-multipleanswers="false"  id="strings_MC_pogil_replacesubstr"  style="visibility: hidden;">
+            <p>11-9-12: The string <code class="docutils literal notranslate"><span class="pre">nofirst</span></code> now equals “Obby”. What line of code would I write if I wanted to change its value to “ObOb”?</p>
+
+            <li data-component="answer"  id="strings_MC_pogil_replacesubstr_opt_a">nofirst = replace(nofirst[-2:0], nofirst[0:2])</li><li data-component="feedback">Incorrect! "replace" is a string method, so it must be called with dot notation. Try again.</li>
+            
+            <li data-component="answer"  id="strings_MC_pogil_replacesubstr_opt_b">nofirst = nofirst.replace(nofirst[2:], nofirst[-2:])</li><li data-component="feedback">Incorrect! This wouldn't change the string at all because it would replace the last two characters with themselves. Try again.</li>
+            
+            <li data-component="answer"  id="strings_MC_pogil_replacesubstr_opt_c">nofirst = nofirst.replace(nofirst[:2], nofirst[-2:])</li><li data-component="feedback">Incorrect! This would replace "Ob" with "by, making "nofirst" = "byby". Try again.</li>
+            
+            <li data-component="answer" data-correct id="strings_MC_pogil_replacesubstr_opt_d">nofirst = nofirst.replace(nofirst[-2:], nofirst[:2])</li><li data-component="feedback">Correct! This replaces all instances of "by" in "nofirst" with "Ob".</li>
+            
+
+            </ul>
+            </div>
+            
+<div class="runestone">
+<ul data-component="dragndrop" data-question_label="7.17.2.7" id="strings_dnd_pogil_methods"  style="visibility: hidden;">
+    <span data-subcomponent="question">11-9-13: Match each string method to a description of what it does.</span>
+	<span data-subcomponent=feedback>Keep trying! Run the code block above if you need more help.</span>
+
+    <li data-subcomponent="draggable" id="strings_dnd_pogil_methods_drag1">split</li>
+    <li data-subcomponent="dropzone" for="strings_dnd_pogil_methods_drag1">Returns a list of substrings which were separated by a specific character/string.</li>
+
+    <li data-subcomponent="draggable" id="strings_dnd_pogil_methods_drag2">lower</li>
+    <li data-subcomponent="dropzone" for="strings_dnd_pogil_methods_drag2">Returns a new string with all letters changed to lowercase.</li>
+
+    <li data-subcomponent="draggable" id="strings_dnd_pogil_methods_drag3">replace</li>
+    <li data-subcomponent="dropzone" for="strings_dnd_pogil_methods_drag3">Returns a new string with all occurences of a specific substring substituted with another string.</li>
+
+    <li data-subcomponent="draggable" id="strings_dnd_pogil_methods_drag4">capitalize</li>
+    <li data-subcomponent="dropzone" for="strings_dnd_pogil_methods_drag4">Returns a new string with the first letter changed to uppercase.</li>
+</ul></div>
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="strings_parsons_pogil_methods" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The code blocks below have been mixed up! Rearrange them so that the program prints “Georgington”. Watch out - there are three code blocks that are unused in the solution!</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="7.17.2.8"   data-adaptive="true"    data-noindent="true"   data-numbered="left"  style="visibility: hidden;">
+        president = "george washington"
+---
+president = president[:5] + president[-6:]
+---
+president = president[:5] + [-6:] #distractor
+---
+president = president[:4] + president[-5:] #distractor
+---
+print(president = president.capitalize()) #distractor
+---
+print(president.capitalize())
+        </pre>
+        </div>
+        </div>
+    <p>There are dozens of other string methods not shown in this
+section of the ebook. Read Python’s online documentation at
+<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#string-methods">https://docs.python.org/3/library/stdtypes.html#string-methods</a>
+to learn about more! They can be <em>very</em> helpful.</p>
+<p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
+
+<div class="runestone alert alert-warning sqcontainer">
+    <div data-component="groupsub" id=strings_groupsub data-size_limit=3>
+        <div class="col-sm-6">
+            <select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%">
+            </select>
+        </div>
+        <div id="groupsub_button" class="col-sm-6">
+        </div>
+        <p>The Submit Group button will submit the answer for each each question
+        on this page for each member of your group. It also logs you as the official
+        group submitter.</p>
+    </div>
+</div>
+</div>
+</div>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 7.16. Write Code Questions' data-toggle="tooltip">
+  <a href="WriteCode.html" aria-label="Previous - 7.16. Write Code Questions">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 8. Files' data-toggle="tooltip" >
+    <a href="../files/toctree.html" aria-label="Next - 8. Files">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 - Based on Python for Everybody.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> 
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch(); 
+  });
+</script>
+
+
+  </body>
+</html>

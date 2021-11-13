@@ -28,7 +28,7 @@ Write Code Questions
                     def testOne(self):
                         self.assertEqual(cur_stud_link('https://umich.edu/'), "https://umich.edu/current-students/", "cur_stud_link('https://umich.edu/')")
 
-                myTests().main()
+                unittest.main()
 
         .. tab:: Answer
 
@@ -80,7 +80,7 @@ Write Code Questions
             def testOne(self):
                 self.assertEqual(headings('https://en.wikipedia.org/wiki/Massive_open_online_course'), ['History', 'Emergence of MOOC providers', 'Student experience and pedagogy', 'Information architecture', 'Industry', 'Benefits', 'Challenges and criticisms', 'See also', 'References', 'Sources', 'Further reading'], "headings('https://en.wikipedia.org/wiki/Massive_open_online_course')")
 
-        myTests().main()
+        unittest.main()
 
 
 #.
@@ -111,7 +111,7 @@ Write Code Questions
                     def testOne(self):
                         self.assertEqual(coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course'), {'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', 'United Kingdom': '4.4%', 'Spain': '4.0%', 'Canada': '3.6%', 'Australia': '2.3%', 'Russia': '2.2%', 'Rest of world': '41.9%'}, "coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course')")
 
-                myTests().main()
+                unittest.main()
 
         .. tab:: Answer
 
@@ -172,7 +172,7 @@ Write Code Questions
             def testOne(self):
                 self.assertEqual(types('https://en.wikipedia.org/wiki/Python_(programming_language)'), ['bool', 'bytearray', 'bytes', 'complex', 'dict', 'ellipsis', 'float', 'frozenset', 'int', 'list', 'NoneType', 'NotImplementedType', 'range', 'set', 'str', 'tuple'], "types('https://en.wikipedia.org/wiki/Python_(programming_language)')")
 
-        myTests().main()
+        unittest.main()
 
 
 #.
@@ -203,7 +203,7 @@ Write Code Questions
                     def testOne(self):
                         self.assertEqual(restaurants_list('https://detroit.eater.com/maps/best-ann-arbor-restaurants'), ["1. Knight's Steakhouse", '2. The Last Word', "3. Krazy Jim's Blimpy Burger", '4. Blue Llama Jazz Club', '5. Spencer', '6. Miss Kim', "7. Zingerman's Delicatessen", '8. Tomukun Noodle Bar', '9. Seoul Street', '10. Ricewood', '11. Bellflower', "12. Ma Lou's Fried Chicken"], "restaurants_list('https://detroit.eater.com/maps/best-ann-arbor-restaurants')")
 
-                myTests().main()
+                unittest.main()
 
         .. tab:: Answer
 
@@ -260,7 +260,7 @@ Write Code Questions
             def testOne(self):
                 self.assertEqual(bsi_list('https://www.si.umich.edu/programs/bachelor-science-information'), ['How do I apply?', 'Current U-M students', 'Transfer students', 'High school students', 'New transfers', 'UMSI Community College Summer Institute', 'Curriculum', 'Career outcomes', 'Internships', 'F-1 visa holders', 'Career development resources', 'Engaged learning', 'Tuition and funding', 'Connect with us', 'Study abroad for undergraduates', 'Exchange student information'], "bsi_list('https://www.si.umich.edu/programs/bachelor-science-information')")
 
-        myTests().main()
+        unittest.main()
 
 
 #.
@@ -292,7 +292,7 @@ Write Code Questions
                     def testOne(self):
                         self.assertEqual(bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information'), {'How do I apply?': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply', 'Current U-M students': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/cross-campus-transfer', 'Transfer students': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/new-transfer-students-bsi', 'High school students': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/preferred-admissions', 'New transfers': 'https://www.si.umich.edu/programs/bachelor-science-information/new-transfers', 'UMSI Community College Summer Institute': 'https://www.si.umich.edu/programs/bachelor-science-information/new-transfers/umsi-community-college-summer-institute', 'Curriculum': 'https://www.si.umich.edu/programs/bachelor-science-information/curriculum', 'Career outcomes': 'https://www.si.umich.edu/programs/bachelor-science-information/career-outcomes', 'Internships': 'https://www.si.umich.edu/programs/bachelor-science-information/internships', 'F-1 visa holders': 'https://www.si.umich.edu/programs/bachelor-science-information/internships/f-1-visa-holders', 'Career development resources': 'https://www.si.umich.edu/programs/bachelor-science-information/career-development-resources', 'Engaged learning': 'https://www.si.umich.edu/programs/bachelor-science-information/engaged-learning', 'Tuition and funding': 'https://www.si.umich.edu/programs/bachelor-science-information/tuition-and-funding', 'Connect with us': 'https://www.si.umich.edu/programs/bachelor-science-information/connect-us', 'Study abroad for undergraduates': 'https://www.si.umich.edu/programs/bachelor-science-information/study-abroad-undergraduates', 'Exchange student information': 'https://www.si.umich.edu/programs/bachelor-science-information/exchange-student-information'}, "bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information')")
 
-                myTests().main()
+                unittest.main()
 
         .. tab:: Answer
 
@@ -358,7 +358,7 @@ Write Code Questions
                 address = soup.find('div', class_ = 'footer--address').text.strip("\n")
                 self.assertEqual(envelope_address('https://www.si.umich.edu/programs/bachelor-science-information'), address, "envelope_address('https://www.si.umich.edu/programs/bachelor-science-information')")
 
-        myTests().main()
+        unittest.main()
 
 
 #.
@@ -389,7 +389,7 @@ Write Code Questions
                     def testOne(self):
                         self.assertEqual(name_email('https://www.si.umich.edu/people/directory/faculty/e'), {'Paul Edwards': 'pne@umich.edu', 'Ron Eglash': 'eglash@umich.edu', 'Nicole Ellison': 'enicole@umich.edu', 'Barbara Ericson': 'barbarer@umich.edu'}, "name_email('https://www.si.umich.edu/people/directory/faculty/e')")
 
-                myTests().main()
+                unittest.main()
 
         .. tab:: Answer
 
@@ -456,4 +456,4 @@ Write Code Questions
             def testOne(self):
                 self.assertEqual(program_email('https://www.si.umich.edu/about-umsi/contact-us'), {'BSI program': 'umsi.undergrad@umich.edu', 'MSI program': 'umsi.admissions@umich.edu', 'MHI program': 'hi.admissions@umich.edu', 'MADS program': 'umsi.mads@umich.edu', 'Doctoral program': 'umsi.phd.admissions@umich.edu'}, "program_email('https://www.si.umich.edu/about-umsi/contact-us')")
 
-        myTests().main()
+        unittest.main()

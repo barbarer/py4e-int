@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mixed-Up Code Questions &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.css?v=bddd2011b20db76a20ea" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.css?v=7c5388ad4389eae1a318" />
+
+
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/runtime.bundle.js?v=aa7c717c38c5405af9e6"></script>
+    <script src="../_static/637.bundle.js?v=1123ad75f9b821cdd636"></script>
+    <script src="../_static/runestone.bundle.js?v=9c8e466e8cbed4a3af5a"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = true;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'py4e-int';
+    eBookConfig.basecourse = 'py4e-int';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/logo_small.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          py4e-int
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span class="visuallyhidden" aria-label="User">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="runestoneComponents.switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/runestone/static/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=mixedupcode_orig'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+  
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="mixed-up-code-questions">
+<h1>Mixed-Up Code Questions<a class="headerlink" href="#mixed-up-code-questions" title="Permalink to this headline">¶</a></h1>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="tup_mixedupcode_1" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Create a function called <code class="docutils literal notranslate"><span class="pre">length_word</span></code> that takes in a parameter, <code class="docutils literal notranslate"><span class="pre">txt</span></code> which returns a list of tuples, <code class="docutils literal notranslate"><span class="pre">tup_list</span></code>,
+where the first element is the length of each word in <code class="docutils literal notranslate"><span class="pre">txt</span></code> and the second is the word itself. Sort the list in terms of word
+length from longest to shortest. For example, <code class="docutils literal notranslate"><span class="pre">length_word(&quot;hi</span> <span class="pre">bye&quot;)</span></code> would return <code class="docutils literal notranslate"><span class="pre">[(3,</span> <span class="pre">'bye'),</span> <span class="pre">(2,</span> <span class="pre">'hi')]</span></code>. Note: there
+is one block that won’t be used in the solution!</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="1"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        def length_word(txt):
+---
+    words = txt.split()
+---
+    t = []
+---
+    for word in words.split(): #paired
+---
+    for word in words:
+---
+        t.append((len(word), word))
+---
+        t.append(len(word)) #paired
+---
+    t.sort(reverse = True)
+---
+    t.sort(reverse = False) #paired
+---
+    return t
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=tup_mixedupcode_1_ac data-question_label="2">
+<div id=tup_mixedupcode_1_ac_question class="ac_question col-md-12">
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">length_word</span></code> that takes in a parameter, <code class="docutils literal notranslate"><span class="pre">txt</span></code> which returns a list of tuples, <code class="docutils literal notranslate"><span class="pre">tup_list</span></code>,
+where the first element is the length of each word in <code class="docutils literal notranslate"><span class="pre">txt</span></code> and the second is the word itself. Sort the list in terms of word
+length from longest to shortest. For example, <code class="docutils literal notranslate"><span class="pre">length_word(&quot;hi</span> <span class="pre">bye&quot;)</span></code> would return <code class="docutils literal notranslate"><span class="pre">[(3,</span> <span class="pre">'bye'),</span> <span class="pre">(2,</span> <span class="pre">'hi')]</span></code>. Note: there
+is one block that won’t be used in the solution!</p>
+
+</div>
+<textarea data-lang="python" id="tup_mixedupcode_1_ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def length_word(txt):
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(length_word('but soft what light in yonder window breaks'), [(6, 'yonder'), (6, 'window'), (6, 'breaks'), (5, 'light'), (4, 'what'), (4, 'soft'), (3, 'but'), (2, 'in')], "length_word('but soft what light in yonder window breaks')")
+        self.assertEqual(length_word('hi bye'), [(3, 'bye'), (2, 'hi')], "length_word('hi bye')")
+        self.assertEqual(length_word('Hello'), [(5, 'Hello')], "length_word('Hello')")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="tup_mixedupcode_2" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Create a function called <code class="docutils literal notranslate"><span class="pre">tuple_word_len</span></code> that takes in one parameter, <code class="docutils literal notranslate"><span class="pre">word_list</span></code>.
+Then create and return a list called <code class="docutils literal notranslate"><span class="pre">tup_list</span></code> that contains tuples of each word from <code class="docutils literal notranslate"><span class="pre">word_list</span></code> paired with their
+lengths. Then sort the words by length from highest to lowest.  For example, <code class="docutils literal notranslate"><span class="pre">tuple_word_len(['hi',</span> <span class="pre">'bye'])</span></code>
+would return <code class="docutils literal notranslate"><span class="pre">[('bye',</span> <span class="pre">3),</span> <span class="pre">('hi',</span> <span class="pre">2)]</span></code>.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="3"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        def tuple_word_len(word_list):
+---
+    tup_list = []
+---
+    for word in word_list:
+---
+    for word in tup_list: #paired
+---
+        tup = word, len(word)
+---
+        tup_list.append(tup)
+---
+        word_list.append(tup) #paired
+---
+    tup_list.sort(key = lambda x: x[1], reverse = True)
+---
+    return tup_list
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=tup_mixedupcode_2_ac data-question_label="4">
+<div id=tup_mixedupcode_2_ac_question class="ac_question col-md-12">
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">tuple_word_len</span></code> that takes in one parameter, <code class="docutils literal notranslate"><span class="pre">word_list</span></code>.
+Then create and return a list called <code class="docutils literal notranslate"><span class="pre">tup_list</span></code> that contains tuples of each word from <code class="docutils literal notranslate"><span class="pre">word_list</span></code> paired with their
+lengths. Then sort the words by length from highest to lowest.  For example, <code class="docutils literal notranslate"><span class="pre">tuple_word_len(['hi',</span> <span class="pre">'bye'])</span></code>
+would return <code class="docutils literal notranslate"><span class="pre">[('bye',</span> <span class="pre">3),</span> <span class="pre">('hi',</span> <span class="pre">2)]</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="tup_mixedupcode_2_ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def tuple_word_len(word_list):
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(tuple_word_len(['hi', 'bye']), [('bye', 3), ('hi', 2)],"tuple_word_len(['hi', 'bye'])")
+        self.assertEqual(tuple_word_len(['but', 'soft', 'what', 'light', 'in', 'yonder', 'window', 'breaks']), [('yonder', 6), ('window', 6), ('breaks', 6), ('light', 5), ('soft', 4), ('what', 4), ('but', 3), ('in', 2)],"tuple_word_len(['but', 'soft', 'what', 'light', 'in', 'yonder', 'window', 'breaks'])")
+        self.assertEqual(tuple_word_len(['Hello']), [('Hello', 5)],"tuple_word_len(['Hello'])")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="tup_mixedupcode_3" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Create a function called <code class="docutils literal notranslate"><span class="pre">swap_values</span></code> that takes in one tuple as a parameter, <code class="docutils literal notranslate"><span class="pre">t</span></code>, that has at least 5 values.
+Swap the second and fourth indices of tuple <code class="docutils literal notranslate"><span class="pre">t</span></code> with one another, and return that value. For example,
+<code class="docutils literal notranslate"><span class="pre">swap_values(('Apple',</span> <span class="pre">'Banana',</span> <span class="pre">'Grapefruit',</span> <span class="pre">'Pear',</span> <span class="pre">'Peach'))</span></code> would return <code class="docutils literal notranslate"><span class="pre">('Apple',</span> <span class="pre">'Pear',</span> <span class="pre">'Grapefruit',</span> <span class="pre">'Banana',</span> <span class="pre">'Peach')</span></code>.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="5"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        def swap_values(t):
+---
+    a, b, c, d, e = t
+---
+    a, b, c, d = t #paired
+---
+    t = a, d, c, b, e
+---
+    t = a, c, b, e, d #paired
+---
+    return t
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=tup_mixedupcode_3_ac data-question_label="6">
+<div id=tup_mixedupcode_3_ac_question class="ac_question col-md-12">
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">swap_values</span></code> that takes in one tuple as a parameter, <code class="docutils literal notranslate"><span class="pre">t</span></code>, that has at least 5 values.
+Swap the second and fourth indices of tuple <code class="docutils literal notranslate"><span class="pre">t</span></code> with one another, and return that value. For example,
+<code class="docutils literal notranslate"><span class="pre">swap_values(('Apple',</span> <span class="pre">'Banana',</span> <span class="pre">'Grapefruit',</span> <span class="pre">'Pear',</span> <span class="pre">'Peach'))</span></code> would return <code class="docutils literal notranslate"><span class="pre">('Apple',</span> <span class="pre">'Pear',</span> <span class="pre">'Grapefruit',</span> <span class="pre">'Banana',</span> <span class="pre">'Peach')</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="tup_mixedupcode_3_ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def swap_values(t):
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(swap_values(('Apple', 'Banana', 'Grapefruit', 'Pear', 'Peach')), ('Apple', 'Pear', 'Grapefruit', 'Banana', 'Peach'), "swap_values(('Apple', 'Banana', 'Grapefruit', 'Pear', 'Peach'))")
+        self.assertEqual(swap_values(('Michigan', 'Go', 'Blue', 'Wolverine', 'Ann Arbor')), ('Michigan', 'Wolverine', 'Blue', 'Go', 'Ann Arbor'), "swap_values(('Michigan', 'Go', 'Blue', 'Wolverine', 'Ann Arbor'))")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="tup_mixedupcode_4" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Create a function called <code class="docutils literal notranslate"><span class="pre">dictionary_to_tup_list</span></code> that takes in a dictionary as a parameter, <code class="docutils literal notranslate"><span class="pre">d</span></code>. Transform the
+dictionary <code class="docutils literal notranslate"><span class="pre">d</span></code> into a list of tuples called <code class="docutils literal notranslate"><span class="pre">tup_list</span></code>, sort it by the dictionary’s keys in ascending order, and return
+the list of tuples. For example, <code class="docutils literal notranslate"><span class="pre">dictionary_to_tup_list({1:'a',</span> <span class="pre">2:'b',</span> <span class="pre">3:'c',</span> <span class="pre">4:'d',</span> <span class="pre">5:'e'})``would</span> <span class="pre">return</span>
+<span class="pre">``[(1,</span> <span class="pre">'a'),</span> <span class="pre">(2,</span> <span class="pre">'b'),</span> <span class="pre">(3,</span> <span class="pre">'c'),</span> <span class="pre">(4,</span> <span class="pre">'d'),</span> <span class="pre">(5,</span> <span class="pre">'e')]</span></code>.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="7"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        def dictionary_to_tup_list(d):
+---
+    tup_list = list(d.items())
+---
+    tup_list = d.items() #paired
+---
+    tup_list.sort()
+---
+    tup_list.sort(reverse = False) #paired
+---
+    tup_list.sort(key = lambda x: x[1]) #paired
+---
+    return tup_list
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=tup_mixedupcode_4_ac data-question_label="8">
+<div id=tup_mixedupcode_4_ac_question class="ac_question col-md-12">
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">dictionary_to_tup_list</span></code> that takes in a dictionary as a parameter, <code class="docutils literal notranslate"><span class="pre">d</span></code>. Transform the
+dictionary <code class="docutils literal notranslate"><span class="pre">d</span></code> into a list of tuples called <code class="docutils literal notranslate"><span class="pre">tup_list</span></code>, sort it by the dictionary’s keys in ascending order, and return
+the list of tuples. For example, <code class="docutils literal notranslate"><span class="pre">dictionary_to_tup_list({1:'a',</span> <span class="pre">2:'b',</span> <span class="pre">3:'c',</span> <span class="pre">4:'d',</span> <span class="pre">5:'e'})``would</span> <span class="pre">return</span>
+<span class="pre">``[(1,</span> <span class="pre">'a'),</span> <span class="pre">(2,</span> <span class="pre">'b'),</span> <span class="pre">(3,</span> <span class="pre">'c'),</span> <span class="pre">(4,</span> <span class="pre">'d'),</span> <span class="pre">(5,</span> <span class="pre">'e')]</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="tup_mixedupcode_4_ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def dictionary_to_tup_list(d):
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(dictionary_to_tup_list({1:'a', 2:'b', 3:'c', 4:'d', 5:'e'}), [(1, 'a'), (2, 'b'), (3, 'c'), (4, 'd'), (5, 'e')], "dictionary_to_tup_list({1:'a', 2:'b', 3:'c', 4:'d', 5:'e'})")
+        self.assertEqual(dictionary_to_tup_list({'a':1,'b':2, 'c':3,'d':4,'e':5}), [('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e', 5)], "dictionary_to_tup_list({'a':1,'b':2, 'c':3,'d':4,'e':5})")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="tup_mixedupcode_5" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Create a function called <code class="docutils literal notranslate"><span class="pre">count_strs</span></code> that takes in a tuple, <code class="docutils literal notranslate"><span class="pre">tup</span></code>, as a parameter and counts the amount of strings in the list. For example,
+<code class="docutils literal notranslate"><span class="pre">count_strs((1,</span> <span class="pre">2,</span> <span class="pre">&quot;hi&quot;))</span></code> should return <code class="docutils literal notranslate"><span class="pre">1.</span></code></p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="9"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        def count_strs(tup):
+---
+Def count_strs(lst) #paired
+---
+    count = 0
+---
+    for item in tup:
+---
+        if isinstance(item,str):
+---
+        if item.isinstance(str): #paired
+---
+            count += 1
+---
+            count += item #paired
+---
+    return count
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=tup_mixedupcode_5_ac data-question_label="10">
+<div id=tup_mixedupcode_5_ac_question class="ac_question col-md-12">
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">count_strs</span></code> that takes in a tuple, <code class="docutils literal notranslate"><span class="pre">tup</span></code>, as a parameter and counts the amount of strings in the list. For example,
+<code class="docutils literal notranslate"><span class="pre">count_strs((1,</span> <span class="pre">2,</span> <span class="pre">&quot;hi&quot;))</span></code> should return <code class="docutils literal notranslate"><span class="pre">1.</span></code></p>
+
+</div>
+<textarea data-lang="python" id="tup_mixedupcode_5_ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def count_strs(tup):
+    #write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(count_strs((1, 2, 'hi')), 1, "count_strs((1, 2, 'hi'))")
+        self.assertEqual(count_strs(('1', 2, 'hi')), 2, "count_strs(('1', 2, 'hi'))")
+        self.assertEqual(count_strs((1, 2)), 0, "count_strs((1, 2))")
+
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="tup_mixedupcode_6" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Create a function called <code class="docutils literal notranslate"><span class="pre">dict_to_list</span></code> that takes in a dictionary parameter, <code class="docutils literal notranslate"><span class="pre">d</span></code>, and adds the key-value pairs of dictionary <code class="docutils literal notranslate"><span class="pre">d</span></code> to a list and
+returns that list. For example, <code class="docutils literal notranslate"><span class="pre">dict_to_list({'monkey':</span> <span class="pre">5,</span> <span class="pre">'snake':</span> <span class="pre">3,</span> <span class="pre">'rabbit':</span> <span class="pre">9,</span> <span class="pre">'dragon':</span> <span class="pre">6,</span> <span class="pre">'rooster':</span> <span class="pre">2,</span> <span class="pre">'rat':</span> <span class="pre">10})</span></code> would return
+<code class="docutils literal notranslate"><span class="pre">[('monkey',</span> <span class="pre">5),</span> <span class="pre">('snake',</span> <span class="pre">3),</span> <span class="pre">('rabbit',</span> <span class="pre">9),</span> <span class="pre">('dragon',</span> <span class="pre">6),</span> <span class="pre">('rooster',</span> <span class="pre">2),</span> <span class="pre">('rat',</span> <span class="pre">10)]</span></code>.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="11"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        def dict_to_list(d):
+---
+    list_kv_pairs = []
+---
+    for key, val in d.items():
+---
+        list_kv_pairs.append((key, val))
+---
+        list_kv_pairs.append(key, val) #paired
+---
+    return list_kv_pairs
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=tup_mixedupcode_6_ac data-question_label="12">
+<div id=tup_mixedupcode_6_ac_question class="ac_question col-md-12">
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">dict_to_list</span></code> that takes in a dictionary parameter, <code class="docutils literal notranslate"><span class="pre">d</span></code>, and adds the key-value pairs of dictionary <code class="docutils literal notranslate"><span class="pre">d</span></code> to a list and
+returns that list. For example, <code class="docutils literal notranslate"><span class="pre">dict_to_list({'monkey':</span> <span class="pre">5,</span> <span class="pre">'snake':</span> <span class="pre">3,</span> <span class="pre">'rabbit':</span> <span class="pre">9,</span> <span class="pre">'dragon':</span> <span class="pre">6,</span> <span class="pre">'rooster':</span> <span class="pre">2,</span> <span class="pre">'rat':</span> <span class="pre">10})</span></code> would return
+<code class="docutils literal notranslate"><span class="pre">[('monkey',</span> <span class="pre">5),</span> <span class="pre">('snake',</span> <span class="pre">3),</span> <span class="pre">('rabbit',</span> <span class="pre">9),</span> <span class="pre">('dragon',</span> <span class="pre">6),</span> <span class="pre">('rooster',</span> <span class="pre">2),</span> <span class="pre">('rat',</span> <span class="pre">10)]</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="tup_mixedupcode_6_ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def dict_to_list(d):
+    #write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(dict_to_list({'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10}), [('monkey', 5), ('snake', 3), ('rabbit', 9), ('dragon', 6), ('rooster', 2), ('rat', 10)], "dict_to_list({'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10})")
+        self.assertEqual(dict_to_list({'twice' : -8.9, 'apples': 7.2, 'for': -2}), [('twice', -8.9), ('apples', 7.2), ('for', -2)], "dict_to_list({'twice' : -8.9, 'apples': 7.2, 'for': -2})")
+        self.assertEqual(dict_to_list({'twice' : 'twice', 'apples': 'apples', 'for': 'for'}), [('twice', 'twice'), ('apples', 'apples'), ('for', 'for')], "dict_to_list({'twice' : 'twice', 'apples': 'apples', 'for': 'for'})")
+        self.assertEqual(dict_to_list({'twice' : 'twice', 'twice' : 'twice'}), [('twice', 'twice')], "dict_to_list({'twice' : 'twice', 'twice' : 'twice'})")
+        self.assertEqual(dict_to_list({'twice' : 0, 'apples': 0, 'for': 0}), [('twice', 0), ('apples', 0), ('for', 0)], "dict_to_list({'twice' : 0, 'apples': 0, 'for': 0})")
+        self.assertEqual(dict_to_list({}), [], "dict_to_list({})")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="tup_mixedupcode_7" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Create a function called <code class="docutils literal notranslate"><span class="pre">alphabetical_dict_list</span></code> that takes in one dictionary parameter, <code class="docutils literal notranslate"><span class="pre">d</span></code>, and creates a list of tuples with the first value of each tuple
+as the word as the key and the second value of each tuple as the length of the word. Return a list of the dictionary’s key-value pairs in alphabetical order.
+For example, <code class="docutils literal notranslate"><span class="pre">alphabetical_dict_list({'monkey':</span> <span class="pre">5,</span> <span class="pre">'snake':</span> <span class="pre">3,</span> <span class="pre">'rabbit':</span> <span class="pre">9,</span> <span class="pre">'dragon':</span> <span class="pre">6,</span> <span class="pre">'rooster':</span> <span class="pre">2,</span> <span class="pre">'rat':</span> <span class="pre">10})</span></code> should return <code class="docutils literal notranslate"><span class="pre">[('dragon',</span> <span class="pre">6),</span> <span class="pre">('monkey',</span> <span class="pre">6),</span> <span class="pre">('rabbit',</span> <span class="pre">6),</span> <span class="pre">('rat',</span> <span class="pre">3),</span> <span class="pre">('rooster',</span> <span class="pre">7),</span> <span class="pre">('snake',</span> <span class="pre">5)]</span></code>.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="13"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        def alphabetical_dict_list(d):
+---
+    new_dict = {}
+---
+    for i in d:
+---
+        new_dict[i] = new_dict.get(i, len(i))
+---
+            new_dict.append(i, len(i)) #paired
+---
+    new_dict = sorted(new_dict.items())
+---
+    sort(new_dict.items()) #paired
+---
+    return new_dict
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=tup_mixedupcode_7_ac data-question_label="14">
+<div id=tup_mixedupcode_7_ac_question class="ac_question col-md-12">
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">alphabetical_dict_list</span></code> that takes in one dictionary parameter, <code class="docutils literal notranslate"><span class="pre">d</span></code>, and creates a list of tuples with the first value of each tuple
+as the word as the key and the second value of each tuple as the length of the word. Return a list of the dictionary’s key-value pairs in alphabetical order. For
+example, <code class="docutils literal notranslate"><span class="pre">alphabetical_dict_list({'monkey':</span> <span class="pre">5,</span> <span class="pre">'snake':</span> <span class="pre">3,</span> <span class="pre">'rabbit':</span> <span class="pre">9,</span> <span class="pre">'dragon':</span> <span class="pre">6,</span> <span class="pre">'rooster':</span> <span class="pre">2,</span> <span class="pre">'rat':</span> <span class="pre">10})</span></code> should return <code class="docutils literal notranslate"><span class="pre">[('dragon',</span> <span class="pre">6),</span> <span class="pre">('monkey',</span> <span class="pre">6),</span> <span class="pre">('rabbit',</span> <span class="pre">6),</span> <span class="pre">('rat',</span> <span class="pre">3),</span> <span class="pre">('rooster',</span> <span class="pre">7),</span> <span class="pre">('snake',</span> <span class="pre">5)]</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="tup_mixedupcode_7_ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def alphabetical_dict_list(d):
+    #write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(alphabetical_dict_list({'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10}), [('dragon', 6), ('monkey', 6), ('rabbit', 6), ('rat', 3), ('rooster', 7), ('snake', 5)], "alphabetical_dict_list({'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10})")
+        self.assertEqual(alphabetical_dict_list({'twice' : -8.9, 'apples': 7.2, 'for': -2}), [('apples', 6), ('for', 3), ('twice', 5)], "alphabetical_dict_list({'twice' : -8.9, 'apples': 7.2, 'for': -2})")
+        self.assertEqual(alphabetical_dict_list({'twice' : 'twice', 'apples': 'apples', 'for': 'for'}), [('apples', 6), ('for', 3), ('twice', 5)], "alphabetical_dict_list({'twice' : 'twice', 'apples': 'apples', 'for': 'for'})")
+        self.assertEqual(alphabetical_dict_list({'twice' : 0, 'apples': 0, 'for': 0}), [('apples', 6), ('for', 3), ('twice', 5)], "alphabetical_dict_list({'twice' : 0, 'apples': 0, 'for': 0})")
+        self.assertEqual(alphabetical_dict_list({'hi': 'bye', 'Run': 'When', 'Win': 'compare'}), [('Run', 3), ('Win', 3), ('hi', 2)], "alphabetical_dict_list({'hi': 'bye', 'Run': 'When', 'Win': 'compare'})")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="tup_mixedupcode_8" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Create a function called <code class="docutils literal notranslate"><span class="pre">longest_word_lst</span></code> that takes in a list of tuples, <code class="docutils literal notranslate"><span class="pre">list_tup</span></code>, as a parameter and adds the longest word in each tuple and adds it to a list. Return this
+list. For example, <code class="docutils literal notranslate"><span class="pre">longest_word_lst([('twice',</span> <span class="pre">'for',</span> <span class="pre">'apples'),</span> <span class="pre">('regular',</span> <span class="pre">'combining'),</span> <span class="pre">('one',</span> <span class="pre">'five',</span> <span class="pre">'twenty',</span> <span class="pre">'twenty-four'),</span> <span class="pre">('tmobile',</span> <span class="pre">'sprint',</span> <span class="pre">'at&amp;t')])</span></code>
+should return``[‘apples’, ‘combining’, ‘twenty-four’, ‘tmobile’]``.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="15"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        def longest_word_lst(lst_tup):
+---
+    lst = []
+---
+    for tup in lst_tup:
+---
+        longest_word = ''
+---
+        for item in tup:
+---
+            if len(item) > len(longest_word):
+---
+                longest_word = item
+---
+        lst.append(longest_word)
+---
+    return lst
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=tup_mixedupcode_8_ac data-question_label="16">
+<div id=tup_mixedupcode_8_ac_question class="ac_question col-md-12">
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">longest_word_lst</span></code> that takes in a list of tuples, <code class="docutils literal notranslate"><span class="pre">list_tup</span></code>, as a parameter and adds the longest word in each tuple and adds it to a list. Return this
+list. For example, <code class="docutils literal notranslate"><span class="pre">longest_word_lst([('twice',</span> <span class="pre">'for',</span> <span class="pre">'apples'),</span> <span class="pre">('regular',</span> <span class="pre">'combining'),</span> <span class="pre">('one',</span> <span class="pre">'five',</span> <span class="pre">'twenty',</span> <span class="pre">'twenty-four'),</span> <span class="pre">('tmobile',</span> <span class="pre">'sprint',</span> <span class="pre">'at&amp;t')])</span></code>
+should return <code class="docutils literal notranslate"><span class="pre">['apples',</span> <span class="pre">'combining',</span> <span class="pre">'twenty-four',</span> <span class="pre">'tmobile']</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="tup_mixedupcode_8_ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def longest_word_lst(lst_tup):
+    #write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(longest_word_lst([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')]), ['apples', 'combining', 'twenty-four', 'tmobile'], "longest_word_lst([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')])")
+        self.assertEqual(longest_word_lst([(),()]), ['', ''], "longest_word_lst([(),()])")
+        self.assertEqual(longest_word_lst([('twice', 'twice'),('rabbit','dragon','rooster')]), ['twice', 'rooster'], "longest_word_lst([('twice', 'twice'),('rabbit','dragon','rooster')])")
+        self.assertEqual(longest_word_lst((('2','22'), ('1'))), ['22', '1'], "longest_word_lst((('2','22'), ('1')))")
+        self.assertEqual(longest_word_lst((('2 0 2 0 2','22'), ('1'))), ['2 0 2 0 2', '1'], "longest_word_lst((('2 0 2 0 2','22'), ('1')))")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="tup_mixedupcode_9" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Create a function called <code class="docutils literal notranslate"><span class="pre">cap</span></code> that takes in a list of tuples, <code class="docutils literal notranslate"><span class="pre">lst_tup</span></code>, as a parameter, that creates a new list with every item in <code class="docutils literal notranslate"><span class="pre">lst_tup</span></code>
+capitalized and then return the list. Note: Each tuple must have at least two items. For example, <code class="docutils literal notranslate"><span class="pre">cap([('twice',</span> <span class="pre">'for',</span> <span class="pre">'apples'),</span> <span class="pre">('regular',</span> <span class="pre">'combining'),</span> <span class="pre">('one',</span> <span class="pre">'five',</span> <span class="pre">'twenty',</span> <span class="pre">'twenty-four'),</span> <span class="pre">('tmobile',</span> <span class="pre">'sprint',</span> <span class="pre">'at&amp;t')])</span></code>
+would return <code class="docutils literal notranslate"><span class="pre">['Twice',</span> <span class="pre">'For',</span> <span class="pre">'Apples',</span> <span class="pre">'Regular',</span> <span class="pre">'Combining',</span> <span class="pre">'One',</span> <span class="pre">'Five',</span> <span class="pre">'Twenty',</span> <span class="pre">'Twenty-four',</span> <span class="pre">'Tmobile',</span> <span class="pre">'Sprint',</span> <span class="pre">'At&amp;t']</span></code>.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="17"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        def cap(lst_tup):
+---
+    t_list = []
+---
+    for item in lst_tup:
+---
+        for word in item:
+---
+        for word in lst_tup: #paired
+---
+            t_list.append(word.capitalize())
+---
+            t_list = t_list.add(item.capitalized()) #paired
+---
+    return t_list
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=tup_mixedupcode_9_ac data-question_label="18">
+<div id=tup_mixedupcode_9_ac_question class="ac_question col-md-12">
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">cap</span></code> that takes in a list of tuples, <code class="docutils literal notranslate"><span class="pre">lst_tup</span></code>, as a parameter, that creates a new list with every item in <code class="docutils literal notranslate"><span class="pre">lst_tup</span></code>
+capitalized and then return the list. Note: Each tuple must have at least two items. For example, <code class="docutils literal notranslate"><span class="pre">cap([('twice',</span> <span class="pre">'for',</span> <span class="pre">'apples'),</span> <span class="pre">('regular',</span> <span class="pre">'combining'),</span> <span class="pre">('one',</span> <span class="pre">'five',</span> <span class="pre">'twenty',</span> <span class="pre">'twenty-four'),</span> <span class="pre">('tmobile',</span> <span class="pre">'sprint',</span> <span class="pre">'at&amp;t')])</span></code>
+would return <code class="docutils literal notranslate"><span class="pre">['Twice',</span> <span class="pre">'For',</span> <span class="pre">'Apples',</span> <span class="pre">'Regular',</span> <span class="pre">'Combining',</span> <span class="pre">'One',</span> <span class="pre">'Five',</span> <span class="pre">'Twenty',</span> <span class="pre">'Twenty-four',</span> <span class="pre">'Tmobile',</span> <span class="pre">'Sprint',</span> <span class="pre">'At&amp;t']</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="tup_mixedupcode_9_ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def cap(lst_tup):
+    #write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(cap([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')]), ['Twice', 'For', 'Apples', 'Regular', 'Combining', 'One', 'Five', 'Twenty', 'Twenty-four', 'Tmobile', 'Sprint', 'At&t'], "cap([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')])")
+        self.assertEqual(cap([('twice', 'twice'),('rabbit','dragon','rooster')]), ['Twice', 'Twice', 'Rabbit', 'Dragon', 'Rooster'], "cap([('twice', 'twice'),('rabbit','dragon','rooster')])")
+        self.assertEqual(cap([('twice', 'twice')]), ['Twice', 'Twice'], "cap([('twice', 'twice')])")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="tup_mixedupcode_10" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Create a function called <code class="docutils literal notranslate"><span class="pre">grocery</span></code> that takes in a dictionary, <code class="docutils literal notranslate"><span class="pre">d</span></code>, changes <code class="docutils literal notranslate"><span class="pre">d</span></code> into a list of tuples, and then sorts the list by the dictionary’s values in ascending order.
+For example, <code class="docutils literal notranslate"><span class="pre">grocery({'chicken':</span> <span class="pre">5,</span> <span class="pre">'lettuce':</span> <span class="pre">3,</span> <span class="pre">'orange</span> <span class="pre">juice':</span> <span class="pre">4,</span> <span class="pre">'bagels':</span> <span class="pre">2.50,</span> <span class="pre">'bacon':</span> <span class="pre">4.25,</span> <span class="pre">'bread':</span> <span class="pre">8})</span></code> should return <code class="docutils literal notranslate"><span class="pre">[('bagels',</span> <span class="pre">2.5),</span> <span class="pre">('lettuce',</span> <span class="pre">3),</span> <span class="pre">('orange</span> <span class="pre">juice',</span> <span class="pre">4),</span> <span class="pre">('bacon',</span> <span class="pre">4.25),</span> <span class="pre">('chicken',</span> <span class="pre">5),</span> <span class="pre">('bread',</span> <span class="pre">8)]</span></code>.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="19"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        def grocery(d):
+---
+    grocery_list = list(d.items())
+---
+    grocery_list = items(d) #paired
+---
+    grocery_list.sort(key = lambda x: x[1])
+---
+    grocery_list.sort(key = lambda x: x[1], reverse = True) #paired
+---
+    return grocery_list
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=tup_mixedupcode_10_ac data-question_label="20">
+<div id=tup_mixedupcode_10_ac_question class="ac_question col-md-12">
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">grocery</span></code> that takes in a dictionary, <code class="docutils literal notranslate"><span class="pre">d</span></code>, and changes <code class="docutils literal notranslate"><span class="pre">d</span></code> into a list of tuples, then sort the list by the dictionary’s values in ascending order. Note: values must be positive.
+For example, <code class="docutils literal notranslate"><span class="pre">grocery({'chicken':</span> <span class="pre">5,</span> <span class="pre">'lettuce':</span> <span class="pre">3,</span> <span class="pre">'orange</span> <span class="pre">juice':</span> <span class="pre">4,</span> <span class="pre">'bagels':</span> <span class="pre">2.50,</span> <span class="pre">'bacon':</span> <span class="pre">4.25,</span> <span class="pre">'bread':</span> <span class="pre">8})</span></code> should return <code class="docutils literal notranslate"><span class="pre">[('bagels',</span> <span class="pre">2.5),</span> <span class="pre">('lettuce',</span> <span class="pre">3),</span> <span class="pre">('orange</span> <span class="pre">juice',</span> <span class="pre">4),</span> <span class="pre">('bacon',</span> <span class="pre">4.25),</span> <span class="pre">('chicken',</span> <span class="pre">5),</span> <span class="pre">('bread',</span> <span class="pre">8)]</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="tup_mixedupcode_10_ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def grocery(d):
+    #write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(grocery({'chicken': 5, 'lettuce': 3, 'orange juice': 4, 'bagels': 2.50, 'bacon': 4.25, 'bread': 8}), [('bagels', 2.5), ('lettuce', 3), ('orange juice', 4), ('bacon', 4.25), ('chicken', 5), ('bread', 8)], "grocery({'chicken': 5, 'lettuce': 3, 'orange juice': 4, 'bagels': 2.50, 'bacon': 4.25, 'bread': 8})")
+        self.assertEqual(grocery({'eggs': 5}), [('eggs', 5)], "grocery({'eggs': 5})")
+        self.assertEqual(grocery({'soup': 5, 'peanut butter': 3, 'orange juice': 4.1, 'bagels': 2.50, 'bacon': 4.25, 'bread': 8}), [('bagels', 2.5), ('peanut butter', 3), ('orange juice', 4.1), ('bacon', 4.25), ('soup', 5), ('bread', 8)], "grocery({'soup': 5, 'peanut butter': 3, 'orange juice': 4.1, 'bagels': 2.50, 'bacon': 4.25, 'bread': 8})")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</div>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 - Based on Python for Everybody.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> 
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch(); 
+  });
+</script>
+
+
+  </body>
+</html>

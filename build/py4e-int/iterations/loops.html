@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6.6. Loop patterns &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.css?v=bddd2011b20db76a20ea" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.css?v=7c5388ad4389eae1a318" />
+
+
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/runtime.bundle.js?v=aa7c717c38c5405af9e6"></script>
+    <script src="../_static/637.bundle.js?v=1123ad75f9b821cdd636"></script>
+    <script src="../_static/runestone.bundle.js?v=9c8e466e8cbed4a3af5a"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6.7. Debugging" href="debugging.html" />
+    <link rel="prev" title="6.5. Definite loops using for" href="definite_for.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = true;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'py4e-int';
+    eBookConfig.basecourse = 'py4e-int';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/logo_small.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          py4e-int
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span class="visuallyhidden" aria-label="User">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="runestoneComponents.switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/runestone/static/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=loops'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">6.5. </span>Definite loops using <code class="docutils literal notranslate"><span class="pre">for</span></code>" data-toggle="tooltip">
+    <a href="definite_for.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">6.7. </span>Debugging' data-toggle="tooltip" >              
+    <a href="debugging.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+  
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="loop-patterns">
+<h1><span class="section-number">6.6. </span>Loop patterns<a class="headerlink" href="#loop-patterns" title="Permalink to this headline">¶</a></h1>
+<p id="index-0">Often we use a <code class="docutils literal notranslate"><span class="pre">for</span></code> or <code class="docutils literal notranslate"><span class="pre">while</span></code> loop to go through
+a list of items or the contents of a file and we are looking for
+something such as the largest or smallest value of the data we scan
+through.</p>
+<p>These loops are generally constructed by:</p>
+<ul class="simple">
+<li><p>Initializing one or more variables before the loop starts</p></li>
+<li><p>Performing some computation on each item in the loop body, possibly
+changing the variables in the body of the loop</p></li>
+<li><p>Looking at the resulting variables when the loop completes</p></li>
+</ul>
+<p>We will use a list of numbers to demonstrate the concepts and
+construction of these loop patterns.</p>
+<div class="section" id="counting-and-summing-loops">
+<h2><span class="section-number">6.6.1. </span>Counting and summing loops<a class="headerlink" href="#counting-and-summing-loops" title="Permalink to this headline">¶</a></h2>
+<p>For example, to count the number of items in a list, we would write the
+following <code class="docutils literal notranslate"><span class="pre">for</span></code> loop:</p>
+
+<div class="runestone" style="max-width: none;">
+    <div class="alert alert-warning cd_section" data-component="codelens" data-question_label="6.6.1.1">
+        <div class="pytutorVisualizer" id="codelens561"
+           data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
+        </div>
+        <p class="runestone_caption"><span class="runestone_caption_text">Activity: CodeLens 6.6.1.1 (codelens561)</span> </p>
+    </div>
+
+<script>
+var codelens561_vis;
+
+if (allTraceData === undefined) {
+   var allTraceData = {};
+}
+
+allTraceData["codelens561"] = {"code": "count = 0\nfor itervar in [3, 41, 12, 9, 74, 15]:\n    count = count + 1\nprint('Count: ', count)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"count": 0}, "ordered_globals": ["count"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"count": 0, "itervar": 3}, "ordered_globals": ["count", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"count": 1, "itervar": 3}, "ordered_globals": ["count", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"count": 1, "itervar": 41}, "ordered_globals": ["count", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"count": 2, "itervar": 41}, "ordered_globals": ["count", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"count": 2, "itervar": 12}, "ordered_globals": ["count", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"count": 3, "itervar": 12}, "ordered_globals": ["count", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"count": 3, "itervar": 9}, "ordered_globals": ["count", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"count": 4, "itervar": 9}, "ordered_globals": ["count", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"count": 4, "itervar": 74}, "ordered_globals": ["count", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"count": 5, "itervar": 74}, "ordered_globals": ["count", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"count": 5, "itervar": 15}, "ordered_globals": ["count", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"count": 6, "itervar": 15}, "ordered_globals": ["count", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"count": 6, "itervar": 15}, "ordered_globals": ["count", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "<module>", "globals": {"count": 6, "itervar": 15}, "ordered_globals": ["count", "itervar"], "stack_to_render": [], "heap": {}, "stdout": "Count:  6\n"}]};
+</script>
+</div>
+<p>We set the variable <code class="docutils literal notranslate"><span class="pre">count</span></code> to zero before the loop starts,
+then we write a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to run through the list of
+numbers. Our <em>iteration variable</em> is named
+<code class="docutils literal notranslate"><span class="pre">itervar</span></code> and while we do not use <code class="docutils literal notranslate"><span class="pre">itervar</span></code> in the
+loop, it does control the loop and cause the loop body to be executed
+once for each of the values in the list.</p>
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="6.6.1.2" data-multipleanswers="false"  id="inLoops_MC_itVar"  style="visibility: hidden;">
+            <p>Q-2: Which variable is the iteration variable in the code block?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">itervar</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">15</span><span class="p">]:</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Count: &#39;</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="inLoops_MC_itVar_opt_a">itervar</li><li data-component="feedback">Correct! itervar is the iteration variable.</li>
+            
+            <li data-component="answer"  id="inLoops_MC_itVar_opt_b">count</li><li data-component="feedback">Incorrect! count is just a variable counting the iterations. Try again.</li>
+            
+            <li data-component="answer"  id="inLoops_MC_itVar_opt_c">[3, 41, 12, 9, 74, 15]</li><li data-component="feedback">Incorrect! This is a list. The program is counting the number of values it contains, but it is not the iteration variable. Try again.</li>
+            
+            <li data-component="answer"  id="inLoops_MC_itVar_opt_d">list</li><li data-component="feedback">Incorrect! This loop iterates through a list, but that is not the iteration variable. Try again.</li>
+            
+
+            </ul>
+            </div>
+            <p>In the body of the loop, we add 1 to the current value of
+<code class="docutils literal notranslate"><span class="pre">count</span></code> for each of the values in the list. While the loop is
+executing, the value of <code class="docutils literal notranslate"><span class="pre">count</span></code> is the number of values we
+have seen “so far”.</p>
+<p>Once the loop completes, the value of <code class="docutils literal notranslate"><span class="pre">count</span></code> is the total
+number of items. The total number “falls in our lap” at the end of the
+loop. We construct the loop so that we have what we want when the loop
+finishes.</p>
+<p>Another similar loop that computes the total of a set of numbers is as
+follows:</p>
+
+<div class="runestone" style="max-width: none;">
+    <div class="alert alert-warning cd_section" data-component="codelens" data-question_label="6.6.1.3">
+        <div class="pytutorVisualizer" id="codelens562"
+           data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
+        </div>
+        <p class="runestone_caption"><span class="runestone_caption_text">Activity: CodeLens 6.6.1.3 (codelens562)</span> </p>
+    </div>
+
+<script>
+var codelens562_vis;
+
+if (allTraceData === undefined) {
+   var allTraceData = {};
+}
+
+allTraceData["codelens562"] = {"code": "total = 0\nfor itervar in [3, 41, 12, 9, 74, 15]:\n    total = total + itervar\nprint('Total: ', total)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"total": 0}, "ordered_globals": ["total"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"total": 0, "itervar": 3}, "ordered_globals": ["total", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"total": 3, "itervar": 3}, "ordered_globals": ["total", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"total": 3, "itervar": 41}, "ordered_globals": ["total", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"total": 44, "itervar": 41}, "ordered_globals": ["total", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"total": 44, "itervar": 12}, "ordered_globals": ["total", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"total": 56, "itervar": 12}, "ordered_globals": ["total", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"total": 56, "itervar": 9}, "ordered_globals": ["total", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"total": 65, "itervar": 9}, "ordered_globals": ["total", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"total": 65, "itervar": 74}, "ordered_globals": ["total", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"total": 139, "itervar": 74}, "ordered_globals": ["total", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"total": 139, "itervar": 15}, "ordered_globals": ["total", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"total": 154, "itervar": 15}, "ordered_globals": ["total", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"total": 154, "itervar": 15}, "ordered_globals": ["total", "itervar"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "<module>", "globals": {"total": 154, "itervar": 15}, "ordered_globals": ["total", "itervar"], "stack_to_render": [], "heap": {}, "stdout": "Total:  154\n"}]};
+</script>
+</div>
+<p>In this loop we <em>do</em> use the <em>iteration variable</em>.
+Instead of simply adding one to the <code class="docutils literal notranslate"><span class="pre">count</span></code> as in the
+previous loop, we add the actual number (3, 41, 12, etc.) to the running
+total during each loop iteration. If you think about the variable
+<code class="docutils literal notranslate"><span class="pre">total</span></code>, it contains the “running total of the values so
+far”. So before the loop starts <code class="docutils literal notranslate"><span class="pre">total</span></code> is zero because we
+have not yet seen any values, during the loop <code class="docutils literal notranslate"><span class="pre">total</span></code> is the
+running total, and at the end of the loop <code class="docutils literal notranslate"><span class="pre">total</span></code> is the
+overall total of all the values in the list.</p>
+<p>As the loop executes, <code class="docutils literal notranslate"><span class="pre">total</span></code> accumulates the sum of the
+elements; a variable used this way is sometimes called an
+<em>accumulator</em>.</p>
+
+        <div class="runestone">
+        <div data-component="fillintheblank" data-question_label="6.6.1.4" id="itLoops_fill1"  style="visibility: hidden;">
+            <p>Q-4: The variable that counts the sum of elements in a loop is called a(n) ________</p>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^\\s*[Aa]ccumulator\\s*$", "regexFlags": "", "feedback": "<p>An accumulator is a variable used to keep track of the sum of elements in a loop.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Incorrect! Reread the text above this question if you need help. Try again.</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            <p>Neither the counting loop nor the summing loop are particularly useful
+in practice because there are built-in functions <code class="docutils literal notranslate"><span class="pre">len()</span></code> and
+<code class="docutils literal notranslate"><span class="pre">sum()</span></code> that compute the number of items in a list and the
+total of the items in the list respectively.</p>
+</div>
+<div class="section" id="maximum-and-minimum-loops">
+<h2><span class="section-number">6.6.2. </span>Maximum and minimum loops<a class="headerlink" href="#maximum-and-minimum-loops" title="Permalink to this headline">¶</a></h2>
+<p>To find the largest value in a list or sequence, we
+construct the following loop:</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=05section6_1 data-question_label="6.6.2.1">
+<div id=05section6_1_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="05section6_1_editor" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+         data-caption='To find the largest value in a list or sequence, we construct the following loop.'  data-wasm=/_static
+     style="visibility: hidden;">
+largest = None
+print('Before:', largest)
+for itervar in [3, 41, 12, 9, 74, 15]:
+    if largest is None or itervar > largest :
+        largest = itervar
+    print('Loop:', itervar, largest)
+print('Largest:', largest)
+</textarea>
+</div>
+</div>
+<p>When the program executes, the output is as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Before</span><span class="p">:</span> <span class="kc">None</span>
+<span class="n">Loop</span><span class="p">:</span> <span class="mi">3</span> <span class="mi">3</span>
+<span class="n">Loop</span><span class="p">:</span> <span class="mi">41</span> <span class="mi">41</span>
+<span class="n">Loop</span><span class="p">:</span> <span class="mi">12</span> <span class="mi">41</span>
+<span class="n">Loop</span><span class="p">:</span> <span class="mi">9</span> <span class="mi">41</span>
+<span class="n">Loop</span><span class="p">:</span> <span class="mi">74</span> <span class="mi">74</span>
+<span class="n">Loop</span><span class="p">:</span> <span class="mi">15</span> <span class="mi">74</span>
+<span class="n">Largest</span><span class="p">:</span> <span class="mi">74</span>
+</pre></div>
+</div>
+<p>The variable <code class="docutils literal notranslate"><span class="pre">largest</span></code> is best thought of as “the largest
+value we have seen so far.” Before the loop, we set <code class="docutils literal notranslate"><span class="pre">largest</span></code>
+to the constant <code class="docutils literal notranslate"><span class="pre">None</span></code>. <code class="docutils literal notranslate"><span class="pre">None</span></code> is a special
+constant value which we can store in a variable to mark the variable as
+“empty”.</p>
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="6.6.2.2" data-multipleanswers="false"  id="inLoops_MC_none_v2"  style="visibility: hidden;">
+            <p>Q-6: Which of the following is <em>not</em> true about <code class="docutils literal notranslate"><span class="pre">None</span></code>?</p>
+
+            <li data-component="answer"  id="inLoops_MC_none_v2_opt_a">It is a constant value.</li><li data-component="feedback">Incorrect! None is a constant value. Try again.</li>
+            
+            <li data-component="answer" data-correct id="inLoops_MC_none_v2_opt_b">It is a variable.</li><li data-component="feedback">Correct! None is a constant value that can be assigned to a variable, not a variable itself.</li>
+            
+            <li data-component="answer"  id="inLoops_MC_none_v2_opt_c">It marks a variable as empty.</li><li data-component="feedback">Incorrect! None marks a variable as empty. Try again.</li>
+            
+            <li data-component="answer"  id="inLoops_MC_none_v2_opt_d">The value of a variable that starts off as ``None`` can change.</li><li data-component="feedback">Incorrect! The value of None only means that the variable is empty. The variable can then be updated or reassigned. Try again.</li>
+            
+
+            </ul>
+            </div>
+            <p>Before the loop starts, the largest value we have seen so far is
+<code class="docutils literal notranslate"><span class="pre">None</span></code> since we have not yet seen any values. While the loop
+is executing, if <code class="docutils literal notranslate"><span class="pre">largest</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code> then we take
+the first value we see as the largest so far. You can see in the first
+iteration when the value of <code class="docutils literal notranslate"><span class="pre">itervar</span></code> is 3, since
+<code class="docutils literal notranslate"><span class="pre">largest</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, we immediately set
+<code class="docutils literal notranslate"><span class="pre">largest</span></code> to be 3.</p>
+<p>After the first iteration, <code class="docutils literal notranslate"><span class="pre">largest</span></code> is no longer
+<code class="docutils literal notranslate"><span class="pre">None</span></code>, so the second part of the compound logical expression
+that checks <code class="docutils literal notranslate"><span class="pre">itervar</span> <span class="pre">&gt;</span> <span class="pre">largest</span></code> triggers only when we see a
+value that is larger than the “largest so far”. When we see a new “even
+larger” value we take that new value for <code class="docutils literal notranslate"><span class="pre">largest</span></code>. You can
+see in the program output that <code class="docutils literal notranslate"><span class="pre">largest</span></code> progresses from 3 to
+41 to 74.</p>
+<p>At the end of the loop, we have scanned all of the values and the
+variable <code class="docutils literal notranslate"><span class="pre">largest</span></code> now does contain the largest value in the
+list.</p>
+<p>To compute the smallest number, the code is very similar with one small
+change:</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=05section6_2 data-question_label="6.6.2.3">
+<div id=05section6_2_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="05section6_2_editor" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+         data-caption='To find the smallest value in a list or sequence, we construct the following loop.'  data-wasm=/_static
+     style="visibility: hidden;">
+smallest = None
+print('Before:', smallest)
+for itervar in [3, 41, 12, 9, 74, 15]:
+    if smallest is None or itervar < smallest:
+        smallest = itervar
+    print('Loop:', itervar, smallest)
+print('Smallest:', smallest)
+</textarea>
+</div>
+</div>
+<p>Again, <code class="docutils literal notranslate"><span class="pre">smallest</span></code> is the “smallest so far” before, during,
+and after the loop executes. When the loop has completed,
+<code class="docutils literal notranslate"><span class="pre">smallest</span></code> contains the minimum value in the list.</p>
+<p>Again as in counting and summing, the built-in functions
+<code class="docutils literal notranslate"><span class="pre">max()</span></code> and <code class="docutils literal notranslate"><span class="pre">min()</span></code> make writing these exact loops
+unnecessary.</p>
+<p>The following is a simple version of the Python built-in
+<code class="docutils literal notranslate"><span class="pre">min()</span></code> function:</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=05section6_3 data-question_label="6.6.2.4">
+<div id=05section6_3_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="05section6_3_editor" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+         data-caption='A simple version of the Python built-in min() function'  data-wasm=/_static
+     style="visibility: hidden;">
+def min(values):
+    smallest = None
+    for value in values:
+        if smallest is None or value < smallest:
+            smallest = value
+    return smallest
+
+nums = [1,2,3,4,5]
+print(min(nums))
+</textarea>
+</div>
+</div>
+<p>In the function version of the “smallest” code, we removed all of the
+<code class="docutils literal notranslate"><span class="pre">print</span></code> statements so as to be equivalent to the
+<code class="docutils literal notranslate"><span class="pre">min</span></code> function which is already built in to Python.</p>
+</div>
+</div>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 6.5. Definite loops using  for ' data-toggle="tooltip">
+  <a href="definite_for.html" aria-label="Previous - 6.5. Definite loops using  for ">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 6.7. Debugging' data-toggle="tooltip" >
+    <a href="debugging.html" aria-label="Next - 6.7. Debugging">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 - Based on Python for Everybody.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> 
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch(); 
+  });
+</script>
+
+
+  </body>
+</html>
