@@ -5,9 +5,16 @@ Write Code Questions
    :fromid: bsoup_writecode1q, bsoup_writecode1q_mu
    :toggle: lock
 
+<<<<<<< HEAD
+
+.. selectquestion:: bsoup_writecode_2_sq
+   :fromid: bsoup_writecode2q, bsoup_writecode2q_mu
+   :toggle:
+=======
 .. selectquestion:: bsoup_writecode_2_sq
    :fromid: bsoup_writecode2q, bsoup_writecode2q_mu
    :toggle: lock
+>>>>>>> upstream/master
 
 
 .. selectquestion:: bsoup_writecode_3_sq
@@ -24,9 +31,16 @@ Write Code Questions
    :fromid: bsoup_writecode5q, bsoup_writecode5q_mu
    :toggle: lock
 
+<<<<<<< HEAD
+
+.. selectquestion:: bsoup_writecode_6_sq
+  :fromid: bsoup_writecode6q, bsoup_writecode6q_mu
+  :toggle:
+=======
 .. selectquestion:: bsoup_writecode_6_sq
   :fromid: bsoup_writecode6q, bsoup_writecode6q_mu
   :toggle: lock
+>>>>>>> upstream/master
 
 .. selectquestion:: bsoup_writecode_7_sq
   :fromid: bsoup_writecode7q, bsoup_writecode7q_mu
@@ -41,7 +55,13 @@ Write Code Questions
   :fromid: bsoup_writecode9q, bsoup_writecode9q_mu
   :toggle: lock
 
+<<<<<<< HEAD
+.. selectquestion:: bsoup_writecode_10_sq
+  :fromid: bsoup_writecode10q, bsoup_writecode10q_mu
+  :toggle:  
+=======
 
 .. selectquestion:: bsoup_writecode_10_sq
   :fromid: bsoup_writecode10q, bsoup_writecode10q_mu
   :toggle: lock
+>>>>>>> upstream/master

@@ -55,3 +55,43 @@ where there is a top element (here: ``person``), and other tags (e.g.,
     :feedback_b: Try again!
 
     True or False? An element in XML that is empty (does not have content) can use self-closing tags.
+
+.. parsonsprob:: webXML_mixedup
+    :practice: T
+    :numbered: left
+    :adaptive:
+
+    Create code to build a restaurant's menu that lists breakfast
+    items, their price, description, and calorie count. These 3 items should be
+    listed in the order of: Belgian Waffles, French Toast, Homestyle Breakfast.
+    -----
+    &#60;breakfast_menu&#62;
+    =====
+    &#60;food&#62;
+        &#60;name&#62;Belgian Waffles&#60;/name&#62;
+        &#60;price&#62;$5.95&#60;/price&#62;
+        &#60;description&#62;
+        Two of our famous Belgian Waffles with plenty of real maple syrup
+        &#60;/description&#62;
+        &#60;calories&#62;650&#60;/calories&#62;
+    &#60;/food&#62;
+    =====
+    &#60;food&#62;
+        &#60;name&#62;French Toast&#60;/name&#62;
+        &#60;price&#62;$4.50&#60;/price&#62;
+        &#60;description&#62;
+        Thick slices made from our homemade sourdough bread
+        &#60;/description&#62;
+        &#60;calories&#62;600&#60;/calories&#62;
+    &#60;/food&#62;
+    =====
+    &#60;food&#62;
+        &#60;name&#62;Homestyle Breakfast&#60;/name&#62;
+        &#60;price&#62;$6.95&#60;/price&#62;
+        &#60;description&#62;
+        Two eggs, bacon or sausage, toast, and our ever-popular hash browns
+        &#60;/description&#62;
+        &#60;calories&#62;950&#60;/calories&#62;
+    &#60;/food&#62;
+    =====
+    &#60;/breakfast_menu&#62;
