@@ -1,11 +1,11 @@
 Write Code Questions
 ---------------------
 #.
-    .. tabbed:: bsoup_writecode1
+    .. tabbed:: bsoup_writecode1_v2
 
         .. tab:: Question
 
-            .. activecode:: bsoup_writecode1q
+            .. activecode:: bsoup_writecode1q_v2
                 :practice: T
                 :nocodelens:
                 :language: python3
@@ -32,7 +32,7 @@ Write Code Questions
 
         .. tab:: Answer
 
-            .. activecode:: bsoup_writecode1a
+            .. activecode:: bsoup_writecode1a_v2
                 :optional:
                 :language: python3
                 :autograde: unittest
@@ -57,7 +57,7 @@ Write Code Questions
                 print(cur_stud_link('https://umich.edu/'))
 
 #.
-    .. activecode:: bsoup_writecode2q
+    .. activecode:: bsoup_writecode2q_v2
         :practice: T
         :nocodelens:
         :language: python3
@@ -84,11 +84,11 @@ Write Code Questions
 
 
 #.
-    .. tabbed:: bsoup_writecode3
+    .. tabbed:: bsoup_writecode3_v2
 
         .. tab:: Question
 
-            .. activecode:: bsoup_writecode3q
+            .. activecode:: bsoup_writecode3q_v2
                 :practice: T
                 :nocodelens:
                 :language: python3
@@ -115,7 +115,7 @@ Write Code Questions
 
         .. tab:: Answer
 
-            .. activecode:: bsoup_writecode3a
+            .. activecode:: bsoup_writecode3a_v2
                 :optional:
                 :language: python3
                 :autograde: unittest
@@ -149,7 +149,7 @@ Write Code Questions
                 print(coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course'))
 
 #.
-    .. activecode:: bsoup_writecode4q
+    .. activecode:: bsoup_writecode4q_v2
         :practice: T
         :nocodelens:
         :language: python3
@@ -176,11 +176,11 @@ Write Code Questions
 
 
 #.
-    .. tabbed:: bsoup_writecode5
+    .. tabbed:: bsoup_writecode5_v2
 
         .. tab:: Question
 
-            .. activecode:: bsoup_writecode5q
+            .. activecode:: bsoup_writecode5q_v2
                 :practice: T
                 :nocodelens:
                 :language: python3
@@ -207,7 +207,7 @@ Write Code Questions
 
         .. tab:: Answer
 
-            .. activecode:: bsoup_writecode5a
+            .. activecode:: bsoup_writecode5a_v2
                 :optional:
                 :language: python3
                 :autograde: unittest
@@ -236,7 +236,7 @@ Write Code Questions
                 print(restaurants_list('https://detroit.eater.com/maps/best-ann-arbor-restaurants'))
 
 #.
-    .. activecode:: bsoup_writecode6q
+    .. activecode:: bsoup_writecode6q_v2
         :practice: T
         :nocodelens:
         :language: python3
@@ -268,7 +268,7 @@ Write Code Questions
 
         .. tab:: Question
 
-            .. activecode:: bsoup_writecode7q
+            .. activecode:: bsoup_writecode7q_v2
                 :practice: T
                 :nocodelens:
                 :language: python3
@@ -296,7 +296,7 @@ Write Code Questions
 
         .. tab:: Answer
 
-            .. activecode:: bsoup_writecode7a
+            .. activecode:: bsoup_writecode7a_v2
                 :optional:
                 :language: python3
                 :autograde: unittest
@@ -333,7 +333,7 @@ Write Code Questions
                 print(bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information'))
 
 #.
-    .. activecode:: bsoup_writecode8q
+    .. activecode:: bsoup_writecode8q_v2
         :practice: T
         :nocodelens:
         :language: python3
@@ -362,11 +362,11 @@ Write Code Questions
 
 
 #.
-    .. tabbed:: bsoup_writecode9
+    .. tabbed:: bsoup_writecode9_v2
 
         .. tab:: Question
 
-            .. activecode:: bsoup_writecode9q
+            .. activecode:: bsoup_writecode9q_v2
                 :practice: T
                 :nocodelens:
                 :language: python3
@@ -393,7 +393,7 @@ Write Code Questions
 
         .. tab:: Answer
 
-            .. activecode:: bsoup_writecode9a
+            .. activecode:: bsoup_writecode9a_v2
                 :optional:
                 :language: python3
                 :autograde: unittest
@@ -433,7 +433,7 @@ Write Code Questions
                 print(name_email('https://www.si.umich.edu/people/directory/faculty/e'))
 
 #.
-    .. activecode:: bsoup_writecode10q
+    .. activecode:: bsoup_writecode10q_v2
         :practice: T
         :nocodelens:
         :language: python3
