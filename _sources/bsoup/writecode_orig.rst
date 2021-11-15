@@ -1,11 +1,11 @@
 Write Code Questions
 ---------------------
 #.
-    .. tabbed:: bsoup_writecode1
+    .. tabbed:: bsoup_writecode1_v2
 
         .. tab:: Question
 
-            .. activecode:: bsoup_writecode1q
+            .. activecode:: bsoup_writecode1q_v2
                 :practice: T
                 :nocodelens:
                 :language: python3
@@ -28,11 +28,11 @@ Write Code Questions
                     def testOne(self):
                         self.assertEqual(cur_stud_link('https://umich.edu/'), "https://umich.edu/current-students/", "cur_stud_link('https://umich.edu/')")
 
-                myTests().main()
+                unittest.main()
 
         .. tab:: Answer
 
-            .. activecode:: bsoup_writecode1a
+            .. activecode:: bsoup_writecode1a_v2
                 :optional:
                 :language: python3
                 :autograde: unittest
@@ -57,7 +57,7 @@ Write Code Questions
                 print(cur_stud_link('https://umich.edu/'))
 
 #.
-    .. activecode:: bsoup_writecode2q
+    .. activecode:: bsoup_writecode2q_v2
         :practice: T
         :nocodelens:
         :language: python3
@@ -80,15 +80,15 @@ Write Code Questions
             def testOne(self):
                 self.assertEqual(headings('https://en.wikipedia.org/wiki/Massive_open_online_course'), ['History', 'Emergence of MOOC providers', 'Student experience and pedagogy', 'Information architecture', 'Industry', 'Benefits', 'Challenges and criticisms', 'See also', 'References', 'Sources', 'Further reading'], "headings('https://en.wikipedia.org/wiki/Massive_open_online_course')")
 
-        myTests().main()
+        unittest.main()
 
 
 #.
-    .. tabbed:: bsoup_writecode3
+    .. tabbed:: bsoup_writecode3_v2
 
         .. tab:: Question
 
-            .. activecode:: bsoup_writecode3q
+            .. activecode:: bsoup_writecode3q_v2
                 :practice: T
                 :nocodelens:
                 :language: python3
@@ -111,11 +111,11 @@ Write Code Questions
                     def testOne(self):
                         self.assertEqual(coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course'), {'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', 'United Kingdom': '4.4%', 'Spain': '4.0%', 'Canada': '3.6%', 'Australia': '2.3%', 'Russia': '2.2%', 'Rest of world': '41.9%'}, "coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course')")
 
-                myTests().main()
+                unittest.main()
 
         .. tab:: Answer
 
-            .. activecode:: bsoup_writecode3a
+            .. activecode:: bsoup_writecode3a_v2
                 :optional:
                 :language: python3
                 :autograde: unittest
@@ -149,7 +149,7 @@ Write Code Questions
                 print(coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course'))
 
 #.
-    .. activecode:: bsoup_writecode4q
+    .. activecode:: bsoup_writecode4q_v2
         :practice: T
         :nocodelens:
         :language: python3
@@ -172,15 +172,15 @@ Write Code Questions
             def testOne(self):
                 self.assertEqual(types('https://en.wikipedia.org/wiki/Python_(programming_language)'), ['bool', 'bytearray', 'bytes', 'complex', 'dict', 'ellipsis', 'float', 'frozenset', 'int', 'list', 'NoneType', 'NotImplementedType', 'range', 'set', 'str', 'tuple'], "types('https://en.wikipedia.org/wiki/Python_(programming_language)')")
 
-        myTests().main()
+        unittest.main()
 
 
 #.
-    .. tabbed:: bsoup_writecode5
+    .. tabbed:: bsoup_writecode5_v2
 
         .. tab:: Question
 
-            .. activecode:: bsoup_writecode5q
+            .. activecode:: bsoup_writecode5q_v2
                 :practice: T
                 :nocodelens:
                 :language: python3
@@ -203,11 +203,11 @@ Write Code Questions
                     def testOne(self):
                         self.assertEqual(restaurants_list('https://detroit.eater.com/maps/best-ann-arbor-restaurants'), ["1. Knight's Steakhouse", '2. The Last Word', "3. Krazy Jim's Blimpy Burger", '4. Blue Llama Jazz Club', '5. Spencer', '6. Miss Kim', "7. Zingerman's Delicatessen", '8. Tomukun Noodle Bar', '9. Seoul Street', '10. Ricewood', '11. Bellflower', "12. Ma Lou's Fried Chicken"], "restaurants_list('https://detroit.eater.com/maps/best-ann-arbor-restaurants')")
 
-                myTests().main()
+                unittest.main()
 
         .. tab:: Answer
 
-            .. activecode:: bsoup_writecode5a
+            .. activecode:: bsoup_writecode5a_v2
                 :optional:
                 :language: python3
                 :autograde: unittest
@@ -236,7 +236,7 @@ Write Code Questions
                 print(restaurants_list('https://detroit.eater.com/maps/best-ann-arbor-restaurants'))
 
 #.
-    .. activecode:: bsoup_writecode6q
+    .. activecode:: bsoup_writecode6q_v2
         :practice: T
         :nocodelens:
         :language: python3
@@ -260,7 +260,7 @@ Write Code Questions
             def testOne(self):
                 self.assertEqual(bsi_list('https://www.si.umich.edu/programs/bachelor-science-information'), ['How do I apply?', 'Current U-M students', 'Transfer students', 'High school students', 'New transfers', 'UMSI Community College Summer Institute', 'Curriculum', 'Career outcomes', 'Internships', 'F-1 visa holders', 'Career development resources', 'Engaged learning', 'Tuition and funding', 'Connect with us', 'Study abroad for undergraduates', 'Exchange student information'], "bsi_list('https://www.si.umich.edu/programs/bachelor-science-information')")
 
-        myTests().main()
+        unittest.main()
 
 
 #.
@@ -268,7 +268,7 @@ Write Code Questions
 
         .. tab:: Question
 
-            .. activecode:: bsoup_writecode7q
+            .. activecode:: bsoup_writecode7q_v2
                 :practice: T
                 :nocodelens:
                 :language: python3
@@ -292,11 +292,11 @@ Write Code Questions
                     def testOne(self):
                         self.assertEqual(bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information'), {'How do I apply?': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply', 'Current U-M students': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/cross-campus-transfer', 'Transfer students': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/new-transfer-students-bsi', 'High school students': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/preferred-admissions', 'New transfers': 'https://www.si.umich.edu/programs/bachelor-science-information/new-transfers', 'UMSI Community College Summer Institute': 'https://www.si.umich.edu/programs/bachelor-science-information/new-transfers/umsi-community-college-summer-institute', 'Curriculum': 'https://www.si.umich.edu/programs/bachelor-science-information/curriculum', 'Career outcomes': 'https://www.si.umich.edu/programs/bachelor-science-information/career-outcomes', 'Internships': 'https://www.si.umich.edu/programs/bachelor-science-information/internships', 'F-1 visa holders': 'https://www.si.umich.edu/programs/bachelor-science-information/internships/f-1-visa-holders', 'Career development resources': 'https://www.si.umich.edu/programs/bachelor-science-information/career-development-resources', 'Engaged learning': 'https://www.si.umich.edu/programs/bachelor-science-information/engaged-learning', 'Tuition and funding': 'https://www.si.umich.edu/programs/bachelor-science-information/tuition-and-funding', 'Connect with us': 'https://www.si.umich.edu/programs/bachelor-science-information/connect-us', 'Study abroad for undergraduates': 'https://www.si.umich.edu/programs/bachelor-science-information/study-abroad-undergraduates', 'Exchange student information': 'https://www.si.umich.edu/programs/bachelor-science-information/exchange-student-information'}, "bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information')")
 
-                myTests().main()
+                unittest.main()
 
         .. tab:: Answer
 
-            .. activecode:: bsoup_writecode7a
+            .. activecode:: bsoup_writecode7a_v2
                 :optional:
                 :language: python3
                 :autograde: unittest
@@ -333,7 +333,7 @@ Write Code Questions
                 print(bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information'))
 
 #.
-    .. activecode:: bsoup_writecode8q
+    .. activecode:: bsoup_writecode8q_v2
         :practice: T
         :nocodelens:
         :language: python3
@@ -358,15 +358,15 @@ Write Code Questions
                 address = soup.find('div', class_ = 'footer--address').text.strip("\n")
                 self.assertEqual(envelope_address('https://www.si.umich.edu/programs/bachelor-science-information'), address, "envelope_address('https://www.si.umich.edu/programs/bachelor-science-information')")
 
-        myTests().main()
+        unittest.main()
 
 
 #.
-    .. tabbed:: bsoup_writecode9
+    .. tabbed:: bsoup_writecode9_v2
 
         .. tab:: Question
 
-            .. activecode:: bsoup_writecode9q
+            .. activecode:: bsoup_writecode9q_v2
                 :practice: T
                 :nocodelens:
                 :language: python3
@@ -389,11 +389,11 @@ Write Code Questions
                     def testOne(self):
                         self.assertEqual(name_email('https://www.si.umich.edu/people/directory/faculty/e'), {'Paul Edwards': 'pne@umich.edu', 'Ron Eglash': 'eglash@umich.edu', 'Nicole Ellison': 'enicole@umich.edu', 'Barbara Ericson': 'barbarer@umich.edu'}, "name_email('https://www.si.umich.edu/people/directory/faculty/e')")
 
-                myTests().main()
+                unittest.main()
 
         .. tab:: Answer
 
-            .. activecode:: bsoup_writecode9a
+            .. activecode:: bsoup_writecode9a_v2
                 :optional:
                 :language: python3
                 :autograde: unittest
@@ -433,7 +433,7 @@ Write Code Questions
                 print(name_email('https://www.si.umich.edu/people/directory/faculty/e'))
 
 #.
-    .. activecode:: bsoup_writecode10q
+    .. activecode:: bsoup_writecode10q_v2
         :practice: T
         :nocodelens:
         :language: python3
@@ -456,4 +456,4 @@ Write Code Questions
             def testOne(self):
                 self.assertEqual(program_email('https://www.si.umich.edu/about-umsi/contact-us'), {'BSI program': 'umsi.undergrad@umich.edu', 'MSI program': 'umsi.admissions@umich.edu', 'MHI program': 'hi.admissions@umich.edu', 'MADS program': 'umsi.mads@umich.edu', 'Doctoral program': 'umsi.phd.admissions@umich.edu'}, "program_email('https://www.si.umich.edu/about-umsi/contact-us')")
 
-        myTests().main()
+        unittest.main()

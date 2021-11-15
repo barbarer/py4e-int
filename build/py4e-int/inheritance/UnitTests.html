@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>20.8. Unit Tests &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.css?v=bddd2011b20db76a20ea" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.css?v=7c5388ad4389eae1a318" />
+
+
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/runtime.bundle.js?v=aa7c717c38c5405af9e6"></script>
+    <script src="../_static/637.bundle.js?v=1123ad75f9b821cdd636"></script>
+    <script src="../_static/runestone.bundle.js?v=9c8e466e8cbed4a3af5a"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="20.9. Multiple Choice Questions" href="Exercises.html" />
+    <link rel="prev" title="20.7. Case Study: Structured Postal Addresses" href="CaseStudy.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = true;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'py4e-int';
+    eBookConfig.basecourse = 'py4e-int';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/logo_small.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          py4e-int
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span class="visuallyhidden" aria-label="User">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="runestoneComponents.switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/runestone/static/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=UnitTests'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">20.7. </span>Case Study: Structured Postal Addresses" data-toggle="tooltip">
+    <a href="CaseStudy.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">20.9. </span>Multiple Choice Questions' data-toggle="tooltip" >              
+    <a href="Exercises.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+  
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="unit-tests">
+<h1><span class="section-number">20.8. </span>Unit Tests<a class="headerlink" href="#unit-tests" title="Permalink to this headline">¶</a></h1>
+<p>Now that you have learned about classes and inheritance we can explain
+how to write your own unit tests.</p>
+<div class="section" id="testing-your-code">
+<h2><span class="section-number">20.8.1. </span>Testing your Code<a class="headerlink" href="#testing-your-code" title="Permalink to this headline">¶</a></h2>
+<p>How do you test that your program worked?  You may put in print statements about what you expect
+the output to be and compare that to what you actually get to see if your code is correct.</p>
+<p>In fact in test-driven development you should write test cases <strong>before</strong> you
+start writing any code. That way you will know when your code works.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=ut_example_test_total_even data-question_label="20.8.1.1">
+<div id=ut_example_test_total_even_question class="ac_question col-md-12">
+<p>Run the code below to see what it prints.</p>
+
+</div>
+<textarea data-lang="python" id="ut_example_test_total_even_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Testing your a function'  data-wasm=/_static
+     style="visibility: hidden;">
+# Return the total of the even numbers in a list of numbers called nums
+def total_even(nums):
+    total = 0
+    for num in nums:
+        if num % 2 == 0:
+            total += num
+    return total
+
+# Test cases for total_even
+def test():
+    print(f"Testing total_even([1, 2]) should return 2 and returns {total_even([1, 2])}")
+    print(f"Testing total_even([1, 3]) should return 0 and returns {total_even([1, 3])}")
+    print(f"Testing total_even([2, 6]) should return 8 and returns {total_even([2, 6])}")
+    print(f"Testing total_even([2, 3, 4]) should return 6 and returns {total_even([2, 3, 4])}")
+    print(f"Testing total_even([]) should return 0 and returns {total_even([])}")
+    print(f"Testing total_even([1]) should return 0 and returns {total_even([1])}")
+    print(f"Testing total_even([2]) should return 2 and returns {total_even([2])}")
+
+# function call
+test()
+</textarea>
+</div>
+</div>
+<p>This type of test is better than just printing out actual output because
+then you have to think about what the correct value should be.  It lets you
+quickly compare the expected value and the actual value.  However, you have
+to visually compare the two, which takes some time and you could miss something that doesn’t match.</p>
+<div class="admonition note" id="index-0">
+<p class="admonition-title">Note</p>
+<p>The tests above are using a f-string which is an easier way to create a string
+with expression results in the string.  Just add <code class="docutils literal notranslate"><span class="pre">f</span></code> before the start of the string and <code class="docutils literal notranslate"><span class="pre">{expression}</span></code> in the string.</p>
+</div>
+<p id="index-1">Another way to write the code above would be to use a <strong>list comprehension</strong>.  These are a quick way to return
+a new list by applying some logic to each element of the list.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">result_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">returned_value</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">list</span> <span class="n">logic</span><span class="p">]</span>
+</pre></div>
+</div>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=ut_example_test_total_even_listc data-question_label="20.8.1.2">
+<div id=ut_example_test_total_even_listc_question class="ac_question col-md-12">
+<p>Run the code below to see what it prints.</p>
+
+</div>
+<textarea data-lang="python" id="ut_example_test_total_even_listc_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Total even using a list comprehension'  data-wasm=/_static
+     style="visibility: hidden;">
+# Return the total of the even numbers in a list of numbers called nums
+def total_even(nums):
+    evens = [num for num in nums if num % 2 == 0]
+    return sum(evens)
+
+# Test cases for total_even
+def test():
+    print(f"Testing total_even([1, 2]) should return 2 and returns {total_even([1, 2])}")
+    print(f"Testing total_even([1, 3]) should return 0 and returns {total_even([1, 3])}")
+    print(f"Testing total_even([2, 6]) should return 8 and returns {total_even([2, 6])}")
+    print(f"Testing total_even([2, 3, 4]) should return 6 and returns {total_even([2, 3, 4])}")
+    print(f"Testing total_even([]) should return 0 and returns {total_even([])}")
+    print(f"Testing total_even([1]) should return 0 and returns {total_even([1])}")
+    print(f"Testing total_even([2]) should return 2 and returns {total_even([2])}")
+
+# function call
+test()
+</textarea>
+</div>
+</div>
+</div>
+<div class="section" id="creating-test-cases">
+<h2><span class="section-number">20.8.2. </span>Creating Test Cases<a class="headerlink" href="#creating-test-cases" title="Permalink to this headline">¶</a></h2>
+<p>What types of tests should you create?  You should create tests that check
+that the function works for a variety of normal input.  You should also think about how
+to handle unusual input such as checking that <code class="docutils literal notranslate"><span class="pre">total_even</span></code> works even for an empty list or
+a list with only one item.</p>
+</div>
+<div class="section" id="understanding-unit-tests">
+<h2><span class="section-number">20.8.3. </span>Understanding Unit Tests<a class="headerlink" href="#understanding-unit-tests" title="Permalink to this headline">¶</a></h2>
+<p id="index-2">Another way to test your code is to write unit tests. You have already been
+using hidden unit tests in this ebook to check your code as shown below.  You
+probably quickly realized that you wanted all the tests to “pass” which is
+highlighted in green. This gives you an even quicker visual indication that your code
+is working than having to compare the expected output to the actual.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=ut-ex-perimeterq data-question_label="20.8.3.1">
+<div id=ut-ex-perimeterq_question class="ac_question col-md-12">
+<p>Fix 4 errors below so that the following code runs and returns the perimeter of a rectangle.</p>
+
+</div>
+<textarea data-lang="python" id="ut-ex-perimeterq_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def recPerimeter(length, width)
+perimeter = 2 * (length + width)
+    Return recPerimeter
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(recPerimeter(10, 20),60,"Tested recPerimeter on inputs 10 and 20")
+        self.assertEqual(recPerimeter(1, 2),6,"Tested recPerimeter on inputs 1 and 2")
+        self.assertEqual(recPerimeter(23.2, 12.3),71,"Tested recPerimeter on inputs 23.2 and 12.3")
+        self.assertEqual(recPerimeter(3.0, 2),10.0,"Tested recPerimeter on inputs 3.0 and 2")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+<p>Let’s look at the unit tests that were hidden.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=ut-ex-perimeterq-with-unit-test-vis data-question_label="20.8.3.2">
+<div id=ut-ex-perimeterq-with-unit-test-vis_question class="ac_question col-md-12">
+<p>Run the code below to see the unit tests again. However, now the unit tests are visible.</p>
+
+</div>
+<textarea data-lang="python" id="ut-ex-perimeterq-with-unit-test-vis_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def recPerimeter(length, width):
+    perimeter = 2 * (length + width)
+    return perimeter
+
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(recPerimeter(10, 20),60,"Tested recPerimeter on inputs 10 and 20")
+        self.assertEqual(recPerimeter(1, 2),6,"Tested recPerimeter on inputs 1 and 2")
+        self.assertEqual(recPerimeter(23.2, 12.3),71,"Tested recPerimeter on inputs 23.2 and 12.3")
+        self.assertEqual(recPerimeter(3.0, 2),10.0,"Tested recPerimeter on inputs 3.0 and 2")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+<p>Look at the unit tests above and answer the questions below.</p>
+
+        <div class="runestone">
+        <div data-component="fillintheblank" data-question_label="20.8.3.3" id="ut_fitb_test_class"  style="visibility: hidden;">
+            <p>Q-5: What is the class that is defined in the unit test code?</p>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^\\s*myTests\\s*$", "regexFlags": "", "feedback": "<p>This defines the class myTests</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>What is the name after the class keyword?</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            
+        <div class="runestone">
+        <div data-component="fillintheblank" data-question_label="20.8.3.4" id="ut_fitb_test_parent"  style="visibility: hidden;">
+            <p>Q-6: What class does the defined class inherit from?</p>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^\\s*TestCaseGui\\s*$", "regexFlags": "", "feedback": "<p>The parent is TestCaseGui</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>What is the name in the () after the class name?</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=ut-ex-compare-valuep-ac data-question_label="20.8.3.5">
+<div id=ut-ex-compare-valuep-ac_question class="ac_question col-md-12">
+<p>Run the code below to see what the unit tests do and then add another test to
+test the result when x is higher than y.</p>
+
+</div>
+<textarea data-lang="python" id="ut-ex-compare-valuep-ac_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def checkValue(x, y):
+    if x < y:
+        return "lower"
+    elif x == y:
+        return "equal"
+    else:
+        return "higher"
+
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def test_checkValue(self):
+        self.assertEqual(checkValue(3, 5), "lower", 'checkValue(3, 5)')
+        self.assertEqual(checkValue(5, 5), "equal", 'checkValue(5, 5)')
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=ut_get_middle_ac_add_test data-question_label="20.8.3.6">
+<div id=ut_get_middle_ac_add_test_question class="ac_question col-md-12">
+<p>Fix the function below to return the middle characters from the passed string.
+If the string has an odd length then return the middle character.  If the string has an even
+length return the two middle characters.  For example, <code class="docutils literal notranslate"><span class="pre">get_middle('abc')</span></code> returns
+<code class="docutils literal notranslate"><span class="pre">'b'</span></code> and <code class="docutils literal notranslate"><span class="pre">get_middle('abcd')</span></code> returns <code class="docutils literal notranslate"><span class="pre">'bc'</span></code>.  Also add tests cases to
+test the result when <code class="docutils literal notranslate"><span class="pre">str</span></code> has only one or two characters in it.</p>
+
+</div>
+<textarea data-lang="python" id="ut_get_middle_ac_add_test_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def get_middle(str):
+    len_s = len(str)
+    mid = len_s // 2
+    if len_s % 2 == 0:
+        return str[mid - 1: mid + 1]
+    else:
+        return str
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(get_middle('abc'), 'b', "get_middle('abc')")
+        self.assertEqual(get_middle('abcd'), 'bc', "get_middle('abcd')")
+        self.assertEqual(get_middle('12345'), '3', "get_middle('12345')")
+        self.assertEqual(get_middle('123456'), '34', "get_middle('123456')")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+<p>Add tests to check the result when <code class="docutils literal notranslate"><span class="pre">str</span></code> has one or two letters.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unit tests in this ebook must include the line <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">unittest.gui</span> <span class="pre">import</span> <span class="pre">TestCaseGui</span></code>
+and inherit from <code class="docutils literal notranslate"><span class="pre">TestCaseGui</span></code>.  Outside of this
+ebook you should include the line <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">unittest</span></code> and inherit from <code class="docutils literal notranslate"><span class="pre">unittest.TestCase</span></code>.</p>
+</div>
+<p>Unit tests inherit from a class that includes several methods. As you can see
+from the code above one of the methods is <code class="docutils literal notranslate"><span class="pre">assertEqual</span></code> which returns the result of <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">==</span> <span class="pre">b</span></code>.</p>
+
+<div class="runestone">
+<ul data-component="dragndrop" data-question_label="20.8.3.7" id="ut_method_def_dnd"  style="visibility: hidden;">
+    <span data-subcomponent="question">Q-9: Drag each method to what it returns.</span>
+	<span data-subcomponent=feedback>Read this page and try again.</span>
+
+    <li data-subcomponent="draggable" id="ut_method_def_dnd_drag1">assertTrue(x)</li>
+    <li data-subcomponent="dropzone" for="ut_method_def_dnd_drag1"> x == True</li>
+
+    <li data-subcomponent="draggable" id="ut_method_def_dnd_drag2">assertIn(a, b)</li>
+    <li data-subcomponent="dropzone" for="ut_method_def_dnd_drag2">a in b</li>
+
+    <li data-subcomponent="draggable" id="ut_method_def_dnd_drag3">assertIsInstance(a, b)</li>
+    <li data-subcomponent="dropzone" for="ut_method_def_dnd_drag3">isinstance(a, b)</li>
+
+    <li data-subcomponent="draggable" id="ut_method_def_dnd_drag4">assertEqual(a, b)</li>
+    <li data-subcomponent="dropzone" for="ut_method_def_dnd_drag4">a == b</li>
+
+    <li data-subcomponent="draggable" id="ut_method_def_dnd_drag5">assertNotEqual(a, b)</li>
+    <li data-subcomponent="dropzone" for="ut_method_def_dnd_drag5">a != b</li>
+
+    <li data-subcomponent="draggable" id="ut_method_def_dnd_drag6">assertFalse(x)</li>
+    <li data-subcomponent="dropzone" for="ut_method_def_dnd_drag6"> x == False</li>
+</ul></div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All of the assert methods can take a third parameter which is a string that explains what was tested.</p>
+</div>
+</div>
+<div class="section" id="writing-unit-tests">
+<h2><span class="section-number">20.8.4. </span>Writing Unit Tests<a class="headerlink" href="#writing-unit-tests" title="Permalink to this headline">¶</a></h2>
+<p>To write a unit test you need to do the following.</p>
+<ol class="arabic simple">
+<li><p>Import the library (<code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">unittest.gui</span> <span class="pre">import</span> <span class="pre">TestCaseGui</span></code> in this ebook and <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">unittest</span></code> elsewhere)</p></li>
+<li><p>Create a class that inherits from the correct class (<code class="docutils literal notranslate"><span class="pre">TestCaseGui</span></code> in this ebook and <code class="docutils literal notranslate"><span class="pre">unittest.TestCase</span></code> elsewhere )</p></li>
+<li><p>Optionally create a <code class="docutils literal notranslate"><span class="pre">setup</span></code> method which is called before <em>every</em> test method is run</p></li>
+<li><p>Create one or more methods that start with <code class="docutils literal notranslate"><span class="pre">test</span></code> to test different things in your code</p>
+<ul class="simple">
+<li><p>Test one or more results using <code class="docutils literal notranslate"><span class="pre">assert</span></code> methods such as <code class="docutils literal notranslate"><span class="pre">self.assertEqual</span></code></p></li>
+</ul>
+</li>
+<li><p>Optionally create a <code class="docutils literal notranslate"><span class="pre">tearDown</span></code> method which is called after <em>every</em> test method is run</p></li>
+<li><p>Run the tests using <code class="docutils literal notranslate"><span class="pre">ClassName.main()</span></code> in the ebook and otherwise <code class="docutils literal notranslate"><span class="pre">unittest.main()</span></code></p></li>
+</ol>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=ut-ex-car-class-unit-tests data-question_label="20.8.4.1">
+<div id=ut-ex-car-class-unit-tests_question class="ac_question col-md-12">
+<p>Fix the code below to run and notice the test results.</p>
+
+</div>
+<textarea data-lang="python" id="ut-ex-car-class-unit-tests_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+class Car:
+
+    def __init__(self, make, model, color):
+        self.make = make
+        model = model
+        self.color = color
+
+    def __str__(self)
+        return f"make: {self.make}, model: {self.model}, color: {self.color}"
+
+    def set_color(self, new_color):
+        self.color = new_color
+
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def setUp():
+        self.c1 = Car("Ford", "Volt", "blue")
+        self.c2 = Car("Toyota", "Prius", "red")
+
+    def testInitAndStr(self):
+        self.assertEqual(c1.__str__(), 'make: Ford, model: Volt, color: blue', "Testing __init__ and __str__ method on c1")
+        self.assertEqual(self.c2.__str__(), 'make: Toyota, model: Prius, color: red', "Testing __init__ and __str__ method on c1")
+
+    def testSetColor(self):
+        # try to set the color
+        self.c1.set_color("white")
+
+        # check that it changed to the new color
+        self.assertEqual(self.c1.color, "white", "Testing set color on c1")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+<p>Modify the code above to add a method in the <code class="docutils literal notranslate"><span class="pre">Car</span></code> class to set (change) the model name and add a test method to test that the new method works.</p>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="ut-pp-test-lower" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Put the code in order to create tests for a Person class initials method that returns the first letter
+from the first name followed by the first letter of the last name. The Person class initializer
+takes the person’s first name and last name.  First define a <code class="docutils literal notranslate"><span class="pre">setUp</span></code> method to
+create two Person objects and then define the <code class="docutils literal notranslate"><span class="pre">test_initials</span></code> method.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="20.8.4.2"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        import unittest
+---
+class TestPerson(unittest.TestCase):
+---
+class TestPerson(TestCase): #paired
+---
+    def setUp(self):
+---
+    def setUp(): #paired
+---
+        self.p1 = Person("Lionel", "Roberts")
+---
+        self.p2 = Person("Kayla", "Wig")
+---
+        p2 = Person("Kayla", "Wig") #paired
+---
+    def test_initials(self):
+---
+        self.assertEqual(self.p1.initials(), "LR", "p1.initials()")
+        self.assertEqual(self.p2.initials(), "KW", "p2.initials()")
+        </pre>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 20.7. Case Study: Structured Postal Addresses' data-toggle="tooltip">
+  <a href="CaseStudy.html" aria-label="Previous - 20.7. Case Study: Structured Postal Addresses">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 20.9. Multiple Choice Questions' data-toggle="tooltip" >
+    <a href="Exercises.html" aria-label="Next - 20.9. Multiple Choice Questions">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 - Based on Python for Everybody.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> 
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch(); 
+  });
+</script>
+
+
+  </body>
+</html>

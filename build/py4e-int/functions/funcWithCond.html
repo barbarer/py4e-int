@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5.25. Group Work: Functions and Conditionals &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.css?v=bddd2011b20db76a20ea" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.css?v=7c5388ad4389eae1a318" />
+
+
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/runtime.bundle.js?v=aa7c717c38c5405af9e6"></script>
+    <script src="../_static/637.bundle.js?v=1123ad75f9b821cdd636"></script>
+    <script src="../_static/runestone.bundle.js?v=9c8e466e8cbed4a3af5a"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.26. Functions and Conditionals Multiple Choice Questions" href="function_conditional_exercises.html" />
+    <link rel="prev" title="5.24. Functions and Strings Write Code Questions" href="function_string_writecode.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = true;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'py4e-int';
+    eBookConfig.basecourse = 'py4e-int';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/logo_small.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          py4e-int
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span class="visuallyhidden" aria-label="User">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="runestoneComponents.switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/runestone/static/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=funcWithCond'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">5.24. </span>Functions and Strings Write Code Questions" data-toggle="tooltip">
+    <a href="function_string_writecode.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">5.26. </span>Functions and Conditionals Multiple Choice Questions' data-toggle="tooltip" >              
+    <a href="function_conditional_exercises.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+  
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="group-work-functions-and-conditionals">
+<h1><span class="section-number">5.25. </span>Group Work: Functions and Conditionals<a class="headerlink" href="#group-work-functions-and-conditionals" title="Permalink to this headline">¶</a></h1>
+<p>It is best to use a POGIL approach with the following. In POGIL students work
+in groups on activities and each member has an assigned role.  For more information see <a class="reference external" href="https://cspogil.org/Home">https://cspogil.org/Home</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.</p>
+</div>
+<p><strong>Learning Objectives</strong></p>
+<p>Students will know and be able to do the following.</p>
+<p><em>Content Objectives:</em></p>
+<ul class="simple">
+<li><p>Recognize the keywords used in conditionals in Python (if, elif, else).</p></li>
+<li><p>Predict the output from simple and complex conditionals.</p></li>
+<li><p>Recognize the keywords used in complex conditionals (and, or, not).</p></li>
+</ul>
+<p><em>Process Objectives:</em></p>
+<ul class="simple">
+<li><p>Create good test data for functions with conditionals</p></li>
+<li><p>Modify code to use complex conditionals</p></li>
+</ul>
+<div class="section" id="basic-conditionals-and-tests">
+<h2><span class="section-number">5.25.1. </span>Basic Conditionals and Tests<a class="headerlink" href="#basic-conditionals-and-tests" title="Permalink to this headline">¶</a></h2>
+
+        <div class="runestone">
+        <div data-component="fillintheblank" data-question_label="5.25.1.1" id="funct_fitb_return_temp_first_line"  style="visibility: hidden;">
+            <p>Q-1: What is the first thing (first line of text) that will be printed when the code below runs?</p>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^\\s*Baby,\\s+its\\s+cold\\s+outside!\\s*$", "regexFlags": "", "feedback": "<p>Since temp &lt; 32 this will print.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Which conditional is true when temp &lt; 32?</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=func_ac_pogil_return_temp_desc data-question_label="5.25.1.2">
+<div id=func_ac_pogil_return_temp_desc_question class="ac_question col-md-12">
+<p>Run this code to see what it prints.</p>
+
+</div>
+<textarea data-lang="python" id="func_ac_pogil_return_temp_desc_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='get_temp_desc'  data-wasm=/_static
+     style="visibility: hidden;">
+# function definition
+def get_temp_desc(temp):
+    if temp < 32:
+        return "Baby, its cold outside!"
+    elif temp < 70:
+        return "Wear a coat"
+    elif temp < 80:
+        return "Feels great!"
+    else:
+        return "Too hot to handle!"
+
+# function definition
+def main():
+    print(get_temp_desc(20))
+    print(get_temp_desc(85))
+
+# function call
+main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone">
+        <div data-component="fillintheblank" data-question_label="5.25.1.3" id="funct_fitb_pogil_else"  style="visibility: hidden;">
+            <p>Q-3: What keyword specifies the block of statements to execute if a Boolean condition is false?</p>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^\\s*else\\s*$", "regexFlags": "", "feedback": "<p>The keyword else is used to execute a blocks of statements if a Boolean condition is false</p>\n"}, {"regex": "^\\s*Else\\s*$", "regexFlags": "", "feedback": "<p>Most keywords in Python start with a lowercase letter</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            
+        <div class="runestone">
+        <div data-component="fillintheblank" data-question_label="5.25.1.4" id="funct_fitb_pogil_if"  style="visibility: hidden;">
+            <p>Q-4: What keyword starts a conditional statement and is the only required keyword in it?</p>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^\\s*if\\s*$", "regexFlags": "", "feedback": "<p>The keyword if is used to start a conditional statement and is the only required keyword.</p>\n"}, {"regex": "^\\s*If\\s*$", "regexFlags": "", "feedback": "<p>Most keywords in Python start with a lowercase letter</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            
+        <div class="runestone">
+        <div data-component="fillintheblank" data-question_label="5.25.1.5" id="funct_fitb_pogil_elif"  style="visibility: hidden;">
+            <p>Q-5: What keyword is used in a conditional statement when you want three of more possible outcomes?</p>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^\\s*elif\\s*$", "regexFlags": "", "feedback": "<p>The keyword elif is used to provide more than two possible outcomes to a conditional statement.</p>\n"}, {"regex": "^\\s*Elif\\s*$", "regexFlags": "", "feedback": "<p>Most keywords in Python start with a lowercase letter</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=func_ac_pogil_return_temp_desc_v2 data-question_label="5.25.1.6">
+<div id=func_ac_pogil_return_temp_desc_v2_question class="ac_question col-md-12">
+<p>Modify the code in the main method below to test all possible return values from get_temp_desc.</p>
+
+</div>
+<textarea data-lang="python" id="func_ac_pogil_return_temp_desc_v2_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Add tests'  data-wasm=/_static
+     style="visibility: hidden;">
+# function definition
+def get_temp_desc(temp):
+    if temp < 32:
+        return "Baby, its cold outside!"
+    elif temp < 70:
+        return "Wear a coat"
+    elif temp < 80:
+        return "Feels great!"
+    else:
+        return "Too hot to handle!"
+
+# function definition
+def main():
+    print(get_temp_desc(20))
+    print(get_temp_desc(85))
+
+# function call
+main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="funct_pogil_check-guess-Parsons-v2" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Put the blocks in order to define the function <code class="docutils literal notranslate"><span class="pre">check_guess</span></code> which will return <code class="docutils literal notranslate"><span class="pre">'too</span> <span class="pre">low'</span></code> if the guess is less
+than the passed target, <code class="docutils literal notranslate"><span class="pre">'correct'</span></code> if they are equal, and <code class="docutils literal notranslate"><span class="pre">'too</span> <span class="pre">high'</span></code> if the guess
+is greater than the passed target.  For example, <code class="docutils literal notranslate"><span class="pre">check_guess(5,7)</span></code> returns
+<code class="docutils literal notranslate"><span class="pre">'too</span> <span class="pre">low'</span></code>, <code class="docutils literal notranslate"><span class="pre">check_guess(7,7)</span></code> returns <code class="docutils literal notranslate"><span class="pre">'correct'</span></code>, and <code class="docutils literal notranslate"><span class="pre">check_guess(9,7)</span></code> returns
+<code class="docutils literal notranslate"><span class="pre">'too</span> <span class="pre">high'</span></code>. There are three extra blocks that are not needed in a correct solution.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="5.25.1.7"   data-adaptive="true"   data-order="5, 6, 7, 3, 4, 8, 9, 0, 2, 1"    data-numbered="left"  style="visibility: hidden;">
+        def check_guess(guess, target):
+---
+    if guess < target:
+---
+    if guess < target #paired
+---
+        return 'too low'
+---
+        return "too low' #paired
+---
+    elif guess == target:
+---
+    elif guess = target: #paired
+---
+        return 'correct'
+---
+    else:
+---
+        return 'too high'
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=funct_pogil_get-middle data-question_label="5.25.1.8">
+<div id=funct_pogil_get-middle_question class="ac_question col-md-12">
+<p>Finish the function <code class="docutils literal notranslate"><span class="pre">get_middle</span></code> which
+returns the middle characters from the passed string.
+If the string has less than 3 characters then return the passed string.
+If the string has an odd length, then return the middle character.  If the string has an even
+length, return the two middle characters.  For example, <code class="docutils literal notranslate"><span class="pre">get_middle('abc')</span></code> returns
+<code class="docutils literal notranslate"><span class="pre">'b'</span></code> and <code class="docutils literal notranslate"><span class="pre">get_middle('abcd')</span></code> returns <code class="docutils literal notranslate"><span class="pre">'bc'</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="funct_pogil_get-middle_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def get_middle(str):
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(get_middle('abc'), 'b', "get_middle('abc')")
+        self.assertEqual(get_middle('abcd'), 'bc', "get_middle('abcd')")
+        self.assertEqual(get_middle('12345'), '3', "get_middle('12345')")
+        self.assertEqual(get_middle('123456'), '34', "get_middle('123456')")
+        self.assertEqual(get_middle('ab'), 'ab', "get_middle('ab')")
+        self.assertEqual(get_middle('a'), 'a', "get_middle('a')")
+        self.assertEqual(get_middle(''), '', "get_middle('')")
+
+
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone">
+        <div data-component="fillintheblank" data-question_label="5.25.1.9" id="funct_fitb_cond_predict_grade"  style="visibility: hidden;">
+            <p>Q-9: What is the first thing that will be printed when the code below runs?</p>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^\\s*D\\s*$", "regexFlags": "", "feedback": "<p>Since every if will execute it will print D.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Remember that every if will execute.  What is the final value of grade?</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=func_ac_fix_grade_code data-question_label="5.25.1.10">
+<div id=func_ac_fix_grade_code_question class="ac_question col-md-12">
+<p>Run this code to see what it prints.  The modify it to work correctly.  Next,
+add code to the main function to test each possible letter grade.  It
+should return A if the score is
+greater than or equal 90, B if greater than or equal 80, C if greater
+than or equal 70, D if greater than or equal 60, and otherwise E.</p>
+
+</div>
+<textarea data-lang="python" id="func_ac_fix_grade_code_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Letter grade from score'  data-wasm=/_static
+     style="visibility: hidden;">
+# function definition
+def get_grade(score):
+    grade = None
+    if score > 90:
+        grade = 'A'
+    if score > 80:
+        grade = 'B'
+    if score > 70:
+        grade = 'C'
+    if score > 60:
+        grade = 'D'
+    else:
+        grade = 'E'
+    return grade
+
+def main():
+    print(get_grade(95))
+
+main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone">
+        <div data-component="fillintheblank" data-question_label="5.25.1.11" id="funct_fitb_cond_grade_num_tests"  style="visibility: hidden;">
+            <p>Q-11: How many test cases do you need to check that the code above works as intended?</p>
+<input type="text">
+        <script type="application/json">
+            [[{"number": [9, 9], "feedback": "<p>You need to test greater than and equal for each grade from A to D and also test a value less than 60.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Remember that you should check that it works correctly if the value is greater than or equal the specified value.</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            </div>
+<div class="section" id="logical-operators-and-complex-conditionals">
+<h2><span class="section-number">5.25.2. </span>Logical Operators and Complex Conditionals<a class="headerlink" href="#logical-operators-and-complex-conditionals" title="Permalink to this headline">¶</a></h2>
+<p>The logical operators in Python are <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, and <code class="docutils literal notranslate"><span class="pre">not</span></code>. These can be used to create complex conditionals.</p>
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="5.25.2.1" data-multipleanswers="false"  id="funt_mc_and"  style="visibility: hidden;">
+            <p>Q-12: Which of the following tests if x is both greater than 10 and less than or equal to 20?</p>
+<li data-component="answer"  id="funt_mc_and_opt_a"><p>x &gt; 10 and &lt; 20</p>
+</li><li data-component="feedback" id="funt_mc_and_opt_a">
+<p>You have to check that x is greater than 10 and x is less than or equal 20.  You must repeat the x.</p></li><li data-component="answer"  id="funt_mc_and_opt_b"><p>x &gt; 10 &amp;&amp; x &lt;= 20</p>
+</li><li data-component="feedback" id="funt_mc_and_opt_b">
+<p>Python uses the keyword and, not &amp;&amp;</p></li><li data-component="answer" data-correct id="funt_mc_and_opt_c"><p>x &gt; 10 and x &lt;= 20</p>
+</li><li data-component="feedback" id="funt_mc_and_opt_c">
+<p>This will be true when x is greater than 10 and less than or equal 20</p></li><li data-component="answer"  id="funt_mc_and_opt_d"><p>x &gt; 10 &amp;&amp; x &lt; 20</p>
+</li><li data-component="feedback" id="funt_mc_and_opt_d">
+<p>Python uses the keyword and, not &amp;&amp; and this will be true when x is greater than 10 and less than 20</p></li>
+
+            </ul>
+            </div>
+            
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="5.25.2.2" data-multipleanswers="false"  id="funt_mc_or"  style="visibility: hidden;">
+            <p>Q-13: Which of the following returns true if <code class="docutils literal notranslate"><span class="pre">have_ride</span></code> is true or <code class="docutils literal notranslate"><span class="pre">can_walk</span></code> is true?</p>
+<li data-component="answer"  id="funt_mc_or_opt_a"><p>have_ride and can_walk</p>
+</li><li data-component="feedback" id="funt_mc_or_opt_a">
+<p>Both must be true for this to be true</p></li><li data-component="answer" data-correct id="funt_mc_or_opt_b"><p>have_ride or can_walk</p>
+</li><li data-component="feedback" id="funt_mc_or_opt_b">
+<p>This will return true when one of these is true</p></li><li data-component="answer"  id="funt_mc_or_opt_c"><p>have_ride || can_walk</p>
+</li><li data-component="feedback" id="funt_mc_or_opt_c">
+<p>Python uses the keyword or, not ||</p></li><li data-component="answer"  id="funt_mc_or_opt_d"><p>have_ride OR can_walk</p>
+</li><li data-component="feedback" id="funt_mc_or_opt_d">
+<p>Python keywords are all lowercase</p></li>
+
+            </ul>
+            </div>
+            
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="5.25.2.3" data-multipleanswers="true"  id="funt_complex_cond_mc_not"  style="visibility: hidden;">
+            <p>Q-14: Which of the following returns true if <code class="docutils literal notranslate"><span class="pre">is_raining</span></code> is false?  Pick all that are correct.</p>
+<li data-component="answer"  id="funt_complex_cond_mc_not_opt_a"><p>! is_raining</p>
+</li><li data-component="feedback" id="funt_complex_cond_mc_not_opt_a">
+<p>Python does not use the ! symbol for not</p></li><li data-component="answer" data-correct id="funt_complex_cond_mc_not_opt_b"><p>not is_raining</p>
+</li><li data-component="feedback" id="funt_complex_cond_mc_not_opt_b">
+<p>This will return True when is_raining is false.</p></li><li data-component="answer"  id="funt_complex_cond_mc_not_opt_c"><p>is_raining</p>
+</li><li data-component="feedback" id="funt_complex_cond_mc_not_opt_c">
+<p>If is_raining is false this will return False.</p></li><li data-component="answer" data-correct id="funt_complex_cond_mc_not_opt_d"><p>is_raining == False</p>
+</li><li data-component="feedback" id="funt_complex_cond_mc_not_opt_d">
+<p>This will return True when is_raining is False.</p></li>
+
+            </ul>
+            </div>
+            
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=func_ac_or_complex_cond data-question_label="5.25.2.4">
+<div id=func_ac_or_complex_cond_question class="ac_question col-md-12">
+<p>Modify this code to use a complex conditional instead.  It should still pass all tests. It should only take four lines of code or less.</p>
+
+</div>
+<textarea data-lang="python" id="func_ac_or_complex_cond_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='complex conditional'  data-wasm=/_static
+     style="visibility: hidden;">
+# function definition
+def either6(a,b):
+    if a == 6:
+        return True
+    if b == 6:
+        return True
+    return False
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(either6(5,2),False,"either6(5,2)")
+        self.assertEqual(either6(6,3),True, "either6(6,3)")
+        self.assertEqual(either6(3,6),True, "either6(3,6)")
+        self.assertEqual(either6(3,-6),False, "either6(3,6)")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=func_ac_and_complex_cond data-question_label="5.25.2.5">
+<div id=func_ac_and_complex_cond_question class="ac_question col-md-12">
+<p>Modify this code to use a complex conditional instead.  It should still pass all tests. It should only take four lines of code or less.</p>
+
+</div>
+<textarea data-lang="python" id="func_ac_and_complex_cond_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='complex conditional'  data-wasm=/_static
+     style="visibility: hidden;">
+# function definition
+def test(a):
+    if a > 0:
+        if a <= 10:
+            return True
+    return False
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(test(5),True,"test(5)")
+        self.assertEqual(test(0),False,"test(0)")
+        self.assertEqual(test(1),True,"test(1)")
+        self.assertEqual(test(-5),False,"test(-5)")
+        self.assertEqual(test(11),False,"test(11)")
+        self.assertEqual(test(10),True,"test(10)")
+        self.assertEqual(test(9),True,"test(9)")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="funct_pp_pogil_speeding-Parsons" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Put the code below in order to first check if it is your birthday and if so then if the speed is less than or equal 65
+return 0, else if it is less than or equal 85 return 1 and otherwise return 2.  If it isn’t your
+birthday then if the speed is less than or equal 60 return 0, else if it is less than or equal 80
+return 1 and otherwise return 2.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="5.25.2.6"   data-adaptive="true"   data-order="1, 10, 4, 5, 14, 8, 11, 3, 2, 9, 0, 12, 6, 7, 13, 16, 15"    data-numbered="left"  style="visibility: hidden;">
+        def caught_speeding(speed, is_birthday):
+---
+    if is_birthday:
+---
+        if speed <= 65:
+---
+        if speed < 65: #paired
+---
+            return 0
+---
+        elif speed <= 85:
+---
+            return 1
+---
+            Return 1 #paired
+---
+        else:
+---
+            return 2
+---
+    else:
+---
+        if speed <= 60:
+---
+            return 0
+---
+        elif speed <= 80:
+---
+            return 1
+---
+        else:
+---
+            return 2
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=fuct_ac_pogil_alarm_clock_v2 data-question_label="5.25.2.7">
+<div id=fuct_ac_pogil_alarm_clock_v2_question class="ac_question col-md-12">
+<p>Write a function that given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, …6=Sat, and a Boolean indicating if we are on vacation, return a string of the form “7:00” indicating when the alarm clock should ring. If you are on vacation then on weekends it should be “off” and weekdays “10:00”. Otherwise, on weekends it should be “10:00” and weekdays “7:00”.</p>
+
+</div>
+<textarea data-lang="python" id="fuct_ac_pogil_alarm_clock_v2_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def alarm_clock(day, vacation):
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(alarm_clock(1,False), '7:00', "alarm_clock(1,False)")
+        self.assertEqual(alarm_clock(5,False), '7:00', "alarm_clock(5,False)")
+        self.assertEqual(alarm_clock(0,False), '10:00', "alarm_clock(0,False)")
+        self.assertEqual(alarm_clock(6,False), '10:00', "alarm_clock(6,False)")
+        self.assertEqual(alarm_clock(0,True), 'off', "alarm_clock(0,True)")
+        self.assertEqual(alarm_clock(6,True), 'off', "alarm_clock(6,True)")
+        self.assertEqual(alarm_clock(1, True), '10:00', "alarm_clock(1, True)")
+        self.assertEqual(alarm_clock(3, True), '10:00', "alarm_clock(3, True)")
+        self.assertEqual(alarm_clock(5, True), '10:00', "alarm_clock(5, True)")
+
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="func_pp_pogil_sq_play" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Drag the blocks from the left and put them in the correct order on the right to define a function <code class="docutils literal notranslate"><span class="pre">squirrel_play</span></code> that takes a <code class="docutils literal notranslate"><span class="pre">temp</span></code> (the temperature) and Boolean <code class="docutils literal notranslate"><span class="pre">is_summer</span></code> that indicates if it is summer or not and returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if it is summer and the temperature is between 60 and 100 (inclusive).  It also returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if it isn’t summer and the temperature is between 60 and 90 (inclusive).  Otherwise, it returns <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="5.25.2.8"   data-adaptive="true"   data-order="9, 10, 0, 1, 2, 3, 8, 7, 5, 4, 6"    data-numbered="left"  style="visibility: hidden;">
+        def squirrel_play(temp, is_summer):
+---
+    if is_summer and temp >= 60 and temp <= 100:
+---
+        return True
+---
+        return true #paired
+---
+    elif not is_summer and temp >= 60 and temp <= 90:
+---
+    else if not is_summer and temp >= 60 and temp <= 90: #paired
+---
+        return True
+---
+    else:
+---
+    else #paired
+---
+        return False
+---
+        return false #paired
+        </pre>
+        </div>
+        </div>
+    <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
+
+<div class="runestone alert alert-warning sqcontainer">
+    <div data-component="groupsub" id=func_cond_groupsub data-size_limit=4>
+        <div class="col-sm-6">
+            <select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%">
+            </select>
+        </div>
+        <div id="groupsub_button" class="col-sm-6">
+        </div>
+        <p>The Submit Group button will submit the answer for each each question
+        on this page for each member of your group. It also logs you as the official
+        group submitter.</p>
+    </div>
+</div>
+</div>
+</div>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 5.24. Functions and Strings Write Code Questions' data-toggle="tooltip">
+  <a href="function_string_writecode.html" aria-label="Previous - 5.24. Functions and Strings Write Code Questions">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 5.26. Functions and Conditionals Multiple Choice Questions' data-toggle="tooltip" >
+    <a href="function_conditional_exercises.html" aria-label="Next - 5.26. Functions and Conditionals Multiple Choice Questions">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 - Based on Python for Everybody.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> 
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch(); 
+  });
+</script>
+
+
+  </body>
+</html>

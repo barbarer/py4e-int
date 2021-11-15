@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>22.2. Building a Google map from geocoded data &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.css?v=bddd2011b20db76a20ea" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.css?v=7c5388ad4389eae1a318" />
+
+
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/runtime.bundle.js?v=aa7c717c38c5405af9e6"></script>
+    <script src="../_static/637.bundle.js?v=1123ad75f9b821cdd636"></script>
+    <script src="../_static/runestone.bundle.js?v=9c8e466e8cbed4a3af5a"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="22.3. Visualizing networks and interconnections" href="visualizingnetworksandinterconnections.html" />
+    <link rel="prev" title="22.1. Visualizing data" href="visualizingdata.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = true;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'py4e-int';
+    eBookConfig.basecourse = 'py4e-int';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/logo_small.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          py4e-int
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span class="visuallyhidden" aria-label="User">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="runestoneComponents.switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/runestone/static/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=buildinggooglemapfromgeodata'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">22.1. </span>Visualizing data" data-toggle="tooltip">
+    <a href="visualizingdata.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">22.3. </span>Visualizing networks and interconnections' data-toggle="tooltip" >              
+    <a href="visualizingnetworksandinterconnections.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+  
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="building-a-google-map-from-geocoded-data">
+<h1><span class="section-number">22.2. </span>Building a Google map from geocoded data<a class="headerlink" href="#building-a-google-map-from-geocoded-data" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The Google API requires an account created with a credit card number, though it is free to use up to a certain number of requests.</p>
+</div>
+<p>In this project, we are using the Google geocoding API to clean up some
+user-entered geographic locations of university names and then placing
+the data on a Google map.</p>
+<a class="reference internal image-reference" href="../_images/google-map.png"><img alt="A Google map" class="align-center" src="../_images/google-map.png" style="width: 565.8px; height: 406.8px;" /></a>
+<p>To get started, download the application from:</p>
+<p><a class="reference external" href="http://www.py4e.com/code3/geodata.zip">www.py4e.com/code3/geodata.zip</a></p>
+<p>The first problem to solve is that the free Google geocoding API is
+rate-limited to a certain number of requests per day. If you have a lot
+of data, you might need to stop and restart the lookup process several
+times. So we break the problem into two phases.</p>
+
+        <div class="runestone">
+        <div data-component="fillintheblank" data-question_label="22.2.1" id="viz-google-fitb-phases"  style="visibility: hidden;">
+            <p>csp-10-2-1: How many phases do we break the first problem of this project into?</p>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^\\s*2|([Two])\\s*$", "regexFlags": "", "feedback": "<p>We break this problem into two phases.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            <p>In the first phase we take our input “survey” data in the file
+<em>where.data</em> and read it one line at a time, and retrieve
+the geocoded information from Google and store it in a database
+<em>geodata.sqlite</em>. Before we use the geocoding API for
+each user-entered location, we simply check to see if we already have
+the data for that particular line of input. The database is functioning
+as a local “cache” of our geocoding data to make sure we never ask
+Google for the same data twice.</p>
+
+        <div class="runestone">
+        <div data-component="fillintheblank" data-question_label="22.2.2" id="viz-google-fitb-db"  style="visibility: hidden;">
+            <p>csp-10-2-2: The database in this program functions as a local ______ of our geocoding data.</p>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^\\s*[Cc]ache\\s*$", "regexFlags": "", "feedback": "<p>The database acts as a local cache of that data to make sure we never ask Google for repeat data.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            <p>You can restart the process at any time by removing the file
+<em>geodata.sqlite</em>.</p>
+<p>Run the <em>geoload.py</em> program. This program will read the
+input lines in <em>where.data</em> and for each line check to
+see if it is already in the database. If we don’t have the data for the
+location, it will call the geocoding API to retrieve the data and store
+it in the database.</p>
+<p>Here is a sample run after there is already some data in the database:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Found in database  Northeastern University
+Found in database  University of Hong Kong, ...
+Found in database  Technion
+Found in database  Viswakarma Institute, Pune, India
+Found in database  UMD
+Found in database  Tufts University
+
+Resolving Monash University
+Retrieving http://maps.googleapis.com/maps/api/
+    geocode/json?address=Monash+University
+Retrieved 2063 characters {    &quot;results&quot; : [
+{&#39;status&#39;: &#39;OK&#39;, &#39;results&#39;: ... }
+
+Resolving Kokshetau Institute of Economics and Management
+Retrieving http://maps.googleapis.com/maps/api/
+    geocode/json?address=Kokshetau+Inst ...
+Retrieved 1749 characters {    &quot;results&quot; : [
+{&#39;status&#39;: &#39;OK&#39;, &#39;results&#39;: ... }
+...
+</pre></div>
+</div>
+<p>The first five locations are already in the database and so they are
+skipped. The program scans to the point where it finds new locations and
+starts retrieving them.</p>
+<p>The <em>geoload.py</em> program can be stopped at any time, and
+there is a counter that you can use to limit the number of calls to the
+geocoding API for each run. Given that the <em>where.data</em>
+only has a few hundred data items, you should not run into the daily
+rate limit, but if you had more data it might take several runs over
+several days to get your database to have all of the geocoded data for
+your input.</p>
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="22.2.3" data-multipleanswers="false"  id="viz-google-mc-tf"  style="visibility: hidden;">
+            <p>csp-10-2-3: True or False? The geoload.py program can be stopped.</p>
+
+            <li data-component="answer" data-correct id="viz-google-mc-tf_opt_a">True</li><li data-component="feedback">The geoload.py program <b>can</b> be stopped at any time. There is also a counter that can be used to limit the number of calls.</li>
+            
+            <li data-component="answer"  id="viz-google-mc-tf_opt_b">False</li><li data-component="feedback">Try again!</li>
+            
+
+            </ul>
+            </div>
+            <p>Once you have some data loaded into <em>geodata.sqlite</em>, you
+can visualize the data using the <em>geodump.py</em> program.
+This program reads the database and writes the file
+<em>where.js</em> with the location, latitude, and longitude in
+the form of executable JavaScript code.</p>
+<p>A run of the <em>geodump.py</em> program is as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Northeastern</span> <span class="n">University</span><span class="p">,</span> <span class="o">...</span> <span class="n">Boston</span><span class="p">,</span> <span class="n">MA</span> <span class="mi">02115</span><span class="p">,</span> <span class="n">USA</span> <span class="mf">42.3396998</span> <span class="o">-</span><span class="mf">71.08975</span>
+<span class="n">Bradley</span> <span class="n">University</span><span class="p">,</span> <span class="mi">1501</span> <span class="o">...</span> <span class="n">Peoria</span><span class="p">,</span> <span class="n">IL</span> <span class="mi">61625</span><span class="p">,</span> <span class="n">USA</span> <span class="mf">40.6963857</span> <span class="o">-</span><span class="mf">89.6160811</span>
+<span class="o">...</span>
+<span class="n">Technion</span><span class="p">,</span> <span class="n">Viazman</span> <span class="mi">87</span><span class="p">,</span> <span class="n">Kesalsaba</span><span class="p">,</span> <span class="mi">32000</span><span class="p">,</span> <span class="n">Israel</span> <span class="mf">32.7775</span> <span class="mf">35.0216667</span>
+<span class="n">Monash</span> <span class="n">University</span> <span class="n">Clayton</span> <span class="o">...</span> <span class="n">VIC</span> <span class="mi">3800</span><span class="p">,</span> <span class="n">Australia</span> <span class="o">-</span><span class="mf">37.9152113</span> <span class="mf">145.134682</span>
+<span class="n">Kokshetau</span><span class="p">,</span> <span class="n">Kazakhstan</span> <span class="mf">53.2833333</span> <span class="mf">69.3833333</span>
+<span class="o">...</span>
+<span class="mi">12</span> <span class="n">records</span> <span class="n">written</span> <span class="n">to</span> <span class="n">where</span><span class="o">.</span><span class="n">js</span>
+<span class="n">Open</span> <span class="n">where</span><span class="o">.</span><span class="n">html</span> <span class="n">to</span> <span class="n">view</span> <span class="n">the</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">browser</span>
+</pre></div>
+</div>
+<p>The file <em>where.html</em> consists of HTML and JavaScript to
+visualize a Google map. It reads the most recent data in
+<em>where.js</em> to get the data to be visualized. Here is the
+format of the <em>where.js</em> file:</p>
+<div class="highlight-{.js} notranslate"><div class="highlight"><pre><span></span>myData = [
+[42.3396998,-71.08975, &#39;Northeastern Uni ... Boston, MA 02115&#39;],
+[40.6963857,-89.6160811, &#39;Bradley University, ... Peoria, IL 61625, USA&#39;],
+[32.7775,35.0216667, &#39;Technion, Viazman 87, Kesalsaba, 32000, Israel&#39;],
+   ...
+];
+</pre></div>
+</div>
+<p>This is a JavaScript variable that contains a list of lists. The syntax
+for JavaScript list constants is very similar to Python, so the syntax
+should be familiar to you.</p>
+<p>Simply open <em>where.html</em> in a browser to see the
+locations. You can hover over each map pin to find the location that the
+geocoding API returned for the user-entered input. If you cannot see any
+data when you open the <em>where.html</em> file, you might want
+to check the JavaScript or developer console for your browser.</p>
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="22.2.4" data-multipleanswers="true"  id="viz-google-mc-language"  style="visibility: hidden;">
+            <p>csp-10-2-4: Which of the following languages are used or produced by this program? Select all that apply.</p>
+
+            <li data-component="answer" data-correct id="viz-google-mc-language_opt_a">HTML</li><li data-component="feedback">This program uses HTML in the where.html file.</li>
+            
+            <li data-component="answer" data-correct id="viz-google-mc-language_opt_b">Python</li><li data-component="feedback">This program uses Python in the geodata.py file.</li>
+            
+            <li data-component="answer"  id="viz-google-mc-language_opt_c">C++</li><li data-component="feedback">Nope! This program does not use C++.</li>
+            
+            <li data-component="answer" data-correct id="viz-google-mc-language_opt_d">JavaScript</li><li data-component="feedback">This program uses JavaScript in the where.html file.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 22.1. Visualizing data' data-toggle="tooltip">
+  <a href="visualizingdata.html" aria-label="Previous - 22.1. Visualizing data">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 22.3. Visualizing networks and interconnections' data-toggle="tooltip" >
+    <a href="visualizingnetworksandinterconnections.html" aria-label="Next - 22.3. Visualizing networks and interconnections">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 - Based on Python for Everybody.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> 
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch(); 
+  });
+</script>
+
+
+  </body>
+</html>

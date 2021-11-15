@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>13.15. Multiple Choice Questions &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.css?v=bddd2011b20db76a20ea" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.css?v=7c5388ad4389eae1a318" />
+
+
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/runtime.bundle.js?v=aa7c717c38c5405af9e6"></script>
+    <script src="../_static/637.bundle.js?v=1123ad75f9b821cdd636"></script>
+    <script src="../_static/runestone.bundle.js?v=9c8e466e8cbed4a3af5a"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="13.16. Mixed-Up Code Questions" href="mixedupcode.html" />
+    <link rel="prev" title="13.14. Glossary" href="glossary.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = true;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'py4e-int';
+    eBookConfig.basecourse = 'py4e-int';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/logo_small.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          py4e-int
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span class="visuallyhidden" aria-label="User">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="runestoneComponents.switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/runestone/static/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=Exercises'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">13.14. </span>Glossary" data-toggle="tooltip">
+    <a href="glossary.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">13.16. </span>Mixed-Up Code Questions' data-toggle="tooltip" >              
+    <a href="mixedupcode.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+  
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="multiple-choice-questions">
+<h1><span class="section-number">13.15. </span>Multiple Choice Questions<a class="headerlink" href="#multiple-choice-questions" title="Permalink to this headline">¶</a></h1>
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="13.15.1" data-multipleanswers="false"  id="networks_ex1"  style="visibility: hidden;">
+            <p>Q-1: What  protocol can be used to retrieve web pages using python?</p>
+
+            <li data-component="answer"  id="networks_ex1_opt_a">urllib</li><li data-component="feedback">urlib is a python library that contains several modules with URLs</li>
+            
+            <li data-component="answer"  id="networks_ex1_opt_b">bs4</li><li data-component="feedback">bs4 is a python library pulling out data from HTML files.</li>
+            
+            <li data-component="answer" data-correct id="networks_ex1_opt_c">HTTP</li><li data-component="feedback">HTTP is a network protocol that is used to transmit different documents like HTML.</li>
+            
+            <li data-component="answer"  id="networks_ex1_opt_d">GET</li><li data-component="feedback">GET is a HTTP request method from a specified resource in a server.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="13.15.2" data-multipleanswers="false"  id="networks_ex2"  style="visibility: hidden;">
+            <p>Q-2: What provides two way communication between two different programs in a network.</p>
+
+            <li data-component="answer" data-correct id="networks_ex2_opt_a">socket</li><li data-component="feedback">A single socket is a program that can be used to send and receive data in a network.</li>
+            
+            <li data-component="answer"  id="networks_ex2_opt_b">port</li><li data-component="feedback">A port represents an endpoint on a computer that can connect to different network nodes.</li>
+            
+            <li data-component="answer"  id="networks_ex2_opt_c">http</li><li data-component="feedback">HTTP is a protocol used for transfer data from a web server.</li>
+            
+            <li data-component="answer"  id="networks_ex2_opt_d">protocol</li><li data-component="feedback">protocol is a set of rules that determine how data is transmitted over a network.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="13.15.3" data-multipleanswers="false"  id="networks_ex3"  style="visibility: hidden;">
+            <p>Q-3: What is a python library that can be used to send and receive data over HTTP?</p>
+
+            <li data-component="answer"  id="networks_ex3_opt_a">http</li><li data-component="feedback">http is a protocol and not a python library</li>
+            
+            <li data-component="answer" data-correct id="networks_ex3_opt_b">urllib</li><li data-component="feedback">urllib can be used to send and receive data over HTTP instead of manually doing it using a webbrowser.</li>
+            
+            <li data-component="answer"  id="networks_ex3_opt_c">port</li><li data-component="feedback">port is an endpoint for a device to connect with other devices in a network to transmit similar types of data.</li>
+            
+            <li data-component="answer"  id="networks_ex3_opt_d">header</li><li data-component="feedback">a header is additional information sent and received along with data.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="13.15.4" data-multipleanswers="false"  id="networks_ex4"  style="visibility: hidden;">
+            <p>Q-4: What is the process by which search engines retrieve webpages and build a search index called?</p>
+
+            <li data-component="answer"  id="networks_ex4_opt_a">scrape</li><li data-component="feedback">Scrape is the act of extraction of webpages</li>
+            
+            <li data-component="answer"  id="networks_ex4_opt_b">parse</li><li data-component="feedback">Parse is breaking down scraped webpages to useful data</li>
+            
+            <li data-component="answer"  id="networks_ex4_opt_c">BeautifulSoup</li><li data-component="feedback">BeautifulSoup is a python library for extracting HTML documents</li>
+            
+            <li data-component="answer" data-correct id="networks_ex4_opt_d">spider</li><li data-component="feedback">spider retrieves a webpage and then all the webpages linked to it to form a search index.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="13.15.5" data-multipleanswers="false"  id="networks_ex5"  style="visibility: hidden;">
+            <p>Q-5: What does the following block of code do?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mysock</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+<span class="n">mysock</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="s1">&#39;data.pr4e.org&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">))</span>
+<span class="n">cmd</span> <span class="o">=</span> <span class="s1">&#39;GET http://data.pr4e.org/romeo.txt HTTP/1.0</span><span class="se">\r\n\r\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
+<span class="n">mysock</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="networks_ex5_opt_a">It sends a request to extract 'romeo.txt' from 'data.pr4e.org'</li><li data-component="feedback">this sends a GET request to the webserver over port 80</li>
+            
+            <li data-component="answer"  id="networks_ex5_opt_b">It sends the 'romeo.txt' file to 'data.pr4e.org'</li><li data-component="feedback">This does not send a file to the webserver.</li>
+            
+            <li data-component="answer"  id="networks_ex5_opt_c">It creates a file named 'romeo.txt'</li><li data-component="feedback">This does not create a file</li>
+            
+            <li data-component="answer"  id="networks_ex5_opt_d">It throws an error because a socket cannot use HTTP.</li><li data-component="feedback">sockets can be used to connect with different types of servers using different protocols.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="13.15.6" data-multipleanswers="false"  id="networks_ex6"  style="visibility: hidden;">
+            <p>Q-6: What does the following block of code do?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">urllib.request</span>
+
+<span class="n">fhand</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s1">&#39;http://data.pr4e.org/romeo.txt&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fhand</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="networks_ex6_opt_a">It creates a file named 'romeo.txt' in 'data.pr4e.org'</li><li data-component="feedback">urllib.request cannot create files in a web server.</li>
+            
+            <li data-component="answer"  id="networks_ex6_opt_b">It finds the urls linked to 'data.pr4e.org' and prints it.</li><li data-component="feedback">urllib.request is not a spider.</li>
+            
+            <li data-component="answer"  id="networks_ex6_opt_c">It opens a file named 'http://data.pr4e.org/romeo.txt' in local storage</li><li data-component="feedback">urllib.request does not handle files in local storage</li>
+            
+            <li data-component="answer" data-correct id="networks_ex6_opt_d">It prints the contents of 'romeo.txt' after retrieving it from 'data.pr4e.org'</li><li data-component="feedback">urllib.request requests the file and then accepts it.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="13.15.7" data-multipleanswers="false"  id="networks_ex7"  style="visibility: hidden;">
+            <p>Q-7: What does the following block of code do?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">urllib.request</span><span class="o">,</span> <span class="nn">urllib.parse</span><span class="o">,</span> <span class="nn">urllib.error</span>
+
+<span class="n">img</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s1">&#39;http://data.pr4e.org/cover3.jpg&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">fhand</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;cover3.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span>
+<span class="n">fhand</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+<span class="n">fhand</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="networks_ex7_opt_a">It retrieves 'cover3.jpg' and saves it to your computer.</li><li data-component="feedback">Running the code does not display any output because it saves the file to your computer.</li>
+            
+            <li data-component="answer"  id="networks_ex7_opt_b">It displays the image 'cover3.jpg'.</li><li data-component="feedback">It does not output anything on the screen.</li>
+            
+            <li data-component="answer"  id="networks_ex7_opt_c">It retrieves the url to download 'cover3.jpg'</li><li data-component="feedback">The urllib retrieves the file and parses it.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="13.15.8" data-multipleanswers="false"  id="networks_ex8"  style="visibility: hidden;">
+            <p>Q-8: What does the following regex match?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>http[s]?://.+?
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="networks_ex8_opt_a">Exact match to 'http[s]?://.+?'</li><li data-component="feedback">The regex uses wildcard characters and is not an exact match case.</li>
+            
+            <li data-component="answer"  id="networks_ex8_opt_b">'http://' or 'http[s]://' followed by one or more character</li><li data-component="feedback">the square brackets denotes a character class with 0 or 1 's'.</li>
+            
+            <li data-component="answer" data-correct id="networks_ex8_opt_c">'http://' or 'https://' followed by one or more characters.</li><li data-component="feedback">the '[s]?' means 0 or 1 s and '.+?' means 1 or more characters</li>
+            
+            <li data-component="answer"  id="networks_ex8_opt_d">'https://' followed by one or more characters.</li><li data-component="feedback">the regex also accepts 'http://' because '[s]?' means 'http' followed by 0 or 1 's'</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="13.15.9" data-multipleanswers="false"  id="networks_ex9"  style="visibility: hidden;">
+            <p>Q-9: What does the following block of code do?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://www.nytimes.com&quot;</span>
+<span class="n">html</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="n">ctx</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="networks_ex9_opt_a">retrieves and displays the webpage</li><li data-component="feedback">This does not display the webpage. BeautufulSoup parses webpage retrieved by urllib.rquest</li>
+            
+            <li data-component="answer" data-correct id="networks_ex9_opt_b">parses the html content of the "https://www.nytimes.com" webpage.</li><li data-component="feedback">This parses all html tags and contents of the webpage.</li>
+            
+            <li data-component="answer"  id="networks_ex9_opt_c">downloads the webpage</li><li data-component="feedback">This does not save files to the computer</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="13.15.10" data-multipleanswers="false"  id="networks_ex10"  style="visibility: hidden;">
+            <p>Q-10: What does the following block of code print?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://www.nytimes.com/&quot;</span>
+<span class="n">html</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+
+<span class="n">tags</span> <span class="o">=</span> <span class="n">soup</span><span class="p">(</span><span class="s1">&#39;img&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">tags</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;src&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="networks_ex10_opt_a">retrieves and displays the webpage</li><li data-component="feedback">urllib retrieves the webpage but does not display it</li>
+            
+            <li data-component="answer"  id="networks_ex10_opt_b">downloads the webpage</li><li data-component="feedback">this does not save files to the computer</li>
+            
+            <li data-component="answer"  id="networks_ex10_opt_c">prints the images from 'www.nytimes.com'</li><li data-component="feedback">BeautifulSoup and html.parser cannot display images</li>
+            
+            <li data-component="answer" data-correct id="networks_ex10_opt_d">prints all the 'img' sources under 'src' from  'www.nytimes.com'</li><li data-component="feedback">it prints  out the image sources listed under 'src' of 'img' tags.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 13.14. Glossary' data-toggle="tooltip">
+  <a href="glossary.html" aria-label="Previous - 13.14. Glossary">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 13.16. Mixed-Up Code Questions' data-toggle="tooltip" >
+    <a href="mixedupcode.html" aria-label="Next - 13.16. Mixed-Up Code Questions">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 - Based on Python for Everybody.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> 
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch(); 
+  });
+</script>
+
+
+  </body>
+</html>

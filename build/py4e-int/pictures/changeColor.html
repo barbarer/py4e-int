@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>18.4. Changing Step 5: Increasing and decreasing color values &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.css?v=bddd2011b20db76a20ea" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.css?v=7c5388ad4389eae1a318" />
+
+
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/runtime.bundle.js?v=aa7c717c38c5405af9e6"></script>
+    <script src="../_static/637.bundle.js?v=1123ad75f9b821cdd636"></script>
+    <script src="../_static/runestone.bundle.js?v=9c8e466e8cbed4a3af5a"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="18.5. Changing Step 6: Changing where we put the colors" href="changeColorLoc.html" />
+    <link rel="prev" title="18.3. A Pattern for Image Processing" href="pattern.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = true;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'py4e-int';
+    eBookConfig.basecourse = 'py4e-int';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/logo_small.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          py4e-int
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span class="visuallyhidden" aria-label="User">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="runestoneComponents.switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/runestone/static/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=changeColor'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">18.3. </span>A Pattern for Image Processing" data-toggle="tooltip">
+    <a href="pattern.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">18.5. </span>Changing Step 6: Changing where we put the colors' data-toggle="tooltip" >              
+    <a href="changeColorLoc.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+  
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="changing-step-5-increasing-and-decreasing-color-values">
+<h1><span class="section-number">18.4. </span>Changing Step 5: Increasing and decreasing color values<a class="headerlink" href="#changing-step-5-increasing-and-decreasing-color-values" title="Permalink to this headline">¶</a></h1>
+<p>First example: Let’s change STEP 5, so that we decrease the red by 50%.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=Image_Decrease_Red data-question_label="18.4.1">
+<div id=Image_Decrease_Red_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="Image_Decrease_Red_editor" 
+      data-timelimit=25000     
+    data-audio='*doubleq*Important Lines Tour*doubleq*; 2: timg5-line2; 5: timg5-line5; 8-9: timg5-line8-9; 12: timg5-line12; 15: timg5-line15; 18: timg5-line18; 21-22: timg5-line21-22;*atype*'  data-datafile='beach.jpg'    
+           data-wasm=/_static
+     style="visibility: hidden;">
+# STEP 1: USE THE IMAGE LIBRARY
+from image import *
+
+# STEP 2: PICK THE IMAGE
+img = Image("beach.jpg")
+
+# STEP 3: LOOP THROUGH THE PIXELS
+pixels = img.getPixels();
+for p in pixels:
+
+    # STEP 4: GET THE DATA
+    r = p.getRed()
+
+    # STEP 5: MODIFY THE COLOR
+    p.setRed(r * 0.5);
+
+    # STEP 6: UPDATE THE IMAGE
+    img.updatePixel(p)
+
+# STEP 7: SHOW THE RESULT
+win = ImageWin(img.getWidth(),img.getHeight())
+img.draw(win)
+</textarea>
+</div>
+</div>
+<p>Try the program above on some of the other images, like “arch.jpg” or “puppy.jpg”, by changing the name of the image file on line 5.  What effect does it always have?  Is this what you expected when we decrease the red?</p>
+<p>We can <em>increase</em> the red in a similar way. Let’s change STEP 5, so that we increase the red by 150%.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=Image_Increase_Red data-question_label="18.4.2">
+<div id=Image_Increase_Red_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="Image_Increase_Red_editor" 
+      data-timelimit=25000     
+    data-audio='*doubleq*Important Lines Tour*doubleq*; 2: timg5-line2; 5: timg5-line5; 8-9: timg5-line8-9; 12: timg5-line12; 15: timg6-line15; 18: timg5-line18; 21-22: timg5-line21-22;*atype*'  data-datafile='beach.jpg'    
+           data-wasm=/_static
+     style="visibility: hidden;">
+# STEP 1: USE THE IMAGE LIBRARY
+from image import *
+
+# STEP 2: PICK THE IMAGE
+img = Image("beach.jpg")
+
+# STEP 3: LOOP THROUGH THE PIXELS
+pixels = img.getPixels()
+for p in pixels:
+
+    # STEP 4: GET THE DATA
+    r = p.getRed()
+
+    # STEP 5: MODIFY THE COLOR
+    p.setRed(r * 1.5)
+
+    # STEP 6: UPDATE THE IMAGE
+    img.updatePixel(p)
+
+# STEP 7: SHOW THE RESULT
+win = ImageWin(img.getWidth(),img.getHeight())
+img.draw(win)
+</textarea>
+</div>
+</div>
+<p>Try the program above on some of the other images by changing the name of the image file on line 5.   What effect does it always have? Is this what you expected when you increase the red?  What happens if you increase two colors at the same time?</p>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="Image_Decrease_GB" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Another way to get a similar effect to increasing the red, is to decrease the green and blue.  Figure out how to do that in the program above and then use that information to drag the code blocks below from the left to the right in the correct order with the correct indention.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="18.4.3"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        from image import *
+---
+img = Image("beach.jpg")
+---
+pixels = img.getPixels()
+---
+for p in pixels:
+---
+    g = p.getGreen()
+    b = p.getBlue()
+---
+    p.setGreen(g * 0.75)
+    p.setBlue(b * 0.75)
+---
+    img.updatePixel(p)
+---
+win = ImageWin(img.getWidth(),img.getHeight())
+img.draw(win)
+        </pre>
+        </div>
+        </div>
+    <div id='11_4_1_WSt' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>Decrease the red by .5 and increase the blue and green by .5 in puppy.jpg.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=11_4_1_WSq data-question_label="18.4.4">
+<div id=11_4_1_WSq_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="11_4_1_WSq_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+
+
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone datafile">
+<div class="datafile_caption">Data file: <code>puppy.jpg</code></div>
+<img data-component="datafile" data-isimage=true id=puppy.jpg data-hidden src='data:image/jpg;base64, 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'/></div>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=11_4_1_WSa data-question_label="18.4.6">
+<div id=11_4_1_WSa_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="11_4_1_WSa_editor" 
+      data-timelimit=25000     
+    data-audio=''  data-datafile='puppy.jpg'    
+           data-wasm=/_static
+     style="visibility: hidden;">
+# STEP 1: USE THE IMAGE LIBRARY
+from image import *
+
+# STEP 2: PICK THE IMAGE
+img = Image("puppy.jpg")
+
+# STEP 3: LOOP THROUGH THE PIXELS
+pixels = img.getPixels()
+for p in pixels:
+
+    # STEP 4: GET THE DATA
+    r = p.getRed()
+    g = p.getGreen()
+    b = p.getBlue()
+
+    # STEP 5: MODIFY THE COLOR
+    p.setRed(r * .5)
+    p.setGreen(g * 1.5)
+    p.setBlue(b * 1.5)
+
+    # STEP 6: UPDATE THE IMAGE
+    img.updatePixel(p)
+
+# STEP 7: SHOW THE RESULT
+win = ImageWin(img.getWidth(),img.getHeight())
+img.draw(win)
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 18.3. A Pattern for Image Processing' data-toggle="tooltip">
+  <a href="pattern.html" aria-label="Previous - 18.3. A Pattern for Image Processing">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 18.5. Changing Step 6: Changing where we put the colors' data-toggle="tooltip" >
+    <a href="changeColorLoc.html" aria-label="Next - 18.5. Changing Step 6: Changing where we put the colors">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 - Based on Python for Everybody.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> 
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch(); 
+  });
+</script>
+
+
+  </body>
+</html>

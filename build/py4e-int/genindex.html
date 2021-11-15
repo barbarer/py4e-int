@@ -1,0 +1,2488 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="_static/637.css?v=bddd2011b20db76a20ea" />
+    <link rel="stylesheet" type="text/css" href="_static/runestone.css?v=7c5388ad4389eae1a318" />
+
+
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="_static/webglinteractive.js?v=2B768384"></script>
+    <script src="_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="_static/html4css1.css?v=4533ACD3"></script>
+    <script src="_static/animationbase.js?v=A043C3A7"></script>
+    <script src="_static/runtime.bundle.js?v=aa7c717c38c5405af9e6"></script>
+    <script src="_static/637.bundle.js?v=1123ad75f9b821cdd636"></script>
+    <script src="_static/runestone.bundle.js?v=9c8e466e8cbed4a3af5a"></script>
+    <link rel="index" title="Index" href="#" />
+    <link rel="search" title="Search" href="search.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = true;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'py4e-int';
+    eBookConfig.basecourse = 'py4e-int';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="_static/img/logo_small.png" alt=""></a>
+        
+        <a class="navbar-brand" href="index.html" aria-label="index-page">
+          
+          py4e-int
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='#'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span class="visuallyhidden" aria-label="User">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="runestoneComponents.switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/runestone/static/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=genindex'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+
+   
+          
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        
+-->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+  
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+
+<h1 id="index">Index</h1>
+
+<div class="genindex-jumpbox">
+ <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
+ | <a href="#I"><strong>I</strong></a>
+ | <a href="#J"><strong>J</strong></a>
+ | <a href="#K"><strong>K</strong></a>
+ | <a href="#L"><strong>L</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#Q"><strong>Q</strong></a>
+ | <a href="#R"><strong>R</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
+ | <a href="#V"><strong>V</strong></a>
+ | <a href="#W"><strong>W</strong></a>
+ | <a href="#X"><strong>X</strong></a>
+ 
+</div>
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lists/mutable.html#index-0">Access</a>
+</li>
+      <li><a href="iterations/glossary.html#term-Accumulator"><strong>Accumulator</strong></a>
+
+      <ul>
+        <li><a href="iterations/loops.html#index-0">Sum</a>
+</li>
+      </ul></li>
+      <li><a href="functions/glossary.html#term-Algorithm"><strong>Algorithm</strong></a>
+</li>
+      <li><a href="lists/glossary.html#term-Aliasing"><strong>Aliasing</strong></a>, <a href="lists/aliasing.html#index-0">[1]</a>, <a href="lists/objectsValues.html#index-0">[2]</a>
+
+      <ul>
+        <li><a href="lists/debugging.html#index-0">Copy to Avoid</a>
+</li>
+        <li><a href="lists/aliasing.html#index-0">Reference</a>
+</li>
+      </ul></li>
+      <li><a href="conditional/altExecution.html#index-0">Alternative Execution</a>
+</li>
+      <li>
+    And
+
+      <ul>
+        <li><a href="conditional/logicalOperators.html#index-0">Operator</a>
+</li>
+      </ul></li>
+      <li><a href="web/glossary.html#term-API"><strong>API</strong></a>, <a href="web/applicationProg.html#index-0">[1]</a>
+
+      <ul>
+        <li><a href="web/securityAPI.html#index-0">Key</a>
+</li>
+      </ul></li>
+      <li>
+    Append
+
+      <ul>
+        <li><a href="lists/listAsArgument.html#index-0">Method</a>, <a href="lists/listAsArgument.html#index-0">[1]</a>, <a href="lists/listMethods.html#index-0">[2]</a>
+</li>
+      </ul></li>
+      <li>
+    Architecture
+
+      <ul>
+        <li><a href="intro/computerHardwareArch.html#index-0">Hardware</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="functions/glossary.html#term-Argument"><strong>Argument</strong></a>, <a href="functions/addingnewfunctions.html#index-0">[1]</a>, <a href="functions/functioncalls.html#index-0">[2]</a>, <a href="functions/parametersandargs.html#index-0">[3]</a>, <a href="lists/listAsArgument.html#index-0">[4]</a>
+
+      <ul>
+        <li><a href="functions/parametersandargs.html#index-0">Function</a>
+</li>
+        <li><a href="lists/listAsArgument.html#index-0">List</a>
+</li>
+        <li><a href="lists/listsAndStrings.html#index-0">Optional</a>, <a href="strings/methods.html#index-0">[1]</a>
+</li>
+      </ul></li>
+      <li>
+    Argument In
+
+      <ul>
+        <li><a href="functions/functioncalls.html#index-0">Parentheses</a>
+</li>
+      </ul></li>
+      <li>
+    Arithmetic
+
+      <ul>
+        <li><a href="variables/operators-and-operands.html#index-0">Operator</a>
+</li>
+      </ul></li>
+      <li><a href="variables/glossary.html#term-Assignment"><strong>Assignment</strong></a>, <a href="lists/sequence.html#index-0">[1]</a>, <a href="variables/variables-section.html#index-0">[2]</a>
+
+      <ul>
+        <li><a href="lists/mutable.html#index-0">Item</a>, <a href="strings/immutable.html#index-0">[1]</a>
+</li>
+        <li><a href="variables/variables-section.html#index-0">Statement</a>
+</li>
+      </ul></li>
+      <li>
+    Assurance
+
+      <ul>
+        <li><a href="files/tryExceptOpen.html#index-0">Quality</a>
+</li>
+      </ul></li>
+      <li><a href="database/glossary.html#term-Attribute"><strong>Attribute</strong></a>, <a href="database/dbConcepts.html#index-0">[1]</a>
+</li>
+      <li><a href="classes-basics/UserDefinedClasses.html#index-0">attribute</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="network/glossary.html#term-BeautifulSoup"><strong>BeautifulSoup</strong></a>
+</li>
+      <li>
+    Before Update
+
+      <ul>
+        <li><a href="iterations/updating.html#index-0">Initialize</a>
+</li>
+      </ul></li>
+      <li><a href="conditional/glossary.html#term-Body"><strong>Body</strong></a>, <a href="functions/addingnewfunctions.html#index-0">[1]</a>, <a href="iterations/while.html#index-0">[2]</a>
+</li>
+      <li><a href="turtles/summary.html#index-0">body syntonic</a>
+</li>
+      <li><a href="conditional/boolean.html#index-0">Bool Type</a>
+</li>
+      <li>
+    Boolean
+
+      <ul>
+        <li><a href="conditional/boolean.html#index-0">Expression</a>
+</li>
+        <li><a href="strings/in.html#index-0">Operator</a>
+</li>
+      </ul></li>
+      <li><a href="conditional/glossary.html#term-Boolean-Expression"><strong>Boolean Expression</strong></a>, <a href="conditional/boolean.html#index-0">[1]</a>
+</li>
+      <li><a href="debugging/HowtoAvoidDebugging.html#index-0">boundary conditions</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    Bracket
+
+      <ul>
+        <li><a href="lists/mutable.html#index-0">Operator</a>, <a href="strings/sequence.html#index-0">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="conditional/glossary.html#term-Branch"><strong>Branch</strong></a>, <a href="conditional/altExecution.html#index-0">[1]</a>
+</li>
+      <li>
+    Break
+
+      <ul>
+        <li><a href="iterations/infinite_loops.html#index-0">Statement</a>
+</li>
+      </ul></li>
+      <li><a href="regex/glossary.html#term-Brittle-Code"><strong>Brittle Code</strong></a>
+</li>
+      <li><a href="intro/glossary.html#term-Bug"><strong>Bug</strong></a>
+</li>
+      <li>
+    Built-in
+
+      <ul>
+        <li><a href="functions/builtin.html#index-0">Function</a>, <a href="lists/listFunctions.html#index-0">[1]</a>
+</li>
+      </ul></li>
+      <li>
+    By Bisection
+
+      <ul>
+        <li><a href="iterations/debugging.html#index-0">Debugging</a>
+</li>
+      </ul></li>
+      <li><a href="ack/A0-preface.html#index-0">BY-SA</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    Case-sensitivity
+
+      <ul>
+        <li><a href="variables/debugging.html#index-0">Variable Names</a>
+</li>
+      </ul></li>
+      <li><a href="files/glossary.html#term-Catch"><strong>Catch</strong></a>
+</li>
+      <li><a href="ack/A0-preface.html#index-0">CC-BY-SA</a>
+</li>
+      <li><a href="conditional/tryExcept.html#index-0">Celsius</a>
+</li>
+      <li><a href="intro/glossary.html#term-Central-Processing-Unit"><strong>Central Processing Unit</strong></a>, <a href="intro/computerHardwareArch.html#index-0">[1]</a>
+</li>
+      <li><a href="conditional/glossary.html#term-Chained-Conditional"><strong>Chained Conditional</strong></a>, <a href="conditional/chained.html#index-0">[1]</a>
+</li>
+      <li><a href="strings/sequence.html#index-0">Character</a>
+</li>
+      <li>
+    Choice
+
+      <ul>
+        <li><a href="functions/randomnumbers.html#index-0">Function</a>
+</li>
+      </ul></li>
+      <li>
+    Class
+
+      <ul>
+        <li><a href="variables/values-and-types.html#index-0">Float</a>
+</li>
+        <li><a href="variables/values-and-types.html#index-0">Int</a>
+</li>
+        <li><a href="variables/values-and-types.html#index-0">Str</a>
+</li>
+      </ul></li>
+      <li><a href="classes-basics/Glossary.html#term-class"><strong>class</strong></a>
+
+      <ul>
+        <li><a href="classes-basics/MultipleClasses.html#index-0">multiple</a>, <a href="classes-basics/MultipleClassesMCQs.html#index-0">[1]</a>, <a href="classes-basics/MultipleClassesPractice.html#index-0">[2]</a>, <a href="classes-basics/MultipleClassesPractice_orig.html#index-0">[3]</a>
+</li>
+        <li><a href="classes-basics/UserDefinedClasses.html#index-0">user defined</a>
+</li>
+      </ul></li>
+      <li><a href="classes-basics/Glossary.html#term-class-attribute"><strong>class attribute</strong></a>
+</li>
+      <li>
+    close
+
+      <ul>
+        <li><a href="files/writingFiles.html#index-0">Method</a>
+</li>
+      </ul></li>
+      <li><a href="functions/addingnewfunctions.html#index-0">Colon</a>
+</li>
+      <li><a href="pictures/repeatimages.html#index-1">color</a>
+</li>
+      <li><a href="database/creatingDBtable.html#index-0">Column</a>, <a href="database/dbConcepts.html#index-0">[1]</a>
+</li>
+      <li><a href="variables/glossary.html#term-Comment"><strong>Comment</strong></a>
+</li>
+      <li><a href="turtles/names4turtles.html#index-0">comment</a>, <a href="turtles/summary.html#index-0">[1]</a>, <a href="variables/comments.html#index-0">[2]</a>
+
+      <ul>
+        <li><a href="turtles/names4turtles.html#index-0">program</a>
+</li>
+        <li><a href="turtles/names4turtles.html#index-0">programming</a>
+</li>
+      </ul></li>
+      <li><a href="tuples/glossary.html#term-Comparable"><strong>Comparable</strong></a>
+</li>
+      <li>
+    Comparison
+
+      <ul>
+        <li><a href="conditional/boolean.html#index-0">Operator</a>
+</li>
+        <li><a href="strings/comparison.html#index-0">String</a>
+</li>
+      </ul></li>
+      <li><a href="conditional/glossary.html#term-Comparison-Operator"><strong>Comparison Operator</strong></a>
+</li>
+      <li><a href="intro/glossary.html#term-Compile"><strong>Compile</strong></a>
+</li>
+      <li><a href="intro/terminology.html#index-0">Compiler</a>
+</li>
+      <li><a href="functions/glossary.html#term-Composition"><strong>Composition</strong></a>, <a href="functions/parametersandargs.html#index-0">[1]</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    Compound
+
+      <ul>
+        <li><a href="conditional/conditionalEx.html#index-0">Statement</a>
+</li>
+      </ul></li>
+      <li><a href="conditional/glossary.html#term-Compound-Statement"><strong>Compound Statement</strong></a>
+</li>
+      <li><a href="variables/glossary.html#term-Concatenate"><strong>Concatenate</strong></a>
+
+      <ul>
+        <li><a href="lists/listAsArgument.html#index-0">List</a>
+</li>
+      </ul></li>
+      <li><a href="lists/listsAndStrings.html#index-0">Concatenation</a>, <a href="strings/immutable.html#index-0">[1]</a>, <a href="variables/string-operations.html#index-0">[2]</a>
+
+      <ul>
+        <li><a href="lists/listAsArgument.html#index-0">List</a>, <a href="lists/listOperations.html#index-0">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="conditional/glossary.html#term-Condition"><strong>Condition</strong></a>, <a href="conditional/conditionalEx.html#index-0">[1]</a>, <a href="iterations/while.html#index-0">[2]</a>
+</li>
+      <li>
+    Conditional
+
+      <ul>
+        <li><a href="conditional/conditionalEx.html#index-0">Statement</a>
+</li>
+      </ul></li>
+      <li><a href="intro/buildingBlocks.html#index-0">Conditional Execution</a>
+</li>
+      <li><a href="conditional/conditionalEx.html#index-0">Conditional Executions</a>
+</li>
+      <li><a href="conditional/glossary.html#term-Conditional-Statement"><strong>Conditional Statement</strong></a>
+</li>
+      <li><a href="database/creatingDBtable.html#index-0">Connect</a>
+</li>
+      <li><a href="database/glossary.html#term-Constraint"><strong>Constraint</strong></a>
+</li>
+      <li>
+    Constraints
+
+      <ul>
+        <li><a href="database/multTables.html#index-0">Database</a>
+</li>
+      </ul></li>
+      <li><a href="classes-basics/Glossary.html#term-constructor"><strong>constructor</strong></a>
+</li>
+      <li>
+    Continue
+
+      <ul>
+        <li><a href="iterations/continue.html#index-0">Statement</a>
+</li>
+      </ul></li>
+      <li><a href="ack/AA-contrib.html#index-2">contributors</a>
+</li>
+      <li>
+    Conversion
+
+      <ul>
+        <li><a href="functions/typeconversion.html#index-0">Type</a>
+</li>
+      </ul></li>
+      <li>
+    Copy
+
+      <ul>
+        <li><a href="lists/slice.html#index-0">List</a>
+</li>
+        <li><a href="lists/slice.html#index-0">Slice</a>, <a href="strings/slices.html#index-0">[1]</a>
+</li>
+      </ul></li>
+      <li>
+    Copy to Avoid
+
+      <ul>
+        <li><a href="lists/debugging.html#index-0">Aliasing</a>
+</li>
+      </ul></li>
+      <li>
+    Count
+
+      <ul>
+        <li><a href="strings/methods.html#index-0">Method</a>
+</li>
+      </ul></li>
+      <li><a href="strings/glossary.html#term-Counter"><strong>Counter</strong></a>, <a href="dictionaries/dictionarycounters.html#index-0">[1]</a>, <a href="files/readingFiles.html#index-0">[2]</a>, <a href="strings/count.html#index-0">[3]</a>
+</li>
+      <li>
+    Counting
+
+      <ul>
+        <li><a href="strings/count.html#index-0">Looping</a>
+</li>
+      </ul></li>
+      <li><a href="ack/A0-preface.html#index-0">Creative Commons License</a>
+</li>
+      <li><a href="database/glossary.html#term-Cursor"><strong>Cursor</strong></a>, <a href="database/creatingDBtable.html#index-0">[1]</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="D">D</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="database/basicModeling.html#index-0">Data Model</a>
+</li>
+      <li><a href="tuples/glossary.html#term-Data-structure"><strong>Data structure</strong></a>
+</li>
+      <li><a href="database/whatIsADatabase.html#index-0">Database</a>
+
+      <ul>
+        <li><a href="database/multTables.html#index-0">Constraints</a>
+</li>
+        <li><a href="database/whatIsADatabase.html#index-0">Indexes</a>
+</li>
+      </ul></li>
+      <li><a href="database/glossary.html#term-Database-Browser"><strong>Database Browser</strong></a>, <a href="database/dbBrowserSQLite.html#index-0">[1]</a>, <a href="database/debugging.html#index-0">[2]</a>
+</li>
+      <li><a href="database/glossary.html#term-Database-Index"><strong>Database Index</strong></a>
+</li>
+      <li><a href="database/glossary.html#term-Database-Tuple"><strong>Database Tuple</strong></a>
+</li>
+      <li><a href="conditional/debugging.html#index-0">Debugging</a>, <a href="database/debugging.html#index-0">[1]</a>, <a href="files/debugging.html#index-0">[2]</a>, <a href="functions/debugging.html#index-0">[3]</a>, <a href="intro/debugging.html#index-0">[4]</a>, <a href="iterations/debugging.html#index-0">[5]</a>, <a href="lists/debugging.html#index-0">[6]</a>, <a href="strings/debugging.html#index-0">[7]</a>, <a href="variables/debugging.html#index-0">[8]</a>
+
+      <ul>
+        <li><a href="iterations/debugging.html#index-0">By Bisection</a>
+</li>
+      </ul></li>
+      <li><a href="debugging/HowtoAvoidDebugging.html#index-0">debugging</a>
+</li>
+      <li><a href="dictionaries/debugging.html#index-0">Debugging Dictionaries</a>
+</li>
+      <li><a href="tuples/debugging.html#index-0">Debugging Tuples</a>
+</li>
+      <li><a href="tuples/comparingtuples.html#index-0">Decorate</a>
+</li>
+      <li><a href="iterations/glossary.html#term-Decrement"><strong>Decrement</strong></a>, <a href="iterations/updating.html#index-0">[1]</a>
+</li>
+      <li>
+    Def
+
+      <ul>
+        <li><a href="functions/addingnewfunctions.html#index-0">Keyword</a>
+</li>
+      </ul></li>
+      <li><a href="functions/flowofexecution.html#index-0">Definition</a>
+
+      <ul>
+        <li><a href="functions/addingnewfunctions.html#index-0">Function</a>, <a href="functions/definitionsanduses.html#index-0">[1]</a>
+</li>
+      </ul></li>
+      <li>
+    definition
+
+      <ul>
+        <li><a href="functions/func-group.html#index-0">function</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    Del
+
+      <ul>
+        <li><a href="lists/deleteElement.html#index-0">Operator</a>
+</li>
+      </ul></li>
+      <li>
+    Deletion
+
+      <ul>
+        <li><a href="lists/deleteElement.html#index-0">Element</a>
+</li>
+      </ul></li>
+      <li><a href="lists/glossary.html#term-Delimiter"><strong>Delimiter</strong></a>, <a href="lists/listsAndStrings.html#index-0">[1]</a>
+</li>
+      <li><a href="functions/glossary.html#term-Deterministic"><strong>Deterministic</strong></a>, <a href="functions/randomnumbers.html#index-0">[1]</a>
+</li>
+      <li><a href="dictionaries/glossary.html#term-Dictionary"><strong>Dictionary</strong></a>, <a href="dictionaries/dictionaries1.html#index-0">[1]</a>
+</li>
+      <li><a href="dictionaries/glossary.html#term-Dictionary-Item"><strong>Dictionary Item</strong></a>
+</li>
+      <li><a href="tuples/multipleassignments.html#index-0">Dictionary Traversal</a>
+</li>
+      <li><a href="dictionaries/glossary.html#term-Dictionary-Value"><strong>Dictionary Value</strong></a>
+</li>
+      <li><a href="variables/modulus.html#index-0">Divisibility</a>
+</li>
+      <li>
+    Division
+
+      <ul>
+        <li><a href="variables/operators-and-operands.html#index-0">Floating-point</a>
+</li>
+      </ul></li>
+      <li>
+    Dot
+
+      <ul>
+        <li><a href="strings/methods.html#index-0">Notation</a>
+</li>
+      </ul></li>
+      <li><a href="functions/glossary.html#term-Dot-Notation"><strong>Dot Notation</strong></a>, <a href="functions/mathfunctions.html#index-0">[1]</a>
+</li>
+      <li><a href="turtles/names4turtles.html#index-1">dot notation</a>
+</li>
+      <li><a href="tuples/glossary.html#term-DSU"><strong>DSU</strong></a>
+</li>
+      <li><a href="tuples/comparingtuples.html#index-0">DSU Pattern</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lists/glossary.html#term-Element"><strong>Element</strong></a>, <a href="lists/sequence.html#index-0">[1]</a>
+
+      <ul>
+        <li><a href="lists/deleteElement.html#index-0">Deletion</a>
+</li>
+        <li><a href="lists/mutable.html#index-0">List</a>
+</li>
+      </ul></li>
+      <li><a href="web/parsingXML.html#index-0">Element Tree</a>
+</li>
+      <li><a href="web/glossary.html#term-ElementTree"><strong>ElementTree</strong></a>, <a href="web/loopingNodes.html#index-0">[1]</a>
+
+      <ul>
+        <li><a href="web/loopingNodes.html#index-0">Findall</a>
+</li>
+      </ul></li>
+      <li>
+    Elif
+
+      <ul>
+        <li><a href="conditional/chained.html#index-0">Keyword</a>
+</li>
+      </ul></li>
+      <li><a href="functions/addingnewfunctions.html#index-0">Ellipses</a>
+</li>
+      <li>
+    Else
+
+      <ul>
+        <li><a href="conditional/altExecution.html#index-0">Keyword</a>
+</li>
+      </ul></li>
+      <li>
+    Empty
+
+      <ul>
+        <li><a href="lists/sequence.html#index-0">List</a>
+</li>
+        <li><a href="functions/addingnewfunctions.html#index-0">Parentheses</a>, <a href="strings/methods.html#index-0">[1]</a>
+</li>
+        <li><a href="lists/listsAndStrings.html#index-0">String</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="strings/glossary.html#term-Empty-String"><strong>Empty String</strong></a>
+</li>
+      <li><a href="strings/count.html#index-0">Encapsulation</a>
+</li>
+      <li><a href="files/debugging.html#index-0">End of Line Character</a>
+</li>
+      <li><a href="lists/objectsValues.html#index-0">Equivalence</a>
+</li>
+      <li><a href="lists/glossary.html#term-Equivalent"><strong>Equivalent</strong></a>
+</li>
+      <li><a href="variables/debugging.html#index-0">Error Message</a>, <a href="variables/values-and-types.html#index-0">[1]</a>
+</li>
+      <li><a href="variables/glossary.html#term-Evaluate"><strong>Evaluate</strong></a>, <a href="variables/expressions.html#index-0">[1]</a>
+</li>
+      <li><a href="conditional/tryExcept.html#index-0">Except</a>
+</li>
+      <li><a href="variables/debugging.html#index-0">Exception</a>
+
+      <ul>
+        <li><a href="lists/mutable.html#index-0">IndexError</a>
+</li>
+        <li><a href="files/tryExceptOpen.html#index-0">IOError</a>
+</li>
+      </ul></li>
+      <li><a href="intro/debugging.html#index-0">Experimental Debugging</a>
+</li>
+      <li><a href="variables/glossary.html#term-Expression"><strong>Expression</strong></a>, <a href="variables/expressions.html#index-0">[1]</a>, <a href="variables/operators-and-operands.html#index-0">[2]</a>
+
+      <ul>
+        <li><a href="conditional/boolean.html#index-0">Boolean</a>
+</li>
+      </ul></li>
+      <li>
+    Extend
+
+      <ul>
+        <li><a href="lists/listMethods.html#index-0">Method</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="inheritance/UnitTests.html#index-0">f-string</a>
+</li>
+      <li><a href="conditional/tryExcept.html#index-0">Fahrenheit</a>
+</li>
+      <li><a href="conditional/boolean.html#index-0">False</a>
+
+      <ul>
+        <li><a href="conditional/boolean.html#index-0">Special Value</a>
+</li>
+      </ul></li>
+      <li><a href="files/toctree.html#index-0">File</a>
+
+      <ul>
+        <li><a href="files/userNames.html#index-0">Name</a>
+</li>
+        <li><a href="files/openingFiles.html#index-0">Open</a>, <a href="files/readingFiles.html#index-0">[1]</a>
+</li>
+        <li><a href="files/readingFiles.html#index-0">Reading</a>
+</li>
+        <li><a href="files/searching.html#index-0">Search</a>
+</li>
+        <li><a href="files/writingFiles.html#index-0">Writing</a>
+</li>
+      </ul></li>
+      <li><a href="files/openingFiles.html#index-0">File Handle</a>
+</li>
+      <li>
+    Filter
+
+      <ul>
+        <li><a href="files/searching.html#index-0">Pattern</a>
+</li>
+      </ul></li>
+      <li>
+    Find
+
+      <ul>
+        <li><a href="strings/parsing.html#index-0">Method</a>
+</li>
+      </ul></li>
+      <li>
+    Findall
+
+      <ul>
+        <li><a href="web/loopingNodes.html#index-0">ElementTree</a>
+</li>
+      </ul></li>
+      <li><a href="regex/extractingdata.html#index-0">Findall Method</a>
+</li>
+      <li><a href="strings/glossary.html#term-Flag"><strong>Flag</strong></a>
+</li>
+      <li>
+    Float
+
+      <ul>
+        <li><a href="variables/values-and-types.html#index-0">Class</a>
+</li>
+        <li><a href="functions/typeconversion.html#index-0">Function</a>
+</li>
+      </ul></li>
+      <li><a href="variables/glossary.html#term-Floating-Point"><strong>Floating Point</strong></a>
+</li>
+      <li>
+    Floating-point
+
+      <ul>
+        <li><a href="variables/operators-and-operands.html#index-0">Division</a>
+</li>
+      </ul></li>
+      <li><a href="functions/glossary.html#term-Flow-of-Execution"><strong>Flow of Execution</strong></a>, <a href="functions/flowofexecution.html#index-0">[1]</a>, <a href="iterations/while.html#index-0">[2]</a>
+</li>
+      <li>
+    For
+
+      <ul>
+        <li><a href="iterations/definite_for.html#index-0">Loop</a>, <a href="iterations/loops.html#index-0">[1]</a>, <a href="lists/traversing.html#index-0">[2]</a>, <a href="strings/traversal.html#index-0">[3]</a>
+</li>
+        <li><a href="iterations/definite_for.html#index-0">Statement</a>, <a href="lists/traversing.html#index-0">[1]</a>, <a href="strings/traversal.html#index-0">[2]</a>
+</li>
+      </ul></li>
+      <li>
+    for
+
+      <ul>
+        <li><a href="pictures/repeatimages.html#index-0">statements</a>, <a href="turtles/repeatturtles.html#index-0">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="pictures/summary.html#index-0">for loop</a>
+</li>
+      <li>
+    for loops
+
+      <ul>
+        <li><a href="turtles/patterns.html#index-0">nested</a>
+</li>
+      </ul></li>
+      <li><a href="database/glossary.html#term-Foreign-Key"><strong>Foreign Key</strong></a>, <a href="database/3Keys.html#index-0">[1]</a>
+</li>
+      <li>
+    Format
+
+      <ul>
+        <li><a href="strings/format.html#index-0">Operator</a>
+</li>
+      </ul></li>
+      <li><a href="strings/glossary.html#term-Format-Operator"><strong>Format Operator</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="strings/glossary.html#term-Format-Sequence"><strong>Format Sequence</strong></a>, <a href="strings/format.html#index-0">[1]</a>
+</li>
+      <li><a href="strings/glossary.html#term-Format-String"><strong>Format String</strong></a>, <a href="strings/format.html#index-0">[1]</a>
+</li>
+      <li><a href="ack/AA-contrib.html#index-0">Free Documentation License, GNU</a>, <a href="ack/AA-contrib.html#index-1">[1]</a>
+</li>
+      <li>
+    Fruitful
+
+      <ul>
+        <li><a href="functions/fruitfulvoid.html#index-0">Function</a>
+</li>
+      </ul></li>
+      <li><a href="functions/glossary.html#term-Fruitful-Function"><strong>Fruitful Function</strong></a>
+</li>
+      <li><a href="functions/glossary.html#term-Function"><strong>Function</strong></a>, <a href="functions/addingnewfunctions.html#index-0">[1]</a>
+
+      <ul>
+        <li><a href="functions/parametersandargs.html#index-0">Argument</a>
+</li>
+        <li><a href="functions/builtin.html#index-0">Built-in</a>, <a href="lists/listFunctions.html#index-0">[1]</a>
+</li>
+        <li><a href="functions/randomnumbers.html#index-0">Choice</a>
+</li>
+        <li><a href="functions/addingnewfunctions.html#index-0">Definition</a>, <a href="functions/definitionsanduses.html#index-0">[1]</a>
+</li>
+        <li><a href="functions/typeconversion.html#index-0">Float</a>
+</li>
+        <li><a href="functions/fruitfulvoid.html#index-0">Fruitful</a>
+</li>
+        <li><a href="functions/typeconversion.html#index-0">Int</a>
+</li>
+        <li><a href="strings/length.html#index-0">Len</a>
+</li>
+        <li><a href="lists/listFunctions.html#index-0">List</a>, <a href="lists/listsAndStrings.html#index-0">[1]</a>
+</li>
+        <li><a href="functions/mathfunctions.html#index-0">Log</a>
+</li>
+        <li><a href="functions/mathfunctions.html#index-0">Math</a>
+</li>
+        <li><a href="functions/addingnewfunctions.html#index-0">Object</a>
+</li>
+        <li><a href="files/openingFiles.html#index-0">Open</a>
+</li>
+        <li><a href="functions/parametersandargs.html#index-0">Parameter</a>
+</li>
+        <li><a href="functions/randomnumbers.html#index-0">Randint</a>
+</li>
+        <li><a href="functions/randomnumbers.html#index-0">Random</a>
+</li>
+        <li><a href="files/debugging.html#index-0">Repr</a>
+</li>
+        <li><a href="functions/mathfunctions.html#index-0">Sine</a>
+</li>
+        <li><a href="lists/listsAndStrings.html#index-0">Split</a>
+</li>
+        <li><a href="functions/mathfunctions.html#index-0">Sqrt</a>
+</li>
+        <li><a href="functions/typeconversion.html#index-0">String</a>
+</li>
+        <li><a href="functions/mathfunctions.html#index-0">Trigonometric</a>
+</li>
+        <li><a href="functions/fruitfulvoid.html#index-0">Void</a>
+</li>
+      </ul></li>
+      <li><a href="functions/func-group.html#index-0">function</a>, <a href="turtles/summary.html#index-0">[1]</a>
+
+      <ul>
+        <li><a href="functions/func-group.html#index-0">definition</a>
+</li>
+        <li><a href="functions/func-group.html#index-0">header</a>
+</li>
+        <li><a href="functions/whyfunctions.html#index-0">reasons for</a>
+</li>
+      </ul></li>
+      <li><a href="functions/glossary.html#term-Function-Body"><strong>Function Body</strong></a>
+</li>
+      <li><a href="functions/glossary.html#term-Function-Call"><strong>Function Call</strong></a>, <a href="functions/functioncalls.html#index-0">[1]</a>
+</li>
+      <li><a href="functions/glossary.html#term-Function-Object"><strong>Function Object</strong></a>
+</li>
+      <li>
+    functions
+
+      <ul>
+        <li><a href="turtles/functionsWithTurtles.html#index-0">turtle</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="tuples/glossary.html#term-Gather"><strong>Gather</strong></a>
+</li>
+      <li><a href="dictionaries/dictionarycounters.html#index-0">Get Method</a>
+</li>
+      <li><a href="ack/AA-contrib.html#index-0">GNU Free Documentation License</a>, <a href="ack/AA-contrib.html#index-1">[1]</a>
+</li>
+      <li><a href="regex/charactermatching.html#index-0">Greedy</a>
+</li>
+      <li><a href="regex/glossary.html#term-Greedy-Matching"><strong>Greedy Matching</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="regex/glossary.html#term-Grep"><strong>Grep</strong></a>, <a href="regex/bonussection.html#index-0">[1]</a>
+</li>
+      <li><a href="conditional/shortCircuit.html#index-0">Guard</a>
+</li>
+      <li>
+    Guardian
+
+      <ul>
+        <li><a href="strings/debugging.html#index-0">Pattern</a>
+</li>
+      </ul></li>
+      <li><a href="conditional/glossary.html#term-Guardian-Pattern"><strong>Guardian Pattern</strong></a>, <a href="conditional/shortCircuit.html#index-0">[1]</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="intro/computerHardwareArch.html#index-0">Hardware</a>
+
+      <ul>
+        <li><a href="intro/computerHardwareArch.html#index-0">Architecture</a>
+</li>
+      </ul></li>
+      <li><a href="dictionaries/glossary.html#term-Hash-function"><strong>Hash function</strong></a>
+</li>
+      <li><a href="dictionaries/dictionaries1.html#index-0">Hash Table</a>
+</li>
+      <li><a href="tuples/glossary.html#term-Hashable"><strong>Hashable</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="dictionaries/glossary.html#term-Hashtable"><strong>Hashtable</strong></a>
+</li>
+      <li><a href="functions/glossary.html#term-Header"><strong>Header</strong></a>, <a href="functions/addingnewfunctions.html#index-0">[1]</a>
+</li>
+      <li>
+    header
+
+      <ul>
+        <li><a href="functions/func-group.html#index-0">function</a>
+</li>
+      </ul></li>
+      <li><a href="intro/glossary.html#term-High-level-Language"><strong>High-level Language</strong></a>, <a href="intro/terminology.html#index-0">[1]</a>
+</li>
+      <li><a href="dictionaries/glossary.html#term-Histogram"><strong>Histogram</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lists/glossary.html#term-Identical"><strong>Identical</strong></a>
+</li>
+      <li><a href="lists/objectsValues.html#index-0">Identity</a>
+</li>
+      <li><a href="lists/debugging.html#index-0">Idiom</a>
+</li>
+      <li>
+    If
+
+      <ul>
+        <li><a href="conditional/conditionalEx.html#index-0">Statement</a>
+</li>
+      </ul></li>
+      <li><a href="pictures/repeatimages.html#index-1">image</a>
+</li>
+      <li><a href="pictures/repeatimages.html#index-0">images</a>
+</li>
+      <li><a href="strings/immutable.html#index-0">Immutability</a>
+</li>
+      <li><a href="strings/glossary.html#term-Immutable"><strong>Immutable</strong></a>, <a href="tuples/tuplesareimmutable.html#index-0">[1]</a>
+
+      <ul>
+        <li><a href="lists/aliasing.html#index-0">String</a>, <a href="strings/immutable.html#index-0">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="dictionaries/glossary.html#term-Implementation"><strong>Implementation</strong></a>, <a href="dictionaries/dictionarycounters.html#index-0">[1]</a>
+</li>
+      <li><a href="functions/glossary.html#term-Import-Statement"><strong>Import Statement</strong></a>
+</li>
+      <li>
+    In
+
+      <ul>
+        <li><a href="lists/mutable.html#index-0">Operator</a>, <a href="strings/in.html#index-0">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="dictionaries/dictionaries1.html#index-0">In operator</a>
+</li>
+      <li><a href="iterations/glossary.html#term-Increment"><strong>Increment</strong></a>, <a href="iterations/updating.html#index-0">[1]</a>
+</li>
+      <li><a href="functions/addingnewfunctions.html#index-0">Indentation</a>
+</li>
+      <li><a href="lists/glossary.html#term-Index"><strong>Index</strong></a>, <a href="dictionaries/dictionaries1.html#index-0">[1]</a>, <a href="lists/mutable.html#index-0">[2]</a>, <a href="strings/sequence.html#index-0">[3]</a>
+
+      <ul>
+        <li><a href="lists/mutable.html#index-0">List</a>
+</li>
+        <li><a href="lists/traversing.html#index-0">Looping with</a>
+</li>
+        <li><a href="lists/slice.html#index-0">Mutability</a>
+</li>
+        <li><a href="strings/length.html#index-0">Negative</a>
+</li>
+        <li><a href="lists/slice.html#index-0">Slice</a>, <a href="strings/slices.html#index-0">[1]</a>
+</li>
+        <li><a href="strings/sequence.html#index-0">Starting at Zero</a>
+</li>
+      </ul></li>
+      <li><a href="lists/mutable.html#index-0">IndexError</a>, <a href="strings/length.html#index-0">[1]</a>
+
+      <ul>
+        <li><a href="lists/mutable.html#index-0">Exception</a>
+</li>
+      </ul></li>
+      <li>
+    Indexes
+
+      <ul>
+        <li><a href="database/whatIsADatabase.html#index-0">Database</a>
+</li>
+      </ul></li>
+      <li>
+    Infinite
+
+      <ul>
+        <li><a href="iterations/infinite_loops.html#index-0">Loop</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="iterations/glossary.html#term-Infinite-Loop"><strong>Infinite Loop</strong></a>, <a href="iterations/infinite_loops.html#index-0">[1]</a>
+</li>
+      <li><a href="inheritance/PillarsOfOop.html#index-0">inheritance</a>
+</li>
+      <li><a href="iterations/glossary.html#term-Initialize"><strong>Initialize</strong></a>
+
+      <ul>
+        <li><a href="iterations/updating.html#index-0">Before Update</a>
+</li>
+      </ul></li>
+      <li><a href="classes-basics/Glossary.html#term-initializer-method"><strong>initializer method</strong></a>
+</li>
+      <li><a href="intro/buildingBlocks.html#index-0">Input</a>
+</li>
+      <li><a href="intro/computerHardwareArch.html#index-0">Input and Output Devices</a>
+</li>
+      <li><a href="classes-basics/Glossary.html#term-instance"><strong>instance</strong></a>
+</li>
+      <li><a href="classes-basics/Glossary.html#term-instantiate"><strong>instantiate</strong></a>
+</li>
+      <li>
+    Int
+
+      <ul>
+        <li><a href="variables/values-and-types.html#index-0">Class</a>
+</li>
+        <li><a href="functions/typeconversion.html#index-0">Function</a>
+</li>
+      </ul></li>
+      <li><a href="variables/glossary.html#term-Integer"><strong>Integer</strong></a>
+</li>
+      <li><a href="intro/glossary.html#term-Interactive-Mode"><strong>Interactive Mode</strong></a>, <a href="functions/fruitfulvoid.html#index-0">[1]</a>, <a href="intro/conversing.html#index-0">[2]</a>, <a href="variables/statements.html#index-0">[3]</a>
+</li>
+      <li><a href="intro/glossary.html#term-Interpret"><strong>Interpret</strong></a>
+</li>
+      <li><a href="intro/terminology.html#index-0">Interpreter</a>
+</li>
+      <li><a href="strings/glossary.html#term-Invocation"><strong>Invocation</strong></a>, <a href="strings/methods.html#index-0">[1]</a>
+</li>
+      <li>
+    IOError
+
+      <ul>
+        <li><a href="files/tryExceptOpen.html#index-0">Exception</a>
+</li>
+      </ul></li>
+      <li><a href="lists/objectsValues.html#index-0">Is</a>
+
+      <ul>
+        <li><a href="lists/objectsValues.html#index-0">Operator</a>
+</li>
+      </ul></li>
+      <li><a href="strings/glossary.html#term-Item"><strong>Item</strong></a>, <a href="lists/sequence.html#index-0">[1]</a>
+
+      <ul>
+        <li><a href="lists/mutable.html#index-0">Assignment</a>, <a href="strings/immutable.html#index-0">[1]</a>
+</li>
+        <li><a href="lists/traversing.html#index-0">Update</a>
+</li>
+      </ul></li>
+      <li><a href="tuples/tuplesareimmutable.html#index-0">Item Assignment</a>
+</li>
+      <li><a href="tuples/dictionariesandtuples.html#index-0">Item Method</a>
+</li>
+      <li><a href="iterations/glossary.html#term-Iteration"><strong>Iteration</strong></a>, <a href="iterations/loops.html#index-0">[1]</a>, <a href="iterations/while.html#index-0">[2]</a>
+
+      <ul>
+        <li><a href="iterations/definite_for.html#index-0">Variable</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="J">J</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="web/JSON.html#index-0">JavaScript Object Notation</a>
+</li>
+      <li>
+    JOIN
+
+      <ul>
+        <li><a href="database/usingJOIN.html#index-0">SQL</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    Join
+
+      <ul>
+        <li><a href="lists/listsAndStrings.html#index-0">Method</a>
+</li>
+      </ul></li>
+      <li><a href="web/glossary.html#term-JSON"><strong>JSON</strong></a>, <a href="web/JSON.html#index-0">[1]</a>, <a href="web/parsingJSON.html#index-0">[2]</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="K">K</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="classes-basics/Glossary.html#term-k"><strong>k</strong></a>
+</li>
+      <li><a href="dictionaries/glossary.html#term-Key"><strong>Key</strong></a>, <a href="database/3Keys.html#index-0">[1]</a>, <a href="database/basicModeling.html#index-0">[2]</a>, <a href="dictionaries/dictionaries1.html#index-0">[3]</a>
+
+      <ul>
+        <li><a href="web/securityAPI.html#index-0">API</a>
+</li>
+      </ul></li>
+      <li><a href="dictionaries/dictionaries1.html#index-0">Key-Value Pair</a>
+</li>
+      <li><a href="dictionaries/glossary.html#term-Key-value-pair"><strong>Key-value pair</strong></a>
+</li>
+      <li><a href="tuples/dictionariesandtuples.html#index-0">Key-Value Pairs</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="variables/user-input.html#index-0">Keyboard Input</a>
+</li>
+      <li><a href="dictionaries/dictionaries1.html#index-0">KeyError</a>
+</li>
+      <li><a href="dictionaries/loopinganddictionaries.html#index-0">Keys Method</a>
+</li>
+      <li><a href="variables/glossary.html#term-Keyword"><strong>Keyword</strong></a>, <a href="variables/variable-names-keywords.html#index-0">[1]</a>
+
+      <ul>
+        <li><a href="functions/addingnewfunctions.html#index-0">Def</a>
+</li>
+        <li><a href="conditional/chained.html#index-0">Elif</a>
+</li>
+        <li><a href="conditional/altExecution.html#index-0">Else</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="L">L</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    Len
+
+      <ul>
+        <li><a href="strings/length.html#index-0">Function</a>
+</li>
+      </ul></li>
+      <li><a href="dictionaries/dictionaries1.html#index-0">Len function</a>
+</li>
+      <li><a href="turtles/names4turtles.html#index-0">library</a>
+
+      <ul>
+        <li><a href="turtles/names4turtles.html#index-0">turtle</a>
+</li>
+      </ul></li>
+      <li><a href="lists/glossary.html#term-List"><strong>List</strong></a>, <a href="lists/listsAndStrings.html#index-0">[1]</a>, <a href="lists/toctree.html#index-0">[2]</a>
+
+      <ul>
+        <li><a href="lists/listAsArgument.html#index-0">Argument</a>
+</li>
+        <li><a href="lists/listAsArgument.html#index-0">Concatenate</a>
+</li>
+        <li><a href="lists/listAsArgument.html#index-0">Concatenation</a>, <a href="lists/listOperations.html#index-0">[1]</a>
+</li>
+        <li><a href="lists/slice.html#index-0">Copy</a>
+</li>
+        <li><a href="lists/mutable.html#index-0">Element</a>
+</li>
+        <li><a href="lists/sequence.html#index-0">Empty</a>
+</li>
+        <li><a href="lists/listFunctions.html#index-0">Function</a>, <a href="lists/listsAndStrings.html#index-0">[1]</a>
+</li>
+        <li><a href="lists/mutable.html#index-0">Index</a>
+</li>
+        <li><a href="lists/mutable.html#index-0">Membership</a>
+</li>
+        <li><a href="lists/listMethods.html#index-0">Method</a>
+</li>
+        <li><a href="lists/aliasing.html#index-0">Mutability</a>
+</li>
+        <li><a href="lists/listOperations.html#index-0">Operations</a>
+</li>
+        <li><a href="lists/parsing.html#index-0">Parsing</a>
+</li>
+        <li><a href="lists/listOperations.html#index-0">Repetition</a>
+</li>
+        <li><a href="lists/slice.html#index-0">Slice</a>
+</li>
+        <li><a href="lists/traversing.html#index-0">Traversal</a>
+</li>
+      </ul></li>
+      <li><a href="inheritance/UnitTests.html#index-1">list comprehension</a>
+</li>
+      <li><a href="lists/glossary.html#term-List-Traversal"><strong>List Traversal</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    Log
+
+      <ul>
+        <li><a href="functions/mathfunctions.html#index-0">Function</a>
+</li>
+      </ul></li>
+      <li><a href="intro/goWrong.html#index-0">Logic Error</a>
+</li>
+      <li>
+    Logical
+
+      <ul>
+        <li><a href="conditional/boolean.html#index-0">Operator</a>, <a href="conditional/logicalOperators.html#index-0">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="database/glossary.html#term-Logical-Key"><strong>Logical Key</strong></a>, <a href="database/3Keys.html#index-0">[1]</a>
+</li>
+      <li><a href="conditional/glossary.html#term-Logical-Operator"><strong>Logical Operator</strong></a>, <a href="conditional/boolean.html#index-0">[1]</a>
+</li>
+      <li><a href="dictionaries/glossary.html#term-Lookup"><strong>Lookup</strong></a>
+</li>
+      <li><a href="iterations/while.html#index-0">Loop</a>
+
+      <ul>
+        <li><a href="iterations/definite_for.html#index-0">For</a>, <a href="iterations/loops.html#index-0">[1]</a>, <a href="lists/traversing.html#index-0">[2]</a>, <a href="strings/traversal.html#index-0">[3]</a>
+</li>
+        <li><a href="iterations/infinite_loops.html#index-0">Infinite</a>
+</li>
+        <li><a href="iterations/loops.html#index-0">Maximum</a>
+</li>
+        <li><a href="iterations/loops.html#index-0">Minimum</a>
+</li>
+        <li><a href="strings/traversal.html#index-0">Traversal</a>
+</li>
+        <li><a href="iterations/loops.html#index-0">While</a>, <a href="iterations/while.html#index-0">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="pictures/summary.html#index-0">loop body</a>
+</li>
+      <li><a href="iterations/glossary.html#term-Loop-Counter"><strong>Loop Counter</strong></a>
+</li>
+      <li>
+    Looping
+
+      <ul>
+        <li><a href="strings/count.html#index-0">Counting</a>
+</li>
+        <li><a href="strings/count.html#index-0">Strings</a>
+</li>
+      </ul></li>
+      <li>
+    Looping with
+
+      <ul>
+        <li><a href="lists/traversing.html#index-0">Index</a>
+</li>
+      </ul></li>
+      <li><a href="lists/traversing.html#index-0">Looping with indicies</a>
+</li>
+      <li><a href="intro/glossary.html#term-Low-level-Language"><strong>Low-level Language</strong></a>, <a href="intro/terminology.html#index-0">[1]</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="intro/glossary.html#term-Machine-Code"><strong>Machine Code</strong></a>
+</li>
+      <li><a href="intro/terminology.html#index-0">Machine Language</a>
+</li>
+      <li><a href="intro/glossary.html#term-Main-Memory"><strong>Main Memory</strong></a>, <a href="intro/computerHardwareArch.html#index-0">[1]</a>
+</li>
+      <li>
+    Math
+
+      <ul>
+        <li><a href="functions/mathfunctions.html#index-0">Function</a>
+</li>
+      </ul></li>
+      <li>
+    Maximum
+
+      <ul>
+        <li><a href="iterations/loops.html#index-0">Loop</a>
+</li>
+      </ul></li>
+      <li>
+    Membership
+
+      <ul>
+        <li><a href="lists/mutable.html#index-0">List</a>
+</li>
+      </ul></li>
+      <li><a href="strings/glossary.html#term-Method"><strong>Method</strong></a>
+
+      <ul>
+        <li><a href="lists/listAsArgument.html#index-0">Append</a>, <a href="lists/listAsArgument.html#index-0">[1]</a>, <a href="lists/listMethods.html#index-0">[2]</a>
+</li>
+        <li><a href="files/writingFiles.html#index-0">close</a>
+</li>
+        <li><a href="strings/methods.html#index-0">Count</a>
+</li>
+        <li><a href="lists/listMethods.html#index-0">Extend</a>
+</li>
+        <li><a href="strings/parsing.html#index-0">Find</a>
+</li>
+        <li><a href="lists/listsAndStrings.html#index-0">Join</a>
+</li>
+        <li><a href="lists/listMethods.html#index-0">List</a>
+</li>
+        <li><a href="lists/deleteElement.html#index-0">Pop</a>
+</li>
+        <li><a href="lists/deleteElement.html#index-0">Remove</a>
+</li>
+        <li><a href="lists/debugging.html#index-0">Sort</a>, <a href="lists/listMethods.html#index-0">[1]</a>
+</li>
+        <li><a href="strings/methods.html#index-0">String</a>
+</li>
+        <li><a href="lists/listMethods.html#index-0">Void</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    Minimum
+
+      <ul>
+        <li><a href="iterations/loops.html#index-0">Loop</a>
+</li>
+      </ul></li>
+      <li><a href="variables/glossary.html#term-Mnemonic"><strong>Mnemonic</strong></a>, <a href="variables/mnemonic-names.html#index-0">[1]</a>
+</li>
+      <li>
+    Module
+
+      <ul>
+        <li><a href="functions/mathfunctions.html#index-0">Object</a>
+</li>
+        <li><a href="functions/randomnumbers.html#index-0">Random</a>
+</li>
+      </ul></li>
+      <li><a href="functions/glossary.html#term-Module-Object"><strong>Module Object</strong></a>
+</li>
+      <li>
+    Modulus
+
+      <ul>
+        <li><a href="variables/modulus.html#index-0">Operator</a>
+</li>
+      </ul></li>
+      <li><a href="variables/glossary.html#term-Modulus-Operator"><strong>Modulus Operator</strong></a>
+</li>
+      <li><a href="strings/immutable.html#index-0">Mutability</a>, <a href="tuples/sequences.html#index-0">[1]</a>
+
+      <ul>
+        <li><a href="lists/slice.html#index-0">Index</a>
+</li>
+        <li><a href="lists/aliasing.html#index-0">List</a>
+</li>
+      </ul></li>
+      <li><a href="lists/mutable.html#index-0">mutability</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="N">N</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    Name
+
+      <ul>
+        <li><a href="files/userNames.html#index-0">File</a>
+</li>
+      </ul></li>
+      <li>
+    Negative
+
+      <ul>
+        <li><a href="strings/length.html#index-0">Index</a>
+</li>
+      </ul></li>
+      <li>
+    nested
+
+      <ul>
+        <li><a href="turtles/patterns.html#index-0">for loops</a>
+</li>
+      </ul></li>
+      <li><a href="conditional/glossary.html#term-Nested-Conditional"><strong>Nested Conditional</strong></a>, <a href="conditional/nested.html#index-0">[1]</a>
+</li>
+      <li><a href="lists/glossary.html#term-Nested-List"><strong>Nested List</strong></a>, <a href="lists/sequence.html#index-0">[1]</a>, <a href="lists/traversing.html#index-0">[2]</a>
+</li>
+      <li><a href="pictures/summary.html#index-0">nested loop</a>
+</li>
+      <li><a href="dictionaries/dictionariesandfiles.html#index-0">Nested Loops</a>
+</li>
+      <li><a href="dictionaries/glossary.html#term-Nested-loops"><strong>Nested loops</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="intro/computerHardwareArch.html#index-0">Network Connection</a>
+</li>
+      <li><a href="files/glossary.html#term-Newline"><strong>Newline</strong></a>, <a href="files/textFiles.html#index-0">[1]</a>, <a href="files/writingFiles.html#index-0">[2]</a>, <a href="variables/user-input.html#index-0">[3]</a>
+</li>
+      <li>
+    None
+
+      <ul>
+        <li><a href="functions/fruitfulvoid.html#index-0">Special Value</a>, <a href="iterations/loops.html#index-0">[1]</a>, <a href="lists/deleteElement.html#index-0">[2]</a>, <a href="lists/listMethods.html#index-0">[3]</a>
+</li>
+      </ul></li>
+      <li><a href="database/glossary.html#term-Normalization"><strong>Normalization</strong></a>, <a href="database/basicModeling.html#index-0">[1]</a>
+</li>
+      <li>
+    Not
+
+      <ul>
+        <li><a href="conditional/logicalOperators.html#index-0">Operator</a>
+</li>
+      </ul></li>
+      <li>
+    Notation
+
+      <ul>
+        <li><a href="strings/methods.html#index-0">Dot</a>
+</li>
+      </ul></li>
+      <li>
+    Number
+
+      <ul>
+        <li><a href="functions/randomnumbers.html#index-0">Random</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="web/securityAPI.html#index-0">OAuth</a>
+</li>
+      <li><a href="lists/glossary.html#term-Object"><strong>Object</strong></a>, <a href="lists/objectsValues.html#index-0">[1]</a>, <a href="strings/immutable.html#index-0">[2]</a>
+
+      <ul>
+        <li><a href="functions/addingnewfunctions.html#index-0">Function</a>
+</li>
+        <li><a href="functions/mathfunctions.html#index-0">Module</a>
+</li>
+      </ul></li>
+      <li><a href="classes-basics/Glossary.html#term-object"><strong>object</strong></a>, <a href="classes-basics/Objectorientedprogramming.html#index-0">[1]</a>, <a href="turtles/summary.html#index-0">[2]</a>
+</li>
+      <li><a href="classes-basics/Glossary.html#term-object-attribute"><strong>object attribute</strong></a>
+</li>
+      <li><a href="classes-basics/Glossary.html#term-object-method"><strong>object method</strong></a>
+</li>
+      <li><a href="classes-basics/Glossary.html#term-object-oriented-language"><strong>object-oriented language</strong></a>
+</li>
+      <li><a href="classes-basics/Glossary.html#term-object-oriented-programming"><strong>object-oriented programming</strong></a>, <a href="classes-basics/Objectorientedprogramming.html#index-0">[1]</a>
+</li>
+      <li><a href="classes-basics/Objectorientedprogramming.html#index-0">OOP</a>
+</li>
+      <li>
+    Open
+
+      <ul>
+        <li><a href="files/openingFiles.html#index-0">File</a>, <a href="files/readingFiles.html#index-0">[1]</a>
+</li>
+        <li><a href="files/openingFiles.html#index-0">Function</a>
+</li>
+        <li><a href="files/tryExceptOpen.html#index-0">Statement</a>
+</li>
+      </ul></li>
+      <li><a href="variables/glossary.html#term-Operand"><strong>Operand</strong></a>, <a href="variables/operators-and-operands.html#index-0">[1]</a>
+</li>
+      <li>
+    Operations
+
+      <ul>
+        <li><a href="lists/listOperations.html#index-0">List</a>
+</li>
+      </ul></li>
+      <li><a href="variables/glossary.html#term-Operator"><strong>Operator</strong></a>
+
+      <ul>
+        <li><a href="conditional/logicalOperators.html#index-0">And</a>
+</li>
+        <li><a href="variables/operators-and-operands.html#index-0">Arithmetic</a>
+</li>
+        <li><a href="strings/in.html#index-0">Boolean</a>
+</li>
+        <li><a href="lists/mutable.html#index-0">Bracket</a>, <a href="strings/sequence.html#index-0">[1]</a>
+</li>
+        <li><a href="conditional/boolean.html#index-0">Comparison</a>
+</li>
+        <li><a href="lists/deleteElement.html#index-0">Del</a>
+</li>
+        <li><a href="strings/format.html#index-0">Format</a>
+</li>
+        <li><a href="lists/mutable.html#index-0">In</a>, <a href="strings/in.html#index-0">[1]</a>
+</li>
+        <li><a href="lists/objectsValues.html#index-0">Is</a>
+</li>
+        <li><a href="conditional/boolean.html#index-0">Logical</a>, <a href="conditional/logicalOperators.html#index-0">[1]</a>
+</li>
+        <li><a href="variables/modulus.html#index-0">Modulus</a>
+</li>
+        <li><a href="conditional/logicalOperators.html#index-0">Not</a>
+</li>
+        <li><a href="conditional/logicalOperators.html#index-0">Or</a>
+</li>
+        <li><a href="lists/listAsArgument.html#index-0">Slice</a>, <a href="lists/listAsArgument.html#index-0">[1]</a>, <a href="lists/slice.html#index-0">[2]</a>, <a href="strings/slices.html#index-0">[3]</a>
+</li>
+        <li><a href="variables/string-operations.html#index-0">String</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="variables/operators-and-operands.html#index-0">Operators</a>
+</li>
+      <li>
+    Optional
+
+      <ul>
+        <li><a href="lists/listsAndStrings.html#index-0">Argument</a>, <a href="strings/methods.html#index-0">[1]</a>
+</li>
+      </ul></li>
+      <li>
+    Or
+
+      <ul>
+        <li><a href="conditional/logicalOperators.html#index-0">Operator</a>
+</li>
+      </ul></li>
+      <li><a href="variables/debugging.html#index-0">Order of Operations</a>, <a href="variables/order-of-operations.html#index-0">[1]</a>
+</li>
+      <li><a href="intro/buildingBlocks.html#index-0">Output</a>
+</li>
+      <li>
+    Overriding Precedence
+
+      <ul>
+        <li><a href="variables/order-of-operations.html#index-0">Parentheses</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="conditional/conditionalEx.html#index-0">Pair</a>
+</li>
+      <li><a href="functions/glossary.html#term-Parameter"><strong>Parameter</strong></a>, <a href="functions/parametersandargs.html#index-0">[1]</a>, <a href="lists/listAsArgument.html#index-0">[2]</a>
+
+      <ul>
+        <li><a href="functions/parametersandargs.html#index-0">Function</a>
+</li>
+      </ul></li>
+      <li>
+    Parameters In
+
+      <ul>
+        <li><a href="functions/parametersandargs.html#index-0">Parentheses</a>
+</li>
+      </ul></li>
+      <li>
+    Parentheses
+
+      <ul>
+        <li><a href="functions/functioncalls.html#index-0">Argument In</a>
+</li>
+        <li><a href="functions/addingnewfunctions.html#index-0">Empty</a>, <a href="strings/methods.html#index-0">[1]</a>
+</li>
+        <li><a href="variables/order-of-operations.html#index-0">Overriding Precedence</a>
+</li>
+        <li><a href="functions/parametersandargs.html#index-0">Parameters In</a>
+</li>
+      </ul></li>
+      <li><a href="intro/glossary.html#term-Parse"><strong>Parse</strong></a>
+</li>
+      <li>
+    Parsing
+
+      <ul>
+        <li><a href="lists/parsing.html#index-0">List</a>
+</li>
+        <li><a href="strings/parsing.html#index-0">String</a>
+</li>
+      </ul></li>
+      <li>
+    Pass
+
+      <ul>
+        <li><a href="conditional/conditionalEx.html#index-0">Statement</a>
+</li>
+      </ul></li>
+      <li>
+    Pattern
+
+      <ul>
+        <li><a href="files/searching.html#index-0">Filter</a>
+</li>
+        <li><a href="strings/debugging.html#index-0">Guardian</a>
+</li>
+      </ul></li>
+      <li><a href="variables/order-of-operations.html#index-0">PEMDAS</a>
+</li>
+      <li><a href="functions/mathfunctions.html#index-0">Pi</a>
+</li>
+      <li><a href="pictures/repeatimages.html#index-1">picture</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pictures/repeatimages.html#index-1">pixel</a>, <a href="pictures/summary.html#index-0">[1]</a>
+</li>
+      <li>
+    Pop
+
+      <ul>
+        <li><a href="lists/deleteElement.html#index-0">Method</a>
+</li>
+      </ul></li>
+      <li><a href="network/glossary.html#term-Port"><strong>Port</strong></a>
+</li>
+      <li><a href="intro/glossary.html#term-Portability"><strong>Portability</strong></a>
+</li>
+      <li><a href="intro/terminology.html#index-0">Portable</a>
+</li>
+      <li><a href="database/glossary.html#term-Primary-Key"><strong>Primary Key</strong></a>, <a href="database/3Keys.html#index-0">[1]</a>
+</li>
+      <li><a href="files/persistence.html#index-0">Primary Memory</a>
+</li>
+      <li><a href="intro/glossary.html#term-Print-Function"><strong>Print Function</strong></a>
+</li>
+      <li><a href="intro/glossary.html#term-Problem-Solving"><strong>Problem Solving</strong></a>, <a href="intro/understanding.html#index-0">[1]</a>
+</li>
+      <li><a href="turtles/summary.html#index-0">procedure</a>
+</li>
+      <li><a href="intro/glossary.html#term-Program"><strong>Program</strong></a>, <a href="intro/computerHardwareArch.html#index-0">[1]</a>, <a href="intro/whatIsAProgram.html#index-0">[2]</a>
+</li>
+      <li>
+    program
+
+      <ul>
+        <li><a href="turtles/names4turtles.html#index-0">comment</a>
+</li>
+      </ul></li>
+      <li>
+    programming
+
+      <ul>
+        <li><a href="turtles/names4turtles.html#index-0">comment</a>
+</li>
+      </ul></li>
+      <li><a href="intro/words-and-sentences.html#index-0">Programming Language</a>
+</li>
+      <li><a href="intro/glossary.html#term-Prompt"><strong>Prompt</strong></a>, <a href="variables/user-input.html#index-0">[1]</a>
+</li>
+      <li><a href="functions/glossary.html#term-Pseudorandom"><strong>Pseudorandom</strong></a>, <a href="functions/randomnumbers.html#index-0">[1]</a>
+</li>
+      <li><a href="variables/operators-and-operands.html#index-0">Python 2.0</a>, <a href="variables/user-input.html#index-0">[1]</a>
+</li>
+      <li><a href="variables/operators-and-operands.html#index-0">Python 3.0</a>
+</li>
+      <li><a href="files/glossary.html#term-Pythonic"><strong>Pythonic</strong></a>, <a href="files/tryExceptOpen.html#index-0">[1]</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Q">Q</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    Quality
+
+      <ul>
+        <li><a href="files/tryExceptOpen.html#index-0">Assurance</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="files/glossary.html#term-Quality-Assurance"><strong>Quality Assurance</strong></a>
+</li>
+      <li><a href="strings/slices.html#index-0">Quotation Mark</a>, <a href="variables/values-and-types.html#index-0">[1]</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="functions/mathfunctions.html#index-0">Radian</a>
+</li>
+      <li>
+    Randint
+
+      <ul>
+        <li><a href="functions/randomnumbers.html#index-0">Function</a>
+</li>
+      </ul></li>
+      <li>
+    Random
+
+      <ul>
+        <li><a href="functions/randomnumbers.html#index-0">Function</a>
+</li>
+        <li><a href="functions/randomnumbers.html#index-0">Module</a>
+</li>
+        <li><a href="functions/randomnumbers.html#index-0">Number</a>
+</li>
+      </ul></li>
+      <li><a href="intro/debugging.html#index-0">Random Walk Programming</a>
+</li>
+      <li>
+    Reading
+
+      <ul>
+        <li><a href="files/readingFiles.html#index-0">File</a>
+</li>
+      </ul></li>
+      <li>
+    reasons for
+
+      <ul>
+        <li><a href="functions/whyfunctions.html#index-0">function</a>
+</li>
+      </ul></li>
+      <li><a href="lists/glossary.html#term-Reference"><strong>Reference</strong></a>, <a href="lists/aliasing.html#index-0">[1]</a>, <a href="lists/listAsArgument.html#index-0">[2]</a>
+
+      <ul>
+        <li><a href="lists/aliasing.html#index-0">Aliasing</a>
+</li>
+      </ul></li>
+      <li><a href="regex/regularexpressions.html#index-0">Regex</a>
+</li>
+      <li><a href="regex/extractingdata.html#index-0">Regex Square Brackets</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="regex/glossary.html#term-Regular-Expression"><strong>Regular Expression</strong></a>
+</li>
+      <li><a href="regex/regularexpressions.html#index-0">Regular Expressions</a>
+</li>
+      <li><a href="database/glossary.html#term-Relation"><strong>Relation</strong></a>, <a href="database/dbConcepts.html#index-0">[1]</a>
+</li>
+      <li>
+    Remove
+
+      <ul>
+        <li><a href="lists/deleteElement.html#index-0">Method</a>
+</li>
+      </ul></li>
+      <li><a href="intro/buildingBlocks.html#index-0">Repeated Execution</a>
+</li>
+      <li>
+    Repetition
+
+      <ul>
+        <li><a href="lists/listOperations.html#index-0">List</a>
+</li>
+      </ul></li>
+      <li>
+    Repr
+
+      <ul>
+        <li><a href="files/debugging.html#index-0">Function</a>
+</li>
+      </ul></li>
+      <li><a href="intro/words-and-sentences.html#index-0">Reserved Words</a>, <a href="variables/mnemonic-names.html#index-0">[1]</a>, <a href="variables/variable-names-keywords.html#index-0">[2]</a>
+</li>
+      <li><a href="functions/glossary.html#term-Return-Value"><strong>Return Value</strong></a>, <a href="functions/functioncalls.html#index-0">[1]</a>
+</li>
+      <li><a href="intro/buildingBlocks.html#index-0">Reuse</a>
+</li>
+      <li><a href="tuples/sequences.html#index-0">Reversed Function</a>
+</li>
+      <li><a href="database/dbConcepts.html#index-0">Row</a>
+</li>
+      <li><a href="variables/glossary.html#term-Rules-of-Precedence"><strong>Rules of Precedence</strong></a>, <a href="variables/order-of-operations.html#index-0">[1]</a>
+</li>
+      <li><a href="variables/debugging.html#index-0">Runtime Error</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="network/glossary.html#term-Scrape"><strong>Scrape</strong></a>
+</li>
+      <li><a href="turtles/names4turtles.html#index-0">screen</a>
+
+      <ul>
+        <li><a href="turtles/names4turtles.html#index-0">turtle</a>
+</li>
+      </ul></li>
+      <li><a href="intro/writingPrograms.html#index-0">Script</a>
+</li>
+      <li><a href="functions/fruitfulvoid.html#index-0">Script Mode</a>, <a href="variables/statements.html#index-0">[1]</a>
+</li>
+      <li><a href="strings/glossary.html#term-Search"><strong>Search</strong></a>
+
+      <ul>
+        <li><a href="files/searching.html#index-0">File</a>
+</li>
+      </ul></li>
+      <li><a href="intro/glossary.html#term-Secondary-Memory"><strong>Secondary Memory</strong></a>, <a href="files/persistence.html#index-0">[1]</a>, <a href="intro/computerHardwareArch.html#index-0">[2]</a>
+</li>
+      <li>
+    SELECT
+
+      <ul>
+        <li><a href="database/SQLsummary.html#index-0">SQL</a>, <a href="database/usingJOIN.html#index-0">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="intro/glossary.html#term-Semantic-Error"><strong>Semantic Error</strong></a>, <a href="intro/goWrong.html#index-0">[1]</a>, <a href="variables/debugging.html#index-0">[2]</a>, <a href="variables/values-and-types.html#index-0">[3]</a>
+</li>
+      <li><a href="intro/glossary.html#term-Semantics"><strong>Semantics</strong></a>
+</li>
+      <li><a href="strings/glossary.html#term-Sequence"><strong>Sequence</strong></a>, <a href="lists/listsAndStrings.html#index-0">[1]</a>, <a href="lists/sequence.html#index-0">[2]</a>, <a href="strings/sequence.html#index-0">[3]</a>, <a href="tuples/sequences.html#index-0">[4]</a>, <a href="tuples/tuplesareimmutable.html#index-0">[5]</a>
+</li>
+      <li><a href="intro/buildingBlocks.html#index-0">Sequential Execution</a>
+</li>
+      <li><a href="web/applicationProg.html#index-0">Service-Oriented Architecture</a>
+</li>
+      <li><a href="turtles/patterns.html#index-0">setExecutionLimit</a>
+</li>
+      <li><a href="tuples/glossary.html#term-Shape-of-a-data-structure"><strong>Shape (of a data structure)</strong></a>
+</li>
+      <li><a href="tuples/debugging.html#index-0">Shape Error</a>
+</li>
+      <li><a href="conditional/glossary.html#term-Short-Circuit"><strong>Short Circuit</strong></a>, <a href="conditional/shortCircuit.html#index-0">[1]</a>
+</li>
+      <li>
+    Sine
+
+      <ul>
+        <li><a href="functions/mathfunctions.html#index-0">Function</a>
+</li>
+      </ul></li>
+      <li><a href="tuples/glossary.html#term-Singleton"><strong>Singleton</strong></a>
+</li>
+      <li><a href="strings/glossary.html#term-Slice"><strong>Slice</strong></a>
+
+      <ul>
+        <li><a href="lists/slice.html#index-0">Copy</a>, <a href="strings/slices.html#index-0">[1]</a>
+</li>
+        <li><a href="lists/slice.html#index-0">Index</a>, <a href="strings/slices.html#index-0">[1]</a>
+</li>
+        <li><a href="lists/slice.html#index-0">List</a>
+</li>
+        <li><a href="lists/listAsArgument.html#index-0">Operator</a>, <a href="lists/listAsArgument.html#index-0">[1]</a>, <a href="lists/slice.html#index-0">[2]</a>, <a href="strings/slices.html#index-0">[3]</a>
+</li>
+        <li><a href="strings/slices.html#index-0">String</a>
+</li>
+        <li><a href="lists/slice.html#index-0">Update</a>
+</li>
+      </ul></li>
+      <li><a href="tuples/tuplesareimmutable.html#index-0">Slice Operator</a>
+</li>
+      <li><a href="web/glossary.html#term-SOA"><strong>SOA</strong></a>, <a href="web/applicationProg.html#index-0">[1]</a>
+</li>
+      <li><a href="network/glossary.html#term-Socket"><strong>Socket</strong></a>
+</li>
+      <li><a href="tuples/comparingtuples.html#index-0">Sort</a>
+
+      <ul>
+        <li><a href="lists/debugging.html#index-0">Method</a>, <a href="lists/listMethods.html#index-0">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="tuples/sequences.html#index-0">Sorted Function</a>
+</li>
+      <li><a href="intro/glossary.html#term-Source-Code"><strong>Source Code</strong></a>
+</li>
+      <li>
+    Special Value
+
+      <ul>
+        <li><a href="conditional/boolean.html#index-0">False</a>
+</li>
+        <li><a href="functions/fruitfulvoid.html#index-0">None</a>, <a href="iterations/loops.html#index-0">[1]</a>, <a href="lists/deleteElement.html#index-0">[2]</a>, <a href="lists/listMethods.html#index-0">[3]</a>
+</li>
+        <li><a href="conditional/boolean.html#index-0">True</a>
+</li>
+      </ul></li>
+      <li><a href="network/glossary.html#term-Spider"><strong>Spider</strong></a>
+</li>
+      <li><a href="database/spideringTwitter.html#index-0">Spidering</a>
+</li>
+      <li>
+    Split
+
+      <ul>
+        <li><a href="lists/listsAndStrings.html#index-0">Function</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="database/SQLsummary.html#index-0">SQL</a>, <a href="database/creatingDBtable.html#index-0">[1]</a>, <a href="database/whatIsADatabase.html#index-0">[2]</a>
+
+      <ul>
+        <li><a href="database/usingJOIN.html#index-0">JOIN</a>
+</li>
+        <li><a href="database/SQLsummary.html#index-0">SELECT</a>, <a href="database/usingJOIN.html#index-0">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="database/dbBrowserSQLite.html#index-0">SQLite</a>
+</li>
+      <li>
+    Sqrt
+
+      <ul>
+        <li><a href="functions/mathfunctions.html#index-0">Function</a>
+</li>
+      </ul></li>
+      <li>
+    Starting at Zero
+
+      <ul>
+        <li><a href="strings/sequence.html#index-0">Index</a>
+</li>
+      </ul></li>
+      <li><a href="classes-basics/ObjectsRevisited.html#index-0">state of an object</a>
+</li>
+      <li><a href="variables/glossary.html#term-Statement"><strong>Statement</strong></a>, <a href="variables/statements.html#index-0">[1]</a>
+
+      <ul>
+        <li><a href="variables/variables-section.html#index-0">Assignment</a>
+</li>
+        <li><a href="iterations/infinite_loops.html#index-0">Break</a>
+</li>
+        <li><a href="conditional/conditionalEx.html#index-0">Compound</a>
+</li>
+        <li><a href="conditional/conditionalEx.html#index-0">Conditional</a>
+</li>
+        <li><a href="iterations/continue.html#index-0">Continue</a>
+</li>
+        <li><a href="iterations/definite_for.html#index-0">For</a>, <a href="lists/traversing.html#index-0">[1]</a>, <a href="strings/traversal.html#index-0">[2]</a>
+</li>
+        <li><a href="conditional/conditionalEx.html#index-0">If</a>
+</li>
+        <li><a href="files/tryExceptOpen.html#index-0">Open</a>
+</li>
+        <li><a href="conditional/conditionalEx.html#index-0">Pass</a>
+</li>
+        <li><a href="files/tryExceptOpen.html#index-0">Try</a>
+</li>
+        <li><a href="iterations/while.html#index-0">While</a>
+</li>
+      </ul></li>
+      <li>
+    statements
+
+      <ul>
+        <li><a href="pictures/repeatimages.html#index-0">for</a>, <a href="turtles/repeatturtles.html#index-0">[1]</a>
+</li>
+      </ul></li>
+      <li>
+    Str
+
+      <ul>
+        <li><a href="variables/values-and-types.html#index-0">Class</a>
+</li>
+      </ul></li>
+      <li><a href="variables/glossary.html#term-String"><strong>String</strong></a>, <a href="lists/listsAndStrings.html#index-0">[1]</a>, <a href="variables/values-and-types.html#index-0">[2]</a>
+
+      <ul>
+        <li><a href="strings/comparison.html#index-0">Comparison</a>
+</li>
+        <li><a href="lists/listsAndStrings.html#index-0">Empty</a>
+</li>
+        <li><a href="functions/typeconversion.html#index-0">Function</a>
+</li>
+        <li><a href="lists/aliasing.html#index-0">Immutable</a>, <a href="strings/immutable.html#index-0">[1]</a>
+</li>
+        <li><a href="strings/methods.html#index-0">Method</a>
+</li>
+        <li><a href="variables/string-operations.html#index-0">Operator</a>
+</li>
+        <li><a href="strings/parsing.html#index-0">Parsing</a>
+</li>
+        <li><a href="strings/slices.html#index-0">Slice</a>
+</li>
+      </ul></li>
+      <li><a href="turtles/summary.html#index-0">string</a>
+</li>
+      <li><a href="strings/glossary.html#term-String-Index"><strong>String Index</strong></a>
+</li>
+      <li><a href="strings/glossary.html#term-String-Object"><strong>String Object</strong></a>
+</li>
+      <li><a href="variables/string-operations.html#index-0">String Operations</a>
+</li>
+      <li><a href="files/debugging.html#index-0">String Representation</a>
+</li>
+      <li>
+    Strings
+
+      <ul>
+        <li><a href="strings/count.html#index-0">Looping</a>
+</li>
+      </ul></li>
+      <li>
+    Sum
+
+      <ul>
+        <li><a href="iterations/loops.html#index-0">Accumulator</a>
+</li>
+      </ul></li>
+      <li><a href="tuples/tupleassignment.html#index-0">Swap Pattern</a>
+</li>
+      <li><a href="intro/goWrong.html#index-0">Syntax Error</a>, <a href="variables/debugging.html#index-0">[1]</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="database/creatingDBtable.html#index-0">Table</a>, <a href="database/dbConcepts.html#index-0">[1]</a>
+</li>
+      <li><a href="conditional/tryExcept.html#index-0">Temperature Conversion</a>
+</li>
+      <li><a href="debugging/HowtoAvoidDebugging.html#index-0">testing</a>
+</li>
+      <li><a href="files/glossary.html#term-Text-File"><strong>Text File</strong></a>, <a href="files/textFiles.html#index-0">[1]</a>
+</li>
+      <li><a href="conditional/glossary.html#term-Traceback"><strong>Traceback</strong></a>, <a href="conditional/debugging.html#index-0">[1]</a>, <a href="conditional/tryExcept.html#index-0">[2]</a>
+</li>
+      <li><a href="dictionaries/advancedtextparsing.html#index-0">Translate Method</a>
+</li>
+      <li><a href="dictionaries/loopinganddictionaries.html#index-0">Trasversal</a>
+</li>
+      <li><a href="strings/traversal.html#index-0">Traversal</a>
+
+      <ul>
+        <li><a href="lists/traversing.html#index-0">List</a>
+</li>
+        <li><a href="strings/traversal.html#index-0">Loop</a>
+</li>
+      </ul></li>
+      <li><a href="strings/glossary.html#term-Traverse"><strong>Traverse</strong></a>
+</li>
+      <li>
+    Trigonometric
+
+      <ul>
+        <li><a href="functions/mathfunctions.html#index-0">Function</a>
+</li>
+      </ul></li>
+      <li><a href="conditional/boolean.html#index-0">True</a>
+
+      <ul>
+        <li><a href="conditional/boolean.html#index-0">Special Value</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="conditional/tryExcept.html#index-0">Try</a>
+
+      <ul>
+        <li><a href="files/tryExceptOpen.html#index-0">Statement</a>
+</li>
+      </ul></li>
+      <li><a href="tuples/glossary.html#term-Tuple"><strong>Tuple</strong></a>, <a href="database/dbConcepts.html#index-0">[1]</a>, <a href="database/spideringTwitter.html#index-0">[2]</a>, <a href="tuples/tuplesareimmutable.html#index-0">[3]</a>
+</li>
+      <li><a href="tuples/tupleassignment.html#index-0">Tuple Assignment</a>
+</li>
+      <li><a href="tuples/glossary.html#term-Tuple-assignment"><strong>Tuple assignment</strong></a>
+</li>
+      <li><a href="tuples/comparingtuples.html#index-0">Tuple Comparison</a>
+</li>
+      <li><a href="tuples/usingtuplesaskeys.html#index-0">Tuples as Keys</a>
+</li>
+      <li>
+    turtle
+
+      <ul>
+        <li><a href="turtles/functionsWithTurtles.html#index-0">functions</a>
+</li>
+        <li><a href="turtles/names4turtles.html#index-0">library</a>
+</li>
+        <li><a href="turtles/names4turtles.html#index-0">screen</a>
+</li>
+      </ul></li>
+      <li><a href="variables/glossary.html#term-Type"><strong>Type</strong></a>, <a href="variables/values-and-types.html#index-0">[1]</a>
+
+      <ul>
+        <li><a href="functions/typeconversion.html#index-0">Conversion</a>
+</li>
+      </ul></li>
+      <li><a href="strings/format.html#index-0">TypeError</a>, <a href="strings/immutable.html#index-0">[1]</a>, <a href="strings/sequence.html#index-0">[2]</a>
+</li>
+      <li><a href="intro/debugging.html#index-0">Typographical Error</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="tuples/comparingtuples.html#index-0">Undecorate</a>
+</li>
+      <li><a href="variables/variable-names-keywords.html#index-0">Underscore Character</a>
+</li>
+      <li><a href="database/creatingDBtable.html#index-0">Unicode</a>
+</li>
+      <li><a href="inheritance/UnitTests.html#index-2">unit tests</a>
+</li>
+      <li><a href="iterations/updating.html#index-0">Update</a>
+
+      <ul>
+        <li><a href="lists/traversing.html#index-0">Item</a>
+</li>
+        <li><a href="lists/slice.html#index-0">Slice</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    Updating
+
+      <ul>
+        <li><a href="iterations/updating.html#index-0">Variable</a>
+</li>
+      </ul></li>
+      <li><a href="functions/definitionsanduses.html#index-0">Use Before Def</a>, <a href="variables/debugging.html#index-0">[1]</a>
+</li>
+      <li><a href="classes-basics/UserDefinedClasses.html#index-0">user defined class</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="variables/glossary.html#term-Value"><strong>Value</strong></a>, <a href="lists/objectsValues.html#index-0">[1]</a>, <a href="variables/values-and-types.html#index-0">[2]</a>
+</li>
+      <li><a href="variables/user-input.html#index-0">ValueError</a>
+</li>
+      <li><a href="dictionaries/dictionaries1.html#index-0">Values operator</a>
+</li>
+      <li><a href="variables/glossary.html#term-Variable"><strong>Variable</strong></a>, <a href="variables/variables-section.html#index-0">[1]</a>
+
+      <ul>
+        <li><a href="iterations/definite_for.html#index-0">Iteration</a>
+</li>
+        <li><a href="iterations/updating.html#index-0">Updating</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    Variable Names
+
+      <ul>
+        <li><a href="variables/debugging.html#index-0">Case-sensitivity</a>
+</li>
+      </ul></li>
+      <li><a href="viz/visualizingdata.html#index-0">Visualizing data</a>
+</li>
+      <li>
+    Void
+
+      <ul>
+        <li><a href="functions/fruitfulvoid.html#index-0">Function</a>
+</li>
+        <li><a href="lists/listMethods.html#index-0">Method</a>
+</li>
+      </ul></li>
+      <li><a href="functions/glossary.html#term-Void-Function"><strong>Void Function</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="W">W</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="web/applicationProg.html#index-0">Web Services</a>
+</li>
+      <li>
+    While
+
+      <ul>
+        <li><a href="iterations/loops.html#index-0">Loop</a>, <a href="iterations/while.html#index-0">[1]</a>
+</li>
+        <li><a href="iterations/while.html#index-0">Statement</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="conditional/debugging.html#index-0">Whitespace</a>, <a href="files/debugging.html#index-0">[1]</a>, <a href="functions/debugging.html#index-0">[2]</a>
+</li>
+      <li><a href="regex/glossary.html#term-Wild-Card"><strong>Wild Card</strong></a>, <a href="regex/charactermatching.html#index-0">[1]</a>
+</li>
+      <li>
+    Writing
+
+      <ul>
+        <li><a href="files/writingFiles.html#index-0">File</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="X">X</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="web/glossary.html#term-XML"><strong>XML</strong></a>, <a href="web/xml.html#index-0">[1]</a>
+</li>
+  </ul></td>
+</tr></table>
+
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 - Based on Python for Everybody.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> 
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch(); 
+  });
+</script>
+
+
+  </body>
+</html>
