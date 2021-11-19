@@ -31,7 +31,7 @@ Mixed-Up Code Questions
         return lst
 
 
-.. activecode:: bsoup_mixedupcode_1_ac
+.. activecode:: bsoup_mixedupcode_1_ac_v2
     :practice: T
     :nocodelens:
     :language: python3
@@ -56,8 +56,7 @@ Mixed-Up Code Questions
                 list1.append(tag.get('src', None))
             self.assertEqual(img_links('https://en.wikipedia.org/wiki/Michigan_Stadium'),list1,"img_links('https://en.wikipedia.org/wiki/Michigan_Stadium')")
 
-    myTests().main()
-
+    unittest.main()
 
 .. parsonsprob:: bsoup_mixedupcode_2
     :numbered: left
@@ -86,7 +85,8 @@ Mixed-Up Code Questions
     =====
         return 'https://en.wikipedia.org' + tag.text #paired
 
-.. activecode:: bsoup_mixedupcode_2_ac
+
+.. activecode:: bsoup_mixedupcode_2_ac_v2
     :practice: T
     :nocodelens:
     :language: python3
@@ -106,7 +106,7 @@ Mixed-Up Code Questions
         def testOne(self):
             self.assertEqual(shapiro_link('https://en.wikipedia.org/wiki/University_of_Michigan'),"https://en.wikipedia.org/wiki/Shapiro_Undergraduate_Library","shapiro_link('https://en.wikipedia.org/wiki/University_of_Michigan')")
 
-    myTests().main()
+    unittest.main()
 
 
 .. parsonsprob:: bsoup_mixedupcode_3
@@ -146,7 +146,7 @@ Mixed-Up Code Questions
     =====
         return lst
 
-.. activecode:: bsoup_mixedupcode_3_ac
+.. activecode:: bsoup_mixedupcode_3_ac_v2
     :practice: T
     :nocodelens:
     :language: python3
@@ -174,7 +174,7 @@ Mixed-Up Code Questions
                 lst.append(tag.get('href', None))
             self.assertEqual(link_or_none('https://umich.edu'),lst,"link_or_none('https://umich.edu')")
 
-    myTests().main()
+    unittest.main()
 
 
 .. parsonsprob:: bsoup_mixedupcode_4
@@ -219,7 +219,7 @@ Mixed-Up Code Questions
         return dictionary
 
 
-.. activecode:: bsoup_mixedupcode_4_ac
+.. activecode:: bsoup_mixedupcode_4_ac_v2
     :practice: T
     :nocodelens:
     :language: python3
@@ -253,7 +253,7 @@ Mixed-Up Code Questions
                 dictionary[ending] = info
             self.assertEqual(descriptions('https://www.si.umich.edu/programs/courses/', ['106', '206', '330']),dictionary,"descriptions('https://www.si.umich.edu/programs/courses/', ['106', '206', '330'])")
 
-    myTests().main()
+    unittest.main()
 
 .. parsonsprob:: bsoup_mixedupcode_5
     :numbered: left
@@ -286,7 +286,7 @@ Mixed-Up Code Questions
     =====
         return lst
 
-.. activecode:: bsoup_mixedupcode_5_ac
+.. activecode:: bsoup_mixedupcode_5_ac_v2
     :practice: T
     :nocodelens:
     :language: python3
@@ -311,7 +311,7 @@ Mixed-Up Code Questions
                 lst.append(tag.get('href', None))
             self.assertEqual(url_links('https://www.si.umich.edu/programs/student-life-umsi'),lst,"url_links('https://www.si.umich.edu/programs/student-life-umsi')")
 
-    myTests().main()
+    unittest.main()
 
 
 .. parsonsprob:: bsoup_mixedupcode_6
@@ -352,7 +352,7 @@ Mixed-Up Code Questions
     =====
         return len(list1)
 
-.. activecode:: bsoup_mixedupcode_6_ac
+.. activecode:: bsoup_mixedupcode_6_ac_v2
     :practice: T
     :nocodelens:
     :language: python3
@@ -381,7 +381,7 @@ Mixed-Up Code Questions
                 length = len(list2)
                 self.assertEqual(bsoup_num_links(link),length,"bsoup_num_links(link)")
 
-    myTests().main()
+    unittest.main()
 
 .. parsonsprob:: bsoup_mixedupcode_7
     :numbered: left
@@ -414,7 +414,7 @@ Mixed-Up Code Questions
     =====
         return list1
 
-.. activecode:: bsoup_mixedupcode_7_ac
+.. activecode:: bsoup_mixedupcode_7_ac_v2
     :practice: T
     :nocodelens:
     :language: python3
@@ -440,7 +440,7 @@ Mixed-Up Code Questions
                     list1.append(tag.get('src', None))
                 self.assertEqual(img_links(link),list1,"img_links(link)")
 
-    myTests().main()
+    unittest.main()
 
 .. parsonsprob:: bsoup_mixedupcode_8
     :numbered: left
@@ -484,7 +484,7 @@ Mixed-Up Code Questions
         return list1
 
 
-.. activecode:: bsoup_mixedupcode_8_ac
+.. activecode:: bsoup_mixedupcode_8_ac_v2
     :practice: T
     :nocodelens:
     :language: python3
@@ -512,4 +512,4 @@ Mixed-Up Code Questions
                     list1.append(tag.attrs)
                 self.assertEqual(span_attrs(link),list1,"span_attrs(link)")
 
-    myTests().main()
+    unittest.main()
