@@ -4,8 +4,9 @@ Group Work: Reading from Files
 It is best to use a POGIL approach with the following. In POGIL students work
 in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
 
-.. groupsub:: read_files_groupsub
-   :limit: 3
+.. note::
+
+   If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.
 
 **Learning Objectives**
 
@@ -17,12 +18,14 @@ Students will know and be able to do the following.
 * Learn several ways to read data from a file.
 * Learn how to use try and except.
 * Learn how to use ``with open`` for opening a file
+* Learn how to write data to a file.
 
 *Process Objectives:*
 
 * Identify a file path, name, and extension.
 * Modify code that reads from files
 * Modify code to handle an exception
+* Fix code that reads from a file
 
 File Paths, Names, and Extensions
 ====================================
@@ -74,7 +77,7 @@ Reading from Files
 ===============================
 
 To read from a file, open the file which returns a file object and loop through
-the lines in a file.  Close the file when you are done reading from it.
+the lines in a file.  Remeber to close the file when you are done reading from it!
 
 .. datafile:: dogs.txt
     :fromfile: dogs.txt
@@ -118,7 +121,7 @@ Modify the code above to remove the newline from each line after it is read in.
       :.*: What is the class name that was printed?
 
 You can also read all the lines from a file at once into a list.  One advantage
-to this is that you can immediately close the file after that.
+to this is that you can immediately close the file after that.  This makes it easier to remember to close the file.
 
 .. activecode:: file_pogil_read_lines_list
     :caption: Reading lines from a file.
@@ -140,6 +143,10 @@ to this is that you can immediately close the file after that.
             print(line)
 
     print_contents("dogs.txt")
+
+.. note::
+
+   You can use either ``open(file,"r")`` or just ``open(file)`` to read from a file.
 
 .. fillintheblank:: line_file_close_fitb
     :practice: T
@@ -235,7 +242,7 @@ Modify the code above to print 4 lines and run it again.
 
     print_contents("unknown.txt")
 
-You can use ``try`` and ``except`` to handle code that can cause exceptions.
+You can use ``try`` and ``except`` to handle code that can cause exceptions. Put the code that can cause the exception in the ``try`` block.
 
 
 .. fillintheblank:: line_file_open_except_fitb
@@ -270,3 +277,61 @@ You can also use ``with open(file) as name`` which will automatically close the 
             print(line)
 
     print_contents("dogs.txt")
+
+.. note::
+
+   When you use ``with open(file) as name:`` the file is closed automatically when you leave the block (indented area).
+
+.. parsonsprob:: file_char_count_with_open
+    :numbered: left
+    :adaptive:
+    :order: 6, 5, 3, 4, 1, 7, 0, 2
+    :practice: T
+
+    Create a function, ``num_chars(filename)``, that returns the number of total characters (including new lines) in the file with the passed file name.  Initialize a count then open the file and loop through all of the lines in the file and add the length of each line to the count.  Close the file.  Then return the count.  There are extra blocks that are not needed in the solution.
+    -----
+    def num_chars(filename):
+    =====
+        count = 0
+    =====
+        with open(filename) as file:
+    =====
+        while open(filename) as file: #distractor
+    =====
+            for line in file:
+    =====
+                count += len(line)
+    =====
+        file.close() #distractor
+    =====
+        return count
+
+.. parsonsprob:: file_char_count_open
+    :numbered: left
+    :adaptive:
+    :order: 7, 1, 3, 0, 5, 4, 2, 6
+    :practice: T
+
+    Create a function, ``num_chars(filename)``, that returns the number of total characters (including new lines) in the file with the passed file name.  Initialize a count then open the file and loop through all of the lines in the file and add the length of each line to the count.  Close the file.  Then return the count.  There is an extra block that is not needed in the solution.
+    -----
+    def num_chars(filename):
+    =====
+        count = 0
+    =====
+        file = open(filename):
+    =====
+        file = with open(filename): #distractor
+    =====
+        for line in file:
+    =====
+            count += len(line)
+    =====
+        file.close()
+    =====
+        return count
+
+
+If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.
+
+.. groupsub:: read_files_groupsub
+   :limit: 3
