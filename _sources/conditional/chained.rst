@@ -119,7 +119,7 @@ true, only the first true branch executes.
     :feedback_d: Each of the first 4 if statements will be executed. So grade will be set to A, then B then C and finally D.
     :feedback_e: This will only be true when score is less than 60.
 
-    If x = 93, what will print when the following code executes?
+    If score = 93, what will print when the following code executes?
 
     ::
 

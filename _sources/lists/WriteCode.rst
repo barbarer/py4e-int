@@ -397,8 +397,8 @@ Write Code Questions
 #.
     .. activecode::  list_loop_two_lists
 
-        Write a function ``combine(names, ages)`` that takes in two lists, ``names`` and ``ages`` and returns a list of strings in the format "Name: name, age: age".  For example,
-        ``combine(["Claire", "Jennifer"],[23, 19]) would return ``["Name: Claire, age: 23", "Name: Jennfier, age: 19"]``.
+        Write a function ``combine(names, ages)`` that takes in two lists, ``names`` and ``ages`` and returns a list of strings in the format ``"Name: name, age: age"``.  For example,
+        ``combine(["Claire", "Jennifer"],[23, 19])`` would return ``["Name: Claire, age: 23", "Name: Jennfier, age: 19"]``.
         ~~~~
         def combine(names, ages):
 
@@ -409,8 +409,10 @@ Write Code Questions
         class myTests(TestCaseGui):
 
             def testOne(self):
-                  self.assertEqual(sort_by_length(['hello', 'hi', 'hey', 'greetings']),['hi', 'hey', 'hello', 'greetings'],"sort_by_length(['hello', 'hi', 'hey', 'greetings'])")
-                  self.assertEqual(sort_by_length(['hello', 'hello']),['hello', 'hello'],"sort_by_length(['hello', 'hello'])")
-                  self.assertEqual(sort_by_length(['I', 'have', 'four', 'apples']),['I', 'have', 'four', 'apples'],"sort_by_length(['I', 'have', 'four', 'apples'])")
+                  self.assertEqual(combine(["Mark", "Mary", "Sue"], [59, 60, 61]), ["Name: Mark, age: 59", "Name: Mary, age: 60", "Name: Sue, age: 61"], 'combine(["Mark", "Mary", "Sue"])')
+                  self.assertEqual(combine(["Iman"], [28]), ["Name: Iman, age: 28"], 'combine(["Iman"], [28])')
+                  self.assertEqual(combine(["Pedro", "Mez"], [24, 26]), ["Name: Pedro, age: 24", "Name: Mez, age: 26"], 'combine(["Pedro", "Mez"], [24, 26])')
+                  self.assertEqual(combine(["Claire", "Jennifer"], [23, 19]), ["Name: Claire, age: 23", "Name: Jennifer, age: 19"], 'combine(["Claire", "Jennifer"], [23, 19])')
+
 
         myTests().main()
