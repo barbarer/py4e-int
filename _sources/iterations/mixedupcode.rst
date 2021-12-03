@@ -1,44 +1,42 @@
 Mixed-up code Questions
 -----------------------
 
-.. selectquestion:: ch5ex1muc-sq
-   :fromid: ch5ex1muc, ch5ex1muc-ac
+.. selectquestion:: itr_countup_str_sq
+   :fromid: itr_countup_str_muc, itr_countup_str_ac
    :toggle:
 
-
-.. selectquestion:: ch5ex2muc-sq
-   :fromid: ch5ex2muc, ch5ex2muc-ac
+.. selectquestion:: itr_reverse_sq
+   :fromid: itr_reverse_muc, itr_reverse_ac
    :toggle:
 
-
-.. selectquestion:: ch5ex3muc-sq
-   :fromid: ch5ex3muc, ch5ex3muc-ac
+.. selectquestion:: itr_countdown_str_sq
+   :fromid: itr_countdown_str_muc, itr_countdown_str_ac
    :toggle:
 
-.. selectquestion:: ch5ex4muc-sq
-   :fromid: ch5ex4muc, ch5ex4muc-ac
+.. selectquestion:: itr_odd_sum_sq
+   :fromid: itr_odd_sum_muc, itr_odd_sum_ac
    :toggle:
 
-.. selectquestion:: ch5ex5muc-sq
-   :fromid: ch5ex5muc, ch5ex5muc-ac
-   :toggle:  
-
-.. selectquestion:: ch5ex6muc-sq
-   :fromid: ch5ex6muc, ch5ex6muc-ac
+.. selectquestion:: itr_sum_of_range_sq
+   :fromid: itr_sum_of_range_muc, itr_sum_of_range_ac
    :toggle:
 
-.. selectquestion:: ch5ex7muc-sq
-   :fromid: ch5ex7muc, ch5ex7muc-ac
+.. selectquestion:: itr_count_vowels_sq
+   :fromid: itr_count_vowels_muc, itr_count_vowels_ac
    :toggle:
 
-.. selectquestion:: ch5ex8muc-sq
-   :fromid: ch5ex8muc, ch5ex8muc-ac
+.. selectquestion:: itr_copy_till_gt_value_sq
+   :fromid: itr_copy_till_gt_value_muc, itr_copy_till_gt_value_ac
    :toggle:
 
-.. selectquestion:: ch5ex9muc-sq
-   :fromid: ch5ex9muc, ch5ex9muc-ac
+.. selectquestion:: itr_count_last2_sq
+   :fromid: itr_count_last2_muc, itr_count_last2_ac
    :toggle:
 
-.. selectquestion:: ch5ex10muc-sq
-   :fromid: ch5ex10muc, ch5ex10muc-ac
+.. selectquestion:: itr_list_to_5_sq
+   :fromid: itr_list_to_5_muc, itr_list_to_5_ac
+   :toggle:
+
+.. selectquestion:: itr_water_quality_sq
+   :fromid: itr_water_quality_muc, itr_water_quality_ac
    :toggle:
