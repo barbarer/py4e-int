@@ -1,43 +1,45 @@
 Multiple Choice Questions
 --------------------------
 
-.. mchoice:: fileEx_read
+.. mchoice:: fileEx_read_v2
     :practice: T
-    :answer_a: infile = open(myText.txt, “r”)
-    :answer_b: infile = open("myText.txt", “r”)
-    :answer_c: infile = open("myText.txt", “w”)
-    :correct: b
-    :feedback_a: Using the file name without quotation marks makes Python think the file name is a variable name here.
-    :feedback_b: We provide a string with file name + "r" which means read only.
-    :feedback_c: "w" opens the file in writing mode.
+    :answer_a: infile = open("myText.txt", “w”)
+    :answer_b: infile = open("myText.txt", r)
+    :answer_c: infile = open("myText.txt", “read”)
+    :answer_d: infile = open("myText.txt")
+    :correct: d
+    :feedback_a: This will open in write-only mode.
+    :feedback_b: The r must be in quotes.
+    :feedback_c: Use "r" for read-only mode.
+    :feedback_d: The default is read if no mode is specified
 
+    Which of the following can be used to open a file called ``myText.txt`` in read-only mode?
 
-    Which of the following commands is used to open a file called ``myText.txt`` in Read-Only mode?
-
-.. mchoice:: fileEx_write
+.. mchoice:: fileEx_write_v2
     :practice: T
-    :answer_a: outfile = open("myText.txt", "w")
-    :answer_b: outfile = open("myText.txt", “r”)
-    :answer_c: outfile = open(myText.txt, “w”)
-    :correct: a
-    :feedback_a: We provide a string with file name + "w" which means write only.
-    :feedback_b: "r" opens the file in reading mode.
-    :feedback_c: Using the file name without quotation marks makes Python think the file name is a variable name here
+    :answer_a: outfile = open("myText.txt", w)
+    :answer_b: outfile = open("myText.txt", “write”)
+    :answer_c: outfile = open("myText.txt", “w”)
+    :answer_d: outfile = open("myText.txt")
+    :correct: c
+    :feedback_a: The w must be in quotes.
+    :feedback_b: Use "w" for write-only mode.
+    :feedback_c: This will open the file in write-only mode.
+    :feedback_d: This would open the file in read-only mode.
 
+    Which of the following can be used to open a file called ``myText.txt`` in write-only mode?
 
-    Which of the following commands is used to open a file called ``myText.txt`` in Write-Only mode?
-
-.. mchoice:: fileEx_close
+.. mchoice:: fileEx_close_v2
     :practice: T
-    :answer_a: "myText".close()
+    :answer_a: close()
     :answer_b: ref_file.close()
     :answer_c: close(ref_file)
     :answer_d: close("myText")
     :correct: b
-    :feedback_a: The title of the file is a string and a string cannot be closed in Python.
+    :feedback_a: You must call this method on the file object.
     :feedback_b: This closes the file using the variable it has been assigned to.
-    :feedback_c: The command close() needs to be called on the file's variable using dot notation.
-    :feedback_d: The command close() needs to be called on the file's variable using dot notation.
+    :feedback_c: The command close() needs to be called on the file object using dot notation.
+    :feedback_d: The command close() needs to be called on the file object using dot notation.
 
     Which command below closes the already open file ``myText.txt`` if the following code has already been written?
 
@@ -55,9 +57,9 @@ Multiple Choice Questions
     :feedback_a: Append is a command used for lists, not files.
     :feedback_b: somestring is a variable and does not need quotation marks around it.
     :feedback_c: Using dot notation, we can call the write command with the string variable inside the parentheses.
-    :feedback_d: The command write() needs to be called on the file's variable, not the string itself.
+    :feedback_d: The command write() needs to be called on the file object, not the string itself.
 
-    Which of the commands below is used to add the following string to the end of a file referenced with the variable ``filevar``?
+    Which of the commands below is used to add the following string to the end of a file object ``filevar``?
 
     ::
 
@@ -108,48 +110,37 @@ Multiple Choice Questions
         for line in names:
             print("line")
 
-.. mchoice:: fileEx_loop
+.. mchoice:: fileEx_catch_v2
     :practice: T
-    :answer_a: For loop
-    :answer_b: While loop
-    :correct: a
-    :feedback_a: A for loop is typically used to iterate through the lines in a file.
-    :feedback_b: A while loop can be used to run through lines in a file, but to iterate through, it is more common to use a for loop.
+    :answer_a: catch
+    :answer_b: except
+    :answer_c: exception
+    :answer_d: error
+    :correct: b
+    :feedback_a: This is used in other languages, but not in Python
+    :feedback_b: Use except to execute code when an error occurs.
+    :feedback_c: Close, but it is shorter.
+    :feedback_d: Try again.
 
-    What type of loop was used in this chapter to iterate through the lines in a file?
+    What keyword do you use to specify code to execute if there is an error when the body of the ``try`` executes?
 
-.. mchoice:: fileEx_catch
+.. mchoice:: fileEx_how_many_errors
     :practice: T
-    :answer_a: True
-    :answer_b: False
-    :correct: a
-    :feedback_a: Try/except statements are used to prevent an exception from terminating a program.
-    :feedback_b: Try/except statements are a catch for programs. What does that mean?
+    :answer_a: 1
+    :answer_b: 2
+    :answer_c: 3
+    :answer_d: 4
+    :correct: d
+    :feedback_a: Try again
+    :feedback_b: Try again
+    :feedback_c: Try again
+    :feedback_d: The first line is missing a ":", the third shouldn't have file_obj in quotes, the fourth should use line rather than line_obj, and the close is missing.
 
-    True or False? Try and except statements are used to catch errors.
+    How many errors are in the code below?  It should open the file in read-only mode, read each line and print each line and then close the file.
 
-.. fillintheblank:: fileEx_r
-    :practice: T
+    ::
 
-    What letter is used to indicate that a file is opening in read only mode?
-
-    - :[Rr]: Adding "r" to the end of a file opening command will open it in reading mode.
-      :[Ww]: "w" is used to indicate writing mode.
-      :.*: Try again!
-
-.. fillintheblank:: fileEx_w
-    :practice: T
-
-    What letter is used to indicate that a file is opening in write only mode?
-
-    - :[Ww]: Adding "w" to the end of a file opening command will open it in writing mode.
-      :[Rr]: "r" is used to indicate reading mode.
-      :.*: Try again!
-
-.. fillintheblank:: fileEx_line
-    :practice: T
-
-    Lines in a file are separated by what character?
-
-    - :([Nn]ewline)|(\\n): A newline (or the symbol \n) is used to separate the lines in a file.
-      :.*: Try again!
+        def print_contents(file)
+            file_obj = open(file)
+            for line in "file_obj":
+                print(line_obj)
