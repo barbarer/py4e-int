@@ -23,7 +23,6 @@ all turtles, they differ in the specific values of the individual state attribut
    :alt: Simple object has state and methods
 
 
-k
 .. mchoice:: class-basics-turtle-object-attributes
     :practice: T
     :answer_a: pos (x and y position)
