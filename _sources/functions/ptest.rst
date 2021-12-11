@@ -29,4 +29,7 @@ Please make sure you are logged into Runestone before beginning. Click the Start
        :fromid: middle_way
 
     .. selectquestion:: pretest_ex1_q7_ac
+       :fromid: funct_loops_writecode1
+
+    .. selectquestion:: pretest_ex1_q8_ac
        :fromid: prestest_is_ascending_ac
