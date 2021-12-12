@@ -102,33 +102,12 @@ probably quickly realized that you wanted all the tests to "pass" which is
 highlighted in green. This gives you an even quicker visual indication that your code
 is working than having to compare the expected output to the actual.
 
-.. activecode:: ut-ex-perimeterq
-    :autograde: unittest
-
-    Fix 4 errors below so that the following code runs and returns the perimeter of a rectangle.
-    ~~~~
-    def recPerimeter(length, width)
-    perimeter = 2 * (length + width)
-        Return recPerimeter
-
-    ====
-    from unittest.gui import TestCaseGui
-    class myTests(TestCaseGui):
-
-        def testOne(self):
-            self.assertEqual(recPerimeter(10, 20),60,"Tested recPerimeter on inputs 10 and 20")
-            self.assertEqual(recPerimeter(1, 2),6,"Tested recPerimeter on inputs 1 and 2")
-            self.assertEqual(recPerimeter(23.2, 12.3),71,"Tested recPerimeter on inputs 23.2 and 12.3")
-            self.assertEqual(recPerimeter(3.0, 2),10.0,"Tested recPerimeter on inputs 3.0 and 2")
-
-    myTests().main()
-
-Let's look at the unit tests that were hidden.
+Let's look at the unit tests that have usually been hidden.
 
 .. activecode:: ut-ex-perimeterq-with-unit-test-vis
     :autograde: unittest
 
-    Run the code below to see the unit tests again. However, now the unit tests are visible.
+    Run the code below to see the unit tests again. See the unit tests after the code.
     ~~~~
     def recPerimeter(length, width):
         perimeter = 2 * (length + width)
@@ -239,7 +218,7 @@ from the code above one of the methods is ``assertEqual`` which returns the resu
 
 .. note::
 
-   All of the assert methods can take a third parameter which is a string that explains what was tested.
+   All of the assert methods can take a third parameter which is a message (string) that explains what was tested.
 
 Writing Unit Tests
 -----------------------
@@ -250,7 +229,7 @@ To write a unit test you need to do the following.
 
 #. Create a class that inherits from the correct class (``TestCaseGui`` in this ebook and ``unittest.TestCase`` elsewhere )
 
-#. Optionally create a ``setup`` method which is called before *every* test method is run
+#. Optionally create a ``setup`` method which is called before *every* test method is run.
 
 #. Create one or more methods that start with ``test`` to test different things in your code
 
@@ -259,6 +238,10 @@ To write a unit test you need to do the following.
 #. Optionally create a ``tearDown`` method which is called after *every* test method is run
 
 #. Run the tests using ``ClassName.main()`` in the ebook and otherwise ``unittest.main()``
+
+.. note::
+
+   The order that the tests run is not the order they are defined.
 
 .. activecode:: ut-ex-car-class-unit-tests
     :autograde: unittest
@@ -273,7 +256,7 @@ To write a unit test you need to do the following.
             self.color = color
 
         def __str__(self)
-            return f"make: {self.make}, model: {self.model}, color: {self.color}"
+            return f"{self.make} {self.model} {self.color}"
 
         def set_color(self, new_color):
             self.color = new_color
@@ -286,15 +269,15 @@ To write a unit test you need to do the following.
             self.c2 = Car("Toyota", "Prius", "red")
 
         def testInitAndStr(self):
-            self.assertEqual(c1.__str__(), 'make: Ford, model: Volt, color: blue', "Testing __init__ and __str__ method on c1")
-            self.assertEqual(self.c2.__str__(), 'make: Toyota, model: Prius, color: red', "Testing __init__ and __str__ method on c1")
+            self.assertEqual(c1.__str__(), 'Ford Volt blue', "Test of init and str")
+            self.assertEqual(self.c2.__str__(), 'Toyota Prius red', "Test of init and str")
 
         def testSetColor(self):
             # try to set the color
             self.c1.set_color("white")
 
             # check that it changed to the new color
-            self.assertEqual(self.c1.color, "white", "Testing set color on c1")
+            self.assertEqual(self.c1.color, "white", "Test of set color")
 
     myTests().main()
 
@@ -328,5 +311,7 @@ Modify the code above to add a method in the ``Car`` class to set (change) the m
    =====
        def test_initials(self):
    =====
-           self.assertEqual(self.p1.initials(), "LR", "p1.initials()")
-           self.assertEqual(self.p2.initials(), "KW", "p2.initials()")
+           p1i = self.p1.initials()
+           self.assertEqual(p1i, "LR", "p1.initials()")
+           p2i = self.p2.initials()
+           self.assertEqual(p2i, "KW", "p2.initials()")

@@ -13,6 +13,7 @@ Inheritance
    AssociationVsInheritance.rst
    CaseStudy.rst
    UnitTests.rst
+   MoreOnTesting.rst
    Exercises.rst
    mixedupcode.rst
    writecode.rst
