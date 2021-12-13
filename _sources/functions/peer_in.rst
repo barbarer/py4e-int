@@ -3,10 +3,7 @@ Peer Instruction: Functions Multiple Choice Questions
 
 .. mchoice:: ctp-functions-08_Functions_07
    :practice: T
-   :answer_a: 
-      .. code-block:: python
-         print Raar I'm a beear
-
+   :answer_a: Raaarrr I’m a bear
    :answer_b: Eeek a bear!
    :answer_c: Both
    :answer_d: Neither
@@ -119,7 +116,11 @@ Peer Instruction: Functions Multiple Choice Questions
    :answer_d: B and C
    :answer_e: I don't know
    :correct: b
-   :feedback_a: Incorrect
+   :feedback_a: Incorrect! Body of the function is not indented.
+   :feedback_b: Correct! Function body should be indented in Python.
+   :feedback_c: Incorrect! x can be defined as both a parameter and variable in Python.
+   :feedback_d: Incorrect! Function body should be indented in Python. x can be defined as both a parameter and variable in Python.
+   :feedback_e: Incorrect! Body of the function is not indented.
 
    What are the bugs in the following code?
 
@@ -140,6 +141,11 @@ Peer Instruction: Functions Multiple Choice Questions
    :answer_d: 15, 8
    :answer_e: I don't know
    :correct: d
+   :feedback_a: Incorrect! Here, odd(4, 2) will return 15 (y = y + 1 = 5 and x = x + 1 = 3) and print(x*y) in main() will return 8. The output of odd() will be printed first as it is initialized first.
+   :feedback_b: Incorrect! Here, odd(4, 2) will return 15 (y = y + 1 = 5 and x = x + 1 = 3) and print(x*y) in main() will return 8. The output of odd() will be printed first as it is initialized first.
+   :feedback_c: Incorrect! Here, odd(4, 2) will return 15 (y = y + 1 = 5 and x = x + 1 = 3) and print(x*y) in main() will return 8. The output of odd() will be printed first as it is initialized first.
+   :feedback_d: Correct! Here, odd(4, 2) will return 15 (y = y + 1 = 5 and x = x + 1 = 3) and print(x*y) in main() will return 8. The output of odd() will be printed first as it is initialized first.
+   :feedback_e: Incorrect! Here, odd(4, 2) will return 15 (y = y + 1 = 5 and x = x + 1 = 3) and print(x*y) in main() will return 8. The output of odd() will be printed first as it is initialized first.
 
    What will the output be?
 
