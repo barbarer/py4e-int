@@ -6,7 +6,7 @@ Mixed-up Code Questions
     :adaptive:
     :numbered: left
 
-    Create a function ``password_maker(word_list)`` that takes a list of words, ``word_list`` and returns a string with the first and last character of 
+    Create a function ``password_maker(word_list)`` that takes a list of words, ``word_list`` and returns a string with the first and last character of
     each word in a list. For example, ``password_maker("show", "me", "the", "money")`` would return ``swmetemy``.
     -----
     def password_maker(word_list):
@@ -29,7 +29,7 @@ Mixed-up Code Questions
 
 .. activecode::  list_MUC_password_creator_ac
 
-    Write a function ``password_maker(word_list)`` that takes a a list of words, ``word_list`` and returns a string with the first and last character of each 
+    Write a function ``password_maker(word_list)`` that takes a a list of words, ``word_list`` and returns a string with the first and last character of each
     word in a list. For example, ``password_maker(["show", "me", "the", "money"])`` would return ``swmetemy``.
 
     ~~~~
@@ -253,19 +253,17 @@ Mixed-up Code Questions
     =====
         for word in terms:
     =====
-<<<<<<< HEAD
         if response not in wordList:
     =====
         if response in wordList: #paired
     =====
             vocabulary.append(response)
-=======
+    =====
             if word not in vocab:
     =====
             if word !in vocab: #paired
     =====
                 vocab.append(word)
->>>>>>> upstream/master
     =====
                 word.append(vocab) #paired
     =====
