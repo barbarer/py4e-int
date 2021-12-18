@@ -222,3 +222,24 @@ Multiple Choice Questions
 
       s = "python rocks"
       print(s[7:11] * 3)
+
+
+.. mchoice:: str-ex-mc-animal-no-space
+    :practice: True
+    :answer_a: dogdog
+    :answer_b: dog dog
+    :answer_c: animal dog
+    :answer_d: animaldog
+    :correct: d
+    :feedback_a: It will print "animal" first.
+    :feedback_b: There is no added space.
+    :feedback_c: There is no added space.
+    :feedback_d: Correct!  It will print the characters in the string followed by the value of the variable animal without any space between.
+
+
+    What is printed by the following statements?
+
+    .. code-block:: python
+
+      animal = "dog"
+      print("animal" + animal)

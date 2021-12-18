@@ -228,3 +228,413 @@ Multiple Choice Questions
    :feedback_d: Try again! This statement about inheritance is correct.
 
    Which statement about inheritance is incorrect?
+
+
+.. mchoice:: unittest_mcq_test_item__1
+    :practice: T
+    :answer_a: I
+    :answer_b: II
+    :answer_c: III
+    :answer_d: IV
+    :correct: c
+    :feedback_a: All methods take self (the current object).
+    :feedback_b: The test_create method takes self and you must use self to access i1 and i2.
+    :feedback_c: Correct!  Remember to pass in self to methods and use self when accessing attributes.
+    :feedback_d: The setUp method takes self and you must use self in the setUp so other methods will still have access.
+
+    Given that there is an ``Item`` class with a name and price with a ``__str__`` method that returns ``"name: price"``, which of the following is correct?
+
+    ``I``
+
+    ::
+
+       class TestItem(unittest.TestCase):
+
+           def setUp():
+               i1 = Item("Coke", 2.99)
+               i2 = Item("Burger", 6.99)
+
+           def test_str_item():
+               self.assertEqual(i1.__str__(), "Coke: 2.99")
+               self.assertEqual(i2.__str__(), "Burger: 6.99")
+
+
+    ``II``
+
+    ::
+
+       class TestItem(unittest.TestCase):
+
+           def setUp(self):
+               self.i1 = Item("Coke", 2.99)
+               self.i2 = Item("Burger", 6.99)
+
+           def test_str_item():
+               self.assertEqual(i1.__str__(), "Coke: 2.99")
+               self.assertEqual(i2.__str__(), "Burger: 6.99")
+
+    ``III``
+
+    ::
+
+       class TestItem(unittest.TestCase):
+
+           def setUp(self):
+               self.i1 = Item("Coke", 2.99)
+               self.i2 = Item("Burger", 6.99)
+
+           def test_str_item(self):
+               self.assertEqual(self.i1.__str__(), "Coke: 2.99")
+               self.assertEqual(self.i2.__str__(), "Burger: 6.99")
+
+
+    ``IV``
+
+    ::
+
+       class TestItem(unittest.TestCase):
+
+           def setUp():
+               i1 = Item("Coke", 2.99)
+               i2 = Item("Burger", 6.99)
+
+           def test_str_item(self):
+               self.assertEqual(self.i1.__str__(), "Coke: 2.99")
+               self.assertEqual(self.i2.__str__(), "Burger: 6.99")
+
+
+
+.. mchoice:: unittest_mcq_test_car_2
+    :practice: T
+    :answer_a: I
+    :answer_b: II
+    :answer_c: III
+    :answer_d: IV
+    :correct: d
+    :feedback_a: All methods take self (the current object).
+    :feedback_b: The assertEqual methods need to be called on self (the current object).
+    :feedback_c: All methods take self (the current object).
+    :feedback_d: Correct! All methods take self and you must call assertEqual on self and use self for accessing attributes.
+
+    Given that there is an ``Car`` class with attributes of ``make`` and ``color``, which of the following is correct?
+
+    ``I``
+
+    ::
+
+      class TestCar(unittest.TestCase):
+
+          def setUp():
+               c1 = Car("Ford", "blue")
+               c2 = Car("Toyota", "red")
+
+           def test_create_car():
+               assertEqual(c1.make, "Ford")
+               assertEqual(c1.color, "blue")
+               assertEqual(c2.make, "Toyota")
+               assertEqual(c2.color, "red")
+
+
+    ``II``
+
+    ::
+
+      class TestCar(unittest.TestCase):
+
+          def setUp(self):
+              self.c1 = Car("Ford", "blue")
+              self.c2 = Car("Toyota", "red")
+
+          def test_create_car(self):
+              assertEqual(self.c1.make, "Ford")
+              assertEqual(self.c1.color, "blue")
+              assertEqual(self.c2.make, "Toyota")
+              assertEqual(self.c2.color, "red")
+
+    ``III``
+
+    ::
+
+      class TestCar(unittest.TestCase):
+
+          def setUp(self):
+              self.c1 = Car("Ford", "blue")
+              self.c2 = Car("Toyota", "red")
+
+          def test_create_car():
+              self.assertEqual(self.c1.make, "Ford")
+              self.assertEqual(self.c1.color, "blue")
+              self.assertEqual(self.c2.make, "Toyota")
+              self.assertEqual(self.c2.color, "red")
+
+
+    ``IV``
+
+    ::
+
+      class TestCar(unittest.TestCase):
+
+          def setUp(self):
+              self.c1 = Car("Ford", "blue")
+              self.c2 = Car("Toyota", "red")
+
+          def test_create_car(self):
+              self.assertEqual(self.c1.make, "Ford")
+              self.assertEqual(self.c1.color, "blue")
+              self.assertEqual(self.c2.make, "Toyota")
+              self.assertEqual(self.c2.color, "red")
+
+
+
+.. mchoice:: unittest_mcq_test_car_set_color_3
+    :practice: T
+    :answer_a: I
+    :answer_b: II
+    :answer_c: III
+    :answer_d: IV
+    :correct: c
+    :feedback_a: All methods take self (the current object).
+    :feedback_b: Check the original and changed color on each car object.
+    :feedback_c: Correct!
+    :feedback_d: Check the original and changed color on each car object.
+
+    Given that there is an ``Car`` class with attributes of ``make`` and ``color`` and a method ``set_color`` which changes the color, which of the following is correct?
+
+    ``I``
+
+    ::
+
+      class TestCar(unittest.TestCase):
+
+          def setUp():
+               c1 = Car("Ford", "blue")
+               c2 = Car("Toyota", "red")
+
+           def test_change_color():
+               assertEqual(c1.color, "blue")
+               c1.set_color("yellow")
+               assertEqual(c1.color, "yellow")
+               assertEqual(c2.color, "red")
+               c2.set_color("blue")
+               assertEqual(c2.color, "blue")
+
+
+    ``II``
+
+    ::
+
+      class TestCar(unittest.TestCase):
+
+          def setUp(self):
+               self.c1 = Car("Ford", "blue")
+               self.c2 = Car("Toyota", "red")
+
+           def test_change_color(self):
+               self.assertEqual(self.c1.color, "yellow")
+               self.c1.set_color("yellow")
+               self.assertEqual(self.c1.color, "blue")
+               self.assertEqual(self.c2.color, "red")
+               self.c2.set_color("blue")
+               self.assertEqual(self.c2.color, "blue")
+
+    ``III``
+
+    ::
+
+      class TestCar(unittest.TestCase):
+
+          def setUp(self):
+               self.c1 = Car("Ford", "blue")
+               self.c2 = Car("Toyota", "red")
+
+           def test_change_color(self):
+               self.assertEqual(self.c1.color, "blue")
+               self.c1.set_color("yellow")
+               self.assertEqual(self.c1.color, "yellow")
+               self.assertEqual(self.c2.color, "red")
+               self.c2.set_color("blue")
+               self.assertEqual(self.c2.color, "blue")
+
+
+    ``IV``
+
+    ::
+
+      class TestCar(unittest.TestCase):
+
+          def setUp(self):
+               self.c1 = Car("Ford", "blue")
+               self.c2 = Car("Toyota", "red")
+
+           def test_change_color(self):
+               self.assertEqual(self.c1.color, "blue")
+               self.c1.set_color("yellow")
+               self.assertEqual(self.c1.color, "yellow")
+               self.assertEqual(self.c2.color, "blue")
+               self.c2.set_color("blue")
+               self.assertEqual(self.c2.color, "red")
+
+
+.. mchoice:: unittest_mcq_test_car_set_model_4
+    :practice: T
+    :answer_a: I
+    :answer_b: II
+    :answer_c: III
+    :answer_d: IV
+    :correct: d
+    :feedback_a: All methods take self (the current object).
+    :feedback_b: All methods take self (the current object).
+    :feedback_c: Are the test cases correct?  What was the original make and changed make for each?
+    :feedback_d: Correct!
+
+    Given that there is an ``Car`` class with attributes of ``make`` and ``color`` and a method ``set_make`` which changes the make, which of the following is correct?
+
+    ``I``
+
+    ::
+
+      class TestCar(unittest.TestCase):
+
+          def setUp():
+               c1 = Car("Ford", "blue")
+               c2 = Car("Toyota", "red")
+
+           def test_change_make():
+               assertEqual(c1.make, "Ford"")
+               c1.set_make("Toyota")
+               assertEqual(c1.make, "Toyota")
+               assertEqual(c2.make, "Toyota")
+               c2.set_make("Ford")
+               assertEqual(c2.make, "Ford")
+
+
+    ``II``
+
+    ::
+
+      class TestCar(unittest.TestCase):
+
+          def setUp(self):
+               self.c1 = Car("Ford", "blue")
+               self.c2 = Car("Toyota", "red")
+
+           def test_change_make():
+               self.assertEqual(self.c1.make, "Toyota")
+               self.c1.set_make("Ford")
+               self.assertEqual(self.c1.make, "Ford")
+               self.assertEqual(self.c2.make, "Ford")
+               self.c2.set_make("Toyota")
+               self.assertEqual(self.c2.make, "Toyota")
+
+    ``III``
+
+    ::
+
+      class TestCar(unittest.TestCase):
+
+          def setUp(self):
+               self.c1 = Car("Ford", "blue")
+               self.c2 = Car("Toyota", "red")
+
+           def test_change_make(self):
+               self.assertEqual(c1.make, "Toyota")
+               self.c1.set_make("Ford")
+               self.assertEqual(c1.make, "Ford")
+               self.assertEqual(c2.make, "Ford")
+               self.c2.set_make("Toyota")
+               self.assertEqual(c2.make, "Toyota")
+
+
+    ``IV``
+
+    ::
+
+      class TestCar(unittest.TestCase):
+
+          def setUp(self):
+               self.c1 = Car("Ford", "blue")
+               self.c2 = Car("Toyota", "red")
+
+           def test_change_make(self):
+               self.assertEqual(self.c1.make, "Ford"")
+               self.c1.set_make("Toyota")
+               self.assertEqual(self.c1.make, "Toyota")
+               self.assertEqual(self.c2.make, "Toyota")
+               self.c2.set_make("Ford")
+               self.assertEqual(self.c2.make, "Ford")
+
+
+.. mchoice:: unittest_mcq_test_order_price__5
+    :practice: T
+    :answer_a: I
+    :answer_b: II
+    :answer_c: III
+    :answer_d: IV
+    :correct: a
+    :feedback_a: Correct!
+    :feedback_b: Is 9.99 correct?
+    :feedback_c: The method total returns a number, not a string.
+    :feedback_d: Is 8.98 correct?
+
+    Given that there is an ``Item`` class with a ``name`` and ``price`` and an ``Order`` class that takes a list of ``Item`` objects and has a ``total`` method which returns the total price for all items, which of the following is correct?
+
+    ``I``
+
+    ::
+
+       class TestItem(unittest.TestCase):
+
+           def setUp(self):
+               i1 = Item("Coke", 2.99)
+               i2 = Item("Burger", 6.99)
+               self.o1 = Order([i1, i2])
+
+           def test_create_order_total(self):
+               self.assertAlmostEqual(self.o1.total(), 9.98, 2)
+
+
+    ``II``
+
+    ::
+
+       class TestItem(unittest.TestCase):
+
+           def setUp(self):
+               i1 = Item("Coke", 2.99)
+               i2 = Item("Burger", 6.99)
+               self.o1 = Order([i1, i2])
+
+           def test_create_order_total(self):
+               self.assertAlmostEqual(self.o1.total(), 9.99, 2)
+
+
+
+    ``III``
+
+    ::
+
+       class TestItem(unittest.TestCase):
+
+           def setUp(self):
+               i1 = Item("Coke", 2.99)
+               i2 = Item("Burger", 6.99)
+               self.o1 = Order([i1, i2])
+
+           def test_create_order_total(self):
+               self.assertAlmostEqual(self.o1.total(), "8.98", 2)
+
+
+    ``IV``
+
+    ::
+
+       class TestItem(unittest.TestCase):
+       class TestItem(unittest.TestCase):
+
+           def setUp(self):
+               i1 = Item("Coke", 2.99)
+               i2 = Item("Burger", 6.99)
+               self.o1 = Order([i1, i2])
+
+           def test_create_order_total(self):
+               self.assertAlmostEqual(self.o1.total(), 8.98, 2)
