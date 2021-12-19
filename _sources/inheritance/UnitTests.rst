@@ -107,7 +107,7 @@ Let's look at the unit tests that have usually been hidden.
 .. activecode:: ut-ex-perimeterq-with-unit-test-vis
     :autograde: unittest
 
-    Run the code below to see the unit tests again. See the unit tests after the code.
+    Run the code below to see the unit tests again. See the unit tests after the code. The last unit test compares the result of ``recPerimeter(3.0, 2)`` to wrong value.  Fix the value so that all of the tests pass.  
     ~~~~
     def recPerimeter(length, width):
         perimeter = 2 * (length + width)
@@ -120,7 +120,7 @@ Let's look at the unit tests that have usually been hidden.
             self.assertEqual(recPerimeter(10, 20),60,"Tested recPerimeter on inputs 10 and 20")
             self.assertEqual(recPerimeter(1, 2),6,"Tested recPerimeter on inputs 1 and 2")
             self.assertEqual(recPerimeter(23.2, 12.3),71,"Tested recPerimeter on inputs 23.2 and 12.3")
-            self.assertEqual(recPerimeter(3.0, 2),10.0,"Tested recPerimeter on inputs 3.0 and 2")
+            self.assertEqual(recPerimeter(3.0, 2),12,"Tested recPerimeter on inputs 3.0 and 2")
 
     myTests().main()
 
@@ -229,7 +229,7 @@ To write a unit test you need to do the following.
 
 #. Create a class that inherits from the correct class (``TestCaseGui`` in this ebook and ``unittest.TestCase`` elsewhere )
 
-#. Optionally create a ``setup`` method which is called before *every* test method is run.
+#. Optionally create a ``setUp`` method which is called before *every* test method is run.
 
 #. Create one or more methods that start with ``test`` to test different things in your code
 

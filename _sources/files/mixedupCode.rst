@@ -1,78 +1,26 @@
 Mixed-up Code Questions
 ------------------------
-.. parsonsprob:: file_mixed_wattle
-    :numbered: left
-    :adaptive:
-    :practice: T
 
-    The following program should open a file, write a line, and close the file, but
-    the code is mixed up. Drag the blocks of statements from the left column to the right column
-    and put them in the right order. Watch out for extra pieces of code and indentation!
-    -----
-    fout = open('ouptut.txt', 'w')
-    =====
-    fout = open('output.txt', 'r') #paired
-    =====
-    file.write("This here's the wattle,\n")
-    =====
-    fout.close()
-    =====
-    fout.close #paired
+.. selectquestion:: file_write_line_sq
+   :fromid: file_write_line_pp, file_write_line_ac
+   :toggle:
 
-.. parsonsprob:: file_mixed_travel
-    :numbered: left
-    :adaptive:
-    :practice: T
+.. selectquestion:: file_read_n_lines_sq
+   :fromid: file_read_n_lines_pp, file_read_n_lines_ac
+   :toggle:
 
-    The following program counts the number of characters in the file "travel_plans.txt", but
-    the code is mixed up. Drag the blocks of statements from the left column to the right column
-    and put them in the right order.  First create a variable num and initialize it.  Then open the
-    file. Loop reading a line from the file and add the length of each line to num.  Then print the result.
-    Watch out for extra pieces of code and indentation!
-    -----
-    num = 0
-    =====
-    num = 1 #paired
-    =====
-    travelFile = open("travel_plans.txt", "r")
-    =====
-    travelFile = open("travel_plans.txt","w") #paired
-    =====
-    for line in travelFile:
-    =====
-    for line in "travelFile": #paired
-    =====
-        num = num + len(line)
-    =====
-    print(num)
-    =====
-    print(lineCharacters) #paired
+.. selectquestion:: file_count_words_sq
+   :fromid: file_count_words_pp, file_count_words_ac
+   :toggle:
 
+.. selectquestion:: file_count_lines_starting_with_sq
+   :fromid: file_count_lines_starting_with_pp, file_count_lines_starting_with_ac
+   :toggle:
 
-.. parsonsprob:: file_mixed_write
-    :adaptive:
-    :practice: T
-    :numbered: left
+.. selectquestion:: file_write_squares_sq
+   :fromid: file_write_squares_pp, file_write_squares_ac
+   :toggle:
 
-    The following program writes the squares of some numbers to the file "squared_numbers.txt", but
-    the code is mixed up. Drag the blocks of statements from the left column to the right column
-    and put them in the right order. Watch out for extra pieces of code and indentation!
-    -----
-    outfile = open("squared_numbers.txt", "w")
-    =====
-    outfile = open("squared_number.txt", "r") #paired
-    =====
-    for number in range(1, 13):
-    =====
-        square = number * number
-    =====
-        square = number * 2 #paired
-    =====
-        outfile.write(str(square) + "\n")
-    =====
-    outfile.close()
-    =====
-    close(outfile) #paired
 
 .. parsonsprob:: file_mixed_olympics
     :adaptive:
