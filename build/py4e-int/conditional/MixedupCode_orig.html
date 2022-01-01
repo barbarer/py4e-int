@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mixed-up Code Questions &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.css?v=bddd2011b20db76a20ea" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.css?v=7c5388ad4389eae1a318" />
+
+
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/runtime.bundle.js?v=aa7c717c38c5405af9e6"></script>
+    <script src="../_static/637.bundle.js?v=1123ad75f9b821cdd636"></script>
+    <script src="../_static/runestone.bundle.js?v=9c8e466e8cbed4a3af5a"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = true;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'py4e-int';
+    eBookConfig.basecourse = 'py4e-int';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/logo_small.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          py4e-int
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span class="visuallyhidden" aria-label="User">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="runestoneComponents.switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/runestone/static/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=MixedupCode_orig'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+  
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="mixed-up-code-questions">
+<h1>Mixed-up Code Questions<a class="headerlink" href="#mixed-up-code-questions" title="Permalink to this headline">¶</a></h1>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="cndtnl-mixed-three" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The following code should set the variable <code class="docutils literal notranslate"><span class="pre">result</span></code> equal to “x is less than 3” when <code class="docutils literal notranslate"><span class="pre">x</span></code> is less than 3. Otherwise, set it to “All done”.
+Be sure to indent correctly!</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="1"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        x = 0
+---
+if x < 3:
+---
+    result = "x is less than 3"
+---
+else:
+---
+    result = "All done"
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cndtnl-mixed-three_write data-question_label="2">
+<div id=cndtnl-mixed-three_write_question class="ac_question col-md-12">
+<p>Write code that sets the variable <code class="docutils literal notranslate"><span class="pre">result</span></code> equal to “x is less than 3” when <code class="docutils literal notranslate"><span class="pre">x</span></code> is less than 3. Otherwise, set it to “All done”.</p>
+
+</div>
+<textarea data-lang="python" id="cndtnl-mixed-three_write_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+x = 0
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(result, "x is less than 3", "Testing result when the value of x is less than 3")
+
+
+
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="cndtnl-mixed-hi" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The following program should set the variable <code class="docutils literal notranslate"><span class="pre">message</span></code> to “Hello” if x is less than 2, “Hey” if x is greater than 2,
+and “Hi” if x is 2. Be sure to indent correctly and look out for extra code blocks!</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="3"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        x = 2
+---
+if x < 2:
+---
+if x < 2: #paired
+---
+    message = "Hello"
+---
+elif x > 2:
+---
+else x > 2: #paired
+---
+    message = "Hey"
+---
+else:
+---
+    message = "Hi"
+---
+    message == "Hi" #paired
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cndtnl-mixed-hi_write data-question_label="4">
+<div id=cndtnl-mixed-hi_write_question class="ac_question col-md-12">
+<p>Write code that sets the variable <code class="docutils literal notranslate"><span class="pre">message</span></code> to “Hello” if <code class="docutils literal notranslate"><span class="pre">x</span></code> is less than <code class="docutils literal notranslate"><span class="pre">2</span></code>, “Hey” if <code class="docutils literal notranslate"><span class="pre">x</span></code> is greater than <code class="docutils literal notranslate"><span class="pre">2</span></code>, and “Hi” if <code class="docutils literal notranslate"><span class="pre">x</span></code> is <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="cndtnl-mixed-hi_write_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+x = 2
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(message,"Hi", "Testing that the value of message when 'x' equals 2")
+
+
+
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="cndtnl-mixed-price_v2" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The following code should set <code class="docutils literal notranslate"><span class="pre">price</span></code> to 1.5 if <code class="docutils literal notranslate"><span class="pre">weight</span></code> is less than 2, otherwise set <code class="docutils literal notranslate"><span class="pre">price</span></code> to 1.3, then set <code class="docutils literal notranslate"><span class="pre">total</span></code> to the <code class="docutils literal notranslate"><span class="pre">weight</span></code> times <code class="docutils literal notranslate"><span class="pre">price</span></code>. For example, if <code class="docutils literal notranslate"><span class="pre">weight</span></code> is 0.5 then <code class="docutils literal notranslate"><span class="pre">price</span></code> should be set to 1.5 and <code class="docutils literal notranslate"><span class="pre">total</span></code> will be 0.75. Be sure to indent correctly!</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="5"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        weight = 0.5
+numItems = 5
+if weight < 2:
+---
+    price = 1.50
+---
+if weight >= 2:
+---
+    price = 1.30
+---
+total = weight * price
+---
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cndtnl-mixed-price_write data-question_label="6">
+<div id=cndtnl-mixed-price_write_question class="ac_question col-md-12">
+<p>Write code that sets <code class="docutils literal notranslate"><span class="pre">price</span></code> to 1.5 if <code class="docutils literal notranslate"><span class="pre">weight</span></code> is less than 2, otherwise set <code class="docutils literal notranslate"><span class="pre">price</span></code> to 1.3, then set <code class="docutils literal notranslate"><span class="pre">total</span></code> to the <code class="docutils literal notranslate"><span class="pre">weight</span></code> times <code class="docutils literal notranslate"><span class="pre">price</span></code>. For example, if <code class="docutils literal notranslate"><span class="pre">weight</span></code> is 0.5 then <code class="docutils literal notranslate"><span class="pre">price</span></code> should be set to 1.5 and <code class="docutils literal notranslate"><span class="pre">total</span></code> will be 0.75.</p>
+
+</div>
+<textarea data-lang="python" id="cndtnl-mixed-price_write_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+weight = 0.5
+numItems = 5
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(price,1.5, "Testing that the price is 1.5")
+        self.assertEqual(total,0.75, "Testing that the total is 0.75")
+
+
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="cndtnl-mixed-ten" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The following program should set the variable <code class="docutils literal notranslate"><span class="pre">number</span></code> to <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">number</span> <span class="pre">from</span> <span class="pre">1</span> <span class="pre">to</span> <span class="pre">10</span></code> if the value of x is 1-10,
+<code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">number</span> <span class="pre">less</span> <span class="pre">than</span> <span class="pre">1</span></code> if the value of x is zero or below, and <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">number</span> <span class="pre">greater</span> <span class="pre">than</span> <span class="pre">10</span></code>
+if the value of x is more than 10. Be sure to indent correctly and look out for extra code blocks!</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="7"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        x = 3
+---
+if x >= 1 and x <= 10:
+---
+    number = "x is a number from 1 to 10"
+---
+elif x < 1:
+---
+    number = "x is a number less than 1"
+---
+    number = "x is greater than 1" #paired
+---
+else:
+---
+    number = "x is a number greater than 10"
+---
+else x < 1: #paired
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cndtnl-mixed-ten_write data-question_label="8">
+<div id=cndtnl-mixed-ten_write_question class="ac_question col-md-12">
+<p>Write code that sets the variable <code class="docutils literal notranslate"><span class="pre">number</span></code> to <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">number</span> <span class="pre">from</span> <span class="pre">1</span> <span class="pre">to</span> <span class="pre">10</span></code> if the value of x is 1-10, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">number</span> <span class="pre">less</span> <span class="pre">than</span> <span class="pre">1</span></code> if the value of x is zero or below, and <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">number</span> <span class="pre">greater</span> <span class="pre">than</span> <span class="pre">10</span></code> if the value of x is more than 10.</p>
+
+</div>
+<textarea data-lang="python" id="cndtnl-mixed-ten_write_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+x = 3
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(number,"x is a number from 1 to 10", "Testing number when x is a number from 1 to 10")
+
+
+
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="cndtnl-mixed-twelve" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Arrange the code to calculate and print the cost of a 14 mile cab ride. If the distance traveled
+is less than or equal to 12 miles the cost is $2.00 a mile, and if the distance traveled is more
+than 12 miles the cost is $1.50 a mile. Be sure to indent correctly and look out for extra code blocks!</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="9"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        distance = 14
+---
+if distance <= 12:
+---
+if distance is 12: #paired
+---
+    rate = 2.00
+---
+if distance > 12:
+---
+if distance < 12: #paired
+---
+    rate = 1.50
+---
+total = distance * rate
+---
+total = distance / rate #paired
+---
+print("Total cost of trip: " + str(total))
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cndtnl-mixed-twelve_write data-question_label="10">
+<div id=cndtnl-mixed-twelve_write_question class="ac_question col-md-12">
+<p>Write code that sets the variable <code class="docutils literal notranslate"><span class="pre">rate</span></code> to the cost of a 14 mile cab ride. If the distance traveled is less than or equal to 12 miles, then <code class="docutils literal notranslate"><span class="pre">rate</span></code> cost is $2.00 a mile, and if the distance traveled is more than 12 miles then <code class="docutils literal notranslate"><span class="pre">rate</span></code> cost is $1.50 a mile. Assign the final cost to the variable <code class="docutils literal notranslate"><span class="pre">total</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="cndtnl-mixed-twelve_write_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+distance = 14
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(total, 21.0, "Testing total is equal to 21.0")
+
+
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="cndtnl-mixed-nested" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Arrange the following code so that after x and y are defined, they are compared and if the value of x
+is less than y it sets the variable <code class="docutils literal notranslate"><span class="pre">result</span></code> to <code class="docutils literal notranslate"><span class="pre">&quot;x</span> <span class="pre">is</span> <span class="pre">less</span> <span class="pre">than</span> <span class="pre">y&quot;</span></code>; if x is greater than y then <code class="docutils literal notranslate"><span class="pre">result</span></code> is set to <code class="docutils literal notranslate"><span class="pre">&quot;x</span> <span class="pre">is</span> <span class="pre">greater</span>
+<span class="pre">than</span> <span class="pre">y&quot;</span></code>; and <code class="docutils literal notranslate"><span class="pre">result</span></code> is <code class="docutils literal notranslate"><span class="pre">&quot;x</span> <span class="pre">and</span> <span class="pre">y</span> <span class="pre">must</span> <span class="pre">be</span> <span class="pre">equal&quot;</span></code> if the values are equal. Be sure to indent correctly!</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="11"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        x = 10
+---
+y = 10
+---
+if x < y:
+---
+    result = "x is less than y"
+---
+else:
+---
+    if x > y:
+---
+        result = "x is greater than y"
+---
+    else:
+---
+        result = "x and y must be equal"
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cndtnl-mixed-nested_write data-question_label="12">
+<div id=cndtnl-mixed-nested_write_question class="ac_question col-md-12">
+<p>Write code so that after x and y are defined, they are compared and if the value of x is less than y it sets the variable <code class="docutils literal notranslate"><span class="pre">result</span></code> to <code class="docutils literal notranslate"><span class="pre">&quot;x</span> <span class="pre">is</span> <span class="pre">less</span> <span class="pre">than</span> <span class="pre">y&quot;</span></code>; if x is greater than y then <code class="docutils literal notranslate"><span class="pre">result</span></code> is set to <code class="docutils literal notranslate"><span class="pre">&quot;x</span> <span class="pre">is</span> <span class="pre">greater</span> <span class="pre">than</span> <span class="pre">y&quot;</span></code>; and <code class="docutils literal notranslate"><span class="pre">result</span></code> is <code class="docutils literal notranslate"><span class="pre">&quot;x</span> <span class="pre">and</span> <span class="pre">y</span> <span class="pre">must</span> <span class="pre">be</span> <span class="pre">equal&quot;</span></code> if the values are equal.</p>
+
+</div>
+<textarea data-lang="python" id="cndtnl-mixed-nested_write_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+x = 10
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(result, "x and y must be equal", "Testing result when x and y are equal")
+
+
+
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="cndtnl-mixed-logical" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Arrange the following code so that after x and y are defined, they are compared and if the value of x
+and y are the same object then the variable <code class="docutils literal notranslate"><span class="pre">value</span></code> will be set to <code class="docutils literal notranslate"><span class="pre">&quot;x</span> <span class="pre">and</span> <span class="pre">y</span> <span class="pre">are</span> <span class="pre">the</span> <span class="pre">same&quot;</span></code>; if x and y have the same value then <code class="docutils literal notranslate"><span class="pre">value</span></code> will be <code class="docutils literal notranslate"><span class="pre">&quot;x</span> <span class="pre">and</span> <span class="pre">y</span> <span class="pre">have</span> <span class="pre">the</span> <span class="pre">same</span> <span class="pre">value&quot;</span></code>; and <code class="docutils literal notranslate"><span class="pre">value</span></code> is <code class="docutils literal notranslate"><span class="pre">&quot;x</span> <span class="pre">and</span> <span class="pre">y</span> <span class="pre">are</span> <span class="pre">not</span> <span class="pre">similar&quot;</span></code> if x and y do not
+fit the other conditionals. Be sure to indent correctly!</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="13"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        x = 12
+---
+y = x
+---
+if x is y:
+---
+    value = "x and y are the same"
+---
+elif x == y:
+---
+    value = "x and y have the same value"
+---
+else:
+---
+    value = "x and y have different values"
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cndtnl-mixed-logical_write data-question_label="14">
+<div id=cndtnl-mixed-logical_write_question class="ac_question col-md-12">
+<p>Write code so that after x and y are defined, they are compared and if the value of x and y are the same object the variable <code class="docutils literal notranslate"><span class="pre">value</span></code> will be set to <code class="docutils literal notranslate"><span class="pre">&quot;x</span> <span class="pre">and</span> <span class="pre">y</span> <span class="pre">are</span> <span class="pre">the</span> <span class="pre">same&quot;</span></code>; if x and y have the same value then <code class="docutils literal notranslate"><span class="pre">value</span></code> is <code class="docutils literal notranslate"><span class="pre">&quot;x</span> <span class="pre">and</span> <span class="pre">y</span> <span class="pre">have</span> <span class="pre">the</span> <span class="pre">same</span> <span class="pre">value&quot;</span></code>; and <code class="docutils literal notranslate"><span class="pre">value</span></code> is <code class="docutils literal notranslate"><span class="pre">&quot;x</span> <span class="pre">and</span> <span class="pre">y</span> <span class="pre">are</span> <span class="pre">not</span> <span class="pre">similar&quot;</span></code> if x and y do not fit the other conditionals.</p>
+
+</div>
+<textarea data-lang="python" id="cndtnl-mixed-logical_write_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+x = 12
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(value, "x and y are the same", "Testing value when the x and y are the same")
+
+
+
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="cndtnl-mixed-grade" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Arrange the code to print the grade equivalent (string) for a score. It should return E for any value
+below 60, D for 61 to 69, C for 70 to 79, B for 80 to 89 and A for 90 and above.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="15"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        score = 93
+---
+if score >= 90:
+---
+    grade = "A"
+---
+elif score >= 80:
+---
+    grade = "B"
+---
+elif score >= 70:
+---
+    grade = "C"
+---
+elif score >= 60:
+---
+    grade = "D"
+---
+else:
+---
+    grade = "E"
+---
+print(grade)
+---
+    elif grade >= 90: #distractor
+---
+    score = "c" #distractor
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cndtnl-mixed-grade_write data-question_label="16">
+<div id=cndtnl-mixed-grade_write_question class="ac_question col-md-12">
+<p>Write code that will set the variable <code class="docutils literal notranslate"><span class="pre">grade</span></code> to the grade equivalent (string) for a score. It should set <code class="docutils literal notranslate"><span class="pre">grade</span></code> to E for any value below 60, D for 61 to 69, C for 70 to 79, B for 80 to 89 and A for 90 and above. For example, if the score is above 90, <code class="docutils literal notranslate"><span class="pre">grade</span></code> should be A.</p>
+
+</div>
+<textarea data-lang="python" id="cndtnl-mixed-grade_write_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+score = 93
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(grade,'A',"Testing that grade equals A")
+
+
+
+
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="cndtnl-mixed-even" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The following program should set the variale <code class="docutils literal notranslate"><span class="pre">result</span></code> to determine whether a number is odd or even, but the lines are mixed up.
+Be sure to indent correctly and watch out for extra pieces of code!</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="17"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        x = 3
+---
+if x % 2 == 0:
+---
+if x / 2 == 0: #paired
+---
+    result = "x is even!"
+---
+else:
+---
+    result = "x is odd"
+---
+elif x % 2 == 1: #paired
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cndtnl-mixed-even_write data-question_label="18">
+<div id=cndtnl-mixed-even_write_question class="ac_question col-md-12">
+<p>Write code that should set the variable <code class="docutils literal notranslate"><span class="pre">result</span></code> to determine whether a number is odd or even.</p>
+
+</div>
+<textarea data-lang="python" id="cndtnl-mixed-even_write_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+x = 3
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(result, "x is odd", "Testing result when the value of x is odd")
+
+
+
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="cndtnl-mixed-goodJob" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The following program should set the variable <code class="docutils literal notranslate"><span class="pre">result</span></code> equal to “Good job” when the number is between 1 and 10 (inclusive) or is 15
+and <code class="docutils literal notranslate"><span class="pre">result</span></code> should be set to “Fail” when it is not. Be sure to indent correctly and watch out for extra pieces of code!</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="19"   data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        x = 8
+---
+if x >= 1 and x <= 10 or x == 15:
+---
+    result = "Good job"
+---
+else:
+---
+    result = "Fail"
+---
+elif x == 15: #paired
+        </pre>
+        </div>
+        </div>
+    
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cndtnl-mixed-goodJob_write data-question_label="20">
+<div id=cndtnl-mixed-goodJob_write_question class="ac_question col-md-12">
+<p>Write code that should set the variable <code class="docutils literal notranslate"><span class="pre">result</span></code> equal to “Good job” when the number is between 1 and 10 (inclusive) or is 15 and <code class="docutils literal notranslate"><span class="pre">result</span></code> should be set to “Fail” when it is not.</p>
+
+</div>
+<textarea data-lang="python" id="cndtnl-mixed-goodJob_write_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+x = 8
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(result, "Good job", "Testing result when the value of x is between 1 and 10")
+
+
+
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</div>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 - Based on Python for Everybody.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> 
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch(); 
+  });
+</script>
+
+
+  </body>
+</html>
