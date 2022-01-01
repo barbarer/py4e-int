@@ -115,7 +115,7 @@ find the "div" tag with the "css-1d8a290" class and then get all the
 
 .. note::
 
-   You must use class_ when looking for a tag with a particular class.
+   You must use class followed by an underscore when looking for a tag with a particular class.
 
 .. activecode:: bs_get_mini_nav_href
     :language: python3

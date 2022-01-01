@@ -138,7 +138,7 @@ Plan 5: Exercises
 
     -   'h2', class='menuTitle'
 
-        -   Very close, but in web scraping code you should use class_
+        -   Very close, but in web scraping code you should use class followed by an underscore
 
     -   <h2 class="menuTitle">
 
@@ -181,7 +181,7 @@ Plan 5: Exercises
        ``collect_info.append(info)``
 
    -    :['"]div['"],\s?class_\s?=\s?['"]headline['"]: Correct.
-        :['"]div['"], class=['"]headline['"]: Very close--but class should be class_!
+        :['"]div['"], class=['"]headline['"]: Very close--but class should be class followed by an underscore
         :div: Good start, but you need more.
         :.*: Incorrect.
    -    :text: Correct.

@@ -29,6 +29,20 @@ List Indexing
 
 A list holds items in order and you can get the value at an index, just like you can with strings.
 
+.. fillintheblank:: funct_ll_list_check_start_first_line_v2
+
+    What is the first thing that will be printed when the code below runs?
+
+    - :1: It will print the item at index 0 in alist.
+      :.*: What is the item at index 0 in the passed list?
+
+.. fillintheblank:: funct_ll_list_check_start_last_line_v2
+
+    What is the last thing that will be printed when the code below runs?
+
+    - :'?hi'?: It will print the first item in the second list.
+      :.*: What is the first item in the list in the second call?
+
 .. activecode:: func_ll_ac_list_check_start
     :caption: Accessing list values at indices
 
@@ -46,19 +60,6 @@ A list holds items in order and you can get the value at an index, just like you
     # function call
     main()
 
-.. fillintheblank:: funct_ll_list_check_start_first_line
-
-    What is the first thing that is printed when the code above runs?
-
-    - :1: It will print the item at index 0 in alist.
-      :.*: What is the item at index 0 in the passed list?
-
-.. fillintheblank:: funct_ll_list_check_start_last_line
-
-    What is the last thing that is printed when the code above runs?
-
-    - :'?hi'?: It will print the first item in the second list.
-      :.*: What is the first item in the list in the second call?
 
 .. activecode:: func_ll_ac_list_check
     :caption: Accessing list values at indices

@@ -27,6 +27,33 @@ Students will know and be able to do the following.
 Print and Function Basics
 ===============================
 
+Look at the code below and predict what it will print.
+
+.. fillintheblank:: funct_fitb_print_test_first_line_v3
+
+    What is the first thing that will be printed when the code below runs?
+
+    - :Hello!: The main function prints this before it calls the test function.
+      :Welcome: Execution starts in the main method, so this won't be the first thing that is printed.
+      :.*: Execution starts in the main method
+
+
+.. fillintheblank:: funct_fitb_print_test_second_line_v3
+
+    What is the second thing that will be printed when the code below runs?
+
+    - :Welcome: This is the first thing printed in the test function.
+      :.*: Run the code and check.
+
+
+.. fillintheblank:: funct_fitb_print_test_last_line_v3
+
+    What is the last thing that will be printed when the code below runs?
+
+    - :1: Prints the value returned from the function test which is the remainder of 5 divided by 2 which is one.
+      :.*: What is the remainder of 5 divided by 2?
+
+
 Run the Python code below and then answer the following questions.
 
 .. activecode:: func_ac_pogil_print_message_v2
@@ -61,49 +88,7 @@ Run the Python code below and then answer the following questions.
    You do not declare the type of a variable in Python. Python requires that all statements that are part of the body of a function must be indented. Use four spaces to indent.
 
 
-.. fillintheblank:: funct_fitb_print_test_first_line_v2
 
-    What is the first thing that was printed when the code above ran?
-
-    - :Hello!: The main function prints this before it calls the test function.
-      :Welcome: Execution starts in the main method, so this won't be the first thing that is printed.
-      :.*: Execution starts in the main method
-
-
-.. fillintheblank:: funct_fitb_print_test_first_line_num
-
-    What line number caused that first line to print?
-
-    - :15: Line 15 prints "Hello!"
-      :.*: Which line has "Hello!" in it?  Line numbers are shown on the left side of the code.
-
-.. fillintheblank:: funct_fitb_print_test_second_line_v2
-
-    What is the second thing that was printed when the code above ran?
-
-    - :Welcome: This is the first thing printed in the test function.
-      :.*: Run the code and check.
-
-.. fillintheblank:: funct_fitb_print_test_second_line_num
-
-    What line number caused that second line to print?
-
-    - :3: Line 3 prints "Welcome"
-      :.*: Which line has "Welcome" in it?  Line numbers are shown on the left side of the code.
-
-.. fillintheblank:: funct_fitb_print_test_last_line_v2
-
-    What is the last thing that was printed when the code above ran?
-
-    - :1: Prints the value returned from the function test which is the remainder of 5 divided by 2 which is one.
-      :.*: What is the remainder of 5 divided by 2?
-
-.. fillintheblank:: funct_fitb_print_test_last_line_num
-
-    What line number caused the last line to print?
-
-    - :18: Line 18 prints the value returned from the call to the test function
-      :.*: Which line has prints the result of the call to test? Line numbers are shown on the left side of the code.
 
 .. fillintheblank:: funct_fitb_print_test_value_b
 
@@ -236,9 +221,9 @@ Writing Function Calls
 
 
 .. activecode:: funct_ac_pogil_add_function_call
-    :caption: Modify the code to print "Hello students".
+    :caption: Modify the code to print "Hello Students".
 
-    Modify the code below to print "Hello students" by adding one line and without calling the print function in that line.
+    Modify the code below to print "Hello Students" by adding one line and without calling the print function in that line.
     ~~~~
     # function definition
     def print_message():
