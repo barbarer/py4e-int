@@ -305,27 +305,7 @@ Multiple Choice Questions
       draw_triangle(alex, -120, 30, 60, 'green', 60)
       draw_triangle(alex, -120, 30, 60, 'green', 240)
 
-.. mchoice:: turtle_exercises_question10_11
 
-    Which of the following code draws this picture?
-
-    .. image:: https://i.postimg.cc/5ysJVc0h/Two-Turtles.png
-
-    -   .. image:: https://i.postimg.cc/5NkJKMDv/codeA.png
-
-        - This code will draw a blue line to the east and a red line to the west.
-
-    -   .. image:: https://i.postimg.cc/9FfVBfgC/codeB.png
-
-        - This code will draw a blue line to the north and a red line to the east.
-
-    -   .. image:: https://i.postimg.cc/Z5BS1MhQ/codeC.png
-
-        - This code will draw a blue line to the south and a red line to the east.
-
-    -   .. image:: https://i.postimg.cc/nV2p7mk3/codeD.png
-
-        + This code will draw a blue line to the north and a red line to the west.
 
 
  

@@ -142,19 +142,17 @@ Basic Conditionals and Tests
    =====
            return 'too high'
 
-.. activecode:: funct_pogil_get-middle
+.. activecode:: funct_pogil_get_last_half
    :autograde: unittest
    :nocodelens:
 
 
-   Finish the function ``get_middle`` which
-   returns the middle characters from the passed string.
-   If the string has less than 3 characters then return the passed string.
-   If the string has an odd length, then return the middle character.  If the string has an even
-   length, return the two middle characters.  For example, ``get_middle('abc')`` returns
-   ``'b'`` and ``get_middle('abcd')`` returns ``'bc'``.
+   Finish the function ``last_half(str)`` which
+   returns the last half of the characters from the passed string ``str``.
+   If ``str`` has less than 2 characters then return the empty string ``""``.
+   For example, ``last_half("a")`` returns ``""``, ``last_half("coal")`` returns ``"al"``, and ``last_half("bye") returns ``ye``.
    ~~~~
-   def get_middle(str):
+   def last_half(str):
 
    ====
    from unittest.gui import TestCaseGui
@@ -162,14 +160,14 @@ Basic Conditionals and Tests
    class myTests(TestCaseGui):
 
        def testOne(self):
-           self.assertEqual(get_middle('abc'), 'b', "get_middle('abc')")
-           self.assertEqual(get_middle('abcd'), 'bc', "get_middle('abcd')")
-           self.assertEqual(get_middle('12345'), '3', "get_middle('12345')")
-           self.assertEqual(get_middle('123456'), '34', "get_middle('123456')")
-           self.assertEqual(get_middle('ab'), 'ab', "get_middle('ab')")
-           self.assertEqual(get_middle('a'), 'a', "get_middle('a')")
-           self.assertEqual(get_middle(''), '', "get_middle('')")
-
+           self.assertEqual(last_half('a'), '', "last_half('a')")
+           self.assertEqual(last_half('coal'), 'al', "last_half('coal')")
+           self.assertEqual(last_half('bye'), 'ye', "last_half('bye')")
+           self.assertEqual(last_half('abcd'), 'cd', "last_half('abcd')")
+           self.assertEqual(last_half('12345'), '345', "last_half('12345')")
+           self.assertEqual(last_half('123456'), '456', "last_half('123456')")
+           self.assertEqual(last_half('ab'), 'b', "last_half('ab')")
+           self.assertEqual(last_half(''), '', "last_half('')")
 
 
    myTests().main()

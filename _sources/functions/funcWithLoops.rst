@@ -109,7 +109,7 @@ A for-each loop in Python will loop though the items in a list starting with the
 .. activecode:: fuct_ac_ll_sum67_fix
    :autograde: unittest
 
-   Fix the ``sum67`` function below that takes a list and should return the total of the items in the list except for all the numbers between a 6 and 7 (inclusive).   For example, sum67([1,2]) should return 3, but sum67([2, 6, 8, 7, 2]) should return 4.
+   Fix the ``sum67`` function below that takes a list and should return the total of the items in the list except for all the numbers between a 6 and 7 (inclusive).   For example, ``sum67([1,2])`` should return ``3`` and ``sum67([2, 6, 8, 7, 2])`` should return ``4``.
    ~~~~
    def sum67(nums):
        total = 0               # initialize the total

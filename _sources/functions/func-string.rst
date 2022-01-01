@@ -187,7 +187,7 @@ String Slices
    :nocodelens:
 
 
-   Write a function ``join_no_first`` that takes two strings ``a`` and ``b`` and returns a new string with all the characters in string ``a`` except the first one followed by all the characters in ``b`` except the first one.  For example, join_no_first('hi', 'bye') would return 'iye'.
+   Write a function ``join_no_first`` that takes two strings ``a`` and ``b`` and returns a new string with all the characters in string ``a`` except the first one followed by all the characters in ``b`` except the first one.  For example, ``join_no_first('hi', 'bye')`` would return ``'iye'``.
    ~~~~
    def join_no_first(a, b):
 
