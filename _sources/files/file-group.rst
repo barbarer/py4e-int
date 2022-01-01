@@ -14,70 +14,23 @@ Students will know and be able to do the following.
 
 *Content Objectives:*
 
-* Learn about file path, file name, and file extension.
 * Learn several ways to read data from a file.
 * Learn how to use try and except.
 * Learn how to use ``with open`` for opening a file
 * Learn how to write data to a file.
+* Use a dictionary to track counts of items.
 
 *Process Objectives:*
 
-* Identify a file path, name, and extension.
 * Modify code that reads from files
 * Modify code to handle an exception
 * Fix code that reads from a file
-
-File Paths, Names, and Extensions
-====================================
-
-A file is saved data in secondary storage on a computer. This type of storage persists
-even if you turn off power to the computer.
-
-A file has a **path**, a **name**, and an **extension**.
-You have probably downloaded a file to your computer (such as ``TurtleEx1.py``).
-
-On a Apple computer you
-can find this file in the ``Downloads`` folder.  The path to that file is
-``/Users/username/Downloads/``.  It is the list of parent directories/folders.  On a Windows computer the path would
-typically be ``C:\users\your name\downloads\``.  One of the things you need
-to be aware of when you read and write files is the path to the file.
-
-The file name
-is what you have actually called the file. In this case it would be ``TurtleEx1``.
-
-The file extension is typically three to four characters following a ``.`` after the name.
-In this case the extension is ``py`` which means that it is a file with Python code in it.
-The ``txt`` extension is used for a plain text file.
-
-.. clickablearea:: file_ca_path
-    :practice: T
-    :question: Click on the path for the file shown below.
-    :iscode:
-    :feedback: The path is the list of directories for the file separated by either / or \.
-
-    :click-correct:/Users/username/Downloads/:endclick::click-incorrect:Test:endclick::click-incorrect:.py:endclick:
-
-.. clickablearea:: file_ca_name
-    :practice: T
-    :question: Click on the just the file name for the file shown below.
-    :iscode:
-    :feedback: The path is the list of directories for the file separated by either / or \.
-
-    :click-incorrect:/Users/username/Downloads/:endclick::click-correct:Test:endclick::click-incorrect:.py:endclick:
-
-.. clickablearea:: file_ca_extension
-    :practice: T
-    :question: Click on the just the extension for the file shown below.
-    :iscode:
-    :feedback: The path is the list of directories for the file separated by either / or \.
-
-    :click-incorrect:/Users/username/Downloads/:endclick::click-incorrect:Test:endclick::click-correct:.py:endclick:
 
 Reading from Files
 ===============================
 
 To read from a file, open the file which returns a file object and loop through
-the lines in a file.  Remeber to close the file when you are done reading from it!
+the lines in a file.  Remember to close the file when you are done reading from it!
 
 .. datafile:: dogs.txt
     :fromfile: dogs.txt
@@ -329,6 +282,38 @@ You can also use ``with open(file) as name`` which will automatically close the 
         file.close()
     =====
         return count
+
+
+.. fillintheblank:: file_pogil_line_count_type_returned
+    :practice: T
+
+    What type of thing is returned from the function below?
+
+    - :dictionary: It will return a dictionary with the counts of the number of lines in the file that start with a character.
+      :.*: What type of thing is b_dict?
+
+
+.. activecode:: file_pogil_dict_count
+    :caption: Using a dictionary to count items
+    :datafile: dogs.txt
+
+    Run the code below to see what it prints.
+    ~~~~
+    # function definition
+    def count_first(file):
+        b_dict = {}
+        file_obj = open(file)
+        for line in file_obj:
+            first_letter = line[0]
+            b_dict[first_letter] = b_dict.get(first_letter, 0) + 1
+        file_obj.close()
+        return b_dict
+
+    print(count_first("dogs.txt"))
+
+.. note ::
+
+   Notice how the code above handles the case when the key isn't yet in the dictionary.  The ``get(key, alternative)`` method on a dictionary will return the value for the key if it is in the dictionary, otherwise it return return the alternative.
 
 
 If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.
