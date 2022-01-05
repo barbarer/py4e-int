@@ -29,13 +29,6 @@ List Indexing
 
 A list holds items in order and you can get the value at an index, just like you can with strings.
 
-.. fillintheblank:: funct_ll_list_check_start_first_line_v2
-
-    What is the first thing that will be printed when the code below runs?
-
-    - :1: It will print the item at index 0 in alist.
-      :.*: What is the item at index 0 in the passed list?
-
 .. fillintheblank:: funct_ll_list_check_start_last_line_v2
 
     What is the last thing that will be printed when the code below runs?
@@ -130,9 +123,6 @@ A list holds items in order and you can get the value at an index, just like you
 
    Describe in your own words how negative indices work.
 
-.. shortanswer:: list_index_of_len_of_list_sa
-
-   What happens if you modify the code above to use an index that is larger than the length of the list?  What happens if you modify the code above to use an index that is equal to the length of list?  Why does this happen?
 
 Built-in Functions That Work on Lists
 ========================================
@@ -237,17 +227,6 @@ Lists are objects of the ``list`` class and have methods that operate on list ob
     - :list: A list is of the class ``list``.
       :.*: What is the first thing printed from the code above?
 
-.. shortanswer:: list_what_does_pop_do
-
-   Describe in your own words what ``pop`` does.
-
-.. shortanswer:: list_what_does_append
-
-   Describe in your own words what ``append`` does.
-
-.. shortanswer:: list_what_does_extend
-
-   Describe in your own words what ``extend`` does. How is it different from ``append``?
 
 .. mchoice:: funct_list_append_pop_predict
     :answer_a: [2, 5, 7, 3]
@@ -256,7 +235,7 @@ Lists are objects of the ``list`` class and have methods that operate on list ob
     :answer_d: [2, 5, 7]
     :answer_e: [2, 5, 3]
     :correct: e
-    :feedback_a: This is what the list looks like before the pop exeuctes.
+    :feedback_a: This is what the list looks like before the pop executes.
     :feedback_b: This would be true if pop removed the first value that was passed in, but it takes an index and removes the item at that index.
     :feedback_c: This would be true if pop removed the item at index 1, but it removes the item at index 2 and the first item is at index 0.
     :feedback_d: This would be true if pop removed the last item, but it removes the one at index 2.

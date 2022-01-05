@@ -8,6 +8,8 @@ Please make sure you are logged into Runestone before beginning. Click the Start
 
 .. timed:: pretest_ex1
     :noresult:
+    :nofeedback:
+    :nopause:
 
 
     .. selectquestion:: pretest_ex1_q1_mcq
@@ -28,8 +30,8 @@ Please make sure you are logged into Runestone before beginning. Click the Start
     .. selectquestion:: pretest_ex1_q6_pp
        :fromid: middle_way
 
-    .. selectquestion:: pretest_ex1_q7_ac
-       :fromid: funct_loops_writecode1
+    .. selectquestion:: pretest_ex1_q7_v2_ac
+       :fromid: funct_loops_writecode1q
 
     .. selectquestion:: pretest_ex1_q8_ac
        :fromid: prestest_is_ascending_ac
