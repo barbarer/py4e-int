@@ -225,7 +225,7 @@ Multiple Choice Questions
 
 
 .. mchoice:: str-ex-mc-animal-no-space
-    :practice: True
+    :practice: T
     :answer_a: dogdog
     :answer_b: dog dog
     :answer_c: animal dog
@@ -246,7 +246,7 @@ Multiple Choice Questions
 
 
 .. mchoice:: str-ex-mc-animal-with-space-but-in-quotes
-    :practice: True
+    :practice: T
     :answer_a: animal animal
     :answer_b: animalanimal
     :answer_c: animal dog
