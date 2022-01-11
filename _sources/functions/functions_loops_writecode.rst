@@ -9,12 +9,14 @@ Functions and Loops Write Code Questions
                 :practice: T
                 :autograde: unittest
 
-                Write a function called ``list_starts_with_a`` that takes in ``lst`` as a parameter and returns a 
-                new list with the words from ``lst`` that start with "a". For example, ``list_starts_with_a(["alphabet", "apple", "banana", "coding", "amazing"])`` 
+                Write a function called ``list_starts_with_a`` that takes in ``lst`` as a parameter and returns a
+                new list with the words from ``lst`` that start with "a". For example, ``list_starts_with_a(["alphabet", "apple", "banana", "coding", "amazing"])``
                 would return ``["alphabet", "apple", "amazing"]``.
                 ~~~~
                 def list_starts_with_a(lst):
                     # write code here
+
+                print(list_starts_with_a(["alphabet", "apple", "banana", "coding", "amazing"]))
 
                 ====
                 from unittest.gui import TestCaseGui
@@ -34,8 +36,8 @@ Functions and Loops Write Code Questions
             .. activecode:: funct_loops_writecode1a
                 :optional:
 
-                Write a function called ``list_starts_with_a`` that takes in ``lst`` as a parameter and returns a 
-                new list with the words from ``lst`` that start with "a". For example, ``list_starts_with_a(["alphabet", "apple", "banana", "coding", "amazing"])`` 
+                Write a function called ``list_starts_with_a`` that takes in ``lst`` as a parameter and returns a
+                new list with the words from ``lst`` that start with "a". For example, ``list_starts_with_a(["alphabet", "apple", "banana", "coding", "amazing"])``
                 would return ``["alphabet", "apple", "amazing"]``.
                 ~~~~
                 def list_starts_with_a(lst):
@@ -45,13 +47,14 @@ Functions and Loops Write Code Questions
                             list_a.append(word)
                     return list_a
 
+                print(list_starts_with_a(["alphabet", "apple", "banana", "coding", "amazing"]))
 
 #.
     .. activecode:: funct_loops_writecode2q
         :practice: T
         :autograde: unittest
 
-        Write a function called ``sentence_without_vowels`` that takes in ``string`` as a parameter and returns a new 
+        Write a function called ``sentence_without_vowels`` that takes in ``string`` as a parameter and returns a new
         string that consists of only characters that are not vowels. For example, ``sentence_without_vowels('apple')`` would return ``"ppl"``.
         ~~~~
         def sentence_without_vowels(string):
@@ -81,8 +84,8 @@ Functions and Loops Write Code Questions
                 :autograde: unittest
 
                 Write a function called ``draw_square`` that takes in ``num`` as a parameter and returns a
-                string that consists of a square made of "*" with the dimensions ``num`` times ``num``. Note: 
-                ignore values that are less than or equal to zero. For example, ``draw_square(4)`` would return 
+                string that consists of a square made of "*" with the dimensions ``num`` times ``num``. Note:
+                ignore values that are less than or equal to zero. For example, ``draw_square(4)`` would return
                 ``"****\n****\n****\n****"``.
                 ~~~~
                 def draw_square(num):
@@ -96,7 +99,7 @@ Functions and Loops Write Code Questions
                     def testOne(self):
                         self.assertEqual(draw_square(4),"****\n****\n****\n****","draw_square(4)")
                         self.assertEqual(draw_square(1),"*","draw_square(1)")
-                        
+
                 myTests().main()
 
 
@@ -106,19 +109,19 @@ Functions and Loops Write Code Questions
                 :optional:
 
                 Write a function called ``draw_square`` that takes in ``num`` as a parameter and returns a
-                string that consists of a square made of "*" with the dimensions ``num`` times ``num``. Note: 
-                ignore values that are less than or equal to zero. For example, ``draw_square(4)`` would return 
+                string that consists of a square made of "*" with the dimensions ``num`` times ``num``. Note:
+                ignore values that are less than or equal to zero. For example, ``draw_square(4)`` would return
                 ``"****\n****\n****\n****"``.
                 ~~~~
                 def draw_square(num):
-                    string1 = "" 
+                    string1 = ""
                     for i in range(num):
                         if i < (num - 1):
                             string1 += "*" * num + "\n"
-                        else: 
-                            string1 += "*" * num 
+                        else:
+                            string1 += "*" * num
                     return string1
-                    
+
                 print(draw_square(4))
 
 
@@ -127,9 +130,9 @@ Functions and Loops Write Code Questions
         :practice: T
         :autograde: unittest
 
-        Write a function called ``check_prime_num`` that takes in ``num`` as a parameter and returns ``True`` if ``num`` is a prime number 
+        Write a function called ``check_prime_num`` that takes in ``num`` as a parameter and returns ``True`` if ``num`` is a prime number
         and ``False`` otherwise. For the purposes of this question, there is no need to test for values of ``num`` that are less than two.
-        For example, ``check_prime_num(5)`` should return ``True``. 
+        For example, ``check_prime_num(5)`` should return ``True``.
         ~~~~
         def check_prime_num(num):
             # write code here
@@ -144,7 +147,7 @@ Functions and Loops Write Code Questions
                 self.assertEqual(check_prime_num(5),True,"check_prime_num(5)")
                 self.assertEqual(check_prime_num(100),False,"check_prime_num(100)")
                 self.assertEqual(check_prime_num(89),True,"check_prime_num(89)")
-            
+
 
         myTests().main()
 
@@ -158,7 +161,7 @@ Functions and Loops Write Code Questions
                 :practice: T
                 :autograde: unittest
 
-                Write a function called ``factorial`` that takes in ``num`` as a parameter and returns the factorial value. 
+                Write a function called ``factorial`` that takes in ``num`` as a parameter and returns the factorial value.
                 Ignore checking numbers that are less than 1. For example, ``factorial(5)`` would return ``120``.
                 ~~~~
                 def factorial(num):
@@ -182,8 +185,8 @@ Functions and Loops Write Code Questions
 
             .. activecode:: funct_loops_writecode5a
                 :optional:
-                
-                Write a function called ``factorial`` that takes in ``num`` as a parameter and returns the factorial value. 
+
+                Write a function called ``factorial`` that takes in ``num`` as a parameter and returns the factorial value.
                 Ignore checking numbers that are less than 1. For example, ``factorial(5)`` would return ``120``.
                 ~~~~
                 def factorial(num):
@@ -192,4 +195,3 @@ Functions and Loops Write Code Questions
                         num -= 1
                         total *= num
                     return total
-
