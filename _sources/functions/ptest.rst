@@ -10,6 +10,7 @@ Please make sure you are logged into Runestone before beginning. Click the Start
     :noresult:
     :nofeedback:
     :nopause:
+    :timed: 20
 
 
     .. selectquestion:: pretest_ex1_q1_mcq
