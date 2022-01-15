@@ -118,7 +118,7 @@ Unlike lists, tuples are immutable (can not change). This makes them more effici
 
    Tuples are immutable (not changeable), so you will get an error if you try to change them.
 
-Some functions that work on lists return an **iterator** (an object that you can loop through the values of) which you can convert to a list of tuples.
+Some functions that work on lists return an **iterator** (an object that you can loop through the values of) which you can convert to a list of tuples using the ``list`` function.
 The ``range`` function also returns an iterator.
 
 .. fillintheblank:: funct_tuple_zip_first_print_fitb
