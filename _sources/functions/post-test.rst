@@ -8,7 +8,8 @@ Please make sure you are logged into Runestone before beginning. Click the Start
 
 .. timed:: posttest_ex1
     :nopause:
-    :timed: 20
+    :fullwidth:
+    :timelimit: 20
 
     .. selectquestion:: posttest_ex1_q3_mcq
        :fromid: range_sum_start_one_change_by_two
