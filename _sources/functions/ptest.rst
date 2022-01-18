@@ -14,26 +14,23 @@ Please make sure you are logged into Runestone before beginning. Click the Start
     :timelimit: 20
 
 
-    .. selectquestion:: pretest_ex1_q1_mcq
-       :fromid: e5mc5
-
-    .. selectquestion:: pretest_ex1_q2_mcq
+    .. selectquestion:: pretest_ex1_q1_v2_mcq
        :fromid: e5mc11
 
-    .. selectquestion:: pretest_ex1_q3_mcq
+    .. selectquestion:: pretest_ex1_q2_v2_mcq
        :fromid: range_sum_start_one_change_by_two
 
-    .. selectquestion:: pretest_ex1_q4_mcq
+    .. selectquestion:: pretest_ex1_q3_v2_mcq
        :fromid: var-operations-math-with-mod-v2
 
-    .. selectquestion:: pretest_ex1_q5_mcq
+    .. selectquestion:: pretest_ex1_q4_v2_mcq
        :fromid: listEx_MC14
 
-    .. selectquestion:: pretest_ex1_q6_pp
+    .. selectquestion:: pretest_ex1_q5_v2_pp
        :fromid: middle_way
 
-    .. selectquestion:: pretest_ex1_q7_v2_ac
+    .. selectquestion:: pretest_ex1_q6_v2_ac
        :fromid: funct_loops_writecode1q
 
-    .. selectquestion:: pretest_ex1_q8_ac
+    .. selectquestion:: pretest_ex1_q7_v2_ac
        :fromid: prestest_is_ascending_ac
