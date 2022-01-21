@@ -4,8 +4,10 @@ Group Work - Classes, constructors, attributes, and methods
 It is best to use a POGIL approach with the following. In POGIL students work
 in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
 
-.. groupsub:: class_basics_groupsub
-   :limit: 3
+
+.. note::
+
+   If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.
 
 **Learning Objectives**
 
@@ -134,6 +136,7 @@ Look at the class definition.  It starts with the keyword ``class``.  Then answe
 .. parsonsprob:: class-pp-person
    :numbered: left
    :adaptive:
+   :order: 2, 3, 4, 0, 1, 6, 5, 8, 7
 
    Put the code blocks in order below to create a class ``Person`` with a
    constructor (``__init__``) method that takes a first and last name and a
@@ -237,3 +240,8 @@ Add a Method to a Class
         print(p1.initials())
 
     main()
+
+If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.
+
+.. groupsub:: class_basics_groupsub
+   :limit: 3
