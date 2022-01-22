@@ -5,8 +5,10 @@ Group Work - Working with Multiple Classes
 It is best to use a POGIL approach with the following. In POGIL students work
 in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
 
-.. groupsub:: mult_classes_groupsub
-   :limit: 3
+
+.. note::
+
+   If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.
 
 **Learning Objectives**
 
@@ -102,18 +104,17 @@ Look at the classes defined above. Then answer the following questions.
 
     Drag the code to the description of what it does
 
-.. parsonsprob:: mult_class_car_sports_car_pp
+.. parsonsprob:: mult_class_car_sports_car_pp_v3
    :numbered: left
    :adaptive:
    :practice: T
+   :order: 2, 10, 9, 1, 5, 0, 8, 3, 4, 6, 7
 
    Drag the blocks from the left and put them in the correct order on the right to define two classes: ``Car`` and ``SportsCar`` that inherits from ``Car``. Add an ``__init__`` method to the ``Car`` class that takes a ``make`` and sets the current object's ``make``.  Add a ``__str__`` method to the ``Car`` class and return a string with the ``make``.  Add an ``__init__`` method to the ``SportsCar`` class that calls the parent class ``__init__`` method.
    -----
    class Car:
    =====
        def __init__(self, make):
-   =====
-       def init(self, make): #paired
    =====
            self.make = make
    =====
@@ -246,3 +247,8 @@ The child class can override an inherited method.  This means it provides the sa
         print(s2.favorite_food())
 
     main()
+
+If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.
+
+.. groupsub:: mult_classes_groupsub
+   :limit: 3
