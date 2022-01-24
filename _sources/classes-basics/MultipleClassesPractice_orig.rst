@@ -7,6 +7,7 @@ Multiple Classes Practice
 =============================
 
 .. activecode:: mult_class_track_and_album_len_ac
+   :autograde: unittest
 
    Given a ``Song`` class that has object attributes of ``name`` and ``length`` as shown below, finish a ``Album`` class with an ``__init__`` method that takes a name and list of ``Song`` objects.  Then write a ``length`` method in the ``Album`` class that returns the total length for the album based on the length of the songs in the album.  Given the objects created below it should print 242.
    ~~~~
@@ -70,6 +71,7 @@ Multiple Classes Practice
            return total
 
 .. activecode:: mult_class_point_and_line_practice_ac
+   :autograde: unittest
 
    Given a ``Point`` class below with a ``distance`` object method that takes another point and returns the distance between the two points, create a ``Line`` class with an ``__init__`` method that takes two points.  Also write the ``length`` method in the ``Line`` class to return the length of the line (hint: use the ``distance`` method in the ``Point`` class).
    ~~~~
@@ -134,6 +136,7 @@ Multiple Classes Practice
           return p1.distance(p2) #paired
 
 .. activecode:: mult_class_point_and_triangle_practice_ac
+   :autograde: unittest
 
    Given a ``Point`` class below with a ``distance`` object method that takes another point and returns the distance between the two points, create a ``Triangle`` class with an ``__init__`` method that takes three points.  Also write the ``perimeter`` method in the ``Triangle`` class to return the sum of the lengths of the sides of the triangle. Use the ``distance`` method in the ``Point`` class to calculate the distance between two points.
    ~~~~
@@ -216,6 +219,7 @@ Multiple Classes Practice
 
 
 .. activecode:: mult_class_item_order_line_order_practice_ac
+   :autograde: unittest
 
    Given the ``Item`` and ``OrderLine`` classes shown below, write an ``Order`` class with an ``__init__`` method that takes a list of ``OrderLine`` objects and a ``total`` method that returns the total for the order.
    ~~~~
@@ -287,6 +291,7 @@ Multiple Classes Practice
            return sum
 
 .. activecode:: mult_class_card_and_deck_practice_ac
+   :autograde: unittest
 
    Write a ``shuffle`` method in the ``Deck`` class that splits the list of cards in half and creates a new list of cards with a card from the first list followed by a card from the second list.  For example, if the list of cards was {a, b, c, d, e, f} it would reset the list to {a, d, b, e, c, f}.  If the list of cards was {a, b, c, d, e} it would reset the list to {a, c, b, d, e}.
    ~~~~

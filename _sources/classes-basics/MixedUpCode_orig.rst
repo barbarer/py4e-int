@@ -29,6 +29,7 @@ Mixed-Up Code Exercises
         return name + " " + code #paired
 
 .. activecode:: Classes_Basic_Airport_ac
+   :autograde: unittest
 
    Write a class ``Airport`` with an ``__init__`` method that takes a ``name`` and ``code`` as strings and initializes these attributes in the current object.
    Then define the ``__str__`` method to return the ``name code``.  For example, ``print(a)`` when ``a = Airport("Detroit", "DTW")`` would print ``Detroit DTW``.
@@ -79,6 +80,7 @@ Mixed-Up Code Exercises
 
 
 .. activecode:: Classes_Basic_Song_ac
+   :autograde: unittest
 
    Write a class ``Song`` with an ``__init__`` method that takes a ``title`` as a string and ``len`` as a number and initializes these attributes in the current object.
    Then define the ``__str__`` method to return the ``title, len``.  For example, ``print(s)`` when ``s = Song('Respect',150)`` would print "Respect, 150".
@@ -133,6 +135,7 @@ Mixed-Up Code Exercises
         return self."Meow" #paired
 
 .. activecode:: Classes_Basic_Cat_ac
+   :autograde: unittest
 
    Write a class Cat with an ``__init__`` method that takes
    ``name`` as a string and ``age`` as a number and initializes these attributes in the current object.  Next create the ``__str__`` method that returns
@@ -191,6 +194,7 @@ Mixed-Up Code Exercises
             self.balance += self.amount #paired
 
 .. activecode:: Classes_Basic_Account_ac
+   :autograde: unittest
 
    Create a class ``Account`` with an ``__init__`` method that takes ``id`` and ``balance`` as numbers. Then create a ``__str__`` method that returns "id, balance". Next create a ``deposit`` method takes ``amount`` as a number and adds that to the ``balance``.  For example,
    if ``a = Account(32, 100)`` and ``a.deposit(50)`` is executed, ``print(a)`` should print "32, 150".
@@ -246,6 +250,7 @@ Mixed-Up Code Exercises
             return fortunes[index] #paired
 
 .. activecode:: Classes_Basic_FortuneTeller_ac
+   :autograde: unittest
 
    Write a class ``FortuneTeller`` with an ``__init__`` method that takes a list of fortunes as strings and saves that as an attribute.  Then create a ``tell_fortune`` method that returns one of the fortunes in the list at random.
    ~~~~

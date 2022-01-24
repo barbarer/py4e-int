@@ -9,9 +9,9 @@ Functions with Tuples and Dictionaries Write Code Questions
                 :practice: T
                 :autograde: unittest
 
-                Write a function called ``index_tup`` that takes in a tuple of strings, ``tup_strings``, as a parameter and returns a string consisting of the characters at the 
-                zeroth index from the first string, the first index from the second string, the second index from the third string, etc. Add on to the string until the length 
-                of the current word is less than or equal to the current index. For example, ``index_tup(("peppermint", "athlete", "business", "everyone", "rhyme", "athlete"))`` 
+                Write a function called ``index_tup`` that takes in a tuple of strings, ``tup_strings``, as a parameter and returns a string consisting of the characters at the
+                zeroth index from the first string, the first index from the second string, the second index from the third string, etc. Add on to the string until the length
+                of the current word is less than or equal to the current index. For example, ``index_tup(("peppermint", "athlete", "business", "everyone", "rhyme", "athlete"))``
                 should return ``ptsret``.
                 ~~~~
                 def index_tup(tup):
@@ -35,9 +35,9 @@ Functions with Tuples and Dictionaries Write Code Questions
             .. activecode:: funct-tups-dicts-writecode1a
                 :optional:
 
-                Write a function called ``index_tup`` that takes in a tuple of strings, ``tup_strings``, as a parameter and returns a string consisting of the characters at the 
-                zeroth index from the first string, the first index from the second string, the second index from the third string, etc. Add on to the string until the length 
-                of the current word is less than or equal to the current index. For example, ``index_tup(("peppermint", "athlete", "business", "everyone", "rhyme", "athlete"))`` 
+                Write a function called ``index_tup`` that takes in a tuple of strings, ``tup_strings``, as a parameter and returns a string consisting of the characters at the
+                zeroth index from the first string, the first index from the second string, the second index from the third string, etc. Add on to the string until the length
+                of the current word is less than or equal to the current index. For example, ``index_tup(("peppermint", "athlete", "business", "everyone", "rhyme", "athlete"))``
                 should return ``ptsret``.
                 ~~~~
 
@@ -45,7 +45,7 @@ Functions with Tuples and Dictionaries Write Code Questions
                     str1 = ''
                     index = 0
                     for word in tup:
-                        if len(word) > index: 
+                        if len(word) > index:
                             str1 += ((word[index]))
                             index += 1
                         else:
@@ -57,11 +57,11 @@ Functions with Tuples and Dictionaries Write Code Questions
         :practice: T
         :autograde: unittest
 
-        Write a function called ``list_tups_into_dict`` that takes in a list of tuples, ``list_of_tups`` as a parameter and returns a dictionary with the first 
+        Write a function called ``list_tups_into_dict`` that takes in a list of tuples, ``list_of_tups`` as a parameter and returns a dictionary with the first
         index of the tuples as the keys and the second index of the tuples as the values. For example, ``list_tups_into_dict([('red', 3), ('blue', 2)])`` should return ``{'red': 3, 'blue':2}``.
         ~~~~
         def list_tups_into_dict(list_of_tups):
-            # write code here 
+            # write code here
 
 
         ====
@@ -110,7 +110,7 @@ Functions with Tuples and Dictionaries Write Code Questions
 
             .. activecode:: funct-tups-dicts-writecode3a
                 :optional:
-                
+
                 Write a function ``squared_converter`` that takes in a list of numbers, ``num_list``, and returns a dictionary with the numbers as keys
                 and their squared value as values.  For example, ``squared_converter([1,2])`` should return ``{1: 1, 2: 4}``.
                 ~~~~
@@ -178,6 +178,7 @@ Functions with Tuples and Dictionaries Write Code Questions
 
             .. activecode:: funct-tups-dicts-writecode5a
                 :optional:
+                :autograde: unittest
 
                 Write a function ``triple_values`` that takes in a list of numbers, ``num_list``,
                 which adds every number in the list to a dictionary as the key and adds three times the number as the value. Then, change every
@@ -214,7 +215,7 @@ Functions with Tuples and Dictionaries Write Code Questions
     .. activecode:: funct-tups-dicts-writecode6
         :practice: T
         :autograde: unittest
-        
+
         Write a function ``count_chars`` that takes a string, ``str1``, and returns a list of tuples ordered by the number of times each character appears in the string in descending order.  For example, ``count_chars("babby")`` should return ``[('b': 3), ('a':1), ('y': 1)]``.
         ~~~~
 

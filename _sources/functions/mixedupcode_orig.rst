@@ -22,6 +22,7 @@ Mixed-up Code Questions
 
 
 .. activecode:: functEx1muc_v2_ac
+    :autograde: unittest
 
     Write  a function ``len_str`` that uses a built-in function to return the number of characters in the passed string ``str``. Then print the result of a call to ``len_str`` passing in the string ``I love Python!``.  It should return 14.
     ~~~~
@@ -60,6 +61,7 @@ Mixed-up Code Questions
         return BMImetric
 
 .. activecode:: functEx2muc_ac
+    :autograde: unittest
 
     Write a function called ``bmi`` that takes ``height`` (in inches) and ``weight`` (in pounds) as parameters. It should calculate the ''bmi'' by squaring the height then dividing the weight by the height squared and then converting to metric by multiplying by 703.
     ~~~~
@@ -104,6 +106,7 @@ Mixed-up Code Questions
         return a + b + c
 
 .. activecode:: functEx3muc_ac
+    :autograde: unittest
 
     Write two functions. The first is ``square(x)``, which returns ``x`` squared. The second function is ``sum_of_squares(x,y,z)``, which returns the sum of the squares of three numbers ``z``, ``y``, and ``z``.  For example, ``square(2)`` should return ``4`` and ``sum_of_squares(2, 4, 6)`` should return 56.
     ~~~~
@@ -145,6 +148,7 @@ Mixed-up Code Questions
 
 
 .. activecode:: functEx4muc_v5_ac
+    :autograde: unittest
 
     Write a function called ``average(num1, num2)``, which finds the average of two numbers ``num1`` and ``num2``.  For example, ``average(10,4)`` should return ``7.0``.
     ~~~~
@@ -188,6 +192,7 @@ Mixed-up Code Questions
 
 
 .. activecode:: functEx5muc_v2_ac
+    :autograde: unittest
 
     Write a function called ``swapValues(val1, val2)`` , which takes two values and swaps them. It then returns val1.  For example, ``swapValues(8,2)`` should return ``2``
     ~~~~
@@ -237,6 +242,7 @@ Mixed-up Code Questions
 
 
 .. activecode:: functEx6muc_ac
+    :autograde: unittest
 
     Write a function called ``get_avg_drop_lowest(num_list)`` which returns the average of a list of numbers, ignoring the lowest value. However, if the list only contains one value, then return that. For example, ``get_avg_drop_lowest([90])`` returns ``90``, ``get_avg_drop_lowest([90, 10])`` also returns ``90``, and ``get_avg_drop_lowest([90, 10, 0])`` returns ``50``.
     ~~~~
@@ -253,7 +259,7 @@ Mixed-up Code Questions
             self.assertEqual(get_avg_drop_lowest([80,10]), 80, "get_avg_drop_lowest([80,10])")
             self.assertEqual(get_avg_drop_lowest([74,25,6]), 49.5, "get_avg_drop_lowest([74,25,6])")
 
-   myTests().main()
+    myTests().main()
 
 .. parsonsprob:: functEx7muc_v2
     :numbered: left
@@ -279,6 +285,7 @@ Mixed-up Code Questions
 
 
 .. activecode:: functEx7muc_v2_ac
+    :autograde: unittest
 
     Write a function called ``compare(p1, p2)`` which returns whichever is greater of its two parameters.
     ~~~~
@@ -349,6 +356,7 @@ Mixed-up Code Questions
 
 
 .. activecode:: functEx8muc_ac
+    :autograde: unittest
 
     You are driving a little too fast, and a police officer stops you. Write a function called ``caught_speeding(speed, is_birthday)`` which returns the type of ticket the police officer will give you. If ``speed`` is 60 or less, the result is ``"no ticket"``. If speed is between 61 and 80 inclusive, the result is ``"minor ticket"``. If speed is 81 or more, the result is ``"major ticket"``. All this is true, unless it is your birthday -- on that day, your speed can be 5 higher in all cases.
     ~~~~
@@ -404,6 +412,7 @@ Mixed-up Code Questions
             return 'too high'
 
 .. activecode:: functEx9muc_ac
+    :autograde: unittest
 
     Write  a ``check_guess(guess, target)`` function which computes if a ``guess`` is too low, too high, or correct compared to the ``target``.
     Return ``'too low'`` if ``guess`` is less than ``target``, ``'correct'`` if they are equal, and
@@ -463,6 +472,7 @@ Mixed-up Code Questions
                 return '7:00'
 
 .. activecode:: functEx10muc_ac
+    :autograde: unittest
 
     Write the function ``alarm_clock``. It will be given a day of the week encoded as 0 = Sun, 1 = Mon, 2 = Tue, ...6 = Sat, and a boolean indicating if we are on vacation, and will return a string indicating when the alarm clock should ring. If we are on vacation and it is a weekend (0 = Saturday or 6 = Sunday), it should return ``"off"``, and otherwise return ``"10:00"``. If we are not on vacation and it is a weekend, it should return ``"10:00"``, and otherwise return ``"7:00"``.
     ~~~~
@@ -514,6 +524,7 @@ Mixed-up Code Questions
 
 
 .. activecode:: functEx11muc_ac
+    :autograde: unittest
 
     First write a function called  ``square_it`` which squares the parameter ``n`` and returns the result. Then, write a function called ``cube_it`` which cubes the parameter ``n`` and returns the result.
     ~~~~
@@ -568,6 +579,7 @@ Mixed-up Code Questions
 
 
 .. activecode:: functEx12muc_v2_ac
+    :autograde: unittest
 
     Write a function called ``distance`` which returns the distance between two coordinates using
     the distance formula: d = √((x_2 - x_1)² + (y_2 - y_1)²).  Use two functions in Python's math module (``math.pow``, ``math.sqrt``).

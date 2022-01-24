@@ -6,7 +6,7 @@ Write Code Questions
         .. tab:: Question
 
             .. activecode:: tup_writecode1q
-                :nocodelens:
+                :autograde: unittest
 
                 Write a function called ``tup_creation`` that takes in two integer parameter, ``start`` and ``end``, and returns a tuple with all the values between
                 ``start`` (inclusive) and ``end`` (non-inclusive). For example, ``tup_creation(-8,3)`` would return  ``(-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2)`` and ``tup_creation(10,3)`` would
@@ -54,7 +54,7 @@ Write Code Questions
 #.
     .. activecode:: tup_writecode2
         :practice: T
-        :nocodelens:
+        :autograde: unittest
 
         Write a function called ``check_third_element`` that takes in a list of tuples, ``lst_tups`` as a parameter. Tuples must have at least 3 items.
         Return a new list that contains the third element of each tuple. For example, ``check_third_element([(1,2.2,3.3),(-1,-2,-3),(0,0,0)])``
@@ -84,7 +84,7 @@ Write Code Questions
 
             .. activecode:: tup_writecode3q
                 :practice: T
-                :nocodelens:
+                :autograde: unittest
 
                 Write a function called ``find_majors`` that takes in a dictionary as a parameter, ``majors``, that has a major code as the key and
                 the name of a major as the value. Return a list of tuples of size two, in which the first element of the tuple is the major code and
@@ -111,7 +111,6 @@ Write Code Questions
         .. tab:: Answer
 
             .. activecode:: tup_writecode3a
-                :nocodelens:
                 :optional:
 
                 Write a function called ``find_majors`` that takes in a dictionary as a parameter, ``majors``, that has a major code as the key and
@@ -131,7 +130,7 @@ Write Code Questions
 #.
     .. activecode:: tup_writecode4
         :practice: T
-        :nocodelens:
+        :autograde: unittest
 
         Create a function called ``interchange_values`` that takes in a tuple with two values as a parameter, ``t`` and returns a tuple which interchanges the values of ``t``.
         For example, ``interchange_values(("LeBron", "James"))`` would return ``("James", "LeBron")``.
@@ -157,7 +156,7 @@ Write Code Questions
         .. tab:: Question
 
             .. activecode:: tup_writecode5q
-                :nocodelens:
+                :autograde: unittest
                 :practice: T
 
                 Write a function called ``dict_transform`` that takes in one dictionary parameter, ``dict``, which returns a tuple of tuples. The inner tuple should
@@ -182,7 +181,6 @@ Write Code Questions
         .. tab:: Answer
 
             .. activecode:: tup_writecode5a
-                :nocodelens:
                 :optional:
 
                 Write a function called ``dict_transform`` that takes in one dictionary parameter, ``dict``, which returns a tuple of tuples. The inner tuple should
@@ -201,7 +199,7 @@ Write Code Questions
 #.
     .. activecode:: tup_writecode6
         :practice: T
-        :nocodelens:
+        :autograde: unittest
 
         Write a function called ``my_data`` that takes in an integer, ``int_value`` as a parameter. Return tuple that contains one elements,
         the integer in the parameter. For example, ``my_data(99)`` would return ``(99,)``.
@@ -227,7 +225,7 @@ Write Code Questions
 
             .. activecode:: tup_writecode7q_v2
                 :practice: T
-                :nocodelens:
+                :autograde: unittest
 
                 Write the function ``mod_tuples`` which takes a list of tuples, ``tup_list`` and returns a copy where the
                 last element in each tuple is modified to be 100. For example, ``mod_tuples([(3,4), (20, -3, 2)])`` returns
@@ -252,7 +250,6 @@ Write Code Questions
         .. tab:: Answer
 
             .. activecode:: tup_writecode7a
-                :nocodelens:
                 :optional:
 
                 Write the function ``mod_tuples`` which takes a list of tuples, ``tup_list`` and returns a copy where the
@@ -268,7 +265,7 @@ Write Code Questions
 #.
     .. activecode:: tup_writecode8
         :practice: T
-        :nocodelens:
+        :autograde: unittest
 
         Write a function called ``info`` with the following required parameters: name, age, birth_year, year_in_college, and hometown. The
         function should return a tuple that contains all the passed information. For example, ``info('Troy', 24, 1996, 'Sophomore', 'Ann Arbor')``
@@ -294,7 +291,7 @@ Write Code Questions
 
             .. activecode:: tup_writecode9q
                 :practice: T
-                :nocodelens:
+                :autograde: unittest
 
                 Write a function ``list_link`` that accepts two lists, ``lst1`` and ``lst2`` and returns a dictionary
                 with the first list as the key and the second list as the value. For example,
@@ -316,7 +313,6 @@ Write Code Questions
         .. tab:: Answer
 
             .. activecode:: tup_writecode9a
-                :nocodelens:
                 :optional:
 
                 Write a function ``list_link`` that accepts two lists, ``lst1`` and ``lst2`` and returns a dictionary
@@ -342,7 +338,7 @@ Write Code Questions
 
 #.
     .. activecode:: tup_writecode10
-        :nocodelens:
+        :autograde: unittest
         :practice: T
 
         Create a function ``tuplize()`` that accepts two inputs and returns a tuple containing those inputs in order.

@@ -13,6 +13,7 @@ Some of the questions use the following data file.
         .. tab:: Question
 
             .. activecode:: regex_writecode1q
+                :autograde: unittest
 
                 Modify the ### to find sequences with one uppercase letter
                 followed by an underscore followed by one or more lowercase letters.
@@ -42,6 +43,7 @@ Some of the questions use the following data file.
 
             .. activecode:: regex_writecode1a
                 :optional:
+                :autograde: unittest
 
                 Modify the ### to find sequences with one uppercase letter
                 followed by an underscore followed by one or more lowercase letters.
@@ -73,6 +75,7 @@ Some of the questions use the following data file.
 
 #.
     .. activecode:: regex_writecode2
+        :autograde: unittest
 
         Complete the code below to check if a string begins with a word character. If it does,
         return "Found a match!", if not return "Not matched!" Replace the ### with your code.
@@ -105,6 +108,7 @@ Some of the questions use the following data file.
         .. tab:: Question
 
             .. activecode:: regex_writecode3q
+                :autograde: unittest
 
                 Define the function "match_four" that takes a string and uses regex to return True if the
                 string starts with 4 followed by zero to many other digits and False if it does not.
@@ -125,6 +129,7 @@ Some of the questions use the following data file.
 
             .. activecode:: regex_writecode3a
                 :optional:
+                :autograde: unittest
 
 
                 Define the function "match_four" that takes a string and uses regex to return True if the
@@ -132,7 +137,7 @@ Some of the questions use the following data file.
                 ~~~~
                 # First import the regex library (re), then define the match_four function.
                 # Within the function, create the regex pattern to match if the string starts with '4'
-                # Use an if statement to check for a match in the string. 
+                # Use an if statement to check for a match in the string.
                 # Return true if the match is made, return false if not.
                 import re
                 def match_four(string):
@@ -155,6 +160,7 @@ Some of the questions use the following data file.
 
 #.
     .. activecode:: regex_writecode4
+        :autograde: unittest
 
         Define the function "match_cat" that uses regex to return True if a
         string matches cat, Cat, CAT, cAt, etc and False if it does not.
@@ -179,6 +185,7 @@ Some of the questions use the following data file.
         .. tab:: Question
 
             .. activecode:: regex_writecode5q
+                :autograde: unittest
 
                 Define the function ``match_z`` to match a word containing a lowercase letter ``z``.
                 Return ``"Found a match!"`` if ``z`` is in the string and ``"Not matched!"`` if
@@ -204,13 +211,14 @@ Some of the questions use the following data file.
 
             .. activecode:: regex_writecode5a
                 :optional:
+                :autograde: unittest
 
                 Define the function ``match_z`` to match a word containing a lowercase letter ``z``.
                 Return ``"Found a match!"`` if ``z`` is in the string and ``"Not matched!"`` if
                 there is not a ``z``.
                 ~~~~
                 # In the function definition, create a regex pattern to find 'z'
-                # Search the string with that pattern using re.search() 
+                # Search the string with that pattern using re.search()
                 # If found, return "Found a match!"
                 # Otherwise, return "Not matched!"
                 import re
@@ -235,6 +243,7 @@ Some of the questions use the following data file.
 
 #.
     .. activecode:: regex_writecode6
+        :autograde: unittest
 
         Define the function matchMiddle_z to match a word containing the letter z,
         but not at the beginning or end of a word. Return "Found a match!" if z is
@@ -264,6 +273,7 @@ Some of the questions use the following data file.
             .. activecode:: regex_writecode7q
                 :practice: T
                 :datafile: mbox-short4.txt
+                :autograde: unittest
 
                 Finish the code below to find all of the emails in "mbox-short4.txt" and add them to a list and return the list.  An email starts with an alphanumeric character followed by one or more non white space characters and then "@" followed by one or more non white space characters with one alphabetic character at the end.
                 ~~~~
@@ -282,12 +292,13 @@ Some of the questions use the following data file.
             .. activecode:: regex_writecode7a
                 :datafile: mbox-short4.txt
                 :optional:
+                :autograde: unittest
 
                 Finish the code below to find all of the emails in "mbox-short4.txt" and add them to a list and return the list.  An email starts with an alphanumeric character followed by one or more non white space characters and then "@" followed by one or more non white space characters with one alphabetic character at the end.
                 ~~~~
-                # First import regex (re) and create a handle for the file. 
+                # First import regex (re) and create a handle for the file.
                 # Initialize a list to hold the emails.
-                # Iterate through each line in the file, using rstrip() to remove whitespace and findall() with a regex expression to find the emails. 
+                # Iterate through each line in the file, using rstrip() to remove whitespace and findall() with a regex expression to find the emails.
                 # Add each email to the list, individually
                 # Print the email list after each loop has completed.
                 import re
@@ -310,6 +321,7 @@ Some of the questions use the following data file.
 #.
     .. activecode:: regex_writecode8
         :available_files: mbox-short.txt
+        :autograde: unittest
 
         Using "mbox-short4.txt", extract the email domains from each email address
         using regex and add them to the list "domains". For the email noname@umich.edu,
@@ -335,6 +347,7 @@ Some of the questions use the following data file.
             .. activecode:: regex_writecode9q
                 :practice: T
                 :available_files: mbox-short4.txt
+                :autograde: unittest
 
                 Using "mbox-short4.txt", extract the number next to each email (the
                 amount of emails each person has sent) using a regex equation, and
@@ -356,6 +369,7 @@ Some of the questions use the following data file.
             .. activecode:: regex_writecode9a
                 :available_files: mbox-short4.txt
                 :optional:
+                :autograde: unittest
 
                 Using "mbox-short4.txt", extract the number next to each email (the
                 amount of emails each person has sent) using a regex equation, and
@@ -363,8 +377,8 @@ Some of the questions use the following data file.
                 'total_emails'. Use the () character to capture and return the number.
                 ~~~~
                 # Import regex (re), create a variable for the total number of emails, and create a handle to access the file.
-                # Iterate through lines in the file, remove trailing whitespace with rstrip(), and create a regex expression to use with findall() to return a list of email matches. 
-                # Finally, increment the total_emails variable for each email in the list 
+                # Iterate through lines in the file, remove trailing whitespace with rstrip(), and create a regex expression to use with findall() to return a list of email matches.
+                # Finally, increment the total_emails variable for each email in the list
                 # Print the variable after each loop has completed.
                 import re
                 total_emails = 0
@@ -388,6 +402,7 @@ Some of the questions use the following data file.
 #.
     .. activecode:: regex_writecode10
         :available_files: mbox-short4.txt
+        :autograde: unittest
 
         Using "mbox-short4.txt", extract the usernames from each email address
         using regex and add them to the list "usernames". For the email noname@umich.edu,

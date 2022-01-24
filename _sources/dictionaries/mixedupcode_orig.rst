@@ -6,12 +6,12 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function ``letter_dict`` that takes in ``string`` as a parameter and returns a dictionary containing the amount of times letters appear in the given ``string``. 
+    Create a function ``letter_dict`` that takes in ``string`` as a parameter and returns a dictionary containing the amount of times letters appear in the given ``string``.
     For example, ``letter_dict('It is')`` should return ``{'i': 2, 't': 1, 's': 1}``. (Note: Pretend the ``string`` doesn't have any punctuation besides spaces.)
     -----
     def letter_dict(string):
     =====
-        d = dict() 
+        d = dict()
     =====
         d = dictionary() #paired
     =====
@@ -39,8 +39,9 @@ Mixed-Up Code Questions
 
 
 .. activecode:: dictionaries_mixedupcode_question10_1_ac
+    :autograde: unittest
 
-    Write a function ``letter_dict`` that takes in ``string`` as a parameter and returns a dictionary containing the amount of times letters appear in the given ``string``. 
+    Write a function ``letter_dict`` that takes in ``string`` as a parameter and returns a dictionary containing the amount of times letters appear in the given ``string``.
     For example, ``letter_dict('It is')`` should return ``{'i': 2, 't': 1, 's': 1}``. (Note: Pretend the ``string`` doesn't have any punctuation besides spaces.)
     ~~~~
 
@@ -65,7 +66,7 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function ``word_dict`` that takes in ``string`` as a parameter and returns a dictionary containing the amount of times a word appears in the given ``string``. 
+    Create a function ``word_dict`` that takes in ``string`` as a parameter and returns a dictionary containing the amount of times a word appears in the given ``string``.
     For example, ``word_dict('HELLO heLlo there  ')`` should return ``{'hello': 2, 'there': 1}``. (Note: Pretend the ``string`` doesn't have any punctuation besides spaces.)
     -----
     def word_dict(string):
@@ -84,8 +85,9 @@ Mixed-Up Code Questions
 
 
 .. activecode:: dictionaries_mixedupcode_question10_2_ac
+    :autograde: unittest
 
-    Write a function ``word_dict`` that takes in ``string`` as a parameter and returns a dictionary containing the amount of times a word appears in the given ``string``. 
+    Write a function ``word_dict`` that takes in ``string`` as a parameter and returns a dictionary containing the amount of times a word appears in the given ``string``.
     For example, ``word_dict('HELLO heLlo there  ')`` should return ``{'hello': 2, 'there': 1}``. (Note: Pretend the ``string`` doesn't have any punctuation besides spaces.)
     ~~~~
 
@@ -109,8 +111,8 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function ``a_counter`` that takes in ``string`` as a parameter, creates a ``dictionary``, and returns the amount of a's in the given ``string`` using the ``dictionary``. 
-    For example, ``a_counter('Alice and Apples')`` should return ``3``. 
+    Create a function ``a_counter`` that takes in ``string`` as a parameter, creates a ``dictionary``, and returns the amount of a's in the given ``string`` using the ``dictionary``.
+    For example, ``a_counter('Alice and Apples')`` should return ``3``.
     -----
     def a_counter(string):
     =====
@@ -129,9 +131,10 @@ Mixed-Up Code Questions
         return dictionary['a'] #paired
 
 .. activecode:: dictionaries_mixedupcode_question10_3_ac
+    :autograde: unittest
 
-    Write a function ``a_counter`` that takes in ``string`` as a parameter, creates a ``dictionary``, and returns the amount of a's in the given ``string`` using the ``dictionary``. 
-    For example, ``a_counter('Alice and Apples')`` should return ``3``. 
+    Write a function ``a_counter`` that takes in ``string`` as a parameter, creates a ``dictionary``, and returns the amount of a's in the given ``string`` using the ``dictionary``.
+    For example, ``a_counter('Alice and Apples')`` should return ``3``.
     ~~~~
 
 
@@ -152,8 +155,8 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``sales_tax`` that takes in a ``list_of_costs`` (floating point values) as a parameter and 
-    returns a dictionary with the original costs as keys and the final costs after the sales tax of 6 percent as values. 
+    Create a function called ``sales_tax`` that takes in a ``list_of_costs`` (floating point values) as a parameter and
+    returns a dictionary with the original costs as keys and the final costs after the sales tax of 6 percent as values.
     The final costs should be rounded to the hundredths place. For example, ``sales_tax([1.25, 8, 5])`` returns ``{1.25: 1.33, 8: 8.48, 5: 5.3}``.
     -----
     def sales_tax(list_of_costs):
@@ -172,9 +175,10 @@ Mixed-Up Code Questions
 
 
 .. activecode:: dictionaries_mixedupcode_question10_4_ac
+    :autograde: unittest
 
-    Write a function called ``sales_tax`` that takes in a ``list_of_costs`` (floating point values) as a parameter and 
-    returns a dictionary with the original costs as keys and the final costs after the sales tax of 6 percent as values. 
+    Write a function called ``sales_tax`` that takes in a ``list_of_costs`` (floating point values) as a parameter and
+    returns a dictionary with the original costs as keys and the final costs after the sales tax of 6 percent as values.
     The final costs should be rounded to the hundredths place. For example, ``sales_tax([1.25, 8, 5])`` returns ``{1.25: 1.33, 8: 8.48, 5: 5.3}``.
     ~~~~
 
@@ -198,8 +202,8 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``discount_and_tax`` that takes in a ``list_of_costs`` (floating point values) and a ``discount`` percentage as parameters and 
-    returns a dictionary with the original costs as keys and the final costs after applying the ``discount`` (first) and the sales tax of 6 percent (second) as values. 
+    Create a function called ``discount_and_tax`` that takes in a ``list_of_costs`` (floating point values) and a ``discount`` percentage as parameters and
+    returns a dictionary with the original costs as keys and the final costs after applying the ``discount`` (first) and the sales tax of 6 percent (second) as values.
     The final costs should be rounded to the hundredths place. For example, ``discount_and_tax([1.25, 8, 5], 20)`` should return ``{1.25: 1.06, 8: 6.78, 5: 4.24}``.
     -----
     def discount_and_tax(list_of_costs, discount):
@@ -220,9 +224,10 @@ Mixed-Up Code Questions
 
 
 .. activecode:: dictionaries_mixedupcode_question10_5_ac
+    :autograde: unittest
 
-    Write a function called ``discount_and_tax`` that takes in a ``list_of_costs`` (floating point values) and a ``discount`` percentage as parameters and 
-    returns a dictionary with the original costs as keys and the final costs after applying the ``discount`` (first) and the sales tax of 6 percent (second) as values. 
+    Write a function called ``discount_and_tax`` that takes in a ``list_of_costs`` (floating point values) and a ``discount`` percentage as parameters and
+    returns a dictionary with the original costs as keys and the final costs after applying the ``discount`` (first) and the sales tax of 6 percent (second) as values.
     The final costs should be rounded to the hundredths place. For example, ``discount_and_tax([1.25, 8, 5], 20)`` should return ``{1.25: 1.06, 8: 6.78, 5: 4.24}``.
     ~~~~
 
@@ -247,7 +252,7 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``create_dictionary`` that takes in ``keys_list`` and ``values_list`` as parameters 
+    Create a function called ``create_dictionary`` that takes in ``keys_list`` and ``values_list`` as parameters
     and returns a dictionary with the ``keys_list`` as keys and the ``values_list`` as values. Assume ``keys_list`` and ``values_list`` are the same length, and
     they only contain numbers and strings. For example, ``create_dictionary(['one', 'two', 'three'], [1, 2, 3])`` should return ``{'one': 1, 'two': 2, 'three': 3}``.
     -----
@@ -266,8 +271,9 @@ Mixed-Up Code Questions
         return combination
 
 .. activecode:: dictionaries_mixedupcode_question10_6_ac
+    :autograde: unittest
 
-    Write a function called ``create_dictionary`` that takes in ``keys_list`` and ``values_list`` as parameters 
+    Write a function called ``create_dictionary`` that takes in ``keys_list`` and ``values_list`` as parameters
     and returns a dictionary with the ``keys_list`` as keys and the ``values_list`` as values. Assume ``keys_list`` and ``values_list`` are the same length, and
     they only contain numbers and strings. For example, ``create_dictionary(['one', 'two', 'three'], [1, 2, 3])`` should return ``{'one': 1, 'two': 2, 'three': 3}``.
     ~~~~
@@ -291,7 +297,7 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``lowest_value_keys`` that takes in ``dictionary`` as a parameter and returns a list of the keys containing the lowest value of all the keys in the dictionary. 
+    Create a function called ``lowest_value_keys`` that takes in ``dictionary`` as a parameter and returns a list of the keys containing the lowest value of all the keys in the dictionary.
     Assume all values of the ``dictionary`` are integers or floats. For example, ``lowest_value_keys({'pizza': 11, 'fruits': 0, 'toys': 0, 'rice bags': 1.9, 'ice': 1.8})`` should return ``['fruits', 'toys']``.
     -----
     def lowest_value_keys(dictionary):
@@ -317,8 +323,9 @@ Mixed-Up Code Questions
         return keys_list
 
 .. activecode:: dictionaries_mixedupcode_question10_7_ac
+    :autograde: unittest
 
-    Write a function called ``lowest_value_keys`` that takes in ``dictionary`` as a parameter and returns a list of the keys containing the lowest value of all the keys in the dictionary. 
+    Write a function called ``lowest_value_keys`` that takes in ``dictionary`` as a parameter and returns a list of the keys containing the lowest value of all the keys in the dictionary.
     Assume all values of the ``dictionary`` are integers or floats. For example, ``lowest_value_keys({'pizza': 11, 'fruits': 0, 'toys': 0, 'rice bags': 1.9, 'ice': 1.8})`` should return ``['fruits', 'toys']``.
     ~~~~
 
@@ -344,7 +351,7 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``duplicated_data`` that takes in ``dictionary1`` and ``dictionary2`` as parameters and returns a dictionary with key-value pairs that are 
+    Create a function called ``duplicated_data`` that takes in ``dictionary1`` and ``dictionary2`` as parameters and returns a dictionary with key-value pairs that are
     in both dictionaries. For example, ``duplicated_data({'Ten': 10, 'Twenty' : 20, 'Thirty' : 30}, {'Ten': 10, 'Twenty' : 20})`` should return ``{'Ten': 10, 'Twenty': 20}``.
     -----
     def duplicated_data(dictionary1, dictionary2):
@@ -367,8 +374,9 @@ Mixed-Up Code Questions
 
 
 .. activecode:: dictionaries_mixedupcode_question10_8_ac
+    :autograde: unittest
 
-    Write a function called ``duplicated_data`` that takes in ``dictionary1`` and ``dictionary2`` as parameters and returns a dictionary with key-value pairs that are 
+    Write a function called ``duplicated_data`` that takes in ``dictionary1`` and ``dictionary2`` as parameters and returns a dictionary with key-value pairs that are
     in both dictionaries. For example, ``duplicated_data({'Ten': 10, 'Twenty' : 20, 'Thirty' : 30}, {'Ten': 10, 'Twenty' : 20})`` should return ``{'Ten': 10, 'Twenty': 20}``.
     ~~~~
 
@@ -392,8 +400,8 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``total_price`` that takes in ``quantity_dict`` and ``price_dict`` and returns the total cost of all items. 
-    Assume keys in both dictionaries are the same, and the values in ``quantity_dict`` are integers. 
+    Create a function called ``total_price`` that takes in ``quantity_dict`` and ``price_dict`` and returns the total cost of all items.
+    Assume keys in both dictionaries are the same, and the values in ``quantity_dict`` are integers.
     For example, ``total_price({'fries': 7, 'hot dogs': 9, 'soda': 9}, {'fries': 1.5, 'hot dogs': 1, 'soda': 1.1})`` should return ``29.4``.
     -----
     def total_price(quantity_dict, price_dict):
@@ -404,7 +412,7 @@ Mixed-Up Code Questions
     =====
         for value in quantity_dict.values(): #paired
     =====
-            total_price += quantity_dict.get(key) * price_dict.get(key) 
+            total_price += quantity_dict.get(key) * price_dict.get(key)
     =====
             total_price += quantity_dict[key] + price_dict[key] #paired
     =====
@@ -412,9 +420,10 @@ Mixed-Up Code Questions
 
 
 .. activecode:: dictionaries_mixedupcode_question10_9_ac
+    :autograde: unittest
 
-    Write a function called ``total_price`` that takes in ``quantity_dict`` and ``price_dict`` and returns the total cost of all items. 
-    Assume keys in both dictionaries are the same, and the values in ``quantity_dict`` are integers. 
+    Write a function called ``total_price`` that takes in ``quantity_dict`` and ``price_dict`` and returns the total cost of all items.
+    Assume keys in both dictionaries are the same, and the values in ``quantity_dict`` are integers.
     For example, ``total_price({'fries': 7, 'hot dogs': 9, 'soda': 9}, {'fries': 1.5, 'hot dogs': 1, 'soda': 1.1})`` should return ``29.4``.
     ~~~~
 
@@ -437,8 +446,8 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``scale_recipe`` that takes in ``quantity_dict`` and ``scale_factor`` as parameters and 
-    returns a dictionary with ``quantity_dict`` scaled by the ``scale_factor``. 
+    Create a function called ``scale_recipe`` that takes in ``quantity_dict`` and ``scale_factor`` as parameters and
+    returns a dictionary with ``quantity_dict`` scaled by the ``scale_factor``.
     For example, ``scale_recipe({'fries': 7, 'hot dogs': 9, 'soda': 8}, 4)`` should return ``{'fries': 28, 'hot dogs': 36, 'soda': 32}``.
     -----
     def scale_recipe(quantity_dict, scale_factor):
@@ -452,9 +461,10 @@ Mixed-Up Code Questions
         return quantity_dict
 
 .. activecode:: dictionaries_mixedupcode_question10_10_ac
+    :autograde: unittest
 
-    Create a function called ``scale_recipe`` that takes in ``quantity_dict`` and ``scale_factor`` as parameters and 
-    returns a dictionary with ``quantity_dict`` scaled by the ``scale_factor``. 
+    Create a function called ``scale_recipe`` that takes in ``quantity_dict`` and ``scale_factor`` as parameters and
+    returns a dictionary with ``quantity_dict`` scaled by the ``scale_factor``.
     For example, ``scale_recipe({'fries': 7, 'hot dogs': 9, 'soda': 8}, 4)`` should return ``{'fries': 28, 'hot dogs': 36, 'soda': 32}``.
     ~~~~
 

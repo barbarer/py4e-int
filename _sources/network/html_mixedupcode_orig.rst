@@ -6,9 +6,9 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in 
-    the ``body`` tag, and a description of your favorite activites in the ``p`` tag in the ``body`` tag, also. For example, if the name was "Melody" and 
-    the description of the favorite activities was "I like to swim.", the tab would show "Melody", "Favorite Activites" would appear as bold on the 
+    Create an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in
+    the ``body`` tag, and a description of your favorite activites in the ``p`` tag in the ``body`` tag, also. For example, if the name was "Melody" and
+    the description of the favorite activities was "I like to swim.", the tab would show "Melody", "Favorite Activites" would appear as bold on the
     webpage as the first line, and "I like to swim." would be below that as regular font (smaller font size without bold).
     -----
     <!DOCTYPE html>
@@ -40,11 +40,10 @@ Mixed-Up Code Questions
     </html>
 
 .. activecode:: html_mixedupcode_1_ac
-    :autograde: unittest
 
-    Write an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in 
-    the ``body`` tag, and a description of your favorite activites in the ``p`` tag in the ``body`` tag, also. For example, if the name was "Melody" and 
-    the description of the favorite activities was "I like to swim.", the tab would show "Melody", "Favorite Activites" would appear as bold on the 
+    Write an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in
+    the ``body`` tag, and a description of your favorite activites in the ``p`` tag in the ``body`` tag, also. For example, if the name was "Melody" and
+    the description of the favorite activities was "I like to swim.", the tab would show "Melody", "Favorite Activites" would appear as bold on the
     webpage as the first line, and "I like to swim." would be below that as regular font (smaller font size without bold).
     ~~~~
 
@@ -54,10 +53,10 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in 
-    the ``body`` tag, and a red-colored description of your favorite activites in the ``p`` tag in the ``body`` tag, also. 
-    For example, if the name was "Melody" and the description of the favorite activities was "I like to swim.", the tab would 
-    show "Melody", "Favorite Activites" would appear as bold on the webpage as the first line, and "I like to swim." would be below 
+    Create an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in
+    the ``body`` tag, and a red-colored description of your favorite activites in the ``p`` tag in the ``body`` tag, also.
+    For example, if the name was "Melody" and the description of the favorite activities was "I like to swim.", the tab would
+    show "Melody", "Favorite Activites" would appear as bold on the webpage as the first line, and "I like to swim." would be below
     that in red as regular font (smaller font size without bold).
     -----
     <!DOCTYPE html>
@@ -85,12 +84,11 @@ Mixed-Up Code Questions
     </html>
 
 .. activecode:: html_mixedupcode_2_ac
-    :autograde: unittest
 
-    Write an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in 
-    the ``body`` tag, and a red-colored description of your favorite activites in the ``p`` tag in the ``body`` tag, also. 
-    For example, if the name was "Melody" and the description of the favorite activities was "I like to swim.", the tab would 
-    show "Melody", "Favorite Activites" would appear as bold on the webpage as the first line, and "I like to swim." would be below 
+    Write an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in
+    the ``body`` tag, and a red-colored description of your favorite activites in the ``p`` tag in the ``body`` tag, also.
+    For example, if the name was "Melody" and the description of the favorite activities was "I like to swim.", the tab would
+    show "Melody", "Favorite Activites" would appear as bold on the webpage as the first line, and "I like to swim." would be below
     that in red as regular font (smaller font size without bold).
     ~~~~
 
@@ -100,10 +98,10 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in 
-    the ``body`` tag, and a 25 pixel font-sized description of your favorite activites in the ``p`` tag in the ``body`` tag, also. 
-    For example, if the name was "Melody" and the description of the favorite activities was "I like to swim.", the tab would 
-    show "Melody", "Favorite Activites" would appear as bold on the webpage as the first line, and "I like to swim." would be below 
+    Create an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in
+    the ``body`` tag, and a 25 pixel font-sized description of your favorite activites in the ``p`` tag in the ``body`` tag, also.
+    For example, if the name was "Melody" and the description of the favorite activities was "I like to swim.", the tab would
+    show "Melody", "Favorite Activites" would appear as bold on the webpage as the first line, and "I like to swim." would be below
     that with a size of 25 pixels.
     -----
     <!DOCTYPE html>
@@ -131,12 +129,11 @@ Mixed-Up Code Questions
     </html>
 
 .. activecode:: html_mixedupcode_3_ac
-    :autograde: unittest
 
-    Write an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in 
-    the ``body`` tag, and a 25 pixel font-sized description of your favorite activites in the ``p`` tag in the ``body`` tag, also. 
-    For example, if the name was "Melody" and the description of the favorite activities was "I like to swim.", the tab would 
-    show "Melody", "Favorite Activites" would appear as bold on the webpage as the first line, and "I like to swim." would be below 
+    Write an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in
+    the ``body`` tag, and a 25 pixel font-sized description of your favorite activites in the ``p`` tag in the ``body`` tag, also.
+    For example, if the name was "Melody" and the description of the favorite activities was "I like to swim.", the tab would
+    show "Melody", "Favorite Activites" would appear as bold on the webpage as the first line, and "I like to swim." would be below
     that with a size of 25 pixels.
     ~~~~
 
@@ -146,10 +143,10 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in 
-    the ``body`` tag, and a description of your favorite activites with the font "Brush Script MT" in the ``p`` tag in the ``body`` tag, also. 
-    For example, if the name was "Melody" and the description of the favorite activities was "I like to swim.", the tab would 
-    show "Melody", "Favorite Activites" would appear as bold on the webpage as the first line, and "I like to swim." would be below 
+    Create an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in
+    the ``body`` tag, and a description of your favorite activites with the font "Brush Script MT" in the ``p`` tag in the ``body`` tag, also.
+    For example, if the name was "Melody" and the description of the favorite activities was "I like to swim.", the tab would
+    show "Melody", "Favorite Activites" would appear as bold on the webpage as the first line, and "I like to swim." would be below
     in the font "Brush Script MT" (cursive looking).
     -----
     <!DOCTYPE html>
@@ -175,12 +172,11 @@ Mixed-Up Code Questions
     </html>
 
 .. activecode:: html_mixedupcode_4_ac
-    :autograde: unittest
 
-    Write an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in 
-    the ``body`` tag, and a description of your favorite activites with the font "Brush Script MT" in the ``p`` tag in the ``body`` tag, also. 
-    For example, if the name was "Melody" and the description of the favorite activities was "I like to swim.", the tab would 
-    show "Melody", "Favorite Activites" would appear as bold on the webpage as the first line, and "I like to swim." would be below 
+    Write an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in
+    the ``body`` tag, and a description of your favorite activites with the font "Brush Script MT" in the ``p`` tag in the ``body`` tag, also.
+    For example, if the name was "Melody" and the description of the favorite activities was "I like to swim.", the tab would
+    show "Melody", "Favorite Activites" would appear as bold on the webpage as the first line, and "I like to swim." would be below
     in the font "Brush Script MT" (cursive looking).
     ~~~~
 
@@ -190,10 +186,10 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in 
-    the ``body`` tag, and a description of your favorite activites with the activity name blue in the ``p`` tag in the ``body`` tag, also. 
-    For example, if the name was "Melody" and the description of the favorite activities was "I like to swim.", the tab would 
-    show "Melody", "Favorite Activites" would appear as bold on the webpage as the first line, and "I like to swim." would be below 
+    Create an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in
+    the ``body`` tag, and a description of your favorite activites with the activity name blue in the ``p`` tag in the ``body`` tag, also.
+    For example, if the name was "Melody" and the description of the favorite activities was "I like to swim.", the tab would
+    show "Melody", "Favorite Activites" would appear as bold on the webpage as the first line, and "I like to swim." would be below
     in a regular font with the word "swim" as blue.
     -----
     <!DOCTYPE html>
@@ -219,12 +215,11 @@ Mixed-Up Code Questions
     </html>
 
 .. activecode:: html_mixedupcode_5_ac
-    :autograde: unittest
 
-    Write an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in 
-    the ``body`` tag, and a description of your favorite activites with the activity name blue in the ``p`` tag in the ``body`` tag, also. 
-    For example, if the name was "Melody" and the description of the favorite activities was "I like to swim.", the tab would 
-    show "Melody", "Favorite Activites" would appear as bold on the webpage as the first line, and "I like to swim." would be below 
+    Write an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in
+    the ``body`` tag, and a description of your favorite activites with the activity name blue in the ``p`` tag in the ``body`` tag, also.
+    For example, if the name was "Melody" and the description of the favorite activities was "I like to swim.", the tab would
+    show "Melody", "Favorite Activites" would appear as bold on the webpage as the first line, and "I like to swim." would be below
     in a regular font with the word "swim" as blue.
     ~~~~
 
@@ -234,10 +229,10 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in 
-    the ``body`` tag, and a ``div`` tag with a purple background color and the description of your favorite activites 
-    in multiple ``p`` tags in the ``div`` tag in the ``body`` tag. For example, if the name was "Melody" and the description of the favorite activities 
-    was "I like to swim." in one ``p`` tag and "I like to eat." in a second ``p`` tag, the tab would show "Melody", "Favorite Activites" would appear as 
+    Create an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in
+    the ``body`` tag, and a ``div`` tag with a purple background color and the description of your favorite activites
+    in multiple ``p`` tags in the ``div`` tag in the ``body`` tag. For example, if the name was "Melody" and the description of the favorite activities
+    was "I like to swim." in one ``p`` tag and "I like to eat." in a second ``p`` tag, the tab would show "Melody", "Favorite Activites" would appear as
     bold on the webpage as the first line, and "I like to swim." and "I like to eat." would be below in regular font with a purple background.
     -----
     <!DOCTYPE html>
@@ -258,7 +253,7 @@ Mixed-Up Code Questions
     =====
             <h1>Favorite Activites<h1> #paired
     =====
-            <div style="background-color:purple"> 
+            <div style="background-color:purple">
     =====
                 <p>I like to swim.</p>
     =====
@@ -277,12 +272,11 @@ Mixed-Up Code Questions
     </html>
 
 .. activecode:: html_mixedupcode_6_ac
-    :autograde: unittest
 
-    Create an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in 
-    the ``body`` tag, and a ``div`` tag with a purple background color and the description of your favorite activites 
-    in multiple ``p`` tags in the ``div`` tag in the ``body`` tag. For example, if the name was "Melody" and the description of the favorite activities 
-    was "I like to swim." in one ``p`` tag and "I like to eat." in a second ``p`` tag, the tab would show "Melody", "Favorite Activites" would appear as 
+    Create an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in
+    the ``body`` tag, and a ``div`` tag with a purple background color and the description of your favorite activites
+    in multiple ``p`` tags in the ``div`` tag in the ``body`` tag. For example, if the name was "Melody" and the description of the favorite activities
+    was "I like to swim." in one ``p`` tag and "I like to eat." in a second ``p`` tag, the tab would show "Melody", "Favorite Activites" would appear as
     bold on the webpage as the first line, and "I like to swim." and "I like to eat." would be below in regular font with a purple background.
     ~~~~
 
@@ -292,12 +286,12 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in 
-    the ``body`` tag, a description of your favorite activites in the ``p`` tag in the ``body`` tag, and a description with a link to a related 
-    article in the ``a`` tag in the ``body`` tag. For example, if the name was "Melody", the description of the favorite activities 
-    was "I like to swim.", the description of the link was "Here are some benefits of swimming!", and the link was 
-    "https://www.healthline.com/health/benefits-of-swimming", the tab would show "Melody", "Favorite Activites" would appear as bold on the webpage 
-    as the first line, "I like to swim." would be below in a regular font, and "Here are some benefits of swimming!" would appear below that 
+    Create an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in
+    the ``body`` tag, a description of your favorite activites in the ``p`` tag in the ``body`` tag, and a description with a link to a related
+    article in the ``a`` tag in the ``body`` tag. For example, if the name was "Melody", the description of the favorite activities
+    was "I like to swim.", the description of the link was "Here are some benefits of swimming!", and the link was
+    "https://www.healthline.com/health/benefits-of-swimming", the tab would show "Melody", "Favorite Activites" would appear as bold on the webpage
+    as the first line, "I like to swim." would be below in a regular font, and "Here are some benefits of swimming!" would appear below that
     with it being linked to "https://www.healthline.com/health/benefits-of-swimming".
     -----
     <!DOCTYPE html>
@@ -325,14 +319,13 @@ Mixed-Up Code Questions
     </html>
 
 .. activecode:: html_mixedupcode_7_ac
-    :autograde: unittest
 
-    Write an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in 
-    the ``body`` tag, a description of your favorite activites in the ``p`` tag in the ``body`` tag, and a description with a link to a related 
-    article in the ``a`` tag in the ``body`` tag. For example, if the name was "Melody", the description of the favorite activities 
-    was "I like to swim.", the description of the link was "Here are some benefits of swimming!", and the link was 
-    "https://www.healthline.com/health/benefits-of-swimming", the tab would show "Melody", "Favorite Activites" would appear as bold on the webpage 
-    as the first line, "I like to swim." would be below in a regular font, and "Here are some benefits of swimming!" would appear below that 
+    Write an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in
+    the ``body`` tag, a description of your favorite activites in the ``p`` tag in the ``body`` tag, and a description with a link to a related
+    article in the ``a`` tag in the ``body`` tag. For example, if the name was "Melody", the description of the favorite activities
+    was "I like to swim.", the description of the link was "Here are some benefits of swimming!", and the link was
+    "https://www.healthline.com/health/benefits-of-swimming", the tab would show "Melody", "Favorite Activites" would appear as bold on the webpage
+    as the first line, "I like to swim." would be below in a regular font, and "Here are some benefits of swimming!" would appear below that
     with it being linked to "https://www.healthline.com/health/benefits-of-swimming".
     ~~~~
 
@@ -342,9 +335,9 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in 
-    the ``body`` tag, and a description of your favorite activites in the ``p`` tag in the ``body`` tag, also. For example, if the name was "Melody" and 
-    the description of the favorite activities was "I like to swim.", the tab would show "Melody", "Favorite Activites" would appear as bold on the 
+    Create an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in
+    the ``body`` tag, and a description of your favorite activites in the ``p`` tag in the ``body`` tag, also. For example, if the name was "Melody" and
+    the description of the favorite activities was "I like to swim.", the tab would show "Melody", "Favorite Activites" would appear as bold on the
     webpage as the first line, and "I like to swim." would be below that as regular font (smaller font size without bold).
     -----
     <!DOCTYPE html>
@@ -376,11 +369,10 @@ Mixed-Up Code Questions
     </html>
 
 .. activecode:: html_mixedupcode_8_ac
-    :autograde: unittest
 
-    Write an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in 
-    the ``body`` tag, and a description of your favorite activites in the ``p`` tag in the ``body`` tag, also. For example, if the name was "Melody" and 
-    the description of the favorite activities was "I like to swim.", the tab would show "Melody", "Favorite Activites" would appear as bold on the 
+    Write an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in
+    the ``body`` tag, and a description of your favorite activites in the ``p`` tag in the ``body`` tag, also. For example, if the name was "Melody" and
+    the description of the favorite activities was "I like to swim.", the tab would show "Melody", "Favorite Activites" would appear as bold on the
     webpage as the first line, and "I like to swim." would be below that as regular font (smaller font size without bold).
     ~~~~
 
@@ -390,9 +382,9 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in 
-    the ``body`` tag, and a description of your favorite activites in the ``p`` tag in the ``body`` tag, also. For example, if the name was "Melody" and 
-    the description of the favorite activities was "I like to swim.", the tab would show "Melody", "Favorite Activites" would appear as bold on the 
+    Create an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in
+    the ``body`` tag, and a description of your favorite activites in the ``p`` tag in the ``body`` tag, also. For example, if the name was "Melody" and
+    the description of the favorite activities was "I like to swim.", the tab would show "Melody", "Favorite Activites" would appear as bold on the
     webpage as the first line, and "I like to swim." would be below that as regular font (smaller font size without bold).
     -----
     <!DOCTYPE html>
@@ -424,11 +416,10 @@ Mixed-Up Code Questions
     </html>
 
 .. activecode:: html_mixedupcode_9_ac
-    :autograde: unittest
 
-    Write an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in 
-    the ``body`` tag, and a description of your favorite activites in the ``p`` tag in the ``body`` tag, also. For example, if the name was "Melody" and 
-    the description of the favorite activities was "I like to swim.", the tab would show "Melody", "Favorite Activites" would appear as bold on the 
+    Write an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in
+    the ``body`` tag, and a description of your favorite activites in the ``p`` tag in the ``body`` tag, also. For example, if the name was "Melody" and
+    the description of the favorite activities was "I like to swim.", the tab would show "Melody", "Favorite Activites" would appear as bold on the
     webpage as the first line, and "I like to swim." would be below that as regular font (smaller font size without bold).
     ~~~~
 
@@ -438,9 +429,9 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in 
-    the ``body`` tag, and a description of your favorite activites in the ``p`` tag in the ``body`` tag, also. For example, if the name was "Melody" and 
-    the description of the favorite activities was "I like to swim.", the tab would show "Melody", "Favorite Activites" would appear as bold on the 
+    Create an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in
+    the ``body`` tag, and a description of your favorite activites in the ``p`` tag in the ``body`` tag, also. For example, if the name was "Melody" and
+    the description of the favorite activities was "I like to swim.", the tab would show "Melody", "Favorite Activites" would appear as bold on the
     webpage as the first line, and "I like to swim." would be below that as regular font (smaller font size without bold).
     -----
     <!DOCTYPE html>
@@ -472,10 +463,9 @@ Mixed-Up Code Questions
     </html>
 
 .. activecode:: html_mixedupcode_10_ac
-    :autograde: unittest
 
-    Write an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in 
-    the ``body`` tag, and a description of your favorite activites in the ``p`` tag in the ``body`` tag, also. For example, if the name was "Melody" and 
-    the description of the favorite activities was "I like to swim.", the tab would show "Melody", "Favorite Activites" would appear as bold on the 
+    Write an HTML page with your name as the ``title`` tag in the ``head`` tag, "Favorite Activities" as the ``h1`` tag in
+    the ``body`` tag, and a description of your favorite activites in the ``p`` tag in the ``body`` tag, also. For example, if the name was "Melody" and
+    the description of the favorite activities was "I like to swim.", the tab would show "Melody", "Favorite Activites" would appear as bold on the
     webpage as the first line, and "I like to swim." would be below that as regular font (smaller font size without bold).
     ~~~~

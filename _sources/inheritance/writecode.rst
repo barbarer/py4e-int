@@ -4,7 +4,7 @@ Write Code Questions
 
             .. activecode:: inheritance_writecode1q_v2
                 :practice: T
-                :nocodelens:
+                :autograde: unittest
 
                 Create a subclass of the ``Parent`` class named ``Child`` that overrides the inherited ``eye_color()`` method to return ``"I have green eyes."``
                 ~~~~
@@ -31,7 +31,7 @@ Write Code Questions
 
             .. activecode:: inheritance_greeter_grumpy_ac
                 :practice: T
-                :nocodelens:
+                :autograde: unittest
 
                 Create a subclass of the ``Greeter`` class named ``GrumpyGreeter`` that overrides the inherited ``greet`` method to return ``"Go Away!"``.
                 ~~~~
@@ -60,7 +60,7 @@ Write Code Questions
 
             .. activecode:: inheritance_animal_cow_ac
                 :practice: T
-                :nocodelens:
+                :autograde: unittest
 
                 Create a subclass of the ``Animal`` class named ``Cow`` that overrides the inherited ``noise`` method to return ``"Moo"``.
                 ~~~~
@@ -88,7 +88,7 @@ Write Code Questions
 
             .. activecode:: inheritance_actor_over_actor_ac
                 :practice: T
-                :nocodelens:
+                :autograde: unittest
 
                 Create a subclass of the ``Actor`` class named ``OverActor`` that overrides the inherited ``act`` method to return ``"I am super happy!"``.
                 ~~~~
@@ -117,7 +117,7 @@ Write Code Questions
 
             .. activecode:: inheritance_student_grad_student_ac
                 :practice: T
-                :nocodelens:
+                :autograde: unittest
 
                 Create a subclass of the ``Student`` class named ``GradStudent`` that calls the ``__init__`` method in ``Student`` to initialize the first and last name and overrides the inherited ``fav_food`` method to return ``"Sushi"``.
                 ~~~~
@@ -153,6 +153,7 @@ Write Code Questions
 #.
 
     .. activecode:: ut_is_ascending_ac
+        :autograde: unittest
 
         Write a function ``is_ascending(nums)`` that returns ``True`` if the numbers in the list ``nums`` are sorted in ascending order and ``False`` otherwise. If the list ``nums`` has less than two numbers in it return ``True``.  For example, ``is_ascending([1,2,3])`` should return ``True``, ``is_ascending([1])`` should also return ``True``, and ``is_ascending([3,2,1])`` should return ``False``.
         ~~~~
@@ -182,6 +183,7 @@ Write Code Questions
 #.
 
     .. activecode:: ut_sum_lists_ac
+        :autograde: unittest
 
         Write a function ``sum_lists(l1,l2)`` that take two lists of numbers, ``l1`` and ``l2`` and returns a list with the sum of the corresponding items in ``l1`` and ``l2``.  For example, ``sum_lists([1,2],[3,4])`` would return [4,6]. If the two lists are of different length then returned list should be the same length as the shortest list. For example, ``sum_lists([1],[4,3])`` should return ``[5]``.
         ~~~~
@@ -211,6 +213,7 @@ Write Code Questions
 #.
 
     .. activecode:: ut_avg_pos_ac
+        :autograde: unittest
 
         Write a function ``avg_pos(nums)`` that returns the average of the positive numbers in the list ``nums``.  For example, ``avg_pos([80, -20, 90])`` should return ``85.0``.
         ~~~~
@@ -234,6 +237,7 @@ Write Code Questions
 #.
 
     .. activecode:: ut_quartile_ac
+        :autograde: unittest
 
         Write a function ``quartile(value)`` that returns ``0`` if ``value`` is <= 0.25, ``1`` if ``value`` is > 0.25 and <= 0.5, ``2`` if ``value`` is > 0.5 and <= 0.75, and ``3`` if ``value`` > 0.75.
         ~~~~
@@ -264,6 +268,7 @@ Write Code Questions
 #.
 
     .. activecode:: ut_dup_adjacent_fix_ac
+        :autograde: unittest
 
         Fix the function ``dup_adjacent(nums)`` to return ``True`` if there are duplicate adjacent values in ``nums``. For example, ``dup_adjacent([1,2,1])`` should return ``False`` and ``dup_adjacent([4, 3, 3, 2])`` should return ``True``  because of the adjacent 3's.  Return ``False`` if the length of the list is less than two.
         ~~~~

@@ -8,6 +8,7 @@ Write Code Questions
         .. tab:: Question
 
             .. activecode:: list_writeMyListq
+                :autograde: unittest
 
                 Write a function ``add_to_new_list`` that takes in a list of strings, ``lst``, as a parameter and creates a new list with the length
                 of ``lst`` and the first element of ``lst`` three times. For example, ``add_to_new_list(["1","2","3"])`` would return ``[3, '111']``.
@@ -33,6 +34,7 @@ Write Code Questions
 
             .. activecode:: list_writeMyListA
                 :optional:
+                :autograde: unittest
 
                 Write a function ``add_to_new_list`` that takes in a list of strings, ``lst``, as a parameter and creates a new list with the length
                 of ``lst`` and the first element of ``lst`` three times. For example, ``add_to_new_list(["1","2","3"])`` would return ``[3, '111']``.
@@ -59,6 +61,7 @@ Write Code Questions
 
 #.
     .. activecode::  list_writeItemsq_v2
+        :autograde: unittest
 
         Write a function ``item_lister`` that takes in a list of at least three values, ``items``, as a parameter. Set the first value to "First item", set
         the second value to the original first value, and set the third value to its current value plus one (rounded to two decimals). (Note: the third value of ``items``
@@ -87,6 +90,7 @@ Write Code Questions
         .. tab:: Question
 
             .. activecode::  list_writeAvgq
+                :autograde: unittest
 
                 Write a function ``average`` that takes in a list of integers, ``aList``, as a parameter and returns the average of
                 all of the integers, rounded to one decimal place. For example, ``average([99, 100, 74, 63, 100, 100])`` would return ``89.3``.
@@ -113,6 +117,7 @@ Write Code Questions
 
             .. activecode:: list_writeAvgA
                 :optional:
+                :autograde: unittest
 
                 Write a function ``average`` that takes in a list of integers, ``aList``, as a parameter and returns the average of
                 all of the integers, rounded to one decimal place. For example, ``average([99, 100, 74, 63, 100, 100])`` would return ``89.33``.
@@ -140,6 +145,7 @@ Write Code Questions
 
 #.
     .. activecode:: list_write23q
+        :autograde: unittest
 
         Write the function ``change_index3`` that takes in one parameter, ``lst``, and assigns the value at index 3 of ``lst`` to '200' and then returns ``lst``.
         For example, ``change_index3(['hi', 'goodbye', 'python', '106', '506'])`` would return ``['hi', 'goodbye', 'python', '200', '506']`` and
@@ -169,6 +175,7 @@ Write Code Questions
         .. tab:: Question
 
             .. activecode:: list_capitalize_q
+                :autograde: unittest
 
                 Write a function ``capitalize`` that takes in a list of lists of strings, ``lst``, and makes the first letter of each element capitalized and adds
                 it to a new list and returns that new list. For example, ``capitalize([["hi"],["hello", "hey"]])`` would return ``['Hi', 'Hello', 'Hey']``.
@@ -194,6 +201,7 @@ Write Code Questions
 
             .. activecode:: list_capitalize_a
                 :optional:
+                :autograde: unittest
 
                 Write a function ``capitalize`` that takes in a list of lists of strings, ``lst``, and makes the first letter of each element capitalized and adds
                 it to a new list and returns that new list. For example, ``capitalize([["hi"],["hello", "hey"]])`` would return ``['Hi', 'Hello', 'Hey']``.
@@ -221,6 +229,7 @@ Write Code Questions
 
 #.
     .. activecode:: list_write5q
+        :autograde: unittest
 
         Write a function ``countWords`` that takes in a list, ``lst``, as a parameter, and returns the amount of words that have a length of 5.
         For example, ``countWords(['hello', 'hi', 'good morning', 'three', 'kitty']`` should return ``3``.
@@ -248,6 +257,7 @@ Write Code Questions
         .. tab:: Question
 
             .. activecode:: list_writeChopq
+                :autograde: unittest
 
                 Write a function ``chop`` that takes a list, ``lst``, and modifies it, removing the first and last elements.
                 For example, ``chop([1,2,3,4,5]`` should return ``[2,3,4]``.
@@ -273,6 +283,7 @@ Write Code Questions
 
             .. activecode:: list_writeChopa
                 :optional:
+                :autograde: unittest
 
                 Write a function ``chop`` that takes a list, ``lst``, and modifies it, removing the first and last elements.
                 For example, ``chop([1,2,3,4,5]`` should return ``[2,3,4]``.
@@ -297,6 +308,7 @@ Write Code Questions
 
 #.
     .. activecode::  list_writeReverseq
+        :autograde: unittest
 
         Write a function ``reverse`` that takes in one parameter, ``lst``, and returns the reverse of a passed list.
         For example, ``reverse[1,2,3]`` should return ``[3, 2, 1]``.
@@ -322,6 +334,7 @@ Write Code Questions
         .. tab:: Question
 
             .. activecode:: list_writeSumq
+                :autograde: unittest
 
                 Write a function ``sumUntilEven`` that takes in one parameter, ``lst``, and returns the sum of all the
                 elements in the ``lst`` up to but not including the first even number. For example, ``sumUntilEven([1,2,3,4,5]``
@@ -347,6 +360,7 @@ Write Code Questions
 
             .. activecode:: list_writeSuma
                 :optional:
+                :autograde: unittest
 
                 Write a function called ``sumUntilEven`` that takes in one parameter, ``lst``, and returns the sum of all the
                 elements in the ``lst`` up to but not including the first even number. For example, ``sumUntilEven([1,2,3,4,5]``
@@ -374,6 +388,7 @@ Write Code Questions
 
 #.
     .. activecode::  list_sortByLen
+        :autograde: unittest
 
         Write a function ``sort_by_length`` that takes in one parameter, a list of strings, ``lst``, and returns the list sorted
         by the length of the strings. For example, ``sort_by_length(["hello", "hi", "hey", "greetings"])`` would return ``['hi', 'hey', 'hello', 'greetings']``.
@@ -396,6 +411,7 @@ Write Code Questions
 
 #.
     .. activecode::  list_loop_two_lists
+        :autograde: unittest
 
         Write a function ``combine(names, ages)`` that takes in two lists, ``names`` and ``ages`` and returns a list of strings in the format ``"Name: name, age: age"``.  For example,
         ``combine(["Claire", "Jennifer"],[23, 19])`` would return ``["Name: Claire, age: 23", "Name: Jennfier, age: 19"]``.
