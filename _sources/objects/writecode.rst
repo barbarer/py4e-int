@@ -6,7 +6,7 @@ Write Code Exercises
         .. tab:: Question
 
             .. activecode:: obj_writecode1q
-                :nocodelens:
+                :autograde: unittest
 
                 Complete the following code to create an object ``spot`` from the ``Dog`` class
                 with the name "Spot" and update their tricks to include "spin" then "sit". You can
@@ -38,6 +38,7 @@ Write Code Exercises
         .. tab:: Answer
 
             .. activecode:: obj_writecode1a
+                :autograde: unittest
                 :optional:
 
                 Below the class definition, create an instance of the class Dog, assigning it to the variable ``spot``.
@@ -76,6 +77,7 @@ Write Code Exercises
 
 #.
     .. activecode:: obj_writecode2
+        :autograde: unittest
 
         Complete the following code to include a method named ``updateAttacks(attack)``
         which appends the ``attack`` to the list of attacks.
@@ -113,7 +115,7 @@ Write Code Exercises
         .. tab:: Question
 
           .. activecode:: obj_writecode3q
-              :nocodelens:
+              :autograde: unittest
 
               Correct the 7 errors in the following code. The program should create
               a class that prints the title and author of a book.
@@ -142,6 +144,7 @@ Write Code Exercises
         .. tab:: Answer
 
           .. activecode:: obj_writecode3a
+              :autograde: unittest
               :optional:
 
               1. ``class`` is a reserved word and must be lowercase.
@@ -177,7 +180,7 @@ Write Code Exercises
 
 #.
     .. activecode:: obj_writecode4
-        :nocodelens:
+        :autograde: unittest
 
         Correct all the errors in the following code. The program should create
         a class that prints the name the tricks the dog knows.
@@ -215,7 +218,7 @@ Write Code Exercises
         .. tab:: Question
 
           .. activecode:: obj_writecode5q
-              :nocodelens:
+              :autograde: unittest
 
               Complete the following code to include a method named ``getTitle`` that returns
               the title and a method named ``getAuthor`` that returns the 'author'.
@@ -247,7 +250,7 @@ Write Code Exercises
         .. tab:: Answer
 
           .. activecode:: obj_writecode5a
-              :nocodelens:
+              :autograde: unittest
               :optional:
 
               Create the ``getTitle`` and ``getAuthor`` methods just as you would define a function.
@@ -276,6 +279,7 @@ Write Code Exercises
 
 #.
     .. activecode:: obj_writecode6
+      :autograde: unittest
 
       Complete the following code to include a method named ``getTricks`` that returns the
       tricks list and a method named ``getName`` that returns the name when called.
@@ -315,7 +319,7 @@ Write Code Exercises
       .. tab:: Question
 
           .. activecode:: obj_writecode7q
-              :nocodelens:
+              :autograde: unittest
 
               Add a new class named ``Paperback`` that extends the ``Book`` class. Add a
               method named ``__str__`` within Paperback that sends a string representation
@@ -350,7 +354,7 @@ Write Code Exercises
       .. tab:: Answer
 
           .. activecode:: obj_writecode7a
-            :nocodelens:
+            :autograde: unittest
             :optional:
 
             Create the ``Paperback`` class just as you did the ``Book`` class, but
@@ -380,6 +384,7 @@ Write Code Exercises
 
 #.
     .. activecode:: obj_writecode8
+      :autograde: unittest
 
       Update the new class named ``WaterType`` which inherits properties of the ``Pokemon`` class.
       Add the following three methods to WaterType: ``updateAttacks`` appends the attacks list with
@@ -415,6 +420,7 @@ Write Code Exercises
 
 #.
     .. activecode:: obj_writecode10
+      :autograde: unittest
 
       Add a new class named ``WaterType`` that inherits from Pokemon class. that takes 'name' as initial values, creates
       an instance of Pokemon with type as 'water' by default and stores the instance

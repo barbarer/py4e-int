@@ -6,7 +6,6 @@ Write Code Questions
         .. tab:: Question
 
             .. activecode::  cndtnl-wc-fiveq
-                :nocodelens:
 
                 Fix the errors in the code, and change it to use only **one** if statement. The code should print
                 "The number is 5" when the number is 5, and should print "The number is NOT 5" when it is not.
@@ -51,7 +50,7 @@ Write Code Questions
         .. tab:: Question
 
             .. activecode::  cndtnl-wc-payq
-                :nocodelens:
+                :autograde: unittest
 
                 Complete the pay computation to give the employee 1.5 times the hourly rate for hours worked
                 above 40 hours, if the regular pay rate is $10 an hour. Then set ``grossPay`` equal to the
@@ -138,7 +137,7 @@ Write Code Questions
 
 
             .. activecode::  cndtnl-wc-distanceq
-                :nocodelens:
+                :autograde: unittest
 
                 Write the code to calculate and print the cost of a 14 mile cab ride. If the distance traveled
                 is less than or equal to 12 miles the cost is $2.00 a mile, and if the distance traveled is more
@@ -160,7 +159,7 @@ Write Code Questions
 
           .. activecode::  cndtnl-wc-distancea
               :optional:
-              :nocodelens:
+
 
               Write the code to calculate and print the cost of a 14 mile cab ride. If the distance traveled
               is less than or equal to 12 miles the cost is $2.00 a mile, and if the distance traveled is more
@@ -211,7 +210,7 @@ Write Code Questions
 
 
            .. activecode::  cndtnl-wc-weightq
-                :nocodelens:
+
 
                 Fix the example such that the cost of frozen yogurt is 0 if you pour exactly 1 lb. in your cup.
                 ~~~~
@@ -230,7 +229,6 @@ Write Code Questions
 
           .. activecode::  cndtnl-wc-weighta
               :optional:
-              :nocodelens:
 
               Fix the example such that the cost of frozen yogurt is 0 if you pour exactly 1 lb. in your cup.
               ~~~~
@@ -271,7 +269,7 @@ Write Code Questions
         .. tab:: Question
 
             .. activecode::  cndtnl-wc-leapYearq
-                :nocodelens:
+
 
                 3 criteria must be taken into account to identify leap years:
 
