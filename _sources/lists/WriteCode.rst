@@ -77,10 +77,16 @@ Write Code Questions
         class myTests(TestCaseGui):
 
             def testOne(self):
-                self.assertAlmostEqual(itemLister([2,4,6.222,8]), ['First item', 2, 7.22, 8], 2, "itemLister([2,4,6,8])")
-                self.assertAlmostEqual(itemLister([2.2,'hi',0]), ['First item', 2.2, 1], 2, "itemLister([2.2,'hi',0])")
-                self.assertAlmostEqual(itemLister([2.2,True,0]), ['First item', 2.2, 1], 2, "itemLister([2.2,True,0])")
-                self.assertAlmostEqual(itemLister([-2.2,'hi',-2.222]), ['First item', -2.2, -1.22], "itemLister([-2.2,'hi',-2.222])")
+
+                res = itemLister([2,4,6.222,8])
+                self.assertEqual(res[0],'First item', "testing first item in list from itemLister([2,4,6.222,8])")
+                self.assertEqual(res[1],2, "testing second item in list from itemLister([2,4,6.222,8])")
+                self.assertAlmostEqual(res[2],7.22, 2, "testing third item in list from itemLister([2,4,6.222,8])")
+                res = itemLister([-2.2,'hi',-2.222])
+                self.assertEqual(res[0],'First item', "testing first item in list from itemLister([-2.2,'hi',-2.222])")
+                self.assertAlmostEqual(res[1],-2.2,1, "testing second item in list from itemLister([-2.2,'hi',-2.222])")
+                self.assertAlmostEqual(res[2],-1.22, 2, "testing third item in list from itemLister([-2.2,'hi',-2.222])")
+
 
         myTests().main()
 

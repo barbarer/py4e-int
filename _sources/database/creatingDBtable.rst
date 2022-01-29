@@ -68,7 +68,7 @@ perform operations on the data stored in the database. Calling
    :alt: A Database Cursor
 
 .. mchoice:: dbCreate_MC_cursor
-    :practice:
+    :practice: T
     :answer_a: Socket
     :answer_b: File Handle
     :answer_c: Script
@@ -101,7 +101,7 @@ short.
 http://en.wikipedia.org/wiki/SQL
 
 .. mchoice:: dbCreate_MC_SQL
-    :practice:
+    :practice: T
     :answer_a: Structured Query Language
     :answer_b: Simple Query Language
     :answer_c: Synchronized Query Language
