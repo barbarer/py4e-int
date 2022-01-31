@@ -161,3 +161,22 @@ Peer Instruction: Functions Multiple Choice Questions
          y = 4
          odd(x,y)
          print(x*y)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

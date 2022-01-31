@@ -602,6 +602,7 @@ The following file contains a set of emotions that will be used in the next ques
 #.
     .. activecode:: file_ex_emotionq
        :available_files: emotion_words.txt
+       :autograde: unittest
 
        Create a list called ``j_emotions`` that contains every word in ``emotion_words.txt``
        that begins with the letter "j".  After the code executes ``j_emotions`` should be ``['joyous', 'jittery', 'jumpy']``
@@ -851,6 +852,7 @@ is the first three letters of the month.
 #.
     .. activecode:: file_ex_300
         :datafile: stocks.txt
+        :autograde: unittest
 
         Fix the errors below so that the ``pointGain`` function returns a list of all the dates where the Dow
         Jones gained more than 300 points from open to close.  Each line has: Date, Open, High, Low, Close.
@@ -925,6 +927,7 @@ is the first three letters of the month.
     .. activecode:: file_ex_abbrq
         :practice: T
         :datafile: stocks.txt
+        :autograde: unittest
 
         Write a function ``avg_month_close(lines, month)`` that takes the ``lines``
         from the stocks file in a list and the abbreviation for a ``month``
