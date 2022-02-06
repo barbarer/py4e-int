@@ -93,3 +93,90 @@ Peer Instruction: Variable Multiple Choice Questions
       y = x - 2
       x = 20   
       What is the value of y after the execution of this code?
+
+
+.. mchoice:: dz-lecture_4_3
+   :practice: T
+   :answer_a: True
+   :answer_b: False
+   :answer_c: 3
+   :answer_d: Syntax error
+   :correct: b
+   :feedback_a: Try again. != means not equal. Because a equals to 3, it returns bool value False. Therefore, b = False.
+   :feedback_b: Correct! != means not equal. Because a equals to 3, it returns bool value False. Therefore, b = False.
+   :feedback_c: Try again. != means not equal. Because a equals to 3, it returns bool value False. Therefore, b = False.
+   :feedback_d: Try again. != means not equal. Because a equals to 3, it returns bool value False. Therefore, b = False.
+   
+   .. code-block:: python
+      
+      What is the output of the following code?
+      a = 3
+      b = (a != 3)
+      print(b)
+
+.. mchoice:: dz-lecture_4_4
+   :practice: T
+   :answer_a: True
+   :answer_b: False
+   :answer_c: 3
+   :answer_d: Syntax error
+   :correct: a
+   :feedback_a: Correct! == tests for equality. Because a equals to 3, it returns bool value True. Therefore, b = True.
+   :feedback_b: Try again. == tests for equality. Because a equals to 3, it returns bool value True. Therefore, b = True.
+   :feedback_c: Try again. == tests for equality. Because a equals to 3, it returns bool value True. Therefore, b = True.
+   :feedback_d: Try again. == tests for equality. Because a equals to 3, it returns bool value True. Therefore, b = True.
+   
+   .. code-block:: python
+      
+      What is the output of the following code?
+      a = 3
+      b = (a == 3)
+      print(b)
+
+
+.. mchoice:: dz-lecture_4_6
+   :practice: T
+   :answer_a: a == b == 5
+   :answer_b: a == b or a == 5
+   :answer_c: a == b and a == 5
+   :answer_d: a == (b == 5)
+   :correct: b
+   :feedback_a: Try again. The expression here means a and b are equal to 5. 
+   :feedback_b: Correct! or produces True exactly when at least one of its operands is True.
+   :feedback_c: Try again. And produces True exactly when both of its operands are True. The expression here evaluates to true when both of the two conditions are true.
+   :feedback_d: Try again. b == 5 returns a bool value. The expression here evaluates to true when b equals to 5 and a equals to bool value True.
+      
+   I would like an expression that evaluates to True exactly when at least one of the following two conditions is true: (1) a and b are equal, (2) when a has value 5. Which of these expressions does that?
+
+
+.. mchoice:: dz-lecture_4_7
+   :practice: T
+   :answer_a: True
+   :answer_b: False
+   :correct: a
+   :feedback_a: Correct! not a returns false. False and b returns False. or produces True exactly when at least one of its operands is True. Therefore, the final result returns True.
+   :feedback_b: Try again. not a returns false because 'not' is a Logical operator in Python that will return True if the expression is False. And produces True exactly when both of its operands are True. So False and b returns False. or produces True exactly when at least one of its operands is True. Therefore, the final result returns True.
+   
+   .. code-block:: python
+
+      What is the value of the expression at the bottom of the code? (Remember that not has the highest precedence, then and, then or.)
+      a = True
+      b = False
+      c = True
+      not a and b or c
+
+.. mchoice:: dz-lecture_4_9
+   :practice: T
+   :answer_a: (a // 10) % 10
+   :answer_b: (a % 100) // 10
+   :answer_c: (a % 10) // 10
+   :answer_d: More than one of the above
+   :answer_e: None of the above
+   :correct: d
+   :feedback_a: Try again. A is correct but b is also right. a % 100 returns the middle and right digit of a. // 10 returns the middle digit.
+   :feedback_b: Try again. B is correct but a is also right. a // 10 returns the left and middle digit of a. % 10 returns the middle digit.
+   :feedback_c: Try again. C cannot return the middle digit. a % 10 returns the right digit of a. // 10 still gets the right digit.
+   :feedback_d: Correct! Both A and B are correct!
+   :feedback_e: Try again. A and B are both correct! In the option A, a % 100 returns the middle and right digit of a. // 10 returns the middle digit. In the option B, a // 10 returns the left and middle digit of a. % 10 returns the middle digit.
+
+   Assume that a refers to a three-digit integer. Which of the following evaluates to the middle digit of a? (For example, if a referred to value 456, we want an expression with value 5.)
