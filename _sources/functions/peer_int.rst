@@ -362,3 +362,93 @@ Peer Instruction: Function Multiple Choice Questions
            elif x[0] != x[len(x) - 1]:
                return False
        	   else return pal(x[1:len(x)-1])
+
+.. mchoice:: dz-lecture_3_4
+   :practice: T
+   :answer_a: (3) only
+   :answer_b: (2) and (3)
+   :answer_c: (1), (3), and (4)
+   :answer_d: All of (1), (2), (3), and (4) include a function call
+   :correct: c
+   :feedback_a: Try again. Function call is to invoke the program to execute the function. So (1), (3) and (4) are all function calls.
+   :feedback_b: Try again. Function call is to invoke the program to execute the function. So (1), (3) and (4) are all function calls. (2) is a function that needs to be executed but not a function call.
+   :feedback_c: Correct! Function call is to invoke the program to execute the function. So (1), (3) and (4) are all function calls.
+   :feedback_d: Try again. Function call is to invoke the program to execute the function. So (1), (3) and (4) are all function calls. (2) is a function that needs to be executed but not a function call.
+   
+   .. code-block:: python
+
+      Which of the following contains a function call?
+        (1) type(4.5)
+        (2) def add_one(x):
+                return x + 1
+        (3) area(2, 9)
+        (4) print("Hello")
+
+.. mchoice:: dz-lecture_3_5
+   :practice: T
+   :answer_a: 5
+   :answer_b: 9
+   :answer_c: 0
+   :answer_d: 3
+   :correct: b
+   :feedback_a: Try again. calculate(3, 2, 0) assigns different values to w, x and y. a = x = 2, b = w + 1 = 3 + 1 = 4. Therefore a + b + 3 = 9. The functions returns 9.
+   :feedback_b: Correct! calculate(3, 2, 0) assigns different values to w, x and y. a = x = 2, b = w + 1 = 3 + 1 = 4. Therefore a + b + 3 = 9. The functions returns 9.
+   :feedback_c: Try again. calculate(3, 2, 0) assigns different values to w, x and y. a = x = 2, b = w + 1 = 3 + 1 = 4. Therefore a + b + 3 = 9. The functions returns 9.
+   :feedback_d: Try again. calculate(3, 2, 0) assigns different values to w, x and y. a = x = 2, b = w + 1 = 3 + 1 = 4. Therefore a + b + 3 = 9. The functions returns 9.
+   
+   .. code-block:: python
+
+      What is the output of this code?
+
+      def calculate(w, x, y):
+        a = x
+        b = w + 1
+        return a + b + 3
+
+      print(calculate(3, 2, 0))
+
+
+.. mchoice:: dz-lecture_3_6
+   :practice: T
+   :answer_a: 3
+   :answer_b: 4
+   :answer_c: 5
+   :answer_d: 6
+   :correct: c
+   :feedback_a: Try again. calculate(1, 2, 0) assigns values 1, 2 and 0 to w, x and y. a = x = 2, b = w + 1 = 1 + 1 = 2. Therefore a + b + 2 = 5. The functions returns 5.
+   :feedback_b: Try again. calculate(1, 2, 0) assigns values 1, 2 and 0 to w, x and y. a = x = 2, b = w + 1 = 1 + 1 = 2. Therefore a + b + 2 = 5. The functions returns 5.
+   :feedback_c: Correct! calculate(1, 2, 0) assigns values 1, 2 and 0 to w, x and y. a = x = 2, b = w + 1 = 1 + 1 = 2. Therefore a + b + 2 = 5. The functions returns 5.
+   :feedback_d: Try again. calculate(1, 2, 0) assigns values 1, 2 and 0 to w, x and y. a = x = 2, b = w + 1 = 1 + 1 = 2. Therefore a + b + 2 = 5. The functions returns 5.
+   
+   .. code-block:: python
+
+      What is the output of this code?
+
+      def calculate(w, x, y):
+        a = x
+        b = w + 1
+        return a + b + w
+        
+      print(calculate(1, 2, 0))
+
+.. mchoice:: dz-lecture_3_7
+   :practice: T
+   :answer_a: No bugs. The code is fine
+   :answer_b: The function body is not indented
+   :answer_c: We are using x as a parameter and a variable, but we are not allowed to do that
+   :answer_d: Both B and C are bugs
+   :correct: b
+   :feedback_a: Try again. It is required by Python that the body of the function should be indented.
+   :feedback_b: Correct! The body of the function is not indented.
+   :feedback_c: Try again! It is required by Python that the body of the function should be indented.
+   :feedback_d: Try again! It is required by Python that the body of the function should be indented.
+   
+   .. code-block:: python
+
+      What is the output of this code?
+
+      def add_one(x):
+      return x + 1
+    
+      x = 2
+      x = x + add_one(x)
