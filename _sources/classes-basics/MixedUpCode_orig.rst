@@ -537,7 +537,7 @@ Mixed-Up Code Exercises
    class myTests(TestCaseGui):
 
        def testOne(self):
-           c = Carts(5)
+           c = Carts()
            c.add_item("Banana", 5)
            c.add_item("Strawberries", 1)
            self.assertEqual(c.cart_list, [('Banana', 5), ('Strawberries', 1)], "Checking that all items were added to the cart")
