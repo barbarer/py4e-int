@@ -37,6 +37,6 @@ Mixed-Up Code Exercises
    :fromid: Classes_Basic_Loan_pp, Classes_Basic_Loan_ac
    :toggle:
 
-.. selectquestion:: Classes_Basic_Carts_sq
-   :fromid: Classes_Basic_Carts_pp, Classes_Basic_Carts_ac
+.. selectquestion:: Classes_Basic_Cart_sq
+   :fromid: Classes_Basic_Cart1_pp, Classes_Basic_Cart1_ac
    :toggle:

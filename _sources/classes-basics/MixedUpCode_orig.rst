@@ -278,7 +278,7 @@ Mixed-Up Code Exercises
     :practice: T
     :adaptive:
 
-    Create a class ``Student`` with an ``__init__`` method that takes a student's name as a string and a list of exam scores as integers. Then create a ``__str__`` method that returns the "name: average exam score" rounded to the nearest integer.
+    Create a class ``Student`` with an ``__init__`` method that takes a student's name as a string and a list of exam scores as integers. Then create a ``__str__`` method that returns the "name: average exam score" rounded to the nearest integer. For example, ``print(s)`` when ``s = Student("Sarah", [91,92,97])`` would print ``Sarah: 93.0``.
     -----
     class Student:
     =====
@@ -306,12 +306,12 @@ Mixed-Up Code Exercises
 .. activecode:: Classes_Basic_Student_ac
    :autograde: unittest
 
-   Write a class ``Student`` with an ``__init__`` method that takes a student's name as a string and a list of exam scores as integers. Then create a ``__str__`` method that returns the "name: average exam score" rounded to the nearest integer.
+   Write a class ``Student`` with an ``__init__`` method that takes a student's name as a string and a list of exam scores as integers. Then create a ``__str__`` method that returns the "name: average exam score" rounded to the nearest integer. For example, ``print(s)`` when ``s = Student("Sarah", [91,92,97])`` would print ``Sarah: 93.0``.
    ~~~~
    class Student:
         #write code here
 
-   s = Student("James", [92,80,76])
+   s = Student("Sarah", [91,92,97])
    print(s)
 
    ====
@@ -331,7 +331,7 @@ Mixed-Up Code Exercises
     :practice: T
     :adaptive:
 
-    Create a class ``Encoder`` with an initializer method that takes in a sentence as a string. Then create a string method that returns "string: length of sentence". Lastly, create a consonants method that returns the sentence without vowels, all lowercase.
+    Create a class ``Encoder`` with an initializer method that takes in a sentence as a string. Then create a string method that returns "string: length of sentence". Lastly, create a consonants method that returns the sentence without vowels, all lowercase. For example, ``print(e)`` when ``e = Encoder("I love Python")`` would print ``I love Python: 13`` and ``print(e.consonants())`` would print `` lv pythn``.
     -----
     class Encoder:
     =====
@@ -368,10 +368,14 @@ Mixed-Up Code Exercises
 .. activecode:: Classes_Basic_Encoder_ac
    :autograde: unittest
 
-   Write a class ``Encoder`` with an initializer method that takes in a sentence as a string. Then create a string method that returns "string: length of sentence". Lastly, create a consonants method that returns the sentence without vowels, all lowercase.
+   Write a class ``Encoder`` with an initializer method that takes in a sentence as a string. Then create a string method that returns "string: length of sentence". Lastly, create a consonants method that returns the sentence without vowels, all lowercase. For example, ``print(e)`` when ``e = Encoder("I love Python")`` would print ``I love Python: 13`` and ``print(e.consonants())`` would print `` lv pythn``.
    ~~~~
    class Encoder:
         #write code here
+
+   e = Encoder("I love Python")
+   print(e)
+   print(e.consonants())
 
    ====
    from unittest.gui import TestCaseGui
@@ -393,6 +397,7 @@ Mixed-Up Code Exercises
     :adaptive:
 
     Create a class ``CharFrequency`` with an initializer method that takes in a sentence as a string. Then create a string method that returns "The most common character in the sentence is x." In the case of tiebreakers, return the character that comes last in alphabetical order.
+    For example, ``print(c)`` when ``c = CharFreequency("I love Python")`` would print ``The most common character in the sentence is o.``
     -----
     class CharFrequency:
     =====
@@ -418,10 +423,14 @@ Mixed-Up Code Exercises
 .. activecode:: Classes_Basic_CharFrequency_ac
    :autograde: unittest
 
-   Write a class ``CharFrequency`` with an initializer method that takes in a sentence as a string. Then create a string method that returns "The most common character in the sentence is x." In the case of tiebreakers, return the character that comes last in alphabetical order.
+   Write a class ``CharFrequency`` with an initializer method that takes in a sentence as a string. Then create a string method that returns "The most common character in the sentence is x." In the case of tiebreakers, return the character that comes last in alphabetical order. For example, ``print(c)`` when ``c = CharFreequency("I love Python")`` would print ``The most common character in the sentence is o.``
    ~~~~
    class CharFrequency:
         #write code here
+
+
+   c = CharFrequency("I love Python")
+   print(c)
 
    ====
    from unittest.gui import TestCaseGui
@@ -442,7 +451,7 @@ Mixed-Up Code Exercises
     :practice: T
     :adaptive:
 
-    Create a class ``Loan`` with an initializer method that takes in an integer loan_amt, a float interest_rate and integer years. Then create a string method that returns "Your loan is ''loan_amt'' for ''years'' years at an interest rate of ''interest_rate''." Create another method called total_payment that calculates the total amount of loan payment based on the interest rate and number of years. Use the formula (loan_amt * (1 + interest_rate/100) ^ years). Also round your total payment to two decimal places. We're assuming that you are paying on an annual basis.
+    Create a class ``Loan`` with an initializer method that takes in an integer loan_amt, a float interest_rate and integer years. Then create a string method that returns "Your loan is ''loan_amt'' for ''years'' years at an interest rate of ''interest_rate''." Create another method called total_payment that calculates the total amount of loan payment based on the interest rate and number of years. Use the formula (loan_amt * (1 + interest_rate/100) ^ years). Also round your total payment to two decimal places. We're assuming that you are paying on an annual basis. For example, ``print(l)`` when ``l = Loan(10000, 5, 10)`` would print ``Your loan is $10000 for 10 years at an interest rate of 5%.`` and ``print(l.total_payment())`` would print ``16288.95`` as a float.
     -----
     class Loan:
     =====
@@ -464,15 +473,19 @@ Mixed-Up Code Exercises
     =====
         total = loan_amt * (1 + interest_rate/100) ** years  #paired
     =====
-        return round(total, 2)
+        return float('{:.2f}'.format(total))
 
 .. activecode:: Classes_Basic_Loan_ac
    :autograde: unittest
 
-   Write a class ``Loan`` with an initializer method that takes in an integer loan_amt, a float interest_rate and integer years. Then write a string method that returns "Your loan is ''loan_amt'' for ''years'' years at an interest rate of ''interest_rate''." Write another method called total_payment that calculates the total amount of loan payment based on the interest rate and number of years. Use the formula (loan_amt * (1 + interest_rate/100) ^ years). Also round your total payment to two decimal places. We're assuming that you are paying on an annual basis.
+   Write a class ``Loan`` with an initializer method that takes in an integer loan_amt, a float interest_rate and integer years. Then write a string method that returns "Your loan is ''loan_amt'' for ''years'' years at an interest rate of ''interest_rate''." Write another method called total_payment that calculates the total amount of loan payment based on the interest rate and number of years. Use the formula (loan_amt * (1 + interest_rate/100) ^ years). Also round your total payment to two decimal places. We're assuming that you are paying on an annual basis. For example, ``print(l)`` when ``l = Loan(10000, 5, 10)`` would print ``Your loan is $10000 for 10 years at an interest rate of 5%.`` and ``print(l.total_payment())`` would print ``16288.95`` as a float.
    ~~~~
    class Loan:
         #write code here
+
+   l = Loan(10000, 5, 10)
+   print(l)
+   print(l.total_payment())
 
    ====
    from unittest.gui import TestCaseGui
@@ -490,18 +503,18 @@ Mixed-Up Code Exercises
 
    myTests().main()
 
-.. parsonsprob:: Classes_Basic_Carts_pp
+.. parsonsprob:: Classes_Basic_Cart1_pp
     :numbered: left
     :practice: T
     :adaptive:
 
-    Create a class ``Carts`` with an initializer method, an add_item method, and a calculate_total method. The initializer method should have two attributes: 1) a dictionary called price_dict with keys as product names and values as the product price and 2) an empty list called cart_list that will contain tuples in the format (item, quantity). The add_item method will take in an item and quantity you wish to purchase and append those to the cart. The calculate_total method should calculate and return the total amount of your purchase for all of the items in your cart.
+    Create a class ``Cart`` that takes in a dictionary price_dict with keys as product names and values as the product price. The initializer method also creates a new empty list called cart_list that will contain tuples in the format (item, quantity). The class also has an add_item and a calculate_total method. The add_item method will take in an item and quantity you wish to purchase and append those to the cart. The calculate_total method should calculate and return the total amount of your purchase for all of the items in your cart. For example, when ``c = Cart({“Notebook”: 1.99, “Pen”: 2.50, “Paper”: 1.00})`` and a user wants to purchase 3 pens by calling c.add_item("Pen", 3), then print(c.calculate_total) would print ``7.50`` as a float.
     -----
-    class Carts:
+    class Cart:
     =====
-      def __init__(self):
+      def __init__(self, price_dict):
     =====
-        self.price_dict = {"Banana": 0.19, "Apple": 1.79, "Blueberries": 3.99, "Strawberries": 4.98}
+        self.price_dict = price_dict
         self.cart_list = []
     =====
         self.price_dict = price_dict #paired
@@ -521,23 +534,28 @@ Mixed-Up Code Exercises
     =====
           total += quantity * self.price_dict[item]
     =====
-        return round(total, 2)
+        return float('{:.2f}'.format(total))
 
 
-.. activecode:: Classes_Basic_Carts_ac
+
+.. activecode:: Classes_Basic_Cart1_ac
    :autograde: unittest
 
-   Write a class ``Carts`` with an initializer method, an add_item method, and a calculate_total method. The initializer method should have two attributes: 1) a dictionary called price_dict with keys as product names and values as the product price, and 2) an empty list called cart_list that will contain tuples in the format (item, quantity). The add_item method will take in an item and quantity you wish to purchase and append those to the cart. The calculate_total method should calculate and return the total amount of your purchase for all of the items in your cart.
+   Create a class ``Cart`` that takes in a dictionary price_dict with keys as product names and values as the product price. The initializer method also creates a new empty list called cart_list that will contain tuples in the format (item, quantity). The class also has an add_item and a calculate_total method. The add_item method will take in an item and quantity you wish to purchase and append those to the cart. The calculate_total method should calculate and return the total amount of your purchase for all of the items in your cart. For example, when ``c = Cart({“Notebook”: 1.99, “Pen”: 2.50, “Paper”: 1.00})`` and a user wants to purchase 3 pens by calling c.add_item("Pen", 3), then print(c.calculate_total) would print ``7.50`` as a float.
    ~~~~
-   class Carts:
+   class Cart:
         #write code here
+
+   c = Cart({"Notebook": 1.99, "Pen": 2.50, "Paper": 1.00})
+   c.add_item("Pen", 3)
+   print(c.calculate_total())
 
    ====
    from unittest.gui import TestCaseGui
    class myTests(TestCaseGui):
 
        def testOne(self):
-           c = Carts()
+           c = Cart({"Banana": 0.19, "Apple": 1.79, "Blueberries": 3.99, "Strawberries": 4.98})
            c.add_item("Banana", 5)
            c.add_item("Strawberries", 1)
            self.assertEqual(c.cart_list, [('Banana', 5), ('Strawberries', 1)], "Checking that all items were added to the cart")
