@@ -102,3 +102,67 @@ Peer Instruction: Strings Multiple Choice Questions
 
       'cave'.center(8, 'x')
 
+.. mchoice:: dz-lecture_12_3
+   :practice: T
+   :answer_a: 'a'
+   :answer_b: 'b'
+   :answer_c: 'c'
+   :answer_d: 'd'
+   :answer_e: 'e'
+   :correct: c
+   :feedback_a: Try again. ord converts characters to codes and chr converts codes to characters. ord('a') = 97, ord('z') = 122, ord(ch) = 119, val = 99. Therefore, mystery = 'c'.
+   :feedback_b: Try again. ord converts characters to codes and chr converts codes to characters. ord('a') = 97, ord('z') = 122, ord(ch) = 119, val = 99. Therefore, mystery = 'c'.
+   :feedback_c: Correct! ord converts characters to codes and chr converts codes to characters. ord('a') = 97, ord('z') = 122, ord(ch) = 119, val = 99. Therefore, mystery = 'c'.
+   :feedback_d: Try again. ord converts characters to codes and chr converts codes to characters. ord('a') = 97, ord('z') = 122, ord(ch) = 119, val = 99. Therefore, mystery = 'c'.
+   :feedback_e: Try again. ord converts characters to codes and chr converts codes to characters. ord('a') = 97, ord('z') = 122, ord(ch) = 119, val = 99. Therefore, mystery = 'c'.
+
+   .. code-block:: python
+
+      What is the value of mystery?
+
+      ch = 'w'
+      val = ord('a') + 6 - (ord('z') - ord(ch) + 1)
+      mystery = chr(val)
+
+
+.. mchoice:: dz-lecture_12_4
+   :practice: T
+   :answer_a: 'a'
+   :answer_b: 'b'
+   :answer_c: 'c'
+   :answer_d: 'd'
+   :answer_e: 'e'
+   :correct: b 
+   :feedback_a: Try again. ord converts characters to codes and chr converts codes to characters. ord('a') = 97, ord('z') = 122, ord(ch) = 128, val = 98. Therefore, mystery = 'b'.
+   :feedback_b: Correct! ord converts characters to codes and chr converts codes to characters. ord('a') = 97, ord('z') = 122, ord(ch) = 128, val = 98. Therefore, mystery = 'b'.
+   :feedback_c: Try again. ord converts characters to codes and chr converts codes to characters. ord('a') = 97, ord('z') = 122, ord(ch) = 128, val = 98. Therefore, mystery = 'b'
+   :feedback_d: Try again. ord converts characters to codes and chr converts codes to characters. ord('a') = 97, ord('z') = 122, ord(ch) = 128, val = 98. Therefore, mystery = 'b'
+   :feedback_e: Try again. ord converts characters to codes and chr converts codes to characters. ord('a') = 97, ord('z') = 122, ord(ch) = 128, val = 98. Therefore, mystery = 'b'
+
+   .. code-block:: python
+
+      What is the value of mystery?
+
+      ch = 'x'
+      val = ord('a') + 4 - (ord('z') - ord(ch) + 1)
+      mystery = chr(val)
+
+.. mchoice:: dz-lecture_12_7
+   :practice: T
+   :answer_a: a{0}b
+   :answer_b: ab
+   :answer_c: a4b
+   :answer_d: The code does not run
+   :correct: c
+   :feedback_a: Try again. The format(4) method formats the specified value(4) and insert them inside the string's placeholder. The placeholder is defined using curly brackets: {}.
+   :feedback_b: Try again. s2 = a{0}b. The format(4) method formats the specified value(4) and insert them inside the string's placeholder. The placeholder is defined using curly brackets: {}.
+   :feedback_c: Correct! The format(4) method formats the specified value(4) and insert them inside the string's placeholder.
+   :feedback_d: Try again. The code can run. {n} inserts the argument, thereefore s2 = a{0}b. The format(4) method formats the specified value(4) and insert them inside the string's placeholder. The placeholder is defined using curly brackets: {}.
+
+   .. code-block:: python
+
+      What is printed by this code?
+
+      s1 = '0'
+      s2 = 'a{' + s1 + '}b'
+      print(s2.format(4))
