@@ -121,10 +121,14 @@ xml tags to define news stories.
     data = fh.read()
     fh.close()
     tree = ET.fromstring(data)
-    story_list = tree.findall('xxxx')
-    for story in story_list:
-        print(f'Title: {story.find(title)}')
-        print(f'Date: {story.find(yyyy).text}'')
+    head = tree.find('head')
+    title = head.find('title')
+    print(head)
+    body = find(body)
+    dateline = body.find('dateline')
+    date = dateline.find('date')
+    print(date)
+
 
 Click on the button below to see the contents of weather.xml.  It contains
 xml tags to define weather observations.
