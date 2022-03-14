@@ -1,4 +1,4 @@
-Group Work: Reading from CSV Files
+Group Work: Using a CSV reader/writer
 ----------------------------------------
 
 It is best to use a POGIL approach with the following. In POGIL students work
@@ -25,7 +25,7 @@ Students will know and be able to do the following.
 CSV Reader
 ====================================
 
-Many people need to read and process CSV files so there is way to make this easier.
+Many people need to read and process CSV files. There is a module that makes this process easier.
 
 Look at the data in the file below.
 
@@ -73,11 +73,11 @@ We can write Python code to read the data using a csv reader and find the date w
     :answer_d: integer
     :correct: b
     :feedback_a: It is not a string when you use a csv reader
-    :feedback_b: The csv reader returns each row as a list of values
+    :feedback_b: The csv reader returns each row as a list of string values
     :feedback_c: It is not a dictionary
     :feedback_d: It is not an integer
 
-    What type of thing is row in the code above?
+    What type of thing is ``row`` in the code above?
 
 .. mchoice:: csv_reader_steps_mcq
     :practice: T
@@ -118,7 +118,7 @@ We can read the data from the file and store it in a nested dictionary. In this 
 
         # get the file handler
         inFile = open(file)
-        csvFile = csv.reader(inFile)
+        csvFile = csv.Reader(inFile)
 
         # read the header row
         headers = next(csvFile)
@@ -155,9 +155,9 @@ We can read the data from the file and store it in a nested dictionary. In this 
 
     =====
 
-    from unittest.gui import TestCaseGui
+    import unittest
 
-    class myTests(TestCaseGui):
+    class myTests(unittest.TestCase):
 
        def testOne(self):
           travel_d = get_dict("airtravel.csv")
@@ -165,14 +165,14 @@ We can read the data from the file and store it in a nested dictionary. In this 
           self.assertEqual(get_total_for_year(travel_d, "1959"), 5140, 'get_total_for_year(travel_d, "1959")')
           self.assertEqual(get_total_for_year(travel_d, "1960"), 5714, 'get_total_for_year(travel_d, "1960")')
 
-    myTests().main()
+    unittest.main()
 
 .. fillintheblank:: csv_reader_read_one_row
     :practice: T
 
     What function can you use to read just one row from a csv reader?
 
-    - :next\(?\)?: Use the function next to read a single row
+    - :next\(?\)?: Use the function ``next`` to read a single row
       :.*: Look at the code above. How do we read the header row?
 
 .. activecode:: csv_reader_airtravel_get_max_month_ac
@@ -187,7 +187,7 @@ We can read the data from the file and store it in a nested dictionary. In this 
 
         # get the file handler
         inFile = open(file)
-        csvFile = csv.reader(file)
+        csvFile = csv.reader()
 
         # skip the header
         headers = next(inFile)
@@ -225,9 +225,9 @@ We can read the data from the file and store it in a nested dictionary. In this 
 
     =====
 
-    from unittest.gui import TestCaseGui
+    import unittest
 
-    class myTests(TestCaseGui):
+    class myTests(unittest.TestCase):
 
        def testOne(self):
           travel_d = get_dict("airtravel.csv")
@@ -235,7 +235,7 @@ We can read the data from the file and store it in a nested dictionary. In this 
           self.assertEqual(get_max_month(travel_d, "1959")[0], "AUG", 'get_max_month(travel_d, "1959")[0]')
           self.assertEqual(get_max_month(travel_d, "1960")[0], "JUL", 'get_max_month(travel_d, "1960")[0]')
 
-    myTests().main()
+    unittest.main()
 
 
 Writing a Comma-Separated Values (CSV) File with CSV Writer
@@ -309,9 +309,9 @@ We can read the data from the file and store it in a list of dictionaires where 
 
     =====
 
-    from unittest.gui import TestCaseGui
+    import unittest
 
-    class myTests(TestCaseGui):
+    class myTests(unittest.TestCase):
 
        def testOne(self):
           l = get_list('oscar_age_actress.csv')
@@ -327,7 +327,7 @@ We can read the data from the file and store it in a list of dictionaires where 
           self.assertEqual(get_top_five_by_age(l)[4][1], 5, 'get_top_five_by_age(l)[4][1]')
 
 
-    myTests().main()
+    unittest.main()
 
 
 .. mchoice:: csv_reader_what_can_be_spec
@@ -350,7 +350,7 @@ We can read the data from the file and store it in a list of dictionaires where 
     :answer_b: It automatically adds a new line
     :answer_c: You write out a list of values
     :answer_d: It automatically converts numbers to strings to write each line
-    :correct: b, c,d
+    :correct: b,c,d
     :feedback_a: No, you still write out each line one at a time
     :feedback_b: Yes, it automatically adds a new line
     :feedback_c: Yes, you write out a list of values rather than a string
