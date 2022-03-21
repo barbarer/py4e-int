@@ -29,7 +29,7 @@ Comma-Separated Values (CSV) Files
 
 One way that we exchange data is by storing it in comma-separated value (CSV) files.  These files have values separated by a symbol, which is often a comma. Each row in the file contains the same type of data.
 
-Look at the data in the file below.
+Look at the data in the file below.  It has a date in day-month-year followed by the opening value, high, low, and closing value.
 
 .. datafile:: stocks1.txt
     :fromfile: stocks.txt
@@ -37,7 +37,7 @@ Look at the data in the file below.
 .. fillintheblank:: csv_file_stocks_max_close_fitb
     :practice: T
 
-    What is the highest closing value in the file above?  The close is the last value on each line.
+    What is the highest closing value in the file above?  The closing value is the last value on each line.
 
     - :11497.12: This is the highest value at the close.
       :.*: Look at the last value on each line and find the highest value.

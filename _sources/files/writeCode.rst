@@ -621,8 +621,8 @@ The following file contains a set of emotions that will be used in the next ques
        myTests().main()
 
 The rest of the questions gather their data from the file ``stocks.txt``, which shows the monthly Dow
-Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Low, Close, Volume. The first
-line is ``3-Dec-01,9848.93,10220.78,9651.87,10021.57``.  The Date is in the format ``d-Month-yy``.  The month
+Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Low, and Close. The first
+line is ``3-Dec-01,9848.93,10220.78,9651.87,10021.57``.  The Date is in the format ``day-month-yy``.  The month
 is the first three letters of the month.
 
 .. reveal:: pol_Data_8_10_2
@@ -800,7 +800,7 @@ is the first three letters of the month.
       .. tab:: Question
 
           Complete the code at the ``#`` so that it prints out the date with the biggest
-          loss from open to close.  Each line has: Date, Open, High, Low, Close, Volume
+          loss from open to close.  Each line has: Date, Open, High, Low, and Close.
           It should print ``3-Aug-98 loss 1329.030000000001``.
 
           .. activecode::  file_ex_biggestLossq
@@ -855,7 +855,7 @@ is the first three letters of the month.
         :autograde: unittest
 
         Fix the errors below so that the ``pointGain`` function returns a list of all the dates where the Dow
-        Jones gained more than 300 points from open to close.  Each line has: Date, Open, High, Low, Close.
+        Jones gained more than 300 points from open to close.  Each line has: Date, Open, High, Low, and Close.
         There should be 22 dates.
         ~~~~
         def pointGain():
@@ -892,7 +892,7 @@ is the first three letters of the month.
 
             The code below prints all the dates and high price for dates that occur
             on the first day of the month (i.e. January 1, February 1...).
-            Each line has: Date, Open, High, Low, Close, Volume Change it
+            Each line has: Date, Open, High, Low, and Close. Change it
             so that it prints the date and low price for all the dates that occur in June.
 
             .. activecode::  file_ex_Juneq
@@ -933,7 +933,7 @@ is the first three letters of the month.
         from the stocks file in a list and the abbreviation for a ``month``
         (i.e. "Jan", "Feb") as parameters and returns the average value of the closing
         prices during that month for all the years in the file.
-        Each line has: Date, Open, High, Low, Close, Volume
+        Each line has: Date, Open, High, Low, and Close.
 
         ~~~~
 

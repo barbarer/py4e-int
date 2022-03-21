@@ -4,8 +4,9 @@ Group Work: Regular Expressions (Regex)
 It is best to use a POGIL approach with the following. In POGIL students work
 in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
 
-.. groupsub:: regex_groupsub
-   :limit: 3
+.. note::
+
+   If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.
 
 **Learning Objectives**
 
@@ -331,3 +332,8 @@ There are times when you want to return just part of what was matched.
 
     - :\(\): Parenthesis are used to specify the part of the match to return.
       :.*: Look at the code above.  What was the part that was returned?
+
+If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to
+
+.. groupsub:: regex_groupsub
+   :limit: 3
