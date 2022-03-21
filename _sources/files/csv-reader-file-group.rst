@@ -329,7 +329,6 @@ We can read the data from the file and store it in a list of dictionaires where 
 
     unittest.main()
 
-
 .. mchoice:: csv_reader_what_can_be_spec
     :practice: T
     :answer_a: delimeter
