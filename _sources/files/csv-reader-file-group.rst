@@ -160,7 +160,7 @@ We can read the data from the file and store it in a nested dictionary. In this 
     class myTests(unittest.TestCase):
 
        def testOne(self):
-          travel_d = get_dict("airtravel.csv")
+          travel_d = get_dict("airtravel1.csv")
           self.assertEqual(get_total_for_year(travel_d, "1958"), 4572, 'get_total_for_year(travel_d, "1958")')
           self.assertEqual(get_total_for_year(travel_d, "1959"), 5140, 'get_total_for_year(travel_d, "1959")')
           self.assertEqual(get_total_for_year(travel_d, "1960"), 5714, 'get_total_for_year(travel_d, "1960")')
@@ -177,7 +177,7 @@ We can read the data from the file and store it in a nested dictionary. In this 
 
 .. activecode:: csv_reader_airtravel_get_max_month_ac
     :language: python3
-    :datafile: airtravel.csv
+    :datafile: airtravel1.csv
 
     Fix the code below to work correctly.  It should print the month with the highest number of passengers in 1958.
     ~~~~
@@ -218,7 +218,7 @@ We can read the data from the file and store it in a nested dictionary. In this 
         tup_list = sorted(d.items(), key = lambda t: t[0], reverse = True)
         return tup_list[0]
 
-    travel_d = get_dict("airtravel.csv")
+    travel_d = get_dict("airtravel1.csv")
     print(travel_d)
     month, amount = get_max_month(travel_d, "1958")
     print(month, amount)
@@ -230,7 +230,7 @@ We can read the data from the file and store it in a nested dictionary. In this 
     class myTests(unittest.TestCase):
 
        def testOne(self):
-          travel_d = get_dict("airtravel.csv")
+          travel_d = get_dict("airtravel1.csv")
           self.assertEqual(get_max_month(travel_d, "1958")[0], "AUG", 'get_max_month(travel_d, "1958")[0]')
           self.assertEqual(get_max_month(travel_d, "1959")[0], "AUG", 'get_max_month(travel_d, "1959")[0]')
           self.assertEqual(get_max_month(travel_d, "1960")[0], "JUL", 'get_max_month(travel_d, "1960")[0]')
@@ -314,7 +314,7 @@ We can read the data from the file and store it in a list of dictionaires where 
     class myTests(unittest.TestCase):
 
        def testOne(self):
-          l = get_list('oscar_age_actress.csv')
+          l = get_list('oscar_age_actress1.csv')
           self.assertEqual(get_top_five_by_age(l)[0][0], '29', 'get_top_five_by_age(l)[0][0]')
           self.assertEqual(get_top_five_by_age(l)[0][1], 8, 'get_top_five_by_age(l)[0][1]')
           self.assertEqual(get_top_five_by_age(l)[1][0], '26', 'get_top_five_by_age(l)[1][0]')
@@ -328,7 +328,6 @@ We can read the data from the file and store it in a list of dictionaires where 
 
 
     unittest.main()
-
 
 .. mchoice:: csv_reader_what_can_be_spec
     :practice: T

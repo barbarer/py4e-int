@@ -163,6 +163,177 @@ Peer Instruction: Functions Multiple Choice Questions
          print(x*y)
 
 
+.. mchoice:: dz-lecture_5_6
+   :practice: T
+   :answer_a: 8
+   :answer_b: 20
+   :answer_c: Error, because a cannot be assigned in two places
+   :answer_d: None
+   :answer_e: 0
+   :correct: b
+   :feedback_a: Incorrect! Because any changes to variable within the scope of the function doesn't affect the variable's value outside of it
+   :feedback_b: Correct! Because any changes to variable within the scope of the function doesn't affect the variable's value outside of it
+   :feedback_c: Incorrect! Because any changes to variable within the scope of the function doesn't affect the variable's value outside of it
+   :feedback_d: Incorrect! Because any changes to variable within the scope of the function doesn't affect the variable's value outside of it
+   :feedback_e: Incorrect! Because any changes to variable within the scope of the function doesn't affect the variable's value outside of it
+
+   What is the output of this code?
+
+   .. code-block:: python
+
+      def first(a):
+         a = 8
+         return a
+
+      a = 20
+      first(a)
+      print(a)
+
+
+.. mchoice:: dz-lecture_5_7
+   :practice: T
+   :answer_a: 8
+   :answer_b: 20
+   :correct: a
+   :feedback_a: Correct! Because the value of a has been reassigned outside the scope of the function- a = first(a)
+   :feedback_b: Incorrect! Because the value of a has been reassigned outside the scope of the function- a = first(a)
+
+   What is the output of this code?
+
+   .. code-block:: python
+
+      def first(a):
+         a = 8
+         return a
+      a = 20
+      a = first(a)
+      print(a)
+
+
+.. mchoice:: dz-lecture_5_11
+   :practice: T
+   :answer_a: 1
+   :answer_b: 2
+   :answer_c: 4
+   :answer_d: 8
+   :answer_e: Error because of an undefined variable
+   :correct: b
+   :feedback_a: Incorrect! a(num) will always return 2. b(val) will always print a(1) which is 2.
+   :feedback_b: Correct! a(num) will always return 2. b(val) will always print a(1) which is 2.
+   :feedback_c: Incorrect! a(num) will always return 2. b(val) will always print a(1) which is 2.
+   :feedback_d: Incorrect! a(num) will always return 2. b(val) will always print a(1) which is 2.
+   :feedback_e: Incorrect! There are no undefined variables in this code block.
+
+   What is the output of this code?
+
+   .. code-block:: python
+
+      def a(num):
+         num = 4
+         return 2
+      def b(val):
+         num = 8
+         print(a(1))
+      b(2)
+
+
+.. mchoice:: dz-lecture_5_12
+   :practice: T
+   :answer_a: 1
+   :answer_b: 2
+   :answer_c: 4
+   :answer_d: 8
+   :answer_e: Error because of an undefined variable
+   :correct: b
+   :feedback_a: Incorrect! a(num) will always return 2. b(val) will always print a(1) which is 2.
+   :feedback_b: Correct! a(num) will always return 2. b(val) will always print a(1) which is 2.
+   :feedback_c: Incorrect! a(num) will always return 2. b(val) will always print a(1) which is 2.
+   :feedback_d: Incorrect! a(num) will always return 2. b(val) will always print a(1) which is 2.
+   :feedback_e: Incorrect! There are no undefined variables in this code block.
+
+   What is the output of this code?
+
+   .. code-block:: python
+
+      def a(num):
+         num = 4
+         return 2
+      def b(val):
+         val = 8
+         print (a(1))
+      b(2)
+
+
+.. mchoice:: dz-lecture_6_4
+   :practice: T
+   :answer_a: Example
+   :answer_b: Type contract
+   :answer_c: Header
+   :answer_d: Description
+   :answer_e: Body
+   :correct: a
+   :feedback_a: Correct! The function returns a boolean but the example returns an integer. 
+   :feedback_b: Incorrect! The name and type of parameters have been clearly defined. Option A is the answer becauase the function returns a boolean but the example returns an integer.
+   :feedback_c: Incorrect! The syntax of function's header is correct. Option A is the answer becauase the function returns a boolean but the example returns an integer.
+   :feedback_d: Incorrect! The function has been clearly descibed. Option A is the answer becauase the function returns a boolean but the example returns an integer.
+   :feedback_e: Incorrect! The body of the function has been defined accurately. Option A is the answer becauase the function returns a boolean but the example returns an integer.
+
+   One of the components of this function is inconsistent with the rest. Which is it?
+
+   .. code-block:: python
+
+      def sum_eleven(num1, num2, num3):
+         ’’’(int, int, int) -> bool
+         Return True iff num1, num2, and num3 sum to 11.
+         >>>sum_eleven (4, 5, 2)
+         11
+         ’’’
+         return num1 + num2 + num3 == 11
+
+
+.. mchoice:: dz-lecture_6_5
+   :practice: T
+   :answer_a: Example
+   :answer_b: Type contract
+   :answer_c: Header
+   :answer_d: Description
+   :answer_e: Body
+   :correct: b
+   :feedback_a: Incorrect! The example has been correctly defined. Option B is right because the function returns an integer but the type of contract indicates bool. 
+   :feedback_b: Correct! Option B is right because the function returns an integer but the type of contract indicates bool.
+   :feedback_c: Incorrect! The syntax of function's header is correct. Option B is right because the function returns an integer but the type of contract indicates bool.
+   :feedback_d: Incorrect! The function has been clearly descibed. Option B is right because the function returns an integer but the type of contract indicates bool.
+   :feedback_e: Incorrect! The body of the function has been defined accurately. Option B is right because the function returns an integer but the type of contract indicates bool.
+
+   One of the components of this function is inconsistent with the rest. Which is it?
+
+   .. code-block:: python
+
+      def rightmost_digit(a):
+         ’’’(int) -> bool
+         Return the rightmost digit of a.
+         >>>rightmost_digit (14)
+         4
+         ’’’
+         return a % 10
+
+
+.. mchoice:: dz-lecture_6_8
+   :practice: T
+   :answer_a: >>> num_pizzas(1, 2, 3)   2
+   :answer_b: >>> num_pizzas(1, 2, 3)   1
+   :answer_c: >>> num_pizzas(1, 2, 3)   9
+   :answer_d: >>> num_pizzas(1, 2, 3)   6
+   :correct: a
+   :feedback_a: Correct! The group will need atleast 11 slices. Since each pizza has 8 slices, the group would need atleast 2 pizzas.
+   :feedback_b: Incorrect! The group will need atleast 11 slices. Since each pizza has 8 slices, the group would need atleast 2 pizzas.
+   :feedback_c: Incorrect! The group will need atleast 11 slices. Since each pizza has 8 slices, the group would need atleast 2 pizzas.
+   :feedback_d: Incorrect! The group will need atleast 11 slices. Since each pizza has 8 slices, the group would need atleast 2 pizzas.
+
+   At a pizzeria, adults order two slices, boys order three slices, and girls order one slice. Each pizza has eight slices. Write a function that takes three parameters representing the number of adults, boys, and girls, and returns the required number of pizzas. Which example is correct?
+
+
+
 
 
 
