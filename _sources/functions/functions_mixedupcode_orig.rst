@@ -203,3 +203,222 @@ Functions Mixed-Up Code Questions
             self.assertAlmostEqual(slope(-1,2,3,4.4), 0.4666666666666668, 2, "slope(-1,2,3,4.4)")
 
     myTests().main()
+
+.. parsonsprob:: Functions_MixedUpCode_6
+    :numbered: left
+    :practice: T
+    :adaptive:
+
+    Create a function called ``get_hypotenuse`` that takes in two parameters, ``angle`` and ``opposite_side``, and 
+    returns the hypotenuse of a right triangle. ``angle`` contains the angle facing the opposite side in degrees. 
+    The sine function takes in a value in radians. The sine of an angle is equal to the opposite side over the hypotenuse.
+    -----
+    import math
+    =====
+    def get_hypotenuse(angle, opposite_side):
+    =====
+    def get_hypotenuse(angle, opposite_side) #paired
+    =====
+        sine = math.sin(math.radians(angle))
+    =====
+        sine = math.sin(angle) #paired
+    =====
+        hypotenuse = opposite_side / sine
+    =====
+        hypotenuse = sine / opposite_side #paired
+    =====
+        return hypotenuse
+
+.. activecode:: Functions_MixedUpCode_6_ac
+    :practice: T
+    :autograde: unittest
+
+    Write a function called ``get_hypotenuse`` that takes in two parameters, ``angle`` and ``opposite_side``, and 
+    returns the hypotenuse of a right triangle. ``angle`` contains the angle facing the opposite side in degrees. 
+    The sine function takes in a value in radians. The sine of an angle is equal to the opposite side over the hypotenuse.
+    ~~~~
+    import math
+
+
+    ====
+    from unittest.gui import TestCaseGui
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertAlmostEqual(get_hypotenuse(45, 1), 1.41421356237, 5, "get_hypotenuse(45, 1)")
+            self.assertAlmostEqual(get_hypotenuse(16, 7), 25.3991291727, 1, "get_hypotenuse(16, 7)")
+            self.assertAlmostEqual(get_hypotenuse(34, 14), 25.035765379, 2,"get_hypotenuse(34, 14)")
+            self.assertAlmostEqual(get_hypotenuse(32, 15.9), 30, 2,"get_hypotenuse(32, 15.9)")
+
+    myTests().main()
+
+
+.. parsonsprob:: Functions_MixedUpCode_7
+    :numbered: left
+    :practice: T
+    :adaptive:
+
+    Create a function called ``convert_to_miles`` that takes in ``feet`` as a parameter and 
+    returns the value in miles. ``feet`` contains the length of an object in feet. 1 mile is equal to 5280 feet.
+    -----
+    def convert_to_miles(feet):
+    =====
+    def convert_to_miles(feet) #paired
+    =====
+        miles = feet / 5280
+    =====
+        miles = 5280 / feet #paired
+    =====
+        return miles
+
+.. activecode:: Functions_MixedUpCode_7_ac
+    :practice: T
+    :autograde: unittest
+
+    Write a function called ``convert_to_miles`` that takes in ``feet`` as a parameter and 
+    returns the value in miles. ``feet`` contains the length of an object in feet. 1 mile is equal to 5280 feet.
+    ~~~~
+
+
+    ====
+    from unittest.gui import TestCaseGui
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertAlmostEqual(convert_to_miles(32451), 6.1460227, 5, "convert_to_miles(32451)")
+            self.assertAlmostEqual(convert_to_miles(4), 0.000757576, 9, "convert_to_miles(4)")
+            self.assertAlmostEqual(convert_to_miles(5280), 1, 1,"convert_to_miles(5280)")
+            self.assertAlmostEqual(convert_to_miles(12475), 2.3626894, 4,"convert_to_miles(12475)")
+
+    myTests().main()
+
+.. parsonsprob:: Functions_MixedUpCode_8
+    :numbered: left
+    :practice: T
+    :adaptive:
+
+    Create a function called ``even_odd`` that takes in ``integer`` as a parameter and 
+    returns 1 if the integer is even, 2 if the integer is odd, or 3 if neither is true.
+    -----
+    def even_odd(integer):
+    =====
+    def even_odd(integer) #paired
+    =====
+        if integer == 0:
+            return 3
+    =====
+        if integer = 0: #paired
+            return 3
+    =====
+        elif integer % 2 == 0:
+            return 1
+    =====
+        else:
+            return 2
+
+
+.. activecode:: Functions_MixedUpCode_8_ac
+    :practice: T
+    :autograde: unittest
+
+    Write a function called ``even_odd`` that takes in ``integer`` as a parameter and 
+    returns 1 if the integer is even, 2 if the integer is odd, or 3 if neither is true.
+    ~~~~
+
+
+    ====
+    from unittest.gui import TestCaseGui
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(even_odd(0), 3, "even_odd(0)")
+            self.assertEqual(even_odd(32), 1, "even_odd(32)")
+            self.assertEqual(even_odd(5), 2, "even_odd(5)")
+
+    myTests().main()
+
+.. parsonsprob:: Functions_MixedUpCode_9
+    :numbered: left
+    :practice: T
+    :adaptive:
+
+    Create a function called ``larger_string`` that takes in two parameters, ``str1`` and ``str2``, and 
+    returns the string that has the larger length. If the lengths are equal, return ``str1``.
+    -----
+    def larger_string(str1, str2):
+    =====
+    def larger_string(str1, str2) #paired
+    =====
+        if len(str1) >= len(str2):
+            return str1
+    =====
+        if len(str1) > len(str2): #paired
+            return str1
+    =====
+        else:
+            return str2
+
+
+.. activecode:: Functions_MixedUpCode_9_ac
+    :practice: T
+    :autograde: unittest
+
+    Write a function called ``larger_string`` that takes in two parameters, ``str1`` and ``str2``, and 
+    returns the string that has the larger length. If the lengths are equal, return ``str1``.
+    ~~~~
+
+
+    ====
+    from unittest.gui import TestCaseGui
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(larger_string("Three", "Four"), "Three", "larger_string('Three', 'Four')")
+            self.assertEqual(larger_string("That", "Knew"), "That", "larger_string('That', 'Knew')")
+            self.assertEqual(larger_string("Cat", "People"), "People", "larger_string('Cat', 'People')")
+
+    myTests().main()
+
+.. parsonsprob:: Functions_MixedUpCode_10
+    :numbered: left
+    :practice: T
+    :adaptive:
+
+    Create a function called ``find_distance`` that takes in four parameters, ``x1``, ``y1``, ``x2``, and ``y2``, and 
+    returns the distance between these two points.
+    -----
+    import math
+    =====
+    def find_distance(x1, y1, x2, y2):
+    =====
+    def find_distance(x1, y1, x2, y2) #paired
+    =====
+        sqr_dist = (x1 - x2)**2 + (y1 - y2)**2
+    =====
+        sqr_dist = (x1 - y1)**2 + (x2 - y2)**2 #paired
+    =====
+        return math.sqrt(sqr_dist)
+    =====
+        return sqrt(sqr_distance) #paired
+
+.. activecode:: Functions_MixedUpCode_10_ac
+    :practice: T
+    :autograde: unittest
+
+    Write a function called ``find_distance`` that takes in four parameters, ``x1``, ``y1``, ``x2``, and ``y2``, and 
+    returns the distance between these two points.
+    ~~~~
+    import math
+
+    ====
+    from unittest.gui import TestCaseGui
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertAlmostEqual(find_distance(1, 2, 21, 14), 23.3238, 4, "find_distance(1, 2, 21, 14)")
+            self.assertAlmostEqual(find_distance(5, 4, 15, 345), 341.1466, 4, "find_distance(5, 4, 15, 345)")
+            self.assertAlmostEqual(find_distance(51, 42, 75, 12), 38.41875, 3, "find_distance(51, 42, 75, 12)")
+            self.assertAlmostEqual(find_distance(1, 2, 3, 4), 2.828427, 3, "find_distance(1, 2, 3, 4)")
+
+
+    myTests().main()
