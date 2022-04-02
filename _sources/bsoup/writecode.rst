@@ -6,7 +6,7 @@ Write Code Questions
    :toggle: lock
 
 .. selectquestion:: bsoup_writecode_2_sq_v2
-   :fromid: bsoup_writecode2q_v2, bsoup_writecode2q_mu
+   :fromid: bsoup_writecode2q_v2, bsoup_writecode2qv2_mu
    :toggle: lock
 
 
@@ -43,5 +43,5 @@ Write Code Questions
 
 
 .. selectquestion:: bsoup_writecode_10_sq_v2
-  :fromid: bsoup_writecode10q_v2, bsoup_writecode10q_mu
+  :fromid: bsoup_writecode10q_v2, bsoup_writecode10q_v2_mu
   :toggle: lock

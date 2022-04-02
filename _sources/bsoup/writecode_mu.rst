@@ -1,7 +1,6 @@
 Write Code Questions
 ---------------------
 
-
 .. parsonsprob:: bsoup_writecode1q_mu
   :numbered: left
   :practice: T
@@ -33,21 +32,19 @@ Write Code Questions
       return all_info
 
 
-.. parsonsprob:: bsoup_writecode2q_mu
+.. parsonsprob:: bsoup_writecode2qv2_mu
   :numbered: left
   :practice: T
   :adaptive:
 
   Create a function called ``headings`` that takes in a parameter ``url`` and uses BeautifulSoup to return a list of all heading names (not subheadings) from the
   Contents box (History, Emergence of MOOC providers, Student experience and pedagogy, etc.). For example, ``headings('https://en.wikipedia.org/wiki/Massive_open_online_course')``
-  should return ``['History', 'Emergence of MOOC providers', 'Student experience and pedagogy', 'Information architecture', 'Industry', 'Benefits', 'Challenges and criticisms', 'See also', 'References', 'Sources', 'Further reading']``.
+  should return ``['History', 'Emergence of MOOC providers', 'Student experience and pedagogy', 'Information architecture', 'Industry', 'Benefits', 'Challenges and criticisms', 'See also', 'References', 'Further reading', 'External links']``.
   -----
   import requests
   from bs4 import BeautifulSoup
   =====
   def headings(url):
-  =====
-      a_tags = []
       h_list = []
   =====
       r = requests.get(url)
@@ -60,17 +57,13 @@ Write Code Questions
   =====
       for tag in hs:
   =====
-      a_tag = tag.find('a')
+          a_tag = tag.find('a')
   =====
-      a_tags.append(a_tag)
+          h = a_tag.find('span', class_='toctext').text
   =====
-      for tag in a_tags:
+          h = a_tag.find('span', class='toctext').text #paired
   =====
-          h = tag.find(class_='toctext').text
-  =====
-          h = tag.find(class='toctext').text #paired
-  =====
-          h_list.append(heading)
+          h_list.append(h)
   =====
       return h_list
 
@@ -88,12 +81,11 @@ Write Code Questions
   import requests
   =====
   def coursera_dict(url):
+      coursera_enrollees = {}
   =====
       r = requests.get(url)
   =====
       soup = BeautifulSoup(r.text, 'html.parser')
-  =====
-      coursera_enrollees = {}
   =====
       tag = soup.find('table', class_='wikitable')
   =====
@@ -108,7 +100,6 @@ Write Code Questions
           both_columns = row.find_all("td")
   =====
           key = both_columns[0].text
-  =====
           value = both_columns[1].text.rstrip("\n")
   =====
           coursera_enrollees[key] = value
@@ -129,7 +120,6 @@ Write Code Questions
   from bs4 import BeautifulSoup
   =====
   def types(url):
-  =====
       types = []
   =====
       r = requests.get(url)
@@ -170,14 +160,13 @@ Write Code Questions
   import requests
   =====
   def restaurants_list(url):
+      r_list = []
   =====
       r = requests.get(url)
   =====
       soup = BeautifulSoup(r.text, 'html.parser')
   =====
       soup = BeautifulSoup(r.text, 'xml') #paired
-  =====
-      r_list = []
   =====
       rest_list = soup.find_all('div', class_ = "c-mapstack__card-hed")
   =====
@@ -203,7 +192,6 @@ Write Code Questions
   from bs4 import BeautifulSoup
   =====
   def bsi_list(url):
-  =====
       list1 = []
   =====
       r = requests.get(url)
@@ -232,10 +220,10 @@ Write Code Questions
   -----
   from bs4 import BeautifulSoup
   import requests
-  =====
   import re
   =====
   def bsi_dict(url):
+      bsi_dict = {}
   =====
       r = requests.get(url)
       soup = BeautifulSoup(r.text, 'html.parser')
@@ -243,29 +231,16 @@ Write Code Questions
       r = requests.get(url)
       soup = BeautifulSoup(r.string, 'html.parser') #paired
   =====
-      bsi_list = []
-      href_list = []
-      bsi_dict = {}
-  =====
       sections = soup.find_all('a', href = re.compile("/programs/bachelor-science-information/"))
   =====
       sections = soup.find_all('link', href = re.compile("/programs/bachelor-science-information/")) #paired
   =====
       for section in sections[:-2]:
   =====
-          bsi_list.append(section.text.strip("\n").strip())
+          key = section.text.strip()
+          value = section.get('href')
   =====
-          url_end = section.get('href')
-  =====
-          url_end = section.find('href') #paired
-  =====
-          full_url = "https://www.si.umich.edu" + url_end
-  =====
-          href_list.append(full_url)
-  =====
-      for i in range(len(bsi_list)):
-  =====
-          bsi_dict[bsi_list[i]] = href_list[i]
+          bsi_dict[bsi_list[key] = value
   =====
       return bsi_dict
 
@@ -275,27 +250,34 @@ Write Code Questions
   :practice: T
   :adaptive:
 
-  Create a function called ``envelope_address`` that takes in a parameter ``url`` and uses BeautifulSoup to web scrape and return the address text in the footer with the newlines stripped. For example, ``envelope_address('https://www.si.umich.edu/programs/bachelor-science-information')``
-  should return first line: ``'School of Information'``, second line: ``'University of Michigan'``, third line: ``'105 S State St.'``, and last line: ``'Ann Arbor, MI 48109-1285'``.
+  Create a function called ``envelope_address`` that takes in a parameter ``url`` and uses BeautifulSoup to web scrape and return the address text in the footer as a list. For example, ``envelope_address('https://www.si.umich.edu/programs/bachelor-science-information')``
+  should return a list like: ``['School of Information', 'University of Michigan', '105 S State St.', 'Ann Arbor, MI 48109-1285']``.
   -----
   import requests
   from bs4 import BeautifulSoup
   =====
   def envelope_address(url):
+      out_list = []
   =====
       r = requests.get(url)
   =====
       soup = BeautifulSoup(r.text, 'html.parser')
   =====
-      address = soup.find('div', class_ = 'footer--address').text.strip("\n")
+      address = soup.find('div', class_ = 'footer--address').text.strip()
   =====
-      address = soup.find(div, class_ = 'footer--address').text.strip("\n") #paired
+      address = soup.find('div', class = 'footer--address').text.strip() #paired
   =====
-      address = soup.find('div', class = 'footer--address').text.strip("\n") #paired
+      add_list = address.split("\n")
   =====
-      address = soup.find_all('div', class = 'footer--address').text.strip("\n") #paired
+      add_list = address.split() #paired
   =====
-      return address
+      for add_line in add_list:
+  =====
+          out_list.append(add_line.strip())
+  =====
+          add_list.append(add_line.strip()) #paired
+  =====
+      return out_list
 
 
 .. parsonsprob:: bsoup_writecode9q_mu
@@ -310,19 +292,18 @@ Write Code Questions
   from bs4 import BeautifulSoup
   import requests
   =====
-  import re #distractor
+  import re #paired
   =====
   def name_email(url):
+      names_list = []
+      emails_list = []
+      name_email_dict = {}
   =====
       r = requests.get(url)
       soup = BeautifulSoup(r.text, 'html.parser')
   =====
       r = requests.get(url)
       soup = BeautifulSoup(r.string, 'html.parser') #paired
-  =====
-      names_list = []
-      emails_list = []
-      name_email_dict = {}
   =====
       names = soup.find_all(class_="research-person-profile__name")
   =====
@@ -354,15 +335,14 @@ Write Code Questions
   :practice: T
   :adaptive:
 
-  Create a function called ``program_email`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the 5 program names under Email Addresses
+  Create a function called ``program_email`` that takes in a parameter ``url``, uses BeautifulSoup to web scrape the program names under Email Addresses
   and Admissions (BSI program, MSI program, etc.) and their associated email addresses, and returns a dictionary with the program names as keys and the email addresses as values.
-  For example, ``program_email('https://www.si.umich.edu/about-umsi/contact-us')`` should return ``{'BSI program': 'umsi.undergrad@umich.edu', 'MSI program': 'umsi.admissions@umich.edu', 'MHI program': 'hi.admissions@umich.edu', 'MADS program': 'umsi.mads@umich.edu', 'Doctoral program': 'umsi.phd.admissions@umich.edu'}``.
+  For example, ``program_email('https://www.si.umich.edu/about-umsi/contact-us')`` should return something like ``{'BSI program': 'umsi.undergrad@umich.edu', 'MSI program': 'umsi.admissions@umich.edu', 'MHI program': 'hi.admissions@umich.edu', 'MADS program': 'umsi.mads@umich.edu', 'Doctoral program': 'umsi.phd.admissions@umich.edu'}``.
   -----
   import requests
   from bs4 import BeautifulSoup
   =====
   def program_email(url):
-  =====
       program_email_dict = {}
   =====
       r = requests.get(url)
@@ -377,14 +357,14 @@ Write Code Questions
   =====
       for program in programs:
   =====
-      split_name_email = program.text.split(":")
+          split_name_email = program.text.split(":")
   =====
-      program_name = split_name_email[0]
+          program_name = split_name_email[0]
   =====
-      program_email = split_name_email[1].replace("\xa0", "")
+          program_email = split_name_email[1].replace("\xa0", "")
   =====
-      program_email = split_name_email[0].replace("\xa0", "") #paired
+          program_email = split_name_email[0].replace("\xa0", "") #paired
   =====
-      program_email_dict[program_name] = program_email
+          program_email_dict[program_name] = program_email
   =====
       return program_email_dict

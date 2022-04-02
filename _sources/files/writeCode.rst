@@ -585,23 +585,12 @@ and hide to put it away.
 
 The following file contains a set of emotions that will be used in the next question.
 
-
-
-.. raw:: html
-
-    <pre id="emotion_words.txt">
-    Sad upset blue down melancholy somber bitter troubled
-    Angry mad enraged irate irritable wrathful outraged infuriated
-    Happy cheerful content elated joyous delighted lively glad
-    Confused disoriented puzzled perplexed dazed befuddled
-    Excited eager thrilled delighted
-    Scared afraid fearful panicked terrified petrified startled
-    Nervous anxious jittery jumpy tense uneasy apprehensive
-    </pre>
-
+.. datafile:: emotion_words.txt
+    :fromfile: emotion_words.txt
+    
 #.
     .. activecode:: file_ex_emotionq
-       :available_files: emotion_words.txt
+       :datafile: emotion_words.txt
        :autograde: unittest
 
        Create a list called ``j_emotions`` that contains every word in ``emotion_words.txt``
