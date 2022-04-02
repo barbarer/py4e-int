@@ -1,5 +1,15 @@
 Mixed-Up Code Questions
 ------------------------
+.. datafile:: chinook.db
+	:image:
+	:fromfile: chinook.db
+	:hide:
+	
+.. datafile:: bikeshare.db
+	:image:
+	:fromfile: bikeshake.db
+	:hide:
+	
 .. parsonsprob:: db-mixed-1
     :practice: T
     :numbered: left
@@ -28,9 +38,9 @@ Mixed-Up Code Questions
    ~~~~
    
    ====
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
+   import unittest
+   
+   class myTests(unittest.TestCase):
        def testOne(self):
            import sqlite3
            conn = sqlite3.connect('music.db')
@@ -40,8 +50,7 @@ Mixed-Up Code Questions
            self.assertEqual(field_names[0], "Title", "test1")
            self.assertEqual(field_names, "Plays", "test2")
 
-   myTests().main()
-
+   unittest.main()
 
 .. parsonsprob:: db-mixed-2
     :practice: T
@@ -56,11 +65,11 @@ Mixed-Up Code Questions
     =====
     cur = conn.cursor()
     =====
-    cur.execute('INSERT INTO albums (AlbumID, Title, ArtistID) VALUES (?, ?, ?), (348, 'Thunderstruck', 300)')
-    cur.execute('INSERT INTO albums (AlbumID, Title, ArtistID) VALUES (?, ?, ?), (349, 'My Way', 301)')
+    cur.execute('INSERT INTO albums (AlbumID, Title, ArtistID) VALUES (?, ?, ?)', (348, 'Thunderstruck', 300))
+    cur.execute('INSERT INTO albums (AlbumID, Title, ArtistID) VALUES (?, ?, ?)', (349, 'My Way', 301))
     =====
-    cur.execute('INSERT IN albums (AlbumID, Title, ArtistID) VALUES (?, ?, ?), (348, 'Thunderstruck', 300)')
-    cur.execute('INSERT IN albums (AlbumID, Title, ArtistID) VALUES (?, ?, ?), (349, 'My Way', 301)') #paired
+    cur.execute('INSERT IN albums (AlbumID, Title, ArtistID) VALUES (?, ?, ?)', (348, 'Thunderstruck', 300))
+    cur.execute('INSERT IN albums (AlbumID, Title, ArtistID) VALUES (?, ?, ?)', (349, 'My Way', 301)) #paired
     =====
     conn.commit()
     =====
@@ -74,19 +83,18 @@ Mixed-Up Code Questions
    Write code to connect to the database file 'chinook.db' which contains a table ``albums`` with three columns ``AlbumID``, ``Title``` and ``ArtistID``. Insert 2 tracks into the table. The first track has an albumID of 348, title "Thunderstruck", and ArtistID of 300. The second track has an albumID 349, title "My Way" with 301 ArtistID.
    ~~~~
    ====
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
+   import unittest
+   
+   class myTests(unittest.TestCase):
        def testOne(self):
            import sqlite3
-           conn = sqlite3.connect('https://runestone.academy/runestone/books/published/overview/_static/chinook.db')
+           conn = sqlite3.connect('chinook.db')
            cur = conn.cursor()
            cur.execute('SELECT AlbumID, Title, ArtistID FROM albums WHERE ArtistID >= 300')
            self.assertEqual(cur[0], "Thunderstruck", "test1")
            self.assertEqual(cur[0], "Thunderstruck", "test2")
 
-   myTests().main()
-   
+   unittest.main()
 
 .. parsonsprob:: db-mixed-3
     :practice: T
@@ -104,7 +112,7 @@ Mixed-Up Code Questions
     =====
     cur.execute('SELECT * FROM bikeshare_stations')
     =====
-    count_rows = len(cur)
+    count_rows = cur.rowcount
     =====
     cur.close()
 
@@ -117,13 +125,13 @@ Mixed-Up Code Questions
    Set the variable ``count_rows`` to the total number of rows returned from the query, before closing the cursor.
    ~~~~
    ====
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
+   import unittest
+   
+   class myTests(unittest.TestCase):
        def testOne(self):
            self.assertEqual(count_rows, 144, "test1")
 
-   myTests().main()
+   unittest.main()
 
 
 .. parsonsprob:: db-mixed-4
@@ -145,12 +153,12 @@ Mixed-Up Code Questions
     =====
     cur.execute('CREATE TABLE Dogs (name TEXT, breed TEXT)')
     =====
-    cur.execute('INSERT INTO Dogs (name, breed) VALUES (?, ?), ('Penelope', 'Doberman')')
-    cur.execute('INSERT INTO Dogs (name, breed) VALUES (?, ?), ('Milo', 'Springer Spaniel')')
+    cur.execute('INSERT INTO Dogs (name, breed) VALUES (?, ?)', ('Penelope', 'Doberman'))
+    cur.execute('INSERT INTO Dogs (name, breed) VALUES (?, ?)', ('Milo', 'Springer Spaniel'))
     =====
     conn.commit()
     =====
-    cur.execute('SELECT name FROM Dogs WHERE breed = 'Springer Spaniel'')
+    cur.execute('SELECT name FROM Dogs WHERE breed = "Springer Spaniel"')
     =====
     cur.close()
     
@@ -169,15 +177,15 @@ Mixed-Up Code Questions
     class myTests(unittest.TestCase):
 
         def testOne(self):
-        	import sqlite3
-   			conn = sqlite3.connect('pets.sqlite')
-    		cur = conn.cursor()
-    		cur.execute('SELECT name FROM Dogs WHERE breed = 'Springer Spaniel')
-    		name = cur.fetchall()[0]
-            self.assertEqual(name, 'Milo', 'Testing that the SELECT statement extracted all dog names with breed Springer Spaniel')
-            cur.execute('SELECT * from Dogs')
-            rows = len(cur.fetchall())
-            self.assertEqual(rows, 2, 'Checking the new data was correctly added to the database')
+			import sqlite3
+			conn = sqlite3.connect('pets.sqlite')
+			cur = conn.cursor()
+			cur.execute('SELECT name FROM Dogs WHERE breed = "Springer Spaniel"')
+			name = cur.fetchall()[0]
+			self.assertEqual(name, 'Milo', 'Testing that the SELECT statement extracted all dog names with breed Springer Spaniel')
+			cur.execute('SELECT * from Dogs')
+			rows = len(cur.fetchall())
+			self.assertEqual(rows, 2, 'Checking the new data was correctly added to the database')
 
     unittest.main()
     
@@ -196,11 +204,11 @@ Mixed-Up Code Questions
     =====
     cur = conn.cursor()
     =====
-    cur.execute('SELECT * FROM Socks WHERE status = closed')
+    cur.execute('SELECT * FROM Socks WHERE status = "closed"')
     =====
-    cur.execute('SELECT all_rows FROM Socks WHERE status = closed') #paired
+    cur.execute('SELECT all_rows FROM Socks WHERE status = "closed"') #paired
     =====
-    count_rows = len(cur)
+    count_rows = cur.rowcount
     =====
     cur.close()
 
@@ -213,13 +221,13 @@ Mixed-Up Code Questions
    Set the variable ``count_rows`` to the total number of rows returned from the query, before closing the cursor.
    ~~~~
    ====
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
+   import unittest
+   
+   class myTests(unittest.TestCase):
        def testOne(self):
            self.assertEqual(count_rows, 6, "test1")
 
-   myTests().main()
+   unittest.main()
    
 
 .. parsonsprob:: db-mixed-6
@@ -241,7 +249,7 @@ Mixed-Up Code Questions
     =====
     cur.exectute('SELECT LastName, FirstName FROM customers ORDER BY LastName DESC') #paired
     =====
-    count_rows = len(cur)
+    count_rows = cur.rowcount
     =====
     cur.close()
 
@@ -281,7 +289,7 @@ Mixed-Up Code Questions
     =====
     cur.execute('''SELECT * FROM albums, artists ON albums.ArtistID = artists.ArtistID WHERE albums.ArtistID = 90''') #paired
     =====
-    count_rows = len(cur)
+    count_rows = cur.rowcount
     =====
     cur.close()
 
@@ -294,13 +302,13 @@ Mixed-Up Code Questions
    Set the variable ``count_rows`` to the total number of rows returned from the query, before closing the cursor.
    ~~~~
    ====
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
+   import unittest
+   
+   class myTests(unittest.TestCase):
        def testOne(self):
            self.assertEqual(count_rows, 21, "test1")
 
-   myTests().main()
+   unittest.main()
 
 
 .. parsonsprob:: db-mixed-8
@@ -366,7 +374,7 @@ Mixed-Up Code Questions
     =====
     cur.execute('''SELECT * FROM tracks JOIN genres ON tracks.GenreID = genres.GenreID WHERE genres.Name = "Pop", tracks.MediaTypeID = 1''') #paired
     =====
-    count_rows = len(cur)
+    count_rows = cur.rowcount
     =====
     cur.close()
 
@@ -379,11 +387,11 @@ Mixed-Up Code Questions
    Set the variable ``count_rows`` to the total number of rows returned from the query, before closing the cursor.
    ~~~~
    ====
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
+   import unittest
+   
+   class myTests(unittest.TestCase):
        def testOne(self):
            self.assertEqual(count_rows, 14, "test1")
 
-   myTests().main()
+   unittest.main()
 
