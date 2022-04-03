@@ -359,8 +359,8 @@ We can read the data from the file and store it in a list of dictionaires where 
 
 Here are a couple of more csv files that we might use in practice problems.
 
-.. datafile:: faithful.txt
-    :fromfile: faithful.txt
+.. datafile:: faithful.csv
+    :fromfile: faithful.csv
 
 .. datafile:: WorldPoll2012.csv
     :fromfile: WorldPoll2012.csv
