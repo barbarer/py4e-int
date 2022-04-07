@@ -19,8 +19,8 @@ Students will know and be able to do the following.
 
 *Process Objectives:*
 
-* Modify code that uses a csv.reader
 * Fix code that uses a csv.reader
+* Fix code that uses a csv.writer
 
 CSV Reader
 ====================================
@@ -68,12 +68,12 @@ We can write Python code to read the data using a csv reader and find the date w
 .. mchoice:: csv_reader_type_of_row
     :practice: T
     :answer_a: string
-    :answer_b: list
+    :answer_b: list/iterator
     :answer_c: dictionary
     :answer_d: integer
     :correct: b
     :feedback_a: It is not a string when you use a csv reader
-    :feedback_b: The csv reader returns each row as a list of string values
+    :feedback_b: The csv reader returns an iterator but you can process it like a list of strings
     :feedback_c: It is not a dictionary
     :feedback_d: It is not an integer
 
@@ -252,7 +252,7 @@ We can read the data from the file and store it in a list of dictionaires where 
     :language: python3
     :datafile: oscar_age_actress1.csv
 
-    Run the code below.  It should read all the data into a list of dictionaries.  Then it should create a new dictionary where the key is the age and the value is the number of actresses who won at that age. It should sort the items in the dictionary by the number of winners descending and return the top five tuples. Then it will write the data to a csv file using a csv writer.
+    Fix the code below.  It should read all the data into a list of dictionaries.  Then it should create a new dictionary where the key is the age and the value is the number of actresses who won at that age. It should sort the items in the dictionary by the number of winners descending and return the top five tuples. Then it will write the data to a csv file using a csv writer.
     ~~~~
     import csv
 
@@ -336,10 +336,10 @@ We can read the data from the file and store it in a list of dictionaires where 
     :answer_c: if initial space should be skipped
     :answer_d: the number of columns
     :correct: a,b,c
-    :feedback_a: It is not a string when you use a csv reader
-    :feedback_b: The csv reader returns each row as a list of values
-    :feedback_c: It is not a dictionary
-    :feedback_d: The number of columns is determined by the delimiter and quote character
+    :feedback_a: You can specify the delimter
+    :feedback_b: You can specify the quote character
+    :feedback_c: You can specify if initial space should be skipped
+    :feedback_d: The number of columns is determined by the size of the list passed to writerow
 
     What type of things can be specified when you create the csv reader?
 
