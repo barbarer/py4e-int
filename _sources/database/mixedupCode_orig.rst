@@ -387,12 +387,9 @@ Mixed-Up Code Questions
 .. activecode:: db-mixed9_ac
    :autograde: unittest
    :language: python3
-<<<<<<< HEAD
    :datafile: chinook.db
    
-=======
 
->>>>>>> c946257c83c6b96fa747c2861dbfaacdbecf3eae
    Create code to connect to a database file 'chinook.db'. Select the name of all rows of data where the genre Name is 'Pop' and MediaTypeID is 1. In order to do this, first join tables ``tracks`` and ``genres``.
    Set the variable ``count_rows`` to the total number of rows returned from the query, before closing the cursor.
    ~~~~
