@@ -3,6 +3,7 @@ Peer Instruction: Exception Multiple Choice Questions
 
 .. mchoice:: ctp-Stringlists-10_Exceptions_06
     :practice: T
+    :author: Cynthia Taylor
     :answer_a: int, int, int
     :answer_b: int, float, boolean
     :answer_c: int, float, int
@@ -26,6 +27,7 @@ Peer Instruction: Exception Multiple Choice Questions
 
 .. mchoice:: ctp-Stringlists-10_Exceptions_07
     :practice: T
+    :author: Cynthia Taylor
     :answer_a: int
     :answer_b: function
     :answer_c: real
@@ -49,6 +51,7 @@ Peer Instruction: Exception Multiple Choice Questions
 
 .. mchoice:: ctp-Stringlists-10_Exceptions_slide_9
     :practice: T
+    :author: Cynthia Taylor
     :answer_a:
     :answer_b:
     :answer_c:
@@ -82,6 +85,7 @@ Peer Instruction: Exception Multiple Choice Questions
 
 .. mchoice:: ctp-Stringlists-10_Exceptions_12
     :practice: T
+    :author: Cynthia Taylor
     :answer_a: "Math is lame"
     :answer_b: "Algebraic!"
     :answer_c: Nothing, this will cause an error
@@ -104,6 +108,7 @@ Peer Instruction: Exception Multiple Choice Questions
 
 .. mchoice:: ctp-reviewtest1-14_review_03
     :practice: T
+    :author: Cynthia Taylor
     :answer_a:
     :answer_b:
     :answer_c:

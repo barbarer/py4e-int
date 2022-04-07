@@ -2,6 +2,7 @@ Peer Instruction: Function Multiple Choice Questions
 ---------------------------------------------------------
 
 .. mchoice:: ctp-reviewtest1-14_review_05
+    :author: Cynthia Taylor
     :practice: T
     :answer_a:
     :answer_b:
@@ -67,6 +68,7 @@ Peer Instruction: Function Multiple Choice Questions
 
 .. mchoice:: ctp-reviewtest1-14_review_08
     :practice: T
+    :author: Cynthia Taylor
     :answer_a:
     :answer_b:
     :answer_c:
@@ -137,6 +139,7 @@ Peer Instruction: Function Multiple Choice Questions
 
 .. mchoice:: ctp-reviewtest1-14_review_07
     :practice: T
+    :author: Cynthia Taylor
     :answer_a: 1
     :answer_b: 3
     :answer_c: 6
@@ -162,6 +165,7 @@ Peer Instruction: Function Multiple Choice Questions
 
 .. mchoice:: ctp-recursion-15_recursion_06
     :practice: T
+    :author: Cynthia Taylor
     :answer_a: 4, 3, 2, 1
     :answer_b: 4, 3, 2, 1, 2, 3, 4
     :answer_c: 4, 3, 2, 1, 1, 2, 3, 4
@@ -187,6 +191,7 @@ Peer Instruction: Function Multiple Choice Questions
 
 .. mchoice:: ctp-recursion-15_recursion_09
     :practice: T
+    :author: Cynthia Taylor
     :answer_a: 4 3 2 1 3 2 1 1 2 3 4
     :answer_b: 4 3 2 1 3 2 1 1 2 3 1 2 3 4
     :answer_c: 4 3 2 1 1 2 1 1 3 2 1 1 2 4
@@ -214,6 +219,7 @@ Peer Instruction: Function Multiple Choice Questions
 
 .. mchoice:: ctp-recursion-15_recursion_11
     :practice: T
+    :author: Cynthia Taylor
     :answer_a: 1
     :answer_b: 2
     :answer_c: 5
@@ -242,6 +248,7 @@ Peer Instruction: Function Multiple Choice Questions
 
 .. mchoice:: ctp-recursion-16_morerecursion_3
     :practice: T
+    :author: Cynthia Taylor
     :answer_a:
     :answer_b:
     :answer_c:
@@ -286,6 +293,7 @@ Peer Instruction: Function Multiple Choice Questions
 
 .. mchoice:: ctp-recursion-16_morerecursion_10
     :practice: T
+    :author: Cynthia Taylor
     :answer_a: Yes
     :answer_b: No
     :answer_c: I don't know
@@ -306,6 +314,7 @@ Peer Instruction: Function Multiple Choice Questions
 
 .. mchoice:: ctp-recursion-16_morerecursion_11
     :practice: T
+    :author: Cynthia Taylor
     :answer_a:
     :answer_b:
     :answer_c:
@@ -365,6 +374,7 @@ Peer Instruction: Function Multiple Choice Questions
 
 .. mchoice:: dz-lecture_3_4
    :practice: T
+   :author: Dan Zingaro
    :answer_a: (3) only
    :answer_b: (2) and (3)
    :answer_c: (1), (3), and (4)
@@ -386,6 +396,7 @@ Peer Instruction: Function Multiple Choice Questions
 
 .. mchoice:: dz-lecture_3_5
    :practice: T
+   :author: Dan Zingaro
    :answer_a: 5
    :answer_b: 9
    :answer_c: 0
@@ -410,6 +421,7 @@ Peer Instruction: Function Multiple Choice Questions
 
 .. mchoice:: dz-lecture_3_6
    :practice: T
+   :author: Dan Zingaro
    :answer_a: 3
    :answer_b: 4
    :answer_c: 5
@@ -433,6 +445,7 @@ Peer Instruction: Function Multiple Choice Questions
 
 .. mchoice:: dz-lecture_3_7
    :practice: T
+   :author: Dan Zingaro
    :answer_a: No bugs. The code is fine
    :answer_b: The function body is not indented
    :answer_c: We are using x as a parameter and a variable, but we are not allowed to do that
@@ -455,6 +468,7 @@ Peer Instruction: Function Multiple Choice Questions
 
 .. mchoice:: dz-lecture_5_6
    :practice: T
+   :author: Dan Zingaro
    :answer_a: 8
    :answer_b: 20
    :answer_c: Error, because a cannot be assigned in two places
@@ -479,6 +493,7 @@ Peer Instruction: Function Multiple Choice Questions
 
 .. mchoice:: dz-lecture_5_7
    :practice: T
+   :author: Dan Zingaro
    :answer_a: 8
    :answer_b: 20
    :correct: a
@@ -497,6 +512,7 @@ Peer Instruction: Function Multiple Choice Questions
 
 .. mchoice:: dz-lecture_5_9
    :practice: T
+   :author: Dan Zingaro
    :answer_a: x = f1()
    :answer_b: x = f2()
    :answer_c: x = f3()
@@ -522,6 +538,7 @@ Peer Instruction: Function Multiple Choice Questions
 
 .. mchoice:: dz-lecture_5_11
    :practice: T
+   :author: Dan Zingaro
    :answer_a: 1
    :answer_b: 2
    :answer_c: 4

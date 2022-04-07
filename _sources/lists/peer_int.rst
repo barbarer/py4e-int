@@ -2,6 +2,7 @@ Peer Instruction: Lists Multiple Choice Questions
 -----------------------------------------------------------------------------
 
 .. mchoice:: dz-lecture_14_4
+   :author: Dan Zingaro
    :practice: T
    :answer_a: 3
    :answer_b: 9
@@ -25,6 +26,7 @@ Peer Instruction: Lists Multiple Choice Questions
         
 .. mchoice:: dz-lecture_14_6
    :practice: T
+   :author: Dan Zingaro
    :answer_a: [2, 4]
    :answer_b: [6, 8]
    :answer_c: [2, 6]
@@ -47,6 +49,7 @@ Peer Instruction: Lists Multiple Choice Questions
 
 .. mchoice:: dz-lecture_14_7
    :practice: T
+   :author: Dan Zingaro
    :answer_a: [2, 4]
    :answer_b: [6, 8]
    :answer_c: [2, 6]
@@ -69,6 +72,7 @@ Peer Instruction: Lists Multiple Choice Questions
 
 .. mchoice:: dz-lecture_15_4
    :practice: T
+   :author: Dan Zingaro
    :answer_a: [[1, 2, 3], [4, 5]] (unchanged)
    :answer_b: [[1, 2, 3], [4, 5], 8]
    :answer_c: [[1, 2, 3], [4, 5, 8]]
@@ -87,6 +91,7 @@ Peer Instruction: Lists Multiple Choice Questions
 
 .. mchoice:: dz-lecture_15_8
    :practice: T
+   :author: Dan Zingaro
    :answer_a: [2, 5, 8]
    :answer_b: [2, 5]
    :answer_c: [2, 5, 7]
@@ -104,6 +109,7 @@ Peer Instruction: Lists Multiple Choice Questions
 
 .. mchoice:: dz-lecture_15_9
    :practice: T
+   :author: Dan Zingaro
    :answer_a: [4, 8]
    :answer_b: [4, 8, 12]
    :answer_c: [4, 8, 9]
@@ -121,6 +127,7 @@ Peer Instruction: Lists Multiple Choice Questions
 
 .. mchoice:: dz-lecture_15_10
    :practice: T
+   :author: Dan Zingaro
    :answer_a: 18
    :answer_b: 6
    :answer_c: 2

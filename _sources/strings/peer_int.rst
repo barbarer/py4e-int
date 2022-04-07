@@ -2,6 +2,7 @@ Peer Instruction: Strings Multiple Choice Questions
 ---------------------------------------------------------
 
 .. mchoice:: dz-lecture_11_4
+   :author: Dan Zingaro
    :practice: T
    :answer_a: kings
    :answer_b: king
@@ -23,6 +24,7 @@ Peer Instruction: Strings Multiple Choice Questions
 
 .. mchoice:: dz-lecture_11_5
    :practice: T
+   :author: Dan Zingaro
    :answer_a: st V
    :answer_b: ost V
    :answer_c: iking
@@ -44,6 +46,7 @@ Peer Instruction: Strings Multiple Choice Questions
 
 .. mchoice:: dz-lecture_11_6
    :practice: T
+   :author: Dan Zingaro
    :answer_a: ost Vikings
    :answer_b: ost Viking
    :answer_c: ikings
@@ -64,6 +67,7 @@ Peer Instruction: Strings Multiple Choice Questions
 
 .. mchoice:: dz-lecture_11_9
    :practice: T
+   :author: Dan Zingaro
    :answer_a: 11
    :answer_b: ss
    :answer_c: 10
@@ -86,6 +90,7 @@ Peer Instruction: Strings Multiple Choice Questions
 
 .. mchoice:: dz-lecture_11_10
    :practice: T
+   :author: Dan Zingaro
    :answer_a: 'xxcavexx'
    :answer_b: '  cave  '
    :answer_c: 'xxxxcavexxxx'
@@ -104,6 +109,7 @@ Peer Instruction: Strings Multiple Choice Questions
 
 .. mchoice:: dz-lecture_12_3
    :practice: T
+   :author: Dan Zingaro
    :answer_a: 'a'
    :answer_b: 'b'
    :answer_c: 'c'
@@ -127,6 +133,7 @@ Peer Instruction: Strings Multiple Choice Questions
 
 .. mchoice:: dz-lecture_12_4
    :practice: T
+   :author: Dan Zingaro
    :answer_a: 'a'
    :answer_b: 'b'
    :answer_c: 'c'
@@ -149,6 +156,7 @@ Peer Instruction: Strings Multiple Choice Questions
 
 .. mchoice:: dz-lecture_12_7
    :practice: T
+   :author: Dan Zingaro
    :answer_a: a{0}b
    :answer_b: ab
    :answer_c: a4b
