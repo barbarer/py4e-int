@@ -4,12 +4,12 @@ Mixed-Up Code Questions
 	:image:
 	:fromfile: chinook.db
 	:hide:
-	
+
 .. datafile:: bikeshare.db
 	:image:
 	:fromfile: bikeshare.db
 	:hide:
-	
+
 .. parsonsprob:: db-mixed-1
     :practice: T
     :numbered: left
@@ -36,10 +36,10 @@ Mixed-Up Code Questions
 
    Write code to create a database file 'music.db' and add a table ``Tracks``` with two columns.
    ~~~~
-   
+
    ====
    import unittest
-   
+
    class myTests(unittest.TestCase):
        def testOne(self):
            import sqlite3
@@ -85,7 +85,7 @@ Mixed-Up Code Questions
    ~~~~
    ====
    import unittest
-   
+
    class myTests(unittest.TestCase):
        def testOne(self):
            import sqlite3
@@ -128,7 +128,7 @@ Mixed-Up Code Questions
    ~~~~
    ====
    import unittest
-   
+
    class myTests(unittest.TestCase):
        def testOne(self):
            self.assertEqual(count_rows, 144, "Testing that count rows has the correct value")
@@ -163,7 +163,7 @@ Mixed-Up Code Questions
     cur.execute('SELECT name FROM Dogs WHERE breed = "Springer Spaniel"')
     =====
     cur.close()
-    
+
 .. activecode:: db-mixed4-ac
     :practice: T
     :nocodelens:
@@ -190,8 +190,8 @@ Mixed-Up Code Questions
 			self.assertEqual(rows, 2, 'Checking the new data was correctly added to the database')
 
     unittest.main()
-    
-    
+
+
 .. parsonsprob:: db-mixed-5
     :practice: T
     :adaptive:
@@ -225,13 +225,13 @@ Mixed-Up Code Questions
    ~~~~
    ====
    import unittest
-   
+
    class myTests(unittest.TestCase):
        def testOne(self):
            self.assertEqual(count_rows, 6, "test1")
 
    unittest.main()
-   
+
 
 .. parsonsprob:: db-mixed-6
     :practice: T
@@ -272,7 +272,7 @@ Mixed-Up Code Questions
 
         def testOne(self):
             self.assertEqual(count_rows, 59, 'Testing that all rows were selected from the query')
-    unittest.main()  
+    unittest.main()
 
 
 .. parsonsprob:: db-mixed-7
@@ -307,7 +307,7 @@ Mixed-Up Code Questions
    ~~~~
    ====
    import unittest
-   
+
    class myTests(unittest.TestCase):
        def testOne(self):
            self.assertEqual(count_rows, 21, "test1")
@@ -336,7 +336,7 @@ Mixed-Up Code Questions
     artist = rows[184][4]
     =====
     cur.close()
-    
+
 .. activecode:: db-mixed8-ac
     :practice: T
     :nocodelens:
@@ -356,7 +356,7 @@ Mixed-Up Code Questions
             self.assertEqual(title, 'Greatest Hits 1', 'Testing that row 185 has the correct title')
             self.assertEqual(artist, 'Queen', 'Testing that row 185 has the correct artist')
 
-    unittest.main() 
+    unittest.main()
 
 
 .. parsonsprob:: db-mixed-9
@@ -387,17 +387,20 @@ Mixed-Up Code Questions
 .. activecode:: db-mixed9_ac
    :autograde: unittest
    :language: python3
+<<<<<<< HEAD
    :datafile: chinook.db
    
+=======
+
+>>>>>>> c946257c83c6b96fa747c2861dbfaacdbecf3eae
    Create code to connect to a database file 'chinook.db'. Select the name of all rows of data where the genre Name is 'Pop' and MediaTypeID is 1. In order to do this, first join tables ``tracks`` and ``genres``.
    Set the variable ``count_rows`` to the total number of rows returned from the query, before closing the cursor.
    ~~~~
    ====
    import unittest
-   
+
    class myTests(unittest.TestCase):
        def testOne(self):
            self.assertEqual(count_rows, 14, "test1")
 
    unittest.main()
-

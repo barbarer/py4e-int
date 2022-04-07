@@ -357,6 +357,14 @@ We can read the data from the file and store it in a list of dictionaires where 
 
     How is a csv writer different from a file writer?
 
+Here are a couple of more csv files that we might use in practice problems.
+
+.. datafile:: faithful.csv
+    :fromfile: faithful.csv
+
+.. datafile:: WorldPoll2012.csv
+    :fromfile: WorldPoll2012.csv
+
 You can read more about the CSV module at https://docs.python.org/3/library/csv.html.
 
 If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.
