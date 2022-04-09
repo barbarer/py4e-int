@@ -16,9 +16,11 @@ Students will know and be able to do the following.
 
 * Learn about ``search`` and ``findall`` and what they return
 * Learn about some common quantifiers (\*, +, ?, {n})
-* Learn about character classes (\\d, \\w, \\s, \\b, .)
+* Learn about character classes (\\d, \\w, \\s, .)
+* Learn about character sets ([an]) and ranges ([0-9])
 * Learn how to escape a special character to match it
 * Learn about greedy matching and how to make it not greedy
+* Learn how to return just part of a match using parentheses
 
 Regex Methods
 ====================================
@@ -88,10 +90,10 @@ Two of the methods that you can use with regular expressions are ``search`` and
 Quantifiers
 ============================
 
-You can specify how many items to match to using quantifiers. They refer to the
+You can specify how many items to match using quantifiers. They refer to the
 item to their left. The quantifiers are ``?``, ``+``, ``*``, ``{n}``, and ``{n,m}``.
 
-.. activecode:: regex_match_chars_ex
+.. activecode:: regex_match_chars_ex_v2
     :caption: Matching characters
 
     Run the code below to see what it prints.
@@ -106,8 +108,8 @@ item to their left. The quantifiers are ``?``, ``+``, ``*``, ``{n}``, and ``{n,m
     res2 = re.findall("colou?r", str2)
     print(res2)
 
-    str3 = "0013 23 093 000029 320 888"
-    res3 = re.findall("0*\d\d", str3)
+    str3 = "b bo boo booo booooo"
+    res3 = re.findall("bo*", str3)
     print(res3)
 
     str4 = "ab abc abcc abcccc abbccc aabbcc"
@@ -141,24 +143,82 @@ item to their left. The quantifiers are ``?``, ``+``, ``*``, ``{n}``, and ``{n,m
       :d: You are missing something before the d
       :.*: Run the code above
 
-.. dragndrop:: regex_quant_dnd
+.. dragndrop:: regex_quant_v2_dnd
     :practice: T
     :feedback: Look at the code above.
     :match_1: ?|||Zero to one
     :match_2: *|||Zero to many
     :match_3: +|||One to many
     :match_4: {2}|||Two
+    :match_5: {1,3}|||One, two, or three
 
     Drag each symbol to the number of items it matches.
+
+Character Sets
+==================
+
+You can use ``[]`` to specify that you need to match any one item in the ``[]``.
+
+.. activecode:: regex_char_sets
+    :caption: Matching character sets
+
+    Run the code below to see what it prints.
+    ~~~~
+    import re
+
+    str1 = "ben bean been ban bottom"
+    res1 = re.findall("b[ea]n", str1)
+    print(res1)
+
+.. mchoice:: regex_char_sets_meaning
+   :answer_a: Match either an 'e' or 'a' one time
+   :answer_b: Match 'ae' one time
+   :answer_c: Match either an 'e' or 'a' one to many times
+   :answer_d: Match 'ae' one to many times
+   :correct: a
+   :feedback_a: It will match one of the items listed in []
+   :feedback_b: It will match one of the items listed in []
+   :feedback_c: This would be true if it was [ae]+
+   :feedback_d: This would be true if it was (ae)+
+
+   What does ``[ea]`` mean?
+
+
+Character Ranges
+===================
+
+You can specify a range of items to match.
+
+.. activecode:: regex_char_ranges-digits
+    :caption: Matching character sets
+
+    Run the code below to see what it prints.
+    ~~~~
+    import re
+
+    str1 = "832 3928.23 382.28378 5 92,000 32-928 +32 -32"
+    res1 = re.findall("[0-9.]+", str1)
+    print(res1)
+
+
+.. mchoice:: regex_char_range_digits
+   :answer_a: Match any digit or period one or more times
+   :answer_b: Match any digit or anything that isn't a new line one or more times
+   :answer_c: Match any digit or period zero to many times
+   :answer_d: Match any digit or anything that isn't a new line zero to many times
+   :correct: d
+   :feedback_a: Items in the [] match themselves and are not treated as special characters other than '-'
+   :feedback_b: The period in a [] just means match a period
+   :feedback_c: The + outside of the [] means match one or more
+   :feedback_d: The period in a [] just means match a period and the + means match one or more times
+
+   What does ``[0-9.]+`` mean?
 
 
 Character Classes
 ============================
 
-There are ways to match particular types of characters.  You have already
-seen ``\d`` which matches a digit (0-9).
-
-.. activecode:: regex_char_classes
+.. activecode:: regex_char_classes_v2
     :caption: Matching character classes
 
     Run the code below to see what it prints.
@@ -169,7 +229,7 @@ seen ``\d`` which matches a digit (0-9).
     res1 = re.findall("m.t", str1)
     print(res1)
 
-    str2 = "barbarer@umich.edu uche@umich.edu lucy@umich.edu"
+    str2 = "barbarer5@umich.edu uche@umich.edu lucy@umich.edu"
     res2 = re.findall("\w+@\w+", str2)
     print(res2)
 
@@ -177,13 +237,11 @@ seen ``\d`` which matches a digit (0-9).
     res3 = re.findall("\sm.t\s", str3)
     print(res3)
 
-    str4 = "mat met m3t m!t mitten mut!"
-    res4 = re.findall(r"\bm.t\b", str4)
+    str4 = "0013 23 093 000029 320 888"
+    res4 = re.findall("0*\d\d", str4)
     print(res4)
 
-.. note ::
 
-   Since ``'\b'`` is also a backspace in Python if you use ``\b`` in a regular expression you must use a raw string ``r"string"``.
 
 .. dragndrop:: regex_char_classes_dnd
     :practice: T
@@ -192,12 +250,11 @@ seen ``\d`` which matches a digit (0-9).
     :match_2: \d|||A digit (0-9)
     :match_3: \w|||A word character which is alphanumeric plus underscore
     :match_4: \s|||A whitespace character (including space, tab, and newline)
-    :match_5: \b|||A word boundary (something that is not a word character such as a space or punctuation)
 
     Drag each item to what it matches
 
 
-.. activecode:: regex_char_classes_v2
+.. activecode:: regex_char_classes_uppercase
     :caption: Matching character classes
 
     Run the code below to see what it prints.
@@ -251,25 +308,25 @@ you must escape it by adding a `\\` in front of it.
     print(res3)
 
 
-.. mchoice:: regex_num_matches_escape_mc
+.. mchoice:: regex_num_matches_escape_v2_mc
     :practice: T
     :answer_a: 1
     :answer_b: 2
     :answer_c: 3
     :answer_d: 4
-    :correct: b
-    :feedback_a: It will match a word boundary followed by 3 digits followed by a . and then 2 digits.
-    :feedback_b: It will match a word boundary followed by 3 digits followed by a . and then 2 digits.
-    :feedback_c: It will match a word boundary followed by 3 digits followed by a . and then 2 digits.
-    :feedback_d: It will match a word boundary followed by 3 digits followed by a . and then 2 digits.
+    :correct: c
+    :feedback_a: It will match three digits followed by a period and then 2 digits
+    :feedback_b: It will match three digits followed by a period and then 2 digits
+    :feedback_c: It will match three digits followed by a period and then 2 digits
+    :feedback_d: It will match three digits followed by a period and then 2 digits
 
     How many items will be in the list that the following code prints?
 
     .. code-block::
 
         import re
-        str = "302.33 64.52 204.24 532.2"
-        res = re.findall(r"\b\d{3}\.\d{2}\b",str)
+        str = "302.33 64.52 204.24 532.2 1.23 323.320"
+        res = re.findall("\d{3}\.\d{2}",str)
         print(res)
 
 
@@ -300,38 +357,6 @@ Matching is usually greedy.
 
     - :\?: Adding the ? will make it not greedy
       :.*: Look at the code above.
-
-
-Specifying What to Extract
-===============================
-
-There are times when you want to return just part of what was matched.
-
-.. activecode:: regex_return_part_match_ac
-    :caption: Extracting part of a match
-
-    Run the code below to see what it prints.
-    ~~~~
-    import re
-
-    str1 = 'From: stephen.marquard@uct.ac.za Sat Jan walk@12  5 09:14:16 2008'
-
-    res1 = re.findall('\S+@\S+', str1)
-    print(res1)
-
-    res2 = re.findall('^From: \S+@\S+', str1)
-    print(res2)
-
-    res3 = re.findall('^From: (\S+@\S+)', str1)
-    print(res3)
-
-.. fillintheblank:: regex_extract_symbols_fitb
-    :practice: T
-
-    Which symbols are used to specify the part of the match to return?
-
-    - :\(\): Parenthesis are used to specify the part of the match to return.
-      :.*: Look at the code above.  What was the part that was returned?
 
 If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to
 

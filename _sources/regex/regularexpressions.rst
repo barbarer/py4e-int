@@ -120,7 +120,7 @@ will match the regular expression.
                 print(line)
 
 
-.. parsonsprob:: re-pp-wolverines
+.. parsonsprob:: re-pp-wolverines-v2
     :numbered: left
     :practice: T
     :adaptive:
@@ -129,16 +129,17 @@ will match the regular expression.
     -----
     import re
     =====
-    hand = open('mbox-short.txt')
+    with open('mbox-short.txt') as fhand:
     =====
-    for line in hand:
+        for line in fhand:
     =====
-     line = line.split() #distractor
+            line = line.rstrip()
     =====
-     line = line.rstrip()
+            line = line.split() #paired
+
     =====
-     if re.search('Wolverines', line): #distractor
+            if re.search('^Wolverines', line):
     =====
-     if re.search('^Wolverines', line):
+            if re.search('Wolverines', line): #paired
     =====
-      print(line)
+                print(line)
