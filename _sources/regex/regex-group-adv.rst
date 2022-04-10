@@ -237,7 +237,7 @@ Boundary or Anchor Characters
 
 .. note::
 
-   Since '\\b' usually means a backspace in a Python string you must use 'r' before the string to treat it as a raw string. You only need to do this if the expression has a '\\b' in it.
+   Since '\\b' usually represents a backspace in a Python string you must use 'r' before the string to treat it as a raw string. You only need to add the r in front of the string if the expression has a '\\b' in it.
 
 Negating a Character Set
 ============================
