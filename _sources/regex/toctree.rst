@@ -17,3 +17,4 @@ Regular Expressions
    mixedupcode.rst
    writecode.rst
    regex-group.rst
+   regex-group-adv.rst
