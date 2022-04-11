@@ -11,7 +11,7 @@ Network Programming
     retrievingwebpageswithurllib.rst
     retrievingbinaryfilesoverurllib.rst
     html.rst
-    html_mixedupcode.rst
+    html_mixedupcode_orig.rst
     parsinghtmlandscrapingtheweb.rst
     parsinghtmlusingregex.rst
     parsinghtmlusingbeautifulsoup.rst
