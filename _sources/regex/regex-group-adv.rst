@@ -1,5 +1,5 @@
-Group Work: Regular Expressions (Regex)
-----------------------------------------
+Group Work: More Regular Expressions (Regex)
+-----------------------------------------------
 
 It is best to use a POGIL approach with the following. In POGIL students work
 in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
@@ -16,7 +16,7 @@ Students will know and be able to do the following.
 
 * Learn about using | as a logical *or*
 * Learn about matching groups and non matching groups
-* Learn about anchor characters (^, $, and \b)
+* Learn about anchor characters (^, $, and \\b)
 * Learn about raw strings
 * Learn how to negate a character set
 
@@ -53,7 +53,7 @@ To use a logical *or* to match one of two expressions use ``(left|right)``. This
     Sometimes dates have a leading zero if the month is from 1 to 9.  Which of the following would match that case as well but still match if there isn't a 0?
 
 
-Specifying What to Extract - Matching Group
+Specifying What to Extract - Matching Groups
 ============================================
 
 There are times when you want to return just part of what was matched.
@@ -82,17 +82,17 @@ There are times when you want to return just part of what was matched.
     Which symbols are used to specify the part of the match to return?
 
     - :\(\): Parenthesis are used to specify the part of the match to return.
-      :.*: Look at the code above.  What was the part that was returned?
+      :.*: Look at the code above.  What symbols were used to specify the part to return?
 
 .. note ::
 
    Parentheses are used to define a capture group - only what is in the parentheses will be returned.
 
 
-Specifying What to Extract - A Non-Matching Group
+Specifying What to Extract - Non-Matching Groups
 ===================================================
 
-What if we need the parentheses because we are using a logical *or* but want the whole match to be returned?  We can add a "?:" after the first parenthesis to still use it for the logical *or*.
+What if we need the parentheses because we are using a logical *or* but want the whole match to be returned?  We can add a "?:" after the first parenthesis to group items for the logical *or* but return the entire match.
 
 .. activecode:: regex_logical_or_with_non_capture_group
     :caption: Regular with logical or and a non-capture group
@@ -237,7 +237,7 @@ Boundary or Anchor Characters
 
 .. note::
 
-   Since '\\b' usually means a backspace in a Python string you must use 'r' before the string to treat it as a raw string. You only need to do this if the expression has a '\\b' in it.
+   Since '\\b' usually represents a backspace in a Python string you must use 'r' before the string to treat it as a raw string. You only need to add the r in front of the string if the expression has a '\\b' in it.
 
 Negating a Character Set
 ============================
@@ -286,13 +286,13 @@ You can negate a character set using the '^' after the '['.
     :feedback: Look at the code above.
     :match_1: $|||Match only at the end of the string
     :match_2: ^|||Match only at the beginning of the string
-    :match_3: \\b|||Match if a whole word (not part of a word)
+    :match_3: \b|||Match if a whole word (not part of a word)
     :match_4: [^]|||Match the opposite of the character set
 
     Drag each symbol to what it matches.
 
 
-If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to
+If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share answers.
 
 .. groupsub:: regex_adv_groupsub
    :limit: 3

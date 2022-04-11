@@ -358,7 +358,7 @@ Matching is usually greedy.
     - :\?: Adding the ? will make it not greedy
       :.*: Look at the code above.
 
-If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to
+If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share answers.
 
 .. groupsub:: regex_groupsub
    :limit: 3
