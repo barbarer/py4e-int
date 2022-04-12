@@ -47,8 +47,8 @@ Mixed-Up Code Questions
            cur = conn.cursor()
            cur.execute('SELECT * FROM Tracks LIMIT 0')
            field_names = [i[0] for i in cur.description]
-           self.assertEqual(field_names[0], "Title", "test1")
-           self.assertEqual(field_names, "Plays", "test2")
+           self.assertEqual(field_names[0], "title", "test1")
+           self.assertEqual(field_names[1], "plays", "test2")
 
    unittest.main()
 
@@ -61,7 +61,7 @@ Mixed-Up Code Questions
     -----
     import sqlite3
     =====
-    conn = sqlite3.connect('music.sqlite')
+    conn = sqlite3.connect('chinook.db')
     =====
     cur = conn.cursor()
     =====
@@ -78,6 +78,7 @@ Mixed-Up Code Questions
 
 .. activecode:: db-mixed2_ac
    :autograde: unittest
+   :datafile: chinook.db
    :language: python3
 
    Write code to connect to the database file 'chinook.db' which contains a table ``albums`` with three columns ``AlbumID``, ``Title``` and ``ArtistID``. Insert 2 tracks into the table. The first track has an albumID of 348, title "Thunderstruck", and ArtistID of 300. The second track has an albumID 349, title "My Way" with 301 ArtistID.
@@ -91,8 +92,8 @@ Mixed-Up Code Questions
            conn = sqlite3.connect('chinook.db')
            cur = conn.cursor()
            cur.execute('SELECT AlbumID, Title, ArtistID FROM albums WHERE ArtistID >= 300')
-           self.assertEqual(cur[0], "Thunderstruck", "test1")
-           self.assertEqual(cur[0], "Thunderstruck", "test2")
+           self.assertEqual(cur[0][1], "Thunderstruck", "Testing that the INSERT statements worked correctly")
+           self.assertEqual(cur[1][0], 349, "Testing that the INSERT statements worked correctly")
 
    unittest.main()
 
@@ -112,13 +113,14 @@ Mixed-Up Code Questions
     =====
     cur.execute('SELECT * FROM bikeshare_stations')
     =====
-    count_rows = cur.rowcount
+    count_rows = len(cur.fetchall())
     =====
     cur.close()
 
 
 .. activecode:: db-mixed3_ac
    :autograde: unittest
+   :datafile: bikeshare.db
    :language: python3
 
    Write code to connect to a database file 'bikeshare.db'. Then selects all of the rows in the table ``bikeshare_stations``.
@@ -129,7 +131,7 @@ Mixed-Up Code Questions
 
    class myTests(unittest.TestCase):
        def testOne(self):
-           self.assertEqual(count_rows, 144, "test1")
+           self.assertEqual(count_rows, 144, "Testing that count rows has the correct value")
 
    unittest.main()
 
@@ -208,13 +210,14 @@ Mixed-Up Code Questions
     =====
     cur.execute('SELECT all_rows FROM Socks WHERE status = "closed"') #paired
     =====
-    count_rows = cur.rowcount
+    count_rows = len(cur.fetchall())
     =====
     cur.close()
 
 
 .. activecode:: db-mixed5_ac
    :autograde: unittest
+   :datafile: bikeshare.db
    :language: python3
 
    Write code to connect to a database file 'bikeshare.db'. Then only selects the rows in the table ``bikeshare_stations``` that have a ``status`` of closed.
@@ -249,13 +252,13 @@ Mixed-Up Code Questions
     =====
     cur.exectute('SELECT LastName, FirstName FROM customers ORDER BY LastName DESC') #paired
     =====
-    count_rows = cur.rowcount
+    count_rows = len(cur.fetchall())
     =====
     cur.close()
 
 .. activecode:: db-mixed6-ac
     :practice: T
-    :nocodelens:
+    :datafile: chinook.db
     :language: python3
     :autograde: unittest
 
@@ -289,13 +292,14 @@ Mixed-Up Code Questions
     =====
     cur.execute('''SELECT * FROM albums, artists ON albums.ArtistID = artists.ArtistID WHERE albums.ArtistID = 90''') #paired
     =====
-    count_rows = cur.rowcount
+    count_rows = len(cur.fetchall())
     =====
     cur.close()
 
 
 .. activecode:: db-mixed7_ac
    :autograde: unittest
+   :datafile: chinook.db
    :language: python3
 
    Write code to connect to a database file 'chinook.db'. Join tables ``albums`` and ``artists``. Then, select the artist ``Name`` where ``ArtistID``` is 90.
@@ -337,6 +341,7 @@ Mixed-Up Code Questions
     :practice: T
     :nocodelens:
     :language: python3
+    :datafile: chinook.db
     :autograde: unittest
 
     Write code to connect to the 'chinook.db' database. Then, join tables 'albums' and 'artists' on 'artistId'. Then, set the variables ``title`` and ``artist`` equal to the title name and artist name in row 185.
@@ -374,7 +379,7 @@ Mixed-Up Code Questions
     =====
     cur.execute('''SELECT * FROM tracks JOIN genres ON tracks.GenreID = genres.GenreID WHERE genres.Name = "Pop", tracks.MediaTypeID = 1''') #paired
     =====
-    count_rows = cur.rowcount
+    count_rows = len(cur.fetchall())
     =====
     cur.close()
 
@@ -382,6 +387,8 @@ Mixed-Up Code Questions
 .. activecode:: db-mixed9_ac
    :autograde: unittest
    :language: python3
+   :datafile: chinook.db
+   
 
    Create code to connect to a database file 'chinook.db'. Select the name of all rows of data where the genre Name is 'Pop' and MediaTypeID is 1. In order to do this, first join tables ``tracks`` and ``genres``.
    Set the variable ``count_rows`` to the total number of rows returned from the query, before closing the cursor.
