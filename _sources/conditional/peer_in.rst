@@ -2,6 +2,7 @@ Peer Instruction: Conditionals Multiple Choice Questions
 --------------------------------------------------------
 
 .. mchoice:: ctp-conditionals-06_Conditionals_04
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: Nothing
    :answer_b: 1
@@ -27,6 +28,7 @@ Peer Instruction: Conditionals Multiple Choice Questions
 
 
 .. mchoice:: ctp-conditionals-06_Conditionals_06
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: Nothing
    :answer_b: 1
@@ -52,6 +54,7 @@ Peer Instruction: Conditionals Multiple Choice Questions
 
 
 .. mchoice:: ctp-conditionals-06_Conditionals_10
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: You got an A!
    :answer_b: You got a B!
@@ -80,6 +83,7 @@ Peer Instruction: Conditionals Multiple Choice Questions
 
 
 .. mchoice:: ctp-conditionals-06_Conditionals_11
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: You got an A!
    :answer_b: You got a B!
@@ -108,6 +112,7 @@ Peer Instruction: Conditionals Multiple Choice Questions
 
 
 .. mchoice:: ctp-conditionals-06_Conditionals_12
+   :author: Cynthia Taylor
    :practice: T
 
    Which code prints the correct output?
@@ -161,6 +166,7 @@ Peer Instruction: Conditionals Multiple Choice Questions
 
 
 .. mchoice:: ctp-conditionals-06_Conditionals_14
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: Spaces before * = r, Spaces after * = r
    :answer_b: Spaces before * = r, Spaces after * = n-r
@@ -188,6 +194,7 @@ Peer Instruction: Conditionals Multiple Choice Questions
 
 
 .. mchoice:: ctp-conditionals-06_Conditionals_16
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: Yes
    :answer_b: No
@@ -223,6 +230,7 @@ Peer Instruction: Conditionals Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture7_Conditionals_03
+   :author: Dan Zingaro
    :practice: T
    :answer_a: -3
    :answer_b: 1
@@ -250,6 +258,7 @@ Peer Instruction: Conditionals Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture7_Conditionals_04
+   :author: Dan Zingaro
    :practice: T
    :answer_a: -3
    :answer_b: 1
@@ -277,6 +286,7 @@ Peer Instruction: Conditionals Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture7_Conditionals_06
+   :author: Dan Zingaro
    :practice: T
    :answer_a: Yes
    :answer_b: No
@@ -310,6 +320,7 @@ Peer Instruction: Conditionals Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture7_Conditionals_07
+   :author: Dan Zingaro
    :practice: T
    :answer_a: Yes
    :answer_b: No
@@ -342,6 +353,7 @@ Peer Instruction: Conditionals Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture7_Conditionals_08
+   :author: Dan Zingaro
    :practice: T
    :answer_a: Yes
    :answer_b: No
@@ -375,6 +387,7 @@ Peer Instruction: Conditionals Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture7_Conditionals_09
+   :author: Dan Zingaro
    :practice: T
    :answer_a: one
    :answer_b: two
@@ -403,6 +416,7 @@ Peer Instruction: Conditionals Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture8_Conditionals_06
+   :author: Dan Zingaro
    :practice: T
    :answer_a: def is_odd(x): return x % 2
    :answer_b: def is_odd(x): return x % 2 == 1
@@ -426,6 +440,7 @@ Peer Instruction: Conditionals Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture8_Conditionals_08
+   :author: Dan Zingaro
    :practice: T
    :answer_a: 'age >= 18 and' can be removed
    :answer_b: 'else: print("ageless")' can be removed
@@ -453,6 +468,7 @@ Peer Instruction: Conditionals Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture9_Conditionals_02
+   :author: Dan Zingaro
    :practice: T
    :answer_a: (1) experience > 0, (2) experience >= 1
    :answer_b: (1) age < 18, (2) experience != 3
@@ -480,6 +496,7 @@ Peer Instruction: Conditionals Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture9_Conditionals_03
+   :author: Dan Zingaro
    :practice: T
    :answer_a: (1) plan == ’silver’, (2) months >= 2 and months <= 6
    :answer_b: (1) plan == ’silver’, (2) months >= 6

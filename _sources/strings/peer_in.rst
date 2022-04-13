@@ -2,6 +2,7 @@ Peer Instruction: Strings Multiple Choice Questions
 ---------------------------------------------------
 
 .. mchoice:: ctp-strings-11_Strings_05
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: “abcddd q”
    :answer_b: “abcddd” “” “” “q”
@@ -26,6 +27,7 @@ Peer Instruction: Strings Multiple Choice Questions
 
 
 .. mchoice:: ctp-strings-11_Strings_07
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: C
    :answer_b: t
@@ -48,6 +50,7 @@ Peer Instruction: Strings Multiple Choice Questions
 
 
 .. mchoice:: ctp-strings-11_Strings_09
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: ats
    :answer_b: bat
@@ -70,6 +73,7 @@ Peer Instruction: Strings Multiple Choice Questions
 
 
 .. mchoice:: ctp-strings-11_Strings_11
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: mpire
    :answer_b: pires
@@ -92,6 +96,7 @@ Peer Instruction: Strings Multiple Choice Questions
 
 
 .. mchoice:: ctp-strings-11_Strings_14
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: Return a copy of s
    :answer_b: Return the reverse of s
@@ -118,6 +123,7 @@ Peer Instruction: Strings Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture10_Strings_03
+   :author: Dan Zingaro
    :practice: T
    :answer_a: "abcddd   q"
    :answer_b: "abcddd   q"
@@ -142,6 +148,7 @@ Peer Instruction: Strings Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture10_Strings_07
+   :author: Dan Zingaro
    :practice: T
    :answer_a: Return a copy of s
    :answer_b: Return the reverse of s
@@ -165,6 +172,7 @@ Peer Instruction: Strings Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture10_Strings_08
+   :author: Dan Zingaro
    :practice: T
    :answer_a: 1
    :answer_b: 2
@@ -189,6 +197,7 @@ Peer Instruction: Strings Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture10_Strings_09
+   :author: Dan Zingaro
    :practice: T
    :answer_a: 1
    :answer_b: 3

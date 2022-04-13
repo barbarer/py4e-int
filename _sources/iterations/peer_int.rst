@@ -2,6 +2,7 @@ Peer Instruction: Iterations Multiple Choice Questions
 -----------------------------------------------------------------------------
 
 .. mchoice:: ctp-reviewtest1-14_review_06
+    :author: Cynthia Taylor
     :practice: T
     :answer_a:
     :answer_b:
@@ -62,6 +63,7 @@ Peer Instruction: Iterations Multiple Choice Questions
 
 
 .. mchoice:: ctp-reviewtest1-14_review_10
+    :author: Cynthia Taylor
     :practice: T
     :answer_a: y == 11
     :answer_b: y != 11
@@ -78,6 +80,7 @@ Peer Instruction: Iterations Multiple Choice Questions
     Write a boolean expression that will evaluate to False if and only if y is equal to 11.
 
 .. mchoice:: dz-lecture_13_4
+   :author: Dan Zingaro
    :practice: T
    :answer_a: 6 5
    :answer_b: 6 5 4
@@ -101,6 +104,7 @@ Peer Instruction: Iterations Multiple Choice Questions
         x = x - 1
 
 .. mchoice:: dz-lecture_13_5
+   :author: Dan Zingaro
    :practice: T
    :answer_a: 6 5
    :answer_b: 6 5 4
@@ -124,6 +128,7 @@ Peer Instruction: Iterations Multiple Choice Questions
         print(x)
         
 .. mchoice:: dz-lecture_13_7
+   :author: Dan Zingaro
    :practice: T
    :answer_a: xyz
    :answer_b: abcxyz
@@ -148,6 +153,7 @@ Peer Instruction: Iterations Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_13_9
+    :author: Dan Zingaro
     :practice: T
     :answer_a:
     :answer_b:
@@ -177,6 +183,7 @@ Peer Instruction: Iterations Multiple Choice Questions
             s = input ("Enter a password: ")
 
 .. mchoice:: dz-lecture_13_10
+   :author: Dan Zingaro
    :practice: T
    :answer_a: 3 4
    :answer_b: 3 4 5

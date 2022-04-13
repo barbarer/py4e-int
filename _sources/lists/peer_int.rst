@@ -2,6 +2,7 @@ Peer Instruction: Lists Multiple Choice Questions
 -----------------------------------------------------------------------------
 
 .. mchoice:: dz-lecture_14_4
+   :author: Dan Zingaro
    :practice: T
    :answer_a: 3
    :answer_b: 9
@@ -24,6 +25,7 @@ Peer Instruction: Lists Multiple Choice Questions
       print(len(lst))
         
 .. mchoice:: dz-lecture_14_6
+   :author: Dan Zingaro
    :practice: T
    :answer_a: [2, 4]
    :answer_b: [6, 8]
@@ -46,6 +48,7 @@ Peer Instruction: Lists Multiple Choice Questions
       a.pop(2)
 
 .. mchoice:: dz-lecture_14_7
+   :author: Dan Zingaro
    :practice: T
    :answer_a: [2, 4]
    :answer_b: [6, 8]
@@ -68,6 +71,7 @@ Peer Instruction: Lists Multiple Choice Questions
       a.remove(4)
 
 .. mchoice:: dz-lecture_15_4
+   :author: Dan Zingaro
    :practice: T
    :answer_a: [[1, 2, 3], [4, 5]] (unchanged)
    :answer_b: [[1, 2, 3], [4, 5], 8]
@@ -86,6 +90,7 @@ Peer Instruction: Lists Multiple Choice Questions
       If we then do: b.append(8) what is the list referred to by a?
 
 .. mchoice:: dz-lecture_15_8
+   :author: Dan Zingaro
    :practice: T
    :answer_a: [2, 5, 8]
    :answer_b: [2, 5]
@@ -103,6 +108,7 @@ Peer Instruction: Lists Multiple Choice Questions
       list(range(2, 7, 3))
 
 .. mchoice:: dz-lecture_15_9
+   :author: Dan Zingaro
    :practice: T
    :answer_a: [4, 8]
    :answer_b: [4, 8, 12]
@@ -120,6 +126,7 @@ Peer Instruction: Lists Multiple Choice Questions
       list(range(4, 9, 4))
 
 .. mchoice:: dz-lecture_15_10
+   :author: Dan Zingaro
    :practice: T
    :answer_a: 18
    :answer_b: 6

@@ -2,6 +2,7 @@ Peer Instruction: Iterations Multiple Choice Questions
 ------------------------------------------------------
 
 .. mchoice:: ctp-iterations-04_moreloops_05
+   :author: Cynthia Taylor
    :practice: T
 
    To print numbers i through n
@@ -41,6 +42,7 @@ Peer Instruction: Iterations Multiple Choice Questions
 
 
 .. mchoice:: ctp-iterations-04_moreloops_06
+   :author: Cynthia Taylor
    :practice: T
 
    Add up the numbers 1 through 4
@@ -87,6 +89,7 @@ Peer Instruction: Iterations Multiple Choice Questions
 
 
 .. mchoice:: ctp-iterations-04_moreloops_08
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: 1 4 2 4 3 4
    :answer_b: 1 4 2 6 3 6
@@ -111,6 +114,7 @@ Peer Instruction: Iterations Multiple Choice Questions
 
 
 .. mchoice:: ctp-iterations-04_moreloops_11
+   :author: Cynthia Taylor
    :practice: T
 
    Generate this pattern for n=5
@@ -162,6 +166,7 @@ Peer Instruction: Iterations Multiple Choice Questions
 
 
 .. mchoice:: ctp-iterations-04_moreloops_13
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: frontspaces = (n-r)/2, stars = r
    :answer_b: frontspaces = n-r, stars = 2*r
@@ -191,6 +196,7 @@ Peer Instruction: Iterations Multiple Choice Questions
 
 
 .. mchoice:: ctp-iterations-05_nestedloops_2
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: 1 1 2 2 3 3
    :answer_b: 1 2 3 1 2 3 1 2 3
@@ -214,6 +220,7 @@ Peer Instruction: Iterations Multiple Choice Questions
 
 
 .. mchoice:: ctp-iterations-05_nestedloops_4
+   :author: Cynthia Taylor
    :practice: T
 
    Generate the times table for any n like-
@@ -269,6 +276,7 @@ Peer Instruction: Iterations Multiple Choice Questions
 
 
 .. mchoice:: ctp-iterations-07_whileloops_2
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: C D E F G I
    :answer_b: D E F G
@@ -308,6 +316,7 @@ Peer Instruction: Iterations Multiple Choice Questions
 
 
 .. mchoice:: ctp-iterations-07_whileloops_7
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: 6 5
    :answer_b: 6 5 4
@@ -332,6 +341,7 @@ Peer Instruction: Iterations Multiple Choice Questions
 
 
 .. mchoice:: ctp-iterations-07_whileloops_8
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: 0 0 0
    :answer_b: 0 1 2
@@ -357,6 +367,7 @@ Peer Instruction: Iterations Multiple Choice Questions
 
 
 .. mchoice:: ctp-iterations-05_whileloops_9
+   :author: Cynthia Taylor
    :practice: T
 
    How can we translate this code to a while loop?
@@ -409,6 +420,7 @@ Peer Instruction: Iterations Multiple Choice Questions
 
 
 .. mchoice:: ctp-iterations-07_whileloops_11
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: 2
    :answer_b: 9
@@ -433,6 +445,7 @@ Peer Instruction: Iterations Multiple Choice Questions
 
 
 .. mchoice:: ctp-iterations-05_whileloops_13
+   :author: Cynthia Taylor
    :practice: T
 
    Which of these will exit on 9?

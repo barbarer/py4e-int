@@ -2,6 +2,7 @@ Peer Instruction: Exception Multiple Choice Questions
 ---------------------------------------------------------
 
 .. mchoice:: ctp-Stringlists-10_Exceptions_06
+    :author: Cynthia Taylor
     :practice: T
     :answer_a: int, int, int
     :answer_b: int, float, boolean
@@ -25,6 +26,7 @@ Peer Instruction: Exception Multiple Choice Questions
 
 
 .. mchoice:: ctp-Stringlists-10_Exceptions_07
+    :author: Cynthia Taylor
     :practice: T
     :answer_a: int
     :answer_b: function
@@ -48,6 +50,7 @@ Peer Instruction: Exception Multiple Choice Questions
       print(type(add(5,1)))
 
 .. mchoice:: ctp-Stringlists-10_Exceptions_slide_9
+    :author: Cynthia Taylor
     :practice: T
     :answer_a:
     :answer_b:
@@ -81,6 +84,7 @@ Peer Instruction: Exception Multiple Choice Questions
 
 
 .. mchoice:: ctp-Stringlists-10_Exceptions_12
+    :author: Cynthia Taylor
     :practice: T
     :answer_a: "Math is lame"
     :answer_b: "Algebraic!"
@@ -103,6 +107,7 @@ Peer Instruction: Exception Multiple Choice Questions
 	        print("Algebraic!")
 
 .. mchoice:: ctp-reviewtest1-14_review_03
+    :author: Cynthia Taylor
     :practice: T
     :answer_a:
     :answer_b:
