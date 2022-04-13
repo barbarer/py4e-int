@@ -2,6 +2,7 @@ Peer Instruction: Text Files Multiple Choice Questions
 ------------------------------------------------------
 
 .. mchoice:: dz-lecture_17_3
+   :author: Dan Zingaro
    :practice: T
    :answer_a: open
    :answer_b: A loop or method for reading (e.g. read)
@@ -20,6 +21,7 @@ Peer Instruction: Text Files Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_17_6
+   :author: Dan Zingaro
    :practice: T
    :answer_a: The first line
    :answer_b: The second line
@@ -55,6 +57,7 @@ Peer Instruction: Text Files Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_17_7
+   :author: Dan Zingaro
    :practice: T
    :answer_a: The first line
    :answer_b: The second line

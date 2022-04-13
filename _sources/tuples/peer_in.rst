@@ -2,6 +2,7 @@ Peer Instruction: Tuples Multiple Choice Questions
 --------------------------------------------------
 
 .. mchoice:: dz-lecture_16_4
+   :author: Dan Zingaro
    :practice: T
    :answer_a: It never fails
    :answer_b: It fails when the list is empty
@@ -35,6 +36,7 @@ Peer Instruction: Tuples Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_16_6
+   :author: Dan Zingaro
    :practice: T
    :answer_a: is_ok([[1, 2], [2, 3]], [1, 2, 3])
    :answer_b: is_ok([[1, 2], [4]], [1, 2, 3])

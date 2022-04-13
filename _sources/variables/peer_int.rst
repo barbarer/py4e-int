@@ -1,6 +1,7 @@
 Peer Instruction: Variable Multiple Choice Questions
 ---------------------------------------------------------
 .. mchoice:: ctp-reviewtest1-14_review_11
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: Ints only have 2 decimal places
    :answer_b: Ints don’t have any decimals
@@ -18,6 +19,7 @@ Peer Instruction: Variable Multiple Choice Questions
    Recall that when we wanted to cut off all but two decimal places of a float, we multiplied it by 100, cast it as a integer, and then divided it by 100 using float division. Why did we cast it as an int?
 
 .. mchoice:: dz-lecture_2_5
+   :author: Dan Zingaro
    :practice: T
    :answer_a: Yes
    :answer_b: No, because it contains an infinite number of steps
@@ -37,6 +39,7 @@ Peer Instruction: Variable Multiple Choice Questions
       Is this an algorithm?
 
 .. mchoice:: dz-lecture_2_8
+   :author: Dan Zingaro
    :practice: T
    :answer_a: Nothing. They are both 1
    :answer_b: Nothing. They might be of different types, but types don’t matter in programming
@@ -53,6 +56,7 @@ Peer Instruction: Variable Multiple Choice Questions
    What is the difference between the literals 1 and 1.0?
 
 .. mchoice:: dz-lecture_2_12
+   :author: Dan Zingaro
    :practice: T
    :answer_a: 39
    :answer_b: 22
@@ -74,6 +78,7 @@ Peer Instruction: Variable Multiple Choice Questions
       What is the value of y after the execution of this code?
 
 .. mchoice:: dz-lecture_2_13
+   :author: Dan Zingaro
    :practice: T
    :answer_a: 39
    :answer_b: 22
@@ -96,6 +101,7 @@ Peer Instruction: Variable Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_4_3
+   :author: Dan Zingaro
    :practice: T
    :answer_a: True
    :answer_b: False
@@ -115,6 +121,7 @@ Peer Instruction: Variable Multiple Choice Questions
       print(b)
 
 .. mchoice:: dz-lecture_4_4
+   :author: Dan Zingaro
    :practice: T
    :answer_a: True
    :answer_b: False
@@ -135,6 +142,7 @@ Peer Instruction: Variable Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_4_6
+   :author: Dan Zingaro
    :practice: T
    :answer_a: a == b == 5
    :answer_b: a == b or a == 5
@@ -150,6 +158,7 @@ Peer Instruction: Variable Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_4_7
+   :author: Dan Zingaro
    :practice: T
    :answer_a: True
    :answer_b: False
@@ -166,6 +175,7 @@ Peer Instruction: Variable Multiple Choice Questions
       not a and b or c
 
 .. mchoice:: dz-lecture_4_9
+   :author: Dan Zingaro
    :practice: T
    :answer_a: (a // 10) % 10
    :answer_b: (a % 100) // 10
