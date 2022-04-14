@@ -1,4 +1,4 @@
-Peer Instruction: Lists Multiple Choice Questions
+Peer Instruction: Objects Multiple Choice Questions
 -----------------------------------------------------------------------------
 
 .. mchoice:: dz-lecture_26_2
@@ -106,7 +106,7 @@ Peer Instruction: Lists Multiple Choice Questions
    :feedback_e: Try again. The equation evaluates to True when self.x < other.x or (self.x == other.x and self.y < other.y). Therefore, A and B are both right since self.x equals to 2 and other.x equals to 4.
    
    Which of the following would evaluate to True?
-   
+
    .. code-block:: python
 
       class Point(object):
