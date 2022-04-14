@@ -2,6 +2,7 @@ Peer Instruction: Dictionaries Multiple Choice Questions
 --------------------------------------------------------
 
 .. mchoice:: dz-lecture_18_2
+   :author: Dan Zingaro
    :practice: T
    :answer_a: The order in which people finish a race
    :answer_b: The ingredients necessary for a recipe
@@ -18,6 +19,7 @@ Peer Instruction: Dictionaries Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_18_4
+   :author: Dan Zingaro
    :practice: T
    :answer_a: counts.append(0)
    :answer_b: counts.append(1)
@@ -47,6 +49,7 @@ Peer Instruction: Dictionaries Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_18_8
+   :author: Dan Zingaro
    :practice: T
    :answer_a: {3:4, 5:8, 4:9}
    :answer_b: {3:4, 5:8, 4:4}
@@ -68,6 +71,7 @@ Peer Instruction: Dictionaries Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_18_9
+   :author: Dan Zingaro
    :practice: T
    :answer_a: {1:5, 2:5, 4:7}
    :answer_b: {1:5, 2:6, 4:7}
@@ -89,6 +93,7 @@ Peer Instruction: Dictionaries Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_19_2
+   :author: Dan Zingaro
    :practice: T
    :answer_a: List elements cannot be mutable, but dictionary values can be mutable
    :answer_b: Assigning to an index that does not exist in a list is an error, but assigning a value to a key that does not exist in a dictionary is not
@@ -104,6 +109,7 @@ Peer Instruction: Dictionaries Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_19_6
+   :author: Dan Zingaro
    :practice: T
    :answer_a: {4:1, 5:[2,4]}
    :answer_b: {4:[1], 5:[4,2]}
@@ -125,6 +131,7 @@ Peer Instruction: Dictionaries Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_19_7
+   :author: Dan Zingaro
    :practice: T
    :answer_a: December
    :answer_b: July
@@ -147,6 +154,7 @@ Peer Instruction: Dictionaries Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_19_8
+   :author: Dan Zingaro
    :practice: T
    :answer_a: December
    :answer_b: July
@@ -165,6 +173,7 @@ Peer Instruction: Dictionaries Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_20_3
+   :author: Dan Zingaro
    :practice: T
    :answer_a: {’’:’this’, ’this’:’is’, ’is’:’this’, ’this’:’was’}
    :answer_b: {’’:[’this’], ’this’:[’is’, ’was’], ’is’:[’this’]}
@@ -180,6 +189,7 @@ Peer Instruction: Dictionaries Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_20_4
+   :author: Dan Zingaro
    :practice: T
    :answer_a: {’’:’this’, ’this’:’is’, ’is’:’was’, ’was’:’this’}
    :answer_b: {’’:[’this’], ’this’:[’is’, ’was’], ’is’:[’was’]}

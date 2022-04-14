@@ -2,6 +2,7 @@ Peer Instruction: Functions Multiple Choice Questions
 -----------------------------------------------------
 
 .. mchoice:: ctp-functions-08_Functions_07
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: Raaarrr I’m a bear
    :answer_b: Eeek a bear!
@@ -29,6 +30,7 @@ Peer Instruction: Functions Multiple Choice Questions
 
 
 .. mchoice:: ctp-functions-08_Functions_10
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: 0
    :answer_b: 8
@@ -55,6 +57,7 @@ Peer Instruction: Functions Multiple Choice Questions
 
 
 .. mchoice:: ctp-functions-08_Functions_13
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: 5
    :answer_b: 9
@@ -81,6 +84,7 @@ Peer Instruction: Functions Multiple Choice Questions
 
 
 .. mchoice:: ctp-functions-08_Functions_14
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: x = f1()
    :answer_b: x = f2()
@@ -109,6 +113,7 @@ Peer Instruction: Functions Multiple Choice Questions
 
 
 .. mchoice:: ctp-functions-08_Functions_15
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: No bugs. The code is fine.
    :answer_b: The function body is not indented.
@@ -134,6 +139,7 @@ Peer Instruction: Functions Multiple Choice Questions
 
 
 .. mchoice:: ctp-functions-08_Functions_16
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: 8, 8
    :answer_b: 15, 15
@@ -164,6 +170,7 @@ Peer Instruction: Functions Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_5_6
+   :author: Dan Zingaro
    :practice: T
    :answer_a: 8
    :answer_b: 20
@@ -191,6 +198,7 @@ Peer Instruction: Functions Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_5_7
+   :author: Dan Zingaro
    :practice: T
    :answer_a: 8
    :answer_b: 20
@@ -211,6 +219,7 @@ Peer Instruction: Functions Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_5_11
+   :author: Dan Zingaro
    :practice: T
    :answer_a: 1
    :answer_b: 2
@@ -238,6 +247,7 @@ Peer Instruction: Functions Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_5_12
+   :author: Dan Zingaro
    :practice: T
    :answer_a: 1
    :answer_b: 2
@@ -265,6 +275,7 @@ Peer Instruction: Functions Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_6_4
+   :author: Dan Zingaro
    :practice: T
    :answer_a: Example
    :answer_b: Type contract
@@ -292,6 +303,7 @@ Peer Instruction: Functions Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_6_5
+   :author: Dan Zingaro
    :practice: T
    :answer_a: Example
    :answer_b: Type contract
@@ -319,6 +331,7 @@ Peer Instruction: Functions Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_6_8
+   :author: Dan Zingaro
    :practice: T
    :answer_a: >>> num_pizzas(1, 2, 3)   2
    :answer_b: >>> num_pizzas(1, 2, 3)   1

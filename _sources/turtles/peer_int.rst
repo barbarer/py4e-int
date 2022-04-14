@@ -1,6 +1,7 @@
 Peer Instruction: Turtles Multiple Choice Questions
 ________________________________________________________
 .. mchoice:: ctp-recursion-17_fractals_11
+   :author: Cynthia Taylor
     :practice: T
     :answer_a: Draw nothing
     :answer_b: Draw a line
@@ -17,6 +18,7 @@ ________________________________________________________
     What is the base case to create a snowflake through a recursive function?
 
 .. mchoice:: ctp-recursion-17_fractals_12
+    :author: Cynthia Taylor
     :practice: T
     :answer_a: 1/3 w
     :answer_b: 1/2 w
@@ -35,6 +37,7 @@ ________________________________________________________
     .. image:: https://i.postimg.cc/XNhVrxCr/image8.png
 
 .. mchoice:: ctp-recursion-17_fractals_13
+    :author: Cynthia Taylor
     :practice: T
     :answer_a: 1
     :answer_b: 3
@@ -54,6 +57,7 @@ ________________________________________________________
 
 
 .. mchoice:: ctp-recursion-17_fractals_14
+    :author: Cynthia Taylor
     :practice: T
     :answer_a: 1/6
     :answer_b: 1/4
@@ -72,6 +76,7 @@ ________________________________________________________
     .. image:: https://i.postimg.cc/vHgZhCs7/image9.png
 
 .. mchoice:: ctp-recursion-17_fractals_15
+    :author: Cynthia Taylor
     :practice: T
     :answer_a: 60, 60, 60
     :answer_b: 60, 30, 60

@@ -2,6 +2,7 @@ Peer Instruction: Inheritance Multiple Choice Questions
 -------------------------------------------------------
 
 .. mchoice:: ctp-inheritance-20_Inheritance_5
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: dog, cat
    :answer_b: dog, animal
@@ -19,6 +20,7 @@ Peer Instruction: Inheritance Multiple Choice Questions
 
 
 .. mchoice:: ctp-inheritance-20_Inheritance_7
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: 5
    :answer_b: 10
@@ -51,6 +53,7 @@ Peer Instruction: Inheritance Multiple Choice Questions
 
 
 .. mchoice:: ctp-inheritance-20_Inheritance_9
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: "Need to study...but...Internet!” will print twice
    :answer_b: "Need to study... but...Internet!” will print once
@@ -117,6 +120,7 @@ Peer Instruction: Inheritance Multiple Choice Questions
 
 
 .. mchoice:: ctp-inheritance-20_Inheritance_13
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: 3, 1, 1
    :answer_b: 3, 1, 3

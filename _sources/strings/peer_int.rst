@@ -2,6 +2,7 @@ Peer Instruction: Strings Multiple Choice Questions
 ---------------------------------------------------------
 
 .. mchoice:: dz-lecture_11_4
+   :author: Dan Zingaro
    :practice: T
    :answer_a: kings
    :answer_b: king
@@ -22,6 +23,7 @@ Peer Instruction: Strings Multiple Choice Questions
         print(game[5:-1])
 
 .. mchoice:: dz-lecture_11_5
+   :author: Dan Zingaro
    :practice: T
    :answer_a: st V
    :answer_b: ost V
@@ -43,6 +45,7 @@ Peer Instruction: Strings Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_11_6
+   :author: Dan Zingaro
    :practice: T
    :answer_a: ost Vikings
    :answer_b: ost Viking
@@ -63,6 +66,7 @@ Peer Instruction: Strings Multiple Choice Questions
         print(game[-6:-1])
 
 .. mchoice:: dz-lecture_11_9
+   :author: Dan Zingaro
    :practice: T
    :answer_a: 11
    :answer_b: ss
@@ -85,6 +89,7 @@ Peer Instruction: Strings Multiple Choice Questions
       print(t)
 
 .. mchoice:: dz-lecture_11_10
+   :author: Dan Zingaro
    :practice: T
    :answer_a: 'xxcavexx'
    :answer_b: '  cave  '
@@ -103,6 +108,7 @@ Peer Instruction: Strings Multiple Choice Questions
       'cave'.center(8, 'x')
 
 .. mchoice:: dz-lecture_12_3
+   :author: Dan Zingaro
    :practice: T
    :answer_a: 'a'
    :answer_b: 'b'
@@ -126,6 +132,7 @@ Peer Instruction: Strings Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_12_4
+   :author: Dan Zingaro
    :practice: T
    :answer_a: 'a'
    :answer_b: 'b'
@@ -148,6 +155,7 @@ Peer Instruction: Strings Multiple Choice Questions
       mystery = chr(val)
 
 .. mchoice:: dz-lecture_12_7
+   :author: Dan Zingaro
    :practice: T
    :answer_a: a{0}b
    :answer_b: ab
