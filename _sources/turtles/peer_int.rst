@@ -1,7 +1,7 @@
 Peer Instruction: Turtles Multiple Choice Questions
 ________________________________________________________
 .. mchoice:: ctp-recursion-17_fractals_11
-   :author: Cynthia Taylor
+    :author: Cynthia Taylor
     :practice: T
     :answer_a: Draw nothing
     :answer_b: Draw a line
@@ -29,8 +29,8 @@ ________________________________________________________
     :feedback_a: Try again. we trisect the flat line, and inserting into the middle portion two lines joined at an acute angle. The length of each of the new lines is 1/3 of the total length of order. Therefore, the rest of line should be 2/3 width.
     :feedback_b: Try again. we trisect the flat line, and inserting into the middle portion two lines joined at an acute angle. The length of each of the new lines is 1/3 of the total length of order. Therefore, the rest of line should be 2/3 width.
     :feedback_c: Correct! The length of each of the new lines is 1/3 of the total length of order. Therefore, the rest of line should be 2/3 width.
-    :feedback_d: Try again. we trisect the flat line, and inserting into the middle portion two lines joined at an acute angle. The length of each of the new lines is 1/3 of the total length of order. Therefore, the rest of line should be 2/3 width. 
-    :feedback_e: Try again. we trisect the flat line, and inserting into the middle portion two lines joined at an acute angle. The length of each of the new lines is 1/3 of the total length of order. Therefore, the rest of line should be 2/3 width. 
+    :feedback_d: Try again. we trisect the flat line, and inserting into the middle portion two lines joined at an acute angle. The length of each of the new lines is 1/3 of the total length of order. Therefore, the rest of line should be 2/3 width.
+    :feedback_e: Try again. we trisect the flat line, and inserting into the middle portion two lines joined at an acute angle. The length of each of the new lines is 1/3 of the total length of order. Therefore, the rest of line should be 2/3 width.
 
     How long will my line be in of width?
 
@@ -45,11 +45,11 @@ ________________________________________________________
     :answer_d: 12
     :answer_e: I don't know
     :correct: c
-    :feedback_a: Try again. The new pattern draws an equilateral triangle on each middle part of the original triangle. And each part of the original triantgle is split into 4 parts. 
-    :feedback_b: Try again. The new pattern draws an equilateral triangle on each middle part of the original triangle. And each part of the original triantgle is split into 4 parts. 
-    :feedback_c: Correct! Each part of the original triantgle is split into 4 parts. 
-    :feedback_d: Try again. The new pattern draws an equilateral triangle on each middle part of the original triangle. And each part of the original triantgle is split into 4 parts. 
-    :feedback_e: Try again. The new pattern draws an equilateral triangle on each middle part of the original triangle. And each part of the original triantgle is split into 4 parts. 
+    :feedback_a: Try again. The new pattern draws an equilateral triangle on each middle part of the original triangle. And each part of the original triantgle is split into 4 parts.
+    :feedback_b: Try again. The new pattern draws an equilateral triangle on each middle part of the original triangle. And each part of the original triantgle is split into 4 parts.
+    :feedback_c: Correct! Each part of the original triantgle is split into 4 parts.
+    :feedback_d: Try again. The new pattern draws an equilateral triangle on each middle part of the original triangle. And each part of the original triantgle is split into 4 parts.
+    :feedback_e: Try again. The new pattern draws an equilateral triangle on each middle part of the original triangle. And each part of the original triantgle is split into 4 parts.
 
     How many times will I call snowflake when I recur?
 
@@ -65,11 +65,11 @@ ________________________________________________________
     :answer_d: 1/2
     :answer_e: I don't know
     :correct: c
-    :feedback_a: Try again. we trisect the flat line, and inserting into the middle portion two lines joined at an acute angle. The length of each of the new lines is 1/3 of the total length of order. 
-    :feedback_b: Try again. we trisect the flat line, and inserting into the middle portion two lines joined at an acute angle. The length of each of the new lines is 1/3 of the total length of order. 
-    :feedback_c: Correct! The length of each of the new lines is 1/3 of the total length of order. 
-    :feedback_d: Try again. we trisect the flat line, and inserting into the middle portion two lines joined at an acute angle. The length of each of the new lines is 1/3 of the total length of order. 
-    :feedback_e: Try again. we trisect the flat line, and inserting into the middle portion two lines joined at an acute angle. The length of each of the new lines is 1/3 of the total length of order. 
+    :feedback_a: Try again. we trisect the flat line, and inserting into the middle portion two lines joined at an acute angle. The length of each of the new lines is 1/3 of the total length of order.
+    :feedback_b: Try again. we trisect the flat line, and inserting into the middle portion two lines joined at an acute angle. The length of each of the new lines is 1/3 of the total length of order.
+    :feedback_c: Correct! The length of each of the new lines is 1/3 of the total length of order.
+    :feedback_d: Try again. we trisect the flat line, and inserting into the middle portion two lines joined at an acute angle. The length of each of the new lines is 1/3 of the total length of order.
+    :feedback_e: Try again. we trisect the flat line, and inserting into the middle portion two lines joined at an acute angle. The length of each of the new lines is 1/3 of the total length of order.
 
     How long will each new segment be in terms of the original line?
 
@@ -88,7 +88,7 @@ ________________________________________________________
     :feedback_b: Try again. The new pattern draws an equilateral triangle on each middle part of the original triangle. The angle of rotation is the angle or the supplementary angle of equilateral triangle.
     :feedback_c: Correct! The angle of rotation is the angle or the supplementary angle of equilateral triangle.
     :feedback_d: Try again. The new pattern draws an equilateral triangle on each middle part of the original triangle.The angle of rotation is the angle or the supplementary angle of equilateral triangle.
-    :feedback_e: Try again. The new pattern draws an equilateral triangle on each middle part of the original triangle.The angle of rotation is the angle or the supplementary angle of equilateral triangle. 
+    :feedback_e: Try again. The new pattern draws an equilateral triangle on each middle part of the original triangle.The angle of rotation is the angle or the supplementary angle of equilateral triangle.
 
     How much will I rotate?
 
