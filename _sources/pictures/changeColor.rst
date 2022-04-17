@@ -88,7 +88,7 @@ Try the program above on some of the other images by changing the name of the im
    -----
    from image import *
    =====
-   img = Image("beach.jpg")
+   img = Image("puppy.jpg")
    =====
    pixels = img.getPixels()
    =====
@@ -115,11 +115,6 @@ Try the program above on some of the other images by changing the name of the im
                :nocodelens:
 
         .. tab:: Answer
-
-          .. datafile:: puppy.jpg
-             :image:
-             :fromfile: Figures/puppy.jpg
-             :hide:
 
           .. activecode::  11_4_1_WSa
               :nocodelens:

@@ -11,11 +11,11 @@ Peer Instruction: Lists Multiple Choice Questions
    :answer_e: No output; there is an error in the second line
    :correct: a
    :feedback_a: Correct! lst[1] = 'wxyz' replaces the second element with 'wxyz'. But the total numebr of elements still remains 3.
-   :feedback_b: Try again. lst[1] = 'wxyz' replaces the second element with 'wxyz'. But the total numebr of elements still remains 3. 
+   :feedback_b: Try again. lst[1] = 'wxyz' replaces the second element with 'wxyz'. But the total numebr of elements still remains 3.
    :feedback_c: Try again. lst[1] = 'wxyz' replaces the second element with 'wxyz'. But the total numebr of elements still remains 3.
    :feedback_d: Try again. lst[1] = 'wxyz' replaces the second element with 'wxyz'. But the total numebr of elements still remains 3.
    :feedback_e: Try again. There is no bug with the second line.
-   
+
    .. code-block:: python
 
       What is the output of this code?
@@ -23,11 +23,10 @@ Peer Instruction: Lists Multiple Choice Questions
       lst = ['abc', 'def', 'ghi']
       lst[1] = 'wxyz'
       print(len(lst))
-        
+
 .. mchoice:: dz-lecture_14_6
    :author: Dan Zingaro
    :practice: T
-   :author: Dan Zingaro
    :answer_a: [2, 4]
    :answer_b: [6, 8]
    :answer_c: [2, 6]
@@ -39,7 +38,7 @@ Peer Instruction: Lists Multiple Choice Questions
    :feedback_c: Correct! a.remove(4) removes 4 and a.pop(2) pops out 8.
    :feedback_d: Try again. a.pop(2) pops out the value at Index 2 and removes it from the list. Therefore, 8 is removed.
    :feedback_e: Try again. The code will not produce an error.
-  
+
    .. code-block:: python
 
       What is the value of a after this code runs?
@@ -51,7 +50,6 @@ Peer Instruction: Lists Multiple Choice Questions
 .. mchoice:: dz-lecture_14_7
    :author: Dan Zingaro
    :practice: T
-   :author: Dan Zingaro
    :answer_a: [2, 4]
    :answer_b: [6, 8]
    :answer_c: [2, 6]
@@ -63,7 +61,7 @@ Peer Instruction: Lists Multiple Choice Questions
    :feedback_c: Try again. a.pop(2) pops out the value at Index 2 and removes it from the list. Therefore, 6 is removed.
    :feedback_d: Correct! a.pop(2) pops out 6, and a.remove(4) removes 4 from the list.
    :feedback_e: Try again. The code will not produce an error.
-  
+
    .. code-block:: python
 
       What is the value of a after this code runs?
@@ -75,7 +73,6 @@ Peer Instruction: Lists Multiple Choice Questions
 .. mchoice:: dz-lecture_15_4
    :author: Dan Zingaro
    :practice: T
-   :author: Dan Zingaro
    :answer_a: [[1, 2, 3], [4, 5]] (unchanged)
    :answer_b: [[1, 2, 3], [4, 5], 8]
    :answer_c: [[1, 2, 3], [4, 5, 8]]
@@ -85,7 +82,7 @@ Peer Instruction: Lists Multiple Choice Questions
    :feedback_b: Try again. [:] makes a shallow copy of the array a. Therefore, b.append(8) allows to modify the copy without damaging the original array a.
    :feedback_c: Try again. [:] makes a shallow copy of the array a. Therefore, b.append(8) allows to modify the copy without damaging the original array a.
    :feedback_d: Try again. [:] makes a shallow copy of the array a. Therefore, b.append(8) allows to modify the copy without damaging the original array a.
-  
+
    .. code-block:: python
 
       a = [[1, 2, 3], [4, 5]]
@@ -95,17 +92,16 @@ Peer Instruction: Lists Multiple Choice Questions
 .. mchoice:: dz-lecture_15_8
    :author: Dan Zingaro
    :practice: T
-   :author: Dan Zingaro
    :answer_a: [2, 5, 8]
    :answer_b: [2, 5]
    :answer_c: [2, 5, 7]
    :answer_d: [2, 3, 4, 5, 6, 7]
    :correct: b
    :feedback_a: Try again. range(2, 7, 3) creates a sequence of numbers from 2 to 7, but increment by 3. Therefore, 8 is not included.
-   :feedback_b: Correct. range(2, 7, 3) creates a sequence of numbers from 2 to 7, but increment by 3. 
+   :feedback_b: Correct. range(2, 7, 3) creates a sequence of numbers from 2 to 7, but increment by 3.
    :feedback_c: Try again. range(2, 7, 3) creates a sequence of numbers from 2 to 7, but increment by 3. Therefore, 7 is not included.
    :feedback_d: Try again. range(2, 7, 3) creates a sequence of numbers from 2 to 7, but increment by 3. Therefore, 3, 4, 6 and 7 are not included.
-  
+
    .. code-block:: python
 
       What is the list produced by this code?
@@ -114,17 +110,16 @@ Peer Instruction: Lists Multiple Choice Questions
 .. mchoice:: dz-lecture_15_9
    :author: Dan Zingaro
    :practice: T
-   :author: Dan Zingaro
    :answer_a: [4, 8]
    :answer_b: [4, 8, 12]
    :answer_c: [4, 8, 9]
    :answer_d: [4, 5, 6, 7, 8, 9]
    :correct: a
-   :feedback_a: Correct! range(4, 9, 4) creates a sequence of numbers from 4 to 9, but increment by 4. 
+   :feedback_a: Correct! range(4, 9, 4) creates a sequence of numbers from 4 to 9, but increment by 4.
    :feedback_b: Try again. range(4, 9, 4) creates a sequence of numbers from 4 to 9, but increment by 4. Therefore, 12 is not included.
    :feedback_c: Try again. range(4, 9, 4) creates a sequence of numbers from 4 to 9, but increment by 4. Therefore, 9 is not included.
    :feedback_d: Try again. range(4, 9, 4) creates a sequence of numbers from 4 to 9, but increment by 4. Therefore, 5, 6, 7 and 9 are not included.
-  
+
    .. code-block:: python
 
       What is the list produced by this code?
@@ -133,7 +128,6 @@ Peer Instruction: Lists Multiple Choice Questions
 .. mchoice:: dz-lecture_15_10
    :author: Dan Zingaro
    :practice: T
-   :author: Dan Zingaro
    :answer_a: 18
    :answer_b: 6
    :answer_c: 2
@@ -141,7 +135,7 @@ Peer Instruction: Lists Multiple Choice Questions
    :answer_e: None of the above
    :correct: c
    :feedback_a: Try again. Since len(lst) = 3, when counter = 4, the loop stops. Because sum += counter comes before counter += 2, sum = 2.
-   :feedback_b: Try again. Since len(lst) = 3, when counter = 4, the loop stops. Because sum += counter comes before counter += 2, sum = 2. 
+   :feedback_b: Try again. Since len(lst) = 3, when counter = 4, the loop stops. Because sum += counter comes before counter += 2, sum = 2.
    :feedback_c: Correct! Since len(lst) = 3, when counter = 4, the loop stops. Because sum += counter comes before counter += 2, sum = 2.
    :feedback_d: Try again. Since len(lst) = 3, when counter = 4, the loop stops. Because sum += counter comes before counter += 2, sum = 2.
    :feedback_e: Try again. Try to think about what is the value of counter when the loop stops.
@@ -201,7 +195,7 @@ Peer Instruction: Lists Multiple Choice Questions
    :answer_d: 4
    :answer_e: 5
    :correct: d
-   :feedback_a: Try again. In the first pass of the outer loop, Approach A would start from lower = 0, moving upper from 0 to 4. In this pass, the sum of [0,1,2,3] and [0,1,2,3,4] were computed. During the second pass, Approach A would start from lower = 1, moving upper from 1 to 4. In this pass, the sum of [1,2,3] and [1,2,3,4] were computed. There would be no more computations of 1+2+3 later since lower would move pass 1. Therefore there are 4 computations of 1+2+3 in total. 
+   :feedback_a: Try again. In the first pass of the outer loop, Approach A would start from lower = 0, moving upper from 0 to 4. In this pass, the sum of [0,1,2,3] and [0,1,2,3,4] were computed. During the second pass, Approach A would start from lower = 1, moving upper from 1 to 4. In this pass, the sum of [1,2,3] and [1,2,3,4] were computed. There would be no more computations of 1+2+3 later since lower would move pass 1. Therefore there are 4 computations of 1+2+3 in total.
    :feedback_b: Try again. In the first pass of the outer loop, Approach A would start from lower = 0, moving upper from 0 to 4. In this pass, the sum of [0,1,2,3] and [0,1,2,3,4] were computed. During the second pass, Approach A would start from lower = 1, moving upper from 1 to 4. In this pass, the sum of [1,2,3] and [1,2,3,4] were computed. There would be no more computations of 1+2+3 later since lower would move pass 1. Therefore there are 4 computations of 1+2+3 in total.
    :feedback_c: Try again. In the first pass of the outer loop, Approach A would start from lower = 0, moving upper from 0 to 4. In this pass, the sum of [0,1,2,3] and [0,1,2,3,4] were computed. During the second pass, Approach A would start from lower = 1, moving upper from 1 to 4. In this pass, the sum of [1,2,3] and [1,2,3,4] were computed. There would be no more computations of 1+2+3 later since lower would move pass 1. Therefore there are 4 computations of 1+2+3 in total.
    :feedback_d: Correct. In the first pass of the outer loop, Approach A would start from lower = 0, moving upper from 0 to 4. In this pass, the sum of [0,1,2,3] and [0,1,2,3,4] were computed. During the second pass, Approach A would start from lower = 1, moving upper from 1 to 4. In this pass, the sum of [1,2,3] and [1,2,3,4] were computed. There would be no more computations of 1+2+3 later since lower would move pass 1. Therefore there are 4 computations of 1+2+3 in total.
@@ -209,7 +203,7 @@ Peer Instruction: Lists Multiple Choice Questions
 
    [0, 1, 2, 3, 4]
    How many times does Approach A compute the sum 1 + 2 + 3 in the above list?
-   
+
    .. code-block:: python
 
       Approach A:
@@ -271,14 +265,14 @@ Peer Instruction: Lists Multiple Choice Questions
    :answer_d: Two of the above
    :answer_e: All of the above
    :correct: d
-   :feedback_a: Try Again. In this senerio sorting is useful because ranking the sales needs sorting the numbers. Is there other case you find useful? 
-   :feedback_b: Try Again. In this senerio sorting is useful because ranking the words needs sorting the strings. Is there other case you find useful? 
+   :feedback_a: Try Again. In this senerio sorting is useful because ranking the sales needs sorting the numbers. Is there other case you find useful?
+   :feedback_b: Try Again. In this senerio sorting is useful because ranking the words needs sorting the strings. Is there other case you find useful?
    :feedback_c: Try Again. Avergaing a set is permutation invariant, so there is no need to sort.
    :feedback_d: Correct. Both A and B needs sorting.
    :feedback_e: Try Again. In case C, avergaing a set is permutation invariant, so there is no need to sort.
-  
+
    For which of the following is a sort useful?
-      
+
 .. mchoice:: dz-lecture_32_8
    :practice: T
    :author: Dan Zingaro
@@ -291,7 +285,7 @@ Peer Instruction: Lists Multiple Choice Questions
    :feedback_b: Try Again. This is false because the sorted part may expect another value that is smaller than the leftmost value of the sorted part. So the elements in the sorted part may still need to swap.
    :feedback_c: Try Again. None of A and B are correct.
    :feedback_d: Correct. None of A and B are correct.
-  
+
    Which of the following is true of insertion sort?
 
 .. mchoice:: dz-lecture_33_4
@@ -308,7 +302,7 @@ Peer Instruction: Lists Multiple Choice Questions
    :feedback_c: Try Again. After the third pass the sorted part is [10, 20, 30, 40], and the unsorted part is [16, 94, 8, 22]. The next value in the unsorted part is 16 and the algorithm will place 16 in the correct position in the sorted part. Thus, the sorted part becomes [10, 16, 20, 30, 40] and the rest is [94, 8, 22]. So the whole list is [10, 16, 20, 30, 40, 94, 8, 22].
    :feedback_d: Try Again. After the third pass the sorted part is [10, 20, 30, 40], and the unsorted part is [16, 94, 8, 22]. The next value in the unsorted part is 16 and the algorithm will place 16 in the correct position in the sorted part. Thus, the sorted part becomes [10, 16, 20, 30, 40] and the rest is [94, 8, 22]. So the whole list is [10, 16, 20, 30, 40, 94, 8, 22].
    :feedback_e: Try Again. After the third pass the sorted part is [10, 20, 30, 40], and the unsorted part is [16, 94, 8, 22]. The next value in the unsorted part is 16 and the algorithm will place 16 in the correct position in the sorted part. Thus, the sorted part becomes [10, 16, 20, 30, 40] and the rest is [94, 8, 22]. So the whole list is [10, 16, 20, 30, 40, 94, 8, 22].
-   
+
    .. code-block:: python
 
       [10, 20, 30, 40, 16, 94, 8, 22]
@@ -346,7 +340,7 @@ Peer Instruction: Lists Multiple Choice Questions
    :feedback_b: Try Again. This is correct because in every pass, the greatest value of the unsorted pass will be moved to the sorted part. Therefore, the sorted part in the right of the array contains sorted elements that are greater than every elements in the unsorted part. Therefore, the sorted part will not expect any elements to affect it.
    :feedback_c: Correct. All of A and B are correct.
    :feedback_d: Try Again. None of A and B are correct.
-  
+
    Which of the following is true of bubble sort?
 
 .. mchoice:: dz-lecture_34_2
@@ -361,7 +355,7 @@ Peer Instruction: Lists Multiple Choice Questions
    :feedback_b: Try Again. During the first pass, the list becomes [- , 5, 9, -, 0, 4, 6, 8, 2], and then [5, -, 9, 0, -, 4, 6, 8, 2], and then [5, 0, -, 9, 4, -, 6, 8, 2], and then [5, 0, 4, -, 9, 6, -, 8, 2], and then [5, 0, 4, 6, -, 9, 8, -, 2], and then [5, 0, 4, 6, 8, -, 9, 2, -], and then [5, 0, 4, 6, 8, 2, 9]
    :feedback_c: Try Again. During the first pass, the list becomes [-, 5, 9, -, 0, 4, 6, 8, 2], and then [5, -, 9, 0, -, 4, 6, 8, 2], and then [5, 0, -, 9, 4, -, 6, 8, 2], and then [5, 0, 4, -, 9, 6, -, 8, 2], and then [5, 0, 4, 6, -, 9, 8, -, 2], and then [5, 0, 4, 6, 8, -, 9, 2, -], and then [5, 0, 4, 6, 8, 2, 9]
    :feedback_d: Correct. During the first pass, the list becomes [-, 5, 9, -, 0, 4, 6, 8, 2], and then [5, -, 9, 0, -, 4, 6, 8, 2], and then [5, 0, -, 9, 4, -, 6, 8, 2], and then [5, 0, 4, -, 9, 6, -, 8, 2], and then [5, 0, 4, 6, -, 9, 8, -, 2], and then [5, 0, 4, 6, 8, -, 9, 2, -], and then [5, 0, 4, 6, 8, 2, 9]
-  
+
    .. code-block:: python
 
       [5, 9, 0, 4, 6, 8, 2]

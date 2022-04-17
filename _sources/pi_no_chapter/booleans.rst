@@ -2,6 +2,7 @@ Peer Instruction: Booleans Multiple Choice Questions
 ----------------------------------------------------
 
 .. mchoice:: dz-lecture-08_Booleans_04_1
+   :author: Dan Zingaro
    :practice: T
    :answer_a: Only (7>2)
    :answer_b: Only (9<2)
@@ -9,7 +10,7 @@ Peer Instruction: Booleans Multiple Choice Questions
    :answer_d: (7>2) and (8>3)
    :answer_e: All the code is evaluated
    :correct: a
-   :feedback_a: Correct! Python evaluates from left to right. If the first part of an expression containing 'or' is True, the truth of the statement is know. 
+   :feedback_a: Correct! Python evaluates from left to right. If the first part of an expression containing 'or' is True, the truth of the statement is know.
    :feedback_b: Incorrect! Python evaluates from left to right.
    :feedback_c: Incorrect! Python evaluates from left to right.
    :feedback_d: Incorrect! Python evaluates from left to right.
@@ -23,6 +24,7 @@ Peer Instruction: Booleans Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture-08_Booleans_04_2
+   :author: Dan Zingaro
    :practice: T
    :answer_a: Only (7>2)
    :answer_b: Only (9<2)
