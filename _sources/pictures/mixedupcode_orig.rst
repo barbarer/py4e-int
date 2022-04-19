@@ -5,7 +5,7 @@ Mixed-Up Code Exercises
 	:practice: T
 	:adaptive:
 
-	Create a function ``removeGreen(img)`` that sets the green in all pixels in image ``img`` to 0. The function should return the image.
+	Create a function ``removeGreen(img)`` that sets the green in all pixels in image ``img`` to 0.
 	-----
 	from image import *
 	=====
@@ -24,8 +24,7 @@ Mixed-Up Code Exercises
 		win = ImageWin(img.getHeight(), img.getWidth()) #paired
 	=====
 		img.draw(win)
-	=====
-		return img
+
 
 .. activecode:: mixedupcode_pictures_ac1
 	:practice: T
@@ -33,7 +32,7 @@ Mixed-Up Code Exercises
 	:datafile: kitten.jpg
 	:autograde: unittest
 
-	Write a function ``removeGreen(img)`` that sets the green in all pixels in image ``img`` to 0. The function should return the image.
+	Write a function ``removeGreen(img)`` that sets the green in all pixels in image ``img`` to 0.
 	~~~~
 
 	=====
@@ -41,12 +40,12 @@ Mixed-Up Code Exercises
 	from unittest.gui import TestCaseGui
 
 	class myTests(TestCaseGui):
-		def testOne(self):
-		  img = Image('kitten.jpg')
-			g = removeGreen(img)
-			pixels = g.getPixels()
-			for p in pixels[0:2]:
-				self.assertEqual(p.getGreen(), 0, 'Checking green in pixels were set to 0.')
+	    def testOne(self):
+		      img = Image('kitten.jpg')
+			    removeGreen(img)
+			    pixels = img.getPixels()
+			    for p in pixels:
+				      self.assertEqual(p, 0, 'Checking that the green in each pixel was set to 0.')
 	myTests().main()
 
 
@@ -56,7 +55,6 @@ Mixed-Up Code Exercises
 	:adaptive:
 
 	Create a function ``changeColors(img)`` that sets the red in all pixels equal to the blue value in the image ``img``. Then, it sets the green and blue in all pixels to 255.
-	The function should return the image.
 	-----
 	from image import *
 	=====
@@ -81,8 +79,6 @@ Mixed-Up Code Exercises
 		win = ImageWin(img.getHeight(), img.getWidth()) #paired
 	=====
 		img.draw(win)
-	=====
-		return img
 
 .. activecode:: mixedupcode_pictures_ac2
 	:practice: T
@@ -91,7 +87,6 @@ Mixed-Up Code Exercises
 	:autograde: unittest
 
 	Write a function ``changeColors(img)`` that sets the red in all pixels equal to the blue value in the image ``img``. Then, it sets the green and blue in all pixels to 255.
-	The function should return the image.
 	~~~~
 
 	=====
@@ -102,15 +97,19 @@ Mixed-Up Code Exercises
 		def testOne(self):
 			img = Image('beach.jpg')
 			pixels1 = img.getPixels()
-			for p in pixels1[-1:]:
-				x1 = p.getBlue()
+			p = pixels1[-1]
+			p2 = pixels[0]
+			x1 = p.getBlue()
+			x2 = p2.getBlue()
 
-			c = changeColors(img)
-			pixels = c.getPixels()
-			for p in pixels[-1:]:
-				self.assertEqual(p.getRed(), x1, "Checking red pixels were set to blue.")
-				self.assertEqual(p.getBlue(), 255, "Checking blue pixels were set to 255")
-				self.assertEqual(p.getGreen(), 255, "Checking green pixels were set to 255")
+			changeColors(img)
+			pixels = img.getPixels()
+			p = pixels[-1]
+			p2 = pixels[0]
+			self.assertEqual(p.getRed(), x1, "Checking that the last pixel's red value was set to the blue value")
+			self.assertEqual(p2.getRed(), x2, "Checking that the first pixel's red value was set to the blue value")
+			self.assertEqual(p.getBlue(), 255, "Checking that the last blue value was set to 255")
+			self.assertEqual(p.getGreen(), 255, "Checking that the last green value was set to 255")
 	myTests().main()
 
 
@@ -119,7 +118,7 @@ Mixed-Up Code Exercises
 	:practice: T
 	:adaptive:
 
-	Create a function ``reduceGreen(img)`` that reduces the green in all pixels by 75% in image ``img`` and returns the image.
+	Create a function ``reduceGreen(img)`` that reduces the green in all pixels by 75% in image ``img``.
 	-----
 	from image import *
 	=====
@@ -142,8 +141,7 @@ Mixed-Up Code Exercises
 		win = ImageWin(img.getWidth(), img.getHeight())
 	=====
 		img.draw(win)
-	=====
-		return img
+
 
 .. activecode:: mixedupcode_pictures_ac3
 	:practice: T
@@ -151,7 +149,7 @@ Mixed-Up Code Exercises
 	:datafile: kitten.jpg
 	:autograde: unittest
 
-	Write a function ``reduceGreen(img)`` that reduces the green in all pixels by 75% in image ``img`` and returns the image.
+	Write a function ``reduceGreen(img)`` that reduces the green in all pixels by 75% in image ``img``.
 	~~~~
 
 	=====
@@ -162,14 +160,14 @@ Mixed-Up Code Exercises
 		def testOne(self):
 			img = Image('kitten.jpg')
 			pixels1 = img.getPixels()
-			for p in pixels1[:1]:
-				x1 = p.getGreen() * 0.25
+			p = pixels1[-1]
+			x1 = p.getGreen() * 0.25
 
-			c = reduceGreen(img)
+			reduceGreen(img)
 			pixels = c.getPixels()
-			for p in pixels[:1]:
-				c1 = p.getGreen()
-			self.assertEqual(c1, x1, "Checking that green pixels were reduced by 75%")
+			p = pixels[-1]
+			c1 = p.getGreen()
+			self.assertEqual(c1, x1, "Checking that the green value in the last pixel was reduced by 75%")
 	myTests().main()
 
 .. parsonsprob:: mixedupcode_pictures_pp4
@@ -177,7 +175,7 @@ Mixed-Up Code Exercises
 	:practice: T
 	:adaptive:
 
-	Create a function ``changeRed(img)`` that sets all red values equal to 1.5x the blue value in the image ``img``. The function should return the image.
+	Create a function ``changeRed(img)`` that sets all red values equal to 1.5x the blue value in the image ``img``.
 	-----
 	from image import *
 	=====
@@ -200,8 +198,7 @@ Mixed-Up Code Exercises
 		win = ImageWin(img.getWidth(), img.getHeight())
 	=====
 		img.draw(win)
-	=====
-		return img
+
 
 .. activecode:: mixedupcode_pictures_ac4
 	:practice: T
@@ -209,7 +206,7 @@ Mixed-Up Code Exercises
 	:datafile: kitten.jpg
 	:autograde: unittest
 
-	Write a function ``changeRed`` that sets all red values equal to 1.5x the blue value in the image ``img``. The function should return the image.
+	Write a function ``changeRed`` that sets all red values equal to 1.5x the blue value in the image ``img``.
 	~~~~
 
 	=====
@@ -220,14 +217,14 @@ Mixed-Up Code Exercises
 		def testOne(self):
 			img = Image('kitten.jpg')
 			pixels1 = img.getPixels()
-			for p in pixels1[:1]:
-				x1 = p.getBlue() * 1.5
+			p = pixels1[-1]
+			x1 = p.getBlue() * 1.5
 
-			c = changeRed(img)
-			pixels = c.getPixels()
-			for p in pixels[:1]:
-				c1 = p.getRed()
-				self.assertEqual(c1, x1, "Checking that red values were set to 1.5x the blue value")
+			changeRed(img)
+			pixels = img.getPixels()
+			p = pixels[-1]
+			c1 = p.getRed()
+			self.assertEqual(c1, x1, "Checking that the red value was set to 1.5x the blue value")
 	myTests().main()
 
 
@@ -236,7 +233,7 @@ Mixed-Up Code Exercises
 	:practice: T
 	:adaptive:
 
-	Create a function ``modifyColors(img)`` that decreases the red to 60% of its original value, increases the blue by 60% of its original value, and sets the green to 0 in the image ``img``. The function should return the image.
+	Create a function ``modifyColors(img)`` that decreases the red to 60% of its original value, increases the blue by 60% of its original value, and sets the green to 0 in the image ``img``.
 	-----
 	from image import *
 	=====
@@ -264,8 +261,6 @@ Mixed-Up Code Exercises
 		img.draw(win)
 	=====
 		img.draw() #paired
-	=====
-		return img
 
 .. activecode:: mixedupcode_pictures_ac5
 	:practice: T
@@ -273,7 +268,7 @@ Mixed-Up Code Exercises
 	:datafile: beach.jpg
 	:autograde: unittest
 
-	Write a function ``modifyColors(img)`` that decreases the red to 60% of its original value, increases the blue by 60% of its original value, and sets the green to 0 in the image ``img``. The function should return the image.
+	Write a function ``modifyColors(img)`` that decreases the red to 60% of its original value, increases the blue by 60% of its original value, and sets the green to 0 in the image ``img``.
 	~~~~
 
 	=====
@@ -284,19 +279,19 @@ Mixed-Up Code Exercises
 		def testOne(self):
 			img = Image("beach.jpg")
 			pixels1 = img.getPixels()
-			for p in pixels1[:1]:
-				x1 = (p.getRed() * 0.6)
-				x2 = (p.getBlue() * 1.6)
+			p = pixels1[1]
+			x1 = (p.getRed() * 0.6)
+			x2 = (p.getBlue() * 1.6)
 
-			c = modifyColors(img)
-			pixels = c.getPixels()
-			for p in pixels[:1]:
-				c1 = p.getRed()
-				c2 = p.getBlue()
-				c3 = p.getGreen()
-				self.assertEqual(1.2, x1, "Checking that red value was reduced to 60% of original value")
-				self.assertEqual(1.6, x2, "Checking that blue value increased by 60% of original value")
-				self.assertEqual(c3, 0, "Checking that green value was set to 0")
+			modifyColors(img)
+			pixels = img.getPixels()
+			p = pixels[1]
+			c1 = p.getRed()
+			c2 = p.getBlue()
+			c3 = p.getGreen()
+			self.assertEqual(1.2, x1, "Checking that red value was reduced to 60% of original value")
+			self.assertEqual(1.6, x2, "Checking that blue value increased by 60% of original value")
+			self.assertEqual(c3, 0, "Checking that green value was set to 0")
 	myTests().main()
 
 .. parsonsprob:: mixedupcode_pictures_pp6
@@ -304,7 +299,7 @@ Mixed-Up Code Exercises
 	:practice: T
 	:adaptive:
 
-	Create a function ``imageToWhite(img)`` that makes the image ``img`` completely white. The function should return the image.
+	Create a function ``imageToWhite(img)`` that makes the image ``img`` completely white.
 	-----
 	from image import *
 	=====
@@ -327,8 +322,7 @@ Mixed-Up Code Exercises
 	=====
 		win = ImageWin(img.getWidth(), img.getHeight())
 		img.draw(win)
-	=====
-		return img
+
 
 
 .. activecode:: mixedupcode_pictures_ac6
@@ -337,7 +331,7 @@ Mixed-Up Code Exercises
 	:datafile: motorcycle.jpg
 	:autograde: unittest
 
-	Write a function ``imageToWhite(img)`` that makes the image ``img`` completely white. The function should return the image.
+	Write a function ``imageToWhite(img)`` that makes the image ``img`` completely white.
 	~~~~
 
 	=====
@@ -348,15 +342,15 @@ Mixed-Up Code Exercises
 		def testOne(self):
 			img = Image("motorcycle.jpg")
 
-			i = imageToWhite(img)
-			pixels = i.getPixels()
-			for p in pixels[-1:]:
-				r = p.getRed()
-				b = p.getBlue()
-				g = p.getGreen()
-				self.assertEqual(r, 255, "Checking that the red value was set to 255")
-				self.assertEqual(b, 255, "Checking that the blue value was set to 255")
-				self.assertEqual(g, 255, "Checking that the green value was set to 255")
+			imageToWhite(img)
+			pixels = img.getPixels()
+			for p in pixels:
+			    r = p.getRed()
+			    b = p.getBlue()
+			    g = p.getGreen()
+			    self.assertEqual(r, 255, "Checking that the red value was set to 255")
+			    self.assertEqual(b, 255, "Checking that the blue value was set to 255")
+			    self.assertEqual(g, 255, "Checking that the green value was set to 255")
 	myTests().main()
 
 
@@ -365,7 +359,7 @@ Mixed-Up Code Exercises
 	:practice: T
 	:adaptive:
 
-	Create a function ``alternatingRed(img)`` that sets the red of every other pixel to 0 in the image ``img``. The function should return the image.
+	Create a function ``alternatingRed(img)`` that sets the red of every other pixel to 0 in the image ``img``.
 	-----
 	from image import *
 	=====
@@ -387,8 +381,7 @@ Mixed-Up Code Exercises
 	=====
 		win = ImageWin(img.getWidth(), img.getHeight())
 		img.draw(win)
-	=====
-		return img
+
 
 
 .. activecode:: mixedupcode_pictures_ac7
@@ -397,7 +390,7 @@ Mixed-Up Code Exercises
 	:datafile: vangogh.jpg
 	:autograde: unittest
 
-	Write a function ``alternatingRed(img)`` that sets the red of every other pixel to 0 in the image ``img``. The function should return the image.
+	Write a function ``alternatingRed(img)`` that sets the red of every other pixel to 0 in the image ``img``.
 	~~~~
 
 	=====
@@ -412,9 +405,9 @@ Mixed-Up Code Exercises
 			r_orig2 = img.getPixel(101,100).getRed()
 
 
-			a = alternatingRed(img)
-			r1 = a.getPixel(100,100).getRed()
-			r2 = a.getPixel(101,100).getRed()
+			alternatingRed(img)
+			r1 = img.getPixel(100,100).getRed()
+			r2 = img.getPixel(101,100).getRed()
 			self.assertEqual(r1, 0, "Checking that the values of the even elements have changed to zero")
 			self.assertNotEqual(r_orig1, r1, "Checking that the values of the even elements have changed")
 			self.assertEqual(r2, 40, "Checking that the values of the odd elements have stayed the same")
@@ -428,7 +421,7 @@ Mixed-Up Code Exercises
 	:adaptive:
 
 	Create a function ``changeQuadrantColors(img)`` that only changes the color of the pixels in the bottom left quadrant of the image ``img``.
-	The code should set the red value to the original blue value, the green value to the original red value, and the blue value to the original green value. The function should return the image.
+	The code should set the red value to the original blue value, the green value to the original red value, and the blue value to the original green value.
 	-----
 	from image import *
 	=====
@@ -455,8 +448,6 @@ Mixed-Up Code Exercises
 	=====
 		win = ImageWin(img.getWidth(), img.getHeight())
 		img.draw(win)
-	=====
-		return img
 
 
 .. activecode:: mixedupcode_pictures_ac8
@@ -466,7 +457,7 @@ Mixed-Up Code Exercises
 	:autograde: unittest
 
 	Write a function ``changeQuadrantColors(img)`` that only changes the color of the pixels in the bottom left quadrant of the image ``img``.
-	The code should set the red value to the original blue value, the green value to the original red value, and the blue value to the original green value. The function should return the image.
+	The code should set the red value to the original blue value, the green value to the original red value, and the blue value to the original green value.
 	~~~~
 
 	=====
@@ -482,8 +473,8 @@ Mixed-Up Code Exercises
 			g_orig = pixel_orig.getGreen()
 
 
-			c = changeQuadrantColors(img)
-			pixel_new = c.getPixel(0,75)
+			changeQuadrantColors(img)
+			pixel_new = img.getPixel(0,75)
 			r_new = pixel_new.getRed()
 			b_new = pixel_new.getBlue()
 			g_new = pixel_new.getGreen()
@@ -497,7 +488,7 @@ Mixed-Up Code Exercises
 	:practice: T
 	:adaptive:
 
-	Create a function ``copyRightSide(img)`` that copies the right side of the image onto the left side in the image ``img``. The function should return the image.
+	Create a function ``copyRightSide(img)`` that copies the right side of the image onto the left side in the image ``img``.
 	-----
 	from image import *
 	=====
@@ -519,8 +510,7 @@ Mixed-Up Code Exercises
 	=====
 		win = ImageWin(img.getWidth(), img.getHeight())
 		img.draw(win)
-	=====
-		return img
+
 
 
 .. activecode:: mixedupcode_pictures_ac9
@@ -529,7 +519,7 @@ Mixed-Up Code Exercises
 	:datafile: motorcycle.jpg
 	:autograde: unittest
 
-	Write a function ``copyRightSide(img)`` that copies the right side of the image onto the left side in the image ``img``. The function should return the image.
+	Write a function ``copyRightSide(img)`` that copies the right side of the image onto the left side in the image ``img``.
 	~~~~
 
 	=====
@@ -541,8 +531,8 @@ Mixed-Up Code Exercises
 			img = Image("motorcycle.jpg")
 			pixel_right = img.getPixel(195,50)
 
-			c = copyRightSide(img)
-			pixel_new = c.getPixel(97,50)
+			copyRightSide(img)
+			pixel_new = img.getPixel(97,50)
 			self.assertEqual(list(pixel_right), list(pixel_new), "Checking that the right side of the image is copied onto the left side")
 	myTests().main()
 
@@ -551,7 +541,7 @@ Mixed-Up Code Exercises
 	:practice: T
 	:adaptive:
 
-	Create a function ``copyTopQuarter(img)`` that copies the pixels from the top quarter of the y-axis to the bottom quarter of the y-axis in the image ``img``. The function should return the image.
+	Create a function ``copyTopQuarter(img)`` that copies the pixels from the top quarter of the y-axis to the bottom quarter of the y-axis in the image ``img``.
 	-----
 	from image import *
 	=====
@@ -569,8 +559,7 @@ Mixed-Up Code Exercises
 	=====
 		win = ImageWin(img.getWidth(), img.getHeight())
 		img.draw(win)
-	=====
-		return img
+
 
 .. activecode:: mixedupcode_pictures_ac10
 	:practice: T
@@ -578,7 +567,7 @@ Mixed-Up Code Exercises
 	:datafile: vangogh.jpg
 	:autograde: unittest
 
-	Write a function ``copyTopQuarter(img)`` that copies the pixels from the top quarter of the y-axis to the bottom quarter of the y-axis in the image ``img``. The function should return the image.
+	Write a function ``copyTopQuarter(img)`` that copies the pixels from the top quarter of the y-axis to the bottom quarter of the y-axis in the image ``img``.
 	~~~~
 
 	=====
@@ -593,9 +582,9 @@ Mixed-Up Code Exercises
 			pixels3 = img.getPixel(0,111)
 
 
-			c = copyTopQuarter(img)
-			pixels_new1 = c.getPixel(0,111)
-			pixels_new2 = c.getPixel(50,50)
+			copyTopQuarter(img)
+			pixels_new1 = img.getPixel(0,111)
+			pixels_new2 = img.getPixel(50,50)
 			self.assertEqual(list(pixels1), list(pixels_new1), "Check that the top quarter is copied to bottom quarter")
 			self.assertEqual(list(pixels2), list(pixels_new2), "Checking that the pixels not in the bottom quarter stayed the same")
 	myTests().main()
