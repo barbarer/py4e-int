@@ -21,6 +21,7 @@ Mixed-up Code Questions
 
 
 .. activecode::  str-mixed-emotion-ac
+    :autograde: unittest
 
     Write the function, ``mood(emotion)``, to return a string with the ``emotion``
     followed by ``" 4 you"``. For example, if ``emotion`` is "So happy" it should
@@ -66,6 +67,7 @@ Mixed-up Code Questions
 
 
 .. activecode::  str-mixed-book-ac
+    :autograde: unittest
 
     Write the function, ``item_purchase(item, price)``, to return a string with the ``item`` purchased followed by the ``price``.
     For example if ``item`` is "new book" and price is ``12`` the function should return ``"My new book cost $12"``.
@@ -110,6 +112,7 @@ Mixed-up Code Questions
 
 
 .. activecode::  str-mixed-code-ac
+    :autograde: unittest
 
     Write the function, ``phrase(person, thing)``, to return a string with a ``person`` of your choosing followed by a ``thing``
     of what that person likes to do. For example, if the ``person`` is ``Sam`` and ``thing`` is ``Likes to code``, the
@@ -152,6 +155,7 @@ Mixed-up Code Questions
 
 
 .. activecode::  str-mixed-time-ac
+    :autograde: unittest
 
     Let's imagine that last weekend you went on a camping trip with your family. Write a function
     ``time(hours, minutes)``.  Return a string that says how long it took you to get home in minutes. For example,
@@ -200,6 +204,7 @@ Mixed-up Code Questions
 
 
 .. activecode::  str-mixed-feeling-ac
+    :autograde: unittest
 
     Write the function, ``food(fave, least_fave)``, to return a string with your ``fave`` food followed by your ``least_fave`` food both in lowercase.
     For example, if your ``fave`` food is "PIZZA" and your ``least_fave`` is "broccoli", return
@@ -239,6 +244,7 @@ Mixed-up Code Questions
 
 
 .. activecode::  str-mixed-animal-ac
+    :autograde: unittest
 
     Finish the function, ``animal(type)``, to return the string, "My ``type_animal`` looks like a Muppet" with ``type`` being
     any animal of your choosing. For example, if your ``type`` is "sheepdog", then the returned string should
@@ -281,6 +287,7 @@ Mixed-up Code Questions
 
 
 .. activecode::  str-mixed-add-ac
+    :autograde: unittest
 
     Let's imagine you went on a huge shopping spree. Write the function, ``total(store1, store2, store3)``,
     to return the total of how much you spent at the three stores. For example, if you spent ``30`` in ``store1``, ``13`` in ``store2``, and ``56`` in ``store3``,
@@ -325,6 +332,7 @@ Mixed-up Code Questions
 
 
 .. activecode::  str-mixed-wizard-ac
+    :autograde: unittest
 
     Write the function, ``combine(var1, var2)``, to return a string by combining the two variables ``var1`` and ``var2``.
     For example, if ``var1`` is "i am a " and ``var2`` is "CS wizard", the function should return the string, ``"I am a cs wizard"``.
@@ -370,6 +378,7 @@ Mixed-up Code Questions
 
 
 .. activecode::  str-mixed-colors-ac
+    :autograde: unittest
 
     Write the function, ``colors(col1, col2)``, to return a string combining the variables ``col1`` and ``col2``.
     For example, if ``col1`` and ``col2`` is "'Red'" and "'blue'", then the function should return ``Red is a primary color and
@@ -411,6 +420,7 @@ Mixed-up Code Questions
         return "Petting " + "animal" + end #paired
 
 .. activecode::  str-mixed-dogs-ac
+    :autograde: unittest
 
     Finish the function, ``fave_animal(animal)``, to return the string, "Petting ``animal`` makes me happier than anything else" where ``animal``
     is any animal of your choice. For example, if ``animal`` is "dogs", then the function should return, ``"Petting dogs makes

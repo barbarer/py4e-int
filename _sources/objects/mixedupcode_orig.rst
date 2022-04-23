@@ -30,6 +30,7 @@ Mixed-Up Code Exercises
 
 
 .. activecode:: obj_mixedupcode_1_ac
+    :autograde: unittest
 
     Write a ``Dog`` class and define the ``__init__`` method that has one parameter, ``name``. Then define the
     ``getName`` method, which returns the ``name`` when the method is called.
@@ -89,6 +90,7 @@ Mixed-Up Code Exercises
 
 
 .. activecode:: obj_mixedupcode_2_v2_ac
+    :autograde: unittest
 
     Write a class named ``Dog``. Define the ``__init__`` method with two parameters, ``name`` and ``age``.
     Also create the method ``updateAge``, that increases the ``age`` by 1 and returns ``age``.
@@ -146,6 +148,7 @@ Mixed-Up Code Exercises
             return "Meow"
 
 .. activecode:: obj_mixedupcode_3_ac
+    :autograde: unittest
 
     Write the class ``Cat``. Define the ``__init__`` method, it has two parameters,
     ``name`` and ``age``. Next define the the ``__str__`` method to return a string with the cat's information:
@@ -207,6 +210,7 @@ Mixed-Up Code Exercises
 
 
 .. activecode:: obj_mixedupcode_4_ac
+    :autograde: unittest
 
     Write a class named ``Book`` that has an ``__init__`` method with two parameters, title
     and author.  Then create a ``__str__`` method that returns ``"Title: title, Author: author"``.
@@ -264,6 +268,7 @@ Mixed-Up Code Exercises
             self.tricks.append(self.trick) #paired
 
 .. activecode:: obj_mixedupcode_5_v3_ac
+    :autograde: unittest
 
     Write a class named ``Dog`` with the ``__init__`` method taking ``name`` as its parameter
     and setting ``self.tricks`` to an empty list.   Then create a ``__str__`` method that returns a string
@@ -327,6 +332,7 @@ Mixed-Up Code Exercises
             return len * len #paired
 
 .. activecode:: obj_mixedupcode_6_ac
+    :autograde: unittest
 
     Write a class named ``Square`` with the ``__init__`` method taking the length, ``len``, with a default of ``10`` if it is not specified.  Then create a ``__str__`` method that returns a string
     with ``"Length: length"``.  Then create an ``area`` method that returns the area (``length`` times ``length``).
@@ -385,6 +391,7 @@ Mixed-Up Code Exercises
             return length * width #paired
 
 .. activecode:: obj_mixedupcode_7_v2_ac
+    :autograde: unittest
 
     Create a class named ``Rectangle`` with the ``__init__`` method taking a ``length``, and ``width``.  Then create a ``__str__`` method that returns a string
     with ``"l: length, w: width"``.  Then create an ``area`` method that returns the area (``length`` times ``width``).
@@ -448,6 +455,7 @@ Mixed-Up Code Exercises
             return max(dist)
 
 .. activecode:: obj_mixedupcode_8_ac
+    :autograde: unittest
 
     Given a class ``Point`` with a method ``distance_from_point(point)``, write a class named ``Triangle`` with the ``__init__`` method taking three ``Point`` objects and creating an attribute ``points``.
     Then create an ``base`` method that returns length of the longest side.
@@ -514,6 +522,7 @@ Mixed-Up Code Exercises
             self.item_list.append(self.item) #paired
 
 .. activecode:: obj_mixedupcode_9_ac
+    :autograde: unittest
 
     Create a class named ``PickItem`` with the ``__init__`` method taking a list of items.
     Then create an ``pick`` method that returns one of the items at random.  You can use the ``random`` module's ``choice`` method for this.  Next create ``add(item)`` that adds the item to the list of items.
@@ -574,6 +583,7 @@ Mixed-Up Code Exercises
             return value
 
 .. activecode:: obj_mixedupcode_10_ac
+    :autograde: unittest
 
     Write a class ``Dice`` with an ``__init__`` method that takes the number of sides, ``num_sides``.  Use a default of 6 if ``num_sides`` isn't passed in. Also set an attribute ``history`` to an empty list in the ``__init__`` method.
     Then create a ``__str__`` method that returns ``"Dice with num_sides sides"`` when ``num_sides`` is the number of sides.

@@ -6,7 +6,7 @@ Write Code Questions
         .. tab:: Question
 
             .. activecode::  str-ex-hiq
-                :nocodelens:
+                :autograde: unittest
 
                 Fix line 2 so that it prints "Hi" instead of "hi".
                 ~~~~
@@ -25,10 +25,9 @@ Write Code Questions
 
         .. tab:: Answer
 
-            The ``capitalize()`` method returns a new string; it doesn't modify the original because strings are immutable. As a result, you need to assign the value of s1.capitalize() to s1. 
+            The ``capitalize()`` method returns a new string; it doesn't modify the original because strings are immutable. As a result, you need to assign the value of s1.capitalize() to s1.
 
             .. activecode::  str-ex-hiA
-                :nocodelens:
                 :optional:
 
                 Fix line 2 so that it prints "Hi" instead of "hi".
@@ -43,7 +42,7 @@ Write Code Questions
         .. tab:: Question
 
             .. activecode::  str-ex-meowq
-                :nocodelens:
+                :autograde: unittest
 
                 Fix the code so that only "meow" is printed.
                 ~~~~
@@ -62,10 +61,9 @@ Write Code Questions
 
         .. tab:: Answer
 
-            The string slicing syntax in line 2 was incorrect. Remember, the final number in the slice is the index of the character after the final one you want in the string. 
+            The string slicing syntax in line 2 was incorrect. Remember, the final number in the slice is the index of the character after the final one you want in the string.
 
             .. activecode::  str-ex-meowa
-                :nocodelens:
                 :optional:
 
                 Fix the code so that only "meow" is printed.
@@ -80,7 +78,6 @@ Write Code Questions
         .. tab:: Question
 
             .. activecode::  str-ex-eggsq
-                :nocodelens:
 
                 Write code to evaluate the length of the string "I like green eggs"
                 and print it. It should print "The length is 17".
@@ -92,7 +89,6 @@ Write Code Questions
 
             .. activecode::  str-ex-eggsa
                 :optional:
-                :nocodelens:
 
                 Write code to evaluate the length of the string "I like green eggs"
                 and print it. It should print "The length is 17".
@@ -103,7 +99,7 @@ Write Code Questions
 
 #.
     .. activecode::  str-ex-countq
-        :nocodelens:
+        :autograde: unittest
 
         Create a function named ``count`` that accepts a string and a letter
         as arguments, then returns the count of that letter in the string.
@@ -130,7 +126,7 @@ Write Code Questions
         .. tab:: Question
 
             .. activecode::  str-ex-floatq
-                :nocodelens:
+                :autograde: unittest
 
                 Take the following Python code that stores this string: ``string = "X-DSPAM-Confidence: 0.8475"``.
                 Use ``find`` and string slicing to extract the portion of the string after the colon character
@@ -167,7 +163,6 @@ Write Code Questions
 
 #.
     .. activecode::  str-ex-ducksq
-        :nocodelens:
 
         In Robert McCloskey's book *Make Way for Ducklings*, the names of the ducklings are
         Jack, Kack, Lack, Mack, Nack, Ouack, Pack, and Quack.
@@ -233,7 +228,7 @@ Write Code Questions
 
 #.
     .. activecode::  str-ex-nameq
-        :nocodelens:
+        :autograde: unittest
 
         Write code to print out the statement "Hi my name is Bob and I am 2" using only string methods
         or string slicing. You must get every part of the new string from the given strings, not by using
@@ -259,7 +254,6 @@ Write Code Questions
         .. tab:: Question
 
             .. activecode::  str-ex-nameInputq
-                :nocodelens:
 
                 Write a program that asks a user for their name and from the input
                 prints the first letter of their name in lowercase.
@@ -283,7 +277,6 @@ Write Code Questions
 
 #.
     .. activecode::  str-ex-lowerq
-        :nocodelens:
 
         Write a program that asks for user input and prints their
         input in all lowercase, as well as the length of their string.

@@ -16,7 +16,10 @@ Contributor List for Python for Everybody - Interactive
 - Mehul Goel
 - Kathryn Cunningham
 - Carl Haynes
-- Dr. Eric Reed of Foothill College 
+- Dr. Eric Reed of Foothill College
+- Adithya Raman
+- Ashutosh Agrawal
+- Nina Chen
 
 Contributor List for Python for Everybody
 ------------------------------------------

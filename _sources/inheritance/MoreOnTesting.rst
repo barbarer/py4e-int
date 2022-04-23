@@ -1,5 +1,19 @@
-More on Testing
-=====================
+Group Work on Unit Tests
+========================
+
+It is best to use a POGIL approach with the following. In POGIL students work
+in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
+
+.. note::
+
+   If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.
+
+**Content Learning Objectives**
+
+*After completing this activity, students should be able to:*
+
+* Use assert methods to test code (assertEqual and assertAlmostEqual, assertIsInstance)
+* Test code that doesn't return a value
 
 It is important to learn how to write good tests, this is especially true if other people will use your code, but it is also true when it is just for your own use.
 
@@ -59,9 +73,9 @@ Read the description of the function below.  How many test cases do you need to 
     class myTests(TestCaseGui):
 
         def testOne(self):
-            self.assertEqual(is_descending([3,2,1]),True,"is_ascending([3,2,1])")
-            self.assertEqual(is_descending([1]),True,"is_ascending([1])")
-            self.assertEqual(is_descending([1,2,3]),False,"is_ascending([1,2,3]])"
+            self.assertEqual(is_descending([3,2,1]),True,"is_descending([3,2,1])")
+            self.assertEqual(is_descending([1]),True,"is_descending([1])")
+            self.assertEqual(is_descending([1,2,3]),False,"is_descending([1,2,3]])")
 
 
     myTests().main()
@@ -82,7 +96,7 @@ Read the description of the function below.  How many test cases do you need to 
     class myTests(TestCaseGui):
 
         def testOne(self):
-            self.assertEqual(temp_cat(96), "low", "temp(96)")
+            self.assertEqual(temp_cat(96), "low", "temp_cat(96)")
 
 
     myTests().main()
@@ -125,7 +139,7 @@ Use ``assertEqual`` if the values you are comparing are integers or strings.  Us
             self.o2 = Order([i1, i3, i4])
 
         def testTotal(self):
-            self.assertAlmostEqual(self.o1.total(), 9.97, 2, "o.total()")
+            self.assertAlmostEqual(self.o1.total(), 9.97, 2, "o1.total()")
 
 
     myTests().main()
@@ -151,7 +165,7 @@ It is easy to test a function or method that returns a value, but how do you tes
         def __str__(self):
             return f"{self.name}: {self.price}"
 
-        def set_price(new_price):
+        def set_price(self, new_price):
             self.price = new_price
 
 
@@ -159,15 +173,15 @@ It is easy to test a function or method that returns a value, but how do you tes
     class myTests(TestCaseGui):
 
         def setUp(self):
-            i1 = Item("burger", 4.99)
-            i2 = Item("fries", 2.99)
-            i3 = Item("drink", 1.99)
-            i4 = Item("fruit", 2.50)
+            self.i1 = Item("burger", 4.99)
+            self.i2 = Item("fries", 2.99)
+            self.i3 = Item("drink", 1.99)
+            self.i4 = Item("fruit", 2.50)
 
         def test_set_price(self):
-            self.assertAlmostEqual(i1.price,4.99,2,"test i1 price before change"
-            i1.set_price("5.29")
-            self.assertAlmostEqual(i1.price,5.29,2,"test i1 price after change"
+            self.assertAlmostEqual(self.i1.price,4.99,2,"test i1 price before change")
+            self.i1.set_price(5.29)
+            self.assertAlmostEqual(self.i1.price,5.29,2,"test i1 price after change")
 
 
     myTests().main()
@@ -204,3 +218,10 @@ Testing with inheritance.  If you have asked someone to create a class that inhe
             self.assertIsInstance(d, type(a), "Testing Duck inherits from Animal")
 
     myTests().main()
+
+
+
+If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.
+
+.. groupsub:: unit_tests_group_work
+   :limit: 3

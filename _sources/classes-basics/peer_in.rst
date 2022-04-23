@@ -2,6 +2,7 @@ Peer Instruction: Classes Multiple Choice Questions
 ---------------------------------------------------
 
 .. mchoice:: ctp-classes-18_Classes_11
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: open_window
    :answer_b: accelerate
@@ -19,6 +20,7 @@ Peer Instruction: Classes Multiple Choice Questions
 
 
 .. mchoice:: ctp-classes-18_Classes_15
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: 0 0
    :answer_b: 4 0
@@ -51,6 +53,7 @@ Peer Instruction: Classes Multiple Choice Questions
 
 
 .. mchoice:: ctp-methods-19_Methods_5
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: do_it(d, e, f)
    :answer_b: do_it(self, d, e, f)
@@ -75,6 +78,7 @@ Peer Instruction: Classes Multiple Choice Questions
 
 
 .. mchoice:: ctp-methods-19_Methods_7
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: 20
    :answer_b: [20]
@@ -105,6 +109,7 @@ Peer Instruction: Classes Multiple Choice Questions
 
 
 .. mchoice:: ctp-methods-19_Methods_9
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: Account(50) == Account(50)
    :answer_b: Account(80) == Account(90)
@@ -130,6 +135,7 @@ Peer Instruction: Classes Multiple Choice Questions
 
 
 .. mchoice:: ctp-methods-19_Methods_12
+   :author: Cynthia Taylor
    :practice: T
 
    Which code for __ne__ is correct?
@@ -166,6 +172,7 @@ Peer Instruction: Classes Multiple Choice Questions
 
 
 .. mchoice:: ctp-methods-19_Methods_13
+   :author: Cynthia Taylor
    :practice: T
 
    We want the point closer to the origin to be the lesser point. Which code is correct?
@@ -208,6 +215,7 @@ Peer Instruction: Classes Multiple Choice Questions
 
 
 .. mchoice:: ctp-methods-19_Methods_14
+   :author: Cynthia Taylor
    :practice: T
 
    Which implementation for <= is correct?

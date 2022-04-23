@@ -22,3 +22,5 @@ Files
     mixedupCode.rst
     writeCode.rst
     file-group.rst
+    csv-file-group.rst
+    csv-reader-file-group.rst

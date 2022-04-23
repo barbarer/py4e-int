@@ -9,7 +9,6 @@ Write Code Questions
 
 
             .. activecode:: var-wc-syntax
-                :nocodelens:
 
                 There are 3 syntax errors in the following code. Fix it to print correctly
                 without errors. It will print, "Her name is Molly and her favorite food is tuna".
@@ -22,7 +21,6 @@ Write Code Questions
 
             .. activecode:: var-wc-syntaxA
                 :optional:
-                :nocodelens:
 
                 There are 3 syntax errors in the following code. Fix it to print correctly
                 without errors. It will print, "Her name is Molly and her favorite food is tuna".
@@ -38,6 +36,7 @@ Write Code Questions
 
 #.
     .. activecode:: var-wc-fruitq
+        :autograde: unittest
 
         Let's say that apples are $0.40 apiece, and pears are $0.65 apiece.
         Modify the program below to calculate the total cost of 4 apples and 3 pears
@@ -94,6 +93,7 @@ Write Code Questions
 
 #.
     .. activecode:: var-wc-order
+        :autograde: unittest
 
         Add parentheses to the following code so that the total equals 40.
         ~~~~
@@ -166,7 +166,7 @@ Write Code Questions
 
 #.
     .. activecode:: var-wc-dog
-        :nocodelens:
+        :autograde: unittest
 
         Assume that you have 24 slices of pizza and 7 people that are going to share it.
         There's been some arguments among your friends, so you've decided to only give people whole slices.
@@ -239,7 +239,6 @@ Write Code Questions
         .. tab:: Question
 
             .. activecode::  var-wc-combine
-                :nocodelens:
 
                 Combine lines 4 and 5 in the code below to print: "270 is 4.0 hours and 30 minutes.".
                 ~~~~
@@ -252,7 +251,6 @@ Write Code Questions
         .. tab:: Answer
 
             .. activecode::  var-wc-combineA
-                :nocodelens:
                 :optional:
 
                 Combine lines 4 and 5 in the code below to print: "270 is 4.0 hours and 30 minutes.".
@@ -266,7 +264,6 @@ Write Code Questions
 #.
 
     .. activecode::  var-wc-madlibs
-        :nocodelens:
 
         Write code below to get at least 3 values from the user using the ``input``
         function and output a mad lib (which will use the input to tell a silly story).

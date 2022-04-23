@@ -66,3 +66,40 @@ Here are our six steps:
 5. STEP 5: MODIFY THE COLOR. This is the part that you will most often change.  Here's where you change the red, green, and/or blue.  You don't have to change all of them.
 6. STEP 6: UPDATE THE IMAGE.  This will update the image object at the original pixel location to the new color.
 7. STEP 7: SHOW THE RESULT.  This will draw the changed image in a window.
+
+Here are some additional pictures that you can use in this chapter.
+
+.. datafile:: kitten.jpg
+   :image:
+   :fromfile: Figures/kitten.jpg
+   :hide:
+
+.. datafile:: puppy.jpg
+   :image:
+   :fromfile: Figures/puppy.jpg
+   :hide:
+
+.. datafile:: baby.jpg
+   :image:
+   :fromfile: Figures/baby.jpg
+   :hide:
+
+.. datafile:: swan.jpg
+   :image:
+   :fromfile: Figures/swan.jpg
+   :hide:
+
+.. datafile:: motorcycle.jpg
+   :image:
+   :fromfile: Figures/motorcycle.jpg
+   :hide:
+
+.. datafile:: gal2.jpg
+   :image:
+   :fromfile: Figures/gal2.jpg
+   :hide:
+
+.. datafile:: guy1.jpg
+   :image:
+   :fromfile: Figures/guy1.jpg
+   :hide:

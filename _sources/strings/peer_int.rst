@@ -15,7 +15,7 @@ Peer Instruction: Strings Multiple Choice Questions
    :feedback_c: Correct! s[i:j] extracts characters beginning at s[i] and ending about not including s[j].
    :feedback_d: Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. Index -1 is the right 1 character. So 's' is not included.
    :feedback_e: Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. And the first index in a string is index 0.
-   
+
    .. code-block:: python
 
       What is the output of the following code?
@@ -23,19 +23,19 @@ Peer Instruction: Strings Multiple Choice Questions
         print(game[5:-1])
 
 .. mchoice:: dz-lecture_11_5
-   :practice: T
    :author: Dan Zingaro
+   :practice: T
    :answer_a: st V
    :answer_b: ost V
    :answer_c: iking
    :answer_d: st Vi
    :answer_e: Viking
    :correct: a
-   :feedback_a: Correct! s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[2] is the third character from left, and s[-6] is the sixth character from right. s[2] = 's' and s[-6] = 'i'. 
+   :feedback_a: Correct! s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[2] is the third character from left, and s[-6] is the sixth character from right. s[2] = 's' and s[-6] = 'i'.
    :feedback_b: Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[2] is the third character from left. s[2] = 's'.
-   :feedback_c: Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[2] is the third character from left, and s[6] is the sixth character from right. s[2] = 's' and s[-6] = 'i'. 
-   :feedback_d: Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[-6] is the sixth character from right. s[-6] = 'i'. 
-   :feedback_e: Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[2] is the third character from left, and s[-6] is the sixth character from right. s[2] = 's' and s[-6] = 'i'. 
+   :feedback_c: Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[2] is the third character from left, and s[6] is the sixth character from right. s[2] = 's' and s[-6] = 'i'.
+   :feedback_d: Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[-6] is the sixth character from right. s[-6] = 'i'.
+   :feedback_e: Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[2] is the third character from left, and s[-6] is the sixth character from right. s[2] = 's' and s[-6] = 'i'.
 
    .. code-block:: python
 
@@ -45,20 +45,20 @@ Peer Instruction: Strings Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_11_6
-   :practice: T
    :author: Dan Zingaro
+   :practice: T
    :answer_a: ost Vikings
    :answer_b: ost Viking
    :answer_c: ikings
    :answer_d: iking
    :answer_e: Vikings
    :correct: d
-   :feedback_a: Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[-6] is the sixth character from right, and s[-1] is the first character from right. There is no index 0 when counting from right to left. 
-   :feedback_b: Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[-6] is the sixth character from right, and s[-1] is the first character from right. There is no index 0 when counting from right to left. 
-   :feedback_c: Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[-1] is the first character from right. There is no index 0 when counting from right to left. 
+   :feedback_a: Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[-6] is the sixth character from right, and s[-1] is the first character from right. There is no index 0 when counting from right to left.
+   :feedback_b: Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[-6] is the sixth character from right, and s[-1] is the first character from right. There is no index 0 when counting from right to left.
+   :feedback_c: Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[-1] is the first character from right. There is no index 0 when counting from right to left.
    :feedback_d: Correct! s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. We can use negative indices in the slice syntax as well.
-   :feedback_e: Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[-1] is the first character from right. There is no index 0 when counting from right to left. 
-   
+   :feedback_e: Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[-1] is the first character from right. There is no index 0 when counting from right to left.
+
    .. code-block:: python
 
       What is the output of the following code?
@@ -66,8 +66,8 @@ Peer Instruction: Strings Multiple Choice Questions
         print(game[-6:-1])
 
 .. mchoice:: dz-lecture_11_9
-   :practice: T
    :author: Dan Zingaro
+   :practice: T
    :answer_a: 11
    :answer_b: ss
    :answer_c: 10
@@ -79,7 +79,7 @@ Peer Instruction: Strings Multiple Choice Questions
    :feedback_c: Try again. s.replace(old, new): return s but with all occurrences of old replaced by new. The new s = 'Miaiaauga'. And the length of new s is 9.
    :feedback_d: Try again. t is the length of the new string because it equals to len(s).
    :feedback_e: Correct! s.replace(old, new): return s but with all occurrences of old replaced by new. The new s = 'Miaiaauga'. And the length of new s is 9.
-   
+
    .. code-block:: python
 
       What is the output of this code?
@@ -89,18 +89,18 @@ Peer Instruction: Strings Multiple Choice Questions
       print(t)
 
 .. mchoice:: dz-lecture_11_10
-   :practice: T
    :author: Dan Zingaro
+   :practice: T
    :answer_a: 'xxcavexx'
    :answer_b: '  cave  '
    :answer_c: 'xxxxcavexxxx'
    :answer_d: '    cave    '
    :correct: a
-   :feedback_a: Correct! In string.center(length, character), the length is the length of the returned string and the character to fill the missing space on each side. 
+   :feedback_a: Correct! In string.center(length, character), the length is the length of the returned string and the character to fill the missing space on each side.
    :feedback_b: Try again. In string.center(length, character), the character to fill the missing space on each side. Here the character is 'x'.
    :feedback_c: Try again. In string.center(length, character), the length is the length of the returned string. The length here should be 8 rather than 12.
    :feedback_d: Try again. In string.center(length, character), the length is the length of the returned string and the character to fill the missing space on each side. The length here should be 8 rather than 12 and the filling character is 'x'.
-   
+
    .. code-block:: python
 
       What is the string produced by the following:?
@@ -108,8 +108,8 @@ Peer Instruction: Strings Multiple Choice Questions
       'cave'.center(8, 'x')
 
 .. mchoice:: dz-lecture_12_3
-   :practice: T
    :author: Dan Zingaro
+   :practice: T
    :answer_a: 'a'
    :answer_b: 'b'
    :answer_c: 'c'
@@ -132,14 +132,14 @@ Peer Instruction: Strings Multiple Choice Questions
 
 
 .. mchoice:: dz-lecture_12_4
-   :practice: T
    :author: Dan Zingaro
+   :practice: T
    :answer_a: 'a'
    :answer_b: 'b'
    :answer_c: 'c'
    :answer_d: 'd'
    :answer_e: 'e'
-   :correct: b 
+   :correct: b
    :feedback_a: Try again. ord converts characters to codes and chr converts codes to characters. ord('a') = 97, ord('z') = 122, ord(ch) = 128, val = 98. Therefore, mystery = 'b'.
    :feedback_b: Correct! ord converts characters to codes and chr converts codes to characters. ord('a') = 97, ord('z') = 122, ord(ch) = 128, val = 98. Therefore, mystery = 'b'.
    :feedback_c: Try again. ord converts characters to codes and chr converts codes to characters. ord('a') = 97, ord('z') = 122, ord(ch) = 128, val = 98. Therefore, mystery = 'b'
@@ -155,8 +155,8 @@ Peer Instruction: Strings Multiple Choice Questions
       mystery = chr(val)
 
 .. mchoice:: dz-lecture_12_7
-   :practice: T
    :author: Dan Zingaro
+   :practice: T
    :answer_a: a{0}b
    :answer_b: ab
    :answer_c: a4b
