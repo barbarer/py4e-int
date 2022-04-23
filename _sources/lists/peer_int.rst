@@ -360,3 +360,46 @@ Peer Instruction: Lists Multiple Choice Questions
 
       [5, 9, 0, 4, 6, 8, 2]
       What will be the list after one pass of bubble sort?
+
+.. mchoice:: dz-lecture_34_3
+   :practice: T
+   :author: Dan Zingaro
+   :answer_a: [2, 1, 7, 15, 9, 1, 10]
+   :answer_b: [2, 1, 7, 10, 9, 1, 15]
+   :answer_c: [2, 1, 10, 7, 15, 9, 1]
+   :answer_d: [2, 1, 10, 7, 15, 1, 9]
+   :correct: B
+   :feedback_a: Try Again. During the first pass, the list becomes [-,2,10,-,1,7,15,9,1], and then [2,-,10,1,-,7,15,9,1], and then [2,1,-,10,7,-,15,9,1], and then [2,1,7,-,10,15,-,9,1], and then [2,1,7,10,-,15,9,-,1], and then [2,1,7,10,9,-,15,1,-], and then [2,1,7,10,9,1,15]
+   :feedback_b: Try Again. During the first pass, the list becomes [-,2,10,-,1,7,15,9,1], and then [2,-,10,1,-,7,15,9,1], and then [2,1,-,10,7,-,15,9,1], and then [2,1,7,-,10,15,-,9,1], and then [2,1,7,10,-,15,9,-,1], and then [2,1,7,10,9,-,15,1,-], and then [2,1,7,10,9,1,15]
+   :feedback_c: Try Again. During the first pass, the list becomes [-,2,10,-,1,7,15,9,1], and then [2,-,10,1,-,7,15,9,1], and then [2,1,-,10,7,-,15,9,1], and then [2,1,7,-,10,15,-,9,1], and then [2,1,7,10,-,15,9,-,1], and then [2,1,7,10,9,-,15,1,-], and then [2,1,7,10,9,1,15]
+   :feedback_d: Correct. During the first pass, the list becomes [-,2,10,-,1,7,15,9,1], and then [2,-,10,1,-,7,15,9,1], and then [2,1,-,10,7,-,15,9,1], and then [2,1,7,-,10,15,-,9,1], and then [2,1,7,10,-,15,9,-,1], and then [2,1,7,10,9,-,15,1,-], and then [2,1,7,10,9,1,15]
+
+   .. code-block:: python
+
+      [2, 10, 1, 7, 15, 9, 1]
+      What will be the list after one pass of bubble sort?
+
+.. mchoice:: dz-lecture_34_5
+   :practice: T
+   :author: Dan Zingaro
+   :answer_a: Selection
+   :answer_b: Insertion
+   :answer_c: Bubble
+   :correct: B
+   :feedback_a: Try Again. During the first pass, selection sort would find the min value of the entire list, which is 2 in this case, and then swap with the first index, so after the first round it would be [2, 9, 0, 4, 6, 8, 5]
+   :feedback_b: Correct. During each pass i, the ith value of the list is inserted into the left sorted part of the list.
+   :feedback_c: Try Again. Bubble sort places the sorted part on the right part after each round, but the lists in the question has left part sorted.
+
+   .. code-block:: python
+
+      Here is a list and that list after each pass of a sort.
+      [5, 9, 0, 4, 6, 8, 2]
+      [5, 9, 0, 4, 6, 8, 2]
+      [5, 9, 0, 4, 6, 8, 2]
+      [0, 5, 9, 4, 6, 8, 2]
+      [0, 4, 5, 9, 6, 8, 2]
+      [0, 4, 5, 6, 9, 8, 2]
+      [0, 4, 5, 6, 8, 9, 2]
+      [0, 2, 4, 5, 6, 8, 9]
+      Which sort is this?
+
