@@ -13,10 +13,10 @@ Peer Instruction: Tuples Multiple Choice Questions
    :feedback_b: Incorrect! Because 'num = lst[i]' goes out of range when the list is empty or the value is not found in the list
    :feedback_c: Incorrect! Because 'num = lst[i]' goes out of range when the list is empty or the value is not found in the list
    :feedback_d: Correct! Because 'num = lst[i]' goes out of range when the list is empty or the value is not found in the list
-   
-   In what situation does the above code fail?
 
-   .. code-block:: python
+   In what situation does the below code fail?
+
+   .. code-block::
 
       def find(lst, value):
          ’’’(list, value) -> int
@@ -49,25 +49,13 @@ Peer Instruction: Tuples Multiple Choice Questions
    :feedback_c: Incorrect! Because there's no group list at all
    :feedback_d: Incorrect! Because 3 has not be assigned to any group
    :feedback_e: Correct! Because there's no option where the group list has assigned every student to exactly one group
-   
-   To represent groups of students, we can use nested list. For example, in the following list, students 1, 3, and 4 are together in a group, and student 2 is working alone: [[1, 3, 4], [2]]. In the following code, which call would return True?
 
-   .. code-block:: python
+   To represent groups of students, we can use a nested list. For example, in the following list, students 1, 3, and 4 are together in a group, and student 2 is working alone: [[1, 3, 4], [2]]. In the following code, which call would return True?
+
+   .. code-block:: 
 
       def is_ok(group_list, class_list):
          ’’’(list of list of int, list of int) -> bool
          Return True iff every student in class_list is in exactly
          one group according to group_list.
          ’’’
-
-
-
-
-
-
-
-
-
-
-
-
