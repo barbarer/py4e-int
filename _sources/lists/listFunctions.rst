@@ -47,7 +47,7 @@ First, the program to compute an average without a list:
     total = 0
     count = 0
     while (True):
-        inp = input('Enter a number: ')
+        inp = input('Enter a number or type done to quit: ')
         if inp == 'done': break
         value = float(inp)
         total = total + value
@@ -111,7 +111,7 @@ the numbers in the list to come up with the average.
     :feedback_b: len returns the number of top level items in the list.  It does not count items in sublists.
     :feedback_c: len returns the number of top level items in the list.  It does not count items in sublists.
     :feedback_d: len returns the number of top level items in the list, not the number of brackets.
-    
+
     What is printed by the following statements?
 
 
