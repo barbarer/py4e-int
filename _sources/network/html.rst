@@ -1,5 +1,30 @@
-HTML
---------
+Group Work: HTML Basics
+------------------------
+
+It is best to use a POGIL approach with the following. In POGIL students work
+in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
+
+.. note::
+
+   If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.
+
+**Learning Objectives**
+
+Students will know and be able to do the following.
+
+*Content Objectives:*
+
+* What is HTML?
+* What is a tag?
+* What are common HTML tags?
+* What is the structure of an HTML page?
+
+*Process Objectives:*
+
+* Identify start and end tags
+* Fix incorrect HTML
+* Put HTML tags in order
+* Describe relationships between tags (parent, child, sibling)
 
 HTML stands for Hyper Text Markup Language.  It is used to create web pages.
 HTML describes the elements of the webpage such as the title, paragraphs,
@@ -34,6 +59,12 @@ enclosed in "<" and ">".
        </body>
    </html>
 
+Try adding a ``h2`` and ``h3`` header to the HTML above after the paragraph.
+
+.. shortanswer:: html-headers-short-answer
+
+   What happens to the text as the header level increases (h1, h2, h3)?
+
 The first tag, ``<!DOCTYPE html>``, indicates that this is an HTML document.
 While it is best to include this tag, the page will typically display
 fine even if you don't include it.
@@ -48,17 +79,19 @@ The ``h1`` tag is for a first-level (most important) header.  There are addition
 
 The ``p`` tag indicates a paragraph of text.
 
-Try adding a ``h2`` and ``h3`` header to the HTML above after the paragraph. How does the display change for each type of header?
+
 
 .. dragndrop:: html_basic_tag_def_dnd
     :practice: T
     :feedback: Read the information above and try again.
-    :match_1: html|||The root (start) tag for a document.
-    :match_2: head|||Contains meta data about the document.
-    :match_3: body|||Contains the information that will be displayed in the web page.
+    :match_1: html|||The root (start) tag for a HTML document.
+    :match_2: head|||Contains meta data about the document. This information will not be displayed.
+    :match_3: body|||Contains all the information that will be displayed in the web page.
     :match_4: title|||The title for this web page.
     :match_5: h2|||A second-level header.
     :match_6: p|||A paragraph.
+
+    Match each tag to its definition.
 
 
 Start and End Tags
@@ -66,7 +99,7 @@ Start and End Tags
 
 Most HTML elements have start tags and end tags. The page is started with
 the start tag  ``<html>`` and ends with the end tag ``</html>``.  Indentation
-isn't required, but can make it easier to read the HTML.
+isn't required, but makes it easier to read the HTML.
 
 .. clickablearea:: html_start_tags_clicka
     :practice: T
@@ -125,26 +158,6 @@ isn't required, but can make it easier to read the HTML.
    </html>
 
 
-
-Link Tag
-============
-
-Web pages can include hyperlinks to other web pages.  They do this by including
-an anchor ``a`` tag which is also known as a **link** tag as shown below.
-
-.. code-block:: html
-
-   <a href="https://www.w3schools.com/">Visit W3Schools.com!</a>
-
-The start tag ``<a>`` contains an **attribute** ``href`` and **value** ``"https://www.w3schools.com/"``.
-The text of the tag is ``Visit W3Schools.com!`` which is the actual text of the link when it is displayed.
-If you click on the link you will be taken to the ``href`` value: ``https://www.w3schools.com/``.
-The ``<a>`` tag has a closing ``</a>`` tag.
-
-The result be displayed as shown below.  If you click on the link you will be taken to the new url.
-
-`Visit W3Schools.com! <https://www.w3schools.com/>`_
-
 List Tags
 =======================
 
@@ -160,7 +173,6 @@ You can include both ordered (numbered) and unordered (bulleted) lists in HTML.
    <html>
        <head>
            <title>My First Page</title>
-              <h1>The First Page</h1>
        </head>
        <body>
            <h2> Ordered List</h2>
@@ -177,33 +189,15 @@ You can include both ordered (numbered) and unordered (bulleted) lists in HTML.
        </body>
    </html>
 
-.. activecode:: html_div_and_image_ac
-   :language: html
-   :nocodelens:
 
-   Render the HTML below.
-   ~~~~
-   <!DOCTYPE html>
-   <html>
-       <head>
-           <title>My First Page</title>
-              <h1>The First Page</h1>
-       </head>
-       <body>
-           <div> A div is a division or section in HTML.  It is a container for other HTML elements.</div>
-           <p> The img tag is used for images.
-           <img src="https://i.ibb.co/WfcrzVn/beach.jpg" atl="A picture of a beach"/>
-       </body>
-   </html>
-
-.. dragndrop:: html_more_tag_def_dnd
+.. dragndrop:: html_list_tag_def_dnd
     :practice: T
     :feedback: Read the information above and try again.
-    :match_1: img|||Tag to include an image.
-    :match_2: div|||Tag to define a division (section).
     :match_3: ul|||Tag to define an unordered list.
     :match_4: ol|||Tag to define an ordered list.
     :match_5: li|||Tag to define a list item.
+
+    Match each tag to its definition.
 
 
 Tag Relationships: Parent, Child, Sibling
@@ -214,8 +208,9 @@ two children tags: ``<head>`` and ``<body>``.  The head contains meta informatio
 about the page including the page title.  The body contains the elements
 that are displayed in the page such as the headers and paragraphs.
 
-.. parsonsprob:: html_pp_my_first_page
+.. parsonsprob:: html_pp_my_first_page_v2
    :adaptive:
+   :order: 8, 5, 3, 0, 6, 2, 7, 4, 1
    :numbered: left
 
    Put the blocks into order to define a simple HTML page. Indent the blocks to show the structure.
@@ -226,13 +221,38 @@ that are displayed in the page such as the headers and paragraphs.
    =====
        &#60head&#62
    =====
-           &#60title&#62My First Page&#60/title&#62
+           &#60title&#62A Page&#60/title&#62
    =====
        &#60/head&#62
    =====
        &#60body&#62
    =====
-           &#60p&#62This paragraph will be displayed by the browser.&#60/p&#62
+           &#60p&#62A paragraph.&#60/p&#62
+   =====
+       &#60/body&#62
+   =====
+   &#60/html&#62
+
+.. parsonsprob:: html_pp_my_second_page
+   :adaptive:
+   :order: 8, 5, 3, 0, 6, 2, 7, 4, 1
+   :numbered: left
+
+   Put the blocks into order to define a simple HTML page with a header and a paragraph in that order. Indent the blocks to show the structure.
+   -----
+   &#60html&#62
+   =====
+       &#60head&#62
+   =====
+           &#60title&#62A Page&#60/title&#62
+   =====
+       &#60/head&#62
+   =====
+       &#60body&#62
+   =====
+           &#60h1&#62A header.&#60/h1&#62
+   =====
+           &#60p&#62A paragraph.&#60/p&#62
    =====
        &#60/body&#62
    =====
@@ -249,7 +269,7 @@ the ``html`` tag.  The ``body`` tag is the parent of the ``h1`` and ``p`` tags.
 
 .. mchoice:: html_parent_a
 
-    Which tag is the parent of the ``a`` tag in the above structure?
+    Which tag is the parent of the ``a`` (hyperlink) tag in the above structure?
 
     -   h1
 
@@ -287,3 +307,8 @@ the ``html`` tag.  The ``body`` tag is the parent of the ``h1`` and ``p`` tags.
     -   html
 
         -   No, the html tag is the parent of the head tag.
+
+If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.
+
+.. groupsub:: html_basics_groupsub
+   :limit: 3
