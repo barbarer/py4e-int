@@ -154,17 +154,7 @@ The text of the tag is ``Visit W3Schools.com!`` which is the actual text of the 
 If you click on the link you will be taken to the ``href`` value: ``https://www.w3schools.com/``.
 The ``<a>`` tag has a closing ``</a>`` tag.
 
-The result is displayed below.  If you click on the link you will be taken to the new url.
-
-`Visit W3Schools.com! <https://www.w3schools.com/>`_
-
-Image Tag
-==================
-
-Web pages can include images using the <img> tag. The image tag has an attribute ``src`` that specifies the URL for the image
-and can have an ``alt`` attribute to specify alternative text that describes the image.
-
-.. activecode:: html_div_and_image_ac
+.. activecode:: html_link_ac
    :language: html
    :nocodelens:
 
@@ -176,11 +166,32 @@ and can have an ``alt`` attribute to specify alternative text that describes the
            <title>My First Page</title>
        </head>
        <body>
-           <div> A div is a division or section in HTML.  It is a container for other HTML elements.
-               <p> The img tag is used to include images in web pages.</p>
-               <img src="https://i.ibb.co/WfcrzVn/beach.jpg" alt="A picture of a beach">
-               <a href = "https://www.travelandleisure.com/trip-ideas/beach-vacations/best-beaches-in-hawaii">Best Beaches in Hawaii</a>
-           </div>
+           <p> The anchor (link) tag is used to include hyperlinks.  Click on "Visit the beach" to go to that url.
+               <a href="https://i.ibb.co/WfcrzVn/beach.jpg">Visit the beach</a>
+           </p>
+       </body>
+   </html>
+
+Image Tag
+==================
+
+Web pages can include images using the <img> tag. The image tag has an attribute ``src`` that specifies the URL for the image
+and can have an ``alt`` attribute to specify alternative text that describes the image.
+
+.. activecode:: html_image_ac
+   :language: html
+   :nocodelens:
+
+   Render the HTML below.
+   ~~~~
+   <!DOCTYPE html>
+   <html>
+       <head>
+           <title>My First Page</title>
+       </head>
+       <body>
+           <p> The img tag is used to include images in web pages.</p>
+           <img src="https://i.ibb.co/WfcrzVn/beach.jpg" alt="A picture of a beach">
        </body>
    </html>
 
@@ -196,6 +207,11 @@ and can have an ``alt`` attribute to specify alternative text that describes the
     :match_3: a|||Tag to define a hyperlink (link)
 
     Match each tag to its definition.
+
+
+.. shortanswer:: html-anchor-vs-img
+
+   List the differences between the ``img`` tag and the ``a`` tag?
 
 Attributes
 ==============
