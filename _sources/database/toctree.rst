@@ -10,6 +10,7 @@ Databases
     dbBrowserSQLite.rst
     creatingDBtable.rst
     SQLsummary.rst
+    more-select.rst
     spideringTwitter.rst
     basicModeling.rst
     multTables.rst
