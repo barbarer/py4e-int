@@ -14,6 +14,7 @@ the code area for compiler errors and/or unit test results.
 See the video below for an example.
 
 .. youtube:: piPz0kh8gMk
+    :divid: iwgex-ps-code
     :optional:
     :width: 650
     :height: 415
@@ -48,16 +49,17 @@ Try to finish writing the code for the following problem.
 
     myTests().main()
 
-Write Code with Mixed-up Code
-================================
+Write Code with Pop-Up Mixed-up Code
+=======================================
 
-You may also be given a write code problem that allows you to pop-up the
+You may also see a write code problem that allows you to pop-up the
 equivalent mixed-up code problem. You can use this problem to help you
 solve the write code problem.  To pop-up the mixed-up code problem
 click on the drop down near the top of problem.
 
 .. youtube:: zz4ATp31_vk
     :optional:
+    :divid: iwgex-ps-toggle
     :width: 650
     :height: 415
     :align: center
@@ -74,6 +76,7 @@ to check your solution.
 See the video below for an example.
 
 .. youtube:: Rf7oWHlo-e0
+    :divid: iwgex-ps-parsons1
     :optional:
     :width: 650
     :height: 415
@@ -128,7 +131,7 @@ Try to solve the following mixed-up code problem. This problem requires indentat
    =====
    Second block
    =====
-   Extra block that isn't needed #paired
+   Extra block that is not needed #paired: This block is not needed
    =====
        Third block that needs to be indented
 
@@ -141,7 +144,20 @@ than three blocks left.
 See the video below for an example.
 
 .. youtube:: QejZ7u642IU
+    :divid: iwgex-ps-parsons2
     :optional:
     :width: 650
     :height: 415
     :align: center
+
+
+Feedback
+==================================
+
+.. shortanswer:: iticse-ex1-intro-ps-sa
+
+   Please provide feedback here. Please share any comments, problems, or suggestions.
+
+What to do next
+============================
+Click on the following link `Practice <iwgex-ps.html>`_

@@ -14,6 +14,7 @@ the code area for compiler errors and/or unit test results.
 See the video below for an example.
 
 .. youtube:: piPz0kh8gMk
+    :divid: iwgex1-code
     :optional:
     :width: 650
     :height: 415
@@ -62,6 +63,7 @@ to check your solution.
 See the video below for an example.
 
 .. youtube:: Rf7oWHlo-e0
+    :divid: iwgex1-parsons1
     :optional:
     :width: 650
     :height: 415
@@ -129,6 +131,7 @@ than three blocks left.
 See the video below for an example.
 
 .. youtube:: QejZ7u642IU
+    :divid: iwgex1-parsons2
     :optional:
     :width: 650
     :height: 415
