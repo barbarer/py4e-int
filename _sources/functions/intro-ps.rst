@@ -6,7 +6,7 @@ Please read the following, watch the videos, and try to solve the problems.
 Solving Write Code Problems
 ==============================
 
-If you see a problem like the one below, you will need to write code.  The problem
+If you see a problem like the one below you will need to write Python code.  The problem
 will have unit tests that you can run to check that your code is working
 correctly.  Click on the "Run" button to compile and run your code.  Look after
 the code area for compiler errors and/or unit test results.
@@ -14,23 +14,22 @@ the code area for compiler errors and/or unit test results.
 See the video below for an example.
 
 .. youtube:: piPz0kh8gMk
-    :divid: iwgex1-code
+    :divid: iwgex-ps-code
     :optional:
     :width: 650
     :height: 415
     :align: center
 
-Finish writing the code for the following problem.
+Try to finish writing the code for the following problem.
 
-.. activecode:: intro-sample-write-code
+.. activecode:: intro-sample-write-code-ps
     :practice: T
     :autograde: unittest
 
     Write a function called ``double(num)`` that takes a number ``num`` and
-    returns the number times 2. For example, ``double(2)`` should return 4 and
-    ``double(-1)`` should return -2.  Look below the code to check for any
-    compiler errors or the results
-    from the test cases.  Be sure to return the result.
+    returns the number times 2. For example, ``double(2)`` should return 4.
+    Look below the code to check for any compiler errors or the results
+    from the test cases.
     ~~~~
     def double(num):
         # write code here
@@ -50,6 +49,20 @@ Finish writing the code for the following problem.
 
     myTests().main()
 
+Write Code with Pop-Up Mixed-up Code
+=======================================
+
+You may also see a write code problem that allows you to pop-up the
+equivalent mixed-up code problem. You can use this problem to help you
+solve the write code problem.  To pop-up the mixed-up code problem
+click on the drop down near the top of problem.
+
+.. youtube:: zz4ATp31_vk
+    :optional:
+    :divid: iwgex-ps-toggle
+    :width: 650
+    :height: 415
+    :align: center
 
 Solving Mixed-up Code Problems
 ==================================
@@ -63,7 +76,7 @@ to check your solution.
 See the video below for an example.
 
 .. youtube:: Rf7oWHlo-e0
-    :divid: iwgex1-parsons1
+    :divid: iwgex-ps-parsons1
     :optional:
     :width: 650
     :height: 415
@@ -71,7 +84,7 @@ See the video below for an example.
 
 Try to solve the following mixed-up code problem.  This problem doesn't require any indentation.
 
-.. parsonsprob:: intro-simple-parsons-no-indent
+.. parsonsprob:: intro-simple-parsons-no-indent-ps
    :numbered: left
    :adaptive:
    :practice: T
@@ -88,7 +101,7 @@ Try to solve the following mixed-up code problem.  This problem doesn't require 
 
 Try to solve the following mixed-up code problem. This problem requires indentation.
 
-.. parsonsprob:: intro-simple-parsons-indent
+.. parsonsprob:: intro-simple-parsons-indent-ps
    :numbered: left
    :adaptive:
    :practice: T
@@ -105,7 +118,7 @@ Try to solve the following mixed-up code problem. This problem requires indentat
 
 Try to solve the following mixed-up code problem. This problem requires indentation and has extra blocks that are not needed in a correct solution.
 
-.. parsonsprob:: intro-simple-parsons-indent-with-dist
+.. parsonsprob:: intro-simple-parsons-indent-with-dist-ps
    :numbered: left
    :adaptive:
    :practice: T
@@ -131,19 +144,20 @@ than three blocks left.
 See the video below for an example.
 
 .. youtube:: QejZ7u642IU
-    :divid: iwgex1-parsons2
+    :divid: iwgex-ps-parsons2
     :optional:
     :width: 650
     :height: 415
     :align: center
 
+
 Feedback
 ==================================
 
-.. shortanswer:: iticse-ex1-intro-sa
+.. shortanswer:: iticse-ex1-intro-ps-sa
 
    Please provide feedback here. Please share any comments, problems, or suggestions.
 
 What to do next
 ============================
-Click on the following link `Practice <iwgex1.html>`_
+Click on the following link `Practice <iwgex-ps.html>`_
