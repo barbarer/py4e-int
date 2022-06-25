@@ -160,4 +160,29 @@ Feedback
 
 What to do next
 ============================
-Click on the following link `Practice <iwgex-ps.html>`_
+
+.. raw:: html
+
+    <p>Click on the following link to go the practice problems: <a id="iwgex-next">Practice</a></p>
+
+.. raw:: html
+
+    <script type="text/javascript" >
+
+      window.onload = function() {
+
+        a = document.getElementById("iwgex-next")
+
+        // randomly pick one of two relative urls
+        var v = Math.floor(Math.random() * 9) + 1;
+        if (v % 2 == 0)
+        {
+              a.href = "iwgex-ps-write.html"
+        }
+        else
+        {
+               a.href = "iwgex-ps-tog.html"
+        }
+
+        };
+    </script>

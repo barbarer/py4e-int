@@ -9,7 +9,7 @@ Look at the code below and predict what will be printed.
 
     What is the last thing (last line of text) that will be printed when the code below runs?
 
-    - :['"]?Attr:yes['"]?: It prints "Attr: " plus the value of the hide attribute in the email tag.
+    - :['"]?Attr: yes['"]?: It prints "Attr: " plus the value of the hide attribute in the email tag.
       :['"]?yes['"]?: Something will be printed before the value. Look at the print statement again.
       :.*: What is the value of the hide attribute?
 
@@ -63,7 +63,7 @@ Look at the code below and predict what will be printed.
 
     What is the last thing (last line of text) that will be printed when the code below runs?
 
-    - :['"]?Attr:None['"]?: The default is to print None if there is no attribute with that name when you use ``.get('name')``.
+    - :['"]?Attr: None['"]?: The default is to print None if there is no attribute with that name when you use ``.get('name')``.
       :['"]?None['"]?: Something will be printed before the value. Look at the print statement again.
       :.*: What is the default value when there is no attribute with that name?
 
@@ -214,7 +214,7 @@ Write Code to Process XML
 .. activecode:: xml_parse_write_code_note_data_ac
     :language: python3
 
-    Write code to print the note's to, from, body, and time (with region). 
+    Write code to print the note's to, from, body, and time (with region).
     ~~~~
     import xml.etree.ElementTree as ET
 

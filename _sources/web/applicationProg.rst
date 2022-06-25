@@ -41,7 +41,7 @@ code necessary to implement the application.
     :answer_b: True
     :correct: b
     :feedback_a: Try again!
-    :feedback_b: By including access to services provided by other programs in the functionality of a program, you are using an SOA approach. 
+    :feedback_b: By including access to services provided by other programs in the functionality of a program, you are using an SOA approach.
 
     True or False? A service-oriented architecture makes use of other applications' services.
 
@@ -82,3 +82,25 @@ the web, we call these *web services*.
     :feedback_d: SOA allows the owners of data to set rules about the use of their data.
 
     Which of the following is **not** an advantage of a service oriented architecture?
+
+Getting JSON Data From an API
+===============================
+
+
+There is a listing of free APIs that you can use at https://github.com/public-apis/public-apis
+
+One of the free APIs has cat facts.  You can get a cat fact by going to the URL: http://cat-fact.herokuapp.com/facts.
+Try entering that in a browser window.  You can use Python to the get data from the response text as shown below.
+
+.. activecode:: web-api-get-cat-fact
+    :caption: Convert Python object to JSON string
+
+    import requests
+    import json
+
+    # get the data
+    response = requests.get('http://cat-fact.herokuapp.com/facts')
+    data = response.text
+    in_list = json.loads(data)
+    print(type(in_list))
+    print(in_list)
