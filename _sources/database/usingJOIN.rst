@@ -22,7 +22,7 @@ The following is an example of a ``SELECT`` with a
        ON Follows.from_id = People.id WHERE People.id = 1
 
 The ``JOIN`` clause indicates that the fields we are selecting
-cross both the ``Follows`` and ``People`` tables. The
+come from the ``Follows`` and ``People`` tables. The
 ``ON`` clause indicates how the two tables are to be joined:
 Take the rows from ``Follows`` and append the row from
 ``People`` where the field ``from_id`` in ``Follows`` is
@@ -30,10 +30,11 @@ the same the ``id`` value in the ``People`` table.
 
 .. fillintheblank:: dbJoin_fill1
     :practice: T
+     :casei:
 
     Which SQL clause can be used to return data from two tables?
 
-    - :[Jj][Oo][Ii][Nn]: JOIN returns data from two tables based on rows selected to join them on.
+    - :join: JOIN returns data from two tables based on rows selected to join them on.
       :.*: Try again!
 
 
@@ -43,7 +44,7 @@ the same the ``id`` value in the ``People`` table.
 
     Fill in the blank in the following: SELECT * FROM Follows JOIN People |blank| Follows.from_id = People.id LIMIT 5
 
-    - :ON: Use ON to specify what column to join the data on.
+    - :on: Use ON to specify what column to join the data on.
       :.*: Try again!
 
 **Connecting Tables Using JOIN**
@@ -73,8 +74,10 @@ run several times.
 .. code-block::
 
     import sqlite3
+    import os
 
-    conn = sqlite3.connect('friends.sqlite')
+    dir = os.path.dirname(__file__) + os.sep
+    conn = sqlite3.connect(dir + 'friends.db')
     cur = conn.cursor()
 
     cur.execute('SELECT * FROM People')
@@ -116,33 +119,32 @@ Here is the output of the program:
    python twjoin.py
    People:
    (1, 'drchuck', 1)
-   (2, 'opencontent', 1)
-   (3, 'lhawthorn', 1)
-   (4, 'steve_coppin', 0)
-   (5, 'davidkocher', 0)
-   55 rows.
+   (2, 'ravenmaster1', 1)
+   (3, 'BrentSeverance', 1)
+   (4, 'prairycat', 0)
+   (5, 'lionelrobertjr', 0)
+   15 rows.
    Follows:
    (1, 2)
    (1, 3)
    (1, 4)
    (1, 5)
    (1, 6)
-   60 rows.
+   15 rows.
    Connections for id=2:
-   (2, 1, 1, 'drchuck', 1)
-   (2, 28, 28, 'cnxorg', 0)
-   (2, 30, 30, 'kthanos', 0)
-   (2, 102, 102, 'SomethingGirl', 0)
-   (2, 103, 103, 'ja_Pac', 0)
-   20 rows.
-
+   (2, 7, 7, 'myldn', 0)
+   (2, 8, 8, 'DickieDover', 0)
+   (2, 9, 9, 'Ukraine', 0)
+   (2, 10, 10, 'AlisonMoyet', 0)
+   (2, 11, 11, 'PhilipPullman', 0)
+   5 rows.
 
 You see the columns from the ``People`` and
 ``Follows`` tables and the last set of rows is the result of
 the ``SELECT`` with the ``JOIN`` clause.
 
 In the last select, we are looking for accounts that are friends of
-"opencontent" (i.e., ``People.id=2``).
+"ravenmaster1" (i.e., ``People.id=2``).
 
 In each of the "metarows" in the last select, the first two columns are
 from the ``Follows`` table followed by columns three through
@@ -183,7 +185,7 @@ You can use ``table_name.field_name`` to specify the column that you want from e
    assert 4,0 == W00392
    assert 3,1 == 3rd & H St NE
 
-You can still add a ``WHERE`` clause.
+You can also a ``WHERE`` clause.
 
 .. activecode:: db_select_bike_join_with_where_ex1
    :language: sql
