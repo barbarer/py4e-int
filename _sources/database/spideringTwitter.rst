@@ -4,10 +4,10 @@ Spidering Twitter using a database
     single: Spidering
     single: Tuple
 
-.. note:: Spidering Twitter uses the API mentioned earlier. This requires a developer
-          account, which you may or may not be granted. If you are running this
-          program, be very careful – you do not want to pull too much data or run
-          the program for too long and end up having your Twitter access shut off.
+.. note:: Spidering Twitter uses the Tweepy API at https://docs.tweepy.org/en/stable/api.html.
+          This requires a developer
+          account, which you may or may not be granted. To apply for a developer account
+          see the instructions at https://developer.twitter.com/en/support/twitter-api/developer-account.
 
 In this section, we will create a simple spidering program that will go
 through Twitter accounts and build a database of them.
@@ -19,14 +19,14 @@ restart your data retrieval at the very beginning so we want to store
 data as we retrieve it so our program can start back up and pick up
 where it left off.
 
-.. mchoice:: dbTwitter_MC1
+.. mchoice:: dbTwitter_MC1_v2
     :practice: T
     :answer_a: Spidering programs need to be stopped and restarted frequently.
-    :answer_b: Spidering programs are time consuming to run.
+    :answer_b: You can lose the data you already gathered.
     :answer_c: Spidering programs cannot be restarted.
     :correct: a
     :feedback_a: One of the problems of any kind of spidering program is that it needs to be able to be stopped and restarted many times and you do not want to lose the data that you have retrieved so far.
-    :feedback_b: Spidering programs are usually pretty simple and able to run consecutively, but the timing depends on your data.
+    :feedback_b: You won't lose any data if you store the data in a database
     :feedback_c: Spidering programs can be restarted from where they leave off.
 
     Which of the following is a problem with spidering programs?
@@ -40,16 +40,6 @@ of the friends of the friend. We do this over and over, picking an
 "unvisited" person, retrieving their friend list, and adding friends we
 have not seen to our list for a future visit.
 
-.. mchoice:: dbTwitter_MC_tf1
-    :practice: T
-    :answer_a: True
-    :answer_b: False
-    :correct: a
-    :feedback_a: By using loops, a spidering program can quickly scroll through each data entry. 
-    :feedback_b: Try again!
-
-    True or False? Spidering programs make user of loops to filter through data.
-
 We also track how many times we have seen a particular friend in the
 database to get some sense of their "popularity".
 
@@ -58,48 +48,47 @@ account or not, and how popular the account is in a database on the disk
 of the computer, we can stop and restart our program as many times as we
 like.
 
-.. mchoice:: dbTwitter_MC_tf2
+.. mchoice:: dbTwitter_MC_tf2_v2
     :practice: T
-    :answer_a: True
-    :answer_b: False
+    :answer_a: Programs using databases may be stopped and restarted, but do not retain the data.
+    :answer_b: Spidering programs gather data by looping through data
     :correct: b
-    :feedback_a: Try again!
-    :feedback_b: Using databases can be very helpful, as they retain run data each time a program is stopped and restarted.
+    :feedback_a: Spidering programs do retain data by storing it in a database
+    :feedback_b: Spidering programs do loop through data
 
-    True or False? Programs using databases may be stopped and restarted, but do not retain the data.
+    Which of the following are true?
 
-This program is a bit complex. It is based on the code from the exercise
-earlier in the book that uses the Twitter API.
+This program is a bit complex.
 
 Here is the source code for our Twitter spidering application:
 
 .. code-block::
 
-    from urllib.request import urlopen
-    import urllib.error
-    import twurl
     import json
     import sqlite3
-    import ssl
+    import twitter_info
+    import tweepy
+    import os
 
-    TWITTER_URL = 'https://api.twitter.com/1.1/friends/list.json'
+    # Set up OAuth2 for access to twitter
+    auth = tweepy.OAuth2BearerHandler(twitter_info.bearer_token)
+    api = tweepy.API(auth, wait_on_rate_limit=True)
 
-    conn = sqlite3.connect('spider.sqlite')
+    # set up the database
+    dir = os.path.dirname(__file__) + os.sep
+    conn = sqlite3.connect(dir + 'spider.db')
     cur = conn.cursor()
-
     cur.execute('''
-                CREATE TABLE IF NOT EXISTS Twitter
-                (name TEXT, retrieved INTEGER, friends INTEGER)''')
+            CREATE TABLE IF NOT EXISTS Twitter
+            (name TEXT, retrieved INTEGER, friends INTEGER)''')
 
-    # Ignore SSL certificate errors
-    ctx = ssl.create_default_context()
-    ctx.check_hostname = False
-    ctx.verify_mode = ssl.CERT_NONE
-
+    # loop till the user types quit
     while True:
-        acct = input('Enter a Twitter account, or quit: ')
+        acct = input('Enter a Twitter screen name, or hit enter, or type quit: ')
         if (acct == 'quit'): break
-        if (len(acct) < 1):
+        if (len(acct) < 1): # enter so pick someone to visit from the database
+
+            # select a screen name that hasn't been visited yet
             cur.execute('SELECT name FROM Twitter WHERE retrieved = 0 LIMIT 1')
             try:
                 acct = cur.fetchone()[0]
@@ -107,59 +96,64 @@ Here is the source code for our Twitter spidering application:
                 print('No unretrieved Twitter accounts found')
                 continue
 
-        url = twurl.augment(TWITTER_URL, {'screen_name': acct, 'count': '20'})
-        print('Retrieving', url)
-        connection = urlopen(url, context=ctx)
-        data = connection.read().decode()
-        headers = dict(connection.getheaders())
+        # Fetch friends for this screen name
+        print("Fetching friends for screen name: " + acct)
+        idList = api.get_friend_ids(screen_name=acct)
 
-        print('Remaining', headers['x-rate-limit-remaining'])
-        js = json.loads(data)
-        # Debugging
-        # print json.dumps(js, indent=4)
-
+        # update the database to show that you have retrieved friends for this one
         cur.execute('UPDATE Twitter SET retrieved=1 WHERE name = ?', (acct, ))
 
+        # loop through 5 ids of the friends (to not get too many at once)
         countnew = 0
         countold = 0
-        for u in js['users']:
-            friend = u['screen_name']
-            print(friend)
+        num = min(5, len(idList)) # in case they do not have as least 5 friends
+        for i in range(num):
+
+            # get the current id
+            currId = idList[i]
+            # print(currId)
+            # get the user information for this id
+            friend = api.get_user(user_id=currId)
+            screenName = friend.screen_name
+
+            # check if we already have this screen name in the database
             cur.execute('SELECT friends FROM Twitter WHERE name = ? LIMIT 1',
-                        (friend, ))
+                   (screenName, ))
             try:
+                # if there update the count
                 count = cur.fetchone()[0]
                 cur.execute('UPDATE Twitter SET friends = ? WHERE name = ?',
-                            (count+1, friend))
+                       (count+1, screenName))
                 countold = countold + 1
             except:
+                # not there, so insert it
                 cur.execute('''INSERT INTO Twitter (name, retrieved, friends)
-                            VALUES (?, 0, 1)''', (friend, ))
+                           VALUES (?, 0, 1)''', (screenName, ))
                 countnew = countnew + 1
         print('New accounts=', countnew, ' revisited=', countold)
         conn.commit()
 
     cur.close()
 
-Our database is stored in the file ``spider.sqlite3`` and it
+Our database is stored in the file ``spider.db`` and it
 has one table named ``Twitter``. Each row in the
 ``Twitter`` table has a column for the account name, whether we
 have retrieved the friends of this account, and how many times this
 account has been "friended".
 
-In the main loop of the program, we prompt the user for a Twitter
-account name or "quit" to exit the program. If the user enters a Twitter
-account, we retrieve the list of friends and statuses for that user and
-add each friend to the database if not already in the database. If the
+In the main loop of the program, we tell the user to enter a Twitter
+account name, hit enter, or type "quit" to exit the program. If the user enters a Twitter
+account name, we retrieve the list of friends for that user and
+add up to five friends to the database if the friend is not already in the
+database. If the
 friend is already in the list, we add 1 to the ``friends``
 field in the row in the database.
 
 If the user presses enter, we look in the database for the next Twitter
-account that we have not yet retrieved, retrieve the friends and
-statuses for that account, add them to the database or update them, and
+account that we have not yet retrieved, retrieve the friends for that account, add them to the database or update them, and
 increase their ``friends`` count.
 
-Once we retrieve the list of friends and statuses, we loop through all
+Once we retrieve the list of friends, we loop through all
 of the ``user`` items in the returned JSON and retrieve the
 ``screen_name`` for each user. Then we use the ``SELECT``
 statement to see if we already have stored this particular ``screen_name``
@@ -168,23 +162,34 @@ the record exists.
 
 .. code-block:: python
 
+    # loop through 5 ids of the friends (to not get too many at once)
     countnew = 0
     countold = 0
-    for u in js['users'] :
-        friend = u['screen_name']
-        print(friend)
+    num = min(5, len(idList)) # in case they do not have as least 5 friends
+    for i in range(num):
+
+        # get the current id
+        currId = idList[i]
+        # print(currId)
+        # get the user information for this id
+        friend = api.get_user(user_id=currId)
+        screenName = friend.screen_name
+
+        # check if we already have this screen name in the database
         cur.execute('SELECT friends FROM Twitter WHERE name = ? LIMIT 1',
-            (friend, ) )
+                   (screenName, ))
         try:
+            # if there update the count
             count = cur.fetchone()[0]
             cur.execute('UPDATE Twitter SET friends = ? WHERE name = ?',
-                (count+1, friend) )
+                       (count+1, screenName))
             countold = countold + 1
         except:
+            # not there, so insert it
             cur.execute('''INSERT INTO Twitter (name, retrieved, friends)
-                VALUES ( ?, 0, 1 )''', ( friend, ) )
+                           VALUES (?, 0, 1)''', (screenName, ))
             countnew = countnew + 1
-    print('New accounts=',countnew,' revisited=',countold)
+    print('New accounts=', countnew, ' revisited=', countold)
     conn.commit()
 
 Once the cursor executes the ``SELECT`` statement, we must
@@ -217,26 +222,27 @@ program runs as follows:
 
 .. code-block::
 
-    Enter a Twitter account, or quit: drchuck
-    Retrieving http://api.twitter.com/1.1/friends ...
-    New accounts= 20  revisited= 0
-    Enter a Twitter account, or quit: quit
+    Enter a Twitter screen name, or hit enter, or type quit: drchuck
+    Fetching friends for screen name: drchuck
+    New accounts= 5  revisited= 0
+    Enter a Twitter screen name, or hit enter, or type quit: quit
 
 Since this is the first time we have run the program, the database is
-empty and we create the database in the file ``spider.sqlite3``
+empty and we create the database in the file ``spider.db``
 and add a table named ``Twitter`` to the database. Then we
-retrieve some friends and add them all to the database since the
+retrieve five friends and add them all to the database since the
 database is empty.
 
 At this point, we might want to write a simple database dumper to take a
-look at what is in our ``spider.sqlite3`` file:
+look at what is in our ``spider.db`` file:
 
 .. code-block::
 
     import sqlite3
+    import os
 
-    conn = sqlite3.connect('spider.sqlite')
-    cur = conn.cursor()
+    dir = os.path.dirname(__file__) + os.sep
+    conn = sqlite3.connect(dir + 'spider.db')
     cur.execute('SELECT * FROM Twitter')
     count = 0
     for row in cur:
@@ -254,14 +260,12 @@ above, its output will be as follows:
 
 .. code-block::
 
-    ('opencontent', 0, 1)
-    ('lhawthorn', 0, 1)
-    ('steve_coppin', 0, 1)
-    ('davidkocher', 0, 1)
-    ('hrheingold', 0, 1)
-    ...
-    20 rows.
-
+    ('ravenmaster1', 0, 1)
+    ('BrentSeverance', 0, 1)
+    ('prairycat', 0, 1)
+    ('lionelrobertjr', 0, 1)
+    ('LockPickingLwyr', 0, 1)
+    5 rows.
 
 We see one row for each ``screen_name``, that we have not retrieved the
 data for that ``screen_name``, and everyone in the database has one
@@ -275,27 +279,28 @@ simply pressing enter instead of a Twitter account as follows:
 .. code-block::
 
     Enter a Twitter account, or quit:
-    Retrieving http://api.twitter.com/1.1/friends ...
-    New accounts= 18  revisited= 2
-    Enter a Twitter account, or quit:
-    Retrieving http://api.twitter.com/1.1/friends ...
-    New accounts= 17  revisited= 3
-    Enter a Twitter account, or quit: quit
-
+    Enter a Twitter screen name, or hit enter, or type quit:
+    Fetching friends for screen name: ravenmaster1
+    New accounts= 5  revisited= 0
+    Enter a Twitter screen name, or hit enter, or type quit:
+    Fetching friends for screen name: BrentSeverance
+    New accounts= 4  revisited= 1
+    Enter a Twitter screen name, or hit enter, or type quit: quit
 
 Since we pressed enter (i.e., we did not specify a Twitter account), the
 following code is executed:
 
 .. code-block:: python
 
-    if ( len(acct) < 1 ) :
-        cur.execute('SELECT name FROM Twitter WHERE retrieved = 0 LIMIT 1')
-        try:
-            acct = cur.fetchone()[0]
-        except:
-            print('No unretrieved twitter accounts found')
-            continue
+    if (len(acct) < 1): # enter so pick someone to visit from the database
 
+       # select a screen name that hasn't been visited yet
+       cur.execute('SELECT name FROM Twitter WHERE retrieved = 0 LIMIT 1')
+       try:
+           acct = cur.fetchone()[0]
+       except:
+           print('No unretrieved Twitter accounts found')
+           continue
 
 We use the SQL ``SELECT`` statement to retrieve the name of the
 first (``LIMIT 1``) user who still has their "have we retrieved
@@ -308,13 +313,12 @@ their data as follows:
 
 .. code-block:: python
 
-    url=twurl.augment(TWITTER_URL,{'screen_name': acct,'count': '20'})
-    print('Retrieving', url)
-    connection = urllib.urlopen(url)
-    data = connection.read()
-    js = json.loads(data)
+    # Fetch friends for this screen name
+    print("Fetching friends for screen name: " + acct)
+    idList = api.get_friend_ids(screen_name=acct)
 
-    cur.execute('UPDATE Twitter SET retrieved=1 WHERE name = ?',(acct, ))
+    # update the database to show that you have retrieved friends for this one
+    cur.execute('UPDATE Twitter SET retrieved=1 WHERE name = ?', (acct, ))
 
 
 Once we retrieve the data successfully, we use the ``UPDATE``
@@ -329,30 +333,33 @@ us the following output:
 
 .. code-block::
 
-    ('opencontent', 1, 1)
-    ('lhawthorn', 1, 1)
-    ('steve_coppin', 0, 1)
-    ('davidkocher', 0, 1)
-    ('hrheingold', 0, 1)
-    ...
-    ('cnxorg', 0, 2)
-    ('knoop', 0, 1)
-    ('kthanos', 0, 2)
-    ('LectureTools', 0, 1)
-    ...
-    55 rows.
+    ('ravenmaster1', 1, 1)
+    ('BrentSeverance', 1, 1)
+    ('prairycat', 0, 2)
+    ('lionelrobertjr', 0, 1)
+    ('LockPickingLwyr', 0, 1)
+    ('myldn', 0, 1)
+    ('DickieDover', 0, 1)
+    ('Ukraine', 0, 1)
+    ('AlisonMoyet', 0, 1)
+    ('PhilipPullman', 0, 1)
+    ('botimer', 0, 1)
+    ('nessimonstar', 0, 1)
+    ('educause', 0, 1)
+    ('lindafeng', 0, 1)
+    14 rows.
 
 We can see that we have properly recorded that we have visited
-``lhawthorn`` and ``opencontent``. Also the accounts
-``cnxorg`` and ``kthanos`` already have two followers.
+``ravenmaster1`` and ``BrentSeverance``. Also the accounts
+``prairycat`` already has two followers.
 Since we now have retrieved the friends of three people
-(``drchuck``, ``opencontent``, and
-``lhawthorn``) our table has 55 rows of friends to retrieve.
+(``drchuck``, ``ravenmaster1``, and
+``BrentSeverance``) our table has 14 rows of friends to retrieve.
 
 Each time we run the program and press enter it will pick the next
-unvisited account (e.g., the next account will be ``steve_coppin``),
+unvisited account (e.g., the next account will be ``prairycat``),
 retrieve their friends, mark them as retrieved, and for each of the
-friends of ``steve_coppin`` either add them to the end of the database or
+friends of ``prairycat`` either add them to the end of the database or
 update their friend count if they are already in the database.
 
 Since the program's data is all stored on disk in a database, the

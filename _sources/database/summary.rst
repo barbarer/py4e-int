@@ -13,19 +13,19 @@ look up information repeatedly, or (3) when you have a long-running
 process that you want to be able to stop and restart and retain the data
 from one run to the next.
 
-.. mchoice:: dbSummary_MC_use
+.. mchoice:: dbSummary_MC_use_v2
     :practice: T
-    :answer_a: When your application needs to make many small random updates within a large data set.
-    :answer_b: When your data is so large it cannot fit in a dictionary and you need to look up data frequently.
-    :answer_c: When you data is so small that it can fit onto one screen.
+    :answer_a: When your application needs to make many small random updates in a large data set.
+    :answer_b: When your data fits in a dictionary.
+    :answer_c: When you only use the data once.
     :answer_d: When you have a long-running process that you want to be able to stop and restart and retain the data from one run to the next.
-    :correct: c
+    :correct: a, d
     :feedback_a: It is useful to use a database for very large sets of data, especially if you are making many updates.
     :feedback_b: It is useful to use a database for very large sets of data, especially if you are accessing it frequently.
-    :feedback_c: A database is unnecessary when you have a small data set.
+    :feedback_c: A database is unnecessary if you are only processing it once.
     :feedback_d: It is useful to use a database if you want to retain the run data.
 
-    Which of the following is **not** a situation where a database is not so useful?
+    Which of the following is a situation where a database is useful?
 
 
 You can build a simple database with a single table to suit many
@@ -44,6 +44,6 @@ fast as possible.
     :answer_b: False
     :correct: b
     :feedback_a: Try again!
-    :feedback_b: Databases can have a single table, but when they use multiple tables, they run fastest when the data is modeled efficiently. 
+    :feedback_b: Databases can have a single table, but when they use multiple tables, they run fastest when the data is modeled efficiently.
 
     True or False? Databases need to have multiple tables to run quickly and efficiently.

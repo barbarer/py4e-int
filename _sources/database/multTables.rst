@@ -9,106 +9,101 @@ code for the new version of the program:
 
 .. code-block::
 
-    import urllib.request, urllib.parse, urllib.error
-    import twurl
     import json
     import sqlite3
-    import ssl
+    import twitter_info
+    import tweepy
+    import os
 
-    TWITTER_URL = 'https://api.twitter.com/1.1/friends/list.json'
+    # Set up OAuth2 for access to twitter
+    auth = tweepy.OAuth2BearerHandler(twitter_info.bearer_token)
+    api = tweepy.API(auth, wait_on_rate_limit=True)
 
-    conn = sqlite3.connect('friends.sqlite')
+    # set up the database tables
+    dir = os.path.dirname(__file__) + os.sep
+    conn = sqlite3.connect(dir + 'friends.db')
     cur = conn.cursor()
-
     cur.execute('''CREATE TABLE IF NOT EXISTS People
-                (id INTEGER PRIMARY KEY, name TEXT UNIQUE, retrieved INTEGER)''')
+               (id INTEGER PRIMARY KEY, name TEXT UNIQUE, retrieved INTEGER)''')
     cur.execute('''CREATE TABLE IF NOT EXISTS Follows
-                (from_id INTEGER, to_id INTEGER, UNIQUE(from_id, to_id))''')
+               (from_id INTEGER, to_id INTEGER, UNIQUE(from_id, to_id))''')
 
-    # Ignore SSL certificate errors
-    ctx = ssl.create_default_context()
-    ctx.check_hostname = False
-    ctx.verify_mode = ssl.CERT_NONE
-
+    # Loop till the user enters quit
     while True:
-        acct = input('Enter a Twitter account, or quit: ')
-        if (acct == 'quit'): break
-        if (len(acct) < 1):
-            cur.execute('SELECT id, name FROM People WHERE retrieved=0 LIMIT 1')
+        acct = input('Enter a Twitter screen name, or hit enter, or type quit: ')
+        if (acct == 'quit'): break # user entered quit, so stop
+        if (len(acct) < 1): # user hit enter, pick someone to visit
+
+            # select a screen name that hasn't been visited yet
+            cur.execute('SELECT id, name FROM People WHERE retrieved = 0 LIMIT 1')
             try:
                 (id, acct) = cur.fetchone()
             except:
                 print('No unretrieved Twitter accounts found')
                 continue
-        else:
-            cur.execute('SELECT id FROM People WHERE name = ? LIMIT 1',
-                        (acct, ))
-            try:
-                id = cur.fetchone()[0]
-            except:
-                cur.execute('''INSERT OR IGNORE INTO People
-                            (name, retrieved) VALUES (?, 0)''', (acct, ))
-                conn.commit()
-                if cur.rowcount != 1:
-                    print('Error inserting account:', acct)
-                    continue
-                id = cur.lastrowid
 
-        url = twurl.augment(TWITTER_URL, {'screen_name': acct, 'count': '100'})
-        print('Retrieving account', acct)
+        # See if the screen name (acct) is in the database
+        cur.execute('SELECT id FROM People WHERE name = ? LIMIT 1',
+                   (acct, ))
         try:
-            connection = urllib.request.urlopen(url, context=ctx)
+            # it is so get the key (id)
+            id = cur.fetchone()[0]
+        except:
+            # not there so add it
+            cur.execute('''INSERT OR IGNORE INTO People
+                       (name, retrieved) VALUES (?, 0)''', (acct, ))
+            conn.commit()
+            if cur.rowcount != 1:
+                print('Error inserting account:', acct)
+                continue
+            id = cur.lastrowid
+
+        print('Retrieving account', acct)
+
+        try:
+            idList = api.get_friend_ids(screen_name=acct)
+
         except Exception as err:
             print('Failed to Retrieve', err)
             break
 
-        data = connection.read().decode()
-        headers = dict(connection.getheaders())
-
-        print('Remaining', headers['x-rate-limit-remaining'])
-
-        try:
-            js = json.loads(data)
-        except:
-            print('Unable to parse json')
-            print(data)
-            break
-
-        # Debugging
-        # print(json.dumps(js, indent=4))
-
-        if 'users' not in js:
-            print('Incorrect JSON received')
-            print(json.dumps(js, indent=4))
-            continue
-
+        # Update the database to show that we have retrieved
         cur.execute('UPDATE People SET retrieved=1 WHERE name = ?', (acct, ))
 
+        # loop through the idList
         countnew = 0
         countold = 0
-        for u in js['users']:
-            friend = u['screen_name']
-            print(friend)
+        highest = min(len(idList), 5) # in case have less than 5 friends
+        for i in range(highest):
+            currId = idList[i]
+            friend = api.get_user(user_id=currId)
+            screenName = friend.screen_name
+
+            # get the key for this screen name
             cur.execute('SELECT id FROM People WHERE name = ? LIMIT 1',
-                        (friend, ))
+                       (screenName, ))
+
+            # if found it then add one to count old
             try:
                 friend_id = cur.fetchone()[0]
                 countold = countold + 1
+
+            # if didn't find it insert it
             except:
                 cur.execute('''INSERT OR IGNORE INTO People (name, retrieved)
-                            VALUES (?, 0)''', (friend, ))
+                            VALUES (?, 0)''', (screenName, ))
                 conn.commit()
                 if cur.rowcount != 1:
-                    print('Error inserting account:', friend)
+                    print('Error inserting account:', screenName)
                     continue
                 friend_id = cur.lastrowid
                 countnew = countnew + 1
             cur.execute('''INSERT OR IGNORE INTO Follows (from_id, to_id)
                         VALUES (?, ?)''', (id, friend_id))
         print('New accounts=', countnew, ' revisited=', countold)
-        print('Remaining', headers['x-rate-limit-remaining'])
         conn.commit()
     cur.close()
+
 
 This program is starting to get a bit complicated, but it illustrates
 the patterns that we need to use when we are using integer keys to link
@@ -212,25 +207,32 @@ section.
 
 .. code-block:: python
 
-        friend = u['screen_name']
+        friend = api.get_user(user_id=currId)
+        screenName = friend.screen_name
+
+        # get the key for this screen name
         cur.execute('SELECT id FROM People WHERE name = ? LIMIT 1',
-            (friend, ) )
+                    (screenName, ))
+
+        # if found it then add one to count old
         try:
             friend_id = cur.fetchone()[0]
             countold = countold + 1
+
+        # if didn't find it insert it
         except:
             cur.execute('''INSERT OR IGNORE INTO People (name, retrieved)
-                VALUES ( ?, 0)''', ( friend, ) )
+                        VALUES (?, 0)''', (screenName, ))
             conn.commit()
-            if cur.rowcount != 1 :
-                print('Error inserting account:',friend)
+            if cur.rowcount != 1:
+                print('Error inserting account:', screenName)
                 continue
             friend_id = cur.lastrowid
             countnew = countnew + 1
 
 If we end up in the ``except`` code, it simply means that the
 row was not found, so we must insert the row. We use ``INSERT OR
-IGNORE`` just to avoid errors and then call ``commit()``
+IGNORE`` just to avoid errors and then call ``conn.commit()``
 to force the database to really be updated. After the write is done, we
 can check the ``cur.rowcount`` to see how many rows were
 affected. Since we are attempting to insert a single row, if the number
@@ -259,8 +261,8 @@ the JSON, it is a simple matter to insert the two numbers into the
 
 .. code-block:: python
 
-    cur.execute('INSERT OR IGNORE INTO Follows (from_id, to_id) VALUES (?, ?)',
-        (id, friend_id) )
+   cur.execute('''INSERT OR IGNORE INTO Follows (from_id, to_id)
+                  VALUES (?, ?)''', (id, friend_id))
 
 Notice that we let the database take care of keeping us from
 "double-inserting" a relationship by creating the table with a
@@ -271,22 +273,19 @@ Here is a sample execution of this program:
 
 .. code-block::
 
-    Enter a Twitter account, or quit:
-    No unretrieved Twitter accounts found
-    Enter a Twitter account, or quit: drchuck
-    Retrieving http://api.twitter.com/1.1/friends ...
-    New accounts= 20  revisited= 0
-    Enter a Twitter account, or quit:
-    Retrieving http://api.twitter.com/1.1/friends ...
-    New accounts= 17  revisited= 3
-    Enter a Twitter account, or quit:
-    Retrieving http://api.twitter.com/1.1/friends ...
-    New accounts= 17  revisited= 3
-    Enter a Twitter account, or quit: quit
-
+    Enter a Twitter screen name, or hit enter, or type quit: drchuck
+    Retrieving account drchuck
+    New accounts= 5  revisited= 0
+    Enter a Twitter screen name, or hit enter, or type quit:
+    Retrieving account ravenmaster1
+    New accounts= 5  revisited= 0
+    Enter a Twitter screen name, or hit enter, or type quit:
+    Retrieving account BrentSeverance
+    New accounts= 4  revisited= 1
+    Enter a Twitter screen name, or hit enter, or type quit: quit
 
 We started with the ``drchuck`` account and then let the
-program automatically pick the next two accounts to retrieve and add to
+program automatically use the next two accounts to retrieve and add to
 our database.
 
 The following is the first few rows in the ``People`` and
@@ -295,19 +294,22 @@ The following is the first few rows in the ``People`` and
 .. code-block::
 
     People:
+    People:
     (1, 'drchuck', 1)
-    (2, 'opencontent', 1)
-    (3, 'lhawthorn', 1)
-    (4, 'steve_coppin', 0)
-    (5, 'davidkocher', 0)
-    55 rows.
+    (2, 'ravenmaster1', 1)
+    (3, 'BrentSeverance', 1)
+    (4, 'prairycat', 0)
+    (5, 'lionelrobertjr', 0)
+    ...
+    15 rows.
     Follows:
     (1, 2)
     (1, 3)
     (1, 4)
     (1, 5)
     (1, 6)
-    60 rows.
+    ...
+    15 rows.
 
 You can see the ``id``, ``name``, and
 ``visited`` fields in the ``People`` table and you see
