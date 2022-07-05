@@ -29,8 +29,8 @@ Take the rows from ``Follows`` and append the row from
 the same the ``id`` value in the ``People`` table.
 
 .. fillintheblank:: dbJoin_fill1
+    :casei:
     :practice: T
-     :casei:
 
     Which SQL clause can be used to return data from two tables?
 
@@ -39,8 +39,8 @@ the same the ``id`` value in the ``People`` table.
 
 
 .. fillintheblank:: dbJoin_on_fill1
-    :practice: T
     :casei:
+    :practice: T
 
     Fill in the blank in the following: SELECT * FROM Follows JOIN People |blank| Follows.from_id = People.id LIMIT 5
 
@@ -185,7 +185,7 @@ You can use ``table_name.field_name`` to specify the column that you want from e
    assert 4,0 == W00392
    assert 3,1 == 3rd & H St NE
 
-You can also a ``WHERE`` clause.
+You can also add a ``WHERE`` clause.
 
 .. activecode:: db_select_bike_join_with_where_ex1
    :language: sql
