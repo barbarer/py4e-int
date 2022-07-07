@@ -1,51 +1,5 @@
-Group Work - Classes, constructors, attributes, and methods
------------------------------------------------------------------
-.. note::
-    Join a CSEd research study for better learning experience today!
-    ================================================================
-
-   👋 Hi, we are a team of researchers in Professor Ericson’s Lab at UMSI! 
-
-   💻 You are invited to participate in a research study about how Parsons problems (a type of coding puzzle) may help
-CS entry-level learning. You must be at least 18 to participate. In this study, you will learn some Python basics, fill in 2 brief surveys and a few write-code practice problems with a short posttest. It takes 45 minutes to one hour to finish it.
-    
-   Your participation will help more students become successful in computing courses in a low-cost, scalable, and easily
-adopted way. 
-
-    If you have any questions about the study, please contact Xinying Hou at xyhou@umich.edu
-with “[Parsons Problem Study]” included in the email subject. 
-
-    Plese click <b><a href="intro-fl-cls.html">Basic Knowledge</a></b> to start!
-
-    We greatly appreciate your help 😊! 
-
-------------------------------------------------------
-
-
-It is best to use a POGIL approach with the following. In POGIL students work
-in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
-
-
-.. note::
-
-   If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.
-
-**Learning Objectives**
-
-Students will know and be able to do the following.
-
-*Content Objectives:*
-
-* Identify the parts of a class
-* Explain what a constructor is and what it does
-* Explain what the __str__ method does
-* Explain the difference(s) between a function and method.
-* Create new objects and name them
-* Create new methods
-
-Look the code below.  It defines a class.  it also declares *methods* which are functions that are defined inside of a class.
-One of the methods is automatically called when a new object is created by the class.  One of the methods is automatically
-called when you print an object of the class.
+Introduction
+-----------------------------------------------------
 
 
 A Book Class
@@ -92,10 +46,6 @@ Look at the class definition.  It starts with the keyword ``class``.  Then answe
       :init: Almost.  The method name includes underscores.
       :.*: This method initializes the object's attributes
 
-.. shortanswer:: class_what_is_init
-
-   Describe in your own words what the ``__init__`` method does.
-
 .. fillintheblank:: class_fitb_book_str
 
     What is the name of the method that is called when the object is printed?
@@ -104,9 +54,6 @@ Look at the class definition.  It starts with the keyword ``class``.  Then answe
       :str: Not quite, the name of the method includes underscores.
       :.*: This method returns a string with the values of the attributes
 
-.. shortanswer:: class_what_is_str
-
-   Describe in your own words what the ``__str__`` method does.
 
 .. fillintheblank:: class_fitb_attribute_num
 
@@ -143,49 +90,12 @@ Look at the class definition.  It starts with the keyword ``class``.  Then answe
 
     :click-incorrect:main():endclick:
 
-.. shortanswer:: class_diff_function_method
-
-   Describe in your own words what is/are the difference(s) between a function and a method.
-
 .. fillintheblank:: class_fitb_first_parameter
 
     What is the name of the first parameter in all of the methods?
 
     - :self: Good job!
       :.*: The parameters are in () after the method name
-
-.. parsonsprob:: class-pp-person
-   :numbered: left
-   :adaptive:
-   :order: 2, 3, 4, 0, 1, 6, 5, 8, 7
-
-   Put the code blocks in order below to create a class ``Person`` with a
-   constructor (``__init__``) method that takes a first and last name and a
-   ``__str__`` method to return a string with the first and last name separated
-   with a space.
-   -----
-   class Person:
-   =====
-   Class Person: #paired
-   =====
-       def __init__(self, first, last):
-   =====
-       def __init__(first, last): #paired
-   =====
-           self.first = first
-           self.last = last
-   =====
-       def __str__(self):
-   =====
-       def __str__(): #paired
-   =====
-           return self.first + " " + self.last
-   =====
-           return first + " " + last #paired
-
-.. shortanswer:: class_what_is_self
-
-   Describe in your own words what ``self`` means.
 
 Create More Book Objects
 ======================================================
@@ -212,28 +122,6 @@ Create More Book Objects
         print(b1)
 
     main()
-
-.. activecode:: class_person_ac2
-    :caption: A class to represent a Person
-
-    Change the following main function to add a person object with your first and last name.
-    ~~~~
-    class Person:
-        """ Represents a person object """
-
-        def __init__(self, first, last):
-            self.first = first
-            self.last = last
-
-        def __str__(self):
-            return self.first + " " + self.last
-
-    def main():
-        p1 = Person("Barbara", "Ericson")
-        print(p1)
-
-    main()
-
 
 Add a Method to a Class
 ======================================================
@@ -262,7 +150,83 @@ Add a Method to a Class
 
     main()
 
-If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.
 
-.. groupsub:: class_basics_groupsub
-   :limit: 3
+An Introduction To Our System
+================================
+Please read the following and watch the videos.
+
+**Write Code with Pop-Up Mixed-up Code**
+
+In this study, you may see a write-code problem that allows you to pop-up the equivalent mixed-up code problem. 
+
+You can use this problem to help you solve the write code problem.  
+
+To pop-up the mixed-up code problem, click on the drop down near the top of problem.
+
+See the video below for an example.
+
+.. youtube:: zz4ATp31_vk
+    :optional:
+    :divid: iwgex-ps-toggle
+    :width: 650
+    :height: 415
+    :align: center
+
+**Write Code with Pop-Up Mixed-up Code**
+
+If you see a problem like the one below, you will need to put the mixed-up code in the correct order on the right side. You may need to indent the blocks as well.  
+
+There may also be extra blocks that are not needed in a correct solution. You can leave on the left side. 
+
+Click the "Check" button to check your solution.
+
+See the video below for an example.
+
+.. youtube:: Rf7oWHlo-e0
+    :divid: iwgex-ps-parsons1
+    :optional:
+    :width: 650
+    :height: 415
+    :align: center
+
+The mixed-up code problems have a "Help me" button at the bottom of the problem. 
+
+Once you have checked at least three incorrect solutions you can click the button for help.  
+
+It will remove an incorrect code block, if you used one in your solution, or combine two blocks into one if there are more than three blocks left.
+
+See the video below for an example.
+
+.. youtube:: QejZ7u642IU
+    :divid: iwgex-ps-parsons2
+    :optional:
+    :width: 650
+    :height: 415
+    :align: center
+
+Try to solve the following mixed-up code problem. This problem requires indentation and has extra blocks that are not needed in a correct solution.
+
+.. parsonsprob:: intro-simple-parsons-indent-with-dist-ps
+   :numbered: left
+   :adaptive:
+   :practice: T
+   :order: 3, 1, 2, 0
+
+   Drag the blocks from the left and put them in the correct order on the right with the correct indentation.
+   There is an extra block that is not needed in the correct solution.
+   -----
+   First block
+   =====
+   Second block
+   =====
+   Extra block that is not needed #paired: This block is not needed
+   =====
+       Third block that needs to be indented
+
+What to do next
+================
+
+.. raw:: html
+
+    <p>Click to finish a survey about your perceptions of your own abilities to complete learning tasks: <b><a href="se-presurvey-cls.html">Survey</a></b></p>
+

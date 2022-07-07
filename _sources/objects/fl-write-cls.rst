@@ -7,24 +7,24 @@ Please do not ask for external help and try your best to finish it!
 Problems
 ==============
 
-.. selectquestion:: fl-has22-ps-sq-write
-   :fromid: has22_Write
+.. selectquestion:: fl-filter-words-ps-sq-write
+   :fromid: Classes_Basic_Song_ac
    :points: 10
 
-.. selectquestion:: fl-get-middle-ps-sq-write
-   :fromid: get-middle
+.. selectquestion:: fl-has22-ps-sq-write
+   :fromid: Classes_Basic_Cat_ac
    :points: 10
 
 .. selectquestion:: fl-sum13-ps-sq-write
-   :fromid: sum13_writecode_test_1_v2
+   :fromid: Classes_Basic_Account_ac
    :points: 10
 
 .. selectquestion:: fl-dict-to-list-ps-sq-write
-   :fromid: dict_to_list_pilot
+   :fromid: Classes_Basic_FortuneTeller_ac
    :points: 10
 
 What to do next
 ============================
 .. raw:: html
    
-   <p>Click to finish a survey about your perceptions of your own abilities to complete learning tasks: <b><a href="se-postsurvey.html">Survey</b></p>
+   <p>Click to finish a survey about your perceptions of your own abilities to complete learning tasks: <b><a href="se-postsurvey-cls.html">Survey</b></p>

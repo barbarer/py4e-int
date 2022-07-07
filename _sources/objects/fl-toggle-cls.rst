@@ -6,24 +6,23 @@ resources.
 
 Problems
 ==============
-
-.. selectquestion:: fl-has22-ps-sq-tog
-   :fromid: has22_Write, has22_Parsons-Version-A
+.. selectquestion:: fl-song-ps-sq-tog
+   :fromid: Classes_Basic_Song_ac, Classes_Basic_Song_pp
    :toggle: lock
    :points: 10
 
-.. selectquestion:: fl-get-middle-ps-sq-tog
-   :fromid: get-middle, get-middle-Parsons-Version-pilot
+.. selectquestion:: fl-cat-ps-sq-tog
+   :fromid: Classes_Basic_Cat_ac, Classes_Basic_Cat_pp 
    :toggle: lock
    :points: 10
 
-.. selectquestion:: fl-sum13-ps-sq-tog
-   :fromid: sum13_writecode_test_1_v2, sum13-Parsons-version-pilot
+.. selectquestion:: fl-account-ps-sq-tog
+   :fromid: Classes_Basic_Account_ac, Classes_Basic_Account_pp
    :toggle: lock
    :points: 10
 
-.. selectquestion:: fl-dict-to-list-ps-sq-tog
-   :fromid: dict_to_list_pilot, dict_to_list_pp_pilot
+.. selectquestion:: fl-fortune-ps-sq-tog
+   :fromid: Classes_Basic_FortuneTeller_ac, Classes_Basic_FortuneTeller_pp
    :toggle: lock
    :points: 10
 
@@ -44,4 +43,4 @@ What to do next
 ============================
 .. raw:: html
    
-   <p>Click to finish a survey about your perceptions of your own abilities to complete learning tasks: <b><a href="se-postsurvey.html">Survey</b></p>
+   <p>Click to finish a survey about your perceptions of your own abilities to complete learning tasks: <b><a href="se-postsurvey-cls.html">Survey</b></p>

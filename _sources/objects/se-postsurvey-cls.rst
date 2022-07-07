@@ -151,4 +151,4 @@ What to do next
 ============================
 .. raw:: html
     
-   <p>Click on the following link to finish a posttest: <b><a href="fl-posttest.html">Post Test</b></p>
+   <p>Click on the following link to finish a posttest: <b><a href="fl-posttest-cls.html">Post Test</b></p>

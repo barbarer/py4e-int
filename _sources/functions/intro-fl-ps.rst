@@ -1,73 +1,211 @@
 Introduction
 -----------------------------------------------------
-👋 Hi, we are a team of researchers in Professor Ericson’s Lab at UMSI. 
 
-You are invited to participate in a research study about how Parsons problems (a type of coding puzzle) may help
-CS entry-level learning. You must be at least 18 to participate in this study. 
+Tuples
+============================
 
-Your participation will help more students become successful in computing courses in a low-cost, scalable, and easily
-adopted way. 
+A tuple is like a list in that holds items in order and those items are separated by commas.  They can be enclosed in ``()``, but don't have to be.
 
-If you have any questions about the study, please contact Xinying Hou at xyhou@umich.edu
-with “[Parsons Problem Study]” included in the email subject. 
+.. activecode:: func_tup_test_ac
+    :caption: Working with tuples
 
-Here is an introduction to use our system.
-Please read the following, watch the videos, and try to solve the problems.
-
-Solving Write Code Problems
-==============================
-
-If you see a problem like the one below you will need to write Python code.  
-
-The problem will have unit tests that you can run to check that your code is working
-correctly.  
-
-Click on the "Run" button to compile and run your code.  
-
-Look after the code area for compiler errors and/or unit test results.
-
-See the video below for an example.
-
-.. youtube:: piPz0kh8gMk
-    :divid: iwgex-ps-code
-    :optional:
-    :width: 650
-    :height: 415
-    :align: center
-
-Try to finish writing the code for the following problem.
-
-.. activecode:: intro-sample-write-code-ps
-    :practice: T
-    :autograde: unittest
-
-    Write a function called ``double(num)`` that takes a number ``num`` and
-    returns the number times 2. For example, ``double(2)`` should return 4.
-    Look below the code to check for any compiler errors or the results
-    from the test cases.
+    Run this code to see what it prints.
     ~~~~
-    def double(num):
-        # write code here
+    # function definition
+    def tuple_test(tup):
+        print(tup[0])
+        print(type(tup))
+        print(tup[-1])
+        print(tup[1:])
+        print(len(tup))
 
-    print(double(2))
+    # function definition
+    def main():
+        tuple_test((1, 2, 3))
+        tuple_test(('hi', 'bye', -20, 'run'))
 
-    ====
-    from unittest.gui import TestCaseGui
-    class myTests(TestCaseGui):
+    # function call
+    main()
 
-        def testOne(self):
-            self.assertEqual(double(2),4,"double(2)")
-            self.assertEqual(double(3),6,"double(3)")
-            self.assertEqual(double(-1),-2,"double(-1)")
-            self.assertEqual(double(0),0,"double(0)")
-            self.assertEqual(double(11),22,"double(11)")
+.. fillintheblank:: funct_tup_test_first
 
-    myTests().main()
+    What is the first thing that will be printed when the code below runs?
 
-Write Code with Pop-Up Mixed-up Code
-=======================================
+    - :1: It will print the item at index 0 the first passed tuple.
+      :.*: What is the item at index 0 in the first passed tuples?
 
-You may also see a write code problem that allows you to pop-up the equivalent mixed-up code problem. 
+.. fillintheblank:: funct_tup_test_last
+
+    What is the last thing that will be printed when the code below runs?
+
+    - :4: It will print the length (number of items) in the second passed tuple.
+      :.*: How many items are in the second passed tuple?
+
+.. fillintheblank:: funct_tuple_test_char
+    :practice: T
+
+    What characters are used to indicate the start and end of a tuple in the code above?
+
+    - :\(\)|\)\(: Parenthesis are often used to start and end a tuple, but they are not required.
+      :.*: Look at the parameter to the function call in the main function.
+
+Tuples are Immutable
+=======================
+
+Unlike lists, tuples are immutable (can not change). This makes them more efficient than lists which can change.
+
+.. activecode:: func_tuple_change_ac
+    :caption: Attempt to change a tuple
+
+    Run this code to see what it prints.
+    ~~~~
+    # function definition
+    def change_tuple(tup):
+        print(tup)
+        tup[0] = 5
+
+    # function definition
+    def main():
+        t1 = (3, 6)
+        change_tuple(t1)
+        print(t1)
+
+    # function call
+    main()
+
+.. Note::
+
+   Tuples are immutable (not changeable), so you will get an error if you try to change them.
+
+Some functions that work on lists return an **iterator** (an object that you can loop through the values of) which you can convert to a list of tuples using the ``list`` function.
+The ``range`` function also returns an iterator.
+
+.. fillintheblank:: funct_tuple_zip_first_print_fitb
+    :practice: T
+
+    What is the first thing the code below prints?
+
+    - :"?No"?: It prints the item at index 1 in the first tuple.
+      :.*: Try again!
+
+.. activecode:: func_tuple_list_zip_ac
+    :caption: Example of using zip to combine lists
+
+    Run this code to see what it prints.
+    ~~~~
+    l1 = ["Will it be sunny?", "Will I be happy?"]
+    l2 = ["No", "Yes"]
+    result = zip(l1, l2)
+    l3 = list(result)
+    print(l3[0][1])
+    print(l3)
+
+.. note::
+
+   The ``zip`` function takes two lists and returns an ``iterator``. You can convert this iterator to a list of tuples using the ``list`` function.  Each tuple has an element from list1 and an element from list2 in order.
+
+Dictionaries
+============================
+
+A dictionary stores a value for a key.
+
+.. fillintheblank:: funct_dict_num_t
+    :practice: T
+
+    What is the first thing the code below prints?
+
+    - :2: It prints the number of t's in the string.
+      :3: A 'T' is different from a 't'.
+      :.*: Try again!
+
+.. activecode:: func_dict_example
+    :caption: Example with a dictionary
+
+    Run this code to see what it prints.
+    ~~~~
+    # function definition
+    def count_chars(str):
+        letter_dict = dict()
+        for char in str:
+            if char in letter_dict:
+                letter_dict[char] = letter_dict[char] + 1
+            else:
+                letter_dict[char] = 1
+        return letter_dict
+
+    d1 = count_chars("This is a test")
+    print(d1['t'])
+    d1 = count_chars("Run, run as fast as you can")
+    print(d1['a'])
+    print(d1)
+    print(type(d1))
+
+There is another way to update the value for a key that works even if the key isn't in the dictionary already.
+
+.. activecode:: func_dict_example_v2
+    :caption: Example with a dictionary
+
+    Run this code to see what it prints.
+    ~~~~
+    # function definition
+    def count_chars(str):
+        letter_dict = dict()
+        for char in str:
+
+            # use .get to stop key errors but if not there
+            # use 0 and then add 1 to the returned value
+            letter_dict[char] = letter_dict.get(char,0) + 1
+
+        return letter_dict
+
+    d1 = count_chars("This is a test")
+    print(d1['t'])
+    d1 = count_chars("Run, run as fast as you can")
+    print(d1['a'])
+    print(d1)
+
+.. note::
+
+   The better way to increment a count at a key is to use
+   ``dict[key] = dict.get(key,0) + 1``.  This will avoid a key error if the key isn't in the dictionary and the code is shorter.
+
+.. dragndrop:: funct_dict_symbol_dnd
+    :practice: T
+    :feedback: Read this page and try again.
+    :match_1: ["a", "b"]||| List
+    :match_2: ("a", "b")|||Tuple
+    :match_3: "ab"|||String
+    :match_4: {"a": 5, "b": 2}|||Dictionary
+
+    Drag the item to its type.
+
+.. mchoice:: funct_which_are_immutable_mc
+
+    Which of the following types are immutable (don't change)?
+
+    -   Strings
+
+        +   Yes, Strings are immutable.
+
+    -   Lists
+
+        -   No, Lists can change.
+
+    -   Tuples
+
+        +   Yes, Tuples are immutable.
+
+    -   Dictionaries
+
+        -   No, Dictionaries can change.
+        
+An Introduction To Our System
+================================
+Please read the following and watch the videos.
+
+**Write Code with Pop-Up Mixed-up Code**
+
+In this study, you may see a write-code problem that allows you to pop-up the equivalent mixed-up code problem. 
 
 You can use this problem to help you solve the write code problem.  
 
@@ -82,8 +220,7 @@ See the video below for an example.
     :height: 415
     :align: center
 
-Solving Mixed-up Code Problems
-==================================
+**Write Code with Pop-Up Mixed-up Code**
 
 If you see a problem like the one below, you will need to put the mixed-up code in the correct order on the right side. You may need to indent the blocks as well.  
 
@@ -100,39 +237,20 @@ See the video below for an example.
     :height: 415
     :align: center
 
-Try to solve the following mixed-up code problem.  This problem doesn't require any indentation.
+The mixed-up code problems have a "Help me" button at the bottom of the problem. 
 
-.. parsonsprob:: intro-simple-parsons-no-indent-ps
-   :numbered: left
-   :adaptive:
-   :practice: T
-   :order: 3, 1, 2, 0
+Once you have checked at least three incorrect solutions you can click the button for help.  
 
-   Drag the blocks from the left and put them in the correct order on the right. The text in each block
-   defines the order.
-   -----
-   First block
-   =====
-   Second block
-   =====
-   Third block
+It will remove an incorrect code block, if you used one in your solution, or combine two blocks into one if there are more than three blocks left.
 
-Try to solve the following mixed-up code problem. This problem requires indentation.
+See the video below for an example.
 
-.. parsonsprob:: intro-simple-parsons-indent-ps
-   :numbered: left
-   :adaptive:
-   :practice: T
-   :order: 3, 1, 2, 0
-
-   Drag the blocks from the left and put them in the correct order on the right with the correct indentation.
-   The text in each block defines the order and indentation.
-   -----
-   First block
-   =====
-   Second block
-   =====
-       Third block that needs to be indented
+.. youtube:: QejZ7u642IU
+    :divid: iwgex-ps-parsons2
+    :optional:
+    :width: 650
+    :height: 415
+    :align: center
 
 Try to solve the following mixed-up code problem. This problem requires indentation and has extra blocks that are not needed in a correct solution.
 
@@ -153,26 +271,11 @@ Try to solve the following mixed-up code problem. This problem requires indentat
    =====
        Third block that needs to be indented
 
-The mixed-up code problems have a "Help me" button at the bottom of the problem. 
-
-Once you have checked at least three incorrect solutions you can click the button for help.  
-
-It will remove an incorrect code block, if you used one in your solution, or combine two blocks into one if there are more than three blocks left.
-
-See the video below for an example.
-
-.. youtube:: QejZ7u642IU
-    :divid: iwgex-ps-parsons2
-    :optional:
-    :width: 650
-    :height: 415
-    :align: center
-
 What to do next
-============================
+================
 
 .. raw:: html
 
-    <p>Click to finish a survey about your perceptions of your own abilities to complete learning tasks first: <b><a href="se-presurvey.html">Survey</a></b></p>
+    <p>Click to finish a survey about your perceptions of your own abilities to complete learning tasks: <b><a href="se-presurvey.html">Survey</a></b></p>
 
 

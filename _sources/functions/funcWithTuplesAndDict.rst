@@ -1,5 +1,26 @@
 Group Work: Functions with Tuples and Dictionaries
 ------------------------------------------------------
+.. note::
+    Join a CSEd research study for better learning experience today!
+    ================================================================
+
+   👋 Hi, we are a team of researchers in Professor Ericson’s Lab at UMSI! 
+
+   💻 You are invited to participate in a 40-minute research study about how Parsons problems (a type of coding puzzle) may help
+CS entry-level learning. You must be at least 18 to participate. In this study, you will learn some Python basics, fill in 2 brief surveys and a few write-code practice problems with a short posttest. It takes 45 minutes to one hour to finish it.
+    
+   Your participation will help more students become successful in computing courses in a low-cost, scalable, and easily
+adopted way. 
+
+    If you have any questions about the study, please contact Xinying Hou at xyhou@umich.edu
+with “[Parsons Problem Study]” included in the email subject. 
+
+    Plese click <b><a href="intro-fl-ps.html">Basic Knowledge</a></b> to start!
+
+    We greatly appreciate your help 😊! 
+
+------------------------------------------------------
+
 
 It is best to use a POGIL approach with the following. In POGIL students work
 in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.

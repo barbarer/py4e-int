@@ -7,20 +7,20 @@ Please do not ask for external help and try your best to finish it! It is OK to 
 Problems
 ==============
 
-.. selectquestion:: fl-post-starts-with-c-ac
-   :fromid: funct_loops_writecode1q-post
+.. selectquestion:: fl-post-so-ac
+   :fromid: Classes_Basic_Capital_ac
    :points: 10
 
-.. selectquestion:: fl-post-is-descending
-   :fromid: prestest_is_ascending_ac-post
+.. selectquestion:: fl-post-cat-fix
+   :fromid: Classes_Basic_Dog_ac
    :points: 10
 
-.. selectquestion:: fl-post-sum67
-   :fromid: fuct_ac_ll_sum67_fix
+.. selectquestion:: fl-post-air-ac
+   :fromid: Classes_Basic_Business_ac
    :points: 10
 
-.. selectquestion:: fl-post-get-city-state
-   :fromid: get-city-state
+.. selectquestion:: fl-post-fortune-fix
+   :fromid: Classes_Basic_PositiveMe_ac
    :points: 10
 
 Feedback
