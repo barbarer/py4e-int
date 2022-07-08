@@ -47,7 +47,7 @@ There are generally three kinds of keys used in a database model.
       :answer_b: False
       :correct: a
       :feedback_a: Integers take up less space than strings, so they are usually used for primary keys
-      :feedback_b: Try again. 
+      :feedback_b: Try again.
 
       True or False? A primary key is usually a number
 
@@ -61,8 +61,9 @@ name ``id`` and appending the suffix ``_id`` to any field name
 that is a foreign key.
 
 .. fillintheblank:: dbKeys_fill
+    :casei:
 
     How many kinds of keys are generally used in a database model?
 
-    - :(3)|([Tt]hree): Generally, there are three kinds of keys used in a database model, logical, primary, and foreign.
+    - :3|three: Generally, there are three kinds of keys used in a database model, logical, primary, and foreign.
       :.*: Try again.
