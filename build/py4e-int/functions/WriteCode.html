@@ -1,0 +1,1108 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>5.16. Write Code Questions &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.cd688d1623c9932e.css?v=630908D8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.bf73008a1eba9f4e.css?v=7DED055E" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/runtime.439d581f758f2b99.bundle.js?v=2E54442"></script>
+    <script src="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.51d9dde4e5162190.bundle.js?v=9CAA2D33"></script>
+    <script src="../_static/runestone.42b576791a4ed54b.bundle.js?v=B7293199"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.17. Group Work: Functions" href="func-group.html" />
+    <link rel="prev" title="5.15. Mixed-up Code Questions" href="mixedupcode.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    
+    eBookConfig.useRunestoneServices = {{use_services}};
+    eBookConfig.host = '';
+    eBookConfig.app = eBookConfig.host + '/runestone';
+    eBookConfig.course = '{{ course_name }}';
+    eBookConfig.basecourse = '{{ base_course }}';
+    eBookConfig.isLoggedIn = {{ is_logged_in}};
+    eBookConfig.email = '{{ user_email }}';
+    eBookConfig.isInstructor = {{ is_instructor }};
+    eBookConfig.username = '{{ user_id}}';
+    eBookConfig.readings = {{ readings|safe}};
+    eBookConfig.activities = {{ activity_info|safe }}
+    eBookConfig.downloadsEnabled = {{downloads_enabled}};
+    eBookConfig.allow_pairs = {{allow_pairs}}
+    eBookConfig.enableCompareMe = {{enable_compare_me}};
+    // _`new_server_prefix`: Defined by the server to be the path to the new server.
+    eBookConfig.new_server_prefix = '{{ new_server_prefix }}';
+    
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+    
+        {% if serve_ad is defined and serve_ad and settings.adsenseid %}
+         <script data-ad-client="{{settings.adsenseid}}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        {% endif %}
+    
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+            
+            {{ course_name }}
+            
+          
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span class="visuallyhidden" aria-label="User">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li id="inst_peer_link"><a href='/runestone/peer/instructor.html'>Peer Instruction (Instructor)</a></li>            
+            <li><a href='/runestone/peer/student.html'>Peer Instruction (Student)</a></li>            
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="runestoneComponents.switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=WriteCode'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+            <script></script>
+<li class="dropdown globaltoc-container">
+    <a
+        href="../index.html"
+        class="dropdown-toggle"
+        data-toggle="dropdown"
+        aria-label="index"
+        >This Chapter<b class="caret"></b
+    ></a>
+    <ul class="dropdown-menu globaltoc">
+         
+        {% for row in subchapter_list %}
+        <li class="toctree-l1">
+            <a class="reference internal" href="{{ row['subchap_uri']}}"
+                >{{ row['title']}}</a
+            >
+        </li>
+        {% endfor %} 
+        
+    </ul>
+</li>
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">5.15. </span>Mixed-up Code Questions" data-toggle="tooltip">
+    <a href="mixedupcode.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">5.17. </span>Group Work: Functions' data-toggle="tooltip" >              
+    <a href="func-group.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+    
+        {% if settings.num_banners > 0 and settings.show_rs_banner %}
+         <div style="width: 100%;">
+            <a href="/runestone/default/donate?banner={{banner_num}}">
+            <img class="runestone-banner"
+                 src="/runestone/static/images/RunestoneBanner{{banner_num}}.png"
+                 alt="Please Support Runestone"
+                 style="display: block; width: 728px; margin-left: auto; margin-right: auto; margin-top: 10px;">
+            </a>
+         </div>
+        {% endif %}
+    
+
+
+  
+  <section id="write-code-questions">
+<h1><span class="section-number">5.16. </span>Write Code Questions<a class="headerlink" href="#write-code-questions" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic">
+<li><div id='funct-ex-perimeter' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=funct-ex-perimeterq data-question_label="5.16.1">
+<div id=funct-ex-perimeterq_question class="ac_question col-md-12">
+<p>Fix the 4 errors so the following code runs and returns the perimeter of a rectangle. For example, <code class="docutils literal notranslate"><span class="pre">recPerimeter(10,</span> <span class="pre">20)</span></code> should return <code class="docutils literal notranslate"><span class="pre">60</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="funct-ex-perimeterq_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def recPerimeter(length, width)
+perimeter = 2 * (length + width)
+    Return recPerimeter
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(recPerimeter(10, 20),60,"recPerimeter(10, 20)")
+        self.assertEqual(recPerimeter(1, 2),6,"recPerimeter(1, 2)")
+        self.assertEqual(recPerimeter(23.2, 12.3),71,"recPerimeter(23.2, 12.3)")
+        self.assertEqual(recPerimeter(3.0, 2),10.0,"recPerimeter(3.0, 2)")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=funct-ex-perimetera data-question_label="5.16.2">
+<div id=funct-ex-perimetera_question class="ac_question col-md-12">
+<p>Fix the 4 errors so the following code runs and returns the perimeter of a rectangle. For example, <code class="docutils literal notranslate"><span class="pre">recPerimeter(10,</span> <span class="pre">20)</span></code> should return <code class="docutils literal notranslate"><span class="pre">60</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="funct-ex-perimetera_editor" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# Function headers end with a colon (:)
+def recPerimeter(length, width):
+
+    # Indent four spaces after the header
+    perimeter = 2 * (length + width)
+
+    # Keyword return is lowercase
+    # Return the variable, not the function name
+    return perimeter
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</li>
+<li>
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=funct_ex_squareq data-question_label="5.16.3">
+<div id=funct_ex_squareq_question class="ac_question col-md-12">
+<p>Fix the 5 errors so the following code runs and returns the area of a square. For example, <code class="docutils literal notranslate"><span class="pre">squareArea(10)</span></code> should return <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="funct_ex_squareq_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+Def squareArea(sideLength)
+    area = length * length
+    return squareArea
+
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(squareArea(10),100,"squareArea(10)")
+        self.assertEqual(squareArea(23),529,"squareArea(23)")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</li>
+<li><div id='funct_ex_triangle' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=funct_ex_triangleq data-question_label="5.16.4">
+<div id=funct_ex_triangleq_question class="ac_question col-md-12">
+<p>Change the code so that <code class="docutils literal notranslate"><span class="pre">areaTriangle</span></code> takes parameters for the base and height of a triangle
+and computes its area. Then, write code to call the function and print the result. For example, <code class="docutils literal notranslate"><span class="pre">areaTriangle(12,45)</span></code> should return <code class="docutils literal notranslate"><span class="pre">270</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="funct_ex_triangleq_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def areaTriangle():
+    base = 5
+    height = 4
+    return (5 * 4) / 2
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(areaTriangle(12,45),270,"areaTriangle(12,45)")
+        self.assertEqual(areaTriangle(5,4),10,"areaTriangle(5,4)")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=funct_ex_trianglea data-question_label="5.16.5">
+<div id=funct_ex_trianglea_question class="ac_question col-md-12">
+<p>Change the code so that <code class="docutils literal notranslate"><span class="pre">areaTriangle</span></code> takes parameters for the base and height of a triangle
+and computes its area. Then, write code to call the function and print the result. For example, <code class="docutils literal notranslate"><span class="pre">areaTriangle(12,45)</span></code> should return <code class="docutils literal notranslate"><span class="pre">270</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="funct_ex_trianglea_editor" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# Give function base and height arguments
+def areaTriangle(base, height):
+    # Set area variable to the formula using arguments
+    area = (base * height) / 2
+    # Return the calculated area
+    return area
+# Call the function with arguments
+print(areaTriangle(2, 6))
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</li>
+<li>
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=funct_ex_tripq data-question_label="5.16.6">
+<div id=funct_ex_tripq_question class="ac_question col-md-12">
+<p>Change the code below to create a function <code class="docutils literal notranslate"><span class="pre">tripCost</span></code> that calculates the cost of a trip.
+It should take the <code class="docutils literal notranslate"><span class="pre">miles</span></code>, <code class="docutils literal notranslate"><span class="pre">milesPerGallon</span></code>, and <code class="docutils literal notranslate"><span class="pre">pricePerGallon</span></code> as parameters and
+should return the cost of the trip. For example, <code class="docutils literal notranslate"><span class="pre">tripCost(100,</span> <span class="pre">25,</span> <span class="pre">2.24)</span></code> should return <code class="docutils literal notranslate"><span class="pre">8.96</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="funct_ex_tripq_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+miles = 500
+milesPerGallon = 26
+numGallons = miles / milesPerGallon
+pricePerGallon = 3.45
+total = numGallons * pricePerGallon
+print(total)
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertAlmostEqual(tripCost(100, 25, 2.24),8.96,2,"tripCost(100, 25, 2.24)")
+        self.assertAlmostEqual(tripCost(250, 20, 3.01),37.625,3,"tripCost(250, 20, 3.01)")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</li>
+<li><div id='funct_ex_name' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=funct_ex_nameq data-question_label="5.16.7">
+<div id=funct_ex_nameq_question class="ac_question col-md-12">
+<p>Fix the errors on line 2 so the function <code class="docutils literal notranslate"><span class="pre">nameAndAge</span></code> returns
+the string “My name is <code class="docutils literal notranslate"><span class="pre">nameString</span></code> and I am <code class="docutils literal notranslate"><span class="pre">ageInt</span></code> years old.” For example, <code class="docutils literal notranslate"><span class="pre">nameAndAge(&quot;John&quot;,</span> <span class="pre">18)</span></code> should return
+<code class="docutils literal notranslate"><span class="pre">&quot;My</span> <span class="pre">name</span> <span class="pre">is</span> <span class="pre">John</span> <span class="pre">and</span> <span class="pre">I</span> <span class="pre">am</span> <span class="pre">18</span> <span class="pre">years</span> <span class="pre">old.&quot;</span></code></p>
+
+</div>
+<textarea data-lang="python" id="funct_ex_nameq_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def nameAndAge(nameString, ageInt):
+    return(My name is "nameString" and I am + "str(ageInt)" + years old.)
+
+print(nameAndAge("John", 18))
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(nameAndAge("John", 18),"My name is John and I am 18 years old.","nameAndAge('John', 18)")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=funct_ex_namea data-question_label="5.16.8">
+<div id=funct_ex_namea_question class="ac_question col-md-12">
+<p>Fix the errors on line 2 so the function <code class="docutils literal notranslate"><span class="pre">nameAndAge</span></code> returns
+the string “My name is <code class="docutils literal notranslate"><span class="pre">nameString</span></code> and I am <code class="docutils literal notranslate"><span class="pre">ageInt</span></code> years old.” For example, <code class="docutils literal notranslate"><span class="pre">nameAndAge(&quot;John&quot;,</span> <span class="pre">18)</span></code> should return
+<code class="docutils literal notranslate"><span class="pre">&quot;My</span> <span class="pre">name</span> <span class="pre">is</span> <span class="pre">John</span> <span class="pre">and</span> <span class="pre">I</span> <span class="pre">am</span> <span class="pre">18</span> <span class="pre">years</span> <span class="pre">old.&quot;</span></code></p>
+
+</div>
+<textarea data-lang="python" id="funct_ex_namea_editor" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def nameAndAge(nameString, ageInt):
+    # Use quotes around strings, keep variables outside of quotes
+    # Include spacing so variables are not connected to words
+    return("My name is " + nameString + " and I am " + str(ageInt) + " years old.")
+
+print(nameAndAge("John", 18))
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</li>
+<li>
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=funct_ex_gradeq data-question_label="5.16.9">
+<div id=funct_ex_gradeq_question class="ac_question col-md-12">
+<p>Rewrite the grade program from the previous chapter using a function called <code class="docutils literal notranslate"><span class="pre">computegrade</span></code>
+that takes a score as its parameter and returns a string representing a grade. If someone
+enters a string or a score greater than 1, return <code class="docutils literal notranslate"><span class="pre">'Bad</span> <span class="pre">score'</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">computegrade(.95)</span></code> should return <code class="docutils literal notranslate"><span class="pre">'A'</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Score</span>    <span class="n">Grade</span>
+<span class="o">&gt;=</span> <span class="mf">0.9</span>     <span class="n">A</span>
+<span class="o">&gt;=</span> <span class="mf">0.8</span>     <span class="n">B</span>
+<span class="o">&gt;=</span> <span class="mf">0.7</span>     <span class="n">C</span>
+<span class="o">&gt;=</span> <span class="mf">0.6</span>     <span class="n">D</span>
+<span class="o">&lt;</span> <span class="mf">0.6</span>      <span class="n">F</span>
+</pre></div>
+</div>
+
+</div>
+<textarea data-lang="python" id="funct_ex_gradeq_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def computegrade(score):
+    # your code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(computegrade(.95),'A',"computegrade(.95)")
+        self.assertEqual(computegrade('perfect'),'Bad score',"computegrade('perfect')")
+        self.assertEqual(computegrade(10.0),'Bad score',"computegrade(10.0)")
+        self.assertEqual(computegrade(.75),'C',"computegrade(.75)")
+        self.assertEqual(computegrade(.5),'F',"computegrade(.5)")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</li>
+<li><div id='funct_ex_sum' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=funct_ex_sumq data-question_label="5.16.10">
+<div id=funct_ex_sumq_question class="ac_question col-md-12">
+<p>Write a fruitful function <code class="docutils literal notranslate"><span class="pre">sumTo(n)</span></code> that returns the sum of all integer numbers up to and
+including <code class="docutils literal notranslate"><span class="pre">n</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">sumTo(10)</span></code> would compute 1 + 2 + 3 + … + 10 and return the value <code class="docutils literal notranslate"><span class="pre">55</span></code>.
+Use this equation to find this sum: (n * (n + 1)) / 2. For example, <code class="docutils literal notranslate"><span class="pre">sumTo(15)</span></code> should return <code class="docutils literal notranslate"><span class="pre">120.0</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="funct_ex_sumq_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def sumTo(n):
+    # your code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertAlmostEqual(sumTo(15),120.0,0,"sumTo(15)")
+        self.assertAlmostEqual(sumTo(0),0.0,0,"sumTo(0)")
+        self.assertAlmostEqual(sumTo(25),325.0,0,"sumTo(25)")
+        self.assertAlmostEqual(sumTo(7),28.0,0,"sumTo(7)")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=funct_ex_suma data-question_label="5.16.11">
+<div id=funct_ex_suma_question class="ac_question col-md-12">
+<p>Write a fruitful function <code class="docutils literal notranslate"><span class="pre">sumTo(n)</span></code> that returns the sum of all integer numbers up to and
+including <code class="docutils literal notranslate"><span class="pre">n</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">sumTo(10)</span></code> would compute 1 + 2 + 3 + … + 10 and return the value <code class="docutils literal notranslate"><span class="pre">55</span></code>.
+Use this equation to find this sum: (n * (n + 1)) / 2. For example, <code class="docutils literal notranslate"><span class="pre">sumTo(15)</span></code> should return <code class="docutils literal notranslate"><span class="pre">120.0</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="funct_ex_suma_editor" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def sumTo(n):
+    # set result variable to given equation
+    result = (n * (n + 1)) / 2
+    # return the variable
+    return result
+    # alternatively, you can accomplish this on one line:
+    # return (n * (n + 1)) / 2
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</li>
+<li>
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=funct_ex_addq data-question_label="5.16.12">
+<div id=funct_ex_addq_question class="ac_question col-md-12">
+<p>Rewrite the function <code class="docutils literal notranslate"><span class="pre">sumTo(n)</span></code> that returns the sum of all integer
+numbers up to and including <code class="docutils literal notranslate"><span class="pre">n</span></code>. This time, print your answer before you return it.
+For example, <code class="docutils literal notranslate"><span class="pre">sumTo(15)</span></code> should return <code class="docutils literal notranslate"><span class="pre">120</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="funct_ex_addq_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def sumTo(n):
+    # your code here
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(sumTo(15),120,"sumTo(15)")
+        self.assertEqual(sumTo(0),0,"sumTo(0)")
+        self.assertEqual(sumTo(25),325,"sumTo(25)")
+        self.assertEqual(sumTo(7),28,"sumTo(7)")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</li>
+<li><div id='funct_ex_circle' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=funct_ex_circleq data-question_label="5.16.13">
+<div id=funct_ex_circleq_question class="ac_question col-md-12">
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">areaOfCircle(r)</span></code> which returns the area of a circle of radius <code class="docutils literal notranslate"><span class="pre">r</span></code>.
+Make sure you import the math module in your solution to obtain an accurate value of pi.
+For example, <code class="docutils literal notranslate"><span class="pre">areaOfCircle(31415.926535897932)</span></code> should return <code class="docutils literal notranslate"><span class="pre">3100627668.0299816</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="funct_ex_circleq_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def areaOfCircle(r):
+    # your code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertAlmostEqual(areaOfCircle(5.0),78.53981633974483,5,"areaOfCircle(5.0)")
+        self.assertEqual(areaOfCircle(0),0.0,"areaOfCircle(0)")
+        self.assertAlmostEqual(areaOfCircle(31415.926535897932),3100627668.0299816,5,"areaOfCircle(31415.926535897932)")
+
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=funct_ex_circlea data-question_label="5.16.14">
+<div id=funct_ex_circlea_question class="ac_question col-md-12">
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">areaOfCircle(r)</span></code> which returns the area of a circle of radius <code class="docutils literal notranslate"><span class="pre">r</span></code>.
+Make sure you import the math module in your solution to obtain an accurate value of pi.
+For example, <code class="docutils literal notranslate"><span class="pre">areaOfCircle(31415.926535897932)</span></code> should return <code class="docutils literal notranslate"><span class="pre">3100627668.0299816</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="funct_ex_circlea_editor" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# Import the math module
+import math
+
+def areaOfCircle(r):
+    # Use ** to square r, then multiply by pi
+    a = r**2 * math.pi
+    # Return the area
+    return a
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</li>
+<li>
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=funct_avg_drop_lowest data-question_label="5.16.15">
+<div id=funct_avg_drop_lowest_question class="ac_question col-md-12">
+<p>Finish the function to return the average of three numbers, but drop the lowest value.
+For example, <code class="docutils literal notranslate"><span class="pre">get_avg_drop_lowest(100,</span> <span class="pre">10,</span> <span class="pre">0)</span></code> returns <code class="docutils literal notranslate"><span class="pre">55</span></code>
+and <code class="docutils literal notranslate"><span class="pre">get_avg_drop_lowest(4,</span> <span class="pre">3,</span> <span class="pre">10)</span></code> returns <code class="docutils literal notranslate"><span class="pre">7</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="funct_avg_drop_lowest_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def get_avg_drop_lowest(num1, num2, num3):
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(get_avg_drop_lowest(100, 10, 0), 55, "get_avg_drop_lowest(100, 10, 0)")
+        self.assertEqual(get_avg_drop_lowest(4, 3, 10), 7, "get_avg_drop_lowest(4, 3, 10)")
+        self.assertEqual(get_avg_drop_lowest(20, -20, 20), 20, "get_avg_drop_lowest(20, -20, 20)")
+        self.assertEqual(get_avg_drop_lowest(0, 0, 0), 0, "get_avg_drop_lowest(0, 0, 0)")
+        self.assertAlmostEqual(get_avg_drop_lowest(75, 83, 90), 86.5, 1, "get_avg_drop_lowest(75, 83, 90)")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</li>
+<li><div id='funct_ex_speeding' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=funct_ex_speedingq data-question_label="5.16.16">
+<div id=funct_ex_speedingq_question class="ac_question col-md-12">
+<p>You are driving a little too fast, and a police officer stops you. Write code to
+compute the kind of ticket you’ll receive, encoded as an int value: 0 = no ticket, 1 =
+small ticket, and 2 = big ticket. If <code class="docutils literal notranslate"><span class="pre">speed</span></code> is 60 or less, return <code class="docutils literal notranslate"><span class="pre">0</span></code>. If <code class="docutils literal notranslate"><span class="pre">speed</span></code>
+is between 61 and 80 inclusive, return <code class="docutils literal notranslate"><span class="pre">1</span></code>. If <code class="docutils literal notranslate"><span class="pre">speed</span></code> is 81 or more, return <code class="docutils literal notranslate"><span class="pre">2</span></code>.
+If it is your birthday, your speed can be 5 higher in all cases. For example, <code class="docutils literal notranslate"><span class="pre">caught_speeding(60,False)</span></code> should return <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="funct_ex_speedingq_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def caught_speeding(speed, is_birthday):
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(caught_speeding(60,False), 0, "caught_speeding(60,False)")
+        self.assertEqual(caught_speeding(65,False), 1, "caught_speeding(65,False)")
+        self.assertEqual(caught_speeding(65,True), 0, "caught_speeding(65,True)")
+        self.assertEqual(caught_speeding(80,False), 1, "caught_speeding(80,False)")
+        self.assertEqual(caught_speeding(85,False), 2, "caught_speeding(85,False)")
+        self.assertEqual(caught_speeding(85,True), 1, "caught_speeding(85,True)")
+        self.assertEqual(caught_speeding(70,False), 1, "caught_speeding(70,False)")
+        self.assertEqual(caught_speeding(75,False), 1, "caught_speeding(75,False)")
+        self.assertEqual(caught_speeding(75,True), 1, "caught_speeding(75,True)")
+        self.assertEqual(caught_speeding(40, False), 0, "caught_speeding(40, False)")
+        self.assertEqual(caught_speeding(40, True), 0, "caught_speeding(40, True)")
+        self.assertEqual(caught_speeding(90, False), 2, "caught_speeding(90, False)")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=funct_ex_speedinga data-question_label="5.16.17">
+<div id=funct_ex_speedinga_question class="ac_question col-md-12">
+<p>You are driving a little too fast, and a police officer stops you. Write code to
+compute the kind of ticket you’ll receive, encoded as an int value: 0 = no ticket, 1 =
+small ticket, and 2 = big ticket. If <code class="docutils literal notranslate"><span class="pre">speed</span></code> is 60 or less, return <code class="docutils literal notranslate"><span class="pre">0</span></code>. If <code class="docutils literal notranslate"><span class="pre">speed</span></code>
+is between 61 and 80 inclusive, return <code class="docutils literal notranslate"><span class="pre">1</span></code>. If <code class="docutils literal notranslate"><span class="pre">speed</span></code> is 81 or more, return <code class="docutils literal notranslate"><span class="pre">2</span></code>.
+If it is your birthday, your speed can be 5 higher in all cases. For example, <code class="docutils literal notranslate"><span class="pre">caught_speeding(60,False)</span></code> should return <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="funct_ex_speedinga_editor" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def caught_speeding(speed, is_birthday):
+    if is_birthday:
+        if speed <= 65:
+            return 0
+        elif speed <= 85:
+            return 1
+        else:
+            return 2
+    else:
+        if speed <= 60:
+            return 0
+        elif speed <= 80:
+            return 1
+        else:
+            return 2
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</li>
+<li>
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=funct_check_guess data-question_label="5.16.18">
+<div id=funct_check_guess_question class="ac_question col-md-12">
+<p>Write the <code class="docutils literal notranslate"><span class="pre">check_guess</span></code> function below which computes if a guess is too low, too high, or correct.
+Return <code class="docutils literal notranslate"><span class="pre">'too</span> <span class="pre">low'</span></code> if <code class="docutils literal notranslate"><span class="pre">guess</span></code> is less than <code class="docutils literal notranslate"><span class="pre">target</span></code>, <code class="docutils literal notranslate"><span class="pre">'correct'</span></code> if they are equal, and
+<code class="docutils literal notranslate"><span class="pre">'too</span> <span class="pre">high'</span></code> if <code class="docutils literal notranslate"><span class="pre">guess</span></code> is greater than <code class="docutils literal notranslate"><span class="pre">target</span></code>.  For example, <code class="docutils literal notranslate"><span class="pre">check_guess(5,</span> <span class="pre">7)</span></code> returns
+<code class="docutils literal notranslate"><span class="pre">'too</span> <span class="pre">low'</span></code>, <code class="docutils literal notranslate"><span class="pre">check_guess(7,</span> <span class="pre">7)</span></code> returns <code class="docutils literal notranslate"><span class="pre">'correct'</span></code>, and <code class="docutils literal notranslate"><span class="pre">check_guess(9,</span> <span class="pre">7)</span></code> returns <code class="docutils literal notranslate"><span class="pre">'too</span> <span class="pre">high'</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="funct_check_guess_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def check_guess(guess, target):
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(check_guess(5, 7), 'too low', "check_guess(5, 7)")
+        self.assertEqual(check_guess(7, 7), 'correct', "check_guess(7, 7)")
+        self.assertEqual(check_guess(9, 7), 'too high', "check_guess(9, 7)")
+        self.assertEqual(check_guess(3, 9), 'too low', "check_guess(3, 9)")
+        self.assertEqual(check_guess(3, 3), 'correct', "check_guess(3, 3)")
+        self.assertEqual(check_guess(20, 9), 'too high', "check_guess(20, 9)")
+        self.assertEqual(check_guess(-5, 7), 'too low', "check_guess(-5, 7)")
+
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</li>
+<li><div id='funct_ex_alarm' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=funct_ex_alarmq data-question_label="5.16.19">
+<div id=funct_ex_alarmq_question class="ac_question col-md-12">
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">alarm_clock</span></code> that has parameters <code class="docutils literal notranslate"><span class="pre">day</span></code> and <code class="docutils literal notranslate"><span class="pre">vacation</span></code>. Given a <code class="docutils literal notranslate"><span class="pre">day</span></code> of the week encoded as 0 = Sun, 1 = Mon, 2 = Tue, … 6 = Sat and a
+boolean indicating if we are on <code class="docutils literal notranslate"><span class="pre">vacation</span></code>, return a string indicating when the
+alarm clock should ring. If we are on <code class="docutils literal notranslate"><span class="pre">vacation</span></code> and it is a weekend (0 = Saturday
+or 6 = Sunday), it should return <code class="docutils literal notranslate"><span class="pre">&quot;off&quot;</span></code>, and otherwise return <code class="docutils literal notranslate"><span class="pre">&quot;10:00&quot;</span></code>. If
+we are not on <code class="docutils literal notranslate"><span class="pre">vacation</span></code> and it is a weekend, it should return <code class="docutils literal notranslate"><span class="pre">&quot;10:00&quot;</span></code>, and
+otherwise return <code class="docutils literal notranslate"><span class="pre">&quot;7:00&quot;</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">alarm_clock(1,</span> <span class="pre">False)</span></code> should return <code class="docutils literal notranslate"><span class="pre">'7:00'</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="funct_ex_alarmq_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def alarm_clock(day, vacation):
+    # your code here
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(alarm_clock(1, False),'7:00',"alarm_clock(1, False)")
+        self.assertEqual(alarm_clock(5, False),'7:00',"alarm_clock(5, False)")
+        self.assertEqual(alarm_clock(0, False),'10:00',"alarm_clock(0, False)")
+        self.assertEqual(alarm_clock(6, False),'10:00',"alarm_clock(6, False)")
+        self.assertEqual(alarm_clock(0, True),'off',"alarm_clock(0, True)")
+        self.assertEqual(alarm_clock(6, True),'off',"alarm_clock(6, True)")
+        self.assertEqual(alarm_clock(1, True),'10:00',"alarm_clock(1, True)")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=funct_ex_alarma data-question_label="5.16.20">
+<div id=funct_ex_alarma_question class="ac_question col-md-12">
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">alarm_clock</span></code> that has parameters <code class="docutils literal notranslate"><span class="pre">day</span></code> and <code class="docutils literal notranslate"><span class="pre">vacation</span></code>. Given a <code class="docutils literal notranslate"><span class="pre">day</span></code> of the week encoded as 0 = Sun, 1 = Mon, 2 = Tue, … 6 = Sat and a
+boolean indicating if we are on <code class="docutils literal notranslate"><span class="pre">vacation</span></code>, return a string indicating when the
+alarm clock should ring. If we are on <code class="docutils literal notranslate"><span class="pre">vacation</span></code> and it is a weekend (0 = Saturday
+or 6 = Sunday), it should return <code class="docutils literal notranslate"><span class="pre">&quot;off&quot;</span></code>, and otherwise return <code class="docutils literal notranslate"><span class="pre">&quot;10:00&quot;</span></code>. If
+we are not on <code class="docutils literal notranslate"><span class="pre">vacation</span></code> and it is a weekend, it should return <code class="docutils literal notranslate"><span class="pre">&quot;10:00&quot;</span></code>, and
+otherwise return <code class="docutils literal notranslate"><span class="pre">&quot;7:00&quot;</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">alarm_clock(1,</span> <span class="pre">False)</span></code> should return <code class="docutils literal notranslate"><span class="pre">'7:00'</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="funct_ex_alarma_editor" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def alarm_clock(day, vacation):
+    if vacation:
+        if (day == 0 or day == 6):
+            return 'off'
+        else:
+            return '10:00'
+    else:
+        if not vacation and (day == 0 or day == 6):
+            return '10:00'
+        else:
+            return '7:00'
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</li>
+</ol>
+</section>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 5.15. Mixed-up Code Questions' data-toggle="tooltip">
+  <a href="mixedupcode.html" aria-label="Previous - 5.15. Mixed-up Code Questions">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 5.17. Group Work: Functions' data-toggle="tooltip" >
+    <a href="func-group.html" aria-label="Next - 5.17. Group Work: Functions">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 - Based on Python for Everybody.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+  
+    {% if settings.google_ga %}
+      <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '{{ settings.google_ga }}']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+    {% endif %}
+  
+
+  
+    <script type="application/json" class="js-hypothesis-config">
+    {
+      "showHighlights": false
+    }
+    </script>
+
+    <script async src="https://hypothes.is/embed.js"></script>
+    <!--provide space to prevent hypothes.is sidebar from obscuring content-->
+    <style>@media screen and (max-width:767px) { body { padding-right: 21px; }}</style>
+
+  
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

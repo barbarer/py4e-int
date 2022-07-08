@@ -1,0 +1,808 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Peer Instruction: Iterations Multiple Choice Questions &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.cd688d1623c9932e.css?v=630908D8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.bf73008a1eba9f4e.css?v=7DED055E" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/runtime.439d581f758f2b99.bundle.js?v=2E54442"></script>
+    <script src="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.51d9dde4e5162190.bundle.js?v=9CAA2D33"></script>
+    <script src="../_static/runestone.42b576791a4ed54b.bundle.js?v=B7293199"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    
+    eBookConfig.useRunestoneServices = {{use_services}};
+    eBookConfig.host = '';
+    eBookConfig.app = eBookConfig.host + '/runestone';
+    eBookConfig.course = '{{ course_name }}';
+    eBookConfig.basecourse = '{{ base_course }}';
+    eBookConfig.isLoggedIn = {{ is_logged_in}};
+    eBookConfig.email = '{{ user_email }}';
+    eBookConfig.isInstructor = {{ is_instructor }};
+    eBookConfig.username = '{{ user_id}}';
+    eBookConfig.readings = {{ readings|safe}};
+    eBookConfig.activities = {{ activity_info|safe }}
+    eBookConfig.downloadsEnabled = {{downloads_enabled}};
+    eBookConfig.allow_pairs = {{allow_pairs}}
+    eBookConfig.enableCompareMe = {{enable_compare_me}};
+    // _`new_server_prefix`: Defined by the server to be the path to the new server.
+    eBookConfig.new_server_prefix = '{{ new_server_prefix }}';
+    
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+    
+        {% if serve_ad is defined and serve_ad and settings.adsenseid %}
+         <script data-ad-client="{{settings.adsenseid}}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        {% endif %}
+    
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+            
+            {{ course_name }}
+            
+          
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span class="visuallyhidden" aria-label="User">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li id="inst_peer_link"><a href='/runestone/peer/instructor.html'>Peer Instruction (Instructor)</a></li>            
+            <li><a href='/runestone/peer/student.html'>Peer Instruction (Student)</a></li>            
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="runestoneComponents.switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=peer_in'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+            <script></script>
+<li class="dropdown globaltoc-container">
+    <a
+        href="../index.html"
+        class="dropdown-toggle"
+        data-toggle="dropdown"
+        aria-label="index"
+        >This Chapter<b class="caret"></b
+    ></a>
+    <ul class="dropdown-menu globaltoc">
+         
+        {% for row in subchapter_list %}
+        <li class="toctree-l1">
+            <a class="reference internal" href="{{ row['subchap_uri']}}"
+                >{{ row['title']}}</a
+            >
+        </li>
+        {% endfor %} 
+        
+    </ul>
+</li>
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+    
+        {% if settings.num_banners > 0 and settings.show_rs_banner %}
+         <div style="width: 100%;">
+            <a href="/runestone/default/donate?banner={{banner_num}}">
+            <img class="runestone-banner"
+                 src="/runestone/static/images/RunestoneBanner{{banner_num}}.png"
+                 alt="Please Support Runestone"
+                 style="display: block; width: 728px; margin-left: auto; margin-right: auto; margin-top: 10px;">
+            </a>
+         </div>
+        {% endif %}
+    
+
+
+  
+  <section id="peer-instruction-iterations-multiple-choice-questions">
+<h1>Peer Instruction: Iterations Multiple Choice Questions<a class="headerlink" href="#peer-instruction-iterations-multiple-choice-questions" title="Permalink to this headline">¶</a></h1>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="1" data-multipleanswers="false"  id="ctp-iterations-04_moreloops_05"  style="visibility: hidden;">
+    <p>Q-1: To print numbers i through n</p>
+<li data-component="answer"  id="ctp-iterations-04_moreloops_05_opt_a"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">i</span><span class="p">):</span>
+</pre></div>
+</div>
+</li><li data-component="feedback" id="ctp-iterations-04_moreloops_05_opt_a">
+<p>Incorrect! Here the range printed is 1 to i-1</p></li><li data-component="answer"  id="ctp-iterations-04_moreloops_05_opt_b"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+</pre></div>
+</div>
+</li><li data-component="feedback" id="ctp-iterations-04_moreloops_05_opt_b">
+<p>Incorrect! Here the range printed is 1 to n-1</p></li><li data-component="answer"  id="ctp-iterations-04_moreloops_05_opt_c"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+</pre></div>
+</div>
+</li><li data-component="feedback" id="ctp-iterations-04_moreloops_05_opt_c">
+<p>Incorrect! Here the range printed is 1 to n</p></li><li data-component="answer"  id="ctp-iterations-04_moreloops_05_opt_d"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+</pre></div>
+</div>
+</li><li data-component="feedback" id="ctp-iterations-04_moreloops_05_opt_d">
+<p>Incorrect! Here the range printed is i to n-1</p></li><li data-component="answer" data-correct id="ctp-iterations-04_moreloops_05_opt_e"><p>None of the above</p>
+</li><li data-component="feedback" id="ctp-iterations-04_moreloops_05_opt_e">
+<p>Correct! Use range(i, n+1) to print numbers through i to n</p></li>
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="2" data-multipleanswers="false"  id="ctp-iterations-04_moreloops_06"  style="visibility: hidden;">
+    <p>Q-2: Add up the numbers 1 through 4</p>
+<li data-component="answer"  id="ctp-iterations-04_moreloops_06_opt_a"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
+   <span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+   <span class="nb">sum</span> <span class="o">=</span> <span class="nb">sum</span> <span class="o">+</span> <span class="n">i</span>
+</pre></div>
+</div>
+</li><li data-component="feedback" id="ctp-iterations-04_moreloops_06_opt_a">
+<p>Incorrect! Here the sum will be set to 0 each time the loop runs from 1 to 4.</p></li><li data-component="answer"  id="ctp-iterations-04_moreloops_06_opt_b"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
+   <span class="nb">sum</span> <span class="o">=</span> <span class="nb">sum</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</li><li data-component="feedback" id="ctp-iterations-04_moreloops_06_opt_b">
+<p>Incorrect! sum needs to be added by i and not 1.</p></li><li data-component="answer"  id="ctp-iterations-04_moreloops_06_opt_c"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+   <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
+   <span class="nb">sum</span> <span class="o">=</span> <span class="nb">sum</span> <span class="o">+</span> <span class="nb">sum</span>
+</pre></div>
+</div>
+</li><li data-component="feedback" id="ctp-iterations-04_moreloops_06_opt_c">
+<p>Incorrect! sum needs to added by i and not sum.</p></li><li data-component="answer" data-correct id="ctp-iterations-04_moreloops_06_opt_d"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
+   <span class="nb">sum</span> <span class="o">=</span> <span class="nb">sum</span> <span class="o">+</span> <span class="n">i</span>
+</pre></div>
+</div>
+</li><li data-component="feedback" id="ctp-iterations-04_moreloops_06_opt_d">
+<p>Correct! The code will keep adding numbers from 1 to 4 with each iteration.</p></li><li data-component="answer"  id="ctp-iterations-04_moreloops_06_opt_e"><p>I don’t know</p>
+</li><li data-component="feedback" id="ctp-iterations-04_moreloops_06_opt_e">
+<p>Incorrect! Define a variable, say sum, and set it to 0. Run a loop from 1 to 4 and keep adding i to sum.</p></li>
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="3" data-multipleanswers="false"  id="ctp-iterations-04_moreloops_08"  style="visibility: hidden;">
+    <p>Q-3: What will the output be?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>n = 4
+for i in range(1,n):
+   print(i,n,end=‘’)
+   n = 6
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="ctp-iterations-04_moreloops_08_opt_a">1 4 2 4 3 4</li><li data-component="feedback">Incorrect! n has been reset to 6 inside the loop. So, the code should print 6 from the second iteration. However, the n inside range will not be affected by this reset.</li>
+    
+    <li data-component="answer" data-correct='yes' id="ctp-iterations-04_moreloops_08_opt_b">1 4 2 6 3 6</li><li data-component="feedback">Correct! n has been reset to 6 inside the loop. So, the code should print 6 from the second iteration. However, the n inside range will not be affected by this reset.</li>
+    
+    <li data-component="answer"  id="ctp-iterations-04_moreloops_08_opt_c">1 4 2 6 3 6 4 6 5 6</li><li data-component="feedback">Incorrect! n has been reset to 6 inside the loop. So, the code should print 6 from the second iteration. However, the n inside range will not be affected by this reset.</li>
+    
+    <li data-component="answer"  id="ctp-iterations-04_moreloops_08_opt_d">This will cause an error</li><li data-component="feedback">Incorrect! n has been reset to 6 inside the loop. So, the code should print 6 from the second iteration. However, the n inside range will not be affected by this reset.</li>
+    
+    <li data-component="answer"  id="ctp-iterations-04_moreloops_08_opt_e">I don’t know</li><li data-component="feedback">Incorrect! n has been reset to 6 inside the loop. So, the code should print 6 from the second iteration. However, the n inside range will not be affected by this reset.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="4" data-multipleanswers="false"  id="ctp-iterations-04_moreloops_11"  style="visibility: hidden;">
+    <p>Q-4: Generate this pattern for n=5</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*****</span>
+<span class="o">*****</span>
+<span class="o">*****</span>
+<span class="o">*****</span>
+<span class="o">*****</span>
+</pre></div>
+</div>
+<li data-component="answer"  id="ctp-iterations-04_moreloops_11_opt_a"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for i in range(0,n):
+   print(“*” * i)
+</pre></div>
+</div>
+</li><li data-component="feedback" id="ctp-iterations-04_moreloops_11_opt_a">
+<p>Incorrect! Although there will be 5 iterations, it will not print 5 rows and columns of asterisks. With each iteration, i columns of asterisks will be printed. It will generate a staircase pattern.</p></li><li data-component="answer" data-correct id="ctp-iterations-04_moreloops_11_opt_b"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for i in range(0,n):
+   print(“*” * n)
+</pre></div>
+</div>
+</li><li data-component="feedback" id="ctp-iterations-04_moreloops_11_opt_b">
+<p>Correct! This will print 5 rows and columns of asterisks. There will be 5 iterations. With each iteration, n=5 columns of asterisks will be printed.</p></li><li data-component="answer"  id="ctp-iterations-04_moreloops_11_opt_c"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for i in range(1,n):
+   print(“*” * i)
+</pre></div>
+</div>
+</li><li data-component="feedback" id="ctp-iterations-04_moreloops_11_opt_c">
+<p>Incorrect! This code will run 4 iterations, starting from 1 through n-1=4. Also, with each iteration, i columns of * will be printed. It will generate a staircase pattern.</p></li><li data-component="answer"  id="ctp-iterations-04_moreloops_11_opt_d"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for i in range(1,n):
+   print(“*” * n)
+</pre></div>
+</div>
+</li><li data-component="feedback" id="ctp-iterations-04_moreloops_11_opt_d">
+<p>Incorrect! This will print 4 rows and 5 columns of asterisks. There will be 4 iterations, starting from 1 through n-1=4. With each iteration, n=5 columns of asterisks will be printed.</p></li><li data-component="answer"  id="ctp-iterations-04_moreloops_11_opt_e"><p>I don’t know</p>
+</li><li data-component="feedback" id="ctp-iterations-04_moreloops_11_opt_e">
+<p>Incorrect! Print n=5 columns of asterisks. Run a for loop to print n=5 rows.</p></li>
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5" data-multipleanswers="false"  id="ctp-iterations-04_moreloops_13"  style="visibility: hidden;">
+    <p>Q-5: For n=5, what will be the values of frontspaces and stars in the following code to print-</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span> <span class="o">*</span> <span class="n">frontspaces</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span> <span class="o">*</span> <span class="n">stars</span><span class="p">)</span>
+
+
+    <span class="o">*</span>
+   <span class="o">***</span>
+  <span class="o">*****</span>
+ <span class="o">*******</span>
+<span class="o">*********</span>
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="ctp-iterations-04_moreloops_13_opt_a">frontspaces = (n-r)/2, stars = r</li><li data-component="feedback">Incorrect! (n-r)/2 can output a non-integer. This will cause an error.</li>
+    
+    <li data-component="answer"  id="ctp-iterations-04_moreloops_13_opt_b">frontspaces = n-r, stars = 2*r</li><li data-component="feedback">Incorrect! This will not print the correct pattern. For instance, take n=5 and r=1. To print the first row, we need 4 frontspaces and 1 star. But here, n-r = 4 and 2*r = 2</li>
+    
+    <li data-component="answer" data-correct='yes' id="ctp-iterations-04_moreloops_13_opt_c">frontspaces = n-r, stars = 2*r - 1</li><li data-component="feedback">Correct! This will print the correct pattern. For instance, take n=5 and r=1. To print the first row, we need 4 frontspaces and 1 star. Here, n-r = 4 and 2*r - 1 = 1</li>
+    
+    <li data-component="answer"  id="ctp-iterations-04_moreloops_13_opt_d">frontspaces = r, stars = n-r</li><li data-component="feedback">Incorrect! This will not print the correct pattern. For instance, take n=5 and r=1. To print the first row, we need 4 frontspaces and 1 star. But here, r = 1 and n-r = 4.</li>
+    
+    <li data-component="answer"  id="ctp-iterations-04_moreloops_13_opt_e">I don't know</li><li data-component="feedback">Incorrect! For instance, to print the first row we need 4 frontspaces and 1 star. So, n-r = 5 - 1 = 4 and 2*r - 1 = 2*1 - 1 = 1.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="6" data-multipleanswers="false"  id="ctp-iterations-05_nestedloops_2"  style="visibility: hidden;">
+    <p>Q-6: At the end of this code, what will appear on the terminal?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for i in range(1,4):
+   for j in range(1,4):
+      print(i,j,end=‘ ’)
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="ctp-iterations-05_nestedloops_2_opt_a">1 1 2 2 3 3</li><li data-component="feedback">Incorrect! The nested for loop will run through j = 1 to 3 for every i.</li>
+    
+    <li data-component="answer"  id="ctp-iterations-05_nestedloops_2_opt_b">1 2 3 1 2 3 1 2 3</li><li data-component="feedback">Incorrect! The nested for loop will run through j = 1 to 3 for every i.</li>
+    
+    <li data-component="answer" data-correct='yes' id="ctp-iterations-05_nestedloops_2_opt_c">1 1 1 2 1 3 2 1 2 2 2 3 3 1 3 2 3 3</li><li data-component="feedback">Correct! The nested for loop will run through j = 1 to 3 for every i.</li>
+    
+    <li data-component="answer"  id="ctp-iterations-05_nestedloops_2_opt_d">1 1 2 1 3 1 2 1 2 2 2 3 3 1 3 2 3 3</li><li data-component="feedback">Incorrect! The nested for loop will run through j = 1 to 3 for every i.</li>
+    
+    <li data-component="answer"  id="ctp-iterations-05_nestedloops_2_opt_e">I don't know</li><li data-component="feedback">Incorrect!The nested for loop will run through j = 1 to 3 for every i.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="7" data-multipleanswers="false"  id="ctp-iterations-05_nestedloops_4"  style="visibility: hidden;">
+    <p>Q-7: Generate the times table for any n like-</p>
+<p>For n = 4,</p>
+<p>1 2 3 4
+2 4 6 8
+3 6 9 12
+4 8 12 16</p>
+<li data-component="answer"  id="ctp-iterations-05_nestedloops_4_opt_a"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for i in range(0,n):
+   for j in range(0,n):
+      print(i*j,end=‘ ’)
+print()
+</pre></div>
+</div>
+</li><li data-component="feedback" id="ctp-iterations-05_nestedloops_4_opt_a">
+<p>Incorrect! This will print a row of 0s in the first row and a row of n-1 times in the last row.</p></li><li data-component="answer"  id="ctp-iterations-05_nestedloops_4_opt_b"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for i in range(1,n+1):
+   for j in range(1,n+1):
+      print(i*j,end=‘ ’)
+</pre></div>
+</div>
+</li><li data-component="feedback" id="ctp-iterations-05_nestedloops_4_opt_b">
+<p>Incorrect! This will print the times table but not in the format given above. There will be no break after the first line.</p></li><li data-component="answer" data-correct id="ctp-iterations-05_nestedloops_4_opt_c"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for i in range(1,n+1):
+   for j in range(1,n+1):
+      print(i*j,end=‘ ’)
+   print()
+</pre></div>
+</div>
+</li><li data-component="feedback" id="ctp-iterations-05_nestedloops_4_opt_c">
+<p>Correct! This will print the times table in the right format due to an additional print in the end. The range in both loops in right and there will be a break after each line of the nested for loop.</p></li><li data-component="answer"  id="ctp-iterations-05_nestedloops_4_opt_d"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for i in range(1,n+1):
+   for j in range(1,n+1):
+      print(i*j,end=‘ ’)
+print()
+</pre></div>
+</div>
+</li><li data-component="feedback" id="ctp-iterations-05_nestedloops_4_opt_d">
+<p>Incorrect! This will print the times table but not in the format given above. There will be no break after the each line but only after end of the last line.</p></li><li data-component="answer"  id="ctp-iterations-05_nestedloops_4_opt_e"><p>I don’t know</p>
+</li><li data-component="feedback" id="ctp-iterations-05_nestedloops_4_opt_e">
+<p>Incorrect! Use a nested for loop and use the * operator.</p></li>
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="8" data-multipleanswers="false"  id="ctp-iterations-07_whileloops_2"  style="visibility: hidden;">
+    <p>Q-8: This will output</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>x = 5
+if (x &lt; 3):
+    x = 1
+    print(“A”)
+    if(x&gt;100):
+        print(“B”)
+    else:
+        print(“C”)
+    print(“D”)
+print(“E”)
+
+if (x&gt;2)
+    print(“F”)
+    if(x%3==2)
+        print(“G”)
+    if (x%3==1)
+        print(“H”)
+    else:
+        print(“I”)
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="ctp-iterations-07_whileloops_2_opt_a">C D E F G I</li><li data-component="feedback">Incorrect! Since x=5, x<3 is False and x%3==2 is True. So, E F G I will print.</li>
+    
+    <li data-component="answer"  id="ctp-iterations-07_whileloops_2_opt_b">D E F G</li><li data-component="feedback">Incorrect! Since x=5, x<3 is False and x%3==2 is True. So, E F G I will print.</li>
+    
+    <li data-component="answer" data-correct='yes' id="ctp-iterations-07_whileloops_2_opt_c">E F G I</li><li data-component="feedback">Correct! Since x=5, x<3 is False and x%3==2 is True. So, E F G I will print.</li>
+    
+    <li data-component="answer"  id="ctp-iterations-07_whileloops_2_opt_d">E F H</li><li data-component="feedback">Incorrect! Since x=5, x<3 is False and x%3==2 is True. So, E F G I will print.</li>
+    
+    <li data-component="answer"  id="ctp-iterations-07_whileloops_2_opt_e">I don't know</li><li data-component="feedback">Incorrect! Since x=5, x<3 is False and x%3==2 is True. So, E F G I will print.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="9" data-multipleanswers="false"  id="ctp-iterations-07_whileloops_7"  style="visibility: hidden;">
+    <p>Q-9: This will output</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>x = 6
+while(x &gt; 4)
+ print(x, end=‘ ’)
+ x = x - 1
+</pre></div>
+</div>
+
+    <li data-component="answer" data-correct='yes' id="ctp-iterations-07_whileloops_7_opt_a">6 5</li><li data-component="feedback">Correct! Each time the loop runs, value of x decrements by 1. So, when its value gets down to 4, the loop condition is no longer satisfied.</li>
+    
+    <li data-component="answer"  id="ctp-iterations-07_whileloops_7_opt_b">6 5 4</li><li data-component="feedback">Incorrect! Each time the loop runs, value of x decrements by 1. So, when its value gets down to 4, the loop condition is no longer satisfied.</li>
+    
+    <li data-component="answer"  id="ctp-iterations-07_whileloops_7_opt_c">6 5 4 3</li><li data-component="feedback">Incorrect! Each time the loop runs, value of x decrements by 1. So, when its value gets down to 4, the loop condition is no longer satisfied.</li>
+    
+    <li data-component="answer"  id="ctp-iterations-07_whileloops_7_opt_d">5 4 3</li><li data-component="feedback">Incorrect! Each time the loop runs, value of x decrements by 1. So, when its value gets down to 4, the loop condition is no longer satisfied.</li>
+    
+    <li data-component="answer"  id="ctp-iterations-07_whileloops_7_opt_e">I don't know</li><li data-component="feedback">Incorrect! Each time the loop runs, value of x decrements by 1. So, when its value gets down to 4, the loop condition is no longer satisfied.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="10" data-multipleanswers="false"  id="ctp-iterations-07_whileloops_8"  style="visibility: hidden;">
+    <p>Q-10: This will output</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>i=0
+
+while(i&lt;3)
+     print(i, end=‘ ’)
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="ctp-iterations-07_whileloops_8_opt_a">0 0 0</li><li data-component="feedback">Incorrect! The value of i never changes from 0. So, the loop condition is always true and it will keep printing i=0.</li>
+    
+    <li data-component="answer"  id="ctp-iterations-07_whileloops_8_opt_b">0 1 2</li><li data-component="feedback">Incorrect! The value of i never changes from 0. So, the loop condition is always true and it will keep printing i=0.</li>
+    
+    <li data-component="answer" data-correct='yes' id="ctp-iterations-07_whileloops_8_opt_c">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 . . . .</li><li data-component="feedback">Correct! The value of i never changes from 0. So, the loop condition is always true and it will keep printing i=0.</li>
+    
+    <li data-component="answer"  id="ctp-iterations-07_whileloops_8_opt_d">3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 . . . .</li><li data-component="feedback">Incorrect! The value of i never changes from 0. So, the loop condition is always true and it will keep printing i=0.</li>
+    
+    <li data-component="answer"  id="ctp-iterations-07_whileloops_8_opt_e">I don't know</li><li data-component="feedback">Incorrect!The value of i never changes from 0. So, the loop condition is always true and it will keep printing i=0.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="11" data-multipleanswers="false"  id="ctp-iterations-05_whileloops_9"  style="visibility: hidden;">
+    <p>Q-11: How can we translate this code to a while loop?</p>
+<dl class="simple">
+<dt>for i in range(n):</dt><dd><p>&lt;body&gt;</p>
+</dd>
+</dl>
+<li data-component="answer"  id="ctp-iterations-05_whileloops_9_opt_a"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">)</span>
+   <span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li><li data-component="feedback" id="ctp-iterations-05_whileloops_9_opt_a">
+<p>Incorrect! This will be an infinite loop as the value of i never changes.</p></li><li data-component="answer" data-correct id="ctp-iterations-05_whileloops_9_opt_b"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">)</span>
+   <span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+   <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</li><li data-component="feedback" id="ctp-iterations-05_whileloops_9_opt_b">
+<p>Correct! The value of i increments by 1 in each iteration till it becomes equal to n at which point the loop condition won’t be satisfied.</p></li><li data-component="answer"  id="ctp-iterations-05_whileloops_9_opt_c"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">)</span>
+   <span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+   <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</li><li data-component="feedback" id="ctp-iterations-05_whileloops_9_opt_c">
+<p>Incorrect! This is not the right implementation of the given for loop as the value of i remains the same and the value of n keeps increasing with each iteration.</p></li><li data-component="answer"  id="ctp-iterations-05_whileloops_9_opt_d"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="o">=</span><span class="mi">1</span>
+<span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">)</span>
+   <span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+   <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</li><li data-component="feedback" id="ctp-iterations-05_whileloops_9_opt_d">
+<p>Incorrect! This is not the right implementation of the given for loop as the value of i remains the same and the value of n keeps increasing with each iteration.</p></li><li data-component="answer"  id="ctp-iterations-05_whileloops_9_opt_e"><p>I don’t know</p>
+</li><li data-component="feedback" id="ctp-iterations-05_whileloops_9_opt_e">
+<p>Incorrect! The value of i should increment by 1 with each iteration of while loop.</p></li>
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="12" data-multipleanswers="false"  id="ctp-iterations-07_whileloops_11"  style="visibility: hidden;">
+    <p>Q-12: Which number will get us out of the loop?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">valid</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="k">while</span> <span class="ow">not</span> <span class="n">valid</span><span class="p">:</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="nb">input</span> <span class="p">(</span><span class="s2">&quot;Enter a number: &quot;</span><span class="p">))</span>
+  <span class="n">valid</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">x</span><span class="o">%</span><span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="ctp-iterations-07_whileloops_11_opt_a">2</li><li data-component="feedback">Incorrect! To get out of the loop, valid should be True. According to the condition provided, an odd number which is a multiple of 3 should work.</li>
+    
+    <li data-component="answer" data-correct='yes' id="ctp-iterations-07_whileloops_11_opt_b">9</li><li data-component="feedback">Correct! To get out of the loop, valid should be True. According to the condition provided, an odd number which is a multiple of 3 should work.</li>
+    
+    <li data-component="answer"  id="ctp-iterations-07_whileloops_11_opt_c">6</li><li data-component="feedback">Incorrect! To get out of the loop, valid should be True. According to the condition provided, an odd number which is a multiple of 3 should work.</li>
+    
+    <li data-component="answer"  id="ctp-iterations-07_whileloops_11_opt_d">None of the above</li><li data-component="feedback">Incorrect! To get out of the loop, valid should be True. According to the condition provided, an odd number which is a multiple of 3 should work.</li>
+    
+    <li data-component="answer"  id="ctp-iterations-07_whileloops_11_opt_e">I don't know</li><li data-component="feedback">Incorrect! To get out of the loop, valid should be True. According to the condition provided, an odd number which is a multiple of 3 should work.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="13" data-multipleanswers="false"  id="ctp-iterations-05_whileloops_13"  style="visibility: hidden;">
+    <p>Q-13: Which of these will exit on 9?</p>
+<li data-component="answer"  id="ctp-iterations-05_whileloops_13_opt_a"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="nb">input</span> <span class="p">(</span><span class="s2">&quot;Enter a number: &quot;</span><span class="p">))</span>
+ <span class="k">while</span> <span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">x</span><span class="o">%</span><span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+   <span class="n">x</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="nb">input</span> <span class="p">(</span><span class="s2">&quot;Enter a number: &quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</li><li data-component="feedback" id="ctp-iterations-05_whileloops_13_opt_a">
+<p>Incorrect! Incorrect! 9 is an odd multiple of 3. So, the condition would always hold true and will not exit the loop. There’s no break statement in this option.</p></li><li data-component="answer" data-correct id="ctp-iterations-05_whileloops_13_opt_b"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="nb">input</span> <span class="p">(</span><span class="s2">&quot;Enter a number: &quot;</span><span class="p">))</span>
+ <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+   <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">x</span><span class="o">%</span><span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+       <span class="k">break</span><span class="p">;</span>
+   <span class="n">x</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="nb">input</span> <span class="p">(</span><span class="s2">&quot;Enter a number: &quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</li><li data-component="feedback" id="ctp-iterations-05_whileloops_13_opt_b">
+<p>Correct! This will exit due to the break statement.</p></li><li data-component="answer"  id="ctp-iterations-05_whileloops_13_opt_c"><p>Both!</p>
+</li><li data-component="feedback" id="ctp-iterations-05_whileloops_13_opt_c">
+<p>Incorrect! There’s no break statement in option A.</p></li><li data-component="answer"  id="ctp-iterations-05_whileloops_13_opt_d"><p>Neither</p>
+</li><li data-component="feedback" id="ctp-iterations-05_whileloops_13_opt_d">
+<p>Incorrect! There’s a break statement in option B.</p></li><li data-component="answer"  id="ctp-iterations-05_whileloops_13_opt_e"><p>I don’t know</p>
+</li><li data-component="feedback" id="ctp-iterations-05_whileloops_13_opt_e">
+<p>Incorrect! A break statement can be used to exit the loop.</p></li>
+
+    </ul>
+    </div>
+    </section>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 - Based on Python for Everybody.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+  
+    {% if settings.google_ga %}
+      <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '{{ settings.google_ga }}']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+    {% endif %}
+  
+
+  
+    <script type="application/json" class="js-hypothesis-config">
+    {
+      "showHighlights": false
+    }
+    </script>
+
+    <script async src="https://hypothes.is/embed.js"></script>
+    <!--provide space to prevent hypothes.is sidebar from obscuring content-->
+    <style>@media screen and (max-width:767px) { body { padding-right: 21px; }}</style>
+
+  
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>
