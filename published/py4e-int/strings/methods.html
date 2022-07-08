@@ -1,0 +1,738 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>7.9. String methods &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.cd688d1623c9932e.css?v=630908D8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.bf73008a1eba9f4e.css?v=7DED055E" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/runtime.439d581f758f2b99.bundle.js?v=2E54442"></script>
+    <script src="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.51d9dde4e5162190.bundle.js?v=9CAA2D33"></script>
+    <script src="../_static/runestone.42b576791a4ed54b.bundle.js?v=B7293199"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7.10. Parsing strings" href="parsing.html" />
+    <link rel="prev" title="7.8. String comparison" href="comparison.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    
+    eBookConfig.useRunestoneServices = {{use_services}};
+    eBookConfig.host = '';
+    eBookConfig.app = eBookConfig.host + '/runestone';
+    eBookConfig.course = '{{ course_name }}';
+    eBookConfig.basecourse = '{{ base_course }}';
+    eBookConfig.isLoggedIn = {{ is_logged_in}};
+    eBookConfig.email = '{{ user_email }}';
+    eBookConfig.isInstructor = {{ is_instructor }};
+    eBookConfig.username = '{{ user_id}}';
+    eBookConfig.readings = {{ readings|safe}};
+    eBookConfig.activities = {{ activity_info|safe }}
+    eBookConfig.downloadsEnabled = {{downloads_enabled}};
+    eBookConfig.allow_pairs = {{allow_pairs}}
+    eBookConfig.enableCompareMe = {{enable_compare_me}};
+    // _`new_server_prefix`: Defined by the server to be the path to the new server.
+    eBookConfig.new_server_prefix = '{{ new_server_prefix }}';
+    
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+    
+        {% if serve_ad is defined and serve_ad and settings.adsenseid %}
+         <script data-ad-client="{{settings.adsenseid}}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        {% endif %}
+    
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+            
+            {{ course_name }}
+            
+          
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span class="visuallyhidden" aria-label="User">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li id="inst_peer_link"><a href='/runestone/peer/instructor.html'>Peer Instruction (Instructor)</a></li>            
+            <li><a href='/runestone/peer/student.html'>Peer Instruction (Student)</a></li>            
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="runestoneComponents.switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=methods'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+            <script></script>
+<li class="dropdown globaltoc-container">
+    <a
+        href="../index.html"
+        class="dropdown-toggle"
+        data-toggle="dropdown"
+        aria-label="index"
+        >This Chapter<b class="caret"></b
+    ></a>
+    <ul class="dropdown-menu globaltoc">
+         
+        {% for row in subchapter_list %}
+        <li class="toctree-l1">
+            <a class="reference internal" href="{{ row['subchap_uri']}}"
+                >{{ row['title']}}</a
+            >
+        </li>
+        {% endfor %} 
+        
+    </ul>
+</li>
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">7.8. </span>String comparison" data-toggle="tooltip">
+    <a href="comparison.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">7.10. </span>Parsing strings' data-toggle="tooltip" >              
+    <a href="parsing.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+    
+        {% if settings.num_banners > 0 and settings.show_rs_banner %}
+         <div style="width: 100%;">
+            <a href="/runestone/default/donate?banner={{banner_num}}">
+            <img class="runestone-banner"
+                 src="/runestone/static/images/RunestoneBanner{{banner_num}}.png"
+                 alt="Please Support Runestone"
+                 style="display: block; width: 728px; margin-left: auto; margin-right: auto; margin-top: 10px;">
+            </a>
+         </div>
+        {% endif %}
+    
+
+
+  
+  <section id="string-methods">
+<h1><span class="section-number">7.9. </span>String methods<a class="headerlink" href="#string-methods" title="Permalink to this headline">¶</a></h1>
+<p id="index-0">Strings are an example of Python <em>objects</em>. An object
+contains both data (the actual string itself) and
+<em>methods</em>, which are effectively functions that are built
+into the object and are available to any <em>instance</em> of
+the object.</p>
+<p>Python has a function called <code class="docutils literal notranslate"><span class="pre">dir</span></code> which lists all the methods
+available for an object. The <code class="docutils literal notranslate"><span class="pre">type</span></code> function returns the type
+of an object.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=str-methods data-question_label="7.9.1">
+<div id=str-methods_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="str-methods_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='String methods through Python interpreter'  data-wasm=/_static
+     style="visibility: hidden;">
+stuff = 'Hello world'
+print(type(stuff))
+print(dir(stuff))
+</textarea>
+</div>
+</div>
+<p>While the <code class="docutils literal notranslate"><span class="pre">dir</span></code> function lists the methods, and you can use
+<code class="docutils literal notranslate"><span class="pre">help</span></code> to get some simple documentation on a method, a better
+source of documentation for string methods would be
+<a class="reference external" href="https://docs.python.org/library/stdtypes.html#string-methods">https://docs.python.org/library/stdtypes.html#string-methods</a>.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">capitalize</span><span class="p">)</span>
+<span class="n">Help</span> <span class="n">on</span> <span class="n">method_descriptor</span><span class="p">:</span>
+
+<span class="n">capitalize</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+    <span class="n">S</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+
+    <span class="n">Return</span> <span class="n">a</span> <span class="n">capitalized</span> <span class="n">version</span> <span class="n">of</span> <span class="n">S</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span><span class="n">e</span><span class="o">.</span> <span class="n">make</span> <span class="n">the</span> <span class="n">first</span> <span class="n">character</span>
+    <span class="n">have</span> <span class="n">upper</span> <span class="n">case</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">rest</span> <span class="n">lower</span> <span class="n">case</span><span class="o">.</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="7.9.2" data-multipleanswers="false"  id="str-method-mc-dir"  style="visibility: hidden;">
+    <p>11-9-2: What function lists the methods available for an object?</p>
+
+    <li data-component="answer" data-correct='yes' id="str-method-mc-dir_opt_a">dir()</li><li data-component="feedback">Correct! dir() will list all the methods that can be used with an object.</li>
+    
+    <li data-component="answer"  id="str-method-mc-dir_opt_b">print()</li><li data-component="feedback">Incorrect! print() prints whatever is within the parentheses. Try again.</li>
+    
+    <li data-component="answer"  id="str-method-mc-dir_opt_c">type()</li><li data-component="feedback">Incorrect! type() returns the type of the object within its parentheses. Try again.</li>
+    
+    <li data-component="answer"  id="str-method-mc-dir_opt_d">object()</li><li data-component="feedback">Incorrect! object() returns a new featureless object. Try again.</li>
+    
+
+    </ul>
+    </div>
+    <p>Calling a <em>method</em> is similar to calling a function (it
+takes arguments and returns a value), but the syntax is different. We call
+a method by typing the variable name, adding a period, and then adding the
+method call.</p>
+<p>For example, the method <code class="docutils literal notranslate"><span class="pre">upper</span></code> takes a string and returns a
+new string with all uppercase letters. Instead of the function
+syntax, <code class="docutils literal notranslate"><span class="pre">upper(word)</span></code>, it uses the method syntax, <code class="docutils literal notranslate"><span class="pre">word.upper()</span></code>.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=str-methodUpper data-question_label="7.9.3">
+<div id=str-methodUpper_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="str-methodUpper_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Using the method "upper"'  data-wasm=/_static
+     style="visibility: hidden;">
+word = 'banana'
+new_word = word.upper()
+print(new_word)
+</textarea>
+</div>
+</div>
+<p>This form of dot notation specifies the name of the method,
+<code class="docutils literal notranslate"><span class="pre">upper</span></code>, and the name of the string to apply the method to,
+<code class="docutils literal notranslate"><span class="pre">word</span></code>. The empty parentheses indicate that this method takes
+no argument.</p>
+<p>A method call is called an <em>invocation</em>; in this case, we
+would say that we are invoking <code class="docutils literal notranslate"><span class="pre">upper</span></code> on the
+<code class="docutils literal notranslate"><span class="pre">word</span></code>.</p>
+<p>For example, there is a string method named <code class="docutils literal notranslate"><span class="pre">find</span></code> that
+searches for the position of one string within another:</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=str-methodFind data-question_label="7.9.4">
+<div id=str-methodFind_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="str-methodFind_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Using the method "find"'  data-wasm=/_static
+     style="visibility: hidden;">
+word = 'banana'
+index = word.find('a')
+print(index)
+</textarea>
+</div>
+</div>
+<p>In this example, we invoke <code class="docutils literal notranslate"><span class="pre">find</span></code> on <code class="docutils literal notranslate"><span class="pre">word</span></code> and
+pass the letter we are looking for as a parameter.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">find</span></code> method can find substrings as well as characters:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;na&#39;</span><span class="p">)</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+<p>It can also take as a second argument the index where it should start looking:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;na&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+<p>One common task is to remove white space (spaces, tabs, or newlines)
+from the beginning and end of a string using the <code class="docutils literal notranslate"><span class="pre">strip</span></code>
+method:</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=str-stripMethod data-question_label="7.9.5">
+<div id=str-stripMethod_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="str-stripMethod_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Using the method "strip"'  data-wasm=/_static
+     style="visibility: hidden;">
+line = '  Here we go  '
+print(line.strip())
+</textarea>
+</div>
+</div>
+<p>Some methods, such as <code class="docutils literal notranslate"><span class="pre">startswith</span></code>, return boolean values:</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=str-startswith data-question_label="7.9.6">
+<div id=str-startswith_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="str-startswith_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Using the method "startswith"'  data-wasm=/_static
+     style="visibility: hidden;">
+line = 'Have a nice day'
+print(line.startswith('Have'))
+print(line.startswith('h'))
+</textarea>
+</div>
+</div>
+<p>You will note that <code class="docutils literal notranslate"><span class="pre">startswith</span></code> requires case to match, so
+sometimes we’ll convert a line to lowercase using the <code class="docutils literal notranslate"><span class="pre">lower</span></code>
+method before we do any checking:</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=str-methodStartsWith data-question_label="7.9.7">
+<div id=str-methodStartsWith_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="str-methodStartsWith_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Using the method "startswith" and "lower"'  data-wasm=/_static
+     style="visibility: hidden;">
+line = 'Have a nice day'
+line.startswith('h')
+
+print(line.lower())
+
+print(line.lower().startswith('h'))
+</textarea>
+</div>
+</div>
+<p>In the last example, the method <code class="docutils literal notranslate"><span class="pre">lower</span></code> is called. Then, we
+use <code class="docutils literal notranslate"><span class="pre">startswith</span></code> to see if the resulting lowercase string
+starts with the letter “h”. As long as we are careful with the order, we
+can make multiple method calls in a single expression.</p>
+<div id='str-method-banana' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Question" >
+<p>Fix the following function. It should use the string method <code class="docutils literal notranslate"><span class="pre">count</span></code>
+to count the number of times a double s (ss) appears in a word. There are 3 mistakes to fix.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=str-method-bananaq data-question_label="7.9.8">
+<div id=str-method-bananaq_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="str-method-bananaq_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def countSS(word):
+    counter == count(word, 'ss'):
+    return counter
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(countSS('banana'),0,"Tested countSS on input 'banana'")
+        self.assertEqual(countSS('Mississippi'),2,"Tested countSS on input 'Mississippi'")
+        self.assertEqual(countSS('scissors'),1,"Tested countSS on input 'scissors'")
+        self.assertEqual(countSS('methods'),0,"Tested countSS on input 'methods'")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script>
+    function strBananaDisc_disqus(source) {
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'strBananaDisc_' + eBookConfig.course;
+                    this.page.url = 'https://strBananaDisc_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'interactivepython';
+            disqus_identifier = 'strBananaDisc_' + eBookConfig.course;
+            disqus_url = 'http://strBananaDisc_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class="disqus_thread_link" data-disqus-identifier="strBananaDisc" onclick="strBananaDisc_disqus(this);">Show Comments</a>
+<script>
+  window.addEventListener('load', (event) => {
+    $("a[data-disqus-identifier='strBananaDisc']").attr('data-disqus-identifier', 'strBananaDisc_' + eBookConfig.course);
+  });
+</script>
+</div>
+    </div>
+
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="7.9.9" data-multipleanswers="false"  id="str-method-mc-cheer"  style="visibility: hidden;">
+    <p>11-9-9: What is printed by the following statements?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;let&#39;s go blue!&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="str-method-mc-cheer_opt_a">0</li><li data-component="feedback">Incorrect! Both 'e' and 'b' are present in the string. Try again.</li>
+    
+    <li data-component="answer"  id="str-method-mc-cheer_opt_b">1</li><li data-component="feedback">Incorrect! There is only one 'b', but there are multiple e's as well. Try again.</li>
+    
+    <li data-component="answer"  id="str-method-mc-cheer_opt_c">2</li><li data-component="feedback">Incorrect! There are two e's, but there is a 'b' as well. Try again.</li>
+    
+    <li data-component="answer" data-correct='yes' id="str-method-mc-cheer_opt_d">3</li><li data-component="feedback">Correct! There are two e's and one b, so added together, this will print "3".</li>
+    
+
+    </ul>
+    </div>
+    
+<div class="runestone  ">
+<ul data-component="dragndrop" data-question_label="7.9.10" id="str-method-dnd-use"  style="visibility: hidden;">
+    <span data-subcomponent="question">11-9-10: Match these common string methods with their function. Hint: many of the names of these methods are hints to what they do!</span>
+	<span data-subcomponent=feedback>If you need help, try looking online for the effects of these methods.</span>
+
+    <li data-subcomponent="draggable" id="str-method-dnd-use_drag1">capitalize()</li>
+    <li data-subcomponent="dropzone" for="str-method-dnd-use_drag1">Returns a copy of a string with its first character capitalized and the rest lowercased.</li>
+
+    <li data-subcomponent="draggable" id="str-method-dnd-use_drag2">count()</li>
+    <li data-subcomponent="dropzone" for="str-method-dnd-use_drag2">Returns the number of non-overlapping occurrences of a substring in the range [start, end].</li>
+
+    <li data-subcomponent="draggable" id="str-method-dnd-use_drag3">endswith()</li>
+    <li data-subcomponent="dropzone" for="str-method-dnd-use_drag3">Returns True if a string ends with the specified suffix. Otherwise, it returns False.</li>
+
+    <li data-subcomponent="draggable" id="str-method-dnd-use_drag4">find()</li>
+    <li data-subcomponent="dropzone" for="str-method-dnd-use_drag4">Returns the lowest index in a string where a substring is found. An optional parameter restricts the search to a slice of the string.</li>
+
+    <li data-subcomponent="draggable" id="str-method-dnd-use_drag5">strip()</li>
+    <li data-subcomponent="dropzone" for="str-method-dnd-use_drag5">Returns a copy of a string with the leading and trailing whitespace characters removed.</li>
+
+    <li data-subcomponent="draggable" id="str-method-dnd-use_drag6">upper()</li>
+    <li data-subcomponent="dropzone" for="str-method-dnd-use_drag6">Returns a copy of a string with all characters converted to uppercase.</li>
+</ul></div></section>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 7.8. String comparison' data-toggle="tooltip">
+  <a href="comparison.html" aria-label="Previous - 7.8. String comparison">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 7.10. Parsing strings' data-toggle="tooltip" >
+    <a href="parsing.html" aria-label="Next - 7.10. Parsing strings">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 - Based on Python for Everybody.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+  
+    {% if settings.google_ga %}
+      <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '{{ settings.google_ga }}']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+    {% endif %}
+  
+
+  
+    <script type="application/json" class="js-hypothesis-config">
+    {
+      "showHighlights": false
+    }
+    </script>
+
+    <script async src="https://hypothes.is/embed.js"></script>
+    <!--provide space to prevent hypothes.is sidebar from obscuring content-->
+    <style>@media screen and (max-width:767px) { body { padding-right: 21px; }}</style>
+
+  
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

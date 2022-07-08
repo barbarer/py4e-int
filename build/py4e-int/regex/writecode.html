@@ -1,0 +1,983 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>12.12. Write Code Questions &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.cd688d1623c9932e.css?v=630908D8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.bf73008a1eba9f4e.css?v=7DED055E" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/runtime.439d581f758f2b99.bundle.js?v=2E54442"></script>
+    <script src="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.51d9dde4e5162190.bundle.js?v=9CAA2D33"></script>
+    <script src="../_static/runestone.42b576791a4ed54b.bundle.js?v=B7293199"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="12.13. Group Work: Regular Expressions (Regex)" href="regex-group.html" />
+    <link rel="prev" title="12.11. Mixed-Up Code Questions" href="mixedupcode.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    
+    eBookConfig.useRunestoneServices = {{use_services}};
+    eBookConfig.host = '';
+    eBookConfig.app = eBookConfig.host + '/runestone';
+    eBookConfig.course = '{{ course_name }}';
+    eBookConfig.basecourse = '{{ base_course }}';
+    eBookConfig.isLoggedIn = {{ is_logged_in}};
+    eBookConfig.email = '{{ user_email }}';
+    eBookConfig.isInstructor = {{ is_instructor }};
+    eBookConfig.username = '{{ user_id}}';
+    eBookConfig.readings = {{ readings|safe}};
+    eBookConfig.activities = {{ activity_info|safe }}
+    eBookConfig.downloadsEnabled = {{downloads_enabled}};
+    eBookConfig.allow_pairs = {{allow_pairs}}
+    eBookConfig.enableCompareMe = {{enable_compare_me}};
+    // _`new_server_prefix`: Defined by the server to be the path to the new server.
+    eBookConfig.new_server_prefix = '{{ new_server_prefix }}';
+    
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+    
+        {% if serve_ad is defined and serve_ad and settings.adsenseid %}
+         <script data-ad-client="{{settings.adsenseid}}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        {% endif %}
+    
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+            
+            {{ course_name }}
+            
+          
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span class="visuallyhidden" aria-label="User">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li id="inst_peer_link"><a href='/runestone/peer/instructor.html'>Peer Instruction (Instructor)</a></li>            
+            <li><a href='/runestone/peer/student.html'>Peer Instruction (Student)</a></li>            
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="runestoneComponents.switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=writecode'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+            <script></script>
+<li class="dropdown globaltoc-container">
+    <a
+        href="../index.html"
+        class="dropdown-toggle"
+        data-toggle="dropdown"
+        aria-label="index"
+        >This Chapter<b class="caret"></b
+    ></a>
+    <ul class="dropdown-menu globaltoc">
+         
+        {% for row in subchapter_list %}
+        <li class="toctree-l1">
+            <a class="reference internal" href="{{ row['subchap_uri']}}"
+                >{{ row['title']}}</a
+            >
+        </li>
+        {% endfor %} 
+        
+    </ul>
+</li>
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">12.11. </span>Mixed-Up Code Questions" data-toggle="tooltip">
+    <a href="mixedupcode.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">12.13. </span>Group Work: Regular Expressions (Regex)' data-toggle="tooltip" >              
+    <a href="regex-group.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+    
+        {% if settings.num_banners > 0 and settings.show_rs_banner %}
+         <div style="width: 100%;">
+            <a href="/runestone/default/donate?banner={{banner_num}}">
+            <img class="runestone-banner"
+                 src="/runestone/static/images/RunestoneBanner{{banner_num}}.png"
+                 alt="Please Support Runestone"
+                 style="display: block; width: 728px; margin-left: auto; margin-right: auto; margin-top: 10px;">
+            </a>
+         </div>
+        {% endif %}
+    
+
+
+  
+  <section id="write-code-questions">
+<h1><span class="section-number">12.12. </span>Write Code Questions<a class="headerlink" href="#write-code-questions" title="Permalink to this headline">¶</a></h1>
+<p>Some of the questions use the following data file.</p>
+
+<div class="runestone datafile ">
+<div class="datafile_caption">Data file: <code>mbox-short4.txt</code></div>
+<pre data-component="datafile" id=mbox-short4.txt data-hidden data-edit="false" data-rows="20" data-cols="31">
+gopal.ramasammycook@gmail.com 1
+louis@media.berkeley.edu 3
+cwen@iupui.edu 5
+antranig@caret.cam.ac.uk 1
+rjlowe@iupui.edu 2
+gsilver@umich.edu 3
+david.horwitz@uct.ac.za 4
+wagnermr@iupui.edu 1
+zqian@umich.edu 4
+stephen.marquard@uct.ac.za 2
+ray@media.berkeley.edu 1
+</pre></div>
+<ol class="arabic">
+<li><div id='regex_writecode1' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=regex_writecode1q data-question_label="12.12.2">
+<div id=regex_writecode1q_question class="ac_question col-md-12">
+<p>Modify the ### to find sequences with one uppercase letter
+followed by an underscore followed by one or more lowercase letters.</p>
+
+</div>
+<textarea data-lang="python" id="regex_writecode1q_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+### re
+def text_match(text):
+    pattern = '[###]_[###]+'
+    if re.search(###,  text):
+            return('Found a match!')
+    ###:
+            return('Not matched!')
+
+print(text_match("aab_cbbbc"))
+====
+from unittest.gui import TestCaseGui
+
+class MyTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(text_match("aab_cbbc"), "Not matched!", 'text_match("aab_cbbc")')
+        self.assertEqual(text_match("aaA_bbbc"), "Found a match!", 'text_match("aaA_bbbc")')
+        self.assertEqual(text_match("A_abbbc"), "Found a match!", 'text_match("A_abbbc")')
+        self.assertEqual(text_match("word_A"), "Not matched!", 'text_match("word_A")')
+        self.assertEqual(text_match("myZ_oo"), "Found a match!", 'text_match("myZ_oo")')
+MyTests().main()
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=regex_writecode1a data-question_label="12.12.3">
+<div id=regex_writecode1a_question class="ac_question col-md-12">
+<p>Modify the ### to find sequences with one uppercase letter
+followed by an underscore followed by one or more lowercase letters.</p>
+
+</div>
+<textarea data-lang="python" id="regex_writecode1a_editor" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# Line 1: import re
+# Line 3: [A-Z] matches uppercase letter characters and [a-z] matches lowercase letter characters
+# Line 4: Use the pattern variable to search the text
+# Line 6: Include the else statement
+import re
+def text_match(text):
+    pattern = '[A-Z]_[a-z]+'
+    if re.search(pattern,  text):
+            return('Found a match!')
+    else:
+            return('Not matched!')
+
+print(text_match("aab_cbbbc"))
+====
+from unittest.gui import TestCaseGui
+
+class MyTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(text_match("aab_cbbc"), "Not matched!", 'text_match("aab_cbbc")')
+        self.assertEqual(text_match("aaA_bbbc"), "Found a match!", 'text_match("aaA_bbbc")')
+        self.assertEqual(text_match("A_abbbc"), "Found a match!", 'text_match("A_abbbc")')
+        self.assertEqual(text_match("word_A"), "Not matched!", 'text_match("word_A")')
+        self.assertEqual(text_match("myZ_oo"), "Found a match!", 'text_match("myZ_oo")')
+MyTests().main()
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</li>
+<li>
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=regex_writecode2 data-question_label="12.12.4">
+<div id=regex_writecode2_question class="ac_question col-md-12">
+<p>Complete the code below to check if a string begins with a word character. If it does,
+return “Found a match!”, if not return “Not matched!” Replace the ### with your code.</p>
+
+</div>
+<textarea data-lang="python" id="regex_writecode2_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+import ###
+def text_match(text):
+    pattern = ###    # Your regex pattern here
+    if re.search(###):
+        return(###)
+    else:
+        return(###)
+print(text_match("The quick brown fox jumps over the lazy dog."))
+====
+from unittest.gui import TestCaseGui
+
+class MyTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(text_match("The quick fox jumps."), "Found a match!", 'text_match("The quick fox jumps.")')
+        self.assertEqual(text_match("   The quick fox jumps."), "Not matched!", 'text_match("   The quick fox jumps.")')
+        self.assertEqual(text_match("+ years ago"), "Not matched!", 'text_match("+ years ago")')
+        self.assertEqual(text_match("Nine years ago"), "Found a match!", 'text_match("Nine years ago")')
+        self.assertEqual(text_match("#run"), "Not matched!", 'text_match("#run")')
+
+
+MyTests().main()
+</textarea>
+</div>
+</div>
+</li>
+<li><div id='regex_writecode3' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=regex_writecode3q data-question_label="12.12.5">
+<div id=regex_writecode3q_question class="ac_question col-md-12">
+<p>Define the function “match_four” that takes a string and uses regex to return True if the
+string starts with 4 followed by zero to many other digits and False if it does not.</p>
+
+</div>
+<textarea data-lang="python" id="regex_writecode3q_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+====
+from unittest.gui import TestCaseGui
+
+class MyTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(match_four("468653892"), True, 'match_four("468653892")')
+        self.assertEqual(match_four("648653892"), False, 'match_four("648653892")')
+        self.assertEqual(match_four("41"), True, 'match_four("41")')
+        self.assertEqual(match_four("4"), True, 'match_four("4")')
+        self.assertEqual(match_four("786328042"), False, 'match_four("786328042")')
+MyTests().main()
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=regex_writecode3a data-question_label="12.12.6">
+<div id=regex_writecode3a_question class="ac_question col-md-12">
+<p>Define the function “match_four” that takes a string and uses regex to return True if the
+string starts with 4 followed by zero to many other digits and False if it does not.</p>
+
+</div>
+<textarea data-lang="python" id="regex_writecode3a_editor" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# First import the regex library (re), then define the match_four function.
+# Within the function, create the regex pattern to match if the string starts with '4'
+# Use an if statement to check for a match in the string.
+# Return true if the match is made, return false if not.
+import re
+def match_four(string):
+    pattern = "^4\d*"
+    if re.search(pattern,  string):
+        return True
+    else:
+        return False
+====
+from unittest.gui import TestCaseGui
+
+class MyTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(match_four("468653892"), True, 'match_four("468653892")')
+        self.assertEqual(match_four("648653892"), False, 'match_four("648653892")')
+        self.assertEqual(match_four("41"), True, 'match_four("41")')
+        self.assertEqual(match_four("4"), True, 'match_four("4")')
+        self.assertEqual(match_four("786328042"), False, 'match_four("786328042")')
+MyTests().main()
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</li>
+<li>
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=regex_writecode4 data-question_label="12.12.7">
+<div id=regex_writecode4_question class="ac_question col-md-12">
+<p>Define the function “match_cat” that uses regex to return True if a
+string matches cat, Cat, CAT, cAt, etc and False if it does not.</p>
+
+</div>
+<textarea data-lang="python" id="regex_writecode4_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+
+====
+from unittest.gui import TestCaseGui
+
+class MyTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(match_cat("cAt"), True, "Testing cAt.")
+        self.assertEqual(match_cat("cat"), True, "Testing cat.")
+        self.assertEqual(match_cat("Cat"), True, "Testing Cat.")
+        self.assertEqual(match_cat("CAT"), True, "Testing CAT.")
+        self.assertEqual(match_cat("dog"), False, "Testing dog.")
+        self.assertEqual(match_cat("caT"), True, "Testing caT.")
+        self.assertEqual(match_cat("Cats"), True, "Testing Cats.")
+MyTests().main()
+</textarea>
+</div>
+</div>
+</li>
+<li><div id='regex_writecode5' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=regex_writecode5q data-question_label="12.12.8">
+<div id=regex_writecode5q_question class="ac_question col-md-12">
+<p>Define the function <code class="docutils literal notranslate"><span class="pre">match_z</span></code> to match a word containing a lowercase letter <code class="docutils literal notranslate"><span class="pre">z</span></code>.
+Return <code class="docutils literal notranslate"><span class="pre">&quot;Found</span> <span class="pre">a</span> <span class="pre">match!&quot;</span></code> if <code class="docutils literal notranslate"><span class="pre">z</span></code> is in the string and <code class="docutils literal notranslate"><span class="pre">&quot;Not</span> <span class="pre">matched!&quot;</span></code> if
+there is not a <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="regex_writecode5q_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+import re
+def match_z(string):
+
+====
+from unittest.gui import TestCaseGui
+
+class MyTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(match_z("The lazy dog."), "Found a match!", 'match_z("The lazy dog.")')
+        self.assertEqual(match_z("Python rocks!"), "Not matched!", 'match_z("Python rocks!")')
+        self.assertEqual(match_z("Zippers"), "Not matched!", 'match_z("Zippers")')
+        self.assertEqual(match_z("pez"), "Found a match!", 'match_z("pez")')
+        self.assertEqual(match_z("abc"), "Not matched!", 'match_z("abc")')
+
+MyTests().main()
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=regex_writecode5a data-question_label="12.12.9">
+<div id=regex_writecode5a_question class="ac_question col-md-12">
+<p>Define the function <code class="docutils literal notranslate"><span class="pre">match_z</span></code> to match a word containing a lowercase letter <code class="docutils literal notranslate"><span class="pre">z</span></code>.
+Return <code class="docutils literal notranslate"><span class="pre">&quot;Found</span> <span class="pre">a</span> <span class="pre">match!&quot;</span></code> if <code class="docutils literal notranslate"><span class="pre">z</span></code> is in the string and <code class="docutils literal notranslate"><span class="pre">&quot;Not</span> <span class="pre">matched!&quot;</span></code> if
+there is not a <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="regex_writecode5a_editor" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# In the function definition, create a regex pattern to find 'z'
+# Search the string with that pattern using re.search()
+# If found, return "Found a match!"
+# Otherwise, return "Not matched!"
+import re
+def match_z(text):
+    patterns = '\w*z\w*'
+    if re.search(patterns,  text):
+        return 'Found a match!'
+    else:
+        return('Not matched!')
+====
+from unittest.gui import TestCaseGui
+
+class MyTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(match_z("The lazy dog."), "Found a match!", 'match_z("The lazy dog.")')
+        self.assertEqual(match_z("Python rocks!"), "Not matched!", 'match_z("Python rocks!")')
+        self.assertEqual(match_z("Zippers"), "Not matched!", 'match_z("Zippers")')
+        self.assertEqual(match_z("pez"), "Found a match!", 'match_z("pez")')
+        self.assertEqual(match_z("abc"), "Not matched!", 'match_z("abc")')
+
+MyTests().main()
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</li>
+<li>
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=regex_writecode6 data-question_label="12.12.10">
+<div id=regex_writecode6_question class="ac_question col-md-12">
+<p>Define the function matchMiddle_z to match a word containing the letter z,
+but not at the beginning or end of a word. Return “Found a match!” if z is
+in the string and “Not matched!” if there is not a z.</p>
+
+</div>
+<textarea data-lang="python" id="regex_writecode6_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+import re
+def matchMiddle_z(string):
+
+====
+from unittest.gui import TestCaseGui
+
+class MyTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(matchMiddle_z("Buzzing bee"), "Found a match!", 'matchMiddle_z("Buzzing bee")')
+        self.assertEqual(matchMiddle_z("zippers"), "Not matched!", 'matchMiddle_z("zippers")')
+        self.assertEqual(matchMiddle_z("pez"), "Not matched!", 'matchMiddle_z("pez")')
+        self.assertEqual(matchMiddle_z("abc"), "Not matched!", 'matchMiddle_z("abc")')
+        self.assertEqual(matchMiddle_z("buzz"), "Found a match!", 'matchMiddle_z("buzz")')
+
+MyTests().main()
+</textarea>
+</div>
+</div>
+</li>
+<li><div id='regex_writecode7' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=regex_writecode7q data-question_label="12.12.11">
+<div id=regex_writecode7q_question class="ac_question col-md-12">
+<p>Finish the code below to find all of the emails in “mbox-short4.txt” and add them to a list and return the list.  An email starts with an alphanumeric character followed by one or more non white space characters and then “&#64;” followed by one or more non white space characters with one alphabetic character at the end.</p>
+
+</div>
+<textarea data-lang="python" id="regex_writecode7q_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''  data-datafile='mbox-short4.txt'    
+           data-wasm=/_static
+     style="visibility: hidden;">
+import re
+hand = open('mbox-short4.txt')
+====
+from unittest.gui import TestCaseGui
+
+class MyTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(email_list, [['gopal.ramasammycook@gmail.com'], ['louis@media.berkeley.edu'], ['cwen@iupui.edu'], ['antranig@caret.cam.ac.uk'], ['rjlowe@iupui.edu'], ['gsilver@umich.edu'], ['david.horwitz@uct.ac.za'], ['wagnermr@iupui.edu'], ['zqian@umich.edu'], ['stephen.marquard@uct.ac.za'], ['ray@media.berkeley.edu']], "Testing that all the emails were matched.")
+MyTests().main()
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=regex_writecode7a data-question_label="12.12.12">
+<div id=regex_writecode7a_question class="ac_question col-md-12">
+<p>Finish the code below to find all of the emails in “mbox-short4.txt” and add them to a list and return the list.  An email starts with an alphanumeric character followed by one or more non white space characters and then “&#64;” followed by one or more non white space characters with one alphabetic character at the end.</p>
+
+</div>
+<textarea data-lang="python" id="regex_writecode7a_editor" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''  data-datafile='mbox-short4.txt'    
+           data-wasm=/_static
+     style="visibility: hidden;">
+# First import regex (re) and create a handle for the file.
+# Initialize a list to hold the emails.
+# Iterate through each line in the file, using rstrip() to remove whitespace and findall() with a regex expression to find the emails.
+# Add each email to the list, individually
+# Print the email list after each loop has completed.
+import re
+hand = open('mbox-short4.txt')
+email_list = []
+for line in hand:
+    line = line.rstrip()
+    x = re.findall('[a-zA-Z0-9]\S+@\S+[a-zA-Z]', line)
+    for email in x:
+        email_list.append(x)
+print(email_list)
+====
+from unittest.gui import TestCaseGui
+
+class MyTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(email_list, [['gopal.ramasammycook@gmail.com'], ['louis@media.berkeley.edu'], ['cwen@iupui.edu'], ['antranig@caret.cam.ac.uk'], ['rjlowe@iupui.edu'], ['gsilver@umich.edu'], ['david.horwitz@uct.ac.za'], ['wagnermr@iupui.edu'], ['zqian@umich.edu'], ['stephen.marquard@uct.ac.za'], ['ray@media.berkeley.edu']], "Testing that all the emails were matched.")
+MyTests().main()
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</li>
+<li>
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=regex_writecode8 data-question_label="12.12.13">
+<div id=regex_writecode8_question class="ac_question col-md-12">
+<p>Using “mbox-short4.txt”, extract the email domains from each email address
+using regex and add them to the list “domains”. For the email <a class="reference external" href="mailto:noname&#37;&#52;&#48;umich&#46;edu">noname<span>&#64;</span>umich<span>&#46;</span>edu</a>,
+this would locate the string “umich.edu”.</p>
+
+</div>
+<textarea data-lang="python" id="regex_writecode8_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+import re
+hand = open('mbox-short4.txt')
+domains = []
+
+====
+from unittest.gui import TestCaseGui
+
+class MyTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(domains, ['@gmail.com', '@media.berkeley.edu', '@iupui.edu', '@caret.cam.ac.uk', '@iupui.edu', '@umich.edu', '@uct.ac.za', '@iupui.edu', '@umich.edu', '@uct.ac.za', '@media.berkeley.edu'], "Testing that all domains were matched.")
+MyTests().main()
+</textarea>
+</div>
+</div>
+</li>
+<li><div id='regex_writecode9' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=regex_writecode9q data-question_label="12.12.14">
+<div id=regex_writecode9q_question class="ac_question col-md-12">
+<p>Using “mbox-short4.txt”, extract the number next to each email (the
+amount of emails each person has sent) using a regex equation, and
+calculate the total amount of emails sent. Save this to the variable
+‘total_emails’. Use the () character to capture and return the number.</p>
+
+</div>
+<textarea data-lang="python" id="regex_writecode9q_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+hand = open('mbox-short4.txt')
+====
+from unittest.gui import TestCaseGui
+
+class MyTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(total_emails, 27, "Testing that the average was calculated properly.")
+
+MyTests().main()
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=regex_writecode9a data-question_label="12.12.15">
+<div id=regex_writecode9a_question class="ac_question col-md-12">
+<p>Using “mbox-short4.txt”, extract the number next to each email (the
+amount of emails each person has sent) using a regex equation, and
+calculate the total amount of emails sent. Save this to the variable
+‘total_emails’. Use the () character to capture and return the number.</p>
+
+</div>
+<textarea data-lang="python" id="regex_writecode9a_editor" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# Import regex (re), create a variable for the total number of emails, and create a handle to access the file.
+# Iterate through lines in the file, remove trailing whitespace with rstrip(), and create a regex expression to use with findall() to return a list of email matches.
+# Finally, increment the total_emails variable for each email in the list
+# Print the variable after each loop has completed.
+import re
+total_emails = 0
+hand = open('mbox-short4.txt')
+for line in hand:
+    line = line.rstrip()
+    x = re.findall('[a-zA-Z0-9]\S+@\S+[a-zA_Z]\s?(\d)', line)
+    for item in x:
+        total_emails += int(item)
+print(total_emails)
+====
+from unittest.gui import TestCaseGui
+
+class MyTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(total_emails, 27, "Testing that the average was calculated properly.")
+
+MyTests().main()
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</li>
+<li>
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=regex_writecode10 data-question_label="12.12.16">
+<div id=regex_writecode10_question class="ac_question col-md-12">
+<p>Using “mbox-short4.txt”, extract the usernames from each email address
+using regex and add them to the list “usernames”. For the email <a class="reference external" href="mailto:noname&#37;&#52;&#48;umich&#46;edu">noname<span>&#64;</span>umich<span>&#46;</span>edu</a>,
+this would locate the string “noname”.</p>
+
+</div>
+<textarea data-lang="python" id="regex_writecode10_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+
+====
+from unittest.gui import TestCaseGui
+
+class MyTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(usernames, ['gopal.ramasammycook', 'louis', 'cwen', 'antranig', 'rjlowe', 'gsilver', 'david.horwitz', 'wagnermr', 'zqian', 'stephen.marquard', 'ray'], "Testing that all usernames were matched.")
+MyTests().main()
+</textarea>
+</div>
+</div>
+</li>
+</ol>
+</section>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 12.11. Mixed-Up Code Questions' data-toggle="tooltip">
+  <a href="mixedupcode.html" aria-label="Previous - 12.11. Mixed-Up Code Questions">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 12.13. Group Work: Regular Expressions (Regex)' data-toggle="tooltip" >
+    <a href="regex-group.html" aria-label="Next - 12.13. Group Work: Regular Expressions (Regex)">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 - Based on Python for Everybody.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+  
+    {% if settings.google_ga %}
+      <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '{{ settings.google_ga }}']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+    {% endif %}
+  
+
+  
+    <script type="application/json" class="js-hypothesis-config">
+    {
+      "showHighlights": false
+    }
+    </script>
+
+    <script async src="https://hypothes.is/embed.js"></script>
+    <!--provide space to prevent hypothes.is sidebar from obscuring content-->
+    <style>@media screen and (max-width:767px) { body { padding-right: 21px; }}</style>
+
+  
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>
