@@ -1,0 +1,655 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>16.13. Multiple Choice Questions &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.cd688d1623c9932e.css?v=630908D8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.bf73008a1eba9f4e.css?v=7DED055E" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/runtime.439d581f758f2b99.bundle.js?v=2E54442"></script>
+    <script src="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.51d9dde4e5162190.bundle.js?v=9CAA2D33"></script>
+    <script src="../_static/runestone.42b576791a4ed54b.bundle.js?v=B7293199"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="16.14. Mixed-Up Code Exercises" href="mixedupcode.html" />
+    <link rel="prev" title="16.12. Glossary" href="glossary.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    
+    eBookConfig.useRunestoneServices = {{use_services}};
+    eBookConfig.host = '';
+    eBookConfig.app = eBookConfig.host + '/runestone';
+    eBookConfig.course = '{{ course_name }}';
+    eBookConfig.basecourse = '{{ base_course }}';
+    eBookConfig.isLoggedIn = {{ is_logged_in}};
+    eBookConfig.email = '{{ user_email }}';
+    eBookConfig.isInstructor = {{ is_instructor }};
+    eBookConfig.username = '{{ user_id}}';
+    eBookConfig.readings = {{ readings|safe}};
+    eBookConfig.activities = {{ activity_info|safe }}
+    eBookConfig.downloadsEnabled = {{downloads_enabled}};
+    eBookConfig.allow_pairs = {{allow_pairs}}
+    eBookConfig.enableCompareMe = {{enable_compare_me}};
+    // _`new_server_prefix`: Defined by the server to be the path to the new server.
+    eBookConfig.new_server_prefix = '{{ new_server_prefix }}';
+    
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+    
+        {% if serve_ad is defined and serve_ad and settings.adsenseid %}
+         <script data-ad-client="{{settings.adsenseid}}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        {% endif %}
+    
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+            
+            {{ course_name }}
+            
+          
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span class="visuallyhidden" aria-label="User">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li id="inst_peer_link"><a href='/runestone/peer/instructor.html'>Peer Instruction (Instructor)</a></li>            
+            <li><a href='/runestone/peer/student.html'>Peer Instruction (Student)</a></li>            
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="runestoneComponents.switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=Exercises'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+            <script></script>
+<li class="dropdown globaltoc-container">
+    <a
+        href="../index.html"
+        class="dropdown-toggle"
+        data-toggle="dropdown"
+        aria-label="index"
+        >This Chapter<b class="caret"></b
+    ></a>
+    <ul class="dropdown-menu globaltoc">
+         
+        {% for row in subchapter_list %}
+        <li class="toctree-l1">
+            <a class="reference internal" href="{{ row['subchap_uri']}}"
+                >{{ row['title']}}</a
+            >
+        </li>
+        {% endfor %} 
+        
+    </ul>
+</li>
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">16.12. </span>Glossary" data-toggle="tooltip">
+    <a href="glossary.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">16.14. </span>Mixed-Up Code Exercises' data-toggle="tooltip" >              
+    <a href="mixedupcode.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+    
+        {% if settings.num_banners > 0 and settings.show_rs_banner %}
+         <div style="width: 100%;">
+            <a href="/runestone/default/donate?banner={{banner_num}}">
+            <img class="runestone-banner"
+                 src="/runestone/static/images/RunestoneBanner{{banner_num}}.png"
+                 alt="Please Support Runestone"
+                 style="display: block; width: 728px; margin-left: auto; margin-right: auto; margin-top: 10px;">
+            </a>
+         </div>
+        {% endif %}
+    
+
+
+  
+  <section id="multiple-choice-questions">
+<h1><span class="section-number">16.13. </span>Multiple Choice Questions<a class="headerlink" href="#multiple-choice-questions" title="Permalink to this headline">¶</a></h1>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="16.13.1" data-multipleanswers="false"  id="inheritance_mchoice1"  style="visibility: hidden;">
+    <p>Q-1: In which of the following does the <code class="docutils literal notranslate"><span class="pre">CricketFan</span></code> class correctly inherit from the <code class="docutils literal notranslate"><span class="pre">PartyAnimal</span></code> class?</p>
+
+    <li data-component="answer"  id="inheritance_mchoice1_opt_a">from party import PartyAnimal</li><li data-component="feedback">This is a necessary  step to import the PartyAnimal class, but it does not define a class CricketFan that inherits from PartyAnimal</li>
+    
+    <li data-component="answer" data-correct='yes' id="inheritance_mchoice1_opt_b">class CricketFan(PartyAnimal)</li><li data-component="feedback">Correct! CricketFan inherits from PartyAnimal.</li>
+    
+    <li data-component="answer"  id="inheritance_mchoice1_opt_c">an = PartyAnimal()</li><li data-component="feedback">This only creates an instance of the PartyAnimal class called an.</li>
+    
+    <li data-component="answer"  id="inheritance_mchoice1_opt_d">CricketFan = PartyAnimal()</li><li data-component="feedback">This would create an instance of the PartyAnimal class called CricketFan.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="16.13.2" data-multipleanswers="false"  id="objects_select_name"  style="visibility: hidden;">
+    <p>Q-2: Which of the following does <strong>not</strong> correctly create an object instance?</p>
+
+    <li data-component="answer"  id="objects_select_name_opt_a">puppy = Dog("Jamie")</li><li data-component="feedback">This uses the constructor function to create an object with arguments.</li>
+    
+    <li data-component="answer"  id="objects_select_name_opt_b">dog = Dog("Jamie")</li><li data-component="feedback">The instance can have a similar name to the class. This uses the constructor function to create an object with arguments.</li>
+    
+    <li data-component="answer"  id="objects_select_name_opt_c">jamie = Dog()</li><li data-component="feedback">This is correct and does not have arguments.</li>
+    
+    <li data-component="answer" data-correct='yes' id="objects_select_name_opt_d">pupper = new Dog("Jamie")</li><li data-component="feedback">The 'new' is incorrect</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="16.13.3" data-multipleanswers="false"  id="multipleinstances_code_output"  style="visibility: hidden;">
+    <p>Q-3: What does the following code output?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">People</span><span class="p">():</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">def</span> <span class="nf">namePrint</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+  <span class="n">person1</span> <span class="o">=</span> <span class="n">People</span><span class="p">(</span><span class="s2">&quot;Sally&quot;</span><span class="p">)</span>
+  <span class="n">person2</span> <span class="o">=</span> <span class="n">People</span><span class="p">(</span><span class="s2">&quot;Louise&quot;</span><span class="p">)</span>
+  <span class="n">person1</span><span class="o">.</span><span class="n">namePrint</span><span class="p">()</span>
+</pre></div>
+</div>
+
+    <li data-component="answer" data-correct='yes' id="multipleinstances_code_output_opt_a">Sally</li><li data-component="feedback">This prints the value of the name attribute for person1.</li>
+    
+    <li data-component="answer"  id="multipleinstances_code_output_opt_b">Louise</li><li data-component="feedback">'Louise' is the 'name' of person2 but we are calling the person1 instance.</li>
+    
+    <li data-component="answer"  id="multipleinstances_code_output_opt_c">Sally Louise</li><li data-component="feedback">It only prints the value of name for one instance.</li>
+    
+    <li data-component="answer"  id="multipleinstances_code_output_opt_d">person1</li><li data-component="feedback">The output is not the name of the instance.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="16.13.4" data-multipleanswers="false"  id="multipleinstances_mchoice1"  style="visibility: hidden;">
+    <p>Q-4: Which of the following statements is incorrect about the following code?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">People</span><span class="p">():</span>
+
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+  <span class="k">def</span> <span class="nf">namePrint</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="n">person1</span> <span class="o">=</span> <span class="n">People</span><span class="p">(</span><span class="s2">&quot;Sally&quot;</span><span class="p">)</span>
+<span class="n">person2</span> <span class="o">=</span> <span class="n">People</span><span class="p">(</span><span class="s2">&quot;Louise&quot;</span><span class="p">)</span>
+<span class="n">person1</span><span class="o">.</span><span class="n">namePrint</span><span class="p">()</span>
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="multipleinstances_mchoice1_opt_a">person1 and person2 are two different instances of the People class.</li><li data-component="feedback">Since two different objects were created, this is correct.</li>
+    
+    <li data-component="answer"  id="multipleinstances_mchoice1_opt_b">The __init__ method is used to set initial values for attributes.</li><li data-component="feedback">__init__ is an optional method in classes that is used to set initial values for objects.</li>
+    
+    <li data-component="answer" data-correct='yes' id="multipleinstances_mchoice1_opt_c">'self' is not needed in def namePrint(self):</li><li data-component="feedback">'self' is used to represent the current instance of the class.</li>
+    
+    <li data-component="answer"  id="multipleinstances_mchoice1_opt_d">person2 has a different value for 'name' than person1.</li><li data-component="feedback">Since they are two different instances, they cannot access each other and have different initial values too</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="16.13.5" data-multipleanswers="false"  id="objectoriented_subdividing"  style="visibility: hidden;">
+    <p>Q-5: Which of the following statements is <strong>not</strong> true about object-oriented programming?</p>
+
+    <li data-component="answer"  id="objectoriented_subdividing_opt_a">One of the benefits of object-oriented programming is that it can hide complexity.</li><li data-component="feedback">This is true, while using an object, we need to know how to use the object class but
+not how it works internally.</li>
+    
+    <li data-component="answer"  id="objectoriented_subdividing_opt_b">A class contains functions as well as the data that is used by those functions.</li><li data-component="feedback">This is true  as an class can contain functions as well as data that is used by those functions.</li>
+    
+    <li data-component="answer" data-correct='yes' id="objectoriented_subdividing_opt_c">Constructor methods are required to initialize an object and destructor methods are required to destroy the
+object when no longer required.</li><li data-component="feedback">This is false, a constructor is optional can be used to set initial values for an object and python automatically
+destroys any object if its reference count changes to a zero without needing a destructor.</li>
+    
+    <li data-component="answer"  id="objectoriented_subdividing_opt_d">A powerful feature of object-oriented programming is the ability to create a new class by extending an existing class.</li><li data-component="feedback">This is true, we can extend a 'parent' class to create a new 'child' class and the new class has access to its functions
+and can override them if needed.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="16.13.6" data-multipleanswers="false"  id="objectoriented_keyword"  style="visibility: hidden;">
+    <p>Q-6: The _________ keyword defines a template indicating the data that will be in an object of the class and the functions that can be called on an object of the class.</p>
+
+    <li data-component="answer" data-correct='yes' id="objectoriented_keyword_opt_a">class</li><li data-component="feedback">The class keyword defines the data that is in an object of a class and the functions that can be called on an object of the class.</li>
+    
+    <li data-component="answer"  id="objectoriented_keyword_opt_b">object</li><li data-component="feedback">An object is created using this template.</li>
+    
+    <li data-component="answer"  id="objectoriented_keyword_opt_c">Class</li><li data-component="feedback">The keyword is case-sensitive</li>
+    
+    <li data-component="answer"  id="objectoriented_keyword_opt_d">instance</li><li data-component="feedback">An instance is a single occurrence of an object created when the object is initialized.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="16.13.7" data-multipleanswers="false"  id="word_output"  style="visibility: hidden;">
+    <p>Q-7: _________ is not a keyword, but by convention it is used to refer to the current instance (object) of a class.</p>
+
+    <li data-component="answer"  id="word_output_opt_a">class</li><li data-component="feedback">'class' is a keyword that defines the template for objects of the class.</li>
+    
+    <li data-component="answer"  id="word_output_opt_b">def</li><li data-component="feedback">'def' is used to define a function</li>
+    
+    <li data-component="answer" data-correct='yes' id="word_output_opt_c">self</li><li data-component="feedback">'self' is not a keyword, but by convention is used to refer to the current object</li>
+    
+    <li data-component="answer"  id="word_output_opt_d">init</li><li data-component="feedback">'init' is not a keyword, but the __init__ method is created to initialize class variables.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="16.13.8" data-multipleanswers="false"  id="object_oriented_output"  style="visibility: hidden;">
+    <p>Q-8: What is the output of the following code?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Pokemon</span><span class="p">():</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="nb">type</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="nb">type</span>
+
+    <span class="k">def</span> <span class="nf">stringPokemon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pokemon name is </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> and type is </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">GrassType</span><span class="p">(</span><span class="n">Pokemon</span><span class="p">):</span>
+
+    <span class="c1"># overrides the stringPokemon() function on &#39;Pokemon&#39; class</span>
+    <span class="k">def</span> <span class="nf">stringPokemon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Grass type pokemon name is </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">poke1</span> <span class="o">=</span> <span class="n">GrassType</span><span class="p">(</span><span class="s1">&#39;Bulbasaur&#39;</span><span class="p">,</span> <span class="s1">&#39;Grass&#39;</span><span class="p">)</span>
+<span class="n">poke1</span><span class="o">.</span><span class="n">stringPokemon</span>
+<span class="n">poke1</span><span class="o">.</span><span class="n">stringPokemon</span><span class="p">()</span>
+<span class="n">poke2</span> <span class="o">=</span> <span class="n">Pokemon</span><span class="p">(</span><span class="s1">&#39;Charizard&#39;</span><span class="p">,</span> <span class="s1">&#39;Fire&#39;</span><span class="p">)</span>
+<span class="n">poke2</span><span class="o">.</span><span class="n">stringPokemon</span>
+<span class="n">poke2</span><span class="o">.</span><span class="n">stringPokemon</span><span class="p">()</span>
+</pre></div>
+</div>
+
+    <li data-component="answer" data-correct='yes' id="object_oriented_output_opt_a">Grass type pokemon name is Bulbasaur
+Pokemon name is Charizard and type is Fire</li><li data-component="feedback">A child class can inherit functions from parent class and also override them.</li>
+    
+    <li data-component="answer"  id="object_oriented_output_opt_b">Pokemon name is Bulbasaur and type is Grass
+Pokemon name is Charizard and type is Fire</li><li data-component="feedback">The stringPokemon() functions is changed inside the GrassType class.</li>
+    
+    <li data-component="answer"  id="object_oriented_output_opt_c">Grass type pokemon name is Bulbasaur
+Grass type pokemon name is Charizard</li><li data-component="feedback">The stringPokemon() functions is only changed for GrassType class but remains unchanged
+in the original class.</li>
+    
+    <li data-component="answer"  id="object_oriented_output_opt_d">Error because the extending class has a stringPokemon() function
+which already exists.</li><li data-component="feedback">A class inherits functions from another class and override them in any way. Only the
+constructor class cannot be changed.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="16.13.9" data-multipleanswers="false"  id="tf_object_oriented"  style="visibility: hidden;">
+    <p>Q-9: True or False? In order to extend a class, the new class should have access to all the data and inner workings of
+the parent class.</p>
+
+    <li data-component="answer"  id="tf_object_oriented_opt_a">True</li><li data-component="feedback">The child class does not need access to the all the inner workings in parent class.</li>
+    
+    <li data-component="answer" data-correct='yes' id="tf_object_oriented_opt_b">False</li><li data-component="feedback">The child class knows how to use the parent class and its functions but not its
+data and the inner workings. The "super" command can come in handy here.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="16.13.10" data-multipleanswers="false"  id="objects_correct"  style="visibility: hidden;">
+    <p>Q-10: Which of the following is the correct way to define an initializer  method?</p>
+
+    <li data-component="answer"  id="objects_correct_opt_a">def __init__(title, author):</li><li data-component="feedback">Unless a class method is static, 'self' is explicitly used to represent current instance.</li>
+    
+    <li data-component="answer" data-correct='yes' id="objects_correct_opt_b">def __init__(self, title, author):</li><li data-component="feedback">"self" is used to represent an instance of the given class and the parameters will be used to initialize variables.</li>
+    
+    <li data-component="answer"  id="objects_correct_opt_c">def __init__():</li><li data-component="feedback">At minimum, the "self" parameter is needed to represent an instance of the given class.</li>
+    
+    <li data-component="answer"  id="objects_correct_opt_d">__init__(self, title, author):</li><li data-component="feedback">The reserved word "def" is necessary to define a method.</li>
+    
+
+    </ul>
+    </div>
+    </section>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 16.12. Glossary' data-toggle="tooltip">
+  <a href="glossary.html" aria-label="Previous - 16.12. Glossary">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 16.14. Mixed-Up Code Exercises' data-toggle="tooltip" >
+    <a href="mixedupcode.html" aria-label="Next - 16.14. Mixed-Up Code Exercises">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 - Based on Python for Everybody.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+  
+    {% if settings.google_ga %}
+      <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '{{ settings.google_ga }}']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+    {% endif %}
+  
+
+  
+    <script type="application/json" class="js-hypothesis-config">
+    {
+      "showHighlights": false
+    }
+    </script>
+
+    <script async src="https://hypothes.is/embed.js"></script>
+    <!--provide space to prevent hypothes.is sidebar from obscuring content-->
+    <style>@media screen and (max-width:767px) { body { padding-right: 21px; }}</style>
+
+  
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

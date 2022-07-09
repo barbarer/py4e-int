@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title><title><no title></title></title>
+  <meta http-equiv="content-type" content="text/html; charset=None">
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css">
+</head>
+<body>
+<h2><title><no title></title></h2>
+
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+
+<span class="k">def</span> <span class="nf">correct</span><span class="p">(</span><span class="n">answer</span><span class="p">):</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="n">answer</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;correct&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pos</span> <span class="o">&gt;=</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">addAnswer</span><span class="p">(</span><span class="n">userDict</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">timestamp</span><span class="p">,</span> <span class="n">answer</span><span class="p">):</span>
+    <span class="n">answerDict</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">userDict</span><span class="p">[</span><span class="n">user</span><span class="p">]</span> <span class="o">=</span> <span class="n">answerDict</span>
+    <span class="n">answerDict</span><span class="p">[</span><span class="s2">&quot;timestamp&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">timestamp</span>
+    <span class="n">answerDict</span><span class="p">[</span><span class="s2">&quot;correct&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">correct</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
+
+
+<span class="c1"># function to gather the data on the mchoice questions</span>
+<span class="k">def</span> <span class="nf">mchoice_worker</span><span class="p">(</span><span class="n">inFileName</span><span class="p">,</span> <span class="n">outFileName</span><span class="p">):</span>
+
+    <span class="c1"># open the output file for writing</span>
+    <span class="nb">dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+    <span class="n">out_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">dir</span><span class="p">,</span> <span class="n">outFileName</span><span class="p">)</span>
+    <span class="n">in_path</span><span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">dir</span><span class="p">,</span> <span class="n">inFileName</span><span class="p">)</span>
+    <span class="n">outFile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">out_path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+
+    <span class="c1"># open the input and output files as csv files</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">in_path</span><span class="p">)</span> <span class="k">as</span> <span class="n">csv_file</span><span class="p">:</span>
+        <span class="n">csv_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">csv_file</span><span class="p">)</span>
+        <span class="n">csv_writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">outFile</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">quotechar</span><span class="o">=</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="n">quoting</span><span class="o">=</span><span class="n">csv</span><span class="o">.</span><span class="n">QUOTE_MINIMAL</span><span class="p">)</span>
+
+        <span class="c1"># create an empty problem dictionary</span>
+        <span class="n">probDict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+        <span class="c1"># loop through the rows</span>
+        <span class="k">for</span> <span class="n">cols</span> <span class="ow">in</span> <span class="n">csv_reader</span><span class="p">:</span>
+
+            <span class="c1"># get the event</span>
+            <span class="n">event</span> <span class="o">=</span> <span class="n">cols</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+
+            <span class="c1"># if event is mChoice</span>
+            <span class="k">if</span> <span class="n">event</span> <span class="o">==</span> <span class="s2">&quot;mChoice&quot;</span><span class="p">:</span>
+
+                <span class="c1"># get the divid, user, timestamp, and answer</span>
+                <span class="n">div</span> <span class="o">=</span> <span class="n">cols</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
+                <span class="n">user</span> <span class="o">=</span> <span class="n">cols</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+                <span class="n">timestamp</span> <span class="o">=</span> <span class="n">cols</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+                <span class="n">answer</span> <span class="o">=</span> <span class="n">cols</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+
+                <span class="c1"># if no dictionary for this problem create one and add this user and answer</span>
+                <span class="k">if</span> <span class="n">div</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">probDict</span><span class="p">:</span>
+                    <span class="n">userDict</span> <span class="o">=</span> <span class="p">{}</span>
+                    <span class="n">probDict</span><span class="p">[</span><span class="n">div</span><span class="p">]</span> <span class="o">=</span> <span class="n">userDict</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">userDict</span> <span class="o">=</span> <span class="n">probDict</span><span class="p">[</span><span class="n">div</span><span class="p">]</span>
+
+                <span class="c1"># if user in dictionary</span>
+                <span class="k">if</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">userDict</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">addAnswer</span><span class="p">(</span><span class="n">userDict</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">timestamp</span><span class="p">,</span> <span class="n">answer</span><span class="p">)</span>
+
+        <span class="c1"># for each multiple choice question total the number of correct responses</span>
+        <span class="k">for</span> <span class="n">prob</span> <span class="ow">in</span> <span class="n">probDict</span><span class="p">:</span>
+
+            <span class="n">total_correct</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="c1"># loop through the users</span>
+            <span class="n">user_dict</span> <span class="o">=</span> <span class="n">probDict</span><span class="p">[</span><span class="n">prob</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">user_dict</span><span class="p">:</span>
+
+                <span class="n">answerDict</span> <span class="o">=</span> <span class="n">user_dict</span><span class="p">[</span><span class="n">user</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">answerDict</span><span class="p">[</span><span class="s2">&quot;correct&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+                    <span class="n">total_correct</span> <span class="o">+=</span> <span class="mi">1</span>
+
+            <span class="c1"># write out the problem id and percent who got it correct</span>
+            <span class="n">total_attempted</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">user_dict</span><span class="p">)</span>
+            <span class="n">percent_correct</span> <span class="o">=</span> <span class="n">total_correct</span> <span class="o">/</span> <span class="n">total_attempted</span> 
+            <span class="n">csv_writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="n">prob</span><span class="p">,</span> <span class="n">total_correct</span><span class="p">,</span> <span class="n">total_attempted</span><span class="p">,</span> <span class="n">percent_correct</span><span class="p">])</span>
+
+    <span class="n">outFile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">probDict</span><span class="p">)</span>
+
+<span class="n">num</span> <span class="o">=</span> <span class="n">mchoice_worker</span><span class="p">(</span><span class="s2">&quot;mChoiceSmall.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;mchoiceResults.csv&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The number of unique questions is </span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">unittest</span>
+<span class="k">class</span> <span class="nc">myTests</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+    
+    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+        <span class="n">inFile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">dir</span><span class="p">,</span> <span class="s2">&quot;mchoiceResults.csv&quot;</span><span class="p">))</span>
+        <span class="n">csv_in</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">inFile</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">datad</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">cols</span> <span class="ow">in</span> <span class="n">csv_in</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">datad</span><span class="p">[</span><span class="n">cols</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">cols</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">cols</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="nb">float</span><span class="p">(</span><span class="n">cols</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span>
+
+    <span class="k">def</span> <span class="nf">testLen</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">datad</span><span class="p">),</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;num unique problems&quot;</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">testData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">datad</span><span class="p">[</span><span class="s2">&quot;q2_2_1&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;num attempted for q2_2_1&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">datad</span><span class="p">[</span><span class="s2">&quot;q2_2_1&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;num correct for q2_2_1&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEqual</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">datad</span><span class="p">[</span><span class="s2">&quot;q2_2_1&quot;</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;percent for q2_2_1&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">datad</span><span class="p">[</span><span class="s2">&quot;q2_2_2&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;num attempted for q2_2_2&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">datad</span><span class="p">[</span><span class="s2">&quot;q2_2_2&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;num correct for q2_2_2&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEqual</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">datad</span><span class="p">[</span><span class="s2">&quot;q2_2_2&quot;</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="mf">57.14</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;percent for q2_2_2&quot;</span><span class="p">)</span>
+
+<span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</body>
+</html>
