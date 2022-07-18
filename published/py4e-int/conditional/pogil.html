@@ -1,0 +1,811 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>4.14. Group Work - Conditionals and Logic &#8212; Python for Everybody - Interactive</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.cd688d1623c9932e.css?v=630908D8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.bf73008a1eba9f4e.css?v=7DED055E" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/runtime.439d581f758f2b99.bundle.js?v=2E54442"></script>
+    <script src="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.51d9dde4e5162190.bundle.js?v=9CAA2D33"></script>
+    <script src="../_static/runestone.42b576791a4ed54b.bundle.js?v=B7293199"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5. Functions" href="../functions/toctree.html" />
+    <link rel="prev" title="4.13. Write Code Questions" href="WriteCode.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    
+    eBookConfig.useRunestoneServices = {{use_services}};
+    eBookConfig.host = '';
+    eBookConfig.app = eBookConfig.host + '/runestone';
+    eBookConfig.course = '{{ course_name }}';
+    eBookConfig.basecourse = '{{ base_course }}';
+    eBookConfig.isLoggedIn = {{ is_logged_in}};
+    eBookConfig.email = '{{ user_email }}';
+    eBookConfig.isInstructor = {{ is_instructor }};
+    eBookConfig.username = '{{ user_id}}';
+    eBookConfig.readings = {{ readings|safe}};
+    eBookConfig.activities = {{ activity_info|safe }}
+    eBookConfig.downloadsEnabled = {{downloads_enabled}};
+    eBookConfig.allow_pairs = {{allow_pairs}}
+    eBookConfig.enableCompareMe = {{enable_compare_me}};
+    // _`new_server_prefix`: Defined by the server to be the path to the new server.
+    eBookConfig.new_server_prefix = '{{ new_server_prefix }}';
+    
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = '' ? '' : 'python'
+  eBookConfig.runestone_version = '';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+    
+        {% if serve_ad is defined and serve_ad and settings.adsenseid %}
+         <script data-ad-client="{{settings.adsenseid}}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        {% endif %}
+    
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+            
+            {{ course_name }}
+            
+          
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"><span class="visuallyhidden" aria-label="User">User</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='/runestone/assignments/chooseAssignment.html'>Assignments</a></li>
+            <li><a href='/runestone/assignments/practice'>Practice</a></li>
+            <li id="inst_peer_link"><a href='/runestone/peer/instructor.html'>Peer Instruction (Instructor)</a></li>            
+            <li><a href='/runestone/peer/student.html'>Peer Instruction (Student)</a></li>            
+            <li class="divider"></li>
+            
+            <li><a href='/runestone/default/courses'>Change Course</a></li>
+			      <li class="divider"></li>
+            <li id="ip_dropdown_link"><a href='/runestone/admin/index'>Instructor's Page</a></li>
+            
+            <li><a href='/runestone/dashboard/studentreport'>Progress Page</a></li>
+            <li class="divider"></li>
+            
+            <li><a href="/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="/runestone/default/user/register" id="registerlink">Register</a></li>
+            
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+			<!-- dark mode toggle -->
+             <li><label class="theme-switch" for="checkbox">
+					  <input type="checkbox" id="checkbox" onchange="runestoneComponents.switchTheme()" />
+							<div class="slider round"></div>
+					</label>Dark Mode</li>
+			 </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=py4e-int&page=pogil'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+            <script></script>
+<li class="dropdown globaltoc-container">
+    <a
+        href="../index.html"
+        class="dropdown-toggle"
+        data-toggle="dropdown"
+        aria-label="index"
+        >This Chapter<b class="caret"></b
+    ></a>
+    <ul class="dropdown-menu globaltoc">
+         
+        {% for row in subchapter_list %}
+        <li class="toctree-l1">
+            <a class="reference internal" href="{{ row['subchap_uri']}}"
+                >{{ row['title']}}</a
+            >
+        </li>
+        {% endfor %} 
+        
+    </ul>
+</li>
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">4.13. </span>Write Code Questions" data-toggle="tooltip">
+    <a href="WriteCode.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">5. </span>Functions' data-toggle="tooltip" >              
+    <a href="../functions/toctree.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+    
+        {% if settings.num_banners > 0 and settings.show_rs_banner %}
+         <div style="width: 100%;">
+            <a href="/runestone/default/donate?banner={{banner_num}}">
+            <img class="runestone-banner"
+                 src="/runestone/static/images/RunestoneBanner{{banner_num}}.png"
+                 alt="Please Support Runestone"
+                 style="display: block; width: 728px; margin-left: auto; margin-right: auto; margin-top: 10px;">
+            </a>
+         </div>
+        {% endif %}
+    
+
+
+  
+  <section id="group-work-conditionals-and-logic">
+<h1><span class="section-number">4.14. </span>Group Work - Conditionals and Logic<a class="headerlink" href="#group-work-conditionals-and-logic" title="Permalink to this headline">¶</a></h1>
+<p>It is best to use a POGIL approach with the following. In POGIL students work
+in groups on activities and each member has an assigned role.  For more information see <a class="reference external" href="https://cspogil.org/Home">https://cspogil.org/Home</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.</p>
+</div>
+<p><strong>Content Learning Objectives</strong></p>
+<p><em>After completing this activity, students should be able to:</em></p>
+<ul class="simple">
+<li><p>Evaluate boolean expressions with comparison operators (<strong>&lt;</strong>, <strong>&gt;</strong>, <strong>&lt;=</strong>, <strong>&gt;=</strong>, <strong>==</strong>, <strong>!=</strong>).</p></li>
+<li><p>Explain the syntax and meaning of <strong>if/else</strong> statements and indented blocks.</p></li>
+<li><p>Evaluate boolean expressions that involve comparisons with <strong>and</strong>, <strong>or</strong>, and <strong>not</strong>.</p></li>
+</ul>
+<p><strong>Process Skill Goals:</strong></p>
+<p><em>During the activity, students should make progress toward:</em></p>
+<ul class="simple">
+<li><p>Evaluating complex logic expressions based on operator precedence (Critical Thinking).</p></li>
+</ul>
+<section id="comparison-operators">
+<h2><span class="section-number">4.14.1. </span>Comparison Operators<a class="headerlink" href="#comparison-operators" title="Permalink to this headline">¶</a></h2>
+<p>In Python, a comparison (e.g., 100 &lt; 200) will yield a Boolean value of either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.
+Most data types (including <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code>, and <code class="docutils literal notranslate"><span class="pre">tuple</span></code>) can be compared
+using the following operators:</p>
+<p>Less than (<strong>&lt;</strong>), less than or equal (<strong>&lt;=</strong>), greater than (<strong>&gt;</strong>),
+greater than or equal (<strong>&gt;=</strong>), equal (<strong>==</strong>), and not equal (<strong>!=</strong>).</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=cond_ac_pogil_output_bool data-question_label="4.14.1.1">
+<div id=cond_ac_pogil_output_bool_question class="ac_question col-md-12">
+<p>Run this code to see what it prints. Each line of code may or may not print something.</p>
+
+</div>
+<textarea data-lang="python" id="cond_ac_pogil_output_bool_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Output of Boolean expressions'  data-wasm=/_static
+     style="visibility: hidden;">
+print(type(True))
+print(type(3 < 4))
+print(3 < 4)
+three = 3
+four = 4
+print(three == four)
+check = three > four
+print(check)
+print(type(check))
+three = four
+print(three == four)
+# print(three = four)
+</textarea>
+</div>
+</div>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="4.14.1.2" data-multipleanswers="false"  id="cond_MC_pogil_comment"  style="visibility: hidden;">
+    <p>Q-2: What would be printed if the commented line above was uncommented?</p>
+
+    <li data-component="answer"  id="cond_MC_pogil_comment_opt_a">True</li><li data-component="feedback">Incorrect! Although the variable "three" does equal "four", the == operator has a return value, while the = operator does not. Try again.</li>
+    
+    <li data-component="answer"  id="cond_MC_pogil_comment_opt_b">False</li><li data-component="feedback">Incorrect! "three" has been set equal to "four", but this is irrelevant because the = operator does not have a return value. Try again.</li>
+    
+    <li data-component="answer"  id="cond_MC_pogil_comment_opt_c">class 'bool'</li><li data-component="feedback">Incorrect! "print(type())" prints output that looks like that, not just "print()". Try again.</li>
+    
+    <li data-component="answer" data-correct='yes' id="cond_MC_pogil_comment_opt_d">TypeError</li><li data-component="feedback">Correct! "three = four" (with a single equals sign) doesn't return anything, so it cannot be printed and a TypeError occurs.</li>
+    
+
+    </ul>
+    </div>
+    
+        <div class="runestone ">
+        <div data-component="fillintheblank" data-question_label="4.14.1.3" id="cond_fitb_pogil_booltype"  style="visibility: hidden;">
+            <p>Q-3: What is the name of the data type that represents Boolean values?</p>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^\\s*bool\\s*$", "regexFlags": "", "feedback": "<p>Correct! They are called \u201cbool\u201d, with an uncapitalized B.</p>\n"}, {"regex": "^\\s*Bool\\s*$", "regexFlags": "", "feedback": "<p>Incorrect! The B is not capitalized. Try again.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Incorrect! Hint: what was the name of the class printed when the line <code class=\"docutils literal notranslate\"><span class=\"pre\">print(type(True))</span></code> was run? Try again.</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            
+<div class="runestone  ">
+<ul data-component="dragndrop" data-question_label="4.14.1.4" id="cond_dnd_pogil_boolean"  style="visibility: hidden;">
+    <span data-subcomponent="question">Q-4: Match examples from the previous code block to their appropriate term.</span>
+	<span data-subcomponent=feedback>Incorrect - keep trying!</span>
+
+    <li data-subcomponent="draggable" id="cond_dnd_pogil_boolean_drag1">check</li>
+    <li data-subcomponent="dropzone" for="cond_dnd_pogil_boolean_drag1">Boolean variables</li>
+
+    <li data-subcomponent="draggable" id="cond_dnd_pogil_boolean_drag2"><, ==, ></li>
+    <li data-subcomponent="dropzone" for="cond_dnd_pogil_boolean_drag2">Boolean operators</li>
+
+    <li data-subcomponent="draggable" id="cond_dnd_pogil_boolean_drag3">3 < 4, three == four, three > four</li>
+    <li data-subcomponent="dropzone" for="cond_dnd_pogil_boolean_drag3">Boolean expressions</li>
+</ul></div>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="4.14.1.5" data-multipleanswers="false"  id="cond_MC_pogil_notequal"  style="visibility: hidden;">
+    <p>Q-5: Which of these Boolean expressions evaluates to <code class="docutils literal notranslate"><span class="pre">False</span></code>?</p>
+
+    <li data-component="answer"  id="cond_MC_pogil_notequal_opt_a">5 != 6</li><li data-component="feedback">Incorrect! 5 does not equal 6, which makes this expression True. Try again.</li>
+    
+    <li data-component="answer"  id="cond_MC_pogil_notequal_opt_b">2 + 2 != 5</li><li data-component="feedback">Incorrect! 4 does not equal 5, so this expression is True. Try again.</li>
+    
+    <li data-component="answer" data-correct='yes' id="cond_MC_pogil_notequal_opt_c">4 + 6 != 11 - 1</li><li data-component="feedback">Correct! 10 equals 10, so the statement "10 != 10" is False.</li>
+    
+
+    </ul>
+    </div>
+    </section>
+<section id="if-else-statements">
+<h2><span class="section-number">4.14.2. </span>if/else Statements<a class="headerlink" href="#if-else-statements" title="Permalink to this headline">¶</a></h2>
+<p>An <code class="docutils literal notranslate"><span class="pre">if</span></code> statement makes it possible to control what code will be executed in a
+program, based on a condition. For example:</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=cond_ac_pogil_output_ifelse data-question_label="4.14.2.1">
+<div id=cond_ac_pogil_output_ifelse_question class="ac_question col-md-12">
+<p>Run this code to see what it prints.</p>
+
+</div>
+<textarea data-lang="python" id="cond_ac_pogil_output_ifelse_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Basic if/else'  data-wasm=/_static
+     style="visibility: hidden;">
+number = int(input("Enter an integer: "))
+if number < 0:
+    print(number, "is negative")
+else:
+    print(number, "is a fine number")
+print("Until next time...")
+</textarea>
+</div>
+</div>
+<p>Python uses <strong>indentation</strong> to define the structure of programs. The line indented
+under the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement is executed only when <code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">&lt;</span> <span class="pre">0</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>.
+Likewise, the line indented under the <code class="docutils literal notranslate"><span class="pre">else</span></code> statement is executed only when
+<code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">&lt;</span> <span class="pre">0</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+
+        <div class="runestone ">
+        <div data-component="fillintheblank" data-question_label="4.14.2.2" id="cond_fitb_pogil_boolexpress"  style="visibility: hidden;">
+            <p>Q-7: Which line of the previous code block contains a Boolean expression?</p>
+<input type="text">
+        <script type="application/json">
+            [[{"number": [2, 2], "feedback": "<p>Correct! <code class=\"docutils literal notranslate\"><span class=\"pre\">number</span> <span class=\"pre\">&lt;</span> <span class=\"pre\">0</span></code> is a Boolean expression.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Incorrect! Think about the definition of a Boolean expression. Try again.</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            <p>Statements that are indented under an if/else statement are executed based on the
+status of the if’s condition. Statements indented at the same level as the if/else
+statement later in the program are always executed. If you indent code incorrectly
+or inconsistently, a <code class="docutils literal notranslate"><span class="pre">SyntaxError:</span> <span class="pre">unexpected</span> <span class="pre">indent</span></code> may be in your future.</p>
+
+        <div class="runestone ">
+        <div data-component="fillintheblank" data-question_label="4.14.2.3" id="cond_fitb_pogil_indent"  style="visibility: hidden;">
+            <p>Q-8: What must each line preceding an indented block of code end with?</p>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^\\s*colon|a\\s+colon|\\:\\s*$", "regexFlags": "", "feedback": "<p>Correct! A colon is necessary to begin an indented block of code.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Incorrect! Hint: it\u2019s one character. Try again.</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=cond_ac_pogil_isten data-question_label="4.14.2.4">
+<div id=cond_ac_pogil_isten_question class="ac_question col-md-12">
+<p>Modify this code to print <code class="docutils literal notranslate"><span class="pre">(number)</span> <span class="pre">is</span> <span class="pre">10</span></code> if <code class="docutils literal notranslate"><span class="pre">number</span></code> equals 10, and <code class="docutils literal notranslate"><span class="pre">(number)</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">10</span></code> otherwise.</p>
+
+</div>
+<textarea data-lang="python" id="cond_ac_pogil_isten_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Using if/else.'  data-wasm=/_static
+     style="visibility: hidden;">
+number = int(input("Enter an integer: "))
+# add your code here
+</textarea>
+</div>
+</div>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="4.14.2.5" data-multipleanswers="false"  id="cond_MC_pogil_mandatoryelse"  style="visibility: hidden;">
+    <p>Q-10: True or False: An <code class="docutils literal notranslate"><span class="pre">if</span></code> statement must always be followed by an <code class="docutils literal notranslate"><span class="pre">else</span></code> statement.</p>
+
+    <li data-component="answer"  id="cond_MC_pogil_mandatoryelse_opt_a">True</li><li data-component="feedback">Incorrect! An if statement does not necessarily need to be followed by an else statement. Try again.</li>
+    
+    <li data-component="answer" data-correct='yes' id="cond_MC_pogil_mandatoryelse_opt_b">False</li><li data-component="feedback">Correct! An else statement must follow an if statement, however.</li>
+    
+
+    </ul>
+    </div>
+    </section>
+<section id="boolean-operations">
+<h2><span class="section-number">4.14.3. </span>Boolean Operations<a class="headerlink" href="#boolean-operations" title="Permalink to this headline">¶</a></h2>
+<p>Expressions may include Boolean operators to implement basic logic. If all three
+operators appear in the same expression, Python will evaluate <code class="docutils literal notranslate"><span class="pre">not</span></code> first, then
+<code class="docutils literal notranslate"><span class="pre">and</span></code>, and finally <code class="docutils literal notranslate"><span class="pre">or</span></code>. If there are multiple of the same operator, they are
+evaluated from left to right.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=cond_ac_pogil_output_booleanops data-question_label="4.14.3.1">
+<div id=cond_ac_pogil_output_booleanops_question class="ac_question col-md-12">
+<p>Run this code to see what it prints.</p>
+
+</div>
+<textarea data-lang="python" id="cond_ac_pogil_output_booleanops_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Boolean operations'  data-wasm=/_static
+     style="visibility: hidden;">
+a = 3
+b = 4
+c = 5
+print(a < b and b < c)
+print(a < b or b < c)
+print(a < b and b > c)
+print(a < b or b > c)
+print(not a < b)
+print(a > b or not a > c and b > c)
+</textarea>
+</div>
+</div>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="4.14.3.2" data-multipleanswers="false"  id="cond_mc_pogil_opsvalue"  style="visibility: hidden;">
+    <p>Q-12: What data type would be the result of <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;</span> <span class="pre">b</span></code>? What about the result of <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;</span> <span class="pre">b</span> <span class="pre">and</span> <span class="pre">b</span> <span class="pre">&lt;</span> <span class="pre">c</span></code>? Use the values of <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, and <code class="docutils literal notranslate"><span class="pre">c</span></code> from the code block above.</p>
+
+    <li data-component="answer" data-correct='yes' id="cond_mc_pogil_opsvalue_opt_a">bool, bool</li><li data-component="feedback">Correct! The type of each is bool; both are Boolean expressions.</li>
+    
+    <li data-component="answer"  id="cond_mc_pogil_opsvalue_opt_b">True, bool</li><li data-component="feedback">Incorrect! True is not a data type. Try again.</li>
+    
+    <li data-component="answer"  id="cond_mc_pogil_opsvalue_opt_c">True, True</li><li data-component="feedback">Incorrect! True is not a data type. Try again.</li>
+    
+    <li data-component="answer"  id="cond_mc_pogil_opsvalue_opt_d">bool, True</li><li data-component="feedback">Incorrect! True is not a data type. Try again.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="4.14.3.3" data-multipleanswers="false"  id="cond_mc_pogil_opsdatatype"  style="visibility: hidden;">
+    <p>Q-13: What would be the value of <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;</span> <span class="pre">b</span></code>? What about the value of <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;</span> <span class="pre">b</span> <span class="pre">and</span> <span class="pre">b</span> <span class="pre">&lt;</span> <span class="pre">c</span></code>? Use the values of <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, and <code class="docutils literal notranslate"><span class="pre">c</span></code> from the code block above.</p>
+
+    <li data-component="answer" data-correct='yes' id="cond_mc_pogil_opsdatatype_opt_a">True, True</li><li data-component="feedback">Correct! The value of each statement is True.</li>
+    
+    <li data-component="answer"  id="cond_mc_pogil_opsdatatype_opt_b">True, False</li><li data-component="feedback">Incorrect! 4 is less than 5, so "b < c" is True. Try again.</li>
+    
+    <li data-component="answer"  id="cond_mc_pogil_opsdatatype_opt_c">False, False</li><li data-component="feedback">Incorrect! 3 is less than 4 and 4 is less than 5. Try again.</li>
+    
+    <li data-component="answer"  id="cond_mc_pogil_opsdatatype_opt_d">False, True</li><li data-component="feedback">Incorrect! 3 is less than 4, so "a < b" is True. Try again.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="4.14.3.4" data-multipleanswers="false"  id="cond_mc_pogil_andproperties"  style="visibility: hidden;">
+    <p>Q-14: If two <code class="docutils literal notranslate"><span class="pre">True</span></code> Boolean expressions are compared using the <code class="docutils literal notranslate"><span class="pre">and</span></code> operator, what is the resulting Boolean value? What if you compare two <code class="docutils literal notranslate"><span class="pre">False</span></code> expressions instead?</p>
+
+    <li data-component="answer"  id="cond_mc_pogil_andproperties_opt_a">True, True</li><li data-component="feedback">Incorrect! "and" only returns True if the expressions on both sides are True. Try again.</li>
+    
+    <li data-component="answer" data-correct='yes' id="cond_mc_pogil_andproperties_opt_b">True, False</li><li data-component="feedback">Correct! "and" only returns True if the expressions on both sides are True and returns False in any other situation.</li>
+    
+    <li data-component="answer"  id="cond_mc_pogil_andproperties_opt_c">False, False</li><li data-component="feedback">Incorrect! "and" only returns True if the expressions on both sides are True. Try again.</li>
+    
+    <li data-component="answer"  id="cond_mc_pogil_andproperties_opt_d">False, True</li><li data-component="feedback">Incorrect! "and" only returns True if the expressions on both sides are True. Try again.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="4.14.3.5" data-multipleanswers="false"  id="cond_mc_pogil_orproperties"  style="visibility: hidden;">
+    <p>Q-15: If two <code class="docutils literal notranslate"><span class="pre">True</span></code> Boolean expressions are compared using the <code class="docutils literal notranslate"><span class="pre">or</span></code> operator, what is the resulting Boolean value? What if you compare two <code class="docutils literal notranslate"><span class="pre">False</span></code> expressions instead?</p>
+
+    <li data-component="answer"  id="cond_mc_pogil_orproperties_opt_a">True, True</li><li data-component="feedback">Incorrect! "or" only returns True if the expressions on one or both sides are True. Try again.</li>
+    
+    <li data-component="answer" data-correct='yes' id="cond_mc_pogil_orproperties_opt_b">True, False</li><li data-component="feedback">Correct! "or" only returns True if the expressions on one or both sides are True and returns False if both sides are false.</li>
+    
+    <li data-component="answer"  id="cond_mc_pogil_orproperties_opt_c">False, False</li><li data-component="feedback">Incorrect! "or" only returns True if the expressions on one or both sides are True. Try again.</li>
+    
+    <li data-component="answer"  id="cond_mc_pogil_orproperties_opt_d">False, True</li><li data-component="feedback">Incorrect! "or" only returns True if the expressions on one or both sides are True. Try again.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="4.14.3.6" data-multipleanswers="false"  id="cond_mc_pogil_trueandfalse"  style="visibility: hidden;">
+    <p>Q-16: If a <code class="docutils literal notranslate"><span class="pre">True</span></code> and a <code class="docutils literal notranslate"><span class="pre">False</span></code> Boolean expression are compared using the <code class="docutils literal notranslate"><span class="pre">and</span></code> operator, what is the resulting Boolean value? What if you use the <code class="docutils literal notranslate"><span class="pre">or</span></code> operator instead?</p>
+
+    <li data-component="answer"  id="cond_mc_pogil_trueandfalse_opt_a">True, True</li><li data-component="feedback">Incorrect! "and" only returns True if the expressions on both sides are True. Try again.</li>
+    
+    <li data-component="answer"  id="cond_mc_pogil_trueandfalse_opt_b">True, False</li><li data-component="feedback">Incorrect! "or" returns True if the expressions on one or both sides are True. Try again.</li>
+    
+    <li data-component="answer"  id="cond_mc_pogil_trueandfalse_opt_c">False, False</li><li data-component="feedback">Incorrect! "or" returns True if the expressions on one or both sides are True. Try again.</li>
+    
+    <li data-component="answer" data-correct='yes' id="cond_mc_pogil_trueandfalse_opt_d">False, True</li><li data-component="feedback">Correct! "and" needs both sides to be True, while "or" only needs of of them.</li>
+    
+
+    </ul>
+    </div>
+    
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=cond_ac_pogil_arepositive data-question_label="4.14.3.7">
+<div id=cond_ac_pogil_arepositive_question class="ac_question col-md-12">
+<p>Suppose you wanted to print the sum of <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> only when both <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> are positive. Write a block of code to achieve this that uses only one <code class="docutils literal notranslate"><span class="pre">if</span></code> statement.</p>
+
+</div>
+<textarea data-lang="python" id="cond_ac_pogil_arepositive_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Using a Boolean expression in code'  data-wasm=/_static
+     style="visibility: hidden;">
+x = int(input("Enter an integer: "))
+y = int(input("Enter an integer: "))
+# add your code here
+</textarea>
+</div>
+</div>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=cond_ac_pogil_usingnot data-question_label="4.14.3.8">
+<div id=cond_ac_pogil_usingnot_question class="ac_question col-md-12">
+<p>Rewrite your code from the previous code block using the <code class="docutils literal notranslate"><span class="pre">not</span></code> operator. Your answer should yield the same result as before, not the opposite, and still only use one <code class="docutils literal notranslate"><span class="pre">if</span></code> statement. Hint: you’ll need to change the &gt; signs!</p>
+
+</div>
+<textarea data-lang="python" id="cond_ac_pogil_usingnot_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Using the ``not`` operator in code'  data-wasm=/_static
+     style="visibility: hidden;">
+x = int(input("Enter an integer: "))
+y = int(input("Enter an integer: "))
+# add your code here
+</textarea>
+</div>
+</div>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=cond_ac_pogil_notpositive data-question_label="4.14.3.9">
+<div id=cond_ac_pogil_notpositive_question class="ac_question col-md-12">
+<p>Suppose that you instead wanted to print the sum of <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> <em>except</em> when both <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> are positive. Write a block of code to achieve this that only uses one <code class="docutils literal notranslate"><span class="pre">if</span></code> statement.</p>
+
+</div>
+<textarea data-lang="python" id="cond_ac_pogil_notpositive_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Using "except when" logic in code'  data-wasm=/_static
+     style="visibility: hidden;">
+x = int(input("Enter an integer: "))
+y = int(input("Enter an integer: "))
+# add your code here
+</textarea>
+</div>
+</div>
+<p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
+
+<div class="runestone sqcontainer %(optclass)s">
+    <div data-component="groupsub" id=cond_logic_groupsub data-size_limit=3>
+        <div class="col-sm-6">
+            <select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%">
+            </select>
+        </div>
+        <div id="groupsub_button" class="col-sm-6">
+        </div>
+        <p>The Submit Group button will submit the answer for each each question
+        on this page for each member of your group. It also logs you as the official
+        group submitter.</p>
+    </div>
+</div>
+</section>
+</section>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 4.13. Write Code Questions' data-toggle="tooltip">
+  <a href="WriteCode.html" aria-label="Previous - 4.13. Write Code Questions">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 5. Functions' data-toggle="tooltip" >
+    <a href="../functions/toctree.html" aria-label="Next - 5. Functions">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      
+      <span id='numuserspan'></span><span class='loggedinuser'></span>
+      
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020 - Based on Python for Everybody.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> .
+    </p>
+  </div>
+</footer>
+
+
+
+  
+    {% if settings.google_ga %}
+      <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '{{ settings.google_ga }}']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+    {% endif %}
+  
+
+  
+    <script type="application/json" class="js-hypothesis-config">
+    {
+      "showHighlights": false
+    }
+    </script>
+
+    <script async src="https://hypothes.is/embed.js"></script>
+    <!--provide space to prevent hypothes.is sidebar from obscuring content-->
+    <style>@media screen and (max-width:767px) { body { padding-right: 21px; }}</style>
+
+  
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>
