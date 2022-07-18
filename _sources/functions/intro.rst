@@ -13,11 +13,11 @@ the code area for compiler errors and/or unit test results.
 
 See the video below for an example.
 
-.. youtube:: piPz0kh8gMk
-    :divid: iwgex1-code
+.. youtube:: w9hTOJ7iJpE
+    :divid: iwgex-ps-code-video1
     :optional:
-    :width: 650
-    :height: 415
+    :width: 425
+    :height: 344
     :align: center
 
 Finish writing the code for the following problem.

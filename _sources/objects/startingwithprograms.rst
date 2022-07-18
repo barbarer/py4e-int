@@ -45,7 +45,7 @@ different objects together to accomplish a task:
    ctx.check_hostname = False
    ctx.verify_mode = ssl.CERT_NONE
 
-   url = input('Enter - ')
+   url = "https://www.nytimes.com/"
    html = urllib.request.urlopen(url, context=ctx).read()
    soup = BeautifulSoup(html, 'html.parser')
 
@@ -55,7 +55,7 @@ different objects together to accomplish a task:
        print(tag.get('href', None))
 
 
-We read the URL into a string and then pass that into ``urllib`` to retrieve
+We pass the url into ``urllib`` to retrieve
 the data from the web.  The ``urllib`` library uses the ``socket`` library to
 make the actual network connection to retrieve the data. We take the string
 that ``urllib`` returns and hand it to BeautifulSoup for parsing.
@@ -78,19 +78,19 @@ We can draw a picture of this program and how the objects work together.
    :answer_a: BeautifulSoup creates and returns an object to soup
    :answer_b: The following program is sequential and not object oriented.
    :answer_c: The following program is an example of procedural programming.
-   :answer_d: The program will give a 'NameError' as function BeautifulSoup 
+   :answer_d: The program will give a 'NameError' as function BeautifulSoup
               is called before its defined.
    :correct: a
    :feedback_a: BeautifulSoup makes use of the object 'html.parser'
                 and returns an object.
-   :feedback_b: The program may look sequential but it also calls on other classes to return 
-                objects. 
+   :feedback_b: The program may look sequential but it also calls on other classes to return
+                objects.
    :feedback_c: The program inherits functions from other classes with the import statements instead
                 of using procedures.
    :feedback_d: BeautifulSoup is imported to the program.
-   
+
    Which of the following is true about the following code?
-   
+
    ::
 
      import urllib.request, urllib.parse, urllib.error
@@ -102,7 +102,7 @@ We can draw a picture of this program and how the objects work together.
       ctx.check_hostname = False
       ctx.verify_mode = ssl.CERT_NONE
 
-     url = input('Enter - ')
+     url = "https://www.nytimes.com/"
      html = urllib.request.urlopen(url, context=ctx).read()
      soup = BeautifulSoup(html, 'html.parser')
      print(soup('a'))
