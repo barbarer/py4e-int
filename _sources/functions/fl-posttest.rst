@@ -1,9 +1,9 @@
-Post Test
+Posttest
 -----------------------------------------------------
 
 Please try to solve each of the following problems. This test is **ungraded**. 
 
-Please do not ask for external help and try your best to finish it! It is OK to not know the correct answers!
+Please do not ask for external help and try your best to finish it! It is **OK** to not know the correct answers!
 
 Problems
 ==============
@@ -36,4 +36,4 @@ Thank You 🤗
 🎉 Thank you so much for taking part in this study! 
 
 🙏 We appreciate your contribution to help more students become successful in computing courses in a low-cost, scalable, and easily
-adopted way!!
+adopted way!

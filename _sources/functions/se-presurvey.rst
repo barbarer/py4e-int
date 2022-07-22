@@ -1,89 +1,89 @@
-Self-efficacy Pre-Survey 
+Pre Survey 
 -----------------------------------------------------
 
 Think about **yourself and your learning** when answering the following questions.
 
 ==============
 
-.. poll:: self-efficacy-1
-    :option_1: Strongly disagree
-    :option_2: Disagree
-    :option_3: Neither agree nor disagree
-    :option_4: Agree
-    :option_5: Strongly agree
-    :results: instructor
+.. .. poll:: self-efficacy-1
+..     :option_1: Strongly disagree
+..     :option_2: Disagree
+..     :option_3: Neither agree nor disagree
+..     :option_4: Agree
+..     :option_5: Strongly agree
+..     :results: instructor
 
-    I will be able to achieve most of the goals that I have set for myself.
+..     I will be able to achieve most of the goals that I have set for myself.
 
-.. poll:: self-efficacy-2
-    :option_1: Strongly disagree
-    :option_2: Disagree
-    :option_3: Neither agree nor disagree
-    :option_4: Agree
-    :option_5: Strongly agree
-    :results: instructor
+.. .. poll:: self-efficacy-2
+..     :option_1: Strongly disagree
+..     :option_2: Disagree
+..     :option_3: Neither agree nor disagree
+..     :option_4: Agree
+..     :option_5: Strongly agree
+..     :results: instructor
 
-    When facing difficult tasks, I am certain that I will accomplish them.
+..     When facing difficult tasks, I am certain that I will accomplish them.
 
-.. poll:: self-efficacy-3
-    :option_1: Strongly disagree
-    :option_2: Disagree
-    :option_3: Neither agree nor disagree
-    :option_4: Agree
-    :option_5: Strongly agree
-    :results: instructor
+.. .. poll:: self-efficacy-3
+..     :option_1: Strongly disagree
+..     :option_2: Disagree
+..     :option_3: Neither agree nor disagree
+..     :option_4: Agree
+..     :option_5: Strongly agree
+..     :results: instructor
 
-    In general, I think that I can obtain outcomes that are important to me.
+..     In general, I think that I can obtain outcomes that are important to me.
 
-.. poll:: self-efficacy-4
-    :option_1: Strongly disagree
-    :option_2: Disagree
-    :option_3: Neither agree nor disagree
-    :option_4: Agree
-    :option_5: Strongly agree
-    :results: instructor
+.. .. poll:: self-efficacy-4
+..     :option_1: Strongly disagree
+..     :option_2: Disagree
+..     :option_3: Neither agree nor disagree
+..     :option_4: Agree
+..     :option_5: Strongly agree
+..     :results: instructor
 
-    I believe I can succeed at most any endeavor to which I set my mind.
+..     I believe I can succeed at most any endeavor to which I set my mind.
 
-.. poll:: self-efficacy-5
-    :option_1: Strongly disagree
-    :option_2: Disagree
-    :option_3: Neither agree nor disagree
-    :option_4: Agree
-    :option_5: Strongly agree
-    :results: instructor
+.. .. poll:: self-efficacy-5
+..     :option_1: Strongly disagree
+..     :option_2: Disagree
+..     :option_3: Neither agree nor disagree
+..     :option_4: Agree
+..     :option_5: Strongly agree
+..     :results: instructor
 
-    I will be able to successfully overcome many challenges.
+..     I will be able to successfully overcome many challenges.
 
-.. poll:: self-efficacy-6
-    :option_1: Strongly disagree
-    :option_2: Disagree
-    :option_3: Neither agree nor disagree
-    :option_4: Agree
-    :option_5: Strongly agree
-    :results: instructor
+.. .. poll:: self-efficacy-6
+..     :option_1: Strongly disagree
+..     :option_2: Disagree
+..     :option_3: Neither agree nor disagree
+..     :option_4: Agree
+..     :option_5: Strongly agree
+..     :results: instructor
 
-    I am confident that I can perform effectively on many different tasks.
+..     I am confident that I can perform effectively on many different tasks.
 
-.. poll:: self-efficacy-7
-    :option_1: Strongly disagree
-    :option_2: Disagree
-    :option_3: Neither agree nor disagree
-    :option_4: Agree
-    :option_5: Strongly agree
-    :results: instructor
+.. .. poll:: self-efficacy-7
+..     :option_1: Strongly disagree
+..     :option_2: Disagree
+..     :option_3: Neither agree nor disagree
+..     :option_4: Agree
+..     :option_5: Strongly agree
+..     :results: instructor
 
-    Compared to other people, I can do most tasks very well.
+..     Compared to other people, I can do most tasks very well.
 
-.. poll:: self-efficacy-8
-    :option_1: Strongly disagree
-    :option_2: Disagree
-    :option_3: Neither agree nor disagree
-    :option_4: Agree
-    :option_5: Strongly agree
-    :results: instructor
+.. .. poll:: self-efficacy-8
+..     :option_1: Strongly disagree
+..     :option_2: Disagree
+..     :option_3: Neither agree nor disagree
+..     :option_4: Agree
+..     :option_5: Strongly agree
+..     :results: instructor
 
-    Even when things are tough, I can perform quite well.
+..     Even when things are tough, I can perform quite well.
 
 .. poll:: CS-self-efficacy-1
     :option_1: Strongly disagree
@@ -145,13 +145,57 @@ Think about **yourself and your learning** when answering the following question
 
     I have a lot of self-confidence when it comes to programming.
 
+For the next questions please select the answer that best
+matches your familiarity and confidence
+about the specified concept(s).
+
+.. poll:: 206-se-loop-7
+    :option_1: I am unfamiliar with this concept
+    :option_2: I know what it means, but have not used it in a program
+    :option_3: I have used this concept in a program, but am not confident about my ability to use it
+    :option_4: I am confident in my ability to use this concept in simple programs
+    :option_5: I am confident in my ability to use this concept in complex programs
+    :results: instructor
+
+    Loops/Iteration like <code>for n in nums:</code> and <code>for i in range(4):</code>
+
+.. poll:: 206-se-cond-8
+    :option_1: I am unfamiliar with this concept
+    :option_2: I know what it means, but have not used it in a program
+    :option_3: I have used this concept in a program, but am not confident about my ability to use it
+    :option_4: I am confident in my ability to use this concept in simple programs
+    :option_5: I am confident in my ability to use this concept in complex programs
+    :results: instructor
+
+    Conditionals/Selection Statements like <code>if x < 3:</code>
+
+.. poll:: 206-se-func-9
+    :option_1: I am unfamiliar with this concept
+    :option_2: I know what it means, but have not used it in a program
+    :option_3: I have used this concept in a program, but am not confident about my ability to use it
+    :option_4: I am confident in my ability to use this concept in simple programs
+    :option_5: I am confident in my ability to use this concept in complex programs
+    :results: instructor
+
+    Functions like <code>def get_odd(nums):</code>
+
+.. poll:: 206-se-list-dic-10
+    :option_1: I am unfamiliar with these concepts
+    :option_2: I know what they mean, but have not used them in a program
+    :option_3: I have used these concepts in a program, but am not confident about my ability to use them
+    :option_4: I am confident in my ability to use these concepts in simple programs
+    :option_5: I am confident in my ability to use these concepts in complex programs
+    :results: instructor
+
+    Lists like <code>a = ["red", "green"]</code> and dictionaries like <code>d = {"red": 2, "green": 3}</code>
+
 Thanks for filling this survey and let us know you better!
 
 What to do next
 ============================
 .. raw:: html
 
-    <p>Click on the following link to start practice: <b><a id="fl-next">Practice</a></b></p>
+    <h4>Click on the following link to start practice 👉 <b><a id="fl-next">Practice</a></b></h4>
 
 .. raw:: html
 

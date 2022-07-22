@@ -7,20 +7,20 @@ Please do not ask for external help and try your best to finish it! It is OK to 
 Problems
 ==============
 
-.. selectquestion:: fl-post-so-ac
-   :fromid: Classes_Basic_Capital_ac
+.. selectquestion:: fl-post-1-Movie
+   :fromid: Classes_Basic_Movie_fix_v3_ac
    :points: 10
 
-.. selectquestion:: fl-post-cat-fix
-   :fromid: Classes_Basic_Dog_ac
+.. selectquestion:: fl-post-2-Horse
+   :fromid: Classes_Basic_Horse_v2_ac
    :points: 10
 
-.. selectquestion:: fl-post-acct-ac
-   :fromid: Classes_Basic_Business_ac
+.. selectquestion:: fl-post-3-GasTank
+   :fromid: Classes_Basic_GasTank_ac
    :points: 10
 
-.. selectquestion:: fl-post-fortune-fix
-   :fromid: Classes_Basic_PositiveMe_ac
+.. selectquestion:: fl-post-4-Dice
+   :fromid: Clases_Basic_Dice_fix_v2_ac
    :points: 10
 
 Feedback
