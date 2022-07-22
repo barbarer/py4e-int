@@ -65,6 +65,51 @@ Think about **yourself and your learning** when answering the following question
 
     I have a lot of self-confidence when it comes to programming.
 
+
+For the next questions please select the answer that best
+matches your familiarity and confidence
+about the specified concept(s).
+
+.. poll:: 206-class-obj-7
+    :option_1: I am unfamiliar with these concepts
+    :option_2: I know what they mean, but have not used them in a program
+    :option_3: I have used these concepts in a program, but am not confident about my ability to use them
+    :option_4: I am confident in my ability to use these concepts in simple programs
+    :option_5: I am confident in my ability to use these concepts in complex programs
+    :results: instructor
+
+    Creating classes like <code>class Person:</code> and objects like <code>p = Person("Barb Ericson")</code>
+
+.. poll:: 206-class-obj-8
+    :option_1: I am unfamiliar with these concepts
+    :option_2: I know what they mean, but have not used them in a program
+    :option_3: I have used these concepts in a program, but am not confident about my ability to use them
+    :option_4: I am confident in my ability to use these concepts in simple programs
+    :option_5: I am confident in my ability to use these concepts in complex programs
+    :results: instructor
+
+    Methods like <code>__init__</code> and <code>__str__</code> 
+
+.. poll:: 206-class-obj-9
+    :option_1: I am unfamiliar with these concepts
+    :option_2: I know what they mean, but have not used them in a program
+    :option_3: I have used these concepts in a program, but am not confident about my ability to use them
+    :option_4: I am confident in my ability to use these concepts in simple programs
+    :option_5: I am confident in my ability to use these concepts in complex programs
+    :results: instructor
+
+    The use of  <code>self</code> in class 
+
+.. poll:: 206-class-obj-10
+    :option_1: I am unfamiliar with these concepts
+    :option_2: I know what they mean, but have not used them in a program
+    :option_3: I have used these concepts in a program, but am not confident about my ability to use them
+    :option_4: I am confident in my ability to use these concepts in simple programs
+    :option_5: I am confident in my ability to use these concepts in complex programs
+    :results: instructor
+
+    Defining instance variables like <code>self.color = color</code>
+
 Thanks for filling this survey and let us know you better!
 
 What to do next
