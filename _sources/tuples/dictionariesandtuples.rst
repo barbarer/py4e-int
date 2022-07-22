@@ -51,7 +51,7 @@ key:
 
 
 (If you need a reminder, the ``sort`` method sorts a list in alphabetical order.)
-  
+
 The resulting list is sorted in ascending alphabetical order by the key value.
 
 .. mchoice:: question10_4_2
@@ -86,11 +86,11 @@ tell ``sort`` to sort in descending order.
    print(grocery_list) #should print [('pineapple', 3), ('kiwi', 7), ('chicken', 8), ('apple', 5)]
 
 
-.. activecode:: question10_4_3
+.. activecode:: question10_4_3_v2
    :nocodelens:
    :practice: T
 
-   Write code that will transform dictionary d into a list of tuples, called tup_list, sorted by the keys' values in descending order.
+   Write code that will transform dictionary d into a list of tuples, called tup_list, sorted by the keys in descending order.
    ~~~~
    d = {'a': 10, 'b': 2, 'c': 27, 'd': 15, 'e': 30, 'f': 3}
 
@@ -100,7 +100,7 @@ tell ``sort`` to sort in descending order.
    class myTests(TestCaseGui):
 
        def testOne(self):
-           self.assertEqual(tup_list, [('e', 30), ('c', 27), ('d', 15), ('a', 10), ('f', 3), ('b', 2)], "Checking to make sure the list was sorted correctly.")
+           self.assertEqual(tup_list, [('f', 3), ('e', 30), ('d', 15), ('c', 27), ('b', 2), ('a', 10)], "Checking to make sure the list was sorted correctly.")
            self.assertEqual(len(tup_list), 6, "Checking to make sure no values were added or deleted.")
 
    myTests().main()
