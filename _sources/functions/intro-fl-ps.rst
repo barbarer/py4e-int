@@ -1,4 +1,4 @@
-Introduction
+Knowledge Review
 -----------------------------------------------------
 
 1. Tuples
@@ -6,103 +6,10 @@ Introduction
 
 A tuple is like a list in that holds items in order and those items are separated by commas.  They can be enclosed in ``()``, but don't have to be.
 
-.. activecode:: func_tup_test_ac_fl
-    :caption: Working with tuples
-
-    Run this code to see what it prints.
-    ~~~~
-    # function definition
-    def tuple_test(tup):
-        print(tup[0])
-        print(type(tup))
-        print(tup[-1])
-        print(tup[1:])
-        print(len(tup))
-
-    # function definition
-    def main():
-        tuple_test((1, 2, 3))
-        tuple_test(('hi', 'bye', -20, 'run'))
-
-    # function call
-    main()
-
-.. fillintheblank:: funct_tup_test_first_fl
-
-    What is the first thing that will be printed when the code below runs?
-
-    - :1: It will print the item at index 0 the first passed tuple.
-      :.*: What is the item at index 0 in the first passed tuples?
-
-.. fillintheblank:: funct_tup_test_last_fl
-
-    What is the last thing that will be printed when the code below runs?
-
-    - :4: It will print the length (number of items) in the second passed tuple.
-      :.*: How many items are in the second passed tuple?
-
-.. fillintheblank:: funct_tuple_test_char_fl
-    :practice: T
-
-    What characters are used to indicate the start and end of a tuple in the code above?
-
-    - :\(\)|\)\(: Parenthesis are often used to start and end a tuple, but they are not required.
-      :.*: Look at the parameter to the function call in the main function.
-
 2. Tuples are Immutable
 =======================
 
 Unlike lists, tuples are immutable (can not change). This makes them more efficient than lists which can change.
-
-.. activecode:: func_tuple_change_ac_fl
-    :caption: Attempt to change a tuple
-
-    Run this code to see what it prints.
-    ~~~~
-    # function definition
-    def change_tuple(tup):
-        print(tup)
-        tup[0] = 5
-
-    # function definition
-    def main():
-        t1 = (3, 6)
-        change_tuple(t1)
-        print(t1)
-
-    # function call
-    main()
-
-.. Note::
-
-   Tuples are immutable (not changeable), so you will get an error if you try to change them.
-
-Some functions that work on lists return an **iterator** (an object that you can loop through the values of) which you can convert to a list of tuples using the ``list`` function.
-The ``range`` function also returns an iterator.
-
-.. fillintheblank:: funct_tuple_zip_first_print_fitb_fl
-    :practice: T
-
-    What is the first thing the code below prints?
-
-    - :"?No"?: It prints the item at index 1 in the first tuple.
-      :.*: Try again!
-
-.. activecode:: func_tuple_list_zip_ac_fl
-    :caption: Example of using zip to combine lists
-
-    Run this code to see what it prints.
-    ~~~~
-    l1 = ["Will it be sunny?", "Will I be happy?"]
-    l2 = ["No", "Yes"]
-    result = zip(l1, l2)
-    l3 = list(result)
-    print(l3[0][1])
-    print(l3)
-
-.. note::
-
-   The ``zip`` function takes two lists and returns an ``iterator``. You can convert this iterator to a list of tuples using the ``list`` function.  Each tuple has an element from list1 and an element from list2 in order.
 
 3. Dictionaries
 ============================
@@ -169,95 +76,11 @@ There is another way to update the value for a key that works even if the key is
    The better way to increment a count at a key is to use
    ``dict[key] = dict.get(key,0) + 1``.  This will avoid a key error if the key isn't in the dictionary and the code is shorter.
 
-.. dragndrop:: funct_dict_symbol_dnd_fl
-    :practice: T
-    :feedback: Read this page and try again.
-    :match_1: ["a", "b"]||| List
-    :match_2: ("a", "b")|||Tuple
-    :match_3: "ab"|||String
-    :match_4: {"a": 5, "b": 2}|||Dictionary
-
-    Drag the item to its type.
-
-.. mchoice:: funct_which_are_immutable_mc_fl
-
-    Which of the following types are immutable (don't change)?
-
-    -   Strings
-
-        +   Yes, Strings are immutable.
-
-    -   Lists
-
-        -   No, Lists can change.
-
-    -   Tuples
-
-        +   Yes, Tuples are immutable.
-
-    -   Dictionaries
-
-        -   No, Dictionaries can change.
-        
-4. An Introduction To Our System
-================================
-Please read the following and watch the videos.
-
-**Write Code with Pop-Up Mixed-up Code**
-
-In this study, you may see a write-code problem that allows you to pop-up the equivalent mixed-up code problem. 
-
-You can use this problem to help you solve the write code problem.  
-
-To pop-up the mixed-up code problem, click on the drop down near the top of problem.
-
-See the video below for an example.
-
-.. youtube:: zz4ATp31_vk
-    :optional:
-    :divid: fl-ps-toggle
-    :width: 650
-    :height: 415
-    :align: center
-
-**Solve Mixed-up Code**
-
-If you see a problem like the one below, you will need to put the mixed-up code in the correct order on the right side. You may need to indent the blocks as well.  
-
-There may also be extra blocks that are not needed in a correct solution. You can leave on the left side. 
-
-Click the "Check" button to check your solution.
-
-See the video below for an example.
-
-.. youtube:: Rf7oWHlo-e0
-    :divid: fl-ps-parsons1
-    :optional:
-    :width: 650
-    :height: 415
-    :align: center
-
-The mixed-up code problems have a "Help me" button at the bottom of the problem. 
-
-Once you have checked at least three incorrect solutions you can click the button for help.  
-
-It will remove an incorrect code block, if you used one in your solution, or combine two blocks into one if there are more than three blocks left.
-
-See the video below for an example.
-
-.. youtube:: QejZ7u642IU
-    :divid: fl-ps-parsons2
-    :optional:
-    :width: 650
-    :height: 415
-    :align: center
-
-
 What to do next
 ================
 
 .. raw:: html
 
-    <p>Click to finish a survey about your perceptions of your own abilities to complete learning tasks: <b><a href="se-presurvey.html">Survey</a></b></p>
+    <h4>Click to see an introduction about our system 👉 <b><a href="system-fl-ps.html">System Introduction</a></b></h4>
 
 

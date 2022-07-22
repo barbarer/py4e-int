@@ -37,11 +37,11 @@ Feedback
 
 .. shortanswer:: fl-toggle-sa-cls
     
-    Please explain the option you chose above in more detail. Please skip this question if you didn't use it.
+    Please explain the option you chose above in more detail. Please skip this question if you didn't use any Parsons problems.
     
 
 What to do next
 ============================
 .. raw:: html
-   
-   <p>Click to finish a survey about your perceptions of your own abilities to complete learning tasks: <b><a href="se-postsurvey-cls.html">Survey</b></p>
+    
+   <p>Click on the following link to finish a posttest 👉 <b><a href="fl-posttest-cls.html">Post Test</b></p>
