@@ -116,7 +116,7 @@ What to do next
 ============================
 .. raw:: html
 
-    <p>Click on the following link to start practice 👉 <b><a id="fl-next-cls">Practice</a></b></p>
+     <h4>Click on the following link to start practice 👉 <b><a id="fl-next-cls">Practice</a></b></h4>
 
 .. raw:: html
 
