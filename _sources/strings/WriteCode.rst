@@ -1,283 +1,207 @@
-Write Code Questions
---------------------
-#.
-    .. tabbed:: str-ex-hi
+Write-code questions
+-----------------------
 
-        .. tab:: Question
+.. tabbed:: str-ex-hi
 
-            .. activecode::  str-ex-hiq
-                :autograde: unittest
+    .. tab:: Question
 
-                Fix line 2 so that it prints "Hi" instead of "hi".
-                ~~~~
-                s1 = "hi"
-                s1.capitalize()
-                print(s1)
+        .. activecode::  str-ex-hiq
+            :autograde: unittest
 
-                ====
-                from unittest.gui import TestCaseGui
-                class myTests(TestCaseGui):
+            Fix line 2 so that it prints "Hi" instead of "hi".
+            ~~~~
+            s1 = "hi"
+            s1.capitalize()
+            print(s1)
 
-                    def testOne(self):
-                        self.assertEqual(s1,"Hi")
+            ====
+            from unittest.gui import TestCaseGui
+            class myTests(TestCaseGui):
 
-                myTests().main()
+                def testOne(self):
+                    self.assertEqual(s1,"Hi")
 
-        .. tab:: Answer
+            myTests().main()
 
-            The ``capitalize()`` method returns a new string; it doesn't modify the original because strings are immutable. As a result, you need to assign the value of s1.capitalize() to s1.
+    .. tab:: Answer
 
-            .. activecode::  str-ex-hiA
-                :optional:
+        The ``capitalize()`` method returns a new string; it doesn't modify the original because strings are immutable. As a result, you need to assign the value of s1.capitalize() to s1.
 
-                Fix line 2 so that it prints "Hi" instead of "hi".
-                ~~~~
-                s1 = "hi"
-                s1 = s1.capitalize()
-                print(s1)
+        .. activecode::  str-ex-hiA
+            :optional:
 
-#.
-    .. tabbed:: str-ex-meow
+            Fix line 2 so that it prints "Hi" instead of "hi".
+            ~~~~
+            s1 = "hi"
+            s1 = s1.capitalize()
+            print(s1)
 
-        .. tab:: Question
 
-            .. activecode::  str-ex-meowq
-                :autograde: unittest
+.. selectquestion:: str-writecode-2
+   :fromid: str-ex-meowacq, str-ex-meowansw
+   :toggle: lock
 
-                Fix the code so that only "meow" is printed.
-                ~~~~
-                sentence = "The cat goes meow."
-                s2 = [16:13]sentence
-                print(s2)
 
-                ====
-                from unittest.gui import TestCaseGui
-                class myTests(TestCaseGui):
 
-                        def testOne(self):
-                            self.assertEqual(s2,"meow")
+.. tabbed:: str-ex-eggs
 
-                myTests().main()
+    .. tab:: Question
 
-        .. tab:: Answer
+        .. activecode::  str-ex-eggsq
 
-            The string slicing syntax in line 2 was incorrect. Remember, the final number in the slice is the index of the character after the final one you want in the string.
+            Write code to evaluate the length of the string "I like green eggs"
+            and print it. It should print "The length is 17".
+            ~~~~
 
-            .. activecode::  str-ex-meowa
-                :optional:
+    .. tab:: Answer
 
-                Fix the code so that only "meow" is printed.
-                ~~~~
-                sentence = "The cat goes meow."
-                s2 = sentence[13:17]
-                print(s2)
+        You can use the ``len()`` method to find the length of a string.
 
-#.
-    .. tabbed:: str-ex-eggs
+        .. activecode::  str-ex-eggsa
+            :optional:
 
-        .. tab:: Question
+            Write code to evaluate the length of the string "I like green eggs"
+            and print it. It should print "The length is 17".
+            ~~~~
+            sentence = 'I like green eggs'
+            print('The length is ' + str(len(sentence)))
 
-            .. activecode::  str-ex-eggsq
 
-                Write code to evaluate the length of the string "I like green eggs"
-                and print it. It should print "The length is 17".
-                ~~~~
 
-        .. tab:: Answer
+.. selectquestion:: str-writecode-4
+   :fromid: str-ex-countacq, str-ex-countansw
+   :toggle: lock
 
-            You can use the ``len()`` method to find the length of a string.
 
-            .. activecode::  str-ex-eggsa
-                :optional:
+.. tabbed:: str-ex-float
 
-                Write code to evaluate the length of the string "I like green eggs"
-                and print it. It should print "The length is 17".
-                ~~~~
-                sentence = 'I like green eggs'
-                print('The length is ' + str(len(sentence)))
+   .. tab:: Question
 
+       .. activecode::  str-ex-floatq
+           :autograde: unittest
 
-#.
-    .. activecode::  str-ex-countq
-        :autograde: unittest
+           Take the following Python code that stores this string: ``string = "X-DSPAM-Confidence: 0.8475"``.
+           Use ``find`` and string slicing to extract the portion of the string after the colon character
+           and then use the ``float`` function to convert the extracted string into a floating point number called ``num``.
+           ~~~~
+           string = "X-DSPAM-Confidence: 0.8475"
 
-        Create a function named ``count`` that accepts a string and a letter
-        as arguments, then returns the count of that letter in the string.
-        For example, if the function call was ``count("banana", "a")`` it would
-        return ``3``. *Hint: use the* ``count`` *method.*
-        ~~~~
 
-        ====
-        from unittest.gui import TestCaseGui
-        class myTests(TestCaseGui):
+           ====
+           from unittest.gui import TestCaseGui
+           class myTests(TestCaseGui):
 
-            def testOne(self):
-                self.assertEqual(count('banana','a'),3,"Tested 'a' in 'banana'")
-                self.assertEqual(count('pineapple','s'),0,"Tested 's' in 'pineapple'")
-                self.assertEqual(count('pepperoni pizza','p'),4,"Tested 'p' in 'pepperoni pizza'")
-                self.assertEqual(count('racecar','r'),2,"Tested 'r' in 'racecar'")
+               def testOne(self):
+                   self.assertEqual(num,0.8475)
 
-        myTests().main()
+           myTests().main()
 
+   .. tab:: Answer
 
-#.
-    .. tabbed:: str-ex-float
+       The ``float()`` function ignores whitespace, so you can begin the slice at the space character after the colon or at the 0 -- your choice!
 
-        .. tab:: Question
+       .. activecode:: str-ex-floatA
+           :optional:
 
-            .. activecode::  str-ex-floatq
-                :autograde: unittest
+           Take the following Python code that stores this string: ``string = "X-DSPAM-Confidence: 0.8475"``.
+           Use ``find`` and string slicing to extract the portion of the string after the colon character
+           and then use the ``float`` function to convert the extracted string into a floating point number called ``num``.
+           ~~~~
+           string = "X-DSPAM-Confidence: 0.8475"
+           colonpos = string.find(':')
+           digit = string[colonpos + 1:]
+           num = float(digit)
 
-                Take the following Python code that stores this string: ``string = "X-DSPAM-Confidence: 0.8475"``.
-                Use ``find`` and string slicing to extract the portion of the string after the colon character
-                and then use the ``float`` function to convert the extracted string into a floating point number called ``num``.
-                ~~~~
-                string = "X-DSPAM-Confidence: 0.8475"
 
+.. selectquestion:: str-writecode-6
+   :fromid: str-ex-ducksacq, str-ex-ducksansw
+   :toggle: lock
 
-                ====
-                from unittest.gui import TestCaseGui
-                class myTests(TestCaseGui):
 
-                    def testOne(self):
-                        self.assertEqual(num,0.8475)
 
-                myTests().main()
 
-        .. tab:: Answer
+.. tabbed:: str-ex-digits
 
-            The ``float()`` function ignores whitespace, so you can begin the slice at the space character after the colon or at the 0 -- your choice!
+   .. tab:: Question
 
-            .. activecode:: str-ex-floatA
-                :optional:
+       .. activecode:: str-ex-digitsq
+           :practice: T
+           :autograde: unittest
 
-                Take the following Python code that stores this string: ``string = "X-DSPAM-Confidence: 0.8475"``.
-                Use ``find`` and string slicing to extract the portion of the string after the colon character
-                and then use the ``float`` function to convert the extracted string into a floating point number called ``num``.
-                ~~~~
-                string = "X-DSPAM-Confidence: 0.8475"
-                colonpos = string.find(':')
-                digit = string[colonpos + 1:]
-                num = float(digit)
+           Write a function ``numDigits`` that will return the number of digits in an integer ``n``.
+           ~~~~
+           def numDigits(n):
+               # your code here
 
+           ====
 
-#.
-    .. activecode::  str-ex-ducksq
+           from unittest.gui import TestCaseGui
 
-        In Robert McCloskey's book *Make Way for Ducklings*, the names of the ducklings are
-        Jack, Kack, Lack, Mack, Nack, Ouack, Pack, and Quack.
-        The following loop tries to output these names in order.
-        Of course, that's not quite right because Ouack and Quack are misspelled.
-        Can you fix it?
-        ~~~~
-        prefixes = "JKLMNOPQ"
-        suffix = "ack"
+           class myTests(TestCaseGui):
 
-        for letter in prefixes:
-            print(letter + suffix)
+               def testOne(self):
+                   self.assertEqual(numDigits(2),1,"Tested numDigits on input of 2")
+                   self.assertEqual(numDigits(55),2,"Tested numDigits on input of 55")
+                   self.assertEqual(numDigits(1352),4,"Tested numDigits on input of 1352")
+                   self.assertEqual(numDigits(444),3,"Tested numDigits on input of 444")
 
-#.
-    .. tabbed:: str-ex-digits
 
-        .. tab:: Question
 
-            .. activecode:: str-ex-digitsq
-                :practice: T
-                :autograde: unittest
+           myTests().main()
 
-                Write a function ``numDigits`` that will return the number of digits in an integer ``n``.
-                ~~~~
-                def numDigits(n):
-                    # your code here
 
-                ====
+   .. tab:: Answer
 
-                from unittest.gui import TestCaseGui
+       Convert the integer to a string, then use the ``len()`` method.
 
-                class myTests(TestCaseGui):
+       .. activecode:: str_ex-digitsa
+           :optional:
 
-                    def testOne(self):
-                        self.assertEqual(numDigits(2),1,"Tested numDigits on input of 2")
-                        self.assertEqual(numDigits(55),2,"Tested numDigits on input of 55")
-                        self.assertEqual(numDigits(1352),4,"Tested numDigits on input of 1352")
-                        self.assertEqual(numDigits(444),3,"Tested numDigits on input of 444")
+           Write a function ``numDigits`` that will return the number of digits in an integer ``n``.
+           ~~~~
+           def numDigits(n):
+               n_str = str(n)
+               return len(n_str)
 
+           # Check the function
+           print(numDigits(50))
+           print(numDigits(20000))
+           print(numDigits(1))
 
 
-                myTests().main()
 
+.. selectquestion:: str-writecode-8
+   :fromid: str-ex-nameacq, str-ex-nameansw
+   :toggle: lock
 
-        .. tab:: Answer
 
-            Convert the integer to a string, then use the ``len()`` method.
+.. tabbed:: str-ex-nameInput
 
-            .. activecode:: str_ex-digitsa
-                :optional:
+   .. tab:: Question
 
-                Write a function ``numDigits`` that will return the number of digits in an integer ``n``.
-                ~~~~
-                def numDigits(n):
-                    n_str = str(n)
-                    return len(n_str)
+       .. activecode::  str-ex-nameInputq
 
-                # Check the function
-                print(numDigits(50))
-                print(numDigits(20000))
-                print(numDigits(1))
+           Write a program that asks a user for their name and from the input
+           prints the first letter of their name in lowercase.
+           ~~~~
 
+   .. tab:: Answer
 
-#.
-    .. activecode::  str-ex-nameq
-        :autograde: unittest
+       Use the ``input()`` function to get the user's input, then use indexing and the ``lower()`` method to print the first letter of their name in lowercase.
 
-        Write code to print out the statement "Hi my name is Bob and I am 2" using only string methods
-        or string slicing. You must get every part of the new string from the given strings, not by using
-        string literals.
-        Name the final string ``statement``.
-        ~~~~
-        s1 = "hi"
-        s2 = "My name is Bob, and he and I love to eat ham."
+       .. activecode:: str-ex-nameInputa
+           :optional:
 
-        ====
-        from unittest.gui import TestCaseGui
-        class myTests(TestCaseGui):
+           Write a program that asks a user for their name and from the input
+           prints the first letter of their name in lowercase.
+           ~~~~
+           prompt = "What is your name?"
+           name = input(prompt)
+           first = name[0]
+           lowerFirst = first.lower()
+           print(lowerFirst)
 
-            def testOne(self):
-                self.assertEqual(statement,"Hi my name is Bob and I am 2")
 
-        myTests().main()
-
-
-#.
-    .. tabbed:: str-ex-nameInput
-
-        .. tab:: Question
-
-            .. activecode::  str-ex-nameInputq
-
-                Write a program that asks a user for their name and from the input
-                prints the first letter of their name in lowercase.
-                ~~~~
-
-        .. tab:: Answer
-
-            Use the ``input()`` function to get the user's input, then use indexing and the ``lower()`` method to print the first letter of their name in lowercase.
-
-            .. activecode:: str-ex-nameInputa
-                :optional:
-
-                Write a program that asks a user for their name and from the input
-                prints the first letter of their name in lowercase.
-                ~~~~
-                prompt = "What is your name?"
-                name = input(prompt)
-                first = name[0]
-                lowerFirst = first.lower()
-                print(lowerFirst)
-
-#.
-    .. activecode::  str-ex-lowerq
-
-        Write a program that asks for user input and prints their
-        input in all lowercase, as well as the length of their string.
-        ~~~~
+.. selectquestion:: str-writecode-10
+   :fromid: str-ex-loweracq, str-ex-loweransw
+   :toggle: lock
