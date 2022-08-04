@@ -48,7 +48,7 @@ to check your solution.
 See the video below for an example.
 
 .. youtube:: Rf7oWHlo-e0
-    :divid: si206-parsons1
+    :divid: si206-parsons1-cls
     :optional:
     :width: 650
     :height: 415
@@ -56,7 +56,7 @@ See the video below for an example.
 
 Try to solve the following mixed-up code problem. This problem requires indentation and has extra blocks that are not needed in a correct solution.
 
-.. parsonsprob:: si206-sample-parsons-indent-with-dist
+.. parsonsprob:: si206-sample-parsons-indent-with-dist-cls
    :numbered: left
    :adaptive:
    :practice: T
@@ -82,7 +82,7 @@ than three blocks left.
 See the video below for an example.
 
 .. youtube:: QejZ7u642IU
-    :divid: si206-parsons2
+    :divid: si206-parsons2-cls
     :optional:
     :width: 650
     :height: 415

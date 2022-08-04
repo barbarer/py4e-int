@@ -14,15 +14,31 @@ Problems
    :toggle: lock
    :points: 10
 
+.. poll:: fl-toggle-poll-1
+    :scale: 9
+
+    From 1-lowest to 9-highest, how useful was the Parsons problem in helping you <b>solve</b> these problems? Please skip this question if you didn't use it.
+
 .. selectquestion:: fl-dict-to-list-ps-sq-tog
    :fromid: dict_to_list_pilot, dict_to_list_pp_pilot
    :toggle: lock
    :points: 10
 
+.. poll:: fl-toggle-poll-2
+    :scale: 9
+
+    From 1-lowest to 9-highest, how useful was the Parsons problem in helping you <b>solve</b> these problems? Please skip this question if you didn't use it.
+
+
 .. selectquestion:: fl-has22-ps-sq-tog
    :fromid: has22_Write, has22_Parsons-Version-A
    :toggle: lock
    :points: 10
+
+.. poll:: fl-toggle-poll-3
+    :scale: 9
+
+    From 1-lowest to 9-highest, how useful was the Parsons problem in helping you <b>solve</b> these problems? Please skip this question if you didn't use it.
 
 
 .. selectquestion:: fl-sum13-ps-sq-tog
@@ -30,14 +46,14 @@ Problems
    :toggle: lock
    :points: 10
 
-
-Feedback
-============================
-
-.. poll:: fl-toggle-poll
+.. poll:: fl-toggle-poll-4
     :scale: 9
 
     From 1-lowest to 9-highest, how useful was the Parsons problem in helping you <b>solve</b> these problems? Please skip this question if you didn't use it.
+
+
+Feedback
+============================
 
 .. shortanswer:: fl-toggle-sa
     
