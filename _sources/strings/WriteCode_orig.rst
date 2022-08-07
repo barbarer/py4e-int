@@ -1,6 +1,7 @@
 Write Code Questions
 --------------------
 
+
 .. activecode::  str-ex-hiacq
     :autograde: unittest
 
@@ -23,7 +24,7 @@ Write Code Questions
     :adaptive:
     :numbered: left
     :practice: T
-    
+
     Fix line 2 so that it prints "Hi" instead of "hi".
     -----
     s1 = "hi"
@@ -53,12 +54,12 @@ Write Code Questions
 
     myTests().main()
 
-        
+
 .. parsonsprob:: str-ex-meowansw
     :adaptive:
     :numbered: left
     :practice: T
-    
+
     Fix the code so that only "meow" is printed.
     -----
     sentence = "The cat goes meow."
@@ -71,12 +72,23 @@ Write Code Questions
 
 
 .. activecode::  str-ex-eggsacq
+    :autograde: unittest
 
     Write code to evaluate the length of the string "I like green eggs"
-    and print it. It should print "The length is 17".
+    and print it. Save the string as s1. It should print "The length is 17".
     ~~~~
 
-    
+    ====
+    from unittest.gui import TestCaseGui
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(s1,"The length is 17")
+
+    myTests().main()
+
+
+
 .. parsonsprob:: str-ex-eggsansw
     :adaptive:
     :numbered: left
@@ -154,7 +166,7 @@ Write Code Questions
 
     myTests().main()
 
-  
+
 .. parsonsprob:: str-ex-floatansw
     :adaptive:
     :numbered: left

@@ -9,3 +9,4 @@ Data Visualization
     visualizingnetworksandinterconnections.rst
     visualizingmaildata.rst
     Exercises.rst
+    mixedUpCode.rst
