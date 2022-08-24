@@ -49,7 +49,8 @@ Glossary
       the evaluation because Python knows the final value for the expression
       without needing to evaluate the rest of the expression.
 
-.. dragndrop:: 03-dnd-glossary1
+.. dragndrop:: cond-dnd-glossary1
+    :practice: T
     :feedback: Look above for these terms.
     :match_1: body|||The sequence of statements within a compound statement.
     :match_2: branch|||One of the alternative sequences of statements in a conditional statement.
@@ -61,7 +62,8 @@ Glossary
 
     Match each term with its definition.
 
-.. dragndrop:: 03-dnd-glossary2
+.. dragndrop:: cond-dnd-glossary2
+    :practice: T
     :feedback: Look above for these terms.
     :match_1: boolean expression|||An expression whose value is either ``True`` or ``False``.
     :match_2: comparison operator|||One of the operators that compares its operands: ``==``,
@@ -72,7 +74,8 @@ Glossary
 
     Match each term with its definition.
 
-.. dragndrop:: 03-dnd-glossary3
+.. dragndrop:: cond-dnd-glossary3
+    :practice: T
     :feedback: Look above for these terms.
     :match_1: chained conditional|||A conditional statement with a series of alternative branches.
     :match_2: conditional statement|||A statement that controls the flow of execution depending

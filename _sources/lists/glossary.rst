@@ -38,6 +38,7 @@ Glossary
 
 
 .. dragndrop:: list_glossary1
+    :practice: T
     :feedback: Look above for the definitions of these terms.
     :match_1: Aliasing|||A circumstance where two or more variables refer to the same object.
     :match_2: Element|||One of the values in a list (or other sequence).
@@ -49,6 +50,7 @@ Glossary
     Match each term to its definition.
 
 .. dragndrop:: list_glossary2
+    :practice: T
     :feedback: Look above for the definitions of these terms.
     :match_1: Delimiter|||A character or string used to indicate where a string should be split.
     :match_2: Index|||An integer value that indicates an element in a list.

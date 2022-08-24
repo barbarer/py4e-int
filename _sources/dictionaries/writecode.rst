@@ -6,7 +6,6 @@ Write Code Questions
         .. tab:: Question
 
             .. activecode:: dict_writecode1q
-                :practice: T
                 :autograde: unittest
 
                 Write a program that categorizes each mail message by which day of the week
@@ -60,7 +59,6 @@ Write Code Questions
 
 #.
     .. activecode:: dict_writecode2
-        :practice: T
         :autograde: unittest
 
         Write a program to read through a mail log, build the dictionary ``user_count`` to count how many messages have come from each email address, and print the dictionary. For example, ``user_count['stephen.marquard@uct.ac.za']`` should be ``4``.
@@ -83,7 +81,6 @@ Write Code Questions
         .. tab:: Question
 
             .. activecode:: dict_writecode3q
-                :practice: T
                 :autograde: unittest
 
                 Write a program that creates a dictionary ``letter_count`` that keeps track
@@ -137,7 +134,6 @@ Write Code Questions
 
 #.
     .. activecode:: dict_writecode4
-        :practice: T
         :autograde: unittest
 
         Write a program that reads the words in the string ``phrase`` and counts how many times each word appears.
@@ -157,8 +153,6 @@ Write Code Questions
                 self.assertEqual(word_dictionary['a'], 3, "word_dictionary['a']")
 
         myTests().main()
-
-Here is the words.txt file for Question 5.
 
 .. reveal:: words-txt-file
    :showtitle: Show
@@ -196,13 +190,8 @@ Here is the words.txt file for Question 5.
 
         .. tab:: Question
 
-            .. datafile:: words.txt
-                :fromfile: words.txt
-                :hide:
-
             .. activecode:: dict_writecode5q
-                :practice: T
-                :available_files: words.txt
+                :datafile: words.txt
                 :autograde: unittest
 
                 Write code that reads in the text from the file words.txt and uses
@@ -224,13 +213,9 @@ Here is the words.txt file for Question 5.
 
         .. tab:: Answer
 
-            .. datafile: words.txt
-                :fromfile: words.txt
-                :hide:
-
             .. activecode:: dict_writecode5a
+                :datafile: words.txt
                 :optional:
-                :available_files: words.txt
 
                 Write code that reads in the text from the file words.txt and uses
                 the dictionary ``word_count`` to count the amount of times a word appears
@@ -297,13 +282,8 @@ Below is the romeo3.txt file used in Question 7.
 
         .. tab:: Question
 
-            .. datafile:: romeo3.txt
-                :fromfile: romeo.txt
-                :hide:
-
             .. activecode:: dict_writecode7q
-                :practice: T
-                :available_files: romeo.txt
+                :datafile: romeo.txt
                 :autograde: unittest
 
                 Write code to read through the lines of the file, break each line into a list of
@@ -325,12 +305,8 @@ Below is the romeo3.txt file used in Question 7.
 
         .. tab:: Answer
 
-            .. datafile: romeo.txt
-                :fromfile: romeo.txt
-                :hide:
-
             .. activecode:: dict_writecode7a
-                :available_files: romeo.txt
+                :datafile: romeo.txt
                 :optional:
 
                 Write code to read through the lines of the file, break each line into a list of
@@ -338,7 +314,7 @@ Below is the romeo3.txt file used in Question 7.
                 the dictionary ``counts``. For example, ``counts['is']`` should be ``3``.
                 ~~~~
                 # Open file in "read" mode
-                with open("romeo3.txt", "r") as filename:
+                with open("romeo.txt", "r") as filename:
                     # Separate and read lines
                     lines = filename.readlines()
                     # Create count dictionary
@@ -357,7 +333,6 @@ Below is the romeo3.txt file used in Question 7.
 
 #.
     .. activecode:: dict_writecode8
-        :practice: T
         :autograde: unittest
 
         Write code that adds the key 'two' with a value of 'dos' to the dictionary ``eng2sp``. For example, ``eng2sp['two']`` should be ``'dos'``.
@@ -400,19 +375,14 @@ The next two questions are associated with the following text file which has an 
 
         .. tab:: Question
 
-            .. datafile:: mbox-short.txt3
-                :fromfile: mbox-short.txt
-                :hide:
-
             .. activecode:: dict_writecode9q
-                :practice: T
-                :available_files: mbox-short.txt
+                :datafile: mbox-short.txt
                 :autograde: unittest
 
                 Add code to the program below to figure out who has the most messages in the file. After all the data has been read and the dictionary ``message_count`` has been created, look through the dictionary using a maximum loop (see Chapter 5: Maximum and minimum loops) to find who has the most messages,
                 and print how many messages the person has. For example, ``message_count['cwen@iupui.edu']`` should be ``5``.
                 ~~~~
-                with open("mbox-short.txt3", "r") as filename:
+                with open("mbox-short.txt", "r") as filename:
                     message_count = {}
 
                 ====
@@ -436,7 +406,7 @@ The next two questions are associated with the following text file which has an 
                 and print how many messages the person has. For example, ``message_count['cwen@iupui.edu']`` should be ``5``.
                 ~~~~
                 # Open file in read mode
-                with open("mbox-short.txt3", "r") as filename:
+                with open("mbox-short.txt", "r") as filename:
                     # Create message_count dictionary
                     message_count = {}
                     # Create variable for lines of the file
@@ -461,20 +431,15 @@ The next two questions are associated with the following text file which has an 
                         max_emails = int(message_count[key])
                 print(max_emails)
 
-.. datafile:: mbox-short.txt2
-   :fromfile: mbox-short.txt
-   :hide:
-
 #.
     .. activecode:: dict_writecode10
-        :practice: T
         :available_files: mbox-short.txt
         :autograde: unittest
 
         Write a program to record in the dictionary ``message_count`` the total number of messages from each domain name (not the whole address, just the part after the @ and before the space). At the end of the program, print out the contents of your dictionary.
         The domains should be the keys of the dictionary, and the counts of the domains should be the values of the dictionary. For example, ``message_count['iupui.edu']`` should be ``8``.
         ~~~~
-        with open("mbox-short.txt2", "r") as filename:
+        with open("mbox-short.txt", "r") as filename:
             message_count = {}
 
         ====

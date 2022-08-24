@@ -144,14 +144,11 @@ of debugging. Here are some common pitfalls and ways to avoid them:
     can use ``continue`` to skip lines that don't have "From"
     as the first word as follows:
 
-    .. datafile:: mboxShort1.txt
-        :fromfile: ../files/mbox-short.txt
-        :hide:
-
     .. activecode:: listDebug_ac_print
         :caption: Revisiting file access.
+        :datafile: mboxShort.txt
 
-        fhand = open('mboxShort1.txt')
+        fhand = open('mboxShort.txt')
         for line in fhand:
             words = line.split()
             if words[0] != 'From' : continue

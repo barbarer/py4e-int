@@ -59,7 +59,6 @@ and ``tuple``) support indexing and slicing.
     print(triplet)
 
 .. mchoice:: strings_MC_pogil_positiveindex
-    :practice: T
     :answer_a: 0, 9
     :answer_b: 0, 10
     :answer_c: 1, 9
@@ -73,7 +72,6 @@ and ``tuple``) support indexing and slicing.
     What is the *positive* index of the first character in the ``sentence`` string? What about the last?
 
 .. mchoice:: strings_MC_pogil_negativeindex
-    :practice: T
     :answer_a: -9, 0
     :answer_b: -9, -1
     :answer_c: -10, 0
@@ -87,7 +85,6 @@ and ``tuple``) support indexing and slicing.
     What is the *negative* index of the first character in the ``sentence`` string? What about the last?
 
 .. mchoice:: strings_MC_pogil_posandneg
-    :practice: T
     :answer_a: a, r
     :answer_b: a, a
     :answer_c: _, r

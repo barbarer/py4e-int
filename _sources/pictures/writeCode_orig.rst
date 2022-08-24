@@ -11,49 +11,16 @@
 Write Code Exercises
 ---------------------------
 
-The picture below are used in the following exercises.
-
-.. datafile:: gal3.jpg
-   :image:
-   :fromfile: Figures/gal2.jpg
-   :hide:
-
-.. datafile:: kitten3.jpg
-   :image:
-   :fromfile: Figures/kitten.jpg
-   :hide:
-
-.. datafile:: swan3.jpg
-   :image:
-   :fromfile: Figures/swan.jpg
-   :hide:
-
-.. datafile:: motorcycle3.jpg
-   :image:
-   :fromfile: Figures/motorcycle.jpg
-   :hide:
-
-.. datafile:: baby3.jpg
-   :image:
-   :fromfile: Figures/baby.jpg
-   :hide:
-
-.. datafile:: guy3.jpg
-   :image:
-   :fromfile: Figures/guy1.jpg
-   :hide:
-
 .. note::
 
    Remember that it can take a bit of time to process all the pixels in a picture!  Check for errors below the code if it is taking a long time, but if you don't see any errors just wait.
 
 
-
-
 .. activecode:: pictures_ac_16
+   :datafile: gal2.jpg
    :nocodelens:
 
-   A grayscale picture is when the red, green, and blue value of a pixel are all equal to the average of the original pixel value. Write the code to turn the left half of the image ``gal3.jpg`` into gray scale.
+   A grayscale picture is when the red, green, and blue value of a pixel are all equal to the average of the original pixel value. Write the code to turn the left half of the image ``gal2.jpg`` into gray scale.
    ~~~~
 
 
@@ -62,11 +29,11 @@ The picture below are used in the following exercises.
    :practice: T
    :adaptive:
 
-   A grayscale picture is when the red, green, and blue value of a pixel are all equal to the average of the original pixel value. Create the code to turn the left half of the image ``gal3.jpg`` into gray scale.
+   A grayscale picture is when the red, green, and blue value of a pixel are all equal to the average of the original pixel value. Create the code to turn the left half of the image ``gal2.jpg`` into gray scale.
    -----
    from image import *
    =====
-   img = Image("gal3.jpg")
+   img = Image("gal2.jpg")
    =====
    pixels = img.getPixels()
    =====
@@ -88,14 +55,11 @@ The picture below are used in the following exercises.
 
 
 
-
-
-
-
 .. activecode:: pictures_ac_17
+   :datafile: kitten.jpg
    :nocodelens:
 
-   Define a procedure to negate an image.  You can negate an image by setting each color value to 255 minus the current value. Write code to negate the ``kitten3.jpg`` image.
+   Define a procedure to negate an image.  You can negate an image by setting each color value to 255 minus the current value. Write code to negate the ``kitten.jpg`` image.
    ~~~~
 
 
@@ -109,7 +73,7 @@ The picture below are used in the following exercises.
    -----
    from image import *
    =====
-   img = Image("kitten3.jpg")
+   img = Image("kitten.jpg")
    =====
    pixels = img.getPixels()
    =====
@@ -130,9 +94,10 @@ The picture below are used in the following exercises.
 
 
 .. activecode:: pictures_ac_18
+   :datafile: kitten.jpg
    :nocodelens:
 
-   Write code that copies the top half of the image ``kitten3.jpg`` to the bottom half.
+   Write code that copies the top half of the image ``kitten.jpg`` to the bottom half.
    ~~~~
 
 
@@ -141,11 +106,11 @@ The picture below are used in the following exercises.
    :practice: T
    :adaptive:
 
-   Write code that copies the top half of the image ``kitten3.jpg`` to the bottom half.
+   Write code that copies the top half of the image ``kitten.jpg`` to the bottom half.
    -----
    from image import *
    =====
-   img = Image("kitten3.jpg")
+   img = Image("kitten.jpg")
    =====
    halfway = (int(img.getHeight() / 2))
    =====
@@ -173,9 +138,10 @@ The picture below are used in the following exercises.
 
 
 .. activecode:: pictures_ac_19
+   :datafile: swan.jpg
    :nocodelens:
 
-   Write a function to mirror the image ``swan3.jpg`` from left to right around a vertical line in the middle of the image. Pass the image to the function. Do the import, create the image, call the function, and show the result.
+   Write a function to mirror the image ``swan.jpg`` from left to right around a vertical line in the middle of the image. Pass the image to the function. Do the import, create the image, call the function, and show the result.
    ~~~~
 
 
@@ -184,11 +150,11 @@ The picture below are used in the following exercises.
    :practice: T
    :adaptive:
 
-   Create a function to mirror the image ``swan3.jpg`` from left to right around a vertical line in the middle of the image. Pass the image to the function. Do the import, create the image, call the function, and show the result.
+   Create a function to mirror the image ``swan.jpg`` from left to right around a vertical line in the middle of the image. Pass the image to the function. Do the import, create the image, call the function, and show the result.
    -----
    from image import *
    =====
-   img = Image("swan3.jpg")
+   img = Image("swan.jpg")
    =====
    halfway = (int(img.getWidth() / 2))
    =====
@@ -208,14 +174,11 @@ The picture below are used in the following exercises.
    win = ImageWin(img.getWidth(),img.getHeight())
    img.draw(win)
 
-
-
-
-
 .. activecode:: pictures_ac_20
+   :datafile: vangogh.jpg
    :nocodelens:
 
-   Write code that flips the image ``vangogh3.jpg`` across a horizontal line.
+   Write code that flips the image ``vangogh.jpg`` across a horizontal line.
    ~~~~
 
 
@@ -225,11 +188,11 @@ The picture below are used in the following exercises.
    :practice: T
    :adaptive:
 
-   Create code that flips the image ``guy3.jpg`` across a horizontal line.
+   Create code that flips the image ``vangogh.jpg`` across a horizontal line.
    -----
    from image import *
    =====
-   img = Image("vangogh3.jpg")
+   img = Image("vangogh.jpg")
    =====
    halfway = (int(img.getHeight() / 2))
    =====

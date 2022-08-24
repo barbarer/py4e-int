@@ -74,7 +74,7 @@ Glossary
     Source Code
       A program in a high-level language.
 
-.. dragndrop:: 01-dnd-glossary1
+.. dragndrop:: intro1-dnd-glossary1
   :feedback: Look above for these terms.
   :match_1: Bug|||An error in a program.
   :match_2: Problem Solving|||The process of formulating a problem, then finding and expressing a solution.
@@ -83,7 +83,7 @@ Glossary
 
   Match each term with its definition.
 
-.. dragndrop:: 01-dnd-glossary2
+.. dragndrop:: intro1-dnd-glossary2
   :feedback: Look above for these terms.
   :match_1: Central Processing Unit|||Part of the computer that runs the software.
   :match_2: Machine Code|||The lowest-level language for software.
@@ -92,7 +92,7 @@ Glossary
 
   Match each term with its definition.
 
-.. dragndrop:: 01-dnd-glossary3
+.. dragndrop:: intro1-dnd-glossary3
   :feedback: Look above for these terms.
   :match_1: Compile|||To translate a program written in a high-level language into a low-level language all at once, in preparation for later execution.
   :match_2: High-level Language|||A programming language like Python that is designed to be easy for humans to read and write.
@@ -101,7 +101,7 @@ Glossary
 
   Match each term with its definition.
 
-.. dragndrop:: 01-dnd-glossary4
+.. dragndrop:: intro1-dnd-glossary4
   :feedback: Look above for these terms.
   :match_1: Interactive Mode|||A way of using the Python interpreter by typing commands and expressions at the prompt.
   :match_2: Parse|||To examine a program and analyze the syntactic structure.
@@ -110,7 +110,7 @@ Glossary
 
   Match each term with its definition.
 
-.. dragndrop:: 01-dnd-glossary5
+.. dragndrop:: intro1-dnd-glossary5
   :feedback: Look above for these terms.
   :match_1: Interpret|||To execute a program in a high-level language by translating it one line at a time.
   :match_2: Portability|||A property of a program that can run on more than one kind of computer.

@@ -2,6 +2,7 @@ Functions with Loops Multiple Choice Questions
 -----------------------------------------------
 
 .. mchoice:: functions_with_loops_mc1
+    :practice: T
     :answer_a: 1
     :answer_b: 2
     :answer_c: 3
@@ -236,7 +237,7 @@ Functions with Loops Multiple Choice Questions
    :feedback_a: This would be true if there was a single loop using an index to loop though both lists but only to the length of the smallest and the items were numbers.
    :feedback_b: This would be true if it looped through l2 and then l1 in the inner loop and the list items were numbers.
    :feedback_c: This would be true if it looped through l1 and then l2 in the inner loop and the list items were numbers.
-   :feedback_d: Since the list items are strings the + will concatenate the values.  
+   :feedback_d: Since the list items are strings the + will concatenate the values.
 
    What does the following code print?
 

@@ -81,7 +81,7 @@ Change the ``??`` in line 7 below to the amount to turn each time to draw a 12 s
       	mia.forward(40)      # move forward by 40 units
       	mia.right(??)        # change ?? to the amount to turn
 
-.. mchoice:: 10_2_1_Turtle_Dodecagon_Q1
+.. mchoice:: turtle_2_1_Turtle_Dodecagon_Q1
    :answer_a: 15
    :answer_b: 30
    :answer_c: 12
@@ -94,7 +94,7 @@ Change the ``??`` in line 7 below to the amount to turn each time to draw a 12 s
 
    How much does ``mia`` need to turn in the program above to create a closed dodecagon (12-sided figure)?  Only one of these works.
 
-.. parsonsprob:: 10_2_2_Triangle
+.. parsonsprob:: turtle_2_2_Triangle
    :numbered: left
    :adaptive:
 
@@ -127,18 +127,18 @@ Change the ``??`` in line 7 below to the amount to turn each time to draw a 12 s
        marie.turn(120) #paired
 
 
-.. tabbed:: 10_2_3_WSt
+.. tabbed:: turtle_2_3_WSt
 
    .. tab:: Question
 
       Write a function which takes in a turtle object and the number of sides as parameters to draw a polygon. Call the function to test it.
 
-      .. activecode:: 10_2_3_WSq
+      .. activecode:: turtle_2_3_WSq
          :nocodelens:
 
    .. tab:: Answer
 
-      .. activecode:: 10_2_3_WSa
+      .. activecode:: turtle_2_3_WSa
          :nocodelens:
 
          Run the code to see what it draws.

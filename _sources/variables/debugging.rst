@@ -20,7 +20,7 @@ characters.
 If you put a space in a variable name, Python thinks it is two operands
 without an operator:
 
-.. activecode:: 02-ac-12-badname
+.. activecode:: var-ac-12-badname
   :caption: Using an illegal variable name
 
   bad name = 5
@@ -48,7 +48,7 @@ The runtime error you are most likely to make is a "use before def;"
 that is, trying to use a variable before you have assigned a value. This
 can happen if you spell a variable name wrong:
 
-.. activecode:: 02-ac-13-definition
+.. activecode:: var-ac-13-definition
   :caption: Using an undefined variable
 
   principal = 327.68
@@ -61,7 +61,7 @@ same as ``latex``.
 At this point, the most likely cause of a semantic error is the order of
 operations. For example, to evaluate ``1/2pi`` (which is .159), you might be tempted to write
 
-.. activecode:: 02-ac-14-pi
+.. activecode:: var-ac-14-pi
   :caption: Order of operations
 
   print(1.0 / 2.0 * 3.14)

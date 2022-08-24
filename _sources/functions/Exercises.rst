@@ -2,6 +2,7 @@ Multiple Choice Questions
 -------------------------
 
 .. mchoice:: functEx_1_v2
+    :practice: T
     :answer_a: a, b
     :answer_b: -3, b
     :answer_c: a, 5
@@ -24,6 +25,7 @@ Multiple Choice Questions
         test(-3)
 
 .. mchoice:: functEx_2
+    :practice: T
     :answer_a: Zap ABC jane fred jane
     :answer_b: Zap ABC Zap
     :answer_c: ABC Zap jane
@@ -51,6 +53,7 @@ Multiple Choice Questions
         jane()
 
 .. mchoice:: functEx_3
+    :practice: T
     :answer_a: value
     :answer_b: Second
     :answer_c: parameter
@@ -76,6 +79,7 @@ Multiple Choice Questions
         myFunction("Second")
 
 .. mchoice:: functEx_4_v2
+    :practice: T
     :answer_a: definition
     :answer_b: method
     :answer_c: turtle
@@ -197,6 +201,7 @@ Multiple Choice Questions
             print("It is sunny!")
 
 .. mchoice:: functEx_10
+    :practice: T
     :answer_a: The lyrics print like normal.
     :answer_b: We get a TypeError.
     :answer_c: We get a NameError.

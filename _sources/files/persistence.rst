@@ -46,7 +46,6 @@ files which are binary files, specifically designed to be read and
 written through database software.
 
 .. mchoice:: file-persistence-mc-work
-    :practice: T
     :answer_a: Main Memory
     :answer_b: Secondary Memory
     :answer_c: Central Processing Unit

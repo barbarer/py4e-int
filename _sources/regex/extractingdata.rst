@@ -73,17 +73,13 @@ are no non-blank characters *before* the at-sign. We can
 use this regular expression in a program to read all the lines in a file
 and print out anything that looks like an email address as follows:
 
-.. datafile:: mbox-short-re3.txt
-    :fromfile: ../files/mbox-short.txt
-    :hide:
-
 .. activecode:: re_data_ac1
-    :available_files: mbox-short-re3.txt
+    :datafile: mbox-short.txt
 
     This code searches for lines that have an at-sign (@) between characters.
     ~~~~
     import re
-    hand = open('mbox-short-re3.txt')
+    hand = open('mbox-short.txt')
     for line in hand:
         line = line.rstrip()
         x = re.findall('\S+@\S+', line)
@@ -140,12 +136,12 @@ character immediately to the left of the plus or asterisk.
 If we use this expression in our program, our data is much cleaner:
 
 .. activecode:: re_data_ac2
-    :available_files: mbox-short-re3.txt
+    :datafile: mbox-short.txt
 
     This code searches for lines that have an at-sign (@) between letter or number characters.
     ~~~~
     import re
-    hand = open('mbox-short-re3.txt')
+    hand = open('mbox-short.txt')
     for line in hand:
         line = line.rstrip()
         x = re.findall('[a-zA-Z0-9]\S+@\S+[a-zA-Z]', line)

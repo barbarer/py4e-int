@@ -32,8 +32,22 @@ Reading from Files
 To read from a file, open the file which returns a file object and loop through
 the lines in a file.  Remember to close the file when you are done reading from it!
 
-.. datafile:: dogs.txt
-    :fromfile: dogs.txt
+.. reveal:: dogs.txt
+   :showtitle: Show
+   :hidetitle: Hide
+
+   .. code-block::
+
+      Labrador Retriever
+      German Shepherd
+      Golden Retriever
+      Beagle
+      Bulldog
+      Yorkshire Terrier
+      Boxer
+      Poodle
+      Rottweiler
+      Dachshunds
 
 .. activecode:: file_pogil_read_lines_with_loop
     :caption: Reading lines from a file.
@@ -66,7 +80,6 @@ When you print a line you add another newline character which prints as a blank 
 Modify the code above to remove the newline from each line after it is read in.
 
 .. fillintheblank:: file_obj_type_fitb
-    :practice: T
 
     What type of thing is ``file_obj`` in the code above?
 
@@ -285,7 +298,6 @@ You can also use ``with open(file) as name`` which will automatically close the 
 
 
 .. fillintheblank:: file_pogil_line_count_type_returned
-    :practice: T
 
     What type of thing is returned from the function below?
 

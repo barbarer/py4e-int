@@ -42,7 +42,6 @@ software or paying our salary to write the software. So the QA team is
 the programmer's best friend.
 
 .. mchoice:: file-try-mc-qa
-    :practice: T
 
     Which of the following is something that the Quality Assurance (QT) team does (pick all that apply)?
 
@@ -113,7 +112,6 @@ always interested in just making something work, we also want our
 solution to be elegant and to be appreciated as elegant by our peers.
 
 .. fillintheblank:: file-try-fitb-python
-    :practice: T
 
     The term |blank| describes something done the "Python way".
 

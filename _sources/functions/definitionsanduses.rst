@@ -80,6 +80,7 @@ See what happens if we move the function definitions around so that ``repeat_lyr
     repeat_lyrics()
 
 .. mchoice:: functDef_MC_order
+    :practice: T
     :answer_a: The lyrics print like normal.
     :answer_b: We get a TypeError.
     :answer_c: We get a NameError.

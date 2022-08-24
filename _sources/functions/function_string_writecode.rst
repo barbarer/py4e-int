@@ -6,7 +6,6 @@ Functions and Strings Write Code Questions
         .. tab:: Question
 
             .. activecode:: funct-strings-writecode1q
-                :practice: T
                 :autograde: unittest
 
                 Write a function called ``start_a`` that takes in ``string`` as a parameter and
@@ -43,7 +42,6 @@ Functions and Strings Write Code Questions
 
 #.
     .. activecode:: funct-strings-writecode2
-        :practice: T
         :autograde: unittest
 
         Write a function called ``square_length`` that takes in ``area`` as a parameter and
@@ -70,7 +68,6 @@ Functions and Strings Write Code Questions
         .. tab:: Question
 
             .. activecode:: funct-strings-writecode3q
-                :practice: T
                 :autograde: unittest
 
                 Write a function called ``use_semicolon`` that takes in ``sentence1`` and ``sentence2`` as parameters and
@@ -108,7 +105,6 @@ Functions and Strings Write Code Questions
 
 #.
     .. activecode:: funct-strings-writecode4
-        :practice: T
         :autograde: unittest
 
 
@@ -140,7 +136,6 @@ Functions and Strings Write Code Questions
         .. tab:: Question
 
             .. activecode:: funct-strings-writecode5q
-                :practice: T
                 :autograde: unittest
 
                 Write a function called ``first_a_gone`` that takes in ``string`` as a parameter and
@@ -177,4 +172,3 @@ Functions and Strings Write Code Questions
                 def first_a_gone(string):
                     capture_a = string.find('a')
                     return string[:capture_a] + string[capture_a + 1:]
-

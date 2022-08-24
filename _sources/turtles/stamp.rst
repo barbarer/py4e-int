@@ -45,7 +45,7 @@ not sure, write a new line of code after the ``for`` loop to change tess' color,
 
 **Mixed up program**
 
-.. parsonsprob:: 10_4_1_turtle-stamp
+.. parsonsprob:: turtle_4_1_turtle-stamp
    :numbered: left
    :adaptive:
 
@@ -80,7 +80,7 @@ not sure, write a new line of code after the ``for`` loop to change tess' color,
    =====
        nikea.stamp #paired
 
-.. parsonsprob:: 10_4_2_turtle-circle
+.. parsonsprob:: turtle_4_2_turtle-circle
    :numbered: left
    :adaptive:
 

@@ -105,18 +105,18 @@ Try the program above on some of the other images by changing the name of the im
    win = ImageWin(img.getWidth(),img.getHeight())
    img.draw(win)
 
-.. tabbed:: 11_4_1_WSt
+.. tabbed:: image_4_1_WSt
 
         .. tab:: Question
 
            Decrease the red by .5 and increase the blue and green by .5 in puppy.jpg.
 
-           .. activecode::  11_4_1_WSq
+           .. activecode::  image_4_1_WSq
                :nocodelens:
 
         .. tab:: Answer
 
-          .. activecode::  11_4_1_WSa
+          .. activecode::  image_4_1_WSa
               :nocodelens:
               :datafile: puppy.jpg
 

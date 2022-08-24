@@ -43,10 +43,12 @@ Images (pictures) on a computer are broken up into little bits called **pixels**
 Pixels are quite small.  Even the small image below has 180 columns and 240 rows of pixels.  Each pixel has a color associated with it: an amount of redness, an amount of greenness, and an amount of blueness.
 Let's remove the red from this picture.  Now, there are lot of lines in the program below, but fortunately, you can ignore most of them. The Audio Tour explains the important lines.  Press |audiobutton| to hear the audio tour explanation.  When you run this program it may take several minutes to show the changed image.
 
-.. datafile:: arch.jpg
-   :image:
-   :fromfile: Figures/arch.jpg
-   :hide:
+.. figure:: Figures/arch.jpg
+    :align: center
+    :alt: A picture of an arch
+    :figclass: align-center
+
+    Figure: A picture of an arch 
 
 .. activecode:: Image_Remove_Red
     :tour_1: "Important Lines Tour"; 1: timg3-line1; 4: timg3-line4; 7-8: timg3-line7-8; 11: timg3-line11; 14: timg3-line14; 17-18: timg3-line17-18;

@@ -393,10 +393,6 @@ and hide to put it away.
        Yuma, AZ :14 :9
        </pre>
 
-.. datafile:: uspoll.txt
-    :fromfile: uspoll.txt
-    :hide:
-
 #.
     .. tabbed:: file_ex_pollError
 
@@ -585,9 +581,20 @@ and hide to put it away.
 
 The following file contains a set of emotions that will be used in the next question.
 
-.. datafile:: emotion_words.txt
-    :fromfile: emotion_words.txt
-    
+.. reveal:: emotion_words.txt
+   :showtitle: Show
+   :hidetitle: Hide
+
+   .. code-block::
+
+      Sad upset blue down melancholy somber bitter troubled
+      Angry mad enraged irate irritable wrathful outraged infuriated
+      Happy cheerful content elated joyous delighted lively glad
+      Confused disoriented puzzled perplexed dazed befuddled
+      Excited eager thrilled delighted
+      Scared afraid fearful panicked terrified petrified startled
+      Nervous anxious jittery jumpy tense uneasy apprehensive
+
 #.
     .. activecode:: file_ex_emotionq
        :datafile: emotion_words.txt
@@ -779,10 +786,6 @@ is the first three letters of the month.
       3-Jan-89,2168.39,2350.18,2127.14,2342.32
       </pre>
 
-.. datafile:: stocks.txt
-    :fromfile: stocks.txt
-    :hide:
-
 #.
     .. tabbed:: file_ex_biggestLoss
 
@@ -914,7 +917,6 @@ is the first three letters of the month.
 
 #.
     .. activecode:: file_ex_abbrq
-        :practice: T
         :datafile: stocks.txt
         :autograde: unittest
 

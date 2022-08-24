@@ -87,7 +87,7 @@ Practice with Turtles
 
    The following problems have a *Help Me* button.  You can click on the *Help Me* button after you have made at least 3 full and distinct attempts to solve the problem to make the problem easier.
 
-.. parsonsprob:: 5_1_1_Turtle_L
+.. parsonsprob:: turtle_1_1_Turtle_L
    :numbered: left
    :adaptive:
 
@@ -121,7 +121,7 @@ Practice with Turtles
 
 
 
-.. parsonsprob:: 5_1_2_Turtle_Check
+.. parsonsprob:: turtle_1_2_Turtle_Check
    :numbered: left
    :adaptive:
 
@@ -153,7 +153,7 @@ Practice with Turtles
    =====
    maria.forward(150)
 
-.. fillintheblank:: 5_2_1_LetterC_fill
+.. fillintheblank:: turtle_2_1_LetterC_fill
 
    What letter (like A, B, C, D, etc) will the program below draw in block style when you click on the Run button?
 

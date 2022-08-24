@@ -17,7 +17,7 @@ The operators ``+``\ , ``-``\ , ``*``\ , ``/``\ , and
 ``**`` perform addition, subtraction, multiplication, division,
 and exponentiation, as in the following examples:
 
-.. activecode:: 02-ac-6-print-operators
+.. activecode:: var-ac-6-print-operators
     :nocodelens:
     :caption: Examples of mathematical operations
 
@@ -32,7 +32,7 @@ and Python 3.x.  In Python 3.x, the result of this division is a
 floating point result:
 
 
-.. activecode:: 02-ac-6-print-vars2
+.. activecode:: var-ac-6-print-vars2
     :caption: Floating point division in Python
 
     minute = 59
@@ -51,7 +51,7 @@ truncate the result to an integer:
 
 To obtain the same answer in Python 3.0 use floored ( ``//`` integer) division.
 
-.. activecode:: 02-ac-6-print-vars3
+.. activecode:: var-ac-6-print-vars3
     :caption: Floored division in Python
 
     minute = 59

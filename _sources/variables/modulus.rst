@@ -9,7 +9,7 @@ remainder when the first operand is divided by the second. In Python,
 the modulus operator is a percent sign ( ``%`` ). The syntax is the same as
 for other operators:
 
-.. activecode:: 02-ac-7-mod
+.. activecode:: var-ac-7-mod
     :caption: Modulus example
 
     quotient = 7 // 3

@@ -28,6 +28,7 @@ Mixed-up Code Questions
         return word_list #paired
 
 .. activecode::  list_MUC_password_creator_ac
+    :practice: T
     :autograde: unittest
 
     Write a function ``password_maker(word_list)`` that takes a a list of words, ``word_list`` and returns a string with the first and last character of each
@@ -88,6 +89,7 @@ Mixed-up Code Questions
 
 
 .. activecode::  list_MUC_rainfall_v2_ac
+    :practice: T
     :autograde: unittest
 
     Write a function ``avg_rainfall(day_list)`` that takes a list with the amount of rain for each day.
@@ -133,6 +135,7 @@ Mixed-up Code Questions
 
 
 .. activecode:: list_MUC_mix_items_ac
+    :practice: T
     :autograde: unittest
 
     Write a function ``mix`` that takes a list ``list1`` and returns a new list with the first and last items from the original list swapped.  For example, ``mix([3, 2, 1, 4])``
@@ -180,6 +183,7 @@ Mixed-up Code Questions
 
 
 .. activecode::  list_MUC_discount_ac
+    :practice: T
     :autograde: unittest
 
     Write a function ``discount(price_list)`` that takes a list of prices and returns a new list with the original price reduced by half.
@@ -225,6 +229,7 @@ Mixed-up Code Questions
 
 
 .. activecode::  list_MUC_append_if_a_ac
+    :practice: T
     :autograde: unittest
 
     Write a function ``filter_a(word_list)`` that takes a list of words, ``word_list`` and returns a new list with only the words in ``word_list`` that start with the letter ``a``.
@@ -276,6 +281,7 @@ Mixed-up Code Questions
 
 
 .. activecode::  list_MUC_add_vocab_ac
+    :practice: T
     :autograde: unittest
 
     Write a function ``vocab_list`` that takes two lists: ``terms`` and ``vocab``. It should loop through the list of terms and add each item to

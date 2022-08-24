@@ -13,7 +13,6 @@ Execution always begins at the first statement of the program.
 Statements are executed one at a time, in order from top to bottom.
 
 .. fillintheblank:: functFlow_Fill1
-    :practice: T
 
     The order in which statements are executed is called the __________________.
 
@@ -62,7 +61,6 @@ always want to read strictly from top to bottom. Sometimes, it makes more sense 
 you follow the flow of execution and read functions as they are called.
 
 .. mchoice:: functFlow_MC_begin
-    :practice: T
     :answer_a: The line where the first function is called.
     :answer_b: The first statement of the program.
     :answer_c: The first function declaration.

@@ -19,7 +19,7 @@ execute.
 
 For example, run this code to see what it does.
 
-.. activecode:: 02-ac-6-print-vars
+.. activecode:: var-ac-6-print-vars
   :caption: Assignments and statements in Python
 
   print(1)

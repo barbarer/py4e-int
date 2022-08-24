@@ -42,7 +42,6 @@ During the activity, students should make progress toward:
     print(len(digits))
 
 .. mchoice:: listOp_MC_list
-    :practice: T
     :answer_a: digits
     :answer_b: media
     :answer_c: studentData
@@ -88,7 +87,6 @@ During the activity, students should make progress toward:
     print(areaCode * 3)
 
 .. mchoice:: listOp_MC_plus312
-    :practice: T
     :answer_a: 9
     :answer_b: [3, 1, 2, 3, 1, 2, 3, 1, 2]
     :answer_c: [3, 3, 3, 1, 1, 1, 2, 2, 2]
@@ -109,7 +107,6 @@ During the activity, students should make progress toward:
       :.*: Try Again! Use .index() to hel find where the index of 3 is.
 
 .. mchoice:: listOp_MC_plus773
-    :practice: T
     :answer_a: areaCode.append(7)
     :answer_b: areaCode.append([7])
     :answer_c: areaCode += 7
@@ -162,7 +159,6 @@ During the activity, students should make progress toward:
       :.*: Try Again! use len() to find the size of the list.
 
 .. mchoice:: listOp_MC_idx
-    :practice: T
     :answer_a: 2
     :answer_b: 1
     :answer_c: 0

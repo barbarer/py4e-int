@@ -60,7 +60,6 @@ Basic Conditionals and Tests
     main()
 
 .. fillintheblank:: funct_fitb_pogil_else
-    :practice: T
 
     What keyword specifies the block of statements to execute if a Boolean condition is false?
 
@@ -69,7 +68,6 @@ Basic Conditionals and Tests
       :.*: Try again!
 
 .. fillintheblank:: funct_fitb_pogil_if
-    :practice: T
 
     What keyword starts a conditional statement and is the only required keyword in it?
 
@@ -78,7 +76,6 @@ Basic Conditionals and Tests
       :.*: Try again!
 
 .. fillintheblank:: funct_fitb_pogil_elif
-    :practice: T
 
     What keyword is used in a conditional statement when you want three of more possible outcomes?
 

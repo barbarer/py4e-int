@@ -109,6 +109,7 @@ if ``y`` is non-zero.
       :.*: Try again!
 
 .. dragndrop:: cndtnl-sc-dnd-terms
+    :practice: T
     :feedback: What is the purpose of each term?
     :match_1: guardian pattern|||A logical expression with additional comparisons to take advantage
               of the short circuit behavior.

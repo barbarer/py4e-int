@@ -44,19 +44,15 @@ that inside the square brackets, the period matches an actual period
 This is a very tight expression that will pretty much match only the
 lines we are interested in as follows:
 
-.. datafile:: mbox-short-re4.txt
-    :fromfile: ../files/mbox-short.txt
-    :hide:
-
 .. activecode:: re_combo_ac1
-    :available_files: mbox-short-re4.txt
+    :datafile: mbox-short.txt
     :nocodelens:
 
     Search for lines that start with 'X', followed by any non-whitespace characters
     and ':', followed by a space and any number, where the number can include a decimal
     ~~~~
     import re
-    hand = open('mbox-short-re4.txt')
+    hand = open('mbox-short.txt')
     for line in hand:
         line = line.rstrip()
         if re.search('^X\S*: [0-9.]+', line):
@@ -82,6 +78,7 @@ matches the regular expression.
 So we make the following change to our program:
 
 .. activecode:: re_combo_ac2
+    :datafile: mbox-short.txt
     :nocodelens:
 
     Search for lines that start with 'X', followed by any non-whitespace characters
@@ -116,14 +113,14 @@ at the end of these lines) using the same technique as above, we could
 write the following program:
 
 .. activecode:: re_combo_ac3
-    :available_files: mbox-short-re4.txt
+    :datafile: mbox-short.txt
     :nocodelens:
 
     Search for lines that start with 'Details: rev=' followed by numbers
     and '.' Then print the number if it is greater than zero
     ~~~~
     import re
-    hand = open('mbox-short-re4.txt')
+    hand = open('mbox-short.txt')
     for line in hand:
         line = line.rstrip()
         x = re.findall('^Details:.*rev=([0-9.]+)', line)
@@ -204,14 +201,14 @@ parentheses around the two digits as follows:
 This results in the following program:
 
 .. activecode:: re_combo_ac4
-    :available_files: mbox-short-re4.txt
+    :datafile: mbox-short.txt
     :nocodelens:
 
     Search for lines that start with From and a character followed by a two
     digit number between 00 and 99, followed by ':'
     ~~~~
     import re
-    hand = open('mbox-short-re4.txt')
+    hand = open('mbox-short.txt')
     for line in hand:
         line = line.rstrip()
         x = re.findall('^From .* ([0-9][0-9]):', line)

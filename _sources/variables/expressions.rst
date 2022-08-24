@@ -20,7 +20,7 @@ the variable ``x`` has been assigned a value):
 If you type an expression in interactive mode, the interpreter
 *evaluates* it and displays the result:
 
-.. activecode:: 02-ac-6-expressions2
+.. activecode:: var-ac-6-expressions2
     :nocodelens:
     :caption: Evaluating expressions
 

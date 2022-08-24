@@ -19,7 +19,6 @@ constructor converts it into a list.)
 
 
 .. mchoice:: question10_4_1
-   :practice: T
    :answer_a: True
    :answer_b: False
    :correct: b

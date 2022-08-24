@@ -71,6 +71,7 @@ Glossary
         A name that refers to a value.
 
 .. dragndrop:: varGlossary1
+    :practice: T
     :feedback: Look above for these terms.
     :match_1: floating point|||A type that represents numbers with fractional parts.
     :match_2: integer|||A type that represents whole numbers.
@@ -80,6 +81,7 @@ Glossary
     Match each term with its definition.
 
 .. dragndrop:: varGlossary2
+    :practice: T
     :feedback: Look above for these terms.
     :match_1: assignment|||A statement that assigns a value to a variable.
     :match_2: keyword|||A reserved word that is used by the compiler to parse a program; you cannot use keywords like ``if``\ , ``def``\ , and ``while`` as variable names.
@@ -90,6 +92,7 @@ Glossary
     Match each term with its definition.
 
 .. dragndrop:: varGlossary3
+    :practice: T
     :feedback: Look above for these terms.
     :match_1: expression|||A combination of variables, operators, and values that represents a single result value.
     :match_2: modulus operator|||An operator, denoted with a percent sign (%), that works on integers and yields the remainder when one number is divided by another.
@@ -100,6 +103,7 @@ Glossary
     Match each term with its definition.
 
 .. dragndrop:: varGlossary4
+    :practice: T
     :feedback: Look above for these terms.
     :match_1: concatenate|||To join two operands end to end.
     :match_2: comment|||Information in a program that is meant for other programmers (or anyone reading the source code) and has no effect on the execution of the program.

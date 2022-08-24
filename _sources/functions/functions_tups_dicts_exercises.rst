@@ -2,6 +2,7 @@ Functions with Tuples and Dictionaries Multiple Choice Questions
 -----------------------------------------------------------------
 
 .. mchoice:: functions_tups_dicts_mcqs_q1
+    :practice: T
     :answer_a: keys() and get()
     :answer_b: values()
     :answer_c: count() and append()
@@ -18,6 +19,7 @@ Functions with Tuples and Dictionaries Multiple Choice Questions
 
 
 .. mchoice:: functions_tups_dicts_mcqs_q2
+    :practice: T
     :answer_a: tup.append(5), tup.pop(1), return sorted(tup)
     :answer_b: tup.append(5), tup.pop(2), return sorted(tup)
     :answer_c: tup.append(5), tup.pop(1), tup.reverse(), return tup
@@ -39,6 +41,7 @@ Functions with Tuples and Dictionaries Multiple Choice Questions
 
 
 .. mchoice:: functions_tups_dicts_mcqs_q3
+    :practice: T
     :answer_a: (0, 7, 16, 27, 100, 84, 99, 78, 200, -7)
     :answer_b: (27, 0, 100, 7, 16, 84, 99, 78, 200, -7)
     :answer_c: ((0, 84), (7, 99), (16, 78), (27, 200), (100, -7))
@@ -63,6 +66,7 @@ Functions with Tuples and Dictionaries Multiple Choice Questions
 
 
 .. mchoice:: functions_tups_dicts_mcqs_q4
+    :practice: T
     :answer_a: return dictionary[1]
     :answer_b: return dictionary['one']
     :answer_c: return dictionary.get('one')
@@ -84,6 +88,7 @@ Functions with Tuples and Dictionaries Multiple Choice Questions
 
 
 .. mchoice:: functions_tups_dicts_mcqs_q5
+    :practice: T
     :answer_a: dictionary[tup[0]] = dictionary[tup[1]]
     :answer_b: dictionary(tup[0]) = tup[1]
     :answer_c: dictionary[tup[0]] = tup[1]
@@ -108,6 +113,7 @@ Functions with Tuples and Dictionaries Multiple Choice Questions
 
 
 .. mchoice:: functions_tups_dicts_mcqs_q6
+    :practice: T
     :answer_a: {3:4, 5:8, 4:9}
     :answer_b: {3:4, 5:8, 4:4}
     :answer_c: {3:4, 5:4, 4:3}

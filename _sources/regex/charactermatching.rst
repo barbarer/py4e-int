@@ -14,17 +14,13 @@ In the following example, the regular expression ``F..m:`` would match any
 of the strings "From:", "Fxxm:", "F12m:", or "F!@m:" since the period
 characters in the regular expression match any character.
 
-.. datafile:: mbox-short-re2.txt
-    :fromfile: ../files/mbox-short.txt
-    :hide:
-
 .. activecode:: re_char_ac1
-    :available_files: mbox-short-re2.txt
+    :datafile: mbox-short.txt
 
     This code searches for lines that start with 'F', follow by 2 characters, followed by 'm:'
     ~~~~
     import re
-    hand = open('mbox-short-re2.txt')
+    hand = open('mbox-short.txt')
     for line in hand:
         line = line.rstrip()
         if re.search('^F..m:', line):
@@ -55,12 +51,12 @@ We can further narrow down the lines that we match using a repeated
 *wild card* character in the following example:
 
 .. activecode:: re_char_ac2
-    :available_files: mbox-short-re2.txt
+    :datafile: mbox-short.txt
 
     This code searches for lines that start with 'From:' and have an '@' symbol.
     ~~~~
     import re
-    hand = open('mbox-short-re2.txt')
+    hand = open('mbox-short.txt')
     for line in hand:
         line = line.rstrip()
         if re.search('^From:.+@', line):

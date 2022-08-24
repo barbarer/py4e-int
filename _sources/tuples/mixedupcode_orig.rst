@@ -6,9 +6,9 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``length_word`` that takes in a parameter, ``txt`` which returns a list of tuples, ``tup_list``, 
-    where the first element is the length of each word in ``txt`` and the second is the word itself. Sort the list in terms of word 
-    length from longest to shortest. For example, ``length_word("hi bye")`` would return ``[(3, 'bye'), (2, 'hi')]``. Note: there 
+    Create a function called ``length_word`` that takes in a parameter, ``txt`` which returns a list of tuples, ``tup_list``,
+    where the first element is the length of each word in ``txt`` and the second is the word itself. Sort the list in terms of word
+    length from longest to shortest. For example, ``length_word("hi bye")`` would return ``[(3, 'bye'), (2, 'hi')]``. Note: there
     is one block that won't be used in the solution!
     -----
     def length_word(txt):
@@ -32,11 +32,12 @@ Mixed-Up Code Questions
         return t
 
 .. activecode:: tup_mixedupcode_1_ac
+    :practice: T
     :autograde: unittest
 
-    Write a function called ``length_word`` that takes in a parameter, ``txt`` which returns a list of tuples, ``tup_list``, 
-    where the first element is the length of each word in ``txt`` and the second is the word itself. Sort the list in terms of word 
-    length from longest to shortest. For example, ``length_word("hi bye")`` would return ``[(3, 'bye'), (2, 'hi')]``. Note: there 
+    Write a function called ``length_word`` that takes in a parameter, ``txt`` which returns a list of tuples, ``tup_list``,
+    where the first element is the length of each word in ``txt`` and the second is the word itself. Sort the list in terms of word
+    length from longest to shortest. For example, ``length_word("hi bye")`` would return ``[(3, 'bye'), (2, 'hi')]``. Note: there
     is one block that won't be used in the solution!
     ~~~~
     def length_word(txt):
@@ -55,12 +56,13 @@ Mixed-Up Code Questions
     myTests().main()
 
 .. parsonsprob:: tup_mixedupcode_2
+    :practice: T
     :numbered: left
     :adaptive:
 
-    Create a function called ``tuple_word_len`` that takes in one parameter, ``word_list``. 
-    Then create and return a list called ``tup_list`` that contains tuples of each word from ``word_list`` paired with their 
-    lengths. Then sort the words by length from highest to lowest.  For example, ``tuple_word_len(['hi', 'bye'])`` 
+    Create a function called ``tuple_word_len`` that takes in one parameter, ``word_list``.
+    Then create and return a list called ``tup_list`` that contains tuples of each word from ``word_list`` paired with their
+    lengths. Then sort the words by length from highest to lowest.  For example, ``tuple_word_len(['hi', 'bye'])``
     would return ``[('bye', 3), ('hi', 2)]``.
     -----
     def tuple_word_len(word_list):
@@ -82,11 +84,12 @@ Mixed-Up Code Questions
         return tup_list
 
 .. activecode:: tup_mixedupcode_2_ac
+    :practice: T
     :autograde: unittest
 
-    Write a function called ``tuple_word_len`` that takes in one parameter, ``word_list``. 
-    Then create and return a list called ``tup_list`` that contains tuples of each word from ``word_list`` paired with their 
-    lengths. Then sort the words by length from highest to lowest.  For example, ``tuple_word_len(['hi', 'bye'])`` 
+    Write a function called ``tuple_word_len`` that takes in one parameter, ``word_list``.
+    Then create and return a list called ``tup_list`` that contains tuples of each word from ``word_list`` paired with their
+    lengths. Then sort the words by length from highest to lowest.  For example, ``tuple_word_len(['hi', 'bye'])``
     would return ``[('bye', 3), ('hi', 2)]``.
     ~~~~
     def tuple_word_len(word_list):
@@ -109,9 +112,9 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``swap_values`` that takes in one tuple as a parameter, ``t``, that has at least 5 values. 
-    Swap the second and fourth indices of tuple ``t`` with one another, and return that value. For example, 
-    ``swap_values(('Apple', 'Banana', 'Grapefruit', 'Pear', 'Peach'))`` would return ``('Apple', 'Pear', 'Grapefruit', 'Banana', 'Peach')``. 
+    Create a function called ``swap_values`` that takes in one tuple as a parameter, ``t``, that has at least 5 values.
+    Swap the second and fourth indices of tuple ``t`` with one another, and return that value. For example,
+    ``swap_values(('Apple', 'Banana', 'Grapefruit', 'Pear', 'Peach'))`` would return ``('Apple', 'Pear', 'Grapefruit', 'Banana', 'Peach')``.
     -----
     def swap_values(t):
     =====
@@ -126,11 +129,12 @@ Mixed-Up Code Questions
         return t
 
 .. activecode:: tup_mixedupcode_3_ac
+    :practice: T
     :autograde: unittest
-   
-    Write a function called ``swap_values`` that takes in one tuple as a parameter, ``t``, that has at least 5 values. 
-    Swap the second and fourth indices of tuple ``t`` with one another, and return that value. For example, 
-    ``swap_values(('Apple', 'Banana', 'Grapefruit', 'Pear', 'Peach'))`` would return ``('Apple', 'Pear', 'Grapefruit', 'Banana', 'Peach')``. 
+
+    Write a function called ``swap_values`` that takes in one tuple as a parameter, ``t``, that has at least 5 values.
+    Swap the second and fourth indices of tuple ``t`` with one another, and return that value. For example,
+    ``swap_values(('Apple', 'Banana', 'Grapefruit', 'Pear', 'Peach'))`` would return ``('Apple', 'Pear', 'Grapefruit', 'Banana', 'Peach')``.
     ~~~~
     def swap_values(t):
         # write code here
@@ -151,9 +155,9 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``dictionary_to_tup_list`` that takes in a dictionary as a parameter, ``d``. Transform the 
-    dictionary ``d`` into a list of tuples called ``tup_list``, sort it by the dictionary's keys in ascending order, and return 
-    the list of tuples. For example, ``dictionary_to_tup_list({1:'a', 2:'b', 3:'c', 4:'d', 5:'e'})``would return 
+    Create a function called ``dictionary_to_tup_list`` that takes in a dictionary as a parameter, ``d``. Transform the
+    dictionary ``d`` into a list of tuples called ``tup_list``, sort it by the dictionary's keys in ascending order, and return
+    the list of tuples. For example, ``dictionary_to_tup_list({1:'a', 2:'b', 3:'c', 4:'d', 5:'e'})``would return
     ``[(1, 'a'), (2, 'b'), (3, 'c'), (4, 'd'), (5, 'e')]``.
     -----
     def dictionary_to_tup_list(d):
@@ -171,11 +175,12 @@ Mixed-Up Code Questions
         return tup_list
 
 .. activecode:: tup_mixedupcode_4_ac
+    :practice: T
     :autograde: unittest
 
-    Write a function called ``dictionary_to_tup_list`` that takes in a dictionary as a parameter, ``d``. Transform the 
-    dictionary ``d`` into a list of tuples called ``tup_list``, sort it by the dictionary's keys in ascending order, and return 
-    the list of tuples. For example, ``dictionary_to_tup_list({1:'a', 2:'b', 3:'c', 4:'d', 5:'e'})``would return 
+    Write a function called ``dictionary_to_tup_list`` that takes in a dictionary as a parameter, ``d``. Transform the
+    dictionary ``d`` into a list of tuples called ``tup_list``, sort it by the dictionary's keys in ascending order, and return
+    the list of tuples. For example, ``dictionary_to_tup_list({1:'a', 2:'b', 3:'c', 4:'d', 5:'e'})``would return
     ``[(1, 'a'), (2, 'b'), (3, 'c'), (4, 'd'), (5, 'e')]``.
     ~~~~
     def dictionary_to_tup_list(d):
@@ -197,7 +202,7 @@ Mixed-Up Code Questions
     :adaptive:
     :practice: T
 
-    Create a function called ``count_strs`` that takes in a tuple, ``tup``, as a parameter and counts the amount of strings in the list. For example, 
+    Create a function called ``count_strs`` that takes in a tuple, ``tup``, as a parameter and counts the amount of strings in the list. For example,
     ``count_strs((1, 2, "hi"))`` should return ``1.``
     -----
     def count_strs(tup):
@@ -218,11 +223,12 @@ Mixed-Up Code Questions
     =====
         return count
 
-    
+
 .. activecode:: tup_mixedupcode_5_ac
+    :practice: T
     :autograde: unittest
 
-    Write a function called ``count_strs`` that takes in a tuple, ``tup``, as a parameter and counts the amount of strings in the list. For example, 
+    Write a function called ``count_strs`` that takes in a tuple, ``tup``, as a parameter and counts the amount of strings in the list. For example,
     ``count_strs((1, 2, "hi"))`` should return ``1.``
     ~~~~
     def count_strs(tup):
@@ -246,8 +252,8 @@ Mixed-Up Code Questions
     :adaptive:
     :practice: T
 
-    Create a function called ``dict_to_list`` that takes in a dictionary parameter, ``d``, and adds the key-value pairs of dictionary ``d`` to a list and 
-    returns that list. For example, ``dict_to_list({'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10})`` would return 
+    Create a function called ``dict_to_list`` that takes in a dictionary parameter, ``d``, and adds the key-value pairs of dictionary ``d`` to a list and
+    returns that list. For example, ``dict_to_list({'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10})`` would return
     ``[('monkey', 5), ('snake', 3), ('rabbit', 9), ('dragon', 6), ('rooster', 2), ('rat', 10)]``.
     -----
     def dict_to_list(d):
@@ -263,10 +269,11 @@ Mixed-Up Code Questions
         return list_kv_pairs
 
 .. activecode:: tup_mixedupcode_6_ac
+    :practice: T
     :autograde: unittest
 
-    Write a function called ``dict_to_list`` that takes in a dictionary parameter, ``d``, and adds the key-value pairs of dictionary ``d`` to a list and 
-    returns that list. For example, ``dict_to_list({'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10})`` would return 
+    Write a function called ``dict_to_list`` that takes in a dictionary parameter, ``d``, and adds the key-value pairs of dictionary ``d`` to a list and
+    returns that list. For example, ``dict_to_list({'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10})`` would return
     ``[('monkey', 5), ('snake', 3), ('rabbit', 9), ('dragon', 6), ('rooster', 2), ('rat', 10)]``.
     ~~~~
     def dict_to_list(d):
@@ -292,7 +299,7 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``alphabetical_dict_list`` that takes in one dictionary parameter, ``d``, and creates a list of tuples with the first value of each tuple 
+    Create a function called ``alphabetical_dict_list`` that takes in one dictionary parameter, ``d``, and creates a list of tuples with the first value of each tuple
     as the word as the key and the second value of each tuple as the length of the word. Return a list of the dictionary's key-value pairs in alphabetical order.
     For example, ``alphabetical_dict_list({'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10})`` should return ``[('dragon', 6), ('monkey', 6), ('rabbit', 6), ('rat', 3), ('rooster', 7), ('snake', 5)]``.
     -----
@@ -313,10 +320,11 @@ Mixed-Up Code Questions
         return new_dict
 
 .. activecode:: tup_mixedupcode_7_ac
+    :practice: T
     :autograde: unittest
 
-    Write a function called ``alphabetical_dict_list`` that takes in one dictionary parameter, ``d``, and creates a list of tuples with the first value of each tuple 
-    as the word as the key and the second value of each tuple as the length of the word. Return a list of the dictionary's key-value pairs in alphabetical order. For 
+    Write a function called ``alphabetical_dict_list`` that takes in one dictionary parameter, ``d``, and creates a list of tuples with the first value of each tuple
+    as the word as the key and the second value of each tuple as the length of the word. Return a list of the dictionary's key-value pairs in alphabetical order. For
     example, ``alphabetical_dict_list({'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10})`` should return ``[('dragon', 6), ('monkey', 6), ('rabbit', 6), ('rat', 3), ('rooster', 7), ('snake', 5)]``.
     ~~~~
     def alphabetical_dict_list(d):
@@ -341,8 +349,8 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``longest_word_lst`` that takes in a list of tuples, ``list_tup``, as a parameter and adds the longest word in each tuple and adds it to a list. Return this 
-    list. For example, ``longest_word_lst([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')])`` 
+    Create a function called ``longest_word_lst`` that takes in a list of tuples, ``list_tup``, as a parameter and adds the longest word in each tuple and adds it to a list. Return this
+    list. For example, ``longest_word_lst([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')])``
     should return``['apples', 'combining', 'twenty-four', 'tmobile']``.
     -----
     def longest_word_lst(lst_tup):
@@ -364,9 +372,10 @@ Mixed-Up Code Questions
         return lst
 
 .. activecode:: tup_mixedupcode_8_ac
+    :practice: T
     :autograde: unittest
 
-    Write a function called ``longest_word_lst`` that takes in a list of tuples, ``list_tup``, as a parameter and adds the longest word in each tuple and adds it to a list. Return this 
+    Write a function called ``longest_word_lst`` that takes in a list of tuples, ``list_tup``, as a parameter and adds the longest word in each tuple and adds it to a list. Return this
     list. For example, ``longest_word_lst([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')])``
     should return ``['apples', 'combining', 'twenty-four', 'tmobile']``.
     ~~~~
@@ -392,11 +401,11 @@ Mixed-Up Code Questions
     :adaptive:
     :practice: T
 
-    Create a function called ``cap`` that takes in a list of tuples, ``lst_tup``, as a parameter, that creates a new list with every item in ``lst_tup`` 
+    Create a function called ``cap`` that takes in a list of tuples, ``lst_tup``, as a parameter, that creates a new list with every item in ``lst_tup``
     capitalized and then return the list. Note: Each tuple must have at least two items. For example, ``cap([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')])``
     would return ``['Twice', 'For', 'Apples', 'Regular', 'Combining', 'One', 'Five', 'Twenty', 'Twenty-four', 'Tmobile', 'Sprint', 'At&t']``.
     -----
-    def cap(lst_tup):  
+    def cap(lst_tup):
     =====
         t_list = []
     =====
@@ -414,13 +423,14 @@ Mixed-Up Code Questions
 
 
 .. activecode:: tup_mixedupcode_9_ac
+    :practice: T
     :autograde: unittest
 
-    Write a function called ``cap`` that takes in a list of tuples, ``lst_tup``, as a parameter, that creates a new list with every item in ``lst_tup`` 
+    Write a function called ``cap`` that takes in a list of tuples, ``lst_tup``, as a parameter, that creates a new list with every item in ``lst_tup``
     capitalized and then return the list. Note: Each tuple must have at least two items. For example, ``cap([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&t')])``
     would return ``['Twice', 'For', 'Apples', 'Regular', 'Combining', 'One', 'Five', 'Twenty', 'Twenty-four', 'Tmobile', 'Sprint', 'At&t']``.
     ~~~~
-    def cap(lst_tup):  
+    def cap(lst_tup):
         #write code here
 
     ====
@@ -440,7 +450,7 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``grocery`` that takes in a dictionary, ``d``, changes ``d`` into a list of tuples, and then sorts the list by the dictionary's values in ascending order. 
+    Create a function called ``grocery`` that takes in a dictionary, ``d``, changes ``d`` into a list of tuples, and then sorts the list by the dictionary's values in ascending order.
     For example, ``grocery({'chicken': 5, 'lettuce': 3, 'orange juice': 4, 'bagels': 2.50, 'bacon': 4.25, 'bread': 8})`` should return ``[('bagels', 2.5), ('lettuce', 3), ('orange juice', 4), ('bacon', 4.25), ('chicken', 5), ('bread', 8)]``.
     -----
     def grocery(d):
@@ -456,9 +466,10 @@ Mixed-Up Code Questions
         return grocery_list
 
 .. activecode:: tup_mixedupcode_10_ac
+    :practice: T
     :autograde: unittest
 
-    Write a function called ``grocery`` that takes in a dictionary, ``d``, and changes ``d`` into a list of tuples, then sort the list by the dictionary's values in ascending order. Note: values must be positive. 
+    Write a function called ``grocery`` that takes in a dictionary, ``d``, and changes ``d`` into a list of tuples, then sort the list by the dictionary's values in ascending order. Note: values must be positive.
     For example, ``grocery({'chicken': 5, 'lettuce': 3, 'orange juice': 4, 'bagels': 2.50, 'bacon': 4.25, 'bread': 8})`` should return ``[('bagels', 2.5), ('lettuce', 3), ('orange juice', 4), ('bacon', 4.25), ('chicken', 5), ('bread', 8)]``.
     ~~~~
     def grocery(d):

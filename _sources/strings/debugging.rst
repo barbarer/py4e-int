@@ -38,7 +38,6 @@ Look what happens when the user enters an empty line of input:
     IndexError: string index out of range
 
 .. fillintheblank:: str-debug-fitb-error
-    :practice: T
 
     What kind of error will come from trying to access a nonexistent element or one that is out of range?
 
@@ -58,7 +57,6 @@ which returns ``False`` if the string is empty.
    if line.startswith('#'):
 
 .. fillintheblank:: str-debug-fitb-string
-    :practice: T
 
     What string method is used to prevent errors?
 
@@ -75,7 +73,6 @@ the string:
    if len(line) > 0 and line[0] == '#':
 
 .. fillintheblank:: str-debug-fitb-safe
-    :practice: T
 
     What kind of pattern is used to prevent errors?
 

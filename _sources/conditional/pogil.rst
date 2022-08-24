@@ -51,7 +51,6 @@ greater than or equal (**>=**), equal (**==**), and not equal (**!=**).
     # print(three = four)
 
 .. mchoice:: cond_MC_pogil_comment
-    :practice: T
     :answer_a: True
     :answer_b: False
     :answer_c: class 'bool'
@@ -73,7 +72,6 @@ greater than or equal (**>=**), equal (**==**), and not equal (**!=**).
       :.*: Incorrect! Hint: what was the name of the class printed when the line ``print(type(True))`` was run? Try again.
 
 .. dragndrop:: cond_dnd_pogil_boolean
-    :practice: T
     :feedback: Incorrect - keep trying!
     :match_1: check|||Boolean variables
     :match_2: <, ==, >|||Boolean operators

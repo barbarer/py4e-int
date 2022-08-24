@@ -10,7 +10,6 @@ Write Code Questions
 
 
             .. activecode:: itr-ex-countdownq
-                :practice: T
 
                 Fix the 5 errors in the code below to print a countdown of the numbers from 10 to 0, including 0.
                 ~~~~
@@ -43,7 +42,6 @@ Write Code Questions
 
 #.
     .. activecode:: itr-ex-100Loopq
-        :practice: T
 
         The following code will loop way too many times. Change one line to
         make the loop only have five iterations.
@@ -62,7 +60,6 @@ Write Code Questions
             Make 5 changes to the code below to correctly print a count up from -10 to 0, including 0.
 
             .. activecode:: itr-ex-countq
-                :practice: T
                 :autograde: unittest
 
                 output = ""
@@ -101,7 +98,6 @@ Write Code Questions
 
 #.
     .. activecode:: itr-ex-allValuesq
-        :practice: T
         :autograde: unittest
 
         Finish lines 1 and 5 so that the following code correctly prints every integer from -5 to -1, including -1.
@@ -131,7 +127,6 @@ Write Code Questions
             Complete the code on lines 4 and 6 so that it prints the number 6.
 
             .. activecode:: itr-ex-sixq
-                :practice: T
                 :autograde: unittest
 
                 x = 3
@@ -165,7 +160,6 @@ Write Code Questions
 
 #.
     .. activecode::  itr-ex-rootq
-        :practice: T
 
         The code below is supposed to print an estimate of the square root of a number, but
         the indention is wrong on 4 lines. Fix these errors to find the estimate.
@@ -190,7 +184,6 @@ Write Code Questions
             the for loop to a while loop while still using the same parameters.
 
             .. activecode:: int-ex-inclusiveq
-                :practice: T
                 :autograde: unittest
 
                 def sumFunc(start, stop):
@@ -237,7 +230,6 @@ Write Code Questions
 
 #.
     .. activecode::  int-ex-timesq
-        :practice: T
         :autograde: unittest
 
         The program below is supposed to print the times tables from 1 to 3, but
@@ -282,7 +274,6 @@ Write Code Questions
 
 #.
     .. activecode:: int-ex-whileq
-        :practice: T
         :autograde: unittest
 
         Rewrite the following code to use a while loop instead of a for loop.

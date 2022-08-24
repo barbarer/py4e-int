@@ -62,21 +62,17 @@ friendly user do that would cause our nice little program to
 ungracefully exit with a traceback, making us look not-so-cool in the
 eyes of our users?"
 
-.. datafile:: mbox-mini.txt
-    :fromfile: mbox-short.txt
-    :hide:
-
 .. tabbed:: fileOpenInput
 
     .. tab:: Question
 
-        The file ``mbox-mini.txt`` is loaded on this page. There are five errors in the code below.
-        Fix the code to ask a user for a file, open "mbox-mini.txt", and count the lines that start with
+        There are five errors in the code below.
+        Fix the code to ask a user for a file, open "mbox-short.txt", and count the lines that start with
         ``Received:``.
 
         .. activecode:: fileOpenInputq
+            :datafile: mbox-short.txt
             :autograde: unittest
-            :practice: T
 
             count = 1
             fname = input('Enter the file name: '

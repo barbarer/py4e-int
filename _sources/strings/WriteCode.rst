@@ -182,7 +182,6 @@ Write Code Questions
         .. tab:: Question
 
             .. activecode:: str-ex-digitsq
-                :practice: T
                 :autograde: unittest
 
                 Write a function ``numDigits`` that will return the number of digits in an integer ``n``.

@@ -37,6 +37,7 @@ Glossary
        An object that appears in a dictionary as the second part of a key-value pair. This is more specific than our previous use of the word "value".
 
 .. dragndrop:: chapter_nine_glossary_one
+   :practice: T
    :feedback: Look above for the definitions of these terms.
    :match_1: dictionary|||A mapping from a set of keys to their corresponding values.
    :match_2: hashtable|||The algorithm used to implement Python dictionaries.
@@ -46,6 +47,7 @@ Glossary
    Match each term with its definition.
 
 .. dragndrop:: chapter_nine_glossary_two
+   :practice: T
    :feedback: Look above for the definitions of these terms.
    :match_1: implementation|||A way of performing a computation.
    :match_2: item|||Another name for a key-value pair.
@@ -55,6 +57,7 @@ Glossary
    Match each term with its definition.
 
 .. dragndrop:: chapter_nine_glossary_three
+   :practice: T
    :feedback: Look above for the definitions of these terms.
    :match_1: lookup|||A dictionary operation that takes a key and finds the corresponding value.
    :match_2: nested loops|||When there are one or more loops "inside" of another loop. The inner loop runs to completion each time the outer loop runs once.

@@ -117,7 +117,7 @@ Let's try side-to-side copying.
     win = ImageWin(img.getWidth(),img.getHeight())
     img.draw(win)
 
-.. mchoice:: 11_6_1_Image_Mirror_Q1
+.. mchoice:: image_6_1_Image_Mirror_Q1
    :answer_a: img.setPixel(halfway - x, y, newPixel)
    :answer_b: img.setPixel(x - halfway, y, newPixel)
    :answer_c: img.setPixel(img.getWidth() - 1 - x, y, newPixel)
@@ -136,18 +136,18 @@ Let's try side-to-side copying.
     :alt:
     :figclass: align-center
 
-.. tabbed:: 11_6_1_WSt
+.. tabbed:: image_6_1_WSt
 
         .. tab:: Question
 
            Copy the pixels in the top left quadrant to the the bottom right quadrant. Look at the picture above for the expected result.
 
-           .. activecode::  11_6_1_WSq
+           .. activecode::  image_6_1_WSq
                :nocodelens:
 
         .. tab:: Answer
 
-          .. activecode::  11_6_1_WSa
+          .. activecode::  image_6_1_WSa
               :nocodelens:
               :datafile: vangogh.jpg
 

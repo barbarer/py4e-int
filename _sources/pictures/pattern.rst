@@ -18,12 +18,6 @@ As we have seen with turtles and words, there are some general patterns in the p
 
 The image processing pattern is shown in the program below.  This program changes the red to the original green, the green to the original blue, and the red to the original green.  But, mostly we are trying to describe a pattern that you can use to create many image effects.
 
-
-.. datafile:: beach.jpg
-   :image:
-   :fromfile: Figures/beach.jpg
-   :hide:
-
 .. activecode:: Image_Pattern
     :tour_1: "Important Lines Tour"; 2: timg4-line2; 5: timg4-line5; 8-9: timg4-line8-9; 12-14: timg4-line12-14; 17-19: timg4-line17-19; 22: timg4-line22; 25-26: timg4-line25-26;
     :nocodelens:
@@ -67,39 +61,4 @@ Here are our six steps:
 6. STEP 6: UPDATE THE IMAGE.  This will update the image object at the original pixel location to the new color.
 7. STEP 7: SHOW THE RESULT.  This will draw the changed image in a window.
 
-Here are some additional pictures that you can use in this chapter.
-
-.. datafile:: kitten.jpg
-   :image:
-   :fromfile: Figures/kitten.jpg
-   :hide:
-
-.. datafile:: puppy.jpg
-   :image:
-   :fromfile: Figures/puppy.jpg
-   :hide:
-
-.. datafile:: baby.jpg
-   :image:
-   :fromfile: Figures/baby.jpg
-   :hide:
-
-.. datafile:: swan.jpg
-   :image:
-   :fromfile: Figures/swan.jpg
-   :hide:
-
-.. datafile:: motorcycle.jpg
-   :image:
-   :fromfile: Figures/motorcycle.jpg
-   :hide:
-
-.. datafile:: gal2.jpg
-   :image:
-   :fromfile: Figures/gal2.jpg
-   :hide:
-
-.. datafile:: guy1.jpg
-   :image:
-   :fromfile: Figures/guy1.jpg
-   :hide:
+You can use other files in this chapter: kitten.jpg, puppy.jpg, baby.jpg, swan.jpg, motorcycle.jpg, gal2.jpg, guy1.jpg.

@@ -18,7 +18,7 @@ true or false. The following examples use the operator ``==``,
 which compares two operands and produces ``True`` if they are
 equal and ``False`` otherwise:
 
-.. activecode:: 03_boolean_equal
+.. activecode:: cond_boolean_equal
     :caption: Printing boolean expressions.
 
     print(5 == 5)
@@ -27,7 +27,7 @@ equal and ``False`` otherwise:
 ``True`` and ``False`` are special values that belong
 to the class ``bool``; they are not strings:
 
-.. activecode:: 03_boolean_types
+.. activecode:: cond_boolean_types
     :caption: Type of Boolean values
 
     print(type(True))

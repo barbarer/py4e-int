@@ -44,7 +44,6 @@ count the lines in any size file using very little memory since each
 line is read, counted, and then discarded.
 
 .. fillintheblank:: file-read-fitb-lines
-    :practice: T
 
     When using a for loop to read lines, how many lines are read at a time?
 

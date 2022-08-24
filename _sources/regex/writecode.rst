@@ -1,11 +1,7 @@
 Write Code Questions
 ----------------------
 
-Some of the questions use the following data file.
-
-.. datafile:: mbox-short4.txt
-    :fromfile: mbox-short.txt
-    :hide:
+Some of the questions use the data file mbox
 
 #.
     .. tabbed:: regex_writecode1
@@ -272,13 +268,13 @@ Some of the questions use the following data file.
 
             .. activecode:: regex_writecode7q
                 :practice: T
-                :datafile: mbox-short4.txt
+                :datafile: mbox-short.txt
                 :autograde: unittest
 
-                Finish the code below to find all of the emails in "mbox-short4.txt" and add them to a list and return the list.  An email starts with an alphanumeric character followed by one or more non white space characters and then "@" followed by one or more non white space characters with one alphabetic character at the end.
+                Finish the code below to find all of the emails in "mbox-short.txt" and add them to a list and return the list.  An email starts with an alphanumeric character followed by one or more non white space characters and then "@" followed by one or more non white space characters with one alphabetic character at the end.
                 ~~~~
                 import re
-                hand = open('mbox-short4.txt')
+                hand = open('mbox-short.txt')
                 ====
                 from unittest.gui import TestCaseGui
 
@@ -290,11 +286,11 @@ Some of the questions use the following data file.
         .. tab:: Answer
 
             .. activecode:: regex_writecode7a
-                :datafile: mbox-short4.txt
+                :datafile: mbox-short.txt
                 :optional:
                 :autograde: unittest
 
-                Finish the code below to find all of the emails in "mbox-short4.txt" and add them to a list and return the list.  An email starts with an alphanumeric character followed by one or more non white space characters and then "@" followed by one or more non white space characters with one alphabetic character at the end.
+                Finish the code below to find all of the emails in "mbox-short.txt" and add them to a list and return the list.  An email starts with an alphanumeric character followed by one or more non white space characters and then "@" followed by one or more non white space characters with one alphabetic character at the end.
                 ~~~~
                 # First import regex (re) and create a handle for the file.
                 # Initialize a list to hold the emails.
@@ -302,7 +298,7 @@ Some of the questions use the following data file.
                 # Add each email to the list, individually
                 # Print the email list after each loop has completed.
                 import re
-                hand = open('mbox-short4.txt')
+                hand = open('mbox-short.txt')
                 email_list = []
                 for line in hand:
                     line = line.rstrip()
@@ -320,15 +316,15 @@ Some of the questions use the following data file.
 
 #.
     .. activecode:: regex_writecode8
-        :available_files: mbox-short.txt
+        :datafile: mbox-short.txt
         :autograde: unittest
 
-        Using "mbox-short4.txt", extract the email domains from each email address
+        Using "mbox-short.txt", extract the email domains from each email address
         using regex and add them to the list "domains". For the email noname@umich.edu,
         this would locate the string "umich.edu".
         ~~~~
         import re
-        hand = open('mbox-short4.txt')
+        hand = open('mbox-short.txt')
         domains = []
 
         ====
@@ -346,15 +342,15 @@ Some of the questions use the following data file.
 
             .. activecode:: regex_writecode9q
                 :practice: T
-                :available_files: mbox-short4.txt
+                :datafile: mbox-short.txt
                 :autograde: unittest
 
-                Using "mbox-short4.txt", extract the number next to each email (the
+                Using "mbox-short.txt", extract the number next to each email (the
                 amount of emails each person has sent) using a regex equation, and
                 calculate the total amount of emails sent. Save this to the variable
                 'total_emails'. Use the () character to capture and return the number.
                 ~~~~
-                hand = open('mbox-short4.txt')
+                hand = open('mbox-short.txt')
                 ====
                 from unittest.gui import TestCaseGui
 
@@ -367,11 +363,11 @@ Some of the questions use the following data file.
         .. tab:: Answer
 
             .. activecode:: regex_writecode9a
-                :available_files: mbox-short4.txt
+                :datafile: mbox-short.txt
                 :optional:
                 :autograde: unittest
 
-                Using "mbox-short4.txt", extract the number next to each email (the
+                Using "mbox-short.txt", extract the number next to each email (the
                 amount of emails each person has sent) using a regex equation, and
                 calculate the total amount of emails sent. Save this to the variable
                 'total_emails'. Use the () character to capture and return the number.
@@ -382,7 +378,7 @@ Some of the questions use the following data file.
                 # Print the variable after each loop has completed.
                 import re
                 total_emails = 0
-                hand = open('mbox-short4.txt')
+                hand = open('mbox-short.txt')
                 for line in hand:
                     line = line.rstrip()
                     x = re.findall('[a-zA-Z0-9]\S+@\S+[a-zA_Z]\s?(\d)', line)
@@ -401,10 +397,10 @@ Some of the questions use the following data file.
 
 #.
     .. activecode:: regex_writecode10
-        :available_files: mbox-short4.txt
+        :datafile: mbox-short.txt
         :autograde: unittest
 
-        Using "mbox-short4.txt", extract the usernames from each email address
+        Using "mbox-short.txt", extract the usernames from each email address
         using regex and add them to the list "usernames". For the email noname@umich.edu,
         this would locate the string "noname".
         ~~~~

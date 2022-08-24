@@ -32,11 +32,6 @@ Since the outer loop changes the  x (the column) and the inner loop changes the 
 
     Figure 2: The order that pixels are processed if you use a nested loop with x changing in the outer loop and y changing in the inner loop.
 
-.. datafile:: vangogh.jpg
-   :image:
-   :fromfile: Figures/vangogh.jpg
-   :hide:
-
 .. activecode:: Nested_Loop_Clear_Red
     :tour_1: "Important Lines Tour"; 2: nli1-line2; 5: nli1-line5; 8: nli1-line8; 9: nli1-line9; 12: nli1-line12; 15: nli1-line15; 18: nli1-line18; 21-22: nli1-line21-22;
     :nocodelens:
@@ -95,7 +90,7 @@ We don't always have to modify the pixel color.  Sometimes we can just change th
 
 Try the program above on some of the other images as well by changing the file name on line 5. Does it always have the same effect?
 
-.. mchoice:: 11_5_1_Image_YX_Q1
+.. mchoice:: image_5_1_Image_YX_Q1
    :answer_a: We rotated the image 90 degrees to the left and flipped it over.
    :answer_b: We mirrored the image around a diagonal line from the top left to the bottom right.
    :answer_c: We flipped the image horizontally.
@@ -110,7 +105,7 @@ Try the program above on some of the other images as well by changing the file n
 
 This one does a little math with the x and y.
 
-.. activecode:: 11_5_2_Image_Flip_Both
+.. activecode:: image_5_2_Image_Flip_Both
     :tour_1: "Important Lines Tour"; 8-9: nli3-line8-9; 12: nli3-line12; 15: nli3-line15;
     :nocodelens:
     :datafile: vangogh.jpg

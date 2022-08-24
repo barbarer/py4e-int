@@ -12,7 +12,7 @@ that refers to a value.
 An *assignment statement* creates new variables and gives
 them values:
 
-.. activecode:: 02-ac-4-assign
+.. activecode:: var-ac-4-assign
   :caption: Assigning values to variables
 
   message = 'And now for something completely different'

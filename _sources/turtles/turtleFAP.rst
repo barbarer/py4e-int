@@ -102,7 +102,7 @@ The program below uses the ``goto(x,y)`` to move to the top left corner before d
 
 **Mixed up programs**
 
-.. parsonsprob:: 5_3_1_DrawF
+.. parsonsprob:: turtle_3_1_DrawF
    :numbered: left
    :adaptive:
 
@@ -139,7 +139,7 @@ The program below uses the ``goto(x,y)`` to move to the top left corner before d
    =====
    anu.forward(50)
 
-.. parsonsprob:: 5_3_2_DrawA
+.. parsonsprob:: turtle_3_2_DrawA
    :numbered: left
    :adaptive:
 

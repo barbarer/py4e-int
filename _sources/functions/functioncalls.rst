@@ -31,21 +31,18 @@ It is common to say that a function "takes" an argument and "returns" a
 result. The result is called the *return value*.
 
 .. clickablearea:: functCall_click_name
-    :practice: T
     :question: Click on the name of the function.
     :iscode:
 
     :click-correct:addTwo:endclick:(:click-incorrect:23:endclick:)
 
 .. clickablearea:: functCall_click_arg
-    :practice: T
     :question: Click on the argument of the function.
     :iscode:
 
     :click-incorrect:addTwo:endclick:(:click-correct:23:endclick:)
 
 .. fillintheblank:: functCall_fill1
-    :practice: T
 
     A _________ is a named sequence of statements that performs a computation.
 

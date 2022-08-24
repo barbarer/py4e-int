@@ -8,12 +8,11 @@ Functions and Conditionals Write Code Questions
         .. tab:: Question
 
             .. activecode:: funct_conditional_writecode1q
-                :practice: T
                 :autograde: unittest
 
-                Write a function called ``cropped_photo`` that takes the ``height`` and ``width`` of a photo. 
-                If the ``height`` and ``width`` are equal, then the function returns ``"Cropped Photo"``. Otherwise, 
-                it returns ``"The photo needs to be cropped."`` Assume ``height`` and ``width`` are positive. For example, 
+                Write a function called ``cropped_photo`` that takes the ``height`` and ``width`` of a photo.
+                If the ``height`` and ``width`` are equal, then the function returns ``"Cropped Photo"``. Otherwise,
+                it returns ``"The photo needs to be cropped."`` Assume ``height`` and ``width`` are positive. For example,
                 ``cropped_photo(23.2, 23.2)`` should return ``"Cropped Photo"``.
                 ~~~~
                 def cropped_photo(height, width):
@@ -37,9 +36,9 @@ Functions and Conditionals Write Code Questions
             .. activecode:: funct_conditional_writecode1a
                 :optional:
 
-                Write a function called ``cropped_photo`` that takes the ``height`` and ``width`` of a photo. 
-                If the ``height`` and ``width`` are equal, then the function returns ``"Cropped Photo"``. Otherwise, 
-                it returns ``"The photo needs to be cropped."`` Assume ``height`` and ``width`` are positive. For example, 
+                Write a function called ``cropped_photo`` that takes the ``height`` and ``width`` of a photo.
+                If the ``height`` and ``width`` are equal, then the function returns ``"Cropped Photo"``. Otherwise,
+                it returns ``"The photo needs to be cropped."`` Assume ``height`` and ``width`` are positive. For example,
                 ``cropped_photo(23.2, 23.2)`` should return ``"Cropped Photo"``.
                 ~~~~
                 def cropped_photo(height, width):
@@ -52,14 +51,13 @@ Functions and Conditionals Write Code Questions
 #.
 
     .. activecode:: funct_conditional_writecode2q
-        :practice: T
         :autograde: unittest
 
-        Write a function called ``bonus`` that takes two parameters, ``years`` and ``quality``. 
-        If ``years`` is more than 5, then the person gets a bonus. 
-        The person also gets a bonus if their ``quality`` of work was more than 90. 
-        They can also get a bonus if they worked for at least 3 ``years`` and had ``quality`` more than 80. 
-        If the person is eligible for a bonus, return ``"Eligible for Bonus"``. Otherwise, return ``"Ineligible for Bonus"``. 
+        Write a function called ``bonus`` that takes two parameters, ``years`` and ``quality``.
+        If ``years`` is more than 5, then the person gets a bonus.
+        The person also gets a bonus if their ``quality`` of work was more than 90.
+        They can also get a bonus if they worked for at least 3 ``years`` and had ``quality`` more than 80.
+        If the person is eligible for a bonus, return ``"Eligible for Bonus"``. Otherwise, return ``"Ineligible for Bonus"``.
         For example, ``bonus(3, 81)`` should return ``"Eligible for Bonus"``.
         ~~~~
         def bonus(years, quality):
@@ -89,11 +87,10 @@ Functions and Conditionals Write Code Questions
         .. tab:: Question
 
             .. activecode:: funct_conditional_writecode3q
-                :practice: T
                 :autograde: unittest
 
-                Write a function called ``move_elevator`` that takes two parameters, ``current_floor`` and ``next_floor``. If the elevator moves 
-                to a floor above, then it should return ``"Up"``. Otherwise, it should return ``"Down"``. Also, if ``next_floor`` is the same as ``current_floor``, it should return 0. 
+                Write a function called ``move_elevator`` that takes two parameters, ``current_floor`` and ``next_floor``. If the elevator moves
+                to a floor above, then it should return ``"Up"``. Otherwise, it should return ``"Down"``. Also, if ``next_floor`` is the same as ``current_floor``, it should return 0.
                 Assume there are no 0 or negative floors. For example, ``move_elevator(5, 8)`` should return ``"Up"``.
                 ~~~~
                 def move_elevator(current_floor, next_floor):
@@ -117,8 +114,8 @@ Functions and Conditionals Write Code Questions
             .. activecode:: funct_conditional_writecode3a
                 :optional:
 
-                Write a function called ``move_elevator`` that takes two parameters, ``current_floor`` and ``next_floor``. If the elevator moves 
-                to a floor above, then it should return ``"Up"``. Otherwise, it should return ``"Down"``. Also, if ``next_floor`` is the same as ``current_floor``, it should return 0. 
+                Write a function called ``move_elevator`` that takes two parameters, ``current_floor`` and ``next_floor``. If the elevator moves
+                to a floor above, then it should return ``"Up"``. Otherwise, it should return ``"Down"``. Also, if ``next_floor`` is the same as ``current_floor``, it should return 0.
                 Assume there are no 0 or negative floors. For example, ``move_elevator(5, 8)`` should return ``"Up"``.
                 ~~~~
                 def move_elevator(current_floor, next_floor):
@@ -133,12 +130,11 @@ Functions and Conditionals Write Code Questions
 #.
 
     .. activecode:: funct_conditional_writecode4q
-        :practice: T
         :autograde: unittest
 
-        Write a function called ``lunch_break`` that takes a parameter ``class_standing`` and determines how long a lunch break will be based on 
-        the student's class standing. If a person is a 'Freshman', return ``40``. If a person is a 'Sophomore', return ``30``. 
-        If a person is a 'Junior', return ``20``. If a person is a 'Senior', return ``15``. If a person is none of these, return ``0``. 
+        Write a function called ``lunch_break`` that takes a parameter ``class_standing`` and determines how long a lunch break will be based on
+        the student's class standing. If a person is a 'Freshman', return ``40``. If a person is a 'Sophomore', return ``30``.
+        If a person is a 'Junior', return ``20``. If a person is a 'Senior', return ``15``. If a person is none of these, return ``0``.
         For example, ``lunch_break('Alumni')`` should return ``0``.
         ~~~~
         def lunch_break(class_standing):
@@ -165,13 +161,12 @@ Functions and Conditionals Write Code Questions
         .. tab:: Question
 
             .. activecode:: funct_conditional_writecode5q
-                :practice: T
                 :autograde: unittest
 
-                Write a function called ``pay_rent`` that takes in one parameter, 
-                ``units``. If ``units`` is less than 200, return ``"$100"``. 
-                If ``units`` is less than 500 and greater than or equal to 200, return ``"$200"``. Otherwise, return ``"$300"``. 
-                For example, ``pay_rent(175)`` should return ``"$100"``. 
+                Write a function called ``pay_rent`` that takes in one parameter,
+                ``units``. If ``units`` is less than 200, return ``"$100"``.
+                If ``units`` is less than 500 and greater than or equal to 200, return ``"$200"``. Otherwise, return ``"$300"``.
+                For example, ``pay_rent(175)`` should return ``"$100"``.
                 ~~~~
                 def pay_rent(units):
                     # write code here
@@ -200,10 +195,10 @@ Functions and Conditionals Write Code Questions
             .. activecode:: funct_conditional_writecode5a
                 :optional:
 
-                Write a function called ``pay_rent`` that takes in one parameter, 
-                ``units``. If ``units`` is less than 200, return ``"$100"``. 
-                If ``units`` is less than 500 and greater than or equal to 200, return ``"$200"``. Otherwise, return ``"$300"``. 
-                For example, ``pay_rent(175)`` should return ``"$100"``. 
+                Write a function called ``pay_rent`` that takes in one parameter,
+                ``units``. If ``units`` is less than 200, return ``"$100"``.
+                If ``units`` is less than 500 and greater than or equal to 200, return ``"$200"``. Otherwise, return ``"$300"``.
+                For example, ``pay_rent(175)`` should return ``"$100"``.
                 ~~~~
                 def pay_rent(units):
                     if units < 200:
@@ -217,13 +212,12 @@ Functions and Conditionals Write Code Questions
 #.
 
     .. activecode:: funct_conditional_writecode6q
-        :practice: T
         :autograde: unittest
 
-        Write a function called ``play_weather`` that takes the string ``weather`` as a parameter and 
-        returns if one should play or not. If the ``weather`` is 'sunny' or 'cloudy', then the function 
-        should return ``"The person should play"``. If the ``weather`` is 'rainy', 'windy' or 'snowy', 
-        then the function should return ``"The person should not play"``. If the ``weather`` is none of these, the 
+        Write a function called ``play_weather`` that takes the string ``weather`` as a parameter and
+        returns if one should play or not. If the ``weather`` is 'sunny' or 'cloudy', then the function
+        should return ``"The person should play"``. If the ``weather`` is 'rainy', 'windy' or 'snowy',
+        then the function should return ``"The person should not play"``. If the ``weather`` is none of these, the
         function should return ``"It is not safe to go outside"``. For example, ``play_weather('sunny')`` should return ``"The person should play"``.
         ~~~~
         def play_weather(weather):

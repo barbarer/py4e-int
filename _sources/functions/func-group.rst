@@ -127,7 +127,6 @@ Delete the last line of the test function above and run the code again.
 .. parsonsprob:: funct_order_first_example
    :numbered: left
    :adaptive:
-   :practice: T
    :order: 3, 1, 2, 0
 
    Drag the blocks from the left and put them in the correct order on the right to describe the order the function calls and functions execute.

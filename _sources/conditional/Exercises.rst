@@ -185,6 +185,7 @@ Multiple Choice Questions
       print(x)
 
 .. mchoice:: cndtnl-ex-mc-weight
+    :practice: T
     :answer_a: $3.45
     :answer_b: $3.11
     :answer_c: $3.105
@@ -213,6 +214,7 @@ Multiple Choice Questions
       print(total)
 
 .. mchoice:: cndtnl-ex-mc-tf
+    :practice: T
     :answer_a: I
     :answer_b: II
     :answer_c: I and II
@@ -230,6 +232,7 @@ Multiple Choice Questions
        | III. False AND (True or False)
 
 .. mchoice:: cndtnl-ex-mc-equal_v2
+    :practice: T
     :answer_a: (num1 == num2)
     :answer_b: (num1 == num2) or (num1 > 0)
     :answer_c: (num1 == num2) and (num1 < 0)
@@ -244,6 +247,7 @@ Multiple Choice Questions
     positive integers?
 
 .. mchoice:: cndtnl-ex-mc-true
+    :practice: T
     :answer_a: float
     :answer_b: string
     :answer_c: boolean

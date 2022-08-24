@@ -19,13 +19,26 @@ we call the original class the *parent class* and the new class the
 For this example, we move our ``PartyAnimal`` class into its own file.
 Then, we can 'import' the ``PartyAnimal`` class in a new file and extend it, as follows:
 
-.. datafile:: party.py
-    :fromfile: party.py
-    :hide:
+.. reveal:: party.py
+   :showtitle: Show
+   :hidetitle: Hide
+
+   .. code-block::
+
+      class PartyAnimal:
+
+          def __init__(self, nam):
+              self.name = nam
+              print(self.name,'constructed')
+
+          def party(self, x) :
+              self.x = x
+              self.x = self.x + 1
+              print(self.name,'party count',self.x)
 
 .. activecode:: inherit_cricketfan
     :language: python3
-    :available_files: party.py
+    :datafile: party.py
 
     from party import PartyAnimal
 

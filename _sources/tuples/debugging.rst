@@ -18,7 +18,6 @@ one integer and I just give you an integer that isn't in a list, it won't work.
 
 
 .. mchoice:: question10_9_1
-   :practice: T
    :answer_a: Read, retreat, run, ruminate
    :answer_b: Read, google, run, ruminate
    :answer_c: Email your GSI for help
@@ -30,7 +29,6 @@ one integer and I just give you an integer that isn't in a list, it won't work.
    When an error is present in your code, what should you do to help discover the bug?
 
 .. fillintheblank:: question10_9_2
-   :practice: T
 
    A(n) ________ is an error that is caused when a data structure has the wrong type, size, or composition.
 

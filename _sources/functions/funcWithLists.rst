@@ -98,6 +98,7 @@ A list holds items in order and you can get the value at an index, just like you
       :.*: Try again!
 
 .. mchoice:: list_neg_2_result
+    :practice: T
     :answer_a: hi
     :answer_b: 3
     :answer_c: buy
@@ -229,6 +230,7 @@ Lists are objects of the ``list`` class and have methods that operate on list ob
 
 
 .. mchoice:: funct_list_append_pop_predict
+    :practice: T
     :answer_a: [2, 5, 7, 3]
     :answer_b: [5, 7, 3]
     :answer_c: [2, 7, 3]
@@ -285,6 +287,7 @@ Lists are objects of the ``list`` class and have methods that operate on list ob
 
 
 .. mchoice:: funct_list_result_of_reverse
+    :practice: T
     :answer_a: None
     :answer_b: [2, 5, 7]
     :answer_c: [7, 5, 2]]
@@ -370,6 +373,7 @@ You can use the slice operator[n:m] with lists to get a new list just like you c
 
 
 .. mchoice:: funct_list_neg_slice
+    :practice: T
     :answer_a: [2, 3, 4, 5]
     :answer_b: [2, 3, 4]
     :answer_c: [3, 4, 5]

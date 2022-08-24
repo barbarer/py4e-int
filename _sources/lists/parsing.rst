@@ -19,10 +19,6 @@ kind of problem. We can write a small program that looks for lines where
 the line starts with "From ", ``split`` those lines, and then
 print out the third word in the line:
 
-.. datafile:: mboxShort.txt
-    :fromfile: ../files/mbox-short.txt
-    :hide:
-
 .. activecode:: listParsing
     :caption: Parsing a file using lists and split.
     :available_files: mboxShort.txt

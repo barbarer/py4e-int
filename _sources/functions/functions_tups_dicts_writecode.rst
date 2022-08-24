@@ -6,7 +6,6 @@ Functions with Tuples and Dictionaries Write Code Questions
         .. tab:: Question
 
             .. activecode:: funct-tups-dicts-writecode1q
-                :practice: T
                 :autograde: unittest
 
                 Write a function called ``index_tup`` that takes in a tuple of strings, ``tup_strings``, as a parameter and returns a string consisting of the characters at the
@@ -54,7 +53,6 @@ Functions with Tuples and Dictionaries Write Code Questions
 
 #.
     .. activecode:: funct-tups-dicts-writecode2
-        :practice: T
         :autograde: unittest
 
         Write a function called ``list_tups_into_dict`` that takes in a list of tuples, ``list_of_tups`` as a parameter and returns a dictionary with the first
@@ -84,7 +82,6 @@ Functions with Tuples and Dictionaries Write Code Questions
         .. tab:: Question
 
             .. activecode:: funct-tups-dicts-writecode3q
-                :practice: T
                 :autograde: unittest
 
                 Write a function ``squared_converter`` that takes in a list of numbers, ``num_list``, and returns a dictionary with the numbers as keys
@@ -123,7 +120,6 @@ Functions with Tuples and Dictionaries Write Code Questions
 
 #.
     .. activecode:: funct-tups-dicts-writecode4
-        :practice: T
         :autograde: unittest
 
         Write a function ``ordered_nums_tup()`` that takes a tuple, ``tup``, that contains various items such as strings and numbers and returns a sorted list of the numeric values (type int and float) sorted in ascending order. For example,
@@ -151,7 +147,6 @@ Functions with Tuples and Dictionaries Write Code Questions
         .. tab:: Question
 
             .. activecode:: funct-tups-dicts-writecode5q
-                :practice: T
                 :autograde: unittest
 
                 Write a function ``triple_values`` that takes in a list of numbers, ``num_list``,
@@ -213,7 +208,6 @@ Functions with Tuples and Dictionaries Write Code Questions
 
 #.
     .. activecode:: funct-tups-dicts-writecode6
-        :practice: T
         :autograde: unittest
 
         Write a function ``count_chars`` that takes a string, ``str1``, and returns a list of tuples ordered by the number of times each character appears in the string in descending order.  For example, ``count_chars("babby")`` should return ``[('b': 3), ('a':1), ('y': 1)]``.

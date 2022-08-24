@@ -48,7 +48,7 @@ Single and Multiple Turtles
     zari.forward(100)		# tell zari to move forward by 100 units
     zari.right(90)    		# turn right by 90 degrees
 
-.. fillintheblank:: 5_4_1_triangle_fill
+.. fillintheblank:: turtle_4_1_triangle_fill
    :casei:
 
    What shape will the program below draw when you click on the Run button?
@@ -98,7 +98,7 @@ Every turtle object has its own attributes like its current position and color. 
 
 **Mixed up programs**
 
-.. parsonsprob:: 5_4_2_JandT
+.. parsonsprob:: turtle_4_2_JandT
    :numbered: left
    :adaptive:
 
@@ -138,7 +138,7 @@ Every turtle object has its own attributes like its current position and color. 
    tina.left(180)
    tina.forward(75)
 
-.. parsonsprob:: 5_4_3_JandT2
+.. parsonsprob:: turtle_4_3_JandT2
    :numbered: left
    :adaptive:
 

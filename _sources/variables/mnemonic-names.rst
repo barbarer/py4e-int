@@ -11,7 +11,7 @@ program and when you write your own programs. For example, the following
 three programs are identical in terms of what they accomplish, but very
 different when you read them and try to understand them.
 
-.. activecode:: 02-ac-10-names1
+.. activecode:: var-ac-10-names1
   :caption: Variables with simple names
 
   a = 35.0
@@ -29,7 +29,7 @@ different when you read them and try to understand them.
   print(pay)
 
 
-.. activecode:: 02-ac-10-names3
+.. activecode:: var-ac-10-names3
   :caption: Variables with obscure names
 
   x1q3z9ahd = 35.0

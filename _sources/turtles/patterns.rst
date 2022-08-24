@@ -79,7 +79,7 @@ By setting the pen color differently, we can distinguish the part that draws the
 
 You can use the coloring in the picture below to help you figure out the correct order of the lines below.
 
-.. parsonsprob:: 10_3_1_Turtle_Spiro
+.. parsonsprob:: turtle_3_1_Turtle_Spiro
    :numbered: left
    :adaptive:
 
@@ -120,7 +120,7 @@ You can use the coloring in the picture below to help you figure out the correct
 
 You can use the coloring in the picture below to help you figure out the correct order of the lines below.
 
-.. parsonsprob:: 10_3_2_Turtle_Spiro_Blue_Red
+.. parsonsprob:: turtle_3_2_Turtle_Spiro_Blue_Red
    :numbered: left
    :adaptive:
 

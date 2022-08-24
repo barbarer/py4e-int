@@ -53,7 +53,6 @@ Write Code Questions
 
 #.
     .. activecode:: tup_writecode2
-        :practice: T
         :autograde: unittest
 
         Write a function called ``check_third_element`` that takes in a list of tuples, ``lst_tups`` as a parameter. Tuples must have at least 3 items.
@@ -83,7 +82,6 @@ Write Code Questions
         .. tab:: Question
 
             .. activecode:: tup_writecode3q
-                :practice: T
                 :autograde: unittest
 
                 Write a function called ``find_majors`` that takes in a dictionary as a parameter, ``majors``, that has a major code as the key and
@@ -129,7 +127,6 @@ Write Code Questions
                     return list_of_tup
 #.
     .. activecode:: tup_writecode4
-        :practice: T
         :autograde: unittest
 
         Create a function called ``interchange_values`` that takes in a tuple with two values as a parameter, ``t`` and returns a tuple which interchanges the values of ``t``.
@@ -157,7 +154,6 @@ Write Code Questions
 
             .. activecode:: tup_writecode5q
                 :autograde: unittest
-                :practice: T
 
                 Write a function called ``dict_transform`` that takes in one dictionary parameter, ``dict``, which returns a tuple of tuples. The inner tuple should
                 have the first element as the key of the ``dict`` and the second element should have the value of the ``dict``. Do not use the ``keys()`` or ``values()``
@@ -198,7 +194,6 @@ Write Code Questions
 
 #.
     .. activecode:: tup_writecode6
-        :practice: T
         :autograde: unittest
 
         Write a function called ``my_data`` that takes in an integer, ``int_value`` as a parameter. Return tuple that contains one elements,
@@ -224,7 +219,6 @@ Write Code Questions
         .. tab:: Question
 
             .. activecode:: tup_writecode7q_v2
-                :practice: T
                 :autograde: unittest
 
                 Write the function ``mod_tuples`` which takes a list of tuples, ``tup_list`` and returns a copy where the
@@ -264,7 +258,6 @@ Write Code Questions
 
 #.
     .. activecode:: tup_writecode8
-        :practice: T
         :autograde: unittest
 
         Write a function called ``info`` with the following required parameters: name, age, birth_year, year_in_college, and hometown. The
@@ -290,7 +283,6 @@ Write Code Questions
         .. tab:: Question
 
             .. activecode:: tup_writecode9q
-                :practice: T
                 :autograde: unittest
 
                 Write a function ``list_link`` that accepts two lists, ``lst1`` and ``lst2`` and returns a dictionary
@@ -339,7 +331,6 @@ Write Code Questions
 #.
     .. activecode:: tup_writecode10
         :autograde: unittest
-        :practice: T
 
         Create a function ``tuplize()`` that accepts two inputs and returns a tuple containing those inputs in order.
         For example, ``tuplize('Stephen', 'Curry')`` would return ``('Stephen', 'Curry')``.

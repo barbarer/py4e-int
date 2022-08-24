@@ -10,7 +10,7 @@ in the mathematical sense. Instead it performs
 *concatenation*, which means joining the strings by
 linking them end to end. For example:
 
-.. activecode:: 02-ac-8-strings
+.. activecode:: var-ac-8-strings
     :caption: Concatenating strings
 
     first = 10
@@ -43,7 +43,7 @@ linking them end to end. For example:
 The ``*`` operator also works with strings by multiplying the content
 of a string by an integer. For example:
 
-.. activecode:: 02-ac-9-mult
+.. activecode:: var-ac-9-mult
     :caption: Multiplying strings
 
     first = 'Test '

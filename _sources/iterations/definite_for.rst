@@ -47,7 +47,7 @@ The syntax of a ``for`` loop is similar to the
 ``while`` loop in that there is a ``for`` statement
 and a loop body:
 
-.. activecode:: 05section5_1
+.. activecode:: itr-section5_1
     :coach:
     :caption: An example of using a for loop to iterate through a list.
 

@@ -63,7 +63,7 @@ but for now we will focus on the Python equivalent of "speak" (in
 human-to-dog language). The nice thing about telling Python to speak is
 that we can even tell it what to say by giving it a message in quotes:
 
-.. activecode:: 01-active-hello
+.. activecode:: intro1-active-hello
     :caption: Hello world
 
     print('Hello world!')

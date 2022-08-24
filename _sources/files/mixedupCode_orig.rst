@@ -24,6 +24,7 @@ Mixed-up Code Questions
 
 
 .. activecode:: file_write_line_ac
+    :practice: T
     :autograde: unittest
 
     Write a function ``write_line(file, output)`` that writes the contents of the string ``output`` to ``file``.  Be sure to add a newline character ``"\n"`` when you write ``output`` to the file. Also make sure that you close the file after writing to it.
@@ -72,6 +73,7 @@ Mixed-up Code Questions
 
 
 .. activecode:: file_read_n_lines_ac
+    :practice: T
     :autograde: unittest
     :datafile: dogs.txt
 
@@ -119,6 +121,7 @@ Mixed-up Code Questions
         return(num)
 
 .. activecode:: file_count_words_ac
+    :practice: T
     :autograde: unittest
     :datafile: dogs.txt
 
@@ -165,6 +168,7 @@ Mixed-up Code Questions
         return(num)
 
 .. activecode:: file_count_lines_starting_with_ac
+    :practice: T
     :autograde: unittest
     :datafile: dogs.txt
 
@@ -213,6 +217,7 @@ Mixed-up Code Questions
         close(outfile) #paired
 
 .. activecode:: file_write_squares_ac
+    :practice: T
     :autograde: unittest
 
     Create a function ``write_squares(file)`` which writes the squares of 1 (inclusive) to 10 (inclusive) with each one on a single line to ``file``.

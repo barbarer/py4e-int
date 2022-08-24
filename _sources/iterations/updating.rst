@@ -22,7 +22,7 @@ If you try to update a variable that doesn't exist, you get an error,
 because Python evaluates the right side before it assigns a value to
 ``x``:
 
-.. activecode:: 05section1_1
+.. activecode:: itr-section1_1
     :coach:
     :caption: NameError: name 'x' is not defined
 
@@ -33,7 +33,7 @@ because Python evaluates the right side before it assigns a value to
 Before you can update a variable, you have to
 *initialize* it, usually with a simple assignment:
 
-.. activecode:: 05section1_2
+.. activecode:: itr-section1_2
     :coach:
     :caption: Defining and updating x
 

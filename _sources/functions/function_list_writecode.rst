@@ -6,7 +6,6 @@ Functions and Lists Write Code Questions
         .. tab:: Question
 
             .. activecode:: funct_list_writecode1q
-                :practice: T
                 :autograde: unittest
 
                 Write a function called ``average_of_num_list`` that takes in a parameter ``num_list`` and returns the average of all the numbers in num_list.
@@ -33,7 +32,7 @@ Functions and Lists Write Code Questions
 
             .. activecode:: funct_list_writecode1a
                 :optional:
-                
+
                 Write a function called ``average_of_num_list`` that takes in a parameter ``num_list`` and returns the average of all the numbers in num_list.
                 For example, ``average_of_num_list([0, 20.8, 80, 5])`` would return ``26.45``.
                 ~~~~
@@ -44,7 +43,6 @@ Functions and Lists Write Code Questions
 #.
 
     .. activecode:: funct_list_writecode2q
-        :practice: T
         :autograde: unittest
 
         Write a function called ``names`` that takes in a parameter ``name_list`` and returns an alphabetically sorted ``name_list``.
@@ -72,10 +70,9 @@ Functions and Lists Write Code Questions
         .. tab:: Question
 
             .. activecode:: funct_list_writecode3q
-                :practice: T
                 :autograde: unittest
 
-                Write a function called ``remove_min_value`` that takes in a parameter ``num_list`` and returns a ``num_list`` without the 
+                Write a function called ``remove_min_value`` that takes in a parameter ``num_list`` and returns a ``num_list`` without the
                 minimum value from ``num_list``. For example, ``remove_min_value([20, 4, 1203, 7482, 3])`` would return ``[20, 4, 1203, 7482]``.
                 ~~~~
                 def remove_min_value(num_list):
@@ -98,8 +95,8 @@ Functions and Lists Write Code Questions
 
             .. activecode:: funct_list_writecode3a
                 :optional:
-                
-                Write a function called ``remove_min_value`` that takes in a parameter ``num_list`` and returns a ``num_list`` without the 
+
+                Write a function called ``remove_min_value`` that takes in a parameter ``num_list`` and returns a ``num_list`` without the
                 minimum value from ``num_list``. For example, ``remove_min_value([20, 4, 1203, 7482, 3])`` would return ``[20, 4, 1203, 7482]``.
                 ~~~~
                 def remove_min_value(num_list):
@@ -110,10 +107,9 @@ Functions and Lists Write Code Questions
 #.
 
     .. activecode:: funct_list_writecode4q
-        :practice: T
         :autograde: unittest
 
-        Write a function called ``range_given_list`` that takes in a parameter ``list_of_nums`` and 
+        Write a function called ``range_given_list`` that takes in a parameter ``list_of_nums`` and
         returns the range (max value - min value) of the values. Try using the sort method and indexing.
         For example ``range_given_list([20, 100, 2000, 15, 3, 12])`` would return ``1997``.
         ~~~~
@@ -142,10 +138,9 @@ Functions and Lists Write Code Questions
         .. tab:: Question
 
             .. activecode:: funct_list_writecode5q
-                :practice: T
                 :autograde: unittest
 
-                Write a function called ``remove_indices_after_first_max_value`` that takes in a parameter ``num_list`` and 
+                Write a function called ``remove_indices_after_first_max_value`` that takes in a parameter ``num_list`` and
                 returns a ``new_num_list`` with values up to the max value of the list. For example, ``remove_indices_after_first_max_value([200, 10, 5, 200])``
                 would return ``[5, 10, 5, 200]``.
                 ~~~~
@@ -170,8 +165,8 @@ Functions and Lists Write Code Questions
 
             .. activecode:: funct_list_writecode5a
                 :optional:
-                
-                Write a function called ``remove_indices_after_first_max_value`` that takes in a parameter ``num_list`` and 
+
+                Write a function called ``remove_indices_after_first_max_value`` that takes in a parameter ``num_list`` and
                 returns a ``new_num_list`` with values up to the max value of the list. For example, ``remove_indices_after_first_max_value([200, 10, 5, 200])``
                 would return ``[5, 10, 5, 200]``.
                 ~~~~
@@ -184,12 +179,11 @@ Functions and Lists Write Code Questions
 #.
 
     .. activecode:: funct_list_writecode6q
-        :practice: T
         :autograde: unittest
 
-        Write a function called ``transform_and_combine`` that takes in two parameters, ``list_one``, which must have at least one element, and ``list_two``. 
-        Remove the last element from ``list_one``, then reverse the list. Sort ``list_two``, then extend ``list_two`` with ``list_one``, and return ``list_two``. 
-        Hint: Use list methods (e.g., pop, sort, append, reverse, and extend). For example, ``transform_and_combine([5, 20, 3, 15, 200, 0, 17], ['Hello', 'Bye', 'How are you?'])`` 
+        Write a function called ``transform_and_combine`` that takes in two parameters, ``list_one``, which must have at least one element, and ``list_two``.
+        Remove the last element from ``list_one``, then reverse the list. Sort ``list_two``, then extend ``list_two`` with ``list_one``, and return ``list_two``.
+        Hint: Use list methods (e.g., pop, sort, append, reverse, and extend). For example, ``transform_and_combine([5, 20, 3, 15, 200, 0, 17], ['Hello', 'Bye', 'How are you?'])``
         would return ``['Bye', 'Hello', 'How are you?', 0, 200, 15, 3, 20, 5]``.
 
         ~~~~

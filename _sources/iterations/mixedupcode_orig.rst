@@ -23,6 +23,7 @@ Mixed-up code Questions
        return out
 
 .. activecode::  itr_countup_str_ac
+    :practice: T
     :autograde: unittest
 
     Write the function, ``countup_str(start)``, to return a string with the numbers from ``1`` to ``end``.  For example, ``countup_str(5)`` would return ``"12345"``.
@@ -66,6 +67,7 @@ Mixed-up code Questions
        return out
 
 .. activecode::  itr_reverse_ac
+    :practice: T
     :autograde: unittest
 
     Write the function, ``reverse(s)``, to return a string with the characters in the string ``s`` reversed.  For example, ``reverse("Hello")`` would return ``"olleH"``.
@@ -109,6 +111,7 @@ Mixed-up code Questions
        return out
 
 .. activecode::  itr_countdown_str_ac
+    :practice: T
     :autograde: unittest
 
     Write the function, ``countdown_str(start)``, to return a string with the numbers from ``start`` to ``0``.  For example, ``countdown_str(5)`` would return ``"543210"``.
@@ -152,6 +155,7 @@ Mixed-up code Questions
 
 
 .. activecode::  itr_odd_sum_ac
+    :practice: T
     :autograde: unittest
 
     Write the function, ``odd_sum(start, increment, end)``, to return the sum of all of the odd numbers between  ``start`` (inclusive) and ``end`` (exclusive) using a range with ``increment``. For example, if ``start`` is 1, ``increment`` is 2, and ``end`` is 6, the returned sum
@@ -196,6 +200,7 @@ Mixed-up code Questions
 
 
 .. activecode::  itr_sum_of_range_ac
+    :practice: T
     :autograde: unittest
 
     Write the function, ``sum_of_range(start, end)``, to return the sum of all numbers between the ``start`` and ``end`` inclusive. For example, if ``start`` is 0 and ``end`` is 5, the returned sum should be (0 + 1 + 2 + 3 + 4 + 5) which is 15.
@@ -242,6 +247,7 @@ Mixed-up code Questions
        return Count #paired
 
 .. activecode::  itr_count_vowels_ac
+    :practice: T
     :autograde: unittest
 
     Write the function, ``count_vowels(s)``, to return a count of the vowels (aeiou) in the string ``s``.   For example, ``count_vowels("careful")`` would return ``3``.
@@ -301,6 +307,7 @@ Mixed-up code Questions
 
 
 .. activecode::  itr_copy_till_gt_value_ac
+    :practice: T
     :autograde: unittest
 
     Write the function, ``copy_till_gt_value(s,value)``, to return a copy of the string ``s`` with all the digits in the string until it finds a digit greater than the passed ``value``.  For example,
@@ -353,6 +360,7 @@ Mixed-up code Questions
        return count
 
 .. activecode::  itr_count_last2_ac
+    :practice: T
     :autograde: unittest
 
     Write the function, ``count_last2(s)``, to return a count of the number of times the last two characters appears in the string ``s``.  If there are less than 2 characters in ``s`` return 0. For example, ``count_last2("hixxhi")`` returns 2, ``count_last2("axxxaaxx")`` returns 3, and ``count_last2('x')`` returns 0.
@@ -399,6 +407,7 @@ Mixed-up code Questions
        return list
 
 .. activecode::  itr_list_to_5_ac
+    :practice: T
     :autograde: unittest
 
     Write the function, ``list_to_5(n)``, so that while the integer ``n`` is less than 5, add ``n`` to a list to return and increment ``n`` by ``1``.
@@ -447,6 +456,7 @@ Mixed-up code Questions
        return average
 
 .. activecode::  itr_water_quality_ac
+    :practice: T
     :autograde: unittest
 
     Write the function, ``water_quality(pHvalues)``, to return a float for the average pH of water samples in the list

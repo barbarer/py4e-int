@@ -4,9 +4,6 @@ Advanced Text Parsing
 .. index::
    single: Translate Method
 
-.. datafile:: romeo2.txt
-   :fromfile: romeo.txt
-   :hide:
 
 .. activecode:: fileOpen2
    :available_files: romeo.txt
@@ -84,9 +81,6 @@ will even let Python tell us the list of characters that it considers
 
 We make the following modifications to our program:
 
-.. datafile:: romeo-full.txt
-   :fromfile: romeo-full.txt
-   :hide:
 
 .. activecode:: fileOpen3_v2
    :language: python3

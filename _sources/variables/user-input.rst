@@ -13,7 +13,7 @@ the keyboard (in Python 2.0, this function was named ``raw_input``). When this f
 the program stops and waits for the user to type something. When the user presses ``Return`` or
 ``Enter``, the program resumes and ``input`` returns what the user typed as a string.
 
-.. activecode:: 02-ac-10-input
+.. activecode:: var-ac-10-input
     :caption: Using the input function
 
     inp = input()
@@ -24,7 +24,7 @@ Before getting input from the user, it is a good idea to print a prompt
 telling the user what to input. You can pass a string to ``input`` to
 be displayed to the user before pausing for input:
 
-.. activecode:: 02-ac-11-print-name
+.. activecode:: var-ac-11-print-name
   :caption: Using the input function with a prompt
 
   name = input('What is your name?')
@@ -34,7 +34,7 @@ be displayed to the user before pausing for input:
 If you expect the user to type an integer, you can try to convert the
 return value to ``int`` using the ``int()`` function:
 
-.. activecode:: 02-ac-11-swallow
+.. activecode:: var-ac-11-swallow
   :caption: Converting an input to an integer
 
   prompt = 'What...is the airspeed velocity of an unladen swallow?'
@@ -102,7 +102,7 @@ We will see how to handle this kind of error later.
 One limitation in Python is that you can't add (concatenate) a number and a string. You
 must first convert the number to a string using the built-in ``str`` method.
 
-.. activecode:: 02-ac-12-birth-year-with-str
+.. activecode:: var-ac-12-birth-year-with-str
   :caption: Using the str function
 
   from datetime import datetime

@@ -21,6 +21,7 @@ Mixed-up Code Questions
 
 
 .. activecode::  str-mixed-emotion-ac
+    :practice: T
     :autograde: unittest
 
     Write the function, ``mood(emotion)``, to return a string with the ``emotion``
@@ -67,6 +68,7 @@ Mixed-up Code Questions
 
 
 .. activecode::  str-mixed-book-ac
+    :practice: T
     :autograde: unittest
 
     Write the function, ``item_purchase(item, price)``, to return a string with the ``item`` purchased followed by the ``price``.
@@ -112,6 +114,7 @@ Mixed-up Code Questions
 
 
 .. activecode::  str-mixed-code-ac
+    :practice: T
     :autograde: unittest
 
     Write the function, ``phrase(person, thing)``, to return a string with a ``person`` of your choosing followed by a ``thing``
@@ -155,6 +158,7 @@ Mixed-up Code Questions
 
 
 .. activecode::  str-mixed-time-ac
+    :practice: T
     :autograde: unittest
 
     Let's imagine that last weekend you went on a camping trip with your family. Write a function
@@ -204,6 +208,7 @@ Mixed-up Code Questions
 
 
 .. activecode::  str-mixed-feeling-ac
+    :practice: T
     :autograde: unittest
 
     Write the function, ``food(fave, least_fave)``, to return a string with your ``fave`` food followed by your ``least_fave`` food both in lowercase.
@@ -244,6 +249,7 @@ Mixed-up Code Questions
 
 
 .. activecode::  str-mixed-animal-ac
+    :practice: T
     :autograde: unittest
 
     Finish the function, ``animal(type)``, to return the string, "My ``type_animal`` looks like a Muppet" with ``type`` being
@@ -287,6 +293,7 @@ Mixed-up Code Questions
 
 
 .. activecode::  str-mixed-add-ac
+    :practice: T
     :autograde: unittest
 
     Let's imagine you went on a huge shopping spree. Write the function, ``total(store1, store2, store3)``,
@@ -332,6 +339,7 @@ Mixed-up Code Questions
 
 
 .. activecode::  str-mixed-wizard-ac
+    :practice: T
     :autograde: unittest
 
     Write the function, ``combine(var1, var2)``, to return a string by combining the two variables ``var1`` and ``var2``.
@@ -378,6 +386,7 @@ Mixed-up Code Questions
 
 
 .. activecode::  str-mixed-colors-ac
+    :practice: T
     :autograde: unittest
 
     Write the function, ``colors(col1, col2)``, to return a string combining the variables ``col1`` and ``col2``.
@@ -420,6 +429,7 @@ Mixed-up Code Questions
         return "Petting " + "animal" + end #paired
 
 .. activecode::  str-mixed-dogs-ac
+    :practice: T
     :autograde: unittest
 
     Finish the function, ``fave_animal(animal)``, to return the string, "Petting ``animal`` makes me happier than anything else" where ``animal``

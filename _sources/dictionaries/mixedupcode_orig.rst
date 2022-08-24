@@ -39,6 +39,7 @@ Mixed-Up Code Questions
 
 
 .. activecode:: dictionaries_mixedupcode_question10_1_ac
+    :practice: T
     :autograde: unittest
 
     Write a function ``letter_dict`` that takes in ``string`` as a parameter and returns a dictionary containing the amount of times letters appear in the given ``string``.
@@ -85,6 +86,7 @@ Mixed-Up Code Questions
 
 
 .. activecode:: dictionaries_mixedupcode_question10_2_ac
+    :practice: T
     :autograde: unittest
 
     Write a function ``word_dict`` that takes in ``string`` as a parameter and returns a dictionary containing the amount of times a word appears in the given ``string``.
@@ -131,6 +133,7 @@ Mixed-Up Code Questions
         return dictionary['a'] #paired
 
 .. activecode:: dictionaries_mixedupcode_question10_3_ac
+    :practice: T
     :autograde: unittest
 
     Write a function ``a_counter`` that takes in ``string`` as a parameter, creates a ``dictionary``, and returns the amount of a's in the given ``string`` using the ``dictionary``.
@@ -175,6 +178,7 @@ Mixed-Up Code Questions
 
 
 .. activecode:: dictionaries_mixedupcode_question10_4_ac
+    :practice: T
     :autograde: unittest
 
     Write a function called ``sales_tax`` that takes in a ``list_of_costs`` (floating point values) as a parameter and
@@ -224,6 +228,7 @@ Mixed-Up Code Questions
 
 
 .. activecode:: dictionaries_mixedupcode_question10_5_ac
+    :practice: T
     :autograde: unittest
 
     Write a function called ``discount_and_tax`` that takes in a ``list_of_costs`` (floating point values) and a ``discount`` percentage as parameters and
@@ -271,6 +276,7 @@ Mixed-Up Code Questions
         return combination
 
 .. activecode:: dictionaries_mixedupcode_question10_6_ac
+    :practice: T
     :autograde: unittest
 
     Write a function called ``create_dictionary`` that takes in ``keys_list`` and ``values_list`` as parameters
@@ -323,6 +329,7 @@ Mixed-Up Code Questions
         return keys_list
 
 .. activecode:: dictionaries_mixedupcode_question10_7_ac
+    :practice: T
     :autograde: unittest
 
     Write a function called ``lowest_value_keys`` that takes in ``dictionary`` as a parameter and returns a list of the keys containing the lowest value of all the keys in the dictionary.
@@ -374,6 +381,7 @@ Mixed-Up Code Questions
 
 
 .. activecode:: dictionaries_mixedupcode_question10_8_ac
+    :practice: T
     :autograde: unittest
 
     Write a function called ``duplicated_data`` that takes in ``dictionary1`` and ``dictionary2`` as parameters and returns a dictionary with key-value pairs that are
@@ -420,6 +428,7 @@ Mixed-Up Code Questions
 
 
 .. activecode:: dictionaries_mixedupcode_question10_9_ac
+    :practice: T
     :autograde: unittest
 
     Write a function called ``total_price`` that takes in ``quantity_dict`` and ``price_dict`` and returns the total cost of all items.
@@ -461,6 +470,7 @@ Mixed-Up Code Questions
         return quantity_dict
 
 .. activecode:: dictionaries_mixedupcode_question10_10_ac
+    :practice: T
     :autograde: unittest
 
     Create a function called ``scale_recipe`` that takes in ``quantity_dict`` and ``scale_factor`` as parameters and

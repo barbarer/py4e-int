@@ -14,7 +14,7 @@ Functions Multiple Choice Questions
     :feedback_d: A return statement is not absolutely needed to create a function. For example, a print statement can be used instead of a return statement.
     :feedback_e: Correct!
 
-    Select all the parts that are absolutely needed to create and call a function. 
+    Select all the parts that are absolutely needed to create and call a function.
 
 
 .. mchoice:: func_exercise_2
@@ -25,7 +25,7 @@ Functions Multiple Choice Questions
     :answer_e: 5 and 100.5 and 1
     :correct: b
     :feedback_a: Incorrect! When you do a smaller number % a larger number, the answer will always be the smaller number. When you do a number % the same number, the answer will always be 0.
-    :feedback_b: Correct! 
+    :feedback_b: Correct!
     :feedback_c: Incorrect! When you do a larger number % a smaller number, the answer will be the remainder of the larger number divided by the smaller number. When you do a number % the same number, the answer will always be 0.
     :feedback_d: Incorrect! When you do a larger number % a smaller number, the answer will be the remainder of the larger number divided by the smaller number. When you do a smaller number % a larger number, the answer will always be the smaller number.
     :feedback_e: Incorrect! When you do a smaller number % a larger number, the answer will always be the smaller number. When you do a number % the same number, the answer will always be 0.
@@ -49,7 +49,7 @@ Functions Multiple Choice Questions
     :feedback_b: Incorrect! Single division is floating point division. Double division is integer division, and it outputs the floor of the value.
     :feedback_c: Incorrect! Single division is floating point division. Double division is integer division, and it outputs the floor of the value.
     :feedback_d: Incorrect! Single division is floating point division. Double division is integer division, and it outputs the floor of the value.
-    :feedback_e: Correct! 
+    :feedback_e: Correct!
 
     What will be printed after calling ``divide(100, 95)`` and ``divide(5, 7)`` and ``divide(7, 5)``? (Note: Ignore whitespaces.)
 
@@ -69,7 +69,7 @@ Functions Multiple Choice Questions
     :answer_d: None will be outputted after printing and calling multiplication_one(5, 10). 50 will be outputted after calling multiplication_two(5, 10).
     :answer_e: 50 will be outputted after printing and calling multiplication_one(5, 10). Nothing will be outputted after calling multiplication_two(5, 10).
     :correct: a
-    :feedback_a: Correct! 
+    :feedback_a: Correct!
     :feedback_b: Incorrect! None is printed when you print and call a function and there is no return statement in the function body. Nothing is outputted when you call a function that only has a return statement and you don't print the function call.
     :feedback_c: Incorrect! None is printed when you print and call a function and there is no return statement in the function body. Nothing is outputted when you call a function that only has a return statement and you don't print the function call.
     :feedback_d: Incorrect! Nothing is outputted when you call a function that only has a return statement and you don't print the function call.
@@ -81,25 +81,24 @@ Functions Multiple Choice Questions
 
         def multiplication_one(num1, num2):
             num1 * num2
-    
+
         print(multiplication_one(5, 10))
 
         def multiplication_two(num1, num2):
             return num1 * num2
-    
+
         multiplication_two(5, 10)
 
 .. mchoice:: func_exercise_5
-    :practice: T
     :answer_a: None and -89
     :answer_b: None
     :answer_c: -89
     :answer_d: -89 and None
     :correct: d
-    :feedback_a: Incorrect! When you print a function call (e.g., print(subtraction(new_add_answer, 200))) and the function prints an output (e.g., def subtraction(num1, num2): print(num1 - num2)), the output will be printed first due to the function call. Then, printing the function call will output None because the function does not have a return statement. 
-    :feedback_b: Incorrect! When you print a function call (e.g., print(subtraction(new_add_answer, 200))) and the function prints an output (e.g., def subtraction(num1, num2): print(num1 - num2)), the output will be printed first due to the function call. Then, printing the function call will output None because the function does not have a return statement. 
-    :feedback_c: Incorrect! When you print a function call (e.g., print(subtraction(new_add_answer, 200))) and the function prints an output (e.g., def subtraction(num1, num2): print(num1 - num2)), the output will be printed first due to the function call. Then, printing the function call will output None because the function does not have a return statement. 
-    :feedback_d: Correct! 
+    :feedback_a: Incorrect! When you print a function call (e.g., print(subtraction(new_add_answer, 200))) and the function prints an output (e.g., def subtraction(num1, num2): print(num1 - num2)), the output will be printed first due to the function call. Then, printing the function call will output None because the function does not have a return statement.
+    :feedback_b: Incorrect! When you print a function call (e.g., print(subtraction(new_add_answer, 200))) and the function prints an output (e.g., def subtraction(num1, num2): print(num1 - num2)), the output will be printed first due to the function call. Then, printing the function call will output None because the function does not have a return statement.
+    :feedback_c: Incorrect! When you print a function call (e.g., print(subtraction(new_add_answer, 200))) and the function prints an output (e.g., def subtraction(num1, num2): print(num1 - num2)), the output will be printed first due to the function call. Then, printing the function call will output None because the function does not have a return statement.
+    :feedback_d: Correct!
 
     What would be outputted after running the code below? (Note: Ignore whitespaces.)
 

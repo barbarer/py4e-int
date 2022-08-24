@@ -17,7 +17,7 @@ A *value* is one of the basic things a program works
 with, like a letter or a number. You can print values in Python.  See what happens
 when you run the following code.
 
-.. activecode:: 02-ac-1-vars2
+.. activecode:: var-ac-1-vars2
     :nocodelens:
     :caption: Printing values in Python
 
@@ -31,7 +31,7 @@ they are enclosed in quotation marks.
 
 If you are not sure what type a value has, use the type function to find out.
 
-.. activecode:: 02-ac-2-var-types
+.. activecode:: var-ac-2-var-types
     :nocodelens:
     :caption: Printing types in Python
 
@@ -64,7 +64,7 @@ they are in quotation marks like strings.
 
 They're strings. We can check this using the active codeblock below.
 
-.. activecode:: 02-ac-2-num-strs
+.. activecode:: var-ac-2-num-strs
     :nocodelens:
     :caption: Printing strings of numbers in Python
 
@@ -75,7 +75,7 @@ When you type a large integer, you might be tempted to use commas
 between groups of three digits, as in 1,000,000. This is
 not a legal integer in Python, but it is legal:
 
-.. activecode:: 02-ac-3-num-commas
+.. activecode:: var-ac-3-num-commas
     :nocodelens:
     :caption: Printing integers with commas in Python
 

@@ -133,7 +133,6 @@ String Slices
    Use the slice [start:end] operator to get a slice (substring) from a string. It will return a new string starting at the start and including all the characters up to just before the end (end - 1).
 
 .. fillintheblank:: funct_fitb_three_char_slice
-    :practice: T
 
     Use the slice operator to return the first three characters from the variable ``dna``?
 
@@ -141,7 +140,6 @@ String Slices
       :.*: Look at the note above and try again.
 
 .. fillintheblank:: funct_fitb_last_three_char_slice
-    :practice: T
 
     Use the slice operator to return a new string with just the last three characters from the variable named ``dna`` using a negative index?
 
@@ -149,7 +147,6 @@ String Slices
       :.*: Read about negative indicies in Python and try again.
 
 .. fillintheblank:: funct_fitb_start_slice_def
-    :practice: T
 
     What index will the slice (substring) start with if the start index isn't specified?
 
@@ -252,7 +249,6 @@ String Methods
 Strings have methods (functions) that operate on a string object using **dot-notation** as shown in the example code below.
 
 .. fillintheblank:: funct_fitb_string_method_pred
-    :practice: T
 
     What will be returned from the ``get_user_name`` function below?
 

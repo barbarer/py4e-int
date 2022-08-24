@@ -17,7 +17,7 @@ to be printed (kind of like Python comments).
 Here is a sample run of this new program with ``continue``
 added:
 
-.. activecode:: 05section4_1
+.. activecode:: itr-section4_1
     :coach:
     :caption: A sample run of this new program with ``continue`` added.
 

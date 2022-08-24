@@ -31,8 +31,8 @@ etc.) work with lists of strings and other types that can be comparable.
     :answer_a: True
     :answer_b: False
     :correct: b
-    :feedback_a: The max and len functions can work on any list.
-    :feedback_b: The max and len functions can work on any list, but the sum function can only work on lists made of numbers.
+    :feedback_a: The max and len functions can work on any list with types that can be compared.
+    :feedback_b: The max and len functions can work on any list with types that can be compared, but the sum function can only work on lists made of numbers.
 
     True or False? The max, sum, and len functions can work on any list.
 

@@ -127,7 +127,7 @@ Maximum and minimum loops
 To find the largest value in a list or sequence, we
 construct the following loop:
 
-.. activecode:: 05section6_1
+.. activecode:: itr-section6_1
     :coach:
     :caption: To find the largest value in a list or sequence, we construct the following loop.
 
@@ -197,7 +197,7 @@ list.
 To compute the smallest number, the code is very similar with one small
 change:
 
-.. activecode:: 05section6_2
+.. activecode:: itr-section6_2
     :coach:
     :caption: To find the smallest value in a list or sequence, we construct the following loop.
 
@@ -221,7 +221,7 @@ unnecessary.
 The following is a simple version of the Python built-in
 ``min()`` function:
 
-.. activecode:: 05section6_3
+.. activecode:: itr-section6_3
     :coach:
     :caption: A simple version of the Python built-in min() function
 

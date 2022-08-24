@@ -6,7 +6,6 @@ Functions and Loops Write Code Questions
         .. tab:: Question
 
             .. activecode:: funct_loops_writecode1q
-                :practice: T
                 :autograde: unittest
 
                 Write a function called ``list_starts_with_a`` that takes in ``lst`` as a parameter and returns a
@@ -51,7 +50,6 @@ Functions and Loops Write Code Questions
 
 #.
     .. activecode:: funct_loops_writecode2q
-        :practice: T
         :autograde: unittest
 
         Write a function called ``sentence_without_vowels`` that takes in ``string`` as a parameter and returns a new
@@ -80,7 +78,6 @@ Functions and Loops Write Code Questions
         .. tab:: Question
 
             .. activecode:: funct_loops_writecode3q
-                :practice: T
                 :autograde: unittest
 
                 Write a function called ``draw_square`` that takes in ``num`` as a parameter and returns a
@@ -127,7 +124,6 @@ Functions and Loops Write Code Questions
 
 #.
     .. activecode:: funct_loops_writecode4q
-        :practice: T
         :autograde: unittest
 
         Write a function called ``check_prime_num`` that takes in ``num`` as a parameter and returns ``True`` if ``num`` is a prime number
@@ -158,7 +154,6 @@ Functions and Loops Write Code Questions
         .. tab:: Question
 
             .. activecode:: funct_loops_writecode5q
-                :practice: T
                 :autograde: unittest
 
                 Write a function called ``factorial`` that takes in ``num`` as a parameter and returns the factorial value.

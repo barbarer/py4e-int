@@ -31,17 +31,13 @@ your program before you can use it. The simplest use of the regular
 expression library is the ``search()`` function. The following
 program demonstrates a trivial use of the search function.
 
-.. datafile:: mbox-short-re.txt
-    :fromfile: ../files/mbox-short.txt
-    :hide:
-
 .. activecode:: re_ac1
-    :available_files: mbox-short-re.txt
+    :datafile: mbox-short.txt
 
     This code uses regular expressions to print lines that contain "From:".
     ~~~~
     import re
-    hand = open('mbox-short-re.txt')
+    hand = open('mbox-short.txt')
     for line in hand:
         line = line.rstrip()
         if re.search('From:', line):
@@ -78,12 +74,12 @@ For example, the caret character is used in regular expressions to match
 lines where "From:" was at the beginning of the line as follows:
 
 .. activecode:: re-ac2
-    :available_files: mbox-short-re.txt
+    :datafile: mbox-short.txt
 
     Using regular expressions to print lines that contain "From:" at the beginning of the line.
     ~~~~
     import re
-    hand = open('mbox-short-re.txt')
+    hand = open('mbox-short.txt')
     for line in hand:
         line = line.rstrip()
         if re.search('^From:', line):
@@ -113,7 +109,7 @@ will match the regular expression.
     .. code-block:: python
 
         import re
-        hand = open('mbox-short-re.txt')
+        hand = open('mbox-short.txt')
         for line in hand:
             line = line.rstrip()
             if re.search('b', line):

@@ -9,7 +9,7 @@ Group Work: Functions with Tuples and Dictionaries
 
     💻 You are invited to participate in a research study about how Parsons problems (a type of coding puzzle) may help
     CS entry-level learning. You must be at least 18 to participate. <br>
-    
+
     💻 In this study, you will learn some Python basics, fill in 2 brief surveys and 4 code practice problems with a short posttest. It takes 45 minutes to one hour to finish it. <br>
 
     💻 Your participation will help more students become successful in computing courses in a low-cost, scalable, and easily
@@ -146,7 +146,6 @@ Some functions that work on lists return an **iterator** (an object that you can
 The ``range`` function also returns an iterator.
 
 .. fillintheblank:: funct_tuple_zip_first_print_fitb
-    :practice: T
 
     What is the first thing the code below prints?
 
@@ -176,7 +175,6 @@ Dictionaries
 A dictionary stores a value for a key.
 
 .. fillintheblank:: funct_dict_num_t
-    :practice: T
 
     What is the first thing the code below prints?
 
@@ -261,6 +259,7 @@ There is another way to update the value for a key that works even if the key is
     Drag the item to its type.
 
 .. mchoice:: funct_which_are_immutable_mc
+    :practice: T
 
     Which of the following types are immutable (don't change)?
 

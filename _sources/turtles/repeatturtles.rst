@@ -43,7 +43,7 @@ We already had a turtle draw a square.  We repeated the lines in order to make t
     	alisha.forward(100)    # move forward by 100 units
       	alisha.right(90)     # turn by 90 degrees
 
-.. mchoice:: 10_1_1_Turtle_For_Q1
+.. mchoice:: turtle_1_1_Turtle_For_Q1
    :answer_a: [0,1,2,3]
    :answer_b: [0,1,2]
    :answer_c: [2,3,4,5]
@@ -56,7 +56,7 @@ We already had a turtle draw a square.  We repeated the lines in order to make t
 
    The numbers in the list ``[1,2,3,4]`` are not important.  It's the fact that there are *four* items in the list that is important.  Only one of these choices does *not* make a square.  Which one?  (It's not cheating to actually try each of them and run the program each time!)
 
-.. parsonsprob:: 10_1_2_Rectangle
+.. parsonsprob:: turtle_1_2_Rectangle
    :numbered: left
    :adaptive:
 

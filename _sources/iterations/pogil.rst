@@ -42,7 +42,6 @@ A ``for`` loop executes the same block of code "for each item in a sequence."
     print("goodbye")
 
 .. mchoice:: loops_MC_pogil_indented
-    :practice: T
     :answer_a: 0
     :answer_b: 1
     :answer_c: 2
@@ -58,7 +57,6 @@ A ``for`` loop executes the same block of code "for each item in a sequence."
     How many times does the indented line of code execute under the ``for`` loop?
 
 .. mchoice:: loops_MC_pogil_notindented
-    :practice: T
     :answer_a: 0
     :answer_b: 1
     :answer_c: 2
@@ -74,7 +72,6 @@ A ``for`` loop executes the same block of code "for each item in a sequence."
     How many times does the line of code NOT indented execute after the ``for`` loop?
 
 .. dragndrop:: loops_dnd_pogil_xvalue
-    :practice: T
     :feedback: Keep trying!
     :match_1: 1st time|||x = 2
     :match_2: 2nd time|||x = 7
@@ -83,7 +80,6 @@ A ``for`` loop executes the same block of code "for each item in a sequence."
     Match each execution of Line 3 to the value "x" has after Line 3 is executed.
 
 .. dragndrop:: loops_dnd_pogil_modifiedlist
-    :practice: T
     :feedback: Keep trying!
     :match_1: [5, -7, 0]|||3 times
     :match_2: [3, 2, 1, 0]|||4 times
@@ -248,7 +244,6 @@ A more general looping structure is the ``while`` statement.
     print("goodbye")
 
 .. mchoice:: loops_mc_pogil_loopcondition
-    :practice: T
     :answer_a: True
     :answer_b: False
     :correct: a
@@ -264,7 +259,6 @@ Boolean expression after the ``while``) eventually becomes false when i = 3, whi
 causes the loop body to stop executing.
 
 .. mchoice:: loops_mc_pogil_swappedlines
-    :practice: T
     :answer_a: 0 1 2
     :answer_b: 1 2 3
     :answer_c: 0 1 2 3
@@ -280,7 +274,6 @@ causes the loop body to stop executing.
     Imagine that lines 3 and 4 in the above code were swapped. What is the new output of the code?
 
 .. mchoice:: loops_mc_pogil_twice
-    :practice: T
     :answer_a: Change line 1 to "i = 1"
     :answer_b: Change the loop condition to "i < 2"
     :answer_c: Change line 4 to "i = i + 2"
@@ -299,7 +292,6 @@ whether the end has been reached, and the third part updates the variable or
 condition.
 
 .. mchoice:: loops_mc_pogil_noincrement
-    :practice: T
     :answer_a: 0 1 2
     :answer_b: 1 2 3
     :answer_c: 0 would print infinitely

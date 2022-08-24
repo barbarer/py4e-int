@@ -1,4 +1,4 @@
- 
+
 Dictionaries
 ============
 
@@ -45,11 +45,10 @@ the dictionary, you can use square brackets:
    >>> eng2sp['one'] = 'uno'
 
 .. activecode:: dict_example1
-   :practice: T
    :nocodelens:
 
    Write code that adds the key 'two' with a value of 'dos' to the dictionary eng2sp.
-   ~~~~   
+   ~~~~
    eng2sp = {'one':'uno'}
 
    ====
@@ -67,7 +66,7 @@ the value "uno". If we print the dictionary again, we see a key-value
 pair with a colon between the key and value:
 
 .. code-block:: python
-	
+
    eng2sp = {'one':'uno'}
    print(eng2sp)
    {'one':'uno'}
@@ -79,7 +78,7 @@ a new dictionary with three items.  But if you print ``eng2sp``\ , you might be 
 
    eng2sp = {'one': 'uno', 'two': 'dos', 'three': 'tres'}
    print(eng2sp)
-   
+
 
 The order of the key-value pairs is not the same. In fact, if you type
 the same example on your computer, you might get a different result. In
@@ -170,8 +169,8 @@ functions are so magical, but you can read more about it at
    :answer_b: 4
    :answer_c: 5
    :correct: c
-   :feedback_a: Try again! This is only the original amount of apples (1), but it must be increased by the amount of bananas (4) 
-   :feedback_b: Try again! This is only the amount of bananas (4), but we must add this to the number of apples (1). 
+   :feedback_a: Try again! This is only the original amount of apples (1), but it must be increased by the amount of bananas (4)
+   :feedback_b: Try again! This is only the amount of bananas (4), but we must add this to the number of apples (1).
    :feedback_c: Correct! The original amount of apples (1) is increased by the amount of bananas (4) to result in 5 apples.
 
    What is the value of fruits['apples'] when the code finishes running?
@@ -180,4 +179,3 @@ functions are so magical, but you can read more about it at
 
       fruits = {'apples': 1, 'bananas': 4, 'pears': 17, 'oranges': 14}
       fruits['apples'] += fruits['bananas']
-

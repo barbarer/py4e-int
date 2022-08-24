@@ -2,6 +2,7 @@ Functions with Lists Multiple Choice Questions
 -----------------------------------------------
 
 .. mchoice:: funct_lists_1_v2
+    :practice: T
     :answer_a: [-2, 0, 1, 4.2, 5.2]
     :answer_b: [-2, 0, 1, 5.2, 4.2]
     :answer_c: [4.2, -2, 0, 1, 5.2]
@@ -25,6 +26,7 @@ Functions with Lists Multiple Choice Questions
             return lst
 
 .. mchoice:: funct_lists_2
+    :practice: T
     :answer_a: 0
     :answer_b: 2.5
     :answer_c: 4
@@ -46,6 +48,7 @@ Functions with Lists Multiple Choice Questions
             return lst
 
 .. mchoice:: funct_lists_3
+    :practice: T
     :answer_a: [0, 200, 5.6, -2, 4, 5, [-2, 4, 5], -2, 4, 5]
     :answer_b: [0, 200, 5.6, -2, 4, 5, 5.6, -2, 4, 5.6, -2, 4]
     :answer_c: [0, 200, 5.6, -2, 4, 5, [5.6, -2, 4], 5.6, -2, 4]
@@ -69,6 +72,7 @@ Functions with Lists Multiple Choice Questions
             return lst
 
 .. mchoice:: funct_lists_4
+    :practice: T
     :answer_a: elif len(lst1) = len(lst2):
     :answer_b: elif len(lst1) == len(lst2):
     :answer_c: elif not(len(lst1) > len(lst2)) and not(len(lst1) < len(lst2))
@@ -95,6 +99,7 @@ Functions with Lists Multiple Choice Questions
 
 
 .. mchoice:: funct_lists_5
+    :practice: T
     :answer_a: lst_reverse = lst.reverse(), return lst
     :answer_b: lst.reverse(), return lst
     :answer_c: lst_reverse = lst.reverse(), return lst_reverse

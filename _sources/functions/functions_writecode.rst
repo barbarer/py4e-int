@@ -6,12 +6,11 @@ Functions Write Code Questions
         .. tab:: Question
 
             .. activecode:: funct_writecode1q
-                :practice: T
                 :autograde: unittest
 
-                Write a function called ``remainder`` that takes in parameters ``x`` and ``y`` (where ``y`` defaults to 4) and 
-                returns the remainder of ``x`` divided by ``y``. Ignore cases for when ``x`` is negative or ``y`` is less than or equal to 0. 
-                For example, ``remainder(5)`` should return ``1``.  
+                Write a function called ``remainder`` that takes in parameters ``x`` and ``y`` (where ``y`` defaults to 4) and
+                returns the remainder of ``x`` divided by ``y``. Ignore cases for when ``x`` is negative or ``y`` is less than or equal to 0.
+                For example, ``remainder(5)`` should return ``1``.
                 ~~~~
 
                 ====
@@ -32,9 +31,9 @@ Functions Write Code Questions
             .. activecode:: funct_writecode1a
                 :optional:
 
-                Write a function called ``remainder`` that takes in parameters ``x`` and ``y`` (where ``y`` defaults to 4) and 
-                returns the remainder of ``x`` divided by ``y``. Ignore cases for when ``x`` is negative or ``y`` is less than or equal to 0. 
-                For example, ``remainder(5)`` should return ``1``.  
+                Write a function called ``remainder`` that takes in parameters ``x`` and ``y`` (where ``y`` defaults to 4) and
+                returns the remainder of ``x`` divided by ``y``. Ignore cases for when ``x`` is negative or ``y`` is less than or equal to 0.
+                For example, ``remainder(5)`` should return ``1``.
                 ~~~~
                 # Function headers end with a colon (:) and a default value for y
                 def remainder(x, y = 4):
@@ -49,10 +48,9 @@ Functions Write Code Questions
 
 #.
     .. activecode:: funct_writecode2q
-        :practice: T
         :autograde: unittest
 
-        Write a function called ``area_of_rect`` that takes in parameters ``width`` and ``length`` and 
+        Write a function called ``area_of_rect`` that takes in parameters ``width`` and ``length`` and
         returns the area (of the rectangle). For example, ``area_of_rect(5,4)`` should return ``20``.
         ~~~~
 
@@ -74,11 +72,10 @@ Functions Write Code Questions
         .. tab:: Question
 
             .. activecode:: funct_writecode3q
-                :practice: T
                 :autograde: unittest
 
-                Write a function called ``welcome_message`` that takes in a parameter ``name`` and 
-                returns ``"Hello (name)! We hope that you will enjoy this course. :)"``. For example, 
+                Write a function called ``welcome_message`` that takes in a parameter ``name`` and
+                returns ``"Hello (name)! We hope that you will enjoy this course. :)"``. For example,
                 ``welcome_message('Aurora')`` should return ``"Hello Aurora! We hope that you will enjoy this course. :)"``.
                 ~~~~
 
@@ -98,8 +95,8 @@ Functions Write Code Questions
             .. activecode:: funct_writecode3a
                 :optional:
 
-                Write a function called ``welcome_message`` that takes in a parameter ``name`` and 
-                returns ``"Hello (name)! We hope that you will enjoy this course. :)"``. For example, 
+                Write a function called ``welcome_message`` that takes in a parameter ``name`` and
+                returns ``"Hello (name)! We hope that you will enjoy this course. :)"``. For example,
                 ``welcome_message('Aurora')`` should return ``"Hello Aurora! We hope that you will enjoy this course. :)"``.
                 ~~~~
                 def welcome_message(name):
@@ -108,10 +105,9 @@ Functions Write Code Questions
 
 #.
     .. activecode:: funct_writecode4q
-        :practice: T
         :autograde: unittest
 
-        Write a function called ``birthday`` that takes in three parameters (``month``, ``day``, and ``year``) and returns it in the format ``month``/``day``/``year``. 
+        Write a function called ``birthday`` that takes in three parameters (``month``, ``day``, and ``year``) and returns it in the format ``month``/``day``/``year``.
         For example, ``birthday(11, 17, 1990)`` should return ``"11/17/1990"`` and ``birthday(7, 5, 2004)`` should return ``"7/5/2004"``.
         ~~~~
 
@@ -135,10 +131,9 @@ Functions Write Code Questions
         .. tab:: Question
 
             .. activecode:: funct_writecode5q
-                :practice: T
                 :autograde: unittest
 
-                Write a function called ``address`` that combines 3 different string address parameters (``city``, ``state``, and ``zip``) and returns a user's address. 
+                Write a function called ``address`` that combines 3 different string address parameters (``city``, ``state``, and ``zip``) and returns a user's address.
                 After the ``city`` and ``state`` inputs, add a comma and a space. For example, ``address('Seattle', 'WA', '98105')`` should return ``"Seattle, WA, 98105"``.
                 ~~~~
 
@@ -162,7 +157,7 @@ Functions Write Code Questions
             .. activecode:: funct_writecode5a
                 :optional:
 
-                Write a function called ``address`` that combines 3 different string address parameters (``city``, ``state``, and ``zip``) and returns a user's address. 
+                Write a function called ``address`` that combines 3 different string address parameters (``city``, ``state``, and ``zip``) and returns a user's address.
                 After the ``city`` and ``state`` inputs, add a comma and a space. For example, ``address('Seattle', 'WA', '98105')`` should return ``"Seattle, WA, 98105"``.
                 ~~~~
                 def address(city, state, zip):
@@ -172,11 +167,10 @@ Functions Write Code Questions
 
 #.
     .. activecode:: funct_writecode6q
-        :practice: T
         :autograde: unittest
 
         Write a function called ``squareArea`` that takes in a parameter ``length`` and calculates the area of the square.
-        It returns a string with this format: "The total area of the square with length (length) is (area).". For example, 
+        It returns a string with this format: "The total area of the square with length (length) is (area).". For example,
         ``squareArea(10)`` would return ``"The total area of the square with length 10 is 100."``.
         ~~~~
 
@@ -201,14 +195,13 @@ Functions Write Code Questions
         .. tab:: Question
 
             .. activecode:: funct_writecode7q
-                :practice: T
                 :autograde: unittest
 
-                Write three functions called ``addNumbers``, ``subtractNumbers``, and ``calculate``. 
-                The function ``addNumbers`` should take two numbers (``x`` and ``y``) as parameters and return the value of adding them together, 
-                while ``subtractNumbers`` should also take two numbers (``x`` and ``y``) and return the value of ``x`` minus ``y``. 
-                Lastly, define a function called ``calculate`` that takes three numbers (``a``, ``b``, and ``c``) and uses  
-                ``addNumbers`` and ``subtractNumbers`` to add ``a`` and ``b`` and subtract ``c``. The value should be returned. For example, 
+                Write three functions called ``addNumbers``, ``subtractNumbers``, and ``calculate``.
+                The function ``addNumbers`` should take two numbers (``x`` and ``y``) as parameters and return the value of adding them together,
+                while ``subtractNumbers`` should also take two numbers (``x`` and ``y``) and return the value of ``x`` minus ``y``.
+                Lastly, define a function called ``calculate`` that takes three numbers (``a``, ``b``, and ``c``) and uses
+                ``addNumbers`` and ``subtractNumbers`` to add ``a`` and ``b`` and subtract ``c``. The value should be returned. For example,
                 ``calculate(2,3,4)`` should return ``1``.
                 ~~~~
                 def addNumbers(x, y):
@@ -248,15 +241,15 @@ Functions Write Code Questions
             .. activecode:: funct_writecode7a
                 :optional:
 
-                Write three functions called ``addNumbers``, ``subtractNumbers``, and ``calculate``. 
-                The function ``addNumbers`` should take two numbers (``x`` and ``y``) as parameters and return the value of adding them together, 
-                while ``subtractNumbers`` should also take two numbers (``x`` and ``y``) and return the value of ``x`` minus ``y``. 
-                Lastly, define a function called ``calculate`` that takes three numbers (``a``, ``b``, and ``c``) and uses  
-                ``addNumbers`` and ``subtractNumbers`` to add ``a`` and ``b`` and subtract ``c``. The value should be returned. For example, 
+                Write three functions called ``addNumbers``, ``subtractNumbers``, and ``calculate``.
+                The function ``addNumbers`` should take two numbers (``x`` and ``y``) as parameters and return the value of adding them together,
+                while ``subtractNumbers`` should also take two numbers (``x`` and ``y``) and return the value of ``x`` minus ``y``.
+                Lastly, define a function called ``calculate`` that takes three numbers (``a``, ``b``, and ``c``) and uses
+                ``addNumbers`` and ``subtractNumbers`` to add ``a`` and ``b`` and subtract ``c``. The value should be returned. For example,
                 ``calculate(2,3,4)`` should return ``1``.
                 ~~~~
                 def addNumbers(x, y):
-                    
+
                     # Return the value of adding x and y together
                     return x + y
 

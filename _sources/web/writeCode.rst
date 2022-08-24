@@ -49,10 +49,6 @@ xml tags to define the books in a bookstore.
 
        &#60;/bookstore&#62;
 
-.. datafile:: books.xml
-    :fromfile: books.xml
-    :hide:
-
 .. activecode:: web_get_book_info_xml
     :language: python3
     :nocodelens:
@@ -103,10 +99,6 @@ xml tags to define news stories.
            &#60;/body&#62;
        &#60;/nitf&#62;
 
-
-.. datafile:: news.xml
-   :fromfile: news.xml
-   :hide:
 
 .. activecode:: web_get_news_info_xml
     :language: python3
@@ -166,9 +158,6 @@ xml tags to define weather observations.
 
        &#60;/current_observation&#62;
 
-.. datafile:: weather.xml
-   :fromfile: weather.xml
-   :hide:
 
 .. activecode:: web_get_weather_info_xml
     :language: python3
@@ -188,8 +177,42 @@ xml tags to define weather observations.
 The file ``email.json`` below contains JSON data for people including their first_name, last_name
 and email address.
 
-.. datafile:: email.json
-   :fromfile: email.json
+.. reveal:: email.json
+    :showtitle: Show
+    :hidetitle: Hide
+
+    .. raw:: html
+
+       <pre id="email.json.">
+       [{
+         "id": 1,
+         "first_name": "Jeanette",
+         "last_name": "Penddreth",
+         "email": "jpenddreth0@census.gov",
+         "gender": "Female",
+         "ip_address": "26.58.193.2"
+       }, {
+         "id": 2,
+         "first_name": "Giavani",
+         "last_name": "Frediani",
+         "email": "gfrediani1@senate.gov",
+         "gender": "Male",
+         "ip_address": "229.179.4.212"
+       }, {
+         "id": 3,
+         "first_name": "Noell",
+         "last_name": "Bea",
+         "email": "nbea2@imageshack.us",
+         "gender": "Female",
+         "ip_address": "180.66.162.255"
+       }, {
+         "id": 4,
+         "first_name": "Willard",
+         "last_name": "Valek",
+         "email": "wvalek3@vk.com",
+         "gender": "Male",
+         "ip_address": "67.76.188.26"
+       }]
 
 .. activecode:: web_email_json_write
     :language: python3
@@ -208,8 +231,41 @@ and email address.
 The file ``person.json`` below contains JSON data for a person in a dictionary including their first name,
 last name, address, and phone numbers.
 
-.. datafile:: person.json
-   :fromfile: person.json
+.. reveal:: person.json
+    :showtitle: Show
+    :hidetitle: Hide
+
+    .. raw:: html
+
+       <pre id="person.json.">
+       {
+         "firstName": "John",
+         "lastName": "Smith",
+         "isAlive": true,
+         "age": 27,
+         "address": {
+           "streetAddress": "21 2nd Street",
+           "city": "New York",
+           "state": "NY",
+           "postalCode": "10021-3100"
+         },
+         "phoneNumbers": [
+           {
+             "type": "home",
+             "number": "212 555-1234"
+           },
+           {
+             "type": "office",
+             "number": "646 555-4567"
+           },
+           {
+             "type": "mobile",
+             "number": "123 456-7890"
+           }
+         ],
+         "children": [],
+         "spouse": null
+       }
 
 .. activecode:: web_email_person_write
     :language: python3

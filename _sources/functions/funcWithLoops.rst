@@ -31,7 +31,6 @@ The For-Each Loop
 A for-each loop in Python will loop though the items in a list starting with the item at index 0, then index 1, and so on till the last item in the list.
 
 .. fillintheblank:: funct_ll_fitb_count_odd_first
-    :practice: T
 
     What is the first thing that will be printed by the code below?
 
@@ -39,7 +38,6 @@ A for-each loop in Python will loop though the items in a list starting with the
       :.*: Run the code to check.
 
 .. fillintheblank:: funct_ll_fitb_count_odd_last
-    :practice: T
 
     What is the last thing that will be printed by the code below?
 
@@ -72,7 +70,6 @@ A for-each loop in Python will loop though the items in a list starting with the
     main()
 
 .. fillintheblank:: funct_ll_fitb_count_odd_var
-    :practice: T
 
     What is the name of the variable that can be used to refer to the current list item in the for-each loop?
 
@@ -150,7 +147,6 @@ How do you loop just a set number of times?  You can use
 the built-in ``range`` function to do this.
 
 .. fillintheblank:: funct_ll_fitb_print_to_first
-    :practice: T
 
     What is first value that that following code prints?
 
@@ -158,7 +154,6 @@ the built-in ``range`` function to do this.
       :.*: Run the code and see.
 
 .. fillintheblank:: funct_ll_fitb_print_to_last
-    :practice: T
 
     What is last value that that following code prints?
 
@@ -189,7 +184,6 @@ the built-in ``range`` function to do this.
    The ``range(end)`` function will produce values from 0 to end - 1.
 
 .. fillintheblank:: funct_ll_fitb_print_from_to_first
-    :practice: T
 
     What is first value that that following code prints?
 
@@ -197,7 +191,6 @@ the built-in ``range`` function to do this.
       :.*: Run the code and see.
 
 .. fillintheblank:: funct_ll_fitb_print_from_to_last
-    :practice: T
 
     What is last value that that following code prints?
 
@@ -229,7 +222,6 @@ the built-in ``range`` function to do this.
    The function range(start, end) will return a range object (an iterator) that allows you to loop from start (inclusive) to end (exclusive).
 
 .. fillintheblank:: funct_ll_fitb_print_from_to_by_first
-    :practice: T
 
     What is first value that that following code prints?
 
@@ -237,7 +229,6 @@ the built-in ``range`` function to do this.
       :.*: Run the code and see.
 
 .. fillintheblank:: funct_ll_fitb_print_from_to_by_last
-    :practice: T
 
     What is last value that that following code prints?
 
@@ -310,7 +301,6 @@ A while loop repeats while a Boolean expression is True.
     main()
 
 .. fillintheblank:: funct_ll_fitb_while_break
-    :practice: T
 
     What keyword is used to stop the loop in the above code?
 
