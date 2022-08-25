@@ -15,7 +15,7 @@ Problems
 .. poll:: fl-toggle-poll-cls-1
     :scale: 9
 
-    From 1-lowest to 9-highest, how useful was the Parsons problem in helping you <b>solve</b> these problem? Please skip this question if you didn't use it.
+    From 1-lowest to 9-highest, how useful was the Parsons problem in helping you <b>solve</b> this problem? Please skip this question if you didn't use it.
 
 
 .. selectquestion:: fl-cat-ps-sq-tog
@@ -26,7 +26,7 @@ Problems
 .. poll:: fl-toggle-poll-cls-2
     :scale: 9
 
-    From 1-lowest to 9-highest, how useful was the Parsons problem in helping you <b>solve</b> these problem? Please skip this question if you didn't use it.
+    From 1-lowest to 9-highest, how useful was the Parsons problem in helping you <b>solve</b> this problem? Please skip this question if you didn't use it.
 
 
 .. selectquestion:: fl-account-ps-sq-tog
@@ -37,7 +37,7 @@ Problems
 .. poll:: fl-toggle-poll-cls-3
     :scale: 9
 
-    From 1-lowest to 9-highest, how useful was the Parsons problem in helping you <b>solve</b> these problem? Please skip this question if you didn't use it.
+    From 1-lowest to 9-highest, how useful was the Parsons problem in helping you <b>solve</b> this problem? Please skip this question if you didn't use it.
 
 
 .. selectquestion:: fl-fortune-ps-sq-tog
@@ -48,7 +48,7 @@ Problems
 .. poll:: fl-toggle-poll-cls-4
     :scale: 9
 
-    From 1-lowest to 9-highest, how useful was the Parsons problem in helping you <b>solve</b> these problem? Please skip this question if you didn't use it.
+    From 1-lowest to 9-highest, how useful was the Parsons problem in helping you <b>solve</b> this problem? Please skip this question if you didn't use it.
 
 
 Feedback
