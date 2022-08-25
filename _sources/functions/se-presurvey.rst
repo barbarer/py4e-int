@@ -1,4 +1,4 @@
-Pre Survey 
+Pre Survey
 -----------------------------------------------------
 
 Think about **yourself and your learning** when answering the following questions.
@@ -149,7 +149,7 @@ For the next questions please select the answer that best
 matches your familiarity and confidence
 about the specified concept(s).
 
-.. poll:: 206-se-loop-7
+.. poll:: se-loop-7
     :option_1: I am unfamiliar with this concept
     :option_2: I know what it means, but have not used it in a program
     :option_3: I have used this concept in a program, but am not confident about my ability to use it
@@ -159,7 +159,7 @@ about the specified concept(s).
 
     Loops/Iteration like <code>for n in nums:</code> and <code>for i in range(4):</code>
 
-.. poll:: 206-se-cond-8
+.. poll:: se-cond-8
     :option_1: I am unfamiliar with this concept
     :option_2: I know what it means, but have not used it in a program
     :option_3: I have used this concept in a program, but am not confident about my ability to use it
@@ -169,7 +169,7 @@ about the specified concept(s).
 
     Conditionals/Selection Statements like <code>if x < 3:</code>
 
-.. poll:: 206-se-func-9
+.. poll:: se-func-9
     :option_1: I am unfamiliar with this concept
     :option_2: I know what it means, but have not used it in a program
     :option_3: I have used this concept in a program, but am not confident about my ability to use it
@@ -179,7 +179,7 @@ about the specified concept(s).
 
     Functions like <code>def get_odd(nums):</code>
 
-.. poll:: 206-se-list-dic-10
+.. poll:: se-list-dic-10
     :option_1: I am unfamiliar with these concepts
     :option_2: I know what they mean, but have not used them in a program
     :option_3: I have used these concepts in a program, but am not confident about my ability to use them
