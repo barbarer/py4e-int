@@ -16,7 +16,7 @@ Peer Instruction: Iterations Multiple Choice Questions
     :feedback_d: Try again! In every iteration, i adds one up. Therefore, s[i:] begins with next letter in the string. However, the string s also changes after every iterations. It does not follow the rule that printing the first letter in 'pirate ship', then the second letter in 'pirate ship'...
     :feedback_e: Try again! In every iteration, i adds one up. Therefore, s[i:] begins with next letter in the string. However, the string s also changes after every iterations. It does not follow the rule that printing the first letter in 'pirate ship', then the second letter in 'pirate ship'...
 
-    What does this print?
+    What does the following code print?
 
     .. code-block:: python
 
@@ -77,7 +77,7 @@ Peer Instruction: Iterations Multiple Choice Questions
     :feedback_d: Try again! This is not a boolean expression.
     :feedback_e: Try again! An expression evaluates to False means its opposite expression is True. Therefore, try to find an expression that will evaluate to True if y it not equal to 11.
 
-    Write a boolean expression that will evaluate to False if and only if y is equal to 11.
+    Which of these will evaluate to ``False`` if and only if ``y`` is equal to 11.
 
 .. mchoice:: dz-lecture_13_4
    :author: Dan Zingaro
@@ -88,7 +88,7 @@ Peer Instruction: Iterations Multiple Choice Questions
    :answer_d: 5 4 3
    :answer_e: 6 5 4 3
    :correct: a
-   :feedback_a: Correct! When x = 4, the loop stops. 
+   :feedback_a: Correct! When x = 4, the loop stops.
    :feedback_b: Try again. When x = 4, the loop stops. Therefore, 4 will not be printed.
    :feedback_c: Try again. When x = 6, the loop runs. Therefore, 6 will be printed. And when x = 4, the loop stops. Therefore, 4 will not be printed.
    :feedback_d: Try again. When x = 6, the loop runs. Therefore, 6 will be printed. And when x = 4, the loop stops. Therefore, 4 and 3 will not be printed.
@@ -113,11 +113,11 @@ Peer Instruction: Iterations Multiple Choice Questions
    :answer_e: 6 5 4 3
    :correct: c
    :feedback_a: Try again. x = x - 1 comes before print(x). Therefore, 6 will never be printed. And when x = 5, the loop will continue and print(x - 1). So, 4 will be printed.
-   :feedback_b: Try again. x = x - 1 comes before print(x). Therefore, 6 will never be printed. 
+   :feedback_b: Try again. x = x - 1 comes before print(x). Therefore, 6 will never be printed.
    :feedback_c: Correct! When x = 4, the loop will stop. Because x = x - 1 comes before print(x), the code prints 5 and 4.
    :feedback_d: Try again.  x = x - 1 comes before print(x). When x = 5, the loop will continue and print(x - 1). So, 4 will be printed while 3 will not.
    :feedback_e: Try again. x = x - 1 comes before print(x). Therefore, 6 will never be printed. And when x = 5, the loop will continue and print(x - 1). So, 4 will be printed and 3 will not.
-   
+
    .. code-block:: python
 
       What is printed by the following code? (Output is on one line to save space.)
@@ -126,7 +126,7 @@ Peer Instruction: Iterations Multiple Choice Questions
       while x > 4:
         x = x - 1
         print(x)
-        
+
 .. mchoice:: dz-lecture_13_7
    :author: Dan Zingaro
    :practice: T
@@ -141,10 +141,10 @@ Peer Instruction: Iterations Multiple Choice Questions
    :feedback_c: Correct! 'xyzabc' satisfies two requirements: len(5) == 5 and s[:2] == 'xy'.
    :feedback_d: Try again. There is only one password that satisfy the two requirements of getting out of the loop.
    :feedback_e: Try again. There is one password that satisfy the two requirements of getting out of the loop.
-  
+
    .. code-block:: python
 
-      Which of the following passwords gets us out of the loop?
+      Which of the following passwords stops the loop?
 
       valid = False
       while not valid:
@@ -194,7 +194,7 @@ Peer Instruction: Iterations Multiple Choice Questions
    :feedback_b: Try again. When n = 5, n satisfies the if condition, and n turns to -99. And print(n) outputs -99 rather than 5.
    :feedback_c: Correct! When n = 5, n satisfies the if condition, and n turns to -99. So the code outputs 3, 4 and -99.
    :feedback_d: Try again. When n = 5, n satisfies the if condition, and n turns to -99. And print(n) outputs -99 rather than 5.
-  
+
    .. code-block:: python
 
       What is the output of this code? (Output is on one line here to save space.)

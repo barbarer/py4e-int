@@ -16,9 +16,9 @@ Peer Instruction: Lists Multiple Choice Questions
    :feedback_d: Try again. lst[1] = 'wxyz' replaces the second element with 'wxyz'. But the total numebr of elements still remains 3.
    :feedback_e: Try again. There is no bug with the second line.
 
-   .. code-block:: python
+   What does the following code print?
 
-      What is the output of this code?
+   .. code-block:: python
 
       lst = ['abc', 'def', 'ghi']
       lst[1] = 'wxyz'
@@ -39,9 +39,9 @@ Peer Instruction: Lists Multiple Choice Questions
    :feedback_d: Try again. a.pop(2) pops out the value at Index 2 and removes it from the list. Therefore, 8 is removed.
    :feedback_e: Try again. The code will not produce an error.
 
-   .. code-block:: python
+   What is the value of ``a`` after this code runs?
 
-      What is the value of a after this code runs?
+   .. code-block:: python
 
       a = [2, 4, 6, 8]
       a.remove(4)
@@ -62,9 +62,9 @@ Peer Instruction: Lists Multiple Choice Questions
    :feedback_d: Correct! a.pop(2) pops out 6, and a.remove(4) removes 4 from the list.
    :feedback_e: Try again. The code will not produce an error.
 
-   .. code-block:: python
+   What is the value of ``a`` after this code runs?
 
-      What is the value of a after this code runs?
+   .. code-block:: python
 
       a = [2, 4, 6, 8]
       a.pop(2)
@@ -83,11 +83,13 @@ Peer Instruction: Lists Multiple Choice Questions
    :feedback_c: Try again. [:] makes a shallow copy of the array a. Therefore, b.append(8) allows to modify the copy without damaging the original array a.
    :feedback_d: Try again. [:] makes a shallow copy of the array a. Therefore, b.append(8) allows to modify the copy without damaging the original array a.
 
+   What is the value of the list ``a`` after the code below runs?
+
    .. code-block:: python
 
       a = [[1, 2, 3], [4, 5]]
       b = a[:]
-      If we then do: b.append(8) what is the list referred to by a?
+      b.append(8)
 
 .. mchoice:: dz-lecture_15_8
    :author: Dan Zingaro
@@ -102,9 +104,10 @@ Peer Instruction: Lists Multiple Choice Questions
    :feedback_c: Try again. range(2, 7, 3) creates a sequence of numbers from 2 to 7, but increment by 3. Therefore, 7 is not included.
    :feedback_d: Try again. range(2, 7, 3) creates a sequence of numbers from 2 to 7, but increment by 3. Therefore, 3, 4, 6 and 7 are not included.
 
+   Which list is produced by this code?
+
    .. code-block:: python
 
-      What is the list produced by this code?
       list(range(2, 7, 3))
 
 .. mchoice:: dz-lecture_15_9
@@ -120,9 +123,10 @@ Peer Instruction: Lists Multiple Choice Questions
    :feedback_c: Try again. range(4, 9, 4) creates a sequence of numbers from 4 to 9, but increment by 4. Therefore, 9 is not included.
    :feedback_d: Try again. range(4, 9, 4) creates a sequence of numbers from 4 to 9, but increment by 4. Therefore, 5, 6, 7 and 9 are not included.
 
+   Which list is produced by this code?
+
    .. code-block:: python
 
-      What is the list produced by this code?
       list(range(4, 9, 4))
 
 .. mchoice:: dz-lecture_15_10
@@ -139,6 +143,8 @@ Peer Instruction: Lists Multiple Choice Questions
    :feedback_c: Correct! Since len(lst) = 3, when counter = 4, the loop stops. Because sum += counter comes before counter += 2, sum = 2.
    :feedback_d: Try again. Since len(lst) = 3, when counter = 4, the loop stops. Because sum += counter comes before counter += 2, sum = 2.
    :feedback_e: Try again. Try to think about what is the value of counter when the loop stops.
+
+   What does the following code print?
 
    .. code-block:: python
 
@@ -166,7 +172,10 @@ Peer Instruction: Lists Multiple Choice Questions
    :feedback_e: Try again. The only contiguous portion of the list that has the greatest sum is [8, -6, 10], summing up tp 12.
 
    What is the maximum segment sum in this list?
-   [2, -5, 8, -6, 10]
+
+   .. code-block:: python
+
+      [2, -5, 8, -6, 10]
 
 .. mchoice:: dz-lecture_30_5
    :practice: T
@@ -184,7 +193,10 @@ Peer Instruction: Lists Multiple Choice Questions
    :feedback_e: Try again. The only contiguous portion of the list that has the greatest sum is [10], summing up tp 10.
 
    What is the maximum segment sum in this list?
-   [2, -5, 8, -6, 10]
+
+   .. code-block:: python
+
+      [2, -5, 8, -6, 10]
 
 .. mchoice:: dz-lecture_30_9
    :practice: T
@@ -303,10 +315,12 @@ Peer Instruction: Lists Multiple Choice Questions
    :feedback_d: Try Again. After the third pass the sorted part is [10, 20, 30, 40], and the unsorted part is [16, 94, 8, 22]. The next value in the unsorted part is 16 and the algorithm will place 16 in the correct position in the sorted part. Thus, the sorted part becomes [10, 16, 20, 30, 40] and the rest is [94, 8, 22]. So the whole list is [10, 16, 20, 30, 40, 94, 8, 22].
    :feedback_e: Try Again. After the third pass the sorted part is [10, 20, 30, 40], and the unsorted part is [16, 94, 8, 22]. The next value in the unsorted part is 16 and the algorithm will place 16 in the correct position in the sorted part. Thus, the sorted part becomes [10, 16, 20, 30, 40] and the rest is [94, 8, 22]. So the whole list is [10, 16, 20, 30, 40, 94, 8, 22].
 
+   The list below reflects the state of the list after 3 passes of insertion sort. What will be in the list after the next (fourth) pass?
+
    .. code-block:: python
 
       [10, 20, 30, 40, 16, 94, 8, 22]
-      The list above reflects the state of the list after 3 passes of insertion sort. What will be the list after the next (fourth) pass?
+
 
 .. mchoice:: dz-lecture_33_5
    :practice: T
@@ -323,10 +337,12 @@ Peer Instruction: Lists Multiple Choice Questions
    :feedback_d: Try Again. After the third pass the sorted part is [5, 7, 14, 19], and the unsorted part is [16, 2, 32, 9]. The next value in the unsorted part is 16 and the algorithm will place 16 in the correct position in the sorted part. Thus, the sorted part becomes [5, 7, 14, 16, 19] and the rest is [2, 32, 9]. So the whole list is [5, 7, 14, 16, 19, 2, 32, 9].
    :feedback_e: Try Again. After the third pass the sorted part is [5, 7, 14, 19], and the unsorted part is [16, 2, 32, 9]. The next value in the unsorted part is 16 and the algorithm will place 16 in the correct position in the sorted part. Thus, the sorted part becomes [5, 7, 14, 16, 19] and the rest is [2, 32, 9]. So the whole list is [5, 7, 14, 16, 19, 2, 32, 9].
 
+   The list below reflects the state of the list after 3 passes of insertion sort. What will be in the list after the next (fourth) pass?
+
    .. code-block:: python
 
       [5, 7, 14, 19, 16, 2, 32, 9]
-      The list above reflects the state of the list after 3 passes of insertion sort. What will be the list after the next (fourth) pass?
+
 
 .. mchoice:: dz-lecture_33_11
    :practice: T
@@ -356,10 +372,12 @@ Peer Instruction: Lists Multiple Choice Questions
    :feedback_c: Try Again. During the first pass, the list becomes [-, 5, 9, -, 0, 4, 6, 8, 2], and then [5, -, 9, 0, -, 4, 6, 8, 2], and then [5, 0, -, 9, 4, -, 6, 8, 2], and then [5, 0, 4, -, 9, 6, -, 8, 2], and then [5, 0, 4, 6, -, 9, 8, -, 2], and then [5, 0, 4, 6, 8, -, 9, 2, -], and then [5, 0, 4, 6, 8, 2, 9]
    :feedback_d: Correct. During the first pass, the list becomes [-, 5, 9, -, 0, 4, 6, 8, 2], and then [5, -, 9, 0, -, 4, 6, 8, 2], and then [5, 0, -, 9, 4, -, 6, 8, 2], and then [5, 0, 4, -, 9, 6, -, 8, 2], and then [5, 0, 4, 6, -, 9, 8, -, 2], and then [5, 0, 4, 6, 8, -, 9, 2, -], and then [5, 0, 4, 6, 8, 2, 9]
 
+   Which of the following matches the contents of the list after one pass of bubble sort?
+
    .. code-block:: python
 
       [5, 9, 0, 4, 6, 8, 2]
-      What will be the list after one pass of bubble sort?
+
 
 .. mchoice:: dz-lecture_34_3
    :practice: T
@@ -374,10 +392,12 @@ Peer Instruction: Lists Multiple Choice Questions
    :feedback_c: Try Again. During the first pass, the list becomes [-,2,10,-,1,7,15,9,1], and then [2,-,10,1,-,7,15,9,1], and then [2,1,-,10,7,-,15,9,1], and then [2,1,7,-,10,15,-,9,1], and then [2,1,7,10,-,15,9,-,1], and then [2,1,7,10,9,-,15,1,-], and then [2,1,7,10,9,1,15]
    :feedback_d: Correct. During the first pass, the list becomes [-,2,10,-,1,7,15,9,1], and then [2,-,10,1,-,7,15,9,1], and then [2,1,-,10,7,-,15,9,1], and then [2,1,7,-,10,15,-,9,1], and then [2,1,7,10,-,15,9,-,1], and then [2,1,7,10,9,-,15,1,-], and then [2,1,7,10,9,1,15]
 
+   Which of the following matches the contents of the list after one pass of bubble sort?
+
    .. code-block:: python
 
       [2, 10, 1, 7, 15, 9, 1]
-      What will be the list after one pass of bubble sort?
+
 
 .. mchoice:: dz-lecture_34_5
    :practice: T
@@ -390,9 +410,10 @@ Peer Instruction: Lists Multiple Choice Questions
    :feedback_b: Correct. During each pass i, the ith value of the list is inserted into the left sorted part of the list.
    :feedback_c: Try Again. Bubble sort places the sorted part on the right part after each round, but the lists in the question has left part sorted.
 
+   Which sort produces the following values on each pass?
+
    .. code-block:: python
 
-      Here is a list and that list after each pass of a sort.
       [5, 9, 0, 4, 6, 8, 2]
       [5, 9, 0, 4, 6, 8, 2]
       [5, 9, 0, 4, 6, 8, 2]
@@ -401,5 +422,3 @@ Peer Instruction: Lists Multiple Choice Questions
       [0, 4, 5, 6, 9, 8, 2]
       [0, 4, 5, 6, 8, 9, 2]
       [0, 2, 4, 5, 6, 8, 9]
-      Which sort is this?
-

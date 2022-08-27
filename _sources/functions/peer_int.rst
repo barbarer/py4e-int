@@ -152,7 +152,7 @@ Peer Instruction: Function Multiple Choice Questions
     :feedback_d: Try again. This code uses recursion but n gradually approaches 1. When n == 1, the program stops.
     :feedback_e: Try again. The program returns a value based on the value of n. When n != 1, it always returns n * fact(n-1), which leads to another round of recursion. But n gradually approaches 1 during the process. When n == 1, the program stops.
 
-    This code will return
+    What will the following code return from ``fact(3)``?
 
     .. code-block:: python
 
@@ -161,7 +161,6 @@ Peer Instruction: Function Multiple Choice Questions
               return 1
           else:
               return n * fact(n - 1)
-      fact(3)
 
 .. mchoice:: ctp-recursion-15_recursion_06
     :practice: T
@@ -178,7 +177,7 @@ Peer Instruction: Function Multiple Choice Questions
     :feedback_d: Correct! This code has an infinite loop, since it does not have a base case.
     :feedback_e: Try again. You can focus on the num() function. There is an endless recursion here.
 
-    This code will return
+    What will the following code print?
 
     .. code-block:: python
 
@@ -232,7 +231,7 @@ Peer Instruction: Function Multiple Choice Questions
     :feedback_d: Correct! Everything in Python is an object. So, your functions can return numeric values ( int , float , and complex values), collections and sequences of objects... But a + b here is not an object. So it will report an error.
     :feedback_e: Try again. Everything in Python is an object. So, your functions can return numeric values ( int , float , and complex values), collections and sequences of objects... But a + b here is not an object. So it will report an error.
 
-    What will the following code return?
+    What is the value of ``y`` after the following code runs?
 
     .. code-block:: python
 
@@ -261,7 +260,7 @@ Peer Instruction: Function Multiple Choice Questions
     :feedback_d: Correct! Option B and C actually do the same thing.
     :feedback_e: Try again. Examine whether each option can end by itself! Some will cause a loop without an end.
 
-    Which code is correct?
+    Which answer is correct?
 
     .. code-block:: python
 
@@ -302,7 +301,7 @@ Peer Instruction: Function Multiple Choice Questions
     :feedback_b: Correct! The function will report an error when it encounters a word with an odd number of letters. Becuase len(x) is equal 0, leading x[1:len(x)-1] out of range.
     :feedback_c: Try again. The function examines whether the sequence is symmetrical by comparing letters counrting backwards with the ranked order. Try to test it with a word with odd number of letters.
 
-    Will this code return True when x is a palidrome (a string that is the symmetrical such as abba)?
+    Will this code return ``True`` when ``x`` is a palidrome (a string that reads the same backwards as forwards like abba)?
 
     .. code-block:: python
 
@@ -327,7 +326,7 @@ Peer Instruction: Function Multiple Choice Questions
     :feedback_d: Correct! The function examines whether the string is a Palindromes. When len(x) = 1, the functions ends.
     :feedback_e: Try again. The function examines whether the string is a Palindromes. It first compares the first letter with the last letter, then the second letter with the seonc last one... Try to focus on how it iterates and its ending conditoon.
 
-    Which code is correct?
+    Which answer is correct?
 
     .. code-block:: python
 
@@ -408,7 +407,7 @@ Peer Instruction: Function Multiple Choice Questions
    :feedback_c: Try again. calculate(3, 2, 0) assigns different values to w, x and y. a = x = 2, b = w + 1 = 3 + 1 = 4. Therefore a + b + 3 = 9. The functions returns 9.
    :feedback_d: Try again. calculate(3, 2, 0) assigns different values to w, x and y. a = x = 2, b = w + 1 = 3 + 1 = 4. Therefore a + b + 3 = 9. The functions returns 9.
 
-   What does the following code output?
+   What does the following code print?
 
    .. code-block:: python
 
@@ -433,7 +432,7 @@ Peer Instruction: Function Multiple Choice Questions
    :feedback_c: Correct! calculate(1, 2, 0) assigns values 1, 2 and 0 to w, x and y. a = x = 2, b = w + 1 = 1 + 1 = 2. Therefore a + b + 2 = 5. The functions returns 5.
    :feedback_d: Try again. calculate(1, 2, 0) assigns values 1, 2 and 0 to w, x and y. a = x = 2, b = w + 1 = 1 + 1 = 2. Therefore a + b + 2 = 5. The functions returns 5.
 
-   What does the following code output?
+   What does the following code print?
 
    .. code-block:: python
 
@@ -457,7 +456,7 @@ Peer Instruction: Function Multiple Choice Questions
    :feedback_c: Try again! It is required by Python that the body of the function should be indented.
    :feedback_d: Try again! It is required by Python that the body of the function should be indented.
 
-   What does the following code output?
+   Which of the following are true about this code.
 
    .. code-block:: python
 
@@ -482,7 +481,7 @@ Peer Instruction: Function Multiple Choice Questions
    :feedback_d: Try again. Parameter passing is just like an assignment statement. When first starts running, a gets the value of 20. And in fucntions, changes to a in function first(a) do not change the value of a.
    :feedback_e: Try again. Parameter passing is just like an assignment statement. When first starts running, a gets the value of 20. And in fucntions, changes to a in function first(a) do not change the value of a.
 
-   What does the following code output?
+   What does the following code print?
 
    .. code-block:: python
 
@@ -503,7 +502,7 @@ Peer Instruction: Function Multiple Choice Questions
    :feedback_a: Correct! In function first(a), a has been assigned to a new value 8. So first(a) returns 8. And a = first(a) makes a equals to 8.
    :feedback_b: Try again. In function first(a), a has been assigned to a new value 8. So first(a) returns 8, however the value of a is still 20 outside the function until a has been assigned with a new value first(a). Therefore, a equals to 8.
 
-   What does the following code output?
+   What does the following code print?
 
    .. code-block:: python
 
@@ -530,7 +529,7 @@ Peer Instruction: Function Multiple Choice Questions
    :feedback_d: Try again. There is only one function that sets x to 5.
    :feedback_e: Try again. There is only one function that sets x to 5.
 
-   Which of the following sets x to 5 if x is set to the result from calling the function?
+   Which of the following sets ``x`` to 5 if ``x`` is set to the result from calling the function?
 
    .. code-block:: python
 
@@ -556,7 +555,7 @@ Peer Instruction: Function Multiple Choice Questions
    :feedback_d: Try again. The output of b(2) is print(a(1)). In a(num), the function returns 2. Therefore, b(2) outputs 2. There is nothing to do with num here.
    :feedback_e: Try again. The output of b(2) is print(a(1)). In a(num), the function returns 2. Therefore, b(2) outputs 2. There is nothing to do with num here..
 
-   What does the following code output?
+   What does the following code print?
 
    .. code-block:: python
 
@@ -585,7 +584,7 @@ Peer Instruction: Function Multiple Choice Questions
    :feedback_d: Try again. The output of b(2) is print(a(1)). In a(num), the function returns 2. Therefore, b(2) outputs 2. val and num do not play a role in the output of b(2).
    :feedback_e: Try again. The output of b(2) is print(a(1)). In a(num), the function returns 2. Therefore, b(2) outputs 2. val and num do not play a role in the output of b(2).
 
-   What does the following code output?
+   What does the following code print?
 
    .. code-block:: python
 

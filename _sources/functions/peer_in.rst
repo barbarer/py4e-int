@@ -16,7 +16,7 @@ Peer Instruction: Functions Multiple Choice Questions
    :feedback_d: Incorrect! The function "foo()" has been called in the last line and NOT "bar()". So, the print statement under "foo()" will be executed and returned.
    :feedback_e: Incorrect! The function "foo()" has been called in the last line and NOT "bar()". So, the print statement under "foo()" will be executed and returned.
 
-   This code will print:
+   What does the following code print?
 
    .. code-block:: python
 
@@ -44,7 +44,7 @@ Peer Instruction: Functions Multiple Choice Questions
    :feedback_d: Incorrect! Change in the value of a function's arguments doesn't change the assigned value of a variable. Try replacing "first(a)" with "first(x)" in function definition.
    :feedback_e: Incorrect! Change in the values of a function's arguments doesn't change the assigned value of a variable. Try replacing "first(a)" with "first(x)" in function definition.
 
-   What will the output be?
+   What does the following code print?
 
    .. code-block:: python
 
@@ -71,7 +71,7 @@ Peer Instruction: Functions Multiple Choice Questions
    :feedback_d: Incorrect! Here, a=x=2 and b= 3+1 = 4. So, a + b + 3 = 2 + 4 + 3 = 9.
    :feedback_e: Incorrect! Here, a=x=2 and b= 3+1 = 4. So, a + b + 3 = 2 + 4 + 3 = 9.
 
-   What will the output be?
+   What does the following code print?
 
    .. code-block:: python
 
@@ -98,7 +98,7 @@ Peer Instruction: Functions Multiple Choice Questions
    :feedback_d: Incorrect! Only function "f1()" has a return statement.
    :feedback_e: Incorrect! Only function "f1()" has a return statement.
 
-   Which assigns x to 5?
+   Which sets ``x`` to the value 5?
 
    .. code-block:: python
 
@@ -127,7 +127,7 @@ Peer Instruction: Functions Multiple Choice Questions
    :feedback_d: Incorrect! Function body should be indented in Python. x can be defined as both a parameter and variable in Python.
    :feedback_e: Incorrect! Body of the function is not indented.
 
-   What are the bugs in the following code?
+   Which of the following are true about this code?
 
    .. code-block:: python
 
@@ -153,7 +153,7 @@ Peer Instruction: Functions Multiple Choice Questions
    :feedback_d: Correct! Here, odd(4, 2) will return 15 (y = y + 1 = 5 and x = x + 1 = 3) and print(x*y) in main() will return 8. The output of odd() will be printed first as it is initialized first.
    :feedback_e: Incorrect! Here, odd(4, 2) will return 15 (y = y + 1 = 5 and x = x + 1 = 3) and print(x*y) in main() will return 8. The output of odd() will be printed first as it is initialized first.
 
-   What will the output be?
+   What does the following code print?
 
    .. code-block:: python
 

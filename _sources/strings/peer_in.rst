@@ -15,8 +15,8 @@ Peer Instruction: Strings Multiple Choice Questions
    :feedback_c: Incorrect! The value of s changes in the following order from the first line- s="abc", s="dddabc", s="dddabc" and s="dddabcq".
    :feedback_d: Correct! The value of s changes in the following order from the first line- s="abc", s="dddabc", s="dddabc" and s="dddabcq".
    :feedback_e: Incorrect! The value of s changes in the following order from the first line- s="abc", s="dddabc", s="dddabc" and s="dddabcq".
-      
-   What is the value of s after the following code runs?
+
+   What is the value of ``s`` after the following code runs?
 
    .. code-block:: python
 
@@ -35,13 +35,13 @@ Peer Instruction: Strings Multiple Choice Questions
    :answer_d: Nothing, this will cause an error
    :answer_e: I don't know
    :correct: c
-   :feedback_a: Incorrect! Here, len(s) = 4 and s[len(s)-1] = s[3]. So, the value of y will be the fourth character in the string i.e. "s". 
+   :feedback_a: Incorrect! Here, len(s) = 4 and s[len(s)-1] = s[3]. So, the value of y will be the fourth character in the string i.e. "s".
    :feedback_b: Incorrect! Here, len(s) = 4 and s[len(s)-1] = s[3]. So, the value of y will be the fourth character in the string i.e. "s".
    :feedback_c: Correct! Here, len(s) = 4 and s[len(s)-1] = s[3]. So, the value of y will be the fourth character in the string i.e. "s".
    :feedback_d: Incorrect! Here, len(s) = 4 and s[len(s)-1] = s[3]. So, the value of y will be the fourth character in the string i.e. "s".
    :feedback_e: Incorrect! Here, len(s) = 4 and s[len(s)-1] = s[3]. So, the value of y will be the fourth character in the string i.e. "s".
-     
-   At the end of this code, y will be
+
+   What is the value of ``y`` after the following code runs?
 
    .. code-block:: python
 
@@ -58,13 +58,13 @@ Peer Instruction: Strings Multiple Choice Questions
    :answer_d: This will throw an exception
    :answer_e: I don't know
    :correct: c
-   :feedback_a: Incorrect! Here len(s) = 4. So, s[0:4] = "bats" i.e. the first four characters. 
-   :feedback_b: Incorrect! Here len(s) = 4. So, s[0:4] = "bats" i.e. the first four characters. 
-   :feedback_c: Correct! Here len(s) = 4. So, s[0:4] = "bats" i.e. the first four characters. 
-   :feedback_d: Incorrect! Here len(s) = 4. So, s[0:4] = "bats" i.e. the first four characters. 
-   :feedback_e: Incorrect! Here len(s) = 4. So, s[0:4] = "bats" i.e. the first four characters. 
+   :feedback_a: Incorrect! Here len(s) = 4. So, s[0:4] = "bats" i.e. the first four characters.
+   :feedback_b: Incorrect! Here len(s) = 4. So, s[0:4] = "bats" i.e. the first four characters.
+   :feedback_c: Correct! Here len(s) = 4. So, s[0:4] = "bats" i.e. the first four characters.
+   :feedback_d: Incorrect! Here len(s) = 4. So, s[0:4] = "bats" i.e. the first four characters.
+   :feedback_e: Incorrect! Here len(s) = 4. So, s[0:4] = "bats" i.e. the first four characters.
 
-   This code will print
+   What will the following code print?
 
    .. code-block:: python
 
@@ -81,13 +81,13 @@ Peer Instruction: Strings Multiple Choice Questions
    :answer_d: pir
    :answer_e: I don't know
    :correct: c
-   :feedback_a: Incorrect! Negative index- "-1" has been used in the slice. So, the slice will end at the second last character. 
-   :feedback_b: Incorrect! Negative index- "-1" has been used in the slice. So, the slice will end at the second last character. 
-   :feedback_c: Correct! Negative index- "-1" has been used in the slice. So, the slice will end at the second last character. 
-   :feedback_d: Incorrect! Negative index- "-1" has been used in the slice. So, the slice will end at the second last character. 
-   :feedback_e: Incorrect! Negative index- "-1" has been used in the slice. So, the slice will end at the second last character. 
+   :feedback_a: Incorrect! Negative index- "-1" has been used in the slice. So, the slice will end at the second last character.
+   :feedback_b: Incorrect! Negative index- "-1" has been used in the slice. So, the slice will end at the second last character.
+   :feedback_c: Correct! Negative index- "-1" has been used in the slice. So, the slice will end at the second last character.
+   :feedback_d: Incorrect! Negative index- "-1" has been used in the slice. So, the slice will end at the second last character.
+   :feedback_e: Incorrect! Negative index- "-1" has been used in the slice. So, the slice will end at the second last character.
 
-   This will print   
+   What will the following code print?
 
    .. code-block:: python
 
@@ -98,10 +98,10 @@ Peer Instruction: Strings Multiple Choice Questions
 .. mchoice:: ctp-strings-11_Strings_14
    :author: Cynthia Taylor
    :practice: T
-   :answer_a: Return a copy of s
-   :answer_b: Return the reverse of s
-   :answer_c: Return a string with only the last character of s
-   :answer_d: Return a string with only the first character of s
+   :answer_a: Returns a copy of s
+   :answer_b: Returns the reverse of s
+   :answer_c: Returns a string with only the last character of s
+   :answer_d: Returns a string with only the first character of s
    :answer_e: I don't know
    :correct: b
    :feedback_a: Incorrect! For example, take s = "xyz". With each step in the loop, the value of new_s will change in the order- new_s = x, new_s = yx and new_s = zyx.
@@ -111,7 +111,7 @@ Peer Instruction: Strings Multiple Choice Questions
    :feedback_e: Incorrect! For example, take s = "xyz". With each step in the loop, the value of new_s will change in the order- new_s = x, new_s = yx and new_s = zyx.
 
 
-   What does this code do?
+   What does the following code return?
 
    .. code-block:: python
 
@@ -136,8 +136,8 @@ Peer Instruction: Strings Multiple Choice Questions
    :feedback_c: Incorrect! Here, 'd' * 3 + s = 'ddd' + 'abc' = 'dddabc'. Then ' ' adds three spaces at the end of the string followed by a 'q' at the end.
    :feedback_d: Incorrect! Here, 'd' * 3 + s = 'ddd' + 'abc' = 'dddabc'. Then ' ' adds three spaces at the end of the string followed by a 'q' at the end.
    :feedback_e: Correct! Here, 'd' * 3 + s = 'ddd' + 'abc' = 'dddabc'. Then ' ' adds three spaces at the end of the string followed by a 'q' at the end.
-     
-   What is the value of s after the following code runs?
+
+   What is the value of ``s`` after the following code runs?
 
    .. code-block:: python
 
@@ -150,17 +150,17 @@ Peer Instruction: Strings Multiple Choice Questions
 .. mchoice:: dz-lecture10_Strings_07
    :author: Dan Zingaro
    :practice: T
-   :answer_a: Return a copy of s
-   :answer_b: Return the reverse of s
-   :answer_c: Return a string consisting of only the final character of s
-   :answer_d: Return a string consisting of only the first character of s
+   :answer_a: Returns a copy of s
+   :answer_b: Returns the reverse of s
+   :answer_c: Returns a string consisting of only the final character of s
+   :answer_d: Returns a string consisting of only the first character of s
    :correct: b
    :feedback_a: Incorrect! Consider s = 'abc'. In the first iteration, new_s = c + new_s = 'a' + '' = 'a'. In the second iteration, new_s = 'b' + 'a' = 'ba' and so on. So, it will return the reverse of s.
    :feedback_b: Correct! Consider s = 'abc'. In the first iteration, new_s = c + new_s = 'a' + '' = 'a'. In the second iteration, new_s = 'b' + 'a' = 'ba' and so on. So, it will return the reverse of s.
    :feedback_c: Incorrect! Consider s = 'abc'. In the first iteration, new_s = c + new_s = 'a' + '' = 'a'. In the second iteration, new_s = 'b' + 'a' = 'ba' and so on. So, it will return the reverse of s.
    :feedback_d: Incrrect! Consider s = 'abc'. In the first iteration, new_s = c + new_s = 'a' + '' = 'a'. In the second iteration, new_s = 'b' + 'a' = 'ba' and so on. So, it will return the reverse of s.
-     
-   What is a good description of this function?
+
+   What is a good description of what the following function does?
 
    .. code-block:: python
 
@@ -185,8 +185,8 @@ Peer Instruction: Strings Multiple Choice Questions
    :feedback_c: Correct! For each 'a' and 'b', the nested for loop will run twice. Thus, val gets incremented by 1 four times resulting in val = 4.
    :feedback_d: Incorrect! For each 'a' and 'b', the nested for loop will run twice. Thus, val gets incremented by 1 four times resulting in val = 4.
    :feedback_e: Incorrect! For each 'a' and 'b', the nested for loop will run twice. Thus, val gets incremented by 1 four times resulting in val = 4.
-     
-   What is the value of val after this code executes?
+
+   What is the value of ``val`` after this code executes?
 
    .. code-block:: python
 
@@ -210,8 +210,8 @@ Peer Instruction: Strings Multiple Choice Questions
    :feedback_c: Incorrect! For each 'a', 'b' and 'c, the nested for loop will run thrice. Thus, val gets incremented by 1 nine times resulting in val = 9.
    :feedback_d: Correct! For each 'a', 'b' and 'c, the nested for loop will run thrice. Thus, val gets incremented by 1 nine times resulting in val = 9.
    :feedback_e: Incorrect! For each 'a', 'b' and 'c, the nested for loop will run thrice. Thus, val gets incremented by 1 nine times resulting in val = 9.
-     
-   What is the value of val after this code executes?
+
+   What is the value of ``val`` after this code executes?
 
    .. code-block:: python
 
@@ -219,6 +219,3 @@ Peer Instruction: Strings Multiple Choice Questions
       for i in ’abc’:
          for j in ’def’:
          val += 1
-
-
-

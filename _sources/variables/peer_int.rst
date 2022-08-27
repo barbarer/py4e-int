@@ -71,7 +71,7 @@ Peer Instruction: Variable Multiple Choice Questions
    :feedback_d: Try again. + operator adds x and 2 together, and x equals to 37. Therefore, y equals to the sum of 37 and 2. Integers are immutable in Python. The later changes in x do not affect the value of y.
    :feedback_e: Try again. + operator adds x and 2 together, and x equals to 37. Therefore, y equals to the sum of 37 and 2. Integers are immutable in Python. The later changes in x do not affect the value of y.
 
-   What is the value of ``y`` after the execution of this code?
+   What is the value of ``y`` after this code runs?
 
    .. code-block:: python
 
@@ -94,7 +94,7 @@ Peer Instruction: Variable Multiple Choice Questions
    :feedback_d: Try again. - operator means x substracts 2, and x equals to 37. Therefore, y equals to the 35. Integers are immutable in Python. The later changes in x do not affect the value of y.
    :feedback_e: Try again. - operator means x substracts 2, and x equals to 37. Therefore, y equals to the 35. Integers are immutable in Python. The later changes in x do not affect the value of y.
 
-   What is the value of ``y`` after the execution of this code?
+   What is the value of ``y`` after this code runs?
 
    .. code-block:: python
 
@@ -115,7 +115,7 @@ Peer Instruction: Variable Multiple Choice Questions
    :feedback_c: Try again. != means not equal. Because a equals to 3, it returns bool value False. Therefore, b = False.
    :feedback_d: Try again. != means not equal. Because a equals to 3, it returns bool value False. Therefore, b = False.
 
-   What is the output of the following code?
+   What does the following code print?
 
    .. code-block:: python
 
@@ -136,7 +136,7 @@ Peer Instruction: Variable Multiple Choice Questions
    :feedback_c: Try again. == tests for equality. Because a equals to 3, it returns bool value True. Therefore, b = True.
    :feedback_d: Try again. == tests for equality. Because a equals to 3, it returns bool value True. Therefore, b = True.
 
-   What is the output of the following code?
+   What does the following code print?
 
    .. code-block:: python
 

@@ -16,7 +16,7 @@ Peer Instruction: Strings Multiple Choice Questions
    :feedback_d: Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. Index -1 is the right 1 character. So 's' is not included.
    :feedback_e: Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. And the first index in a string is index 0.
 
-   What is the output of the following code?
+   What does the following code print?
 
    .. code-block:: python
 
@@ -38,7 +38,7 @@ Peer Instruction: Strings Multiple Choice Questions
    :feedback_d: Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[-6] is the sixth character from right. s[-6] = 'i'.
    :feedback_e: Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[2] is the third character from left, and s[-6] is the sixth character from right. s[2] = 's' and s[-6] = 'i'.
 
-   What is the output of the following code?
+   What does the following code print?
 
    .. code-block:: python
 
@@ -61,7 +61,7 @@ Peer Instruction: Strings Multiple Choice Questions
    :feedback_d: Correct! s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. We can use negative indices in the slice syntax as well.
    :feedback_e: Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[-1] is the first character from right. There is no index 0 when counting from right to left.
 
-   What is the output of the following code?
+   What does the following code print?
 
    .. code-block:: python
 
@@ -83,7 +83,7 @@ Peer Instruction: Strings Multiple Choice Questions
    :feedback_d: Try again. t is the length of the new string because it equals to len(s).
    :feedback_e: Correct! s.replace(old, new): return s but with all occurrences of old replaced by new. The new s = 'Miaiaauga'. And the length of new s is 9.
 
-   What is the output of this code?
+   What does the following code print?
 
    .. code-block:: python
 
@@ -104,7 +104,7 @@ Peer Instruction: Strings Multiple Choice Questions
    :feedback_c: Try again. In string.center(length, character), the length is the length of the returned string. The length here should be 8 rather than 12.
    :feedback_d: Try again. In string.center(length, character), the length is the length of the returned string and the character to fill the missing space on each side. The length here should be 8 rather than 12 and the filling character is 'x'.
 
-   What is the string produced by the following:?
+   What string is produced by the following code?
 
    .. code-block:: python
 
@@ -170,7 +170,7 @@ Peer Instruction: Strings Multiple Choice Questions
    :feedback_c: Correct! The format(4) method formats the specified value(4) and insert them inside the string's placeholder.
    :feedback_d: Try again. The code can run. {n} inserts the argument, thereefore s2 = a{0}b. The format(4) method formats the specified value(4) and insert them inside the string's placeholder. The placeholder is defined using curly brackets: {}.
 
-   What is printed by this code?
+   What does the following code print?
 
    .. code-block:: python
 

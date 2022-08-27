@@ -15,8 +15,8 @@ Peer Instruction: Conditionals Multiple Choice Questions
    :feedback_c: Incorrect! Here, x=1 which is less than 3 making the condition true. It will first print x = 1 and then x = x+4 = 1+4 = 5.
    :feedback_d: Correct! Here, x=1 which is less than 3 making the condition true. It will first print x = 1 and then x = x+4 = 1+4 = 5.
    :feedback_e: Incorrect! Here, x=1 which is less than 3 making the condition true. It will first print x = 1 and then x = x+4 = 1+4 = 5.
-      
-   At the end of this code, what will appear on the terminal?
+
+   What does the following code print?
 
    .. code-block:: python
 
@@ -41,8 +41,8 @@ Peer Instruction: Conditionals Multiple Choice Questions
    :feedback_c: Incorrect! Here, x = 1 which is less than 3 making the 'if' condition true. So, the code will print x = 1.
    :feedback_d: Incorrect! Here, x = 1 which is less than 3 making the 'if' condition true. So, the code will print x = 1.
    :feedback_e: Incorrect! Here, x = 1 which is less than 3 making the 'if' condition true. So, the code will print x = 1.
-     
-   At the end of this code, what will appear on the terminal?
+
+   What does the following code print?
 
    .. code-block:: python
 
@@ -67,8 +67,8 @@ Peer Instruction: Conditionals Multiple Choice Questions
    :feedback_c: Incorrect! Here, grade=98 which is greater than both 90 and 80 making both the 'if' conditions true. So, the code will print 'You got an A!' and 'You got a B!' respectively.
    :feedback_d: Correct! Here, grade=98 which is greater than both 90 and 80 making both the 'if' conditions true. So, the code will print 'You got an A!' and 'You got a B!' respectively.
    :feedback_e: Incorrect! Here, grade=98 which is greater than both 90 and 80 making both the 'if' conditions true. So, the code will print 'You got an A!' and 'You got a B!' respectively.
-      
-   At the end of this code, what will appear on the terminal?
+
+   What does the following code print?
 
    .. code-block:: python
 
@@ -96,8 +96,8 @@ Peer Instruction: Conditionals Multiple Choice Questions
    :feedback_c: Incorrect! Here, grade=98 which is greater than 90 making the first 'if' condition true and will print 'You got an A!'. However, the second 'if' condition is not satisfied as grade doesn't lie between 80 and 90. So, the code will execute the statements under 'else' and print 'You got something else!'. Note that True 'and' False equals 'False' in boolean logic.
    :feedback_d: Correct! Here, grade=98 which is greater than 90 making the first 'if' condition true and will print 'You got an A!'. However, the second 'if' condition is not satisfied as grade doesn't lie between 80 and 90. So, the code will execute the statements under 'else' and print 'You got something else!'. Note that True 'and' False equals 'False' in boolean logic.
    :feedback_e: Incorrect! Here, grade=98 which is greater than 90 making the first 'if' condition true and will print 'You got an A!'. However, the second 'if' condition is not satisfied as grade doesn't lie between 80 and 90. So, the code will execute the statements under 'else' and print 'You got something else!'. Note that True 'and' False equals 'False' in boolean logic.
-      
-   At the end of this code, what will appear on the terminal?
+
+   What does the following code print?
 
    .. code-block:: python
 
@@ -115,54 +115,56 @@ Peer Instruction: Conditionals Multiple Choice Questions
    :author: Cynthia Taylor
    :practice: T
 
-   Which code prints the correct output?
+   Which code prints the correct value? If grade >= 90 it should print "You got an A!".
+   If grade < 90 and >= 80 it should print "You got a B!". If you got less than
+   80 it should print "You got something else".
 
-   -   
+   -
        ::
 
          grade = 98
          if (grade >= 90):
-            print(“You got an A!”)
+            print("You got an A!")
          if (grade >= 80 and grade < 90):
-            print(“You got a B!”)
+            print("You got a B!")
          if (grade < 80):
-            print(“You got something else”)
+            print("You got something else")
 
        +   Correct! Here, grade = 98 which is greater than 90 satisfying the first 'if' condition. So, this code will output 'You got an A!'
 
-   -   
+   -
        ::
 
          grade = 98
          if (grade >= 90):
-            print(“You got an A!”)
+            print("You got an A!")
          elif (grade >= 80):
-            print(“You got a B!”)
+            print("You got a B!")
          else:
-            print(“You got something else”)
+            print("You got something else")
 
        +   Correct! Here, grade = 98 which is greater than 90 satisfying the first 'if' condition. So, this code will output 'You got an A!'
 
-   -   
+   -
        ::
 
          grade = 98
          if (grade >= 90):
-            print(“You got an A!”)
+            print("You got an A!")
          elif (grade >= 80):
-            print(“You got a B!”)
+            print("You got a B!")
          elif(grade < 80):
-            print(“You got something else”)
+            print("You got something else")
 
        + Correct! Here, grade = 98 which is greater than 90 satisfying the first 'if' condition. So, this code will output 'You got an A!'
 
    -   None of the above
 
-       - Incorrect! Here, grade = 98 which is greater than 90 satisfying the first 'if' condition in all the options above. 
+       - Incorrect! Here, grade = 98 which is greater than 90 satisfying the first 'if' condition in all the options above.
 
    -   I don't know
 
-       - Incorrect! Here, grade = 98 which is greater than 90 satisfying the first 'if' condition in all the options above. 
+       - Incorrect! Here, grade = 98 which is greater than 90 satisfying the first 'if' condition in all the options above.
 
 
 .. mchoice:: ctp-conditionals-06_Conditionals_14
@@ -174,17 +176,17 @@ Peer Instruction: Conditionals Multiple Choice Questions
    :answer_d: Spaces before * = r, Spaces after * = n-r-1
    :answer_e: I don't know
    :correct: d
-   :feedback_a: Incorrect! Skipping rows with 2 stars, the total no. of rows n = 3. If r = 1, the spaces before * = r = 1 and the spaces after * =  n-r-1 = 3-1-1 = 1. The same can be computed with r=0 and r=3.  
+   :feedback_a: Incorrect! Skipping rows with 2 stars, the total no. of rows n = 3. If r = 1, the spaces before * = r = 1 and the spaces after * =  n-r-1 = 3-1-1 = 1. The same can be computed with r=0 and r=3.
    :feedback_b: Incorrect! Skipping rows with 2 stars, the total no. of rows n = 3. If r = 1, the spaces before * = r = 1 and the spaces after * =  n-r-1 = 3-1-1 = 1. The same can be computed with r=0 and r=3.
    :feedback_c: Incorrect! Skipping rows with 2 stars, the total no. of rows n = 3. If r = 1, the spaces before * = r = 1 and the spaces after * =  n-r-1 = 3-1-1 = 1. The same can be computed with r=0 and r=3.
    :feedback_d: Correct! Skipping rows with 2 stars, the total no. of rows n = 3. If r = 1, the spaces before * = r = 1 and the spaces after * =  n-r-1 = 3-1-1 = 1. The same can be computed with r=0 and r=3.
    :feedback_e: Incorrect! Skipping rows with 2 stars, the total no. of rows n = 3. If r = 1, the spaces before * = r = 1 and the spaces after * =  n-r-1 = 3-1-1 = 1. The same can be computed with r=0 and r=3.
 
-   How do we print row r of this pattern? Skip rows with 2 stars.
-    
+   How do we print row ``r`` of this pattern? Skip rows with 2 stars.
+
    .. code-block:: python
 
-      
+
       *   *
       **  *
       * * *
@@ -205,7 +207,7 @@ Peer Instruction: Conditionals Multiple Choice Questions
    :feedback_b: Incorrect! Try inserting n=3 and running the code for any value of row and col.
    :feedback_c: Incorrect! Try inserting n=3 and running the code for any value of row and col.
    :feedback_d: Incorrect! Try inserting n=3 and running the code for any value of row and col.
-     
+
    Will the codeblock print the following pattern?
 
    .. code-block:: python
@@ -243,8 +245,8 @@ Peer Instruction: Conditionals Multiple Choice Questions
    :feedback_c: Incorrect! Here x = 5 which is greater than 2. So, the 'if' condition is satisfied. The value of x is first assigned -3 and then finally 1.
    :feedback_d: Incorrect! Here x = 5 which is greater than 2. So, the 'if' condition is satisfied. The value of x is first assigned -3 and then finally 1.
    :feedback_e: Incorrect! Here x = 5 which is greater than 2. So, the 'if' condition is satisfied. The value of x is first assigned -3 and then finally 1.
-     
-   What is the value of x after this code runs?
+
+   What is the value of ``x`` after this code runs?
 
    .. code-block:: python
 
@@ -271,8 +273,8 @@ Peer Instruction: Conditionals Multiple Choice Questions
    :feedback_c: Correct! Here x = 1 which is smaller than 2. So, the 'else' condition is satisfied. The value of x is first assigned 3 and then finally 2.
    :feedback_d: Incorrect! Here x = 1 which is smaller than 2. So, the 'else' condition is satisfied. The value of x is first assigned 3 and then finally 2.
    :feedback_e: Incorrect! Here x = 1 which is smaller than 2. So, the 'else' condition is satisfied. The value of x is first assigned 3 and then finally 2.
-     
-   What is the value of x after this code runs?
+
+   What is the value of ``x`` after this code runs?
 
    .. code-block:: python
 
@@ -293,7 +295,7 @@ Peer Instruction: Conditionals Multiple Choice Questions
    :correct: a
    :feedback_a: Correct! In both Code 1 and Code 2, the else and elif conditions at the end are essentially the same i.e. temperature < 0.
    :feedback_b: Incorrect! In both Code 1 and Code 2, the else and elif conditions at the end are essentially the same i.e. temperature < 0.
-     
+
    Does Code 1 do exactly the same thing as Code 2? (Assume temperature already refers to some numeric value.)
 
    .. code-block:: python
@@ -327,7 +329,7 @@ Peer Instruction: Conditionals Multiple Choice Questions
    :correct: b
    :feedback_a: Incorrect! In Code 1, "below freezing" prints only if the other two conditions don't satisfy. However in Code 2, "below freezing" prints everytime as it is not bound to any condition.
    :feedback_b: Correct! In Code 1, "below freezing" prints only if the other two conditions don't satisfy. However in Code 2, "below freezing" prints everytime as it is not bound to any condition.
-     
+
    Does Code 1 do exactly the same thing as Code 2? (Assume temperature already refers to some numeric value.)
 
    .. code-block:: python
@@ -360,7 +362,7 @@ Peer Instruction: Conditionals Multiple Choice Questions
    :correct: b
    :feedback_a: Incorrect! Code 2 will print "below freezing" for temperature <= 0.
    :feedback_b: Correct! Code 2 will print "below freezing" for temperature <= 0.
-     
+
    Does Code 1 do exactly the same thing as Code 2? (Assume temperature already refers to some numeric value.)
 
    .. code-block:: python
@@ -400,8 +402,8 @@ Peer Instruction: Conditionals Multiple Choice Questions
    :feedback_c: Incorrect! Here, x = 5 which is smaller than 15 satistying the 'if' condition and smaller than 8 satisfying the nested 'else' condition. So, the output is 'two'.
    :feedback_d: Incorrect! Here, x = 5 which is smaller than 15 satistying the 'if' condition and smaller than 8 satisfying the nested 'else' condition. So, the output is 'two'.
    :feedback_e: Incorrect! Here, x = 5 which is smaller than 15 satistying the 'if' condition and smaller than 8 satisfying the nested 'else' condition. So, the output is 'two'.
-     
-   What is the output?
+
+   What does the following code print?
 
    .. code-block:: python
 
@@ -427,8 +429,8 @@ Peer Instruction: Conditionals Multiple Choice Questions
    :feedback_b: Correct! This will return True if x is Odd and False if x is Even.
    :feedback_c: Incorrect! This will return True if x is Even and False if x is Odd.
    :feedback_d: Incorrect! Option B will return True if x is Odd and False if x is Even.
-     
-   What is the output?
+
+   What does the following code print?
 
    .. code-block:: python
 
@@ -451,7 +453,7 @@ Peer Instruction: Conditionals Multiple Choice Questions
    :feedback_b: Correct! This will not change the output of the code regardless of the age entered.
    :feedback_c: Incorrect! If 'age >= 18 and' is removed, it will print both 'minor' and 'adult' for ages less than 18.
    :feedback_d: Incorrect! Option B will not change the output of the code regardless of the age entered.
-     
+
    What parts of the code can be removed without changing what the code does? Assume that the user enters a non-negative integer.
 
    .. code-block:: python
@@ -474,10 +476,10 @@ Peer Instruction: Conditionals Multiple Choice Questions
    :answer_b: (1) age < 18, (2) experience != 3
    :answer_c: (1) age < 18, (2) experience == 1 or experience == 2
    :correct: c
-   :feedback_a: Incorrect! In this option, wages for experience > 0 and experience >= 1 encomapes wages $12 and $11 as well. 
+   :feedback_a: Incorrect! In this option, wages for experience > 0 and experience >= 1 encomapes wages $12 and $11 as well.
    :feedback_b: Incorrect! In this option, age < 18 and experience !=3 includes wages $6.5, and $12 as well.
    :feedback_c: Correct! Wages $9.5 and $11 are for ages less than 18. So, (1) = age < 18. Wage $9.5 is for experience 1-2. So, experience == 1 or experience == 2.
-   
+
    What goes in the two numbered blanks?
 
    .. image:: ../images/dz-lecture9_Conditionals_02.png
@@ -505,7 +507,7 @@ Peer Instruction: Conditionals Multiple Choice Questions
    :feedback_a: Correct! Here, cost = $60 for plan = 'silver' and months != 1. So, (1) plan = 'silver'. And cost = $70 for plan = 'gold' and months 2-6. The former is inherent to the 'else' condition while the latter is encompassed through (2) months >= 2 and months <= 6.
    :feedback_b: Incorrect! Here, cost = $60 for plan = 'silver' and months != 1. So, (1) plan = 'silver'. And cost = $70 for plan = 'gold' and months 2-6. The former is inherent to the 'else' condition while the latter is encompassed through (2) months >= 2 and months <= 6 but not months >=6.
    :feedback_c: Incorrect! This option doesn't include cost = $60 for months >= 7. Furthermore, plan = 'gold' also includes $35 in addition to $70. Here, cost = $60 for plan = 'silver' and months != 1. So, (1) plan = 'silver' and not . And cost = $70 for plan = 'gold' and months 2-6. The former is inherent to the 'else' condition while the latter is encompassed through (2) months >= 2 and months <= 6.
-   
+
    What goes in the two numbered blanks?
 
    .. image:: ../images/dz-lecture9_Conditionals_03.png
@@ -521,28 +523,3 @@ Peer Instruction: Conditionals Multiple Choice Questions
             cost = 70
          else:
             cost = 35
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

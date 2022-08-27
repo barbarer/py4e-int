@@ -5,7 +5,7 @@ Peer Instruction: Iterations Multiple Choice Questions
    :author: Cynthia Taylor
    :practice: T
 
-   To print numbers i through n
+   Which of the following prints the numbers ``i`` through ``n``?
 
    -
        ::
@@ -45,7 +45,7 @@ Peer Instruction: Iterations Multiple Choice Questions
    :author: Cynthia Taylor
    :practice: T
 
-   Add up the numbers 1 through 4
+   Which of the following adds up the numbers 1 through 4?
 
    -
        ::
@@ -103,7 +103,7 @@ Peer Instruction: Iterations Multiple Choice Questions
    :feedback_d: Incorrect! n has been reset to 6 inside the loop. So, the code should print 6 from the second iteration. However, the n inside range will not be affected by this reset.
    :feedback_e: Incorrect! n has been reset to 6 inside the loop. So, the code should print 6 from the second iteration. However, the n inside range will not be affected by this reset.
 
-   What will the output be?
+   What does the following code print?
 
    ::
 
@@ -117,7 +117,7 @@ Peer Instruction: Iterations Multiple Choice Questions
    :author: Cynthia Taylor
    :practice: T
 
-   Generate this pattern for n=5
+   Which of the following generates this pattern for ``n = 5``?
 
    ::
 
@@ -168,24 +168,24 @@ Peer Instruction: Iterations Multiple Choice Questions
 .. mchoice:: ctp-iterations-04_moreloops_13
    :author: Cynthia Taylor
    :practice: T
-   :answer_a: frontspaces = (n-r)/2, stars = r
-   :answer_b: frontspaces = n-r, stars = 2*r
-   :answer_c: frontspaces = n-r, stars = 2*r - 1
-   :answer_d: frontspaces = r, stars = n-r
+   :answer_a: frontspaces = (n-r) / 2, stars = r
+   :answer_b: frontspaces = n - r, stars = 2 * r
+   :answer_c: frontspaces = n - r, stars = 2 * r - 1
+   :answer_d: frontspaces = r, stars = n - r
    :answer_e: I don't know
    :correct: c
-   :feedback_a: Incorrect! (n-r)/2 can output a non-integer. This will cause an error.
-   :feedback_b: Incorrect! This will not print the correct pattern. For instance, take n=5 and r=1. To print the first row, we need 4 frontspaces and 1 star. But here, n-r = 4 and 2*r = 2
-   :feedback_c: Correct! This will print the correct pattern. For instance, take n=5 and r=1. To print the first row, we need 4 frontspaces and 1 star. Here, n-r = 4 and 2*r - 1 = 1
-   :feedback_d: Incorrect! This will not print the correct pattern. For instance, take n=5 and r=1. To print the first row, we need 4 frontspaces and 1 star. But here, r = 1 and n-r = 4.
-   :feedback_e: Incorrect! For instance, to print the first row we need 4 frontspaces and 1 star. So, n-r = 5 - 1 = 4 and 2*r - 1 = 2*1 - 1 = 1.
+   :feedback_a: Incorrect! (n - r) / 2 can output a non-integer. This will cause an error.
+   :feedback_b: Incorrect! This will not print the correct pattern. For instance, take n = 5 and r = 1. To print the first row, we need 4 frontspaces and 1 star. But here, n-r = 4 and 2 * r = 2
+   :feedback_c: Correct! This will print the correct pattern. For instance, take n = 5 and r = 1. To print the first row, we need 4 frontspaces and 1 star. Here, n-r = 4 and 2 * r - 1 = 1
+   :feedback_d: Incorrect! This will not print the correct pattern. For instance, take n = 5 and r = 1. To print the first row, we need 4 frontspaces and 1 star. But here, r = 1 and n - r = 4.
+   :feedback_e: Incorrect! For instance, to print the first row we need 4 frontspaces and 1 star. So, n - r = 5 - 1 = 4 and 2 * r - 1 = 2 * 1 - 1 = 1.
 
-   For n=5, what will be the values of frontspaces and stars in the following code to print-
+   For ``n = 5``, which of the following is the number of frontspaces and stars printed?
 
    .. code-block:: python
 
-      for r in range(1,n+1):
-       print(' ' * frontspaces, '*' * stars)
+      for r in range(1, n + 1):
+          print(' ' * frontspaces, '*' * stars)
 
 
          *
@@ -210,12 +210,12 @@ Peer Instruction: Iterations Multiple Choice Questions
    :feedback_d: Incorrect! The nested for loop will run through j = 1 to 3 for every i.
    :feedback_e: Incorrect!The nested for loop will run through j = 1 to 3 for every i.
 
-   At the end of this code, what will appear on the terminal?
+   What does the following code print?
 
    ::
 
-      for i in range(1,4):
-         for j in range(1,4):
+      for i in range(1, 4):
+         for j in range(1, 4):
             print(i,j,end=‘ ’)
 
 
@@ -223,7 +223,7 @@ Peer Instruction: Iterations Multiple Choice Questions
    :author: Cynthia Taylor
    :practice: T
 
-   Generate the times table for any n like-
+   Which of the following code generates the times table for any n as shown below?
 
    For n = 4,
 
@@ -235,9 +235,9 @@ Peer Instruction: Iterations Multiple Choice Questions
    -
        ::
 
-         for i in range(0,n):
-            for j in range(0,n):
-               print(i*j,end=‘ ’)
+         for i in range(0, n):
+            for j in range(0, n):
+               print(i * j,end=‘ ’)
          print()
 
        -  Incorrect! This will print a row of 0s in the first row and a row of n-1 times in the last row.
@@ -245,27 +245,27 @@ Peer Instruction: Iterations Multiple Choice Questions
    -
        ::
 
-         for i in range(1,n+1):
-            for j in range(1,n+1):
-               print(i*j,end=‘ ’)
+         for i in range(1,n + 1):
+            for j in range(1,n + 1):
+               print(i * j,end=‘ ’)
 
        -  Incorrect! This will print the times table but not in the format given above. There will be no break after the first line.
 
    -
        ::
 
-         for i in range(1,n+1):
-            for j in range(1,n+1):
-               print(i*j,end=‘ ’)
+         for i in range(1,n + 1):
+            for j in range(1,n + 1):
+               print(i * j,end=‘ ’)
             print()
 
        +  Correct! This will print the times table in the right format due to an additional print in the end. The range in both loops in right and there will be a break after each line of the nested for loop.
    -
        ::
 
-         for i in range(1,n+1):
-            for j in range(1,n+1):
-               print(i*j,end=‘ ’)
+         for i in range(1,n + 1):
+            for j in range(1,n + 1):
+               print(i * j,end=‘ ’)
          print()
 
        -  Incorrect! This will print the times table but not in the format given above. There will be no break after the each line but only after end of the last line.
@@ -290,29 +290,29 @@ Peer Instruction: Iterations Multiple Choice Questions
    :feedback_d: Incorrect! Since x=5, x<3 is False and x%3==2 is True. So, E F G I will print.
    :feedback_e: Incorrect! Since x=5, x<3 is False and x%3==2 is True. So, E F G I will print.
 
-   This will output
+   What does the following code print?
 
    ::
 
         x = 5
         if (x < 3):
             x = 1
-            print(“A”)
-            if(x>100):
-                print(“B”)
+            print("A")
+            if(x > 100):
+                print("B")
             else:
-                print(“C”)
-            print(“D”)
-        print(“E”)
+                print("C")
+            print("D")
+        print("E")
 
-        if (x>2)
-            print(“F”)
-            if(x%3==2)
-                print(“G”)
-            if (x%3==1)
-                print(“H”)
+        if (x > 2)
+            print("F")
+            if(x % 3 == 2)
+                print("G")
+            if (x % 3 == 1)
+                print("H")
             else:
-                print(“I”)
+                print("I")
 
 
 .. mchoice:: ctp-iterations-07_whileloops_7
@@ -330,13 +330,13 @@ Peer Instruction: Iterations Multiple Choice Questions
    :feedback_d: Incorrect! Each time the loop runs, value of x decrements by 1. So, when its value gets down to 4, the loop condition is no longer satisfied.
    :feedback_e: Incorrect! Each time the loop runs, value of x decrements by 1. So, when its value gets down to 4, the loop condition is no longer satisfied.
 
-   This will output
+   What does the following code print?
 
    ::
 
        x = 6
        while(x > 4)
-        print(x, end=‘ ’)
+        print(x, end=' ')
         x = x - 1
 
 
@@ -355,14 +355,14 @@ Peer Instruction: Iterations Multiple Choice Questions
    :feedback_d: Incorrect! The value of i never changes from 0. So, the loop condition is always true and it will keep printing i=0.
    :feedback_e: Incorrect!The value of i never changes from 0. So, the loop condition is always true and it will keep printing i=0.
 
-   This will output
+   What does the following code print?
 
    ::
 
        i=0
 
-       while(i<3)
-            print(i, end=‘ ’)
+       while(i < 3)
+            print(i, end=' ')
 
 
 
@@ -370,7 +370,7 @@ Peer Instruction: Iterations Multiple Choice Questions
    :author: Cynthia Taylor
    :practice: T
 
-   How can we translate this code to a while loop?
+   Which of the following correctly translates the for loop below to a while loop?
 
    for i in range(n):
      <body>
@@ -378,8 +378,8 @@ Peer Instruction: Iterations Multiple Choice Questions
    -
        ::
 
-         i=0
-         while(i<n)
+         i = 0
+         while(i < n)
             <body>
 
        -  Incorrect! This will be an infinite loop as the value of i never changes.
@@ -387,8 +387,8 @@ Peer Instruction: Iterations Multiple Choice Questions
    -
        ::
 
-         i=0
-         while(i<n)
+         i = 0
+         while(i < n)
             <body>
             i = i + 1
 
@@ -397,8 +397,8 @@ Peer Instruction: Iterations Multiple Choice Questions
    -
        ::
 
-         i=0
-         while(i<n)
+         i = 0
+         while(i < n)
             <body>
             n = n + 1
 
@@ -406,8 +406,8 @@ Peer Instruction: Iterations Multiple Choice Questions
    -
        ::
 
-         i=1
-         while(i<n)
+         i = 1
+         while(i < n)
             <body>
             i = i + 1
 
@@ -434,14 +434,14 @@ Peer Instruction: Iterations Multiple Choice Questions
    :feedback_d: Incorrect! To get out of the loop, valid should be True. According to the condition provided, an odd number which is a multiple of 3 should work.
    :feedback_e: Incorrect! To get out of the loop, valid should be True. According to the condition provided, an odd number which is a multiple of 3 should work.
 
-   Which number will get us out of the loop?
+   Which of these numbers will stop the loop?
 
    ::
 
       valid = False
       while not valid:
         x = eval(input ("Enter a number: "))
-        valid = (x%2 == 1 and x%3 == 0)
+        valid = (x % 2 == 1 and x % 3 == 0)
 
 
 .. mchoice:: ctp-iterations-05_whileloops_13
@@ -455,7 +455,7 @@ Peer Instruction: Iterations Multiple Choice Questions
        ::
 
          x = eval(input ("Enter a number: "))
-          while (x%2 == 1 and x%3 == 0):
+          while (x % 2 == 1 and x % 3 == 0):
             x = eval(input ("Enter a number: "))
 
        -  Incorrect! Incorrect! 9 is an odd multiple of 3. So, the condition would always hold true and will not exit the loop. There's no break statement in this option.
@@ -465,7 +465,7 @@ Peer Instruction: Iterations Multiple Choice Questions
 
          x = eval(input ("Enter a number: "))
           while True:
-            if (x%2 == 1 and x%3 == 0):
+            if (x % 2 == 1 and x % 3 == 0):
                 break;
             x = eval(input ("Enter a number: "))
 

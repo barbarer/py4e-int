@@ -65,7 +65,7 @@ Peer Instruction: Exception Multiple Choice Questions
     :feedback_e: Try again. str(i) can change i into a string type. Multiply str(i) and i will have the value of i for i times.
 
 
-    We want to print the value of i, i times.  Which code will do that?
+    Which code will print the value of ``i``, ``i`` times?
 
     .. code-block:: python
 
@@ -96,7 +96,7 @@ Peer Instruction: Exception Multiple Choice Questions
     :feedback_c: Try again. Yes, this will cause an error. But the error will be detected by Exceptions. So the program will not stop.
     :feedback_d: Try again. Because  x = 1/0 can cause an error. Once the error appears, it will be detected by Exceptions. And the program will jump to Exception execution.
 
-    This will print
+    What does the following code print?
 
     .. code-block:: python
 
@@ -121,7 +121,7 @@ Peer Instruction: Exception Multiple Choice Questions
     :feedback_d: Try again. You can get a right result but grade < 90 in elif (grade >= 80) and (grade < 90) is redundant because elif block will be executed only if if block is not satisfied.
     :feedback_e: Try again. There are three different conditions and output: grade > 90 --> 'You got an A!'; 80 <= grade < 90 --> 'You got a B!'; grade < 80 --> 'You got something else'. Considering to use the 'if...elif...else' structure to distinguish these conditions.
 
-    Rewrite this code using Elif
+    Which of the following rewrites this code using Elif?
 
       .. sourcecode:: python
 
