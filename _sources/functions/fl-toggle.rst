@@ -19,8 +19,8 @@ Problems
 
     From 1-lowest to 9-highest, how useful was the Parsons problem in helping you <b>solve</b> this problem? Please skip this question if you didn't use it.
 
-.. selectquestion:: fl-dict-to-list-ps-sq-tog
-   :fromid: dict_to_list_pilot, dict_to_list_pp_pilot
+.. selectquestion:: fl-list_loop_two_lists_ps-sq-tog
+   :fromid: list_loop_two_lists, list_loop_two_lists_pp
    :toggle: lock
    :points: 10
 

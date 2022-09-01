@@ -20,8 +20,8 @@ Problems
    :fromid: fuct_ac_ll_sum67_fix
    :points: 10
 
-.. selectquestion:: fl-post-get-city-state
-   :fromid: get-city-state
+.. selectquestion:: fl-post-lst_loop_two
+   :fromid: lst_loop_two-post
    :points: 10
 
 Feedback
