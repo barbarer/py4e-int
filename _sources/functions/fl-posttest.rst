@@ -21,7 +21,7 @@ Problems
    :points: 10
 
 .. selectquestion:: fl-post-lst_loop_two
-   :fromid: lst_loop_two-post
+   :fromid: lst_two_loop_post
    :points: 10
 
 Feedback

@@ -14,7 +14,7 @@ the code area for compiler errors and/or unit test results.
 See the video below for an example.
 
 .. youtube:: piPz0kh8gMk
-    :divid: si206-code
+    :divid: si206-code-N
     :optional:
     :width: 650
     :height: 415
@@ -22,7 +22,7 @@ See the video below for an example.
 
 Finish writing the code for the following problem.
 
-.. activecode:: si206-sample-write-code
+.. activecode:: si206-sample-write-code-N
     :practice: T
     :autograde: unittest
 
@@ -60,7 +60,7 @@ click on the drop down near the top of problem.
 
 .. youtube:: zz4ATp31_vk
     :optional:
-    :divid: si206-ps-toggle
+    :divid: si206-ps-toggle-N
     :width: 650
     :height: 415
     :align: center
@@ -77,7 +77,7 @@ to check your solution.
 See the video below for an example.
 
 .. youtube:: Rf7oWHlo-e0
-    :divid: si206-parsons1
+    :divid: si206-parsons1-N
     :optional:
     :width: 650
     :height: 415
@@ -85,7 +85,7 @@ See the video below for an example.
 
 Try to solve the following mixed-up code problem. This problem requires indentation and has extra blocks that are not needed in a correct solution.
 
-.. parsonsprob:: si206-sample-parsons-indent-with-dist
+.. parsonsprob:: si206-sample-parsons-indent-with-dist-N
    :numbered: left
    :adaptive:
    :practice: T
@@ -111,7 +111,7 @@ than three blocks left.
 See the video below for an example.
 
 .. youtube:: QejZ7u642IU
-    :divid: si206-parsons2
+    :divid: si206-parsons2-N
     :optional:
     :width: 650
     :height: 415
@@ -120,7 +120,7 @@ See the video below for an example.
 Feedback
 ==================================
 
-.. shortanswer:: si206-system-sa
+.. shortanswer:: si206-system-sa-N
 
    Please provide feedback here. Please share any comments, problems, or suggestions.
 
@@ -129,6 +129,6 @@ What to do next
 
 .. raw:: html
 
-    <h4>Click to finish a survey about your perceptions of your abilities to complete programming learning tasks 👉 <b><a href="se-presurvey.html">Survey</a></b></h4>
+    <h4>Click to finish a survey about your perceptions of your abilities to complete programming learning tasks 👉 <b><a href="se-presurvey-N.html">Survey</a></b></h4>
 
 
