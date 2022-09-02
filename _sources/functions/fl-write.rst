@@ -14,7 +14,7 @@ Problems
 
 
 .. selectquestion:: fl-dict-to-list-ps-sq-write
-   :fromid: dict_to_list_pilot
+   :fromid: list_loop_two_lists
    :points: 10
 
 .. selectquestion:: fl-has22-ps-sq-write

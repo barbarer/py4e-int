@@ -85,7 +85,7 @@ Think about **yourself and your learning** when answering the following question
 
 ..     Even when things are tough, I can perform quite well.
 
-.. poll:: CS-self-efficacy-1
+.. poll:: CS-self-efficacy-1-N
     :option_1: Strongly disagree
     :option_2: Disagree
     :option_3: Neither agree nor disagree
@@ -95,7 +95,7 @@ Think about **yourself and your learning** when answering the following question
 
     Generally I have felt secure about attempting computer programming problems.
 
-.. poll:: CS-self-efficacy-2
+.. poll:: CS-self-efficacy-2-N
     :option_1: Strongly disagree
     :option_2: Disagree
     :option_3: Neither agree nor disagree
@@ -105,7 +105,7 @@ Think about **yourself and your learning** when answering the following question
 
     I am sure I could do advanced work in computer science.
 
-.. poll:: CS-self-efficacy-3
+.. poll:: CS-self-efficacy-3-N
     :option_1: Strongly disagree
     :option_2: Disagree
     :option_3: Neither agree nor disagree
@@ -115,7 +115,7 @@ Think about **yourself and your learning** when answering the following question
 
     I am sure that I can learn programming.
 
-.. poll:: CS-self-efficacy-4
+.. poll:: CS-self-efficacy-4-N
     :option_1: Strongly disagree
     :option_2: Disagree
     :option_3: Neither agree nor disagree
@@ -125,7 +125,7 @@ Think about **yourself and your learning** when answering the following question
 
     I think I could handle more difficult programming problems.
 
-.. poll:: CS-self-efficacy-5
+.. poll:: CS-self-efficacy-5-N
     :option_1: Strongly disagree
     :option_2: Disagree
     :option_3: Neither agree nor disagree
@@ -135,7 +135,7 @@ Think about **yourself and your learning** when answering the following question
 
     I can get good grades in computer science.
 
-.. poll:: CS-self-efficacy-6
+.. poll:: CS-self-efficacy-6-N
     :option_1: Strongly disagree
     :option_2: Disagree
     :option_3: Neither agree nor disagree
@@ -149,7 +149,7 @@ For the next questions please select the answer that best
 matches your familiarity and confidence
 about the specified concept(s).
 
-.. poll:: se-loop-7
+.. poll:: se-loop-7-N
     :option_1: I am unfamiliar with this concept
     :option_2: I know what it means, but have not used it in a program
     :option_3: I have used this concept in a program, but am not confident about my ability to use it
@@ -159,7 +159,7 @@ about the specified concept(s).
 
     Loops/Iteration like <code>for n in nums:</code> and <code>for i in range(4):</code>
 
-.. poll:: se-cond-8
+.. poll:: se-cond-8-N
     :option_1: I am unfamiliar with this concept
     :option_2: I know what it means, but have not used it in a program
     :option_3: I have used this concept in a program, but am not confident about my ability to use it
@@ -169,7 +169,7 @@ about the specified concept(s).
 
     Conditionals/Selection Statements like <code>if x < 3:</code>
 
-.. poll:: se-func-9
+.. poll:: se-func-9-N
     :option_1: I am unfamiliar with this concept
     :option_2: I know what it means, but have not used it in a program
     :option_3: I have used this concept in a program, but am not confident about my ability to use it
@@ -179,7 +179,7 @@ about the specified concept(s).
 
     Functions like <code>def get_odd(nums):</code>
 
-.. poll:: se-list-dic-10
+.. poll:: se-list-dic-10-N
     :option_1: I am unfamiliar with these concepts
     :option_2: I know what they mean, but have not used them in a program
     :option_3: I have used these concepts in a program, but am not confident about my ability to use them
@@ -187,7 +187,7 @@ about the specified concept(s).
     :option_5: I am confident in my ability to use these concepts in complex programs
     :results: instructor
 
-    Lists like <code>a = ["red", "green"]</code> and dictionaries like <code>d = {"red": 2, "green": 3}</code>
+    Lists like <code>a = ["red", "green"]</code>.
 
 Thanks for filling this survey and let us know you better!
 
@@ -195,26 +195,5 @@ What to do next
 ============================
 .. raw:: html
 
-    <h4>Click on the following link to start practice 👉 <b><a id="fl-next">Practice</a></b></h4>
+    <h4>Click on the following link to start practice 👉 <b><a href="fl-write.html">Practice</a></b></h4>
 
-.. raw:: html
-
-    <script type="text/javascript" >
-
-      window.onload = function() {
-
-        a = document.getElementById("fl-next")
-
-        // randomly pick one of two relative urls
-        var v = Math.floor(Math.random() * 9) + 1;
-        if (v % 2 == 0)
-        {
-              a.href = "fl-toggle.html"
-        }
-        else
-        {
-               a.href = "fl-write.html"
-        }
-
-        };
-    </script>
