@@ -8,8 +8,8 @@ Please do not ask for external help and try your best to finish it! It is **OK**
 Problems
 ==============
 
-.. selectquestion:: fl-post-starts-with-c-ac
-   :fromid: funct_loops_writecode1q-post
+.. selectquestion:: fl-post-upper-center-ac
+   :fromid: upper_center
    :points: 10
 
 .. selectquestion:: fl-post-is-descending
