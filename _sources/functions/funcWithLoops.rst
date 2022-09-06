@@ -79,6 +79,7 @@ A for-each loop in Python will loop though the items in a list starting with the
 .. parsonsprob:: func_ll_pp_total_even
    :numbered: left
    :adaptive:
+   :order: 2, 5, 6, 1, 0, 7, 4, 3, 8, 9
    :practice: T
 
    Drag the blocks from the left and put them in the correct order on the right to define a function ``total_even`` that returns the total of the even numbers in the passed list.
@@ -220,6 +221,7 @@ the built-in ``range`` function to do this.
 .. parsonsprob:: func_ll_pp_total_at_odd_indices
    :numbered: left
    :adaptive:
+   :order: 7, 3, 4, 1, 0, 6, 5, 2
    :practice: T
 
    Drag the blocks from the left and put them in the correct order on the right to define a function ``total_at_odd_indices`` that returns the total of the numbers at odd indices in the passed list.
