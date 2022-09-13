@@ -1,7 +1,9 @@
-Practice
+Practice Problems
 -----------------------------------------------------
 
-Please try to solve each of the following problems. This practice is **ungraded**. 
+Please answer the following problems to the best
+of your ability without any outside help. You can stop working on question after you worked on it for
+about five minutes without solving it.
 
 Please do not ask for external help and try your best to finish it!
 

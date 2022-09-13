@@ -91,21 +91,21 @@ about the specified concept(s).
     Methods like <code>__init__</code> and <code>__str__</code>
 
 .. poll:: class-obj-9
-    :option_1: I am unfamiliar with these concepts
-    :option_2: I know what they mean, but have not used them in a program
-    :option_3: I have used these concepts in a program, but am not confident about my ability to use them
-    :option_4: I am confident in my ability to use these concepts in simple programs
-    :option_5: I am confident in my ability to use these concepts in complex programs
+    :option_1: I am unfamiliar with this concept
+    :option_2: I know what it means, but have not used it in a program
+    :option_3: I have used this concept in a program, but am not confident about my ability to use it
+    :option_4: I am confident in my ability to use this concept in simple programs
+    :option_5: I am confident in my ability to use this concept in complex programs
     :results: instructor
 
     The use of  <code>self</code> in class
 
 .. poll:: class-obj-10
-    :option_1: I am unfamiliar with these concepts
-    :option_2: I know what they mean, but have not used them in a program
-    :option_3: I have used these concepts in a program, but am not confident about my ability to use them
-    :option_4: I am confident in my ability to use these concepts in simple programs
-    :option_5: I am confident in my ability to use these concepts in complex programs
+    :option_1: I am unfamiliar with this concept
+    :option_2: I know what it means, but have not used it in a program
+    :option_3: I have used this concept in a program, but am not confident about my ability to use it
+    :option_4: I am confident in my ability to use this concept in simple programs
+    :option_5: I am confident in my ability to use this concept in complex programs
     :results: instructor
 
     Defining instance variables like <code>self.color = color</code>
@@ -116,7 +116,7 @@ What to do next
 ============================
 .. raw:: html
 
-     <h4>Click on the following link to start practice 👉 <b><a id="fl-next-cls">Practice</a></b></h4>
+     <h4>Click on the following link to start practice 👉 <b><a id="fl-next-cls">Practice Problems</a></b></h4>
 
 .. raw:: html
 
