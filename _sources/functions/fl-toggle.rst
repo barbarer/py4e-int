@@ -1,16 +1,16 @@
-Practice
+Practice Problems
 -----------------------------------------------------
 
-Please answer the following problems to the best of your ability without any outside help. 
-
-You can skip any question that you do not feel qualified to answer or stop working on a question after you worked on it for
-about five minutes without solving it.
+Please answer
+the following problems to the best of your ability without any
+outside help. You can stop working on a problem after you worked
+on it for about five minutes without solving it.
 
 Problems
 ==============
 
-.. selectquestion:: fl-get-middle-ps-sq-tog
-   :fromid: get-middle, get-middle-Parsons-Version-pilot
+.. selectquestion:: fl-get-middle-ps-sq-tog-v2
+   :fromid: get-middle-ac, get-middle-Parsons-Version-pilot
    :toggle: lock
    :points: 10
 
@@ -56,13 +56,13 @@ Feedback
 ============================
 
 .. shortanswer:: fl-toggle-sa
-    
+
     Please explain the option you chose above in more detail. Please skip this question if you didn't use any Parsons problems.
-    
-    
+
+
 
 What to do next
 ============================
 .. raw:: html
-   
+
    <h4>Click on the following link to finish a posttest 👉 <b><a href="fl-posttest.html">Posttest</b></h4>
