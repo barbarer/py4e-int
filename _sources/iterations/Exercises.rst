@@ -390,3 +390,33 @@ Multiple Choice Questions
         for i in range(1,4):
             for j in range(1,4):
                 print(i, j, end=' ')
+
+.. mchoice:: e5mc16
+    :practice: T
+    :answer_a: 1018
+    :answer_b: 1009
+    :answer_c: 19
+    :answer_d: 10
+    :correct: d
+    :feedback_a: This would be true if it added all values in the list to total
+    :feedback_b: This would be true if it added the 999 to the list before the break
+    :feedback_c: This would be true if it used continue rather than break when it found 999
+    :feedback_d: This will return the total of the values in the list before the 999
+
+    What will the following code print
+
+    ::
+
+        def mystery(nums):
+            total = 0
+            for num in nums:
+                if num == 999:
+                    break
+                else:
+                    total += num
+            return total
+        mystery([8, 2, 999, 5, 4])
+
+
+
+        print(mystery("walking"))
