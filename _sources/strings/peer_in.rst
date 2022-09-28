@@ -4,11 +4,11 @@ Peer Instruction: Strings Multiple Choice Questions
 .. mchoice:: ctp-strings-11_Strings_05
    :author: Cynthia Taylor
    :practice: T
-   :answer_a: “abcddd q”
-   :answer_b: “abcddd” “” “” “q”
-   :answer_c: “qdddabc”
-   :answer_d: “dddabcq”
-   :answer_e: I don’t know
+   :answer_a: "abcddd q"
+   :answer_b: "abcddd" "" "" "q"
+   :answer_c: "qdddabc"
+   :answer_d: "dddabcq"
+   :answer_e: I don't know
    :correct: d
    :feedback_a: Incorrect! The value of s changes in the following order from the first line- s="abc", s="dddabc", s="dddabc" and s="dddabcq".
    :feedback_b: Incorrect! The value of s changes in the following order from the first line- s="abc", s="dddabc", s="dddabc" and s="dddabcq".
@@ -20,10 +20,10 @@ Peer Instruction: Strings Multiple Choice Questions
 
    .. code-block:: python
 
-      s = “abc”
-      s = “d” * 3 + s
-      s = s + ““*3
-      s = s + “q”
+      s = "abc"
+      s = "d" * 3 + s
+      s = s + "" * 3
+      s = s + "q"
 
 
 .. mchoice:: ctp-strings-11_Strings_07
@@ -45,7 +45,7 @@ Peer Instruction: Strings Multiple Choice Questions
 
    .. code-block:: python
 
-      s = “Cats”
+      s = "Cats"
       y = s[len(s)-1]
 
 
@@ -68,7 +68,7 @@ Peer Instruction: Strings Multiple Choice Questions
 
    .. code-block:: python
 
-      s = “bats”
+      s = "bats"
       print(s[0:len(s)])
 
 
@@ -91,7 +91,7 @@ Peer Instruction: Strings Multiple Choice Questions
 
    .. code-block:: python
 
-      s = “Vampires”
+      s = "Vampires"
       print(s[3:-1]
 
 
@@ -116,7 +116,7 @@ Peer Instruction: Strings Multiple Choice Questions
    .. code-block:: python
 
       def mystery(s):
-         new_s = “”
+         new_s = ""
          for c in s:
             new_s = c + new_s
          return new_s
@@ -141,10 +141,10 @@ Peer Instruction: Strings Multiple Choice Questions
 
    .. code-block:: python
 
-      s = ’abc’
-      s = ’d’ * 3 + s
-      s = s + ’ ’ * 3
-      s = s + ’q’
+      s = 'abc'
+      s = 'd' * 3 + s
+      s = s + ' ' * 3
+      s = s + 'q'
 
 
 .. mchoice:: dz-lecture10_Strings_07
@@ -165,7 +165,7 @@ Peer Instruction: Strings Multiple Choice Questions
    .. code-block:: python
 
       def mystery(s):
-         new_s = ’’
+         new_s = ''
          for c in s:
             new_s = c + new_s
          return new_s
@@ -191,8 +191,8 @@ Peer Instruction: Strings Multiple Choice Questions
    .. code-block:: python
 
       val = 0
-      for i in ’ab’:
-         for j in ’cd’:
+      for i in 'ab':
+         for j in 'cd':
             val += 1
 
 
@@ -205,17 +205,17 @@ Peer Instruction: Strings Multiple Choice Questions
    :answer_d: 9
    :answer_e: 27
    :correct: d
-   :feedback_a: Incorrect! For each 'a', 'b' and 'c, the nested for loop will run thrice. Thus, val gets incremented by 1 nine times resulting in val = 9.
-   :feedback_b: Incorrect! For each 'a', 'b' and 'c, the nested for loop will run thrice. Thus, val gets incremented by 1 nine times resulting in val = 9.
-   :feedback_c: Incorrect! For each 'a', 'b' and 'c, the nested for loop will run thrice. Thus, val gets incremented by 1 nine times resulting in val = 9.
-   :feedback_d: Correct! For each 'a', 'b' and 'c, the nested for loop will run thrice. Thus, val gets incremented by 1 nine times resulting in val = 9.
-   :feedback_e: Incorrect! For each 'a', 'b' and 'c, the nested for loop will run thrice. Thus, val gets incremented by 1 nine times resulting in val = 9.
+   :feedback_a: Incorrect! For each 'a', 'b' and 'c', the nested for loop will run thrice. Thus, val gets incremented by 1 nine times resulting in val = 9.
+   :feedback_b: Incorrect! For each 'a', 'b' and 'c', the nested for loop will run thrice. Thus, val gets incremented by 1 nine times resulting in val = 9.
+   :feedback_c: Incorrect! For each 'a', 'b' and 'c', the nested for loop will run thrice. Thus, val gets incremented by 1 nine times resulting in val = 9.
+   :feedback_d: Correct! For each 'a', 'b' and 'c', the nested for loop will run thrice. Thus, val gets incremented by 1 nine times resulting in val = 9.
+   :feedback_e: Incorrect! For each 'a', 'b' and 'c', the nested for loop will run thrice. Thus, val gets incremented by 1 nine times resulting in val = 9.
 
    What is the value of ``val`` after this code executes?
 
    .. code-block:: python
 
       val = 0
-      for i in ’abc’:
-         for j in ’def’:
+      for i in 'abc':
+         for j in 'def':
          val += 1
