@@ -13,7 +13,7 @@ Peer Instruction: Dictionaries Multiple Choice Questions
    :feedback_b: Incorrect! A list can be used for listing down the ingredients for a recipe
    :feedback_c: Correct! This requires a key-value pair i.e. country-capital and is thus best suited for dictionary.
    :feedback_d: Incorrect! A list would be more suitable for 50 random integers.
-   
+
    Which of the following is best suited for a dictionary instead of a list?
 
 
@@ -30,16 +30,16 @@ Peer Instruction: Dictionaries Multiple Choice Questions
    :feedback_b: Incorrect! Since a new bird sighting has been appended into "kinds", its count has to be appended to the end of "counts" too. The last two lines irrespective of the if condition increment the corresponding count of a sighting by 1. So, the missing code needs to append 0 to "counts".
    :feedback_c: Incorrect! Since a new bird sighting has been appended into "kinds", its count has to be appended to the end of "counts" too. The last two lines irrespective of the if condition increment the corresponding count of a sighting by 1. So, the missing code needs to append 0 to "counts".
    :feedback_d: Incorrect! Since a new bird sighting has been appended into "kinds", its count has to be appended to the end of "counts" too. The last two lines irrespective of the if condition increment the corresponding count of a sighting by 1. So, the missing code needs to append 0 to "counts".
-   
+
 
    What code should go in place of the missing code?
 
    .. code-block:: python
 
       def new_sighting(kinds, counts, sighting):
-         ’’’(list of str, list of int, str) -> NoneType
+         '''(list of str, list of int, str) -> NoneType
          Add new sighting to parallel lists kinds and counts.
-         ’’’
+         '''
          if sighting not in kinds:
             kinds.append(sighting)
             ... missing code
@@ -60,7 +60,7 @@ Peer Instruction: Dictionaries Multiple Choice Questions
    :feedback_b: Correct! Both d[5] =  and d[4] =  adds new keys to the dictionary with values returned by d.get(). d.get(4, 8) = 8 as there exists no key = '4' in dictionary d. d.get(3,9) returns 4 as this value corresponds to key = '3'.
    :feedback_c: Incorrect! Both d[5] =  and d[4] =  adds new keys to the dictionary with values returned by d.get(). d.get(4, 8) = 8 as there exists no key = '4' in dictionary d. d.get(3,9) returns 4 as this value corresponds to key = '3'.
    :feedback_d: Incorrect! Both d[5] =  and d[4] =  adds new keys to the dictionary with values returned by d.get(). d.get(4, 8) = 8 as there exists no key = '4' in dictionary d. d.get(3,9) returns 4 as this value corresponds to key = '3'.
-   
+
    What is dictionary d created by the following code?
 
    .. code-block:: python
@@ -78,11 +78,11 @@ Peer Instruction: Dictionaries Multiple Choice Questions
    :answer_c: {1:5, 2:1, 4:2}
    :answer_d: Error caused by get
    :correct: a
-   :feedback_a: Correct! Both d[2] =  and d[4] =  adds new keys to the dictionary with values returned by d.get(). d.get(1,6) returns 5 as this value corresponds to key = '1'. d.get(3, 7) = 7 as there exists no key = '3' in dictionary d. 
+   :feedback_a: Correct! Both d[2] =  and d[4] =  adds new keys to the dictionary with values returned by d.get(). d.get(1,6) returns 5 as this value corresponds to key = '1'. d.get(3, 7) = 7 as there exists no key = '3' in dictionary d.
    :feedback_b: Incorrect! Both d[2] =  and d[4] =  adds new keys to the dictionary with values returned by d.get(). d.get(1,6) returns 5 as this value corresponds to key = '1'. d.get(3, 7) = 7 as there exists no key = '3' in dictionary d.
    :feedback_c: Incorrect! Both d[2] =  and d[4] =  adds new keys to the dictionary with values returned by d.get(). d.get(1,6) returns 5 as this value corresponds to key = '1'. d.get(3, 7) = 7 as there exists no key = '3' in dictionary d.
    :feedback_d: Incorrect! Both d[2] =  and d[4] =  adds new keys to the dictionary with values returned by d.get(). d.get(1,6) returns 5 as this value corresponds to key = '1'. d.get(3, 7) = 7 as there exists no key = '3' in dictionary d.
-   
+
    What is dictionary d created by the following code?
 
    .. code-block:: python
@@ -104,7 +104,7 @@ Peer Instruction: Dictionaries Multiple Choice Questions
    :feedback_b: Correct!
    :feedback_c: Incorrect!
    :feedback_d: Incorrect!
-   
+
    Which of the following is a difference between lists and dictionaries?
 
 
@@ -145,9 +145,9 @@ Peer Instruction: Dictionaries Multiple Choice Questions
 
    .. code-block:: python
 
-      {"December" : {24 : ["Dan", "Joe", "Steph"]}, 
-       "July" : {17 : ["Angelo"], 
-                16 : ["Chris"], 
+      {"December" : {24 : ["Dan", "Joe", "Steph"]},
+       "July" : {17 : ["Angelo"],
+                16 : ["Chris"],
                 1 : ["Canada"]
                 }
       }
@@ -175,15 +175,15 @@ Peer Instruction: Dictionaries Multiple Choice Questions
 .. mchoice:: dz-lecture_20_3
    :author: Dan Zingaro
    :practice: T
-   :answer_a: {’’:’this’, ’this’:’is’, ’is’:’this’, ’this’:’was’}
-   :answer_b: {’’:[’this’], ’this’:[’is’, ’was’], ’is’:[’this’]}
-   :answer_c: {’’:[’this’], ’this’:[’is’, ’was’], ’is’:[’was’]}
-   :answer_d: {’’:’this’, ’this’:’is’, ’is’:’this’}
+   :answer_a: {'':'this', 'this':'is', 'is':'this', 'this':'was'}
+   :answer_b: {'':['this'], 'this':['is', 'was'], 'is':['this']}
+   :answer_c: {'':['this'], 'this':['is', 'was'], 'is':['was']}
+   :answer_d: {'':'this', 'this':'is', 'is':'this'}
    :correct: b
    :feedback_a: Incorrect! Keys in a dictionary must be unique.
    :feedback_b: Correct! 'this' is followed by either of 'is' and 'was' and 'is' could be followed by a 'this'.
    :feedback_c: Incorrect! 'this' is followed by either of 'is' and 'was' but 'is' cannot be followed by a 'was'.
-   :feedback_d: Incorrect! No 'was' in this dictionary. 
+   :feedback_d: Incorrect! No 'was' in this dictionary.
 
    What is the dictionary that should be created for the text: this is this was
 
@@ -191,10 +191,10 @@ Peer Instruction: Dictionaries Multiple Choice Questions
 .. mchoice:: dz-lecture_20_4
    :author: Dan Zingaro
    :practice: T
-   :answer_a: {’’:’this’, ’this’:’is’, ’is’:’was’, ’was’:’this’}
-   :answer_b: {’’:[’this’], ’this’:[’is’, ’was’], ’is’:[’was’]}
-   :answer_c: {’’:[’this’], ’this’:[’is’], ’is’:[’was’], ’was’:[’this’]}
-   :answer_d: {’’:[’this’], ’is’:[’was’], ’was’:[’this’]}
+   :answer_a: {'':'this', 'this':'is', 'is':'was', 'was':'this'}
+   :answer_b: {'':['this'], 'this':['is', 'was'], 'is':['was']}
+   :answer_c: {'':['this'], 'this':['is'], 'is':['was'], 'was':['this']}
+   :answer_d: {'':['this'], 'is':['was'], 'was':['this']}
    :correct: c
    :feedback_a: Incorrect! It's better to use a list for the words (values) which can follow a particular word (keys)
    :feedback_b: Incorrect! 'this' is not immediately followed by 'was'
@@ -202,17 +202,3 @@ Peer Instruction: Dictionaries Multiple Choice Questions
    :feedback_d: Incorrect! No 'this' key in this dictionary.
 
    What is the dictionary that should be created for the text: this is was this
-
-
-
-
-
-
-
-
-
-
-
-
-
-

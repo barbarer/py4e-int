@@ -8,7 +8,7 @@ Peer Instruction: Conditionals Multiple Choice Questions
    :answer_b: 1
    :answer_c: 5
    :answer_d: 1 5
-   :answer_e: I don’t know
+   :answer_e: I don't know
    :correct: d
    :feedback_a: Incorrect! Here, x=1 which is less than 3 making the condition true. It will first print x = 1 and then x = x+4 = 1+4 = 5.
    :feedback_b: Incorrect! Here, x=1 which is less than 3 making the condition true. It will first print x = 1 and then x = x+4 = 1+4 = 5.
@@ -410,11 +410,11 @@ Peer Instruction: Conditionals Multiple Choice Questions
       x = 5
       if x < 15:
          if x > 8:
-            print(’one’)
+            print('one')
          else:
-            print(’two’)
+            print('two')
       else:
-         print(’three’)
+         print('three')
 
 
 .. mchoice:: dz-lecture8_Conditionals_06
@@ -500,9 +500,9 @@ Peer Instruction: Conditionals Multiple Choice Questions
 .. mchoice:: dz-lecture9_Conditionals_03
    :author: Dan Zingaro
    :practice: T
-   :answer_a: (1) plan == ’silver’, (2) months >= 2 and months <= 6
-   :answer_b: (1) plan == ’silver’, (2) months >= 6
-   :answer_c: (1) months >= 2 and months <= 6, (2) plan == ’gold’
+   :answer_a: (1) plan == 'silver', (2) months >= 2 and months <= 6
+   :answer_b: (1) plan == 'silver', (2) months >= 6
+   :answer_c: (1) months >= 2 and months <= 6, (2) plan == 'gold'
    :correct: a
    :feedback_a: Correct! Here, cost = $60 for plan = 'silver' and months != 1. So, (1) plan = 'silver'. And cost = $70 for plan = 'gold' and months 2-6. The former is inherent to the 'else' condition while the latter is encompassed through (2) months >= 2 and months <= 6.
    :feedback_b: Incorrect! Here, cost = $60 for plan = 'silver' and months != 1. So, (1) plan = 'silver'. And cost = $70 for plan = 'gold' and months 2-6. The former is inherent to the 'else' condition while the latter is encompassed through (2) months >= 2 and months <= 6 but not months >=6.

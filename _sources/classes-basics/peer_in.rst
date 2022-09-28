@@ -8,7 +8,7 @@ Peer Instruction: Classes Multiple Choice Questions
    :answer_b: accelerate
    :answer_c: num_wheels
    :answer_d: turn_right
-   :answer_e: I don’t know
+   :answer_e: I don't know
    :correct: c
    :feedback_a: Incorrect! Method describes a specific action associated with a Class. "open_window" is a possbile action.
    :feedback_b: Incorrect! Method describes a specific action associated with a Class. "accelerate" is a possbile action
@@ -102,7 +102,7 @@ Peer Instruction: Classes Multiple Choice Questions
             self.val = a * b
 
          def __str__(self):
-            return ’[’ + str(self.val + 2) + ’]’
+            return '[' + str(self.val + 2) + ']'
 
       t = Thing(4, 5)
       print(t)

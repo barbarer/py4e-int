@@ -19,12 +19,12 @@ Peer Instruction: Tuples Multiple Choice Questions
    .. code-block::
 
       def find(lst, value):
-         ’’’(list, value) -> int
+         '''(list, value) -> int
          Return the first occurrence of value in lst.
          If value is not found, return -1.
          >>> find([20, 40, 60], 40)
          1
-         ’’’
+         '''
          i = 0
          num = lst[i]
          while num != value:
@@ -52,10 +52,10 @@ Peer Instruction: Tuples Multiple Choice Questions
 
    To represent groups of students, we can use a nested list. For example, in the following list, students 1, 3, and 4 are together in a group, and student 2 is working alone: [[1, 3, 4], [2]]. In the following code, which call would return True?
 
-   .. code-block:: 
+   .. code-block::
 
       def is_ok(group_list, class_list):
-         ’’’(list of list of int, list of int) -> bool
+         '''(list of list of int, list of int) -> bool
          Return True iff every student in class_list is in exactly
          one group according to group_list.
-         ’’’
+         '''

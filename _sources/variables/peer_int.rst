@@ -4,8 +4,8 @@ Peer Instruction: Variable Multiple Choice Questions
    :author: Cynthia Taylor
    :practice: T
    :answer_a: Ints only have 2 decimal places
-   :answer_b: Ints don’t have any decimals
-   :answer_c: It’s easier to multiply ints
+   :answer_b: Ints don't have any decimals
+   :answer_c: It's easier to multiply ints
    :answer_d: Funsies
    :answer_e: I don't know
    :correct: b
@@ -43,7 +43,7 @@ Peer Instruction: Variable Multiple Choice Questions
    :author: Dan Zingaro
    :practice: T
    :answer_a: Nothing. They are both 1
-   :answer_b: Nothing. They might be of different types, but types don’t matter in programming
+   :answer_b: Nothing. They might be of different types, but types don't matter in programming
    :answer_c: 1 is an integer and 1.0 is a string, because of the character
    :answer_d: 1 is an integer and 1.0 is a floating-point number
    :answer_e: 1.0 is an integer and 1 is a floating-point number

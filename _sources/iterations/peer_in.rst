@@ -83,7 +83,7 @@ Peer Instruction: Iterations Multiple Choice Questions
 
        +  Correct! The code will keep adding numbers from 1 to 4 with each iteration.
 
-   -   I don’t know
+   -   I don't know
 
        -  Incorrect! Define a variable, say sum, and set it to 0. Run a loop from 1 to 4 and keep adding i to sum.
 
@@ -95,7 +95,7 @@ Peer Instruction: Iterations Multiple Choice Questions
    :answer_b: 1 4 2 6 3 6
    :answer_c: 1 4 2 6 3 6 4 6 5 6
    :answer_d: This will cause an error
-   :answer_e: I don’t know
+   :answer_e: I don't know
    :correct: b
    :feedback_a: Incorrect! n has been reset to 6 inside the loop. So, the code should print 6 from the second iteration. However, the n inside range will not be affected by this reset.
    :feedback_b: Correct! n has been reset to 6 inside the loop. So, the code should print 6 from the second iteration. However, the n inside range will not be affected by this reset.
@@ -109,7 +109,7 @@ Peer Instruction: Iterations Multiple Choice Questions
 
       n = 4
       for i in range(1,n):
-         print(i,n,end=‘’)
+         print(i,n,end='')
          n = 6
 
 
@@ -132,7 +132,7 @@ Peer Instruction: Iterations Multiple Choice Questions
        ::
 
          for i in range(0,n):
-            print(“*” * i)
+            print("*" * i)
 
        -  Incorrect! Although there will be 5 iterations, it will not print 5 rows and columns of asterisks. With each iteration, i columns of asterisks will be printed. It will generate a staircase pattern.
 
@@ -140,7 +140,7 @@ Peer Instruction: Iterations Multiple Choice Questions
        ::
 
          for i in range(0,n):
-            print(“*” * n)
+            print("*" * n)
 
        +  Correct! This will print 5 rows and columns of asterisks. There will be 5 iterations. With each iteration, n=5 columns of asterisks will be printed.
 
@@ -148,7 +148,7 @@ Peer Instruction: Iterations Multiple Choice Questions
        ::
 
          for i in range(1,n):
-            print(“*” * i)
+            print("*" * i)
 
        -  Incorrect! This code will run 4 iterations, starting from 1 through n-1=4. Also, with each iteration, i columns of * will be printed. It will generate a staircase pattern.
 
@@ -156,11 +156,11 @@ Peer Instruction: Iterations Multiple Choice Questions
        ::
 
          for i in range(1,n):
-            print(“*” * n)
+            print("*" * n)
 
        -  Incorrect! This will print 4 rows and 5 columns of asterisks. There will be 4 iterations, starting from 1 through n-1=4. With each iteration, n=5 columns of asterisks will be printed.
 
-   -   I don’t know
+   -   I don't know
 
        -  Incorrect! Print n=5 columns of asterisks. Run a for loop to print n=5 rows.
 
@@ -216,7 +216,7 @@ Peer Instruction: Iterations Multiple Choice Questions
 
       for i in range(1, 4):
          for j in range(1, 4):
-            print(i,j,end=‘ ’)
+            print(i,j,end=‘ ')
 
 
 .. mchoice:: ctp-iterations-05_nestedloops_4
@@ -237,7 +237,7 @@ Peer Instruction: Iterations Multiple Choice Questions
 
          for i in range(0, n):
             for j in range(0, n):
-               print(i * j,end=‘ ’)
+               print(i * j, end=‘ ')
          print()
 
        -  Incorrect! This will print a row of 0s in the first row and a row of n-1 times in the last row.
@@ -245,32 +245,32 @@ Peer Instruction: Iterations Multiple Choice Questions
    -
        ::
 
-         for i in range(1,n + 1):
-            for j in range(1,n + 1):
-               print(i * j,end=‘ ’)
+         for i in range(1, n + 1):
+            for j in range(1, n + 1):
+               print(i * j, end=‘ ')
 
        -  Incorrect! This will print the times table but not in the format given above. There will be no break after the first line.
 
    -
        ::
 
-         for i in range(1,n + 1):
-            for j in range(1,n + 1):
-               print(i * j,end=‘ ’)
+         for i in range(1, n + 1):
+            for j in range(1, n + 1):
+               print(i * j, end=‘ ')
             print()
 
        +  Correct! This will print the times table in the right format due to an additional print in the end. The range in both loops in right and there will be a break after each line of the nested for loop.
    -
        ::
 
-         for i in range(1,n + 1):
-            for j in range(1,n + 1):
-               print(i * j,end=‘ ’)
+         for i in range(1, n + 1):
+            for j in range(1, n + 1):
+               print(i * j, end=‘ ')
          print()
 
        -  Incorrect! This will print the times table but not in the format given above. There will be no break after the each line but only after end of the last line.
 
-   -   I don’t know
+   -   I don't know
 
        -  Incorrect! Use a nested for loop and use the * operator.
 
@@ -413,7 +413,7 @@ Peer Instruction: Iterations Multiple Choice Questions
 
        -  Incorrect! This is not the right implementation of the given for loop as the value of i remains the same and the value of n keeps increasing with each iteration.
 
-   -   I don’t know
+   -   I don't know
 
        -  Incorrect! The value of i should increment by 1 with each iteration of while loop.
 
@@ -479,6 +479,6 @@ Peer Instruction: Iterations Multiple Choice Questions
 
        -  Incorrect! There's a break statement in option B.
 
-   -   I don’t know
+   -   I don't know
 
        -  Incorrect! A break statement can be used to exit the loop.
