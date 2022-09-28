@@ -403,7 +403,7 @@ Multiple Choice Questions
     :feedback_c: This would be true if it used continue rather than break when it found 999
     :feedback_d: This will return the total of the values in the list before the 999
 
-    What will the following code print
+    What will the following code print?
 
     ::
 
@@ -415,6 +415,7 @@ Multiple Choice Questions
                 else:
                     total += num
             return total
+            
         mystery([8, 2, 999, 5, 4])
 
 
