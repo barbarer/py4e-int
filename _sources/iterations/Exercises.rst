@@ -222,8 +222,8 @@ Multiple Choice Questions
     :answer_d: wlkng
     :correct: c
     :feedback_a: Not all of the characters will be added to the output string.
-    :feedback_b: This would be true if it didn't break when it sound an 'i'
-    :feedback_c: It will not all the 'a' and will stop when it reaches the 'i'
+    :feedback_b: This would be true if it didn't break when it found an 'i'
+    :feedback_c: It will not add the 'a' and will stop when it reaches the 'i'
     :feedback_d: This would be true if when it found an 'i' it did a continue rather than a break
 
     What will the following code print?
@@ -310,7 +310,7 @@ Multiple Choice Questions
     :feedback_a: This adds any non negative values to the out list.
     :feedback_b: This will not add any negative values to the list.
     :feedback_c: This would be true if the continue was a break
-    :feedback_d: This would be true if it just added all values to out 
+    :feedback_d: This would be true if it just added all values to out
 
     What will the following code print?
 
