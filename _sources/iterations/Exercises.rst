@@ -308,9 +308,9 @@ Multiple Choice Questions
     :answer_d: [3, -3, -2, 1]
     :correct: a
     :feedback_a: This adds any non negative values to the out list.
-    :feedback_b: This will not add any non
+    :feedback_b: This will not add any negative values to the list.
     :feedback_c: This would be true if the continue was a break
-    :feedback_d: This would be true if when it found an 'i' it did a continue rather than a break
+    :feedback_d: This would be true if it just added all values to out 
 
     What will the following code print?
 
@@ -322,7 +322,7 @@ Multiple Choice Questions
                 if num < 0:
                     continue
                 else:
-                    out += num
+                    out.append(num)
             return out
 
         print(mystery([3, -3, -2, 1]))
