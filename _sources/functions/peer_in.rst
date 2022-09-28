@@ -4,11 +4,11 @@ Peer Instruction: Functions Multiple Choice Questions
 .. mchoice:: ctp-functions-08_Functions_07
    :author: Cynthia Taylor
    :practice: T
-   :answer_a: Raaarrr I’m a bear
+   :answer_a: Raaarrr I'm a bear
    :answer_b: Eeek a bear!
    :answer_c: Both
    :answer_d: Neither
-   :answer_e: I don’t know
+   :answer_e: I don't know
    :correct: a
    :feedback_a: Correct! The function "foo()" has been called in the last line. So, the print statement under it will be executed.
    :feedback_b: Incorrect! The function "foo()" has been called in the last line and NOT "bar()". So, the print statement under "foo()" will be executed and returned.
@@ -21,10 +21,10 @@ Peer Instruction: Functions Multiple Choice Questions
    .. code-block:: python
 
       def foo():
-	      print(“Raaarrr I’m a bear”)
+	      print("Raaarrr I'm a bear")
 
       def bar():
-	      print(“Eeek a bear!”)
+	      print("Eeek a bear!")
 
       foo()
 
@@ -36,7 +36,7 @@ Peer Instruction: Functions Multiple Choice Questions
    :answer_b: 8
    :answer_c: 20
    :answer_d: Error, because a cannot be assigned in two places
-   :answer_e: I don’t know
+   :answer_e: I don't know
    :correct: c
    :feedback_a: Incorrect! Change in the values of a function's arguments doesn't change the assigned value of a variable. Try replacing "first(a)" with "first(x)" in function definition.
    :feedback_b: Incorrect! Change in the values of a function's arguments doesn't change the assigned value of a variable. Try replacing "first(a)" with "first(x)" in function definition.
@@ -188,11 +188,11 @@ Peer Instruction: Functions Multiple Choice Questions
    .. code-block:: python
 
       def sum_eleven(num1, num2, num3):
-         ’’’(int, int, int) -> bool
+         '''(int, int, int) -> bool
          Return True iff num1, num2, and num3 sum to 11.
          >>>sum_eleven (4, 5, 2)
          11
-         ’’’
+         '''
          return num1 + num2 + num3 == 11
 
 
@@ -216,11 +216,11 @@ Peer Instruction: Functions Multiple Choice Questions
    .. code-block:: python
 
       def rightmost_digit(a):
-         ’’’(int) -> bool
+         '''(int) -> bool
          Return the rightmost digit of a.
          >>>rightmost_digit (14)
          4
-         ’’’
+         '''
          return a % 10
 
 

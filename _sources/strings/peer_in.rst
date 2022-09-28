@@ -122,7 +122,7 @@ Peer Instruction: Strings Multiple Choice Questions
          return new_s
 
 
-.. mchoice:: dz-lecture10_Strings_03
+.. mchoice:: dz-lecture10_Strings_03_v2
    :author: Dan Zingaro
    :practice: T
    :answer_a: "abcddd   q"

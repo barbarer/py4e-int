@@ -14,7 +14,7 @@ Peer Instruction: Text Files Multiple Choice Questions
    :feedback_b: Incorrect! A loop or method for reading is required to read an open file.
    :feedback_c: Incorrect! Write will be called to write text on to another file.
    :feedback_d: Incorrect! Close will be called to after the program is done reading or writing a file.
-   :feedback_e: Correct! All these functions/methods will be called by the program. 
+   :feedback_e: Correct! All these functions/methods will be called by the program.
 
    A program is designed to retrieve some data from a file, process it, and output the revised data to another file. Which of the following functions/methods will not be called in the program?
 
@@ -34,9 +34,9 @@ Peer Instruction: Text Files Multiple Choice Questions
    :feedback_c: Incorrect! Because readline() has been called five times. So skip will return the fifth line.
    :feedback_d: Incorrect! Because readline() has been called five times. So skip will return the fifth line.
    :feedback_e: Correct! Because readline() has been called five times. So skip will return the fifth line.
-   
+
    Here are the first few lines from a file- songs.txt:
-      
+
       Songs Chosen this Semester
       #Game names for the songs
       #All ridiculously good soundtracks
@@ -50,7 +50,7 @@ Peer Instruction: Text Files Multiple Choice Questions
       def skip(f):
          line = f.readline()
          line = f.readline()
-         while line.startswith(’#’ ):
+         while line.startswith('#' ):
             line = f.readline()
          return f.readline()
 
@@ -70,9 +70,9 @@ Peer Instruction: Text Files Multiple Choice Questions
    :feedback_c: Incorrect! Because line was last assigned to the fourth iteration of readline().
    :feedback_d: Correct! Because line was last assigned to the fourth iteration of readline().
    :feedback_e: Incorrect! Because line was last assigned to the fourth iteration of readline().
-   
+
    Here are the first few lines from a file- songs.txt:
-      
+
       Songs Chosen this Semester
       #Game names for the songs
       #All ridiculously good soundtracks
@@ -86,19 +86,6 @@ Peer Instruction: Text Files Multiple Choice Questions
       def skip(f):
          line = f.readline()
          line = f.readline()
-         while line.startswith(’#’ ):
+         while line.startswith('#' ):
             line = f.readline()
          return line
-
-
-
-
-
-
-
-
-
-
-
-
-
