@@ -1,9 +1,12 @@
-posttest
-----------
+Problem Bank for Practice Problems and Test Problems
+-----------------------------------------------------
 
-.. mchoice:: hparsons_lg_regex_posttest_mcq_1
 
-    What does a regex [^abc] mean?
+
+
+.. mchoice:: hparsons_lg_regex_test_mcq_1
+
+    What does a regex ``[^abc]`` mean?
 
     -   Match a character that is one of ^, a, b, or c.
 
@@ -22,9 +25,9 @@ posttest
         -
 
 
-.. mchoice:: hparsons_lg_regex_posttest_mcq_2
+.. mchoice:: hparsons_lg_regex_test_mcq_2
 
-    What does the pattern '\d' do in regex?
+    What does the pattern ``\d`` do in regex?
 
     -   Matches any digit (0, 1, ..., 9).
 
@@ -42,14 +45,18 @@ posttest
 
         -
 
-.. mchoice:: hparsons_lg_regex_posttest_mcq_3
+    -   I don't know.
+
+        -
+
+.. mchoice:: hparsons_lg_regex_test_mcq_3
 
     Which one of the following patterns should I use to treat "abc" as a group for repeating, but not make re.findall only return the content in the group?
 
 
     -   [abc]
 
-        +
+        -
 
     -   (abc)
 
@@ -63,10 +70,13 @@ posttest
 
         +
 
+    -   I don't know.
 
-.. mchoice:: hparsons_lg_regex_posttest_mcq_4
+        -
 
-    What does pattern "\w" mean?
+.. mchoice:: hparsons_lg_regex_test_mcq_4
+
+    What does pattern ``\w`` mean?
 
     -   Any lowercase letter
 
@@ -84,8 +94,12 @@ posttest
 
         -
 
+    -   I don't know.
 
-.. mchoice:: hparsons_lg_regex_posttest_mcq_5
+        -
+
+
+.. mchoice:: hparsons_lg_regex_test_mcq_5
 
     Which of the following pattern would match "A"s separated by individual "B"s in between, for example, "AAABAABAA", "ABAAA"?
     Note that "B" should not appear consecutively, and should not appear as the first or last character. B must appear at least once.
@@ -106,27 +120,32 @@ posttest
 
         -
 
+    -   I don't know.
 
-.. mchoice:: hparsons_lg_regex_posttest_mcq_6
+        -
+
+
+.. mchoice:: hparsons_lg_regex_test_mcq_6
 
     Which of the following pattern would match both words "attend" and "attendee"?
+
+    -   attend|ee
+
+        -
+    
+    -   attend(ee){1,}
+
+        -
 
     -   attend(ee)?
 
         +
 
-    -   attend|ee
-
-        -
-
-    -   attend(ee){1,}
-
-        -
-
     -   attend[ee]
 
         -
 
-Thank You
-============================
-Thank you for taking part in this study!  We appreciate your time on this.
+    -   I don't know.
+
+        -
+

@@ -848,6 +848,7 @@ is the first three letters of the month.
 
         Fix the errors below so that the ``pointGain`` function returns a list of all the dates where the Dow
         Jones gained more than 300 points from open to close.  Each line has: Date, Open, High, Low, and Close.
+        The Date is in the format ``day-month-yy``.
         There should be 22 dates.
         ~~~~
         def pointGain():
@@ -924,8 +925,8 @@ is the first three letters of the month.
         from the stocks file in a list and the abbreviation for a ``month``
         (i.e. "Jan", "Feb") as parameters and returns the average value of the closing
         prices during that month for all the years in the file.
-        Each line has: Date, Open, High, Low, and Close.
-
+        Each line has: Date, Open, High, Low, and Close. The Date is in the format ``day-month-yy``.   The month
+        is just the first three letters of the month.
         ~~~~
 
 
