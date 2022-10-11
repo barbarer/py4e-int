@@ -1,4 +1,4 @@
-Practice Problems
+Practice Problems - Write Code
 -----------------------------------------------------
 
 Please answer the following problems to the best
@@ -29,5 +29,5 @@ Problems
 What to do next
 ============================
 .. raw:: html
-    
+
    <h4>Click on the following link to finish a posttest 👉 <b><a href="fl-posttest-cls.html">Post Test</b></h4>
