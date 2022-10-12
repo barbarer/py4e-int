@@ -76,27 +76,27 @@ Problem Bank for Practice Problems and Test Problems
 
 .. mchoice:: hparsons_lg_regex_test_mcq_4
 
-    What does pattern ``\w`` mean?
+    Which of the following best describes what ``\w`` matches?
 
     -   Any lowercase letter
 
-        -
+        - It matches more than this
 
     -   Any lowercase or uppercase letter
 
-        -
+        - It matches more than this
 
     -   Any lowercase or uppercase letter, or underscore
 
-        +
+        - It matches more than this
 
-    -   A word consisting of uppercase or lowercase letters
+    -   Any lowercase or uppercase letter, or underscore, or digit from 0-9
 
-        -
+        + It matches any lowercase or uppercase letter, or underscore, or digit from 0-9
 
     -   I don't know.
 
-        -
+        - That is okay
 
 
 .. mchoice:: hparsons_lg_regex_test_mcq_5
@@ -132,7 +132,7 @@ Problem Bank for Practice Problems and Test Problems
     -   attend|ee
 
         -
-    
+
     -   attend(ee){1,}
 
         -
@@ -148,4 +148,3 @@ Problem Bank for Practice Problems and Test Problems
     -   I don't know.
 
         -
-
