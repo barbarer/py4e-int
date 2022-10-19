@@ -117,13 +117,13 @@ Problems
     :randomize:
     :blockanswer: 0 1 2
 
-    Please write a regex to capture a URL that only consists of characters, numbers, underscore, and dots. 
+    Please write a regex to capture a URL that only consists of characters, numbers, underscore, and dots.
     For example: www.abc.com, def_ghi.com, a678.cn
     Note that dots(".") should not appear consecutively, and should not appear as the first or last character. The dot must appear at least once.
 
     ~~~~
     --blocks--
-    (\w+\.)
+    (?:\w+\.)
     +
     \w+
     \.
