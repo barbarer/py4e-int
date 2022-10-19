@@ -9,7 +9,7 @@ Problems
 ==============
 
 .. timed:: hparsons_lg_regex_timed_post
-   :timelimit: 20
+   :timelimit: 15
    :noresult:
    :nofeedback:
    :nopause:
