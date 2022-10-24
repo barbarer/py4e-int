@@ -1,11 +1,40 @@
-BeautifulSoup with Requests
-----------------------------
+Group Work on BeautifulSoup with Requests
+--------------------------------------------
+
+It is best to use a POGIL approach with the following. In POGIL students work
+in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
+
+.. note::
+
+   If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.
+
+**Learning Objectives**
+
+Students will know and be able to do the following.
+
+*Content Objectives:*
+
+* Import the necessary libraries
+* Use requests to get HTML from a URL
+* Create a soup object from HTML
+* Use ``find`` and ``find_all`` to get data from a soup object
+* Use ``class_`` to find data with a CSS class
+* Get the text of a tag
+* Get the value for an attribute from a tag
+
+*Process Objectives:*
+
+* Put code in order.
+* Modify code to produce the correct output.
+
+Getting a tag from a soup object
+====================================
 
 BeautifulSoup makes it easy to extract
-the data you need from an HTML or XML page.
+the data you need from an HTML or XML page.  You can find a particular HTML tag.
 
 We will use the ``requests`` library to get a response object from a URL,
-create a ``BeautifulSoup`` object from the HTML content in the response, 
+create a ``BeautifulSoup`` object from the HTML content in the response,
 use ``find`` to find the first paragraph tag, and then
 print the first paragraph tag.
 
@@ -28,12 +57,14 @@ print the first paragraph tag.
     print(soup.find('p'))
 
 The ``html.parser`` is the HTML parser that is included in the standard Python 3 library.
+It is used to parse the HTML into a tree of tags.
 Information on other HTML parsers is available at:
 
 http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser
 
 .. parsonsprob:: bs_print_first_paragraph_pp
    :numbered: left
+   :order: 4-5-6, 0-1, 2-3, 9, 12, 11, 7-8, 9-10, 14, 13
    :adaptive:
 
    Put the following blocks in order to print the second paragraph from the Michigan Daily website.  Use the find_all method on
@@ -93,6 +124,7 @@ You can also find a tag with a particular class.
 .. parsonsprob:: bs_get_tag_text_with_class_pp
    :numbered: left
    :adaptive:
+   :order: 10, 3, 4, 2, 7, 6, 0-1, 5, 8, 9
 
    Put the following blocks in order to print the text for span which
    is a child of the h3 tag with a class of css-1pjbq1w.
@@ -145,6 +177,7 @@ get the value for an attribute of the tag.
 .. parsonsprob:: bs_print_get_all_href_pp
    :numbered: left
    :adaptive:
+   :order: 4, 3, 7, 8, 0-1, 10, 11, 9, 2, 6, 5
 
    Put the following blocks in order to find all the link tags and print the href for each one for the Michgian Daily.
    -----
@@ -176,7 +209,7 @@ How to Find Tags Inside of Tags
 
 Sometimes the tags that you want to find don't have a particular class that
 makes it easy to find them.  Then you can find a parent tag with a particular
-class and then use that tag to look for the tag you want.
+class and then use that tag to look for the child tag you want.
 
 .. note::
 
@@ -194,7 +227,7 @@ on what you are interested in viewing on a webpage, and then click on "Inspect".
 
 You will see the HTML source for the thing you inspected.
 
-.. figure:: ../images/divAndOl.png
+.. figure:: ../images/listitem.png
    :alt: Inspecting part of a webpage in the Chrome browser.
 
 You can use this information to find a parent tag such as the "li" tag that contains the "a" tag
@@ -224,6 +257,7 @@ first "a" tag in each "li" tag.
 .. parsonsprob:: bs_find_all_and_find
    :numbered: left
    :adaptive:
+   :order: 3, 2, 7, 6, 0-1, 11, 10, 12, 4, 8, 9, 5
 
    Put the following blocks in order to print the href for the first 'a' tag
    in each h2 tag with a class of "entry-title"
@@ -232,6 +266,8 @@ first "a" tag in each "li" tag.
    from bs4 import BeautifulSoup
    =====
    url = "https://www.michigandaily.com/"
+   =====
+   url = https://www.michigandaily.com/ #paired: url must be a string (in quotes)
    =====
    resp = requests.get(url)
    =====
@@ -250,3 +286,9 @@ first "a" tag in each "li" tag.
        a_tag = li.find('link') #paired: use a (anchor)
    =====
        print(a_tag.get("href",None))
+
+
+If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.
+
+.. groupsub:: bs_group_work_intro
+   :limit: 4
