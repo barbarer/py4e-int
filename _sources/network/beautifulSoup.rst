@@ -241,7 +241,7 @@ first "a" tag in each "li" tag.
 .. activecode:: bs_get_mini_nav_href
     :language: python3
 
-    This will print the first "href" inside each list item (li) with a class of "menu-item".
+    This will print the first "href" inside each list item (li) with a class of "menu-item-has-children".
     ~~~~
     import requests
     from bs4 import BeautifulSoup
@@ -252,7 +252,7 @@ first "a" tag in each "li" tag.
     soup = BeautifulSoup(resp.content, 'html.parser')
 
     # get all the li tags and find the first link (a) tag and print the href
-    li_list = soup.find_all("li", class_="menu-item")
+    li_list = soup.find_all("li", class_="menu-item-has-children")
     for li in li_list:
         a_tag = li.find('a')
         print(a_tag.get("href",None))
