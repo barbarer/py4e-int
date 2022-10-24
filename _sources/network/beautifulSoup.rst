@@ -5,92 +5,142 @@ BeautifulSoup makes it easy to extract
 the data you need from an HTML or XML page.
 
 We will use the ``requests`` library to get a response object from a URL,
-create a ``BeautifulSoup`` object from the HTML in the response, then
-print the first paragraph from the New York Times site.
+create a ``BeautifulSoup`` object from the HTML content in the response, then
+print the first paragraph from the site.
 
 .. activecode:: bs_get_print_first_para
     :language: python3
 
-    This will find and print the first paragraph from the New York Times site.
+    This will find and print the first paragraph from the Michigan Daily site.
     ~~~~
     import requests
     from bs4 import BeautifulSoup
 
     # get the response from the URL
-    url = "https://nytimes.com"
+    url = "https://www.michigandaily.com/"
     resp = requests.get(url)
 
     # create the soup object
     soup = BeautifulSoup(resp.content, 'html.parser')
 
     # Print the first paragraph in the soup
-    print(soup.p)
-
-
-We can also print all of the URLs on that page.
-Again, we will use the ``requests`` library to get a response object from a URL,
-create a ``BeautifulSoup`` object from the HTML in the response, get a list of all of the
-anchor (``a``) tags, then loop through the tags and
-extract the ``href`` attribute. Anchor tags are also known as link tags.
-
-.. activecode:: bs_get_all_a_tags_and_print_hrefs
-    :language: python3
-
-    This will find all of the 'a' tags and print the href for each of them.
-    ~~~~
-    import requests
-    from bs4 import BeautifulSoup
-
-    url = "https://nytimes.com"
-    resp = requests.get(url)
-    soup = BeautifulSoup(resp.content, 'html.parser')
-
-    # Retrieve all of the anchor tags
-    tags = soup.find_all('a')
-    for tag in tags:
-        print(tag.get('href', None))
-
-
-The program reads the HTML page from "http://www.dr-chuck.com/page1.htm",
-creates a BeautifulSoup object from the content of that HTML page, gets a list of the
-'a' tags. It then loops through the list of 'a' tags and prints the 'href' attribute
-for it or 'None' if there isn't an 'href' attribute.
-
-You can use also BeautifulSoup to pull out various parts of each tag:
-
-.. activecode:: bs_get_tag_info
-    :language: python3
-
-    This will find the first 'a' tag and print the information for it.
-    ~~~~
-    import requests
-    from bs4 import BeautifulSoup
-
-    url = "http://www.dr-chuck.com/page1.htm"
-    resp = requests.get(url)
-    soup = BeautifulSoup(resp.content, 'html.parser')
-
-    # Retrieve all of the anchor tags
-    tags = soup.find_all('a')
-    for tag in tags:
-        # Look at the parts of a tag
-        print('TAG:', tag)
-        print('URL:', tag.get('href', None))
-        print('Contents:', tag.contents[0])
-        print('Attrs:', tag.attrs)
+    print(soup.find(p))
 
 The ``html.parser`` is the HTML parser that is included in the standard Python 3 library.
 Information on other HTML parsers is available at:
 
 http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser
 
-How to Find Tags
-==================
+.. parsonsprob:: bs_print_first_paragraph_pp
+   :numbered: left
+   :adaptive:
+
+   Put the following blocks in order to print the second paragraph from the Michigan Daily website.  Use the find_all method on
+   BeautifulSoup to get a list of all of the paragraphs.
+   -----
+   import requests
+   from bs4 import BeautifulSoup
+   =====
+   import requests
+   import bs #paired: Use from bs4 import BeautifulSoup
+   =====
+   # get the response from the URL
+   url = "https://www.michigandaily.com/"
+   resp = requests.get(url)
+   =====
+   # create the soup object
+   soup = BeautifulSoup(resp.content, 'html.parser')
+   =====
+   # create the soup object
+   soup = BeautifulSoup(resp, 'html.parser') #paired: need to use resp.content
+   =====
+   p_list = soup.find_all('p')
+   =====
+   print(p_list[1])
+   =====
+   print(p_list[2]) #paired: the second item is at index 1
+
+
+We can also print the URLS for all of the links on a page.
+Again, we will use the ``requests`` library to get a response object from a URL,
+create a ``BeautifulSoup`` object from the HTML in the response, get a list of all of the
+link (``a``) tags, then loop through the tags and
+extract the ``href`` attribute.
+
+.. activecode:: bs_get_all_a_tags_and_print_hrefs
+    :language: python3
+
+    This will find all of the link tags and print the href for each of them.
+    ~~~~
+    import requests
+    from bs4 import BeautifulSoup
+
+    # get the soup object
+    url = "https://nytimes.com"
+    resp = requests.get(url)
+    soup = BeautifulSoup(resp.content, 'html.parser')
+
+    # print the href in each link (anchor) tag
+    tags = soup.find_all('a')
+    for tag in tags:
+        print(tag.get('href', None))
+
+.. parsonsprob:: bs_print_get_all_href_pp
+   :numbered: left
+   :adaptive:
+
+   Put the following blocks in order to find all the link tags and print the href for each one for the Michgian Daily.
+   -----
+   import requests
+   from bs4 import BeautifulSoup
+   =====
+   url = "https://nytimes.com"
+   =====
+   resp = requests.get(url)
+   =====
+   resp = requests.find(url) #paired: use get
+   =====
+   soup = BeautifulSoup(resp.content, 'html.parser')
+   =====
+   tags = soup.find_all('a')
+   =====
+   tags = soup.find_all('link') #paired: use a for link (anchor)
+   =====
+   for tag in tags:
+   =====
+       print(tag.get('href', None))
+   =====
+       print(tag.get('ref', None)) #paired: use href
+
+You can also find a tag with a particular tag and then print the text of that tag.
+
+.. activecode:: bs_get_class
+    :language: python3
+
+    This will print the text for the first headline on the New York Times page.
+    ~~~~
+    import requests
+    from bs4 import BeautifulSoup
+
+    url = "http://nytimes.com"
+    resp = requests.get(url)
+    soup = BeautifulSoup(resp.content, 'html.parser')
+
+    # get the headline with the class and print its text
+    tag = soup.find("span", class_="balancedHeadLine")
+    print(tag.text)
+
+How to Find Tags Inside of Tags
+===================================
+
+Sometimes the tags that you want to find don't have a particular class that
+makes it easy to find them.  Then you can find a parent tag with a particular
+class and then use that tag to find the tag you want.
 
 .. note::
 
-   Use ``find`` to get the first tag that meets some criteria and ``find_all``
-   to get a list of all tags that meet some criteria.
+   You can use 'find_all' to get a list of all tags of a type and then loop through
+   those tags and get the first tag of a type.
 
 You will typically first inspect a webpage to determine how to find what you are
 looking for in the page.  You can do that with the developer tools in the
@@ -106,12 +156,10 @@ You will see the HTML source for the thing you inspected.
 .. figure:: ../images/divAndOl.png
    :alt: Inspecting part of a webpage in the Chrome browser.
 
-You can use this information to find a parent tag such as the "div" tag that
-contains the "li" (list item)
-for each "a" tag for the mini nagivation bar in the New York Times webpage.
-You can then use ``find`` to
-find the "div" tag with the "css-1d8a290" class and then get all the
-"a" tags that are in the "div" tag.
+You can use this information to find a parent tag such as the "li" tag that contains the "a" tag
+in the nagivation bar in the Michigan Daily webpage.
+Use *find_all* to get all the "li" tags and then loop through those tags and use *find* to get the
+first "a" tag in each "li" tag.
 
 .. note::
 
@@ -120,16 +168,48 @@ find the "div" tag with the "css-1d8a290" class and then get all the
 .. activecode:: bs_get_mini_nav_href
     :language: python3
 
-    This will print the "href" for all the links in the mini nav header for the
-    New York Times page.
+    This will print the first "href" inside each list item (li) with a class of "menu-item".
     ~~~~
     import requests
     from bs4 import BeautifulSoup
 
-    url = "https://www.nytimes.com/"
+    # get the soup object
+    url = "https://www.michigandaily.com/"
     resp = requests.get(url)
     soup = BeautifulSoup(resp.content, 'html.parser')
-    div = soup.find("div", class_="css-1d8a290")
-    tags = div.find_all('a')
-    for tag in tags:
-        print(tag.get('href', None))
+
+    # get all the li tags and find the first link (a) tag and print the href
+    li_list = soup.find_all("li", class_="menu-item")
+    for li in li_list:
+        a_tag = li.find('a')
+        print(a_tag.get("href",None))
+
+.. parsonsprob:: bs_find_all_and_find
+   :numbered: left
+   :adaptive:
+
+   Put the following blocks in order to print the href for the first 'a' tag
+   in each h2 tag with a class of "entry-title"
+   -----
+   import requests
+   from bs4 import BeautifulSoup
+   =====
+   url = "https://www.michigandaily.com/"
+   =====
+   resp = requests.get(url)
+   =====
+   soup = BeautifulSoup(resp.content, 'html.parser')
+   =====
+   li_list = soup.find_all("h2", class_="entry-title")
+   =====
+   li_list = soup.find_all("h2", class="entry-title") #paired: must use class_
+   =====
+   for li in li_list:
+   =====
+   for li in tags: #paired: use li_list
+   =====
+       a_tag = li.find('a')
+   =====
+       a_tag = li.find('link') #paired: use a (anchor)
+   =====
+       print(a_tag.get("href",None))
