@@ -31,7 +31,9 @@ Getting a tag from a soup object
 ====================================
 
 BeautifulSoup makes it easy to extract
-the data you need from an HTML or XML page.  You can find a particular HTML tag.
+the data you need from an HTML or XML page.  It creates a soup object that
+contains all the tags in the page.  You can use ``find`` or ``find_all`` to find
+either the first of a type of a tag or a list of a type of tag.
 
 We will use the ``requests`` library to get a response object from a URL,
 create a ``BeautifulSoup`` object from the HTML content in the response,
@@ -293,6 +295,31 @@ first "a" tag in each "li" tag.
    =====
        print(a_tag.get("href",None))
 
+The Michigan Daily has a "Most Read" section. It is in a "div" tag with a
+class of "jetpack_top_posts_widget".  Inside that tag there are "li" (list item)
+tags.  In each "li" tag is an "a" tag.
+
+.. activecode:: bs_get_most_read_href
+    :language: python3
+
+    Complete the code below to print the
+    href values for the "a" tags in the "Most Read" section.
+    ~~~~
+    import requests
+    from bs4 import BeautifulSoup
+
+    # get the soup object
+    url = "https://www.michigandaily.com/"
+    resp = requests.get(url)
+    soup = BeautifulSoup(resp.content, 'html.parser')
+
+    # get the div tag with a class of "jetpack_top_posts_widget"
+
+    # get all the li tags in the div tag
+
+    # loop through the li tags
+
+        # get the 'a' tag and print the value of the "href" attribute
 
 If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.
 
