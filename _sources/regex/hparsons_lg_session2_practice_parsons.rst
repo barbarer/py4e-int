@@ -9,29 +9,29 @@ on it for about four minutes without solving it.
 Problems
 ==============
 
-.. .. selectquestion:: hparsons_lg_regex_1_practice_parsons
-..    :fromid: hparsons_lg_regex_1_hparsons
-..    :points: 10
+.. selectquestion:: hparsons_lg_regex_1_practice_parsons
+   :fromid: hparsons_lg_regex_1_hparsons
+   :points: 10
 
-.. .. selectquestion:: hparsons_lg_regex_2_practice_parsons
-..    :fromid: hparsons_lg_regex_2_hparsons
-..    :points: 10
+.. selectquestion:: hparsons_lg_regex_2_practice_parsons
+   :fromid: hparsons_lg_regex_2_hparsons
+   :points: 10
 
-.. .. selectquestion:: hparsons_lg_regex_3_practice_parsons
-..    :fromid: hparsons_lg_regex_3_hparsons
-..    :points: 10
+.. selectquestion:: hparsons_lg_regex_3_practice_parsons
+   :fromid: hparsons_lg_regex_3_hparsons
+   :points: 10
 
-.. .. selectquestion:: hparsons_lg_regex_4_practice_parsons
-..    :fromid: hparsons_lg_regex_4_hparsons
-..    :points: 10
+.. selectquestion:: hparsons_lg_regex_4_practice_parsons
+   :fromid: hparsons_lg_regex_4_hparsons
+   :points: 10
 
-.. .. selectquestion:: hparsons_lg_regex_5_practice_parsons
-..    :fromid: hparsons_lg_regex_5_hparsons
-..    :points: 10
+.. selectquestion:: hparsons_lg_regex_5_practice_parsons
+   :fromid: hparsons_lg_regex_5_hparsons
+   :points: 10
 
-.. .. selectquestion:: hparsons_lg_regex_6_practice_parsons
-..    :fromid: hparsons_lg_regex_6_hparsons
-..    :points: 10
+.. selectquestion:: hparsons_lg_regex_6_practice_parsons
+   :fromid: hparsons_lg_regex_6_hparsons
+   :points: 10
 
 .. hparsons:: hparsons_lg_regex_1_hparsons
     :language: regex
@@ -39,7 +39,6 @@ Problems
     :blockanswer: 0 1 2
 
     Please write a regex that would match both word "gray" and "grey".
-
     ~~~~
     --blocks--
     gr
@@ -120,7 +119,6 @@ Problems
     Please write a regex to capture a URL that only consists of characters, numbers, underscore, and dots.
     For example: www.abc.com, def_ghi.com, a678.cn
     Note that dots(".") should not appear consecutively, and should not appear as the first or last character. The dot must appear at least once.
-
     ~~~~
     --blocks--
     (?:\w+\.)
