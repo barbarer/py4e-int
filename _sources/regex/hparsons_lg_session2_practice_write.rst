@@ -39,8 +39,7 @@ Problems
     :autograde: unittest
 
     Please write a regex that would match both word "gray" and "grey".
-    Replace "YOUR_REGEX" with your answer, but do not remove other symbols.
-
+    Replace "YOUR_REGEX" with your answer, but do not remove other symbols
     ~~~~
     import re
 
@@ -68,7 +67,6 @@ Problems
 
     Please write a regex that would match a word that starts with an uppercase letter and followed by at least one lowercase letters, like "Apple", "Banana", or "Carrot".
     Replace "YOUR_REGEX" with your answer, but do not remove other symbols.
-
     ~~~~
     import re
 
@@ -84,7 +82,7 @@ Problems
         def testOne(self):
             self.assertEqual(match_word('Apple'), True, 'Should match "Apple"')
             self.assertEqual(match_word('Banana'), True, 'Should match "Banana"')
-            self.assertEqual(match_word('It'), False, 'Should not match "It"')
+            self.assertEqual(match_word('It'), True, 'Should match "It"')
             self.assertEqual(match_word('FRUIT'), False, 'Should not match "FRUIT"')
             self.assertEqual(match_word('vegetable'), False, 'Should not match "vegetable"')
     myTests().main()
@@ -98,7 +96,6 @@ Problems
 
     Please write a regex to capture numbers with 5-7 digits. For example: 48105, 103028, 1234567.
     Replace "YOUR_REGEX" with your answer, but do not remove other symbols.
-
     ~~~~
     import re
 
@@ -130,7 +127,6 @@ Problems
     Capture words that start with a vowel (a, e, i, o, u), but end with a consonant (any letters that are not a, e, i, o, u).
     For example, it should match "unicorn", "it", and "element".
     Replace "YOUR_REGEX" with your answer, but do not remove other symbols.
-
     ~~~~
     import re
 
@@ -160,7 +156,6 @@ Problems
 
     Please write a regex to replace the 'YOUR_REGEX' below to match any price in the form of $3.45 or $23.32 or $400.
     Note that we are using re.findall(), so please make sure your regex would return the full match string.
-
     ~~~~
     import re
 
@@ -183,11 +178,10 @@ Problems
     :practice: T
     :autograde: unittest
 
-    Please write a regex to capture a URL that only consists of characters, numbers, underscore, and dots. 
+    Please write a regex to capture a URL that only consists of characters, numbers, underscore, and dots.
     For example: www.abc.com, def_ghi.com, a678.cn
     Note that dots(".") should not appear consecutively, and should not appear as the first or last character. The dot must appear at least once.
     Replace "YOUR_REGEX" with your answer, but do not remove other symbols.
-
     ~~~~
     import re
 
