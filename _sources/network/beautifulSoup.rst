@@ -5,8 +5,9 @@ BeautifulSoup makes it easy to extract
 the data you need from an HTML or XML page.
 
 We will use the ``requests`` library to get a response object from a URL,
-create a ``BeautifulSoup`` object from the HTML content in the response, then
-print the first paragraph from the site.
+create a ``BeautifulSoup`` object from the HTML content in the response, 
+use ``find`` to find the first paragraph tag, and then
+print the first paragraph tag.
 
 .. activecode:: bs_get_print_first_para
     :language: python3
