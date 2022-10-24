@@ -15,12 +15,12 @@ Students will know and be able to do the following.
 *Content Objectives:*
 
 * Import the necessary libraries
-* Use requests to get HTML from a URL
-* Create a soup object from HTML
+* Use requests to get the HTML from a URL
+* Create a soup object from the HTML
 * Use ``find`` and ``find_all`` to get data from a soup object
-* Use ``class_`` to find data with a CSS class
-* Get the text of a tag
-* Get the value for an attribute from a tag
+* Use ``class_`` to find data with a particular CSS class
+* Get the text of a tag using ``tag.text``
+* Get the value for an attribute from a tag using ``tag.get(attribute)``
 
 *Process Objectives:*
 
@@ -97,7 +97,7 @@ http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser
 Getting text from a tag
 =========================
 Some tags have text like a paragraph tag or a span tag.  You can use ``tagName.text`` to get the text.
-You can also find a tag with a particular class.
+You can also find a tag with a particular CSS class.
 
 .. activecode:: bs_get_text_with_class
     :language: python3
@@ -254,6 +254,11 @@ first "a" tag in each "li" tag.
     for li in li_list:
         a_tag = li.find('a')
         print(a_tag.get("href",None))
+
+.. note ::
+
+   You don't have to use all the classes that a tag has.  Try to find a class
+   that is specific to the tags you are looking for.
 
 .. parsonsprob:: bs_find_all_and_find
    :numbered: left
