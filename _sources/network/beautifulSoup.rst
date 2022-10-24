@@ -41,7 +41,7 @@ print the first paragraph tag.
 .. activecode:: bs_get_print_first_para
     :language: python3
 
-    This will find and print the first paragraph from the Michigan Daily site.
+    This will find and print the first paragraph tag from the Michigan Daily site.
     ~~~~
     import requests
     from bs4 import BeautifulSoup
@@ -67,7 +67,7 @@ http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser
    :order: 4-5-6, 0-1, 2-3, 9, 12, 11, 7-8, 9-10, 14, 13
    :adaptive:
 
-   Put the following blocks in order to print the second paragraph from the Michigan Daily website.  Use the find_all method on
+   Put the following blocks in order to print the second paragraph from the Michigan Daily website.  It uses the ``find_all`` method on
    BeautifulSoup to get a list of all of the paragraphs.
    -----
    import requests
@@ -118,16 +118,16 @@ You can also find a tag with a particular class.
 
 .. note ::
 
-   When you specify a class you must use ``class_`` as the keyword.  This is becuase class is already
-   used to define a new class in Python.
+   When you specify a CSS class you must use ``class_`` as the keyword.  This is becuase ``class`` is already
+   a keyword that is used to define a new class in Python.
 
 .. parsonsprob:: bs_get_tag_text_with_class_pp
    :numbered: left
    :adaptive:
    :order: 10, 3, 4, 2, 7, 6, 0-1, 5, 8, 9
 
-   Put the following blocks in order to print the text for span which
-   is a child of the h3 tag with a class of css-1pjbq1w.
+   Put the following blocks in order to print the text for span tag which
+   is a child of a h3 tag with a class of css-1pjbq1w.
    -----
    import requests
    from bs4 import BeautifulSoup
@@ -154,7 +154,8 @@ You can also find a tag with a particular class.
 Getting data from tags with attributes
 ===========================================
 Some tags have attribute and value pairs like the link (anchor) tag.  You can
-get the value for an attribute of the tag.
+get the value for an attribute of the tag.  A link or anchor tag looks like
+``<a href="url">link text</a>``. An example is ``<a href="https://www.w3schools.com">W3Schools</a>``.
 
 .. activecode:: bs_get_all_a_tags_and_print_hrefs
     :language: python3
