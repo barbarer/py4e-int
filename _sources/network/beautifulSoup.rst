@@ -23,8 +23,8 @@ print the first paragraph from the site.
     # create the soup object
     soup = BeautifulSoup(resp.content, 'html.parser')
 
-    # Print the first paragraph in the soup
-    print(soup.find(p))
+    # Print the first paragraph tag in the soup
+    print(soup.find('p'))
 
 The ``html.parser`` is the HTML parser that is included in the standard Python 3 library.
 Information on other HTML parsers is available at:
@@ -56,21 +56,77 @@ http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser
    =====
    p_list = soup.find_all('p')
    =====
+   p_list = soup.find_all(p) #paired: the tag must be a string
+   =====
    print(p_list[1])
    =====
    print(p_list[2]) #paired: the second item is at index 1
 
+Getting text from a tag
+=========================
+Some tags have text like a paragraph tag or a span tag.  You can use ``tagName.text`` to get the text.
+You can also find a tag with a particular class.
 
-We can also print the URLS for all of the links on a page.
-Again, we will use the ``requests`` library to get a response object from a URL,
-create a ``BeautifulSoup`` object from the HTML in the response, get a list of all of the
-link (``a``) tags, then loop through the tags and
-extract the ``href`` attribute.
+.. activecode:: bs_get_text_with_class
+    :language: python3
+
+    This will print the text for the site description paragraph.
+    ~~~~
+    import requests
+    from bs4 import BeautifulSoup
+
+    # create the soup object from the HTML
+    url = "https://www.michigandaily.com/"
+    resp = requests.get(url)
+    soup = BeautifulSoup(resp.content, 'html.parser')
+
+    # get the headline with the class and print its text
+    tag = soup.find("p", class_="site-description")
+    print(tag.text)
+
+.. note ::
+
+   When you specify a class you must use ``class_`` as the keyword.  This is becuase class is already
+   used to define a new class in Python.
+
+.. parsonsprob:: bs_get_tag_text_with_class_pp
+   :numbered: left
+   :adaptive:
+
+   Put the following blocks in order to print the text for span which
+   is a child of the h3 tag with a class of css-1pjbq1w.
+   -----
+   import requests
+   from bs4 import BeautifulSoup
+   =====
+   url = "https://www.nytimes.com/"
+   =====
+   resp = requests.get(url)
+   =====
+   resp = requests.get('url') #paired: don't put quotes around url - it is a variable
+   =====
+   soup = BeautifulSoup(resp.content, 'html.parser')
+   =====
+   tag = soup.find("h3", class_="css-1pjbq1w")
+   =====
+   tag = soup.find(h3, class_="css-1pjbq1w") #paired: need quotes around h3.
+   =====
+   tag = tag.find('span')
+   =====
+   tag = soup.find('span') #paired: use tag.find
+   =====
+   print(tag.text)
+
+
+Getting data from tags with attributes
+===========================================
+Some tags have attribute and value pairs like the link (anchor) tag.  You can
+get the value for an attribute of the tag.
 
 .. activecode:: bs_get_all_a_tags_and_print_hrefs
     :language: python3
 
-    This will find all of the link tags and print the href for each of them.
+    This will find all of the link tags in the New York Times site and print the href for each of them.
     ~~~~
     import requests
     from bs4 import BeautifulSoup
@@ -102,6 +158,8 @@ extract the ``href`` attribute.
    =====
    soup = BeautifulSoup(resp.content, 'html.parser')
    =====
+   soup = BeautifulSoup(resp, 'html.parser') #paired: must use .content
+   =====
    tags = soup.find_all('a')
    =====
    tags = soup.find_all('link') #paired: use a for link (anchor)
@@ -112,30 +170,12 @@ extract the ``href`` attribute.
    =====
        print(tag.get('ref', None)) #paired: use href
 
-You can also find a tag with a particular tag and then print the text of that tag.
-
-.. activecode:: bs_get_class
-    :language: python3
-
-    This will print the text for the first headline on the New York Times page.
-    ~~~~
-    import requests
-    from bs4 import BeautifulSoup
-
-    url = "http://nytimes.com"
-    resp = requests.get(url)
-    soup = BeautifulSoup(resp.content, 'html.parser')
-
-    # get the headline with the class and print its text
-    tag = soup.find("span", class_="balancedHeadLine")
-    print(tag.text)
-
 How to Find Tags Inside of Tags
 ===================================
 
 Sometimes the tags that you want to find don't have a particular class that
 makes it easy to find them.  Then you can find a parent tag with a particular
-class and then use that tag to find the tag you want.
+class and then use that tag to look for the tag you want.
 
 .. note::
 
@@ -160,10 +200,6 @@ You can use this information to find a parent tag such as the "li" tag that cont
 in the nagivation bar in the Michigan Daily webpage.
 Use *find_all* to get all the "li" tags and then loop through those tags and use *find* to get the
 first "a" tag in each "li" tag.
-
-.. note::
-
-   You must use class followed by an underscore when looking for a tag with a particular class.
 
 .. activecode:: bs_get_mini_nav_href
     :language: python3
