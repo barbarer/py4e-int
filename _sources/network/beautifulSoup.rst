@@ -44,6 +44,7 @@ print the first paragraph tag.
     :language: python3
 
     This will find and print the first paragraph tag from the Michigan Daily site.
+    It will interpret the tag as HTML and show just the text of the tag.
     ~~~~
     import requests
     from bs4 import BeautifulSoup
