@@ -70,14 +70,14 @@ Here is another example.  Run the code to see what it does.
 
     What type of thing (class name) is ``data`` in the code above?
 
-    - :str: It is an object of the str (string) class
+    - :str|string: It is an object of the str (string) class
       :.*: Try again
 
 .. fillintheblank:: net_json_what_type_returned_d1
 
     What type of thing (class name) is ``d1`` in the code above?
 
-    - :dict: It is an object of the dict (dictionary) class.
+    - :dict|dictionary: It is an object of the dict (dictionary) class.
       :.*: Try again
 
 .. mchoice:: webParsingJSON_MC_construct
