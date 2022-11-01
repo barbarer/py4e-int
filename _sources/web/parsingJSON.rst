@@ -5,7 +5,8 @@ You can read a JSON string from a file or from a URL and convert it into a Pytho
 You can also convert a Python dictionary or list into a JSON string.
 
 Converting a JSON String into a Python Object
---------------------------------------------------
+===============================================
+
 .. index::
     single: JSON
 
