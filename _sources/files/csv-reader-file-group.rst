@@ -29,7 +29,7 @@ Many people need to read and process CSV files. There is a module that makes thi
 
 Look at the data in the file below.
 
-.. reveal:: stocks.txt
+.. reveal:: stocksr.txt
    :showtitle: Show
    :hidetitle: Hide
 
@@ -259,7 +259,7 @@ Reading Comma-Separated Values (CSV) Files with a Header Row
 
 Here is another sample example CSV file.  It contains the number of passengers (in thousands) for transatlantic air travel for each month for the years 1958 to 1960.  The first row is a header that explains the data. The data is from https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html.
 
-.. reveal:: airtravel.csv
+.. reveal:: airtravelr.csv
    :showtitle: Show
    :hidetitle: Hide
 
@@ -420,7 +420,7 @@ Writing a Comma-Separated Values (CSV) File with CSV Writer
 
 Here is another sample example CSV file.  It contains the Oscar winners for Best Actress from 1928 to 2016.  It has a header row to explain the data in each column.
 
-.. reveal:: oscar_age_actress.csv
+.. reveal:: oscar_age_actressr.csv
    :showtitle: Show
    :hidetitle: Hide
 
