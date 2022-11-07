@@ -9,7 +9,7 @@ Look at the code below and predict what will be printed.
 
     What is the last thing (last line of text) that will be printed when the code below runs?
 
-    - :['"]?Attr: yes['"]?: It prints "Attr: " plus the value of the hide attribute in the email tag.
+    - :['"]?Attr: ['"]?yes['"]?: It prints "Attr: " plus the value of the hide attribute in the email tag.
       :['"]?yes['"]?: Something will be printed before the value. Look at the print statement again.
       :.*: What is the value of the hide attribute?
 
