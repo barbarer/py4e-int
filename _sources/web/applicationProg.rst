@@ -99,8 +99,10 @@ Try entering that in a browser window.  You can use Python to the get data from 
     import json
 
     # get the data
-    response = requests.get('http://cat-fact.herokuapp.com/facts')
+    response = requests.get('https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1')
     data = response.text
     in_list = json.loads(data)
     print(type(in_list))
-    print(in_list)
+    in_dict = in-list[0]
+    print(type(in_dict))
+    print(in_dict.get("fact"))
