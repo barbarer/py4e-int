@@ -86,7 +86,6 @@ the web, we call these *web services*.
 Getting JSON Data From an API
 ===============================
 
-
 There is a listing of free APIs that you can use
 at https://github.com/public-apis/public-apis
 
@@ -96,6 +95,7 @@ Try entering that in a browser window.  You can use Python to the get data
 from the response text as shown below.
 
 .. activecode:: web-api-get-dog-fact
+    :language: python3
     :caption: Get a dog fact from an API
 
     import requests
@@ -103,10 +103,11 @@ from the response text as shown below.
 
     # get the data
     response = requests.get('https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1')
+    print(response.status_code)
     data = response.text
     in_list = json.loads(data)
     print(type(in_list))
-    in_dict = in-list[0]
+    in_dict = in_list[0]
     print(type(in_dict))
     print(in_dict.get("fact"))
 
@@ -120,17 +121,18 @@ with all the parameter names and values and then pass the dictionary to the
 ``requests.get(url,dict)`` as shown below.
 
 .. activecode:: web-api-get-dog-fact-with-parms-dict
+    :language: python3
     :caption: Get a dog fact from an api with a dictionary with parameters
 
     import requests
     import json
 
     # get the data
-    parms = dict{'number': 1}
+    parms = {'number': 1}
     response = requests.get('https://dog-facts-api.herokuapp.com/api/v1/resources/dogs', parms)
     data = response.text
     in_list = json.loads(data)
     print(type(in_list))
-    in_dict = in-list[0]
+    in_dict = in_list[0]
     print(type(in_dict))
     print(in_dict.get("fact"))
