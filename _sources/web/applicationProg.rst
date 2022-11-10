@@ -92,14 +92,39 @@ There is a listing of free APIs that you can use at https://github.com/public-ap
 One of the free APIs has cat facts.  You can get a cat fact by going to the URL: http://cat-fact.herokuapp.com/facts.
 Try entering that in a browser window.  You can use Python to the get data from the response text as shown below.
 
-.. activecode:: web-api-get-cat-fact
-    :caption: Convert Python object to JSON string
+.. activecode:: web-api-get-dog-fact
+    :caption: Get a dog fact from an API
 
     import requests
     import json
 
     # get the data
     response = requests.get('https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1')
+    data = response.text
+    in_list = json.loads(data)
+    print(type(in_list))
+    in_dict = in-list[0]
+    print(type(in_dict))
+    print(in_dict.get("fact"))
+
+
+Using a Dictionary for URL Parameters
+=======================================
+
+To add parameters to a URL you can just add them to the URL string as shown above but spaces in
+strings also need to be replaced.  An easier way is to create a dictionary
+with all the parameter names and values and then pass the dictionary to the
+``requests.get(url,dict)`` as shown below.
+
+.. activecode:: web-api-get-dog-fact-with-parms-dict
+    :caption: Get a dog fact from an api with a dictionary with parameters
+
+    import requests
+    import json
+
+    # get the data
+    parms = dict{'number': 1}
+    response = requests.get('https://dog-facts-api.herokuapp.com/api/v1/resources/dogs', parms)
     data = response.text
     in_list = json.loads(data)
     print(type(in_list))
