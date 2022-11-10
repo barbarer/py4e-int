@@ -87,10 +87,13 @@ Getting JSON Data From an API
 ===============================
 
 
-There is a listing of free APIs that you can use at https://github.com/public-apis/public-apis
+There is a listing of free APIs that you can use
+at https://github.com/public-apis/public-apis
 
-One of the free APIs has cat facts.  You can get a cat fact by going to the URL: http://cat-fact.herokuapp.com/facts.
-Try entering that in a browser window.  You can use Python to the get data from the response text as shown below.
+One of the free APIs has dog facts.  You can get a dog fact by going to the
+URL: https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1.
+Try entering that in a browser window.  You can use Python to the get data
+from the response text as shown below.
 
 .. activecode:: web-api-get-dog-fact
     :caption: Get a dog fact from an API
