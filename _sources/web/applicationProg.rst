@@ -91,8 +91,8 @@ at https://github.com/public-apis/public-apis
 
 One of the free APIs has dog facts.  You can get a dog fact by going to the
 URL: https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1.
-Try entering that in a browser window.  You can use Python to the get data
-from the response text as shown below.
+Try entering that in a browser window.  You can also use Python to the get data
+from an API using a URL as shown below.
 
 .. activecode:: web-api-get-dog-fact
     :language: python3
@@ -112,10 +112,11 @@ from the response text as shown below.
 Using a Dictionary for URL Parameters
 =======================================
 
-To add parameters to a URL you can just add them to the URL string as shown above but spaces in
-strings also need to be replaced.  An easier way is to create a dictionary
+To add parameters to a URL you can just add them to the URL string as shown above (``?number=1``) but spaces in
+strings need to be replaced.  An easier way to add parameters to a URL is to
+create a dictionary
 with all the parameter names and values and then pass the dictionary to the
-``requests.get(url,dict)`` as shown below.
+``requests.get`` after the URL as shown below.
 
 .. activecode:: web-api-get-dog-fact-with-parms-dict
     :language: python3
