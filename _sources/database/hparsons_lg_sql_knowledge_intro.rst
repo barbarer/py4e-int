@@ -27,7 +27,7 @@ AND Keyword
         ('2022-11-06', 'food_drink', 'ramen', '15'),
         ('2022-11-09', 'food_drink', 'boba', '5.5');
     ^^^^
-    -- The following statement selects the "date", "item", and "price" of entries 
+    -- The following statement selects the "date", "item", and "price" of entries
     -- that are in the "food_drink" "category", and "price" is over 10.
     SELECT date, item, price FROM bookkeeping WHERE category = "food_drink" AND price > 10
 
@@ -38,10 +38,10 @@ UPDATE Keyword
 .. activecode:: hparsons_lg_sql_intro_update
     :language: sql
 
-    With the same table ``bookkeeping``:
+    Here is a similar table for ``bookkeeping``:
 
     .. image:: https://i.ibb.co/yYZ9tyY/intro-bookkeeping.png
-    
+
     Sometimes we want to update certain records.
 
     note: When you run the code, there will be several execution results.
@@ -66,7 +66,7 @@ UPDATE Keyword
     UPDATE bookkeeping SET price = price + 2 WHERE item = "boba";
 
     -- The following line selects all data to display the change.
-    SELECT * FROM bookkeeping 
+    SELECT * FROM bookkeeping
 
 
 JOIN Keyword
@@ -75,10 +75,10 @@ JOIN Keyword
 .. activecode:: hparsons_lg_sql_intro_join
     :language: sql
 
-    Consider as a publishing company, we have two table ``authors`` and ``books``:
+    Consider as a publishing company, we have two tables: ``authors`` and ``books``:
 
     .. image:: https://i.ibb.co/98D76Dh/intro-join.png
-    
+
     Sometimes we want to merge the information from different tables.
 
     note: When you run the code, there will be several execution results.
@@ -141,7 +141,7 @@ What to do next
          // get prev set cookie
          var EXP_COOKIE = 'hparsons_lg_sql_221115'
          var cond = getCookie(EXP_COOKIE);
-         
+
          // if no prev set cookie: generate random condition and set cookie
          if (cond != 'wr' && cond != 'hp') {
             var v = Math.floor(Math.random() * 2);
