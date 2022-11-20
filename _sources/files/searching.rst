@@ -23,6 +23,7 @@ prefix:
     for line in fhand:
         if line.startswith('From:'):
             print(line)
+    fhand.close()
 
 
 The output looks great since the only lines we are seeing are those
@@ -46,6 +47,7 @@ strips whitespace from the right side of a string as follows:
         line = line.rstrip()
         if line.startswith('From:'):
             print(line)
+    fhand.close()
 
 .. mchoice:: file-search-mc-rstrip
     :practice: T
@@ -78,6 +80,7 @@ uninteresting lines as follows:
             continue
             # Process our 'interesting' line
         print(line)
+    fhand.close()
 
 The output of the program is the same. In English, the uninteresting
 lines are those which do not start with "From:", which we skip using
@@ -102,6 +105,7 @@ University of Cape Town in South Africa):
         if line.find('@uct.ac.za') == -1:
             continue
         print(line)
+    fhand.close()
 
 
 .. mchoice:: file-search-mc-find
