@@ -53,7 +53,7 @@ Practice Problems - Regular Expressions
     --blocks--
     [aeiou]
     [a-z]
-    * least
+    * 
     [^aeiou]
     +
 
