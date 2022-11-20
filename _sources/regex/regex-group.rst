@@ -18,6 +18,7 @@ Students will know and be able to do the following.
 * Learn about some common quantifiers (\*, +, ?, {n})
 * Learn about character classes (\\d, \\w, \\s, .)
 * Learn about character sets ([an]) and ranges ([0-9])
+* Learn how to negate a character set using [^0-9]
 * Learn how to escape a special character to match it
 * Learn about greedy matching and how to make it not greedy
 * Learn how to return just part of a match using parentheses
@@ -196,8 +197,10 @@ You can specify a range of items to match.
     ~~~~
     import re
 
-    str1 = "832 3928.23 382.28378 5 92,000 32-928 +32 -32"
+    str1 = "832 3928.23 382.28378 5 92,000 32-928 +32 -32 ABC"
     res1 = re.findall("[0-9.]+", str1)
+    print(res1)
+    res2 = re.findall("[^0-9.]+", str1)
     print(res1)
 
 
@@ -214,6 +217,19 @@ You can specify a range of items to match.
 
    What does ``[0-9.]+`` mean?
 
+
+.. mchoice:: regex_neg_char_range_digits
+   :answer_a: Match anything other than 0-9 and a period zero to one times
+   :answer_b: Match anything other than 0-9 and a period one to many times
+   :answer_c: Match ^ or 0-9 or a period zero to one times
+   :answer_d: Match ^ or 0-9 or a period one to many times
+   :correct: b
+   :feedback_a: The + means one to many times
+   :feedback_b: Correct!
+   :feedback_c: The ^ negates the items
+   :feedback_d: The ^ negates the items
+
+   What does ``[^0-9.]+`` mean?
 
 Character Classes
 ============================

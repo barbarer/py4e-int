@@ -53,21 +53,21 @@ Practice Problems - Regular Expressions
     --blocks--
     [aeiou]
     [a-z]
-    * 
+    *
     [^aeiou]
     +
 
-.. hparsons:: hp-url-p5
+.. hparsons:: hp-match-period-p5
     :language: regex
     :randomize:
     :blockanswer: 0 1 2
 
-    Please write a regex to capture a URL that only consists of characters, numbers, underscore, and dots.
-    For example: www.abc.com, def_ghi.com, a678.cn
-    Note that dots(".") should not appear consecutively, and should not appear as the first or last character. The dot must appear at least once.
+    Write a regex that captures strings that have two digits followed by a period and then four letters from a to z.
     ~~~~
     --blocks--
-    (?:\w+\.)
-    +
-    \w+
+    \d{2}
     \.
+    [a-z]{4}
+    .
+    \d[2]
+    \w{4}
