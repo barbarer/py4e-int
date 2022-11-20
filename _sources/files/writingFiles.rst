@@ -68,7 +68,7 @@ lost if the power goes off.
     >>> fout.close()
 
 
-We could close the files which we open for read as well, but we can be a
+We should close the files which we open for read as well, but we can be a
 little sloppy if we are only opening a few files since Python makes sure
 that all open files are closed when the program ends. When we are
 writing files, we want to explicitly close the files so as to leave

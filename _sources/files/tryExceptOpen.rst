@@ -75,6 +75,7 @@ when the ``open`` fails as follows (creating a new file *search7.py*):
     for line in fhand:
         if line.startswith('Subject:'):
             count = count + 1
+    fhand.close()
     print('There were', count, 'subject lines in', fname)
 
 The ``exit`` function terminates the program. It is a function

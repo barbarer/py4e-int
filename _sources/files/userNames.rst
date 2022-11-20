@@ -19,6 +19,7 @@ This is quite simple to do by reading the file name from the user using
     for line in fhand:
         if line.startswith('Subject:'):
             count = count + 1
+    fhand.close()
     print('There were', count, 'subject lines in', fname)
 
 We read the file name from the user and place it in a variable named
@@ -35,7 +36,7 @@ repeatedly on different files.
      Enter the file name: mbox-short.txt
    There were 27 subject lines in mbox-short.txt
 
-.. parsonsprob:: file-user-pp-input
+.. parsonsprob:: file-user-pp-input-v2
     :adaptive:
     :practice: T
     :numbered: left
@@ -54,6 +55,7 @@ repeatedly on different files.
     =====
         count = count + 1
     =====
+    fhand.close()
     print('There were', count, 'lines in', fname)
 
 Before peeking at the next section, take a look at the above program and
@@ -80,6 +82,7 @@ eyes of our users?"
             for line in fhand:
                 if line.endswith('Received:'):
                 count = count + 1
+            fhand.close()
             print('There were', count, 'lines starting with "Received:" in the file', fname)
 
             =====
@@ -103,4 +106,5 @@ eyes of our users?"
                 if line.startswith('Received:'):
                 # Check at the beginning of the line, not the end
                     count = count + 1 # Correct indentation.
+            fhand.close()
             print('There were', count, 'lines starting with "Received:" in the file', fname)
