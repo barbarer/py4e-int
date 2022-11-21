@@ -4,7 +4,7 @@ Practice Problems - Advanced Regular Expressions
 .. hparsons:: hpa-day-p1
     :language: regex
     :randomize:
-    :blockanswer: 0 1 0 1 2 0 3 4 5
+    :blockanswer: 0 1 2 3 4 5 6 7 8
 
     Create a regex that finds dates in the format MM/DD/YY or MM/DD/YYYY and returns
     just the year part.
@@ -12,7 +12,10 @@ Practice Problems - Advanced Regular Expressions
     --blocks--
     \d{2}
     /
+    \d{2}
+    /
     (
+    \d{2}
     |
     \d{4}
     )
@@ -20,7 +23,7 @@ Practice Problems - Advanced Regular Expressions
 .. hparsons:: hpa-phone-p2
     :language: regex
     :randomize:
-    :blockanswer: 0 1 2 3 1 3 4
+    :blockanswer: 0 1 2 3 4 5 6
 
     Create a regex that finds phone numbers like 333-232-3403 or (333) 232 3403.
     ~~~~
@@ -28,6 +31,8 @@ Practice Problems - Advanced Regular Expressions
     \(?
     \d{3}
     \)?
+    [-\s]
+    \d{3}
     [-\s]
     \d{4}
     (?
@@ -67,6 +72,7 @@ Practice Problems - Advanced Regular Expressions
     (?:\.\d\d)
     ?
     (\.\d\d)
+    *
 
 
 .. hparsons:: hpa-url-p5
@@ -83,3 +89,4 @@ Practice Problems - Advanced Regular Expressions
     +
     \w+
     \.
+    *
