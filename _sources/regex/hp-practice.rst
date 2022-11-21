@@ -63,14 +63,17 @@ Practice Problems - Regular Expressions
 .. hparsons:: hp-match-period-p5
     :language: regex
     :randomize:
-    :blockanswer: 0 1 2
+    :blockanswer: 0 1 2 3 4
 
     Write a regex that captures strings that have two digits followed by a period and then four letters from a to z.
     ~~~~
     --blocks--
-    \d{2}
+    \d
+    {2}
     \.
-    [a-z]{4}
+    [a-z]
+    {4}
     .
-    \d[2]
-    \w{4}
+    [2]
+    \w
+    [4]
