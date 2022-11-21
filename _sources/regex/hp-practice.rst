@@ -60,7 +60,7 @@ Practice Problems - Regular Expressions
     +
     [!aeiou]
 
-.. hparsons:: hp-match-period-p5
+.. hparsons:: hp-match-period-p5-v2
     :language: regex
     :randomize:
     :blockanswer: 0 1 2 3 4
