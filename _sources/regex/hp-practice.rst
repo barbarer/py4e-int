@@ -12,7 +12,7 @@ Practice Problems - Regular Expressions
     gr
     [ae]
     y
-    a
+    {ae}
 
 
 .. hparsons:: hp-upper-lower-p2
@@ -27,6 +27,7 @@ Practice Problems - Regular Expressions
     [a-z]
     +
     \w
+    *
 
 
 .. hparsons:: hp-digits-p3
@@ -39,7 +40,8 @@ Practice Problems - Regular Expressions
     --blocks--
     \d
     {5,7}
-    {5}
+    /d
+    {5:7}
 
 
 .. hparsons:: hp-vowels-letter-not-vowel-p4
@@ -56,6 +58,7 @@ Practice Problems - Regular Expressions
     *
     [^aeiou]
     +
+    [!aeiou]
 
 .. hparsons:: hp-match-period-p5
     :language: regex
