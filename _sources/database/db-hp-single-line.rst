@@ -23,8 +23,6 @@ Let's practice what we have learned about SQL.
     WHERE
     english < 60 AND math > 90
     english < 60 & math > 90
-    GET
-    TABLE
 
 
 .. hparsons:: db-hp-change-p2
