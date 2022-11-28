@@ -3,6 +3,28 @@ Practice Problems - Mixed-up Code
 
 Let's practice what we have learned about SQL.
 
+
+.. hparsons:: hparsons_test
+    :language: sql
+    :randomize:
+    :blockanswer: 0 1 2 3 4 5
+
+    In the ``grades`` table:
+
+    .. image:: https://i.ibb.co/r6qShy5/practice-grade.png
+
+    Please write a SELECT statement to retrieve the ``student_id``, ``test_name``,
+    and ``english`` of all entries whose ``english`` is lower than 60 and ``math`` is higher than 90.
+    ~~~~
+    --blocks--
+    SELECT
+    student_id, test_name, english
+    FROM
+    grades
+    WHERE
+    english < 60 AND math > 90
+    english < 60 & math > 90
+
 .. hparsons:: db-hp-get-and-p1
     :language: sql
     :randomize:
@@ -105,7 +127,6 @@ Let's practice what we have learned about SQL.
     a ``student_id`` of type integer, a ``test_name`` of type text,
     an ``english`` score of type integer and a ``math`` score of type
     integer.
-
     ~~~~
     --blocks--
     CREATE
