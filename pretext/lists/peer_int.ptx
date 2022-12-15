@@ -1,0 +1,954 @@
+<?xml version="1.0"?>
+<section xml:id="lists_peer-instruction-lists-multiple-choice-questions">
+  <title>Peer Instruction: Lists Multiple Choice Questions</title>
+  <exercise label="dz-lecture_14_4">
+    <statement>
+      <p>Q-1: What does the following code print?</p>
+      <program language="python">
+        <input>
+lst = ['abc', 'def', 'ghi']
+lst[1] = 'wxyz'
+print(len(lst))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Correct! lst[1] = 'wxyz' replaces the second element with 'wxyz'. But the total numebr of elements still remains 3.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>9</p>
+        </statement>
+        <feedback>
+          <p>Try again. lst[1] = 'wxyz' replaces the second element with 'wxyz'. But the total numebr of elements still remains 3.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>10</p>
+        </statement>
+        <feedback>
+          <p>Try again. lst[1] = 'wxyz' replaces the second element with 'wxyz'. But the total numebr of elements still remains 3.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>4</p>
+        </statement>
+        <feedback>
+          <p>Try again. lst[1] = 'wxyz' replaces the second element with 'wxyz'. But the total numebr of elements still remains 3.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>No output; there is an error in the second line</p>
+        </statement>
+        <feedback>
+          <p>Try again. There is no bug with the second line.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_14_6">
+    <statement>
+      <p>Q-2: What is the value of <c>a</c> after this code runs?</p>
+      <program language="python">
+        <input>
+a = [2, 4, 6, 8]
+a.remove(4)
+a.pop(2)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>[2, 4]</p>
+        </statement>
+        <feedback>
+          <p>Try again. a.remove(4) removes 4 from the list.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[6, 8]</p>
+        </statement>
+        <feedback>
+          <p>Try again. a.pop(2) pops out the value at Index 2 and removes it from the list. Therefore, 8 is removed.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>[2, 6]</p>
+        </statement>
+        <feedback>
+          <p>Correct! a.remove(4) removes 4 and a.pop(2) pops out 8.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[2, 8]</p>
+        </statement>
+        <feedback>
+          <p>Try again. a.pop(2) pops out the value at Index 2 and removes it from the list. Therefore, 8 is removed.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Nothing. The code produces an error.</p>
+        </statement>
+        <feedback>
+          <p>Try again. The code will not produce an error.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_14_7">
+    <statement>
+      <p>Q-3: What is the value of <c>a</c> after this code runs?</p>
+      <program language="python">
+        <input>
+a = [2, 4, 6, 8]
+a.pop(2)
+a.remove(4)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>[2, 4]</p>
+        </statement>
+        <feedback>
+          <p>Try again. a.remove(4) removes 4 from the list.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[6, 8]</p>
+        </statement>
+        <feedback>
+          <p>Try again. a.pop(2) pops out the value at Index 2 and removes it from the list. Therefore, 6 is removed.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[2, 6]</p>
+        </statement>
+        <feedback>
+          <p>Try again. a.pop(2) pops out the value at Index 2 and removes it from the list. Therefore, 6 is removed.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>[2, 8]</p>
+        </statement>
+        <feedback>
+          <p>Correct! a.pop(2) pops out 6, and a.remove(4) removes 4 from the list.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Nothing. The code produces an error.</p>
+        </statement>
+        <feedback>
+          <p>Try again. The code will not produce an error.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_15_4">
+    <statement>
+      <p>Q-4: What is the value of the list <c>a</c> after the code below runs?</p>
+      <program language="python">
+        <input>
+a = [[1, 2, 3], [4, 5]]
+b = a[:]
+b.append(8)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>[[1, 2, 3], [4, 5]] (unchanged)</p>
+        </statement>
+        <feedback>
+          <p>Correct! [:] makes a shallow copy of the array. b.append(8) allows to modify the copy without damaging the original.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[[1, 2, 3], [4, 5], 8]</p>
+        </statement>
+        <feedback>
+          <p>Try again. [:] makes a shallow copy of the array a. Therefore, b.append(8) allows to modify the copy without damaging the original array a.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[[1, 2, 3], [4, 5, 8]]</p>
+        </statement>
+        <feedback>
+          <p>Try again. [:] makes a shallow copy of the array a. Therefore, b.append(8) allows to modify the copy without damaging the original array a.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[[1, 2, 3], [4, 5], [8]]</p>
+        </statement>
+        <feedback>
+          <p>Try again. [:] makes a shallow copy of the array a. Therefore, b.append(8) allows to modify the copy without damaging the original array a.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_15_8">
+    <statement>
+      <p>Q-5: Which list is produced by this code?</p>
+      <program language="python">
+        <input>
+list(range(2, 7, 3))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>[2, 5, 8]</p>
+        </statement>
+        <feedback>
+          <p>Try again. range(2, 7, 3) creates a sequence of numbers from 2 to 7, but increment by 3. Therefore, 8 is not included.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>[2, 5]</p>
+        </statement>
+        <feedback>
+          <p>Correct. range(2, 7, 3) creates a sequence of numbers from 2 to 7, but increment by 3.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[2, 5, 7]</p>
+        </statement>
+        <feedback>
+          <p>Try again. range(2, 7, 3) creates a sequence of numbers from 2 to 7, but increment by 3. Therefore, 7 is not included.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[2, 3, 4, 5, 6, 7]</p>
+        </statement>
+        <feedback>
+          <p>Try again. range(2, 7, 3) creates a sequence of numbers from 2 to 7, but increment by 3. Therefore, 3, 4, 6 and 7 are not included.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_15_9">
+    <statement>
+      <p>Q-6: Which list is produced by this code?</p>
+      <program language="python">
+        <input>
+list(range(4, 9, 4))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>[4, 8]</p>
+        </statement>
+        <feedback>
+          <p>Correct! range(4, 9, 4) creates a sequence of numbers from 4 to 9, but increment by 4.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[4, 8, 12]</p>
+        </statement>
+        <feedback>
+          <p>Try again. range(4, 9, 4) creates a sequence of numbers from 4 to 9, but increment by 4. Therefore, 12 is not included.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[4, 8, 9]</p>
+        </statement>
+        <feedback>
+          <p>Try again. range(4, 9, 4) creates a sequence of numbers from 4 to 9, but increment by 4. Therefore, 9 is not included.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[4, 5, 6, 7, 8, 9]</p>
+        </statement>
+        <feedback>
+          <p>Try again. range(4, 9, 4) creates a sequence of numbers from 4 to 9, but increment by 4. Therefore, 5, 6, 7 and 9 are not included.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_15_10">
+    <statement>
+      <p>Q-7: What does the following code print?</p>
+      <program language="python">
+        <input>
+lst = [3, 6, 9]
+sum = 0
+counter = 0
+while counter &lt; len(lst):
+   sum += counter
+   counter += 2
+print(sum)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>18</p>
+        </statement>
+        <feedback>
+          <p>Try again. Since len(lst) = 3, when counter = 4, the loop stops. Because sum += counter comes before counter += 2, sum = 2.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>6</p>
+        </statement>
+        <feedback>
+          <p>Try again. Since len(lst) = 3, when counter = 4, the loop stops. Because sum += counter comes before counter += 2, sum = 2.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>2</p>
+        </statement>
+        <feedback>
+          <p>Correct! Since len(lst) = 3, when counter = 4, the loop stops. Because sum += counter comes before counter += 2, sum = 2.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>9</p>
+        </statement>
+        <feedback>
+          <p>Try again. Since len(lst) = 3, when counter = 4, the loop stops. Because sum += counter comes before counter += 2, sum = 2.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above</p>
+        </statement>
+        <feedback>
+          <p>Try again. Try to think about what is the value of counter when the loop stops.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_30_4">
+    <statement>
+      <p>Q-8: What is the maximum segment sum in this list?</p>
+      <program language="python">
+        <input>
+[2, -5, 8, -6, 10]
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>8</p>
+        </statement>
+        <feedback>
+          <p>Try again. The only contiguous portion of the list that has the greatest sum is [8, -6, 10], summing up tp 12.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>9</p>
+        </statement>
+        <feedback>
+          <p>Try again. The only contiguous portion of the list that has the greatest sum is [8, -6, 10], summing up tp 12.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>10</p>
+        </statement>
+        <feedback>
+          <p>Try again. The only contiguous portion of the list that has the greatest sum is [8, -6, 10], summing up tp 12.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>12</p>
+        </statement>
+        <feedback>
+          <p>Correct! The only contiguous portion of the list that has the greatest sum is [8, -6, 10], summing up tp 12.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>20</p>
+        </statement>
+        <feedback>
+          <p>Try again. The only contiguous portion of the list that has the greatest sum is [8, -6, 10], summing up tp 12.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_30_5">
+    <statement>
+      <p>Q-9: What is the maximum segment sum in this list?</p>
+      <program language="python">
+        <input>
+[2, -5, 8, -6, 10]
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Try again. The only contiguous portion of the list that has the greatest sum is [10], summing up tp 10.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>8</p>
+        </statement>
+        <feedback>
+          <p>Try again. The only contiguous portion of the list that has the greatest sum is [10], summing up tp 10.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>10</p>
+        </statement>
+        <feedback>
+          <p>Correct! The only contiguous portion of the list that has the greatest sum is [10], summing up tp 10.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>12</p>
+        </statement>
+        <feedback>
+          <p>Try again. The only contiguous portion of the list that has the greatest sum is [10], summing up tp 10.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>15</p>
+        </statement>
+        <feedback>
+          <p>Try again. The only contiguous portion of the list that has the greatest sum is [10], summing up tp 10.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_30_9">
+    <statement>
+      <p>Q-10: [0, 1, 2, 3, 4]
+            How many times does Approach A compute the sum 1 + 2 + 3 in the above list?</p>
+      <program language="python">
+        <input>
+Approach A:
+
+def max_segment_sum(L):
+   '''(list of int) -&gt; int
+   Return maximum segment sum of L.
+   '''
+   max_so_far = 0
+   for lower in range(len(L)):
+      for upper in range(lower, len(L)):
+         sum = 0
+         for i in range(lower, upper+1):
+            sum = sum + L[i]
+      max_so_far = max(max_so_far, sum)
+   return max_so_far
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>Try again. In the first pass of the outer loop, Approach A would start from lower = 0, moving upper from 0 to 4. In this pass, the sum of [0,1,2,3] and [0,1,2,3,4] were computed. During the second pass, Approach A would start from lower = 1, moving upper from 1 to 4. In this pass, the sum of [1,2,3] and [1,2,3,4] were computed. There would be no more computations of 1+2+3 later since lower would move pass 1. Therefore there are 4 computations of 1+2+3 in total.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>2</p>
+        </statement>
+        <feedback>
+          <p>Try again. In the first pass of the outer loop, Approach A would start from lower = 0, moving upper from 0 to 4. In this pass, the sum of [0,1,2,3] and [0,1,2,3,4] were computed. During the second pass, Approach A would start from lower = 1, moving upper from 1 to 4. In this pass, the sum of [1,2,3] and [1,2,3,4] were computed. There would be no more computations of 1+2+3 later since lower would move pass 1. Therefore there are 4 computations of 1+2+3 in total.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Try again. In the first pass of the outer loop, Approach A would start from lower = 0, moving upper from 0 to 4. In this pass, the sum of [0,1,2,3] and [0,1,2,3,4] were computed. During the second pass, Approach A would start from lower = 1, moving upper from 1 to 4. In this pass, the sum of [1,2,3] and [1,2,3,4] were computed. There would be no more computations of 1+2+3 later since lower would move pass 1. Therefore there are 4 computations of 1+2+3 in total.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>4</p>
+        </statement>
+        <feedback>
+          <p>Correct. In the first pass of the outer loop, Approach A would start from lower = 0, moving upper from 0 to 4. In this pass, the sum of [0,1,2,3] and [0,1,2,3,4] were computed. During the second pass, Approach A would start from lower = 1, moving upper from 1 to 4. In this pass, the sum of [1,2,3] and [1,2,3,4] were computed. There would be no more computations of 1+2+3 later since lower would move pass 1. Therefore there are 4 computations of 1+2+3 in total.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>5</p>
+        </statement>
+        <feedback>
+          <p>Try again. In the first pass of the outer loop, Approach A would start from lower = 0, moving upper from 0 to 4. In this pass, the sum of [0,1,2,3] and [0,1,2,3,4] were computed. During the second pass, Approach A would start from lower = 1, moving upper from 1 to 4. In this pass, the sum of [1,2,3] and [1,2,3,4] were computed. There would be no more computations of 1+2+3 later since lower would move pass 1. Therefore there are 4 computations of 1+2+3 in total.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_30_10">
+    <statement>
+      <p>Q-11: [0, 1, 2, 3, 4]
+            How many times does Approach A compute the sum 0 + 1 + 2 in the above list?</p>
+      <program language="python">
+        <input>
+Approach A:
+
+def max_segment_sum(L):
+   '''(list of int) -&gt; int
+   Return maximum segment sum of L.
+   '''
+   max_so_far = 0
+   for lower in range(len(L)):
+      for upper in range(lower, len(L)):
+         sum = 0
+         for i in range(lower, upper+1):
+            sum = sum + L[i]
+      max_so_far = max(max_so_far, sum)
+   return max_so_far
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>Try again. In the first pass of the outer loop, Approach A would start from lower = 0, moving upper from 0 to 4. In this pass, the sum of [0,1,2], [0,1,2,3] and [0,1,2,3,4] were computed. There would be no more computations of 0+1+2 since lower would move pass 0. Therefore there would be 3 times.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>2</p>
+        </statement>
+        <feedback>
+          <p>Try again. In the first pass of the outer loop, Approach A would start from lower = 0, moving upper from 0 to 4. In this pass, the sum of [0,1,2], [0,1,2,3] and [0,1,2,3,4] were computed. There would be no more computations of 0+1+2 since lower would move pass 0. Therefore there would be 3 times.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Correct. In the first pass of the outer loop, Approach A would start from lower = 0, moving upper from 0 to 4. In this pass, the sum of [0,1,2], [0,1,2,3] and [0,1,2,3,4] were computed. There would be no more computations of 0+1+2 since lower would move pass 0. Therefore there would be 3 times.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>4</p>
+        </statement>
+        <feedback>
+          <p>Try again. In the first pass of the outer loop, Approach A would start from lower = 0, moving upper from 0 to 4. In this pass, the sum of [0,1,2], [0,1,2,3] and [0,1,2,3,4] were computed. There would be no more computations of 0+1+2 since lower would move pass 0. Therefore there would be 3 times.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>5</p>
+        </statement>
+        <feedback>
+          <p>Try again. In the first pass of the outer loop, Approach A would start from lower = 0, moving upper from 0 to 4. In this pass, the sum of [0,1,2], [0,1,2,3] and [0,1,2,3,4] were computed. There would be no more computations of 0+1+2 since lower would move pass 0. Therefore there would be 3 times.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_32_2">
+    <statement>
+      <p>Q-12: For which of the following is a sort useful?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Displaying the top fiction sales on Amazon</p>
+        </statement>
+        <feedback>
+          <p>Try Again. In this senerio sorting is useful because ranking the sales needs sorting the numbers. Is there other case you find useful?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Putting a list of words in alphabetical order</p>
+        </statement>
+        <feedback>
+          <p>Try Again. In this senerio sorting is useful because ranking the words needs sorting the strings. Is there other case you find useful?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Printing the average GPA of 100 students</p>
+        </statement>
+        <feedback>
+          <p>Try Again. Avergaing a set is permutation invariant, so there is no need to sort.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Two of the above</p>
+        </statement>
+        <feedback>
+          <p>Correct. Both A and B needs sorting.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>All of the above</p>
+        </statement>
+        <feedback>
+          <p>Try Again. In case C, avergaing a set is permutation invariant, so there is no need to sort.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_32_8">
+    <statement>
+      <p>Q-13: Which of the following is true of insertion sort?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Once a value is placed in the sorted part, it will never move again</p>
+        </statement>
+        <feedback>
+          <p>Try Again. This is false because the sorted part may expect another value that is smaller than the leftmost value of the sorted part. So the elements in the sorted part may still need to swap.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>All values in the sorted part are always less than or equal to all values in the unsorted part</p>
+        </statement>
+        <feedback>
+          <p>Try Again. This is false because the sorted part may expect another value that is smaller than the leftmost value of the sorted part. So the elements in the sorted part may still need to swap.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Both of the above are true</p>
+        </statement>
+        <feedback>
+          <p>Try Again. None of A and B are correct.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>None of the above is true</p>
+        </statement>
+        <feedback>
+          <p>Correct. None of A and B are correct.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_33_4">
+    <statement>
+      <p>Q-14: The list below reflects the state of the list after 3 passes of insertion sort. What will be in the list after the next (fourth) pass?</p>
+      <program language="python">
+        <input>
+[10, 20, 30, 40, 16, 94, 8, 22]
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>[8, 20, 30, 40, 16, 94, 10, 22]</p>
+        </statement>
+        <feedback>
+          <p>Try Again. After the third pass the sorted part is [10, 20, 30, 40], and the unsorted part is [16, 94, 8, 22]. The next value in the unsorted part is 16 and the algorithm will place 16 in the correct position in the sorted part. Thus, the sorted part becomes [10, 16, 20, 30, 40] and the rest is [94, 8, 22]. So the whole list is [10, 16, 20, 30, 40, 94, 8, 22].</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>[10, 16, 20, 30, 40, 94, 8, 22]</p>
+        </statement>
+        <feedback>
+          <p>Correct. After the third pass the sorted part is [10, 20, 30, 40], and the unsorted part is [16, 94, 8, 22]. The next value in the unsorted part is 16 and the algorithm will place 16 in the correct position in the sorted part. Thus, the sorted part becomes [10, 16, 20, 30, 40] and the rest is [94, 8, 22]. So the whole list is [10, 16, 20, 30, 40, 94, 8, 22].</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[10, 16, 30, 40, 20, 94, 8, 22]</p>
+        </statement>
+        <feedback>
+          <p>Try Again. After the third pass the sorted part is [10, 20, 30, 40], and the unsorted part is [16, 94, 8, 22]. The next value in the unsorted part is 16 and the algorithm will place 16 in the correct position in the sorted part. Thus, the sorted part becomes [10, 16, 20, 30, 40] and the rest is [94, 8, 22]. So the whole list is [10, 16, 20, 30, 40, 94, 8, 22].</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[8, 10, 20, 30, 40, 16, 94, 22]</p>
+        </statement>
+        <feedback>
+          <p>Try Again. After the third pass the sorted part is [10, 20, 30, 40], and the unsorted part is [16, 94, 8, 22]. The next value in the unsorted part is 16 and the algorithm will place 16 in the correct position in the sorted part. Thus, the sorted part becomes [10, 16, 20, 30, 40] and the rest is [94, 8, 22]. So the whole list is [10, 16, 20, 30, 40, 94, 8, 22].</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[10, 20, 30, 40, 8, 94, 16, 22]</p>
+        </statement>
+        <feedback>
+          <p>Try Again. After the third pass the sorted part is [10, 20, 30, 40], and the unsorted part is [16, 94, 8, 22]. The next value in the unsorted part is 16 and the algorithm will place 16 in the correct position in the sorted part. Thus, the sorted part becomes [10, 16, 20, 30, 40] and the rest is [94, 8, 22]. So the whole list is [10, 16, 20, 30, 40, 94, 8, 22].</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_33_5">
+    <statement>
+      <p>Q-15: The list below reflects the state of the list after 3 passes of insertion sort. What will be in the list after the next (fourth) pass?</p>
+      <program language="python">
+        <input>
+[5, 7, 14, 19, 16, 2, 32, 9]
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>[5, 7, 14, 16, 19, 2, 32, 9]</p>
+        </statement>
+        <feedback>
+          <p>Correct. After the third pass the sorted part is [5, 7, 14, 19], and the unsorted part is [16, 2, 32, 9]. The next value in the unsorted part is 16 and the algorithm will place 16 in the correct position in the sorted part. Thus, the sorted part becomes [5, 7, 14, 16, 19] and the rest is [2, 32, 9]. So the whole list is [5, 7, 14, 16, 19, 2, 32, 9].</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[5, 7, 14, 19, 2, 16, 32, 9]</p>
+        </statement>
+        <feedback>
+          <p>Try Again. After the third pass the sorted part is [5, 7, 14, 19], and the unsorted part is [16, 2, 32, 9]. The next value in the unsorted part is 16 and the algorithm will place 16 in the correct position in the sorted part. Thus, the sorted part becomes [5, 7, 14, 16, 19] and the rest is [2, 32, 9]. So the whole list is [5, 7, 14, 16, 19, 2, 32, 9].</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[5, 7, 16, 19, 14, 2, 32, 9]</p>
+        </statement>
+        <feedback>
+          <p>Try Again. After the third pass the sorted part is [5, 7, 14, 19], and the unsorted part is [16, 2, 32, 9]. The next value in the unsorted part is 16 and the algorithm will place 16 in the correct position in the sorted part. Thus, the sorted part becomes [5, 7, 14, 16, 19] and the rest is [2, 32, 9]. So the whole list is [5, 7, 14, 16, 19, 2, 32, 9].</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[2, 5, 7, 14, 19, 16, 32, 9]</p>
+        </statement>
+        <feedback>
+          <p>Try Again. After the third pass the sorted part is [5, 7, 14, 19], and the unsorted part is [16, 2, 32, 9]. The next value in the unsorted part is 16 and the algorithm will place 16 in the correct position in the sorted part. Thus, the sorted part becomes [5, 7, 14, 16, 19] and the rest is [2, 32, 9]. So the whole list is [5, 7, 14, 16, 19, 2, 32, 9].</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[2, 7, 14, 19, 16, 5, 32, 9]</p>
+        </statement>
+        <feedback>
+          <p>Try Again. After the third pass the sorted part is [5, 7, 14, 19], and the unsorted part is [16, 2, 32, 9]. The next value in the unsorted part is 16 and the algorithm will place 16 in the correct position in the sorted part. Thus, the sorted part becomes [5, 7, 14, 16, 19] and the rest is [2, 32, 9]. So the whole list is [5, 7, 14, 16, 19, 2, 32, 9].</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_33_11">
+    <statement>
+      <p>Q-16: Which of the following is true of bubble sort?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Once a value is placed in the sorted part, it will never move again</p>
+        </statement>
+        <feedback>
+          <p>Try Again. This is correct because in every pass, the greatest value of the unsorted pass will be moved to the sorted part. Therefore, the sorted part in the right of the array contains sorted elements that are greater than every elements in the unsorted part. Therefore, the sorted part will not expect any elements to affect it.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>There is never a value in the sorted part that is smaller than some value in the unsorted part</p>
+        </statement>
+        <feedback>
+          <p>Try Again. This is correct because in every pass, the greatest value of the unsorted pass will be moved to the sorted part. Therefore, the sorted part in the right of the array contains sorted elements that are greater than every elements in the unsorted part. Therefore, the sorted part will not expect any elements to affect it.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Both of the above are true</p>
+        </statement>
+        <feedback>
+          <p>Correct. All of A and B are correct.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above is true</p>
+        </statement>
+        <feedback>
+          <p>Try Again. None of A and B are correct.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_34_2">
+    <statement>
+      <p>Q-17: Which of the following matches the contents of the list after one pass of bubble sort?</p>
+      <program language="python">
+        <input>
+[5, 9, 0, 4, 6, 8, 2]
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>[5, 0, 9, 6, 4, 2, 8]</p>
+        </statement>
+        <feedback>
+          <p>Try Again. During the first pass, the list becomes [-, 5, 9, -, 0, 4, 6, 8, 2], and then [5, -, 9, 0, -, 4, 6, 8, 2], and then [5, 0, -, 9, 4, -, 6, 8, 2], and then [5, 0, 4, -, 9, 6, -, 8, 2], and then [5, 0, 4, 6, -, 9, 8, -, 2], and then [5, 0, 4, 6, 8, -, 9, 2, -], and then [5, 0, 4, 6, 8, 2, 9]</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[5, 9, 0, 4, 6, 2, 8]</p>
+        </statement>
+        <feedback>
+          <p>Try Again. During the first pass, the list becomes [- , 5, 9, -, 0, 4, 6, 8, 2], and then [5, -, 9, 0, -, 4, 6, 8, 2], and then [5, 0, -, 9, 4, -, 6, 8, 2], and then [5, 0, 4, -, 9, 6, -, 8, 2], and then [5, 0, 4, 6, -, 9, 8, -, 2], and then [5, 0, 4, 6, 8, -, 9, 2, -], and then [5, 0, 4, 6, 8, 2, 9]</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[5, 0, 9, 4, 6, 8, 2]</p>
+        </statement>
+        <feedback>
+          <p>Try Again. During the first pass, the list becomes [-, 5, 9, -, 0, 4, 6, 8, 2], and then [5, -, 9, 0, -, 4, 6, 8, 2], and then [5, 0, -, 9, 4, -, 6, 8, 2], and then [5, 0, 4, -, 9, 6, -, 8, 2], and then [5, 0, 4, 6, -, 9, 8, -, 2], and then [5, 0, 4, 6, 8, -, 9, 2, -], and then [5, 0, 4, 6, 8, 2, 9]</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>[5, 0, 4, 6, 8, 2, 9]</p>
+        </statement>
+        <feedback>
+          <p>Correct. During the first pass, the list becomes [-, 5, 9, -, 0, 4, 6, 8, 2], and then [5, -, 9, 0, -, 4, 6, 8, 2], and then [5, 0, -, 9, 4, -, 6, 8, 2], and then [5, 0, 4, -, 9, 6, -, 8, 2], and then [5, 0, 4, 6, -, 9, 8, -, 2], and then [5, 0, 4, 6, 8, -, 9, 2, -], and then [5, 0, 4, 6, 8, 2, 9]</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_34_3">
+    <statement>
+      <p>Q-18: Which of the following matches the contents of the list after one pass of bubble sort?</p>
+      <program language="python">
+        <input>
+[2, 10, 1, 7, 15, 9, 1]
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>[2, 1, 7, 15, 9, 1, 10]</p>
+        </statement>
+        <feedback>
+          <p>Try Again. During the first pass, the list becomes [-,2,10,-,1,7,15,9,1], and then [2,-,10,1,-,7,15,9,1], and then [2,1,-,10,7,-,15,9,1], and then [2,1,7,-,10,15,-,9,1], and then [2,1,7,10,-,15,9,-,1], and then [2,1,7,10,9,-,15,1,-], and then [2,1,7,10,9,1,15]</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[2, 1, 7, 10, 9, 1, 15]</p>
+        </statement>
+        <feedback>
+          <p>Try Again. During the first pass, the list becomes [-,2,10,-,1,7,15,9,1], and then [2,-,10,1,-,7,15,9,1], and then [2,1,-,10,7,-,15,9,1], and then [2,1,7,-,10,15,-,9,1], and then [2,1,7,10,-,15,9,-,1], and then [2,1,7,10,9,-,15,1,-], and then [2,1,7,10,9,1,15]</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[2, 1, 10, 7, 15, 9, 1]</p>
+        </statement>
+        <feedback>
+          <p>Try Again. During the first pass, the list becomes [-,2,10,-,1,7,15,9,1], and then [2,-,10,1,-,7,15,9,1], and then [2,1,-,10,7,-,15,9,1], and then [2,1,7,-,10,15,-,9,1], and then [2,1,7,10,-,15,9,-,1], and then [2,1,7,10,9,-,15,1,-], and then [2,1,7,10,9,1,15]</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[2, 1, 10, 7, 15, 1, 9]</p>
+        </statement>
+        <feedback>
+          <p>Correct. During the first pass, the list becomes [-,2,10,-,1,7,15,9,1], and then [2,-,10,1,-,7,15,9,1], and then [2,1,-,10,7,-,15,9,1], and then [2,1,7,-,10,15,-,9,1], and then [2,1,7,10,-,15,9,-,1], and then [2,1,7,10,9,-,15,1,-], and then [2,1,7,10,9,1,15]</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_34_5">
+    <statement>
+      <p>Q-19: Which sort produces the following values on each pass?</p>
+      <program language="python">
+        <input>
+[5, 9, 0, 4, 6, 8, 2]
+[5, 9, 0, 4, 6, 8, 2]
+[5, 9, 0, 4, 6, 8, 2]
+[0, 5, 9, 4, 6, 8, 2]
+[0, 4, 5, 9, 6, 8, 2]
+[0, 4, 5, 6, 9, 8, 2]
+[0, 4, 5, 6, 8, 9, 2]
+[0, 2, 4, 5, 6, 8, 9]
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Selection</p>
+        </statement>
+        <feedback>
+          <p>Try Again. During the first pass, selection sort would find the min value of the entire list, which is 2 in this case, and then swap with the first index, so after the first round it would be [2, 9, 0, 4, 6, 8, 5]</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Insertion</p>
+        </statement>
+        <feedback>
+          <p>Correct. During each pass i, the ith value of the list is inserted into the left sorted part of the list.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Bubble</p>
+        </statement>
+        <feedback>
+          <p>Try Again. Bubble sort places the sorted part on the right part after each round, but the lists in the question has left part sorted.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

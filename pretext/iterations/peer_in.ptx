@@ -1,0 +1,722 @@
+<?xml version="1.0"?>
+<section xml:id="iterations_peer-instruction-iterations-multiple-choice-questions">
+  <title>Peer Instruction: Iterations Multiple Choice Questions</title>
+  <exercise label="ctp-iterations-04_moreloops_05">
+    <statement>
+      <p>Q-1: Which of the following prints the numbers <c>i</c> through <c>n</c>?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement id="ctp-iterations-04_moreloops_05_opt_a">
+          <pre>for i in range(1,i):</pre>
+        </statement>
+        <feedback id="ctp-iterations-04_moreloops_05_opt_a">
+          <p>Incorrect! Here the range printed is 1 to i-1</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-iterations-04_moreloops_05_opt_b">
+          <pre>for i in range(1,n):</pre>
+        </statement>
+        <feedback id="ctp-iterations-04_moreloops_05_opt_b">
+          <p>Incorrect! Here the range printed is 1 to n-1</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-iterations-04_moreloops_05_opt_c">
+          <pre>for i in range(1,n+1):</pre>
+        </statement>
+        <feedback id="ctp-iterations-04_moreloops_05_opt_c">
+          <p>Incorrect! Here the range printed is 1 to n</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-iterations-04_moreloops_05_opt_d">
+          <pre>for i in range(i,n):</pre>
+        </statement>
+        <feedback id="ctp-iterations-04_moreloops_05_opt_d">
+          <p>Incorrect! Here the range printed is i to n-1</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement id="ctp-iterations-04_moreloops_05_opt_e">
+          <p>None of the above</p>
+        </statement>
+        <feedback id="ctp-iterations-04_moreloops_05_opt_e">
+          <p>Correct! Use range(i, n+1) to print numbers through i to n</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-iterations-04_moreloops_06">
+    <statement>
+      <p>Q-2: Which of the following adds up the numbers 1 through 4?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement id="ctp-iterations-04_moreloops_06_opt_a">
+          <pre>for i in range(1,5):
+   sum = 0
+   sum = sum + i</pre>
+        </statement>
+        <feedback id="ctp-iterations-04_moreloops_06_opt_a">
+          <p>Incorrect! Here the sum will be set to 0 each time the loop runs from 1 to 4.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-iterations-04_moreloops_06_opt_b">
+          <pre>sum = 0
+for i in range(1,5):
+   sum = sum + 1</pre>
+        </statement>
+        <feedback id="ctp-iterations-04_moreloops_06_opt_b">
+          <p>Incorrect! sum needs to be added by i and not 1.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-iterations-04_moreloops_06_opt_c">
+          <pre>sum = 0
+   for i in range(1,5):
+   sum = sum + sum</pre>
+        </statement>
+        <feedback id="ctp-iterations-04_moreloops_06_opt_c">
+          <p>Incorrect! sum needs to added by i and not sum.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement id="ctp-iterations-04_moreloops_06_opt_d">
+          <pre>sum = 0
+for i in range(1,5):
+   sum = sum + i</pre>
+        </statement>
+        <feedback id="ctp-iterations-04_moreloops_06_opt_d">
+          <p>Correct! The code will keep adding numbers from 1 to 4 with each iteration.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-iterations-04_moreloops_06_opt_e">
+          <p>I don't know</p>
+        </statement>
+        <feedback id="ctp-iterations-04_moreloops_06_opt_e">
+          <p>Incorrect! Define a variable, say sum, and set it to 0. Run a loop from 1 to 4 and keep adding i to sum.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-iterations-04_moreloops_08">
+    <statement>
+      <p>Q-3: What does the following code print?</p>
+      <pre>n = 4
+for i in range(1,n):
+   print(i,n,end='')
+   n = 6</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1 4 2 4 3 4</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! n has been reset to 6 inside the loop. So, the code should print 6 from the second iteration. However, the n inside range will not be affected by this reset.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>1 4 2 6 3 6</p>
+        </statement>
+        <feedback>
+          <p>Correct! n has been reset to 6 inside the loop. So, the code should print 6 from the second iteration. However, the n inside range will not be affected by this reset.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1 4 2 6 3 6 4 6 5 6</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! n has been reset to 6 inside the loop. So, the code should print 6 from the second iteration. However, the n inside range will not be affected by this reset.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>This will cause an error</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! n has been reset to 6 inside the loop. So, the code should print 6 from the second iteration. However, the n inside range will not be affected by this reset.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! n has been reset to 6 inside the loop. So, the code should print 6 from the second iteration. However, the n inside range will not be affected by this reset.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-iterations-04_moreloops_11">
+    <statement>
+      <p>Q-4: Which of the following generates this pattern for <c>n = 5</c>?</p>
+      <pre>*****
+*****
+*****
+*****
+*****</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement id="ctp-iterations-04_moreloops_11_opt_a">
+          <pre>for i in range(0,n):
+   print("*" * i)</pre>
+        </statement>
+        <feedback id="ctp-iterations-04_moreloops_11_opt_a">
+          <p>Incorrect! Although there will be 5 iterations, it will not print 5 rows and columns of asterisks. With each iteration, i columns of asterisks will be printed. It will generate a staircase pattern.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement id="ctp-iterations-04_moreloops_11_opt_b">
+          <pre>for i in range(0,n):
+   print("*" * n)</pre>
+        </statement>
+        <feedback id="ctp-iterations-04_moreloops_11_opt_b">
+          <p>Correct! This will print 5 rows and columns of asterisks. There will be 5 iterations. With each iteration, n=5 columns of asterisks will be printed.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-iterations-04_moreloops_11_opt_c">
+          <pre>for i in range(1,n):
+   print("*" * i)</pre>
+        </statement>
+        <feedback id="ctp-iterations-04_moreloops_11_opt_c">
+          <p>Incorrect! This code will run 4 iterations, starting from 1 through n-1=4. Also, with each iteration, i columns of * will be printed. It will generate a staircase pattern.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-iterations-04_moreloops_11_opt_d">
+          <pre>for i in range(1,n):
+   print("*" * n)</pre>
+        </statement>
+        <feedback id="ctp-iterations-04_moreloops_11_opt_d">
+          <p>Incorrect! This will print 4 rows and 5 columns of asterisks. There will be 4 iterations, starting from 1 through n-1=4. With each iteration, n=5 columns of asterisks will be printed.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-iterations-04_moreloops_11_opt_e">
+          <p>I don't know</p>
+        </statement>
+        <feedback id="ctp-iterations-04_moreloops_11_opt_e">
+          <p>Incorrect! Print n=5 columns of asterisks. Run a for loop to print n=5 rows.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-iterations-04_moreloops_13">
+    <statement>
+      <p>Q-5: For <c>n = 5</c>, which of the following is the number of frontspaces and stars printed?</p>
+      <program language="python">
+        <input>
+ for r in range(1, n + 1):
+     print(' ' * frontspaces, '*' * stars)
+
+
+    *
+   ***
+  *****
+ *******
+*********
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>frontspaces = (n-r) / 2, stars = r</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! (n - r) / 2 can output a non-integer. This will cause an error.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>frontspaces = n - r, stars = 2 * r</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This will not print the correct pattern. For instance, take n = 5 and r = 1. To print the first row, we need 4 frontspaces and 1 star. But here, n-r = 4 and 2 * r = 2</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>frontspaces = n - r, stars = 2 * r - 1</p>
+        </statement>
+        <feedback>
+          <p>Correct! This will print the correct pattern. For instance, take n = 5 and r = 1. To print the first row, we need 4 frontspaces and 1 star. Here, n-r = 4 and 2 * r - 1 = 1</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>frontspaces = r, stars = n - r</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This will not print the correct pattern. For instance, take n = 5 and r = 1. To print the first row, we need 4 frontspaces and 1 star. But here, r = 1 and n - r = 4.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! For instance, to print the first row we need 4 frontspaces and 1 star. So, n - r = 5 - 1 = 4 and 2 * r - 1 = 2 * 1 - 1 = 1.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-iterations-05_nestedloops_2">
+    <statement>
+      <p>Q-6: What does the following code print?</p>
+      <pre>for i in range(1, 4):
+   for j in range(1, 4):
+      print(i,j,end=&#x2018; ')</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1 1 2 2 3 3</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The nested for loop will run through j = 1 to 3 for every i.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1 2 3 1 2 3 1 2 3</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The nested for loop will run through j = 1 to 3 for every i.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>1 1 1 2 1 3 2 1 2 2 2 3 3 1 3 2 3 3</p>
+        </statement>
+        <feedback>
+          <p>Correct! The nested for loop will run through j = 1 to 3 for every i.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1 1 2 1 3 1 2 1 2 2 2 3 3 1 3 2 3 3</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The nested for loop will run through j = 1 to 3 for every i.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Incorrect!The nested for loop will run through j = 1 to 3 for every i.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-iterations-05_nestedloops_4">
+    <statement>
+      <p>Q-7: Which of the following code generates the times table for any n as shown below?</p>
+      <p>For n = 4,</p>
+      <p>1 2 3 4
+            2 4 6 8
+            3 6 9 12
+            4 8 12 16</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement id="ctp-iterations-05_nestedloops_4_opt_a">
+          <pre>for i in range(0, n):
+   for j in range(0, n):
+      print(i * j, end=&#x2018; ')
+print()</pre>
+        </statement>
+        <feedback id="ctp-iterations-05_nestedloops_4_opt_a">
+          <p>Incorrect! This will print a row of 0s in the first row and a row of n-1 times in the last row.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-iterations-05_nestedloops_4_opt_b">
+          <pre>for i in range(1, n + 1):
+   for j in range(1, n + 1):
+      print(i * j, end=&#x2018; ')</pre>
+        </statement>
+        <feedback id="ctp-iterations-05_nestedloops_4_opt_b">
+          <p>Incorrect! This will print the times table but not in the format given above. There will be no break after the first line.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement id="ctp-iterations-05_nestedloops_4_opt_c">
+          <pre>for i in range(1, n + 1):
+   for j in range(1, n + 1):
+      print(i * j, end=&#x2018; ')
+   print()</pre>
+        </statement>
+        <feedback id="ctp-iterations-05_nestedloops_4_opt_c">
+          <p>Correct! This will print the times table in the right format due to an additional print in the end. The range in both loops in right and there will be a break after each line of the nested for loop.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-iterations-05_nestedloops_4_opt_d">
+          <pre>for i in range(1, n + 1):
+   for j in range(1, n + 1):
+      print(i * j, end=&#x2018; ')
+print()</pre>
+        </statement>
+        <feedback id="ctp-iterations-05_nestedloops_4_opt_d">
+          <p>Incorrect! This will print the times table but not in the format given above. There will be no break after the each line but only after end of the last line.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-iterations-05_nestedloops_4_opt_e">
+          <p>I don't know</p>
+        </statement>
+        <feedback id="ctp-iterations-05_nestedloops_4_opt_e">
+          <p>Incorrect! Use a nested for loop and use the * operator.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-iterations-07_whileloops_2">
+    <statement>
+      <p>Q-8: What does the following code print?</p>
+      <pre>x = 5
+if (x &lt; 3):
+    x = 1
+    print("A")
+    if(x &gt; 100):
+        print("B")
+    else:
+        print("C")
+    print("D")
+print("E")
+
+if (x &gt; 2)
+    print("F")
+    if(x % 3 == 2)
+        print("G")
+    if (x % 3 == 1)
+        print("H")
+    else:
+        print("I")</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>C D E F G I</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Since x=5, x &lt; 3 is False and x % 3 == 2 is True. So, E F G I will print.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>D E F G</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Since x=5, x &lt; 3 is False and x % 3 == 2 is True. So, E F G I will print.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>E F G I</p>
+        </statement>
+        <feedback>
+          <p>Correct! Since x=5, x &lt; 3 is False and x % 3 == 2 is True. So, E F G I will print.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>E F H</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Since x=5, x &lt; 3 is False and x % 3 == 2 is True. So, E F G I will print.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Since x=5, x &lt; 3 is False and x % 3 == 2 is True. So, E F G I will print.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-iterations-07_whileloops_7">
+    <statement>
+      <p>Q-9: What does the following code print?</p>
+      <pre>x = 6
+while(x &gt; 4)
+ print(x, end=' ')
+ x = x - 1</pre>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>6 5</p>
+        </statement>
+        <feedback>
+          <p>Correct! Each time the loop runs, value of x decrements by 1. So, when its value gets down to 4, the loop condition is no longer satisfied.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>6 5 4</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Each time the loop runs, value of x decrements by 1. So, when its value gets down to 4, the loop condition is no longer satisfied.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>6 5 4 3</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Each time the loop runs, value of x decrements by 1. So, when its value gets down to 4, the loop condition is no longer satisfied.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>5 4 3</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Each time the loop runs, value of x decrements by 1. So, when its value gets down to 4, the loop condition is no longer satisfied.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Each time the loop runs, value of x decrements by 1. So, when its value gets down to 4, the loop condition is no longer satisfied.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-iterations-07_whileloops_8">
+    <statement>
+      <p>Q-10: What does the following code print?</p>
+      <pre>i=0
+
+while(i &lt; 3)
+     print(i, end=' ')</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>0 0 0</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The value of i never changes from 0. So, the loop condition is always true and it will keep printing i=0.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>0 1 2</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The value of i never changes from 0. So, the loop condition is always true and it will keep printing i=0.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 . . . .</p>
+        </statement>
+        <feedback>
+          <p>Correct! The value of i never changes from 0. So, the loop condition is always true and it will keep printing i=0.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 . . . .</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The value of i never changes from 0. So, the loop condition is always true and it will keep printing i=0.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Incorrect!The value of i never changes from 0. So, the loop condition is always true and it will keep printing i=0.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-iterations-05_whileloops_9">
+    <statement>
+      <p>Q-11: Which of the following correctly translates the for loop below to a while loop?</p>
+      <dl>
+        <li>
+          <title>for i in range(n):</title>
+          <p>&lt;body&gt;</p>
+        </li>
+      </dl>
+    </statement>
+    <choices>
+      <choice>
+        <statement id="ctp-iterations-05_whileloops_9_opt_a">
+          <pre>i = 0
+while(i &lt; n)
+   &lt;body&gt;</pre>
+        </statement>
+        <feedback id="ctp-iterations-05_whileloops_9_opt_a">
+          <p>Incorrect! This will be an infinite loop as the value of i never changes.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement id="ctp-iterations-05_whileloops_9_opt_b">
+          <pre>i = 0
+while(i &lt; n)
+   &lt;body&gt;
+   i = i + 1</pre>
+        </statement>
+        <feedback id="ctp-iterations-05_whileloops_9_opt_b">
+          <p>Correct! The value of i increments by 1 in each iteration till it becomes equal to n at which point the loop condition won't be satisfied.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-iterations-05_whileloops_9_opt_c">
+          <pre>i = 0
+while(i &lt; n)
+   &lt;body&gt;
+   n = n + 1</pre>
+        </statement>
+        <feedback id="ctp-iterations-05_whileloops_9_opt_c">
+          <p>Incorrect! This is not the right implementation of the given for loop as the value of i remains the same and the value of n keeps increasing with each iteration.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-iterations-05_whileloops_9_opt_d">
+          <pre>i = 1
+while(i &lt; n)
+   &lt;body&gt;
+   i = i + 1</pre>
+        </statement>
+        <feedback id="ctp-iterations-05_whileloops_9_opt_d">
+          <p>Incorrect! This is not the right implementation of the given for loop as the value of i remains the same and the value of n keeps increasing with each iteration.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-iterations-05_whileloops_9_opt_e">
+          <p>I don't know</p>
+        </statement>
+        <feedback id="ctp-iterations-05_whileloops_9_opt_e">
+          <p>Incorrect! The value of i should increment by 1 with each iteration of while loop.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-iterations-07_whileloops_11">
+    <statement>
+      <p>Q-12: Which of these numbers will stop the loop?</p>
+      <pre>valid = False
+while not valid:
+  x = eval(input ("Enter a number: "))
+  valid = (x % 2 == 1 and x % 3 == 0)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>2</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! To get out of the loop, valid should be True. According to the condition provided, an odd number which is a multiple of 3 should work.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>9</p>
+        </statement>
+        <feedback>
+          <p>Correct! To get out of the loop, valid should be True. According to the condition provided, an odd number which is a multiple of 3 should work.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>6</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! To get out of the loop, valid should be True. According to the condition provided, an odd number which is a multiple of 3 should work.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! To get out of the loop, valid should be True. According to the condition provided, an odd number which is a multiple of 3 should work.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! To get out of the loop, valid should be True. According to the condition provided, an odd number which is a multiple of 3 should work.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-iterations-05_whileloops_13">
+    <statement>
+      <p>Q-13: Which of these will exit on 9?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement id="ctp-iterations-05_whileloops_13_opt_a">
+          <pre>x = eval(input ("Enter a number: "))
+ while (x % 2 == 1 and x % 3 == 0):
+   x = eval(input ("Enter a number: "))</pre>
+        </statement>
+        <feedback id="ctp-iterations-05_whileloops_13_opt_a">
+          <p>Incorrect! Incorrect! 9 is an odd multiple of 3. So, the condition would always hold true and will not exit the loop. There's no break statement in this option.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement id="ctp-iterations-05_whileloops_13_opt_b">
+          <pre>x = eval(input ("Enter a number: "))
+ while True:
+   if (x % 2 == 1 and x % 3 == 0):
+       break;
+   x = eval(input ("Enter a number: "))</pre>
+        </statement>
+        <feedback id="ctp-iterations-05_whileloops_13_opt_b">
+          <p>Correct! This will exit due to the break statement.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-iterations-05_whileloops_13_opt_c">
+          <p>Both!</p>
+        </statement>
+        <feedback id="ctp-iterations-05_whileloops_13_opt_c">
+          <p>Incorrect! There's no break statement in option A.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-iterations-05_whileloops_13_opt_d">
+          <p>Neither</p>
+        </statement>
+        <feedback id="ctp-iterations-05_whileloops_13_opt_d">
+          <p>Incorrect! There's a break statement in option B.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-iterations-05_whileloops_13_opt_e">
+          <p>I don't know</p>
+        </statement>
+        <feedback id="ctp-iterations-05_whileloops_13_opt_e">
+          <p>Incorrect! A break statement can be used to exit the loop.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

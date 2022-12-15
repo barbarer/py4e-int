@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<section xml:id="database_problem-bank-for-post-test-problems">
+  <title>Problem Bank for Post Test Problems</title>
+  <exercise label="hparsons_lg_sql_test_bank_post_select">
+    <statement>
+      <p>We use SQL to manage a vending machine. Our current table <c>goods</c> looks like this:</p>
+      <image source="https://i.ibb.co/hWd4CJG/posttest-goods.png" width="50%"/>
+      <p>To help us refill goods that are low in stock,
+            please write a SELECT statement to retrieve the <c>name</c> and  <c>brand</c> of all items
+            in the table <c>goods</c> that belongs to <c>type</c> of <q>chips</q> and has a <c>quantity</c> of
+            less than 15.</p>
+      <p>note: When you run the code, there will be several execution results.
+            Please only refer to the <term>last</term> execution result for debugging purposes.</p>
+    </statement>
+    <program xml:id="hparsons_lg_sql_test_bank_post_select_editor" interactive="activecode" language="sql">
+      <input>
+DROP TABLE IF EXISTS goods;
+create table "goods" ("id" INTEGER, "name" TEXT, "type" TEXT, "brand" TEXT, "quantity" INTEGER);
+INSERT INTO goods (id,name,type,brand,quantity) VALUES
+    (1, 'classic_chips', 'chips', 'lays', 18),
+    (2, 'cheese_nachos', 'chips', 'doritos', 9),
+    (3, 'sparkling_water', 'drink', 'lacroix', 25),
+    (4, 'classic_chips', 'chips', 'ruffles', 5),
+    (5, 'choco_nuts', 'protein_bar', 'kind', 7);
+^^^^
+====
+        </input>
+    </program>
+  </exercise>
+  <exercise label="hparsons_lg_sql_test_bank_post_update">
+    <statement>
+      <p>In the same <c>goods</c> table:</p>
+      <image source="https://i.ibb.co/hWd4CJG/posttest-goods.png" width="50%"/>
+      <p>We just bought more chips.</p>
+      <p>Please write an UPDATE statement that: for all entries which <c>type</c> column is <c>chips</c>,
+            add the <c>quantity</c> by 10.</p>
+      <p>note: When you run the code, there will be several execution results.
+            Please only refer to the <term>last</term> execution result for debugging purposes.</p>
+    </statement>
+    <program xml:id="hparsons_lg_sql_test_bank_post_update_editor" interactive="activecode" language="sql">
+      <input>
+DROP TABLE IF EXISTS goods;
+create table "goods" ("id" INTEGER, "name" TEXT, "type" TEXT, "brand" TEXT, "quantity" INTEGER);
+INSERT INTO goods (id,name,type,brand,quantity) VALUES
+    (1, 'classic_chips', 'chips', 'lays', 18),
+    (2, 'cheese_nachos', 'chips', 'doritos', 9),
+    (3, 'sparkling_water', 'drink', 'lacroix', 25),
+    (4, 'classic_chips', 'chips', 'ruffles', 5),
+    (5, 'choco_nuts', 'protein_bar', 'kind', 7);
+^^^^
+-- Write your code here:
+
+-- The following line separates with your code and selects all data for debugging. Please do not modify.
+;
+SELECT * FROM goods
+====
+        </input>
+    </program>
+  </exercise>
+  <exercise label="hparsons_lg_sql_test_bank_post_join">
+    <statement>
+      <p>Aside from the <c>goods</c> table:</p>
+      <image source="https://i.ibb.co/hWd4CJG/posttest-goods.png" width="50%"/>
+      <p>We have another table <c>transactions</c> that looks like this:</p>
+      <image source="https://i.ibb.co/B4H3WXb/posttest-transactions.png" width="50%"/>
+      <p>Where the <c>goods_id</c> in this table refers to the <c>id</c> in the <c>goods</c> table above.</p>
+      <p>To provide better service, we want to know when people purchased a type of item and how they paid.</p>
+      <p>Please write a statement using SELECT and JOIN to: select the <c>type</c> from the <c>goods</c> table
+            and <c>method</c> and <c>date</c> from the <c>transactions</c> table, where the <c>goods_id</c> in the
+            <c>transactions</c> table is the same as the <c>id</c> in the <c>goods</c> table.</p>
+      <p>note: When you run the code, there will be several execution results.
+            Please only refer to the unittest and the <term>last</term> execution result for debugging purposes.</p>
+    </statement>
+    <program xml:id="hparsons_lg_sql_test_bank_post_join_editor" interactive="activecode" language="sql">
+      <input>
+DROP TABLE IF EXISTS goods;
+create table "goods" ("id" INTEGER, "name" TEXT, "type" TEXT, "brand" TEXT, "quantity" INTEGER);
+INSERT INTO goods (id,name,type,brand,quantity) VALUES
+    (1, 'classic_chips', 'chips', 'lays', 18),
+    (2, 'cheese_nachos', 'chips', 'doritos', 9),
+    (3, 'sparkling_water', 'drink', 'lacroix', 25),
+    (4, 'classic_chips', 'chips', 'ruffles', 5),
+    (5, 'choco_nuts', 'protein_bar', 'kind', 7);
+DROP TABLE IF EXISTS transactions;
+create table "transactions" ("method" TEXT, "goods_id" INTEGER, "date" DATE);
+INSERT INTO transactions (method,goods_id,date) VALUES
+    ('cash', '3', '2022-11-10'),
+    ('credit_card', '1', '2022-11-13'),
+    ('credit_card', '2', '2022-11-14'),
+    ('cash', '5', '2022-11-15');
+^^^^
+====
+        </input>
+    </program>
+  </exercise>
+  <subsection xml:id="database_thank-you">
+    <title>Thank You &#x1F917;</title>
+    <p>&#x1F389; We appreciate your participation in our study.</p>
+    <p>We will provide the answer of the questions in a separate link soon.</p>
+    <p>If you have questions or feedback, or want to know more, please contact Zihan Wu (<url href="mailto:ziwu@umich.edu" visual="mailto:ziwu@umich.edu">ziwu@umich.edu</url>).</p>
+  </subsection>
+</section>

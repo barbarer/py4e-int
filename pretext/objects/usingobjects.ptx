@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<section xml:id="objects_using-objects">
+  <title>Using objects</title>
+  <p>As it turns out, we have been using objects all along in this book. Python
+            provides us with many built-in objects. Here is some simple code
+            where the first few lines should feel very simple and natural to you.</p>
+  <program xml:id="usingobjects" interactive="activecode" language="python">
+    <input>
+stuff = list()
+stuff.append('python')
+stuff.append('chuck')
+stuff.sort()
+print (stuff[0])
+print (stuff.__getitem__(0))
+print (list.__getitem__(stuff,0))
+        </input>
+  </program>
+  <p>Instead of focusing on what these lines accomplish, let's look at what is
+            really happening from the point of view of object-oriented programming.
+            Don't worry if the following paragraphs don't make any sense the
+            first time you read them because we have not yet defined all of these terms.</p>
+  <p>The first line <em>constructs</em> an object of type <c>list</c>, the second and third
+            lines <em>call</em> the <c>append()</c> <em>method</em>, the fourth line calls
+            the <c>sort()</c> method, and the fifth line <em>retrieves</em> the item at position 0.</p>
+  <p>The sixth line calls the <c>__getitem__()\ ``method in the</c>stuff`` list
+            with a parameter of zero.</p>
+  <program language="python">
+    <input>
+print (stuff.__getitem__(0))
+</input>
+  </program>
+  <p>The seventh line is an even more verbose way of retrieving the 0th item
+            in the list.</p>
+  <program language="python">
+    <input>
+print (list.__getitem__(stuff,0))
+</input>
+  </program>
+  <p>In this code, we call the <c>__getitem__\ ``method in the</c>list`` class
+            and <em>pass</em> the list and the item we want retrieved from the list
+            as parameters.</p>
+  <p>The last three lines of the program are equivalent, but it is more
+            convenient to simply use the square bracket syntax to look up an item at
+            a particular position in a list.</p>
+  <p>We can take a look at the capabilities of an object by
+            looking at the output of the <c>dir()</c> function:</p>
+  <program xml:id="dir_activecode" interactive="activecode" language="python">
+    <input>
+stuff = list()
+print(dir(stuff))
+        </input>
+  </program>
+  <p>The rest of this chapter will define all of the above terms so make sure to
+            come back after you finish the chapter and re-read the above paragraphs to
+            check your understanding.</p>
+</section>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<section xml:id="objects_pre-survey">
+  <title>Pre Survey</title>
+  <p>Think about <term>yourself and your learning</term> when answering the following questions.</p>
+  <transition/>
+  <exercise runestone="CS-self-efficacy-1-cls"/>
+  <exercise runestone="CS-self-efficacy-2-cls"/>
+  <exercise runestone="CS-self-efficacy-3-cls"/>
+  <exercise runestone="CS-self-efficacy-4-cls"/>
+  <exercise runestone="CS-self-efficacy-5-cls"/>
+  <exercise runestone="CS-self-efficacy-6-cls"/>
+  <p>For the next questions please select the answer that best
+            matches your familiarity and confidence
+            about the specified concept(s).</p>
+  <exercise runestone="class-obj-7"/>
+  <exercise runestone="class-obj-8"/>
+  <exercise runestone="class-obj-9"/>
+  <exercise runestone="class-obj-10"/>
+  <p>Thanks for filling this survey and let us know you better!</p>
+  <subsection xml:id="objects_what-to-do-next">
+    <title>What to do next</title>
+    <raw format="html" xml:space="preserve">&lt;h4&gt;Click on the following link to start practice &#x1F449; &lt;b&gt;&lt;a id="fl-next-cls"&gt;Practice Problems&lt;/a&gt;&lt;/b&gt;&lt;/h4&gt;</raw>
+    <raw format="html" xml:space="preserve">&lt;script type="text/javascript" &gt;
+
+  window.onload = function() {
+
+    a = document.getElementById("fl-next-cls")
+
+    // randomly pick one of two relative urls
+    var v = Math.floor(Math.random() * 9) + 1;
+    if (v % 2 == 0)
+    {
+          a.href = "fl-toggle-cls.html"
+    }
+    else
+    {
+           a.href = "fl-write-cls.html"
+    }
+
+    };
+&lt;/script&gt;</raw>
+  </subsection>
+</section>

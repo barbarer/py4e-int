@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<section xml:id="database_practice-problems-mixed-up-code">
+  <title>Practice Problems - Mixed-up Code</title>
+  <p>Now, let's spend 15 minutes to practice what we just learned!</p>
+  <p>
+    <term>Please do not refer back to the previous page or outside resources.</term>
+  </p>
+  <p>You can stop working on a problem after you worked
+            on it for about three minutes without solving it.</p>
+  <subsection xml:id="database_problems">
+    <title>Problems</title>
+    <HParsonsNode line="14" runestone_options="{'language': &quot;data-language='sql'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2 3 4 5'&quot;, 'subchapter': 'hparsons_lg_sql_practice_H', 'chapter': 'database', 'basecourse': 'py4e-int', 'optional': '', 'optclass': '', 'divid': 'hparsons_lg_sql_practice_1_hp', 'qnumber': 'Q-1', 'reuse': '', 'initialsetting': '--blocks--\nSELECT\nstudent_id, test_name, english\nFROM\ngrades\nWHERE\nenglish &lt; 60 AND math &gt; 90\nenglish &lt; 60 &amp; math &gt; 90', 'dburl': '', 'question_label': '1'}" source="/home/david/comsc020/py4e-int/_sources/database/hparsons_lg_sql_practice_H.rst">
+      <p>In the <c>grades</c> table:</p>
+      <image source="https://i.ibb.co/r6qShy5/practice-grade.png" width="50%"/>
+      <p>Please write a SELECT statement to retrieve the <c>student_id</c>, <c>test_name</c>,
+                    and <c>english</c> of all entries whose <c>english</c> is lower than 60 and <c>math</c> is higher than 90.</p>
+    </HParsonsNode>
+    <HParsonsNode line="36" runestone_options="{'language': &quot;data-language='sql'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2 3 4'&quot;, 'subchapter': 'hparsons_lg_sql_practice_H', 'chapter': 'database', 'basecourse': 'py4e-int', 'optional': '', 'optclass': '', 'divid': 'hparsons_lg_sql_practice_2_hp', 'qnumber': 'Q-2', 'reuse': '', 'initialsetting': '--blocks--\nUPDATE grades\nSET\nmath = 90\nWHERE\nstudent_id = 1 AND test_name = &quot;final&quot;\nLET\nstudent_id = 1 AND test_name = final', 'dburl': '', 'question_label': '2'}" source="/home/david/comsc020/py4e-int/_sources/database/hparsons_lg_sql_practice_H.rst">
+      <p>In the <c>grades</c> table:</p>
+      <image source="https://i.ibb.co/r6qShy5/practice-grade.png" width="50%"/>
+      <p>A student completed an extra assignment and got some additional points.</p>
+      <p>Please write an UPDATE statement to change the entry whose <c>student_id</c> is 1, and set their math score for <c>final</c> <c>test_name</c> to 90.</p>
+    </HParsonsNode>
+    <HParsonsNode line="60" runestone_options="{'language': &quot;data-language='sql'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2 3 4 5'&quot;, 'subchapter': 'hparsons_lg_sql_practice_H', 'chapter': 'database', 'basecourse': 'py4e-int', 'optional': '', 'optclass': '', 'divid': 'hparsons_lg_sql_practice_3_hp', 'qnumber': 'Q-3', 'reuse': '', 'initialsetting': '--blocks--\nUPDATE\ngrades\nSET\nenglish = english + 10\nWHERE\ntest_name = &quot;midterm&quot;\nenglish + 10', 'dburl': '', 'question_label': '3'}" source="/home/david/comsc020/py4e-int/_sources/database/hparsons_lg_sql_practice_H.rst">
+      <p>In the <c>grades</c> table:</p>
+      <image source="https://i.ibb.co/r6qShy5/practice-grade.png" width="50%"/>
+      <p>The instructors decided to add some points to all students as one test was too difficult.</p>
+      <p>Please write an UPDATE statement to change all entries whose <c>test_name</c> is <c>midterm</c>,
+                    and add 10 points to their <c>english</c> score.</p>
+    </HParsonsNode>
+    <HParsonsNode line="84" runestone_options="{'language': &quot;data-language='sql'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2 3 4'&quot;, 'subchapter': 'hparsons_lg_sql_practice_H', 'chapter': 'database', 'basecourse': 'py4e-int', 'optional': '', 'optclass': '', 'divid': 'hparsons_lg_sql_practice_4_hp', 'qnumber': 'Q-4', 'reuse': '', 'initialsetting': '--blocks--\nSELECT\ngrades.test_name, grades.math, students.name\nFROM grades\nJOIN students\nON students.id = grades.student_id\nON students.id = grades.id', 'dburl': '', 'question_label': '4'}" source="/home/david/comsc020/py4e-int/_sources/database/hparsons_lg_sql_practice_H.rst">
+      <p>Aside from the <c>grades</c> table:</p>
+      <image source="https://i.ibb.co/r6qShy5/practice-grade.png" width="50%"/>
+      <p>We also have a <c>students</c> table:</p>
+      <image source="https://i.ibb.co/m4KxSMC/practice-students.png" width="50%"/>
+      <p>Now we want to match the student name to their math grades.</p>
+      <p>Please write a statement using SELECT and JOIN to: select the <c>test_name</c> and <c>math</c>
+                    from the <c>grades</c>  table and <c>name</c> from the <c>students</c> table, where the <c>student_id</c>
+                    in the <c>grades</c> table is the same as the <c>id</c> in the <c>students</c> table.</p>
+    </HParsonsNode>
+    <HParsonsNode line="112" runestone_options="{'language': &quot;data-language='sql'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2 3 4 5 6'&quot;, 'subchapter': 'hparsons_lg_sql_practice_H', 'chapter': 'database', 'basecourse': 'py4e-int', 'optional': '', 'optclass': '', 'divid': 'hparsons_lg_sql_practice_5_hp', 'qnumber': 'Q-5', 'reuse': '', 'initialsetting': '--blocks--\nSELECT\ntests.date, tests.name, grades.student_id\nFROM tests\nJOIN\ngrades\nON\ngrades.test_name = tests.name', 'dburl': '', 'question_label': '5'}" source="/home/david/comsc020/py4e-int/_sources/database/hparsons_lg_sql_practice_H.rst">
+      <p>Aside from the <c>grades</c> table:</p>
+      <image source="https://i.ibb.co/r6qShy5/practice-grade.png" width="50%"/>
+      <p>We also have a <c>tests</c> table:</p>
+      <image source="https://i.ibb.co/KVTGNXh/practice-tests.png" width="50%"/>
+      <p>Now we want to add the date information to the grades to see when the students took the tests.</p>
+      <p>Please write a statement using SELECT and JOIN to: select the <c>date</c> and <c>name</c>
+                    from the <c>tests</c>  table and <c>student_id</c> from the <c>grades</c> table,
+                    where the <c>test_name</c> in the <c>grades</c> table is the same as the <c>name</c> in the <c>tests</c> table.</p>
+    </HParsonsNode>
+  </subsection>
+  <subsection xml:id="database_what-to-do-next">
+    <title>What to do next</title>
+    <raw format="html" xml:space="preserve">&lt;p&gt;Click on the following link to go to the post test: &lt;b&gt;&lt;a id="hparsons_lg_sql_posttest"&gt;&lt;font size="+2"&gt;Post Test&lt;/font&gt;&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;</raw>
+    <raw format="html" xml:space="preserve">&lt;style&gt;
+    .drag-area{
+        height: auto !important;
+        min-height: 42px;
+    }
+    .drop-area{
+        height: auto !important;
+        min-height: 42px;
+    }
+&lt;/style&gt;
+
+
+&lt;script type="text/javascript" &gt;
+
+  function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i &lt;ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+  }
+
+  window.onload = function() {
+
+    a = document.getElementById("hparsons_lg_sql_posttest")
+    a.href = "hparsons_lg_sql_posttest.html"
+
+    // get prev set cookie
+    var EXP_COOKIE = 'hparsons_lg_sql_221115'
+    var cond = getCookie(EXP_COOKIE);
+    if (cond == 'wr') {
+      window.location.href = "hparsons_lg_sql_practice_W.html";
+    }
+  };
+
+&lt;/script&gt;</raw>
+  </subsection>
+</section>

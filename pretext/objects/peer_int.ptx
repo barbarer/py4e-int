@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<section xml:id="objects_peer-instruction-objects-multiple-choice-questions">
+  <title>Peer Instruction: Objects Multiple Choice Questions</title>
+  <exercise label="dz-lecture_26_2">
+    <statement>
+      <p>Q-1:  What is the output of this code?</p>
+      <program language="python">
+        <input>
+class Thing(object):
+
+  def __init__(self, a, b):
+      self.val = a * b
+  def __str__(self):
+      return '[' + str(self.val + 2) + ']'
+
+t = Thing(4, 5)
+print(t)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>20</p>
+        </statement>
+        <feedback>
+          <p>Try again. str is a string combination of '[', str(self.val + 2) and ']'. self.val equals to 20, which is the result of a*b. Therefore, t is [22].</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[20]</p>
+        </statement>
+        <feedback>
+          <p>Try again. str is a string combination of '[', str(self.val + 2) and ']'. self.val equals to 20, which is the result of a*b. Therefore, t is [22].</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>22</p>
+        </statement>
+        <feedback>
+          <p>Try again. str is a string combination of '[', str(self.val + 2) and ']'. Therefore, t is a string that starts with '[' and ends with ']'. t is [22].</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>[22]</p>
+        </statement>
+        <feedback>
+          <p>Correct! str is a string combination of '[', str(self.val + 2) and ']' and self.val equals to 20. Therefore, t equals to [22].</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A memory address</p>
+        </statement>
+        <feedback>
+          <p>Try again. str is a string combination of '[', str(self.val + 2) and ']'. self.val equals to 20, which is the result of a*b. Therefore, t is [22].</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_26_6">
+    <statement>
+      <p>Q-2:  Which of the following would evaluate to True?</p>
+      <program language="python">
+        <input>
+class Account(object):
+  def __init__(self, val):
+      '''(int) -&gt; Account
+      Create bank account with val gold.
+      '''
+      self.gold = val
+
+  def __eq__(self, other):
+      '''(Account) -&gt; bool'''
+      return self.gold == 0 and other.gold == 5
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Account(50) == Account(50)</p>
+        </statement>
+        <feedback>
+          <p>Try again. The equation only evaluates to True when self.gold equals to 0 and other.gold equals to 5. Account(50) == Account (50) returns False.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Account(80) == Account(90)</p>
+        </statement>
+        <feedback>
+          <p>Try again. The equation only evaluates to True when self.gold equals to 0 and other.gold equals to 5. Account(80) == Account (90) returns False.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Account(0) == Account(5)</p>
+        </statement>
+        <feedback>
+          <p>Correct! The equation only evaluates to True when self.gold equals to 0 and other.gold equals to 5. Account(0) == Account (5) returns True.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Account(0) == Account(0)</p>
+        </statement>
+        <feedback>
+          <p>Try again. The equation only evaluates to True when self.gold equals to 0 and other.gold equals to 5. Account(0) == Account (0) returns False.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>More than one of the above</p>
+        </statement>
+        <feedback>
+          <p>Try again. There is only one right answer. The equation only evaluates to True when self.gold equals to 0 and other.gold equals to 5.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_26_7">
+    <statement>
+      <p>Q-3:  Which of the following would evaluate to True?</p>
+      <program language="python">
+        <input>
+class Account(object):
+  def __init__(self, val):
+      '''(int) -&gt; Account
+      Create bank account with val gold.
+      '''
+      self.gold = val
+
+  def __eq__(self, other):
+      '''(Account) -&gt; bool'''
+      return self.gold == 0
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Account(50) == Account(50)</p>
+        </statement>
+        <feedback>
+          <p>Try again. The equation evaluates to True when self.gold equals to 0. As long as the first object in the equation equals to 0, the equation evaluates True.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Account(80) == Account(90)</p>
+        </statement>
+        <feedback>
+          <p>Try again. The equation evaluates to True when self.gold equals to 0. As long as the first object in the equation equals to 0, the equation evaluates True.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Account(0) == Account(5)</p>
+        </statement>
+        <feedback>
+          <p>Try again. There is more than one answer. The equation evaluates to True when self.gold equals to 0. As long as the first object in the equation equals to 0, the equation evaluates True.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Account(0) == Account(0)</p>
+        </statement>
+        <feedback>
+          <p>Try again. There is more than one answer. The equation evaluates to True when self.gold equals to 0. As long as the first object in the equation equals to 0, the equation evaluates True.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>More than one of the above</p>
+        </statement>
+        <feedback>
+          <p>Correct! As long as the first object in the equation equals to 0, the equation evaluates True. Therefore, Account(0) == Account(0) and Account(0) == Account(5) are correct answers.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_26_9">
+    <statement>
+      <p>Q-4: Which of the following would evaluate to True?</p>
+      <program language="python">
+        <input>
+class Point(object):
+  '''Two-dimensional points'''
+
+  def __init__ (self, x, y):
+      '''(int, int) -&gt; Point
+      Create two-dimensional Point at (x, y)
+      '''
+      self.x = x
+      self.y = y
+
+  def __lt__(self, other):
+      return isinstance(other, Point) and (self.x &lt; other.x \
+      or (self.x == other.x and self.y &lt; other.y))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Point(2, 3) &lt; Point(4, 5)</p>
+        </statement>
+        <feedback>
+          <p>Try again. The equation evaluates to True when self.x &lt; other.x or (self.x == other.x and self.y &lt; other.y). Therefore, A and B are both right since self.x equals to 2 and other.x equals to 4.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Point(2, 3) &lt; Point(4, 1)</p>
+        </statement>
+        <feedback>
+          <p>Try again. The equation evaluates to True when self.x &lt; other.x or (self.x == other.x and self.y &lt; other.y). Therefore, A and B are both right since self.x equals to 2 and other.x equals to 4.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Point(2, 3) &lt;Point(1, 5)</p>
+        </statement>
+        <feedback>
+          <p>Try again. The equation evaluates to True when self.x &lt; other.x or (self.x == other.x and self.y &lt; other.y). C is incorrect because it does not satisfy either of the options.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>A and B</p>
+        </statement>
+        <feedback>
+          <p>Correct! The equation evaluates to True when self.x &lt; other.x or (self.x == other.x and self.y &lt; other.y). Therefore, A and B are both right since self.x equals to 2 and other.x equals to 4.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>All of the above</p>
+        </statement>
+        <feedback>
+          <p>Try again. The equation evaluates to True when self.x &lt; other.x or (self.x == other.x and self.y &lt; other.y). Therefore, A and B are both right since self.x equals to 2 and other.x equals to 4.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

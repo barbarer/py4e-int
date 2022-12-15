@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<section xml:id="regex_problem-bank-for-practice-problems-and-test-problems">
+  <title>Problem Bank for Practice Problems and Test Problems</title>
+  <exercise label="hparsons_lg_regex_test_mcq_1">
+    <statement>
+      <p>11-9-1: What does <c>[^abc]</c> mean?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement id="hparsons_lg_regex_test_mcq_1_opt_a">
+          <p>Match a character that is one of ^, a, b, or c.</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_1_opt_a">
+</feedback>
+      </choice>
+      <choice>
+        <statement id="hparsons_lg_regex_test_mcq_1_opt_b">
+          <p>Match a character that is not one of ^, a, b, or c.</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_1_opt_b">
+</feedback>
+      </choice>
+      <choice correct="yes">
+        <statement id="hparsons_lg_regex_test_mcq_1_opt_c">
+          <p>Match a character that is not one of a, b, or c.</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_1_opt_c">
+</feedback>
+      </choice>
+      <choice>
+        <statement id="hparsons_lg_regex_test_mcq_1_opt_d">
+          <p>Match 3 characters in the sequence of <q>abc</q>.</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_1_opt_d">
+</feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="hparsons_lg_regex_test_mcq_2">
+    <statement>
+      <p>11-9-2: What does the pattern <c>\d</c> match?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement id="hparsons_lg_regex_test_mcq_2_opt_a">
+          <p>Matches any digit (0, 1, &#x2026;, 9).</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_2_opt_a">
+</feedback>
+      </choice>
+      <choice>
+        <statement id="hparsons_lg_regex_test_mcq_2_opt_b">
+          <p>Matches any date (yyyy-mm-dd).</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_2_opt_b">
+</feedback>
+      </choice>
+      <choice>
+        <statement id="hparsons_lg_regex_test_mcq_2_opt_c">
+          <p>Matches a dash.</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_2_opt_c">
+</feedback>
+      </choice>
+      <choice>
+        <statement id="hparsons_lg_regex_test_mcq_2_opt_d">
+          <p>Matches a dot.</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_2_opt_d">
+</feedback>
+      </choice>
+      <choice>
+        <statement id="hparsons_lg_regex_test_mcq_2_opt_e">
+          <p>I don't know.</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_2_opt_e">
+</feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="hparsons_lg_regex_test_mcq_3">
+    <statement>
+      <p>11-9-3: Which one of the following patterns should I use to treat <q>abc</q> as a group for repeating, but not make re.findall only return the content in the group?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement id="hparsons_lg_regex_test_mcq_3_opt_a">
+          <p>[abc]</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_3_opt_a">
+</feedback>
+      </choice>
+      <choice>
+        <statement id="hparsons_lg_regex_test_mcq_3_opt_b">
+          <p>(abc)</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_3_opt_b">
+</feedback>
+      </choice>
+      <choice>
+        <statement id="hparsons_lg_regex_test_mcq_3_opt_c">
+          <p>(?abc)</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_3_opt_c">
+</feedback>
+      </choice>
+      <choice correct="yes">
+        <statement id="hparsons_lg_regex_test_mcq_3_opt_d">
+          <p>(?:abc)</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_3_opt_d">
+</feedback>
+      </choice>
+      <choice>
+        <statement id="hparsons_lg_regex_test_mcq_3_opt_e">
+          <p>I don't know.</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_3_opt_e">
+</feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="hparsons_lg_regex_test_mcq_4">
+    <statement>
+      <p>11-9-4: Which of the following best describes what <c>\w</c> matches?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement id="hparsons_lg_regex_test_mcq_4_opt_a">
+          <p>Any lowercase letter</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_4_opt_a">
+          <p>It matches more than this</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="hparsons_lg_regex_test_mcq_4_opt_b">
+          <p>Any lowercase or uppercase letter</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_4_opt_b">
+          <p>It matches more than this</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="hparsons_lg_regex_test_mcq_4_opt_c">
+          <p>Any lowercase or uppercase letter, or underscore</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_4_opt_c">
+          <p>It matches more than this</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement id="hparsons_lg_regex_test_mcq_4_opt_d">
+          <p>Any lowercase or uppercase letter, or underscore, or digit from 0-9</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_4_opt_d">
+          <p>It matches any lowercase or uppercase letter, or underscore, or digit from 0-9</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="hparsons_lg_regex_test_mcq_4_opt_e">
+          <p>I don't know.</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_4_opt_e">
+          <p>That is okay</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="hparsons_lg_regex_test_mcq_5">
+    <statement>
+      <p>11-9-5: Which of the following patterns would match <q>A</q>s separated by individual <q>B</q>s in between, for example, <q>AAABAABAA</q>, <q>ABAAA</q>?
+            Note that <q>B</q> should not appear consecutively, and should not appear as the first or last character. B must appear at least once.</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement id="hparsons_lg_regex_test_mcq_5_opt_a">
+          <p>(?:A+B)+A+</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_5_opt_a">
+</feedback>
+      </choice>
+      <choice>
+        <statement id="hparsons_lg_regex_test_mcq_5_opt_b">
+          <p>(?:A+B)*A+</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_5_opt_b">
+</feedback>
+      </choice>
+      <choice>
+        <statement id="hparsons_lg_regex_test_mcq_5_opt_c">
+          <p>(?:AB)+A+</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_5_opt_c">
+</feedback>
+      </choice>
+      <choice>
+        <statement id="hparsons_lg_regex_test_mcq_5_opt_d">
+          <p>(?:A*B)+A+</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_5_opt_d">
+</feedback>
+      </choice>
+      <choice>
+        <statement id="hparsons_lg_regex_test_mcq_5_opt_e">
+          <p>I don't know.</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_5_opt_e">
+</feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="hparsons_lg_regex_test_mcq_6">
+    <statement>
+      <p>11-9-6: Which of the following would match both words <q>attend</q> and <q>attendee</q>?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement id="hparsons_lg_regex_test_mcq_6_opt_a">
+          <p>attend|ee</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_6_opt_a">
+</feedback>
+      </choice>
+      <choice>
+        <statement id="hparsons_lg_regex_test_mcq_6_opt_b">
+          <p>attend(ee){1,}</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_6_opt_b">
+</feedback>
+      </choice>
+      <choice correct="yes">
+        <statement id="hparsons_lg_regex_test_mcq_6_opt_c">
+          <p>attend(?:ee)?</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_6_opt_c">
+</feedback>
+      </choice>
+      <choice>
+        <statement id="hparsons_lg_regex_test_mcq_6_opt_d">
+          <p>attend[ee]</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_6_opt_d">
+</feedback>
+      </choice>
+      <choice>
+        <statement id="hparsons_lg_regex_test_mcq_6_opt_e">
+          <p>I don't know.</p>
+        </statement>
+        <feedback id="hparsons_lg_regex_test_mcq_6_opt_e">
+</feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

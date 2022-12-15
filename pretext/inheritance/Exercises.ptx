@@ -1,0 +1,965 @@
+<?xml version="1.0"?>
+<exercises xml:id="inheritance_multiple-choice-questions">
+  <title>Multiple Choice Questions</title>
+  <exercise label="Exercises_inheritance_mc1">
+    <statement>
+      <p>Q-1: Given the below code, what would be printed (ignore newlines and spacing between sentences)?</p>
+      <program language="python">
+        <input>
+class Person:
+    def work(self):
+        print("A person can work.")
+
+    def food(self):
+        print("A person eats food.")
+
+class Employee(Person):
+    def work(self):
+        print("An employee works.")
+
+p1 = Person()
+p2 = Employee()
+p1.work()
+p2.work()
+p1.food()
+p2.food()
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>A person can work. A person can work. An employee works. A person eats food.</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A person can work. An employee works. A person eats food.</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The code won't compile.</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>A person can work. An employee works. A person eats food. A person eats food.</p>
+        </statement>
+        <feedback>
+          <p>Correct! Since Employee inherited from Person, the food method works for the Employee class as well.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A person can work. A person can work. An employee works. A person eats food. A person eats food.</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_inheritance_mc2">
+    <statement>
+      <p>Q-2: Given the below code, what would be printed (ignore newlines and spacing between sentences)?</p>
+      <program language="python">
+        <input>
+class Person:
+   def work(self):
+      print("A person can work.")
+
+   def food(self):
+      print("A person eats food.")
+
+class Employee(Person):
+   pass
+
+p1 = Person()
+p2 = Employee()
+p1.work()
+p2.work()
+p1.food()
+p2.food()
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>A person can work. None. A person eats food. None.</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>A person can work. A person can work. A person eats food. A person eats food.</p>
+        </statement>
+        <feedback>
+          <p>Correct! Since Employee inherited from Person, the methods work and food work for Employee as well.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The code won't compile.</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A person can work. A person eats food.</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_inheritance_mc3">
+    <statement>
+      <p>Q-3: Given the below code, what would be printed (ignore newlines and spacing between sentences)?</p>
+      <program language="python">
+        <input>
+class Person:
+   def work(self):
+      print("A person can work.")
+
+   def food(self):
+      print("A person eats food.")
+
+class Employee(Person):
+   def work(self):
+      super().work()
+      print("I can work.")
+
+   def food(self):
+      super().food()
+      print("I can eat.")
+
+p1 = Person()
+p2 = Employee()
+p1.work()
+p2.work()
+p1.food()
+p2.food()
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>A person can work. I can work. A person eats food. I can eat.</p>
+        </statement>
+        <feedback>
+          <p>Try again! There are 2 sentences missing: "A person can work." and "A person eats food.".</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A person can work. None. I can work. A person eats food. None. I can eat.</p>
+        </statement>
+        <feedback>
+          <p>Try again! Using super().method in the child class Employee method inherits the method (print statements, in this case) from the parent class Person.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The code won't compile.</p>
+        </statement>
+        <feedback>
+          <p>Try again! The code compiles.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>A person can work. A person can work. I can work. A person eats food. A person eats food. I can eat.</p>
+        </statement>
+        <feedback>
+          <p>Correct! Using super() reduces code duplication, and the child class method can duplicate the functionality of the parent class method.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_inheritance_mc4">
+    <statement>
+      <p>Q-4: For which of the following can inheritance be used?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Keyboard inherits from Computer.</p>
+        </statement>
+        <feedback>
+          <p>Try again! Keyboard isn't a type of Computer, so inheritance can't be used.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Student inherits from Person.</p>
+        </statement>
+        <feedback>
+          <p>Correct! Student is a type of Person, so inheritance can be used.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Encyclopedia inherits from Book.</p>
+        </statement>
+        <feedback>
+          <p>Correct! Encyclopedia is a type of Book, so inheritance can be used.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Person inherits House.</p>
+        </statement>
+        <feedback>
+          <p>Try again! Person isn't a type of House, so inheritance can't be used.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_inheritance_mc5">
+    <statement>
+      <p>Q-5: Can a class only inherit from another class if it is a type of the class?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>Yes, a class can only inherit from another class if it is a type of the class.</p>
+        </statement>
+        <feedback>
+          <p>Correct! A class can only inherit from another class if it is a type of the class. For example, an encyclopedia is a type of book.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>No, a class can inherit from another class if they're associated.</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Yes and no. A class can inherit from another class if they're associated or if it is a type of the class.</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_inheritance_mc6">
+    <statement>
+      <p>Q-6: What phrases represent inheritance?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>A (class) has a (class).</p>
+        </statement>
+        <feedback>
+          <p>Try again! Classes that are associated can't use inheritance.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>A (class) can be substituted with (another class).</p>
+        </statement>
+        <feedback>
+          <p>Correct! Classes that can be substituted can use inheritance.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A (class) can be associated with (another class).</p>
+        </statement>
+        <feedback>
+          <p>Try again! Classes that are associated can't use inheritance.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>A (class) is a type of (other class).</p>
+        </statement>
+        <feedback>
+          <p>Correct! Classes that can be substituted can use inheritance.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>A (class) is a specialization of (other class).</p>
+        </statement>
+        <feedback>
+          <p>Correct! Classes that can be substituted can use inheritance.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_inheritance_mc7_v2">
+    <statement>
+      <p>Q-7: How do you call a method in a parent class?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>parent().method</p>
+        </statement>
+        <feedback>
+          <p>Do not use parent.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>parent.method</p>
+        </statement>
+        <feedback>
+          <p>Do not use parent. Do use ().</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>super().method</p>
+        </statement>
+        <feedback>
+          <p>Correct! Use super().method to call parent class methods.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>super.method</p>
+        </statement>
+        <feedback>
+          <p>You need the ()</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_inheritance_mc8">
+    <statement>
+      <p>Q-8: If Dictionary is a subclass of Book, what line of code is needed to invoke the __init__ method in Book to Dictionary?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>Book.__init__(self)</p>
+        </statement>
+        <feedback>
+          <p>Correct! Using ParentClass.method is one way to invoke a method in the ParentClass to the ChildClass.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Dictionary.__init__(self)</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>super().__init__()</p>
+        </statement>
+        <feedback>
+          <p>Correct! Using super().method is one way to invoke a method in the ParentClass to the ChildClass.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Book.super().__init__(self)</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Book.__init__(Dictionary)</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_inheritance_mc9">
+    <statement>
+      <p>Q-9: What will be printed?</p>
+      <program language="python">
+        <input>
+class Person:
+   pass
+
+class Employee(Person):
+   pass
+
+p2 = Employee()
+print(isinstance(p2, Person))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>Correct! p2 is assigned to an Employee object, and the Employee object inherits from Person. Therefore, p2 is an instance of Person.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The code won't compile.</p>
+        </statement>
+        <feedback>
+          <p>Try again! The code compiles even with the pass statements.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None</p>
+        </statement>
+        <feedback>
+          <p>Try again! Printing isinstance() will print either True or False if it compiles.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_inheritance_mc10">
+    <statement>
+      <p>Q-10: Which statement about inheritance is incorrect?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Inheritance is a key idea of Object-oriented programming (OOP).</p>
+        </statement>
+        <feedback>
+          <p>Try again! This statement about inheritance is correct.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The child class is also called a subclass or a derived class.</p>
+        </statement>
+        <feedback>
+          <p>Try again! This statement about inheritance is correct.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Private members of a class can be inherited.</p>
+        </statement>
+        <feedback>
+          <p>Correct! This statement about inheritance is incorrect. Private members of a class can't be inherited.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Protected members of a class can be inherited.</p>
+        </statement>
+        <feedback>
+          <p>Try again! This statement about inheritance is correct.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="unittest_mcq_test_item__1">
+    <statement>
+      <p>Q-11: Given that there is an <c>Item</c> class with a name and price with a <c>__str__</c> method that returns <c>"name: price"</c>, which of the following is correct?</p>
+      <p>
+        <c>I</c>
+      </p>
+      <pre>class TestItem(unittest.TestCase):
+
+    def setUp():
+        i1 = Item("Coke", 2.99)
+        i2 = Item("Burger", 6.99)
+
+    def test_str_item():
+        self.assertEqual(i1.__str__(), "Coke: 2.99")
+        self.assertEqual(i2.__str__(), "Burger: 6.99")</pre>
+      <p>
+        <c>II</c>
+      </p>
+      <pre>class TestItem(unittest.TestCase):
+
+    def setUp(self):
+        self.i1 = Item("Coke", 2.99)
+        self.i2 = Item("Burger", 6.99)
+
+    def test_str_item():
+        self.assertEqual(i1.__str__(), "Coke: 2.99")
+        self.assertEqual(i2.__str__(), "Burger: 6.99")</pre>
+      <p>
+        <c>III</c>
+      </p>
+      <pre>class TestItem(unittest.TestCase):
+
+    def setUp(self):
+        self.i1 = Item("Coke", 2.99)
+        self.i2 = Item("Burger", 6.99)
+
+    def test_str_item(self):
+        self.assertEqual(self.i1.__str__(), "Coke: 2.99")
+        self.assertEqual(self.i2.__str__(), "Burger: 6.99")</pre>
+      <p>
+        <c>IV</c>
+      </p>
+      <pre>class TestItem(unittest.TestCase):
+
+    def setUp():
+        i1 = Item("Coke", 2.99)
+        i2 = Item("Burger", 6.99)
+
+    def test_str_item(self):
+        self.assertEqual(self.i1.__str__(), "Coke: 2.99")
+        self.assertEqual(self.i2.__str__(), "Burger: 6.99")</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>I</p>
+        </statement>
+        <feedback>
+          <p>All methods take self (the current object).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>II</p>
+        </statement>
+        <feedback>
+          <p>The test_create method takes self and you must use self to access i1 and i2.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>III</p>
+        </statement>
+        <feedback>
+          <p>Correct!  Remember to pass in self to methods and use self when accessing attributes.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>IV</p>
+        </statement>
+        <feedback>
+          <p>The setUp method takes self and you must use self in the setUp so other methods will still have access.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="unittest_mcq_test_car_2">
+    <statement>
+      <p>Q-12: Given that there is an <c>Car</c> class with attributes of <c>make</c> and <c>color</c>, which of the following is correct?</p>
+      <p>
+        <c>I</c>
+      </p>
+      <pre>class TestCar(unittest.TestCase):
+
+    def setUp():
+         c1 = Car("Ford", "blue")
+         c2 = Car("Toyota", "red")
+
+     def test_create_car():
+         assertEqual(c1.make, "Ford")
+         assertEqual(c1.color, "blue")
+         assertEqual(c2.make, "Toyota")
+         assertEqual(c2.color, "red")</pre>
+      <p>
+        <c>II</c>
+      </p>
+      <pre>class TestCar(unittest.TestCase):
+
+    def setUp(self):
+        self.c1 = Car("Ford", "blue")
+        self.c2 = Car("Toyota", "red")
+
+    def test_create_car(self):
+        assertEqual(self.c1.make, "Ford")
+        assertEqual(self.c1.color, "blue")
+        assertEqual(self.c2.make, "Toyota")
+        assertEqual(self.c2.color, "red")</pre>
+      <p>
+        <c>III</c>
+      </p>
+      <pre>class TestCar(unittest.TestCase):
+
+    def setUp(self):
+        self.c1 = Car("Ford", "blue")
+        self.c2 = Car("Toyota", "red")
+
+    def test_create_car():
+        self.assertEqual(self.c1.make, "Ford")
+        self.assertEqual(self.c1.color, "blue")
+        self.assertEqual(self.c2.make, "Toyota")
+        self.assertEqual(self.c2.color, "red")</pre>
+      <p>
+        <c>IV</c>
+      </p>
+      <pre>class TestCar(unittest.TestCase):
+
+    def setUp(self):
+        self.c1 = Car("Ford", "blue")
+        self.c2 = Car("Toyota", "red")
+
+    def test_create_car(self):
+        self.assertEqual(self.c1.make, "Ford")
+        self.assertEqual(self.c1.color, "blue")
+        self.assertEqual(self.c2.make, "Toyota")
+        self.assertEqual(self.c2.color, "red")</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>I</p>
+        </statement>
+        <feedback>
+          <p>All methods take self (the current object).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>II</p>
+        </statement>
+        <feedback>
+          <p>The assertEqual methods need to be called on self (the current object).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>III</p>
+        </statement>
+        <feedback>
+          <p>All methods take self (the current object).</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>IV</p>
+        </statement>
+        <feedback>
+          <p>Correct! All methods take self and you must call assertEqual on self and use self for accessing attributes.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="unittest_mcq_test_car_set_color_3">
+    <statement>
+      <p>Q-13: Given that there is an <c>Car</c> class with attributes of <c>make</c> and <c>color</c> and a method <c>set_color</c> which changes the color, which of the following is correct?</p>
+      <p>
+        <c>I</c>
+      </p>
+      <pre>class TestCar(unittest.TestCase):
+
+    def setUp():
+         c1 = Car("Ford", "blue")
+         c2 = Car("Toyota", "red")
+
+     def test_change_color():
+         assertEqual(c1.color, "blue")
+         c1.set_color("yellow")
+         assertEqual(c1.color, "yellow")
+         assertEqual(c2.color, "red")
+         c2.set_color("blue")
+         assertEqual(c2.color, "blue")</pre>
+      <p>
+        <c>II</c>
+      </p>
+      <pre>class TestCar(unittest.TestCase):
+
+    def setUp(self):
+         self.c1 = Car("Ford", "blue")
+         self.c2 = Car("Toyota", "red")
+
+     def test_change_color(self):
+         self.assertEqual(self.c1.color, "yellow")
+         self.c1.set_color("yellow")
+         self.assertEqual(self.c1.color, "blue")
+         self.assertEqual(self.c2.color, "red")
+         self.c2.set_color("blue")
+         self.assertEqual(self.c2.color, "blue")</pre>
+      <p>
+        <c>III</c>
+      </p>
+      <pre>class TestCar(unittest.TestCase):
+
+    def setUp(self):
+         self.c1 = Car("Ford", "blue")
+         self.c2 = Car("Toyota", "red")
+
+     def test_change_color(self):
+         self.assertEqual(self.c1.color, "blue")
+         self.c1.set_color("yellow")
+         self.assertEqual(self.c1.color, "yellow")
+         self.assertEqual(self.c2.color, "red")
+         self.c2.set_color("blue")
+         self.assertEqual(self.c2.color, "blue")</pre>
+      <p>
+        <c>IV</c>
+      </p>
+      <pre>class TestCar(unittest.TestCase):
+
+    def setUp(self):
+         self.c1 = Car("Ford", "blue")
+         self.c2 = Car("Toyota", "red")
+
+     def test_change_color(self):
+         self.assertEqual(self.c1.color, "blue")
+         self.c1.set_color("yellow")
+         self.assertEqual(self.c1.color, "yellow")
+         self.assertEqual(self.c2.color, "blue")
+         self.c2.set_color("blue")
+         self.assertEqual(self.c2.color, "red")</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>I</p>
+        </statement>
+        <feedback>
+          <p>All methods take self (the current object).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>II</p>
+        </statement>
+        <feedback>
+          <p>Check the original and changed color on each car object.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>III</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>IV</p>
+        </statement>
+        <feedback>
+          <p>Check the original and changed color on each car object.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="unittest_mcq_test_car_set_model_4">
+    <statement>
+      <p>Q-14: Given that there is an <c>Car</c> class with attributes of <c>make</c> and <c>color</c> and a method <c>set_make</c> which changes the make, which of the following is correct?</p>
+      <p>
+        <c>I</c>
+      </p>
+      <pre>class TestCar(unittest.TestCase):
+
+    def setUp():
+         c1 = Car("Ford", "blue")
+         c2 = Car("Toyota", "red")
+
+     def test_change_make():
+         assertEqual(c1.make, "Ford"")
+         c1.set_make("Toyota")
+         assertEqual(c1.make, "Toyota")
+         assertEqual(c2.make, "Toyota")
+         c2.set_make("Ford")
+         assertEqual(c2.make, "Ford")</pre>
+      <p>
+        <c>II</c>
+      </p>
+      <pre>class TestCar(unittest.TestCase):
+
+    def setUp(self):
+         self.c1 = Car("Ford", "blue")
+         self.c2 = Car("Toyota", "red")
+
+     def test_change_make():
+         self.assertEqual(self.c1.make, "Toyota")
+         self.c1.set_make("Ford")
+         self.assertEqual(self.c1.make, "Ford")
+         self.assertEqual(self.c2.make, "Ford")
+         self.c2.set_make("Toyota")
+         self.assertEqual(self.c2.make, "Toyota")</pre>
+      <p>
+        <c>III</c>
+      </p>
+      <pre>class TestCar(unittest.TestCase):
+
+    def setUp(self):
+         self.c1 = Car("Ford", "blue")
+         self.c2 = Car("Toyota", "red")
+
+     def test_change_make(self):
+         self.assertEqual(c1.make, "Toyota")
+         self.c1.set_make("Ford")
+         self.assertEqual(c1.make, "Ford")
+         self.assertEqual(c2.make, "Ford")
+         self.c2.set_make("Toyota")
+         self.assertEqual(c2.make, "Toyota")</pre>
+      <p>
+        <c>IV</c>
+      </p>
+      <pre>class TestCar(unittest.TestCase):
+
+    def setUp(self):
+         self.c1 = Car("Ford", "blue")
+         self.c2 = Car("Toyota", "red")
+
+     def test_change_make(self):
+         self.assertEqual(self.c1.make, "Ford"")
+         self.c1.set_make("Toyota")
+         self.assertEqual(self.c1.make, "Toyota")
+         self.assertEqual(self.c2.make, "Toyota")
+         self.c2.set_make("Ford")
+         self.assertEqual(self.c2.make, "Ford")</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>I</p>
+        </statement>
+        <feedback>
+          <p>All methods take self (the current object).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>II</p>
+        </statement>
+        <feedback>
+          <p>All methods take self (the current object).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>III</p>
+        </statement>
+        <feedback>
+          <p>Are the test cases correct?  What was the original make and changed make for each?</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>IV</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="unittest_mcq_test_order_price__5">
+    <statement>
+      <p>Q-15: Given that there is an <c>Item</c> class with a <c>name</c> and <c>price</c> and an <c>Order</c> class that takes a list of <c>Item</c> objects and has a <c>total</c> method which returns the total price for all items, which of the following is correct?</p>
+      <p>
+        <c>I</c>
+      </p>
+      <pre>class TestItem(unittest.TestCase):
+
+    def setUp(self):
+        i1 = Item("Coke", 2.99)
+        i2 = Item("Burger", 6.99)
+        self.o1 = Order([i1, i2])
+
+    def test_create_order_total(self):
+        self.assertAlmostEqual(self.o1.total(), 9.98, 2)</pre>
+      <p>
+        <c>II</c>
+      </p>
+      <pre>class TestItem(unittest.TestCase):
+
+    def setUp(self):
+        i1 = Item("Coke", 2.99)
+        i2 = Item("Burger", 6.99)
+        self.o1 = Order([i1, i2])
+
+    def test_create_order_total(self):
+        self.assertAlmostEqual(self.o1.total(), 9.99, 2)</pre>
+      <p>
+        <c>III</c>
+      </p>
+      <pre>class TestItem(unittest.TestCase):
+
+    def setUp(self):
+        i1 = Item("Coke", 2.99)
+        i2 = Item("Burger", 6.99)
+        self.o1 = Order([i1, i2])
+
+    def test_create_order_total(self):
+        self.assertAlmostEqual(self.o1.total(), "8.98", 2)</pre>
+      <p>
+        <c>IV</c>
+      </p>
+      <pre>class TestItem(unittest.TestCase):
+class TestItem(unittest.TestCase):
+
+    def setUp(self):
+        i1 = Item("Coke", 2.99)
+        i2 = Item("Burger", 6.99)
+        self.o1 = Order([i1, i2])
+
+    def test_create_order_total(self):
+        self.assertAlmostEqual(self.o1.total(), 8.98, 2)</pre>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>I</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>II</p>
+        </statement>
+        <feedback>
+          <p>Is 9.99 correct?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>III</p>
+        </statement>
+        <feedback>
+          <p>The method total returns a number, not a string.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>IV</p>
+        </statement>
+        <feedback>
+          <p>Is 8.98 correct?</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</exercises>

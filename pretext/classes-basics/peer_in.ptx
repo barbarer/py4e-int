@@ -1,0 +1,427 @@
+<?xml version="1.0"?>
+<section xml:id="classes-basics_peer-instruction-classes-multiple-choice-questions">
+  <title>Peer Instruction: Classes Multiple Choice Questions</title>
+  <exercise label="ctp-classes-18_Classes_11">
+    <statement>
+      <p>Q-1: Which of the following is not a possible method for a <c>Car</c> class?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>open_window</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Method describes a specific action associated with a Class. "open_window" is a possbile action.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>accelerate</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Method describes a specific action associated with a Class. "accelerate" is a possbile action</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>num_wheels</p>
+        </statement>
+        <feedback>
+          <p>Correct! "num_wheels" is a possible attribute which describes a specific feature.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>turn_right</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Method describes a specific action associated with a Class. "turn_right" is a possbile action.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Method describes a specific action associated with a Class.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-classes-18_Classes_15">
+    <statement>
+      <p>Q-2: What does this code output?</p>
+      <program language="python">
+        <input>
+class Point:
+
+   def __init__ (self):
+      self.x = 0
+      self.y = 0
+
+p1 = Point()
+p1.x = p1.x + 2
+p1.y = p1.x + 3
+p2 = Point()
+p2.x = p2.x + 4
+print(p2.x, p2.y)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>0 0</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, p2.x = 0 + 4 = 4 and p2.y = 0.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>4 0</p>
+        </statement>
+        <feedback>
+          <p>Correct! Here, p2.x = 0 + 4 = 4 and p2.y = 0.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>2 3</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, p2.x = 0 + 4 = 4 and p2.y = 0.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>7 3</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, p2.x = 0 + 4 = 4 and p2.y = 0.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, p2.x = 0 + 4 = 4 and p2.y = 0.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-methods-19_Methods_5">
+    <statement>
+      <p>Q-3: If <c>t</c> is an object of class <c>Thing</c> and <c>d</c>, <c>e</c>, and <c>f</c> are defined, what is the proper way to call <c>do_it</c>?</p>
+      <program language="python">
+        <input>
+class Thing(object):
+   def do_it(self, a, b, c):
+      ...
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>do_it(d, e, f)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! You call a method using dot notation.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>do_it(self, d, e, f)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! You call a method using dot notation.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>do_it(t, d, e, f)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! You call a method using dot notation.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>t.do_it(d, e, f)</p>
+        </statement>
+        <feedback>
+          <p>Correct! Use dot notation on the object to call a method.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>t.do_it(t, d, e, f)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Use dot notation and this will implicitly pass in the object as the first item, you don't also pass it in explicitly.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-methods-19_Methods_7">
+    <statement>
+      <p>Q-4: What does this code output?</p>
+      <program language="python">
+        <input>
+class Thing(object):
+
+   def __init__(self, a, b):
+      self.val = a * b
+
+   def __str__(self):
+      return '[' + str(self.val + 2) + ']'
+
+t = Thing(4, 5)
+print(t)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>20</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, a = 4, b = 5 and self.val = a*b = 20. So, '[' + str(20 + 2) + ']' = [22].</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[20]</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, a = 4, b = 5 and self.val = a*b = 20. So, '[' + str(20 + 2) + ']' = [22].</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>22</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, a = 4, b = 5 and self.val = a*b = 20. So, '[' + str(20 + 2) + ']' = [22].</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>[22]</p>
+        </statement>
+        <feedback>
+          <p>Correct! Here, a = 4, b = 5 and self.val = a*b = 20. So, '[' + str(20 + 2) + ']' = [22].</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, a = 4, b = 5 and self.val = a*b = 20. So, '[' + str(20 + 2) + ']' = [22].</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-methods-19_Methods_9">
+    <statement>
+      <p>Q-5: What does this code output?</p>
+      <program language="python">
+        <input>
+class Account(object):
+   def __init__(self, val):
+      self.gold = val
+   def __eq__(self, other):
+      return self.gold==0 and other.gold==5
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Account(50) == Account(50)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Account(50) assigns 50 to self.gold and when called again assigns 50 to other.gold too. So, the return statement evaluates to False (False and False).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Account(80) == Account(90)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Account(80) assigns 80 to self.gold and Account(90) assigns 90 to other.gold. So, the return statement evaluates to False (False and False).</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Account(0) == Account(5)</p>
+        </statement>
+        <feedback>
+          <p>Correct! Account(0) assigns 0 to self.gold and Account(5) assigns 5 to other.gold. So, the return statement evaluates to True.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Account(0) == Account(0)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Account(0) assigns 0 to self.gold and and when called again assigns 0 to other.gold too. So, the return statement evaluates to False (True and False).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>More than one of the above</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Account(0) assigns 0 to self.gold and Account(5) assigns 5 to other.gold. So, the return statement evaluates to True.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-methods-19_Methods_12">
+    <statement>
+      <p>Q-6: Which code for <c>__ne__</c> is correct?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement id="ctp-methods-19_Methods_12_opt_a">
+          <pre>def __ne__(self, p):
+   return not self == p</pre>
+        </statement>
+        <feedback id="ctp-methods-19_Methods_12_opt_a">
+          <p>Correct! self == p calls <q>__eq__</q>. So, it essentially returns self != p.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-methods-19_Methods_12_opt_b">
+          <pre>def __ne__(self, p):
+   return self.x == p.x and self.y == p.y</pre>
+        </statement>
+        <feedback id="ctp-methods-19_Methods_12_opt_b">
+          <p>Incorrect! It would return the opposite.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement id="ctp-methods-19_Methods_12_opt_c">
+          <pre>def __ne__(self, p):
+   if self.x =! p.x or self.y != p.y:
+      return True
+   return False</pre>
+        </statement>
+        <feedback id="ctp-methods-19_Methods_12_opt_c">
+          <p>Correct! If self != p, then the <q>if</q> condition would evaluate to True returning True. Otherwise, it would return False.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-methods-19_Methods_12_opt_d">
+          <p>I don't know</p>
+        </statement>
+        <feedback id="ctp-methods-19_Methods_12_opt_d">
+          <p>Incorrect!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-methods-19_Methods_13">
+    <statement>
+      <p>Q-7: We want the point closer to the origin to be the lesser point. Which code is correct?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement id="ctp-methods-19_Methods_13_opt_a">
+          <pre>def __lt__(self, p):
+   if self.x &lt; p.x and self.y &lt; p.y:
+      return True
+   return False</pre>
+        </statement>
+        <feedback id="ctp-methods-19_Methods_13_opt_a">
+          <p>Incorrect! Consider negative numbers as well. For instance, (self.x = -1) &gt; (p.x = -5) but self.x is near closer to the origin.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement id="ctp-methods-19_Methods_13_opt_b">
+          <pre>def __lt__(self, p):
+   if self.magnitude() &lt; p.magnitude():
+      return True
+   return False</pre>
+        </statement>
+        <feedback id="ctp-methods-19_Methods_13_opt_b">
+          <p>Correct! This option uses magnitude and thus the relation stands true for negative numbers as well.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement id="ctp-methods-19_Methods_13_opt_c">
+          <pre>def __lt__(self, p):
+   my_val = math.sqrt(self.x**2 + self.y**2)
+   p_val = math.sqrt(p.x**2 + p.y**2)
+   if my_val &lt; p_val:
+      return True
+   return False</pre>
+        </statement>
+        <feedback id="ctp-methods-19_Methods_13_opt_c">
+          <p>Correct! The equation <q>math.sqrt(x**2 + y**2)</q> measures the absolute distance of point (x, y) from (0, 0).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-methods-19_Methods_13_opt_d">
+          <p>I don't know</p>
+        </statement>
+        <feedback id="ctp-methods-19_Methods_13_opt_d">
+          <p>Incorrect!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-methods-19_Methods_14">
+    <statement>
+      <p>Q-8: Which implementation for <c>(__le__)</c> is correct?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement id="ctp-methods-19_Methods_14_opt_a">
+          <pre>def __le__(self, p):
+   if self &lt; p or self == p:
+      return True
+   return False</pre>
+        </statement>
+        <feedback id="ctp-methods-19_Methods_14_opt_a">
+          <p>Correct! self &lt; p will invoke <q>__lt__</q> and self == p will invoke <q>__eq__</q></p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-methods-19_Methods_14_opt_b">
+          <pre>def __le__(self, p):
+   if self.magnitude() &lt;= p.magnitude():
+      return True
+   return False</pre>
+        </statement>
+        <feedback id="ctp-methods-19_Methods_14_opt_b">
+          <p>Incorrect! This will lead to erroneous results in case of negative co-ordinates.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-methods-19_Methods_14_opt_c">
+          <pre>def __le__(self, p):
+   if self.x &lt;= p.x and self.y &lt;= p.y:
+      return True
+   return False</pre>
+        </statement>
+        <feedback id="ctp-methods-19_Methods_14_opt_c">
+          <p>Incorrect! This would have been correct if <q>and</q> is replaced by <q>or</q></p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-methods-19_Methods_14_opt_d">
+          <p>I don't know</p>
+        </statement>
+        <feedback id="ctp-methods-19_Methods_14_opt_d">
+          <p>Incorrect! Option A is correct. self &lt; p will invoke <q>__lt__</q> and self == p will invoke <q>__eq__</q></p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

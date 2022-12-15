@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<section xml:id="regex_glossary">
+  <title>Glossary</title>
+  <glossary sorted="False">
+    <gi>
+      <title>Brittle Code</title>
+      <p>Code that works when the input data is in a particular format but is prone to breakage if there is some deviation from the correct format. We call this <q>brittle code</q> because it is easily broken.</p>
+    </gi>
+    <gi>
+      <title>Greedy Matching</title>
+      <p>The notion that the <c>+</c> and <c>*</c> characters in a regular expression expand outward to match the largest possible string.</p>
+    </gi>
+    <gi>
+      <title>Grep</title>
+      <p>A command available in most Unix systems that searches through text files looking for lines that match regular expressions. The command name stands for <q>Generalized Regular Expression Parser</q>.</p>
+    </gi>
+    <gi>
+      <title>Regular Expression</title>
+      <p>A language for expressing more complex search strings. A regular expression may contain special characters that indicate that a search only matches at the beginning or end of a line or many other similar capabilities.</p>
+    </gi>
+    <gi>
+      <title>Wild Card</title>
+      <p>A special character that matches any character. In regular expressions the wild-card character is the period.</p>
+    </gi>
+  </glossary>
+  <exercise label="chapter_11_glossary_one">
+    <statement>
+      <p>Match the following terms with their definitions.</p>
+    </statement>
+    <feedback>
+      <p>Look above for the definitions of these terms.</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>brittle code</premise>
+        <response>Code that works when the input data is in a particular format but is prone to breakage if there is some deviation from the correct format.</response>
+      </match>
+      <match order="2">
+        <premise>greedy matching</premise>
+        <response>The notion that the ``+`` and ``*`` characters in a regular expression expand outward to match the largest possible string.</response>
+      </match>
+      <match order="3">
+        <premise>grep</premise>
+        <response>A command available in most Unix systems that searches through text files looking for lines that match regular expressions.</response>
+      </match>
+      <match order="4">
+        <premise>regular expression</premise>
+        <response>A language for expressing more complex search strings.</response>
+      </match>
+      <match order="5">
+        <premise>wild card</premise>
+        <response>A special character that matches any character.</response>
+      </match>
+    </matches>
+  </exercise>
+</section>

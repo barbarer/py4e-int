@@ -1,0 +1,482 @@
+<?xml version="1.0"?>
+<exercises xml:id="dictionaries_multiple-choice-questions">
+  <title>Multiple Choice Questions</title>
+  <exercise label="Exercises_question9_1">
+    <statement>
+      <p>Q-1: Which line of code correctly adds an item to the <c>fruits</c> dictionary with a key of &#x2018;grapes' and a value of 15?</p>
+      <program language="python">
+        <input>
+fruits = {'apples': 1, 'bananas': 4, 'pears': 17, 'oranges': 14}
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>fruits['grapes']</p>
+        </statement>
+        <feedback>
+          <p>Try again! This does not add a value.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>fruits['grapes'] = 15</p>
+        </statement>
+        <feedback>
+          <p>Correct! This line adds 'grapes' as a key with a value of 15.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>insert 'grapes' in fruits</p>
+        </statement>
+        <feedback>
+          <p>Try again! This is not correct Python.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>fruits[15] = 'grapes'</p>
+        </statement>
+        <feedback>
+          <p>Try again! This sets the key to 15 and the value to 'grapes'.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_question9_2">
+    <statement>
+      <p>Q-2: What does the following code print?</p>
+      <program language="python">
+        <input>
+names = {'Janice': 5, 'Emily': 3, 'John': 7, 'Eleanor': 2}
+list_o_names = []
+for name in names:
+    if names[name] &gt; 5:
+        list_o_names.append(name)
+print(list_o_names)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>['Janice', 'John']</p>
+        </statement>
+        <feedback>
+          <p>Try again! This would be true if it was greater than or equal 5.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>['Janice', 'Emily', 'Eleanor']</p>
+        </statement>
+        <feedback>
+          <p>Try again! This only adds items with a value greater than 5.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>['John']</p>
+        </statement>
+        <feedback>
+          <p>Correct! John is the only key that has a value greater than 5.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>['Janice', 'Emily', 'John', 'Eleanor']</p>
+        </statement>
+        <feedback>
+          <p>Try again! This only adds items with a value greater than 5.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_question9_3">
+    <statement>
+      <p>Q-3: What does the following code print?</p>
+      <program language="python">
+        <input>
+names = {'Janice': 5, 'Emily': 3, 'John': 7, 'Eleanor': 2}
+list_o_names = []
+
+names['Emily'] += 10
+names['Erik'] = 22
+
+for name in names:
+    if names[name] &gt; 5:
+        list_o_names.append(name)
+print(list_o_names)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>['Emily', 'John', 'Erik']</p>
+        </statement>
+        <feedback>
+          <p>Correct! Erik is initialized to 22, and Emily is updated to 13. Therefore, these two entries are added to the list found in the previous question.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>['Janice', 'Emily', 'John']</p>
+        </statement>
+        <feedback>
+          <p>Try again! Erik is set to 22, so it should be added.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>['Janice', 'John', 'Erik']</p>
+        </statement>
+        <feedback>
+          <p>Try again! Emily is set to 13, so it should be added.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>['Janice', 'Emily', 'John', 'Eleanor']</p>
+        </statement>
+        <feedback>
+          <p>Try again! This will not add Eleanor since the value is 2, and this will not add Janice since the value is 5.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_question9_4">
+    <statement>
+      <p>Q-4: What is the value of <c>counter</c> after the code is run?</p>
+      <program language="python">
+        <input>
+phrase = "Cheese in Philadelphia is extraordinary according to Erik"
+
+counter = 0
+letters = {}
+for word in phrase.split():
+    for letter in word:
+        letter = letter.lower()
+        if letter not in letters.keys():
+            letters[letter] = 0
+        letters[letter] += 1
+for key in letters.keys():
+    if letters[key] &gt; 2:
+        counter += 1
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>5</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>10</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>9</p>
+        </statement>
+        <feedback>
+          <p>Correct! There are 9 letters in phrase that appear more than two times.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_question9_5">
+    <statement>
+      <p>Q-5: Which line of code correctly gets the value of the key &#x2018;apples' if it exists and returns 0 if it does not?</p>
+      <program language="python">
+        <input>
+fruits = {'bananas': 7, 'apples': 4, 'grapes': 19, 'pears': 4}
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>fruits.get(apples)</p>
+        </statement>
+        <feedback>
+          <p>Try again! The key must be a string in this case.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>fruits.get('apples', 0)</p>
+        </statement>
+        <feedback>
+          <p>Correct! This correctly grabs the key as a string and also includes a default value in case the key is not present in the dictionary.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>fruits.get('apple')</p>
+        </statement>
+        <feedback>
+          <p>Try again! This will return None if the key does not exist.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>fruits.get(apples, 0)</p>
+        </statement>
+        <feedback>
+          <p>Try again! The key must be a string in this case.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_question9_6">
+    <statement>
+      <p>Q-6: What value is printed when this code runs?</p>
+      <program language="python">
+        <input>
+word = 'brontosaurus'
+diction = {}
+for letter in word:
+    if letter not in diction.keys():
+        diction[letter] = 0
+    diction[letter] += 1
+print(diction.get('o', 0) + 4)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>10</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>4</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>6</p>
+        </statement>
+        <feedback>
+          <p>Correct! The get() method grabs the value 2 and then 4 gets added to it to get 6.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>2</p>
+        </statement>
+        <feedback>
+          <p>Try again! This would be true if it just printed the value for the key 'o'. However, 4 is added to it.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_question9_7_v2">
+    <statement>
+      <p>Q-7: What order do the keys print in after the following code is run?</p>
+      <program language="python">
+        <input>
+counts = {'annie' : 42, 'chuck' : 1, 'jan' : 100}
+for key in counts:
+    print(key)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>jan, chuck, annie</p>
+        </statement>
+        <feedback>
+          <p>The order is their order in the dictionary.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>chuck, annie, jan</p>
+        </statement>
+        <feedback>
+          <p>The order is their order in the dictionary.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>annie, chuck, jan</p>
+        </statement>
+        <feedback>
+          <p>Correct! The order is their order in the dictionary.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>jan, annie, chuck</p>
+        </statement>
+        <feedback>
+          <p>The order is their order in the dictionary.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_question9_8_v2">
+    <statement>
+      <p>Q-8: What order do the keys print in after the following code is run?</p>
+      <program language="python">
+        <input>
+counts = {'annie' : 42, 'chuck' : 1, 'jan' : 100}
+items = counts.items()
+out = sorted(items, reverse = True)
+for item in out:
+    print(item[0])
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>jan, chuck, annie</p>
+        </statement>
+        <feedback>
+          <p>Correct! This will sort by the keys in descending order.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>chuck, annie, jan</p>
+        </statement>
+        <feedback>
+          <p>This will sort by the keys in descending order.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>annie, chuck, jan</p>
+        </statement>
+        <feedback>
+          <p>This will sort by the keys in descending order.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>jan, annie, chuck</p>
+        </statement>
+        <feedback>
+          <p>This will sort by the keys in descending order.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_question9_9_v2">
+    <statement>
+      <p>Q-9: What order do the keys print in after the following code is run?</p>
+      <program language="python">
+        <input>
+counts = {'annie' : 42, 'chuck' : 1, 'jan' : 100}
+items = counts.items()
+out = sorted(items, key = lambda t: t[1])
+for item in out:
+    print(item[0])
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>jan, chuck, annie</p>
+        </statement>
+        <feedback>
+          <p>This will sort by the values in ascending order.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>chuck, annie, jan</p>
+        </statement>
+        <feedback>
+          <p>Correct! This will sort by the values in ascending order.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>annie, chuck, jan</p>
+        </statement>
+        <feedback>
+          <p>This will sort by the values in ascending order.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>jan, annie, chuck</p>
+        </statement>
+        <feedback>
+          <p>This will sort by the values in ascending order.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_question9_10_v2">
+    <statement>
+      <p>Q-10: What order do the keys print in after the following code is run?</p>
+      <program language="python">
+        <input>
+counts = {'annie' : 42, 'chuck' : 1, 'jan' : 100}
+items = counts.items()
+sorted(items, key = lambda t: t[1])
+for item in items:
+    print(item[0])
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>jan, chuck, annie</p>
+        </statement>
+        <feedback>
+          <p>This will print the keys in their current order since sorted returns a new list.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>chuck, annie, jan</p>
+        </statement>
+        <feedback>
+          <p>This will print the keys in their current order since sorted returns a new list.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>annie, chuck, jan</p>
+        </statement>
+        <feedback>
+          <p>Correct! This will print the keys in their current order since sorted returns a new list.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>jan, annie, chuck</p>
+        </statement>
+        <feedback>
+          <p>This will print the keys in their current order since sorted returns a new list.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</exercises>

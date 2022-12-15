@@ -1,0 +1,415 @@
+<?xml version="1.0"?>
+<section xml:id="strings_peer-instruction-strings-multiple-choice-questions">
+  <title>Peer Instruction: Strings Multiple Choice Questions</title>
+  <exercise label="dz-lecture_11_4">
+    <statement>
+      <p>11-9-1: What does the following code print?</p>
+      <program language="python">
+        <input>
+game = 'Lost Vikings'
+print(game[5:-1])
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>kings</p>
+        </statement>
+        <feedback>
+          <p>Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. And the first index in a string is index 0.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>king</p>
+        </statement>
+        <feedback>
+          <p>Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. And the first index in a string is index 0. Index -1 is the right 1 character.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Viking</p>
+        </statement>
+        <feedback>
+          <p>Correct! s[i:j] extracts characters beginning at s[i] and ending about not including s[j].</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Vikings</p>
+        </statement>
+        <feedback>
+          <p>Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. Index -1 is the right 1 character. So 's' is not included.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>ikings</p>
+        </statement>
+        <feedback>
+          <p>Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. And the first index in a string is index 0.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_11_5">
+    <statement>
+      <p>11-9-2: What does the following code print?</p>
+      <program language="python">
+        <input>
+game = 'Lost Vikings'
+print(game[2:-6])
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>st V</p>
+        </statement>
+        <feedback>
+          <p>Correct! s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[2] is the third character from left, and s[-6] is the sixth character from right. s[2] = 's' and s[-6] = 'i'.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>ost V</p>
+        </statement>
+        <feedback>
+          <p>Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[2] is the third character from left. s[2] = 's'.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>iking</p>
+        </statement>
+        <feedback>
+          <p>Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[2] is the third character from left, and s[6] is the sixth character from right. s[2] = 's' and s[-6] = 'i'.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>st Vi</p>
+        </statement>
+        <feedback>
+          <p>Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[-6] is the sixth character from right. s[-6] = 'i'.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Viking</p>
+        </statement>
+        <feedback>
+          <p>Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[2] is the third character from left, and s[-6] is the sixth character from right. s[2] = 's' and s[-6] = 'i'.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_11_6">
+    <statement>
+      <p>11-9-3: What does the following code print?</p>
+      <program language="python">
+        <input>
+game = 'Lost Vikings'
+print(game[-6:-1])
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>ost Vikings</p>
+        </statement>
+        <feedback>
+          <p>Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[-6] is the sixth character from right, and s[-1] is the first character from right. There is no index 0 when counting from right to left.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>ost Viking</p>
+        </statement>
+        <feedback>
+          <p>Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[-6] is the sixth character from right, and s[-1] is the first character from right. There is no index 0 when counting from right to left.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>ikings</p>
+        </statement>
+        <feedback>
+          <p>Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[-1] is the first character from right. There is no index 0 when counting from right to left.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>iking</p>
+        </statement>
+        <feedback>
+          <p>Correct! s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. We can use negative indices in the slice syntax as well.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Vikings</p>
+        </statement>
+        <feedback>
+          <p>Try again. s[i:j] extracts characters beginning at s[i] and ending about not including s[j]. s[-1] is the first character from right. There is no index 0 when counting from right to left.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_11_9">
+    <statement>
+      <p>11-9-4: What does the following code print?</p>
+      <program language="python">
+        <input>
+s = 'Mississauga'
+t = len(s.replace('ss', 'a'))
+print(t)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>11</p>
+        </statement>
+        <feedback>
+          <p>Try again. s.replace(old, new): return s but with all occurrences of old replaced by new. The new s = 'Miaiaauga'. And the length of new s is 9.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>ss</p>
+        </statement>
+        <feedback>
+          <p>Try again. t is the length of the new string because it equals to len(s).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>10</p>
+        </statement>
+        <feedback>
+          <p>Try again. s.replace(old, new): return s but with all occurrences of old replaced by new. The new s = 'Miaiaauga'. And the length of new s is 9.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Miaaiaaauga'</p>
+        </statement>
+        <feedback>
+          <p>Try again. t is the length of the new string because it equals to len(s).</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>None of the above</p>
+        </statement>
+        <feedback>
+          <p>Correct! s.replace(old, new): return s but with all occurrences of old replaced by new. The new s = 'Miaiaauga'. And the length of new s is 9.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_11_10">
+    <statement>
+      <p>11-9-5: What string is produced by the following code?</p>
+      <program language="python">
+        <input>
+'cave'.center(8, 'x')
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>'xxcavexx'</p>
+        </statement>
+        <feedback>
+          <p>Correct! In string.center(length, character), the length is the length of the returned string and the character to fill the missing space on each side.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>'  cave  '</p>
+        </statement>
+        <feedback>
+          <p>Try again. In string.center(length, character), the character to fill the missing space on each side. Here the character is 'x'.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>'xxxxcavexxxx'</p>
+        </statement>
+        <feedback>
+          <p>Try again. In string.center(length, character), the length is the length of the returned string. The length here should be 8 rather than 12.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>'    cave    '</p>
+        </statement>
+        <feedback>
+          <p>Try again. In string.center(length, character), the length is the length of the returned string and the character to fill the missing space on each side. The length here should be 8 rather than 12 and the filling character is 'x'.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_12_3">
+    <statement>
+      <p>11-9-6: What is the value of <c>mystery</c>?</p>
+      <program language="python">
+        <input>
+ch = 'w'
+val = ord('a') + 6 - (ord('z') - ord(ch) + 1)
+mystery = chr(val)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>'a'</p>
+        </statement>
+        <feedback>
+          <p>Try again. ord converts characters to codes and chr converts codes to characters. ord('a') = 97, ord('z') = 122, ord(ch) = 119, val = 99. Therefore, mystery = 'c'.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>'b'</p>
+        </statement>
+        <feedback>
+          <p>Try again. ord converts characters to codes and chr converts codes to characters. ord('a') = 97, ord('z') = 122, ord(ch) = 119, val = 99. Therefore, mystery = 'c'.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>'c'</p>
+        </statement>
+        <feedback>
+          <p>Correct! ord converts characters to codes and chr converts codes to characters. ord('a') = 97, ord('z') = 122, ord(ch) = 119, val = 99. Therefore, mystery = 'c'.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>'d'</p>
+        </statement>
+        <feedback>
+          <p>Try again. ord converts characters to codes and chr converts codes to characters. ord('a') = 97, ord('z') = 122, ord(ch) = 119, val = 99. Therefore, mystery = 'c'.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>'e'</p>
+        </statement>
+        <feedback>
+          <p>Try again. ord converts characters to codes and chr converts codes to characters. ord('a') = 97, ord('z') = 122, ord(ch) = 119, val = 99. Therefore, mystery = 'c'.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_12_4">
+    <statement>
+      <p>11-9-7: What is the value of <c>mystery</c>?</p>
+      <program language="python">
+        <input>
+ch = 'x'
+val = ord('a') + 4 - (ord('z') - ord(ch) + 1)
+mystery = chr(val)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>'a'</p>
+        </statement>
+        <feedback>
+          <p>Try again. ord converts characters to codes and chr converts codes to characters. ord('a') = 97, ord('z') = 122, ord(ch) = 128, val = 98. Therefore, mystery = 'b'.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>'b'</p>
+        </statement>
+        <feedback>
+          <p>Correct! ord converts characters to codes and chr converts codes to characters. ord('a') = 97, ord('z') = 122, ord(ch) = 128, val = 98. Therefore, mystery = 'b'.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>'c'</p>
+        </statement>
+        <feedback>
+          <p>Try again. ord converts characters to codes and chr converts codes to characters. ord('a') = 97, ord('z') = 122, ord(ch) = 128, val = 98. Therefore, mystery = 'b'</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>'d'</p>
+        </statement>
+        <feedback>
+          <p>Try again. ord converts characters to codes and chr converts codes to characters. ord('a') = 97, ord('z') = 122, ord(ch) = 128, val = 98. Therefore, mystery = 'b'</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>'e'</p>
+        </statement>
+        <feedback>
+          <p>Try again. ord converts characters to codes and chr converts codes to characters. ord('a') = 97, ord('z') = 122, ord(ch) = 128, val = 98. Therefore, mystery = 'b'</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_12_7">
+    <statement>
+      <p>11-9-8: What does the following code print?</p>
+      <program language="python">
+        <input>
+s1 = '0'
+s2 = 'a{' + s1 + '}b'
+print(s2.format(4))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>a{0}b</p>
+        </statement>
+        <feedback>
+          <p>Try again. The format(4) method formats the specified value(4) and insert them inside the string's placeholder. The placeholder is defined using curly brackets: {}.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>ab</p>
+        </statement>
+        <feedback>
+          <p>Try again. s2 = a{0}b. The format(4) method formats the specified value(4) and insert them inside the string's placeholder. The placeholder is defined using curly brackets: {}.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>a4b</p>
+        </statement>
+        <feedback>
+          <p>Correct! The format(4) method formats the specified value(4) and insert them inside the string's placeholder.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The code does not run</p>
+        </statement>
+        <feedback>
+          <p>Try again. The code can run. {n} inserts the argument, thereefore s2 = a{0}b. The format(4) method formats the specified value(4) and insert them inside the string's placeholder. The placeholder is defined using curly brackets: {}.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

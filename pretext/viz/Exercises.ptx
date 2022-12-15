@@ -1,0 +1,316 @@
+<?xml version="1.0"?>
+<exercises xml:id="viz_multiple-choice-questions">
+  <title>Multiple Choice Questions</title>
+  <exercise label="viz_MC1">
+    <statement>
+      <p>csp-10-2-1: What is the standard way to import matplotlib's pyplot library in python?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>import matplot as plt</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! matplot is not a library.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>import matplotlib.pyplot as plt</p>
+        </statement>
+        <feedback>
+          <p>Correct! This is the correct way to import the library.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>from matplotlib import pyplot as plt</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This is not the correct way to import.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>import matplotlib pyplot as plt</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! There is a period between matplotlib and pyplot instead of space.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="viz_MC2">
+    <statement>
+      <p>csp-10-2-2: What is the correct way to plot a line graph?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>plot(x, y)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>plt.plot(x, y)</p>
+        </statement>
+        <feedback>
+          <p>Correct! This is the correct way.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>plt(x, y)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>plot.plt(x, y)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="viz_MC3">
+    <statement>
+      <p>csp-10-2-3: How do you set a title for a plot using matplotlib library?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>plt.set.title("Title")</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! plt has no function set.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>plt.Title("Title")</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Title needs to be lowercased.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>plt.title("Title")</p>
+        </statement>
+        <feedback>
+          <p>Correct! This is the correct way to set a title.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>plt.set_title("Title")</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! plt has no function set_title.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="viz_MC4">
+    <statement>
+      <p>csp-10-2-4: How do you set a title for the axis using matplotlib library?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>ax.set_title("Axis Title")</p>
+        </statement>
+        <feedback>
+          <p>Correct! This is the correct way to set axis title.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>ax.title("Axis Title")</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! ax has no method title.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>ax.axis_title("Axis Title")</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! ax has no method axis_title.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>ax.setTitle("Axis Title")</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! ax has no method setTitle.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="viz_MC5">
+    <statement>
+      <p>csp-10-2-5: How to create a subplot in a figure with three plots side by side and two rows of subplots?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>ax1 = fig.add_subplot(123)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This means row 1, column 2, and plot 3, which is not possible in a 1 * 2 figure.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>ax1 = fig.add_subplot(231)</p>
+        </statement>
+        <feedback>
+          <p>Correct! This is the correct way to create a subplot for this case.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>ax1 = fig.add_subplot(321)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This means row 3, column 2 and plot 1. Row and column need to be switched.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>ax1 = fig.add_subplot(3*2)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This is incorrect way to create subplot.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="viz_MC6">
+    <statement>
+      <p>csp-10-2-6: What is the function for creating a horizontal bar plot?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>plt.bar_hor(x, y)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! There is no function bar_hor.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>plt.hbar(x, y)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! There is no function hbar.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>plt.barh(x, y)</p>
+        </statement>
+        <feedback>
+          <p>Correct! This is the correct way to create a horizontal bar.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>plt.bar(x, y)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This is to create a vertical bar.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="viz_MC7">
+    <statement>
+      <p>csp-10-2-7: Which line of code would create a line plot in form of red squares with x = x and y = y?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>ax.plot(x, y, 'red', marker = 'square')</p>
+        </statement>
+        <feedback>
+          <p>Incorrect!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>ax.plot(x, y, 'R-', marker = 'sqr')</p>
+        </statement>
+        <feedback>
+          <p>Incorrect!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>ax.plot(x, y, 'r', 's')</p>
+        </statement>
+        <feedback>
+          <p>Incorrect!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>ax.plot(x, y, 'r-', marker = 's')</p>
+        </statement>
+        <feedback>
+          <p>Correct! This is the correct way.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="viz_MC8">
+    <statement>
+      <p>csp-10-2-8: What single line of code will set the x and y labels and the title of a plot?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>ax.set((xlabel, ylabel, title), ('Year', 'Amount', 'Title of Graph'))</p>
+        </statement>
+        <feedback>
+          <p>Incorrect!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>ax.(xlabel='Year', ylabel='Amount', title='Title of Graph')</p>
+        </statement>
+        <feedback>
+          <p>Incorrect!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>ax.set(xlabel='Year', ylabel='Amount', title='Title of Graph')</p>
+        </statement>
+        <feedback>
+          <p>Correct! This is the correct way.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>ax.set(xlabel='Year'), ax.set(ylabel='Amount'), ax.set(title='Title of Graph')</p>
+        </statement>
+        <feedback>
+          <p>Incorrect!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</exercises>

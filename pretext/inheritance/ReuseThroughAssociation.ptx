@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<section xml:id="inheritance_reuse-through-association">
+  <title>Reuse Through Association</title>
+  <p>Inheritance is not the only way to reuse code. <em>Association</em> occurs when
+            an object stores a reference to one or more objects from a different class in one of its instance
+            variables (attributes). The object is thus able to execute code on the objects it
+            embeds within itself.</p>
+  <p>For example, our <c>LabeledPoint</c> example could have been implemented as follows:</p>
+  <program xml:id="pt_composition_1" interactive="activecode" language="python">
+    <input>
+class Point:
+
+    def __init__(self, initX, initY):
+        self.x = initX
+        self.y = initY
+
+    def distanceFromOrigin(self):
+        return ((self.x ** 2) + (self.y ** 2)) ** 0.5
+
+    def __str__(self):
+        return "x=" + str(self.x) + ", y=" + str(self.y)
+
+class LabeledPoint:
+
+    def __init__(self, initX, initY, label):
+        self.point = Point(initX, initY)
+        self.label = label
+
+    def distanceFromOrigin(self):
+        return self.point.distanceFromOrigin()
+
+    def __str__(self):
+        return str(self.point) + " (" + self.label + ")"
+
+p = LabeledPoint(7,6,"Here")
+print(p)
+print(p.distanceFromOrigin())
+        </input>
+  </program>
+  <p>The first thing to notice is that <c>LabeledPoint</c>
+            does not inherit from <c>Point</c> in the code above. Instead, its constructor
+            creates a <c>Point</c> and stores a reference to it in its <c>point</c>
+            instance variable so that it can be used by the other methods.</p>
+  <p>Next, notice how the <c>distanceFromOrigin()</c> method uses the code in
+            <c>Point` by invoking it. We say that ``LabeledPoint</c>'s <c>distanceFromOrigin()</c>
+            delegates its implementation to <c>Point</c>'s implementation.</p>
+  <p>Finally, notice how the <c>__str__()</c> method also uses the code in
+            <c>Point</c> by calling <c>str(self.point)</c>.</p>
+  <exercise label="reuse_with_assoc_mcq">
+    <statement>
+      <p>Q-2: Which of the following are true about association?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>A class includes objects from another class as an attribute.</p>
+        </statement>
+        <feedback>
+          <p>In association one class with include objects from another class as an attribute.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A class inherits attributes from another class.</p>
+        </statement>
+        <feedback>
+          <p>This is only true for inheritance.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>A class can execute code on an object from another class.</p>
+        </statement>
+        <feedback>
+          <p>In association one class can execute code on an object from another class.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A class can override a method from another class.</p>
+        </statement>
+        <feedback>
+          <p>This is only true for inheritance.   A class can not override a method from another class unless it inherits from that class.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

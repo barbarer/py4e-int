@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<section xml:id="objects_classes-as-types">
+  <title>Classes as types</title>
+  <p>As we have seen, in Python all variables have a type.  We can use the built-in
+            <c>dir</c> function to examine the capabilities of a variable.  We can also use <c>type</c> and
+            <c>dir</c> with the classes that we create.</p>
+  <program xml:id="partyanimal_types" interactive="activecode" language="python">
+    <input>
+class PartyAnimal:
+    x = 0
+
+    def party(self) :
+        self.x = self.x + 1
+        print("So far",self.x)
+
+an = PartyAnimal()
+print ("Type", type(an))
+print ("Dir ", dir(an))
+print ("Type", type(an))
+print ("Type", type(an.party))
+        </input>
+  </program>
+  <p>You can see that using the <c>class</c> keyword, we have created a new type.
+            From the <c>dir</c> output, you can see both the <c>x</c> integer attribute and the <c>party</c>
+            method are available in the object.</p>
+</section>

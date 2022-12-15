@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<section xml:id="functions_functions-with-lists-multiple-choice-questions">
+  <title>Functions with Lists Multiple Choice Questions</title>
+  <exercise label="funct_lists_1_v2">
+    <statement>
+      <p>Q-1: What would <c>list_transformation([0, -2, 5.2, 1])</c> return?</p>
+      <program language="python">
+        <input>
+def list_transformation(lst):
+    lst.sort()
+    sum_of_lst = sum(lst)
+    lst.append(sum_of_lst)
+    return lst
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>[-2, 0, 1, 4.2, 5.2]</p>
+        </statement>
+        <feedback>
+          <p>Incorrect. This function will sort the list in order from lowest to highest, and then add the sum to the end of the list.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>[-2, 0, 1, 5.2, 4.2]</p>
+        </statement>
+        <feedback>
+          <p>Correct! It sorts the list in ascending order and then adds the sum at the end.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[4.2, -2, 0, 1, 5.2]</p>
+        </statement>
+        <feedback>
+          <p>Incorrect. This function will sort the list in order from lowest to highest, and then add the sum to the end of the list.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[0, -2, 5.2, 1, 4.2]</p>
+        </statement>
+        <feedback>
+          <p>Incorrect. This function will sort the list in order from lowest to highest, and then add the sum to the end of the list.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[5.2, 1, 0, -2, 4.2]</p>
+        </statement>
+        <feedback>
+          <p>Incorrect. This function will sort the list in order from lowest to highest, and then add the sum to the end of the list.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="funct_lists_2">
+    <statement>
+      <p>Q-2: Which values of <c>num</c> would not return an error if <c>lst</c> were <c>[0, 4, -4, 2.5]</c>?</p>
+      <program language="python">
+        <input>
+def popping_removal(lst, num):
+    lst.pop(num)
+    return lst
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>0</p>
+        </statement>
+        <feedback>
+          <p>Correct! This will remove the number at index 0.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>2.5</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The built-in function, pop, removes the value from a list, lst, at a specified index, num.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>4</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The built-in function, pop, removes the value from a list, lst, at a specified index, num.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>-5</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The built-in function, pop, removes the value from a list, lst, at a specified index, num.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>-4</p>
+        </statement>
+        <feedback>
+          <p>Correct! This will remove the number at index 0.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="funct_lists_3">
+    <statement>
+      <p>Q-3: What would the function <c>extend_and_append</c> output if <c>lst</c> were <c>[0, 200, 5.6, -2, 4, 5]</c>?</p>
+      <program language="python">
+        <input>
+def extend_and_append(lst):
+    new_list = lst[-4:-1]
+    lst.append(new_list)
+    lst.extend(new_list)
+    return lst
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>[0, 200, 5.6, -2, 4, 5, [-2, 4, 5], -2, 4, 5]</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The built-in function append adds a list to the end of a list. The built-in function extend adds the values of a list to the end of a list.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[0, 200, 5.6, -2, 4, 5, 5.6, -2, 4, 5.6, -2, 4]</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The built-in function append adds a list to the end of a list. The built-in function extend adds the values of a list to the end of a list.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>[0, 200, 5.6, -2, 4, 5, [5.6, -2, 4], 5.6, -2, 4]</p>
+        </statement>
+        <feedback>
+          <p>Correct! If the item you are appending is a list it is added as a list, while extend adds the values in the list.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[0, 200, 5.6, -2, 4, 5, 5.6, -2, 4, [5.6, -2, 4]]</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The built-in function append adds a list to the end of a list. The built-in function extend adds the values of a list to the end of a list.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[0, 200, 5.6, -2, 4, 5, -2, 4, 5, [-2, 4, 5]]</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The built-in function append adds a list to the end of a list. The built-in function extend adds the values of a list to the end of a list.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="funct_lists_4">
+    <statement>
+      <p>Q-4: Which of the following would correctly replace the else statement?</p>
+      <program language="python">
+        <input>
+def comparing_lengths(lst1, lst2):
+    if len(lst1) &gt; len(lst2):
+        return "The length of lst1 is greater than the length of lst1"
+    elif len(lst1) &lt; len(lst2):
+        return "The length of lst2 is greater than the length of lst1"
+    else:
+        return "The length of lst1 and the length of lst2 are equal"
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>elif len(lst1) = len(lst2):</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! A single equal sign is the assignment operator.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>elif len(lst1) == len(lst2):</p>
+        </statement>
+        <feedback>
+          <p>Correct! This checks if they are the same length.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>elif not(len(lst1) &gt; len(lst2)) and not(len(lst1) &lt; len(lst2))</p>
+        </statement>
+        <feedback>
+          <p>Correct! This checks that the length of lst1 is not greater or less than lst2.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>elif not(len(lst1) &gt; len(lst2)) or not(len(lst1) &lt; len(lst2))</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! When an or operator is used with two statements, only one of the statements has to be true in order for the entire statement to pass as true.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>elif not(len(lst1) is not len(lst2)):</p>
+        </statement>
+        <feedback>
+          <p>Correct! This checks if it is not true that the len of lst1 is not the same as the length of lst2.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="funct_lists_5">
+    <statement>
+      <p>Q-5: Which of the following line(s) of code would properly return a reversed list? (Note: Commas represent line breaks)</p>
+      <program language="python">
+        <input>
+def reverse_list(lst):
+    # line(s)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>lst_reverse = lst.reverse(), return lst</p>
+        </statement>
+        <feedback>
+          <p>Correct! Although it properly returns a reversed list, it is unnecessary to assign the reverse method to a variable. Reverse returns None.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>lst.reverse(), return lst</p>
+        </statement>
+        <feedback>
+          <p>Correct! This will reverse the list and then return it.  Reverse returns None.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>lst_reverse = lst.reverse(), return lst_reverse</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The built-in python function, reverse, does not need to be assigned to a new variable.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>return lst.reverse()</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The built-in python function, reverse, has to be used on the list before the list can be returned.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>lst_reverse = lst_reverse.reverse(), return lst</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This code does not modify lst, the passed in parameter.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

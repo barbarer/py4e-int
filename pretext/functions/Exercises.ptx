@@ -1,0 +1,513 @@
+<?xml version="1.0"?>
+<exercises xml:id="functions_multiple-choice-questions">
+  <title>Multiple Choice Questions</title>
+  <exercise label="functEx_1_v2">
+    <statement>
+      <p>Q-1: What will be printed when the following code executes?</p>
+      <program language="python">
+        <input>
+def test(a, b = 5):
+    print(a, b)
+
+test(-3)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>a, b</p>
+        </statement>
+        <feedback>
+          <p>It will print the value of a and b.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>-3, b</p>
+        </statement>
+        <feedback>
+          <p>It will print -3 and the value of b.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>a, 5</p>
+        </statement>
+        <feedback>
+          <p>It will print the value of a and 5.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>-3, 5</p>
+        </statement>
+        <feedback>
+          <p>It looks like it will print this, but it will actually print the values with a space between them.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>-3 5</p>
+        </statement>
+        <feedback>
+          <p>It prints the values of a and b with a space between them.  The default value of b is 5.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="functEx_2">
+    <statement>
+      <p>Q-2: What will the following Python program print out? (Given that each word will actually print on a new line)</p>
+      <program language="python">
+        <input>
+def fred():
+    print("Zap")
+
+def jane():
+    print("ABC")
+
+jane()
+fred()
+jane()
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Zap ABC jane fred jane</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This code will only print the strings "Zap" or "ABC", not "jane" or "fred". Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Zap ABC Zap</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This would be correct if the call was fred() jane() fred(). Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>ABC Zap jane</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This code will only print the strings "Zap" or "ABC", not "jane" or "fred". Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>ABC Zap ABC</p>
+        </statement>
+        <feedback>
+          <p>Correct! jane() fred() jane() will print ABC Zap ABC.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Zap Zap Zap</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This would be correct if the call was fred() fred() fred(). Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="functEx_3">
+    <statement>
+      <p>Q-3: What value is printed when the following code is executed?</p>
+      <program language="python">
+        <input>
+name = "Jane Doe"
+def myFunction(parameter):
+    value = "First"
+    value = parameter
+    print (value)
+
+myFunction("Second")
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>value</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! "value" is the name of a variable. This code will print what "value" is assigned to. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Second</p>
+        </statement>
+        <feedback>
+          <p>Correct! "value" is assigned to the value of parameter which is "Second", so that's what will print.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>parameter</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! "parameter" is equal to the function call's argument. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>First</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Although the variable value is assigned to "First" initially, it is then reassigned to be equal to the parameter. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Jane Doe</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The "name" variable is unused in the function call, so it does not affect what is printed. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="functEx_4_v2">
+    <statement>
+      <p>Q-4: A named sequence of statements is known as which of the following?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>definition</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! A definition is used to create functions. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>method</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! A method is a function that is defined in a class.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>turtle</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! "turtle" is a specific Python module that lets you draw lines and shapes. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>module</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! A module is a file that contains Python statements and definitions. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>function</p>
+        </statement>
+        <feedback>
+          <p>Correct! A function is a named sequence of statements in Python.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="functEx_5_v2">
+    <statement>
+      <p>Q-5: What will the following code print?</p>
+      <program language="python">
+        <input>
+def pow(b, p):
+    y = b ** p
+    return y
+
+def square(x):
+    a = pow(x, 2)
+    return a
+
+n = 5
+result = square(n)
+print(result)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>5</p>
+        </statement>
+        <feedback>
+          <p>This would be true if it first printed the value of x.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>10</p>
+        </statement>
+        <feedback>
+          <p>This would be true if it printed 5 * 2 but it is 5 ** 2 which is 5 * 5.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>25</p>
+        </statement>
+        <feedback>
+          <p>It prints the value of 5 raised to the 2nd power which is 5 * 5 = 25.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>32</p>
+        </statement>
+        <feedback>
+          <p>This would be true if it was 2 raised to the 5th power (2 * 2 * 2 * 2 * 2) = 32.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3125</p>
+        </statement>
+        <feedback>
+          <p>This would be ture if it was 5 raised to the 5th power (5 * 5 * 5 * 5 * 5) = 3125.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="functEx_6_v2">
+    <statement>
+      <p>Q-6: Consider the following Python code. What does this code print?</p>
+      <program language="python">
+        <input>
+def rem(a, b):
+    return a % b
+
+print(rem(3,7))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>0</p>
+        </statement>
+        <feedback>
+          <p>This would be true if it was rem(3,3).  The value 3 would go into 3 one time with 0 remainder.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>The value 7 goes into 3 zero times, so the remainder is 3.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>7</p>
+        </statement>
+        <feedback>
+          <p>How many times does 7 go evenly into 3 and what is the remainder?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>This would be true if it was rem(7,3)</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="functEx_7">
+    <statement>
+      <p>Q-7: Which of the following would NOT work as a variable name?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>a</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! a is a valid variable name. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>len</p>
+        </statement>
+        <feedback>
+          <p>Correct! This would not work as a variable name because it is already reserved as a built-in function name.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>length</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! length would work as a variable because it is not a reserved word or a built-in function. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>x</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! x is a valid variable name. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="functEx_8">
+    <statement>
+      <p>Q-8: Consider the code below. What prints?</p>
+      <program language="python">
+        <input>
+print(int(33.7))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>34.0</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The int function converts a floating point number to an integer. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>34</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The int function does not round up. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>33.70</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The int function converts a floating point number to an integer. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>33</p>
+        </statement>
+        <feedback>
+          <p>Correct! The int function always truncates floating point numbers.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="functEx_9">
+    <statement>
+      <p>Q-9: Consider the code below. Line 1 is called&#x2026;</p>
+      <program language="python">
+        <input>
+def printWeather():
+    print("It is sunny!")
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>the function header</p>
+        </statement>
+        <feedback>
+          <p>Correct! The first line of a function definition is the header.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>the function body</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Everything but the first line of a function definition is the function body. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>the function definition</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Lines 1 and 2 collectively are the function definition. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>the function named</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The name is printWeather.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="functEx_10">
+    <statement>
+      <p>Q-10: Consider the code block below. What happens when you run this program?</p>
+      <program language="python">
+        <input>
+repeat_lyrics()
+
+def repeat_lyrics():
+    print_lyrics()
+    print_lyrics()
+
+def print_lyrics():
+    print("I'm a lumberjack, and I'm okay.")
+    print('I sleep all night and I work all day.')
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>The lyrics print like normal.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! An error occurs when you call a function before it is defined. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>We get a TypeError.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This will not cause a TypeError because there is not an issue with the variable types. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>We get a NameError.</p>
+        </statement>
+        <feedback>
+          <p>Correct! You get a NameError when you call a function before it is defined.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The program compiles but nothing prints.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This program will not compile. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</exercises>

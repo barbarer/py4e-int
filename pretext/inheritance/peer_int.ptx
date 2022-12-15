@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<section xml:id="inheritance_peer-instruction-inheritance-multiple-choice-questions">
+  <title>Peer Instruction: Inheritance Multiple Choice Questions</title>
+  <exercise label="dz-lecture_27_5">
+    <statement>
+      <p>Q-1:  In the following pairs of words, the first is the subclass and the second is the superclass. Which of them is a correct example of inheritance?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>dog, cat</p>
+        </statement>
+        <feedback>
+          <p>Try again. Dog and cat are both the subclass of animal.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>dog, animal</p>
+        </statement>
+        <feedback>
+          <p>Correct! Dog is the subclass of animal.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>animal, dog</p>
+        </statement>
+        <feedback>
+          <p>Try again. Dog is the subclass of animal and the question wants the first is subclass.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>dog, tail</p>
+        </statement>
+        <feedback>
+          <p>Try again. Tail is a part of the dog but it does not belong to the subclass.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above</p>
+        </statement>
+        <feedback>
+          <p>Try again. There is one answer correct. Try to think about the relationship between category and subcategory.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_27_6">
+    <statement>
+      <p>Q-2:  In the following pairs of words, the first is the subclass and the second is the superclass. Which of them is a correct example of inheritance?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>school, building</p>
+        </statement>
+        <feedback>
+          <p>Correct! School is the subclass of building.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>school, student</p>
+        </statement>
+        <feedback>
+          <p>Try again. School is an object but student is not.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>student, school</p>
+        </statement>
+        <feedback>
+          <p>Try again. School is an object but student is not.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>school, computer</p>
+        </statement>
+        <feedback>
+          <p>Try again. School is a building but computer is not.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above</p>
+        </statement>
+        <feedback>
+          <p>Try again. There is one answer correct. Try to think about the relationship between category and subcategory.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_27_8">
+    <statement>
+      <p>Q-3: What is the output of this code?</p>
+      <program language="python">
+        <input>
+class A(object):
+  def __init__(self, x):
+      self.x = x
+
+  def __str__(self):
+      return str(self.x)
+
+class B(A):
+  def __init__(self, x):
+  self.x = x * 2
+
+b = B(5)
+print(b)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>5</p>
+        </statement>
+        <feedback>
+          <p>Try again. A is defined by the first class, which returns self.x. self.x equals to x, so class B inherits A whose value is 5. B(5) = 5 * 2 = 10.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>10</p>
+        </statement>
+        <feedback>
+          <p>Correct! Class B inherits A, whose value is 5. B(5) = 5 * 2 = 10.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>510</p>
+        </statement>
+        <feedback>
+          <p>Try again. A is defined by the first class, which returns self.x. self.x equals to x, so class B inherits A whose value is 5. B(5) = 5 * 2 = 10.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>105</p>
+        </statement>
+        <feedback>
+          <p>Try again. A is defined by the first class, which returns self.x. self.x equals to x, so class B inherits A whose value is 5. B(5) = 5 * 2 = 10.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

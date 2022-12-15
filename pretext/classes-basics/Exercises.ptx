@@ -1,0 +1,438 @@
+<?xml version="1.0"?>
+<exercises xml:id="classes-basics_multiple-choice-questions">
+  <title>Multiple Choice Questions</title>
+  <exercise label="objects_mcq10_1">
+    <statement>
+      <p>Q-1: Which of the following does <term>not</term> correctly create an object instance?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>student = Person("Charles")</p>
+        </statement>
+        <feedback>
+          <p>This uses a constructor to initialize object attributes. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>person = Person("Charles")</p>
+        </statement>
+        <feedback>
+          <p>This uses a constructor to initialize object attributes. The instance can have a similar name to the class. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Charles = Person()</p>
+        </statement>
+        <feedback>
+          <p>This is correct and does not have arguments. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>student = new Person("Charles")</p>
+        </statement>
+        <feedback>
+          <p>Correct! 'new' is incorrect.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="objects_mcq10_2_v2">
+    <statement>
+      <p>Q-2: Which of the following is the correct way to define a constuctor (intializer)?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>def __init__(title, author):</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Unless a class method is static, 'self' is needed to represent the current instance. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>def __init__(self, title, author):</p>
+        </statement>
+        <feedback>
+          <p>Correct! The "self" is used to represent an instance of the given class and the parameters will be used to initialize attributes.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>def __init__():</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! At minimum, the "self" parameter is needed to represent an instance of the given class. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>def init(self, title, author):</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The method name is __init__. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="objects_mcq10_3">
+    <statement>
+      <p>Q-3: How many attributes does an object of the Book class have?</p>
+      <pre>class Book:
+
+  def __init__(self, title, author, pages, price, age_group):
+    self.title = title
+    self.author = author
+    self.pages = pages
+    self.price = price
+    self.age_group = age_group
+
+  def __str__(self):
+    return "title: " + self.title + " author: " + self.author + " pages: " + self.pages + " price: " + self.price + " age_group: " + self.age_group</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>2</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This is the number of methods in the Book Class. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! How many items are initialized in the __init__ method?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>6</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! We do not count the 'self' as an attribute. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>5</p>
+        </statement>
+        <feedback>
+          <p>Correct! There are five attributes that are initialized in the __init__ method.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="objects_mcq10_4_v2">
+    <statement>
+      <p>Q-4: What should be in the underlined section in the <c>getX</c> method of the <c>Point</c> class?</p>
+      <pre>class Point:
+
+  def __init__(self, initX, initY):
+    self.x = initX
+    self.y = initY
+
+  def getX(self):
+    return ______</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>x</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! We need to refer to the current instance of the class. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>print(x)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! We do not want print a value. We want to return the attribute value. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>self.x</p>
+        </statement>
+        <feedback>
+          <p>Correct! Here 'self' is used to represent the current instance of the class.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>init.x</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! There is nothing like init.x since we are using the 'self' in the class. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="objects_mcq10_5">
+    <statement>
+      <p>Q-5: What does the following code output?</p>
+      <pre>class Person():
+
+    def __init__(self, name):
+      self.name = name
+
+    def __str__(self):
+      print("Name: " + self.name)
+
+  person1 = Person("James")
+  person2 = Person("Tony")
+  print(person1)</pre>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>Name: James</p>
+        </statement>
+        <feedback>
+          <p>Correct! This prints the string returned from the __str__ method.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Name: Tony</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! 'Tony' is the 'name' of person2 but we are printing the person1 instance. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Name: James Name: Tony</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! It does not print both objects.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>person1</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The output is not the name of the instance. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="objects_mcq10_6">
+    <statement>
+      <p>Q-6: Which of the following statements is incorrect about the following code?</p>
+      <pre>class Person():
+
+  def __init__(self, name):
+    self.name = name
+
+  def __str__(self):
+    print("Name: " + self.name)
+
+person1 = Person("James")
+person2 = Person("Tony")
+print(person1)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>person1 and person2 are two different instances of the People class.</p>
+        </statement>
+        <feedback>
+          <p>Since two different objects were created, this is correct. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The __init__ class is used to create instances and set initial values for its attributes.</p>
+        </statement>
+        <feedback>
+          <p>__init__ is an optional method in classes that is used to set initial values for objects. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>As we are not updating any values, 'self' does not need to be passed to the __str__ method.</p>
+        </statement>
+        <feedback>
+          <p>Correct! Here 'self' is used to represent the current instance of the class and the current object must be passed into the __str__ method.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>person2 cannot access the 'name' of person1.</p>
+        </statement>
+        <feedback>
+          <p>Since they are two different instances, they cannot access each other and have different initial values too. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="objects_mcq10_7">
+    <statement>
+      <p>Q-7: Which of the following statements is <term>not</term> true about object-oriented programming?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>One of the benefits of object-oriented programming is that it can hide complexity.</p>
+        </statement>
+        <feedback>
+          <p>This is true, while using an object, we need to know how to use the object, but not how it works internally. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A class defines a number of functions as well as the data that is used by those functions.</p>
+        </statement>
+        <feedback>
+          <p>This is true as a class defines functions as well as data that is used by those functions. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Constructor methods are required to initialize an object and destructor methods are required to destroy the
+object when no longer required.</p>
+        </statement>
+        <feedback>
+          <p>Correct! This is false, a constructor is optional can be used to set initial values for an object and  python automatically
+destroys any object if its reference count changes to a zero without needing a destructor.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The __str__ method is responsible for returning a string representation for an object.</p>
+        </statement>
+        <feedback>
+          <p>This is true, we can print information about an object with the __str__ method. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="objects_mcq10_8_v2">
+    <statement>
+      <p>Q-8: Which of the following is the correct way to define the __str__ method which returns a string with the title and author?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>def __str__(title, author):</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Unless a class method is static, 'self' is used to represent the current instance. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>def __str__(self):</p>
+        </statement>
+        <feedback>
+          <p>Correct! The "self" is used to represent an instance of the given class.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>def __str__():</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The "self" parameter is needed to represent an instance of the given class. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>def str(self):</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The method is __str__. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="objects_mcq10_9_v2">
+    <statement>
+      <p>Q-9: The _________ keyword defines a template for objects of a class.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Class</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Python is case sensitive. It should be class not Class.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>object</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! An object is created by a class. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>class</p>
+        </statement>
+        <feedback>
+          <p>Correct! The keyword is class.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>instance</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! An instance is created from a class. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="objects_mcq10_10_v2">
+    <statement>
+      <p>Q-10: _________ is by convention used to represent the current instance of a class
+            and to access the attributes and methods of the class.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>class</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The 'class' keyword defines a template for all objects of the class. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>def</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The 'def' keyword defines a function. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>self</p>
+        </statement>
+        <feedback>
+          <p>Correct! While 'self' is not a keyword, the convention is to use it to represent the current object.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>init</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The 'init' is not a keyword, but the __init__ method is created to initialize object attributes. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</exercises>

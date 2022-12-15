@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<section xml:id="pi_no_chapter_peer-instruction-booleans-multiple-choice-questions">
+  <title>Peer Instruction: Booleans Multiple Choice Questions</title>
+  <exercise label="dz-lecture-08_Booleans_04_1">
+    <statement>
+      <p>Q-1: In the following expression, which parts are evaluated?</p>
+      <program language="python">
+        <input>
+(7 &gt; 2) or ( (9 &lt; 2) and (8 &gt; 3) )
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>Only (7 &gt; 2)</p>
+        </statement>
+        <feedback>
+          <p>Correct! Python evaluates from left to right. If the first part of an expression containing 'or' is True, the truth of the statement is know.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Only (9 &lt; 2)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Python evaluates from left to right.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Only (8 &gt; 3)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Python evaluates from left to right.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>(7 &gt; 2) and (8 &gt; 3)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Python evaluates from left to right.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>All the code is evaluated</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The (7 &gt; 2) is joined by an or so since (7 &gt; 2) is true, evaluation stops.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture-08_Booleans_04_2">
+    <statement>
+      <p>Q-2: In the following expression, which parts are evaluated?</p>
+      <program language="python">
+        <input>
+( (7 &gt; 2) and (9 &lt; 2) ) or (8 &gt; 3)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Only (7 &gt; 2)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Python evaluates from left to right and must evaluate both sides of an expression when they are joined by "and".</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Only (9 &lt; 2)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Python evaluates from left to right and must evaluate both sides of an expression when they are joined by "and".</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Only (8 &gt; 3)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Python evaluates from left to right and must evaluate both sides of an expression when they are joined by "and".</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>(7 &gt; 2) and (8 &gt; 3)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Python evaluates from left to right.  The ((7 &gt; 2) and (9 &lt; 2)) will be evaluated first.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>All the code is evaluated</p>
+        </statement>
+        <feedback>
+          <p>Correct! The truth of this expression is not established until all parts have been evaluated.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<section xml:id="regex_practice-problems-regular-expressions">
+  <title>Practice Problems - Regular Expressions</title>
+  <HParsonsNode line="4" runestone_options="{'language': &quot;data-language='regex'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2'&quot;, 'subchapter': 'hp-practice', 'chapter': 'regex', 'basecourse': 'py4e-int', 'optional': '', 'optclass': '', 'divid': 'hp-char-set-p1', 'qnumber': '11-9-1', 'reuse': '', 'initialsetting': '--blocks--\ngr\n[ae]\ny\n{ae}', 'dburl': '', 'question_label': '1'}" source="/home/david/comsc020/py4e-int/_sources/regex/hp-practice.rst">
+    <p>Please write a regex that matches both <q>gray</q> and <q>grey</q>.</p>
+  </HParsonsNode>
+  <HParsonsNode line="18" runestone_options="{'language': &quot;data-language='regex'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2'&quot;, 'subchapter': 'hp-practice', 'chapter': 'regex', 'basecourse': 'py4e-int', 'optional': '', 'optclass': '', 'divid': 'hp-upper-lower-p2', 'qnumber': '11-9-2', 'reuse': '', 'initialsetting': '--blocks--\n[A-Z]\n[a-z]\n+\n\\w\n*', 'dburl': '', 'question_label': '2'}" source="/home/david/comsc020/py4e-int/_sources/regex/hp-practice.rst">
+    <p>Please write a regex that matches a word that starts with an uppercase letter followed by at least one lowercase letter, like <q>Apple</q>, <q>Banana</q>, or <q>Carrot</q>.</p>
+  </HParsonsNode>
+  <HParsonsNode line="33" runestone_options="{'language': &quot;data-language='regex'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1'&quot;, 'subchapter': 'hp-practice', 'chapter': 'regex', 'basecourse': 'py4e-int', 'optional': '', 'optclass': '', 'divid': 'hp-digits-p3', 'qnumber': '11-9-3', 'reuse': '', 'initialsetting': '--blocks--\n\\d\n{5,7}\n/d\n{5:7}', 'dburl': '', 'question_label': '3'}" source="/home/david/comsc020/py4e-int/_sources/regex/hp-practice.rst">
+    <p>Please write a regex to capture numbers with 5-7 digits. For example: 48105, 103028, 1234567.</p>
+  </HParsonsNode>
+  <HParsonsNode line="47" runestone_options="{'language': &quot;data-language='regex'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2 3'&quot;, 'subchapter': 'hp-practice', 'chapter': 'regex', 'basecourse': 'py4e-int', 'optional': '', 'optclass': '', 'divid': 'hp-vowels-letter-not-vowel-p4', 'qnumber': '11-9-4', 'reuse': '', 'initialsetting': '--blocks--\n[aeiou]\n[a-z]\n*\n[^aeiou]\n+\n[!aeiou]', 'dburl': '', 'question_label': '4'}" source="/home/david/comsc020/py4e-int/_sources/regex/hp-practice.rst">
+    <p>Write a regex that captures words that start with a vowel (a, e, i, o, u), can have any number of characters from a-z after the vowel (including zero), and end with a consonant (any letters that are not a, e, i, o, u).
+                For example, it should match <q>unicorn</q>, <q>it</q>, and <q>element</q>.</p>
+  </HParsonsNode>
+  <HParsonsNode line="63" runestone_options="{'language': &quot;data-language='regex'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2 3 4'&quot;, 'subchapter': 'hp-practice', 'chapter': 'regex', 'basecourse': 'py4e-int', 'optional': '', 'optclass': '', 'divid': 'hp-match-period-p5-v2', 'qnumber': '11-9-5', 'reuse': '', 'initialsetting': '--blocks--\n\\d\n{2}\n\\.\n[a-z]\n{4}\n.\n[2]\n\\w\n[4]', 'dburl': '', 'question_label': '5'}" source="/home/david/comsc020/py4e-int/_sources/regex/hp-practice.rst">
+    <p>Write a regex that captures strings that have two digits followed by a period and then four letters from a to z.</p>
+  </HParsonsNode>
+</section>

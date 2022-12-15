@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<section xml:id="objects_glossary">
+  <title>Glossary</title>
+  <dl>
+    <li>
+      <title>
+        <term>attribute</term>
+      </title>
+      <p>A variable that is part of a class.</p>
+    </li>
+    <li>
+      <title>
+        <term>class</term>
+      </title>
+      <p>A template that can be used to construct an object.  Defines
+                        the attributes and methods that will make up the object.</p>
+    </li>
+    <li>
+      <title>
+        <term>child class</term>
+      </title>
+      <p>A new class created when a parent class is extended.  The child class
+                        inherits all of the attributes and methods of the parent class.</p>
+    </li>
+    <li>
+      <title>
+        <term>constructor</term>
+      </title>
+      <p>An optional specially named method ( <c>__init__</c> ) that is called at the
+                        moment when a class is being used to construct an object.
+                        Usually this is used to set up initial values for the object.</p>
+    </li>
+    <li>
+      <title>
+        <term>destructor</term>
+      </title>
+      <p>An optional specially named method ( <c>__del__</c> ) that is called at the
+                        moment just before an object is destroyed.  Destructors are rarely
+                        used.</p>
+    </li>
+    <li>
+      <title>
+        <term>inheritance</term>
+      </title>
+      <p>When we create a new class (child) by extending an
+                        existing class (parent).  The child class has all the attributes
+                        and methods of the parent class plus additional attributes and
+                        methods defined by the child class.</p>
+    </li>
+    <li>
+      <title>
+        <term>method</term>
+      </title>
+      <p>A function that is contained within a class and the objects
+                        that are constructed from the class.  Some object-oriented
+                        patterns use &#x2018;message' instead of &#x2018;method' to describe this concept.</p>
+    </li>
+    <li>
+      <title>
+        <term>object</term>
+      </title>
+      <p>A constructed instance of a class.  An object contains all of
+                        the attributes and methods that were defined by the class.
+                        Some object-oriented documentation uses the term &#x2018;instance'
+                        interchangeably with &#x2018;object'.</p>
+    </li>
+    <li>
+      <title>
+        <term>parent class</term>
+      </title>
+      <p>The class which is being extended to create a new child class.
+                        The parent class contributes all of its methods and attributes
+                        to the new child class.</p>
+    </li>
+  </dl>
+  <exercise label="objects_glossary1">
+    <statement>
+      <p>Match each term with its definition.</p>
+    </statement>
+    <feedback>
+      <p>Try again!</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>attributes</premise>
+        <response>A variable that is part of a class.</response>
+      </match>
+      <match order="2">
+        <premise>class</premise>
+        <response>A template that can be used to construct an object.</response>
+      </match>
+      <match order="3">
+        <premise>object</premise>
+        <response>A constructed instance of a class.  It contains all of
+the attributes and methods that were defined by the class.</response>
+      </match>
+      <match order="4">
+        <premise>method</premise>
+        <response>A function that is contained within a class and the objects
+that are constructed from the class.</response>
+      </match>
+    </matches>
+  </exercise>
+  <exercise label="objects_glossary2">
+    <statement>
+      <p>Match each term with its definition.</p>
+    </statement>
+    <feedback>
+      <p>Try again!</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>inheritance</premise>
+        <response>When we create a new class (child) by extending an
+existing class (parent).  The child class has all the attributes
+and methods of the parent class plus additional attributes and
+methods defined by the child class.</response>
+      </match>
+      <match order="2">
+        <premise>child class</premise>
+        <response>A new class created when a parent class is extended.</response>
+      </match>
+      <match order="3">
+        <premise>parent class</premise>
+        <response>The class which is being extended to create a new child class.</response>
+      </match>
+      <match order="4">
+        <premise>constructor</premise>
+        <response>An optional specially named method ( ``__init__`` ) that is called at the
+moment when a class is being used to construct an object.</response>
+      </match>
+      <match order="5">
+        <premise>destructor</premise>
+        <response>An optional specially named method ( ``__del__`` ) that is called at the
+moment just before an object is destroyed.</response>
+      </match>
+    </matches>
+  </exercise>
+</section>

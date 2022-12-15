@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<section xml:id="database_practice-problems-write-code">
+  <title>Practice Problems - Write Code</title>
+  <p>Now, let's spend 15 minutes to practice what we just learned!</p>
+  <p>
+    <term>Please do not refer back to the previous page or outside resources.</term>
+  </p>
+  <p>You can stop working on a problem after you worked
+            on it for about three minutes without solving it.</p>
+  <subsection xml:id="database_problems">
+    <title>Problems</title>
+    <exercise label="hparsons_lg_sql_practice_1_wr">
+      <statement>
+        <p>In the <c>grades</c> table:</p>
+        <image source="https://i.ibb.co/r6qShy5/practice-grade.png" width="50%"/>
+        <p>Please write a SELECT statement to retrieve the <c>student_id</c>, <c>test_name</c>,
+                and <c>english</c> of all entries whose <c>english</c> is lower than 60 and <c>math</c> is higher than 90.</p>
+        <p>note: When you run the code, there will be several execution results.
+                Please only refer to the unittest and the <term>last</term> execution result for debugging purposes.</p>
+      </statement>
+      <program xml:id="hparsons_lg_sql_practice_1_wr_editor" interactive="activecode" language="sql">
+        <input>
+DROP TABLE IF EXISTS grades;
+create table "grades" ("student_id" INTEGER, "test_name" TEXT, "english" INTEGER, "math" INTEGER);
+INSERT INTO grades (student_id,test_name,english,math) VALUES
+    ('1', 'midterm', 62, 84),
+    ('1', 'final', 70, 86),
+    ('2', 'midterm', 50, 95),
+    ('2', 'final', 80, 99),
+    ('3', 'midterm', 55, 91);
+^^^^
+====
+assert 0,0 == 2
+assert 0,1 == midterm
+assert 1,0 == 3
+assert 1,1 == midterm
+        </input>
+      </program>
+    </exercise>
+    <exercise label="hparsons_lg_sql_practice_2_wr">
+      <statement>
+        <p>In the <c>grades</c> table:</p>
+        <image source="https://i.ibb.co/r6qShy5/practice-grade.png" width="50%"/>
+        <p>A student completed an extra assignment and got some additional points.</p>
+        <p>Please write an UPDATE statement to change the entry whose <c>student_id</c> is 1, and set their math score for <c>final</c> <c>test_name</c> to 90.</p>
+        <p>note: When you run the code, there will be several execution results.
+                Please only refer to the unittest and the <term>last</term> execution result for debugging purposes.</p>
+      </statement>
+      <program xml:id="hparsons_lg_sql_practice_2_wr_editor" interactive="activecode" language="sql">
+        <input>
+DROP TABLE IF EXISTS grades;
+create table "grades" ("student_id" INTEGER, "test_name" TEXT, "english" INTEGER, "math" INTEGER);
+INSERT INTO grades (student_id,test_name,english,math) VALUES
+    ('1', 'midterm', 62, 84),
+    ('1', 'final', 70, 86),
+    ('2', 'midterm', 50, 95),
+    ('2', 'final', 80, 99),
+    ('3', 'midterm', 55, 91);
+^^^^
+-- Write your code here:
+
+-- The following line separates with your code and selects all data for testing. Please do not modify.
+;
+SELECT * FROM grades
+====
+assert 1,1 == final
+assert 1,3 == 90
+assert 3,3 == 99
+        </input>
+      </program>
+    </exercise>
+    <exercise label="hparsons_lg_sql_practice_3_wr">
+      <statement>
+        <p>In the <c>grades</c> table:</p>
+        <image source="https://i.ibb.co/r6qShy5/practice-grade.png" width="50%"/>
+        <p>The instructors decided to add some points to all students as one test was too difficult.</p>
+        <p>Please write an UPDATE statement to change all entries whose <c>test_name</c> is <c>midterm</c>,
+                and add 10 points to their <c>english</c> score.</p>
+        <p>note: When you run the code, there will be several execution results.
+                Please only refer to the unittest and the <term>last</term> execution result for debugging purposes.</p>
+      </statement>
+      <program xml:id="hparsons_lg_sql_practice_3_wr_editor" interactive="activecode" language="sql">
+        <input>
+DROP TABLE IF EXISTS grades;
+create table "grades" ("student_id" INTEGER, "test_name" TEXT, "english" INTEGER, "math" INTEGER);
+INSERT INTO grades (student_id,test_name,english,math) VALUES
+    ('1', 'midterm', 62, 84),
+    ('1', 'final', 70, 86),
+    ('2', 'midterm', 50, 95),
+    ('2', 'final', 80, 99),
+    ('3', 'midterm', 55, 91);
+^^^^
+-- Write your code here:
+
+-- The following line separates with your code and selects all data for testing. Please do not modify.
+;
+SELECT * FROM grades
+====
+assert 0,2 == 72
+assert 1,2 == 70
+assert 2,2 == 60
+assert 3,2 == 80
+assert 4,2 == 65
+        </input>
+      </program>
+    </exercise>
+    <exercise label="hparsons_lg_sql_practice_4_wr">
+      <statement>
+        <p>Aside from the <c>grades</c> table:</p>
+        <image source="https://i.ibb.co/r6qShy5/practice-grade.png" width="50%"/>
+        <p>We also have a <c>students</c> table:</p>
+        <image source="https://i.ibb.co/m4KxSMC/practice-students.png" width="50%"/>
+        <p>Now we want to match the student name to their math grades.</p>
+        <p>Please write a statement using SELECT and JOIN to: select the <c>test_name</c> and <c>math</c>
+                from the <c>grades</c>  table and <c>name</c> from the <c>students</c> table, where the <c>student_id</c>
+                in the <c>grades</c> table is the same as the <c>id</c> in the <c>students</c> table.</p>
+        <p>note: When you run the code, there will be several execution results.
+                Please only refer to the unittest and the <term>last</term> execution result for debugging purposes.</p>
+      </statement>
+      <program xml:id="hparsons_lg_sql_practice_4_wr_editor" interactive="activecode" language="sql">
+        <input>
+DROP TABLE IF EXISTS grades;
+create table "grades" ("student_id" INTEGER, "test_name" TEXT, "english" INTEGER, "math" INTEGER);
+INSERT INTO grades (student_id,test_name,english,math) VALUES
+    ('1', 'midterm', 62, 84),
+    ('1', 'final', 70, 86),
+    ('2', 'midterm', 50, 95),
+    ('2', 'final', 80, 99),
+    ('3', 'midterm', 55, 91);
+DROP TABLE IF EXISTS students;
+create table "students" ("id" INTEGER, "name" TEXT);
+INSERT INTO students (id,name) VALUES
+    (1, 'Alex'),
+    (2, 'Blake'),
+    (3, 'Charlie');
+^^^^
+====
+assert 0,2 == Alex
+assert 3,2 == Blake
+        </input>
+      </program>
+    </exercise>
+    <exercise label="hparsons_lg_sql_practice_5_wr">
+      <statement>
+        <p>Aside from the <c>grades</c> table:</p>
+        <image source="https://i.ibb.co/r6qShy5/practice-grade.png" width="50%"/>
+        <p>We also have a <c>tests</c> table:</p>
+        <image source="https://i.ibb.co/KVTGNXh/practice-tests.png" width="50%"/>
+        <p>Now we want to add the date information to the grades to see when the students took the tests.</p>
+        <p>Please write a statement using SELECT and JOIN to: select the <c>date</c> and <c>name</c>
+                from the <c>tests</c>  table and <c>student_id</c> from the <c>grades</c> table,
+                where the <c>test_name</c> in the <c>grades</c> table is the same as the <c>name</c> in the <c>tests</c> table.</p>
+        <p>note: When you run the code, there will be several execution results.
+                Please only refer to the unittest and the <term>last</term> execution result for debugging purposes.</p>
+      </statement>
+      <program xml:id="hparsons_lg_sql_practice_5_wr_editor" interactive="activecode" language="sql">
+        <input>
+DROP TABLE IF EXISTS grades;
+create table "grades" ("student_id" INTEGER, "test_name" TEXT, "english" INTEGER, "math" INTEGER);
+INSERT INTO grades (student_id,test_name,english,math) VALUES
+    ('1', 'midterm', 62, 84),
+    ('1', 'final', 70, 86),
+    ('2', 'midterm', 50, 95),
+    ('2', 'final', 80, 99),
+    ('3', 'midterm', 55, 91);
+DROP TABLE IF EXISTS tests;
+create table "tests" ("name" TEXT, "date" DATE);
+INSERT INTO tests (name,date) VALUES
+    ('midterm', '2022-10-15'),
+    ('final', '2022-11-13');
+^^^^
+====
+assert 0,0 == 2022-10-15
+assert 0,1 == midterm
+assert 0,2 == 1
+        </input>
+      </program>
+    </exercise>
+  </subsection>
+  <subsection xml:id="database_what-to-do-next">
+    <title>What to do next</title>
+    <raw format="html" xml:space="preserve">&lt;p&gt;Click on the following link to go to the post test: &lt;b&gt;&lt;a id="hparsons_lg_sql_posttest"&gt;&lt;font size="+2"&gt;Post Test&lt;/font&gt;&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;</raw>
+    <raw format="html" xml:space="preserve">&lt;script type="text/javascript" &gt;
+
+  function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i &lt;ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+  }
+
+  window.onload = function() {
+
+    a = document.getElementById("hparsons_lg_sql_posttest")
+    a.href = "hparsons_lg_sql_posttest.html"
+
+    // get prev set cookie
+    var EXP_COOKIE = 'hparsons_lg_sql_221115'
+    var cond = getCookie(EXP_COOKIE);
+    if (cond == 'hp') {
+      window.location.href = "hparsons_lg_sql_practice_H.html";
+    }
+  };
+
+&lt;/script&gt;</raw>
+  </subsection>
+</section>

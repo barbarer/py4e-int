@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<section xml:id="dictionaries_advanced-text-parsing">
+  <title>Advanced Text Parsing</title>
+  <program xml:id="fileOpen2" interactive="activecode" language="python">
+    <input>
+with open("romeo2.txt", "r") as filename:
+    lines = filename.readlines()
+    counts = {}
+    for line in lines:
+        for word in line.split():
+            if word not in counts.keys():
+                counts[word] = 1
+            else:
+                counts[word] += 1
+print(counts)
+        </input>
+  </program>
+  <p>In the above example using the file <em>romeo.txt</em>, we made the
+            file as simple as possible by removing all punctuation by hand. The
+            actual text has lots of punctuation, as shown below.</p>
+  <pre>But, soft! what light through yonder window breaks?
+It is the east, and Juliet is the sun.
+Arise, fair sun, and kill the envious moon,
+Who is already sick and pale with grief,</pre>
+  <p>Since the Python <c>split</c> function looks for spaces and treats
+            words as tokens separated by spaces, we would treat the words <q>soft!</q>
+            and <q>soft</q> as <em>different</em> words and create a separate dictionary entry
+            for each word.</p>
+  <p>Also since the file has capitalization, we would treat <q>who</q> and <q>Who</q>
+            as different words with different counts.</p>
+  <p>We can solve both these problems by using the string methods
+            <c>lower</c>, <c>punctuation</c>, and
+            <c>translate</c>. The <c>translate</c> is the most subtle of
+            the methods. Here is the documentation for <c>translate</c>:</p>
+  <p>
+    <c>line.translate(str.maketrans(fromstr, tostr, deletestr))</c>
+  </p>
+  <p>
+    <em>Replace the characters in ``fromstr`` with the character in the same position in ``tostr``
+                and delete all characters that are in ``deletestr``.
+                The ``fromstr`` and ``tostr`` can be empty strings and the ``deletestr``
+                parameter can be omitted.</em>
+  </p>
+  <p>We will not specify the <c>tostr</c> but we will use the
+            <c>deletestr</c> parameter to delete all of the punctuation. We
+            will even let Python tell us the list of characters that it considers
+            <q>punctuation</q>:</p>
+  <exercise label="question9_5_1">
+    <statement>
+      <p>Q-2: Which line of code correctly uses the .translate() method?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>line.translate(str.maketrans(fromstr, tostr, deletestr))</p>
+        </statement>
+        <feedback>
+          <p>Correct! In order to use .translate(), you have to map the translation using the .maketrans() method.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>line.translate(fromstr, tostr, deletestr)</p>
+        </statement>
+        <feedback>
+          <p>Try again! In order to use .translate(), you have to map the translation</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>line.translate(str.translate(fromstr, tostr, deletestr))</p>
+        </statement>
+        <feedback>
+          <p>Try again! You have to map the translation using the .maketrans() method.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; import string
+&gt;&gt;&gt; string.punctuation
+'!"#$%&amp;\'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~'
+</input>
+  </program>
+  <note>
+    <p>The parameters used by <c>translate</c> were different in Python 2.0.</p>
+  </note>
+  <p>We make the following modifications to our program:</p>
+  <program xml:id="fileOpen3_v2" interactive="activecode" language="python3">
+    <input>
+import string
+
+with open("romeo-full.txt", "r") as fhand:
+    lines = fhand.readlines()
+counts = {}
+table = str.maketrans("", "", string.punctuation)
+for line in lines:
+    line = line.translate(table)
+    for word in line.split():
+        if word not in counts.keys():
+            counts[word] = 1
+        else:
+            counts[word] += 1
+print(counts)
+        </input>
+  </program>
+  <exercise label="question9_5_2">
+    <statement>
+      <p>Q-4: Which line(s) in the above activecode remove the punctuation from the text?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>line 7</p>
+        </statement>
+        <feedback>
+          <p>Try again! This line iterate line.split</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>line 8</p>
+        </statement>
+        <feedback>
+          <p>Correct! This line creates the table, which tells the translate method what to change/remove.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>line 9</p>
+        </statement>
+        <feedback>
+          <p>Correct! This line runs the translate method, which is where the punctuation is filtered out.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>line 10</p>
+        </statement>
+        <feedback>
+          <p>Try again! This line translates the punctuation, but does not remove them.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>Part of learning the <q>Art of Python</q> or <q>Thinking Pythonically</q> is
+            realizing that Python often has built-in capabilities for many common
+            data analysis problems. Over time, you will see enough example code and
+            read enough of the documentation to know where to look to see if someone
+            has already written something that makes your job much easier.</p>
+  <p>The following is an abbreviated version of the output:</p>
+  <pre>Enter the file name: romeo-full.txt
+{'swearst': 1, 'all': 6, 'afeard': 1, 'leave': 2, 'these': 2,
+'kinsmen': 2, 'what': 11, 'thinkst': 1, 'love': 24, 'cloak': 1,
+a': 24, 'orchard': 2, 'light': 5, 'lovers': 2, 'romeo': 40,
+'maiden': 1, 'whiteupturned': 1, 'juliet': 32, 'gentleman': 1,
+'it': 22, 'leans': 1, 'canst': 1, 'having': 1, ...}</pre>
+  <p>Looking through this output is still unwieldy and we can use Python to
+            give us exactly what we are looking for, but to do so, we need to learn
+            about Python <em>tuples</em>. We will pick up this example once
+            we learn about tuples.</p>
+</section>

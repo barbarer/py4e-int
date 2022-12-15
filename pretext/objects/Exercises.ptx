@@ -1,0 +1,433 @@
+<?xml version="1.0"?>
+<exercises xml:id="objects_multiple-choice-questions">
+  <title>Multiple Choice Questions</title>
+  <exercise label="inheritance_mchoice1">
+    <statement>
+      <p>Q-1: In which of the following does the <c>CricketFan</c> class correctly inherit from the <c>PartyAnimal</c> class?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>from party import PartyAnimal</p>
+        </statement>
+        <feedback>
+          <p>This is a necessary  step to import the PartyAnimal class, but it does not define a class CricketFan that inherits from PartyAnimal</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>class CricketFan(PartyAnimal)</p>
+        </statement>
+        <feedback>
+          <p>Correct! CricketFan inherits from PartyAnimal.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>an = PartyAnimal()</p>
+        </statement>
+        <feedback>
+          <p>This only creates an instance of the PartyAnimal class called an.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>CricketFan = PartyAnimal()</p>
+        </statement>
+        <feedback>
+          <p>This would create an instance of the PartyAnimal class called CricketFan.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="objects_select_name">
+    <statement>
+      <p>Q-2: Which of the following does <term>not</term> correctly create an object instance?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>puppy = Dog("Jamie")</p>
+        </statement>
+        <feedback>
+          <p>This uses the constructor function to create an object with arguments.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>dog = Dog("Jamie")</p>
+        </statement>
+        <feedback>
+          <p>The instance can have a similar name to the class. This uses the constructor function to create an object with arguments.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>jamie = Dog()</p>
+        </statement>
+        <feedback>
+          <p>This is correct and does not have arguments.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>pupper = new Dog("Jamie")</p>
+        </statement>
+        <feedback>
+          <p>The 'new' is incorrect</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="multipleinstances_code_output">
+    <statement>
+      <p>Q-3: What does the following code output?</p>
+      <pre>class People():
+
+    def __init__(self, name):
+      self.name = name
+
+    def namePrint(self):
+      print(self.name)
+
+  person1 = People("Sally")
+  person2 = People("Louise")
+  person1.namePrint()</pre>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>Sally</p>
+        </statement>
+        <feedback>
+          <p>This prints the value of the name attribute for person1.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Louise</p>
+        </statement>
+        <feedback>
+          <p>'Louise' is the 'name' of person2 but we are calling the person1 instance.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Sally Louise</p>
+        </statement>
+        <feedback>
+          <p>It only prints the value of name for one instance.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>person1</p>
+        </statement>
+        <feedback>
+          <p>The output is not the name of the instance.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="multipleinstances_mchoice1">
+    <statement>
+      <p>Q-4: Which of the following statements is incorrect about the following code?</p>
+      <pre>class People():
+
+  def __init__(self, name):
+    self.name = name
+
+  def namePrint(self):
+    print(self.name)
+
+person1 = People("Sally")
+person2 = People("Louise")
+person1.namePrint()</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>person1 and person2 are two different instances of the People class.</p>
+        </statement>
+        <feedback>
+          <p>Since two different objects were created, this is correct.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The __init__ method is used to set initial values for attributes.</p>
+        </statement>
+        <feedback>
+          <p>__init__ is an optional method in classes that is used to set initial values for objects.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>'self' is not needed in def namePrint(self):</p>
+        </statement>
+        <feedback>
+          <p>'self' is used to represent the current instance of the class.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>person2 has a different value for 'name' than person1.</p>
+        </statement>
+        <feedback>
+          <p>Since they are two different instances, they cannot access each other and have different initial values too</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="objectoriented_subdividing">
+    <statement>
+      <p>Q-5: Which of the following statements is <term>not</term> true about object-oriented programming?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>One of the benefits of object-oriented programming is that it can hide complexity.</p>
+        </statement>
+        <feedback>
+          <p>This is true, while using an object, we need to know how to use the object class but
+not how it works internally.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A class contains functions as well as the data that is used by those functions.</p>
+        </statement>
+        <feedback>
+          <p>This is true  as an class can contain functions as well as data that is used by those functions.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Constructor methods are required to initialize an object and destructor methods are required to destroy the
+object when no longer required.</p>
+        </statement>
+        <feedback>
+          <p>This is false, a constructor is optional can be used to set initial values for an object and python automatically
+destroys any object if its reference count changes to a zero without needing a destructor.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A powerful feature of object-oriented programming is the ability to create a new class by extending an existing class.</p>
+        </statement>
+        <feedback>
+          <p>This is true, we can extend a 'parent' class to create a new 'child' class and the new class has access to its functions
+and can override them if needed.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="objectoriented_keyword">
+    <statement>
+      <p>Q-6: The _________ keyword defines a template indicating the data that will be in an object of the class and the functions that can be called on an object of the class.</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>class</p>
+        </statement>
+        <feedback>
+          <p>The class keyword defines the data that is in an object of a class and the functions that can be called on an object of the class.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>object</p>
+        </statement>
+        <feedback>
+          <p>An object is created using this template.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Class</p>
+        </statement>
+        <feedback>
+          <p>The keyword is case-sensitive</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>instance</p>
+        </statement>
+        <feedback>
+          <p>An instance is a single occurrence of an object created when the object is initialized.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="word_output">
+    <statement>
+      <p>Q-7: _________ is not a keyword, but by convention it is used to refer to the current instance (object) of a class.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>class</p>
+        </statement>
+        <feedback>
+          <p>'class' is a keyword that defines the template for objects of the class.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>def</p>
+        </statement>
+        <feedback>
+          <p>'def' is used to define a function</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>self</p>
+        </statement>
+        <feedback>
+          <p>'self' is not a keyword, but by convention is used to refer to the current object</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>init</p>
+        </statement>
+        <feedback>
+          <p>'init' is not a keyword, but the __init__ method is created to initialize class variables.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="object_oriented_output">
+    <statement>
+      <p>Q-8: What is the output of the following code?</p>
+      <pre>class Pokemon():
+
+    def __init__(self, name, type):
+        self.name = name
+        self.type = type
+
+    def stringPokemon(self):
+        print(f"Pokemon name is {self.name} and type is {self.type}")
+
+class GrassType(Pokemon):
+
+    # overrides the stringPokemon() function on 'Pokemon' class
+    def stringPokemon(self):
+        print(f"Grass type pokemon name is {self.name}")
+
+poke1 = GrassType('Bulbasaur', 'Grass')
+poke1.stringPokemon
+poke1.stringPokemon()
+poke2 = Pokemon('Charizard', 'Fire')
+poke2.stringPokemon
+poke2.stringPokemon()</pre>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>Grass type pokemon name is Bulbasaur
+Pokemon name is Charizard and type is Fire</p>
+        </statement>
+        <feedback>
+          <p>A child class can inherit functions from parent class and also override them.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Pokemon name is Bulbasaur and type is Grass
+Pokemon name is Charizard and type is Fire</p>
+        </statement>
+        <feedback>
+          <p>The stringPokemon() functions is changed inside the GrassType class.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Grass type pokemon name is Bulbasaur
+Grass type pokemon name is Charizard</p>
+        </statement>
+        <feedback>
+          <p>The stringPokemon() functions is only changed for GrassType class but remains unchanged
+in the original class.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Error because the extending class has a stringPokemon() function
+which already exists.</p>
+        </statement>
+        <feedback>
+          <p>A class inherits functions from another class and override them in any way. Only the
+constructor class cannot be changed.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="tf_object_oriented">
+    <statement>
+      <p>Q-9: True or False? In order to extend a class, the new class should have access to all the data and inner workings of
+            the parent class.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>The child class does not need access to the all the inner workings in parent class.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>The child class knows how to use the parent class and its functions but not its
+data and the inner workings. The "super" command can come in handy here.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="objects_correct">
+    <statement>
+      <p>Q-10: Which of the following is the correct way to define an initializer  method?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>def __init__(title, author):</p>
+        </statement>
+        <feedback>
+          <p>Unless a class method is static, 'self' is explicitly used to represent current instance.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>def __init__(self, title, author):</p>
+        </statement>
+        <feedback>
+          <p>"self" is used to represent an instance of the given class and the parameters will be used to initialize variables.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>def __init__():</p>
+        </statement>
+        <feedback>
+          <p>At minimum, the "self" parameter is needed to represent an instance of the given class.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>__init__(self, title, author):</p>
+        </statement>
+        <feedback>
+          <p>The reserved word "def" is necessary to define a method.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</exercises>

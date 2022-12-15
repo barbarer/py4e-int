@@ -1,0 +1,505 @@
+<?xml version="1.0"?>
+<exercises xml:id="bsoup_multiple-choice-questions">
+  <title>Multiple Choice Questions</title>
+  <exercise label="Exercises_bsoup_mc1">
+    <statement>
+      <p>Q-1: Given the below html, how would this tag type be described in web scraping code?</p>
+      <program language="python">
+        <input>
+&lt;h1 class='sports'&gt;Sports News&lt;/h1&gt;
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>h1</p>
+        </statement>
+        <feedback>
+          <p>Try again! Each tag must be in quotes and this answer does not mention the class attribute.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>h1, class='sports'</p>
+        </statement>
+        <feedback>
+          <p>Try again! Each tag must be in quotes and the class has to be followed by an underscore.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>h1, class_='sports'</p>
+        </statement>
+        <feedback>
+          <p>Try again! Each tag must be in quotes.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>'h1', class_='sports'</p>
+        </statement>
+        <feedback>
+          <p>Correct! Both the tag and attribute are important. The h1 tag needs to be in quotes, and class has to be followed by an underscore.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_bsoup_mc2">
+    <statement>
+      <p>Q-2: Which line of code correctly gets the first item in <c>items</c> and makes the most sense following the below code snippet?</p>
+      <program language="python">
+        <input>
+soup = BeautifulSoup(response.content, 'html.parser')
+items = soup.find_all(class_='items')
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>first_item = items[0]</p>
+        </statement>
+        <feedback>
+          <p>Correct! Given that soup.find_all(class_='items') returns a list, in order to get the first item, all you need to do is index.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>first_item = items.find(0)</p>
+        </statement>
+        <feedback>
+          <p>Try again! Since soup.find_all(class_='items') returns a list, we cannot use find() as it is a string method that returns the first instance of a specified value in a string.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>first_item = items.get(0)</p>
+        </statement>
+        <feedback>
+          <p>Try again! Since soup.find_all(class_='items') returns a list, we cannot use get() as it is a dictionary method used to return the value of an item with specified key.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>first_item = items.find[0]</p>
+        </statement>
+        <feedback>
+          <p>Try again! Since soup.find_all(class_='items') returns a list, we cannot use find() as it is a string method that returns the first instance of a specified value in a string.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>first_item = soup.items[0]</p>
+        </statement>
+        <feedback>
+          <p>Try again! We already called the soup object to get items so all we need to do is index to the first item.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_bsoup_mc3">
+    <statement>
+      <p>Q-3: How does one parse the HTML into a <c>BeautifulSoup</c> object given a <c>response</c> object?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>soup = BeautifulSoup(response.text, 'html.parser')</p>
+        </statement>
+        <feedback>
+          <p>Correct! It is the correct way to parse content in UniCode.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>soup = BeautifulSoup(response.content, 'html.parser')</p>
+        </statement>
+        <feedback>
+          <p>Correct! It is the correct way to parse content in bytes.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>soup = BeautifulSoup(response.string, 'html.parser')</p>
+        </statement>
+        <feedback>
+          <p>Try again! .string returns None if there is more than one tag inside of the ``response`` object.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_bsoup_mc4">
+    <statement>
+      <p>Q-4: Which of the following is the best way to get the value for the <c>id</c> in the first <c>p</c> tag?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>soup.p.get('id')</p>
+        </statement>
+        <feedback>
+          <p>Try again! If there is no tag 'id', this line will return an error.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>soup.p.get('id', None)</p>
+        </statement>
+        <feedback>
+          <p>Correct! This is the correct way to get the first p tag and get the value for the id in the p tag.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>soup.p[id]</p>
+        </statement>
+        <feedback>
+          <p>Try again! The correct way to find a tag is to use the get method().</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>soup.p['id']</p>
+        </statement>
+        <feedback>
+          <p>Try again! The correct way to find a tag is to use the get method().</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_bsoup_mc5">
+    <statement>
+      <p>Q-5: How does one get the first header 1 tag after creating a <c>soup</c> object?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>soup.h1</p>
+        </statement>
+        <feedback>
+          <p>Correct! The header 1 tag is h1, and this is the correct way to get the first header 1 tag after creating a soup object.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>soup.header1</p>
+        </statement>
+        <feedback>
+          <p>Try again! There is no tag called header1.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>soup.h1[0]</p>
+        </statement>
+        <feedback>
+          <p>Try again! h1 is a tag and index 0 will not give the correct output.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>soup.h1[1]</p>
+        </statement>
+        <feedback>
+          <p>Try again! h1 is a tag and index 1 will not give the correct output.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_bsoup_mc6">
+    <statement>
+      <p>Q-6: Which of the following gets the first link tag and returns a dictionary of all attributes and values for that link tag?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>soup.a.attributes</p>
+        </statement>
+        <feedback>
+          <p>Try again! Attributes is not the correct way to get a dictionary of all attributes and values for a tag.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>soup.link.attrs</p>
+        </statement>
+        <feedback>
+          <p>Try again! There is no tag 'link', instead we use tag 'a' to find links.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>soup.a.attrs</p>
+        </statement>
+        <feedback>
+          <p>Correct! This is the correct way to get the first link tag (soup.a) and get a dictionary of all attributes and values for that link tag (.attrs).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>soup.link.attributes</p>
+        </statement>
+        <feedback>
+          <p>Try again! There is no tag 'link', instead we use tag 'a' to find links. Attributes is not the correct way to get a dictionary of all attributes and values for a tag.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_bsoup_mc7">
+    <statement>
+      <p>Q-7: Which of the following finds all link tags?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>all_links = soup.find('a')</p>
+        </statement>
+        <feedback>
+          <p>Try again! This will only find the first link.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>all_links = soup.findall('a')</p>
+        </statement>
+        <feedback>
+          <p>Try again! For Beautiful Soup, find_all requires an underscore.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>all_links = soup.findall('link')</p>
+        </statement>
+        <feedback>
+          <p>Try again! For Beautiful Soup, find_all requires an underscore. There is no tag called 'link'.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>all_links = soup.find_all('a')</p>
+        </statement>
+        <feedback>
+          <p>Correct! This is the correct way to find all link tags. In HTML, link tags are 'a' tags. For Beautiful Soup, find_all requires an underscore.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>all_links = soup.find_all('link')</p>
+        </statement>
+        <feedback>
+          <p>Try again! There is no tag called 'link', instead we use tag 'a' to get links.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_bsoup_mc8">
+    <statement>
+      <p>Q-8: Which of the following finds all paragraph tags with <c>class b-soup</c>?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>all_links = soup.find_all('p', class='b-soup')</p>
+        </statement>
+        <feedback>
+          <p>Try again! To find a class in Beautiful Soup, it requires an underscore (class_).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>all_links = soup.find_all('paragraph', class='b-soup')</p>
+        </statement>
+        <feedback>
+          <p>Try again! There is no tag called 'paragraph', instead we use tag 'p' to find paragraphs. Also, to find a class in Beautiful Soup, it requires an underscore (class_).</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>all_links = soup.find_all('p', class_='b-soup')</p>
+        </statement>
+        <feedback>
+          <p>Correct! This is the correct way to find all paragraph tags. In HTML, paragraph tags are 'p' tags. For Beautiful Soup, to find a class, class requires an underscore (class_).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>all_links = soup.find_all('paragraph', class_='b-soup')</p>
+        </statement>
+        <feedback>
+          <p>Try again! There is no tag called 'paragraph', instead we use tag 'p' to find paragraphs.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_bsoup_mc9">
+    <statement>
+      <p>Q-9: After creating an empty dictionary and getting a list of all link tags, how does one put the <c>link_tag</c> text as keys and the <c>link_tag</c> <c>href</c> attribute as values for the dictionary?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>loop through the elements of the list and do dictionary[link_tag.text] = a.get('href', None)</p>
+        </statement>
+        <feedback>
+          <p>Try again! Although the 'a' tag is the link tag, the variable that contains the href attribute is link_tag.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>loop through the elements of the list and do dictionary[link_tag.text] = a['href']</p>
+        </statement>
+        <feedback>
+          <p>Try again! Although the 'a' tag is the link tag, the variable that contains the href attribute is link_tag. Also, using the format tag['attribute_name'] will cause an error if the tag is not there.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>loop through the elements of the list and do dictionary[link_tag.text] = link_tag.get('href', None)</p>
+        </statement>
+        <feedback>
+          <p>Correct! This is the correct way to create a dictionary with link_tag text as keys and href as values. Using .get('attribute_name', None) will not cause an error. It will set None as the default value and grab the value if there is one.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>loop through the elements of the list and do dictionary[link_tag.text] = link_tag[href]</p>
+        </statement>
+        <feedback>
+          <p>Try again! The attribute name is missing quotation marks, and using the format tag['attribute_name'] will cause an error if the tag is not there.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_bsoup_mc10">
+    <statement>
+      <p>Q-10: Given the below html, after importing re, what will be returned after <c>for tag in soup.find_all(re.compile("t")): print(tag.name)</c> is run?</p>
+      <program language="python">
+        <input>
+&lt;html&gt;
+   &lt;head&gt;
+      &lt;title&gt;Site&lt;/title&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+      &lt;p&gt;There is lots of content.&lt;/p&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>html</p>
+        </statement>
+        <feedback>
+          <p>Correct! It returns html as it is the name of a tag that contains the letter 't'.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>title</p>
+        </statement>
+        <feedback>
+          <p>Correct! It returns title as it is the name of a tag that contains the letter 't'.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Site</p>
+        </statement>
+        <feedback>
+          <p>Try again! 'Site' is not a tag.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>There is lots of content.</p>
+        </statement>
+        <feedback>
+          <p>Try again! This isn't a tag. This is the content inside a 'p' tag.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_bsoup_mc11">
+    <statement>
+      <p>Q-11: What does the following block of code do?</p>
+      <pre>url = "https://www.nytimes.com"
+html = urllib.request.urlopen(url, context=ctx).read()
+soup = BeautifulSoup(html, 'html.parser')</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>retrieves and displays the webpage</p>
+        </statement>
+        <feedback>
+          <p>Try Again! This does not display the webpage. BeautufulSoup parses webpage retrieved by urllib.rquest.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>parses the html content of the "https://www.nytimes.com" webpage.</p>
+        </statement>
+        <feedback>
+          <p>Correct! This parses all html tags and contents of the webpage.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>downloads the webpage</p>
+        </statement>
+        <feedback>
+          <p>Try Again! This does not save files to the computer.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_bsoup_mc12">
+    <statement>
+      <p>Q-12: What does the following block of code print?</p>
+      <pre>url = "https://www.nytimes.com/"
+html = urllib.request.urlopen(url).read()
+soup = BeautifulSoup(html, 'html.parser')
+
+tags = soup('img')
+for tag in tags:
+    print(tag.get('src', None))</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>retrieves and displays the webpage</p>
+        </statement>
+        <feedback>
+          <p>Try Again! Urllib retrieves the webpage but does not display it.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>downloads the webpage</p>
+        </statement>
+        <feedback>
+          <p>Try Again! This does not save files to the computer.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>prints the images from 'www.nytimes.com'</p>
+        </statement>
+        <feedback>
+          <p>Try Again! BeautifulSoup and html.parser cannot display images</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>prints all the 'img' sources under 'src' from  'www.nytimes.com'</p>
+        </statement>
+        <feedback>
+          <p>Correct! It prints  out the image sources listed under 'src' of 'img' tags.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</exercises>

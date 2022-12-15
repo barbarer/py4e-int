@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+<section xml:id="web_write-code-questions">
+  <title>Write Code Questions</title>
+  <p>Click on the button below to see the contents of books.xml.  It contains
+            xml tags to define the books in a bookstore.</p>
+  <hint>
+    <raw format="html" xml:space="preserve">&lt;pre id="books.xml"&gt;
+&amp;#60;?xml version="1.0" encoding="UTF-8"?&amp;#62;
+&amp;#60;bookstore&amp;#62;
+
+    &amp;#60;book category="cooking"&amp;#62;
+        &amp;#60;title lang="en"&amp;#62;Everyday Italian&amp;#60;/title&amp;#62;
+        &amp;#60;author&amp;#62;Giada De Laurentiis&amp;#60;/author&amp;#62;
+        &amp;#60;year&amp;#62;2005&amp;#60;/year&amp;#62;
+        &amp;#60;price&amp;#62;30.00&amp;#60;/price&amp;#62;
+    &amp;#60;/book&amp;#62;
+
+    &amp;#60;book category="children"&amp;#62;
+        &amp;#60;title lang="en"&amp;#62;Harry Potter&amp;#60;/title&amp;#62;
+        &amp;#60;author&amp;#62;J K. Rowling&amp;#60;/author&amp;#62;
+        &amp;#60;year&amp;#62;2005&amp;#60;/year&amp;#62;
+        &amp;#60;price&amp;#62;29.99&amp;#60;/price&amp;#62;
+    &amp;#60;/book&amp;#62;
+
+    &amp;#60;book category="web"&amp;#62;
+        &amp;#60;title lang="en"&amp;#62;XQuery Kick Start&amp;#60;/title&amp;#62;
+        &amp;#60;author&amp;#62;James McGovern&amp;#60;/author&amp;#62;
+        &amp;#60;author&amp;#62;Per Bothner&amp;#60;/author&amp;#62;
+        &amp;#60;author&amp;#62;Kurt Cagle&amp;#60;/author&amp;#62;
+        &amp;#60;author&amp;#62;James Linn&amp;#60;/author&amp;#62;
+        &amp;#60;author&amp;#62;Vaidyanathan Nagarajan&amp;#60;/author&amp;#62;
+        &amp;#60;year&amp;#62;2003&amp;#60;/year&amp;#62;
+        &amp;#60;price&amp;#62;49.99&amp;#60;/price&amp;#62;
+    &amp;#60;/book&amp;#62;
+
+    &amp;#60;book category="web" cover="paperback"&amp;#62;
+        &amp;#60;title lang="en"&amp;#62;Learning XML&amp;#60;/title&amp;#62;
+        &amp;#60;author&amp;#62;Erik T. Ray&amp;#60;/author&amp;#62;
+        &amp;#60;year&amp;#62;2003&amp;#60;/year&amp;#62;
+        &amp;#60;price&amp;#62;39.95&amp;#60;/price&amp;#62;
+    &amp;#60;/book&amp;#62;
+
+&amp;#60;/bookstore&amp;#62;</raw>
+  </hint>
+  <exercise label="web_get_book_info_xml">
+    <statement>
+      <p>Fix the errors in the code below so that it reads the data from books.xml
+            and finds all of the book data and prints the title for each book and
+            then finds all the author names for each book and prints each author name.</p>
+    </statement>
+    <program xml:id="web_get_book_info_xml_editor" interactive="activecode" language="python3">
+      <input>
+import xml.etree.ElementTree as ET
+fh = open("books.xml")
+data = fh.read()
+fh.close()
+tree = ET.fromstring(data)
+book_list = tree.find('book')
+for book in book_list:
+    print(f'Book title: {book.find(title).text}')
+    author_list = book.find('author')
+    for author in author_list:
+        print(f"Author: {author}")
+        </input>
+    </program>
+  </exercise>
+  <p>Click on the button below to see the contents of news.xml.  It contains
+            xml tags to define news stories.</p>
+  <hint>
+    <raw format="html" xml:space="preserve">&lt;pre id="news.xml"&gt;
+&amp;#60;?xml version="1.0" encoding="UTF-8"?&amp;#62;
+&amp;#60;nitf&amp;#62;
+    &amp;#60;head&amp;#62;
+        &amp;#60;title&amp;#62;Colombia Earthquake&amp;#60;/title&amp;#62;
+    &amp;#60;/head&amp;#62;
+    &amp;#60;body&amp;#62;
+        &amp;#60;headline&amp;#62;
+            &amp;#60;hl1&amp;#62;143 Dead in Colombia Earthquake&amp;#60;/hl1&amp;#62;
+        &amp;#60;/headline&amp;#62;
+        &amp;#60;byline&amp;#62;
+            &amp;#60;bytag&amp;#62;By Jared Kotler, Associated Press Writer&amp;#60;/bytag&amp;#62;
+        &amp;#60;/byline&amp;#62;
+        &amp;#60;dateline&amp;#62;
+            &amp;#60;location&amp;#62;Bogota, Colombia&amp;#60;/location&amp;#62;
+            &amp;#60;date&amp;#62;Monday January 25 1999 7:28 ET&amp;#60;/date&amp;#62;
+        &amp;#60;/dateline&amp;#62;
+    &amp;#60;/body&amp;#62;
+&amp;#60;/nitf&amp;#62;</raw>
+  </hint>
+  <exercise label="web_get_news_info_xml">
+    <statement>
+      <p>Fix the errors in the code below so that it reads the data from news.xml
+            and prints the headline and date.</p>
+    </statement>
+    <program xml:id="web_get_news_info_xml_editor" interactive="activecode" language="python3">
+      <input>
+import xml.etree.ElementTree as ET
+fh = open("news.xml")
+data = fh.read()
+fh.close()
+tree = ET.fromstring(data)
+head = tree.find('head')
+title = head.find('title')
+print(head)
+body = find(body)
+dateline = body.find('dateline')
+date = dateline.find('date')
+print(date)
+        </input>
+    </program>
+  </exercise>
+  <p>Click on the button below to see the contents of weather.xml.  It contains
+            xml tags to define weather observations.</p>
+  <hint>
+    <raw format="html" xml:space="preserve">&lt;pre id="weather.xml"&gt;
+&amp;#60;?xml version="1.0" encoding="UTF-8"?&amp;#62;
+&amp;#60;current_observation&amp;#62;
+
+    &amp;#60;location&amp;#62;New York/John F. Kennedy Intl Airport, NY&amp;#60;/location&amp;#62;
+    &amp;#60;station_id&amp;#62;KJFK&amp;#60;/station_id&amp;#62;
+    &amp;#60;latitude&amp;#62;40.66&amp;#60;/latitude&amp;#62;
+    &amp;#60;longitude&amp;#62;-73.78&amp;#60;/longitude&amp;#62;
+    &amp;#60;observation_time_rfc822&amp;#62;Mon, 11 Feb 2008 06:51:00 -0500 EST&amp;#60;/observation_time_rfc822&amp;#62;
+    &amp;#60;weather&amp;#62;A Few Clouds&amp;#60;/weather&amp;#62;
+    &amp;#60;temp_f&amp;#62;11&amp;#60;/temp_f&amp;#62;
+    &amp;#60;temp_c&amp;#62;-12&amp;#60;/temp_c&amp;#62;
+    &amp;#60;relative_humidity&amp;#62;36&amp;#60;/relative_humidity&amp;#62;
+    &amp;#60;wind_dir&amp;#62;West&amp;#60;/wind_dir&amp;#62;
+    &amp;#60;wind_degrees&amp;#62;280&amp;#60;/wind_degrees&amp;#62;
+    &amp;#60;wind_mph&amp;#62;18.4&amp;#60;/wind_mph&amp;#62;
+    &amp;#60;wind_gust_mph&amp;#62;29&amp;#60;/wind_gust_mph&amp;#62;
+    &amp;#60;pressure_mb&amp;#62;1023.6&amp;#60;/pressure_mb&amp;#62;
+    &amp;#60;pressure_in&amp;#62;30.23&amp;#60;/pressure_in&amp;#62;
+    &amp;#60;dewpoint_f&amp;#62;-11&amp;#60;/dewpoint_f&amp;#62;
+    &amp;#60;dewpoint_c&amp;#62;-24&amp;#60;/dewpoint_c&amp;#62;
+    &amp;#60;windchill_f&amp;#62;-7&amp;#60;/windchill_f&amp;#62;
+    &amp;#60;windchill_c&amp;#62;-22&amp;#60;/windchill_c&amp;#62;
+    &amp;#60;visibility_mi&amp;#62;10.00&amp;#60;/visibility_mi&amp;#62;
+
+&amp;#60;/current_observation&amp;#62;</raw>
+  </hint>
+  <exercise label="web_get_weather_info_xml">
+    <statement>
+      <p>Finish the code below so that it reads the data from weather.xml
+            into a tree and then prints the location, temp_f, and windchill_f for
+            the current_observation.</p>
+    </statement>
+    <program xml:id="web_get_weather_info_xml_editor" interactive="activecode" language="python3">
+      <input>
+import xml.etree.ElementTree as ET
+fh = open("weather.xml")
+data = fh.read()
+fh.close()
+tree = ET.fromstring(data)
+        </input>
+    </program>
+  </exercise>
+  <p>The file <c>email.json</c> below contains JSON data for people including their first_name, last_name
+            and email address.</p>
+  <hint>
+    <raw format="html" xml:space="preserve">&lt;pre id="email.json."&gt;
+[{
+  "id": 1,
+  "first_name": "Jeanette",
+  "last_name": "Penddreth",
+  "email": "jpenddreth0@census.gov",
+  "gender": "Female",
+  "ip_address": "26.58.193.2"
+}, {
+  "id": 2,
+  "first_name": "Giavani",
+  "last_name": "Frediani",
+  "email": "gfrediani1@senate.gov",
+  "gender": "Male",
+  "ip_address": "229.179.4.212"
+}, {
+  "id": 3,
+  "first_name": "Noell",
+  "last_name": "Bea",
+  "email": "nbea2@imageshack.us",
+  "gender": "Female",
+  "ip_address": "180.66.162.255"
+}, {
+  "id": 4,
+  "first_name": "Willard",
+  "last_name": "Valek",
+  "email": "wvalek3@vk.com",
+  "gender": "Male",
+  "ip_address": "67.76.188.26"
+}]</raw>
+  </hint>
+  <exercise label="web_email_json_write">
+    <statement>
+      <p>Finish the code below so that it prints the first name, last name and email
+            address for each person in the list of dictionaries returned from <c>json.loads(data).</c></p>
+    </statement>
+    <program xml:id="web_email_json_write_editor" interactive="activecode" language="python3">
+      <input>
+import json
+fh = open("email.json")
+data = fh.read()
+fh.close()
+person_list = json.loads(data)
+        </input>
+    </program>
+  </exercise>
+  <p>The file <c>person.json</c> below contains JSON data for a person in a dictionary including their first name,
+            last name, address, and phone numbers.</p>
+  <hint>
+    <raw format="html" xml:space="preserve">&lt;pre id="person.json."&gt;
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "isAlive": true,
+  "age": 27,
+  "address": {
+    "streetAddress": "21 2nd Street",
+    "city": "New York",
+    "state": "NY",
+    "postalCode": "10021-3100"
+  },
+  "phoneNumbers": [
+    {
+      "type": "home",
+      "number": "212 555-1234"
+    },
+    {
+      "type": "office",
+      "number": "646 555-4567"
+    },
+    {
+      "type": "mobile",
+      "number": "123 456-7890"
+    }
+  ],
+  "children": [],
+  "spouse": null
+}</raw>
+  </hint>
+  <exercise label="web_email_person_write">
+    <statement>
+      <p>Finish the code below so that it prints the first name, last name, the
+            state the person lives in, and their mobile phone number.</p>
+    </statement>
+    <program xml:id="web_email_person_write_editor" interactive="activecode" language="python3">
+      <input>
+import json
+        </input>
+    </program>
+  </exercise>
+</section>

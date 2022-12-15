@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+<section xml:id="functions_functions-with-tuples-and-dictionaries-multiple-choice-questions">
+  <title>Functions with Tuples and Dictionaries Multiple Choice Questions</title>
+  <exercise label="functions_tups_dicts_mcqs_q1">
+    <statement>
+      <p>Q-1: Which of following are python dictionary methods?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>keys() and get()</p>
+        </statement>
+        <feedback>
+          <p>Correct! Both keys() and get() are dictionary methods.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>values()</p>
+        </statement>
+        <feedback>
+          <p>Correct, values() is a dictionary method.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>count() and append()</p>
+        </statement>
+        <feedback>
+          <p>Try again! These are list methods.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>items()</p>
+        </statement>
+        <feedback>
+          <p>Correct, items() is a dictionary method.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>index()</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="functions_tups_dicts_mcqs_q2">
+    <statement>
+      <p>Q-2: Which of the following would change <c>tup_transformation(90, 103, 54, 45)</c> into <c>tup_transformation(5, 45, 54, 90)</c>? (Note: Commas represent line breaks.)</p>
+      <program language="python">
+        <input>
+def tup_transformation(tup):
+    # line(s)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>tup.append(5), tup.pop(1), return sorted(tup)</p>
+        </statement>
+        <feedback>
+          <p>Try again! Tuples are immutable.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>tup.append(5), tup.pop(2), return sorted(tup)</p>
+        </statement>
+        <feedback>
+          <p>Try again! Tuples are immutable.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>tup.append(5), tup.pop(1), tup.reverse(), return tup</p>
+        </statement>
+        <feedback>
+          <p>Try again! Tuples are immutable.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>tup.append(5), tup.pop(1), return tup.reverse()</p>
+        </statement>
+        <feedback>
+          <p>Try again! Tuples are immutable.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>(90, 103, 54, 45) can't be changed to (5, 45, 54, 90).</p>
+        </statement>
+        <feedback>
+          <p>Correct! Tuples are immutable, so (90, 103, 54, 45) can't be changed to (5, 45, 54, 90).</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="functions_tups_dicts_mcqs_q3">
+    <statement>
+      <p>Q-3: What would the output when <c>tup_and_list_transform((16, 7, 100, 0, 27),(84, 99, 78, 200, -7))</c> is called?</p>
+      <program language="python">
+        <input>
+def tup_and_list_transform(tup1, tup2):
+    list_tup1 = list(tup1)
+    list_tup2 = list(tup2)
+    list_tup1.reverse()
+    return tuple(zip(list_tup1, list_tup2))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>(0, 7, 16, 27, 100, 84, 99, 78, 200, -7)</p>
+        </statement>
+        <feedback>
+          <p>Try again! Be careful not to sort in place of reverse. Also, by using zip, each tuple will have an element from list_tup1 and an element from list_tup2 in order.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>(27, 0, 100, 7, 16, 84, 99, 78, 200, -7)</p>
+        </statement>
+        <feedback>
+          <p>Try again! By using zip, each tuple will have an element from list_tup1 and an element from list_tup2 in order.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>((0, 84), (7, 99), (16, 78), (27, 200), (100, -7))</p>
+        </statement>
+        <feedback>
+          <p>Try again! Be careful not to sort in place of reverse.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>((27, 84), (0, 99), (100, 78), (7, 200), (16, -7))</p>
+        </statement>
+        <feedback>
+          <p>Correct! This converts the tuples to lists and reverses list_tup1 and zips list_tup1 and list_tup2 together.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The function call tup_and_list_transform((16, 7, 100, 0, 27), (84, 99, 78, 200, -7)) would cause an error because tuples are immutable.</p>
+        </statement>
+        <feedback>
+          <p>Try again! While it's true that tuples are immutable, tuples can be changed into data types that are mutable in order to be changed (e.g., lists).</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="functions_tups_dicts_mcqs_q4">
+    <statement>
+      <p>Q-4: Which of the following return statements will <em>not</em> return a value for the function call <c>transform_dict({'one': 8, 'two': 10, 'three': 0})</c>?</p>
+      <program language="python">
+        <input>
+def transform_dict(dictionary):
+    # return statement goes here
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>return dictionary[1]</p>
+        </statement>
+        <feedback>
+          <p>Correct! This will cause a key error since 1 is not a key.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>return dictionary['one']</p>
+        </statement>
+        <feedback>
+          <p>This will return 8.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>return dictionary.get('one')</p>
+        </statement>
+        <feedback>
+          <p>This will return 8.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>return dictionary.get(8)</p>
+        </statement>
+        <feedback>
+          <p>This will return None which is the default value to return from get if the key isn't found.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>return dictionary.get('ten', 5)</p>
+        </statement>
+        <feedback>
+          <p>This will return 5 since 'ten' is not a key.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="functions_tups_dicts_mcqs_q5">
+    <statement>
+      <p>Q-5: Which of the following code snippets would cause <c>tup_of_tuples_to_dict((1, 'one'), (5, 'five'))</c> to return <c>{1: 'one', 5: 'five'}</c>?</p>
+      <program language="python">
+        <input>
+def tup_of_tuples_to_dict(tup_of_tuples):
+    dictionary = {}
+    for tup in tup_of_tuples:
+        # insert code snippet here
+    return dictionary
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>dictionary[tup[0]] = dictionary[tup[1]]</p>
+        </statement>
+        <feedback>
+          <p>Try again! There is no tup[1] value in the dictionary.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>dictionary(tup[0]) = tup[1]</p>
+        </statement>
+        <feedback>
+          <p>Try again! Setting up the key for a dictionary requires square brackets.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>dictionary[tup[0]] = tup[1]</p>
+        </statement>
+        <feedback>
+          <p>Correct! This will set the key to the first item in the tuple and the value to the second item.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>dictionary[tup[1]] = tup[0]</p>
+        </statement>
+        <feedback>
+          <p>Try again! This would set the key to the 2nd item and the value to the first.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>dictionary[tup[0]] = dictionary.get(tup[1])</p>
+        </statement>
+        <feedback>
+          <p>Try again! There is no tup[1] key in the dictionary, and the default value for the get() method is None.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="functions_tups_dicts_mcqs_q6">
+    <statement>
+      <p>Q-6: What are the contents of <c>d</c> after this code executes?</p>
+      <program language="python">
+        <input>
+d = {3:4}
+d[5] = d.get(4, 8)
+d[4] = d.get(3, 9)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>{3:4, 5:8, 4:9}</p>
+        </statement>
+        <feedback>
+          <p>This would be true if the key 3 wasn't in the dictionary, but it is.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>{3:4, 5:8, 4:4}</p>
+        </statement>
+        <feedback>
+          <p>It sets the value for key 4 to the value of key 3.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>{3:4, 5:4, 4:3}</p>
+        </statement>
+        <feedback>
+          <p>This would be true if get set the value to the first item rather than the second.  The first item is the key to look for.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>There will be an error</p>
+        </statement>
+        <feedback>
+          <p>This code will run without any errors.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

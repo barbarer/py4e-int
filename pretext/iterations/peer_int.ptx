@@ -1,0 +1,407 @@
+<?xml version="1.0"?>
+<section xml:id="iterations_peer-instruction-iterations-multiple-choice-questions">
+  <title>Peer Instruction: Iterations Multiple Choice Questions</title>
+  <exercise label="ctp-reviewtest1-14_review_06">
+    <statement>
+      <p>Q-1: What does the following code print?</p>
+      <program language="python">
+        <input>
+s = 'pirate ship'
+i = 0
+while(len(s) &gt; i ):
+    s = s[i:]
+    i = i + 1
+    print (s , i )
+</input>
+      </program>
+      <pre>A.
+pirate ship 1
+irate ship 2
+rate ship 3
+ate ship 4
+te ship 5
+e ship 6</pre>
+      <pre>B.
+pirate ship 1
+irate ship 2
+ate ship 3
+ ship 4
+p 5</pre>
+      <pre>C.
+pirate ship 1
+irate ship 2
+rate ship 3
+ate ship 4
+te ship 5
+e ship 6
+ ship 7
+ship 8
+hip 9
+ip 10
+p 11</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Try again! The string s changes after every iterations. First 'pirate ship', 'pirate ship', then 'irate ship'...</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Correct! In every iteration, i adds one up. Therefore, s[i:] begins with next letter in the string. However, the string s also changes after every iterations. So the final printing obmits several letters.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Try again! The string s changes after every iterations. First 'pirate ship', 'pirate ship', then 'irate ship'... It does not follow the rule that printing the first letter in 'pirate ship', then the second letter in 'pirate ship'... Some letters are obmitted.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above</p>
+        </statement>
+        <feedback>
+          <p>Try again! In every iteration, i adds one up. Therefore, s[i:] begins with next letter in the string. However, the string s also changes after every iterations. It does not follow the rule that printing the first letter in 'pirate ship', then the second letter in 'pirate ship'...</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Try again! In every iteration, i adds one up. Therefore, s[i:] begins with next letter in the string. However, the string s also changes after every iterations. It does not follow the rule that printing the first letter in 'pirate ship', then the second letter in 'pirate ship'...</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-reviewtest1-14_review_10">
+    <statement>
+      <p>Q-2: Which of these will evaluate to <c>False</c> if and only if <c>y</c> is equal to 11.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>y == 11</p>
+        </statement>
+        <feedback>
+          <p>Try again! This will evaluate to False if y is not equal to 11.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>y != 11</p>
+        </statement>
+        <feedback>
+          <p>Correct! This will evaluate to False if and only if y is equal to 11.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>y &gt; 11</p>
+        </statement>
+        <feedback>
+          <p>Try again! This will evaluate to False if y is equal to or smaller than 11.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>y and 11</p>
+        </statement>
+        <feedback>
+          <p>Try again! This is not a boolean expression.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Try again! An expression evaluates to False means its opposite expression is True. Therefore, try to find an expression that will evaluate to True if y it not equal to 11.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_13_4">
+    <statement>
+      <p>Q-3:</p>
+      <program language="python">
+        <input>
+What is printed by the following code? (Output is on one line to save space.)
+
+x = 6
+while x &gt; 4:
+  print(x)
+  x = x - 1
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>6 5</p>
+        </statement>
+        <feedback>
+          <p>Correct! When x = 4, the loop stops.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>6 5 4</p>
+        </statement>
+        <feedback>
+          <p>Try again. When x = 4, the loop stops. Therefore, 4 will not be printed.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>5 4</p>
+        </statement>
+        <feedback>
+          <p>Try again. When x = 6, the loop runs. Therefore, 6 will be printed. And when x = 4, the loop stops. Therefore, 4 will not be printed.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>5 4 3</p>
+        </statement>
+        <feedback>
+          <p>Try again. When x = 6, the loop runs. Therefore, 6 will be printed. And when x = 4, the loop stops. Therefore, 4 and 3 will not be printed.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>6 5 4 3</p>
+        </statement>
+        <feedback>
+          <p>Try again. When x = 4, the loop stops. Therefore, 4 and 3 will not be printed.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_13_5">
+    <statement>
+      <p>Q-4:</p>
+      <program language="python">
+        <input>
+What is printed by the following code? (Output is on one line to save space.)
+
+x = 6
+while x &gt; 4:
+  x = x - 1
+  print(x)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>6 5</p>
+        </statement>
+        <feedback>
+          <p>Try again. x = x - 1 comes before print(x). Therefore, 6 will never be printed. And when x = 5, the loop will continue and print(x - 1). So, 4 will be printed.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>6 5 4</p>
+        </statement>
+        <feedback>
+          <p>Try again. x = x - 1 comes before print(x). Therefore, 6 will never be printed.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>5 4</p>
+        </statement>
+        <feedback>
+          <p>Correct! When x = 4, the loop will stop. Because x = x - 1 comes before print(x), the code prints 5 and 4.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>5 4 3</p>
+        </statement>
+        <feedback>
+          <p>Try again.  x = x - 1 comes before print(x). When x = 5, the loop will continue and print(x - 1). So, 4 will be printed while 3 will not.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>6 5 4 3</p>
+        </statement>
+        <feedback>
+          <p>Try again. x = x - 1 comes before print(x). Therefore, 6 will never be printed. And when x = 5, the loop will continue and print(x - 1). So, 4 will be printed and 3 will not.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_13_7">
+    <statement>
+      <p>Q-5:</p>
+      <program language="python">
+        <input>
+Which of the following passwords stops the loop?
+
+valid = False
+while not valid:
+  s = input ("Enter a password: ")
+  valid = len(s) == 5 and s[:2] == 'xy'
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>xyz</p>
+        </statement>
+        <feedback>
+          <p>Try again. while not valid means the loop will not stop until valid equals to True. And 'xyz' does not satisfy the requirement: len(5) == 5.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>abcxyz</p>
+        </statement>
+        <feedback>
+          <p>Try again. while not valid means the loop will not stop until valid equals to True. And 'abcxyz' does not satisfy the requirement: s[:2] == 'xy'.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>xyabc</p>
+        </statement>
+        <feedback>
+          <p>Correct! 'xyzabc' satisfies two requirements: len(5) == 5 and s[:2] == 'xy'.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>More than one of the above passwords get us out of the loop.</p>
+        </statement>
+        <feedback>
+          <p>Try again. There is only one password that satisfy the two requirements of getting out of the loop.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None; the loop never executes and no passwords are obtained.</p>
+        </statement>
+        <feedback>
+          <p>Try again. There is one password that satisfy the two requirements of getting out of the loop.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_13_9">
+    <statement>
+      <p>Q-6: A valid password is one that is length 5 and starts with xy. Such passwords should get us out of the loop. Which of these does this?</p>
+      <program language="python">
+        <input>
+A.
+while True:
+    s = input ("Enter a password: ")
+    if len(s) == 5 and s[:2] == 'xy':
+        break
+</input>
+      </program>
+      <pre>B.
+s = input ("Enter a password: ")
+while len(s) == 5 and s[:2] == 'xy':
+    s = input ("Enter a password: ")</pre>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Correct! When the length is 5 and it starts with xy, break helps the string get out of the loop.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Try again. When a string meets both of the requirements, being the length 5 and starting with xy, the while loop continues.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Both are correct</p>
+        </statement>
+        <feedback>
+          <p>Try again. There is only one correct answer.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None is correct</p>
+        </statement>
+        <feedback>
+          <p>Try again. There is a correct answer.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_13_10">
+    <statement>
+      <p>Q-7:</p>
+      <program language="python">
+        <input>
+What is the output of this code? (Output is on one line here to save space.)
+
+n = 3
+while n &gt; 0:
+    if n == 5:
+        n = -99
+    print(n)
+    n = n + 1
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>3 4</p>
+        </statement>
+        <feedback>
+          <p>Try again. When n = 5, n satisfies the if condition, and n turns to -99. And print(n) outputs -99.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3 4 5</p>
+        </statement>
+        <feedback>
+          <p>Try again. When n = 5, n satisfies the if condition, and n turns to -99. And print(n) outputs -99 rather than 5.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>3 4 -99</p>
+        </statement>
+        <feedback>
+          <p>Correct! When n = 5, n satisfies the if condition, and n turns to -99. So the code outputs 3, 4 and -99.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3 4 5 -99</p>
+        </statement>
+        <feedback>
+          <p>Try again. When n = 5, n satisfies the if condition, and n turns to -99. And print(n) outputs -99 rather than 5.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

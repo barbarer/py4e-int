@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<section xml:id="regex_introduction-to-problem-types">
+  <title>Introduction to Problem Types</title>
+  <p>Please read the following, watch the videos, and try to solve the problems.</p>
+  <subsection xml:id="regex_solving-regex-write-code-problems">
+    <title>Solving Regex Write Code Problems</title>
+    <p>If you see a problem like the one below you will need to replace your regex with <q>YOUR_REGEX</q> in the code.
+                Please do not replace other symbols such as <q>^</q> and <q>$</q> if they exist.</p>
+    <p>See the video below for an example.</p>
+    <video xml:id="hparsons_lg_regex_intro_write_video" youtube="bNyHBwPA8Xk" width="425"/>
+    <p>Try to finish writing the code for the following problem.</p>
+    <exercise label="hparsons_lg_regex_intro_write">
+      <statement>
+        <p>Please write a regex that would match the word <q>apple</q>.
+                Replace <q>YOUR_REGEX</q> with your answer, but do not remove other symbols.</p>
+      </statement>
+      <program xml:id="hparsons_lg_regex_intro_write_editor" interactive="activecode" language="python">
+        <input>
+import re
+
+def match_apple(word):
+    if re.match('^YOUR_REGEX$', word) != None:
+        return True
+    else:
+        return False
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(match_apple('apple'), True, 'Should match "apple"')
+        self.assertEqual(match_apple('apples'), False, 'Should not match "apples"')
+        self.assertEqual(match_apple('Apple'), False, 'Should not match "Apple"')
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+  </subsection>
+  <subsection xml:id="regex_solving-mixed-up-code-problems">
+    <title>Solving Mixed-up Code Problems</title>
+    <p>If you see a problem like the one below you will need to put the mixed-up
+                code in the correct order on the bottom.
+                There will also be extra blocks that are not needed in a correct solution that you can leave on the top row.
+                Click the <q>Check</q> button to check your solution.</p>
+    <p>See the video below for an example.</p>
+    <video xml:id="hparsons_lg_regex_intro_hparsons_video" youtube="YehVhjxLae0" width="650"/>
+    <p>Try to solve the following mixed-up code problem.</p>
+    <HParsonsNode line="68" runestone_options="{'language': &quot;data-language='regex'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1'&quot;, 'subchapter': 'hparsons_lg_session2_intro', 'chapter': 'regex', 'basecourse': 'py4e-int', 'optional': '', 'optclass': '', 'divid': 'hparsons_lg_regex_intro_parsons', 'qnumber': '11-9-4', 'reuse': '', 'initialsetting': '--blocks--\napp\nle\ns', 'dburl': '', 'question_label': '4'}" source="/home/david/comsc020/py4e-int/_sources/regex/hparsons_lg_session2_intro.rst">
+      <p>Please write a regex that would match the word <q>apple</q>.</p>
+    </HParsonsNode>
+  </subsection>
+  <subsection xml:id="regex_what-to-do-next">
+    <title>What to do next</title>
+    <raw format="html" xml:space="preserve">&lt;p&gt;Click on the following link to go the practice problems: &lt;a id="hparsons_lg_session2_practice"&gt;&lt;font size="+2"&gt;Practice Problems&lt;/font&gt;&lt;/a&gt;&lt;/p&gt;</raw>
+    <raw format="html" xml:space="preserve">&lt;script type="text/javascript" &gt;
+
+  window.onload = function() {
+
+    a = document.getElementById("hparsons_lg_session2_practice")
+
+    // randomly pick one of two relative urls
+    var v = Math.floor(Math.random() * 9) + 1;
+    if (v % 2 == 0)
+    {
+          a.href = "hparsons_lg_session2_practice_write.html"
+    }
+    else
+    {
+          a.href = "hparsons_lg_session2_practice_parsons.html"
+    }
+
+    };
+&lt;/script&gt;</raw>
+  </subsection>
+</section>

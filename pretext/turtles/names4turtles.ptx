@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<section xml:id="turtles_history-of-turtles">
+  <title>History of Turtles</title>
+  <p>The idea of a virtual turtle, dates back to the 1960's.  Seymour Papert and his group at MIT created the programming language LOGO which could control a robot turtle with a physical pen in it.  Kids would steer the robot around, and it would draw as it moved. Seymour said that the Turtle was, <q>an object to think with</q>.  Many modern programming languages support Turtles, including Python.</p>
+  <figure align="center" xml:id="id1">
+    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 3: Children playing with a Logo turtle robot that could draw with a pen</caption>
+    <image source="turtles/Figures/mindstorms_turtle.jpg" width="200px%" alt="Children playing with a Logo turtle robot that can draw with a pen"/>
+  </figure>
+  <p xml:id="turtles_index-0">Today, we can play with virtual turtles in a fully-graphical and non-robotic way. Below is a Python program that first creates a Screen object (object of the Screen class) for the turtle to draw on and then creates a Turtle object (object of the Turtle class).
+            The program asks the turtle object to perform some of its behaviors (methods) like moving forward a set amount and turning. The turtle draws as it moves.</p>
+  <exercise label="Turtle_ex_1">
+    <statement>
+      <p>Click the Run button to see what this code does.  The drawing will happen below the code.</p>
+    </statement>
+    <program xml:id="Turtle_ex_1_editor" interactive="activecode" language="python">
+      <input>
+from turtle import *  # use the turtle library
+space = Screen()      # create a Screen object named space
+alex = Turtle()       # create a Turtle object named alex
+alex.forward(150)     # ask alex to move forward by 150 units
+alex.left(90)         # ask alex to turn by 90 degrees
+alex.forward(75)      # ask alex to move forward by 75 units
+        </input>
+    </program>
+  </exercise>
+  <exercise label="Turtle_Init_Dir_mc_q1">
+    <statement>
+      <p>csp-5-4-2: Which way does a turtle (object of the Turtle class) face when it is first created?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>North</p>
+        </statement>
+        <feedback>
+          <p>Some systems start with the turtle facing North, but not this one.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>South</p>
+        </statement>
+        <feedback>
+          <p>Which way does the turtle first move in the example above?  North is at the top of the page.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>East</p>
+        </statement>
+        <feedback>
+          <p>Turtles start off facing east which is toward the right side of the page.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>West</p>
+        </statement>
+        <feedback>
+          <p>Which way does the turtle first move in the example above?   North is at the top of the page.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <note xml:id="turtles_index-1">
+    <p>Notice that we tell <c>alex</c> the turtle what to do in the code above using <term>dot notation</term>: <c>alex.forward(150)</c>,  <c>alex.left(90)</c>, and <c>alex.forward(75)</c>.  That is how you communicate with an object.  You use the name of the turtle object followed by a <c>.</c> and then the name of the method that you want to execute.</p>
+  </note>
+  <p>Just by going forward and turning we can have a turtle object draw many things.</p>
+  <subsection xml:id="turtles_what-does-a-left-turn-of-90-mean">
+    <title>What does a left turn of 90 mean?</title>
+    <p>When we ask a turtle to turn left, it will turn left based on the direction it is currently heading. A turtle object keeps track of its heading (direction it is facing). Use the figure below to help you understand how much the turtle will turn if asked to turn left 90 degrees and it is currently heading east (0 degrees).</p>
+    <figure align="center" xml:id="id2">
+      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: The amount of turn for specified degrees for left and right turns</caption>
+      <image source="turtles/Figures/turnDegrees.png" width="600px%" alt="shows what a turn of each degrees means for left and right turns"/>
+    </figure>
+  </subsection>
+</section>

@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<section xml:id="inheritance_association-vs-inheritance">
+  <title>Association vs. Inheritance</title>
+  <p>Now you have seen two ways for a class to reuse code in another class. So,
+            is one better than the other? When do you use inheritance, and when is
+            association the better choice?</p>
+  <p>Although the subject of this chapter is inheritance, the truth is that
+            association is usually a better choice than inheritance.
+            Perhaps 95% of cases where you are debating about choosing inheritance or
+            association, you should choose association. It's hard to go wrong with
+            association, but you can get into all kinds of trouble if you go with
+            inheritance and inheritance is not an appropriate choice.</p>
+  <p>So, it's easier to address the question of which technique to use by
+            determining when inheritance is an appropriate choice.
+            Inheritance is appropriate when the proposed child class (the one reusing
+            the functionality in its parent) represents a <em>specialization</em> of its parent.
+            You can test this by filling in the names of the child and parent class in the following sentence.</p>
+  <p>
+    <term>(child class) is a type of (parent class).</term>
+  </p>
+  <p>Let's try an example. Using the <c>LabeledPoint</c> example from the previous
+            section: <q><c>LabeledPoint</c> is a type of <c>Point</c>.</q> Since a
+            <c>LabeledPoint</c> is a specific type of <c>Point</c>&#x2013;a point that has a label&#x2013;that
+            sentence makes sense. <c>LabeledPoint</c> is a specialization of <c>Point</c>, and
+            inheritance is an appropriate choice. You can also use the substitution test.
+            Inheritance is appropriate if a child object can substitute for a parent object.
+            If I ask for a <c>Point</c> object and you give me a <c>LabeledPoint</c> object is that okay?
+            Yes, they both are points.</p>
+  <exercise label="assocVsInher_mcq1">
+    <statement>
+      <p>Q-1: Which of the following should use inheritance?  Select all that apply.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Card and Deck</p>
+        </statement>
+        <feedback>
+          <p>A deck has cards and is not a type of card.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Car and ElectricCar</p>
+        </statement>
+        <feedback>
+          <p>An electric car is a type of car.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Person and Student</p>
+        </statement>
+        <feedback>
+          <p>A student is a type of person.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Address and Person</p>
+        </statement>
+        <feedback>
+          <p>A person has an address or several addresses.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>Now, suppose you wanted to define a class that represents a rectangle.
+            Like a <c>Point</c>, a <c>Rectangle</c> would need to keep track of an x and y location
+            to determine its position, and might also have a width and a height.
+            You're thinking about defining <c>Rectangle</c> to inherit from <c>Point</c>, so that it
+            reuses all of the functionality in <c>Point</c> (like knowing its position and calculating its
+            distance from origin), and adding just the two new instance variables it
+            needs for its width and height. From a pure code reuse standpoint,
+            inheritance seems plausible. But wait&#x2013;let's apply the <q>is-a-type-of</q> linguistic test.
+            Filling in the blanks in the sentence template above, we get: <q>Rectangle
+            is a type of Point.</q> Most people would feel there is something wrong with
+            that statement.  A rectangle <em>has</em> a point, but is not itself
+            a point. Thus, it fails the linguistic test; association is the better
+            choice here.  The test for association is also called a <em>has-a</em> relationship.
+            You can test this by filling in the names of the two classes in the following sentence.</p>
+  <p>
+    <term>(class one) has a (class two).</term>
+  </p>
+  <exercise label="assocVsInher_mcq2">
+    <statement>
+      <p>Q-2: Which of the following should use association?  Select all that apply.</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>Point and Triangle</p>
+        </statement>
+        <feedback>
+          <p>A triangle has a point or several points.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Shape and Triangle</p>
+        </statement>
+        <feedback>
+          <p>A triangle is a type of shape.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Account and SavingsAccount</p>
+        </statement>
+        <feedback>
+          <p>A savings account is a type of account.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Patient and Doctor</p>
+        </statement>
+        <feedback>
+          <p>A doctor has a patient (or several).</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>So what happens if you decide to ignore the linguistic test and go ahead
+            and make <c>Rectangle</c> inherit from <c>Point</c>? In some cases, you won't run into
+            trouble right away. Often, the difficulties don't start to crop up until
+            later, when you decide to add more methods to <c>Point</c> (the parent) that
+            aren't appropriate for Rectangle (the child). This leads to a program
+            that is confusing to understand and contains bugs that occur when
+            methods intended for <c>Point</c> are invoked on <c>Rectangle</c> instances by
+            mistake. Also, since inheritance is the strongest form of relationship
+            between classes, changes to code in a parent class have a stronger
+            likelihood of breaking code in its children than would tend to occur
+            if composition were used.</p>
+  <p>Inheritance is a powerful feature and, when used appropriately, a
+            terrific way to reuse code. But, like most power tools, it can cut
+            you up pretty badly if you don't know what you are doing.
+            Use it with caution and respect.</p>
+  <exercise label="assocVsInher_mcq3">
+    <statement>
+      <p>Q-3: Which of the following are <em>false</em>? Select all that apply.</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>If you aren't sure of the relationship use inheritance</p>
+        </statement>
+        <feedback>
+          <p>If you aren't sure use association</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Test for inheritance using *is-a-type-of*</p>
+        </statement>
+        <feedback>
+          <p>The test for inheritance is *is-a-type-of*</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Test for association using *has-a*</p>
+        </statement>
+        <feedback>
+          <p>The test for association is *has-a*</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Test for association using substitution (can you substitute one class for another)</p>
+        </statement>
+        <feedback>
+          <p>Use substitution to test for inheritance</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

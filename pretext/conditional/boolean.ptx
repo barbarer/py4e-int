@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<section xml:id="conditional_boolean-expressions">
+  <title>Boolean expressions</title>
+  <p xml:id="conditional_index-0">A <em>boolean expression</em> is an expression that is either
+            true or false. The following examples use the operator <c>==</c>,
+            which compares two operands and produces <c>True</c> if they are
+            equal and <c>False</c> otherwise:</p>
+  <program xml:id="cond_boolean_equal" interactive="activecode" language="python">
+    <input>
+print(5 == 5)
+print(5 == 6)
+        </input>
+  </program>
+  <p><c>True</c> and <c>False</c> are special values that belong
+            to the class <c>bool</c>; they are not strings:</p>
+  <program xml:id="cond_boolean_types" interactive="activecode" language="python">
+    <input>
+print(type(True))
+print(type(False))
+        </input>
+  </program>
+  <p>The <c>==</c> operator is one of the <em>comparison
+                operators</em>; the others are:</p>
+  <program language="python">
+    <input>
+x != y               # x is not equal to y
+x &gt; y                # x is greater than y
+x &lt; y                # x is less than y
+x &gt;= y               # x is greater than or equal to y
+x &lt;= y               # x is less than or equal to y
+x is y               # x is the same as y
+x is not y           # x is not the same as y
+</input>
+  </program>
+  <p>Although these operations are probably familiar to you, the Python
+            symbols are different from the mathematical symbols for the same
+            operations. A common error is to use a single equal sign
+            (<c>=</c>) instead of a double equal sign (<c>==</c>).
+            Remember that <c>=</c> is an assignment operator and
+            <c>==</c> is a comparison operator. There is no such thing as
+            <c>=&lt;</c> or <c>=&gt;</c>.</p>
+  <exercise label="cndtnl-bool-mc-expression">
+    <statement>
+      <p>Q-3: Which of the following is a Boolean expression?  Select all that apply.</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>True and False are both Boolean literals.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>3 == 4</p>
+        </statement>
+        <feedback>
+          <p>The comparison between two numbers via == results in either True or False (in this case False),  both Boolean values.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3 + 4</p>
+        </statement>
+        <feedback>
+          <p>3 + 4 evaluates to 7, which is a number, not a Boolean value.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>3 + 4 == 7</p>
+        </statement>
+        <feedback>
+          <p>3 + 4 evaluates to 7.  7 == 7 then evaluates to True, which is a Boolean value.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>"False"</p>
+        </statement>
+        <feedback>
+          <p>With the double quotes surrounding it, False is interpreted as a string, not a Boolean value.
+If the quotes had not been included, False alone is in fact a Boolean value.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="cndtnl-bool-mc-same">
+    <statement>
+      <p>Q-4: Which of the following comparison operators is used to check if x and y are the same object?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>x = y</p>
+        </statement>
+        <feedback>
+          <p>Try again. This reassigns the value of y to x.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>x != y</p>
+        </statement>
+        <feedback>
+          <p>Try again. This means that x is not equal to y.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>x == y</p>
+        </statement>
+        <feedback>
+          <p>Try again. This means that x and y have the same value, but it does not mean they are the same object.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>x is y</p>
+        </statement>
+        <feedback>
+          <p>This means that x and y are the same object, not just the same value.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>x is not y</p>
+        </statement>
+        <feedback>
+          <p>Try again. This means that x and y are not the same object. This can be true if x and y have the same value, but are stored in different objects.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="cndtnl-bool-mc-true">
+    <statement>
+      <p>Q-5: What operator makes <c>783 ___ 206</c> true? Select all that apply.</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>&gt;</p>
+        </statement>
+        <feedback>
+          <p>783 &gt; 206 is True.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>&lt;=</p>
+        </statement>
+        <feedback>
+          <p>Try again. 783 &lt;= 206 is False.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>!=</p>
+        </statement>
+        <feedback>
+          <p>Correct! 783 != 206 is True.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>is not</p>
+        </statement>
+        <feedback>
+          <p>Correct! 783 is not 206 is True.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

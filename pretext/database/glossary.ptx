@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<section xml:id="database_glossary">
+  <title>Glossary</title>
+  <glossary sorted="False">
+    <gi>
+      <title>Attribute</title>
+      <p>One of the values within a tuple. More commonly called a <q>column</q> or <q>field</q>.</p>
+    </gi>
+    <gi>
+      <title>Constraint</title>
+      <p>When we tell the database to enforce a rule on a field or a row in a table.
+                            A common constraint is to insist that there can be no duplicate values in a
+                            particular field (i.e., all the values must be unique).</p>
+    </gi>
+    <gi>
+      <title>Cursor</title>
+      <p>A cursor allows you to execute SQL commands in a database and retrieve data
+                            from the database. A cursor is similar to a socket or file handle for network
+                            connections and files, respectively.</p>
+    </gi>
+    <gi>
+      <title>Database Browser</title>
+      <p>A piece of software that allows you to directly connect to a database and
+                            manipulate the database directly without writing a program.</p>
+    </gi>
+    <gi>
+      <title>Foreign Key</title>
+      <p>A numeric key that points to the primary key of a row in another table. Foreign
+                            keys establish relationships between rows stored in different tables.</p>
+    </gi>
+    <gi>
+      <title>Database Index</title>
+      <p>Additional data that the database software maintains as rows and inserts into
+                            a tables to make lookups very fast.</p>
+    </gi>
+    <gi>
+      <title>Logical Key</title>
+      <p>A key that the <q>outside world</q> uses to look up a particular row. For example
+                            in a table of user accounts, a person's email address might be a good candidate
+                            as the logical key for the user's data.</p>
+    </gi>
+    <gi>
+      <title>Normalization</title>
+      <p>Designing a data model so that no data is replicated. We store each item of data
+                            at one place in the database and reference it elsewhere using a foreign key.</p>
+    </gi>
+    <gi>
+      <title>Primary Key</title>
+      <p>A numeric key assigned to each row that is used to refer to one row in a table
+                            from another table. Often the database is configured to automatically assign
+                            primary keys as rows are inserted.</p>
+    </gi>
+    <gi>
+      <title>Relation</title>
+      <p>An area within a database that contains tuples and attributes. More
+                            typically called a <q>table</q>.</p>
+    </gi>
+    <gi>
+      <title>Database Tuple</title>
+      <p>A single entry in a database table that is a set of attributes. More typically
+                            called a <q>row</q>.</p>
+    </gi>
+  </glossary>
+  <exercise label="db_glossary1">
+    <statement>
+      <p>Match each term to its definition.</p>
+    </statement>
+    <feedback>
+      <p>Try again!</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>Attribute</premise>
+        <response>One of the values within a tuple.</response>
+      </match>
+      <match order="2">
+        <premise>Cursor</premise>
+        <response> What allows you to execute SQL commands in a database and retrieve data from the database.</response>
+      </match>
+      <match order="3">
+        <premise>Relation</premise>
+        <response>An area within a database that contains rows and columns - also called a table.</response>
+      </match>
+      <match order="4">
+        <premise>Tuple</premise>
+        <response>A single entry in a database table that is a set of columns.</response>
+      </match>
+    </matches>
+  </exercise>
+  <exercise label="db_glossary2">
+    <statement>
+      <p>Match each term to its definition.</p>
+    </statement>
+    <feedback>
+      <p>Try again!</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>Constraint</premise>
+        <response>When we tell the database to enforce a rule on a field or a row in a table.</response>
+      </match>
+      <match order="2">
+        <premise>Database Browser</premise>
+        <response>A piece of software that allows you to directly connect to a database and manipulate the database directly without writing a program.</response>
+      </match>
+      <match order="3">
+        <premise>Index</premise>
+        <response>Additional data that the database software maintains as rows and inserts into a tables to make lookups very fast.</response>
+      </match>
+      <match order="4">
+        <premise>Normalization</premise>
+        <response>Designing a data model so that no string data is replicated.</response>
+      </match>
+    </matches>
+  </exercise>
+  <exercise label="db_glossary3">
+    <statement>
+      <p>Match each term to its definition.</p>
+    </statement>
+    <feedback>
+      <p>Try again!</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>Foreign Key</premise>
+        <response>A numeric key that points to the primary key of a row in another table.</response>
+      </match>
+      <match order="2">
+        <premise>Logical Key</premise>
+        <response>A key that the "outside world" uses to look up a particular row.</response>
+      </match>
+      <match order="3">
+        <premise>Primary Key</premise>
+        <response> A numeric key assigned to each row that is used to refer to one row in a table from another table.</response>
+      </match>
+    </matches>
+  </exercise>
+</section>

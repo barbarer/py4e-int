@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<section xml:id="objects_starting-with-programs">
+  <title>Starting with programs</title>
+  <p>A program in its most basic form takes some input, does some processing, and
+            produces some output.  Our elevator conversion program demonstrates a very
+            short but complete program showing all three of these steps.</p>
+  <program xml:id="startingprograms_elev" interactive="activecode" language="python">
+    <input>
+usf = input('Enter the US Floor Number: ')
+wf = int(usf) - 1
+print('Non-US Floor Number is',wf)
+        </input>
+  </program>
+  <p>If we think a bit more about this program, there is the <q>outside world</q> and
+            the program. The input and output aspects are where the program interacts
+            with the outside world.  Within the program we have code and data to accomplish
+            the task the program is designed to solve.</p>
+  <image source="images/program.svg" width="50%" alt="A Program"/>
+  <p>One way to think about object-oriented programming is that it separates
+            our program into multiple <q>zones.</q> Each zone contains some code and data
+            (like a program) and has well defined interactions with the outside world
+            and the other zones within the program.</p>
+  <p>If we look back at the link extraction application where we used the
+            BeautifulSoup library, we can see a program that is constructed by connecting
+            different objects together to accomplish a task:</p>
+  <program xml:id="urllinksparser" interactive="activecode" language="python3">
+    <input>
+import urllib.request, urllib.parse, urllib.error
+from bs4 import BeautifulSoup
+import ssl
+
+# Ignore SSL certificate errors
+ctx = ssl.create_default_context()
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
+
+url = "https://www.nytimes.com/"
+html = urllib.request.urlopen(url, context=ctx).read()
+soup = BeautifulSoup(html, 'html.parser')
+
+# Retrieve all of the anchor tags
+tags = soup('a')
+for tag in tags:
+    print(tag.get('href', None))
+        </input>
+  </program>
+  <p>We pass the url into <c>urllib</c> to retrieve
+            the data from the web.  The <c>urllib</c> library uses the <c>socket</c> library to
+            make the actual network connection to retrieve the data. We take the string
+            that <c>urllib</c> returns and hand it to BeautifulSoup for parsing.
+            BeautifulSoup makes use of the object
+            <c>html.parser</c>^[<url href="https://docs.python.org/3/library/html.parser.html" visual="https://docs.python.org/3/library/html.parser.html">https://docs.python.org/3/library/html.parser.html</url>] and returns an object.
+            We call the <c>tags()</c> method on the returned object that returns a dictionary of tag
+            objects. We loop through the tags and call the <c>get()</c> method for each tag
+            to print out the <c>href</c> attribute.</p>
+  <p>We can draw a picture of this program and how the objects work together.</p>
+  <image source="images/program-oo.svg" width="50%" alt="A Program as Network of Objects"/>
+  <exercise label="urllib_objects">
+    <statement>
+      <p>Q-3: Which of the following is true about the following code?</p>
+      <pre>import urllib.request, urllib.parse, urllib.error
+from bs4 import BeautifulSoup
+import ssl
+
+# Ignore SSL certificate errors
+ ctx = ssl.create_default_context()
+ ctx.check_hostname = False
+ ctx.verify_mode = ssl.CERT_NONE
+
+url = "https://www.nytimes.com/"
+html = urllib.request.urlopen(url, context=ctx).read()
+soup = BeautifulSoup(html, 'html.parser')
+print(soup('a'))</pre>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>BeautifulSoup creates and returns an object to soup</p>
+        </statement>
+        <feedback>
+          <p>BeautifulSoup makes use of the object 'html.parser'
+and returns an object.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The following program is sequential and not object oriented.</p>
+        </statement>
+        <feedback>
+          <p>The program may look sequential but it also calls on other classes to return
+objects.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The following program is an example of procedural programming.</p>
+        </statement>
+        <feedback>
+          <p>The program inherits functions from other classes with the import statements instead
+of using procedures.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The program will give a 'NameError' as function BeautifulSoup
+is called before its defined.</p>
+        </statement>
+        <feedback>
+          <p>BeautifulSoup is imported to the program.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>The key here is not to understand perfectly how this program works but to see
+            how we build a network of interacting objects and orchestrate the movement
+            of information between the objects to create a program.  It is also important
+            to note that when you looked at that program several chapters back, you could
+            fully understand what was going on in the program without even realizing
+            that the program was <q>orchestrating the movement of data between objects.</q>
+            It was just lines of code that got the job done.</p>
+</section>

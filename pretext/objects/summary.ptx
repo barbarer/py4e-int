@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<section xml:id="objects_summary">
+  <title>Summary</title>
+  <p>This is a very quick introduction to object-oriented programming that focuses mainly
+            on terminology and the syntax of defining and using objects.
+            Let's quickly review the code that we looked at in the beginning of the chapter.
+            At this point you should fully understand what is going on.</p>
+  <program xml:id="summary_objectoriented" interactive="activecode" language="python">
+    <input>
+stuff = list()
+stuff.append('python')
+stuff.append('chuck')
+stuff.sort()
+print (stuff[0])
+print (stuff.__getitem__(0))
+print (list.__getitem__(stuff,0))
+        </input>
+  </program>
+  <p>The first line constructs a <c>list</c> <em>object</em>.  When Python creates the <c>list</c> object,
+            it calls the <em>constructor</em> method (named  <c>__init__</c> ) to set up the internal
+            data attributes that will be used to store the list data. We have not passed any
+            parameters to the <em>constructor</em>. When the constructor returns, we use the variable `` stuff`` to point to the returned instance of the <c>list</c> class.</p>
+  <p>The second and third lines call the <c>append</c> method
+            with one parameter to add a new item at the end of the list by updating the
+            attributes within <c>stuff</c>.  Then in the fourth line,
+            we call the <c>sort</c> method with no parameters to sort the data within the <c>stuff</c>
+            object.</p>
+  <p>We then print out the first item in the list using the square brackets which are
+            a shortcut to calling the <c>__getitem</c> method within the `` stuff`` .  This
+            is equivalent to calling the <c>getitem__</c> method in the `` list`` <em>class</em>
+            and passing the `` stuff`` object as the first parameter and the position
+            we are looking for as the second parameter.</p>
+  <p>At the end of the program, the <c>stuff</c> object is discarded but not before
+            calling the <em>destructor</em> (named <c>__del__</c> ) so that the object can clean up any
+            loose ends as necessary.</p>
+  <p>Those are the basics of object-oriented programming. There are many additional details
+            as to how to best use object-oriented approaches when developing large applications
+            and libraries that are beyond the scope of this chapter.^[If
+            you are curious about where the <c>list</c> class is defined, take a look
+            at (hopefully the URL won't change)
+            <url href="https://github.com/python/cpython/blob/master/Objects/listobject.c" visual="https://github.com/python/cpython/blob/master/Objects/listobject.c">https://github.com/python/cpython/blob/master/Objects/listobject.c</url> -
+            the list class is written in a language
+            called <q>C</q>. If you take a look at that source code and find it curious
+            you might want to explore a few Computer Science courses.]</p>
+</section>

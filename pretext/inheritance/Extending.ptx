@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<section xml:id="inheritance_call-a-parent-method">
+  <title>Call a Parent Method</title>
+  <p>If you compare the code in the __init__ methods of <c>Point</c> and <c>LabeledPoint</c>, you can
+            see that there is some duplication&#x2013;the initialization of x and y. We can
+            eliminate the duplication by having <c>LabeledPoint</c>'s <c>__init__()</c> method call (execute)
+            <c>Point</c>'s <c>__init__()</c> method. That way, each class will be responsible for
+            initializing its own instance variables.</p>
+  <p>All objects keep a reference to the class that created them and every class has a reference to its parent class.
+            You can get an object that represents the parent class using <c>super()</c> and then call a method on that object.</p>
+  <program language="python">
+    <input>
+ class LabeledPoint(Point):
+
+     def __init__(self, initX, initY, label):
+         super().__init__(initX, initY)
+         self.label = label
+</input>
+  </program>
+  <p>In this example, line 4 invokes the <c>__init__()</c> method in <c>Point</c>,
+            passing the values of <c>initX</c> and <c>initY</c>
+            to be used in initializing the <c>x</c> and <c>y</c> instance variables.</p>
+  <p>Here is a complete code listing showing both classes, with a version
+            of <c>__str__()</c> for <c>LabeledPoint</c> that invokes its parent's implementation
+            using <c>super()</c> to avoid duplicating the functionality provided in <c>Point</c>.</p>
+  <program xml:id="combined_pts_1" interactive="activecode" language="python">
+    <input>
+class Point:
+
+    def __init__(self, initX, initY):
+        self.x = initX
+        self.y = initY
+
+    def distanceFromOrigin(self):
+        return ((self.x ** 2) + (self.y ** 2)) ** 0.5
+
+    def __str__(self):
+        return "x=" + str(self.x) + ", y=" + str(self.y)
+
+class LabeledPoint(Point):
+
+    def __init__(self, initX, initY, label):
+        super().__init__(initX, initY)
+        self.label = label
+
+    def __str__(self):
+        return super().__str__() + " (" + self.label + ")"
+
+p = LabeledPoint(7,6,"Here")
+print(p)
+print(p.distanceFromOrigin())
+        </input>
+  </program>
+  <p>Finish the code for the <c>Student</c> class below.  In the <c>__init__</c> method for <c>Student</c> call the <c>__init__</c> method for <c>Person</c> and pass in a first and last name.  Then also set the id. In the <c>__str__</c> method for <c>Student</c> return the id in the form (id: actual_id,) followed by the string returned from the <c>__str__</c> method in <c>Person</c>.  For example, if <c>s = Student("Abby", "Lane", 1)</c> then <c>print(s)</c> should print <q>id: 1, name: Abby Lane</q>.</p>
+  <program xml:id="inherit_person_student_super_ac" interactive="activecode" language="python">
+    <input>
+class Person:
+
+    def __init__(self, first, last):
+        self.first = first
+        self.last = last
+
+    def __str__(self):
+        return f"name: {self.first} {self.last}"
+
+class Student(Person):
+
+    def __init__(self, first, last, id):
+
+    def __str__(self):
+
+s = Student("Abby", "Lane", 1)
+print(s)
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        s = Student("Abby", "Lane", 1)
+        self.assertEqual(s.__str__(),"id: 1, name: Abby Lane","Test of Abby Lane with id of 1")
+        s = Student("Sam", "Brown", 2)
+        self.assertEqual(s.__str__(),"id: 2, name: Sam Brown","Test of Sam Brown with id of 2")
+        s = Student("Julia", "Pai", 3)
+        self.assertEqual(s.__str__(),"id: 3, name: Julia Pai","Test of Julia Pai with id of 3")
+
+
+myTests().main()
+        </input>
+  </program>
+</section>

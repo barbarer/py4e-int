@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<section xml:id="classes-basics_creating-a-dice-class">
+  <title>Creating a Dice Class</title>
+  <p>Have you played a game where you used dice?  Let's create a <c>Die</c> class so that if we lose our physical dice we can still play. A die is one of a pair of dice.</p>
+  <exercise label="class_basics-dice-attributes">
+    <statement>
+      <p>Q-1: What attributes (data) would an object of the Dice class need to know? What questions should you be able to ask about it?</p>
+    </statement>
+  </exercise>
+  <exercise label="class_basics-dice-behaviors">
+    <statement>
+      <p>Q-2: What behaviors (methods) would we expect a dice class to have?</p>
+    </statement>
+  </exercise>
+  <p>We would expect to be able to roll a die and get the value from the last roll.  When we roll a dice we pick a random number from 1 to 6.
+            Let's store all the values that were rolled in a list, <c>roll_history</c>. We will add each <c>value</c> rolled to the end of the <c>roll_history</c> list and return the <c>value</c> from the <c>roll</c> method.</p>
+  <program xml:id="diceClass" interactive="activecode" language="python">
+    <input>
+import random
+
+class Die:
+
+    def __init__(self):
+        """ Initialize the roll history """
+        self.roll_history = []
+
+    def __str__(self):
+        return f"Last roll: {self.roll_history[-1]}"
+
+    def roll(self):
+        value = random.randint(1,6)
+        self.roll_history.append(value)
+        return value
+
+def main():
+    my_die = Die()
+    for i in range(10):
+        print(my_die.roll())
+        </input>
+  </program>
+</section>

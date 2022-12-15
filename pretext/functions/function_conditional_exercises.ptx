@@ -1,0 +1,263 @@
+<?xml version="1.0"?>
+<section xml:id="functions_functions-and-conditionals-multiple-choice-questions">
+  <title>Functions and Conditionals Multiple Choice Questions</title>
+  <exercise label="functions_conditionals_mcqs_q1">
+    <statement>
+      <p>Q-1: Which of following uses the correct syntax for a python if statement?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>if (x = y):</p>
+        </statement>
+        <feedback>
+          <p>Try again! An if statement shouldn't contain an assignment operator.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>if (x == y):</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>if !(x is not y):</p>
+        </statement>
+        <feedback>
+          <p>Try again! The not operator (!) can't be used in python.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>if x = y:</p>
+        </statement>
+        <feedback>
+          <p>Try again! An if statement shouldn't contain an assignment operator.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>if x == y:</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="functions_conditionals_mcqs_q2">
+    <statement>
+      <p>Q-2: Which of the following tests if <c>5 exponentiated to the 4th power</c> is greater than <c>y</c> and less than or equal to <c>z</c>?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>z &gt;= 5**4 &gt; y</p>
+        </statement>
+        <feedback>
+          <p>Correct! Note that compound statements are allowed in python.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>5**4 &gt; y and (5**4 &lt; z or 5**4 == z)</p>
+        </statement>
+        <feedback>
+          <p>Correct! Note that the and operator comes before the or operator in operator precedence.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>5**4 &gt; y and &lt;= z</p>
+        </statement>
+        <feedback>
+          <p>Try again! Nothing is being compared to z.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>5**4 &gt; y and 5**4 &lt; z or 5**4 == z</p>
+        </statement>
+        <feedback>
+          <p>Try again! The and operator comes before the or operator in operator precedence.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>5**4 &gt; y and z &gt;= 5**4</p>
+        </statement>
+        <feedback>
+          <p>Correct! Note that z &gt;= 5**4 is the same as 5**4 &lt;= z.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="functions_conditionals_mcqs_q3">
+    <statement>
+      <p>Q-3: Which of the following statements completes the function and returns <c>True</c> if one's age is greater than or equal to 16?</p>
+      <program language="python">
+        <input>
+def days_to_age(days):
+    # what line goes here?
+        return True
+    else:
+        return False
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>if days / 365 == 16 or 16 &lt; days / 365:</p>
+        </statement>
+        <feedback>
+          <p>Correct! Note that (16 &lt; days / 365) is the same as (days / 365 &gt; 16).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>if (days / 365 = 16) or (16 &lt; days / 365):</p>
+        </statement>
+        <feedback>
+          <p>Try again! The assignment operator (=) should not be in the if statement.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>if days / 365 &gt;= 16:</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>if 365 / days &gt;= 16:</p>
+        </statement>
+        <feedback>
+          <p>Try again! To convert days to age, you divide days by 365.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>if (days / 365 == 16) and (days / 365 &gt; 16):</p>
+        </statement>
+        <feedback>
+          <p>Try again! One's age can't be 16 and greater than 16.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="functions_conditionals_mcqs_q4">
+    <statement>
+      <p>Q-4: Which of the following properly expresses the precedence of operators (using parentheses) in the following expression: 10 &gt; y or x + y == 10 and x is not y? Might be best to try on paper first.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>(((10 &gt; y) or (x + y == 10)) and (x is not y))</p>
+        </statement>
+        <feedback>
+          <p>Try again! The precedence of the operators is incorrect.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>(10 &gt; (y or x) + y == (10 and x) is not y)</p>
+        </statement>
+        <feedback>
+          <p>Try again! The precedence of the operators is incorrect.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>(10 &gt; y or x + y == 10 and x is not y)</p>
+        </statement>
+        <feedback>
+          <p>Try again! The precedence of the operators is incorrect.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>((10 &gt; y) or (((x + y) == 10) and (x is not y)))</p>
+        </statement>
+        <feedback>
+          <p>Correct! Parentheses should be added in the following order: (x + y), (x is not y), (10 &gt; y), ((x + y) == 10), (((x + y) == 10) and (x is not y)), ((10 &gt; y) or (((x + y) == 10) and (x is not y))).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>(((10 &gt; y) or ((x + y) == 10)) and (x is not y))</p>
+        </statement>
+        <feedback>
+          <p>Try again! The precedence of the operators is incorrect.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="functions_conditionals_mcqs_q5">
+    <statement>
+      <p>Q-5: What would be the outputs for <c>transform_string('green')</c>, <c>transform_string('door')</c>, and <c>transform_string('mountains')</c> in order? (Note: Ignore whitespaces.)</p>
+      <program language="python">
+        <input>
+def transform_string(word):
+    if len(word) &lt;= 5:
+        new_letters = word[1:3].upper()
+        if new_letters[0] == new_letters[1]:
+            print(new_letters)
+        else:
+            print("Letters don't match.")
+    else:
+        new_chars = word[-3:]
+        print(new_chars)
+    print('Done.')
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>LETTERS DON'T MATCH. Done. oo Done. i Done.</p>
+        </statement>
+        <feedback>
+          <p>Try again! LETTERS DON'T MATCH shouldn't be all uppercase, oo should be all uppercase, and i is missing characters.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>EEN. Done. OO Done. ins Done.</p>
+        </statement>
+        <feedback>
+          <p>Try again! EEN is incorrect.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Letters don't match. Done. OO Done. ins Done.</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Letters don't match. OO ins Done.</p>
+        </statement>
+        <feedback>
+          <p>Try again! "Done." is missing twice.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>RE OO in Done.</p>
+        </statement>
+        <feedback>
+          <p>Try again! RE is incorrect, "Done." is missing twice, and in is missing a character.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<section xml:id="network_reading-binary-files-using-urllib">
+  <title>Reading binary files using <c>urllib</c></title>
+  <p>Sometimes you want to retrieve a non-text (or binary) file such as an
+            image or video file. The data in these files is generally not useful to
+            print out, but you can easily make a copy of a URL to a local file on
+            your hard disk using <c>urllib</c>.</p>
+  <p>The pattern is to open the URL and use <c>read</c> to download the
+            entire contents of the document into a string variable
+            (<c>img</c>) then write that information to a local file as
+            follows:</p>
+  <program xml:id="curl1" interactive="activecode" language="python3">
+    <input>
+import urllib.request, urllib.parse, urllib.error
+
+img = urllib.request.urlopen('http://data.pr4e.org/cover3.jpg').read()
+fhand = open('cover3.jpg', 'wb')
+fhand.write(img)
+fhand.close()
+        </input>
+  </program>
+  <p>This program reads all of the data in at once across the network and
+            stores it in the variable <c>img</c> in the main memory of your
+            computer, then opens the file <c>cover.jpg</c> and writes the data
+            out to your disk. The <c>wb</c> argument for <c>open()</c> opens a binary file
+            for writing only. This program will work if the size of the file is less than
+            the size of the memory of your computer.</p>
+  <exercise label="network_binary_tf">
+    <statement>
+      <p>Q-2: True or False? The <c>wb</c> argument opens a binary file for writing only.</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>Correct! The 'wb' argument stands for <b>W</b>rite <b>B</b>inary.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>However if this is a large audio or video file, this program may crash
+            or at least run extremely slowly when your computer runs out of memory.
+            In order to avoid running out of memory, we retrieve the data in blocks
+            (or buffers) and then write each block to your disk before retrieving
+            the next block. This way the program can read any size file without
+            using up all of the memory you have in your computer.</p>
+  <program xml:id="curl2" interactive="activecode" language="python3">
+    <input>
+import urllib.request, urllib.parse, urllib.error
+
+img = urllib.request.urlopen('http://data.pr4e.org/cover3.jpg')
+fhand = open('cover3.jpg', 'wb')
+size = 0
+while True:
+    info = img.read(100000)
+    if len(info) &lt; 1: break
+    size = size + len(info)
+    fhand.write(info)
+
+print(size, 'characters copied.')
+fhand.close()
+        </input>
+  </program>
+  <p>In this example, we read only 100,000 characters at a time and then
+            write those characters to the <c>cover.jpg</c> file before
+            retrieving the next 100,000 characters of data from the web.</p>
+  <exercise label="network_binary_mc">
+    <statement>
+      <p>Q-4: What is the purpose of the line <c>info = img.read(100000)</c> in the following code?</p>
+      <pre>img = urllib.request.urlopen('http://data.pr4e.org/cover3.jpg')
+fhand = open('cover3.jpg', 'wb')
+size = 0
+while True:
+    info = img.read(100000)
+    if len(info) &lt; 1: break
+    size = size + len(info)
+    fhand.write(info)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>It deletes any characters past the first 100,000.</p>
+        </statement>
+        <feedback>
+          <p>This will not delete characters.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>It only reads 100,000 characters then stops.</p>
+        </statement>
+        <feedback>
+          <p>This will continue to read more characters, not stop after 100,000.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>It only looks at 100,000 images.</p>
+        </statement>
+        <feedback>
+          <p>This line deals with the data characters of the images, not the images themselves.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>It limits how many characters are read at a time.</p>
+        </statement>
+        <feedback>
+          <p>read(100000) limits the number of characters read at a time to 100,000.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

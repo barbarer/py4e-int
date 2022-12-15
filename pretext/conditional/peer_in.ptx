@@ -1,0 +1,917 @@
+<?xml version="1.0"?>
+<section xml:id="conditional_peer-instruction-conditionals-multiple-choice-questions">
+  <title>Peer Instruction: Conditionals Multiple Choice Questions</title>
+  <exercise label="ctp-conditionals-06_Conditionals_04">
+    <statement>
+      <p>Q-1: What does the following code print?</p>
+      <program language="python">
+        <input>
+x = 1
+if (x &lt; 3):
+   print(x)
+   x = x + 4
+   print(x)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Nothing</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, x=1 which is less than 3 making the condition true. It will first print x = 1 and then x = x+4 = 1+4 = 5.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, x=1 which is less than 3 making the condition true. It will first print x = 1 and then x = x+4 = 1+4 = 5.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>5</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, x=1 which is less than 3 making the condition true. It will first print x = 1 and then x = x+4 = 1+4 = 5.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>1 5</p>
+        </statement>
+        <feedback>
+          <p>Correct! Here, x=1 which is less than 3 making the condition true. It will first print x = 1 and then x = x+4 = 1+4 = 5.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, x=1 which is less than 3 making the condition true. It will first print x = 1 and then x = x+4 = 1+4 = 5.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-conditionals-06_Conditionals_06">
+    <statement>
+      <p>Q-2: What does the following code print?</p>
+      <program language="python">
+        <input>
+x = 1
+if (x &lt; 3):
+   print(x)
+else:
+   print(x+7)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Nothing</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, x = 1 which is less than 3 making the 'if' condition true. So, the code will print x = 1.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>Correct! Here, x = 1 which is less than 3 making the 'if' condition true. So, the code will print x = 1.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>8</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, x = 1 which is less than 3 making the 'if' condition true. So, the code will print x = 1.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1 8</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, x = 1 which is less than 3 making the 'if' condition true. So, the code will print x = 1.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, x = 1 which is less than 3 making the 'if' condition true. So, the code will print x = 1.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-conditionals-06_Conditionals_10">
+    <statement>
+      <p>Q-3: What does the following code print?</p>
+      <program language="python">
+        <input>
+grade = 98
+if (grade &gt;= 90):
+   print(<q>You got an A!</q>)
+if (grade &gt;= 80):
+   print(<q>You got a B!</q>)
+else:
+   print(<q>You got something else</q>)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>You got an A!</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, grade=98 which is greater than both 90 and 80 making both the 'if' conditions true. So, the code will print 'You got an A!' and 'You got a B!' respectively.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>You got a B!</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, grade=98 which is greater than both 90 and 80 making both the 'if' conditions true. So, the code will print 'You got an A!' and 'You got a B!' respectively.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>You got something else!</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, grade=98 which is greater than both 90 and 80 making both the 'if' conditions true. So, the code will print 'You got an A!' and 'You got a B!' respectively.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>More than one of the above</p>
+        </statement>
+        <feedback>
+          <p>Correct! Here, grade=98 which is greater than both 90 and 80 making both the 'if' conditions true. So, the code will print 'You got an A!' and 'You got a B!' respectively.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, grade=98 which is greater than both 90 and 80 making both the 'if' conditions true. So, the code will print 'You got an A!' and 'You got a B!' respectively.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-conditionals-06_Conditionals_11">
+    <statement>
+      <p>Q-4: What does the following code print?</p>
+      <program language="python">
+        <input>
+grade = 98
+if (grade &gt;= 90):
+   print(<q>You got an A!</q>)
+if (grade &gt;= 80 and grade &lt; 90):
+   print(<q>You got a B!</q>)
+else:
+   print(<q>You got something else</q>)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>You got an A!</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, grade=98 which is greater than 90 making the first 'if' condition true and will print 'You got an A!'. However, the second 'if' condition is not satisfied as grade doesn't lie between 80 and 90. So, the code will execute the statements under 'else' and print 'You got something else!'. Note that True 'and' False equals 'False' in boolean logic.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>You got a B!</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, grade=98 which is greater than 90 making the first 'if' condition true and will print 'You got an A!'. However, the second 'if' condition is not satisfied as grade doesn't lie between 80 and 90. So, the code will execute the statements under 'else' and print 'You got something else!'. Note that True 'and' False equals 'False' in boolean logic.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>You got something else!</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, grade=98 which is greater than 90 making the first 'if' condition true and will print 'You got an A!'. However, the second 'if' condition is not satisfied as grade doesn't lie between 80 and 90. So, the code will execute the statements under 'else' and print 'You got something else!'. Note that True 'and' False equals 'False' in boolean logic.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>More than one of the above</p>
+        </statement>
+        <feedback>
+          <p>Correct! Here, grade=98 which is greater than 90 making the first 'if' condition true and will print 'You got an A!'. However, the second 'if' condition is not satisfied as grade doesn't lie between 80 and 90. So, the code will execute the statements under 'else' and print 'You got something else!'. Note that True 'and' False equals 'False' in boolean logic.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, grade=98 which is greater than 90 making the first 'if' condition true and will print 'You got an A!'. However, the second 'if' condition is not satisfied as grade doesn't lie between 80 and 90. So, the code will execute the statements under 'else' and print 'You got something else!'. Note that True 'and' False equals 'False' in boolean logic.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-conditionals-06_Conditionals_12">
+    <statement>
+      <p>Q-5: Which code prints the correct value? If grade &gt;= 90 it should print <q>You got an A!</q>.
+            If grade &lt; 90 and &gt;= 80 it should print <q>You got a B!</q>. If you got less than
+            80 it should print <q>You got something else</q>.</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement id="ctp-conditionals-06_Conditionals_12_opt_a">
+          <pre>grade = 98
+if (grade &gt;= 90):
+   print("You got an A!")
+if (grade &gt;= 80 and grade &lt; 90):
+   print("You got a B!")
+if (grade &lt; 80):
+   print("You got something else")</pre>
+        </statement>
+        <feedback id="ctp-conditionals-06_Conditionals_12_opt_a">
+          <p>Correct! Here, grade = 98 which is greater than 90 satisfying the first &#x2018;if' condition. So, this code will output &#x2018;You got an A!'</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement id="ctp-conditionals-06_Conditionals_12_opt_b">
+          <pre>grade = 98
+if (grade &gt;= 90):
+   print("You got an A!")
+elif (grade &gt;= 80):
+   print("You got a B!")
+else:
+   print("You got something else")</pre>
+        </statement>
+        <feedback id="ctp-conditionals-06_Conditionals_12_opt_b">
+          <p>Correct! Here, grade = 98 which is greater than 90 satisfying the first &#x2018;if' condition. So, this code will output &#x2018;You got an A!'</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement id="ctp-conditionals-06_Conditionals_12_opt_c">
+          <pre>grade = 98
+if (grade &gt;= 90):
+   print("You got an A!")
+elif (grade &gt;= 80):
+   print("You got a B!")
+elif(grade &lt; 80):
+   print("You got something else")</pre>
+        </statement>
+        <feedback id="ctp-conditionals-06_Conditionals_12_opt_c">
+          <p>Correct! Here, grade = 98 which is greater than 90 satisfying the first &#x2018;if' condition. So, this code will output &#x2018;You got an A!'</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-conditionals-06_Conditionals_12_opt_d">
+          <p>None of the above</p>
+        </statement>
+        <feedback id="ctp-conditionals-06_Conditionals_12_opt_d">
+          <p>Incorrect! Here, grade = 98 which is greater than 90 satisfying the first &#x2018;if' condition in all the options above.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="ctp-conditionals-06_Conditionals_12_opt_e">
+          <p>I don't know</p>
+        </statement>
+        <feedback id="ctp-conditionals-06_Conditionals_12_opt_e">
+          <p>Incorrect! Here, grade = 98 which is greater than 90 satisfying the first &#x2018;if' condition in all the options above.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-conditionals-06_Conditionals_14">
+    <statement>
+      <p>Q-6: How do we print row <c>r</c> of this pattern? Skip rows with 2 stars.</p>
+      <program language="python">
+        <input>
+*   *
+**  *
+* * *
+*  **
+*   *
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Spaces before * = r, Spaces after * = r</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Skipping rows with 2 stars, the total no. of rows n = 3. If r = 1, the spaces before * = r = 1 and the spaces after * =  n-r-1 = 3-1-1 = 1. The same can be computed with r=0 and r=3.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Spaces before * = r, Spaces after * = n-r</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Skipping rows with 2 stars, the total no. of rows n = 3. If r = 1, the spaces before * = r = 1 and the spaces after * =  n-r-1 = 3-1-1 = 1. The same can be computed with r=0 and r=3.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Spaces before * = n-r, Spaces after * = r</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Skipping rows with 2 stars, the total no. of rows n = 3. If r = 1, the spaces before * = r = 1 and the spaces after * =  n-r-1 = 3-1-1 = 1. The same can be computed with r=0 and r=3.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Spaces before * = r, Spaces after * = n-r-1</p>
+        </statement>
+        <feedback>
+          <p>Correct! Skipping rows with 2 stars, the total no. of rows n = 3. If r = 1, the spaces before * = r = 1 and the spaces after * =  n-r-1 = 3-1-1 = 1. The same can be computed with r=0 and r=3.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Skipping rows with 2 stars, the total no. of rows n = 3. If r = 1, the spaces before * = r = 1 and the spaces after * =  n-r-1 = 3-1-1 = 1. The same can be computed with r=0 and r=3.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-conditionals-06_Conditionals_16">
+    <statement>
+      <p>Q-7: Will the codeblock print the following pattern?</p>
+      <program language="python">
+        <input>
+for row in range(n+2):
+   for col in range(n+2):
+      if (row == col or col == 0 or col == n+1):
+         print("*", end='')
+      else:
+         print(" ",end='')
+
+   print()
+
+
+Output-
+
+*   *
+**  *
+* * *
+*  **
+*   *
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>Yes</p>
+        </statement>
+        <feedback>
+          <p>Correct! Try inserting n=3 and running the code for any value of row and col.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>No</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Try inserting n=3 and running the code for any value of row and col.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Sometimes</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Try inserting n=3 and running the code for any value of row and col.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Try inserting n=3 and running the code for any value of row and col.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture7_Conditionals_03">
+    <statement>
+      <p>Q-8: What is the value of <c>x</c> after this code runs?</p>
+      <program language="python">
+        <input>
+x = 5
+if x &gt; 2:
+   x = -3
+   x = 1
+else:
+   x = 3
+   x = 2
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>-3</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here x = 5 which is greater than 2. So, the 'if' condition is satisfied. The value of x is first assigned -3 and then finally 1.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>Correct! Here x = 5 which is greater than 2. So, the 'if' condition is satisfied. The value of x is first assigned -3 and then finally 1.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>2</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here x = 5 which is greater than 2. So, the 'if' condition is satisfied. The value of x is first assigned -3 and then finally 1.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here x = 5 which is greater than 2. So, the 'if' condition is satisfied. The value of x is first assigned -3 and then finally 1.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>5</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here x = 5 which is greater than 2. So, the 'if' condition is satisfied. The value of x is first assigned -3 and then finally 1.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture7_Conditionals_04">
+    <statement>
+      <p>Q-9: What is the value of <c>x</c> after this code runs?</p>
+      <program language="python">
+        <input>
+x = 1
+if x &gt; 2:
+   x = -3
+   x = 1
+else:
+   x = 3
+   x = 2
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>-3</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here x = 1 which is smaller than 2. So, the 'else' condition is satisfied. The value of x is first assigned 3 and then finally 2.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here x = 1 which is smaller than 2. So, the 'else' condition is satisfied. The value of x is first assigned 3 and then finally 2.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>2</p>
+        </statement>
+        <feedback>
+          <p>Correct! Here x = 1 which is smaller than 2. So, the 'else' condition is satisfied. The value of x is first assigned 3 and then finally 2.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here x = 1 which is smaller than 2. So, the 'else' condition is satisfied. The value of x is first assigned 3 and then finally 2.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>5</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here x = 1 which is smaller than 2. So, the 'else' condition is satisfied. The value of x is first assigned 3 and then finally 2.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture7_Conditionals_06">
+    <statement>
+      <p>Q-10: Does Code 1 do exactly the same thing as Code 2? (Assume temperature already refers to some numeric value.)</p>
+      <program language="python">
+        <input>
+Code 1-
+
+if temperature &gt; 0:
+   print("above freezing")
+elif temperature == 0:
+   print("at freezing")
+else:
+   print("below freezing")
+
+
+
+Code 2-
+
+if temperature &gt; 0:
+   print("above freezing")
+elif temperature == 0:
+   print("at freezing")
+elif temperature &lt; 0:
+   print("below freezing")
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>Yes</p>
+        </statement>
+        <feedback>
+          <p>Correct! In both Code 1 and Code 2, the else and elif conditions at the end are essentially the same i.e. temperature &lt; 0.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>No</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! In both Code 1 and Code 2, the else and elif conditions at the end are essentially the same i.e. temperature &lt; 0.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture7_Conditionals_07">
+    <statement>
+      <p>Q-11: Does Code 1 do exactly the same thing as Code 2? (Assume temperature already refers to some numeric value.)</p>
+      <program language="python">
+        <input>
+Code 1-
+
+if temperature &gt; 0:
+   print("above freezing")
+elif temperature == 0:
+   print("at freezing")
+else:
+   print("below freezing")
+
+
+
+Code 2-
+
+if temperature &gt; 0:
+   print("above freezing")
+elif temperature == 0:
+   print("at freezing")
+print("below freezing")
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Yes</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! In Code 1, "below freezing" prints only if the other two conditions don't satisfy. However in Code 2, "below freezing" prints everytime as it is not bound to any condition.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>No</p>
+        </statement>
+        <feedback>
+          <p>Correct! In Code 1, "below freezing" prints only if the other two conditions don't satisfy. However in Code 2, "below freezing" prints everytime as it is not bound to any condition.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture7_Conditionals_08">
+    <statement>
+      <p>Q-12: Does Code 1 do exactly the same thing as Code 2? (Assume temperature already refers to some numeric value.)</p>
+      <program language="python">
+        <input>
+Code 1-
+
+if temperature &gt; 0:
+   print("above freezing")
+elif temperature == 0:
+   print("at freezing")
+else:
+   print("below freezing")
+
+
+
+Code 2-
+
+if temperature == 0:
+   print("at freezing")
+elif temperature &lt;= 0:
+   print("below freezing")
+else:
+   print("above freezing")
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Yes</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Code 2 will print "below freezing" for temperature &lt;= 0.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>No</p>
+        </statement>
+        <feedback>
+          <p>Correct! Code 2 will print "below freezing" for temperature &lt;= 0.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture7_Conditionals_09">
+    <statement>
+      <p>Q-13: What does the following code print?</p>
+      <program language="python">
+        <input>
+x = 5
+if x &lt; 15:
+   if x &gt; 8:
+      print('one')
+   else:
+      print('two')
+else:
+   print('three')
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>one</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, x = 5 which is smaller than 15 satistying the 'if' condition and smaller than 8 satisfying the nested 'else' condition. So, the output is 'two'.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>two</p>
+        </statement>
+        <feedback>
+          <p>Correct! Here, x = 5 which is smaller than 15 satistying the 'if' condition and smaller than 8 satisfying the nested 'else' condition. So, the output is 'two'.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>three</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, x = 5 which is smaller than 15 satistying the 'if' condition and smaller than 8 satisfying the nested 'else' condition. So, the output is 'two'.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>More than one of the above</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, x = 5 which is smaller than 15 satistying the 'if' condition and smaller than 8 satisfying the nested 'else' condition. So, the output is 'two'.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>No output</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, x = 5 which is smaller than 15 satistying the 'if' condition and smaller than 8 satisfying the nested 'else' condition. So, the output is 'two'.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture8_Conditionals_06">
+    <statement>
+      <p>Q-14: What does the following code print?</p>
+      <program language="python">
+        <input>
+def is_odd(x):
+   if x % 2 == 1:
+      return True
+   else:
+      return False
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>def is_odd(x): return x % 2</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This will return either 1 or 0.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>def is_odd(x): return x % 2 == 1</p>
+        </statement>
+        <feedback>
+          <p>Correct! This will return True if x is Odd and False if x is Even.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>def is_odd(x): return x % 2 == 0</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This will return True if x is Even and False if x is Odd.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Option B will return True if x is Odd and False if x is Even.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture8_Conditionals_08">
+    <statement>
+      <p>Q-15: What parts of the code can be removed without changing what the code does? Assume that the user enters a non-negative integer.</p>
+      <program language="python">
+        <input>
+age = int(input("Enter your age: "))
+if age &lt; 18:
+   print("minor")
+elif age &gt;= 18 and age &lt; 30:
+   print("adult")
+elif age &gt;= 30:
+   print("older than Dan")
+else:
+   print("ageless")
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>'age &gt;= 18 and' can be removed</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This will print both 'minor' and 'adult' for ages less than 18.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>'else: print("ageless")' can be removed</p>
+        </statement>
+        <feedback>
+          <p>Correct! This will not change the output of the code regardless of the age entered.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Both A and B</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! If 'age &gt;= 18 and' is removed, it will print both 'minor' and 'adult' for ages less than 18.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Nothing can be removed</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Option B will not change the output of the code regardless of the age entered.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture9_Conditionals_02">
+    <statement>
+      <p>Q-16: What goes in the two numbered blanks?</p>
+      <image source="images/dz-lecture9_Conditionals_02.png" width="50%"/>
+      <program language="python">
+        <input>
+if experience == 0:
+   wage = 6.5
+elif (1) :
+   if (2) :
+      wage = 9.5
+   else:
+      wage = 11
+else:
+   wage = 12
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>(1) experience &gt; 0, (2) experience &gt;= 1</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! In this option, wages for experience &gt; 0 and experience &gt;= 1 encomapes wages $12 and $11 as well.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>(1) age &lt; 18, (2) experience != 3</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! In this option, age &lt; 18 and experience !=3 includes wages $6.5, and $12 as well.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>(1) age &lt; 18, (2) experience == 1 or experience == 2</p>
+        </statement>
+        <feedback>
+          <p>Correct! Wages $9.5 and $11 are for ages less than 18. So, (1) = age &lt; 18. Wage $9.5 is for experience 1-2. So, experience == 1 or experience == 2.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture9_Conditionals_03">
+    <statement>
+      <p>Q-17: What goes in the two numbered blanks?</p>
+      <image source="images/dz-lecture9_Conditionals_03.png" width="50%"/>
+      <program language="python">
+        <input>
+if months == 1:
+   cost = 90
+elif (1) :
+   cost = 60
+else:
+   if (2) :
+      cost = 70
+   else:
+      cost = 35
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>(1) plan == 'silver', (2) months &gt;= 2 and months &lt;= 6</p>
+        </statement>
+        <feedback>
+          <p>Correct! Here, cost = $60 for plan = 'silver' and months != 1. So, (1) plan = 'silver'. And cost = $70 for plan = 'gold' and months 2-6. The former is inherent to the 'else' condition while the latter is encompassed through (2) months &gt;= 2 and months &lt;= 6.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>(1) plan == 'silver', (2) months &gt;= 6</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, cost = $60 for plan = 'silver' and months != 1. So, (1) plan = 'silver'. And cost = $70 for plan = 'gold' and months 2-6. The former is inherent to the 'else' condition while the latter is encompassed through (2) months &gt;= 2 and months &lt;= 6 but not months &gt;=6.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>(1) months &gt;= 2 and months &lt;= 6, (2) plan == 'gold'</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This option doesn't include cost = $60 for months &gt;= 7. Furthermore, plan = 'gold' also includes $35 in addition to $70. Here, cost = $60 for plan = 'silver' and months != 1. So, (1) plan = 'silver' and not . And cost = $70 for plan = 'gold' and months 2-6. The former is inherent to the 'else' condition while the latter is encompassed through (2) months &gt;= 2 and months &lt;= 6.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>
