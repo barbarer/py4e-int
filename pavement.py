@@ -79,6 +79,23 @@ options(
     )
 )
 
+# Copied for conversion to PreTeXt
+template_args={'course_id': project_name,
+                'login_required':'false',
+                'appname':master_app,
+                'loglevel': 10,
+                'course_url':master_url,
+                'use_services': 'true',
+                'python3': 'true',
+                'dburl': 'postgresql://runestone@localhost/runestone',
+                'basecourse': 'py4e-int',
+                # new 7/2019 changes
+                'dynamic_pages': dynamic_pages,
+                'downloads_enabled': 'false',
+                'enable_chatcodes': 'false',
+                'allow_pairs': 'false'
+                }
+
 # Check to see if we are building on our Jenkins build server, if so use the environment variables
 # to update the DB information for this build
 if 'DBHOST' in environ and  'DBPASS' in environ and 'DBUSER' in environ and 'DBNAME' in environ:
