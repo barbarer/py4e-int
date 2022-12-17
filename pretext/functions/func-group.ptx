@@ -249,19 +249,19 @@ main()
       </feedback>
       <areas>
         <cline># function definition</cline>
-        <cline><area correct="yes">def print_message():</area>:</cline>
-        <cline><area>print("Welcome to Python.")</area>:</cline>
-        <cline><area>print("Learn the power of functions!")</area>:</cline>
+        <cline><area correct="yes">def print_message()</area></cline>
+        <cline><area correct="no">print("Welcome to Python.")</area></cline>
+        <cline><area correct="no">print("Learn the power of functions!")</area></cline>
         <cline/>
         <cline># function definition</cline>
-        <cline><area correct="yes">def main():</area>:</cline>
-        <cline><area>print("Hello Programmer!")</area>:</cline>
+        <cline><area correct="yes">def main()</area></cline>
+        <cline><area correct="no">print("Hello Programmer!")</area></cline>
         <cline/>
         <cline>    # function call</cline>
-        <cline><area>print_message()</area>:</cline>
+        <cline><area correct="no">print_message()</area></cline>
         <cline/>
         <cline># function call</cline>
-        <cline><area>main()</area>:</cline>
+        <cline><area correct="no">main()</area></cline>
       </areas>
     </exercise>
     <exercise label="funct_ca_click_names">
@@ -274,33 +274,33 @@ main()
       <areas>
         <cline># function definition</cline>
         <cline>
-          <area>def </area>
+          <area correct="no">def </area>
           <area correct="yes">print_message</area>
-          <area>()</area>
+          <area correct="no">()</area>
         </cline>
         <cline>
-          <area>print("Welcome to Python.")</area>
+          <area correct="no">print("Welcome to Python.")</area>
         </cline>
         <cline>
-          <area>print("Learn the power of functions!")</area>
+          <area correct="no">print("Learn the power of functions!")</area>
         </cline>
         <cline/>
         <cline># function definition</cline>
         <cline>
-          <area>def </area>
+          <area correct="no">def </area>
           <area correct="yes">main</area>
-          <area>()</area>
+          <area correct="no">()</area>
         </cline>
         <cline>
-          <area>print("Hello Programmer!")</area>
+          <area correct="no">print("Hello Programmer!")</area>
         </cline>
         <cline/>
         <cline>    # function call</cline>
-        <cline><area>print_message()</area>:</cline>
+        <cline><area correct="no">print_message()</area>:</cline>
         <cline/>
         <cline># function call</cline>
         <cline>
-          <area>main()</area>
+          <area correct="no">main()</area>
         </cline>
       </areas>
     </exercise>

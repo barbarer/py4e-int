@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="variables_variable-names-and-keywords">
   <title>Variable names and keywords</title>
-  <p xml:id="variables_index-0">Programmers generally choose names for their variables that are
+  <p xml:id="variables_names_keywords_index-0">Programmers generally choose names for their variables that are
             meaningful and document what the variable is used for.</p>
   <p>Variable names can be arbitrarily long. They can contain both letters
             and numbers, but they cannot start with a number. It is legal to use
@@ -21,9 +21,9 @@
       <p>Remember that variables cannot start with a number. If you're stuck, look at the list of keywords below.</p>
     </feedback>
     <areas>
-      <cline><area correct="yes">76</area>:<area>trombones</area>: = "big parade"</cline>
-      <cline><area>more</area>:<area correct="yes">@</area>: = 1000000</cline>
-      <cline><area correct="yes">class</area>: = "Advanced Theoretical Zymurgy"</cline>
+      <cline><area correct="yes">76</area><area correct="no">trombones</area> = "big parade"</cline>
+      <cline><area correct="no">more</area><area correct="yes">@</area> = 1000000</cline>
+      <cline><area correct="yes">class</area> = "Advanced Theoretical Zymurgy"</cline>
     </areas>
   </exercise>
   <p>The variable name <c>76trombones</c> is illegal because it begins with a number.

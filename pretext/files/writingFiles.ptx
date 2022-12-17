@@ -134,10 +134,10 @@
       <p>Keep in mind names and syntax!</p>
     </feedback>
     <areas>
-      <cline><area>fout</area>: = open(<area>'output.txt'</area>:, <area correct="yes">'r'</area>:)</cline>
-      <cline><area>line1</area>: = <area>"This here's the wattle,\n"</area>:</cline>
-      <cline><area correct="yes">file</area>:<area>.write</area>:(<area correct="yes">line2</area>:)</cline>
-      <cline><area>fout.close</area>:<area correct="yes">[]</area>:</cline>
+      <cline><area correct="no">fout</area> = open(<area correct="no">'output.txt'</area>, <area correct="yes">'r'</area>)</cline>
+      <cline><area correct="no">line1</area> = <area correct="no">"This here's the wattle,\n"</area></cline>
+      <cline><area correct="yes">file</area><area correct="no">.write</area>(<area correct="yes">line2</area>)</cline>
+      <cline><area correct="no">fout.close</area><area correct="yes">[]</area>:</cline>
     </areas>
   </exercise>
 </section>

@@ -209,26 +209,26 @@ main()
         <p>Method names are the names of functions that are defined in a class.</p>
       </feedback>
       <areas>
-        <cline><area>class</area>: <area>Book:</area>:</cline>
-        <cline><area>""" Represents a book object """</area>:</cline>
+        <cline><area correct="no">class</area> <area correct="no">Book:</area></cline>
+        <cline><area correct="no">""" Represents a book object """</area></cline>
         <cline/>
-        <cline><area>def</area>: <area correct="yes">__init__</area>:<area>(self, title, author):</area>:</cline>
-        <cline><area>self.title = title</area>:</cline>
-        <cline><area>self.author = author</area>:</cline>
+        <cline><area correct="no">def</area> <area correct="yes">__init__</area><area correct="no">(self, title, author):</area></cline>
+        <cline><area correct="no">self.title = title</area></cline>
+        <cline><area correct="no">self.author = author</area></cline>
         <cline/>
-        <cline><area>def</area>: <area correct="yes">__str__</area>:<area>(self):</area>:</cline>
-        <cline><area>return "title: " + self.title + " author: " + self.author</area>:</cline>
+        <cline><area correct="no">def</area> <area correct="yes">__str__</area><area correct="no">(self):</area></cline>
+        <cline><area correct="no">return "title: " + self.title + " author: " + self.author</area></cline>
         <cline/>
-        <cline><area>def</area>: <area correct="yes">get_author</area>:<area>(self):</area>:</cline>
-        <cline><area>return self.author</area>:</cline>
+        <cline><area correct="no">def</area> <area correct="yes">get_author</area><area correct="no">(self)</area></cline>
+        <cline><area correct="no">return self.author</area></cline>
         <cline/>
-        <cline><area>def</area>: <area>main():</area>:</cline>
-        <cline><area>b2 = Book("A Wrinkle in Time", "M. L'Engle")</area>:</cline>
-        <cline><area>print(b2)</area>:</cline>
-        <cline><area>b1 = Book("Goodnight Moon", "Margaret Wise Brown")</area>:</cline>
-        <cline><area>print(b1)</area>:</cline>
+        <cline><area correct="no">def</area> <area correct="no">main()</area></cline>
+        <cline><area correct="no">b2 = Book("A Wrinkle in Time", "M. L'Engle")</area></cline>
+        <cline><area correct="no">print(b2)</area></cline>
+        <cline><area correct="no">b1 = Book("Goodnight Moon", "Margaret Wise Brown")</area></cline>
+        <cline><area correct="no">print(b1)</area></cline>
         <cline/>
-        <cline><area>main()</area>:</cline>
+        <cline><area correct="no">main()</area></cline>
       </areas>
     </exercise>
     <exercise label="class_diff_function_method">

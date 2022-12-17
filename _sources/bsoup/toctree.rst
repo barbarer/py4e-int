@@ -1,3 +1,6 @@
+Learn Web Scraping
+::::::::::::::::::
+ 
 ..  Copyright (C)  Brad Miller, David Ranum
     Permission is granted to copy, distribute and/or modify this document
     under the terms of the GNU Free Documentation License, Version 1.3 or
@@ -16,8 +19,6 @@ Learn Web Scraping!
     :align: center
     :alt: A robot looking through a magnifying glass
 
-What is web scraping?
-:::::::::::::::::::::
 
 The internet is full of information people would like to collect. Copying and pasting it would take forever! In this ebook, we'll explore an easier way.
 
