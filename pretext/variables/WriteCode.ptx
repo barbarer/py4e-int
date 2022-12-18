@@ -4,7 +4,7 @@
   <p>
     <ol label="1">
       <li>
-        <exercise>
+        <exercise exercise-interactive="coding">
           <statement>
             <p>There are 3 syntax errors in the following code. Fix it to print correctly
                             without errors. It will print, <q>Her name is Molly and her favorite food is tuna</q>.</p>
@@ -24,7 +24,7 @@ print("Her name is " + name +  and her favorite food is "  food + ".")
                             without errors. It will print, <q>Her name is Molly and her favorite food is tuna</q>.
 
     
-    <program xml:id="var-wc-syntaxA_editor" language="python"><input>
+    <program xml:id="var-wc-syntaxA_editor"  interactive="activecode" language="python"><input>
 # Each set of quotes needs to be matching
 food = 'tuna'
 name = 'Molly'
@@ -36,7 +36,7 @@ print("Her name is " + name + " and her favorite food is " + food + ".")
         </input></program>
 
                     
-
+<!--
 <exercise label="var-wc-syntaxA"><statement><p>There are 3 syntax errors in the following code. Fix it to print correctly
                             without errors. It will print, <q>Her name is Molly and her favorite food is tuna</q>.</p></statement><program xml:id="var-wc-syntaxA_editor" interactive="activecode" language="python"><input>
 # Each set of quotes needs to be matching
@@ -47,12 +47,12 @@ name = 'Molly'
 # Include spaces before and after where variables are printed
 # Add + between strings
 print("Her name is " + name + " and her favorite food is " + food + ".")
-        </input></program></exercise>
+    </input></program></exercise>-->
                     </solution>
         </exercise>
       </li>
       <li>
-        <exercise label="var-wc-fruitq">
+        <exercise label="var-wc-fruitq" exercise-interactive="coding">
           <statement>
             <p>Let's say that apples are $0.40 apiece, and pears are $0.65 apiece.
                     Modify the program below to calculate the total cost of 4 apples and 3 pears</p>
@@ -113,7 +113,7 @@ print(word1, word1, word2, word3)
 
                     
 
-<exercise label="var-wc-rhymeA"><statement><p>Take the phrase: <term>twinkle twinkle little star</term>.
+<!--<exercise label="var-wc-rhymeA"><statement><p>Take the phrase: <term>twinkle twinkle little star</term>.
                             Store each word in a separate variable, then print out the sentence on
                             one line using <c>print</c>.</p></statement><program xml:id="var-wc-rhymeA_editor" interactive="activecode" language="python"><input>
 # Set each word to its own variable
@@ -127,7 +127,7 @@ print(word1, word1, word2, word3)
 
 #another option is
 #print(word1 + " " + word1 + " " + word2 + " " + word3)
-        </input></program></exercise>
+    </input></program></exercise>-->
                     </solution>
         </exercise>
       </li>
