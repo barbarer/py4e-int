@@ -111,7 +111,7 @@ final_time_int = current_time_int + wait_time_int
 print(final_time_int)
         </input>
   </program>
-  <p xml:id="debugging_index-0">Now, that's a lot better, and in fact depending on the hours you chose, it may be exactly right.  If you entered 8 for <c>current_time</c> and 5 for <c>wait_time</c> then 13 is correct.  But if you entered 17 (5 pm) for <c>current_time</c> and 9 for <c>wait_time</c> then the result of 26 is not correct.</p>
+  <p>Now, that's a lot better, and in fact depending on the hours you chose, it may be exactly right. <idx>boundary conditions</idx><idx>testing</idx><idx>debugging</idx> If you entered 8 for <c>current_time</c> and 5 for <c>wait_time</c> then 13 is correct.  But if you entered 17 (5 pm) for <c>current_time</c> and 9 for <c>wait_time</c> then the result of 26 is not correct.</p>
   <p>This illustrates an important aspect of <term>testing</term>: it is important to test your code on a range of inputs.  It is especially important to test your code on <term>boundary conditions</term>.  For this particular problem, you should test your program with <c>current_time</c> of 0, 23, and some values in between.  You should test your <c>wait_time</c> for 0, and some larger values.  What about negative numbers?  Negative numbers don't make sense, and since we don't really have the tools to deal with telling the user when something is wrong we will not worry about that just yet.</p>
   <p>So to account for those numbers that are bigger than 23, we need one final step: using the modulus operator.</p>
   <program xml:id="db_ex3_4" interactive="activecode" language="python">

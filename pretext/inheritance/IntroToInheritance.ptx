@@ -30,7 +30,7 @@ print(p)
             provides a way to reuse the definition of Point without having to copy and
             paste.</p>
   <p>We begin like this:</p>
-  <program xml:id="labeledpoint" interactive="activecode" language="python">
+  <program xml:id="labeledpoint" interactive="activecode" language="python" include="pointclass_1">
     <input>
 class LabeledPoint(Point):
     pass
@@ -88,7 +88,7 @@ dist = p.distanceFromOrigin()
   </exercise>
   <p>Now, let's refine LabeledPoint so that it holds a label, along with the x and y
             coordinates:</p>
-  <program xml:id="labeledpoint_2" interactive="activecode" language="python">
+  <program xml:id="labeledpoint_2" interactive="activecode" language="python" include="pointclass_1">
     <input>
 class LabeledPoint(Point):
 
@@ -113,7 +113,7 @@ print(labeledPt)
             executes code in the child's class; an invocation of the method on an instance
             of the parent class executes code in the parent's class. For example,
             consider the following:</p>
-  <program xml:id="combinedpts" interactive="activecode" language="python">
+  <program xml:id="combinedpts" interactive="activecode" language="python" include="pointclass_1 labeledpoint_2">
     <input>
 pt = Point(5,10)
 labeledPt = LabeledPoint(7, 6, "Here")

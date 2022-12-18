@@ -1,7 +1,10 @@
 <?xml version="1.0"?>
 <section xml:id="conditional_short-circuit-evaluation-of-logical-expressions">
   <title>Short-circuit evaluation of logical expressions</title>
-  <p xml:id="conditional_index-0">When Python is processing a logical expression such as <c>x &gt;= 2 and
+      <idx>Short Circuit</idx>
+    <idx>Guardian Pattern</idx>
+    <idx>Guard</idx>
+  <p>When Python is processing a logical expression such as <c>x &gt;= 2 and
 (x/y) &gt; 2</c>, it evaluates the expression from left to right.
             Because of the definition of <c>and</c>, if <c>x</c> is less
             than 2, the expression <c>x &gt;= 2</c> is <c>False</c> and so
