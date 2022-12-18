@@ -1,8 +1,11 @@
 <?xml version="1.0"?>
 <section xml:id="turtles_making-patterns-within-patterns">
   <title>Making Patterns within Patterns</title>
+  <idx><h>for loops</h><h>nested</h></idx>
+  <idx><h>nested</h><h>for loops</h></idx>
+  <idx>setExecutionLimit</idx>
   <p>We now know the pattern for creating any polygon.  We can wrap that pattern in another loop to create <url href="http://en.wikipedia.org/wiki/Spirograph" visual="http://en.wikipedia.org/wiki/Spirograph">spirograph</url> like patterns.  The example below uses pentagons, but you can use other polygons instead.</p>
-  <note xml:id="turtles_index-0">
+  <note>
     <p>The outer <c>for</c> loop in the code below on line 8 executes 20 times and the inner <c>for</c> loop on line 13 executes 5 times <em>for each</em> of the outer loop values, 5 times when the outer loop value is 0, 5 times when the outer loop value is 1, 5 times when the outer loop value is 2, and so on.  The inner loop is executed a total of 20 * 5 = 100 times.  The turtle can take a long time to finish drawing this pattern.  Normally code in the browser is limited to only running in 10 seconds or less.  But, we can use the <c>sys</c> library (short for system) <c>setExecutionLimit(milliseconds)</c> procedure which will let the code run for up to the specified number of milliseconds.  One second is 1,000 milliseconds, so 50,0000 milliseconds is 50 seconds.</p>
   </note>
   <exercise label="Turtle_Spirograph1">
