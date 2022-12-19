@@ -1,9 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="inheritance_write-code-questions">
   <title>Write Code Questions</title>
-  <p>
-    <ol label="1">
-      <li>
+
         <exercise label="inheritance_writecode1q_v2">
           <statement>
             <p>Create a subclass of the <c>Parent</c> class named <c>Child</c> that overrides the inherited <c>eye_color()</c> method to return <c>"I have green eyes."</c></p>
@@ -31,8 +29,7 @@ myTests().main()
         </input>
           </program>
         </exercise>
-      </li>
-      <li>
+
         <exercise label="inheritance_greeter_grumpy_ac">
           <statement>
             <p>Create a subclass of the <c>Greeter</c> class named <c>GrumpyGreeter</c> that overrides the inherited <c>greet</c> method to return <c>"Go Away!"</c>.</p>
@@ -61,8 +58,7 @@ myTests().main()
         </input>
           </program>
         </exercise>
-      </li>
-      <li>
+
         <exercise label="inheritance_animal_cow_ac">
           <statement>
             <p>Create a subclass of the <c>Animal</c> class named <c>Cow</c> that overrides the inherited <c>noise</c> method to return <c>"Moo"</c>.</p>
@@ -91,8 +87,7 @@ myTests().main()
         </input>
           </program>
         </exercise>
-      </li>
-      <li>
+
         <exercise label="inheritance_actor_over_actor_ac">
           <statement>
             <p>Create a subclass of the <c>Actor</c> class named <c>OverActor</c> that overrides the inherited <c>act</c> method to return <c>"I am super happy!"</c>.</p>
@@ -122,8 +117,7 @@ myTests().main()
         </input>
           </program>
         </exercise>
-      </li>
-      <li>
+
         <exercise label="inheritance_student_grad_student_ac">
           <statement>
             <p>Create a subclass of the <c>Student</c> class named <c>GradStudent</c> that calls the <c>__init__</c> method in <c>Student</c> to initialize the first and last name and overrides the inherited <c>fav_food</c> method to return <c>"Sushi"</c>.</p>
@@ -159,8 +153,7 @@ myTests().main()
         </input>
           </program>
         </exercise>
-      </li>
-      <li>
+
         <exercise label="ut_is_ascending_ac">
           <statement>
             <p>Write a function <c>is_ascending(nums)</c> that returns <c>True</c> if the numbers in the list <c>nums</c> are sorted in ascending order and <c>False</c> otherwise. If the list <c>nums</c> has less than two numbers in it return <c>True</c>.  For example, <c>is_ascending([1,2,3])</c> should return <c>True</c>, <c>is_ascending([1])</c> should also return <c>True</c>, and <c>is_ascending([3,2,1])</c> should return <c>False</c>.</p>
@@ -191,8 +184,7 @@ myTests().main()
         </input>
           </program>
         </exercise>
-      </li>
-      <li>
+
         <exercise label="ut_sum_lists_ac">
           <statement>
             <p>Write a function <c>sum_lists(l1,l2)</c> that take two lists of numbers, <c>l1</c> and <c>l2</c> and returns a list with the sum of the corresponding items in <c>l1</c> and <c>l2</c>.  For example, <c>sum_lists([1,2],[3,4])</c> would return [4,6]. If the two lists are of different length then returned list should be the same length as the shortest list. For example, <c>sum_lists([1],[4,3])</c> should return <c>[5]</c>.</p>
@@ -220,8 +212,7 @@ myTests().main()
         </input>
           </program>
         </exercise>
-      </li>
-      <li>
+
         <exercise label="ut_avg_pos_ac">
           <statement>
             <p>Write a function <c>avg_pos(nums)</c> that returns the average of the positive numbers in the list <c>nums</c>.  For example, <c>avg_pos([80, -20, 90])</c> should return <c>85.0</c>.</p>
@@ -247,8 +238,7 @@ myTests().main()
         </input>
           </program>
         </exercise>
-      </li>
-      <li>
+
         <exercise label="ut_quartile_ac">
           <statement>
             <p>Write a function <c>quartile(value)</c> that returns <c>0</c> if <c>value</c> is &lt;= 0.25, <c>1</c> if <c>value</c> is &gt; 0.25 and &lt;= 0.5, <c>2</c> if <c>value</c> is &gt; 0.5 and &lt;= 0.75, and <c>3</c> if <c>value</c> &gt; 0.75.</p>
@@ -280,8 +270,7 @@ myTests().main()
         </input>
           </program>
         </exercise>
-      </li>
-      <li>
+
         <exercise label="ut_dup_adjacent_fix_ac">
           <statement>
             <p>Fix the function <c>dup_adjacent(nums)</c> to return <c>True</c> if there are duplicate adjacent values in <c>nums</c>. For example, <c>dup_adjacent([1,2,1])</c> should return <c>False</c> and <c>dup_adjacent([4, 3, 3, 2])</c> should return <c>True</c>  because of the adjacent 3's.  Return <c>False</c> if the length of the list is less than two.</p>
@@ -318,7 +307,4 @@ myTests().main()
         </input>
           </program>
         </exercise>
-      </li>
-    </ol>
-  </p>
 </section>

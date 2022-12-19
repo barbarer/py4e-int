@@ -1,7 +1,6 @@
+<?xml version="1.0"?>
 <section xml:id="network_write-code-exercises">
         <title>Write Code Exercises</title>
-        <p><ol label="1">
-            <li>
                 <exercise ><statement>
                         <p>Complete the following code that retrieves the file &#8216;romeo.txt' from.
                             Make changes to line 4 and 5.</p>
@@ -52,34 +51,7 @@ while True:
 
                     
 
-<exercise label="network_writecode1b">
-    <statement>
-                        <p>Complete the following code that retrieves the file &#8216;romeo.txt' from.
-                            Make changes to line 4 and 5.</p>
-
-    </statement>
-    <program xml:id="network_writecode1b_editor" interactive="activecode" language="python3">
-        <input>
-import socket
-
-mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-mysock.connect(('data.pr4e.org', 80))
-cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
-mysock.send(cmd)
-
-while True:
-    data = mysock.recv(512)
-    if len(data) &lt; 1:
-        break
-    print(data.decode(),end='')
-
-    mysock.close()
-        </input>
-    </program>
-</exercise>
                     </solution></exercise>
-            </li>
-        </ol></p>
 
 <exercise label="writingcode_network_2">
     <statement>
@@ -149,29 +121,6 @@ for line in fhand:
 print(counts)
         </input>
     </program>
-
-            
-
-<exercise label="writtencode_network_3b">
-    <statement>
-                <p>Complete the following code that retrieves the text from
-                    &#8216;<url href="http://data.pr4e.org/clown.txt" visual="http://data.pr4e.org/clown.txt">http://data.pr4e.org/clown.txt</url>' and prints the frequency of each word.</p>
-
-    </statement>
-    <program xml:id="writtencode_network_3b_editor" interactive="activecode" language="python3">
-        <input>
-import urllib.request
-
-fhand = urllib.request.urlopen('http://data.pr4e.org/clown.txt')
-for line in fhand:
-    words = line.decode().strip()
-    print(words)
-    for word in words:
-        counts[word] = counts.get(word, 0) + 1
-print(counts)
-        </input>
-    </program>
-</exercise>
             </solution></exercise>
 
 <exercise label="writingcode_network_4">
@@ -186,6 +135,7 @@ import urllib.request
         </input>
     </program>
 </exercise>
+
         <exercise ><statement>
                 <p>Write a program to store image file from &#8216;<url href="http://data.pr4e.org/cover.jpg" visual="http://data.pr4e.org/cover.jpg">http://data.pr4e.org/cover.jpg</url>'
                     to your disk.</p>

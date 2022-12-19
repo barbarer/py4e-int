@@ -363,12 +363,8 @@ def list_transformation():
   <exercise label="listEx_MC9">
     <statement>
       <p>Q-9: Given that we want to accumulate the total sum of a list of numbers, which of the following accumulator patterns would be appropriate?</p>
-      <p>
-        <ol label="I">
-          <li>
-            </li>
-        </ol>
-      </p>
+      <ol marker="I">
+        <li>
       <program language="python">
         <input>
 def find_sum():
@@ -379,12 +375,8 @@ def find_sum():
     return s
 </input>
       </program>
-      <p>
-        <ol label="I">
-          <li>
-            </li>
-        </ol>
-      </p>
+    </li>
+    <li>
       <program language="python">
         <input>
 def find_sum():
@@ -395,12 +387,9 @@ def find_sum():
     return s
 </input>
       </program>
-      <p>
-        <ol label="I">
-          <li>
-            </li>
-        </ol>
-      </p>
+    </li>
+    <li>
+      
       <program language="python">
         <input>
 def find_sum():
@@ -411,11 +400,13 @@ def find_sum():
     return s
 </input>
       </program>
+    </li>
+  </ol>
     </statement>
     <choices>
       <choice>
         <statement>
-          <p>I.</p>
+          <p>Pattern I</p>
         </statement>
         <feedback>
           <p>This pattern will only count how many items are in the list, not provide the total accumulated value.</p>
@@ -423,7 +414,7 @@ def find_sum():
       </choice>
       <choice>
         <statement>
-          <p>II.</p>
+          <p>Pattern II</p>
         </statement>
         <feedback>
           <p>This would reset the value of s each time the for loop iterated, and so by the end s would be assigned the value of the last item in the list plus the last item in the list.</p>
@@ -431,7 +422,7 @@ def find_sum():
       </choice>
       <choice correct="yes">
         <statement>
-          <p>III.</p>
+          <p>Pattern III</p>
         </statement>
         <feedback>
           <p>Yes, this will solve the problem.</p>
@@ -450,12 +441,8 @@ def find_sum():
   <exercise label="listEx_MC10">
     <statement>
       <p>Q-10: Given that we want to accumulate the total number of strings in the list, which of the following accumulator patterns would be appropriate?</p>
-      <p>
-        <ol label="1">
-          <li>
-            </li>
-        </ol>
-      </p>
+      <ol marker="1">
+        <li>
       <program language="python">
         <input>
 def num_of_strings():
@@ -466,12 +453,8 @@ def num_of_strings():
     return s
 </input>
       </program>
-      <p>
-        <ol label="1">
-          <li>
-            </li>
-        </ol>
-      </p>
+    </li>
+    <li>
       <program language="python">
         <input>
 def num_of_strings():
@@ -483,12 +466,8 @@ def num_of_strings():
     return s
 </input>
       </program>
-      <p>
-        <ol label="1">
-          <li>
-            </li>
-        </ol>
-      </p>
+    </li>
+    <li>
       <program language="python">
         <input>
 def num_of_strings():
@@ -499,12 +478,8 @@ def num_of_strings():
     return s
 </input>
       </program>
-      <p>
-        <ol label="1">
-          <li>
-            </li>
-        </ol>
-      </p>
+    </li>
+    <li>
       <program language="python">
         <input>
 def num_of_strings():
@@ -515,11 +490,13 @@ def num_of_strings():
             s = s + 1
 </input>
       </program>
+    </li>
+  </ol>
     </statement>
     <choices>
       <choice>
         <statement>
-          <p>1.</p>
+          <p>Pattern 1.</p>
         </statement>
         <feedback>
           <p>How does this solution know that the element of lst is a string and that s should be updated?</p>
@@ -527,7 +504,7 @@ def num_of_strings():
       </choice>
       <choice>
         <statement>
-          <p>2.</p>
+          <p>Pattern 2.</p>
         </statement>
         <feedback>
           <p>What happens to s each time the for loop iterates?</p>
@@ -535,15 +512,15 @@ def num_of_strings():
       </choice>
       <choice>
         <statement>
-          <p>3.</p>
+          <p>Pattern 3.</p>
         </statement>
         <feedback>
-          <p>Reread the prompt again, what do we want to accumulate?</p>
+          <p>Reread the prompt again. What do we want to accumulate?</p>
         </feedback>
       </choice>
       <choice correct="yes">
         <statement>
-          <p>4.</p>
+          <p>Pattern 4.</p>
         </statement>
         <feedback>
           <p>Yes, this will solve the problem.</p>
@@ -562,7 +539,7 @@ def num_of_strings():
   <exercise label="listEx_MC11">
     <statement>
       <p>Q-11: What will the following code print?</p>
-      <pre>def mystery(num_list):
+      <program language="python"><input>def mystery(num_list):
     index = 0
     while index &lt; len(num_list):
         num = num_list[index]
@@ -572,7 +549,7 @@ def num_of_strings():
 
 list1 = [3, 0, 2, 0, 0]
 mystery(list1)
-print(list1)</pre>
+print(list1)</input></program>
     </statement>
     <choices>
       <choice>
@@ -612,7 +589,7 @@ print(list1)</pre>
   <exercise label="listEx_MC12">
     <statement>
       <p>Q-12: What will the following code print?</p>
-      <pre>def mystery(num_list):
+      <program language="python"><input>def mystery(num_list):
     sum = 0
     for i in range(0, len(num_list), 2):
         num = num_list[i]
@@ -620,7 +597,7 @@ print(list1)</pre>
         return sum
 
 list1 = [1, 2, 3, 4, 5]
-print(mystery(list1))</pre>
+print(mystery(list1))</input></program>
     </statement>
     <choices>
       <choice correct="yes">
@@ -660,14 +637,14 @@ print(mystery(list1))</pre>
   <exercise label="listEx_MC13">
     <statement>
       <p>Q-13: What will the following code print?</p>
-      <pre>def mystery(num_list):
+      <program language="python"><input>def mystery(num_list):
     for num in num_list:
         if num &lt; 0:
             return False
         else:
             return True
 
-print(mystery([3, -1, 2]))</pre>
+print(mystery([3, -1, 2]))</input></program>
     </statement>
     <choices>
       <choice correct="yes">
@@ -707,7 +684,7 @@ print(mystery([3, -1, 2]))</pre>
   <exercise label="listEx_MC14">
     <statement>
       <p>Q-14: What will the following code print?</p>
-      <pre>def mystery(num_list):
+      <program><input>def mystery(num_list):
     out = []
     for num in num_list:
         if num &gt; 10:
@@ -715,7 +692,7 @@ print(mystery([3, -1, 2]))</pre>
     return out
 
 
-print(mystery([5, 10, 15, 20]))</pre>
+print(mystery([5, 10, 15, 20]))</input></program>
     </statement>
     <choices>
       <choice>
@@ -755,15 +732,15 @@ print(mystery([5, 10, 15, 20]))</pre>
   <exercise label="listEx_MC15">
     <statement>
       <p>Q-15: What will the following code print?</p>
-      <pre>def mystery(num_list):
+      <program><input>def mystery(num_list):
     out = []
     for i in range(len(num_list) - 1,0,-1):
         num = num_list[i]
-            out.append(num)
+        out.append(num)
     return out
 
 
-print(mystery([5, 10, 15, 20]))</pre>
+print(mystery([5, 10, 15, 20]))</input></program>
     </statement>
     <choices>
       <choice>
