@@ -78,12 +78,12 @@ print(fhand)
     </statement>
     <setup>
       <var>
-        <condition string="^\s*open\s*$">
+        <condition string="open">
           <feedback>
             <p>Yes, <q>open</q> is used to open a file.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again.</p>
           </feedback>
@@ -105,12 +105,12 @@ print(fhand)
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Hh]andle\s*$">
+        <condition string="[Hh]andle">
           <feedback>
             <p>A file handle is used to read the data of a file.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again.</p>
           </feedback>

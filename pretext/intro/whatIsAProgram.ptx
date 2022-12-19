@@ -13,17 +13,17 @@
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Pp]rogram\s*$">
+        <condition string="[Pp]rogram">
           <feedback>
             <p>A program is a sequence of statements that have been crafted to do something.</p>
           </feedback>
         </condition>
-        <condition string="^\s*[Cc]omputer\s*$">
+        <condition string="[Cc]omputer">
           <feedback>
             <p>Not quite.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again.</p>
           </feedback>

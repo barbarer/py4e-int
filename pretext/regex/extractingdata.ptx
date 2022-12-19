@@ -124,17 +124,17 @@ for line in hand:
     </statement>
     <setup>
       <var>
-        <condition string="^\s*(?:square\s+brackets|\[\])\s*$">
+        <condition string="(?:square\s+brackets|\[\])">
           <feedback>
             <p>Correct! Square brackets are used when matching multiple sets of characters.</p>
           </feedback>
         </condition>
-        <condition string="^\s*brackets\s*$">
+        <condition string="brackets">
           <feedback>
             <p>What type?</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!</p>
           </feedback>

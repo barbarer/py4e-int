@@ -62,12 +62,12 @@ len(stuff)
     </statement>
     <setup>
       <var>
-        <condition string="^\s*newline\s*$">
+        <condition string="newline">
           <feedback>
             <p>The newline character separates the characters in the file into lines.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again.</p>
           </feedback>

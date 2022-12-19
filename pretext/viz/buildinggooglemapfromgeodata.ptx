@@ -22,12 +22,12 @@
     </statement>
     <setup>
       <var>
-        <condition string="^\s*2|([Two])\s*$">
+        <condition string="2|([Two])">
           <feedback>
             <p>We break this problem into two phases.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!</p>
           </feedback>
@@ -49,12 +49,12 @@
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Cc]ache\s*$">
+        <condition string="[Cc]ache">
           <feedback>
             <p>The database acts as a local cache of that data to make sure we never ask Google for repeat data.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!</p>
           </feedback>

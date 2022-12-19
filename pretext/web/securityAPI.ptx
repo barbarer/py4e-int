@@ -18,12 +18,12 @@
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Kk]ey\s*$">
+        <condition string="[Kk]ey">
           <feedback>
             <p>An API key can be a parameter in the URL when calling the API or part of POST data.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again. What would you need if access to the API is considered to be <q>locked</q>?</p>
           </feedback>

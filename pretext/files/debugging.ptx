@@ -32,12 +32,12 @@ print(repr(s))
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Ss]tring\s*$">
+        <condition string="[Ss]tring">
           <feedback>
             <p>The repr function takes an object as an argument and returns a string representation of the object.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again.</p>
           </feedback>

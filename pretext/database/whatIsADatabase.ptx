@@ -77,12 +77,12 @@ jump to a particular entry. <var/>  </p>
     </statement>
     <setup>
       <var>
-        <condition string="^\s*indexes|indices\s*$">
+        <condition string="indexes|indices">
           <feedback>
             <p>Much like dictionaries, databases use indexes to locate and keep track of data as it is inserted.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again! Databases function similarly to dictionaries in this way!</p>
           </feedback>

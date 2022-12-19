@@ -48,12 +48,12 @@
       </statement>
       <setup>
         <var>
-          <condition string="^\s*'?hi'?\s*$">
+          <condition string="'?hi'?">
             <feedback>
               <p>It will print the first item in the second list.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>What is the first item in the list in the second call?</p>
             </feedback>
@@ -109,12 +109,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*\[\]|\]\[\s*$">
+          <condition string="\[\]|\]\[">
             <feedback>
               <p>Square brackets are used at the start and end of a list.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Look at the parameter to the function call in the code above.</p>
             </feedback>
@@ -128,12 +128,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition number="[0, 0]">
+          <condition number="0">
             <feedback>
               <p>The first item in a list is at index 0.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Try again!</p>
             </feedback>
@@ -147,12 +147,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition number="[-1, -1]">
+          <condition number="-1">
             <feedback>
               <p>The last item in a list is at index -1, which is the length of the list - 1.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Try again!</p>
             </feedback>
@@ -341,12 +341,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*list\s*$">
+          <condition string="list">
             <feedback>
               <p>A list is of the class <c>list</c>.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>What is the first thing printed from the code above?</p>
             </feedback>
@@ -563,12 +563,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition number="[0, 0]">
+          <condition number="0">
             <feedback>
               <p>If the start index isn't specified it is 0.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Run the code above to check.</p>
             </feedback>

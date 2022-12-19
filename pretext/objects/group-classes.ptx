@@ -106,17 +106,17 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*Book\s*$">
+          <condition string="Book">
             <feedback>
               <p>Good job!  The class name follows the class keyword.</p>
             </feedback>
           </condition>
-          <condition string="^\s*book\s*$">
+          <condition string="book">
             <feedback>
               <p>The class name is usually upper case.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>The class name is after the keyword class and before the :</p>
             </feedback>
@@ -130,17 +130,17 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*__init__\s*$">
+          <condition string="__init__">
             <feedback>
               <p>Good job!  The __init__ method is called when an object is created.</p>
             </feedback>
           </condition>
-          <condition string="^\s*init\s*$">
+          <condition string="init">
             <feedback>
               <p>Almost.  The method name includes underscores.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>This method initializes the object's attributes</p>
             </feedback>
@@ -159,17 +159,17 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*__str__\s*$">
+          <condition string="__str__">
             <feedback>
               <p>Good job!  This method is called when you print an object of a class.</p>
             </feedback>
           </condition>
-          <condition string="^\s*str\s*$">
+          <condition string="str">
             <feedback>
               <p>Not quite, the name of the method includes underscores.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>This method returns a string with the values of the attributes</p>
             </feedback>
@@ -188,12 +188,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*2|two|Two|TWO\s*$">
+          <condition string="2|two|Two|TWO">
             <feedback>
               <p>Good Job!  The attributes are initialized in the __init__ method (also known as the constructor).</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Attributes are initialized in the __init__ method</p>
             </feedback>
@@ -242,12 +242,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*self\s*$">
+          <condition string="self">
             <feedback>
               <p>Good job!</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>The parameters are in () after the method name</p>
             </feedback>

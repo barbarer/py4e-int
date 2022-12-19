@@ -34,12 +34,12 @@ print(a is b)
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Ii]s\s*$">
+        <condition string="[Ii]s">
           <feedback>
             <p>The is operator will check if two variables refer to the same object.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again.</p>
           </feedback>
@@ -68,17 +68,17 @@ print(a is b)
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Ee]quivalent\s*$">
+        <condition string="[Ee]quivalent">
           <feedback>
             <p>These lists are equivalent because they look the same, but actually refer to different objects.</p>
           </feedback>
         </condition>
-        <condition string="^\s*[Ii]dentical\s*$">
+        <condition string="[Ii]dentical">
           <feedback>
             <p>In order for lists to be identical, they must refer to the same object. For example, a = [1, 2, 3] and b = a</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again.</p>
           </feedback>

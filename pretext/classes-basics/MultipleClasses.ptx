@@ -363,12 +363,12 @@ if __name__ == "__main__":
       </statement>
       <setup>
         <var>
-          <condition string="^\s*Card\s*$">
+          <condition string="Card">
             <feedback>
               <p>Use the name of the class to access a class attribute</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Look at the __init__ method in the Deck class</p>
             </feedback>
@@ -426,24 +426,24 @@ if __name__ == "__main__":
       </statement>
       <setup>
         <var>
-          <condition string="^\s*__init__\s*$">
+          <condition string="__init__">
             <feedback>
               <p>The __init__ function creates all 52 cards</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>An object of a class is created with Class()</p>
             </feedback>
           </condition>
         </var>
         <var>
-          <condition string="^\s*Deck\s*$">
+          <condition string="Deck">
             <feedback>
               <p>The Deck class creates the 52 cards when you create a new deck</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Which class creates multiple cards?</p>
             </feedback>

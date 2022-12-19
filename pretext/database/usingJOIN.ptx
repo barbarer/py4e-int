@@ -33,12 +33,12 @@ SELECT * FROM Follows JOIN People
     </statement>
     <setup>
       <var>
-        <condition string="^\s*join\s*$">
+        <condition string="join">
           <feedback>
             <p>JOIN returns data from two tables based on rows selected to join them on.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!</p>
           </feedback>
@@ -52,12 +52,12 @@ SELECT * FROM Follows JOIN People
     </statement>
     <setup>
       <var>
-        <condition string="^\s*on\s*$">
+        <condition string="on">
           <feedback>
             <p>Use ON to specify what column to join the data on.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!</p>
           </feedback>

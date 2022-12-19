@@ -117,12 +117,12 @@ var2 = "fish"</pre>
     </statement>
     <setup>
       <var>
-        <condition string="^\s*^assignment$|^Assignment$|^ASSIGNMENT$\s*$">
+        <condition string="^assignment$|^Assignment$|^ASSIGNMENT$">
           <feedback>
             <p>The process of giving value to a variable is called an assignment.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!</p>
           </feedback>

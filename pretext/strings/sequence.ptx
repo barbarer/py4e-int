@@ -186,13 +186,13 @@ print(hello)</pre>
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Ii]ndex\s*$">
+        <condition string="[Ii]ndex">
           <feedback>
             <p>Correct! An index is an integer value used to select an item in a sequence, such as a
 character in a string.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Incorrect! Hint: its value has to be an integer. Try again.</p>
           </feedback>

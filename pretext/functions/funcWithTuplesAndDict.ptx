@@ -78,12 +78,12 @@ with <q>[Parsons Problem Study]</q> included in the email subject. &lt;br&gt;&lt
       </statement>
       <setup>
         <var>
-          <condition number="[1, 1]">
+          <condition number="1">
             <feedback>
               <p>It will print the item at index 0 the first passed tuple.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>What is the item at index 0 in the first passed tuples?</p>
             </feedback>
@@ -97,12 +97,12 @@ with <q>[Parsons Problem Study]</q> included in the email subject. &lt;br&gt;&lt
       </statement>
       <setup>
         <var>
-          <condition number="[4, 4]">
+          <condition number="4">
             <feedback>
               <p>It will print the length (number of items) in the second passed tuple.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>How many items are in the second passed tuple?</p>
             </feedback>
@@ -140,12 +140,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*\(\)|\)\(\s*$">
+          <condition string="\(\)|\)\(">
             <feedback>
               <p>Parenthesis are often used to start and end a tuple, but they are not required.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Look at the parameter to the function call in the main function.</p>
             </feedback>
@@ -159,12 +159,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition number="[0, 0]">
+          <condition number="0">
             <feedback>
               <p>The first item in a list is at index 0.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Try again!</p>
             </feedback>
@@ -178,12 +178,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition number="[-1, -1]">
+          <condition number="-1">
             <feedback>
               <p>The last item in a list is at index -1, which is the length of the list - 1.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Try again!</p>
             </feedback>
@@ -233,12 +233,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*&quot;?No&quot;?\s*$">
+          <condition string="&quot;?No&quot;?">
             <feedback>
               <p>It prints the item at index 1 in the first tuple.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Try again!</p>
             </feedback>
@@ -274,17 +274,17 @@ print(l3)
       </statement>
       <setup>
         <var>
-          <condition number="[2, 2]">
+          <condition number="2">
             <feedback>
               <p>It prints the number of t's in the string.</p>
             </feedback>
           </condition>
-          <condition number="[3, 3]">
+          <condition number="3">
             <feedback>
               <p>A &#x2018;T' is different from a &#x2018;t'.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Try again!</p>
             </feedback>

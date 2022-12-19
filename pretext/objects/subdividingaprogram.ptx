@@ -13,13 +13,13 @@
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Oo]bject[-\s+][Oo]riented\s*$">
+        <condition string="[Oo]bject[-\s+][Oo]riented">
           <feedback>
             <p>Yes, we do not need to know how the object classes
 work internally when we use them.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!</p>
           </feedback>

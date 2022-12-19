@@ -28,12 +28,12 @@
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Tt]uple\s*$">
+        <condition string="[Tt]uple">
           <feedback>
             <p>Correct! A tuple is perfect for this scenario. One could also use a string.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Incorrect! Hint: what is this chapter about? Try again.</p>
           </feedback>

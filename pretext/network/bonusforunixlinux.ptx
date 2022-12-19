@@ -33,24 +33,24 @@ Both commands are used on Linux computers to retrieve plain text and binary file
     </statement>
     <setup>
       <var>
-        <condition string="^\s*curl\s*$">
+        <condition string="curl">
           <feedback>
             <p>Correct. curl is short for copy URL.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try combining the words it is short for and using all lowercase.</p>
           </feedback>
         </condition>
       </var>
       <var>
-        <condition string="^\s*wget\s*$">
+        <condition string="wget">
           <feedback>
             <p>Correct. wget is short for web get.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try combining the words it is short for and using all lowercase.</p>
           </feedback>

@@ -23,17 +23,17 @@ relationships between them is called __________. <var/>  </p>
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Dd]ata\s+[Mm]odeling\s*$">
+        <condition string="[Dd]ata\s+[Mm]odeling">
           <feedback>
             <p>Data modeling is the act of deciding how to break up your application data into multiple tables and establishing the relationships between the tables.</p>
           </feedback>
         </condition>
-        <condition string="^\s*[Dd]ata\s+[Mm]odel\s*$">
+        <condition string="[Dd]ata\s+[Mm]odel">
           <feedback>
             <p>Close! A data model is the design document that shows the tables and their relationships.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again.</p>
           </feedback>

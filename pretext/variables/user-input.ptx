@@ -58,17 +58,17 @@ ValueError: invalid literal for int() with base 10:
     </statement>
     <setup>
       <var>
-        <condition string="^\s*int(\(\))*\s*$">
+        <condition string="int(\(\))*">
           <feedback>
             <p>int() converts values to integers</p>
           </feedback>
         </condition>
-        <condition string="^\s*integer\s*$">
+        <condition string="integer">
           <feedback>
             <p>Close, but not quite!</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again.</p>
           </feedback>
@@ -82,17 +82,17 @@ ValueError: invalid literal for int() with base 10:
     </statement>
     <setup>
       <var>
-        <condition string="^\s*\\n\s*$">
+        <condition string="\\n">
           <feedback>
             <p>n creates a newline.</p>
           </feedback>
         </condition>
-        <condition string="^\s*n\s*$">
+        <condition string="n">
           <feedback>
             <p>Close, but there is a symbol that goes with it.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again.</p>
           </feedback>

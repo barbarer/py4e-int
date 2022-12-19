@@ -108,12 +108,12 @@ print(len(digits))
     </statement>
     <setup>
       <var>
-        <condition number="[10, 10]">
+        <condition number="10">
           <feedback>
             <p>Nice job! len(list) returns the number of items in the list</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!  How many items are in digits at this point?</p>
           </feedback>
@@ -127,12 +127,12 @@ print(len(digits))
     </statement>
     <setup>
       <var>
-        <condition number="[3, 3]">
+        <condition number="3">
           <feedback>
             <p>The last item is at the length of the list minus one.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Remember that the first item is at index 0.</p>
           </feedback>
@@ -209,12 +209,12 @@ print(areaCode * 3)
     </statement>
     <setup>
       <var>
-        <condition number="[0, 0]">
+        <condition number="0">
           <feedback>
             <p>Correct! 3 is at the begininng of the list.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try Again! Use .index() to hel find where the index of 3 is.</p>
           </feedback>
@@ -316,12 +316,12 @@ print()
     </statement>
     <setup>
       <var>
-        <condition number="[4, 4]">
+        <condition number="4">
           <feedback>
             <p>Yes! there are four items in this list.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try Again! use len() to find the size of the list.</p>
           </feedback>

@@ -88,12 +88,12 @@ print(random.choice(t))
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Rr]andom\s*$">
+        <condition string="[Rr]andom">
           <feedback>
             <p>Correct! Some functions include <c>random</c>, <c>randint</c>, <c>choice</c>, and more.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Incorrect! What is the word that comes before the period in these function calls? Try again.</p>
           </feedback>

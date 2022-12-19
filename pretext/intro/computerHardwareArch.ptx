@@ -120,17 +120,17 @@
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Pp]rogram\s*$">
+        <condition string="[Pp]rogram">
           <feedback>
             <p>A program holds the instructions that answer the CPU's <q>What next</q> question.</p>
           </feedback>
         </condition>
-        <condition string="^\s*[Pp]rogramming\s*$">
+        <condition string="[Pp]rogramming">
           <feedback>
             <p>Programming is the process of creating and editing these instructions.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!</p>
           </feedback>

@@ -61,13 +61,13 @@ ValueError: could not convert string to float: 'fred'</pre>
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Ii]nsurance\s+[Pp]olicy\s*$">
+        <condition string="[Ii]nsurance\s+[Pp]olicy">
           <feedback>
             <p>Try / except acts as an insurance policy to catch expected
 or unexpected errors in your code.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Check the previous paragraph for some help!</p>
           </feedback>
@@ -110,12 +110,12 @@ Please enter a number</pre>
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Ee]xception\s*$">
+        <condition string="[Ee]xception">
           <feedback>
             <p>When using try/except you are trying to catch an exception and give the computer a different way to handle it.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again.</p>
           </feedback>

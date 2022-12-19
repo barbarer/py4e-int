@@ -32,12 +32,12 @@ information.
     </statement>
     <setup>
       <var>
-        <condition string="^\s*&gt;&gt;&gt;\s*$">
+        <condition string="&gt;&gt;&gt;">
           <feedback>
             <p>Correct! &gt;&gt;&gt; is the prompt from the Python interpreter.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again. Open your Python interpreter using the command <q>python</q> and see what you are prompted with.</p>
           </feedback>
@@ -172,12 +172,12 @@ SyntaxError: invalid syntax
     </statement>
     <setup>
       <var>
-        <condition string="^\s*quit(\(\))*\s*$">
+        <condition string="quit(\(\))*">
           <feedback>
             <p>Correct!</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again.</p>
           </feedback>

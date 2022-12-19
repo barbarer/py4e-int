@@ -86,12 +86,12 @@ v = 5     # velocity in meters/second.
     </statement>
     <setup>
       <var>
-        <condition string="^\s*#\s*$">
+        <condition string="#">
           <feedback>
             <p>Yes, # is used to start a single line of comments.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again! Remember that three sets of quotation marks are used for multi-line comments.</p>
           </feedback>

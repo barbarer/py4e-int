@@ -136,12 +136,12 @@ print('Total: ', total)
       </statement>
       <setup>
         <var>
-          <condition string="^\s*[Aa]ccumulator\s*$">
+          <condition string="[Aa]ccumulator">
             <feedback>
               <p>An accumulator is a variable used to keep track of the sum of elements in a loop.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Incorrect! Reread the text above this question if you need help. Try again.</p>
             </feedback>

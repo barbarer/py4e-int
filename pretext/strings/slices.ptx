@@ -47,12 +47,12 @@ print(fruit[3:3])
     </statement>
     <setup>
       <var>
-        <condition string="^\s*([Aa]ll)|5|([Ff]ive)\s*$">
+        <condition string="([Aa]ll)|5|([Ff]ive)">
           <feedback>
             <p>[:] Correct! It selects the entire string.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Incorrect! It could be helpful to run this in an activecode block. Try again.</p>
           </feedback>

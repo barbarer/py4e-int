@@ -19,13 +19,13 @@ those functions. <var/>  </p>
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Dd]ata\s*$">
+        <condition string="[Dd]ata">
           <feedback>
             <p>Correct, these data can be initialized within the class or when object
 is constructed.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!</p>
           </feedback>
@@ -40,12 +40,12 @@ objects. <var/>  </p>
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[c]lass\s*$">
+        <condition string="[c]lass">
           <feedback>
             <p>Correct, we use the keyword &#x2018;class'.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again! Note that keywords are case-sensitive.</p>
           </feedback>

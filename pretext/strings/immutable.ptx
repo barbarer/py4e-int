@@ -138,12 +138,12 @@ print(s)
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Ii]mmutable\s*$">
+        <condition string="[Ii]mmutable">
           <feedback>
             <p>Correct! Strings are immutable, meaning you cannot change the object itself once it has been defined.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Incorrect! Check your spelling. Try again.</p>
           </feedback>

@@ -63,12 +63,12 @@
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Ff]irst\s*$">
+        <condition string="[Ff]irst">
           <feedback>
             <p>Correct! If the mid-point check is incorrect the problem must be in the first half of the program.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Incorrect! Hint: the problem won't be in the second half. Try again.</p>
           </feedback>

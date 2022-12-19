@@ -46,12 +46,12 @@ for item in info:
       </statement>
       <setup>
         <var>
-          <condition string="^\s*loads\s*$">
+          <condition string="loads">
             <feedback>
               <p>The loads method takes a JSON string and returns a list or dictionary.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Which method was called in the code above?</p>
             </feedback>
@@ -85,12 +85,12 @@ for person in people_list:
       </statement>
       <setup>
         <var>
-          <condition string="^\s*str|string\s*$">
+          <condition string="str|string">
             <feedback>
               <p>It is an object of the str (string) class</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Try again</p>
             </feedback>
@@ -104,12 +104,12 @@ for person in people_list:
       </statement>
       <setup>
         <var>
-          <condition string="^\s*dict|dictionary\s*$">
+          <condition string="dict|dictionary">
             <feedback>
               <p>It is an object of the dict (dictionary) class.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Try again</p>
             </feedback>
@@ -173,12 +173,12 @@ print(json.dumps(d))
       </statement>
       <setup>
         <var>
-          <condition string="^\s*dumps\s*$">
+          <condition string="dumps">
             <feedback>
               <p>The dumps method takes a Python object and returns a JSON string.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Which method was called in the code above?</p>
             </feedback>

@@ -57,12 +57,12 @@ print(total)
     </statement>
     <setup>
       <var>
-        <condition string="^\s*^1$|1\.[0]*$\s*$">
+        <condition string="^1$|1\.[0]*$">
           <feedback>
             <p>The code checks for numbers greater or less than 1, but not 1 itself.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Which value is not tested currently?</p>
           </feedback>

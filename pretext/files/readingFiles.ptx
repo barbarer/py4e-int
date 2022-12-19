@@ -44,12 +44,12 @@ print('Line Count:', count)
     </statement>
     <setup>
       <var>
-        <condition string="^\s*([Oo]ne)|1\s*$">
+        <condition string="([Oo]ne)|1">
           <feedback>
             <p>When using a for loop, the program reads each line individually.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again.</p>
           </feedback>

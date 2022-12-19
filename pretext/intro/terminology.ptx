@@ -80,17 +80,17 @@
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Cc]ompiler\s*$">
+        <condition string="[Cc]ompiler">
           <feedback>
             <p>Correct! A compiler translates a program into machine language from a file.</p>
           </feedback>
         </condition>
-        <condition string="^\s*[Ii]nterpreter\s*$">
+        <condition string="[Ii]nterpreter">
           <feedback>
             <p>An interpreter reads and processes code immediately.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!</p>
           </feedback>

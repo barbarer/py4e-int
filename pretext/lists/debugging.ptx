@@ -49,12 +49,12 @@ t = t.sort()           # WRONG!
               </statement>
               <setup>
                 <var>
-                  <condition string="^\s*[Nn]one\s*$">
+                  <condition string="[Nn]one">
                     <feedback>
                       <p>Most list methods modify the argument and return <q>None</q>.</p>
                     </feedback>
                   </condition>
-                  <condition string="^\s*.*\s*$">
+                  <condition string=".*">
                     <feedback>
                       <p>Try again.</p>
                     </feedback>

@@ -61,17 +61,17 @@ print ('Done!')
     </statement>
     <setup>
       <var>
-        <condition string="^\s*done\s*$">
+        <condition string="done">
           <feedback>
             <p>The while loop will end when the user types <q>done</q></p>
           </feedback>
         </condition>
-        <condition string="^\s*Done\s*$">
+        <condition string="Done">
           <feedback>
             <p>Incorrect! The conditions of the while loop are case specific. Try again.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Incorrect! Look closely at the code above. Try again.</p>
           </feedback>

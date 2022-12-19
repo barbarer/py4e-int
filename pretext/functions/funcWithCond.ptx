@@ -47,12 +47,12 @@
       </statement>
       <setup>
         <var>
-          <condition string="^\s*Baby,\s+its\s+cold\s+outside!\s*$">
+          <condition string="Baby,\s+its\s+cold\s+outside!">
             <feedback>
               <p>Since temp &lt; 32 this will print.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Which conditional is true when temp &lt; 32?</p>
             </feedback>
@@ -93,17 +93,17 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*else\s*$">
+          <condition string="else">
             <feedback>
               <p>The keyword else is used to execute a blocks of statements if a Boolean condition is false</p>
             </feedback>
           </condition>
-          <condition string="^\s*Else\s*$">
+          <condition string="Else">
             <feedback>
               <p>Most keywords in Python start with a lowercase letter</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Try again!</p>
             </feedback>
@@ -117,17 +117,17 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*if\s*$">
+          <condition string="if">
             <feedback>
               <p>The keyword if is used to start a conditional statement and is the only required keyword.</p>
             </feedback>
           </condition>
-          <condition string="^\s*If\s*$">
+          <condition string="If">
             <feedback>
               <p>Most keywords in Python start with a lowercase letter</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Try again!</p>
             </feedback>
@@ -141,17 +141,17 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*elif\s*$">
+          <condition string="elif">
             <feedback>
               <p>The keyword elif is used to provide more than two possible outcomes to a conditional statement.</p>
             </feedback>
           </condition>
-          <condition string="^\s*Elif\s*$">
+          <condition string="Elif">
             <feedback>
               <p>Most keywords in Python start with a lowercase letter</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Try again!</p>
             </feedback>
@@ -270,12 +270,12 @@ myTests().main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*D\s*$">
+          <condition string="D">
             <feedback>
               <p>Since every if will execute it will print D.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Remember that every if will execute.  What is the final value of grade?</p>
             </feedback>
@@ -321,12 +321,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition number="[9, 9]">
+          <condition number="9">
             <feedback>
               <p>You need to test greater than and equal for each grade from A to D and also test a value less than 60.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Remember that you should check that it works correctly if the value is greater than or equal the specified value.</p>
             </feedback>

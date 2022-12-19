@@ -96,17 +96,17 @@ print(minute//60)
     </statement>
     <setup>
       <var>
-        <condition string="^\s*//\s*$">
+        <condition string="//">
           <feedback>
             <p>// is the operator for floored division in Python.</p>
           </feedback>
         </condition>
-        <condition string="^\s*/\s*$">
+        <condition string="/">
           <feedback>
             <p>Not quite, remember the difference between divison (/) and floored division.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Make sure you are looking at the symbols for division!</p>
           </feedback>

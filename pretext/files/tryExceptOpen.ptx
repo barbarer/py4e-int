@@ -102,12 +102,12 @@ File cannot be opened: na na boo boo</pre>
     </statement>
     <setup>
       <var>
-        <condition string="^\s*exit\s*$">
+        <condition string="exit">
           <feedback>
             <p>The exit function does not return anything and closes the program.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again. Which function will close or end a program without returning anything?</p>
           </feedback>
@@ -131,12 +131,12 @@ File cannot be opened: na na boo boo</pre>
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Pp]ythonic\s*$">
+        <condition string="[Pp]ythonic">
           <feedback>
             <p>A pythonic technique is a technique that works elegantly in Python.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again.</p>
           </feedback>

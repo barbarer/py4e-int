@@ -12,24 +12,24 @@ we call the original class the <BlankNode/> class and the new class the <BlankNo
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Pp]arent\s*$">
+        <condition string="[Pp]arent">
           <feedback>
             <p>Yes, the original class is the &#x2018;parent' class.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!</p>
           </feedback>
         </condition>
       </var>
       <var>
-        <condition string="^\s*[Cc]hild\s*$">
+        <condition string="[Cc]hild">
           <feedback>
             <p>Yes, the extending class is the &#x2018;child' class.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!</p>
           </feedback>

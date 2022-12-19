@@ -48,12 +48,12 @@ SELECT * FROM Tracks WHERE title = 'My Way'
     </statement>
     <setup>
       <var>
-        <condition string="^\s*INSERT\s*$">
+        <condition string="INSERT">
           <feedback>
             <p>INSERT is used to add a new row of values to a table.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!</p>
           </feedback>
@@ -79,7 +79,7 @@ SELECT * FROM Tracks WHERE title = 'My Way'
     </statement>
     <setup>
       <var>
-        <condition string="^\s*\*\s*$">
+        <condition string="\*">
           <feedback>
             <p>
               <ul>
@@ -90,7 +90,7 @@ SELECT * FROM Tracks WHERE title = 'My Way'
             </p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!</p>
           </feedback>

@@ -43,12 +43,12 @@ print(x)
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Ii]nitialize\s*$">
+        <condition string="[Ii]nitialize">
           <feedback>
             <p>Before updating a variable, you need to initialize the variable.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Incorrect! Hint: what are you doing to variable &#x2018;x' when you say &#x2018;x = 0'? Try again!</p>
           </feedback>
@@ -62,12 +62,12 @@ print(x)
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Dd]ecrement\s*$">
+        <condition string="[Dd]ecrement">
           <feedback>
             <p>Subtracting 1 from a varaible is called decrementing, the opposite of adding 1 (incrementing).</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Incorrect! Hint: the answer is the opposite of <q>increment</q>. Try again!</p>
           </feedback>

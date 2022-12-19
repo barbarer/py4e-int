@@ -18,12 +18,12 @@ connection between two programs. <var/>  </p>
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Ss]ocket\s*$">
+        <condition string="[Ss]ocket">
           <feedback>
             <p>Yes, a socket provides a two-way connection between two programs.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!</p>
           </feedback>
@@ -49,12 +49,12 @@ who sends next, and so on. <var/>  </p>
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Pp]rotocol\s*$">
+        <condition string="[Pp]rotocol">
           <feedback>
             <p>A protocol is a set of rules that determines order and responses.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!</p>
           </feedback>

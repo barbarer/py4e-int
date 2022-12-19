@@ -15,17 +15,17 @@
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Ss]cript\s*$">
+        <condition string="[Ss]cript">
           <feedback>
             <p>A script is a file that holds Python instructions.</p>
           </feedback>
         </condition>
-        <condition string="^\s*[Ff]ile\s*$">
+        <condition string="[Ff]ile">
           <feedback>
             <p>What is this type of file called?</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again.</p>
           </feedback>
@@ -60,12 +60,12 @@ Hello world!
     </statement>
     <setup>
       <var>
-        <condition string="^\s*\.?[Pp][Yy]\s*$">
+        <condition string="\.?[Pp][Yy]">
           <feedback>
             <p>.py at the end of a file implies that it is a script containing Python instructions.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again.</p>
           </feedback>

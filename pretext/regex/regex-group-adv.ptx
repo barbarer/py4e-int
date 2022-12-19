@@ -121,12 +121,12 @@ print(res3)
       </statement>
       <setup>
         <var>
-          <condition string="^\s*\(\)\s*$">
+          <condition string="\(\)">
             <feedback>
               <p>Parenthesis are used to specify the part of the match to return.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Look at the code above.  What symbols were used to specify the part to return?</p>
             </feedback>

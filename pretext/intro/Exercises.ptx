@@ -85,17 +85,17 @@
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Ii]nterpreter\s*$">
+        <condition string="[Ii]nterpreter">
           <feedback>
             <p>An interpreter is a program that can analyze and execute a program line by line.</p>
           </feedback>
         </condition>
-        <condition string="^\s*[Cc]ompiler\s*$">
+        <condition string="[Cc]ompiler">
           <feedback>
             <p>A compiler translates a program into machine language from a file and saves it for later execution.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!</p>
           </feedback>
@@ -285,12 +285,12 @@ print(x)
     </statement>
     <setup>
       <var>
-        <condition string="^\s*(CPU)|([Cc]entral\s+[Pp]rocessing\s+[Uu]nit)\s*$">
+        <condition string="(CPU)|([Cc]entral\s+[Pp]rocessing\s+[Uu]nit)">
           <feedback>
             <p>The Central Processing Unit is very similar to a brain for your computer.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!</p>
           </feedback>
@@ -304,17 +304,17 @@ print(x)
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Ii]nput\s*$">
+        <condition string="[Ii]nput">
           <feedback>
             <p>A keyboard connects to your computer and provides information that your computer reads <b>in</b>.</p>
           </feedback>
         </condition>
-        <condition string="^\s*[Oo]utput\s*$">
+        <condition string="[Oo]utput">
           <feedback>
             <p>Try again!</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!</p>
           </feedback>
@@ -328,17 +328,17 @@ print(x)
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Oo]utput\s*$">
+        <condition string="[Oo]utput">
           <feedback>
             <p>A speaker connects to your computer, which provides information that the speaker sends <b>out</b>.</p>
           </feedback>
         </condition>
-        <condition string="^\s*[Ii]nput\s*$">
+        <condition string="[Ii]nput">
           <feedback>
             <p>Try again!</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!</p>
           </feedback>
@@ -352,17 +352,17 @@ print(x)
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Ss]yntax\s*$">
+        <condition string="[Ss]yntax">
           <feedback>
             <p>If your code doesn't follow the <q>grammar rules</q> of Python, it will let you know.</p>
           </feedback>
         </condition>
-        <condition string="^\s*[Ss]emantic\s*$">
+        <condition string="[Ss]emantic">
           <feedback>
             <p>Try again! Semantic Errors will not trigger an error message.</p>
           </feedback>
         </condition>
-        <condition string="^\s*[Ll]ogic\s*$">
+        <condition string="[Ll]ogic">
           <feedback>
             <p>Try again! Logic Errors will not trigger an error message.</p>
           </feedback>

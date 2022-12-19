@@ -111,17 +111,17 @@ print(three == four)
       </statement>
       <setup>
         <var>
-          <condition string="^\s*bool\s*$">
+          <condition string="bool">
             <feedback>
               <p>Correct! They are called <q>bool</q>, with an uncapitalized B.</p>
             </feedback>
           </condition>
-          <condition string="^\s*Bool\s*$">
+          <condition string="Bool">
             <feedback>
               <p>Incorrect! The B is not capitalized. Try again.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Incorrect! Hint: what was the name of the class printed when the line <c>print(type(True))</c> was run? Try again.</p>
             </feedback>
@@ -212,12 +212,12 @@ print("Until next time...")
       </statement>
       <setup>
         <var>
-          <condition number="[2, 2]">
+          <condition number="2">
             <feedback>
               <p>Correct! <c>number &lt; 0</c> is a Boolean expression.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Incorrect! Think about the definition of a Boolean expression. Try again.</p>
             </feedback>
@@ -235,12 +235,12 @@ print("Until next time...")
       </statement>
       <setup>
         <var>
-          <condition string="^\s*colon|a\s+colon|\:\s*$">
+          <condition string="colon|a\s+colon|\:">
             <feedback>
               <p>Correct! A colon is necessary to begin an indented block of code.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Incorrect! Hint: it's one character. Try again.</p>
             </feedback>

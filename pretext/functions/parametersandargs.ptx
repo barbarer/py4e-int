@@ -33,12 +33,12 @@ def print_twice(bruce):
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Pp]arameters*\s*$">
+        <condition string="[Pp]arameters*">
           <feedback>
             <p>Inside the function, the arguments are assigned to variables called parameters.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Incorrect! Reread the beginning of this section and try again.</p>
           </feedback>

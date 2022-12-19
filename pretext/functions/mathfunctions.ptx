@@ -166,12 +166,12 @@ print(result)
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Mm]odule\s+[Oo]bject\s*$">
+        <condition string="[Mm]odule\s+[Oo]bject">
           <feedback>
             <p>A module object is created when we import math.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Incorrect! What type of object is created? Try again.</p>
           </feedback>

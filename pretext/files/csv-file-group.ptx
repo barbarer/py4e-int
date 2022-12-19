@@ -210,12 +210,12 @@
       </statement>
       <setup>
         <var>
-          <condition number="[11497.12, 11497.12]">
+          <condition number="11497.12">
             <feedback>
               <p>This is the highest value at the close.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Look at the last value on each line and find the highest value.</p>
             </feedback>
@@ -268,12 +268,12 @@ print(f"Max close {max_close} on {max_date}")
       </statement>
       <setup>
         <var>
-          <condition number="[2258.39, 2258.39]">
+          <condition number="2258.39">
             <feedback>
               <p>This is the lowest value at the close.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Look at the last value on each line and find the lowest value.</p>
             </feedback>
@@ -581,12 +581,12 @@ myTests().main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*AUG\s*$">
+          <condition string="AUG">
             <feedback>
               <p>August 1958 had the highest number of passengers.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Look at the values for 1958 in the file.  What is the highest number?</p>
             </feedback>

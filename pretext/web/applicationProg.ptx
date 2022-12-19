@@ -22,12 +22,12 @@
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Cc]ontract(s)*\s*$">
+        <condition string="[Cc]ontract(s)*">
           <feedback>
             <p>An API is the general name for an application to application contract.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>An API is an agreement between the two applications, also known as&#x2026;.</p>
           </feedback>

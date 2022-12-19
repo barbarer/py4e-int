@@ -14,12 +14,12 @@
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Ff]low\s+[Oo]f\s+[Ee]xecution\s*$">
+        <condition string="[Ff]low\s+[Oo]f\s+[Ee]xecution">
           <feedback>
             <p>Correct! The flow of execution is the order in which statements are executed.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Incorrect! Hint: it's the name of this section. Try again.</p>
           </feedback>

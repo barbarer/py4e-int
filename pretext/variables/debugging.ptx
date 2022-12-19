@@ -93,12 +93,12 @@ print(1.0 / 2.0 * 3.14)
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Dd]ebugging\s*$">
+        <condition string="[Dd]ebugging">
           <feedback>
             <p>Debugging is the process of fixing errors in your code.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!</p>
           </feedback>

@@ -89,12 +89,12 @@ level elements in the <c>findall</c> statement expect for the top level element.
     </statement>
     <setup>
       <var>
-        <condition string="^\s*parent\s*$">
+        <condition string="parent">
           <feedback>
             <p>It is important to include all parent level elements. These are the outside elements that contain the other elements.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Not the children but the _______.</p>
           </feedback>

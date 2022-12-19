@@ -53,12 +53,12 @@ print(counts)
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Nn]ested\s+[Ll]oop\s*$">
+        <condition string="[Nn]ested\s+[Ll]oop">
           <feedback>
             <p>Correct! A nested loop contains two for loops where the inner loop executes all its iterations every time the outer loop completes one loop.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!</p>
           </feedback>

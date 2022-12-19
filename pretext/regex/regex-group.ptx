@@ -88,12 +88,12 @@ print(y)
       </statement>
       <setup>
         <var>
-          <condition string="^\s*list\s*$">
+          <condition string="list">
             <feedback>
               <p>The findall method returns a list of items that matched</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>What type of thing was last printed?</p>
             </feedback>
@@ -107,17 +107,17 @@ print(y)
       </statement>
       <setup>
         <var>
-          <condition string="^\s*None\s*$">
+          <condition string="None">
             <feedback>
               <p>The search method returns None if no match was found</p>
             </feedback>
           </condition>
-          <condition string="^\s*none\s*$">
+          <condition string="none">
             <feedback>
               <p>Remember that this keyword starts with a capital letter</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>What was the second thing printed?</p>
             </feedback>
@@ -131,12 +131,12 @@ print(y)
       </statement>
       <setup>
         <var>
-          <condition string="^\s*search\s*$">
+          <condition string="search">
             <feedback>
               <p>The search method returns a MatchObject</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Look at the code above.</p>
             </feedback>
@@ -224,17 +224,17 @@ print(res5)
       </statement>
       <setup>
         <var>
-          <condition string="^\s*\\d\s*$">
+          <condition string="\\d">
             <feedback>
               <p>The backslash d is used to match any digit</p>
             </feedback>
           </condition>
-          <condition string="^\s*d\s*$">
+          <condition string="d">
             <feedback>
               <p>You are missing something before the d</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Run the code above</p>
             </feedback>
@@ -621,12 +621,12 @@ print(res2)
       </statement>
       <setup>
         <var>
-          <condition string="^\s*\?\s*$">
+          <condition string="\?">
             <feedback>
               <p>Adding the ? will make it not greedy</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Look at the code above.</p>
             </feedback>

@@ -27,12 +27,12 @@
           </statement>
           <setup>
             <var>
-              <condition string="^\s*[Uu][Nn][Ii][Qq][Uu][Ee]\s*$">
+              <condition string="[Uu][Nn][Ii][Qq][Uu][Ee]">
                 <feedback>
                   <p>A UNIQUE constraint is often used with a logical key, since it doesn't make sense to allow multiple rows with the same identifier.</p>
                 </feedback>
               </condition>
-              <condition string="^\s*.*\s*$">
+              <condition string=".*">
                 <feedback>
                   <p>Try again.</p>
                 </feedback>
@@ -90,12 +90,12 @@
     </statement>
     <setup>
       <var>
-        <condition string="^\s*3|three\s*$">
+        <condition string="3|three">
           <feedback>
             <p>Generally, there are three kinds of keys used in a database model, logical, primary, and foreign.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again.</p>
           </feedback>

@@ -42,12 +42,12 @@ IndexError: string index out of range
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Ii]ndex([Ee]rror)?\s*$">
+        <condition string="[Ii]ndex([Ee]rror)?">
           <feedback>
             <p>Correct! Try to access an index that isn't there causes a index error.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Incorrect! Read the error message above for the answer. Try again.</p>
           </feedback>
@@ -71,12 +71,12 @@ if line.startswith('#'):
     </statement>
     <setup>
       <var>
-        <condition string="^\s*(\.)?startswith(\(\))?\s*$">
+        <condition string="(\.)?startswith(\(\))?">
           <feedback>
             <p>Correct! The string method startswith can be used as an extra check to prevent errors.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Incorrect! Watch your capitalization (methods don't use camelCase). Try again.</p>
           </feedback>
@@ -99,12 +99,12 @@ if len(line) &gt; 0 and line[0] == '#':
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Gg]uardian(\s+[Pp]attern)?\s*$">
+        <condition string="[Gg]uardian(\s+[Pp]attern)?">
           <feedback>
             <p>Correct! A guardian pattern can be used as an extra check to prevent errors.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Incorrect! Make sure you spelled it correctly. Try again.</p>
           </feedback>

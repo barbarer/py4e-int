@@ -63,12 +63,12 @@ print(host)
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Ff]ind\s*$">
+        <condition string="[Ff]ind">
           <feedback>
             <p>Correct! <c>find</c> is used to search through a string and select a specific substring.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Incorrect! You can <em>find</em> the answer by rereading this section. Try again.</p>
           </feedback>

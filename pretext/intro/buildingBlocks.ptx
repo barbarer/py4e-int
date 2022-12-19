@@ -89,17 +89,17 @@
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Oo]utput\s*$">
+        <condition string="[Oo]utput">
           <feedback>
             <p>A CD displays the results of a program when the disc is played.</p>
           </feedback>
         </condition>
-        <condition string="^\s*[Ii]nput\s*$">
+        <condition string="[Ii]nput">
           <feedback>
             <p>Not quite. Is the CD being read from or written to?</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again.</p>
           </feedback>
@@ -113,17 +113,17 @@
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Ii]nput\s*$">
+        <condition string="[Ii]nput">
           <feedback>
             <p>A CD holds information that the program reads.</p>
           </feedback>
         </condition>
-        <condition string="^\s*[Oo]utput\s*$">
+        <condition string="[Oo]utput">
           <feedback>
             <p>Not quite. Is the CD being read from or written to?</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again.</p>
           </feedback>

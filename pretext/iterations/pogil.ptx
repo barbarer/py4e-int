@@ -270,17 +270,17 @@ for i in range(5): #this line prints nothing
       </statement>
       <setup>
         <var>
-          <condition string="^\s*range\(4\)\s*$">
+          <condition string="range\(4\)">
             <feedback>
               <p>Correct! With one parameter, the sequence will start at 0 and end at one less than the specified value.</p>
             </feedback>
           </condition>
-          <condition string="^\s*range\(3\)\s*$">
+          <condition string="range\(3\)">
             <feedback>
               <p>Incorrect! The last number of the sequence is equal to the specified value - 1. Try again.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Incorrect! Make sure you only use one parameter and write your answer in the form <q>range(x)</q>. Try again.</p>
             </feedback>
@@ -297,17 +297,17 @@ for i in range(5): #this line prints nothing
       </statement>
       <setup>
         <var>
-          <condition string="^\s*range\(1,\s+5\)|range\(1,5\)\s*$">
+          <condition string="range\(1,\s+5\)|range\(1,5\)">
             <feedback>
               <p>Correct! The sequence will start at 1 and end at one less than the second value.</p>
             </feedback>
           </condition>
-          <condition string="^\s*range\(1,\s+5\)|range\(1,4\)\s*$">
+          <condition string="range\(1,\s+5\)|range\(1,4\)">
             <feedback>
               <p>Incorrect! Remember that the range starts at the first value but ends before the second value.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Incorrect! Make sure you use two parameters and write your answer in the form <q>range(x, y)</q>. Try again.</p>
             </feedback>
@@ -326,12 +326,12 @@ for i in range(5): #this line prints nothing
       </statement>
       <setup>
         <var>
-          <condition string="^\s*range\(1,\s+8,\s+2\)|range\(1,\s+9,\s+2\)|range\(1,8,2\)|range\(1,9,2\)\s*$">
+          <condition string="range\(1,\s+8,\s+2\)|range\(1,\s+9,\s+2\)|range\(1,8,2\)|range\(1,9,2\)">
             <feedback>
               <p>Correct! With three parameters, the sequence will start at 1 and increment by 2 until it lists 7.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Incorrect! Make sure you use three parameters and write your answer in the form <q>range(x, y, z)</q>. Try again.</p>
             </feedback>

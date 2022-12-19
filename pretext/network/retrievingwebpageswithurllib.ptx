@@ -13,12 +13,12 @@
     </statement>
     <setup>
       <var>
-        <condition string="^\s*urllib\s*$">
+        <condition string="urllib">
           <feedback>
             <p>The urllib library treats a web page like a file and makes it much easier to parse the page.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again! What python library would be most useful for parsing a web page?</p>
           </feedback>

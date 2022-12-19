@@ -121,12 +121,12 @@ myTests().main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*myTests\s*$">
+          <condition string="myTests">
             <feedback>
               <p>This defines the class myTests</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>What is the name after the class keyword?</p>
             </feedback>
@@ -140,12 +140,12 @@ myTests().main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*TestCaseGui\s*$">
+          <condition string="TestCaseGui">
             <feedback>
               <p>The parent is TestCaseGui</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>What is the name in the () after the class name?</p>
             </feedback>

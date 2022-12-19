@@ -91,12 +91,12 @@ print_contents("dogs.txt")
       </statement>
       <setup>
         <var>
-          <condition string="^\s*rstrip|strip\s*$">
+          <condition string="rstrip|strip">
             <feedback>
               <p>You can use rstrip or strip to remove the newline character.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>What method removes whitespace from the right side of a string?</p>
             </feedback>
@@ -111,12 +111,12 @@ print_contents("dogs.txt")
       </statement>
       <setup>
         <var>
-          <condition string="^\s*'?file'?\s*$">
+          <condition string="'?file'?">
             <feedback>
               <p>It is an object of the file class.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>What is the class name that was printed?</p>
             </feedback>
@@ -158,12 +158,12 @@ print_contents("dogs.txt")
       </statement>
       <setup>
         <var>
-          <condition string="^\s*close\s*$">
+          <condition string="close">
             <feedback>
               <p>This will close the file object.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Look at the example Python code above.</p>
             </feedback>
@@ -268,12 +268,12 @@ print_contents("unknown.txt")
       </statement>
       <setup>
         <var>
-          <condition string="^\s*except\s*$">
+          <condition string="except">
             <feedback>
               <p>The code specified in the body of the except will run if there is an exception when the code in the body fo the try runs.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Look at the example Python code above.</p>
             </feedback>
@@ -377,12 +377,12 @@ print_contents("dogs.txt")
       </statement>
       <setup>
         <var>
-          <condition string="^\s*dictionary\s*$">
+          <condition string="dictionary">
             <feedback>
               <p>It will return a dictionary with the counts of the number of lines in the file that start with a character.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>What type of thing is b_dict?</p>
             </feedback>

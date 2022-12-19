@@ -102,12 +102,12 @@ print(t)
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Vv]oid\s*$">
+        <condition string="[Vv]oid">
           <feedback>
             <p>Most list methods are void meaning they don't return anything.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again! (Remember that functions are either fruitful or void)</p>
           </feedback>

@@ -401,12 +401,12 @@ unittest.main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*next\(?\)?\s*$">
+          <condition string="next\(?\)?">
             <feedback>
               <p>Use the function <c>next</c> to read a single row</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Look at the code above. How do we read the header row?</p>
             </feedback>

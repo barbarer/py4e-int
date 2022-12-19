@@ -115,17 +115,17 @@ print(x &gt;= 2 and (x/y) &gt; 2 and y != 0)
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Tt]rue\s*$">
+        <condition string="[Tt]rue">
           <feedback>
             <p>A guard is used to avoid runtime errors.</p>
           </feedback>
         </condition>
-        <condition string="^\s*[Ff]alse\s*$">
+        <condition string="[Ff]alse">
           <feedback>
             <p>Try again! A guard is used to avoid runtime errors.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!</p>
           </feedback>

@@ -84,12 +84,12 @@ print(str(3.14159))
     </statement>
     <setup>
       <var>
-        <condition string="^\s*float\s*$">
+        <condition string="float">
           <feedback>
             <p>Correct! The float function takes any value and converts it to a floating point number.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Incorrect! The function has an intuitive name. Try again.</p>
           </feedback>

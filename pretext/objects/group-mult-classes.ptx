@@ -39,17 +39,17 @@
       </statement>
       <setup>
         <var>
-          <condition string="^\s*MA\s*$">
+          <condition string="MA">
             <feedback>
               <p>It prints the initials of the object p2.</p>
             </feedback>
           </condition>
-          <condition string="^\s*BE\s*$">
+          <condition string="BE">
             <feedback>
               <p>Not quite. These are the initials of the object p.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>What does the initials method return?</p>
             </feedback>
@@ -98,17 +98,17 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*3|three|Three\s*$">
+          <condition string="3|three|Three">
             <feedback>
               <p>Good job!  It inherits two from Person and has an id</p>
             </feedback>
           </condition>
-          <condition string="^\s*1|one|One\s*$">
+          <condition string="1|one|One">
             <feedback>
               <p>Not quite.  It has an id, but inherits some as well</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>The attributes are initialized in the __init__ method</p>
             </feedback>
@@ -122,17 +122,17 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*Person\s*$">
+          <condition string="Person">
             <feedback>
               <p>Yes, it is defined in the Person class and the Employee class inherits it.</p>
             </feedback>
           </condition>
-          <condition string="^\s*Employee\s*$">
+          <condition string="Employee">
             <feedback>
               <p>Not quite.  Where is the method defined?</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Which class is it inside of?</p>
             </feedback>
@@ -146,17 +146,17 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*Employee\s*$">
+          <condition string="Employee">
             <feedback>
               <p>Yes, Employee is the child class.</p>
             </feedback>
           </condition>
-          <condition string="^\s*Person\s*$">
+          <condition string="Person">
             <feedback>
               <p>No, this is the parent class.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Which class inherits from another class?</p>
             </feedback>
@@ -243,12 +243,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*Good\s+Morning\s*$">
+          <condition string="Good\s+Morning">
             <feedback>
               <p>It prints the default value of the message in Greeter.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>What does message get set to by default in __init__?</p>
             </feedback>
@@ -262,12 +262,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*Go\s+Away\s*$">
+          <condition string="Go\s+Away">
             <feedback>
               <p>It prints the value of the message after the Grump is initialized.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>What does the message get set to in the Grump __init__ method?</p>
             </feedback>
@@ -356,12 +356,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*Pizza\s*$">
+          <condition string="Pizza">
             <feedback>
               <p>It prints returned string from favorite_food on a Student object.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>What does Student's favorite_food return?</p>
             </feedback>
@@ -375,12 +375,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*Sushi\s*$">
+          <condition string="Sushi">
             <feedback>
               <p>It prints returned string from favorite_food on a GradStudent object.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>What does GradStudent's favorite_food return?</p>
             </feedback>

@@ -56,12 +56,12 @@
       </statement>
       <setup>
         <var>
-          <condition string="^\s*Jk\s*$">
+          <condition string="Jk">
             <feedback>
               <p>It prints the first letter of the first name and last letter of the last name.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>String indices start with 0 and -1 is the index of the last letter in a string.</p>
             </feedback>
@@ -112,12 +112,12 @@ myTests().main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*'?str'?\s*$">
+          <condition string="'?str'?">
             <feedback>
               <p>A string in Python is an object of the str class.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>What is the class name printed by print(type(<q>Hello</q>))?</p>
             </feedback>
@@ -131,12 +131,12 @@ myTests().main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*'?int'?\s*$">
+          <condition string="'?int'?">
             <feedback>
               <p>An integer in Python is an object of the int class.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>What is the class name printed by print(type(42))?</p>
             </feedback>
@@ -150,12 +150,12 @@ myTests().main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*\+\s*$">
+          <condition string="\+">
             <feedback>
               <p>Use + to append one string after another in Python.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Check the code above and try again.</p>
             </feedback>
@@ -172,12 +172,12 @@ myTests().main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*Sibs\s*$">
+          <condition string="Sibs">
             <feedback>
               <p>The last thing it prints are the first two letters of the first name and the last two letters of the last name.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>A slice starts with the first number and ends before the second.  If the second is left off it goes to the end of the string. The last character in a string is at index -1.</p>
             </feedback>
@@ -215,12 +215,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*dna\[0\:3\]|\[:3\]\s*$">
+          <condition string="dna\[0\:3\]|\[:3\]">
             <feedback>
               <p>This will return a new string with the characters from index 0 to 2.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Look at the note above and try again.</p>
             </feedback>
@@ -234,12 +234,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*dna\[-3\:\]\s*$">
+          <condition string="dna\[-3\:\]">
             <feedback>
               <p>This will return a new string with the last three characters in it.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Read about negative indicies in Python and try again.</p>
             </feedback>
@@ -253,12 +253,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition number="[0, 0]">
+          <condition number="0">
             <feedback>
               <p>A slice starts at index 0 if the start isn't specified.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Look at the code above and try again.</p>
             </feedback>
@@ -303,12 +303,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*len\s*$">
+          <condition string="len">
             <feedback>
               <p>The len function takes a string and returns the number of characters in it.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Look at the example code above.</p>
             </feedback>
@@ -374,12 +374,12 @@ get_name()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*int\s*$">
+          <condition string="int">
             <feedback>
               <p>This will convert a string to an integer</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Look at the code above and try again.</p>
             </feedback>
@@ -393,12 +393,12 @@ get_name()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*str\s*$">
+          <condition string="str">
             <feedback>
               <p>This will convert a number to a string.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Look at the code above and try again.</p>
             </feedback>
@@ -416,12 +416,12 @@ get_name()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*malana_coffy\s*$">
+          <condition string="malana_coffy">
             <feedback>
               <p>This will return the first name in lowercase followed by a _ and then the last name in lowercase.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Remember that string methods don't change the original string.</p>
             </feedback>
@@ -462,12 +462,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition number="[-1, -1]">
+          <condition number="-1">
             <feedback>
               <p>If the character isn't in the string find returns -1.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Check the output of find(&#x2018;z') above</p>
             </feedback>

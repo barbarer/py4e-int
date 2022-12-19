@@ -49,12 +49,12 @@
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Ss]hape\s+[Ee]rror\s*$">
+        <condition string="[Ss]hape\s+[Ee]rror">
           <feedback>
             <p>Correct! A shape error is more likely to occur when working with compound data structures.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Incorrect! If you need a refresher, reread the opening paragraphs of this section. Try again.</p>
           </feedback>

@@ -27,12 +27,12 @@
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Ss]paces\s*$">
+        <condition string="[Ss]paces">
           <feedback>
             <p>The best way to avoid problems with spacing is to use spaces exclusively.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Incorrect! Which of those two options should you use? Try again.</p>
           </feedback>
@@ -46,12 +46,12 @@
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Ss]ave\s*$">
+        <condition string="[Ss]ave">
           <feedback>
             <p>Saving frequently will keep your code up to date.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Incorrect! When you make changes to your code, what do you have to do? Try again.</p>
           </feedback>

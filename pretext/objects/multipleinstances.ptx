@@ -51,12 +51,12 @@ Sally party count 2</pre>
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Cc]onstructor\s*$">
+        <condition string="[Cc]onstructor">
           <feedback>
             <p>Yes, constructors can be used to initialize objects with initial values.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!</p>
           </feedback>

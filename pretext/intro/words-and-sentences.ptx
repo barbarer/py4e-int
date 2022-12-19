@@ -146,12 +146,12 @@ print('Hello world!')
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Rr]eserved\s*$">
+        <condition string="[Rr]eserved">
           <feedback>
             <p>Reserved words already have a meaning in Python that cannot be changed, like <b>print</b> or <b>for</b>.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again!</p>
           </feedback>

@@ -54,12 +54,12 @@
       </statement>
       <setup>
         <var>
-          <condition number="[1, 1]">
+          <condition number="1">
             <feedback>
               <p>It will print the number of values that are odd in the first list, which is one.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Run the code to check.</p>
             </feedback>
@@ -73,12 +73,12 @@
       </statement>
       <setup>
         <var>
-          <condition number="[0, 0]">
+          <condition number="0">
             <feedback>
               <p>It will print the number of values that are odd in the last list which is zero.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Run the code to check.</p>
             </feedback>
@@ -120,12 +120,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*num\s*$">
+          <condition string="num">
             <feedback>
               <p>The for-each loop uses num to refer to the current list item.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>What is the first name in the for-each loop?</p>
             </feedback>
@@ -189,12 +189,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition number="[0, 0]">
+          <condition number="0">
             <feedback>
               <p>The code prints from 0 to the passed end.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Run the code and see.</p>
             </feedback>
@@ -208,12 +208,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition number="[2, 2]">
+          <condition number="2">
             <feedback>
               <p>The code prints from 0 to the passed end (exclusive).  The end is 3 which means the last value is 2.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>What is the parameter in the second call to count_to?</p>
             </feedback>
@@ -252,12 +252,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition number="[1, 1]">
+          <condition number="1">
             <feedback>
               <p>The code prints from start (inclusive) to the passed end (exclusive) and the start is one.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Run the code and see.</p>
             </feedback>
@@ -271,12 +271,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition number="[9, 9]">
+          <condition number="9">
             <feedback>
               <p>The code prints from start (inclusive) to the passed end (exclusive) so it ends with 9.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Run the code and see.</p>
             </feedback>
@@ -315,12 +315,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition number="[10, 10]">
+          <condition number="10">
             <feedback>
               <p>The code prints from start (inclusive) to the passed end (exclusive) and the start is ten.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Run the code and see.</p>
             </feedback>
@@ -334,12 +334,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition number="[9, 9]">
+          <condition number="9">
             <feedback>
               <p>The code prints from start (inclusive) which is 1 to the passed end (exclusive) which is 10 and changes by 2 each time so the end is 9.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Run the code and see.</p>
             </feedback>
@@ -437,12 +437,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*break\s*$">
+          <condition string="break">
             <feedback>
               <p>The break keyword will stop the enclosing loop.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>How does the code stop above?</p>
             </feedback>

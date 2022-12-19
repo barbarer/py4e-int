@@ -53,12 +53,12 @@ fhand.close()
     </statement>
     <setup>
       <var>
-        <condition string="^\s*Content-Type\s*$">
+        <condition string="Content-Type">
           <feedback>
             <p>Yes, the &#x2018;Content-Type' header has value <q>image/jpeg</q> to denote its a jpeg image.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Try again! This has to be an exact match.</p>
           </feedback>

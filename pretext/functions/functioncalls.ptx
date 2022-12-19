@@ -46,12 +46,12 @@ print(result)
     </statement>
     <setup>
       <var>
-        <condition string="^\s*[Ff]unction\s*$">
+        <condition string="[Ff]unction">
           <feedback>
             <p>Correct! A function is a named sequence of statements that performs a computation.</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string=".*">
           <feedback>
             <p>Incorrect! <c>type</c> is an example of one of these. Try again.</p>
           </feedback>

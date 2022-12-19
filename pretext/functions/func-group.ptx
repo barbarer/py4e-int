@@ -51,17 +51,17 @@
       </statement>
       <setup>
         <var>
-          <condition string="^\s*Hello!\s*$">
+          <condition string="Hello!">
             <feedback>
               <p>The main function prints this before it calls the test function.</p>
             </feedback>
           </condition>
-          <condition string="^\s*Welcome\s*$">
+          <condition string="Welcome">
             <feedback>
               <p>Execution starts in the main method, so this won't be the first thing that is printed.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Execution starts in the main method</p>
             </feedback>
@@ -75,12 +75,12 @@
       </statement>
       <setup>
         <var>
-          <condition string="^\s*Welcome\s*$">
+          <condition string="Welcome">
             <feedback>
               <p>This is the first thing printed in the test function.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Run the code and check.</p>
             </feedback>
@@ -94,12 +94,12 @@
       </statement>
       <setup>
         <var>
-          <condition number="[1, 1]">
+          <condition number="1">
             <feedback>
               <p>Prints the value returned from the function test which is the remainder of 5 divided by 2 which is one.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>What is the remainder of 5 divided by 2?</p>
             </feedback>
@@ -147,12 +147,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition number="[2, 2]">
+          <condition number="2">
             <feedback>
               <p>Since the value of b was not specified it defaults to 2 (it was set to 2 as a default in the function definition)</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>What is the default value specified for b in the function definition?</p>
             </feedback>
@@ -166,12 +166,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*return\s*$">
+          <condition string="return">
             <feedback>
               <p>The return keyword is used to return a value from a function</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>What word starts the last line of the test function?</p>
             </feedback>
@@ -185,12 +185,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*print\s*$">
+          <condition string="print">
             <feedback>
               <p>The print function will display a value in Python.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Look at the example Python code above.</p>
             </feedback>
@@ -205,12 +205,12 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="^\s*None\s*$">
+          <condition string="None">
             <feedback>
               <p>A function without a return still returns the keyword None</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>What is the last thing that is printed when you run the code above after deleting the return from the test function?</p>
             </feedback>
@@ -468,12 +468,12 @@ def main():
       </statement>
       <setup>
         <var>
-          <condition string="^\s*\:\s*$">
+          <condition string="\:">
             <feedback>
               <p>A : is used to indicate the start of the body of a function.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>It is the last character on the function header.</p>
             </feedback>
@@ -487,12 +487,12 @@ def main():
       </statement>
       <setup>
         <var>
-          <condition string="^\s*#\s*$">
+          <condition string="#">
             <feedback>
               <p>A # is used to start a comment.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Comments explain the code, try again</p>
             </feedback>
@@ -506,17 +506,17 @@ def main():
       </statement>
       <setup>
         <var>
-          <condition string="^\s*def\s*$">
+          <condition string="def">
             <feedback>
               <p>Use def to start a function definition.</p>
             </feedback>
           </condition>
-          <condition string="^\s*Def\s*$">
+          <condition string="Def">
             <feedback>
               <p>Remember that case matters in Python.  All keywords start with a lower case letter.</p>
             </feedback>
           </condition>
-          <condition string="^\s*.*\s*$">
+          <condition string=".*">
             <feedback>
               <p>Try again!</p>
             </feedback>

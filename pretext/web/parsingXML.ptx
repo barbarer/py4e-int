@@ -7,7 +7,7 @@
 
         <exercise>
             <statement>
-    <p>csp-10-2-1: What is the last thing (last line of text) that will be printed when the code below runs? <var/>  </p></statement><setup><var><condition string="^\s*['&quot;]?Attr\s*$"><feedback><p>['"]?yes['"]?: It prints <q>Attr: </q> plus the value of the hide attribute in the email tag.</p></feedback></condition><condition string="^\s*['&quot;]?yes['&quot;]?\s*$"><feedback><p>Something will be printed before the value. Look at the print statement again.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value of the hide attribute?</p></feedback></condition></var></setup></exercise>        <p>Here is a simple application that parses some XML and extracts some data
+    <p>csp-10-2-1: What is the last thing (last line of text) that will be printed when the code below runs? <var/>  </p></statement><setup><var><condition string="['&quot;]?Attr"><feedback><p>['"]?yes['"]?: It prints <q>Attr: </q> plus the value of the hide attribute in the email tag.</p></feedback></condition><condition string="['&quot;]?yes['&quot;]?"><feedback><p>Something will be printed before the value. Look at the print statement again.</p></feedback></condition><condition string=".*"><feedback><p>What is the value of the hide attribute?</p></feedback></condition></var></setup></exercise>        <p>Here is a simple application that parses some XML and extracts some data
             elements from the XML:</p>
 
 <exercise label="xml_parse_person_ac1">
@@ -54,7 +54,7 @@ print('Attr:', tree.find('email').get('hide'))
 
         <exercise>
             <statement>
-    <p>csp-10-2-3: What is the last thing (last line of text) that will be printed when the code below runs? <var/>  </p></statement><setup><var><condition string="^\s*['&quot;]?Attr\s*$"><feedback><p>None[""]?: The default is to print None if there is no attribute with that name when you use <c>.get('name')</c>.</p></feedback></condition><condition string="^\s*['&quot;]?None['&quot;]?\s*$"><feedback><p>Something will be printed before the value. Look at the print statement again.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the default value when there is no attribute with that name?</p></feedback></condition></var></setup></exercise>
+    <p>csp-10-2-3: What is the last thing (last line of text) that will be printed when the code below runs? <var/>  </p></statement><setup><var><condition string="['&quot;]?Attr"><feedback><p>None[""]?: The default is to print None if there is no attribute with that name when you use <c>.get('name')</c>.</p></feedback></condition><condition string="['&quot;]?None['&quot;]?"><feedback><p>Something will be printed before the value. Look at the print statement again.</p></feedback></condition><condition string=".*"><feedback><p>What is the default value when there is no attribute with that name?</p></feedback></condition></var></setup></exercise>
 <exercise label="xml_parse_person_wihtout_attr_ac1">
     <statement>
             <p>Run this to see what it prints.</p>
