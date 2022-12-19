@@ -2,13 +2,13 @@
 <section xml:id="pictures_changing-step-6-changing-where-we-put-the-colors">
   <title>Changing Step 6: Changing where we put the colors</title>
   <p>We have been getting a list of all of the pixels from an image using <c>img.getPixels()</c> and then looping through all the pixels using <c>for p in pixels:</c>.  This processed all the pixels in the first row, then all the pixels in the second row, and so on until it processed all the pixels in the image.</p>
-  <figure align="center" xml:id="id1">
+  <figure align="center" xml:id="fig_change_color_id1">
     <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: The order that pixels are processed if you use <literal>img.getPixels()</literal></caption>
     <image source="pictures/Figures/rowOrder.png" width="50%"/>
   </figure>
   <p>We can also loop through all the x and y values in the image and then use the current (x,y) location to get the pixel from the image.  This approach uses two <c>for</c> loops with one inside of the other.  This is called a <term>nested loop</term>. See step 3 below for the nested loop.  Also, notice that we now need to get the pixel at the (x,y) location in step 4 as well.</p>
   <p>Since the outer loop changes the  x (the column) and the inner loop changes the y (the row), we will be processing all the pixels in the first column, then all the pixels in the second column, and so on until we process all the pixels in the image.  The order doesn't matter if we are just setting the red to zero at every pixel as shown below.</p>
-  <figure align="center" xml:id="id2">
+  <figure align="center" xml:id="fig_change_color_id2">
     <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: The order that pixels are processed if you use a nested loop with x changing in the outer loop and y changing in the inner loop.</caption>
     <image source="pictures/Figures/colOrder.png" width="50%"/>
   </figure>

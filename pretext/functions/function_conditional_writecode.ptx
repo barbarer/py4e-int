@@ -46,19 +46,6 @@ def cropped_photo(height, width):
     else:
         return "The photo needs to be cropped."
         </input></program>
-
-                    
-
-<exercise label="funct_conditional_writecode1a"><statement><p>Write a function called <c>cropped_photo</c> that takes the <c>height</c> and <c>width</c> of a photo.
-                            If the <c>height</c> and <c>width</c> are equal, then the function returns <c>"Cropped Photo"</c>. Otherwise,
-                            it returns <c>"The photo needs to be cropped."</c> Assume <c>height</c> and <c>width</c> are positive. For example,
-                            <c>cropped_photo(23.2, 23.2)</c> should return <c>"Cropped Photo"</c>.</p></statement><program xml:id="funct_conditional_writecode1a_editor" interactive="activecode" language="python"><input>
-def cropped_photo(height, width):
-    if height == width:
-        return "Cropped Photo"
-    else:
-        return "The photo needs to be cropped."
-        </input></program></exercise>
                     </solution>
         </exercise>
       </li>
@@ -140,20 +127,6 @@ def move_elevator(current_floor, next_floor):
     else:
         return 0
         </input></program>
-
-                    
-
-<exercise label="funct_conditional_writecode3a"><statement><p>Write a function called <c>move_elevator</c> that takes two parameters, <c>current_floor</c> and <c>next_floor</c>. If the elevator moves
-                            to a floor above, then it should return <c>"Up"</c>. Otherwise, it should return <c>"Down"</c>. Also, if <c>next_floor</c> is the same as <c>current_floor</c>, it should return 0.
-                            Assume there are no 0 or negative floors. For example, <c>move_elevator(5, 8)</c> should return <c>"Up"</c>.</p></statement><program xml:id="funct_conditional_writecode3a_editor" interactive="activecode" language="python"><input>
-def move_elevator(current_floor, next_floor):
-    if next_floor &lt; current_floor:
-        return "Down"
-    elif next_floor &gt; current_floor:
-        return "Up"
-    else:
-        return 0
-        </input></program></exercise>
                     </solution>
         </exercise>
       </li>
@@ -238,21 +211,6 @@ def pay_rent(units):
     else:
         return "$300"
         </input></program>
-
-                    
-
-<exercise label="funct_conditional_writecode5a"><statement><p>Write a function called <c>pay_rent</c> that takes in one parameter,
-                            <c>units</c>. If <c>units</c> is less than 200, return <c>"$100"</c>.
-                            If <c>units</c> is less than 500 and greater than or equal to 200, return <c>"$200"</c>. Otherwise, return <c>"$300"</c>.
-                            For example, <c>pay_rent(175)</c> should return <c>"$100"</c>.</p></statement><program xml:id="funct_conditional_writecode5a_editor" interactive="activecode" language="python"><input>
-def pay_rent(units):
-    if units &lt; 200:
-        return "$100"
-    elif units &lt; 500:
-        return "$200"
-    else:
-        return "$300"
-        </input></program></exercise>
                     </solution>
         </exercise>
       </li>

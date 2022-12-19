@@ -40,16 +40,8 @@ myTests().main()
 def start_a(string):
     return string.startswith('a')
         </input></program>
-
-                    
-
-<exercise label="funct-strings-writecode1a"><statement><p>Write a function called <c>start_a</c> that takes in <c>string</c> as a parameter and
-                            returns <c>True</c> if the <c>string</c> starts with a lowercase a and <c>False</c> otherwise. For example,
-                            <c>start_a('apple')</c> should return <c>True</c>.</p></statement><program xml:id="funct-strings-writecode1a_editor" interactive="activecode" language="python"><input>
-def start_a(string):
-    return string.startswith('a')
-        </input></program></exercise>
                     </solution>
+                    
         </exercise>
       </li>
       <li>
@@ -117,17 +109,6 @@ myTests().main()
 def use_semicolon(sentence1, sentence2):
     return sentence1[:-1] + '; ' + sentence2[0].lower() + sentence2[1:]
         </input></program>
-
-                    
-
-<exercise label="funct-strings-writecode3a"><statement><p>Write a function called <c>use_semicolon</c> that takes in <c>sentence1</c> and <c>sentence2</c> as parameters and
-                            returns both sentences joined by a semicolon with the correct grammar. This means that <c>sentence1</c> shouldn't have a terminal punctuation mark,
-                            there should be a space after the semicolon, and <c>sentence2</c> should start with a lowercase letter.
-                            For example, <c>use_semicolon('The sun is bright.', "Let's go outside.")</c> should return <c>"The sun is bright; let's go outside."</c>.
-                            (Note: Assume both <c>sentence1</c> and <c>sentence2</c> are simple and complete sentences with proper grammar.)</p></statement><program xml:id="funct-strings-writecode3a_editor" interactive="activecode" language="python"><input>
-def use_semicolon(sentence1, sentence2):
-    return sentence1[:-1] + '; ' + sentence2[0].lower() + sentence2[1:]
-        </input></program></exercise>
                     </solution>
         </exercise>
       </li>
@@ -200,17 +181,8 @@ def first_a_gone(string):
     capture_a = string.find('a')
     return string[:capture_a] + string[capture_a + 1:]
         </input></program>
-
-                    
-
-<exercise label="funct-strings-writecode5a"><statement><p>Write a function called <c>first_a_gone</c> that takes in <c>string</c> as a parameter and
-                            returns a new string without the first lowercase &#x2018;a'. For example, <c>first_a_gone('australia')</c> should return <c>"ustralia"</c>.
-                            (Note: Don't worry about accounting for strings that don't have a lowercase &#x2018;a'.)</p></statement><program xml:id="funct-strings-writecode5a_editor" interactive="activecode" language="python"><input>
-def first_a_gone(string):
-    capture_a = string.find('a')
-    return string[:capture_a] + string[capture_a + 1:]
-        </input></program></exercise>
                     </solution>
+                    
         </exercise>
       </li>
     </ol>

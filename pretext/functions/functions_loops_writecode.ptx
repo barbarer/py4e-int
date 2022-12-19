@@ -49,21 +49,6 @@ def list_starts_with_a(lst):
 
 print(list_starts_with_a(["alphabet", "apple", "banana", "coding", "amazing"]))
         </input></program>
-
-                    
-
-<exercise label="funct_loops_writecode1a"><statement><p>Write a function called <c>list_starts_with_a</c> that takes in <c>lst</c> as a parameter and returns a
-                            new list with the words from <c>lst</c> that start with <q>a</q>. For example, <c>list_starts_with_a(["alphabet", "apple", "banana", "coding", "amazing"])</c>
-                            would return <c>["alphabet", "apple", "amazing"]</c>.</p></statement><program xml:id="funct_loops_writecode1a_editor" interactive="activecode" language="python"><input>
-def list_starts_with_a(lst):
-    list_a = []
-    for word in lst:
-        if word.startswith('a'):
-            list_a.append(word)
-    return list_a
-
-print(list_starts_with_a(["alphabet", "apple", "banana", "coding", "amazing"]))
-        </input></program></exercise>
                     </solution>
         </exercise>
       </li>
@@ -141,24 +126,6 @@ def draw_square(num):
 
 print(draw_square(4))
         </input></program>
-
-                    
-
-<exercise label="funct_loops_writecode3a"><statement><p>Write a function called <c>draw_square</c> that takes in <c>num</c> as a parameter and returns a
-                            string that consists of a square made of <q>*</q> with the dimensions <c>num</c> times <c>num</c>. Note:
-                            ignore values that are less than or equal to zero. For example, <c>draw_square(4)</c> would return
-                            <c>"****\n****\n****\n****"</c>.</p></statement><program xml:id="funct_loops_writecode3a_editor" interactive="activecode" language="python"><input>
-def draw_square(num):
-    string1 = ""
-    for i in range(num):
-        if i &lt; (num - 1):
-            string1 += "*" * num + "\n"
-        else:
-            string1 += "*" * num
-    return string1
-
-print(draw_square(4))
-        </input></program></exercise>
                     </solution>
         </exercise>
       </li>
@@ -232,18 +199,6 @@ def factorial(num):
         total *= num
     return total
         </input></program>
-
-                    
-
-<exercise label="funct_loops_writecode5a"><statement><p>Write a function called <c>factorial</c> that takes in <c>num</c> as a parameter and returns the factorial value.
-                            Ignore checking numbers that are less than 1. For example, <c>factorial(5)</c> would return <c>120</c>.</p></statement><program xml:id="funct_loops_writecode5a_editor" interactive="activecode" language="python"><input>
-def factorial(num):
-    total = num
-    while num &gt; 1:
-        num -= 1
-        total *= num
-    return total
-        </input></program></exercise>
                     </solution>
         </exercise>
       </li>

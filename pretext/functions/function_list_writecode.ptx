@@ -40,14 +40,6 @@ myTests().main()
 def average_of_num_list(num_list):
     return sum(num_list) / len(num_list)
         </input></program>
-
-                    
-
-<exercise label="funct_list_writecode1a"><statement><p>Write a function called <c>average_of_num_list</c> that takes in a parameter <c>num_list</c> and returns the average of all the numbers in num_list.
-                            For example, <c>average_of_num_list([0, 20.8, 80, 5])</c> would return <c>26.45</c>.</p></statement><program xml:id="funct_list_writecode1a_editor" interactive="activecode" language="python"><input>
-def average_of_num_list(num_list):
-    return sum(num_list) / len(num_list)
-        </input></program></exercise>
                     </solution>
         </exercise>
       </li>
@@ -113,16 +105,8 @@ def remove_min_value(num_list):
     num_list.remove(min(num_list))
     return num_list
         </input></program>
-
-                    
-
-<exercise label="funct_list_writecode3a"><statement><p>Write a function called <c>remove_min_value</c> that takes in a parameter <c>num_list</c> and returns a <c>num_list</c> without the
-                            minimum value from <c>num_list</c>. For example, <c>remove_min_value([20, 4, 1203, 7482, 3])</c> would return <c>[20, 4, 1203, 7482]</c>.</p></statement><program xml:id="funct_list_writecode3a_editor" interactive="activecode" language="python"><input>
-def remove_min_value(num_list):
-    num_list.remove(min(num_list))
-    return num_list
-        </input></program></exercise>
                     </solution>
+                    
         </exercise>
       </li>
       <li>
@@ -195,18 +179,8 @@ def remove_indices_after_first_max_value(num_list):
     new_num_list = num_list[:index_value]
     return new_num_list
         </input></program>
-
-                    
-
-<exercise label="funct_list_writecode5a"><statement><p>Write a function called <c>remove_indices_after_first_max_value</c> that takes in a parameter <c>num_list</c> and
-                            returns a <c>new_num_list</c> with values up to the max value of the list. For example, <c>remove_indices_after_first_max_value([200, 10, 5, 200])</c>
-                            would return <c>[5, 10, 5, 200]</c>.</p></statement><program xml:id="funct_list_writecode5a_editor" interactive="activecode" language="python"><input>
-def remove_indices_after_first_max_value(num_list):
-    index_value = num_list.index(max(num_list)) + 1
-    new_num_list = num_list[:index_value]
-    return new_num_list
-        </input></program></exercise>
                     </solution>
+                    
         </exercise>
       </li>
       <li>

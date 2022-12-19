@@ -46,19 +46,6 @@ def recPerimeter(length, width):
     return perimeter
         </input></program>
 
-                    
-
-<exercise label="funct-ex-perimetera"><statement><p>Fix the 4 errors so the following code runs and returns the perimeter of a rectangle. For example, <c>recPerimeter(10, 20)</c> should return <c>60</c>.</p></statement><program xml:id="funct-ex-perimetera_editor" interactive="activecode" language="python"><input>
-# Function headers end with a colon (:)
-def recPerimeter(length, width):
-
-    # Indent four spaces after the header
-    perimeter = 2 * (length + width)
-
-    # Keyword return is lowercase
-    # Return the variable, not the function name
-    return perimeter
-        </input></program></exercise>
                     </solution>
         </exercise>
       </li>
@@ -130,19 +117,7 @@ def areaTriangle(base, height):
 print(areaTriangle(2, 6))
         </input></program>
 
-                    
 
-<exercise label="funct_ex_trianglea"><statement><p>Change the code so that <c>areaTriangle</c> takes parameters for the base and height of a triangle
-                            and computes its area. Then, write code to call the function and print the result. For example, <c>areaTriangle(12,45)</c> should return <c>270</c>.</p></statement><program xml:id="funct_ex_trianglea_editor" interactive="activecode" language="python"><input>
-# Give function base and height arguments
-def areaTriangle(base, height):
-    # Set area variable to the formula using arguments
-    area = (base * height) / 2
-    # Return the calculated area
-    return area
-# Call the function with arguments
-print(areaTriangle(2, 6))
-        </input></program></exercise>
                     </solution>
         </exercise>
       </li>
@@ -217,19 +192,6 @@ def nameAndAge(nameString, ageInt):
 
 print(nameAndAge("John", 18))
         </input></program>
-
-                    
-
-<exercise label="funct_ex_namea"><statement><p>Fix the errors on line 2 so the function <c>nameAndAge</c> returns
-                            the string <q>My name is <c>nameString</c> and I am <c>ageInt</c> years old.</q> For example, <c>nameAndAge("John", 18)</c> should return
-                            <c>"My name is John and I am 18 years old."</c></p></statement><program xml:id="funct_ex_namea_editor" interactive="activecode" language="python"><input>
-def nameAndAge(nameString, ageInt):
-    # Use quotes around strings, keep variables outside of quotes
-    # Include spacing so variables are not connected to words
-    return("My name is " + nameString + " and I am " + str(ageInt) + " years old.")
-
-print(nameAndAge("John", 18))
-        </input></program></exercise>
                     </solution>
         </exercise>
       </li>
@@ -316,20 +278,6 @@ def sumTo(n):
     # alternatively, you can accomplish this on one line:
     # return (n * (n + 1)) / 2
         </input></program>
-
-                    
-
-<exercise label="funct_ex_suma"><statement><p>Write a fruitful function <c>sumTo(n)</c> that returns the sum of all integer numbers up to and
-                            including <c>n</c>. For example, <c>sumTo(10)</c> would compute 1 + 2 + 3 + &#x2026; + 10 and return the value <c>55</c>.
-                            Use this equation to find this sum: (n * (n + 1)) / 2. For example, <c>sumTo(15)</c> should return <c>120.0</c>.</p></statement><program xml:id="funct_ex_suma_editor" interactive="activecode" language="python"><input>
-def sumTo(n):
-    # set result variable to given equation
-    result = (n * (n + 1)) / 2
-    # return the variable
-    return result
-    # alternatively, you can accomplish this on one line:
-    # return (n * (n + 1)) / 2
-        </input></program></exercise>
                     </solution>
         </exercise>
       </li>
@@ -405,21 +353,6 @@ def areaOfCircle(r):
     # Return the area
     return a
         </input></program>
-
-                    
-
-<exercise label="funct_ex_circlea"><statement><p>Write a function <c>areaOfCircle(r)</c> which returns the area of a circle of radius <c>r</c>.
-                            Make sure you import the math module in your solution to obtain an accurate value of pi.
-                            For example, <c>areaOfCircle(31415.926535897932)</c> should return <c>3100627668.0299816</c>.</p></statement><program xml:id="funct_ex_circlea_editor" interactive="activecode" language="python"><input>
-# Import the math module
-import math
-
-def areaOfCircle(r):
-    # Use ** to square r, then multiply by pi
-    a = r**2 * math.pi
-    # Return the area
-    return a
-        </input></program></exercise>
                     </solution>
         </exercise>
       </li>
@@ -514,30 +447,6 @@ def caught_speeding(speed, is_birthday):
         else:
             return 2
         </input></program>
-
-                    
-
-<exercise label="funct_ex_speedinga"><statement><p>You are driving a little too fast, and a police officer stops you. Write code to
-                            compute the kind of ticket you'll receive, encoded as an int value: 0 = no ticket, 1 =
-                            small ticket, and 2 = big ticket. If <c>speed</c> is 60 or less, return <c>0</c>. If <c>speed</c>
-                            is between 61 and 80 inclusive, return <c>1</c>. If <c>speed</c> is 81 or more, return <c>2</c>.
-                            If it is your birthday, your speed can be 5 higher in all cases. For example, <c>caught_speeding(60,False)</c> should return <c>0</c>.</p></statement><program xml:id="funct_ex_speedinga_editor" interactive="activecode" language="python"><input>
-def caught_speeding(speed, is_birthday):
-    if is_birthday:
-        if speed &lt;= 65:
-            return 0
-        elif speed &lt;= 85:
-            return 1
-        else:
-            return 2
-    else:
-        if speed &lt;= 60:
-            return 0
-        elif speed &lt;= 80:
-            return 1
-        else:
-            return 2
-        </input></program></exercise>
                     </solution>
         </exercise>
       </li>
@@ -629,27 +538,6 @@ def alarm_clock(day, vacation):
         else:
             return '7:00'
         </input></program>
-
-                    
-
-<exercise label="funct_ex_alarma"><statement><p>Write a function called <c>alarm_clock</c> that has parameters <c>day</c> and <c>vacation</c>. Given a <c>day</c> of the week encoded as 0 = Sun, 1 = Mon, 2 = Tue, &#x2026; 6 = Sat and a
-                            boolean indicating if we are on <c>vacation</c>, return a string indicating when the
-                            alarm clock should ring. If we are on <c>vacation</c> and it is a weekend (0 = Saturday
-                            or 6 = Sunday), it should return <c>"off"</c>, and otherwise return <c>"10:00"</c>. If
-                            we are not on <c>vacation</c> and it is a weekend, it should return <c>"10:00"</c>, and
-                            otherwise return <c>"7:00"</c>. For example, <c>alarm_clock(1, False)</c> should return <c>'7:00'</c>.</p></statement><program xml:id="funct_ex_alarma_editor" interactive="activecode" language="python"><input>
-def alarm_clock(day, vacation):
-    if vacation:
-        if (day == 0 or day == 6):
-            return 'off'
-        else:
-            return '10:00'
-    else:
-        if not vacation and (day == 0 or day == 6):
-            return '10:00'
-        else:
-            return '7:00'
-        </input></program></exercise>
                     </solution>
         </exercise>
       </li>

@@ -201,7 +201,8 @@ cur.execute('''INSERT OR IGNORE INTO Follows
     <p>Since over time it will be increasingly likely that the account will
                 already be in the database, we first check to see if the
                 <c>People</c> record exists using a <c>SELECT</c> statement.</p>
-    <p>If all goes well <footnote_reference auto="1" docname="database/multTables" xml:id="database_id1" refid="id2">1</footnote_reference> inside
+              <p>If all goes well <fn>In general, when a sentence starts with “if all goes well”, you will find that
+                    the code needs to use try/except.</fn> inside
                 the <c>try</c> section, we retrieve
                 the record using <c>fetchone()</c> and then retrieve the first
                 (and only) element of the returned tuple and store it in <c>friend_id</c>.</p>
@@ -327,10 +328,6 @@ Follows:
                 Twitter friends of <c>drchuck</c>. If you were to print more rows
                 from the <c>Follows</c> table, you would see the friends of users
                 2 and 3 as well.</p>
-    <footnote auto="1" backrefs="id1" docname="database/multTables" xml:id="database_id2" names="1">
-      <label>1</label>
-      <p>In general, when a sentence starts with <q>if all goes well</q> you will find that
-                    the code needs to use try/except.</p>
-    </footnote>
+    
   </subsection>
 </section>

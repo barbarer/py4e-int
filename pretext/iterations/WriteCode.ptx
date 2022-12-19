@@ -62,36 +62,6 @@ class myTests(TestCaseGui):
         self.assertEqual(output,"10 9 8 7 6 5 4 3 2 1 0 ")
 myTests().main()
         </input></program>
-
-            
-
-<exercise label="itr-ex-countdowna"><statement><p>Fix the 5 errors in the code below to return a countdown of the numbers from 10 to 0, including 0.</p></statement><program xml:id="itr-ex-countdowna_editor" interactive="activecode" language="python"><input>
-def countdown():
-    counter = 10
-    answer = ""
-
-    # Keep running loop until counter equals 0 (use &lt;=)
-    # Use correct variable name (counter is lowercase)
-    while counter &gt;= 0:
-        answer = answer + str(counter) + " "
-
-        # Decrement to lower the counter
-        counter = counter - 1
-
-    # Keyword return is lowercase
-    return answer
-
-# Call correct function name (countdown)
-countdown()
-
-====
-from unittest.gui import TestCaseGui
-class myTests(TestCaseGui):
-    def testOne(self):
-        output = countdown()
-        self.assertEqual(output,"10 9 8 7 6 5 4 3 2 1 0 ")
-myTests().main()
-        </input></program></exercise>
             </solution>
   </exercise>
   <exercise label="itr-ex-100Loopq">
@@ -160,33 +130,6 @@ class myTests(TestCaseGui):
         self.assertEqual(output,"-10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 ")
 myTests().main()
         </input></program>
-
-            
-
-<exercise label="itr-ex-counta"><statement><p>Make 5 changes to the code below to correctly print a count up from -10 to 0, including 0.</p></statement><program xml:id="itr-ex-counta_editor" interactive="activecode" language="python"><input>
-output = ""
-# Start x at -11 so it stays under 0
-x = -11
-
-# First line of a loop ends with a colon (:)
-while x &lt; 0:
-
-    # Since the iteration variable is negative, increase the count
-    x = x + 1
-
-    # Output reassignment is within the loop
-    output = output + str(x) + " "
-
-# Close print parentheses
-print(output)
-
-====
-from unittest.gui import TestCaseGui
-class myTests(TestCaseGui):
-    def testOne(self):
-        self.assertEqual(output,"-10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 ")
-myTests().main()
-        </input></program></exercise>
             </solution>
   </exercise>
   <exercise label="itr-ex-allValuesq">
@@ -257,25 +200,6 @@ class myTests(TestCaseGui):
 myTests().main()
         </input></program>
 
-            
-
-<exercise label="itr-ex-sixa"><statement><p>Complete the code on lines 4 and 6 so that it prints the number 6.</p></statement><program xml:id="itr-ex-sixa_editor" interactive="activecode" language="python"><input>
-x = 3
-i = 0
-while i &lt; 3:
-    # Increase x by 1 for each run of the loop
-    x = x + 1
-    i = i + 1
-# Print the x variable
-print(x)
-
-====
-from unittest.gui import TestCaseGui
-class myTests(TestCaseGui):
-    def testOne(self):
-        self.assertEqual(x,6)
-myTests().main()
-        </input></program></exercise>
             </solution>
   </exercise>
   <raw format="html" xml:space="preserve">
@@ -345,37 +269,6 @@ class myTests(TestCaseGui):
         self.assertEqual(sumFunc(-3, 12),72,"Tested sumFunc on inputs -3 and 12")
 myTests().main()
         </input></program>
-
-            
-
-<exercise label="int-ex-inclusivea"><statement><p>This function currently takes a start and stop argument and uses a for loop to find the sum of all the numbers between them (inclusive).
-                    Change the for loop to a while loop while still using the same parameters.</p></statement><program xml:id="int-ex-inclusivea_editor" interactive="activecode" language="python"><input>
-def sumFunc(start, stop):
-    sum = 0
-    # Create an iteration variable, initialized to the start argument
-    num = start
-    # Use while loop until iteration variable is less than
-    # or equal to stop argument
-    while num &lt;= stop:
-        # Add number to sum
-        sum = sum + num
-        # Increase iteration variable
-        num += 1
-    # Return the sum
-    return sum
-
-print(sumFunc(1,10))
-
-====
-from unittest.gui import TestCaseGui
-class myTests(TestCaseGui):
-    def testOne(self):
-        self.assertEqual(sumFunc(1, 10),55,"Tested sumFunc on inputs 1 and 10")
-        self.assertEqual(sumFunc(10, 3),0,"Tested sumFunc on inputs 10 and 3")
-        self.assertEqual(sumFunc(-5, 0),-15,"Tested sumFunc on inputs 20 and 50")
-        self.assertEqual(sumFunc(-3, 12),72,"Tested sumFunc on inputs -3 and 12")
-myTests().main()
-        </input></program></exercise>
             </solution>
   </exercise>
   <exercise label="int-ex-timesq">

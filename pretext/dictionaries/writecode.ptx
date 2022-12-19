@@ -59,32 +59,6 @@ for email in mail:
 # Print final count
 print(mail_count)
         </input></program>
-
-                    
-
-<exercise label="dict_writecode1a"><statement><p>Write a program that categorizes each mail message by which day of the week
-                            the commit was done. To do this, look for lines that start with <q>From</q>. Then,
-                            look for the third word, and keep a running count of each of the days of the week.
-                            At the end of the program, print out the contents of the dictionary <c>mail_count</c>
-                            (order does not matter). For example, <c>mail_count['Mon']</c> should be <c>2</c>.</p></statement><program xml:id="dict_writecode1a_editor" interactive="activecode" language="python"><input>
-# mail list was given
-mail = ['From stephen.marquard@uct.ac.za Sat Jan  7', 'From gopal.ramasammycook@gmail.com Thurs Jan  5', 'From louis@media.berkeley.edu Tues Jan  3', 'From antranig@caret.cam.ac.uk Sat Jan  7', 'From david.horwitz@uct.ac.za Wed Jan  4', 'From ray@media.berkeley.edu Mon Jan  2', 'From stephen.marquard@uct.ac.za Mon Jan 2', 'From wagnermr@iupui.edu Fri Jan  6']
-
-# Create dictionary for the emails
-mail_count = {}
-
-# Iterate through each email in the list
-for email in mail:
-    # Separate pieces of each email setting key to the day (third element)
-    key = email.split()[2]
-    # Add key to dictionary if not included
-    if key not in mail_count.keys():
-        mail_count[key] = 0
-    # Update key
-    mail_count[key] += 1
-# Print final count
-print(mail_count)
-        </input></program></exercise>
                     </solution>
         </exercise>
       </li>
@@ -166,33 +140,6 @@ for word in phrase.split():
 # Create e_counter to see how many are in the phrase
 e_counter = letter_count['e']
         </input></program>
-
-                    
-
-<exercise label="dict_writecode3a"><statement><p>Write a program that creates a dictionary <c>letter_count</c> that keeps track
-                            of the amount of times each letter appears in the given phrase. Assign the
-                            number of times <q>e</q> appears in the phrase to the variable <c>e_counter</c>. Make
-                            sure to account for each letter in its lowercase form. For example, <c>e_counter</c> should be <c>10</c>, and <c>letter_count['e']</c> should be <c>10</c>.</p></statement><program xml:id="dict_writecode3a_editor" interactive="activecode" language="python"><input>
-# phrase string is given
-phrase = "Exeggcute evolves into Exeggutor which are two extraordinary Pokemon"
-
-# Create dictionary for letters and their counts
-letter_count = {}
-
-# Iterate through words in string
-for word in phrase.split():
-    # Iterate through each letter
-    for letter in word:
-        # Put each letter into lowercase
-        letter = letter.lower()
-        # Add letter as key to dictionary, if not included
-        if letter not in letter_count.keys():
-            letter_count[letter] = 0
-        # Update letter
-        letter_count[letter] += 1
-# Create e_counter to see how many are in the phrase
-e_counter = letter_count['e']
-        </input></program></exercise>
                     </solution>
         </exercise>
       </li>
@@ -304,31 +251,6 @@ with open("words.txt", "r") as filename:
 # Print final count
 print(word_count)
         </input></program>
-
-                    
-
-<exercise label="dict_writecode5a"><statement><p>Write code that reads in the text from the file words.txt and uses
-                            the dictionary <c>word_count</c> to count the amount of times a word appears
-                            in the file. Watch out for repetition using the .lower() function. For example, <c>word_count['and']</c> should be <c>5</c>.</p></statement><program xml:id="dict_writecode5a_editor" interactive="activecode" language="python"><input>
-# Open the file in "read" mode
-with open("words.txt", "r") as filename:
-    # Create dictionary to count words
-    word_count = {}
-    # Separate lines and iterate through them
-    lines = filename.readlines()
-    for line in lines:
-        # Iterate through each word
-        for word in line.split():
-            # Set each word to lowercase
-            word = word.lower()
-            # Add word to dictionary if not included
-            if word not in word_count.keys():
-                word_count[word] = 0
-            # Update word
-            word_count[word] += 1
-# Print final count
-print(word_count)
-        </input></program></exercise>
                     </solution>
         </exercise>
       </li>
@@ -422,30 +344,6 @@ with open("romeo.txt", "r") as filename:
             # Update word
             counts[word] += 1
         </input></program>
-
-                    
-
-<exercise label="dict_writecode7a"><statement><p>Write code to read through the lines of the file, break each line into a list of
-                            words, and then loop through each of the words in the line and count each word using
-                            the dictionary <c>counts</c>. For example, <c>counts['is']</c> should be <c>3</c>.</p></statement><program xml:id="dict_writecode7a_editor" interactive="activecode" language="python"><input>
-# Open file in "read" mode
-with open("romeo.txt", "r") as filename:
-    # Separate and read lines
-    lines = filename.readlines()
-    # Create count dictionary
-    counts = {}
-    # Iterate through lines
-    for line in lines:
-        # Iterate through words in each line
-        for word in line.split():
-            # Set each word to lowercase
-            word = word.lower()
-            # Add word to dictionary if not included
-            if word not in counts.keys():
-                counts[word] = 0
-            # Update word
-            counts[word] += 1
-        </input></program></exercise>
                     </solution>
         </exercise>
       </li>
@@ -547,37 +445,6 @@ for key in message_count.keys():
         max_emails = int(message_count[key])
 print(max_emails)
         </input></program>
-
-                    
-
-<exercise label="dict_writecode9a"><statement><p>Add code to the program below to figure out who has the most messages in the file. After all the data has been read and the dictionary <c>message_count</c> has been created, look through the dictionary using a maximum loop (see Chapter 5: Maximum and minimum loops) to find who has the most messages,
-                            and print how many messages the person has. For example, <c>message_count['cwen@iupui.edu']</c> should be <c>5</c>.</p></statement><program xml:id="dict_writecode9a_editor" interactive="activecode" language="python"><input>
-# Open file in read mode
-with open("mbox-short.txt", "r") as filename:
-    # Create message_count dictionary
-    message_count = {}
-    # Create variable for lines of the file
-    messages = filename.readlines()
-    # Iterate through each message (each line)
-    for message in messages:
-        # Assign the key to the first (0th) element of the message
-        key = message.split()[0]
-        # Assign the value to the second element of the message
-        value = message.split()[1]
-        # Check if key is already in dictionary
-        if key not in message_count.keys():
-            # if not, add key/value pair to dictionary
-            message_count[key] = value
-# Create variable to count emails
-max_emails = 0
-# Iterate through keys in dictionary
-for key in message_count.keys():
-    # Check if key is larger than the max emails
-    if int(message_count[key]) &gt;= max_emails:
-        # If so, reassign max_emails to that key
-        max_emails = int(message_count[key])
-print(max_emails)
-        </input></program></exercise>
                     </solution>
         </exercise>
       </li>

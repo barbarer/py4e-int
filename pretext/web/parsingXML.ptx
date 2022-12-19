@@ -20,13 +20,13 @@
 import xml.etree.ElementTree as ET
 
 data = '''
-<person>
-  <name>Chuck</name>
-  <phone type="intl">
+&lt;person&gt;
+  &lt;name&gt;Chuck&lt;/name&gt;
+  &lt;phone type="intl"&gt;
     +1 734 303 4456
-  </phone>
-  <email hide="yes"/>
-</person>'''
+  &lt;/phone&gt;
+  &lt;email hide="yes"/&gt;
+&lt;/person&gt;'''
 
 tree = ET.fromstring(data)
 print('Name:', tree.find('name').text)
@@ -65,13 +65,13 @@ print('Attr:', tree.find('email').get('hide'))
 import xml.etree.ElementTree as ET
 
 data = '''
-<person>
-  <name>Chuck</name>
-  <phone type="intl">
+&lt;person&gt;
+  &lt;name&gt;Chuck&lt;/name&gt;
+  &lt;phone type="intl"&gt;
     +1 734 303 4456
-  </phone>
-  <email>csev@umich.edu</email>
-</person>'''
+  &lt;/phone&gt;
+  &lt;email&gt;csev@umich.edu&lt;/email&gt;
+&lt;/person&gt;'''
 
 tree = ET.fromstring(data)
 print('Name:', tree.find('name').text)
@@ -98,21 +98,21 @@ print('Attr:', tree.find('email').get('hide'))
 import xml.etree.ElementTree as ET
 
 data = '''
-    <bookstore>
-        <book category="cooking">
-            <title lang="en">Everyday Italian</title>
-            <author>Giada De Laurentiis</author>
-            <year calendar="Gregorian">2005</year>
-            <price>30.00</price>
-        </book>
+    &lt;bookstore&gt;
+        &lt;book category="cooking"&gt;
+            &lt;title lang="en"&gt;Everyday Italian&lt;/title&gt;
+            &lt;author&gt;Giada De Laurentiis&lt;/author&gt;
+            &lt;year calendar="Gregorian"&gt;2005&lt;/year&gt;
+            &lt;price&gt;30.00&lt;/price&gt;
+        &lt;/book&gt;
 
-        <book category="CHILDREN">
-            <title lang="en">Harry Potter</title>
-            <author>J K. Rowling</author>
-            <year>2005</year>
-            <price>29.99</price>
-        </book>
-</bookstore>
+        &lt;book category="CHILDREN"&gt;
+            &lt;title lang="en"&gt;Harry Potter&lt;/title&gt;
+            &lt;author&gt;J K. Rowling&lt;/author&gt;
+            &lt;year&gt;2005&lt;/year&gt;
+            &lt;price&gt;29.99&lt;/price&gt;
+        &lt;/book&gt;
+&lt;/bookstore&gt;
 '''
 
 tree = ET.fromstring(data)
@@ -208,13 +208,13 @@ print('time region:',note.find('time').get('region'))
 import xml.etree.ElementTree as ET
 
 data = '''
-    <bookstore>
-        <book category="Cultural Heritage Fiction">
-            <title lang="en">The Turner House</title>
-            <author>Angela Flournoy</author>
-            <year>2016</year>
-        </book>
-    </bookstore>
+    &lt;bookstore&gt;
+        &lt;book category="Cultural Heritage Fiction"&gt;
+            &lt;title lang="en"&gt;The Turner House&lt;/title&gt;
+            &lt;author&gt;Angela Flournoy&lt;/author&gt;
+            &lt;year&gt;2016&lt;/year&gt;
+        &lt;/book&gt;
+    &lt;/bookstore&gt;
 '''
         </input>
     </program>

@@ -37,12 +37,6 @@ print(s1)
 
             
                 <p>The <c>capitalize()</c> method returns a new string; it doesn't modify the original because strings are immutable. As a result, you need to assign the value of s1.capitalize() to s1.</p>
-
-<exercise label="str-ex-hiA"><statement><p>Fix line 2 so that it prints <q>Hi</q> instead of <q>hi</q>.</p></statement><program xml:id="str-ex-hiA_editor" interactive="activecode" language="python"><input>
-s1 = "hi"
-s1 = s1.capitalize()
-print(s1)
-        </input></program></exercise>
             </solution>
   </exercise>
   <raw format="html" xml:space="preserve">
@@ -78,12 +72,6 @@ print('The length is ' + str(len(sentence)))
 
             
                 <p>You can use the <c>len()</c> method to find the length of a string.</p>
-
-<exercise label="str-ex-eggsa"><statement><p>Write code to evaluate the length of the string <q>I like green eggs</q>
-                    and print it. It should print <q>The length is 17</q>.</p></statement><program xml:id="str-ex-eggsa_editor" interactive="activecode" language="python"><input>
-sentence = 'I like green eggs'
-print('The length is ' + str(len(sentence)))
-        </input></program></exercise>
             </solution>
   </exercise>
   <raw format="html" xml:space="preserve">
@@ -134,14 +122,6 @@ num = float(digit)
             
                 <p>The <c>float()</c> function ignores whitespace, so you can begin the slice at the space character after the colon or at the 0 &#x2013; your choice!</p>
 
-<exercise label="str-ex-floatA"><statement><p>Take the following Python code that stores this string: <c>string = "X-DSPAM-Confidence: 0.8475"</c>.
-                    Use <c>find</c> and string slicing to extract the portion of the string after the colon character
-                    and then use the <c>float</c> function to convert the extracted string into a floating point number called <c>num</c>.</p></statement><program xml:id="str-ex-floatA_editor" interactive="activecode" language="python"><input>
-string = "X-DSPAM-Confidence: 0.8475"
-colonpos = string.find(':')
-digit = string[colonpos + 1:]
-num = float(digit)
-        </input></program></exercise>
             </solution>
   </exercise>
   <raw format="html" xml:space="preserve">
@@ -197,16 +177,6 @@ print(numDigits(1))
             
                 <p>Convert the integer to a string, then use the <c>len()</c> method.</p>
 
-<exercise label="str_ex-digitsa"><statement><p>Write a function <c>numDigits</c> that will return the number of digits in an integer <c>n</c>.</p></statement><program xml:id="str_ex-digitsa_editor" interactive="activecode" language="python"><input>
-def numDigits(n):
-    n_str = str(n)
-    return len(n_str)
-
-# Check the function
-print(numDigits(50))
-print(numDigits(20000))
-print(numDigits(1))
-        </input></program></exercise>
             </solution>
   </exercise>
   <raw format="html" xml:space="preserve">
@@ -245,15 +215,6 @@ print(lowerFirst)
 
             
                 <p>Use the <c>input()</c> function to get the user's input, then use indexing and the <c>lower()</c> method to print the first letter of their name in lowercase.</p>
-
-<exercise label="str-ex-nameInputa"><statement><p>Write a program that asks a user for their name and from the input
-                    prints the first letter of their name in lowercase.</p></statement><program xml:id="str-ex-nameInputa_editor" interactive="activecode" language="python"><input>
-prompt = "What is your name?"
-name = input(prompt)
-first = name[0]
-lowerFirst = first.lower()
-print(lowerFirst)
-        </input></program></exercise>
             </solution>
   </exercise>
   <raw format="html" xml:space="preserve">

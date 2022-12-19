@@ -76,42 +76,6 @@ class myTests(TestCaseGui):
         self.assertEqual(spot.__str__(), "Dog(name = Spot, tricks = ['spin', 'sit'])", 'Checking that a Spot prints correctly.')
 myTests().main()
         </input></program>
-
-                    
-
-<exercise label="obj_writecode1a"><statement><p>Below the class definition, create an instance of the class Dog, assigning it to the variable <c>spot</c>.
-                            Be sure to include a name when constructing the instance! This works similar to a function.
-                            To update the dog's tricks, use the instance and dot notation to call the method, with the name of the trick as the argument.
-                            This needs to be done for each trick. Then, using the print function, you can print the dog's tricks and the contents of the <c>__str__</c> method.</p></statement><program xml:id="obj_writecode1a_editor" interactive="activecode" language="python"><input>
-class Dog:
-
-    def __init__(self, name):
-        self.name = name
-        self.tricks = []    # creates a new empty list for each dog
-
-    def updateTricks(self, trick):
-        self.tricks.append(trick)
-
-    def __str__(self):
-        return f'Dog(name = {self.name}, tricks = {str(self.tricks)})'
-
-spot = Dog('Spot')
-spot.updateTricks('spin')
-spot.updateTricks('sit')
-print(spot.tricks)
-print(spot)
-
-====
-
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-    def testOne(self):
-        self.assertEqual(spot.tricks, ['spin', 'sit'], 'Checking that sit and spin are added to the list of tricks.')
-        self.assertEqual(spot.__str__(), "Dog(name = Spot, tricks = ['spin', 'sit'])", 'Checking that a Spot prints correctly.')
-myTests().main()
-        </input></program></exercise>
                     </solution>
         </exercise>
       </li>
@@ -234,32 +198,6 @@ class myTests(TestCaseGui):
 
 myTests().main()
         </input></program>
-
-                    
-
-<exercise label="obj_writecode3a"><statement><p><ol label="1"><li><p><c>class</c> is a reserved word and must be lowercase.</p></li><li><p>class methods must include the self parameter as a reference to the current instance of the class. <c>def __init__(self, title, author):</c></p></li><li><p>Use dot notation with the self instance to access the title variable in the Book class. <c>self.title = title</c></p></li><li><p>Use dot notation with the self instance to access the author variable in the Book class. <c>self.author = author</c></p></li><li><p>Use dot notation with the self instance to access the title variable when using it in a string. <c>self.title</c></p></li><li><p>Use dot notation with the self instance to access the author variable when using it in a string. <c>self.author</c></p></li><li><p>Use the correct class name, in this case it is <c>Book</c> not <c>new Book</c>.</p></li></ol></p></statement><program xml:id="obj_writecode3a_editor" interactive="activecode" language="python"><input>
-class Book:
-
-    def __init__(self, title, author):
-        self.title = title
-        self.author = author
-
-    def __str__(self):
-        return f"Your book is {self.title} by {self.author}"
-
-book = Book("The Odyssey", "Homer")
-print(book)
-
-====
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-    def testOne(self):
-        gatsby = Book("The Great Gatsby", "F. Scott Fitzgerald")
-        self.assertEqual(gatsby.__str__(), "Your book is The Great Gatsby by F. Scott Fitzgerald", "Testing Great Gatsby")
-
-myTests().main()
-        </input></program></exercise>
                     </solution>
         </exercise>
       </li>
@@ -360,30 +298,6 @@ book = Book("The Odyssey", "Homer")
 print(book.getTitle())
 print(book.getAuthor())
         </input></program>
-
-                    
-
-<exercise label="obj_writecode5a"><statement><p>Create the <c>getTitle</c> and <c>getAuthor</c> methods just as you would define a function.
-                            Include the <c>self</c> parameter and use the self instance with dot notation to access
-                            title and author, as needed.</p></statement><program xml:id="obj_writecode5a_editor" interactive="activecode" language="python"><input>
-class Book:
-
-    def __init__(self, title, author):
-        self.title = title
-        self.author = author
-
-    # Create the methods using self to access the attributes
-    def getTitle(self):
-        return self.title
-
-    def getAuthor(self):
-        return self.author
-
-
-book = Book("The Odyssey", "Homer")
-print(book.getTitle())
-print(book.getAuthor())
-        </input></program></exercise>
                     </solution>
         </exercise>
       </li>
@@ -493,33 +407,6 @@ class Paperback(Book):
 book = Paperback("The Odyssey", "Homer")
 print(book)
         </input></program>
-
-                    
-
-<exercise label="obj_writecode7a"><statement><p>Create the <c>Paperback</c> class just as you did the <c>Book</c> class, but
-                            use the <c>Book</c> class as the parameter.
-                            Define the <c>__str__</c> function as usual, using instances from the parent class.</p></statement><program xml:id="obj_writecode7a_editor" interactive="activecode" language="python"><input>
-class Book:
-
-    def __init__(self, title, author):
-        self.title = title
-        self.author = author
-
-    def getTitle(self):
-        return self.title
-
-    def getAuthor(self):
-        return self.author
-
-# Create Paperback class, using Book class
-class Paperback(Book):
-
-    def __str__(self):
-        return f"Paperback book {self.title} was written by {self.author}"
-
-book = Paperback("The Odyssey", "Homer")
-print(book)
-        </input></program></exercise>
                     </solution>
         </exercise>
       </li>

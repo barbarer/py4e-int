@@ -17,7 +17,7 @@
 import xml.etree.ElementTree as ET
 
 input = '''
-<stuff><users><user x="2"><id>001</id><name>Chuck</name></user><user x="7"><id>009</id><name>Brent</name></user></users></stuff>'''
+&lt;stuff&gt;&lt;users&gt;&lt;user x="2"&gt;&lt;id&gt;001&lt;/id&gt;&lt;name&gt;Chuck&lt;/name&gt;&lt;/user&gt;&lt;user x="7"&gt;&lt;id&gt;009&lt;/id&gt;&lt;name&gt;Brent&lt;/name&gt;&lt;/user&gt;&lt;/users&gt;&lt;/stuff&gt;'''
 
 stuff = ET.fromstring(input)
 lst = stuff.findall('users/user')
@@ -67,7 +67,7 @@ for item in lst:
 import xml.etree.ElementTree as ET
 
 input = '''
-<stuff><users><user x="2"><id>001</id><name>Chuck</name></user><user x="7"><id>009</id><name>Brent</name></user></users></stuff>'''
+&lt;stuff&gt;&lt;users&gt;&lt;user x="2"&gt;&lt;id&gt;001&lt;/id&gt;&lt;name&gt;Chuck&lt;/name&gt;&lt;/user&gt;&lt;user x="7"&gt;&lt;id&gt;009&lt;/id&gt;&lt;name&gt;Brent&lt;/name&gt;&lt;/user&gt;&lt;/users&gt;&lt;/stuff&gt;'''
 
 stuff = ET.fromstring(input)
 
