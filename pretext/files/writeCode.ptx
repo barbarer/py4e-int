@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
-<section xml:id="files_write-code-questions">
+<exercises xml:id="files_write-code-questions">
   <title>Write Code Questions</title>
+  <introduction>
   <p>The following data file <c>uspoll.txt</c> is used in some of the questions in this section. The data
             is <c>City, State: PM10: PM2.5</c>.  PM 10 is annual mean amounts of particulate pollution that's over 2.5 and less than 10
             micrometers in diameter, and PM2.5 is the  annual mean amounts of particulate pollution
@@ -388,16 +389,21 @@ Yuba City, CA :12 :7
 Yuma, AZ :14 :9
 &lt;/pre&gt;</raw>
   </hint>
-  <p>
-    <ol marker="1">
-      <li>
+</introduction>
         <exercise>
-          <statement/>
-          <program interactive="" language=""/>
-          <solution>
-                        It was missing a close double quote after the r on line 1.  It was missing a colon
-                            at the end of line 3.  It was missing a comma or plus sign between the values on line 7.
+          <statement><p>Fix errors in the code below so that the code runs correctly and prints the pollution for all cities that start with the letter A.</p>
+            <program interactive="activecode" language="python"><input>inFile = open("uspoll.txt","r)
 
+for line in inFile
+    values = line.split(":")
+    city = values[0]
+    if (city.find("A") == 0):
+        print('City: ' city)
+        print("Pollution values:",values[1],values[2])
+
+inFile.close()</input>
+          <solution>
+            
     <program xml:id="file_ex_pollErrora" language="python"><input>
 # Close quotations around "r"
 inFile = open("uspoll.txt","r")
@@ -414,14 +420,11 @@ for line in inFile:
 inFile.close()
         </input></program>
                     
-                        <p>It was missing a close double quote after the r on line 1.  It was missing a colon
-                            at the end of line 3.  It was missing a comma or plus sign between the values on line 7.</p>
-
-    
+        <p>The program was missing a close double quote after the r on line 1.  It was missing a colon
+              at the end of line 3.  It was missing a comma or plus sign between the values on line 7.</p>
                     </solution>
         </exercise>
-      </li>
-      <li>
+
         <exercise label="file_ex_pmErrorq">
           <statement>
             <p>Fix the errors in the code below so that it returns the average PM 2.5 value
@@ -456,11 +459,18 @@ print(avg_PM25('OH'))
         </input>
           </program>
         </exercise>
-      </li>
-      <li>
+
         <exercise>
-          <statement/>
-          <program interactive="" language=""/>
+          <statement><p>The code below prints all the lines that have a city that starts with an “A”. Change it so that it prints out all lines that have a city that starts with “A” or “B”.</p></statement>
+          <program xml:id="file_ex_bad_AorBa" interactive="activecode" language="python"><input>inFile = open("uspoll.txt","r")
+lines = inFile.readlines()
+inFile.close()
+
+for line in lines:
+    if line[0] == "A":
+        print(line)
+        </input></program>
+    
           <solution>
             <program xml:id="file_ex_AorBa" language="python">
               <input>
@@ -479,8 +489,7 @@ for line in lines:
             </program>
           </solution>
         </exercise>
-      </li>
-      <li>
+
         <exercise label="file_ex_valueCity">
           <statement>
             <p>Fix the indention below for the code to correctly find and print the lowest 2.5 value and city.
@@ -504,13 +513,23 @@ print("Smallest PM 2.5 ",min25," in ",minCity)
         </input>
           </program>
         </exercise>
-      </li>
-      <li>
+
         <exercise>
-          <statement/>
-          <program interactive="" language=""/>
+          <statement>
+            <p>The following sample file called <c>studentdata.txt</c> contains one line for each student in an imaginary class. The student's name is the first thing on each line, followed by some exam scores. The number of scores might be different for each student.</p>
+            <pre>joe 10 15 20 30 40
+bill 23 16 19 22
+sue 8 22 17 14 32 17 24 21 2 9 11 17
+grace 12 28 21 45 26 10
+john 14 32 25 16 89</pre></statement>
+            <program interactive="activecode" language="python" xml:id="file_student_ex_start"><input># Hint: first see if you can write a program that just
+# prints out the number of scores on each line
+# Then, make it print the number only if the number is at least six
+# Then, switch it to printing the name instead of the number
+</input></program>
+
           <solution>
-            <program xml:id="file_ex_testa" language="python">
+            <program xml:id="file_student_ex_solution" language="python">
               <input>
 # Open the file in "read" mode
 f = open("studentdata.txt", "r")
@@ -530,10 +549,12 @@ f.close()
             </program>
           </solution>
         </exercise>
-      </li>
-    </ol>
-  </p>
-  <p>The following file contains a set of emotions that will be used in the next question.</p>
+
+
+ 
+        <exercise label="file_ex_emotionq">
+          <statement>
+              <p>The following file contains a set of emotions that will be used in the next question.</p>
   <hint>
     <pre>Sad upset blue down melancholy somber bitter troubled
 Angry mad enraged irate irritable wrathful outraged infuriated
@@ -543,11 +564,6 @@ Excited eager thrilled delighted
 Scared afraid fearful panicked terrified petrified startled
 Nervous anxious jittery jumpy tense uneasy apprehensive</pre>
   </hint>
-  <p>
-    <ol marker="1">
-      <li>
-        <exercise label="file_ex_emotionq">
-          <statement>
             <p>Create a list called <c>j_emotions</c> that contains every word in <c>emotion_words.txt</c>
                     that begins with the letter <q>j</q>.  After the code executes <c>j_emotions</c> should be <c>['joyous', 'jittery', 'jumpy']</c></p>
           </statement>
@@ -568,10 +584,11 @@ myTests().main()
         </input>
           </program>
         </exercise>
-      </li>
-    </ol>
-  </p>
-  <p>The rest of the questions gather their data from the file <c>stocks.txt</c>, which shows the monthly Dow
+
+  
+ 
+        <exercise>
+          <statement><p>The rest of the questions gather their data from the file <c>stocks.txt</c>, which shows the monthly Dow
             Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Low, and Close. The first
             line is <c>3-Dec-01,9848.93,10220.78,9651.87,10021.57</c>.  The Date is in the format <c>day-month-yy</c>.  The month
             is the first three letters of the month.</p>
@@ -735,12 +752,24 @@ myTests().main()
 3-Jan-89,2168.39,2350.18,2127.14,2342.32
 &lt;/pre&gt;</raw>
   </hint>
-  <p>
-    <ol marker="1">
-      <li>
-        <exercise>
-          <statement/>
-          <program interactive="" language=""/>
+  <p>Complete the code at the # so that it prints out the date with the biggest loss from open to close. Each line has: Date, Open, High, Low, and Close. It should print 3-Aug-98 loss 1329.030000000001.</p>
+</statement>
+<program interactive="activecode" language="python"><input>def biggestLoss(file):
+    maxLoss = 0
+    lines = file.readlines()
+    for line in #:
+        values = line.split(",")
+        opening = float(values[#])
+        closing = float(values[4])
+        dailyLoss = opening # closing
+        if (dailyLoss # maxLoss):
+            maxLoss = dailyLoss
+            date = values[#]
+    print(date + " loss " + str(maxLoss))
+
+file = open("stocks.txt", "r")
+biggestLoss(file)
+</input></program>
           <solution>
             <program xml:id="file_ex_biggestLossA" language="python">
               <input>
@@ -768,8 +797,7 @@ biggestLoss(file)
             </program>
           </solution>
         </exercise>
-      </li>
-      <li>
+ 
         <exercise label="file_ex_300">
           <statement>
             <p>Fix the errors below so that the <c>pointGain</c> function returns a list of all the dates where the Dow
@@ -808,11 +836,17 @@ myTests().main()
         </input>
           </program>
         </exercise>
-      </li>
-      <li>
+        
         <exercise>
-          <statement/>
-          <program interactive="" language=""/>
+          <statement><p>The code below prints all the dates and high price for dates that occur on the first day of the month (i.e. January 1, February 1…). Each line has: Date, Open, High, Low, and Close. Change it so that it prints the date and low price for all the dates that occur in June.</p></statement>
+          <program interactive="activecode" language="python" xml:id="file_ex_June_start"><input>file = open("stocks.txt", "r")
+lines = file.readlines()
+for line in lines:
+    values = line.split(",")
+    date = values[0]
+    if date[0] == "1":
+        print(date + " had a high value of " + values[2])
+        </input></program>
           <solution>
             <program xml:id="file_ex_Junea" language="python">
               <input>
@@ -829,8 +863,7 @@ for line in lines:
             </program>
           </solution>
         </exercise>
-      </li>
-      <li>
+
         <exercise label="file_ex_abbrq">
           <statement>
             <p>Write a function <c>avg_month_close(lines, month)</c> that takes the <c>lines</c>
@@ -865,7 +898,5 @@ myTests().main()
         </input>
           </program>
         </exercise>
-      </li>
-    </ol>
-  </p>
-</section>
+
+</exercises>
