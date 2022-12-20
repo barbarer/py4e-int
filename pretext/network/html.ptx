@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<section xml:id="network_group-work-html-basics">
+<exercises xml:id="network_group-work-html-basics">
   <title>Group Work: HTML Basics</title>
   <introduction>
   <p>It is best to use a POGIL approach with the following. In POGIL students work
@@ -131,11 +131,11 @@
     </matches>
   </exercise>
 </introduction>
-  <subsection xml:id="network_start-and-end-tags">
+  <subexercises xml:id="network_start-and-end-tags">
     <title>Start and End Tags</title>
-    <p>Most HTML elements have start tags and end tags. The page is started with
+    <introduction><p>Most HTML elements have start tags and end tags. The page is started with
                 the start tag  <c>&lt;html&gt;</c> and ends with the end tag <c>&lt;/html&gt;</c>.  Indentation
-                isn't required, but makes it easier to read the HTML.</p>
+                isn't required, but makes it easier to read the HTML.</p></introduction>
     <exercise label="html_start_tags_clicka">
       <statement>
         <p>Click on all of the start tags in the HTML below.</p>
@@ -251,10 +251,10 @@
         </input>
       </program>
     </exercise>
-  </subsection>
-  <subsection xml:id="network_list-tags">
+  </subexercises>
+  <subexercises xml:id="network_list-tags">
     <title>List Tags</title>
-    <p>You can include both ordered (numbered) and unordered (bulleted) lists in HTML.</p>
+    <introduction><p>You can include both ordered (numbered) and unordered (bulleted) lists in HTML.</p></introduction>
     <exercise label="html_lists_ac">
       <statement>
         <p>Render the HTML below.</p>
@@ -305,13 +305,14 @@
         </match>
       </matches>
     </exercise>
-  </subsection>
-  <subsection xml:id="network_tag-relationships-parent-child-sibling">
+  </subexercises>
+  <subexercises xml:id="network_tag-relationships-parent-child-sibling">
     <title>Tag Relationships: Parent, Child, Sibling</title>
+    <introduction>
     <p>The HTML tag has
                 two children tags: <c>&lt;head&gt;</c> and <c>&lt;body&gt;</c>.  The head contains meta information
                 about the page including the page title.  The body contains the elements
-                that are displayed in the page such as the headers and paragraphs.</p>
+                that are displayed in the page such as the headers and paragraphs.</p></introduction>
     <exercise label="html_pp_my_first_page_v2" numbered="yes" adaptive="yes" indent="show" language="python">
       <statement>
         <p>Put the blocks into order to define a simple HTML page. Indent the blocks to show the structure.</p>
@@ -482,5 +483,5 @@
     &lt;/div&gt;
 &lt;/div&gt;
 </raw>
-  </subsection>
-</section>
+  </subexercises>
+</exercises>

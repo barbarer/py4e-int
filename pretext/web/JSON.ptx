@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<section xml:id="web_javascript-object-notation-json">
+<exercises xml:id="web_javascript-object-notation-json">
   <title>JavaScript Object Notation - JSON</title>
   <introduction>
 <idx>JSON</idx>
@@ -168,10 +168,11 @@
     </choices>
   </exercise>
 </introduction>
-  <subsection xml:id="web_list-of-dictionaries">
+
+  <subexercises xml:id="web_list-of-dictionaries">
     <title>List of Dictionaries</title>
-    <p>The outermost JSON structure can be a dictionary or a list.  Here is an example
-                where the outermost JSON structure is a list.  In this case it is a list of dictionaries.</p>
+    <introduction><p>The outermost JSON structure can be a dictionary or a list.  Here is an example
+        where the outermost JSON structure is a list.  In this case it is a list of dictionaries.</p>
     <program language="json">
       <input>
 [{
@@ -188,7 +189,7 @@
   "gender": "Non-binary",
 }]
 </input>
-    </program>
+    </program></introduction>
     <exercise label="webJSON_equivalent_xml">
       <statement>
         <p>csp-10-2-4: Which of the following is the correct equivalent XML to the JSON above?</p>
@@ -284,5 +285,5 @@
         </choice>
       </choices>
     </exercise>
-  </subsection>
-</section>
+  </subexercises>
+</exercises>

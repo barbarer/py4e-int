@@ -1,4 +1,4 @@
-<section xml:id="web_parsing-xml">
+<exercises xml:id="web_parsing-xml">
         <title>Parsing XML</title>
         
         <introduction>
@@ -48,7 +48,7 @@ print('Attr:', tree.find('email').get('hide'))
             allows us to extract data from XML without worrying about the rules of
             XML syntax.</p>
     </introduction>
-        <subsection xml:id="web_using-get-to-get-the-value-of-an-attribute">
+        <subexercises xml:id="web_using-get-to-get-the-value-of-an-attribute">
             <title>Using <c>get</c> to get the value of an attribute</title>
             <p>Why do we use <c>get</c> to get the value of an attribute?</p>
             <p>Look at the code below and predict what will be printed.</p>
@@ -83,11 +83,11 @@ print('Attr:', tree.find('email').get('hide'))
             <note>
                 <p>Just like with dictionaries we can use <c>get</c> to get the value of an attribute and if the attribute isn't there the default is to return <c>None</c>.</p>
             </note>
-        </subsection>
-        <subsection xml:id="web_getting-data-from-the-first-element-of-a-type-in-xml">
+        </subexercises>
+        <subexercises xml:id="web_getting-data-from-the-first-element-of-a-type-in-xml">
             <title>Getting Data from the First Element of a Type in XML</title>
-            <p>You can use <c>find</c> to get the first element of the XML of a specified type.
-                You can the use <c>find</c> on that element to get children tags of that element.</p>
+            <introduction><p>You can use <c>find</c> to get the first element of the XML of a specified type.
+                You can the use <c>find</c> on that element to get children tags of that element.</p></introduction>
 
 <exercise label="xml_parse_book_data">
     <statement>
@@ -123,11 +123,11 @@ print('Lang:',book.find('title').get('lang'))
         </input>
     </program>
 </exercise>
-            <p>What do you think would happen if we looked for the first &#8216;author' in <c>tree</c> rather than in <c>book</c>?  Modify the code to see what happens.</p>
-        </subsection>
-        <subsection xml:id="web_fixing-errors-in-xml">
+            <conclusion><p>What do you think would happen if we looked for the first &#8216;author' in <c>tree</c> rather than in <c>book</c>?  Modify the code to see what happens.</p></conclusion>
+        </subexercises>
+        <subexercises xml:id="web_fixing-errors-in-xml">
             <title>Fixing Errors in XML</title>
-            <p>If your XML has errors, what do you think will happen?</p>
+            <introduction><p>If your XML has errors, what do you think will happen?</p></introduction>
 
 <exercise label="xml_parse_fix_book_data">
     <statement>
@@ -195,8 +195,8 @@ print('time region:',note.find('time').get('region'))
         </input>
     </program>
 </exercise>
-        </subsection>
-        <subsection xml:id="web_write-code-to-process-xml">
+        </subexercises>
+        <subexercises xml:id="web_write-code-to-process-xml">
             <title>Write Code to Process XML</title>
 
 <exercise label="xml_parse_write_code_book_data_ac">
@@ -244,6 +244,6 @@ data = '''
         </input>
     </program>
 </exercise>
-        </subsection>
-    </section>
+        </subexercises>
+    </exercises>
 
