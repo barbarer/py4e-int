@@ -8,7 +8,7 @@
             that's 2.5 micrometers or less in diameter. Click show to see all of the data
             and hide to put it away.</p>
   <hint>
-    <raw format="html" xml:space="preserve">&lt;pre id="uspoll.txt"&gt;
+    <pre xml:id="uspoll.txt">
 Aberdeen, SD :13 :8
 Adrian, MI :15 :9
 Akron, OH :18 :11
@@ -387,11 +387,12 @@ York-Hanover, PA :20 :12
 Youngstown-Warren-Boardman, OH-PA :23 :14
 Yuba City, CA :12 :7
 Yuma, AZ :14 :9
-&lt;/pre&gt;</raw>
+</pre>
   </hint>
 </introduction>
         <exercise>
-          <statement><p>Fix errors in the code below so that the code runs correctly and prints the pollution for all cities that start with the letter A.</p>
+          <statement><p>Fix errors in the code below so that the code runs correctly and prints the pollution
+              for all cities that start with the letter A.</p></statement>
             <program interactive="activecode" language="python"><input>inFile = open("uspoll.txt","r)
 
 for line in inFile
@@ -401,7 +402,7 @@ for line in inFile
         print('City: ' city)
         print("Pollution values:",values[1],values[2])
 
-inFile.close()</input>
+inFile.close()</input></program>
           <solution>
             
     <program xml:id="file_ex_pollErrora" language="python"><input>
