@@ -1,7 +1,7 @@
 <section xml:id="web_parsing-xml">
         <title>Parsing XML</title>
         
-        
+        <introduction>
 <idx>Element Tree</idx>
         <p>Look at the code below and predict what will be printed.</p>
 
@@ -47,6 +47,7 @@ print('Attr:', tree.find('email').get('hide'))
             are many rules regarding valid XML, and using <c>ElementTree</c>
             allows us to extract data from XML without worrying about the rules of
             XML syntax.</p>
+    </introduction>
         <subsection xml:id="web_using-get-to-get-the-value-of-an-attribute">
             <title>Using <c>get</c> to get the value of an attribute</title>
             <p>Why do we use <c>get</c> to get the value of an attribute?</p>

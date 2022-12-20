@@ -1,9 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="dictionaries_write-code-questions">
   <title>Write Code Questions</title>
-  <p>
-    <ol label="1">
-      <li>
+
         <exercise>
           <statement>
             <p>Write a program that categorizes each mail message by which day of the week
@@ -61,8 +59,7 @@ print(mail_count)
         </input></program>
                     </solution>
         </exercise>
-      </li>
-      <li>
+
         <exercise label="dict_writecode2">
           <statement>
             <p>Write a program to read through a mail log, build the dictionary <c>user_count</c> to count how many messages have come from each email address, and print the dictionary. For example, <c>user_count['stephen.marquard@uct.ac.za']</c> should be <c>4</c>.</p>
@@ -83,8 +80,7 @@ myTests().main()
         </input>
           </program>
         </exercise>
-      </li>
-      <li>
+
         <exercise>
           <statement>
             <p>Write a program that creates a dictionary <c>letter_count</c> that keeps track
@@ -142,8 +138,7 @@ e_counter = letter_count['e']
         </input></program>
                     </solution>
         </exercise>
-      </li>
-      <li>
+
         <exercise label="dict_writecode4">
           <statement>
             <p>Write a program that reads the words in the string <c>phrase</c> and counts how many times each word appears.
@@ -168,8 +163,7 @@ myTests().main()
         </input>
           </program>
         </exercise>
-      </li>
-    </ol>
+
   </p>
   <hint>
     <pre>Writing programs or programming is a very creative
@@ -197,9 +191,7 @@ Interestingly, the kinds of things computers can do best
 are often the kinds of things that we humans find boring
 and mind-numbing</pre>
   </hint>
-  <p>
-    <ol label="1">
-      <li>
+
         <exercise>
           <statement>
             <p>Write code that reads in the text from the file words.txt and uses
@@ -253,8 +245,7 @@ print(word_count)
         </input></program>
                     </solution>
         </exercise>
-      </li>
-      <li>
+
         <exercise label="dict_writecode6">
           <statement>
             <p>Write a program that reads the words in the string <c>phrase</c> and counts how many times each word appears.
@@ -281,9 +272,7 @@ myTests().main()
         </input>
           </program>
         </exercise>
-      </li>
-    </ol>
-  </p>
+
   <p>Below is the romeo3.txt file used in Question 7.</p>
   <hint>
     <pre>But soft what light through yonder window breaks
@@ -291,9 +280,7 @@ It is the east and Juliet is the sun
 Arise fair sun and kill the envious moon
 Who is already sick and pale with grief</pre>
   </hint>
-  <p>
-    <ol label="1">
-      <li>
+ 
         <exercise>
           <statement>
             <p>Write code to read through the lines of the file, break each line into a list of
@@ -346,8 +333,7 @@ with open("romeo.txt", "r") as filename:
         </input></program>
                     </solution>
         </exercise>
-      </li>
-      <li>
+
         <exercise label="dict_writecode8">
           <statement>
             <p>Write code that adds the key &#x2018;two' with a value of &#x2018;dos' to the dictionary <c>eng2sp</c>. For example, <c>eng2sp['two']</c> should be <c>'dos'</c>.</p>
@@ -368,9 +354,7 @@ myTests().main()
         </input>
           </program>
         </exercise>
-      </li>
-    </ol>
-  </p>
+
   <p>The next two questions are associated with the following text file which has an email address followed by the number of messages from that address.</p>
   <hint>
     <pre>gopal.ramasammycook@gmail.com 1
@@ -385,9 +369,7 @@ zqian@umich.edu 4
 stephen.marquard@uct.ac.za 2
 ray@media.berkeley.edu 1</pre>
   </hint>
-  <p>
-    <ol label="1">
-      <li>
+
         <exercise>
           <statement>
             <p>Add code to the program below to figure out who has the most messages in the file. After all the data has been read and the dictionary <c>message_count</c> has been created, look through the dictionary using a maximum loop (see Chapter 5: Maximum and minimum loops) to find who has the most messages,
@@ -447,8 +429,7 @@ print(max_emails)
         </input></program>
                     </solution>
         </exercise>
-      </li>
-      <li>
+
         <exercise label="dict_writecode10">
           <statement>
             <p>Write a program to record in the dictionary <c>message_count</c> the total number of messages from each domain name (not the whole address, just the part after the @ and before the space). At the end of the program, print out the contents of your dictionary.
@@ -472,7 +453,4 @@ myTests().main()
         </input>
           </program>
         </exercise>
-      </li>
-    </ol>
-  </p>
 </section>

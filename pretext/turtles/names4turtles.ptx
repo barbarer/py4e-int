@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="turtles_history-of-turtles">
   <title>History of Turtles</title>
+  <introduction>
   <p>The idea of a virtual turtle, dates back to the 1960's.  Seymour Papert and his group at MIT created the programming language LOGO which could control a robot turtle with a physical pen in it.  Kids would steer the robot around, and it would draw as it moved. Seymour said that the Turtle was, <q>an object to think with</q>.  Many modern programming languages support Turtles, including Python.</p>
   <figure align="center" xml:id="fig_names_turtles_id1">
     <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 3: Children playing with a Logo turtle robot that could draw with a pen</caption>
@@ -76,6 +77,7 @@ alex.forward(75)      # ask alex to move forward by 75 units
     <p>Notice that we tell <c>alex</c> the turtle what to do in the code above using <term>dot notation</term>: <c>alex.forward(150)</c>,  <c>alex.left(90)</c>, and <c>alex.forward(75)</c>.  That is how you communicate with an object.  You use the name of the turtle object followed by a <c>.</c> and then the name of the method that you want to execute.</p>
   </note>
   <p>Just by going forward and turning we can have a turtle object draw many things.</p>
+</introduction>
   <subsection xml:id="turtles_what-does-a-left-turn-of-90-mean">
     <title>What does a left turn of 90 mean?</title>
     <p>When we ask a turtle to turn left, it will turn left based on the direction it is currently heading. A turtle object keeps track of its heading (direction it is facing). Use the figure below to help you understand how much the turtle will turn if asked to turn left 90 degrees and it is currently heading east (0 degrees).</p>
