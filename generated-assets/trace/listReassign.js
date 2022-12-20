@@ -1,0 +1,4 @@
+if (allTraceData === undefined) {
+ var allTraceData = {};
+ }
+ allTraceData["listReassign"] = {"code": "numbers = [17, 123]\nnumbers[1] = 5\nprint(numbers)\n\n", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"numbers": ["REF", 1]}, "ordered_globals": ["numbers"], "stack_to_render": [], "heap": {"1": ["LIST", 17, 123]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"numbers": ["REF", 1]}, "ordered_globals": ["numbers"], "stack_to_render": [], "heap": {"1": ["LIST", 17, 5]}, "stdout": ""}, {"line": 3, "event": "return", "func_name": "<module>", "globals": {"numbers": ["REF", 1]}, "ordered_globals": ["numbers"], "stack_to_render": [], "heap": {"1": ["LIST", 17, 5]}, "stdout": "[17, 5]\n"}]}
