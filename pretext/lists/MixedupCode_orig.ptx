@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="lists_mixed-up-code-questions">
   <title>Mixed-up Code Questions</title>
-  <exercise label="list_MUC_password_creator" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="list_MUC_password_creator" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function <c>password_maker(word_list)</c> that takes a list of words, <c>word_list</c> and returns a string with the first and last character of
             each word in a list. For example, <c>password_maker("show", "me", "the", "money")</c> would return <c>swmetemy</c>.</p>
@@ -62,7 +62,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="list_MUC_rainfall_v2" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="list_MUC_rainfall_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function <c>avg_rainfall(day_list)</c> that takes a list with the amount of rain for each day.
             There are some problems with the equipment, so ignore days that have a negative number for the amount of rain. Calculate the average rainfall as the sum of the non-negative values divided by the number of non-negative values. If at least one day has a non-negative rainfall return <c>Average: (average)</c> and otherwise return <c>No rain</c>.  For example,  <c>avg_rainfall([30,-2, 0])</c> should return <c>Average: 15</c> and <c>avg_rainfall([-3, -2])</c> should return <c>No rain</c>.</p>
@@ -134,7 +134,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="list_MUC_mix_items" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="list_MUC_mix_items" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function <c>mix</c> that takes a list <c>list1</c> and returns a new list with the first and last items from the original list swapped.  For example, <c>mix([3, 2, 1, 4]</c>
             should return <c>[4, 2, 1, 3]</c>.</p>
@@ -195,7 +195,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="list_MUC_discount" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="list_MUC_discount" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function <c>discount(price_list)</c> that takes a list of prices and returns a new list with the original price reduced by half.
             Limit each price to two digits after the decimal by rounding to the closest value.  Hint, you can use the <c>round</c> function to do this.</p>
@@ -254,7 +254,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="list_MUC_append_if_a" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="list_MUC_append_if_a" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function <c>filter_a(word_list)</c> that takes a list of words, <c>word_list</c> and returns a new list with only the words in <c>word_list</c> that start with the letter <c>a</c>.
             For example, <c>filter_a(['a', 'bye', 'above'])</c> should return <c>['a', 'above']</c>.</p>
@@ -315,7 +315,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="list_MUC_add_vocab" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="list_MUC_add_vocab" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function <c>vocab_list</c> that takes two lists: <c>terms</c> and <c>vocab</c>. It should loop through the list of terms and add each item to
             <c>vocab</c> if it is not already in that list. It should return the list <c>vocab</c>.</p>

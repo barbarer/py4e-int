@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="functions_mixed-up-code-questions">
   <title>Mixed-up Code Questions</title>
-  <exercise label="functEx1muc_v2" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="functEx1muc_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function <c>len_str</c> that uses a built-in function to return the number of characters in the passed string <c>str</c>. Then print the result of a call to <c>len_str</c> passing in the string <c>I love Python!</c>.  It should return 14.</p>
     </statement>
@@ -55,7 +55,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="functEx2muc" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="functEx2muc" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>bmi</c> that takes <c>height</c> (in inches) and <c>weight</c> (in pounds) as parameters. It should calculate the &#x2018;'bmi'' by squaring the height then dividing the weight by the height squared and then converting to metric by multiplying by 703.
             Watch your indentation!</p>
@@ -103,7 +103,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="functEx3muc" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="functEx3muc" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Write two functions. The first is <c>square(x)</c>, which returns <c>x</c> squared. The second function is <c>sum_of_squares(x,y,z)</c>, which returns the sum of the squares of three numbers <c>z</c>, <c>y</c>, and <c>z</c>.  For example, <c>square(2)</c> should return <c>4</c> and <c>sum_of_squares(2, 4, 6)</c> should return 56.
             For example, <c>square(2)</c> should return <c>4</c> and <c>sum_of_squares(2, 4, 6)</c> should return 56.</p>
@@ -155,7 +155,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="functEx4muc_v5" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="functEx4muc_v5" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>average(num1, num2)</c>, which finds the average of two numbers <c>num1</c> and <c>num2</c>.  For example, <c>average(10,4)</c> should return <c>7.0</c>.
             Note: there are two extra code blocks, and watch your indentation!</p>
@@ -209,7 +209,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="functEx5muc_v2" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="functEx5muc_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>swapValues(val1, val2)</c>, which takes two values and swaps them.
             It then returns val1. For example, <c>swapValues(8,2)</c> should return <c>2</c>.  Note: there is an extra code block, and
@@ -261,7 +261,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="functEx6muc" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="functEx6muc" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>get_avg_drop_lowest(num_list)</c> which returns the average of a list of numbers, ignoring the lowest value. However, if the list only contains one value, then return that. For example, <c>get_avg_drop_lowest([90])</c> returns <c>90</c>, <c>get_avg_drop_lowest([90, 10])</c> also returns <c>90</c>, and <c>get_avg_drop_lowest([90, 10, 0])</c> returns <c>50</c>.</p>
     </statement>
@@ -326,7 +326,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="functEx7muc_v2" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="functEx7muc_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>compare(p1, p2)</c> which returns whichever is greater of its two parameters. Note:
             there are two unused code blocks.</p>
@@ -384,7 +384,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="functEx8muc" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="functEx8muc" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>You are driving a little too fast, and a police officer stops you. Create a function
             called <c>caught_speeding(speed, is_birthday)</c> which returns the type of ticket the police officer will give you.
@@ -474,7 +474,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="functEx9muc" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="functEx9muc" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a <c>check_guess(guess, target)</c> function which computes if a <c>guess</c> is too low, too high, or correct compared to the <c>target</c>.
             Return <c>'too low'</c> if <c>guess</c> is less than <c>target</c>, <c>'correct'</c> if they are equal, and
@@ -546,7 +546,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="functEx10muc" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="functEx10muc" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Put the code blocks below to define the function <c>alarm_clock</c>. It will be given a day of the week encoded as 0 = Sun, 1 = Mon, 2 = Tue, &#x2026;6 = Sat, and a
             boolean indicating if we are on vacation, and will return a string indicating when the alarm
@@ -631,7 +631,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="functEx11muc" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="functEx11muc" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>First create a function called <c>square_it</c> which
             squares the parameter <c>n</c> and returns the result. Then, create a function called <c>cube_it</c> which cubes
@@ -686,7 +686,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="functEx12muc_v2" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="functEx12muc_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>distance</c> which returns the distance between two coordinates using
             the distance formula: d = &#x221A;((x_2 - x_1)&#xB2; + (y_2 - y_1)&#xB2;).  Use two functions in Python's math module (<c>math.pow</c>, <c>math.sqrt</c>).

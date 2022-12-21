@@ -91,7 +91,7 @@ print(soup.find('p'))
     <p>
       <url href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser" visual="http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser">http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser</url>
     </p>
-    <exercise label="bs_print_first_paragraph_pp" numbered="yes" adaptive="yes" indent="show" language="python">
+    <exercise label="bs_print_first_paragraph_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
       <statement>
         <p>Put the following blocks in order to print the second paragraph from the Michigan Daily website.  It uses the <c>find_all</c> method on
                 BeautifulSoup to get a list of all of the paragraphs.</p>
@@ -169,7 +169,7 @@ print(tag.text)
       <p>When you specify a CSS class you must use <c>class_</c> as the keyword.  This is becuase <c>class</c> is already
                     a keyword that is used to define a new class in Python.</p>
     </note>
-    <exercise label="bs_get_tag_text_with_class_pp" numbered="yes" adaptive="yes" indent="show" language="python">
+    <exercise label="bs_get_tag_text_with_class_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
       <statement>
         <p>Put the following blocks in order to print the text for span tag which
                 is a child of a h3 tag with a class of css-1pjbq1w.</p>
@@ -241,7 +241,7 @@ for tag in tags:
         </input>
       </program>
     </exercise>
-    <exercise label="bs_print_get_all_href_pp" numbered="yes" adaptive="yes" indent="show" language="python">
+    <exercise label="bs_print_get_all_href_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
       <statement>
         <p>Put the following blocks in order to find all the link tags and print the href for each one for the Michgian Daily.</p>
       </statement>
@@ -342,7 +342,7 @@ for li in li_list:
       <p>You don't have to use all the classes that a tag has.  Try to find a class
                     that is specific to the tags you are looking for.</p>
     </note>
-    <exercise label="bs_find_all_and_find" numbered="yes" adaptive="yes" indent="show" language="python">
+    <exercise label="bs_find_all_and_find" numbered="yes" adaptive="yes" indentation="show" language="python">
       <statement>
         <p>Put the following blocks in order to print the href for the first &#x2018;a' tag
                 in each h2 tag with a class of <q>entry-title</q></p>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="files_mixed-up-code-questions">
   <title>Mixed-up Code Questions</title>
-  <exercise label="file_write_line_pp" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="file_write_line_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function <c>write_line(file, output)</c> that writes the contents of the string <c>output</c> to <c>file</c>.  Be sure to add a newline character <c>"\n"</c> when you write <c>output</c> to the file.</p>
     </statement>
@@ -58,7 +58,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="file_read_n_lines_pp" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="file_read_n_lines_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function <c>read_n_lines(file, n)</c> that reads the first <c>n</c> lines from <c>file</c> and returns them in a list. Be sure to remove the end of line character from each line before you add it to the list and close the file after you have read the lines.</p>
     </statement>
@@ -116,7 +116,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="file_count_words_pp" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="file_count_words_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function <c>count_words(file)</c> that returns the number of words in the passed file. First create a variable <c>num</c> and initialize it.  Then open the
             file. Loop reading a line from the file. Break the line at spaces and add the length of the resulting list to <c>num</c>. After you have read all the lines, close the file and return <c>num</c>.</p>
@@ -184,7 +184,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="file_count_lines_starting_with_pp" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="file_count_lines_starting_with_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function <c>count_starting_with(file, str)</c> that returns the number of lines in the passed <c>file</c> that start with the characters in <c>str</c>.  Be sure to close the file.</p>
     </statement>
@@ -248,7 +248,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="file_write_squares_pp" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="file_write_squares_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function <c>write_squares(file)</c> which writes the squares of 1 (inclusive) to 10 (inclusive) with each one on a single line to <c>file</c>.</p>
     </statement>

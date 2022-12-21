@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="classes-basics_mixed-up-code-exercises">
   <title>Mixed-Up Code Exercises</title>
-  <exercise label="Classes_Basic_Airport_pp" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="Classes_Basic_Airport_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a class <c>Airport</c> with an <c>__init__</c> method that takes a <c>name</c> and <c>code</c> as strings and initializes these attributes in the current object.
             Then define the <c>__str__</c> method to return the <c>name code</c>.  For example, <c>print(a)</c> when <c>a = Airport("Detroit", "DTW")</c> would print <c>Detroit DTW</c>.</p>
@@ -70,7 +70,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="Classes_Basic_Song_pp" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="Classes_Basic_Song_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a class <c>Song</c> with an <c>__init__</c> method that takes a <c>title</c> as a string and <c>len</c> as a number and initializes these attributes in the current object.
             Then define the <c>__str__</c> method to return the <c>title, len</c>.  For example, <c>print(s)</c> when <c>s = Song('Respect',150)</c> would print <q>Respect, 150</q>.</p>
@@ -139,7 +139,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="Classes_Basic_Cat_pp" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="Classes_Basic_Cat_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a class Cat with an <c>__init__</c> method that takes
             <c>name</c> as a string and <c>age</c> as a number and initializes these attributes in the current object.  Next create the <c>__str__</c> method that returns
@@ -218,7 +218,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="Classes_Basic_Account_pp" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="Classes_Basic_Account_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a class <c>Account</c> with an <c>__init__</c> method that takes <c>id</c> and <c>balance</c> as numbers. Then create a <c>__str__</c> method that returns <q>id, balance</q>. Next create a <c>deposit</c> method takes <c>amount</c> as a number and adds that to the <c>balance</c>.  For example,
             if <c>a = Account(32, 100)</c> and <c>a.deposit(50)</c> is executed, <c>print(a)</c> should print <q>32, 150</q>.</p>
@@ -255,7 +255,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="Classes_Basic_FortuneTeller_pp" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="Classes_Basic_FortuneTeller_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a class <c>FortuneTeller</c> with an <c>__init__</c> method that takes a list of fortunes as strings and saves that as an attribute.  Then create a <c>tell_fortune</c> method that returns one of the fortunes in the list at random.</p>
     </statement>
@@ -327,7 +327,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="Classes_Basic_Student_pp" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="Classes_Basic_Student_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a class <c>Student</c> with an <c>__init__</c> method that takes a student's name as a string and a list of exam scores as integers. Then create a <c>__str__</c> method that returns the <q>name: average exam score</q> rounded to the nearest integer. For example, <c>print(s)</c> when <c>s = Student("Sarah", [91,92,97])</c> would print <c>Sarah: 93.0</c>.</p>
     </statement>
@@ -398,7 +398,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="Classes_Basic_Encoder_pp" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="Classes_Basic_Encoder_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a class <c>Encoder</c> with an initializer method that takes in a sentence as a string. Then create a string method that returns <q>string: length of sentence</q>. Lastly, create a consonants method that returns the sentence without vowels, all lowercase. For example, <c>print(e)</c> when <c>e = Encoder("I love Python")</c> would print <c>I love Python: 13</c> and <c>print(e.consonants())</c> would print `` lv pythn``.</p>
     </statement>
@@ -490,7 +490,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="Classes_Basic_CharFrequency_pp" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="Classes_Basic_CharFrequency_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a class <c>CharFrequency</c> with an initializer method that takes in a sentence as a string. Then create a string method that returns <q>The most common character in the sentence is x.</q> In the case of tiebreakers, return the character that comes last in alphabetical order.
             For example, <c>print(c)</c> when <c>c = CharFreequency("I love Python")</c> would print <c>The most common character in the sentence is o.</c></p>
@@ -557,7 +557,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="Classes_Basic_Loan_pp" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="Classes_Basic_Loan_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a class <c>Loan</c> with an initializer method that takes in an integer loan_amt, a float interest_rate and integer years. Then create a string method that returns <q>Your loan is &#x2018;'loan_amt'' for &#x2018;'years'' years at an interest rate of &#x2018;'interest_rate''.</q> Create another method called total_payment that calculates the total amount of loan payment based on the interest rate and number of years. Use the formula (loan_amt * (1 + interest_rate/100) ^ years). Also round your total payment to two decimal places. We're assuming that you are paying on an annual basis. For example, <c>print(l)</c> when <c>l = Loan(10000, 5, 10)</c> would print <c>Your loan is $10000 for 10 years at an interest rate of 5%.</c> and <c>print(l.total_payment())</c> would print <c>16288.95</c> as a float.</p>
     </statement>
@@ -631,7 +631,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="Classes_Basic_Cart1_pp" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="Classes_Basic_Cart1_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a class <c>Cart</c> that takes in a dictionary price_dict with keys as product names and values as the product price. The initializer method also creates a new empty list called cart_list that will contain tuples in the format (item, quantity). The class also has an add_item and a calculate_total method. The add_item method will take in an item and quantity you wish to purchase and append those to the cart. The calculate_total method should calculate and return the total amount of your purchase for all of the items in your cart. For example, when <c>c = Cart({<q>Notebook</q>: 1.99, <q>Pen</q>: 2.50, <q>Paper</q>: 1.00})</c> and a user wants to purchase 3 pens by calling c.add_item(<q>Pen</q>, 3), then print(c.calculate_total) would print <c>7.50</c> as a float.</p>
     </statement>

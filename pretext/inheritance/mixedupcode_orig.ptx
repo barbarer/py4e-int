@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="inheritance_mixed-up-code-questions">
   <title>Mixed-Up Code Questions</title>
-  <exercise label="inheritance_mixed1_v3" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="inheritance_mixed1_v3" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a class <c>Person</c> with a <c>constructor</c> that takes <c>first_name</c> and <c>last_name</c> and inititalize those attributes in the current object. Next, create a class called <c>Customer</c> that inherits from <c>Person</c> with a constructor that takes <c>first_name</c>, <c>last_name</c>, and <c>id</c>.  Call the constructor in <c>Person</c> to initialize <c>first_name</c> and <c>last_name</c> and then also set the <c>id</c> attribute in the <c>Customer</c> object.  For example, <c>Person("Barb", "Ericson").last_name == "Ericson"</c> and <c>Customer("Barb", "Ericson", "a1").id == ``"a1"</c>.</p>
     </statement>
@@ -76,7 +76,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="inheritance_mixed2_v3" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="inheritance_mixed2_v3" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a class called <c>Person</c> with a <c>constructor</c> that takes <c>name</c> and <c>age</c>. Next, create a class called <c>Student</c> that inherits from <c>Person</c>.
             The constructor for <c>Student</c> takes <c>name</c>, <c>age</c>, and <c>gpa</c>. Have the constructor for the <c>Student</c> class call the constructor for the <c>Person</c> class to initialize the <c>name</c> and <c>age</c> and then set the value for the <c>gpa</c>.  For example, <c>Person('Susan', 13).name</c> would be <c>"Susan"</c>
@@ -154,7 +154,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="inheritance_mixed3_v3" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="inheritance_mixed3_v3" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a class called <c>Building</c> with a <c>constructor</c> that inititalizes the attributes <c>floors</c> and <c>sqft</c>. Next, create a class called <c>House</c> that inherits from <c>Building</c>. The constructor for <c>House</c> should take <c>floors</c>, <c>sqft</c>, and <c>bedrooms</c> and call the construtor in <c>Building</c> to initialze the <c>floors</c> and <c>sqft</c> before setting the attribute <c>bedrooms</c>. For example, <c>Building(15, 10000).floors</c> would be <c>15</c>
             and <c>House(3, 2000, 3).bedrooms</c> would be <c>3</c>.</p>
@@ -232,7 +232,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="inheritance_mixed4_v3" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="inheritance_mixed4_v3" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a class <c>Account</c> with an attribute of <c>balance</c> and methods of <c>deposit</c> and <c>withdraw</c> that both take an <c>amount</c>. For example, <c>Account(200).withdraw(50)</c> should set the balance to <c>150</c> and <c>Account(200).deposit(100)</c> should set the balance to <c>300</c>.</p>
     </statement>
@@ -314,7 +314,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="inheritance_mixed5_v3" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="inheritance_mixed5_v3" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a class <c>Animal</c> with an attribute of <c>name</c> and a method <c>make_noise</c> that returns <c>"Noise"</c>.  Then create a <c>Dog</c> class that inherits from <c>Animal</c>.  Have the constructor in <c>Dog</c> call the constructor in <c>Animal</c> to initialze the <c>name</c>. In <c>Dog</c> also override the <c>make_noise</c> method inherited from <c>Animal</c> to return <c>"Bark"</c>.   For example, <c>Animal("Diana").make_noise()</c> returns <c>"Noise"</c> and <c>Dog("Percy").make_noise()</c> returns <c>"Bark"</c>.</p>
     </statement>
@@ -397,7 +397,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="inheritance_mixed6_v3" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="inheritance_mixed6_v3" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a class <c>Animal</c> with an attribute of <c>name</c> and a method <c>make_noise</c> that returns <c>"Noise"</c>.  Then create a <c>Cat</c> class that inherits from <c>Animal</c>.  Have the constructor in <c>Cat</c> call the constructor in <c>Animal</c> to initialze the <c>name</c>. In <c>Cat</c> also override the <c>make_noise</c> method inherited from <c>Animal</c> to return <c>"Meow"</c>.   For example, <c>Animal("Spike").make_noise()</c> returns <c>"Noise"</c> and <c>Cat("Diana").make_noise()</c> returns <c>"Meow"</c>.</p>
     </statement>
@@ -478,7 +478,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="inheritance_mixed7_v3" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="inheritance_mixed7_v3" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Given a class <c>Point</c> that has attributes of <c>x</c> and <c>y</c> and a method <c>distance_to(self, other)</c> that returns the distance between the current point (self) and the other point, create a <c>MyCircle</c> class that has a constructor that takes two attibutes <c>p1</c> and <c>p2</c> both objects of the class <c>Point</c>.  Also create a <c>radius</c> method that returns the radius of the circle (half the distance between the two points that define circle).</p>
     </statement>
@@ -556,7 +556,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="inheritance_mixed8_v3" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="inheritance_mixed8_v3" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Given a class <c>Item</c> with an attributes of <c>name</c> and <c>price</c>, create an <c>Order</c> class that has an attribute <c>item_list</c> that is intitialized to the empty list in the constructor.  Then add an <c>add_item</c> method that takes an <c>item</c> and appends it to the <c>item_list</c> attribute.   Then create a <c>get_total</c> method that returns the total price for all the items in <c>item_list</c> attribute.</p>
     </statement>
@@ -657,7 +657,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="inheritance_mixed9_v3" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="inheritance_mixed9_v3" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Given a class <c>Account</c> with an attribute <c>balance</c> and methods of <c>deposit</c> and <c>withdraw</c>, create a <c>SavingsAccount</c> class that inherits from <c>Account</c>.  Create a constructor that takes <c>balance</c> and <c>interest</c>.  In the <c>SavingsAccount</c> constructor call the <c>Account</c> constructor to intitialze the <c>balance</c> and then initialize the <c>interest</c>.   Then create a <c>pay_interest</c> method that adds the interest to the balance (divide the interest rate by 100 and multiply it by the balance to determine the amount to add).</p>
     </statement>
@@ -747,7 +747,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="inheritance_mixed10_v3" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="inheritance_mixed10_v3" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Given a class <c>Treasure</c> that has attributes of <c>name</c> and <c>points</c>, create a class <c>Room</c> that has attributes of <c>name</c> and <c>treasures</c>.  Initialize <c>treasures</c> to the empty list in the constructor.  Create a <c>add_treasure</c> method in <c>Room</c> that adds a passed <c>Treasure</c> object to <c>treasures</c>.  Next create a <c>get_points</c> method in <c>Room</c> that returns the total of all of the points for the <c>Treasure</c> in <c>treasures</c>.</p>
     </statement>
