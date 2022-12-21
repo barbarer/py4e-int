@@ -206,7 +206,7 @@
 1-Feb-89,2342.32,2369.29,2232.14,2258.39
 3-Jan-89,2168.39,2350.18,2127.14,2342.32</pre>
     </hint>
-    <exercise>
+    <exercise label="csv_file_stocks_max_close_fitb">
       <statement>
         <p>Q-1: What is the highest closing value in the file above?  The closing value is the last value on each line. <var/>  </p>
       </statement>
@@ -264,7 +264,7 @@ print(f"Max close {max_close} on {max_date}")
     </note>
     <p>What if you want to find several things from the data? You wouldn't want to read the data from the file in every function.  You could read all the data into a nested dictionary and then pass the dictionary to every function. A nested dictionary is a dictionary that has dictionaries for the values.  In this case we can use the date as the key for the outer dictionary and use <q>open</q>, <q>high</q>, <q>low</q> and <q>close</q>
                 as the keys for each inner dictionary.</p>
-    <exercise>
+    <exercise label="csv_file_stocks_min_close_fitb">
       <statement>
         <p>Q-3: What is the lowest closing value in the stocks.txt file above? <var/>  </p>
       </statement>
@@ -577,7 +577,7 @@ myTests().main()
         </input>
       </program>
     </exercise>
-    <exercise>
+    <exercise label="csv_file_air_travel_most_month_1958_fitb">
       <statement>
         <p>Q-9: Which month had the most passengers travelling by air in 1958?  Enter the three letter code from the file for the month. <var/>  </p>
       </statement>

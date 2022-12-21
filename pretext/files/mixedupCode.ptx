@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="files_mixed-up-code-questions">
   <title>Mixed-up Code Questions</title>
+  <!--
   <raw format="html" xml:space="preserve">
 &lt;div class="runestone sqcontainer %(optclass)s"&gt;
 &lt;div data-component="selectquestion" id=file_write_line_sq data-questionlist='file_write_line_pp, file_write_line_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
@@ -36,7 +37,8 @@
 &lt;/div&gt;
 &lt;/div&gt;
 </raw>
-  <exercise label="file_mixed_olympics" numbered="yes" adaptive="yes" indent="show" language="python">
+  -->
+  <exercise label="file_mixed_olympics" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>The following program should split the lines of <q>olympics.txt</q>, then print the name,
             team, and event of each athlete in a sentence. Unfortunately the code is mixed up.
@@ -46,7 +48,7 @@
     <blocks>
       <block order="2">
         <choice correct="yes">
-          <cline>olypmicsfile = open("olypmics.txt", "r")</cline>
+          <cline>olypmicsfile = open("olympics.txt", "r")</cline>
         </choice>
         <choice>
           <cline>olympicsfile = open(olympics.txt, "r") </cline>

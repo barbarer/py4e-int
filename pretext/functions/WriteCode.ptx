@@ -2,7 +2,7 @@
 <exercises xml:id="functions_write-code-questions">
   <title>Write Code Questions</title>
 
-        <exercise>
+        <exercise label="funct-ex-perimeterq">
           <statement>
             <p>Fix the 4 errors so the following code runs and returns the perimeter of a rectangle. For example, <c>recPerimeter(10, 20)</c> should return <c>60</c>.</p>
           </statement>
@@ -71,7 +71,7 @@ myTests().main()
           </program>
         </exercise>
 
-        <exercise>
+        <exercise label="funct_ex_triangle">
           <statement>
             <p>Change the code so that <c>areaTriangle</c> takes parameters for the base and height of a triangle
                             and computes its area. Then, write code to call the function and print the result. For example, <c>areaTriangle(12,45)</c> should return <c>270</c>.</p>
@@ -145,7 +145,7 @@ myTests().main()
           </program>
         </exercise>
 
-        <exercise>
+        <exercise label="funct_ex_name">
           <statement>
             <p>Fix the errors on line 2 so the function <c>nameAndAge</c> returns
                             the string <q>My name is <c>nameString</c> and I am <c>ageInt</c> years old.</q> For example, <c>nameAndAge("John", 18)</c> should return
@@ -227,7 +227,7 @@ myTests().main()
           </program>
         </exercise>
 
-        <exercise>
+        <exercise label="funct_ex_sumq">
           <statement>
             <p>Write a fruitful function <c>sumTo(n)</c> that returns the sum of all integer numbers up to and
                             including <c>n</c>. For example, <c>sumTo(10)</c> would compute 1 + 2 + 3 + &#x2026; + 10 and return the value <c>55</c>.
@@ -299,7 +299,7 @@ myTests().main()
           </program>
         </exercise>
 
-        <exercise>
+        <exercise label="funct_ex_circleq">
           <statement>
             <p>Write a function <c>areaOfCircle(r)</c> which returns the area of a circle of radius <c>r</c>.
                             Make sure you import the math module in your solution to obtain an accurate value of pi.
@@ -373,7 +373,7 @@ myTests().main()
           </program>
         </exercise>
 
-        <exercise>
+        <exercise label="funct_ex_speedingq">
           <statement>
             <p>You are driving a little too fast, and a police officer stops you. Write code to
                             compute the kind of ticket you'll receive, encoded as an int value: 0 = no ticket, 1 =
@@ -469,7 +469,7 @@ myTests().main()
           </program>
         </exercise>
 
-        <exercise>
+        <exercise label="funct_ex_alarmq">
           <statement>
             <p>Write a function called <c>alarm_clock</c> that has parameters <c>day</c> and <c>vacation</c>. Given a <c>day</c> of the week encoded as 0 = Sun, 1 = Mon, 2 = Tue, &#x2026; 6 = Sat and a
                             boolean indicating if we are on <c>vacation</c>, return a string indicating when the

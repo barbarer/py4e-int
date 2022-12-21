@@ -87,7 +87,7 @@ print_contents("dogs.txt")
     <p>Notice that when you run this code it adds a blank line after each line.
                 That is because when you read a line from a file the line contains the newline character (<c>\n</c>).
                 When you print a line you add another newline character which prints as a blank line.</p>
-    <exercise>
+    <exercise label="file_remove_newline">
       <statement>
         <p>Q-2: What string method can you use to remove the newline character from the end of a line? <var/>  </p>
       </statement>
@@ -107,7 +107,7 @@ print_contents("dogs.txt")
       </setup>
     </exercise>
     <p>Modify the code above to remove the newline from each line after it is read in.</p>
-    <exercise>
+    <exercise label="file_obj_type_fitb">
       <statement>
         <p>Q-3: What type of thing is <c>file_obj</c> in the code above? <var/>  </p>
       </statement>
@@ -154,7 +154,7 @@ print_contents("dogs.txt")
     <note>
       <p>You can use either <c>open(file,"r")</c> or just <c>open(file)</c> to read from a file.</p>
     </note>
-    <exercise>
+    <exercise label="line_file_close_fitb">
       <statement>
         <p>Q-5: What method do you use to close a file that you have opened? <var/>  </p>
       </statement>
@@ -264,7 +264,7 @@ print_contents("unknown.txt")
       </program>
     </exercise>
     <p>You can use <c>try</c> and <c>except</c> to handle code that can cause exceptions. Put the code that can cause the exception in the <c>try</c> block.</p>
-    <exercise>
+    <exercise label="line_file_open_except_fitb">
       <statement>
         <p>Q-11: What keyword do you use to specify code to execute if there is an error when the code in the body of the <c>try</c> executes? <var/>  </p>
       </statement>
@@ -373,7 +373,7 @@ print_contents("dogs.txt")
         </block>
       </blocks>
     </exercise>
-    <exercise>
+    <exercise label="file_pogil_line_count_type_returned">
       <statement>
         <p>Q-15: What type of thing is returned from the function below? <var/>  </p>
       </statement>

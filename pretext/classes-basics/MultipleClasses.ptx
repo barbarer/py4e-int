@@ -359,7 +359,7 @@ if __name__ == "__main__":
     </exercise>
     <p>Notice that we have defined a list of <c>suit_names</c> and <c>rank_names</c> in the <c>Card</c> class.  These will be created in the class <c>Card</c> and not in each object of the class <c>Card</c>.  They are called <c>class attributes</c>.
                 Each object of the <c>Card</c> class doesn't need to have its own copy of these lists.  That would be a waste of space. Instead they are created in the class and all objects of the class have access to it.</p>
-    <exercise>
+    <exercise label="mult_class_attribute_fitb">
       <statement>
         <p>Q-8: Use <BlankNode/>.rank_names to access the class attribute <c>rank_names</c> in the <c>Card</c> class. <var/>  </p>
       </statement>
@@ -422,7 +422,7 @@ if __name__ == "__main__":
         <p>Q-10: How can you tell if an attribute is a class or object attribute?</p>
       </statement>
     </exercise>
-    <exercise>
+    <exercise label="mult_class_deck_who_creates_cards_fitb">
       <statement>
         <p>Q-11: The <BlankNode/> function in class <BlankNode/> creates all of the card objects in the deck object. <var/>  <var/>  </p>
       </statement>

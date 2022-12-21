@@ -236,7 +236,7 @@ print(final_time_int)
     <p>Parse errors happen when you make an error in the syntax of your program.  Syntax errors are like making grammatical errors in writing.  If you don't use periods and commas in your writing then you are making it hard for other readers to figure out what you are trying to say.  Similarly Python has certain grammatical rules that must be followed or else Python can't figure out what you are trying to say.</p>
     <p>Usually ParseErrors can be traced back to missing punctuation characters, such as parentheses, quotation marks, or commas. Remember that in Python commas are used to separate parameters to functions.  Paretheses must be balanced, or else Python thinks that you are trying to include everything that follows as a parameter to some function.</p>
     <p>Here are a couple examples of Parse errors in the example program we have been using.  See if you can figure out what caused them.</p>
-    <exercise>
+    <exercise label="db_ex3_6">
       <statement><p>Find and fix the error in the following code.</p></statement>
       <program interactive="activecode" language="python" xml:id="parse_err_example1"><input>current_time_str = input("What is the current time (in hours 0-23)?")
 wait_time_str = input("How many hours do you want to wait"
@@ -261,7 +261,7 @@ print(final_time_int)
                 </solution>
     </exercise>
     <p><term>Finding Clues</term>  How can you help yourself find these problems?  One trick that can be very valuable in this situation is to simply start by commenting out the line number that is flagged as having the error.  If you comment out line four, the error message now changes to point to line 5.  Now you ask yourself, am I really that bad that I have two lines in a row that have errors on them?  Maybe, so taken to the extreme, you could comment out all of the remaining lines in the program. Now the error message changes to <c>TokenError: EOF in multi-line statement</c>  This is a very technical way of saying that Python got to the end of file (EOF) while it was still looking for something.  In this case a right parenthesis.</p>
-    <exercise>
+    <exercise label="db_ex3_7">
       <statement><p>Find and fix the error in the following code.</p></statement>
       <program interactive="activecode" language="python" xml:id="parse_err_example2">
         <input>current_time_str = input("What is the "current time" (in hours 0-23)?")

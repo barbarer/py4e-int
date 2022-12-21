@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <section xml:id="lists_parsing-lines">
         <title>Parsing lines</title>
     <idx><h>List</h><h>Parsing</h></idx>
@@ -31,7 +32,7 @@ for line in fhand:
             the lines to work on and how we pull those lines apart to find the exact
             bit of information we are looking for.</p>
 
-        <exercise>
+        <exercise label="listPars_fill1">
             <statement>
     <p>Q-2: When reading lines from a file, what list method can be used to select or print parts of a line? <var/>  </p></statement><setup><var><condition string="[Ss]plit(\(\))*"><feedback><p>The split method can be used to separate interesting parts of a line.</p></feedback></condition><condition string=".*"><feedback><p>Try again.</p></feedback></condition></var></setup></exercise><exercise label="listPars_PP_file" numbered="yes" adaptive="yes" indent="show" language="python"><statement>
         <p>The following code should open a file and read through the lines, splitting them when a line starts

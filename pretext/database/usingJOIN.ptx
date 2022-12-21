@@ -27,7 +27,7 @@ SELECT * FROM Follows JOIN People
             Take the rows from <c>Follows</c> and append the row from
             <c>People</c> where the field <c>from_id</c> in <c>Follows</c> is
             the same the <c>id</c> value in the <c>People</c> table.</p>
-  <exercise>
+  <exercise label="dbJoin_fill1">
     <statement>
       <p>Q-1: Which SQL clause can be used to return data from two tables? <var/>  </p>
     </statement>
@@ -46,7 +46,7 @@ SELECT * FROM Follows JOIN People
       </var>
     </setup>
   </exercise>
-  <exercise>
+  <exercise label="dbJoin_on_fill1">
     <statement>
       <p>Q-2: Fill in the blank in the following: SELECT * FROM Follows JOIN People <BlankNode/> Follows.from_id = People.id LIMIT 5 <var/>  </p>
     </statement>
