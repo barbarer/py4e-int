@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<section xml:id="web_application-programming-interfaces">
+<exercises xml:id="web_application-programming-interfaces">
   <title>Application Programming Interfaces</title>
   <introduction>
 <idx>API</idx>
@@ -127,7 +127,7 @@
     </choices>
   </exercise>
 </introduction>
-  <subsection xml:id="web_getting-json-data-from-an-api">
+  <subexercises xml:id="web_getting-json-data-from-an-api">
     <title>Getting JSON Data From an API</title>
     <p>There is a listing of free APIs that you can use
                 at <url href="https://github.com/public-apis/public-apis" visual="https://github.com/public-apis/public-apis">https://github.com/public-apis/public-apis</url></p>
@@ -148,8 +148,8 @@ in_dict = in_list[0]
 print(in_dict.get("fact"))
         </input>
     </program>
-  </subsection>
-  <subsection xml:id="web_using-a-dictionary-for-url-parameters">
+  </subexercises>
+  <subexercises xml:id="web_using-a-dictionary-for-url-parameters">
     <title>Using a Dictionary for URL Parameters</title>
     <p>To add parameters to a URL you can just add them to the URL string as shown above (<c>?number=1</c>) but spaces in
                 strings need to be replaced.  An easier way to add parameters to a URL is to
@@ -170,5 +170,5 @@ in_dict = in_list[0]
 print(in_dict.get("fact"))
         </input>
     </program>
-  </subsection>
-</section>
+  </subexercises>
+</exercises>

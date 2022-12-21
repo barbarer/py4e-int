@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="database_three-kinds-of-keys">
   <title>Three kinds of keys</title>
+  <introduction>
     <idx>Key</idx>
     <idx>Logical Key</idx>
     <idx>Primary Key</idx>
@@ -9,9 +10,7 @@
             multiple linked tables and linking the rows in those tables using
             <em>keys</em>, we need to look at some terminology around keys.
             There are generally three kinds of keys used in a database model.</p>
-  <p>
-    <ul>
-      <li>
+        </introduction> 
         <p>A <em>logical key</em> is a key that the <q>real world</q> might
                     use to look up a row. In our example data model, the
                     <c>name</c> field is a logical key. It is the screen name for
@@ -21,6 +20,7 @@
                     key. Since the logical key is how we look up a row from the outside
                     world, it makes little sense to allow multiple rows with the same
                     value in the table.</p>
+
         <exercise>
           <statement>
             <p>Q-1: What constraint is often used with logical keys? <var/>  </p>
@@ -40,8 +40,7 @@
             </var>
           </setup>
         </exercise>
-      </li>
-      <li>
+
         <p>A <em>primary key</em> is usually a number that is assigned
                     automatically by the database. It generally has no meaning outside
                     the program and is only used to link rows from different tables
@@ -73,14 +72,11 @@
             </choice>
           </choices>
         </exercise>
-      </li>
-      <li>
+
         <p>A <em>foreign key</em> is usually a number that points to
                     the primary key of an associated row in a different table. An
                     example of a foreign key in our data model is the <c>from_id</c>.</p>
-      </li>
-    </ul>
-  </p>
+
   <p>We are using a naming convention of always calling the primary key field
             name <c>id</c> and appending the suffix <c>_id</c> to any field name
             that is a foreign key.</p>

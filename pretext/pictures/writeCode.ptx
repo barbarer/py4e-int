@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <section xml:id="pictures_write-code-exercises">
   <title>Write Code Exercises</title>
-  <note>
+  <introduction><note>
     <p>Remember that it can take a bit of time to process all the pixels in a picture!  Check for errors below the code if it is taking a long time, but if you don't see any errors just wait.</p>
-  </note>
+    </note></introduction>
   <exercise>
     <statement>
       <p>Fix 4 syntax errors in the code below so that it correctly sets the red in all pixels to 0.</p>
@@ -307,7 +307,7 @@ img.draw(win)
         </input></program>
                 </solution>
   </exercise>
-  <blockquote>
+ 
     <exercise>
       <statement>
         <p>Complete the code in order to set the blue value to an eighth of the green value plus an eighth of the red value.</p>
@@ -371,7 +371,7 @@ img.draw(win)
         </input></program>
                     </solution>
     </exercise>
-  </blockquote>
+
   <exercise>
     <statement>
       <p>Fix the indention in the code below so that it correctly increases the red in each pixel in the picture by 1.5.</p>
@@ -894,6 +894,7 @@ img.draw(win)
         </input></program>
                 </solution>
   </exercise>
+  <!--
   <raw format="html" xml:space="preserve">
 &lt;div class="runestone sqcontainer %(optclass)s"&gt;
 &lt;div data-component="selectquestion" id=pictures_writecode_16 data-questionlist='pictures_ac_16, pictures_ac_16_pp'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
@@ -928,7 +929,7 @@ img.draw(win)
     &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: pictures_ac_20, pictures_ac_20_pp&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</raw>
+  </raw>-->
   <exercise>
     <statement>
       <p>Write code to create a subclass of the Image class with three different image effect functions and use each effect on a different part of the image.  For example, you could turn the image into grayscale, keep only the green values, swap the red and green values, negate the image, etc. This is one possible solution. For example, the image shown below has one image effect on the first third of the image (negate), one on the second third (clear blue), and one on the final third (reduce red).  It is using the image <c>gal2.jpg</c></p>
