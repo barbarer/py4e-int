@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <section xml:id="strings_group-work-strings">
         <title>Group Work - Strings</title>
         <introduction>
@@ -215,10 +216,10 @@ print(triplet)
                 end.</q> The slice <c>[:n]</c> means <q>from the beginning to the index
                 just before <c>n</c></q> (i.e., the first <c>n</c> characters).</p>
 
-        <exercise>
+        <exercise label="strings_fitb_pogil_smarpos">
             <statement>
     <p>11-9-5: Write a Python expression that slices <q>smar</q> from <c>sentence</c> using only <em>positive</em> indexes. Reminder: <c>sentence</c> = <q>I_am_smart</q>. <var/>  </p></statement><setup><var><condition string="sentence\[5:9\]"><feedback><p>Correct! This slice starts at &#8216;s', which is index 5, and stops after including &#8216;r' at index 8, which is one index before 9.</p></feedback></condition><condition string="sentence\[5:8\]"><feedback><p>Incorrect! The second number in the slice is the index after the index of the last character you want to include. Try again.</p></feedback></condition><condition string=".*"><feedback><p>Incorrect! Write your answer in the form <q>sentence[m:n]</q>. Try again.</p></feedback></condition></var></setup></exercise>
-        <exercise>
+        <exercise label="strings_fitb_pogil_smarneg">
             <statement>
     <p>11-9-6: Write a Python expression that slices <q>smar</q> from <c>sentence</c> using only <em>negative</em> indexes. Reminder: <c>sentence</c> = <q>I_am_smart</q>. <var/>  </p></statement><setup><var><condition string="sentence\[-5:-1\]"><feedback><p>Correct! This slice starts at &#8216;s', which is index -5, and stops after including &#8216;r' at index -2, which is one index before -1.</p></feedback></condition><condition string="sentence\[-5:0\]"><feedback><p>Incorrect! Remember, the last character in the string has the index -1. Try again.</p></feedback></condition><condition string=".*"><feedback><p>Incorrect! Write your answer in the form <q>sentence[-m:-n]</q>. Try again.</p></feedback></condition></var></setup></exercise>        </subsection>
         <subsection xml:id="strings_common-string-methods">
