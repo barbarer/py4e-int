@@ -24,7 +24,7 @@ bad name = 5
   </program>
   <exercise label="var-debug-mc-name">
     <statement>
-      <p>csp-10-2-2: Which error will you get if you name a variable <q>bad name</q>?</p>
+      <p><!--csp-10-2-2: -->Which error will you get if you name a variable <q>bad name</q>?</p>
     </statement>
     <choices>
       <choice>
@@ -77,19 +77,19 @@ interest = principle * rate
   <p>Variables names are case sensitive, so <c>LaTeX</c> is not the
             same as <c>latex</c>.</p>
   <p>At this point, the most likely cause of a semantic error is the order of
-            operations. For example, to evaluate <c>1/2pi</c> (which is .159), you might be tempted to write</p>
+    operations. For example, to evaluate <m>1 \over {2\pi }</m> (which is .159), you might be tempted to write</p>
   <program xml:id="var-ac-14-pi" interactive="activecode" language="python">
     <input>
 print(1.0 / 2.0 * 3.14)
         </input>
   </program>
-  <p>But the division happens first, so you would get <c>pi / 2</c>, which is not
+  <p>But the division happens first, so you would get <m>\pi \over 2</m>, which is not
             the same thing! There is no way for Python to know what you meant to
             write, so in this case you don't get an error message; you just get the
             wrong answer. <em>Try adding parentheses to the code above to return the correct answer.</em></p>
   <exercise label="var-fitb-error-fix">
     <statement>
-      <p>csp-10-2-5: ________ is the process of fixing errors in your code. <var/>  </p>
+      <p><!--csp-10-2-5: -->________ is the process of fixing errors in your code. <var/>  </p>
     </statement>
     <setup>
       <var>
@@ -108,7 +108,7 @@ print(1.0 / 2.0 * 3.14)
   </exercise>
   <exercise label="var-debug-mc-equation">
     <statement>
-      <p>csp-10-2-6: Which error will you get if you use the equation 1/2*3.14 instead of 1/(2*3.14)?</p>
+      <p><!--csp-10-2-6: -->Which error will you get if you use the equation 1/2*3.14 instead of 1/(2*3.14)?</p>
     </statement>
     <choices>
       <choice>
