@@ -1,6 +1,6 @@
 <section xml:id="web_mixed-up-code-questions">
         <title>Mixed-Up Code Questions</title>
-<exercise label="web-mixed1" numbered="yes" adaptive="yes" indent="show" language="python"><statement>
+<exercise label="web-mixed1" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
         <p>Put the code blocks in order to import the json library.  Then convert the
             string &lt;code&gt;x&lt;/code&gt; to a Python dictionary. Then print the value for the
             &lt;code&gt;<q>age</q>&lt;/code&gt; key.</p>
@@ -15,7 +15,7 @@
 </choice></block><block order="3">
 <choice correct="yes"><cline>print(y["age"])</cline>
 </choice><choice><cline>print(y[1]) </cline>
-</choice></block></blocks></exercise><exercise label="web-mixed2" numbered="yes" adaptive="yes" indent="show" language="python"><statement>
+</choice></block></blocks></exercise><exercise label="web-mixed2" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
         <p>Put the blocks in order to output a Python dictionary &lt;code&gt;x&lt;/code&gt; as a
             JSON string.  Watch out for an extra piece of code!</p>
 </statement>
@@ -33,7 +33,7 @@
 <cline>y = json.loads(x) </cline>
 </block><block order="5">
 <cline>y = json.dumps(x)</cline>
-</block></blocks></exercise><exercise label="web-mixed3" numbered="yes" adaptive="yes" indent="show" language="python"><statement>
+</block></blocks></exercise><exercise label="web-mixed3" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
         <p>Put the blocks in order to import the needed module, define the data, read an
             XML tree from the data, and print the name and email hide attribute value.</p>
 </statement>
@@ -54,7 +54,7 @@
 <cline>print('Name:', tree.find('name').text)</cline>
 </block><block order="4">
 <cline>print('Attr:', tree.find('email').get('hide'))</cline>
-</block></blocks></exercise><exercise label="web-mixed4" numbered="yes" adaptive="yes" indent="show" language="python"><statement>
+</block></blocks></exercise><exercise label="web-mixed4" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
         <p>Put the blocks in order to define a JSON encoding that is roughly equivalent to the simple
             XML from before. It first includes the name and phone number, then the email
             (which isn't visible). Drag the blocks of statements from the left column to
@@ -77,7 +77,7 @@
 </block><block order="7">
 <cline>    }</cline>
 <cline>}"</cline>
-</block></blocks></exercise><exercise label="web-mixed5" numbered="yes" adaptive="yes" indent="show" language="python"><statement>
+</block></blocks></exercise><exercise label="web-mixed5" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
         <p>Put the blocks in order to convert JSON data for Chuck and Brent to Python
             then print the number of entries and their data, but the code is mixed up.
             Drag the blocks of statements from the left column to the right column and put
@@ -116,7 +116,7 @@
 <cline>    print('Name', item['name'])</cline>
 <cline>    print('Id', item['id'])</cline>
 <cline>    print('Attribute', item['x'])</cline>
-</block></blocks></exercise><exercise label="web-mixed6" numbered="yes" adaptive="yes" indent="show" language="python"><statement>
+</block></blocks></exercise><exercise label="web-mixed6" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
         <p>Put the blocks in order to define the XML for a note. First the recipient is listed,
             then the sender, heading, and message. There is an extra block that isn't
             needed in a correct solution.</p>
@@ -135,7 +135,7 @@
 <cline>    &lt;body&gt;Don't forget me this weekend!&lt;/body&gt;</cline>
 </block><block order="2">
 <cline>&lt;/note&gt;</cline>
-</block></blocks></exercise><exercise label="web-mixed7" numbered="yes" adaptive="yes" indent="show" language="python"><statement>
+</block></blocks></exercise><exercise label="web-mixed7" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
         <p>Put the blocks in order to create a restaurant's menu that lists breakfast
             items, their price, description, and calorie count. These 3 items should be
             listed in the order of: Belgian Waffles, French Toast, Homestyle Breakfast.</p>
@@ -171,7 +171,7 @@
 <cline>&lt;/food&gt;</cline>
 </block><block order="2">
 <cline>&lt;/breakfast_menu&gt;</cline>
-</block></blocks></exercise><exercise label="web-mixed8_new" numbered="yes" adaptive="yes" indent="show" language="python"><statement>
+</block></blocks></exercise><exercise label="web-mixed8_new" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
         <p>Put the blocks in order to convert a python dictionary to JSON, then use the sort_keys
             parameter to specify if the result should be sorted or not. Watch your indentation
             and make sure closing brackets/braces are in the right order!</p>

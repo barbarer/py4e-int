@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="objects_mixed-up-code-exercises">
   <title>Mixed-Up Code Exercises</title>
-  <exercise label="obj_mixedupcode_1" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="obj_mixedupcode_1" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a <c>Dog</c> class and define the <c>__init__</c> method
             that has one parameter, <c>name</c>. Then define the <c>getName</c> method, which returns the
@@ -76,7 +76,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="obj_mixedupcode_2_v2" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="obj_mixedupcode_2_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a class named <c>Dog</c>. Define the <c>__init__</c> method with two parameters, <c>name</c> and <c>age</c>.
             Also create the method <c>updateAge</c>, that increases the <c>age</c> by 1 and returns <c>age</c>.</p>
@@ -157,7 +157,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="obj_mixedupcode_3" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="obj_mixedupcode_3" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create the class <c>Cat</c>. Define the <c>__init__</c> method, it has two parameters,
             <c>name</c> and <c>age</c>. Next define the the <c>__str__</c> method to return a string with the cat's information:
@@ -229,7 +229,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="obj_mixedupcode_4" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="obj_mixedupcode_4" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a class named <c>Book</c> that has an <c>__init__</c> method with the parameters <c>title</c>
             and <c>author</c>.  Then create a <c>__str__</c> method that returns <c>"Title: title, Author: author"</c>.</p>
@@ -295,7 +295,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="obj_mixedupcode_5_v3" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="obj_mixedupcode_5_v3" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a class named <c>Dog</c> with the <c>__init__</c> method taking <c>name</c> as its parameter
             and setting <c>self.tricks</c> to an empty list.  Then create a <c>__str__</c> method that returns a string
@@ -377,7 +377,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="obj_mixedupcode_6" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="obj_mixedupcode_6" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a class named <c>Square</c> with the <c>__init__</c> method taking the length, <c>len</c>, with a default of <c>10</c> if it is not specified.  Then create a <c>__str__</c> method that returns a string
             with <c>"Length: length"</c>.  Then create an <c>area</c> method that returns the area (<c>length</c> times <c>length</c>).</p>
@@ -460,7 +460,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="obj_mixedupcode_7_v2" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="obj_mixedupcode_7_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a class named <c>Rectangle</c> with the <c>__init__</c> method taking a <c>length</c>, and <c>width</c>.  Then create a <c>__str__</c> method that returns a string
             with <c>"l: length, w: width"</c>.  Then create an <c>area</c> method that returns the area (<c>length</c> times <c>width</c>).</p>
@@ -547,7 +547,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="obj_mixedupcode_8" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="obj_mixedupcode_8" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Given a class <c>Point</c> with a method <c>distance_from_point(point)</c>, create a class named <c>Triangle</c> with the <c>__init__</c> method taking three <c>Point</c> objects and creating an attribute <c>points</c>.
             Then create an <c>base</c> method that returns length of the longest side.
@@ -637,7 +637,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="obj_mixedupcode_9" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="obj_mixedupcode_9" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a class named <c>PickItem</c> with the <c>__init__</c> method taking a list of items.
             Then create an <c>pick</c> method that returns one of the items at random.  You can use the <c>random</c> module's <c>choice</c> method for this.  Next create <c>add(item)</c> that adds the item to the list of items.</p>
@@ -719,7 +719,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="obj_mixedupcode_10" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="obj_mixedupcode_10" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a class <c>Dice</c> with an <c>__init__</c> method that takes the number of sides, <c>num_sides</c>.  Use a default of 6 if <c>num_sides</c> isn't passed in. Also set an attribute <c>history</c> to an empty list in the <c>__init__</c> method.
             Then create a <c>__str__</c> method that returns <c>"Dice with num_sides sides"</c> when <c>num_sides</c> is the number of sides.

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="regex_mixed-up-code-questions">
   <title>Mixed-Up Code Questions</title>
-  <exercise label="re_mixed1" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="re_mixed1" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>greeting_search</c> that takes in a list of strings, <c>lst</c>, as a parameter and returns <c>True</c> if the list
             has <q>Good Morning!</q> in it and <c>False</c> otherwise. For example, <c>greeting_search(["Hello!", "Good Morning!", "good morning!"])</c>
@@ -57,7 +57,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="re_mixed2" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="re_mixed2" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>search_h</c> that takes in a list of strings, <c>lst</c>, and uses regular expressions to add all the words
             starting with an <q>H</q> or an <q>h</q> to a new list and returns that new list. For example, <c>search_h(["Hello!", "hello.", "Morning!", "hi"])</c>
@@ -116,7 +116,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="re_mixed3" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="re_mixed3" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>search_o</c> that takes in a list of strings, <c>lst</c>, and uses regular expressions to add all the words
             that have a lowercase <q>o</q> to a new list and returns that new list. For example, <c>search_o(['Hello', 'Good Morning!', 'hi'])</c> should return
@@ -176,7 +176,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="re_mixed4_v2" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="re_mixed4_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>match_word(word, str)</c> that returns True if the string <c>str</c> contains the word <c>word</c>, but not if it is part of another word.  For example, <c>match_word('is', "This was bad")</c> would return False and <c>match_word('is', "This is good")</c> would return True.</p>
     </statement>
@@ -237,7 +237,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="re_mixed5_v2" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="re_mixed5_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>test_pattern</c> that takes in one string parameter, <c>sequence</c>, and uses regular expressions to see if <c>sequence</c> has the pattern
             of at least one letter, number, or underscore, at least one space, and at least one letter, number, or underscore again. Return <c>"Match!"</c> if <c>sequence</c> matches the pattern, and
@@ -307,7 +307,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="re_mixed6_v2" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="re_mixed6_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>first_price</c> that takes in a parameter <c>string</c> and uses regular expressions to find and return the first price in
             the <c>string</c> if there is one. A price must have at least one digit after a &#x2018;$' symbol and can optionally have a period followed by two digits.
@@ -382,7 +382,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="re_mixed7_v2" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="re_mixed7_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>search_email</c> that takes in a string parameter, <c>string</c>, and uses regular expressions to return
             a list with all the emails in the string. The format for the email is at least one letter, number or underscore, the <q>@</q> symbol,
@@ -433,7 +433,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="re_mixed8" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="re_mixed8" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>start_from`</c> that takes in a list of strings, <c>lst</c>, and adds into a new list each item that starts
             with <q>From:</q> and is followed by one or more characters and an <q>@</q> sign. For example, <c>start_from(['From: Kelly@umich.edu','From: Kelly@',': Kelly@'])</c>
@@ -492,7 +492,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="re_mixed9_v2" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="re_mixed9_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>grab_domain</c> that takes in a list of strings, <c>lst</c>, as a parameter and returns a new list with the domains of the emails, if they exist.
             For example, <c>grab_domain(['python@umich.edu','This is Kelly@umich.gov','123','java@css','jav12a@css.com'])</c> would return <c>['umich.edu', 'umich.gov', 'css.com']</c>.</p>
@@ -554,7 +554,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="re_mixed10_v2" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="re_mixed10_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>vowels_in_mid</c> that takes in one string parameter, <c>string</c>, and returns <c>string</c> if there is an area in the string
             that contains two to four vowels, and it does not start nor end with a vowel. Otherwise, return <c>'Does not exist'</c>. For example, <c>vowels_in_mid('chEEEEEYYEErry')</c>

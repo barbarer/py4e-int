@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="dictionaries_mixed-up-code-questions">
   <title>Mixed-Up Code Questions</title>
-  <exercise label="dictionaries_mixedupcode_question10_1" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="dictionaries_mixedupcode_question10_1" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function <c>letter_dict</c> that takes in <c>string</c> as a parameter and returns a dictionary containing the amount of times letters appear in the given <c>string</c>.
             For example, <c>letter_dict('It is')</c> should return <c>{'i': 2, 't': 1, 's': 1}</c>. (Note: Pretend the <c>string</c> doesn't have any punctuation besides spaces.)</p>
@@ -84,7 +84,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="dictionaries_mixedupcode_question10_2" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="dictionaries_mixedupcode_question10_2" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function <c>word_dict</c> that takes in <c>string</c> as a parameter and returns a dictionary containing the amount of times a word appears in the given <c>string</c>.
             For example, <c>word_dict('HELLO heLlo there  ')</c> should return <c>{'hello': 2, 'there': 1}</c>. (Note: Pretend the <c>string</c> doesn't have any punctuation besides spaces.)</p>
@@ -141,7 +141,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="dictionaries_mixedupcode_question10_3" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="dictionaries_mixedupcode_question10_3" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function <c>a_counter</c> that takes in <c>string</c> as a parameter, creates a <c>dictionary</c>, and returns the amount of a's in the given <c>string</c> using the <c>dictionary</c>.
             For example, <c>a_counter('Alice and Apples')</c> should return <c>3</c>.</p>
@@ -201,7 +201,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="dictionaries_mixedupcode_question10_4" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="dictionaries_mixedupcode_question10_4" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>sales_tax</c> that takes in a <c>list_of_costs</c> (floating point values) as a parameter and
             returns a dictionary with the original costs as keys and the final costs after the sales tax of 6 percent as values.
@@ -260,7 +260,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="dictionaries_mixedupcode_question10_5" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="dictionaries_mixedupcode_question10_5" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>discount_and_tax</c> that takes in a <c>list_of_costs</c> (floating point values) and a <c>discount</c> percentage as parameters and
             returns a dictionary with the original costs as keys and the final costs after applying the <c>discount</c> (first) and the sales tax of 6 percent (second) as values.
@@ -323,7 +323,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="dictionaries_mixedupcode_question10_6" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="dictionaries_mixedupcode_question10_6" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>create_dictionary</c> that takes in <c>keys_list</c> and <c>values_list</c> as parameters
             and returns a dictionary with the <c>keys_list</c> as keys and the <c>values_list</c> as values. Assume <c>keys_list</c> and <c>values_list</c> are the same length, and
@@ -381,7 +381,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="dictionaries_mixedupcode_question10_7" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="dictionaries_mixedupcode_question10_7" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>lowest_value_keys</c> that takes in <c>dictionary</c> as a parameter and returns a list of the keys containing the lowest value of all the keys in the dictionary.
             Assume all values of the <c>dictionary</c> are integers or floats. For example, <c>lowest_value_keys({'pizza': 11, 'fruits': 0, 'toys': 0, 'rice bags': 1.9, 'ice': 1.8})</c> should return <c>['fruits', 'toys']</c>.</p>
@@ -452,7 +452,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="dictionaries_mixedupcode_question10_8" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="dictionaries_mixedupcode_question10_8" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>duplicated_data</c> that takes in <c>dictionary1</c> and <c>dictionary2</c> as parameters and returns a dictionary with key-value pairs that are
             in both dictionaries. For example, <c>duplicated_data({'Ten': 10, 'Twenty' : 20, 'Thirty' : 30}, {'Ten': 10, 'Twenty' : 20})</c> should return <c>{'Ten': 10, 'Twenty': 20}</c>.</p>
@@ -515,7 +515,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="dictionaries_mixedupcode_question10_9" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="dictionaries_mixedupcode_question10_9" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>total_price</c> that takes in <c>quantity_dict</c> and <c>price_dict</c> and returns the total cost of all items.
             Assume keys in both dictionaries are the same, and the values in <c>quantity_dict</c> are integers.
@@ -573,7 +573,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="dictionaries_mixedupcode_question10_10" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="dictionaries_mixedupcode_question10_10" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>scale_recipe</c> that takes in <c>quantity_dict</c> and <c>scale_factor</c> as parameters and
             returns a dictionary with <c>quantity_dict</c> scaled by the <c>scale_factor</c>.

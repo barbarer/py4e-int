@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="bsoup_write-code-questions">
   <title>Write Code Questions</title>
-  <exercise label="bsoup_writecode1q_mu" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="bsoup_writecode1q_mu" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>cur_stud_link</c> that takes in a parameter <c>url</c>
             and uses BeautifulSoup to return the URL that links to Current Students in the Navigation Bar.
@@ -45,7 +45,7 @@
       </block>
     </blocks>
   </exercise>
-  <exercise label="bsoup_writecode2qv2_mu" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="bsoup_writecode2qv2_mu" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>headings</c> that takes in a parameter <c>url</c> and uses BeautifulSoup to return a list of all heading names (not subheadings) from the
             Contents box (History, Emergence of MOOC providers, Student experience and pedagogy, etc.). For example, <c>headings('https://en.wikipedia.org/wiki/Massive_open_online_course')</c>
@@ -96,7 +96,7 @@
       </block>
     </blocks>
   </exercise>
-  <exercise label="bsoup_writecode3q_mu" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="bsoup_writecode3q_mu" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>coursera_dict</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the Coursera enrollees table,
             and returns a dictionary with Country as keys and Percentage as values. For example, <c>coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course')</c>
@@ -151,7 +151,7 @@
       </block>
     </blocks>
   </exercise>
-  <exercise label="bsoup_writecode4q_mu" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="bsoup_writecode4q_mu" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>types</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the Summary of Python 3's built-in types table,
             and returns a list of the types. For example, <c>types('https://en.wikipedia.org/wiki/Python_(programming_language)')</c>
@@ -209,7 +209,7 @@
       </block>
     </blocks>
   </exercise>
-  <exercise label="bsoup_writecode5q_mu" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="bsoup_writecode5q_mu" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>restaurants_list</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the 12 essential Ann Arbor restaurants' names,
             and returns a list of the 12 best Ann Arbor restaurants in 2019. For example, <c>restaurants_list('https://detroit.eater.com/maps/best-ann-arbor-restaurants')</c>
@@ -254,7 +254,7 @@
       </block>
     </blocks>
   </exercise>
-  <exercise label="bsoup_writecode6q_mu" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="bsoup_writecode6q_mu" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>bsi_list</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the section names and subsection names under Programs Bachelor of Science in Information,
             and returns a list of the section names and subsection names under Programs Bachelor of Science in Information. For example, <c>bsi_list('https://www.si.umich.edu/programs/bachelor-science-information')</c>
@@ -294,7 +294,7 @@
       </block>
     </blocks>
   </exercise>
-  <exercise label="bsoup_writecode7q_mu" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="bsoup_writecode7q_mu" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>bsi_dict</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape and create a list of the section names and subsection names under Programs Bachelor of Science in Information,
             and creates another list that contains the full urls of the named sections and subsections. Then, return a dictionary that contains the names as keys and their full urls as values. For example, <c>bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information')</c>
@@ -343,7 +343,7 @@
       </block>
     </blocks>
   </exercise>
-  <exercise label="bsoup_writecode8q_mu" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="bsoup_writecode8q_mu" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>envelope_address</c> that takes in a parameter <c>url</c> and uses BeautifulSoup to web scrape and return the address text in the footer as a list. For example, <c>envelope_address('https://www.si.umich.edu/programs/bachelor-science-information')</c>
             should return a list like: <c>['School of Information', 'University of Michigan', '105 S State St.', 'Ann Arbor, MI 48109-1285']</c>.</p>
@@ -395,7 +395,7 @@
       </block>
     </blocks>
   </exercise>
-  <exercise label="bsoup_writecode9q_mu" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="bsoup_writecode9q_mu" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>name_email</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the names and email addresses,
             and returns a dictionary with the names as keys and the email addresses as values. Use the string replace method while web scraping. For example, <c>name_email('https://www.si.umich.edu/people/directory/faculty/e')</c>
@@ -467,7 +467,7 @@
       </block>
     </blocks>
   </exercise>
-  <exercise label="bsoup_writecode10q_v2_mu" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="bsoup_writecode10q_v2_mu" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>program_email</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the program names under Email Addresses
             and Admissions (BSI program, MSI program, etc.) and their associated email addresses, and returns a dictionary with the program names as keys and the email addresses as values.

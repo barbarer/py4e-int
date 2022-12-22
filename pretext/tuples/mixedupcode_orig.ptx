@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="tuples_mixed-up-code-questions">
   <title>Mixed-Up Code Questions</title>
-  <exercise label="tup_mixedupcode_1" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="tup_mixedupcode_1" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>length_word</c> that takes in a parameter, <c>txt</c> which returns a list of tuples, <c>tup_list</c>,
             where the first element is the length of each word in <c>txt</c> and the second is the word itself. Sort the list in terms of word
@@ -73,7 +73,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="tup_mixedupcode_2" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="tup_mixedupcode_2" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>tuple_word_len</c> that takes in one parameter, <c>word_list</c>.
             Then create and return a list called <c>tup_list</c> that contains tuples of each word from <c>word_list</c> paired with their
@@ -140,7 +140,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="tup_mixedupcode_3" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="tup_mixedupcode_3" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>swap_values</c> that takes in one tuple as a parameter, <c>t</c>, that has at least 5 values.
             Swap the second and fourth indices of tuple <c>t</c> with one another, and return that value. For example,
@@ -195,7 +195,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="tup_mixedupcode_4" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="tup_mixedupcode_4" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>dictionary_to_tup_list</c> that takes in a dictionary as a parameter, <c>d</c>. Transform the
             dictionary <c>d</c> into a list of tuples called <c>tup_list</c>, sort it by the dictionary's keys in ascending order, and return
@@ -255,7 +255,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="tup_mixedupcode_5" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="tup_mixedupcode_5" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>count_strs</c> that takes in a tuple, <c>tup</c>, as a parameter and counts the amount of strings in the list. For example,
             <c>count_strs((1, 2, "hi"))</c> should return <c>1.</c></p>
@@ -321,7 +321,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="tup_mixedupcode_6" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="tup_mixedupcode_6" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>dict_to_list</c> that takes in a dictionary parameter, <c>d</c>, and adds the key-value pairs of dictionary <c>d</c> to a list and
             returns that list. For example, <c>dict_to_list({'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10})</c> would return
@@ -378,7 +378,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="tup_mixedupcode_7" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="tup_mixedupcode_7" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>alphabetical_dict_list</c> that takes in one dictionary parameter, <c>d</c>, and creates a list of tuples with the first value of each tuple
             as the word as the key and the second value of each tuple as the length of the word. Return a list of the dictionary's key-value pairs in alphabetical order.
@@ -442,7 +442,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="tup_mixedupcode_8" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="tup_mixedupcode_8" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>longest_word_lst</c> that takes in a list of tuples, <c>list_tup</c>, as a parameter and adds the longest word in each tuple and adds it to a list. Return this
             list. For example, <c>longest_word_lst([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&amp;t')])</c>
@@ -505,7 +505,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="tup_mixedupcode_9" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="tup_mixedupcode_9" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>cap</c> that takes in a list of tuples, <c>lst_tup</c>, as a parameter, that creates a new list with every item in <c>lst_tup</c>
             capitalized and then return the list. Note: Each tuple must have at least two items. For example, <c>cap([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&amp;t')])</c>
@@ -567,7 +567,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="tup_mixedupcode_10" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="tup_mixedupcode_10" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>grocery</c> that takes in a dictionary, <c>d</c>, changes <c>d</c> into a list of tuples, and then sorts the list by the dictionary's values in ascending order.
             For example, <c>grocery({'chicken': 5, 'lettuce': 3, 'orange juice': 4, 'bagels': 2.50, 'bacon': 4.25, 'bread': 8})</c> should return <c>[('bagels', 2.5), ('lettuce', 3), ('orange juice', 4), ('bacon', 4.25), ('chicken', 5), ('bread', 8)]</c>.</p>

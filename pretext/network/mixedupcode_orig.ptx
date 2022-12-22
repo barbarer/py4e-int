@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="network_mixed-up-code-questions-original">
   <title>Mixed-Up Code Questions Original</title>
-  <exercise label="mixedupcode_network_1" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="mixedupcode_network_1" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>decode</c> that takes in a parameter <c>link</c> and returns a string that contains
             the contents of the <c>link</c> using urllib. Between each word, there should be a space. Also, a space at the end is okay.
@@ -62,7 +62,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="mixedupcode_network_2" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="mixedupcode_network_2" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>write_txt</c> that takes in a parameter <c>link</c>, retrieves a file from the <c>link</c> using urllib,
             and writes the contents of the <c>link</c> to a file called <c>'clown.txt'</c>. For example, <c>write_txt('http://data.pr4e.org/clown.txt')</c> should create
@@ -118,7 +118,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="mixedupcode_network_3" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="mixedupcode_network_3" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>count_words</c> that takes in a parameter <c>link</c>, retrieves a file from the <c>link</c> using urllib, and
             returns a dictionary with words as keys and the number of times they appear in the <c>link</c> as values. For example, <c>count_words('http://data.pr4e.org/romeo.txt')</c>
@@ -188,7 +188,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="mixedupcode_network_4" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="mixedupcode_network_4" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>write_jpg</c> that takes in a parameter <c>img_link</c>, retrieves a file from the <c>img_link</c> using urllib,
             and writes the contents of the <c>img_link</c> to a file called <c>'cover.jpg'</c>. For example, <c>write_jpg('http://data.pr4e.org/cover3.jpg')</c> should create
@@ -236,7 +236,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="mixedupcode_network_5" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="mixedupcode_network_5" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>num_chars</c> that takes in a parameter <c>link</c>, retrieves a file from the <c>link</c> using urllib, and
             returns the number of characters in <c>link</c> in the format <c>"(num) characters"</c>. For example, <c>num_chars('http://data.pr4e.org/romeo-full.txt')</c>
@@ -294,7 +294,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="mixedupcode_network_6" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="mixedupcode_network_6" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>contents</c> that takes in a parameter <c>link</c>, retrieves a file from the <c>link</c> using sockets, and returns as a string
             the contents of the <c>link</c> (specifically 10000 characters). For example, <c>contents('http://data.pr4e.org/clown.txt')</c> should return
@@ -369,7 +369,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="mixedupcode_network_7" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="mixedupcode_network_7" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>reg_num_links</c> that takes in a parameter <c>url</c> and returns the number of &#x2018;href'
             attributes that start with &#x2018;http' using regular expressions. Since websites are frequently updated,
@@ -429,7 +429,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="mixedupcode_network_8" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="mixedupcode_network_8" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>bsoup_num_links</c> that takes in a parameter <c>url</c> and returns the number of &#x2018;href'
             attributes that start with &#x2018;http' using BeautifulSoup. Since websites are frequently updated,
@@ -517,7 +517,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="mixedupcode_network_9" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="mixedupcode_network_9" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>img_links</c> that takes in a parameter <c>url</c> and returns a list that contains all image links
             using BeautifulSoup. Since websites are frequently updated, the returned list of image links may change as image links get added and deleted.</p>
@@ -590,7 +590,7 @@ myTests().main()
         </input>
     </program>
   </exercise>
-  <exercise label="mixedupcode_network_10" numbered="yes" adaptive="yes" indent="show" language="python">
+  <exercise label="mixedupcode_network_10" numbered="yes" adaptive="yes" indentation="show" language="python">
     <statement>
       <p>Create a function called <c>span_attrs</c> that takes in a parameter <c>url</c> and returns a list of dictionaries using BeautifulSoup.
             Each dictionary is equivalent to each span tag. The keys of the dictionary are the attributes of the span tag,
