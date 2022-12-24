@@ -5,7 +5,15 @@
     <idx><h>Keyword</h><h>Elif</h></idx>
     <idx><h>Elif</h><h>Keyword</h></idx>
   <p>Sometimes there are more than two possibilities and we need more than
-            two branches. One way to express a computation like that is a
+    two branches. For example, when we compare two numbers <c>x</c> and <c>y</c>, we have three possibilities:
+    <ul>
+      <li><c>x</c> is less than <c>y</c></li>
+      <li><c>x</c> is greater than <c>y</c></li>
+      <li><c>x</c> equals <c>y</c></li>
+    </ul>
+      
+    
+    One way to express a computation like that is a
             <em>chained conditional</em>:</p>
   <program xml:id="cndtnl_elif" interactive="codelens" language="python">
     <input>
@@ -21,31 +29,48 @@ print('All done.')
     </input>
   </program>
   <p><c>elif</c> is an abbreviation of <q>else if.</q> Again, exactly one
-            branch will be executed.</p>
-  <figure align="">
-    <image source="images/elif.svg" width="50%" alt="If-Then-ElseIf Logic"/>
+    branch will be executed. The flowchart for this program is shown in <xref ref="fig_chained_elif"/>.</p>
+  <figure xml:id="fig_chained_elif" align="">
+    <title>Flowchart of <c>if</c>-<c>elif</c> Chain</title>
+    <caption>Flowchart of <c>if</c>-<c>elif</c> Chain</caption>
+    <image source="images/elif.svg" width="50%" alt="If-ElseIf Logic"/>
   </figure>
-  <p>There is no limit on the number of <c>elif</c> statements. If
+  
+  <p>Notice that we didn't have to test <c>x == y</c>; if <c>x</c> isn't greater than <c>y</c>, and it isn't less than <c>y</c>, then they <em>must</em> be equal. A simple <c>else</c> takes care of that case.</p>
+  
+  <p>There is no limit on the number of <c>elif</c> statements in a chain. If
             there is an <c>else</c> clause, it has to be at the end, but there
-            doesn't have to be one.</p>
-  <program xml:id="cndtnl_elif2" interactive="codelens" language="python">
+            doesn't have to be one. Try running the following program to see what it does.</p>
+  <program xml:id="elif_example" interactive="activecode" language="python">
     <input>
 choice = 'b'
 if choice == 'a':
-    print('Bad guess')
+    print('You chose A')
 elif choice == 'b':
-    print('Good guess')
+    print('You chose B')
 elif choice == 'c':
-    print('Close, but not correct')
+    print('You chose C')
+else:
+    print('You chose some other letter.')
     </input>
   </program>
+  
   <p>Each condition is checked in order. If the first is false, the next is
             checked, and so on. If one of them is true, the corresponding branch
             executes, and the statement ends. Even if more than one condition is
             true, only the first true branch executes.</p>
+          <p>If none of the conditions is true and you have an <c>else</c> clause at the end, its body will execute.</p>
+  
+    <p>Now make these changes to the preceding program:
+    <ul>
+      <li>Change the first line to <c>choice = 'x'</c>. What do you think the output will be? Run the program and find out if you were right.</li>
+      <li>Comment out the last two lines by putting a <c>#</c> at the beginning of each line. Now what do you think the output will be? Run the program again. Spoiler alert: Because there is now no <c>else</c>, the program will not print anything.</li>
+    </ul>
+  </p>
+
   <exercise label="cndtnl-chain-mc-elif">
     <statement>
-      <p>Q-3: What will the following code print if x = 3, y = 5, and z = 2?</p>
+      <p>What will the following code print when <c>x = 3</c>, <c>y = 5</c>, and <c>z = 2></c>?</p>
       <program language="python">
         <input>
 if x &lt; y and x &lt; z:
@@ -86,7 +111,7 @@ else:
   </exercise>
   <exercise label="cndtnl-chain-mc-grades">
     <statement>
-      <p>Q-4: If score = 93, what will print when the following code executes?</p>
+      <p>When <c>score = 93</c>, what will print when the following code executes?</p>
       <pre>if score &gt;= 90:
     grade = "A"
 elif score &gt;= 80:
@@ -200,4 +225,56 @@ print(grade)</pre>
       </choice>
     </choices>
   </exercise>
+  <!--
+  <p>
+    From the last two exercises, you can see that an <c>if</c>/<c>elif</c> chain is very different from a series of separate <c>if</c> statements.
+    To bring this home, look at the next two programs and their flowcharts. Copy and paste them into the following ActiveCode area and run them to see the difference.
+  </p>
+  
+  <sidebyside width="50%">
+    <program language="python">
+      <input>percent = 80
+if percent >= 75:
+    print("great")
+elif percent >= 50:
+    print("good")
+elif percent &lt; 50:
+    print("fair")
+        </input>
+      </program>
+      
+       <figure xml:id="fig_example_elif" align="">
+    <title>Use of <c>if</c>-<c>elif</c> Chain</title>
+    <caption>Use of <c>if</c>-<c>elif</c> Chain</caption>
+    <image source="conditional/flowchart1.svg" width="15%" alt="If-ElseIf Logic"/>
+  </figure> 
+</sidebyside>
+
+<sidebyside width="50%">
+    <program language="python">
+      <input>percent = 80
+if percent >= 75:
+    print("great")
+if percent >= 50:
+    print("good")
+if percent &lt; 50:
+    print("fair")
+        </input>
+      </program>
+      
+       <figure xml:id="fig_example_separate_if" align="">
+    <title>Example of separate <c>if</c> Statements</title>
+    <caption>Example of separate <c>if</c> Statements</caption>
+    <image source="conditional/flowchart2.svg" width="15%" alt="Separate if Logic"/>
+  </figure> 
+</sidebyside>
+
+<p>Paste the preceding two programs, one at a time, into this ActiveCode area and run them. See if you can figure out what they will do <em>before</em> you run the code.</p>
+  <program interactive="activecode" language="python">
+    <input>
+# paste code here..
+</input>
+  </program>
+  -->
+
 </section>

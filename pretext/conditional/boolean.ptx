@@ -16,14 +16,28 @@
     <idx>False</idx>
     <idx><h>Comparison</h><h>Operator</h></idx>
     <idx><h>Operator</h><h>Comparison</h></idx>
-  <p>A <em>boolean expression</em> is an expression that is either
+    <introduction>
+      <title>Making Decisions</title>
+      <p>Up to this point, our programs do the same sequence of statements every time we run them. Sometimes, though, we need to make decisions:</p>
+      <p>
+        <ul>
+          <li>Is the number the user entered greater than zero?</li>
+          <li>Is the amount we want to withdraw from a bank account greater than the account balance?</li>
+          <li>Did the total of two dice come out to seven?</li>
+        </ul>
+      </p>
+      <p>All of these are "yes or no" questions, and we may want to take different actions depending ono the answer to the question. For example, if the answer to the second question is "yes," we want to tell the customer they can't take out that much money; if the answer is "no," we go ahead and let them have their money.</p>
+      
+      <p>In this chapter, we'll show you how to ask these kinds of questions in Python in order to control what your programs do.</p>
+    </introduction>
+  <p>We ask a yes/no question in Python by writing a <em>boolean expression</em> (named after George Boole, a 19th century mathematician). A boolean expression asks a question whose answer is either true (yes) or false (no). is an expression that is either
             true or false. The following examples use the operator <c>==</c>,
             which compares two operands and produces <c>True</c> if they are
             equal and <c>False</c> otherwise:</p>
   <program xml:id="cond_boolean_equal" interactive="activecode" language="python">
     <input>
-print(5 == 5)
-print(5 == 6)
+print(5 == 5)  # is 5 equal to 5? True or False?
+print(5 == 6)  # is 5 equal to 6? True or False?
         </input>
   </program>
   <p><c>True</c> and <c>False</c> are special values that belong
@@ -35,7 +49,7 @@ print(type(False))
         </input>
   </program>
   <p>The <c>==</c> operator is one of the <em>comparison
-                operators</em>; the others are:</p>
+                operators</em>; others are:</p>
   <program language="python">
     <input>
 x != y               # x is not equal to y
@@ -43,8 +57,8 @@ x &gt; y                # x is greater than y
 x &lt; y                # x is less than y
 x &gt;= y               # x is greater than or equal to y
 x &lt;= y               # x is less than or equal to y
-x is y               # x is the same as y
-x is not y           # x is not the same as y
+<!--x is y               # x is the same as y
+x is not y           # x is not the same as y-->
 </input>
   </program>
   <p>Although these operations are probably familiar to you, the Python
@@ -96,15 +110,15 @@ x is not y           # x is not the same as y
           <p>"False"</p>
         </statement>
         <feedback>
-          <p>With the double quotes surrounding it, False is interpreted as a string, not a Boolean value.
-If the quotes had not been included, False alone is in fact a Boolean value.</p>
+          <p>With the double quotes surrounding it, False is interpreted as a string, not a Boolean value. If the quotes had not been included, False alone would in fact be a Boolean value.</p>
         </feedback>
       </choice>
     </choices>
   </exercise>
+
   <exercise label="cndtnl-bool-mc-same">
     <statement>
-      <p>Q-4: Which of the following comparison operators is used to check if x and y are the same object?</p>
+      <p>Q-4: Which of the following comparison operators is used to check if x and y have the same value?</p>
     </statement>
     <choices>
       <choice>
@@ -131,6 +145,7 @@ If the quotes had not been included, False alone is in fact a Boolean value.</p>
           <p>Try again. This means that x and y have the same value, but it does not mean they are the same object.</p>
         </feedback>
       </choice>
+      <!--
       <choice correct="yes">
         <statement>
           <p>x is y</p>
@@ -147,6 +162,7 @@ If the quotes had not been included, False alone is in fact a Boolean value.</p>
           <p>Try again. This means that x and y are not the same object. This can be true if x and y have the same value, but are stored in different objects.</p>
         </feedback>
       </choice>
+      -->
     </choices>
   </exercise>
   <exercise label="cndtnl-bool-mc-true">
@@ -186,14 +202,123 @@ If the quotes had not been included, False alone is in fact a Boolean value.</p>
           <p>Correct! 783 != 206 is True.</p>
         </feedback>
       </choice>
-      <choice correct="yes">
+      <!--<choice correct="yes">
         <statement>
           <p>is not</p>
         </statement>
         <feedback>
           <p>Correct! 783 is not 206 is True.</p>
         </feedback>
-      </choice>
+      </choice>-->
     </choices>
   </exercise>
+  
+  <p>Now, translate these questions or phrases into Python.</p>
+  
+  <exercise label="bool-expr-fitb-1">
+    <statement><p>Is <c>age</c> less than or equal to 18? <var /></p></statement>
+    <setup>
+      <var>
+        <condition string="age\s*&lt;=\s*18">
+          <feedback>
+            <p>Correct.</p>
+          </feedback>
+        </condition>
+        <condition string="age\s*&lt;\s+=\s*18">
+          <feedback>
+            <p>Do not put a space between &lt; and =.</p>
+          </feedback>
+        </condition>
+        <condition string="age\s*=&lt;\s*18">
+          <feedback>
+            <p>You have <c>&lt;</c> and <c>=</c> in the wrong order.</p>
+          </feedback>
+        </condition>
+        <condition string="age\s*lt;\s*18">
+          <feedback>
+            <p>We want <q>less than or equal</q>, not <q>less than</q></p>
+          </feedback>
+        </condition>
+        <condition string="18\s*&gt;=\s*age">
+          <feedback>
+            <p>That is technically correct, but common Python programming style puts the variable name first.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Look at the table at the top of the page to find the operator for <q>less than or equal</q>.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  
+  <exercise label="bool-expr-fitb-2">
+    <statement><p><c>month</c> is equal to 7. <var /></p></statement>
+    <setup>
+      <var>
+        <condition string="month\s*==\s*7">
+          <feedback>
+            <p>Good. You remembered to use <c>==</c>.</p>
+          </feedback>
+        </condition>
+        <condition string="month\s*=\s*7">
+          <feedback>
+            <p>Watch out. That says <q><c>month</c> gets the value 7</q>.</p>
+          </feedback>
+        </condition>
+        <condition string="7\s*==\s*month">
+          <feedback>
+            <p>That is technically correct, but common Python programming style puts the variable name first.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Look at the table at the top of the page to find the operator for <q>equal</q>.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  
+  <exercise label="bool-expr-fitb-3">
+    <statement><p><c>price</c> is not zero. <var /></p></statement>
+    <setup>
+      <var>
+        <condition string="price\s*!=\s*0">
+          <feedback>
+            <p>Good work.</p>
+          </feedback>
+        </condition>
+        <condition string="price\s*=!\s*0">
+          <feedback>
+            <p>You have the <c>!</c> and <c>=</c> in the wrong order.</p>
+          </feedback>
+        </condition>
+        <condition string="0\s*!=\s*price">
+          <feedback>
+            <p>That is technically correct, but common Python programming style puts the variable name first.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Look at the table at the top of the page to find the operator for <q>not equal</q>.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+
+  <p>
+    There are two more comparison operators in Python:
+  </p>
+    <program language="python">
+    <input>
+x is y          # x is the same object as y
+x is not y      # x is not the same object as y
+</input>
+</program>
+
+<p>While these might seem to be just another way of saying <c>x == y</c> and <c>x != y</c>, they are different in a very important way. Explaining that difference would take us into a fairly advanced topic, so we'll leave <c>is</c> and <c>is not</c> for later in the course. For now, use <c>==</c> to ask if two values are equal, and use <c>!=</c> to ask if they are not equal.</p>
+
 </section>

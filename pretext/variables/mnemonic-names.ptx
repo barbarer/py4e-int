@@ -121,17 +121,26 @@ for slice in pizza:
             the data, <c>pizza</c> and <c>slice</c> are very un-mnemonic
             variable names. Choosing them as variable names distracts from the
             meaning of the program.</p>
-  <p>After a pretty short period of time, you will know the most common
+<!--  <p>After a pretty short period of time, you will know the most common
             reserved words and you will start to see the reserved words jumping out
             at you:</p>
   <raw format="html" xml:space="preserve">&lt;pre&gt;
 &lt;b&gt;for&lt;/b&gt; word &lt;b&gt;in&lt;/b&gt; words&lt;b&gt;:&lt;/b&gt;
     &lt;b&gt;print&lt;/b&gt;(word)
-&lt;/pre&gt;</raw>
+    &lt;/pre&gt;</raw>-->
+    <p>After a pretty short period of time, you will know the most common
+            reserved words and you will start to see the reserved words jumping out
+            at you. See if you can tell which ones they are in this code:</p>
+          <pre>
+            for word in words:
+                print(word)
+              </pre>
+<!--
   <p>The parts of the code that are defined by Python (<c>for</c>,
             <c>in</c>, <c>print</c>, and <c>:</c>) are in bold and
             the programmer-chosen variables (<c>word</c> and
-            <c>words</c>) are not in bold. Many text editors are aware of
+              <c>words</c>) are not in bold. -->
+              <p>The parts of the code that are defined by Python are <c>for</c>, <c>in</c>, <c>print</c>, and <c>:</c>. Many text editors are aware of
             Python syntax and will color reserved words differently to give you
             clues to keep your variables and reserved words separate. After a while
             you will begin to read Python and quickly determine what is a variable

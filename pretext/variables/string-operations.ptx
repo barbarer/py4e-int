@@ -75,7 +75,7 @@ print(first * second)
       <p>csp-10-2-4: What is printed by the following statements?</p>
       <pre>cheer = "Let's go Blue"
 excl = "!"
-print(cheer+excl*2)</pre>
+print(cheer + excl * 2)</pre>
     </statement>
     <choices>
       <choice>
@@ -83,7 +83,7 @@ print(cheer+excl*2)</pre>
           <p>Let's go Blue !!</p>
         </statement>
         <feedback>
-          <p>Is there an extra space in the expression?</p>
+          <p>Is there an extra space in the <c>cheer</c> variable?</p>
         </feedback>
       </choice>
       <choice correct="yes">
@@ -91,7 +91,7 @@ print(cheer+excl*2)</pre>
           <p>Let's go Blue!!</p>
         </statement>
         <feedback>
-          <p>This will print Let's go Blue!! Only excl is multiplied by 2.</p>
+          <p>This will print Let's go Blue!! Only <c>excl</c> is multiplied by 2.</p>
         </feedback>
       </choice>
       <choice>
@@ -107,7 +107,7 @@ print(cheer+excl*2)</pre>
           <p>Lets go Blue ! Let's go Blue !</p>
         </statement>
         <feedback>
-          <p>Think about the order of operations.</p>
+          <p>Think about the order of operations, and remember that the apostrophe <c>'</c> is in the string.</p>
         </feedback>
       </choice>
     </choices>

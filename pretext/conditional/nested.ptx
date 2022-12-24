@@ -19,6 +19,14 @@ else:
 print('All done.')
     </input>
   </program>
+  
+    <p>The outer conditional contains two branches. The first branch contains a
+            simple statement. The second branch contains another <c>if</c>
+            statement, which has two branches of its own. Those two branches are
+            both simple statements, although they could have been conditional
+            statements as well.</p>
+  <image source="images/nested.svg" width="50%" alt="Nested If Statements"/>
+
   <exercise label="cndtnl-nest-mc-error">
     <statement>
       <p>Q-2: Will the following code cause an error?</p>
@@ -54,12 +62,6 @@ else:
       </choice>
     </choices>
   </exercise>
-  <p>The outer conditional contains two branches. The first branch contains a
-            simple statement. The second branch contains another <c>if</c>
-            statement, which has two branches of its own. Those two branches are
-            both simple statements, although they could have been conditional
-            statements as well.</p>
-  <image source="images/nested.svg" width="50%" alt="Nested If Statements"/>
   <p>Although the indentation of the statements makes the structure apparent,
             <em>nested conditionals</em> become difficult to read very
             quickly. In general, it is a good idea to avoid them when you can.</p>
@@ -84,6 +86,41 @@ if 0 &lt; x and x &lt; 10:
     print('x is a positive single-digit number.')
         </input>
   </program>
+  
+  <p>There are, however, cases where a nested <c>if</c> is very useful. This will usually happen when you have tests on two different variables (unlike the preceding example, where both conditions involve <c>x</c>).</p>
+  
+  <p>Consider the following program, which figures out a ticket price for a movie according to their age and the time at which the movie starts (using a 24-hour clock) Here are the rules:</p>
+  <p>
+    <ul>
+      <li><p>For people less than 65 years old:
+          <ul>
+            <li><p>If the hour is less than 15 (3 p.m.), they pay $7</p></li>
+            <li><p>Otherwise (the movie starts at or after 3 p.m.) they pay $8</p></li>
+          </ul>
+          </p></li>
+      <li><p>Everyone else pays $9.</p></li>
+    </ul>
+  </p>
+  
+  <p>Here is the program, using a nested <c>if</c>.  Run it several times, entering different values for <c>age</c> and <c>hour</c> to see what output you get.</p>
+  
+  <program xml:id="cndtnl-nested-movie" interactive="activecode" language="python">
+    <input>age_str = input("Enter age in years:")
+age = int(age_str)
+
+hour_str = input("Enter start hour in 24-hour time:")
+hour = int(hour_str)
+
+if age &lt; 65:
+    if hour &lt; 15:
+        price = 7
+    else:
+        price = 8
+else:
+    price = 9
+    
+print("Ticket price:", price, "dollars.")</input>
+</program>
   <exercise label="cndtnl-nest-mc-chain">
     <statement>
       <p>Q-5: Which of I, II, and III below gives the same result as the following nested if?</p>

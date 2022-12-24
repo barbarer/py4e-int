@@ -31,22 +31,22 @@ ValueError: invalid literal for int() with base 10:
             Celsius temperature:</p>
   <program xml:id="cndtnlTemp" interactive="activecode" language="python">
     <input>
-inp = input('Enter Fahrenheit Temperature: ')
-fahr = float(inp)
-cel = (fahr - 32.0) * 5.0 / 9.0
-print(cel)
+input_str = input('Enter Fahrenheit Temperature: ')
+fahrenheit = float(input_str)
+celsius = (fahrenheit - 32.0) * 5.0 / 9.0
+print('That is', celsius, 'degrees Celsius.')
         </input>
   </program>
   <p>Example:</p>
   <pre>Enter Fahrenheit Temperature:72
-22.22222222222222</pre>
+that is 22.22222222222222 degrees Celsius.</pre>
   <p>If we execute this code and give it invalid input, it simply fails with
             an unfriendly error message:</p>
-  <pre>Enter Fahrenheit Temperature:fred
+  <pre>Enter Fahrenheit Temperature:fifty
 Traceback (most recent call last):
   File "fahren.py", line 2, in &lt;module&gt;
-    fahr = float(inp)
-ValueError: could not convert string to float: 'fred'</pre>
+    fahrenheit = float(input_str)
+ValueError: could not convert string to float: 'fifty'</pre>
   <p>There is a conditional execution structure built into Python to handle
             these types of expected and unexpected errors called <q>try / except</q>. The
             idea of <c>try</c> and <c>except</c> is that you know that
@@ -78,13 +78,13 @@ or unexpected errors in your code.</p>
   <p>We can rewrite our temperature converter as follows:</p>
   <program xml:id="cndtnlTempTry" interactive="activecode" language="python">
     <input>
-inp = input('Enter Fahrenheit Temperature:')
+input_str = input('Enter Fahrenheit Temperature:')
 try:
-    fahr = float(inp)
-    cel = (fahr - 32.0) * 5.0 / 9.0
-    print(cel)
+    fahrenheit = float(input_str)
+    celsius = (fahrenheit - 32.0) * 5.0 / 9.0
+    print('That is', celsius, 'degrees Celsius.')
 except:
-    print('Please enter a number')
+    print('Please enter a number.')
         </input>
   </program>
   <p>Python starts by executing the sequence of statements in the
@@ -97,8 +97,8 @@ except:
   <pre>Enter Fahrenheit Temperature:72
 22.22222222222222</pre>
   <p>If we execute this code and give it invalid input, it executes the statements in the <c>except</c> block:</p>
-  <pre>Enter Fahrenheit Temperature:fred
-Please enter a number</pre>
+  <pre>Enter Fahrenheit Temperature:fifty
+Please enter a number.</pre>
   <p>Handling an exception with a <c>try</c> statement is called
             <em>catching</em> an exception. In this example, the
             <c>except</c> clause prints an error message. In general, catching
@@ -123,7 +123,7 @@ Please enter a number</pre>
       </var>
     </setup>
   </exercise>
-  <exercise label="cndtnl-try-pp-temp" numbered="yes" adaptive="yes" indentation="show" language="python">
+  <exercise label="cndtnl-try-pp-temp" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>The following program should get a temperature in Fahrenheit from the user, then print out the
             temperature in Celsius. If the input is not a number, it should ask the user to enter a
@@ -131,30 +131,30 @@ Please enter a number</pre>
     </statement>
     <blocks>
       <block order="6">
-        <cline>inp = input('Enter Fahrenheit Temperature:')</cline>
+        <cline>input_str = input('Enter Fahrenheit Temperature:')</cline>
       </block>
       <block order="7">
         <cline>try:</cline>
       </block>
       <block order="3">
         <choice correct="yes">
-          <cline>    fahr = float(inp)</cline>
+          <cline>    fahrenheit = float(input_str)</cline>
         </choice>
         <choice>
-          <cline>    fahr = int(inp) </cline>
+          <cline>    fahrenheit = int(input_str) </cline>
         </choice>
       </block>
       <block order="1">
-        <cline>    cel = (fahr - 32.0) * 5.0 / 9.0</cline>
+        <cline>    celsius = (fahrenheit - 32.0) * 5.0 / 9.0</cline>
       </block>
       <block order="2">
-        <cline>    print(cel)</cline>
+        <cline>    print('That is', celsius, 'degrees C.')</cline>
       </block>
       <block order="4">
         <cline>except:</cline>
       </block>
       <block order="5">
-        <cline>    print('Please enter a number')</cline>
+        <cline>    print('Please enter a number.')</cline>
       </block>
     </blocks>
   </exercise>
