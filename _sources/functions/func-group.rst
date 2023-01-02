@@ -37,15 +37,6 @@ Look at the code below and predict what it will print.
       :Welcome: Execution starts in the main method, so this won't be the first thing that is printed.
       :.*: Execution starts in the main method
 
-
-.. fillintheblank:: funct_fitb_print_test_second_line_v3
-
-    What is the second thing that will be printed when the code below runs?
-
-    - :Welcome: This is the first thing printed in the test function.
-      :.*: Run the code and check.
-
-
 .. fillintheblank:: funct_fitb_print_test_last_line_v3
 
     What is the last thing that will be printed when the code below runs?
@@ -123,21 +114,6 @@ Delete the last line of the test function above and run the code again.
     - :None: A function without a return still returns the keyword None
       :.*: What is the last thing that is printed when you run the code above after deleting the return from the test function?
 
-
-.. parsonsprob:: funct_order_first_example
-   :numbered: left
-   :adaptive:
-   :order: 3, 1, 2, 0
-
-   Drag the blocks from the left and put them in the correct order on the right to describe the order the function calls and functions execute.
-   -----
-   Call to main function on line 21
-   =====
-   main function defined on line 14
-   =====
-   call to test function on line 18
-   =====
-   test function defined on line 2
 
 Parts of a Function and Function Calls
 =========================================

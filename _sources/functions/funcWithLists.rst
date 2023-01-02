@@ -81,14 +81,6 @@ A list holds items in order and you can get the value at an index, just like you
     - :\[\]|\]\[: Square brackets are used at the start and end of a list.
       :.*: Look at the parameter to the function call in the code above.
 
-.. fillintheblank:: funct_ll_first_index
-    :practice: T
-
-    What index is used to get the first item in a list?
-
-    - :0: The first item in a list is at index 0.
-      :.*: Try again!
-
 .. fillintheblank:: funct_ll_last_index
     :practice: T
 
@@ -173,18 +165,6 @@ There are several built-in functions in Python that work on lists.
            self.assertEqual(avg_with_drop([5, 10, 15, 20]), 12.5, 'avg_with_drop([5, 10, 15, 20])')
 
    myTests().main()
-
-.. dragndrop:: func_ll_dnd_funct
-    :practice: T
-    :feedback: Read the chapter on functions and try again.
-    :match_1: len|||Returns the length of an object (the number of items in the list).
-    :match_2: sum|||Returns the total of the values in the list.
-    :match_3: min|||Returns the minimum value in the list.
-    :match_4: max|||Returns the maximum value in the list.
-
-    Drag each built-in function name to what it does.
-
-
 
 List Methods
 ===============
@@ -362,10 +342,6 @@ You can use the slice operator[n:m] with lists to get a new list just like you c
 
     - :0: If the start index isn't specified it is 0.
       :.*: Run the code above to check.
-
-.. shortanswer:: list_def_end_index_sa
-
-   In ``[2:]`` what is the end index?
 
 .. note::
 
