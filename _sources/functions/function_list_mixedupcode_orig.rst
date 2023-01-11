@@ -7,7 +7,7 @@ Functions and Lists Mixed-Up Code Questions
     :practice: T
 
     Create a function called ``second_half`` that takes in ``lst`` as a parameter and returns the second half of ``lst``.
-    For example, ``second_half([1])`` should return ``[1]``, ``second_half([1, 2, 3])`` should return ``[2, 3]``, and ``second_half([1, 2, 3, 4])`` 
+    For example, ``second_half([1])`` should return ``[1]``, ``second_half([1, 2, 3])`` should return ``[2, 3]``, and ``second_half([1, 2, 3, 4])``
     should return ``[3, 4]``.
     -----
     def second_half(lst):
@@ -28,7 +28,7 @@ Functions and Lists Mixed-Up Code Questions
    :autograde: unittest
 
    Write a function called ``second_half`` that takes in ``lst`` as a parameter and returns the second half of ``lst``.
-   For example, ``second_half([1])`` should return ``[1]``, ``second_half([1, 2, 3])`` should return ``[2, 3]``, and ``second_half([1, 2, 3, 4])`` 
+   For example, ``second_half([1])`` should return ``[1]``, ``second_half([1, 2, 3])`` should return ``[2, 3]``, and ``second_half([1, 2, 3, 4])``
    should return ``[3, 4]``.
    ~~~~
 
@@ -51,8 +51,8 @@ Functions and Lists Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``sum_of_split_num`` that takes in ``str_num_with_hyphens`` as a parameter and returns the sum of the integers that 
-    are split up by hyphens. For example, ``sum_of_split_num('978-876-4908')`` should return ``6762`` because 978 + 876 + 4908 = 6762. 
+    Create a function called ``sum_of_split_num`` that takes in ``str_num_with_hyphens`` as a parameter and returns the sum of the integers that
+    are split up by hyphens. For example, ``sum_of_split_num('978-876-4908')`` should return ``6762`` because 978 + 876 + 4908 = 6762.
     (Note: Integers are 0 or greater.)
     -----
     def sum_of_split_num(str_num_with_hyphens):
@@ -76,8 +76,8 @@ Functions and Lists Mixed-Up Code Questions
    :practice: T
    :autograde: unittest
 
-   Write a function called ``sum_of_split_num`` that takes in ``str_num_with_hyphens`` as a parameter and returns the sum of the integers that 
-   are split up by hyphens. For example, ``sum_of_split_num('978-876-4908')`` should return ``6762`` because 978 + 876 + 4908 = 6762. (Note: Integers 
+   Write a function called ``sum_of_split_num`` that takes in ``str_num_with_hyphens`` as a parameter and returns the sum of the integers that
+   are split up by hyphens. For example, ``sum_of_split_num('978-876-4908')`` should return ``6762`` because 978 + 876 + 4908 = 6762. (Note: Integers
    are 0 or greater.)
    ~~~~
 
@@ -103,7 +103,7 @@ Functions and Lists Mixed-Up Code Questions
     -----
     def sort_descending(lst_of_nums):
     =====
-        lst_of_nums.sort(reverse=True) 
+        lst_of_nums.sort(reverse=True)
     =====
         lst_of_nums.sort(reverse=False) #paired
     =====
@@ -146,7 +146,7 @@ Functions and Lists Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``extend_two_lists_sort`` that takes in ``lst1`` and ``lst2`` as parameters, sorts both lists, and extends ``lst1`` with ``lst2``.
+    Create a function called ``extend_two_lists_sort`` that takes in ``lst1`` and ``lst2`` as parameters, sorts lst1 and then lst2, and extends ``lst1`` with ``lst2``.
     For example, ``extend_two_lists_sort(['string', 'hello'], ['my', 'goodness'])`` should return ``['hello', 'string', 'goodness', 'my']``.
     -----
     def extend_two_lists_sort(lst1, lst2):
@@ -197,8 +197,8 @@ Functions and Lists Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create a function called ``sort_and_get_median_num`` that takes in ``lst_of_nums`` as a parameter, sorts ``lst_of_nums``, and returns the median 
-    of ``lst_of_nums``. For example, ``sort_and_get_median_num([200, -5, 0, 75, 80, 60])`` should return ``67.5``, and 
+    Create a function called ``sort_and_get_median_num`` that takes in ``lst_of_nums`` as a parameter, sorts ``lst_of_nums``, and returns the median
+    of ``lst_of_nums``. For example, ``sort_and_get_median_num([200, -5, 0, 75, 80, 60])`` should return ``67.5``, and
     ``sort_and_get_median_num([200, -5, 0, 75, 80])`` should return ``75``.
     -----
     def sort_and_get_median_num(lst_of_nums):
@@ -245,6 +245,6 @@ Functions and Lists Mixed-Up Code Questions
            self.assertEqual(sort_and_get_median_num([200, -5, 0, 75, 80, 60]),67.5,"sort_and_get_median_num([200, -5, 0, 75, 80, 60])")
            self.assertEqual(sort_and_get_median_num([200]),200,"sort_and_get_median_num([200])")
            self.assertEqual(sort_and_get_median_num([200, -5]),97.5,"sort_and_get_median_num([200, -5])")
-            
+
 
    myTests().main()

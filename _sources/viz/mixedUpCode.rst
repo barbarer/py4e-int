@@ -1,15 +1,15 @@
 Mixed-Up Code Questions
 ------------------------
 
-.. parsonsprob:: matplotlib_1
+.. parsonsprob:: matplotlib_1-v2
     :numbered: left
     :practice: T
     :adaptive:
 
     Create code to plot a line graph for the average yearly temperatures in US from 2015 to 2020. The x-axis should include years [2015, 2016, 2017, 2018, 2019, 2020]. The average temperatures during these years were [54.4, 54.9, 54.6, 53.5, 52.7, 54.4] respectively.
+    Be sure to show the plot after you create it.
     -----
     import matplotlib
-    =====
     import matplotlib.pyplot as plt
     =====
     x = ['2015', '2016', '2017', '2018', '2019', '2020']
@@ -17,7 +17,7 @@ Mixed-Up Code Questions
     =====
     plt.plot(x, y)
     =====
-    matplot.plot(x, y) #paired
+    plt.line(x, y) #paired
     =====
     plt.show()
 
@@ -27,10 +27,11 @@ Mixed-Up Code Questions
     :practice: T
     :adaptive:
 
-    Create code to plot a line graph for the average company sales per month from January to March. The x-axis should include months [Jan, Feb, Mar]. The average sales during these months were [5000, 7000, 8000] respectively measured in dollars. Make sure to add labels 'Months' and 'Sales (in Dollars)' for both x-axis and y-axis respectively. Add the title 'Total Sales per Month'.
+    Create code to plot a line graph for the average company sales per month from January to March.
+    Do the following in order: set the xlabel to "Months", the ylabel to "Sales (in Dollars)", the title
+    to 'Total Sales by Month' and show the plot.
     -----
     import matplotlib
-    =====
     import matplotlib.pyplot as plt
     =====
     x = ['Jan', 'Feb', 'Mar']

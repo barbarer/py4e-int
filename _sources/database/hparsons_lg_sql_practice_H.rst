@@ -19,7 +19,7 @@ Problems
     In the ``grades`` table:
 
     .. image:: https://i.ibb.co/r6qShy5/practice-grade.png
-    
+
     Please write a SELECT statement to retrieve the ``student_id``, ``test_name``,
     and ``english`` of all entries whose ``english`` is lower than 60 and ``math`` is higher than 90.
     ~~~~
@@ -31,7 +31,7 @@ Problems
     WHERE
     english < 60 AND math > 90
     english < 60 & math > 90
-  
+
 
 .. hparsons:: hparsons_lg_sql_practice_2_hp
     :language: sql
@@ -41,8 +41,8 @@ Problems
     In the ``grades`` table:
 
     .. image:: https://i.ibb.co/r6qShy5/practice-grade.png
-    
-    A student completed an extra assignment and got some additional points. 
+
+    A student completed an extra assignment and got some additional points.
 
     Please write an UPDATE statement to change the entry whose ``student_id`` is 1, and set their math score for ``final`` ``test_name`` to 90.
     ~~~~
@@ -65,7 +65,7 @@ Problems
     In the ``grades`` table:
 
     .. image:: https://i.ibb.co/r6qShy5/practice-grade.png
-    
+
     The instructors decided to add some points to all students as one test was too difficult.
 
     Please write an UPDATE statement to change all entries whose ``test_name`` is ``midterm``,
@@ -91,9 +91,9 @@ Problems
     .. image:: https://i.ibb.co/r6qShy5/practice-grade.png
 
     We also have a ``students`` table:
-    
+
     .. image:: https://i.ibb.co/m4KxSMC/practice-students.png
-    
+
     Now we want to match the student name to their math grades.
 
     Please write a statement using SELECT and JOIN to: select the ``test_name`` and ``math``
@@ -119,9 +119,9 @@ Problems
     .. image:: https://i.ibb.co/r6qShy5/practice-grade.png
 
     We also have a ``tests`` table:
-    
+
     .. image:: https://i.ibb.co/KVTGNXh/practice-tests.png
-    
+
     Now we want to add the date information to the grades to see when the students took the tests.
 
     Please write a statement using SELECT and JOIN to: select the ``date`` and ``name``
