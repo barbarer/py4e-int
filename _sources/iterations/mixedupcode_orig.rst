@@ -170,7 +170,7 @@ Mixed-up code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(odd_sum(1, 2, 5), 9, 'odd_sum(1, 2, 5)')
+            self.assertEqual(odd_sum(1, 2, 5), 4, 'odd_sum(1, 2, 5)')
             self.assertEqual(odd_sum(1, 2, 30), 225, 'odd_sum(1, 2, 30)')
             self.assertEqual(odd_sum(2, 3, 100), 1650, 'odd_sum(2, 3, 100)')
             self.assertEqual(odd_sum(-1, 4, 30), 104, 'odd_sum(-1, 4, 30)')
