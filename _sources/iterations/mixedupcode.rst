@@ -14,8 +14,8 @@ Mixed-up code Questions
    :fromid: itr_countdown_str_muc, itr_countdown_str_ac
    :toggle:
 
-.. selectquestion:: itr_odd_sum_sq
-   :fromid: itr_odd_sum_muc, itr_odd_sum_ac
+.. selectquestion:: itr_odd_sum_sq_v2
+   :fromid: itr_odd_sum_muc, itr_odd_sum_ac_v2
    :toggle:
 
 .. selectquestion:: itr_sum_of_range_sq
