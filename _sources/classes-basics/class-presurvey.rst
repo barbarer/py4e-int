@@ -136,7 +136,7 @@ What to do next
       window.onload = function() {
 
         a = document.getElementById("class-intro-classes.html")
-        a.href = "class-intro.html"
+        a.href = "class-intro"
 
       };
 
