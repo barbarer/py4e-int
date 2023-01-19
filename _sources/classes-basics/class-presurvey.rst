@@ -135,8 +135,8 @@ What to do next
 
       window.onload = function() {
 
-        a = document.getElementById("class-intro-classes.html")
-        a.href = "class-intro"
+        a = document.getElementById("class-intro")
+        a.href = "class-intro-classes.html"
 
       };
 
