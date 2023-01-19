@@ -122,7 +122,7 @@ What to do next
 ============================
 .. raw:: html
 
-    <p>Click on the following link to learn how to solve different types of problems in this ebook : <b><a id="class-intro"><font size="+2">Introduction to Problem Types</font></a></b></p>
+    <p>Click on the following link to learn how to create a new class in Python: <b><a id="class-intro"><font size="+2">Creating Classes</font></a></b></p>
 
 .. raw:: html
 
