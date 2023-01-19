@@ -16,7 +16,7 @@ Working with Classes
 SECTION 1: Introduction
 :::::::::::::::::::::::
 
-This study has five parts.  It will take approximately 60 minutes to complete
+This study has four parts.  It will take approximately 50 minutes to complete
 the study.  Please do the parts in order and answer questions to the best
 of your ability without any outside help. You can stop working on a problem after you worked
 on it for about five minutes without solving it.
@@ -26,7 +26,6 @@ If you have questions about this study please email Dr. Barbara Ericson at barba
 The parts are:
 
 - Pre Survey - Questions about your experience and confidence in computing
-- Introduction to Problem Types - Materials to get you familiar with the types of problems in this study
 - Creating Classes - Learn how to create a class, methods, and objects
 - Practice - Practice problems
 - Post Test - Post test problems
