@@ -10,7 +10,7 @@ called when you print an object of the class.
 A Book Class
 ======================================================
 
-.. activecode:: class_book_ac1_v2
+.. activecode:: class_exp_book_ac1_v2
     :caption: A class to represent a book
 
     Run the following code
@@ -39,7 +39,7 @@ Creating More Objects
 
 Once you have defined a class you can use it to create many objects.
 
-.. activecode:: class_person_ac2
+.. activecode:: class_exp_person_ac2
     :caption: A class to represent a Person
 
     Change the following main function to add a person object with your first and last name.
@@ -68,7 +68,7 @@ method to the Person class.  The function must take an object of the
 class to work with that by convention we call ``self``. The name of the function
 doesn't need to have any underscores in it.
 
-.. activecode:: class_person_init_ac1
+.. activecode:: class_exp_person_init_ac1
     :caption: A class to represent a Person
 
     Change the following Person class to add an ``initials`` method that returns
@@ -107,7 +107,7 @@ doesn't need to have any underscores in it.
 Feedback
 ==================================
 
-.. shortanswer:: class-intro-classes-ps-sa
+.. shortanswer:: class-exp-intro-classes-ps-sa
 
    Please provide feedback here. Please share any comments, problems, or suggestions.
 
