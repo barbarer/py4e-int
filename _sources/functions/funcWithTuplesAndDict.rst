@@ -1,45 +1,6 @@
 Group Work: Functions with Tuples and Dictionaries
 ------------------------------------------------------
 
-.. raw:: html
-
-    <h2>Please join a research study to help us test new approaches to learning programming!</h2>
-
-    <p>Hi! We are a team of researchers in Professor Ericson’s Lab at UMSI!</p>
-
-    <h4>The Project</h4>
-    <p>You are invited to participate in a research study about how Parsons problems (a type of coding puzzle) may help
-    CS entry-level learning. You must be at least <b>18</b> to participate. <br> 
-    Your participation will help more students become successful in computing courses in a low-cost, scalable, and easily
-    adopted way. <br> </p>
-
-    <h4> What Will Occur </h4>
-    <p>This study takes 50 minutes to one hour to finish. The study materials include:</p>
-    <ul>
-        <li>A basic knowledge review about Python basics (~5 mins)</li>
-        <li>An introduction about our system (~5 mins)</li>
-        <li>A self-efficacy survey to measure your level of programming self-efficacy (~5 mins)</li>
-        <li>Four code practice problems (~20 mins)</li>
-        <li>A short posttest consists of 4 questions (~15 mins)</li>
-    </ul>
-    <p>Each section must be completed in order. After finishing one part, you can click the link provided under <b>"What to do next"</b> to the next part.</p>
-
-    <h4> Confidentiality of Information </h4>
-    <p>All the data we collect will be de-identified. We will not collect any identifiable data such as demographic information. </p>
-
-    <h4>Who to Contact</h4>
-    <p> If you have any questions about the study, please contact Xinying Hou at xyhou@umich.edu
-    with “[Parsons Problem Study]” included in the email subject. <br></p>
-
-    <p>We greatly appreciate your help!</p>
-.. note::
-    .. raw:: html
-
-        <h4>Click on the following link 👉 <b><a href="intro-fl-ps.html">Basic Knowledge Review</a></b> 👈 to start!</h4>
-
-------------------------------------------------------
-
-
 It is best to use a POGIL approach with the following. In POGIL students work
 in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
 
