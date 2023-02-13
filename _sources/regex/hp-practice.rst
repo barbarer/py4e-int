@@ -97,7 +97,7 @@ Practice Problems - Regular Expressions
 .. hparsons:: hp-alpha-one-plus-space-digits-two-to-four
     :language: regex
     :randomize:
-    :blockanswer: 0 1 
+    :blockanswer: 0 1 2 3 4 
 
     Construct a regex that matches one or more lowercase letters (a-z) followed by a space character and then two to four digits.
     ~~~~
