@@ -53,6 +53,7 @@ Practice Problems - Regular Expressions
     .
     3
     *
+    \3
 
 .. hparsons:: hp-char-t-dot-forward
     :language: regex
@@ -86,7 +87,7 @@ Practice Problems - Regular Expressions
     :randomize:
     :blockanswer: 0 1 
 
-    Construct a regex that matches eight characters that are a letter, digit, or underscore.
+    Construct a regex that matches eight word characters (letter, digit, or underscore).
     ~~~~
     --blocks--
     \w
