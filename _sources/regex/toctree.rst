@@ -14,6 +14,7 @@ Regular Expressions
    debugging.rst
    glossary.rst
    Exercises.rst
+   hp-practice.rst
    mixedupcode.rst
    writecode.rst
    regex-group.rst
