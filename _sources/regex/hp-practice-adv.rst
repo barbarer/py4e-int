@@ -90,3 +90,19 @@ Practice Problems - Advanced Regular Expressions
     \w+
     \.
     *
+
+.. hparsons:: hpa-vowels-letter-not-vowel-p6
+    :language: regex
+    :randomize:
+    :blockanswer: 0 1 2 3
+
+    Construct a regex that captures words that start with a vowel (a, e, i, o, u), can have any number of characters from a-z after the vowel (including zero), and end with a consonant (any letters that are not a, e, i, o, u).
+    For example, it should match "unicorn", "it", and "element".
+    ~~~~
+    --blocks--
+    [aeiou]
+    [a-z]
+    *
+    [^aeiou]
+    +
+    [!aeiou]
