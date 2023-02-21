@@ -103,7 +103,7 @@ on turning off the greedy behavior.
     :feedback_d: Try again! There needs to be at least a $ in the line.
 
     Select **all** of the lines that will be printed when the following code is run.
-    (&#92;$ is used to match the character '$')
+    (&#92;&#92;$ is used to match the character '$')
 
     .. code-block:: python
 
