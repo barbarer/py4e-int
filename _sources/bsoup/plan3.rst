@@ -35,11 +35,11 @@ We are interested in getting information about mutliple UMSI professors: Dr. Bar
 
 Their webpages are:
 
-``https://www.si.umich.edu/people/barbara-ericson``
+``https://web.archive.org/web/20230128074139/https://www.si.umich.edu/people/``
 
-``https://www.si.umich.edu/people/steve-oney``
+``https://web.archive.org/web/20230128074139/https://www.si.umich.edu/people/``
 
-``https://www.si.umich.edu/people/paul-resnick``
+``https://web.archive.org/web/20230128074139/https://www.si.umich.edu/people/``
 
 In this code, we get a **soup** from multiple **UMSI faculty pages**.
 
@@ -51,7 +51,7 @@ In this code, we get a **soup** from multiple **UMSI faculty pages**.
    from bs4 import BeautifulSoup
    import requests
    <strong># Get a soup from <mark style="background-color:#FEF5E7">multiple URLs</mark></strong>
-   base_url = <mark style="background-color:#FEF5E7">'https://www.si.umich.edu/people/'</mark>
+   base_url = <mark style="background-color:#FEF5E7">'https://web.archive.org/web/20230128074139/https://www.si.umich.edu/people/'</mark>
    endings = <mark style="background-color:#FEF5E7">['barbara-ericson', 'steve-oney', 'paul-resnick']</mark>
    for ending in endings:
        url = base_url + ending
