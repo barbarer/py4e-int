@@ -72,11 +72,11 @@ Look at the webpages you want to scrape and determine which parts they have in c
 Plan 3: Exercises
 ====================================
 
-If you want to also get the link to the most recent news item from Dean Tom Finholt's page, how would you change the code below? Dean Finholt's web page is ``https://www.si.umich.edu/people/thomas-finholt``.
+If you want to also get the link to the most recent news item from Dr Robin Brewer's page, how would you change the code below? Her web page is ``https://web.archive.org/web/20230110174202/https://www.si.umich.edu/people/robin-brewer``.
 
 Change the code and run it to see if you're right!
 
-.. activecode:: plan3_edit_finholt
+.. activecode:: plan3_edit_brewer
    :language: python3
    :nocodelens:
 
