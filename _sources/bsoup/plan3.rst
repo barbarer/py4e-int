@@ -85,7 +85,7 @@ Change the code and run it to see if you're right!
    from bs4 import BeautifulSoup
    import requests
    # Get a soup from multiple URLs
-   base_url = 'https://www.si.umich.edu/people/'
+   base_url = 'https://web.archive.org/web/20230128074139/https://www.si.umich.edu/people/'
    endings = ['barbara-ericson', 'steve-oney', 'paul-resnick']
    for ending in endings:
        url = base_url + ending
