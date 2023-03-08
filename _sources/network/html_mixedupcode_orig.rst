@@ -177,7 +177,7 @@ Mixed-Up Code Questions
     =====
     &#60/html&#62
 
-.. parsonsprob:: html_mixedupcode_6
+.. parsonsprob:: html_mixedupcode_6_v2
     :numbered: left
     :practice: T
     :adaptive:
@@ -217,8 +217,6 @@ Mixed-Up Code Questions
                 &#60p&#62I like to eat.&#60p&#62 #paired
     =====
             &#60/div&#62
-    =====
-        &#60/div&#62
     =====
         &#60/body&#62
     =====
