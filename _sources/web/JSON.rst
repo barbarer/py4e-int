@@ -54,7 +54,7 @@ two cooperating programs exchange data.
 
 .. mchoice:: webJSON_MC_diffs_XML
     :practice: T
-    :answer_a: XML uses attribute = "value" and JSON uses "attribute" = "value"
+    :answer_a: XML uses attribute = "value" and JSON uses "attribute" : "value"
     :answer_b: XML supports nested data, but JSON does not
     :answer_c: XML is used to structure data, and JSON is not
     :answer_d: XML is extensible, while JSON is not
