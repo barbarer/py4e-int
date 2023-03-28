@@ -79,15 +79,15 @@ There are other keywords that you can use with SELECT.  Run the following to see
    ~~~~
 
    ====
-   assert 0,0 == W01117
+   assert 0,0 == w01117
    assert 0,1 == 225
-   assert 1,0 == W01117
+   assert 1,0 == w01117
    assert 1,1 == 626
-   assert 2,0 == W01117
+   assert 2,0 == w01117
    assert 2,1 == 288
-   assert 3,0 == W01117
+   assert 3,0 == w01117
    assert 3,1 == 559
-   assert 4,0 == W01117
+   assert 4,0 == w01117
    assert 4,1 == 980
 
 What happens if you try to limit the number of items returned before you specify how to sort the data in the SQL above?
