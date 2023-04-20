@@ -3,7 +3,7 @@ Advanced Practice Problems - Mixed-up Code
 
 Let's practice what we have learned about SQL.
 
-.. hparsons:: db-hp-get-and-p1
+.. hparsons:: db-adv-hp-get-and-p1
     :language: sql
     :randomize:
     :blockanswer: 0 1 2 3 4 5
@@ -27,7 +27,7 @@ Let's practice what we have learned about SQL.
     TABLE
 
 
-.. hparsons:: db-hp-change-p2
+.. hparsons:: db-adv-hp-change-p2
     :language: sql
     :randomize:
     :blockanswer: 0 1 2 3 4
@@ -52,7 +52,7 @@ Let's practice what we have learned about SQL.
 
 
 
-.. hparsons:: db-hp-update-p3
+.. hparsons:: db-adv-hp-update-p3
     :language: sql
     :randomize:
     :blockanswer: 0 1 2 3 4 5
@@ -77,7 +77,7 @@ Let's practice what we have learned about SQL.
     WHEN
 
 
-.. hparsons:: db-hp-select-p4
+.. hparsons:: db-adv-hp-select-p4
     :language: sql
     :randomize:
     :blockanswer: 0 1 2 3 4
@@ -105,7 +105,7 @@ Let's practice what we have learned about SQL.
     GET
 
 
-.. hparsons:: db-hp-select-p5
+.. hparsons:: db-adv-hp-select-p5
     :language: sql
     :randomize:
     :blockanswer: 0 1 2 3 4 5 6

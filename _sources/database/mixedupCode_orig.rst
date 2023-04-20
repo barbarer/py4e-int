@@ -1,22 +1,34 @@
 Mixed-Up Code Questions
 ------------------------
 
-.. parsonsprob:: db-mixed-1
+.. parsonsprob:: db-mixed-1-v2
     :practice: T
     :numbered: left
     :adaptive:
 
-    Create a database file 'music.db' and add a table ``Tracks`` with two columns.
+    Import the sqlite3 package, create a conection to the file ``music.db``,
+    create the cursor, drop the ``Tracks`` table if it exists,
+    next create a table ``Tracks`` with two columns (``title`` which is text and
+    ``plays`` which is an integer), commit the changes, and finally close the
+    connection.
     -----
     import sqlite3
     =====
     conn = sqlite3.connect('music.db')
     =====
+    conn = sqlite3.open('music.db') #paired
+    =====
     cur = conn.cursor()
     =====
     cur.execute('DROP TABLE IF EXISTS Tracks')
     =====
+    cur.execute('DELETE TABLE IF EXISTS Tracks') #paired
+    =====
     cur.execute('CREATE TABLE Tracks (title TEXT, plays INTEGER)')
+    =====
+    cur.execute('CREATE TABLE Tracks WITH title TEXT, plays INTEGER') #paired
+    =====
+    conn.commit()
     =====
     conn.close()
 
@@ -25,7 +37,11 @@ Mixed-Up Code Questions
    :autograde: unittest
    :language: python3
 
-   Write code to create a database file 'music.db' and add a table ``Tracks``` with two columns.
+   Import the sqlite3 package, create a conection to the file ``music.db``,
+   create the cursor, drop the ``Tracks`` table if it exists,
+   next create a table ``Tracks`` with two columns (``title`` which is text and
+   ``plays`` which is an integer), commit the changes, and finally close the
+   connection.
    ~~~~
 
    ====
@@ -88,13 +104,14 @@ Mixed-Up Code Questions
 
    unittest.main()
 
-.. parsonsprob:: db-mixed-3
+.. parsonsprob:: db-mixed-3-v2
     :practice: T
     :adaptive:
     :numbered: left
 
-    Create code to connect to a database file 'bikeshare.db'. Then selects all of the rows in the table ``bikeshare_stations``.
-    Set the variable ``count_rows`` to the total number of rows returned from the query, before closing the cursor.
+    Create code to connect to a database file 'bikeshare.db'.
+    Print the number of rows in the table ``bikeshare_stations``.
+    Close the cursor.
     -----
     import sqlite3
     =====
@@ -102,9 +119,11 @@ Mixed-Up Code Questions
     =====
     cur = conn.cursor()
     =====
-    cur.execute('SELECT * FROM bikeshare_stations')
+    cur.execute('SELECT COUNT(bike_number) FROM bikeshare_stations')
     =====
-    count_rows = len(cur.fetchall())
+    print(cur.fetchone())
+    =====
+    conn.commit() #distractor
     =====
     cur.close()
 
