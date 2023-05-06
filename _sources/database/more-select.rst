@@ -21,7 +21,7 @@ There are other keywords that you can use with SELECT.  Run the following to see
 .. activecode:: db_bike_sel_count
    :language: sql
    :autograde: unittest
-   :dburl: /runestone/books/published/overview/_static/bikeshare.db 
+   :dburl: /_static/bikeshare.db
 
    Run the following to see what COUNT and LIMIT do.
    ~~~~
@@ -31,7 +31,7 @@ There are other keywords that you can use with SELECT.  Run the following to see
 .. activecode:: db_bike_max_count
    :language: sql
    :autograde: unittest
-   :dburl: /runestone/books/published/overview/_static/bikeshare.db 
+   :dburl: /_static/bikeshare.db 
 
    Run the following to see what MAX does
    ~~~~
@@ -41,7 +41,7 @@ There are other keywords that you can use with SELECT.  Run the following to see
 .. activecode:: db_bike_order_by
    :language: sql
    :autograde: unittest
-   :dburl: /runestone/books/published/overview/_static/bikeshare.db 
+   :dburl: /_static/bikeshare.db
 
    Run the following to see what ORDER BY does
    ~~~~
@@ -50,7 +50,7 @@ There are other keywords that you can use with SELECT.  Run the following to see
 .. activecode:: db_bike_order_by_desc
    :language: sql
    :autograde: unittest
-   :dburl: /runestone/books/published/overview/_static/bikeshare.db 
+   :dburl: /_static/bikeshare.db 
 
    Run the following to see what ORDER BY does
    ~~~~
@@ -71,7 +71,7 @@ There are other keywords that you can use with SELECT.  Run the following to see
 .. activecode:: db_test_more_select_ac
    :language: sql
    :autograde: unittest
-   :dburl: /runestone/books/published/overview/_static/bikeshare.db 
+   :dburl: /_static/bikeshare.db 
 
    Given a database of bike share information write a SELECT statement to
    retrieve the ``bike_number`` and ``duration`` from table ``trip_data`` but

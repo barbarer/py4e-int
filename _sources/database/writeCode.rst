@@ -5,7 +5,7 @@ Write Code Questions
    .. activecode:: db_writecode_bike1
       :language: sql
       :autograde: unittest
-      :dburl: /runestone/books/published/overview/_static/bikeshare.db 
+      :dburl: /_static/bikeshare.db 
 
       Given a database of bike share information fix the SELECT statement to
       retrieve the ``bike_number`` and ``duration`` from table ``trip_data`` for
@@ -29,7 +29,7 @@ Write Code Questions
    .. activecode:: db_writecode_bike2
       :language: sql
       :autograde: unittest
-      :dburl: /runestone/books/published/overview/_static/bikeshare.db 
+      :dburl: /_static/bikeshare.db 
 
       Given a database of bike share information write a SELECT statement below that
       retrieves the ``bike_number`` and ``duration`` from table ``trip_data`` for
@@ -52,7 +52,7 @@ Write Code Questions
    .. activecode:: db_writecode_bike3
       :language: sql
       :autograde: unittest
-      :dburl: /runestone/books/published/overview/_static/bikeshare.db 
+      :dburl: /_static/bikeshare.db 
 
       Given a database of bike share information write a SELECT statement below that
       retrieves the ``bike_number``, ``duration``, and ``start_date`` from table ``trip_data`` for all of
@@ -75,7 +75,7 @@ Write Code Questions
    .. activecode:: db_writecode_bike4
       :language: sql
       :autograde: unittest
-      :dburl: /runestone/books/published/overview/_static/bikeshare.db 
+      :dburl: /_static/bikeshare.db
 
       Given a database of bike share information write a SELECT statement below that
       retrieves the ``bike_number`` and ``member_type`` for all of
@@ -97,7 +97,7 @@ Write Code Questions
    .. activecode:: db_writecode_bike5
       :language: sql
       :autograde: unittest
-      :dburl: /runestone/books/published/overview/_static/bikeshare.db 
+      :dburl: /_static/bikeshare.db
 
       Given a database of bike share information write a SELECT statement below that
       retrieves the ``bike_number`` and ``duration`` from table ``trip_data`` for
@@ -120,7 +120,7 @@ Write Code Questions
    .. activecode:: db_writecode_bike6
       :language: sql
       :autograde: unittest
-      :dburl: /runestone/books/published/overview/_static/bikeshare.db 
+      :dburl: /_static/bikeshare.db
 
       Given a database of bike share information write a SELECT statement to
       retrieve all the rows from tables ``trip_data`` and ``bikeshare_stations``
@@ -144,7 +144,7 @@ Write Code Questions
    .. activecode:: db_writecode_bike7
       :language: sql
       :autograde: unittest
-      :dburl: /runestone/books/published/overview/_static/bikeshare.db
+      :dburl: /_static/bikeshare.db
 
       Given a database of bike share information write a SELECT statement to
       retrieve the ``duration`` and ``bike_number`` from ``trip_data`` and the ``name`` from ``bikeshare_stations``
@@ -166,7 +166,7 @@ Write Code Questions
    .. activecode:: db_writecode_bike8
       :language: sql
       :autograde: unittest
-      :dburl: /runestone/books/published/overview/_static/bikeshare.db 
+      :dburl: /_static/bikeshare.db 
 
       Given a database of bike share information write a SELECT statement to
       retrieve the ``duration`` and ``bike_number`` from ``trip_data`` and the ``name``, ``latitude``, and ``longitude`` from ``bikeshare_stations``
@@ -189,7 +189,7 @@ Write Code Questions
    .. activecode:: db_writecode_bike9
       :language: sql
       :autograde: unittest
-      :dburl: /runestone/books/published/overview/_static/bikeshare.db 
+      :dburl: /_static/bikeshare.db 
 
       Given a database of bike share information write a SELECT statement to
       retrieve the ``bike_number``, ``start_date``, and ``end_date`` from ``trip_data`` and the ``station_id`` and ``name`` from ``bikeshare_stations``
@@ -210,7 +210,7 @@ Write Code Questions
    .. activecode:: db_writecode_bike10
       :language: sql
       :autograde: unittest
-      :dburl: /runestone/books/published/overview/_static/bikeshare.db 
+      :dburl: /_static/bikeshare.db
 
       Given a database of bike share information write a SELECT statement to
       retrieve the ``bike_number``, ``start_date``, and ``end_date`` from ``trip_data`` and the ``station_id`` and ``name`` from ``bikeshare_stations``

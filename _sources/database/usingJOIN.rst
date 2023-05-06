@@ -168,7 +168,7 @@ You can use ``table_name.field_name`` to specify the column that you want from e
 .. activecode:: db_select_bike_join_ex1
    :language: sql
    :autograde: unittest
-   :dburl: /runestone/books/published/overview/_static/bikeshare.db 
+   :dburl: /_static/bikeshare.db
 
    The following code will select the ``bike_number`` from ``trip_data``
    and ``name`` from ``bikeshare_stations``
@@ -190,7 +190,7 @@ You can also add a ``WHERE`` clause.
 .. activecode:: db_select_bike_join_with_where_ex1
    :language: sql
    :autograde: unittest
-   :dburl: /runestone/books/published/overview/_static/bikeshare.db 
+   :dburl: /_static/bikeshare.db
 
    The following code will select the ``bike_number`` and ``duration`` from ``trip_data``
    and ``name`` from ``bikeshare_stations``
