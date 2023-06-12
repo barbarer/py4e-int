@@ -1,0 +1,546 @@
+<?xml version="1.0"?>
+<section xml:id="functions_group-work-functions">
+  <title>Group Work: Functions</title>
+  <introduction>
+  <p>It is best to use a POGIL approach with the following. In POGIL students work
+            in groups on activities and each member has an assigned role.  For more information see <url href="https://cspogil.org/Home" visual="https://cspogil.org/Home">https://cspogil.org/Home</url>.</p>
+  <note>
+    <p>If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.</p>
+  </note>
+  <p>
+    <term>Learning Objectives</term>
+  </p>
+  <p>Students will know and be able to do the following.</p>
+  <p>
+    <em>Content Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Learn how to display a value in Python using print.</p>
+      </li>
+      <li>
+        <p>Math terms for functions to their definitiions.</p>
+      </li>
+      <li>
+        <p>Recognize common symbols (:, #), operators (+, -, /), and keywords (def, return) in Python.</p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    <em>Process Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Modify code that includes function definitions and function calls</p>
+      </li>
+      <li>
+        <p>Learn how to properly indent the body of a function</p>
+      </li>
+      <li>
+        <p>Predict output from functions.</p>
+      </li>
+    </ul>
+  </p>
+</introduction>
+  <subsection xml:id="functions_print-and-function-basics">
+    <title>Print and Function Basics</title>
+    <p>Look at the code below and predict what it will print.</p>
+    <exercise label="funct_fitb_print_test_first_line_v3">
+      <statement>
+        <p>Q-1: What is the first thing that will be printed when the code below runs? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="Hello!">
+            <feedback>
+              <p>The main function prints this before it calls the test function.</p>
+            </feedback>
+          </condition>
+          <condition string="Welcome">
+            <feedback>
+              <p>Execution starts in the main method, so this won't be the first thing that is printed.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Execution starts in the main method</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funct_fitb_print_test_second_line_v3">
+      <statement>
+        <p>Q-2: What is the second thing that will be printed when the code below runs? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="Welcome">
+            <feedback>
+              <p>This is the first thing printed in the test function.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Run the code and check.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funct_fitb_print_test_last_line_v3">
+      <statement>
+        <p>Q-3: What is the last thing that will be printed when the code below runs? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="1">
+            <feedback>
+              <p>Prints the value returned from the function test which is the remainder of 5 divided by 2 which is one.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>What is the remainder of 5 divided by 2?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <p>Run the Python code below and then answer the following questions.</p>
+    <exercise label="func_ac_pogil_print_message_v2">
+      <statement>
+        <p>Run the code below to see what it prints and then use it to answer the following questions.</p>
+      </statement>
+      <program xml:id="func_ac_pogil_print_message_v2_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def test(a, b = 2):
+    print("Welcome")
+    print("Learn the power of functions!")
+    print(a + b)
+    print(a - b)
+    print(a * b)
+    print(a / b)
+    print(a // b)
+    a = 5 % 2
+    return a
+
+# function definition
+def main():
+    print("Hello!")
+
+    # function call
+    print(test(3))
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+    <note>
+      <p>You do not declare the type of a variable in Python. Python requires that all statements that are part of the body of a function must be indented. Use four spaces to indent.</p>
+    </note>
+    <exercise label="funct_fitb_print_test_value_b">
+      <statement>
+        <p>Q-5: What is the value of <c>b</c> when function <c>test</c> starts executing? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="2">
+            <feedback>
+              <p>Since the value of b was not specified it defaults to 2 (it was set to 2 as a default in the function definition)</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>What is the default value specified for b in the function definition?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funct_fitb_return">
+      <statement>
+        <p>Q-6: What keyword in Python is used to return a value from a function? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="return">
+            <feedback>
+              <p>The return keyword is used to return a value from a function</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>What word starts the last line of the test function?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funct_fitb_print">
+      <statement>
+        <p>Q-7: What built-in function in Python is used to display a value? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="print">
+            <feedback>
+              <p>The print function will display a value in Python.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Look at the example Python code above.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <p>Delete the last line of the test function above and run the code again.</p>
+    <exercise label="funct_fitb_return_None">
+      <statement>
+        <p>Q-8: What value is returned from a function that doesn't have a return keyword? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="None">
+            <feedback>
+              <p>A function without a return still returns the keyword None</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>What is the last thing that is printed when you run the code above after deleting the return from the test function?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funct_order_first_example" numbered="yes" adaptive="yes" indentation="show" language="python">
+      <statement>
+        <p>Drag the blocks from the left and put them in the correct order on the right to describe the order the function calls and functions execute.</p>
+      </statement>
+      <blocks>
+        <block order="3">
+          <cline>Call to main function on line 21</cline>
+        </block>
+        <block order="4">
+          <cline>main function defined on line 14</cline>
+        </block>
+        <block order="1">
+          <cline>call to test function on line 18</cline>
+        </block>
+        <block order="2">
+          <cline>test function defined on line 2</cline>
+        </block>
+      </blocks>
+    </exercise>
+  </subsection>
+  <subsection xml:id="functions_parts-of-a-function-and-function-calls">
+    <title>Parts of a Function and Function Calls</title>
+    <exercise label="funct_ca_click_headers">
+      <statement>
+        <p>Click on all of the function headers in the code below.</p>
+      </statement>
+      <feedback>
+        <p>The first line in the function definition is the header.</p>
+      </feedback>
+      <areas>
+        <cline># function definition</cline>
+        <cline><area correct="yes">def print_message()</area></cline>
+        <cline><area correct="no">print("Welcome to Python.")</area></cline>
+        <cline><area correct="no">print("Learn the power of functions!")</area></cline>
+        <cline/>
+        <cline># function definition</cline>
+        <cline><area correct="yes">def main()</area></cline>
+        <cline><area correct="no">print("Hello Programmer!")</area></cline>
+        <cline/>
+        <cline>    # function call</cline>
+        <cline><area correct="no">print_message()</area></cline>
+        <cline/>
+        <cline># function call</cline>
+        <cline><area correct="no">main()</area></cline>
+      </areas>
+    </exercise>
+    <exercise label="funct_ca_click_names">
+      <statement>
+        <p>Click on all of the function names in the code below.</p>
+      </statement>
+      <feedback>
+        <p>The name of the function is after the def keyword and before the ().</p>
+      </feedback>
+      <areas>
+        <cline># function definition</cline>
+        <cline>
+          <area correct="no">def </area>
+          <area correct="yes">print_message</area>
+          <area correct="no">()</area>
+        </cline>
+        <cline>
+          <area correct="no">print("Welcome to Python.")</area>
+        </cline>
+        <cline>
+          <area correct="no">print("Learn the power of functions!")</area>
+        </cline>
+        <cline/>
+        <cline># function definition</cline>
+        <cline>
+          <area correct="no">def </area>
+          <area correct="yes">main</area>
+          <area correct="no">()</area>
+        </cline>
+        <cline>
+          <area correct="no">print("Hello Programmer!")</area>
+        </cline>
+        <cline/>
+        <cline>    # function call</cline>
+        <cline><area correct="no">print_message()</area>:</cline>
+        <cline/>
+        <cline># function call</cline>
+        <cline>
+          <area correct="no">main()</area>
+        </cline>
+      </areas>
+    </exercise>
+    <exercise label="function_def_dnd_v3">
+      <statement>
+        <p>Drag each term to its definition</p>
+      </statement>
+      <feedback>
+        <p>Read the chapter on functions and try again.</p>
+      </feedback>
+      <matches>
+        <match order="1">
+          <premise>function definition</premise>
+          <response>All of the code that tells the program what to do when the function is executed.  It includes the header and body.</response>
+        </match>
+        <match order="2">
+          <premise>function header</premise>
+          <response>The first line of a function definition</response>
+        </match>
+        <match order="3">
+          <premise>function body</premise>
+          <response>All of the lines in the function after the function header</response>
+        </match>
+        <match order="4">
+          <premise>function call</premise>
+          <response>The name of the function followed by an argument list in ().</response>
+        </match>
+        <match order="5">
+          <premise>function name</premise>
+          <response>Follows the def keyword and is before the list of arguments in ().</response>
+        </match>
+      </matches>
+    </exercise>
+  </subsection>
+  <subsection xml:id="functions_writing-function-calls">
+    <title>Writing Function Calls</title>
+    <exercise label="funct_ac_pogil_add_line">
+      <statement>
+        <p>Modify the code below to print the last two lines twice by only adding one line.  That line can't call the print function.</p>
+      </statement>
+      <program xml:id="funct_ac_pogil_add_line_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def print_message():
+    print("Welcome to Python.")
+    print("Learn the power of functions!")
+
+# function definition
+def main():
+    print("Hello Programmer!")
+
+    # function call
+    print_message()
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="funct_ac_pogil_add_function_call">
+      <statement>
+        <p>Modify the code below to print <q>Hello Students</q> by adding one line and without calling the print function in that line.</p>
+      </statement>
+      <program xml:id="funct_ac_pogil_add_function_call_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def print_message():
+    print("Hello Students")
+
+# function definition
+def main():
+
+    # function call
+    print_message()
+        </input>
+      </program>
+    </exercise>
+  </subsection>
+  <subsection xml:id="functions_function-order">
+    <title>Function Order</title>
+    <exercise label="func_sa_call_before_define">
+      <statement>
+        <p>Q-15: Look at the Python code below.  What do you think will happen when you run the following code?</p>
+      </statement>
+    </exercise>
+    <exercise label="func_ac_pogil_print_message_main_first">
+      <statement>
+        <p>Run the code below to see what happens when you try to call a function before it is defined.</p>
+      </statement>
+      <program xml:id="func_ac_pogil_print_message_main_first_editor" interactive="activecode" language="python">
+        <input>
+# function call
+main()
+
+# function definition
+def print_message():
+    print("Welcome to Python.")
+    print("Learn the power of functions!")
+
+# function definition
+def main():
+    print("Hello Programmer!")
+
+    # function call
+    print_message()
+        </input>
+      </program>
+    </exercise>
+<idx>function</idx>
+<idx><h>function</h><h>definition</h></idx>
+<idx><h>definition</h><h>function</h></idx>
+<idx><h>function</h><h>header</h></idx>
+<idx><h>header</h><h>function</h></idx>
+    <note>
+      <p>Python processes the code in a file from left to right and from the
+                    first line to the last line.
+                    All functions must be defined before they are called.</p>
+    </note>
+    <exercise label="func_pp_print_name_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
+      <statement>
+        <p>Drag the blocks from the left and put them in the correct order on the right to define a function <c>print_greeting</c> that asks for your name and prints <q>Hello Name</q>. Then define a <c>main</c> function that calls <c>print_greeting</c>.  Be sure to also call the <c>main</c> function. Note that you will have to indent the lines that are in the body of each function.  Click the <em>Check</em> button to check your solution.</p>
+      </statement>
+      <blocks>
+        <block order="5">
+          <choice correct="yes">
+            <cline>def print_greeting():</cline>
+          </choice>
+          <choice>
+            <cline>def print_greeting() </cline>
+          </choice>
+        </block>
+        <block order="8">
+          <cline>    name = input("What is your name?")</cline>
+        </block>
+        <block order="9">
+          <cline>    print("Hello " + name)</cline>
+        </block>
+        <block order="7">
+          <choice correct="yes">
+            <cline>def main():</cline>
+          </choice>
+          <choice>
+            <cline>Def main(): </cline>
+          </choice>
+        </block>
+        <block order="4">
+          <choice correct="yes">
+            <cline>    print_greeting()</cline>
+          </choice>
+          <choice>
+            <cline>    print_greeting </cline>
+          </choice>
+        </block>
+        <block order="3">
+          <cline>main()</cline>
+        </block>
+      </blocks>
+    </exercise>
+  </subsection>
+  <subsection xml:id="functions_special-characters-and-keywords">
+    <title>Special Characters and Keywords</title>
+    <exercise label="funct_fitb_body_char">
+      <statement>
+        <p>Q-18: What character indicates that what follows next is the body of the function? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="\:">
+            <feedback>
+              <p>A : is used to indicate the start of the body of a function.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>It is the last character on the function header.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funct_fitb_comment_char">
+      <statement>
+        <p>Q-19: What character starts a comment? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="#">
+            <feedback>
+              <p>A # is used to start a comment.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Comments explain the code, try again</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funct_fitb_def_fitb">
+      <statement>
+        <p>Q-20: What Python keyword is used to start a function definition? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="def">
+            <feedback>
+              <p>Use def to start a function definition.</p>
+            </feedback>
+          </condition>
+          <condition string="Def">
+            <feedback>
+              <p>Remember that case matters in Python.  All keywords start with a lower case letter.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Try again!</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
+    <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+    &lt;div data-component="groupsub" id=func_basics_groupsub data-size_limit=4&gt;
+        &lt;div class="col-sm-6"&gt;
+            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div id="groupsub_button" class="col-sm-6"&gt;
+        &lt;/div&gt;
+        &lt;p&gt;The Submit Group button will submit the answer for each each question
+        on this page for each member of your group. It also logs you as the official
+        group submitter.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  </subsection>
+</section>

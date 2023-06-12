@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<section xml:id="tuples_using-tuples-as-keys-in-dictionaries">
+  <title>Using Tuples as Keys in Dictionaries</title>
+<idx>Tuples as Keys</idx>
+  <p>Because tuples are hashable and lists are not, if we
+            want to create a composite key to use in a dictionary
+            we must use a tuple as the key.</p>
+  <p>We would encounter a composite key if we wanted to create a telephone
+            directory that maps from last-name, first-name pairs to telephone
+            numbers. Assuming that we have defined the variables <c>last</c>,
+            <c>first</c>, and <c>number</c>, we could write a dictionary
+            assignment statement as follows:</p>
+  <program language="python">
+    <input>
+directory[last, first] = number
+</input>
+  </program>
+  <exercise label="question10_7_1">
+    <statement>
+      <p>Write code to create a dictionary called &#x2018;d1', and in it give the tuple (1, &#x2018;a') a value of <q>tuple</q>.</p>
+    </statement>
+    <program xml:id="question10_7_1_editor" interactive="activecode" language="python">
+      <input>
+
+====
+from unittest.gui import TestCaseGui
+
+class MyTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(d1[(1, "a")], "tuple", "Checking to make sure the key has the correct value.")
+
+MyTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="question10_7_2">
+    <statement>
+      <p>11-9-2: Which of these options can be keys of a dictionary? Select all that apply.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Dictionaries</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Dictionaries cannot be the keys of other dictionaries. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Tuples</p>
+        </statement>
+        <feedback>
+          <p>Correct! It is fine to use tuples as keys in a dictionary.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Strings</p>
+        </statement>
+        <feedback>
+          <p>Correct! Strings are used as keys of dictionaries all the time!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Integers</p>
+        </statement>
+        <feedback>
+          <p>Correct! Integers are perfectly acceptable to be keys of dictionaries.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Lists</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Lists cannot be used as the keys of dictionaries. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>The expression in brackets is a tuple. We could use tuple assignment in
+            a <c>for</c> loop to traverse this dictionary.</p>
+  <program language="python">
+    <input>
+for last, first in directory:
+    print(first, last, directory[last, first])
+</input>
+  </program>
+  <p>This loop traverses the keys in <c>directory</c>, which are
+            tuples. It assigns the elements of each tuple to <c>last</c> and
+            <c>first</c>, then prints the name and corresponding telephone
+            number.</p>
+  <exercise label="question10_7_3">
+    <statement>
+      <p>11-9-3: Which of the following lines of code correctly prints the value associated with (&#x2018;Go', &#x2018;Blue')? Select all that apply.</p>
+      <program language="python">
+        <input>
+my_dict = {}
+my_dict[('Go', 'Blue')] = True
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>my_dict['Go']</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! You need both values in the tuple for the dictionary to recognize it as the correct key. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>my_dict['Blue']</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! You need both values in the tuple for the dictionary to recognize it as the correct key. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>my_dict['Go', 'Blue']</p>
+        </statement>
+        <feedback>
+          <p>Correct! In this case, the parentheses of the tuple are not required in order to properly call its value.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>my_dict[('Go', 'Blue')]</p>
+        </statement>
+        <feedback>
+          <p>Correct! This is one way to grab the value associated with the tuple.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

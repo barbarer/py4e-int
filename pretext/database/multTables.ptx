@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+<section xml:id="database_programming-with-multiple-tables">
+  <title>Programming with multiple tables</title>
+  <introduction>
+      <idx><h>Database</h><h>Constraints</h></idx>
+    <idx><h>Constraints</h><h>Database</h></idx>
+  <p>We will now redo the Twitter spider program using two tables, the
+            primary keys, and the key references as described above. Here is the
+            code for the new version of the program:</p>
+  <pre>import json
+import sqlite3
+import twitter_info
+import tweepy
+import os
+
+# Set up OAuth2 for access to twitter
+auth = tweepy.OAuth2BearerHandler(twitter_info.bearer_token)
+api = tweepy.API(auth, wait_on_rate_limit=True)
+
+# set up the database tables
+dir = os.path.dirname(__file__) + os.sep
+conn = sqlite3.connect(dir + 'friends.db')
+cur = conn.cursor()
+cur.execute('''CREATE TABLE IF NOT EXISTS People
+           (id INTEGER PRIMARY KEY, name TEXT UNIQUE, retrieved INTEGER)''')
+cur.execute('''CREATE TABLE IF NOT EXISTS Follows
+           (from_id INTEGER, to_id INTEGER, UNIQUE(from_id, to_id))''')
+
+# Loop till the user enters quit
+while True:
+    acct = input('Enter a Twitter screen name, or hit enter, or type quit: ')
+    if (acct == 'quit'): break # user entered quit, so stop
+    if (len(acct) &lt; 1): # user hit enter, pick someone to visit
+
+        # select a screen name that hasn't been visited yet
+        cur.execute('SELECT id, name FROM People WHERE retrieved = 0 LIMIT 1')
+        try:
+            (id, acct) = cur.fetchone()
+        except:
+            print('No unretrieved Twitter accounts found')
+            continue
+
+    # See if the screen name (acct) is in the database
+    cur.execute('SELECT id FROM People WHERE name = ? LIMIT 1',
+               (acct, ))
+    try:
+        # it is so get the key (id)
+        id = cur.fetchone()[0]
+    except:
+        # not there so add it
+        cur.execute('''INSERT OR IGNORE INTO People
+                   (name, retrieved) VALUES (?, 0)''', (acct, ))
+        conn.commit()
+        if cur.rowcount != 1:
+            print('Error inserting account:', acct)
+            continue
+        id = cur.lastrowid
+
+    print('Retrieving account', acct)
+
+    try:
+        idList = api.get_friend_ids(screen_name=acct)
+
+    except Exception as err:
+        print('Failed to Retrieve', err)
+        break
+
+    # Update the database to show that we have retrieved
+    cur.execute('UPDATE People SET retrieved=1 WHERE name = ?', (acct, ))
+
+    # loop through the idList
+    countnew = 0
+    countold = 0
+    highest = min(len(idList), 5) # in case have less than 5 friends
+    for i in range(highest):
+        currId = idList[i]
+        friend = api.get_user(user_id=currId)
+        screenName = friend.screen_name
+
+        # get the key for this screen name
+        cur.execute('SELECT id FROM People WHERE name = ? LIMIT 1',
+                   (screenName, ))
+
+        # if found it then add one to count old
+        try:
+            friend_id = cur.fetchone()[0]
+            countold = countold + 1
+
+        # if didn't find it insert it
+        except:
+            cur.execute('''INSERT OR IGNORE INTO People (name, retrieved)
+                        VALUES (?, 0)''', (screenName, ))
+            conn.commit()
+            if cur.rowcount != 1:
+                print('Error inserting account:', screenName)
+                continue
+            friend_id = cur.lastrowid
+            countnew = countnew + 1
+        cur.execute('''INSERT OR IGNORE INTO Follows (from_id, to_id)
+                    VALUES (?, ?)''', (id, friend_id))
+    print('New accounts=', countnew, ' revisited=', countold)
+    conn.commit()
+cur.close()</pre>
+  <p>This program is starting to get a bit complicated, but it illustrates
+            the patterns that we need to use when we are using integer keys to link
+            tables. The basic patterns are:</p>
+  <p>
+    <ul>
+      <li>
+        <p>Create tables with primary keys and constraints.</p>
+      </li>
+      <li>
+        <p>When we have a logical key for a person (i.e., account name) and we need the
+                    <c>id</c> value for the person, depending on whether or not the person is already
+                    in the <c>People</c> table we either need to: (1) look up the person in the <c>People</c>
+                    table and retrieve the <c>id</c> value for the person or (2) add the person to the
+                    <c>People</c> table and get the <c>id</c> value for the newly added row.</p>
+      </li>
+      <li>
+        <p>Insert the row that captures the <q>follows</q> relationship.</p>
+      </li>
+    </ul>
+  </p>
+  <p>We will cover each of these in turn.</p>
+</introduction>
+  <subsection xml:id="database_constraints-in-database-tables">
+    <title>Constraints in database tables</title>
+    <p>As we design our table structures, we can tell the database system that
+                we would like it to enforce a few rules on us. These rules help us from
+                making mistakes and introducing incorrect data into out tables. When we
+                create our tables:</p>
+    <program language="python">
+      <input>
+cur.execute('''CREATE TABLE IF NOT EXISTS People
+    (id INTEGER PRIMARY KEY, name TEXT UNIQUE, retrieved INTEGER)''')
+cur.execute('''CREATE TABLE IF NOT EXISTS Follows
+    (from_id INTEGER, to_id INTEGER, UNIQUE(from_id, to_id))''')
+</input>
+    </program>
+    <p>We indicate that the <c>name</c> column in the <c>People</c>
+                table must be <c>UNIQUE</c>. We also indicate that the combination
+                of the two numbers in each row of the <c>Follows</c> table must be
+                unique. These constraints keep us from making mistakes such as adding
+                the same relationship more than once.</p>
+    <p>We can take advantage of these constraints in the following code:</p>
+    <program language="python">
+      <input>
+cur.execute('''INSERT OR IGNORE INTO People (name, retrieved)
+    VALUES ( ?, 0)''', ( friend, ) )
+</input>
+    </program>
+    <p>We add the <c>OR IGNORE</c> clause to our <c>INSERT</c>
+                statement to indicate that if this particular <c>INSERT</c> would
+                cause a violation of the <q><c>name</c> must be unique</q> rule, the
+                database system is allowed to ignore the <c>INSERT</c>. We are
+                using the database constraint as a safety net to make sure we don't
+                inadvertently do something incorrect.</p>
+    <p>Similarly, the following code ensures that we don't add the exact same
+                <c>Follows</c> relationship twice.</p>
+    <program language="python">
+      <input>
+cur.execute('''INSERT OR IGNORE INTO Follows
+    (from_id, to_id) VALUES (?, ?)''', (id, friend_id) )
+</input>
+    </program>
+    <p>Again, we simply tell the database to ignore our attempted
+                <c>INSERT</c> if it would violate the uniqueness constraint that
+                we specified for the <c>Follows</c> rows.</p>
+    <exercise label="dbMult_MC_tf1">
+      <statement>
+        <p>Q-1: True or False? You can instruct SQL to ignore a command.</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>True</p>
+          </statement>
+          <feedback>
+            <p>By using the command "OR IGNORE" you can instruct SQL to skip a command if it invalidates a constraint.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>False</p>
+          </statement>
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+  <subsection xml:id="database_retrieve-and-or-insert-a-record">
+    <title>Retrieve and/or insert a record</title>
+    <p>When we prompt the user for a Twitter account, if the account exists, we
+                must look up its <c>id</c> value. If the account does not yet
+                exist in the <c>People</c> table, we must insert the record and
+                get the <c>id</c> value from the inserted row.</p>
+    <p>This is a very common pattern and is done twice in the program above.
+                This code shows how we look up the <c>id</c> for a friend's
+                account when we have extracted a <c>screen_name</c> from a <c>user</c>
+                node in the retrieved Twitter JSON.</p>
+    <p>Since over time it will be increasingly likely that the account will
+                already be in the database, we first check to see if the
+                <c>People</c> record exists using a <c>SELECT</c> statement.</p>
+              <p>If all goes well <fn>In general, when a sentence starts with “if all goes well”, you will find that
+                    the code needs to use try/except.</fn> inside
+                the <c>try</c> section, we retrieve
+                the record using <c>fetchone()</c> and then retrieve the first
+                (and only) element of the returned tuple and store it in <c>friend_id</c>.</p>
+    <p>If the <c>SELECT</c> fails, the <c>fetchone()[0]</c> code
+                will fail and control will transfer into the <c>except</c>
+                section.</p>
+    <program language="python">
+      <input>
+friend = api.get_user(user_id=currId)
+screenName = friend.screen_name
+
+# get the key for this screen name
+cur.execute('SELECT id FROM People WHERE name = ? LIMIT 1',
+            (screenName, ))
+
+# if found it then add one to count old
+try:
+    friend_id = cur.fetchone()[0]
+    countold = countold + 1
+
+# if didn't find it insert it
+except:
+    cur.execute('''INSERT OR IGNORE INTO People (name, retrieved)
+                VALUES (?, 0)''', (screenName, ))
+    conn.commit()
+    if cur.rowcount != 1:
+        print('Error inserting account:', screenName)
+        continue
+    friend_id = cur.lastrowid
+    countnew = countnew + 1
+</input>
+    </program>
+    <p>If we end up in the <c>except</c> code, it simply means that the
+                row was not found, so we must insert the row. We use <c>INSERT OR
+IGNORE</c> just to avoid errors and then call <c>conn.commit()</c>
+                to force the database to really be updated. After the write is done, we
+                can check the <c>cur.rowcount</c> to see how many rows were
+                affected. Since we are attempting to insert a single row, if the number
+                of affected rows is something other than 1, it is an error.</p>
+    <p>If the <c>INSERT</c> is successful, we can look at
+                <c>cur.lastrowid</c> to find out what value the database assigned
+                to the <c>id</c> column in our newly created row.</p>
+    <exercise label="dbMult_MC_tf2">
+      <statement>
+        <p>Q-2: True or False? SQL will automatically check if something already exists in your data.</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>True</p>
+          </statement>
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>False</p>
+          </statement>
+          <feedback>
+            <p>Before adding new data to a table, you should check if it already exists or use INSERT OR IGNORE.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+  <subsection xml:id="database_storing-the-friend-relationship">
+    <title>Storing the friend relationship</title>
+    <p>Once we know the key value for both the Twitter user and the friend in
+                the JSON, it is a simple matter to insert the two numbers into the
+                <c>Follows</c> table with the following code:</p>
+    <program language="python">
+      <input>
+cur.execute('''INSERT OR IGNORE INTO Follows (from_id, to_id)
+               VALUES (?, ?)''', (id, friend_id))
+</input>
+    </program>
+    <p>Notice that we let the database take care of keeping us from
+                <q>double-inserting</q> a relationship by creating the table with a
+                uniqueness constraint and then adding <c>OR IGNORE</c> to our
+                <c>INSERT</c> statement.</p>
+    <p>Here is a sample execution of this program:</p>
+    <pre>Enter a Twitter screen name, or hit enter, or type quit: drchuck
+Retrieving account drchuck
+New accounts= 5  revisited= 0
+Enter a Twitter screen name, or hit enter, or type quit:
+Retrieving account ravenmaster1
+New accounts= 5  revisited= 0
+Enter a Twitter screen name, or hit enter, or type quit:
+Retrieving account BrentSeverance
+New accounts= 4  revisited= 1
+Enter a Twitter screen name, or hit enter, or type quit: quit</pre>
+    <p>We started with the <c>drchuck</c> account and then let the
+                program automatically use the next two accounts to retrieve and add to
+                our database.</p>
+    <p>The following is the first few rows in the <c>People</c> and
+                <c>Follows</c> tables after this run is completed:</p>
+    <pre>People:
+People:
+(1, 'drchuck', 1)
+(2, 'ravenmaster1', 1)
+(3, 'BrentSeverance', 1)
+(4, 'prairycat', 0)
+(5, 'lionelrobertjr', 0)
+...
+15 rows.
+Follows:
+(1, 2)
+(1, 3)
+(1, 4)
+(1, 5)
+(1, 6)
+...
+15 rows.</pre>
+    <p>You can see the <c>id</c>, <c>name</c>, and
+                <c>visited</c> fields in the <c>People</c> table and you see
+                the numbers of both ends of the relationship in the <c>Follows</c>
+                table. In the <c>People</c> table, we can see that the first three
+                people have been visited and their data has been retrieved. The data in
+                the <c>Follows</c> table indicates that <c>drchuck</c> (user
+                1) is a friend to all of the people shown in the first five rows. This
+                makes sense because the first data we retrieved and stored was the
+                Twitter friends of <c>drchuck</c>. If you were to print more rows
+                from the <c>Follows</c> table, you would see the friends of users
+                2 and 3 as well.</p>
+    
+  </subsection>
+</section>

@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<section xml:id="variables_variables">
+  <title>Variables</title>
+<idx>Variable</idx>
+<idx>Assignment</idx>
+<idx><h>Assignment</h><h>Statement</h></idx>
+<idx><h>Statement</h><h>Assignment</h></idx>
+  <p>One of the most powerful features of a programming language is the
+            ability to manipulate <em>variables</em>. A variable is a name
+            that refers to a value.</p>
+  <p>An <em>assignment statement</em> creates new variables and gives
+            them values:</p>
+  <program xml:id="var-ac-4-assign" interactive="activecode" language="python">
+    <input>
+message = 'And now for something completely different'
+n = 17
+pi = 3.1415926535897931
+print(message)
+print(n)
+print(pi)
+        </input>
+  </program>
+  <p>This example makes three assignments and then prints the value of each of the variables. The first assigns a string to a
+            new variable named <c>message</c>; the second assigns the integer
+            17 to a variable named <c>n</c>; and the third assigns the (approximate)
+            value of pi to a variable named <c>pi</c>.</p>
+  <p>The type of a variable is the type of the value it refers to.</p>
+  <exercise label="var-variables-dnd-type">
+    <statement>
+      <p>Using the code above, match the variables up with their type.</p>
+    </statement>
+    <feedback>
+      <p>Look at the variable assignments above.</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>message</premise>
+        <response>string</response>
+      </match>
+      <match order="2">
+        <premise>n</premise>
+        <response>integer</response>
+      </match>
+      <match order="3">
+        <premise>pi</premise>
+        <response>float</response>
+      </match>
+    </matches>
+  </exercise>
+  <exercise label="var-variables-ca-string">
+    <statement>
+      <p>Click the variables representing strings in this block.</p>
+    </statement>
+    <feedback>
+      <p>Remember that the type of a variable is the type of the value it refers to.</p>
+    </feedback>
+    <areas>
+      <cline><area correct="yes">message</area> = <area correct="no">'And now for something completely different'</area></cline>
+      <cline><area correct="no">n</area> = <area correct="no">17</area></cline>
+      <cline><area correct="yes">number</area> = <area correct="no">"123456789"</area></cline>
+      <cline><area correct="no">pi</area> = <area correct="no">3.1415926535897931</area></cline>
+    </areas>
+  </exercise>
+  <exercise label="var-variables-mc-assign">
+    <statement>
+      <p>csp-10-2-4: How would you assign the variable <c>name</c> to the string <c>Penelope</c>?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>name = 'Penelope"</p>
+        </statement>
+        <feedback>
+          <p>The quotation marks on each side of the string need to be the same, either single or double, not a mix.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>name = "Penelope"</p>
+        </statement>
+        <feedback>
+          <p>An equals sign is needed to assign a variable and quotation marks tell the program that the value is a string.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>name = Penelope</p>
+        </statement>
+        <feedback>
+          <p>What symbols are missing to make ``Penelope`` a string?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>name, "Penelope"</p>
+        </statement>
+        <feedback>
+          <p>Look at the variable assignments above, what's missing?</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

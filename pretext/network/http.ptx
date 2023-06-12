@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<section xml:id="network_hypertext-transfer-protocol-http">
+  <title>HyperText Transfer Protocol - HTTP</title>
+  <p>The network protocol that powers the web is actually quite simple and
+            there is built-in support in Python called <c>sockets</c> which
+            makes it very easy to make network connections and retrieve data over
+            those sockets in a Python program.</p>
+  <p>A <em>socket</em> is much like a file, except that a single
+            socket provides a two-way connection between two programs. You can both
+            read from and write to the same socket. If you write something to a
+            socket, it is sent to the application at the other end of the socket. If
+            you read from the socket, you are given the data which the other
+            application has sent.</p>
+  <exercise label="http_connection">
+    <statement>
+      <p>Q-1: A ______ is much like a file, except that a single socket provides a two-way
+connection between two programs. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Ss]ocket">
+          <feedback>
+            <p>Yes, a socket provides a two-way connection between two programs.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>But if you try to read a socket when the program on the other end of the
+            socket has not sent any data, you just sit and wait. If the programs on
+            both ends of the socket simply wait for some data without sending
+            anything, they will wait for a very long time, so an important part of programs
+            that communicate over the Internet is to have some sort of protocol.</p>
+  <p>A protocol is a set of precise rules that
+            determine who is to go first, what they are to do, and then what the
+            responses are to that message, and who sends next, and so on. In a sense
+            the two applications at either end of the socket are doing a dance and
+            making sure not to step on each other's toes.</p>
+  <exercise label="http_rules">
+    <statement>
+      <p>Q-2: A ________ is a set of practice rules that determine who is to go first,
+what they are to do, and then what the responses are to that message, and
+who sends next, and so on. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Pp]rotocol">
+          <feedback>
+            <p>A protocol is a set of rules that determines order and responses.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>There are many documents that describe these network protocols. The
+            HyperText Transfer Protocol is described in the following document:</p>
+  <p>
+    <url href="https://www.w3.org/Protocols/rfc2616/rfc2616.txt" visual="https://www.w3.org/Protocols/rfc2616/rfc2616.txt">https://www.w3.org/Protocols/rfc2616/rfc2616.txt</url>
+  </p>
+  <p>This is a long and complex 176-page document with a lot of detail. If
+            you find it interesting, feel free to read it all. But if you take a
+            look around page 36 of RFC2616 you will find the syntax for the GET
+            request. To request a document from a web server, we make a connection
+            to the <c>www.pr4e.org</c> server on port 80, and then send a
+            line of the form</p>
+  <p>
+    <c>GET http://data.pr4e.org/romeo.txt HTTP/1.0</c>
+  </p>
+  <p>where the second parameter is the web page we are requesting, and then
+            we also send a blank line. The web server will respond with some header
+            information about the document and a blank line followed by the document
+            content.</p>
+</section>

@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<section xml:id="network_the-world-s-simplest-web-browser">
+  <title>The world's simplest web browser</title>
+  <p>Perhaps the easiest way to show how the HTTP protocol works is to write
+            a very simple Python program that makes a connection to a web server and
+            follows the rules of the HTTP protocol to request a document and
+            display what the server sends back.</p>
+  <program xml:id="simplewebbrowser" interactive="activecode" language="python3">
+    <input>
+import socket
+
+mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+mysock.connect(('data.pr4e.org', 80))
+cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
+mysock.send(cmd)
+
+while True:
+    data = mysock.recv(512)
+    if len(data) &lt; 1:
+        break
+    print(data.decode(),end='')
+
+mysock.close()
+        </input>
+  </program>
+  <p>First the program makes a connection to port 80 on the server
+            <url href="http://www.py4e.com" visual="http://www.py4e.com">www.py4e.com</url>. Since our program is playing the role
+            of the <q>web browser</q>, the HTTP protocol says we must send the GET
+            command followed by a blank line. <c>\r\n</c> signifies an EOL (end of line),
+            so <c>\r\n\r\n</c> signifies nothing between two EOL sequences. That is the
+            equivalent of a blank line.</p>
+  <image source="images/socket.svg" width="50%" alt="A Socket Connection"/>
+  <p>Once we send that blank line, we write a loop that receives data in
+            512-character chunks from the socket and prints the data out until there
+            is no more data to read (i.e., the recv() returns an empty string).</p>
+  <p>The output starts with headers which the web server sends to describe
+            the document. For example, the <c>Content-Type</c> header
+            indicates that the document is a plain text document
+            (<c>text/plain</c>).</p>
+  <p>After the server sends us the headers, it adds a blank line to indicate
+            the end of the headers, and then sends the actual data of the file
+            <em>romeo.txt</em>.</p>
+  <p>This example shows how to make a low-level network connection with
+            sockets. Sockets can be used to communicate with a web server or with a
+            mail server or many other kinds of servers. All that is needed is to
+            find the document which describes the protocol and write the code to
+            send and receive the data according to the protocol.</p>
+  <p>However, since the protocol that we use most commonly is the HTTP web
+            protocol, Python has a special library specifically designed to support
+            the HTTP protocol for the retrieval of documents and data over the web.</p>
+  <p>One of the requirements for using the HTTP protocol is the need to send
+            and receive data as bytes objects, instead of strings. In the preceding
+            example, the <c>encode()</c> and <c>decode()</c> methods convert strings into bytes
+            objects and back again.</p>
+  <p>The next example uses <c>b''</c> notation to specify that a variable should
+            be stored as a bytes object. <c>encode()</c> and <c>b''</c> are equivalent.</p>
+  <pre>&gt;&gt;&gt; b'Hello world'
+b'Hello world'
+&gt;&gt;&gt; 'Hello world'.encode()
+b'Hello world'</pre>
+  <exercise label="http_protocol">
+    <statement>
+      <p>Q-2: Which of the following statements is correct?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>HTTP protocol sends and receives data as string types over sockets.</p>
+        </statement>
+        <feedback>
+          <p>HTTP only supports byte objects, that's why they are encoded to be byte objects and decoded as strings.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Sockets can be used to connect with many kinds of servers using different protocols.</p>
+        </statement>
+        <feedback>
+          <p>Sockets support different types of servers with codes describing the protocol used and required send and recive data.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Python does not support HTTP so we made a simple web browser to connect with web servers.</p>
+        </statement>
+        <feedback>
+          <p>HTTP is a commonly used protocol for web servers, python has its own library for http protocols.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>b'' notation specifies that a variable is stored as a beta object.</p>
+        </statement>
+        <feedback>
+          <p>b'' notation specifies that a variable is stored as a bytes object.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

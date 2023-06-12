@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<section xml:id="functions_functions-and-strings-mixed-up-code-questions">
+  <title>Functions and Strings Mixed-Up Code Questions</title>
+  <exercise label="Function_String_MixedUpCode_1_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>joinStrings(str1, str2)</c> that takes two different strings
+            as parameters, <c>str1</c> and <c>str2</c>, and returns them as one string with <c>str1</c> before <c>str2</c>.
+            For example, <c>joinStrings('he','llo')</c> returns <c>hello</c>.</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <choice correct="yes">
+          <cline>def joinStrings(str1, str2):</cline>
+        </choice>
+        <choice>
+          <cline>def joinStrings(): </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    joined = str1 + str2</cline>
+        </choice>
+        <choice>
+          <cline>    joined = str1.join(str2) </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    return joined</cline>
+        </choice>
+        <choice>
+          <cline>    Return joined </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="Function_String_MixedUpCode_2_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>rect_per(w, h)</c> that takes the width, <c>w</c>, and the height, <c>h</c>, as parameters. Calculate the perimeter, which is the width plus the height times two,
+            and return a string in the form - <c>Perimeter of rectangle with width of (w) and height of (h) is (perimeter)</c>.  For example, <c>rect_per(5,10)</c>
+            returns <c>Perimeter of rectangle with width of 5 and height of 10 is 30</c>.</p>
+    </statement>
+    <blocks>
+      <block order="7">
+        <choice correct="yes">
+          <cline>def rect_per(w, h):</cline>
+        </choice>
+        <choice>
+          <cline>def rect_per(w, h) </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>    perimeter = (w + h) * 2</cline>
+        </choice>
+        <choice>
+          <cline>    perimeter = w + h * 2 </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    answer = "Perimeter of rectangle with width of " + str(w) + " and height of " + str(h) + " is " + str(perimeter)</cline>
+        </choice>
+        <choice>
+          <cline>    answer = "Perimeter of rectangle with width of " + str(w) + " and height of " + str(h) + " is " + perimeter </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <cline>    return answer</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="Function_String_MixedUpCode_3" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>cube(n)</c> that takes a number, <c>n</c>, and cubes it and returns a string in the form
+            <c>Cube of (n) is (n cubed)</c>.  For example, <c>cube(4)</c> returns <c>Cube of 4 is 64</c>.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>def cube(n):</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    cube_num = n ** 3</cline>
+        </choice>
+        <choice>
+          <cline>    cube_num = n * 3 </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>    answer = "Cube of " + str(n) + " is " + str(cube_num)</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    return answer</cline>
+        </choice>
+        <choice>
+          <cline>    return cube_num </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="Function_String_MixedUpCode_4" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>atlas(c_name)</c> that takes a country name, <c>c_name</c>,
+            as a parameter and returns a string in the form of
+            <c>The last letter of (c_name) is (last)</c>.  For example, <c>atlas('Germany')</c> returns
+            <c>The last letter of Germany is y</c>.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>def atlas(c_name):</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    last = c_name[-1]</cline>
+        </choice>
+        <choice>
+          <cline>    last = c_name[:-1] </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    return("The last letter of " + c_name + " is " + last)</cline>
+        </choice>
+        <choice>
+          <cline>    return("The last letter of" + c_name + "is" + last) </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="Function_String_MixedUpCode_5" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>dateYear(date)</c> that takes a string, <c>date</c>, in the format MM/DD/YYYY and returns the year.
+            For example, <c>dateYear(11/07/2000)</c> should return <c>2000</c>.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>def dateYear(date):</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    year = date[6:]</cline>
+        </choice>
+        <choice>
+          <cline>    year = date[7:] </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>    return year</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="Function_String_MixedUpCode_6" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>capitalize(str)</c>, that takes a string, <c>str</c>, and returns the string with the first letter capitalized.
+            For example, <c>capitalize('america')</c> would return <c>America</c>.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <choice correct="yes">
+          <cline>def capitalize(str):</cline>
+        </choice>
+        <choice>
+          <cline>Def Capitalize(str): </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    answer = str[0].upper() + str[1:]</cline>
+        </choice>
+        <choice>
+          <cline>    answer = str.upper() + str[1:] </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>    return answer</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+    <exercise label="Function_String_MixedUpCode_7" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>mod_password(password)</c>, that takes a string, <c>password</c>, and returns a new string that replaces all <c>'s'</c> in the string with <c>'$'</c>.
+            For example, <c>mod_password('suspense')</c> returns <c>$u$pen$e</c>.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <cline>def mod_password(password):</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    new = password.replace('s', '$')</cline>
+        </choice>
+        <choice>
+          <cline>    new = password.remove('s') + '$' </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>    return new</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="Function_String_MixedUpCode_8" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>first_last(str)</c>, that takes a string, <c>str</c>, and returns a new string with the first two characters of the word
+            followed by the last two characters. Assume <c>str</c> is four characters or more.
+            For example, <c>first_last('wander')</c> returns <c>waer</c>.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>def first_last(str):</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    out = str[:2] + str[-2:]</cline>
+        </choice>
+        <choice>
+          <cline>    out = str[-2:] + str[:2] </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>    return out</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <!--
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=Function_String_MixedUpCode_1_v2_sq data-questionlist='Function_String_MixedUpCode_1_v2, Function_String_MixedUpCode_1_v2_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: Function_String_MixedUpCode_1_v2, Function_String_MixedUpCode_1_v2_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=Function_String_MixedUpCode_2_v2_sq data-questionlist='Function_String_MixedUpCode_2_v2, Function_String_MixedUpCode_2_v2_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: Function_String_MixedUpCode_2_v2, Function_String_MixedUpCode_2_v2_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=Function_String_MixedUpCode_3_sq data-questionlist='Function_String_MixedUpCode_3, Function_String_MixedUpCode_3_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: Function_String_MixedUpCode_3, Function_String_MixedUpCode_3_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=Function_String_MixedUpCode_4_sq data-questionlist='Function_String_MixedUpCode_4, Function_String_MixedUpCode_4_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: Function_String_MixedUpCode_4, Function_String_MixedUpCode_4_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=Function_String_MixedUpCode_5_sq data-questionlist='Function_String_MixedUpCode_5, Function_String_MixedUpCode_5_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: Function_String_MixedUpCode_5, Function_String_MixedUpCode_5_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=Function_String_MixedUpCode_6_sq data-questionlist='Function_String_MixedUpCode_6, Function_String_MixedUpCode_6_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: Function_String_MixedUpCode_6, Function_String_MixedUpCode_6_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=Function_String_MixedUpCode_7_sq data-questionlist='Function_String_MixedUpCode_7, Function_String_MixedUpCode_7_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: Function_String_MixedUpCode_7, Function_String_MixedUpCode_7_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=Function_String_MixedUpCode_8_sq data-questionlist='Function_String_MixedUpCode_8, Function_String_MixedUpCode_8_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: Function_String_MixedUpCode_8, Function_String_MixedUpCode_8_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  -->
+</section>

@@ -1,0 +1,527 @@
+<?xml version="1.0"?>
+<section xml:id="bsoup_write-code-questions">
+  <title>Write Code Questions</title>
+  <exercise label="bsoup_writecode1q_mu" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>cur_stud_link</c> that takes in a parameter <c>url</c>
+            and uses BeautifulSoup to return the URL that links to Current Students in the Navigation Bar.
+            For example, <c>cur_stud_link('https://umich.edu/')</c> should return <c>"https://umich.edu/current-students/"</c>.</p>
+    </statement>
+    <blocks>
+      <block order="8">
+        <cline>import requests</cline>
+        <cline>from bs4 import BeautifulSoup</cline>
+      </block>
+      <block order="10">
+        <cline>def cur_stud_link(url):</cline>
+      </block>
+      <block order="6">
+        <cline>    r = requests.get(url)</cline>
+      </block>
+      <block order="1">
+        <cline>    soup = BeautifulSoup(r.text, 'html.parser')</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    text = soup.find('a', text = "Current Students")</cline>
+        </choice>
+        <choice>
+          <cline>    text = soup.find_all('a', text = "Current Students")  </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    info = text.get('href')</cline>
+        </choice>
+        <choice>
+          <cline>    info = text.get(href) </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <cline>    all_info = "https://umich.edu" + info</cline>
+      </block>
+      <block order="2">
+        <cline>    return all_info</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="bsoup_writecode2qv2_mu" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>headings</c> that takes in a parameter <c>url</c> and uses BeautifulSoup to return a list of all heading names (not subheadings) from the
+            Contents box (History, Emergence of MOOC providers, Student experience and pedagogy, etc.). For example, <c>headings('https://en.wikipedia.org/wiki/Massive_open_online_course')</c>
+            should return <c>['History', 'Emergence of MOOC providers', 'Student experience and pedagogy', 'Information architecture', 'Industry', 'Benefits', 'Challenges and criticisms', 'See also', 'References', 'Further reading', 'External links']</c>.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>import requests</cline>
+        <cline>from bs4 import BeautifulSoup</cline>
+      </block>
+      <block order="12">
+        <cline>def headings(url):</cline>
+        <cline>    h_list = []</cline>
+      </block>
+      <block order="1">
+        <cline>    r = requests.get(url)</cline>
+      </block>
+      <block order="5">
+        <cline>    soup = BeautifulSoup(r.text, 'html.parser')</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    hs = soup.find_all('li', class_='toclevel-1')</cline>
+        </choice>
+        <choice>
+          <cline>    hs = soup.find('li', class_='toclevel-1') </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    for tag in hs:</cline>
+      </block>
+      <block order="8">
+        <cline>        a_tag = tag.find('a')</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>        h = a_tag.find('span', class_='toctext').text</cline>
+        </choice>
+        <choice>
+          <cline>        h = a_tag.find('span', class='toctext').text </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <cline>        h_list.append(h)</cline>
+      </block>
+      <block order="11">
+        <cline>    return h_list</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="bsoup_writecode3q_mu" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>coursera_dict</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the Coursera enrollees table,
+            and returns a dictionary with Country as keys and Percentage as values. For example, <c>coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course')</c>
+            should return <c>{'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', 'United Kingdom': '4.4%', 'Spain': '4.0%', 'Canada': '3.6%', 'Australia': '2.3%', 'Russia': '2.2%', 'Rest of world': '41.9%'}</c>.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <cline>from bs4 import BeautifulSoup</cline>
+        <cline>import requests</cline>
+      </block>
+      <block order="2">
+        <cline>def coursera_dict(url):</cline>
+        <cline>    coursera_enrollees = {}</cline>
+      </block>
+      <block order="3">
+        <cline>    r = requests.get(url)</cline>
+      </block>
+      <block order="4">
+        <cline>    soup = BeautifulSoup(r.text, 'html.parser')</cline>
+      </block>
+      <block order="13">
+        <choice correct="yes">
+          <cline>    tag = soup.find('table', class_='wikitable')</cline>
+        </choice>
+        <choice>
+          <cline>    tag = soup.find_all('table', class_='wikitable') </cline>
+        </choice>
+      </block>
+      <block order="12">
+        <choice correct="yes">
+          <cline>    rows = tag.find_all('tr')</cline>
+        </choice>
+        <choice>
+          <cline>    rows = table.find_all('td') </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <cline>    for row in rows[1:]:</cline>
+      </block>
+      <block order="7">
+        <cline>        both_columns = row.find_all("td")</cline>
+      </block>
+      <block order="8">
+        <cline>        key = both_columns[0].text</cline>
+        <cline>        value = both_columns[1].text.rstrip("\n")</cline>
+      </block>
+      <block order="6">
+        <cline>        coursera_enrollees[key] = value</cline>
+      </block>
+      <block order="5">
+        <cline>    return coursera_enrollees</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="bsoup_writecode4q_mu" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>types</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the Summary of Python 3's built-in types table,
+            and returns a list of the types. For example, <c>types('https://en.wikipedia.org/wiki/Python_(programming_language)')</c>
+            should return <c>['bool', 'bytearray', 'bytes', 'complex', 'dict', 'ellipsis', 'float', 'frozenset', 'int', 'list', 'NoneType', 'NotImplementedType', 'range', 'set', 'str', 'tuple']</c>.</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <cline>import requests</cline>
+        <cline>from bs4 import BeautifulSoup</cline>
+      </block>
+      <block order="2">
+        <cline>def types(url):</cline>
+        <cline>    types = []</cline>
+      </block>
+      <block order="1">
+        <cline>    r = requests.get(url)</cline>
+      </block>
+      <block order="10">
+        <cline>    soup = BeautifulSoup(r.text, 'html.parser')</cline>
+      </block>
+      <block order="12">
+        <choice correct="yes">
+          <cline>    table = soup.find('table', class_ = 'wikitable')</cline>
+        </choice>
+        <choice>
+          <cline>    table = soup.find(table, class_ = 'wikitable') </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>    rows = table.find_all('tr')</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    for row in rows[1:]:</cline>
+        </choice>
+        <choice>
+          <cline>    for row in rows: </cline>
+        </choice>
+      </block>
+      <block order="14">
+        <cline>        all_columns = row.find_all("td")</cline>
+      </block>
+      <block order="11">
+        <cline>        p_type = all_columns[0]</cline>
+      </block>
+      <block order="9">
+        <cline>        code = p_type.find('code')</cline>
+        <cline>        one_type = code.text.rstrip("\n")</cline>
+      </block>
+      <block order="13">
+        <cline>        types.append(one_type)</cline>
+      </block>
+      <block order="8">
+        <cline>    return types</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="bsoup_writecode5q_mu" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>restaurants_list</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the 12 essential Ann Arbor restaurants' names,
+            and returns a list of the 12 best Ann Arbor restaurants in 2019. For example, <c>restaurants_list('https://detroit.eater.com/maps/best-ann-arbor-restaurants')</c>
+            should return <c>["1. Knight's Steakhouse", '2. The Last Word', "3. Krazy Jim's Blimpy Burger", '4. Blue Llama Jazz Club', '5. Spencer', '6. Miss Kim', "7. Zingerman's Delicatessen", '8. Tomukun Noodle Bar', '9. Seoul Street', '10. Ricewood', '11. Bellflower', "12. Ma Lou's Fried Chicken"]</c>.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <cline>from bs4 import BeautifulSoup</cline>
+        <cline>import requests</cline>
+      </block>
+      <block order="9">
+        <cline>def restaurants_list(url):</cline>
+        <cline>    r_list = []</cline>
+      </block>
+      <block order="7">
+        <cline>    r = requests.get(url)</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    soup = BeautifulSoup(r.text, 'html.parser')</cline>
+        </choice>
+        <choice>
+          <cline>    soup = BeautifulSoup(r.text, 'xml') </cline>
+        </choice>
+      </block>
+      <block order="10">
+        <choice correct="yes">
+          <cline>    rest_list = soup.find_all('div', class_ = "c-mapstack__card-hed")</cline>
+        </choice>
+        <choice>
+          <cline>    rest_list = soup.find_all('div', class = "c-mapstack__card-hed") </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>    for rest in rest_list:</cline>
+      </block>
+      <block order="6">
+        <cline>        r_list.append(rest.text.strip().rstrip("Copy Link").rstrip())</cline>
+      </block>
+      <block order="4">
+        <cline>    return r_list</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="bsoup_writecode6q_mu" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>bsi_list</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the section names and subsection names under Programs Bachelor of Science in Information,
+            and returns a list of the section names and subsection names under Programs Bachelor of Science in Information. For example, <c>bsi_list('https://www.si.umich.edu/programs/bachelor-science-information')</c>
+            should return <c>['How do I apply?', 'Current U-M students', 'Transfer students', 'High school students', 'New transfers', 'UMSI Community College Summer Institute', 'Curriculum', 'Career outcomes', 'Internships', 'F-1 visa holders', 'Career development resources', 'Engaged learning', 'Tuition and funding', 'Connect with us', 'Study abroad for undergraduates', 'Exchange student information']</c>.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <cline>import requests</cline>
+        <cline>from bs4 import BeautifulSoup</cline>
+      </block>
+      <block order="6">
+        <cline>def bsi_list(url):</cline>
+        <cline>    list1 = []</cline>
+      </block>
+      <block order="4">
+        <cline>    r = requests.get(url)</cline>
+      </block>
+      <block order="2">
+        <cline>    soup = BeautifulSoup(r.text, 'html.parser')</cline>
+      </block>
+      <block order="1">
+        <cline>    sections = soup.find_all('a', href = re.compile("/programs/bachelor-science-information/"))</cline>
+      </block>
+      <block order="7">
+        <cline>    for section in sections[:-2]:</cline>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>        list1.append(section.text.strip("\n").strip())</cline>
+        </choice>
+        <choice>
+          <cline>        list1.append(section.strip("\n").strip()) </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>    return list1</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="bsoup_writecode7q_mu" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>bsi_dict</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape and create a list of the section names and subsection names under Programs Bachelor of Science in Information,
+            and creates another list that contains the full urls of the named sections and subsections. Then, return a dictionary that contains the names as keys and their full urls as values. For example, <c>bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information')</c>
+            should return <c>{'How do I apply?': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply', 'Current U-M students': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/cross-campus-transfer', 'Transfer students': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/new-transfer-students-bsi', 'High school students': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/preferred-admissions', 'New transfers': 'https://www.si.umich.edu/programs/bachelor-science-information/new-transfers', 'UMSI Community College Summer Institute': 'https://www.si.umich.edu/programs/bachelor-science-information/new-transfers/umsi-community-college-summer-institute', 'Curriculum': 'https://www.si.umich.edu/programs/bachelor-science-information/curriculum', 'Career outcomes': 'https://www.si.umich.edu/programs/bachelor-science-information/career-outcomes', 'Internships': 'https://www.si.umich.edu/programs/bachelor-science-information/internships', 'F-1 visa holders': 'https://www.si.umich.edu/programs/bachelor-science-information/internships/f-1-visa-holders', 'Career development resources': 'https://www.si.umich.edu/programs/bachelor-science-information/career-development-resources', 'Engaged learning': 'https://www.si.umich.edu/programs/bachelor-science-information/engaged-learning', 'Tuition and funding': 'https://www.si.umich.edu/programs/bachelor-science-information/tuition-and-funding', 'Connect with us': 'https://www.si.umich.edu/programs/bachelor-science-information/connect-us', 'Study abroad for undergraduates': 'https://www.si.umich.edu/programs/bachelor-science-information/study-abroad-undergraduates', 'Exchange student information': 'https://www.si.umich.edu/programs/bachelor-science-information/exchange-student-information'}</c>.</p>
+    </statement>
+    <blocks>
+      <block order="7">
+        <cline>from bs4 import BeautifulSoup</cline>
+        <cline>import requests</cline>
+        <cline>import re</cline>
+      </block>
+      <block order="4">
+        <cline>def bsi_dict(url):</cline>
+        <cline>    bsi_dict = {}</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    r = requests.get(url)</cline>
+          <cline>    soup = BeautifulSoup(r.text, 'html.parser')</cline>
+        </choice>
+        <choice>
+          <cline>    r = requests.get(url)</cline>
+          <cline>    soup = BeautifulSoup(r.string, 'html.parser') </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    sections = soup.find_all('a', href = re.compile("/programs/bachelor-science-information/"))</cline>
+        </choice>
+        <choice>
+          <cline>    sections = soup.find_all('link', href = re.compile("/programs/bachelor-science-information/")) </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    for section in sections[:-2]:</cline>
+      </block>
+      <block order="9">
+        <cline>        key = section.text.strip()</cline>
+        <cline>        value = section.get('href')</cline>
+      </block>
+      <block order="2">
+        <cline>        bsi_dict[bsi_list[key] = value</cline>
+      </block>
+      <block order="10">
+        <cline>    return bsi_dict</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="bsoup_writecode8q_mu" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>envelope_address</c> that takes in a parameter <c>url</c> and uses BeautifulSoup to web scrape and return the address text in the footer as a list. For example, <c>envelope_address('https://www.si.umich.edu/programs/bachelor-science-information')</c>
+            should return a list like: <c>['School of Information', 'University of Michigan', '105 S State St.', 'Ann Arbor, MI 48109-1285']</c>.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <cline>import requests</cline>
+        <cline>from bs4 import BeautifulSoup</cline>
+      </block>
+      <block order="11">
+        <cline>def envelope_address(url):</cline>
+        <cline>    out_list = []</cline>
+      </block>
+      <block order="3">
+        <cline>    r = requests.get(url)</cline>
+      </block>
+      <block order="10">
+        <cline>    soup = BeautifulSoup(r.text, 'html.parser')</cline>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>    address = soup.find('div', class_ = 'footer--address').text.strip()</cline>
+        </choice>
+        <choice>
+          <cline>    address = soup.find('div', class = 'footer--address').text.strip() </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    add_list = address.split("\n")</cline>
+        </choice>
+        <choice>
+          <cline>    add_list = address.split() </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <cline>    for add_line in add_list:</cline>
+      </block>
+      <block order="12">
+        <choice correct="yes">
+          <cline>        out_list.append(add_line.strip())</cline>
+        </choice>
+        <choice>
+          <cline>        add_list.append(add_line.strip()) </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>    return out_list</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="bsoup_writecode9q_mu" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>name_email</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the names and email addresses,
+            and returns a dictionary with the names as keys and the email addresses as values. Use the string replace method while web scraping. For example, <c>name_email('https://www.si.umich.edu/people/directory/faculty/e')</c>
+            should return <c>{'Paul Edwards': 'pne@umich.edu', 'Ron Eglash': 'eglash@umich.edu', 'Nicole Ellison': 'enicole@umich.edu', 'Barbara Ericson': 'barbarer@umich.edu'}</c>.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <choice correct="yes">
+          <cline>from bs4 import BeautifulSoup</cline>
+          <cline>import requests</cline>
+        </choice>
+        <choice>
+          <cline>import re </cline>
+        </choice>
+      </block>
+      <block order="8">
+        <cline>def name_email(url):</cline>
+        <cline>    names_list = []</cline>
+        <cline>    emails_list = []</cline>
+        <cline>    name_email_dict = {}</cline>
+      </block>
+      <block order="11">
+        <choice correct="yes">
+          <cline>    r = requests.get(url)</cline>
+          <cline>    soup = BeautifulSoup(r.text, 'html.parser')</cline>
+        </choice>
+        <choice>
+          <cline>    r = requests.get(url)</cline>
+          <cline>    soup = BeautifulSoup(r.string, 'html.parser') </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>    names = soup.find_all(class_="research-person-profile__name")</cline>
+        </choice>
+        <choice>
+          <cline>    names = soup.find_all(class="research-person-profile__name") </cline>
+        </choice>
+      </block>
+      <block order="10">
+        <choice correct="yes">
+          <cline>    emails = soup.find_all("a", target="_blank")</cline>
+        </choice>
+        <choice>
+          <cline>    emails = soup.find_all("link", target="_blank") </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <cline>    for name in names:</cline>
+      </block>
+      <block order="5">
+        <cline>        profile_name = name.text.strip().replace('\n \n ', '')</cline>
+        <cline>        names_list.append(profile_name)</cline>
+      </block>
+      <block order="6">
+        <cline>    for email in emails:</cline>
+      </block>
+      <block order="4">
+        <cline>        profile_email = email.get("href")</cline>
+        <cline>        profile_email = profile_email.replace('mailto:', '')</cline>
+        <cline>        emails_list.append(profile_email)</cline>
+      </block>
+      <block order="14">
+        <cline>    for i in range(len(names_list)):</cline>
+        <cline>        name_email_dict[names_list[i]] = emails_list[i]</cline>
+      </block>
+      <block order="3">
+        <cline>    return name_email_dict</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="bsoup_writecode10q_v2_mu" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>program_email</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the program names under Email Addresses
+            and Admissions (BSI program, MSI program, etc.) and their associated email addresses, and returns a dictionary with the program names as keys and the email addresses as values.
+            For example, <c>program_email('https://www.si.umich.edu/about-umsi/contact-us')</c> should return something like <c>{'BSI program': 'umsi.undergrad@umich.edu', 'MSI program': 'umsi.admissions@umich.edu', 'MHI program': 'hi.admissions@umich.edu', 'MADS program': 'umsi.mads@umich.edu', 'Doctoral program': 'umsi.phd.admissions@umich.edu'}</c>.</p>
+    </statement>
+    <blocks>
+      <block order="8">
+        <cline>import requests</cline>
+        <cline>from bs4 import BeautifulSoup</cline>
+      </block>
+      <block order="12">
+        <cline>def program_email(url):</cline>
+        <cline>    program_email_dict = {}</cline>
+      </block>
+      <block order="2">
+        <cline>    r = requests.get(url)</cline>
+      </block>
+      <block order="6">
+        <cline>    soup = BeautifulSoup(r.text, 'html.parser')</cline>
+      </block>
+      <block order="1">
+        <cline>    programs_section = soup.find("ul", dir="ltr")</cline>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>    programs = programs_section.find_all("li")</cline>
+        </choice>
+        <choice>
+          <cline>    programs = programs_section.find("li") </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>    for program in programs:</cline>
+      </block>
+      <block order="13">
+        <cline>        split_name_email = program.text.split(":")</cline>
+      </block>
+      <block order="7">
+        <cline>        program_name = split_name_email[0]</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>        program_email = split_name_email[1].replace("\xa0", "")</cline>
+        </choice>
+        <choice>
+          <cline>        program_email = split_name_email[0].replace("\xa0", "") </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>        program_email_dict[program_name] = program_email</cline>
+      </block>
+      <block order="14">
+        <cline>    return program_email_dict</cline>
+      </block>
+    </blocks>
+  </exercise>
+</section>

@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<section xml:id="files_letting-the-user-choose-the-file-name">
+  <title>Letting the user choose the file name</title>
+    <idx><h>File</h><h>Name</h></idx>
+    <idx><h>Name</h><h>File</h></idx>
+  <p>We really do not want to have to edit our Python code every time we want
+            to process a different file. It would be more usable to ask the user to
+            enter the file name string each time the program runs so they can use
+            our program on different files without changing the Python code.</p>
+  <p>This is quite simple to do by reading the file name from the user using
+            <c>input</c> as follows:</p>
+  <program language="fileInput">
+    <input>
+fname = input('Enter the file name: ')
+fhand = open(fname)
+count = 0
+for line in fhand:
+    if line.startswith('Subject:'):
+        count = count + 1
+fhand.close()
+print('There were', count, 'subject lines in', fname)
+</input>
+  </program>
+  <p>We read the file name from the user and place it in a variable named
+            <c>fname</c> and open that file. Now we can run the program
+            repeatedly on different files.</p>
+  <pre> python search6.py # seach6.py is the file containing the above script.
+ Enter the file name: mbox.txt
+ There were 1797 subject lines in mbox.txt
+
+ python search6.py
+  Enter the file name: mbox-short.txt
+There were 27 subject lines in mbox-short.txt</pre>
+  <exercise label="file-user-pp-input-v2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Put the following code in order to open and count the lines of a file from the user.
+            Watch out for indentation and extra code blocks!</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <cline>count = 0</cline>
+        <cline>fname = input('Enter the file name: ')</cline>
+      </block>
+      <block order="4">
+        <cline>fhand = open(fname)</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>for line in fhand:</cline>
+        </choice>
+        <choice>
+          <cline>for line in fname: </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>    count = count + 1</cline>
+      </block>
+      <block order="3">
+        <cline>fhand.close()</cline>
+        <cline>print('There were', count, 'lines in', fname)</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <p>Before peeking at the next section, take a look at the above program and
+            ask yourself, <q>What could go possibly wrong here?</q> or <q>What might our
+            friendly user do that would cause our nice little program to
+            ungracefully exit with a traceback, making us look not-so-cool in the
+            eyes of our users?</q></p>
+  <exercise>
+    <statement/>
+    <program interactive="" language=""/>
+    <solution>
+      <program xml:id="fileOpenInputa" language="python">
+        <input>
+count = 0 # Start counting from zero
+fname = input('Enter the file name: ') # Close parentheses
+fhand = open(fname) # Open the correct file name
+
+for line in fhand:
+    if line.startswith('Received:'):
+    # Check at the beginning of the line, not the end
+        count = count + 1 # Correct indentation.
+fhand.close()
+print('There were', count, 'lines starting with "Received:" in the file', fname)
+        </input>
+      </program>
+    </solution>
+  </exercise>
+</section>

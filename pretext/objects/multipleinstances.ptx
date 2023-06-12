@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<section xml:id="objects_multiple-instances">
+  <title>Multiple instances</title>
+  <p>So far, we have defined a class, constructed a single object, used
+            that object, and then thrown the object away. However, the real power
+            in object-oriented programming happens when we construct multiple instances
+            of our class.</p>
+  <p>When we construct multiple objects from our class, we might want to set
+            up different initial values for each of the objects. We can
+            pass data to the constructors to give each object a different initial
+            value:</p>
+  <program xml:id="partyanimal_multipleinstances" interactive="codelens" language="python">
+    <input>
+class PartyAnimal:
+
+    def __init__(self, nam):
+        self.name = nam
+        print(self.name,'constructed')
+
+    def party(self, x) :
+        self.x = x
+        self.x = self.x + 1
+        print(self.name,'party count',self.x)
+
+s = PartyAnimal('Sally')
+j = PartyAnimal('Jim')
+
+s.party(0)
+j.party(0)
+s.party(1)
+    </input>
+  </program>
+  <p>The constructor has both a <c>self</c> parameter that points to the object instance
+            and additional parameters that are passed into the constructor as the
+            object is constructed:</p>
+  <pre>s = PartyAnimal('Sally')</pre>
+  <p>Within the constructor, the second line copies the parameter (<c>nam</c>) that is
+            passed into the <c>name</c> attribute within the object instance.</p>
+  <pre>self.name = nam</pre>
+  <p>The output of the program shows that each of the objects (<c>s</c> and <c>j</c>) contain their own
+            independent copies of <c>x</c> and <c>nam</c>:</p>
+  <pre>Sally constructed
+Sally party count 1
+Jim constructed
+Jim party count 1
+Sally party count 2</pre>
+  <exercise label="multipleinstances">
+    <statement>
+      <p>Q-2: When using multiple instances, we can set different initial values for the instances by using a
+<BlankNode/>. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Cc]onstructor">
+          <feedback>
+            <p>Yes, constructors can be used to initialize objects with initial values.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+</section>

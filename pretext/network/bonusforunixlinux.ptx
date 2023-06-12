@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<section xml:id="network_bonus-section-for-unix-linux-users">
+  <title>Bonus section for Unix / Linux users</title>
+  <p>If you have a Linux, Unix, or Macintosh computer, you probably have
+            commands built in to your operating system that retrieves both plain
+            text and binary files using the HTTP or File Transfer (FTP) protocols.
+            One of these commands is <c>curl</c>:</p>
+  <program language="{.bash}">
+    <input>
+$ curl -O http://www.py4e.com/cover.jpg
+</input>
+  </program>
+  <p>The command <c>curl</c> is short for <q>copy URL</q> and so the two
+            examples listed earlier to retrieve binary files with <c>urllib</c>
+            are cleverly named <c>curl1.py</c> and <c>curl2.py</c> on
+            <url href="http://www.py4e.com/code3" visual="http://www.py4e.com/code3">www.py4e.com/code3</url> as
+            they implement similar functionality to the <c>curl</c> command.
+            There is also a <c>curl3.py</c> sample program that does this task
+            a little more effectively, in case you actually want to use this pattern
+            in a program you are writing.</p>
+  <p>A second command that functions very similarly is <c>wget</c>:</p>
+  <program language="{.bash}">
+    <input>
+$ wget http://www.py4e.com/cover.jpg
+</input>
+  </program>
+  <p>Both of these commands make retrieving webpages and remote files a
+            simple task.</p>
+  <exercise label="network_bonus_fitb">
+    <statement>
+      <p>Q-1: The <BlankNode/> command is short for <q>copy URL</q> and <BlankNode/> command is short for <q>World Wide Web get.</q>
+Both commands are used on Linux computers to retrieve plain text and binary files. <var/>  <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="curl">
+          <feedback>
+            <p>Correct. curl is short for copy URL.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try combining the words it is short for and using all lowercase.</p>
+          </feedback>
+        </condition>
+      </var>
+      <var>
+        <condition string="wget">
+          <feedback>
+            <p>Correct. wget is short for web get.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try combining the words it is short for and using all lowercase.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+</section>

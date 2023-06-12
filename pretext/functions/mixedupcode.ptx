@@ -1,0 +1,556 @@
+<?xml version="1.0"?>
+<section xml:id="functions_mixed-up-code-questions">
+  <title>Mixed-up Code Questions</title>
+  
+  <exercise label="functEx1muc_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>len_str</c> that uses a built-in function to return the number of characters in the passed string <c>str</c>. Then print the result of a call to <c>len_str</c> passing in the string <c>I love Python!</c>.  It should return 14.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <choice correct="yes">
+          <cline>def len_str(str):</cline>
+        </choice>
+        <choice>
+          <cline>def len_str(str) </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    return len(str)</cline>
+        </choice>
+        <choice>
+          <cline>    Return len(str) </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>print(len_str("I love Python!"))</cline>
+        </choice>
+        <choice>
+          <cline>print(len_str(I love Python!)) </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="functEx2muc" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>bmi</c> that takes <c>height</c> (in inches) and <c>weight</c> (in pounds) as parameters. It should calculate the &#x2018;'bmi'' by squaring the height then dividing the weight by the height squared and then converting to metric by multiplying by 703.
+            Watch your indentation!</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>def bmi(height, weight):</cline>
+      </block>
+      <block order="1">
+        <cline>    heightSquared = height * height</cline>
+      </block>
+      <block order="2">
+        <cline>    BMI = weight / heightSquared</cline>
+      </block>
+      <block order="5">
+        <cline>    BMImetric = BMI * 703</cline>
+      </block>
+      <block order="4">
+        <cline>    return BMImetric</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="functEx3muc" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Write two functions. The first is <c>square(x)</c>, which returns <c>x</c> squared. The second function is <c>sum_of_squares(x,y,z)</c>, which returns the sum of the squares of three numbers <c>z</c>, <c>y</c>, and <c>z</c>.  For example, <c>square(2)</c> should return <c>4</c> and <c>sum_of_squares(2, 4, 6)</c> should return 56.
+            For example, <c>square(2)</c> should return <c>4</c> and <c>sum_of_squares(2, 4, 6)</c> should return 56.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <cline>def square(x):</cline>
+      </block>
+      <block order="2">
+        <cline>    y = x * x</cline>
+      </block>
+      <block order="1">
+        <cline>    return y</cline>
+      </block>
+      <block order="4">
+        <cline>def sum_of_squares(x, y, z):</cline>
+      </block>
+      <block order="6">
+        <cline>    a = square(x)</cline>
+        <cline>    b = square(y)</cline>
+        <cline>    c = square(z)</cline>
+      </block>
+      <block order="3">
+        <cline>    return a + b + c</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="functEx4muc_v5" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>average(num1, num2)</c>, which finds the average of two numbers <c>num1</c> and <c>num2</c>.  For example, <c>average(10,4)</c> should return <c>7.0</c>.
+            Note: there are two extra code blocks, and watch your indentation!</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <choice correct="yes">
+          <cline>def average(num1, num2):</cline>
+        </choice>
+        <choice>
+          <cline>def average(num1, num2) </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <cline>    sum = num1 + num2</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    sum = sum / 2</cline>
+        </choice>
+        <choice>
+          <cline>    sum = sum // 2 </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>    return sum</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="functEx5muc_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>swapValues(val1, val2)</c>, which takes two values and swaps them.
+            It then returns val1. For example, <c>swapValues(8,2)</c> should return <c>2</c>.  Note: there is an extra code block, and
+            watch your indentation!</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <cline>def swapValues(val1, val2):</cline>
+      </block>
+      <block order="5" correct="no">
+        <cline>    val1 = val2 </cline>
+        <cline>    val2 = val1</cline>
+      </block>
+      <block order="4">
+        <cline>    temp = val2</cline>
+      </block>
+      <block order="1">
+        <cline>    val2 = val1</cline>
+      </block>
+      <block order="2">
+        <cline>    val1 = temp</cline>
+      </block>
+      <block order="3">
+        <cline>    return val1</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="functEx6muc" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>get_avg_drop_lowest(num_list)</c> which returns the average of a list of numbers, ignoring the lowest value. However, if the list only contains one value, then return that. For example, <c>get_avg_drop_lowest([90])</c> returns <c>90</c>, <c>get_avg_drop_lowest([90, 10])</c> also returns <c>90</c>, and <c>get_avg_drop_lowest([90, 10, 0])</c> returns <c>50</c>.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <choice correct="yes">
+          <cline>def get_avg_drop_lowest(num_list):</cline>
+        </choice>
+        <choice>
+          <cline>def get_avg_drop_lowest(num_list) </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    total = sum(num_list)</cline>
+        <cline>    lowest = min(num_list)</cline>
+        <cline>    num = len(num_list)</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    if num == 1:</cline>
+        </choice>
+        <choice>
+          <cline>    if num = 1: </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>        return total</cline>
+      </block>
+      <block order="3">
+        <cline>    else:</cline>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>        return (total - lowest) / (num - 1)</cline>
+        </choice>
+        <choice>
+          <cline>        return (total - lowest) / (num + 1) </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="functEx7muc_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>compare(p1, p2)</c> which returns whichever is greater of its two parameters. Note:
+            there are two unused code blocks.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <choice correct="yes">
+          <cline>def compare(p1, p2):</cline>
+        </choice>
+        <choice>
+          <cline>Def compare(p1, p2): </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    if p1 &gt; p2:</cline>
+        </choice>
+        <choice>
+          <cline>    if p1 == p2: </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>        return p1</cline>
+      </block>
+      <block order="3">
+        <cline>    else:</cline>
+      </block>
+      <block order="7">
+        <cline>        return p2</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="functEx8muc" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>You are driving a little too fast, and a police officer stops you. Create a function
+            called <c>caught_speeding(speed, is_birthday)</c> which returns the type of ticket the police officer will give you.
+            If <c>speed</c> is 60 or less, the result is <c>"no ticket"</c>. If speed is between 61 and 80 inclusive,
+            the result is <c>"minor ticket"</c>. If speed is 81 or more, the result is <c>"major ticket"</c>. All this
+            is true, unless it is your birthday &#x2013; on that day, your speed can be 5 higher in all cases.
+            Note: there are two extra code blocks and lots of indentation to watch out for!</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <cline>def caught_speeding(speed, is_birthday):</cline>
+      </block>
+      <block order="5">
+        <cline>    if is_birthday:</cline>
+      </block>
+      <block order="15">
+        <cline>        if speed &lt;= 65:</cline>
+      </block>
+      <block order="3" correct="no">
+        <cline>        if speed &lt; 65: </cline>
+      </block>
+      <block order="8">
+        <cline>            return "no ticket"</cline>
+      </block>
+      <block order="12">
+        <cline>        elif speed &lt;= 85:</cline>
+      </block>
+      <block order="11">
+        <cline>            return "minor ticket"</cline>
+      </block>
+      <block order="1" correct="no">
+        <cline>            return minor ticket </cline>
+      </block>
+      <block order="9">
+        <cline>        else:</cline>
+      </block>
+      <block order="10">
+        <cline>            return "major ticket"</cline>
+      </block>
+      <block order="7">
+        <cline>    else:</cline>
+      </block>
+      <block order="16">
+        <cline>        if speed &lt;= 60:</cline>
+      </block>
+      <block order="4">
+        <cline>            return "no ticket"</cline>
+      </block>
+      <block order="2">
+        <cline>        elif speed &lt;= 80:</cline>
+      </block>
+      <block order="17">
+        <cline>            return "minor ticket"</cline>
+      </block>
+      <block order="13">
+        <cline>        else:</cline>
+      </block>
+      <block order="14">
+        <cline>            return "major ticket"</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="functEx9muc" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a <c>check_guess(guess, target)</c> function which computes if a <c>guess</c> is too low, too high, or correct compared to the <c>target</c>.
+            Return <c>'too low'</c> if <c>guess</c> is less than <c>target</c>, <c>'correct'</c> if they are equal, and
+            <c>'too high'</c> if <c>guess</c> is greater than <c>target</c>.  For example, <c>check_guess(5, 7)</c> returns
+            <c>'too low'</c>, <c>check_guess(7, 7)</c> returns <c>'correct'</c>, and <c>check_guess(9, 7)</c> returns <c>'too high'</c>.
+            Note: there are three extra code blocks, and watch your indentation!</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <choice correct="yes">
+          <cline>def check_guess(guess, target):</cline>
+        </choice>
+        <choice>
+          <cline>def check_guess(guess), (target): </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <cline>    if guess &lt; target:</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>        return 'too low'</cline>
+        </choice>
+        <choice>
+          <cline>        return "too low' </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <cline>    elif guess == target:</cline>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>        return 'correct'</cline>
+        </choice>
+        <choice>
+          <cline>        return correct </cline>
+        </choice>
+      </block>
+      <block order="10">
+        <cline>    else:</cline>
+      </block>
+      <block order="6">
+        <cline>        return 'too high'</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="functEx10muc" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Put the code blocks below to define the function <c>alarm_clock</c>. It will be given a day of the week encoded as 0 = Sun, 1 = Mon, 2 = Tue, &#x2026;6 = Sat, and a
+            boolean indicating if we are on vacation, and will return a string indicating when the alarm
+            clock should ring. If we are on vacation and it is a weekend (0 = Saturday or 6 =
+            Sunday), it should return <c>"off"</c>, and otherwise return <c>"10:00"</c>. If we are not
+            on vacation and it is a weekend, it should return <c>"10:00"</c>, and otherwise return
+            <c>"7:00"</c>. Note: there are two extra code blocks, and watch your indentation!</p>
+    </statement>
+    <blocks>
+      <block order="13">
+        <choice correct="yes">
+          <cline>def alarm_clock(day, vacation):</cline>
+        </choice>
+        <choice>
+          <cline>def alarm_clock(day, vacation) </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>    if vacation:</cline>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>        if day == 0 or day == 6:</cline>
+        </choice>
+        <choice>
+          <cline>        if (day == 0) || (day == 6): </cline>
+        </choice>
+      </block>
+      <block order="8">
+        <cline>            return 'off'</cline>
+      </block>
+      <block order="3">
+        <cline>        else:</cline>
+      </block>
+      <block order="10">
+        <cline>            return '10:00'</cline>
+      </block>
+      <block order="12">
+        <cline>    else:</cline>
+      </block>
+      <block order="2">
+        <cline>        if day == 0 or day == 6:</cline>
+      </block>
+      <block order="1">
+        <cline>            return '10:00'</cline>
+      </block>
+      <block order="6">
+        <cline>        else:</cline>
+      </block>
+      <block order="11">
+        <cline>            return '7:00'</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="functEx11muc" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>First create a function called <c>square_it</c> which
+            squares the parameter <c>n</c> and returns the result. Then, create a function called <c>cube_it</c> which cubes
+            the parameter <c>n</c> and returns the result. Note : there are three extra code blocks, and watch your indentation!</p>
+    </statement>
+    <blocks>
+      <block order="7">
+        <cline>def square_it(n):</cline>
+      </block>
+      <block order="3">
+        <cline>    return n * n</cline>
+      </block>
+      <block order="1" correct="no">
+        <cline>    return n * 2 </cline>
+      </block>
+      <block order="2">
+        <cline>def cube_it(n):</cline>
+      </block>
+      <block order="6" correct="no">
+        <cline>def cube_it(n) </cline>
+      </block>
+      <block order="4">
+        <cline>    return n * n * n</cline>
+      </block>
+      <block order="5" correct="no">
+        <cline>    return n * n * 3 </cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="functEx12muc_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>distance</c> which returns the distance between two coordinates using
+            the distance formula: d = &#x221A;((x_2 - x_1)&#xB2; + (y_2 - y_1)&#xB2;).  Use two functions in Python's math module (<c>math.pow</c>, <c>math.sqrt</c>).
+            The function <c>math.pow(a,b)</c> returns <c>a</c> raised to the <c>b</c> power.  The function <c>math.sqrt(a)</c> returns the square root of <c>a</c>.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>import math</cline>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>def distance(x1, y1, x2, y2):</cline>
+        </choice>
+        <choice>
+          <cline>def distance(x1, y1, x2, y2) </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>    dx = x2 - x1</cline>
+        <cline>    dy = y2 - y1</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    dsquared = math.pow(dx, 2) + math.pow(dy, 2)</cline>
+        </choice>
+        <choice>
+          <cline>    dsquared = math.pow(2, dx) + math.pow(2, dy) </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    result = math.sqrt(dsquared)</cline>
+        </choice>
+        <choice>
+          <cline>    result = math.square_root(dsquared) </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    return result</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <!--
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=functEx1muc_v2_sq data-questionlist='functEx1muc_v2, functEx1muc_v2_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: functEx1muc_v2, functEx1muc_v2_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=functEx2muc_sq data-questionlist='functEx2muc, functEx2muc_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: functEx2muc, functEx2muc_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=functEx3muc_sq data-questionlist='functEx3muc, functEx3muc_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: functEx3muc, functEx3muc_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=functEx4muc_v5_sq data-questionlist='functEx4muc_v5, functEx4muc_v5_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: functEx4muc_v5, functEx4muc_v5_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=functEx5muc_v2_sq data-questionlist='functEx5muc_v2, functEx5muc_v2_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: functEx5muc_v2, functEx5muc_v2_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=functEx6muc_sq data-questionlist='functEx6muc, functEx6muc_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: functEx6muc, functEx6muc_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=functEx7muc_v2_sq data-questionlist='functEx7muc_v2, functEx7muc_v2_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: functEx7muc_v2, functEx7muc_v2_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=functEx8muc_sq data-questionlist='functEx8muc, functEx8muc_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: functEx8muc, functEx8muc_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=functEx9muc_sq data-questionlist='functEx9muc, functEx9muc_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: functEx9muc, functEx9muc_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=functEx10muc_sq data-questionlist='functEx10muc, functEx10muc_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: functEx10muc, functEx10muc_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=functEx11muc_sq data-questionlist='functEx11muc, functEx11muc_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: functEx11muc, functEx11muc_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=functEx12muc_v2_sq data-questionlist='functEx12muc_v2, functEx12muc_v2_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: functEx12muc_v2, functEx12muc_v2_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  -->
+</section>

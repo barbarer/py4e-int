@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<section xml:id="tuples_multiple-assignment-with-dictionaries">
+  <title>Multiple Assignment with Dictionaries</title>
+<idx>Dictionary Traversal</idx>
+  <p>By combining <c>items</c>, tuple assignment, and <c>for</c>,
+            you can make a nice code pattern for traversing the keys and values of a
+            dictionary in a single loop:</p>
+  <program language="python">
+    <input>
+for key, val in list(d.items()):
+    print(val, key)
+</input>
+  </program>
+  <p>This loop has two iteration variables because
+            <c>items</c> returns a list of tuples and <c>key, val</c> is
+            a tuple assignment that successively iterates through each of the
+            key-value pairs in the dictionary.</p>
+  <p>For each iteration through the loop, both <c>key</c> and
+            <c>value</c> are advanced to the next key-value pair in the
+            dictionary (still in hash order).</p>
+  <p>The output of this loop is:</p>
+  <pre>10 a
+22 c
+1 b</pre>
+  <p>Again, it is in hash key order (i.e., no particular order).</p>
+  <exercise label="question10_5_1">
+    <statement>
+      <p>11-9-1: How will the contents of list <q>lst</q> be ordered after the following code is run?</p>
+      <program language="python">
+        <input>
+d = {'a': 10, 'b': 15, 'c': 17, 'd': 4}
+lst = []
+for key, val in d.items():
+    lst.append( (val, key) )
+print(lst)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>[(4, 'd'), (10, 'a'), (15, 'b'), (17, 'c')]</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Remember, key-value pairs aren't in any particular order. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[('a', 10), ('b', 15), ('c', 17), ('d', 4)]</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Remember, key-value pairs aren't in any particular order. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>There will be no particular order</p>
+        </statement>
+        <feedback>
+          <p>Correct! When running this type of iteration, we are left with a hash key order, meaning there is no particular order.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>If we combine these two techniques, we can print out the contents of a
+            dictionary sorted by the <em>value</em> stored in each key-value pair.</p>
+  <p>To do this, we first make a list of tuples where each tuple is
+            <c>(value, key)</c>. The <c>items</c> method would give us a
+            list of <c>(key, value)</c> tuples, but this time we want to sort
+            by value, not key. Once we have constructed the list with the value-key
+            tuples, it is a simple matter to sort the list in reverse order and
+            print out the new, sorted list.</p>
+  <program xml:id="multipleassignments_exercise_1" interactive="activecode" language="python">
+    <input>
+d = {'a':10, 'b':1, 'c':22}
+lst = list()
+for key, val in d.items():
+    lst.append( (val, key) )
+print(lst) #should print [(10, 'a'), (1, 'b'), (22, 'c')]
+lst.sort(reverse=True)
+print(lst) #should print [(22, 'c'), (10, 'a'), (1, 'b')]
+        </input>
+  </program>
+  <p>By carefully constructing the list of tuples so that the value is the
+            first element of each tuple and the key is the second element, we can sort
+            our dictionary contents by value.</p>
+  <exercise label="question10_5_2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Construct a block of code to iterate through the items in dictionary d and print out its key-value pairs.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <choice correct="yes">
+          <cline>d = {'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10}</cline>
+          <cline>list_for_kv_pairs = []</cline>
+        </choice>
+        <choice>
+          <cline>d = {'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10}</cline>
+          <cline>list_for_kv_pairs = list </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>for (key, val) in d.items():</cline>
+        </choice>
+        <choice>
+          <cline>for key, val in d.items: </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>     list_for_kv_pairs.append( (key, val) )</cline>
+      </block>
+      <block order="6">
+        <cline>print(list_for_kv_pairs)</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="question10_5_3">
+    <statement>
+      <p>Write code to create a list called &#x2018;lst' and add the key-value pairs of dictionary d to list lst as tuples. Sort list lst by the values in descending order.</p>
+    </statement>
+    <program xml:id="question10_5_3_editor" interactive="activecode" language="python">
+      <input>
+d = {'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10}
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(lst, [('rat', 10), ('rabbit', 9), ('dragon', 6), ('monkey', 5), ('snake', 3), ('rooster', 2)], "Making sure the list was sorted correctly.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

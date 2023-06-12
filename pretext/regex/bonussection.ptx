@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<section xml:id="regex_bonus-section-for-unix-linux-users">
+  <title>Bonus section for Unix / Linux users</title>
+<idx>Grep</idx>
+  <p>Support for searching files using regular expressions was built into the
+            Unix operating system since the 1960s and it is available in nearly all
+            programming languages in one form or another.</p>
+  <p>As a matter of fact, there is a command-line program built into Unix
+            called <em>grep</em> (Generalized Regular Expression Parser)
+            that does pretty much the same as the <c>search()</c> examples in
+            this chapter. So if you have a Macintosh or Linux system, you can try
+            the following commands in your command-line window.</p>
+  <program language="{.bash}">
+    <input>
+$ grep '^From:' mbox-short.txt
+From: stephen.marquard@uct.ac.za
+From: louis@media.berkeley.edu
+From: zqian@umich.edu
+From: rjlowe@iupui.edu
+</input>
+  </program>
+  <p>This tells <c>grep</c> to show you lines that start with the
+            string <q>From:</q> in the file <em>mbox-short.txt</em>. If you
+            experiment with the <c>grep</c> command a bit and read the
+            documentation for <c>grep</c>, you will find some subtle
+            differences between the regular expression support in Python and the
+            regular expression support in <c>grep</c>. As an example,
+            <c>grep</c> does not support the non-blank character
+            <c>\S</c> so you will need to use the slightly more complex set
+            notation <c>[^ ]</c>, which simply means match a character that is anything
+            other than a space.</p>
+  <exercise label="question11_7_1">
+    <statement>
+      <p>11-9-1: Which option(s) properly uses the grep command-line to search for prices? Select all that apply.</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>$ grep '\$[0-9.]+' mbox-short.txt</p>
+        </statement>
+        <feedback>
+          <p>Correct! This is the correct way to use grep to find prices in a file.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>$ grep '\$[0-9]+'</p>
+        </statement>
+        <feedback>
+          <p>Make sure to include the file!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>$ grep '\$[/d.]+' mbox-short.txt</p>
+        </statement>
+        <feedback>
+          <p>Correct! This uses the /d regex character to find prices in mbox-short.txt.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>$ grep '$[0-9.]+' mbox-short.txt</p>
+        </statement>
+        <feedback>
+          <p>You're missing a character.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

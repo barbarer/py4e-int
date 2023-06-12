@@ -1,0 +1,442 @@
+<?xml version="1.0"?>
+<section xml:id="objects_group-work-working-with-multiple-classes">
+  <title>Group Work - Working with Multiple Classes</title>
+  <introduction>
+  <p>It is best to use a POGIL approach with the following. In POGIL students work
+            in groups on activities and each member has an assigned role.  For more information see <url href="https://cspogil.org/Home" visual="https://cspogil.org/Home">https://cspogil.org/Home</url>.</p>
+  <note>
+    <p>If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.</p>
+  </note>
+  <p>
+    <term>Learning Objectives</term>
+  </p>
+  <p>Students will know and be able to do the following.</p>
+  <p>
+    <em>Content Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Define a parent and child class.</p>
+      </li>
+      <li>
+        <p>Predict the output from code with inheritance.</p>
+      </li>
+      <li>
+        <p>Describe how a child can override an inherited method.</p>
+      </li>
+      <li>
+        <p>Call the parent constructor</p>
+      </li>
+    </ul>
+  </p>
+</introduction>
+  <subsection xml:id="groupwork_objects_inheritance">
+    <title>Inheritance</title>
+    <p>One class can inherit attributes and behavior from another class. The class that is inherited from
+                is called the <term>parent</term> or <term>base class</term>.  The one that is inheriting is called the <term>child</term> or <term>derived class</term>.</p>
+    <exercise label="mult_class_emp_second_output">
+      <statement>
+        <p>Q-1: What is the last thing that the following code will print? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="MA">
+            <feedback>
+              <p>It prints the initials of the object p2.</p>
+            </feedback>
+          </condition>
+          <condition string="BE">
+            <feedback>
+              <p>Not quite. These are the initials of the object p.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>What does the initials method return?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="mult_class_person_and_employee">
+      <statement>
+        <p>Run the following code</p>
+      </statement>
+      <program xml:id="mult_class_person_and_employee_editor" interactive="activecode" language="python">
+        <input>
+class Person:
+    def __init__(self, first, last):
+        self.first = first
+        self.last = last
+
+    def __str__(self):
+        return("name: " + self.first + " " + self.last)
+
+    def initials(self):
+        return (self.first[0] + self.last[0])
+
+class Employee(Person):
+    def __init__(self, first, last, id):
+        super().__init__(first, last)
+        self.id = id
+
+def main():
+    p = Person("Barbara", "Ericson")
+    print(p)
+    print(p.initials())
+    p2 = Employee("Malik", "Abra", 7)
+    print(p2)
+    print(p2.initials())
+
+main()
+        </input>
+      </program>
+    </exercise>
+    <p>Look at the classes defined above. Then answer the following questions.</p>
+    <exercise label="mult_class_emp_num_attrs">
+      <statement>
+        <p>Q-3: How many attributes does an employee object have? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="3|three|Three">
+            <feedback>
+              <p>Good job!  It inherits two from Person and has an id</p>
+            </feedback>
+          </condition>
+          <condition string="1|one|One">
+            <feedback>
+              <p>Not quite.  It has an id, but inherits some as well</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>The attributes are initialized in the __init__ method</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="mult_class_emp_initials">
+      <statement>
+        <p>Q-4: Which class defines the initials method? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="Person">
+            <feedback>
+              <p>Yes, it is defined in the Person class and the Employee class inherits it.</p>
+            </feedback>
+          </condition>
+          <condition string="Employee">
+            <feedback>
+              <p>Not quite.  Where is the method defined?</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Which class is it inside of?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="mult_class_emp_child">
+      <statement>
+        <p>Q-5: Which class is the child class? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="Employee">
+            <feedback>
+              <p>Yes, Employee is the child class.</p>
+            </feedback>
+          </condition>
+          <condition string="Person">
+            <feedback>
+              <p>No, this is the parent class.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Which class inherits from another class?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="mult_class_first_class_dnd">
+      <statement>
+        <p>Drag the code to the description of what it does</p>
+      </statement>
+      <feedback>
+        <p>Read the chapter on strings and try again</p>
+      </feedback>
+      <matches>
+        <match order="1">
+          <premise>super().__init__(first, last)</premise>
+          <response>Passes the first and last name to the parent class's __init__ method</response>
+        </match>
+        <match order="2">
+          <premise>class Employee(Person):</premise>
+          <response>Defines a new class that inherits from the Person class</response>
+        </match>
+        <match order="3">
+          <premise>def __init__(self, first, last):</premise>
+          <response>Defines an initializer (constructor) method</response>
+        </match>
+        <match order="4">
+          <premise>def __str__(self):</premise>
+          <response>Defines a method that is called when you print an object of this class</response>
+        </match>
+      </matches>
+    </exercise>
+    <exercise label="mult_class_car_sports_car_pp_v3" numbered="yes" adaptive="yes" indentation="show" language="python">
+      <statement>
+        <p>Drag the blocks from the left and put them in the correct order on the right to define two classes: <c>Car</c> and <c>SportsCar</c> that inherits from <c>Car</c>. Add an <c>__init__</c> method to the <c>Car</c> class that takes a <c>make</c> and sets the current object's <c>make</c>.  Add a <c>__str__</c> method to the <c>Car</c> class and return a string with the <c>make</c>.  Add an <c>__init__</c> method to the <c>SportsCar</c> class that calls the parent class <c>__init__</c> method.</p>
+      </statement>
+      <blocks>
+        <block order="1">
+          <cline>class Car:</cline>
+        </block>
+        <block order="11">
+          <cline>    def __init__(self, make):</cline>
+        </block>
+        <block order="10">
+          <cline>        self.make = make</cline>
+        </block>
+        <block order="3">
+          <choice correct="yes">
+            <cline>    def __str__(self):</cline>
+          </choice>
+          <choice>
+            <cline>    def __str__(): </cline>
+          </choice>
+        </block>
+        <block order="2">
+          <cline>        return "Car with make: " + self.make</cline>
+        </block>
+        <block order="4">
+          <choice correct="yes">
+            <cline>class SportsCar(Car):</cline>
+          </choice>
+          <choice>
+            <cline>class SportsCar extends Car: </cline>
+          </choice>
+        </block>
+        <block order="5">
+          <cline>    def __init__(self, make):</cline>
+        </block>
+        <block order="7">
+          <choice correct="yes">
+            <cline>        super().__init__(make)</cline>
+          </choice>
+          <choice>
+            <cline>        super().__init__(self, make) </cline>
+          </choice>
+        </block>
+      </blocks>
+    </exercise>
+    <p>Look at the code below and answer the following questions.</p>
+    <exercise label="mult_class_greeter_first_line">
+      <statement>
+        <p>Q-8: What is the first thing that the following code will print? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="Good\s+Morning">
+            <feedback>
+              <p>It prints the default value of the message in Greeter.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>What does message get set to by default in __init__?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="mult_class_greeter_last_line">
+      <statement>
+        <p>Q-9: What is the last thing that the following code will print? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="Go\s+Away">
+            <feedback>
+              <p>It prints the value of the message after the Grump is initialized.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>What does the message get set to in the Grump __init__ method?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="mult_class_greeter_grumpr">
+      <statement>
+        <p>Run the following code</p>
+      </statement>
+      <program xml:id="mult_class_greeter_grumpr_editor" interactive="activecode" language="python">
+        <input>
+class Greeter:
+
+    def __init__(self, message = "Good Morning"):
+        self.message = message
+
+    def greet(self):
+        print(self.message)
+
+class Grump(Greeter):
+
+    def __init__(self):
+        super().__init__("Go Away")
+
+def main():
+    g1 = Greeter()
+    g1.greet()
+    print(g1)
+    g2 = Grump()
+    g2.greet()
+    print(g2)
+
+main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="mult_class_no_str_method">
+      <statement>
+        <p>Q-11: What happens when a class doesn't have a __str__ method and you print an object?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>You get an error</p>
+          </statement>
+          <feedback>
+            <p>It won't cause an error</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>It prints None</p>
+          </statement>
+          <feedback>
+            <p>It doesn't print None</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>It prints the type of the object (the class name)</p>
+          </statement>
+          <feedback>
+            <p>It prints the type of the object (the class name)</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>It prints the variable name</p>
+          </statement>
+          <feedback>
+            <p>It does not print the variable name</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <p>Modify the code above to add a __str__ method to the Greeter class that returns the self.message and run the code again.</p>
+  </subsection>
+  <subsection xml:id="objects_overriding-an-inherited-method">
+    <title>Overriding an Inherited Method</title>
+    <p>The child class can override an inherited method.  This means it provides the same method name and parameter list as an inherited method.</p>
+    <exercise label="mult_class_student_first_fitb">
+      <statement>
+        <p>Q-12: What is the first thing that will be printed when the code runs below? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="Pizza">
+            <feedback>
+              <p>It prints returned string from favorite_food on a Student object.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>What does Student's favorite_food return?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="mult_class_student_last_fitb">
+      <statement>
+        <p>Q-13: What is the last thing that will be printed when the code runs below? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="Sushi">
+            <feedback>
+              <p>It prints returned string from favorite_food on a GradStudent object.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>What does GradStudent's favorite_food return?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="mult_class_override_inherited">
+      <statement>
+        <p>Run the following code</p>
+      </statement>
+      <program xml:id="mult_class_override_inherited_editor" interactive="activecode" language="python">
+        <input>
+class Student:
+
+    def __init__(self, name):
+        self.name = name
+
+    def favorite_food(self):
+        return "Pizza"
+
+class GradStudent(Student):
+
+    def __init__(self, name):
+        super().__init__(name)
+
+    def favorite_food(self):
+        return "Sushi"
+
+def main():
+    s1 = Student("Tiara")
+    s2 = GradStudent("Carl")
+    print(s1.favorite_food())
+    print(s2.favorite_food())
+
+main()
+        </input>
+      </program>
+    </exercise>
+    <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
+    <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+    &lt;div data-component="groupsub" id=mult_classes_groupsub data-size_limit=3&gt;
+        &lt;div class="col-sm-6"&gt;
+            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div id="groupsub_button" class="col-sm-6"&gt;
+        &lt;/div&gt;
+        &lt;p&gt;The Submit Group button will submit the answer for each each question
+        on this page for each member of your group. It also logs you as the official
+        group submitter.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  </subsection>
+</section>

@@ -1,0 +1,605 @@
+<?xml version="1.0"?>
+<exercises xml:id="conditional_multiple-choice-questions">
+  <title>Multiple Choice Questions</title>
+  <exercise label="cndtnl-ex-mc-bool">
+    <statement>
+      <p>Q-1: Which of the following is <term>not</term> a boolean expression?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>Try again. True and False are both Boolean literals.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3 == 4</p>
+        </statement>
+        <feedback>
+          <p>Try again. The comparison between two numbers via == results in either True or False (in this case False),  both Boolean values.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>3 + 4</p>
+        </statement>
+        <feedback>
+          <p>3 + 4 evaluates to 7, which is a number, not a Boolean value.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3 + 4 == 7</p>
+        </statement>
+        <feedback>
+          <p>Try again. 3 + 4 evaluates to 7.  7 == 7 then evaluates to True, which is a Boolean value.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="cndtnl-ex-mc-operators">
+    <statement>
+      <p>Q-2: Which of the following properly expresses the precedence of operators (using parentheses) in the following expression: 5*3 &gt; 10 and 4+6==11</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>((5*3) &gt; 10) and ((4+6) == 11)</p>
+        </statement>
+        <feedback>
+          <p>Yes, * and + have higher precedence, followed by &gt; and ==, and then the keyword "and"</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>(5*(3 &gt; 10)) and (4 + (6 == 11))</p>
+        </statement>
+        <feedback>
+          <p>Arithmetic operators (*, +) have higher precedence than comparison operators (&gt;, ==)</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>((((5*3) &gt; 10) and 4)+6) == 11</p>
+        </statement>
+        <feedback>
+          <p>This grouping assumes Python simply evaluates from left to right, which is incorrect.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>((5*3) &gt; (10 and (4+6))) == 11</p>
+        </statement>
+        <feedback>
+          <p>This grouping assumes that "and" has a higher precedence than ==, which is not true.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="cndtnl-ex-mc-output">
+    <statement>
+      <p>Q-3: What does the following code print?</p>
+      <program language="python">
+        <input>
+if 4 + 5 == 10:
+    print("TRUE")
+else:
+    print("FALSE")
+print("TRUE")
+</input>
+      </program>
+      <pre>a. TRUE
+
+b.
+  TRUE
+  FALSE
+
+c.
+  FALSE
+  TRUE
+d.
+  TRUE
+  FALSE
+  TRUE</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Output a</p>
+        </statement>
+        <feedback>
+          <p>Although TRUE is printed after the if-else statement completes, both blocks within the if-else statement print something too.  In this case, Python would have had to have skipped both blocks in the if-else statement, which it never would do.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Output b</p>
+        </statement>
+        <feedback>
+          <p>Because there is a TRUE printed after the if-else statement ends, Python will always print TRUE as the last statement.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Output c</p>
+        </statement>
+        <feedback>
+          <p>Python will print FALSE from within the else-block (because 5+4 does not equal 10), and then print TRUE after the if-else statement completes.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Output d</p>
+        </statement>
+        <feedback>
+          <p>To print these three lines, Python would have to execute both blocks in the if-else statement, which it can never do.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="cndtnl-ex-mc-negative">
+    <statement>
+      <p>Q-4: What does the following code print?</p>
+      <program language="python">
+        <input>
+x = -10
+if x &lt; 0:
+    print("The negative number ",  x, " is not valid here.")
+print("This is always printed")
+</input>
+      </program>
+      <pre>a.
+This is always printed
+
+b.
+The negative number -10 is not valid here
+This is always printed
+
+c.
+The negative number -10 is not valid here</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Output a</p>
+        </statement>
+        <feedback>
+          <p>Because -10 is less than 0, Python will execute the body of the if-statement here.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Output b</p>
+        </statement>
+        <feedback>
+          <p>Python executes the body of the if-block as well as the statement that follows the if-block.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Output c</p>
+        </statement>
+        <feedback>
+          <p>Python will also execute the statement that follows the if-block (because it is not enclosed in an else-block, but rather just a normal statement).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>It will cause an error because every if statement must have an else statement.</p>
+        </statement>
+        <feedback>
+          <p>It is valid to have an if-block without a corresponding else-block (though you cannot have an else-block without a corresponding if-block).</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="cndtnl-ex-mc-chainedNested">
+    <statement>
+      <p>Q-5: Which of I, II, and III below gives the same result as the following nested if?</p>
+      <program language="python">
+        <input>
+# nested if-else statement
+x = -10
+if x &lt; 0:
+    print("The negative number ",  x, " is not valid here.")
+else:
+    if x &gt; 0:
+        print(x, " is a positive number")
+    else:
+        print(x, " is 0")
+</input>
+      </program>
+      <program language="python">
+        <input>
+I.
+
+if x &lt; 0:
+    print("The negative number ",  x, " is not valid here.")
+else x &gt; 0:
+    print(x, " is a positive number")
+else:
+    print(x, " is 0")
+</input>
+      </program>
+      <program language="python">
+        <input>
+II.
+
+if x &lt; 0:
+    print("The negative number ",  x, " is not valid here.")
+elif x &gt; 0:
+   print(x, " is a positive number")
+else:
+    print(x, " is 0")
+</input>
+      </program>
+      <program language="python">
+        <input>
+III.
+
+if x &lt; 0:
+    print("The negative number ",  x, " is not valid here.")
+if x &gt; 0:
+    print(x, " is a positive number")
+else:
+    print(x, " is 0")
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>I only</p>
+        </statement>
+        <feedback>
+          <p>You can not use a Boolean expression after an else.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>II only</p>
+        </statement>
+        <feedback>
+          <p>Yes, II will give the same result.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>III only</p>
+        </statement>
+        <feedback>
+          <p>No, III will not give the same result.  The first if statement will be true, but the second will be false, so the else part will execute.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>II and III</p>
+        </statement>
+        <feedback>
+          <p>No, Although II is correct III will not give the same result.  Try it.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I, II, and III</p>
+        </statement>
+        <feedback>
+          <p>No, in I you can not have a Boolean expression after an else.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="cndtnl-ex-mc-ifs">
+    <statement>
+      <p>Q-6: Which of the following is true about the code below?</p>
+      <pre>x = 3
+if (x &gt; 2):
+    x = x * 2;
+if (x &gt; 4):
+    x = 0;
+print(x)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>x will always equal 0 after this code executes for any value of x</p>
+        </statement>
+        <feedback>
+          <p>If x was set to 1 originally, then it would still equal 1.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>if x is greater than 2, the value in x will be doubled after this code executes</p>
+        </statement>
+        <feedback>
+          <p>What happens in the original when x is greater than 2?</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>if x is greater than 2, x will equal 0 after this code executes</p>
+        </statement>
+        <feedback>
+          <p>If x is greater than 2, it will be set to 0.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="cndtnl-ex-mc-weight">
+    <statement>
+      <p>Q-7: What is the total for 12 items that weigh 3 pounds?</p>
+      <pre>weight = 0.5
+numItems = 5
+if weight &lt; 1:
+    price = 1.45
+if weight &gt;= 1:
+    price = 1.15
+total = weight * price
+if numItems &gt;= 10:
+    total = total * 0.9
+print(weight)
+print(price)
+print(total)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>$3.45</p>
+        </statement>
+        <feedback>
+          <p>This would be the answer without the 10% discount for buying 10 or more items</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>$3.11</p>
+        </statement>
+        <feedback>
+          <p>Python doesn't automatically round up</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>$3.105</p>
+        </statement>
+        <feedback>
+          <p>This is the actual result.  But, can you pay $3.105?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>$3.10</p>
+        </statement>
+        <feedback>
+          <p>Python doesn't automatically change $3.105 to $3.10.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="cndtnl-ex-mc-tf">
+    <statement>
+      <p>Q-8: Which of the following will evaluate to true?</p>
+      <blockquote>
+        <line_block>
+          <line>I. True AND False</line>
+          <line>II. False or True</line>
+          <line>III. False AND (True or False)</line>
+        </line_block>
+      </blockquote>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>I</p>
+        </statement>
+        <feedback>
+          <p>Incorrect. This evaluates to False - a statement cannot be True AND False.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>II</p>
+        </statement>
+        <feedback>
+          <p>The statement can be either True or False which evaluates to True.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I and II</p>
+        </statement>
+        <feedback>
+          <p>Incorrect. I evaluates to False.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>II and III</p>
+        </statement>
+        <feedback>
+          <p>Incorrect. III evaluates to False because a statement cannot be False AND True.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="cndtnl-ex-mc-equal_v2">
+    <statement>
+      <p>Q-9: Given two variables, <c>num1</c> and <c>num2</c>, which of the following would mean that both <c>num1</c> and <c>num2</c> are
+            positive integers?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>(num1 == num2)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect. The two variables can be equal to each other and still be negative integers.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>(num1 == num2) or (num1 &gt; 0)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect. This is true if the two numbers are equal or num1 is greater than 0.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>(num1 == num2) and (num1 &lt; 0)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect. The two variables would both be negative in this case.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>(num1 == num2) and (num1 &gt; 0)</p>
+        </statement>
+        <feedback>
+          <p>If num1 is equal to num2 and num1 is greater than 0, then both values must be positive.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="cndtnl-ex-mc-true">
+    <statement>
+      <p>Q-10: <c>True</c> is what type of variable?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>float</p>
+        </statement>
+        <feedback>
+          <p>Try again! True is not a float.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>string</p>
+        </statement>
+        <feedback>
+          <p>Try again! True is not a string.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>boolean</p>
+        </statement>
+        <feedback>
+          <p>True is a boolean value.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>integer</p>
+        </statement>
+        <feedback>
+          <p>Try again! True is not an integer.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="cndtnl-ex-mc-not-equal-test">
+    <statement>
+      <p>Q-11: What is the output from the following code?</p>
+      <pre>a = 3
+b = (a != 3)
+print(b)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>This would be true if a was not equal to 3, but it is.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>A is equal to three so this statement is false.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>0</p>
+        </statement>
+        <feedback>
+          <p>Some languages use 0 for false, but Python will print False.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>This does not set b to the value of a.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Syntax error</p>
+        </statement>
+        <feedback>
+          <p>This code is legal.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="cndtnl-ex-mc-which-for-or">
+    <statement>
+      <p>Q-12: Which of the following evaluates to True when <c>a</c> is equal to <c>b</c> or when <c>a</c> is equal to <c>5</c>?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>a == b == 5</p>
+        </statement>
+        <feedback>
+          <p>You can not join conditionals in this way.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>a = b or a = 5</p>
+        </statement>
+        <feedback>
+          <p>You must use == to test for equality.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>a == b or a == 5</p>
+        </statement>
+        <feedback>
+          <p>This will be true if a is equal to b or a is equal to 5.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>a = b and a = 5</p>
+        </statement>
+        <feedback>
+          <p>You must use == to test for equality.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>a == b and a = 5</p>
+        </statement>
+        <feedback>
+          <p>This will only be true when a and b both equal 5.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</exercises>

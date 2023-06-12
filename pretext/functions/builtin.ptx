@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<section xml:id="functions_built-in-functions">
+  <title>Built-in functions</title>
+
+    <idx><h>Built-in</h><h>Function</h></idx>
+    <idx><h>Function</h><h>Built-in</h></idx>
+
+  <p>Python provides a number of important built-in functions that we can use
+            without needing to provide the function definition. The creators of
+            Python wrote a set of functions to solve common problems and included
+            them in Python for us to use.</p>
+  <p>The <c>max</c> and <c>min</c> functions give us the largest
+            and smallest values in a list, respectively:</p>
+  <program xml:id="functBuiltin_MaxMin" interactive="activecode" language="python">
+    <input>
+maximum = max(1, 0, -2, 4, 3)
+print(maximum)
+minimum = min(1, 0, -2, 4, 3)
+print(minimum)
+        </input>
+  </program>
+  <p>The <c>max</c> function gives us the value 4 because it is the largest value
+            in the list. The <c>min</c> function, inversely, give us the value -2 because
+            it is the smallest value in the list.</p>
+  <exercise label="functBuiltin_MC_min">
+    <statement>
+      <p>Q-2: What will be printed as the output of this code?</p>
+      <program language="python">
+        <input>
+maximum = max(5, 'fish', True)
+print(maximum)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>5</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! You cannot use the max function to compare different data types. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>fish</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! You cannot use the max function to compare different data types. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! You cannot use the max function to compare different data types. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>There is an error</p>
+        </statement>
+        <feedback>
+          <p>Correct! This code causes a TypeError because the max function cannot be used to compare different data types.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>Another very common built-in function is the <c>len</c> function,
+            which tells us how many items are in its argument. If the argument to
+            <c>len</c> is a string, it returns the number of characters in the string.</p>
+  <program xml:id="functBuiltin_len" interactive="activecode" language="python">
+    <input>
+length_x = len('Hello world')
+print(length_x)
+        </input>
+  </program>
+  <p>These functions can operate on any set of values, as we will see in
+            later chapters.</p>
+  <p>You should treat the names of built-in functions as reserved words
+            (i.e., avoid using <q>max</q> as a variable name).</p>
+  <program xml:id="functBuiltin_codelens_line2" interactive="codelens" language="python">
+    <input>
+city_name = "Detroit"
+num = 10
+if len(city_name) &gt; num:
+  print("Long city name")
+else:
+  print("Short city name")
+    </input>
+  </program>
+  <exercise label="functBuiltin_MC_len">
+    <statement>
+      <p>Q-5: Consider the code block below. What prints?</p>
+      <program language="python">
+        <input>
+sentence_a = "Hello, world!"
+length_sentence_a = len(sentence_a)
+print(length_sentence_a)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>10</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Spaces and punctuation characters count in the length. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>11</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Punctuation characters count in the length. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>12</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Spaces count in the length. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>13</p>
+        </statement>
+        <feedback>
+          <p>Correct! 13 is the length of all characters in the string, including spaces and punctuation.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="functBuiltin_MC_name">
+    <statement>
+      <p>Q-6: Which of the following would work as a variable name?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>max</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This is a reserved keyword because it is a built-in function in Python. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>min</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This is a reserved keyword because it is a built-in function in Python. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>built_in</p>
+        </statement>
+        <feedback>
+          <p>Correct! built_in is a valid variable name because it is not a built-in Python function.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>len</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This is a reserved keyword because it is a built-in function in Python. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

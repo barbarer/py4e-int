@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<section xml:id="pictures_changing-step-6-changing-where-we-put-the-colors">
+  <title>Changing Step 6: Changing where we put the colors</title>
+  <p>We have been getting a list of all of the pixels from an image using <c>img.getPixels()</c> and then looping through all the pixels using <c>for p in pixels:</c>.  This processed all the pixels in the first row, then all the pixels in the second row, and so on until it processed all the pixels in the image.</p>
+  <figure align="center" xml:id="fig_change_color_id1">
+    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: The order that pixels are processed if you use <literal>img.getPixels()</literal></caption>
+    <image source="pictures/Figures/rowOrder.png" width="50%"/>
+  </figure>
+  <p>We can also loop through all the x and y values in the image and then use the current (x,y) location to get the pixel from the image.  This approach uses two <c>for</c> loops with one inside of the other.  This is called a <term>nested loop</term>. See step 3 below for the nested loop.  Also, notice that we now need to get the pixel at the (x,y) location in step 4 as well.</p>
+  <p>Since the outer loop changes the  x (the column) and the inner loop changes the y (the row), we will be processing all the pixels in the first column, then all the pixels in the second column, and so on until we process all the pixels in the image.  The order doesn't matter if we are just setting the red to zero at every pixel as shown below.</p>
+  <figure align="center" xml:id="fig_change_color_id2">
+    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: The order that pixels are processed if you use a nested loop with x changing in the outer loop and y changing in the inner loop.</caption>
+    <image source="pictures/Figures/colOrder.png" width="50%"/>
+  </figure>
+  <program xml:id="Nested_Loop_Clear_Red" interactive="activecode" language="python">
+    <input>
+# STEP 1: USE THE IMAGE LIBRARY
+from image import *
+
+# STEP 2: PICK THE IMAGE
+img = Image("vangogh.jpg")
+
+# STEP 3: LOOP THROUGH THE PIXELS
+for x in range(img.getWidth()):
+    for y in range(img.getHeight()):
+
+        # STEP 4: GET THE DATA
+        p = img.getPixel(x, y)
+
+        # STEP 5: MODIFY THE COLOR
+        p.setRed(0)
+
+        # STEP 6: MODIFY THE IMAGE
+        img.updatePixel(p)
+
+# STEP 7: SHOW THE RESULT
+win = ImageWin(img.getWidth(),img.getHeight())
+img.draw(win)
+        </input>
+  </program>
+  <p>We don't always have to modify the pixel color.  Sometimes we can just change the color at a different (x,y) location than the current pixel. This time we will skip step 5 (changing the color) and change step 6 to get the pixel at (x,y) and copy the color from that pixel to the pixel at location (y,x).  So this will copy the color from (0,2) to (2,0).  Later it will also copy the color from (2,0) to (0,2), since this loops through all the pixels in the image, but that will just copy back the original color.</p>
+  <program xml:id="Image_Location_Change" interactive="activecode" language="python">
+    <input>
+# STEP 1: USE THE IMAGE LIBRARY
+from image import *
+
+# STEP 2: PICK THE IMAGE
+img = Image("vangogh.jpg")
+
+# STEP 3: LOOP THROUGH THE PIXELS
+last = min(img.getWidth(), img.getHeight())
+for x in range(last):
+    for y in range(last):
+
+        # STEP 4: GET THE DATA
+        p = img.getPixel(x, y)
+
+        # STEP 6: MODIFY THE IMAGE
+        img.setPixel(y, x, p)
+
+# STEP 7: SHOW THE RESULT
+win = ImageWin(img.getWidth(),img.getHeight())
+img.draw(win)
+        </input>
+  </program>
+  <p>Try the program above on some of the other images as well by changing the file name on line 5. Does it always have the same effect?</p>
+  <exercise label="image_5_1_Image_YX_Q1">
+    <statement>
+      <p>Q-3: What happened when we copied the pixel color from (x,y) to (y,x)?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>We rotated the image 90 degrees to the left and flipped it over.</p>
+        </statement>
+        <feedback>
+          <p>This would be true if we created a new image and set the values in the new image from the old pixel values.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>We mirrored the image around a diagonal line from the top left to the bottom right.</p>
+        </statement>
+        <feedback>
+          <p>This is true since we copy the pixel colors from the current image to the new location.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>We flipped the image horizontally.</p>
+        </statement>
+        <feedback>
+          <p>The pixels would be copied to the same row.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>No change.</p>
+        </statement>
+        <feedback>
+          <p>Compare this image to the original vangogh.jpg image.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>This one does a little math with the x and y.</p>
+  <program xml:id="image_5_2_Image_Flip_Both" interactive="activecode" language="python">
+    <input>
+# STEP 1: USE THE IMAGE LIBRARY
+from image import *
+
+# STEP 2: PICK THE IMAGE
+img = Image("vangogh.jpg")
+
+# STEP 3: SELECT THE DATA
+for x in range(img.getWidth()):
+    for y in range(img.getHeight()):
+
+        # STEP 4: GET THE DATA
+        p = img.getPixel(x, y)
+
+        # STEP 6: CHANGE THE IMAGE
+        img.setPixel(img.getWidth() - 1 - x,
+                     img.getHeight() - 1 - y,
+                     p)
+
+# STEP 7: SHOW THE RESULT
+win = ImageWin(img.getWidth(),img.getHeight())
+img.draw(win)
+        </input>
+  </program>
+  <p>Try the program above on some of the other images as well by changing the file name on line 5.   Which picture looks the best after you run the program?</p>
+</section>

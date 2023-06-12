@@ -1,0 +1,487 @@
+<?xml version="1.0"?>
+<exercises xml:id="variables_multiple-choice-questions">
+  <title>Multiple Choice Questions</title>
+  <exercise label="var-ex-mc-division">
+    <statement>
+      <p>csp-10-2-1: What is the value of <c>15 / 12</c>?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>Try again, this is the answer for 15 // 12.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>1.25</p>
+        </statement>
+        <feedback>
+          <p>15 / 12 will result in 1.25.  The / operator returns a floating point result.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1.5</p>
+        </statement>
+        <feedback>
+          <p>Try running this in your python interpreter.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Try again, this is the answer for 15 % 12.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="var-ex-mc-floored">
+    <statement>
+      <p>csp-10-2-2: What is the value of <c>15 // 12</c>?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>The // operator returns an integer result (the floor).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1.25</p>
+        </statement>
+        <feedback>
+          <p>Try again, this is the answer for 15 / 12.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1.5</p>
+        </statement>
+        <feedback>
+          <p>Try running this in your python interpreter.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Try again, this is the answer for 15 % 12.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="var-ex-mc-mod">
+    <statement>
+      <p>csp-10-2-3: What is the value of <c>15 % 12</c>?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>Try again, this is the answer for 15 // 12.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1.25</p>
+        </statement>
+        <feedback>
+          <p>Try again, this is the answer for 15 / 12.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1.5</p>
+        </statement>
+        <feedback>
+          <p>Try running this in your python interpreter.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>The % (modulo) operator returns the remainder and 12 goes into 15 one time with a remainder of 3.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="var-ex-mc-type">
+    <statement>
+      <p>csp-10-2-4: What is the data type of <c>'this is what kind of data'</c>?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Character</p>
+        </statement>
+        <feedback>
+          <p>It is not a single character.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Integer</p>
+        </statement>
+        <feedback>
+          <p>The data is not numeric.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Float</p>
+        </statement>
+        <feedback>
+          <p>The value is not numeric with a decimal point.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>String</p>
+        </statement>
+        <feedback>
+          <p>Strings can be enclosed in single quotes.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="var-ex-mc-assign">
+    <statement>
+      <p>csp-10-2-5: What is printed when the following statements execute?</p>
+      <program language="python">
+        <input>
+day = "Thursday"
+day = 32.5
+day = 19
+print(day)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Nothing is printed. A runtime error occurs.</p>
+        </statement>
+        <feedback>
+          <p>It is legal to change the type of data that a variable holds in Python.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Thursday</p>
+        </statement>
+        <feedback>
+          <p>This is the first value assigned to the variable day, but the value is changed.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>32.5</p>
+        </statement>
+        <feedback>
+          <p>This is the second value assigned to the variable day, but the value is changed.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>19</p>
+        </statement>
+        <feedback>
+          <p>The current value of the variable day will be printed.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="var-ex-mc-input">
+    <statement>
+      <p>csp-10-2-6: What is printed when the following statements execute?</p>
+      <program language="python">
+        <input>
+n = input("Please enter your age: ")
+# user types in 18
+print ( type(n) )
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>&lt;class 'str'&gt;</p>
+        </statement>
+        <feedback>
+          <p>All input from users is read in as a string.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>&lt;class 'int'&gt;</p>
+        </statement>
+        <feedback>
+          <p>Even though the user typed in an integer, it does not come into the program as an integer.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>&lt;class 18&gt;</p>
+        </statement>
+        <feedback>
+          <p>18 is the value of what the user typed, not the type of the data.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>18</p>
+        </statement>
+        <feedback>
+          <p>18 is the value of what the user typed, not the type of the data.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="var-ex-mc-order">
+    <statement>
+      <p>csp-10-2-7: What is the value of the following expression:</p>
+      <program language="python">
+        <input>
+16 - 2 * 5 // 3 + 1
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>14</p>
+        </statement>
+        <feedback>
+          <p>Using parentheses, the expression is evaluated as (2*5) first, then (10 // 3), then (16-3), and then (13+1).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>24</p>
+        </statement>
+        <feedback>
+          <p>Remember that * has precedence over -.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Remember that // has precedence over -.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>13.667</p>
+        </statement>
+        <feedback>
+          <p>Remember that // does integer division.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="var-ex-mc-reassign">
+    <statement>
+      <p>csp-10-2-8: After the following statements, what are the values of x and y?</p>
+      <program language="python">
+        <input>
+x = 15
+y = x
+x = 22
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>x is 15 and y is 15</p>
+        </statement>
+        <feedback>
+          <p>Look at the last assignment statement which gives x a different value.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>x is 22 and y is 22</p>
+        </statement>
+        <feedback>
+          <p>No, x and y are two separate variables.  Just because x changes in the last assignment statement, it does not change the value that was copied into y in the second statement.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>x is 15 and y is 22</p>
+        </statement>
+        <feedback>
+          <p>Look at the last assignment statement, which reassigns x, and not y.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>x is 22 and y is 15</p>
+        </statement>
+        <feedback>
+          <p>Yes, x has the value 22 and y the value 15.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="var-ex-mc-print">
+    <statement>
+      <p>csp-10-2-9: Given the following code segment, what will be printed?</p>
+      <pre>street = "125 Main Street"
+print("The address is " + "street")</pre>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>The address is street</p>
+        </statement>
+        <feedback>
+          <p>Since street is in double quotes it will print the string street rather than the value of the variable street.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The address is 125 Main Street</p>
+        </statement>
+        <feedback>
+          <p>This would be true if it was print("The address is " + street)</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>It won't execute</p>
+        </statement>
+        <feedback>
+          <p>While this isn't printing what we probably want it to, it will print something.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="var-ex-dnd-types">
+    <statement>
+      <p>Assume that width = 17 and height = 12.0. For each of the following expressions, match them up with the value of
+the expression and the type (of the value of the expression).</p>
+    </statement>
+    <feedback>
+      <p>Try running these commands in your terminal window.</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>(width//2)</premise>
+        <response>8, integer</response>
+      </match>
+      <match order="2">
+        <premise>(width/2.0)</premise>
+        <response>8.5, float</response>
+      </match>
+      <match order="3">
+        <premise>(height/3)</premise>
+        <response>4.0, float</response>
+      </match>
+      <match order="4">
+        <premise>(1 + 2 * 5)</premise>
+        <response>11, integer</response>
+      </match>
+    </matches>
+  </exercise>
+  <exercise label="var-string-var-print-in-quotes">
+    <statement>
+      <p>csp-10-2-11: Given the following code segment, what will be printed?</p>
+      <pre>friends = 4
+name = "Derrik"
+print("name" + " has " + str(friends) + " friends")</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Derrick has 4 friends</p>
+        </statement>
+        <feedback>
+          <p>Since name is in quotes it will print those characters rather than the value of name.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>name has 4 friends</p>
+        </statement>
+        <feedback>
+          <p>Since name is in quotes it will print those characters rather than the value of name, but it will print the value of friends after it converts it to a string.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>name has friends friends</p>
+        </statement>
+        <feedback>
+          <p>This would be true if both name and friends were in quotes.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>There will be an error</p>
+        </statement>
+        <feedback>
+          <p>This would be true if the friends can not been converted to a string</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="var-string-print-no-convert-int">
+    <statement>
+      <p>csp-10-2-12: Given the following code segment, what will be printed?</p>
+      <pre>pets = 2
+name = "Mariah"
+print(name + " has " + pets + " pets")</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Mariah has 2 pets</p>
+        </statement>
+        <feedback>
+          <p>This would be true if there wasn't an error</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>name has 2 pets</p>
+        </statement>
+        <feedback>
+          <p>This would be true if name was in quotes</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Mariah has pets pets</p>
+        </statement>
+        <feedback>
+          <p>This would be true if pets was in quotes</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>There will be an error</p>
+        </statement>
+        <feedback>
+          <p>You can't concatenate an integer with a string.  You need to convert it to a string first.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</exercises>

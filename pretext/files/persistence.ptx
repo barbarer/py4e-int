@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<section xml:id="files_persistence">
+  <title>Persistence</title>
+  <idx>Secondary Memory</idx>
+  <idx>Primary Memory</idx>
+  <idx><h>Memory</h><h>Primary</h></idx>
+  <idx><h>Memory</h><h>Secondary</h></idx>
+  
+  <p>So far, we have learned how to write programs and communicate our
+            intentions to the <em>Central Processing Unit</em> using
+            conditional execution, functions, and iterations. We have learned how to
+            create and use data structures in the <em>Main Memory</em>. The
+            CPU and memory are where our software works and runs. It is where all of
+            the <q>thinking</q> happens.</p>
+  <exercise label="file-persistence-mc-software">
+    <statement>
+      <p>Q-1: Where does the software work/run on a device? Select all that apply.</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>Central Processing Unit</p>
+        </statement>
+        <feedback>
+          <p>The CPU runs the software in conjunction will memory sources.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Input Devices</p>
+        </statement>
+        <feedback>
+          <p>Input devices supplement the software and other hardware.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Memory</p>
+        </statement>
+        <feedback>
+          <p>Memory sources run the software in conjunction will the CPU.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Network</p>
+        </statement>
+        <feedback>
+          <p>The network does not run software.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>But if you recall from our hardware architecture discussions, once the
+            power is turned off, anything stored in either the CPU or main memory is
+            erased. So up to now, our programs have just been transient fun
+            exercises to learn Python.</p>
+  <figure align="">
+    <image source="images/arch.svg" width="50%" alt="Secondary Memory"/>
+  </figure>
+  <p>In this chapter, we start to work with <em>Secondary Memory</em>
+            (or files). Secondary memory is not erased when the power is turned
+            off. Or in the case of a USB flash drive, the data we write from our
+            programs can be removed from the system and transported to another
+            system.</p>
+  <p>We will primarily focus on reading and writing text files such as those
+            we create in a text editor. Later we will see how to work with database
+            files which are binary files, specifically designed to be read and
+            written through database software.</p>
+  <exercise label="file-persistence-mc-work">
+    <statement>
+      <p>Q-2: Which piece of hardware are we working with in this chapter?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Main Memory</p>
+        </statement>
+        <feedback>
+          <p>What type of hardware are files?</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Secondary Memory</p>
+        </statement>
+        <feedback>
+          <p>This chapter focuses on files which is a part of secondary memory.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Central Processing Unit</p>
+        </statement>
+        <feedback>
+          <p>What type of hardware are files?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Primary Memory</p>
+        </statement>
+        <feedback>
+          <p>What type of hardware are files?</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

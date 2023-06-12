@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<section xml:id="files_searching-through-a-file">
+  <title>Searching through a file</title>
+    <idx><h>Filter</h><h>Pattern</h></idx>
+    <idx><h>Pattern</h><h>Filter</h></idx>
+    <idx><h>Search</h><h>File</h></idx>
+    <idx><h>File</h><h>Search</h></idx>
+
+  <p>When you are searching through data in a file, it is a very common
+            pattern to read through a file, ignoring most of the lines and only
+            processing lines which meet a particular condition. We can combine the
+            pattern for reading a file with string methods to build simple search
+            mechanisms.</p>
+  <p>For example, if we wanted to read a file and only print out lines which
+            started with the prefix <q>From:</q>, we could use the string method
+            <em>startswith</em> to select only those lines with the desired
+            prefix:</p>
+  <program xml:id="fileFrom" interactive="activecode" language="python">
+    <input>
+fhand = open('mbox-short.txt')
+for line in fhand:
+    if line.startswith('From:'):
+        print(line)
+fhand.close()
+        </input>
+  </program>
+  <p>The output looks great since the only lines we are seeing are those
+            which start with <q>From:</q>, but why are we seeing the extra blank lines?
+            This is due to that invisible <em>newline</em> character. Each
+            of the lines ends with a newline, so the <c>print</c> statement
+            prints the string in the variable <em>line</em> which includes a
+            newline and then <c>print</c> adds <em>another</em> newline, resulting in
+            the double spacing effect we see.</p>
+  <p>We could use line slicing to print all but the last character, but a
+            simpler approach is to use the <em>rstrip</em> method which
+            strips whitespace from the right side of a string as follows:</p>
+  <program xml:id="filerstrip" interactive="activecode" language="python">
+    <input>
+fhand = open('mbox-short.txt')
+for line in fhand:
+    line = line.rstrip()
+    if line.startswith('From:'):
+        print(line)
+fhand.close()
+        </input>
+  </program>
+  <exercise label="file-search-mc-rstrip">
+    <statement>
+      <p>Q-3: True or False? The <c>rstrip</c> method removes all whitespace from a string.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>rstrip only removes whitespace from the right side of a string, strip removes whitespace from the left and right side of a string.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>As your file processing programs get more complicated, you may want to
+            structure your search loops using <c>continue</c>. The basic idea
+            of the search loop is that you are looking for <q>interesting</q> lines and
+            effectively skipping <q>uninteresting</q> lines. And then when we find an
+            interesting line, we do something with that line.</p>
+  <p>We can structure the loop to follow the pattern of skipping
+            uninteresting lines as follows:</p>
+  <program xml:id="fileInteresting" interactive="activecode" language="python">
+    <input>
+fhand = open('mbox-short.txt')
+for line in fhand:
+    line = line.rstrip()
+    # Skip 'uninteresting lines'
+    if not line.startswith('From:'):
+        continue
+        # Process our 'interesting' line
+    print(line)
+fhand.close()
+        </input>
+  </program>
+  <p>The output of the program is the same. In English, the uninteresting
+            lines are those which do not start with <q>From:</q>, which we skip using
+            <c>continue</c>. For the <q>interesting</q> lines (i.e., those that
+            start with <q>From:</q>) we perform the processing on those lines.</p>
+  <p>We can use the <c>find</c> string method to simulate a text editor
+            search that finds lines where the search string is anywhere in the line.
+            Since <c>find</c> looks for an occurrence of a string within
+            another string and either returns the position of the string or -1 if
+            the string was not found, we can write the following loop to show lines
+            which contain the string <q>@uct.ac.za</q> (i.e., they come from the
+            University of Cape Town in South Africa):</p>
+  <program xml:id="fileFind" interactive="activecode" language="python">
+    <input>
+fhand = open('mbox-short.txt')
+for line in fhand:
+    line = line.rstrip()
+    if line.find('@uct.ac.za') == -1:
+        continue
+    print(line)
+fhand.close()
+        </input>
+  </program>
+  <exercise label="file-search-mc-find">
+    <statement>
+      <p>Q-6: When using the string method <c>find</c>, what does a return of <c>-1</c> mean?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>The value was at the end of the string.</p>
+        </statement>
+        <feedback>
+          <p>-1 is the last index for a slice, but find only returns positive numbers for the index of a value.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The value was the last element of a string.</p>
+        </statement>
+        <feedback>
+          <p>-1 is the last index for a slice, but find only returns positive numbers for the index of a value.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The value was the at the beginning of the string.</p>
+        </statement>
+        <feedback>
+          <p>-1 is the last index for a slice, but find only returns positive numbers for the index of a value.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>The value was not found in the string.</p>
+        </statement>
+        <feedback>
+          <p>If find returns -1, the value is not in the string.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

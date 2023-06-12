@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<section xml:id="variables_asking-the-user-for-input">
+  <title>Asking the user for input</title>
+<idx>Keyboard Input</idx>
+<idx>Python 2.0</idx>
+<idx>Prompt</idx>
+<idx>Newline</idx>
+<idx>ValueError</idx>
+  <p>Sometimes we would like to take the value for a variable from the user
+            via their keyboard. Python provides a built-in function called <c>input</c> that gets input from
+            the keyboard (in Python 2.0, this function was named <c>raw_input</c>). When this function is called,
+            the program stops and waits for the user to type something. When the user presses <c>Return</c> or
+            <c>Enter</c>, the program resumes and <c>input</c> returns what the user typed as a string.</p>
+  <program xml:id="var-ac-10-input" interactive="activecode" language="python">
+    <input>
+inp = input()
+print(inp)
+        </input>
+  </program>
+  <p>Before getting input from the user, it is a good idea to print a prompt
+            telling the user what to input. You can pass a string to <c>input</c> to
+            be displayed to the user before pausing for input:</p>
+  <program xml:id="var-ac-11-print-name" interactive="activecode" language="python">
+    <input>
+name = input('What is your name?')
+print(name)
+        </input>
+  </program>
+  <p>If you expect the user to type an integer, you can try to convert the
+            return value to <c>int</c> using the <c>int()</c> function:</p>
+  <program xml:id="var-ac-11-swallow" interactive="activecode" language="python">
+    <input>
+prompt = 'What...is the airspeed velocity of an unladen swallow?'
+speed = input(prompt)
+print(int(speed))
+print(int(speed) + 5)
+        </input>
+  </program>
+  <p>But if the user types something other than a string of digits, you get
+            an error:</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; prompt = 'What...is the airspeed velocity of an unladen swallow?\n'
+&gt;&gt;&gt; speed = input(prompt)
+What...is the airspeed velocity of an unladen swallow?
+What do you mean, an African or a European swallow?
+&gt;&gt;&gt; int(speed)
+ValueError: invalid literal for int() with base 10:
+</input>
+  </program>
+  <note>
+    <p>If you are typing Python code in interpreter you might want to add a new line using <q>\n</q> as shown above.</p>
+  </note>
+  <p>We will see how to handle this kind of error later.</p>
+  <exercise label="var-convert-str-fitb">
+    <statement>
+      <p>csp-10-2-4: What function is used to convert string values to integers? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="int(\(\))*">
+          <feedback>
+            <p>int() converts values to integers</p>
+          </feedback>
+        </condition>
+        <condition string="integer">
+          <feedback>
+            <p>Close, but not quite!</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="var-input-fitb-newline">
+    <statement>
+      <p>csp-10-2-5: What sequence is used to create a newline at the end of statements? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="\\n">
+          <feedback>
+            <p>n creates a newline.</p>
+          </feedback>
+        </condition>
+        <condition string="n">
+          <feedback>
+            <p>Close, but there is a symbol that goes with it.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="var-input-pp-prompt" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Construct a block of code that asks the user for a number and prints three times that number.
+            There is extra code to watch out for.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <cline>prompt = 'Please enter a number\n'</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>userNumber = input(prompt)</cline>
+        </choice>
+        <choice>
+          <cline>user number = input(prompt) </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>print(3 * int(userNumber))</cline>
+        </choice>
+        <choice>
+          <cline>print(3 * userNumber) </cline>
+        </choice>
+      </block>
+      <block order="4" correct="no">
+        <cline>print(userNumber) </cline>
+      </block>
+    </blocks>
+  </exercise>
+  <p>One limitation in Python is that you can't add (concatenate) a number and a string. You
+            must first convert the number to a string using the built-in <c>str</c> method.</p>
+  <program xml:id="var-ac-12-birth-year-with-str" interactive="activecode" language="python">
+    <input>
+from datetime import datetime
+today = datetime.today()
+age_str = input('What is your age?\n')
+age = int(age_str)
+birth_year = today.year - age
+print("You were born in " + str(birth_year) + " or " + str(birth_year - 1))
+        </input>
+  </program>
+</section>

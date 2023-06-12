@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<section xml:id="lists_list-slices">
+  <title>List slices</title>
+<idx><h>Operator</h><h>Slice</h></idx>
+<idx><h>Slice</h><h>Operator</h></idx>
+<idx><h>Index</h><h>Slice</h></idx>
+<idx><h>Slice</h><h>Index</h></idx>
+<idx><h>List</h><h>Slice</h></idx>
+<idx><h>Slice</h><h>List</h></idx>
+<idx><h>List</h><h>Copy</h></idx>
+<idx><h>Copy</h><h>List</h></idx>
+<idx><h>Slice</h><h>Copy</h></idx>
+<idx><h>Copy</h><h>Slice</h></idx>
+<idx><h>Index</h><h>Mutability</h></idx>
+<idx><h>Mutability</h><h>Index</h></idx>
+<idx><h>Slice</h><h>Update</h></idx>
+<idx><h>Update</h><h>Slice</h></idx>
+  <p>The slice operator also works on lists:</p>
+  <program xml:id="listSlice" interactive="activecode" language="python">
+    <input>
+t = ['a', 'b', 'c', 'd', 'e', 'f']
+print(t[1:3])
+
+print(t[:4])
+
+print(t[3:])
+        </input>
+  </program>
+  <p>If you omit the first index, the slice starts at the beginning. If you
+            omit the second, the slice goes to the end. So if you omit both, the
+            slice is a copy of the whole list.</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; t[:]
+['a', 'b', 'c', 'd', 'e', 'f']
+</input>
+  </program>
+  <exercise label="listSlice_MC_4">
+    <statement>
+      <p>Q-2: What is printed by the following statements?</p>
+      <pre>alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+print(alist[4:])</pre>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>[ [ ], 3.14, False]</p>
+        </statement>
+        <feedback>
+          <p>Yes, the slice starts at index 4 and goes up to and including the last item.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[ [ ], 3.14]</p>
+        </statement>
+        <feedback>
+          <p>By leaving out the upper bound on the slice, we go up to and including the last item.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[ [56, 57, "dog"], [ ], 3.14, False]</p>
+        </statement>
+        <feedback>
+          <p>Index values start at 0.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="listSlice_MC_empty">
+    <statement>
+      <p>Q-3: What is printed by the following statements?</p>
+      <pre>alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+print(alist[:])</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>[]</p>
+        </statement>
+        <feedback>
+          <p>An empty slice like this would not produce an empty list. Think about how the slice indexes.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[3]</p>
+        </statement>
+        <feedback>
+          <p>This would be correct if the slice was [:1]</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>[3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]</p>
+        </statement>
+        <feedback>
+          <p>Omitting both indexes in a slice will create a copy of the whole list.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>Since lists are mutable, it is often useful to make a copy before
+            performing operations that fold, spindle, or mutilate lists.</p>
+  <p>A slice operator on the left side of an assignment can update multiple
+            elements:</p>
+  <program xml:id="listSliceLeft" interactive="activecode" language="python">
+    <input>
+t = ['a', 'b', 'c', 'd', 'e', 'f']
+t[1:3] = ['x', 'y']
+print(t)
+        </input>
+  </program>
+  <exercise label="listSlice_MC_len">
+    <statement>
+      <p>Q-5: What is printed by the following statements?</p>
+      <pre>L = [0.34, '6', 'SI106', 'Python', -2]
+print(len(L[1:-1]))</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>2</p>
+        </statement>
+        <feedback>
+          <p>The list begins with the second item of L and includes everything up to but not including the last item.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Yes, there are 3 items in this slice.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>4</p>
+        </statement>
+        <feedback>
+          <p>The list begins with the second item of L and includes everything up to but not including the last item.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>5</p>
+        </statement>
+        <feedback>
+          <p>The list begins with the second item of L and includes everything up to but not including the last item.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

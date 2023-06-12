@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<section xml:id="lists_lists-and-strings">
+  <title>Lists and strings</title>
+<idx>List</idx>
+<idx>String</idx>
+<idx>Sequence</idx>
+<idx><h>List</h><h>Function</h></idx>
+<idx><h>Function</h><h>List</h></idx>
+<idx><h>Split</h><h>Function</h></idx>
+<idx><h>Function</h><h>Split</h></idx>
+<idx><h>Optional</h><h>Argument</h></idx>
+<idx><h>Argument</h><h>Optional</h></idx>
+<idx>Delimiter</idx>
+<idx><h>Join</h><h>Method</h></idx>
+<idx><h>Method</h><h>Join</h></idx>
+<idx>Concatenation</idx>
+<idx><h>Empty</h><h>String</h></idx>
+<idx><h>String</h><h>Empty</h></idx>
+  <p>A string is a sequence of characters and a list is a sequence of values,
+            but a list of characters is not the same as a string. To convert from a
+            string to a list of characters, you can use <c>list</c>:</p>
+  <program xml:id="listString" interactive="activecode" language="python">
+    <input>
+s = 'spam'
+t = list(s)
+print(t)
+        </input>
+  </program>
+  <p>Because <c>list</c> is the name of a built-in function, you should
+            avoid using it as a variable name. I also avoid the letter
+            <q>l</q> because it looks too much like the number <q>1</q>.
+            So that's why I use <q>t</q>.</p>
+  <p>The <c>list</c> function breaks a string into individual letters.
+            If you want to break a string into words, you can use the
+            <c>split</c> method:</p>
+  <program xml:id="listSplit" interactive="activecode" language="python">
+    <input>
+s = 'pining for the fjords'
+t = s.split()
+print(t)
+
+print(t[2])
+        </input>
+  </program>
+  <p>Once you have used <c>split</c> to break the string into a list of
+            words, you can use the index operator (square bracket) to look at a
+            particular word in the list.</p>
+  <p>You can call <c>split</c> with an optional argument called a
+            <em>delimiter</em> that specifies which characters to use as
+            word boundaries. The following example uses a hyphen as a delimiter:</p>
+  <program xml:id="listSplitDelimiter" interactive="activecode" language="python">
+    <input>
+s = 'spam-spam-spam'
+delimiter = '-'
+print(s.split(delimiter))
+        </input>
+  </program>
+  <exercise label="listString_MC_poe">
+    <statement>
+      <p>Q-4: What is printed by the following statements?</p>
+      <pre>myname = "Edgar Allan Poe"
+namelist = myname.split()
+init = ""
+for aname in namelist:
+    init = init + aname[0]
+print(init)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Poe</p>
+        </statement>
+        <feedback>
+          <p>Three characters but not the right ones.  namelist is the list of names.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>EdgarAllanPoe</p>
+        </statement>
+        <feedback>
+          <p>Too many characters in this case.  There should be a single letter from each name.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>EAP</p>
+        </statement>
+        <feedback>
+          <p>Yes, split creates a list of the three names.  The for loop iterates through the names and creates a string from the first characters.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>William Shakespeare</p>
+        </statement>
+        <feedback>
+          <p>That does not make any sense.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p><c>join</c> is the inverse of <c>split</c>. It takes a list
+            of strings and concatenates the elements. <c>join</c> is a string
+            method, so you have to invoke it on the delimiter and pass the list as a
+            parameter:</p>
+  <program xml:id="listJoin" interactive="activecode" language="python">
+    <input>
+t = ['pining', 'for', 'the', 'fjords']
+delimiter = ' '
+print(delimiter.join(t))
+        </input>
+  </program>
+  <p>In this case the delimiter is a space character, so <c>join</c>
+            puts a space between words. To concatenate strings without spaces, you
+            can use the empty string, <q/>, as a delimiter.</p>
+  <exercise label="listString_MC_join">
+    <statement>
+      <p>Q-6: What would print when the following code executes?</p>
+      <pre>mylist = ['Hannah', 'Grace', 'Olivia', 'Ruth']
+delimiter = ''
+print(delimiter.join(mylist))</pre>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>HannahGraceOliviaRuth</p>
+        </statement>
+        <feedback>
+          <p>Because the delimiter is an empty string (not a space) the list would join without spaces.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Hannah Grace Olivia Ruth</p>
+        </statement>
+        <feedback>
+          <p>The delimiter is an empty string, not a space.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Hannah, Grace, Olivia, Ruth</p>
+        </statement>
+        <feedback>
+          <p>The delimiter is an empty string, it does not add spaces and commas automatically.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>We would get an error</p>
+        </statement>
+        <feedback>
+          <p>This will print without causing an error.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="listString_MC_split">
+    <statement>
+      <p>Q-7: What would print when the following code executes?</p>
+      <pre>input = "Pat,Smith,girl,65 Elm Street,eat"
+pieces = input.split(",")
+print(pieces[3])</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Smith</p>
+        </statement>
+        <feedback>
+          <p>That's pieces[1].</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>girl</p>
+        </statement>
+        <feedback>
+          <p>That's pieces[2]</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>65 Elm Street</p>
+        </statement>
+        <feedback>
+          <p>The address is at position 3 in the resulting list.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>eat</p>
+        </statement>
+        <feedback>
+          <p>That's pieces[4]</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>We would get an error</p>
+        </statement>
+        <feedback>
+          <p>Why would this cause an error?  We can use indices to get the element at an index in a list.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<section xml:id="lists_aliasing">
+  <title>Aliasing</title>
+<idx>Aliasing</idx>
+<idx><h>Reference</h><h>Aliasing</h></idx>
+<idx><h>Aliasing</h><h>Reference</h></idx>
+<idx>Reference</idx>
+<idx><h>List</h><h>Mutability</h></idx>
+<idx><h>Mutability</h><h>List</h></idx>
+<idx><h>String</h><h>Immutable</h></idx>
+<idx><h>Immutable</h><h>String</h></idx>
+  <p>If <c>a</c> refers to an object and you assign <c>b = a</c>,
+            then both variables refer to the same object:</p>
+  <program xml:id="listAliasing" interactive="codelens" language="python">
+    <input>
+a = [1, 2, 3]
+b = a
+print(b is a)
+    </input>
+  </program>
+  <p>The association of a variable with an object is called a
+            <em>reference</em>. In this example, there are two references to
+            the same object.</p>
+  <p>An object with more than one reference has more than one name, so we say
+            that the object is <em>aliased</em>.</p>
+  <p>If the aliased object is mutable, changes made with one alias affect the
+            other:</p>
+  <program xml:id="listChange" interactive="codelens" language="python">
+    <input>
+a = [1, 2, 3]
+b = a
+b[0] = 17
+print(a)
+    </input>
+  </program>
+  <p>Although this behavior can be useful, it is error-prone. In general, it
+            is safer to avoid aliasing when you are working with mutable objects.</p>
+  <p>For immutable objects like strings, aliasing is not as much of a
+            problem. In this example:</p>
+  <program language="python">
+    <input>
+a = 'banana'
+b = 'banana'
+</input>
+  </program>
+  <p>it almost never makes a difference whether <c>a</c> and
+            <c>b</c> refer to the same string or not.</p>
+  <exercise label="listAlias_MC_999">
+    <statement>
+      <p>Q-3: What is printed by the following statements?</p>
+      <pre>alist = [4, 2, 8, 6, 5]
+blist = alist
+blist[3] = 999
+print(alist)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>[4, 2, 8, 6, 5]</p>
+        </statement>
+        <feedback>
+          <p>blist is not a copy of alist, it is a reference to the list alist refers to.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>[4, 2, 8, 999, 5]</p>
+        </statement>
+        <feedback>
+          <p>Yes, since alist and blist both reference the same list, changes to one also change the other.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[999]</p>
+        </statement>
+        <feedback>
+          <p>alist has more than one element.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[4, 2, 8, 6, 5, 999]</p>
+        </statement>
+        <feedback>
+          <p>999 does not get added to the end of the list.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="listAlias_MC_party">
+    <statement>
+      <p>Q-4: What is the value of y after the following code has been evaluated:</p>
+      <pre>w = ['Jamboree', 'get-together', 'party']
+y = ['celebration']
+y = w</pre>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>['Jamboree', 'get-together', 'party']</p>
+        </statement>
+        <feedback>
+          <p>Yes, the value of y has been reassigned to the value of w.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>['celebration']</p>
+        </statement>
+        <feedback>
+          <p>No, that was the inital value of y, but y has changed.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>['celebration', 'Jamboree', 'get-together', 'party']</p>
+        </statement>
+        <feedback>
+          <p>No, when we assign a list to another list it does not concatenate the lists together.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>['Jamboree', 'get-together', 'party', 'celebration']</p>
+        </statement>
+        <feedback>
+          <p>No, when we assign a list to another list it does not concatenate the lists together.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

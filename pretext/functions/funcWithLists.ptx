@@ -1,0 +1,685 @@
+<?xml version="1.0"?>
+<section xml:id="functions_group-work-functions-and-lists">
+  <title>Group Work: Functions and Lists</title>
+  <introduction>
+  <p>It is best to use a POGIL approach with the following. In POGIL students work
+            in groups on activities and each member has an assigned role.  For more information see <url href="https://cspogil.org/Home" visual="https://cspogil.org/Home">https://cspogil.org/Home</url>.</p>
+  <note>
+    <p>If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.</p>
+  </note>
+  <p>
+    <term>Learning Objectives</term>
+  </p>
+  <p>Students will know and be able to do the following.</p>
+  <p>
+    <em>Content Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Use positive and negative indices to access elements of a list.</p>
+      </li>
+      <li>
+        <p>Identify the purpose of common list methods and common methods that take lists as parameters</p>
+      </li>
+      <li>
+        <p>Use the slice operator to copy parts of a list.</p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    <em>Process Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Predict the output of code with lists (Information Processing)</p>
+      </li>
+      <li>
+        <p>Write code using the slice operator (Assessment)</p>
+      </li>
+    </ul>
+  </p>
+</introduction>
+  <subsection xml:id="functions_list-indexing">
+    <title>List Indexing</title>
+    <p>A list holds items in order and you can get the value at an index, just like you can with strings.</p>
+    <exercise label="funct_ll_list_check_start_last_line_v2">
+      <statement>
+        <p>Q-1: What is the last thing that will be printed when the code below runs? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="'?hi'?">
+            <feedback>
+              <p>It will print the first item in the second list.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>What is the first item in the list in the second call?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="func_ll_ac_list_check_start">
+      <statement>
+        <p>Run this code to see what it prints.</p>
+      </statement>
+      <program xml:id="func_ll_ac_list_check_start_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def list_check(alist):
+    print(alist[0])
+
+# function definition
+def main():
+    list_check([1, 2, 5])
+    list_check(['hi', 'bye'])
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="func_ll_ac_list_check">
+      <statement>
+        <p>Run this code to see what it prints.</p>
+      </statement>
+      <program xml:id="func_ll_ac_list_check_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def list_check(alist):
+    print(alist[1])
+    print(len(alist))
+    print(alist[-1])
+
+# function definition
+def main():
+    list_check([4, 5, 6])
+    list_check(['blue', 'red'])
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="funct_ll_list_char">
+      <statement>
+        <p>Q-4: What characters are used to indicate the start and end of a list? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="\[\]|\]\[">
+            <feedback>
+              <p>Square brackets are used at the start and end of a list.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Look at the parameter to the function call in the code above.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funct_ll_first_index">
+      <statement>
+        <p>Q-5: What index is used to get the first item in a list? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="0">
+            <feedback>
+              <p>The first item in a list is at index 0.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Try again!</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funct_ll_last_index">
+      <statement>
+        <p>Q-6: What negative index is used to get the last item in a list? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="-1">
+            <feedback>
+              <p>The last item in a list is at index -1, which is the length of the list - 1.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Try again!</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="list_neg_2_result">
+      <statement>
+        <p>Q-7: What will the following code print?</p>
+        <program language="python">
+          <input>
+def list_get(lst):
+    return lst[-2]
+l = ["hi", 3, 'buy', 4]
+print(list_get(l))
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>hi</p>
+          </statement>
+          <feedback>
+            <p>This would be true if it was returning the item at index 0 or -4.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>3</p>
+          </statement>
+          <feedback>
+            <p>This would be true if it was returning the item at index 1 or -3.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>buy</p>
+          </statement>
+          <feedback>
+            <p>This is returning the second to the last item, the one at index -2.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>4</p>
+          </statement>
+          <feedback>
+            <p>This would be true if it was returning the item at index 3 or -1.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Nothing, there will be an error.</p>
+          </statement>
+          <feedback>
+            <p>This code will run without any errors.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="list_index_negative_indices">
+      <statement>
+        <p>Q-8: Describe in your own words how negative indices work.</p>
+      </statement>
+    </exercise>
+  </subsection>
+  <subsection xml:id="functions_built-in-functions-that-work-on-lists">
+    <title>Built-in Functions That Work on Lists</title>
+    <p>There are several built-in functions in Python that work on lists.</p>
+    <exercise label="func_ll_ac_list_func">
+      <statement>
+        <p>Run this code to see what it prints.</p>
+      </statement>
+      <program xml:id="func_ll_ac_list_func_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def list_func(my_list):
+    print(max(my_list))
+    print(min(my_list))
+    print(len(my_list))
+    print(sum(my_list))
+    print(sum(my_list) / len(my_list))
+
+# function definition
+def main():
+    list_func([1, 2, 3])
+    list_func([90, 100])
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="avg_drop_high_and_low">
+      <statement>
+        <p>Write a function <c>avg_with_drop</c> that takes a list, <c>num_list</c> and returns the average of the values in the list, but it does not include the highest or lowest value in the average. For example, <c>avg_with_drop([1,2,3,4])</c> should return <c>2.5</c>.</p>
+      </statement>
+      <program xml:id="avg_drop_high_and_low_editor" interactive="activecode" language="python">
+        <input>
+def avg_with_drop(num_list):
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(avg_with_drop([1,2,3,4]), 2.5, 'avg_with_drop([1,2,3,4])')
+        self.assertEqual(avg_with_drop([2,4,6,8]), 5, 'avg_with_drop([2,4,6,8])')
+        self.assertEqual(avg_with_drop([10, 80, 100, 60]), 70, 'avg_with_drop([10, 80, 100, 60])')
+        self.assertEqual(avg_with_drop([-10, 80, 120, 60]), 70, 'avg_with_drop([-10, 80, 120, 60])')
+        self.assertEqual(avg_with_drop([5, 10, 15, 20]), 12.5, 'avg_with_drop([5, 10, 15, 20])')
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="func_ll_dnd_funct">
+      <statement>
+        <p>Drag each built-in function name to what it does.</p>
+      </statement>
+      <feedback>
+        <p>Read the chapter on functions and try again.</p>
+      </feedback>
+      <matches>
+        <match order="1">
+          <premise>len</premise>
+          <response>Returns the length of an object (the number of items in the list).</response>
+        </match>
+        <match order="2">
+          <premise>sum</premise>
+          <response>Returns the total of the values in the list.</response>
+        </match>
+        <match order="3">
+          <premise>min</premise>
+          <response>Returns the minimum value in the list.</response>
+        </match>
+        <match order="4">
+          <premise>max</premise>
+          <response>Returns the maximum value in the list.</response>
+        </match>
+      </matches>
+    </exercise>
+  </subsection>
+  <subsection xml:id="functions_list-methods">
+    <title>List Methods</title>
+    <p>Lists are objects of the <c>list</c> class and have methods that operate on list objects.</p>
+    <exercise label="func_ll_ac_list_methods">
+      <statement>
+        <p>Run this code to see what it prints.</p>
+      </statement>
+      <program xml:id="func_ll_ac_list_methods_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def list_methods(alist):
+    print(type(alist))
+    print(alist)
+    alist.append(3)
+    print(alist)
+    alist.append([2])
+    print(alist)
+    alist.pop(1)
+    print(alist)
+    alist.extend([8, 11])
+    print(alist)
+
+# function definition
+def main():
+    l1 = [1]
+    list_methods(l1)
+    print(l1)
+    l1 = ['hi', 'bye']
+    list_methods(l1)
+    print(l1)
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="funct_ll_list_type">
+      <statement>
+        <p>Q-13: What class (type) is a list? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="list">
+            <feedback>
+              <p>A list is of the class <c>list</c>.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>What is the first thing printed from the code above?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funct_list_append_pop_predict">
+      <statement>
+        <p>Q-14: What would the following code print?</p>
+        <program language="python">
+          <input>
+def list_trans(lst):
+    lst.append(3)
+    lst.pop(2)
+    return lst
+l1 = [2, 5, 7]
+print(list_trans(l1))
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>[2, 5, 7, 3]</p>
+          </statement>
+          <feedback>
+            <p>This is what the list looks like before the pop executes.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>[5, 7, 3]</p>
+          </statement>
+          <feedback>
+            <p>This would be true if pop removed the first value that was passed in, but it takes an index and removes the item at that index.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>[2, 7, 3]</p>
+          </statement>
+          <feedback>
+            <p>This would be true if pop removed the item at index 1, but it removes the item at index 2 and the first item is at index 0.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>[2, 5, 7]</p>
+          </statement>
+          <feedback>
+            <p>This would be true if pop removed the last item, but it removes the one at index 2.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>[2, 5, 3]</p>
+          </statement>
+          <feedback>
+            <p>Correct.  This adds 3 at the end and then removes the item at index 2.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <note>
+      <p>Lists are mutable (changeable).  List methods like append and pop change the current list.</p>
+    </note>
+    <exercise label="func_ll_ac_list_methods2">
+      <statement>
+        <p>Run this code to see what it prints.</p>
+      </statement>
+      <program xml:id="func_ll_ac_list_methods2_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def list_methods2(alist):
+    print(alist)
+    alist.reverse()
+    print(alist)
+    alist.sort()
+    print(alist)
+    alist.sort(reverse = True)
+    print(alist)
+
+# function definition
+def main():
+    l1 = [-2, 50, -20, 30]
+    list_methods2(l1)
+    print(l1)
+    l1 = ['hi', 'bye', 'apple']
+    list_methods2(l1)
+    print(l1)
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="funct_list_result_of_reverse">
+      <statement>
+        <p>Q-16: What is the last thing the following code prints?</p>
+        <program language="python">
+          <input>
+def list_trans(lst):
+    r = lst.reverse()
+    print(lst)
+    print(r)
+
+l1 = [2, 5, 7]
+list_trans(l1)
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>None</p>
+          </statement>
+          <feedback>
+            <p>It prints the return value from the reverse method which is None.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>[2, 5, 7]</p>
+          </statement>
+          <feedback>
+            <p>This would be true if it printed the value of</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>[7, 5, 2]]</p>
+          </statement>
+          <feedback>
+            <p>This would be true if pop removed the item at index 1, but it removes the item at index 2 and the first item is at index 0.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Nothing, there will be an error.</p>
+          </statement>
+          <feedback>
+            <p>This would be true if pop removed the last item, but it removes the one at index 2.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="func_ll_dnd_func_methods">
+      <statement>
+        <p>Drag each built-in function name to what it does.</p>
+      </statement>
+      <feedback>
+        <p>Read the chapter on functions and try again.</p>
+      </feedback>
+      <matches>
+        <match order="1">
+          <premise>pop(index)</premise>
+          <response>Removes the value at the specified index.</response>
+        </match>
+        <match order="2">
+          <premise>append(item)</premise>
+          <response>Adds the items (value or list) to the end of the current list.</response>
+        </match>
+        <match order="3">
+          <premise>extend(list)</premise>
+          <response>Adds all the contents of the passed list to the end of the current list.</response>
+        </match>
+        <match order="4">
+          <premise>sort()</premise>
+          <response>Sort the contents of the list in ascending order.</response>
+        </match>
+        <match order="5">
+          <premise>reverse()</premise>
+          <response>Reverse the contents of the list.</response>
+        </match>
+      </matches>
+    </exercise>
+  </subsection>
+  <subsection xml:id="functions_using-the-slice-operator">
+    <title>Using the Slice Operator</title>
+    <p>You can use the slice operator[n:m] with lists to get a new list just like you can with strings.</p>
+    <exercise label="func_ll_ac_list_slice">
+      <statement>
+        <p>Run this code to see what it prints.</p>
+      </statement>
+      <program xml:id="func_ll_ac_list_slice_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def list_slice(num_list):
+    a = num_list[:]
+    print(a)
+    b = num_list[:2]
+    print(b)
+    c = num_list[2:]
+    print(c)
+
+# function definition
+def main():
+    l1 = [-2, 50, -20, 30]
+    list_slice(l1)
+    print(l1)
+    l1 = ['hi', 'bye', 'apple', 'dog']
+    list_slice(l1)
+    print(l1)
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="funct_ll_fitb_slice_def_first">
+      <statement>
+        <p>Q-19: In <c>[:2]</c> what is the start index? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="0">
+            <feedback>
+              <p>If the start index isn't specified it is 0.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Run the code above to check.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="list_def_end_index_sa">
+      <statement>
+        <p>Q-20: In <c>[2:]</c> what is the end index?</p>
+      </statement>
+    </exercise>
+    <note>
+      <p>The slice operator always returns a new object.  It doesn't change the current object (list or string).</p>
+    </note>
+    <exercise label="funct_list_neg_slice">
+      <statement>
+        <p>Q-21: What does the following code print?</p>
+        <program language="python">
+          <input>
+alist = [1, 2, 3, 4, 5]
+l2 = alist[-3: -1]
+print(l2)
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>[2, 3, 4, 5]</p>
+          </statement>
+          <feedback>
+            <p>It returns items starting from the 3rd from the right and ending before the last.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>[2, 3, 4]</p>
+          </statement>
+          <feedback>
+            <p>It returns items starting from the 3rd from the right and ending before the last.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>[3, 4, 5]</p>
+          </statement>
+          <feedback>
+            <p>It returns items starting from the 3rd from the right and ending before the last.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>[3, 4]</p>
+          </statement>
+          <feedback>
+            <p>It returns items starting from the 3rd from the right and ending before the last.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Nothing, there will be an error.</p>
+          </statement>
+          <feedback>
+            <p>The code will run withtout an error.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="fuct_ac_list_first_half">
+      <statement>
+        <p>Write a function <c>first_half</c> that takes a list and returns a new list (use the slice operator) with just the items from the first half of the original list.  For example, first_half([1,2,3,4]) would return [1, 2] and first_half([7,8,9]) should return [7].</p>
+      </statement>
+      <program xml:id="fuct_ac_list_first_half_editor" interactive="activecode" language="python">
+        <input>
+def first_half(alist):
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(first_half([1,2,3,4]), [1,2], 'first_half([1,2,3,4])')
+        self.assertEqual(first_half([7,8,9]), [7], 'first_half([7,8,9])')
+        self.assertEqual(first_half([]), [], 'first_half([])')
+        self.assertEqual(first_half([6]), [], 'first_half([6])')
+        self.assertEqual(first_half([1,2,3,4,5]), [1,2], 'first_half([1,2,3,4,5])')
+        self.assertEqual(first_half([1,2,3,4,5,6]), [1,2,3], 'first_half([1,2,3,4,5,6])')
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+    <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
+    <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+    &lt;div data-component="groupsub" id=func_list_groupsub data-size_limit=4&gt;
+        &lt;div class="col-sm-6"&gt;
+            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div id="groupsub_button" class="col-sm-6"&gt;
+        &lt;/div&gt;
+        &lt;p&gt;The Submit Group button will submit the answer for each each question
+        on this page for each member of your group. It also logs you as the official
+        group submitter.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  </subsection>
+</section>

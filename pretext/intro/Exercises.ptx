@@ -1,0 +1,389 @@
+<?xml version="1.0"?>
+<exercises xml:id="intro_exercises">
+  <title>Exercises</title>
+  <exercise label="intro-MC-secondaryMem">
+    <statement>
+      <p>Q-1: What is the function of the secondary memory in a computer?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Execute all of the computation and logic of the program</p>
+        </statement>
+        <feedback>
+          <p>This would be correct if we asked what the CPU does.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Retrieve web pages over the Internet</p>
+        </statement>
+        <feedback>
+          <p>This would be correct if we asked what the client does.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Store information for the long term, even beyond a power cycle</p>
+        </statement>
+        <feedback>
+          <p>The secondary memory provides long term storage, even if you turn off the computer.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Take input from the user</p>
+        </statement>
+        <feedback>
+          <p>The secondary memory does not ask users for input.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="intro-MC-prog">
+    <statement>
+      <p>Q-2: When talking about computers and code, which of the following is a program?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>A set of instructions for your computer and CPU.</p>
+        </statement>
+        <feedback>
+          <p>A program holds the instructions that answer the CPU's "What next" question.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The process of creating and editing code.</p>
+        </statement>
+        <feedback>
+          <p>Programming is the process of creating and editing these instructions.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>An event that teaches you to write code.</p>
+        </statement>
+        <feedback>
+          <p>This can be a program, but not the kind we're talking about here.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A question you ask your computer.</p>
+        </statement>
+        <feedback>
+          <p>While a program can ask your computer or the user a question, it typically answers the question of "what next" from your CPU.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="intro-fitb-line-by-line">
+    <statement>
+      <p>Q-3: A __________ is a program that can analyze and execute a program line by line. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Ii]nterpreter">
+          <feedback>
+            <p>An interpreter is a program that can analyze and execute a program line by line.</p>
+          </feedback>
+        </condition>
+        <condition string="[Cc]ompiler">
+          <feedback>
+            <p>A compiler translates a program into machine language from a file and saves it for later execution.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="intro-MC-machineCode">
+    <statement>
+      <p>Q-4: Which of the following creates or contains <q>machine code</q>?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>The Python interpreter</p>
+        </statement>
+        <feedback>
+          <p>The interpreter translates python source code from a human readable form to machine code</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The keyboard</p>
+        </statement>
+        <feedback>
+          <p>The keyboard provides textual input</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A Python source file</p>
+        </statement>
+        <feedback>
+          <p>The Python source file contains human readable programs</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A word processing document</p>
+        </statement>
+        <feedback>
+          <p>A word processing document contains text</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="intro-MC-whereStored">
+    <statement>
+      <p>Q-5: Where in the computer is a variable such as <q>x</q> stored after the following Python line executes?</p>
+      <program language="python">
+        <input>
+x = 123
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Central processing unit</p>
+        </statement>
+        <feedback>
+          <p>The CPU processses instructions</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Main Memory</p>
+        </statement>
+        <feedback>
+          <p>The main memory holds the values of the variables while a program executes</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Secondary Memory</p>
+        </statement>
+        <feedback>
+          <p>Secondary memory provides long-term storage.  You must write out values to secondary memory to store them long-term.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Input Devices</p>
+        </statement>
+        <feedback>
+          <p>Input devices do not store data</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Output Devices</p>
+        </statement>
+        <feedback>
+          <p>Ouptut devices do not store data</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="intro-MC-printVal">
+    <statement>
+      <p>Q-6: What will the following program print out:</p>
+      <program language="python">
+        <input>
+x = 43
+x = x + 1
+print(x)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>43</p>
+        </statement>
+        <feedback>
+          <p>The value of x was changed.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>44</p>
+        </statement>
+        <feedback>
+          <p>While x was set to 43 originally it was changed to one more than the current value.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>x + 1</p>
+        </statement>
+        <feedback>
+          <p>This would be true if the code was priInput devices do not store data</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Error because x = x + 1 is not possible mathematically</p>
+        </statement>
+        <feedback>
+          <p>This code sets the value of x to the current value of x plus 1.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="intro-MC-replace">
+    <statement>
+      <p>Q-7: Pick the best replacements for 1 and 2 in the following sentence: When comparing compilers and interpreters, a compiler is like 1 while an interpreter is like 2.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1 = a process, 2 = a function</p>
+        </statement>
+        <feedback>
+          <p>Compiling is a software process, and running the interpreter is invoking a function, but how is a process different than a function?</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>1 = translating an entire book, 2 = translating a line at a time</p>
+        </statement>
+        <feedback>
+          <p>Compilers take the entire source code and produce object code or the executable and interpreters execute the code line by line.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1 = software, 2 = hardware</p>
+        </statement>
+        <feedback>
+          <p>Both compilers and interpreters are software.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1 = object code, 2 = byte code</p>
+        </statement>
+        <feedback>
+          <p>Compilers can produce object code or byte code depending on the language.  An interpreter produces neither.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="intro-fitb-explainBrain">
+    <statement>
+      <p>Q-8: A brain is the human equivalent to what in your computer? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="(CPU)|([Cc]entral\s+[Pp]rocessing\s+[Uu]nit)">
+          <feedback>
+            <p>The Central Processing Unit is very similar to a brain for your computer.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="intro-fitb-keyboard">
+    <statement>
+      <p>Q-9: A keyboard is an example of an Input or Output device? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Ii]nput">
+          <feedback>
+            <p>A keyboard connects to your computer and provides information that your computer reads <b>in</b>.</p>
+          </feedback>
+        </condition>
+        <condition string="[Oo]utput">
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="intro-fitb-speaker">
+    <statement>
+      <p>Q-10: A speaker is an example of an Input or Output device? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Oo]utput">
+          <feedback>
+            <p>A speaker connects to your computer, which provides information that the speaker sends <b>out</b>.</p>
+          </feedback>
+        </condition>
+        <condition string="[Ii]nput">
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="intro-SA-typeOfError">
+    <statement>
+      <p>Q-11: The Python interpreter or complier will tell you if your code has a __________ Error. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Ss]yntax">
+          <feedback>
+            <p>If your code doesn't follow the <q>grammar rules</q> of Python, it will let you know.</p>
+          </feedback>
+        </condition>
+        <condition string="[Ss]emantic">
+          <feedback>
+            <p>Try again! Semantic Errors will not trigger an error message.</p>
+          </feedback>
+        </condition>
+        <condition string="[Ll]ogic">
+          <feedback>
+            <p>Try again! Logic Errors will not trigger an error message.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="intro_writeEx">
+    <statement><p>Try running the following code.  Can you tell what is wrong with it and fix it?</p></statement>
+    <program xml:id="intro-AC-fix" interactive="activecode" language="python">
+      <input>primt 'Hello world!'
+          </input>
+        </program>
+    <solution>
+      <program xml:id="intro-AC-answer" language="python">
+        <input>
+# The print function is spelled incorrectly
+# and needs parentheses around its contents
+print('Hello world!')
+        </input>
+      </program>
+    </solution>
+  </exercise>
+</exercises>

@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<section xml:id="strings_looping-and-counting">
+  <title>Looping and counting</title>
+<idx>Counter</idx>
+<idx><h>Looping</h><h>Strings</h></idx>
+<idx><h>Strings</h><h>Looping</h></idx>
+<idx><h>Looping</h><h>Counting</h></idx>
+<idx><h>Counting</h><h>Looping</h></idx>
+<idx>Encapsulation</idx>
+  <p>The following program counts the number of times the letter
+            <q>r</q> appears in a string:</p>
+  <program xml:id="strCount" interactive="codelens" language="python">
+    <input>
+word = 'raspberry'
+count = 0
+for letter in word:
+    if letter == 'r':
+        count = count + 1
+print(count)
+    </input>
+  </program>
+  <p>This program demonstrates another pattern of computation called a
+            <em>counter</em>. The variable <c>count</c> is initialized
+            to 0 and then incremented each time an <q>r</q> is found. When the
+            loop exits, <c>count</c> contains the result: the total number of
+            r's.</p>
+  <exercise label="str-count-mc-t">
+    <statement>
+      <p>11-9-2: What is printed by the following:</p>
+      <program language="python">
+        <input>
+s = "peanut butter"
+count = 0
+for char in s:
+    if char == "t":
+          count = count + 1
+print(count)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>0</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! count is initialized to 0, but is then incremented by the for loop. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Correct! The letter t appears 3 times in "peanut butter".</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>4</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The value of count is initially 0, not 1. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Nothing, this is an infinite loop</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This for loop will eventually terminate because string s has a finite number of characters. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise>
+    <statement/>
+    <program interactive="" language=""/>
+    <solution>
+                In line 2, lettercount should be initialized to 0. In line 4, there should be a ==, not a =.
+                    In line 5, the variable name should be changed to lettercount. In line 6, the return statement should be indented.
+
+    <program xml:id="str-count-fixa" language="python"><input>
+def count(text, aChar):
+    lettercount = 0
+    for c in text:
+        if c == aChar:
+            lettercount = lettercount + 1
+    return lettercount
+        </input></program>
+            
+                <p>In line 2, <c>lettercount</c> should be initialized to 0. In line 4, there should be a <c>==</c>, not a <c>=</c>.
+                    In line 5, the variable name should be changed to <c>lettercount</c>. In line 6, the return statement should be indented.</p>
+
+    
+            </solution>
+  </exercise>
+</section>

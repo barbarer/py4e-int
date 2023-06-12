@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<section xml:id="classes-basics_multiple-choice-questions-for-multiple-classes">
+  <title>Multiple Choice Questions for Multiple Classes</title>
+  <idx><h>class</h><h>multiple</h></idx>
+  <exercise label="mult_class_point_object_methods_mcq">
+    <statement>
+      <p>Q-1: Given the <c>Point</c> class below.  What are the object methods in the <c>Point</c> class?  Pick all that apply.</p>
+      <pre>class Point:
+
+    def __init__(self, initX, initY):
+        """ Create a new point at the given coordinates. """
+        self.x = initX
+        self.y = initY
+
+    def distanceFromOrigin(self):
+        return ((self.x ** 2) + (self.y ** 2)) ** 0.5
+
+    def __str__(self):
+        return f"x = {self.x}, y = {self.y}"
+
+    def halfway(self, target):
+        mx = (self.x + target.x) / 2
+        my = (self.y + target.y) / 2
+        return Point(mx, my)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement id="mult_class_point_object_methods_mcq_opt_a">
+          <p>self.x</p>
+        </statement>
+        <feedback id="mult_class_point_object_methods_mcq_opt_a">
+          <p>This stores the x position for the point. It is an object attribute.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement id="mult_class_point_object_methods_mcq_opt_b">
+          <p>self.distanceFromOrigin</p>
+        </statement>
+        <feedback id="mult_class_point_object_methods_mcq_opt_b">
+          <p>This is an object method in the Point class</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="mult_class_point_object_methods_mcq_opt_c">
+          <p>self.y</p>
+        </statement>
+        <feedback id="mult_class_point_object_methods_mcq_opt_c">
+          <p>This stores the y position for the point. It is an object attribute.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement id="mult_class_point_object_methods_mcq_opt_d">
+          <p>self.halfway</p>
+        </statement>
+        <feedback id="mult_class_point_object_methods_mcq_opt_d">
+          <p>This is an object method in the Point class</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="mult_class_rectangle_object_attributes_mcq">
+    <statement>
+      <p>Q-2: Given the code below, what are the object attribute(s) in the <c>Rectangle</c> class?  Pick all that apply.</p>
+      <pre>class Rectangle:
+
+    def __init__(self, p1, p2):
+        """ Create a new rectangle with the given points """
+        self.p1 = p1
+        self.p2 = p2
+
+    def area(self):
+        """ Return the area of the rectangle """
+        width = abs(self.p1.x - self.p2.x)
+        height = abs(self.p1.y - self.p2.y)
+        return width * height</pre>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement id="mult_class_rectangle_object_attributes_mcq_opt_a">
+          <p>self.p1</p>
+        </statement>
+        <feedback id="mult_class_rectangle_object_attributes_mcq_opt_a">
+          <p>This is an object attribute in the Rectangle class.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="mult_class_rectangle_object_attributes_mcq_opt_b">
+          <p>self.__init__</p>
+        </statement>
+        <feedback id="mult_class_rectangle_object_attributes_mcq_opt_b">
+          <p>This is an object method in the Rectangle class.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement id="mult_class_rectangle_object_attributes_mcq_opt_c">
+          <p>self.p2</p>
+        </statement>
+        <feedback id="mult_class_rectangle_object_attributes_mcq_opt_c">
+          <p>This is an object attribute in the Rectangle class.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="mult_class_rectangle_object_attributes_mcq_opt_d">
+          <p>self.area</p>
+        </statement>
+        <feedback id="mult_class_rectangle_object_attributes_mcq_opt_d">
+          <p>This is an object method in the Rectangle class.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="mult_class_dog_breed_types_mcq">
+    <statement>
+      <p>Q-3: Given the following code, what is <c>breeds</c>?</p>
+      <pre>class Dog:
+
+    breeds = ["Bulldog", "Poodle", "Chihuahua", "Dachshund"]
+
+    def __init__(self, name, breed):
+        self.name = name
+        if breed not in Dog.breeds:
+            Dog.breeds.append(breed)
+        self.breed_index = Dog.breeds.index(breed)
+
+    def speak(self):
+        return "bark"</pre>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>class attribute</p>
+        </statement>
+        <feedback>
+          <p>Correct! It is a class attribute (only exists in the class).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>class method</p>
+        </statement>
+        <feedback>
+          <p>It is not a class method.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>object attribute</p>
+        </statement>
+        <feedback>
+          <p>It is not an object attribute.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>object method</p>
+        </statement>
+        <feedback>
+          <p>It is not an object method.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="mult_class_dog_speak_mcq">
+    <statement>
+      <p>Q-4: Given the following code, what is <c>speak</c>?</p>
+      <pre>class Dog:
+
+    breeds = ["Bulldog", "Poodle", "Chihuahua", "Dachshund"]
+
+    def __init__(self, name, breed):
+        self.name = name
+        if breed not in Dog.breeds:
+            Dog.breeds.append(breed)
+        self.breed_index = Dog.breeds.index(breed)
+
+    def speak(self):
+        return "bark"</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>class attribute</p>
+        </statement>
+        <feedback>
+          <p>It is not a class attribute.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>class method</p>
+        </statement>
+        <feedback>
+          <p>It is not a class method.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>object attribute</p>
+        </statement>
+        <feedback>
+          <p>It is not an object attribute.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>object method</p>
+        </statement>
+        <feedback>
+          <p>Correct!  It is an object method.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="mult_class_dog_breed_index_mcq">
+    <statement>
+      <p>Q-5: Given the following code, what is <c>self.breed_index</c>?</p>
+      <pre>class Dog:
+
+    breeds = ["Bulldog", "Poodle", "Chihuahua", "Dachshund"]
+
+    def __init__(self, name, breed):
+        self.name = name
+        if breed not in Dog.breeds:
+            Dog.breeds.append(breed)
+        self.breed_index = Dog.breeds.index(breed)
+
+    def speak(self):
+        return "bark"</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>class attribute</p>
+        </statement>
+        <feedback>
+          <p>It is not a class attribute.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>class method</p>
+        </statement>
+        <feedback>
+          <p>It is not a class method.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>object attribute</p>
+        </statement>
+        <feedback>
+          <p>Correct! It is an object attribute.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>object method</p>
+        </statement>
+        <feedback>
+          <p>It is not an object method.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

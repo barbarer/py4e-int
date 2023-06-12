@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<section xml:id="tuples_dictionaries-and-tuples">
+  <title>Dictionaries and Tuples</title>
+<idx>Item Method</idx>
+<idx>Key-Value Pairs</idx>
+  <p>Dictionaries have a method called <c>items</c> that returns a list
+            of tuples, where each tuple is a key-value pair. (Technically, it returns
+            a <q>view object,</q> but using it as the parameter in Python's <c>list()</c>
+            constructor converts it into a list.)</p>
+  <program xml:id="dictionariesandtuples_exercise_1" interactive="activecode" language="python">
+    <input>
+d = {'a':10, 'b':1, 'c':22}
+t = list(d.items())
+print(t)
+        </input>
+  </program>
+  <exercise label="question10_4_1">
+    <statement>
+      <p>11-9-2: True or false? The following code will correctly output the items of the dictionary t.</p>
+      <program language="python">
+        <input>
+name_dictionary = {'Bob': 5, 'Melissa': 3, 'John': 7, 'Kim': 5}
+t = list(name_dictionary.items)
+print(t)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Look closely at the second line. Notice anything missing? Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>Correct! Parentheses are required when calling the items() method.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>As you should expect from a dictionary, the items are in no particular order.
+            However, since a list of tuples is a list, and tuples are comparable,
+            we can sort the list of tuples. Converting a dictionary to a list of
+            tuples is a way for us to output the contents of a dictionary sorted by
+            key:</p>
+  <program xml:id="dictionariesandtuples_exercise_2" interactive="activecode" language="python">
+    <input>
+d = {'b':1, 'a': 10, 'c':22}
+t = list(d.items())
+print(t) #should print [('b', 1), ('a', 10), ('c', 22)]
+t.sort()
+print(t) #should print [('a', 10), ('b', 1), ('c', 22)]
+        </input>
+  </program>
+  <p>(If you need a reminder, the <c>sort</c> method sorts a list in alphabetical order.)</p>
+  <p>The resulting list is sorted in ascending alphabetical order by the key value.</p>
+  <exercise label="question10_4_2">
+    <statement>
+      <p>11-9-4: How will the list below be sorted (if there is any order at all)?</p>
+      <program language="python">
+        <input>
+grocery_dict = {'apple': 5, 'pineapple': 3, 'chicken': 8, 'kiwi': 7}
+grocery_list = list(grocery_dict.items())
+grocery_list.sort()
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>In ascending order by the keys' first letter.</p>
+        </statement>
+        <feedback>
+          <p>Correct! This is the way that the sort() method sorts lists of tuples.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>In descending order by each key's value.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The sort() method doesn't consider the keys' values at all. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>In descending order by the keys' first letter.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The default way that the sort() method sorts is in ascending order. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>In ascending order by each key's value.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The sort() method doesn't consider the keys' values at all. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>The <c>sort</c> method also has an optional parameter, <c>reverse</c>, whose value can
+            tell <c>sort</c> to sort in descending order.</p>
+  <program xml:id="dictionariesandtuples_exercise_3" interactive="activecode" language="python">
+    <input>
+grocery_dict = {'apple': 5, 'pineapple': 3, 'chicken': 8, 'kiwi': 7}
+grocery_list = list(grocery_dict.items())
+grocery_list.sort(reverse=True)
+print(grocery_list) #should print [('pineapple', 3), ('kiwi', 7), ('chicken', 8), ('apple', 5)]
+        </input>
+  </program>
+  <exercise label="question10_4_3_v2">
+    <statement>
+      <p>Write code that will transform dictionary d into a list of tuples, called tup_list, sorted by the keys in descending order.</p>
+    </statement>
+    <program xml:id="question10_4_3_v2_editor" interactive="activecode" language="python">
+      <input>
+d = {'a': 10, 'b': 2, 'c': 27, 'd': 15, 'e': 30, 'f': 3}
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(tup_list, [('f', 3), ('e', 30), ('d', 15), ('c', 27), ('b', 2), ('a', 10)], "Checking to make sure the list was sorted correctly.")
+        self.assertEqual(len(tup_list), 6, "Checking to make sure no values were added or deleted.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

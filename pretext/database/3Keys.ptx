@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<section xml:id="database_three-kinds-of-keys">
+  <title>Three kinds of keys</title>
+  <introduction>
+    <idx>Key</idx>
+    <idx>Logical Key</idx>
+    <idx>Primary Key</idx>
+    <idx>Foreign Key</idx>
+  <p>Now that we have started building a data model putting our data into
+            multiple linked tables and linking the rows in those tables using
+            <em>keys</em>, we need to look at some terminology around keys.
+            There are generally three kinds of keys used in a database model.</p>
+        </introduction> 
+        <p>A <em>logical key</em> is a key that the <q>real world</q> might
+                    use to look up a row. In our example data model, the
+                    <c>name</c> field is a logical key. It is the screen name for
+                    the user and we indeed look up a user's row several times in the
+                    program using the <c>name</c> field. You will often find that
+                    it makes sense to add a <c>UNIQUE</c> constraint to a logical
+                    key. Since the logical key is how we look up a row from the outside
+                    world, it makes little sense to allow multiple rows with the same
+                    value in the table.</p>
+
+        <exercise label="dbKeys_fill1">
+          <statement>
+            <p>Q-1: What constraint is often used with logical keys? <var/>  </p>
+          </statement>
+          <setup>
+            <var>
+              <condition string="[Uu][Nn][Ii][Qq][Uu][Ee]">
+                <feedback>
+                  <p>A UNIQUE constraint is often used with a logical key, since it doesn't make sense to allow multiple rows with the same identifier.</p>
+                </feedback>
+              </condition>
+              <condition string=".*">
+                <feedback>
+                  <p>Try again.</p>
+                </feedback>
+              </condition>
+            </var>
+          </setup>
+        </exercise>
+
+        <p>A <em>primary key</em> is usually a number that is assigned
+                    automatically by the database. It generally has no meaning outside
+                    the program and is only used to link rows from different tables
+                    together. When we want to look up a row in a table, usually
+                    searching for the row using the primary key is the fastest way to
+                    find the row. Since primary keys are integer numbers, they take up
+                    very little storage and can be compared or sorted very quickly. In
+                    our data model, the <c>id</c> field is an example of a primary key.</p>
+        <exercise label="dbKeys_MC_tf">
+          <statement>
+            <p>Q-2: True or False? A primary key is usually a number</p>
+          </statement>
+          <choices>
+            <choice correct="yes">
+              <statement>
+                <p>True</p>
+              </statement>
+              <feedback>
+                <p>Integers take up less space than strings, so they are usually used for primary keys</p>
+              </feedback>
+            </choice>
+            <choice>
+              <statement>
+                <p>False</p>
+              </statement>
+              <feedback>
+                <p>Try again.</p>
+              </feedback>
+            </choice>
+          </choices>
+        </exercise>
+
+        <p>A <em>foreign key</em> is usually a number that points to
+                    the primary key of an associated row in a different table. An
+                    example of a foreign key in our data model is the <c>from_id</c>.</p>
+
+  <p>We are using a naming convention of always calling the primary key field
+            name <c>id</c> and appending the suffix <c>_id</c> to any field name
+            that is a foreign key.</p>
+  <exercise label="dbKeys_fill">
+    <statement>
+      <p>Q-3: How many kinds of keys are generally used in a database model? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="3|three">
+          <feedback>
+            <p>Generally, there are three kinds of keys used in a database model, logical, primary, and foreign.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+</section>

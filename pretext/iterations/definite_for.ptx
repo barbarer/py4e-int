@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<section xml:id="iterations_definite-loops-using-for">
+  <title>Definite loops using <c>for</c></title>
+<idx><h>For</h><h>Statement</h></idx>
+<idx><h>Statement</h><h>For</h></idx>
+<idx><h>For</h><h>Loop</h></idx>
+<idx><h>Loop</h><h>For</h></idx>
+<idx><h>Variable</h><h>Iteration</h></idx>
+<idx><h>Iteration</h><h>Variable</h></idx>
+  <p>Sometimes we want to loop through a <em>set</em> of things, such
+            as a list of words, the lines in a file, or a list of numbers. When we
+            have a list of things to loop through, we can construct a <em>definite</em>
+            loop using a <c>for</c> statement. We call the <c>while</c>
+            statement an <em>indefinite</em> loop because it simply loops until some
+            condition becomes <c>False</c>, whereas the <c>for</c> loop
+            is looping through a known set of items so it runs through as many
+            iterations as there are items in the set.</p>
+  <exercise label="itFor_MC_while">
+    <statement>
+      <p>Q-1: The while loop is an <q>indefinite</q> loop because&#x2026;</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>it loops through a known set of items so it runs through as many iterations as there are items in the set.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! A while loop does not run through a known set of items. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>it loops until some condition becomes True.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! A while loop will keep iterating while the condition is True. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>it loops until some condition becomes False.</p>
+        </statement>
+        <feedback>
+          <p>Correct! A while loop continues until the condition is False. There is no definite answer to when that happens; it all depends on the incrementation.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>it loops until it reaches a "break" statement.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! A while loop can stop at a break statement, but so can any other loop. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="itFor_MC_for">
+    <statement>
+      <p>Q-2: The for loop is not an <q>indefinite</q> loop because&#x2026;</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>it loops through a known set of items so it runs through as many iterations as there are items in the set.</p>
+        </statement>
+        <feedback>
+          <p>Correct! A for loop only runs through a distinct set of items.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>it loops until some condition becomes True.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! A for loop does not check any condition to decide whether it should continue to iterate. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>it loops until some condition becomes False.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This is the condition for a while loop to stop. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>it loops until it reaches a "break" statement.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! A for loop can stop at a break statement, but so can any other loop. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>The syntax of a <c>for</c> loop is similar to the
+            <c>while</c> loop in that there is a <c>for</c> statement
+            and a loop body:</p>
+  <program xml:id="itr-section5_1" interactive="activecode" language="python">
+    <input>
+friends = ['Joseph', 'Glenn', 'Sally']
+for friend in friends:
+    print('Happy New Year:', friend)
+print('Done!')
+        </input>
+  </program>
+  <p>In Python terms, the variable <c>friends</c> is a list (We will examine lists
+            in more detail in a later chapter) of
+            three strings. The <c>for</c> loop goes through the list and
+            executes the body once for each of the three strings in the list
+            resulting in this output:</p>
+  <program language="python">
+    <input>
+Happy New Year: Joseph
+Happy New Year: Glenn
+Happy New Year: Sally
+Done!
+</input>
+  </program>
+  <p>Translating this <c>for</c> loop to English is not as direct as
+            the <c>while</c>, but if you think of friends as a <em>set</em>, it goes
+            like this: <q>Run the statements in the body of the for loop once
+            for each friend <em>in</em> the set named friends.</q></p>
+  <p>Looking at the <c>for</c> loop, <em>for</em> and
+            <em>in</em> are reserved Python keywords, and
+            <c>friend</c> and <c>friends</c> are variables.</p>
+  <program language="python">
+    <input>
+for friend in friends:
+    print('Happy New Year:', friend)
+</input>
+  </program>
+  <p>In particular, <c>friend</c> is the <em>iteration
+                variable</em> for the for loop. The variable <c>friend</c>
+            changes for each iteration of the loop and controls when the
+            <c>for</c> loop completes. The <em>iteration variable</em>
+            steps successively through the three strings stored in the
+            <c>friends</c> variable.</p>
+  <exercise label="itFor_PP_friends" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Construct a block of code that prints <q>Hello, Prisha</q>, <q>Hello, Kahlil</q>, <q>Hello, Nirav</q>,
+            <q>Hello, Aliyah</q>, and <q>Hello, Antonella</q>. After saying hello to each name in
+            the list, print <q>All done!</q>. Watch out for three extra pieces of code and make sure your
+            indentation is correct.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>names = ['Prisha', 'Kahlil', 'Nirav', 'Aliyah', 'Antonella']</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>for name in names:</cline>
+        </choice>
+        <choice>
+          <cline>for names in names: </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>    print("Hello,", name)</cline>
+        </choice>
+        <choice>
+          <cline>    print("Hello", name) </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>print("All done!")</cline>
+        </choice>
+        <choice>
+          <cline>print(All done!) </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+</section>

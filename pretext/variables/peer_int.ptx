@@ -1,0 +1,461 @@
+<?xml version="1.0"?>
+<section xml:id="variables_peer-instruction-variable-multiple-choice-questions">
+  <title>Peer Instruction: Variable Multiple Choice Questions</title>
+  <exercise label="ctp-reviewtest1-14_review_11">
+    <statement>
+      <p>csp-10-2-1: Recall that when we wanted to cut off all but two decimal places of a float, we multiplied it by 100, cast it as a integer, and then divided it by 100 using float division. Why did we cast it as an int?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Ints only have 2 decimal places</p>
+        </statement>
+        <feedback>
+          <p>Try again. Ints do not have any decimal places.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Ints don't have any decimals</p>
+        </statement>
+        <feedback>
+          <p>Correct! Because ints do not have any decimal places,therefore by multipling it with 100, the two decimal places can be transformed into ones and tens place.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>It's easier to multiply ints</p>
+        </statement>
+        <feedback>
+          <p>Try again. Try to consider why we multiply the number by 100. Becausen we want the two decimal places to be transformed into ones and tens place.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Funsies</p>
+        </statement>
+        <feedback>
+          <p>Try again. Good point but we want the funsies?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Try again. Try to consider why we multiply the number by 100. Because ints do not have any decimal places,therefore by multipling it with 100, the two decimal places can be transformed into ones and tens place.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_2_5">
+    <statement>
+      <p>csp-10-2-2: Is the following an algorithm?</p>
+      <program language="python">
+        <input>
+Step 1: write down the number 0
+Step 2: add 3
+Step 3: return to step 1
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Yes</p>
+        </statement>
+        <feedback>
+          <p>Try again. Step 3 ends with returning to step 1. It never ends. But an algorithm must halt.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>No, because it contains an infinite number of steps</p>
+        </statement>
+        <feedback>
+          <p>Try again. B is incorrect because there are three steps.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>No, because it never halts</p>
+        </statement>
+        <feedback>
+          <p>Correct! Because step 3 ends with returning to step 1. It never ends.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>No, because step 3 is not well-defined</p>
+        </statement>
+        <feedback>
+          <p>Try again. It is true that there are problems with step 3. But it is because step 3 makes it never halt.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_2_8">
+    <statement>
+      <p>csp-10-2-3: What is the difference between the literals 1 and 1.0?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Nothing. They are both 1</p>
+        </statement>
+        <feedback>
+          <p>Try again. 1 and 1.0 represent different types in programming.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Nothing. They might be of different types, but types don't matter in programming</p>
+        </statement>
+        <feedback>
+          <p>Try again. 1 and 1.0 are different types. And types are very important in programming.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1 is an integer and 1.0 is a string, because of the character</p>
+        </statement>
+        <feedback>
+          <p>Try again. 1 is an integer but 1.0 is not a string. It has a decimal place, so 1.0 is a float.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>1 is an integer and 1.0 is a floating-point number</p>
+        </statement>
+        <feedback>
+          <p>Correct! 1 and 1.0 represent different types in programming. And 1.0 with a decimal place is a float.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1.0 is an integer and 1 is a floating-point number</p>
+        </statement>
+        <feedback>
+          <p>Try again. An integer does not have any decimal place but a float does.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_2_12">
+    <statement>
+      <p>csp-10-2-4: What is the value of <c>y</c> after this code runs?</p>
+      <program language="python">
+        <input>
+x = 37
+y = x + 2
+x = 20
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>39</p>
+        </statement>
+        <feedback>
+          <p>Correct! + operator adds x and 2 together, and x equals to 37. Therefore, y equals to the sum of 37 and 2.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>22</p>
+        </statement>
+        <feedback>
+          <p>Try again. + operator adds x and 2 together, and x equals to 37. Therefore, y equals to the sum of 37 and 2. Integers are immutable in Python. The later changes in x do not affect the value of y.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>35</p>
+        </statement>
+        <feedback>
+          <p>Try again. + operator adds x and 2 together, and x equals to 37. Therefore, y equals to the sum of 37 and 2.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>20</p>
+        </statement>
+        <feedback>
+          <p>Try again. + operator adds x and 2 together, and x equals to 37. Therefore, y equals to the sum of 37 and 2. Integers are immutable in Python. The later changes in x do not affect the value of y.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>18</p>
+        </statement>
+        <feedback>
+          <p>Try again. + operator adds x and 2 together, and x equals to 37. Therefore, y equals to the sum of 37 and 2. Integers are immutable in Python. The later changes in x do not affect the value of y.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_2_13">
+    <statement>
+      <p>csp-10-2-5: What is the value of <c>y</c> after this code runs?</p>
+      <program language="python">
+        <input>
+x = 37
+y = x - 2
+x = 20
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>39</p>
+        </statement>
+        <feedback>
+          <p>Try again. - operator means x substracts 2, and x equals to 37. Therefore, y equals to the 35.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>22</p>
+        </statement>
+        <feedback>
+          <p>Try again. - operator means x substracts 2, and x equals to 37. Therefore, y equals to the 35. Integers are immutable in Python. The later changes in x do not affect the value of y.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>35</p>
+        </statement>
+        <feedback>
+          <p>Correct! - operator means x substracts 2, and x equals to 37. Therefore, y equals to the 35.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>20</p>
+        </statement>
+        <feedback>
+          <p>Try again. - operator means x substracts 2, and x equals to 37. Therefore, y equals to the 35. Integers are immutable in Python. The later changes in x do not affect the value of y.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>18</p>
+        </statement>
+        <feedback>
+          <p>Try again. - operator means x substracts 2, and x equals to 37. Therefore, y equals to the 35. Integers are immutable in Python. The later changes in x do not affect the value of y.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_4_3">
+    <statement>
+      <p>csp-10-2-6: What does the following code print?</p>
+      <program language="python">
+        <input>
+a = 3
+b = (a != 3)
+print(b)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>Try again. != means not equal. Because a equals to 3, it returns bool value False. Therefore, b = False.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>Correct! != means not equal. Because a equals to 3, it returns bool value False. Therefore, b = False.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Try again. != means not equal. Because a equals to 3, it returns bool value False. Therefore, b = False.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Syntax error</p>
+        </statement>
+        <feedback>
+          <p>Try again. != means not equal. Because a equals to 3, it returns bool value False. Therefore, b = False.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_4_4">
+    <statement>
+      <p>csp-10-2-7: What does the following code print?</p>
+      <program language="python">
+        <input>
+a = 3
+b = (a == 3)
+print(b)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>Correct! == tests for equality. Because a equals to 3, it returns bool value True. Therefore, b = True.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>Try again. == tests for equality. Because a equals to 3, it returns bool value True. Therefore, b = True.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Try again. == tests for equality. Because a equals to 3, it returns bool value True. Therefore, b = True.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Syntax error</p>
+        </statement>
+        <feedback>
+          <p>Try again. == tests for equality. Because a equals to 3, it returns bool value True. Therefore, b = True.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_4_6">
+    <statement>
+      <p>csp-10-2-8: I would like an expression that evaluates to True exactly when at least one of the following two conditions is true: (1) <c>a</c> and <c>b</c> are equal, (2) when <c>a</c> has value 5. Which of these expressions does that?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>a == b == 5</p>
+        </statement>
+        <feedback>
+          <p>Try again. The expression here means a and b are equal to 5.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>a == b or a == 5</p>
+        </statement>
+        <feedback>
+          <p>Correct! or produces True exactly when at least one of its operands is True.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>a == b and a == 5</p>
+        </statement>
+        <feedback>
+          <p>Try again. And produces True exactly when both of its operands are True. The expression here evaluates to true when both of the two conditions are true.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>a == (b == 5)</p>
+        </statement>
+        <feedback>
+          <p>Try again. b == 5 returns a bool value. The expression here evaluates to true when b equals to 5 and a equals to bool value True.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_4_7">
+    <statement>
+      <p>csp-10-2-9: What is the value of the last expression? (Remember that <c>not</c> has the highest precedence, then <c>and</c>, then <c>or</c>.)</p>
+      <program language="python">
+        <input>
+a = True
+b = False
+c = True
+not a and b or c
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>Correct! not a returns false. False and b returns False. or produces True exactly when at least one of its operands is True. Therefore, the final result returns True.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>Try again. not a returns false because 'not' is a Logical operator in Python that will return True if the expression is False. And produces True exactly when both of its operands are True. So False and b returns False. or produces True exactly when at least one of its operands is True. Therefore, the final result returns True.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_4_9">
+    <statement>
+      <p>csp-10-2-10: Assume that a refers to a three-digit integer. Which of the following evaluates to the middle digit of <c>a</c>? (For example, if a referred to value 456, we want an expression with value 5.)</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>(a // 10) % 10</p>
+        </statement>
+        <feedback>
+          <p>Try again. A is correct but b is also right. a % 100 returns the middle and right digit of a. // 10 returns the middle digit.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>(a % 100) // 10</p>
+        </statement>
+        <feedback>
+          <p>Try again. B is correct but a is also right. a // 10 returns the left and middle digit of a. % 10 returns the middle digit.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>(a % 10) // 10</p>
+        </statement>
+        <feedback>
+          <p>Try again. C cannot return the middle digit. a % 10 returns the right digit of a. // 10 still gets the right digit.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>More than one of the above</p>
+        </statement>
+        <feedback>
+          <p>Correct! Both A and B are correct!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above</p>
+        </statement>
+        <feedback>
+          <p>Try again. A and B are both correct! In the option A, a % 100 returns the middle and right digit of a. // 10 returns the middle digit. In the option B, a // 10 returns the left and middle digit of a. % 10 returns the middle digit.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

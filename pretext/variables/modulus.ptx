@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<section xml:id="variables_modulus-operator">
+  <title>Modulus operator</title>
+<idx><h>Modulus</h><h>Operator</h></idx>
+<idx><h>Operator</h><h>Modulus</h></idx>
+<idx>Divisibility</idx>
+  <p>The <em>modulus operator</em> works on integers and yields the
+            remainder when the first operand is divided by the second. In Python,
+            the modulus operator is a percent sign ( <c>%</c> ). The syntax is the same as
+            for other operators:</p>
+  <program xml:id="var-ac-7-mod" interactive="activecode" language="python">
+    <input>
+quotient = 7 // 3
+print(quotient)
+remainder = 7 % 3
+print(remainder)
+        </input>
+  </program>
+  <p>So 7 divided by 3 is 2 with 1 left over.</p>
+  <p>The modulus operator turns out to be surprisingly useful. For example,
+            you can check whether one number is divisible by another: if <c>x&#160;%&#160;y</c> is zero, then <c>x</c> is divisible by <c>y</c>.</p>
+  <p>You can also extract the right-most digit or digits from a number. For
+            example, <c>x&#160;%&#160;10</c> yields the right-most digit of
+            <c>x</c> (in base 10). Similarly, <c>x&#160;%&#160;100</c> yields the
+            last two digits.</p>
+  <exercise label="var-mod-mc-18-mod-5">
+    <statement>
+      <p>csp-10-2-2: What is the result of <c>18 % 5</c>?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>0</p>
+        </statement>
+        <feedback>
+          <p>This would be correct if it was <code>18 % 2</code>, but what is the remainder of 18 divided by 5?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>This would be correct if it was <code>18 % 17</code>, since 17 goes into 18 one time and the remainder is 18 - 17 = 1.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>2</p>
+        </statement>
+        <feedback>
+          <p>What is the highest multiple of 5 that is less than or equal to 18? The remainder is 18 - that number.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>The reminder is 3 since 5 goes into 18 three times (15) and 18 - 15 = 3.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="var-mod-mc-2-mod-3">
+    <statement>
+      <p>csp-10-2-3: What is the result of <c>2 % 3</c>?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>2</p>
+        </statement>
+        <feedback>
+          <p>The remainder when a smaller number is divided by a larger number is the smaller number.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>8</p>
+        </statement>
+        <feedback>
+          <p>This would be true if it was 2 raised to the 3rd power, but it is modulus.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>This would be true if it was <code>3 % 2</code>.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>0.66666</p>
+        </statement>
+        <feedback>
+          <p>This would be true if it was floating point division, but it is modulus.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="var-mod-dnd-division">
+    <statement>
+      <p>Match each expression with the type of division the operator performs.</p>
+    </statement>
+    <feedback>
+      <p>Try out these expressions in terminal or review the operators and operands section.</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>7 / 2</premise>
+        <response>division</response>
+      </match>
+      <match order="2">
+        <premise>90 // 4</premise>
+        <response>floored division</response>
+      </match>
+      <match order="3">
+        <premise>45 % 6</premise>
+        <response>remainder</response>
+      </match>
+    </matches>
+  </exercise>
+  <exercise label="var-fitb-6-mod">
+    <statement>
+      <p>csp-10-2-5: What is the result of <c>25 % 4</c>? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition number="1">
+          <feedback>
+            <p>25 % 4 has a remainder of 1.</p>
+          </feedback>
+        </condition>
+        <condition number="6">
+          <feedback>
+            <p>6 is the result of 25 // 4, try using modulus in terminal.</p>
+          </feedback>
+        </condition>
+        <condition number="6.25">
+          <feedback>
+            <p>6.25 is the result of 25 / 4, try using modulus in terminal.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Not quite, try using modulus in terminal.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+</section>

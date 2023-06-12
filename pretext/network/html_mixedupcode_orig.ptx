@@ -1,0 +1,542 @@
+<?xml version="1.0"?>
+<section xml:id="network_html-mixed-up-code-questions">
+  <title>Mixed-Up Code Questions</title>
+  <exercise label="html_mixedupcode_1" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create an HTML page with your name as the <c>title</c> tag in the <c>head</c> tag, <q>Favorite Activities</q> as the <c>h1</c> tag in
+            the <c>body</c> tag, and a description of your favorite activites in the <c>p</c> tag in the <c>body</c> tag, also. For example, if the name was <q>Melody</q> and
+            the description of the favorite activities was <q>I like to swim.</q>, the tab would show <q>Melody</q>, <q>Favorite Activites</q> would appear as bold on the
+            webpage as the first line, and <q>I like to swim.</q> would be below that as regular font (smaller font size without bold).</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <cline>&lt;!DOCTYPE html&gt;</cline>
+      </block>
+      <block order="8">
+        <cline>&lt;html&gt;</cline>
+      </block>
+      <block order="6">
+        <cline>    &lt;head&gt;</cline>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>        &lt;title&gt;Melody&lt;/title&gt;</cline>
+        </choice>
+        <choice>
+          <cline>        &lt;title&gt;Melody&lt;title&gt; </cline>
+        </choice>
+      </block>
+      <block order="12">
+        <cline>    &lt;/head&gt;</cline>
+      </block>
+      <block order="2">
+        <cline>    &lt;body&gt;</cline>
+      </block>
+      <block order="11">
+        <choice correct="yes">
+          <cline>        &lt;h1&gt;Favorite Activites&lt;/h1&gt;</cline>
+        </choice>
+        <choice>
+          <cline>        &lt;h1&gt;Favorite Activites&lt;h1&gt; </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>        &lt;p&gt;</cline>
+      </block>
+      <block order="5">
+        <cline>            I like to swim.</cline>
+      </block>
+      <block order="4">
+        <cline>        &lt;/p&gt;</cline>
+      </block>
+      <block order="13">
+        <cline>    &lt;/body&gt;</cline>
+      </block>
+      <block order="7">
+        <cline>&lt;/html&gt;</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="html_mixedupcode_2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create an HTML page with your name as the <c>title</c> tag in the <c>head</c> tag, <q>Favorite Activities</q> as the <c>h1</c> tag in
+            the <c>body</c> tag, and a red-colored description of your favorite activites in the <c>p</c> tag in the <c>body</c> tag, also.
+            For example, if the name was <q>Melody</q> and the description of the favorite activities was <q>I like to swim.</q>, the tab would
+            show <q>Melody</q>, <q>Favorite Activites</q> would appear as bold on the webpage as the first line, and <q>I like to swim.</q> would be below
+            that in red as regular font (smaller font size without bold).</p>
+    </statement>
+    <blocks>
+      <block order="7">
+        <cline>&lt;!DOCTYPE html&gt;</cline>
+      </block>
+      <block order="3">
+        <cline>&lt;html&gt;</cline>
+      </block>
+      <block order="4">
+        <cline>    &lt;head&gt;</cline>
+      </block>
+      <block order="5">
+        <cline>        &lt;title&gt;Melody&lt;/title&gt;</cline>
+      </block>
+      <block order="10">
+        <cline>    &lt;/head&gt;</cline>
+      </block>
+      <block order="6">
+        <cline>    &lt;body&gt;</cline>
+      </block>
+      <block order="8">
+        <cline>        &lt;h1&gt;Favorite Activites&lt;/h1&gt;</cline>
+      </block>
+      <block order="11">
+        <choice correct="yes">
+          <cline>        &lt;p style="color:red;"&gt;I like to swim.&lt;/p&gt;</cline>
+        </choice>
+        <choice>
+          <cline>        &lt;p&gt;&lt;style="color:red;"&gt;I like to swim.&lt;/style&gt;&lt;/p&gt; </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <cline>        &lt;p style = "color: red;"&gt;I like to swim.&lt;/p&gt; </cline>
+      </block>
+      <block order="2">
+        <cline>    &lt;/body&gt;</cline>
+      </block>
+      <block order="1">
+        <cline>&lt;/html&gt;</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="html_mixedupcode_3" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create an HTML page with your name as the <c>title</c> tag in the <c>head</c> tag, <q>Favorite Activities</q> as the <c>h1</c> tag in
+            the <c>body</c> tag, and a 25 pixel font-sized description of your favorite activites in the <c>p</c> tag in the <c>body</c> tag, also.
+            For example, if the name was <q>Melody</q> and the description of the favorite activities was <q>I like to swim.</q>, the tab would
+            show <q>Melody</q>, <q>Favorite Activites</q> would appear as bold on the webpage as the first line, and <q>I like to swim.</q> would be below
+            that with a size of 25 pixels.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>&lt;!DOCTYPE html&gt;</cline>
+      </block>
+      <block order="7">
+        <cline>&lt;html&gt;</cline>
+      </block>
+      <block order="6">
+        <cline>    &lt;head&gt;</cline>
+      </block>
+      <block order="9">
+        <cline>        &lt;title&gt;Melody&lt;/title&gt;</cline>
+      </block>
+      <block order="8">
+        <cline>    &lt;/head&gt;</cline>
+      </block>
+      <block order="12">
+        <cline>    &lt;body&gt;</cline>
+      </block>
+      <block order="10">
+        <cline>        &lt;h1&gt;Favorite Activites&lt;/h1&gt;</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>        &lt;p style="font-size:25px;"&gt;I like to swim.&lt;/p&gt;</cline>
+        </choice>
+        <choice>
+          <cline>        &lt;p style="fontsize:25px;"&gt;I like to swim.&lt;/p&gt; </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>        &lt;p style="font-size:25 px;"&gt;I like to swim.&lt;/p&gt; </cline>
+      </block>
+      <block order="11">
+        <cline>    &lt;/body&gt;</cline>
+      </block>
+      <block order="4">
+        <cline>&lt;/html&gt;</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="html_mixedupcode_4" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create an HTML page with your name as the <c>title</c> tag in the <c>head</c> tag, <q>Favorite Activities</q> as the <c>h1</c> tag in
+            the <c>body</c> tag, and a description of your favorite activites with the font <q>Brush Script MT</q> in the <c>p</c> tag in the <c>body</c> tag, also.
+            For example, if the name was <q>Melody</q> and the description of the favorite activities was <q>I like to swim.</q>, the tab would
+            show <q>Melody</q>, <q>Favorite Activites</q> would appear as bold on the webpage as the first line, and <q>I like to swim.</q> would be below
+            in the font <q>Brush Script MT</q> (cursive looking).</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <cline>&lt;!DOCTYPE html&gt;</cline>
+      </block>
+      <block order="7">
+        <cline>&lt;html&gt;</cline>
+      </block>
+      <block order="5">
+        <cline>    &lt;head&gt;</cline>
+      </block>
+      <block order="2">
+        <cline>        &lt;title&gt;Melody&lt;/title&gt;</cline>
+      </block>
+      <block order="4">
+        <cline>    &lt;/head&gt;</cline>
+      </block>
+      <block order="3">
+        <cline>    &lt;body&gt;</cline>
+      </block>
+      <block order="1">
+        <cline>        &lt;h1&gt;Favorite Activites&lt;/h1&gt;</cline>
+      </block>
+      <block order="10">
+        <choice correct="yes">
+          <cline>        &lt;p style="font-family:Brush Script MT;"&gt;I like to swim.&lt;/p&gt;</cline>
+        </choice>
+        <choice>
+          <cline>        &lt;p style="font:Brush Script MT;"&gt;I like to swim.&lt;/p&gt; </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <cline>    &lt;/body&gt;</cline>
+      </block>
+      <block order="8">
+        <cline>&lt;/html&gt;</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="html_mixedupcode_5" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create an HTML page with your name as the <c>title</c> tag in the <c>head</c> tag, <q>Favorite Activities</q> as the <c>h1</c> tag in
+            the <c>body</c> tag, and a description of your favorite activites with the activity name blue in the <c>p</c> tag in the <c>body</c> tag, also.
+            For example, if the name was <q>Melody</q> and the description of the favorite activities was <q>I like to swim.</q>, the tab would
+            show <q>Melody</q>, <q>Favorite Activites</q> would appear as bold on the webpage as the first line, and <q>I like to swim.</q> would be below
+            in a regular font with the word <q>swim</q> as blue.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>&lt;!DOCTYPE html&gt;</cline>
+      </block>
+      <block order="3">
+        <cline>&lt;html&gt;</cline>
+      </block>
+      <block order="6">
+        <cline>    &lt;head&gt;</cline>
+      </block>
+      <block order="8">
+        <cline>        &lt;title&gt;Melody&lt;/title&gt;</cline>
+      </block>
+      <block order="2">
+        <cline>    &lt;/head&gt;</cline>
+      </block>
+      <block order="1">
+        <cline>    &lt;body&gt;</cline>
+      </block>
+      <block order="11">
+        <cline>        &lt;h1&gt;Favorite Activites&lt;/h1&gt;</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>        &lt;p&gt;I like to &lt;span style="color:blue;"&gt;swim&lt;/span&gt;.&lt;/p&gt;</cline>
+        </choice>
+        <choice>
+          <cline>        &lt;p&gt;I &lt;span style="color:blue;"&gt;like to swim&lt;/span&gt;.&lt;/p&gt; </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <cline>    &lt;/body&gt;</cline>
+      </block>
+      <block order="10">
+        <cline>&lt;/html&gt;</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="html_mixedupcode_6" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create an HTML page with your name as the <c>title</c> tag in the <c>head</c> tag, <q>Favorite Activities</q> as the <c>h1</c> tag in
+            the <c>body</c> tag, and a <c>div</c> tag with a purple background color and the description of your favorite activites
+            in multiple <c>p</c> tags in the <c>div</c> tag in the <c>body</c> tag. For example, if the name was <q>Melody</q> and the description of the favorite activities
+            was <q>I like to swim.</q> in one <c>p</c> tag and <q>I like to eat.</q> in a second <c>p</c> tag, the tab would show <q>Melody</q>, <q>Favorite Activites</q> would appear as
+            bold on the webpage as the first line, and <q>I like to swim.</q> and <q>I like to eat.</q> would be below in regular font with a purple background.</p>
+    </statement>
+    <blocks>
+      <block order="8">
+        <cline>&lt;!DOCTYPE html&gt;</cline>
+      </block>
+      <block order="13">
+        <cline>&lt;html&gt;</cline>
+      </block>
+      <block order="10">
+        <cline>    &lt;head&gt;</cline>
+      </block>
+      <block order="18">
+        <choice correct="yes">
+          <cline>        &lt;title&gt;Melody&lt;/title&gt;</cline>
+        </choice>
+        <choice>
+          <cline>        &lt;title&gt;Melody&lt;title&gt; </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>    &lt;/head&gt;</cline>
+      </block>
+      <block order="6">
+        <cline>    &lt;body&gt;</cline>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>        &lt;h1&gt;Favorite Activites&lt;/h1&gt;</cline>
+        </choice>
+        <choice>
+          <cline>        &lt;h1&gt;Favorite Activites&lt;h1&gt; </cline>
+        </choice>
+      </block>
+      <block order="11">
+        <cline>        &lt;div style="background-color:purple"&gt;</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>            &lt;p&gt;I like to swim.&lt;/p&gt;</cline>
+        </choice>
+        <choice>
+          <cline>            &lt;p&gt;I like to swim.&lt;p&gt; </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>            &lt;p&gt;I like to eat.&lt;/p&gt;</cline>
+        </choice>
+        <choice>
+          <cline>            &lt;p&gt;I like to eat.&lt;p&gt; </cline>
+        </choice>
+      </block>
+      <block order="15">
+        <cline>        &lt;/div&gt;</cline>
+      </block>
+      <block order="3">
+        <cline>    &lt;/div&gt;</cline>
+      </block>
+      <block order="14">
+        <cline>    &lt;/body&gt;</cline>
+      </block>
+      <block order="12">
+        <cline>&lt;/html&gt;</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="html_mixedupcode_7" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create an HTML page with your name as the <c>title</c> tag in the <c>head</c> tag, <q>Favorite Activities</q> as the <c>h1</c> tag in
+            the <c>body</c> tag, a description of your favorite activites in the <c>p</c> tag in the <c>body</c> tag, and a description with a link to a related
+            article in the <c>a</c> tag in the <c>body</c> tag. For example, if the name was <q>Melody</q>, the description of the favorite activities
+            was <q>I like to swim.</q>, the description of the link was <q>Here are some benefits of swimming!</q>, and the link was
+            <q><url href="https://www.healthline.com/health/benefits-of-swimming" visual="https://www.healthline.com/health/benefits-of-swimming">https://www.healthline.com/health/benefits-of-swimming</url></q>, the tab would show <q>Melody</q>, <q>Favorite Activites</q> would appear as bold on the webpage
+            as the first line, <q>I like to swim.</q> would be below in a regular font, and <q>Here are some benefits of swimming!</q> would appear below that
+            with it being linked to <q><url href="https://www.healthline.com/health/benefits-of-swimming" visual="https://www.healthline.com/health/benefits-of-swimming">https://www.healthline.com/health/benefits-of-swimming</url></q>.</p>
+    </statement>
+    <blocks>
+      <block order="7">
+        <cline>&lt;!DOCTYPE html&gt;</cline>
+      </block>
+      <block order="2">
+        <cline>&lt;html&gt;</cline>
+      </block>
+      <block order="5">
+        <cline>    &lt;head&gt;</cline>
+      </block>
+      <block order="4">
+        <cline>        &lt;title&gt;Melody&lt;/title&gt;</cline>
+      </block>
+      <block order="6">
+        <cline>    &lt;/head&gt;</cline>
+      </block>
+      <block order="11">
+        <cline>    &lt;body&gt;</cline>
+      </block>
+      <block order="1">
+        <cline>        &lt;h1&gt;Favorite Activites&lt;/h1&gt;</cline>
+      </block>
+      <block order="12">
+        <cline>        &lt;p&gt;I like to swim.&lt;/p&gt;</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>        &lt;a href="https://www.healthline.com/health/benefits-of-swimming"&gt;Here are some benefits of swimming!&lt;/a&gt;</cline>
+        </choice>
+        <choice>
+          <cline>        &lt;a href="https://www.healthline.com/health/benefits-of-swimming" Here are some benefits of swimming!&gt;&lt;/a&gt; </cline>
+        </choice>
+      </block>
+      <block order="8">
+        <cline>    &lt;/body&gt;</cline>
+      </block>
+      <block order="9">
+        <cline>&lt;/html&gt;</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="html_mixedupcode_8" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create an HTML page with your name as the <c>title</c> tag in the <c>head</c> tag, <q>Favorite Activities</q> as the <c>h1</c> tag in
+            the <c>body</c> tag, and a description of your favorite activites in the <c>p</c> tag in the <c>body</c> tag, also. For example, if the name was <q>Melody</q> and
+            the description of the favorite activities was <q>I like to swim.</q>, the tab would show <q>Melody</q>, <q>Favorite Activites</q> would appear as bold on the
+            webpage as the first line, and <q>I like to swim.</q> would be below that as regular font (smaller font size without bold).</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <cline>&lt;!DOCTYPE html&gt;</cline>
+      </block>
+      <block order="14">
+        <cline>&lt;html&gt;</cline>
+      </block>
+      <block order="7">
+        <cline>    &lt;head&gt;</cline>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>        &lt;title&gt;Melody&lt;/title&gt;</cline>
+        </choice>
+        <choice>
+          <cline>        &lt;title&gt;Melody&lt;title&gt; </cline>
+        </choice>
+      </block>
+      <block order="13">
+        <cline>    &lt;/head&gt;</cline>
+      </block>
+      <block order="3">
+        <cline>    &lt;body&gt;</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>        &lt;h1&gt;Favorite Activites&lt;/h1&gt;</cline>
+        </choice>
+        <choice>
+          <cline>        &lt;h1&gt;Favorite Activites&lt;h1&gt; </cline>
+        </choice>
+      </block>
+      <block order="12">
+        <cline>        &lt;p&gt;</cline>
+      </block>
+      <block order="5">
+        <cline>            I like to swim.</cline>
+      </block>
+      <block order="6">
+        <cline>        &lt;/p&gt;</cline>
+      </block>
+      <block order="8">
+        <cline>    &lt;/body&gt;</cline>
+      </block>
+      <block order="10">
+        <cline>&lt;/html&gt;</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="html_mixedupcode_9" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create an HTML page with your name as the <c>title</c> tag in the <c>head</c> tag, <q>Favorite Activities</q> as the <c>h1</c> tag in
+            the <c>body</c> tag, and a description of your favorite activites in the <c>p</c> tag in the <c>body</c> tag, also. For example, if the name was <q>Melody</q> and
+            the description of the favorite activities was <q>I like to swim.</q>, the tab would show <q>Melody</q>, <q>Favorite Activites</q> would appear as bold on the
+            webpage as the first line, and <q>I like to swim.</q> would be below that as regular font (smaller font size without bold).</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>&lt;!DOCTYPE html&gt;</cline>
+      </block>
+      <block order="1">
+        <cline>&lt;html&gt;</cline>
+      </block>
+      <block order="9">
+        <cline>    &lt;head&gt;</cline>
+      </block>
+      <block order="10">
+        <choice correct="yes">
+          <cline>        &lt;title&gt;Melody&lt;/title&gt;</cline>
+        </choice>
+        <choice>
+          <cline>        &lt;title&gt;Melody&lt;title&gt; </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <cline>    &lt;/head&gt;</cline>
+      </block>
+      <block order="2">
+        <cline>    &lt;body&gt;</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>        &lt;h1&gt;Favorite Activites&lt;/h1&gt;</cline>
+        </choice>
+        <choice>
+          <cline>        &lt;h1&gt;Favorite Activites&lt;h1&gt; </cline>
+        </choice>
+      </block>
+      <block order="12">
+        <cline>        &lt;p&gt;</cline>
+      </block>
+      <block order="11">
+        <cline>            I like to swim.</cline>
+      </block>
+      <block order="14">
+        <cline>        &lt;/p&gt;</cline>
+      </block>
+      <block order="5">
+        <cline>    &lt;/body&gt;</cline>
+      </block>
+      <block order="6">
+        <cline>&lt;/html&gt;</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="html_mixedupcode_10" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create an HTML page with your name as the <c>title</c> tag in the <c>head</c> tag, <q>Favorite Activities</q> as the <c>h1</c> tag in
+            the <c>body</c> tag, and a description of your favorite activites in the <c>p</c> tag in the <c>body</c> tag, also. For example, if the name was <q>Melody</q> and
+            the description of the favorite activities was <q>I like to swim.</q>, the tab would show <q>Melody</q>, <q>Favorite Activites</q> would appear as bold on the
+            webpage as the first line, and <q>I like to swim.</q> would be below that as regular font (smaller font size without bold).</p>
+    </statement>
+    <blocks>
+      <block order="7">
+        <cline>&lt;!DOCTYPE html&gt;</cline>
+      </block>
+      <block order="4">
+        <cline>&lt;html&gt;</cline>
+      </block>
+      <block order="14">
+        <cline>    &lt;head&gt;</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>        &lt;title&gt;Melody&lt;/title&gt;</cline>
+        </choice>
+        <choice>
+          <cline>        &lt;title&gt;Melody&lt;title&gt; </cline>
+        </choice>
+      </block>
+      <block order="10">
+        <cline>    &lt;/head&gt;</cline>
+      </block>
+      <block order="5">
+        <cline>    &lt;body&gt;</cline>
+      </block>
+      <block order="11">
+        <choice correct="yes">
+          <cline>        &lt;h1&gt;Favorite Activites&lt;/h1&gt;</cline>
+        </choice>
+        <choice>
+          <cline>        &lt;h1&gt;Favorite Activites&lt;h1&gt; </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <cline>        &lt;p&gt;</cline>
+      </block>
+      <block order="3">
+        <cline>            I like to swim.</cline>
+      </block>
+      <block order="6">
+        <cline>        &lt;/p&gt;</cline>
+      </block>
+      <block order="12">
+        <cline>    &lt;/body&gt;</cline>
+      </block>
+      <block order="13">
+        <cline>&lt;/html&gt;</cline>
+      </block>
+    </blocks>
+  </exercise>
+</section>

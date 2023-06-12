@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<section xml:id="database_structured-query-language-summary">
+  <title>Structured Query Language summary</title>
+      <idx>SQL</idx>
+    <idx><h>SQL</h><h>SELECT</h></idx>
+    <idx><h>SELECT</h><h>SQL</h></idx>
+
+  <p>So far, we have been using the Structured Query Language in our Python
+            examples and have covered many of the basics of the SQL commands. In
+            this section, we look at the SQL language in particular and give an
+            overview of SQL syntax.</p>
+  <p>Since there are so many different database vendors, the Structured Query
+            Language (SQL) was standardized so we could communicate in a portable
+            manner to database systems from multiple vendors.</p>
+  <p>A relational database is made up of tables, rows, and columns. The
+            columns generally have a type such as text, numeric, or date data. When
+            we create a table, we indicate the names and types of the columns:</p>
+  <program language="{.sql}">
+    <input>
+CREATE TABLE Tracks (title TEXT, plays INTEGER)
+</input>
+  </program>
+  <p>To insert a row into a table, we use the SQL <c>INSERT</c>
+            command:</p>
+  <program language="{.sql}">
+    <input>
+INSERT INTO Tracks (title, plays) VALUES ('My Way', 15)
+</input>
+  </program>
+  <p>The <c>INSERT</c> statement specifies the table name, then a list
+            of the fields/columns that you would like to set in the new row, and
+            then the keyword <c>VALUES</c> and a list of corresponding values
+            for each of the fields.</p>
+  <p>The SQL <c>SELECT</c> command is used to retrieve rows and columns
+            from a database. The <c>SELECT</c> statement lets you specify
+            which columns you would like to retrieve as well as a <c>WHERE</c>
+            clause to select which rows you would like to see. It also allows an
+            optional <c>ORDER BY</c> clause to control the sorting of the
+            returned rows.</p>
+  <program language="{.sql}">
+    <input>
+SELECT * FROM Tracks WHERE title = 'My Way'
+</input>
+  </program>
+  <exercise label="dbSQL_fill">
+    <statement>
+      <p>Q-1: What is the SQL command that is used to add new data to a table? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="INSERT">
+          <feedback>
+            <p>INSERT is used to add a new row of values to a table.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>Using <c>*</c> indicates that you want the database to return all of the
+            columns for each row that matches the <c>WHERE</c> clause.</p>
+  <note>
+    <p>Note, unlike in Python, in a SQL <c>WHERE</c> clause we use a single equal sign to indicate a test for equality rather than a double equal sign.</p>
+  </note>
+  <dl>
+    <li>
+      <title>Other logical operations allowed in a <c>WHERE</c></title>
+      <p>clause include <c>&lt;</c>, <c>&gt;</c>, <c>&lt;=</c>, <c>&gt;=</c>, <c>!=</c>, as well as <c>AND</c>
+                        and <c>OR</c> and parentheses to build your logical expressions.</p>
+    </li>
+  </dl>
+  <exercise label="dbSQL_fill2">
+    <statement>
+      <p>Q-2: What is the symbol that is used to return all information for a row that matches a WHERE statement? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="\*">
+          <feedback>
+            <p>
+              <ul>
+                <li>
+                  <p>indicates that you want the database to return all of the columns for each row that matches the WHERE clause.</p>
+                </li>
+              </ul>
+            </p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>You can request that the returned rows be sorted by one of the fields as
+            follows:</p>
+  <program language="{.sql}">
+    <input>
+SELECT title,plays FROM Tracks ORDER BY title
+</input>
+  </program>
+  <p>To remove a row, you need a <c>WHERE</c> clause on an SQL
+            <c>DELETE</c> statement. The <c>WHERE</c> clause determines
+            which rows are to be deleted:</p>
+  <program language="{.sql}">
+    <input>
+DELETE FROM Tracks WHERE title = 'My Way'
+</input>
+  </program>
+  <p>It is possible to <c>UPDATE</c> a column or columns within one or
+            more rows in a table using the SQL <c>UPDATE</c> statement as
+            follows:</p>
+  <program language="{.sql}">
+    <input>
+UPDATE Tracks SET plays = 16 WHERE title = 'My Way'
+</input>
+  </program>
+  <p>The <c>UPDATE</c> statement specifies a table and then a list of
+            fields and values to change after the <c>SET</c> keyword and then
+            an optional <c>WHERE</c> clause to select the rows that are to be
+            updated. A single <c>UPDATE</c> statement will change all of the
+            rows that match the <c>WHERE</c> clause. If a <c>WHERE</c>
+            clause is not specified, it performs the <c>UPDATE</c> on all of
+            the rows in the table.</p>
+  <p>These four basic SQL commands (INSERT, SELECT, UPDATE, and DELETE) allow
+            the four basic operations needed to create and maintain data.</p>
+  <exercise label="db_SQLcommands_defs_dd">
+    <statement>
+      <p>Match each SQL command with what it does.</p>
+    </statement>
+    <feedback>
+      <p>Check above to see what each command does.</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>INSERT</premise>
+        <response> Tries to add a new row of information to a table</response>
+      </match>
+      <match order="2">
+        <premise>SELECT</premise>
+        <response> Tries to get information from a database</response>
+      </match>
+      <match order="3">
+        <premise>UPDATE</premise>
+        <response> Tries to change information in a database</response>
+      </match>
+      <match order="4">
+        <premise>DELETE</premise>
+        <response> Tries to remove information from a database</response>
+      </match>
+    </matches>
+  </exercise>
+</section>

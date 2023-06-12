@@ -1,0 +1,841 @@
+<?xml version="1.0"?>
+<exercises xml:id="iterations_multiple-choice-questions">
+  <title>Multiple Choice Questions</title>
+  <exercise label="e5mc1">
+    <statement>
+      <p>Q-1: What is the result of executing the following code?</p>
+      <pre>number = 5
+while number &lt;= 5:
+    if number &lt; 5:
+        number = number + 1
+    print(number)</pre>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>The program will loop indefinitely</p>
+        </statement>
+        <feedback>
+          <p>Correct! This code loops while number is less than or equal to 5. number only increments if it is less than 5, and it's originally set to 5, so 'number' never changes.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The value of number will be printed exactly 1 time</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This would be true if line 3 said "if number &lt;= 5:". Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The while loop will never get executed</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This would be true if number was initialized as a number larger than 5 to start. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The value of number will be printed exactly 5 times</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This would be true if number was initialized as 0. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="e5mc2">
+    <statement>
+      <p>Q-2: What will the following code print?</p>
+      <pre>counter = 1
+sum = 0
+while counter &lt;= 6:
+    sum = sum + counter
+    counter = counter + 2
+print(sum)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>12</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This would be true if counter was initialized as 0. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>9</p>
+        </statement>
+        <feedback>
+          <p>Correct! This loop executes 3 times.  After the first loop sum = 1 and counter = 3, after the second loop sum = 4 and counter = 5, and after the third loop sum = 9 and counter = 7.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>7</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This is the value of counter, but this code prints the value of sum. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>8</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This would be the value of counter after the loop if counter was initialized as 0. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="e5mc3">
+    <statement>
+      <p>Q-3: What will be printed by the following code when it executes?</p>
+      <pre>sum = 0
+values = [1,3,5,7]
+for number in values:
+    sum = sum + number
+print(sum)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>4</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This would be true if line 4 said "sum = sum + 1". Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>0</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Sum increases every iteration of the loop. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>7</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This would be true if line 4 said "sum = number". Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>16</p>
+        </statement>
+        <feedback>
+          <p>Correct! This adds up the numbers in values and prints the sum.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="e5mc4">
+    <statement>
+      <p>Q-4: What is the last thing printed when the following code is run?</p>
+      <pre>number = 0
+while number &lt;= 10:
+    print("Number: ", number)
+    number = number + 1</pre>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>Number: 10</p>
+        </statement>
+        <feedback>
+          <p>Correct! Since this while loop continues while number is less than or equal to 10, the last iteration of the loop will print "Number: 10".</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Number: number</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Because number is an variable, the print statement will print its value, not its name. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Number: 0</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Although number is initialized as 0, it increments each iteration. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Number: 11</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This would be true if number was incremented before each print statement instead of after. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="e5mc5">
+    <statement>
+      <p>Q-5: What does the following code print?</p>
+      <pre>output = ""
+x = -5
+while x &lt; 0:
+    x = x + 1
+    output = output + str(x) + " "
+print(output)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>5 4 3 2 1</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! x is initialized as -5, not 5. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>-4 -3 -2 -1 0</p>
+        </statement>
+        <feedback>
+          <p>Correct! The value of x is incremented before it is printed, so the first value printed is -4.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>-5 -4 -3 -2 -1</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! x is incremented before it is printed. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>This is an infinite loop, so nothing will be printed</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! x increases each loop and will eventually be positive. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="e5mc6">
+    <statement>
+      <p>Q-6: What are the values of var1 and var2 that are printed when the following code executes?</p>
+      <pre>output = ""
+var1 = -2
+var2 = 0
+while var1 != 0:
+    var1 = var1 + 1
+    var2 = var2 - 1
+print("var1: " + str(var1) + " var2 " + str(var2))</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>var1 = -2, var2 = 0</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! These are the initial values, but they change during the loop. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>var1 = 0, var2 = -2</p>
+        </statement>
+        <feedback>
+          <p>Correct! This loop will execute two times, so var1 will be 0 and var2 will be -2 when the loop is exited.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>var1 = 0, var2 = -1</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The body of the loop will finish executing before the value of var1 is re-tested. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>This is an infinite loop, so nothing will be printed</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! var1 will eventually equal 0, so this loop isn't infinite. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="e5mc7">
+    <statement>
+      <p>Q-7: How many asterisks will be printed when the following code executes?</p>
+      <pre>for x in [0, 1, 2, 3]:
+    for y in [0, 1, 2, 3, 4]:
+        print('*')</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>0</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Each loop will iterate as many times as there are elements in its list. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>4</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The print statement is inside of both loops. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>5</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The print statement is inside of both loops. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>20</p>
+        </statement>
+        <feedback>
+          <p>Correct! The outer loop will iterate 4 times and the inner loop will iterate 5 times. 4 times 5 = 20.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>This is an infinite loop, so nothing will be printed</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This loop is not infinite. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="e5mc8">
+    <statement>
+      <p>Q-8: The following code contains an infinite loop.  Which is the best explanation for why the loop does not terminate?</p>
+      <program language="python">
+        <input>
+n = 10
+answer = 1
+while n &gt; 0:
+    answer = answer + n
+    n = n + 1
+print(answer)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>n starts at 10 and is incremented by 1 each time through the loop, so it will always be positive.</p>
+        </statement>
+        <feedback>
+          <p>Correct! The loop will run as long as n is positive.  In this case, we can see that n will never become non-positive, so it will run infinitely.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>answer starts at 1 and is incremented by n each time, so it will always be positive.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! While it is true that answer will always be positive, answer is not considered in the loop condition. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>You cannot compare n to 0 in the while loop. You must compare it to another variable.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! It is perfectly valid to compare n to 0. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>In the while loop body, we must set n to False, and this code does not do that.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The loop condition must become False for the loop to terminate, but n by itself is not the condition in this case. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="e5mc9">
+    <statement>
+      <p>Q-9: Which type of loop can be used to perform the following iteration: You choose a positive integer at random and then print the numbers from 1 up to and including the selected integer.</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>a for-loop or a while-loop</p>
+        </statement>
+        <feedback>
+          <p>Correct! Although you do not know how many iterations you loop will run before the program starts running, once you have chosen your random integer, Python knows exactly how many iterations the loop will run, so either a for-loop or a while-loop will work.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>only a for-loop</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! As you learned in section 7.2, a while-loop can always be used for anything a for-loop can be used for. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>only a while-loop</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Although you do not know how many iterations you loop will run before the program starts running, once you have chosen your random integer, Python knows exactly how many iterations the loop will run, so this is an example of definite iteration. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="e5mc10">
+    <statement>
+      <p>Q-10: Which of the following statements won't be printed when this Python code is run?</p>
+      <program language="python">
+        <input>
+for letter in 'Python':
+    if letter == 'h':
+        continue
+    print('Current Letter : ' + letter)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Current Letter : P</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This will be printed. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Current Letter : t</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This will be printed. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Current Letter : h</p>
+        </statement>
+        <feedback>
+          <p>Correct! Because continue sends the loop to the next iteration at h, it will not print "Current Letter: h".</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Current Letter : o</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This will be printed. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="e5mc11">
+    <statement>
+      <p>Q-11: What will the following code print?</p>
+      <pre>def mystery(str):
+    out = ""
+    for char in str:
+        if char == "i":
+            break
+        if char == 'a':
+            continue
+        out += char
+    return out
+
+print(mystery("walking"))</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>walking</p>
+        </statement>
+        <feedback>
+          <p>Not all of the characters will be added to the output string.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>wlking</p>
+        </statement>
+        <feedback>
+          <p>This would be true if it didn't break when it found an 'i'</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>wlk</p>
+        </statement>
+        <feedback>
+          <p>It will not add the 'a' and will stop when it reaches the 'i'</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>wlkng</p>
+        </statement>
+        <feedback>
+          <p>This would be true if when it found an 'i' it did a continue rather than a break</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="e5mc12">
+    <statement>
+      <p>Q-12: Which of the following will add up the numbers from 1 to 4?</p>
+      <p>
+        <ol marker="1">
+          <li>
+            </li>
+        </ol>
+      </p>
+      <program language="python">
+        <input>
+for i in range(1,4):
+    sum = 0
+    sum = sum + i
+</input>
+      </program>
+      <p>
+        <ol marker="1">
+          <li>
+            </li>
+        </ol>
+      </p>
+      <program language="python">
+        <input>
+sum = 0
+for i in range(1,4):
+    sum = sum + i
+</input>
+      </program>
+      <p>
+        <ol marker="1">
+          <li>
+            </li>
+        </ol>
+      </p>
+      <program language="python">
+        <input>
+for i in range(1,5):
+    sum = 0
+    sum = sum + i
+</input>
+      </program>
+      <p>
+        <ol marker="1">
+          <li>
+            </li>
+        </ol>
+      </p>
+      <program language="python">
+        <input>
+sum = 0
+for i in range(1,5):
+    sum = sum + sum
+</input>
+      </program>
+      <p>
+        <ol marker="1">
+          <li>
+            </li>
+        </ol>
+      </p>
+      <program language="python">
+        <input>
+sum = 0
+for i in range(1,5):
+    sum = sum + i
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1.</p>
+        </statement>
+        <feedback>
+          <p>This will loop from 1 to 3 and reset sum to 0 at the start of each iteration.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>2.</p>
+        </statement>
+        <feedback>
+          <p>This will loop from 1 to 3.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3.</p>
+        </statement>
+        <feedback>
+          <p>This will loop from 1 to 4, but will reset the sum to 0 at the start of each iteration.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>4.</p>
+        </statement>
+        <feedback>
+          <p>This will loop from 1 to 4, but adds sum to itself.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>5.</p>
+        </statement>
+        <feedback>
+          <p>This will loop from 1 to 4 and calculate the sum of those values.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="e5mc13">
+    <statement>
+      <p>Q-13: What will the following code print?</p>
+      <pre>def mystery(nums):
+    out = []
+    for num in nums:
+        if num &lt; 0:
+            continue
+        else:
+            out.append(num)
+    return out
+
+print(mystery([3, -3, -2, 1]))</pre>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>[3, 1]</p>
+        </statement>
+        <feedback>
+          <p>This adds any non negative values to the out list.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[3, -2, 1]</p>
+        </statement>
+        <feedback>
+          <p>This will not add any negative values to the list.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[3]</p>
+        </statement>
+        <feedback>
+          <p>This would be true if the continue was a break</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[3, -3, -2, 1]</p>
+        </statement>
+        <feedback>
+          <p>This would be true if it just added all values to out</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="e5mc14">
+    <statement>
+      <p>Q-14: Which of the following will print five rows with five &#x2018;*' in each row?</p>
+      <p>
+        <ol marker="1">
+          <li>
+            </li>
+        </ol>
+      </p>
+      <program language="python">
+        <input>
+for i in range(0,5):
+    print("*" * i)
+</input>
+      </program>
+      <p>
+        <ol marker="1">
+          <li>
+            </li>
+        </ol>
+      </p>
+      <program language="python">
+        <input>
+for i in range(0,5):
+    print("*" * 5)
+</input>
+      </program>
+      <p>
+        <ol marker="1">
+          <li>
+            </li>
+        </ol>
+      </p>
+      <program language="python">
+        <input>
+for i range(1,5):
+    print("*" * i)
+</input>
+      </program>
+      <p>
+        <ol marker="1">
+          <li>
+            </li>
+        </ol>
+      </p>
+      <program language="python">
+        <input>
+for i in range(1,5):
+    print("*" * 5)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1.</p>
+        </statement>
+        <feedback>
+          <p>This will loop 5 times (0 to 4) and print 0 "*" on the first row, 1 on the second, etc.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>2.</p>
+        </statement>
+        <feedback>
+          <p>This will loop 5 times (0 to 4) and print five "*" on each row.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3.</p>
+        </statement>
+        <feedback>
+          <p>This will loop 4 times (1 to 4) and print 0 "*" on the first row, 1 on the second, etc.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>4.</p>
+        </statement>
+        <feedback>
+          <p>This will loop 4 times (1 to 4) and print five "*" on each row.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="e5mc15">
+    <statement>
+      <p>Q-15: What will the following code print?</p>
+      <pre>for i in range(1,4):
+    for j in range(1,4):
+        print(i, j, end=' ')</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1 1 2 2 3 3</p>
+        </statement>
+        <feedback>
+          <p>It prints both i and j each time through the loop.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1 2 3 1 2 3 1 2 3</p>
+        </statement>
+        <feedback>
+          <p>This would be true if it only printed j each time through the loop.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>1 1 1 2 1 3 2 1 2 2 2 3 3 1 3 2 3 3</p>
+        </statement>
+        <feedback>
+          <p>It prints both i and j each time through the loop. The value of i starts at 1 and j changes from 1 to 3 before i changes.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1 1 2 1 3 1 2 1 2 2 2 3 3 1 3 2 3 3</p>
+        </statement>
+        <feedback>
+          <p>Remember that i starts at 1 and j will change from 1 to 3 before i changes.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="e5mc16">
+    <statement>
+      <p>Q-16: What will the following code print?</p>
+      <pre>def mystery(nums):
+    total = 0
+    for num in nums:
+        if num == 999:
+            break
+        else:
+            total += num
+    return total
+
+mystery([8, 2, 999, 5, 4])
+
+
+
+print(mystery("walking"))</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1018</p>
+        </statement>
+        <feedback>
+          <p>This would be true if it added all values in the list to total</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1009</p>
+        </statement>
+        <feedback>
+          <p>This would be true if it added the 999 to the list before the break</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>19</p>
+        </statement>
+        <feedback>
+          <p>This would be true if it used continue rather than break when it found 999</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>10</p>
+        </statement>
+        <feedback>
+          <p>This will return the total of the values in the list before the 999</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</exercises>

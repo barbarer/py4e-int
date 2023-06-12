@@ -1,0 +1,624 @@
+<?xml version="1.0"?>
+<section xml:id="tuples_mixed-up-code-questions">
+  <title>Mixed-Up Code Questions</title>
+  <exercise label="tup_mixedupcode_1" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>length_word</c> that takes in a parameter, <c>txt</c> which returns a list of tuples, <c>tup_list</c>,
+            where the first element is the length of each word in <c>txt</c> and the second is the word itself. Sort the list in terms of word
+            length from longest to shortest. For example, <c>length_word("hi bye")</c> would return <c>[(3, 'bye'), (2, 'hi')]</c>. Note: there
+            is one block that won't be used in the solution!</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <cline>def length_word(txt):</cline>
+      </block>
+      <block order="2">
+        <cline>    words = txt.split()</cline>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>    t = []</cline>
+        </choice>
+        <choice>
+          <cline>    for word in words.split(): </cline>
+        </choice>
+      </block>
+      <block order="8">
+        <cline>    for word in words:</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>        t.append((len(word), word))</cline>
+        </choice>
+        <choice>
+          <cline>        t.append(len(word)) </cline>
+        </choice>
+      </block>
+      <block order="10">
+        <choice correct="yes">
+          <cline>    t.sort(reverse = True)</cline>
+        </choice>
+        <choice>
+          <cline>    t.sort(reverse = False) </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <cline>    return t</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="tup_mixedupcode_1_ac">
+    <statement>
+      <p>Write a function called <c>length_word</c> that takes in a parameter, <c>txt</c> which returns a list of tuples, <c>tup_list</c>,
+            where the first element is the length of each word in <c>txt</c> and the second is the word itself. Sort the list in terms of word
+            length from longest to shortest. For example, <c>length_word("hi bye")</c> would return <c>[(3, 'bye'), (2, 'hi')]</c>. Note: there
+            is one block that won't be used in the solution!</p>
+    </statement>
+    <program xml:id="tup_mixedupcode_1_ac_editor" interactive="activecode" language="python">
+      <input>
+def length_word(txt):
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(length_word('but soft what light in yonder window breaks'), [(6, 'yonder'), (6, 'window'), (6, 'breaks'), (5, 'light'), (4, 'what'), (4, 'soft'), (3, 'but'), (2, 'in')], "length_word('but soft what light in yonder window breaks')")
+        self.assertEqual(length_word('hi bye'), [(3, 'bye'), (2, 'hi')], "length_word('hi bye')")
+        self.assertEqual(length_word('Hello'), [(5, 'Hello')], "length_word('Hello')")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="tup_mixedupcode_2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>tuple_word_len</c> that takes in one parameter, <c>word_list</c>.
+            Then create and return a list called <c>tup_list</c> that contains tuples of each word from <c>word_list</c> paired with their
+            lengths. Then sort the words by length from highest to lowest.  For example, <c>tuple_word_len(['hi', 'bye'])</c>
+            would return <c>[('bye', 3), ('hi', 2)]</c>.</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <cline>def tuple_word_len(word_list):</cline>
+      </block>
+      <block order="4">
+        <cline>    tup_list = []</cline>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>    for word in word_list:</cline>
+        </choice>
+        <choice>
+          <cline>    for word in tup_list: </cline>
+        </choice>
+      </block>
+      <block order="8">
+        <cline>        tup = word, len(word)</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>        tup_list.append(tup)</cline>
+        </choice>
+        <choice>
+          <cline>        word_list.append(tup) </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>    tup_list.sort(key = lambda x: x[1], reverse = True)</cline>
+      </block>
+      <block order="1">
+        <cline>    return tup_list</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="tup_mixedupcode_2_ac">
+    <statement>
+      <p>Write a function called <c>tuple_word_len</c> that takes in one parameter, <c>word_list</c>.
+            Then create and return a list called <c>tup_list</c> that contains tuples of each word from <c>word_list</c> paired with their
+            lengths. Then sort the words by length from highest to lowest.  For example, <c>tuple_word_len(['hi', 'bye'])</c>
+            would return <c>[('bye', 3), ('hi', 2)]</c>.</p>
+    </statement>
+    <program xml:id="tup_mixedupcode_2_ac_editor" interactive="activecode" language="python">
+      <input>
+def tuple_word_len(word_list):
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(tuple_word_len(['hi', 'bye']), [('bye', 3), ('hi', 2)],"tuple_word_len(['hi', 'bye'])")
+        self.assertEqual(tuple_word_len(['but', 'soft', 'what', 'light', 'in', 'yonder', 'window', 'breaks']), [('yonder', 6), ('window', 6), ('breaks', 6), ('light', 5), ('soft', 4), ('what', 4), ('but', 3), ('in', 2)],"tuple_word_len(['but', 'soft', 'what', 'light', 'in', 'yonder', 'window', 'breaks'])")
+        self.assertEqual(tuple_word_len(['Hello']), [('Hello', 5)],"tuple_word_len(['Hello'])")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="tup_mixedupcode_3" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>swap_values</c> that takes in one tuple as a parameter, <c>t</c>, that has at least 5 values.
+            Swap the second and fourth indices of tuple <c>t</c> with one another, and return that value. For example,
+            <c>swap_values(('Apple', 'Banana', 'Grapefruit', 'Pear', 'Peach'))</c> would return <c>('Apple', 'Pear', 'Grapefruit', 'Banana', 'Peach')</c>.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>def swap_values(t):</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    a, b, c, d, e = t</cline>
+        </choice>
+        <choice>
+          <cline>    a, b, c, d = t </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>    t = a, d, c, b, e</cline>
+        </choice>
+        <choice>
+          <cline>    t = a, c, b, e, d </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>    return t</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="tup_mixedupcode_3_ac">
+    <statement>
+      <p>Write a function called <c>swap_values</c> that takes in one tuple as a parameter, <c>t</c>, that has at least 5 values.
+            Swap the second and fourth indices of tuple <c>t</c> with one another, and return that value. For example,
+            <c>swap_values(('Apple', 'Banana', 'Grapefruit', 'Pear', 'Peach'))</c> would return <c>('Apple', 'Pear', 'Grapefruit', 'Banana', 'Peach')</c>.</p>
+    </statement>
+    <program xml:id="tup_mixedupcode_3_ac_editor" interactive="activecode" language="python">
+      <input>
+def swap_values(t):
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(swap_values(('Apple', 'Banana', 'Grapefruit', 'Pear', 'Peach')), ('Apple', 'Pear', 'Grapefruit', 'Banana', 'Peach'), "swap_values(('Apple', 'Banana', 'Grapefruit', 'Pear', 'Peach'))")
+        self.assertEqual(swap_values(('Michigan', 'Go', 'Blue', 'Wolverine', 'Ann Arbor')), ('Michigan', 'Wolverine', 'Blue', 'Go', 'Ann Arbor'), "swap_values(('Michigan', 'Go', 'Blue', 'Wolverine', 'Ann Arbor'))")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="tup_mixedupcode_4" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>dictionary_to_tup_list</c> that takes in a dictionary as a parameter, <c>d</c>. Transform the
+            dictionary <c>d</c> into a list of tuples called <c>tup_list</c>, sort it by the dictionary's keys in ascending order, and return
+            the list of tuples. For example, <c>dictionary_to_tup_list({1:'a', 2:'b', 3:'c', 4:'d', 5:'e'})``would return
+``[(1, 'a'), (2, 'b'), (3, 'c'), (4, 'd'), (5, 'e')]</c>.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <cline>def dictionary_to_tup_list(d):</cline>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>    tup_list = list(d.items())</cline>
+        </choice>
+        <choice>
+          <cline>    tup_list = d.items() </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    tup_list.sort()</cline>
+        </choice>
+        <choice>
+          <cline>    tup_list.sort(reverse = False) </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    tup_list.sort(key = lambda x: x[1]) </cline>
+      </block>
+      <block order="3">
+        <cline>    return tup_list</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="tup_mixedupcode_4_ac">
+    <statement>
+      <p>Write a function called <c>dictionary_to_tup_list</c> that takes in a dictionary as a parameter, <c>d</c>. Transform the
+            dictionary <c>d</c> into a list of tuples called <c>tup_list</c>, sort it by the dictionary's keys in ascending order, and return
+            the list of tuples. For example, <c>dictionary_to_tup_list({1:'a', 2:'b', 3:'c', 4:'d', 5:'e'})``would return
+``[(1, 'a'), (2, 'b'), (3, 'c'), (4, 'd'), (5, 'e')]</c>.</p>
+    </statement>
+    <program xml:id="tup_mixedupcode_4_ac_editor" interactive="activecode" language="python">
+      <input>
+def dictionary_to_tup_list(d):
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(dictionary_to_tup_list({1:'a', 2:'b', 3:'c', 4:'d', 5:'e'}), [(1, 'a'), (2, 'b'), (3, 'c'), (4, 'd'), (5, 'e')], "dictionary_to_tup_list({1:'a', 2:'b', 3:'c', 4:'d', 5:'e'})")
+        self.assertEqual(dictionary_to_tup_list({'a':1,'b':2, 'c':3,'d':4,'e':5}), [('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e', 5)], "dictionary_to_tup_list({'a':1,'b':2, 'c':3,'d':4,'e':5})")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="tup_mixedupcode_5" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>count_strs</c> that takes in a tuple, <c>tup</c>, as a parameter and counts the amount of strings in the list. For example,
+            <c>count_strs((1, 2, "hi"))</c> should return <c>1.</c></p>
+    </statement>
+    <blocks>
+      <block order="9">
+        <choice correct="yes">
+          <cline>def count_strs(tup):</cline>
+        </choice>
+        <choice>
+          <cline>Def count_strs(lst) </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>    count = 0</cline>
+      </block>
+      <block order="4">
+        <cline>    for item in tup:</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>        if isinstance(item,str):</cline>
+        </choice>
+        <choice>
+          <cline>        if item.isinstance(str): </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>            count += 1</cline>
+        </choice>
+        <choice>
+          <cline>            count += item </cline>
+        </choice>
+      </block>
+      <block order="8">
+        <cline>    return count</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="tup_mixedupcode_5_ac">
+    <statement>
+      <p>Write a function called <c>count_strs</c> that takes in a tuple, <c>tup</c>, as a parameter and counts the amount of strings in the list. For example,
+            <c>count_strs((1, 2, "hi"))</c> should return <c>1.</c></p>
+    </statement>
+    <program xml:id="tup_mixedupcode_5_ac_editor" interactive="activecode" language="python">
+      <input>
+def count_strs(tup):
+    #write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(count_strs((1, 2, 'hi')), 1, "count_strs((1, 2, 'hi'))")
+        self.assertEqual(count_strs(('1', 2, 'hi')), 2, "count_strs(('1', 2, 'hi'))")
+        self.assertEqual(count_strs((1, 2)), 0, "count_strs((1, 2))")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="tup_mixedupcode_6" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>dict_to_list</c> that takes in a dictionary parameter, <c>d</c>, and adds the key-value pairs of dictionary <c>d</c> to a list and
+            returns that list. For example, <c>dict_to_list({'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10})</c> would return
+            <c>[('monkey', 5), ('snake', 3), ('rabbit', 9), ('dragon', 6), ('rooster', 2), ('rat', 10)]</c>.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>def dict_to_list(d):</cline>
+      </block>
+      <block order="2">
+        <cline>    list_kv_pairs = []</cline>
+      </block>
+      <block order="6">
+        <cline>    for key, val in d.items():</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>        list_kv_pairs.append((key, val))</cline>
+        </choice>
+        <choice>
+          <cline>        list_kv_pairs.append(key, val) </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>    return list_kv_pairs</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="tup_mixedupcode_6_ac">
+    <statement>
+      <p>Write a function called <c>dict_to_list</c> that takes in a dictionary parameter, <c>d</c>, and adds the key-value pairs of dictionary <c>d</c> to a list and
+            returns that list. For example, <c>dict_to_list({'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10})</c> would return
+            <c>[('monkey', 5), ('snake', 3), ('rabbit', 9), ('dragon', 6), ('rooster', 2), ('rat', 10)]</c>.</p>
+    </statement>
+    <program xml:id="tup_mixedupcode_6_ac_editor" interactive="activecode" language="python">
+      <input>
+def dict_to_list(d):
+    #write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(dict_to_list({'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10}), [('monkey', 5), ('snake', 3), ('rabbit', 9), ('dragon', 6), ('rooster', 2), ('rat', 10)], "dict_to_list({'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10})")
+        self.assertEqual(dict_to_list({'twice' : -8.9, 'apples': 7.2, 'for': -2}), [('twice', -8.9), ('apples', 7.2), ('for', -2)], "dict_to_list({'twice' : -8.9, 'apples': 7.2, 'for': -2})")
+        self.assertEqual(dict_to_list({'twice' : 'twice', 'apples': 'apples', 'for': 'for'}), [('twice', 'twice'), ('apples', 'apples'), ('for', 'for')], "dict_to_list({'twice' : 'twice', 'apples': 'apples', 'for': 'for'})")
+        self.assertEqual(dict_to_list({'twice' : 'twice', 'twice' : 'twice'}), [('twice', 'twice')], "dict_to_list({'twice' : 'twice', 'twice' : 'twice'})")
+        self.assertEqual(dict_to_list({'twice' : 0, 'apples': 0, 'for': 0}), [('twice', 0), ('apples', 0), ('for', 0)], "dict_to_list({'twice' : 0, 'apples': 0, 'for': 0})")
+        self.assertEqual(dict_to_list({}), [], "dict_to_list({})")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="tup_mixedupcode_7" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>alphabetical_dict_list</c> that takes in one dictionary parameter, <c>d</c>, and creates a list of tuples with the first value of each tuple
+            as the word as the key and the second value of each tuple as the length of the word. Return a list of the dictionary's key-value pairs in alphabetical order.
+            For example, <c>alphabetical_dict_list({'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10})</c> should return <c>[('dragon', 6), ('monkey', 6), ('rabbit', 6), ('rat', 3), ('rooster', 7), ('snake', 5)]</c>.</p>
+    </statement>
+    <blocks>
+      <block order="8">
+        <cline>def alphabetical_dict_list(d):</cline>
+      </block>
+      <block order="4">
+        <cline>    new_dict = {}</cline>
+      </block>
+      <block order="5">
+        <cline>    for i in d:</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>        new_dict[i] = new_dict.get(i, len(i))</cline>
+        </choice>
+        <choice>
+          <cline>            new_dict.append(i, len(i)) </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>    new_dict = sorted(new_dict.items())</cline>
+        </choice>
+        <choice>
+          <cline>    sort(new_dict.items()) </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <cline>    return new_dict</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="tup_mixedupcode_7_ac">
+    <statement>
+      <p>Write a function called <c>alphabetical_dict_list</c> that takes in one dictionary parameter, <c>d</c>, and creates a list of tuples with the first value of each tuple
+            as the word as the key and the second value of each tuple as the length of the word. Return a list of the dictionary's key-value pairs in alphabetical order. For
+            example, <c>alphabetical_dict_list({'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10})</c> should return <c>[('dragon', 6), ('monkey', 6), ('rabbit', 6), ('rat', 3), ('rooster', 7), ('snake', 5)]</c>.</p>
+    </statement>
+    <program xml:id="tup_mixedupcode_7_ac_editor" interactive="activecode" language="python">
+      <input>
+def alphabetical_dict_list(d):
+    #write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(alphabetical_dict_list({'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10}), [('dragon', 6), ('monkey', 6), ('rabbit', 6), ('rat', 3), ('rooster', 7), ('snake', 5)], "alphabetical_dict_list({'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10})")
+        self.assertEqual(alphabetical_dict_list({'twice' : -8.9, 'apples': 7.2, 'for': -2}), [('apples', 6), ('for', 3), ('twice', 5)], "alphabetical_dict_list({'twice' : -8.9, 'apples': 7.2, 'for': -2})")
+        self.assertEqual(alphabetical_dict_list({'twice' : 'twice', 'apples': 'apples', 'for': 'for'}), [('apples', 6), ('for', 3), ('twice', 5)], "alphabetical_dict_list({'twice' : 'twice', 'apples': 'apples', 'for': 'for'})")
+        self.assertEqual(alphabetical_dict_list({'twice' : 0, 'apples': 0, 'for': 0}), [('apples', 6), ('for', 3), ('twice', 5)], "alphabetical_dict_list({'twice' : 0, 'apples': 0, 'for': 0})")
+        self.assertEqual(alphabetical_dict_list({'hi': 'bye', 'Run': 'When', 'Win': 'compare'}), [('Run', 3), ('Win', 3), ('hi', 2)], "alphabetical_dict_list({'hi': 'bye', 'Run': 'When', 'Win': 'compare'})")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="tup_mixedupcode_8" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>longest_word_lst</c> that takes in a list of tuples, <c>list_tup</c>, as a parameter and adds the longest word in each tuple and adds it to a list. Return this
+            list. For example, <c>longest_word_lst([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&amp;t')])</c>
+            should return``[&#x2018;apples', &#x2018;combining', &#x2018;twenty-four', &#x2018;tmobile']``.</p>
+    </statement>
+    <blocks>
+      <block order="8">
+        <cline>def longest_word_lst(lst_tup):</cline>
+      </block>
+      <block order="3">
+        <cline>    lst = []</cline>
+      </block>
+      <block order="1">
+        <cline>    for tup in lst_tup:</cline>
+      </block>
+      <block order="5">
+        <cline>        longest_word = ''</cline>
+      </block>
+      <block order="9">
+        <cline>        for item in tup:</cline>
+      </block>
+      <block order="4">
+        <cline>            if len(item) &gt; len(longest_word):</cline>
+      </block>
+      <block order="6">
+        <cline>                longest_word = item</cline>
+      </block>
+      <block order="2">
+        <cline>        lst.append(longest_word)</cline>
+      </block>
+      <block order="7">
+        <cline>    return lst</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="tup_mixedupcode_8_ac">
+    <statement>
+      <p>Write a function called <c>longest_word_lst</c> that takes in a list of tuples, <c>list_tup</c>, as a parameter and adds the longest word in each tuple and adds it to a list. Return this
+            list. For example, <c>longest_word_lst([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&amp;t')])</c>
+            should return <c>['apples', 'combining', 'twenty-four', 'tmobile']</c>.</p>
+    </statement>
+    <program xml:id="tup_mixedupcode_8_ac_editor" interactive="activecode" language="python">
+      <input>
+def longest_word_lst(lst_tup):
+    #write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(longest_word_lst([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&amp;t')]), ['apples', 'combining', 'twenty-four', 'tmobile'], "longest_word_lst([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&amp;t')])")
+        self.assertEqual(longest_word_lst([(),()]), ['', ''], "longest_word_lst([(),()])")
+        self.assertEqual(longest_word_lst([('twice', 'twice'),('rabbit','dragon','rooster')]), ['twice', 'rooster'], "longest_word_lst([('twice', 'twice'),('rabbit','dragon','rooster')])")
+        self.assertEqual(longest_word_lst((('2','22'), ('1'))), ['22', '1'], "longest_word_lst((('2','22'), ('1')))")
+        self.assertEqual(longest_word_lst((('2 0 2 0 2','22'), ('1'))), ['2 0 2 0 2', '1'], "longest_word_lst((('2 0 2 0 2','22'), ('1')))")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="tup_mixedupcode_9" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>cap</c> that takes in a list of tuples, <c>lst_tup</c>, as a parameter, that creates a new list with every item in <c>lst_tup</c>
+            capitalized and then return the list. Note: Each tuple must have at least two items. For example, <c>cap([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&amp;t')])</c>
+            would return <c>['Twice', 'For', 'Apples', 'Regular', 'Combining', 'One', 'Five', 'Twenty', 'Twenty-four', 'Tmobile', 'Sprint', 'At&amp;t']</c>.</p>
+    </statement>
+    <blocks>
+      <block order="7">
+        <cline>def cap(lst_tup):</cline>
+      </block>
+      <block order="6">
+        <cline>    t_list = []</cline>
+      </block>
+      <block order="2">
+        <cline>    for item in lst_tup:</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>        for word in item:</cline>
+        </choice>
+        <choice>
+          <cline>        for word in lst_tup: </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>            t_list.append(word.capitalize())</cline>
+        </choice>
+        <choice>
+          <cline>            t_list = t_list.add(item.capitalized()) </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <cline>    return t_list</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="tup_mixedupcode_9_ac">
+    <statement>
+      <p>Write a function called <c>cap</c> that takes in a list of tuples, <c>lst_tup</c>, as a parameter, that creates a new list with every item in <c>lst_tup</c>
+            capitalized and then return the list. Note: Each tuple must have at least two items. For example, <c>cap([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&amp;t')])</c>
+            would return <c>['Twice', 'For', 'Apples', 'Regular', 'Combining', 'One', 'Five', 'Twenty', 'Twenty-four', 'Tmobile', 'Sprint', 'At&amp;t']</c>.</p>
+    </statement>
+    <program xml:id="tup_mixedupcode_9_ac_editor" interactive="activecode" language="python">
+      <input>
+def cap(lst_tup):
+    #write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(cap([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&amp;t')]), ['Twice', 'For', 'Apples', 'Regular', 'Combining', 'One', 'Five', 'Twenty', 'Twenty-four', 'Tmobile', 'Sprint', 'At&amp;t'], "cap([('twice', 'for', 'apples'), ('regular', 'combining'), ('one', 'five', 'twenty', 'twenty-four'), ('tmobile', 'sprint', 'at&amp;t')])")
+        self.assertEqual(cap([('twice', 'twice'),('rabbit','dragon','rooster')]), ['Twice', 'Twice', 'Rabbit', 'Dragon', 'Rooster'], "cap([('twice', 'twice'),('rabbit','dragon','rooster')])")
+        self.assertEqual(cap([('twice', 'twice')]), ['Twice', 'Twice'], "cap([('twice', 'twice')])")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="tup_mixedupcode_10" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>grocery</c> that takes in a dictionary, <c>d</c>, changes <c>d</c> into a list of tuples, and then sorts the list by the dictionary's values in ascending order.
+            For example, <c>grocery({'chicken': 5, 'lettuce': 3, 'orange juice': 4, 'bagels': 2.50, 'bacon': 4.25, 'bread': 8})</c> should return <c>[('bagels', 2.5), ('lettuce', 3), ('orange juice', 4), ('bacon', 4.25), ('chicken', 5), ('bread', 8)]</c>.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <cline>def grocery(d):</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    grocery_list = list(d.items())</cline>
+        </choice>
+        <choice>
+          <cline>    grocery_list = items(d) </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    grocery_list.sort(key = lambda x: x[1])</cline>
+        </choice>
+        <choice>
+          <cline>    grocery_list.sort(key = lambda x: x[1], reverse = True) </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>    return grocery_list</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="tup_mixedupcode_10_ac">
+    <statement>
+      <p>Write a function called <c>grocery</c> that takes in a dictionary, <c>d</c>, and changes <c>d</c> into a list of tuples, then sort the list by the dictionary's values in ascending order. Note: values must be positive.
+            For example, <c>grocery({'chicken': 5, 'lettuce': 3, 'orange juice': 4, 'bagels': 2.50, 'bacon': 4.25, 'bread': 8})</c> should return <c>[('bagels', 2.5), ('lettuce', 3), ('orange juice', 4), ('bacon', 4.25), ('chicken', 5), ('bread', 8)]</c>.</p>
+    </statement>
+    <program xml:id="tup_mixedupcode_10_ac_editor" interactive="activecode" language="python">
+      <input>
+def grocery(d):
+    #write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(grocery({'chicken': 5, 'lettuce': 3, 'orange juice': 4, 'bagels': 2.50, 'bacon': 4.25, 'bread': 8}), [('bagels', 2.5), ('lettuce', 3), ('orange juice', 4), ('bacon', 4.25), ('chicken', 5), ('bread', 8)], "grocery({'chicken': 5, 'lettuce': 3, 'orange juice': 4, 'bagels': 2.50, 'bacon': 4.25, 'bread': 8})")
+        self.assertEqual(grocery({'eggs': 5}), [('eggs', 5)], "grocery({'eggs': 5})")
+        self.assertEqual(grocery({'soup': 5, 'peanut butter': 3, 'orange juice': 4.1, 'bagels': 2.50, 'bacon': 4.25, 'bread': 8}), [('bagels', 2.5), ('peanut butter', 3), ('orange juice', 4.1), ('bacon', 4.25), ('soup', 5), ('bread', 8)], "grocery({'soup': 5, 'peanut butter': 3, 'orange juice': 4.1, 'bagels': 2.50, 'bacon': 4.25, 'bread': 8})")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

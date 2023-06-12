@@ -1,0 +1,465 @@
+<?xml version="1.0"?>
+<section xml:id="dictionaries_mixed-up-code-questions">
+  <title>Mixed-Up Code Questions</title>
+
+  <exercise label="dictionaries_mixedupcode_question10_1" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>letter_dict</c> that takes in <c>string</c> as a parameter and returns a dictionary containing the amount of times letters appear in the given <c>string</c>.
+            For example, <c>letter_dict('It is')</c> should return <c>{'i': 2, 't': 1, 's': 1}</c>. (Note: Pretend the <c>string</c> doesn't have any punctuation besides spaces.)</p>
+    </statement>
+    <blocks>
+      <block order="12">
+        <cline>def letter_dict(string):</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    d = dict()</cline>
+        </choice>
+        <choice>
+          <cline>    d = dictionary() </cline>
+        </choice>
+      </block>
+      <block order="10">
+        <cline>    for char in string:</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>        if char == ' ':</cline>
+        </choice>
+        <choice>
+          <cline>        if char = ' ': </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>            continue</cline>
+        </choice>
+        <choice>
+          <cline>            break </cline>
+        </choice>
+      </block>
+      <block order="14">
+        <choice correct="yes">
+          <cline>        if char.lower() not in d:</cline>
+        </choice>
+        <choice>
+          <cline>        if char in d: </cline>
+        </choice>
+      </block>
+      <block order="8">
+        <cline>            d[char.lower()] = 1</cline>
+      </block>
+      <block order="13">
+        <cline>        else:</cline>
+      </block>
+      <block order="11">
+        <cline>            d[char.lower()] += 1</cline>
+      </block>
+      <block order="9">
+        <cline>    return d</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="dictionaries_mixedupcode_question10_2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>word_dict</c> that takes in <c>string</c> as a parameter and returns a dictionary containing the amount of times a word appears in the given <c>string</c>.
+            For example, <c>word_dict('HELLO heLlo there  ')</c> should return <c>{'hello': 2, 'there': 1}</c>. (Note: Pretend the <c>string</c> doesn't have any punctuation besides spaces.)</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>def word_dict(string):</cline>
+      </block>
+      <block order="3">
+        <cline>    dictionary = {}</cline>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>    for word in string.split():</cline>
+        </choice>
+        <choice>
+          <cline>    for word.lower() in string.split(): </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>        dictionary[word.lower()] = dictionary.get(word.lower(), 0) + 1</cline>
+        </choice>
+        <choice>
+          <cline>        dictionary[word.lower()] = dictionary.get(word.lower(), 0) </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <cline>    return dictionary</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="dictionaries_mixedupcode_question10_3" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>a_counter</c> that takes in <c>string</c> as a parameter, creates a <c>dictionary</c>, and returns the amount of a's in the given <c>string</c> using the <c>dictionary</c>.
+            For example, <c>a_counter('Alice and Apples')</c> should return <c>3</c>.</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <cline>def a_counter(string):</cline>
+      </block>
+      <block order="2">
+        <cline>    dictionary = {}</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    for char in string:</cline>
+        </choice>
+        <choice>
+          <cline>    for char in string.split(): </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>        dictionary[char.lower()] = dictionary.get(char.lower(), 0) + 1</cline>
+        </choice>
+        <choice>
+          <cline>        dictionary[char.lower()] = dictionary.get(char.lower(), 0) </cline>
+        </choice>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>    return dictionary.get('a', 0)</cline>
+        </choice>
+        <choice>
+          <cline>    return dictionary['a'] </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="dictionaries_mixedupcode_question10_4" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>sales_tax</c> that takes in a <c>list_of_costs</c> (floating point values) as a parameter and
+            returns a dictionary with the original costs as keys and the final costs after the sales tax of 6 percent as values.
+            The final costs should be rounded to the hundredths place. For example, <c>sales_tax([1.25, 8, 5])</c> returns <c>{1.25: 1.33, 8: 8.48, 5: 5.3}</c>.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>def sales_tax(list_of_costs):</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    final_dictionary = {}</cline>
+        </choice>
+        <choice>
+          <cline>    final_dictionary = [] </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <cline>    for cost in list_of_costs:</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>        final_dictionary[cost] = round(cost * 1.06, 2)</cline>
+        </choice>
+        <choice>
+          <cline>        final_dictionary[cost] = round(cost * 0.06, 2) </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <cline>    return final_dictionary</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="dictionaries_mixedupcode_question10_5" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>discount_and_tax</c> that takes in a <c>list_of_costs</c> (floating point values) and a <c>discount</c> percentage as parameters and
+            returns a dictionary with the original costs as keys and the final costs after applying the <c>discount</c> (first) and the sales tax of 6 percent (second) as values.
+            The final costs should be rounded to the hundredths place. For example, <c>discount_and_tax([1.25, 8, 5], 20)</c> should return <c>{1.25: 1.06, 8: 6.78, 5: 4.24}</c>.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>def discount_and_tax(list_of_costs, discount):</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    discount_multiplier = 1 - (discount / 100)</cline>
+        </choice>
+        <choice>
+          <cline>    discount_multiplier = (discount / 100) </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <cline>    dictionary = {}</cline>
+      </block>
+      <block order="3">
+        <cline>    for cost in list_of_costs:</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>        dictionary[cost] = round(cost * discount_multiplier * 1.06, 2)</cline>
+        </choice>
+        <choice>
+          <cline>        dictionary[cost] = round(cost * discount_multiplier * 0.06, 2) </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    return dictionary</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="dictionaries_mixedupcode_question10_6" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>create_dictionary</c> that takes in <c>keys_list</c> and <c>values_list</c> as parameters
+            and returns a dictionary with the <c>keys_list</c> as keys and the <c>values_list</c> as values. Assume <c>keys_list</c> and <c>values_list</c> are the same length, and
+            they only contain numbers and strings. For example, <c>create_dictionary(['one', 'two', 'three'], [1, 2, 3])</c> should return <c>{'one': 1, 'two': 2, 'three': 3}</c>.</p>
+    </statement>
+    <blocks>
+      <block order="7">
+        <cline>def create_dictionary(keys_list, values_list):</cline>
+      </block>
+      <block order="2">
+        <cline>    combination = {}</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    for i in range(len(keys_list)):</cline>
+        </choice>
+        <choice>
+          <cline>    for i in len(keys_list): </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>        combination[keys_list[i]] = values_list[i]</cline>
+        </choice>
+        <choice>
+          <cline>        combination[keys_list[i]] = combination[values_list[i]] </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    return combination</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="dictionaries_mixedupcode_question10_7" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>lowest_value_keys</c> that takes in <c>dictionary</c> as a parameter and returns a list of the keys containing the lowest value of all the keys in the dictionary.
+            Assume all values of the <c>dictionary</c> are integers or floats. For example, <c>lowest_value_keys({'pizza': 11, 'fruits': 0, 'toys': 0, 'rice bags': 1.9, 'ice': 1.8})</c> should return <c>['fruits', 'toys']</c>.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>def lowest_value_keys(dictionary):</cline>
+      </block>
+      <block order="3">
+        <cline>    keys_list = []</cline>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>    minimum = min(dictionary.values())</cline>
+        </choice>
+        <choice>
+          <cline>    minimum = min(dictionary) </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>    minimum = minimum(dictionary) </cline>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>    for key, value in dictionary.items():</cline>
+        </choice>
+        <choice>
+          <cline>    for value in dictionary.values(): </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>    for key in dictionary.keys(): </cline>
+      </block>
+      <block order="11">
+        <cline>        if value == minimum:</cline>
+      </block>
+      <block order="6">
+        <cline>            keys_list.append(key)</cline>
+      </block>
+      <block order="9">
+        <cline>    return keys_list</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="dictionaries_mixedupcode_question10_8" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>duplicated_data</c> that takes in <c>dictionary1</c> and <c>dictionary2</c> as parameters and returns a dictionary with key-value pairs that are
+            in both dictionaries. For example, <c>duplicated_data({'Ten': 10, 'Twenty' : 20, 'Thirty' : 30}, {'Ten': 10, 'Twenty' : 20})</c> should return <c>{'Ten': 10, 'Twenty': 20}</c>.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>def duplicated_data(dictionary1, dictionary2):</cline>
+      </block>
+      <block order="4">
+        <cline>    dict = {}</cline>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>    for key, value in dictionary1.items():</cline>
+        </choice>
+        <choice>
+          <cline>    for key, value in dictionary2: </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    for key, value in dictionary2.items(): </cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>        if dictionary2.get(key) == value:</cline>
+        </choice>
+        <choice>
+          <cline>        if dictionary2[key] == value: </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <cline>            dict[key] = value</cline>
+      </block>
+      <block order="9">
+        <cline>    return dict</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="dictionaries_mixedupcode_question10_9" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>total_price</c> that takes in <c>quantity_dict</c> and <c>price_dict</c> and returns the total cost of all items.
+            Assume keys in both dictionaries are the same, and the values in <c>quantity_dict</c> are integers.
+            For example, <c>total_price({'fries': 7, 'hot dogs': 9, 'soda': 9}, {'fries': 1.5, 'hot dogs': 1, 'soda': 1.1})</c> should return <c>29.4</c>.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <cline>def total_price(quantity_dict, price_dict):</cline>
+      </block>
+      <block order="4">
+        <cline>    total_price = 0</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    for key in quantity_dict.keys():</cline>
+        </choice>
+        <choice>
+          <cline>    for value in quantity_dict.values(): </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>        total_price += quantity_dict.get(key) * price_dict.get(key)</cline>
+        </choice>
+        <choice>
+          <cline>        total_price += quantity_dict[key] + price_dict[key] </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <cline>    return total_price</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="dictionaries_mixedupcode_question10_10" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>scale_recipe</c> that takes in <c>quantity_dict</c> and <c>scale_factor</c> as parameters and
+            returns a dictionary with <c>quantity_dict</c> scaled by the <c>scale_factor</c>.
+            For example, <c>scale_recipe({'fries': 7, 'hot dogs': 9, 'soda': 8}, 4)</c> should return <c>{'fries': 28, 'hot dogs': 36, 'soda': 32}</c>.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>def scale_recipe(quantity_dict, scale_factor):</cline>
+      </block>
+      <block order="4">
+        <cline>    for key in quantity_dict.keys():</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>        quantity_dict[key] = quantity_dict.get(key) * scale_factor</cline>
+        </choice>
+        <choice>
+          <cline>        quantity_dict[key] = quantity_dict.get(key) / scale_factor </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>    return quantity_dict</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <!--
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=dictionaries_mixedupcode_question10_1_sq data-questionlist='dictionaries_mixedupcode_question10_1, dictionaries_mixedupcode_question10_1_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: dictionaries_mixedupcode_question10_1, dictionaries_mixedupcode_question10_1_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=dictionaries_mixedupcode_question10_2_sq data-questionlist='dictionaries_mixedupcode_question10_2, dictionaries_mixedupcode_question10_2_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: dictionaries_mixedupcode_question10_2, dictionaries_mixedupcode_question10_2_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=dictionaries_mixedupcode_question10_3_sq data-questionlist='dictionaries_mixedupcode_question10_3, dictionaries_mixedupcode_question10_3_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: dictionaries_mixedupcode_question10_3, dictionaries_mixedupcode_question10_3_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=dictionaries_mixedupcode_question10_4_sq data-questionlist='dictionaries_mixedupcode_question10_4, dictionaries_mixedupcode_question10_4_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: dictionaries_mixedupcode_question10_4, dictionaries_mixedupcode_question10_4_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=dictionaries_mixedupcode_question10_5_sq data-questionlist='dictionaries_mixedupcode_question10_5, dictionaries_mixedupcode_question10_5_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: dictionaries_mixedupcode_question10_5, dictionaries_mixedupcode_question10_5_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=dictionaries_mixedupcode_question10_6_sq data-questionlist='dictionaries_mixedupcode_question10_6, dictionaries_mixedupcode_question10_6_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: dictionaries_mixedupcode_question10_6, dictionaries_mixedupcode_question10_6_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=dictionaries_mixedupcode_question10_7_sq data-questionlist='dictionaries_mixedupcode_question10_7, dictionaries_mixedupcode_question10_7_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: dictionaries_mixedupcode_question10_7, dictionaries_mixedupcode_question10_7_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=dictionaries_mixedupcode_question10_8_sq data-questionlist='dictionaries_mixedupcode_question10_8, dictionaries_mixedupcode_question10_8_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: dictionaries_mixedupcode_question10_8, dictionaries_mixedupcode_question10_8_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=dictionaries_mixedupcode_question10_9_sq data-questionlist='dictionaries_mixedupcode_question10_9, dictionaries_mixedupcode_question10_9_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: dictionaries_mixedupcode_question10_9, dictionaries_mixedupcode_question10_9_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=dictionaries_mixedupcode_question10_10_sq data-questionlist='dictionaries_mixedupcode_question10_10, dictionaries_mixedupcode_question10_10_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: dictionaries_mixedupcode_question10_10, dictionaries_mixedupcode_question10_10_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  -->
+</section>

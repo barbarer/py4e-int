@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<section xml:id="iterations_write-code-questions">
+  <title>Write Code Questions</title>
+  <warning>
+    <p>Be careful not to create infinite loops, as they will cause the page to freeze.</p>
+  </warning>
+  <exercise label="itr-ex-root_ac">
+    <statement>
+      <p>The code below is supposed to print an estimate of the square root of a number (target). You are given an initial guess of 2.
+            However, the indention is wrong on 4 lines. Fix these errors to find the estimate.</p>
+    </statement>
+    <program xml:id="itr-ex-root_ac_editor" interactive="activecode" language="python">
+      <input>
+target = 6
+    guess = 2
+guessSquared = guess * guess
+while abs(target-guessSquared) &gt; 0.01:
+    closer = target / guess
+guess = (guess + closer) / 2.0
+        guessSquared = guess * guess
+    print("Square root of", target, "is", guess)
+        </input>
+    </program>
+  </exercise>
+  <exercise label="itr-ex-root_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create code to print an estimate of the square root of a number (target). You are given an initial guess of 2.</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <cline>target = 6</cline>
+        <cline>guess = 2</cline>
+      </block>
+      <block order="2">
+        <cline>guessSquared = guess * guess</cline>
+      </block>
+      <block order="7">
+        <cline>while abs(target-guessSquared) &gt; 0.01:</cline>
+      </block>
+      <block order="3">
+        <cline>    closer = target / guess</cline>
+      </block>
+      <block order="4">
+        <cline>    guess = (guess + closer) / 2.0</cline>
+      </block>
+      <block order="1">
+        <cline>    guessSquared = guess * guess</cline>
+      </block>
+      <block order="5">
+        <cline>print("Square root of", target, "is", guess)</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="int-ex-while_ac">
+    <statement>
+      <p>Rewrite the following code to use a while loop instead of a for loop to calcultae the value of the ten factorial.</p>
+    </statement>
+    <program xml:id="int-ex-while_ac_editor" interactive="activecode" language="python">
+      <input>
+product = 1  # Start out with nothing
+numbers = range(1,11)
+for number in numbers:
+    product = product * number
+print(product)
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(product, 3628800)
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="int-ex-while_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Using the blocks below, create code to calculate the value of the ten factorial.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <cline>product = 1</cline>
+        <cline>number = 1</cline>
+      </block>
+      <block order="4">
+        <cline>while number &lt; 11:</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    product = product * number</cline>
+        </choice>
+        <choice>
+          <cline>    product = number * number </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    number = number + 1</cline>
+      </block>
+      <block order="2">
+        <cline>print(product)</cline>
+      </block>
+    </blocks>
+  </exercise>
+</section>

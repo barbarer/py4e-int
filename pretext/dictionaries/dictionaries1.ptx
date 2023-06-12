@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<section xml:id="dictionaries_dictionaries">
+  <title>Dictionaries</title>
+   <idx>Dictionary</idx>
+   <idx>Key</idx>
+   <idx>Index</idx>
+   <idx>Key-Value Pair</idx>
+   <idx>KeyError</idx>
+   <idx>Len function</idx>
+   <idx>In operator</idx>
+   <idx>Values operator</idx>
+   <idx>Hash Table</idx>
+  <p>A <em>dictionary</em> is like a list, but more general. In a
+            list, the index positions have to be integers; in a dictionary, the
+            indices can be (almost) any type.</p>
+  <p>You can think of a dictionary as a mapping between a set of indices
+            (which are called <em>keys</em>) and a set of values. Each key
+            maps to a value. The association of a key and a value is called a
+            <em>key-value pair</em> or sometimes an <em>item</em>.</p>
+  <p>As an example, we'll build a dictionary that maps from English to
+            Spanish words, so the keys and the values are all strings.</p>
+  <p>The function <c>dict</c> creates a new dictionary with no items.
+            Because <c>dict</c> is the name of a built-in function, you should
+            avoid using it as a variable name.</p>
+  <program xml:id="dict_print_new_dict" interactive="activecode" language="python">
+    <input>
+d1 = dict()
+print(d1)
+d2 = {}
+print(d2)
+        </input>
+  </program>
+  <p>The curly brackets, <c>{}</c>, represent an empty dictionary. To add items to
+            the dictionary, you can use square brackets:</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; eng2sp['one'] = 'uno'
+</input>
+  </program>
+  <exercise label="dict_example1">
+    <statement>
+      <p>Write code that adds the key &#x2018;two' with a value of &#x2018;dos' to the dictionary eng2sp.</p>
+    </statement>
+    <program xml:id="dict_example1_editor" interactive="activecode" language="python">
+      <input>
+eng2sp = {'one':'uno'}
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+       self.assertEqual(eng2sp['two'], 'dos', "Testing if the key 'two' maps to 'dos'.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <p>This line creates an item that maps from the key <c>'one'</c> to
+            the value <q>uno</q>. If we print the dictionary again, we see a key-value
+            pair with a colon between the key and value:</p>
+  <program language="python">
+    <input>
+eng2sp = {'one':'uno'}
+print(eng2sp)
+{'one':'uno'}
+</input>
+  </program>
+  <p>This output format is also an input format. For example, you can create
+            a new dictionary with three items.  But if you print <c>eng2sp</c>, you might be surprised:</p>
+  <program xml:id="Dict_example2" interactive="activecode" language="python">
+    <input>
+eng2sp = {'one': 'uno', 'two': 'dos', 'three': 'tres'}
+print(eng2sp)
+        </input>
+  </program>
+  <p>The order of the key-value pairs is not the same. In fact, if you type
+            the same example on your computer, you might get a different result. In
+            general, the order of items in a dictionary is unpredictable.</p>
+  <p>But that's not a problem because the elements of a dictionary are never
+            indexed with integer indices. Instead, you use the keys to look up the
+            corresponding values:</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; print(eng2sp['two'])
+'dos'
+</input>
+  </program>
+  <p>The key <c>'two'</c> always maps to the value <q>dos</q> so the order
+            of the items doesn't matter.</p>
+  <p>If the key isn't in the dictionary, you get an exception:</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; print(eng2sp['four'])
+KeyError: 'four'
+</input>
+  </program>
+  <p>The <c>len</c> function works on dictionaries; it returns the
+            number of key-value pairs:</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; len(eng2sp)
+3
+</input>
+  </program>
+  <p>The <c>in</c> operator works on dictionaries; it tells you whether
+            something appears as a <em>key</em> in the dictionary (appearing as a value is
+            not good enough).</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; 'one' in eng2sp
+True
+&gt;&gt;&gt; 'uno' in eng2sp
+False
+</input>
+  </program>
+  <exercise label="question9_1_2">
+    <statement>
+      <p>Q-4: What is printed after the following code is run?</p>
+      <program language="python">
+        <input>
+pokemon_name_n_type = {'Squirtle': 'Water', 'Charmander': 'Fire', 'Bulbasaur' : 'Grass'}
+print('Water' in pokemon_name_n_type)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>Try again! Remember that the in operator returns true if the value is a key in the dictionary.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>Correct! 'Water' is a value in the dictionary, therefore the in operator will not be able to determine if this is in the dictionary.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>To see whether something appears as a value in a dictionary, you can use
+            the method <c>values</c>, which returns the values as a list, and
+            then use the <c>in</c> operator:</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; vals = list(eng2sp.values())
+&gt;&gt;&gt; 'uno' in vals
+True
+</input>
+  </program>
+  <p>The <c>in</c> operator uses different algorithms for lists and
+            dictionaries. For lists, it uses a linear search algorithm. As the list
+            gets longer, the search time gets longer in direct proportion to the
+            length of the list. For dictionaries, Python uses an algorithm called a
+            <em>hash table</em> that has a remarkable property: the
+            <c>in</c> operator takes about the same amount of time no matter
+            how many items there are in a dictionary. I won't explain why hash
+            functions are so magical, but you can read more about it at
+            <url href="https://wikipedia.org/wiki/Hash_table" visual="https://wikipedia.org/wiki/Hash_table">wikipedia.org/wiki/Hash_table</url>.</p>
+  <exercise label="question9_1_3">
+    <statement>
+      <p>Q-5: What is the value of fruits[&#x2018;apples'] when the code finishes running?</p>
+      <program language="python">
+        <input>
+fruits = {'apples': 1, 'bananas': 4, 'pears': 17, 'oranges': 14}
+fruits['apples'] += fruits['bananas']
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>Try again! This is only the original amount of apples (1), but it must be increased by the amount of bananas (4)</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>4</p>
+        </statement>
+        <feedback>
+          <p>Try again! This is only the amount of bananas (4), but we must add this to the number of apples (1).</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>5</p>
+        </statement>
+        <feedback>
+          <p>Correct! The original amount of apples (1) is increased by the amount of bananas (4) to result in 5 apples.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

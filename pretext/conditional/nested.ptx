@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<section xml:id="conditional_nested-conditionals">
+  <title>Nested conditionals</title>
+      <idx>Nested Conditional</idx>
+      <idx><h>Conditional</h><h>Nested</h></idx>
+  <p>One conditional can also be nested within another. We could have written
+            the three-branch example like this:</p>
+  <program xml:id="cndtnlNested" interactive="codelens" language="python">
+    <input>
+x = 5
+y = 6
+if x == y:
+    print('x and y are equal')
+else:
+    if x &lt; y:
+        print('x is less than y')
+    else:
+        print('x is greater than y')
+print('All done.')
+    </input>
+  </program>
+  
+    <p>The outer conditional contains two branches. The first branch contains a
+            simple statement. The second branch contains another <c>if</c>
+            statement, which has two branches of its own. Those two branches are
+            both simple statements, although they could have been conditional
+            statements as well.</p>
+  <image source="images/nested.svg" width="50%" alt="Nested If Statements"/>
+
+  <exercise label="cndtnl-nest-mc-error">
+    <statement>
+      <p>Q-2: Will the following code cause an error?</p>
+      <program language="python">
+        <input>
+x = -10
+if x &lt; 0:
+    print("The negative number ",  x, " is not valid here.")
+else:
+    if x &gt; 0:
+        print(x, " is a positive number")
+    else:
+        print(x," is 0")
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>No</p>
+        </statement>
+        <feedback>
+          <p>This is a legal nested if-else statement.  The inner if-else statement is contained completely within the body of the outer else-block.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Yes</p>
+        </statement>
+        <feedback>
+          <p>This is a legal nested if-else statement.  The inner if-else statement is contained completely within the body of the outer else-block.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>Although the indentation of the statements makes the structure apparent,
+            <em>nested conditionals</em> become difficult to read very
+            quickly. In general, it is a good idea to avoid them when you can.</p>
+  <p>Logical operators often provide a way to simplify nested conditional
+            statements. For example, we can rewrite the following code using a
+            single conditional:</p>
+  <program xml:id="cndtnlNestedPositive" interactive="activecode" language="python">
+    <input>
+x = 2
+if 0 &lt; x:
+    if x &lt; 10:
+        print('x is a positive single-digit number.')
+        </input>
+  </program>
+  <p>The first <c>print</c> statement is executed only if we make it past
+            both conditionals, so we can get the same effect with the
+            <c>and</c> operator:</p>
+  <program xml:id="cndtnlNestedAnd" interactive="activecode" language="python">
+    <input>
+x = 3
+if 0 &lt; x and x &lt; 10:
+    print('x is a positive single-digit number.')
+        </input>
+  </program>
+  
+  <p>There are, however, cases where a nested <c>if</c> is very useful. This will usually happen when you have tests on two different variables (unlike the preceding example, where both conditions involve <c>x</c>).</p>
+  
+  <p>Consider the following program, which figures out a ticket price for a movie according to their age and the time at which the movie starts (using a 24-hour clock) Here are the rules:</p>
+  <p>
+    <ul>
+      <li><p>For people less than 65 years old:
+          <ul>
+            <li><p>If the hour is less than 15 (3 p.m.), they pay $7</p></li>
+            <li><p>Otherwise (the movie starts at or after 3 p.m.) they pay $8</p></li>
+          </ul>
+          </p></li>
+      <li><p>Everyone else pays $9.</p></li>
+    </ul>
+  </p>
+  
+  <p>Here is the program, using a nested <c>if</c>.  Run it several times, entering different values for <c>age</c> and <c>hour</c> to see what output you get.</p>
+  
+  <program xml:id="cndtnl-nested-movie" interactive="activecode" language="python">
+    <input>age_str = input("Enter age in years:")
+age = int(age_str)
+
+hour_str = input("Enter start hour in 24-hour time:")
+hour = int(hour_str)
+
+if age &lt; 65:
+    if hour &lt; 15:
+        price = 7
+    else:
+        price = 8
+else:
+    price = 9
+    
+print("Ticket price:", price, "dollars.")</input>
+</program>
+  <exercise label="cndtnl-nest-mc-chain">
+    <statement>
+      <p>Q-5: Which of I, II, and III below gives the same result as the following nested if?</p>
+      <program language="python">
+        <input>
+# nested if-else statement
+x = -10
+if x &lt; 0:
+    print("The negative number ",  x, " is not valid here.")
+else:
+    if x &gt; 0:
+        print(x, " is a positive number")
+    else:
+        print(x, " is 0")
+</input>
+      </program>
+      <program language="python">
+        <input>
+I.
+
+if x &lt; 0:
+    print("The negative number ",  x, " is not valid here.")
+else x &gt; 0:
+    print(x, " is a positive number")
+else:
+    print(x, " is 0")
+</input>
+      </program>
+      <program language="python">
+        <input>
+II.
+
+if x &lt; 0:
+    print("The negative number ",  x, " is not valid here.")
+elif x &gt; 0:
+    print(x, " is a positive number")
+else:
+    print(x, " is 0")
+</input>
+      </program>
+      <program language="python">
+        <input>
+III.
+
+if x &lt; 0:
+    print("The negative number ",  x, " is not valid here.")
+if x &gt; 0:
+    print(x, " is a positive number")
+else:
+    print(x, " is 0")
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>I only</p>
+        </statement>
+        <feedback>
+          <p>You can not use a Boolean expression after an else.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>II only</p>
+        </statement>
+        <feedback>
+          <p>Yes, II will give the same result.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>III only</p>
+        </statement>
+        <feedback>
+          <p>No, III will not give the same result.  The first if statement will be true, but the second will be false, so the else part will execute.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>II and III</p>
+        </statement>
+        <feedback>
+          <p>No, Although II is correct III will not give the same result.  Try it.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I, II, and III</p>
+        </statement>
+        <feedback>
+          <p>No, in I you can not have a Boolean expression after an else.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="cndtnl-nest-mc-elif">
+    <statement>
+      <p>Q-6: True or False? You can use <c>elif</c> statements within nested if-else statements.</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>Yes, it is possible to use elif statements within nested if-else statements, just make sure you are keeping track of all the branches.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>Try again. You can have multiple branches within each branch of an if-else statement.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

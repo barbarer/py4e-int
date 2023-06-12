@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<section xml:id="database_practice-problems-mixed-up-code">
+  <title>Practice Problems - Mixed-up Code</title>
+  <p>Let's practice what we have learned about SQL.</p>
+  <HParsonsNode line="7" runestone_options="{'language': &quot;data-language='sql'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2 3 4 5'&quot;, 'subchapter': 'db-hp-single-line', 'chapter': 'database', 'basecourse': 'py4e-int', 'optional': '', 'optclass': '', 'divid': 'hparsons_test', 'qnumber': 'Q-1', 'reuse': '', 'initialsetting': '--blocks--\nSELECT\nstudent_id, test_name, english\nFROM\ngrades\nWHERE\nenglish &lt; 60 AND math &gt; 90\nenglish &lt; 60 &amp; math &gt; 90', 'dburl': '', 'question_label': '1'}" source="/home/david/comsc020/py4e-int/_sources/database/db-hp-single-line.rst">
+    <p>In the <c>grades</c> table:</p>
+    <image source="https://i.ibb.co/r6qShy5/practice-grade.png" width="50%"/>
+    <p>Please write a SELECT statement to retrieve the <c>student_id</c>, <c>test_name</c>,
+                and <c>english</c> of all entries whose <c>english</c> is lower than 60 and <c>math</c> is higher than 90.</p>
+  </HParsonsNode>
+  <HParsonsNode line="28" runestone_options="{'language': &quot;data-language='sql'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2 3 4 5'&quot;, 'subchapter': 'db-hp-single-line', 'chapter': 'database', 'basecourse': 'py4e-int', 'optional': '', 'optclass': '', 'divid': 'db-hp-get-and-p1', 'qnumber': 'Q-2', 'reuse': '', 'initialsetting': '--blocks--\nSELECT\nstudent_id, test_name, english\nFROM\ngrades\nWHERE\nenglish &lt; 60 AND math &gt; 90\nenglish &lt; 60 &amp; math &gt; 90', 'dburl': '', 'question_label': '2'}" source="/home/david/comsc020/py4e-int/_sources/database/db-hp-single-line.rst">
+    <p>In the <c>grades</c> table:</p>
+    <image source="https://i.ibb.co/r6qShy5/practice-grade.png" width="50%"/>
+    <p>Create a SELECT statement to retrieve the <c>student_id</c>, <c>test_name</c>,
+                and <c>english</c> for all entries whose <c>english</c> value is lower than 60 and <c>math</c> value is higher than 90.</p>
+  </HParsonsNode>
+  <HParsonsNode line="50" runestone_options="{'language': &quot;data-language='sql'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2 3 4'&quot;, 'subchapter': 'db-hp-single-line', 'chapter': 'database', 'basecourse': 'py4e-int', 'optional': '', 'optclass': '', 'divid': 'db-hp-change-p2', 'qnumber': 'Q-3', 'reuse': '', 'initialsetting': '--blocks--\nUPDATE grades\nSET\nmath = 90\nWHERE\nstudent_id = 1 AND test_name = &quot;final&quot;\nLET\nstudent_id = 1 AND test_name = final\nCHANGE grades', 'dburl': '', 'question_label': '3'}" source="/home/david/comsc020/py4e-int/_sources/database/db-hp-single-line.rst">
+    <p>In the <c>grades</c> table:</p>
+    <image source="https://i.ibb.co/r6qShy5/practice-grade.png" width="50%"/>
+    <p>A student completed an extra assignment and got some additional points.</p>
+    <p>Create an UPDATE statement to change the entry with a <c>student_id</c> of 1 and set the math score for the <c>test_name</c> of <c>final</c> to 90.</p>
+  </HParsonsNode>
+  <HParsonsNode line="75" runestone_options="{'language': &quot;data-language='sql'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2 3 4 5'&quot;, 'subchapter': 'db-hp-single-line', 'chapter': 'database', 'basecourse': 'py4e-int', 'optional': '', 'optclass': '', 'divid': 'db-hp-update-p3', 'qnumber': 'Q-4', 'reuse': '', 'initialsetting': '--blocks--\nUPDATE\ngrades\nSET\nenglish = english + 10\nWHERE\ntest_name = &quot;midterm&quot;\ntest_name == &quot;midterm&quot;\nWHEN', 'dburl': '', 'question_label': '4'}" source="/home/david/comsc020/py4e-int/_sources/database/db-hp-single-line.rst">
+    <p>In the <c>grades</c> table:</p>
+    <image source="https://i.ibb.co/r6qShy5/practice-grade.png" width="50%"/>
+    <p>One test was too difficult so the instructors decided to give everyone extra points.</p>
+    <p>Create an UPDATE statement to add 10 points to the <c>english</c> score
+                of the entries with a <c>test_name</c> of <c>midterm</c></p>
+  </HParsonsNode>
+  <HParsonsNode line="100" runestone_options="{'language': &quot;data-language='sql'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2 3 4'&quot;, 'subchapter': 'db-hp-single-line', 'chapter': 'database', 'basecourse': 'py4e-int', 'optional': '', 'optclass': '', 'divid': 'db-hp-insert-p4', 'qnumber': 'Q-5', 'reuse': '', 'initialsetting': '--blocks--\nINSERT\nINTO\ngrades\n(student_id, test_name, english, math)\nVALUES\n(4, &quot;midterm&quot;, 90, 95)\n(&quot;4&quot;, &quot;midterm&quot;, &quot;90&quot;, &quot;95&quot;)\n(&quot;student_id&quot;, &quot;test_name&quot;, &quot;english&quot;, &quot;math&quot;)\n&quot;grades&quot;', 'dburl': '', 'question_label': '5'}" source="/home/david/comsc020/py4e-int/_sources/database/db-hp-single-line.rst">
+    <p>Create an INSERT statement to add a new entry to the <c>grades</c> table.
+                Set the <c>student_id</c> to 4, <c>test_name</c> to <q>midterm</q> ,
+                <c>english</c> score to 90 and <c>math</c> score to 95.</p>
+  </HParsonsNode>
+  <HParsonsNode line="121" runestone_options="{'language': &quot;data-language='sql'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2 3 4 5 6 7 8'&quot;, 'subchapter': 'db-hp-single-line', 'chapter': 'database', 'basecourse': 'py4e-int', 'optional': '', 'optclass': '', 'divid': 'db-hp-create-table-p5', 'qnumber': 'Q-6', 'reuse': '', 'initialsetting': '--blocks--\nCREATE\nTABLE\ngrades\n(\nstudent_id INTEGER,\ntest_name TEXT,\nenglish INTEGER,\nmath INTEGER\n)\ntest_name INTEGER,', 'dburl': '', 'question_label': '6'}" source="/home/david/comsc020/py4e-int/_sources/database/db-hp-single-line.rst">
+    <p>Create a <c>CREATE TABLE</c> statement to create a <c>grades</c> table with
+                a <c>student_id</c> of type integer, a <c>test_name</c> of type text,
+                an <c>english</c> score of type integer and a <c>math</c> score of type
+                integer.</p>
+  </HParsonsNode>
+</section>

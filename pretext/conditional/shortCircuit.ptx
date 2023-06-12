@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<section xml:id="conditional_short-circuit-evaluation-of-logical-expressions">
+  <title>Short-circuit evaluation of logical expressions</title>
+      <idx>Short Circuit</idx>
+    <idx>Guardian Pattern</idx>
+    <idx>Guard</idx>
+  <p>When Python is processing a logical expression such as <c>x &gt;= 2 and
+(x/y) &gt; 2</c>, it evaluates the expression from left to right.
+            Because of the definition of <c>and</c>, if <c>x</c> is less
+            than 2, the expression <c>x &gt;= 2</c> is <c>False</c> and so
+            the whole expression is <c>False</c> regardless of whether
+            <c>(x/y) &gt; 2</c> evaluates to <c>True</c> or
+            <c>False</c>.</p>
+  <p>When Python detects that there is nothing to be gained by evaluating the
+            rest of a logical expression, it stops its evaluation and does not do
+            the computations in the rest of the logical expression. When the
+            evaluation of a logical expression stops because the overall value is
+            already known, it is called <em>short-circuiting</em> the
+            evaluation.</p>
+  <p>While this may seem like a fine point, the short-circuit behavior leads
+            to a clever technique called the <em>guardian pattern</em>.
+            Consider the following code sequence in the Python interpreter:</p>
+  <program xml:id="cndtnlShortCircuit" interactive="activecode" language="python">
+    <input>
+x = 6
+y = 2
+print(x &gt;= 2 and (x/y) &gt; 2)
+
+x = 1
+y = 0
+print(x &gt;= 2 and (x/y) &gt; 2)
+
+x = 6
+y = 0
+print(x &gt;= 2 and (x/y) &gt; 2)
+        </input>
+  </program>
+  <p>The third calculation failed because Python was evaluating
+            <c>(x/y)</c> and <c>y</c> was zero, which causes a runtime
+            error. But the second example did <em>not</em> fail because the first part of
+            the expression <c>x &gt;= 2</c> evaluated to <c>False</c> so
+            the <c>(x/y)</c> was not ever executed due to the
+            <em>short-circuit</em> rule and there was no error.</p>
+  <p>We can construct the logical expression to strategically place a
+            <em>guard</em> evaluation just before the evaluation that might
+            cause an error as follows:</p>
+  <program xml:id="cndtnlGuardian" interactive="activecode" language="python">
+    <input>
+x = 1
+y = 0
+print(x &gt;= 2 and y != 0 and (x/y) &gt; 2)
+
+x = 1
+y = 0
+print(x &gt;= 2 and y != 0 and (x/y) &gt; 2)
+
+x = 6
+y = 0
+print(x &gt;= 2 and (x/y) &gt; 2 and y != 0)
+        </input>
+  </program>
+  <p>In the first logical expression, <c>x &gt;= 2</c> is
+            <c>False</c> so the evaluation stops at the <c>and</c>.</p>
+  <p>In the second logical expression, <c>x &gt;= 2</c> is <c>True</c>
+            but <c>y != 0</c> is <c>False</c> so we never reach
+            <c>(x/y)</c>.</p>
+  <p>In the third logical expression, the <c>y != 0</c> is <em>after</em> the
+            <c>(x/y)</c> calculation so the expression fails with an error.</p>
+  <p>In the second expression, we say that <c>y != 0</c> acts as a
+            <em>guard</em> to insure that we only execute <c>(x/y)</c>
+            if <c>y</c> is non-zero.</p>
+  <exercise label="cndtnl-sc-mc-guard">
+    <statement>
+      <p>Q-3: Which of the following is a <em>guard</em> for the code below?</p>
+      <pre>x &gt;= 2 and y != 0 and (x/y) &gt; 2</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>x &gt;= 2</p>
+        </statement>
+        <feedback>
+          <p>Try again. This element is making sure x matches a condition.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>y != 0</p>
+        </statement>
+        <feedback>
+          <p>This element is a guard, making sure the code does not try to divide by 0.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>(x/y) &gt; 2</p>
+        </statement>
+        <feedback>
+          <p>Try again. This element is making sure x/y matches a condition.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>and</p>
+        </statement>
+        <feedback>
+          <p>Try again. This is a logical operator for the boolean expression.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="cndtnl-sc-fitb-guard">
+    <statement>
+      <p>Q-4: True or False? The guard should be placed before an expression is evaluated. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Tt]rue">
+          <feedback>
+            <p>A guard is used to avoid runtime errors.</p>
+          </feedback>
+        </condition>
+        <condition string="[Ff]alse">
+          <feedback>
+            <p>Try again! A guard is used to avoid runtime errors.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="cndtnl-sc-dnd-terms">
+    <statement>
+      <p>Match each term with its meaning.</p>
+    </statement>
+    <feedback>
+      <p>What is the purpose of each term?</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>guardian pattern</premise>
+        <response>A logical expression with additional comparisons to take advantage
+of the short circuit behavior.</response>
+      </match>
+      <match order="2">
+        <premise>short circuit</premise>
+        <response>When Python is part-way through evaluating a logical expression and stops
+the evaluation because Python knows the final value for the expression without needing to
+evaluate the rest of the expression.</response>
+      </match>
+      <match order="3">
+        <premise>guard</premise>
+        <response> A comparison put in place to cause short circuit behavior and avoid a runtime error.</response>
+      </match>
+    </matches>
+  </exercise>
+</section>

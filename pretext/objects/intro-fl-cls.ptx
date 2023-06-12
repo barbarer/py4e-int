@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<section xml:id="objects_knowledge-review">
+  <title>Knowledge Review</title>
+  <p>Look the code below.  It defines a class.  it also declares <em>methods</em> which are
+            functions that are defined inside of a class.
+            One of the methods, <c>__init__</c>, is automatically called when a new object is
+            created by the class.  One of the methods, <c>__str__</c>, is automatically
+            called when you print an object of the class.</p>
+  <subsection xml:id="objects_a-book-class">
+    <title>A Book Class</title>
+    <exercise label="class_book_ac1_v2_fl">
+      <statement>
+        <p>Run the following code</p>
+      </statement>
+      <program xml:id="class_book_ac1_v2_fl_editor" interactive="activecode" language="python">
+        <input>
+class Book:
+    """ Represents a book object """
+
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+
+    def __str__(self):
+        return "title: " + self.title + " author: " + self.author
+
+def main():
+     b2 = Book("A Wrinkle in Time", "M. L'Engle")
+     print(b2)
+     b1 = Book("Goodnight Moon", "Margaret Wise Brown")
+     print(b1)
+
+main()
+        </input>
+      </program>
+    </exercise>
+  </subsection>
+  <subsection xml:id="objects_creating-more-objects">
+    <title>Creating More Objects</title>
+    <p>Once you have defined a class you can use it to create many objects.</p>
+    <exercise label="class_person_ac2_fl">
+      <statement>
+        <p>Change the following main function to add a person object with your first and last name.</p>
+      </statement>
+      <program xml:id="class_person_ac2_fl_editor" interactive="activecode" language="python">
+        <input>
+class Person:
+    """ Represents a person object """
+
+    def __init__(self, first, last):
+        self.first = first
+        self.last = last
+
+    def __str__(self):
+        return self.first + " " + self.last
+
+def main():
+    p1 = Person("Barbara", "Ericson")
+    print(p1)
+
+main()
+        </input>
+      </program>
+    </exercise>
+  </subsection>
+  <subsection xml:id="objects_add-a-method-to-a-class">
+    <title>Add a Method to a Class</title>
+    <p>You can add a new method to a class by adding a new function inside the class.  For example, you can add the <c>initials</c>
+                method to the Person class.  The function must take an object of the
+                class to work with that by convention we call <c>self</c>. The name of the function
+                doesn't need to have any underscores in it.</p>
+    <exercise label="class_person_init_ac1_fl">
+      <statement>
+        <p>Change the following Person class to add an <c>initials</c> method that returns
+                a string with the first letter in the first name and the first letter in
+                the last name in lowercase.</p>
+      </statement>
+      <program xml:id="class_person_init_ac1_fl_editor" interactive="activecode" language="python">
+        <input>
+class Person:
+    """ Represents a person object """
+
+    def __init__(self, first, last):
+        self.first = first
+        self.last = last
+
+    def __str__(self):
+        return self.first + " " + self.last
+
+def main():
+    p1 = Person("Barbara", "Ericson")
+    print(p1)
+    print(p1.initials())
+
+main()
+        </input>
+      </program>
+    </exercise>
+  </subsection>
+  <subsection xml:id="objects_feedback">
+    <title>Feedback</title>
+    <exercise label="class-intro-sa-fl">
+      <statement>
+        <p>Q-4: Please provide feedback here. Please share any comments, problems, or suggestions.</p>
+      </statement>
+    </exercise>
+  </subsection>
+  <subsection xml:id="objects_what-to-do-next">
+    <title>What to do next</title>
+    <raw format="html" xml:space="preserve">&lt;h4&gt;Click to see an introduction about our system &#x1F449; &lt;b&gt;&lt;a href="system-fl-cls.html"&gt;System Introduction&lt;/a&gt;&lt;/b&gt;&lt;/h4&gt;</raw>
+  </subsection>
+</section>

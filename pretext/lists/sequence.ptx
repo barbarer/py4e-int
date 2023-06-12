@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<section xml:id="lists_a-list-is-a-sequence">
+        <title>A list is a sequence</title>
+        
+        
+<idx>Element</idx>
+<idx>Sequence</idx>
+<idx>Item</idx>
+<idx>Assignment</idx>
+<idx>Nested List</idx>
+<idx><h>Empty</h><h>List</h></idx>
+<idx><h>List</h><h>Empty</h></idx>
+        <p>Like a string, a <em>list</em> is a sequence of values. In a
+            string, the values are characters; in a list, they can be any type. The
+            values in list are called <em>elements</em> or sometimes
+            <em>items</em>.</p>
+        <p>There are several ways to create a new list; the simplest is to enclose
+            the elements in square brackets (<q>[</q> and <q>]</q>):</p>
+        <program language="python"><input>
+[10, 20, 30, 40]
+['crunchy frog', 'ram bladder', 'lark vomit']
+</input></program>
+        <p>The first example is a list of four integers. The second is a list of
+            three strings. The elements of a list don't have to be the same type.
+            The following list contains a string, a float, an integer, and (lo!)
+            another list:</p>
+        <program language="python"><input>
+['spam', 2.0, 5, [10, 20]]
+</input></program>
+        <p>A list within another list is <em>nested</em>.</p>
+        <p>A list that contains no elements is called an empty list; you can create
+            one with empty brackets, <c>[]</c>.</p>
+        <p>As you might expect, you can assign list values to variables:</p>
+
+    <program xml:id="listExamples" interactive="activecode" language="python">
+        <input>
+cheeses = ['Cheddar', 'Edam', 'Gouda']
+numbers = [17, 123]
+empty = []
+print(cheeses, numbers, empty)
+        </input>
+    </program>
+
+    <exercise label="listSeq_MC_tf">
+        <statement>
+
+        <p>Q-2: True or False? A list can contain only integer items.</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>True</p>
+                </statement>
+                <feedback>
+                    <p>lists can have different data types.</p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>False</p>
+                </statement>
+                <feedback>
+                    <p>lists can contain any combination of items, even other lists!</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise label="listSeq_MC_length">
+        <statement>
+
+        <p>Q-3: What is the length of the list [<q>Sue</q>,<q>Maria</q>,5,<q>Erica</q>]?</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>1</p>
+                </statement>
+                <feedback>
+                    <p>There is only one number in the list, but that is not the length.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>3</p>
+                </statement>
+                <feedback>
+                    <p>There are three strings in the list, but that is not the length.</p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>4</p>
+                </statement>
+                <feedback>
+                    <p>There are 4 items in this list (three strings and a number) making the length 4.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>5</p>
+                </statement>
+                <feedback>
+                    <p>The value of the number in this list is 5, but that is not the length.</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+        <exercise label="listSeq_fill1">
+            <statement>
+    <p>Q-4: A list within another list is said to be __________. <var/>  </p></statement><setup><var><condition string="[Nn]ested"><feedback><p>A list within another list is nested.</p></feedback></condition><condition string=".*"><feedback><p>Try again.</p></feedback></condition></var></setup></exercise>    </section>
+

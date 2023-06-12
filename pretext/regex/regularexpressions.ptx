@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<section xml:id="regex_regular-expressions">
+  <title>Regular Expressions</title>
+<idx>Regular Expressions</idx>
+<idx>Regex</idx>
+  <p>So far we have been reading through files, looking for patterns and
+            extracting various bits of lines that we find interesting. We have been using string methods like <c>split</c> and <c>find</c> and using lists and string slicing to extract portions of the lines.</p>
+  <p>This task of searching and extracting is so common that Python has a
+            very powerful library called <term>regular expressions</term> that
+            handles many of these tasks quite elegantly. The reason we have not
+            introduced regular expressions earlier in the book is because while they
+            are very powerful, they are a little complicated and their syntax takes
+            some getting used to.</p>
+  <p>Regular expressions are almost their own little programming language for
+            searching and parsing strings. As a matter of fact, entire books have
+            been written on the topic of regular expressions. In this chapter, we
+            will only cover the basics of regular expressions. For more detail on
+            regular expressions, see:</p>
+  <p>
+    <url href="https://en.wikipedia.org/wiki/Regular_expression" visual="https://en.wikipedia.org/wiki/Regular_expression">https://en.wikipedia.org/wiki/Regular_expression</url>
+  </p>
+  <p>
+    <url href="https://docs.python.org/library/re.html" visual="https://docs.python.org/library/re.html">https://docs.python.org/library/re.html</url>
+  </p>
+  <p>The regular expression library <c>re</c> must be imported into
+            your program before you can use it. The simplest use of the regular
+            expression library is the <c>search()</c> function. The following
+            program demonstrates a trivial use of the search function.</p>
+  <exercise label="re_ac1">
+    <statement>
+      <p>This code uses regular expressions to print lines that contain <q>From:</q>.</p>
+    </statement>
+    <program xml:id="re_ac1_editor" interactive="activecode" language="python">
+      <input>
+import re
+hand = open('mbox-short.txt')
+for line in hand:
+    line = line.rstrip()
+    if re.search('From:', line):
+        print(line)
+        </input>
+    </program>
+  </exercise>
+  <p>We open the file, loop through each line, and use the regular expression
+            <c>search()</c> to only print out lines that contain the string
+            <q>From:</q>. This program does not use the real power of regular
+            expressions, since we could have just as easily used
+            <c>line.find()</c> to accomplish the same result.</p>
+  <exercise label="re_mc_import">
+    <statement>
+      <p>11-9-2: Which of the following correctly imports the regex library?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>import regex</p>
+        </statement>
+        <feedback>
+          <p>The module name is not regex.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>import re.search()</p>
+        </statement>
+        <feedback>
+          <p>We are not importing a specific regex function.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>import re</p>
+        </statement>
+        <feedback>
+          <p>Correct! This is the proper way to import the regular expression library.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>import regular_expressions</p>
+        </statement>
+        <feedback>
+          <p>This is not the module name.  It is much shorter.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>The power of the regular expressions comes when we add special
+            characters to the search string that allow us to more precisely control
+            which lines match the string. Adding these special characters to our
+            regular expression allow us to do sophisticated matching and extraction
+            while writing very little code.</p>
+  <p>For example, the caret character is used in regular expressions to match
+            <q>the beginning</q> of a line. We could change our program to only match
+            lines where <q>From:</q> was at the beginning of the line as follows:</p>
+  <exercise label="re-ac2">
+    <statement>
+      <p>Using regular expressions to print lines that contain <q>From:</q> at the beginning of the line.</p>
+    </statement>
+    <program xml:id="re-ac2_editor" interactive="activecode" language="python">
+      <input>
+import re
+hand = open('mbox-short.txt')
+for line in hand:
+    line = line.rstrip()
+    if re.search('^From:', line):
+        print(line)
+        </input>
+    </program>
+  </exercise>
+  <p>Now we will only match lines that <em>start with</em> the string
+            <q>From:</q>. This is still a very simple example that we could have done
+            equivalently with the <c>startswith()</c> method from the string
+            library. But it serves to introduce the notion that regular expressions
+            contain special action characters that give us more control as to what
+            will match the regular expression.</p>
+  <exercise label="re_mc_startswith">
+    <statement>
+      <p>11-9-4: Which lines will the following code print?</p>
+      <program language="python">
+        <input>
+import re
+hand = open('mbox-short.txt')
+for line in hand:
+    line = line.rstrip()
+    if re.search('b', line):
+        print(line)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Any line that contains a 'B'</p>
+        </statement>
+        <feedback>
+          <p>Regular expressions are case sensitive for individual characters.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Any line containing a 'b'</p>
+        </statement>
+        <feedback>
+          <p>Correct! Since there is no ^ before the 'b', we are only looking at lines that contain the letter 'b'.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Lines that start with the letter 'b'</p>
+        </statement>
+        <feedback>
+          <p>Since there is no ^, we are only looking for lines that contain 'b', not those that start with 'b'.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Lines that contain 'B' or 'b'</p>
+        </statement>
+        <feedback>
+          <p>Regular expressions are case sensitive for individual characters, so it will only look for 'b'.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="re-pp-wolverines-v2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Construct a block of code that loops reading lines from a file, removes whitespace on the right of the line, and prints out any line starting with &#x2018;Wolverines'.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>import re</cline>
+      </block>
+      <block order="6">
+        <cline>with open('mbox-short.txt') as fhand:</cline>
+      </block>
+      <block order="8">
+        <cline>    for line in fhand:</cline>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>        line = line.rstrip()</cline>
+        </choice>
+        <choice>
+          <cline>        line = line.split() </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>        if re.search('^Wolverines', line):</cline>
+        </choice>
+        <choice>
+          <cline>        if re.search('Wolverines', line): </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>            print(line)</cline>
+      </block>
+    </blocks>
+  </exercise>
+</section>

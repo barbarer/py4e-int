@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<section xml:id="exp_dictionary-practice-parsons-problems">
+  <title>Dictionary Practice - Parsons Problems</title>
+  <p>Try to solve the following mixed up code problems. You can use the <q>Help Me</q> button
+            to make the problem easier if you have made at least three attempts to solve the
+            problem.</p>
+  <exercise label="dp_two_list_to_dict_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Put the blocks in order to define the function <c>make_dir</c> that takes two lists (<c>l1</c> and <c>l2</c>) of equal length and returns a dictionary where the items in <c>l1</c> are the keys and the items in <c>l2</c> are the values. For example, <c>make_dir([&#x2018;a', &#x2018;c'], [5, 0])</c> returns <c>{&#x2018;a': 5, &#x2018;c': 0}</c>.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>def make_dir(l1, l2):</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    d = {}</cline>
+        </choice>
+        <choice>
+          <cline>    d = [] </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    for i in range(len(l1)):</cline>
+        </choice>
+        <choice>
+          <cline>    for i in range(l1): </cline>
+        </choice>
+      </block>
+      <block order="8">
+        <cline>        val1 = l1[i]</cline>
+        <cline>        val2 = l2[i]</cline>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>        d[val1] = val2</cline>
+        </choice>
+        <choice>
+          <cline>        d[val1] = d[val2] </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <cline>    return d</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="dp_list_of_tuples_to_dict_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Put the blocks in order to define the function <c>make_dir</c> which takes a list of tuples (<c>tuple_list</c>) and returns a dictionary where the first item in each tuple is the key and the second is the value. For example, <c>make_dir([(&#x2018;gray', -3), (&#x2018;blue', 2)])</c> returns <c>{&#x2018;gray': -3, &#x2018;blue': 2}</c>.</p>
+    </statement>
+    <blocks>
+      <block order="7">
+        <cline>def make_dir(tuple_list):</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    d = {}</cline>
+        </choice>
+        <choice>
+          <cline>    d = [] </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    for tuple in tuple_list:</cline>
+        </choice>
+        <choice>
+          <cline>    for tuple in range(tuple_list): </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>        d[tuple[0]] = tuple[1]</cline>
+        </choice>
+        <choice>
+          <cline>        d[tuple[0]] = d[tuple[1]] </cline>
+        </choice>
+      </block>
+      <block order="8">
+        <cline>    return d</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="dp_get_tuple_from_dict_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Put the blocks in order to define the function <c>get_tuple</c> which takes a dictionary <c>dict</c> and a <c>key</c> and if the <c>key</c> is found in the dictionary it returns <c>(key, value)</c> otherwise it returns <c>(key, &#x2018;Not Found')</c>. For example, <c>get_tuple({&#x2018;a': 0}, &#x2018;c')</c> returns <c>(&#x2018;c', &#x2018;Not Found')</c>, and <c>get_tuple({&#x2018;a': 0}, &#x2018;a')</c> returns <c>(&#x2018;a', 0)</c></p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <choice correct="yes">
+          <cline>def get_tuple(dict, key):</cline>
+        </choice>
+        <choice>
+          <cline>def get_tuple(dict, key) </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    value = dict.get(key,'Not Found')</cline>
+        </choice>
+        <choice>
+          <cline>    value = dict[key] </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    return (key, value)</cline>
+        </choice>
+        <choice>
+          <cline>    return {key, value} </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="dp_greater_dict_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Put the blocks in order to define the function <c>greater_dictionary</c> which takes a dictionary <c>d</c> and an integer <c>cutoff</c> and returns a dictionary
+            that contains only the key-value pairs where the value is greater than
+            or equal to the cutoff.   For example, <c>greater_dict({&#x2018;a': 20, &#x2018;b': 10}, 15)</c> returns <c>{&#x2018;a': 20}</c>.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <choice correct="yes">
+          <cline>def greater_dictionary(d, cutoff):</cline>
+        </choice>
+        <choice>
+          <cline>def greater_dictionary(self, d, cutoff): </cline>
+        </choice>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>    result = {}</cline>
+        </choice>
+        <choice>
+          <cline>    result = () </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    for key in d:</cline>
+        </choice>
+        <choice>
+          <cline>    for key in range(d): </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>        if d[key] &gt;= cutoff:</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>            result[key] = d[key]</cline>
+        </choice>
+        <choice>
+          <cline>            d[key] = result[key] </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <cline>    return result</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="dp_get_counts_dict_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Put the blocks in order to define the function <c>get_counts</c> which takes a list of strings <c>s_list</c> and returns a dictionary that has the number of times each unique string appears in the list. For example, <c>get_counts([&#x2018;a','b','a'])</c> returns <c>{&#x2018;a':2, &#x2018;b':1}</c>.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <choice correct="yes">
+          <cline>def get_counts(s_list):</cline>
+        </choice>
+        <choice>
+          <cline>def get_counts(self, s_list): </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    d = dict()</cline>
+        </choice>
+        <choice>
+          <cline>    d = new dict() </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    for s in s_list:</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>        d[s] = d.get(s,0) + 1</cline>
+        </choice>
+        <choice>
+          <cline>        d[s] = d[s] + 1 </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>    return d</cline>
+      </block>
+    </blocks>
+  </exercise>
+</section>

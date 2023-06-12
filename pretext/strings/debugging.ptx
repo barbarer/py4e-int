@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<section xml:id="strings_debugging">
+  <title>Debugging</title>
+<idx>Debugging</idx>
+<idx><h>Guardian</h><h>Pattern</h></idx>
+<idx><h>Pattern</h><h>Guardian</h></idx>
+  <p>A skill that you should cultivate as you program is always asking
+            yourself, <q>What could go wrong here?</q> or alternatively, <q>What crazy
+            thing might our user do to crash our (seemingly) perfect program?</q></p>
+  <p>For example, look at the program which we used to demonstrate the
+            <c>while</c> loop in the chapter on iteration:</p>
+  <program language="python">
+    <input>
+while True:
+    line = input('&gt; ')
+    if line[0] == '#':
+        continue
+    if line == 'done':
+        break
+    print(line)
+print('Done!')
+</input>
+  </program>
+  <p>Look what happens when the user enters an empty line of input:</p>
+  <program language="python">
+    <input>
+&gt; hello there
+hello there
+&gt; # don't print this
+&gt; print this!
+print this!
+&gt;
+Traceback (most recent call last):
+  File "copytildone.py", line 3, in &lt;module&gt;
+    if line[0] == '#':
+IndexError: string index out of range
+</input>
+  </program>
+  <exercise label="str-debug-fitb-error">
+    <statement>
+      <p>11-9-1: What kind of error will come from trying to access a nonexistent element or one that is out of range? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Ii]ndex([Ee]rror)?">
+          <feedback>
+            <p>Correct! Try to access an index that isn't there causes a index error.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Incorrect! Read the error message above for the answer. Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>The code works fine until it is presented with an empty line. In that case, there is
+            no zero-th character, so we get a traceback. There are two solutions to
+            make line three <q>safe,</q> even if the line is empty.</p>
+  <p>One possibility is to simply use the <c>startswith</c> method,
+            which returns <c>False</c> if the string is empty.</p>
+  <program language="python">
+    <input>
+if line.startswith('#'):
+</input>
+  </program>
+  <exercise label="str-debug-fitb-string">
+    <statement>
+      <p>11-9-2: What string method is used to prevent errors? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="(\.)?startswith(\(\))?">
+          <feedback>
+            <p>Correct! The string method startswith can be used as an extra check to prevent errors.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Incorrect! Watch your capitalization (methods don't use camelCase). Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>Another way is to safely write the <c>if</c> statement using the
+            <em>guardian</em> pattern and make sure the second logical
+            expression is evaluated only where there is at least one character in
+            the string:</p>
+  <program language="python">
+    <input>
+if len(line) &gt; 0 and line[0] == '#':
+</input>
+  </program>
+  <exercise label="str-debug-fitb-safe">
+    <statement>
+      <p>11-9-3: What kind of pattern is used to prevent errors? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Gg]uardian(\s+[Pp]attern)?">
+          <feedback>
+            <p>Correct! A guardian pattern can be used as an extra check to prevent errors.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Incorrect! Make sure you spelled it correctly. Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+</section>

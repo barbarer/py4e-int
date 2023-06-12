@@ -1,0 +1,435 @@
+<?xml version="1.0"?>
+<section xml:id="files_group-work-reading-from-files">
+  <title>Group Work: Reading from Files</title>
+  <introduction>
+  <p>It is best to use a POGIL approach with the following. In POGIL students work
+            in groups on activities and each member has an assigned role.  For more information see <url href="https://cspogil.org/Home" visual="https://cspogil.org/Home">https://cspogil.org/Home</url>.</p>
+  <note>
+    <p>If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.</p>
+  </note>
+  <p>
+    <term>Learning Objectives</term>
+  </p>
+  <p>Students will know and be able to do the following.</p>
+  <p>
+    <em>Content Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Learn several ways to read data from a file.</p>
+      </li>
+      <li>
+        <p>Learn how to use try and except.</p>
+      </li>
+      <li>
+        <p>Learn how to use <c>with open</c> for opening a file</p>
+      </li>
+      <li>
+        <p>Learn how to write data to a file.</p>
+      </li>
+      <li>
+        <p>Use a dictionary to track counts of items.</p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    <em>Process Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Modify code that reads from files</p>
+      </li>
+      <li>
+        <p>Modify code to handle an exception</p>
+      </li>
+      <li>
+        <p>Fix code that reads from a file</p>
+      </li>
+    </ul>
+  </p>
+</introduction>
+  <subsection xml:id="files_reading-from-files">
+    <title>Reading from Files</title>
+    <p>To read from a file, open the file which returns a file object and loop through
+                the lines in a file.  Remember to close the file when you are done reading from it!</p>
+    <hint>
+      <pre>Labrador Retriever
+German Shepherd
+Golden Retriever
+Beagle
+Bulldog
+Yorkshire Terrier
+Boxer
+Poodle
+Rottweiler
+Dachshunds</pre>
+    </hint>
+    <exercise label="file_pogil_read_lines_with_loop">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="file_pogil_read_lines_with_loop_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def print_contents(file):
+    file_obj = open(file)
+    print(type(file_obj))
+    for line in file_obj:
+        print(line)
+    file_obj.close()
+
+print_contents("dogs.txt")
+        </input>
+      </program>
+    </exercise>
+    <p>Notice that when you run this code it adds a blank line after each line.
+                That is because when you read a line from a file the line contains the newline character (<c>\n</c>).
+                When you print a line you add another newline character which prints as a blank line.</p>
+    <exercise label="file_remove_newline">
+      <statement>
+        <p>Q-2: What string method can you use to remove the newline character from the end of a line? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="rstrip|strip">
+            <feedback>
+              <p>You can use rstrip or strip to remove the newline character.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>What method removes whitespace from the right side of a string?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <p>Modify the code above to remove the newline from each line after it is read in.</p>
+    <exercise label="file_obj_type_fitb">
+      <statement>
+        <p>Q-3: What type of thing is <c>file_obj</c> in the code above? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="'?file'?">
+            <feedback>
+              <p>It is an object of the file class.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>What is the class name that was printed?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <p>You can also read all the lines from a file at once into a list.  One advantage
+                to this is that you can immediately close the file after that.  This makes it easier to remember to close the file.</p>
+    <exercise label="file_pogil_read_lines_list">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="file_pogil_read_lines_list_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def print_contents(file):
+
+    # get the contents
+    file_obj = open(file, "r")
+    lines = file_obj.readlines()
+    file_obj.close()
+
+    # process the lines
+    for line in lines:
+        line = line.rstrip() # remove newline
+        print(line)
+
+print_contents("dogs.txt")
+        </input>
+      </program>
+    </exercise>
+    <note>
+      <p>You can use either <c>open(file,"r")</c> or just <c>open(file)</c> to read from a file.</p>
+    </note>
+    <exercise label="line_file_close_fitb">
+      <statement>
+        <p>Q-5: What method do you use to close a file that you have opened? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="close">
+            <feedback>
+              <p>This will close the file object.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Look at the example Python code above.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="file_read_all_lines_at_once_sa">
+      <statement>
+        <p>Q-6: When would it not be best to read all of the lines in a file into a list at once?</p>
+      </statement>
+    </exercise>
+    <p>You can also just read some of the lines from a file using the <c>readline</c> method.  This can be handy
+                if you just want to see what type of data is in a file, but don't need to see the entire file.</p>
+    <exercise label="file_pogil_read_x_lines">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="file_pogil_read_x_lines_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def print_contents(file, num):
+    file_obj = open(file)
+    for i in range(num):
+        line = file_obj.readline()
+        line = line.rstrip()
+        print(line)
+    file_obj.close()
+
+print_contents("dogs.txt", 2)
+        </input>
+      </program>
+    </exercise>
+    <p>Modify the code above to print 4 lines and run it again.</p>
+    <exercise label="file_read_lines_no_file">
+      <statement>
+        <p>Q-8: What do you think will happen when you try to run the code below?</p>
+      </statement>
+    </exercise>
+    <exercise label="file_pogil_read_lines_wrong_file_name">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="file_pogil_read_lines_wrong_file_name_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def print_contents(file):
+
+    # get the contents
+    file_obj = open(file, "r")
+    lines = file_obj.readlines()
+    file_obj.close()
+
+    # process the lines
+    for line in lines:
+        line = line.rstrip() # remove newline
+        print(line)
+
+print_contents("unknown.txt")
+        </input>
+      </program>
+    </exercise>
+    <note>
+      <p>If the file that you try to open is not found, you will get an error.</p>
+    </note>
+    <exercise label="file_pogil_read_lines_try_and_catch">
+      <statement>
+        <p>Run the code below to see what it prints.  When it asks for another file name type in &#x2018;dogs.txt'.</p>
+      </statement>
+      <program xml:id="file_pogil_read_lines_try_and_catch_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def print_contents(file):
+
+    # try to read from the file
+    try:
+        # get the contents
+        file_obj = open(file, "r")
+
+    # if there is an exception ask for another file name
+    except:
+        file = input("The specified file doesn't exist.  Enter another name")
+        file_obj = open(file, "r")
+
+    # read the lines and close the file
+    lines = file_obj.readlines()
+    file_obj.close()
+
+    # process the lines
+    for line in lines:
+        line = line.rstrip() # remove newline
+        print(line)
+
+print_contents("unknown.txt")
+        </input>
+      </program>
+    </exercise>
+    <p>You can use <c>try</c> and <c>except</c> to handle code that can cause exceptions. Put the code that can cause the exception in the <c>try</c> block.</p>
+    <exercise label="line_file_open_except_fitb">
+      <statement>
+        <p>Q-11: What keyword do you use to specify code to execute if there is an error when the code in the body of the <c>try</c> executes? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="except">
+            <feedback>
+              <p>The code specified in the body of the except will run if there is an exception when the code in the body fo the try runs.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Look at the example Python code above.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <p>You can also use <c>with open(file) as name</c> which will automatically close the file after the code block ends. It is particularly important to close the file when you write data to a file.</p>
+    <exercise label="file_pogil_read_lines_list_with">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="file_pogil_read_lines_list_with_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def print_contents(file):
+
+    # this will automatically close the file too
+    with open(file) as file_obj:
+
+        # read the lines
+        lines = file_obj.readlines()
+
+    # process the lines
+    for line in lines:
+        line = line.rstrip() # remove newline
+        print(line)
+
+print_contents("dogs.txt")
+        </input>
+      </program>
+    </exercise>
+    <note>
+      <p>When you use <c>with open(file) as name:</c> the file is closed automatically when you leave the block (indented area).</p>
+    </note>
+    <exercise label="file_char_count_with_open" numbered="yes" adaptive="yes" indentation="show" language="python">
+      <statement>
+        <p>Create a function, <c>num_chars(filename)</c>, that returns the number of total characters (including new lines) in the file with the passed file name.  Initialize a count then open the file and loop through all of the lines in the file and add the length of each line to the count.  Close the file.  Then return the count.  There are extra blocks that are not needed in the solution.</p>
+      </statement>
+      <blocks>
+        <block order="4">
+          <cline>def num_chars(filename):</cline>
+        </block>
+        <block order="5">
+          <cline>    count = 0</cline>
+        </block>
+        <block order="6">
+          <cline>    with open(filename) as file:</cline>
+        </block>
+        <block order="1" correct="no">
+          <cline>    while open(filename) as file: </cline>
+        </block>
+        <block order="8">
+          <cline>        for line in file:</cline>
+        </block>
+        <block order="7">
+          <cline>            count += len(line)</cline>
+        </block>
+        <block order="3" correct="no">
+          <cline>    file.close() </cline>
+        </block>
+        <block order="2">
+          <cline>    return count</cline>
+        </block>
+      </blocks>
+    </exercise>
+    <exercise label="file_char_count_open" numbered="yes" adaptive="yes" indentation="show" language="python">
+      <statement>
+        <p>Create a function, <c>num_chars(filename)</c>, that returns the number of total characters (including new lines) in the file with the passed file name.  Initialize a count then open the file and loop through all of the lines in the file and add the length of each line to the count.  Close the file.  Then return the count.  There is an extra block that is not needed in the solution.</p>
+      </statement>
+      <blocks>
+        <block order="2">
+          <cline>def num_chars(filename):</cline>
+        </block>
+        <block order="7">
+          <cline>    count = 0</cline>
+        </block>
+        <block order="8">
+          <cline>    file = open(filename):</cline>
+        </block>
+        <block order="3" correct="no">
+          <cline>    file = with open(filename): </cline>
+        </block>
+        <block order="1">
+          <cline>    for line in file:</cline>
+        </block>
+        <block order="5">
+          <cline>        count += len(line)</cline>
+        </block>
+        <block order="4">
+          <cline>    file.close()</cline>
+        </block>
+        <block order="6">
+          <cline>    return count</cline>
+        </block>
+      </blocks>
+    </exercise>
+    <exercise label="file_pogil_line_count_type_returned">
+      <statement>
+        <p>Q-15: What type of thing is returned from the function below? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="dictionary">
+            <feedback>
+              <p>It will return a dictionary with the counts of the number of lines in the file that start with a character.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>What type of thing is b_dict?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="file_pogil_dict_count">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="file_pogil_dict_count_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def count_first(file):
+    b_dict = {}
+    file_obj = open(file)
+    for line in file_obj:
+        first_letter = line[0]
+        b_dict[first_letter] = b_dict.get(first_letter, 0) + 1
+    file_obj.close()
+    return b_dict
+
+print(count_first("dogs.txt"))
+        </input>
+      </program>
+    </exercise>
+    <note>
+      <p>Notice how the code above handles the case when the key isn't yet in the dictionary.  The <c>get(key, alternative)</c> method on a dictionary will return the value for the key if it is in the dictionary, otherwise it return return the alternative.</p>
+    </note>
+    <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
+    <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+    &lt;div data-component="groupsub" id=read_files_groupsub data-size_limit=3&gt;
+        &lt;div class="col-sm-6"&gt;
+            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div id="groupsub_button" class="col-sm-6"&gt;
+        &lt;/div&gt;
+        &lt;p&gt;The Submit Group button will submit the answer for each each question
+        on this page for each member of your group. It also logs you as the official
+        group submitter.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  </subsection>
+</section>

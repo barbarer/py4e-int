@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<section xml:id="intro_words-and-sentences-in-python">
+  <title>Words and sentences in Python</title>
+<idx>Programming Language</idx>
+<idx>Reserved Words</idx>
+  <p>Unlike human languages, the Python vocabulary is actually pretty small.
+            We call this <q>vocabulary</q> the <q>reserved words</q>. These are words that
+            have very special meaning to Python. When Python sees these words in a
+            Python program, they have one and only one meaning to Python. Later as
+            you write programs you will make up your own words that have meaning to
+            you called <em>variables</em>. You will have great latitude in
+            choosing your names for your variables, but you cannot use any of
+            Python's reserved words as a name for a variable.</p>
+  <p>When we train a dog, we use special words like <q>sit</q>, <q>stay</q>, and
+            <q>fetch</q>. When you talk to a dog and don't use any of the reserved words,
+            they just look at you with a quizzical look on their face until you say
+            a reserved word. For example, if you say, <q>I wish more people would walk
+            to improve their overall health</q>, what most dogs likely hear is, <q>blah
+            blah blah <em>walk</em> blah blah blah blah.</q> That is because
+            <q>walk</q> is a reserved word in dog language. Many might suggest that the
+            language between humans and cats has no reserved words [<url href="http://xkcd.com/231/" visual="http://xkcd.com/231/">http://xkcd.com/231/</url>].</p>
+  <p>The reserved words in the language where humans talk to Python include
+            the following:</p>
+  <pre>and       del       global      not       with
+as        elif      if          or        yield
+assert    else      import      pass
+break     except    in          raise
+class     finally   is          return
+continue  for       lambda      try
+def       from      nonlocal    while</pre>
+  <p>That is it, and unlike a dog, Python is already completely trained. When
+            you say <q>try</q>, Python will try every time you say it without fail.</p>
+  <exercise label="intro-words-mc-reserved">
+    <statement>
+      <p>Q-1: Which of the following are reserved words? Select all that apply.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>number</p>
+        </statement>
+        <feedback>
+          <p>Number is not a reserved word in python.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>class</p>
+        </statement>
+        <feedback>
+          <p>The word class is used to create a new "class" or set of objects.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>pass</p>
+        </statement>
+        <feedback>
+          <p>Pass is a null operation - nothing happens when it is used, making it a great placeholder for incomplete functions.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>print</p>
+        </statement>
+        <feedback>
+          <p>Print is a function in Python, but not a reserved word.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>try</p>
+        </statement>
+        <feedback>
+          <p>Try allows you to test a block of code for errors.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>We will learn these reserved words and how they are used in good time,
+            but for now we will focus on the Python equivalent of <q>speak</q> (in
+            human-to-dog language). The nice thing about telling Python to speak is
+            that we can even tell it what to say by giving it a message in quotes:</p>
+  <program xml:id="intro1-active-hello" interactive="activecode" language="python">
+    <input>
+print('Hello world!')
+        </input>
+  </program>
+  <p>And we have even written our first syntactically correct Python
+            sentence. Our sentence starts with the function <em>print</em>
+            followed by a string of text of our choosing enclosed in single quotes.
+            The strings in the print statements are enclosed in quotes. Single
+            quotes and double quotes do the same thing; most people use single
+            quotes except in cases where a single quote (which is also an
+            apostrophe) appears in the string.</p>
+  <exercise label="intro-words-mc-quotes">
+    <statement>
+      <p>Q-3: What is the difference between single and double quotes in Python?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Single quotes are used for char variables, double quotes are used for string variables.</p>
+        </statement>
+        <feedback>
+          <p>Python does not have a char type. Single **or** double quotes are used for strings.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Single quotes are used at the beginning of a string, double quotes are used at the end.</p>
+        </statement>
+        <feedback>
+          <p>When using quotes, a single quote needs to be followed by a single quote and a double quote needs to be followed by a double quote.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Double quotes enclose a string containing single quotes.</p>
+        </statement>
+        <feedback>
+          <p>While this is common practice, it is not a rule. Single and double quotes do the same thing.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>All of the above.</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>None of the above.</p>
+        </statement>
+        <feedback>
+          <p>You can use double and quotes interchangeably in Python.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="intro-words-fitb-words">
+    <statement>
+      <p>Q-4: ________ words have only one meeting in Python and cannot be used as variable names. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Rr]eserved">
+          <feedback>
+            <p>Reserved words already have a meaning in Python that cannot be changed, like <b>print</b> or <b>for</b>.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+</section>

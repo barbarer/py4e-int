@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<section xml:id="pictures_using-repetition-with-images">
+  <title>Using Repetition with Images</title>
+  <p>
+    <em>Learning Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Use <c>for</c> loops and nested <c>for</c> loops to repeat actions on pixels in an image.</p>
+      </li>
+      <li>
+        <p>Understand the pattern (the steps) used in modifying all the pixels in an image.</p>
+      </li>
+      <li>
+        <p>Describe how multiple classes (Image and Pixel) interact.</p>
+      </li>
+    </ul>
+  </p>
+  <p xml:id="pictures_index-1">Images (pictures) on a computer are broken up into little bits called <term>pixels</term>, for <em>picture</em> (pix) <em>elements</em> (els).  These are laid out on a grid, from left to right (horizontal or <term>x</term> dimension) and top to bottom (vertical or <term>y</term> dimension).</p>
+  <figure align="center" xml:id="fig_repeat_images_id1">
+    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure: A grid with horizontal (x) and vertical (y) dimensions</caption>
+    <image source="pictures/Figures/grid.png" width="50%" alt="A grid with horizontal (x) and vertical (y) dimensions"/>
+  </figure>
+  <p>Pixels are quite small.  Even the small image below has 180 columns and 240 rows of pixels.  Each pixel has a color associated with it: an amount of redness, an amount of greenness, and an amount of blueness.
+            Let's remove the red from this picture.  Now, there are lot of lines in the program below, but fortunately, you can ignore most of them. The Audio Tour explains the important lines.  Press <image source="pictures/Figures/start-audio-tour.png" width="50%" alt="audio tour button"/> to hear the audio tour explanation.  When you run this program it may take several minutes to show the changed image.</p>
+  <figure align="center" xml:id="fig_repeat_images_id2">
+    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure: A picture of an arch</caption>
+    <image source="pictures/Figures/arch.jpg" width="50%" alt="A picture of an arch"/>
+  </figure>
+  <program xml:id="Image_Remove_Red" interactive="activecode" language="python">
+    <input>
+from image import *
+
+# CREATE AN IMAGE FROM A FILE
+img = Image("arch.jpg")
+
+# LOOP THROUGH THE PIXELS
+pixelList = img.getPixels()
+for p in pixelList:
+
+    # SET THE RED TO 0
+    p.setRed(0)
+
+    # UPDATE THE IMAGE
+    img.updatePixel(p)
+
+# SHOW THE RESULT
+win = ImageWin(img.getWidth(),img.getHeight())
+img.draw(win)
+        </input>
+  </program>
+  <p>The program above can take several minutes to execute on the <c>arch.jpg</c> picture.  But we're not stuck using just the arch image.  You can
+            change the file name in the program above to the URL for any small photo that is on the internet.</p>
+  <exercise label="Image_set_all_to_0_mcq">
+    <statement>
+      <p>11-9-2: What happens when you set all the colors to 0?  Try adding <c>p.setBlue(0)</c> and <c>p.setGreen(0)</c> to the program above after the <c>p.setRed(0)</c> and run it to check.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>You still see the picture, but it is all in shades of gray.</p>
+        </statement>
+        <feedback>
+          <p>Not if you set all the color values to 0.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The picture is all white.</p>
+        </statement>
+        <feedback>
+          <p>Did you try it?  This would be true if you set all the values to 255 instead of 0.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>The picture is all black.</p>
+        </statement>
+        <feedback>
+          <p>Black is the absence of light so setting all colors to 0 results in an all black image since there is no light.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Image_save_only_green">
+    <statement>
+      <p>11-9-3: What happens when you keep only the original green color?   Will you still be able to see the arch?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>Yes</p>
+        </statement>
+        <feedback>
+          <p>It shows all the green values from none to lots so it looks like a greenish version of a grayscale image.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>No</p>
+        </statement>
+        <feedback>
+          <p>Did you try it?</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Image_negate">
+    <statement>
+      <p>11-9-4: What happens if set every color value to 255 minus the original value?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>It is all black.</p>
+        </statement>
+        <feedback>
+          <p>No, this would happen if you set every value to 0.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Shows as a grayscale image.</p>
+        </statement>
+        <feedback>
+          <p>Did you try it?</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Shows as a negative of the original image.</p>
+        </statement>
+        <feedback>
+          <p>It is a negative of the original image.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>It is all white.</p>
+        </statement>
+        <feedback>
+          <p>No, this would happen if you set every value to 255.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

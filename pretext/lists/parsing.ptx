@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<section xml:id="lists_parsing-lines">
+        <title>Parsing lines</title>
+    <idx><h>List</h><h>Parsing</h></idx>
+    <idx><h>Parsing</h><h>List</h></idx>
+        
+        
+        <p>Usually when we are reading a file we want to do something to the lines
+            other than just printing the whole line. Often we want to find the
+            <q>interesting lines</q> and then <em>parse</em> the line to find
+            some interesting <em>part</em> of the line. What if we wanted to print out the
+            day of the week from those lines that start with <q>From </q>?</p>
+        <pre>From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008</pre>
+        <p>The <c>split</c> method is very effective when faced with this
+            kind of problem. We can write a small program that looks for lines where
+            the line starts with <q>From </q>, <c>split</c> those lines, and then
+            print out the third word in the line:</p>
+
+    <program xml:id="listParsing" interactive="activecode" language="python">
+        <input>
+fhand = open('mboxShort.txt')
+for line in fhand:
+    line = line.rstrip()
+    if not line.startswith('From '): continue
+    words = line.split()
+    print(words[2])
+
+# Continue is used here to skip the rest of the line if it doesn't start with "From "
+        </input>
+    </program>
+        <p>Later, we will learn increasingly sophisticated techniques for picking
+            the lines to work on and how we pull those lines apart to find the exact
+            bit of information we are looking for.</p>
+
+        <exercise label="listPars_fill1">
+            <statement>
+    <p>Q-2: When reading lines from a file, what list method can be used to select or print parts of a line? <var/>  </p></statement><setup><var><condition string="[Ss]plit(\(\))*"><feedback><p>The split method can be used to separate interesting parts of a line.</p></feedback></condition><condition string=".*"><feedback><p>Try again.</p></feedback></condition></var></setup></exercise><exercise label="listPars_PP_file" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
+        <p>The following code should open a file and read through the lines, splitting them when a line starts
+            with <q>Hello</q>, then printing the second word in the line. Watch out for extra pieces of code and
+            indentation.</p>
+</statement>
+<blocks><block order="4">
+<cline>fhand = open('myFile.txt')</cline>
+</block><block order="3">
+<cline>for line in fhand:</cline>
+</block><block order="5" correct="no">
+<cline>for line in myFile: </cline>
+</block><block order="7">
+<cline>    line = line.rstrip() #remove trailing whitespace</cline>
+</block><block order="1" correct="no">
+<cline>    if not line.startswith('From '): continue </cline>
+</block><block order="2">
+<cline>    if not line.startswith('Hello'): continue</cline>
+</block><block order="6">
+<cline>    words = line.split()</cline>
+</block><block order="8">
+<cline>    print(words[1])</cline>
+</block><block order="9" correct="no">
+<cline>    print(words[2]) </cline>
+</block></blocks></exercise>    </section>
+

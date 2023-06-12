@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<section xml:id="functions_math-functions">
+  <title>Math functions</title>
+<idx><h>Math</h><h>Function</h></idx>
+<idx><h>Function</h><h>Math</h></idx>
+<idx><h>Module</h><h>Object</h></idx>
+<idx><h>Object</h><h>Module</h></idx>
+<idx>Dot Notation</idx>
+<idx>Pi</idx>
+<idx><h>Log</h><h>Function</h></idx>
+<idx><h>Function</h><h>Log</h></idx>
+<idx>Radian</idx>
+<idx><h>Trigonometric</h><h>Function</h></idx>
+<idx><h>Function</h><h>Trigonometric</h></idx>
+<idx><h>Sine</h><h>Function</h></idx>
+<idx><h>Function</h><h>Sine</h></idx>
+<idx><h>Sqrt</h><h>Function</h></idx>
+<idx><h>Function</h><h>Sqrt</h></idx>
+  <p>Python has a <c>math</c> module that provides most of the familiar
+            mathematical functions. Before we can use the module, we have to import
+            it:</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; import math
+</input>
+  </program>
+  <p>This statement creates a <em>module object</em> named math. If
+            you print the module object, you get some information about it:</p>
+  <program xml:id="functMath_module" interactive="activecode" language="python">
+    <input>
+import math
+print(math)
+        </input>
+  </program>
+  <p>The module object contains the functions and variables defined in the
+            module. To access one of the functions, you have to specify the name of
+            the module and the name of the function, separated by a dot (also known
+            as a period). This format is called <em>dot notation</em>.</p>
+  <program xml:id="functMath_logSin" interactive="activecode" language="python">
+    <input>
+import math
+
+signal_power = 10
+noise_power = 10
+ratio = signal_power / noise_power
+decibels = 10 * math.log10(ratio)
+print(decibels)
+
+radians = 0.7
+height = math.sin(radians)
+print(height)
+        </input>
+  </program>
+  <p>The first example computes the logarithm base 10 of the signal-to-noise
+            ratio. The math module also provides a function called <c>log</c>
+            that computes logarithms base e.</p>
+  <p>The second example finds the sine of <c>radians</c>. The name of
+            the variable is a hint that <c>sin</c> and the other trigonometric
+            functions (<c>cos</c>, <c>tan</c>, etc.) take arguments in
+            radians. To convert from degrees to radians, divide by 360 and multiply
+            by 2pi:</p>
+  <program xml:id="functMath_sinPi" interactive="activecode" language="python">
+    <input>
+import math
+
+degrees = 45
+radians = degrees / 360.0 * 2 * math.pi
+result = math.sin(radians)
+print(result)
+        </input>
+  </program>
+  <p>The expression <c>math.pi</c> gets the variable <c>pi</c>
+            from the math module. The value of this variable is an approximation of
+            pi, accurate to about 15 digits.</p>
+  <p>If you know your trigonometry, you can check the previous result by
+            comparing it to the square root of two divided by two:</p>
+  <program xml:id="functMath_sqrt" interactive="activecode" language="python">
+    <input>
+import math
+
+result = math.sqrt(2) / 2.0
+print(result)
+        </input>
+  </program>
+  <exercise label="functMath_MC_statement">
+    <statement>
+      <p>Q-5: Which statement allows you to use the math module in Python?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>import math</p>
+        </statement>
+        <feedback>
+          <p>Correct! import math allows you to use the math module by creating the "math" module object.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>include math</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! include works similarly to import, but it's not what we're using. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>add math</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! add will not import the math module. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None. You can always use the math module.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Something needs to be done to allow the math module to be used. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="functMath_MC_access">
+    <statement>
+      <p>Q-6: To access a function in a module, we must use&#x2026;</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>log</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! log is a function within the math module. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>quotation marks or single quotes</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! You need these to create a string. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>dot notation</p>
+        </statement>
+        <feedback>
+          <p>Correct! Dot notation allows us to access a function in a module.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>function notation</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Function notation is the way a function is written. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="functMath_fill1">
+    <statement>
+      <p>Q-7: When we use the <q>import math</q> statement, a __________ called math is created. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Mm]odule\s+[Oo]bject">
+          <feedback>
+            <p>A module object is created when we import math.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Incorrect! What type of object is created? Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <program xml:id="functMath_codelens1" interactive="codelens" language="python">
+    <input>
+import math
+num = 2.0
+result = math.sqrt(4) / num
+print(result)
+    </input>
+  </program>
+</section>

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<section xml:id="pictures_a-pattern-for-image-processing">
+  <title>A Pattern for Image Processing</title>
+  <p>As we have seen with turtles and words, there are some general patterns in the programs that we write.  With turtles, there was a polygon pattern (based on the Total Turtle Trip Theorem).  When working with words and numbers, we used the accumulator pattern.</p>
+  <p>The image processing pattern is shown in the program below.  This program changes the red to the original green, the green to the original blue, and the red to the original green.  But, mostly we are trying to describe a pattern that you can use to create many image effects.</p>
+  <program xml:id="Image_Pattern" interactive="activecode" language="python">
+    <input>
+# STEP 1: USE THE IMAGE LIBRARY
+from image import *
+
+# STEP 2: PICK THE IMAGE
+img = Image("beach.jpg")
+
+# STEP 3: LOOP THROUGH THE PIXELS
+pixels = img.getPixels()
+for p in pixels:
+
+    # STEP 4: GET THE DATA
+    r = p.getRed()
+    g = p.getGreen()
+    b = p.getBlue()
+
+    # STEP 5: MODIFY THE COLOR
+    p.setRed(g)
+    p.setGreen(b)
+    p.setBlue(r)
+
+    # STEP 6: UPDATE THE IMAGE
+    img.updatePixel(p)
+
+# STEP 7: SHOW THE RESULT
+win = ImageWin(img.getWidth(),img.getHeight())
+img.draw(win)
+        </input>
+  </program>
+  <p>Here are our six steps:</p>
+  <p>
+    <ol marker="1">
+      <li>
+        <p>STEP 1: USE THE IMAGE LIBRARY.  We need to import the image library.</p>
+      </li>
+      <li>
+        <p>STEP 2: CREATE THE IMAGE OBJECT. We create an image object from a file in our library by specifying the filename inside of the parentheses and double quotes.</p>
+      </li>
+      <li>
+        <p>STEP 3: LOOP THROUGH THE PIXELS This example gets <em>every</em> pixel object in the image and loops through them all one at a time.</p>
+      </li>
+      <li>
+        <p>STEP 4: GET THE DATA.  You could <em>always</em> use the STEP 4 lines just as they are above, but you might be able to make it shorter if you wanted.  If you only needed red and were going to set the green and blue to zero, you don't have to get the green and blue.</p>
+      </li>
+      <li>
+        <p>STEP 5: MODIFY THE COLOR. This is the part that you will most often change.  Here's where you change the red, green, and/or blue.  You don't have to change all of them.</p>
+      </li>
+      <li>
+        <p>STEP 6: UPDATE THE IMAGE.  This will update the image object at the original pixel location to the new color.</p>
+      </li>
+      <li>
+        <p>STEP 7: SHOW THE RESULT.  This will draw the changed image in a window.</p>
+      </li>
+    </ol>
+  </p>
+  <p>You can use other files in this chapter: kitten.jpg, puppy.jpg, baby.jpg, swan.jpg, motorcycle.jpg, gal2.jpg, guy1.jpg.</p>
+</section>

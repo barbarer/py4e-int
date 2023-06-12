@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<section xml:id="intro_why-should-you-learn-to-write-programs">
+  <title>Why should you learn to write programs?</title>
+  <p>Writing programs (or programming) is a very creative and rewarding
+            activity. You can write programs for many reasons, ranging from making
+            your living to solving a difficult data analysis problem to having fun
+            to helping someone else solve a problem. This book assumes that
+            <em>everyone</em> needs to know how to program, and that once you know how to
+            program you will figure out what you want to do with your newfound
+            skills.</p>
+  <p>We are surrounded in our daily lives with computers ranging from laptops
+            to cell phones. We can think of these computers as our <q>personal
+            assistants</q> who can take care of many things on our behalf. The hardware
+            in our current-day computers is essentially built to continuously ask us
+            the question, <q>What would you like me to do next?</q></p>
+  <exercise label="intro-whyprogram-mc-ask">
+    <statement>
+      <p>Q-1: Hardware in today's computers is built to continuously ask what?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>"How can I help you?"</p>
+        </statement>
+        <feedback>
+          <p>Today's computers are programmed to help, but they focus more on *doing things*.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>"Where should I store this information?"</p>
+        </statement>
+        <feedback>
+          <p>Computers are used to store information, but more generally do tasks that we ask them to.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>"What would you like me to do next?"</p>
+        </statement>
+        <feedback>
+          <p>Today's computers are build to continuously ask the user "what would you like me to do next?".</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>They are not built to ask anything.</p>
+        </statement>
+        <feedback>
+          <p>Try again! They are programmed to continuously ask us what?</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <figure align="">
+    <image source="intro/Figures/pda.svg" width="50%" alt="Personal Digital Assistant"/>
+  </figure>
+  <p>Programmers add an operating system and a set of applications to the
+            hardware and we end up with a Personal Digital Assistant that is quite
+            helpful and capable of helping us do many different things.</p>
+  <exercise label="intro-whyprogram-mc-add">
+    <statement>
+      <p>Q-2: What does a programmer add to a computer's hardware?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>an operating system and applications</p>
+        </statement>
+        <feedback>
+          <p>Programmers add an operating system and applications to the hardware.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>a computer and images</p>
+        </statement>
+        <feedback>
+          <p>Try again, a computer is the machine itself.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>images and applications</p>
+        </statement>
+        <feedback>
+          <p>Try again, programmers can add images within applications.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>a computer and an operating system</p>
+        </statement>
+        <feedback>
+          <p>Try again, a computer is the machine itself.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>Our computers are fast and have vast amounts of memory and could be very
+            helpful to us if we only knew the language to speak to explain to the
+            computer what we would like it to <q>do next</q>. If we knew this language,
+            we could tell the computer to do tasks on our behalf that were
+            repetitive. Interestingly, the kinds of things computers can do best are
+            often the kinds of things that we humans find boring and mind-numbing.</p>
+  <p>For example, look at the first three paragraphs of this chapter and tell
+            me the most commonly used word and how many times the word is used.
+            While you were able to read and understand the words in a few seconds,
+            counting them is almost painful because it is not the kind of problem
+            that human minds are designed to solve. For a computer the opposite is
+            true, reading and understanding text from a piece of paper is hard for a
+            computer to do but counting the words and telling you how many times the
+            most used word was used is very easy for the computer:</p>
+  <program language="python">
+    <input>
+python words.py
+Enter file:words.txt
+to 16
+</input>
+  </program>
+  <p>Our <q>personal information analysis assistant</q> quickly told us that the
+            word <q>to</q> was used sixteen times in the first three paragraphs of this
+            chapter.</p>
+  <p>This very fact that computers are good at things that humans are not is
+            why you need to become skilled at talking <q>computer language</q>. Once you
+            learn this new language, you can delegate mundane tasks to your partner
+            (the computer), leaving more time for you to do the things that you are
+            uniquely suited for. You bring creativity, intuition, and inventiveness
+            to this partnership.</p>
+  <exercise label="intro-whyprogram-mc-common">
+    <statement>
+      <p>Q-3: What is the most commonly used word in the first three paragraphs of this page and how many times is it used?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>the, 25</p>
+        </statement>
+        <feedback>
+          <p>Try again! A program has already counted the words and listed them above!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>to, 16</p>
+        </statement>
+        <feedback>
+          <p>Yes, the most common word is "to" and it appears 16 times in the first three paragraphs.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>computer, 19</p>
+        </statement>
+        <feedback>
+          <p>Try again! A program has already counted the words and listed them above!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>a, 21</p>
+        </statement>
+        <feedback>
+          <p>Try again! A program has already counted the words and listed them above!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

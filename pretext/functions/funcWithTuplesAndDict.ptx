@@ -1,0 +1,453 @@
+<?xml version="1.0"?>
+<section xml:id="functions_group-work-functions-with-tuples-and-dictionaries">
+  <title>Group Work: Functions with Tuples and Dictionaries</title>
+  <introduction>
+  <!--
+    <raw format="html" xml:space="preserve">&lt;h2&gt;Please join a research study to help us test new approaches to learning programming!&lt;/h2&gt;
+
+&lt;p&gt;Hi! We are a team of researchers in Professor Ericson's Lab at UMSI!&lt;/p&gt;
+
+&lt;h4&gt;The Project&lt;/h4&gt;
+&lt;p&gt;You are invited to participate in a research study about how Parsons problems (a type of coding puzzle) may help
+CS entry-level learning. You must be at least &lt;b&gt;18&lt;/b&gt; to participate. &lt;br&gt;
+Your participation will help more students become successful in computing courses in a low-cost, scalable, and easily
+adopted way. &lt;br&gt; &lt;/p&gt;
+
+&lt;h4&gt; What Will Occur &lt;/h4&gt;
+&lt;p&gt;This study takes 50 minutes to one hour to finish. The study materials include:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;A basic knowledge review about Python basics (~5 mins)&lt;/li&gt;
+    &lt;li&gt;An introduction about our system (~5 mins)&lt;/li&gt;
+    &lt;li&gt;A self-efficacy survey to measure your level of programming self-efficacy (~5 mins)&lt;/li&gt;
+    &lt;li&gt;Four code practice problems (~20 mins)&lt;/li&gt;
+    &lt;li&gt;A short posttest consists of 4 questions (~15 mins)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Each section must be completed in order. After finishing one part, you can click the link provided under &lt;b&gt;"What to do next"&lt;/b&gt; to the next part.&lt;/p&gt;
+
+&lt;h4&gt; Confidentiality of Information &lt;/h4&gt;
+&lt;p&gt;All the data we collect will be de-identified. We will not collect any identifiable data such as demographic information. &lt;/p&gt;
+
+&lt;h4&gt;Who to Contact&lt;/h4&gt;
+&lt;p&gt; If you have any questions about the study, please contact Xinying Hou at xyhou@umich.edu
+with <q>[Parsons Problem Study]</q> included in the email subject. &lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;We greatly appreciate your help!&lt;/p&gt;</raw>
+  <note>
+    <raw format="html" xml:space="preserve">&lt;h4&gt;Click on the following link &#x1F449; &lt;b&gt;&lt;a href="intro-fl-ps.html"&gt;Basic Knowledge Review&lt;/a&gt;&lt;/b&gt; &#x1F448; to start!&lt;/h4&gt;</raw>
+  </note>
+  <transition/> -->
+  <p>It is best to use a POGIL approach with the following. In POGIL students work
+            in groups on activities and each member has an assigned role.  For more information see <url href="https://cspogil.org/Home" visual="https://cspogil.org/Home">https://cspogil.org/Home</url>.</p>
+  <note>
+    <p>If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.</p>
+  </note>
+  <p>
+    <term>Learning Objectives</term>
+  </p>
+  <p>Students will know and be able to do the following.</p>
+  <p>
+    <em>Content Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Learn the differences and similarities between strings, lists, tuples, and dictionaries.</p>
+      </li>
+      <li>
+        <p>Predict the output of functions with tuples and dictionaries.</p>
+      </li>
+      <li>
+        <p>Use .get to prevent key errors in dictionaries.</p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    <em>Process Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Predict the output of functions with tuples and dictionaries.</p>
+      </li>
+    </ul>
+  </p>
+</introduction>
+  <subsection xml:id="functions_tuples">
+    <title>Tuples</title>
+    <p>A tuple is like a list in that holds items in order and those items are separated by commas.  They can be enclosed in <c>()</c>, but don't have to be.</p>
+    <exercise label="funct_tup_test_first">
+      <statement>
+        <p>Q-1: What is the first thing that will be printed when the code below runs? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="1">
+            <feedback>
+              <p>It will print the item at index 0 the first passed tuple.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>What is the item at index 0 in the first passed tuples?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funct_tup_test_last">
+      <statement>
+        <p>Q-2: What is the last thing that will be printed when the code below runs? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="4">
+            <feedback>
+              <p>It will print the length (number of items) in the second passed tuple.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>How many items are in the second passed tuple?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="func_tup_test_ac">
+      <statement>
+        <p>Run this code to see what it prints.</p>
+      </statement>
+      <program xml:id="func_tup_test_ac_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def tuple_test(tup):
+    print(tup[0])
+    print(type(tup))
+    print(tup[-1])
+    print(tup[1:])
+    print(len(tup))
+
+# function definition
+def main():
+    tuple_test((1, 2, 3))
+    tuple_test(('hi', 'bye', -20, 'run'))
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="funct_tuple_test_char">
+      <statement>
+        <p>Q-4: What characters are used to indicate the start and end of a tuple in the code above? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="\(\)|\)\(">
+            <feedback>
+              <p>Parenthesis are often used to start and end a tuple, but they are not required.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Look at the parameter to the function call in the main function.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funct_tuple_first_index">
+      <statement>
+        <p>Q-5: What index is used to get the first item in a tuple? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="0">
+            <feedback>
+              <p>The first item in a list is at index 0.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Try again!</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funct_tuple_last_index">
+      <statement>
+        <p>Q-6: What negative index is used to get the last item in a tuple? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="-1">
+            <feedback>
+              <p>The last item in a list is at index -1, which is the length of the list - 1.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Try again!</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+  </subsection>
+  <subsection xml:id="functions_tuples-are-immutable">
+    <title>Tuples are Immutable</title>
+    <p>Unlike lists, tuples are immutable (can not change). This makes them more efficient than lists which can change.</p>
+    <exercise label="func_tuple_change_sa">
+      <statement>
+        <p>Q-7: Look at the Python code below.  What do you think will happen when you run the following code?</p>
+      </statement>
+    </exercise>
+    <exercise label="func_tuple_change_ac">
+      <statement>
+        <p>Run this code to see what it prints.</p>
+      </statement>
+      <program xml:id="func_tuple_change_ac_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def change_tuple(tup):
+    print(tup)
+    tup[0] = 5
+
+# function definition
+def main():
+    t1 = (3, 6)
+    change_tuple(t1)
+    print(t1)
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+    <note>
+      <p>Tuples are immutable (not changeable), so you will get an error if you try to change them.</p>
+    </note>
+    <p>Some functions that work on lists return an <term>iterator</term> (an object that you can loop through the values of) which you can convert to a list of tuples using the <c>list</c> function.
+                The <c>range</c> function also returns an iterator.</p>
+    <exercise label="funct_tuple_zip_first_print_fitb">
+      <statement>
+        <p>Q-9: What is the first thing the code below prints? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="&quot;?No&quot;?">
+            <feedback>
+              <p>It prints the item at index 1 in the first tuple.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Try again!</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="func_tuple_list_zip_ac">
+      <statement>
+        <p>Run this code to see what it prints.</p>
+      </statement>
+      <program xml:id="func_tuple_list_zip_ac_editor" interactive="activecode" language="python">
+        <input>
+l1 = ["Will it be sunny?", "Will I be happy?"]
+l2 = ["No", "Yes"]
+result = zip(l1, l2)
+l3 = list(result)
+print(l3[0][1])
+print(l3)
+        </input>
+      </program>
+    </exercise>
+    <note>
+      <p>The <c>zip</c> function takes two lists and returns an <c>iterator</c>. You can convert this iterator to a list of tuples using the <c>list</c> function.  Each tuple has an element from list1 and an element from list2 in order.</p>
+    </note>
+  </subsection>
+  <subsection xml:id="functions_dictionaries">
+    <title>Dictionaries</title>
+    <p>A dictionary stores a value for a key.</p>
+    <exercise label="funct_dict_num_t">
+      <statement>
+        <p>Q-11: What is the first thing the code below prints? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="2">
+            <feedback>
+              <p>It prints the number of t's in the string.</p>
+            </feedback>
+          </condition>
+          <condition number="3">
+            <feedback>
+              <p>A &#x2018;T' is different from a &#x2018;t'.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Try again!</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="func_dict_example">
+      <statement>
+        <p>Run this code to see what it prints.</p>
+      </statement>
+      <program xml:id="func_dict_example_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def count_chars(str):
+    letter_dict = dict()
+    for char in str:
+        if char in letter_dict:
+            letter_dict[char] = letter_dict[char] + 1
+        else:
+            letter_dict[char] = 1
+    return letter_dict
+
+d1 = count_chars("This is a test")
+print(d1['t'])
+d1 = count_chars("Run, run as fast as you can")
+print(d1['a'])
+print(d1)
+print(type(d1))
+        </input>
+      </program>
+    </exercise>
+    <exercise label="func_dict_key_error_sa">
+      <statement>
+        <p>Q-13: Look at the Python code below.  What do you think will happen when you run the following code?</p>
+      </statement>
+    </exercise>
+    <exercise label="func_dict_with_key_error">
+      <statement>
+        <p>Run this code to see what it prints.</p>
+      </statement>
+      <program xml:id="func_dict_with_key_error_editor" interactive="activecode" language="python">
+        <input>
+d = {}
+d['north'] = "Michigan"
+d['south'] = "Kentucky"
+print(d['east'])
+        </input>
+      </program>
+    </exercise>
+    <p>There is another way to update the value for a key that works even if the key isn't in the dictionary already.</p>
+    <exercise label="func_dict_example_v2">
+      <statement>
+        <p>Run this code to see what it prints.</p>
+      </statement>
+      <program xml:id="func_dict_example_v2_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def count_chars(str):
+    letter_dict = dict()
+    for char in str:
+
+        # use .get to stop key errors but if not there
+        # use 0 and then add 1 to the returned value
+        letter_dict[char] = letter_dict.get(char,0) + 1
+
+    return letter_dict
+
+d1 = count_chars("This is a test")
+print(d1['t'])
+d1 = count_chars("Run, run as fast as you can")
+print(d1['a'])
+print(d1)
+        </input>
+      </program>
+    </exercise>
+    <note>
+      <p>The better way to increment a count at a key is to use
+                    <c>dict[key] = dict.get(key,0) + 1</c>.  This will avoid a key error if the key isn't in the dictionary and the code is shorter.</p>
+    </note>
+    <exercise label="funct_dict_symbol_dnd">
+      <statement>
+        <p>Drag the item to its type.</p>
+      </statement>
+      <feedback>
+        <p>Read this page and try again.</p>
+      </feedback>
+      <matches>
+        <match order="1">
+          <premise>["a", "b"]</premise>
+          <response> List</response>
+        </match>
+        <match order="2">
+          <premise>("a", "b")</premise>
+          <response>Tuple</response>
+        </match>
+        <match order="3">
+          <premise>"ab"</premise>
+          <response>String</response>
+        </match>
+        <match order="4">
+          <premise>{"a": 5, "b": 2}</premise>
+          <response>Dictionary</response>
+        </match>
+      </matches>
+    </exercise>
+    <exercise label="funct_which_are_immutable_mc">
+      <statement>
+        <p>Q-17: Which of the following types are immutable (don't change)?</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement id="funct_which_are_immutable_mc_opt_a">
+            <p>Strings</p>
+          </statement>
+          <feedback id="funct_which_are_immutable_mc_opt_a">
+            <p>Yes, Strings are immutable.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="funct_which_are_immutable_mc_opt_b">
+            <p>Lists</p>
+          </statement>
+          <feedback id="funct_which_are_immutable_mc_opt_b">
+            <p>No, Lists can change.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="funct_which_are_immutable_mc_opt_c">
+            <p>Tuples</p>
+          </statement>
+          <feedback id="funct_which_are_immutable_mc_opt_c">
+            <p>Yes, Tuples are immutable.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="funct_which_are_immutable_mc_opt_d">
+            <p>Dictionaries</p>
+          </statement>
+          <feedback id="funct_which_are_immutable_mc_opt_d">
+            <p>No, Dictionaries can change.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
+    <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+    &lt;div data-component="groupsub" id=func_tuplesanddict_groupsub data-size_limit=3&gt;
+        &lt;div class="col-sm-6"&gt;
+            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div id="groupsub_button" class="col-sm-6"&gt;
+        &lt;/div&gt;
+        &lt;p&gt;The Submit Group button will submit the answer for each each question
+        on this page for each member of your group. It also logs you as the official
+        group submitter.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  </subsection>
+</section>

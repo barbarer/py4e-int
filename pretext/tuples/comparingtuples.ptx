@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<section xml:id="tuples_comparing-tuples">
+  <title>Comparing Tuples</title>
+<idx>Tuple Comparison</idx>
+<idx>DSU Pattern</idx>
+<idx>Decorate</idx>
+<idx>Sort</idx>
+<idx>Undecorate</idx>
+  <p>The comparison operators can be used with tuples and other sequences. Python
+            starts by comparing the first element from each sequence. If they are
+            equal, it compares the next element of each, and so on, until it finds
+            elements that differ. Subsequent elements are not considered (even if
+            they're really big).</p>
+  <program language="python">
+    <input>
+(0, 1, 2) &lt; (0, 3, 4)
+&gt;&gt;&gt; True
+(0, 1, 2000000) &lt; (0, 3, 4)
+&gt;&gt;&gt; True
+</input>
+  </program>
+  <exercise label="question10_2_1">
+    <statement>
+      <p>11-9-1: What is returned when the following code is run?</p>
+      <program language="python">
+        <input>
+(5, 7, 3) &lt; (7, 4, 2)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>Correct! The comparison operator looks at the first pair of elements that differ from each other. In this case, it is the first elements, so all following elements are ignored.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Remember, the comparison operator starts by comparing just the first element of the two tuples, and only moves on if they're equal. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>An error message will occur</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The comparison operator works fine with tuples. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p><c>sort()</c> is a list method that can be helpful when managing a list of tuples. When sorting, it compares the
+            first element of each tuple, but in the case of a tie, it compares their second elements, and
+            so on.</p>
+  <p>Combining these tools leads to a very common, and widely applicable sorting process called <em>DSU</em>.
+            <em>DSU</em> is short for:</p>
+  <p><term>Decorate</term> a sequence by building a list of tuples with one or more sort metrics preceding the elements from the sequence.</p>
+  <p><term>Sort</term> the list of tuples using Python's built-in <c>sort</c> method.</p>
+  <p><term>Undecorate</term> by extracting the sorted elements of the sequence.</p>
+  <exercise label="question10_2_2">
+    <statement>
+      <p>Match the steps of DSU with their definitions.</p>
+    </statement>
+    <feedback>
+      <p>Something's wrong! Look up for the definitions.</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>Decorate</premise>
+        <response>A sequence by building a list of tuples with one or more sort metrics preceding the elements from the sequence.</response>
+      </match>
+      <match order="2">
+        <premise>Sort</premise>
+        <response>The list of tuples using the Python built-in sort.</response>
+      </match>
+      <match order="3">
+        <premise>Undecorate</premise>
+        <response>By extracting the sorted elements of the sequence.</response>
+      </match>
+    </matches>
+  </exercise>
+  <p>For example, suppose you have a list of words and you want to sort them
+            from longest to shortest:</p>
+  <program xml:id="comparingtuples_exercise_1" interactive="activecode" language="python">
+    <input>
+txt = 'but soft what light in yonder window breaks'
+words = txt.split()
+tupleList = []
+for word in words:
+    tupleList.append((len(word), word))
+
+tupleList.sort(reverse = True)
+
+sortedWordsList = []
+for length, word in tupleList:
+    sortedWordsList.append(word)
+
+print(sortedWordsList)
+        </input>
+  </program>
+  <p>Let's walk through the <em>DSU</em> process:</p>
+  <p>The first loop <term>decorates</term> by building a list of tuples, where each tuple is a word
+            preceded by its length.</p>
+  <p><c>sort</c><term>sorts</term> by comparing the first element of each tuple (length) first. It only
+            considers the second element, alphabetical order, to break ties. The keyword argument
+            <c>reverse=True</c> tells <c>sort</c> to go in decreasing
+            order, meaning that longer words will be first in the sorted list and that if two words are
+            the same length, the one that comes last in alphabetical order will appear before the other.</p>
+  <p>Finally, the second loop <term>undecorates</term> by traversing the list of tuples and adding the sorted words to a list.</p>
+  <p>The output of the program is as follows:</p>
+  <pre>['yonder', 'window', 'breaks', 'light', 'what', 'soft', 'but', 'in']</pre>
+  <p>Of course, the line loses much of its poetic impact when turned into a
+            Python list and sorted in descending word length order.</p>
+  <exercise label="question10_2_3" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Move the code blocks around to create a program that sorts the words in word_list by length from longest to shortest and adds them to sorted_word_list. Hint: remember DSU!</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <cline>word_list = ['pen', 'skyscraper', 'post', 'computer', 'apple', 'Hollywood']</cline>
+        <cline>tup_list = []</cline>
+        <cline>sorted_word_list = []</cline>
+      </block>
+      <block order="7">
+        <cline>for word in word_list:</cline>
+      </block>
+      <block order="2">
+        <cline>   tup = len(word), word</cline>
+      </block>
+      <block order="4">
+        <cline>   tup_list.append(tup)</cline>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>tup_list.sort(reverse = True)</cline>
+        </choice>
+        <choice>
+          <cline>tup_list.sort() </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>for length, word in tup_list:</cline>
+      </block>
+      <block order="6">
+        <cline>   sorted_word_list.append(word)</cline>
+      </block>
+    </blocks>
+  </exercise>
+</section>

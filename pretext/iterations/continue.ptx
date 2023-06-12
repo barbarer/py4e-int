@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<section xml:id="iterations_finishing-iterations-with-continue">
+  <title>Finishing iterations with <c>continue</c></title>
+<idx><h>Continue</h><h>Statement</h></idx>
+<idx><h>Statement</h><h>Continue</h></idx>
+  <p>Sometimes, you are in a loop and want to finish the
+            current iteration and immediately jump to the next. In that
+            case, you can use the <c>continue</c> statement to skip to the next
+            iteration without finishing the body of the loop for the current
+            iteration.</p>
+  <p>Here is an example of a loop that copies its input until the user types
+            <q>done</q>, but treats lines that start with the hash character as lines not
+            to be printed (kind of like Python comments).</p>
+  <p>Here is a sample run of this new program with <c>continue</c>
+            added:</p>
+  <program xml:id="itr-section4_1" interactive="activecode" language="python">
+    <input>
+while True:
+    line = input('&gt; ')
+    if line[0] == '#' :
+        continue
+    if line == 'done':
+        break
+    else:
+        print(line)
+print ('Done!')
+        </input>
+  </program>
+  <p>Try the code block above using the input below as well as your own input.</p>
+  <program language="python">
+    <input>
+&gt; hello there
+hello there
+&gt; # don't print this
+&gt; print this!
+print this!
+&gt; done
+Done!
+</input>
+  </program>
+  <p>All the lines are printed except the one that starts with the hash sign
+            because when the <c>continue</c> is executed, it ends the current
+            iteration and jumps back to the <c>while</c> statement to start
+            the next iteration, thus skipping the <c>print</c> statement.</p>
+  <exercise label="itContinue_MC_line_v2">
+    <statement>
+      <p>Q-2: What prints if the user's input is &#x2018;done'?</p>
+      <program language="python">
+        <input>
+while True:
+    line = input('&gt; ')
+    if line[0] == '#' :
+        continue
+    if line == 'done':
+        break
+    else:
+        print(line)
+print ('Done!')
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>nothing prints</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Something will print, regardless of what is inputted. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>'Done!'</p>
+        </statement>
+        <feedback>
+          <p>Entering 'done' will print 'Done!'.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>'#'</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This will not print "#". Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>it will prompt the user for input with '&gt; '</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This would be true if the user entered '#'.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="itContinue_PP_not8_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Construct a block of code that prints the numbers 1 through 10, but skips the number 8.
+            The loop will start by incrementing n, before doing anything else. Look out for the
+            three extra code pieces and watch your indentation!</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <cline>n = 0</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>while (n &lt; 10):</cline>
+        </choice>
+        <choice>
+          <cline>while (n &lt;= 10): </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>    n = n + 1</cline>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>    if n == 8:</cline>
+        </choice>
+        <choice>
+          <cline>    if n = 8: </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>        continue</cline>
+      </block>
+      <block order="5">
+        <cline>    print(n)</cline>
+      </block>
+    </blocks>
+  </exercise>
+</section>

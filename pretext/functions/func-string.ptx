@@ -1,0 +1,586 @@
+<?xml version="1.0"?>
+<section xml:id="functions_group-work-functions-and-strings">
+  <title>Group Work: Functions and Strings</title>
+  <introduction>
+  <p>It is best to use a POGIL approach with the following. In POGIL students work
+            in groups on activities and each member has an assigned role.  For more information see <url href="https://cspogil.org/Home" visual="https://cspogil.org/Home">https://cspogil.org/Home</url>.</p>
+  <note>
+    <p>If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.</p>
+  </note>
+  <p>
+    <term>Learning Objectives</term>
+  </p>
+  <p>Students will know and be able to do the following.</p>
+  <p>
+    <em>Content Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Recognize strings.</p>
+      </li>
+      <li>
+        <p>Use string indices.</p>
+      </li>
+      <li>
+        <p>Understand how slice works for both positive and negative indices.</p>
+      </li>
+      <li>
+        <p>Use input and convert between strings and numbers.</p>
+      </li>
+      <li>
+        <p>Recognize common string methods.</p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    <em>Process Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Predict the output from code.</p>
+      </li>
+      <li>
+        <p>Modify code to produce the correct output.</p>
+      </li>
+    </ul>
+  </p>
+  <p>A <term>string</term> is a sequence of characters enclosed in quotes.  In Python you can use pairs of single
+            or double quotes to enclose a string.  You can even use tripe quotes when
+            a string covers more than one line.</p>
+        </introduction>
+  <subsection xml:id="functions_string-indices">
+    <title>String Indices</title>
+    <exercise label="funct_fitb_pogil_initials_v2">
+      <statement>
+        <p>Q-1: What is the last thing that will be printed when the code below runs? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="Jk">
+            <feedback>
+              <p>It prints the first letter of the first name and last letter of the last name.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>String indices start with 0 and -1 is the index of the last letter in a string.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funct_ac_pogil_initials_v2">
+      <statement>
+        <p>Run the code below to see what it prints.  Then fix it to pass the given test.  It should return a string with the
+                first character of the first name and first character of the last name.</p>
+      </statement>
+      <program xml:id="funct_ac_pogil_initials_v2_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def get_initials(first, last):
+    return first[0] + last[-1]
+
+# function definition
+def main():
+    print(type("Hello"))
+    print(type('Class'))
+    print(type(42))
+
+    print(get_initials("J'Quan",'Alik'))
+
+
+# function call
+main()
+
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(get_initials("J'Quan",'Alik'),"JA",'''get_initials("J'Quan",'Alik')''')
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+    <note>
+      <p>Use [index] to get a character from a string.  The first character in a string is at index 0 and the last is at the length of the string minus 1 (also know as index -1 in Python).  Also note that you can use pairs of single quotes or double quotes to create a string.  This is useful when the string includes a single quote.</p>
+    </note>
+    <p>Fix the function <c>get_initials</c> above to return a string with the first letter of the first name followed by the first letter of the last name.</p>
+    <exercise label="funct_fitb_hello_type">
+      <statement>
+        <p>Q-3: What type of thing is <q>Hello</q>, i.e. what class does it belong to? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="'?str'?">
+            <feedback>
+              <p>A string in Python is an object of the str class.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>What is the class name printed by print(type(<q>Hello</q>))?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funct_fitb_42_type">
+      <statement>
+        <p>Q-4: What type of thing is 42, i.e. what class does it belong to? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="'?int'?">
+            <feedback>
+              <p>An integer in Python is an object of the int class.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>What is the class name printed by print(type(42))?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funct_fitb_add_strings">
+      <statement>
+        <p>Q-5: What is the symbol that is used to append (concatenate) strings together? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="\+">
+            <feedback>
+              <p>Use + to append one string after another in Python.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Check the code above and try again.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+  </subsection>
+  <subsection xml:id="functions_string-slices">
+    <title>String Slices</title>
+    <exercise label="funct_fitb_pogil_short_name">
+      <statement>
+        <p>Q-6: What is the last thing that will be printed when the code below runs? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="Sibs">
+            <feedback>
+              <p>The last thing it prints are the first two letters of the first name and the last two letters of the last name.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>A slice starts with the first number and ends before the second.  If the second is left off it goes to the end of the string. The last character in a string is at index -1.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funct_ac_pogil_short_name">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="funct_ac_pogil_short_name_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def get_short_name(first, last):
+    print(len(first))
+    print(len(last))
+    return first[:2] + last[-2:]
+
+# function definition
+def main():
+    print(get_short_name('Simona',"Jacobs"))
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+    <note>
+      <p>Use the slice [start:end] operator to get a slice (substring) from a string. It will return a new string starting at the start and including all the characters up to just before the end (end - 1).</p>
+    </note>
+    <exercise label="funct_fitb_three_char_slice">
+      <statement>
+        <p>Q-8: Use the slice operator to return the first three characters from the variable <c>dna</c>? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="dna\[0\:3\]|\[:3\]">
+            <feedback>
+              <p>This will return a new string with the characters from index 0 to 2.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Look at the note above and try again.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funct_fitb_last_three_char_slice">
+      <statement>
+        <p>Q-9: Use the slice operator to return a new string with just the last three characters from the variable named <c>dna</c> using a negative index? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="dna\[-3\:\]">
+            <feedback>
+              <p>This will return a new string with the last three characters in it.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Read about negative indicies in Python and try again.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funct_fitb_start_slice_def">
+      <statement>
+        <p>Q-10: What index will the slice (substring) start with if the start index isn't specified? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="0">
+            <feedback>
+              <p>A slice starts at index 0 if the start isn't specified.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Look at the code above and try again.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funt_mc_end_slice">
+      <statement>
+        <p>Q-11: What index is the default end index if it isn't specified in a slice?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement id="funt_mc_end_slice_opt_a">
+            <p>0</p>
+          </statement>
+          <feedback id="funt_mc_end_slice_opt_a">
+            <p>This is the default start index</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="funt_mc_end_slice_opt_b">
+            <p>-1 (the index of the last character)</p>
+          </statement>
+          <feedback id="funt_mc_end_slice_opt_b">
+            <p>Since a slice does not include the character at the specified end index this would stop at the second to last character in the string</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="funt_mc_end_slice_opt_c">
+            <p>the length of the string</p>
+          </statement>
+          <feedback id="funt_mc_end_slice_opt_c">
+            <p>The slice returns a string with all the characters from the start to the end minus one.  That is the same as the length of the string minus one.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="funct_fitb_string_nchars">
+      <statement>
+        <p>Q-12: What built-in function tells you the number of characters in a string? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="len">
+            <feedback>
+              <p>The len function takes a string and returns the number of characters in it.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Look at the example code above.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="fuct_ac_list_join_strings_without_first">
+      <statement>
+        <p>Write a function <c>join_no_first</c> that takes two strings <c>a</c> and <c>b</c> and returns a new string with all the characters in string <c>a</c> except the first one followed by all the characters in <c>b</c> except the first one.  For example, <c>join_no_first('hi', 'bye')</c> would return <c>'iye'</c>.</p>
+      </statement>
+      <program xml:id="fuct_ac_list_join_strings_withtout_first_editor" interactive="activecode" language="python">
+        <input>
+def join_no_first(a, b):
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(join_no_first('hi', 'bye'), 'iye', "join_no_first('hi', 'bye')")
+        self.assertEqual(join_no_first('abc', 'cba'), 'bcba', "join_no_first('abc', 'cba')")
+        self.assertEqual(join_no_first('Watch out', 'bye'), 'atch outye', "join_no_first('Watch out', 'bye')")
+        self.assertEqual(join_no_first('123', '456'), '2356', "join_no_first('123', '456')")
+        self.assertEqual(join_no_first('!Hi', 'Bye!'), 'Hiye!', "join_no_first('!Hi', 'Bye!')")
+        self.assertEqual(join_no_first('a', 'x'), '', "join_no_first('a', 'x')")
+
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+  </subsection>
+  <subsection xml:id="functions_input-and-converting-between-strings-and-numbers">
+    <title>Input and Converting Between Strings and Numbers</title>
+    <exercise label="funct_ac_pogil_get_name">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="funct_ac_pogil_get_name_editor" interactive="activecode" language="python">
+        <input>
+from datetime import datetime
+
+# function definition
+def get_name():
+    first = input("What is your first name?")
+    print("Hello " + first)
+    age_str = input("What is your age?")
+    today = datetime.today()
+    age = int(age_str)
+    birth_year = today.year - age
+    print("You were born in " + str(birth_year) + " or " + str(birth_year - 1))
+
+# function call
+get_name()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="funct_fitb_convert_string_int">
+      <statement>
+        <p>Q-15: What is the name of the built-in function that will convert a string to an integer? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="int">
+            <feedback>
+              <p>This will convert a string to an integer</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Look at the code above and try again.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funct_fitb_convert_int_string">
+      <statement>
+        <p>Q-16: What is the name of the built-in function that will convert an integer to a string? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="str">
+            <feedback>
+              <p>This will convert a number to a string.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Look at the code above and try again.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+  </subsection>
+  <subsection xml:id="functions_string-methods">
+    <title>String Methods</title>
+    <p>Strings have methods (functions) that operate on a string object using <term>dot-notation</term> as shown in the example code below.</p>
+    <exercise label="funct_fitb_string_method_pred">
+      <statement>
+        <p>Q-17: What will be returned from the <c>get_user_name</c> function below? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="malana_coffy">
+            <feedback>
+              <p>This will return the first name in lowercase followed by a _ and then the last name in lowercase.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Remember that string methods don't change the original string.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funct_ac_pogil_user_name">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="funct_ac_pogil_user_name_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def get_user_name(first, last):
+    print(first.lower())
+    print(last.upper())
+    print(first.find('a'))
+    print(first.find('z'))
+    print(last.replace("f", "1"))
+    print(first.split("a"))
+    user = first.lower() + "_" + last.lower()
+    return user
+
+# function definition
+def main():
+    print("run away!".capitalize())
+    print(get_user_name("Malana", "Coffy"))
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="funct_fitb_pogil_find_return">
+      <statement>
+        <p>Q-19: What does the function <c>find</c> return if the character is not found in the string? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="-1">
+            <feedback>
+              <p>If the character isn't in the string find returns -1.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Check the output of find(&#x2018;z') above</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <note>
+      <p>Strings are immutable, which means that they do not change.  String methods that appear to change a string return a new string.</p>
+    </note>
+    <exercise label="funct_string_methods_dnd_v2">
+      <statement>
+        <p>Drag each string method to the description of what it does.</p>
+      </statement>
+      <feedback>
+        <p>Read the chapter on strings and try again</p>
+      </feedback>
+      <matches>
+        <match order="1">
+          <premise>replace</premise>
+          <response>Returns a new string with all instances of the first specified character replaced with the second specified character.</response>
+        </match>
+        <match order="2">
+          <premise>lower</premise>
+          <response>Returns a new string with all of the characters in lowercase.</response>
+        </match>
+        <match order="3">
+          <premise>upper</premise>
+          <response>Returns a new string with all of the characters in uppercase.</response>
+        </match>
+        <match order="4">
+          <premise>split</premise>
+          <response>Returns a list of strings created by splitting the original string at the specified character.</response>
+        </match>
+        <match order="5">
+          <premise>capitalize</premise>
+          <response>Returns a new string with the first letter capitalized (uppercase).</response>
+        </match>
+      </matches>
+    </exercise>
+    <exercise label="funct_ac_pogil_strip_methods_v2">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="funct_ac_pogil_strip_methods_v2_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def test(the_string):
+    print(len(the_string))
+    s1 = the_string.strip()
+    print(s1)
+    print(len(s1))
+    s2 = the_string.rstrip()
+    print(s2)
+    print(len(s2))
+    s3 = the_string.lstrip()
+    print(s3)
+    print(s3)
+    print(the_string.find('H'))
+
+# function definition
+def main():
+    test(" Help! ")
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="funct_string_methods2_dnd">
+      <statement>
+        <p>Drag each string method to the description of what it does.</p>
+      </statement>
+      <feedback>
+        <p>Read the chapter on strings and try again</p>
+      </feedback>
+      <matches>
+        <match order="1">
+          <premise>strip</premise>
+          <response>Returns a new string with leading and trailing spaces removed.</response>
+        </match>
+        <match order="2">
+          <premise>rstrip</premise>
+          <response>Returns a new string with trailing spaces removed.</response>
+        </match>
+        <match order="3">
+          <premise>lstrip</premise>
+          <response>Returns a new string with leading spaces removed.</response>
+        </match>
+        <match order="4">
+          <premise>find</premise>
+          <response>Returns the starting index of a target string if found or -1 if not found.</response>
+        </match>
+      </matches>
+    </exercise>
+    <p>For more information on string methods see <url href="https://www.w3schools.com/python/python_ref_string.asp" visual="https://www.w3schools.com/python/python_ref_string.asp">https://www.w3schools.com/python/python_ref_string.asp</url>.</p>
+    <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
+    <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+    &lt;div data-component="groupsub" id=func_string_groupsub data-size_limit=4&gt;
+        &lt;div class="col-sm-6"&gt;
+            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div id="groupsub_button" class="col-sm-6"&gt;
+        &lt;/div&gt;
+        &lt;p&gt;The Submit Group button will submit the answer for each each question
+        on this page for each member of your group. It also logs you as the official
+        group submitter.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  </subsection>
+</section>

@@ -1,0 +1,314 @@
+<?xml version="1.0"?>
+<section xml:id="database_creating-a-database-table">
+  <title>Creating a database table</title>
+      <idx>SQL</idx>
+    <idx>Table</idx>
+    <idx>Column</idx>
+    <idx>Connect</idx>
+    <idx>Cursor</idx>
+    <idx>Unicode</idx>
+  <p>Databases require more defined structure than Python lists or
+    dictionaries <fn>SQLite actually does allow some flexibility in the type of data stored in a column,
+                but we will keep our data types strict in this chapter so the concepts apply equally
+                to other database systems such as MySQL</fn>.</p>
+  <p>When we create a database <em>table</em> we must tell the
+            database in advance the names of each of the <em>columns</em> in
+            the table and the type of data which we are planning to store in each
+            <em>column</em>. When the database software knows the type of
+            data in each column, it can choose the most efficient way to store and
+            look up the data based on the type of data.</p>
+  <exercise label="db_MC_tableTF">
+    <statement>
+      <p>Q-1: True or False? Python dictionaries require less defined structure than databases.</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>Databases require more defined structure than Python lists or dictionaries.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>You can look at the various data types supported by SQLite at the
+            following url:</p>
+  <p>
+    <url href="http://www.sqlite.org/datatypes.html" visual="http://www.sqlite.org/datatypes.html">http://www.sqlite.org/datatypes.html</url>
+  </p>
+  <p>Defining structure for your data up front may seem inconvenient at the
+            beginning, but the payoff is fast access to your data even when the
+            database contains a large amount of data.</p>
+  <p>The code to create a database file and a table named <c>Tracks</c>
+            with two columns in the database is as follows:</p>
+  <pre>import sqlite3
+
+conn = sqlite3.connect('music.sqlite')
+cur = conn.cursor()
+
+cur.execute('DROP TABLE IF EXISTS Tracks')
+cur.execute('CREATE TABLE Tracks (title TEXT, plays INTEGER)')
+
+conn.close()</pre>
+  <p>The <c>connect</c> operation makes a <q>connection</q> to the database
+            stored in the file <c>music.sqlite3</c> in the current directory.
+            If the file does not exist, it will be created. The reason this is
+            called a <q>connection</q> is that sometimes the database is stored on a
+            separate <q>database server</q> from the server on which we are running our
+            application. In our simple examples the database will just be a local
+            file in the same directory as the Python code we are running.</p>
+  <p>A <em>cursor</em> is like a file handle that we can use to
+            perform operations on the data stored in the database. Calling
+            <c>cursor()</c> is very similar conceptually to calling
+            <c>open()</c> when dealing with text files.</p>
+  <figure align="">
+    <image source="images/cursor.svg" width="50%" alt="A Database Cursor"/>
+  </figure>
+  <exercise label="dbCreate_MC_cursor">
+    <statement>
+      <p>Q-2: A cursor that we create to perform operations on the data within the database is very similar to which of the following?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Socket</p>
+        </statement>
+        <feedback>
+          <p>A network socket is a software structure within a network node of a computer network that serves as an endpoint for sending and receiving data across the network.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>File Handle</p>
+        </statement>
+        <feedback>
+          <p>A cursor is like a file handle. Calling cursor() is similar to calling open().</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Script</p>
+        </statement>
+        <feedback>
+          <p>A script is a file containing code written in Python.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Module Object</p>
+        </statement>
+        <feedback>
+          <p>A value created by an import statement that provides access to the data and code defined in a module.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>Once we have the cursor, we can begin to execute commands on the
+            contents of the database using the <c>execute()</c> method.</p>
+  <exercise label="db_connection_vs_cursor_dd">
+    <statement>
+      <p>Match the term to its definition</p>
+    </statement>
+    <feedback>
+      <p>Read the section above to determine what a connection and cursor are used for.</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>Connection</premise>
+        <response>Handles establishing communication with the database, which may be on another server.</response>
+      </match>
+      <match order="2">
+        <premise>Cursor</premise>
+        <response>Handles executing commands on the database such as getting data from the database.</response>
+      </match>
+    </matches>
+  </exercise>
+  <p>Database commands are expressed in a special language that has been
+            standardized across many different database vendors to allow us to learn
+            a single database language. The database language is called
+            <em>Structured Query Language</em> or <em>SQL</em> for
+            short.</p>
+  <p>
+    <url href="http://en.wikipedia.org/wiki/SQL" visual="http://en.wikipedia.org/wiki/SQL">http://en.wikipedia.org/wiki/SQL</url>
+  </p>
+  <exercise label="dbCreate_MC_SQL">
+    <statement>
+      <p>Q-4: SQL stands for ___________.</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>Structured Query Language</p>
+        </statement>
+        <feedback>
+          <p>SQL is the acronym for <b>S</b>tructured <b>Q</b>uery <b>L</b>anguage.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Simple Query Language</p>
+        </statement>
+        <feedback>
+          <p>Not quite.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Synchronized Query Language</p>
+        </statement>
+        <feedback>
+          <p>Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Simple Query Lingua</p>
+        </statement>
+        <feedback>
+          <p>Not quite.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>In our example, we are executing two SQL commands in our database. As a
+            convention, we will show the SQL keywords in uppercase and the parts of
+            the command that we are adding (such as the table and column names) will
+            be shown in lowercase.</p>
+  <p>The first SQL command removes the <c>Tracks</c> table from the
+            database if it exists. This pattern is simply to allow us to run the
+            same program to create the <c>Tracks</c> table over and over again
+            without causing an error. Note that the <c>DROP TABLE</c> command
+            deletes the table and all of its contents from the database (i.e., there
+            is no <q>undo</q>).</p>
+  <program language="python">
+    <input>
+cur.execute('DROP TABLE IF EXISTS Tracks ')
+</input>
+  </program>
+  <p>The second command creates a table named <c>Tracks</c> with a text
+            column named <c>title</c> and an integer column named
+            <c>plays</c>.</p>
+  <program language="python">
+    <input>
+cur.execute('CREATE TABLE Tracks (title TEXT, plays INTEGER)')
+</input>
+  </program>
+  <p>Now that we have created a table named <c>Tracks</c>, we can put
+            some data into that table using the SQL <c>INSERT</c> operation.
+            Again, we begin by making a connection to the database and getting a
+            <c>cursor</c> object. We can then execute SQL commands using the cursor.</p>
+  <p>The SQL <c>INSERT</c> command indicates which table we are using
+            and then defines a new row by listing the fields we want to include
+            <c>(title, plays)</c> followed by the <c>VALUES</c> we want
+            placed in the new row. We specify the values as question marks <c>(?,
+?)</c> to indicate that the actual values are passed in as a tuple
+            <c>( 'My Way', 15 )</c> as the second parameter to the
+            <c>execute()</c> call.</p>
+  <pre>import sqlite3
+
+conn = sqlite3.connect('music.sqlite')
+cur = conn.cursor()
+
+cur.execute('INSERT INTO Tracks (title, plays) VALUES (?, ?)',
+    ('Thunderstruck', 20))
+cur.execute('INSERT INTO Tracks (title, plays) VALUES (?, ?)',
+    ('My Way', 15))
+conn.commit()
+
+print('Tracks:')
+cur.execute('SELECT title, plays FROM Tracks')
+for row in cur:
+     print(row)
+
+cur.execute('DELETE FROM Tracks WHERE plays &lt; 100')
+conn.commit()
+
+cur.close()</pre>
+  <p>First we <c>INSERT</c> two rows into our table and use
+            <c>commit()</c> to force the data to be written to the database
+            file.</p>
+  <figure align="">
+    <image source="images/tracks.svg" width="50%" alt="Rows in a Table"/>
+  </figure>
+  <p>Then we use the <c>SELECT</c> command to retrieve the rows we just
+            inserted from the table. On the <c>SELECT</c> command, we indicate
+            which columns we would like <c>(title, plays)</c> and indicate
+            which table we want to retrieve the data from. After we execute the
+            <c>SELECT</c> statement, the cursor is something we can loop
+            through in a <c>for</c> statement. For efficiency, the cursor does
+            not read all of the data from the database when we execute the
+            <c>SELECT</c> statement. Instead, the data is read on demand as we
+            loop through the rows in the <c>for</c> statement.</p>
+  <p>The output of the program is as follows:</p>
+  <pre>Tracks:
+('Thunderstruck', 20)
+('My Way', 15)</pre>
+  <p>Our <c>for</c> loop finds two rows, and each row is a Python tuple
+            with the first value as the <c>title</c> and the second value as
+            the number of <c>plays</c>.</p>
+  <note>
+    <p>Note: You may see strings starting with <c>u'</c> in other books or on the Internet.
+                This was an indication in Python 2 that the strings are <em>Unicode</em> strings that are capable
+                of storing non-Latin character sets. In Python 3, all strings are unicode
+                strings by default.</p>
+  </note>
+  <p>At the very end of the program, we execute an SQL command to
+            <c>DELETE</c> the rows we have just created so we can run the
+            program over and over. The <c>DELETE</c> command shows the use of
+            a <c>WHERE</c> clause that allows us to express a selection
+            criterion so that we can ask the database to apply the command to only
+            the rows that match the criterion. In this example the criterion happens
+            to apply to all the rows so we empty the table out so we can run the
+            program repeatedly. After the <c>DELETE</c> is performed, we also
+            call <c>commit()</c> to force the data to be removed from the
+            database.</p>
+  <exercise label="dbCreate_PP" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Put the following code in order to create a cursor, make a table called <q>Cats</q> with
+            two text columns (<q>Name</q> and <q>Breed</q>). Then add the rows for Whiskers, Ruby, and Milo in
+            the table and commit that change.  Finally select all the rows and print them before closing the cursor.</p>
+    </statement>
+    <blocks>
+      <block order="7">
+        <cline>import sqlite3</cline>
+        <cline>conn = sqlite3.connect('pets.sqlite')</cline>
+        <cline>cur = conn.cursor()</cline>
+      </block>
+      <block order="4">
+        <cline>cur.execute('DROP TABLE IF EXISTS Cats')</cline>
+        <cline>cur.execute('CREATE TABLE Tracks (name TEXT, breed INTEGER)')</cline>
+      </block>
+      <block order="5">
+        <cline>cur.execute('INSERT INTO Cats (name, breed) VALUES (?, ?)',</cline>
+        <cline>    ('Whiskers', 'Ragdoll'))</cline>
+        <cline>cur.execute('INSERT INTO Cats (name, breed) VALUES (?, ?)',</cline>
+        <cline>    ('Ruby', 'Persian'))</cline>
+        <cline>cur.execute('INSERT INTO Cats (name, breed) VALUES (?, ?)',</cline>
+        <cline>    ('Milo', 'Russian Blue'))</cline>
+      </block>
+      <block order="3">
+        <cline>conn.commit()</cline>
+      </block>
+      <block order="6">
+        <cline>print('Cats:')</cline>
+        <cline>cur.execute('SELECT name, breed FROM Cats')</cline>
+      </block>
+      <block order="2">
+        <cline>for row in cur:</cline>
+        <cline>     print(row)</cline>
+      </block>
+      <block order="1">
+        <cline>cur.close()</cline>
+      </block>
+    </blocks>
+  </exercise>
+</section>

@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<section xml:id="functions_flow-of-execution">
+  <title>Flow of execution</title>
+<idx>Flow of Execution</idx>
+<idx>Definition</idx>
+  <p>In order to ensure that a function is defined before its first use, you
+            have to know the order in which statements are executed, which is called
+            the <em>flow of execution</em>.</p>
+  <p>Execution always begins at the first statement of the program.
+            Statements are executed one at a time, in order from top to bottom.</p>
+  <exercise label="functFlow_Fill1">
+    <statement>
+      <p>Q-1: The order in which statements are executed is called the __________________. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Ff]low\s+[Oo]f\s+[Ee]xecution">
+          <feedback>
+            <p>Correct! The flow of execution is the order in which statements are executed.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Incorrect! Hint: it's the name of this section. Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>Function <em>definitions</em> do not alter the flow of execution of the
+            program, but remember that statements inside the function are not
+            executed until the function is called.</p>
+  <p>A function call is like a detour in the flow of execution. Instead of
+            going to the next statement, the flow jumps to the body of the function,
+            executes all the statements there, and then comes back to pick up where
+            it left off.</p>
+  <p>That sounds simple enough, until you remember that one function can call
+            another. While in the middle of one function, the program might have to
+            execute the statements in another function. But while executing that new
+            function, the program might have to execute yet another function!</p>
+  <p>Observe below, where one function calls another function, which calls another.</p>
+  <program xml:id="functFlow_codelens" interactive="codelens" language="python">
+    <input>
+def firstPrint():
+    print("First")
+    secondPrint()
+
+def secondPrint():
+    print("Second")
+    thirdPrint()
+
+def thirdPrint():
+    print("Third")
+
+firstPrint()
+    </input>
+  </program>
+  <p>Fortunately, Python is good at keeping track of where it is, so each
+            time a function completes, the program picks up where it left off in the
+            function that called it. When it gets to the end of the program, it
+            terminates.</p>
+  <p>So what's the moral of the story? When you read a program, you don't
+            always want to read strictly from top to bottom. Sometimes, it makes more sense if
+            you follow the flow of execution and read functions as they are called.</p>
+  <exercise label="functFlow_MC_begin">
+    <statement>
+      <p>Q-3: Where does the execution of a program always begin?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>The line where the first function is called.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The flow of execution begins at the very top of the program. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>The first statement of the program.</p>
+        </statement>
+        <feedback>
+          <p>The execution of a program begins at the first statement of the program.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The first function declaration.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The flow of execution begins at the very top of the program. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="functFlow_MC_read">
+    <statement>
+      <p>Q-4: When you read a program, you&#x2026;</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>...don't always want to read from top to bottom</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This is important, but so is B. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>...should follow the flow of execution.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This is important, but so is A. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Both a and b</p>
+        </statement>
+        <feedback>
+          <p>Correct! It is important to start reading from the beginning, but also to follow the flow of execution as it continues.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

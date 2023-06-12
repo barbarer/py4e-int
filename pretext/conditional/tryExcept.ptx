@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<section xml:id="conditional_catching-exceptions-using-try-and-except">
+  <title>Catching exceptions using try and except</title>
+    <idx>Traceback</idx>
+    <idx>Fahrenheit</idx>
+    <idx>Celsius</idx>
+    <idx>Temperature Conversion</idx>
+    <idx>Try</idx>
+    <idx>Except</idx>
+  <p>Earlier we saw a code segment where we used the <c>input</c> and
+            <c>int</c> functions to read and parse an integer number entered
+            by the user. We also saw how treacherous doing this could be:</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; prompt = "What is the air velocity of an unladen swallow?\n"
+&gt;&gt;&gt; speed = input(prompt)
+What is the air velocity of an unladen swallow?
+What do you mean, an African or a European swallow?
+&gt;&gt;&gt; int(speed)
+ValueError: invalid literal for int() with base 10:
+&gt;&gt;&gt;
+</input>
+  </program>
+  <p>When we are executing these statements in the Python interpreter, we get
+            a new prompt from the interpreter, think <q>oops</q>, and move on to our next
+            statement.</p>
+  <p>However if you place this code in a Python script and this error occurs,
+            your script immediately stops in its tracks with a traceback. It does
+            not execute the following statement.</p>
+  <p>Here is a sample program to convert a Fahrenheit temperature to a
+            Celsius temperature:</p>
+  <program xml:id="cndtnlTemp" interactive="activecode" language="python">
+    <input>
+input_str = input('Enter Fahrenheit Temperature: ')
+fahrenheit = float(input_str)
+celsius = (fahrenheit - 32.0) * 5.0 / 9.0
+print('That is', celsius, 'degrees Celsius.')
+        </input>
+  </program>
+  <p>Example:</p>
+  <pre>Enter Fahrenheit Temperature:72
+that is 22.22222222222222 degrees Celsius.</pre>
+  <p>If we execute this code and give it invalid input, it simply fails with
+            an unfriendly error message:</p>
+  <pre>Enter Fahrenheit Temperature:fifty
+Traceback (most recent call last):
+  File "fahren.py", line 2, in &lt;module&gt;
+    fahrenheit = float(input_str)
+ValueError: could not convert string to float: 'fifty'</pre>
+  <p>There is a conditional execution structure built into Python to handle
+            these types of expected and unexpected errors called <q>try / except</q>. The
+            idea of <c>try</c> and <c>except</c> is that you know that
+            some sequence of instruction(s) may have a problem and you want to add
+            some statements to be executed if an error occurs. These extra
+            statements (the except block) are ignored if there is no error.</p>
+  <p>You can think of the <c>try</c> and <c>except</c> feature in
+            Python as an <q>insurance policy</q> on a sequence of statements.</p>
+  <exercise label="cndtnl-try-fitb-equivalent">
+    <statement>
+      <p>Q-2: The <c>try / except</c> feature is more or less a(n) _______ for your code. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Ii]nsurance\s+[Pp]olicy">
+          <feedback>
+            <p>Try / except acts as an insurance policy to catch expected
+or unexpected errors in your code.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Check the previous paragraph for some help!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>We can rewrite our temperature converter as follows:</p>
+  <program xml:id="cndtnlTempTry" interactive="activecode" language="python">
+    <input>
+input_str = input('Enter Fahrenheit Temperature:')
+try:
+    fahrenheit = float(input_str)
+    celsius = (fahrenheit - 32.0) * 5.0 / 9.0
+    print('That is', celsius, 'degrees Celsius.')
+except:
+    print('Please enter a number.')
+        </input>
+  </program>
+  <p>Python starts by executing the sequence of statements in the
+            <c>try</c> block. If all goes well, it skips the
+            <c>except</c> block and proceeds. If an exception occurs in the
+            <c>try</c> block, Python jumps out of the <c>try</c> block
+            and executes the sequence of statements in the <c>except</c>
+            block.</p>
+  <p>Example:</p>
+  <pre>Enter Fahrenheit Temperature:72
+22.22222222222222</pre>
+  <p>If we execute this code and give it invalid input, it executes the statements in the <c>except</c> block:</p>
+  <pre>Enter Fahrenheit Temperature:fifty
+Please enter a number.</pre>
+  <p>Handling an exception with a <c>try</c> statement is called
+            <em>catching</em> an exception. In this example, the
+            <c>except</c> clause prints an error message. In general, catching
+            an exception gives you a chance to fix the problem, or try again, or at
+            least end the program gracefully.</p>
+  <exercise label="cndtnl-try-fitb-meaning">
+    <statement>
+      <p>Q-4: The <c>try/except</c> feature is used to catch ________. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Ee]xception">
+          <feedback>
+            <p>When using try/except you are trying to catch an exception and give the computer a different way to handle it.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="cndtnl-try-pp-temp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>The following program should get a temperature in Fahrenheit from the user, then print out the
+            temperature in Celsius. If the input is not a number, it should ask the user to enter a
+            number again. Be sure to indent correctly!</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <cline>input_str = input('Enter Fahrenheit Temperature:')</cline>
+      </block>
+      <block order="7">
+        <cline>try:</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    fahrenheit = float(input_str)</cline>
+        </choice>
+        <choice>
+          <cline>    fahrenheit = int(input_str) </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <cline>    celsius = (fahrenheit - 32.0) * 5.0 / 9.0</cline>
+      </block>
+      <block order="2">
+        <cline>    print('That is', celsius, 'degrees C.')</cline>
+      </block>
+      <block order="4">
+        <cline>except:</cline>
+      </block>
+      <block order="5">
+        <cline>    print('Please enter a number.')</cline>
+      </block>
+    </blocks>
+  </exercise>
+</section>

@@ -1,0 +1,537 @@
+<?xml version="1.0"?>
+<section xml:id="functions_group-work-functions-with-loops">
+  <title>Group Work: Functions with Loops</title>
+  <introduction>
+  <p>It is best to use a POGIL approach with the following. In POGIL students work
+            in groups on activities and each member has an assigned role.  For more information see <url href="https://cspogil.org/Home" visual="https://cspogil.org/Home">https://cspogil.org/Home</url>.</p>
+  <note>
+    <p>If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.</p>
+  </note>
+  <p>
+    <term>Learning Objectives</term>
+  </p>
+  <p>Students will know and be able to do the following.</p>
+  <p>
+    <em>Content Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Recognize a for-each loop.</p>
+      </li>
+      <li>
+        <p>Recognize a range.</p>
+      </li>
+      <li>
+        <p>Recognize a for loop.</p>
+      </li>
+      <li>
+        <p>Recognize a while loop.</p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    <em>Process Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Predict the outcome of code with lists and loops.</p>
+      </li>
+      <li>
+        <p>Modify code with loops.</p>
+      </li>
+      <li>
+        <p>Fix code that processes a list with loops.</p>
+      </li>
+    </ul>
+  </p>
+</introduction>
+  <subsection xml:id="functions_the-for-each-loop">
+    <title>The For-Each Loop</title>
+    <p>A for-each loop in Python will loop though the items in a list starting with the item at index 0, then index 1, and so on till the last item in the list.</p>
+    <exercise label="funct_ll_fitb_count_odd_first">
+      <statement>
+        <p>Q-1: What is the first thing that will be printed by the code below? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="1">
+            <feedback>
+              <p>It will print the number of values that are odd in the first list, which is one.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Run the code to check.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funct_ll_fitb_count_odd_last">
+      <statement>
+        <p>Q-2: What is the last thing that will be printed by the code below? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="0">
+            <feedback>
+              <p>It will print the number of values that are odd in the last list which is zero.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Run the code to check.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="func_ll_ac_count_odd">
+      <statement>
+        <p>Run this code to see what it prints.</p>
+      </statement>
+      <program xml:id="func_ll_ac_count_odd_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def count_odd(num_list):
+    count = 0
+    for num in num_list:
+        if num % 2 == 1:
+            count += 1
+    return count
+
+# function definition
+def main():
+    list1 = [2, 8, 9]
+    print(count_odd(list1))
+    list1 = [1, 3, 5]
+    print(count_odd(list1))
+    list1 = [0]
+    print(count_odd(list1))
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="funct_ll_fitb_count_odd_var">
+      <statement>
+        <p>Q-4: What is the name of the variable that can be used to refer to the current list item in the for-each loop? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="num">
+            <feedback>
+              <p>The for-each loop uses num to refer to the current list item.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>What is the first name in the for-each loop?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="func_ll_pp_total_even" numbered="yes" adaptive="yes" indentation="show" language="python">
+      <statement>
+        <p>Drag the blocks from the left and put them in the correct order on the right to define a function <c>total_even</c> that returns the total of the even numbers in the passed list.</p>
+      </statement>
+      <blocks>
+        <block order="3">
+          <choice correct="yes">
+            <cline>def total_even(alist):</cline>
+          </choice>
+          <choice>
+            <cline>Def total_even(alist): </cline>
+          </choice>
+        </block>
+        <block order="1">
+          <cline>    total = 0</cline>
+        </block>
+        <block order="6">
+          <choice correct="yes">
+            <cline>    for num in alist:</cline>
+          </choice>
+          <choice>
+            <cline>    for num in alist </cline>
+          </choice>
+        </block>
+        <block order="10">
+          <choice correct="yes">
+            <cline>        if num % 2 == 0:</cline>
+          </choice>
+          <choice>
+            <cline>        if num % 2 == 1: </cline>
+          </choice>
+        </block>
+        <block order="5">
+          <cline>            total += num</cline>
+        </block>
+        <block order="9">
+          <choice correct="yes">
+            <cline>    return total</cline>
+          </choice>
+          <choice>
+            <cline>    Return total </cline>
+          </choice>
+        </block>
+      </blocks>
+    </exercise>
+  </subsection>
+  <subsection xml:id="functions_range-and-for">
+    <title>Range and For</title>
+    <p>How do you loop just a set number of times?  You can use
+                the built-in <c>range</c> function to do this.</p>
+    <exercise label="funct_ll_fitb_print_to_first">
+      <statement>
+        <p>Q-6: What is the first value that the following code prints? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="0">
+            <feedback>
+              <p>The code prints from 0 to the passed end.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Run the code and see.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funct_ll_fitb_print_to_last">
+      <statement>
+        <p>Q-7: What is last value that that following code prints? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="2">
+            <feedback>
+              <p>The code prints from 0 to the passed end (exclusive).  The end is 3 which means the last value is 2.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>What is the parameter in the second call to count_to?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="func_ll_ac_count_to">
+      <statement>
+        <p>Run this code to see what it prints.</p>
+      </statement>
+      <program xml:id="func_ll_ac_count_to_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def print_to(end):
+    for x in range(end):
+        print(x)
+
+# function definition
+def main():
+    print_to(5)
+    print()
+    print_to(3)
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+    <note>
+      <p>The <c>range(end)</c> function will produce values from 0 to end - 1.</p>
+    </note>
+    <exercise label="funct_ll_fitb_print_from_to_first">
+      <statement>
+        <p>Q-9: What is first value that that following code prints? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="1">
+            <feedback>
+              <p>The code prints from start (inclusive) to the passed end (exclusive) and the start is one.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Run the code and see.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funct_ll_fitb_print_from_to_last">
+      <statement>
+        <p>Q-10: What is last value that that following code prints? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="9">
+            <feedback>
+              <p>The code prints from start (inclusive) to the passed end (exclusive) so it ends with 9.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Run the code and see.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="func_ll_ac_print_from_to">
+      <statement>
+        <p>Run this code to see what it prints.</p>
+      </statement>
+      <program xml:id="func_ll_ac_print_from_to_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def print_from_to(start, end):
+    for x in range(start, end):
+        print(x)
+
+# function definition
+def main():
+    print_from_to(1,5)
+    print()
+    print_from_to(5,10)
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+    <note>
+      <p>The function range(start, end) will return a range object (an iterator) that allows you to loop from start (inclusive) to end (exclusive).</p>
+    </note>
+    <exercise label="funct_ll_fitb_print_from_to_by_first">
+      <statement>
+        <p>Q-12: What is first value that that following code prints? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="10">
+            <feedback>
+              <p>The code prints from start (inclusive) to the passed end (exclusive) and the start is ten.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Run the code and see.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="funct_ll_fitb_print_from_to_by_last">
+      <statement>
+        <p>Q-13: What is last value that that following code prints? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="9">
+            <feedback>
+              <p>The code prints from start (inclusive) which is 1 to the passed end (exclusive) which is 10 and changes by 2 each time so the end is 9.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Run the code and see.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="func_ll_ac_print_from_to_by">
+      <statement>
+        <p>Run this code to see what it prints.</p>
+      </statement>
+      <program xml:id="func_ll_ac_print_from_to_by_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def print_from_to_by(start, end, by):
+    for x in range(start, end, by):
+        print(x)
+
+# function definition
+def main():
+    print_from_to_by(10,0,-1)
+    print()
+    print_from_to_by(1,10,2)
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="func_ll_pp_total_at_odd_indices" numbered="yes" adaptive="yes" indentation="show" language="python">
+      <statement>
+        <p>Drag the blocks from the left and put them in the correct order on the right to define a function <c>total_at_odd_indices</c> that returns the total of the numbers at odd indices in the passed list.</p>
+      </statement>
+      <blocks>
+        <block order="3">
+          <choice correct="yes">
+            <cline>def total_at_odd_indices(alist):</cline>
+          </choice>
+          <choice>
+            <cline>def total_at_odd_indices(alist) </cline>
+          </choice>
+        </block>
+        <block order="5">
+          <cline>     total = 0</cline>
+        </block>
+        <block order="1">
+          <choice correct="yes">
+            <cline>     for i in range(1,len(alist),2):</cline>
+          </choice>
+          <choice>
+            <cline>     for i in range(1,len(alist)): </cline>
+          </choice>
+        </block>
+        <block order="2">
+          <choice correct="yes">
+            <cline>         total += alist[i]</cline>
+          </choice>
+          <choice>
+            <cline>         total += i </cline>
+          </choice>
+        </block>
+        <block order="7">
+          <cline>     return total</cline>
+        </block>
+      </blocks>
+    </exercise>
+  </subsection>
+  <subsection xml:id="functions_while-loops">
+    <title>While Loops</title>
+    <p>A while loop repeats while a Boolean expression is True.</p>
+    <exercise label="func_ll_ac_inifite">
+      <statement>
+        <p>Try running the code below.</p>
+      </statement>
+      <program xml:id="func_ll_ac_inifite_editor" interactive="activecode" language="python">
+        <input>
+def example():
+    count = 0
+    while (True):
+        print("This is the song that never ends", count)
+        count += 1
+        if (count &gt; 100):
+            break
+
+def main():
+    example()
+
+main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="funct_ll_fitb_while_break">
+      <statement>
+        <p>Q-17: What keyword is used to stop the loop in the above code? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="break">
+            <feedback>
+              <p>The break keyword will stop the enclosing loop.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>How does the code stop above?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <p>What do you think would happen if you deleted lines 6 and 7 in the above code?</p>
+    <note>
+      <p>A loop that never ends is called an infinite loop.  A while loop should have some way to end.  If you have an infinite loop you may need to refresh the page to stop it.</p>
+    </note>
+    <exercise label="func_ll_ac_while">
+      <statement>
+        <p>Run this code to see what it prints.</p>
+      </statement>
+      <program xml:id="func_ll_ac_while_editor" interactive="activecode" language="python">
+        <input>
+import random
+def check_value(target, actual):
+    if target == actual:
+        return("Correct")
+    elif (actual &lt; target):
+        return("Too Low")
+    else:
+        return("Too High")
+
+# function definition
+def main():
+    # pick a random number
+    target = random.randint(1,10)
+
+    # get the user's guess
+    num = int(input("Enter a number from 1 to 10 (inclusive)"))
+
+    # get the result
+    result = check_value(target, num)
+
+    # loop while the guess is not correct
+    while result != "Correct":
+
+        # Tell the result and get a new number
+        num = int(input(result + ".  Enter a number from 1 to 10"))
+
+        # get the result
+        result = check_value(target, num)
+
+    # Tell the user the number
+    print("You guessed it!  It was", target)
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+    <p>Modify the code above to keep a count of the number of guesses and print the number of guesses it took to guess the correct value.</p>
+    <exercise label="func_ll_ac_blastoff">
+      <statement>
+        <p>Fix the code below to print from start (inclusive) to 0 and then <q>Blastoff</q></p>
+      </statement>
+      <program xml:id="func_ll_ac_blastoff_editor" interactive="activecode" language="python">
+        <input>
+def countdown(start):
+    value = start
+    while value &gt; 0:
+        print(value)
+    print(Blastoff)
+
+def main():
+    countdown(5)
+        </input>
+      </program>
+    </exercise>
+    <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
+    <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+    &lt;div data-component="groupsub" id=func_loop_groupsub data-size_limit=4&gt;
+        &lt;div class="col-sm-6"&gt;
+            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div id="groupsub_button" class="col-sm-6"&gt;
+        &lt;/div&gt;
+        &lt;p&gt;The Submit Group button will submit the answer for each each question
+        on this page for each member of your group. It also logs you as the official
+        group submitter.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  </subsection>
+</section>

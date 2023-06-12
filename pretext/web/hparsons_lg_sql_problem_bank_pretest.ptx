@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<section xml:id="web_problem-bank-for-pre-test-problems">
+  <title>Problem Bank for Pre Test Problems</title>
+  <exercise label="hparsons_lg_sql_test_bank_pre_select">
+    <statement>
+      <p>We use SQL to manage the equipment in a gym. Our current table <c>equipment</c> looks like this:</p>
+      <image source="https://i.ibb.co/zbxr8M6/pretest-equipment.png" width="50%"/>
+      <p>To help us refill some sport equipments that are low in stock,
+            please write a SELECT statement to retrieve the <c>name</c> and  <c>brand</c> of all items
+            in the table <c>equipment</c> that belongs to <c>sport</c> category of <q>table_tennis</q> and
+            has a <c>quantity</c> of less than 10.</p>
+      <p>note: When you run the code, there will be several execution results.
+            Please only refer to the unittest and the <term>last</term> execution result for debugging purposes.</p>
+    </statement>
+    <program xml:id="hparsons_lg_sql_test_bank_pre_select_editor" interactive="activecode" language="sql">
+      <input>
+DROP TABLE IF EXISTS equipment;
+create table "equipment" ("id" INTEGER, "name" TEXT, "sport" TEXT, "brand" TEXT, "quantity" INTEGER);
+INSERT INTO equipment (id,name,sport,brand,quantity) VALUES
+    ('1', 'table_tennis_ball', 'table_tennis', 'stiga', '24'),
+    ('2', 'table_tennis_racket', 'table_tennis', 'stiga', '6'),
+    ('3', 'volleyball', 'volleyball', 'wilson', '10'),
+    ('4', 'table_tennis_ball', 'table_tennis', 'dhs', '5'),
+    ('5', 'basketball', 'basketball', 'nike', '7');
+^^^^
+====
+assert 0,0 == table_tennis_racket
+assert 0,1 == stiga
+assert 1,0 == table_tennis_ball
+assert 1,1 == dhs
+        </input>
+    </program>
+  </exercise>
+  <exercise label="hparsons_lg_sql_test_bank_pre_update">
+    <statement>
+      <p>In the same <c>equipment</c> table:</p>
+      <image source="https://i.ibb.co/zbxr8M6/pretest-equipment.png" width="50%"/>
+      <p>We just bought more equipment for table tennis.</p>
+      <p>Please write an UPDATE statement that: for all entries which <c>sport</c> column is <c>table_tennis</c>,
+            add the <c>quantity</c> by 5.</p>
+      <p>note: When you run the code, there will be several execution results.
+            Please only refer to the unittest and the <term>last</term> execution result for debugging purposes.</p>
+    </statement>
+    <program xml:id="hparsons_lg_sql_test_bank_pre_update_editor" interactive="activecode" language="sql">
+      <input>
+DROP TABLE IF EXISTS equipment;
+create table "equipment" ("id" INTEGER, "name" TEXT, "sport" TEXT, "brand" TEXT, "quantity" INTEGER);
+INSERT INTO equipment (id,name,sport,brand,quantity) VALUES
+    ('1', 'table_tennis_ball', 'table_tennis', 'stiga', '24'),
+    ('2', 'table_tennis_racket', 'table_tennis', 'stiga', '6'),
+    ('3', 'volleyball', 'volleyball', 'wilson', '10'),
+    ('4', 'table_tennis_ball', 'table_tennis', 'dhs', '5'),
+    ('5', 'basketball', 'basketball', 'nike', '7');
+^^^^
+-- Write your code here:
+
+-- The following line separates with your code and selects all data for testing. Please do not modify.
+;
+SELECT * FROM equipment
+====
+assert 0,4 == 29
+assert 1,4 == 11
+assert 2,4 == 10
+assert 3,4 == 10
+assert 4,4 == 7
+        </input>
+    </program>
+  </exercise>
+  <exercise label="hparsons_lg_sql_test_bank_pre_join">
+    <statement>
+      <p>Aside from the <c>equipment</c> table:</p>
+      <image source="https://i.ibb.co/zbxr8M6/pretest-equipment.png" width="50%"/>
+      <p>As students can rent items from the gym, we have another table <c>rental</c>:</p>
+      <image source="https://i.ibb.co/7WNs12N/pretest-rental.png" width="50%"/>
+      <p>Where the <c>equipment_id</c> in this table refers to the <c>id</c> in the <c>equipment</c> table above.
+            To provide sports-related recommendations for people, we want to know when each individual
+            played a certain sport.</p>
+      <p>Please write a statement using SELECT and JOIN to: select the <c>sport</c> from the <c>equipment</c>
+            table and <c>name</c> and <c>date</c> from the <c>rental</c> table, where the <c>equipment_id</c> in the
+            <c>rental</c> table is the same as the <c>id</c> in the <c>equipment</c> table.</p>
+      <p>note: When you run the code, there will be several execution results.
+            Please only refer to the unittest and the <term>last</term> execution result for debugging purposes.</p>
+    </statement>
+    <program xml:id="hparsons_lg_sql_test_bank_pre_join_editor" interactive="activecode" language="sql">
+      <input>
+DROP TABLE IF EXISTS equipment;
+create table "equipment" ("id" INTEGER, "name" TEXT, "sport" TEXT, "brand" TEXT, "quantity" INTEGER);
+INSERT INTO equipment (id,name,sport,brand,quantity) VALUES
+    ('1', 'table_tennis_ball', 'table_tennis', 'stiga', '24'),
+    ('2', 'table_tennis_racket', 'table_tennis', 'stiga', '6'),
+    ('3', 'volleyball', 'volleyball', 'wilson', '10'),
+    ('4', 'table_tennis_ball', 'table_tennis', 'dhs', '5'),
+    ('5', 'basketball', 'basketball', 'nike', '7');
+DROP TABLE IF EXISTS rental;
+create table "rental" ("name" TEXT, "equipment_id" INTEGER, "date" DATE);
+INSERT INTO rental (name,equipment_id,date) VALUES
+    ('Alex', '2', '2022-11-06'),
+    ('Blake', '1', '2022-11-06'),
+    ('Charlie', '3', '2022-11-08'),
+    ('Dale', '5', '2022-11-09');
+^^^^
+====
+assert 2,1 == Charlie
+assert 3,1 == Dale
+        </input>
+    </program>
+  </exercise>
+</section>

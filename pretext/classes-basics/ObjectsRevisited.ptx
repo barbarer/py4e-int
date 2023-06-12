@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<section xml:id="classes-basics_objects-revisited">
+  <title>Objects Revisited</title>
+  <idx>state of an object</idx>
+  <p>In Python, every value is actually an object. Whether it be a turtle, a list, or even an integer, they are all objects.  Programs manipulate those objects either by performing
+            computation with them or by asking them to perform methods.  To be more specific, we say that an object has
+            a <term>state</term> (also called attributes or properties) and a collection of <term>methods</term> (also called behavior) that it can perform.  The state of an object represents those things
+            that the object knows about itself.  For example, as we have seen with turtle objects, each turtle has a state consisting
+            of the turtle's position, its color, its heading and so on.  Each turtle also has the ability to go forward, backward, or turn right or left.  Individual turtles are different in that even though they are
+            all turtles, they differ in the specific values of the individual state attributes (maybe they are in a different location or have a different heading).</p>
+  <image source="classes-basics/Figures/objectpic1.png" width="50%" alt="Simple object has state and methods"/>
+  <exercise label="class-basics-turtle-object-attributes">
+    <statement>
+      <p>Q-1: Which of the following is/are attributes (state) for objects of the <c>Turtle</c> class?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>pos (x and y position)</p>
+        </statement>
+        <feedback>
+          <p>Turtle objects know their position.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>pen color</p>
+        </statement>
+        <feedback>
+          <p>Turtle objects know their pen color.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>forward</p>
+        </statement>
+        <feedback>
+          <p>This is a behavior (something the object can do) not an attribute (data about itself).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>left</p>
+        </statement>
+        <feedback>
+          <p>This is a behavior (something the object can do) not an attribute (data about itself).</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

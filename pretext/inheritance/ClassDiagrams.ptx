@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<section xml:id="inheritance_class-diagrams">
+  <title>Class Diagrams</title>
+  <p>The two major types of relationships between classes are <em>association</em> and <em>inheritance</em>.
+            The <em>Unified Modeling Language</em> (UML) is a graphical
+            notation that provides a standard for depicting classes and the relationships between them.
+            It gives software engineers a
+            way to record both their proposed designs, as well as the design of the
+            final product. Put another way, UML provides the notation for constructing
+            blueprints for software, and since it is widely used in both industry and
+            academia, it is important for you to have some familiarity with it.</p>
+  <p>UML defines notations for several different kinds of diagrams. Here, we
+            will introduce class diagrams, one of the most common UML diagrams. Class
+            diagrams can contain a number of different elements, but we will focus
+            on the basics: showing classes with their instance variables and methods,
+            and the relationships between classes.</p>
+  <p>On a UML class diagram, a class is depicted as a rectangle with three sections.
+            The top section contains the class name; the middle section, the instance
+            variables (attributes); and the bottom section, the methods (behaviors). The following diagram shows
+            the classes Point and LabeledPoint in an inheritance relationship where <c>LabeledPoint</c> is a child (subclass) of <c>Point</c>.</p>
+  <image source="inheritance/Figures/pointInheritance.png" width="100%" alt="UML diagram showing class inheritance"/>
+  <exercise label="class_diagram_with_inheritance_attributes_mcq">
+    <statement>
+      <p>Q-1: Which of the following are attributes of the <c>LabeledPoint</c> class as shown above.  Select all that apply.</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>x</p>
+        </statement>
+        <feedback>
+          <p>LabeledPoint inherits this attribute from Point.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>y</p>
+        </statement>
+        <feedback>
+          <p>LabeledPoint inherits this attribute from Point.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>label</p>
+        </statement>
+        <feedback>
+          <p>This is an attribute of a LabeledPoint object.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>distanceFromOrigin</p>
+        </statement>
+        <feedback>
+          <p>LabeledPoint inherits this method (behavior) from Point.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>The class diagram below shows an association relationship between <c>Point</c> and <c>LabeledPoint</c>.</p>
+  <image source="inheritance/Figures/pointAssocv3.png" width="50%" alt="UML diagram showing association"/>
+  <exercise label="class_diagram_with_association_attributes_mcq">
+    <statement>
+      <p>Q-2: Which of the following are attributes of the <c>LabeledPoint</c> class as shown above.  Select all that apply.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>x</p>
+        </statement>
+        <feedback>
+          <p>This is an attribute of Point.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>y</p>
+        </statement>
+        <feedback>
+          <p>This is an attribute of Point.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>label</p>
+        </statement>
+        <feedback>
+          <p>This is an attribute of a LabeledPoint object.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>point</p>
+        </statement>
+        <feedback>
+          <p>This is an attribute of a LabeledPoint object.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="class_diagram_parts_dnd">
+    <statement>
+      <p>Drag each item to its location in a class diagram</p>
+    </statement>
+    <feedback>
+      <p>Read the chapter on functions and try again.</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>methods</premise>
+        <response> in the bottom section of a class diagram</response>
+      </match>
+      <match order="2">
+        <premise>attributes</premise>
+        <response> in the middle section of a class diagram</response>
+      </match>
+      <match order="3">
+        <premise>class name</premise>
+        <response> in the top section of a class diagram</response>
+      </match>
+    </matches>
+  </exercise>
+</section>

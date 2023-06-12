@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<section xml:id="dictionaries_dictionaries-and-files">
+  <title>Dictionaries and Files</title>
+  <idx>Nested Loops</idx>
+  <idx><h>Loops</h><h>Nested</h></idx>
+  <p>One of the common uses of a dictionary is to count the occurrence of
+            words in a file with some written text. Let's start with a very simple
+            file of words taken from the text of <em>Romeo and Juliet</em>.</p>
+  <p>For the first set of examples, we will use a shortened and simplified
+            version of the text with no punctuation. Later we will work with the
+            text of the scene with punctuation included.</p>
+  <pre>But soft what light through yonder window breaks
+It is the east and Juliet is the sun
+Arise fair sun and kill the envious moon
+Who is already sick and pale with grief</pre>
+  <p>We will write a Python program to read through the lines of the file,
+            break each line into a list of words, and then loop through each of the
+            words in the line and count each word using a dictionary.</p>
+  <program xml:id="dictionariesandfiles_example_1" interactive="activecode" language="python">
+    <input>
+fname = input('Enter the file name: ')
+try:
+    fhand = open(fname)
+except:
+    print('File cannot be opened:', fname)
+    exit()
+
+counts = dict()
+for line in fhand:
+    words = line.split()
+    for word in words:
+        if word not in counts:
+            counts[word] = 1
+        else:
+            counts[word] += 1
+
+print(counts)
+        </input>
+  </program>
+  <p>You will see that we have two <c>for</c> loops. The outer loop is
+            reading the lines of the file and the inner loop is iterating through
+            each of the words on that particular line. This is an example of a
+            pattern called <em>nested loops</em> because one of the loops is
+            the <em>outer</em> loop and the other loop is the <em>inner</em> loop.</p>
+  <p>Because the inner loop executes all of its iterations each time the
+            outer loop makes a single iteration, we think of the inner loop as
+            iterating <q>more quickly</q> and the outer loop as iterating more slowly.</p>
+  <p>The combination of the two nested loops ensures that we will count every
+            word on every line of the input file.</p>
+  <exercise label="question9_3_1">
+    <statement>
+      <p>Q-2: A(n) _________ is a pattern consisting of two for loops, where one of the loops is the outer loop and the other is the inner loop. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Nn]ested\s+[Ll]oop">
+          <feedback>
+            <p>Correct! A nested loop contains two for loops where the inner loop executes all its iterations every time the outer loop completes one loop.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>In our <c>else</c> statement, we use the more compact alternative for incrementing a variable. <c>counts[word] += 1</c> is equivalent to <c>counts[word] = counts[word] + 1</c>. Either method can be used to change the value of a variable by any desired amount. Similar alternatives exist for <c>-=</c>, <c>*=</c>, and <c>/=</c>.</p>
+  <exercise label="question9_3_2">
+    <statement>
+      <p>Q-3: Which of these answers (if any) will increment a key's value in the dictionary counts by 1?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>counts[word] = counts[word] + 1</p>
+        </statement>
+        <feedback>
+          <p>Almost...try again!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>counts[word] += 1</p>
+        </statement>
+        <feedback>
+          <p>Almost...try again!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of these options increments the key's value by 1</p>
+        </statement>
+        <feedback>
+          <p>Try again! Remember you can increment by either adding 1 or doing += 1.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Both a and b increment the key's value by 1</p>
+        </statement>
+        <feedback>
+          <p>Correct! Both of these methods are correct ways to increment a key's value by 1.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>When we run the program, we see a raw dump of all of the counts in
+            unsorted hash order. (the <em>romeo.txt</em> file is available at
+            <url href="http://www.py4e.com/code3/romeo.txt" visual="http://www.py4e.com/code3/romeo.txt">www.py4e.com/code3/romeo.txt</url>)</p>
+  <pre>python count1.py
+Enter the file name: romeo.txt
+{'and': 3, 'envious': 1, 'already': 1, 'fair': 1,
+'is': 3, 'through': 1, 'pale': 1, 'yonder': 1,
+'what': 1, 'sun': 2, 'Who': 1, 'But': 1, 'moon': 1,
+'window': 1, 'sick': 1, 'east': 1, 'breaks': 1,
+'grief': 1, 'with': 1, 'light': 1, 'It': 1, 'Arise': 1,
+'kill': 1, 'the': 3, 'soft': 1, 'Juliet': 1}</pre>
+  <p>It is a bit inconvenient to look through the dictionary to find the most
+            common words and their counts, so we need to add some more Python code
+            to get us the output that will be more helpful.</p>
+  <exercise label="question9_3_3" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Construct a block of code to read through the lines of a file, break each line into a list of words, and then loop through each of the words in the line and count each word using a dictionary.</p>
+    </statement>
+    <blocks>
+      <block order="12">
+        <cline>file_to_read = "textfile.txt"</cline>
+      </block>
+      <block order="1">
+        <cline>with open(file_to_read, "r") as filename:</cline>
+      </block>
+      <block order="8" correct="no">
+        <cline>with open(file_to_read, "w") as filename: </cline>
+      </block>
+      <block order="7">
+        <cline> lines = filename.readlines()</cline>
+      </block>
+      <block order="10">
+        <cline> word_count = {}</cline>
+      </block>
+      <block order="13" correct="no">
+        <cline> word_count = dictionary() </cline>
+      </block>
+      <block order="4">
+        <cline> for line in lines:</cline>
+      </block>
+      <block order="3" correct="no">
+        <cline> for word in lines.split() </cline>
+      </block>
+      <block order="6">
+        <cline>  for word in lines.split():</cline>
+      </block>
+      <block order="11">
+        <cline>   if word not in word_count.keys():</cline>
+      </block>
+      <block order="2">
+        <cline>    word_count[word] = 0</cline>
+      </block>
+      <block order="9">
+        <cline>   counts[word] += 1</cline>
+      </block>
+      <block order="5">
+        <cline>print(word_count)</cline>
+      </block>
+    </blocks>
+  </exercise>
+</section>

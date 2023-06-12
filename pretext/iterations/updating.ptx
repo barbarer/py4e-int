@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<section xml:id="iterations_updating-variables">
+  <title>Updating variables</title>
+<idx>Update</idx>
+<idx><h>Updating</h><h>Variable</h></idx>
+<idx><h>Variable</h><h>Updating</h></idx>
+<idx><h>Initialize</h><h>Before Update</h></idx>
+<idx><h>Before Update</h><h>Initialize</h></idx>
+<idx>Increment</idx>
+<idx>Decrement</idx>
+  <p>Commonly, assignment statements are used to update a variable, where the
+            new value of the variable depends on the old.</p>
+  <program language="python">
+    <input>
+x = x + 1
+</input>
+  </program>
+  <p>This means <q>get the current value of <c>x</c>, add 1, and then
+            update <c>x</c> with the new value.</q></p>
+  <p>If you try to update a variable that doesn't exist, you get an error,
+            because Python evaluates the right side before it assigns a value to
+            <c>x</c>:</p>
+  <program xml:id="itr-section1_1" interactive="activecode" language="python">
+    <input>
+x = x + 1
+print(x)
+        </input>
+  </program>
+  <p>Before you can update a variable, you have to
+            <em>initialize</em> it, usually with a simple assignment:</p>
+  <program xml:id="itr-section1_2" interactive="activecode" language="python">
+    <input>
+x = 0
+x = x + 1
+print(x)
+        </input>
+  </program>
+  <p>When you update a variable by adding 1 it's called an <em>increment</em>;
+            subtracting 1 is called a <em>decrement</em>.</p>
+  <exercise id="itUpdate_fill1">
+    <statement>
+      <p>Q-3: Before you can update a variable, you have to ________ it. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Ii]nitialize">
+          <feedback>
+            <p>Before updating a variable, you need to initialize the variable.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Incorrect! Hint: what are you doing to variable &#x2018;x' when you say &#x2018;x = 0'? Try again!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="itUpdate_fill2">
+    <statement>
+      <p>Q-4: When you subtract 1 from a variable, you ________ it. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Dd]ecrement">
+          <feedback>
+            <p>Subtracting 1 from a varaible is called decrementing, the opposite of adding 1 (incrementing).</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Incorrect! Hint: the answer is the opposite of <q>increment</q>. Try again!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="itUpdate_MC_y">
+    <statement>
+      <p>Q-5: Consider the code block below. What happens when you run this program?</p>
+      <program language="python">
+        <input>
+y = 1
+x = x + 1
+print(x)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>The integer "2" prints.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Take another look at the second line. Try again!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>We get a TypeError.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This will not cause a TypeError because x, y, and 1 are all integers. Try again!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>We get a NameError.</p>
+        </statement>
+        <feedback>
+          <p>Correct! This will cause a NameError because x has not been initialized yet.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The program compiles with no errors but nothing prints.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This program will not compile. Try again!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

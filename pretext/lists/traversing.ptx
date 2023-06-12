@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<section xml:id="lists_traversing-a-list">
+  <title>Traversing a list</title>
+<idx><h>List</h><h>Traversal</h></idx>
+<idx><h>Traversal</h><h>List</h></idx>
+<idx><h>Loop</h><h>For</h></idx>
+<idx><h>For</h><h>Loop</h></idx>
+<idx><h>For</h><h>Statement</h></idx>
+<idx><h>Statement</h><h>For</h></idx>
+<idx>Looping with indicies</idx>
+<idx><h>Index</h><h>Looping with</h></idx>
+<idx><h>Looping with</h><h>Index</h></idx>
+<idx><h>Item</h><h>Update</h></idx>
+<idx><h>Update</h><h>Item</h></idx>
+<idx>Nested List</idx>
+  <p>The most common way to traverse the elements of a list is with a
+            <c>for</c> loop. The syntax is the same as for strings:</p>
+  <program xml:id="listCheese" interactive="activecode" language="python">
+    <input>
+cheeses = ["Gouda", "Swiss", "Provolone", "Cheddar"]
+for cheese in cheeses:
+    print(cheese)
+        </input>
+  </program>
+  <p>This works well if you only need to read the elements of the list. But
+            if you want to write or update the elements, you need the indices. A
+            common way to do that is to combine the functions <c>range</c> and
+            <c>len</c>:</p>
+  <program language="python">
+    <input>
+for i in range(len(numbers)):
+    numbers[i] = numbers[i] * 2
+</input>
+  </program>
+  <exercise label="listTrav_MC_iterate">
+    <statement>
+      <p>Q-2: How many times will the for loop iterate in the following statements?</p>
+      <pre>p = [3, 4, "Me", 3, [], "Why", 0, "Tell", 9.3]
+for ch in p:
+    print(ch)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>8</p>
+        </statement>
+        <feedback>
+          <p>Iteration by item will process once for each item in the sequence, even the empty list.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>9</p>
+        </statement>
+        <feedback>
+          <p>Yes, there are nine elements in the list so the for loop will iterate nine times.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>15</p>
+        </statement>
+        <feedback>
+          <p>Iteration by item will process once for each item in the sequence. Each string is viewed as a single item, even if you are able to iterate over a string itself.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Error, the for statement needs to use the range function.</p>
+        </statement>
+        <feedback>
+          <p>The for statement can iterate over a sequence item by item.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>This loop traverses the list and updates each element. <c>len</c>
+            returns the number of elements in the list. <c>range</c> returns a
+            list of indices from 0 to <term>n-1</term>, where <term>n</term> is the length of the list.
+            Each time through the loop, <c>i</c> gets the index of the next
+            element. The assignment statement in the body uses <c>i</c> to
+            read the old value of the element and to assign the new value.</p>
+  <p>A <c>for</c> loop over an empty list never executes the body:</p>
+  <program xml:id="listEmptyLoop" interactive="activecode" language="python">
+    <input>
+empty = []
+for x in empty:
+    print('This never happens.')
+        </input>
+  </program>
+  <exercise label="listTrav_MC_empty">
+    <statement>
+      <p>Q-4: What will happen if you attempt to traverse an empty list?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>The loop will run once.</p>
+        </statement>
+        <feedback>
+          <p>The loop will not run because the initial conditions are not met. You cannot traverse over nothing.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Nothing will happen.</p>
+        </statement>
+        <feedback>
+          <p>Nothing will happen when traversing through an empty loop because there are no elements to iterate through.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>It will cause an error.</p>
+        </statement>
+        <feedback>
+          <p>It is legal to call this, but nothing will happen. It will not call an error.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The list will add items to traverse.</p>
+        </statement>
+        <feedback>
+          <p>Python will not add items to the list so it is no longer empty, empty lists are okay.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>Although a list can contain another list, the nested list still counts
+            as a single element. Check out the length of this list:</p>
+  <program xml:id="listNested2" interactive="activecode" language="python">
+    <input>
+bigList = ['spam', 1, ['Brie', 'Roquefort', 'Pol le Veq'], [1, 2, 3]]
+print(len(bigList))
+        </input>
+  </program>
+  <exercise label="listTrav_MC_nested">
+    <statement>
+      <p>Q-6: How many items are in <c>nestedList</c>?</p>
+      <pre>nestedList = [["First", 2, ["Third"]]]</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Remember that the length of a list is only the elements in the outside list.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>There is technically only one element in this list, but that element has its own items.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>2</p>
+        </statement>
+        <feedback>
+          <p>Remember that the length of a list is only the elements in the outside list.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

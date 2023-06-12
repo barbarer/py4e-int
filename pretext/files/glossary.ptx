@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+<section xml:id="files_summary">
+  <title>Summary</title>
+  <p>You can open files for reading or writing which returns a file object, close a file object, and read from file objects.  The file object is <term>iterable</term> which means that you can loop though all the lines in a file using a for each loop.</p>
+  <table>
+    <tabular>
+      <row header="yes">
+        <cell>
+                            Method
+                        </cell>
+        <cell>
+                            Example
+                        </cell>
+        <cell>
+                            Description
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            open
+                        </cell>
+        <cell>
+                            file_obj = open(filename)
+                        </cell>
+        <cell>
+                            Opens the file named filename for reading and returns a file object
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            open
+                        </cell>
+        <cell>
+                            file_obj = open(filename, <q>r</q>)
+                        </cell>
+        <cell>
+                            Opens the file named filename for reading and returns a file object
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            open
+                        </cell>
+        <cell>
+                            file_obj = open(filename, &#x2018;w')
+                        </cell>
+        <cell>
+                            Opens the file named filename for writing and returns a file object
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            close
+                        </cell>
+        <cell>
+                            file_obj.close()
+                        </cell>
+        <cell>
+                            Closes an open file (most crucial when writing to a file)
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            read
+                        </cell>
+        <cell>
+                            data = file_obj.read()
+                        </cell>
+        <cell>
+                            Reads all data from a file object and returns it as a string
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            readline
+                        </cell>
+        <cell>
+                            line = file_obj.readline()
+                        </cell>
+        <cell>
+                            Returns a line from a file object as a string
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            readlines
+                        </cell>
+        <cell>
+                            lines = file_obj.readlines()
+                        </cell>
+        <cell>
+                            Returns a list of lines from a file object
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            write
+                        </cell>
+        <cell>
+                            file_obj.write(line)
+                        </cell>
+        <cell>
+                            Writes the line to the file object
+                        </cell>
+      </row>
+    </tabular>
+  </table>
+  <p>When reading from files you may need to change the current directory to the one with the file to read from.  These are some of the useful terminal commands for navigating the directory structure.</p>
+  <table>
+    <tabular>
+      <row header="yes">
+        <cell>
+                            Mac
+                        </cell>
+        <cell>
+                            Windows
+                        </cell>
+        <cell>
+                            Description
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            cd
+                        </cell>
+        <cell>
+                            cd
+                        </cell>
+        <cell>
+                            Change directory - takes you to the root directory
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            cd dir
+                        </cell>
+        <cell>
+                            cd dir
+                        </cell>
+        <cell>
+                            Will change the current directory to the specified directory
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            cd ..
+                        </cell>
+        <cell>
+                            cd..
+                        </cell>
+        <cell>
+                            Change directory up one level (move to the parent directory)
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            pwd
+                        </cell>
+        <cell>
+                            chdir
+                        </cell>
+        <cell>
+                            Print working directory (pwd) or show the current directory
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            ls
+                        </cell>
+        <cell>
+                            dir
+                        </cell>
+        <cell>
+                            List the contents of the current directory
+                        </cell>
+      </row>
+    </tabular>
+  </table>
+  <p>When working with git and GitHub these are some of the useful commands.</p>
+  <table>
+    <tabular>
+      <row header="yes">
+        <cell>
+                            Command
+                        </cell>
+        <cell>
+                            Description
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            git clone URL
+                        </cell>
+        <cell>
+                            Download a copy of the repo at the given URL to the current directory
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            git add file
+                        </cell>
+        <cell>
+                            Add the specified file to the list of files to be committed
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            git status
+                        </cell>
+        <cell>
+                            What files have been added and/or changed
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            git commit -m <q>message</q>
+                        </cell>
+        <cell>
+                            Package changes into a commit on your local computer
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            git push
+                        </cell>
+        <cell>
+                            Push commits to your GitHub account
+                        </cell>
+      </row>
+      <row>
+        <cell>
+                            git pull
+                        </cell>
+        <cell>
+                            Download changes from GitHub to your local repo
+                        </cell>
+      </row>
+    </tabular>
+  </table>
+</section>

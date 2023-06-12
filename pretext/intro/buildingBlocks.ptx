@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<section xml:id="intro_the-building-blocks-of-programs">
+  <title>The building blocks of programs</title>
+<idx>Input</idx>
+<idx>Sequential Execution</idx>
+<idx>Output</idx>
+<idx>Conditional Execution</idx>
+<idx>Repeated Execution</idx>
+<idx>Reuse</idx>
+  <p>In the next few chapters, we will learn more about the vocabulary,
+            sentence structure, paragraph structure, and story structure of Python.
+            We will learn about the powerful capabilities of Python and how to
+            compose those capabilities together to create useful programs.</p>
+  <p>There are some low-level conceptual patterns that we use to construct
+            programs. These constructs are not just for Python programs, they are
+            part of every programming language from machine language up to the
+            high-level languages.</p>
+  <p>
+        <dl>
+          <li>
+            <title>input</title>
+            <p>Get data from the <q>outside world</q>. This might be reading data from a
+                                file, or even some kind of sensor like a microphone or GPS. In our
+                                initial programs, our input will come from the user typing data on
+                                the keyboard.</p>
+          </li>
+      
+          <li>
+            <title>output</title>
+            <p>Display the results of the program on a screen or store them in a
+                                file or perhaps write them to a device like a speaker to play music
+                                or speak text.</p>
+          </li>
+       
+          <li>
+            <title>sequential execution</title>
+            <p>Perform statements one after another in the order they are
+                                encountered in the script.</p>
+          </li>
+   
+          <li>
+            <title>conditional execution</title>
+            <p>Check for certain conditions and then execute or skip a sequence of
+                                statements.</p>
+          </li>
+
+          <li>
+            <title>repeated execution</title>
+            <p>Perform some set of statements repeatedly, usually with some
+                                variation.</p>
+          </li>
+
+          <li>
+            <title>reuse</title>
+            <p>Write a set of instructions once and give them a name and then reuse
+                                those instructions as needed throughout your program.</p>
+          </li>
+        </dl>
+  </p>
+  <p>It sounds almost too simple to be true, and of course it is never so
+            simple. It is like saying that walking is simply <q>putting one foot in
+            front of the other</q>. The <q>art</q> of writing a program is composing and
+            weaving these basic elements together many times over to produce
+            something that is useful to its users.</p>
+  <p>The word counting program from the previous section directly uses all of these patterns
+            except for one.</p>
+          <exercise label="intro-bb-fitb-CDwrite">>
+    <statement>
+      <p>Q-1: When writing content to a CD, the CD is an example of ________. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Oo]utput">
+          <feedback>
+            <p>A CD displays the results of a program when the disc is played.</p>
+          </feedback>
+        </condition>
+        <condition string="[Ii]nput">
+          <feedback>
+            <p>Not quite. Is the CD being read from or written to?</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="intro-bb-fitb-CDread">
+    <statement>
+      <p>Q-2: When reading content from a CD, the CD is an example of ________. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Ii]nput">
+          <feedback>
+            <p>A CD holds information that the program reads.</p>
+          </feedback>
+        </condition>
+        <condition string="[Oo]utput">
+          <feedback>
+            <p>Not quite. Is the CD being read from or written to?</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="intro-bb-dbd-terms">
+    <statement>
+      <p>Match each pattern with what it means for a program.</p>
+    </statement>
+    <matches>
+      <match order="1">
+        <premise>Input</premise>
+        <response>Getting data from outside the computer.</response>
+      </match>
+      <match order="2">
+        <premise>Output</premise>
+        <response>Displaying or producing the results of the program.</response>
+      </match>
+      <match order="3">
+        <premise>Sequential Execution</premise>
+        <response>Performing statements one after another in the order they are encountered.</response>
+      </match>
+      <match order="4">
+        <premise>Conditional Execution</premise>
+        <response>Checking for certain conditions, then executing or skipping a sequence of statements.</response>
+      </match>
+      <match order="5">
+        <premise>Repeated Execution</premise>
+        <response>Performing some set of statements multiple times, typically with some variation.</response>
+      </match>
+      <match order="6">
+        <premise>Reuse</premise>
+        <response>writing a set of instructions once, giving them a name, and calling those instructions as needed in the program.</response>
+      </match>
+    </matches>
+  </exercise>
+</section>

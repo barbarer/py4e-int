@@ -1,0 +1,799 @@
+<?xml version="1.0"?>
+<section xml:id="objects_mixed-up-code-exercises">
+  <title>Mixed-Up Code Exercises</title>
+  <exercise label="obj_mixedupcode_1" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a <c>Dog</c> class and define the <c>__init__</c> method
+            that has one parameter, <c>name</c>. Then define the <c>getName</c> method, which returns the
+            <c>name</c> when the method is called.</p>
+    </statement>
+    <blocks>
+      <block order="9">
+        <choice correct="yes">
+          <cline>class Dog:</cline>
+        </choice>
+        <choice>
+          <cline>class Dog </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>    def __init__(self, name):</cline>
+        </choice>
+        <choice>
+          <cline>    def __init__(name): </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>        self.name = name</cline>
+        </choice>
+        <choice>
+          <cline>        name = self.name </cline>
+        </choice>
+      </block>
+      <block order="8">
+        <cline>    def getName(self):</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>        return self.name</cline>
+        </choice>
+        <choice>
+          <cline>        return name </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="obj_mixedupcode_1_ac">
+    <statement>
+      <p>Write a <c>Dog</c> class and define the <c>__init__</c> method that has one parameter, <c>name</c>. Then define the
+            <c>getName</c> method, which returns the <c>name</c> when the method is called.</p>
+    </statement>
+    <program xml:id="obj_mixedupcode_1_ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def setUp(self):
+        self.Bill = Dog("Bill")
+        self.Dot = Dog("Dot")
+        self.Spot = Dog("Spot")
+        self.Lovey = Dog("Lovey")
+        self.Brownie = Dog("Brownie")
+
+    def testOne(self):
+        self.assertEqual(self.Bill.getName(), "Bill" ,"self.Bill.getName()")
+        self.assertEqual(self.Dot.getName(), "Dot" ,"self.Dot.getName()")
+        self.assertEqual(self.Spot.getName(), "Spot" ,"self.Spot.getName()")
+        self.assertEqual(self.Lovey.getName(), "Lovey" ,"self.Lovey.getName()")
+        self.assertEqual(self.Brownie.getName(), "Brownie" ,"self.Brownie.getName()")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="obj_mixedupcode_2_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a class named <c>Dog</c>. Define the <c>__init__</c> method with two parameters, <c>name</c> and <c>age</c>.
+            Also create the method <c>updateAge</c>, that increases the <c>age</c> by 1 and returns <c>age</c>.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <choice correct="yes">
+          <cline>class Dog:</cline>
+        </choice>
+        <choice>
+          <cline>class Dog </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>    def __init__(self, name, age):</cline>
+        </choice>
+        <choice>
+          <cline>    def __init__(name, age): </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>        self.name = name</cline>
+          <cline>        self.age = age</cline>
+        </choice>
+        <choice>
+          <cline>        name = self.name </cline>
+          <cline>        age = self.age</cline>
+        </choice>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>    def updateAge(self):</cline>
+        </choice>
+        <choice>
+          <cline>    def updateAge(age): </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>        self.age += 1</cline>
+      </block>
+      <block order="7">
+        <cline>        return self.age</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="obj_mixedupcode_2_v2_ac">
+    <statement>
+      <p>Write a class named <c>Dog</c>. Define the <c>__init__</c> method with two parameters, <c>name</c> and <c>age</c>.
+            Also create the method <c>updateAge</c>, that increases the <c>age</c> by 1 and returns <c>age</c>.</p>
+    </statement>
+    <program xml:id="obj_mixedupcode_2_v2_ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def setUp(self):
+        self.Lark = Dog("Lark", 10)
+        self.Bill = Dog("Bill", 10)
+        self.Tom = Dog("Tom", 22)
+        self.James = Dog("James", 18)
+        self.Terry = Dog("Terry", 29)
+        self.Tina = Dog("Tina", 17)
+
+    def testOne(self):
+        self.assertEqual(self.Lark.updateAge(), 11 ,"self.Lark.updateAge()")
+        self.assertEqual(self.Bill.updateAge(), 11 ,"self.Bill.updateAge()")
+        self.assertEqual(self.Tom.updateAge(), 23 ,"self.Tom.updateAge()")
+        self.assertEqual(self.James.updateAge(), 19 ,"self.James.updateAge()")
+        self.assertEqual(self.Terry.updateAge(), 30 ,"self.Terry.updateAge()")
+        self.assertEqual(self.Tina.updateAge(), 18 ,"self.Tina.updateAge()")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="obj_mixedupcode_3" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create the class <c>Cat</c>. Define the <c>__init__</c> method, it has two parameters,
+            <c>name</c> and <c>age</c>. Next define the the <c>__str__</c> method to return a string with the cat's information:
+            <c>"Name: name, Age: age"</c>. Then define the <c>make_sound</c> method, which should return
+            the string <c>"Meow"</c>.</p>
+    </statement>
+    <blocks>
+      <block order="8">
+        <cline>class Cat:</cline>
+      </block>
+      <block order="1">
+        <cline>    def __init__(self, name, age):</cline>
+      </block>
+      <block order="2">
+        <cline>        self.name = name</cline>
+        <cline>        self.age = age</cline>
+      </block>
+      <block order="6">
+        <cline>    def __str__(self):</cline>
+      </block>
+      <block order="7">
+        <cline>        return f"Name: {self.name}, Age: {self.age}"</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    def make_sound(self):</cline>
+        </choice>
+        <choice>
+          <cline>    def make_sound(sound): </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>        return "Meow"</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="obj_mixedupcode_3_ac">
+    <statement>
+      <p>Write the class <c>Cat</c>. Define the <c>__init__</c> method, it has two parameters,
+            <c>name</c> and <c>age</c>. Next define the the <c>__str__</c> method to return a string with the cat's information:
+            <c>"Name: name, Age: age"</c>. Then define the <c>make_sound</c> method, which should return
+            the string <c>"Meow"</c>.</p>
+    </statement>
+    <program xml:id="obj_mixedupcode_3_ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def setUp(self):
+        self.Lucky = Cat("Lucky", 10)
+        self.Jack = Cat("Jack", 10)
+        self.Chip = Cat("Chip", 22)
+        self.Tink = Cat("Tink", 18)
+        self.Pinky = Cat("Pinky", 29)
+
+
+    def testOne(self):
+        self.assertEqual(self.Lucky.__str__(), "Name: Lucky, Age: 10" ,"self.Lucky.__str__()")
+        self.assertEqual(self.Lucky.make_sound(), "Meow", 'self.Lucky.make_sound()')
+        self.assertEqual(self.Jack.__str__(), "Name: Jack, Age: 10" ,"self.Jack.__str__()")
+        self.assertEqual(self.Jack.make_sound(), "Meow", 'self.Jack.make_sound()')
+        self.assertEqual(self.Chip.__str__(), "Name: Chip, Age: 22" ,"self.Chip.__str__()")
+        self.assertEqual(self.Tink.__str__(), "Name: Tink, Age: 18" ,"self.Tink.__str__()")
+        self.assertEqual(self.Pinky.__str__(), "Name: Pinky, Age: 29" ,"self.Pinky.__str__()")
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="obj_mixedupcode_4" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a class named <c>Book</c> that has an <c>__init__</c> method with the parameters <c>title</c>
+            and <c>author</c>.  Then create a <c>__str__</c> method that returns <c>"Title: title, Author: author"</c>.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <choice correct="yes">
+          <cline>class Book:</cline>
+        </choice>
+        <choice>
+          <cline>Class Book: </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    def __init__(self, title, author):</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>        self.title = title</cline>
+          <cline>        self.author = author</cline>
+        </choice>
+        <choice>
+          <cline>        title = self.title </cline>
+          <cline>        author = self.author</cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>    def __str__(self):</cline>
+      </block>
+      <block order="7">
+        <cline>        a = self.author</cline>
+        <cline>        t = self.title</cline>
+        <cline>        return f"Title: {t}, Author: {a}"</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="obj_mixedupcode_4_ac">
+    <statement>
+      <p>Write a class named <c>Book</c> that has an <c>__init__</c> method with two parameters, title
+            and author.  Then create a <c>__str__</c> method that returns <c>"Title: title, Author: author"</c>.</p>
+    </statement>
+    <program xml:id="obj_mixedupcode_4_ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def setUp(self):
+        self.newbook = Book("The Odyssey", "Homer")
+        self.newbook2 = Book("The Fault in Our Stars", "John Green")
+
+
+    def testOne(self):
+        self.assertEqual(self.newbook.title, "The Odyssey", "Testing title")
+        self.assertEqual(self.newbook.author, "Homer", "Testing author")
+        self.assertEqual(self.newbook2.title, "The Fault in Our Stars", "Testing title")
+        self.assertEqual(self.newbook2.author, "John Green", "Testing author")
+        self.assertEqual(self.newbook.__str__(), "Title: The Odyssey, Author: Homer", "Testing the __str__ method")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="obj_mixedupcode_5_v3" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a class named <c>Dog</c> with the <c>__init__</c> method taking <c>name</c> as its parameter
+            and setting <c>self.tricks</c> to an empty list.  Then create a <c>__str__</c> method that returns a string
+            with <c>"Name: name"</c>.  Then create a method, <c>updateTricks</c>, that adds
+            a new trick to the list.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <cline>class Dog:</cline>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>    def __init__(self, name):</cline>
+        </choice>
+        <choice>
+          <cline>    def __init__(name): </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>        self.name = name</cline>
+          <cline>        self.tricks = []</cline>
+        </choice>
+        <choice>
+          <cline>        this.name = name </cline>
+          <cline>        this.tricks = []</cline>
+        </choice>
+      </block>
+      <block order="10">
+        <cline>    def __str__(self):</cline>
+      </block>
+      <block order="8">
+        <cline>        return f'Name: {self.name}'</cline>
+      </block>
+      <block order="5">
+        <cline>    def updateTricks(self, trick):</cline>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>        self.tricks.append(trick)</cline>
+        </choice>
+        <choice>
+          <cline>        self.tricks.append(self.trick) </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="obj_mixedupcode_5_v3_ac">
+    <statement>
+      <p>Write a class named <c>Dog</c> with the <c>__init__</c> method taking <c>name</c> as its parameter
+            and setting <c>self.tricks</c> to an empty list.   Then create a <c>__str__</c> method that returns a string
+            with <c>"Name: name"</c>. Then create a method, <c>updateTricks</c>, that adds
+            a new trick to the list.</p>
+    </statement>
+    <program xml:id="obj_mixedupcode_5_v3_ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def setUp(self):
+        self.Spot = Dog("Spot")
+        self.Jack = Dog("Jack")
+        self.Chip = Dog("Chip")
+        self.Tink = Dog("Tink")
+        self.Pinky = Dog("Pinky")
+
+
+    def testOne(self):
+        self.assertEqual(self.Spot.__str__(), "Name: Spot" ,"self.Spot.__str__()")
+        self.Spot.updateTricks("jump")
+        self.assertEqual(self.Spot.tricks, ['jump'], "Testing self.Spot.tricks after add 'jump'")
+        self.Spot.updateTricks("sit")
+        self.assertEqual(self.Spot.tricks, ['jump', 'sit'], "Testing self.Spot.trick after add 'sit'")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="obj_mixedupcode_6" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a class named <c>Square</c> with the <c>__init__</c> method taking the length, <c>len</c>, with a default of <c>10</c> if it is not specified.  Then create a <c>__str__</c> method that returns a string
+            with <c>"Length: length"</c>.  Then create an <c>area</c> method that returns the area (<c>length</c> times <c>length</c>).</p>
+    </statement>
+    <blocks>
+      <block order="11">
+        <choice correct="yes">
+          <cline>class Square:</cline>
+        </choice>
+        <choice>
+          <cline>def Square: </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    def __init__(self, len = 10):</cline>
+        </choice>
+        <choice>
+          <cline>    def __init__(len = 10): </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>        self.len = len</cline>
+      </block>
+      <block order="9">
+        <cline>    def __str__(self):</cline>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>        return f'Length: {self.len}'</cline>
+        </choice>
+        <choice>
+          <cline>        return f'Length: {len}' </cline>
+        </choice>
+      </block>
+      <block order="10">
+        <choice correct="yes">
+          <cline>    def area(self):</cline>
+        </choice>
+        <choice>
+          <cline>    def __area__(self): </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>        return self.len * self.len</cline>
+        </choice>
+        <choice>
+          <cline>        return len * len </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="obj_mixedupcode_6_ac">
+    <statement>
+      <p>Write a class named <c>Square</c> with the <c>__init__</c> method taking the length, <c>len</c>, with a default of <c>10</c> if it is not specified.  Then create a <c>__str__</c> method that returns a string
+            with <c>"Length: length"</c>.  Then create an <c>area</c> method that returns the area (<c>length</c> times <c>length</c>).</p>
+    </statement>
+    <program xml:id="obj_mixedupcode_6_ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+
+    def testOne(self):
+        s1 = Square()
+        self.assertEqual(s1.len, 10, "Testing the default length")
+        self.assertEqual(s1.area(), 100, "Testing s1.area() with length 10")
+        s2 = Square(5)
+        self.assertEqual(s2.area(), 25, "Testing s2.area() with length 5")
+        s3 = Square(8)
+        self.assertEqual(s3.area(), 64, "Testing s3.area() with length 8")
+        self.assertEqual(s1.__str__(), "Length: 10", "Testing s1 __str__ method")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="obj_mixedupcode_7_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a class named <c>Rectangle</c> with the <c>__init__</c> method taking a <c>length</c>, and <c>width</c>.  Then create a <c>__str__</c> method that returns a string
+            with <c>"l: length, w: width"</c>.  Then create an <c>area</c> method that returns the area (<c>length</c> times <c>width</c>).</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <choice correct="yes">
+          <cline>class Rectangle:</cline>
+        </choice>
+        <choice>
+          <cline>Class Rectangle: </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    def __init__(self, length, width):</cline>
+        </choice>
+        <choice>
+          <cline>    def __init__(Length, width): </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <cline>        self.length = length</cline>
+        <cline>        self.width = width</cline>
+      </block>
+      <block order="6">
+        <cline>    def __str__(self):</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>        return f'l: {self.length}, w: {self.width}'</cline>
+        </choice>
+        <choice>
+          <cline>        return f'l: {len}, w: {width}' </cline>
+        </choice>
+      </block>
+      <block order="12">
+        <choice correct="yes">
+          <cline>    def area(self):</cline>
+        </choice>
+        <choice>
+          <cline>    def __area__(self): </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>        return self.length * self.width</cline>
+        </choice>
+        <choice>
+          <cline>        return length * width </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="obj_mixedupcode_7_v2_ac">
+    <statement>
+      <p>Create a class named <c>Rectangle</c> with the <c>__init__</c> method taking a <c>length</c>, and <c>width</c>.  Then create a <c>__str__</c> method that returns a string
+            with <c>"l: length, w: width"</c>.  Then create an <c>area</c> method that returns the area (<c>length</c> times <c>width</c>).</p>
+    </statement>
+    <program xml:id="obj_mixedupcode_7_v2_ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+
+    def testOne(self):
+        r1 = Rectangle(10,5)
+        self.assertEqual(r1.length, 10, "Testing that length is 10")
+        self.assertEqual(r1.width, 5, "Testing that width is 5")
+        self.assertEqual(r1.area(), 50, "Testing area with a length of 10 and width of 5")
+        self.assertEqual(r1.__str__(), "l: 10, w: 5", "Testing __str__")
+        r1 = Rectangle(2,3)
+        self.assertEqual(r1.length, 2, "Testing that length is 2")
+        self.assertEqual(r1.width, 3, "Testing that width is 3")
+        self.assertEqual(r1.area(), 6, "Testing area with a length of 2 and width of 3")
+        self.assertEqual(r1.__str__(), "l: 2, w: 3", "Testing __str__")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="obj_mixedupcode_8" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Given a class <c>Point</c> with a method <c>distance_from_point(point)</c>, create a class named <c>Triangle</c> with the <c>__init__</c> method taking three <c>Point</c> objects and creating an attribute <c>points</c>.
+            Then create an <c>base</c> method that returns length of the longest side.
+            The length of a side is the distance between two points.  For example, <c>t = Triangle(Point(0,0), Point(1,0), Point(0,2))</c> would return <c>2.23</c> from <c>base</c>.</p>
+    </statement>
+    <blocks>
+      <block order="10">
+        <cline>class Triangle:</cline>
+      </block>
+      <block order="9">
+        <cline>    def __init__(self, p1, p2, p3):</cline>
+      </block>
+      <block order="6">
+        <cline>        self.points = [p1, p2, p3]</cline>
+      </block>
+      <block order="3">
+        <cline>    def base(self):</cline>
+      </block>
+      <block order="8">
+        <cline>        dist = []</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>        for i in range(len(self.points)):</cline>
+        </choice>
+        <choice>
+          <cline>        for i in range(len(points)): </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <cline>            curr = self.points[i]</cline>
+      </block>
+      <block order="12">
+        <cline>            prev = self.points[i-1]</cline>
+      </block>
+      <block order="4">
+        <cline>            d = curr.distance_from_point(prev)</cline>
+      </block>
+      <block order="13">
+        <choice correct="yes">
+          <cline>            dist.append(d)</cline>
+        </choice>
+        <choice>
+          <cline>            self.dist.append(d) </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <cline>        return max(dist)</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="obj_mixedupcode_8_ac">
+    <statement>
+      <p>Given a class <c>Point</c> with a method <c>distance_from_point(point)</c>, write a class named <c>Triangle</c> with the <c>__init__</c> method taking three <c>Point</c> objects and creating an attribute <c>points</c>.
+            Then create an <c>base</c> method that returns length of the longest side.
+            The length of a side is the distance between two points.  For example, <c>t = Triangle(Point(0,0), Point(1,0), Point(0,2))</c> would return <c>2.23</c> from <c>base</c>.</p>
+    </statement>
+    <program xml:id="obj_mixedupcode_8_ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+
+import math
+from unittest.gui import TestCaseGui
+
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __str__(self):
+        return f"({self.y}, {self.y})"
+
+    def distance_from_point(self, p):
+        return math.sqrt((p.x - self.x) ** 2 + (p.y - self.y) ** 2)
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        t1 = Triangle(Point(0,0), Point(1,0), Point(0,2))
+        self.assertAlmostEqual(t1.base(), 2.23, 1, "Testing base of 2.2")
+        t1 = Triangle(Point(0,0), Point(1,0), Point(0,3))
+        self.assertAlmostEqual(t1.base(), 3.16, 1, "Testing base of 3.1")
+        t1 = Triangle(Point(-3,-3), Point(0,0), Point(0,3))
+        self.assertAlmostEqual(t1.base(), 6.70, 1, "Testing base of 6.7")
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="obj_mixedupcode_9" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a class named <c>PickItem</c> with the <c>__init__</c> method taking a list of items.
+            Then create an <c>pick</c> method that returns one of the items at random.  You can use the <c>random</c> module's <c>choice</c> method for this.  Next create <c>add(item)</c> that adds the item to the list of items.</p>
+    </statement>
+    <blocks>
+      <block order="7">
+        <cline>import random</cline>
+        <cline>class PickItem:</cline>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>    def __init__(self, item_list):</cline>
+        </choice>
+        <choice>
+          <cline>    def __init__(item_list): </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>        self.item_list = item_list</cline>
+      </block>
+      <block order="4">
+        <cline>    def pick(self):</cline>
+      </block>
+      <block order="11">
+        <choice correct="yes">
+          <cline>        return random.choice(self.item_list)</cline>
+        </choice>
+        <choice>
+          <cline>        return random.choice(item_list) </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    def add(self,item):</cline>
+        </choice>
+        <choice>
+          <cline>    def add(item): </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>        self.item_list.append(item)</cline>
+        </choice>
+        <choice>
+          <cline>        self.item_list.append(self.item) </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="obj_mixedupcode_9_ac">
+    <statement>
+      <p>Create a class named <c>PickItem</c> with the <c>__init__</c> method taking a list of items.
+            Then create an <c>pick</c> method that returns one of the items at random.  You can use the <c>random</c> module's <c>choice</c> method for this.  Next create <c>add(item)</c> that adds the item to the list of items.</p>
+    </statement>
+    <program xml:id="obj_mixedupcode_9_ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        l = ['red', 'green', 'blue']
+        p = PickItem(l)
+        self.assertEqual(p.item_list, l, "Testing item list")
+        self.assertIn(p.pick(), l, "Testing pick")
+        p.add('yellow')
+        self.assertIn('yellow', p.item_list, "Testing add yellow")
+        l = [1, 2, 3]
+        p = PickItem(l)
+        self.assertEqual(p.item_list, l, "Testing item list")
+        self.assertIn(p.pick(), l, "Testing pick")
+        p.add(4)
+        self.assertIn(4, p.item_list, "Testing add 4")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="obj_mixedupcode_10" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a class <c>Dice</c> with an <c>__init__</c> method that takes the number of sides, <c>num_sides</c>.  Use a default of 6 if <c>num_sides</c> isn't passed in. Also set an attribute <c>history</c> to an empty list in the <c>__init__</c> method.
+            Then create a <c>__str__</c> method that returns <c>"Dice with num_sides sides"</c> when <c>num_sides</c> is the number of sides.
+            Next create an <c>roll</c> method that picks a random value from one to the number of sides, adds the value to the end of the <c>history</c> list, and returns it.
+            You can use the <c>random</c> module's <c>randint(start,end)</c> method to return a random number from start to end inclusvie.</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <cline>import random</cline>
+      </block>
+      <block order="8">
+        <cline>class Dice:</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    def __init__(self, num_sides = 6):</cline>
+        </choice>
+        <choice>
+          <cline>    def __init__(self, num_sides): </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>        self.num_sides = num_sides</cline>
+        <cline>        self.history = []</cline>
+      </block>
+      <block order="4">
+        <cline>    def __str__(self):</cline>
+      </block>
+      <block order="10">
+        <cline>        return f"Dice with {self.num_sides} sides"</cline>
+      </block>
+      <block order="3">
+        <cline>    def roll(self):</cline>
+      </block>
+      <block order="9">
+        <cline>        value = random.randint(1, self.num_sides)</cline>
+        <cline>        self.history.append(value)</cline>
+      </block>
+      <block order="1">
+        <cline>        return value</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="obj_mixedupcode_10_ac">
+    <statement>
+      <p>Write a class <c>Dice</c> with an <c>__init__</c> method that takes the number of sides, <c>num_sides</c>.  Use a default of 6 if <c>num_sides</c> isn't passed in. Also set an attribute <c>history</c> to an empty list in the <c>__init__</c> method.
+            Then create a <c>__str__</c> method that returns <c>"Dice with num_sides sides"</c> when <c>num_sides</c> is the number of sides.
+            Next create an <c>roll</c> method that picks a random value from one to the number of sides, adds the value to the end of the <c>history</c> list, and returns it.
+            You can use the <c>random</c> module's <c>randint(start,end)</c> method to return a random number from start to end inclusvie.</p>
+    </statement>
+    <program xml:id="obj_mixedupcode_10_ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        d = Dice(4)
+        values = [1, 2, 3, 4]
+        self.assertIn(d.roll(), values, "Testing roll value with 4 sides")
+        x = d.roll()
+        self.assertEqual(len(d.history), 2, "Testing history length")
+        self.assertEqual(d.history[-1], x, "Testing save last roll")
+        self.assertEqual(d.__str__(), "Dice with 4 sides", "Testing __str__ with 4 sides")
+        d = Dice()
+        values = [1, 2, 3, 4, 5, 6]
+        self.assertIn(d.roll(), values, "Testing roll values with 6 sides")
+        self.assertEqual(d.__str__(), "Dice with 6 sides", "Testing __str__ with 6 sides")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

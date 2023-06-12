@@ -1,0 +1,293 @@
+<?xml version="1.0"?>
+<section xml:id="network_write-code-exercises">
+        <title>Write Code Exercises</title>
+                <exercise ><statement>
+                        <p>Complete the following code that retrieves the file &#8216;romeo.txt' from.
+                            Make changes to line 4 and 5.</p>
+
+    </statement><program interactive="activecode" language="python3" xml:id="network_writecode1q_editor">
+        <input>
+import socket
+
+mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+mysock.connect(('____', __))
+cmd = '____ ________________________ HTTP/1.0\r\n\r\n'.encode()
+mysock.send(cmd)
+
+while True:
+    data = mysock.recv(512)
+    if len(data) &lt; 1:
+        break
+    print(data.decode(),end='')
+
+mysock.close()
+        </input>
+    </program><solution>
+
+
+    
+                        Complete the following code that retrieves the file &#8216;romeo.txt' from.
+                            Make changes to line 4 and 5.
+
+    
+    <program xml:id="network_writecode1a_editor" language="python3">
+        <input>
+import socket
+
+mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+mysock.connect(('data.pr4e.org', 80))
+cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
+mysock.send(cmd)
+
+while True:
+    data = mysock.recv(512)
+    if len(data) &lt; 1:
+        break
+    print(data.decode(),end='')
+
+    mysock.close()
+        </input>
+    </program>
+
+                    
+
+                    </solution></exercise>
+
+<exercise label="writingcode_network_2">
+    <statement>
+        <p>Complete the following code to extract an image &#8216;cover3.jpg' from the URL
+            &#8216;<url href="http://data.pr4e.org/cover3.jpg" visual="http://data.pr4e.org/cover3.jpg">http://data.pr4e.org/cover3.jpg</url>' and host &#8216;data.pr4e.org'. There are 5 empty spaces.</p>
+
+    </statement>
+    <program xml:id="writingcode_network_2_editor" interactive="activecode" language="python3">
+        <input>
+import socket
+
+HOST = '________'
+PORT = 80
+mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+mysock.connect((____, ____))
+mysock.sendall(b'___ __________________ HTTP/1.0\r\n\r\n')
+count = 0
+picture = b""
+
+while True:
+    data = mysock.recv(5120)
+    if len(data) &lt; 1: break
+    #time.sleep(0.25)
+    count = count + len(data)
+    print(len(data), count)
+    picture = picture + data
+
+mysock.close()
+
+pos = picture.find(b"\r\n\r\n")
+picture = picture[pos+4:]
+fhand = open("stuff.jpg", "wb")
+fhand.write(picture)
+fhand.close()
+        </input>
+    </program>
+</exercise>
+        <exercise ><statement>
+                <p>Complete the following code that retrieves the text from
+                    &#8216;<url href="http://data.pr4e.org/clown.txt" visual="http://data.pr4e.org/clown.txt">http://data.pr4e.org/clown.txt</url>', prints it and also prints the
+                    frequency of each word.</p>
+
+    </statement><program interactive="activecode" language="python3" xml:id="writingcode_network_3_editor">
+        <input>
+import urllib.request
+
+fhand = urllib.request.urlopen('_________________')
+        </input>
+    </program><solution>
+
+
+    
+                Complete the following code that retrieves the text from
+                    &#8216;http://data.pr4e.org/clown.txt' and prints the frequency of each word.
+
+    
+    <program xml:id="writtencode_network_3_editor" language="python3">
+        <input>
+import urllib.request
+
+fhand = urllib.request.urlopen('http://data.pr4e.org/clown.txt')
+for line in fhand:
+    words = line.decode().strip()
+    print(words)
+    for word in words:
+        counts[word] = counts.get(word, 0) + 1
+print(counts)
+        </input>
+    </program>
+            </solution></exercise>
+
+<exercise label="writingcode_network_4">
+    <statement>
+        <p>Write a program to retrieve and print text from <q><url href="http://data.pr4e.org/intro-short.txt" visual="http://data.pr4e.org/intro-short.txt">http://data.pr4e.org/intro-short.txt</url></q>
+            and print it.</p>
+
+    </statement>
+    <program xml:id="writingcode_network_4_editor" interactive="activecode" language="python3">
+        <input>
+import urllib.request
+        </input>
+    </program>
+</exercise>
+
+        <exercise ><statement>
+                <p>Write a program to store image file from &#8216;<url href="http://data.pr4e.org/cover.jpg" visual="http://data.pr4e.org/cover.jpg">http://data.pr4e.org/cover.jpg</url>'
+                    to your disk.</p>
+
+    </statement><program interactive="activecode" language="python3" xml:id="writingcode_network_5_editor">
+        <input>
+import urllib.request, urllib.parse, urllib.error
+        </input>
+    </program><solution>
+
+
+    
+                Write a program to store image file from &#8216;http://data.pr4e.org/cover.jpg'
+                    to your disk.
+
+    
+    <program xml:id="writtencode_network_5_editor" language="python3">
+        <input>
+import urllib.request, urllib.parse, urllib.error
+
+img = urllib.request.urlopen('http://data.pr4e.org/cover.jpg').read()
+fhand = open('cover.jpg', 'wb')
+fhand.write(img)
+fhand.close()
+        </input>
+    </program>
+            </solution></exercise>
+
+<exercise label="writingcode_network_6">
+    <statement>
+        <p>Complete the following program to extract all url from the webpage using regex.</p>
+
+    </statement>
+    <program xml:id="writingcode_network_6_editor" interactive="activecode" language="python3">
+        <input>
+import urllib.request, urllib.parse, urllib.error
+import re
+
+url = "https://www.nytimes.com"
+html = _______________________
+links = _______(b'href="(http[s]?://.*?)"', html)
+        </input>
+    </program>
+</exercise>
+        <exercise ><statement>
+                <p>Write a program that retrives a txt file from
+                    &#8216;<url href="https://www.gutenberg.org/files/1342/1342-0.txt" visual="https://www.gutenberg.org/files/1342/1342-0.txt">https://www.gutenberg.org/files/1342/1342-0.txt</url>' in several blocks
+                    of 100,000 characters, joins them and saves as &#8216;prideandprejudice.txt'
+                    to disk and prints number of characters.</p>
+
+    </statement><program interactive="activecode" language="python3" xml:id="writingcode_network_7_editor">
+        <input>
+import urllib.request, urllib.parse, urllib.error
+
+txt = urllib.request.urlopen('___________________')
+
+size = 0
+while True:
+    info = txt.read(100000)
+    if len(info) &lt; 1: break
+    size = size + len(info)
+        </input>
+    </program><solution>
+
+
+    
+                Write a program that retrives a txt file from
+                    &#8216;https://www.gutenberg.org/files/1342/1342-0.txt' in several blocks of 100,000 characters, joins them and saves as &#8216;prideandprejudice.txt' to disk and prints number of characters.
+
+    
+    <program xml:id="writtencode_network_7_editor" language="python3">
+        <input>
+import urllib.request, urllib.parse, urllib.error
+
+txt = urllib.request.urlopen('https://www.gutenberg.org/files/1342/1342-0.txt')
+fhand = open('prideandprejudice.txt', 'wb')
+size = 0
+while True:
+    info = txt.read(100000)
+    if len(info) &lt; 1: break
+    size = size + len(info)
+    fhand.write(info)
+
+print(size, 'characters copied.')
+fhand.close()
+        </input>
+    </program>
+            </solution></exercise>
+
+<exercise label="writingcode_network_8">
+    <statement>
+        <p>Write a program that retrives a txt file from
+            &#8216;<url href="https://www.gutenberg.org/files/16/16-0.txt" visual="https://www.gutenberg.org/files/16/16-0.txt">https://www.gutenberg.org/files/16/16-0.txt</url>' in several blocks of 100,000
+            characters, joins them and saves as &#8216;peterpan.txt' to disk and prints number
+            of characters.</p>
+
+    </statement>
+    <program xml:id="writingcode_network_8_editor" interactive="activecode" language="python3">
+        <input>
+import urllib.request, urllib.parse, urllib.error
+        </input>
+    </program>
+</exercise>
+        <exercise ><statement>
+                <p>Complete the following code to print all the image sources from
+                    the webpage. Use &#8216;img' and &#8216;src' as tags.</p>
+
+    </statement><program interactive="activecode" language="python3" xml:id="writingcode_network_9_editor">
+        <input>
+import requests
+from bs4 import BeautifulSoup
+
+url = "https://www.nytimes.com/"
+resp = requests.get(url)
+soup = BeautifulSoup(resp.content, 'html.parser')
+        </input>
+    </program><solution>
+
+
+    
+                Complete the following code to print all the image sources from the webpage. Use &#8216;img' and &#8216;src' as tags.
+
+    
+    <program xml:id="writtencode_network_9_editor" language="python3">
+        <input>
+import requests
+from bs4 import BeautifulSoup
+
+url = "https://www.nytimes.com/"
+resp = requests.get(url)
+soup = BeautifulSoup(resp.content, 'html.parser')
+
+tags = soup('img')
+for tag in tags:
+    print(tag.get('src', None))
+        </input>
+    </program>
+            </solution></exercise>
+
+<exercise label="writingcode_network_10">
+    <statement>
+        <p>Write code that extracts data from several parts of the &#8216;a' tag from
+            <q><url href="http://www.dr-chuck.com/page1.htm" visual="http://www.dr-chuck.com/page1.htm">http://www.dr-chuck.com/page1.htm</url></q> using BeautifulSoup and html.parser and
+            print the tag, href, contents as well as all the attributes.</p>
+
+    </statement>
+    <program xml:id="writingcode_network_10_editor" interactive="activecode" language="python3">
+        <input>
+import requests
+from bs4 import BeautifulSoup
+        </input>
+    </program>
+</exercise>
+    </section>
+

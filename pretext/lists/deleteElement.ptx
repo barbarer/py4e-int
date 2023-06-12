@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<section xml:id="lists_deleting-elements">
+  <title>Deleting elements</title>
+<idx><h>Element</h><h>Deletion</h></idx>
+<idx><h>Deletion</h><h>Element</h></idx>
+<idx><h>Method</h><h>Pop</h></idx>
+<idx><h>Pop</h><h>Method</h></idx>
+<idx><h>Del</h><h>Operator</h></idx>
+<idx><h>Operator</h><h>Del</h></idx>
+<idx><h>Remove</h><h>Method</h></idx>
+<idx><h>Method</h><h>Remove</h></idx>
+<idx><h>None</h><h>Special Value</h></idx>
+<idx><h>Special Value</h><h>None</h></idx>
+  <p>There are several ways to delete elements from a list. If you know the
+            index of the element you want, you can use <c>pop</c>:</p>
+  <program xml:id="listPop" interactive="activecode" language="python">
+    <input>
+t = ['a', 'b', 'c']
+x = t.pop(1)
+print(t)
+
+print(x)
+        </input>
+  </program>
+  <p><c>pop</c> modifies the list and returns the element that was
+            removed. If you don't provide an index, it deletes and returns the last
+            element.</p>
+  <exercise label="listDel_MC_pop">
+    <statement>
+      <p>Q-2: What is printed by the following statements?</p>
+      <pre>alist = [4, 2, 8, 6, 5]
+temp = alist.pop(2)
+temp = alist.pop()
+print(alist)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>[4, 8, 6]</p>
+        </statement>
+        <feedback>
+          <p>pop(2) removes the item at index 2, not the 2 itself.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[2, 6, 5]</p>
+        </statement>
+        <feedback>
+          <p>pop() removes the last item, not the first.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>[4, 2, 6]</p>
+        </statement>
+        <feedback>
+          <p>Yes, first the 8 was removed, then the last item, which was 5.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="listDel_MC_pop2">
+    <statement>
+      <p>Q-3: What is printed by the following statements?</p>
+      <pre>alist = [4, 2, 8, 6, 5]
+alist = alist.pop(0)
+print(alist)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>[2, 8, 6, 5]</p>
+        </statement>
+        <feedback>
+          <p>alist is now the value that was returned from pop(0).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[4, 2, 8, 6, 5]</p>
+        </statement>
+        <feedback>
+          <p>pop(0) changes the list by removing the first item.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>4</p>
+        </statement>
+        <feedback>
+          <p>Yes, first the 4 was removed from the list, then returned and assigned to alist.  The list is lost.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None</p>
+        </statement>
+        <feedback>
+          <p>pop(0) returns the first item in the list so alist has now been changed.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>If you don't need the removed value, you can use the <c>del</c>
+            operator:</p>
+  <program xml:id="listDel" interactive="activecode" language="python">
+    <input>
+t = ['a', 'b', 'c']
+del t[1]
+print(t)
+        </input>
+  </program>
+  <p>If you know the element you want to remove (but not the index), you can
+            use <c>remove</c>:</p>
+  <program xml:id="listRemove" interactive="activecode" language="python">
+    <input>
+t = ['a', 'b', 'c']
+t.remove('b')
+print(t)
+        </input>
+  </program>
+  <p>The return value from <c>remove</c> is <c>None</c>.</p>
+  <p>To remove more than one element, you can use <c>del</c> with a
+            slice index:</p>
+  <program xml:id="listDelSlice" interactive="activecode" language="python">
+    <input>
+t = ['a', 'b', 'c', 'd', 'e', 'f']
+del t[1:5]
+print(t)
+        </input>
+  </program>
+  <p>As usual, the slice selects all the elements up to, but not including,
+            the second index.</p>
+  <exercise label="listDel_MC_del">
+    <statement>
+      <p>Q-7: What is the value of alist after the following code executes?</p>
+      <pre>alist = ['a', 'b', 'c', 'd', 'e', 'f']
+del alist[1:5]
+print(alist)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>['a', 'b', 'c', 'd', 'e', 'f']</p>
+        </statement>
+        <feedback>
+          <p>The del method removes part of the list, so it will be shorter.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>['a', 'f']</p>
+        </statement>
+        <feedback>
+          <p>'a' is the 0th element of the list and 'f' is the 5th element of the list, so these are the values that remain after deleting [1:5].</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>['f']</p>
+        </statement>
+        <feedback>
+          <p>Remember that lists start at 0, not 1, and that a slice stops before the second element - not after.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>['b', 'c', 'd', 'e']</p>
+        </statement>
+        <feedback>
+          <p>These are the values that will be deleted with the slice [1:5]</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="listDel_dnd">
+    <statement>
+      <p>Match each deletion method with its function.</p>
+    </statement>
+    <feedback>
+      <p>How does each operator and method work?</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>del</premise>
+        <response>Gets rid of an element.</response>
+      </match>
+      <match order="2">
+        <premise>pop</premise>
+        <response>Modifies a list and returns the removed element.</response>
+      </match>
+      <match order="3">
+        <premise>del with a slice</premise>
+        <response>Gets rid of more than one element.</response>
+      </match>
+      <match order="4">
+        <premise>remove</premise>
+        <response>Gets rid of an element without using the index.</response>
+      </match>
+    </matches>
+  </exercise>
+</section>

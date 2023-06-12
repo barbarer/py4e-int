@@ -1,0 +1,545 @@
+<?xml version="1.0"?>
+<section xml:id="functions_functions-mixed-up-code-questions">
+  <title>Functions Mixed-Up Code Questions</title>
+  <exercise label="Functions_MixedUpCode_1P_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>exp</c> that takes in two parameters, <c>num1</c> and <c>num2</c>, and returns <c>num1</c> raised to the
+            power of <c>num2</c>. For example, <c>exp(2,3)</c> should return <c>8</c>.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <choice correct="yes">
+          <cline>def exp(num1, num2):</cline>
+        </choice>
+        <choice>
+          <cline>def exp(num1, num2) </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    value = num1 ** num2</cline>
+        </choice>
+        <choice>
+          <cline>    value = num1 * num2 </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>    return value</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="Functions_MixedUpCode_1P_v2_ac">
+    <statement>
+      <p>Write a function called <c>exp</c> that takes in two parameters, <c>num1</c> and <c>num2</c>, and returns <c>num1</c> raised to the
+            power of <c>num2</c>. For example, <c>exp(2,3)</c> should return <c>8</c>.</p>
+    </statement>
+    <program xml:id="Functions_MixedUpCode_1P_v2_ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertAlmostEqual(exp(2,3),8,0, "exp(2,3)")
+        self.assertAlmostEqual(exp(1,1),1,0,"exp(1,1)")
+        self.assertAlmostEqual(exp(2,-2),0.25,2,"exp(2,-2)")
+        self.assertAlmostEqual(exp(0,0),1,0, "exp(0,0)")
+        self.assertAlmostEqual(exp(1.2,4),2.0736,2,"exp(1.2,4)")
+        self.assertAlmostEqual(exp(2,4.1),17.148375400580687,2,"exp(2,4.1)")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="Functions_MixedUpCode_2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>poly_perimeter</c> that takes in two parameters, <c>len_side</c> and <c>num_sides</c>, and
+            returns the perimeter of the polygon.  The perimeter of a polygon is the length of each side times the number of sides.  For example, <c>poly_perimeter(4,5)</c>
+            should return <c>20</c>.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <choice correct="yes">
+          <cline>def poly_perimeter(len_side, num_sides):</cline>
+        </choice>
+        <choice>
+          <cline>Def poly_perimeter(len_side, num_sides): </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    per = len_side * num_sides</cline>
+        </choice>
+        <choice>
+          <cline>    per = len_side ** num_sides </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>    return per</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="Functions_MixedUpCode_2_ac">
+    <statement>
+      <p>Write a function called <c>poly_perimeter</c> that takes in two parameters, <c>len_side</c> and <c>num_sides</c>, and
+            returns the perimeter of the polygon.  The perimeter of a polygon is the length of each side times the number of sides.  For example, <c>poly_perimeter(4,5)</c>
+            should return <c>20</c>.</p>
+    </statement>
+    <program xml:id="Functions_MixedUpCode_2_ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertAlmostEqual(poly_perimeter(4,5),20,0,"poly_perimeter(4,5)")
+        self.assertAlmostEqual(poly_perimeter(2,3),6,0,"poly_perimeter(2,3)")
+        self.assertAlmostEqual(poly_perimeter(0.1,6),0.6000000000000001,2,"poly_perimeter(0.1,6)")
+        self.assertAlmostEqual(poly_perimeter(2,9999),19998,0,"poly_perimeter(2,9999)")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="Functions_MixedUpCode_3" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>sphere_volume</c> that takes in one parameter, <c>radius</c>, and
+            returns the volume of a sphere with the given <c>radius</c>.  The volume of a sphere is 4 / 3 times PI (in which 3.14 should be used) times the <c>radius</c> cubed.
+            For example, <c>sphere_volume(3)</c> should return <c>113.04</c>.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <cline>def sphere_volume(radius):</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    volume = (4/3) * (3.14) * radius ** 3</cline>
+        </choice>
+        <choice>
+          <cline>    volume = (4/3) * (3.14) * (radius * 3) </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    return volume</cline>
+        </choice>
+        <choice>
+          <cline>    ret volume </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="Functions_MixedUpCode_3_ac">
+    <statement>
+      <p>Write a function called <c>sphere_volume</c> that takes in one parameter, <c>radius</c>, and
+            returns the volume of a sphere with the given <c>radius</c>.  The volume of a sphere is 4 / 3 times PI (in which 3.14 should be used) times the <c>radius</c> cubed.
+            For example, <c>sphere_volume(3)</c> should return <c>113.04</c>.</p>
+    </statement>
+    <program xml:id="Functions_MixedUpCode_3_ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertAlmostEqual(sphere_volume(3),113.04,2,"sphere_volume(3)")
+        self.assertAlmostEqual(sphere_volume(0.1),0.004186666666666668,5,"sphere_volume(0.1)")
+        self.assertAlmostEqual(sphere_volume(5),523.3333333333334,2,"sphere_volume(5)")
+        self.assertAlmostEqual(sphere_volume(10),4186.666666666667,2,"sphere_volume(10)")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="Functions_MixedUpCode_4" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>circle_circumference</c> that takes in one parameter, <c>radius</c>, and returns the
+            circumference of a circle with the given <c>radius</c>.  The circumference of a circle is 2 times PI (in which 3.14 should be used) times the <c>radius</c>. For example,
+            <c>circle_circumference(3)</c> should return <c>18.84</c>.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <choice correct="yes">
+          <cline>def circle_circumference(radius):</cline>
+        </choice>
+        <choice>
+          <cline>def circle_circumference(radius: </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    value = 2 * 3.14 * radius</cline>
+        </choice>
+        <choice>
+          <cline>    value = 2 ** 3.14 * radius </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <cline>    return value</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="Functions_MixedUpCode_4_ac">
+    <statement>
+      <p>Write a function called <c>circle_circumference</c> that takes in one parameter, <c>radius</c>, and returns the
+            circumference of a circle with the given <c>radius</c>.  The circumference of a circle is 2 times PI (in which 3.14 should be used) times the <c>radius</c>. For example,
+            <c>circle_circumference(3)</c> should return <c>18.84</c>.</p>
+    </statement>
+    <program xml:id="Functions_MixedUpCode_4_ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertAlmostEqual(circle_circumference(3),18.84,2,"circle_circumference(3)")
+        self.assertAlmostEqual(circle_circumference(0.1),0.6280000000000001,3,"circle_circumference(0.1)")
+        self.assertAlmostEqual(circle_circumference(5),31.400000000000002,2,"circle_circumference(5)")
+        self.assertAlmostEqual(circle_circumference(10),62.800000000000004,2,"circle_circumference(10)")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="Functions_MixedUpCode_5" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>slope</c> that takes in four parameters, <c>x1</c>, <c>x2</c>, <c>y1</c>, and <c>y2</c>, and
+            returns the slope of a line formed by the two points.  The slope is <c>y2</c> minus <c>y1</c> divided by <c>x2</c> minus <c>x1</c>.
+            For example, <c>slope(4, 3, 7, 8)</c> should return <c>-1</c>.</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <choice correct="yes">
+          <cline>def slope(x1, x2, y1, y2):</cline>
+        </choice>
+        <choice>
+          <cline>def slope(x1, x2, y1, y2) </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    value = (y2 - y1) / (x2 - x1)</cline>
+        </choice>
+        <choice>
+          <cline>    value = (x2 - x1) / (y2 - y1) </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    return value</cline>
+        </choice>
+        <choice>
+          <cline>    return Value </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="Functions_MixedUpCode_5_ac">
+    <statement>
+      <p>Write a function called <c>slope</c> that takes in four parameters, <c>x1</c>, <c>x2</c>, <c>y1</c>, and <c>y2</c>, and
+            returns the slope of a line formed by the two points.  The slope is <c>y2</c> minus <c>y1</c> divided by <c>x2</c> minus <c>x1</c>.
+            For example, <c>slope(4, 3, 7, 8)</c> should return <c>-1</c>.</p>
+    </statement>
+    <program xml:id="Functions_MixedUpCode_5_ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertAlmostEqual(slope(4,3,7,8), -1.0, 1, "slope(4,3,7,8)")
+        self.assertAlmostEqual(slope(1,2,0,0), 0.0, 1, "slope(1,2,0,0)")
+        self.assertAlmostEqual(slope(0,1,1,1), 0.0, 1,"slope(0,1,1,1)")
+        self.assertAlmostEqual(slope(-1,2,3,4.4), 0.4666666666666668, 2, "slope(-1,2,3,4.4)")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="Functions_MixedUpCode_6" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>get_hypotenuse</c> that takes in two parameters, <c>angle</c> and <c>opposite_side</c>, and
+            returns the hypotenuse of a right triangle. <c>angle</c> contains the angle facing the opposite side in degrees.
+            The sine function takes in a value in radians. The sine of an angle is equal to the opposite side over the hypotenuse.</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <cline>import math</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>def get_hypotenuse(angle, opposite_side):</cline>
+        </choice>
+        <choice>
+          <cline>def get_hypotenuse(angle, opposite_side) </cline>
+        </choice>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>    sine = math.sin(math.radians(angle))</cline>
+        </choice>
+        <choice>
+          <cline>    sine = math.sin(angle) </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    hypotenuse = opposite_side / sine</cline>
+        </choice>
+        <choice>
+          <cline>    hypotenuse = sine / opposite_side </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <cline>    return hypotenuse</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="Functions_MixedUpCode_6_ac">
+    <statement>
+      <p>Write a function called <c>get_hypotenuse</c> that takes in two parameters, <c>angle</c> and <c>opposite_side</c>, and
+            returns the hypotenuse of a right triangle. <c>angle</c> contains the angle facing the opposite side in degrees.
+            The sine function takes in a value in radians. The sine of an angle is equal to the opposite side over the hypotenuse.</p>
+    </statement>
+    <program xml:id="Functions_MixedUpCode_6_ac_editor" interactive="activecode" language="python">
+      <input>
+import math
+
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertAlmostEqual(get_hypotenuse(45, 1), 1.41421356237, 5, "get_hypotenuse(45, 1)")
+        self.assertAlmostEqual(get_hypotenuse(16, 7), 25.3991291727, 1, "get_hypotenuse(16, 7)")
+        self.assertAlmostEqual(get_hypotenuse(34, 14), 25.035765379, 2,"get_hypotenuse(34, 14)")
+        self.assertAlmostEqual(get_hypotenuse(32, 15.9), 30, 2,"get_hypotenuse(32, 15.9)")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="Functions_MixedUpCode_7" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>convert_to_miles</c> that takes in <c>feet</c> as a parameter and
+            returns the value in miles. <c>feet</c> contains the length of an object in feet. 1 mile is equal to 5280 feet.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <choice correct="yes">
+          <cline>def convert_to_miles(feet):</cline>
+        </choice>
+        <choice>
+          <cline>def convert_to_miles(feet) </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    miles = feet / 5280</cline>
+        </choice>
+        <choice>
+          <cline>    miles = 5280 / feet </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>    return miles</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="Functions_MixedUpCode_7_ac">
+    <statement>
+      <p>Write a function called <c>convert_to_miles</c> that takes in <c>feet</c> as a parameter and
+            returns the value in miles. <c>feet</c> contains the length of an object in feet. 1 mile is equal to 5280 feet.</p>
+    </statement>
+    <program xml:id="Functions_MixedUpCode_7_ac_editor" interactive="activecode" language="python">
+      <input>
+
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertAlmostEqual(convert_to_miles(32451), 6.1460227, 5, "convert_to_miles(32451)")
+        self.assertAlmostEqual(convert_to_miles(4), 0.000757576, 9, "convert_to_miles(4)")
+        self.assertAlmostEqual(convert_to_miles(5280), 1, 1,"convert_to_miles(5280)")
+        self.assertAlmostEqual(convert_to_miles(12475), 2.3626894, 4,"convert_to_miles(12475)")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="Functions_MixedUpCode_8" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>even_odd</c> that takes in <c>integer</c> as a parameter and
+            returns 1 if the integer is even, 2 if the integer is odd, or 3 if neither is true.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <choice correct="yes">
+          <cline>def even_odd(integer):</cline>
+        </choice>
+        <choice>
+          <cline>def even_odd(integer) </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    if integer == 0:</cline>
+          <cline>        return 3</cline>
+        </choice>
+        <choice>
+          <cline>    if integer = 0: </cline>
+          <cline>        return 3</cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>    elif integer % 2 == 0:</cline>
+        <cline>        return 1</cline>
+      </block>
+      <block order="3">
+        <cline>    else:</cline>
+        <cline>        return 2</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="Functions_MixedUpCode_8_ac">
+    <statement>
+      <p>Write a function called <c>even_odd</c> that takes in <c>integer</c> as a parameter and
+            returns 1 if the integer is even, 2 if the integer is odd, or 3 if neither is true.</p>
+    </statement>
+    <program xml:id="Functions_MixedUpCode_8_ac_editor" interactive="activecode" language="python">
+      <input>
+
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(even_odd(0), 3, "even_odd(0)")
+        self.assertEqual(even_odd(32), 1, "even_odd(32)")
+        self.assertEqual(even_odd(5), 2, "even_odd(5)")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="Functions_MixedUpCode_9" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>larger_string</c> that takes in two parameters, <c>str1</c> and <c>str2</c>, and
+            returns the string that has the larger length. If the lengths are equal, return <c>str1</c>.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <choice correct="yes">
+          <cline>def larger_string(str1, str2):</cline>
+        </choice>
+        <choice>
+          <cline>def larger_string(str1, str2) </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    if len(str1) &gt;= len(str2):</cline>
+          <cline>        return str1</cline>
+        </choice>
+        <choice>
+          <cline>    if len(str1) &gt; len(str2): </cline>
+          <cline>        return str1</cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>    else:</cline>
+        <cline>        return str2</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="Functions_MixedUpCode_9_ac">
+    <statement>
+      <p>Write a function called <c>larger_string</c> that takes in two parameters, <c>str1</c> and <c>str2</c>, and
+            returns the string that has the larger length. If the lengths are equal, return <c>str1</c>.</p>
+    </statement>
+    <program xml:id="Functions_MixedUpCode_9_ac_editor" interactive="activecode" language="python">
+      <input>
+
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(larger_string("Three", "Four"), "Three", "larger_string('Three', 'Four')")
+        self.assertEqual(larger_string("That", "Knew"), "That", "larger_string('That', 'Knew')")
+        self.assertEqual(larger_string("Cat", "People"), "People", "larger_string('Cat', 'People')")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="Functions_MixedUpCode_10" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>find_distance</c> that takes in four parameters, <c>x1</c>, <c>y1</c>, <c>x2</c>, and <c>y2</c>, and
+            returns the distance between these two points.</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <cline>import math</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>def find_distance(x1, y1, x2, y2):</cline>
+        </choice>
+        <choice>
+          <cline>def find_distance(x1, y1, x2, y2) </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    sqr_dist = (x1 - x2)**2 + (y1 - y2)**2</cline>
+        </choice>
+        <choice>
+          <cline>    sqr_dist = (x1 - y1)**2 + (x2 - y2)**2 </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    return math.sqrt(sqr_dist)</cline>
+        </choice>
+        <choice>
+          <cline>    return sqrt(sqr_distance) </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="Functions_MixedUpCode_10_ac">
+    <statement>
+      <p>Write a function called <c>find_distance</c> that takes in four parameters, <c>x1</c>, <c>y1</c>, <c>x2</c>, and <c>y2</c>, and
+            returns the distance between these two points.</p>
+    </statement>
+    <program xml:id="Functions_MixedUpCode_10_ac_editor" interactive="activecode" language="python">
+      <input>
+import math
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertAlmostEqual(find_distance(1, 2, 21, 14), 23.3238, 4, "find_distance(1, 2, 21, 14)")
+        self.assertAlmostEqual(find_distance(5, 4, 15, 345), 341.1466, 4, "find_distance(5, 4, 15, 345)")
+        self.assertAlmostEqual(find_distance(51, 42, 75, 12), 38.41875, 3, "find_distance(51, 42, 75, 12)")
+        self.assertAlmostEqual(find_distance(1, 2, 3, 4), 2.828427, 3, "find_distance(1, 2, 3, 4)")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

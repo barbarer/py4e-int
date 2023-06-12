@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<section xml:id="intro_terminology-interpreter-and-compiler">
+  <title>Terminology: Interpreter and compiler</title>
+<idx>High-level Language</idx>
+<idx>Machine Language</idx>
+<idx>Low-level Language</idx>
+<idx>Portable</idx>
+<idx>Interpreter</idx>
+<idx>Compiler</idx>
+  <p>Python is a <em>high-level</em> language intended to be
+            relatively straightforward for humans to read and write and for
+            computers to read and process. Other high-level languages include Java,
+            C++, PHP, Ruby, Basic, Perl, JavaScript, and many more. The actual
+            hardware inside the Central Processing Unit (CPU) does not understand
+            any of these high-level languages.</p>
+  <p>The CPU understands a language we call <em>machine
+                language</em>. Machine language is very simple and frankly very
+            tiresome to write because it is represented all in zeros and ones:</p>
+  <pre>001010001110100100101010000001111
+11100110000011101010010101101101
+...</pre>
+  <p>Machine language seems quite simple on the surface, given that there are
+            only zeros and ones, but its syntax is even more complex and far more
+            intricate than Python. So very few programmers ever write machine
+            language. Instead we build various translators to allow programmers to
+            write in high-level languages like Python or JavaScript and these
+            translators convert the programs to machine language for actual
+            execution by the CPU.</p>
+  <p>Since machine language is tied to the computer hardware, machine
+            language is not <em>portable</em> across different types of
+            hardware. Programs written in high-level languages can be moved between
+            different computers by using a different interpreter on the new machine
+            or recompiling the code to create a machine language version of the
+            program for the new machine.</p>
+  <p>These programming language translators fall into two general categories:
+            (1) interpreters and (2) compilers.</p>
+  <p>An <em>interpreter</em> reads the source code of the program as
+            written by the programmer, parses the source code, and interprets the
+            instructions on the fly. Python is an interpreter and when we are
+            running Python interactively, we can type a line of Python (a sentence)
+            and Python processes it immediately and is ready for us to type another
+            line of Python.</p>
+  <p>Some of the lines of Python tell Python that you want it to remember
+            some value for later. We need to pick a name for that value to be
+            remembered and we can use that symbolic name to retrieve the value
+            later. We use the term <em>variable</em> to refer to the labels
+            we use to refer to this stored data.</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; x = 6
+&gt;&gt;&gt; print(x)
+6
+&gt;&gt;&gt; y = x * 7
+&gt;&gt;&gt; print(y)
+42
+&gt;&gt;&gt;
+</input>
+  </program>
+  <p>In this example, we ask Python to remember the value six and use the
+            label <em>x</em> so we can retrieve the value later. We verify
+            that Python has actually remembered the value using
+            <em>print</em>. Then we ask Python to retrieve
+            <em>x</em> and multiply it by seven and put the newly computed
+            value in <em>y</em>. Then we ask Python to print out the value
+            currently in <em>y</em>.</p>
+  <p>Even though we are typing these commands into Python one line at a time,
+            Python is treating them as an ordered sequence of statements with later
+            statements able to retrieve data created in earlier statements. We are
+            writing our first simple paragraph with four sentences in a logical and
+            meaningful order.</p>
+  <p>It is the nature of an <em>interpreter</em> to be able to have
+            an interactive conversation as shown above. A <em>compiler</em>
+            needs to be handed the entire program in a file, and then it runs a
+            process to translate the high-level source code into machine language
+            and then the compiler puts the resulting machine language into a file
+            for later execution.</p>
+  <exercise label="intro-terminology-fitb-translate">
+    <statement>
+      <p>Q-1: A(n) ________ translates a program into machine language from a file and saves it for later execution. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Cc]ompiler">
+          <feedback>
+            <p>Correct! A compiler translates a program into machine language from a file.</p>
+          </feedback>
+        </condition>
+        <condition string="[Ii]nterpreter">
+          <feedback>
+            <p>An interpreter reads and processes code immediately.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>If you have a Windows system, often these executable machine language
+            programs have a suffix of <q>.exe</q> or <q>.dll</q> which stand for <q>executable</q>
+            and <q>dynamic link library</q> respectively. In Linux and Macintosh, there
+            is no suffix that uniquely marks a file as executable.</p>
+  <p>If you were to open an executable file in a text editor, it would look
+            completely crazy and be unreadable:</p>
+  <pre>^?ELF^A^A^A^@^@^@^@^@^@^@^@^@^B^@^C^@^A^@^@^@\xa0\x82
+^D^H4^@^@^@\x90^]^@^@^@^@^@^@4^@ ^@^G^@(^@$^@!^@^F^@
+^@^@4^@^@^@4\x80^D^H4\x80^D^H\xe0^@^@^@\xe0^@^@^@^E
+^@^@^@^D^@^@^@^C^@^@^@^T^A^@^@^T\x81^D^H^T\x81^D^H^S
+^@^@^@^S^@^@^@^D^@^@^@^A^@^@^@^A\^D^HQVhT\x83^D^H\xe8
+....</pre>
+  <p>It is not easy to read or write machine language, so it is nice that we
+            have <em>interpreters</em> and <em>compilers</em> that
+            allow us to write in high-level languages like Python or C.</p>
+  <p>Now at this point in our discussion of compilers and interpreters, you
+            should be wondering a bit about the Python interpreter itself. What
+            language is it written in? Is it written in a compiled language? When we
+            type <q>python</q>, what exactly is happening?</p>
+  <p>The Python interpreter is written in a high-level language called <q>C</q>.
+            You can look at the actual source code for the Python interpreter by
+            going to <url href="http://www.python.org" visual="http://www.python.org">www.python.org</url> and working your way to their
+            source code. So Python is a program itself and it is compiled into
+            machine code. When you installed Python on your computer (or the vendor
+            installed it), you copied a machine-code copy of the translated Python
+            program onto your system. In Windows, the executable machine code for
+            Python itself is likely in a file with a name like:</p>
+  <pre>C:\Python35\python.exe</pre>
+  <p>That is more than you really need to know to be a Python programmer, but
+            sometimes it pays to answer those little nagging questions right at the
+            beginning.</p>
+  <exercise label="intro-terminology-mc-language">
+    <statement>
+      <p>Q-2: What language is the Python interpreter written in?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>C</p>
+        </statement>
+        <feedback>
+          <p>Correct! The Python interpreter is written in C.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Ruby</p>
+        </statement>
+        <feedback>
+          <p>Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>JavaScript</p>
+        </statement>
+        <feedback>
+          <p>Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>C++</p>
+        </statement>
+        <feedback>
+          <p>Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="intro-terminology-dnd-terms">
+    <statement>
+      <p>Match each term to its definition.</p>
+    </statement>
+    <feedback>
+      <p>What do these terms mean?</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>Machine Language</premise>
+        <response>Programming language using binary or hexadecimal instructions that a computer can directly respond to.</response>
+      </match>
+      <match order="2">
+        <premise>Interpreter</premise>
+        <response>Program that analyzes and executes each line of code.</response>
+      </match>
+      <match order="3">
+        <premise>Variable</premise>
+        <response>Item that holds a value while a program is running.</response>
+      </match>
+      <match order="4">
+        <premise>Compiler</premise>
+        <response>Program that converts instructions into a machine-code so that they can be read and executed by a computer.</response>
+      </match>
+    </matches>
+  </exercise>
+</section>

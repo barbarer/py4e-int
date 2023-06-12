@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<section xml:id="functions_functions-and-loops-write-code-questions">
+  <title>Functions and Loops Write Code Questions</title>
+        <exercise>
+          <statement>
+            <p>Write a function called <c>list_starts_with_a</c> that takes in <c>lst</c> as a parameter and returns a
+                            new list with the words from <c>lst</c> that start with <q>a</q>. For example, <c>list_starts_with_a(["alphabet", "apple", "banana", "coding", "amazing"])</c>
+                            would return <c>["alphabet", "apple", "amazing"]</c>.</p>
+          </statement>
+          <program interactive="activecode" language="python" xml:id="funct_loops_writecode1q_editor">
+            <input>
+def list_starts_with_a(lst):
+    # write code here
+
+print(list_starts_with_a(["alphabet", "apple", "banana", "coding", "amazing"]))
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(list_starts_with_a(['alphabet', 'apple', 'banana', 'coding', 'amazing']),['alphabet', 'apple', 'amazing'],"list_starts_with_a(['alphabet', 'apple', 'banana', 'coding', 'amazing'])")
+        self.assertEqual(list_starts_with_a(['alphabet', 'apple', 'amazing']),['alphabet', 'apple', 'amazing'],"list_starts_with_a(['alphabet', 'apple', 'amazing'])")
+        self.assertEqual(list_starts_with_a(['banana', 'coding']),[],"list_starts_with_a(['banana', 'coding'])")
+        self.assertEqual(list_starts_with_a([]),[],"list_starts_with_a([])")
+
+myTests().main()
+        </input>
+          </program>
+          <solution>
+
+
+    
+                        Write a function called list_starts_with_a that takes in lst as a parameter and returns a
+                            new list with the words from lst that start with <q>a</q>. For example, list_starts_with_a(["alphabet", "apple", "banana", "coding", "amazing"])
+                            would return ["alphabet", "apple", "amazing"].
+
+    
+    <program xml:id="funct_loops_writecode1a_editor" language="python"><input>
+def list_starts_with_a(lst):
+    list_a = []
+    for word in lst:
+        if word.startswith('a'):
+            list_a.append(word)
+    return list_a
+
+print(list_starts_with_a(["alphabet", "apple", "banana", "coding", "amazing"]))
+        </input></program>
+                    </solution>
+        </exercise>
+
+        
+        <exercise label="funct_loops_writecode2q">
+          <statement>
+            <p>Write a function called <c>sentence_without_vowels</c> that takes in <c>string</c> as a parameter and returns a new
+                    string that consists of only characters that are not vowels. For example, <c>sentence_without_vowels('apple')</c> would return <c>"ppl"</c>.</p>
+          </statement>
+          <program xml:id="funct_loops_writecode2q_editor" interactive="activecode" language="python">
+            <input>
+def sentence_without_vowels(string):
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(sentence_without_vowels('apple'),"ppl","sentence_without_vowels('apple')")
+        self.assertEqual(sentence_without_vowels('soup'),"sp","sentence_without_vowels('soup')")
+        self.assertEqual(sentence_without_vowels('coding'),"cdng","sentence_without_vowels('coding')")
+        self.assertEqual(sentence_without_vowels('Hi!'),"H!","sentence_without_vowels('Hi!')")
+        self.assertEqual(sentence_without_vowels(' ')," ","sentence_without_vowels(' ')")
+
+myTests().main()
+        </input>
+          </program>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>Write a function called <c>draw_square</c> that takes in <c>num</c> as a parameter and returns a
+                            string that consists of a square made of <q>*</q> with the dimensions <c>num</c> times <c>num</c>. Note:
+                            ignore values that are less than or equal to zero. For example, <c>draw_square(4)</c> would return
+                            <c>"****\n****\n****\n****"</c>.</p>
+          </statement>
+          <program interactive="activecode" language="python" xml:id="funct_loops_writecode3q_editor">
+            <input>
+def draw_square(num):
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(draw_square(4),"****\n****\n****\n****","draw_square(4)")
+        self.assertEqual(draw_square(1),"*","draw_square(1)")
+
+myTests().main()
+        </input>
+          </program>
+          <solution>
+
+
+    
+                        Write a function called draw_square that takes in num as a parameter and returns a
+                            string that consists of a square made of <q>*</q> with the dimensions num times num. Note:
+                            ignore values that are less than or equal to zero. For example, draw_square(4) would return
+                            "****\n****\n****\n****".
+
+    
+    <program xml:id="funct_loops_writecode3a_editor" language="python"><input>
+def draw_square(num):
+    string1 = ""
+    for i in range(num):
+        if i &lt; (num - 1):
+            string1 += "*" * num + "\n"
+        else:
+            string1 += "*" * num
+    return string1
+
+print(draw_square(4))
+        </input></program>
+                    </solution>
+        </exercise>
+
+        <exercise label="funct_loops_writecode4q">
+          <statement>
+            <p>Write a function called <c>check_prime_num</c> that takes in <c>num</c> as a parameter and returns <c>True</c> if <c>num</c> is a prime number
+                    and <c>False</c> otherwise. For the purposes of this question, there is no need to test for values of <c>num</c> that are less than two.
+                    For example, <c>check_prime_num(5)</c> should return <c>True</c>.</p>
+          </statement>
+          <program xml:id="funct_loops_writecode4q_editor" interactive="activecode" language="python">
+            <input>
+def check_prime_num(num):
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(check_prime_num(4),False,"check_prime_num(4)")
+        self.assertEqual(check_prime_num(5),True,"check_prime_num(5)")
+        self.assertEqual(check_prime_num(100),False,"check_prime_num(100)")
+        self.assertEqual(check_prime_num(89),True,"check_prime_num(89)")
+
+
+myTests().main()
+        </input>
+          </program>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>Write a function called <c>factorial</c> that takes in <c>num</c> as a parameter and returns the factorial value.
+                            Ignore checking numbers that are less than 1. For example, <c>factorial(5)</c> would return <c>120</c>.</p>
+          </statement>
+          <program interactive="activecode" language="python" xml:id="funct_loops_writecode5q_editor">
+            <input>
+def factorial(num):
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(factorial(5), 120, "factorial(5)")
+        self.assertEqual(factorial(1), 1, "factorial(1)")
+        self.assertEqual(factorial(4), 24, "factorial(4)")
+        self.assertEqual(factorial(12), 479001600, "factorial(12)")
+
+myTests().main()
+        </input>
+          </program>
+          <solution>
+
+
+    
+                        Write a function called factorial that takes in num as a parameter and returns the factorial value.
+                            Ignore checking numbers that are less than 1. For example, factorial(5) would return 120.
+
+    
+    <program xml:id="funct_loops_writecode5a_editor" language="python"><input>
+def factorial(num):
+    total = num
+    while num &gt; 1:
+        num -= 1
+        total *= num
+    return total
+        </input></program>
+                    </solution>
+        </exercise>
+</section>

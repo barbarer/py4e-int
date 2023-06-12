@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<section xml:id="conditional_conditional-execution">
+  <title>Conditional execution</title>
+    <idx><h>Conditional</h><h>Statement</h></idx>
+    <idx><h>Statement</h><h>Conditional</h></idx>
+    <idx><h>If</h><h>Statement</h></idx>
+    <idx><h>Statement</h><h>If</h></idx>
+    <idx>Conditional Executions</idx>
+    <idx>Condition</idx>
+    <idx><h>Compound</h><h>Statement</h></idx>
+    <idx><h>Statement</h><h>Compound</h></idx>
+    <idx><h>Pass</h><h>Statement</h></idx>
+    <idx><h>Statement</h><h>Pass</h></idx>
+    <idx>Pair</idx>
+    <introduction>
+      <title>Putting Conditions to Work</title>
+      <p>Now that we know how to express <q>true or false</q> questions  in Python, it's time to put them to use in programs. We'll take different actions depending on whether a condition is true or false with <em>conditional statements</em>.</p>
+    </introduction>
+    <p>The simplest form of a conditional statement is the <c>if</c> statement:</p>
+  <program xml:id="cndtnlPositive" interactive="codelens" language="python">
+    <input>
+x = 2
+if x &gt; 0 :
+    print('x is positive')
+print('All done.')
+    </input>
+  </program>
+  <p>The first line is the <em>header line</em>. The boolean expression after the <c>if</c> keyword is called the
+            <em>condition</em>. We end the header line with a
+            colon character (:), and the line(s) after the if statement are indented.</p>
+  <p>If the logical condition is true, then the indented statement gets
+            executed. If the logical condition is false, the indented statement is
+            skipped. The flowchart is shown in <xref ref="figure_simple_if" /></p>
+          
+            <figure xml:id="figure_simple_if" align="">
+              <title>Flowchart of an <c>if</c> Statement</title>
+              <caption>Flowchart of an <c>if</c> Statement</caption>
+              <image source="images/if.svg" width="50%" alt="If Logic"/>
+            </figure>
+
+            <p>The general form of an <c>if</c> statement consists of a header line (the word <c>if</c> followed by a condition and ending with a colon character <c>:</c>). The header is followed by an indented block. That block is the <em>body</em> of the <c>if</c> statement. <idx><h>if</h><h>block</h></idx>
+            The statement consists of a
+            header line that ends with the colon character (:) followed by an
+            indented block. Statements like this are called <em>compound
+              statements</em> because they stretch across more than one line. <idx><h>statement</h><h>compound</h></idx>
+            <idx>compound statement</idx></p>
+  <note>
+    <p><c>if</c> statements have the same structure as function
+      definitions or <c>for</c> loops. [We will learn about functions in
+      <xref ref="ch-functions">Chapter 4</xref> and loops in
+      <xref ref="ch-loops-iterations">Chapter 5</xref>.].</p>
+    </note>
+  <p>There is no limit on the number of statements that can appear in the
+    body of an <c>if</c>, but there must be at least one. Occasionally, it is useful to have
+            a body with no statements (usually as a place holder for code you haven't
+            written yet). In that case, you can use the <c>pass</c> statement,
+            which does nothing.</p>
+  <program xml:id="cndtnlNegative" interactive="codelens" language="python">
+    <input>
+x = -3
+if x &lt; 0:
+    pass # need to handle negative values!
+print('All done.')
+    </input>
+  </program>
+  <p>If you enter an <c>if</c> statement in the Python interpreter, the
+            prompt will change from three chevrons to three dots to indicate you are
+            in the middle of a block of statements, as shown below:</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; x = 3
+&gt;&gt;&gt; if x &lt; 10:
+...    print('Small')
+...
+Small
+&gt;&gt;&gt;
+</input>
+  </program>
+  <p>When using the Python interpreter, you must leave a blank line at the end of a
+            block; otherwise, Python will return an error:</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; x = 3
+&gt;&gt;&gt; if x &lt; 10:
+...    print('Small')
+... print('Done')
+  File "&lt;stdin&gt;", line 3
+    print('Done')
+       ^
+SyntaxError: invalid syntax
+</input>
+  </program>
+  <p>A blank line at the end of a block of statements is not necessary when writing
+            and executing a script, but it may improve readability of your code.</p>
+  <exercise label="cndtnl-cndex-mc-if1">
+    <statement>
+      <p>Q-3: Given the code below, what line executes after line 2 executes?</p>
+      <pre>1) x = 4
+2) if x &lt; 3:
+3)     print ("x is less than 3")
+4) print ("All done")</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>line 3</p>
+        </statement>
+        <feedback>
+          <p>Line 3 will only execute when x is less than 3.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>line 4</p>
+        </statement>
+        <feedback>
+          <p>Execution continues at the next statement beyond the block following the <code>if</code> when the logical expression is false.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  
+  <exercise label="cndtnl-cndex-mc-and">
+    <statement>
+      <p>Q-4: Given the code below, what describes the values of x that will cause the code to print <q>condition true</q>?</p>
+      <pre>if x &gt; 0 and x &lt; 10:
+    print ("condition true")
+print ("All done")</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1 to 10</p>
+        </statement>
+        <feedback>
+          <p>Try again. This would be true if the second expression was x &lt;= 10.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>0 to 9</p>
+        </statement>
+        <feedback>
+          <p>Try again. This would be true if the first logical expression was x &gt;= 0.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>1 to 9</p>
+        </statement>
+        <feedback>
+          <p>The "condition true" will only be printed when x is greater than 0 and less than 10, so this is the range from 1 to 9.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>all values of x</p>
+        </statement>
+        <feedback>
+          <p>Try again. This would be true if the conditional was x &gt; 0 <em>or</em> x &lt; 10.</p>
+        </feedback>
+      </choice>
+    </choices>
+    
+  </exercise>
+  <exercise label="cndtnl-cndex-mc-or">
+    <statement>
+      <p>Q-5: Given the code below, what describes the values of x that will cause the code to print <q>condition true</q>?</p>
+      <pre>if x &gt; 0 or x &lt; 10:
+    print ("condition true")
+print ("All done")</pre>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>all values of x</p>
+        </statement>
+        <feedback>
+          <p>This will be true if x is greater than 0 <em>or</em> less than 10.  This covers all possible values of x.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1 to 9</p>
+        </statement>
+        <feedback>
+          <p>Try again. This would be true if the boolean expressions were joined with <c>and</c> instead of <c>or</c>.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>0 to 9</p>
+        </statement>
+        <feedback>
+          <p>Try again. This would be true if the boolean expressions were joined with <c>and</c> instead of <c>or</c> and if the first boolean expression was <c>x &gt;= 0</c>.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1 to 10</p>
+        </statement>
+        <feedback>
+          <p>Try again. This would be true if the boolean expressions were joined with <c>and</c> instead of <c>or</c> and if the first logical expression was <c>x &gt;= 0</c> and the second expression was <c>x &lt;= 10</c>.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

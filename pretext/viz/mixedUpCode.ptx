@@ -1,0 +1,394 @@
+<?xml version="1.0"?>
+<section xml:id="viz_mixed-up-code-questions">
+  <title>Mixed-Up Code Questions</title>
+  <exercise label="matplotlib_1" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create code to plot a line graph for the average yearly temperatures in US from 2015 to 2020. The x-axis should include years [2015, 2016, 2017, 2018, 2019, 2020]. The average temperatures during these years were [54.4, 54.9, 54.6, 53.5, 52.7, 54.4] respectively.</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <cline>import matplotlib</cline>
+      </block>
+      <block order="2">
+        <cline>import matplotlib.pyplot as plt</cline>
+      </block>
+      <block order="3">
+        <cline>x = ['2015', '2016', '2017', '2018', '2019', '2020']</cline>
+        <cline>y = [54.4, 54.9, 54.6, 53.5, 52.7, 54.4]</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>plt.plot(x, y)</cline>
+        </choice>
+        <choice>
+          <cline>matplot.plot(x, y) </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>plt.show()</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="matplotlib_2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create code to plot a line graph for the average company sales per month from January to March. The x-axis should include months [Jan, Feb, Mar]. The average sales during these months were [5000, 7000, 8000] respectively measured in dollars. Make sure to add labels &#x2018;Months' and &#x2018;Sales (in Dollars)' for both x-axis and y-axis respectively. Add the title &#x2018;Total Sales per Month'.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>import matplotlib</cline>
+      </block>
+      <block order="1">
+        <cline>import matplotlib.pyplot as plt</cline>
+      </block>
+      <block order="2">
+        <cline>x = ['Jan', 'Feb', 'Mar']</cline>
+        <cline>y = [5000, 7000, 8000]</cline>
+      </block>
+      <block order="7">
+        <cline>plt.plot(x, y)</cline>
+      </block>
+      <block order="5">
+        <cline>plt.xlabel('Months')</cline>
+      </block>
+      <block order="8">
+        <cline>plt.ylabel('Sales (in Dollars)')</cline>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>plt.title('Total Sales by Month')</cline>
+        </choice>
+        <choice>
+          <cline>plt.set_title('Total Sales by Month') </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <cline>plt.show()</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="matplotlib_3" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create code to plot two line graphs and plot them side-by-side. The first line graph uses the data where x= [1, 2, 3, 4, 5] and y= [9.3, 4.4, 5.2, 6, 7]. The second line graph uses x= [5, 10, 15, 20] and y= [6.7, 8.2, 7.4, 8.6]. Set figsize = 10,5. Add x-axis labels &#x2018;Number of Miles', y-axis labels of &#x2018;Running Speed (in MPH)', and a title &#x2018;Marathon Running Speed in MPH by Mile'.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>import matplotlib</cline>
+        <cline>import matplotlib.pyplot as plt</cline>
+      </block>
+      <block order="8">
+        <cline>fig = plt.figure(figsize=(10, 5))</cline>
+      </block>
+      <block order="5">
+        <cline>ax1 = fig.add_subplot(121)</cline>
+        <cline>ax2 = fig.add_subplot(122)</cline>
+      </block>
+      <block order="1">
+        <cline>ax1.plot([1, 2, 3, 4, 5], [9.3, 4.4, 5.2, 6, 7])</cline>
+      </block>
+      <block order="7">
+        <cline>ax2.plot([5, 10, 15, 20], [6.7, 8.2, 7.4, 8.6])</cline>
+      </block>
+      <block order="9">
+        <cline>ax1.set_xlabel('Number of Miles')</cline>
+        <cline>ax2.set_xlabel('Number of Miles')</cline>
+      </block>
+      <block order="6">
+        <cline>ax1.set_ylabel('Running Speed (in MPH)')</cline>
+        <cline>ax2.set_ylabel('Running Speed (in MPH)')</cline>
+      </block>
+      <block order="4">
+        <cline>plt.suptitle('Marathon Running Speed in MPH by Mile')</cline>
+      </block>
+      <block order="2">
+        <cline>plt.show()</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="matplotlib_4" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create code to plot a vertical bar chart showing the number of people who like each movie genre. The x-axis is each movie genre including [&#x2018;Comedy', &#x2018;Action', &#x2018;Romance', &#x2018;Drama', &#x2018;SciFi'] with number of people who like each respective genre as [4.4, 5.9, 6.2, 1.7, 4.5] in thousands. Plot this as a singular subplot. Add x and y axes titles &#x2013; &#x2018;Movie Genre' and &#x2018;Number of People (in thousands)' respectively &#x2013; and the title &#x2018;Movie Genre Preferences'.</p>
+    </statement>
+    <blocks>
+      <block order="8">
+        <cline>import matplotlib</cline>
+        <cline>import matplotlib.pyplot as plt</cline>
+      </block>
+      <block order="6">
+        <cline>fig = plt.figure()</cline>
+      </block>
+      <block order="10">
+        <cline>ax = fig.add_subplot(111)</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>ax.bar(['Comedy', 'Action', 'Romance', 'Drama', 'SciFi'], [4.4, 5.9, 6.2, 1.7, 4.5])</cline>
+        </choice>
+        <choice>
+          <cline>ax.barh(['Comedy', 'Action', 'Romance', 'Drama', 'SciFi'], [4.4, 5.9, 6.2, 1.7, 4.5]) </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>ax.set_xlabel('Movie Genre')</cline>
+          <cline>ax.set_ylabel('Number of People (in thousands)')</cline>
+        </choice>
+        <choice>
+          <cline>ax.xlabel('Movie Genre')</cline>
+          <cline>ax.ylabel('Number of People (in thousands)') </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>ax.set_title('Movie Genre Preferences')</cline>
+        </choice>
+        <choice>
+          <cline>ax.title('Movie Genre Preferences') </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <cline>plt.show()</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="matplotlib_5" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create code to plot two horizontal bar charts and plot them side-by-side. The first bar chart uses the data with x values of [9.3, 8.8, 7.9] and y values of [1, 2, 3]. The second horizontal bar chart has uses data with x values of [9.6, 6.8, 6.9, 6.2] and y values of [5, 10, 15, 20]. Set figsize = 10,5. Set axis labels for each graph so that the x-axis reads &#x2018;Number of Mistakes' and the y-axis reads &#x2018;Hours of Practice'. Finally, add the title &#x2018;Average Number of Mistakes in Code After Hours of Practice'.</p>
+    </statement>
+    <blocks>
+      <block order="8">
+        <cline>import matplotlib</cline>
+        <cline>import matplotlib.pyplot as plt</cline>
+      </block>
+      <block order="5">
+        <cline>fig = plt.figure(figsize=(10, 5))</cline>
+      </block>
+      <block order="6">
+        <cline>ax1 = fig.add_subplot(121)</cline>
+        <cline>ax2 = fig.add_subplot(122)</cline>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>ax1.barh([1, 2, 3], [9.3, 8.8, 7.9])</cline>
+        </choice>
+        <choice>
+          <cline>ax1.barh([9.3, 8.8, 7.9], [1, 2, 3]) </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>ax2.barh([5, 10, 15, 20], [9.6, 6.8, 6.9, 6.2])</cline>
+        </choice>
+        <choice>
+          <cline>ax2.plot_barh([5, 10, 15, 20], [9.6, 6.8, 6.9, 6.2]) </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>ax1.set_xlabel('Number of Mistakes')</cline>
+        <cline>ax2.set_xlabel('Number of Mistakes')</cline>
+        <cline>ax1.set_ylabel('Hours of Practice')</cline>
+        <cline>ax2.set_ylabel('Hours of Practice')</cline>
+      </block>
+      <block order="2">
+        <cline>plt.suptitle('Average Number of Mistakes in Code After Hours of Practice')</cline>
+      </block>
+      <block order="4">
+        <cline>plt.show()</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="matplotlib_6" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create code to plot a line graph with x values of [0, 10, 20, 30] and y values [105, 89, 70, 113]. Change the color of the line to red, set line width equal to 5, and add gridlines.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <cline>import matplotlib</cline>
+        <cline>import matplotlib.pyplot as plt</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>plt.plot([0, 10, 20, 30], [105, 89, 70, 113], color = 'red', linewidth = 5)</cline>
+        </choice>
+        <choice>
+          <cline>plt.plot([0, 10, 20, 30], [105, 89, 70, 113], linecolor = 'red', linewidth = 5) </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>plt.grid(True)</cline>
+      </block>
+      <block order="5">
+        <cline>plt.show()</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="matplotlib_7" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create code to plot a pie chart that shows the popularity distribution for different genres of films. First specify the labels for the pie chart to be &#x2018;Action', &#x2018;Adventure', &#x2018;Thriller', &#x2018;Drama', &#x2018;Romance', &#x2018;Comedy', followed by their respective sizes [182, 164, 93, 22, 143, 88] and colors [&#x2018;red', &#x2018;green', &#x2018;gray', &#x2018;blue', &#x2018;pink', &#x2018;yellow']. Add the title &#x2018;Popularity Distribution of Movie Genres'.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <cline>import matplotlib</cline>
+        <cline>import matplotlib.pyplot as plt</cline>
+      </block>
+      <block order="6">
+        <cline>labels = 'Action', 'Adventure', 'Thriller', 'Drama', 'Romance', 'Comedy'</cline>
+      </block>
+      <block order="1">
+        <cline>sizes = [182, 164, 93, 22, 143, 88]</cline>
+      </block>
+      <block order="2">
+        <cline>colors = ['red', 'green', 'gray', 'blue', 'pink', 'yellow']</cline>
+      </block>
+      <block order="3">
+        <cline>plt.pie(sizes, labels=lables, colors=colors, autopct='%1.1f%%')</cline>
+      </block>
+      <block order="4">
+        <cline>plt.title('Popularity Distribution by Movie Genres')</cline>
+      </block>
+      <block order="7">
+        <cline>plt.show()</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="matplotlib_8" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create code to plot a line graph with two lines. The x values should reflect years [&#x2018;2020', &#x2018;2021', &#x2018;2022'] and y values should reflect the average student GPA. &#x2018;ABC College' should have y values of [3.42, 3.37, 3.44] and a green line color while &#x2018;XYZ University' has y values of [3.23, 3.57, 3.61] and a blue line color. Both lines have square markers represented by &#x2018;s'. Set an x-label &#x2018;Year', y-label &#x2018;Average Student GPA', and title &#x2018;Average Student GPA per Year'. Lastly, create a legend.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>import matplotlib</cline>
+        <cline>import matplotlib.pyplot as plt</cline>
+      </block>
+      <block order="7">
+        <cline>fig, ax = plt.subplots()</cline>
+      </block>
+      <block order="5">
+        <cline>years = ['2020', '2021', '2022']</cline>
+        <cline>gpa1 = [3.42, 3.37, 3.44]</cline>
+        <cline>gpa2 = [3.23, 3.57, 3.61]</cline>
+      </block>
+      <block order="6">
+        <cline>ax.plot(years, gpa1, 'g-', label = 'ABC College', marker = 's')</cline>
+        <cline>ax.plot(years, gpa2, 'b-', label = 'XYZ University', marker = 's')</cline>
+      </block>
+      <block order="8">
+        <cline>ax.set_xlabel('Year')</cline>
+      </block>
+      <block order="2">
+        <cline>ax.set_ylabel('Average Student GPA')</cline>
+      </block>
+      <block order="9">
+        <cline>ax.set_title('Average Student GPA per Year')</cline>
+      </block>
+      <block order="10">
+        <choice correct="yes">
+          <cline>ax.legend()</cline>
+        </choice>
+        <choice>
+          <cline>plt.legend() </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <cline>plt.show()</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="matplotlib_9" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create code to plot two vertical bar charts on the same plot. One bar will represent the annual cost incurred by a store and the other bar will represent the annual revenue earned by the store, from 2014 to 2018. The x-axis will be the &#x2018;Year' and the y-axis is the &#x2018;Amount (in Dollars)'. The first bar chart should be red and represented as &#x2018;Cost' with y values of [13000, 16000, 18000, 21000, 17000]. The second bar chart should be yellow and represented by &#x2018;Revenue' with y values of [41000, 33000, 67000, 73000, 66000]. Set the xticklabels equal to the years [2014, 2015, 2016, 2017, 2018]. Set width to 0.5 and figsize of 10,5. Add a legend and set the x-axis to &#x2018;Year', y-axis to &#x2018;Amount (in Dollars)' and the title to &#x2018;Total Cost and Revenue Generated from 2014 to 2018'. Finally, add a grid.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <cline>import matplotlib</cline>
+        <cline>import matplotlib.pyplot as plt</cline>
+      </block>
+      <block order="8">
+        <cline>import numpy as np</cline>
+      </block>
+      <block order="6">
+        <cline>n = 5</cline>
+        <cline>width = 0.5</cline>
+        <cline>ind = np.arange(n)</cline>
+      </block>
+      <block order="7">
+        <cline>fig = plt.figure(figsize=(10, 5))</cline>
+      </block>
+      <block order="1">
+        <cline>ax = fig.subplots()</cline>
+      </block>
+      <block order="3">
+        <cline>p1 = ax.bar(ind, [13000, 16000, 18000, 21000, 17000], width, color='red')</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>p2 = ax.bar(ind + width, [41000, 33000, 67000, 73000, 66000], width, color='yellow')</cline>
+        </choice>
+        <choice>
+          <cline>p2 = ax[121].bar([41000, 33000, 67000, 73000, 66000], width, color='yellow') </cline>
+        </choice>
+      </block>
+      <block order="10">
+        <choice correct="yes">
+          <cline>ax.legend((p1[0], p2[0]), ('Costs', 'Revenue'))</cline>
+        </choice>
+        <choice>
+          <cline>ax.legend((p1[0] = 'Costs', p2[0] = 'Revenue')) </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>ax.set(xlabel='Year', ylabel='Amount (in Dollars)', title='Total Cost and Revenue Generated from 2014 to 2018')</cline>
+      </block>
+      <block order="9">
+        <cline>ax.grid()</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="matplotlib_10" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create code to make a 2x2 subplot each with a different type of graph, all with the same values. To do this, create a figure with figsize of (10,5). The x-values are letters [&#x2018;X, &#x2018;Y', &#x2018;Z'] and the y-values are numbers [35, 65, 70]. The top left graph should be a vertical bar chart. The top right graph should be a scatterplot with magenta colored points and star markers represented by an asterisk (*). The bottom left graph should be an indigo colored line graph with line width of 3. The bottom right graph should be a horizontal bar chart. Title the graph &#x2018;Categorical Plotting'.</p>
+    </statement>
+    <blocks>
+      <block order="11">
+        <cline>import matplotlib</cline>
+        <cline>import matplotlib.pyplot as plt</cline>
+      </block>
+      <block order="1">
+        <cline>letters = ['X', 'Y', 'Z']</cline>
+        <cline>numbers = [35, 65, 70]</cline>
+      </block>
+      <block order="5">
+        <cline>plt.figure(1, figsize = (10,5))</cline>
+      </block>
+      <block order="10">
+        <cline>plt.subplot(221)</cline>
+      </block>
+      <block order="8">
+        <cline>plt.bar(letters, numbers)</cline>
+      </block>
+      <block order="7">
+        <cline>plt.subplot(222)</cline>
+      </block>
+      <block order="2">
+        <cline>plt.scatter(letters, numbers, color = 'magenta', marker = '*')</cline>
+      </block>
+      <block order="4">
+        <cline>plt.subplot(223)</cline>
+      </block>
+      <block order="9">
+        <cline>plt.plot(letters, numbers, color = 'indigo', linewidth = 3)</cline>
+      </block>
+      <block order="6">
+        <cline>plt.subplot(224)</cline>
+      </block>
+      <block order="12">
+        <cline>plt.barh(letters, numbers)</cline>
+      </block>
+      <block order="3">
+        <cline>plt.suptitle('Categorical Plotting')</cline>
+      </block>
+      <block order="13">
+        <cline>plt.show()</cline>
+      </block>
+    </blocks>
+  </exercise>
+</section>

@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<section xml:id="variables_variable-names-and-keywords">
+  <title>Variable names and keywords</title>
+<idx>Keyword</idx>
+<idx>Underscore Character</idx>
+<idx>Reserved Words</idx>
+  <p>Programmers generally choose names for their variables that are
+            meaningful and document what the variable is used for.</p>
+  <p>Variable names can be arbitrarily long. They can contain both letters
+            and numbers, but they cannot start with a number. It is legal to use
+            uppercase letters, but it is a good idea to begin variable names with a
+            lowercase letter (you'll see why later).</p>
+  <p>The underscore character ( _ ) can appear in a name. It is often used in
+            names with multiple words, such as <c>my_name</c> or
+            <c>airspeed_of_unladen_swallow</c>. Variable names can start with an
+            underscore character, but we generally avoid doing this unless we are
+            writing library code for others to use.</p>
+  <p>If you give a variable an illegal name, you get a syntax error when you try to execute the code.</p>
+  <exercise label="var-keywords-ca-error">
+    <statement>
+      <p>Click the portion of the variable names that cause syntax errors.</p>
+    </statement>
+    <feedback>
+      <p>Remember that variables cannot start with a number. If you're stuck, look at the list of keywords below.</p>
+    </feedback>
+    <areas>
+      <cline><area correct="yes">76</area><area correct="no">trombones</area> = "big parade"</cline>
+      <cline><area correct="no">more</area><area correct="yes">@</area> = 1000000</cline>
+      <cline><area correct="yes">class</area> = "Advanced Theoretical Zymurgy"</cline>
+    </areas>
+  </exercise>
+  <p>The variable name <c>76trombones</c> is illegal because it begins with a number.
+            The name <c>more@</c> is illegal because it contains an illegal character,
+            @. But what's wrong with <c>class</c>?</p>
+  <p>It turns out that <c>class</c> is one of Python's
+            <em>keywords</em>. The interpreter uses keywords to recognize
+            the structure of the program, and they cannot be used as variable names.</p>
+  <p>Python reserves 33 keywords:</p>
+  <pre>and       del       from      None      True
+as        elif      global    nonlocal  try
+assert    else      if        not       while
+break     except    import    or        with
+class     False     in        pass      yield
+continue  finally   is        raise
+def       for       lambda    return</pre>
+  <p>You might want to keep this list handy. If the interpreter complains
+            about one of your variable names and you don't know why, see if it is on
+            this list.</p>
+  <exercise label="var-keywords-mc-illegal">
+    <statement>
+      <p><!--csp-10-2-2: -->Which of the following is <term>not</term> a legal variable name?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>_a1</p>
+        </statement>
+        <feedback>
+          <p>You can use an underscore as the first character in a variable name</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>my_name</p>
+        </statement>
+        <feedback>
+          <p>You can use an underscore between words in a variable name.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>amountOfStuff</p>
+        </statement>
+        <feedback>
+          <p>You can use both uppercase and lowercase letters in a variable name.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>BMP</p>
+        </statement>
+        <feedback>
+          <p>You can use only uppercase letters in a variable name.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>1A</p>
+        </statement>
+        <feedback>
+          <p>You can't use a digit as the first letter in a variable name.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="var-keywords-mc-name">
+    <statement>
+      <p><!--csp-10-2-3: -->Which of the following is <term>not</term> a legal variable name?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>_my_name</p>
+        </statement>
+        <feedback>
+          <p>This is legal, but you don't usually start a variable name with an underscore.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>my name</p>
+        </statement>
+        <feedback>
+          <p>You can't have a space in a variable name.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>myname</p>
+        </statement>
+        <feedback>
+          <p>This may be hard to read, but it is legal.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>myName</p>
+        </statement>
+        <feedback>
+          <p>Since you can't have spaces in names, one way to make variable names easier to read is to use camel case (uppercase the first letter of each new word).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>my_name</p>
+        </statement>
+        <feedback>
+          <p>Since you can't have spaces in names, one way to make variable names easier to read is to use an underscore between two words.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

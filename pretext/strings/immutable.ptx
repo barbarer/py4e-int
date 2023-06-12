@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<section xml:id="strings_strings-are-immutable">
+  <title>Strings are immutable</title>
+<idx>Mutability</idx>
+<idx>Immutability</idx>
+<idx><h>String</h><h>Immutable</h></idx>
+<idx><h>Immutable</h><h>String</h></idx>
+<idx>TypeError</idx>
+<idx>Object</idx>
+<idx><h>Item</h><h>Assignment</h></idx>
+<idx><h>Assignment</h><h>Item</h></idx>
+<idx>Concatenation</idx>
+  <p>It is tempting to use the operator on the left side of an assignment,
+            with the intention of changing a character in a string. For example:</p>
+  <program xml:id="str-immutable" interactive="activecode" language="python">
+    <input>
+greeting = 'Hello, world!'
+greeting[0] = 'J'
+        </input>
+  </program>
+  <p>The <c>greeting</c> string is an example of an <term>object</term> and the character
+            you tried to assign is an example of an <term>item</term>. For now, think of an object as a
+            special virtual construction. Objects have special properties. Strings, for example,
+            are objects that hold a sequence of characters. An item is one of the values in a sequence.</p>
+  <p>The reason for the error is that strings are <term>immutable</term>,
+            which means that you can't modify an existing string. The best you can do is
+            create a new string that is a variation on the original:</p>
+  <program xml:id="str-newString" interactive="activecode" language="python">
+    <input>
+greeting = 'Hello, world!'
+new_greeting = 'J' + greeting[1:]
+print(new_greeting)
+        </input>
+  </program>
+  <p>This example concatenates a new first letter onto a slice of
+            <c>greeting</c>. It has no effect on the original string.</p>
+  <p>Or, you can reassign an existing variable to a completely new string:</p>
+  <program xml:id="str-redefineString" interactive="activecode" language="python">
+    <input>
+greeting = 'Hello, world!'
+greeting = 'Hola, mundo!'
+print(greeting)
+        </input>
+  </program>
+  <p>This example assigns the <c>greeting</c> variable to represent a new string object.
+            The old string object is deleted in the process.</p>
+  <exercise label="str-imm-mc-xyz">
+    <statement>
+      <p>11-9-4: Given the following code segment, what is the value of the string s1 after the code is executed?</p>
+      <pre>s1 = 'xy'
+s2 = s1
+s1 = s1 + s2 + 'z'</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>xyz</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Think about the values of s1 and s2 before line 3, then use those to determine the value of s1 in line 3. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>xyxyz</p>
+        </statement>
+        <feedback>
+          <p>Correct! The right side of the assignment statement is evaluated, then s1 is redefined to be equal to that, so s1 becomes xyxyz.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>xy xy z</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! No spaces are added during concatenation. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>There is an error</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The right side of the assignment statement is evaluated, then s1 is redefined to be equal to that. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="str-imm-mc-ball">
+    <statement>
+      <p>11-9-5: What is printed by the following statements:</p>
+      <program language="python">
+        <input>
+s = "Ball"
+s[0] = "C"
+print(s)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Ball</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Assignment is not allowed with strings. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Call</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Assignment is not allowed with strings. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>C</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Assignment is not allowed with strings. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Nothing, there is an error</p>
+        </statement>
+        <feedback>
+          <p>Correct! Strings are immutable.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="str-no-change-fitb-def">
+    <statement>
+      <p>11-9-6: You cannot change an existing string because it is ________. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Ii]mmutable">
+          <feedback>
+            <p>Correct! Strings are immutable, meaning you cannot change the object itself once it has been defined.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Incorrect! Check your spelling. Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+</section>

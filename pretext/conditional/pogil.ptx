@@ -1,0 +1,560 @@
+<?xml version="1.0"?>
+<section xml:id="conditional_group-work-conditionals-and-logic">
+  <title>Group Work - Conditionals and Logic</title>
+  <introduction>
+  <p>It is best to use a POGIL approach with the following. In POGIL students work
+            in groups on activities and each member has an assigned role.  For more information see <url href="https://cspogil.org/Home" visual="https://cspogil.org/Home">https://cspogil.org/Home</url>.</p>
+  <note>
+    <p>If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.</p>
+  </note>
+  <p>
+    <term>Content Learning Objectives</term>
+  </p>
+  <p>
+    <em>After completing this activity, students should be able to:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Evaluate boolean expressions with comparison operators (<term>&lt;</term>, <term>&gt;</term>, <term>&lt;=</term>, <term>&gt;=</term>, <term>==</term>, <term>!=</term>).</p>
+      </li>
+      <li>
+        <p>Explain the syntax and meaning of <term>if/else</term> statements and indented blocks.</p>
+      </li>
+      <li>
+        <p>Evaluate boolean expressions that involve comparisons with <term>and</term>, <term>or</term>, and <term>not</term>.</p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    <term>Process Skill Goals:</term>
+  </p>
+  <p>
+    <em>During the activity, students should make progress toward:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Evaluating complex logic expressions based on operator precedence (Critical Thinking).</p>
+      </li>
+    </ul>
+  </p>
+</introduction>
+  <subsection xml:id="conditional_comparison-operators">
+    <title>Comparison Operators</title>
+    <p>In Python, a comparison (e.g., 100 &lt; 200) will yield a Boolean value of either <c>True</c> or <c>False</c>.
+                Most data types (including <c>int</c>, <c>float</c>, <c>str</c>, <c>list</c>, and <c>tuple</c>) can be compared
+                using the following operators:</p>
+    <p>Less than (<term>&lt;</term>), less than or equal (<term>&lt;=</term>), greater than (<term>&gt;</term>),
+                greater than or equal (<term>&gt;=</term>), equal (<term>==</term>), and not equal (<term>!=</term>).</p>
+    <exercise label="cond_ac_pogil_output_bool">
+      <statement>
+        <p>Run this code to see what it prints. Each line of code may or may not print something.</p>
+      </statement>
+      <program xml:id="cond_ac_pogil_output_bool_editor" interactive="activecode" language="python">
+        <input>
+print(type(True))
+print(type(3 &lt; 4))
+print(3 &lt; 4)
+three = 3
+four = 4
+print(three == four)
+check = three &gt; four
+print(check)
+print(type(check))
+three = four
+print(three == four)
+# print(three = four)
+        </input>
+      </program>
+    </exercise>
+    <exercise label="cond_MC_pogil_comment">
+      <statement>
+        <p>Q-2: What would be printed if the commented line above was uncommented?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>True</p>
+          </statement>
+          <feedback>
+            <p>Incorrect! Although the variable "three" does equal "four", the == operator has a return value, while the = operator does not. Try again.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>False</p>
+          </statement>
+          <feedback>
+            <p>Incorrect! "three" has been set equal to "four", but this is irrelevant because the = operator does not have a return value. Try again.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>class 'bool'</p>
+          </statement>
+          <feedback>
+            <p>Incorrect! "print(type())" prints output that looks like that, not just "print()". Try again.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>TypeError</p>
+          </statement>
+          <feedback>
+            <p>Correct! "three = four" (with a single equals sign) doesn't return anything, so it cannot be printed and a TypeError occurs.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="cond_fitb_pogil_booltype">
+      <statement>
+        <p>Q-3: What is the name of the data type that represents Boolean values? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="bool">
+            <feedback>
+              <p>Correct! They are called <q>bool</q>, with an uncapitalized B.</p>
+            </feedback>
+          </condition>
+          <condition string="Bool">
+            <feedback>
+              <p>Incorrect! The B is not capitalized. Try again.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Incorrect! Hint: what was the name of the class printed when the line <c>print(type(True))</c> was run? Try again.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="cond_dnd_pogil_boolean">
+      <statement>
+        <p>Match examples from the previous code block to their appropriate term.</p>
+      </statement>
+      <feedback>
+        <p>Incorrect - keep trying!</p>
+      </feedback>
+      <matches>
+        <match order="1">
+          <premise>check</premise>
+          <response>Boolean variables</response>
+        </match>
+        <match order="2">
+          <premise>&lt;, ==, &gt;</premise>
+          <response>Boolean operators</response>
+        </match>
+        <match order="3">
+          <premise>3 &lt; 4, three == four, three &gt; four</premise>
+          <response>Boolean expressions</response>
+        </match>
+      </matches>
+    </exercise>
+    <exercise label="cond_MC_pogil_notequal">
+      <statement>
+        <p>Q-5: Which of these Boolean expressions evaluates to <c>False</c>?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>5 != 6</p>
+          </statement>
+          <feedback>
+            <p>Incorrect! 5 does not equal 6, which makes this expression True. Try again.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>2 + 2 != 5</p>
+          </statement>
+          <feedback>
+            <p>Incorrect! 4 does not equal 5, so this expression is True. Try again.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>4 + 6 != 11 - 1</p>
+          </statement>
+          <feedback>
+            <p>Correct! 10 equals 10, so the statement "10 != 10" is False.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+  <subsection xml:id="conditional_if-else-statements">
+    <title>if/else Statements</title>
+    <p>An <c>if</c> statement makes it possible to control what code will be executed in a
+                program, based on a condition. For example:</p>
+    <exercise label="cond_ac_pogil_output_ifelse">
+      <statement>
+        <p>Run this code to see what it prints.</p>
+      </statement>
+      <program xml:id="cond_ac_pogil_output_ifelse_editor" interactive="activecode" language="python">
+        <input>
+number = int(input("Enter an integer: "))
+if number &lt; 0:
+    print(number, "is negative")
+else:
+    print(number, "is a fine number")
+print("Until next time...")
+        </input>
+      </program>
+    </exercise>
+    <p>Python uses <term>indentation</term> to define the structure of programs. The line indented
+                under the <c>if</c> statement is executed only when <c>number &lt; 0</c> is <c>True</c>.
+                Likewise, the line indented under the <c>else</c> statement is executed only when
+                <c>number &lt; 0</c> is <c>False</c>.</p>
+    <exercise label="cond_fitb_pogil_boolexpress">
+      <statement>
+        <p>Q-7: Which line of the previous code block contains a Boolean expression? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="2">
+            <feedback>
+              <p>Correct! <c>number &lt; 0</c> is a Boolean expression.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Incorrect! Think about the definition of a Boolean expression. Try again.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <p>Statements that are indented under an if/else statement are executed based on the
+                status of the if's condition. Statements indented at the same level as the if/else
+                statement later in the program are always executed. If you indent code incorrectly
+                or inconsistently, a <c>SyntaxError: unexpected indent</c> may be in your future.</p>
+    <exercise label="cond_fitb_pogil_indent">
+      <statement>
+        <p>Q-8: What must each line preceding an indented block of code end with? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="colon|a\s+colon|\:">
+            <feedback>
+              <p>Correct! A colon is necessary to begin an indented block of code.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Incorrect! Hint: it's one character. Try again.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="cond_ac_pogil_isten">
+      <statement>
+        <p>Modify this code to print <c>(number) is 10</c> if <c>number</c> equals 10, and <c>(number) is not 10</c> otherwise.</p>
+      </statement>
+      <program xml:id="cond_ac_pogil_isten_editor" interactive="activecode" language="python">
+        <input>
+number = int(input("Enter an integer: "))
+# add your code here
+        </input>
+      </program>
+    </exercise>
+    <exercise label="cond_MC_pogil_mandatoryelse">
+      <statement>
+        <p>Q-10: True or False: An <c>if</c> statement must always be followed by an <c>else</c> statement.</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>True</p>
+          </statement>
+          <feedback>
+            <p>Incorrect! An if statement does not necessarily need to be followed by an else statement. Try again.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>False</p>
+          </statement>
+          <feedback>
+            <p>Correct! An else statement must follow an if statement, however.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+  <subsection xml:id="conditional_boolean-operations">
+    <title>Boolean Operations</title>
+    <p>Expressions may include Boolean operators to implement basic logic. If all three
+                operators appear in the same expression, Python will evaluate <c>not</c> first, then
+                <c>and</c>, and finally <c>or</c>. If there are multiple of the same operator, they are
+                evaluated from left to right.</p>
+    <exercise label="cond_ac_pogil_output_booleanops">
+      <statement>
+        <p>Run this code to see what it prints.</p>
+      </statement>
+      <program xml:id="cond_ac_pogil_output_booleanops_editor" interactive="activecode" language="python">
+        <input>
+a = 3
+b = 4
+c = 5
+print(a &lt; b and b &lt; c)
+print(a &lt; b or b &lt; c)
+print(a &lt; b and b &gt; c)
+print(a &lt; b or b &gt; c)
+print(not a &lt; b)
+print(a &gt; b or not a &gt; c and b &gt; c)
+        </input>
+      </program>
+    </exercise>
+    <exercise label="cond_mc_pogil_opsvalue">
+      <statement>
+        <p>Q-12: What data type would be the result of <c>a &lt; b</c>? What about the result of <c>a &lt; b and b &lt; c</c>? Use the values of <c>a</c>, <c>b</c>, and <c>c</c> from the code block above.</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>bool, bool</p>
+          </statement>
+          <feedback>
+            <p>Correct! The type of each is bool; both are Boolean expressions.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>True, bool</p>
+          </statement>
+          <feedback>
+            <p>Incorrect! True is not a data type. Try again.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>True, True</p>
+          </statement>
+          <feedback>
+            <p>Incorrect! True is not a data type. Try again.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>bool, True</p>
+          </statement>
+          <feedback>
+            <p>Incorrect! True is not a data type. Try again.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="cond_mc_pogil_opsdatatype">
+      <statement>
+        <p>Q-13: What would be the value of <c>a &lt; b</c>? What about the value of <c>a &lt; b and b &lt; c</c>? Use the values of <c>a</c>, <c>b</c>, and <c>c</c> from the code block above.</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>True, True</p>
+          </statement>
+          <feedback>
+            <p>Correct! The value of each statement is True.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>True, False</p>
+          </statement>
+          <feedback>
+            <p>Incorrect! 4 is less than 5, so "b &lt; c" is True. Try again.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>False, False</p>
+          </statement>
+          <feedback>
+            <p>Incorrect! 3 is less than 4 and 4 is less than 5. Try again.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>False, True</p>
+          </statement>
+          <feedback>
+            <p>Incorrect! 3 is less than 4, so "a &lt; b" is True. Try again.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="cond_mc_pogil_andproperties">
+      <statement>
+        <p>Q-14: If two <c>True</c> Boolean expressions are compared using the <c>and</c> operator, what is the resulting Boolean value? What if you compare two <c>False</c> expressions instead?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>True, True</p>
+          </statement>
+          <feedback>
+            <p>Incorrect! "and" only returns True if the expressions on both sides are True. Try again.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>True, False</p>
+          </statement>
+          <feedback>
+            <p>Correct! "and" only returns True if the expressions on both sides are True and returns False in any other situation.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>False, False</p>
+          </statement>
+          <feedback>
+            <p>Incorrect! "and" only returns True if the expressions on both sides are True. Try again.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>False, True</p>
+          </statement>
+          <feedback>
+            <p>Incorrect! "and" only returns True if the expressions on both sides are True. Try again.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="cond_mc_pogil_orproperties">
+      <statement>
+        <p>Q-15: If two <c>True</c> Boolean expressions are compared using the <c>or</c> operator, what is the resulting Boolean value? What if you compare two <c>False</c> expressions instead?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>True, True</p>
+          </statement>
+          <feedback>
+            <p>Incorrect! "or" only returns True if the expressions on one or both sides are True. Try again.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>True, False</p>
+          </statement>
+          <feedback>
+            <p>Correct! "or" only returns True if the expressions on one or both sides are True and returns False if both sides are false.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>False, False</p>
+          </statement>
+          <feedback>
+            <p>Incorrect! "or" only returns True if the expressions on one or both sides are True. Try again.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>False, True</p>
+          </statement>
+          <feedback>
+            <p>Incorrect! "or" only returns True if the expressions on one or both sides are True. Try again.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="cond_mc_pogil_trueandfalse">
+      <statement>
+        <p>Q-16: If a <c>True</c> and a <c>False</c> Boolean expression are compared using the <c>and</c> operator, what is the resulting Boolean value? What if you use the <c>or</c> operator instead?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>True, True</p>
+          </statement>
+          <feedback>
+            <p>Incorrect! "and" only returns True if the expressions on both sides are True. Try again.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>True, False</p>
+          </statement>
+          <feedback>
+            <p>Incorrect! "or" returns True if the expressions on one or both sides are True. Try again.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>False, False</p>
+          </statement>
+          <feedback>
+            <p>Incorrect! "or" returns True if the expressions on one or both sides are True. Try again.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>False, True</p>
+          </statement>
+          <feedback>
+            <p>Correct! "and" needs both sides to be True, while "or" only needs of of them.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="cond_ac_pogil_arepositive">
+      <statement>
+        <p>Suppose you wanted to print the sum of <c>x</c> and <c>y</c> only when both <c>x</c> and <c>y</c> are positive. Write a block of code to achieve this that uses only one <c>if</c> statement.</p>
+      </statement>
+      <program xml:id="cond_ac_pogil_arepositive_editor" interactive="activecode" language="python">
+        <input>
+x = int(input("Enter an integer: "))
+y = int(input("Enter an integer: "))
+# add your code here
+        </input>
+      </program>
+    </exercise>
+    <exercise label="cond_ac_pogil_usingnot">
+      <statement>
+        <p>Rewrite your code from the previous code block using the <c>not</c> operator. Your answer should yield the same result as before, not the opposite, and still only use one <c>if</c> statement. Hint: you'll need to change the &gt; signs!</p>
+      </statement>
+      <program xml:id="cond_ac_pogil_usingnot_editor" interactive="activecode" language="python">
+        <input>
+x = int(input("Enter an integer: "))
+y = int(input("Enter an integer: "))
+# add your code here
+        </input>
+      </program>
+    </exercise>
+    <exercise label="cond_ac_pogil_notpositive">
+      <statement>
+        <p>Suppose that you instead wanted to print the sum of <c>x</c> and <c>y</c> <em>except</em> when both <c>x</c> and <c>y</c> are positive. Write a block of code to achieve this that only uses one <c>if</c> statement.</p>
+      </statement>
+      <program xml:id="cond_ac_pogil_notpositive_editor" interactive="activecode" language="python">
+        <input>
+x = int(input("Enter an integer: "))
+y = int(input("Enter an integer: "))
+# add your code here
+        </input>
+      </program>
+    </exercise>
+    <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
+    <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+    &lt;div data-component="groupsub" id=cond_logic_groupsub data-size_limit=3&gt;
+        &lt;div class="col-sm-6"&gt;
+            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div id="groupsub_button" class="col-sm-6"&gt;
+        &lt;/div&gt;
+        &lt;p&gt;The Submit Group button will submit the answer for each each question
+        on this page for each member of your group. It also logs you as the official
+        group submitter.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  </subsection>
+</section>

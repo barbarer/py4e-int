@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<section xml:id="files_debugging">
+  <title>Debugging</title>
+    <idx>Debugging</idx>
+    <idx>Whitespace</idx>
+    <idx><h>Repr</h><h>Function</h></idx>
+    <idx><h>Function</h><h>Repr</h></idx>
+    <idx>String Representation</idx>
+    <idx>End of Line Character</idx>
+  <p>When you are reading and writing files, you might run into problems with
+            whitespace. These errors can be hard to debug because spaces, tabs, and
+            newlines are normally invisible:</p>
+  <program xml:id="fileWhiteSpace" interactive="activecode" language="python">
+    <input>
+s = '1 2\t 3\n 4'
+print(s)
+        </input>
+  </program>
+  <p>The built-in function <c>repr</c> can help. It takes any object as
+            an argument and returns a string representation of the object. For
+            strings, it represents whitespace characters with backslash sequences:</p>
+  <program xml:id="fileRepr" interactive="activecode" language="python">
+    <input>
+s = '1 2\t 3\n 4'
+print(repr(s))
+        </input>
+  </program>
+  <p>This can be helpful for debugging.</p>
+  <exercise label="fileDebugFITBrepr">
+    <statement>
+      <p>Q-3: The <c>repr</c> function takes an object as an argument and returns what type of representation of the object? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Ss]tring">
+          <feedback>
+            <p>The repr function takes an object as an argument and returns a string representation of the object.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>One other problem you might run into is that different systems use
+            different characters to indicate the end of a line. Some systems use a
+            newline, represented <c>\n</c>. Others use a return character, represented
+            <c>\r</c>. Some use both. If you move files between different systems, these
+            inconsistencies might cause problems.</p>
+  <exercise label="fileDebugMCreturn">
+    <statement>
+      <p>Q-4: Which of the following symbols create newlines, or returns, in files? Select all that apply.</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>\n</p>
+        </statement>
+        <feedback>
+          <p>This is the symbol for a newline.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>\t</p>
+        </statement>
+        <feedback>
+          <p>This is the symbol for a tab.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>\r</p>
+        </statement>
+        <feedback>
+          <p>This is the symbol for the return character.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>\'</p>
+        </statement>
+        <feedback>
+          <p>This is the symbol for the ' character in a string.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>For most systems, there are applications to convert from one format to
+            another. You can find them (and read more about this issue) at
+            <url href="wikipedia.org/wiki/Newline" visual="wikipedia.org/wiki/Newline">wikipedia.org/wiki/Newline</url>. Or, of course,
+            you could write one yourself.</p>
+</section>

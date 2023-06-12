@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<section xml:id="pictures_write-code-exercises">
+  <title>Write Code Exercises</title>
+  <note>
+    <p>Remember that it can take a bit of time to process all the pixels in a picture!  Check for errors below the code if it is taking a long time, but if you don't see any errors just wait.</p>
+  </note>
+  <exercise label="pictures_ac_16">
+    <statement>
+      <p>A grayscale picture is when the red, green, and blue value of a pixel are all equal to the average of the original pixel value. Write the code to turn the left half of the image <c>gal2.jpg</c> into gray scale.</p>
+    </statement>
+    <program xml:id="pictures_ac_16_editor" interactive="activecode" language="python">
+      <input>
+
+        </input>
+    </program>
+  </exercise>
+  <exercise label="pictures_ac_16_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>A grayscale picture is when the red, green, and blue value of a pixel are all equal to the average of the original pixel value. Create the code to turn the left half of the image <c>gal2.jpg</c> into gray scale.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>from image import *</cline>
+      </block>
+      <block order="6">
+        <cline>img = Image("gal2.jpg")</cline>
+      </block>
+      <block order="8">
+        <cline>pixels = img.getPixels()</cline>
+      </block>
+      <block order="3">
+        <cline>for p in pixels:</cline>
+        <cline>    r = p.getRed()</cline>
+        <cline>    b = p.getBlue()</cline>
+        <cline>    g = p.getGreen()</cline>
+      </block>
+      <block order="1">
+        <cline>    avg = int((r + b + g) / 3)</cline>
+      </block>
+      <block order="7">
+        <cline>    r = p.setRed(avg)</cline>
+        <cline>    b = p.setBlue(avg)</cline>
+        <cline>    g = p.setGreen(avg)</cline>
+      </block>
+      <block order="5">
+        <cline>    img.updatePixel(p)</cline>
+      </block>
+      <block order="2">
+        <cline>win = ImageWin(img.getWidth(),img.getHeight())</cline>
+        <cline>img.draw(win)</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="pictures_ac_17">
+    <statement>
+      <p>Define a procedure to negate an image.  You can negate an image by setting each color value to 255 minus the current value. Write code to negate the <c>kitten.jpg</c> image.</p>
+    </statement>
+    <program xml:id="pictures_ac_17_editor" interactive="activecode" language="python">
+      <input>
+
+        </input>
+    </program>
+  </exercise>
+  <exercise label="pictures_ac_17_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Define a procedure to negate an image.  You can negate an image by setting each color value to 255 minus the current value. Create code to negate the <c>kitten3.jpg</c> image.</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <cline>from image import *</cline>
+      </block>
+      <block order="3">
+        <cline>img = Image("kitten.jpg")</cline>
+      </block>
+      <block order="1">
+        <cline>pixels = img.getPixels()</cline>
+      </block>
+      <block order="7">
+        <cline>for p in pixels:</cline>
+        <cline>    r = p.getRed()</cline>
+        <cline>    b = p.getBlue()</cline>
+        <cline>    g = p.getGreen()</cline>
+      </block>
+      <block order="2">
+        <cline>    r = p.setRed(255-r)</cline>
+        <cline>    b = p.setBlue(255-b)</cline>
+        <cline>    g = p.setGreen(255-g)</cline>
+      </block>
+      <block order="4">
+        <cline>    img.updatePixel(p)</cline>
+      </block>
+      <block order="5">
+        <cline>win = ImageWin(img.getWidth(),img.getHeight())</cline>
+        <cline>img.draw(win)</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="pictures_ac_18">
+    <statement>
+      <p>Write code that copies the top half of the image <c>kitten.jpg</c> to the bottom half.</p>
+    </statement>
+    <program xml:id="pictures_ac_18_editor" interactive="activecode" language="python">
+      <input>
+
+        </input>
+    </program>
+  </exercise>
+  <exercise label="pictures_ac_18_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Write code that copies the top half of the image <c>kitten.jpg</c> to the bottom half.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <cline>from image import *</cline>
+      </block>
+      <block order="4">
+        <cline>img = Image("kitten.jpg")</cline>
+      </block>
+      <block order="7">
+        <cline>halfway = (int(img.getHeight() / 2))</cline>
+      </block>
+      <block order="6">
+        <cline>for x in range(img.getWidth()):</cline>
+        <cline>    for y in range(halfway):</cline>
+      </block>
+      <block order="5">
+        <cline>        p = img.getPixel(x, y)</cline>
+      </block>
+      <block order="2">
+        <cline>        r = p.getRed()</cline>
+        <cline>        g = p.getGreen()</cline>
+        <cline>        b = p.getBlue()</cline>
+      </block>
+      <block order="8">
+        <cline>        newPixel = Pixel(r, g, b)</cline>
+      </block>
+      <block order="9">
+        <cline>        img.setPixel(x, halfway + y, newPixel)</cline>
+      </block>
+      <block order="3">
+        <cline>win = ImageWin(img.getWidth(),img.getHeight())</cline>
+        <cline>img.draw(win)</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="pictures_ac_19">
+    <statement>
+      <p>Write a function to mirror the image <c>swan.jpg</c> from left to right around a vertical line in the middle of the image. Pass the image to the function. Do the import, create the image, call the function, and show the result.</p>
+    </statement>
+    <program xml:id="pictures_ac_19_editor" interactive="activecode" language="python">
+      <input>
+
+        </input>
+    </program>
+  </exercise>
+  <exercise label="pictures_ac_19_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function to mirror the image <c>swan.jpg</c> from left to right around a vertical line in the middle of the image. Pass the image to the function. Do the import, create the image, call the function, and show the result.</p>
+    </statement>
+    <blocks>
+      <block order="7">
+        <cline>from image import *</cline>
+      </block>
+      <block order="9">
+        <cline>img = Image("swan.jpg")</cline>
+      </block>
+      <block order="3">
+        <cline>halfway = (int(img.getWidth() / 2))</cline>
+      </block>
+      <block order="5">
+        <cline>for x in range(img.getWidth()):</cline>
+        <cline>    for y in range(img.getHeight()):</cline>
+      </block>
+      <block order="2">
+        <cline>        p = img.getPixel(x, y)</cline>
+      </block>
+      <block order="8">
+        <cline>        r = p.getRed()</cline>
+        <cline>        g = p.getGreen()</cline>
+        <cline>        b = p.getBlue()</cline>
+      </block>
+      <block order="6">
+        <cline>        newPixel = Pixel(r, g, b)</cline>
+      </block>
+      <block order="4">
+        <cline>        img.setPixel(img.getWidth() - x - 1, y, newPixel)</cline>
+      </block>
+      <block order="1">
+        <cline>win = ImageWin(img.getWidth(),img.getHeight())</cline>
+        <cline>img.draw(win)</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="pictures_ac_20">
+    <statement>
+      <p>Write code that flips the image <c>vangogh.jpg</c> across a horizontal line.</p>
+    </statement>
+    <program xml:id="pictures_ac_20_editor" interactive="activecode" language="python">
+      <input>
+
+        </input>
+    </program>
+  </exercise>
+  <exercise label="pictures_ac_20_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create code that flips the image <c>vangogh.jpg</c> across a horizontal line.</p>
+    </statement>
+    <blocks>
+      <block order="8">
+        <cline>from image import *</cline>
+      </block>
+      <block order="2">
+        <cline>img = Image("vangogh.jpg")</cline>
+      </block>
+      <block order="4">
+        <cline>halfway = (int(img.getHeight() / 2))</cline>
+      </block>
+      <block order="3">
+        <cline>for x in range(img.getWidth()):</cline>
+        <cline>    for y in range(img.getHeight()):</cline>
+      </block>
+      <block order="9">
+        <cline>        p = img.getPixel(x, y)</cline>
+      </block>
+      <block order="1">
+        <cline>        r = p.getRed()</cline>
+        <cline>        g = p.getGreen()</cline>
+        <cline>        b = p.getBlue()</cline>
+      </block>
+      <block order="7">
+        <cline>        newPixel = Pixel(r, g, b)</cline>
+      </block>
+      <block order="5">
+        <cline>        img.setPixel(x, img.getHeight() - y - 1, newPixel)</cline>
+      </block>
+      <block order="6">
+        <cline>win = ImageWin(img.getWidth(),img.getHeight())</cline>
+        <cline>img.draw(win)</cline>
+      </block>
+    </blocks>
+  </exercise>
+</section>

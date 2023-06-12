@@ -1,0 +1,551 @@
+<?xml version="1.0"?>
+<section xml:id="strings_mixed-up-code-questions">
+  <title>Mixed-up Code Questions</title>
+  <exercise label="str-mixed-emotion" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create the function, <c>mood(emotion)</c>, to return a string with the <c>emotion</c>
+            followed by <c>" 4 you"</c>. For example, if <c>emotion</c> is <q>So happy</q> it should
+            return <c>"So happy 4 you!"</c>.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>def mood(emotion):</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    out = emotion + " 4 you!"</cline>
+        </choice>
+        <choice>
+          <cline>    out = emotion + "4 you!" </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    return out</cline>
+        </choice>
+        <choice>
+          <cline>    return emotion </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="str-mixed-emotion-ac">
+    <statement>
+      <p>Write the function, <c>mood(emotion)</c>, to return a string with the <c>emotion</c>
+            followed by <c>" 4 you"</c>. For example, if <c>emotion</c> is <q>So happy</q> it should
+            return <c>"So happy 4 you!"</c>.</p>
+    </statement>
+    <program xml:id="str-mixed-emotion-ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(mood("So happy"), "So happy 4 you!", 'mood("So happy")')
+        self.assertEqual(mood("So HaPpY"), "So HaPpY 4 you!",  'mood("So HaPpY")')
+        self.assertEqual(mood("HAPPY"), "HAPPY 4 you!", 'mood("HAPPY")')
+        self.assertEqual(mood("happy"), "happy 4 you!", 'mood("happy")')
+        self.assertEqual(mood("Happy"), "Happy 4 you!", 'mood("Happy")')
+        self.assertEqual(mood("So glad"), "So glad 4 you!", 'mood("So glad")')
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="str-mixed-book" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create the function, <c>item_purchase(item, price)</c>, to return a string with the <c>item</c> purchased followed by the <c>price</c>.
+            For example if <c>item</c> is <q>new book</q> and price is <c>12</c> the function should return <c>"My new book cost $12"</c>.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <choice correct="yes">
+          <cline>def item_purchase(item, price):</cline>
+        </choice>
+        <choice>
+          <cline>def item_purchase(price, item): </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    out = "My " + item + " cost $" + str(price)</cline>
+        </choice>
+        <choice>
+          <cline>    out = "My " + item + " cost $" + price </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>    return out</cline>
+        </choice>
+        <choice>
+          <cline>    Return out </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="str-mixed-book-ac">
+    <statement>
+      <p>Write the function, <c>item_purchase(item, price)</c>, to return a string with the <c>item</c> purchased followed by the <c>price</c>.
+            For example if <c>item</c> is <q>new book</q> and price is <c>12</c> the function should return <c>"My new book cost $12"</c>.</p>
+    </statement>
+    <program xml:id="str-mixed-book-ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(item_purchase("new book", "12"), "My new book cost $12", 'item_purchase("new book", "12")')
+        self.assertEqual(item_purchase("makeup", "14"), "My makeup cost $14", 'item_purchase("makeup", "14")')
+        self.assertEqual(item_purchase("new bag", "12.31"), "My new bag cost $12.31", 'item_purchase("new bag", "12.31")')
+        self.assertEqual(item_purchase("backpack", "0"), "My backpack cost $0", 'item_purchase("backpack", "0")')
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="str-mixed-code" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create the function <c>phrase(person, thing)</c>, to return a string with a <c>person</c> of your choosing followed by a <c>thing</c>
+            of what that person likes to do. For example, if the <c>person</c> is <c>sam</c> and <c>thing</c> is <c>Likes to code</c>, the
+            returned string should be <c>"Sam likes to code"</c>. Make sure that <c>person</c> is capitalized and <c>thing</c> is lowercase.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <choice correct="yes">
+          <cline>def phrase(person, thing):</cline>
+        </choice>
+        <choice>
+          <cline>def phrase(person, thing) </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>    person = person.capitalized()</cline>
+          <cline>    thing = thing.lower()</cline>
+        </choice>
+        <choice>
+          <cline>    person.capitalized() </cline>
+          <cline>    thing.lower()</cline>
+        </choice>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    return person + " " + thing</cline>
+        </choice>
+        <choice>
+          <cline>    return person + thing </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="str-mixed-code-ac">
+    <statement>
+      <p>Write the function, <c>phrase(person, thing)</c>, to return a string with a <c>person</c> of your choosing followed by a <c>thing</c>
+            of what that person likes to do. For example, if the <c>person</c> is <c>Sam</c> and <c>thing</c> is <c>Likes to code</c>, the
+            returned string should be <c>"Sam likes to code"</c>.  Make sure that <c>person</c> is capitalized and <c>thing</c> is lowercase.</p>
+    </statement>
+    <program xml:id="str-mixed-code-ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(phrase("sam", "Likes to code"), "Sam likes to code", 'phrase("sam", " Likes to code")')
+        self.assertEqual(phrase("mary-anne", "likes to sing"), "Mary-anne likes to sing", 'phrase("mary-anne", " likes to sing")')
+        self.assertEqual(phrase("ANNA", "likes to dance"), "Anna likes to dance", 'phrase("ANNA", " likes to dance")')
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="str-mixed-time" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Let's imagine that last weekend you went on a camping trip with your family. Create a function
+            <c>time(hours, minutes)</c>. Return a string that says how long it took you to get home in minutes. For example,
+            if <c>hours</c> was <c>3</c> and <c>minutes</c> was <c>13</c>, the returned string should be, <c>"It took us 193 minutes to get home"</c>.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <choice correct="yes">
+          <cline>def time(hours, minutes):</cline>
+        </choice>
+        <choice>
+          <cline>def time(hours, minutes) </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    total = hours * 60 + minutes</cline>
+        </choice>
+        <choice>
+          <cline>    total = hours + 60 * minutes </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>    return "It took us " + str(total) + " minutes to get home"</cline>
+        </choice>
+        <choice>
+          <cline>    return "It took us " + str(total) " minutes to get home"  </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="str-mixed-time-ac">
+    <statement>
+      <p>Let's imagine that last weekend you went on a camping trip with your family. Write a function
+            <c>time(hours, minutes)</c>.  Return a string that says how long it took you to get home in minutes. For example,
+            if <c>hours</c> was <c>3</c> and <c>minutes</c> was <c>13</c>, the returned string should be, <c>"It took us 193 minutes to get home"</c>.</p>
+    </statement>
+    <program xml:id="str-mixed-time-ac_editor" interactive="activecode" language="python">
+      <input>
+
+
+====
+from unittest.gui import TestCaseGui
+
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(time(2, 45), "It took us 165 minutes to get home", 'time(2, 45)')
+        self.assertEqual(time(2, 15), "It took us 135 minutes to get home", 'time(2, 15)')
+        self.assertEqual(time(1, 23), "It took us 83 minutes to get home", 'time(1, 23)')
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="str-mixed-feeling" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create the function, <c>food(fave, least_fave)</c>, to return a string with your <c>fave</c> food followed by your <c>least_fave</c> food both in lowercase.
+            For example, if your <c>fave</c> food is <q>PIZZA</q> and your <c>least_fave</c> is <q>broccoli</q>, return
+            <c>"My favorite food is pizza, but I don't like broccoli"</c>. Be sure to change <c>fave</c> and <c>least_fave</c> to lowercase.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <cline>def food(fave, least_fave):</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    fave_l = fave.lower()</cline>
+          <cline>    least_l = least_fave.lower()</cline>
+          <cline>    start = "My favorite food is "</cline>
+          <cline>    end = ", but I don't like "</cline>
+        </choice>
+        <choice>
+          <cline>    fave.lower() </cline>
+          <cline>    least_fave.lower()</cline>
+          <cline>    start = "My favorite food is "</cline>
+          <cline>    end = ", but I don't like "</cline>
+        </choice>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    return start + fave_l + end + least_l</cline>
+        </choice>
+        <choice>
+          <cline>    return start + fave_l + least_l + end </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="str-mixed-feeling-ac">
+    <statement>
+      <p>Write the function, <c>food(fave, least_fave)</c>, to return a string with your <c>fave</c> food followed by your <c>least_fave</c> food both in lowercase.
+            For example, if your <c>fave</c> food is <q>PIZZA</q> and your <c>least_fave</c> is <q>broccoli</q>, return
+            <c>"My favorite food is pizza, but I don't like broccoli"</c>. Be sure to change <c>fave</c> and <c>least_fave</c> to lowercase.</p>
+    </statement>
+    <program xml:id="str-mixed-feeling-ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(food("pizza", "broccoli"), "My favorite food is pizza, but I don't like broccoli", 'food("pizza", "broccoli")')
+        self.assertEqual(food("pizza", "pizza"), "My favorite food is pizza, but I don't like pizza", 'food("pizza", "pizza")')
+        self.assertEqual(food("HAMBURGER", "caRrOts"), "My favorite food is hamburger, but I don't like carrots", 'food("HAMBURGER", "caRrOts")')
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="str-mixed-animal" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create the function, <c>animal(type)</c>, to return the string, <q>My <c>type_animal</c> looks like a Muppet</q> with <c>type</c> being
+            any animal of your choosing. For example, if your <c>type</c> is <q>sheepdog</q>, then the returned string should
+            be <c>"My sheepdog looks like a Muppet"</c>.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>def animal(type):</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    end = " looks like a Muppet"</cline>
+        </choice>
+        <choice>
+          <cline>    end = "looks like a Muppet" </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    return "My " + type + end</cline>
+        </choice>
+        <choice>
+          <cline>    return "My" + type + end </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="str-mixed-animal-ac">
+    <statement>
+      <p>Finish the function, <c>animal(type)</c>, to return the string, <q>My <c>type_animal</c> looks like a Muppet</q> with <c>type</c> being
+            any animal of your choosing. For example, if your <c>type</c> is <q>sheepdog</q>, then the returned string should
+            be <c>"My sheepdog looks like a Muppet"</c>.</p>
+    </statement>
+    <program xml:id="str-mixed-animal-ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(animal("sheepdog"), "My sheepdog looks like a Muppet", 'animal("sheepdog")')
+        self.assertEqual(animal("FROG"), "My FROG looks like a Muppet", 'animal("FROG")')
+        self.assertEqual(animal("c a t"), "My c a t looks like a Muppet", 'animal("c a t")')
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="str-mixed-add" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Let's imagine you went on a huge shopping spree. Create the function, <c>total(store1, store2, store3)</c>,
+            to return the total of how much you spent at the three stores. For example, if you spent <c>30</c> in <c>store1</c>, <c>13</c> in <c>store2</c>, and <c>56</c> in <c>store3</c>,
+            <c>ans</c> return <c>"$30 + $13 + $56 = $99"</c>.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>def total(store1, store2, store3):</cline>
+      </block>
+      <block order="1">
+        <cline>    total = store1 + store2 + store3</cline>
+      </block>
+      <block order="5">
+        <cline>    s1 = "$" + str(store1)</cline>
+        <cline>    s2 = "$" + str(store2)</cline>
+        <cline>    s3 = "$" + str(store3)</cline>
+        <cline>    t = "$" + str(total)</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    return s1 + " + " + s2 + " + " + s3 + " = " + t</cline>
+        </choice>
+        <choice>
+          <cline>    return s1 + s2 + s3 + t </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="str-mixed-add-ac">
+    <statement>
+      <p>Let's imagine you went on a huge shopping spree. Write the function, <c>total(store1, store2, store3)</c>,
+            to return the total of how much you spent at the three stores. For example, if you spent <c>30</c> in <c>store1</c>, <c>13</c> in <c>store2</c>, and <c>56</c> in <c>store3</c>,
+            <c>ans</c> return <c>"$30 + $13 + $56 = $99"</c>.</p>
+    </statement>
+    <program xml:id="str-mixed-add-ac_editor" interactive="activecode" language="python">
+      <input>
+
+
+====
+from unittest.gui import TestCaseGui
+
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(total(30,13,56), "$30 + $13 + $56 = $99", 'total(30,13,56,99)')
+        self.assertEqual(total(1.5,3.5,13), "$1.5 + $3.5 + $13 = $18.0", 'total(1.5,3.5,13,17)')
+        self.assertEqual(total(1,1,1), "$1 + $1 + $1 = $3", 'total(1,1,1,3)')
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="str-mixed-wizard" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create the function <c>combine(var1, var2)</c>, to return a string by combining the two variables <c>var1</c> and <c>var2</c>.
+            For example, if <c>var1</c> is <q>i am a</q> and <c>var2</c> is <q>CS wizard</q>, the function should return the string, <c>"I am a cs wizard"</c>.
+            Make sure <c>var1</c> is capitalized and <c>var2</c> is lowercase.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <cline>def combine(var1, var2):</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    var1 = var1.capitalize()</cline>
+          <cline>    var2 = var2.lower()</cline>
+        </choice>
+        <choice>
+          <cline>    var1.capitalize() </cline>
+          <cline>    var2.lower()</cline>
+        </choice>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    return var1 + " " + var2</cline>
+        </choice>
+        <choice>
+          <cline>    return var1 + var2 </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="str-mixed-wizard-ac">
+    <statement>
+      <p>Write the function, <c>combine(var1, var2)</c>, to return a string by combining the two variables <c>var1</c> and <c>var2</c>.
+            For example, if <c>var1</c> is <q>i am a </q> and <c>var2</c> is <q>CS wizard</q>, the function should return the string, <c>"I am a cs wizard"</c>.</p>
+    </statement>
+    <program xml:id="str-mixed-wizard-ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(combine("i am a", "CS wizard"), "I am a cs wizard", 'combine("i am a", "CS wizard")')
+        self.assertEqual(combine("Potatos", "are cool"), "Potatos are cool", 'combine("Potatos", "are cool")')
+        self.assertEqual(combine("i am a", "Meatloaf"), "I am a meatloaf", 'combine("i am a", "Meatloaf")')
+        self.assertEqual(combine("I like", "bubbles"), "I like bubbles", 'combine("I like", "bubbles")')
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="str-mixed-colors" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create the function, <c>colors(col1, col2)</c>, should return a string combining the variables <c>col1</c> and <c>col2</c>. For example,
+            if <c>col1</c> and <c>col2</c> is <q>&#x2018;red'</q> and <q>&#x2018;blue'</q>, then the function should return <c>Red is a primary color and
+so is blue</c>.  Be sure to capitalize the first color and lowercase at second.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>def colors(col1, col2):</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    mid = " is a primary color, and so is "</cline>
+        </choice>
+        <choice>
+          <cline>    mid = "is a primary color, and so is" </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    col1 = col1.capitalize() + mid</cline>
+          <cline>    col2 = col2.lower()</cline>
+        </choice>
+        <choice>
+          <cline>    col1 = col1.lower() + mid </cline>
+          <cline>    col2 = col2.capitalize()</cline>
+        </choice>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>    return col1 + col2</cline>
+        </choice>
+        <choice>
+          <cline>    return col1 + " " + col2 </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="str-mixed-colors-ac">
+    <statement>
+      <p>Write the function, <c>colors(col1, col2)</c>, to return a string combining the variables <c>col1</c> and <c>col2</c>.
+            For example, if <c>col1</c> and <c>col2</c> is <q>&#x2018;Red'</q> and <q>&#x2018;blue'</q>, then the function should return <c>Red is a primary color and
+so is blue</c>.  Be sure to capitalize the first color and lowercase the second.</p>
+    </statement>
+    <program xml:id="str-mixed-colors-ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+from unittest.gui import TestCaseGui
+
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(colors("red", "blue"), "Red is a primary color, and so is blue", "colors('red', 'blue')")
+        self.assertEqual(colors("yellow", "Blue"), "Yellow is a primary color, and so is blue", "colors('yellow', 'Blue')")
+        self.assertEqual(colors("Yellow", "red"), "Yellow is a primary color, and so is red", "colors('Yellow', 'red')")
+        self.assertEqual(colors("Red", "Yellow"), "Red is a primary color, and so is yellow", "colors('Red', 'Yellow')")
+        self.assertEqual(colors("blue", "RED"), "Blue is a primary color, and so is red", "colors('blue', 'RED')")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="str-mixed-dogs" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create the function, <c>fave_animal(animal)</c>, to return the string, <q>Petting <c>animal</c> makes me happier than anything else</q> where <c>animal</c>
+            is any animal of your choice. For example, if <c>animal</c> is <q>dogs</q>, then the function should return, <c>"Petting dogs makes
+me happier than anything else"</c>.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>def fave_animal(animal):</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    end = " makes me happier than anything else"</cline>
+        </choice>
+        <choice>
+          <cline>    end = "makes me happier than anything else" </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    return "Petting " + animal + end</cline>
+        </choice>
+        <choice>
+          <cline>    return "Petting " + "animal" + end </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="str-mixed-dogs-ac">
+    <statement>
+      <p>Finish the function, <c>fave_animal(animal)</c>, to return the string, <q>Petting <c>animal</c> makes me happier than anything else</q> where <c>animal</c>
+            is any animal of your choice. For example, if <c>animal</c> is <q>dogs</q>, then the function should return, <c>"Petting dogs makes
+me happier than anything else"</c>.</p>
+    </statement>
+    <program xml:id="str-mixed-dogs-ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(fave_animal("dogs"), "Petting dogs makes me happier than anything else", "fave_animal('dogs')")
+        self.assertEqual(fave_animal("ca ts"), "Petting ca ts makes me happier than anything else", 'fave_animal("ca ts")')
+        self.assertEqual(fave_animal("Horses"), "Petting Horses makes me happier than anything else", 'fave_animal("Horses")')
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

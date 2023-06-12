@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<section xml:id="lists_list-arguments">
+  <title>List arguments</title>
+<idx><h>Argument</h><h>List</h></idx>
+<idx><h>List</h><h>Argument</h></idx>
+<idx>Argument</idx>
+<idx>Reference</idx>
+<idx>Parameter</idx>
+<idx><h>Method</h><h>Append</h></idx>
+<idx><h>Append</h><h>Method</h></idx>
+<idx><h>List</h><h>Concatenate</h></idx>
+<idx><h>Concatenate</h><h>List</h></idx>
+<idx><h>Concatenation</h><h>List</h></idx>
+<idx><h>List</h><h>Concatenation</h></idx>
+<idx><h>Operator</h><h>Slice</h></idx>
+<idx><h>Slice</h><h>Operator</h></idx>
+<idx><h>Slice</h><h>Operator</h></idx>
+<idx><h>Operator</h><h>Slice</h></idx>
+<idx><h>Append</h><h>Method</h></idx>
+<idx><h>Method</h><h>Append</h></idx>
+  <p>When you pass a list to a function, the function gets a reference to the
+            list. If the function modifies a list parameter, the caller sees the
+            change. For example, <c>delete_head</c> removes the first element from a
+            list and is used like this:</p>
+  <program xml:id="listArgument" interactive="activecode" language="python">
+    <input>
+def delete_head(t):
+    del t[0]
+
+letters = ['a', 'b', 'c']
+delete_head(letters)
+print(letters)
+        </input>
+  </program>
+  <p>The parameter <c>t</c> and the variable <c>letters</c> are
+            aliases for the same object.</p>
+  <exercise label="listArg_MC_del">
+    <statement>
+      <p>Q-2: What would print when the following code executes?</p>
+      <pre>def myfun(lst):
+    del lst[0]
+
+mylist = ['a', 'b']
+myfun(mylist)
+print(mylist)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>['a', 'b']</p>
+        </statement>
+        <feedback>
+          <p>myfun alters the state of the list object by removing the value at slot 0.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>['b']</p>
+        </statement>
+        <feedback>
+          <p>myfun alters the state of the list object by removing the value at slot 0.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>It is important to distinguish between operations that modify lists and
+            operations that create new lists. For example, the <c>append</c>
+            method modifies a list, but the <c>+</c> operator creates a new
+            list:</p>
+  <program xml:id="listArgumentAppend" interactive="activecode" language="python">
+    <input>
+t1 = [1, 2]
+t2 = t1.append(3)
+print(t1)
+print(t2)
+
+t3 = t1 + [3]
+print(t3)
+print(t2 is t3)
+        </input>
+  </program>
+  <p>This difference is important when you write functions that are supposed
+            to modify lists. For example, this function <em>does not</em> delete the head
+            of a list:</p>
+  <program language="python">
+    <input>
+def bad_delete_head(t):
+    t = t[1:]              # WRONG!
+</input>
+  </program>
+  <p>The slice operator creates a new list and the assignment makes
+            <c>t</c> refer to it, but none of that has any effect on the list
+            that was passed as an argument.</p>
+  <exercise label="listArg_MC_slice">
+    <statement>
+      <p>Q-4: True or False. The following code block will <term>not</term> remove the first element from the list argument.</p>
+      <pre>def deleting_first(lst):
+    lst = lst[1:]</pre>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>The slice operator creates a new list called "t", but that will not affect the list it was passed.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>The slice operator creates a new list called "t", so it will not modify the original list.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>An alternative is to write a function that creates and returns a new
+            list. For example, <c>tail</c> returns all but the first element
+            of a list and leaves the original list unmodified. Here's how it is used:</p>
+  <program xml:id="listArgumentTail" interactive="activecode" language="python">
+    <input>
+def tail(t):
+    return t[1:]
+
+letters = ['a', 'b', 'c']
+rest = tail(letters)
+print(rest)
+        </input>
+  </program>
+  <exercise label="listArg_MC_modify">
+    <statement>
+      <p>Q-6: Which of the following list methods or operators will <term>not</term> create a new list when used.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>+</p>
+        </statement>
+        <feedback>
+          <p>Using the + operator will create a new list, not modify the original.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>append</p>
+        </statement>
+        <feedback>
+          <p>The append method modifies the original list, rather than creating a new one.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>slice</p>
+        </statement>
+        <feedback>
+          <p>The slice operator creates a new list, rather than modifying the original.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

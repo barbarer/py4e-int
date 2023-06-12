@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<section xml:id="database_database-browser-for-sqlite">
+  <title>Database Browser for SQLite</title>
+      <idx>SQLite</idx>
+    <idx>Database Browser</idx>
+  <p>While this chapter will focus on using Python to work with data in
+            SQLite database files, many operations can be done more conveniently
+            using software called the <em>Database Browser for SQLite</em> which is freely available from:</p>
+  <p>
+    <url href="http://sqlitebrowser.org/" visual="http://sqlitebrowser.org/">http://sqlitebrowser.org/</url>
+  </p>
+  <p>Using the browser you can easily create tables, insert data, edit data,
+            or run simple SQL queries on the data in the database.</p>
+  <p>In a sense, the database browser is similar to a text editor when
+            working with text files. When you want to do one or very few operations
+            on a text file, you can just open it in a text editor and make the
+            changes you want. When you have many changes that you need to do to a
+            text file, often you will write a simple Python program. You will find
+            the same pattern when working with databases. You will do simple
+            operations in the database manager and more complex operations will be
+            most conveniently done in Python.</p>
+  <exercise label="db_MC_browserCap">
+    <statement>
+      <p>Q-1: Which of the following can you do with the Database Browser for SQLite?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>Create a table</p>
+        </statement>
+        <feedback>
+          <p>You can create tables</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Insert data</p>
+        </statement>
+        <feedback>
+          <p>You can insert data</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Edit data</p>
+        </statement>
+        <feedback>
+          <p>You can edit data</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Select data</p>
+        </statement>
+        <feedback>
+          <p>You can select data</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="db_MC_browserTF">
+    <statement>
+      <p>Q-2: True or False? It is convenient to do <term>all</term> changes and operations in a database manager.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>You will do simple operations in the database manager and more complex operations will be
+most conveniently done in Python.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

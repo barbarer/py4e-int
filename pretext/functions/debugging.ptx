@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<section xml:id="functions_debugging">
+  <title>Debugging</title>
+
+<idx>Debugging</idx>
+<idx>Whitespace</idx>
+
+  <p>If you are using a text editor to write your scripts, you might run into
+            problems with spaces and tabs. The best way to avoid these problems is
+            to use spaces exclusively (no tabs). Most text editors that know about
+            Python do this by default, but some don't.</p>
+  <p>Tabs and spaces are usually invisible, which makes them hard to debug,
+            so try to find an editor that manages indentation for you.</p>
+  <p>Also, don't forget to save your program before you run it. Some
+            development environments do this automatically, but some don't. In that
+            case, the program you are looking at in the text editor is not the same
+            as the program you are running.</p>
+  <p>Debugging can take a long time if you keep running the same incorrect
+            program over and over!</p>
+  <p>Make sure that the code that you're looking at is the same code that you're running.
+            If you're not sure, put something like <c>print("hello")</c> at the beginning
+            of the program and run it again. If you don't see <c>hello</c>, you're not
+            running the right program!</p>
+  <exercise label="functDebug_spacing">
+    <statement>
+      <p>Q-1: The best way to avoid problems with spaces and tabs is to use ______ exclusively. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Ss]paces">
+          <feedback>
+            <p>The best way to avoid problems with spacing is to use spaces exclusively.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Incorrect! Which of those two options should you use? Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="functDebug_look">
+    <statement>
+      <p>Q-2: Sometimes the program you are running can be different than the program you are looking at in the text editor if you forget to ____ your program. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Ss]ave">
+          <feedback>
+            <p>Saving frequently will keep your code up to date.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Incorrect! When you make changes to your code, what do you have to do? Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+</section>

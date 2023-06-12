@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<section xml:id="conditional_logical-operators">
+  <title>Logical operators</title>
+    <idx><h>Logical</h><h>Operator</h></idx>
+    <idx><h>Operator</h><h>Logical</h></idx>
+    <idx><h>And</h><h>Operator</h></idx>
+    <idx><h>Operator</h><h>And</h></idx>
+    <idx><h>Not</h><h>Operator</h></idx>
+    <idx><h>Operator</h><h>Not</h></idx>
+    <idx><h>Or</h><h>Operator</h></idx>
+    <idx><h>Operator</h><h>Or</h></idx>
+    <introduction>
+      <title>Combining Conditions</title>
+      <p>Remember that question we had in the previous section: <q>Is the amount we want to withdraw from a bank account greater than the account balance?</q> It turns out we have to also make sure that the customer isn't trying to take out a negative amount.  The question we <em>really</em> need to ask is: <q>Is the amount we want to withdraw from a bank account less than zero <em>or</em> is it greater than the account balance?</q> If either one of those things happens, we can't let the customer do the transaction.</p>
+      <p>Here are other questions that combine two conditions:</p>
+      <p>
+        <ul>
+          <li>Is the age greater than or equal to 18 and less than 21?</li>
+          <li>Did the roll of two dice add up to either 7 or 11?</li>
+        </ul>
+      </p>
+      <p>We use <em>logical operators</em> to ask these sorts of questions in Python.</p>
+              
+    </introduction>
+  <p>There are three <em>logical operators</em>: <c>and</c>,
+            <c>or</c>, and <c>not</c>. The semantics (meaning) of these
+            operators is similar to their meaning in English. For example,</p>
+  <p><c>x &gt; 0 and x &lt; 10</c> is true only if <c>x</c> is greater than 0 <em>and</em> less than 10.</p>
+  <p><c>n % 2 == 0 or n % 3 == 0</c> is true if <em>either</em> of the conditions
+            is true, that is, if the number is divisible by 2 <em>or</em> 3.</p>
+  <p>Finally, the <c>not</c> operator negates a boolean expression, so
+            <c>not (x &gt; y)</c> is true if <c>x &gt; y</c> is false; that
+            is, if <c>x</c> is less than or equal to <c>y</c>.</p>
+  <exercise label="cndtnl-log-mc-between">
+    <statement>
+      <p>Q-2: What is a correct Python expression for checking to see if a number stored in a variable x is between 0 and 5?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>x &gt; 0 and &lt; 5</p>
+        </statement>
+        <feedback>
+          <p>Try again. Each comparison must be between exactly two values.  In this case the right-hand expression &lt; 5 lacks a value on its left.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>x &gt; 0 or x &lt; 5</p>
+        </statement>
+        <feedback>
+          <p>Try again. Although this is legal Python syntax, the expression is incorrect.  It will evaluate to true for all numbers that are either greater than 0 or less than 5.  Because all numbers are either greater than 0 or less than 5, this expression will always be <c>True</c>.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>x &gt; 0 and x &lt; 5</p>
+        </statement>
+        <feedback>
+          <p>Correct! With an <c>and</c> keyword both expressions must be true so the number must be greater than 0 an less than 5 for this expression to be true. Although most other programming languages do not allow this mathematical syntax, in Python, you could also write 0 &lt; x &lt; 5.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  
+  <exercise label="cndtnl-log-mc-and">
+    <statement>
+      <p>Q-3: Which of the following is true for both 7 and 24?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>x &lt; 0 or x &gt; 25</p>
+        </statement>
+        <feedback>
+          <p>Neither value is less than 0 or greater than 25.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>x &gt; 0 or x &lt; 5</p>
+        </statement>
+        <feedback>
+          <p>This is true when x is greater than 0 or less than 5. Both 7 and 24 are greater than 0.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>x &gt; 0 and x &lt; 5</p>
+        </statement>
+        <feedback>
+          <p>This is true when the number is both greater than 0 and less than 5.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  
+  <exercise label="cndtnl-log-mc-True">
+    <statement>
+      <p>Q-4: Which of the following is True?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>not (5 &gt; 71)</p>
+        </statement>
+        <feedback>
+          <p>Correct! 5 &gt; 71 is False, so not(False) is True.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>not (5 &lt; 71)</p>
+        </statement>
+        <feedback>
+          <p>Try again. 5 &lt; 7 is True, so not (True) is False.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>not (5 != 71)</p>
+        </statement>
+        <feedback>
+          <p>Try again. 5 != 71 is True, so not (True) is False.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  
+  <note> 
+    <p>Strictly speaking, the operands of the logical operators should be
+            boolean expressions, but Python is not very strict. Any nonzero number
+            is interpreted as <q>true.</q></p>
+  <program xml:id="strOperators" interactive="activecode" language="python">
+    <input>
+print(17 and True) # this will print True
+        </input>
+  </program>
+  <p>This flexibility can be useful, but there are some subtleties to it that
+            might be confusing. You might want to avoid it until you are sure you
+            know what you are doing.</p>
+        </note>
+</section>

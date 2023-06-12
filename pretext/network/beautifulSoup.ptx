@@ -1,0 +1,443 @@
+<?xml version="1.0"?>
+<section xml:id="network_group-work-on-beautifulsoup-with-requests">
+  <title>Group Work on BeautifulSoup with Requests</title>
+  <introduction>
+  <p>It is best to use a POGIL approach with the following. In POGIL students work
+            in groups on activities and each member has an assigned role.  For more information see <url href="https://cspogil.org/Home" visual="https://cspogil.org/Home">https://cspogil.org/Home</url>.</p>
+  <note>
+    <p>If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.</p>
+  </note>
+  <p>
+    <term>Learning Objectives</term>
+  </p>
+  <p>Students will know and be able to do the following.</p>
+  <p>
+    <em>Content Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Import the necessary libraries</p>
+      </li>
+      <li>
+        <p>Use requests to get the HTML from a URL</p>
+      </li>
+      <li>
+        <p>Create a soup object from the HTML</p>
+      </li>
+      <li>
+        <p>Use <c>find</c> and <c>find_all</c> to get data from a soup object</p>
+      </li>
+      <li>
+        <p>Use <c>class_</c> to find data with a particular CSS class</p>
+      </li>
+      <li>
+        <p>Get the text of a tag using <c>tag.text</c></p>
+      </li>
+      <li>
+        <p>Get the value for an attribute from a tag using <c>tag.get(attribute)</c></p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    <em>Process Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Put code in order.</p>
+      </li>
+      <li>
+        <p>Modify code to produce the correct output.</p>
+      </li>
+    </ul>
+  </p>
+</introduction>
+  <subsection xml:id="network_getting-a-tag-from-a-soup-object">
+    <title>Getting a tag from a soup object</title>
+    <p>BeautifulSoup makes it easy to extract
+                the data you need from an HTML or XML page.  It creates a soup object that
+                contains all the tags in the page.  You can use <c>find</c> or <c>find_all</c> to find
+                either the first of a type of a tag or a list of a type of tag.</p>
+    <p>We will use the <c>requests</c> library to get a response object from a URL,
+                create a <c>BeautifulSoup</c> object from the HTML content in the response,
+                use <c>find</c> to find the first paragraph tag, and then
+                print the first paragraph tag.</p>
+    <exercise label="bs_get_print_first_para">
+      <statement>
+        <p>This will find and print the first paragraph tag from the Michigan Daily site.
+                It will interpret the tag as HTML and show just the text of the tag.</p>
+      </statement>
+      <program xml:id="bs_get_print_first_para_editor" interactive="activecode" language="python3">
+        <input>
+import requests
+from bs4 import BeautifulSoup
+
+# get the response from the URL
+url = "https://www.michigandaily.com/"
+resp = requests.get(url)
+
+# create the soup object
+soup = BeautifulSoup(resp.content, 'html.parser')
+
+# Print the first paragraph tag in the soup
+print(soup.find('p'))
+        </input>
+      </program>
+    </exercise>
+    <p>The <c>html.parser</c> is the HTML parser that is included in the standard Python 3 library.
+                It is used to parse the HTML into a tree of tags.
+                Information on other HTML parsers is available at:</p>
+    <p>
+      <url href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser" visual="http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser">http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser</url>
+    </p>
+    <exercise label="bs_print_first_paragraph_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+      <statement>
+        <p>Put the following blocks in order to print the second paragraph from the Michigan Daily website.  It uses the <c>find_all</c> method on
+                BeautifulSoup to get a list of all of the paragraphs.</p>
+      </statement>
+      <blocks>
+        <block order="1">
+          <choice correct="yes">
+            <cline>import requests</cline>
+            <cline>from bs4 import BeautifulSoup</cline>
+          </choice>
+          <choice>
+            <cline>import requests</cline>
+            <cline>import bs : Use from bs4 import BeautifulSoup</cline>
+          </choice>
+        </block>
+        <block order="7">
+          <cline># get the response from the URL</cline>
+          <cline>url = "https://www.michigandaily.com/"</cline>
+          <cline>resp = requests.get(url)</cline>
+        </block>
+        <block order="8">
+          <choice correct="yes">
+            <cline># create the soup object</cline>
+            <cline>soup = BeautifulSoup(resp.content, 'html.parser')</cline>
+          </choice>
+          <choice>
+            <cline># create the soup object</cline>
+            <cline>soup = BeautifulSoup(resp, 'html.parser') : need to use resp.content</cline>
+          </choice>
+        </block>
+        <block order="9">
+          <choice correct="yes">
+            <cline>p_list = soup.find_all('p')</cline>
+          </choice>
+          <choice>
+            <cline>p_list = soup.find_all(p) : the tag must be a string</cline>
+          </choice>
+        </block>
+        <block order="5">
+          <choice correct="yes">
+            <cline>print(p_list[1])</cline>
+          </choice>
+          <choice>
+            <cline>print(p_list[2]) : the second item is at index 1</cline>
+          </choice>
+        </block>
+      </blocks>
+    </exercise>
+  </subsection>
+  <subsection xml:id="network_getting-text-from-a-tag">
+    <title>Getting text from a tag</title>
+    <p>Some tags have text like a paragraph tag or a span tag.  You can use <c>tagName.text</c> to get the text.
+                You can also find a tag with a particular CSS class.</p>
+    <exercise label="bs_get_text_with_class">
+      <statement>
+        <p>This will print the text for the site description paragraph.</p>
+      </statement>
+      <program xml:id="bs_get_text_with_class_editor" interactive="activecode" language="python3">
+        <input>
+import requests
+from bs4 import BeautifulSoup
+
+# create the soup object from the HTML
+url = "https://www.michigandaily.com/"
+resp = requests.get(url)
+soup = BeautifulSoup(resp.content, 'html.parser')
+
+# get the headline with the class and print its text
+tag = soup.find("p", class_="site-description")
+print(tag.text)
+        </input>
+      </program>
+    </exercise>
+    <note>
+      <p>When you specify a CSS class you must use <c>class_</c> as the keyword.  This is becuase <c>class</c> is already
+                    a keyword that is used to define a new class in Python.</p>
+    </note>
+    <exercise label="bs_get_tag_text_with_class_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+      <statement>
+        <p>Put the following blocks in order to print the text for span tag which
+                is a child of a h3 tag with a class of css-1pjbq1w.</p>
+      </statement>
+      <blocks>
+        <block order="9">
+          <cline>import requests</cline>
+          <cline>from bs4 import BeautifulSoup</cline>
+        </block>
+        <block order="8">
+          <cline>url = "https://www.nytimes.com/"</cline>
+        </block>
+        <block order="1">
+          <choice correct="yes">
+            <cline>resp = requests.get(url)</cline>
+          </choice>
+          <choice>
+            <cline>resp = requests.get('url') : don't put quotes around url - it is a variable</cline>
+          </choice>
+        </block>
+        <block order="4">
+          <cline>soup = BeautifulSoup(resp.content, 'html.parser')</cline>
+        </block>
+        <block order="5">
+          <choice correct="yes">
+            <cline>tag = soup.find("h3", class_="css-1pjbq1w")</cline>
+          </choice>
+          <choice>
+            <cline>tag = soup.find(h3, class_="css-1pjbq1w") : need quotes around h3.</cline>
+          </choice>
+        </block>
+        <block order="10">
+          <choice correct="yes">
+            <cline>tag = tag.find('span')</cline>
+          </choice>
+          <choice>
+            <cline>tag = soup.find('span') : use tag.find</cline>
+          </choice>
+        </block>
+        <block order="3">
+          <cline>print(tag.text)</cline>
+        </block>
+      </blocks>
+    </exercise>
+  </subsection>
+  <subsection xml:id="network_getting-data-from-tags-with-attributes">
+    <title>Getting data from tags with attributes</title>
+    <p>Some tags have attribute and value pairs like the link (anchor) tag.  You can
+                get the value for an attribute of the tag.  A link or anchor tag looks like
+                <c>&lt;a href="url"&gt;link text&lt;/a&gt;</c>. An example is <c>&lt;a href="https://www.w3schools.com"&gt;W3Schools&lt;/a&gt;</c>.</p>
+    <exercise label="bs_get_all_a_tags_and_print_hrefs">
+      <statement>
+        <p>This will find all of the link tags in the New York Times site and print the href for each of them.</p>
+      </statement>
+      <program xml:id="bs_get_all_a_tags_and_print_hrefs_editor" interactive="activecode" language="python3">
+        <input>
+import requests
+from bs4 import BeautifulSoup
+
+# get the soup object
+url = "https://nytimes.com"
+resp = requests.get(url)
+soup = BeautifulSoup(resp.content, 'html.parser')
+
+# print the href in each link (anchor) tag
+tags = soup.find_all('a')
+for tag in tags:
+    print(tag.get('href', None))
+        </input>
+      </program>
+    </exercise>
+    <exercise label="bs_print_get_all_href_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+      <statement>
+        <p>Put the following blocks in order to find all the link tags and print the href for each one for the Michgian Daily.</p>
+      </statement>
+      <blocks>
+        <block order="9">
+          <cline>import requests</cline>
+          <cline>from bs4 import BeautifulSoup</cline>
+        </block>
+        <block order="7">
+          <cline>url = "https://nytimes.com"</cline>
+        </block>
+        <block order="8">
+          <choice correct="yes">
+            <cline>resp = requests.get(url)</cline>
+          </choice>
+          <choice>
+            <cline>resp = requests.find(url) : use get</cline>
+          </choice>
+        </block>
+        <block order="5">
+          <choice correct="yes">
+            <cline>soup = BeautifulSoup(resp.content, 'html.parser')</cline>
+          </choice>
+          <choice>
+            <cline>soup = BeautifulSoup(resp, 'html.parser') : must use .content</cline>
+          </choice>
+        </block>
+        <block order="2">
+          <choice correct="yes">
+            <cline>tags = soup.find_all('a')</cline>
+          </choice>
+          <choice>
+            <cline>tags = soup.find_all('link') : use a for link (anchor)</cline>
+          </choice>
+        </block>
+        <block order="10">
+          <cline>for tag in tags:</cline>
+        </block>
+        <block order="11">
+          <choice correct="yes">
+            <cline>    print(tag.get('href', None))</cline>
+          </choice>
+          <choice>
+            <cline>    print(tag.get('ref', None)) : use href</cline>
+          </choice>
+        </block>
+      </blocks>
+    </exercise>
+  </subsection>
+  <subsection xml:id="network_how-to-find-tags-inside-of-tags">
+    <title>How to Find Tags Inside of Tags</title>
+    <p>Sometimes the tags that you want to find don't have a particular class that
+                makes it easy to find them.  Then you can find a parent tag with a particular
+                class and then use that tag to look for the child tag you want.</p>
+    <note>
+      <p>You can use &#x2018;find_all' to get a list of all tags of a type and then loop through
+                    those tags and get the first tag of a type.</p>
+    </note>
+    <p>You will typically first inspect a webpage to determine how to find what you are
+                looking for in the page.  You can do that with the developer tools in the
+                Chrome browser.  Click on the three dots on the top right of the page and then
+                <q>More Tools</q> and then <q>Developer Tools</q>.  You you can also just right-click
+                on what you are interested in viewing on a webpage, and then click on <q>Inspect</q>.</p>
+    <figure align="">
+      <image source="images/inspect.png" width="50%" alt="Inspecting part of a webpage in the Chrome browser."/>
+    </figure>
+    <p>You will see the HTML source for the thing you inspected.</p>
+    <figure align="">
+      <image source="images/listitem.png" width="50%" alt="Inspecting part of a webpage in the Chrome browser."/>
+    </figure>
+    <p>You can use this information to find a parent tag such as the <q>li</q> tag that contains the <q>a</q> tag
+                in the nagivation bar in the Michigan Daily webpage.
+                Use <em>find_all</em> to get all the <q>li</q> tags and then loop through those tags and use <em>find</em> to get the
+                first <q>a</q> tag in each <q>li</q> tag.</p>
+    <exercise label="bs_get_mini_nav_href">
+      <statement>
+        <p>This will print the first <q>href</q> inside each list item (li) with a class of <q>menu-item-has-children</q>.</p>
+      </statement>
+      <program xml:id="bs_get_mini_nav_href_editor" interactive="activecode" language="python3">
+        <input>
+import requests
+from bs4 import BeautifulSoup
+
+# get the soup object
+url = "https://www.michigandaily.com/"
+resp = requests.get(url)
+soup = BeautifulSoup(resp.content, 'html.parser')
+
+# get all the li tags and find the first link (a) tag and print the href
+li_list = soup.find_all("li", class_="menu-item-has-children")
+for li in li_list:
+    a_tag = li.find('a')
+    print(a_tag.get("href",None))
+        </input>
+      </program>
+    </exercise>
+    <note>
+      <p>You don't have to use all the classes that a tag has.  Try to find a class
+                    that is specific to the tags you are looking for.</p>
+    </note>
+    <exercise label="bs_find_all_and_find" numbered="yes" adaptive="yes" indentation="show" language="python">
+      <statement>
+        <p>Put the following blocks in order to print the href for the first &#x2018;a' tag
+                in each h2 tag with a class of <q>entry-title</q></p>
+      </statement>
+      <blocks>
+        <block order="10">
+          <cline>import requests</cline>
+          <cline>from bs4 import BeautifulSoup</cline>
+        </block>
+        <block order="3">
+          <choice correct="yes">
+            <cline>url = "https://www.michigandaily.com/"</cline>
+          </choice>
+          <choice>
+            <cline>url = https://www.michigandaily.com/ : url must be a string (in quotes)</cline>
+          </choice>
+        </block>
+        <block order="8">
+          <cline>resp = requests.get(url)</cline>
+        </block>
+        <block order="2">
+          <cline>soup = BeautifulSoup(resp.content, 'html.parser')</cline>
+        </block>
+        <block order="9">
+          <choice correct="yes">
+            <cline>li_list = soup.find_all("h2", class_="entry-title")</cline>
+          </choice>
+          <choice>
+            <cline>li_list = soup.find_all("h2", class="entry-title") : must use class_</cline>
+          </choice>
+        </block>
+        <block order="4">
+          <choice correct="yes">
+            <cline>for li in li_list:</cline>
+          </choice>
+          <choice>
+            <cline>for li in tags: : use li_list</cline>
+          </choice>
+        </block>
+        <block order="7">
+          <choice correct="yes">
+            <cline>    a_tag = li.find('a')</cline>
+          </choice>
+          <choice>
+            <cline>    a_tag = li.find('link') : use a (anchor)</cline>
+          </choice>
+        </block>
+        <block order="5">
+          <cline>    print(a_tag.get("href",None))</cline>
+        </block>
+      </blocks>
+    </exercise>
+    <p>The Michigan Daily has a <q>Most Read</q> section. It is in a <q>div</q> tag with a
+                class of <q>jetpack_top_posts_widget</q>.  Inside that tag there are <q>li</q> (list item)
+                tags.  In each <q>li</q> tag is an <q>a</q> tag.</p>
+    <exercise label="bs_get_most_read_href">
+      <statement>
+        <p>Complete the code below to print the
+                href values for the <q>a</q> tags in the <q>Most Read</q> section.</p>
+      </statement>
+      <program xml:id="bs_get_most_read_href_editor" interactive="activecode" language="python3">
+        <input>
+import requests
+from bs4 import BeautifulSoup
+
+# get the soup object
+url = "https://www.michigandaily.com/"
+resp = requests.get(url)
+soup = BeautifulSoup(resp.content, 'html.parser')
+
+# get the div tag with a class of "jetpack_top_posts_widget"
+
+# get all the li tags in the div tag
+
+# loop through the li tags
+
+    # get the 'a' tag and print the value of the "href" attribute
+        </input>
+      </program>
+    </exercise>
+    <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
+    <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+    &lt;div data-component="groupsub" id=bs_group_work_intro data-size_limit=4&gt;
+        &lt;div class="col-sm-6"&gt;
+            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div id="groupsub_button" class="col-sm-6"&gt;
+        &lt;/div&gt;
+        &lt;p&gt;The Submit Group button will submit the answer for each each question
+        on this page for each member of your group. It also logs you as the official
+        group submitter.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  </subsection>
+</section>

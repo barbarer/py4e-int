@@ -1,0 +1,565 @@
+<?xml version="1.0"?>
+<exercises xml:id="turtles_multiple-choice-questions">
+  <title>Multiple Choice Questions</title>
+  <exercise label="Exercises_question10_1_v2">
+    <statement>
+      <p>11-9-1: What order do these four statements need to appear in to not give any errors?</p>
+      <program language="python">
+        <input>
+Statement 1 : alex = Turtle()
+Statement 2 : from turtle import *
+Statement 3 : space = Screen()
+Statement 4 : alex.forward(50)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1234</p>
+        </statement>
+        <feedback>
+          <p>You must first import the turtle module.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>2341</p>
+        </statement>
+        <feedback>
+          <p>You must create a turtle object before you ask it to do things using dot notation.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3142</p>
+        </statement>
+        <feedback>
+          <p>You must first import the turtle module.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>2314</p>
+        </statement>
+        <feedback>
+          <p>Correct! The turtle module needs to be imported and then a screen needs to be created before creating a turtle object.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_question10_2">
+    <statement>
+      <p>11-9-2: What letter will this code draw?</p>
+      <program language="python">
+        <input>
+from turtle import *
+space = Screen()
+alex = Turtle()
+alex.forward(100)
+alex.left(180)
+alex.forward(50)
+alex.left(90)
+alex.forward(150)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>L</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Follow every step and try to recreate the shape. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Follow every step and try to recreate the shape. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>T</p>
+        </statement>
+        <feedback>
+          <p>Correct! The code would create an T shape.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>H</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Follow every step and try to recreate the shape. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_question10_3">
+    <statement>
+      <p>11-9-3: Which way does a turtle (object of the Turtle class) face after this code executes?</p>
+      <program language="python">
+        <input>
+from turtle import *
+space = Screen()
+alex = Turtle()
+alex.forward(150)
+alex.left(180)
+alex.forward(75)
+alex.right(45)
+alex.left(315)
+alex.forward(50)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>East</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Remember where the turtle initially faces when it is created. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>South</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Remember where the turtle initially faces when it is created. Try again</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>West</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Remember where the turtle initially faces when it is created. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>North</p>
+        </statement>
+        <feedback>
+          <p>Correct! The turtle always start from facing east by default.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_question10_4">
+    <statement>
+      <p>11-9-4: How many errors are present in the following code?</p>
+      <program language="python">
+        <input>
+from Turtle Import *
+space = Screen
+alex = turtle()
+alexes.Forward('150')
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>4 errors</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Hint: Remember the correct syntax for creating turtles. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>7 errors</p>
+        </statement>
+        <feedback>
+          <p>Correct! Every row in the code has atleast one problem.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>6 errors</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Hint: Remember the correct syntax for creating turtles. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>5 errors</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Hint: Remember the correct syntax for creating turtles. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_question10_5">
+    <statement>
+      <p>11-9-5: Based on the given code, how many lines will be drawn on the screen?</p>
+      <program language="python">
+        <input>
+from turtle import *
+space = Screen()
+alex = Turtle()
+alex.forward(30)
+alex.left(90)
+alex.penup()
+alex.forward(50)
+alex.left(90)
+alex.pendown()
+alex.forward(20)
+alex.right(90)
+alex.penup()
+alex.forward(50)
+alex.left(180)
+alex.forward(10)
+alex.right(30)
+alex.pendown()
+alex.right(90)
+alex.forward(30)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>2 lines</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Hint: What do penup() and pendown() do? Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>3 lines</p>
+        </statement>
+        <feedback>
+          <p>Correct! Remember, that due to penup() some lines won't be printed.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>4 lines</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Hint: What do penup() and pendown() do? Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>5 lines</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Hint: What do penup() and pendown() do? Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_question10_6">
+    <statement>
+      <p>11-9-6: What would be the final pensize and pencolor after this code executes for both the turtles?</p>
+      <program language="python">
+        <input>
+from turtle import *
+space = Screen()
+alex = Turtle()
+james = Turtle()
+alex.forward(30)
+alex.left(90)
+alex.color("blue")
+alex.pensize(10)
+alex.forward(50)
+alex.left(90)
+alex.color("red")
+alex.forward(20)
+alex.right(90)
+james.pensize(5)
+james.forward(50)
+james.left(180)
+james.forward(10)
+james.right(30)
+james.pensize(2)
+james.right(90)
+james.color("green")
+james.forward(50)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>alex : 5, "Red", james : 4, "Green"</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Follow every step and try to recreate the shape. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>alex : 10, "Blue", james : 10, "Red"</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Follow every step and try to recreate the shape. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>alex : 2, "Green", james : 10, "Blue"</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Follow every step and try to recreate the shape. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>alex : 10, "Red", james : 2, "Green"</p>
+        </statement>
+        <feedback>
+          <p>Correct! The given code would have the turtle with these values at the end of the code.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_question10_7">
+    <statement>
+      <p>11-9-7: What are the final coordinates of the turtle at the end of this code?</p>
+      <program language="python">
+        <input>
+from turtle import *
+space = Screen()
+alex = Turtle()
+alex.forward(30)
+alex.left(90)
+alex.goto(120, 50)
+alex.forward(50)
+alex.left(90)
+alex.goto(30, 30)
+alex.forward(20)
+alex.right(90)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>(30, 10)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Follow every step and try to recreate the shape. Also see what goto() does. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>(10, 30)</p>
+        </statement>
+        <feedback>
+          <p>Correct! The turtle is facing west at (30,30) when it goes forward 20 which decreases x to 10.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>(30, 30)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Follow every step and try to recreate the shape. Also see what goto() does. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>(50, 30)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Follow every step and try to recreate the shape. Also see what goto() does. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_question10_8">
+    <statement>
+      <p>11-9-8: What shape would the following code draw?</p>
+      <program language="python">
+        <input>
+from turtle import *
+
+def draw_shape(turtle, xpos, ypos, width, height, color, size):
+    turtle.penup()
+    turtle.goto(xpos, ypos)
+    turtle.pendown()
+    turtle.color(color)
+    turtle.pensize(size)
+    turtle.begin_fill()
+    for x in range(2):
+        turtle.forward(width)
+        turtle.right(90)
+        turtle.forward(height)
+        turtle.right(90)
+    turtle.end_fill()
+
+space = Screen()
+alex = Turtle()
+draw_shape(alex, 10, 20, 50, 20, 'blue', 5)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>The outline of a square in blue</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Think what the .begin_fill() method does. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The outline of a rectangle in blue</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Think what the .begin_fill() method does. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A blue square</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Look at the height and width parameters of the function. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>A blue rectangle</p>
+        </statement>
+        <feedback>
+          <p>It will draw a filled blue rectangle.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_question10_9">
+    <statement>
+      <p>11-9-9: Given the function below. What parameters would you use to create a green rectangle of pen size 7 with a width 80 and height 50 at location (-100, 80)?</p>
+      <program language="python">
+        <input>
+from turtle import *
+
+def draw_rectangle(turtle, xpos, ypos, width, height, color, size):
+    turtle.penup()
+    turtle.goto(xpos, ypos)
+    turtle.pendown()
+    turtle.color(color)
+    turtle.pensize(size)
+    turtle.begin_fill()
+    for x in range(2):
+        turtle.forward(width)
+        turtle.right(90)
+        turtle.forward(height)
+        turtle.right(90)
+    turtle.end_fill()
+
+space = Screen()
+alex = Turtle()
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>draw_rectangle(alex, 80, 50, -100, 80, 'green', 7)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The parameters are assigned in order. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>draw_rectangle(alex, -100, 80, 80, 50, 'green', 7)</p>
+        </statement>
+        <feedback>
+          <p>This assigns the parameters correctly.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>draw_rectangle(alex, -100, 80, 80, 50, green, 7)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The color must be a string.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>draw_rectangle(alex, 80, 100, 80, 50, 'green', 7)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The xpos is before the ypos.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_question10_10">
+    <statement>
+      <p>11-9-10: What is drawn when the following code runs?</p>
+      <program language="python">
+        <input>
+from turtle import *
+def draw_triangle(turtle, xpos, ypos, width, color, heading):
+    turtle.penup()
+    turtle.goto(xpos, ypos)
+    turtle.setheading(heading)
+    turtle.pendown()
+    turtle.color(color)
+    turtle.begin_fill()
+    for side in range(3):
+        turtle.forward(width)
+        turtle.left(120)
+    turtle.end_fill()
+
+space = Screen()
+alex = Turtle()
+draw_triangle(alex, -120, 30, 60, 'green', 60)
+draw_triangle(alex, -120, 30, 60, 'green', 240)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Tree</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Think of what the heading would be for each triangle. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Hourglass</p>
+        </statement>
+        <feedback>
+          <p>Correct! This is the correct shape that will be printed from this code.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Diamond</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Think of what the heading would be for each triangle. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Rectangle</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Try to draw it yourself.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</exercises>

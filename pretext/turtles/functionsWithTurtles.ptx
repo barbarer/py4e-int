@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<section xml:id="turtles_creating-functions-with-turtles">
+  <title>Creating Functions with Turtles</title>
+  <p>
+    <em>Learning Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Create functions that take a turtle object and draw a shape</p>
+      </li>
+      <li>
+        <p>Add parameters to make functions more reusable</p>
+      </li>
+      <li>
+        <p>Use <c>begin_fill</c> and <c>end_fill</c> to fill a shape</p>
+      </li>
+      <li>
+        <p>Use <c>bgcolor</c> on the screen to change the background color of the screen object.</p>
+      </li>
+    </ul>
+  </p>
+  <idx><h>functions</h><h>turtle</h></idx>
+  <idx><h>turtle</h><h>functions</h></idx>
+  <p>Here is code that draws a square with a turtle using a <c>for</c> loop with <c>range</c>.</p>
+  <exercise label="Turtle_square_orig_ac">
+    <statement>
+      <p>Run the code to see what it draws.</p>
+    </statement>
+    <program xml:id="Turtle_square_orig_ac_editor" interactive="activecode" language="python">
+      <input>
+from turtle import *     # use the turtle library
+space = Screen()         # create a turtle space
+alisha = Turtle()        # create a turtle named alisha
+alisha.setheading(90)    # point due north
+for sides in range(4):   # repeat the indented lines 4 times
+    alisha.forward(100)    # move forward by 100 units
+    alisha.right(90)     # turn by 90 degrees
+        </input>
+    </program>
+  </exercise>
+  <p>We can create a function out of the code that draws the square.</p>
+  <p>
+    <ul>
+      <li>
+        <p>Keep the import at the top of the code</p>
+      </li>
+      <li>
+        <p>Move the code that draws the square after the import</p>
+      </li>
+      <li>
+        <p>Add a function definition and pass in a turtle object.  You can call it anything, but <c>turtle</c> is a good name for an object of the  <c>Turtle</c> class.</p>
+      </li>
+      <li>
+        <p>Modify the code in the function to  use the local name (<c>turtle</c>).</p>
+      </li>
+      <li>
+        <p>Add a call to the function after you create the <c>turtle</c> and pass in the <c>turtle</c> object. Use whatever name you gave the turtle when you created it.</p>
+      </li>
+    </ul>
+  </p>
+  <p>When we execute <c>square(alisha)</c> the local variable <c>turtle</c> is set to
+            the same object as <c>alisha</c>.  Notice that we still need to import the library, create the screen object,
+            create the turtle object, and call the function.</p>
+  <exercise label="Turtle_square_function_ac">
+    <statement>
+      <p>Run the code to see what it draws.</p>
+    </statement>
+    <program xml:id="Turtle_square_function_ac_editor" interactive="activecode" language="python">
+      <input>
+from turtle import *     # use the turtle library
+
+def square(turtle):
+    turtle.setheading(0)     # set the heading to east
+    for sides in range(4):   # repeat the indented lines 4 times
+        turtle.forward(100)    # move forward by 100 units
+        turtle.right(90)       # turn by 90 degrees
+
+space = Screen()         # create a turtle space
+alisha = Turtle()        # create a turtle named alisha
+square(alisha)           # call the square function
+        </input>
+    </program>
+  </exercise>
+  <p>We can change the <c>square</c> function to take a <c>length</c> to make it more reusable.  We can
+            change the <c>length</c> when we call the function to draw different squares. We can even set a default value for length in case a value isn't specified for it.</p>
+  <exercise label="Turtle_square_function_with_length">
+    <statement>
+      <p>Run the code to see what it draws.</p>
+    </statement>
+    <program xml:id="Turtle_square_function_with_length_editor" interactive="activecode" language="python">
+      <input>
+from turtle import *     # use the turtle library
+
+def square(turtle, length = 100):
+    turtle.setheading(0)    # set the heading to east
+    for sides in range(4):   # repeat the indented lines 4 times
+        turtle.forward(length)    # move forward by 100 units
+        turtle.right(90)          # turn by 90 degrees
+
+space = Screen()         # create a turtle space
+alisha = Turtle()        # create a turtle named alisha
+square(alisha, 20)       # call the square function
+alisha.penup()           # pick up the pen
+alisha.goto(40,0)        # move to (40, 0)
+alisha.pendown()         # put down the pen
+square(alisha,40)        # draw another square
+alisha.penup()           # pick up the pen
+alisha.goto(-100,0)      # move to (-100, 0)
+alisha.pendown()         # put down the pen
+square(alisha)           # draw another square
+        </input>
+    </program>
+  </exercise>
+  <p>Let's practice creating reusable functions from code that draws a shape with a <c>turtle</c> object.</p>
+  <exercise label="Turtle_triangle_orig_ac">
+    <statement>
+      <p>Run the code first to see what it draws and then modify it to create a <c>triangle</c> function and pass in the <c>length</c> of each side. Then draw several triangles with the function.</p>
+    </statement>
+    <program xml:id="Turtle_triangle_orig_ac_editor" interactive="activecode" language="python">
+      <input>
+from turtle import *     # use the turtle library
+space = Screen()         # create a turtle space
+alisha = Turtle()        # create a turtle named alisha
+alisha.setheading(60)    # set the heading
+for sides in range(3):   # repeat the indented lines 3 times
+    alisha.forward(100)    # move forward by 100 units
+    alisha.right(120)    # turn by 120 degrees
+        </input>
+    </program>
+  </exercise>
+  <p>We can add even more parameters to set the fill color.  We can make the default fill color green. Use <c>begin_fill()</c> to start the shape you want to fill and <c>end_fill()</c> after the shape is finished.</p>
+  <exercise label="Turtle_square_function_with_color">
+    <statement>
+      <p>Run the code to see what it draws.</p>
+    </statement>
+    <program xml:id="Turtle_square_function_with_color_editor" interactive="activecode" language="python">
+      <input>
+from turtle import *       # use the turtle library
+
+def square(turtle, length = 100, color = 'green'):
+    turtle.setheading(0)    # set the heading to east
+    turtle.fillcolor(color)
+    turtle.begin_fill()
+    for sides in range(4):   # repeat the indented lines 4 times
+        turtle.forward(length)    # move forward by length
+        turtle.right(90)          # turn by 90 degrees
+    turtle.end_fill()
+
+space = Screen()           # create a turtle space
+alisha = Turtle()          # create a turtle named alisha
+square(alisha, 20, 'red')  # call the square function
+alisha.penup()             # pick up the pen
+alisha.goto(40,0)          # move to (40, 0)
+alisha.pendown()           # put down the pen
+square(alisha,40)          # draw another square
+alisha.penup()             # pick up the pen
+alisha.goto(-100,0)        # move to (-100, 0)
+alisha.pendown()           # put down the pen
+square(alisha,100, 'blue') # draw another square
+        </input>
+    </program>
+  </exercise>
+  <p>You can change the size of the screen object, set a background color for the screen, and set the code to not exit until you click the window.  You need to do this when you run turtle code outside of the ebook otherwise the program will run but exit before you can even see the result.</p>
+  <exercise label="Turtle_square_function_with_screen_methods">
+    <statement>
+      <p>Run the code to see what it draws.</p>
+    </statement>
+    <program xml:id="Turtle_square_function_with_screen_methods_editor" interactive="activecode" language="python">
+      <input>
+from turtle import *       # use the turtle library
+
+def square(turtle, length = 100, color = 'green'):
+    turtle.setheading(0)    # set the heading to east
+    turtle.fillcolor(color)
+    turtle.begin_fill()
+    for sides in range(4):   # repeat the indented lines 4 times
+        turtle.forward(length)    # move forward by length
+        turtle.right(90)          # turn by 90 degrees
+    turtle.end_fill()
+
+space = Screen(200,200)    # create a larger turtle space
+space.bgcolor('yellow')    # set the background color
+#space.exitonclick()        # use outside of the ebook
+alisha = Turtle()          # create a turtle named alisha
+square(alisha, 20, 'red')  # call the square function
+alisha.penup()             # pick up the pen
+alisha.goto(40,0)          # move to (40, 0)
+alisha.pendown()           # put down the pen
+square(alisha,40)          # draw another square
+alisha.penup()             # pick up the pen
+alisha.goto(-100,0)        # move to (-100, 0)
+alisha.pendown()           # put down the pen
+square(alisha,100, 'blue') # draw another square
+        </input>
+    </program>
+  </exercise>
+  <exercise label="Turtle_draw_house">
+    <statement>
+      <p>Add a function to draw an equilateral triangle and then write a function
+            to draw a simple house by calling the functions to draw a triangle and a square.</p>
+    </statement>
+    <program xml:id="Turtle_draw_house_editor" interactive="activecode" language="python">
+      <input>
+from turtle import *       # use the turtle library
+
+def square(turtle, length = 100, color = 'green'):
+    turtle.setheading(0)    # set the heading to east
+    turtle.fillcolor(color)
+    turtle.begin_fill()
+    for sides in range(4):   # repeat the indented lines 4 times
+        turtle.forward(length)    # move forward by length
+        turtle.right(90)          # turn by 90 degrees
+    turtle.end_fill()
+
+space = Screen()         # create a turtle space
+t1 = Turtle()            # create a turtle named t1
+        </input>
+    </program>
+  </exercise>
+</section>

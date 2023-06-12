@@ -1,0 +1,355 @@
+<?xml version="1.0"?>
+<section xml:id="functions_functions-and-strings-multiple-choice-questions">
+  <title>Functions and Strings Multiple Choice Questions</title>
+  <exercise label="Exercises_function_string_mc1">
+    <statement>
+      <p>Q-1: Given the below code snippet, which of the following options would create a variable called <c>final_string</c> that is assigned to the word <q>yelling</q>?</p>
+      <program language="python">
+        <input>
+string1 = "yellow"
+string2 = "screaming"
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>final_string = string1[:4] + string2[-3:]</p>
+        </statement>
+        <feedback>
+          <p>Correct! Using the slice operator [start:end], the starting index is inclusive, while the ending index is exclusive.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>final_string = string1[:4] + string2[6:]</p>
+        </statement>
+        <feedback>
+          <p>Correct! Using the slice operator [start:end], the starting index is inclusive, while the ending index is exclusive.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>final_string = string1[:3] + string2[6:]</p>
+        </statement>
+        <feedback>
+          <p>Try again! This would assign final_string to "yeling".</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>final_string = string1[:3] + string2[6:-1]</p>
+        </statement>
+        <feedback>
+          <p>Try again! This would assign final_string to "yelin".</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>final_string = string1[:4].append(string2[-3:])</p>
+        </statement>
+        <feedback>
+          <p>Try again! String objects do not have the attribute "append".</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_function_string_mc2_v4">
+    <statement>
+      <p>Q-2: Which of the following choices correctly prints a sentence using the variable <c>num_of_apples</c>?</p>
+      <program language="python">
+        <input>
+num_of_apples = 4
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>print("I have " + num_of_apples + " apples.")</p>
+        </statement>
+        <feedback>
+          <p>Try again! You can't concatenate a string and an integer together.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>print("I have " + str("num_of_apples") + " apples.")</p>
+        </statement>
+        <feedback>
+          <p>Try again! Do not enclose the variable name in a string or you will get just those characters.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>print("I have 4 apples.")</p>
+        </statement>
+        <feedback>
+          <p>Try again! This doesn't use the variable num_of_apples.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>print("I have " + str(num_of_apples) + " apples.")</p>
+        </statement>
+        <feedback>
+          <p>Correct! By using str, the integer variable is converted into a string.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_function_string_mc3">
+    <statement>
+      <p>Q-3: Which of the following are string methods?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>split()</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>lower()</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>append()</p>
+        </statement>
+        <feedback>
+          <p>Try again! This is a list method, not a string method.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>startswith()</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>sort()</p>
+        </statement>
+        <feedback>
+          <p>Try again! This is a list method, not a string method.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_function_string_mc4_v2">
+    <statement>
+      <p>Q-4: Which of the following code corresponds to the amount of characters in the following <c>string</c> variable?</p>
+      <program language="python">
+        <input>
+string = "I love coding!"
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>count(string)</p>
+        </statement>
+        <feedback>
+          <p>Try again! Count is a python string method that counts the amount of occurrences of a substring.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>len(string)</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>int(string)</p>
+        </statement>
+        <feedback>
+          <p>Try again! String with words cannot be converted to ints.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>length(string)</p>
+        </statement>
+        <feedback>
+          <p>Try again! Instead of length, it should be len, because length is not a built-in python function.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_function_string_mc5">
+    <statement>
+      <p>Q-5: What does the following code output?</p>
+      <program language="python">
+        <input>
+def abbrev(first_name, last_name):
+   print(first_name[0:1] + ". " + last_name.lower())
+
+abbrev("Joanne", "Weathers")
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>J. Weathers</p>
+        </statement>
+        <feedback>
+          <p>Try again! The first letter in the last name should be lowercase.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Jo. Weathers</p>
+        </statement>
+        <feedback>
+          <p>Try again! The end of a slice operator is exclusive (e.g., 1 is exclusive in this example).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>oa. Weathers</p>
+        </statement>
+        <feedback>
+          <p>Try again! Strings are indexed starting at 0.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>J. weathers</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>j. weathers</p>
+        </statement>
+        <feedback>
+          <p>Try again! Only the last name should be lowercase.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_function_string_mc6">
+    <statement>
+      <p>Q-6: After running this code, what would be the output if the input was <c>first_name = "Katie"</c> and <c>last_name = "perkins"</c>?</p>
+      <program language="python">
+        <input>
+def abbrev():
+   first_name = input("What is your first name? ")
+   last_name = input("What is your last name? ")
+   return("Hello " + first_name + last_name[0:2].capitalize() + ". ")
+
+def main():
+   abbrev()
+
+main()
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Hello KatiePe.</p>
+        </statement>
+        <feedback>
+          <p>Try again! This would be correct if there was a print statement.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Nothing.</p>
+        </statement>
+        <feedback>
+          <p>Correct! Nothing would be outputted because there is no print statement.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Hello Katie Pe.</p>
+        </statement>
+        <feedback>
+          <p>Try again! There shouldn't be a space between the first and last name.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Hello KatiePE.</p>
+        </statement>
+        <feedback>
+          <p>Try again! The E should not be capitalized. The upper() method would capitalize the E, but not the capitalize() method.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Exercises_function_string_mc7">
+    <statement>
+      <p>Q-7: Given the variable <c>item</c>, how would you grab the letters <q>tebo</q>?</p>
+      <program language="python">
+        <input>
+def notebook():
+   item = "notebook"
+   # What goes here?
+
+notebook()
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>print(item[2:7])</p>
+        </statement>
+        <feedback>
+          <p>Try again! This would print "teboo".</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>print(item[2:6])</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>print(item[-6:-2])</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>print(item[3] + item[4] + item[5] + item[6])</p>
+        </statement>
+        <feedback>
+          <p>Try again! This would print "eboo".</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>print(item[3:7])</p>
+        </statement>
+        <feedback>
+          <p>Try again! This would print "eboo".</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

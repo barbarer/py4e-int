@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<section xml:id="variables_values-and-types">
+  <title>Values and types</title>
+<idx>Value</idx>
+<idx>Type</idx>
+<idx>String</idx>
+<idx>Quotation Mark</idx>
+<idx><h>Class</h><h>Str</h></idx>
+<idx><h>Str</h><h>Class</h></idx>
+<idx><h>Class</h><h>Int</h></idx>
+<idx><h>Int</h><h>Class</h></idx>
+<idx><h>Class</h><h>Float</h></idx>
+<idx><h>Float</h><h>Class</h></idx>
+<idx>Semantic Error</idx>
+<idx>Error Message</idx>
+  <p>A <em>value</em> is one of the basic things a program works
+            with, like a letter or a number. You can print values in Python.  See what happens
+            when you run the following code.</p>
+  <program xml:id="var-ac-1-vars2" interactive="activecode" language="python">
+    <input>
+print(17)
+print('Hello World!')
+        </input>
+  </program>
+  <p>These values belong to different <em>types</em>: 17
+            is an integer, and <q>Hello World!</q> is a <em>string</em>, so
+            called because it contains a <q>string</q> of letters. You can identify strings because
+            they are enclosed in quotation marks.</p>
+  <p>If you are not sure what type a value has, use the type function to find out.</p>
+  <program xml:id="var-ac-2-var-types" interactive="activecode" language="python">
+    <input>
+print(type('Hello, World!'))
+print(type(17))
+print(type(3.2))
+        </input>
+  </program>
+  <p>Not surprisingly, strings belong to the type <c>str</c> and
+            integers belong to the type <c>int</c>. Less obviously, numbers
+            with a decimal point belong to a type called <c>float</c>, because
+            these numbers are represented in a format called <em>floating
+                point</em>.</p>
+  <p>What about values like <q>17</q> and <q>3.2</q>? They look like numbers, but
+            they are in quotation marks like strings.</p>
+  <exercise label="var-value-mc-string">
+    <statement>
+      <p>csp-10-2-3: The values <q>17</q> and <q>3.2</q> are what type?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>float</p>
+        </statement>
+        <feedback>
+          <p>"3.2" has a decimal but "17" does not, is there an option that would include both values?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>integer (int)</p>
+        </statement>
+        <feedback>
+          <p>What do the quotation marks mean?</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>string (str)</p>
+        </statement>
+        <feedback>
+          <p>Quotation marks imply that the value is a string.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>boolean (bool)</p>
+        </statement>
+        <feedback>
+          <p>A boolean value represents either *True* or *False*.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>They're strings. We can check this using the active codeblock below.</p>
+  <program xml:id="var-ac-2-num-strs" interactive="activecode" language="python">
+    <input>
+print(type('17'))
+print(type('3.2'))
+        </input>
+  </program>
+  <p>When you type a large integer, you might be tempted to use commas
+            between groups of three digits, as in 1,000,000. This is
+            not a legal integer in Python, but it is legal:</p>
+  <program xml:id="var-ac-3-num-commas" interactive="activecode" language="python">
+    <input>
+print(1,000,000)
+        </input>
+  </program>
+  <p>Well, that's probably not what you expected! Python interprets
+            1,000,000 as a comma-separated sequence of integers, which
+            it prints with spaces between.</p>
+  <p>This is the first example we have seen of a semantic error: the code
+            runs without producing an error message, but it doesn't do the <q>right</q>
+            thing.</p>
+  <exercise label="var-value-mc-int">
+    <statement>
+      <p>csp-10-2-6: How would you print the <em>integer</em> <c>1,000,000</c>?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>print("1,000,000")</p>
+        </statement>
+        <feedback>
+          <p>We are trying to print an integer, what do the quotation marks do?</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>print(1000000)</p>
+        </statement>
+        <feedback>
+          <p>To print an integer don't use commas or quotations.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>print(1,000,000)</p>
+        </statement>
+        <feedback>
+          <p>See the example above, commas in between the digits produce spaces.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>print 1000000</p>
+        </statement>
+        <feedback>
+          <p>Remember to use parentheses to print!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="var-value-dnd-type">
+    <statement>
+      <p>Drag and drop the values to match each with its type.</p>
+    </statement>
+    <feedback>
+      <p>Try using type(x) in terminal or your python interpreter.</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>"Hello, World!"</premise>
+        <response>string (str)</response>
+      </match>
+      <match order="2">
+        <premise>17</premise>
+        <response>integer (int)</response>
+      </match>
+      <match order="3">
+        <premise>3.2</premise>
+        <response>float</response>
+      </match>
+      <match order="4">
+        <premise>a</premise>
+        <response>character (char)</response>
+      </match>
+      <match order="5">
+        <premise>True</premise>
+        <response>boolean (bool)</response>
+      </match>
+    </matches>
+  </exercise>
+</section>

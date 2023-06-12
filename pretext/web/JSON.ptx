@@ -1,0 +1,289 @@
+<?xml version="1.0"?>
+<exercises xml:id="web_javascript-object-notation-json">
+  <title>JavaScript Object Notation - JSON</title>
+  <introduction>
+<idx>JSON</idx>
+<idx>JavaScript Object Notation</idx>
+  <p>The JSON format was inspired by the object and array format used in the
+            JavaScript language. But since Python was invented before JavaScript,
+            Python's syntax for dictionaries and lists influenced the syntax of
+            JSON. So the format of JSON is nearly identical to a combination of
+            Python lists and dictionaries.</p>
+  <p>Here is a JSON encoding of some data. The outermost JSON structure is a dictionary
+            and the value for two of the keys (phone and email) are dictionaries as well.</p>
+  <program language="json">
+    <input>
+{
+ "name" : "Chuck",
+ "phone" : {
+   "type" : "intl",
+   "number" : "+1 734 303 4456"
+  },
+  "email" : {
+    "hide" : "yes"
+  }
+}
+</input>
+  </program>
+  <p>Here is the XML equivalent.</p>
+  <program language="{.xml}">
+    <input>
+&lt;person&gt;
+  &lt;name&gt;Chuck&lt;/name&gt;
+  &lt;phone type="intl"&gt;
+    +1 734 303 4456
+  &lt;/phone&gt;
+  &lt;email hide="yes" /&gt;
+&lt;/person&gt;
+</input>
+  </program>
+  <p>You will notice some differences. First, in XML, we can add attributes
+            like <q>intl</q> to the <q>phone</q> tag. In JSON, we simply have key-value pairs in a dictionary.
+            Also the XML <q>person</q> tag is gone, replaced by a set of outer curly
+            braces.</p>
+  <p>In general, JSON structures are simpler than XML because JSON has fewer
+            capabilities than XML. But JSON has the advantage that it maps
+            <em>directly</em> to some combination of dictionaries and lists.
+            And since nearly all programming languages have something equivalent to
+            Python's dictionaries and lists, JSON is a very natural format to have
+            two cooperating programs exchange data.</p>
+  <exercise label="webJSON_MC_diffs_XML">
+    <statement>
+      <p>csp-10-2-1: Which of the following are differences between JSON and XML?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>XML uses attribute = "value" and JSON uses "attribute" = "value"</p>
+        </statement>
+        <feedback>
+          <p>Correct! XML uses attribute = "value" and JSON uses "attribute" = "value"</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>XML supports nested data, but JSON does not</p>
+        </statement>
+        <feedback>
+          <p>Incorrect. Both support nested data</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>XML is used to structure data, and JSON is not</p>
+        </statement>
+        <feedback>
+          <p>Incorrect. Both are used to structure data</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>XML is extensible, while JSON is not</p>
+        </statement>
+        <feedback>
+          <p>Correct! XML is extensible and JSON is not.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="webJSON_MC_not_diffs">
+    <statement>
+      <p>csp-10-2-2: Which of the following is <term>not</term> a difference between JSON and XML?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>XML can add attributes to tags.</p>
+        </statement>
+        <feedback>
+          <p>XML can add attributes to tags, while JSON uses key-value pairs.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>JSON uses curly braces.</p>
+        </statement>
+        <feedback>
+          <p>JSON uses curly braces in place of some tags used in XML.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>XML has a simpler structure than JSON.</p>
+        </statement>
+        <feedback>
+          <p>XML is actually a more complex than JSON because it has more capabilities.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>JSON has a simpler structure than XML.</p>
+        </statement>
+        <feedback>
+          <p>JSON has a simpler structure than XML and fewer capabilities.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>JSON is quickly becoming the format of choice for nearly all data
+            exchange between applications because of its relative simplicity
+            compared to XML.</p>
+  <exercise label="webJSON_MC_acro">
+    <statement>
+      <p>csp-10-2-3: JSON stands for what?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Java Single Object Notation</p>
+        </statement>
+        <feedback>
+          <p>JSON uses some Java notations but isn't fully in the acronym.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>JavaScript Object Notation</p>
+        </statement>
+        <feedback>
+          <p>JSON is an acronym for <b>J</b>ava<b>S</b>cript <b>O</b>bject <b>N</b>otation.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>JavaScript Server Operation Notation</p>
+        </statement>
+        <feedback>
+          <p>The "s" in JSON is actually included in the first word!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Java Sold On Nantucket</p>
+        </statement>
+        <feedback>
+          <p>Java (coffee) is sold many places.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</introduction>
+
+  <subexercises xml:id="web_list-of-dictionaries">
+    <title>List of Dictionaries</title>
+    <introduction><p>The outermost JSON structure can be a dictionary or a list.  Here is an example
+        where the outermost JSON structure is a list.  In this case it is a list of dictionaries.</p>
+    <program language="json">
+      <input>
+[{
+  "id": 1,
+  "first_name": "Jeanette",
+  "last_name": "Penddreth",
+  "email": "jpenddreth0@census.gov",
+  "gender": "Female",
+ }, {
+  "id": 2,
+  "first_name": "Giavani",
+  "last_name": "Frediani",
+  "email": "gfrediani1@senate.gov",
+  "gender": "Non-binary",
+}]
+</input>
+    </program></introduction>
+    <exercise label="webJSON_equivalent_xml">
+      <statement>
+        <p>csp-10-2-4: Which of the following is the correct equivalent XML to the JSON above?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement id="webJSON_equivalent_xml_opt_a">
+            <pre>&lt;students&gt;
+    &lt;student&gt;
+        &lt;id&gt;1&lt;/id&gt;
+        &lt;first_name&gt;Jeanette&lt;first_name&gt;
+        &lt;last_name&gt;Penddreth&lt;last_name&gt;
+        &lt;email&gt;jpenddreth0@census.gov&lt;email&gt;
+        &lt;gender&gt;Female&lt;gender&gt;
+    &lt;/student&gt;
+    &lt;student&gt;
+        &lt;id&gt;2&lt;/id&gt;
+        &lt;first_name&gt;Giavani&lt;first_name&gt;
+        &lt;last_name&gt;Frediani&lt;last_name&gt;
+        &lt;email&gt;gfrediani1@senate.gov&lt;email&gt;
+        &lt;gender&gt;Non-binary&lt;gender&gt;
+    &lt;/student&gt;
+&lt;/students&gt;</pre>
+          </statement>
+          <feedback id="webJSON_equivalent_xml_opt_a">
+            <p>Incorrect - some of the closing tags are not correct</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="webJSON_equivalent_xml_opt_b">
+            <pre>&lt;student&gt;
+    &lt;id&gt;1&lt;/id&gt;
+    &lt;first_name&gt;Jeanette&lt;/first_name&gt;
+    &lt;last_name&gt;Penddreth&lt;/last_name&gt;
+    &lt;email&gt;jpenddreth0@census.gov&lt;/email&gt;
+   &lt;gender&gt;Female&lt;/gender&gt;
+&lt;/student&gt;
+&lt;student&gt;
+    &lt;id&gt;2&lt;/id&gt;
+    &lt;first_name&gt;Giavani&lt;/first_name&gt;
+    &lt;last_name&gt;Frediani&lt;/last_name&gt;
+    &lt;email&gt;gfrediani1@senate.gov&lt;/email&gt;
+    &lt;gender&gt;Non-binary&lt;/gender&gt;
+&lt;/student&gt;</pre>
+          </statement>
+          <feedback id="webJSON_equivalent_xml_opt_b">
+            <p>Incorrect.  This is missing a root tag.  XML must have one root tag.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="webJSON_equivalent_xml_opt_c">
+            <pre>&lt;students&gt;
+    &lt;student&gt;
+        &lt;id&gt;1&lt;/id&gt;
+        &lt;first_name&gt;Jeanette&lt;/first_name&gt;
+        &lt;last_name&gt;Penddreth&lt;/last_name&gt;
+        &lt;email&gt;jpenddreth0@census.gov&lt;/email&gt;
+        &lt;gender&gt;Female&lt;/gender&gt;
+    &lt;/student&gt;
+    &lt;student&gt;
+        &lt;id&gt;2&lt;/id&gt;
+        &lt;first_name&gt;Giavani&lt;/first_name&gt;
+        &lt;last_name&gt;Frediani&lt;/last_name&gt;
+        &lt;email&gt;gfrediani1@senate.gov&lt;/email&gt;
+        &lt;gender&gt;Non-binary&lt;/gender&gt;
+    &lt;/student&gt;
+&lt;/students&gt;</pre>
+          </statement>
+          <feedback id="webJSON_equivalent_xml_opt_c">
+            <p>Correct.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="webJSON_equivalent_xml_opt_d">
+            <pre>&lt;students&gt;
+    &lt;student&gt;
+        &lt;id&gt;1&lt;/id&gt;
+        &lt;/first_name&gt;Jeanette&lt;first_name&gt;
+        &lt;last_name&gt;Penddreth&lt;/last_name&gt;
+        &lt;email&gt;jpenddreth0@census.gov&lt;/email&gt;
+        &lt;gender&gt;Female&lt;/gender&gt;
+    &lt;student&gt;
+        &lt;id&gt;2&lt;/id&gt;
+        &lt;first_name&gt;Giavani&lt;/first_name&gt;
+        &lt;last_name&gt;Frediani&lt;/last_name&gt;
+        &lt;email&gt;gfrediani1@senate.gov&lt;/email&gt;
+        &lt;gender&gt;Non-binary&lt;/gender&gt;
+&lt;/students&gt;</pre>
+          </statement>
+          <feedback id="webJSON_equivalent_xml_opt_d">
+            <p>Incorrect.  The close tags are missing for student.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subexercises>
+</exercises>

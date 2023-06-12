@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+<exercises xml:id="files_multiple-choice-questions">
+  <title>Multiple Choice Questions</title>
+  <exercise label="fileEx_read_v2">
+    <statement>
+      <p>Q-1: Which of the following can be used to open a file called <c>myText.txt</c> in read-only mode?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>infile = open("myText.txt", <q>w</q>)</p>
+        </statement>
+        <feedback>
+          <p>This will open in write-only mode.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>infile = open("myText.txt", r)</p>
+        </statement>
+        <feedback>
+          <p>The r must be in quotes.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>infile = open("myText.txt", <q>read</q>)</p>
+        </statement>
+        <feedback>
+          <p>Use "r" for read-only mode.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>infile = open("myText.txt")</p>
+        </statement>
+        <feedback>
+          <p>The default is read if no mode is specified</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="fileEx_write_v2">
+    <statement>
+      <p>Q-2: Which of the following can be used to open a file called <c>myText.txt</c> in write-only mode?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>outfile = open("myText.txt", w)</p>
+        </statement>
+        <feedback>
+          <p>The w must be in quotes.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>outfile = open("myText.txt", <q>write</q>)</p>
+        </statement>
+        <feedback>
+          <p>Use "w" for write-only mode.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>outfile = open("myText.txt", <q>w</q>)</p>
+        </statement>
+        <feedback>
+          <p>This will open the file in write-only mode.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>outfile = open("myText.txt")</p>
+        </statement>
+        <feedback>
+          <p>This would open the file in read-only mode.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="fileEx_close_v2">
+    <statement>
+      <p>Q-3: Which command below closes the already open file <c>myText.txt</c> if the following code has already been written?</p>
+      <pre>ref_file = open("myText.txt", "r")</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>close()</p>
+        </statement>
+        <feedback>
+          <p>You must call this method on the file object.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>ref_file.close()</p>
+        </statement>
+        <feedback>
+          <p>This closes the file using the variable it has been assigned to.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>close(ref_file)</p>
+        </statement>
+        <feedback>
+          <p>The command close() needs to be called on the file object using dot notation.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>close("myText")</p>
+        </statement>
+        <feedback>
+          <p>The command close() needs to be called on the file object using dot notation.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="fileEx_writeLine">
+    <statement>
+      <p>Q-4: Which of the commands below is used to add the following string to the end of a file object <c>filevar</c>?</p>
+      <pre>somestring = "my Sentence"</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>filevar.append(somestring)</p>
+        </statement>
+        <feedback>
+          <p>Append is a command used for lists, not files.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>filevar.write("somestring")</p>
+        </statement>
+        <feedback>
+          <p>somestring is a variable and does not need quotation marks around it.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>filevar.write(somestring)</p>
+        </statement>
+        <feedback>
+          <p>Using dot notation, we can call the write command with the string variable inside the parentheses.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>somestring.write()</p>
+        </statement>
+        <feedback>
+          <p>The command write() needs to be called on the file object, not the string itself.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="fileEx_printNames">
+    <statement>
+      <p>Q-5: The contents of <c>names.txt</c> is listed here:</p>
+      <pre>Moana
+Cinderella
+Tiana</pre>
+      <p>Which of the following code blocks will print all of the names in <c>names.txt</c>?</p>
+      <p>
+        <c>I</c>
+      </p>
+      <pre>names = open("names.txt", "r")
+for line in names:
+    print(names)</pre>
+      <p>
+        <c>II</c>
+      </p>
+      <pre>names = open("names.txt", "r")
+for line in names:
+    print(line)</pre>
+      <p>
+        <c>III</c>
+      </p>
+      <pre>names = open("names.txt", "r")
+for line in names:
+    print("line")</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>I</p>
+        </statement>
+        <feedback>
+          <p>Append is a command used for lists, not files.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>II</p>
+        </statement>
+        <feedback>
+          <p>somestring is a variable and does not need quotation marks around it.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>III</p>
+        </statement>
+        <feedback>
+          <p>Using dot notation, we can call the write command with the string variable inside the parentheses.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above.</p>
+        </statement>
+        <feedback>
+          <p/>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="fileEx_catch_v2">
+    <statement>
+      <p>Q-6: What keyword do you use to specify code to execute if there is an error when the body of the <c>try</c> executes?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>catch</p>
+        </statement>
+        <feedback>
+          <p>This is used in other languages, but not in Python</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>except</p>
+        </statement>
+        <feedback>
+          <p>Use except to execute code when an error occurs.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>exception</p>
+        </statement>
+        <feedback>
+          <p>Close, but it is shorter.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>error</p>
+        </statement>
+        <feedback>
+          <p>Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="fileEx_how_many_errors">
+    <statement>
+      <p>Q-7: How many errors are in the code below?  It should open the file in read-only mode, read each line and print each line and then close the file.</p>
+      <pre>def print_contents(file)
+    file_obj = open(file)
+    for line in "file_obj":
+        print(line_obj)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>Try again</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>2</p>
+        </statement>
+        <feedback>
+          <p>Try again</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Try again</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>4</p>
+        </statement>
+        <feedback>
+          <p>The first line is missing a ":", the third shouldn't have file_obj in quotes, the fourth should use line rather than line_obj, and the close is missing.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</exercises>

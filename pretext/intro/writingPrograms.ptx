@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<section xml:id="intro_writing-a-program">
+  <title>Writing a program</title>
+<idx>Script</idx>
+  <p>Typing commands into the Python interpreter is a great way to experiment
+            with Python's features, but it is not recommended for solving more
+            complex problems.</p>
+  <p>When we want to write a program, we use a text editor to write the
+            Python instructions into a file, which is called a
+            <em>script</em>. By convention, Python scripts have names that
+            end with <c>.py</c>.</p>
+  <exercise label="intro-write-fitb-file">
+    <statement>
+      <p>Q-1: A(n) ______ is a file that holds Python instructions. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Ss]cript">
+          <feedback>
+            <p>A script is a file that holds Python instructions.</p>
+          </feedback>
+        </condition>
+        <condition string="[Ff]ile">
+          <feedback>
+            <p>What is this type of file called?</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>To execute the script, you have to tell the Python interpreter the name
+            of the file. In a command window, you would type
+            <c>python hello.py</c> as follows:</p>
+  <program language="bash">
+    <input>
+$ cat hello.py
+print('Hello world!')
+$ python hello.py
+Hello world!
+</input>
+  </program>
+  <p>The <q>$</q> is the operating system prompt, and the <q>cat hello.py</q> is
+            showing us that the file <q>hello.py</q> has a one-line Python program to
+            print a string.</p>
+  <p>We call the Python interpreter and tell it to read its source code from
+            the file <q>hello.py</q> instead of prompting us for lines of Python code
+            interactively.</p>
+  <p>You will notice that there was no need to have <em>quit()</em>
+            at the end of the Python program in the file. When Python is reading
+            your source code from a file, it knows to stop when it reaches the end
+            of the file.</p>
+  <exercise label="intro-write-fitb-end">
+    <statement>
+      <p>Q-2: Files containing Python instructions end with what two letters? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="\.?[Pp][Yy]">
+          <feedback>
+            <p>.py at the end of a file implies that it is a script containing Python instructions.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="intro-write-mc-end">
+    <statement>
+      <p>Q-3: How does a Python program stop when reading from a file?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>The file contains a "quit()" statement.</p>
+        </statement>
+        <feedback>
+          <p>Try again. You do not need to inlcude a "quit()" statement.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>The program automatically stops at the end of the file.</p>
+        </statement>
+        <feedback>
+          <p>Correct! When Python is reading source code from a file, it knows to stop when it reaches the end of the file.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The user types $ to start a new program.</p>
+        </statement>
+        <feedback>
+          <p>Try again. $ is the operating system prompt.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The user quits the program manually.</p>
+        </statement>
+        <feedback>
+          <p>Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

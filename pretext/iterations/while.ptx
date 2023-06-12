@@ -1,0 +1,175 @@
+<section xml:id="iterations_the-while-statement">
+        <title>The <c>while</c> statement</title>
+        
+        
+<idx><h>While</h><h>Statement</h></idx>
+<idx><h>Statement</h><h>While</h></idx>
+<idx><h>While</h><h>Loop</h></idx>
+<idx><h>Loop</h><h>While</h></idx>
+<idx>Iteration</idx>
+<idx>Flow of Execution</idx>
+<idx>Condition</idx>
+<idx>Loop</idx>
+<idx>Body</idx>
+        <p>Computers are often used to automate repetitive tasks. Repeating
+            identical or similar tasks without making errors is something that
+            computers do well and people do poorly. Because iteration is so common,
+            Python provides several language features to make it easier.</p>
+        <p>One form of iteration in Python is the <c>while</c> statement.
+            Here is a simple program that counts down from five and then says
+            <q>Blastoff!</q>.</p>
+
+<program xml:id="codelens511" interactive="codelens" language="python">
+    <input>
+n = 5
+while n &gt; 0:
+    print(n)
+    n = n - 1
+print('Blastoff!')
+    </input>
+</program>
+        <p>You can almost read the <c>while</c> statement as if it were
+            English. It means, <q>While <c>n</c> is greater than 0, display the
+            value of <c>n</c> and then reduce the value of <c>n</c> by 1. When you get
+            to 0, exit the <c>while</c> statement and display the word <c>Blastoff!</c></q></p>
+
+    <exercise label="itWhile_MC_blastoff">
+        <statement>
+
+        <p>Q-2: Consider the code block below. What happens when you run this program?</p>
+        <program language="python"><input>
+n = 5
+while n &gt; 0:
+    print(n)
+    n = n + 1
+print('Blastoff!')
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>The program has five iterations but does not print anything.</p>
+                </statement>
+                <feedback>
+                    <p>Incorrect! The program both prints things and has more than five iterations. Try again.</p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>The loop will repeat forever and results in an infinite loop.</p>
+                </statement>
+                <feedback>
+                    <p>Correct! Because the loop is incrementing, rather than decrementing, n will always be greater than 0 and the loop will never end.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>The program compiles and prints "1 2 3 4 5 Blastoff!" where each space is a new line.</p>
+                </statement>
+                <feedback>
+                    <p>Incorrect! The program will compile, but will not start with 1 and won't ever reach "Blastoff!". Try again.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>The program compiles and prints "5 4 3 2 1 Blastoff!" where each space is a new line.</p>
+                </statement>
+                <feedback>
+                    <p>Incorrect! The program will compile, but it won't ever reach "Blastoff!". Try again.</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+        <p>More formally, here is the flow of execution for a <c>while</c>
+            statement:</p>
+        <p><ol marker="1">
+            <li>
+                <p>Evaluate the condition, yielding <c>True</c> or
+                    <c>False</c>.</p>
+            </li>
+            <li>
+                <p>If the condition is false, exit the <c>while</c> statement and
+                    continue execution at the next statement.</p>
+            </li>
+            <li>
+                <p>If the condition is true, execute the body and then go back to
+                    step 1.</p>
+            </li>
+        </ol></p>
+        <p>This type of flow is called a <em>loop</em> because the third
+            step loops back around to the top. We call each time we execute the body
+            of the loop an <em>iteration</em>. For the above loop, we would
+            say, <q>It had five iterations</q>, which means that the body of the loop was
+            executed five times.</p>
+
+        <exercise label="itWhile_fill1">
+            <statement>
+    <p>Q-3: We call each time we execute the body of the loop an ________. <var/>  </p></statement><setup><var><condition string="[Ii]teration"><feedback><p>Each time we execute the body of a loop, we are completing an iteration.</p></feedback></condition><condition string=".*"><feedback><p>Incorrect! Read the text above this to find the answer. Try again!</p></feedback></condition></var></setup></exercise>        <p>The body of the loop should change the value of one or more variables so
+            that eventually the condition becomes false and the loop terminates. We
+            call the variable that changes each time the loop executes and controls
+            when the loop finishes the <em>iteration variable</em>. If there
+            is no iteration variable, the loop will repeat forever, resulting in an
+            <em>infinite loop</em>.</p>
+
+    <exercise label="itWhile_MC_xy2">
+        <statement>
+
+        <p>Q-4: Consider the code block below. What are the values of x and y when this while loop finishes executing?</p>
+        <program language="python"><input>
+x = 2
+y = 5
+
+while (y &gt; 2 and x &lt; y):
+    x = x + 1
+    y = y - 1
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>x = 2; y = 5</p>
+                </statement>
+                <feedback>
+                    <p>Incorrect! These were the values of x and y at first, but they changed by the time the loop finished executing. Try again.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>x = 5; y = 2</p>
+                </statement>
+                <feedback>
+                    <p>Incorrect! The while loop will finish executing before x and y reach these values. Try again.</p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>x = 4; y = 3</p>
+                </statement>
+                <feedback>
+                    <p>Correct! The loop will terminate at x = 4 and y = 3 because at this point, x is not less than y.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>x = 4; y = 2</p>
+                </statement>
+                <feedback>
+                    <p>Incorrect! The way the loop modifies x and y, it is impossible for y to be 2 while x is 4. Try again.</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+    </section>
+

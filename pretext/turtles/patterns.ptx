@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<section xml:id="turtles_making-patterns-within-patterns">
+  <title>Making Patterns within Patterns</title>
+  <idx><h>for loops</h><h>nested</h></idx>
+  <idx><h>nested</h><h>for loops</h></idx>
+  <idx>setExecutionLimit</idx>
+  <p>We now know the pattern for creating any polygon.  We can wrap that pattern in another loop to create <url href="http://en.wikipedia.org/wiki/Spirograph" visual="http://en.wikipedia.org/wiki/Spirograph">spirograph</url> like patterns.  The example below uses pentagons, but you can use other polygons instead.</p>
+  <note>
+    <p>The outer <c>for</c> loop in the code below on line 8 executes 20 times and the inner <c>for</c> loop on line 13 executes 5 times <em>for each</em> of the outer loop values, 5 times when the outer loop value is 0, 5 times when the outer loop value is 1, 5 times when the outer loop value is 2, and so on.  The inner loop is executed a total of 20 * 5 = 100 times.  The turtle can take a long time to finish drawing this pattern.  Normally code in the browser is limited to only running in 10 seconds or less.  But, we can use the <c>sys</c> library (short for system) <c>setExecutionLimit(milliseconds)</c> procedure which will let the code run for up to the specified number of milliseconds.  One second is 1,000 milliseconds, so 50,0000 milliseconds is 50 seconds.</p>
+  </note>
+  <exercise label="Turtle_Spirograph1">
+    <statement>
+      <p>Run the code to see what it draws.</p>
+    </statement>
+    <program xml:id="Turtle_Spirograph1_editor" interactive="activecode" language="python">
+      <input>
+from turtle import *     # use the turtle library
+from sys import *        # use the system library
+setExecutionLimit(50000) # let this take up to 50 seconds
+space = Screen()         # create a turtle space
+zoe = Turtle()           # create a turtle named zoe
+zoe.setheading(90)       # point due north
+
+# This part makes the circle
+for repeats in range(20):     # draw the pattern 20 times
+    zoe.forward(10)           # Offset the shapes a bit
+    zoe.right(18)             # And turn each one a bit
+
+    # This part makes a pentagon
+    for sides in range(5):    # repeat 5 times
+        zoe.forward(50)       # move forward by 50 unit
+        zoe.right(72)         # turn by 72 degrees
+        </input>
+    </program>
+  </exercise>
+  <p>By setting the pen color differently, we can distinguish the part that draws the shape, from the part that draws <em>between</em> the shapes.</p>
+  <exercise label="Turtle_Spirograph2">
+    <statement>
+      <p>Run the code to see what it draws.</p>
+    </statement>
+    <program xml:id="Turtle_Spirograph2_editor" interactive="activecode" language="python">
+      <input>
+from turtle import *     # use the turtle library
+from sys import *        # use the system library
+setExecutionLimit(50000) # let this take up to 50 seconds
+space = Screen()         # create a turtle space
+zoe = Turtle()           # create a turtle named zoe
+zoe.setheading(90)       # point zoe due north
+
+# This part makes the circle
+for repeats in range(20):   # 20 times to draw the pattern
+    zoe.color("green")      # set the color to green
+    zoe.forward(10)           # Offset the shapes a bit
+    zoe.right(18)             # And turn each one a bit
+    zoe.color("red")          # set the color to red
+
+    # This part makes a pentagon
+    for sides in range(5):    # repeat 5 times
+        zoe.forward(50)         # move forward 50 units
+        zoe.right(72)           # turn by 72 degrees
+        </input>
+    </program>
+  </exercise>
+  <p>You can use the coloring in the picture below to help you figure out the correct order of the lines below.</p>
+  <exercise label="turtle_3_1_Turtle_Spiro" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>There is a way of arranging the statements below such that this image is created. The turtle will draw many triangles.  Move the needed pieces of the program from the left into the space on the right.  Indent lines as needed.</p>
+      <image source="turtles/Figures/BlueTrianglesRedCircle.png" width="200px%"/>
+    </statement>
+    <blocks>
+      <block order="9">
+        <cline>from turtle import *</cline>
+        <cline>from sys import *</cline>
+        <cline>setExecutionLimit(50000)</cline>
+      </block>
+      <block order="7">
+        <cline>wn = Screen()</cline>
+        <cline>mateo = Turtle()</cline>
+        <cline>mateo.setheading(90)</cline>
+      </block>
+      <block order="4">
+        <cline>for repeats in range(20):</cline>
+      </block>
+      <block order="2" correct="no">
+        <cline>for repeats in range(20) </cline>
+      </block>
+      <block order="3">
+        <cline>    mateo.color("red")</cline>
+        <cline>    mateo.forward(10)</cline>
+        <cline>    mateo.left(18)</cline>
+      </block>
+      <block order="8" correct="no">
+        <cline>    mateo.color("red")</cline>
+        <cline>    mateo.forward(10)</cline>
+        <cline>    mateo.left(12) </cline>
+      </block>
+      <block order="6">
+        <cline>    for sides in range(3):</cline>
+        <cline>    </cline>
+      </block>
+      <block order="1" correct="no">
+        <cline>    for sides in range(4): </cline>
+      </block>
+      <block order="5">
+        <cline>        mateo.color("blue")</cline>
+        <cline>        mateo.forward(50)</cline>
+        <cline>        mateo.right(120)</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <p>You can use the coloring in the picture below to help you figure out the correct order of the lines below.</p>
+  <exercise label="turtle_3_2_Turtle_Spiro_Blue_Red" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>There is a way of arranging the statements below such that this image is created. The turtle will draw many triangles. Move the needed pieces of the program from the left into the space on the right.  Indent lines as needed.</p>
+      <image source="turtles/Figures/RedTrianglesBlueCircle.png" width="200px%"/>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>from turtle import *</cline>
+        <cline>from sys import *</cline>
+        <cline>setExecutionLimit(50000)</cline>
+      </block>
+      <block order="5">
+        <cline>wn = Screen()</cline>
+        <cline>mateo = Turtle()</cline>
+        <cline>mateo.setheading(90)</cline>
+      </block>
+      <block order="2">
+        <cline>for repeats in range(20):</cline>
+      </block>
+      <block order="8" correct="no">
+        <cline>for repeats in range(20) </cline>
+      </block>
+      <block order="6">
+        <cline>    mateo.color("blue")</cline>
+        <cline>    mateo.forward(10)</cline>
+        <cline>    mateo.left(18)</cline>
+      </block>
+      <block order="3">
+        <cline>    for sides in range(3):</cline>
+      </block>
+      <block order="7" correct="no">
+        <cline>    for sides in range(3) </cline>
+      </block>
+      <block order="1">
+        <cline>        mateo.color("red")</cline>
+        <cline>        mateo.forward(50)</cline>
+        <cline>        mateo.right(120)</cline>
+      </block>
+      <block order="9" correct="no">
+        <cline>        mateo.color("red")</cline>
+        <cline>        mateo.forward(50)</cline>
+        <cline>        mateo.right(60) </cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="Turtle_Nested_Error1">
+    <statement>
+      <p>The following example has 4 errors.  Can you fix the errors so that the code compiles and runs?</p>
+    </statement>
+    <program xml:id="Turtle_Nested_Error1_editor" interactive="activecode" language="python">
+      <input>
+from turtle import *    # use the turtle library
+from sys import *
+setExecutionLimit(50000)
+
+wn = screen()
+mateo = Turtle()
+mateo.setheading(90)
+
+for repeats in range(20)
+    mateo.color("red")
+    mateo.forward(10)
+    mateo.left(18)
+
+    for sides in range(3):
+        mateo.Color("blue")
+        mateo.forward(50)
+        mateo.Right(120)
+        </input>
+    </program>
+  </exercise>
+  <exercise label="Turtle_Nested_Error2">
+    <statement>
+      <p>The following example has 4 errors.  Can you fix the errors so that the code compiles and runs?</p>
+    </statement>
+    <program xml:id="Turtle_Nested_Error2_editor" interactive="activecode" language="python">
+      <input>
+from turtle import *    # use the turtle library
+from sys import *
+setExecutionLimit(50000)
+
+wn = screen()
+mateo = turtle()
+mateo.setheading(90)
+
+for repeats in range(20):
+    mateo.color("red")
+    mateo.forward(10)
+    mateo.left(18)
+
+    for sides in range(3)
+        mateo.color("blue")
+        mateo.Forward(50)
+        mateo.right(120)
+        </input>
+    </program>
+  </exercise>
+</section>

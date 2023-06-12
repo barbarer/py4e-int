@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<section xml:id="strings_a-string-is-a-sequence">
+  <title>A string is a sequence</title>
+<idx>Sequence</idx>
+<idx>Character</idx>
+<idx><h>Operator</h><h>Bracket</h></idx>
+<idx><h>Bracket</h><h>Operator</h></idx>
+<idx>Index</idx>
+<idx><h>Index</h><h>Starting at Zero</h></idx>
+<idx><h>Starting at Zero</h><h>Index</h></idx>
+<idx>TypeError</idx>
+  <p>A string is a <em>sequence</em> of characters. You can access
+            the characters one at a time with the bracket operator:</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; fruit = 'banana'
+&gt;&gt;&gt; letter = fruit[1]
+</input>
+  </program>
+  <p>The second statement extracts the character at index position 1 from the
+            <c>fruit</c> variable and assigns it to the <c>letter</c>
+            variable.</p>
+  <p>The expression in brackets is called an <em>index</em>. The
+            index indicates which character in the sequence you want.</p>
+  <p>But you might not get what you expect:</p>
+  <program xml:id="strCharacters" interactive="activecode" language="python">
+    <input>
+fruit = 'banana'
+letter = fruit[1]
+print(letter)
+        </input>
+  </program>
+  <p>For most people, the first letter of <q>banana</q> is <q>b</q>, not
+            <q>a</q>. But in Python, the index of a sequence is equal to its
+            offset from the beginning of the string, and the offset of
+            the first letter is zero.</p>
+  <program xml:id="strFirst" interactive="activecode" language="python">
+    <input>
+fruit = 'banana'
+letter = fruit[0]
+print(letter)
+        </input>
+  </program>
+  <p>So <q>b</q> is the 0th letter (<q>zero-th</q>) of <q>banana</q>,
+            <q>a</q> is the 1th letter (<q>one-th</q>), and <q>n</q> is the
+            2th (<q>two-th</q>) letter.</p>
+  <figure align="">
+    <image source="images/string.svg" width="50%" alt="String Indexes"/>
+  </figure>
+  <exercise label="str-seq-mc-cheer">
+    <statement>
+      <p>11-9-3: What is printed by the following statements?</p>
+      <pre>cheer = "Go Blue!"
+print(cheer[3])</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>"o"</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Remember that in Python, counting starts at zero; so "o" is actually cheer[1]. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>" "</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Remember that in Python, counting starts at zero; so " " is actually cheer[2]. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>"B"</p>
+        </statement>
+        <feedback>
+          <p>Correct! In Python, counting starts with zero; so cheer[3] is "B".</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>"l"</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Remember that in Python, counting starts at zero; so "l" is actually cheer[4]. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>You can use any expression, including variables and operators, as an
+            index, but the value of the index has to be an integer. Otherwise you
+            get:</p>
+  <program xml:id="strFloatIndex" interactive="activecode" language="python">
+    <input>
+fruit = 'banana'
+letter = fruit[1.5]
+        </input>
+  </program>
+  <exercise label="str-seq-mc-error">
+    <statement>
+      <p>11-9-5: The following code would cause what kind of error?</p>
+      <pre>fruit = 'papaya'
+letter = fruit[1.5]</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>IndexError</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! You will get an IndexError if you try to access a string beyond its range. For example, if string = "hi", calling string[2] would cause an IndexError. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>TypeError</p>
+        </statement>
+        <feedback>
+          <p>Correct! A TypeError would occur because the program is expecting an integer as the index, not a float.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>SyntaxError</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! A SyntaxError is caused when there are issues with the code as it is written, rather than the values it is given. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>This code is correct and would cause no errors</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! You cannot use a float as the value of an index. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="str-seq-mc-name">
+    <statement>
+      <p>11-9-6: What is printed by the following statements?</p>
+      <pre>hello = "Hi, my name is Olivia."
+hello = hello[15]
+print(hello)</pre>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>"O"</p>
+        </statement>
+        <feedback>
+          <p>Correct! In Python, counting starts with zero, so hello[15] = 'O'. Then, the asignment statement sets hello equal to 'O'.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>" "</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Remember that in Python, counting starts at zero! Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>"Olivia"</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! hello[15] = 'O', not 'Olivia'. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>"l"</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Make sure you're counting correctly, starting from 0. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="str-seq-fitb-brackets-expr">
+    <statement>
+      <p>11-9-7: The expression in brackets that indicates which character you want to get from a sequence is called a(n) ______. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Ii]ndex">
+          <feedback>
+            <p>Correct! An index is an integer value used to select an item in a sequence, such as a
+character in a string.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Incorrect! Hint: its value has to be an integer. Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+</section>

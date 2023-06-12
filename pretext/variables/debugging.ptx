@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<section xml:id="variables_debugging">
+  <title>Debugging</title>
+<idx>Debugging</idx>
+<idx>Syntax Error</idx>
+<idx>Error Message</idx>
+<idx>Use Before Def</idx>
+<idx>Exception</idx>
+<idx>Runtime Error</idx>
+<idx>Semantic Error</idx>
+<idx><h>Case-sensitivity</h><h>Variable Names</h></idx>
+<idx><h>Variable Names</h><h>Case-sensitivity</h></idx>
+<idx>Order of Operations</idx>
+  <p>At this point, the syntax error you are most likely to make is an
+            illegal variable name, like <c>class</c> and <c>yield</c>,
+            which are keywords, or <c>odd~job</c> and <c>US$</c>, which contain illegal
+            characters.</p>
+  <p>If you put a space in a variable name, Python thinks it is two operands
+            without an operator:</p>
+  <program xml:id="var-ac-12-badname" interactive="activecode" language="python">
+    <input>
+bad name = 5
+        </input>
+  </program>
+  <exercise label="var-debug-mc-name">
+    <statement>
+      <p>csp-10-2-2: Which error will you get if you name a variable <q>bad name</q>?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>NameError</p>
+        </statement>
+        <feedback>
+          <p>No, a NameError occurs when a variable is used before it is defined.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>SyntaxError</p>
+        </statement>
+        <feedback>
+          <p>This error comes from bad input.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>TypeError</p>
+        </statement>
+        <feedback>
+          <p>No, a TypeError occurs when an operation or function is applied to an object of inappropriate type.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>There will not be an error</p>
+        </statement>
+        <feedback>
+          <p>No, this will cause an error - see above for an example.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>For syntax errors, the error messages don't help much. The most common
+            messages are <c>SyntaxError: invalid syntax</c> and
+            <c>SyntaxError: invalid token</c>, neither of which is very
+            informative.</p>
+  <p>The runtime error you are most likely to make is a <q>use before def;</q>
+            that is, trying to use a variable before you have assigned a value. This
+            can happen if you spell a variable name wrong:</p>
+  <program xml:id="var-ac-13-definition" interactive="activecode" language="python">
+    <input>
+principal = 327.68
+interest = principle * rate
+        </input>
+  </program>
+  <p>Variables names are case sensitive, so <c>LaTeX</c> is not the
+            same as <c>latex</c>.</p>
+  <p>At this point, the most likely cause of a semantic error is the order of
+    operations. For example, to evaluate <m>1 \over {2\pi }</m> (which is .159), you might be tempted to write</p>
+  <program xml:id="var-ac-14-pi" interactive="activecode" language="python">
+    <input>
+print(1.0 / 2.0 * 3.14)
+        </input>
+  </program>
+  <p>But the division happens first, so you would get <m>\pi \over 2</m>, which is not
+            the same thing! There is no way for Python to know what you meant to
+            write, so in this case you don't get an error message; you just get the
+            wrong answer. <em>Try adding parentheses to the code above to return the correct answer.</em></p>
+  <exercise label="var-fitb-error-fix">
+    <statement>
+      <p>csp-10-2-5: ________ is the process of fixing errors in your code. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Dd]ebugging">
+          <feedback>
+            <p>Debugging is the process of fixing errors in your code.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="var-debug-mc-equation">
+    <statement>
+      <p>csp-10-2-6: Which error will you get if you use the equation 1/2*3.14 instead of 1/(2*3.14)?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>NameError</p>
+        </statement>
+        <feedback>
+          <p>No, a NameError occurs when a variable is used before it is defined.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>SyntaxError</p>
+        </statement>
+        <feedback>
+          <p>No, a SyntaxError occurs when the program cannot understand a line of code.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>TypeError</p>
+        </statement>
+        <feedback>
+          <p>No, a TypeError occurs when an operation or function is applied to an object of inappropriate type.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>There will not be an error</p>
+        </statement>
+        <feedback>
+          <p>This will still compute, but will not return the expected result.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

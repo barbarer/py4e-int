@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<section xml:id="lists_objects-and-values">
+  <title>Objects and values</title>
+<idx><h>List</h><h>Parsing</h></idx>
+<idx><h>Parsing</h><h>List</h></idx>
+  <p>If we execute these assignment statements:</p>
+  <program language="python">
+    <input>
+a = 'banana'
+b = 'banana'
+</input>
+  </program>
+  <p>we know that <c>a</c> and <c>b</c> both refer to a string,
+            but we don't know whether they refer to the <em>same</em> string. There are two
+            possible states:</p>
+  <figure align="">
+    <image source="images/list1.svg" width="50%" alt="Variables and Objects"/>
+  </figure>
+  <p>In one case, <c>a</c> and <c>b</c> refer to two different
+            objects that have the same value. In the second case, they refer to the
+            same object.</p>
+  <p>To check whether two variables refer to the same object, you can use the
+            <c>is</c> operator.</p>
+  <program xml:id="listStringIs" interactive="activecode" language="python">
+    <input>
+a = 'banana'
+b = 'banana'
+print(a is b)
+        </input>
+  </program>
+  <exercise label="listOb_fill1">
+    <statement>
+      <p>Q-2: What operator can be used to see if two variables refer to the same object? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Ii]s">
+          <feedback>
+            <p>The is operator will check if two variables refer to the same object.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>In this example, Python only created one string object, and both
+            <c>a</c> and <c>b</c> refer to it.</p>
+  <p>But when you create two lists, you get two objects:</p>
+  <program xml:id="listIs" interactive="activecode" language="python">
+    <input>
+a = [1, 2, 3]
+b = [1, 2, 3]
+print(a is b)
+        </input>
+  </program>
+  <p>In this case we would say that the two lists are
+            <em>equivalent</em>, because they have the same elements, but
+            not <em>identical</em>, because they are not the same object. If
+            two objects are identical, they are also equivalent, but if they are
+            equivalent, they are not necessarily identical.</p>
+  <exercise label="listOb_fill2">
+    <statement>
+      <p>Q-4: When two lists have the same elements, but are different objects we say they are __________. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Ee]quivalent">
+          <feedback>
+            <p>These lists are equivalent because they look the same, but actually refer to different objects.</p>
+          </feedback>
+        </condition>
+        <condition string="[Ii]dentical">
+          <feedback>
+            <p>In order for lists to be identical, they must refer to the same object. For example, a = [1, 2, 3] and b = a</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>Until now, we have been using <q>object</q> and <q>value</q> interchangeably, but
+            it is more precise to say that an object has a value. If you execute
+            <c>a = [1,2,3]</c>, <c>a</c> refers to a list object whose
+            value is a particular sequence of elements. If another list has the same
+            elements, we would say it has the same value.</p>
+  <exercise label="listOb_dnd">
+    <statement>
+      <p>Match the terms to the code examples.</p>
+    </statement>
+    <feedback>
+      <p>Try again.</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>Equivalent</premise>
+        <response> a = [1, 2, 3] b = [1, 2, 3]</response>
+      </match>
+      <match order="2">
+        <premise>Identical</premise>
+        <response> a = [1, 2, 3] b = a</response>
+      </match>
+    </matches>
+  </exercise>
+</section>

@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<section xml:id="variables_statements">
+  <title>Statements</title>
+<idx>Statement</idx>
+<idx>Interactive Mode</idx>
+<idx>Script Mode</idx>
+  <p>A <em>statement</em> is a unit of code that the Python
+            interpreter can execute. We have seen two kinds of statements: print being
+            an expression statement and assignment.</p>
+  <p>When you type a statement in interactive mode, the interpreter executes
+            it and displays the result, if there is one.</p>
+  <p>A script usually contains a sequence of statements. If there is more
+            than one statement, the results appear one at a time as the statements
+            execute.</p>
+  <p>For example, run this code to see what it does.</p>
+  <program xml:id="var-ac-6-print-vars" interactive="activecode" language="python">
+    <input>
+print(1)
+x = 2
+print(x)
+        </input>
+  </program>
+  <p>The assignment statement produces no output.</p>
+  <exercise label="var-state-mc-var3">
+    <statement>
+      <p>csp-10-2-2: What is the value of var3 after the following code executes?</p>
+      <pre>var1 = "cat"
+var2 = "dog"
+var3 = "bird"
+var1 = var2
+var3 = var1
+var2 = "fish"</pre>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>dog</p>
+        </statement>
+        <feedback>
+          <p>The value of var3 is first set to "bird" but then changed to be the value of var1.  The value of var1 is first set to "cat" but later changed to the value of var2 which was set to "dog".</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>fish</p>
+        </statement>
+        <feedback>
+          <p>Only var2 has the value of fish.  When you assign the value of a variable to the value of another variable the value is copied to the new variable.  No relationship is created between the two variables.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>cat</p>
+        </statement>
+        <feedback>
+          <p>The value of var3 is first set to "bird" but then changed to be the value of var1.  However, the value of var1 also is changed after it is originally set.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>bird</p>
+        </statement>
+        <feedback>
+          <p>While var3 is originally set to "bird" the value is changed later.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="var-state-mc-var2">
+    <statement>
+      <p>csp-10-2-3: What is the value of var2 after the following code executes?</p>
+      <pre>var1 = "cat"
+var2 = "dog"
+var3 = "bird"
+var1 = var2
+var3 = var1
+var2 = "fish"</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>dog</p>
+        </statement>
+        <feedback>
+          <p>The value of var2 is first set to "dog" but then it changes. What does it change to?</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>fish</p>
+        </statement>
+        <feedback>
+          <p>The value of var2 is first set to "dog" then changed to "fish". Even though var1 is reassigned to the value of var2 it does not change the value of var2.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>cat</p>
+        </statement>
+        <feedback>
+          <p>Var1 is first assigned to the value "cat", what is var2 assigned to?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>bird</p>
+        </statement>
+        <feedback>
+          <p>Var3 is initially set to "bird", but "bird" has no relationship to var2. What is var2 assigned to?</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="var-state-fitb-give-value">
+    <statement>
+      <p>csp-10-2-4: The process of giving value to a variable is called a(n) <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="^assignment$|^Assignment$|^ASSIGNMENT$">
+          <feedback>
+            <p>The process of giving value to a variable is called an assignment.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="var-state-ca-assign">
+    <statement>
+      <p>Click the assignments in this codeblock.</p>
+    </statement>
+    <feedback>
+      <p>Remember that an assignment gives value to a variable and does not produce output.</p>
+    </feedback>
+    <areas>
+      <cline><area correct="yes">minutes = 60</area></cline>
+      <cline><area correct="no">print(minutes)</area></cline>
+      <cline><area correct="yes">seconds = minutes * 60</area></cline>
+      <cline><area correct="no">print(seconds)</area></cline>
+    </areas>
+  </exercise>
+</section>

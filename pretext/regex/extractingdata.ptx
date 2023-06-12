@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<section xml:id="regex_extracting-data-using-regular-expressions">
+  <title>Extracting Data Using Regular Expressions</title>
+<idx>Findall Method</idx>
+<idx>Regex Square Brackets</idx>
+  <p>If we want to extract data from a string in Python we can use the
+            <c>findall()</c> method to extract all of the substrings which
+            match a regular expression. Let's use the example of wanting to extract
+            anything that looks like an email address from any line regardless of
+            format. For example, we want to pull the email addresses from each of
+            the following lines:</p>
+  <pre>From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
+Return-Path: &lt;postmaster@collab.sakaiproject.org&gt;
+          for &lt;source@collab.sakaiproject.org&gt;;
+Received: (from apache@localhost)
+Author: stephen.marquard@uct.ac.za</pre>
+  <p>We don't want to write code for each of the types of lines, splitting
+            and slicing differently for each line. This following program uses
+            <c>findall()</c> to find the lines with email addresses in them
+            and extract one or more addresses from each of those lines.</p>
+  <exercise label="extractingdata_exercise_1">
+    <statement>
+      <p>Use findall to find the lines with email addresses in them and print them.</p>
+    </statement>
+    <program xml:id="extractingdata_exercise_1_editor" interactive="activecode" language="python">
+      <input>
+import re
+s = 'A message from csev@umich.edu to cwen@iupui.edu about meeting @2PM'
+lst = re.findall('\S+@\S+', s)
+print(lst)
+        </input>
+    </program>
+  </exercise>
+  <p>The <c>findall()</c> method searches the string in the second
+            argument and returns a list of all of the strings that look like email
+            addresses. We are using a two-character sequence that matches a
+            non-whitespace character (<c>\S</c>).</p>
+  <p>The output of the program is:</p>
+  <pre>['csev@umich.edu', 'cwen@iupui.edu']</pre>
+  <exercise label="re_data_mc_s">
+    <statement>
+      <p>11-9-2: What does \S match with when using regular expressions?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Whitespace characters</p>
+        </statement>
+        <feedback>
+          <p>Whitespace characters are matched by \s</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>It matches '\' and 'S'</p>
+        </statement>
+        <feedback>
+          <p>\ is used as an escape for some characters, so \S is seen as one character.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Non-whitespace characters</p>
+        </statement>
+        <feedback>
+          <p>Correct! \S matches all non-whitespace characters.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>This is not a part of the regular expression library</p>
+        </statement>
+        <feedback>
+          <p>This is part of the regex library!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>Translating the regular expression, we are looking for substrings that
+            have at least one non-whitespace character, followed by an at-sign,
+            followed by at least one more non-whitespace character. The
+            <c>\S+</c> matches as many non-whitespace characters as
+            possible.</p>
+  <p>The regular expression would match twice (<url href="mailto:csev@umich.edu" visual="mailto:csev@umich.edu">csev@umich.edu</url> and
+            <url href="mailto:cwen@iupui.edu" visual="mailto:cwen@iupui.edu">cwen@iupui.edu</url>), but it would not match the string <q>@2PM</q> because there
+            are no non-blank characters <em>before</em> the at-sign. We can
+            use this regular expression in a program to read all the lines in a file
+            and print out anything that looks like an email address as follows:</p>
+  <exercise label="re_data_ac1">
+    <statement>
+      <p>This code searches for lines that have an at-sign (@) between characters.</p>
+    </statement>
+    <program xml:id="re_data_ac1_editor" interactive="activecode" language="python">
+      <input>
+import re
+hand = open('mbox-short.txt')
+for line in hand:
+    line = line.rstrip()
+    x = re.findall('\S+@\S+', line)
+    if len(x) &gt; 0:
+        print(x)
+        </input>
+    </program>
+  </exercise>
+  <p>We read each line and then extract all the substrings that match our
+            regular expression. Since <c>findall()</c> returns a list, we
+            simply check if the number of elements in our returned list is more than
+            zero to print only lines where we found at least one substring that
+            looks like an email address.</p>
+  <p>Some of our email addresses have incorrect characters like <q>&lt;</q> or <q>;</q>
+            at the beginning or end. Let's declare that we are only interested in
+            the portion of the string that starts and ends with a letter or a
+            number.</p>
+  <p>To do this, we use another feature of regular expressions. Square
+            brackets are used to indicate a set of multiple acceptable characters we
+            are willing to consider matching. In a sense, the <c>\S</c> is
+            asking to match the set of <q>non-whitespace characters</q>. Now we will be a
+            little more explicit in terms of the characters we will match.</p>
+  <p>Here is our new regular expression:</p>
+  <pre>[a-zA-Z0-9]\S*@\S*[a-zA-Z]</pre>
+  <exercise label="re_data_fitb">
+    <statement>
+      <p>11-9-4: <BlankNode/> are used to indicate a set of multiple acceptable characters we are willing to consider matching. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="(?:square\s+brackets|\[\])">
+          <feedback>
+            <p>Correct! Square brackets are used when matching multiple sets of characters.</p>
+          </feedback>
+        </condition>
+        <condition string="brackets">
+          <feedback>
+            <p>What type?</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>This is getting a little complicated and you can begin to see why
+            regular expressions are their own little language unto themselves.
+            Translating this regular expression, we are looking for substrings that
+            start with a <em>single</em> lowercase letter, uppercase letter,
+            or number <q>[a-zA-Z0-9]</q>, followed by zero or more non-blank characters
+            (<c>\S*</c>), followed by an at-sign, followed by zero or more
+            non-blank characters (<c>\S*</c>), followed by an uppercase or
+            lowercase letter. Note that we switched from <c>+</c> to <c>*</c> to indicate
+            zero or more non-blank characters since <c>[a-zA-Z0-9]</c> is already one
+            non-blank character. Remember that the <c>*</c> or <c>+</c> applies to the single
+            character immediately to the left of the plus or asterisk.</p>
+  <p>If we use this expression in our program, our data is much cleaner:</p>
+  <exercise label="re_data_ac2">
+    <statement>
+      <p>This code searches for lines that have an at-sign (@) between letter or number characters.</p>
+    </statement>
+    <program xml:id="re_data_ac2_editor" interactive="activecode" language="python">
+      <input>
+import re
+hand = open('mbox-short.txt')
+for line in hand:
+    line = line.rstrip()
+    x = re.findall('[a-zA-Z0-9]\S+@\S+[a-zA-Z]', line)
+    if len(x) &gt; 0:
+        print(x)
+        </input>
+    </program>
+  </exercise>
+  <p>Notice that on the <c>source@collab.sakaiproject.org</c> lines, our regular
+            expression eliminated two letters at the end of the string (<q>&gt;;</q>).
+            This is because when we append <c>[a-zA-Z]</c> to the end of our regular
+            expression, we are demanding that whatever string the regular expression
+            parser finds must end with a letter. So when it sees the <q>&gt;</q> at the end of
+            <q>sakaiproject.org&gt;;</q> it simply stops at the last <q>matching</q> letter it
+            found (i.e., the <q>g</q> was the last good match).</p>
+  <exercise label="re_data_mc_findall">
+    <statement>
+      <p>11-9-6: What does [a-zA-Z0-9] match with when used in the findall() method?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>All letters (capitalized and uncapitalized) and numbers 0 through 9</p>
+        </statement>
+        <feedback>
+          <p>This will match all letters, uppercase and lowercase, and will match all numbers 0 through 9.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Matches a, zA, Z0, and 9</p>
+        </statement>
+        <feedback>
+          <p>This will match more characters than that.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>This is an invalid command in the regex library</p>
+        </statement>
+        <feedback>
+          <p>This is a valid command.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A lowercase letter, an uppercase letter, and a number, all at once</p>
+        </statement>
+        <feedback>
+          <p>This will only match one character at a time.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>Also note that the output of the program is a Python list that has a
+            string as the single element in the list.</p>
+</section>

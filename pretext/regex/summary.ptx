@@ -1,0 +1,56 @@
+<section xml:id="regex_summary">
+        <title>Summary</title>
+        <p>While this only scratched the surface of regular expressions, we have
+            learned a bit about the language of regular expressions. They are search
+            strings with special characters in them that communicate your wishes to
+            the regular expression system as to what defines <q>matching</q> and what is
+            extracted from the matched strings. Here are some of those special
+            characters and character sequences:</p>
+        <p><c>^</c> Matches the beginning of the string.</p>
+        <p><c>$</c> Matches the end of the string.</p>
+        <p><c>.</c> Matches any character (a wildcard).</p>
+        <p><c>\s</c> Matches a whitespace character.</p>
+        <p><c>\S</c> Matches a non-whitespace character (opposite of s).</p>
+        <p><c>*</c> Applies to the immediately preceding character(s) and indicates to match
+            zero or more times.</p>
+        <p><c>*?</c> Applies to the immediately preceding character(s) and indicates to
+            match zero or more times in <q>non-greedy mode</q>.</p>
+        <p><c>+</c> Applies to the immediately preceding character(s) and indicates to match
+            one or more times.</p>
+        <p><c>+?</c> Applies to the immediately preceding character(s) and indicates to
+            match one or more times in <q>non-greedy mode</q>.</p>
+        <p><c>?</c> Applies to the immediately preceding character(s) and indicates to match
+            zero or one time.</p>
+        <p><c>??</c> Applies to the immediately preceding character(s) and indicates to
+            match zero or one time in <q>non-greedy mode</q>.</p>
+        <p><c>[aeiou]</c> Matches a single character as long as that character is in the
+            specified set. In this example, it would match <q>a</q>, <q>e</q>, <q>i</q>, <q>o</q>, or
+            <q>u</q>, but no other characters.</p>
+        <p><c>[a-z0-9]</c> You can specify ranges of characters using the minus sign. This
+            example is a single character that must be a lowercase letter or a
+            digit.</p>
+        <p><c>[^A-Za-z]</c> When the first character in the set notation is a caret, it
+            inverts the logic. This example matches a single character that is
+            anything <em>other than</em> an uppercase or lowercase letter.</p>
+        <p><c>( )</c> When parentheses are added to a regular expression, they are ignored
+            for the purpose of matching, but allow you to extract a particular
+            subset of the matched string rather than the whole string when using
+            <c>findall()</c>.</p>
+        <p><c>\b</c> Matches an empty string, but only at a word boundary.  Must be used in a raw string (r<q>string</q>) so that it isn't changed to a backspace.</p>
+        <p><c>\B</c> Matches an empty string, but only when it is not at the beginning or end of a word.</p>
+        <p><c>\d</c> Matches any decimal digit; equivalent to the set [0-9].</p>
+        <p><c>\D</c> Matches any non-digit character; equivalent to the set [^0-9].</p>
+
+<exercise label="re-summary-dnd1">
+    <statement><p>Match each character with its regex definition.</p></statement>
+    <feedback><p>Look above for the definitions of these special characters.</p></feedback>
+<matches><match order="1"><premise>^</premise><response>Matches the beginning of the line.</response></match><match order="2"><premise>$</premise><response>Matches the end of the line.</response></match><match order="3"><premise>.</premise><response>Matches any character (a wildcard).</response></match><match order="4"><premise>\s</premise><response>Matches a whitespace character.</response></match><match order="5"><premise>\S</premise><response>Matches a non-whitespace character.</response></match></matches></exercise>
+<exercise label="re-summary-dnd2">
+    <statement><p>Match each character with its regex definition.</p></statement>
+    <feedback><p>Look above for the definitions of these special characters.</p></feedback>
+<matches><match order="1"><premise>*</premise><response>Match the previous character(s) zero or more times (greedy).</response></match><match order="2"><premise>*?</premise><response>Match the previous character(s) zero or more times in "non-greedy mode".</response></match><match order="3"><premise>+</premise><response>Match the previous character(s) one or more times (greedy).</response></match><match order="4"><premise>+?</premise><response>Match the previous character(s) one or more times in "non-greedy mode".</response></match><match order="5"><premise>?</premise><response>Match the previous character(s) zero or one time.</response></match><match order="6"><premise>??</premise><response>Match the previous character(s) zero or one time in "non-greedy mode".</response></match></matches></exercise>
+<exercise label="re-summary-dnd3">
+    <statement><p>Match each character with its regex definition.</p></statement>
+    <feedback><p>Look above for the definitions of these special characters.</p></feedback>
+<matches><match order="1"><premise>[aeiou]</premise><response>Matches a single character as long as that character is in the specified set.</response></match><match order="2"><premise>()</premise><response>Used to extract a particular subset of the matched string rather than the whole string when using findall().</response></match><match order="3"><premise>\b</premise><response>Matches an empty string, but only at the start or end of a word.</response></match><match order="4"><premise>\B</premise><response>Matches an empty string, but not at the start or end of a word.</response></match><match order="5"><premise>\d</premise><response>Matches any decimal digit; equivalent to the set [0-9].</response></match><match order="6"><premise>\D</premise><response>Matches any non-digit character; equivalent to the set [^0-9].</response></match></matches></exercise>    </section>
+

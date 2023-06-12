@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<section xml:id="pictures_understanding-image-representation">
+  <title>Understanding Image Representation</title>
+  <blockquote>
+    <p>Understanding images requires understanding a set of abstractions:</p>
+  </blockquote>
+  <p>
+    <ol marker="1">
+      <li>
+        <p>Images are made up of little pixels (objects of the Pixel class), laid out on an (x,y) grid.</p>
+      </li>
+      <li>
+        <p>Each pixel contains a red value, a green value, and a blue value.</p>
+      </li>
+      <li>
+        <p>Each color value is actually a number between 0 and 255.</p>
+      </li>
+      <li>
+        <p>If a pixel has red=0, green=0, and blue=0 then the color is black since this is an absence of any color of light.</p>
+      </li>
+      <li>
+        <p>If a pixel as red=255, green=255, and blue=255 then the color is white.  Try tilting the bottom of a cd in white light to see the colors in the light.</p>
+      </li>
+    </ol>
+  </p>
+  <figure align="center" xml:id="fig_abstraction_id1">
+    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure: A grid with horizontal (x) and vertical (y) dimensions</caption>
+    <image source="pictures/Figures/grid.png" width="50%" alt="A grid with horizontal (x) and vertical (y) dimensions"/>
+  </figure>
+  <p>There are some excellent CS Unplugged activities for understanding <url href="http://csunplugged.org/image-representation" visual="http://csunplugged.org/image-representation">image and color representation</url>.</p>
+  <exercise label="Image_where_is_0_0">
+    <statement>
+      <p>11-9-1: Where is x = 0 y = 0 on an image?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Middle of the image in width on the left side</p>
+        </statement>
+        <feedback>
+          <p>y is 0 at the top left corner</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Top right corner of the image</p>
+        </statement>
+        <feedback>
+          <p>x is 0 at the left corner</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Middle of the image in width and height</p>
+        </statement>
+        <feedback>
+          <p>y is 0 at the top left corner and x is 0 on the left</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Top left corner of the image</p>
+        </statement>
+        <feedback>
+          <p>Correct! x is 0 and y is 0 at the top left corner of the image</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Bottom left corner of the image</p>
+        </statement>
+        <feedback>
+          <p>y is 0 at the top and increases towards the bottom</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="Image_red_color">
+    <statement>
+      <p>11-9-2: What color would red = 255, green = 0, blue = 0 be?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>black</p>
+        </statement>
+        <feedback>
+          <p>Black is an absence of light (all values are 0).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>white</p>
+        </statement>
+        <feedback>
+          <p>White is when all values are 255.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>red</p>
+        </statement>
+        <feedback>
+          <p>If the green and blue are 0 and the red is 255 this will be red.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>green</p>
+        </statement>
+        <feedback>
+          <p>This would be true if the green was 255 and the other values were 0.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>blue</p>
+        </statement>
+        <feedback>
+          <p>This would be true if the blue was 255 and the other values were 0.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

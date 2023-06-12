@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<section xml:id="variables_comments">
+  <title>Comments</title>
+  <idx>comment</idx>
+  <p>As programs get bigger and more complicated, they get more difficult to
+            read. Formal languages are dense, and it is often difficult to look at a
+            piece of code and figure out what it is doing, or why.</p>
+  <p>For this reason, it is a good idea to add notes to your programs to
+            explain in natural language what the program is doing. These notes are
+            called <em>comments</em>, and in Python they start with the <c>#</c>
+            symbol:</p>
+  <program language="python">
+    <input>
+# compute the percentage of the hour that has elapsed
+percentage = (minute * 100) / 60
+</input>
+  </program>
+  <p>In this case, the comment appears on a line by itself. You can also put
+            comments at the end of a line:</p>
+  <program language="python">
+    <input>
+percentage = (minute * 100) / 60     # percentage of an hour
+</input>
+  </program>
+  <p>Everything from the <c>#</c> to the end of the line is ignored; it
+            has no effect on the program.</p>
+  <p>Comments are most useful when they document non-obvious features of the
+            code. It is reasonable to assume that the reader can figure out <em>what</em>
+            the code does; it is much more useful to explain <em>why</em>.</p>
+  <exercise label="var-comments-mc-use">
+    <statement>
+      <p>csp-10-2-1: What are comments used for?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>To add notes to code.</p>
+        </statement>
+        <feedback>
+          <p>Comments are used to add notes to code.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>To assign names to variables.</p>
+        </statement>
+        <feedback>
+          <p>Comments are not read by the program when code is running, so variable assignments should not be commented out.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>To run code.</p>
+        </statement>
+        <feedback>
+          <p>Try again! Comments do not run the code.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>To keep track of how many times a loop has iterated.</p>
+        </statement>
+        <feedback>
+          <p>Try again! Please do not keep track of iterations in a comment!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>This comment is redundant with the code and useless:</p>
+  <program language="python">
+    <input>
+v = 5     # assign 5 to v
+</input>
+  </program>
+  <p>This comment contains useful information that is not in the code:</p>
+  <program language="python">
+    <input>
+v = 5     # velocity in meters/second.
+</input>
+  </program>
+  <p>Good variable names can reduce the need for comments, but long names can
+            make complex expressions hard to read, so there is a trade-off.</p>
+  <exercise label="var-comments-fitb-symbol">
+    <statement>
+      <p>csp-10-2-2: What is the symbol for a single line of comments? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="#">
+          <feedback>
+            <p>Yes, # is used to start a single line of comments.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again! Remember that three sets of quotation marks are used for multi-line comments.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="var-comments-mc-false">
+    <statement>
+      <p>csp-10-2-3: Which of the following is <term>not</term> true about comments?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Comments start with the symbol #</p>
+        </statement>
+        <feedback>
+          <p>Try again! This is true! Which of the options is not?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Comments document the non-obvious features of the code.</p>
+        </statement>
+        <feedback>
+          <p>Try again! This is true! Which of the options is not?</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Comments function like any other line of code.</p>
+        </statement>
+        <feedback>
+          <p>Comments are ignored and have no effect on the program.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Comments cause the rest of the line to be ignored.</p>
+        </statement>
+        <feedback>
+          <p>Try again! This is true! Which of the options is not?</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="var-comments-mc-print">
+    <statement>
+      <p>csp-10-2-4: What will be printed after the following code executes?</p>
+      <pre>name = "Milo"
+age = 12
+sentence = " is this many years old: "
+#print(name + statement + age)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Milo is this many years old: 12</p>
+        </statement>
+        <feedback>
+          <p>Try again! Remember that # is the symbol for comments.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Milois this many years old:12</p>
+        </statement>
+        <feedback>
+          <p>Try again! Remember that # is the symbol for comments.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Milo + is this many years old: + 12</p>
+        </statement>
+        <feedback>
+          <p>Try again! Remember that # is the symbol for comments.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Nothing will print.</p>
+        </statement>
+        <feedback>
+          <p>The print statement is commented out, so this code only assigns values to each variable.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

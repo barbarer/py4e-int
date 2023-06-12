@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<section xml:id="files_reading-files">
+  <title>Reading files</title>
+    <idx><h>Reading</h><h>File</h></idx>
+    <idx><h>File</h><h>Reading</h></idx>
+    <idx>Counter</idx>
+    <idx><h>File</h><h>Open</h></idx>
+    <idx><h>Open</h><h>File</h></idx>
+  <p>While the <em>file handle</em> object does not contain the actual data in the
+            file, it is quite easy to construct a <c>for</c> loop to read
+            through and count each of the lines in a file:</p>
+  <program xml:id="fileLines" interactive="activecode" language="python" datafile="files/mbox-short.txt">
+    <input>
+fhand = open('mbox-short.txt')
+count = 0
+for line in fhand:
+    count = count + 1
+print('Line Count:', count)
+        </input>
+  </program>
+  <p>We can use the file handle object in a <c>for</c> loop.
+            Our <c>for</c> loop simply counts the number of lines in the file
+            and prints them out. The rough translation of the <c>for</c> loop
+            into English is, <q>for each line in the file represented by the file
+            handle object, add one to the <c>count</c> variable.</q></p>
+  <p>The reason that the <c>open</c> function does not read the entire
+            file is that the file might be quite large with many gigabytes of data.
+            The <c>open</c> statement takes the same amount of time regardless
+            of the size of the file. The <c>for</c> loop actually causes the
+            data to be read from the file.</p>
+  <p>When the file is read using a <c>for</c> loop in this manner,
+            Python takes care of splitting the data in the file into separate lines
+            using the newline character. Python reads each line through the newline
+            and includes the newline as the last character in the <c>line</c>
+            variable for each iteration of the <c>for</c> loop.</p>
+  <p>Because the <c>for</c> loop reads the data one line at a time, it
+            can efficiently read and count the lines in very large files without
+            running out of main memory to store the data. The above program can
+            count the lines in any size file using very little memory since each
+            line is read, counted, and then discarded.</p>
+  <exercise label="file-read-fitb-lines">
+    <statement>
+      <p>Q-2: When using a for loop to read lines, how many lines are read at a time? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="([Oo]ne)|1">
+          <feedback>
+            <p>When using a for loop, the program reads each line individually.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>If you know the file is relatively small compared to the size of your
+            main memory, you can read the whole file into one string using the
+            <c>read</c> method on the file handle.</p>
+  <program xml:id="fileSlice" interactive="activecode" language="python">
+    <input>
+fhand = open('mbox-short.txt')
+inp = fhand.read()
+print(len(inp))
+print(inp[:20])
+        </input>
+  </program>
+  <p>In this example, the entire contents (all 94,626 characters) of the file
+            <em>mbox-short.txt</em> are read directly into the variable
+            <c>inp</c>. We use string slicing to print out the first 20
+            characters of the string data stored in <c>inp</c>.</p>
+  <p>When the file is read in this manner, all the characters including all
+            of the lines and newline characters are one big string in the variable
+            <c>inp</c>. It is a good idea to store the output of <c>read</c> as a variable
+            because each call to <c>read</c> exhausts the resource:</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; fhand = open('mbox-short.txt')
+&gt;&gt;&gt; print(len(fhand.read()))
+94626
+&gt;&gt;&gt; print(len(fhand.read()))
+0
+</input>
+  </program>
+  <p>Remember that this form of the <c>open</c> function should only be used
+            if the file data will fit comfortably in the main memory of your computer.
+            If the file is too large to fit in main memory, you should write your
+            program to read the file in chunks using a <c>for</c> or <c>while</c> loop.</p>
+  <exercise label="file-read-pp-code" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Put the following code in order so that it uses a for each loop to read the file and print out the total number of lines.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <cline>count = 0</cline>
+        <cline>file_handler = open('textFile.txt')</cline>
+      </block>
+      <block order="2">
+        <cline>for line in file_handler:</cline>
+      </block>
+      <block order="3">
+        <cline>    count = count + 1</cline>
+      </block>
+      <block order="4">
+        <cline>print('Line Count:', count)</cline>
+      </block>
+    </blocks>
+  </exercise>
+</section>

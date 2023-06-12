@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<section xml:id="network_parsing-html-and-scraping-the-web">
+  <title>Parsing HTML and scraping the web</title>
+  <p>One of the common uses of the <c>urllib</c> capability in Python
+            is to <em>scrape</em> the web. Web scraping is when we write a
+            program that pretends to be a web browser and retrieves pages, then
+            examines the data in those pages looking for patterns.</p>
+  <p>As an example, a search engine such as Google will look at the source of
+            one web page and extract the links to other pages and retrieve those
+            pages, extracting links, and so on. Using this technique, Google
+            <em>spiders</em> its way through nearly all of the pages on the
+            web.</p>
+  <p>Google also uses the frequency of links from pages it finds to a
+            particular page as one measure of how <q>important</q> a page is and how high
+            the page should appear in its search results.</p>
+  <exercise label="html_parse">
+    <statement>
+      <p>Q-1: _____________ is when we write a
+            program that pretends to be a web browser and retrieves pages, then
+            examines the data in those pages looking for patterns.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>HTML parsing</p>
+        </statement>
+        <feedback>
+          <p>HTML parsing is breaking down scraped data into smaller bits specifically for data mining.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Crawling</p>
+        </statement>
+        <feedback>
+          <p>Crawling involves going through different websites and inspecting them, before scraping or parsing.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Search engine</p>
+        </statement>
+        <feedback>
+          <p>Search engines crawl the world wide web and scrape pages.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Web scraping</p>
+        </statement>
+        <feedback>
+          <p>Correct, Scraping involves copying data from the web into a specific storage location.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

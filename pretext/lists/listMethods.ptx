@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<section xml:id="lists_list-methods">
+  <title>List methods</title>
+<idx><h>List</h><h>Operations</h></idx>
+<idx><h>Operations</h><h>List</h></idx>
+<idx><h>List</h><h>Concatenation</h></idx>
+<idx><h>Concatenation</h><h>List</h></idx>
+<idx><h>List</h><h>Repetition</h></idx>
+<idx><h>Repetition</h><h>List</h></idx>
+  <p>Python provides methods that operate on lists. For example,
+            <c>append</c> adds a new element to the end of a list:</p>
+  <program xml:id="listAppend" interactive="activecode" language="python">
+    <input>
+t = ['a', 'b', 'c']
+t.append('d')
+print(t)
+        </input>
+  </program>
+  <exercise label="listMethod_MC_append">
+    <statement>
+      <p>Q-2: What is printed by the following statements?</p>
+      <pre>alist = [4, 2, 8, 6, 5]
+alist.append(True)
+alist.append(False)
+print(alist)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>[4, 2, 8, 6, 5, False, True]</p>
+        </statement>
+        <feedback>
+          <p>True was added first, then False was added last.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>[4, 2, 8, 6, 5, True, False]</p>
+        </statement>
+        <feedback>
+          <p>Yes, each item is added to the end of the list.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[True, False, 4, 2, 8, 6, 5]</p>
+        </statement>
+        <feedback>
+          <p>append adds at the end, not the beginning.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p><c>extend</c> takes a list as an argument and appends all of the
+            elements:</p>
+  <program xml:id="listExtend" interactive="activecode" language="python">
+    <input>
+t1 = ['a', 'b', 'c']
+t2 = ['d', 'e']
+t1.extend(t2)
+print(t1)
+        </input>
+  </program>
+  <p>This example leaves <c>t2</c> unmodified.</p>
+  <p><c>sort</c> arranges the elements of the list from low to high:</p>
+  <program xml:id="listSort" interactive="activecode" language="python">
+    <input>
+t = ['d', 'c', 'e', 'b', 'a']
+t.sort()
+print(t)
+        </input>
+  </program>
+  <exercise label="listMethod_MC_sort">
+    <statement>
+      <p>Q-5: True or False? The sort method alphabetizes lists.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>While this may be true if the values are letter characters, sort can be used on lists with different elements, too.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>The sort method puts elements in order of low to high, this can be true for letters, numbers, or whatever the elements of the list are.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>Most list methods are void; they modify the list and return
+            <c>None</c>. If you accidentally write <c>t = t.sort()</c>,
+            you will be disappointed with the result.</p>
+  <exercise label="listMethod_fill1">
+    <statement>
+      <p>Q-6: Most list methods are _______. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Vv]oid">
+          <feedback>
+            <p>Most list methods are void meaning they don't return anything.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again! (Remember that functions are either fruitful or void)</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+</section>

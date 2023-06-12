@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<section xml:id="tuples_debugging">
+  <title>Debugging</title>
+<idx>Debugging Tuples</idx>
+<idx>Shape Error</idx>
+  <p>Lists, dictionaries and tuples are known generically as <term>data
+                structures</term>. In this chapter, we have started to see <term>compound</term>
+            data structures, like lists of tuples and dictionaries with
+            tuples as keys and lists as values.</p>
+  <p>Compound data structures are useful, but they are prone to <em>shape errors</em>;
+            that is, errors caused when a data structure has the wrong type, size, or
+            composition, or perhaps you write some code and forget the shape of your
+            data and introduce an error. For example, if you are expecting a list containing
+            one integer and I just give you an integer that isn't in a list, it won't work.</p>
+  <exercise label="question10_9_1">
+    <statement>
+      <p>11-9-1: When an error is present in your code, what should you do to help discover the bug?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>Read, retreat, run, ruminate</p>
+        </statement>
+        <feedback>
+          <p>Correct! As shown in Chapter 1, these are the best ways to go about discovering bugs in your code.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Read, google, run, ruminate</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! While Google is very useful for programmers, it's not one of the debugging steps we reviewed in Chapter 1. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Email your GSI for help</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! While you can always reach out to your GSI with questions, always make sure to first try and find the bug yourself. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise>
+    <statement label="tuple-wrong-data-struct">
+      <p>11-9-2: A(n) ________ is an error that is caused when a data structure has the wrong type, size, or composition. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Ss]hape\s+[Ee]rror">
+          <feedback>
+            <p>Correct! A shape error is more likely to occur when working with compound data structures.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Incorrect! If you need a refresher, reread the opening paragraphs of this section. Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="question10_9_3">
+    <statement>
+      <p>11-9-3: Which of the following are examples of compound data structures? (Select all that apply)</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>Lists of tuples</p>
+        </statement>
+        <feedback>
+          <p>Correct! Lists of tuples are a type of compound data structure.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Lists</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Lists are a type of data structure, but a list by itself isn't compound. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Tuples</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Tuples are a type of data structure, but a tuple by itself isn't compound. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Dictionaries with tuples for keys</p>
+        </statement>
+        <feedback>
+          <p>Correct! A dictionary with tuples for keys is another type of compound data structure.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

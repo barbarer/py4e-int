@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<section xml:id="web_security-and-api-usage">
+  <title>Security and API usage</title>
+<idx>OAuth</idx>
+<idx><h>Key</h><h>API</h></idx>
+<idx><h>API</h><h>Key</h></idx>
+  <p>It is quite common that you need an API key to make use of a
+            vendor's API. The general idea is that they want to know who is using
+            their services and how much each user is using. Perhaps they have free
+            and pay tiers of their services or have a policy that limits the number
+            of requests that a single individual can make during a particular time
+            period.</p>
+  <p>Sometimes once you get your API key, you simply include the key as part
+            of POST data or perhaps as a parameter on the URL when calling the API.</p>
+  <exercise label="webSecurity_fill">
+    <statement>
+      <p>csp-10-2-1: An API ____ is typically needed to use and access an API with the vendor's services. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Kk]ey">
+          <feedback>
+            <p>An API key can be a parameter in the URL when calling the API or part of POST data.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again. What would you need if access to the API is considered to be <q>locked</q>?</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>Other times, the vendor wants increased assurance of the source of the
+            requests and so they expect you to send cryptographically signed
+            messages using shared keys and secrets. A very common technology that is
+            used to sign requests over the Internet is called
+            <em>OAuth</em>. You can read more about the OAuth protocol at
+            <url href="http://www.oauth.net" visual="http://www.oauth.net">www.oauth.net</url>.</p>
+  <p>Thankfully there are a number of convenient
+            and free OAuth libraries so you can avoid writing an OAuth
+            implementation from scratch by reading the specification. These
+            libraries are of varying complexity and have varying degrees of
+            richness. The OAuth web site has information about various OAuth
+            libraries.</p>
+  <exercise label="webSecurity_MC_OAuth">
+    <statement>
+      <p>csp-10-2-2: OAuth is a technology used to ________?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>OAuth is used to access libraries with information.</p>
+        </statement>
+        <feedback>
+          <p>OAuth could be used to authorize an account's access to a library, but it can be used for many other websites/services.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>OAuth is used to provide API keys.</p>
+        </statement>
+        <feedback>
+          <p>OAuth does not provide API keys.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>OAuth is used to find prewritten code.</p>
+        </statement>
+        <feedback>
+          <p>OAuth is a security framework, but there are some libraries of prewritten code <b>for</b> OAuth so that you don't need to write your own.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>OAuth is used to sign requests over the Internet.</p>
+        </statement>
+        <feedback>
+          <p>OAuth is an authorization source that is used to sign requests over the Internet.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

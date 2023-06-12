@@ -1,0 +1,271 @@
+<?xml version="1.0"?>
+<section xml:id="lists_write-code-questions">
+  <title>Write Code Questions</title>
+  <exercise label="list_writeItemsq_v2_ac">
+    <statement>
+      <p>Write a function <c>item_lister</c> that takes in a list of at least three values, <c>items</c>, as a parameter. Set the first value to <q>First item</q>, set
+            the second value to the original first value, and set the third value to its current value plus one (rounded to two decimals). (Note: the third value of <c>items</c>
+            will only be numerical.) Then, return the modified list. For example, <c>itemLister([2,4,6.222,8])</c> would return <c>['First item', 2, 7.22, 8]</c>.</p>
+    </statement>
+    <program xml:id="list_writeItemsq_v2_ac_editor" interactive="activecode" language="python">
+      <input>
+def itemLister(items):
+    # write code here
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+
+        res = itemLister([2,4,6.222,8])
+        self.assertEqual(res[0],'First item', "testing first item in list from itemLister([2,4,6.222,8])")
+        self.assertEqual(res[1],2, "testing second item in list from itemLister([2,4,6.222,8])")
+        self.assertAlmostEqual(res[2],7.22, 2, "testing third item in list from itemLister([2,4,6.222,8])")
+        res = itemLister([-2.2,'hi',-2.222])
+        self.assertEqual(res[0],'First item', "testing first item in list from itemLister([-2.2,'hi',-2.222])")
+        self.assertAlmostEqual(res[1],-2.2,1, "testing second item in list from itemLister([-2.2,'hi',-2.222])")
+        self.assertAlmostEqual(res[2],-1.22, 2, "testing third item in list from itemLister([-2.2,'hi',-2.222])")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="list_writeItemsq_v2_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>item_lister</c> that takes in a list of at least three values, <c>items</c>, as a parameter. Set the first value to <q>First item</q>, set
+            the second value to the original first value, and set the third value to its current value plus one (rounded to two decimals). (Note: the third value of <c>items</c>
+            will only be numerical.) Then, return the modified list. For example, <c>itemLister([2,4,6.222,8])</c> would return <c>['First item', 2, 7.22, 8]</c>.</p>
+    </statement>
+    <blocks>
+      <block order="9">
+        <cline>def itemLister(items):</cline>
+      </block>
+      <block order="2">
+        <cline>    new_list = []</cline>
+      </block>
+      <block order="3">
+        <cline>    new_list.append("First item")</cline>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>    new_list.append(items[0])</cline>
+        </choice>
+        <choice>
+          <cline>    new_list.append(new_list[0]) </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>    new_list.append(round(items[2] + 1, 2))</cline>
+      </block>
+      <block order="8">
+        <cline>    for item in items[3:]:</cline>
+      </block>
+      <block order="4">
+        <cline>        new_list.append(item)</cline>
+      </block>
+      <block order="1">
+        <cline>    return new_list</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="list_write23_ac">
+    <statement>
+      <p>Write the function <c>change_index3</c> that takes in one parameter, <c>lst</c>, and assigns the value at index 3 of <c>lst</c> to &#x2018;200' and then returns <c>lst</c>.
+            For example, <c>change_index3(['hi', 'goodbye', 'python', '106', '506'])</c> would return <c>['hi', 'goodbye', 'python', '200', '506']</c> and
+            <c>change_index3([1, 2, 0, -5, 4])</c> would return <c>[1, 2, 0, '200', 4]</c>.</p>
+    </statement>
+    <program xml:id="list_write23_ac_editor" interactive="activecode" language="python">
+      <input>
+def change_index3(lst):
+    # write code here
+
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(change_index3(['hi', 'goodbye', 'python', '106', '506']), ['hi', 'goodbye', 'python', '200', '506'], "change_index3(['hi', 'goodbye', 'python', '106', '506'])")
+        self.assertEqual(change_index3([1, 2, 0, -5, 4]), [1, 2, 0, '200', 4], "change_index3([1, 2, 0, -5, 4])")
+        self.assertEqual(change_index3([False, '2', 2.5, '200', -4]), [False, '2', 2.5, '200', -4], "change_index3([False, '2', 2.5, '200', -4]")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="list_write23_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create the function <c>change_index3</c> that takes in one parameter, <c>lst</c>, and assigns the value at index 3 of <c>lst</c> to &#x2018;200' and then returns <c>lst</c>.
+            For example, <c>change_index3(['hi', 'goodbye', 'python', '106', '506'])</c> would return <c>['hi', 'goodbye', 'python', '200', '506']</c> and
+            <c>change_index3([1, 2, 0, -5, 4])</c> would return <c>[1, 2, 0, '200', 4]</c>.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <cline>def change_index3(lst):</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    lst[3] = '200'</cline>
+        </choice>
+        <choice>
+          <cline>    lst[3] = 200 </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>    return lst</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="list_write5_ac">
+    <statement>
+      <p>Write a function <c>countWords</c> that takes in a list, <c>lst</c>, as a parameter, and returns the amount of words that have a length of 5.
+            For example, <c>countWords(['hello', 'hi', 'good morning', 'three', 'kitty']</c> should return <c>3</c>.</p>
+    </statement>
+    <program xml:id="list_write5_ac_editor" interactive="activecode" language="python">
+      <input>
+def countWords(lst):
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(countWords(['hello', 'hi', 'good morning', 'three', 'kitty']),3,"countWords(['hello', 'hi', 'good morning', 'three', 'kitty'])")
+        self.assertEqual(countWords(['two', 'three', 'four', 'five', 'six', 'seven']),2,"countWords(['two', 'three', 'four', 'five', 'six', 'seven'])")
+        self.assertEqual(countWords(['these', 'those', 'there']),3,"countWords(['these', 'those', 'there'])")
+        self.assertEqual(countWords(['the', 'an', 'a']),0,"countWords(['the', 'an', 'a'])")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="list_write5_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>countWords</c> that takes in a list, <c>lst</c>, as a parameter, and returns the amount of words that have a length of 5.
+            For example, <c>countWords(['hello', 'hi', 'good morning', 'three', 'kitty']</c> should return <c>3</c>.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>def countWords(lst):</cline>
+      </block>
+      <block order="6">
+        <cline>    count = 0</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    for item in lst:</cline>
+        </choice>
+        <choice>
+          <cline>    for item in lst[]: </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <cline>        if len(item) == 5:</cline>
+      </block>
+      <block order="1">
+        <cline>            count += 1</cline>
+      </block>
+      <block order="2">
+        <cline>    return count</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="list_writeReverse_ac">
+    <statement>
+      <p>Write a function <c>reverse</c> that takes in one parameter, <c>lst</c>, and returns the reverse of a passed list.
+            For example, <c>reverse[1,2,3]</c> should return <c>[3, 2, 1]</c>.</p>
+    </statement>
+    <program xml:id="list_writeReverse_ac_editor" interactive="activecode" language="python">
+      <input>
+def reverse(lst):
+    # write code here
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+          self.assertEqual(reverse([1,2,3,4,5]),[5,4,3,2,1],"reverse([1,2,3,4,5])")
+          self.assertEqual(reverse([1,3,5,7,9]),[9,7,5,3,1],"reverse([1,3,5,7,9])")
+          self.assertEqual(reverse([2,4,6,7,9]),[9,7,6,4,2],"reverse([2,4,6,7,9])")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="list_writeReverse_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>reverse</c> that takes in one parameter, <c>lst</c>, and returns the reverse of a passed list.
+            For example, <c>reverse[1,2,3]</c> should return <c>[3, 2, 1]</c>.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>def reverse(lst):</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    lst.reverse()</cline>
+        </choice>
+        <choice>
+          <cline>    return lst.reverse() </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>    return lst</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="list_sortByLen_ac">
+    <statement>
+      <p>Write a function <c>sort_by_length</c> that takes in one parameter, a list of strings, <c>lst</c>, and returns the list sorted
+            by the length of the strings. For example, <c>sort_by_length(["hello", "hi", "hey", "greetings"])</c> would return <c>['hi', 'hey', 'hello', 'greetings']</c>.</p>
+    </statement>
+    <program xml:id="list_sortByLen_ac_editor" interactive="activecode" language="python">
+      <input>
+def sort_by_length(lst):
+    # write code here
+
+====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+          self.assertEqual(sort_by_length(['hello', 'hi', 'hey', 'greetings']),['hi', 'hey', 'hello', 'greetings'],"sort_by_length(['hello', 'hi', 'hey', 'greetings'])")
+          self.assertEqual(sort_by_length(['hello', 'hello']),['hello', 'hello'],"sort_by_length(['hello', 'hello'])")
+          self.assertEqual(sort_by_length(['I', 'have', 'four', 'apples']),['I', 'have', 'four', 'apples'],"sort_by_length(['I', 'have', 'four', 'apples'])")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="list_sortByLen_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>reverse</c> that takes in one parameter, <c>lst</c>, and returns the reverse of a passed list.
+            For example, <c>reverse[1,2,3]</c> should return <c>[3, 2, 1]</c>.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>def sort_by_length(lst):</cline>
+      </block>
+      <block order="2">
+        <cline>    lst.sort(key=len)</cline>
+      </block>
+      <block order="1">
+        <cline>    return lst</cline>
+      </block>
+    </blocks>
+  </exercise>
+</section>

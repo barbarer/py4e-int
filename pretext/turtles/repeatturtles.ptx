@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<section xml:id="turtles_using-repetition-with-turtles">
+  <title>Using Repetition with Turtles</title>
+  <p>
+    <em>Learning Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Use a <c>for-each</c> loop to repeat steps with turtles.</p>
+      </li>
+      <li>
+        <p>Introduce the range function</p>
+      </li>
+      <li>
+        <p>Generalize how to draw a polygon.</p>
+      </li>
+    </ul>
+  </p>
+  <p><idx><h>statements</h><h>for</h></idx>
+    <idx><h>for</h><h>statements</h></idx>
+    We already had a turtle draw a square.  We repeated the lines in order to make the turtle go forward and turn four times.  Another way to do this is to tell the computer to do something explicitly for a certain number of times by using a <c>for</c> loop. The lines that you want to repeat in the <c>for</c> loop must be indented by 4 spaces as shown below.</p>
+  <exercise label="Turtle_For">
+    <statement>
+      <p>Run the code to see what it draws.</p>
+    </statement>
+    <program xml:id="Turtle_For_editor" interactive="activecode" language="python">
+      <input>
+from turtle import *     # use the turtle library
+space = Screen()         # create a turtle space
+alisha = Turtle()        # create a turtle named alisha
+alisha.setheading(90)    # point due north
+for sides in [1,2,3,4]:  # repeat the indented lines 4 times
+    alisha.forward(100)    # move forward by 100 units
+    alisha.right(90)     # turn by 90 degrees
+        </input>
+    </program>
+  </exercise>
+  <exercise label="turtle_1_1_Turtle_For_Q1">
+    <statement>
+      <p>csp-10-1-2: The numbers in the list <c>[1,2,3,4]</c> are not important.  It's the fact that there are <em>four</em> items in the list that is important.  Only one of these choices does <em>not</em> make a square.  Which one?  (It's not cheating to actually try each of them and run the program each time!)</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>[0,1,2,3]</p>
+        </statement>
+        <feedback>
+          <p>This still has four sides -- they are just numbered differently.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>[0,1,2]</p>
+        </statement>
+        <feedback>
+          <p>This would only draw 3 side since there are only 3 items in the list.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[2,3,4,5]</p>
+        </statement>
+        <feedback>
+          <p>This still has four sides -- they are just numbered differently.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[1,2,3,4,5]</p>
+        </statement>
+        <feedback>
+          <p>This <i>will</i> draw a square. The turtle will just go on to trace the first side twice.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="turtle_1_2_Rectangle" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>The following program uses a turtle to draw a rectangle as shown below, but the lines are mixed up.  The program should do all necessary set-up and create the turtle.  After that, iterate (loop) 2 times, and each time through the loop the turtle should go forward 175 pixels, turn right 90 degrees, go forward 150 pixels, and turn right 90 degrees. Drag the needed blocks of statements from the left column to the right column and put them in the right order with the correct indention.  There may be additional blocks that are not needed in a correct solution.   Click on <em>Check</em> to see if you are right. You will be told if any of the lines are in the wrong order or are the wrong blocks.</p>
+      <image source="turtles/Figures/TurtleRect.png" width="200px%"/>
+    </statement>
+    <blocks>
+      <block order="10">
+        <choice correct="yes">
+          <cline>from turtle import *</cline>
+        </choice>
+        <choice>
+          <cline>from Turtle import * </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>space = Screen()</cline>
+        <cline>carlos = Turtle()</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline># repeat 2 times</cline>
+          <cline>for i in [1,2]:</cline>
+        </choice>
+        <choice>
+          <cline># repeat 2 times</cline>
+          <cline>for i in [1,2]  </cline>
+        </choice>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>    carlos.forward(175)</cline>
+        </choice>
+        <choice>
+          <cline>    carlos.Forward(175) </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>    carlos.right(90)</cline>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>    carlos.forward(150)</cline>
+          <cline>    carlos.right(90)</cline>
+        </choice>
+        <choice>
+          <cline>    carlos.forward(150)</cline>
+          <cline>    carlos.turn(90) </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <p>Since it doesn't matter what's in the list, just as long as there are <em>four</em> items, there is a special way of writing that loop.  We use a <c>range</c> function.</p>
+  <exercise label="Turtle_For_Range">
+    <statement>
+      <p>Run the code to see what it draws.</p>
+    </statement>
+    <program xml:id="Turtle_For_Range_editor" interactive="activecode" language="python">
+      <input>
+from turtle import *   # use the turtle library
+space = Screen()       # create a turtle space
+marcus = Turtle()      # create a turtle named marcus
+marcus.setheading(90)  # point due north
+
+# Now make a square
+for sides in range(4):   # repeat the indented lines 4 times
+    marcus.forward(100)  # move forward by 100 units
+    marcus.right(90)     # turn by 90 degrees
+        </input>
+    </program>
+  </exercise>
+  <p>The <c>range(n)</c> function returns an object (a range object) that produces the value from 0 to n - 1 when you use it in a for-each loop as shown below.</p>
+  <exercise label="Turtle_Print_Range">
+    <statement>
+      <p>Run this code to see what it prints.</p>
+    </statement>
+    <program xml:id="Turtle_Print_Range_editor" interactive="activecode" language="python">
+      <input>
+# print the type (class name)
+print(type(range(4)))
+print() # empty line
+
+# print the values in the range from 0 to end - 1
+for i in range(4):
+    print(i)
+
+# print an empty line
+print()
+
+# print the values in the range from 0 to end - 1
+for i in range(10):
+    print(i)
+        </input>
+    </program>
+  </exercise>
+</section>

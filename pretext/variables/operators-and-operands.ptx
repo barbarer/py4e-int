@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<section xml:id="variables_operators-and-operands">
+  <title>Operators and operands</title>
+<idx>Operators</idx>
+<idx><h>Operator</h><h>Arithmetic</h></idx>
+<idx><h>Arithmetic</h><h>Operator</h></idx>
+<idx>Operand</idx>
+<idx>Expression</idx>
+<idx>Python 3.0</idx>
+<idx>Python 2.0</idx>
+<idx><h>Floating-point</h><h>Division</h></idx>
+<idx><h>Division</h><h>Floating-point</h></idx>
+  <p><em>Operators</em> are special symbols that represent
+            computations like addition and multiplication. The values the operator
+            is applied to are called <em>operands</em>.</p>
+  <p>The operators <c>+</c>, <c>-</c>, <c>*</c>, <c>/</c>, and
+            <c>**</c> perform addition, subtraction, multiplication, division,
+            and exponentiation, as in the following examples:</p>
+  <program xml:id="var-ac-6-print-operators" interactive="activecode" language="python">
+    <input>
+print(20+32)
+print(75-1)
+print(5**2)
+print((5+9)*(15-7))
+        </input>
+  </program>
+  <p>There was a change in the division operator between Python 2.x
+            and Python 3.x.  In Python 3.x, the result of this division is a
+            floating point result:</p>
+  <program xml:id="var-ac-6-print-vars2" interactive="activecode" language="python">
+    <input>
+minute = 59
+print(minute/60)
+        </input>
+  </program>
+  <p>The division operator in Python 2.0 would divide two integers and
+            truncate the result to an integer:</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; minute = 59
+&gt;&gt;&gt; minute/60
+0
+</input>
+  </program>
+  <p>To obtain the same answer in Python 3.0 use floored ( <c>//</c> integer) division.</p>
+  <program xml:id="var-ac-6-print-vars3" interactive="activecode" language="python">
+    <input>
+minute = 59
+print(minute//60)
+        </input>
+  </program>
+  <p>In Python 3.0 integer division functions much more as you would expect
+            if you entered the expression on a calculator.</p>
+  <exercise label="var-operator-mc-division">
+    <statement>
+      <p>csp-10-2-4: What is the result of <c>3 / 4</c>?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>0</p>
+        </statement>
+        <feedback>
+          <p>If the two values are both integers (whole numbers) you will normally get an integer (whole number) result in older Python environments.  But, this book is using Python 3 so you get a decimal result.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>This would be correct if the result was rounded up before the values after the decimal point were thrown away, but it does not do this.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>0.75</p>
+        </statement>
+        <feedback>
+          <p>While this isn't the what older Pyton development environments would return, in this book we are using Python 3 so it returns a decimal result.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>0.25</p>
+        </statement>
+        <feedback>
+          <p>This would be correct if it was <code>1 / 4</code>, <code>1.0 / 4</code>, or <code>1 / 4.0</code></p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="var-operator-fitb-symbol">
+    <statement>
+      <p>csp-10-2-5: What operator (<em>symbol</em>) would you use to truncate division in Python 3.0? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="//">
+          <feedback>
+            <p>// is the operator for floored division in Python.</p>
+          </feedback>
+        </condition>
+        <condition string="/">
+          <feedback>
+            <p>Not quite, remember the difference between divison (/) and floored division.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Make sure you are looking at the symbols for division!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="var-operator-dnd-operations">
+    <statement>
+      <p>Match each expression with the operation it performs.</p>
+    </statement>
+    <feedback>
+      <p>Try assigning values to these variables and testing out the espressions in your python interpreter.</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>x + y</premise>
+        <response>addition</response>
+      </match>
+      <match order="2">
+        <premise>x - y</premise>
+        <response>subtraction</response>
+      </match>
+      <match order="3">
+        <premise>x * y</premise>
+        <response>multiplication</response>
+      </match>
+      <match order="4">
+        <premise>x / y</premise>
+        <response>division</response>
+      </match>
+      <match order="5">
+        <premise>x % y</premise>
+        <response>remainder (modulus)</response>
+      </match>
+      <match order="6">
+        <premise>x // y</premise>
+        <response>floored division</response>
+      </match>
+      <match order="7">
+        <premise>x ** y</premise>
+        <response>exponentiation</response>
+      </match>
+    </matches>
+  </exercise>
+</section>

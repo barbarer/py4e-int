@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<section xml:id="conditional_alternative-execution">
+  <title>Alternative Execution</title>
+    <idx>Alternative Execution</idx>
+    <idx><h>Keyword</h><h>Else</h></idx>
+    <idx><h>Else</h><h>Keyword</h></idx>
+    <idx>Branch</idx>
+    <introduction>
+      <title>Two-Way Decisions</title>
+      <p>Although the simple <c>if</c> statement that you saw in <xref ref="conditional_conditional-execution"/> is useful, it only takes an action when the condition is <c>True</c>. Otherwise, it does nothing. In most programs, it is more common to have a <q>two-way</q> decision such as the following (phrased in English)</p>
+      
+      <p>
+        <ul>
+          <li>If your age is greater than 65, you get a 15% discount; otherwise, you get a 5% discount.</li>
+          <li>If the amount is greater than zero and less than the balance, subtract the amount from the balance; otherwise, tell the customer the amount is wrong.</li>
+          <li>If the year is a leap year, set the number of days for February to 29; otherwise set the nuber of days to 28.</li>
+        </ul>
+      </p>
+    </introduction>
+    <p>To handle these decisions, we use a second form of the <c>if</c> statement: <em>alternative
+                execution</em>, in which there are two possibilities and the
+            condition determines which one gets executed. The syntax looks like
+            this:</p>
+  <program xml:id="cndtnlMod" interactive="codelens" language="python">
+    <input>
+x = 8
+if x % 2 == 0 :
+    print('x is even')
+else :
+    print('x is odd')
+print('All done.')
+    </input>
+  </program>
+  <p>If the remainder when <c>x</c> is divided by 2 is 0, then we know
+            that <c>x</c> is even, and the program displays a message to that
+            effect. If the condition is false, the second set of statements is
+            executed. <xref ref="figure_alternative_if"/> shows the flowchart for this code.</p>
+            <figure xml:id="figure_alternative_if">
+              <title>Flowchart of an <c>if</c>-<c>else</c></title>
+              <caption>Flowchart of an <c>if</c>-<c>else</c></caption>
+  <image source="images/if-else.svg" width="50%" alt="If-Then-Else Logic"/>
+</figure>
+  <p>Since the condition must either be true or false, exactly one of the
+            alternatives will be executed. The alternatives are called <em>branches</em>,
+            because they are branches in the flow of execution.</p>
+          
+  <exercise label="cndtnl-altex-mc-print">
+    <statement>
+      <p>Q-2: What does the following code print?</p>
+      <program language="python">
+        <input>
+if 4 + 5 == 10:
+    print("WEIRD")
+else:
+    print("GREAT")
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>WEIRD</p>
+        </statement>
+        <feedback>
+          <p>WEIRD is printed by the <c>if</c>-block, which only executes when the conditional (in this case, <c>4&#160;+&#160;5&#160;== &#160;10</c>) is true.  However, 5 + 4 is not equal to 10, so the condition is <c>False</c>.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>GREAT</p>
+        </statement>
+        <feedback>
+          <p>Since <c>4&#160;+&#160;5&#160;==&#160;10</c> evaluates to <c>False</c>, Python will skip over the <c>if</c> block and execute the statement in the <c>else</c> block.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>WEIRD on one line and GREAT on the next</p>
+        </statement>
+        <feedback>
+          <p>Python would never print both WEIRD and GREAT because it will only execute either the <c>if</c>-block or the <c>else</c>-block, but not both.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Nothing will be printed</p>
+        </statement>
+        <feedback>
+          <p>Python will always execute either the <c>if</c>-block (when the condition is true) or the <c>else</c>-block (when the condition is false).  It will never skip over both blocks.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  
+  <exercise label="cndtnl-altex-mc-negative">
+    <statement>
+      <p>Q-3: What does the following code print?</p>
+      <program language="python">
+        <input>
+x = -10
+if x &lt; 0:
+    print("The negative number ",  x, " is not valid here.")
+print("This is always printed")
+</input>
+      </program>
+      <pre>a.
+This is always printed
+
+b.
+The negative number -10 is not valid here
+This is always printed
+
+c.
+The negative number -10 is not valid here</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Output a</p>
+        </statement>
+        <feedback>
+          <p>Because -10 is less than 0, Python will execute the body of the <c>if</c>-statement here.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Output b</p>
+        </statement>
+        <feedback>
+          <p>Python executes the body of the <c>if</c>-block as well as the statement that follows the <c>if</c>-block.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Output c</p>
+        </statement>
+        <feedback>
+          <p>Python will also execute the statement that follows the <c>if</c>-block because it is not enclosed in an <c>else</c>-block, but rather just a normal statement. Notice also that <c>print("This is always printed")</c> is not indented.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>It will cause an error because every <c>if</c> must have an <c>else</c> clause.</p>
+        </statement>
+        <feedback>
+          <p>It is valid to have an <c>if</c>-block without a corresponding <c>else</c>-block, as we saw in <xref ref="conditional_conditional-execution">an example in the preceding section</xref>. However, you cannot have an <c>else</c>-block without a corresponding <c>if</c>-block).</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+
+  <exercise label="cndtnl-altex-mc-error">
+    <statement>
+      <p>Q-4: Will the following code cause an error?</p>
+      <program language="python">
+        <input>
+x = -10
+if x &lt; 0:
+    print("The negative number ",  x, " is not valid here.")
+else:
+    print(x, " is a positive number")
+else:
+    print("This is always printed")
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>No</p>
+        </statement>
+        <feedback>
+          <p>Every <c>else</c>-block must have exactly one corresponding <c>if</c>-block.  If you want to chain <c>if</c>-<c>else</c> statements together, you must use the <c>elif</c> construct, described in <xref ref="conditional_chained-conditionals"/>.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Yes</p>
+        </statement>
+        <feedback>
+          <p>Correct! This will cause an error because the second <c>else</c>-block is not attached to a corresponding <c>if</c>-block.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="cndtnl-altex-pp-even" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>The following program should print out <q>x is even</q> if the remainder of x divided by 2 is 0 and <q>x is odd</q>
+            otherwise, but the code is mixed up. Be sure to indent correctly!</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <cline>x = 92</cline>
+      </block>
+      <block order="2">
+        <cline>if x % 2 == 0:</cline>
+      </block>
+      <block order="1">
+        <cline>    print("x is even")</cline>
+      </block>
+      <block order="4">
+        <cline>else:</cline>
+      </block>
+      <block order="3">
+        <cline>    print("x is odd")</cline>
+      </block>
+    </blocks>
+  </exercise>
+</section>

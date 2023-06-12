@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<section xml:id="objects_subdividing-a-problem">
+  <title>Subdividing a problem</title>
+  <p>One of the advantages of the object-oriented approach is that it can
+            hide complexity. For example, while we need to know how to use the
+            <c>urllib</c> and BeautifulSoup code, we do not need to know how those libraries
+            work internally. This allows us to focus on the part of the problem we need to
+            solve and ignore the other parts of the program.</p>
+  <image source="images/program-oo-code.svg" width="50%" alt="Ignoring Detail When Using an Object"/>
+  <exercise label="subdividing_complexity">
+    <statement>
+      <p>Q-1: One of the advantages of the __________ approach is that it can hide complexity. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Oo]bject[-\s+][Oo]riented">
+          <feedback>
+            <p>Yes, we do not need to know how the object classes
+work internally when we use them.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>This ability to focus exclusively on the part of a program that we care about
+            and ignore the rest is also helpful to the developers of the objects that we use.
+            For example, the programmers developing BeautifulSoup do not need to
+            know or care about how we retrieve our HTML page, what parts we want to
+            read, or what we plan to do with the data we extract from the web page.</p>
+  <image source="images/program-oo-bs4.svg" width="50%" alt="Ignoring Detail When Building an Object"/>
+</section>

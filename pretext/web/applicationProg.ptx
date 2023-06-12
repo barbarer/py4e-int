@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<exercises xml:id="web_application-programming-interfaces">
+  <title>Application Programming Interfaces</title>
+  <introduction>
+<idx>API</idx>
+<idx>SOA</idx>
+<idx>Web Services</idx>
+<idx>Service-Oriented Architecture</idx>
+  <p>We now have the ability to exchange data between applications using
+            HyperText Transport Protocol (HTTP) and a way to represent complex data
+            that we are sending back and forth between these applications using
+            eXtensible Markup Language (XML) or JavaScript Object Notation (JSON).</p>
+  <p>The next step is to begin to define and document <q>contracts</q> between
+            applications using these techniques. The general name for these
+            application-to-application contracts is <em>Application Program
+                Interfaces</em> (APIs). When we use an API, generally one program
+            makes a set of <em>services</em> available for use by other
+            applications and publishes the APIs (i.e., the <q>rules</q>) that must be
+            followed to access the services provided by the program.</p>
+  <exercise label="webAPI_fill1">
+    <statement>
+      <p>csp-10-2-1: APIs are ________ between applications that exchange data using HTTP and representing complex data using XML or JSON. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Cc]ontract(s)*">
+          <feedback>
+            <p>An API is the general name for an application to application contract.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>An API is an agreement between the two applications, also known as&#x2026;.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>When we begin to build our programs where the functionality of our
+            program includes access to services provided by other programs, we call
+            the approach a <em>Service-oriented architecture</em> (SOA). A
+            SOA approach is one where our overall application makes use of the
+            services of other applications. A non-SOA approach is where the
+            application is a single standalone application which contains all of the
+            code necessary to implement the application.</p>
+  <exercise label="webAPI_MC_tf">
+    <statement>
+      <p>csp-10-2-2: True or False? A service-oriented architecture makes use of other applications' services.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>By including access to services provided by other programs in the functionality of a program, you are using an SOA approach.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>We see many examples of SOA when we use the web. We can go to a single
+            web site and book air travel, hotels, and automobiles all from a single
+            site. The data for hotels is not stored on the airline computers.
+            Instead, the airline computers contact the services on the hotel
+            computers and retrieve the hotel data and present it to the user. When
+            the user agrees to make a hotel reservation using the airline site, the
+            airline site uses another web service on the hotel systems to actually
+            make the reservation. And when it comes time to charge your credit card
+            for the whole transaction, still other computers become involved in the
+            process.</p>
+  <figure align="">
+    <image source="images/soa.svg" width="50%" alt="Service-oriented architecture"/>
+  </figure>
+  <p>A Service-oriented architecture has many advantages, including: (1) we
+            always maintain only one copy of data (this is particularly important
+            for things like hotel reservations where we do not want to over-commit)
+            and (2) the owners of the data can set the rules about the use of their
+            data. With these advantages, an SOA system must be carefully designed to
+            have good performance and meet the user's needs.</p>
+  <p>When an application makes a set of services in its API available over
+            the web, we call these <em>web services</em>.</p>
+  <exercise label="webAPI_MC_soa">
+    <statement>
+      <p>csp-10-2-3: Which of the following is <term>not</term> an advantage of a service oriented architecture?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>It maintains only one copy of data.</p>
+        </statement>
+        <feedback>
+          <p>SOA maintains only one copy of the user's data.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>It is designed to meet the user's needs.</p>
+        </statement>
+        <feedback>
+          <p>SOA is designed to meet the user's needs.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>It is automatically implemented.</p>
+        </statement>
+        <feedback>
+          <p>SOA is not automatically implemented, it is an approach taken to when building a program.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>It allows the owners of the data to set the rules about the use of their data.</p>
+        </statement>
+        <feedback>
+          <p>SOA allows the owners of data to set rules about the use of their data.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</introduction>
+  <subexercises xml:id="web_getting-json-data-from-an-api">
+    <title>Getting JSON Data From an API</title>
+    <p>There is a listing of free APIs that you can use
+                at <url href="https://github.com/public-apis/public-apis" visual="https://github.com/public-apis/public-apis">https://github.com/public-apis/public-apis</url></p>
+    <p>One of the free APIs has dog facts.  You can get a dog fact by going to the
+                URL: <url href="https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1" visual="https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1">https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1</url>.
+                Try entering that in a browser window.  You can also use Python to the get data
+                from an API using a URL as shown below.</p>
+    <program xml:id="web-api-get-dog-fact" interactive="activecode" language="python3">
+      <input>
+import requests
+import json
+
+# get the data
+response = requests.get('https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1')
+data = response.text
+in_list = json.loads(data)
+in_dict = in_list[0]
+print(in_dict.get("fact"))
+        </input>
+    </program>
+  </subexercises>
+  <subexercises xml:id="web_using-a-dictionary-for-url-parameters">
+    <title>Using a Dictionary for URL Parameters</title>
+    <p>To add parameters to a URL you can just add them to the URL string as shown above (<c>?number=1</c>) but spaces in
+                strings need to be replaced.  An easier way to add parameters to a URL is to
+                create a dictionary
+                with all the parameter names and values and then pass the dictionary to the
+                <c>requests.get</c> after the URL as shown below.</p>
+    <program xml:id="web-api-get-dog-fact-with-parms-dict" interactive="activecode" language="python3">
+      <input>
+import requests
+import json
+
+# get the data
+parms = {'number': 1}
+response = requests.get('https://dog-facts-api.herokuapp.com/api/v1/resources/dogs', parms)
+data = response.text
+in_list = json.loads(data)
+in_dict = in_list[0]
+print(in_dict.get("fact"))
+        </input>
+    </program>
+  </subexercises>
+</exercises>

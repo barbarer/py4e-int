@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<section xml:id="variables_order-of-operations">
+  <title>Order of operations</title>
+  <program xml:id="Expression_Order1" interactive="activecode" language="python">
+    <input>
+result = 4 + -2 * 3
+print(result)
+        </input>
+  </program>
+  <p>When more than one operator appears in an expression, the order of
+            evaluation depends on the <em>rules of precedence</em>. For
+            mathematical operators, Python follows mathematical convention. The
+            acronym <em>PEMDAS</em> is a useful way to remember the rules:</p>
+  <p>
+    <ul>
+      <li>
+        <p><term>P</term>arentheses have the highest precedence and can be
+                    used to force an expression to evaluate in the order you want. Since
+                    expressions in parentheses are evaluated first, <c>2&#160;*&#160;(3&#160;-&#160;1)</c> is 4, and <c>(1&#160;+&#160;1)&#160;**&#160;(5&#160;-&#160;2)</c> is 8. You can
+                    also use parentheses to make an expression easier to read, as in
+                    <c>(minute * 100) / 60</c>, even if it doesn't change the
+                    result.</p>
+      </li>
+      <li>
+        <p><term>E</term>xponentiation has the next highest precedence, so
+                    <c>2&#160;**&#160;1&#160;+&#160;1</c> is 3, not 4, and <c>3&#160;*&#160;1&#160;**&#160;3</c> is 3,
+                    not 27.</p>
+      </li>
+      <li>
+        <p><term>M</term>ultiplication and <term>D</term>ivision have
+                    the same precedence, which is higher than <term>A</term>ddition
+                    and <term>S</term>ubtraction, which also have the same
+                    precedence. So <c>2&#160;*&#160;3&#160;-&#160;1</c> is 5, not 4, and
+                    <c>6&#160;+&#160;4&#160;/&#160;2</c> is 8, not 5.</p>
+      </li>
+      <li>
+        <p>Operators with the same precedence are evaluated from left to right.
+                    So the expression <c>5&#160;-&#160;3&#160;-&#160;1</c> is 1, not 3, because the
+                    <c>5&#160;-&#160;3</c> happens first and then <c>1</c> is subtracted
+                    from 2.</p>
+      </li>
+    </ul>
+  </p>
+  <exercise label="var-order-mc-print">
+    <statement>
+      <p>csp-10-2-2: What is printed from the following codeblock?</p>
+      <pre>result = 4 + -2 * 3
+print(result)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>18</p>
+        </statement>
+        <feedback>
+          <p>Try running the code in your python interpreter.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>-2</p>
+        </statement>
+        <feedback>
+          <p>4 + -2 * 3 is -2. First -2 is multiplied by 3 then 4 is added.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>6</p>
+        </statement>
+        <feedback>
+          <p>Which order will the operators run?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>10</p>
+        </statement>
+        <feedback>
+          <p>Make sure that you are using a negative 2, not positive.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="var-order-mc-parentheses">
+    <statement>
+      <p>csp-10-2-3: What is printed from the following codeblock?</p>
+      <pre>result = (4 + -2) * 3
+print(result)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>18</p>
+        </statement>
+        <feedback>
+          <p>Try running the code in your python interpreter.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>-2</p>
+        </statement>
+        <feedback>
+          <p>Which order will the operators run?</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>6</p>
+        </statement>
+        <feedback>
+          <p>With parentheses, (4 + -2) * 3 is 6.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>10</p>
+        </statement>
+        <feedback>
+          <p>Make sure that you are using a negative 2, not positive.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>Try running the code below as is, then add parentheses around <c>4 + -2</c> to see how the order of operations changes.</p>
+  <program xml:id="Expression_Order" interactive="activecode" language="python">
+    <input>
+result = 4 + -2 * 3
+print(result)
+        </input>
+  </program>
+  <p>When in doubt, always put parentheses in your expressions to make sure
+            the computations are performed in the order you intend.</p>
+  <exercise label="var-order-pp-operations_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Put these code blocks in the oder that they would run using the order of operations.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>(6 * 52 + 3)</cline>
+      </block>
+      <block order="1">
+        <cline>3**2</cline>
+      </block>
+      <block order="3">
+        <cline>33 / 11</cline>
+      </block>
+      <block order="2">
+        <cline>15 + 20</cline>
+      </block>
+    </blocks>
+  </exercise>
+</section>

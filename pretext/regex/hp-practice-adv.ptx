@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<section xml:id="regex_practice-problems-advanced-regular-expressions">
+  <title>Practice Problems - Advanced Regular Expressions</title>
+  <HParsonsNode line="4" runestone_options="{'language': &quot;data-language='regex'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2 3 4 5 6 7 8'&quot;, 'subchapter': 'hp-practice-adv', 'chapter': 'regex', 'basecourse': 'py4e-int', 'optional': '', 'optclass': '', 'divid': 'hpa-day-p1', 'qnumber': '11-9-1', 'reuse': '', 'initialsetting': '--blocks--\n\\d{2}\n/\n\\d{2}\n/\n(\n\\d{2}\n|\n\\d{4}\n)', 'dburl': '', 'question_label': '1'}" source="/home/david/comsc020/py4e-int/_sources/regex/hp-practice-adv.rst">
+    <p>Create a regex that finds dates in the format MM/DD/YY or MM/DD/YYYY and returns
+                just the year part.</p>
+  </HParsonsNode>
+  <HParsonsNode line="23" runestone_options="{'language': &quot;data-language='regex'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2 3 4 5 6'&quot;, 'subchapter': 'hp-practice-adv', 'chapter': 'regex', 'basecourse': 'py4e-int', 'optional': '', 'optclass': '', 'divid': 'hpa-phone-p2', 'qnumber': '11-9-2', 'reuse': '', 'initialsetting': '--blocks--\n\\(?\n\\d{3}\n\\)?\n[-\\s]\n\\d{3}\n[-\\s]\n\\d{4}\n(?\n)?\n(-|/s)', 'dburl': '', 'question_label': '2'}" source="/home/david/comsc020/py4e-int/_sources/regex/hp-practice-adv.rst">
+    <p>Create a regex that finds phone numbers like 333-232-3403 or (333) 232 3403.</p>
+  </HParsonsNode>
+  <HParsonsNode line="42" runestone_options="{'language': &quot;data-language='regex'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2'&quot;, 'subchapter': 'hp-practice-adv', 'chapter': 'regex', 'basecourse': 'py4e-int', 'optional': '', 'optclass': '', 'divid': 'hpa-start-str-p3', 'qnumber': '11-9-3', 'reuse': '', 'initialsetting': '--blocks--\n^\n[a-zA-Z]\n+\n$\n\\w\n*', 'dburl': '', 'question_label': '3'}" source="/home/david/comsc020/py4e-int/_sources/regex/hp-practice-adv.rst">
+    <p>Create a regex that returns only the first alphabetic word (upper and lower case) at the start of the string.</p>
+  </HParsonsNode>
+  <HParsonsNode line="57" runestone_options="{'language': &quot;data-language='regex'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2'&quot;, 'subchapter': 'hp-practice-adv', 'chapter': 'regex', 'basecourse': 'py4e-int', 'optional': '', 'optclass': '', 'divid': 'hpa-price-p4', 'qnumber': '11-9-4', 'reuse': '', 'initialsetting': '--blocks--\n\\$\\d+\n(?:\\.\\d\\d)\n?\n(\\.\\d\\d)\n*', 'dburl': '', 'question_label': '4'}" source="/home/david/comsc020/py4e-int/_sources/regex/hp-practice-adv.rst">
+    <p>Replace &#x2018;YOUR_REGEX' below with a regex that matches any price in the form of $3.45 or $23.32 or $400.</p>
+    <program language="python">
+      <input>
+def find_price(content):
+    return re.findall('YOUR_REGEX', content)
+</input>
+    </program>
+  </HParsonsNode>
+  <HParsonsNode line="78" runestone_options="{'language': &quot;data-language='regex'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2'&quot;, 'subchapter': 'hp-practice-adv', 'chapter': 'regex', 'basecourse': 'py4e-int', 'optional': '', 'optclass': '', 'divid': 'hpa-url-p5', 'qnumber': '11-9-5', 'reuse': '', 'initialsetting': '--blocks--\n(?:\\w+\\.)\n+\n\\w+\n\\.\n*', 'dburl': '', 'question_label': '5'}" source="/home/david/comsc020/py4e-int/_sources/regex/hp-practice-adv.rst">
+    <p>Create a regex below that captures a URL that only consists of characters, numbers, underscore, and dots.
+                For example: www.abc.com, def_ghi.com, a678.cn
+                Note that dots(<q>.</q>) should not appear consecutively, and should not appear as the first or last character. The dot must appear at least once.</p>
+  </HParsonsNode>
+</section>

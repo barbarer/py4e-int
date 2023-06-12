@@ -1,0 +1,487 @@
+<?xml version="1.0"?>
+<section xml:id="strings_peer-instruction-strings-multiple-choice-questions">
+  <title>Peer Instruction: Strings Multiple Choice Questions</title>
+  <exercise label="ctp-strings-11_Strings_05">
+    <statement>
+      <p>11-9-1: What is the value of <c>s</c> after the following code runs?</p>
+      <program language="python">
+        <input>
+s = "abc"
+s = "d" * 3 + s
+s = s + "" * 3
+s = s + "q"
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>"abcddd q"</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The value of s changes in the following order from the first line- s="abc", s="dddabc", s="dddabc" and s="dddabcq".</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>"abcddd" "" "" "q"</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The value of s changes in the following order from the first line- s="abc", s="dddabc", s="dddabc" and s="dddabcq".</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>"qdddabc"</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The value of s changes in the following order from the first line- s="abc", s="dddabc", s="dddabc" and s="dddabcq".</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>"dddabcq"</p>
+        </statement>
+        <feedback>
+          <p>Correct! The value of s changes in the following order from the first line- s="abc", s="dddabc", s="dddabc" and s="dddabcq".</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The value of s changes in the following order from the first line- s="abc", s="dddabc", s="dddabc" and s="dddabcq".</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-strings-11_Strings_07">
+    <statement>
+      <p>11-9-2: What is the value of <c>y</c> after the following code runs?</p>
+      <program language="python">
+        <input>
+s = "Cats"
+y = s[len(s)-1]
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>C</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, len(s) = 4 and s[len(s)-1] = s[3]. So, the value of y will be the fourth character in the string i.e. "s".</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>t</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, len(s) = 4 and s[len(s)-1] = s[3]. So, the value of y will be the fourth character in the string i.e. "s".</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>s</p>
+        </statement>
+        <feedback>
+          <p>Correct! Here, len(s) = 4 and s[len(s)-1] = s[3]. So, the value of y will be the fourth character in the string i.e. "s".</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Nothing, this will cause an error</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, len(s) = 4 and s[len(s)-1] = s[3]. So, the value of y will be the fourth character in the string i.e. "s".</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, len(s) = 4 and s[len(s)-1] = s[3]. So, the value of y will be the fourth character in the string i.e. "s".</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-strings-11_Strings_09">
+    <statement>
+      <p>11-9-3: What will the following code print?</p>
+      <program language="python">
+        <input>
+s = "bats"
+print(s[0:len(s)])
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>ats</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here len(s) = 4. So, s[0:4] = "bats" i.e. the first four characters.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>bat</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here len(s) = 4. So, s[0:4] = "bats" i.e. the first four characters.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>bats</p>
+        </statement>
+        <feedback>
+          <p>Correct! Here len(s) = 4. So, s[0:4] = "bats" i.e. the first four characters.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>This will throw an exception</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here len(s) = 4. So, s[0:4] = "bats" i.e. the first four characters.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here len(s) = 4. So, s[0:4] = "bats" i.e. the first four characters.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-strings-11_Strings_11">
+    <statement>
+      <p>11-9-4: What will the following code print?</p>
+      <program language="python">
+        <input>
+s = "Vampires"
+print(s[3:-1]
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>mpire</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Negative index- "-1" has been used in the slice. So, the slice will end at the second last character.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>pires</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Negative index- "-1" has been used in the slice. So, the slice will end at the second last character.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>pire</p>
+        </statement>
+        <feedback>
+          <p>Correct! Negative index- "-1" has been used in the slice. So, the slice will end at the second last character.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>pir</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Negative index- "-1" has been used in the slice. So, the slice will end at the second last character.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Negative index- "-1" has been used in the slice. So, the slice will end at the second last character.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-strings-11_Strings_14">
+    <statement>
+      <p>11-9-5: What does the following code return?</p>
+      <program language="python">
+        <input>
+def mystery(s):
+   new_s = ""
+   for c in s:
+      new_s = c + new_s
+   return new_s
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Returns a copy of s</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! For example, take s = "xyz". With each step in the loop, the value of new_s will change in the order- new_s = x, new_s = yx and new_s = zyx.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Returns the reverse of s</p>
+        </statement>
+        <feedback>
+          <p>Correct! For example, take s = "xyz". With each step in the loop, the value of new_s will change in the order- new_s = x, new_s = yx and new_s = zyx.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Returns a string with only the last character of s</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! For example, take s = "xyz". With each step in the loop, the value of new_s will change in the order- new_s = x, new_s = yx and new_s = zyx.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Returns a string with only the first character of s</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! For example, take s = "xyz". With each step in the loop, the value of new_s will change in the order- new_s = x, new_s = yx and new_s = zyx.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! For example, take s = "xyz". With each step in the loop, the value of new_s will change in the order- new_s = x, new_s = yx and new_s = zyx.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture10_Strings_03_v2">
+    <statement>
+      <p>11-9-6: What is the value of <c>s</c> after the following code runs?</p>
+      <program language="python">
+        <input>
+s = 'abc'
+s = 'd' * 3 + s
+s = s + ' ' * 3
+s = s + 'q'
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>"abcddd   q"</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, 'd' * 3 + s = 'ddd' + 'abc' = 'dddabc'. Then ' ' adds three spaces at the end of the string followed by a 'q' at the end.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>"abcddd   q"</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, 'd' * 3 + s = 'ddd' + 'abc' = 'dddabc'. Then ' ' adds three spaces at the end of the string followed by a 'q' at the end.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>"abcdddq"</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, 'd' * 3 + s = 'ddd' + 'abc' = 'dddabc'. Then ' ' adds three spaces at the end of the string followed by a 'q' at the end.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>"qdddabc"</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Here, 'd' * 3 + s = 'ddd' + 'abc' = 'dddabc'. Then ' ' adds three spaces at the end of the string followed by a 'q' at the end.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>"dddabc   q"</p>
+        </statement>
+        <feedback>
+          <p>Correct! Here, 'd' * 3 + s = 'ddd' + 'abc' = 'dddabc'. Then ' ' adds three spaces at the end of the string followed by a 'q' at the end.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture10_Strings_07">
+    <statement>
+      <p>11-9-7: What is a good description of what the following function does?</p>
+      <program language="python">
+        <input>
+def mystery(s):
+   new_s = ''
+   for c in s:
+      new_s = c + new_s
+   return new_s
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Returns a copy of s</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Consider s = 'abc'. In the first iteration, new_s = c + new_s = 'a' + '' = 'a'. In the second iteration, new_s = 'b' + 'a' = 'ba' and so on. So, it will return the reverse of s.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Returns the reverse of s</p>
+        </statement>
+        <feedback>
+          <p>Correct! Consider s = 'abc'. In the first iteration, new_s = c + new_s = 'a' + '' = 'a'. In the second iteration, new_s = 'b' + 'a' = 'ba' and so on. So, it will return the reverse of s.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Returns a string consisting of only the final character of s</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Consider s = 'abc'. In the first iteration, new_s = c + new_s = 'a' + '' = 'a'. In the second iteration, new_s = 'b' + 'a' = 'ba' and so on. So, it will return the reverse of s.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Returns a string consisting of only the first character of s</p>
+        </statement>
+        <feedback>
+          <p>Incrrect! Consider s = 'abc'. In the first iteration, new_s = c + new_s = 'a' + '' = 'a'. In the second iteration, new_s = 'b' + 'a' = 'ba' and so on. So, it will return the reverse of s.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture10_Strings_08">
+    <statement>
+      <p>11-9-8: What is the value of <c>val</c> after this code executes?</p>
+      <program language="python">
+        <input>
+val = 0
+for i in 'ab':
+   for j in 'cd':
+      val += 1
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! For each 'a' and 'b', the nested for loop will run twice. Thus, val gets incremented by 1 four times resulting in val = 4.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>2</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! For each 'a' and 'b', the nested for loop will run twice. Thus, val gets incremented by 1 four times resulting in val = 4.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>4</p>
+        </statement>
+        <feedback>
+          <p>Correct! For each 'a' and 'b', the nested for loop will run twice. Thus, val gets incremented by 1 four times resulting in val = 4.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>8</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! For each 'a' and 'b', the nested for loop will run twice. Thus, val gets incremented by 1 four times resulting in val = 4.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>16</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! For each 'a' and 'b', the nested for loop will run twice. Thus, val gets incremented by 1 four times resulting in val = 4.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture10_Strings_09">
+    <statement>
+      <p>11-9-9: What is the value of <c>val</c> after this code executes?</p>
+      <program language="python">
+        <input>
+val = 0
+for i in 'abc':
+   for j in 'def':
+   val += 1
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! For each 'a', 'b' and 'c', the nested for loop will run thrice. Thus, val gets incremented by 1 nine times resulting in val = 9.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! For each 'a', 'b' and 'c', the nested for loop will run thrice. Thus, val gets incremented by 1 nine times resulting in val = 9.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>6</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! For each 'a', 'b' and 'c', the nested for loop will run thrice. Thus, val gets incremented by 1 nine times resulting in val = 9.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>9</p>
+        </statement>
+        <feedback>
+          <p>Correct! For each 'a', 'b' and 'c', the nested for loop will run thrice. Thus, val gets incremented by 1 nine times resulting in val = 9.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>27</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! For each 'a', 'b' and 'c', the nested for loop will run thrice. Thus, val gets incremented by 1 nine times resulting in val = 9.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

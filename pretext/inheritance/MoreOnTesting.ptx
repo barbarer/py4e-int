@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<section xml:id="inheritance_group-work-on-unit-tests">
+  <title>Group Work on Unit Tests</title>
+  <introduction>
+  <p>It is best to use a POGIL approach with the following. In POGIL students work
+            in groups on activities and each member has an assigned role.  For more information see <url href="https://cspogil.org/Home" visual="https://cspogil.org/Home">https://cspogil.org/Home</url>.</p>
+  <note>
+    <p>If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.</p>
+  </note>
+  <p>
+    <term>Content Learning Objectives</term>
+  </p>
+  <p>
+    <em>After completing this activity, students should be able to:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Use assert methods to test code (assertEqual and assertAlmostEqual, assertIsInstance)</p>
+      </li>
+      <li>
+        <p>Test code that doesn't return a value</p>
+      </li>
+    </ul>
+  </p>
+  <p>It is important to learn how to write good tests, this is especially true if other people will use your code, but it is also true when it is just for your own use.</p>
+</introduction>
+  <subsection xml:id="inheritance_assert-methods">
+    <title>Assert methods</title>
+    <p>There are many assert methods that you can use in your tests.  See <url href="https://docs.python.org/3/library/unittest.html" visual="https://docs.python.org/3/library/unittest.html">https://docs.python.org/3/library/unittest.html</url> for the documentation.  You will mostly use
+                <c>assertEqual</c>, but here are a few others that are very useful.</p>
+    <table>
+      <tabular>
+        <row header="yes">
+          <cell>
+                                Method
+                            </cell>
+          <cell>
+                                What the Method Tests
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                assertEqual(a,b)
+                            </cell>
+          <cell>
+                                a == b
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                assertTrue(x)
+                            </cell>
+          <cell>
+                                x == True
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                assertGreater(a,b)
+                            </cell>
+          <cell>
+                                a &gt; b
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                assertGreaterEqual(a,b)
+                            </cell>
+          <cell>
+                                a &gt;= b
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                assertIn(a,b)
+                            </cell>
+          <cell>
+                                a in b
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                assertIsInstance
+                            </cell>
+          <cell>
+                                isinstance(a, b)
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                assertAlmostEquals(a,b,p)
+                            </cell>
+          <cell>
+                                round(a-b, p) == 0, the default for p (num places after decimal point) is 7
+                            </cell>
+        </row>
+      </tabular>
+    </table>
+    <note>
+      <p>All the assert methods also take an optional message (string) to display as the last parameter.</p>
+    </note>
+  </subsection>
+  <subsection xml:id="inheritance_more_testing_writing-unit-tests">
+    <title>Writing Unit Tests</title>
+    <p>When you create tests you want to test the usual things as well as edge cases (unusual things).  For example, when working with lists what is the result when the list is empty? When working with numbers be sure to test positive and negative numbers.</p>
+    <p>Read the description of the function below.  How many test cases do you need to test this function?</p>
+    <exercise label="ut_is_descending_ac">
+      <statement>
+        <p>Write a function <c>is_descending(nums)</c> that returns <c>True</c> if the numbers in the list <c>nums</c> are sorted in descending order and <c>False</c> otherwise. If the list <c>nums</c> has less than two numbers in it return <c>True</c>.  For example, <c>is_descending([3, 2, 1])</c> should return <c>True</c>, <c>is_descending([1])</c> should also return <c>True</c>, and <c>is_descending([1,2,3])</c> should return <c>False</c>.</p>
+      </statement>
+      <program xml:id="ut_is_descending_ac_editor" interactive="activecode" language="python">
+        <input>
+def is_descending(nums):
+
+
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(is_descending([3,2,1]),True,"is_descending([3,2,1])")
+        self.assertEqual(is_descending([1]),True,"is_descending([1])")
+        self.assertEqual(is_descending([1,2,3]),False,"is_descending([1,2,3]])")
+
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+    <p>Add a test to the <c>testOne</c> function above to test when <c>nums</c> is the empty list.  Add tests to check what happens when all numbers are descending except the first, middle, or last.  Add tests that check that it works for unusual values such as negative numbers or zero.</p>
+    <p>Read the description of the function below.  How many test cases do you need to test this function?</p>
+    <exercise label="ut_temp_category_ac">
+      <statement>
+        <p>Write a function <c>temp_cat(value)</c> that returns <c>"low"</c> if <c>value</c> is &lt; 97, <c>normal</c> if <c>value</c> is &gt;= 97 and &lt;= 99, and <c>high</c> if <c>value</c> is &gt; 99.  Add more test cases to check the three possible return values (<c>"low"</c>, <c>"normal"</c>, and <c>"high"</c>).</p>
+      </statement>
+      <program xml:id="ut_temp_category_ac_editor" interactive="activecode" language="python">
+        <input>
+def temp_cat(value):
+
+
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(temp_cat(96), "low", "temp_cat(96)")
+
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+    <p>Did you check when <c>value</c> equals 97 and is greater than 97?  Did you check when <c>value</c> was equal to 99?  What happens if <c>value</c> is a floating point number like 98.7 or 102.4?</p>
+    <p>Use <c>assertEqual</c> if the values you are comparing are integers or strings.  Use <c>assertAlmostEqual</c> if the values are floating point numbers (especially if they are calculated by the computer).  This method takes the two items to compare, the number of decimal places to compare (the default is 7), and a string describing the test.</p>
+    <exercise label="ut_item_and_order_add_total_ac">
+      <statement>
+        <p>Write a <c>total</c> method in the <c>Order</c> class to return the total of all of the prices for the items in the order.  Then add a test to <c>testTotal</c> to test the total of o2.</p>
+      </statement>
+      <program xml:id="ut_item_and_order_add_total_ac_editor" interactive="activecode" language="python">
+        <input>
+class Item:
+
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+
+    def __str__(self):
+        return f"{self.name}: {self.price}"
+
+class Order:
+
+    def __init__(self, items):
+        self.items = items
+
+
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def setUp(self):
+        i1 = Item("burger", 4.99)
+        i2 = Item("fries", 2.99)
+        i3 = Item("drink", 1.99)
+        i4 = Item("fruit", 2.50)
+        self.o1 = Order([i1, i2, i3])
+        self.o2 = Order([i1, i3, i4])
+
+    def testTotal(self):
+        self.assertAlmostEqual(self.o1.total(), 9.97, 2, "o1.total()")
+
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+    <note>
+      <p>Remember that the <c>setUp</c> method is called before every method of the class <c>myTests</c> and that the methods are not called in the order they are written.</p>
+    </note>
+    <p>It is easy to test a function or method that returns a value, but how do you test when no value is returned?  For example, the <c>set_price</c> method below doesn't return anything, but it should change the price.  You can test that the price changed from the original value as shown below.</p>
+    <exercise label="ut_item_set_name_set_price_ac">
+      <statement>
+        <p>Write a <c>set_name</c> method that changes the current object's name and then add a new method <c>test_set_name</c> to test <c>set_name</c>.</p>
+      </statement>
+      <program xml:id="ut_item_set_name_set_price_ac_editor" interactive="activecode" language="python">
+        <input>
+class Item:
+
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+
+    def __str__(self):
+        return f"{self.name}: {self.price}"
+
+    def set_price(self, new_price):
+        self.price = new_price
+
+
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def setUp(self):
+        self.i1 = Item("burger", 4.99)
+        self.i2 = Item("fries", 2.99)
+        self.i3 = Item("drink", 1.99)
+        self.i4 = Item("fruit", 2.50)
+
+    def test_set_price(self):
+        self.assertAlmostEqual(self.i1.price,4.99,2,"test i1 price before change")
+        self.i1.set_price(5.29)
+        self.assertAlmostEqual(self.i1.price,5.29,2,"test i1 price after change")
+
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+    <note>
+      <p>To test a method or function in a test method be sure to call the method or function.</p>
+    </note>
+    <p>Testing with inheritance.  If you have asked someone to create a class that inherits from another class you might want to check that they specified the inheritance correctly.  You can use <c>assertIsInstance</c> to check if an object is an instance of a class.</p>
+    <exercise label="inheritance_pet_duck_ac">
+      <statement>
+        <p>Create a subclass of the <c>Animal</c> class named <c>Duck</c> that overrides the inherited <c>noise</c> method to return <c>"Quack"</c>.  Also create a test to check that the <c>noise</c> method in <c>Duck</c> returns the correct string.</p>
+      </statement>
+      <program xml:id="inheritance_pet_duck_ac_editor" interactive="activecode" language="python">
+        <input>
+class Animal:
+
+    def noise(self):
+        return "Unknown"
+
+
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        d = Duck()
+        a = Animal()
+        self.assertEqual(a.noise(), "Unknown", "Testing Pet noise")
+        self.assertIsInstance(d, type(a), "Testing Duck inherits from Animal")
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+    <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
+    <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+    &lt;div data-component="groupsub" id=unit_tests_group_work data-size_limit=3&gt;
+        &lt;div class="col-sm-6"&gt;
+            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div id="groupsub_button" class="col-sm-6"&gt;
+        &lt;/div&gt;
+        &lt;p&gt;The Submit Group button will submit the answer for each each question
+        on this page for each member of your group. It also logs you as the official
+        group submitter.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  </subsection>
+</section>

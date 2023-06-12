@@ -1,0 +1,334 @@
+<?xml version="1.0"?>
+<section xml:id="functions_functions-and-lists-mixed-up-code-questions">
+  <title>Functions and Lists Mixed-Up Code Questions</title>
+  <exercise label="functions_lists_mixedupcode_1" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>second_half</c> that takes in <c>lst</c> as a parameter and returns the second half of <c>lst</c>.
+            For example, <c>second_half([1])</c> should return <c>[1]</c>, <c>second_half([1, 2, 3])</c> should return <c>[2, 3]</c>, and <c>second_half([1, 2, 3, 4])</c>
+            should return <c>[3, 4]</c>.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>def second_half(lst):</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    return lst[(len(lst) // 2):]</cline>
+        </choice>
+        <choice>
+          <cline>    return lst[(len(lst) / 2):] </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    return lst[(len(lst) / 2):-1] </cline>
+        </choice>
+        <choice>
+          <cline>    return lst[(len(lst) // 2):(len(lst) - 1)] </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>    return lst[(len(lst) % 2):len(lst)] </cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="functions_lists_mixedupcode_1_ac">
+    <statement>
+      <p>Write a function called <c>second_half</c> that takes in <c>lst</c> as a parameter and returns the second half of <c>lst</c>.
+            For example, <c>second_half([1])</c> should return <c>[1]</c>, <c>second_half([1, 2, 3])</c> should return <c>[2, 3]</c>, and <c>second_half([1, 2, 3, 4])</c>
+            should return <c>[3, 4]</c>.</p>
+    </statement>
+    <program xml:id="functions_lists_mixedupcode_1_ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(second_half([1, 2, 3]),[2, 3],"second_half([1, 2, 3])")
+        self.assertEqual(second_half([1]),[1],"second_half([1])")
+        self.assertEqual(second_half([1, 2, 3, 4]),[3, 4],"second_half([1, 2, 3, 4])")
+        self.assertEqual(second_half(['hello', 'many', False, True, 2, 3, 'happy']),[True, 2, 3, 'happy'],"second_half(['hello', 'many', False, True, 2, 3, 'happy'])")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="functions_lists_mixedupcode_2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>sum_of_split_num</c> that takes in <c>str_num_with_hyphens</c> as a parameter and returns the sum of the integers that
+            are split up by hyphens. For example, <c>sum_of_split_num('978-876-4908')</c> should return <c>6762</c> because 978 + 876 + 4908 = 6762.
+            (Note: Integers are 0 or greater.)</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <cline>def sum_of_split_num(str_num_with_hyphens):</cline>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>    num_without_hyphens = str_num_with_hyphens.split('-')</cline>
+        </choice>
+        <choice>
+          <cline>    num_without_hyphens = str_num_with_hyphens.split() </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <cline>    map_object_to_ints = map(int, num_without_hyphens)</cline>
+      </block>
+      <block order="4">
+        <cline>    lst_of_ints = list(map_object_to_ints)</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    return sum(lst_of_ints)</cline>
+        </choice>
+        <choice>
+          <cline>    return sum(lst_of_ints) / 2 </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <cline>    return lst_of_ints.sum() </cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="functions_lists_mixedupcode_2_ac">
+    <statement>
+      <p>Write a function called <c>sum_of_split_num</c> that takes in <c>str_num_with_hyphens</c> as a parameter and returns the sum of the integers that
+            are split up by hyphens. For example, <c>sum_of_split_num('978-876-4908')</c> should return <c>6762</c> because 978 + 876 + 4908 = 6762. (Note: Integers
+            are 0 or greater.)</p>
+    </statement>
+    <program xml:id="functions_lists_mixedupcode_2_ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(sum_of_split_num('978-876-4908'),6762,"sum_of_split_num('978-876-4908')")
+        self.assertEqual(sum_of_split_num('000-05746-28736'),34482,"sum_of_split_num('000-05746-28736')")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="functions_lists_mixedupcode_3" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>sort_descending</c> that takes in <c>lst_of_nums</c> as a parameter and returns <c>lst_of_nums</c> in descending order.
+            For example, <c>sort_descending([100, 2000, -50])</c> should return <c>[2000, 100, -50]</c>.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <cline>def sort_descending(lst_of_nums):</cline>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>    lst_of_nums.sort(reverse=True)</cline>
+        </choice>
+        <choice>
+          <cline>    lst_of_nums.sort(reverse=False) </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>    lst_of_nums.sort() </cline>
+        </choice>
+        <choice>
+          <cline>    lst_of_nums = lst_of_nums.sort(reverse=True) </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    return lst_of_nums</cline>
+        </choice>
+        <choice>
+          <cline>    return sorted(lst_of_nums, reverse=False) </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>    return sorted(lst_of_nums) </cline>
+        </choice>
+        <choice>
+          <cline>    return lst_of_nums.sort(reverse=True) </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="functions_lists_mixedupcode_3_ac">
+    <statement>
+      <p>Write a function called <c>sort_descending</c> that takes in <c>lst_of_nums</c> as a parameter and returns <c>lst_of_nums</c> in descending order.
+            For example, <c>sort_descending([100, 2000, -50])</c> should return <c>[2000, 100, -50]</c>.</p>
+    </statement>
+    <program xml:id="functions_lists_mixedupcode_3_ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(sort_descending([100, 2000, -50]),[2000, 100, -50],"sort_descending([100, 2000, -50])")
+        self.assertEqual(sort_descending([83, 0, -2000]),[83, 0, -2000],"sort_descending([83, 0, -2000])")
+        self.assertEqual(sort_descending([-83]),[-83],"sort_descending([-83])")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="functions_lists_mixedupcode_4" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>extend_two_lists_sort</c> that takes in <c>lst1</c> and <c>lst2</c> as parameters, sorts both lists, and extends <c>lst1</c> with <c>lst2</c>.
+            For example, <c>extend_two_lists_sort(['string', 'hello'], ['my', 'goodness'])</c> should return <c>['hello', 'string', 'goodness', 'my']</c>.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>def extend_two_lists_sort(lst1, lst2):</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    lst1.sort()</cline>
+        </choice>
+        <choice>
+          <cline>    sorted(lst1) </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>    lst2.sort()</cline>
+        </choice>
+        <choice>
+          <cline>    sorted(lst2) </cline>
+        </choice>
+      </block>
+      <block order="11">
+        <choice correct="yes">
+          <cline>    lst1.extend(lst2)</cline>
+        </choice>
+        <choice>
+          <cline>    lst1.append(lst2) </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    return lst1</cline>
+        </choice>
+        <choice>
+          <cline>    return lst1.extend(lst2) </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>    return lst1.extend(lst2).sort() </cline>
+        </choice>
+        <choice>
+          <cline>    return sorted(lst1.extend(lst2)) </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="functions_lists_mixedupcode_4_ac">
+    <statement>
+      <p>Write a function called <c>extend_two_lists_sort</c> that takes in <c>lst1</c> and <c>lst2</c> as parameters, sorts both lists, and extends <c>lst1</c> with <c>lst2</c>.
+            For example, <c>extend_two_lists_sort(['string', 'hello'], ['my', 'goodness'])</c> should return <c>['hello', 'string', 'goodness', 'my']</c>.</p>
+    </statement>
+    <program xml:id="functions_lists_mixedupcode_4_ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(extend_two_lists_sort(['string', 'hello'], ['my', 'goodness']),['hello', 'string', 'goodness', 'my'],"extend_two_lists_sort(['string', 'hello'], ['my', 'goodness'])")
+        self.assertEqual(extend_two_lists_sort([1, -5, 0], ['my', 'hello']),[-5, 0, 1, 'hello', 'my'],"extend_two_lists_sort([1, -5, 0], ['my', 'hello'])")
+        self.assertEqual(extend_two_lists_sort([1, -5, 0], [8000, -23, -1, 0]),[-5, 0, 1, -23, -1, 0, 8000],"extend_two_lists_sort([1, -5, 0], [8000, -23, -1, 0])")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="functions_lists_mixedupcode_5" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>sort_and_get_median_num</c> that takes in <c>lst_of_nums</c> as a parameter, sorts <c>lst_of_nums</c>, and returns the median
+            of <c>lst_of_nums</c>. For example, <c>sort_and_get_median_num([200, -5, 0, 75, 80, 60])</c> should return <c>67.5</c>, and
+            <c>sort_and_get_median_num([200, -5, 0, 75, 80])</c> should return <c>75</c>.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>def sort_and_get_median_num(lst_of_nums):</cline>
+      </block>
+      <block order="3">
+        <cline>    lst_of_nums.sort()</cline>
+      </block>
+      <block order="13">
+        <cline>    if len(lst_of_nums) % 2 == 1:</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>        return lst_of_nums[len(lst_of_nums) // 2]</cline>
+        </choice>
+        <choice>
+          <cline>        return lst_of_nums[len(lst_of_nums) / 2] </cline>
+        </choice>
+      </block>
+      <block order="12">
+        <cline>    else:</cline>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>        sum_of_middle_two_nums = sum(lst_of_nums[len(lst_of_nums) // 2 - 1: len(lst_of_nums) // 2 + 1])</cline>
+        </choice>
+        <choice>
+          <cline>        sum_of_middle_two_nums = sum(lst_of_nums[len(lst_of_nums) // 2: len(lst_of_nums) // 2 + 2]) </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>        sum_of_middle_two_nums = sum(lst_of_nums[len(lst_of_nums) // 2 - 2: len(lst_of_nums) // 2]) </cline>
+        </choice>
+        <choice>
+          <cline>        sum_of_middle_two_nums = sum(lst_of_nums[len(lst_of_nums) / 2 - 1: len(lst_of_nums) / 2 + 1]) </cline>
+        </choice>
+      </block>
+      <block order="10">
+        <choice correct="yes">
+          <cline>        mean_of_two_nums = sum_of_middle_two_nums / 2</cline>
+        </choice>
+        <choice>
+          <cline>        mean_of_two_nums = sum_of_middle_two_nums // 2 </cline>
+        </choice>
+      </block>
+      <block order="11">
+        <cline>        return mean_of_two_nums</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="functions_lists_mixedupcode_5_ac">
+    <statement>
+      <p>Write a function called <c>sort_and_get_median_num</c> that takes in <c>lst_of_nums</c> as a parameter, sorts <c>lst_of_nums</c>, and returns the median of <c>lst_of_nums</c>.
+            For example, <c>sort_and_get_median_num([200, -5, 0, 75, 80, 60])</c> should return <c>67.5</c>, and <c>sort_and_get_median_num([200, -5, 0, 75, 80])</c> should return <c>75</c>.</p>
+    </statement>
+    <program xml:id="functions_lists_mixedupcode_5_ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(sort_and_get_median_num([200, -5, 0, 75, 80]),75,"sort_and_get_median_num([200, -5, 0, 75, 80])")
+        self.assertEqual(sort_and_get_median_num([200, -5, 0, 75, 80, 60]),67.5,"sort_and_get_median_num([200, -5, 0, 75, 80, 60])")
+        self.assertEqual(sort_and_get_median_num([200]),200,"sort_and_get_median_num([200])")
+        self.assertEqual(sort_and_get_median_num([200, -5]),97.5,"sort_and_get_median_num([200, -5])")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

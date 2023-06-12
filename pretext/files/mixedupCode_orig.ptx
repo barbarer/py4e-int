@@ -1,0 +1,320 @@
+<?xml version="1.0"?>
+<section xml:id="files_mixed-up-code-questions">
+  <title>Mixed-up Code Questions</title>
+  <exercise label="file_write_line_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>write_line(file, output)</c> that writes the contents of the string <c>output</c> to <c>file</c>.  Be sure to add a newline character <c>"\n"</c> when you write <c>output</c> to the file.</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <cline>def write_line(file, output):</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    fout = open(file, 'w')</cline>
+        </choice>
+        <choice>
+          <cline>    fout = open(file, 'r') </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    fout.write(output + "\n")</cline>
+        </choice>
+        <choice>
+          <cline>    fout.write(output) </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    fout.close()</cline>
+        </choice>
+        <choice>
+          <cline>    fout.close </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="file_write_line_ac">
+    <statement>
+      <p>Write a function <c>write_line(file, output)</c> that writes the contents of the string <c>output</c> to <c>file</c>.  Be sure to add a newline character <c>"\n"</c> when you write <c>output</c> to the file. Also make sure that you close the file after writing to it.</p>
+    </statement>
+    <program xml:id="file_write_line_ac_editor" interactive="activecode" language="python">
+      <input>
+def write_line(file, output):
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        m = 'Python rocks!'
+        write_line('temp.txt', m)
+        fin = open('temp.txt')
+        line = fin.readline()
+        self.assertEqual(line.rstrip(), m, "Testing write_line with rstrip")
+        self.assertEqual(line, m + "\n", "Testing that write_line writes the end of line character"
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="file_read_n_lines_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>read_n_lines(file, n)</c> that reads the first <c>n</c> lines from <c>file</c> and returns them in a list. Be sure to remove the end of line character from each line before you add it to the list and close the file after you have read the lines.</p>
+    </statement>
+    <blocks>
+      <block order="8">
+        <cline>def read_n_lines(file, n):</cline>
+      </block>
+      <block order="4">
+        <cline>    out = []</cline>
+        <cline>    f = open(file)</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    for i in range(n):</cline>
+        </choice>
+        <choice>
+          <cline>    for i in range(n+1): </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>        line = f.readline()</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>        out.append(line.rstrip())</cline>
+        </choice>
+        <choice>
+          <cline>        out.append(line) </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    f.close()</cline>
+      </block>
+      <block order="2">
+        <cline>    return out</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="file_read_n_lines_ac">
+    <statement>
+      <p>Write a function <c>read_n_lines(file, n)</c> that reads the first <c>n</c> lines from <c>file</c> and returns them in a list. Be sure to remove the end of line character from each line before you add it to the list and close the file after you have read the lines</p>
+    </statement>
+    <program xml:id="file_read_n_lines_ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(read_n_lines("dogs.txt", 3), ["Labrador Retriever", "German Shepherd", "Golden Retriever"], 'read_n_lines(["dogs.txt"], 3)')
+        self.assertEqual(read_n_lines("dogs.txt", 2), ["Labrador Retriever", "German Shepherd"], 'read_n_lines(["dogs.txt"], 2)')
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="file_count_words_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>count_words(file)</c> that returns the number of words in the passed file. First create a variable <c>num</c> and initialize it.  Then open the
+            file. Loop reading a line from the file. Break the line at spaces and add the length of the resulting list to <c>num</c>. After you have read all the lines, close the file and return <c>num</c>.</p>
+    </statement>
+    <blocks>
+      <block order="9">
+        <cline>def count_words(file):</cline>
+      </block>
+      <block order="8">
+        <cline>    num = 0</cline>
+      </block>
+      <block order="6">
+        <cline>    file_obj = open(file, "r")</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    for line in file_obj:</cline>
+        </choice>
+        <choice>
+          <cline>    for line in "file_obj": </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>        words = line.split(" ")</cline>
+        </choice>
+        <choice>
+          <cline>        words = line.break(" ") </cline>
+        </choice>
+      </block>
+      <block order="10">
+        <choice correct="yes">
+          <cline>        num = num + len(words)</cline>
+        </choice>
+        <choice>
+          <cline>        num = num + words </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <cline>    file_obj.close()</cline>
+      </block>
+      <block order="2">
+        <cline>    return(num)</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="file_count_words_ac">
+    <statement>
+      <p>Write a function <c>count_words(file)</c> that returns the number of words in the passed file. First create a variable <c>num</c> and initialize it.  Then open the
+            file. Loop reading a line from the file. Split the line at spaces and add the length of the resulting list to <c>num</c>. After you have read all the lines, close the file and return <c>num</c>.</p>
+    </statement>
+    <program xml:id="file_count_words_ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(count_words("dogs.txt"), 14, 'count_words("dogs.txt")')
+        self.assertEqual(count_words("emotion_words.txt"), 48, 'count_words("emotion_words.txt")')
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="file_count_lines_starting_with_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>count_starting_with(file, str)</c> that returns the number of lines in the passed <c>file</c> that start with the characters in <c>str</c>.  Be sure to close the file.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>def count_starting_with(file, str):</cline>
+      </block>
+      <block order="9">
+        <cline>    num = 0</cline>
+      </block>
+      <block order="6">
+        <cline>    file_obj = open(file)</cline>
+      </block>
+      <block order="2">
+        <cline>    for line in file_obj:</cline>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>        if line.startswith(str):</cline>
+        </choice>
+        <choice>
+          <cline>        if line.startsWith(str): </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>            num += 1</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    file_obj.close()</cline>
+        </choice>
+        <choice>
+          <cline>    file.close() </cline>
+        </choice>
+      </block>
+      <block order="8">
+        <cline>    return(num)</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="file_count_lines_starting_with_ac">
+    <statement>
+      <p>Create a function <c>count_starting_with(file, str)</c> that returns the number of lines in the passed <c>file</c> that start with the characters in <c>str</c>.  Be sure to close the file.</p>
+    </statement>
+    <program xml:id="file_count_lines_starting_with_ac_editor" interactive="activecode" language="python">
+      <input>
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(count_starting_with("dogs.txt" ,"B"), 3, 'count_starting_with("dogs.txt" ,"B")')
+        self.assertEqual(count_starting_with("dogs.txt" ,"G"), 2, 'count_starting_with("dogs.txt" ,"G")')
+        self.assertEqual(count_starting_with("dogs.txt" ,"P"), 1, 'count_starting_with("dogs.txt" ,"P")')
+        self.assertEqual(count_starting_with("emotion_words.txt", "A"), 1, 'count_starting_with("emotion_words.txt", "A")')
+        self.assertEqual(count_starting_with("emotion_words.txt", "S"), 2, 'count_starting_with("emotion_words.txt", "S")')
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="file_write_squares_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>write_squares(file)</c> which writes the squares of 1 (inclusive) to 10 (inclusive) with each one on a single line to <c>file</c>.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <cline>def write_squares(file)</cline>
+      </block>
+      <block order="8">
+        <cline>    outfile = open(file, "w")</cline>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>    for number in range(1, 11):</cline>
+        </choice>
+        <choice>
+          <cline>    for number in range(1, 10): </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>        square = number * number</cline>
+        </choice>
+        <choice>
+          <cline>        square = number * 2 </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>        outfile.write(str(square) + "\n")</cline>
+        </choice>
+        <choice>
+          <cline>        outfile.write(str(square)) </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    outfile.close()</cline>
+        </choice>
+        <choice>
+          <cline>    close(outfile) </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="file_write_squares_ac">
+    <statement>
+      <p>Create a function <c>write_squares(file)</c> which writes the squares of 1 (inclusive) to 10 (inclusive) with each one on a single line to <c>file</c>.</p>
+    </statement>
+    <program xml:id="file_write_squares_ac_editor" interactive="activecode" language="python">
+      <input>
+def write_squares(file):
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        write_squares('squares.txt')
+        fin = open('squares.txt')
+        str = ""
+        for line in fin:
+            str = str + line.rstrip() + ", "
+
+        self.assertEqual(str, "1, 4, 9, 16, 25, 36, 49, 64, 81, 100, ", "testing write_squares form 1 to 10")
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

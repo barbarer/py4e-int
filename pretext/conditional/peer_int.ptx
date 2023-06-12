@@ -1,0 +1,327 @@
+<?xml version="1.0"?>
+<section xml:id="conditional_peer-instruction-exception-multiple-choice-questions">
+  <title>Peer Instruction: Exception Multiple Choice Questions</title>
+  <exercise label="ctp-Stringlists-10_Exceptions_06">
+    <statement>
+      <p>Q-1: Select the correct type for each variable</p>
+      <program language="python">
+        <input>
+a = 7 + 3
+b = 3.1415
+c = 7 &lt; 3
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>int, int, int</p>
+        </statement>
+        <feedback>
+          <p>Try again. A float is a number with a fractional part and a boolean is a true or false value of an expression.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>int, float, boolean</p>
+        </statement>
+        <feedback>
+          <p>Correct! 3 + 4 evaluates to 7, which is a whole number. 3.1415 has a fractional part, and 7 &lt; 3 is the false value of an expression.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>int, float, int</p>
+        </statement>
+        <feedback>
+          <p>Try again. 7 &lt; 3 here represents the false value of an expression.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>float, real, boolean</p>
+        </statement>
+        <feedback>
+          <p>Try again. 3 + 4 evaluates to 7, which is a whole number, and 3.1415 has a fractional part.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Try again. 3 + 4 evaluates to 7, which is a whole number. 3.1415 has a fracional part, and 7 &lt; 3 is the false value of an expression.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-Stringlists-10_Exceptions_07">
+    <statement>
+      <p>Q-2: What type will this print?</p>
+      <program language="python">
+        <input>
+def add(x, y):
+    z = x + y
+    return z
+print(type(add(5,1)))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>int</p>
+        </statement>
+        <feedback>
+          <p>Correct! add(5,1) outputs 6, which is a whole number. And type() returns class type of the object.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>function</p>
+        </statement>
+        <feedback>
+          <p>Try again. add(5,1) = 5 + 1 = 6. And type() returns class type of the object.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>real</p>
+        </statement>
+        <feedback>
+          <p>Try again. add(5,1) = 5 + 1 = 6. And type() returns class type of the object.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>This will cause an error</p>
+        </statement>
+        <feedback>
+          <p>Try again. add(5,1) generates a new number. And type() returns class type of the object while print() prints the result out.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Try again. add(5,1) = 5 + 1 = 6. And type() returns class type of the object while print() prints the result out.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-Stringlists-10_Exceptions_slide_9">
+    <statement>
+      <p>Q-3: Which code will print the value of <c>i</c>, <c>i</c> times?</p>
+      <program language="python">
+        <input>
+A.
+i = 5
+print(i*i)
+
+B.
+i = 5
+print(str(i)*str(i))
+
+C.
+i = 5
+print(str(i)*i)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Try again. i*i multiplies i with i rather than output value.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Try again. str(i) is a string type and it cannot get multiplied by another string.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Correct! str(i)*i will multiply i in the string type for i times.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above</p>
+        </statement>
+        <feedback>
+          <p>Try again. str(i) can change i into a string type. Multiply str(i) and i will have the value of i for i times.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Try again. str(i) can change i into a string type. Multiply str(i) and i will have the value of i for i times.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-Stringlists-10_Exceptions_12">
+    <statement>
+      <p>Q-4: What does the following code print?</p>
+      <program language="python">
+        <input>
+try:
+          x = 1/0
+          print("Math is lame!")
+except Exception as e:
+          print("Algebraic!")
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>"Math is lame"</p>
+        </statement>
+        <feedback>
+          <p>Try again. Because  x = 1/0 causes an error. Once the error appears, it will be detected by Exceptions. And the program will jump to Exception execution.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>"Algebraic!"</p>
+        </statement>
+        <feedback>
+          <p>Correct! Because x=1/10 causes an error which is detected by Exceptions.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Nothing, this will cause an error</p>
+        </statement>
+        <feedback>
+          <p>Try again. Yes, this will cause an error. But the error will be detected by Exceptions. So the program will not stop.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Try again. Because  x = 1/0 can cause an error. Once the error appears, it will be detected by Exceptions. And the program will jump to Exception execution.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-reviewtest1-14_review_03">
+    <statement>
+      <p>Q-5: Which of the following rewrites this code using Elif?</p>
+      <blockquote>
+        <program language="python">
+          <input>
+grade = 98
+if grade &gt; = 90:
+    print('You got an A!)
+if grade &gt; = 80 and grade &lt; 90:
+    print('You got a B!')
+if grade &lt; 80:
+    print ('You got something else')
+</input>
+        </program>
+      </blockquote>
+      <pre>A.
+
+    grade = 98
+    if (grade &gt;= 90):
+        print('You got an A!')
+    elif (grade &lt; 90):
+            print('You got a B!')
+    elif (grade &gt;= 80):
+            print('You got a B!')
+    elif (grade &lt; 80):
+            print ('You got something else')
+
+
+B.
+
+    grade = 98
+    if (grade &gt;= 90):
+            print('You got an A!')
+    elif (grade &gt;= 80):
+            print('You got a B!')
+    else:
+            print ('You got something else')
+
+
+C.
+
+    grade = 98
+    elif (grade &gt;= 90):
+            print('You got an A!')
+    elif (grade &gt;= 80):
+            print('You got a B!')
+    elif (grade &lt; 80):
+            print ('You got something else')
+
+
+D.
+
+    grade = 98
+    if (grade &gt;= 90):
+            print('You got an A!')
+    elif (grade &gt;= 80) and (grade &lt; 90):
+            print('You got a B!')
+    else:
+            print ('You got something else')</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Try again. You can get a right result if grade is 98. But if there is any grade under 90, the result will always be 'You got a B!' since the second condition can always be satisfied.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Correct! If the condition for if is False , it checks the condition of the next elif block and so on. If previous condition is satisfied, the body of elif will not be executed.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Try again. This will cause a syntax error because there is no If leading the whole block.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Try again. You can get a right result but grade &lt; 90 in elif (grade &gt;= 80) and (grade &lt; 90) is redundant because elif block will be executed only if if block is not satisfied.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Try again. There are three different conditions and output: grade &gt; 90 --&gt; 'You got an A!'; 80 &lt;= grade &lt; 90 --&gt; 'You got a B!'; grade &lt; 80 --&gt; 'You got something else'. Considering to use the 'if...elif...else' structure to distinguish these conditions.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

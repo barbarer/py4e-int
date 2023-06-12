@@ -1,0 +1,539 @@
+<?xml version="1.0"?>
+<section xml:id="network_mixed-up-code-questions">
+  <title>Mixed-Up Code Questions</title>
+
+  <exercise label="mixedupcode_network_1" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>decode</c> that takes in a parameter <c>link</c> and returns a string that contains
+            the contents of the <c>link</c> using urllib. Between each word, there should be a space. Also, a space at the end is okay.
+            For example, <c>decode('http://data.pr4e.org/romeo.txt')</c> should return <c>'But soft what light through yonder window breaks It is the east and Juliet is the sun Arise fair sun and kill the envious moon Who is already sick and pale with grief '</c>.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>import urllib.request</cline>
+      </block>
+      <block order="2">
+        <cline>def decode(link):</cline>
+      </block>
+      <block order="9">
+        <cline>    fhand = urllib.request.urlopen(link)</cline>
+      </block>
+      <block order="1">
+        <cline>    string = ''</cline>
+      </block>
+      <block order="6">
+        <cline>    for line in fhand:</cline>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>        string += line.decode().replace('\n', ' ')</cline>
+        </choice>
+        <choice>
+          <cline>        string += line.decode().strip() </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    return string</cline>
+        </choice>
+        <choice>
+          <cline>    return fhand.decode().strip() </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="mixedupcode_network_2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>write_txt</c> that takes in a parameter <c>link</c>, retrieves a file from the <c>link</c> using urllib,
+            and writes the contents of the <c>link</c> to a file called <c>'clown.txt'</c>. For example, <c>write_txt('http://data.pr4e.org/clown.txt')</c> should create
+            a file called <c>'clown.txt'</c> that has the string <c>'the clown ran after the car and the car ran into the tent and the tent fell down on the clown and the car'</c>.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <cline>import urllib.request</cline>
+        <cline>import os</cline>
+      </block>
+      <block order="6">
+        <cline>def write_txt(link):</cline>
+      </block>
+      <block order="2">
+        <cline>    text = urllib.request.urlopen(link).read()</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    fhand = open(os.path.join(os.path.dirname(__file__), 'clown.txt'), 'wb')</cline>
+        </choice>
+        <choice>
+          <cline>    fhand = open(os.path.join(os.path.dirname(__file__), 'clown.txt'), 'w') </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <cline>    fhand.write(text)</cline>
+      </block>
+      <block order="7">
+        <cline>    fhand.close()</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="mixedupcode_network_3" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>count_words</c> that takes in a parameter <c>link</c>, retrieves a file from the <c>link</c> using urllib, and
+            returns a dictionary with words as keys and the number of times they appear in the <c>link</c> as values. For example, <c>count_words('http://data.pr4e.org/romeo.txt')</c>
+            should return <c>{'But': 1, 'soft': 1, 'what': 1, 'light': 1, 'through': 1, 'yonder': 1, 'window': 1, 'breaks': 1, 'It': 1, 'is': 3, 'the': 3, 'east': 1, 'and': 3, 'Juliet': 1, 'sun': 2, 'Arise': 1, 'fair': 1, 'kill': 1, 'envious': 1, 'moon': 1, 'Who': 1, 'already': 1, 'sick': 1, 'pale': 1, 'with': 1, 'grief': 1}</c>.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>import urllib.request</cline>
+      </block>
+      <block order="7">
+        <cline>def count_words(link):</cline>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>    fhand = urllib.request.urlopen(link)</cline>
+        </choice>
+        <choice>
+          <cline>    fhand = urllib.request.urlopen(link).read() </cline>
+        </choice>
+      </block>
+      <block order="10">
+        <cline>    counts = {}</cline>
+      </block>
+      <block order="2">
+        <cline>    for line in fhand:</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>        words = line.decode().split()</cline>
+        </choice>
+        <choice>
+          <cline>        words = line.decode() </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <cline>        words = line.split() </cline>
+      </block>
+      <block order="12">
+        <cline>        for word in words:</cline>
+      </block>
+      <block order="6">
+        <cline>            counts[word] = counts.get(word, 0) + 1</cline>
+      </block>
+      <block order="3">
+        <cline>    return counts</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="mixedupcode_network_4" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>write_jpg</c> that takes in a parameter <c>img_link</c>, retrieves a file from the <c>img_link</c> using urllib,
+            and writes the contents of the <c>img_link</c> to a file called <c>'cover.jpg'</c>. For example, <c>write_jpg('http://data.pr4e.org/cover3.jpg')</c> should create
+            a file called <c>'cover.jpg'</c> that has an image of the cover for <c>"PYTHON FOR EVERYBODY"</c>.</p>
+    </statement>
+    <blocks>
+      <block order="8">
+        <cline>import urllib.request</cline>
+        <cline>import os</cline>
+      </block>
+      <block order="2">
+        <cline>def write_jpg(img_link):</cline>
+      </block>
+      <block order="4">
+        <cline>    img = urllib.request.urlopen(img_link).read()</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    fhand = open(os.path.join(os.path.dirname(__file__), 'cover.jpg'), 'wb')</cline>
+        </choice>
+        <choice>
+          <cline>    fhand = open(os.path.join(os.path.dirname(__file__), 'cover.jpg'), 'w') </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>    fhand = open(os.path.join(os.path.dirname(__file__), 'cover.jpg'), 'r') </cline>
+      </block>
+      <block order="1">
+        <cline>    fhand.write(img)</cline>
+      </block>
+      <block order="7">
+        <cline>    fhand.close()</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="mixedupcode_network_5" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>num_chars</c> that takes in a parameter <c>link</c>, retrieves a file from the <c>link</c> using urllib, and
+            returns the number of characters in <c>link</c> in the format <c>"(num) characters"</c>. For example, <c>num_chars('http://data.pr4e.org/romeo-full.txt')</c>
+            should return <c>"8864 characters"</c>.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <cline>import urllib.request</cline>
+      </block>
+      <block order="4">
+        <cline>def num_chars(link):</cline>
+      </block>
+      <block order="1">
+        <cline>    txt = urllib.request.urlopen(link)</cline>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>    num = len(txt.read())</cline>
+        </choice>
+        <choice>
+          <cline>    num = len(txt.decode()) </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>    num = len(txt) </cline>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>    return str(num) + ' characters'</cline>
+        </choice>
+        <choice>
+          <cline>    return num + ' characters' </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="mixedupcode_network_6" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>contents</c> that takes in a parameter <c>link</c>, retrieves a file from the <c>link</c> using sockets, and returns as a string
+            the contents of the <c>link</c> (specifically 10000 characters). For example, <c>contents('http://data.pr4e.org/clown.txt')</c> should return
+            <c>"HTTP/1.1 200 OK\nDate: Thu, 12 Aug 2021 01:24:15 GMT\nServer: Apache/2.4.18 (Ubuntu)\nLast-Modified: Sat, 13 May 2017 11:22:22 GMT\nETag: '6a-54f6609240717'\nAccept-Ranges: bytes\nContent-Length: 106\nCache-Control: max-age=0, no-cache, no-store, must-revalidate\nPragma: no-cache\nExpires: Wed, 11 Jan 1984 05:00:00 GMT\nConnection: close\nContent-Type: text/plain\n\nthe clown ran after the car and the car ran into the tent and the tent fell down on the clown and the car\n"</c>.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>import socket</cline>
+      </block>
+      <block order="6">
+        <cline>def contents(link):</cline>
+      </block>
+      <block order="8">
+        <cline>    mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</cline>
+      </block>
+      <block order="7">
+        <cline>    mysock.connect(('data.pr4e.org', 80))</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    cmd = 'GET ' + link + ' HTTP/1.0\r\n\r\n'</cline>
+        </choice>
+        <choice>
+          <cline>    cmd = 'GET ' + link + ' HTTP/1.0\r\n\r\n'.encode() </cline>
+        </choice>
+      </block>
+      <block order="11">
+        <cline>    cmd = cmd.encode()</cline>
+      </block>
+      <block order="12">
+        <cline>    mysock.send(cmd)</cline>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>    data = mysock.recv(10000)</cline>
+        </choice>
+        <choice>
+          <cline>    data = mysock.recv() </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    return data.decode()</cline>
+        </choice>
+        <choice>
+          <cline>    return data </cline>
+        </choice>
+      </block>
+      <block order="13">
+        <cline>    mysock.close()</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="mixedupcode_network_7" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>reg_num_links</c> that takes in a parameter <c>url</c> and returns the number of &#x2018;href'
+            attributes that start with &#x2018;http' using regular expressions. Since websites are frequently updated,
+            the returned number may change as links get added and deleted.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>import urllib.request</cline>
+        <cline>import re</cline>
+      </block>
+      <block order="2">
+        <cline>def reg_num_links(url):</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    html = urllib.request.urlopen(url).read()</cline>
+        </choice>
+        <choice>
+          <cline>    html = urllib.request.urlopen(url) </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>    links = re.findall(b'href="(http[s]?://.*?)"', html)</cline>
+        </choice>
+        <choice>
+          <cline>    links = re.findall(b'href="(http.*)"', html) </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    return len(links)</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="mixedupcode_network_8" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>bsoup_num_links</c> that takes in a parameter <c>url</c> and returns the number of &#x2018;href'
+            attributes that start with &#x2018;http' using BeautifulSoup. Since websites are frequently updated,
+            the returned number may change as links get added and deleted.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>import requests</cline>
+        <cline>from bs4 import BeautifulSoup</cline>
+      </block>
+      <block order="8">
+        <cline>def bsoup_num_links(url):</cline>
+      </block>
+      <block order="5">
+        <cline>    list1 = []</cline>
+      </block>
+      <block order="6">
+        <cline>    resp = requests.get(url)</cline>
+      </block>
+      <block order="13">
+        <cline>    soup = BeautifulSoup(resp.content, 'html.parser')</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    tags = soup.find_all(href=True)</cline>
+        </choice>
+        <choice>
+          <cline>    tags = soup.find_all(href) </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    tags = soup.find_all('href'=True) </cline>
+        </choice>
+        <choice>
+          <cline>    tags = soup.find_all('href') </cline>
+        </choice>
+      </block>
+      <block order="10">
+        <cline>    for tag in tags:</cline>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>        if tag.get('href', None).startswith('http'):</cline>
+        </choice>
+        <choice>
+          <cline>        if tag.startswith('http'): </cline>
+        </choice>
+      </block>
+      <block order="12">
+        <cline>            list1.append((tag.get('href', None)))</cline>
+      </block>
+      <block order="1">
+        <cline>    return len(list1)</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="mixedupcode_network_9" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>img_links</c> that takes in a parameter <c>url</c> and returns a list that contains all image links
+            using BeautifulSoup. Since websites are frequently updated, the returned list of image links may change as image links get added and deleted.</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <cline>import requests</cline>
+        <cline>from bs4 import BeautifulSoup</cline>
+      </block>
+      <block order="1">
+        <cline>def img_links(url):</cline>
+      </block>
+      <block order="11">
+        <cline>    list1 = []</cline>
+      </block>
+      <block order="3">
+        <cline>    resp = requests.get(url)</cline>
+      </block>
+      <block order="7">
+        <cline>    soup = BeautifulSoup(resp.content, 'html.parser')</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    tags = soup.find_all('img')</cline>
+        </choice>
+        <choice>
+          <cline>    tags = soup.findall('img') </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <cline>    for tag in tags:</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>        list1.append(tag.get('src', None))</cline>
+        </choice>
+        <choice>
+          <cline>        list1.append(tag) </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>    return list1</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="mixedupcode_network_10" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>span_attrs</c> that takes in a parameter <c>url</c> and returns a list of dictionaries using BeautifulSoup.
+            Each dictionary is equivalent to each span tag. The keys of the dictionary are the attributes of the span tag,
+            and the values of the dictionary are the values of the attributes. Since websites are frequently updated,
+            the returned list of dictionaries may change as span tags, attributes, and values get added, deleted, or modified.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>import requests</cline>
+        <cline>from bs4 import BeautifulSoup</cline>
+      </block>
+      <block order="3">
+        <cline>def span_attrs(url):</cline>
+      </block>
+      <block order="7">
+        <cline>    list1 = []</cline>
+      </block>
+      <block order="1">
+        <cline>    resp = requests.get(url)</cline>
+      </block>
+      <block order="6">
+        <cline>    soup = BeautifulSoup(resp.content, "html.parser")</cline>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>    tags = soup.find_all('span')</cline>
+        </choice>
+        <choice>
+          <cline>    tags = soup.find_all(span) </cline>
+        </choice>
+      </block>
+      <block order="15">
+        <cline>    for tag in tags:</cline>
+      </block>
+      <block order="11">
+        <choice correct="yes">
+          <cline>        list1.append(tag.attrs)</cline>
+        </choice>
+        <choice>
+          <cline>        list1.append(tag.attributes) </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>        list1.append({tag.attrs: tag.values}) </cline>
+        </choice>
+        <choice>
+          <cline>        list1.append({tag.attrs(): tag.values()}) </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>        list1.append({tag.attributes: tag.values}) </cline>
+        </choice>
+        <choice>
+          <cline>        list1.append({tag.attributes(): tag.values()}) </cline>
+        </choice>
+      </block>
+      <block order="8">
+        <cline>    return list1</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <!--
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=mixedupcode_network_1_sq data-questionlist='mixedupcode_network_1, mixedupcode_network_1_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: mixedupcode_network_1, mixedupcode_network_1_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=mixedupcode_network_2_sq data-questionlist='mixedupcode_network_2, mixedupcode_network_2_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: mixedupcode_network_2, mixedupcode_network_2_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=mixedupcode_network_3_sq data-questionlist='mixedupcode_network_3, mixedupcode_network_3_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: mixedupcode_network_3, mixedupcode_network_3_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=mixedupcode_network_4_sq data-questionlist='mixedupcode_network_4, mixedupcode_network_4_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: mixedupcode_network_4, mixedupcode_network_4_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=mixedupcode_network_5_sq data-questionlist='mixedupcode_network_5, mixedupcode_network_5_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: mixedupcode_network_5, mixedupcode_network_5_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=mixedupcode_network_6_sq data-questionlist='mixedupcode_network_6, mixedupcode_network_6_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: mixedupcode_network_6, mixedupcode_network_6_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=mixedupcode_network_7_sq data-questionlist='mixedupcode_network_7, mixedupcode_network_7_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: mixedupcode_network_7, mixedupcode_network_7_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=mixedupcode_network_8_sq data-questionlist='mixedupcode_network_8, mixedupcode_network_8_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: mixedupcode_network_8, mixedupcode_network_8_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=mixedupcode_network_9_sq data-questionlist='mixedupcode_network_9, mixedupcode_network_9_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: mixedupcode_network_9, mixedupcode_network_9_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=mixedupcode_network_10_sq data-questionlist='mixedupcode_network_10, mixedupcode_network_10_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: mixedupcode_network_10, mixedupcode_network_10_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  -->
+</section>

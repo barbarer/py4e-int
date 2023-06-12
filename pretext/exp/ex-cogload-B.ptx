@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<section xml:id="exp_questions-for-cognitive-load-experiment-b">
+  <title>Questions for Cognitive Load Experiment - B</title>
+  <exercise label="exp1_q1_write">
+    <statement>
+      <p>Finish the function <c>has22</c> below to return <c>True</c> if there are at least two items in the list <c>nums</c> that are adjacent and both equal to 2, otherwise return <c>False</c>.  For example, return <c>True</c> for <c>has22([1, 2, 2])</c> since there are two adjacent items equal to 2 (at index 1 and 2) and <c>False</c> for <c>has22([2, 1, 2])</c> since the 2's are not adjacent.</p>
+    </statement>
+    <program xml:id="exp1_q1_write_editor" interactive="activecode" language="python">
+      <input>
+def has22(nums):
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(has22([1, 2, 2]), True, 'has22([1, 2, 2])')
+        self.assertEqual(has22([1, 2, 1, 2]), False, 'has22([1, 2, 1, 2])')
+        self.assertEqual(has22([2, 1, 2]), False, 'has22([2, 1, 2])')
+        self.assertEqual(has22([2, 2, 1]), True, 'has22([2, 2, 1])')
+        self.assertEqual(has22([3, 4, 2]), False, 'has22([3, 4, 2])')
+        self.assertEqual(has22([2]), False, 'has22([2])')
+        self.assertEqual(has22([]), False, 'has22([])')
+        self.assertEqual(has22([3, 3, 1]), False, 'has22([3, 3, 1])')
+        self.assertEqual(has22([1, 4, 4]), False, 'has22([1, 4, 4])')
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise runestone="exp1_q1_write_poll"/>
+  <exercise label="Count_Target_In_Range_Order" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Put the code in order to define <c>countInRange</c> that returns a count of the number of times that a <c>target</c> value appears in a list between the <c>start</c> and <c>end</c> indices (inclusive).  For example, <c>countInRange(1,2,4,[1, 2, 1, 1, 1, 1])</c> should return <c>3</c> since there are three 1's between index 2 and 4 inclusive.</p>
+    </statement>
+    <blocks>
+      <block order="9">
+        <cline>def countInRange(target, start, end, numList):</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    count = 0</cline>
+        </choice>
+        <choice>
+          <cline>    count = 1 </cline>
+        </choice>
+      </block>
+      <block order="10">
+        <choice correct="yes">
+          <cline>    for index in range(start, end+1):</cline>
+        </choice>
+        <choice>
+          <cline>    for index in range(start, end): </cline>
+        </choice>
+      </block>
+      <block order="12">
+        <choice correct="yes">
+          <cline>        current = numList[index]</cline>
+        </choice>
+        <choice>
+          <cline>        current = numList[start] </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>        if current == target:</cline>
+        </choice>
+        <choice>
+          <cline>        if index == target: </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>            count = count + 1</cline>
+        </choice>
+        <choice>
+          <cline>            count++ </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <cline>    return count</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise runestone="Count_Target_In_Range_Order_poll"/>
+  <exercise label="exp1_q3_write">
+    <statement>
+      <p>Finish the function <c>diffMaxMin</c> to return the difference between the largest and smallest value in the passed list of numbers (<c>nums</c>). For example, <c>diffMaxMin([1,2,3])</c> should return 2 since the difference between 3 and 1 is 2.</p>
+    </statement>
+    <program xml:id="exp1_q3_write_editor" interactive="activecode" language="python">
+      <input>
+def diffMaxMin(nums):
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(diffMaxMin([1, 2, 3]), 2, 'diffMaxMin([1, 2, 3])')
+        self.assertEqual(diffMaxMin([10, 20, 30]), 20, 'diffMaxMin([10, 20, 30])')
+        self.assertEqual(diffMaxMin([1, 10]), 9, 'diffMaxMin([1 , 10])')
+        self.assertEqual(diffMaxMin([10, 1]), 9, 'diffMaxMin([-10 , 1])')
+        self.assertEqual(diffMaxMin([4, 1, 10]), 9, 'diffMaxMin([4, 1 , 10])')
+        self.assertEqual(diffMaxMin([4, -10, 1]), 14, 'diffMaxMin([4, -10 , 1])')
+
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise runestone="exp1_q3_write_poll"/>
+  <exercise label="Total_Dict_Values_PP" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Put the code in order to define <c>total_values</c> that takes a dictionary (<c>dict</c>) and returns the total of the values in the dictionary.  For example, <c>total_values({'red': 3, 'blue': 2, 'green': 20})</c> would return <c>25</c>.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <choice correct="yes">
+          <cline>def total_values(dict):</cline>
+        </choice>
+        <choice>
+          <cline>def total_values(): </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>    total = 0</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    for key in dict:</cline>
+        </choice>
+        <choice>
+          <cline>    for key in dict </cline>
+        </choice>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>        total += dict[key]</cline>
+        </choice>
+        <choice>
+          <cline>        total += key </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>    return total</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise runestone="Total_Dict_Values_PP_poll"/>
+  <exercise label="exp1_q5_write">
+    <statement>
+      <p>Finish the function <c>get_names</c> that takes a list of dictionaries and returns a list of strings with the names from the dictionaries.  The key for the first name is &#x2018;first' and the key for the last name is &#x2018;last'.  Return a list of the full names (first last) as a string.  If the &#x2018;first' or &#x2018;last' key is missing in the dictionary use &#x2018;Unknown'.  For example, <c>[{'first': 'Ann', 'last': 'Brown'}, {'first': 'Darius'}]</c> should return <c>['Ann Brown', 'Darius Unknown']</c>..</p>
+    </statement>
+    <program xml:id="exp1_q5_write_editor" interactive="activecode" language="python">
+      <input>
+def get_names(d_list):
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        d1 = {'first': 'Tsi', 'last': 'Choi'}
+        d2 = {'first': 'Joy', 'last': 'Ali'}
+        d3 = {'first': 'Jose', 'last': 'Capo'}
+        d4 = {'first': 'Malik'}
+        d5 = {'last': 'Owens'}
+        d_l1 = [d1, d2]
+        d_l2 = [d3]
+        d_l3 = [d4]
+        d_l4 = [d5]
+        self.assertEqual(get_names(d_l1), ['Tsi Choi', 'Joy Ali'], "get_names([{'first': 'Tsi', 'last': 'Choi'}, {'first': 'Joy', 'last': 'Ali'}])")
+        self.assertEqual(get_names(d_l2), ['Jose Capo'], "get_names([{'first': 'Jose', 'last': 'Capo'}])")
+        self.assertEqual(get_names(d_l3), ['Malik Unknown'], "get_names([{'first': 'Malik'}])")
+        self.assertEqual(get_names(d_l4), ['Unknown Owens'], "get_names([{'last': 'Owens'}])")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise runestone="exp1_q5_write_poll"/>
+</section>

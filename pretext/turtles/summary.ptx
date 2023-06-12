@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<section xml:id="turtles_summary">
+  <title>Summary</title>
+  <introduction>
+  <p>This chapter included the following concepts from computing.</p>
+  <p>
+    <ul>
+      <li>
+        <p><term>Body Syntonic</term> - Body syntonic means experiences related to knowledge of your body.  You can use your knowledge of how to move your body to help you understand how to move the turtle objects.</p>
+      </li>
+      <li>
+        <p><term>Comment</term> - A comment describes one or more lines of code.  Comments are ignored by the computer.  A comment in Python starts with <c>#</c>.  The computer will ignore everything from the start of the comment to the end of that line.</p>
+      </li>
+      <li>
+        <p><term>Object</term> - Turtles are objects in Python.  Objects can have data and behavior.  A turtle object knows its heading (data) and can go forward and turn (behavior).</p>
+      </li>
+      <li>
+        <p><term>Method</term> - Functions that are defined in the Turtle class are called methods.  Methods define the behaviors for the objects of a class (what they can do).</p>
+      </li>
+    </ul>
+  </p>
+</introduction>
+  <subsection xml:id="turtles_summary-of-turtle-methods">
+    <title>Summary of Turtle Methods</title>
+    <p>The table below shows some of the turtle methods that you might find useful.  See <url href="https://docs.python.org/3/library/turtle.html" visual="https://docs.python.org/3/library/turtle.html">https://docs.python.org/3/library/turtle.html</url> for a complete list.</p>
+    <table>
+      <tabular>
+        <row header="yes">
+          <cell>
+                                Name
+                            </cell>
+          <cell>
+                                Input
+                            </cell>
+          <cell>
+                                Description
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                backward
+                            </cell>
+          <cell>
+                                amount
+                            </cell>
+          <cell>
+                                Moves the turle backward by the specified amount
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                begin_fill
+                            </cell>
+          <cell>
+                                None
+                            </cell>
+          <cell>
+                                Starts a shape to fill
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                circle
+                            </cell>
+          <cell>
+                                radius
+                            </cell>
+          <cell>
+                                Draws a circle with the specified radius
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                color
+                            </cell>
+          <cell>
+                                colorname
+                            </cell>
+          <cell>
+                                Sets the color for the pen.  Use &#x2018;red', &#x2018;black', etc. If you give it two colors the second is the fill color.
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                end_fill
+                            </cell>
+          <cell>
+                                None
+                            </cell>
+          <cell>
+                                Ends a shape to fill
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                fillcolor
+                            </cell>
+          <cell>
+                                colorname
+                            </cell>
+          <cell>
+                                Sets the fill color to the specified color.  Use &#x2018;red', &#x2018;black', etc.
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                forward
+                            </cell>
+          <cell>
+                                amount
+                            </cell>
+          <cell>
+                                Moves the turtle forward by the specified amount
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                goto
+                            </cell>
+          <cell>
+                                x,y
+                            </cell>
+          <cell>
+                                Moves the turtle to position x,y
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                left
+                            </cell>
+          <cell>
+                                angle
+                            </cell>
+          <cell>
+                                Turns the turtle counter clockwise by the specified angle
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                pendown
+                            </cell>
+          <cell>
+                                None
+                            </cell>
+          <cell>
+                                Puts down the turtles tail so that it draws when it moves
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                penup
+                            </cell>
+          <cell>
+                                None
+                            </cell>
+          <cell>
+                                Picks up the turtles tail so that it doesn't draw when it moves
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                pensize
+                            </cell>
+          <cell>
+                                width
+                            </cell>
+          <cell>
+                                Sets the width of the pen for drawing
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                right
+                            </cell>
+          <cell>
+                                angle
+                            </cell>
+          <cell>
+                                Turns the turtle clockwise by the specified angle
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                setheading
+                            </cell>
+          <cell>
+                                angle
+                            </cell>
+          <cell>
+                                Turns the turtle to face the given heading.  East is 0, north is 90, west is 180, and south is 270.
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                Turtle
+                            </cell>
+          <cell>
+                                None
+                            </cell>
+          <cell>
+                                Creates and returns a new turtle object
+                            </cell>
+        </row>
+      </tabular>
+    </table>
+  </subsection>
+  <subsection xml:id="turtles_summary-of-screen-methods">
+    <title>Summary of Screen Methods</title>
+    <p>The table below shows the screen methods that you might find useful.</p>
+    <table>
+      <tabular>
+        <row header="yes">
+          <cell>
+                                Name
+                            </cell>
+          <cell>
+                                Input
+                            </cell>
+          <cell>
+                                Description
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                bgcolor
+                            </cell>
+          <cell>
+                                color
+                            </cell>
+          <cell>
+                                Sets the color for the screen background
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                bgpic
+                            </cell>
+          <cell>
+                                file_name
+                            </cell>
+          <cell>
+                                Save a picture of the screen to the file_name
+                            </cell>
+        </row>
+        <row>
+          <cell>
+                                exitonclick
+                            </cell>
+          <cell>
+                                none
+                            </cell>
+          <cell>
+                                Stops the program from exiting until you click the window - use if running turtle code outside of the ebook
+                            </cell>
+        </row>
+      </tabular>
+    </table>
+  </subsection>
+</section>

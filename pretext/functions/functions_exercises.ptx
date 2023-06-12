@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<section xml:id="functions_functions-multiple-choice-questions">
+  <title>Functions Multiple Choice Questions</title>
+  <exercise label="func_exercise_1">
+    <statement>
+      <p>Q-1: Select all the parts that are absolutely needed to create and call a function.</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>function header (including the definition and the name)</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>function body</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>variables</p>
+        </statement>
+        <feedback>
+          <p>Variables are not absolutely needed to create a function. For example, a function can just contain a print statement.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>return statement</p>
+        </statement>
+        <feedback>
+          <p>A return statement is not absolutely needed to create a function. For example, a print statement can be used instead of a return statement.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>function call</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="func_exercise_2">
+    <statement>
+      <p>Q-2: What will be returned after calling <c>modulus(100,95)</c> and <c>modulus(95.3,100.5)</c> and <c>modulus(12,12)</c>?</p>
+      <program language="python">
+        <input>
+def modulus(num1, num2):
+    answer = num1 % num2
+    return answer
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>5 and 5.2 and 1</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! When you do a smaller number % a larger number, the answer will always be the smaller number. When you do a number % the same number, the answer will always be 0.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>5 and 95.3 and 0</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>100 and 95.3 and 12</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! When you do a larger number % a smaller number, the answer will be the remainder of the larger number divided by the smaller number. When you do a number % the same number, the answer will always be 0.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>95 and 100.5 and 0</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! When you do a larger number % a smaller number, the answer will be the remainder of the larger number divided by the smaller number. When you do a smaller number % a larger number, the answer will always be the smaller number.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>5 and 100.5 and 1</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! When you do a smaller number % a larger number, the answer will always be the smaller number. When you do a number % the same number, the answer will always be 0.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="func_exercise_3">
+    <statement>
+      <p>Q-3: What will be printed after calling <c>divide(100, 95)</c> and <c>divide(5, 7)</c> and <c>divide(7, 5)</c>? (Note: Ignore whitespaces.)</p>
+      <program language="python">
+        <input>
+def divide(num1, num2):
+    single_div_answer = num1 / num2
+    print(round(single_div_answer, 2))
+    double_div_answer = num1 // num2
+    print(round(double_div_answer, 2))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1, 1.05, 0, 0.71, 1, 1.4</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Single division is floating point division. Double division is integer division, and it outputs the floor of the value.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1.05, 5, 0.71, 5, 1.4, 2</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Single division is floating point division. Double division is integer division, and it outputs the floor of the value.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1.05, 2, 0.71, 1, 1.4, 2</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Single division is floating point division. Double division is integer division, and it outputs the floor of the value.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1.05, 1, 0.71, 1, 1.4, 1</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Single division is floating point division. Double division is integer division, and it outputs the floor of the value.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>1.05, 1, 0.71, 0, 1.4, 1</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="func_exercise_4">
+    <statement>
+      <p>Q-4: After running the following code, what will the output be?</p>
+      <program language="python">
+        <input>
+def multiplication_one(num1, num2):
+    num1 * num2
+
+print(multiplication_one(5, 10))
+
+def multiplication_two(num1, num2):
+    return num1 * num2
+
+multiplication_two(5, 10)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>None will be outputted after printing and calling multiplication_one(5, 10). Nothing will be outputted after calling multiplication_two(5, 10).</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Nothing will be outputted after printing and calling multiplication_one(5, 10). None will be outputted after calling multiplication_two(5, 10).</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! None is printed when you print and call a function and there is no return statement in the function body. Nothing is outputted when you call a function that only has a return statement and you don't print the function call.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>50 will be outputted after printing and calling multiplication_one(5, 10) and after calling multiplication_two(5, 10).</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! None is printed when you print and call a function and there is no return statement in the function body. Nothing is outputted when you call a function that only has a return statement and you don't print the function call.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None will be outputted after printing and calling multiplication_one(5, 10). 50 will be outputted after calling multiplication_two(5, 10).</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Nothing is outputted when you call a function that only has a return statement and you don't print the function call.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>50 will be outputted after printing and calling multiplication_one(5, 10). Nothing will be outputted after calling multiplication_two(5, 10).</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! None is printed when you print and call a function and there is no return statement in the function body.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="func_exercise_5">
+    <statement>
+      <p>Q-5: What would be outputted after running the code below? (Note: Ignore whitespaces.)</p>
+      <program language="python">
+        <input>
+def addition(num1, num2):
+    return(num1 + num2)
+
+def subtraction(num1, num2):
+    print(num1 - num2)
+
+def main():
+    add_answer = addition(2, 4)
+    new_add_answer = addition(add_answer, 105)
+    print(subtraction(new_add_answer, 200))
+
+main()
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>None and -89</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! When you print a function call (e.g., print(subtraction(new_add_answer, 200))) and the function prints an output (e.g., def subtraction(num1, num2): print(num1 - num2)), the output will be printed first due to the function call. Then, printing the function call will output None because the function does not have a return statement.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! When you print a function call (e.g., print(subtraction(new_add_answer, 200))) and the function prints an output (e.g., def subtraction(num1, num2): print(num1 - num2)), the output will be printed first due to the function call. Then, printing the function call will output None because the function does not have a return statement.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>-89</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! When you print a function call (e.g., print(subtraction(new_add_answer, 200))) and the function prints an output (e.g., def subtraction(num1, num2): print(num1 - num2)), the output will be printed first due to the function call. Then, printing the function call will output None because the function does not have a return statement.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>-89 and None</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

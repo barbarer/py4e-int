@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<section xml:id="files_writing-files">
+  <title>Writing files</title>
+    <idx><h>File</h><h>Writing</h></idx>
+    <idx><h>Writing</h><h>File</h></idx>
+    <idx>Newline</idx>
+    <idx><h>Method</h><h>close</h></idx>
+    <idx><h>close</h><h>Method</h></idx>
+  <p>To write a file, you have to open it with mode <q>w</q> as a second
+            parameter:</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; fout = open('output.txt', 'w')
+&gt;&gt;&gt; print(fout)
+&lt;_io.TextIOWrapper name='output.txt' mode='w' encoding='cp1252'&gt;
+</input>
+  </program>
+  <p>If the file already exists, opening it in write mode clears out the old
+            data and starts fresh, so be careful! If the file doesn't exist, a new
+            one is created.</p>
+  <p>The <c>write</c> method of the file handle object puts data into
+            the file, returning the number of characters written. The default write
+            mode is text for writing (and reading) strings.</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; line1 = "This here's the wattle,\n"
+&gt;&gt;&gt; fout.write(line1)
+24
+</input>
+  </program>
+  <p>Again, the file object keeps track of where it is, so if you call
+            <c>write</c> again, it adds the new data to the end.</p>
+  <exercise label="fileWriteMC">
+    <statement>
+      <p>Q-1: Which of the following methods will put data into a file?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>read</p>
+        </statement>
+        <feedback>
+          <p>The read method returns the file content.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>write</p>
+        </statement>
+        <feedback>
+          <p>The write method writes the specified string to the file.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>close</p>
+        </statement>
+        <feedback>
+          <p>The close method closes the file.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>tell</p>
+        </statement>
+        <feedback>
+          <p>The tell method returns the current file position.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>We must make sure to manage the ends of lines as we write to the file by
+            explicitly inserting the newline character when we want to end a line.
+            The <c>print</c> statement automatically appends a newline, but
+            the <c>write</c> method does not add the newline automatically.</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; line2 = 'the emblem of our land.\n'
+&gt;&gt;&gt; fout.write(line2)
+24
+</input>
+  </program>
+  <p>When you are done writing, you have to close the file to make sure that
+            the last bit of data is physically written to the disk so it will not be
+            lost if the power goes off.</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; fout.close()
+</input>
+  </program>
+  <p>We should close the files which we open for read as well, but we can be a
+            little sloppy if we are only opening a few files since Python makes sure
+            that all open files are closed when the program ends. When we are
+            writing files, we want to explicitly close the files so as to leave
+            nothing to chance.</p>
+  <exercise label="fileWritePP" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Put the following pieces of code in order so a file is opened for writing,
+            two lines are defined, two lines are
+            written to the file, and the file is closed. Watch out for extra code blocks.</p>
+    </statement>
+    <blocks>
+      <block order="8">
+        <choice correct="yes">
+          <cline>fout = open("myfile.txt", "w")</cline>
+        </choice>
+        <choice>
+          <cline>fout = open("myfile.txt", "r") </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>line1 = "this is the first line \n"</cline>
+        <cline>line2 = "this is the second line"</cline>
+      </block>
+      <block order="1">
+        <cline>fout.write(line1)</cline>
+      </block>
+      <block order="6" correct="no">
+        <cline>fout(write(line1)) </cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>fout.write(line2)</cline>
+        </choice>
+        <choice>
+          <cline>fout.write(second) </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <cline>fout.close()</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="fileWriteCA">
+    <statement>
+      <p>Click the errors in this code block. It should open a file, write a line, and close the file.</p>
+    </statement>
+    <feedback>
+      <p>Keep in mind names and syntax!</p>
+    </feedback>
+    <areas>
+      <cline><area correct="no">fout</area> = open(<area correct="no">'output.txt'</area>, <area correct="yes">'r'</area>)</cline>
+      <cline><area correct="no">line1</area> = <area correct="no">"This here's the wattle,\n"</area></cline>
+      <cline><area correct="yes">file</area><area correct="no">.write</area>(<area correct="yes">line2</area>)</cline>
+      <cline><area correct="no">fout.close</area><area correct="yes">[]</area>:</cline>
+    </areas>
+  </exercise>
+</section>

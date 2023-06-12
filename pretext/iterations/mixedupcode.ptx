@@ -1,0 +1,433 @@
+<?xml version="1.0"?>
+<section xml:id="iterations_mixed-up-code-questions">
+  <title>Mixed-up code Questions</title>
+
+  <exercise label="itr_countup_str_muc" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create the function, <c>countup_str(start)</c>, to return a string with the numbers from <c>1</c> to <c>end</c>.  For example, <c>countup_str(5)</c> would return <c>"12345"</c>.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <cline>def countup_str(end):</cline>
+      </block>
+      <block order="7">
+        <cline>    out = ""</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    for i in range(1, end + 1):</cline>
+        </choice>
+        <choice>
+          <cline>    for i in range(1, end): </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>        out = out + str(i)</cline>
+        </choice>
+        <choice>
+          <cline>        out = out + i </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    return out</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="itr_reverse_muc" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create the function, <c>reverse(s)</c>, to return a string with the characters in the string <c>s</c> reversed.  For example, <c>reverse("Hello")</c> would return <c>"olleH"</c>.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <cline>def reverse(s):</cline>
+      </block>
+      <block order="3">
+        <cline>    out = ""</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    for i in range(len(s) - 1, -1, -1):</cline>
+        </choice>
+        <choice>
+          <cline>    for i in range(len(s), -1, -1): </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>        out = out + s[i]</cline>
+        </choice>
+        <choice>
+          <cline>        out = s[i] + out </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    return out</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="itr_countdown_str_muc" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create the function, <c>countdown_str(start)</c>, to return a string with the numbers from <c>start</c> to <c>0</c>.  For example, <c>countdown_str(5)</c> would return <c>"543210"</c>.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>def countdown_str(start):</cline>
+      </block>
+      <block order="6">
+        <cline>    out = ""</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    for i in range(start, -1, -1):</cline>
+        </choice>
+        <choice>
+          <cline>    for i in range(start, 0, -1): </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>        out = out + str(i)</cline>
+        </choice>
+        <choice>
+          <cline>        out = out + i </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <cline>    return out</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="itr_odd_sum_muc" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create the function, <c>odd_sum(start, increment, end)</c>, to return the sum of all of the odd numbers between  <c>start</c> (inclusive) and <c>end</c> (exclusive) using a range with <c>increment</c>. For example, if <c>start</c> is 1, <c>increment</c> is 2, and <c>end</c> is 6, the returned sum
+            should be (1 + 3 + 5) which is 9.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>def odd_sum(start, increment, end):</cline>
+      </block>
+      <block order="1">
+        <cline>    sum = 0</cline>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>    for number in range(start, end, increment):</cline>
+        </choice>
+        <choice>
+          <cline>    for numbers in range(start, increment, end): </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>        sum = sum + number</cline>
+      </block>
+      <block order="2">
+        <cline>    return sum</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="itr_sum_of_range_muc" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create the function, <c>sum_of_range(start, end)</c>, to return the sum of all numbers between the <c>start</c> and <c>end</c> inclusive. For example, if <c>start</c> is 0 and <c>end</c> is 5, the returned sum should be (0 + 1 + 2 + 3 + 4 + 5) which is 15.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>def sum_of_range(start, end):</cline>
+      </block>
+      <block order="6">
+        <cline>    sum = 0</cline>
+      </block>
+      <block order="3">
+        <cline>    for number in range(start, end):</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>        sum = sum + number</cline>
+        </choice>
+        <choice>
+          <cline>        sum = sum + numbers </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>    return(sum)</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="itr_count_vowels_muc" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create the function, <c>count_vowels(s)</c>, to return a count of the vowels (aeiou) in the string <c>s</c>.   For example, <c>count_vowels("careful")</c> would return <c>3</c>.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>def count_vowels(s):</cline>
+      </block>
+      <block order="5">
+        <cline>    count = 0</cline>
+        <cline>    vowels = "aeiou"</cline>
+      </block>
+      <block order="8">
+        <cline>    for ch in s:</cline>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>        if ch in vowels:</cline>
+        </choice>
+        <choice>
+          <cline>        if s in vowels: </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <cline>            count += 1</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    return count</cline>
+        </choice>
+        <choice>
+          <cline>    return Count </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="itr_copy_till_gt_value_muc" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create the function, <c>copy_till_gt_value(s,value)</c>, to return a copy of the string <c>s</c> with all the digits in the string until it finds a digit greater than the passed <c>value</c>.  For example,
+            <c>copy_till_gt_value("1357", 5)</c> would return <q>135</q>.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>def copy_till_gt_value(s, value):</cline>
+      </block>
+      <block order="11">
+        <cline>    out = ""</cline>
+        <cline>    i = 0</cline>
+        <cline>    while i &lt; len(s):</cline>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>        ch = s[i]</cline>
+        </choice>
+        <choice>
+          <cline>        ch = s(i) </cline>
+        </choice>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>        int_ch = int(ch)</cline>
+        </choice>
+        <choice>
+          <cline>        int_ch = integer(ch) </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>        if int_ch &gt; value:</cline>
+        </choice>
+        <choice>
+          <cline>        if int_ch &gt;= value: </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>            return out</cline>
+      </block>
+      <block order="12">
+        <cline>        out += ch</cline>
+      </block>
+      <block order="7">
+        <cline>        i += 1</cline>
+      </block>
+      <block order="10">
+        <cline>    return out</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="itr_count_last2_muc" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create the function, <c>count_last2(s)</c>, to return a count of the number of times the last two characters appears in the string <c>s</c>. If there are less than 2 characters in <c>s</c> return 0. For example, <c>count_last2("hixxhi")</c> returns 2, <c>count_last2("axxxaaxx")</c> returns 3, and <c>count_last2('x')</c> returns 0.</p>
+    </statement>
+    <blocks>
+      <block order="11">
+        <cline>def count_last2(s):</cline>
+      </block>
+      <block order="1">
+        <cline>    if  len(s) &lt; 2:</cline>
+      </block>
+      <block order="5">
+        <cline>        return 0</cline>
+      </block>
+      <block order="7">
+        <cline>    count = 0</cline>
+        <cline>    last2 = s[-2:]</cline>
+      </block>
+      <block order="10">
+        <cline>    for i in range(len(s)):</cline>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>        curr = s[i:i+2]</cline>
+        </choice>
+        <choice>
+          <cline>        curr = s[i:i+1] </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>        if curr == last2</cline>
+        </choice>
+        <choice>
+          <cline>        if curr = last2 </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>            count += 1</cline>
+      </block>
+      <block order="2">
+        <cline>    return count</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="itr_list_to_5_muc" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create the function, <c>list_to_5(n)</c>, so that while the integer <c>n</c> is less than <c>5</c>, add <c>n</c> to a list to return and increment <c>n</c> by <c>1</c>.
+            Then return the list. For example, if <c>n</c> is 0, then the function should return <c>[0, 1, 2, 3, 4]</c>.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>def list_to_5(n):</cline>
+      </block>
+      <block order="2">
+        <cline>    list = []</cline>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>    while n &lt; 5:</cline>
+        </choice>
+        <choice>
+          <cline>    while n &gt; 5: </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <cline>        list.append(n)</cline>
+      </block>
+      <block order="7">
+        <cline>        n += 1</cline>
+      </block>
+      <block order="5">
+        <cline>    return list</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="itr_water_quality_muc" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create the function, <c>water_quality(pHvalues)</c>, to return a float for the average pH of water samples in the list
+            <c>pHvalues</c>. For example, if <c>pHvalues</c> is [7.0, 8.2, 6.7, 7.5, 8.0, 7.2], then the function should return 7.433333333333334.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>def water_quality(pHvalues):</cline>
+      </block>
+      <block order="1">
+        <cline>    total = 0</cline>
+      </block>
+      <block order="4">
+        <cline>    for number in pHvalues:</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>        total = total + number</cline>
+        </choice>
+        <choice>
+          <cline>        total = total * number </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <cline>    average = total / len(pHvalues)</cline>
+      </block>
+      <block order="6">
+        <cline>    return average</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <!--
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=itr_countup_str_sq data-questionlist='itr_countup_str_muc, itr_countup_str_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: itr_countup_str_muc, itr_countup_str_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=itr_reverse_sq data-questionlist='itr_reverse_muc, itr_reverse_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: itr_reverse_muc, itr_reverse_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=itr_countdown_str_sq data-questionlist='itr_countdown_str_muc, itr_countdown_str_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: itr_countdown_str_muc, itr_countdown_str_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=itr_odd_sum_sq data-questionlist='itr_odd_sum_muc, itr_odd_sum_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: itr_odd_sum_muc, itr_odd_sum_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=itr_sum_of_range_sq data-questionlist='itr_sum_of_range_muc, itr_sum_of_range_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: itr_sum_of_range_muc, itr_sum_of_range_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=itr_count_vowels_sq data-questionlist='itr_count_vowels_muc, itr_count_vowels_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: itr_count_vowels_muc, itr_count_vowels_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=itr_copy_till_gt_value_sq data-questionlist='itr_copy_till_gt_value_muc, itr_copy_till_gt_value_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: itr_copy_till_gt_value_muc, itr_copy_till_gt_value_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=itr_count_last2_sq data-questionlist='itr_count_last2_muc, itr_count_last2_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: itr_count_last2_muc, itr_count_last2_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=itr_list_to_5_sq data-questionlist='itr_list_to_5_muc, itr_list_to_5_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: itr_list_to_5_muc, itr_list_to_5_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=itr_water_quality_sq data-questionlist='itr_water_quality_muc, itr_water_quality_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: itr_water_quality_muc, itr_water_quality_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  -->
+</section>

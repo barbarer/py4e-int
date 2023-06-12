@@ -1,0 +1,464 @@
+<?xml version="1.0"?>
+<section xml:id="variables_mixed-up-code-questions">
+  <title>Mixed-up Code Questions</title>
+  <exercise label="var-mixed-1" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create code that first sets the variable <c>x</c> to 3, then sets the variable <c>y</c> to the string <q>hello</q>, and then sets the variable <c>z</c> to the string <q>Python</q>. Then set <c>x_type</c>, <c>y_type</c>, and <c>z_type</c> to the types of each of these variables. For example, x_type = int. The blocks have been mixed up and include extra blocks that aren't correct.</p>
+    </statement>
+    <blocks>
+      <block order="7">
+        <cline>x = 3</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>y = "hello"</cline>
+        </choice>
+        <choice>
+          <cline>y = hello </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>z = "Python"</cline>
+        </choice>
+        <choice>
+          <cline>z = Python </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>x_type = type(x)</cline>
+          <cline>y_type = type(y)</cline>
+          <cline>z_type = type(z)</cline>
+        </choice>
+        <choice>
+          <cline>x_type = x.type() </cline>
+          <cline>y_type = y.type()</cline>
+          <cline>z_type = z.type()</cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="var-mixed-ac-1q">
+    <statement>
+      <p>Write code that sets the variable <c>x</c> to 3, the variable <c>y</c> to the string <q>hello</q>, and the variable <c>z</c> to the string <q>Python</q>. Then set <c>x_type</c>, <c>y_type</c>, and <c>z_type</c> to the types of each of these variables. For example, x_type = int.</p>
+    </statement>
+    <program xml:id="var-mixed-ac-1q_editor" interactive="activecode" language="python">
+      <input>
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(x, 3, "Testing that 'x' contains 3")
+        self.assertEqual(y, "hello", "Testing that 'y' contains 'hello'")
+        self.assertEqual(z, "Python", "Testing that 'z' contains 'Python'")
+        self.assertEqual(x_type, type(1), "Testing that 'x_type' holds the type of 'x'")
+        self.assertEqual(y_type, type("hello"), "Testing that 'y_type' holds the type of 'y'")
+        self.assertEqual(z_type, type("hello"), "Testing that 'z_type' holds the type of 'z'")
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="var-mixed-2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create code that sets <c>Carla</c> to the sentence <q>Carla ate 4 apples.</q>. The blocks have been mixed up and include extra blocks that aren't correct.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <choice correct="yes">
+          <cline>number = 4</cline>
+          <cline>fruit = "apples"</cline>
+        </choice>
+        <choice>
+          <cline>number = 4 </cline>
+          <cline>fruit = " apples"</cline>
+        </choice>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>Carla = "Carla ate " + str(number) + " " + fruit + "."</cline>
+        </choice>
+        <choice>
+          <cline>Carla = "Carla ate" + string(number) + fruit + "." </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="var-mixed-ac-2q">
+    <statement>
+      <p>Write code that sets <c>Carla</c> to the the sentence <q>Carla ate 4 apples.</q>. Use the variables <c>number</c> and <c>fruit</c>.</p>
+    </statement>
+    <program xml:id="var-mixed-ac-2q_editor" interactive="activecode" language="python">
+      <input>
+number = 4
+fruit = "apples"
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(Carla, "Carla ate 4 apples.","Testing that 'Carla' contains the sentence 'Carla ate 4 apples.'")
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="var-mixed-hours-3" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create code that calculates John's gross pay for a certain week and inputs it into <c>grossPay</c> given that he worked 45 hours that week, earned 10 dollars per hour, and recieved a 5 percent bonus of his salary that week. The blocks have been mixed up and include extra blocks that aren't correct.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <choice correct="yes">
+          <cline>hours = 45</cline>
+          <cline>payRate = 10</cline>
+        </choice>
+        <choice>
+          <cline>hours = 45 </cline>
+          <cline>pay rate = 10</cline>
+        </choice>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>grossPay = hours * payRate</cline>
+        </choice>
+        <choice>
+          <cline>grossPay = hours * pay rate </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>grossPay += .05 * grossPay</cline>
+        </choice>
+        <choice>
+          <cline>grossPay += 1.05 * grossPay </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="var-mixed-ac-3q">
+    <statement>
+      <p>Write code that calculates John's gross pay for a certain week and inputs it into <c>grossPay</c> given that he worked 45 hours that week, earned 10 dollars per hour, and recieved a 5 percent bonus of his salary that week. Hint: gross pay is equal to the number of hours worked times pay rate.</p>
+    </statement>
+    <program xml:id="var-mixed-ac-3q_editor" interactive="activecode" language="python">
+      <input>
+
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(grossPay, 1.05 * (45 * 10),"Testing that 'grossPay' contains the correct value")
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="var-mixed-price-4" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Create code that stores the cost of each shirt in the variable <c>pricePerShirt</c> if John purchases 2 shirts and gets the third free with each shirt originally costing $45. The blocks have been mixed up and include an extra block that isn't correct.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>price = 45</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>totalCost = price * 2</cline>
+        </choice>
+        <choice>
+          <cline>totalCost = price * 3 </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>pricePerShirt = totalCost / 3</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="var-mixed-ac-4q">
+    <statement>
+      <p>Write code that stores the cost of each shirt in the variable <c>pricePerShirt</c> if John purchases 2 shirts and gets the third free with each shirt originally costing $45. Use the variable <c>price</c>.</p>
+    </statement>
+    <program xml:id="var-mixed-ac-4q_editor" interactive="activecode" language="python">
+      <input>
+price = 45
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(pricePerShirt, 30,"Testing that 'pricePerShirt' contains the value 30")
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="var-mixed-tip-5" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Create code that assigns the cost per person for a dinner to <c>perPersonCost</c>. <c>tip</c> is a percentage of the bill. The blocks have been mixed up and include an extra block that isn't needed in the solution.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <cline>bill = 45</cline>
+        <cline>tip = 19</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>tip = (tip / 100) * bill</cline>
+        </choice>
+        <choice>
+          <cline>tip = ((1 - tip) / 100) * bill </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>total = bill + tip</cline>
+      </block>
+      <block order="2">
+        <cline>numPeople = 3</cline>
+        <cline>perPersonCost = total / numPeople</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="var-mixed-ac-5q">
+    <statement>
+      <p>Write code that assigns the cost per person for a dinner to <c>perPersonCost</c>. The bill is 45 dollars and the tip is 19 percent of the bill. The cost per person will be divided equally.</p>
+    </statement>
+    <program xml:id="var-mixed-ac-5q_editor" interactive="activecode" language="python">
+      <input>
+bill = 45
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(perPersonCost, (45 + 0.19 * (45)) / 3,"Testing that 'perPersonCost' contains the correct value")
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="var-mixed-switch-6" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Create code that swaps the values of <c>x</c> and <c>y</c>. The blocks have been mixed up and include an extra block that isn't
+            needed in the solution.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>x = val1</cline>
+        <cline>y = val2</cline>
+      </block>
+      <block order="5">
+        <cline>temp = x</cline>
+      </block>
+      <block order="4">
+        <cline>x = y</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>y = temp</cline>
+        </choice>
+        <choice>
+          <cline>temp = y </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="var-mixed-switch-ac-6q">
+    <statement>
+      <p>Write code that swaps the values of <c>x</c> and <c>y</c> using a temporary variable.</p>
+    </statement>
+    <program xml:id="var-mixed-switch-ac-6q_editor" interactive="activecode" language="python">
+      <input>
+x = 2
+y = 4
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(y, 2,"Testing that 'y' holds 2")
+        self.assertEqual(x, 4,"Testing that 'x' holds 4")
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="var-mixed-discount-7" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Create code that assigns the final price you will have to pay for an item that is 60% off the original price of $52.99 to <c>finalPrice</c>. The blocks have been mixed up and include extra blocks that aren't needed in the solution.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>price = 52.99</cline>
+        <cline>discount = 0.6</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>savings = price * discount</cline>
+        </choice>
+        <choice>
+          <cline>savings = price / discount </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>finalPrice = price - savings</cline>
+        </choice>
+        <choice>
+          <cline>finalPrice = price - discount </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="var-mixed-discount-ac-7q">
+    <statement>
+      <p>Write code that assigns the final price you will have to pay for an item that is 60% off the original price of $52.99 to <c>finalPrice</c>.</p>
+    </statement>
+    <program xml:id="var-mixed-discount-ac-7q_editor" interactive="activecode" language="python">
+      <input>
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(finalPrice, 21.196,"Testing that 'finalPrice' holds the correct value")
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="var-mixed-cookies-8" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Create code that sets <c>cookies</c> to the sentence <q>Chris likes baking cookies more than anything.</q>. The blocks have been mixed up and include extra blocks that aren't correct.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>var1 = "Chris likes baking "</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>var2 = " more " + "than anything."</cline>
+        </choice>
+        <choice>
+          <cline>var2 = " more than " + " anything." </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>cookies = var1 + "cookies" + var2</cline>
+        </choice>
+        <choice>
+          <cline>cookies = var1 + cookies + var2 </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="var-mixed-cookies-ac-8q">
+    <statement>
+      <p>Write code that sets <c>cookies</c> to the sentence <q>Chris likes baking cookies more than anything.</q>. Use the variables <c>var1</c> and <c>var2</c>.</p>
+    </statement>
+    <program xml:id="var-mixed-cookies-ac-8q_editor" interactive="activecode" language="python">
+      <input>
+var1 = "Chris likes baking "
+var2 = " more " + "than anything."
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(cookies, "Chris likes baking cookies more than anything.","Testing that 'cookies' contains the sentence 'Chris likes baking cookies more than anything.'")
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="var-mixed-camp-9" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Create code that sets <c>var</c> to the sentence <q>It takes us 165 minutes to get
+            home from camp.</q>. Then append the sentence <q>165 minutes is also 2 hours and 45 minutes.</q> to the variable. The blocks have been mixed up and include extra blocks that aren't correct.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>numHours = 2</cline>
+        <cline>numMinutes = 45</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>var = "It takes us " + str(numHours * 60 + 45) + " minutes to get home from camp. "</cline>
+        </choice>
+        <choice>
+          <cline>var = "It takes us " + (numHours * 60) + 45 + " minutes to get home from camp. " </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>var += "165 minutes is also " + str(numHours) + " hours and " + str(numMinutes) + "."</cline>
+        </choice>
+        <choice>
+          <cline>var += "165 minutes is also " + string(numHours) + " hours and " + string(numMinutes) + "." </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="var-mixed-camp-ac-9q">
+    <statement>
+      <p>Write code that sets <c>var</c> to the sentence <q>It takes us 165 minutes to get home from camp.</q>. Then append the sentence <q>165 minutes is also 2 hours and 45 minutes.</q> to the variable. Use the variables <c>numHours</c> and <c>numMinutes</c>.</p>
+    </statement>
+    <program xml:id="var-mixed-camp-ac-9q_editor" interactive="activecode" language="python">
+      <input>
+numHours = 2
+numMinutes = 45
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(var, "It takes us 165 minutes to get home from camp. 165 minutes is also 2 hours and 45 minutes.","Testing that 'var' contains the sentence 'It takes us 165 minutes to get home from camp. 165 minutes is also 2 hours and 45 minutes.'")
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="var-mixed-numbers-10" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Create code that sets <c>num_quarters</c> to the maximum number of quarters you can provide as change if your friend owed you 17.42 dollars but gave you 20 dollars. The blocks have been mixed up and include an extra block that isn't correct.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>money_recieved = 20</cline>
+        <cline>money_owed = 17.42</cline>
+      </block>
+      <block order="1">
+        <cline>change = 20 - 17.42</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>num_quarters = change // 0.25</cline>
+        </choice>
+        <choice>
+          <cline>num_quarters = change / int(0.25) </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="var-mixed-numbers-ac-10q">
+    <statement>
+      <p>Write code that sets <c>num_quarters</c> to the maximum number of quarters you can provide as change if your friend owed you 17.42 dollars but gave you 20 dollars.</p>
+    </statement>
+    <program xml:id="var-mixed-numbers-ac-10q_editor" interactive="activecode" language="python">
+      <input>
+
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(num_quarters, 10,"Testing that 'num_quarters' contains 10")
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<section xml:id="lists_list-operations">
+  <title>List operations</title>
+      <idx><h>List</h><h>Operations</h></idx>
+    <idx><h>Operations</h><h>List</h></idx>
+    <idx><h>List</h><h>Concatenation</h></idx>
+    <idx><h>Concatenation</h><h>List</h></idx>
+    <idx><h>List</h><h>Repetition</h></idx>
+    <idx><h>Repetition</h><h>List</h></idx>
+
+  <p>The <c>+</c> operator concatenates lists:</p>
+  <program xml:id="listConcat" interactive="activecode" language="python">
+    <input>
+a = [1, 2, 3]
+b = [4, 5, 6]
+c = a + b
+print(c)
+        </input>
+  </program>
+  <p>Similarly, the <c>*</c> operator repeats a list a given number of times:</p>
+  <program xml:id="listRepeat" interactive="activecode" language="python">
+    <input>
+print([0] * 4)
+print([1, 2, 3] * 3)
+        </input>
+  </program>
+  <p>The first example repeats four times. The second example repeats the
+            list three times.</p>
+  <exercise label="listOp_MC_plus">
+    <statement>
+      <p>Q-3: What is printed by the following statements?</p>
+      <pre>alist = [4, 2, 8, 6, 5]
+alist = alist + 999
+print(alist)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>[4, 2, 8, 6, 5, 999]</p>
+        </statement>
+        <feedback>
+          <p>You cannot concatenate a list with an integer.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Error, you cannot concatenate a list with an integer.</p>
+        </statement>
+        <feedback>
+          <p>Yes, in order to perform concatenation you would need to write alist+[999].  You must have two lists.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[[4, 2, 8, 6, 5], 999]</p>
+        </statement>
+        <feedback>
+          <p>You cannot concatenate a list with an integer. This would cause an error, not create a new list.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[4, 2, 8, 6, 5]</p>
+        </statement>
+        <feedback>
+          <p>This will cause an error, but alist will remain unchanged.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="listOp_MC_AplusB">
+    <statement>
+      <p>Q-4: What is printed by the following statements?</p>
+      <pre>alist = [1, 3, 5]
+blist = [2, 4, 6]
+print(alist + blist)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>6</p>
+        </statement>
+        <feedback>
+          <p>Concatenation does not add the lengths of the lists.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[1, 2, 3, 4, 5, 6]</p>
+        </statement>
+        <feedback>
+          <p>Concatenation does not reorder the items.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>[1, 3, 5, 2, 4, 6]</p>
+        </statement>
+        <feedback>
+          <p>Yes, a new list with all the items of the first list followed by all those from the second.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[3, 7, 11]</p>
+        </statement>
+        <feedback>
+          <p>Concatenation does not add the individual items.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="listOp_MC_rep3">
+    <statement>
+      <p>Q-5: What is printed by the following statements?</p>
+      <pre>alist = [1, 3, 5]
+print(alist * 3)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>9</p>
+        </statement>
+        <feedback>
+          <p>Repetition does not multiply the lengths of the lists.  It repeats the items.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[1, 1, 1, 3, 3, 3, 5, 5, 5]</p>
+        </statement>
+        <feedback>
+          <p>Repetition does not repeat each item individually.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>[1, 3, 5, 1, 3, 5, 1, 3, 5]</p>
+        </statement>
+        <feedback>
+          <p>Yes, the items of the list are repeated 3 times, one after another.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[3, 9, 15]</p>
+        </statement>
+        <feedback>
+          <p>Repetition does not multiply the individual items.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

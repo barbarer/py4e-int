@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<section xml:id="regex_escape-character">
+  <title>Escape Character</title>
+  <p>Since we use special characters in regular expressions to match the
+            beginning or end of a line or specify wild cards, we need a way to
+            indicate that these characters are <q>normal</q> and we want to match the
+            actual character such as a dollar sign or caret.</p>
+  <p>We can indicate that we want to simply match a character by prefixing
+            that character with a backslash. For example, we can find money amounts
+            with the following regular expression.</p>
+  <program xml:id="re-escape-ac1" interactive="activecode" language="python">
+    <input>
+import re
+x = 'We just received $10.00 for cookies.'
+y = re.findall('\$[0-9.]+',x)
+print(y)
+        </input>
+  </program>
+  <p>Since we prefix the dollar sign with a backslash, it actually matches
+            the dollar sign in the input string instead of matching the <q>end of
+            line</q>, and the rest of the regular expression matches one or more digits
+            or the period character.</p>
+  <note>
+    <p>Inside square brackets, characters are not <q>special</q>. So when we say <c>[0-9.]</c>,
+                it really means digits or a period. Outside of square brackets, a period is the <q>wild-card</q>
+                character and matches any character. Inside square brackets, the period is a period.</p>
+  </note>
+  <exercise label="re-escape-ac2">
+    <statement>
+      <p>Change the regex equation so that it matches with the math equation in the given string &#x2018;x'.</p>
+    </statement>
+    <program xml:id="re-escape-ac2_editor" interactive="activecode" language="python">
+      <input>
+import re
+x = 'We learned in school today that 5 + 6 is 11!'
+y = re.findall('[0-9]+ [\D]', x)
+====
+from unittest.gui import TestCaseGui
+
+class MyTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(y, ['5 + 6'], "Testing that the regex equation matches correctly.")
+
+MyTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="re-escape-mc-period">
+    <statement>
+      <p>11-9-3: How do we match a period (and not a wild-card) in a string using regex?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>.</p>
+        </statement>
+        <feedback>
+          <p>This will trigger the wild-card function.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>/.</p>
+        </statement>
+        <feedback>
+          <p>This will not work.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>\.</p>
+        </statement>
+        <feedback>
+          <p>This is the correct usage of the backslash.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>|.</p>
+        </statement>
+        <feedback>
+          <p>Try again! In regex, | is used to match the expression on the left or the expression on the right</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

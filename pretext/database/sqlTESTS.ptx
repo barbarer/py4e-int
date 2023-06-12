@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<program xml:id="sqlTEST" interactive="activecode" language="sql">
+  <input>
+select bike_number, max(duration)
+from trip_data
+group by bike_number
+order by max(duration) desc
+limit 4;
+
+====
+assert 0,0 == W00379
+assert 0,1 == 86355
+assert 2,1 == 86336
+        </input>
+</program>

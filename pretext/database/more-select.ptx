@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<section xml:id="database_more-select-keywords">
+  <title>More SELECT Keywords</title>
+  <p>So far we have covered selecting the data from all fields from a table, from
+            just one specified field, and from a list of fields.</p>
+  <exercise label="db_SQL_three_types_of_select">
+    <statement>
+      <p>Match each SQL statement with what it does.</p>
+    </statement>
+    <feedback>
+      <p>Refer to previous SELECT examples.</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>SELECT * FROM Tracks</premise>
+        <response> Returns the data from all fields (columns) from the Tracks table</response>
+      </match>
+      <match order="2">
+        <premise>SELECT title FROM Tracks</premise>
+        <response> Returns the data from just the title field (column) from the Tracks table</response>
+      </match>
+      <match order="3">
+        <premise>SELECT title, length FROM Tracks</premise>
+        <response> Returns the data from the title and length fields from the Tracks table</response>
+      </match>
+    </matches>
+  </exercise>
+  <p>There are other keywords that you can use with SELECT. <idx><h>SQL</h><h>SELECT COUNT</h></idx>
+    <idx><h>SELECT COUNT</h><h>SQL</h></idx> Run the following to see what they do.</p>
+  <exercise label="db_bike_sel_count">
+    <statement>
+      <p>Run the following to see what COUNT and LIMIT do.</p>
+    </statement>
+    <program xml:id="db_bike_sel_count_editor" interactive="activecode" language="sql">
+      <input>
+SELECT bike_number, duration FROM trip_data LIMIT 5;
+SELECT COUNT(bike_number) FROM trip_data;
+        </input>
+    </program>
+  </exercise>
+  <exercise label="db_bike_max_count">
+    <statement>
+      <p>Run the following to see what MAX does</p>
+    </statement>
+    <program xml:id="db_bike_max_count_editor" interactive="activecode" language="sql">
+      <input>
+SELECT bike_number FROM trip_data LIMIT 10;
+SELECT MAX(bike_number) FROM trip_data;
+        </input>
+    </program>
+  </exercise>
+  <exercise label="db_bike_order_by">
+    <statement>
+      <p>Run the following to see what ORDER BY does</p>
+    </statement>
+    <program xml:id="db_bike_order_by_editor" interactive="activecode" language="sql">
+      <input>
+SELECT * FROM trip_data ORDER BY bike_number LIMIT 20
+        </input>
+    </program>
+  </exercise>
+  <exercise label="db_bike_order_by_desc">
+    <statement>
+      <p>Run the following to see what ORDER BY does</p>
+    </statement>
+    <program xml:id="db_bike_order_by_desc_editor" interactive="activecode" language="sql">
+      <input>
+SELECT * FROM trip_data ORDER BY bike_number DESC LIMIT 15
+        </input>
+    </program>
+  </exercise>
+  <exercise label="db_SQL_sel_more">
+    <statement>
+      <p>Match each SQL option to what it does</p>
+    </statement>
+    <feedback>
+      <p>Check above to see what each command does.</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>LIMIT n</premise>
+        <response> Limits the number of items returns to n.</response>
+      </match>
+      <match order="2">
+        <premise>Count(field)</premise>
+        <response> Returns the number of items in the specified field (column).</response>
+      </match>
+      <match order="3">
+        <premise>Max(field)</premise>
+        <response> Returns the maximum value in a field (column).</response>
+      </match>
+      <match order="4">
+        <premise>ORDER BY field</premise>
+        <response> Returns the data sorted in ascending order by the specified field.</response>
+      </match>
+      <match order="5">
+        <premise>ORDER BY field DESC</premise>
+        <response> Returns the data sorted in descending order by the specified field.</response>
+      </match>
+    </matches>
+  </exercise>
+  <exercise label="db_test_more_select_ac">
+    <statement>
+      <p>Given a database of bike share information write a SELECT statement to
+            retrieve the <c>bike_number</c> and <c>duration</c> from table <c>trip_data</c> but
+            order the data by <c>bike_number</c> in descending order and limit the number of items returned to 5.</p>
+    </statement>
+    <program xml:id="db_test_more_select_ac_editor" interactive="activecode" language="sql">
+      <input>
+
+====
+assert 0,0 == W01117
+assert 0,1 == 225
+assert 1,0 == W01117
+assert 1,1 == 626
+assert 2,0 == W01117
+assert 2,1 == 288
+assert 3,0 == W01117
+assert 3,1 == 559
+assert 4,0 == W01117
+assert 4,1 == 980
+        </input>
+    </program>
+  </exercise>
+  <p>What happens if you try to limit the number of items returned before you specify how to sort the data in the SQL above?</p>
+</section>

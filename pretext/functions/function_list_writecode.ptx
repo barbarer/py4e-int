@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<section xml:id="functions_functions-and-lists-write-code-questions">
+  <title>Functions and Lists Write Code Questions</title>
+
+        <exercise>
+          <statement>
+            <p>Write a function called <c>average_of_num_list</c> that takes in a parameter <c>num_list</c> and returns the average of all the numbers in num_list.
+                            For example, <c>average_of_num_list([0, 20.8, 80, 5])</c> would return <c>26.45</c>.</p>
+          </statement>
+          <program interactive="activecode" language="python" xml:id="funct_list_writecode1q_editor">
+            <input>
+def average_of_num_list(num_list):
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(average_of_num_list([0]),0,"average_of_num_list([0])")
+        self.assertAlmostEqual(average_of_num_list([0, 20.8, 80, 5]),26.45,2,"average_of_num_list([0, 20.8, 80, 5])")
+        self.assertAlmostEqual(average_of_num_list([0, 15, 13, 14, 7]),9.8,1,"average_of_num_list([0, 15, 13, 14, 7])")
+        self.assertAlmostEqual(average_of_num_list([0, 100, 5, 10]),28.75,2,"average_of_num_list([0, 100, 5, 10])")
+        self.assertAlmostEqual(average_of_num_list([0, 25, 40, -20, -100]),-11.0,1,"average_of_num_list([0, 25, 40, -20, -100])")
+
+myTests().main()
+        </input>
+          </program>
+          <solution>
+
+
+    
+                        Write a function called average_of_num_list that takes in a parameter num_list and returns the average of all the numbers in num_list.
+                            For example, average_of_num_list([0, 20.8, 80, 5]) would return 26.45.
+
+    
+    <program xml:id="funct_list_writecode1a_editor" language="python"><input>
+def average_of_num_list(num_list):
+    return sum(num_list) / len(num_list)
+        </input></program>
+                    </solution>
+        </exercise>
+
+        <exercise label="funct_list_writecode2q">
+          <statement>
+            <p>Write a function called <c>names</c> that takes in a parameter <c>name_list</c> and returns an alphabetically sorted <c>name_list</c>.
+                    For example, <c>names(['Susan', 'Sara', 'Sammy', 'Sarah'])</c> would return <c>['Sammy', 'Sara', 'Sarah', 'Susan']</c>.</p>
+          </statement>
+          <program xml:id="funct_list_writecode2q_editor" interactive="activecode" language="python">
+            <input>
+def names(name_list):
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(names(['Sally', 'Jimmy', 'Peter', 'Tinkerbell']),['Jimmy', 'Peter', 'Sally', 'Tinkerbell'],"names(['Sally', 'Jimmy', 'Peter', 'Tinkerbell'])")
+        self.assertEqual(names(['Timmy']),['Timmy'],"names(['Timmy'])")
+        self.assertEqual(names(['Susan', 'Sara', 'Sammy', 'Sarah']),['Sammy', 'Sara', 'Sarah', 'Susan'],"names(['Susan', 'Sara', 'Sammy', 'Sarah'])")
+
+myTests().main()
+        </input>
+          </program>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>Write a function called <c>remove_min_value</c> that takes in a parameter <c>num_list</c> and returns a <c>num_list</c> without the
+                            minimum value from <c>num_list</c>. For example, <c>remove_min_value([20, 4, 1203, 7482, 3])</c> would return <c>[20, 4, 1203, 7482]</c>.</p>
+          </statement>
+          <program interactive="activecode" language="python" xml:id="funct_list_writecode3q_editor">
+            <input>
+def remove_min_value(num_list):
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(remove_min_value([20, 4, 1203, 7482, 3]),[20, 4, 1203, 7482],"remove_min_value([20, 4, 1203, 7482, 3])")
+        self.assertEqual(remove_min_value([3]),[],"remove_min_value([3])")
+        self.assertEqual(remove_min_value([3, 0, 100]),[3, 100],"remove_min_value([3, 0, 100])")
+
+myTests().main()
+        </input>
+          </program>
+          <solution>
+
+
+    
+                        Write a function called remove_min_value that takes in a parameter num_list and returns a num_list without the
+                            minimum value from num_list. For example, remove_min_value([20, 4, 1203, 7482, 3]) would return [20, 4, 1203, 7482].
+
+    
+    <program xml:id="funct_list_writecode3a_editor" language="python"><input>
+def remove_min_value(num_list):
+    num_list.remove(min(num_list))
+    return num_list
+        </input></program>
+                    </solution>
+                    
+        </exercise>
+
+        <exercise label="funct_list_writecode4q">
+          <statement>
+            <p>Write a function called <c>range_given_list</c> that takes in a parameter <c>list_of_nums</c> and
+                    returns the range (max value - min value) of the values. Try using the sort method and indexing.
+                    For example <c>range_given_list([20, 100, 2000, 15, 3, 12])</c> would return <c>1997</c>.</p>
+          </statement>
+          <program xml:id="funct_list_writecode4q_editor" interactive="activecode" language="python">
+            <input>
+def range_given_list(list_of_nums):
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(range_given_list([20, 100, 2000, 15, 3, 12]),1997,"range_given_list([20, 100, 2000, 15, 3, 12])")
+        self.assertEqual(range_given_list([20, 100, 2000, 15, 3, 0]),2000,"range_given_list([20, 100, 2000, 15, 3, 0])")
+        self.assertEqual(range_given_list([20, 100, 2000, 15, 3, -12]),2012,"range_given_list([20, 100, 2000, 15, 3, -12])")
+        self.assertEqual(range_given_list([-20, -100, -2000, -15, -3, -12]),1997,"range_given_list([-20, -100, -2000, -15, -3, -12])")
+        self.assertAlmostEqual(range_given_list([20.7, 100.3, 2000.5, 2000.4, 15.7, 3.6, -12.9]),2013.4,1,"range_given_list([20.7, 100.3, 2000.5, 2000.4, 15.7, 3.6, -12.9])")
+
+myTests().main()
+        </input>
+          </program>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>Write a function called <c>remove_indices_after_first_max_value</c> that takes in a parameter <c>num_list</c> and
+                            returns a <c>new_num_list</c> with values up to the max value of the list. For example, <c>remove_indices_after_first_max_value([200, 10, 5, 200])</c>
+                            would return <c>[5, 10, 5, 200]</c>.</p>
+          </statement>
+          <program interactive="activecode" language="python" xml:id="funct_list_writecode5q_editor">
+            <input>
+def remove_indices_after_first_max_value(num_list):
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(remove_indices_after_first_max_value([200, 10, 5, 200]),[200],"remove_indices_after_first_max_value([200, 10, 5, 200])")
+        self.assertEqual(remove_indices_after_first_max_value([5, 13, 0, -201, 200, 10, 5, 200]),[5, 13, 0, -201, 200],"remove_indices_after_first_max_value([5, 13, 0, -201, 200, 10, 5, 200])")
+        self.assertEqual(remove_indices_after_first_max_value([5.6, 7.9, 11.3, 10, 200.1, 10, 5, 200]),[5.6, 7.9, 11.3, 10, 200.1],"remove_indices_after_first_max_value([5.6, 7.9, 11.3, 10, 200.1, 10, 5, 200])")
+        self.assertEqual(remove_indices_after_first_max_value([100, 10, 5, 200]),[100, 10, 5, 200],"remove_indices_after_first_max_value([100, 10, 5, 200])")
+
+myTests().main()
+        </input>
+          </program>
+          <solution>
+
+
+    
+                        Write a function called remove_indices_after_first_max_value that takes in a parameter num_list and
+                            returns a new_num_list with values up to the max value of the list. For example, remove_indices_after_first_max_value([200, 10, 5, 200])
+                            would return [5, 10, 5, 200].
+
+    
+    <program xml:id="funct_list_writecode5a_editor" language="python"><input>
+def remove_indices_after_first_max_value(num_list):
+    index_value = num_list.index(max(num_list)) + 1
+    new_num_list = num_list[:index_value]
+    return new_num_list
+        </input></program>
+                    </solution>
+                    
+        </exercise>
+
+        <exercise label="funct_list_writecode6q">
+          <statement>
+            <p>Write a function called <c>transform_and_combine</c> that takes in two parameters, <c>list_one</c>, which must have at least one element, and <c>list_two</c>.
+                    Remove the last element from <c>list_one</c>, then reverse the list. Sort <c>list_two</c>, then extend <c>list_two</c> with <c>list_one</c>, and return <c>list_two</c>.
+                    Hint: Use list methods (e.g., pop, sort, append, reverse, and extend). For example, <c>transform_and_combine([5, 20, 3, 15, 200, 0, 17], ['Hello', 'Bye', 'How are you?'])</c>
+                    would return <c>['Bye', 'Hello', 'How are you?', 0, 200, 15, 3, 20, 5]</c>.</p>
+          </statement>
+          <program xml:id="funct_list_writecode6q_editor" interactive="activecode" language="python">
+            <input>
+def transform_and_combine(list_one, list_two):
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(transform_and_combine([5, 20, 3, 15, 200, 0, 17], ['Hello', 'Bye', 'How are you?']),['Bye', 'Hello', 'How are you?', 0, 200, 15, 3, 20, 5],"transform_and_combine([5, 20, 3, 15, 200, 0, 17], ['Hello', 'Bye', 'How are you?'])")
+        self.assertEqual(transform_and_combine(['Susan', 'Sara', 'Sammy', 'Sarah'], ['Hello', 'Bye', 'How are you?']),['Bye', 'Hello', 'How are you?', 'Sammy', 'Sara', 'Susan'],"transform_and_combine(['Susan', 'Sara', 'Sammy', 'Sarah'], ['Hello', 'Bye', 'How are you?'])")
+        self.assertEqual(transform_and_combine([5, 13, 0, -201, 200, 10, 5, 200], [200, 10, 5, 200]),[5, 10, 200, 200, 5, 10, 200, -201, 0, 13, 5],"transform_and_combine([5, 13, 0, -201, 200, 10, 5, 200], [200, 10, 5, 200])")
+        self.assertEqual(transform_and_combine([1], [4]),[4],"transform_and_combine([1], [4]")
+        self.assertEqual(transform_and_combine([1], []),[],"transform_and_combine([1], []")
+
+
+
+myTests().main()
+        </input>
+          </program>
+        </exercise>
+</section>

@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<section xml:id="strings_write-code-questions">
+  <title>Write-code questions</title>
+  <exercise>
+    <statement>
+      <p>Fix line 2 so that it prints <q>Hi</q> instead of <q>hi</q>.</p>
+    </statement>
+    <program interactive="activecode" language="python" xml:id="str-ex-hiq_editor">
+      <input>
+s1 = "hi"
+s1.capitalize()
+print(s1)
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(s1,"Hi")
+
+myTests().main()
+        </input>
+    </program>
+    <solution>
+                The capitalize() method returns a new string; it doesn't modify the original because strings are immutable. As a result, you need to assign the value of s1.capitalize() to s1.
+
+
+    
+                Fix line 2 so that it prints <q>Hi</q> instead of <q>hi</q>.
+
+    
+    <program xml:id="str-ex-hiA_editor" language="python"><input>
+s1 = "hi"
+s1 = s1.capitalize()
+print(s1)
+        </input></program>
+
+            
+                <p>The <c>capitalize()</c> method returns a new string; it doesn't modify the original because strings are immutable. As a result, you need to assign the value of s1.capitalize() to s1.</p>
+            </solution>
+  </exercise>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=str-writecode-2 data-questionlist='str-ex-meowacq, str-ex-meowansw'         data-toggleoptions="toggle, lock" data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: str-ex-meowacq, str-ex-meowansw&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <exercise>
+    <statement>
+      <p>Write code to evaluate the length of the string <q>I like green eggs</q>
+                    and print it. It should print <q>The length is 17</q>.</p>
+    </statement>
+    <program interactive="activecode" language="python" xml:id="str-ex-eggsq_editor">
+      <input>
+
+        </input>
+    </program>
+    <solution>
+                You can use the len() method to find the length of a string.
+
+
+    
+                Write code to evaluate the length of the string <q>I like green eggs</q>
+                    and print it. It should print <q>The length is 17</q>.
+
+    
+    <program xml:id="str-ex-eggsa_editor" language="python"><input>
+sentence = 'I like green eggs'
+print('The length is ' + str(len(sentence)))
+        </input></program>
+
+            
+                <p>You can use the <c>len()</c> method to find the length of a string.</p>
+            </solution>
+  </exercise>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=str-writecode-4 data-questionlist='str-ex-countacq, str-ex-countansw'         data-toggleoptions="toggle, lock" data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: str-ex-countacq, str-ex-countansw&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <exercise>
+    <statement>
+      <p>Take the following Python code that stores this string: <c>string = "X-DSPAM-Confidence: 0.8475"</c>.
+                    Use <c>find</c> and string slicing to extract the portion of the string after the colon character
+                    and then use the <c>float</c> function to convert the extracted string into a floating point number called <c>num</c>.</p>
+    </statement>
+    <program interactive="activecode" language="python" xml:id="str-ex-floatq_editor">
+      <input>
+string = "X-DSPAM-Confidence: 0.8475"
+
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(num,0.8475)
+
+myTests().main()
+        </input>
+    </program>
+    <solution>
+                The float() function ignores whitespace, so you can begin the slice at the space character after the colon or at the 0 &#x2013; your choice!
+
+
+    
+                Take the following Python code that stores this string: string = "X-DSPAM-Confidence: 0.8475".
+                    Use find and string slicing to extract the portion of the string after the colon character
+                    and then use the float function to convert the extracted string into a floating point number called num.
+
+    
+    <program xml:id="str-ex-floatA_editor" language="python"><input>
+string = "X-DSPAM-Confidence: 0.8475"
+colonpos = string.find(':')
+digit = string[colonpos + 1:]
+num = float(digit)
+        </input></program>
+
+            
+                <p>The <c>float()</c> function ignores whitespace, so you can begin the slice at the space character after the colon or at the 0 &#x2013; your choice!</p>
+
+            </solution>
+  </exercise>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=str-writecode-6 data-questionlist='str-ex-ducksacq, str-ex-ducksansw'         data-toggleoptions="toggle, lock" data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: str-ex-ducksacq, str-ex-ducksansw&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <exercise>
+    <statement>
+      <p>Write a function <c>numDigits</c> that will return the number of digits in an integer <c>n</c>.</p>
+    </statement>
+    <program interactive="activecode" language="python" xml:id="str-ex-digitsq_editor">
+      <input>
+def numDigits(n):
+    # your code here
+
+====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(numDigits(2),1,"Tested numDigits on input of 2")
+        self.assertEqual(numDigits(55),2,"Tested numDigits on input of 55")
+        self.assertEqual(numDigits(1352),4,"Tested numDigits on input of 1352")
+        self.assertEqual(numDigits(444),3,"Tested numDigits on input of 444")
+
+myTests().main()
+        </input>
+    </program>
+    <solution>
+                Convert the integer to a string, then use the len() method.
+
+
+    
+                Write a function numDigits that will return the number of digits in an integer n.
+
+    
+    <program xml:id="str_ex-digitsa_editor" language="python"><input>
+def numDigits(n):
+    n_str = str(n)
+    return len(n_str)
+
+# Check the function
+print(numDigits(50))
+print(numDigits(20000))
+print(numDigits(1))
+        </input></program>
+
+            
+                <p>Convert the integer to a string, then use the <c>len()</c> method.</p>
+
+            </solution>
+  </exercise>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=str-writecode-8 data-questionlist='str-ex-nameacq, str-ex-nameansw'         data-toggleoptions="toggle, lock" data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: str-ex-nameacq, str-ex-nameansw&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <exercise>
+    <statement>
+      <p>Write a program that asks a user for their name and from the input
+                    prints the first letter of their name in lowercase.</p>
+    </statement>
+    <program interactive="activecode" language="python" xml:id="str-ex-nameInputq_editor">
+      <input>
+
+        </input>
+    </program>
+    <solution>
+                Use the input() function to get the user's input, then use indexing and the lower() method to print the first letter of their name in lowercase.
+
+
+    
+                Write a program that asks a user for their name and from the input
+                    prints the first letter of their name in lowercase.
+
+    
+    <program xml:id="str-ex-nameInputa_editor" language="python"><input>
+prompt = "What is your name?"
+name = input(prompt)
+first = name[0]
+lowerFirst = first.lower()
+print(lowerFirst)
+        </input></program>
+
+            
+                <p>Use the <c>input()</c> function to get the user's input, then use indexing and the <c>lower()</c> method to print the first letter of their name in lowercase.</p>
+            </solution>
+  </exercise>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=str-writecode-10 data-questionlist='str-ex-loweracq, str-ex-loweransw'         data-toggleoptions="toggle, lock" data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: str-ex-loweracq, str-ex-loweransw&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+</section>

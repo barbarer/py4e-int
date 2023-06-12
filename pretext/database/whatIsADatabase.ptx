@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<section xml:id="database_what-is-a-database">
+  <title>What is a database?</title>
+      <idx>Database</idx>
+    <idx><h>Database</h><h>Indexes</h></idx>
+    <idx><h>Indexes</h><h>Database</h></idx>
+    <idx>SQL</idx>
+
+  <p>A <em>database</em> is a file that is organized for storing
+            data. Most databases are organized like a dictionary in the sense that
+            they map from keys to values. The biggest difference is that the
+            database is on disk (or other permanent storage), so it persists after
+            the program ends. Because a database is stored on permanent storage, it
+            can store far more data than a dictionary, which is limited to the size
+            of the memory in the computer.</p>
+  <p>Like a dictionary, database software is designed to keep the inserting
+            and accessing of data very fast, even for large amounts of data.
+            Database software maintains its performance by building
+            <em>indexes</em> as data is added to the database to allow the
+            computer to jump quickly to a particular entry.</p>
+  <p>There are many different database systems which are used for a wide
+            variety of purposes including: Oracle, MySQL, Microsoft SQL Server,
+            PostgreSQL, and SQLite. We focus on SQLite in this book because it is a
+            very common database and is already built into Python. SQLite is
+            designed to be <em>embedded</em> into other applications to provide database
+            support within the application. For example, the Firefox browser also
+            uses the SQLite database internally as do many other products.</p>
+  <p>
+    <url href="http://sqlite.org/" visual="http://sqlite.org/">http://sqlite.org/</url>
+  </p>
+  <p>SQLite is well suited to some of the data manipulation problems that we
+            see in Informatics such as the Twitter spidering application that we
+            describe in this chapter.</p>
+  <exercise label="db_MC_what">
+    <statement>
+      <p>Q-1: What is a database?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Another name for a dictionary</p>
+        </statement>
+        <feedback>
+          <p>A database keeps it data after the program ends, while a dictionary only exists while a program is running.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A list of lists</p>
+        </statement>
+        <feedback>
+          <p>That's a tuple!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A file containing dictionaries</p>
+        </statement>
+        <feedback>
+          <p>While databases can have dictionaries as their stored data, it is not a requirement.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>A file that is organized for storing data</p>
+        </statement>
+        <feedback>
+          <p>A database is a file organized for storing data!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="db_fill_what">
+    <statement>
+      <p>Q-2: Database software uses _________ to keep track of data as it is added and allow the computer to
+jump to a particular entry. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="indexes|indices">
+          <feedback>
+            <p>Much like dictionaries, databases use indexes to locate and keep track of data as it is inserted.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again! Databases function similarly to dictionaries in this way!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="db_MC_what_dbSystem">
+    <statement>
+      <p>Q-3: Which database system are we using in this book?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>MySQL</p>
+        </statement>
+        <feedback>
+          <p>We are using a database system that uses Structured Query Language based syntax, but not MySQL.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>SQLite</p>
+        </statement>
+        <feedback>
+          <p>SQLite is designed to be embedded into other applications, so we're focusing on it in this book.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Oracle</p>
+        </statement>
+        <feedback>
+          <p>Oracle is commonly used for running online transaction processing, data warehousing and mixed database workloads - not really what we're focusing on here.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>PostgreSQL</p>
+        </statement>
+        <feedback>
+          <p>We are using a database system that uses Structured Query Language based syntax, but not PostgreSQL.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

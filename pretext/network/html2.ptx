@@ -1,0 +1,553 @@
+<?xml version="1.0"?>
+<section xml:id="network_group-work-more-html">
+  <title>Group Work: More HTML</title>
+  <introduction>
+  <p>It is best to use a POGIL approach with the following. In POGIL students work
+            in groups on activities and each member has an assigned role.  For more information see <url href="https://cspogil.org/Home" visual="https://cspogil.org/Home">https://cspogil.org/Home</url>.</p>
+  <note>
+    <p>If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.</p>
+  </note>
+  <p>
+    <term>Learning Objectives</term>
+  </p>
+  <p>Students will know and be able to do the following.</p>
+  <p>
+    <em>Content Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>How do you create a hyperlink in a HTML page with an <c>&lt;a&gt;</c> tag?</p>
+      </li>
+      <li>
+        <p>How do you include an image in a HTML page with a <c>&lt;img&gt;</c> tag?</p>
+      </li>
+      <li>
+        <p>What are tag attributes?</p>
+      </li>
+      <li>
+        <p>What is the difference between a <c>&lt;div&gt;</c> and a <c>&lt;span&gt;</c> tag?</p>
+      </li>
+      <li>
+        <p>How to change the look of the displayed HTML elements with Cascading Style Sheets (CSS).</p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    <em>Process Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Put HTML in order to define tables</p>
+      </li>
+      <li>
+        <p>Identify tag attribute names and values</p>
+      </li>
+      <li>
+        <p>Match terms to definitions</p>
+      </li>
+    </ul>
+  </p>
+</introduction>
+  <subsection xml:id="network_table-tags">
+    <title>Table Tags</title>
+    <p>HTML pages can include tables.  Use the <c>&lt;table&gt;</c> tag.</p>
+    <exercise label="html_table_ex">
+      <statement>
+        <p>Click on the <q>Render</q> button to see the resulting web page.</p>
+      </statement>
+      <program xml:id="html_table_ex_editor" interactive="activecode" language="htmlmixed">
+        <input>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page with Table&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;The First Page&lt;/h1&gt;
+        &lt;table&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Country&lt;/th&gt;
+                &lt;th&gt;Year&lt;/th&gt;
+                &lt;th&gt;Unemployment Rate&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;United Kingdom&lt;/td&gt;
+                &lt;td&gt;2017&lt;/td&gt;
+                &lt;td&gt;4.33&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;India&lt;/td&gt;
+                &lt;td&gt;2017&lt;/td&gt;
+                &lt;td&gt;3.52&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        </input>
+      </program>
+    </exercise>
+    <exercise label="html_table_tag_def_dnd">
+      <statement>
+        <p>Match each tag to its definition.</p>
+      </statement>
+      <feedback>
+        <p>Read the information above and try again.</p>
+      </feedback>
+      <matches>
+        <match order="1">
+          <premise>table</premise>
+          <response>Used to create a table.</response>
+        </match>
+        <match order="2">
+          <premise>th</premise>
+          <response>Used to specify a header (optional first row).</response>
+        </match>
+        <match order="3">
+          <premise>tr</premise>
+          <response>Used to create a row in a table.</response>
+        </match>
+        <match order="4">
+          <premise>td</premise>
+          <response>Used to identify data in a table.</response>
+        </match>
+      </matches>
+    </exercise>
+    <exercise label="html_body_table_unemployment_order" numbered="yes" adaptive="yes" indentation="show" language="python">
+      <statement>
+        <p>Put the blocks into order to define just the body of simple HTML page with a table. The table has a header row and one row of data. Indent the blocks to show the structure.</p>
+      </statement>
+      <blocks>
+        <block order="7">
+          <cline>&lt;body&gt;</cline>
+        </block>
+        <block order="9">
+          <cline>    &lt;table&gt;</cline>
+        </block>
+        <block order="8">
+          <cline>        &lt;tr&gt;</cline>
+        </block>
+        <block order="6">
+          <cline>            &lt;th&gt;Country&lt;/th&gt;</cline>
+          <cline>            &lt;th&gt;Year&lt;/th&gt;</cline>
+          <cline>            &lt;th&gt;Unemployment Rate&lt;/th&gt;</cline>
+        </block>
+        <block order="10">
+          <cline>        &lt;/tr&gt;</cline>
+        </block>
+        <block order="1">
+          <cline>        &lt;tr&gt;</cline>
+        </block>
+        <block order="4">
+          <cline>            &lt;td&gt;United Kingdom&lt;/td&gt;</cline>
+          <cline>            &lt;td&gt;2017&lt;/td&gt;</cline>
+          <cline>            &lt;td&gt;4.33&lt;/td&gt;</cline>
+        </block>
+        <block order="3">
+          <cline>        &lt;/tr&gt;</cline>
+        </block>
+        <block order="2">
+          <cline>    &lt;/table&gt;</cline>
+        </block>
+        <block order="5">
+          <cline>&lt;/body&gt;</cline>
+        </block>
+      </blocks>
+    </exercise>
+    <exercise label="html_body_table_order_two_data" numbered="yes" adaptive="yes" indentation="show" language="python">
+      <statement>
+        <p>Put the blocks into order to define just the body of simple HTML page with a table. The table has two rows of data.  The first row is data about the United Kingdom and the second is data about India. Indent the blocks to show the structure.</p>
+      </statement>
+      <blocks>
+        <block order="6">
+          <cline>&lt;body&gt;</cline>
+        </block>
+        <block order="2">
+          <cline>    &lt;table&gt;</cline>
+        </block>
+        <block order="1">
+          <cline>        &lt;tr&gt;</cline>
+        </block>
+        <block order="9">
+          <cline>            &lt;td&gt;United Kingdom&lt;/td&gt;</cline>
+          <cline>            &lt;td&gt;2017&lt;/td&gt;</cline>
+          <cline>            &lt;td&gt;4.33&lt;/td&gt;</cline>
+        </block>
+        <block order="7">
+          <cline>        &lt;/tr&gt;</cline>
+        </block>
+        <block order="4">
+          <cline>        &lt;tr&gt;</cline>
+        </block>
+        <block order="3">
+          <cline>            &lt;td&gt;India&lt;/th&gt;</cline>
+          <cline>            &lt;td&gt;2017&lt;/th&gt;</cline>
+          <cline>            &lt;td&gt;3.52&lt;/th&gt;</cline>
+        </block>
+        <block order="10">
+          <cline>        &lt;/tr&gt;</cline>
+        </block>
+        <block order="8">
+          <cline>    &lt;/table&gt;</cline>
+        </block>
+        <block order="5">
+          <cline>&lt;/body&gt;</cline>
+        </block>
+      </blocks>
+    </exercise>
+  </subsection>
+  <subsection xml:id="network_link-tag">
+    <title>Link Tag</title>
+    <p>Web pages can include hyperlinks to other web pages.  They do this by including
+                an anchor <c>a</c> tag which is also known as a <term>link</term> tag as shown below.</p>
+    <program language="html">
+      <input>
+&lt;a href="https://www.w3schools.com/"&gt;Visit W3Schools.com!&lt;/a&gt;
+</input>
+    </program>
+    <p>The start tag <c>&lt;a&gt;</c> contains an <term>attribute</term> <c>href</c> and <term>value</term> <c>"https://www.w3schools.com/"</c>.
+                The text of the tag is <c>Visit W3Schools.com!</c> which is the actual text of the link when it is displayed.
+                If you click on the link you will be taken to the <c>href</c> value: <c>https://www.w3schools.com/</c>.
+                The <c>&lt;a&gt;</c> tag has a closing <c>&lt;/a&gt;</c> tag.</p>
+    <exercise label="html_link_ac">
+      <statement>
+        <p>Render the HTML below.</p>
+      </statement>
+      <program xml:id="html_link_ac_editor" interactive="activecode" language="htmlmixed">
+        <input>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My First Page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt; The anchor (link) tag is used to include hyperlinks.  Click on "Visit the beach" to go to that url.
+            &lt;a href="https://i.ibb.co/WfcrzVn/beach.jpg"&gt;Visit the beach&lt;/a&gt;
+        &lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        </input>
+      </program>
+    </exercise>
+  </subsection>
+  <subsection xml:id="network_image-tag">
+    <title>Image Tag</title>
+    <p>Web pages can include images using the &lt;img&gt; tag. The image tag has an attribute <c>src</c> that specifies the URL for the image
+                and can have an <c>alt</c> attribute to specify alternative text that describes the image.</p>
+    <exercise label="html_image_ac">
+      <statement>
+        <p>Render the HTML below.</p>
+      </statement>
+      <program xml:id="html_image_ac_editor" interactive="activecode" language="htmlmixed">
+        <input>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My First Page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt; The img tag is used to include images in web pages.&lt;/p&gt;
+        &lt;img src="https://i.ibb.co/WfcrzVn/beach.jpg" alt="A picture of a beach"&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        </input>
+      </program>
+    </exercise>
+    <note>
+      <p>An image tag, <c>&lt;img&gt;</c>, does not have an end tag.  All of the information is in the start tag.</p>
+    </note>
+    <exercise label="html_other_tags_def_dnd">
+      <statement>
+        <p>Match each tag to its definition.</p>
+      </statement>
+      <feedback>
+        <p>Read the information above and try again.</p>
+      </feedback>
+      <matches>
+        <match order="1">
+          <premise>img</premise>
+          <response>Tag to include an image.</response>
+        </match>
+        <match order="2">
+          <premise>div</premise>
+          <response>Tag to define a division (section).</response>
+        </match>
+        <match order="3">
+          <premise>a</premise>
+          <response>Tag to define a hyperlink (link)</response>
+        </match>
+      </matches>
+    </exercise>
+    <exercise label="html-anchor-vs-img">
+      <statement>
+        <p>Q-8: List the differences between the <c>img</c> tag and the <c>a</c> tag?</p>
+      </statement>
+    </exercise>
+  </subsection>
+  <subsection xml:id="network_attributes">
+    <title>Attributes</title>
+    <p>All HTML tags can have attributes.  Attributes provide additional information about the tag such as the alternative text to use for an image as shown above by the <c>alt</c> attribute of the <c>img</c> tag.
+                Attributes are specified by name and value pairs.  The value should be in quotes.</p>
+    <exercise label="html_a_tag_attribute_names">
+      <statement>
+        <p>Click on all of the attribute names in the example HTML below.</p>
+      </statement>
+      <feedback>
+        <p>The attribute name is on the left side of the equal sign</p>
+      </feedback>
+      <areas>
+        <cline>
+          <area correct="no">&lt;html&gt;</area>
+        </cline>
+        <cline>
+          <area correct="no">&lt;head&gt;</area>
+        </cline>
+        <cline>
+          <area correct="no">&lt;title&gt;</area>
+          <area correct="no">My First Page</area>
+          <area correct="no">&lt;/title&gt;</area>
+        </cline>
+        <cline>
+          <area correct="no">&lt;/head&gt;</area>
+        </cline>
+        <cline>
+          <area correct="no">&lt;body&gt;</area>
+        </cline>
+        <cline>
+          <area correct="no">&lt;h1&gt;</area>
+          <area correct="no">The First Page</area>
+          <area correct="no">&lt;/h1&gt;</area>
+        </cline>
+        <cline>
+          <area correct="no">&lt;p&gt;</area>
+        </cline>
+        <cline>
+          <area correct="no">HTML is the language used to create web pages.</area>
+        </cline>
+        <cline>
+          <area correct="no">&lt;/p&gt;</area>
+        </cline>
+        <cline>
+          <area correct="no">&lt;a</area>
+          <area correct="yes">href</area>
+          <area correct="no">=</area>
+          <area correct="no">"https://www.w3schools.com/"&gt;</area>
+          <area correct="no">&lt;/a&gt;</area>
+        </cline>
+        <cline><area correct="no">&lt;img</area><area correct="yes">src</area><area correct="no">=</area><area correct="no">"https://i.ibb.co/WfcrzVn/beach.jpg"</area>: <area correct="yes">alt</area><area correct="no">=</area><area correct="no">"A picture of a beach"</area>&gt;</cline>
+        <cline>
+          <area correct="no">&lt;/body&gt;</area>
+        </cline>
+        <cline>
+          <area correct="no">&lt;/html&gt;</area>
+        </cline>
+      </areas>
+    </exercise>
+    <exercise label="html_a_tag_attribute_values">
+      <statement>
+        <p>Click on all of the attribute values in the example HTML below.</p>
+      </statement>
+      <feedback>
+        <p>The attribute name is on the left side of the equal sign</p>
+      </feedback>
+      <areas>
+        <cline>
+          <area correct="no">&lt;html&gt;</area>
+        </cline>
+        <cline>
+          <area correct="no">&lt;head&gt;</area>
+        </cline>
+        <cline>
+          <area correct="no">&lt;title&gt;</area>
+          <area correct="no">My First Page</area>
+          <area correct="no">&lt;/title&gt;</area>
+        </cline>
+        <cline>
+          <area correct="no">&lt;/head&gt;</area>
+        </cline>
+        <cline>
+          <area correct="no">&lt;body&gt;</area>
+        </cline>
+        <cline>
+          <area correct="no">&lt;h1&gt;</area>
+          <area correct="no">The First Page</area>
+          <area correct="no">&lt;/h1&gt;</area>
+        </cline>
+        <cline>
+          <area correct="no">&lt;p&gt;</area>
+        </cline>
+        <cline>
+          <area correct="no">HTML is the language used to create web pages.</area>
+        </cline>
+        <cline>
+          <area correct="no">&lt;/p&gt;</area>
+        </cline>
+        <cline>
+          <area correct="no">&lt;a</area>
+          <area correct="no">href</area>
+          <area correct="no">=</area>
+          <area correct="yes">"https://www.w3schools.com/"&gt;</area>
+          <area correct="no">&lt;/a&gt;</area>
+        </cline>
+        <cline><area correct="no">&lt;img</area><area correct="no">src</area><area correct="no">=</area><area correct="yes">"https://i.ibb.co/WfcrzVn/beach.jpg"</area><area correct="no">alt</area><area correct="no">=</area><area correct="yes">"A picture of a beach"</area>:&gt;</cline>
+        <cline>
+          <area correct="no">&lt;/body&gt;</area>
+        </cline>
+        <cline>
+          <area correct="no">&lt;/html&gt;</area>
+        </cline>
+      </areas>
+    </exercise>
+  </subsection>
+  <subsection xml:id="network_div-and-span-tags">
+    <title>Div and Span tags</title>
+    <p>The <c>div</c> tag is used to contain other HTML tags (elements).  It is often used to divide the HTML page into sections. The <c>span</c> tag is used for inline grouping or styling.
+                You can use Cascading Style Sheets (CSS) to change the look of each HTML tag (element).  You can add the CSS directly in the <c>head</c> section using the <c>style</c> tag, but the recommended approach is to use external CSS.</p>
+    <exercise label="html_div_with_css_ac">
+      <statement>
+        <p>Render the HTML below.</p>
+      </statement>
+      <program xml:id="html_div_with_css_ac_editor" interactive="activecode" language="htmlmixed">
+        <input>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My First Page&lt;/title&gt;
+        &lt;style&gt;
+            div {
+                background-color: #EAF0F6;
+                color: #33475B;
+                border: 3px solid #00A4BD;
+                padding: 5px;
+            }
+            span {
+                 background-color: #F6FF33;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div&gt; A div is a division or section in HTML.  It is a container for other HTML elements.
+            &lt;p&gt; First paragraph &lt;/p&gt;
+            &lt;p&gt; Second &lt;span&gt;paragraph&lt;/span&gt; with a span in it.&lt;/p&gt;
+            &lt;p&gt; Third paragraph&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        </input>
+      </program>
+    </exercise>
+    <exercise label="html_span_div_css">
+      <statement>
+        <p>Match each term to its definition.</p>
+      </statement>
+      <feedback>
+        <p>Read the information above and try again.</p>
+      </feedback>
+      <matches>
+        <match order="1">
+          <premise>span</premise>
+          <response>Tag to define an inline style or order.</response>
+        </match>
+        <match order="2">
+          <premise>div</premise>
+          <response>Tag to define a block or section in an HTML page.</response>
+        </match>
+        <match order="3">
+          <premise>CSS</premise>
+          <response>Is used to define styles to change how HTML elements are displayed.</response>
+        </match>
+      </matches>
+    </exercise>
+  </subsection>
+  <subsection xml:id="network_using-css-classes">
+    <title>Using CSS Classes</title>
+    <p>You can define one or more classes in CSS and then use them to change the display of the HTML elements.</p>
+    <exercise label="html_div_with_css_classes_ac">
+      <statement>
+        <p>Render the HTML below.</p>
+      </statement>
+      <program xml:id="html_div_with_css_classes_ac_editor" interactive="activecode" language="htmlmixed">
+        <input>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;style&gt;
+             p.warning {
+                 color: red;
+             }
+
+             p.large {
+                 font-size: 150%;
+             }
+       &lt;/style&gt;
+   &lt;/head&gt;
+  &lt;body&gt;
+
+      &lt;h1&gt;Demo using CSS classes&lt;/h1&gt;
+      &lt;p&gt;This is a normal paragraph&lt;/p&gt;
+      &lt;p class="warning"&gt;This paragraph will be red.&lt;/p&gt;
+      &lt;p class="warning large"&gt;This paragraph will be red and in a larger font-size.&lt;/p&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+        </input>
+      </program>
+    </exercise>
+    <p>Change the class <c>warning</c> to use an orange color instead and render the HTML again.</p>
+    <exercise label="html_true_items">
+      <statement>
+        <p>Q-14: Which of the follow are true?</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>The root (start) of the elements in an HTML page is the html tag</p>
+          </statement>
+          <feedback>
+            <p>The root is the html tag</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>All start tags must have an end tag</p>
+          </statement>
+          <feedback>
+            <p>Some start tags do not have an end tag like &lt;img&gt;</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>All HTML tags can have attributes</p>
+          </statement>
+          <feedback>
+            <p>All HTML tags can have attributes</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>You must start the HTML page with &lt;!DOCTYPE html&gt;</p>
+          </statement>
+          <feedback>
+            <p>You do not have to start an HTML page with &lt;!DOCTYPE html&gt; but should</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
+    <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+    &lt;div data-component="groupsub" id=html_more_groupsub data-size_limit=3&gt;
+        &lt;div class="col-sm-6"&gt;
+            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div id="groupsub_button" class="col-sm-6"&gt;
+        &lt;/div&gt;
+        &lt;p&gt;The Submit Group button will submit the answer for each each question
+        on this page for each member of your group. It also logs you as the official
+        group submitter.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  </subsection>
+</section>

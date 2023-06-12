@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<section xml:id="network_parsing-html-using-regular-expressions">
+  <title>Parsing HTML using regular expressions</title>
+  <p>One simple way to parse HTML is to use regular expressions to repeatedly
+            search for and extract substrings that match a particular pattern.</p>
+  <p>Here is a simple web page:</p>
+  <program language="{.html}">
+    <input>
+&lt;h1&gt;The First Page&lt;/h1&gt;
+&lt;p&gt;
+If you like, you can switch to the
+&lt;a href="http://www.dr-chuck.com/page2.htm"&gt;
+Second Page&lt;/a&gt;.
+&lt;/p&gt;
+</input>
+  </program>
+  <p>We can construct a well-formed regular expression to match and extract
+            the link values from the above text as follows:</p>
+  <pre>href="http[s]?://.+?"</pre>
+  <p>Our regular expression looks for strings that start with
+            <q>href="<url href="http://" visual="http://">http://</url></q> or <q>href="<url href="https://" visual="https://">https://</url></q>, followed by one or more characters (<c>.+?</c>),
+            followed by another double quote. The question mark behind the <c>[s]?</c> indicates
+            to search for the string <q>http</q> followed by zero or one <q>s</q>.</p>
+  <p>The question mark added to the <c>.+?</c> indicates
+            that the match is to be done in a <q>non-greedy</q> fashion instead of a
+            <q>greedy</q> fashion. A non-greedy match tries to find the
+            <em>smallest</em> possible matching string and a greedy match
+            tries to find the <em>largest</em> possible matching string.</p>
+  <exercise label="network_regex_tf">
+    <statement>
+      <p>Q-1: True or False? In regex, <c>?</c> is a greedy character, meaning it will select as many characters as it can.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>Try again. ? is not greedy.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>Correct! ? is not greedy because it only selects one or zero of the preceding character.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>We add parentheses to our regular expression to indicate which part of
+            our matched string we would like to extract, and produce the following
+            program:</p>
+  <program xml:id="urlregex" interactive="activecode" language="python3">
+    <input>
+# Search for link values within URL input
+import urllib.request, urllib.parse, urllib.error
+import re
+import ssl
+
+# Ignore SSL certificate errors
+ctx = ssl.create_default_context()
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
+
+url = "https://docs.python.org"
+html = urllib.request.urlopen(url, context=ctx).read()
+links = re.findall(b'href="(http[s]?://.*?)"', html)
+for link in links:
+    print(link.decode())
+        </input>
+  </program>
+  <p>The <c>ssl</c> library allows this program to access web sites that strictly
+            enforce HTTPS. The <c>read</c> method returns HTML source code as a bytes object
+            instead of returning an HTTPResponse object. The <c>findall</c> regular expression
+            method will give us a list of all of the strings that match our
+            regular expression, returning only the link text between the double quotes.</p>
+  <p>Regular expressions work very nicely when your HTML is well formatted
+            and predictable. But since there are a lot of <q>broken</q> HTML pages out
+            there, a solution only using regular expressions might either miss some
+            valid links or end up with bad data.</p>
+  <p>This can be solved by using a robust HTML parsing library.</p>
+  <exercise label="network_regex_tf2">
+    <statement>
+      <p>Q-3: True or False? Using regex with HTML will always select the necessary HTML pages.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>Correct! regex only finds exact matches, so there is a lot of room for error.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

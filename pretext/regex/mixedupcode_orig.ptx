@@ -1,0 +1,619 @@
+<?xml version="1.0"?>
+<section xml:id="regex_mixed-up-code-questions">
+  <title>Mixed-Up Code Questions</title>
+  <exercise label="re_mixed1" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>greeting_search</c> that takes in a list of strings, <c>lst</c>, as a parameter and returns <c>True</c> if the list
+            has <q>Good Morning!</q> in it and <c>False</c> otherwise. For example, <c>greeting_search(["Hello!", "Good Morning!", "good morning!"])</c>
+            should return <c>True</c>.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>import re</cline>
+      </block>
+      <block order="1">
+        <cline>def greeting_search(lst):</cline>
+      </block>
+      <block order="2">
+        <cline>    for item in lst:</cline>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>        if re.search(item, "Good Morning!"):</cline>
+        </choice>
+        <choice>
+          <cline>        if re.search(lst, "Good Morning!"): </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>            return True</cline>
+      </block>
+      <block order="7">
+        <cline>    return False</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="re_mixed1_ac">
+    <statement>
+      <p>Write a function called <c>greeting_search</c> that takes in a list of strings, <c>lst</c>, as a parameter and returns <c>True</c> if the list
+            has <q>Good Morning!</q> in it and <c>False</c> otherwise. For example, <c>greeting_search(["Hello!", "Good Morning!", "good morning!"])</c>
+            should return <c>True</c>.</p>
+    </statement>
+    <program xml:id="re_mixed1_ac_editor" interactive="activecode" language="python">
+      <input>
+import re
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(greeting_search(['Hello!', 'Good Morning!', 'good morning!']), True, "greeting_search(['Hello!', 'Good Morning!', 'good morning!'])")
+        self.assertEqual(greeting_search(['Hello!', 'good morning!']), False, "greeting_search(['Hello!', 'good morning!'])")
+        self.assertEqual(greeting_search(['Good Morning!', 'Hello!', 'good morning!']), True, "greeting_search(['Good Morning!', 'Hello!', 'good morning!'])")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="re_mixed2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>search_h</c> that takes in a list of strings, <c>lst</c>, and uses regular expressions to add all the words
+            starting with an <q>H</q> or an <q>h</q> to a new list and returns that new list. For example, <c>search_h(["Hello!", "hello.", "Morning!", "hi"])</c>
+            should return <c>['Hello!', 'hello.', 'hi']</c>.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>import re</cline>
+      </block>
+      <block order="2">
+        <cline>def search_h(lst):</cline>
+      </block>
+      <block order="4">
+        <cline>    new_list = []</cline>
+      </block>
+      <block order="1">
+        <cline>    for item in lst:</cline>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>        if re.search('^[Hh]', item):</cline>
+        </choice>
+        <choice>
+          <cline>        if re('^H,h'), item): </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>            new_list.append(item)</cline>
+      </block>
+      <block order="7">
+        <cline>    return new_list</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="re_mixed2_ac">
+    <statement>
+      <p>Write a function called <c>search_h</c> that takes in a list of strings, <c>lst</c>, and uses regular expressions to add all the words
+            starting with an <q>H</q> or an <q>h</q> to a new list and returns that new list. For example, <c>search_h(["Hello!", "hello.", "Morning!", "hi"])</c>
+            should return <c>['Hello!', 'hello.', 'hi']</c>.</p>
+    </statement>
+    <program xml:id="re_mixed2_ac_editor" interactive="activecode" language="python">
+      <input>
+import re
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(search_h(['Hello!', 'hello.', 'Morning!', 'hi']), ['Hello!', 'hello.', 'hi'], "search_h(['Hello!', 'hello.', 'Morning!', 'hi'])")
+        self.assertEqual(search_h(['Morning!']), [], "search_h(['Morning!'])")
+        self.assertEqual(search_h(['fresh', 'Kahoot']), [], "search_h(['fresh', 'Kahoot'])")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="re_mixed3" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>search_o</c> that takes in a list of strings, <c>lst</c>, and uses regular expressions to add all the words
+            that have a lowercase <q>o</q> to a new list and returns that new list. For example, <c>search_o(['Hello', 'Good Morning!', 'hi'])</c> should return
+            <c>['Hello', 'Good Morning!']</c>.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>import re</cline>
+      </block>
+      <block order="5">
+        <cline>def search_o(lst):</cline>
+      </block>
+      <block order="8">
+        <cline>    new_list = []</cline>
+      </block>
+      <block order="4">
+        <cline>    for item in lst:</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>        if re.search('o', item):</cline>
+        </choice>
+        <choice>
+          <cline>        if re.search('^o', item): </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>            new_list.append(item)</cline>
+      </block>
+      <block order="7">
+        <cline>    return new_list</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="re_mixed3_ac">
+    <statement>
+      <p>Write a function called <c>search_o</c> that takes in a list of strings, <c>lst</c>, and uses regular expressions to add all the words
+            that have a lowercase <q>o</q> to a new list and returns that new list. For example, <c>search_o(['Hello', 'Good Morning!', 'hi'])</c> should return
+            <c>['Hello', 'Good Morning!']</c>.</p>
+    </statement>
+    <program xml:id="re_mixed3_ac_editor" interactive="activecode" language="python">
+      <input>
+import re
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(search_o(['Hello', 'Good Morning!', 'hi']), ['Hello', 'Good Morning!'], "search_o(['Hello', 'Good Morning!', 'hi'])")
+        self.assertEqual(search_o(['Other', 'open', 'Petroleum']), ['open', 'Petroleum'], "search_o(['Other', 'open', 'Petroleum'])")
+        self.assertEqual(search_o(['hi', 'bye']), [], "search_o(['hi', 'bye'])")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="re_mixed4_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>match_word(word, str)</c> that returns True if the string <c>str</c> contains the word <c>word</c>, but not if it is part of another word.  For example, <c>match_word('is', "This was bad")</c> would return False and <c>match_word('is', "This is good")</c> would return True.</p>
+    </statement>
+    <blocks>
+      <block order="7">
+        <choice correct="yes">
+          <cline>import re</cline>
+        </choice>
+        <choice>
+          <cline>import regex </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>def match_word(word, str):</cline>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>    if re.search(r"\b" + word + r"\b", str):</cline>
+        </choice>
+        <choice>
+          <cline>    if re.search("\b" + word + "\b", str): </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <cline>        return True</cline>
+      </block>
+      <block order="2">
+        <cline>    else:</cline>
+      </block>
+      <block order="3">
+        <cline>        return False</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="re_mixed4_v2_ac">
+    <statement>
+      <p>Write a function called <c>match_word(word, str)</c> that returns True if the string <c>str</c> contains the word <c>word</c>, but not if it is part of another word.  For example, <c>match_word('is', "This was bad")</c> would return False and <c>match_word('is', "This is good")</c> would return True.</p>
+    </statement>
+    <program xml:id="re_mixed4_v2_ac_editor" interactive="activecode" language="python">
+      <input>
+import re
+
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(match_word('is','This was bad'),False,"match_word('is','This was bad')")
+        self.assertEqual(match_word('is','This is good'),True,"match_word('is','This is good')")
+        self.assertEqual(match_word('good','This is good'),True,"match_word('good','This is good')")
+        self.assertEqual(match_word('go','This is good'),False,"match_word('go','This is good')")
+        self.assertEqual(match_word('This','This is good'),True,"match_word('This','This is good')")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="re_mixed5_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>test_pattern</c> that takes in one string parameter, <c>sequence</c>, and uses regular expressions to see if <c>sequence</c> has the pattern
+            of at least one letter, number, or underscore, at least one space, and at least one letter, number, or underscore again. Return <c>"Match!"</c> if <c>sequence</c> matches the pattern, and
+            <c>"Not a match!"</c> otherwise. For example, <c>test_pattern('Sincerely1       Molly')</c> should return <c>"Match!"</c>.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>import re</cline>
+      </block>
+      <block order="2">
+        <cline>def test_pattern(sequence):</cline>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>    pattern = "\w+\s+\w+"</cline>
+        </choice>
+        <choice>
+          <cline>    pattern = "\w+\S+\w+" </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    if re.search(pattern, sequence):</cline>
+      </block>
+      <block order="3">
+        <cline>        return "Match!"</cline>
+      </block>
+      <block order="1">
+        <cline>    else:</cline>
+      </block>
+      <block order="8">
+        <cline>        return "Not a match!"</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="re_mixed5_ac">
+    <statement>
+      <p>Write a function called <c>test_pattern</c> that takes in one string parameter, <c>sequence</c>, and uses regular expressions to see if <c>sequence</c> has the pattern
+            of at least one letter, number, or underscore, at least one space, and at least one letter, number, or underscore again. Return <c>"Match!"</c> if <c>sequence</c> matches the pattern, and
+            <c>"Not a match!"</c> otherwise. For example, <c>test_pattern('Sincerely1       Molly')</c> should return <c>"Match!"</c>.</p>
+    </statement>
+    <program xml:id="re_mixed5_ac_editor" interactive="activecode" language="python">
+      <input>
+import re
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(test_pattern('Sincerely       Molly'), 'Match!', "test_pattern('Sincerely       Molly')")
+        self.assertEqual(test_pattern('Sincerely1       Molly'), 'Match!', "test_pattern('Sincerely1       Molly')")
+        self.assertEqual(test_pattern('Sincerely   Molly'), 'Match!', "test_pattern('Sincerely   Molly')")
+        self.assertEqual(test_pattern('1 M'), 'Match!', "test_pattern('1 M')")
+        self.assertEqual(test_pattern('1 1'), 'Match!', "test_pattern('1 1')")
+        self.assertEqual(test_pattern('S M'), 'Match!', "test_pattern('S M')")
+        self.assertEqual(test_pattern('1S 1M'), 'Match!', "test_pattern('1S 1M')")
+        self.assertEqual(test_pattern('_ M_9'), 'Match!', "test_pattern('_ M_9')")
+        self.assertEqual(test_pattern('SM'), 'Not a match!', "test_pattern('SM')")
+        self.assertEqual(test_pattern(' SM '),'Not a match!', "test_pattern(' SM ')")
+        self.assertEqual(test_pattern(' SM'), 'Not a match!', "test_pattern(' SM')")
+        self.assertEqual(test_pattern('S, M'), 'Not a match!', "test_pattern('S, M')")
+        self.assertEqual(test_pattern('SM '), 'Not a match!', "test_pattern('SM ')")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="re_mixed6_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>first_price</c> that takes in a parameter <c>string</c> and uses regular expressions to find and return the first price in
+            the <c>string</c> if there is one. A price must have at least one digit after a &#x2018;$' symbol and can optionally have a period followed by two digits.
+            If there isn't a price in the <c>string</c>, return <c>'No price'</c>. For example, <c>first_price('We just received $2098.10 for cookies and $209 for brownies.')</c>
+            should return <c>"$2098.10"</c>.</p>
+    </statement>
+    <blocks>
+      <block order="9">
+        <cline>import re</cline>
+      </block>
+      <block order="5">
+        <cline>def first_price(string):</cline>
+        <cline>    out = []</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    pattern = '\$\d+(?:\.\d{2})?'</cline>
+        </choice>
+        <choice>
+          <cline>    pattern = '$\d+(?:\.\d{2})?' </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>    out = re.findall(pattern,string)</cline>
+      </block>
+      <block order="7">
+        <cline>    if len(out) &gt; 0:</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>        return out[0]</cline>
+        </choice>
+        <choice>
+          <cline>        return out </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    else:</cline>
+      </block>
+      <block order="8">
+        <cline>        return 'No price'</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="re_mixed6_ac">
+    <statement>
+      <p>Write a function called <c>first_price</c> that takes in a parameter <c>string</c> and uses regular expressions to find and return the first price in
+            the <c>string</c> if there is one. A price must have at least one digit after a &#x2018;$' symbol and can optionally have a period followed by two digits.
+            If there isn't a price in the <c>string</c>, return <c>'No price'</c>. For example, <c>first_price('We just received $2098.10 for cookies and $209 for brownies.')</c>
+            should return <c>"$2098.10"</c>.</p>
+    </statement>
+    <program xml:id="re_mixed6_ac_editor" interactive="activecode" language="python">
+      <input>
+import re
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(first_price('We just received $10.00 for cookies.'), '$10.00', "first_price('We just received $10.00 for cookies.')")
+        self.assertEqual(first_price('We just received $2098.10 for cookies and $209 for brownies.'), '$2098.10', "first_price('We just received $2098.10 for cookies and $209 for brownies.')")
+        self.assertEqual(first_price('We just received $5.00 for cookies.'), '$5.00', "first_price('We just received $5.00 for cookies.')")
+        self.assertEqual(first_price('$5.35 for cookies'), '$5.35', "first_price('$5.35 for cookies')")
+        self.assertEqual(first_price('cookies for $5.05'), '$5.05', "first_price('cookies for $5.05')")
+        self.assertEqual(first_price('cookies for $5'), '$5', "first_price('cookies for $5')")
+        self.assertEqual(first_price('cookies'), 'No price', "first_price('cookies')")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="re_mixed7_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>search_email</c> that takes in a string parameter, <c>string</c>, and uses regular expressions to return
+            a list with all the emails in the string. The format for the email is at least one letter, number or underscore, the <q>@</q> symbol,
+            and the email domain (which includes a period). For example, <c>search_email('His email is pyth_on@umich.edu and her email is java@css.')</c> should return
+            <c>['pyth_on@umich.edu']</c>.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>import re</cline>
+      </block>
+      <block order="3">
+        <cline>def search_email(string):</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    return re.findall('\w+@\w+\.\w+', string)</cline>
+        </choice>
+        <choice>
+          <cline>    return re.findall('\S+@S+', string) </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="re_mixed7_ac">
+    <statement>
+      <p>Write a function called <c>search_email</c> that takes in a string parameter, <c>string</c>, and uses regular expressions to return
+            a list with all the emails in the string. The format for the email is at least one letter, number or underscore, the <q>@</q> symbol,
+            and the email domain (which includes a period). For example, <c>search_email('His email is pyth_on@umich.edu and her email is java@css.')</c> should return
+            <c>['pyth_on@umich.edu']</c>.</p>
+    </statement>
+    <program xml:id="re_mixed7_ac_editor" interactive="activecode" language="python">
+      <input>
+import re
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(search_email('python@umich.edu'), ['python@umich.edu'], "search_email('python@umich.edu')")
+        self.assertEqual(search_email('python@umich.edu, java@umich.edu'), ['python@umich.edu', 'java@umich.edu'], "search_email('python@umich.edu, java@umich.edu')")
+        self.assertEqual(search_email('His email is pyth_on@umich.edu and her email is java@css.'),['pyth_on@umich.edu'], "search_email('His email is pyth_on@umich.edu and her email is java@css.')")
+        self.assertEqual(search_email('His email is python@umich.edu and her email is jav12a@css.com.'), ['python@umich.edu', 'jav12a@css.com'], "search_email('His email is python@umich.edu and her email is jav12a@css.com.')")
+        self.assertEqual(search_email('python'), [], "search_email('python')")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="re_mixed8" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>start_from`</c> that takes in a list of strings, <c>lst</c>, and adds into a new list each item that starts
+            with <q>From:</q> and is followed by one or more characters and an <q>@</q> sign. For example, <c>start_from(['From: Kelly@umich.edu','From: Kelly@',': Kelly@'])</c>
+            should return <c>['From: Kelly@umich.edu', 'From: Kelly@']</c>.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <cline>import re</cline>
+      </block>
+      <block order="7">
+        <cline>def start_from(lst):</cline>
+      </block>
+      <block order="6">
+        <cline>    new_list = []</cline>
+      </block>
+      <block order="1">
+        <cline>    for item in lst:</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>        if re.search('^From:.+@', item):</cline>
+        </choice>
+        <choice>
+          <cline>        if re.search('^F..m:', item): </cline>
+        </choice>
+      </block>
+      <block order="8">
+        <cline>            new_list.append(item)</cline>
+      </block>
+      <block order="3">
+        <cline>    return new_list</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="re_mixed8_ac">
+    <statement>
+      <p>Write a function called <c>start_from`</c> that takes in a list of strings, <c>lst</c>, and adds into a new list each item that starts
+            with <q>From:</q> and is followed by one or more characters and an <q>@</q> sign. For example, <c>start_from(['From: Kelly@umich.edu','From: Kelly@',': Kelly@'])</c>
+            should return <c>['From: Kelly@umich.edu', 'From: Kelly@']</c>.</p>
+    </statement>
+    <program xml:id="re_mixed8_ac_editor" interactive="activecode" language="python">
+      <input>
+import re
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(start_from(['From: Kelly@umich.edu']), ['From: Kelly@umich.edu'], "start_from(['From: Kelly@umich.edu'])")
+        self.assertEqual(start_from(['From: Kelly@umich.edu','From: Kelly@',': Kelly@']), ['From: Kelly@umich.edu', 'From: Kelly@'], "start_from(['From: Kelly@umich.edu','From: Kelly@',': Kelly@'])")
+        self.assertEqual(start_from(['From: Kelly','From Kelly','rom Kelly']),[], "start_from(['From: Kelly','From Kelly','rom Kelly'])")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="re_mixed9_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>grab_domain</c> that takes in a list of strings, <c>lst</c>, as a parameter and returns a new list with the domains of the emails, if they exist.
+            For example, <c>grab_domain(['python@umich.edu','This is Kelly@umich.gov','123','java@css','jav12a@css.com'])</c> would return <c>['umich.edu', 'umich.gov', 'css.com']</c>.</p>
+    </statement>
+    <blocks>
+      <block order="7">
+        <cline>import re</cline>
+      </block>
+      <block order="3">
+        <cline>def grab_domain(lst):</cline>
+      </block>
+      <block order="4">
+        <cline>    out = []</cline>
+      </block>
+      <block order="5">
+        <cline>    for str in lst:</cline>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>        curr = re.findall('\w+@(\w+\.\w+)', str)</cline>
+        </choice>
+        <choice>
+          <cline>        curr = re.findall('\w+@(\w+)', str) </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>        out.extend(curr)</cline>
+        </choice>
+        <choice>
+          <cline>        out.append(curr) </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    return out</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="re_mixed9_ac">
+    <statement>
+      <p>Write a function called <c>grab_domain</c> that takes in a list of strings, <c>lst</c>, as a parameter and returns a new list with the domains of the emails, if they exist.
+            For example, <c>grab_domain(['python@umich.edu','This is Kelly@umich.gov','123','java@css','jav12a@css.com'])</c> would return <c>['umich.edu', 'umich.gov', 'css.com']</c>.</p>
+    </statement>
+    <program xml:id="re_mixed9_ac_editor" interactive="activecode" language="python">
+      <input>
+import re
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(grab_domain(['python@umich.edu','This is Kelly@umich.gov','123','java@css','jav12a@css.com']), ['umich.edu', 'umich.gov', 'css.com'], "grab_domain(['python@umich.edu','This is Kelly@umich.gov','123','java@css','jav12a@css.com'])")
+        self.assertEqual(grab_domain(['123','java@css']), [], "grab_domain(['123','java@css'])")
+        self.assertEqual(grab_domain(['123@google.com, be@facebook.com']), ['google.com', 'facebook.com'], "grab_domain(['123@google.com, be@facebook.com'])")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="re_mixed10_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>vowels_in_mid</c> that takes in one string parameter, <c>string</c>, and returns <c>string</c> if there is an area in the string
+            that contains two to four vowels, and it does not start nor end with a vowel. Otherwise, return <c>'Does not exist'</c>. For example, <c>vowels_in_mid('chEEEEEYYEErry')</c>
+            should return <c>'chEEEEEYYEErry'</c>.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>import re</cline>
+      </block>
+      <block order="8">
+        <cline>def vowels_in_mid(string):</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    p = "[^AEIOU]+[AEIOU]{2,4}[^AEIOU]+"</cline>
+        </choice>
+        <choice>
+          <cline>    p = ".+[AEIOU]{2,4}[^AEIOU]+$" </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>    if re.search(p, string):</cline>
+      </block>
+      <block order="6">
+        <cline>        return string</cline>
+      </block>
+      <block order="4">
+        <cline>    else:</cline>
+      </block>
+      <block order="3">
+        <cline>        return 'Does not exist'</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="re_mixed10_ac">
+    <statement>
+      <p>Write a function called <c>vowels_in_mid</c> that takes in one string parameter, <c>string</c>, and returns <c>string</c> if there is an area in the string
+            that contains two to four vowels, and it does not start nor end with a vowel. Otherwise, return <c>'Does not exist'</c>. For example, <c>vowels_in_mid('chEEEEEYYEErry')</c>
+            should return <c>'chEEEEEYYEErry'</c>.</p>
+    </statement>
+    <program xml:id="re_mixed10_ac_editor" interactive="activecode" language="python">
+      <input>
+import re
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(vowels_in_mid('chErry'), 'Does not exist', "vowels_in_mid('chErry')")
+        self.assertEqual(vowels_in_mid('chEErry'), 'chEErry', "vowels_in_mid('chEErry')")
+        self.assertEqual(vowels_in_mid('chEEErry'), 'chEEErry', "vowels_in_mid('chEEErry')")
+        self.assertEqual(vowels_in_mid('chEEEErry'), 'chEEEErry', "vowels_in_mid('chEEEErry')")
+        self.assertEqual(vowels_in_mid('chEEEEErry'), 'Does not exist', "vowels_in_mid('chEEEEErry')")
+        self.assertEqual(vowels_in_mid('chEEEEEYYEErry'), 'chEEEEEYYEErry', "vowels_in_mid('chEEEEEYYEErry')")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

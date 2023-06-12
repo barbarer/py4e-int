@@ -1,0 +1,510 @@
+<?xml version="1.0"?>
+<section xml:id="regex_group-work-more-regular-expressions-regex">
+  <title>Group Work: More Regular Expressions (Regex)</title>
+  <introduction>
+  <p>It is best to use a POGIL approach with the following. In POGIL students work
+            in groups on activities and each member has an assigned role.  For more information see <url href="https://cspogil.org/Home" visual="https://cspogil.org/Home">https://cspogil.org/Home</url>.</p>
+  <note>
+    <p>If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.</p>
+  </note>
+  <p>
+    <term>Learning Objectives</term>
+  </p>
+  <p>Students will know and be able to do the following.</p>
+  <p>
+    <em>Content Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Learn about using | as a logical <em>or</em></p>
+      </li>
+      <li>
+        <p>Learn about matching groups and non matching groups</p>
+      </li>
+      <li>
+        <p>Learn about anchor characters (^, $, and \b)</p>
+      </li>
+      <li>
+        <p>Learn about raw strings</p>
+      </li>
+      <li>
+        <p>Learn how to negate a character set</p>
+      </li>
+    </ul>
+  </p>
+</introduction>
+  <subsection xml:id="regex_using-a-logical-or">
+    <title>Using a logical <q>or</q></title>
+    <p>What if you want to match a month from 1 to 12 in MM/DD/YYYY? You can't use [1-12] since it matches a character at a time. You have to match either a digit from 1 to 9 or a 1 followed by 0, 1, or 2.
+                To use a logical <em>or</em> to match one of two expressions use <c>(left|right)</c>. This will match either the expression on the left or the one on the right.</p>
+    <exercise label="regex_logical_or">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="regex_logical_or_editor" interactive="activecode" language="python">
+        <input>
+import re
+str = "The dates were 9/11/2022, 10/15/2022, 11/20/2022, and 12/01/2022"
+
+# get the dates
+dates = re.findall("([1-9]|1[0-2])/\d{2}/\d{4}", str)
+print(dates)
+        </input>
+      </program>
+    </exercise>
+    <exercise label="regex_match_0_before_digit_on_month">
+      <statement>
+        <p>11-9-2: Sometimes dates have a leading zero if the month is from 1 to 9.  Which of the following would match that case as well but still match if there isn't a 0?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>"0([1-9]|1[0-2])/\d{2}/\d{4}"</p>
+          </statement>
+          <feedback>
+            <p>This would require a 0 before a 1-9</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>"0*([1-9]|1[0-2])/\d{2}/\d{4}"</p>
+          </statement>
+          <feedback>
+            <p>This would match 0 to many 0's</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>"0+([1-9]|1[0-2])/\d{2}/\d{4}"</p>
+          </statement>
+          <feedback>
+            <p>This would require at least one 0</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>"0?([1-9]|1[0-2])/\d{2}/\d{4}"</p>
+          </statement>
+          <feedback>
+            <p>This matches 0 to 1 0's</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+  <subsection xml:id="regex_specifying-what-to-extract-matching-groups">
+    <title>Specifying What to Extract - Matching Groups</title>
+    <p>There are times when you want to return just part of what was matched.</p>
+    <exercise label="regex_return_part_match_ac">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="regex_return_part_match_ac_editor" interactive="activecode" language="python">
+        <input>
+import re
+
+str1 = 'From: stephen.marquard@uct.ac.za Sat Jan walk@12  5 09:14:16 2008'
+
+res1 = re.findall('\S+@\S+', str1)
+print(res1)
+
+res2 = re.findall('^From: \S+@\S+', str1)
+print(res2)
+
+res3 = re.findall('^From: (\S+@\S+)', str1)
+print(res3)
+        </input>
+      </program>
+    </exercise>
+    <exercise label="regex_extract_symbols_fitb">
+      <statement>
+        <p>11-9-4: Which symbols are used to specify the part of the match to return? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="\(\)">
+            <feedback>
+              <p>Parenthesis are used to specify the part of the match to return.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Look at the code above.  What symbols were used to specify the part to return?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <note>
+      <p>Parentheses are used to define a capture group - only what is in the parentheses will be returned.</p>
+    </note>
+  </subsection>
+  <subsection xml:id="regex_specifying-what-to-extract-non-matching-groups">
+    <title>Specifying What to Extract - Non-Matching Groups</title>
+    <p>What if we need the parentheses because we are using a logical <em>or</em> but want the whole match to be returned?  We can add a <q>?:</q> after the first parenthesis to group items for the logical <em>or</em> but return the entire match.</p>
+    <exercise label="regex_logical_or_with_non_capture_group">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="regex_logical_or_with_non_capture_group_editor" interactive="activecode" language="python">
+        <input>
+import re
+str = "The dates were 9/11/2022, 10/15/2022, 11/20/2022, and 12/01/2022"
+
+# get the dates
+dates = re.findall("(?:[1-9]|1[0-2])/\d{2}/\d{4}", str)
+print(dates)
+        </input>
+      </program>
+    </exercise>
+    <p>Another approach is to enclose everything in a set of outer parentheses if you have any inner parentheses.</p>
+    <exercise label="regex_logical_or_with_outer_paren">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="regex_logical_or_with_outer_paren_editor" interactive="activecode" language="python">
+        <input>
+import re
+str = "The dates were 9/11/2022, 10/15/2022, 11/20/2022, and 12/01/2022"
+
+# try the search method
+matches = re.findall("(([1-9]|1[0-2])/\d{2}/\d{4})", str)
+print(matches)
+        </input>
+      </program>
+    </exercise>
+    <exercise label="regex_get_date_from_match">
+      <statement>
+        <p>11-9-7: Given the following code which of the following would you use to get the current date and add it to the list?</p>
+        <pre>import re
+str = "The dates were 9/11/2022, 10/15/2022, 11/20/2022, and 12/01/2022"
+
+# get the dates
+l = []
+matches = re.findall("(([1-9]|1[0-2])/\d{2}/\d{4})", str)
+for match in matches:
+    # line to get current date and add to the list</pre>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>l.append(match)</p>
+          </statement>
+          <feedback>
+            <p>This would add the tuple not the date</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>l.extend(match)</p>
+          </statement>
+          <feedback>
+            <p>Use extend to add two lists together</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>l.append(match[0])</p>
+          </statement>
+          <feedback>
+            <p>This will add the date to the list (the first element in the tuple)</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>l.extend(match[0])</p>
+          </statement>
+          <feedback>
+            <p>Use extend to add two lists together</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+  <subsection xml:id="regex_boundary-or-anchor-characters">
+    <title>Boundary or Anchor Characters</title>
+    <exercise label="regex_bound_caret">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="regex_bound_caret_editor" interactive="activecode" language="python">
+        <input>
+import re
+str = "From: aadarsh, From: carl, From: zihan"
+str2 = "A list: From: aadarsh, From: carl, From: zihan"
+
+# find matches
+matches = re.findall("^From: \w+",str)
+print(matches)
+
+# find matches
+matches = re.findall("^From: \w+",str2)
+print(matches)
+        </input>
+      </program>
+    </exercise>
+    <exercise label="regex_match_caret_mc">
+      <statement>
+        <p>11-9-9: What does the &#x2018;^' do?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>Return the first match that it finds.</p>
+          </statement>
+          <feedback>
+            <p>It does not do this.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>Return a match if it is at the beginning of the string.</p>
+          </statement>
+          <feedback>
+            <p>Correct.  It returns a match only if it is at the beginning of a string.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Return a match if it is at the end of the string.</p>
+          </statement>
+          <feedback>
+            <p>It does not do this, however any anchor character does.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Return a match if it is a whole word, not just part of a word.</p>
+          </statement>
+          <feedback>
+            <p>It does not do this.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="regex_bound_dollar">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="regex_bound_dollar_editor" interactive="activecode" language="python">
+        <input>
+import re
+str = "$32.99 42.29 24.42"
+
+# find matches
+matches = re.findall("\d+\.\d{2}$",str)
+print(matches)
+        </input>
+      </program>
+    </exercise>
+    <exercise label="regex_match_dollar_mc">
+      <statement>
+        <p>11-9-11: What does the &#x2018;$' do?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>Return the first match that it finds.</p>
+          </statement>
+          <feedback>
+            <p>It does not do this.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Return a match if it is at the beginning of the string.</p>
+          </statement>
+          <feedback>
+            <p>It does not do this, but the '^' does.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>Return a match if it is at the end of the string.</p>
+          </statement>
+          <feedback>
+            <p>Correct!  It matches only at the end of the string.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Return a match if it is a whole word, not just part of a word.</p>
+          </statement>
+          <feedback>
+            <p>It does not do this.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <note>
+      <p>Since &#x2018;$' is an anchor character if you want to match a &#x2018;$' use &#x2018;\$'.</p>
+    </note>
+    <exercise label="regex_word_boundary">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="regex_word_boundary_editor" interactive="activecode" language="python">
+        <input>
+import re
+str = "The rain in Spain falls on the plain."
+
+# find matches
+matches = re.findall(r"\bin\b",str)
+print(matches)
+        </input>
+      </program>
+    </exercise>
+    <exercise label="regex_match_slach_b_mc">
+      <statement>
+        <p>11-9-13: What does the &#x2018;\b' do?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>Return the first match that it finds.</p>
+          </statement>
+          <feedback>
+            <p>It does not do this.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Return a match if it is at the beginning of the string.</p>
+          </statement>
+          <feedback>
+            <p>It does not do this, but the '^' does.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Return a match if it is at the end of the string.</p>
+          </statement>
+          <feedback>
+            <p>It does not do this, but the '$' does.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>Return a match if it is a whole word, not just part of a word.</p>
+          </statement>
+          <feedback>
+            <p>Correct! It matches if it is a whole word, not just part of a word.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <note>
+      <p>Since &#x2018;\b' usually represents a backspace in a Python string you must use &#x2018;r' before the string to treat it as a raw string. You only need to add the r in front of the string if the expression has a &#x2018;\b' in it.</p>
+    </note>
+  </subsection>
+  <subsection xml:id="regex_negating-a-character-set">
+    <title>Negating a Character Set</title>
+    <p>You can negate a character set using the &#x2018;^' after the &#x2018;[&#x2018;.</p>
+    <exercise label="regex_negate_char_set">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="regex_negate_char_set_editor" interactive="activecode" language="python">
+        <input>
+import re
+
+def passwordChecker(str):
+
+    # find matches
+    result = re.search('[^a-zA-Z0-9]',str)
+    if result:
+        return False
+    else:
+        return True
+
+print(passwordChecker('Yhmah!23'))
+print(passwordChecker('123456'))
+print(passwordChecker('password'))
+print(passwordChecker('{hi}'))
+        </input>
+      </program>
+    </exercise>
+    <exercise label="regex_password_checker_mc">
+      <statement>
+        <p>11-9-15: Which of the following best describes when <c>passwordChecker</c> returns true?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>If the string has only uppercase and lowercase alphabetic characters.</p>
+          </statement>
+          <feedback>
+            <p>It also allows digits.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>If the string has only uppercase and lowercase alphabetic characters or numeric digits.</p>
+          </statement>
+          <feedback>
+            <p>Correct!  It returns true if the string only has alphabetic characters or numeric digits.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>If the string has only numeric digits.</p>
+          </statement>
+          <feedback>
+            <p>It also allows alpabetic characters.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>If the string has only uppercase and lowercase alphabetic characters, numeric digits, or special characters like '!{}[]'.</p>
+          </statement>
+          <feedback>
+            <p>It does not do this.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="regex_match_adv_symbols">
+      <statement>
+        <p>Drag each symbol to what it matches.</p>
+      </statement>
+      <feedback>
+        <p>Look at the code above.</p>
+      </feedback>
+      <matches>
+        <match order="1">
+          <premise>$</premise>
+          <response>Match only at the end of the string</response>
+        </match>
+        <match order="2">
+          <premise>^</premise>
+          <response>Match only at the beginning of the string</response>
+        </match>
+        <match order="3">
+          <premise>\b</premise>
+          <response>Match if a whole word (not part of a word)</response>
+        </match>
+        <match order="4">
+          <premise>[^]</premise>
+          <response>Match the opposite of the character set</response>
+        </match>
+      </matches>
+    </exercise>
+    <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share answers.</p>
+    <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+    &lt;div data-component="groupsub" id=regex_adv_groupsub data-size_limit=3&gt;
+        &lt;div class="col-sm-6"&gt;
+            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div id="groupsub_button" class="col-sm-6"&gt;
+        &lt;/div&gt;
+        &lt;p&gt;The Submit Group button will submit the answer for each each question
+        on this page for each member of your group. It also logs you as the official
+        group submitter.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  </subsection>
+</section>

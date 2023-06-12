@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<section xml:id="lists_lists-are-mutable">
+  <title>Lists are mutable</title>
+<idx><h>List</h><h>Element</h></idx>
+<idx><h>Element</h><h>List</h></idx>
+<idx>Access</idx>
+<idx>Index</idx>
+<idx><h>Bracket</h><h>Operator</h></idx>
+<idx><h>Operator</h><h>Bracket</h></idx>
+<idx>mutability</idx>
+<idx><h>Item</h><h>Assignment</h></idx>
+<idx><h>Assignment</h><h>Item</h></idx>
+<idx>IndexError</idx>
+<idx><h>IndexError</h><h>Exception</h></idx>
+<idx><h>Exception</h><h>IndexError</h></idx>
+<idx><h>List</h><h>Index</h></idx>
+<idx><h>Index</h><h>List</h></idx>
+<idx><h>List</h><h>Membership</h></idx>
+<idx><h>Membership</h><h>List</h></idx>
+<idx><h>Operator</h><h>In</h></idx>
+<idx><h>In</h><h>Operator</h></idx>
+  <p>The syntax for accessing the elements of a list is the same as for
+            accessing the characters of a string: the bracket operator. The
+            expression inside the brackets specifies the index. Remember that the
+            indices start at 0:</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; print(cheeses[0])
+Cheddar
+</input>
+  </program>
+  <p>Unlike strings, lists are mutable because you can change the order of
+            items in a list or reassign an item in a list. When the bracket operator
+            appears on the left side of an assignment, it identifies the element of
+            the list that will be assigned.</p>
+  <program xml:id="listReassign" interactive="codelens" language="python">
+    <input>
+numbers = [17, 123]
+numbers[1] = 5
+print(numbers)
+    </input>
+  </program>
+  <p>The one-th element of <c>numbers</c>, which used to be 123, is
+            now 5.</p>
+  <p>You can think of a list as a relationship between indices and elements.
+            This relationship is called a <em>mapping</em>; each index <q>maps
+            to</q> one of the elements.</p>
+  <p>List indices work the same way as string indices:</p>
+  <p>
+    <ul>
+      <li>
+        <p>Any integer expression can be used as an index.</p>
+      </li>
+      <li>
+        <p>If you try to read or write an element that does not exist, you get
+                    an <c>IndexError</c>.</p>
+      </li>
+      <li>
+        <p>If an index has a negative value, it counts backward from the end of
+                    the list.</p>
+      </li>
+    </ul>
+  </p>
+  <p>The <c>in</c> operator also works on lists.</p>
+  <program xml:id="listIn" interactive="activecode" language="python">
+    <input>
+cheeses = ['Cheddar', 'Edam', 'Gouda']
+print('Edam' in cheeses)
+print('Brie' in cheeses)
+        </input>
+  </program>
+  <exercise label="listMut_MC_alist">
+    <statement>
+      <p>Q-3: What is printed by the following statements?</p>
+      <pre>alist = [4, 2, 8, 6, 5]
+alist[2] = True
+print(alist)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>[4, 2, True, 8, 6, 5]</p>
+        </statement>
+        <feedback>
+          <p>Item assignment does not insert the new item into the list.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>[4, 2, True, 6, 5]</p>
+        </statement>
+        <feedback>
+          <p>Yes, the value True is placed in the list at index 2.  It replaces 8.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Error, it is illegal to assign</p>
+        </statement>
+        <feedback>
+          <p>Item assignment is allowed with lists.  Lists are mutable.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="listMut_MC_index">
+    <statement>
+      <p>Q-4: What would the following code print?</p>
+      <pre>values = [3, 2, 1]
+values[0] = values[1]
+values[2] = values[2] + 1
+print(values)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>[3, 2, 1]</p>
+        </statement>
+        <feedback>
+          <p>That is the original contents of <code>values</code>, but the contents are changed.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[2, 0, 2]</p>
+        </statement>
+        <feedback>
+          <p>When you set <code>values[0]</code> to <code>values[1]</code> it makes a copy of the value and doesn't zero it out.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>[2, 2, 2]</p>
+        </statement>
+        <feedback>
+          <p>The value at index 0 is set to a copy of the value at index 1 and the value at index 2 is incremented.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[2, 2, 1]</p>
+        </statement>
+        <feedback>
+          <p>Notice that we do change the value at index 2.  It is incremented by 1.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="listMut_MC_in">
+    <statement>
+      <p>Q-5: What is printed by the following statements?</p>
+      <pre>alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
+print(57 in alist)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>in returns True for top level items only.  57 is in a sublist.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>Yes, 57 is not a top level item in alist.  It is in a sublist.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

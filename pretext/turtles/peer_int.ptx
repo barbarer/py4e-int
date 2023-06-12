@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<section xml:id="turtles_peer-instruction-turtles-multiple-choice-questions">
+  <title>Peer Instruction: Turtles Multiple Choice Questions</title>
+  <exercise label="ctp-recursion-17_fractals_11">
+    <statement>
+      <p>csp-10-3-1: What is the base case to create a snowflake through a recursive function?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Draw nothing</p>
+        </statement>
+        <feedback>
+          <p>Try again. We need to draw something to start. And a flat line will be the base case in our recursive function.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Draw a line</p>
+        </statement>
+        <feedback>
+          <p>Correct! A flat line will be the base case in our recursive function.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Draw a triangle</p>
+        </statement>
+        <feedback>
+          <p>Try again. What does a triangle consist of? A flat line right?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Draw a line with a pointy bit</p>
+        </statement>
+        <feedback>
+          <p>Try again. No pointy bit is necessary here. A flat line will be the base case in our recursive function.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Try again. A flat line will be the base case in our recursive function.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-recursion-17_fractals_12">
+    <statement>
+      <p>csp-10-3-2: How long will my line be in of width?</p>
+      <image source="https://i.postimg.cc/XNhVrxCr/image8.png" width="50%"/>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1/3 w</p>
+        </statement>
+        <feedback>
+          <p>Try again. we trisect the flat line, and inserting into the middle portion two lines joined at an acute angle. The length of each of the new lines is 1/3 of the total length of order. Therefore, the rest of line should be 2/3 width.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1/2 w</p>
+        </statement>
+        <feedback>
+          <p>Try again. we trisect the flat line, and inserting into the middle portion two lines joined at an acute angle. The length of each of the new lines is 1/3 of the total length of order. Therefore, the rest of line should be 2/3 width.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>2/3 w</p>
+        </statement>
+        <feedback>
+          <p>Correct! The length of each of the new lines is 1/3 of the total length of order. Therefore, the rest of line should be 2/3 width.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>w</p>
+        </statement>
+        <feedback>
+          <p>Try again. we trisect the flat line, and inserting into the middle portion two lines joined at an acute angle. The length of each of the new lines is 1/3 of the total length of order. Therefore, the rest of line should be 2/3 width.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Try again. we trisect the flat line, and inserting into the middle portion two lines joined at an acute angle. The length of each of the new lines is 1/3 of the total length of order. Therefore, the rest of line should be 2/3 width.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-recursion-17_fractals_13">
+    <statement>
+      <p>csp-10-3-3: How many times will I call snowflake when I recur?</p>
+      <image source="https://i.postimg.cc/vHgZhCs7/image9.png" width="50%"/>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>Try again. The new pattern draws an equilateral triangle on each middle part of the original triangle. And each part of the original triantgle is split into 4 parts.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Try again. The new pattern draws an equilateral triangle on each middle part of the original triangle. And each part of the original triantgle is split into 4 parts.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>4</p>
+        </statement>
+        <feedback>
+          <p>Correct! Each part of the original triantgle is split into 4 parts.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>12</p>
+        </statement>
+        <feedback>
+          <p>Try again. The new pattern draws an equilateral triangle on each middle part of the original triangle. And each part of the original triantgle is split into 4 parts.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Try again. The new pattern draws an equilateral triangle on each middle part of the original triangle. And each part of the original triantgle is split into 4 parts.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-recursion-17_fractals_14">
+    <statement>
+      <p>csp-10-3-4: How long will each new segment be in terms of the original line?</p>
+      <image source="https://i.postimg.cc/vHgZhCs7/image9.png" width="50%"/>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1/6</p>
+        </statement>
+        <feedback>
+          <p>Try again. we trisect the flat line, and inserting into the middle portion two lines joined at an acute angle. The length of each of the new lines is 1/3 of the total length of order.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1/4</p>
+        </statement>
+        <feedback>
+          <p>Try again. we trisect the flat line, and inserting into the middle portion two lines joined at an acute angle. The length of each of the new lines is 1/3 of the total length of order.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>1/3</p>
+        </statement>
+        <feedback>
+          <p>Correct! The length of each of the new lines is 1/3 of the total length of order.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1/2</p>
+        </statement>
+        <feedback>
+          <p>Try again. we trisect the flat line, and inserting into the middle portion two lines joined at an acute angle. The length of each of the new lines is 1/3 of the total length of order.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Try again. we trisect the flat line, and inserting into the middle portion two lines joined at an acute angle. The length of each of the new lines is 1/3 of the total length of order.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-recursion-17_fractals_15">
+    <statement>
+      <p>csp-10-3-5: How much will I rotate?</p>
+      <image source="https://i.postimg.cc/vHgZhCs7/image9.png" width="50%"/>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>60, 60, 60</p>
+        </statement>
+        <feedback>
+          <p>Try again. The new pattern draws an equilateral triangle on each middle part of the original triangle. The angle of rotation is the angle or the supplementary angle of equilateral triangle.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>60, 30, 60</p>
+        </statement>
+        <feedback>
+          <p>Try again. The new pattern draws an equilateral triangle on each middle part of the original triangle. The angle of rotation is the angle or the supplementary angle of equilateral triangle.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>60, 240, 60</p>
+        </statement>
+        <feedback>
+          <p>Correct! The angle of rotation is the angle or the supplementary angle of equilateral triangle.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>120, 240, 120</p>
+        </statement>
+        <feedback>
+          <p>Try again. The new pattern draws an equilateral triangle on each middle part of the original triangle.The angle of rotation is the angle or the supplementary angle of equilateral triangle.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Try again. The new pattern draws an equilateral triangle on each middle part of the original triangle.The angle of rotation is the angle or the supplementary angle of equilateral triangle.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

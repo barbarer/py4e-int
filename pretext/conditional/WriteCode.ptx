@@ -1,0 +1,356 @@
+<?xml version="1.0"?>
+<exercises xml:id="conditional_write-code-questions">
+  <title>Write Code Questions</title>
+
+        <exercise>
+          <statement>
+            <p>Fix the errors in the code, and change it to use only <term>one</term> if statement. The code should print
+                            <q>The number is 5</q> when the number is 5, and should print <q>The number is NOT 5</q> when it is not.</p>
+          </statement>
+          <program interactive="activecode" language="python" xml:id="cndtnl-wc-fiveq_editor">
+            <input>
+x = 5
+if x == 5:
+print("The number is 5")
+if x != 5:
+print("The number is NOT 5")
+        </input>
+          </program>
+          <solution>
+
+
+    
+                        Fix the errors in the code, and change it to use only one if statement. The code should print
+                            <q>The number is 5</q> when the number is 5, and should print <q>The number is NOT 5</q> when it is not.
+
+    
+    <program xml:id="cndtnl-wc-fivea_editor" language="python"><input>
+# Initialize x and set condition for when x = 5
+x = 5
+if x == 5:
+    # Indent the body of if statement
+    print("The number is 5")
+# Use else for the secondary condition
+else:
+    # Indent the body of else statement
+    print("The number is NOT 5")
+        </input></program>
+                    </solution>
+        </exercise>
+
+        <exercise label="cndtnl-wc-hiq">
+          <statement>
+            <p>Complete the conditional below so the word <q>Hi</q> is printed if x does not
+                    equal 3 and <q>Hello</q> is printed otherwise.</p>
+          </statement>
+          <program xml:id="cndtnl-wc-hiq_editor" interactive="activecode" language="python">
+            <input>
+x = 4
+if x
+        </input>
+          </program>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>Complete the pay computation to give the employee 1.5 times the hourly rate for hours worked
+                            above 40 hours, if the regular pay rate is $10 an hour. Then set <c>grossPay</c> equal to the
+                            amount an employee would be paid for working 45 hours.</p>
+          </statement>
+          <program interactive="activecode" language="python" xml:id="cndtnl-wc-payq_editor">
+            <input>
+hours = 45
+rate = 10
+overtimeRate =  #your code here
+grossPay = 0
+if hours  #your code here
+    grossPay = hours * rate
+else:
+    overTime =  #your code here
+    grossPay =  #your code here
+print(grossPay)
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(grossPay, 475.0)
+
+myTests().main()
+        </input>
+          </program>
+          <solution>
+
+
+    
+                        Complete the pay computation to give the employee 1.5 times the hourly rate for hours worked
+                            above 40 hours, if the regular pay rate is $10 an hour. Then set grossPay equal to the
+                            amount an employee would be paid for working 45 hours.
+
+    
+    <program xml:id="cndtnl-wc-paya_editor" language="python"><input>
+# Initializing variables
+hours = 45
+rate = 10
+# overtimeRate is 1.5 the rate amount
+overtimeRate = rate * 1.5
+grossPay = 0
+# Begin conditional to see if hours are within regular pay
+if hours &lt;= 40:
+    #if within 40 hours, pay will be hours * rate
+    grossPay = hours * rate
+# Else statement for when hours are greater than 40
+else:
+    # Create variable for overtime hours
+    overTime = hours % 40
+    # Pay will equal the regular rate for 40 hours,
+    # plus the overtime rate for the extra hours
+    grossPay = (rate * 40) + (overTime * overtimeRate)
+# Print the final pay
+print(grossPay)
+        </input></program>
+
+                    
+
+
+                    </solution>
+        </exercise>
+
+        <exercise label="cndtnl-wc-pay2q">
+          <statement>
+            <p>Rewrite your pay program using <c>try</c> and <c>except</c> so that your program handles non-numeric
+                    input gracefully by printing a message and exiting the program. The following shows two
+                    executions of the program:</p>
+            <pre>Enter Hours: 20
+Enter Rate: nine
+Error, please enter numeric input</pre>
+            <pre>Enter Hours: forty
+Error, please enter numeric input</pre>
+          </statement>
+          <program xml:id="cndtnl-wc-pay2q_editor" interactive="activecode" language="python">
+            <input>
+
+        </input>
+          </program>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>Write the code to calculate and print the cost of a 14 mile cab ride. If the distance traveled
+                            is less than or equal to 12 miles the cost is $2.00 a mile, and if the distance traveled is more
+                            than 12 miles the cost is $1.50 a mile. Assign the final cost to the variable <c>total</c>.</p>
+          </statement>
+          <program interactive="activecode" language="python" xml:id="cndtnl-wc-distanceq_editor">
+            <input>
+distance = 14
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(total, 21.0)
+
+myTests().main()
+        </input>
+          </program>
+          <solution>
+
+
+    
+                        Write the code to calculate and print the cost of a 14 mile cab ride. If the distance traveled
+                            is less than or equal to 12 miles the cost is $2.00 a mile, and if the distance traveled is more
+                            than 12 miles the cost is $1.50 a mile. Assign the final cost to the variable total.
+
+    
+    <program xml:id="cndtnl-wc-distancea_editor" language="python"><input>
+# distance variable given
+distance = 14
+# Set conditions
+if distance &lt;= 12:
+    # rate will be 2 if the distance is less than or equal to 12
+    rate = 2.00
+if distance &gt; 12:
+    # rate will be 1.5 if the distance is greater than 12
+    rate = 1.50
+# Calculate trip cost
+total = distance * rate
+# Print final statement
+print("Total cost of trip: " + str(total))
+        </input></program>
+                    </solution>
+        </exercise>
+
+        <exercise label="cndtnl-wc-scoreq">
+          <statement>
+            <p>Write a program to prompt for a score between 0.0 and 1.0. If the score is out of range,
+                    print an error message. If the score is between 0.0 and 1.0, print a grade using the
+                    following table:</p>
+            <pre> Score   Grade
+&gt;= 0.9     A
+&gt;= 0.8     B
+&gt;= 0.7     C
+&gt;= 0.6     D
+ &lt; 0.6     F</pre>
+            <pre>Enter score: 0.95
+A</pre>
+          </statement>
+          <program xml:id="cndtnl-wc-scoreq_editor" interactive="activecode" language="python">
+            <input>
+
+        </input>
+          </program>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>Fix the example such that the cost of frozen yogurt is 0 if you pour exactly 1 lb. in your cup.</p>
+          </statement>
+          <program interactive="activecode" language="python" xml:id="cndtnl-wc-weightq_editor">
+            <input>
+weight = 0.5
+if weight &lt; 1:
+    price = 1.45
+if weight &gt; 1:
+    price = 1.15
+total = weight * price
+print(weight)
+print(price)
+print(total)
+        </input>
+          </program>
+          <solution>
+
+
+    
+                        Fix the example such that the cost of frozen yogurt is 0 if you pour exactly 1 lb. in your cup.
+
+    
+    <program xml:id="cndtnl-wc-weighta_editor" language="python"><input>
+# Initial weight is given
+weight = 0.5
+# Set conditionals
+if weight &lt; 1:
+    # Set price to 1.45 when weight is less than 1
+    price = 1.45
+# Create condition for when weight is 1
+if weight == 1:
+    # Set price to 0 when weight is 1
+    price = 0
+if weight &gt; 1:
+    # Set price to 1.15 when weight is greater than 1
+    price = 1.15
+# calculate total using newly assigned variables
+total = weight * price
+# Print variables
+print(weight)
+print(price)
+print(total)
+        </input></program>
+
+ 
+                    </solution>
+        </exercise>
+
+        <exercise label="cndtnl-wc-walletq">
+          <statement>
+            <p>Write a procedure that takes 2 ints, total price, and amount in wallet. Print <q>You have enough
+                    money</q> if the difference between the wallet and price is 0 or greater; otherwise,
+                    print <q>Get more money</q>.</p>
+          </statement>
+          <program xml:id="cndtnl-wc-walletq_editor" interactive="activecode" language="python">
+            <input>
+
+        </input>
+          </program>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>3 criteria must be taken into account to identify leap years:</p>
+            <p>
+              <ul>
+                <li>
+                  <p>The year is evenly divisible by 4;</p>
+                </li>
+                <li>
+                  <p>If the year can be evenly divided by 100, it is NOT a leap year, unless;</p>
+                </li>
+                <li>
+                  <p>The year is also evenly divisible by 400. Then it is a leap year.</p>
+                </li>
+              </ul>
+            </p>
+            <p>Write a program that takes a year as a parameter and sets <c>leapYear</c> equal to <c>True</c> if the year is a
+                            leap year, <c>False</c> otherwise. (use a few different years to test your work)</p>
+          </statement>
+          <program interactive="activecode" language="python" xml:id="cndtnl-wc-leapYearq_editor">
+            <input>
+
+        </input>
+          </program>
+          <solution>
+
+
+    
+                        3 criteria must be taken into account to identify leap years:
+                        
+                            
+                                The year is evenly divisible by 4;
+                            
+                            
+                                If the year can be evenly divided by 100, it is NOT a leap year, unless;
+                            
+                            
+                                The year is also evenly divisible by 400. Then it is a leap year.
+                            
+                        
+                        Write a program that takes a year as a parameter and sets leapYear equal to True if the year is a
+                            leap year, False otherwise. (use a few different years to test your work)
+
+    
+    <program xml:id="cndtnl-wc-leapYeara_editor" language="python"><input>
+year = 1900 #TEST WITH ANY YEAR
+# Initializing leapYear to False since most years are not leap years
+leapYear = False
+
+# Use modulus to see if the year is divisible by 4
+if year % 4 == 0:
+    # If divisible by 4, use modulus to see if divisible by 100
+    if year % 100 == 0:
+        # if divisible by 4 and 100, use modulus to see if divisible by 400
+        if year % 400 == 0:
+            # if divisible by 4, 100, and 400 it is a leap year
+            leapYear = True
+    else: # if divisible by 4 and not 100 it is a leap year
+        leapYear = True
+print(leapYear)
+''' Since leapYear started as False, we do not need to reset it to False
+    for the instances that the year is not a leap year '''
+
+# ANOTHER OPTION
+year = 1900
+leapYear = False
+if year % 400 == 0:
+    leapYear = True
+elif year % 4 == 0 and year % 100 != 0:
+    leapYear = True
+print(leapYear)
+        </input></program>
+                    </solution>
+        </exercise>
+
+        <exercise label="cndtnl-wc-evenq">
+          <statement>
+            <p>Finish the following code. It first sets <c>n</c> to a number input by a user.  Convert the number from a string to an integer and set <c>result</c> to <c>True</c> if the
+                    number is an <term>even number</term> (evenly divisible by two) and <c>False</c> if it is <term>odd</term>. Note: use the modulo operator.</p>
+          </statement>
+          <program xml:id="cndtnl-wc-evenq_editor" interactive="activecode" language="python">
+            <input>
+n = input("Enter a number")
+        </input>
+          </program>
+        </exercise>
+
+</exercises>

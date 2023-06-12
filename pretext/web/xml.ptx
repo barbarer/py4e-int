@@ -1,0 +1,465 @@
+<?xml version="1.0"?>
+<exercises xml:id="web_extensible-markup-language-xml">
+  <title>eXtensible Markup Language - XML</title>
+  <introduction>
+<idx>XML</idx>
+  <p>XML is a mark-up language.  HTML is also a mark-up language.
+            XML looks very similar to HTML, but it is different from XML.</p>
+  <p>Some of the differences between XML and HTML are:</p>
+  <p>
+    <ul>
+      <li>
+        <p>XML is used to store and transport data, not to create web pages like HTML.</p>
+      </li>
+      <li>
+        <p>XML tags are not predefined, but HTML tags are.</p>
+      </li>
+      <li>
+        <p>XML can be extended (you can add new tags). You can not add new tags to HTML.</p>
+      </li>
+    </ul>
+  </p>
+  <p>For more information on XML see <url href="https://www.w3schools.com/xml/default.asp" visual="https://www.w3schools.com/xml/default.asp">https://www.w3schools.com/xml/default.asp</url>.</p>
+  <p>Here is a sample of an XML document:</p>
+  <program language="{.xml}">
+    <input>
+&lt;person&gt;
+  &lt;name&gt;Chuck&lt;/name&gt;
+  &lt;phone type="intl"&gt;
+    +1 734 303 4456
+  &lt;/phone&gt;
+  &lt;email hide="yes" /&gt;
+&lt;/person&gt;
+</input>
+  </program>
+  <p>Each pair of opening (e.g., <c>&lt;person&gt;</c>) and closing tags
+            (e.g., <c>&lt;\person&gt;</c>) represents a <em>element</em> or <em>node</em> with the same
+            name as the tag (e.g., <c>person</c>). Each element can have some text,
+            some attributes (e.g., <c>hide</c>), and other nested elements. If an XML
+            element is empty (i.e., has no content), then it may be depicted by
+            a self-closing tag (e.g., <c>&lt;email /&gt;</c>).</p>
+  <exercise label="webXML_MC_tags">
+    <statement>
+      <p>csp-10-2-1: In XML, a pair of opening and closing tags (&lt;&gt; and &lt;\&gt;) represent what? Select all that apply.</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>element</p>
+        </statement>
+        <feedback>
+          <p>A pair of tags in XML can represent an element.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>string</p>
+        </statement>
+        <feedback>
+          <p>A pair of tags in XML does not represent a string.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>node</p>
+        </statement>
+        <feedback>
+          <p>A pair of tags in XML can represent a node.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>method</p>
+        </statement>
+        <feedback>
+          <p>A pair of tags in XML does not represent methods.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>Often it is helpful to think of an XML document as a tree structure
+            where there is a top/root element (here: <c>person</c>), and other tags (e.g.,
+            <c>phone</c>) are drawn as <em>children</em> of their <em>parent</em> elements.</p>
+  <figure align="">
+    <image source="images/xmlTree-fixed.png" width="50%" alt="A Tree Representation of XML"/>
+  </figure>
+  <exercise label="webXML_email_sibling_tag">
+    <statement>
+      <p>csp-10-2-2: What are the sibling tags of the email tag?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>person</p>
+        </statement>
+        <feedback>
+          <p>The person tag is the parent tag of the email tag.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>name</p>
+        </statement>
+        <feedback>
+          <p>The name tag is a sibling of the email tag.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>phone</p>
+        </statement>
+        <feedback>
+          <p>The phone tag is a sibling of the email tag.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>hide</p>
+        </statement>
+        <feedback>
+          <p>The hide is an attribute name of the email tag.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="xml_person_self_closing_tags_clicka">
+    <statement>
+      <p>Click on all of the self-closing tags in the XML below.</p>
+    </statement>
+    <feedback>
+      <p>The self-closing tags look like <tag/></p>
+    </feedback>
+    <areas>
+      <cline><area>&lt;person&gt;</area>:</cline>
+      <cline><area>&lt;name&gt;</area>:Chuck<area>&lt;/name&gt;</area>:</cline>
+      <cline><area>&lt;phone type="intl"&gt;</area>:</cline>
+      <cline>    +1 734 303 4456</cline>
+      <cline><area>&lt;/phone&gt;</area>:</cline>
+      <cline><area correct="yes">&lt;email hide="yes" /&gt;</area>:</cline>
+      <cline><area>&lt;/person&gt;</area>:</cline>
+    </areas>
+  </exercise>
+  <exercise label="xml_food_tag_text_clicka">
+    <statement>
+      <p>Click on all of the text in the XML tags below.</p>
+    </statement>
+    <feedback>
+      <p>The text is between the start tag <tag> and end tag </tag></p>
+    </feedback>
+    <areas>
+      <cline><area>&lt;food&gt;</area>:</cline>
+      <cline><area>&lt;name&gt;</area>:<area correct="yes">French Toast</area>:<area>&lt;/name&gt;</area>:</cline>
+      <cline><area>&lt;price&gt;</area>:<area correct="yes">$4.50</area>:<area>&lt;/price&gt;</area>:</cline>
+      <cline><area>&lt;description&gt;</area>:</cline>
+      <cline><area correct="yes">Thick slices made from our homemade sourdough bread</area>:</cline>
+      <cline><area>&lt;/description&gt;</area>:</cline>
+      <cline><area>&lt;calories&gt;</area>:<area correct="yes">600</area>:<area>&lt;/calories&gt;</area>:</cline>
+      <cline><area>&lt;/food&gt;</area>:</cline>
+    </areas>
+  </exercise>
+  <exercise label="xml_person_attributes_clicka">
+    <statement>
+      <p>Click on all of the attribute names in the XML below.</p>
+    </statement>
+    <feedback>
+      <p>Attributes look like name="value" and are defined in the open tags.</p>
+    </feedback>
+    <areas>
+      <cline><area>&lt;person&gt;</area>:</cline>
+      <cline><area>&lt;name&gt;</area>:Chuck<area>&lt;/name&gt;</area></cline>
+      <cline><area>&lt;phone</area><area correct="yes">type</area>=<area>"intl" &gt;</area></cline>
+      <cline>    +1 734 303 4456</cline>
+      <cline>
+        <area>&lt;/phone&gt;</area>
+      </cline>
+      <cline><area>&lt;email </area><area correct="yes">hide</area> =<area>"yes" /&gt;</area></cline>
+      <cline>
+        <area>&lt;/person&gt;</area>
+      </cline>
+    </areas>
+  </exercise>
+</introduction>
+  <subexercises xml:id="web_properly-formatted-xml">
+    <title>Properly Formatted XML</title>
+    <p>Solve the next couple of problems and think about what are the rules for properly formatted XML.</p>
+    <exercise label="xml_note_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+      <statement>
+        <p>Put the blocks into order to define just the body of simple XML document that defines a note. A note has a date, subject, and a body in that order. Indent the blocks to show the structure (parent and child).</p>
+      </statement>
+      <blocks>
+        <block order="2">
+          <cline>&lt;note&gt;</cline>
+        </block>
+        <block order="5">
+          <cline>    &lt;date&gt;05/16/2022&lt;/date&gt;</cline>
+        </block>
+        <block order="3">
+          <choice correct="yes">
+            <cline>    &lt;subject&gt;After work&lt;/subject&gt;</cline>
+          </choice>
+          <choice>
+            <cline>    &lt;subject&gt;After work&lt;/Subject&gt; </cline>
+          </choice>
+        </block>
+        <block order="6">
+          <choice correct="yes">
+            <cline>    &lt;body&gt;Pick up milk.&lt;/body&gt;</cline>
+          </choice>
+          <choice>
+            <cline>    &lt;/body&gt;Pick up milk.&lt;body&gt; </cline>
+          </choice>
+        </block>
+        <block order="4">
+          <choice correct="yes">
+            <cline>&lt;/note&gt;</cline>
+          </choice>
+          <choice>
+            <cline>&lt;note\&gt; </cline>
+          </choice>
+        </block>
+      </blocks>
+    </exercise>
+    <exercise label="xml_message_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+      <statement>
+        <p>Put the blocks into order to define just the body of simple XML document that stores information for a message: to, from, time, subject, and body in that order.  Indent the blocks to show the structure (parent and child).</p>
+      </statement>
+      <blocks>
+        <block order="2">
+          <cline>&lt;message&gt;</cline>
+        </block>
+        <block order="10">
+          <choice correct="yes">
+            <cline>    &lt;to&gt;Jamal&lt;/to&gt;</cline>
+          </choice>
+          <choice>
+            <cline>    &lt;To&gt;Jamal&lt;/to&gt; </cline>
+          </choice>
+        </block>
+        <block order="8">
+          <cline>    &lt;from&gt;Ali&lt;/from&gt;</cline>
+        </block>
+        <block order="3">
+          <choice correct="yes">
+            <cline>    &lt;time region="EST"&gt;09:00:03&lt;/time&gt;</cline>
+          </choice>
+          <choice>
+            <cline>    &lt;time region=EST&gt;09:00:03&lt;/time&gt; </cline>
+          </choice>
+        </block>
+        <block order="5">
+          <choice correct="yes">
+            <cline>    &lt;subject&gt;Meeting today?&lt;/subject&gt;</cline>
+          </choice>
+          <choice>
+            <cline>    &lt;subject&gt;Meeting today? </cline>
+          </choice>
+        </block>
+        <block order="6">
+          <cline>    &lt;body&gt;Meet today at 2:00pm?&lt;/body&gt;</cline>
+        </block>
+        <block order="1">
+          <cline>&lt;/message&gt;</cline>
+        </block>
+      </blocks>
+    </exercise>
+    <exercise label="webXML_proper_format">
+      <statement>
+        <p>csp-10-2-8: Select all of the following that are true about XML.</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>There must be a root tag</p>
+          </statement>
+          <feedback>
+            <p>Correct!  There must be a root tag.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>The case of tags doesn't matter</p>
+          </statement>
+          <feedback>
+            <p>Incorrect. Case matters.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>All elements must be closed</p>
+          </statement>
+          <feedback>
+            <p>Correct! All elements must be closed.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>Attribute values must be in quotes</p>
+          </statement>
+          <feedback>
+            <p>Correct! Attribute values must be in quotes.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="xml_book_end_tags_clicka">
+      <statement>
+        <p>Click on all of the end tags in the XML below.</p>
+      </statement>
+      <feedback>
+        <p>The end tags look like &lt;/tag&gt; and have a corresponding start tag &lt;tag&gt;</p>
+      </feedback>
+      <areas>
+        <cline><area>&lt;bookstore&gt;</area>:</cline>
+        <cline>
+          <area>&lt;book&gt;category="cooking"&gt;</area>
+        </cline>
+        <cline><area>&lt;title lang="en"&gt;</area>:Everyday Italian<area correct="yes">&lt;/title&gt;</area></cline>
+        <cline><area>&lt;author&gt;</area>:Giada De Laurentiis<area correct="yes">&lt;/author&gt;</area></cline>
+        <cline><area>&lt;year&gt;</area>:2005<area correct="yes">&lt;/year&gt;</area></cline>
+        <cline><area>&lt;price&gt;</area>:30.00<area correct="yes">&lt;/price&gt;</area></cline>
+        <cline>
+          <area correct="yes">&lt;/book&gt;</area>
+        </cline>
+        <cline/>
+        <cline>
+          <area>&lt;book category="children"&gt;</area>
+        </cline>
+        <cline><area>&lt;title lang="en"&gt;</area>:Harry Potter<area correct="yes">&lt;/title&gt;</area></cline>
+        <cline><area>&lt;author&gt;</area>:J. K. Rowling<area correct="yes">&lt;/author&gt;</area></cline>
+        <cline><area>&lt;year&gt;</area>:2005<area correct="yes">&lt;/year&gt;</area></cline>
+        <cline><area>&lt;price&gt;</area>:29.99<area correct="yes">&lt;/price&gt;</area></cline>
+        <cline>
+          <area correct="yes">&lt;/book&gt;</area>
+        </cline>
+        <cline>
+          <area correct="yes">&lt;/bookstore&gt;</area>
+        </cline>
+      </areas>
+    </exercise>
+    <exercise label="webXML_child_tag_bookstore">
+      <statement>
+        <p>csp-10-2-10: Select the child tag of the bookstore tag.</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>title</p>
+          </statement>
+          <feedback>
+            <p>The title tag is a grandchild of the bookstore tag.  It is the child of the book tag.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>author</p>
+          </statement>
+          <feedback>
+            <p>The author tag is a grandchild of the bookstore tag.  It is the child of the book tag.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>year</p>
+          </statement>
+          <feedback>
+            <p>The year tag is a grandchild of the bookstore tag.  It is the child of the book tag.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>book</p>
+          </statement>
+          <feedback>
+            <p>Correct!  The book tag is a child tag of the bookstore tag.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="webXML_bookstore_attr_names">
+      <statement>
+        <p>csp-10-2-11: Select all of the attribute values in the example XML for a bookstore.</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>category</p>
+          </statement>
+          <feedback>
+            <p>No, category is the attribute name.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>children</p>
+          </statement>
+          <feedback>
+            <p>Correct, "children" is a value of the category attribute.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>lang</p>
+          </statement>
+          <feedback>
+            <p>No, lang is the attribute name.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>en</p>
+          </statement>
+          <feedback>
+            <p>Correct, "en" is a value for the lang attribute.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="webXML_MC_tf">
+      <statement>
+        <p>csp-10-2-12: Select all of the following that are true.</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>An element in XML that is empty (does not have content) can use self-closing tags.</p>
+          </statement>
+          <feedback>
+            <p>Correct! An element in XML that is empty (does not have content) can use self-closing tags.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>Nodes in XML can have parent and children nodes.</p>
+          </statement>
+          <feedback>
+            <p>Correct! Nodes in XML can have parent and children nodes.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>XML has predefined (standard) tags.</p>
+          </statement>
+          <feedback>
+            <p>Incorrect.  HTML has predefined (standard) tags but XML does not.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>XML has opening and closing tags like HTML.</p>
+          </statement>
+          <feedback>
+            <p>Correct! XML does have opening and closing tags like HTML.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>XML is the standard language for describing web pages.</p>
+          </statement>
+          <feedback>
+            <p>Incorrect.  HTML is the standard language for describing web pages.  XML is used to describe data.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subexercises>
+</exercises>

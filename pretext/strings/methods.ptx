@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+<section xml:id="strings_string-methods">
+  <title>String methods</title>
+<idx><h>String</h><h>Method</h></idx>
+<idx><h>Method</h><h>String</h></idx>
+<idx><h>Dot</h><h>Notation</h></idx>
+<idx><h>Notation</h><h>Dot</h></idx>
+<idx><h>Parentheses</h><h>Empty</h></idx>
+<idx><h>Empty</h><h>Parentheses</h></idx>
+<idx>Invocation</idx>
+<idx><h>Optional</h><h>Argument</h></idx>
+<idx><h>Argument</h><h>Optional</h></idx>
+<idx><h>Count</h><h>Method</h></idx>
+<idx><h>Method</h><h>Count</h></idx>
+  <p>Strings are an example of Python <em>objects</em>. An object
+            contains both data (the actual string itself) and
+            <em>methods</em>, which are effectively functions that are built
+            into the object and are available to any <em>instance</em> of
+            the object.</p>
+  <p>Python has a function called <c>dir</c> which lists all the methods
+            available for an object. The <c>type</c> function returns the type
+            of an object.</p>
+  <program xml:id="str-methods" interactive="activecode" language="python">
+    <input>
+stuff = 'Hello world'
+print(type(stuff))
+print(dir(stuff))
+        </input>
+  </program>
+  <p>While the <c>dir</c> function lists the methods, and you can use
+            <c>help</c> to get some simple documentation on a method, a better
+            source of documentation for string methods would be
+            <url href="https://docs.python.org/library/stdtypes.html#string-methods" visual="https://docs.python.org/library/stdtypes.html#string-methods">https://docs.python.org/library/stdtypes.html#string-methods</url>.</p>
+  <program language="Python">
+    <input>
+&gt;&gt;&gt; help(str.capitalize)
+Help on method_descriptor:
+
+capitalize(...)
+    S.capitalize() -&gt; str
+
+    Return a capitalized version of S, i.e. make the first character
+    have upper case and the rest lower case.
+&gt;&gt;&gt;
+</input>
+  </program>
+  <exercise label="str-method-mc-dir">
+    <statement>
+      <p>11-9-2: What function lists the methods available for an object?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>dir()</p>
+        </statement>
+        <feedback>
+          <p>Correct! dir() will list all the methods that can be used with an object.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>print()</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! print() prints whatever is within the parentheses. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>type()</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! type() returns the type of the object within its parentheses. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>object()</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! object() returns a new featureless object. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>Calling a <em>method</em> is similar to calling a function (it
+            takes arguments and returns a value), but the syntax is different. We call
+            a method by typing the variable name, adding a period, and then adding the
+            method call.</p>
+  <p>For example, the method <c>upper</c> takes a string and returns a
+            new string with all uppercase letters. Instead of the function
+            syntax, <c>upper(word)</c>, it uses the method syntax, <c>word.upper()</c>.</p>
+  <program xml:id="str-methodUpper" interactive="activecode" language="python">
+    <input>
+word = 'banana'
+new_word = word.upper()
+print(new_word)
+        </input>
+  </program>
+  <p>This form of dot notation specifies the name of the method,
+            <c>upper</c>, and the name of the string to apply the method to,
+            <c>word</c>. The empty parentheses indicate that this method takes
+            no argument.</p>
+  <p>A method call is called an <em>invocation</em>; in this case, we
+            would say that we are invoking <c>upper</c> on the
+            <c>word</c>.</p>
+  <p>For example, there is a string method named <c>find</c> that
+            searches for the position of one string within another:</p>
+  <program xml:id="str-methodFind" interactive="activecode" language="python">
+    <input>
+word = 'banana'
+index = word.find('a')
+print(index)
+        </input>
+  </program>
+  <p>In this example, we invoke <c>find</c> on <c>word</c> and
+            pass the letter we are looking for as a parameter.</p>
+  <p>The <c>find</c> method can find substrings as well as characters:</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; word.find('na')
+2
+</input>
+  </program>
+  <p>It can also take as a second argument the index where it should start looking:</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; word.find('na', 3)
+4
+</input>
+  </program>
+  <p>One common task is to remove white space (spaces, tabs, or newlines)
+            from the beginning and end of a string using the <c>strip</c>
+            method:</p>
+  <program xml:id="str-stripMethod" interactive="activecode" language="python">
+    <input>
+line = '  Here we go  '
+print(line.strip())
+        </input>
+  </program>
+  <p>Some methods, such as <c>startswith</c>, return boolean values:</p>
+  <program xml:id="str-startswith" interactive="activecode" language="python">
+    <input>
+line = 'Have a nice day'
+print(line.startswith('Have'))
+print(line.startswith('h'))
+        </input>
+  </program>
+  <p>You will note that <c>startswith</c> requires case to match, so
+            sometimes we'll convert a line to lowercase using the <c>lower</c>
+            method before we do any checking:</p>
+  <program xml:id="str-methodStartsWith" interactive="activecode" language="python">
+    <input>
+line = 'Have a nice day'
+line.startswith('h')
+
+print(line.lower())
+
+print(line.lower().startswith('h'))
+        </input>
+  </program>
+  <p>In the last example, the method <c>lower</c> is called. Then, we
+            use <c>startswith</c> to see if the resulting lowercase string
+            starts with the letter <q>h</q>. As long as we are careful with the order, we
+            can make multiple method calls in a single expression.</p>
+  <exercise>
+    <statement/>
+    <program interactive="" language=""/>
+  </exercise>
+  <exercise label="str-method-mc-cheer">
+    <statement>
+      <p>11-9-9: What is printed by the following statements?</p>
+      <program language="python">
+        <input>
+s = "let's go blue!"
+print(s.count("e") + s.count("b"))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>0</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Both 'e' and 'b' are present in the string. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! There is only one 'b', but there are multiple e's as well. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>2</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! There are two e's, but there is a 'b' as well. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Correct! There are two e's and one b, so added together, this will print "3".</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="str-method-dnd-use">
+    <statement>
+      <p>Match these common string methods with their function. Hint: many of the names of these methods are hints to what they do!</p>
+    </statement>
+    <feedback>
+      <p>If you need help, try looking online for the effects of these methods.</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>capitalize()</premise>
+        <response>Returns a copy of a string with its first character capitalized and the rest lowercased.</response>
+      </match>
+      <match order="2">
+        <premise>count()</premise>
+        <response>Returns the number of non-overlapping occurrences of a substring in the range [start, end].</response>
+      </match>
+      <match order="3">
+        <premise>endswith()</premise>
+        <response>Returns True if a string ends with the specified suffix. Otherwise, it returns False.</response>
+      </match>
+      <match order="4">
+        <premise>find()</premise>
+        <response>Returns the lowest index in a string where a substring is found. An optional parameter restricts the search to a slice of the string.</response>
+      </match>
+      <match order="5">
+        <premise>strip()</premise>
+        <response>Returns a copy of a string with the leading and trailing whitespace characters removed.</response>
+      </match>
+      <match order="6">
+        <premise>upper()</premise>
+        <response>Returns a copy of a string with all characters converted to uppercase.</response>
+      </match>
+    </matches>
+  </exercise>
+</section>

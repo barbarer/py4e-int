@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<section xml:id="dictionaries_dictionary-as-a-set-of-counters">
+  <title>Dictionary as a Set of Counters</title>
+   <idx>Counter</idx>
+   <idx>Implementation</idx>
+   <idx>Get Method</idx>
+
+  <p>Suppose you are given a string and you want to count how many times each
+            letter appears. There are several ways you could do it:</p>
+  <dl>
+    <li>
+      <title>.  You could create 26 variables, one for each letter of the alphabet.</title>
+      <p>Then you could traverse the string and, for each character,
+                        increment the corresponding counter, probably using a chained
+                        conditional.</p>
+    </li>
+    <li>
+      <title>.  You could create a list with 26 elements.</title>
+      <p>Then you could convert each character to a number (using the built-in function
+                        <c>ord</c>), use the number as an index into the list, and
+                        increment the appropriate counter.</p>
+    </li>
+    <li>
+      <title>.  You could create a dictionary with characters as keys and counters as the corresponding values.</title>
+      <p>The first time you see a character, you
+                        would add an item to the dictionary. After that you would increment
+                        the value of an existing item.</p>
+    </li>
+  </dl>
+  <p>Each of these options performs the same computation, but each of them
+            implements that computation in a different way.</p>
+  <p>An <em>implementation</em> is a way of performing a computation;
+            some implementations are better than others. For example, an advantage
+            of the dictionary implementation is that we don't have to know ahead of
+            time which letters appear in the string and we only have to make room
+            for the letters that do appear.</p>
+  <p>Here is what the code might look like:</p>
+  <program xml:id="brontosaurausexample" interactive="activecode" language="python">
+    <input>
+word = 'brontosaurus'
+d = dict()
+for c in word:
+    if c not in d:
+        d[c] = 1
+    else:
+        d[c] = d[c] + 1
+print(d)
+        </input>
+  </program>
+  <p>We are effectively computing a <em>histogram</em>, which is a
+            statistical term for a set of counters (or frequencies).</p>
+  <p>The <title_reference>for</title_reference> loop traverses the string. Each time through the
+            loop, if the character <title_reference>c</title_reference> is not in the dictionary, we
+            create a new item with key <title_reference>c</title_reference> and the initial value 1 (since
+            we have seen this letter once). If <title_reference>c</title_reference> is already in the
+            dictionary we increment <title_reference>d[c]</title_reference>.</p>
+  <p>Here's the output of the program:</p>
+  <program language="python">
+    <input>
+{'a': 1, 'b': 1, 'o': 2, 'n': 1, 's': 2, 'r': 2, 'u': 2, 't': 1}
+</input>
+  </program>
+  <p>The histogram indicates that the letters <q>a</q> and <q>b</q>
+            appear once; <q>o</q> appears twice, and so on.</p>
+  <exercise label="question9_2_1" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Construct a block of code that prints a dictionary containing the amount of times a letter appears in the string &#x2018;word'.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>word = "cheerful"</cline>
+      </block>
+      <block order="6" correct="no">
+        <cline>d = dictionary() </cline>
+      </block>
+      <block order="1">
+        <cline>d = dict()</cline>
+      </block>
+      <block order="10">
+        <cline>for char in word:</cline>
+      </block>
+      <block order="3" correct="no">
+        <cline>for char in d: </cline>
+      </block>
+      <block order="11" correct="no">
+        <cline> if char in d: </cline>
+      </block>
+      <block order="9">
+        <cline> if char not in d:</cline>
+      </block>
+      <block order="8">
+        <cline>  d[char] = 1</cline>
+      </block>
+      <block order="4">
+        <cline> else:</cline>
+      </block>
+      <block order="5">
+        <cline>  d[char] += 1</cline>
+      </block>
+      <block order="7">
+        <cline>print(d)</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <p>Dictionaries have a method called <title_reference>get</title_reference> that takes a key and
+            a default value. If the key appears in the dictionary, <title_reference>get</title_reference>
+            returns the corresponding value; otherwise it returns the default value.
+            For example:</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100}
+&gt;&gt;&gt; print(counts.get('jan', 0))
+100
+&gt;&gt;&gt; print(counts.get('tim', 0))
+0
+</input>
+  </program>
+  <exercise label="question9_2_2">
+    <statement>
+      <p>Q-3: Which use of the get method correctly returns the amount of times the name <q>Russell</q> appears in the dictionary names?</p>
+      <program language="python">
+        <input>
+names = {'James' : 10, 'Russell' : 2, 'Kevin' : 27}
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>print(names.get('Russell'))</p>
+        </statement>
+        <feedback>
+          <p>Try again! There is no default value, so it will not print out anything</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>names.get('Russell')</p>
+        </statement>
+        <feedback>
+          <p>Try again! There is no default value, so it will not return anything. The statement is also not being printed out.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>print(names.get('Russell', 0))</p>
+        </statement>
+        <feedback>
+          <p>Correct! This line of code uses print so that the number is printed and not just returned, and it makes sure to include the default value in case 'Russell' does not appear in the dictionary.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>names.get('Russell', 0)</p>
+        </statement>
+        <feedback>
+          <p>Try again! This statement does not print out the number, just returns the number.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>We can use <c>get</c> to write our histogram loop more concisely.
+            Because the <c>get</c> method automatically handles the case where
+            a key is not in a dictionary, we can reduce four lines down to one and
+            eliminate the <c>if</c> statement.</p>
+  <program language="python">
+    <input>
+word = 'brontosaurus'
+d = dict()
+for c in word:
+    d[c] = d.get(c,0) + 1
+print(d)
+</input>
+  </program>
+  <p>The use of the <c>get</c> method to simplify this counting loop
+            ends up being a very commonly used <q>idiom</q> in Python and we will use it
+            many times in the rest of the book. So you should take a moment and
+            compare the loop using the <c>if</c> statement and <c>in</c>
+            operator with the loop using the <c>get</c> method. They do
+            exactly the same thing, but one is more succinct.</p>
+  <exercise label="question9_2_3">
+    <statement>
+      <p>Q-4: What does the following code print?</p>
+      <program language="python">
+        <input>
+word = "incomprehensible"
+d = dict()
+for char in word:
+    if char not in d:
+        d[char] = 1
+    else:
+        d[char] = d[char] + 1
+print(d.get('d', 0))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>0</p>
+        </statement>
+        <feedback>
+          <p>Correct! Since there isn't a "d" in word, the code returns the default value.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>Try again! The letter is not in the word so it will not enter the for loop.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None</p>
+        </statement>
+        <feedback>
+          <p>Try again! If the letter does not appear in the word, it should print out the default value.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

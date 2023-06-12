@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<section xml:id="objects_our-first-python-object">
+  <title>Our first Python object</title>
+  <p>At a basic level, an object is simply some code plus data structures that are
+            smaller than a whole program. Defining a function allows us to store
+            a bit of code and give it a name and then later invoke that code using the
+            name of the function.</p>
+  <p>An object can contain a number of functions (which we call <em>methods</em>) as
+            well as data that is used by those functions.  We call data items that are
+            part of the object <em>attributes</em>.</p>
+  <p>We use the <c>class</c> keyword to define the data and code that will make up each
+            of the objects. The class keyword includes the name of the class and begins
+            an indented block of code where we include the attributes (data)
+            and methods (code).</p>
+  <exercise label="object_contents">
+    <statement>
+      <p>Q-1: An object can contain a number of functions as well as <BlankNode/> that is used by
+those functions. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Dd]ata">
+          <feedback>
+            <p>Correct, these data can be initialized within the class or when object
+is constructed.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="keyword_object">
+    <statement>
+      <p>Q-2: The <BlankNode/> keyword is used to define the data and code that will make up each of the
+objects. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[c]lass">
+          <feedback>
+            <p>Correct, we use the keyword &#x2018;class'.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again! Note that keywords are case-sensitive.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="partyanimal">
+    <statement>
+      <p>Run the code below.</p>
+    </statement>
+    <program xml:id="partyanimal_editor" interactive="activecode" language="python">
+      <input>
+class PartyAnimal:
+
+    def party(self, x):
+        self.x = x
+        self.x += 1
+        print("So far",self.x)
+
+an = PartyAnimal()
+an.party(1)
+an.party(2)
+an.party(3)
+PartyAnimal.party(an, 12)
+        </input>
+    </program>
+  </exercise>
+  <p>Each method looks like a function, starting with the <c>def</c> keyword and
+            consisting of an indented block of code.  This object has one attribute (<c>x</c>)
+            and one method (<c>party</c>).  The methods have a special first parameter that
+            we name by convention <c>self</c>.</p>
+  <p>Just as the <c>def</c> keyword does not cause function code to be executed, the
+            <c>class</c> keyword does not create an object.  Instead, the <c>class</c>
+            keyword defines a template indicating what data and code will be contained
+            in each object of type <c>PartyAnimal</c>.  The class is like a cookie cutter
+            and the objects created using the class are the
+            cookies.
+            You don't put frosting on the cookie cutter;
+            you put frosting on the cookies, and you can put different frosting
+            on each cookie.</p>
+  <image source="images/cookie_cutter_flickr_Didriks.png" width="50%" alt="A Class and Two Objects"/>
+  <p>If we continue through this sample program, we see the first executable line of
+            code:</p>
+  <program language="python">
+    <input>
+an = PartyAnimal()
+</input>
+  </program>
+  <p>This is where we instruct Python to construct (i.e., create) an <em>object</em> or
+            <em>instance</em> of the class <c>PartyAnimal</c>. It looks like a function call to the
+            class itself. Python constructs the object with the right data and methods
+            and returns the object which is then assigned to the variable <c>an</c>.
+            In a way this is quite similar to the following line which we have
+            been using all along:</p>
+  <program language="python">
+    <input>
+counts = dict()
+</input>
+  </program>
+  <p>Here we instruct Python to construct an object using the <c>dict</c> template
+            (already present in Python), return the instance of dictionary,
+            and assign it to the variable <c>counts</c>.</p>
+  <p>When the <c>PartyAnimal</c> class is used to construct an object, the variable <c>an</c>
+            is used to point to that object.  We use <c>an</c> to access the code and data for that
+            particular instance of the <c>PartyAnimal</c> class.</p>
+  <p>Each Partyanimal object/instance contains within it a variable <c>x</c>
+            and a method/function named <c>party</c>. We call the <c>party</c> method in this line:</p>
+  <program language="python">
+    <input>
+an.party()
+</input>
+  </program>
+  <p>When the <c>party</c> method is called, the first parameter (which we call by convention <c>self</c>)
+            points to the particular instance of the PartyAnimal object that <c>party</c> is called from.
+            Within the <c>party</c> method, we see the line:</p>
+  <program language="python">
+    <input>
+self.x = self.x + 1
+</input>
+  </program>
+  <p>This syntax using the <em>dot</em> operator is saying &#x2018;the x within self.' Each time <c>party()</c> is
+            called, the internal <c>x</c> value is incremented by 1 and the value is printed out.</p>
+  <p>The following line is another way to call the <c>party</c> method within the <c>an</c>
+            object:</p>
+  <program language="python">
+    <input>
+PartyAnimal.party(an)
+</input>
+  </program>
+  <p>In this variation, we access the code from within the class and explicitly
+            pass the object pointer <c>an</c> as the first parameter (i.e., <c>self</c> within the method).
+            You can think of <c>an.party()</c> as shorthand for the above line.</p>
+  <p>When the program executes, it produces the following output:</p>
+  <pre>So far 1
+So far 2
+So far 3
+So far 4</pre>
+  <p>The object is constructed, and the <c>party</c> method is called four times, both
+            incrementing and printing the value for <c>x</c> within the <c>an</c> object.</p>
+</section>

@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<section xml:id="dictionaries_looping-and-dictionaries">
+  <title>Looping and Dictionaries</title>
+   <idx>Traversal</idx>
+   <idx>Keys Method</idx>
+
+  <p>If you use a dictionary as the sequence in a <c>for</c> statement,
+            it traverses the keys of the dictionary. This loop prints each key and
+            the corresponding value:</p>
+  <program language="python">
+    <input>
+counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100}
+for key in counts:
+    print(key, counts[key])
+</input>
+  </program>
+  <p>Here's what the output looks like:</p>
+  <pre>jan 100
+chuck 1
+annie 42</pre>
+  <p>Again, the keys are in no particular order.</p>
+  <p>We can use this pattern to implement the various loop idioms that we
+            have described earlier. For example if we wanted to find all the entries
+            in a dictionary with a value above ten, we could write the following
+            code:</p>
+  <program language="python">
+    <input>
+counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100}
+for key in counts:
+    if counts[key] &gt; 10 :
+        print(key, counts[key])
+</input>
+  </program>
+  <p>The <c>for</c> loop iterates through the <em>keys</em> of
+            the dictionary, so we must use the index operator to retrieve the
+            corresponding <em>value</em> for each key. Here's what the output
+            looks like:</p>
+  <pre>jan 100
+annie 42</pre>
+  <p>We see only the entries with a value above 10.</p>
+  <exercise label="question9_4_1">
+    <statement>
+      <p>Q-1: What is printed after the following code is run?</p>
+      <program language="python">
+        <input>
+counts = {'NBA Champ': 3, 'MVP': 4, 'All-Star': 16, 'ROTY': 1, '6MOTY': 0}
+counts['Finals MVP'] = 3
+achievements = []
+for achievement in counts:
+    if counts[achievement] &gt;= 1:
+        achievements.append(achievement)
+print(achievements)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>['NBA Champ', 'Finals MVP', 'MVP', 'All-Star']</p>
+        </statement>
+        <feedback>
+          <p>Try again! This list does not inlude all the values that are greater than or equal to one.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>['NBA Champ', 'Finals MVP', 'MVP', 'All-Star', 'ROTY']</p>
+        </statement>
+        <feedback>
+          <p>Correct! This code takes the keys with values greater than or equal to one and puts them into a list. If any of you are wondering, these are some of LeBron James' accolades.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>['MVP', 'All-Star']</p>
+        </statement>
+        <feedback>
+          <p>Try again! This list does not inlude all the values that are greater than or equal to one.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>If you want to print the keys in alphabetical order, you first make a
+            list of the keys in the dictionary using the <c>keys</c> method
+            available in dictionary objects, and then sort that list and loop
+            through the sorted list, looking up each key and printing out key-value
+            pairs in sorted order as follows:</p>
+  <program language="python">
+    <input>
+counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100}
+lst = list(counts.keys())
+print(lst)
+lst.sort()
+for key in lst:
+    print(key, counts[key])
+</input>
+  </program>
+  <p>Here's what the output looks like:</p>
+  <pre>['jan', 'chuck', 'annie']
+annie 42
+chuck 1
+jan 100</pre>
+  <p>First you see the list of keys in unsorted order that we get from the
+            <c>keys</c> method. Then we see the key-value pairs in order from
+            the <c>for</c> loop.</p>
+  <exercise label="question9_4_2">
+    <statement>
+      <p>Write code to add the keys of dictionary wordCount into a list named MoreThan5 if the keys' value is greater than 5.</p>
+    </statement>
+    <program xml:id="question9_4_2_editor" interactive="activecode" language="python">
+      <input>
+wordCount = {'so': 7, 'the': 10, 'doctor': 2, 'there': 4, 'code': 10, 'a': 27, 'TI-84': 2, 'therefore': 5}
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(len(MoreThan5), 4, "Testing to make sure the length of the list changed.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="question9_4_3" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Construct a block of code that adds the items in a dictionary to a list, where the items' values are greater than or equal to 8, and prints said list.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>books = {'Percy Jackson': 8, 'Harry Potter': 10, 'The Maze Runner': 10, 'The Hobbit': 7}</cline>
+      </block>
+      <block order="4">
+        <cline>list_o_books = []</cline>
+      </block>
+      <block order="1" correct="no">
+        <cline>list_o_books = {} </cline>
+      </block>
+      <block order="2">
+        <cline>for title in books:</cline>
+      </block>
+      <block order="7" correct="no">
+        <cline>for title in books </cline>
+      </block>
+      <block order="5" correct="no">
+        <cline> if books[title] &gt; 8: </cline>
+      </block>
+      <block order="6">
+        <cline> if books[title] &#x2265; 8:</cline>
+      </block>
+      <block order="9">
+        <cline>  list_o_books.append(title)</cline>
+      </block>
+      <block order="8">
+        <cline>print(list_o_books)</cline>
+      </block>
+    </blocks>
+  </exercise>
+</section>

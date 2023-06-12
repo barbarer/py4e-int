@@ -1,0 +1,471 @@
+<?xml version="1.0"?>
+<section xml:id="database_mixed-up-code-questions">
+  <title>Mixed-Up Code Questions</title>
+  <exercise label="db-mixed-1" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a database file &#x2018;music.db' and add a table <c>Tracks</c> with two columns.</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <cline>import sqlite3</cline>
+      </block>
+      <block order="3">
+        <cline>conn = sqlite3.connect('music.db')</cline>
+      </block>
+      <block order="1">
+        <cline>cur = conn.cursor()</cline>
+      </block>
+      <block order="5">
+        <cline>cur.execute('DROP TABLE IF EXISTS Tracks')</cline>
+      </block>
+      <block order="2">
+        <cline>cur.execute('CREATE TABLE Tracks (title TEXT, plays INTEGER)')</cline>
+      </block>
+      <block order="4">
+        <cline>conn.close()</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="db-mixed1_ac">
+    <statement>
+      <p>Write code to create a database file &#x2018;music.db' and add a table <c>Tracks`</c> with two columns.</p>
+    </statement>
+    <program xml:id="db-mixed1_ac_editor" interactive="activecode" language="python3">
+      <input>
+
+====
+import unittest
+
+class myTests(unittest.TestCase):
+    def testOne(self):
+        import sqlite3
+        conn = sqlite3.connect('music.db')
+        cur = conn.cursor()
+        cur.execute('SELECT * FROM Tracks LIMIT 0')
+        field_names = [i[0] for i in cur.description]
+        self.assertEqual(field_names[0], "title", "test1")
+        self.assertEqual(field_names[1], "plays", "test2")
+
+unittest.main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="db-mixed-2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create code to connect to the database file &#x2018;chinook.db' which contains a table <c>albums</c> with three columns <c>AlbumID</c>, <c>Title`</c> and <c>ArtistID</c>. Insert 2 tracks into the table. The first track has an albumID of 348, title <q>Thunderstruck</q>, and ArtistID of 300. The second track has an albumID 349, title <q>My Way</q> with 301 ArtistID.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>import sqlite3</cline>
+      </block>
+      <block order="4">
+        <cline>conn = sqlite3.connect('chinook.db')</cline>
+      </block>
+      <block order="6">
+        <cline>cur = conn.cursor()</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>cur.execute('INSERT INTO albums (AlbumID, Title, ArtistID) VALUES (?, ?, ?)', (348, 'Thunderstruck', 300))</cline>
+          <cline>cur.execute('INSERT INTO albums (AlbumID, Title, ArtistID) VALUES (?, ?, ?)', (349, 'My Way', 301))</cline>
+        </choice>
+        <choice>
+          <cline>cur.execute('INSERT IN albums (AlbumID, Title, ArtistID) VALUES (?, ?, ?)', (348, 'Thunderstruck', 300))</cline>
+          <cline>cur.execute('INSERT IN albums (AlbumID, Title, ArtistID) VALUES (?, ?, ?)', (349, 'My Way', 301)) </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>conn.commit()</cline>
+      </block>
+      <block order="7">
+        <cline>cur.close()</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="db-mixed2_ac">
+    <statement>
+      <p>Write code to connect to the database file &#x2018;chinook.db' which contains a table <c>albums</c> with three columns <c>AlbumID</c>, <c>Title`</c> and <c>ArtistID</c>. Insert 2 tracks into the table. The first track has an albumID of 348, title <q>Thunderstruck</q>, and ArtistID of 300. The second track has an albumID 349, title <q>My Way</q> with 301 ArtistID.</p>
+    </statement>
+    <program xml:id="db-mixed2_ac_editor" interactive="activecode" language="python3">
+      <input>
+====
+import unittest
+
+class myTests(unittest.TestCase):
+    def testOne(self):
+        import sqlite3
+        conn = sqlite3.connect('chinook.db')
+        cur = conn.cursor()
+        cur.execute('SELECT AlbumID, Title, ArtistID FROM albums WHERE ArtistID &gt;= 300')
+        self.assertEqual(cur[0][1], "Thunderstruck", "Testing that the INSERT statements worked correctly")
+        self.assertEqual(cur[1][0], 349, "Testing that the INSERT statements worked correctly")
+
+unittest.main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="db-mixed-3" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create code to connect to a database file &#x2018;bikeshare.db'. Then selects all of the rows in the table <c>bikeshare_stations</c>.
+            Set the variable <c>count_rows</c> to the total number of rows returned from the query, before closing the cursor.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <cline>import sqlite3</cline>
+      </block>
+      <block order="3">
+        <cline>conn = sqlite3.connect('bikeshare.db')</cline>
+      </block>
+      <block order="1">
+        <cline>cur = conn.cursor()</cline>
+      </block>
+      <block order="6">
+        <cline>cur.execute('SELECT * FROM bikeshare_stations')</cline>
+      </block>
+      <block order="2">
+        <cline>count_rows = len(cur.fetchall())</cline>
+      </block>
+      <block order="4">
+        <cline>cur.close()</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="db-mixed3_ac">
+    <statement>
+      <p>Write code to connect to a database file &#x2018;bikeshare.db'. Then selects all of the rows in the table <c>bikeshare_stations</c>.
+            Set the variable <c>count_rows</c> to the total number of rows returned from the query, before closing the cursor.</p>
+    </statement>
+    <program xml:id="db-mixed3_ac_editor" interactive="activecode" language="python3">
+      <input>
+====
+import unittest
+
+class myTests(unittest.TestCase):
+    def testOne(self):
+        self.assertEqual(count_rows, 144, "Testing that count rows has the correct value")
+
+unittest.main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="db-mixed-4" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a connection to the database &#x2018;pets.sqlite' and add a table <c>Dogs</c> with two columns, <c>name</c> and <c>breed</c>. Insert 2 dogs into the table. The first dog is named Penelope and is a Doberman. The second dog is named Milo and is a Springer Spaniel. Commit the change, then select the name(s) of the dogs of breed Springer Spaniel.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>import sqlite3</cline>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>conn = sqlite3.connect('pets.sqlite')</cline>
+        </choice>
+        <choice>
+          <cline>cur = sqlite3.cursor('pets.sqlite') </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>cur = conn.cursor()</cline>
+      </block>
+      <block order="6">
+        <cline>cur.execute('DROP TABLE IF EXISTS Dogs')</cline>
+      </block>
+      <block order="9">
+        <cline>cur.execute('CREATE TABLE Dogs (name TEXT, breed TEXT)')</cline>
+      </block>
+      <block order="1">
+        <cline>cur.execute('INSERT INTO Dogs (name, breed) VALUES (?, ?)', ('Penelope', 'Doberman'))</cline>
+        <cline>cur.execute('INSERT INTO Dogs (name, breed) VALUES (?, ?)', ('Milo', 'Springer Spaniel'))</cline>
+      </block>
+      <block order="2">
+        <cline>conn.commit()</cline>
+      </block>
+      <block order="8">
+        <cline>cur.execute('SELECT name FROM Dogs WHERE breed = "Springer Spaniel"')</cline>
+      </block>
+      <block order="4">
+        <cline>cur.close()</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="db-mixed4-ac">
+    <statement>
+      <p>Write code to create a connection to the database &#x2018;pets.sqlite' and add a table <c>Dogs</c> with two columns, <c>name</c> and <c>breed</c>. Insert 2 dogs into the table. The first dog is named Penelope and is a Doberman. The second dog is named Milo and is a Springer Spaniel. Commit the change, then select the name(s) of the dogs of breed Springer Spaniel.</p>
+    </statement>
+    <program xml:id="db-mixed4-ac_editor" interactive="activecode" language="python3">
+      <input>
+
+====
+import unittest
+
+class myTests(unittest.TestCase):
+
+    def testOne(self):
+                    import sqlite3
+                    conn = sqlite3.connect('pets.sqlite')
+                    cur = conn.cursor()
+                    cur.execute('SELECT name FROM Dogs WHERE breed = "Springer Spaniel"')
+                    name = cur.fetchall()[0]
+                    self.assertEqual(name, 'Milo', 'Testing that the SELECT statement extracted all dog names with breed Springer Spaniel')
+                    cur.execute('SELECT * from Dogs')
+                    rows = len(cur.fetchall())
+                    self.assertEqual(rows, 2, 'Checking the new data was correctly added to the database')
+
+unittest.main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="db-mixed-5" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create code to connect to a database file &#x2018;bikeshare.db'. Then only selects the rows in the table <c>bikeshare_stations</c> that have a <c>status</c> of closed.
+            Set the variable <c>count_rows</c> to the total number of rows returned from the query, before closing the cursor.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>import sqlite3</cline>
+      </block>
+      <block order="3">
+        <cline>conn = sqlite3.connect('bikeshare.db')</cline>
+      </block>
+      <block order="2">
+        <cline>cur = conn.cursor()</cline>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>cur.execute('SELECT * FROM Socks WHERE status = "closed"')</cline>
+        </choice>
+        <choice>
+          <cline>cur.execute('SELECT all_rows FROM Socks WHERE status = "closed"') </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>count_rows = len(cur.fetchall())</cline>
+      </block>
+      <block order="1">
+        <cline>cur.close()</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="db-mixed5_ac">
+    <statement>
+      <p>Write code to connect to a database file &#x2018;bikeshare.db'. Then only selects the rows in the table <c>bikeshare_stations`</c> that have a <c>status</c> of closed.
+            Set the variable <c>count_rows</c> to the total number of rows returned from the query, before closing the cursor.</p>
+    </statement>
+    <program xml:id="db-mixed5_ac_editor" interactive="activecode" language="python3">
+      <input>
+====
+import unittest
+
+class myTests(unittest.TestCase):
+    def testOne(self):
+        self.assertEqual(count_rows, 6, "test1")
+
+unittest.main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="db-mixed-6" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a connection to the &#x2018;chinook.db' database. Select rows <c>LastName</c> and <c>FirstName`</c> in the table <c>customers</c> in alphabetical order by <c>LastName</c>. Set the variable count_rows to the total number of rows returned from the query, before closing the cursor.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <cline>import sqlite3</cline>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>conn = sqlite3.connect('chinook.db')</cline>
+        </choice>
+        <choice>
+          <cline>conn = sql.connect('chinook.db') </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>cur = conn.cursor()</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>cur.execute('SELECT LastName, FirstName FROM customers ORDER BY LastName ASC')</cline>
+        </choice>
+        <choice>
+          <cline>cur.exectute('SELECT LastName, FirstName FROM customers ORDER BY LastName DESC') </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <cline>count_rows = len(cur.fetchall())</cline>
+      </block>
+      <block order="5">
+        <cline>cur.close()</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="db-mixed6-ac">
+    <statement>
+      <p>Write code to create a connection to the &#x2018;chinook.db' database. Select rows <c>LastName</c> and <c>FirstName`</c> in the table <c>customers</c> in alphabetical order by <c>LastName</c>. Set the variable count_rows to the total number of rows returned from the query, before closing the cursor.</p>
+    </statement>
+    <program xml:id="db-mixed6-ac_editor" interactive="activecode" language="python3">
+      <input>
+
+====
+import unittest
+
+class myTests(unittest.TestCase):
+
+    def testOne(self):
+        self.assertEqual(count_rows, 59, 'Testing that all rows were selected from the query')
+unittest.main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="db-mixed-7" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create code to connect to a database file &#x2018;chinook.db'. Join tables <c>albums</c> and <c>artists</c>. Then, select the artist <c>Name</c> where <c>ArtistID`</c> is 90.
+            Set the variable <c>count_rows</c> to the total number of rows returned from the query, before closing the cursor.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>import sqlite3</cline>
+      </block>
+      <block order="1">
+        <cline>conn = sqlite3.connect('chinook.db')</cline>
+        <cline>cur = conn.cursor()</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>cur.execute('''SELECT Name FROM albums JOIN artists ON albums.ArtistID = artists.ArtistID WHERE artists.ArtistID = 90''')</cline>
+        </choice>
+        <choice>
+          <cline>cur.execute('''SELECT * FROM albums, artists ON albums.ArtistID = artists.ArtistID WHERE albums.ArtistID = 90''') </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>count_rows = len(cur.fetchall())</cline>
+      </block>
+      <block order="6">
+        <cline>cur.close()</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="db-mixed7_ac">
+    <statement>
+      <p>Write code to connect to a database file &#x2018;chinook.db'. Join tables <c>albums</c> and <c>artists</c>. Then, select the artist <c>Name</c> where <c>ArtistID`</c> is 90.
+            Set the variable <c>count_rows</c> to the total number of rows returned from the query, before closing the cursor.</p>
+    </statement>
+    <program xml:id="db-mixed7_ac_editor" interactive="activecode" language="python3">
+      <input>
+====
+import unittest
+
+class myTests(unittest.TestCase):
+    def testOne(self):
+        self.assertEqual(count_rows, 21, "test1")
+
+unittest.main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="db-mixed-8" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a connection to the &#x2018;chinook.db' database. Then, join tables &#x2018;albums' and &#x2018;artists' on &#x2018;artistId'. Then, set the variables <c>title</c> and <c>artist</c> equal to the title name and artist name in row 185.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <cline>import sqlite3</cline>
+        <cline>conn = sqlite3.connect('chinook.db')</cline>
+        <cline>cur = conn.cursor()</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>cur.execute('SELECT * FROM albums JOIN artists ON albums.artistId = artists.artistId')</cline>
+        </choice>
+        <choice>
+          <cline>cur.execute('SELECT * FROM albums JOIN artists ON artistId.albums = artistId.artists') </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>rows = cur.fetchall()</cline>
+      </block>
+      <block order="3">
+        <cline>title = rows[184][1]</cline>
+        <cline>artist = rows[184][4]</cline>
+      </block>
+      <block order="5">
+        <cline>cur.close()</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="db-mixed8-ac">
+    <statement>
+      <p>Write code to connect to the &#x2018;chinook.db' database. Then, join tables &#x2018;albums' and &#x2018;artists' on &#x2018;artistId'. Then, set the variables <c>title</c> and <c>artist</c> equal to the title name and artist name in row 185.</p>
+    </statement>
+    <program xml:id="db-mixed8-ac_editor" interactive="activecode" language="python3">
+      <input>
+
+====
+import unittest
+
+class myTests(unittest.TestCase):
+
+    def testOne(self):
+        self.assertEqual(title, 'Greatest Hits 1', 'Testing that row 185 has the correct title')
+        self.assertEqual(artist, 'Queen', 'Testing that row 185 has the correct artist')
+
+unittest.main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="db-mixed-9" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create code to connect to a database file &#x2018;chinook.db'. Select the name of all rows of data where the genre Name is &#x2018;Pop' and MediaTypeID is 1. In order to do this, first join tables <c>tracks</c> and <c>genres</c>.
+            Set the variable <c>count_rows</c> to the total number of rows returned from the query, before closing the cursor.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>import sqlite3</cline>
+      </block>
+      <block order="1">
+        <cline>conn = sqlite3.connect('chinook.db')</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>cur = conn.cursor()</cline>
+        </choice>
+        <choice>
+          <cline>cur = cursor() </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>cur.execute('''SELECT Name FROM tracks JOIN genres ON tracks.GenreID = genres.GenreID WHERE genres.Name = "Pop" AND tracks.MediaTypeID = 1''')</cline>
+        </choice>
+        <choice>
+          <cline>cur.execute('''SELECT * FROM tracks JOIN genres ON tracks.GenreID = genres.GenreID WHERE genres.Name = "Pop", tracks.MediaTypeID = 1''') </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>count_rows = len(cur.fetchall())</cline>
+      </block>
+      <block order="8">
+        <cline>cur.close()</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="db-mixed9_ac">
+    <statement>
+      <p>Create code to connect to a database file &#x2018;chinook.db'. Select the name of all rows of data where the genre Name is &#x2018;Pop' and MediaTypeID is 1. In order to do this, first join tables <c>tracks</c> and <c>genres</c>.
+            Set the variable <c>count_rows</c> to the total number of rows returned from the query, before closing the cursor.</p>
+    </statement>
+    <program xml:id="db-mixed9_ac_editor" interactive="activecode" language="python3">
+      <input>
+====
+import unittest
+
+class myTests(unittest.TestCase):
+    def testOne(self):
+        self.assertEqual(count_rows, 14, "test1")
+
+unittest.main()
+        </input>
+    </program>
+  </exercise>
+</section>

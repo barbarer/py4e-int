@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<section xml:id="functions_parameters-and-arguments">
+  <title>Parameters and arguments</title>
+<idx><h>Parameter</h><h>Function</h></idx>
+<idx><h>Function</h><h>Parameter</h></idx>
+<idx>Parameter</idx>
+<idx><h>Function</h><h>Argument</h></idx>
+<idx><h>Argument</h><h>Function</h></idx>
+<idx><h>Parentheses</h><h>Parameters In</h></idx>
+<idx><h>Parameters In</h><h>Parentheses</h></idx>
+<idx>Composition</idx>
+<idx>Argument</idx>
+  <p>Some of the built-in functions we have seen require arguments. For
+            example, when you call <c>math.sin</c>, you pass a number as an
+            argument. Some functions take more than one argument:
+            <c>math.pow</c> takes two, the base and the exponent.</p>
+  <p>Inside the function, the arguments are assigned to variables called
+            <em>parameters</em>. Here is an example of a user-defined
+            function that takes an argument:</p>
+  <program language="python">
+    <input>
+def print_twice(bruce):
+    print(bruce)
+    print(bruce)
+</input>
+  </program>
+  <p>This function assigns the argument to a parameter named
+            <c>bruce</c>. When the function is called, it prints the value of
+            the parameter (whatever it is) twice.</p>
+  <exercise label="functParam_fill1">
+    <statement>
+      <p>Q-1: Inside the function, the arguments are assigned to variables called ___________. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Pp]arameters*">
+          <feedback>
+            <p>Inside the function, the arguments are assigned to variables called parameters.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Incorrect! Reread the beginning of this section and try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>This function works with any value that can be printed.</p>
+  <program xml:id="functParam_codelens1" interactive="codelens" language="python">
+    <input>
+import math
+
+def print_twice(bruce):
+    print(bruce)
+    print(bruce)
+
+print_twice('Spam')
+print_twice(17)
+print_twice(math.pi)
+    </input>
+  </program>
+  <p>The same rules of composition that apply to built-in functions also
+            apply to user-defined functions, so we can use any kind of expression as
+            an argument for <c>print_twice</c>:</p>
+  <program xml:id="functParam_codelens2" interactive="codelens" language="python">
+    <input>
+import math
+
+def print_twice(bruce):
+    print(bruce)
+    print(bruce)
+
+print_twice('Spam '*4)
+print_twice(math.cos(math.pi))
+    </input>
+  </program>
+  <p>The argument is evaluated before the function is called, so in the
+            examples the expressions <c>'Spam '*4</c> and <c>math.cos(math.pi)</c>
+            are only evaluated once.</p>
+  <p>You can also use a variable as an argument:</p>
+  <program xml:id="functParam_codelens3" interactive="codelens" language="python">
+    <input>
+def print_twice(bruce):
+    print(bruce)
+    print(bruce)
+
+michael = 'Python is cool.'
+print_twice(michael)
+    </input>
+  </program>
+  <p>The name of the variable we pass as an argument (<c>michael</c>)
+            has nothing to do with the name of the parameter (<c>bruce</c>).
+            It doesn't matter what the value was called back home (in the caller);
+            here in <c>print_twice</c>, we call everybody <c>bruce</c>.</p>
+  <exercise label="functParam_MC_add">
+    <statement>
+      <p>Q-5: Consider the code block below. What prints?</p>
+      <program language="python">
+        <input>
+def add_two(num):
+    num = num + 2
+    print(num)
+
+def add_three(nums):
+    nums = nums + 3
+    print(nums)
+
+hi = 4
+add_two(hi)
+add_three(hi)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>67 (on the same line)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! In Python, each print statement automatically adds a new line after printing whatever is inside the print statement. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>67 (on two separate lines)</p>
+        </statement>
+        <feedback>
+          <p>Correct! Even though the variable "hi" was changed in the functions, its value outside the functions remains the same, and print statements automatically add a new line.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>69 (on two separate lines)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Even though the variable "hi" was changed in the functions, its value outside the functions remains the same unless specified. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>69 (on the same line)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! In Python, each print statement automatically adds a new line after printing whatever is inside the print statement. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="functParam_PP_four" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Construct a block of code with four functions, defined in this order: printName, printGPA,
+            printAttendance, printStudentInfo. printStudentInfo should call the other three functions
+            which will print all of the student's information. Be mindful of indentation!</p>
+    </statement>
+    <blocks>
+      <block order="9">
+        <cline>def printName(name):</cline>
+      </block>
+      <block order="2">
+        <cline>    print("Name: " + name)</cline>
+      </block>
+      <block order="7">
+        <cline>def printGPA(gpa):</cline>
+      </block>
+      <block order="5">
+        <cline>    print("GPA: " + gpa)</cline>
+      </block>
+      <block order="3">
+        <cline>def printAttendance(daysAbsent):</cline>
+      </block>
+      <block order="1">
+        <cline>    print("Days absent: " + daysAbsent)</cline>
+      </block>
+      <block order="4">
+        <cline>def printStudentInfo(stuName, stuGPA, stuDaysAbsent):</cline>
+      </block>
+      <block order="6">
+        <cline>    printName(stuName)</cline>
+        <cline>    printGPA(stuGPA)</cline>
+        <cline>    printAttendance(stuDaysAbsent)</cline>
+      </block>
+      <block order="8">
+        <cline>printStudentInfo("John", 3.6, 2)</cline>
+        <cline>printStudentInfo("Ben", 3.2, 4)</cline>
+      </block>
+    </blocks>
+  </exercise>
+</section>

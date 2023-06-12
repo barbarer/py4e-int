@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<section xml:id="functions_definitions-and-uses">
+  <title>Definitions and uses</title>
+
+    <idx><h>Function</h><h>Definition</h></idx>
+    <idx><h>Definition</h><h>Function</h></idx>
+    <idx>Use Before Def</idx>
+
+  <p>Pulling together the code fragments from the previous section, the whole
+            program looks like this:</p>
+  <program xml:id="functDef_lyrics" interactive="activecode" language="python">
+    <input>
+def print_lyrics():
+    print("I'm a lumberjack, and I'm okay.")
+    print('I sleep all night and I work all day.')
+
+def repeat_lyrics():
+    print_lyrics()
+    print_lyrics()
+
+repeat_lyrics()
+        </input>
+  </program>
+  <p>This program contains two function definitions: <c>print_lyrics</c> and
+            <c>repeat_lyrics</c>. Function definitions get executed just like other
+            statements, but the effect is to create function objects. The statements
+            inside the function do not get executed until the function is called,
+            and the function definition generates no output.</p>
+  <p>As you might expect, you have to create a function before you can
+            execute it. In other words, the function definition has to be executed
+            before the first time it is called.</p>
+  <p>If we move the function call above the definition we will get an error.</p>
+  <program xml:id="functDef_callFirst" interactive="activecode" language="python">
+    <input>
+repeat_lyrics()
+
+def print_lyrics():
+    print("I'm a lumberjack, and I'm okay.")
+    print('I sleep all night and I work all day.')
+
+def repeat_lyrics():
+    print_lyrics()
+    print_lyrics()
+        </input>
+  </program>
+  <exercise label="functDef_MC_error">
+    <statement>
+      <p>Q-3: What kind of error do you get when you call a function before it is defined?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>SyntaxError</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! A SyntaxError occurs when there is a mistake in your code's syntax. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>IndexError</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! An IndexError occurs when you try to access an element of a container that doesn't exist. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>NameError</p>
+        </statement>
+        <feedback>
+          <p>Correct! This will cause a NameError because the function hasn't been defined yet.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>TypeError</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! A TypeError occurs when a variable of an incorrect type is used in a function argument or operation. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>See what happens if we move the function definitions around so that <c>repeat_lyrics</c> is defined before
+            <c>print_lyrics</c>.</p>
+  <program xml:id="functDef_codelens" interactive="codelens" language="python">
+    <input>
+def repeat_lyrics():
+    print_lyrics()
+    print_lyrics()
+
+def print_lyrics():
+    print("I'm a lumberjack, and I'm okay.")
+    print('I sleep all night and I work all day.')
+
+repeat_lyrics()
+    </input>
+  </program>
+  <exercise label="functDef_MC_order">
+    <statement>
+      <p>Q-5: Consider the code block below. What happens when you run this program?</p>
+      <program language="python">
+        <input>
+def repeat_lyrics():
+    print_lyrics()
+    print_lyrics()
+
+def print_lyrics():
+    print("I'm a lumberjack, and I'm okay.")
+    print('I sleep all night and I work all day.')
+
+repeat_lyrics()
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>The lyrics print like normal.</p>
+        </statement>
+        <feedback>
+          <p>Correct! This doesn't cause an error because both functions are defined before repeat_lyrics is called.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>We get a TypeError.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This will not cause a TypeError because no invalid data types are used. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>We get a NameError.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! This will not cause a NameError because both functions are defined before repeat_lyrics is called. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The program compiles but nothing prints.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Something will be printed. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="functDef_PP_flavors" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Construct a block of code with two functions. The first function is called printFlavors,
+            which lists the available flavors. The second function should print the products and call the
+            first function. Finally, call the second function. Watch your indentation! Hint: there is one
+            unused code block.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>def printFlavors():</cline>
+      </block>
+      <block order="6">
+        <cline>    print("Vanilla")</cline>
+        <cline>    print("Chocolate")</cline>
+        <cline>    print("Strawberry")</cline>
+      </block>
+      <block order="5">
+        <cline>def printProducts():</cline>
+      </block>
+      <block order="2">
+        <cline>    print("Ice cream")</cline>
+        <cline>    print("Milkshake")</cline>
+        <cline>    print("Frozen yogurt")</cline>
+        <cline>    print("************")</cline>
+        <cline>    print("Flavors:")</cline>
+        <cline>    printFlavors()</cline>
+      </block>
+      <block order="1" correct="no">
+        <cline>    print("Ice cream")  </cline>
+        <cline>    print("Milkshake")</cline>
+        <cline>    print("Frozen yogurt")</cline>
+        <cline>    print("************")</cline>
+        <cline>    print("Flavors:")</cline>
+        <cline>    print(printFlavors())</cline>
+      </block>
+      <block order="4">
+        <cline>printProducts()</cline>
+      </block>
+    </blocks>
+  </exercise>
+</section>

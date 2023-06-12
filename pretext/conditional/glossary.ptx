@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<section xml:id="conditional_glossary">
+  <title>Glossary</title>
+  <glossary sorted="False">
+    <gi>
+      <title>Body</title>
+      <p>The sequence of statements within a compound statement.</p>
+    </gi>
+    <gi>
+      <title>Boolean Expression</title>
+      <p>An expression whose value is either <c>True</c> or <c>False</c>.</p>
+    </gi>
+    <gi>
+      <title>Branch</title>
+      <p>One of the alternative sequences of statements in a conditional statement.</p>
+    </gi>
+    <gi>
+      <title>Chained Conditional</title>
+      <p>A conditional statement with a series of alternative branches.</p>
+    </gi>
+    <gi>
+      <title>Comparison Operator</title>
+      <p>One of the operators that compares its operands: <c>==</c>, <c>!=</c>, <c>&gt;</c>,
+                            <c>&lt;</c>, <c>&gt;=</c>, and <c>&lt;=</c>.</p>
+    </gi>
+    <gi>
+      <title>Conditional Statement</title>
+      <p>A statement that controls the flow of execution depending on some condition.</p>
+    </gi>
+    <gi>
+      <title>Condition</title>
+      <p>The boolean expression in a conditional statement that determines which
+                            branch is executed.</p>
+    </gi>
+    <gi>
+      <title>Compound Statement</title>
+      <p>A statement that consists of a header and a body. The header ends with a
+                            colon (:). The body is indented relative to the header.</p>
+    </gi>
+    <gi>
+      <title>Guardian Pattern</title>
+      <p>Where we construct a logical expression with additional comparisons to
+                            take advantage of the short-circuit behavior.</p>
+    </gi>
+    <gi>
+      <title>Logical Operator</title>
+      <p>One of the operators that combines boolean expressions: <c>and</c>, <c>or</c>,
+                            and <c>not</c>.</p>
+    </gi>
+    <gi>
+      <title>Nested Conditional</title>
+      <p>A conditional statement that appears in one of the branches of another
+                            conditional statement.</p>
+    </gi>
+    <gi>
+      <title>Traceback</title>
+      <p>A list of the functions that are executing, printed when an exception occurs.</p>
+    </gi>
+    <gi>
+      <title>Short Circuit</title>
+      <p>When Python is part-way through evaluating a logical expression and stops
+                            the evaluation because Python knows the final value for the expression
+                            without needing to evaluate the rest of the expression.</p>
+    </gi>
+  </glossary>
+  <exercise label="cond-dnd-glossary1">
+    <statement>
+      <p>Match each term with its definition.</p>
+    </statement>
+    <feedback>
+      <p>Look above for these terms.</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>body</premise>
+        <response>The sequence of statements within a compound statement.</response>
+      </match>
+      <match order="2">
+        <premise>branch</premise>
+        <response>One of the alternative sequences of statements in a conditional statement.</response>
+      </match>
+      <match order="3">
+        <premise>guardian pattern</premise>
+        <response>Where we construct a logical expression with additional
+comparisons to take advantage of the short-circuit behavior.</response>
+      </match>
+      <match order="4">
+        <premise>short circuit</premise>
+        <response>When Python is part-way through evaluating a logical expression and
+stops the evaluation because Python knows the final value for the expression without
+needing to evaluate the rest of the expression.</response>
+      </match>
+    </matches>
+  </exercise>
+  <exercise label="cond-dnd-glossary2">
+    <statement>
+      <p>Match each term with its definition.</p>
+    </statement>
+    <feedback>
+      <p>Look above for these terms.</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>boolean expression</premise>
+        <response>An expression whose value is either ``True`` or ``False``.</response>
+      </match>
+      <match order="2">
+        <premise>comparison operator</premise>
+        <response>One of the operators that compares its operands: ``==``,
+``!=``, ``&gt;``, ``&lt;``, ``&gt;=``, and ``&lt;=``.</response>
+      </match>
+      <match order="3">
+        <premise>logical operator</premise>
+        <response>One of the operators that combines boolean expressions:
+``and``, ``or``, and ``not``.</response>
+      </match>
+      <match order="4">
+        <premise>traceback</premise>
+        <response>A list of the functions that are executing, printed when an exception occurs.</response>
+      </match>
+    </matches>
+  </exercise>
+  <exercise label="cond-dnd-glossary3">
+    <statement>
+      <p>Match each term with its definition.</p>
+    </statement>
+    <feedback>
+      <p>Look above for these terms.</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>chained conditional</premise>
+        <response>A conditional statement with a series of alternative branches.</response>
+      </match>
+      <match order="2">
+        <premise>conditional statement</premise>
+        <response>A statement that controls the flow of execution depending
+on some condition.</response>
+      </match>
+      <match order="3">
+        <premise>condition</premise>
+        <response>The boolean expression in a conditional statement that determines which
+branch is executed.</response>
+      </match>
+      <match order="4">
+        <premise>compound statement</premise>
+        <response>A statement that consists of a header and a body.</response>
+      </match>
+      <match order="5">
+        <premise>nested conditional</premise>
+        <response>A conditional statement that appears in one of the branches of
+another conditional statement.</response>
+      </match>
+    </matches>
+  </exercise>
+</section>

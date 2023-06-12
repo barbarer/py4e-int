@@ -1,0 +1,1063 @@
+<?xml version="1.0"?>
+<section xml:id="functions_peer-instruction-function-multiple-choice-questions">
+  <title>Peer Instruction: Function Multiple Choice Questions</title>
+  <exercise label="ctp-reviewtest1-14_review_05">
+    <statement>
+      <p>Q-1: Which of the following creates a function <c>min(a, b, c)</c> that takes in integers a, b, c and returns the smallest.</p>
+      <program language="python">
+        <input>
+A.
+def min(a, b, c):
+    smallest = a
+    if (b &lt; smallest):
+        smallest = b
+    if (c &lt; smallest):
+        smallest = c
+    return smallest
+</input>
+      </program>
+      <pre>B.
+
+ def min(a, b, c):
+     min = a
+     if (b &gt; min):
+         min = b
+     if (c &lt; smallest):
+         min = c</pre>
+      <pre>C.
+
+ def min(a, b, c):
+     smallest = a
+     if (b &lt; smallest):
+         smallest = b
+     if (c &lt; smallest):
+         smallest = c
+ min()</pre>
+      <pre>D.
+
+ def min(a, b, c):
+     smallest = a
+     if (b &gt; smallest):
+         smallest = b
+     if (c &gt; smallest):
+         smallest = c
+     return smallest</pre>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Correct! Variable 'smallest' here will always be the smallest number among a, b and c.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Try again. Variable 'smallest' is not defined in this program.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Try again. This will give a type error because min() is missing positional arguments: a, b and c. And this question only requires to write a function. So min() is not necessary.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Try again. This will output the biggest number among a, b and c.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Try again. The hint is: we can compare a, b and c in pairs using If block. After each comparison, we make variable  'smallest' equal to the smaller number in the pair.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-reviewtest1-14_review_08">
+    <statement>
+      <p>Q-2: What does the following code print?</p>
+      <program language="python">
+        <input>
+def woot(x):
+      print (x)
+      yar(x + 1)
+      print (x)
+      yar(x + 2)
+
+def yar(y):
+    if y &gt; 5:
+        print (y * 2)
+    else:
+        foo(y + 1)
+
+def foo(z):
+      print(z - 1)
+      yar(z + 1)
+
+def main():
+      woot (3)
+
+main()
+</input>
+      </program>
+      <pre>A.
+3
+4
+12
+3
+10</pre>
+      <pre>B.
+3
+4
+12
+3
+5
+14</pre>
+      <pre>C.
+3
+4
+10
+10
+24</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Try again. Let's first break woot(3) down into four parts: print(3), yar(4), print(x) and yar(5). And your problem might be related to yar(4). Because 4 &lt; 5, yar(4) jumps to Else block and leads to foo (5). foo(5) leads to prints(4) and yar(6). Because 6 &gt; 5, yar(6) leads to print(6*2). So yar(4) outputs 4 and 12.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Correct! woot(3) can be broken down into four parts: print(3), yar(4), print(x) and yar (5).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Try again. Let's first break woot(3) down into four parts: print(3), yar(4), print(x) and yar (5).  And your problem might be related to yar(5). Because 7 &gt; 5, yar(7) prints (7 * 2), which is 14.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above</p>
+        </statement>
+        <feedback>
+          <p>Try again. woot(3) can be broken down into four parts: print(3), yar(4), print(x) and yar(5). The difficulty is that yar(4) and yar (5) satisfy different conditions. yar(4) activates foo() function while yar(5) doesn't. Try to calculate the output of each part based on the condition.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Try again. woot(3) can be broken down into four parts: print(3), yar(4), print(x) and yar(5). The difficulty is that yar(4) and yar (5) satisfy different conditions. Try to calculate the output of each part based on the condition.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-reviewtest1-14_review_07">
+    <statement>
+      <p>Q-3: What will the following code return from <c>fact(3)</c>?</p>
+      <program language="python">
+        <input>
+def fact(n):
+    if (n == 1):
+        return 1
+    else:
+        return n * fact(n - 1)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>Try again. Because n != 1, fact(3) returns 3 * fact(2). And 2 != 1, fact(2) returns 2 * fact(1). Since 1 == 1, fact(1) returns 1. fact(3) returns 3 * 2 * fact(1), which equals to 6.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Try again. Because n != 1, fact(3) returns 3 * fact(2). And 2 != 1, fact(2) returns 2 * fact(1). Since 1 == 1, fact(1) returns 1. fact(3) returns 3 * 2 * fact(1), which equals to 6.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>6</p>
+        </statement>
+        <feedback>
+          <p>Correct! The program returns the factorial of 3 which is 3 * fact(2) which is 2 * fact(1) which is 1.  So that is 2 * 1 = 2 * 3 = 6.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>This code will cause an error</p>
+        </statement>
+        <feedback>
+          <p>Try again. This code uses recursion but n gradually approaches 1. When n == 1, the program stops.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Try again. The program returns a value based on the value of n. When n != 1, it always returns n * fact(n-1), which leads to another round of recursion. But n gradually approaches 1 during the process. When n == 1, the program stops.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-recursion-15_recursion_06">
+    <statement>
+      <p>Q-4: What will the following code print?</p>
+      <program language="python">
+        <input>
+def num(x):
+    print(x)
+    num(x - 1)
+    print(x)
+
+num(4)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>4, 3, 2, 1</p>
+        </statement>
+        <feedback>
+          <p>Try again. Does the recursion ever stop?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>4, 3, 2, 1, 2, 3, 4</p>
+        </statement>
+        <feedback>
+          <p>Try again. Does the recursion ever stop?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>4, 3, 2, 1, 1, 2, 3, 4</p>
+        </statement>
+        <feedback>
+          <p>Try again. Does the recursion ever stop?</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>This code has an infinite recursion</p>
+        </statement>
+        <feedback>
+          <p>Correct! This code has an infinite loop, since it does not have a base case.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Try again. You can focus on the num() function. There is an endless recursion here.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-recursion-15_recursion_09">
+    <statement>
+      <p>Q-5: What will the following code print?</p>
+      <program language="python">
+        <input>
+def num(x):
+    if x &gt; 0:
+        print(x)
+        num(x - 1)
+        num(x - 2)
+        print(x)
+
+num(4)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>4 3 2 1 3 2 1 1 2 3 4</p>
+        </statement>
+        <feedback>
+          <p>Try again. Because 4 &gt; 0, num(4) --&gt; 4 num(3) num(2) 4. Because there is only one num(3), number 3 will only show up twice.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>4 3 2 1 3 2 1 1 2 3 1 2 3 4</p>
+        </statement>
+        <feedback>
+          <p>Try again. Because 4 &gt; 0, num(4) --&gt; 4 num(3) num(2) 4. Because there is only one num(3), number 3 will only show up twice. And as we can see num(4) --&gt; 4 num(3) num(2) 4, num(2) is before 4, so the last two number must be 2 and 4.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>4 3 2 1 1 2 1 1 3 2 1 1 2 4</p>
+        </statement>
+        <feedback>
+          <p>Correct! The recursion will stop when x &lt; 0, but it has two functions embedded in num(4): num(3) and num(2), which makes it a little complicated.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>This code will cause an error</p>
+        </statement>
+        <feedback>
+          <p>Try again. This will not report an error because once x &lt; 0 or x = 0, the function will stop.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Try again. Because 4 &gt; 0, num(4) --&gt; 4 num(3) num(2) 4. Since 3 &gt; 0, num(3) --&gt; 3 num(2) num(1) 3. Because 2 &gt; 0, num(2)--&gt; 2 num(1) num(0) 2. Becuase 1 &gt; 0, num(1) --&gt; 1 1. Try to detach each part as a block.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-recursion-15_recursion_11">
+    <statement>
+      <p>Q-6: What is the value of <c>y</c> after the following code runs?</p>
+      <program language="python">
+        <input>
+def noob(x):
+    if x &lt; 2:
+        return 1
+    else:
+        a = noob(x - 1)
+        b = noob(x - 2)
+        return a + b
+
+y = noob(4)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>Try again. Everything in Python is an object. So, your functions can return numeric values ( int , float , and complex values), collections and sequences of objects... But a + b here is not an object. So it will report an error.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>2</p>
+        </statement>
+        <feedback>
+          <p>Try again. Everything in Python is an object. So, your functions can return numeric values ( int , float , and complex values), collections and sequences of objects... But a + b here is not an object. So it will report an error.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>5</p>
+        </statement>
+        <feedback>
+          <p>Try again. Everything in Python is an object. So, your functions can return numeric values ( int , float , and complex values), collections and sequences of objects... But a + b here is not an object. So it will report an error.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>This code will cause an error</p>
+        </statement>
+        <feedback>
+          <p>Correct! Everything in Python is an object. So, your functions can return numeric values ( int , float , and complex values), collections and sequences of objects... But a + b here is not an object. So it will report an error.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Try again. Everything in Python is an object. So, your functions can return numeric values ( int , float , and complex values), collections and sequences of objects... But a + b here is not an object. So it will report an error.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-recursion-16_morerecursion_3">
+    <statement>
+      <p>Q-7: Which answer is correct?</p>
+      <program language="python">
+        <input>
+A.
+
+def fac(x):
+    return x * fac(x - 1)
+</input>
+      </program>
+      <pre>B.
+
+def fac(x):
+      if x == 0:
+        return 1
+      return x * fac(x - 1)</pre>
+      <pre>C.
+
+def fac(x):
+    if x == 0:
+        return 1
+    else:
+        return x * fac(x - 1)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Try again. This function has an infinite recursion.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Try again. Option B is correct! But option C is also correct. The else block in option C can be removed.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Try again. Option C is correct! But option B is also correct. The else block in option C can be removed.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Both B and C</p>
+        </statement>
+        <feedback>
+          <p>Correct! Option B and C actually do the same thing.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Try again. Examine whether each option can end by itself! Some will cause a loop without an end.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-recursion-16_morerecursion_10">
+    <statement>
+      <p>Q-8: Will this code return <c>True</c> when <c>x</c> is a palidrome (a string that reads the same backwards as forwards like abba)?</p>
+      <program language="python">
+        <input>
+def pal(x):
+    if x[0] != x[len(x) - 1]:
+        return False
+    else:
+        return pal(x[1:len(x) - 1])
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Yes</p>
+        </statement>
+        <feedback>
+          <p>Try again. The function examines whether the sequence is symmetrical by comparing letters counrting backwards with the ranked order. However, if the word has an odd number of letters, when the function approaches the middle of the sequence, it will report string index out of range error. Becuase len(x) is equal to 0, leading x[1:len(x)-1] out of range.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>No</p>
+        </statement>
+        <feedback>
+          <p>Correct! The function will report an error when it encounters a word with an odd number of letters. Becuase len(x) is equal 0, leading x[1:len(x)-1] out of range.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Try again. The function examines whether the sequence is symmetrical by comparing letters counrting backwards with the ranked order. Try to test it with a word with odd number of letters.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ctp-recursion-16_morerecursion_11">
+    <statement>
+      <p>Q-9: Which answer is correct?</p>
+      <program language="python">
+        <input>
+A.
+
+def pal(x):
+    if len(x) &lt;= 1:
+        return True
+    elif x[0] != x[len(x) - 1]:
+        return False
+    else return pal(x)
+</input>
+      </program>
+      <pre>B.
+
+def pal(x):
+    if x[0] != x[len(x) - 1]:
+              return False
+    else return pal(x[1:len(x) - 1])</pre>
+      <pre>C.
+
+def pal(x):
+    if len(x) &lt;= 0:
+        return True
+    elif x[0] != x[len(x) - 1]:
+        return False
+    else return pal(x[1:len(x) - 1])</pre>
+      <pre>D.
+
+def pal(x):
+    if len(x) &lt;= 1:
+        return True
+    elif x[0] != x[len(x) - 1]:
+        return False
+    else return pal(x[1:len(x)-1])</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Try again. This function only examines whether the first letter is the same with the last one. It has no iteration.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Try again. This function will report an error. Because when len(x) &lt;= 1, len(x) - 1 &lt;= 0. return pal (x[1:len(x)-1]) will report string index out of range error.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Try again. When len(x) = 1, if the string satisfies comdition in the else block, it returns pal(x[1:len(x) - 1]). x[1:0] will report string index out of range error.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p/>
+        </statement>
+        <feedback>
+          <p>Correct! The function examines whether the string is a Palindromes. When len(x) = 1, the functions ends.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I don't know</p>
+        </statement>
+        <feedback>
+          <p>Try again. The function examines whether the string is a Palindromes. It first compares the first letter with the last letter, then the second letter with the seonc last one... Try to focus on how it iterates and its ending conditoon.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_3_4">
+    <statement>
+      <p>Q-10: Which of the following contains a function call?</p>
+      <program language="python">
+        <input>
+(1) type(4.5)
+(2) def add_one(x):
+        return x + 1
+(3) area(2, 9)
+(4) print("Hello")
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>(3) only</p>
+        </statement>
+        <feedback>
+          <p>Try again. Function call is to invoke the program to execute the function. So (1), (3) and (4) are all function calls.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>(2) and (3)</p>
+        </statement>
+        <feedback>
+          <p>Try again. Function call is to invoke the program to execute the function. So (1), (3) and (4) are all function calls. (2) is a function that needs to be executed but not a function call.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>(1), (3), and (4)</p>
+        </statement>
+        <feedback>
+          <p>Correct! Function call is to invoke the program to execute the function. So (1), (3) and (4) are all function calls.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>All of (1), (2), (3), and (4) include a function call</p>
+        </statement>
+        <feedback>
+          <p>Try again. Function call is to invoke the program to execute the function. So (1), (3) and (4) are all function calls. (2) is a function that needs to be executed but not a function call.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_3_5">
+    <statement>
+      <p>Q-11: What does the following code print?</p>
+      <program language="python">
+        <input>
+def calculate(w, x, y):
+  a = x
+  b = w + 1
+  return a + b + 3
+
+print(calculate(3, 2, 0))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>5</p>
+        </statement>
+        <feedback>
+          <p>Try again. calculate(3, 2, 0) assigns different values to w, x and y. a = x = 2, b = w + 1 = 3 + 1 = 4. Therefore a + b + 3 = 9. The functions returns 9.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>9</p>
+        </statement>
+        <feedback>
+          <p>Correct! calculate(3, 2, 0) assigns different values to w, x and y. a = x = 2, b = w + 1 = 3 + 1 = 4. Therefore a + b + 3 = 9. The functions returns 9.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>0</p>
+        </statement>
+        <feedback>
+          <p>Try again. calculate(3, 2, 0) assigns different values to w, x and y. a = x = 2, b = w + 1 = 3 + 1 = 4. Therefore a + b + 3 = 9. The functions returns 9.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Try again. calculate(3, 2, 0) assigns different values to w, x and y. a = x = 2, b = w + 1 = 3 + 1 = 4. Therefore a + b + 3 = 9. The functions returns 9.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_3_6">
+    <statement>
+      <p>Q-12: What does the following code print?</p>
+      <program language="python">
+        <input>
+def calculate(w, x, y):
+  a = x
+  b = w + 1
+  return a + b + w
+
+print(calculate(1, 2, 0))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Try again. calculate(1, 2, 0) assigns values 1, 2 and 0 to w, x and y. a = x = 2, b = w + 1 = 1 + 1 = 2. Therefore a + b + 2 = 5. The functions returns 5.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>4</p>
+        </statement>
+        <feedback>
+          <p>Try again. calculate(1, 2, 0) assigns values 1, 2 and 0 to w, x and y. a = x = 2, b = w + 1 = 1 + 1 = 2. Therefore a + b + 2 = 5. The functions returns 5.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>5</p>
+        </statement>
+        <feedback>
+          <p>Correct! calculate(1, 2, 0) assigns values 1, 2 and 0 to w, x and y. a = x = 2, b = w + 1 = 1 + 1 = 2. Therefore a + b + 2 = 5. The functions returns 5.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>6</p>
+        </statement>
+        <feedback>
+          <p>Try again. calculate(1, 2, 0) assigns values 1, 2 and 0 to w, x and y. a = x = 2, b = w + 1 = 1 + 1 = 2. Therefore a + b + 2 = 5. The functions returns 5.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_3_7">
+    <statement>
+      <p>Q-13: Which of the following are true about this code.</p>
+      <program language="python">
+        <input>
+def add_one(x):
+return x + 1
+
+x = 2
+x = x + add_one(x)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>No bugs. The code is fine</p>
+        </statement>
+        <feedback>
+          <p>Try again. It is required by Python that the body of the function should be indented.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>The function body is not indented</p>
+        </statement>
+        <feedback>
+          <p>Correct! The body of the function is not indented.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>We are using x as a parameter and a variable, but we are not allowed to do that</p>
+        </statement>
+        <feedback>
+          <p>Try again! It is required by Python that the body of the function should be indented.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Both B and C are bugs</p>
+        </statement>
+        <feedback>
+          <p>Try again! It is required by Python that the body of the function should be indented.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_5_6">
+    <statement>
+      <p>Q-14: What does the following code print?</p>
+      <program language="python">
+        <input>
+def first(a):
+  a = 8
+  return a
+
+a = 20
+first(a)
+print(a)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>8</p>
+        </statement>
+        <feedback>
+          <p>Try again. In fucntions, changes to a in function first(a) do not change the value of a.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>20</p>
+        </statement>
+        <feedback>
+          <p>Correct! In fucntions, changes to a in function first(a) do not change the value of a.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Error, because a cannot be assigned in two places</p>
+        </statement>
+        <feedback>
+          <p>Try again. Parameter passing is just like an assignment statement. When first starts running, a gets the value of 20. And in fucntions, changes to a in function first(a) do not change the value of a.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None</p>
+        </statement>
+        <feedback>
+          <p>Try again. Parameter passing is just like an assignment statement. When first starts running, a gets the value of 20. And in fucntions, changes to a in function first(a) do not change the value of a.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>0</p>
+        </statement>
+        <feedback>
+          <p>Try again. Parameter passing is just like an assignment statement. When first starts running, a gets the value of 20. And in fucntions, changes to a in function first(a) do not change the value of a.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_5_7">
+    <statement>
+      <p>Q-15: What does the following code print?</p>
+      <program language="python">
+        <input>
+def first(a):
+  a = 8
+  return a
+
+a = 20
+a= first(a)
+print(a)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>8</p>
+        </statement>
+        <feedback>
+          <p>Correct! In function first(a), a has been assigned to a new value 8. So first(a) returns 8. And a = first(a) makes a equals to 8.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>20</p>
+        </statement>
+        <feedback>
+          <p>Try again. In function first(a), a has been assigned to a new value 8. So first(a) returns 8, however the value of a is still 20 outside the function until a has been assigned with a new value first(a). Therefore, a equals to 8.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_5_9">
+    <statement>
+      <p>Q-16: Which of the following sets <c>x</c> to 5 if <c>x</c> is set to the result from calling the function?</p>
+      <program language="python">
+        <input>
+def f1():
+  return 5
+def f2():
+  print(5)
+def f3():
+  return print(5)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>x = f1()</p>
+        </statement>
+        <feedback>
+          <p>Correct! f1() returns 5 and sets x to 5.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>x = f2()</p>
+        </statement>
+        <feedback>
+          <p>Try again. f2() only prints 5 but does not return the value.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>x = f3()</p>
+        </statement>
+        <feedback>
+          <p>Try again. f3() returns the result from print(5), but does not return the value 5.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Two of the above</p>
+        </statement>
+        <feedback>
+          <p>Try again. There is only one function that sets x to 5.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>All of the above</p>
+        </statement>
+        <feedback>
+          <p>Try again. There is only one function that sets x to 5.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_5_11">
+    <statement>
+      <p>Q-17: What does the following code print?</p>
+      <program language="python">
+        <input>
+def a(num):
+  num = 4
+  return 2
+
+def b(val):
+  num = 8
+  print(a(1))
+
+b(2)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>Try again. The output of b(2) is print(a(1)). In a(num), the function returns 2. Therefore, b(2) outputs 2. There is nothing to do with num here.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>2</p>
+        </statement>
+        <feedback>
+          <p>Correct! The output of b(2) is print(a(1)). In a(num), the function returns 2. Therefore, b(2) outputs 2. .</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>4</p>
+        </statement>
+        <feedback>
+          <p>Try again. The output of b(2) is print(a(1)). In a(num), the function returns 2. Therefore, b(2) outputs 2. There is nothing to do with num here.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>8</p>
+        </statement>
+        <feedback>
+          <p>Try again. The output of b(2) is print(a(1)). In a(num), the function returns 2. Therefore, b(2) outputs 2. There is nothing to do with num here.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Error because of an undefined variable</p>
+        </statement>
+        <feedback>
+          <p>Try again. The output of b(2) is print(a(1)). In a(num), the function returns 2. Therefore, b(2) outputs 2. There is nothing to do with num here..</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_5_12">
+    <statement>
+      <p>Q-18: What does the following code print?</p>
+      <program language="python">
+        <input>
+def a(num):
+  num = 4
+  return 2
+
+def b(val):
+  val = 8
+  print(a(1))
+
+b(2)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>Try again. The output of b(2) is print(a(1)). In a(num), the function returns 2. Therefore, b(2) outputs 2. val and num do not play a role in the output of b(2).</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>2</p>
+        </statement>
+        <feedback>
+          <p>Correct! The output of b(2) is print(a(1)). In a(num), the function returns 2. Therefore, b(2) outputs 2. .</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>4</p>
+        </statement>
+        <feedback>
+          <p>Try again. The output of b(2) is print(a(1)). In a(num), the function returns 2. Therefore, b(2) outputs 2. val and num do not play a role in the output of b(2).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>8</p>
+        </statement>
+        <feedback>
+          <p>Try again. The output of b(2) is print(a(1)). In a(num), the function returns 2. Therefore, b(2) outputs 2. val and num do not play a role in the output of b(2).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Error because of an undefined variable</p>
+        </statement>
+        <feedback>
+          <p>Try again. The output of b(2) is print(a(1)). In a(num), the function returns 2. Therefore, b(2) outputs 2. val and num do not play a role in the output of b(2).</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

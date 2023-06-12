@@ -1,0 +1,559 @@
+<?xml version="1.0"?>
+<exercises xml:id="pictures_multiple-choice-questions">
+  <title>Multiple Choice Questions</title>
+  <exercise label="pictures-mc-q1">
+    <statement>
+      <p>Q-1: What are the three colors parts that make up each pixel?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>red, blue and yellow</p>
+        </statement>
+        <feedback>
+          <p>These are the primary colors for paint, but computers use light.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>red, green and blue</p>
+        </statement>
+        <feedback>
+          <p>Correct. Computers use red, green, and blue light to make all of the colors.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>red, white and blue</p>
+        </statement>
+        <feedback>
+          <p>Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>blue, black and red</p>
+        </statement>
+        <feedback>
+          <p>Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="pictures-mc-q2_v2">
+    <statement>
+      <p>Q-2: What does the following code block do?</p>
+      <program language="python">
+        <input>
+from image import *
+img = Image('beach.jpg')
+pixels = img.getPixels()
+for p in pixels:
+    r = p.getRed()
+    p.setGreen(r)
+    img.updatePixel(p)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>Sets the green value in every pixel to the red value.</p>
+        </statement>
+        <feedback>
+          <p>Correct. It sets the green value to the red value.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Switches the green and red values in every pixel.</p>
+        </statement>
+        <feedback>
+          <p>It only sets the green value, not the red value.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Creates a green filter on the image.</p>
+        </statement>
+        <feedback>
+          <p>What does it set the green value to?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The code has no effect on pixel color.</p>
+        </statement>
+        <feedback>
+          <p>It does change the pixel color.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="pictures-mc-q3-v2">
+    <statement>
+      <p>Q-3: Every pixel has a color with a red value, a green value and a blue value. What is the range (minimum value and maximum value)?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>0 to 100</p>
+        </statement>
+        <feedback>
+          <p>The maximum value is not 100.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>0 to 255</p>
+        </statement>
+        <feedback>
+          <p>Correct.  The minimum value is 0 and the maximum is 255.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1 to 10</p>
+        </statement>
+        <feedback>
+          <p>Neither of these is correct.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1 to 255</p>
+        </statement>
+        <feedback>
+          <p>The minimum value is not 1.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="pictures-mc-q4-v2">
+    <statement>
+      <p>Q-4: If a pixel has red=0, green=255, and blue=0, what color will it be?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Red</p>
+        </statement>
+        <feedback>
+          <p>Try again. If red equals 0, there will be no red color in the resulting pixel.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Green</p>
+        </statement>
+        <feedback>
+          <p>Correct. Since green equals 255 and the other two values equal 0, the resulting pixel color will be green.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Black</p>
+        </statement>
+        <feedback>
+          <p>Try again. All values must be 0 for the pixel to be black.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Blue</p>
+        </statement>
+        <feedback>
+          <p>Try again. If blue equals 0, there will be no blue color in the resulting pixel.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>White</p>
+        </statement>
+        <feedback>
+          <p>Try again. All values must be 255 for the pixel to be white.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="pictures-mc-q5-v2">
+    <statement>
+      <p>Q-5: Which code block should you insert in the for loop below to correctly increase the blue by 180%?</p>
+      <program language="python">
+        <input>
+from image import *
+
+img = Image("motorcycle.jpg")
+pixels = img.getPixels()
+
+for p in pixels:
+    #INSERT LINES HERE
+    img.updatePixel(p)
+win = ImageWin(img.getWidth(), img.getHeight())
+img.draw(win)
+</input>
+      </program>
+      <program language="python">
+        <input>
+I.
+
+r = p.getRed()
+p.setRed(r * 180)
+</input>
+      </program>
+      <program language="python">
+        <input>
+II.
+
+b = p.getBlue()
+p.setBlue(b * 1.8)
+</input>
+      </program>
+      <program language="python">
+        <input>
+III.
+
+b = p.getBlue()
+p.setBlue(b * 180)
+</input>
+      </program>
+      <program language="python">
+        <input>
+IV.
+
+p.setBlue(b * 1.8)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>I</p>
+        </statement>
+        <feedback>
+          <p>No, this code would increase red, not blue, by 180%.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>II</p>
+        </statement>
+        <feedback>
+          <p>Correct.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>III</p>
+        </statement>
+        <feedback>
+          <p>No, you have to convert the percentage you want to increase by into a decimal. If you want to increase a color by 180%, you would multiply by 1.8.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>IV</p>
+        </statement>
+        <feedback>
+          <p>No, you have to get the blue value first in order to increase it by a certain amount.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="pictures-mc-reduce-25-percent-q6-v2">
+    <statement>
+      <p>Q-6: Which of the following would reduce the green value by 25%?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>multiply the green value by 25</p>
+        </statement>
+        <feedback>
+          <p>To reduce the green value you must multiply by a value that is less than 1.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>multiply the green value by 0.25</p>
+        </statement>
+        <feedback>
+          <p>This would reduce it by 75%.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>multiply the green value by 0.5</p>
+        </statement>
+        <feedback>
+          <p>This would reduce it by 50%.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>multiply the green value by 0.75</p>
+        </statement>
+        <feedback>
+          <p>This would reduce it by 25%.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="pictures-mc-q7">
+    <statement>
+      <p>Q-7: Which code block would allow you to copy the bottom half of the image onto the top half?</p>
+      <program language="python">
+        <input>
+I.
+
+from image import *
+img = Image("vangogh.jpg")
+
+halfway = (int) (img.getHeight() / 2)
+for x in range(img.getWidth()):
+    for y in range(halfway, img.getHeight()):
+        p = img.getPixel(x, y)
+        r = p.getRed()
+        g = p.getGreen()
+        b = p.getBlue()
+        newPixel = Pixel(r, g, b)
+        img.setPixel(x, y - halfway, newPixel)
+
+win = ImageWin(img.getWidth(),img.getHeight())
+img.draw(win)
+</input>
+      </program>
+      <program language="python">
+        <input>
+II.
+
+from image import *
+img = Image("vangogh.jpg")
+
+halfway = (int) (img.getWidth() / 2)
+for x in range(halfway):
+    for y in range(img.getHeight()):
+        p = img.getPixel(x, y)
+        r = p.getRed()
+        g = p.getGreen()
+        b = p.getBlue()
+        newPixel = Pixel(r, g, b)
+        img.setPixel(halfway + x, y, newPixel)
+
+win = ImageWin(img.getWidth(),img.getHeight())
+img.draw(win)
+</input>
+      </program>
+      <program language="python">
+        <input>
+III.
+
+from image import *
+img = Image("vangogh.jpg")
+
+halfway_x = (int) (img.getWidth() / 2)
+halfway_y = (int) (img.getHeight() / 2)
+for x in range(halfway_x):
+    for y in range(halfway_y):
+        p = img.getPixel(x, y)
+        r = p.getRed()
+        g = p.getGreen()
+        b = p.getBlue()
+        newPixel = Pixel(r, g, b)
+        img.setPixel(x, halfway_y + y, newPixel)
+
+win = ImageWin(img.getWidth(),img.getHeight())
+img.draw(win)
+</input>
+      </program>
+      <program language="python">
+        <input>
+IV.
+
+from image import *
+img = Image("vangogh.jpg")
+
+halfway = (int) (img.getHeight() / 2)
+for x in range(img.getWidth()):
+    for y in range(halfway):
+        p = img.getPixel(x, y)
+        r = p.getRed()
+        g = p.getGreen()
+        b = p.getBlue()
+        newPixel = Pixel(r, g, b)
+        img.setPixel(x, halfway + y, newPixel)
+
+win = ImageWin(img.getWidth(),img.getHeight())
+img.draw(win)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>I</p>
+        </statement>
+        <feedback>
+          <p>Correct. This code block copies from the bottom half of the image to the top half.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>II</p>
+        </statement>
+        <feedback>
+          <p>Try again. This code block copies from the left half to the right half.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>III</p>
+        </statement>
+        <feedback>
+          <p>Try again. This code block copies the top left quadrant to the bottom left quadrant.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>IV</p>
+        </statement>
+        <feedback>
+          <p>Try again. This code block copies the top half of the image onto the bottom of the image.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="pictures-make-white-q8">
+    <statement>
+      <p>Q-8: Which of the following combinations of red (r), green (g), and blue (b) values makes white?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>r = 255, g = 0, b = 0</p>
+        </statement>
+        <feedback>
+          <p>This would be red.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>r = 0, g = 0, b = 0</p>
+        </statement>
+        <feedback>
+          <p>This would be black (no light).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>r = 0, g = 255, b = 0</p>
+        </statement>
+        <feedback>
+          <p>This would be green</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>r = 255, g = 255, b = 255</p>
+        </statement>
+        <feedback>
+          <p>Correct.  To make white set all values to 255.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="pictures-mc-q9">
+    <statement>
+      <p>Q-9: What happens when we run the following code?</p>
+      <program language="python">
+        <input>
+from image import *
+img = Image("vangogh.jpg")
+
+for x in range(img.getWidth()):
+    for y in range(img.getHeight()):
+        p = img.getPixel(x, y)
+        img.setPixel(img.getWidth() - 1 - y,
+                     img.getHeight() - 1 - x,
+                     p)
+
+win = ImageWin(img.getWidth(),img.getHeight())
+img.draw(win)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>The image is rotated 90 degree to the right.</p>
+        </statement>
+        <feedback>
+          <p>We would have to create a new image and set the values in the new image from the old pixel values for this to be true.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The image is mirrored around a diagonal line from the top left to the bottom right.</p>
+        </statement>
+        <feedback>
+          <p>Close, try again!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The image is mirrored vertically.</p>
+        </statement>
+        <feedback>
+          <p>This would be true if the pixels were copied to the same row.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>The image is mirrored around a diagonal line from the top right to the bottom left.</p>
+        </statement>
+        <feedback>
+          <p>Correct.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="pictures-mc-q10-v2">
+    <statement>
+      <p>Q-10:     What line of code sets the red, green and blue values simultaneously?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>setPixel(r, g, b)</p>
+        </statement>
+        <feedback>
+          <p>There is no setPixel method.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Pixel(r, g, b)</p>
+        </statement>
+        <feedback>
+          <p>Correct. You can set the red, blue, and green when you create a Pixel.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>setAll(r, g, b)</p>
+        </statement>
+        <feedback>
+          <p>There is no setAll method.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>This cannot be accomplished using a single line of code.</p>
+        </statement>
+        <feedback>
+          <p>You can actually set the red, blue, and green at the same time.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</exercises>

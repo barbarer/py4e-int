@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<section xml:id="files_peer-instruction-text-files-multiple-choice-questions">
+  <title>Peer Instruction: Text Files Multiple Choice Questions</title>
+  <exercise label="dz-lecture_17_3">
+    <statement>
+      <p>Q-1: A program is designed to retrieve some data from a file, process it, and output the revised data to another file. Which of the following functions/methods will not be called in the program?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>open</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Open will be called to open the file to be read.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A loop or method for reading (e.g. read)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! A loop or method for reading is required to read an open file.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>write</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Write will be called to write text on to another file.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>close</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Close will be called to after the program is done reading or writing a file.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>All should be called</p>
+        </statement>
+        <feedback>
+          <p>Correct! All these functions/methods will be called by the program.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_17_6">
+    <statement>
+      <p>Q-2: Here are the first few lines from a file- songs.txt:</p>
+      <blockquote>
+        <p>Songs Chosen this Semester
+                #Game names for the songs
+                #All ridiculously good soundtracks
+                Sep, 17, Chrono Cross
+                Sep, 19, Zelda 3</p>
+      </blockquote>
+      <p>f refers to this file and has just been opened. What does skip return?</p>
+      <program language="python">
+        <input>
+def skip(f):
+   line = f.readline()
+   line = f.readline()
+   while line.startswith('#' ):
+      line = f.readline()
+   return f.readline()
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>The first line</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Because readline() has been called five times. So skip will return the fifth line.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The second line</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Because readline() has been called five times. So skip will return the fifth line.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The third line</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Because readline() has been called five times. So skip will return the fifth line.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The fourth line</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Because readline() has been called five times. So skip will return the fifth line.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>The fifth line</p>
+        </statement>
+        <feedback>
+          <p>Correct! Because readline() has been called five times. So skip will return the fifth line.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="dz-lecture_17_7">
+    <statement>
+      <p>Q-3: Here are the first few lines from a file- songs.txt:</p>
+      <blockquote>
+        <p>Songs Chosen this Semester
+                #Game names for the songs
+                #All ridiculously good soundtracks
+                Sep, 17, Chrono Cross
+                Sep, 19, Zelda 3</p>
+      </blockquote>
+      <p>f refers to this file and has just been opened. What does skip return?</p>
+      <program language="python">
+        <input>
+def skip(f):
+   line = f.readline()
+   line = f.readline()
+   while line.startswith('#' ):
+      line = f.readline()
+   return line
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>The first line</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Because line was last assigned to the fourth iteration of readline().</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The second line</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Because line was last assigned to the fourth iteration of readline().</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The third line</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Because line was last assigned to the fourth iteration of readline().</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>The fourth line</p>
+        </statement>
+        <feedback>
+          <p>Correct! Because line was last assigned to the fourth iteration of readline().</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The fifth line</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Because line was last assigned to the fourth iteration of readline().</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

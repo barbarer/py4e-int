@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<section xml:id="regex_combining-searching-and-extracting">
+  <title>Combining Searching and Extracting</title>
+  <p>If we want to find numbers on lines that start with the string <q>X-</q> such
+            as:</p>
+  <pre>X-DSPAM-Confidence: 0.8475
+X-DSPAM-Probability: 0.0000</pre>
+  <p>we don't just want any floating-point numbers from any lines. We only
+            want to extract numbers from lines that have the above syntax.</p>
+  <p>We can construct the following regular expression to select the lines:</p>
+  <pre>^X-.*: [0-9.]+</pre>
+  <exercise label="re-combo-mc-match">
+    <statement>
+      <p>11-9-1: Which of the following options will the regular expression <c>^X-.*: [0-9.]+</c> match with? Select all that apply.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>X-DSPAM-Probability: Accurate</p>
+        </statement>
+        <feedback>
+          <p>This regex equation will not match "Accurate" at the end, it is looking for numbers.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>X-DSPAM-Confidence: 0.8475</p>
+        </statement>
+        <feedback>
+          <p>This matches the given regex equation.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>X-Wolverine-Confidence: 1</p>
+        </statement>
+        <feedback>
+          <p>This line matches with the given regex equation.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>X Wolverine-Confidence: 0.53</p>
+        </statement>
+        <feedback>
+          <p>This equation will not match the "-" after the X.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>Translating this, we are saying, we want lines that start with <c>X-</c>,
+            followed by zero or more characters (<c>.*</c>), followed by a colon (<c>:</c>)
+            and then a space. After the space we are looking for one or more
+            characters that are either a digit (0-9) or a period <c>[0-9.]+</c>. Note
+            that inside the square brackets, the period matches an actual period
+            (i.e., it is not a wildcard between the square brackets).</p>
+  <p>This is a very tight expression that will pretty much match only the
+            lines we are interested in as follows:</p>
+  <exercise label="re_combo_ac1">
+    <statement>
+      <p>Search for lines that start with &#x2018;X', followed by any non-whitespace characters
+            and &#x2018;:', followed by a space and any number, where the number can include a decimal</p>
+    </statement>
+    <program xml:id="re_combo_ac1_editor" interactive="activecode" language="python">
+      <input>
+import re
+hand = open('mbox-short.txt')
+for line in hand:
+    line = line.rstrip()
+    if re.search('^X\S*: [0-9.]+', line):
+        print(line)
+        </input>
+    </program>
+  </exercise>
+  <p>When we run the program, we see the data nicely filtered to show only
+            the lines we are looking for.</p>
+  <p>But now we have to solve the problem of extracting the numbers. While it
+            would be simple enough to use <c>split</c>, we can use another
+            feature of regular expressions to both search and parse the line at the
+            same time.</p>
+  <p>Parentheses are another special character in regular expressions. When
+            you add parentheses to a regular expression, they are ignored when
+            matching the string. But when you are using <c>findall()</c>,
+            parentheses indicate that while you want the whole expression to match,
+            you only are interested in extracting a portion of the substring that
+            matches the regular expression.</p>
+  <p>So we make the following change to our program:</p>
+  <exercise label="re_combo_ac2">
+    <statement>
+      <p>Search for lines that start with &#x2018;X', followed by any non-whitespace characters
+            and &#x2018;:', followed by a space and any number. The number can contain a decimal</p>
+    </statement>
+    <program xml:id="re_combo_ac2_editor" interactive="activecode" language="python">
+      <input>
+import re
+s = ['X-DSPAM-Confidence: 0.8475', 'X-DSPAM-Probability: 0.0000', 'X-DSPAM-Confidence: 0.6178', 'X-DSPAM-Probability: 0.0000']
+for item in s:
+    x = re.findall('^X\S*: ([0-9.]+)', item)
+    if len(x) &gt; 0:
+        print(x)
+        </input>
+    </program>
+  </exercise>
+  <p>Instead of calling <c>search()</c>, we add parentheses around the
+            part of the regular expression that represents the floating-point number
+            to indicate we only want <c>findall()</c> to give us back the
+            floating-point number portion of the matching string.</p>
+  <p>The numbers in the output are still in a list and need to be converted from strings to
+            floating point, but we have used the power of regular expressions to
+            both search and extract the information we found interesting.</p>
+  <p>As another example of this technique, if you look at the file there are
+            a number of lines of the form:</p>
+  <pre>Details: http://source.sakaiproject.org/viewsvn/?view=rev&amp;rev=39772</pre>
+  <p>If we wanted to extract all of the revision numbers (the integer number
+            at the end of these lines) using the same technique as above, we could
+            write the following program:</p>
+  <exercise label="re_combo_ac3">
+    <statement>
+      <p>Search for lines that start with &#x2018;Details: rev=' followed by numbers
+            and &#x2018;.' Then print the number if it is greater than zero</p>
+    </statement>
+    <program xml:id="re_combo_ac3_editor" interactive="activecode" language="python">
+      <input>
+import re
+hand = open('mbox-short.txt')
+for line in hand:
+    line = line.rstrip()
+    x = re.findall('^Details:.*rev=([0-9.]+)', line)
+    if len(x) &gt; 0:
+        print(x)
+        </input>
+    </program>
+  </exercise>
+  <p>Translating our regular expression, we are looking for lines that start
+            with <c>Details:</c>, followed by any number of characters (<c>.*</c>), followed
+            by <c>rev=</c>, and then by one or more digits. We want to find lines that
+            match the entire expression but we only want to extract the integer
+            number at the end of the line, so we surround <c>[0-9]+</c> with parentheses.</p>
+  <p>Remember that the <c>[0-9]+</c> is <q>greedy</q> and it tries to make as large a
+            string of digits as possible before extracting those digits. This
+            <q>greedy</q> behavior is why we get all five digits for each number. The
+            regular expression library expands in both directions until it
+            encounters a non-digit, or the beginning or the end of a line.</p>
+  <exercise label="re-combo-mc-a">
+    <statement>
+      <p>11-9-5: Which of these strings would be returned by re.findall(&#x2018;a+', string)? Select all that apply.</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>'aa'</p>
+        </statement>
+        <feedback>
+          <p>+ is greedy so it will match as many 'a's as it can.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>'aaaaaa'</p>
+        </statement>
+        <feedback>
+          <p>+ is greedy in regex and will obtain the most 'a's as possible.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>'aaaaa'</p>
+        </statement>
+        <feedback>
+          <p>+ is greedy so it will match as many 'a's as it can.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>'a+'</p>
+        </statement>
+        <feedback>
+          <p>findall would only return the 'a'</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>Now we can use regular expressions to redo an exercise from earlier in
+            the book where we were interested in the time of day of each mail
+            message. We looked for lines of the form:</p>
+  <pre>From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008</pre>
+  <p>and wanted to extract the hour of the day for each line. Previously we
+            did this with two calls to <c>split</c>. First the line was split
+            into words and then we pulled out the fifth word and split it again on
+            the colon character to pull out the two characters we were interested
+            in.</p>
+  <p>While this worked, it actually results in pretty brittle code that is
+            assuming the lines are nicely formatted. If you were to add enough error
+            checking (or a big try/except block) to insure that your program never
+            failed when presented with incorrectly formatted lines, the code would
+            balloon to 10-15 lines of code that was pretty hard to read.</p>
+  <p>We can do this in a far simpler way with the following regular
+            expression:</p>
+  <pre>^From .* [0-9][0-9]:</pre>
+  <p>The translation of this regular expression is that we are looking for
+            lines that start with <c>From</c> (note the space), followed by any number
+            of characters (<c>.*</c>), followed by a space, followed by two digits
+            <c>[0-9][0-9]</c>, followed by a colon character. This is the definition of
+            the kinds of lines we are looking for.</p>
+  <p>In order to pull out only the hour using <c>findall()</c>, we add
+            parentheses around the two digits as follows:</p>
+  <pre>^From .* ([0-9][0-9]):</pre>
+  <p>This results in the following program:</p>
+  <exercise label="re_combo_ac4">
+    <statement>
+      <p>Search for lines that start with From and a character followed by a two
+            digit number between 00 and 99, followed by &#x2018;:'</p>
+    </statement>
+    <program xml:id="re_combo_ac4_editor" interactive="activecode" language="python">
+      <input>
+import re
+hand = open('mbox-short.txt')
+for line in hand:
+    line = line.rstrip()
+    x = re.findall('^From .* ([0-9][0-9]):', line)
+    if len(x) &gt; 0:
+        print(x)
+        </input>
+    </program>
+  </exercise>
+  <exercise label="re-combo-dnd">
+    <statement>
+      <p> Match the following symbols with their function in a regular expression equation.</p>
+    </statement>
+    <feedback>
+      <p>Look above for references.</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>^</premise>
+        <response>Matches with the beginning of the line.</response>
+      </match>
+      <match order="2">
+        <premise>.</premise>
+        <response>Matches any character (a wildcard).</response>
+      </match>
+      <match order="3">
+        <premise>\S</premise>
+        <response>Matches a non-whitespace character.</response>
+      </match>
+      <match order="4">
+        <premise>*</premise>
+        <response>Match the previous character(s) zero or more times (greedy).</response>
+      </match>
+      <match order="5">
+        <premise>+</premise>
+        <response>Match the previous character(s) one or more times (greedy).</response>
+      </match>
+      <match order="6">
+        <premise>()</premise>
+        <response>Allow you to extract a particular subset of the matched string rather than the whole string.</response>
+      </match>
+    </matches>
+  </exercise>
+</section>

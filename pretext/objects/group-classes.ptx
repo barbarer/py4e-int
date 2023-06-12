@@ -1,0 +1,413 @@
+<?xml version="1.0"?>
+<section xml:id="objects_group-work-classes-constructors-attributes-and-methods">
+  <title>Group Work - Classes, constructors, attributes, and methods</title>
+<!--
+  <raw format="html" xml:space="preserve">&lt;h2&gt;Please join a research study to help us test new approaches to learning programming!&lt;/h2&gt;
+
+&lt;p&gt;Hi! We are a team of researchers in Professor Ericson's Lab at UMSI!&lt;/p&gt;
+
+&lt;h4&gt;The Project&lt;/h4&gt;
+&lt;p&gt;You are invited to participate in a research study about how Parsons problems (a type of coding puzzle) may help
+CS entry-level learning. You must be at least &lt;b&gt;18&lt;/b&gt; to participate. &lt;br&gt;
+Your participation will help more students become successful in computing courses in a low-cost, scalable, and easily
+adopted way. &lt;br&gt; &lt;/p&gt;
+
+&lt;h4&gt; What Will Occur &lt;/h4&gt;
+&lt;p&gt;This study takes 50 minutes to one hour to finish. The study materials include:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Knowledge Review - A basic knowledge review about Class (~5 mins)&lt;/li&gt;
+    &lt;li&gt;System Introduction - Materials to get you familiar with the types of problems in this study (~5 mins)&lt;/li&gt;
+    &lt;li&gt;Pre Survey - Questions about your level of programming self-efficacy (~5 mins)&lt;/li&gt;
+    &lt;li&gt;Practice - Four code practice problems (~20 mins)&lt;/li&gt;
+    &lt;li&gt;Posttest - A short posttest consists of 4 programming questions (~15 mins)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Each section must be completed in order. After finishing one part, you can click the link provided under &lt;b&gt;"What to do next"&lt;/b&gt; to the next part.&lt;/p&gt;
+
+&lt;h4&gt; Confidentiality of Information &lt;/h4&gt;
+&lt;p&gt;All the data we collect will be de-identified. We will not collect any identifiable data such as demographic information. &lt;/p&gt;
+
+&lt;h4&gt;Who to Contact&lt;/h4&gt;
+&lt;p&gt; If you have any questions about the study, please contact Xinying Hou at xyhou@umich.edu
+with <q>[Parsons Problem Study]</q> included in the email subject. &lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;We greatly appreciate your help!&lt;/p&gt;</raw>
+  <note>
+    <raw format="html" xml:space="preserve">&lt;h4&gt;Click on the following link &#x1F449; &lt;b&gt;&lt;a href="intro-fl-cls.html"&gt;Basic Knowledge Review&lt;/a&gt;&lt;/b&gt; &#x1F448; to start!&lt;/h4&gt;</raw>
+  </note>
+  <transition/>
+  -->
+  <introduction>
+  <p>It is best to use a POGIL approach with the following. In POGIL students work
+            in groups on activities and each member has an assigned role.  For more information see <url href="https://cspogil.org/Home" visual="https://cspogil.org/Home">https://cspogil.org/Home</url>.</p>
+  <note>
+    <p>If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.</p>
+  </note>
+  <p>
+    <term>Learning Objectives</term>
+  </p>
+  <p>Students will know and be able to do the following.</p>
+  <p>
+    <em>Content Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Identify the parts of a class</p>
+      </li>
+      <li>
+        <p>Explain what a constructor is and what it does</p>
+      </li>
+      <li>
+        <p>Explain what the __str__ method does</p>
+      </li>
+      <li>
+        <p>Explain the difference(s) between a function and method.</p>
+      </li>
+      <li>
+        <p>Create new objects and name them</p>
+      </li>
+      <li>
+        <p>Create new methods</p>
+      </li>
+    </ul>
+  </p>
+  <p>Look the code below.  It defines a class.  it also declares <em>methods</em> which are functions that are defined inside of a class.
+            One of the methods is automatically called when a new object is created by the class.  One of the methods is automatically
+            called when you print an object of the class.</p>
+        </introduction>
+  <subsection xml:id="objects_a-book-class">
+    <title>A Book Class</title>
+    <exercise label="class_book_ac1_v2">
+      <statement>
+        <p>Run the following code</p>
+      </statement>
+      <program xml:id="class_book_ac1_v2_editor" interactive="activecode" language="python">
+        <input>
+class Book:
+    """ Represents a book object """
+
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+
+    def __str__(self):
+        return "title: " + self.title + " author: " + self.author
+
+def main():
+     b2 = Book("A Wrinkle in Time", "M. L'Engle")
+     print(b2)
+     b1 = Book("Goodnight Moon", "Margaret Wise Brown")
+     print(b1)
+
+main()
+        </input>
+      </program>
+    </exercise>
+    <p>Look at the class definition.  It starts with the keyword <c>class</c>.  Then answer the following questions.</p>
+    <exercise label="class_fitb_whats_class_name">
+      <statement>
+        <p>Q-2: What is the name of this class? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="Book">
+            <feedback>
+              <p>Good job!  The class name follows the class keyword.</p>
+            </feedback>
+          </condition>
+          <condition string="book">
+            <feedback>
+              <p>The class name is usually upper case.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>The class name is after the keyword class and before the :</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="class_fitb_create_method">
+      <statement>
+        <p>Q-3: What is the name of the method that is called when the object is created? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="__init__">
+            <feedback>
+              <p>Good job!  The __init__ method is called when an object is created.</p>
+            </feedback>
+          </condition>
+          <condition string="init">
+            <feedback>
+              <p>Almost.  The method name includes underscores.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>This method initializes the object's attributes</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="class_what_is_init">
+      <statement>
+        <p>Q-4: Describe in your own words what the <c>__init__</c> method does.</p>
+      </statement>
+    </exercise>
+    <exercise label="class_fitb_print_method">
+      <statement>
+        <p>Q-5: What is the name of the method that is called when the object is printed? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="__str__">
+            <feedback>
+              <p>Good job!  This method is called when you print an object of a class.</p>
+            </feedback>
+          </condition>
+          <condition string="str">
+            <feedback>
+              <p>Not quite, the name of the method includes underscores.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>This method returns a string with the values of the attributes</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="class_what_is_str">
+      <statement>
+        <p>Q-6: Describe in your own words what the <c>__str__</c> method does.</p>
+      </statement>
+    </exercise>
+    <exercise label="class_fitb_attribute_num">
+      <statement>
+        <p>Q-7: How many attributes does an object of the Book class have? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="2|two|Two|TWO">
+            <feedback>
+              <p>Good Job!  The attributes are initialized in the __init__ method (also known as the constructor).</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Attributes are initialized in the __init__ method</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="class_ca_book_method_names">
+      <statement>
+        <p>Click on all of the method names in the code below.</p>
+      </statement>
+      <feedback>
+        <p>Method names are the names of functions that are defined in a class.</p>
+      </feedback>
+      <areas>
+        <cline><area correct="no">class</area> <area correct="no">Book:</area></cline>
+        <cline><area correct="no">""" Represents a book object """</area></cline>
+        <cline/>
+        <cline><area correct="no">def</area> <area correct="yes">__init__</area><area correct="no">(self, title, author):</area></cline>
+        <cline><area correct="no">self.title = title</area></cline>
+        <cline><area correct="no">self.author = author</area></cline>
+        <cline/>
+        <cline><area correct="no">def</area> <area correct="yes">__str__</area><area correct="no">(self):</area></cline>
+        <cline><area correct="no">return "title: " + self.title + " author: " + self.author</area></cline>
+        <cline/>
+        <cline><area correct="no">def</area> <area correct="yes">get_author</area><area correct="no">(self)</area></cline>
+        <cline><area correct="no">return self.author</area></cline>
+        <cline/>
+        <cline><area correct="no">def</area> <area correct="no">main()</area></cline>
+        <cline><area correct="no">b2 = Book("A Wrinkle in Time", "M. L'Engle")</area></cline>
+        <cline><area correct="no">print(b2)</area></cline>
+        <cline><area correct="no">b1 = Book("Goodnight Moon", "Margaret Wise Brown")</area></cline>
+        <cline><area correct="no">print(b1)</area></cline>
+        <cline/>
+        <cline><area correct="no">main()</area></cline>
+      </areas>
+    </exercise>
+    <exercise label="class_diff_function_method">
+      <statement>
+        <p>Q-9: Describe in your own words what is/are the difference(s) between a function and a method.</p>
+      </statement>
+    </exercise>
+    <exercise label="class_fitb_first_paramter">
+      <statement>
+        <p>Q-10: What is the name of the first parameter in all of the methods? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="self">
+            <feedback>
+              <p>Good job!</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>The parameters are in () after the method name</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="class-pp-person" numbered="yes" adaptive="yes" indentation="show" language="python">
+      <statement>
+        <p>Put the code blocks in order below to create a class <c>Person</c> with a
+                constructor (<c>__init__</c>) method that takes a first and last name and a
+                <c>__str__</c> method to return a string with the first and last name separated
+                with a space.</p>
+      </statement>
+      <blocks>
+        <block order="4">
+          <choice correct="yes">
+            <cline>class Person:</cline>
+          </choice>
+          <choice>
+            <cline>Class Person: </cline>
+          </choice>
+        </block>
+        <block order="8">
+          <choice correct="yes">
+            <cline>    def __init__(self, first, last):</cline>
+          </choice>
+          <choice>
+            <cline>    def __init__(first, last): </cline>
+          </choice>
+        </block>
+        <block order="1">
+          <cline>        self.first = first</cline>
+          <cline>        self.last = last</cline>
+        </block>
+        <block order="2">
+          <choice correct="yes">
+            <cline>    def __str__(self):</cline>
+          </choice>
+          <choice>
+            <cline>    def __str__(): </cline>
+          </choice>
+        </block>
+        <block order="9">
+          <choice correct="yes">
+            <cline>        return self.first + " " + self.last</cline>
+          </choice>
+          <choice>
+            <cline>        return first + " " + last </cline>
+          </choice>
+        </block>
+      </blocks>
+    </exercise>
+    <exercise label="class_what_is_self">
+      <statement>
+        <p>Q-12: Describe in your own words what <c>self</c> means.</p>
+      </statement>
+    </exercise>
+  </subsection>
+  <subsection xml:id="objects_create-more-book-objects">
+    <title>Create More Book Objects</title>
+    <exercise label="class_book_ac2_v2">
+      <statement>
+        <p>Change the following main function to create a third book object called b3 with a title of <q>1984</q> and author <q>George Orwell</q>.  Print out the values using the print function in the main.</p>
+      </statement>
+      <program xml:id="class_book_ac2_v2_editor" interactive="activecode" language="python">
+        <input>
+class Book:
+    """ Represents a book object """
+
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+
+    def __str__(self):
+        return "title: " + self.title + " author: " + self.author
+
+def main():
+    b2 = Book("A Wrinkle in Time", "M. L'Engle")
+    print(b2)
+    b1 = Book("Goodnight Moon", "Margaret Wise Brown")
+    print(b1)
+
+main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="class_person_ac2">
+      <statement>
+        <p>Change the following main function to add a person object with your first and last name.</p>
+      </statement>
+      <program xml:id="class_person_ac2_editor" interactive="activecode" language="python">
+        <input>
+class Person:
+    """ Represents a person object """
+
+    def __init__(self, first, last):
+        self.first = first
+        self.last = last
+
+    def __str__(self):
+        return self.first + " " + self.last
+
+def main():
+    p1 = Person("Barbara", "Ericson")
+    print(p1)
+
+main()
+        </input>
+      </program>
+    </exercise>
+  </subsection>
+  <subsection xml:id="objects_add-a-method-to-a-class">
+    <title>Add a Method to a Class</title>
+    <exercise label="class_person_init_ac1">
+      <statement>
+        <p>Change the following Person class to add an <c>initials</c> method that returns
+                a string with the first letter in the first name and the first letter in
+                the last name in lowercase.</p>
+      </statement>
+      <program xml:id="class_person_init_ac1_editor" interactive="activecode" language="python">
+        <input>
+class Person:
+    """ Represents a person object """
+
+    def __init__(self, first, last):
+        self.first = first
+        self.last = last
+
+    def __str__(self):
+        return self.first + " " + self.last
+
+def main():
+    p1 = Person("Barbara", "Ericson")
+    print(p1)
+    print(p1.initials())
+
+main()
+        </input>
+      </program>
+    </exercise>
+    <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
+    <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+    &lt;div data-component="groupsub" id=class_basics_groupsub data-size_limit=3&gt;
+        &lt;div class="col-sm-6"&gt;
+            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div id="groupsub_button" class="col-sm-6"&gt;
+        &lt;/div&gt;
+        &lt;p&gt;The Submit Group button will submit the answer for each each question
+        on this page for each member of your group. It also logs you as the official
+        group submitter.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  </subsection>
+</section>

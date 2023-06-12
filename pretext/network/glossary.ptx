@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<section xml:id="network_glossary">
+  <title>Glossary</title>
+  <glossary sorted="False">
+    <gi>
+      <title>BeautifulSoup</title>
+      <p>A Python library for parsing HTML documents and extracting data from
+                            HTML documents that compensates for most of the imperfections in the
+                            HTML that browsers generally ignore. You can download the
+                            BeautifulSoup code from <url href="http://www.crummy.com" visual="http://www.crummy.com">www.crummy.com</url>.</p>
+    </gi>
+    <gi>
+      <title>Port</title>
+      <p>A number that generally indicates which application you are
+                            contacting when you make a socket connection to a server. As an
+                            example, web traffic usually uses port 80 while email traffic uses
+                            port 25.</p>
+    </gi>
+    <gi>
+      <title>Scrape</title>
+      <p>When a program pretends to be a web browser and retrieves a web
+                            page, then looks at the web page content. Often programs are
+                            following the links in one page to find the next page so they can
+                            traverse a network of pages or a social network.</p>
+    </gi>
+    <gi>
+      <title>Socket</title>
+      <p>A network connection between two applications where the applications
+                            can send and receive data in either direction.</p>
+    </gi>
+    <gi>
+      <title>Spider</title>
+      <p>The act of a web search engine retrieving a page and then all the
+                            pages linked from a page and so on until they have nearly all of the
+                            pages on the Internet which they use to build their search index.</p>
+    </gi>
+  </glossary>
+  <exercise label="networks_glossary">
+    <statement>
+      <p>Match each term with its definition.</p>
+    </statement>
+    <feedback>
+      <p>Look above for the definitions.</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>BeautifulSoup</premise>
+        <response>A Python library for parsing and extracting data from HTML documents.</response>
+      </match>
+      <match order="2">
+        <premise>port</premise>
+        <response>A number that indicates which application you are contacting when you make a connection to a server.</response>
+      </match>
+      <match order="3">
+        <premise>scrape</premise>
+        <response>When a program pretends to be a web browser and retrieves a web page, then looks at the web page content.</response>
+      </match>
+      <match order="4">
+        <premise>socket</premise>
+        <response>A network connection between two applications where the applications can send and receive data in either direction.</response>
+      </match>
+      <match order="5">
+        <premise>spider</premise>
+        <response>The act of a web search engine retrieving a page and then all the pages linked from a page and so on until they have
+nearly all of the pages on the Internet which they use to build their search index.</response>
+      </match>
+    </matches>
+  </exercise>
+</section>

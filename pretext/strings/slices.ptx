@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<section xml:id="strings_string-slices">
+  <title>String slices</title>
+<idx><h>Slice</h><h>Operator</h></idx>
+<idx><h>Operator</h><h>Slice</h></idx>
+<idx><h>String</h><h>Slice</h></idx>
+<idx><h>Slice</h><h>String</h></idx>
+<idx><h>Index</h><h>Slice</h></idx>
+<idx><h>Slice</h><h>Index</h></idx>
+<idx>Quotation Mark</idx>
+<idx><h>Copy</h><h>Slice</h></idx>
+<idx><h>Slice</h><h>Copy</h></idx>
+  <p>A segment of a string is called a <em>slice</em>. Selecting a
+            slice is similar to selecting a character:</p>
+  <program xml:id="str-slice" interactive="activecode" language="python">
+    <input>
+s = 'Monty Python'
+print(s[0:5])
+print(s[6:12])
+        </input>
+  </program>
+  <p>The operator returns the part of the string from the <q>n-th</q> character
+            to the <q>m-th</q> character, including the first but excluding the last.</p>
+  <p>If you omit the first index (before the colon), the slice starts at the
+            beginning of the string. If you omit the second index, the slice goes to
+            the end of the string:</p>
+  <program xml:id="str-colonSlices" interactive="activecode" language="python">
+    <input>
+fruit = 'orange'
+print(fruit[:3])
+print(fruit[3:])
+        </input>
+  </program>
+  <p>If the first index is greater than or equal to the second the result is
+            an <em>empty string</em>, represented by two quotation marks:</p>
+  <program xml:id="str-emptyString" interactive="activecode" language="python">
+    <input>
+fruit = 'orange'
+print(fruit[3:3])
+        </input>
+  </program>
+  <p>An empty string contains no characters and has length 0, but other than
+            that, it is the same as any other string.</p>
+  <exercise label="str-slice-fitb-fruit">
+    <statement>
+      <p>11-9-4: Given that <c>fruit</c> is a string, how many characters does <c>fruit[:]</c> select? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="([Aa]ll)|5|([Ff]ive)">
+          <feedback>
+            <p>[:] Correct! It selects the entire string.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Incorrect! It could be helpful to run this in an activecode block. Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="str-slice-mc-hello">
+    <statement>
+      <p>11-9-5: How many times is the word HELLO printed by the following statements?</p>
+      <program language="python">
+        <input>
+s = "pomegranate"
+for ch in s[3:8]:
+    print("HELLO")
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>4</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Slicing includes the first index but excludes the last. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>5</p>
+        </statement>
+        <feedback>
+          <p>Correct! s[3:8] is "egran", which is five characters long, so "HELLO" is printed five times.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>6</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Slicing includes the first index but excludes the last. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Error, the for statement cannot use string slices.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Slicing returns a sequence that can be iterated over with a for loop. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="str-slice-mc-end">
+    <statement>
+      <p>11-9-6: What will be printed when the following executes?</p>
+      <pre>str = "Python is cool"
+str = str[1:4]
+print(str)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Python is cool</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The string slicing on line 2 takes out part of the original str. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Pyt</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Indices in Python start at 0. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>yth</p>
+        </statement>
+        <feedback>
+          <p>Correct! str[1:4] starts with the character at index 1 and ends after the character at index 3.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>ytho</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The slice operator includes the first index and excludes the last. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="str-slice-mc-38">
+    <statement>
+      <p>11-9-7: What is printed by the following statements?</p>
+      <program language="python">
+        <input>
+s = "python rocks"
+print(s[3:8])
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>python</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! That would be s[0:6]. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>rocks</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! That would be s[7:]. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>hon r</p>
+        </statement>
+        <feedback>
+          <p>Correct! The space is considered a character.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Error, you cannot have two numbers inside the [].</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! String slicing requires a starting index and an ending index. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

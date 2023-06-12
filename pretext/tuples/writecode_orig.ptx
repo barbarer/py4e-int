@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<section xml:id="tuples_write-code-questions">
+  <title>Write Code Questions</title>
+  <exercise label="tup_writecode2">
+    <statement>
+      <p>Write a function called <c>check_third_element</c> that takes in a list of tuples, <c>lst_tups</c> as a parameter. Tuples must have at least 3 items.
+            Return a new list that contains the third element of each tuple. For example, <c>check_third_element([(1,2.2,3.3),(-1,-2,-3),(0,0,0)])</c>
+            would return <c>[3.3, -3, 0]</c>.</p>
+    </statement>
+    <program xml:id="tup_writecode2_editor" interactive="activecode" language="python">
+      <input>
+def check_third_element(lst_tups):
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class MyTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(check_third_element([(1,2.2,3.3),(-1,-2,-3),(0,0,0)]), [3.3, -3, 0], "check_third_element([(1,2.2,3.3),(-1,-2,-3),(0,0,0)])")
+        self.assertEqual(check_third_element([(1,2,3),(1,2,3),(1,2,3),(1,2,3)]), [3, 3, 3, 3], "check_third_element([(1,2,3),(1,2,3),(1,2,3),(1,2,3)])")
+        self.assertEqual(check_third_element([('hi','hello','how are you'),('bye','goodbye','farewell')]), ['how are you', 'farewell'], "check_third_element([('hi','hello','how are you'),('bye','goodbye','farewell')])")
+
+
+
+MyTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="tup_writecode2_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>check_third_element</c> that takes in a list of tuples, <c>lst_tups</c> as a parameter. Tuples must have at least 3 items.
+            Return a new list that contains the third element of each tuple. For example, <c>check_third_element([(1,2.2,3.3),(-1,-2,-3),(0,0,0)])</c>
+            would return <c>[3.3, -3, 0]</c>.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>def check_third_element(lst_tups):</cline>
+      </block>
+      <block order="6">
+        <cline>    new_lst = []</cline>
+      </block>
+      <block order="1">
+        <cline>    for item in lst_tups:</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>        new_lst.append(item[2])</cline>
+        </choice>
+        <choice>
+          <cline>        new_lst.append(item[3]) </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>    return new_lst</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="tup_writecode4">
+    <statement>
+      <p>Write a function called <c>interchange_values</c> that takes in a tuple with two values as a parameter, <c>t</c> and returns a tuple which interchanges the values of <c>t</c>.
+            For example, <c>interchange_values(("LeBron", "James"))</c> would return <c>("James", "LeBron")</c>.</p>
+    </statement>
+    <program xml:id="tup_writecode4_editor" interactive="activecode" language="python">
+      <input>
+def interchange_values(t):
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class MyTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(interchange_values(('LeBron', 'James')), ('James', 'LeBron'), "interchange_values(('LeBron', 'James'))")
+        self.assertEqual(interchange_values(('Hi', 'Hello')), ('Hello', 'Hi'), "interchange_values(('Hi', 'Hello'))")
+        self.assertEqual(interchange_values((1, 2)), (2, 1), "interchange_values((1, 2))")
+        self.assertEqual(interchange_values((True, False)), (False, True), "interchange_values((True, False))")
+
+MyTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="tup_writecode4_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>interchange_values</c> that takes in a tuple with two values as a parameter, <c>t</c> and returns a tuple which interchanges the values of <c>t</c>.
+            For example, <c>interchange_values(("LeBron", "James"))</c> would return <c>("James", "LeBron")</c>.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <cline>def interchange_values(t):</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    lst = list(t)</cline>
+        </choice>
+        <choice>
+          <cline>    lst = t.list() </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>    new_t = (lst[1], lst[0])</cline>
+      </block>
+      <block order="5">
+        <cline>    return new_t</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="tup_writecode6">
+    <statement>
+      <p>Write a function called <c>my_data</c> that takes in an integer, <c>int_value</c> as a parameter. Return tuple that contains one elements,
+            the integer in the parameter. For example, <c>my_data(99)</c> would return <c>(99,)</c>.</p>
+    </statement>
+    <program xml:id="tup_writecode6_editor" interactive="activecode" language="python">
+      <input>
+def my_data(int_value):
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class MyTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(my_data(99), (99,), "my_data(99)")
+        self.assertEqual(my_data(0), (0,), "my_data(0)")
+        self.assertEqual(my_data(-1), (-1,), "my_data(-1)")
+
+MyTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="tup_writecode6_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>my_data</c> that takes in an integer, <c>int_value</c> as a parameter. Return tuple that contains one elements,
+            the integer in the parameter. For example, <c>my_data(99)</c> would return <c>(99,)</c>.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <cline>def my_data(int_value):</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    t = (int_value, )</cline>
+        </choice>
+        <choice>
+          <cline>    t = (int_value) </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>    return t</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="tup_writecode8">
+    <statement>
+      <p>Write a function called <c>info</c> with the following required parameters: name, age, birth_year, year_in_college, and hometown. The
+            function should return a tuple that contains all the passed information. For example, <c>info('Troy', 24, 1996, 'Sophomore', 'Ann Arbor')</c>
+            should return <c>('Troy', 24, 1996, 'Sophomore', 'Ann Arbor')</c>.</p>
+    </statement>
+    <program xml:id="tup_writecode8_editor" interactive="activecode" language="python">
+      <input>
+def info(name, age, birth_year, year_in_college, hometown):
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+
+class MyTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(info('Troy', 24, 1996, 'Sophomore', 'Ann Arbor'), ('Troy', 24, 1996, 'Sophomore', 'Ann Arbor'), "Testing that the function correctly outputs the tuple.")
+        self.assertEqual(info('Jane', 18, 2002, 'Freshman', 'Manhattan'), ('Jane', 18, 2002, 'Freshman', 'Manhattan'), "Testing that the function correctly outputs the tuple.")
+
+MyTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="tup_writecode8_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>info</c> with the following required parameters: name, age, birth_year, year_in_college, and hometown. The
+            function should return a tuple that contains all the passed information. For example, <c>info('Troy', 24, 1996, 'Sophomore', 'Ann Arbor')</c>
+            should return <c>('Troy', 24, 1996, 'Sophomore', 'Ann Arbor')</c>.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <cline>def info(name, age, birth_year, year_in_college, hometown):</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    tup = (name, age, birth_year, year_in_college, hometown)</cline>
+        </choice>
+        <choice>
+          <cline>    tup = [name, age, birth_year, year_in_college, hometown] </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>    return tup</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="tup_writecode10">
+    <statement>
+      <p>Write a function <c>tuplize()</c> that accepts two inputs and returns a tuple containing those inputs in order.
+            For example, <c>tuplize('Stephen', 'Curry')</c> would return <c>('Stephen', 'Curry')</c>.</p>
+    </statement>
+    <program xml:id="tup_writecode10_editor" interactive="activecode" language="python">
+      <input>
+def tuplize(val1, val2):
+    # write code here
+====
+from unittest.gui import TestCaseGui
+
+class MyTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(tuplize('Stephen', 'Curry'), ('Stephen', 'Curry'), "Testing that the function creates the correct tuple.")
+        self.assertEqual(tuplize(1, 2), (1, 2), "Testing that the function creates the correct tuple.")
+
+MyTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="tup_writecode10_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>tuplize()</c> that accepts two inputs and returns a tuple containing those inputs in order.
+            For example, <c>tuplize('Stephen', 'Curry')</c> would return <c>('Stephen', 'Curry')</c>.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>def tuplize(val1, val2):</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    tup = (val1, val2)</cline>
+        </choice>
+        <choice>
+          <cline>    tup = (val1[0], val2[0]) </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>    return tup</cline>
+      </block>
+    </blocks>
+  </exercise>
+</section>

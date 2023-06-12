@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<section xml:id="intro_computer-hardware-architecture">
+  <title>Computer hardware architecture</title>
+<idx>Hardware</idx>
+<idx><h>Hardware</h><h>Architecture</h></idx>
+<idx><h>Architecture</h><h>Hardware</h></idx>
+<idx>Program</idx>
+<idx>Central Processing Unit</idx>
+<idx>Main Memory</idx>
+<idx>Secondary Memory</idx>
+<idx>Input and Output Devices</idx>
+<idx>Network Connection</idx>
+  <p>Before we start learning the language we speak to give instructions to
+            computers to develop software, we need to learn a small amount about how
+            computers are built. If you were to take apart your computer or cell
+            phone and look deep inside, you would find the following parts:</p>
+  <figure align="">
+    <image source="intro/Figures/arch.svg" width="50%" alt="Hardware Architecture"/>
+  </figure>
+  <p>The high-level definitions of these parts are as follows:</p>
+  <p>
+    <ul>
+      <li>
+        <p>The <em>Central Processing Unit</em> (or CPU) is the part of
+                    the computer that is built to be obsessed with <q>what is next?</q> If
+                    your computer is rated at 3.0 Gigahertz, it means that the CPU will
+                    ask <q>What next?</q> three billion times per second. You are going to
+                    have to learn how to talk fast to keep up with the CPU.</p>
+      </li>
+      <li>
+        <p>The <em>Main Memory</em> is used to store information that
+                    the CPU needs in a hurry. The main memory is nearly as fast as the
+                    CPU. But the information stored in the main memory vanishes when the
+                    computer is turned off.</p>
+      </li>
+      <li>
+        <p>The <em>Secondary Memory</em> is also used to store
+                    information, but it is much slower than the main memory. The
+                    advantage of the secondary memory is that it can store information
+                    even when there is no power to the computer. Examples of secondary
+                    memory are disk drives or flash memory (typically found in USB
+                    sticks and portable music players).</p>
+      </li>
+      <li>
+        <p>The <em>Input and Output Devices</em> are simply our screen,
+                    keyboard, mouse, microphone, speaker, touchpad, etc. They are all of
+                    the ways we interact with the computer.</p>
+      </li>
+      <li>
+        <p>These days, most computers also have a <em>Network
+                        Connection</em> to retrieve information over a network. We can
+                    think of the network as a very slow place to store and retrieve data
+                    that might not always be <q>up</q>. So in a sense, the network is a
+                    slower and at times unreliable form of <em>Secondary
+                        Memory</em>.</p>
+      </li>
+    </ul>
+  </p>
+  <exercise label="intro-hardware-mc-storage">
+    <statement>
+      <p>Q-1: Which of the following will keep information stored without a power source?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Main Memory</p>
+        </statement>
+        <feedback>
+          <p>Information stored in the main memory vanishes when the computer is turned off.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Secondary Memory</p>
+        </statement>
+        <feedback>
+          <p>Correct! The secondary memory will hod information without power.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Central Processing Unit</p>
+        </statement>
+        <feedback>
+          <p>Try again! The CPU is what does the computing.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Input Devices</p>
+        </statement>
+        <feedback>
+          <p>Try again! Input devices are other physical hardwares.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>While most of the detail of how these components work is best left to
+            computer builders, it helps to have some terminology so we can talk
+            about these different parts as we write our programs.</p>
+  <p>As a programmer, your job is to use and orchestrate each of these
+            resources to solve the problem that you need to solve and analyze the
+            data you get from the solution. As a programmer you will mostly be
+            <q>talking</q> to the CPU and telling it what to do next. Sometimes you will
+            tell the CPU to use the main memory, secondary memory, network, or the
+            input/output devices.</p>
+  <figure align="">
+    <image source="intro/Figures/arch2.svg" width="50%" alt="Where Are You?"/>
+  </figure>
+  <p>You need to be the person who answers the CPU's <q>What next?</q> question.
+            But it would be very uncomfortable to shrink you down to 5mm tall and
+            insert you into the computer just so you could issue a command three
+            billion times per second. So instead, you must write down your
+            instructions in advance. We call these stored instructions a
+            <em>program</em> and the act of writing these instructions down
+            and getting the instructions to be correct <em>programming</em>.</p>
+  <exercise label="intro-hardware-stored-instructions">
+    <statement>
+      <p>Q-2: A set of stored instructions used to direct your computer's central processing unit is called a ________. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Pp]rogram">
+          <feedback>
+            <p>A program holds the instructions that answer the CPU's <q>What next</q> question.</p>
+          </feedback>
+        </condition>
+        <condition string="[Pp]rogramming">
+          <feedback>
+            <p>Programming is the process of creating and editing these instructions.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="intro-hardware-dnd-memory">
+    <statement>
+      <p>Match each term with its definition.</p>
+    </statement>
+    <feedback>
+      <p>How is memory stored?</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>Main Memory</premise>
+        <response>Stores information quickly for the CPU; needs power for storage.</response>
+      </match>
+      <match order="2">
+        <premise>Secondary Memory</premise>
+        <response>Stores information slowly; can save information without power.</response>
+      </match>
+      <match order="3">
+        <premise>Input/Output Devices</premise>
+        <response>Physical aspects beyond the internal computer.</response>
+      </match>
+      <match order="4">
+        <premise>Network Connection</premise>
+        <response>Allows information to be stored on a network; very slow.</response>
+      </match>
+      <match order="5">
+        <premise>Central Processing Unit</premise>
+        <response>Does the actual computing and executing of programs in the computer.</response>
+      </match>
+    </matches>
+  </exercise>
+</section>

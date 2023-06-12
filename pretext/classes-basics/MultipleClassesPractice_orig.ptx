@@ -1,0 +1,486 @@
+<?xml version="1.0"?>
+<section xml:id="classes-basics_multiple-classes-practice">
+  <title>Multiple Classes Practice</title>
+  <idx><h>class</h><h>multiple</h></idx>
+  <exercise label="mult_class_track_and_album_len_ac">
+    <statement>
+      <p>Given a <c>Song</c> class that has object attributes of <c>name</c> and <c>length</c> as shown below, finish a <c>Album</c> class with an <c>__init__</c> method that takes a name and list of <c>Song</c> objects.  Then write a <c>length</c> method in the <c>Album</c> class that returns the total length for the album based on the length of the songs in the album.  Given the objects created below it should print 242.</p>
+    </statement>
+    <program xml:id="mult_class_track_and_album_len_ac_editor" interactive="activecode" language="python">
+      <input>
+class Song:
+
+    def __init__(self, name, length):
+        self.name = name
+        self.length = length
+
+    def __str__(self):
+        return f"{self.name}: {self.length}"
+
+class Album:
+
+s1 = Song("Something", 120)
+s2 = Song("Here Comes the Sun", 122)
+a1 = Album("Abbey Road", [s1, s2])
+print(a1.length())
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        s1 = Song("Something", 120)
+        s2 = Song("Here Comes the Sun", 122)
+        a1 = Album("Abbey Road", [s1, s2])
+        self.assertEqual(a1.length(), 242)
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="mult_class_track_and_album_len_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Given a <c>Song</c> class that has object attributes of <c>name</c> and <c>length</c>, create an <c>Album</c> class with an <c>__init__</c> method that takes a name and list of <c>Song</c> objects.  Then create a <c>length</c> method in the <c>Album</c> class that returns the total length for the album based on the length of the songs in the album.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>class Album</cline>
+      </block>
+      <block order="7">
+        <cline>     def __init__(self, name, songs):</cline>
+      </block>
+      <block order="5">
+        <cline>         self.name = name</cline>
+        <cline>         self.songs = songs</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>     def length(self):</cline>
+        </choice>
+        <choice>
+          <cline>     def length(): </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>         total = 0</cline>
+      </block>
+      <block order="10">
+        <choice correct="yes">
+          <cline>         for song in self.songs:</cline>
+        </choice>
+        <choice>
+          <cline>         for song in songs: </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>             total += song.length</cline>
+        </choice>
+        <choice>
+          <cline>             total += song </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <cline>         return total</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="mult_class_point_and_line_practice_ac">
+    <statement>
+      <p>Given a <c>Point</c> class below with a <c>distance</c> object method that takes another point and returns the distance between the two points, create a <c>Line</c> class with an <c>__init__</c> method that takes two points.  Also write the <c>length</c> method in the <c>Line</c> class to return the length of the line (hint: use the <c>distance</c> method in the <c>Point</c> class).</p>
+    </statement>
+    <program xml:id="mult_class_point_and_line_practice_ac_editor" interactive="activecode" language="python">
+      <input>
+import math
+class Point:
+
+    def __init__(self, initX, initY):
+        """ Create a new point at the given coordinates. """
+        self.x = initX
+        self.y = initY
+
+    def __str__(self):
+        return f"x = {self.x}, y = {self.y}"
+
+    def distance(self, other):
+        mx = (self.x - other.x) ** 2
+        my = (self.y - other.y) ** 2
+        return math.sqrt(mx + my)
+
+class Line:
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        point1 = Point(0,0)
+        point2 = Point(10,5)
+        point3 = Point(5,10)
+        point4 = Point(20,10)
+        l1 = Line(point1, point2)
+        l2 = Line(point3, point4)
+
+        self.assertAlmostEqual(l1.length(), 11.18, 2, "l1.length")
+        self.assertAlmostEqual(l2.length(), 15.0, 1, "l2.length()")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="mult_class_point_and_line_practice_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Given a <c>Point</c> class that has a <c>distance</c> object method that takes another point and returns the distance between the two points, create a <c>Line</c> class with an <c>__init__</c> method that takes two points.  Also write the <c>length</c> method in the <c>Line</c> class to return the length of the line (hint: use the <c>distance</c> method in the <c>Point</c> class).</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>class Line:</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    def __init__(self, p1, p2):</cline>
+        </choice>
+        <choice>
+          <cline>    def __init__(p1, p2): </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>        self.p1 = p1</cline>
+        <cline>        self.p2 = p2</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    def length(self):</cline>
+        </choice>
+        <choice>
+          <cline>    def length(): </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>        return self.p1.distance(self.p2)</cline>
+        </choice>
+        <choice>
+          <cline>        return p1.distance(p2) </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="mult_class_point_and_triangle_practice_ac">
+    <statement>
+      <p>Given a <c>Point</c> class below with a <c>distance</c> object method that takes another point and returns the distance between the two points, create a <c>Triangle</c> class with an <c>__init__</c> method that takes three points.  Also write the <c>perimeter</c> method in the <c>Triangle</c> class to return the sum of the lengths of the sides of the triangle. Use the <c>distance</c> method in the <c>Point</c> class to calculate the distance between two points.</p>
+    </statement>
+    <program xml:id="mult_class_point_and_triangle_practice_ac_editor" interactive="activecode" language="python">
+      <input>
+import math
+class Point:
+
+    def __init__(self, initX, initY):
+        """ Create a new point at the given coordinates. """
+        self.x = initX
+        self.y = initY
+
+    def distanceFromOrigin(self):
+        return ((self.x ** 2) + (self.y ** 2)) ** 0.5
+
+    def __str__(self):
+        return f"x = {self.x}, y = {self.y}"
+
+    def halfway(self, target):
+        mx = (self.x + target.x) / 2
+        my = (self.y + target.y) / 2
+        return Point(mx, my)
+
+    def distance(self, other):
+        mx = (self.x - other.x) ** 2
+        my = (self.y - other.y) ** 2
+        return math.sqrt(mx + my)
+
+class Triangle:
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        point1 = Point(0,0)
+        point2 = Point(10,5)
+        point3 = Point(5,10)
+        point4 = Point(20,10)
+        t1 = Triangle(point1, point2, point3)
+        t2 = Triangle(point1, point4, point3)
+
+        self.assertAlmostEqual(t1.perimeter(), 29.43, 2, "t1.perimeter()")
+        self.assertAlmostEqual(t2.perimeter(), 48.54, 2, "t2.perimeter()")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="mult_class_point_and_triangle_practice_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Given a <c>Point</c> class that has a <c>distance</c> object method that takes another point and returns the distance between the two points, create a <c>Triangle</c> class with an <c>__init__</c> method that takes three points.  Also write the <c>perimeter</c> method in the <c>Triangle</c> class to return the sum of the lengths of the sides of the triangle. Use the <c>distance</c> method in the <c>Point</c> class to calculate the distance between two points.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>class Triangle:</cline>
+      </block>
+      <block order="10">
+        <choice correct="yes">
+          <cline>     def __init__(self, p1, p2, p3):</cline>
+        </choice>
+        <choice>
+          <cline>     def __init__(p1, p2, p3): </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>         self.p1 = p1</cline>
+        <cline>         self.p2 = p2</cline>
+        <cline>         self.p3 = p3</cline>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>     def perimeter(self):</cline>
+        </choice>
+        <choice>
+          <cline>     def perimeter(): </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>         total = self.p1.distance(self.p2)</cline>
+        </choice>
+        <choice>
+          <cline>         total = distance(self.p1, self.p2) </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>         total += self.p2.distance(self.p3)</cline>
+          <cline>         total += self.p3.distance(self.p1)</cline>
+        </choice>
+        <choice>
+          <cline>         total += distance(self.p2, self.p3) </cline>
+          <cline>         total += distance(self.p3, self.p1)</cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>         return total</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="mult_class_item_order_line_order_practice_ac">
+    <statement>
+      <p>Given the <c>Item</c> and <c>OrderLine</c> classes shown below, write an <c>Order</c> class with an <c>__init__</c> method that takes a list of <c>OrderLine</c> objects and a <c>total</c> method that returns the total for the order.</p>
+    </statement>
+    <program xml:id="mult_class_item_order_line_order_practice_ac_editor" interactive="activecode" language="python">
+      <input>
+class Item:
+
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+
+    def __str__(self):
+        return f"{self.name}: {self.price}"
+
+class OrderLine:
+
+    def __init__(self, item, quantity):
+        self.item = item
+        self.quantity = quantity
+
+    def total(self):
+        return self.item.price * self.quantity
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        i1 = Item("Burger", 6.99)
+        i2 = Item("Fries", 2.99)
+        i3 = Item("Coke", 1.99)
+        ol1 = OrderLine(i1,2)
+        ol2 = OrderLine(i2,3)
+        ol3 = OrderLine(i3,1)
+        o1 = Order([ol1, ol2, ol3])
+        self.assertAlmostEqual(o1.total(), 24.94, 2, "o1.total()")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="mult_class_item_order_line_order_practice_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Given an <c>Item</c> class with object attributes of <c>name</c> and <c>price</c> and an <c>OrderLine</c> class with an object method <c>total</c> that returns the total for the <c>OrderLine</c> object (the item's price times the quantity), create an <c>Order</c> class with an <c>__init__</c> method that takes a list of <c>OrderLine</c> objects and a <c>total</c> method that returns the total for the order.</p>
+    </statement>
+    <blocks>
+      <block order="12">
+        <cline>class Order:</cline>
+      </block>
+      <block order="4">
+        <cline>     def __init__(self, orderLines):</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>         self.orderLines = orderLines</cline>
+        </choice>
+        <choice>
+          <cline>         orderLines = self.orderLines </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>     def total(self):</cline>
+        </choice>
+        <choice>
+          <cline>     def total(): </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>         sum = 0</cline>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>         for orderLine in self.orderLines:</cline>
+        </choice>
+        <choice>
+          <cline>         for self.orderLine in self.orderLines: </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>             sum += orderLine.total()</cline>
+        </choice>
+        <choice>
+          <cline>             sum += orderLine.total </cline>
+        </choice>
+      </block>
+      <block order="10">
+        <cline>         return sum</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="mult_class_card_and_deck_practice_ac">
+    <statement>
+      <p>Write a <c>shuffle</c> method in the <c>Deck</c> class that splits the list of cards in half and creates a new list of cards with a card from the first list followed by a card from the second list.  For example, if the list of cards was {a, b, c, d, e, f} it would reset the list to {a, d, b, e, c, f}.  If the list of cards was {a, b, c, d, e} it would reset the list to {a, c, b, d, e}.</p>
+    </statement>
+    <program xml:id="mult_class_card_and_deck_practice_ac_editor" interactive="activecode" language="python">
+      <input>
+class Card:
+
+    suit_names = ["Clubs", "Diamonds", "Hearts", "Spades"]
+    rank_names = ["Ace", "2", "3", "4", "5", "6", "7", "8", "9",  "10", "Jack", "Queen", "King"]
+
+    def __init__(self, suit=0, rank = 0):
+        self.suit = suit
+        self.rank = rank
+
+    def __str__(self):
+        return Card.rank_names[self.rank] + " of " + Card.suit_names[self.suit]
+
+class Deck:
+
+    def __init__(self):
+        self.card_list = []
+        for i in range(len(Card.suit_names)):
+            for j in range(len(Card.rank_names)):
+                self.card_list.append(Card(i, j))
+
+    def __str__(self):
+        output = ""
+        for card in self.card_list:
+            output += card.__str__() + ", "
+        return output
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        d = Deck()
+        d.shuffle()
+        self.assertEqual(d.card_list[0].__str__(), "Ace of Clubs","testing d.card_list[0]")
+        self.assertEqual(d.card_list[1].__str__(), "Ace of Hearts","testing d.card_list[1]")
+        self.assertEqual(d.card_list[2].__str__(), "2 of Clubs","testing d.card_list[2]")
+        self.assertEqual(d.card_list[3].__str__(), "2 of Hearts","testing d.card_list[3]")
+        self.assertEqual(len(d.card_list), 52, "testing number of cards")
+        d = Deck()
+        d.card_list = d.card_list[0:5]
+        d.shuffle()
+        self.assertEqual(d.card_list[0].__str__(), "Ace of Clubs","testing d.card_list[0]")
+        self.assertEqual(d.card_list[1].__str__(), "3 of Clubs","testing d.card_list[1]")
+        self.assertEqual(d.card_list[2].__str__(), "2 of Clubs","testing d.card_list[2]")
+        self.assertEqual(d.card_list[3].__str__(), "4 of Clubs","testing d.card_list[3]")
+        self.assertEqual(d.card_list[4].__str__(), "5 of Clubs","testing d.card_list[4]")
+        self.assertEqual(len(d.card_list), 5, "testing number of cards")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="mult_class_card_and_deck_practice_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a <c>shuffle</c> method for the <c>Deck</c> class that splits the list of cards in half and creates a new list of cards with a card from the first list followed by a card from the second list.  For example, if the list of cards was {a, b, c, d, e, f} it would reset the list to {a, d, b, e, c, f}.  If the list of cards was {a, b, c, d, e} it would reset the list to {a, c, b, d, e}.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <choice correct="yes">
+          <cline>def shuffle(self):</cline>
+        </choice>
+        <choice>
+          <cline>def shuffle(): </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>      mid = len(self.card_list) // 2</cline>
+        </choice>
+        <choice>
+          <cline>      mid = len(self.card_list) / 2 </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>      l1 = self.card_list[:mid]</cline>
+        <cline>      l2 = self.card_list[mid:]</cline>
+        <cline>      l3 = []</cline>
+      </block>
+      <block order="12">
+        <choice correct="yes">
+          <cline>      for i in range(len(l1)):</cline>
+        </choice>
+        <choice>
+          <cline>      for i in range(l1): </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <cline>          l3.append(l1[i])</cline>
+      </block>
+      <block order="8">
+        <cline>          l3.append(l2[i])</cline>
+      </block>
+      <block order="10">
+        <choice correct="yes">
+          <cline>      if len(l2) &gt; len(l1):</cline>
+        </choice>
+        <choice>
+          <cline>      if len(l1) &gt; len(l2): </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>          l3.append(l2[-1])</cline>
+      </block>
+      <block order="13">
+        <choice correct="yes">
+          <cline>      self.card_list = l3</cline>
+        </choice>
+        <choice>
+          <cline>      self.card_list = self.l3 </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+</section>

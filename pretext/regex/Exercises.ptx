@@ -1,0 +1,367 @@
+<?xml version="1.0"?>
+<exercises xml:id="regex_multiple-choice-questions">
+  <title>Multiple Choice Questions</title>
+  <exercise label="re-exercise1">
+    <statement>
+      <p>11-9-1: What will the following code print?</p>
+      <program language="python">
+        <input>
+import re
+hand = open('mbox-short.txt')
+for line in hand:
+    line = line.rstrip()
+    if re.search('^From:', line):
+        print(line)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Any line containing 'From'</p>
+        </statement>
+        <feedback>
+          <p>The '^' symbol matches strings from the beginning of the line.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Any line that starts with 'From'</p>
+        </statement>
+        <feedback>
+          <p>It must include the colon to match.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Any line that starts with 'From:'</p>
+        </statement>
+        <feedback>
+          <p>Correct! The regex equation will match with any line beginning with 'From:'.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Any line containing 'From:'</p>
+        </statement>
+        <feedback>
+          <p>The '^' symbol matches strings at the beginning of the line.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="re-exercise2">
+    <statement>
+      <p>11-9-2: Which of the following options is the correct way to import the regex library?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>import regex</p>
+        </statement>
+        <feedback>
+          <p>We shorten regex a little more!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>import re</p>
+        </statement>
+        <feedback>
+          <p>This is how to import the regex library.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>import Regex</p>
+        </statement>
+        <feedback>
+          <p>Try shortening regex and using all lowercase.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>import Re</p>
+        </statement>
+        <feedback>
+          <p>Close, but Python is case sensitive.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="re-exercise3">
+    <statement>
+      <p>11-9-3: Which of these option(s) will match digits in a string? Select all that apply.</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>[0-9]</p>
+        </statement>
+        <feedback>
+          <p>This is one way to match all digits using regex.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>\D</p>
+        </statement>
+        <feedback>
+          <p>\D matches any non-digit character.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>\d</p>
+        </statement>
+        <feedback>
+          <p>\d matches any digit from 0 to 9.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>\w</p>
+        </statement>
+        <feedback>
+          <p>\w matches word characters, not digits.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="re-exercise4">
+    <statement>
+      <p>11-9-4: Which of these lines will be matched when the following code is run?</p>
+      <program language="python">
+        <input>
+import re
+hand = open('mbox-short.txt')
+for line in hand:
+    line = line.rstrip()
+    if re.search('\$.+', line):
+        print(line)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>It will cost you $1.00</p>
+        </statement>
+        <feedback>
+          <p>There is a dollar sign followed by one or more characters.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>From: stephen.marquard@uct.ac.za $a</p>
+        </statement>
+        <feedback>
+          <p>This will match a dollar sign followed by at least one character.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>$2.50 is your change</p>
+        </statement>
+        <feedback>
+          <p>The dollar sign in this line is followed by more than one character.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>You owe three dollars.</p>
+        </statement>
+        <feedback>
+          <p>The string needs to include a dollar sign.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="re-exercise5">
+    <statement>
+      <p>11-9-5: True or false? The following code will match only the first email(up to the @ sign) in the string?</p>
+      <program language="python">
+        <input>
+import re
+stri = 'From: stephen.a.smith@espn.com, drake@hotmail.com, frenchMontana@gmail.com'
+stri = stri.rstrip()
+print(re.findall('From:.+@', stri))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>The '+' character in regex is greedy, therefore it will match with the entire string and not just one email.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="re-exercise6">
+    <statement>
+      <p>11-9-6: Which of the following options will the regular expression ^X-.*: [0-9.]+ match?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>X-DSPAM-Probability: Accurate</p>
+        </statement>
+        <feedback>
+          <p>This is missing a digit for the equation to match.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>X-DSPAM-Confidence: 0.8475</p>
+        </statement>
+        <feedback>
+          <p>This matches the given regex equation.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>X-Wolverine-Confidence: 1</p>
+        </statement>
+        <feedback>
+          <p>This line matches with the given regex equation.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>X Wolverine-Confidence: 0.53</p>
+        </statement>
+        <feedback>
+          <p>This is missing a dash between 'X' and other letters.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="re-exercise8">
+    <statement>
+      <p>11-9-7: Which of the following regex statements will match and return any price of the form $3.45 or $23.32 or $400 found in the string &#x2018;x'?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>re.findall('\$\d+\.\d{2}', x)</p>
+        </statement>
+        <feedback>
+          <p>This would require the "." and two digits after the period</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>re.findall('$\d+(?:\.\d{2})?', x)</p>
+        </statement>
+        <feedback>
+          <p>The '$' needs to be escaped with a '\'</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>re.findall('\$\d+(\.\d{2})?', x)</p>
+        </statement>
+        <feedback>
+          <p>This will only return the "." and digits after if they exist</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>re.findall('\$\d+(?:\.\d{2})?', x)</p>
+        </statement>
+        <feedback>
+          <p>This will allow for the period and ending two digits to be optional and will return the whole price</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="re-exercise9">
+    <statement>
+      <p>11-9-8: Which of these command lines will match lines in mbox-short.txt starting with &#x2018;UMich'?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p># grep '^Umich' mbox-short.txt</p>
+        </statement>
+        <feedback>
+          <p>grep is case sensitive!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>$ grep '^UMich' mbox-short.txt</p>
+        </statement>
+        <feedback>
+          <p>This is the proper use of the grep command-line.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>$ grep 'UMich' mbox-short.txt</p>
+        </statement>
+        <feedback>
+          <p>This is missing a character!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p># grep 'UMich' mbox-short.txt</p>
+        </statement>
+        <feedback>
+          <p>Not quite the correct symbol at the start of the line.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="re-exercise10">
+    <statement>
+      <p>11-9-9: If you are having trouble remembering what methods the regex library contains, which command can you use to find said methods?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>help()</p>
+        </statement>
+        <feedback>
+          <p>This will trigger the interactive help system, but not the methods of regex.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>dir(regex)</p>
+        </statement>
+        <feedback>
+          <p>We shorten regex to something shorter.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>dir(re)</p>
+        </statement>
+        <feedback>
+          <p>This will return a list containing all the methods of the regex library.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>import re</p>
+        </statement>
+        <feedback>
+          <p>This will import the regular expression module.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</exercises>

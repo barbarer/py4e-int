@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<section xml:id="pictures_changing-step-5-increasing-and-decreasing-color-values">
+  <title>Changing Step 5: Increasing and decreasing color values</title>
+  <p>First example: Let's change STEP 5, so that we decrease the red by 50%.</p>
+  <program xml:id="Image_Decrease_Red" interactive="activecode" language="python">
+    <input>
+# STEP 1: USE THE IMAGE LIBRARY
+from image import *
+
+# STEP 2: PICK THE IMAGE
+img = Image("beach.jpg")
+
+# STEP 3: LOOP THROUGH THE PIXELS
+pixels = img.getPixels();
+for p in pixels:
+
+    # STEP 4: GET THE DATA
+    r = p.getRed()
+
+    # STEP 5: MODIFY THE COLOR
+    p.setRed(r * 0.5);
+
+    # STEP 6: UPDATE THE IMAGE
+    img.updatePixel(p)
+
+# STEP 7: SHOW THE RESULT
+win = ImageWin(img.getWidth(),img.getHeight())
+img.draw(win)
+        </input>
+  </program>
+  <p>Try the program above on some of the other images, like <q>arch.jpg</q> or <q>puppy.jpg</q>, by changing the name of the image file on line 5.  What effect does it always have?  Is this what you expected when we decrease the red?</p>
+  <p>We can <em>increase</em> the red in a similar way. Let's change STEP 5, so that we increase the red by 150%.</p>
+  <program xml:id="Image_Increase_Red" interactive="activecode" language="python">
+    <input>
+# STEP 1: USE THE IMAGE LIBRARY
+from image import *
+
+# STEP 2: PICK THE IMAGE
+img = Image("beach.jpg")
+
+# STEP 3: LOOP THROUGH THE PIXELS
+pixels = img.getPixels()
+for p in pixels:
+
+    # STEP 4: GET THE DATA
+    r = p.getRed()
+
+    # STEP 5: MODIFY THE COLOR
+    p.setRed(r * 1.5)
+
+    # STEP 6: UPDATE THE IMAGE
+    img.updatePixel(p)
+
+# STEP 7: SHOW THE RESULT
+win = ImageWin(img.getWidth(),img.getHeight())
+img.draw(win)
+        </input>
+  </program>
+  <p>Try the program above on some of the other images by changing the name of the image file on line 5.   What effect does it always have? Is this what you expected when you increase the red?  What happens if you increase two colors at the same time?</p>
+  <exercise label="Image_Decrease_GB" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Another way to get a similar effect to increasing the red, is to decrease the green and blue.  Figure out how to do that in the program above and then use that information to drag the code blocks below from the left to the right in the correct order with the correct indention.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>from image import *</cline>
+      </block>
+      <block order="1">
+        <cline>img = Image("puppy.jpg")</cline>
+      </block>
+      <block order="7">
+        <cline>pixels = img.getPixels()</cline>
+      </block>
+      <block order="4">
+        <cline>for p in pixels:</cline>
+      </block>
+      <block order="2">
+        <cline>    g = p.getGreen()</cline>
+        <cline>    b = p.getBlue()</cline>
+      </block>
+      <block order="6">
+        <cline>    p.setGreen(g * 0.75)</cline>
+        <cline>    p.setBlue(b * 0.75)</cline>
+      </block>
+      <block order="5">
+        <cline>    img.updatePixel(p)</cline>
+      </block>
+      <block order="8">
+        <cline>win = ImageWin(img.getWidth(),img.getHeight())</cline>
+        <cline>img.draw(win)</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise>
+    <statement/>
+    <program interactive="" language=""/>
+    <solution>
+      <program xml:id="image_4_1_WSa" language="python">
+        <input>
+# STEP 1: USE THE IMAGE LIBRARY
+from image import *
+
+# STEP 2: PICK THE IMAGE
+img = Image("puppy.jpg")
+
+# STEP 3: LOOP THROUGH THE PIXELS
+pixels = img.getPixels()
+for p in pixels:
+
+    # STEP 4: GET THE DATA
+    r = p.getRed()
+    g = p.getGreen()
+    b = p.getBlue()
+
+    # STEP 5: MODIFY THE COLOR
+    p.setRed(r * .5)
+    p.setGreen(g * 1.5)
+    p.setBlue(b * 1.5)
+
+    # STEP 6: UPDATE THE IMAGE
+    img.updatePixel(p)
+
+# STEP 7: SHOW THE RESULT
+win = ImageWin(img.getWidth(),img.getHeight())
+img.draw(win)
+        </input>
+      </program>
+    </solution>
+  </exercise>
+</section>

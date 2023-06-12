@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<section xml:id="files_opening-files">
+  <title>Opening files</title>
+    <idx><h>Function</h><h>Open</h></idx>
+    <idx><h>Open</h><h>Function</h></idx>
+    <idx><h>File</h><h>Open</h></idx>
+    <idx><h>Open</h><h>File</h></idx>
+    <idx>File Handle</idx>
+  <p>When we want to read or write a file (say on your hard drive), we first
+            must <em>open</em> the file. Opening the file communicates with
+            your operating system, which knows where the data for each file is
+            stored. When you open a file, you are asking the operating system to
+            find the file by name and make sure the file exists. In this example, we
+            open the file <em>mbox.txt</em>, which should be stored in the same
+            folder that you are in when you start Python. You can download this file
+            from <url href="http://www.py4e.com/code3/mbox.txt" visual="http://www.py4e.com/code3/mbox.txt">www.py4e.com/code3/mbox.txt</url>
+            For learning purposes, we are using the shortened version of this file
+            <c>mbox-short.txt</c> This file can be found and downloaded from
+            <url href="http://www.py4e.com/code3/mbox-short.txt" visual="http://www.py4e.com/code3/mbox-short.txt">www.py4e.com/code3/mbox-short.txt</url></p>
+  <p>Click on the button to show the first lines from this file.</p>
+  <hint>
+    <pre>From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
+Return-Path: &lt;postmaster@collab.sakaiproject.org&gt;
+Received: from murder (mail.umich.edu [141.211.14.90])
+   by frankenstein.mail.umich.edu (Cyrus v2.3.8) with LMTPA;
+   Sat, 05 Jan 2008 09:14:16 -0500
+X-Sieve: CMU Sieve 2.3
+Received: from murder ([unix socket])
+   by mail.umich.edu (Cyrus v2.2.12) with LMTPA;
+   Sat, 05 Jan 2008 09:14:16 -0500
+Received: from holes.mr.itd.umich.edu (holes.mr.itd.umich.edu [141.211.14.79])
+  by flawless.mail.umich.edu () with ESMTP id m05EEFR1013674;
+  Sat, 5 Jan 2008 09:14:15 -0500
+Received: FROM paploo.uhi.ac.uk (app1.prod.collab.uhi.ac.uk [194.35.219.184])
+  BY holes.mr.itd.umich.edu ID 477F90B0.2DB2F.12494 ;
+   5 Jan 2008 09:14:10 -0500
+Received: from paploo.uhi.ac.uk (localhost [127.0.0.1])
+  by paploo.uhi.ac.uk (Postfix) with ESMTP id 5F919BC2F2;
+  Sat,  5 Jan 2008 14:10:05 +0000 (GMT)
+Message-ID: &lt;200801051412.m05ECIaH010327@nakamura.uits.iupui.edu&gt;
+Mime-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Received: from prod.collab.uhi.ac.uk ([194.35.219.182])
+          by paploo.uhi.ac.uk (JAMES SMTP Server 2.1.3) with SMTP ID 899
+          for &lt;source@collab.sakaiproject.org&gt;;
+          Sat, 5 Jan 2008 14:09:50 +0000 (GMT)
+Received: from nakamura.uits.iupui.edu (nakamura.uits.iupui.edu [134.68.220.122])
+  by shmi.uhi.ac.uk (Postfix) with ESMTP id A215243002
+  for &lt;source@collab.sakaiproject.org&gt;; Sat,  5 Jan 2008 14:13:33 +0000 (GMT)
+Received: from nakamura.uits.iupui.edu (localhost [127.0.0.1])
+  by nakamura.uits.iupui.edu (8.12.11.20060308/8.12.11) with ESMTP id m05ECJVp010329
+  for &lt;source@collab.sakaiproject.org&gt;; Sat, 5 Jan 2008 09:12:19 -0500
+Received: (from apache@localhost)
+  by nakamura.uits.iupui.edu (8.12.11.20060308/8.12.11/Submit) id m05ECIaH010327
+  for source@collab.sakaiproject.org; Sat, 5 Jan 2008 09:12:18 -0500
+Date: Sat, 5 Jan 2008 09:12:18 -0500
+X-Authentication-Warning: nakamura.uits.iupui.edu: apache set sender to stephen.marquard@uct.ac.za using -f
+To: source@collab.sakaiproject.org
+From: stephen.marquard@uct.ac.za
+Subject: [sakai] svn commit: r39772 - content/branches/sakai_2-5-x/content-impl/impl/src/java/org/sakaiproject/content/impl
+X-Content-Type-Outer-Envelope: text/plain; charset=UTF-8
+X-Content-Type-Message-Body: text/plain; charset=UTF-8
+Content-Type: text/plain; charset=UTF-8
+X-DSPAM-Result: Innocent
+X-DSPAM-Processed: Sat Jan  5 09:14:16 2008
+X-DSPAM-Confidence: 0.8475
+X-DSPAM-Probability: 0.0000</pre>
+  </hint>
+  <program xml:id="fileOpen" interactive="activecode" language="python">
+    <input>
+fhand = open('mbox-short.txt')
+print(fhand)
+        </input>
+  </program>
+  <exercise label="file-open-fitb-start">
+    <statement>
+      <p>Q-2: Complete this line to open the file for reading: fhand = ______(&#x2018;mbox-short.txt') <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="open">
+          <feedback>
+            <p>Yes, <q>open</q> is used to open a file.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>If the <c>open</c> is successful, the operating system returns
+            a <em>file handle</em> object. The file handle object is not the actual data
+            contained in the file, but instead it is a <q>handle</q> that we can use to
+            read the data. You are given a handle if the requested file exists and
+            you have the proper permissions to read the file.</p>
+  <figure align="">
+    <image source="images/handle.svg" width="50%" alt="A File Handle"/>
+  </figure>
+  <exercise label="file-open-fitb-object">
+    <statement>
+      <p>Q-3: A file <BlankNode/> is an object that is used to read or modify a file, not the actual data in a file. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Hh]andle">
+          <feedback>
+            <p>A file handle is used to read the data of a file.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>If the file does not exist, <c>open</c> will fail with a traceback
+            and you will not get a file handle object.</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; fhand = open('stuff.txt')
+Traceback (most recent call last):
+File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+FileNotFoundError: [Errno 2] No such file or directory: 'stuff.txt'
+</input>
+  </program>
+  <p>Later we will use <c>try</c> and <c>except</c> to deal more
+            gracefully with the situation where we attempt to open a file that does
+            not exist.</p>
+  <exercise label="file-open-mc-exist">
+    <statement>
+      <p>Q-4: What will happen if you try to open a file that does not exist?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>the program will close</p>
+        </statement>
+        <feedback>
+          <p>If a file does not exist, the program will not close, but cannot run as expected.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>nothing</p>
+        </statement>
+        <feedback>
+          <p>Something *will* happen if the file does not exist.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>open will fail</p>
+        </statement>
+        <feedback>
+          <p>If a file does not exist, open will fail and you will get an error.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>the program will create a new file</p>
+        </statement>
+        <feedback>
+          <p>The program will not make a new file on its own if it tries to open a file that does not exist.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

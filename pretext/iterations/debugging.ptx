@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<section xml:id="iterations_debugging">
+  <title>Debugging</title>
+<idx>Debugging</idx>
+<idx><h>Debugging</h><h>By Bisection</h></idx>
+<idx><h>By Bisection</h><h>Debugging</h></idx>
+  <p>As you start writing bigger programs, you might find yourself spending
+            more time debugging. More code means more chances to make an error and
+            more places for bugs to hide.</p>
+  <p>One way to cut your debugging time is <q>debugging by bisection.</q> For
+            example, if there are 100 lines in your program and you check them one
+            at a time, it would take 100 steps.</p>
+  <p>Instead, try to break the problem in half. Look at the middle of the
+            program, or near it, for an intermediate value you can check. Add a
+            <c>print</c> statement (or something else that has a verifiable
+            effect) and run the program.</p>
+  <p>If the mid-point check is incorrect, the problem must be in the first
+            half of the program. If it is correct, the problem is in the second
+            half.</p>
+  <p>Every time you perform a check like this, you halve the number of lines
+            you have to search. After six steps (which is much less than 100), you
+            would be down to one or two lines of code, at least in theory.</p>
+  <p>In practice it is not always clear what the <q>middle of the program</q> is
+            and not always possible to check it. It doesn't make sense to count
+            lines and find the exact midpoint. Instead, think about places in the
+            program where there might be errors and places where it is easy to put a
+            check. Then choose a spot where you think the chances are about the same
+            that the bug is before or after the check.</p>
+  <exercise label="itDebug_MC_bisection">
+    <statement>
+      <p>Q-1: An example of <q>debugging by bisection</q> is&#x2026;</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>writing the entire program at once and looking at the code collectively to find the error</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Debugging the entire program at once is not an example of debugging by bisection. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>breaking the problem in half and doing "mid-point checks"</p>
+        </statement>
+        <feedback>
+          <p>Correct! Debugging by bisection means to split the program in half (or bisections) and debug those separately.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>purposely creating errors in your code to test sections</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Purposefully creating errors is not an example of debugging by bisection (nor is it useful). Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="itDebug_fill1">
+    <statement>
+      <p>Q-2: When debugging, if the mid-point check is incorrect, the problem must be in the _______ half of the program. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Ff]irst">
+          <feedback>
+            <p>Correct! If the mid-point check is incorrect the problem must be in the first half of the program.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Incorrect! Hint: the problem won't be in the second half. Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+</section>

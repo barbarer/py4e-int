@@ -1,0 +1,587 @@
+<?xml version="1.0"?>
+<section xml:id="classes-basics_group-work-with-multiple-classes">
+  <title>Group Work with Multiple Classes</title>
+  <introduction>
+  <idx><h>class</h><h>multiple</h></idx>
+  <p>It is best to use a POGIL approach with the following. In POGIL students work
+            in groups on activities and each member has an assigned role.  For more information see <url href="https://cspogil.org/Home" visual="https://cspogil.org/Home">https://cspogil.org/Home</url>.</p>
+  <note>
+    <p>If you work in a group, have only one member of the group fill in the answers on this page.  That person will be able to share answers with the group at the bottom of the page.</p>
+  </note>
+  <p>
+    <term>Learning Objectives</term>
+  </p>
+  <p>Students will know and be able to do the following.</p>
+  <p>
+    <em>Content Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Explain how objects of one class can be used in another</p>
+      </li>
+      <li>
+        <p>Identify object attributes and methods</p>
+      </li>
+      <li>
+        <p>Identify class attributes</p>
+      </li>
+      <li>
+        <p>Define the parts of a UML class diagram</p>
+      </li>
+      <li>
+        <p>Explain how to use a description of a system to find classes, attributes, and methods.</p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    <em>Process Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Modify code that involves multiple classes</p>
+      </li>
+      <li>
+        <p>Predict output from code with multiple classes</p>
+      </li>
+    </ul>
+  </p>
+</introduction>
+  <subsection xml:id="classes-basics_multiple-classes">
+    <title>Multiple Classes</title>
+    <p>Object-oriented programs typically have many classes.  Each class describes
+                the data (attributes) that objects of that class have and their behaviors (methods). One class can use objects from another class.</p>
+    <p>Let's use the Point class that we created earlier to define a Rectangle class.
+                A rectangle can be defined by two points if we assume that one point is the top left
+                and the other is the bottom right.  That means the width of a rectangle is the difference
+                between the x values and the height is the difference between the y values.
+                The area of a rectangle is the width times the height.</p>
+    <exercise label="mult_class_point_and_rectangle">
+      <statement>
+        <p>Run the code below to see what it prints.  You can also use the <q>Show in CodeLens</q> button to step through the code.</p>
+      </statement>
+      <program xml:id="mult_class_point_and_rectangle_editor" interactive="activecode" language="python">
+        <input>
+class Point:
+
+    def __init__(self, initX, initY):
+        """ Create a new point at the given coordinates. """
+        self.x = initX
+        self.y = initY
+
+    def distanceFromOrigin(self):
+        return ((self.x ** 2) + (self.y ** 2)) ** 0.5
+
+    def __str__(self):
+        return f"x = {self.x}, y = {self.y}"
+
+    def halfway(self, target):
+        mx = (self.x + target.x) / 2
+        my = (self.y + target.y) / 2
+        return Point(mx, my)
+
+
+class Rectangle:
+
+    def __init__(self, p1, p2):
+        """ Create a new rectangle with the given points """
+        self.p1 = p1
+        self.p2 = p2
+
+    def area(self):
+        """ Return the area of the rectangle """
+        width = abs(self.p1.x - self.p2.x)
+        height = abs(self.p1.y - self.p2.y)
+        return width * height
+
+point1 = Point(0,0)
+point2 = Point(10,5)
+r1 = Rectangle(point1, point2)
+print(r1.area())
+point3 = Point(-5,-10)
+r2 = Rectangle(point2, point3)
+print(r2.area())
+        </input>
+      </program>
+    </exercise>
+    <exercise label="mult_class_rectangle_object_methods">
+      <statement>
+        <p>Q-2: Look at the code above.  What are the object methods in the <c>Rectangle</c> class?  Pick all that apply.</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement id="mult_class_rectangle_object_methods_opt_a">
+            <p>self.p1</p>
+          </statement>
+          <feedback id="mult_class_rectangle_object_methods_opt_a">
+            <p>This is an object attribute in the Rectangle class.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="mult_class_rectangle_object_methods_opt_b">
+            <p>self.__init__</p>
+          </statement>
+          <feedback id="mult_class_rectangle_object_methods_opt_b">
+            <p>This is an object method in the Rectangle class.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="mult_class_rectangle_object_methods_opt_c">
+            <p>self.p2</p>
+          </statement>
+          <feedback id="mult_class_rectangle_object_methods_opt_c">
+            <p>This is an object attribute in the Rectangle class.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="mult_class_rectangle_object_methods_opt_d">
+            <p>self.area</p>
+          </statement>
+          <feedback id="mult_class_rectangle_object_methods_opt_d">
+            <p>This is an object method in the Rectangle class.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="mult_class_point_rect_mcq2">
+      <statement>
+        <p>Q-3: Look at the code above.  What type of thing (class) is <c>p1</c> in the <c>__init__</c> method in the <c>Rectangle</c> class?</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement id="mult_class_point_rect_mcq2_opt_a">
+            <p>Point</p>
+          </statement>
+          <feedback id="mult_class_point_rect_mcq2_opt_a">
+            <p>It was created by the Point class and passed to the __init__ method in the Rectangle class</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="mult_class_point_rect_mcq2_opt_b">
+            <p>Rectangle</p>
+          </statement>
+          <feedback id="mult_class_point_rect_mcq2_opt_b">
+            <p>It is set in the __init__ method in the Rectangle class, but it is not a rectangle</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="mult_class_point_rect_mcq2_opt_c">
+            <p>Tuple</p>
+          </statement>
+          <feedback id="mult_class_point_rect_mcq2_opt_c">
+            <p>It is not a tuple.  Point(0,0) creates an object of the Point class and calls the __init__ method in that class.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="mult_class_point_attributes">
+      <statement>
+        <p>Q-4: Look at the code above.  What are the object attributes in the <c>Point</c> class?  Pick all that apply.</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement id="mult_class_point_attributes_opt_a">
+            <p>self.x</p>
+          </statement>
+          <feedback id="mult_class_point_attributes_opt_a">
+            <p>This stores the x position for the point. It is an object attribute.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="mult_class_point_attributes_opt_b">
+            <p>self.distanceFromOrigin</p>
+          </statement>
+          <feedback id="mult_class_point_attributes_opt_b">
+            <p>This is an object method in the Point class.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="mult_class_point_attributes_opt_c">
+            <p>self.y</p>
+          </statement>
+          <feedback id="mult_class_point_attributes_opt_c">
+            <p>This stores the y position for the point. It is an object attribute.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="mult_class_point_attributes_opt_d">
+            <p>self.halfway</p>
+          </statement>
+          <feedback id="mult_class_point_attributes_opt_d">
+            <p>This is an object method in the Point class.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+  <subsection xml:id="classes-basics_object-oriented-analysis-and-design">
+    <title>Object-Oriented Analysis and Design</title>
+    <p>How do you determine the classes that you need and the attributes and methods that objects of the class should have?
+                In object-oriented analysis and design you often walk through a scenario of how the system will work.  Write down all the nouns and verbs that are mentioned.  Nouns are potential classes or attributes.  Verbs are potential methods. If a noun represents simple data like a number or string it is usually just an attribute of a class. If a noun has data associated with it or behavior then it is likely a class.</p>
+    <note>
+      <p>One approach to object-oriented analysis and design is to use index cards to represent classes.  Write the class name at the top of the card. Put the data or attributes that each object needs to keep track of below that and the methods or behaviors that objects need to be able to do below that.</p>
+    </note>
+    <p>How would you create software for a simple card game?  Play the Aces and Twos card game at <url href="https://www.mathsisfun.com/games/card-match-game.html" visual="https://www.mathsisfun.com/games/card-match-game.html">https://www.mathsisfun.com/games/card-match-game.html</url></p>
+    <p>When the game starts all of the cards are all face down in rows and columns.  You click on a card to select it and it turns over to show the suit and rank (value).  Then you click another card to select it and it also turns face up.  If the two cards match (have the same rank and value) then the cards stay facing up.  Otherwise they both turn down and you take another turn.  You win when you have found all of the matches.  The game keeps track of the total time it took you to find all of the matches.</p>
+    <exercise label="mult_class_card_game_classes">
+      <statement>
+        <p>Q-5: Look at explanation of the game above.  Which of the following nouns could be classes?</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement id="mult_class_card_game_classes_opt_a">
+            <p>Game</p>
+          </statement>
+          <feedback id="mult_class_card_game_classes_opt_a">
+            <p>Game is a noun and you can play a game so it has behavior so it is a good candidate class.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="mult_class_card_game_classes_opt_b">
+            <p>Card</p>
+          </statement>
+          <feedback id="mult_class_card_game_classes_opt_b">
+            <p>Card is a noun and you can turn a card so it has behavior.  A card has a suit and rank so it has attributes.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="mult_class_card_game_classes_opt_c">
+            <p>Row</p>
+          </statement>
+          <feedback id="mult_class_card_game_classes_opt_c">
+            <p>Row is a noun, but here it just describes how to layout the cards when you start the game. It doesn't need to be a class.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="mult_class_card_game_classes_opt_d">
+            <p>Suit</p>
+          </statement>
+          <feedback id="mult_class_card_game_classes_opt_d">
+            <p>Suit is a noun, but it can be an integer representing one of the four suits.  It will be an attribute of a Card object.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="mult_class_card_game_bevaiors">
+      <statement>
+        <p>Q-6: Look at explanation of the game above.  Which of the following verbs could be methods (behaviors)?</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement id="mult_class_card_game_bevaiors_opt_a">
+            <p>select</p>
+          </statement>
+          <feedback id="mult_class_card_game_bevaiors_opt_a">
+            <p>You select a card so it could be a method on the Card class.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="mult_class_card_game_bevaiors_opt_b">
+            <p>turn</p>
+          </statement>
+          <feedback id="mult_class_card_game_bevaiors_opt_b">
+            <p>You turn a card over so it could be a method on the Card class.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="mult_class_card_game_bevaiors_opt_c">
+            <p>show</p>
+          </statement>
+          <feedback id="mult_class_card_game_bevaiors_opt_c">
+            <p>While this is a verb, it happens when you turn over a card. It probably doesn't need to be another method.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="mult_class_card_game_bevaiors_opt_d">
+            <p>match</p>
+          </statement>
+          <feedback id="mult_class_card_game_bevaiors_opt_d">
+            <p>In the game you need to determine if two cards match, so you do need a method to support this.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+  <subsection xml:id="classes-basics_uml-diagrams">
+    <title>UML Diagrams</title>
+    <p>UML means Unified Modeling Language.  It is a standard way to visualize the design of an object-oriented program.  See <url href="https://en.wikipedia.org/wiki/Unified_Modeling_Language" visual="https://en.wikipedia.org/wiki/Unified_Modeling_Language">https://en.wikipedia.org/wiki/Unified_Modeling_Language</url> for more information.</p>
+    <p>The figure below shows a possible class diagram for a Card class.</p>
+    <figure align="">
+      <image source="images/card.png" width="50%" alt="Class diagram for a Card class"/>
+    </figure>
+    <p>In UML each class is shown in a box with the class name on top optionally followed by a line then the attributes and then optionally followed by a line and then the behaviors (methods).</p>
+    <p>To play the card game you need two of each type of card.  So you will need to two decks.  A deck has 52 cards in the four suits from Ace to King.</p>
+    <figure align="">
+      <image source="images/cardAndDeck.png" width="50%" alt="Class diagram for Card and Deck"/>
+    </figure>
+    <exercise label="mult_classes_card_and_deck">
+      <statement>
+        <p>Run the code below to see what it prints.  You can also use the <q>Show in CodeLens</q> button to step through the code.</p>
+      </statement>
+      <program xml:id="mult_classes_card_and_deck_editor" interactive="activecode" language="python">
+        <input>
+class Card:
+
+    suit_names = ["Clubs", "Diamonds", "Hearts", "Spades"]
+    rank_names = ["Ace", "2", "3", "4", "5", "6", "7", "8", "9",  "10", "Jack", "Queen", "King"]
+
+    def __init__(self, suit=0, rank = 0):
+        self.suit = suit
+        self.rank = rank
+
+    def __str__(self):
+        return Card.rank_names[self.rank] + " of " + Card.suit_names[self.suit]
+
+class Deck:
+
+    def __init__(self):
+        self.card_list = []
+        for i in range(len(Card.suit_names)):
+            for j in range(len(Card.rank_names)):
+                self.card_list.append(Card(i, j))
+
+    def __str__(self):
+        output = ""
+        for card in self.card_list:
+            output += card.__str__() + ", "
+        return output
+
+
+def main():
+    my_deck = Deck()
+    print(my_deck)
+
+if __name__ == "__main__":
+    main()
+        </input>
+      </program>
+    </exercise>
+    <p>Notice that we have defined a list of <c>suit_names</c> and <c>rank_names</c> in the <c>Card</c> class.  These will be created in the class <c>Card</c> and not in each object of the class <c>Card</c>.  They are called <c>class attributes</c>.
+                Each object of the <c>Card</c> class doesn't need to have its own copy of these lists.  That would be a waste of space. Instead they are created in the class and all objects of the class have access to it.</p>
+    <exercise label="mult_class_attribute_fitb">
+      <statement>
+        <p>Q-8: Use <BlankNode/>.rank_names to access the class attribute <c>rank_names</c> in the <c>Card</c> class. <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="Card">
+            <feedback>
+              <p>Use the name of the class to access a class attribute</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Look at the __init__ method in the Deck class</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="mult-classes-card-attributes-vs-class">
+      <statement>
+        <p>Q-9: Look at class <c>Card</c> above.  Which of the following are object attributes?  Select all that apply.</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement id="mult-classes-card-attributes-vs-class_opt_a">
+            <p>suit_names</p>
+          </statement>
+          <feedback id="mult-classes-card-attributes-vs-class_opt_a">
+            <p>This is defined in the class not on an object.  It is a class attribute.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="mult-classes-card-attributes-vs-class_opt_b">
+            <p>rank_names</p>
+          </statement>
+          <feedback id="mult-classes-card-attributes-vs-class_opt_b">
+            <p>This is defined in the class not on an object.  It is a class attribute.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="mult-classes-card-attributes-vs-class_opt_c">
+            <p>self.suit</p>
+          </statement>
+          <feedback id="mult-classes-card-attributes-vs-class_opt_c">
+            <p>This is an object attribute.  It is set in every card object.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="mult-classes-card-attributes-vs-class_opt_d">
+            <p>self.rank</p>
+          </statement>
+          <feedback id="mult-classes-card-attributes-vs-class_opt_d">
+            <p>This is an object attribute.  It is set in every card object.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="mult_class_diff_class_and_object_attribute">
+      <statement>
+        <p>Q-10: How can you tell if an attribute is a class or object attribute?</p>
+      </statement>
+    </exercise>
+    <exercise label="mult_class_deck_who_creates_cards_fitb">
+      <statement>
+        <p>Q-11: The <BlankNode/> function in class <BlankNode/> creates all of the card objects in the deck object. <var/>  <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="__init__">
+            <feedback>
+              <p>The __init__ function creates all 52 cards</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>An object of a class is created with Class()</p>
+            </feedback>
+          </condition>
+        </var>
+        <var>
+          <condition string="Deck">
+            <feedback>
+              <p>The Deck class creates the 52 cards when you create a new deck</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Which class creates multiple cards?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <p>Use the following UML class diagram to answer the next few questions.</p>
+    <figure align="">
+      <image source="images/flightAndAirport.png" width="50%" alt="class diagram of a Flight and Airport class"/>
+    </figure>
+    <exercise label="mult-classes-flight-airport-mcq1">
+      <statement>
+        <p>Q-12: Look at class diagram for <c>Flight</c> and <c>Airport</c> above.  How many object attributes does a <c>Flight</c> object have?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement id="mult-classes-flight-airport-mcq1_opt_a">
+            <p>3</p>
+          </statement>
+          <feedback id="mult-classes-flight-airport-mcq1_opt_a">
+            <p>How many items are listed after the first line in the class diagram for Flight?</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="mult-classes-flight-airport-mcq1_opt_b">
+            <p>5</p>
+          </statement>
+          <feedback id="mult-classes-flight-airport-mcq1_opt_b">
+            <p>A Flight object has 5 object attributes: (number, departure_date, departure_time, departure_airport, and arrival_airport)</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="mult-classes-flight-airport-mcq1_opt_c">
+            <p>7</p>
+          </statement>
+          <feedback id="mult-classes-flight-airport-mcq1_opt_c">
+            <p>This would be true if Flight inherited from Airport, but it does not.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="classes_flight_and_airport">
+      <statement>
+        <p>Given the <c>Airport</c> class shown below and the class diagram shown above, write the <c>Flight</c> class with an <c>__init__</c> method that takes the object attributes in order from top to bottom in the class diagram (number, departure_date, departure_time, departure_airport, and arrival_airport).</p>
+      </statement>
+      <program xml:id="classes_flight_and_airport_editor" interactive="activecode" language="python">
+        <input>
+class Airport:
+
+    def __init__(self, name, code):
+        self.name = name
+        self.code = code
+
+    def __str__(self):
+        return f"{self.name}: {self.code}"
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        a1 = Airport("Atlanta", "ATL")
+        a2 = Airport("Detroit", "DTW")
+        f1 = Flight(190, "10/3/2021", "16:00", a1, a2)
+        self.assertEqual(f1.number, 190, "test of f1.number")
+        self.assertEqual(f1.departure_date, "10/3/2021", "test of f1.departure_date")
+        self.assertEqual(f1.departure_time, "16:00", "test of f1.departure_time")
+        self.assertEqual(f1.departure_airport, a1, "test of f1.departure_airport")
+        self.assertEqual(f1.arrival_airport, a2, "test of f1.arrival_airport")
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="classes_order_and_item">
+      <statement>
+        <p>Given the <c>Item</c>  and <c>Order</c> classes shown below, write the <c>get_total</c> method in the <c>Order</c> class that returns a total of all of the prices of the items in the order.</p>
+      </statement>
+      <program xml:id="classes_order_and_item_editor" interactive="activecode" language="python">
+        <input>
+class Item:
+
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+
+    def __str__(self):
+        return f"{self.name}: {self.price}"
+
+class Order:
+
+    def __init__(self, items):
+        self.items = items
+
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        i1 = Item("Burger", 6.99)
+        i2 = Item("Fries", 2.99)
+        i3 = Item("Coke", 1.99)
+        o1 = Order([i1, i2])
+        o2 = Order([i1, i3])
+        o3 = Order([i2, i3])
+        self.assertAlmostEqual(o1.get_total(), 9.98, 2, "test of order 1 total")
+        self.assertAlmostEqual(o2.get_total(), 8.98, 2, "test of order 2 total")
+        self.assertAlmostEqual(o3.get_total(), 4.98, 2, "test of order 3 total")
+
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="mult_class_relationship_between_classes_sa">
+      <statement>
+        <p>Q-15: What is the relationship between the example classes on this page, such as <c>Point</c> and <c>Rectangle</c> or <c>Item</c> and <c>Order</c>?  How do they relate to each other?</p>
+      </statement>
+    </exercise>
+    <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
+    <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+    &lt;div data-component="groupsub" id=mult_classes_groupsub data-size_limit=4&gt;
+        &lt;div class="col-sm-6"&gt;
+            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div id="groupsub_button" class="col-sm-6"&gt;
+        &lt;/div&gt;
+        &lt;p&gt;The Submit Group button will submit the answer for each each question
+        on this page for each member of your group. It also logs you as the official
+        group submitter.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  </subsection>
+</section>

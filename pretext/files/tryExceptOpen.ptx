@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<section xml:id="files_using-try-except-and-open">
+  <title>Using <c>try, except,</c> and <c>open</c></title>
+    <idx>Quality Assurance</idx>
+    <idx><h>Assurance</h><h>Quality</h></idx>
+    <idx><h>Statement</h><h>Try</h></idx>
+    <idx><h>Try</h><h>Statement</h></idx>
+    <idx><h>Open</h><h>Statement</h></idx>
+    <idx><h>Statement</h><h>Open</h></idx>
+    <idx><h>IOError</h><h>Exception</h></idx>
+    <idx><h>Exception</h><h>IOError</h></idx>
+    <idx>Pythonic</idx>
+  <p>I told you not to peek. This is your last chance.</p>
+  <p>What if our user types something that is not a file name?</p>
+  <pre>python search6.py
+Enter the file name: missing.txt
+Traceback (most recent call last):
+  File "search6.py", line 2, in &lt;module&gt;
+    fhand = open(fname)
+FileNotFoundError: [Errno 2] No such file or directory: 'missing.txt'
+
+python search6.py
+Enter the file name: na na boo boo
+Traceback (most recent call last):
+  File "search6.py", line 2, in &lt;module&gt;
+    fhand = open(fname)
+FileNotFoundError: [Errno 2] No such file or directory: 'na na boo boo'</pre>
+  <p>Do not laugh. Users will eventually do every possible thing they can do
+            to break your programs, either on purpose or with malicious intent. As a
+            matter of fact, an important part of any software development team is a
+            person or group called <em>Quality Assurance</em> (or QA for
+            short) whose very job it is to do the craziest things possible in an
+            attempt to break the software that the programmer has created.</p>
+  <p>The QA team is responsible for finding the flaws in programs before we
+            have delivered the program to the end users who may be purchasing the
+            software or paying our salary to write the software. So the QA team is
+            the programmer's best friend.</p>
+  <exercise label="file-try-mc-qa">
+    <statement>
+      <p>Q-1: Which of the following is something that the Quality Assurance (QT) team does (pick all that apply)?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement id="file-try-mc-qa_opt_a">
+          <p>Try to break the software.</p>
+        </statement>
+        <feedback id="file-try-mc-qa_opt_a">
+          <p>The quality assurance team tries to break the software, so the developers can fix it.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement id="file-try-mc-qa_opt_b">
+          <p>Find flaws in programs.</p>
+        </statement>
+        <feedback id="file-try-mc-qa_opt_b">
+          <p>The quality assurance team tries to find flaws in the software, so the users don't run into them.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement id="file-try-mc-qa_opt_c">
+          <p>Purchase software.</p>
+        </statement>
+        <feedback id="file-try-mc-qa_opt_c">
+          <p>The quality assurance team does not purchase software.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>So now that we see the flaw in the program, we can elegantly fix it
+            using the <c>try</c>/<c>except</c> structure. We need to
+            assume that the <c>open</c> call might fail and add recovery code
+            when the <c>open</c> fails as follows (creating a new file <em>search7.py</em>):</p>
+  <program language="fileInputTry">
+    <input>
+fname = input('Enter the file name: ')
+try:
+    fhand = open(fname)
+except:
+    print('File cannot be opened:', fname)
+    exit()
+count = 0
+for line in fhand:
+    if line.startswith('Subject:'):
+        count = count + 1
+fhand.close()
+print('There were', count, 'subject lines in', fname)
+</input>
+  </program>
+  <p>The <c>exit</c> function terminates the program. It is a function
+            that we call that never returns. Now when our user (or QA team) types in
+            silliness or bad file names, we <q>catch</q> them and recover gracefully:</p>
+  <pre>python search7.py
+Enter the file name: mbox.txt
+There were 1797 subject lines in mbox.txt
+
+python search7.py
+Enter the file name: na na boo boo
+File cannot be opened: na na boo boo</pre>
+  <exercise label="file-try-fitb-close">
+    <statement>
+      <p>Q-2: The <BlankNode/> function terminates or ends the program. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="exit">
+          <feedback>
+            <p>The exit function does not return anything and closes the program.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again. Which function will close or end a program without returning anything?</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>Protecting the <c>open</c> call is a good example of the proper
+            use of <c>try</c> and <c>except</c> in a Python program. We
+            use the term <q>Pythonic</q> when we are doing something the <q>Python way</q>. We
+            might say that the above example is the Pythonic way to open a file.</p>
+  <p>Once you become more skilled in Python, you can engage in repartee with
+            other Python programmers to decide which of two equivalent solutions to
+            a problem is <q>more Pythonic</q>. The goal to be <q>more Pythonic</q> captures
+            the notion that programming is part engineering and part art. We are not
+            always interested in just making something work, we also want our
+            solution to be elegant and to be appreciated as elegant by our peers.</p>
+  <exercise label="file-try-fitb-python">
+    <statement>
+      <p>Q-3: The term <BlankNode/> describes something done the <q>Python way</q>. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Pp]ythonic">
+          <feedback>
+            <p>A pythonic technique is a technique that works elegantly in Python.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+</section>

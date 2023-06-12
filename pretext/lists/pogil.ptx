@@ -1,0 +1,449 @@
+<?xml version="1.0"?>
+<section xml:id="lists_group-work-lists">
+  <title>Group Work: Lists</title>
+  <p>It is best to use a POGIL approach with the following. In POGIL students work
+            in groups on activities and each member has an assigned role.  For more information see <url href="https://cspogil.org/Home" visual="https://cspogil.org/Home">https://cspogil.org/Home</url>.</p>
+  <note>
+    <p>If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.</p>
+  </note>
+  <p>Many interesting problems involve manipulating sequences of data.  This
+            activity should help you learn about two types of sequences in Python:
+            lists and strings. Both lists and strings hold items in order and you can use an index
+            to get the value at a location.  The index of the first item in each is 0.</p>
+  <p>
+    <term>Learning Objectives</term>
+  </p>
+  <p>After completing this activity, Students should be able to:</p>
+  <p>
+    <ul>
+      <li>
+        <p>Define a list</p>
+      </li>
+      <li>
+        <p>Identify elements of a list</p>
+      </li>
+      <li>
+        <p>Explain the purpose of positive and negative indexes in a list</p>
+      </li>
+      <li>
+        <p>Explain how to access individual elements of a list</p>
+      </li>
+      <li>
+        <p>Define the following list functions: append(), insert(), remove(), len(), index(), count()</p>
+      </li>
+      <li>
+        <p>Explain how to replace an item</p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    <term>Process Skill Goals</term>
+  </p>
+  <p>During the activity, students should make progress toward:</p>
+  <p>
+    <ul>
+      <li>
+        <p>Writing code that prints a list</p>
+      </li>
+      <li>
+        <p>Writing code that edits a list - add, remove, and insert items</p>
+      </li>
+    </ul>
+  </p>
+  <exercise label="list_methods_digit">
+    <statement>
+      <p>Edit the code below to answer the following questions.</p>
+    </statement>
+    <program xml:id="list_methods_digit_editor" interactive="activecode" language="python">
+      <input>
+digits = [1, 2, 0, 5, 4, 3, 6, 9, 8, 7]
+media = ["facebook", "twitter", "instagram", "snapchat"]
+studentData = [['Ethan', 13], ['Ashley', 14], ['Jalen', 12], ['Avery', 13]]
+print(len(digits))
+        </input>
+    </program>
+  </exercise>
+  <exercise label="listOp_MC_list">
+    <statement>
+      <p>Q-2: Which of the lists in the code have the most number of items?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>digits</p>
+        </statement>
+        <feedback>
+          <p>Correct! Digits has the most items in its lists.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>media</p>
+        </statement>
+        <feedback>
+          <p>Try Again! Use len() to check the length of each list</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>studentData</p>
+        </statement>
+        <feedback>
+          <p>Try Again! Each list within a list counts as  one item. Use len() to check the length of each list.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>both b and c</p>
+        </statement>
+        <feedback>
+          <p>Try Again! While b and c have the same number of items in their list, it is not the most. Use len() to check the length of each list</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="list_len_digit">
+    <statement>
+      <p>Q-3: What is printed by line 4? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition number="10">
+          <feedback>
+            <p>Nice job! len(list) returns the number of items in the list</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again!  How many items are in digits at this point?</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="index_last_studentData">
+    <statement>
+      <p>Q-4: What is the index of the last item in studentData at line 3? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition number="3">
+          <feedback>
+            <p>The last item is at the length of the list minus one.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Remember that the first item is at index 0.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="par_ex_group1" indentation="show" language="python">
+    <statement>
+      <p>Construct a function that replaces a value in a list with a new specified value and returns the list with the new value.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <cline>def replaceVal(alist, val, newval):</cline>
+        <cline>    idx = alist.index(val)</cline>
+        <cline>    alist[index] = newval</cline>
+        <cline>    return alist</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="listRepeat1">
+    <statement>
+      <p>Run this code to see what it prints. Feel free to edit!</p>
+    </statement>
+    <program xml:id="listRepeat1_editor" interactive="activecode" language="python">
+      <input>
+areaCode = [3, 1, 2]
+print(areaCode * 3)
+        </input>
+    </program>
+  </exercise>
+  <exercise label="listOp_MC_plus312">
+    <statement>
+      <p>Q-7: What is printed by the following code?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>9</p>
+        </statement>
+        <feedback>
+          <p>Repetition does not multiply the lengths of the lists.  It repeats the items.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>[3, 1, 2, 3, 1, 2, 3, 1, 2]</p>
+        </statement>
+        <feedback>
+          <p>Yes, the items of the list are repeated 3 times, one after another.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[3, 3, 3, 1, 1, 1, 2, 2, 2]</p>
+        </statement>
+        <feedback>
+          <p>Repetition does not repeat each item individually.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>[27, 3, 6]</p>
+        </statement>
+        <feedback>
+          <p>Repetition does not multiply the individual items.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="list_area_code">
+    <statement>
+      <p>Q-8: What is the index of 3 in the list areaCode? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition number="0">
+          <feedback>
+            <p>Correct! 3 is at the begininng of the list.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try Again! Use .index() to hel find where the index of 3 is.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="listOp_MC_plus773">
+    <statement>
+      <p>Q-9:  Which of the following lines could you use to add 7 to the list to become [3, 1, 2, 7,]?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>areaCode.append(7)</p>
+        </statement>
+        <feedback>
+          <p>Yes! You can add the item directly to the list using append</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>areaCode.append([7])</p>
+        </statement>
+        <feedback>
+          <p>Try again! You cannot append a list even if it has one element</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>areaCode += 7</p>
+        </statement>
+        <feedback>
+          <p>Try Again! You cannot concatenate a list and an integer, only two lists.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>areaCode.extend([7])</p>
+        </statement>
+        <feedback>
+          <p>Yes! You can add a list to the end of another list using extend.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>areaCode.extend(7)</p>
+        </statement>
+        <feedback>
+          <p>Try again!  You cannot extend a list with a number.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="par_ex_group2" indentation="show" language="python">
+    <statement>
+      <p>Construct a function that returns the max value from a list. If there are no items in <c>alist``return ``None</c>.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <cline>def getMax(alist):</cline>
+      </block>
+      <block order="4">
+        <cline>    if len(alist) == 0:</cline>
+        <cline>        return None</cline>
+      </block>
+      <block order="2">
+        <cline>    curr = alist[0]</cline>
+        <cline>    for item in alist:</cline>
+      </block>
+      <block order="6">
+        <cline>        if item &gt; curr:</cline>
+      </block>
+      <block order="3">
+        <cline>            curr = item</cline>
+      </block>
+      <block order="1">
+        <cline>    return curr</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="list_methods_lucky_ac">
+    <statement>
+      <p>Run this code to see what it prints. Feel free to edit!</p>
+    </statement>
+    <program xml:id="list_methods_lucky_ac_editor" interactive="activecode" language="python">
+      <input>
+bigCities = ["Chicago", "Detroit", "Houston", "New York"]
+print(bigCities)
+for x in bigCities:
+    print(x, end = " ")
+print()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="list_print_out">
+    <statement>
+      <p>Q-12: How many items are in the list <c>bigCities</c>? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition number="4">
+          <feedback>
+            <p>Yes! there are four items in this list.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try Again! use len() to find the size of the list.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="listOp_MC_idx">
+    <statement>
+      <p>Q-13: What is the index of <q>Detroit</q> in the list <c>bigCities</c>?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>2</p>
+        </statement>
+        <feedback>
+          <p>Try Again! Remember that the index starts at 0 not at 1.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>1</p>
+        </statement>
+        <feedback>
+          <p>Yes, because lists start 0 based index, the solution would be index 1.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>0</p>
+        </statement>
+        <feedback>
+          <p>Try Again! Use index("Detroit") to find the index.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>3</p>
+        </statement>
+        <feedback>
+          <p>Try Again! Use index("Detroit") to find the index.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="par_ex_group5" indentation="show" language="python">
+    <statement>
+      <p>Construct a function that returns the average of the values entered into the list.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <cline>def average():</cline>
+      </block>
+      <block order="1">
+        <cline>    numlist = list()</cline>
+        <cline>    while (True):</cline>
+      </block>
+      <block order="8">
+        <cline>        inp = input('Enter a number: ')</cline>
+      </block>
+      <block order="2">
+        <cline>        if inp == 'done': break</cline>
+      </block>
+      <block order="4">
+        <cline>        value = float(inp)</cline>
+      </block>
+      <block order="7">
+        <cline>        numlist.append(value)</cline>
+      </block>
+      <block order="6">
+        <cline>    average = sum(numlist) / len(numlist)</cline>
+      </block>
+      <block order="3">
+        <cline>    print('Average:', average)</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="list_methods_dnd">
+    <statement>
+      <p>Drag each term to its definition</p>
+    </statement>
+    <feedback>
+      <p>Read the chapter on lists and try again.</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>count</premise>
+        <response>Returns the number of times a specified value appears in the list</response>
+      </match>
+      <match order="2">
+        <premise>append</premise>
+        <response>Adds a value to the end of a list.</response>
+      </match>
+      <match order="3">
+        <premise>len</premise>
+        <response>Returns the number of items in a list.</response>
+      </match>
+      <match order="4">
+        <premise>remove</premise>
+        <response>Removes an item from a list.</response>
+      </match>
+      <match order="5">
+        <premise>type</premise>
+        <response>Returns the class name (type) of the current object.</response>
+      </match>
+    </matches>
+  </exercise>
+  <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+    &lt;div data-component="groupsub" id=lists_intro_groupsub data-size_limit=3&gt;
+        &lt;div class="col-sm-6"&gt;
+            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div id="groupsub_button" class="col-sm-6"&gt;
+        &lt;/div&gt;
+        &lt;p&gt;The Submit Group button will submit the answer for each each question
+        on this page for each member of your group. It also logs you as the official
+        group submitter.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</raw>
+</section>

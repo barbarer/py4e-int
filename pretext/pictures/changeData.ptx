@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<section xml:id="pictures_changing-step-3-changing-which-data-we-use">
+  <title>Changing Step 3: Changing which data we use</title>
+  <p>Below is a selection of images that you can use in the programs in this section.</p>
+  <p>We can also change which part of the picture we read and manipulate.  When we are changing several colors at once we can create a new pixel with the desired color using <c>Pixl(red,green,blue)</c> as shown below on line 20.</p>
+  <program xml:id="Image_Negate_Quarter" interactive="activecode" language="python">
+    <input>
+# STEP 1: USE THE IMAGE LIBRARY
+from image import *
+
+# STEP 2: PICK THE IMAGE
+img = Image("vangogh.jpg")
+
+# STEP 3: SELECT THE DATA
+halfWidth = (int) (img.getWidth() / 2)
+halfHeight = (int) (img.getHeight() / 2)
+for x in range(halfWidth):
+    for y in range(halfHeight):
+
+        # STEP 4: GET THE DATA
+        p = img.getPixel(x, y)
+        r = p.getRed()
+        g = p.getGreen()
+        b = p.getBlue()
+
+        # STEP 5: CREATE THE COLOR
+        newPixel = Pixel(255-r, 255-g, 255-b)
+
+        # STEP 6: CHANGE THE PIXEL
+        img.setPixel(x, y, newPixel)
+
+# STEP 7: SHOW THE RESULT
+win = ImageWin(img.getWidth(),img.getHeight())
+img.draw(win)
+        </input>
+  </program>
+  <p>What happens if we skip every other x and y as we manipulate the colors?  Maybe make the green 255 and the blue 0?</p>
+  <program xml:id="Image_Every_Other" interactive="activecode" language="python">
+    <input>
+# STEP 1: USE THE IMAGE LIBRARY
+from image import *
+
+# STEP 2: PICK THE IMAGE
+img = Image("vangogh.jpg")
+
+# STEP 3: SELECT THE DATA
+for x in range(0,img.getWidth(),2):
+    for y in range(0,img.getHeight(),2):
+
+        # STEP 4: GET THE DATA
+        p = img.getPixel(x, y)
+        r = p.getRed()
+
+        # STEP 5: CREATE THE COLOR
+        newPixel = Pixel(r, 255, 0)
+
+        # STEP 6: CHANGE THE PIXEL
+        img.setPixel(x, y, newPixel)
+
+# STEP 7: SHOW THE RESULT
+win = ImageWin(img.getWidth(),img.getHeight())
+img.draw(win)
+        </input>
+  </program>
+  <p>Let's try side-to-side copying.</p>
+  <program xml:id="Image_Copy_Left" interactive="activecode" language="python">
+    <input>
+# STEP 1: USE THE IMAGE LIBRARY
+from image import *
+
+# STEP 2: PICK THE IMAGE
+img = Image("vangogh.jpg")
+
+# STEP 3: SELECT THE DATA
+halfway = (int) (img.getWidth() / 2)
+for x in range(halfway):
+    for y in range(img.getHeight()):
+
+        # STEP 4: GET THE DATA
+        p = img.getPixel(x, y)
+        r = p.getRed()
+        g = p.getGreen()
+        b = p.getBlue()
+
+        # STEP 5: CREATE THE COLOR
+        newPixel = Pixel(r, g, b)
+
+        # STEP 6: CHANGE THE PIXEL
+        img.setPixel(halfway + x, y, newPixel)
+
+# STEP 7: SHOW THE RESULT
+win = ImageWin(img.getWidth(),img.getHeight())
+img.draw(win)
+        </input>
+  </program>
+  <exercise label="image_6_1_Image_Mirror_Q1">
+    <statement>
+      <p>Q-4: Try it: How would you mirror the image from left-to-right around a vertical line in the middle of the picture?  Try changing line 22 to these.  If you get it right it will look like the women is nose to nose with herself.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>img.setPixel(halfway - x, y, newPixel)</p>
+        </statement>
+        <feedback>
+          <p>It does mirror, but only the left half</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>img.setPixel(x - halfway, y, newPixel)</p>
+        </statement>
+        <feedback>
+          <p>This creates two copies of the left half</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>img.setPixel(img.getWidth() - 1 - x, y, newPixel)</p>
+        </statement>
+        <feedback>
+          <p>Yes, it looks like the woman is kissing herself</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>img.setPixel(x - img.getWidth(), y, newPixel)</p>
+        </statement>
+        <feedback>
+          <p>No, no effect.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <figure align="center">
+    <image source="pictures/Figures/ImageCopy.png" width="150px%" alt=""/>
+  </figure>
+  <exercise>
+    <statement/>
+    <program interactive="" language=""/>
+    <solution>
+      <program xml:id="image_6_1_WSa" language="python">
+        <input>
+# USE THE IMAGE LIBRARY
+from image import *
+
+# PICK THE IMAGE
+img = Image("vangogh.jpg")
+
+# SELECT THE DATA
+halfwayWidth = (int) (img.getWidth() / 2)
+halfwayHeight = (int) (img.getHeight() / 2)
+for x in range(halfwayWidth):
+    for y in range(halfwayHeight):
+
+        # GET THE DATA
+        p = img.getPixel(x, y)
+        r = p.getRed()
+        g = p.getGreen()
+        b = p.getBlue()
+
+        # CREATE THE COLOR
+        newPixel = Pixel(r, g, b)
+
+        # CHANGE THE PIXEL
+        img.setPixel(halfwayWidth + x, halfwayHeight + y, newPixel)
+
+# SHOW THE RESULT
+win = ImageWin(img.getWidth(),img.getHeight())
+img.draw(win)
+        </input>
+      </program>
+    </solution>
+  </exercise>
+</section>

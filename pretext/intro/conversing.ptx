@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<section xml:id="intro_conversing-with-python">
+  <title>Conversing with Python</title>
+  <p xml:id="intro_index_conversing-0">Now that we have a word and a simple sentence that we know in Python, we
+            need to know how to start a conversation with Python to test our new
+            language skills.</p>
+  <p>Before you can converse with Python, you must first install the Python
+            software on your computer and learn how to start Python on your
+            computer. That is too much detail for this chapter so I suggest that you
+            consult <url href="http://www.py4e.com" visual="http://www.py4e.com">www.py4e.com</url> where I have detailed
+            instructions and screencasts of setting up and starting Python on
+            Macintosh and Windows systems. At some point, you will be in a terminal
+            or command window and you will type <em>python</em> and the
+            Python interpreter will start executing in interactive mode and appear
+            somewhat as follows:</p>
+  <program language="python">
+    <input>
+Python 3.5.1 (v3.5.1:37a07cee5969, Dec  6 2015, 01:54:25)
+[MSC v.1900 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more
+information.
+&gt;&gt;&gt;
+</input>
+  </program>
+  <p>The <c>&gt;&gt;&gt;</c> prompt is the Python interpreter's way of asking
+            you, <q>What do you want me to do next?</q> Python is ready to have a
+            conversation with you. All you have to know is how to speak the Python
+            language.</p>
+  <exercise label="intro-convo-fitb-prompt">
+    <statement>
+      <p>Q-1: What symbol is the Python interpreter's prompt for <q>What do you want me to do next?</q> <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="&gt;&gt;&gt;">
+          <feedback>
+            <p>Correct! &gt;&gt;&gt; is the prompt from the Python interpreter.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again. Open your Python interpreter using the command <q>python</q> and see what you are prompted with.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>Let's say for example that you did not know even the simplest Python
+            language words or sentences. You might want to use the standard line
+            that astronauts use when they land on a faraway planet and try to speak
+            with the inhabitants of the planet:</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; I come in peace, please take me to your leader
+File "&lt;stdin&gt;", line 1
+  I come in peace, please take me to your leader
+       ^
+SyntaxError: invalid syntax
+&gt;&gt;&gt;
+</input>
+  </program>
+  <p>This is not going so well. Unless you think of something quickly, the
+            inhabitants of the planet are likely to stab you with their spears, put
+            you on a spit, roast you over a fire, and eat you for dinner.</p>
+  <p>Luckily you brought a copy of this book on your travels, and you thumb
+            to this very page and try again:</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; print('Hello world!')
+Hello world!
+</input>
+  </program>
+  <p>This is looking much better, so you try to communicate some more:</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; print('You must be the legendary god that comes from the sky')
+You must be the legendary god that comes from the sky
+&gt;&gt;&gt; print('We have been waiting for you for a long time')
+We have been waiting for you for a long time
+&gt;&gt;&gt; print('Our legend says you will be very tasty with mustard')
+Our legend says you will be very tasty with mustard
+&gt;&gt;&gt; print 'We will have a feast tonight unless you say
+File "&lt;stdin&gt;", line 1
+  print 'We will have a feast tonight unless you say
+                                                   ^
+SyntaxError: Missing parentheses in call to 'print'
+&gt;&gt;&gt;
+</input>
+  </program>
+  <p>The conversation was going so well for a while and then you made the
+            tiniest mistake using the Python language and Python brought the spears
+            back out.</p>
+  <exercise label="intro-convo-mc-print">
+    <statement>
+      <p>Q-2: What is missing from this print statement?</p>
+      <pre>print 'We will have a feast tonight unless you say'</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>commas</p>
+        </statement>
+        <feedback>
+          <p>What is needed to complete a print statement?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>brackets</p>
+        </statement>
+        <feedback>
+          <p>What symbols are needed around the text to print?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>semicolons</p>
+        </statement>
+        <feedback>
+          <p>Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>parentheses</p>
+        </statement>
+        <feedback>
+          <p>Correct! Parentheses are needed around statements that are being printed.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>At this point, you should also realize that while Python is amazingly
+            complex and powerful and very picky about the syntax you use to
+            communicate with it, Python is <em>not</em> intelligent. You are
+            really just having a conversation with yourself, but using proper
+            syntax.</p>
+  <p>In a sense, when you use a program written by someone else the
+            conversation is between you and those other programmers with Python
+            acting as an intermediary. Python is a way for the creators of programs
+            to express how the conversation is supposed to proceed. And in just a
+            few more chapters, you will be one of those programmers using Python to
+            talk to the users of your program.</p>
+  <p>Before we leave our first conversation with the Python interpreter, you
+            should probably know the proper way to say <q>good-bye</q> when interacting
+            with the inhabitants of Planet Python:</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; good-bye
+Traceback (most recent call last):
+File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+NameError: name 'good' is not defined
+&gt;&gt;&gt; if you don't mind, I need to leave
+File "&lt;stdin&gt;", line 1
+  if you don't mind, I need to leave
+           ^
+SyntaxError: invalid syntax
+&gt;&gt;&gt; quit()
+</input>
+  </program>
+  <p>You will notice that the error is different for the first two incorrect
+            attempts. The second error is different because <em>if</em> is a
+            reserved word and Python saw the reserved word and thought we were
+            trying to say something but got the syntax of the sentence wrong.</p>
+  <p>The proper way to say <q>good-bye</q> to Python is to enter
+            <em>quit()</em> at the interactive chevron <c>&gt;&gt;&gt;</c>
+            prompt. It would have probably taken you quite a while to guess that
+            one, so having a book handy probably will turn out to be helpful.</p>
+  <exercise label="intro-convo-fitb-leave-Python">
+    <statement>
+      <p>Q-3: What do you type to leave the Python interpreter? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="quit(\(\))*">
+          <feedback>
+            <p>Correct!</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+</section>

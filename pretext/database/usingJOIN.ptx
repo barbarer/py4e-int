@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<section xml:id="database_using-join-to-retrieve-data">
+  <title>Using JOIN to retrieve data</title>
+      <idx><h>SQL</h><h>JOIN</h></idx>
+    <idx><h>JOIN</h><h>SQL</h></idx>
+    <idx><h>SQL</h><h>SELECT</h></idx>
+    <idx><h>SELECT</h><h>SQL</h></idx>
+
+  <p>Now that we have followed the rules of database normalization and have
+            data separated into two tables, linked together using primary and
+            foreign keys, we need to be able to build a <c>SELECT</c> that
+            reassembles the data across the tables.</p>
+  <p>SQL uses the <c>JOIN</c> clause to reconnect these tables. In the
+            <c>JOIN</c> clause you specify the fields that are used to
+            reconnect the rows between the tables.</p>
+  <p>The following is an example of a <c>SELECT</c> with a
+            <c>JOIN</c> clause:</p>
+  <program language="{.sql}">
+    <input>
+SELECT * FROM Follows JOIN People
+    ON Follows.from_id = People.id WHERE People.id = 1
+</input>
+  </program>
+  <p>The <c>JOIN</c> clause indicates that the fields we are selecting
+            come from the <c>Follows</c> and <c>People</c> tables. The
+            <c>ON</c> clause indicates how the two tables are to be joined:
+            Take the rows from <c>Follows</c> and append the row from
+            <c>People</c> where the field <c>from_id</c> in <c>Follows</c> is
+            the same the <c>id</c> value in the <c>People</c> table.</p>
+  <exercise label="dbJoin_fill1">
+    <statement>
+      <p>Q-1: Which SQL clause can be used to return data from two tables? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="join">
+          <feedback>
+            <p>JOIN returns data from two tables based on rows selected to join them on.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="dbJoin_on_fill1">
+    <statement>
+      <p>Q-2: Fill in the blank in the following: SELECT * FROM Follows JOIN People <BlankNode/> Follows.from_id = People.id LIMIT 5 <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="on">
+          <feedback>
+            <p>Use ON to specify what column to join the data on.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>
+    <term>Connecting Tables Using JOIN</term>
+  </p>
+  <p>The result of the JOIN is to create extra-long <q>metarows</q> which have
+            both the fields from <c>People</c> and the matching fields from
+            <c>Follows</c>. Where there is more than one match between the
+            <c>id</c> field from <c>People</c> and the <c>from_id</c> from
+            <c>People</c>, then JOIN creates a metarow for <em>each</em> of the
+            matching pairs of rows, duplicating data as needed.</p>
+  <exercise label="dbJoin_MC_metarow">
+    <statement>
+      <p>Q-3: True or False? A <q>metarow</q> only contains the first set of matching data.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>A metarow includes all data in the matching fields, regardless of how many matches there are.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>The following code demonstrates the data that we will have in the
+            database after the multi-table Twitter spider program (above) has been
+            run several times.</p>
+  <pre>import sqlite3
+import os
+
+dir = os.path.dirname(__file__) + os.sep
+conn = sqlite3.connect(dir + 'friends.db')
+cur = conn.cursor()
+
+cur.execute('SELECT * FROM People')
+count = 0
+print('People:')
+for row in cur:
+    if count &lt; 5: print(row)
+    count = count + 1
+print(count, 'rows.')
+
+cur.execute('SELECT * FROM Follows')
+count = 0
+print('Follows:')
+for row in cur:
+    if count &lt; 5: print(row)
+    count = count + 1
+print(count, 'rows.')
+
+cur.execute('''SELECT * FROM Follows JOIN People
+            ON Follows.to_id = People.id
+            WHERE Follows.from_id = 2''')
+count = 0
+print('Connections for id=2:')
+for row in cur:
+    if count &lt; 5: print(row)
+    count = count + 1
+print(count, 'rows.')
+
+cur.close()</pre>
+  <p>In this program, we first dump out the <c>People</c> and
+            <c>Follows</c> and then dump out a subset of the data in the
+            tables joined together.</p>
+  <p>Here is the output of the program:</p>
+  <pre>python twjoin.py
+People:
+(1, 'drchuck', 1)
+(2, 'ravenmaster1', 1)
+(3, 'BrentSeverance', 1)
+(4, 'prairycat', 0)
+(5, 'lionelrobertjr', 0)
+15 rows.
+Follows:
+(1, 2)
+(1, 3)
+(1, 4)
+(1, 5)
+(1, 6)
+15 rows.
+Connections for id=2:
+(2, 7, 7, 'myldn', 0)
+(2, 8, 8, 'DickieDover', 0)
+(2, 9, 9, 'Ukraine', 0)
+(2, 10, 10, 'AlisonMoyet', 0)
+(2, 11, 11, 'PhilipPullman', 0)
+5 rows.</pre>
+  <p>You see the columns from the <c>People</c> and
+            <c>Follows</c> tables and the last set of rows is the result of
+            the <c>SELECT</c> with the <c>JOIN</c> clause.</p>
+  <p>In the last select, we are looking for accounts that are friends of
+            <q>ravenmaster1</q> (i.e., <c>People.id=2</c>).</p>
+  <p>In each of the <q>metarows</q> in the last select, the first two columns are
+            from the <c>Follows</c> table followed by columns three through
+            five from the <c>People</c> table. You can also see that the
+            second column (<c>Follows.to_id</c>) matches the third column
+            (<c>People.id</c>) in each of the joined-up <q>metarows</q>.</p>
+  <exercise label="dbJoin_MC_titles">
+    <statement>
+      <p>Q-4: True or False? When using JOIN on two tables, you can join on columns that have different names.</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>You can absolutely join two tables on columns that have different names. For example, you can join on Follows.to_id = People.id</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>You can use <c>table_name.field_name</c> to specify the column that you want from each table.</p>
+  <exercise label="db_select_bike_join_ex1">
+    <statement>
+      <p>The following code will select the <c>bike_number</c> from <c>trip_data</c>
+            and <c>name</c> from <c>bikeshare_stations</c>
+            where the <c>start_station</c> in <c>trip_data</c> is the same as the <c>station_id</c> in <c>bikeshare_stations</c>.
+            It will also limit the results to 5 rows.</p>
+    </statement>
+    <program xml:id="db_select_bike_join_ex1_editor" interactive="activecode" language="sql">
+      <input>
+SELECT trip_data.bike_number, bikeshare_stations.name
+FROM trip_data JOIN bikeshare_stations
+ON trip_data.start_station = bikeshare_stations.station_id
+LIMIT 5
+====
+assert 0,0 == W00058
+assert 1,0 == W00775
+assert 4,0 == W00392
+assert 3,1 == 3rd &amp; H St NE
+        </input>
+    </program>
+  </exercise>
+  <p>You can also add a <c>WHERE</c> clause.</p>
+  <exercise label="db_select_bike_join_with_where_ex1">
+    <statement>
+      <p>The following code will select the <c>bike_number</c> and <c>duration</c> from <c>trip_data</c>
+            and <c>name</c> from <c>bikeshare_stations</c>
+            where the <c>start_station</c> in <c>trip_data</c> is the same as the <c>station_id</c> in <c>bikeshare_stations</c>
+            and where the duration is greater than 85,000.</p>
+    </statement>
+    <program xml:id="db_select_bike_join_with_where_ex1_editor" interactive="activecode" language="sql">
+      <input>
+SELECT trip_data.bike_number, trip_data.duration, bikeshare_stations.name
+FROM trip_data JOIN bikeshare_stations
+ON trip_data.start_station = bikeshare_stations.station_id
+WHERE trip_data.duration &gt; 85000
+====
+assert 0,0 == W00837
+assert 0,1 == 85168
+assert 1,0 == W00930
+assert 3,0 == W00202
+assert 3,1 == 85102
+assert 3,2 == 14th &amp; G St NW
+        </input>
+    </program>
+  </exercise>
+</section>

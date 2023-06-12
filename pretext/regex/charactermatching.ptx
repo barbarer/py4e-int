@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<section xml:id="regex_character-matching-in-regular-expressions">
+  <title>Character Matching in Regular Expressions</title>
+<idx>Wild Card</idx>
+<idx>Greedy</idx>
+  <p>There are a number of other special characters that let us build even
+            more powerful regular expressions. The most commonly used special
+            character is the period or full stop, which matches any character.</p>
+  <p>In the following example, the regular expression <c>F..m:</c> would match any
+            of the strings <q>From:</q>, <q>Fxxm:</q>, <q>F12m:</q>, or <q>F!@m:</q> since the period
+            characters in the regular expression match any character.</p>
+  <exercise label="re_char_ac1">
+    <statement>
+      <p>This code searches for lines that start with &#x2018;F', follow by 2 characters, followed by &#x2018;m:'</p>
+    </statement>
+    <program xml:id="re_char_ac1_editor" interactive="activecode" language="python">
+      <input>
+import re
+hand = open('mbox-short.txt')
+for line in hand:
+    line = line.rstrip()
+    if re.search('^F..m:', line):
+        print(line)
+        </input>
+    </program>
+  </exercise>
+  <p>This is particularly powerful when combined with the ability to indicate
+            that a character can be repeated any number of times using the <c>*</c> or
+            <c>+</c> characters in your regular expression. These special characters mean
+            that instead of matching a single character in the search string, they
+            match zero-or-more characters (in the case of the asterisk) or
+            one-or-more of the characters (in the case of the plus sign).</p>
+  <exercise label="re_char_mc_symbol">
+    <statement>
+      <p>11-9-2: Which symbol in regex matches zero or more characters in the search string?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>+</p>
+        </statement>
+        <feedback>
+          <p>The plus is used to match more than one character.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>^</p>
+        </statement>
+        <feedback>
+          <p>The carrot is used to match characters at the beginning of a string.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>*</p>
+        </statement>
+        <feedback>
+          <p>Correct! The asterisk is used to match zero or more characters.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>.</p>
+        </statement>
+        <feedback>
+          <p>The period is used to match any character.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>We can further narrow down the lines that we match using a repeated
+            <em>wild card</em> character in the following example:</p>
+  <exercise label="re_char_ac2">
+    <statement>
+      <p>This code searches for lines that start with &#x2018;From:' and have an &#x2018;@' symbol.</p>
+    </statement>
+    <program xml:id="re_char_ac2_editor" interactive="activecode" language="python">
+      <input>
+import re
+hand = open('mbox-short.txt')
+for line in hand:
+    line = line.rstrip()
+    if re.search('^From:.+@', line):
+        print(line)
+        </input>
+    </program>
+  </exercise>
+  <p>The search string <c>^From:.+@</c> will successfully match lines that start
+            with <q>From:</q>, followed by one or more characters (<c>.+</c>), followed by an
+            at-sign. So this will match the following line:</p>
+  <pre>From: stephen.marquard@uct.ac.za</pre>
+  <p>You can think of the <c>.+</c> wildcard as expanding to match all the
+            characters between the colon character and the at-sign.</p>
+  <pre>From:.+@</pre>
+  <p>It is good to think of the plus and asterisk characters as <q>pushy</q> or <q>greedy</q>. For
+            example, the following string would match the last at-sign in the string
+            as the <c>.+</c> pushes outwards, as shown below:</p>
+  <pre>From: stephen.marquard@uct.ac.za, csev@umich.edu, and cwen @iupui.edu</pre>
+  <p>It is possible to tell an asterisk or plus sign not to be so <q>greedy</q> by
+            adding another character. See the detailed documentation for information
+            on turning off the greedy behavior.</p>
+  <exercise label="re_char_mc_match">
+    <statement>
+      <p>11-9-4: Select <term>all</term> of the lines that will be printed when the following code is run.
+            (\$ is used to match the character &#x2018;$')</p>
+      <program language="python">
+        <input>
+import re
+hand = open('mbox-short-re2.txt')
+for line in hand:
+    line = line.rstrip()
+    if re.search('\$.+', line):
+        print(line)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>It will cost you $1.00</p>
+        </statement>
+        <feedback>
+          <p>Correct! There is a dollar sign followed by one or more characters.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>From: stephen.marquard@uct.ac.za $</p>
+        </statement>
+        <feedback>
+          <p>The .+ indicates that there need to be characters following the $.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>$2.50 is your change</p>
+        </statement>
+        <feedback>
+          <p>Correct. The dollar sign in this line is followed by more than one character.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Your change is two dollars and fifty cents.</p>
+        </statement>
+        <feedback>
+          <p>Try again! There needs to be at least a $ in the line.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="re_char_mc_matchAbove">
+    <statement>
+      <p>11-9-5: Looking at the code-block below, what parts of it will be matched by the regex equation <c>re.search('From:.+@')</c>?</p>
+      <program language="python">
+        <input>
+From: stephen.marquard@uct.ac.za, csev@umich.edu, and cwen @iupui.edu
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>From: stephen.marquard@</p>
+        </statement>
+        <feedback>
+          <p>'^From:.+@' will match this.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>From: stephen.marquard@uct.ac.za, csev@</p>
+        </statement>
+        <feedback>
+          <p>Remember the + and * characters in regex are pushy!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>From: stephen.marquard@uct.ac.za, csev@umich.edu, and cwen @</p>
+        </statement>
+        <feedback>
+          <p>Correct! The + and * characters are greedy, so this will capture the entire statement and not just to the first @ sign.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>From: stephen.marquard@uct.ac.za, csev@umich.edu, and cwen @iupui.edu</p>
+        </statement>
+        <feedback>
+          <p>It stops at the last @</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

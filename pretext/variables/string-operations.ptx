@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<section xml:id="variables_string-operations">
+  <title>String operations</title>
+<idx><h>String</h><h>Operator</h></idx>
+<idx><h>Operator</h><h>String</h></idx>
+<idx>String Operations</idx>
+<idx>Concatenation</idx>
+  <p>The <c>+</c> operator works with strings, but it is not addition
+            in the mathematical sense. Instead it performs
+            <em>concatenation</em>, which means joining the strings by
+            linking them end to end. For example:</p>
+  <program xml:id="var-ac-8-strings" interactive="activecode" language="python">
+    <input>
+first = 10
+second = 15
+print(first+second)
+first = '100'
+second = '150'
+print(first + second)
+        </input>
+  </program>
+  <exercise label="var-string-mc-fruit">
+    <statement>
+      <p>csp-10-2-2: Which of the following correctly prints <q>Apples, Oranges, Blueberries, Strawberries, Raspberries, Peaches, Plums</q> from the codeblock below?</p>
+      <pre>fruit = "Apples, Oranges"
+berries = "Blueberries, Strawberries, Raspberries"
+stoneFruit = "Peaches, Plums"</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>print(berries + ", " + fruit + ", " + stoneFruit)</p>
+        </statement>
+        <feedback>
+          <p>Are they in the correct order?</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>print(fruits + " " + berries + " " + stonefruit)</p>
+        </statement>
+        <feedback>
+          <p>Make sure you are using the right variable names.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>print(fruit + ", " + berries + ", " + stoneFruit)</p>
+        </statement>
+        <feedback>
+          <p>This will print Apples, Oranges, Blueberries, Strawberries, Raspberries, Peaches, Plums</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>print(fruit + berries + stoneFruit)</p>
+        </statement>
+        <feedback>
+          <p>Don't forget the commas and spaces!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>The <c>*</c> operator also works with strings by multiplying the content
+            of a string by an integer. For example:</p>
+  <program xml:id="var-ac-9-mult" interactive="activecode" language="python">
+    <input>
+first = 'Test '
+second = 3
+print(first * second)
+        </input>
+  </program>
+  <exercise label="var-string-mc-cheer">
+    <statement>
+      <p>csp-10-2-4: What is printed by the following statements?</p>
+      <pre>cheer = "Let's go Blue"
+excl = "!"
+print(cheer + excl * 2)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Let's go Blue !!</p>
+        </statement>
+        <feedback>
+          <p>Is there an extra space in the <c>cheer</c> variable?</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Let's go Blue!!</p>
+        </statement>
+        <feedback>
+          <p>This will print Let's go Blue!! Only <c>excl</c> is multiplied by 2.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Let's go Blue! Let's go Blue!</p>
+        </statement>
+        <feedback>
+          <p>Think about the order of operations.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Lets go Blue ! Let's go Blue !</p>
+        </statement>
+        <feedback>
+          <p>Think about the order of operations, and remember that the apostrophe <c>'</c> is in the string.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="var-string-mc-false">
+    <statement>
+      <p>csp-10-2-5: Which of the following is <term>not</term> true about string operations?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>You can combine strings using + (concatenation).</p>
+        </statement>
+        <feedback>
+          <p>You can combine strings using "+". Which of the options is not true?</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Concatenating strings automatically adds a space between the strings.</p>
+        </statement>
+        <feedback>
+          <p>Concatenating joins the strings beginning to end without adding additional spaces.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>You can use * to multiply a string by an integer.</p>
+        </statement>
+        <feedback>
+          <p>You can use "*" to multiply a string by an integer.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The operands + and * follow the order of operations when applied to strings.</p>
+        </statement>
+        <feedback>
+          <p>The operands "+" and "*" follow the order of operations when applied to strings.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<section xml:id="viz_visualizing-mail-data">
+  <title>Visualizing mail data</title>
+  <p>Up to this point in the book, you have become quite familiar with our
+            <em>mbox-short.txt</em> and <em>mbox.txt</em> data
+            files. Now it is time to take our analysis of email data to the next
+            level.</p>
+  <p>In the real world, sometimes you have to pull down mail data from
+            servers. That might take quite some time and the data might be
+            inconsistent, error-filled, and need a lot of cleanup or adjustment. In
+            this section, we work with an application that is the most complex so
+            far and pull down nearly a gigabyte of data and visualize it.</p>
+  <image source="images/wordcloud.png" width="50%" alt="A Word Cloud from the Sakai Developer List"/>
+  <p>You can download this application from:</p>
+  <p>
+    <url href="http://www.py4e.com/code3/gmane.zip" visual="http://www.py4e.com/code3/gmane.zip">www.py4e.com/code3/gmane.zip</url>
+  </p>
+  <p>We will be using data from a free email list archiving service called
+            <url href="http://www.gmane.org" visual="http://www.gmane.org">www.gmane.org</url>. This service is very popular with open
+            source projects because it provides a nice searchable archive of their
+            email activity. They also have a very liberal policy regarding accessing
+            their data through their API. They have no rate limits, but ask that you
+            don't overload their service and take only the data you need. You can
+            read gmane's terms and conditions at this page:</p>
+  <p>
+    <url href="http://gmane.org/export.php" visual="http://gmane.org/export.php">http://gmane.org/export.php</url>
+  </p>
+  <note>
+    <p>It is very important that you make use of the gmane.org data responsibly by adding
+                delays to your access of their services and spreading long-running jobs over a longer
+                period of time. Do not abuse this free service and ruin it for the rest of us.</p>
+  </note>
+  <p>When the Sakai email data was spidered using this software, it produced
+            nearly a Gigabyte of data and took a number of runs on several days. The
+            file <em>README.txt</em> in the above ZIP may have instructions
+            as to how you can download a pre-spidered copy of the
+            <em>content.sqlite</em> file for a majority of the Sakai email
+            corpus so you don't have to spider for five days just to run the
+            programs. If you download the pre-spidered content, you should still run
+            the spidering process to catch up with more recent messages.</p>
+  <exercise label="viz-mail-MC-tf">
+    <statement>
+      <p>csp-10-2-1: True or False? When running the following program, it is required to spider the Sakai email data.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>Try again! In the README.txt file, there are instructions to download a pre-spidered file.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>In the README.txt file, there are instructions to download a pre-spidered file. It is useful to spider after this, to stay up to date on new messages.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>The first step is to spider the gmane repository. The base URL is
+            hard-coded in the <em>gmane.py</em> and is hard-coded to the
+            Sakai developer list. You can spider another repository by changing that
+            base url. Make sure to delete the <em>content.sqlite</em> file
+            if you switch the base url.</p>
+  <p>The <em>gmane.py</em> file operates as a responsible caching
+            spider in that it runs slowly and retrieves one mail message per second
+            so as to avoid getting throttled by gmane. It stores all of its data in
+            a database and can be interrupted and restarted as often as needed. It
+            may take many hours to pull all the data down. So you may need to
+            restart several times.</p>
+  <p>Here is a run of <em>gmane.py</em> retrieving the last five
+            messages of the Sakai developer list:</p>
+  <pre>How many messages:10
+http://download.gmane.org/gmane.comp.cms.sakai.devel/51410/51411 9460
+    nealcaidin@sakaifoundation.org 2013-04-05 re: [building ...
+http://download.gmane.org/gmane.comp.cms.sakai.devel/51411/51412 3379
+    samuelgutierrezjimenez@gmail.com 2013-04-06 re: [building ...
+http://download.gmane.org/gmane.comp.cms.sakai.devel/51412/51413 9903
+    da1@vt.edu 2013-04-05 [building sakai] melete 2.9 oracle ...
+http://download.gmane.org/gmane.comp.cms.sakai.devel/51413/51414 349265
+    m.shedid@elraed-it.com 2013-04-07 [building sakai] ...
+http://download.gmane.org/gmane.comp.cms.sakai.devel/51414/51415 3481
+    samuelgutierrezjimenez@gmail.com 2013-04-07 re: ...
+http://download.gmane.org/gmane.comp.cms.sakai.devel/51415/51416 0
+
+Does not start with From</pre>
+  <p>The program scans <em>content.sqlite</em> from one up to the
+            first message number not already spidered and starts spidering at that
+            message. It continues spidering until it has spidered the desired number
+            of messages or it reaches a page that does not appear to be a properly
+            formatted message.</p>
+  <p>Sometimes <url href="gmane.org" visual="gmane.org">gmane.org</url> is missing a message. Perhaps
+            administrators can delete messages or perhaps they get lost. If your
+            spider stops, and it seems it has hit a missing message, go into the
+            SQLite Manager and add a row with the missing id leaving all the other
+            fields blank and restart <em>gmane.py</em>. This will unstick
+            the spidering process and allow it to continue. These empty messages
+            will be ignored in the next phase of the process.</p>
+  <p>One nice thing is that once you have spidered all of the messages and
+            have them in <em>content.sqlite</em>, you can run
+            <em>gmane.py</em> again to get new messages as they are sent to
+            the list.</p>
+  <p>The <em>content.sqlite</em> data is pretty raw, with an
+            inefficient data model, and not compressed. This is intentional as it
+            allows you to look at <em>content.sqlite</em> in the SQLite
+            Manager to debug problems with the spidering process. It would be a bad
+            idea to run any queries against this database, as they would be quite
+            slow.</p>
+  <p>The second process is to run the program <em>gmodel.py</em>.
+            This program reads the raw data from <em>content.sqlite</em> and
+            produces a cleaned-up and well-modeled version of the data in the file
+            <em>index.sqlite</em>. This file will be much smaller (often 10X
+            smaller) than <em>content.sqlite</em> because it also compresses
+            the header and body text.</p>
+  <p>Each time <em>gmodel.py</em> runs it deletes and rebuilds
+            <em>index.sqlite</em>, allowing you to adjust its parameters and
+            edit the mapping tables in <em>content.sqlite</em> to tweak the
+            data cleaning process. This is a sample run of
+            <em>gmodel.py</em>. It prints a line out each time 250 mail
+            messages are processed so you can see some progress happening, as this
+            program may run for a while processing nearly a Gigabyte of mail data.</p>
+  <pre>Loaded allsenders 1588 and mapping 28 dns mapping 1
+1 2005-12-08T23:34:30-06:00 ggolden22@mac.com
+251 2005-12-22T10:03:20-08:00 tpamsler@ucdavis.edu
+501 2006-01-12T11:17:34-05:00 lance@indiana.edu
+751 2006-01-24T11:13:28-08:00 vrajgopalan@ucmerced.edu
+...</pre>
+  <p>The <em>gmodel.py</em> program handles a number of data cleaning
+            tasks.</p>
+  <p>Domain names are truncated to two levels for .com, .org, .edu, and .net.
+            Other domain names are truncated to three levels. So si.umich.edu
+            becomes umich.edu and caret.cam.ac.uk becomes cam.ac.uk. Email addresses
+            are also forced to lower case, and some of the @gmane.org address like
+            the following</p>
+  <pre>arwhyte-63aXycvo3TyHXe+LvDLADg@public.gmane.org</pre>
+  <p>are converted to the real address whenever there is a matching real
+            email address elsewhere in the message corpus.</p>
+  <p>In the <em>mapping.sqlite</em> database there are two tables
+            that allow you to map both domain names and individual email addresses
+            that change over the lifetime of the email list. For example, Steve
+            Githens used the following email addresses as he changed jobs over the
+            life of the Sakai developer list:</p>
+  <pre>s-githens@northwestern.edu
+sgithens@cam.ac.uk
+swgithen@mtu.edu</pre>
+  <p>We can add two entries to the Mapping table in
+            <em>mapping.sqlite</em> so <em>gmodel.py</em> will map
+            all three to one address:</p>
+  <pre>s-githens@northwestern.edu -&gt;  swgithen@mtu.edu
+sgithens@cam.ac.uk -&gt; swgithen@mtu.edu</pre>
+  <p>You can also make similar entries in the DNSMapping table if there are
+            multiple DNS names you want mapped to a single DNS. The following
+            mapping was added to the Sakai data:</p>
+  <pre>iupui.edu -&gt; indiana.edu</pre>
+  <p>so all the accounts from the various Indiana University campuses are
+            tracked together.</p>
+  <p>You can rerun the <em>gmodel.py</em> over and over as you look
+            at the data, and add mappings to make the data cleaner and cleaner. When
+            you are done, you will have a nicely indexed version of the email in
+            <em>index.sqlite</em>. This is the file to use to do data
+            analysis. With this file, data analysis will be really quick.</p>
+  <p>The first, simplest data analysis is to determine <q>who sent the most
+            mail?</q> and <q>which organization sent the most mail</q>? This is done using
+            <em>gbasic.py</em>:</p>
+  <pre>How many to dump? 5
+Loaded messages= 51330 subjects= 25033 senders= 1584
+
+Top 5 Email list participants
+steve.swinsburg@gmail.com 2657
+azeckoski@unicon.net 1742
+ieb@tfd.co.uk 1591
+csev@umich.edu 1304
+david.horwitz@uct.ac.za 1184
+
+Top 5 Email list organizations
+gmail.com 7339
+umich.edu 6243
+uct.ac.za 2451
+indiana.edu 2258
+unicon.net 2055</pre>
+  <p>Note how much more quickly <em>gbasic.py</em> runs compared to
+            <em>gmane.py</em> or even <em>gmodel.py</em>. They are
+            all working on the same data, but <em>gbasic.py</em> is using
+            the compressed and normalized data in <em>index.sqlite</em>. If
+            you have a lot of data to manage, a multistep process like the one in
+            this application may take a little longer to develop, but will save you
+            a lot of time when you really start to explore and visualize your data.</p>
+  <p>You can produce a simple visualization of the word frequency in the
+            subject lines in the file <em>gword.py</em>:</p>
+  <pre>Range of counts: 33229 129
+Output written to gword.js</pre>
+  <p>This produces the file <em>gword.js</em> which you can visualize
+            using <em>gword.htm</em> to produce a word cloud similar to the
+            one at the beginning of this section.</p>
+  <p>A second visualization is produced by <em>gline.py</em>. It
+            computes email participation by organizations over time.</p>
+  <pre>Loaded messages= 51330 subjects= 25033 senders= 1584
+Top 10 Oranizations
+['gmail.com', 'umich.edu', 'uct.ac.za', 'indiana.edu',
+'unicon.net', 'tfd.co.uk', 'berkeley.edu', 'longsight.com',
+'stanford.edu', 'ox.ac.uk']
+Output written to gline.js</pre>
+  <p>Its output is written to <em>gline.js</em> which is visualized
+            using <em>gline.htm</em>.</p>
+  <image source="images/mailorg.png" width="50%" alt="Sakai Mail Activity by Organization"/>
+  <p>This is a relatively complex and sophisticated application and has
+            features to do some real data retrieval, cleaning, and visualization.</p>
+</section>

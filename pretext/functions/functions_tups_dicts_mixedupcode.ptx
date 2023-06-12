@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<section xml:id="functions_functions-with-tuples-and-dictionaries-mixed-up-code-questions">
+  <title>Functions with Tuples and Dictionaries Mixed-Up Code Questions</title>
+
+  <exercise label="Functions_Tups_Dictionaries_MixedUpCode_1_v2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>addition_tup</c> that takes in parameters <c>lst</c> and <c>num</c> and returns a tuple that contains tuples with the first
+            value being a number from the <c>lst</c> and the second value being the number from the <c>lst</c> plus <c>num</c>. Round each value within the tuple to two decimal places.
+            For example, <c>addition_tup([1,2,3], 5)</c> should return <c>((1, 6), (2, 7), (3, 8))</c> and <c>addition_tup([-1,-2, -3, 0, 5], -5.2)</c> should return
+            <c>((-1, -6.2), (-2, -7.2), (-3, -8.2), (0, -5.2), (5, -0.2))</c>.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>def addition_tup(lst, num):</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    lst_of_tups = []</cline>
+        </choice>
+        <choice>
+          <cline>    tup_of_tups = () </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>    for i in lst:</cline>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>        lst_of_tups.append((round(i,2), round(i + num,2)))</cline>
+        </choice>
+        <choice>
+          <cline>        lst_of_tups.append(round(i,2), round(i + num,2))) </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    return tuple(lst_of_tups)</cline>
+        </choice>
+        <choice>
+          <cline>    return lst_of_tups </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="Functions_Tups_Dictionaries_MixedUpCode_2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>greater_than_five</c> that takes in <c>dictionary</c> as a parameter and returns a list of keys that
+            correspond to values in the <c>dictionary</c> that are greater than 5.  For example, <c>greater_than_five({'a':1, 'b': 2, 'c':7})</c>
+            should return <c>['c']</c>.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <cline>def greater_than_five(dictionary):</cline>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>    lst = []</cline>
+        </choice>
+        <choice>
+          <cline>    lst = () </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    for i in dictionary.items():</cline>
+        </choice>
+        <choice>
+          <cline>    for i in dictionary.keys(): </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>        if i[1] &gt; 5:</cline>
+        </choice>
+        <choice>
+          <cline>        if i[0] &gt; 5: </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>            lst.append(i[0])</cline>
+        </choice>
+        <choice>
+          <cline>            lst.append(i[1]) </cline>
+        </choice>
+      </block>
+      <block order="10">
+        <cline>    return lst</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="Functions_Tups_Dictionaries_MixedUpCode_3" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>dict_to_tup_of_tuples</c> that takes in <c>dictionary</c> as a parameter and returns a tuple that contains
+            tuples with the first value being the keys of the <c>dictionary</c> and the second being the values of the <c>dictionary</c>.  For example,
+            <c>dict_to_tup_of_tuples({'a':1, 'b': 2, 'c':7})</c> would return <c>(('a', 1), ('b', 2), ('c', 7))</c>.</p>
+    </statement>
+    <blocks>
+      <block order="5">
+        <cline>def dict_to_tup_of_tuples(dictionary):</cline>
+      </block>
+      <block order="11">
+        <cline>    lst1 = []</cline>
+      </block>
+      <block order="7">
+        <cline>    lst2 = []</cline>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>    for item in dictionary.items():</cline>
+        </choice>
+        <choice>
+          <cline>    for item in dictionary: </cline>
+        </choice>
+      </block>
+      <block order="10">
+        <cline>        lst1.append(item[0])</cline>
+      </block>
+      <block order="3">
+        <cline>        lst2.append(item[1])</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    zipped_lst = zip(lst1,lst2)</cline>
+        </choice>
+        <choice>
+          <cline>    zipped_lst = zip(lst2,lst1) </cline>
+        </choice>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>    return tuple(zipped_lst)</cline>
+        </choice>
+        <choice>
+          <cline>    return zipped_lst </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="Functions_Tups_Dictionaries_MixedUpCode_4" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>swap_keys_values</c> that takes in <c>dictionary</c> as a parameter and returns <c>swapped_dictionary</c> that
+            swaps the keys and values of the passed in <c>dictionary</c>. For example, <c>swap_keys_values({'a':1, 'b': 2, 'c':7})</c> would return
+            <c>{1: 'a', 2: 'b', 7: 'c'}</c>.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <cline>def swap_keys_values(dictionary):</cline>
+      </block>
+      <block order="7">
+        <cline>    swapped_dictionary = {}</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    for item in dictionary.items():</cline>
+        </choice>
+        <choice>
+          <cline>    for item in dictionary(): </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>        swapped_dictionary[item[1]] = item[0]</cline>
+        </choice>
+        <choice>
+          <cline>        swapped_dictionary[item[0]] = item[1] </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>        swapped_dictionary[item[1]].append(item[0]) </cline>
+      </block>
+      <block order="5">
+        <cline>    return swapped_dictionary</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="Functions_Tups_Dictionaries_MixedUpCode_5" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>common_value_in_tups</c> that takes in two tuples, <c>tup1</c> and <c>tup2</c>, as parameters and
+            returns <c>True</c> if any of the values in both tuples match and <c>False</c> otherwise. (Note: Disregard position of values.)  For example,
+            <c>common_value_in_tups((1,2,3),(6,4,5))</c> should return <c>False</c>.</p>
+    </statement>
+    <blocks>
+      <block order="7">
+        <cline>def common_value_in_tups(tup1, tup2):</cline>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>    for value in tup1:</cline>
+        </choice>
+        <choice>
+          <cline>    if tup1 == tup2: </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>        if value in tup2:</cline>
+        </choice>
+        <choice>
+          <cline>        for value2 in tup2: </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <cline>            return True</cline>
+      </block>
+      <block order="3">
+        <cline>    return False</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <!--
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=Functions_Tups_Dictionaries_MixedUpCode_1_sq data-questionlist='Functions_Tups_Dictionaries_MixedUpCode_1_v2, Functions_Tups_Dictionaries_MixedUpCode_1_v2_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: Functions_Tups_Dictionaries_MixedUpCode_1_v2, Functions_Tups_Dictionaries_MixedUpCode_1_v2_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=Functions_Tups_Dictionaries_MixedUpCode_2_sq data-questionlist='Functions_Tups_Dictionaries_MixedUpCode_2, Functions_Tups_Dictionaries_MixedUpCode_2_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: Functions_Tups_Dictionaries_MixedUpCode_2, Functions_Tups_Dictionaries_MixedUpCode_2_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=Functions_Tups_Dictionaries_MixedUpCode_3_sq data-questionlist='Functions_Tups_Dictionaries_MixedUpCode_3, Functions_Tups_Dictionaries_MixedUpCode_3_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: Functions_Tups_Dictionaries_MixedUpCode_3, Functions_Tups_Dictionaries_MixedUpCode_3_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=Functions_Tups_Dictionaries_MixedUpCode_4_sq data-questionlist='Functions_Tups_Dictionaries_MixedUpCode_4, Functions_Tups_Dictionaries_MixedUpCode_4_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: Functions_Tups_Dictionaries_MixedUpCode_4, Functions_Tups_Dictionaries_MixedUpCode_4_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=Functions_Tups_Dictionaries_MixedUpCode_5_sq data-questionlist='Functions_Tups_Dictionaries_MixedUpCode_5, Functions_Tups_Dictionaries_MixedUpCode_5_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: Functions_Tups_Dictionaries_MixedUpCode_5, Functions_Tups_Dictionaries_MixedUpCode_5_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  -->
+</section>

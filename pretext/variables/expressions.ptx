@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<section xml:id="variables_expressions">
+  <title>Expressions</title>
+<idx>Expression</idx>
+<idx>Evaluate</idx>
+  <p>An <em>expression</em> is a combination of values, variables,
+            and operators. A value all by itself is considered an expression, and so
+            is a variable, so the following are all legal expressions (assuming that
+            the variable <c>x</c> has been assigned a value):</p>
+  <program language="python">
+    <input>
+17
+x
+x + 17
+</input>
+  </program>
+  <p>If you type an expression in interactive mode, the interpreter
+            <em>evaluates</em> it and displays the result:</p>
+  <program xml:id="var-ac-6-expressions2" interactive="activecode" language="python">
+    <input>
+1 + 1
+print(1+1)
+        </input>
+  </program>
+  <p>But in a script, an expression all by itself doesn't do anything! This
+            is a common source of confusion for beginners.</p>
+  <p>Type the following statements in the Python interpreter to
+            see what they do:</p>
+  <program language="python">
+    <input>
+5
+x = 5
+x + 1
+</input>
+  </program>
+  <exercise label="var-expressions-mc-expression">
+    <statement>
+      <p>csp-10-2-2: Which of the following is an expression?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>5</p>
+        </statement>
+        <feedback>
+          <p>An expression is a combination of values, variables, and operators.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>x = 5</p>
+        </statement>
+        <feedback>
+          <p>An expression is a combination of values, variables, and operators.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>x + 1</p>
+        </statement>
+        <feedback>
+          <p>An expression is a combination of values, variables, and operators.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>all of the above</p>
+        </statement>
+        <feedback>
+          <p>All of the above are correct! An expression is a combination of values, variables, and operators.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>none of the above</p>
+        </statement>
+        <feedback>
+          <p>An expression is a combination of values, variables, and operators.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="var-expressions-mc-click">
+    <statement>
+      <p>Click on the expression(s) that will **not** return a value when typed in an interpreter.</p>
+    </statement>
+    <feedback>
+      <p>Try typing these expressions in a python interpreter to see what they do.</p>
+    </feedback>
+    <areas>
+      <cline><area>12</area>:</cline>
+      <cline><area correct="yes">x = 73</area>:</cline>
+      <cline><area>x + 12</area>:</cline>
+      <cline><area correct="yes">x += 52</area>:<area>    #using += is the same as writing out x = x + 52</area>:</cline>
+    </areas>
+  </exercise>
+</section>

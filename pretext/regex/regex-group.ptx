@@ -1,0 +1,656 @@
+<?xml version="1.0"?>
+<section xml:id="regex_group-work-regular-expressions-regex">
+  <title>Group Work: Regular Expressions (Regex)</title>
+  <introduction>
+  <p>It is best to use a POGIL approach with the following. In POGIL students work
+            in groups on activities and each member has an assigned role.  For more information see <url href="https://cspogil.org/Home" visual="https://cspogil.org/Home">https://cspogil.org/Home</url>.</p>
+  <note>
+    <p>If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.</p>
+  </note>
+  <p>
+    <term>Learning Objectives</term>
+  </p>
+  <p>Students will know and be able to do the following.</p>
+  <p>
+    <em>Content Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Learn about <c>search</c> and <c>findall</c> and what they return</p>
+      </li>
+      <li>
+        <p>Learn about some common quantifiers (*, +, ?, {n})</p>
+      </li>
+      <li>
+        <p>Learn about character classes (\d, \w, \s, .)</p>
+      </li>
+      <li>
+        <p>Learn about character sets ([an]) and ranges ([0-9])</p>
+      </li>
+      <li>
+        <p>Learn how to negate a character set using [^0-9]</p>
+      </li>
+      <li>
+        <p>Learn how to escape a special character to match it</p>
+      </li>
+      <li>
+        <p>Learn about greedy matching and how to make it not greedy</p>
+      </li>
+      <li>
+        <p>Learn how to return just part of a match using parentheses</p>
+      </li>
+    </ul>
+  </p>
+</introduction>
+  <subsection xml:id="regex_regex-methods">
+    <title>Regex Methods</title>
+    <p>Two of the methods that you can use with regular expressions are <c>search</c> and
+                <c>findall</c>.  Note that you must <c>import re</c> to use these.</p>
+    <exercise label="regex_methods_ex">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="regex_methods_ex_editor" interactive="activecode" language="python">
+        <input>
+import re
+str = "The rain in Spain"
+
+# try the search method
+x = re.search("ai", str)
+print(x)
+
+# show what happens if you check the result
+if x:
+   print(True)
+else:
+   print(False)
+
+# try the search method again
+x = re.search("blue", str)
+
+# show what happens if you check the result
+print(x)
+if x:
+   print(True)
+else:
+   print(False)
+
+# try the findall method
+y = re.findall("ai", str)
+print(y)
+y = re.findall("blue", str)
+print(y)
+        </input>
+      </program>
+    </exercise>
+    <exercise label="regex_findall_return_type_fitb">
+      <statement>
+        <p>11-9-2: What type of thing does <c>findall</c> return? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="list">
+            <feedback>
+              <p>The findall method returns a list of items that matched</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>What type of thing was last printed?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="regex_search_not_found_return_fitb">
+      <statement>
+        <p>11-9-3: What does <c>search</c> return if no match is found? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="None">
+            <feedback>
+              <p>The search method returns None if no match was found</p>
+            </feedback>
+          </condition>
+          <condition string="none">
+            <feedback>
+              <p>Remember that this keyword starts with a capital letter</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>What was the second thing printed?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="regex_search_fitb">
+      <statement>
+        <p>11-9-4: Which method returns information about the first match as an object? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="search">
+            <feedback>
+              <p>The search method returns a MatchObject</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Look at the code above.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+  </subsection>
+  <subsection xml:id="regex_quantifiers">
+    <title>Quantifiers</title>
+    <p>You can specify how many items to match using quantifiers. They refer to the
+                item to their left. The quantifiers are <c>?</c>, <c>+</c>, <c>*</c>, <c>{n}</c>, and <c>{n,m}</c>.</p>
+    <exercise label="regex_match_chars_ex_v2">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="regex_match_chars_ex_v2_editor" interactive="activecode" language="python">
+        <input>
+import re
+
+str1 = "ab abc abcc abcccc abbccc aabbcc"
+res1 = re.findall("abc+", str1)
+print(res1)
+
+str2 = "color colour colouur"
+res2 = re.findall("colou?r", str2)
+print(res2)
+
+str3 = "b bo boo booo booooo"
+res3 = re.findall("bo*", str3)
+print(res3)
+
+str4 = "ab abc abcc abcccc abbccc aabbcc"
+res4 = re.findall("abc{2}", str4)
+print(res4)
+
+str5 = "ab abc abcc abcccc abbccc aabbcc"
+res5 = re.findall("abc{1,3}", str5)
+print(res5)
+        </input>
+      </program>
+    </exercise>
+    <exercise label="regex_quant_2_mc">
+      <statement>
+        <p>11-9-6: How many c's must there be in a row for c{2} to match at least part of the string?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>0 to many</p>
+          </statement>
+          <feedback>
+            <p>No, this would be 'c*'</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>0 to 2</p>
+          </statement>
+          <feedback>
+            <p>No, this would be just 'c'</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>exactly 2</p>
+          </statement>
+          <feedback>
+            <p>No, it will match strings that have more than 2 c's in a row.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>2 or more</p>
+          </statement>
+          <feedback>
+            <p>This will match 2 c's but there can be more in the string.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="regex_digit_fitb">
+      <statement>
+        <p>11-9-7: What characters are used to match a digit? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="\\d">
+            <feedback>
+              <p>The backslash d is used to match any digit</p>
+            </feedback>
+          </condition>
+          <condition string="d">
+            <feedback>
+              <p>You are missing something before the d</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Run the code above</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="regex_quant_v2_dnd">
+      <statement>
+        <p>Drag each symbol to the number of items it matches.</p>
+      </statement>
+      <feedback>
+        <p>Look at the code above.</p>
+      </feedback>
+      <matches>
+        <match order="1">
+          <premise>?</premise>
+          <response>Zero to one</response>
+        </match>
+        <match order="2">
+          <premise>*</premise>
+          <response>Zero to many</response>
+        </match>
+        <match order="3">
+          <premise>+</premise>
+          <response>One to many</response>
+        </match>
+        <match order="4">
+          <premise>{2}</premise>
+          <response>Two</response>
+        </match>
+        <match order="5">
+          <premise>{1,3}</premise>
+          <response>One, two, or three</response>
+        </match>
+      </matches>
+    </exercise>
+  </subsection>
+  <subsection xml:id="regex_character-sets">
+    <title>Character Sets</title>
+    <p>You can use <c>[]</c> to specify that you need to match any one item in the <c>[]</c>.</p>
+    <exercise label="regex_char_sets">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="regex_char_sets_editor" interactive="activecode" language="python">
+        <input>
+import re
+
+str1 = "ben bean been ban bottom"
+res1 = re.findall("b[ea]n", str1)
+print(res1)
+        </input>
+      </program>
+    </exercise>
+    <exercise label="regex_char_sets_meaning">
+      <statement>
+        <p>11-9-10: What does <c>[ea]</c> mean?</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>Match either an 'e' or 'a' one time</p>
+          </statement>
+          <feedback>
+            <p>It will match one of the items listed in []</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Match 'ae' one time</p>
+          </statement>
+          <feedback>
+            <p>It will match one of the items listed in []</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Match either an 'e' or 'a' one to many times</p>
+          </statement>
+          <feedback>
+            <p>This would be true if it was [ae]+</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Match 'ae' one to many times</p>
+          </statement>
+          <feedback>
+            <p>This would be true if it was (ae)+</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+  <subsection xml:id="regex_character-ranges">
+    <title>Character Ranges</title>
+    <p>You can specify a range of items to match.</p>
+    <exercise label="regex_char_ranges-digits">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="regex_char_ranges-digits_editor" interactive="activecode" language="python">
+        <input>
+import re
+
+str1 = "832 3928.23 382.28378 5 92,000 32-928 +32 -32 ABC"
+res1 = re.findall("[0-9.]+", str1)
+print(res1)
+res2 = re.findall("[^0-9.]+", str1)
+print(res1)
+        </input>
+      </program>
+    </exercise>
+    <exercise label="regex_char_range_digits">
+      <statement>
+        <p>11-9-12: What does <c>[0-9.]+</c> mean?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>Match any digit or period one or more times</p>
+          </statement>
+          <feedback>
+            <p>Items in the [] match themselves and are not treated as special characters other than '-'</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Match any digit or anything that isn't a new line one or more times</p>
+          </statement>
+          <feedback>
+            <p>The period in a [] just means match a period</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Match any digit or period zero to many times</p>
+          </statement>
+          <feedback>
+            <p>The + outside of the [] means match one or more</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>Match any digit or anything that isn't a new line zero to many times</p>
+          </statement>
+          <feedback>
+            <p>The period in a [] just means match a period and the + means match one or more times</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="regex_neg_char_range_digits">
+      <statement>
+        <p>11-9-13: What does <c>[^0-9.]+</c> mean?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>Match anything other than 0-9 and a period zero to one times</p>
+          </statement>
+          <feedback>
+            <p>The + means one to many times</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>Match anything other than 0-9 and a period one to many times</p>
+          </statement>
+          <feedback>
+            <p>Correct!</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Match ^ or 0-9 or a period zero to one times</p>
+          </statement>
+          <feedback>
+            <p>The ^ negates the items</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Match ^ or 0-9 or a period one to many times</p>
+          </statement>
+          <feedback>
+            <p>The ^ negates the items</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+  <subsection xml:id="regex_character-classes">
+    <title>Character Classes</title>
+    <exercise label="regex_char_classes_v2">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="regex_char_classes_v2_editor" interactive="activecode" language="python">
+        <input>
+import re
+
+str1 = "mat met m3t m!t m t mitten"
+res1 = re.findall("m.t", str1)
+print(res1)
+
+str2 = "barbarer5@umich.edu uche@umich.edu lucy@umich.edu"
+res2 = re.findall("\w+@\w+", str2)
+print(res2)
+
+str3 = "mat met m3t m!t mitten"
+res3 = re.findall("\sm.t\s", str3)
+print(res3)
+
+str4 = "0013 23 093 000029 320 888"
+res4 = re.findall("0*\d\d", str4)
+print(res4)
+        </input>
+      </program>
+    </exercise>
+    <exercise label="regex_char_classes_dnd">
+      <statement>
+        <p>Drag each item to what it matches</p>
+      </statement>
+      <feedback>
+        <p>Look at the code above.</p>
+      </feedback>
+      <matches>
+        <match order="1">
+          <premise>.</premise>
+          <response>Any single character other than a newline</response>
+        </match>
+        <match order="2">
+          <premise>\d</premise>
+          <response>A digit (0-9)</response>
+        </match>
+        <match order="3">
+          <premise>\w</premise>
+          <response>A word character which is alphanumeric plus underscore</response>
+        </match>
+        <match order="4">
+          <premise>\s</premise>
+          <response>A whitespace character (including space, tab, and newline)</response>
+        </match>
+      </matches>
+    </exercise>
+    <exercise label="regex_char_classes_uppercase">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="regex_char_classes_uppercase_editor" interactive="activecode" language="python">
+        <input>
+import re
+
+str1 = 'From: stephen.marquard@uct.ac.za Sat Jan walk@12  5 09:14:16 2008'
+res1 = re.findall('\S+@\S+', str1)
+print(res1)
+
+str2 = "What?  Come here, 24601!"
+res2 = re.findall("\W+", str2)
+print(res2)
+
+res3 = re.findall("\D+", str2)
+print(res3)
+        </input>
+      </program>
+    </exercise>
+    <exercise label="regex_char_classes2_dnd">
+      <statement>
+        <p>Drag each item to what it matches</p>
+      </statement>
+      <feedback>
+        <p>Look at the code above.</p>
+      </feedback>
+      <matches>
+        <match order="1">
+          <premise>\W</premise>
+          <response>Any non-word character (not alphanumeric or underscore)</response>
+        </match>
+        <match order="2">
+          <premise>\S</premise>
+          <response>Any non-whitespace character (not space, tab, or newline)</response>
+        </match>
+        <match order="3">
+          <premise>\D</premise>
+          <response>Any non-digit character (not 0-9).</response>
+        </match>
+      </matches>
+    </exercise>
+  </subsection>
+  <subsection xml:id="regex_escaping-special-characters">
+    <title>Escaping Special Characters</title>
+    <p>If you want to match something that is normally a special character in regex
+                you must escape it by adding a <title_reference>\</title_reference> in front of it.</p>
+    <exercise label="regex_escape_char">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="regex_escape_char_editor" interactive="activecode" language="python">
+        <input>
+import re
+
+str1 = "me. you? us. them. when!"
+res1 = re.findall("\w+\.", str1)
+print(res1)
+
+res2 = re.findall("\w+\?", str1)
+print(res2)
+
+str3 = "a + b and c + d"
+res3 = re.findall("\w \+ \w", str3)
+print(res3)
+        </input>
+      </program>
+    </exercise>
+    <exercise label="regex_num_matches_escape_v2_mc">
+      <statement>
+        <p>11-9-19: How many items will be in the list that the following code prints?</p>
+        <pre>import re
+str = "302.33 64.52 204.24 532.2 1.23 323.320"
+res = re.findall("\d{3}\.\d{2}",str)
+print(res)</pre>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>1</p>
+          </statement>
+          <feedback>
+            <p>It will match three digits followed by a period and then 2 digits</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>2</p>
+          </statement>
+          <feedback>
+            <p>It will match three digits followed by a period and then 2 digits</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>3</p>
+          </statement>
+          <feedback>
+            <p>It will match three digits followed by a period and then 2 digits</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>4</p>
+          </statement>
+          <feedback>
+            <p>It will match three digits followed by a period and then 2 digits</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+  <subsection xml:id="regex_greedy-and-non-greedy-matching">
+    <title>Greedy and Non-Greedy Matching</title>
+    <p>Matching is usually greedy.</p>
+    <exercise label="regex_greedy_vs_not">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="regex_greedy_vs_not_editor" interactive="activecode" language="python">
+        <input>
+import re
+
+str1 = 'From: Using the : character'
+res1 = re.findall('F.+:', str1)
+print(res1)
+
+res2 = re.findall('F.+?:', str1)
+print(res2)
+        </input>
+      </program>
+    </exercise>
+    <exercise label="regex_not_greedy_char">
+      <statement>
+        <p>11-9-21: What character can you add after a quantifier like &#x2018;+' or &#x2018;*' to make it not greedy? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="\?">
+            <feedback>
+              <p>Adding the ? will make it not greedy</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Look at the code above.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share answers.</p>
+    <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+    &lt;div data-component="groupsub" id=regex_groupsub data-size_limit=3&gt;
+        &lt;div class="col-sm-6"&gt;
+            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div id="groupsub_button" class="col-sm-6"&gt;
+        &lt;/div&gt;
+        &lt;p&gt;The Submit Group button will submit the answer for each each question
+        on this page for each member of your group. It also logs you as the official
+        group submitter.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  </subsection>
+</section>

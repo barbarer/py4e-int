@@ -1,0 +1,467 @@
+<?xml version="1.0"?>
+<section xml:id="functions_functions-and-loops-mixed-up-code-questions">
+  <title>Functions and Loops Mixed-Up Code Questions</title>
+  <exercise label="Functions_Loops_MixedUpCode_1" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>nums_x_to_y</c> that takes in two integer parameter, <c>x</c> and <c>y</c> and uses a for loop to create and
+            return a list with numbers <c>x</c> to <c>y</c>. Note: ignore cases when <c>y</c> is not larger than <c>x</c>. For example, <c>nums_x_to_y(1,10)</c>
+            would return <c>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</c>.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <choice correct="yes">
+          <cline>def nums_x_to_y(x,y):</cline>
+        </choice>
+        <choice>
+          <cline>def nums_x_to_y: </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>    x_to_y_list = []</cline>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>    for num in range(x, y + 1):</cline>
+        </choice>
+        <choice>
+          <cline>    for num in range(y): </cline>
+        </choice>
+      </block>
+      <block order="8">
+        <cline>    for num in range(x, y): </cline>
+      </block>
+      <block order="6">
+        <cline>        x_to_y_list.append(num)</cline>
+      </block>
+      <block order="2">
+        <cline>    return x_to_y_list</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="Functions_Loops_MixedUpCode_1_ac">
+    <statement>
+      <p>Write a function called <c>nums_x_to_y</c> that takes in two integer parameter, <c>x</c> and <c>y</c> and uses a for loop to create and
+            return a list with numbers <c>x</c> to <c>y</c>. Note: ignore cases when <c>y</c> is not larger than <c>x</c>. For example, <c>nums_x_to_y(1,10)</c>
+            would return <c>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</c>.</p>
+    </statement>
+    <program xml:id="Functions_Loops_MixedUpCode_1_ac_editor" interactive="activecode" language="python">
+      <input>
+def nums_x_to_y():
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(nums_x_to_y(1,10),[1, 2, 3, 4, 5, 6, 7, 8, 9, 10],"nums_x_to_y(1,10)")
+        self.assertEqual(nums_x_to_y(3,4),[3, 4],"nums_x_to_y(3,4)")
+        self.assertEqual(nums_x_to_y(2,9),[2, 3, 4, 5, 6, 7, 8, 9],"nums_x_to_y(2,9)")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="Functions_Loops_MixedUpCode_2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>count_by_x_to_y</c> that takes in two integer parameter, <c>x</c> and <c>y</c> and uses a for loop to create and return
+            a list with numbers <c>x</c> to <c>y</c>. Note: ignore cases when <c>y</c> is not larger than <c>x</c>. Use a for loop to create and return a
+            list with numbers up to <c>y</c> by skip counting by <c>x</c>. For example, <c>count_by_x_to_y(5,20)</c> should return <c>[0, 5, 10, 15, 20]</c>.</p>
+    </statement>
+    <blocks>
+      <block order="1">
+        <choice correct="yes">
+          <cline>def count_by_x_to_y(x,y):</cline>
+        </choice>
+        <choice>
+          <cline>def count_by_x_to_y: </cline>
+        </choice>
+      </block>
+      <block order="8">
+        <cline>    x_to_y_lst = []</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    for num in range (0, y + 1, x):</cline>
+        </choice>
+        <choice>
+          <cline>    for num in range (0, y, x+1): </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>        x_to_y_lst.append(num)</cline>
+        </choice>
+        <choice>
+          <cline>        x_to_y_lst += num </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    return x_to_y_lst</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="Functions_Loops_MixedUpCode_2_ac">
+    <statement>
+      <p>Write a function <c>count_by_x_to_y</c> that takes in two integer parameter, <c>x</c> and <c>y</c> and uses a for loop to create and return
+            a list with numbers <c>x</c> to <c>y</c>. Note: ignore cases when <c>y</c> is not larger than <c>x</c>. Use a for loop to create and return a
+            list with numbers up to <c>y</c> by skip counting by <c>x</c>. For example, <c>count_by_x_to_y(5,20)</c> should return <c>[0, 5, 10, 15, 20]</c>.</p>
+    </statement>
+    <program xml:id="Functions_Loops_MixedUpCode_2_ac_editor" interactive="activecode" language="python">
+      <input>
+def count_by_x_to_y():
+    # write code here
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(count_by_x_to_y(5,20),[0, 5, 10, 15, 20],"count_by_x_to_y(5,20)")
+        self.assertEqual(count_by_x_to_y(2,10),[0, 2, 4, 6, 8, 10],"count_by_x_to_y(2,10)")
+        self.assertEqual(count_by_x_to_y(1,10),[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],"count_by_x_to_y(1,10)")
+        self.assertEqual(count_by_x_to_y(5,6),[0, 5],"count_by_x_to_y(5,6)")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="Functions_Loops_MixedUpCode_3" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>countdown</c> that takes in one integer parameter <c>seconds</c> and creates a list of numbers that counts down from
+            seconds to 1, and then returns that list. Note: <c>seconds</c> must be greater than or equal to 1. For example, <c>countdown(3)</c> would return <c>[3, 2, 1]</c>.</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <choice correct="yes">
+          <cline>def countdown(seconds):</cline>
+        </choice>
+        <choice>
+          <cline>def countdown(): </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>    countdown_lst = []</cline>
+      </block>
+      <block order="5">
+        <cline>    while seconds &gt; 0:</cline>
+      </block>
+      <block order="3">
+        <cline>        countdown_lst.append(seconds)</cline>
+      </block>
+      <block order="7">
+        <cline>        seconds -= 1</cline>
+      </block>
+      <block order="4">
+        <cline>    return countdown_lst</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="Functions_Loops_MixedUpCode_3_ac">
+    <statement>
+      <p>Write a function called <c>countdown</c> that takes in one integer parameter <c>seconds</c> and creates a list of numbers that counts down from
+            seconds to 1, and then returns that list. Note: <c>seconds</c> must be greater than or equal to 1. For example, <c>countdown(3)</c> would return <c>[3, 2, 1]</c>.</p>
+    </statement>
+    <program xml:id="Functions_Loops_MixedUpCode_3_ac_editor" interactive="activecode" language="python">
+      <input>
+# write code here
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(countdown(3),[3, 2, 1],"countdown(3)")
+        self.assertEqual(countdown(11),[11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],"countdown(11)")
+        self.assertEqual(countdown(4),[4, 3, 2, 1],"countdown(4)")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="Functions_Loops_MixedUpCode_4" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>add_odds_or_floor_division</c> that takes in a parameter <c>num_list</c> and loops through the <c>num_list</c>.
+            If the number in <c>num_list</c> is odd, it gets added to <c>result</c>. Otherwise, it gets divided from the <c>result</c>, having the <c>result</c> be the floor value.
+            Then, return <c>result</c>. For example, <c>add_odds_or_floor_division([-3, -5, -2, -9, 7.5, 10001, -5.3])</c> would return -1887.0.</p>
+    </statement>
+    <blocks>
+      <block order="4">
+        <choice correct="yes">
+          <cline>def add_odds_or_floor_division(num_list):</cline>
+        </choice>
+        <choice>
+          <cline>def add_odds_or_floor_division(): </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>    result = 0</cline>
+      </block>
+      <block order="6">
+        <cline>    for num in num_list:</cline>
+      </block>
+      <block order="11">
+        <choice correct="yes">
+          <cline>        if num % 2 == 1:</cline>
+        </choice>
+        <choice>
+          <cline>        if num / 2 == 1: </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>            result += num</cline>
+      </block>
+      <block order="9">
+        <cline>        else:</cline>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>            result //= num</cline>
+        </choice>
+        <choice>
+          <cline>            result /= num </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>    return result</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="Functions_Loops_MixedUpCode_4_ac">
+    <statement>
+      <p>Write a function <c>add_odds_or_floor_division</c> that takes in a parameter <c>num_list</c> and loops through the <c>num_list</c>.
+            If the number in <c>num_list</c> is odd, it gets added to <c>result</c>. Otherwise, it gets divided from the <c>result</c>, having the <c>result</c> be the floor value.
+            Then, return <c>result</c>. For example, <c>add_odds_or_floor_division([-3, -5, -2, -9, 7.5, 10001, -5.3])</c> would return -1887.0.</p>
+    </statement>
+    <program xml:id="Functions_Loops_MixedUpCode_4_ac_editor" interactive="activecode" language="python">
+      <input>
+# write code here
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(add_odds_or_floor_division([3, 5, 10, 8, 20, 15]),15,"add_odds_or_floor_division([3, 5, 10, 8, 20, 15])")
+        self.assertEqual(add_odds_or_floor_division([3, 5, 2, 9, 7, 10, 2, 1, 15]),17,"add_odds_or_floor_division([3, 5, 2, 9, 7, 10, 2, 1, 15])")
+        self.assertAlmostEqual(add_odds_or_floor_division([-3, -5, -2, -9, 7.5, 10001, -5.3]),-1887.0,1,"add_odds_or_floor_division([-3, -5, -2, -9, 7.5, 10001, -5.3])")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="Functions_Loops_MixedUpCode_5" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>strings_chars_less_than_len</c> that takes in a <c>strings_list</c>
+            and returns a sorted new list with strings that are shorter in length than the original list.
+            For example, <c>strings_chars_less_than_len(['hello', 'bye', 'me', 'mississippi', 'miss'])</c> would return [&#x2018;bye', &#x2018;me', &#x2018;miss'].</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <choice correct="yes">
+          <cline>def strings_chars_less_than_len(strings_list):</cline>
+        </choice>
+        <choice>
+          <cline>Def strings_chars_less_than_len(string_list): </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <cline>    new_strings_list = []</cline>
+      </block>
+      <block order="10">
+        <cline>    for string in strings_list:</cline>
+      </block>
+      <block order="11">
+        <choice correct="yes">
+          <cline>        if len(string) &lt; len(strings_list):</cline>
+        </choice>
+        <choice>
+          <cline>        if string &lt; len(strings_list): </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>            new_strings_list.append(string)</cline>
+      </block>
+      <block order="8">
+        <cline>        else:</cline>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>            continue</cline>
+        </choice>
+        <choice>
+          <cline>            break </cline>
+        </choice>
+      </block>
+      <block order="12">
+        <choice correct="yes">
+          <cline>    return sorted(new_strings_list)</cline>
+        </choice>
+        <choice>
+          <cline>    return new_strings_list.sort() </cline>
+        </choice>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="Functions_Loops_MixedUpCode_5_ac">
+    <statement>
+      <p>Create a function <c>strings_chars_less_than_len</c> that takes in a <c>strings_list</c>
+            and returns a sorted new list with strings that are shorter in length than the original list.
+            For example, <c>strings_chars_less_than_len(['hello', 'bye', 'me', 'mississippi', 'miss'])</c> would return [&#x2018;bye', &#x2018;me', &#x2018;miss'].</p>
+    </statement>
+    <program xml:id="Functions_Loops_MixedUpCode_5_ac_editor" interactive="activecode" language="python">
+      <input>
+# write code here
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(strings_chars_less_than_len(['hello', 'bye', 'me', 'mississippi', 'miss']),['bye', 'me', 'miss'],"strings_chars_less_than_len(['hello', 'bye', 'me', 'mississippi', 'miss'])")
+        self.assertEqual(strings_chars_less_than_len(['hi', 'bye', 'Run', 'When', 'Win', 'compare', 'python']),['Run', 'When', 'Win', 'bye', 'hi', 'python'],"strings_chars_less_than_len(['hi', 'bye', 'Run', 'When', 'Win', 'compare', 'python'])")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="Functions_Loops_MixedUpCode_6" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>print_lists(nums1, nums2)</c> that takes two lists of numbers with the same length, <c>nums1</c> and <c>nums2</c>,
+            and returns a list of strings in the form: <q>Num1: num1, Num2: num2</q> for each pair of items in the two lists.
+            For example, <c>print_lists([3, 2], [8, 4])</c> would return <c>["Num1: 3, Num2: 8", "Num1: 2, Num2: 4"]</c>.</p>
+    </statement>
+    <blocks>
+      <block order="7">
+        <cline>def print_lists(nums1, nums2):</cline>
+      </block>
+      <block order="10">
+        <cline>    out_list = []</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    for i in range(len(nums1)):</cline>
+        </choice>
+        <choice>
+          <cline>    for i in range(nums1): </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <cline>    for val1 in nums1:</cline>
+        <cline>        for val2 in nums2: </cline>
+      </block>
+      <block order="2">
+        <cline>        val1 = nums1[i]</cline>
+        <cline>        val2 = nums2[i]</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>        out = "Num1: " + str(val1) + ", Num2: " + str(val2)</cline>
+        </choice>
+        <choice>
+          <cline>        out = "Num1: " + val1 + ", Num2: " + val2 </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <cline>        out_list.append(out)</cline>
+      </block>
+      <block order="6">
+        <cline>    return out_list</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="Functions_Loops_MixedUpCode_6_ac">
+    <statement>
+      <p>Write a function <c>print_lists(nums1, nums2)</c> that takes two lists of numbers with the same length, <c>nums1</c> and <c>nums2</c>,
+            and returns a list of strings in the form: <q>Num1: num1, Num2: num2</q> for each pair of items in the two lists.
+            For example, <c>print_lists([3, 2], [8, 4])</c> would return <c>["Num1: 3, Num2: 8", "Num1: 2, Num2: 4"]</c>.</p>
+    </statement>
+    <program xml:id="Functions_Loops_MixedUpCode_6_ac_editor" interactive="activecode" language="python">
+      <input>
+# write code here
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(print_lists([3, 2], [8, 4]),["Num1: 3, Num2: 8", "Num1: 2, Num2: 4"],"print_lists([3, 2], [8, 4])")
+        self.assertEqual(print_lists([1], [2]),["Num1: 1, Num2: 2"],"print_lists([1], [2])")
+        self.assertEqual(print_lists([3, 2, 1], [9, 8, 7]),["Num1: 3, Num2: 9", "Num1: 2, Num2: 8", "Num1: 1, Num2: 7"],"print_lists([3, 2, 1], [9, 8, 7])")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <exercise label="Functions_Loops_MixedUpCode_7" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function <c>sum_lists(nums1, nums2)</c> that takes two lists of numbers with the same length, <c>nums1</c> and <c>nums2</c>,
+            and returns a list of the totals of the two numbers for each pair of items in the two lists.
+            For example, <c>sum_lists([3, 2], [8, 4])</c> would return <c>[11, 6]</c>.</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <cline>def sum_lists(nums1, nums2):</cline>
+      </block>
+      <block order="1">
+        <cline>    out_list = []</cline>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>    for i in range(len(nums1)):</cline>
+        </choice>
+        <choice>
+          <cline>    for i in range(nums1): </cline>
+        </choice>
+      </block>
+      <block order="10">
+        <cline>    for val1 in nums1:</cline>
+        <cline>        for val2 in nums2: </cline>
+      </block>
+      <block order="7">
+        <cline>        val1 = nums1[i]</cline>
+        <cline>        val2 = nums2[i]</cline>
+      </block>
+      <block order="3">
+        <cline>        total = val1 + val2</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>        out_list.append(total)</cline>
+        </choice>
+        <choice>
+          <cline>        out_list += total </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <cline>    return out_list</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="Functions_Loops_MixedUpCode_7_ac">
+    <statement>
+      <p>Write a function <c>sum_lists(nums1, nums2)</c> that takes two lists of numbers with the same length, <c>nums1</c> and <c>nums2</c>,
+            and returns a list of the totals of the two numbers for each pair of items in the two lists.
+            For example, <c>sum_lists([3, 2], [8, 4])</c> would return <c>[11, 6]</c>.</p>
+    </statement>
+    <program xml:id="Functions_Loops_MixedUpCode_7_ac_editor" interactive="activecode" language="python">
+      <input>
+# write code here
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(sum_lists([3, 2], [8, 4]),[11, 6],"sum_lists([3, 2]")
+        self.assertEqual(sum_lists([1], [2]),[3],"sum_lists([1], [2])")
+        self.assertEqual(sum_lists([3, 2, 1], [9, 8, 7]),[12, 10, 8],"sum_lists([3, 2, 1], [9, 8, 7])")
+
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+</section>

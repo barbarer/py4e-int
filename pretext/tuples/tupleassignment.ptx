@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<section xml:id="tuples_tuple-assignment">
+  <title>Tuple Assignment</title>
+<idx>Tuple Assignment</idx>
+<idx>Swap Pattern</idx>
+  <p>One of the unique syntactic features of Python is the
+            ability to have a tuple on the left side of an assignment statement.
+            This allows you to assign more than one variable at a time when the left
+            side is a sequence.</p>
+  <p>In this example we have a two-element list (which is a sequence) and
+            assign the first and second elements of the sequence to the variables
+            <c>x</c> and <c>y</c> in a single statement.</p>
+  <program xml:id="tuplesassignment_exercise_1" interactive="activecode" language="python">
+    <input>
+m = [ 'have', 'fun' ]
+x, y = m
+print(x) #should print 'have'
+print(y) #should print 'fun'
+        </input>
+  </program>
+  <p>This isn't magic! Python <em>roughly</em> translates the tuple assignment syntax
+            to the following:</p>
+  <program xml:id="tupleassignment_exercise_2" interactive="activecode" language="python">
+    <input>
+m = [ 'have', 'fun' ]
+x = m[0]
+y = m[1]
+print(x) #should print 'have'
+print(y) #should print 'fun'
+        </input>
+  </program>
+  <p>It's worth noting that Python does not translate the syntax literally. For example, if
+            you try this with a dictionary, it won't work as you might expect.</p>
+  <p>Stylistically, when we use a tuple on the left side of the assignment
+            statement, we omit the parentheses, but the following is an equally
+            valid syntax:</p>
+  <program xml:id="tupleassignment_exercise_3" interactive="activecode" language="python">
+    <input>
+m = [ 'have', 'fun' ]
+(x, y) = m
+print(x) #should print 'have'
+print(y) #should print 'fun'
+        </input>
+  </program>
+  <exercise label="question10_3_1">
+    <statement>
+      <p>11-9-4: What is associated with the variable &#x2018;x' once the following code is run?</p>
+      <program language="python">
+        <input>
+random_list = ['Harden', 'James']
+(x, y) = random_list
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>['Harden']</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The values in random_list are strings, not lists. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>'James'</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! x is listed before y in the tuple on the left side of the assignment statement, so the first value in random_list should be assigned to x. Try again.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>'Harden'</p>
+        </statement>
+        <feedback>
+          <p>Correct! This properly assigns the first element of the list to 'x'.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>A particularly clever application of tuple assignment allows us to
+            <em>swap</em> the values of two variables in a single statement:</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; a, b = b, a
+</input>
+  </program>
+  <p>Both sides of this statement are tuples, but Python interprets the left side to be a tuple of
+            variables and the right side to be a tuple of expressions. All of
+            the expressions on the right side are evaluated before any of the
+            assignments. This means that the values of <c>b</c> and <c>a</c> on the right side are evaluated,
+            then <c>a</c> and <c>b</c> on the left side take on their values.</p>
+  <p>The number of variables on the left and the number of values on the
+            right must be the same:</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; a, b = 1, 2, 3
+ValueError: too many values to unpack
+</input>
+  </program>
+  <exercise label="question10_3_2">
+    <statement>
+      <p>Write code to swap the values of tuple t.</p>
+    </statement>
+    <program xml:id="question10_3_2_editor" interactive="activecode" language="python">
+      <input>
+t = ('Antetokounmpo', 'Giannis')
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(t, ('Giannis', 'Antetokounmpo'), "Checking that the two values of the tuple were swapped.")
+
+myTests().main()
+        </input>
+    </program>
+  </exercise>
+  <p>More generally, the right side can be any kind of sequence (string,
+            list, or tuple). For example, to split an email address into a username
+            and a domain, you could write:</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; addr = 'monty@python.org'
+&gt;&gt;&gt; uname, domain = addr.split('@')
+</input>
+  </program>
+  <p>The return value from <c>split()</c> is a list with two elements;
+            the first element is assigned to <c>uname</c>, the second to
+            <c>domain</c>.</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; print(uname)
+monty
+&gt;&gt;&gt; print(domain)
+python.org
+</input>
+  </program>
+  <exercise label="question10_3_3">
+    <statement>
+      <p>11-9-6: What is associated with the variable &#x2018;domain' once the following code is run?</p>
+      <program language="python">
+        <input>
+email = yeezy@hotmail.com
+uname, domain = email.split('@')
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>hotmail.com</p>
+        </statement>
+        <feedback>
+          <p>Correct! The split() method splits the email address at '@'.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>@hotmail.com</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The split() method doesn't include its parameter in any of the elements of its returned list. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>['hotmail.com']</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! The split() method returns a list of strings, not a list of lists. Try again.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

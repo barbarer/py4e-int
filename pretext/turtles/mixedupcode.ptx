@@ -1,0 +1,603 @@
+<?xml version="1.0"?>
+<section xml:id="turtles_mixed-up-code-questions">
+  <title>Mixed-Up Code Questions</title>
+  
+  <exercise label="mixedupcode_turtles_1" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>forward_50</c> that takes in <c>turtle</c> as a parameter and moves the turtle forward 50.
+            After creating the function, create a Screen object and a Turtle object and call <c>forward_50</c>.</p>
+    </statement>
+    <blocks>
+      <block order="7">
+        <choice correct="yes">
+          <cline>from turtle import *</cline>
+        </choice>
+        <choice>
+          <cline>from math import * </cline>
+        </choice>
+      </block>
+      <block order="11">
+        <cline>def forward_50(turtle):</cline>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>    turtle.forward(50)</cline>
+        </choice>
+        <choice>
+          <cline>    Lilly.forward(50) </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>space = Screen()</cline>
+        </choice>
+        <choice>
+          <cline>space = screen() </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>space = space() </cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>Lilly = Turtle()</cline>
+        </choice>
+        <choice>
+          <cline>Lilly = turtle() </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>forward_50(Lilly)</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="mixedupcode_turtles_2" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>create_T</c> that takes in <c>turtle</c> as a parameter and moves the turtle to create the letter T.
+            The width of the letter should be 100, and the height of the letter should be 150. After creating the function, create a Screen object and a Turtle object and call <c>create_T</c>.</p>
+    </statement>
+    <blocks>
+      <block order="11">
+        <cline>from turtle import *</cline>
+      </block>
+      <block order="4">
+        <cline>def create_T(turtle):</cline>
+      </block>
+      <block order="10">
+        <choice correct="yes">
+          <cline>    turtle.forward(100)</cline>
+        </choice>
+        <choice>
+          <cline>    turtle.forward(150) </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>    turtle.left(180)</cline>
+      </block>
+      <block order="2">
+        <cline>    turtle.forward(50)</cline>
+      </block>
+      <block order="8">
+        <cline>    turtle.left(90)</cline>
+      </block>
+      <block order="13">
+        <choice correct="yes">
+          <cline>    turtle.forward(150)</cline>
+        </choice>
+        <choice>
+          <cline>    turtle.left(145) </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <cline>    turtle.forward(100) </cline>
+      </block>
+      <block order="6">
+        <cline>space = Screen()</cline>
+      </block>
+      <block order="9">
+        <cline>alex = Turtle()</cline>
+      </block>
+      <block order="12">
+        <cline>create_T(alex)</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="mixedupcode_turtles_3" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>create_rectangle</c> that takes in <c>turtle</c> as a parameter and creates a rectangle of width 40 and height 90.
+            After creating the function, create a Screen object and a Turtle object and call <c>create_rectangle</c>.</p>
+    </statement>
+    <blocks>
+      <block order="11">
+        <cline>from turtle import *</cline>
+      </block>
+      <block order="1">
+        <cline>def create_rectangle(turtle):</cline>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>    for i in range(2):</cline>
+        </choice>
+        <choice>
+          <cline>    for i in turtle.range(2): </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <cline>        turtle.forward(40)</cline>
+      </block>
+      <block order="12">
+        <cline>        turtle.left(90)</cline>
+      </block>
+      <block order="6">
+        <cline>        turtle.forward(90)</cline>
+      </block>
+      <block order="3">
+        <cline>        turtle.left(90)</cline>
+      </block>
+      <block order="10">
+        <cline>space = Screen()</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>alex = Turtle()</cline>
+        </choice>
+        <choice>
+          <cline>alex = turtle() </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <cline>create_rectangle(alex)</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="mixedupcode_turtles_4" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>forward</c> that takes in parameters <c>x</c>, <c>y</c>, <c>amount</c>, and <c>turtle</c>.
+            The <c>turtle</c> should draw a line of length <c>amount</c> at location <c>x</c>, <c>y</c>.
+            After creating the function, create a Screen object and a Turtle object and call <c>forward</c> with arguments <c>x = 80</c>, <c>y = 100</c>, <c>amount = 50</c>, and the Turtle object.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>from turtle import *</cline>
+      </block>
+      <block order="6">
+        <cline>def forward(x, y, amount, turtle):</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    turtle.penup()</cline>
+        </choice>
+        <choice>
+          <cline>    turtle.pen(up) </cline>
+        </choice>
+      </block>
+      <block order="13">
+        <choice correct="yes">
+          <cline>    turtle.goto(x, y)</cline>
+        </choice>
+        <choice>
+          <cline>    turtle.go_to(x, y) </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    turtle.moveto(x, y) </cline>
+        </choice>
+        <choice>
+          <cline>    turtle.move_to(x, y) </cline>
+        </choice>
+      </block>
+      <block order="11">
+        <choice correct="yes">
+          <cline>    turtle.pendown()</cline>
+        </choice>
+        <choice>
+          <cline>    turtle.pen(down) </cline>
+        </choice>
+      </block>
+      <block order="14">
+        <cline>    turtle.forward(amount)</cline>
+      </block>
+      <block order="12">
+        <cline>space = Screen()</cline>
+      </block>
+      <block order="10">
+        <cline>alex = Turtle()</cline>
+      </block>
+      <block order="8">
+        <cline>forward(80, 100, 50, alex)</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="mixedupcode_turtles_5" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>create_V</c> that takes in <c>turtle</c> as a parameter and moves the <c>turtle</c> to create the letter V.
+            First, create the right side of the V. Then, create the left side of the V. Each side of the V should be of length 100.
+            After creating the function, create a Screen object and a Turtle object and call <c>create_V</c>.</p>
+    </statement>
+    <blocks>
+      <block order="11">
+        <cline>from turtle import *</cline>
+      </block>
+      <block order="8">
+        <cline>def create_V(turtle):</cline>
+      </block>
+      <block order="12">
+        <cline>    turtle.left(60)</cline>
+      </block>
+      <block order="9">
+        <cline>    turtle.forward(100)</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    turtle.goto(0,0)</cline>
+        </choice>
+        <choice>
+          <cline>    turtle.backwards(100) </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    turtle.left(60)</cline>
+        </choice>
+        <choice>
+          <cline>    turtle.right(60) </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>    turtle.forward(100)</cline>
+      </block>
+      <block order="4">
+        <cline>space = Screen()</cline>
+      </block>
+      <block order="5">
+        <cline>alex = Turtle()</cline>
+      </block>
+      <block order="10">
+        <cline>create_V(alex)</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="mixedupcode_turtles_6" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>create_hexagon</c> that takes in <c>turtle</c> as a parameter and moves the <c>turtle</c> to create a hexagon.
+            Each side of the hexagon should be of length 50. After creating the function, create a Screen object and a Turtle object and call <c>create_hexagon</c>.</p>
+    </statement>
+    <blocks>
+      <block order="9">
+        <cline>from turtle import *</cline>
+      </block>
+      <block order="7">
+        <cline>def create_hexagon(turtle):</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    for i in range(6):</cline>
+        </choice>
+        <choice>
+          <cline>    for i in len(6): </cline>
+        </choice>
+      </block>
+      <block order="8">
+        <cline>        turtle.forward(50)</cline>
+      </block>
+      <block order="10">
+        <choice correct="yes">
+          <cline>        turtle.left(60)</cline>
+        </choice>
+        <choice>
+          <cline>        turtle.left(80) </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>space = Screen()</cline>
+      </block>
+      <block order="3">
+        <cline>alex = Turtle()</cline>
+      </block>
+      <block order="1">
+        <cline>create_hexagon(alex)</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="mixedupcode_turtles_7" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>draw_rectangle</c> that takes in parameters <c>turtle</c>, <c>width</c>, <c>height</c>, and <c>size</c> and moves the <c>turtle</c>
+            to create a rectangle of width <c>width</c> and height <c>height</c> with a pen size of <c>size</c>. After creating the function, create a Screen object and
+            a Turtle object and call <c>draw_rectangle</c> with arguments <c>width = 50</c>, <c>height = 80</c>, <c>size = 10</c>, and the Turtle object.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>from turtle import *</cline>
+      </block>
+      <block order="14">
+        <choice correct="yes">
+          <cline>def draw_rectangle(turtle, width, height, size):</cline>
+        </choice>
+        <choice>
+          <cline>def draw_rectangle(turtle, 50, 80, 10): </cline>
+        </choice>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    turtle.pensize(size)</cline>
+        </choice>
+        <choice>
+          <cline>    turtle.pen_size(size) </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <cline>    turtle.size(size) </cline>
+      </block>
+      <block order="10">
+        <cline>    for i in range(2):</cline>
+      </block>
+      <block order="2">
+        <cline>        turtle.forward(width)</cline>
+      </block>
+      <block order="9">
+        <cline>        turtle.right(90)</cline>
+      </block>
+      <block order="5">
+        <cline>        turtle.forward(height)</cline>
+      </block>
+      <block order="13">
+        <cline>        turtle.right(90)</cline>
+      </block>
+      <block order="11">
+        <cline>space = Screen()</cline>
+      </block>
+      <block order="6">
+        <cline>alex = Turtle()</cline>
+      </block>
+      <block order="8">
+        <cline>draw_rectangle(alex, 50, 80, 10)</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="mixedupcode_turtles_8" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>draw_triangle</c> that takes in parameters <c>turtle</c>, <c>length</c>, and <c>three_colors_list</c> and moves the <c>turtle</c>
+            to create a triangle with side lengths of <c>length</c> and in which the pen color changes for each side. After creating the function, create a Screen object and
+            a Turtle object and call <c>draw_triangle</c> with arguments <c>length = 50</c>, <c>three_colors_list = ["blue", "green", "yellow"]</c>, and the Turtle object.</p>
+    </statement>
+    <blocks>
+      <block order="7">
+        <cline>from turtle import *</cline>
+      </block>
+      <block order="10">
+        <cline>def draw_triangle(turtle, length, three_colors_list):</cline>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>    for color in three_colors_list:</cline>
+        </choice>
+        <choice>
+          <cline>    for i in range(3): </cline>
+        </choice>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>        turtle.color(color)</cline>
+        </choice>
+        <choice>
+          <cline>        turtle.side(color) </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>        turtle.forward(length)</cline>
+      </block>
+      <block order="3">
+        <cline>        turtle.right(120)</cline>
+      </block>
+      <block order="2">
+        <cline>space = Screen()</cline>
+      </block>
+      <block order="1">
+        <cline>alex = Turtle()</cline>
+      </block>
+      <block order="9">
+        <cline>draw_triangle(alex, 50, ["blue", "green", "yellow"])</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="mixedupcode_turtles_9" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>draw_triangle</c> that takes in parameters <c>turtle</c>, <c>xpos</c>, <c>ypos</c>, <c>length</c>, <c>color</c>, and <c>heading</c> and moves the <c>turtle</c>
+            to location <c>xpos</c>, <c>ypos</c>, sets the <c>heading</c>, changes the <c>color</c> of the pen, creates the triangle with side lengths of <c>length</c>, and colors the entire triangle.
+            After creating the function, create a Screen object and a Turtle object and call <c>draw_triangle</c> with arguments
+            <c>xpos = -120</c>, <c>ypos = 30</c>, <c>length = 60</c>, <c>color = 'green'</c>, <c>heading = 60</c>, and the Turtle object. Then, call <c>draw_triangle</c> again
+            with all of the same arguments with the exception of <c>heading = 240</c>. In the end, an hourglass should be created.</p>
+    </statement>
+    <blocks>
+      <block order="6">
+        <cline>from turtle import *</cline>
+      </block>
+      <block order="11">
+        <cline>def draw_triangle(turtle, xpos, ypos, length, color, heading):</cline>
+      </block>
+      <block order="9">
+        <cline>    turtle.penup()</cline>
+        <cline>    turtle.goto(xpos, ypos)</cline>
+        <cline>    turtle.setheading(heading)</cline>
+      </block>
+      <block order="1">
+        <cline>    turtle.pendown()</cline>
+        <cline>    turtle.color(color)</cline>
+        <cline>    turtle.begin_fill()</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    for side in range(3):</cline>
+        </choice>
+        <choice>
+          <cline>    for side in len(3): </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>        turtle.forward(length)</cline>
+        <cline>        turtle.left(120)</cline>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>    turtle.end_fill()</cline>
+        </choice>
+        <choice>
+          <cline>    turtle.endfill() </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>space = Screen()</cline>
+        <cline>alex = Turtle()</cline>
+      </block>
+      <block order="10">
+        <cline>draw_triangle(alex, -120,30,60, 'green', 60)</cline>
+        <cline>draw_triangle(alex, -120,30,60, 'green', 240)</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <exercise label="mixedupcode_turtles_10" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Create a function called <c>draw_diamond</c> that takes in parameters <c>turtle</c>, <c>xpos</c>, <c>ypos</c>, <c>length</c>, and <c>color</c> and creates a diamond
+            at any given position with color <c>color</c> and side lengths of <c>length</c>. After creating the function, create a Screen object and a Turtle object and
+            call <c>draw_diamond</c> with arguments <c>xpos = -120</c>, <c>ypos = 30</c>, <c>length = 60</c>, <c>color = 'green'</c>, and the Turtle object.</p>
+    </statement>
+    <blocks>
+      <block order="7">
+        <cline>from turtle import *</cline>
+        <cline>def draw_diamond(turtle, xpos, ypos, length, color):</cline>
+      </block>
+      <block order="10">
+        <cline>    turtle.penup()</cline>
+        <cline>    turtle.goto(xpos, ypos)</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    turtle.left(45)</cline>
+        </choice>
+        <choice>
+          <cline>    turtle.left(90) </cline>
+        </choice>
+      </block>
+      <block order="9">
+        <cline>    turtle.pendown()</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    turtle.color(color)</cline>
+        </choice>
+        <choice>
+          <cline>    turtle.side(color) </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    turtle.begin_fill()</cline>
+        </choice>
+        <choice>
+          <cline>    turtle.beginfill() </cline>
+        </choice>
+      </block>
+      <block order="12">
+        <cline>    for i in range(4):</cline>
+        <cline>        turtle.forward(length)</cline>
+        <cline>        turtle.left(90)</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    turtle.end_fill()</cline>
+        </choice>
+        <choice>
+          <cline>    turtle.endfill() </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>space = Screen()</cline>
+        <cline>alex = Turtle()</cline>
+        <cline>draw_diamond(alex, -120,30,60, 'green')</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+  <!--
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=mixedupcode_turtles_1_sq data-questionlist='mixedupcode_turtles_1, mixedupcode_turtles_1_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: mixedupcode_turtles_1, mixedupcode_turtles_1_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=mixedupcode_turtles_2_sq data-questionlist='mixedupcode_turtles_2, mixedupcode_turtles_2_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: mixedupcode_turtles_2, mixedupcode_turtles_2_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=mixedupcode_turtles_3_sq data-questionlist='mixedupcode_turtles_3, mixedupcode_turtles_3_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: mixedupcode_turtles_3, mixedupcode_turtles_3_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=mixedupcode_turtles_4_sq data-questionlist='mixedupcode_turtles_4, mixedupcode_turtles_4_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: mixedupcode_turtles_4, mixedupcode_turtles_4_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=mixedupcode_turtles_5_sq data-questionlist='mixedupcode_turtles_5, mixedupcode_turtles_5_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: mixedupcode_turtles_5, mixedupcode_turtles_5_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=mixedupcode_turtles_6_sq data-questionlist='mixedupcode_turtles_6, mixedupcode_turtles_6_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: mixedupcode_turtles_6, mixedupcode_turtles_6_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=mixedupcode_turtles_7_sq data-questionlist='mixedupcode_turtles_7, mixedupcode_turtles_7_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: mixedupcode_turtles_7, mixedupcode_turtles_7_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=mixedupcode_turtles_8_sq data-questionlist='mixedupcode_turtles_8, mixedupcode_turtles_8_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: mixedupcode_turtles_8, mixedupcode_turtles_8_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=mixedupcode_turtles_9_sq data-questionlist='mixedupcode_turtles_9, mixedupcode_turtles_9_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: mixedupcode_turtles_9, mixedupcode_turtles_9_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=mixedupcode_turtles_10_sq data-questionlist='mixedupcode_turtles_10, mixedupcode_turtles_10_ac'         data-toggleoptions="toggle, " data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: mixedupcode_turtles_10, mixedupcode_turtles_10_ac&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  -->
+</section>

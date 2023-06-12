@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<section xml:id="sec_objects_inheritance">
+  <title>Inheritance</title>
+  <p>Another powerful feature of object-oriented programming is the ability to
+            create a new class by extending an existing class.  When extending a class,
+            we call the original class the <em>parent class</em> and the new class the
+            <em>child class</em>.</p>
+  <exercise label="inheritance_extendclass">
+    <statement>
+      <p>Q-1: A new class can be created by extending an exisiting class. When extending a class,
+we call the original class the <BlankNode/> class and the new class the <BlankNode/> class. <var/>  <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Pp]arent">
+          <feedback>
+            <p>Yes, the original class is the &#x2018;parent' class.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </condition>
+      </var>
+      <var>
+        <condition string="[Cc]hild">
+          <feedback>
+            <p>Yes, the extending class is the &#x2018;child' class.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again!</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>For this example, we move our <c>PartyAnimal</c> class into its own file.
+            Then, we can &#x2018;import' the <c>PartyAnimal</c> class in a new file and extend it, as follows:</p>
+  <hint>
+    <pre>class PartyAnimal:
+
+    def __init__(self, nam):
+        self.name = nam
+        print(self.name,'constructed')
+
+    def party(self, x) :
+        self.x = x
+        self.x = self.x + 1
+        print(self.name,'party count',self.x)</pre>
+  </hint>
+  <program xml:id="inherit_cricketfan" interactive="activecode" language="python3">
+    <input>
+from party import PartyAnimal
+
+class CricketFan(PartyAnimal):
+    points = 0
+    def six(self):
+        self.points = self.points + 6
+        self.party()
+        print(self.name,"points",self.points)
+
+s = PartyAnimal("Sally")
+s.party()
+j = CricketFan("Jim")
+j.party()
+j.six()
+print(dir(j))
+        </input>
+  </program>
+  <p>When we define the <c>CricketFan</c> class, we indicate that we are extending
+            the <c>PartyAnimal</c> class.  This means that all of the variables (<c>x</c>) and methods
+            (<c>party</c>) from the <c>PartyAnimal</c> class are <em>inherited</em> by the <c>CricketFan</c> class.
+            For example, within the <c>six</c> method in the <c>CricketFan</c> class, we
+            call the <c>party</c> method from the <c>PartyAnimal</c> class.</p>
+  <p>As the program executes, we create <c>s</c> and <c>j</c> as independent instances
+            of <c>PartyAnimal</c> and <c>CricketFan</c>. The <c>j</c> object has additional capabilities beyond
+            the <c>s</c> object.</p>
+  <pre>Sally constructed
+Sally party count 1
+Jim constructed
+Jim party count 1
+Jim party count 2
+Jim points 6
+['__class__', '__delattr__', ... '__weakref__',
+'name', 'party', 'points', 'six', 'x']</pre>
+  <p>In the <c>dir</c> output for the <c>j</c> object (instance of the <c>CricketFan</c> class), we see
+            that it has the attributes and methods of the parent class, as well as the attributes
+            and methods that were added when the class was extended to create the <c>CricketFan</c> class.</p>
+</section>

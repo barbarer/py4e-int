@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<section xml:id="conditional_debugging">
+  <title>Debugging</title>
+      <idx>Debugging</idx>
+    <idx>Traceback</idx>
+    <idx>Whitespace</idx>
+  <p>The traceback Python displays when an error occurs contains a lot of
+            information, but it can be overwhelming. The most useful parts are
+            usually:</p>
+  <p>
+    <ul>
+      <li>
+        <p>What kind of error it was, and</p>
+      </li>
+      <li>
+        <p>Where it occurred.</p>
+      </li>
+    </ul>
+  </p>
+  <p>Syntax errors are usually easy to find, but there are a few gotchas.
+            Whitespace errors can be tricky because spaces and tabs are invisible
+            and we are used to ignoring them.</p>
+  <program language="python">
+    <input>
+&gt;&gt;&gt; x = 5
+&gt;&gt;&gt;  y = 6
+  File "&lt;stdin&gt;", line 1
+    y = 6
+    ^
+IndentationError: unexpected indent
+</input>
+  </program>
+  <p>In this example, the problem is that the second line is indented by one
+            space. But the error message points to <c>y</c>, which is
+            misleading. In general, error messages indicate where the problem was
+            discovered, but the actual error might be earlier in the code, sometimes
+            on a previous line.</p>
+  <p>In general, error messages tell you where the problem was discovered,
+            but that is often not where it was caused.</p>
+  <program xml:id="Price_If_Broken" interactive="activecode" language="python">
+    <input>
+weight = 0.5
+if weight &lt; 1:
+    price = 1.45
+if weight &gt; 1:
+    price = 1.15
+total = weight * price
+print(weight)
+print(price)
+print(total)
+        </input>
+  </program>
+  <p>Try different values for weight in the above code and then answer the question below:</p>
+  <exercise label="cndtnl-debug-fitb-weight">
+    <statement>
+      <p>Q-2: What value for weight will result in an error complaining that price is not defined? <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="^1$|1\.[0]*$">
+          <feedback>
+            <p>The code checks for numbers greater or less than 1, but not 1 itself.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Which value is not tested currently?</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="cndtnl-debug-mc-error">
+    <statement>
+      <p>Q-3: Which of the following will cause an error if x = 2, y = 12, and z = 0?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>x ** z</p>
+        </statement>
+        <feedback>
+          <p>Try again. ** is the exponent operator. With the values given, this evaluates to 1.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>y + 12</p>
+        </statement>
+        <feedback>
+          <p>Try again. With the values given, this evaluates to 24.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>x + y / z</p>
+        </statement>
+        <feedback>
+          <p>Dividing by z (0) will cause an error.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>z % 3</p>
+        </statement>
+        <feedback>
+          <p>Try again. With the values given, this evaluates to 0.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="cndtnl-debug-mc-error2">
+    <statement>
+      <p>Q-4: Which of the following will cause an error if x = 6 and y = 0?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>x &gt;= 2 and y != 0 and (x/y) &gt; 2</p>
+        </statement>
+        <feedback>
+          <p>Try again. This will evaluate to False because y = 0.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>x &gt;= 2 and y != 0 and (x/y) &gt; 2</p>
+        </statement>
+        <feedback>
+          <p>Try again. This will evaluate to False because y = 0.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>x &gt;= 2 and (x/y) &gt; 2 and y != 0</p>
+        </statement>
+        <feedback>
+          <p>Since y = 0, x/y will cause en erorr. The gaurd (y != 0) should be placed before that expression.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

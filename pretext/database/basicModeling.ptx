@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<section xml:id="database_basic-data-modeling">
+  <title>Basic data modeling</title>
+      <idx>Data Model</idx>
+    <idx>Normalization</idx>
+    <idx>Key</idx>
+  <p>The real power of a relational database is when we create multiple
+            tables and make links between those tables. The act of deciding how to
+            break up your application data into multiple tables and establishing the
+            relationships between the tables is called <em>data
+                modeling</em>. The design document that shows the tables and their
+            relationships is called a <em>data model</em>.</p>
+  <p>Data modeling is a relatively sophisticated skill and we will only
+            introduce the most basic concepts of relational data modeling in this
+            section. For more detail on data modeling you can start with:</p>
+  <p>
+    <url href="http://en.wikipedia.org/wiki/Relational_model" visual="http://en.wikipedia.org/wiki/Relational_model">http://en.wikipedia.org/wiki/Relational_model</url>
+  </p>
+  <exercise label="dbModel_fill1">
+    <statement>
+      <p>Q-1: Deciding how to break up your application data into tables and creating the
+relationships between them is called __________. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="[Dd]ata\s+[Mm]odeling">
+          <feedback>
+            <p>Data modeling is the act of deciding how to break up your application data into multiple tables and establishing the relationships between the tables.</p>
+          </feedback>
+        </condition>
+        <condition string="[Dd]ata\s+[Mm]odel">
+          <feedback>
+            <p>Close! A data model is the design document that shows the tables and their relationships.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Try again.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+  <p>Let's say for our Twitter spider application, instead of just counting a
+            person's friends, we wanted to keep a list of all of the incoming
+            relationships so we could find a list of everyone who is following a
+            particular account.</p>
+  <p>Since everyone will potentially have many accounts that follow them, we
+            cannot simply add a single column to our <c>Twitter</c> table. So
+            we create a new table that keeps track of pairs of friends. The
+            following is a simple way of making such a table:</p>
+  <program language="{.sql}">
+    <input>
+CREATE TABLE Pals (from_friend TEXT, to_friend TEXT)
+</input>
+  </program>
+  <p>Each time we encounter a person who <c>drchuck</c> is following,
+            we would insert a row of the form:</p>
+  <program language="{.sql}">
+    <input>
+INSERT INTO Pals (from_friend,to_friend) VALUES ('drchuck', 'lhawthorn')
+</input>
+  </program>
+  <p>As we are processing the 20 friends from the <c>drchuck</c> Twitter feed, we will
+            insert 20 records with <q>drchuck</q> as the first parameter so we will end up duplicating
+            the string many times in the database.</p>
+  <p>This duplication of string data violates one of the best practices for
+            <em>database normalization</em> which basically states that we
+            should never put the same string data in the database more than once. If
+            we need the data more than once, we create a numeric
+            <em>key</em> for the data and reference the actual data using
+            this key.</p>
+  <exercise label="dbModel_MC_tf">
+    <statement>
+      <p>Q-2: True or False? Database normalization is the practice of inserting the same string data into a database more than once.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>Try again!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>Database normalization says that we should never put the same string data into a database more than once.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>In practical terms, a string takes up a lot more space than an integer
+            on the disk and in the memory of our computer, and takes more processor
+            time to compare and sort. If we only have a few hundred entries, the
+            storage and processor time hardly matters. But if we have a million
+            people in our database and a possibility of 100 million friend links, it
+            is important to be able to scan data as quickly as possible.</p>
+  <p>We will store our Twitter accounts in a table named <c>People</c>
+            instead of the <c>Twitter</c> table used in the previous example.
+            The <c>People</c> table has an additional column to store the
+            numeric key associated with the row for this Twitter user. SQLite has a
+            feature that automatically adds the key value for any row we insert into
+            a table using a special type of data column (<c>INTEGER PRIMARY
+KEY</c>).</p>
+  <p>We can create the <c>People</c> table with this additional
+            <c>id</c> column as follows:</p>
+  <program language="{.sql}">
+    <input>
+CREATE TABLE People
+    (id INTEGER PRIMARY KEY, name TEXT UNIQUE, retrieved INTEGER)
+</input>
+  </program>
+  <p>Notice that we are no longer maintaining a friend count in each row of
+            the <c>People</c> table. When we select <c>INTEGER PRIMARY
+KEY</c> as the type of our <c>id</c> column, we are indicating
+            that we would like SQLite to manage this column and assign a unique
+            numeric key to each row we insert automatically. We also add the keyword
+            <c>UNIQUE</c> to indicate that we will not allow SQLite to insert
+            two rows with the same value for <c>name</c>.</p>
+  <p>Now instead of creating the table <c>Pals</c> above, we create a
+            table called <c>Follows</c> with two integer columns <c>from_id</c> and
+            <c>to_id</c> and a constraint on the table that the <em>combination</em> of
+            <c>from_id</c> and <c>to_id</c> must be unique in this table (i.e., we cannot
+            insert duplicate rows) in our database.</p>
+  <program language="{.sql}">
+    <input>
+CREATE TABLE Follows
+    (from_id INTEGER, to_id INTEGER, UNIQUE(from_id, to_id) )
+</input>
+  </program>
+  <p>When we add <c>UNIQUE</c> clauses to our tables, we are
+            communicating a set of rules that we are asking the database to enforce
+            when we attempt to insert records. We are creating these rules as a
+            convenience in our programs, as we will see in a moment. The rules both
+            keep us from making mistakes and make it simpler to write some of our
+            code.</p>
+  <p>In essence, in creating this <c>Follows</c> table, we are
+            modelling a <q>relationship</q> where one person <q>follows</q> someone else and
+            representing it with a pair of numbers indicating that (a) the people
+            are connected and (b) the direction of the relationship.</p>
+  <exercise label="dbModel_MC_clause">
+    <statement>
+      <p>Q-3: Which of the following SQL clauses asks the database to keep each identifier that is unique?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>SINGULAR</p>
+        </statement>
+        <feedback>
+          <p>This is not a SQL clause.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>UNIQUE</p>
+        </statement>
+        <feedback>
+          <p>UNIQUE asks the database to enforce that each entry is unique when it is added.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>IS DIFFERENT</p>
+        </statement>
+        <feedback>
+          <p>This is not a SQL clause.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>INDIVIDUAL</p>
+        </statement>
+        <feedback>
+          <p>This is not a SQL clause.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

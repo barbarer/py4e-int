@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<section xml:id="exp_questions-for-experiment-b">
+  <title>Questions for Experiment B</title>
+  <p>Try to solve the following mixed up code problems. You can use the <q>Help Me</q> button
+            to make the problem easier if you have made at least three attempts to solve the
+            problem.  After you solve each problem, please answer the poll as well.</p>
+  <exercise label="sum13_w6d_pp_exB" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Put the code blocks in order to return the sum of the numbers in the list <c>nums</c>, returning <c>0</c> for an empty list. Except the number 13 is very unlucky, so  it does not count and a number that comes immediately after a 13 also does not count.  For example, <c>sum13([13,1,2])</c> returns <c>2</c> and <c>sum13([1,13])</c> returns <c>1</c>.</p>
+    </statement>
+    <blocks>
+      <block order="7">
+        <cline>def sum_13(nums):</cline>
+      </block>
+      <block order="1">
+        <cline>    index = 0</cline>
+        <cline>    sum = 0</cline>
+      </block>
+      <block order="9">
+        <choice correct="yes">
+          <cline>    while index &lt; len(nums):</cline>
+        </choice>
+        <choice>
+          <cline>    while index &lt; len(nums) - 1: </cline>
+        </choice>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>        if nums[index] == 13:</cline>
+        </choice>
+        <choice>
+          <cline>        if nums[index] = 13: </cline>
+        </choice>
+      </block>
+      <block order="10">
+        <cline>            index += 2</cline>
+      </block>
+      <block order="6">
+        <cline>        else:</cline>
+      </block>
+      <block order="12">
+        <choice correct="yes">
+          <cline>            sum += nums[index]</cline>
+        </choice>
+        <choice>
+          <cline>            sum += nums </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>            index += 1</cline>
+      </block>
+      <block order="11">
+        <cline>    return sum</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="list_multiples_w3d_pp_exB" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Put the code blocks in order to create a function that takes two numbers as arguments (<c>num</c>, <c>length</c>) and returns a list of multiples of <c>num</c> [<c>num * 1</c>, <c>num * 2</c>, etc] until the list contains <c>length</c> elements. For example, <c>list_of_multiples(8, 4)</c> returns <c>[8, 16, 24, 32]</c> and <c>list_of_multiples (11, 8)</c> returns <c>[11, 22, 33, 44, 55, 66, 77, 88]</c>.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>def list_of_multiples (num, length):</cline>
+      </block>
+      <block order="5">
+        <cline>    count = 1</cline>
+        <cline>    a_list = []</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    while count &lt;= length:</cline>
+        </choice>
+        <choice>
+          <cline>    while count &lt; length: </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>        a_list.append(num * count)</cline>
+        </choice>
+        <choice>
+          <cline>        a_list.append(num + count) </cline>
+        </choice>
+      </block>
+      <block order="7">
+        <cline>        count += 1</cline>
+      </block>
+      <block order="4">
+        <cline>    return a_list</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="ibeforee_pp_wd_exB" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Put the code in order to define a function called grammarly that checks whether a word is spelled correctly using the rule <q>i before e except after c</q>. For example, it should return <c>False</c> for <c>grammarly('beleive')</c> since the &#x2018;ei' does not follow a &#x2018;c', it should return <c>True</c> for <c>grammarly ('receive')</c> since the &#x2018;ei' follows a &#x2018;c'.</p>
+    </statement>
+    <blocks>
+      <block order="3">
+        <cline>def grammarly(word):</cline>
+      </block>
+      <block order="13">
+        <choice correct="yes">
+          <cline>    index = 0</cline>
+        </choice>
+        <choice>
+          <cline>    index = 1 </cline>
+        </choice>
+      </block>
+      <block order="10">
+        <choice correct="yes">
+          <cline>    while index &lt; len(word) - 1:</cline>
+        </choice>
+        <choice>
+          <cline>    while index in word: </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>        vowel_combo = word[index] + word[index + 1]</cline>
+        </choice>
+        <choice>
+          <cline>        vowel_combo = word[index] + [index - 1] </cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>        if vowel_combo == "ei" and \</cline>
+        <cline>        index &gt; 0 and word[index - 1] == "c":</cline>
+      </block>
+      <block order="2">
+        <cline>            return True</cline>
+      </block>
+      <block order="7">
+        <cline>        elif vowel_combo == "ei":</cline>
+      </block>
+      <block order="12">
+        <cline>            return False</cline>
+      </block>
+      <block order="6">
+        <choice correct="yes">
+          <cline>        index += 1</cline>
+        </choice>
+        <choice>
+          <cline>        index -= 1 </cline>
+        </choice>
+      </block>
+      <block order="14">
+        <cline>    return True</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="remove_target_pp_wd_exB" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Put the code blocks in order to remove all values from a list of numbers equal to the passed <c>target</c> value and return the modified list.  For example,
+            <c>remove_target([5, 2, 5])</c> returns <c>[2]</c>.</p>
+    </statement>
+    <blocks>
+      <block order="7">
+        <cline>def remove_target(nums, target):</cline>
+      </block>
+      <block order="11">
+        <choice correct="yes">
+          <cline>    index = 0</cline>
+        </choice>
+        <choice>
+          <cline>    index = 1 </cline>
+        </choice>
+      </block>
+      <block order="12">
+        <choice correct="yes">
+          <cline>    while index &lt; len(nums):</cline>
+        </choice>
+        <choice>
+          <cline>    while index &lt; nums: </cline>
+        </choice>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>        if nums[index] == target:</cline>
+        </choice>
+        <choice>
+          <cline>        if nums[index] = target: </cline>
+        </choice>
+      </block>
+      <block order="8">
+        <cline>            nums.pop(index)</cline>
+      </block>
+      <block order="6">
+        <cline>        else:</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>            index += 1</cline>
+        </choice>
+        <choice>
+          <cline>            index -= 1 </cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>    return nums</cline>
+      </block>
+    </blocks>
+  </exercise>
+</section>

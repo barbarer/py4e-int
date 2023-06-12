@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<section xml:id="web_looping-through-nodes">
+  <title>Looping through nodes</title>
+<idx>ElementTree</idx>
+<idx><h>ElementTree</h><h>Findall</h></idx>
+<idx><h>Findall</h><h>ElementTree</h></idx>
+  <p>Often the XML has multiple nodes and we need to write a loop to process
+            all of the nodes. In the following program, we loop through all of the
+            <c>user</c> nodes:</p>
+  <exercise label="net_parse_users_ac1">
+    <statement>
+      <p>What do you think this code will print?  Run it to see what it actually
+            prints.</p>
+    </statement>
+    <program xml:id="net_parse_users_ac1_editor" interactive="activecode" language="python3">
+      <input>
+import xml.etree.ElementTree as ET
+
+input = '''
+&lt;stuff&gt;&lt;users&gt;&lt;user x="2"&gt;&lt;id&gt;001&lt;/id&gt;&lt;name&gt;Chuck&lt;/name&gt;&lt;/user&gt;&lt;user x="7"&gt;&lt;id&gt;009&lt;/id&gt;&lt;name&gt;Brent&lt;/name&gt;&lt;/user&gt;&lt;/users&gt;&lt;/stuff&gt;'''
+
+stuff = ET.fromstring(input)
+lst = stuff.findall('users/user')
+print('User count:', len(lst))
+
+for item in lst:
+    print('Name', item.find('name').text)
+    print('Id', item.find('id').text)
+    print('Attribute', item.get('x'))
+        </input>
+    </program>
+  </exercise>
+  <p>The <c>findall</c> method retrieves a Python list of subtrees that
+            represent the <c>user</c> structures in the XML tree. Then we can
+            write a <c>for</c> loop that looks at each of the user nodes, and
+            prints the <c>name</c> and <c>id</c> text elements as well
+            as the <c>x</c> attribute from the <c>user</c> node.</p>
+  <exercise label="webLoop_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+    <statement>
+      <p>Put the following blocks in order to use a loop to process nodes in an XML program, like the one seen above.</p>
+    </statement>
+    <blocks>
+      <block order="2">
+        <cline>Use findall to retrieve subtrees representing user structures in the XML tree.</cline>
+      </block>
+      <block order="4">
+        <cline>Use a for each loop to loop through the user nodes</cline>
+      </block>
+      <block order="3">
+        <cline>    Print the name and id from the user node</cline>
+      </block>
+      <block order="1">
+        <cline>    Print the x attribute from the user node using get</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <p>It is important to include all parent level elements in the <c>findall</c>
+            statement except for the top level element (e.g., <c>users/user</c>).
+            Otherwise, Python will not find any desired nodes.</p>
+  <exercise label="net_parse_users_ac2">
+    <statement>
+      <p>What do you think this code will print?  Run it to see what it actually
+            prints.</p>
+    </statement>
+    <program xml:id="net_parse_users_ac2_editor" interactive="activecode" language="python3">
+      <input>
+import xml.etree.ElementTree as ET
+
+input = '''
+&lt;stuff&gt;&lt;users&gt;&lt;user x="2"&gt;&lt;id&gt;001&lt;/id&gt;&lt;name&gt;Chuck&lt;/name&gt;&lt;/user&gt;&lt;user x="7"&gt;&lt;id&gt;009&lt;/id&gt;&lt;name&gt;Brent&lt;/name&gt;&lt;/user&gt;&lt;/users&gt;&lt;/stuff&gt;'''
+
+stuff = ET.fromstring(input)
+
+lst = stuff.findall('users/user')
+print('User count:', len(lst))
+
+lst2 = stuff.findall('user')
+print('User count:', len(lst2))
+        </input>
+    </program>
+  </exercise>
+  <p><c>lst</c> stores all <c>user</c> elements that are nested within their <c>users</c>
+            parent. <c>lst2</c> looks for <c>user</c> elements that are not nested within
+            the top level <c>stuff</c> element where there are none.</p>
+  <exercise label="webLoop_fill">
+    <statement>
+      <p>csp-10-2-4: In order for Python to find the desired nodes, it is important to include all ______
+level elements in the <c>findall</c> statement expect for the top level element. <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <condition string="parent">
+          <feedback>
+            <p>It is important to include all parent level elements. These are the outside elements that contain the other elements.</p>
+          </feedback>
+        </condition>
+        <condition string=".*">
+          <feedback>
+            <p>Not the children but the _______.</p>
+          </feedback>
+        </condition>
+      </var>
+    </setup>
+  </exercise>
+</section>
