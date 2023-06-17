@@ -81,7 +81,7 @@
             where there is a top/root element (here: <c>person</c>), and other tags (e.g.,
             <c>phone</c>) are drawn as <em>children</em> of their <em>parent</em> elements.</p>
   <figure align="">
-    <image source="images/xmlTree-fixed.png" width="50%" alt="A Tree Representation of XML"/>
+    <image source="images/xmlTree-fixed.png" width="80%" alt="A Tree Representation of XML"/>
   </figure>
   <exercise label="webXML_email_sibling_tag">
     <statement>
@@ -127,16 +127,16 @@
       <p>Click on all of the self-closing tags in the XML below.</p>
     </statement>
     <feedback>
-      <p>The self-closing tags look like <tag/></p>
+      <p>The self-closing tags do not have both a start and end tag</p>
     </feedback>
     <areas>
-      <cline><area>&lt;person&gt;</area>:</cline>
-      <cline><area>&lt;name&gt;</area>:Chuck<area>&lt;/name&gt;</area>:</cline>
-      <cline><area>&lt;phone type="intl"&gt;</area>:</cline>
-      <cline>    +1 734 303 4456</cline>
-      <cline><area>&lt;/phone&gt;</area>:</cline>
-      <cline><area correct="yes">&lt;email hide="yes" /&gt;</area>:</cline>
-      <cline><area>&lt;/person&gt;</area>:</cline>
+      <cline><area correct="no">&lt;person&gt;</area></cline>
+      <cline>    <area correct="no">&lt;name&gt;</area>Chuck<area correct="no">&lt;/name&gt;</area></cline>
+      <cline>    <area correct="no">&lt;phone type="intl"&gt;</area></cline>
+      <cline>        +1 734 303 4456</cline>
+      <cline>    <area correct="no">&lt;/phone&gt;</area></cline>
+      <cline>    <area correct="yes">&lt;email hide="yes" /&gt;</area></cline>
+      <cline><area correct="no">&lt;/person&gt;</area></cline>
     </areas>
   </exercise>
   <exercise label="xml_food_tag_text_clicka">
@@ -144,17 +144,17 @@
       <p>Click on all of the text in the XML tags below.</p>
     </statement>
     <feedback>
-      <p>The text is between the start tag <tag> and end tag </tag></p>
+      <p>The text is between the start tag and end tag</p>
     </feedback>
     <areas>
-      <cline><area>&lt;food&gt;</area>:</cline>
-      <cline><area>&lt;name&gt;</area>:<area correct="yes">French Toast</area>:<area>&lt;/name&gt;</area>:</cline>
-      <cline><area>&lt;price&gt;</area>:<area correct="yes">$4.50</area>:<area>&lt;/price&gt;</area>:</cline>
-      <cline><area>&lt;description&gt;</area>:</cline>
-      <cline><area correct="yes">Thick slices made from our homemade sourdough bread</area>:</cline>
-      <cline><area>&lt;/description&gt;</area>:</cline>
-      <cline><area>&lt;calories&gt;</area>:<area correct="yes">600</area>:<area>&lt;/calories&gt;</area>:</cline>
-      <cline><area>&lt;/food&gt;</area>:</cline>
+      <cline><area correct="no">&lt;food&gt;</area></cline>
+      <cline>    <area correct="no">&lt;name&gt;</area><area correct="yes">French Toast</area><area correct="no">&lt;/name&gt;</area></cline>
+      <cline>    <area correct="no">&lt;price&gt;</area><area correct="yes">$4.50</area><area correct="no">&lt;/price&gt;</area></cline>
+      <cline>    <area correct="no">&lt;description&gt;</area></cline>
+      <cline>         <area correct="yes">Thick slices made from our homemade sourdough bread</area></cline>
+      <cline>    <area correct="no">&lt;/description&gt;</area></cline>
+      <cline>    <area correct="no">&lt;calories&gt;</area><area correct="yes">600</area><area correct="no">&lt;/calories&gt;</area></cline>
+      <cline><area correct="no">&lt;/food&gt;</area></cline>
     </areas>
   </exercise>
   <exercise label="xml_person_attributes_clicka">
@@ -162,20 +162,16 @@
       <p>Click on all of the attribute names in the XML below.</p>
     </statement>
     <feedback>
-      <p>Attributes look like name="value" and are defined in the open tags.</p>
+      <p>Attributes look like name="value" and are defined in the start tags.</p>
     </feedback>
     <areas>
-      <cline><area>&lt;person&gt;</area>:</cline>
-      <cline><area>&lt;name&gt;</area>:Chuck<area>&lt;/name&gt;</area></cline>
-      <cline><area>&lt;phone</area><area correct="yes">type</area>=<area>"intl" &gt;</area></cline>
-      <cline>    +1 734 303 4456</cline>
-      <cline>
-        <area>&lt;/phone&gt;</area>
-      </cline>
-      <cline><area>&lt;email </area><area correct="yes">hide</area> =<area>"yes" /&gt;</area></cline>
-      <cline>
-        <area>&lt;/person&gt;</area>
-      </cline>
+      <cline><area correct="no">&lt;person&gt;</area></cline>
+      <cline>    <area correct="no">&lt;name&gt;</area>Chuck<area correct="no">&lt;/name&gt;</area></cline>
+      <cline>    <area correct="no">&lt;phone</area> <area correct="yes">type</area>=<area correct="no">"intl" &gt;</area></cline>
+      <cline>        +1 734 303 4456</cline>
+      <cline>    <area correct="no">&lt;/phone&gt;</area></cline>
+      <cline>    <area correct="no">&lt;email </area> <area correct="yes">hide</area>=<area correct="no">"yes" /&gt;</area></cline>
+      <cline><area correct="no">&lt;/person&gt;</area></cline>
     </areas>
   </exercise>
 </introduction>
@@ -309,31 +305,21 @@
         <p>The end tags look like &lt;/tag&gt; and have a corresponding start tag &lt;tag&gt;</p>
       </feedback>
       <areas>
-        <cline><area>&lt;bookstore&gt;</area>:</cline>
-        <cline>
-          <area>&lt;book&gt;category="cooking"&gt;</area>
-        </cline>
-        <cline><area>&lt;title lang="en"&gt;</area>:Everyday Italian<area correct="yes">&lt;/title&gt;</area></cline>
-        <cline><area>&lt;author&gt;</area>:Giada De Laurentiis<area correct="yes">&lt;/author&gt;</area></cline>
-        <cline><area>&lt;year&gt;</area>:2005<area correct="yes">&lt;/year&gt;</area></cline>
-        <cline><area>&lt;price&gt;</area>:30.00<area correct="yes">&lt;/price&gt;</area></cline>
-        <cline>
-          <area correct="yes">&lt;/book&gt;</area>
-        </cline>
+        <cline><area correct="no">&lt;bookstore&gt;</area></cline>
+        <cline>    <area correct="no">&lt;book&gt;category="cooking"&gt;</area></cline>
+        <cline>        <area correct="no">&lt;title lang="en"&gt;</area>Everyday Italian<area correct="yes">&lt;/title&gt;</area></cline>
+        <cline>        <area correct="no">&lt;author&gt;</area>Giada De Laurentiis<area correct="yes">&lt;/author&gt;</area></cline>
+        <cline>        <area correct="no">&lt;year&gt;</area>2005<area correct="yes">&lt;/year&gt;</area></cline>
+        <cline>        <area correct="no">&lt;price&gt;</area>30.00<area correct="yes">&lt;/price&gt;</area></cline>
+        <cline>    <area correct="yes">&lt;/book&gt;</area></cline>
         <cline/>
-        <cline>
-          <area>&lt;book category="children"&gt;</area>
-        </cline>
-        <cline><area>&lt;title lang="en"&gt;</area>:Harry Potter<area correct="yes">&lt;/title&gt;</area></cline>
-        <cline><area>&lt;author&gt;</area>:J. K. Rowling<area correct="yes">&lt;/author&gt;</area></cline>
-        <cline><area>&lt;year&gt;</area>:2005<area correct="yes">&lt;/year&gt;</area></cline>
-        <cline><area>&lt;price&gt;</area>:29.99<area correct="yes">&lt;/price&gt;</area></cline>
-        <cline>
-          <area correct="yes">&lt;/book&gt;</area>
-        </cline>
-        <cline>
-          <area correct="yes">&lt;/bookstore&gt;</area>
-        </cline>
+        <cline>    <area correct="no">&lt;book category="children"&gt;</area></cline>
+        <cline>        <area correct="no">&lt;title lang="en"&gt;</area>Harry Potter<area correct="yes">&lt;/title&gt;</area></cline>
+        <cline>        <area correct="no">&lt;author&gt;</area>J. K. Rowling<area correct="yes">&lt;/author&gt;</area></cline>
+        <cline>        <area correct="no">&lt;year&gt;</area>2005<area correct="yes">&lt;/year&gt;</area></cline>
+        <cline>        <area correct="no">&lt;price&gt;</area>29.99<area correct="yes">&lt;/price&gt;</area></cline>
+        <cline>    <area correct="yes">&lt;/book&gt;</area></cline>
+        <cline><area correct="yes">&lt;/bookstore&gt;</area></cline>
       </areas>
     </exercise>
     <exercise label="webXML_child_tag_bookstore">
