@@ -24,76 +24,28 @@ The internet is full of information people would like to collect. Copying and pa
 
  *Web scraping* is the process of getting information from web pages with code.
 
-How this ebook works
-::::::::::::::::::::
-
 .. admonition:: During this lesson, you will learn code plans used by *real professionals*.
 
    These plans represent the most common patterns in web scraping with the BeautifulSoup library. The plans in this ebook were created after an anaylsis of 100 web scraping files from `Github <https://github.com/search?l=Python&q=BeautifulSoup%28&type=Code>`_, as well as two interviews with people who use web scraping in their jobs.
 
-Two scraping examples
-::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
    :maxdepth: 1
 
    example1.rst
    example2.rst
-
-
-Plans 2-3: Get the webpage
-::::::::::::::::::::::::::
-
-.. toctree::
-   :maxdepth: 1
-
    plan2.rst
    plan3.rst
-
-Plans 4-5: Extract info from the webpage
-::::::::::::::::::::::::::::::::::::::::
-
-.. toctree::
-   :maxdepth: 1
-
    plan4.rst
    plan5.rst
-
-Plans 9-10: Do something with the info
-::::::::::::::::::::::::::::::::::::::
-
-.. toctree::
-   :maxdepth: 1
-
    plan9.rst
    plan10.rst
-
-Putting it together
-::::::::::::::::::::::::::::::::::::::
-
-.. toctree::
-   :maxdepth: 1
-
    activity-writing-1.rst
    activity-writing-2.rst
    activity-writing-3.rst
    activity-debugging.rst
    activity-explaining.rst
-
-Download the plans
-::::::::::::::::::
-
-.. toctree::
-   :maxdepth: 1
-
    downloads.rst
-
-Practice problems
-::::::::::::::::::::::
-
-.. toctree::
-   :maxdepth: 1
-
    Exercises.rst
    mixedupcode.rst
    writecode.rst
