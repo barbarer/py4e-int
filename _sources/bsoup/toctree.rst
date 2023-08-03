@@ -10,10 +10,6 @@ Learn Web Scraping
     is included in the section entitled "GNU Free Documentation License".
 
 
-=======================================
-Learn Web Scraping!
-=======================================
-
 .. image:: _static/web_crawler.png
     :scale: 20%
     :align: center
