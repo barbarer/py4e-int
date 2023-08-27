@@ -15,7 +15,7 @@ Students will know and be able to do the following.
 *Content Objectives:*
 
 * Learn how to display a value in Python using print.
-* Math terms for functions to their definitiions.
+* Match terms for functions to their definitiions.
 * Recognize common symbols (:, #), operators (+, -, /), and keywords (def, return) in Python.
 
 *Process Objectives:*
