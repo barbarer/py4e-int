@@ -368,37 +368,11 @@ Logical Operators and Complex Conditionals
 
 The logical operators in Python are ``and``, ``or``, and ``not``. These can be used to create complex conditionals.
 
-
-.. activecode::fsc_ac_or_complex_cond
-    :caption: complex conditional with or
-
-    Modify this code to use a complex conditional instead.  It should still pass all tests. It should only take four lines of code or less.
-    ~~~~
-    # function definition
-    def either6(a,b):
-        if a == 6:
-            return True
-        if b == 6:
-            return True
-        return False
-
-    ====
-    from unittest.gui import TestCaseGui
-
-    class myTests(TestCaseGui):
-
-        def testOne(self):
-            self.assertEqual(either6(5,2),False,"either6(5,2)")
-            self.assertEqual(either6(6,3),True, "either6(6,3)")
-            self.assertEqual(either6(3,6),True, "either6(3,6)")
-            self.assertEqual(either6(3,-6),False, "either6(3,6)")
-
-    myTests().main()
-
 .. activecode:: fsc_ac_and_complex_cond
     :caption: complex conditional with and
 
-    Modify this code to use a complex conditional instead.  It should still pass all tests. It should only take four lines of code or less.
+    Modify this code to use a complex conditional instead.  
+    It should still pass all tests. It should only take four lines of code or less.
     ~~~~
     # function definition
     def test(a):
@@ -420,6 +394,33 @@ The logical operators in Python are ``and``, ``or``, and ``not``. These can be u
             self.assertEqual(test(11),False,"test(11)")
             self.assertEqual(test(10),True,"test(10)")
             self.assertEqual(test(9),True,"test(9)")
+
+    myTests().main()
+
+.. activecode::fsc_ac_or_complex_cond
+    :caption: complex conditional with or
+
+    Modify this code to use a complex conditional instead.  It should still pass all tests. 
+    It should only take four lines of code or less.
+    ~~~~
+    # function definition
+    def either6(a,b):
+        if a == 6:
+            return True
+        if b == 6:
+            return True
+        return False
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(either6(5,2),False,"either6(5,2)")
+            self.assertEqual(either6(6,3),True, "either6(6,3)")
+            self.assertEqual(either6(3,6),True, "either6(3,6)")
+            self.assertEqual(either6(3,-6),False, "either6(3,6)")
 
     myTests().main()
 
