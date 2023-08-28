@@ -172,7 +172,7 @@ String Indices
 
 .. note::
 
-   Use [index] to get a character from a string.  The first character in a string is at index 0 and the last is at the length of the string minus 1 (also know as index -1 in Python).  Also note that you can use pairs of single quotes or double quotes to create a string.  This is useful when the string includes a single quote.
+   Use [index] to get a character from a string.  The first character in a string is at index 0 and the last is at the length of the string minus 1 (also know as index -1 in Python).  
 
 Fix the function ``get_initials`` above to return a string with the first letter of the first name followed by the first letter of the last name.
 
@@ -207,7 +207,8 @@ String Slices
 
 .. note::
 
-   Use the slice [start:end] operator to get a slice (substring) from a string. It will return a new string starting at the start and including all the characters up to just before the end (end - 1).
+   Use the slice ``[start:end]`` operator to get a slice (substring) from a string. It will return a new string starting at the start and including all the characters up to just before the end (end - 1).
+   If ``start`` is missing the default is 0 and if ``end`` is missing the default value is the length of the string.
 
 .. fillintheblank:: fsc_fitb_three_char_slice
 
@@ -369,7 +370,7 @@ The logical operators in Python are ``and``, ``or``, and ``not``. These can be u
 
 
 .. activecode::fsc_ac_or_complex_cond
-    :caption: complex conditional
+    :caption: complex conditional with or
 
     Modify this code to use a complex conditional instead.  It should still pass all tests. It should only take four lines of code or less.
     ~~~~
@@ -395,7 +396,7 @@ The logical operators in Python are ``and``, ``or``, and ``not``. These can be u
     myTests().main()
 
 .. activecode:: fsc_ac_and_complex_cond
-    :caption: complex conditional
+    :caption: complex conditional with and
 
     Modify this code to use a complex conditional instead.  It should still pass all tests. It should only take four lines of code or less.
     ~~~~
