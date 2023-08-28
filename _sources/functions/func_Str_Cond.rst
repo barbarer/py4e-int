@@ -270,13 +270,13 @@ Basic Conditionals and Tests
     # function definition
     def get_temp_desc(temp):
         if temp < 32:
-            return "Baby, its cold outside!"
+            return "Baby, its cold outside!  The temp is " + str(temp)
         elif temp < 70:
-            return "Wear a coat"
+            return "Wear a coat. The temp is " + str(temp)
         elif temp < 80:
-            return "Feels great!"
+            return "Feels great! The temp is " + str(temp)
         else:
-            return "Too hot to handle!"
+            return "Too hot to handle! The temp is " + str(temp)
 
     # function definition
     def main():
@@ -285,6 +285,10 @@ Basic Conditionals and Tests
 
     # function call
     main()
+
+.. note::
+
+   You must first convert a number to a string using ``str(nun)`` if you want to add it to a string using ``+``.
 
 .. parsonsprob:: fsc_pogil_check-guess-Parsons-v2
    :numbered: left
