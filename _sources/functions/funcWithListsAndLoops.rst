@@ -72,7 +72,7 @@ There are several built-in functions in Python that work on lists such as ``max`
 .. activecode:: flal_ac_list_func
     :caption: List methods
 
-    Run this code to see what it prints.
+    Run this code to see what it prints.  You can also step through the code usign the "Show CodeLens" button.
     ~~~~
     # function definition
     def list_func(my_list):
@@ -283,7 +283,7 @@ the built-in ``range`` function to do this.
 .. activecode:: flal_ac_count_to
     :caption: Range example with end
 
-    Run this code to see what it prints.
+    Run this code to see what it prints.  You can also step through the code usign the "Show CodeLens" button.
     ~~~~
     # function definition
     def print_to(end):
@@ -329,6 +329,30 @@ the built-in ``range`` function to do this.
     # function call
     main()
 
+.. parsonsprob:: flal_pp_total_at_odd_indices
+   :numbered: left
+   :adaptive:
+   :order: 7, 3, 4, 1, 0, 6, 5, 2
+   :practice: T
+
+   Drag the blocks from the left and put them in the correct order on the right to define a function ``total_at_odd_indices`` that returns the total of the numbers at odd indices in the passed list.
+   -----
+   def total_at_odd_indices(alist):
+   =====
+   def total_at_odd_indices(alist) #paired
+   =====
+        total = 0
+   =====
+        for i in range(1,len(alist),2):
+   =====
+        for i in range(1,len(alist)): #paired
+   =====
+            total += alist[i]
+   =====
+            total += i #paired
+   =====
+        return total
+
 While Loops
 ===============
 
@@ -337,7 +361,7 @@ A while loop repeats while a Boolean expression is True.
 .. activecode:: flal_ac_inifite
     :caption: Example infinite loop
 
-    Try running the code below.
+    Try running the code below.  You can also step through the code usign the "Show CodeLens" button.
     ~~~~
     def example():
         count = 0
