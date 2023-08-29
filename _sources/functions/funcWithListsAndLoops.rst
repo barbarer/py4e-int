@@ -72,7 +72,7 @@ There are several built-in functions in Python that work on lists such as ``max`
 .. activecode:: flal_ac_list_func
     :caption: List methods
 
-    Run this code to see what it prints.  You can also step through the code usign the "Show CodeLens" button.
+    Run this code to see what it prints.  You can also step through the code using the "Show CodeLens" button.
     ~~~~
     # function definition
     def list_func(my_list):
@@ -122,7 +122,7 @@ Lists are objects of the ``list`` class and have methods that operate on list ob
 .. activecode:: flal_ac_list_methods
     :caption: List methods
 
-    Run this code to see what it prints.  You can also step through the code usign the "Show CodeLens" button.
+    Run this code to see what it prints.  You can also step through the code using the "Show CodeLens" button.
     ~~~~
     # function definition
     def list_methods(alist):
@@ -181,7 +181,7 @@ You can also ``reverse`` a list or ``sort`` it.
 .. activecode:: flal_ac_list_methods2
     :caption: More list methods
 
-    Run this code to see what it prints.  You can also step through the code usign the "Show CodeLens" button.
+    Run this code to see what it prints.  You can also step through the code using the "Show CodeLens" button.
     ~~~~
     # function definition
     def list_methods2(alist):
@@ -245,7 +245,7 @@ A for-each loop in Python will loop though the items in a list starting with the
 .. activecode:: flal_ll_ac_count_odd
     :caption: Count odd numbers
 
-    Run this code to see what it prints.  You can also step through the code usign the "Show CodeLens" button.
+    Run this code to see what it prints.  You can also step through the code using the "Show CodeLens" button.
     ~~~~
     # function definition
     def count_odd(num_list):
@@ -283,7 +283,7 @@ the built-in ``range`` function to do this.
 .. activecode:: flal_ac_count_to
     :caption: Range example with end
 
-    Run this code to see what it prints.  You can also step through the code usign the "Show CodeLens" button.
+    Run this code to see what it prints.  You can also step through the code using the "Show CodeLens" button.
     ~~~~
     # function definition
     def print_to(end):
@@ -313,7 +313,7 @@ the built-in ``range`` function to do this.
 .. activecode:: flal_ac_print_from_to_by
     :caption: Range example with start, end, and by
 
-    Run this code to see what it prints.  You can also step through the code usign the "Show CodeLens" button.
+    Run this code to see what it prints.  You can also step through the code using the "Show CodeLens" button.
     ~~~~
     # function definition
     def print_from_to_by(start, end, by):
@@ -361,7 +361,7 @@ A while loop repeats while a Boolean expression is True.
 .. activecode:: flal_ac_inifite
     :caption: Example infinite loop
 
-    Try running the code below.  You can also step through the code usign the "Show CodeLens" button.
+    Try running the code below.  You can also step through the code using the "Show CodeLens" button.
     ~~~~
     def example():
         count = 0
