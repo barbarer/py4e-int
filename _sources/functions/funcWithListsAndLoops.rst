@@ -94,7 +94,7 @@ There are several built-in functions in Python that work on lists such as ``max`
    :nocodelens:
 
    Write a function ``sum_first_half`` that takes a list and returns a the sum of just the first half of the items.  
-   For example, ``sum_first_half([1,2,3,4])`` should return ``3````` (sum of 1 and 2) and first_half([7,8,9])`` should return 7.  
+   For example, ``sum_first_half([1,2,3,4])`` should return ``3`` (sum of 1 and 2) and ``first_half([7,8,9])`` should return ``7``.  
    ~~~~
    def sum_first_half(alist):
 
@@ -122,7 +122,7 @@ Lists are objects of the ``list`` class and have methods that operate on list ob
 .. activecode:: flal_ac_list_methods
     :caption: List methods
 
-    Run this code to see what it prints.
+    Run this code to see what it prints.  You can also step through the code usign the "Show CodeLens" button.
     ~~~~
     # function definition
     def list_methods(alist):
@@ -181,7 +181,7 @@ You can also ``reverse`` a list or ``sort`` it.
 .. activecode:: flal_ac_list_methods2
     :caption: More list methods
 
-    Run this code to see what it prints.
+    Run this code to see what it prints.  You can also step through the code usign the "Show CodeLens" button.
     ~~~~
     # function definition
     def list_methods2(alist):
@@ -245,7 +245,7 @@ A for-each loop in Python will loop though the items in a list starting with the
 .. activecode:: flal_ll_ac_count_odd
     :caption: Count odd numbers
 
-    Run this code to see what it prints.
+    Run this code to see what it prints.  You can also step through the code usign the "Show CodeLens" button.
     ~~~~
     # function definition
     def count_odd(num_list):
@@ -275,7 +275,7 @@ the built-in ``range`` function to do this.
 
 .. fillintheblank:: flal_fitb_print_to_last
 
-    What is last value that that following code prints?
+    What is the last value that the following code prints?
 
     - :2|two: The code prints from 0 to the passed end (exclusive).  The end is 3 which means the last value is 2.
       :.*: What is the parameter in the second call to count_to?
@@ -305,7 +305,7 @@ the built-in ``range`` function to do this.
 
 .. fillintheblank:: flal_fitb_print_from_to_by_last
 
-    What is last value that that following code prints?
+    What is last value that the following code prints?
 
     - :9|nine: The code prints from start (inclusive) which is 1 to the passed end (exclusive) which is 10 and changes by 2 each time so the end is 9.
       :.*: Run the code and see.
@@ -313,7 +313,7 @@ the built-in ``range`` function to do this.
 .. activecode:: flal_ac_print_from_to_by
     :caption: Range example with start, end, and by
 
-    Run this code to see what it prints.
+    Run this code to see what it prints.  You can also step through the code usign the "Show CodeLens" button.
     ~~~~
     # function definition
     def print_from_to_by(start, end, by):
