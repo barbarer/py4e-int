@@ -16,7 +16,7 @@ Students will know and be able to do the following.
 *Content Objectives:*
 
 * Understand how list indexing and slicing works.
-* Gain famililarity with built-in fuctions that take lists and list methods.
+* Gain famililarity with built-in fuctions that take lists as well as list methods.
 * Recognize a for-each loop.
 * Recognize a range.
 * Recognize a for loop.
