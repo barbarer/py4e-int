@@ -140,7 +140,7 @@ item to their left. The quantifiers are ``?``, ``+``, ``*``, ``{n}``, and ``{n,m
 
     What characters are used to match a digit?
 
-    - :\\d|[0-9]: The backslash d is used to match any digit or [0-9] can be used as well.
+    - :\\d|\[0-9\]: The backslash d is used to match any digit or [0-9] can be used as well.
       :d: You are missing something before the d
       :/d: Try a backslash instead
       :.*: Run the code above
