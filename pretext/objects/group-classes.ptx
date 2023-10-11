@@ -55,7 +55,7 @@ with <q>[Parsons Problem Study]</q> included in the email subject. &lt;br&gt;&lt
         <p>Identify the parts of a class</p>
       </li>
       <li>
-        <p>Explain what a constructor is and what it does</p>
+        <p>Explain what a constructor (initializer) is and what it does</p>
       </li>
       <li>
         <p>Explain what the __str__ method does</p>
@@ -130,13 +130,13 @@ main()
     </exercise>
     <exercise label="class_fitb_create_method">
       <statement>
-        <p>Q-3: What is the name of the method that is called when the object is created? <var/>  </p>
+        <p>Q-3: What is the name of the method that is always called when an object is created? <var/>  </p>
       </statement>
       <setup>
         <var>
           <condition string="__init__">
             <feedback>
-              <p>Good job!  The __init__ method is called when an object is created.</p>
+              <p>Good job!  The __init__ method is always called when an object is created.</p>
             </feedback>
           </condition>
           <condition string="init">

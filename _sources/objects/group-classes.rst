@@ -23,7 +23,7 @@ Students will know and be able to do the following.
 * Create new methods
 
 Look the code below.  It defines a class.  it also declares *methods* which are functions that are defined inside of a class.
-One of the methods is automatically called when a new object is created by the class.  One of the methods is automatically
+One of the methods is automatically called everytime a new object is created by the class.  One of the methods is automatically
 called when you print an object of the class.
 
 
