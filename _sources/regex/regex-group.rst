@@ -140,8 +140,9 @@ item to their left. The quantifiers are ``?``, ``+``, ``*``, ``{n}``, and ``{n,m
 
     What characters are used to match a digit?
 
-    - :\\d: The backslash d is used to match any digit
+    - :\\d|[0-9]: The backslash d is used to match any digit or [0-9] can be used as well.
       :d: You are missing something before the d
+      :/d: Try a backslash instead
       :.*: Run the code above
 
 .. dragndrop:: regex_quant_v2_dnd
@@ -201,15 +202,15 @@ You can specify a range of items to match.
     res1 = re.findall("[0-9.]+", str1)
     print(res1)
     res2 = re.findall("[^0-9.]+", str1)
-    print(res1)
+    print(res2)
 
 
 .. mchoice:: regex_char_range_digits
-   :answer_a: Match any digit or period one or more times
+   :answer_a: Match any digit or period one or more times.  Special characters like '.' just match themselves in [].
    :answer_b: Match any digit or anything that isn't a new line one or more times
    :answer_c: Match any digit or period zero to many times
    :answer_d: Match any digit or anything that isn't a new line zero to many times
-   :correct: d
+   :correct: a
    :feedback_a: Items in the [] match themselves and are not treated as special characters other than '-'
    :feedback_b: The period in a [] just means match a period
    :feedback_c: The + outside of the [] means match one or more
