@@ -9,7 +9,7 @@ Look at the code below and predict what will be printed.
 
     What is the last thing (last line of text) that will be printed when the code below runs?
 
-    - :['"]?Attr\s*['"]?yes['"]?: It prints "Attr " plus the value of the hide attribute in the email tag.
+    - :['"]?Attr\:\s*['"]?yes['"]?: It prints "Attr " plus the value of the hide attribute in the email tag.
       :['"]?yes['"]?: Something will be printed before the value. Look at the print statement again.
       :.*: What is the value of the hide attribute?
 
@@ -33,8 +33,8 @@ elements from the XML:
     </person>'''
 
     tree = ET.fromstring(data)
-    print('Name ', tree.find('name').text)
-    print('Attr ', tree.find('email').get('hide'))
+    print('Name: ', tree.find('name').text)
+    print('Attr: ', tree.find('email').get('hide'))
 
 The triple single quote (``'''``), as well as the triple double quote (``"""``),
 allow for the creation of strings in Python that span multiple lines.
