@@ -49,6 +49,10 @@ xml tags to define the books in a bookstore.
 
        &#60;/bookstore&#62;
 
+.. datafile:: books.xml
+    :fromfile: books.xml
+    :hide:
+
 .. activecode:: web_get_book_info_xml
     :language: python3
     :nocodelens:
@@ -99,6 +103,9 @@ xml tags to define news stories.
            &#60;/body&#62;
        &#60;/nitf&#62;
 
+.. datafile:: news.xml
+    :fromfile: news.xml
+    :hide:
 
 .. activecode:: web_get_news_info_xml
     :language: python3
@@ -158,6 +165,9 @@ xml tags to define weather observations.
 
        &#60;/current_observation&#62;
 
+.. datafile:: weather.xml
+    :fromfile: weather.xml
+    :hide:
 
 .. activecode:: web_get_weather_info_xml
     :language: python3
@@ -177,7 +187,7 @@ xml tags to define weather observations.
 The file ``email.json`` below contains JSON data for people including their first_name, last_name
 and email address.
 
-.. reveal:: emailr.json
+.. reveal:: email_data
     :showtitle: Show
     :hidetitle: Hide
 
@@ -214,6 +224,10 @@ and email address.
          "ip_address": "67.76.188.26"
        }]
 
+.. datafile:: email.json
+    :fromfile: email.json
+    :hide:
+
 .. activecode:: web_email_json_write
     :language: python3
     :nocodelens:
@@ -231,7 +245,7 @@ and email address.
 The file ``person.json`` below contains JSON data for a person in a dictionary including their first name,
 last name, address, and phone numbers.
 
-.. reveal:: person2.json
+.. reveal:: person_data
     :showtitle: Show
     :hidetitle: Hide
 
@@ -266,6 +280,10 @@ last name, address, and phone numbers.
          "children": [],
          "spouse": null
        }
+
+.. datafile:: person.json
+    :fromfile: person.json
+    :hide:
 
 .. activecode:: web_email_person_write
     :language: python3
