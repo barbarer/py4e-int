@@ -177,7 +177,7 @@ xml tags to define weather observations.
 The file ``email.json`` below contains JSON data for people including their first_name, last_name
 and email address.
 
-.. reveal:: email.json
+.. reveal:: emailr.json
     :showtitle: Show
     :hidetitle: Hide
 
@@ -231,7 +231,7 @@ and email address.
 The file ``person.json`` below contains JSON data for a person in a dictionary including their first name,
 last name, address, and phone numbers.
 
-.. reveal:: person.json
+.. reveal:: person2.json
     :showtitle: Show
     :hidetitle: Hide
 
