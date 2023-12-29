@@ -12,7 +12,6 @@ Problems
    :fromid: get-middle
    :points: 10
 
-
 .. selectquestion:: fl-list_loop_two_lists-ps-sq-write
    :fromid: list_loop_two_lists
    :points: 10

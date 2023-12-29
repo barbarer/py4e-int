@@ -3,8 +3,8 @@ An Introduction To Our System
 
 Please read the following and watch the videos.
 
-Solving Write Code Problems
-==============================
+Basic: Solving Write Code Problems
+==================================
 
 If you see a problem like the one below, you will need to write code.  The problem
 will have unit tests that you can run to check that your code is working
@@ -20,30 +20,13 @@ See the video below for an example.
     :height: 415
     :align: center
 
-Write Code with Pop-Up Mixed-up Code
-=======================================
+Basic: Solving Mixed-up Code Problems
+=====================================
 
-You may also see a write code problem that allows you to pop-up the
-equivalent mixed-up code problem. You can use this problem to help you
-solve the write code problem.  To pop-up the mixed-up code problem
-click on the drop down near the top of problem.
-
-.. youtube:: zz4ATp31_vk
-    :optional:
-    :divid: si206-ps-toggle-cls
-    :width: 650
-    :height: 415
-    :align: center
-
-
-Solving Mixed-up Code Problems
-==================================
-
-If you see a problem like the one below you will need to put the mixed-up
-code in the correct order on the right side. You
-may need to indent the blocks as well.  There may also be extra blocks that are not
-needed in a correct solution that you can leave on the left side. Click the "Check" button
-to check your solution.
+If you see a problem like the one below you will need to put the mixed-up code in the correct order on the right side. 
+You need to indent the blocks as well.  Click the "Check" button to check your solution.
+Click the "Reset" button to start over.  You can check your solution as many times as you want.
+You can also click the "Copy" button to copy the finished solution to the clipboard.
 
 See the video below for an example.
 
@@ -88,19 +71,29 @@ See the video below for an example.
     :height: 415
     :align: center
 
-    
-Feedback
-==================================
+In this practice: Write Code with A Pop-Up Mixed-up Code Example Problem 
+=========================================================================
 
-.. shortanswer:: si206-system-sa-cls
+In the practice, you may see a write code problem that allows you to pop-up an mixed-up code problem of an example problem. 
+You can use this problem to help you solve the write code problem.  
+To pop-up the mixed-up code problem, click on the drop down near the top of problem.
 
-   Please provide feedback here. Please share any comments, problems, or suggestions.
+
+In this practice: Write Code with A Pop-Up Code Example Solution
+=================================================================
+
+In the practice, you may also see a write code problem that allows you to pop-up a completed solution with step-by-step comments for an example problem.
+You can use this problem to help you solve the write code problem.  
+Similarly, to pop-up the code example demostration, click on the drop down near the top of problem.
+
+
+
 
 What to do next
 ================
 
 .. raw:: html
 
-    <h4>Click to finish a survey about your perceptions of your abilities to complete programming learning tasks 👉 <b><a href="se-presurvey-cls.html">Survey</a></b></h4>
+    <h4>Click to finish a survey about your perceptions of your abilities to complete programming learning tasks 👉 <b><a href="presurvey-cls.html">Survey</a></b></h4>
 
 
