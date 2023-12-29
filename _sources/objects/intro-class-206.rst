@@ -14,7 +14,7 @@ Hi! We are a team of researchers in Professor Ericson’s Lab at UMSI!
     <h4> What Will Occur </h4>
     <p>This study takes 60 minutes to one hour to finish. The study materials include:</p>
     <ul>
-        <li>Knowledge Review - A basic knowledge introduction about <b>Class</b> (~5 mins)</li>
+        <li>Knowledge Introduction - A basic knowledge introduction about Python <b>Class</b> (~5 mins)</li>
         <li>System Introduction - Materials to get you familiar with the types of problems in this study (~5 mins)</li>
         <li>Pre Survey - Questions about your level of programming self-efficacy (~5 mins)</li>
         <li>Practice - Five code practice problems (~30 mins)</li>
