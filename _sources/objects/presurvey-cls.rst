@@ -116,26 +116,56 @@ What to do next
 ============================
 .. raw:: html
 
-     <h4>Click on the following link to start practice 👉 <b><a id="fl-next-cls">Practice Problems</a></b></h4>
+     <h4>Click on the following link to start practice 👉 <b><a id="class-practice">Practice Problems</a></b></h4>
 
 .. raw:: html
 
-    <script type="text/javascript" >
+   <script type="text/javascript">
 
-      window.onload = function() {
-
-        a = document.getElementById("fl-next-cls")
-
-        // randomly pick one of two relative urls
-        var v = Math.floor(Math.random() * 9) + 1;
-        if (v % 2 == 0)
-        {
-              a.href = "fl-toggle-cls.html"
+     function getCookie(cookieName) {
+        let name = cookieName + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i < ca.length; i++) {
+           let c = ca[i];
+           while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+           }
+           if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+           }
         }
-        else
-        {
-               a.href = "fl-write-cls.html"
+        return "";
+     }
+
+     function setCookie(cookieName, cvalue) {
+        document.cookie = cookieName + "=" + cvalue + ";";
+     }
+
+     window.onload = function() {
+
+        a = document.getElementById("class-practice")
+
+        // get prev set cookie
+        var EXP_COOKIE = 'class-exp-we-or-pp'
+        var cond = getCookie(EXP_COOKIE);
+
+        // if no prev set cookie: generate random condition and set cookie
+        if (cond != 'pp' && cond != 'we') {
+           var v = Math.floor(Math.random() * 2);
+           if (v < 1) {
+               cond = 'pp';
+           } else {
+               cond = 'we';
+           }
+           setCookie(EXP_COOKIE, cond);
         }
 
-        };
-    </script>
+        if (cond == 'pp') {
+           a.href = "practice-toggle-pp-cls.html"
+        } else if (cond == 'we') {
+           a.href = "practice-toggle-we-cls.html"
+        }
+     };
+   </script>
+
