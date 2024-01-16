@@ -14,13 +14,13 @@ Problems
    :toggle: lock
    :points: 10
 
-.. poll:: pp-iso-poll-cls-1
+.. poll:: we-iso-poll-cls-1
     :scale: 9
 
     From 1-lowest to 9-highest, how useful was the Parsons problem in helping you <b>solve</b> this problem? Please skip this question if you didn't use it.
 
 
-.. shortanswer:: pp-iso-sa-cls-1
+.. shortanswer:: we-iso-sa-cls-1
 
     Please explain your rating above or explain why you didn’t use the Parsons problem to help you solve the write-code problem.
 
@@ -29,12 +29,12 @@ Problems
    :toggle: lock
    :points: 10
 
-.. poll:: pp-iso-poll-cls-2
+.. poll:: we-iso-poll-cls-2
     :scale: 9
 
     From 1-lowest to 9-highest, how useful was the Parsons problem in helping you <b>solve</b> this problem? Please skip this question if you didn't use it.
 
-.. shortanswer:: pp-iso-sa-cls-2
+.. shortanswer:: we-iso-sa-cls-2
 
     Please explain your rating above or explain why you didn’t use the Parsons problem to help you solve the write-code problem.
 
@@ -44,12 +44,12 @@ Problems
    :toggle: lock
    :points: 10
 
-.. poll:: pp-iso-poll-cls-3
+.. poll:: we-iso-poll-cls-3
     :scale: 9
 
     From 1-lowest to 9-highest, how useful was the Parsons problem in helping you <b>solve</b> this problem? Please skip this question if you didn't use it.
 
-.. shortanswer:: pp-iso-sa-cls-3
+.. shortanswer:: we-iso-sa-cls-3
 
     Please explain your rating above or explain why you didn’t use the Parsons problem to help you solve the write-code problem.
 
@@ -58,12 +58,12 @@ Problems
    :toggle: lock
    :points: 10
 
-.. poll:: pp-iso-poll-cls-4
+.. poll:: we-iso-poll-cls-4
     :scale: 9
 
     From 1-lowest to 9-highest, how useful was the Parsons problem in helping you <b>solve</b> this problem? Please skip this question if you didn't use it.
 
-.. shortanswer:: pp-iso-sa-cls-4
+.. shortanswer:: we-iso-sa-cls-4
 
     Please explain your rating above or explain why you didn’t use the Parsons problem to help you solve the write-code problem.
 
@@ -73,12 +73,12 @@ Problems
    :toggle: lock
    :points: 10
 
-.. poll:: pp-iso-poll-cls-5
+.. poll:: we-iso-poll-cls-5
     :scale: 9
 
     From 1-lowest to 9-highest, how useful was the Parsons problem in helping you <b>solve</b> this problem? Please skip this question if you didn't use it.
 
-.. shortanswer:: pp-iso-sa-cls-5
+.. shortanswer:: we-iso-sa-cls-5
 
     Please explain your rating above or explain why you didn’t use the Parsons problem to help you solve the write-code problem.
 
