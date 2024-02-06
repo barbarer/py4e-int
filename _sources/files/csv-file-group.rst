@@ -15,7 +15,7 @@ Students will know and be able to do the following.
 *Content Objectives:*
 
 * Process data in csv files using rstrip, strip, and split.
-* Read csv data into a nested dictionary.
+* Read csv data into a nested dictionary.  A nested dictionary has a dictionary inside of another dictionary.  
 * Total data using a dictionary
 * Sort data from a dictionary
 
@@ -29,7 +29,7 @@ Comma-Separated Values (CSV) Files
 
 One way that we exchange data is by storing it in comma-separated value (CSV) files.  These files have values separated by a symbol, which is often a comma. Each row in the file contains the same type of data.
 
-Look at the data in the file below.  It has a date in day-month-year followed by the opening value, high, low, and closing value. The first 
+Look at the data in the file below by clicking on the "Show" button.  It has a date in day-month-year followed by the opening value, high, low, and closing value. The first 
 line is "3-Dec-01,9848.93,10220.78,9651.87,10021.57".
 
 
@@ -198,7 +198,7 @@ line is "3-Dec-01,9848.93,10220.78,9651.87,10021.57".
 
 .. fillintheblank:: csv_file_stocks_max_close_fitb
 
-    What is the highest closing value in the file above?  The closing value is the last value on each line.
+    What is the highest closing value in the file above?  The closing value is the last value on each line. For example for 3-Dec-01 it was 10021.57.
 
     - :11497.12: This is the highest value at the close.
       :.*: Look at the last value on each line and find the highest value.
@@ -240,7 +240,7 @@ We can write Python code to read the data and find the date with the highest val
 
    Remember to remove the end of line character and convert the string values to integers or floating point numbers before comparing them or using them in calculations.
 
-What if you want to find several things from the data? You wouldn't want to read the data from the file in every function.  You could read all the data into a nested dictionary and then pass the dictionary to every function. A nested dictionary is a dictionary that has dictionaries for the values.  In this case we can use the date as the key for the outer dictionary and use "open", "high", "low" and "close"
+What if you want to find several things from the data? You wouldn't want to read the data from the file in every function.  You could read all the data into a nested dictionary (a dictionary that contains another dictionary inside of it) and then pass the outer dictionary to every function. A nested dictionary is a dictionary that has dictionaries for the values.  In this case we can use the date as the key for the outer dictionary and use "open", "high", "low" and "close"
 as the keys for each inner dictionary.
 
 .. fillintheblank:: csv_file_stocks_min_close_fitb
@@ -341,6 +341,8 @@ as the keys for each inner dictionary.
     :match_4: str.strip()|||Returns a new string without leading or trailing white space.
     :match_5: int(value)|||Returns an integer value from a string.
 
+    Drag each function to the correct description.
+
 .. mchoice:: csv_file_strip_with_params_mcq
     :practice: T
     :answer_a: 1958
@@ -358,6 +360,16 @@ as the keys for each inner dictionary.
     ::
 
         print(' "1958"'.strip('"'))
+
+
+Nested dictionaries
+=====================
+
+A dictionary can contain or more more dictioaries inside of it.  We call this a nested 
+dictioanry.  For example, {'JAN': {'1958': 340, '1959': 360, '1960': 417}, 'FEB': {'1958': 318, '1959': 342, '1960': 391}},
+is a nested dictionary. It has an outer dictionary that has keys with a three letter abreviation for a month and the values are inner dictionaries. Each 
+inner dictionary has keys that are years ('1958', '1959', and '1960') and values that are the number of passengers
+who flew that month and year in the thousands.
 
 .. parsonsprob:: csv_file_stocks_max_close_for_year_pp
     :numbered: left
