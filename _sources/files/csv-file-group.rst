@@ -412,8 +412,8 @@ Comma-Separated Values (CSV) Files with a Header Row
 
 Here is another sample example CSV file.  It contains the number of passengers (in thousands) for transatlantic air travel for each month for the years 1958 to 1960.  The first row is a header that explains the data: "Month", "1958", "1959", "1960".
 The second row starts with a three letter abbreation for the month followed by the number
-of passengers (in thousands) for 1958, then 1959, then 1960:  "JAN",  340,  360,  417.
-      The data is from https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html.
+of passengers (in thousands) for 1958, then 1959, and then 1960:  "JAN",  340,  360,  417.
+The data is from https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html.
 
 .. reveal:: airtravel.csv
    :showtitle: Show
@@ -437,7 +437,7 @@ of passengers (in thousands) for 1958, then 1959, then 1960:  "JAN",  340,  360,
 
 
 We can read the data from the file and store it in a nested dictionary. In this case the outer dictionary will use the month as the key and the inner dictionary will use the years as the keys.  It will use the data from the header row for the year keys.
-The nested dictionary will look like: {'JAN': {'1958': '340', '1959': '360', '1960': '417'}, 'FEB': {'1958': '318', '1959': '342', '1960': '391'} ....
+The nested dictionary will look like: {'JAN': {'1958': 340, '1959': 360, '1960': 417}, 'FEB': {'1958': 318, '1959': 342, '1960': 391} ....
 
 .. activecode:: csv_file_airtravel_get_toal_for_year_ac
     :datafile: airtravel.csv
@@ -576,7 +576,7 @@ The nested dictionary will look like: {'JAN': {'1958': '340', '1959': '360', '19
 
     myTests().main()
 
-Here is another sample example CSV file.  It contains the Oscar winners for Best Actress from 1928 to 2016.  
+Click on the "Show" button to see another CSV file.  It contains the Oscar winners for Best Actress from 1928 to 2016.  
 It has a header row to explain the data in each column: "Index", "Year", "Age", "Name", "Movie".
 The first row of data is: 1, 1928, 22, "Janet Gaynor", "Seventh Heaven, Street Angel and Sunrise: A Song of Two Humans".
 
