@@ -240,8 +240,10 @@ We can write Python code to read the data and find the date with the highest val
 
    Remember to remove the end of line character and convert the string values to integers or floating point numbers before comparing them or using them in calculations.
 
-What if you want to find several things from the data? You wouldn't want to read the data from the file in every function.  You could read all the data into a nested dictionary (a dictionary that contains another dictionary inside of it) and then pass the outer dictionary to every function. A nested dictionary is a dictionary that has dictionaries for the values.  In this case we can use the date as the key for the outer dictionary and use "open", "high", "low" and "close"
-as the keys for each inner dictionary.
+What if you want to find several things from the data? You wouldn't want to read the data from the file in every function.  
+You could read all the data into a nested dictionary (a dictionary that contains another dictionary inside of it) and then pass the outer dictionary to every function. 
+In this case we can use the date as the key for the outer dictionary and use "open", "high", "low" and "close"
+as the keys for each inner dictionary: {'3-Dec-01': {'open': 9848.93, 'high': 10220.78, 'low': 9651.870000000001, 'close': 10021.57}, ...
 
 .. fillintheblank:: csv_file_stocks_min_close_fitb
 
@@ -366,10 +368,9 @@ Nested dictionaries
 =====================
 
 A dictionary can contain or more more dictioaries inside of it.  We call this a nested 
-dictioanry.  For example, {'JAN': {'1958': 340, '1959': 360, '1960': 417}, 'FEB': {'1958': 318, '1959': 342, '1960': 391}},
-is a nested dictionary. It has an outer dictionary that has keys with a three letter abreviation for a month and the values are inner dictionaries. Each 
-inner dictionary has keys that are years ('1958', '1959', and '1960') and values that are the number of passengers
-who flew that month and year in the thousands.
+dictionary.  For example, {'3-Dec-01': {'open': 9848.93, 'high': 10220.78, 'low': 9651.870000000001, 'close': 10021.57}} 
+is a nested dictionary.  It has a date as a string as the key for the outer csv_file_stocks_read_into_dictionary
+and the inner dictionary has keys of 'high', 'low', and 'close' and a floating point value for each inner key.
 
 .. parsonsprob:: csv_file_stocks_max_close_for_year_pp
     :numbered: left
