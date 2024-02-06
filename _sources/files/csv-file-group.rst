@@ -30,7 +30,7 @@ Comma-Separated Values (CSV) Files
 One way that we exchange data is by storing it in comma-separated value (CSV) files.  These files have values separated by a symbol, which is often a comma. Each row in the file contains the same type of data.
 
 Look at the data in the file below by clicking on the "Show" button.  It has a date in day-month-year followed by the opening value, high, low, and closing value. The first 
-line is "3-Dec-01,9848.93,10220.78,9651.87,10021.57".
+line is 3-Dec-01,9848.93,10220.78,9651.87,10021.57.
 
 
 .. reveal:: stocks.txt
@@ -369,7 +369,7 @@ Nested dictionaries
 
 A dictionary can contain or more more dictioaries inside of it.  We call this a nested 
 dictionary.  For example, {'3-Dec-01': {'open': 9848.93, 'high': 10220.78, 'low': 9651.870000000001, 'close': 10021.57}} 
-is a nested dictionary.  It has a date as a string as the key for the outer csv_file_stocks_read_into_dictionary
+is a nested dictionary.  It has a date as a string as the key for the outer dictionary
 and the inner dictionary has keys of 'high', 'low', and 'close' and a floating point value for each inner key.
 
 .. parsonsprob:: csv_file_stocks_max_close_for_year_pp
@@ -411,9 +411,9 @@ and the inner dictionary has keys of 'high', 'low', and 'close' and a floating p
 Comma-Separated Values (CSV) Files with a Header Row
 =======================================================
 
-Here is another sample example CSV file.  It contains the number of passengers (in thousands) for transatlantic air travel for each month for the years 1958 to 1960.  The first row is a header that explains the data: "Month", "1958", "1959", "1960".
+Click on the "Show" button to see another sample example CSV file.  It contains the number of passengers (in thousands) for transatlantic air travel for each month for the years 1958 to 1960.  The first row is a header that explains the data: "Month", "1958", "1959", "1960".
 The second row starts with a three letter abbreation for the month followed by the number
-of passengers (in thousands) for 1958, then 1959, and then 1960:  "JAN",  340,  360,  417.
+of passengers (in thousands) for 1958, then 1959, and then 1960 such as:  "JAN",  340,  360,  417.
 The data is from https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html.
 
 .. reveal:: airtravel.csv
