@@ -242,7 +242,7 @@ We can write Python code to read the data and find the date with the highest val
 
 What if you want to find several things from the data? You wouldn't want to read the data from the file in every function.  
 You could read all the data into a nested dictionary (a dictionary that contains another dictionary inside of it) and then pass the outer dictionary to every function. 
-In this case we can use the date as the key for the outer dictionary and use "open", "high", "low" and "close"
+In this case we can use the date as a key for the outer dictionary and use "open", "high", "low" and "close"
 as the keys for each inner dictionary: {'3-Dec-01': {'open': 9848.93, 'high': 10220.78, 'low': 9651.870000000001, 'close': 10021.57}, ...
 
 .. fillintheblank:: csv_file_stocks_min_close_fitb
