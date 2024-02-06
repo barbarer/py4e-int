@@ -29,7 +29,8 @@ Comma-Separated Values (CSV) Files
 
 One way that we exchange data is by storing it in comma-separated value (CSV) files.  These files have values separated by a symbol, which is often a comma. Each row in the file contains the same type of data.
 
-Look at the data in the file below.  It has a date in day-month-year followed by the opening value, high, low, and closing value.
+Look at the data in the file below.  It has a date in day-month-year followed by the opening value, high, low, and closing value. The first 
+line is "3-Dec-01,9848.93,10220.78,9651.87,10021.57".
 
 
 .. reveal:: stocks.txt
@@ -397,7 +398,10 @@ as the keys for each inner dictionary.
 Comma-Separated Values (CSV) Files with a Header Row
 =======================================================
 
-Here is another sample example CSV file.  It contains the number of passengers (in thousands) for transatlantic air travel for each month for the years 1958 to 1960.  The first row is a header that explains the data. The data is from https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html.
+Here is another sample example CSV file.  It contains the number of passengers (in thousands) for transatlantic air travel for each month for the years 1958 to 1960.  The first row is a header that explains the data: "Month", "1958", "1959", "1960".
+The second row starts with a three letter abbreation for the month followed by the number
+of passengers (in thousands) for 1958, then 1959, then 1960:  "JAN",  340,  360,  417.
+      The data is from https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html.
 
 .. reveal:: airtravel.csv
    :showtitle: Show
@@ -421,6 +425,7 @@ Here is another sample example CSV file.  It contains the number of passengers (
 
 
 We can read the data from the file and store it in a nested dictionary. In this case the outer dictionary will use the month as the key and the inner dictionary will use the years as the keys.  It will use the data from the header row for the year keys.
+The nested dictionary will look like: {'JAN': {'1958': '340', '1959': '360', '1960': '417'}, 'FEB': {'1958': '318', '1959': '342', '1960': '391'} ....
 
 .. activecode:: csv_file_airtravel_get_toal_for_year_ac
     :datafile: airtravel.csv
@@ -559,7 +564,9 @@ We can read the data from the file and store it in a nested dictionary. In this 
 
     myTests().main()
 
-Here is another sample example CSV file.  It contains the Oscar winners for Best Actress from 1928 to 2016.  It has a header row to explain the data in each column.
+Here is another sample example CSV file.  It contains the Oscar winners for Best Actress from 1928 to 2016.  
+It has a header row to explain the data in each column: "Index", "Year", "Age", "Name", "Movie".
+The first row of data is: 1, 1928, 22, "Janet Gaynor", "Seventh Heaven, Street Angel and Sunrise: A Song of Two Humans".
 
 .. reveal:: oscar_age_actress.csv
    :showtitle: Show
@@ -660,6 +667,7 @@ Here is another sample example CSV file.  It contains the Oscar winners for Best
 
 
 We can read the data from the file and store it in a list of dictionaires where the keys in the dictionary are 'year', 'age', 'name', and 'movie'.
+The first dictionary should be: {'year': '1928', 'age': '22', 'name': 'Janet Gaynor', 'movie': 'Seventh Heaven Street Angel and Sunrise: A Song of Two Humans'}.
 
 .. activecode:: csv_file_oscar_actress_age_dictionary
     :datafile: oscar_age_actress.csv
@@ -733,7 +741,9 @@ We can read the data from the file and store it in a list of dictionaires where 
 
     myTests().main()
 
-Change the code above to read from the file for the best actor.  Are the results different?
+Change the code above to read from the file for the best actor.  This file has a header: "Index", "Year", "Age", "Name", "Movie".
+The first row of data is: 1, 1928, 44, "Emil Jannings", "The Last Command, The Way of All Flesh".  
+Are the results different?
 
 
 .. reveal:: oscar_age_actor.csv
