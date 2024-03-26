@@ -242,7 +242,7 @@ and email address.
     fh.close()
     person_list = json.loads(data)
 
-The file ``person.json`` below contains JSON data for a person in a dictionary including their first name,
+The file ``person2.json`` below contains JSON data for a person in a dictionary including their first name,
 last name, address, and phone numbers.
 
 .. reveal:: person2_data_rev
@@ -288,7 +288,7 @@ last name, address, and phone numbers.
 .. activecode:: web_email_person_write_v2
     :language: python3
     :nocodelens:
-    :datafile: person.json
+    :datafile: person2.json
 
     Finish the code below so that it prints the first name, last name, the
     state the person lives in, and their mobile phone number from the JSON loaded from person2.json.
