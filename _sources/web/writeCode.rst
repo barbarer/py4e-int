@@ -245,13 +245,13 @@ and email address.
 The file ``person.json`` below contains JSON data for a person in a dictionary including their first name,
 last name, address, and phone numbers.
 
-.. reveal:: person_data
+.. reveal:: person2_data_rev
     :showtitle: Show
     :hidetitle: Hide
 
     .. raw:: html
 
-       <pre id="person.json.">
+       <pre id="person2.json.">
        {
          "firstName": "John",
          "lastName": "Smith",
@@ -281,16 +281,16 @@ last name, address, and phone numbers.
          "spouse": null
        }
 
-.. datafile:: person.json
-    :fromfile: person.json
+.. datafile:: person2.json
+    :fromfile: person2.json
     :hide:
 
-.. activecode:: web_email_person_write
+.. activecode:: web_email_person_write_v2
     :language: python3
     :nocodelens:
     :datafile: person.json
 
     Finish the code below so that it prints the first name, last name, the
-    state the person lives in, and their mobile phone number.
+    state the person lives in, and their mobile phone number from the JSON loaded from person2.json.
     ~~~~
     import json
