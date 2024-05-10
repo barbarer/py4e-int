@@ -53,6 +53,11 @@ Table of Contents
    database/toctree.rst
    viz/toctree.rst
 
+.. toctree::
+   :hidden:
+   :maxdepth: 2
+   _hidden/student_survey.rst
+
 Acknowledgements
 ::::::::::::::::
 
