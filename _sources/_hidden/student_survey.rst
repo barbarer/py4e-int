@@ -72,7 +72,7 @@ If you agree to be in this study. Please answer the following questions.
    :option_5: 21
    :option_6: 22
    :option_7: 23
-   :option_10: Older than 23
+   :option_8: Older than 23
    :results: instructor
 
    What is your current age in years?
