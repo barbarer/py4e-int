@@ -69,12 +69,13 @@ If you agree to be in this study. Please answer the following questions.
    :option_2: 18
    :option_3: 19
    :option_4: 20
-   :option:5: 21
-   :option:6: 22
-   :option:7: 23
-   :option:8: 24
-   :option:9: 25
-   :option:10: Older than 25
+   :option_5: 21
+   :option_6: 22
+   :option_7: 23
+   :option_8: 24
+   :option_9: 25
+   :option_10: Older than 25
+   :results: instructor
 
    What is your current age in years?
 
@@ -84,6 +85,7 @@ If you agree to be in this study. Please answer the following questions.
     :option_3: transgender
     :option_4: non-binary/non-conforming
     :option_5: prefer not to say
+    :results: instructor
 
     What is your gender identity?
 
@@ -93,8 +95,9 @@ If you agree to be in this study. Please answer the following questions.
     :option_3: third year
     :option_4: fourth year
     :option_5: fixth year
-    :option_5: six year
-    :option_6: more than six years
+    :option_6: six year
+    :option_7: more than six years
+    :results: instructor
 
     What year are you in of your undergradaute program?
 
