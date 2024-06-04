@@ -59,7 +59,7 @@ Sciences has determined that this study is exempt from IRB oversight.
 Student Demographic Survey
 ----------------------------
 
-If you agree to be in this study. Please answer the following questions.
+If you agree to be in this study, please answer the following questions.
 
 ==============
 
@@ -132,7 +132,7 @@ If you agree to be in this study. Please answer the following questions.
 Student Self-Efficacy Survey
 ----------------------------
 
-If you agree to be in this study. Please answer the following questions. Answer with the amount you agree or disagree with the following questions.
+If you agree to be in this study, please answer the following questions. Answer with the amount you agree or disagree with the following questions.
 
 .. poll:: stud-self-efficacy-1
     :option_1: Strongly disagree
