@@ -64,7 +64,7 @@ If you agree to be in this study. Please answer the following questions.
 
 ==============
 
-.. poll:: stud-1-age-poll
+.. poll:: stud-1-age-poll-v2
    :option_1: Under 18
    :option_2: 18
    :option_3: 19
