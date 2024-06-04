@@ -56,9 +56,8 @@ Sciences has determined that this study is exempt from IRB oversight.
    Given the above information, do you agree to being in this study?
 
 
-
-Student Survey
-----------------
+Student Demographic Survey
+----------------------------
 
 If you agree to be in this study. Please answer the following questions.
 
@@ -73,7 +72,6 @@ If you agree to be in this study. Please answer the following questions.
    :option_6: 22
    :option_7: 23
    :option_8: Older than 23
-   :results: instructor
 
    What is your current age in years?
 
@@ -83,7 +81,6 @@ If you agree to be in this study. Please answer the following questions.
     :option_3: transgender
     :option_4: non-binary/non-conforming
     :option_5: prefer not to say
-    :results: instructor
 
     What is your gender identity?
 
@@ -95,7 +92,6 @@ If you agree to be in this study. Please answer the following questions.
     :option_5: fixth year
     :option_6: six year
     :option_7: more than six years
-    :results: instructor
 
     What year are you in of your undergradaute program?
 
@@ -121,7 +117,6 @@ If you agree to be in this study. Please answer the following questions.
     :option_3: Average
     :option_4: Above Average
     :option_5: Excellent
-    :results: instructor
 
     Rate your ability to read English.
 
@@ -131,11 +126,13 @@ If you agree to be in this study. Please answer the following questions.
     :option_3: Average
     :option_4: Above Average
     :option_5: Excellent
-    :results: instructor
 
     Rate your ability to understand spoken English.
 
-The following quesitons are about how you feel about computer programming and computer science.  Answer with the amount you agree or disagree with the following questions.
+Student Self-Efficacy Survey
+----------------------------
+
+If you agree to be in this study. Please answer the following questions. Answer with the amount you agree or disagree with the following questions.
 
 .. poll:: stud-self-efficacy-1
     :option_1: Strongly disagree
@@ -143,7 +140,6 @@ The following quesitons are about how you feel about computer programming and co
     :option_3: Neither agree nor disagree
     :option_4: Agree
     :option_5: Strongly agree
-    :results: instructor
 
     Generally I have felt secure about attempting computer programming problems.
 
@@ -153,7 +149,6 @@ The following quesitons are about how you feel about computer programming and co
     :option_3: Neither agree nor disagree
     :option_4: Agree
     :option_5: Strongly agree
-    :results: instructor
 
     I am sure I could do advanced work in computer science.
 
@@ -163,7 +158,6 @@ The following quesitons are about how you feel about computer programming and co
     :option_3: Neither agree nor disagree
     :option_4: Agree
     :option_5: Strongly agree
-    :results: instructor
 
     I am sure that I can learn programming.
 
@@ -173,7 +167,6 @@ The following quesitons are about how you feel about computer programming and co
     :option_3: Neither agree nor disagree
     :option_4: Agree
     :option_5: Strongly agree
-    :results: instructor
 
     I think I could handle more difficult programming problems.
 
@@ -183,7 +176,6 @@ The following quesitons are about how you feel about computer programming and co
     :option_3: Neither agree nor disagree
     :option_4: Agree
     :option_5: Strongly agree
-    :results: instructor
 
     I can get good grades in computer science.
 
@@ -193,6 +185,5 @@ The following quesitons are about how you feel about computer programming and co
     :option_3: Neither agree nor disagree
     :option_4: Agree
     :option_5: Strongly agree
-    :results: instructor
 
     I have a lot of self-confidence when it comes to programming.
