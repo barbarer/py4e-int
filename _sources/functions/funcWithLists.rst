@@ -106,6 +106,7 @@ A list holds items in order and you can get the value at an index, just like you
     What will the following code print?
 
     .. code-block:: python
+       :linenos:
 
         def list_get(lst):
             return lst[-2]
@@ -122,18 +123,18 @@ Built-in Functions That Work on Lists
 
 There are several built-in functions in Python that work on lists.
 
-.. activecode:: func_ll_ac_list_func
+.. activecode:: func_ll_ac_list_func_v2
     :caption: List methods
 
     Run this code to see what it prints.
     ~~~~
     # function definition
     def list_func(my_list):
-        print(max(my_list))
-        print(min(my_list))
-        print(len(my_list))
-        print(sum(my_list))
-        print(sum(my_list) / len(my_list))
+        print("max", max(my_list))
+        print("min", min(my_list))
+        print("len", len(my_list))
+        print("sum", sum(my_list))
+        print("avg", sum(my_list) / len(my_list))
 
     # function definition
     def main():

@@ -124,25 +124,6 @@ main()
         </var>
       </setup>
     </exercise>
-    <exercise label="funct_ll_first_index">
-      <statement>
-        <p>Q-5: What index is used to get the first item in a list? <var/>  </p>
-      </statement>
-      <setup>
-        <var>
-          <condition number="0">
-            <feedback>
-              <p>The first item in a list is at index 0.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Try again!</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
-    </exercise>
     <exercise label="funct_ll_last_index">
       <statement>
         <p>Q-6: What negative index is used to get the last item in a list? <var/>  </p>
@@ -234,11 +215,11 @@ print(list_get(l))
         <input>
 # function definition
 def list_func(my_list):
-    print(max(my_list))
-    print(min(my_list))
-    print(len(my_list))
-    print(sum(my_list))
-    print(sum(my_list) / len(my_list))
+    print("max", max(my_list))
+    print("min", min(my_list))
+    print("len", len(my_list))
+    print("sum", sum(my_list))
+    print("avg", sum(my_list) / len(my_list))
 
 # function definition
 def main():
@@ -273,32 +254,6 @@ class myTests(TestCaseGui):
 myTests().main()
         </input>
       </program>
-    </exercise>
-    <exercise label="func_ll_dnd_funct">
-      <statement>
-        <p>Drag each built-in function name to what it does.</p>
-      </statement>
-      <feedback>
-        <p>Read the chapter on functions and try again.</p>
-      </feedback>
-      <matches>
-        <match order="1">
-          <premise>len</premise>
-          <response>Returns the length of an object (the number of items in the list).</response>
-        </match>
-        <match order="2">
-          <premise>sum</premise>
-          <response>Returns the total of the values in the list.</response>
-        </match>
-        <match order="3">
-          <premise>min</premise>
-          <response>Returns the minimum value in the list.</response>
-        </match>
-        <match order="4">
-          <premise>max</premise>
-          <response>Returns the maximum value in the list.</response>
-        </match>
-      </matches>
     </exercise>
   </subsection>
   <subsection xml:id="functions_list-methods">
@@ -518,11 +473,11 @@ list_trans(l1)
         </match>
         <match order="4">
           <premise>sort()</premise>
-          <response>Sort the contents of the list in ascending order.</response>
+          <response>Sorts the contents of the list in ascending order.</response>
         </match>
         <match order="5">
           <premise>reverse()</premise>
-          <response>Reverse the contents of the list.</response>
+          <response>Reverses the contents of the list.</response>
         </match>
       </matches>
     </exercise>
@@ -577,11 +532,6 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
-    <exercise label="list_def_end_index_sa">
-      <statement>
-        <p>Q-20: In <c>[2:]</c> what is the end index?</p>
-      </statement>
     </exercise>
     <note>
       <p>The slice operator always returns a new object.  It doesn't change the current object (list or string).</p>
