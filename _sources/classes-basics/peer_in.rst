@@ -1,9 +1,8 @@
 Peer Instruction: Classes Multiple Choice Questions
 ---------------------------------------------------
 
-.. mchoice:: ctp-classes-18_Classes_11
+.. mchoice:: ctp-classes-18_Classes_11_v2
    :author: Cynthia Taylor
-   :practice: T
    :answer_a: open_window
    :answer_b: accelerate
    :answer_c: num_wheels
@@ -16,7 +15,7 @@ Peer Instruction: Classes Multiple Choice Questions
    :feedback_d: Incorrect! Method describes a specific action associated with a Class. "turn_right" is a possbile action.
    :feedback_e: Incorrect! Method describes a specific action associated with a Class.
 
-   Which of the following is not a possible method for a ``Car`` class?
+   Which of the following is not most likely not a method for a ``Car`` class?
 
 
 .. mchoice:: ctp-classes-18_Classes_15

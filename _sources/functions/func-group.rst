@@ -29,13 +29,13 @@ Print and Function Basics
 
 Look at the code below and predict what it will print.
 
-.. fillintheblank:: funct_fitb_print_test_first_line_v3
+.. fillintheblank:: funct_fitb_print_test_first_line_v4
 
     What is the first thing that will be printed when the code below runs?
 
     - :Hello!: The main function prints this before it calls the test function.
-      :Welcome: Execution starts in the main method, so this won't be the first thing that is printed.
-      :.*: Execution starts in the main method
+      :Welcome: Execution starts by calling the main function near the bottom of the example.  
+      :.*: Execution starts by calling the main function near the bottom of the example.
 
 .. fillintheblank:: funct_fitb_print_test_last_line_v3
 
@@ -81,7 +81,7 @@ Run the Python code below and then answer the following questions.
 
 
 
-.. fillintheblank:: funct_fitb_print_test_value_b
+.. fillintheblank:: funct_fitb_print_test_value_b_v2
 
     What is the value of ``b`` when function ``test`` starts executing?
 
@@ -104,12 +104,12 @@ Run the Python code below and then answer the following questions.
     - :print: The print function will display a value in Python.
       :.*: Look at the example Python code above.
 
-Delete the last line of the test function above and run the code again.
 
-.. fillintheblank:: funct_fitb_return_None
+
+.. fillintheblank:: funct_fitb_return_None_v2
     :practice: T
 
-    What value is returned from a function that doesn't have a return keyword?
+    Delete the last line of the test function above and run the code again.  What value is returned from a function that doesn't have a return keyword?
 
     - :None: A function without a return still returns the keyword None
       :.*: What is the last thing that is printed when you run the code above after deleting the return from the test function?

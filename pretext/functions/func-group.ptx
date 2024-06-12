@@ -47,7 +47,7 @@
   <subsection xml:id="functions_print-and-function-basics">
     <title>Print and Function Basics</title>
     <p>Look at the code below and predict what it will print.</p>
-    <exercise label="funct_fitb_print_test_first_line_v3">
+    <exercise label="funct_fitb_print_test_first_line_v4">
       <statement>
         <p>Q-1: What is the first thing that will be printed when the code below runs? <var/>  </p>
       </statement>
@@ -55,17 +55,17 @@
         <var>
           <condition string="Hello!">
             <feedback>
-              <p>The main function prints this before it calls the test function.</p>
+              <p>The main function prints this before it calls the test function. The main function is called at the end of the example code.</p>
             </feedback>
           </condition>
           <condition string="Welcome">
             <feedback>
-              <p>Execution starts in the main method, so this won't be the first thing that is printed.</p>
+              <p>Execution starts by calling the main function at the bottom of the example.</p>
             </feedback>
           </condition>
           <condition string=".*">
             <feedback>
-              <p>Execution starts in the main method</p>
+              <p>Execution starts by calling the main function at the bottom of the example. </p>
             </feedback>
           </condition>
         </var>
@@ -200,10 +200,9 @@ main()
         </var>
       </setup>
     </exercise>
-    <p>Delete the last line of the test function above and run the code again.</p>
-    <exercise label="funct_fitb_return_None">
+    <exercise label="funct_fitb_return_None_v2">
       <statement>
-        <p>Q-8: What value is returned from a function that doesn't have a return keyword? <var/>  </p>
+        <p>Q-8: Delete the last line of the test function above and run the code again. What value is returned from a function that doesn't have a return keyword? <var/>  </p>
       </statement>
       <setup>
         <var>
