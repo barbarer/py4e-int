@@ -260,8 +260,8 @@ Strings have methods (functions) that operate on a string object using **dot-not
     :feedback: Read the chapter on strings and try again
     :match_1: replace|||Returns a new string with all instances of the first specified character replaced with the second specified character.
     :match_2: lower|||Returns a new string with all of the characters in lowercase.
-    :match_3: upper|||Returns a new string with all of the characters in uppercase.
-    :match_4: capitalize|||Returns a new string with the first letter capitalized (uppercase).
+    :match_3: split|||Returns a list of strings created by splitting the original string at the specified character.
+    :match_4: capitalize|||Returns a new string with just the first letter capitalized (uppercase).
 
     Drag each string method to the description of what it does.
 

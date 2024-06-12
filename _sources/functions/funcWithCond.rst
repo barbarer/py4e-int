@@ -147,7 +147,7 @@ Basic Conditionals and Tests
    Finish the function ``last_half(str)`` which
    returns the last half of the characters from the passed string ``str``.
    If ``str`` has less than 2 characters then return the empty string ``""``.
-   For example, ``last_half("a")`` returns ``""``, ``last_half("coal")`` returns ``"al"``, and ``last_half("bye") returns ``ye``.
+   For example, ``last_half("a")`` returns ``""``, ``last_half("coal")`` returns ``"al"``, and ``last_half("bye")`` returns ``ye``.
    ~~~~
    def last_half(str):
 
@@ -181,10 +181,10 @@ Basic Conditionals and Tests
     :caption: Letter grade from score
 
     Run this code to see what it prints.  The modify it to work correctly.  Next,
-    add code to the main function to test each possible letter grade.  It
-    should return A if the score is
-    greater than or equal 90, B if greater than or equal 80, C if greater
-    than or equal 70, D if greater than or equal 60, and otherwise E.
+    add code to the ``main`` function to test each possible letter grade.  It
+    should return ``A`` if the score is
+    greater than or equal 90, ``B`` if greater than or equal 80, ``C`` if greater
+    than or equal 70, ``D`` if greater than or equal 60, and otherwise ``E``.
     ~~~~
     # function definition
     def get_grade(score):

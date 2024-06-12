@@ -235,12 +235,12 @@ main()
         </block>
       </blocks>
     </exercise>
-    <exercise label="funct_pogil_get_last_half">
+    <exercise label="funct_pogil_get_last_half_v2">
       <statement>
         <p>Finish the function <c>last_half(str)</c> which
                 returns the last half of the characters from the passed string <c>str</c>.
                 If <c>str</c> has less than 2 characters then return the empty string <c>""</c>.
-                For example, <c>last_half("a")</c> returns <c>""</c>, <c>last_half("coal")</c> returns <c>"al"</c>, and <c>last_half("bye") returns ``ye</c>.</p>
+                For example, <c>last_half("a")</c> returns <c>""</c>, <c>last_half("coal")</c> returns <c>"al"</c>, and <c>last_half("bye")</c> returns <c>ye</c>.</p>
       </statement>
       <program xml:id="funct_pogil_get_last_half_editor" interactive="activecode" language="python">
         <input>
@@ -288,10 +288,10 @@ myTests().main()
     <exercise label="func_ac_fix_grade_code">
       <statement>
         <p>Run this code to see what it prints.  The modify it to work correctly.  Next,
-                add code to the main function to test each possible letter grade.  It
-                should return A if the score is
-                greater than or equal 90, B if greater than or equal 80, C if greater
-                than or equal 70, D if greater than or equal 60, and otherwise E.</p>
+                add code to the <c>main</c> function to test each possible letter grade.  It
+                should return <c>A</c> if the score is
+                greater than or equal 90, <c>B</c> if greater than or equal 80, <c>C</c> if greater
+                than or equal 70, <c>D</c> if greater than or equal 60, and otherwise <c>E</c>.</p>
       </statement>
       <program xml:id="func_ac_fix_grade_code_editor" interactive="activecode" language="python">
         <input>

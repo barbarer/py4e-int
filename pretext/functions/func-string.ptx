@@ -480,7 +480,7 @@ main()
     <note>
       <p>Strings are immutable, which means that they do not change.  String methods that appear to change a string return a new string.</p>
     </note>
-    <exercise label="funct_string_methods_dnd_v2">
+    <exercise label="funct_string_methods_dnd_v3">
       <statement>
         <p>Drag each string method to the description of what it does.</p>
       </statement>
@@ -497,16 +497,12 @@ main()
           <response>Returns a new string with all of the characters in lowercase.</response>
         </match>
         <match order="3">
-          <premise>upper</premise>
-          <response>Returns a new string with all of the characters in uppercase.</response>
-        </match>
-        <match order="4">
           <premise>split</premise>
           <response>Returns a list of strings created by splitting the original string at the specified character.</response>
         </match>
-        <match order="5">
+        <match order="4">
           <premise>capitalize</premise>
-          <response>Returns a new string with the first letter capitalized (uppercase).</response>
+          <response>Returns a new string with just the first letter capitalized (uppercase).</response>
         </match>
       </matches>
     </exercise>
