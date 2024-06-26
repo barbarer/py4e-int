@@ -21,7 +21,7 @@ For learning purposes, we are using the shortened version of this file
 Click on the button to show the first lines from this file.
 
 
-.. reveal:: mbox-short.txt
+.. reveal:: mbox-short
    :showtitle: Show
    :hidetitle: Hide
 
@@ -74,6 +74,10 @@ Click on the button to show the first lines from this file.
       X-DSPAM-Confidence: 0.8475
       X-DSPAM-Probability: 0.0000
 
+
+.. datafile:: mbox-short.txt
+    :fromfile: mbox-short.txt
+    :hide:
 
 .. activecode:: fileOpen
     :caption: Opening a file

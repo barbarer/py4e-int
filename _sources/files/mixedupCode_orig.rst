@@ -167,6 +167,10 @@ Mixed-up Code Questions
     =====
         return(num)
 
+.. datafile:: dogs.txt
+    :fromfile: dogs.txt
+    :hide:
+
 .. activecode:: file_count_lines_starting_with_ac
     :practice: T
     :autograde: unittest

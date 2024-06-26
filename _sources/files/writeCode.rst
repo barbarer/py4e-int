@@ -12,7 +12,7 @@ and hide to put it away.
 
     .. raw:: html
 
-       <pre id="uspoll.txt">
+       <pre id="uspoll">
        Aberdeen, SD :13 :8
        Adrian, MI :15 :9
        Akron, OH :18 :11
@@ -393,6 +393,10 @@ and hide to put it away.
        Yuma, AZ :14 :9
        </pre>
 
+.. datafile:: uspoll.txt
+    :fromfile: uspoll.txt
+    :hide:
+
 #.
     .. tabbed:: file_ex_pollError
 
@@ -581,7 +585,7 @@ and hide to put it away.
 
 The following file contains a set of emotions that will be used in the next question.
 
-.. reveal:: emotion_words.txt
+.. reveal:: emotion_words
    :showtitle: Show
    :hidetitle: Hide
 
@@ -595,6 +599,10 @@ The following file contains a set of emotions that will be used in the next ques
       Scared afraid fearful panicked terrified petrified startled
       Nervous anxious jittery jumpy tense uneasy apprehensive
 
+
+.. datafile:: emotion_words.txt
+    :fromfile: emotion_words.txt
+    :hide:
 #.
     .. activecode:: file_ex_emotionq
        :datafile: emotion_words.txt
@@ -627,7 +635,7 @@ is the first three letters of the month.
 
    .. raw:: html
 
-      <pre id="stocks.txt">
+      <pre id="stocks">
       3-Dec-01,9848.93,10220.78,9651.87,10021.57
       1-Nov-01,9087.45,10054.58,8987.61,9851.56
       1-Oct-01,8845.97,9626.54,8659.9,9075.14
@@ -785,6 +793,10 @@ is the first three letters of the month.
       1-Feb-89,2342.32,2369.29,2232.14,2258.39
       3-Jan-89,2168.39,2350.18,2127.14,2342.32
       </pre>
+
+.. datafile:: stocks.txt
+    :fromfile: stocks.txt
+    :hide:
 
 #.
     .. tabbed:: file_ex_biggestLoss

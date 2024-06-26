@@ -15,6 +15,10 @@ started with the prefix "From:", we could use the string method
 *startswith* to select only those lines with the desired
 prefix:
 
+.. datafile:: mbox-short.txt
+    :fromfile: mbox-short.txt
+    :hide:
+
 .. activecode:: fileFrom
     :caption: Printing lines starting with "From:"
     :datafile: mbox-short.txt

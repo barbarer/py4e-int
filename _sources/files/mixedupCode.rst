@@ -62,7 +62,7 @@ you can hide it again by clicking on the Hide button.
 
     .. raw:: html
 
-       <pre id="uspoll.txt">
+       <pre id="uspoll">
        Aberdeen, SD :13 :8
        Adrian, MI :15 :9
        Akron, OH :18 :11

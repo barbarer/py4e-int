@@ -9,6 +9,10 @@ While the *file handle* object does not contain the actual data in the
 file, it is quite easy to construct a ``for`` loop to read
 through and count each of the lines in a file:
 
+.. datafile:: mbox-short.txt
+    :fromfile: mbox-short.txt
+    :hide:
+
 .. activecode:: fileLines
     :caption: Opening and counting the lines in a file
     :datafile: mbox-short.txt
