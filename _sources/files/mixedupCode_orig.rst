@@ -41,7 +41,7 @@ Mixed-up Code Questions
             fin = open('temp.txt')
             line = fin.readline()
             self.assertEqual(line.rstrip(), m, "Testing write_line with rstrip")
-            self.assertEqual(line, m + "\n", "Testing that write_line writes the end of line character"
+            self.assertEqual(line, m + "\n", "Testing that write_line writes the end of line character")
     myTests().main()
 
 
