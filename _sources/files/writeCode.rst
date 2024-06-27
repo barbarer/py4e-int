@@ -6,6 +6,10 @@ micrometers in diameter, and PM2.5 is the  annual mean amounts of particulate po
 that’s 2.5 micrometers or less in diameter. Click show to see all of the data
 and hide to put it away.
 
+.. datafile:: uspoll.txt
+    :fromfile: uspoll.txt
+    :hide:
+
 .. reveal:: pol_Data_8_10
     :showtitle: Show
     :hidetitle: Hide
@@ -393,10 +397,6 @@ and hide to put it away.
        Yuma, AZ :14 :9
        </pre>
 
-.. datafile:: uspoll.txt
-    :fromfile: uspoll.txt
-    :hide:
-
 #.
     .. tabbed:: file_ex_pollError
 
@@ -602,7 +602,7 @@ The following file contains a set of emotions that will be used in the next ques
 
 .. datafile:: emotion_words.txt
     :fromfile: emotion_words.txt
-    
+
 #.
     .. activecode:: file_ex_emotionq
        :datafile: emotion_words.txt
