@@ -585,6 +585,10 @@ and hide to put it away.
 
 The following file contains a set of emotions that will be used in the next question.
 
+.. datafile:: emotion_words.txt
+    :fromfile: emotion_words.txt
+    :hide
+
 .. reveal:: emotion_words
    :showtitle: Show
    :hidetitle: Hide
@@ -598,10 +602,6 @@ The following file contains a set of emotions that will be used in the next ques
       Excited eager thrilled delighted
       Scared afraid fearful panicked terrified petrified startled
       Nervous anxious jittery jumpy tense uneasy apprehensive
-
-
-.. datafile:: emotion_words.txt
-    :fromfile: emotion_words.txt
 
 #.
     .. activecode:: file_ex_emotionq

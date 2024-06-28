@@ -202,9 +202,29 @@ alex.forward(75)      # ask alex to move forward by 75 units
   </exercise>
 
     <exercise label="var-draw-letter-fitb">
-    <statement>
-      <p>What letter (like A, B, C, d, etc.) will the program below draw in block style when you click the Run button? <var/>  </p>
-      <program xml:id="prog-draw-letter-1" language="python" interactive="activecode">
+      <statement>
+        <p>What letter (like A, B, C, d, etc.) will the program below draw in block style when you click the Run button? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="c|C">
+            <feedback>
+              <p>That's correct!</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Try to follow the directions as if you are the turtle.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="Turtle_C">
+      <statement>
+        <p>Click the Run button to see what this code does. The drawing will happen below the code.</<p>
+        </statement>
+      <program xml:id="Turtle_C-editor" language="python" interactive="activecode">
         <input>from turtle import *    # use the turtle library
 space = Screen()        # create a Screen object named space
 alex = Turtle()         # create a Turtle object named alex
@@ -214,26 +234,16 @@ alex.left(90)           # turn left 90 degrees
 alex.forward(100)       # more forward by 100 units
 alex.left(90)           # turn left 90 degrees
 alex.forward(75)        # move forward by 75 units</input></program>
-    </statement>
-    <setup>
-      <var>
-        <condition string="c|C">
-          <feedback>
-            <p>That's correct!</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try to follow the directions as if you are the turtle.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
-  </exercise>
+</input>
+</program>
+</exercise>
 
-  <p>The following example has four errors. Can you fix the errors so that the code runs correctly to print a capital L?</p>
-  
-  <program xml:id="turtle_error_1" interactive="activecode" language="python">
+
+<exercise label="Turtle_Error1)">
+  <statement>
+    <p>The following example has four errors. Can you fix the errors so that the code runs correctly to print a capital L?</p>
+  </statement>
+  <program xml:id="turtle_error_1_editor" interactive="activecode" language="python">
 <input>from turtle import *    # use the turtle library
 space = screen()        # create a Screen object named space
 alisha = Turtle         # create a Turtle object named alisha
@@ -242,9 +252,13 @@ alisha.forward          # move forward by 150 units
 alisha.left(90)         # turn to face east
 alisha.Forward(75)      # move forward by 75 units</input>
 </program>
+</exercise>
 
+<exercise label="Turtle_Error2)">
+  <statement>
 <p>The following example has 4 errors.  Can you fix the errors so that the code runs correctly to print a capital C?</p>
-<program xml:id="turtle_error_2" interactive="activecode" language="python">
+  </statement>
+<program xml:id="turtle_error_2_editor" interactive="activecode" language="python">
   <input>from turtle Import *    # use the turtle library
 space = Screen()        # create a Screen object named space
 alex = Turtle           # create a Turtle object named alex
