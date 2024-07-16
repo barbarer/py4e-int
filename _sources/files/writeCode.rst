@@ -587,7 +587,7 @@ The following file contains a set of emotions that will be used in the next ques
 
 .. datafile:: emotion_words.txt
     :fromfile: emotion_words.txt
-    :hide
+    :hide:
 
 .. reveal:: emotion_words
    :showtitle: Show
