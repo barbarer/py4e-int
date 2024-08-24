@@ -5,6 +5,11 @@ In this homework you will be given some input and output and will determine how 
 into the output.  Then you can either generate code using generative AI like Chat GPT or write
 the code yourself. 
 
+.. note::
+
+   If you work in a group of two to three people, only one member of the group should fill in the answers on this page.  You will be able to share your answers with the other group members at the bottom of the page.
+
+
 Function 1
 ===========
 
@@ -324,3 +329,8 @@ To check that you understand what the function is doing please enter the expecte
             self.assertEqual(function5("Trust Me"), "Trme", "function4('Trust Me')")
      
     myTests().main()
+
+If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.
+
+.. groupsub:: funcGAI-hw1-group
+   :limit: 3
