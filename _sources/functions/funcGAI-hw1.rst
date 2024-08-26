@@ -19,7 +19,7 @@ Function1 takes a list of numbers and outputs a number as shown below:
 
         Input                             Output
         function1([10, 80, 100])           90.0
-        function1([70, 50 90])             80.0
+        function1([70, 50, 90])            80.0
         function1([2, 4, 6, 8])            6.0
 
 
@@ -228,7 +228,7 @@ Function 4 takes a list of numbers and outputs a list of numbers as shown below:
 
         Input                                  Output
         function4([1, 3, -2, 5])            [1, 3, 0, 5]
-        function4([-8, 2, 4, -1])           [-8, 2, 4, 0]
+        function4([-8, 2, 4, -1])           [0, 2, 4, 0]
         function4([0, 3, 5])                [0, 3, 5]
 
 
@@ -261,7 +261,7 @@ To check that you understand what the function is doing please enter the expecte
 
         Input                             Output
         function4([1, 3, -2, 5])            [1, 3, 0, 5]
-        function4([-8, 2, 4, -1])           [-8, 2, 4, 0]
+        function4([-8, 2, 4, -1])           [0, 2, 4, 0]
         function4([0, 3, 5])                [0, 3, 5]
 
     ~~~~
