@@ -332,7 +332,7 @@ Basic Conditionals and Tests
 .. activecode:: fsc_ac_fix_grade_code
     :caption: Letter grade from score
 
-    Run this code to see what it prints.  The modify it to work correctly.  Next,
+    Run this code to see what it prints.  Then modify it to work correctly.  Next,
     add code to the main function to test each possible letter grade.  It
     should return A if the score is
     greater than or equal 90, B if greater than or equal 80, C if greater
