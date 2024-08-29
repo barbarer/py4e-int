@@ -47,4 +47,5 @@ Functions
    func_Str_Cond.rst
    funcWithListsAndLoops.rst
    funcGAI-hw1.rst
+   funcGAI-Diss2.rst
 
