@@ -5,8 +5,6 @@ Turtle Posttest Problem
 
 * Again, you can stop working on a problem after you worked on it for about two minutes without solving it. 
 
-* As a reminder, as no demographic data will be collected, if you do not meet the eligibility criteria or if you choose to withdraw your consent at any time and wish to have your responses deleted, please email xyhou@umich.edu with only a subject line **"Turtle - Delete my responses"**. You do not need to tell the reason for your withdrawal.
-
 
 .. timed:: timed_posttest
     :timelimit: 15
@@ -186,7 +184,9 @@ Turtle Posttest Problem
 
         ``t.goto(100, 100)``
 
+.. shortanswer:: SE_opinion
 
+    What did you think of the practice problems in this study? Please provide any feedback or suggestions for improvement.
 
 🙌 Thank You!
 ============================

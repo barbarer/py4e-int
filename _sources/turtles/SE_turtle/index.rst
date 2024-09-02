@@ -20,12 +20,10 @@ The four parts are:
 
 Only your anonymous log fles from this session will be used for this study. No identifiable information will be collected. Participating in this study is completely voluntary. 
 
-🛎️ As no demographic data will be collected, if you do not meet the eligibility criteria (at least 18) or if you choose to withdraw your consent at any time and wish to have your responses deleted
+If you do not meet the eligibility criteria or if you choose to withdraw your consent and wish to have your **anonymous responses** deleted, please click to withdraw from the study.
 
-🛎️ Please email xyhou@umich.edu with only a subject line **"Turtle - Delete my responses"**. You do not need to tell the reason for your withdrawal.
-
-.. .. poll:: withdrawal
-..    :option_1: I do not want to participate in this study.
+.. poll:: withdrawal
+   :option_1: I do not want to participate in this study.
 
 If you have questions at any time about the study or the procedures, you may contact the researcher at email xyhou@umich.edu.
 
