@@ -57,7 +57,7 @@ Turtle Posttest Problem
 
         <b>One correct option MCQ:</b> What is the output of the following code snippet?
         <br>
-        .. image:: https://i.postimg.cc/yNz84Rvh/SE-posttest-mcq-7.png
+        .. image:: https://i.postimg.cc/7YSbRQKs/SE-posttest-mcq-5.png
 
 
     .. mchoice:: SE_posttest_mcq_6
