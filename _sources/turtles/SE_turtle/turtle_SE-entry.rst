@@ -116,7 +116,7 @@ What to do next
 ^^^^^^^^^^^^^^^^
 .. raw:: html
 
-    <p>Click on the following link to learn how to solve different types of problems in this ebook : <b><a id="tutle_SE-intro"><font size="+2">Introduction to Problem Types</font></a></b></p>
+    <p>Click on the following link to learn how to solve different types of problems in this ebook : <b><a id="tutle_SE-intro"><font size="+1">Introduction to Problem Types</font></a></b></p>
 
 .. raw:: html
 

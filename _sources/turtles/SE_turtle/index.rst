@@ -34,7 +34,7 @@ What to do next
 ^^^^^^^^^^^^^^^^^^^^^^
 .. raw:: html
 
-    <p>Click on the following link to take the pre-survey: <b><a id="pps-entry"> <font size="+2">Know more about your current state</font></a></b></p>
+    <p>Click on the following link to take the pre-survey: <b><a id="pps-entry"> <font size="+1">Know more about your current state</font></a></b></p>
 
 .. raw:: html
 
