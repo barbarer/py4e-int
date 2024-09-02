@@ -7,7 +7,6 @@ Turtle Posttest Problem
 
 * As a reminder, as no demographic data will be collected, if you do not meet the eligibility criteria or if you choose to withdraw your consent at any time and wish to have your responses deleted, please email xyhou@umich.edu with only a subject line **"Turtle - Delete my responses"**. You do not need to tell the reason for your withdrawal.
 
-* For the questions below, please put the option you think is the best answer.
 
 .. timed:: timed_posttest
     :timelimit: 15
