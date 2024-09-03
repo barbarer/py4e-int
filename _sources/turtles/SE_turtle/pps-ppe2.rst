@@ -1,8 +1,6 @@
-Complete the following sections to get an explanation for the completed puzzle
-==============================================================================
 
 .. clickablearea:: SE_tutles_2
-    :question: Complete the following sections to get an explanation for the completed puzzle:
+    :question: Complete this section to get an explanation for the previous puzzle
     :prim_comp: ASSIGNMENT
     :iscode:
     :feedback: (1) Think about how to import all functions from the Turtle graphics library. (3) Think about the type of alex in the function call. Think about the type of Turtle() from the turtle module. (5) Think about the loop range by start and stop values. (6) Think about the purpose of the left() function.

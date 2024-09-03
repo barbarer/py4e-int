@@ -1,8 +1,6 @@
-Complete the following sections to get an explanation for the completed puzzle
-==============================================================================
 
 .. clickablearea:: SE_tutles_3
-    :question: Complete the following sections to get an explanation for the completed puzzle:
+    :question: Complete this section to get an explanation for the previous puzzle
     :prim_comp: ASSIGNMENT
     :iscode:
     :feedback:  (3) Think about the type of alex in the function call. Think about the type of Turtle() from the turtle module. (5) Think about the loop range by start and stop values. (6) Think about the index used to access colors in the list. (8) Think about the angle used to turn the turtle for the next side of the triangle. Think about which direction it turns.

@@ -7,7 +7,7 @@ Practice Problems
     :adaptive:
 
     Create a function called ``create_rectangle`` that takes in ``turtle`` as a parameter and creates a rectangle of width 40 and height 90.
-    After creating the function, create a Screen object and a Turtle object and call ``create_rectangle``.
+    Create a Screen object and a Turtle object. After creating the function, call ``create_rectangle``.
     -----
     from turtle import *
     space = Screen()

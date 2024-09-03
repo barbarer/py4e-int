@@ -1,11 +1,9 @@
-Complete the following sections to get an explanation for the completed puzzle
-==============================================================================
 
 .. clickablearea:: SE_tutles_4
-    :question: Complete the following sections to get an explanation for the completed puzzle:
+    :question: Complete this section to get an explanation for the previous puzzle
     :prim_comp: ASSIGNMENT
     :iscode:
-    :feedback:  (2) Think about the parameters in a function call. (3) Think about what .penup() does. (6) Think about what .pendown() does. (8) Think about the correct syntax to begin filling range by start and stop values.  (9) Think about the loop range by start and stop values. (11) Think about purpose for turning left. (12) Think about the correct syntax to end filling the shape.
+    :feedback:  (5) Think about the type of loop and how it works. (6) Think about the meaning of .forward(). (9) Think about the last action of each iteration. (12) Think about the correct sequence to call the function to draw a rectangle.
 
 
     Here is a completed function:
