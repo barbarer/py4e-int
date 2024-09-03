@@ -1,8 +1,6 @@
-Complete the following sections to get an explanation for the completed puzzle
-==============================================================================
 
 .. clickablearea:: SE_tutles_1
-    :question: Complete the following sections to get an explanation for the completed puzzle:
+    :question: Complete this section to get an explanation for the previous puzzle
     :prim_comp: ASSIGNMENT
     :iscode:
     :feedback: (1) Think about how to import all functions from the Turtle graphics library. (5) Think about what .penup() does. (6) Think about the meaning of - in the context of moving the turtle. (7) Think about the purpose of .pendown() function. (8) Think about the purpose of the .forward() function. (9) Think about the output of the / operation in a division between two numbers. (10) Think about the purpose of the .right() function.

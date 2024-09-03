@@ -1,8 +1,6 @@
-Complete the following sections to get an explanation for the completed puzzle
-==============================================================================
 
 .. clickablearea:: SE_tutles_2
-    :question: Complete the following sections to get an explanation for the completed puzzle:
+    :question: Complete this section to get an explanation for the previous puzzle
     :prim_comp: ASSIGNMENT
     :iscode:
     :feedback: (1) Think about how to import all functions from the Turtle graphics library. (3) Think about the type of alex in the function call. Think about the type of Turtle() from the turtle module. (5) Think about the loop range by start and stop values. (6) Think about the purpose of the left() function.
@@ -15,7 +13,7 @@ Complete the following sections to get an explanation for the completed puzzle
     (2) <b>space = Screen() -- Screen Initialization</b>
         Initializes a Screen object named space. This object creates a window where the turtle graphics will be displayed.
     (3) <b>alex = Turtle() -- Turtle Initialization</b>
-        Initializes a Turtle object named alex using Turtle(). alex is a <b style="background-color:#d9d9d9">[:click-correct:variable:endclick: / :click-incorrect:method:endclick:]</b> used to store an instance of the Turtle <b style="background-color:#d9d9d9">[:click-correct:class:endclick: / :click-incorrect:variable:endclick:]</b>.
+        Initializes a Turtle object named alex using Turtle(). alex is a <b style="background-color:#d9d9d9">[:click-correct:variable:endclick: / :click-incorrect:method:endclick:]</b> used to name an object of the Turtle <b style="background-color:#d9d9d9">[:click-correct:class:endclick: / :click-incorrect:variable:endclick:]</b>.
         This allows you to control and use that specific turtle object to perform various drawing operations.
     (4) <b>def create_hexagon(turtle): -- Hexagon Function Definition</b>
         Defines a function called create_hexagon that takes a Turtle object (turtle) as an argument.

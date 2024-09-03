@@ -1,6 +1,3 @@
-Know more about your current state
-==================================
-
 Your self-efficacy in Computer Science
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -88,7 +85,7 @@ For the next four questions, please select the answer that best matches your fam
     :option_5: I am confident in my ability to use this concept in complex programs
     :results: instructor
 
-    Creat a turtle space like <code>Screen()</code>
+    Creates a turtle drawing area like <code>Screen()</code>
 
 .. poll:: turtle-3
     :option_1: I am unfamiliar with this concept
@@ -98,7 +95,7 @@ For the next four questions, please select the answer that best matches your fam
     :option_5: I am confident in my ability to use this concept in complex programs
     :results: instructor
 
-    Turn the direction the turtle like <code>left(angle)</code>
+    Turns the turtle like <code>left(angle)</code>
 
 .. poll:: turtle-4
     :option_1: I am unfamiliar with this concept
@@ -108,7 +105,7 @@ For the next four questions, please select the answer that best matches your fam
     :option_5: I am confident in my ability to use this concept in complex programs
     :results: instructor
 
-    Set turtle's pen color like <code>color(color)</code>
+    Sets the turtle's pen color like <code>color(color)</code>
 
 
 

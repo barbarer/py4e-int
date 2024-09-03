@@ -16,7 +16,7 @@ Here is an explanation for the completed puzzle
         Initializes a Screen() object named space. This object creates a window where the turtle graphics will be displayed.
     (3) <b>alex = Turtle() -- Turtle Initialization</b>
         Initializes a Turtle object named alex using Turtle(). 
-        alex is a variable used to store an instance of the Turtle class.
+        alex is a variable used to name an object of the Turtle class.
         This allows you to control and use that specific turtle object to perform various drawing operations.
     (4) <b>def draw_triangle(turtle, length, three_colors_list): -- Function Definition</b>
         Defines a function called draw_triangle that takes in a turtle object, the length of the triangle sides, and a list of three colors.

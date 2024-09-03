@@ -39,49 +39,55 @@ Practice Problems
 .. raw:: html
 
 
-    <script type="text/javascript">
-
-    // Initialize a counter variable at a higher scope
-    let clickCount = 0;
-
-    // Function to update the click count
-    function updateClickCount() {
-        clickCount++;
-        // Here you would usually update the UI, but it's not needed now
-        console.log(`Button clicked ${clickCount} times`);
-    }
-
-    // Function to check for presence of button and handle the link click
-    function handleLinkClick(event) {
-        // Check if an element with the class 'alert alert-info' contains the text 'Perfect!'
-        const alertElement = document.querySelector('.alert');
-            
-        if ((alertElement && alertElement.textContent.includes('Perfect!')) || clickCount >= 8) {
-            // Allow the link to be followed
-            return true;
-        } else {
-            // Prevent the default link action
-            event.preventDefault();
-            
-            // Display a popup window
-            alert('Please try again to complete the mixed-up puzzle first.' + "\n" + 'Remember, you can click the "Help me" button to remove an unnecessary block or combine two blocks.' + "\n" + 'You can skip the puzzle after 8 attempts.');
-            return false;
-        }
-    }
-
-    // Attach the click event handler to the link
-    document.getElementById('pp-e1').addEventListener('click', handleLinkClick);
+       <script type="text/javascript">
 
     document.addEventListener('DOMContentLoaded', () => {
-        // Get references to the button
-        const checkButton = document.getElementById('parsons-1-check');
-        
-        // Check if the button was found
-        if (checkButton) {
-            // Add an event listener to the button
-            checkButton.addEventListener('click', updateClickCount);
+        let isC8 = false;
+
+        // Override the console.log function to capture the log event
+        const originalConsoleLog = console.log;
+        console.log = function (message) {
+            // Call the original console.log function to ensure the message still appears in the console
+            originalConsoleLog.apply(console, arguments);
+
+            // Check if the message contains the specific pattern
+            if (message.includes('Save logging event')) {
+                // Extract the JSON part from the log message
+                const jsonString = message.substring(message.indexOf('{'));
+                checkActValue(jsonString);
+            }
+        };
+
+        function checkActValue(loggingEvent) {
+            try {
+                const eventObj = JSON.parse(loggingEvent);
+                const actValue = eventObj.act;
+                const lastPart = actValue.split('|').pop();
+                if (lastPart === "c8") {
+                    isC8 = true;
+                }
+                console.log(`Last part of act: ${lastPart}, isC8: ${isC8}`);
+            } catch (error) {
+                console.error('Error parsing the logging event:', error);
+            }
+        }
+
+        function handleLinkClick(event) {
+            const alertElement = document.querySelector('.alert');
+            if ((alertElement && alertElement.textContent.includes('Perfect!')) || isC8) {
+                return true;
+            } else {
+                event.preventDefault();
+                alert('Please try again to complete the mixed-up puzzle first.' + "\n" + 'Remember, you can click the "Help me" button to remove an unnecessary block or combine two blocks.' + "\n" + 'You can skip the puzzle after 8 attempts.');
+                return false;
+            }
+        }
+
+        const linkElement = document.getElementById('pp-2');
+        if (linkElement) {
+            linkElement.addEventListener('click', handleLinkClick);
         } else {
-            console.error('Button with ID "parsons-1-check" not found.');
+            console.error('Element with ID "pp-2" not found.');
         }
     });
 
