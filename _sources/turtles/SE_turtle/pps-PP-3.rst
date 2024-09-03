@@ -47,7 +47,8 @@ Practice Problems
     // Function to update the click count
     function updateClickCount() {
         clickCount++;
-        document.getElementById('clickCount').textContent = `Times Clicked: ${clickCount}`;
+        // Here you would usually update the UI, but it's not needed now
+        console.log(`Button clicked ${clickCount} times`);
     }
 
     // Function to check for presence of button and handle the link click
@@ -55,7 +56,7 @@ Practice Problems
         // Check if an element with the class 'alert alert-info' contains the text 'Perfect!'
         const alertElement = document.querySelector('.alert');
             
-        if ((alertElement && alertElement.textContent.includes('Perfect!')) || clickCount >= 5) {
+        if ((alertElement && alertElement.textContent.includes('Perfect!')) || clickCount >= 8) {
             // Allow the link to be followed
             return true;
         } else {
@@ -63,20 +64,25 @@ Practice Problems
             event.preventDefault();
             
             // Display a popup window
-            alert('Please try again to complete the mixed-up puzzle first.' + "\n" + 'Remember, you can click the "Help me" button to remove an unnecessary block or combine two blocks.' + "\n" + ' You can skip the puzzle after 8 attempts.');
+            alert('Please try again to complete the mixed-up puzzle first.' + "\n" + 'Remember, you can click the "Help me" button to remove an unnecessary block or combine two blocks.' + "\n" + 'You can skip the puzzle after 8 attempts.');
             return false;
         }
     }
 
     // Attach the click event handler to the link
-    document.getElementById('pp-4').addEventListener('click', handleLinkClick);
+    document.getElementById('pp-e1').addEventListener('click', handleLinkClick);
 
     document.addEventListener('DOMContentLoaded', () => {
-        // Get references to the button and the display element
+        // Get references to the button
         const checkButton = document.getElementById('parsons-1-check');
         
-        // Add an event listener to the button
-        checkButton.addEventListener('click', updateClickCount);
+        // Check if the button was found
+        if (checkButton) {
+            // Add an event listener to the button
+            checkButton.addEventListener('click', updateClickCount);
+        } else {
+            console.error('Button with ID "parsons-1-check" not found.');
+        }
     });
 
     </script>

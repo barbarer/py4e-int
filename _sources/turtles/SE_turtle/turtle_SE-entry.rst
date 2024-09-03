@@ -98,7 +98,7 @@ For the next four questions, please select the answer that best matches your fam
     :option_5: I am confident in my ability to use this concept in complex programs
     :results: instructor
 
-    Set the direction the turtle faces like <code>setheading(angle)</code>
+    Turn the direction the turtle like <code>left(angle)</code>
 
 .. poll:: turtle-4
     :option_1: I am unfamiliar with this concept

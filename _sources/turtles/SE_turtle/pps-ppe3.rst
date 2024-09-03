@@ -5,7 +5,7 @@ Complete the following sections to get an explanation for the completed puzzle
     :question: Complete the following sections to get an explanation for the completed puzzle:
     :prim_comp: ASSIGNMENT
     :iscode:
-    :feedback: 
+    :feedback:  (3) Think about the type of alex in the function call. Think about the type of Turtle() from the turtle module. (5) Think about the loop range by start and stop values. (6) Think about the index used to access colors in the list. (8) Think about the angle used to turn the turtle for the next side of the triangle. Think about which direction it turns.
 
     Here is a completed function:
     <img src="https://i.postimg.cc/W18C7xKL/draw-triangle.png" width="500">
@@ -15,7 +15,8 @@ Complete the following sections to get an explanation for the completed puzzle
     (2) <b>space = Screen() -- Screen Initialization</b>
         Initializes a Screen() object named space. This object creates a window where the turtle graphics will be displayed.
     (3) <b>alex = Turtle() -- Turtle Initialization</b>
-        Initializes a Turtle object named alex using Turtle(). alex is a <b style="background-color:#d9d9d9">[:click-correct:variable:endclick: / :click-incorrect:method:endclick:]</b> used to store an instance of the Turtle class.
+        Initializes a Turtle object named alex using Turtle(). 
+        alex is a <b style="background-color:#d9d9d9">[:click-correct:variable:endclick: / :click-incorrect:method:endclick:]</b> used to store an instance of the Turtle <b style="background-color:#d9d9d9">[:click-correct:class:endclick: / :click-incorrect:variable:endclick:]</b>.
         This allows you to control and use that specific turtle object to perform various drawing operations.
     (4) <b>def draw_triangle(turtle, length, three_colors_list): -- Function Definition</b>
         Defines a function called draw_triangle that takes in a turtle object, the length of the triangle sides, and a  <b style="background-color:#d9d9d9">[:click-correct:list:endclick: / :click-incorrect:dictionary:endclick:]</b> of three colors.
@@ -28,7 +29,7 @@ Complete the following sections to get an explanation for the completed puzzle
     (7) <b>turtle.forward(length) -- Draw Side</b> 
         Moves the turtle forward by the specified length to draw a side of the triangle.    
     (8) <b>turtle.right(120) -- Turn Turtle to the right</b> 
-        Rotates the turtle to the <b style="background-color:#d9d9d9">[:click-correct:right:endclick: / :click-incorrect:left:endclick:]</b> by a 120 degrees.
+        Rotates the turtle to the right by a <b style="background-color:#d9d9d9">[:click-correct:120:endclick: / :click-incorrect:240:endclick:]</b> degrees.
         This determines the direction the turtle will face for the <b style="background-color:#d9d9d9">[:click-correct:next:endclick: / :click-incorrect:current:endclick:]</b> iteration.
     (9) <b>draw_triangle(alex, 50, ["blue", "green", "yellow"]) -- Call Function</b> 
         Calls the draw_triangle function with the specified turtle object, side length, and list of colors to draw an equilateral triangle.
