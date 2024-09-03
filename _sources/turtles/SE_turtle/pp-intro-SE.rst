@@ -100,7 +100,7 @@ The clicable area are those with a dark gray background and a border around them
 You will then receive a completed explanatoin of the solution you got from solving the mixed-up puzzle.
 
 
-<img src="https://i.postimg.cc/Kzgng2sJ/SE-introduction.png" width="500">
+.. image:: <img src="https://i.postimg.cc/Kzgng2sJ/SE-introduction.png" width="400">
 
 
 Four types of feedback will be provided for each option you select.
@@ -127,7 +127,9 @@ Try to solve the following explanation problem. You can click on the options to 
     :feedback: (1) Think about the type of the input parameter. (2) Think about the operator used to concatenate two strings.
 
     Here is a completed function:
-    <img src="https://i.postimg.cc/fTbCh4Rc/join-Strings-solution.png" width="500">
+    <img src="https://i.postimg.cc/fTbCh4Rc/join-Strings-solution.png" width="300">
+
+
 
     (1) <b>Function Definition —— def joinStrings(str1, str2):</b>
         Defines a new function and takes two parameters as inputs: str1 and str2. Both parameters are <b style="background-color:#d9d9d9">[:click-correct:string:endclick: / :click-incorrect:list:endclick:]</b>.

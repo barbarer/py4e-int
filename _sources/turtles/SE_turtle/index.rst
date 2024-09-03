@@ -24,6 +24,7 @@ If you do not meet the eligibility criteria or if you choose to withdraw your co
 
 .. poll:: withdrawal
    :option_1: I do not want to participate in this study.
+   :results: instructor
 
 If you have questions at any time about the study or the procedures, you may contact the researcher at email xyhou@umich.edu.
 

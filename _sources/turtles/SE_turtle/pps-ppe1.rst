@@ -5,10 +5,9 @@ Complete the following sections to get an explanation for the completed puzzle
     :question: Complete the following sections to get an explanation for the completed puzzle:
     :prim_comp: ASSIGNMENT
     :iscode:
-    :feedback: 
-
-
-    Here is a completed function:
+    :feedback: (1) Think about how to import all functions from the Turtle graphics library. (5) Think about what .penup() does. (6) Think about the meaning of - in the context of moving the turtle. (7) Think about the purpose of .pendown() function. (8) Think about the purpose of the .forward() function. (9) Think about the output of the / operation in a division between two numbers. (10) Think about the purpose of the .right() function.
+    
+    
     <img src="https://i.postimg.cc/rFSvDDNp/create-T.png" width="450">
 
     (1) <b>from turtle import * -- Importing Turtle Graphicss</b>
@@ -23,15 +22,18 @@ Complete the following sections to get an explanation for the completed puzzle
         Use .penup() to <b style="background-color:#d9d9d9">[:click-incorrect:lower:endclick: / :click-correct:lift:endclick:]</b> the turtle's pen to move it without drawing.
     (6) <b>turtle_obj.goto(-width / 2, height / 2) -- Move to Start Position</b> 
         Moves the turtle to the starting position at the top-left part of the T.
-        -width / 2: Moves the turtle half the width to the <b style="background-color:#d9d9d9">[:click-incorrect:right:endclick: / :click-correct:left:endclick:]</b> of the origin (center of the screen). This ensures the horizontal line of the T is centered horizontally.
-        height / 2: Moves the turtle to half the height <b style="background-color:#d9d9d9">[:click-incorrect:downwards:endclick: / :click-correct:upwards:endclick:]</b>  from the origin. This places the turtle at the highest point needed to start drawing the letter T.
+        -width / 2: Moves the turtle half the width to the <b style="background-color:#d9d9d9">[:click-incorrect:right:endclick: / :click-correct:left:endclick:]</b> of the origin (center of the screen). 
+        This ensures the horizontal line of the T is centered horizontally.
+        height / 2: Moves the turtle to half the height upwards from the origin. 
+        This places the turtle at the highest point needed to start drawing the letter T.
         The goto function thus moves the turtle to the point (-50, 75), which is the left end of the top horizontal line of the T.
     (7) <b>turtle_obj.pendown() -- Lower Pen</b> 
         Use .pendown() to <b style="background-color:#d9d9d9">[:click-correct:lower:endclick: / :click-incorrect:lift:endclick:]</b> the turtle's pen to start drawing.
     (8) <b>turtle_obj.forward(width) -- Draw Top Horizontal Line</b>
         Moves the turtle <b style="background-color:#d9d9d9">[:click-incorrect:backward:endclick: / :click-correct:forward:endclick:]</b>  by the value of width to draw the top horizontal line of the T.
     (9) <b>turtle_obj.backward(width / 2) -- Move to Middle</b>
-        Use / to perform standard division and returns the quotient as a floating-point number. Operator % performs division and returns the <b style="background-color:#d9d9d9">[:click-incorrect:quotient:endclick: / :click-correct:reminder:endclick:]</b> of that division.
+        Use / to perform standard division and returns the <b style="background-color:#d9d9d9">[:click-correct:quotient:endclick: / :click-incorrect:reminder:endclick:]</b> as a floating-point number. 
+        However, operator % performs division and returns the remainder of that division.
         Moves the turtle backward by half the width to the middle of the top horizontal line.
     (10) <b>turtle_obj.right(90) -- Turn Right</b>
         Rotates the turtle 90 degrees to the <b style="background-color:#d9d9d9">[:click-incorrect:counterclockwise(left):endclick: / :click-correct:clockwise(right):endclick:]</b> to prepare for drawing the vertical line.

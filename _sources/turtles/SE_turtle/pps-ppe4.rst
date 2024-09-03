@@ -5,7 +5,7 @@ Complete the following sections to get an explanation for the completed puzzle
     :question: Complete the following sections to get an explanation for the completed puzzle:
     :prim_comp: ASSIGNMENT
     :iscode:
-    :feedback: 
+    :feedback:  (2) Think about the parameters in a function call. (3) Think about what .penup() does. (6) Think about what .pendown() does. (8) Think about the correct syntax to begin filling range by start and stop values.  (9) Think about the loop range by start and stop values. (11) Think about purpose for turning left. (12) Think about the correct syntax to end filling the shape.
 
 
     Here is a completed function:
@@ -14,7 +14,8 @@ Complete the following sections to get an explanation for the completed puzzle
     (1) <b>from turtle import * -- Importing Turtle Graphicss</b>
         Use import * to import all functions, classes, and variables from the Turtle graphics library into the current namespace.
     (2) <b>def draw_diamond(turtle, xpos, ypos, length, color): -- Function Definition</b>
-        Defines a function named draw_diamond that takes five parameters: turtle (a Turtle object), xpos and ypos (coordinates for position), length (side length of the diamond), and color (color of the diamond).
+        Defines a function named draw_diamond that takes <b style="background-color:#d9d9d9">[:click-correct:five:endclick: / :click-incorrect:four:endclick:]</b> parameters: 
+        turtle (a Turtle object), xpos and ypos (coordinates for position), length (side length of the diamond), and color (color of the diamond).
     (3) <b>turtle.penup() -- Lift Pen Up</b>
         Lifts the turtle's pen so that it <b style="background-color:#d9d9d9">[:click-correct:does now draw:endclick: / :click-incorrect:draws:endclick:]</b> while moving to the start position.
     (4) <b>turtle.goto(xpos, ypos) -- Move to Start Position</b>
@@ -26,7 +27,8 @@ Complete the following sections to get an explanation for the completed puzzle
     (7) <b>turtle.color(color) -- Set Pen Color</b> 
         Sets the color of the turtle’s pen to the specified color stored in the variable color.
     (8) <b>turtle.begin_fill() -- Start Filling a Shape with a Color</b> 
-        Use <b style="background-color:#d9d9d9">[:click-incorrect:.beginfill():endclick: / :click-correct:.begin_fill():endclick:]</b> to start the filling process, so the shape will be filled with the specified color when completed.
+        Use <b style="background-color:#d9d9d9">[:click-incorrect:.beginfill():endclick: / :click-correct:.begin_fill():endclick:]</b> to start the filling process, 
+        so the shape will be filled with the specified color when completed.
     (9) <b>for i in range(4): -- A Loop to Draw the Outline of the Diamond</b> 
         Starts a loop that will iterate <b style="background-color:#d9d9d9">[:click-incorrect:five:endclick: / :click-correct:four:endclick:]</b> times to draw the four sides of the diamond.
     (10) <b>turtle.forward(length) -- Move Forward to Draw the Outline of the Shape</b> 
@@ -34,7 +36,8 @@ Complete the following sections to get an explanation for the completed puzzle
     (11) <b>turtle.left(90) -- Turn 90 Degrees Left</b> 
         Turns the turtle left by 90 degrees to prepare for drawing the <b style="background-color:#d9d9d9">[:click-correct:next:endclick: / :click-incorrect:current:endclick:]</b> side.
     (12) <b>turtle.end_fill() -- End Filling the Shape with the Color</b> 
-        Use <b style="background-color:#d9d9d9">[:click-incorrect:.beginfill():endclick: / :click-correct:.end_fill():endclick:]</b> to end the filling process, completing the filled shape with the specified color.
+        Use <b style="background-color:#d9d9d9">[:click-incorrect:.beginfill():endclick: / :click-correct:.end_fill():endclick:]</b> to end the filling process, 
+        completing the filled shape with the specified color.
 
 
 .. raw:: html

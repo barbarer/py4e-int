@@ -14,7 +14,8 @@ Here is an explanation for the completed puzzle
     (1) <b>from turtle import * -- Importing Turtle Graphicss</b>
         Use import * to import all functions, classes, and variables from the Turtle graphics library into the current namespace.
     (2) <b>def draw_diamond(turtle, xpos, ypos, length, color): -- Function Definition</b>
-        Defines a function named draw_diamond that takes five parameters: turtle (a Turtle object), xpos and ypos (coordinates for position), length (side length of the diamond), and color (color of the diamond).
+        Defines a function named draw_diamond that takes five parameters: 
+        turtle (a Turtle object), xpos and ypos (coordinates for position), length (side length of the diamond), and color (color of the diamond).
     (3) <b>turtle.penup() -- Lift Pen Up</b>
         Lifts the turtle's pen so that it does now draw while moving to the start position.
     (4) <b>turtle.goto(xpos, ypos) -- Move to Start Position</b>
