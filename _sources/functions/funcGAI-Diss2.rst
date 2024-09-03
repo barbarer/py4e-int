@@ -30,7 +30,7 @@ Function1 takes a list of numbers and outputs a number as shown below:
         Input                             Output
         function1([10, 80, 100])           72.5
         function1([70, 90, 50])            75.0
-        function1([2, 4, 6, 8])            7.2
+        function1([2, 4, 6, 8])            5.6
 
 
 To check that you understand what the function is doing please enter the expected output for the following input:
@@ -65,7 +65,7 @@ To check that you understand what the function is doing please enter the expecte
        Input                             Output
        function1([10, 80, 100])           72.5
        function1([70, 90, 50])            75.0
-       function1([2, 4, 6, 8])            7.2
+       function1([2, 4, 6, 8])            5.6
     ~~~~
 
     ====
