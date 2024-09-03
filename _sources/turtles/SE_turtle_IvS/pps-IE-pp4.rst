@@ -1,40 +1,42 @@
 Practice Problems
 =================
 
-.. parsonsprob:: PP_NSE_tutles_3
+.. parsonsprob:: PP_IE_tutles_4
     :numbered: left
     :practice: T
     :adaptive:
 
-    Create a function called ``draw_triangle`` that takes in parameters ``turtle``, ``length``, and ``three_colors_list`` and moves the ``turtle``
-    to create a triangle with side lengths of ``length`` and in which the pen color changes for each side. Create a Screen object and a Turtle object first. 
-    After creating the function, call ``draw_triangle`` with arguments ``length = 50``, ``three_colors_list = ["blue", "green", "yellow"]``, and the Turtle object.
+    Create a function called ``create_rectangle`` that takes in ``turtle`` as a parameter and creates a rectangle of width 40 and height 90.
+    Create a Screen object and a Turtle object. After creating the function, call ``create_rectangle``.
     -----
     from turtle import *
     space = Screen()
     alex = Turtle()
     =====
-    def draw_triangle(turtle_obj, length, three_colors_list):
+    def create_rectangle(turtle):
     =====
-        for color in three_colors_list:
+        for i in range(2):
+            turtle.forward(40)
     =====
-        for i in range(3): #paired
+        for i in turtle.range(2): 
+            turtle.forward(40)    #paired
     =====
-            turtle_obj.color(color)
+        for i in turtle.range(1, 2): 
+            turtle.forward(40)    #paired
     =====
-            turtle_obj.side(three_colors_list[i]) #paired
+            turtle.left(90)
     =====
-            turtle_obj.forward(length)
+            turtle.forward(90)
     =====
-            turtle_obj.right(120)
+            turtle.left(90)
     =====
-    draw_triangle(alex, 50, ["blue", "green", "yellow"])
+    create_rectangle(alex)
 
 
 
 .. raw:: html
 
-    <p>Click on the following link to go to the explanation question: <a id="pp-4" href="pps-PP-4.html"><font size="+1"><b>Mixed-up Puzzle 4</b></font></a></p>
+    <p>Click on the following link to go to the explanation: <a id="ie4" href="pps-ie4.html"><font size="+1"><b>Explanation</b></font></a></p>
 
 
 .. raw:: html
@@ -83,11 +85,11 @@ Practice Problems
             }
         }
 
-        const linkElement = document.getElementById('pp-4');
+        const linkElement = document.getElementById('ie4');
         if (linkElement) {
             linkElement.addEventListener('click', handleLinkClick);
         } else {
-            console.error('Element with ID "pp-4" not found.');
+            console.error('Element with ID "ie4" not found.');
         }
     });
 

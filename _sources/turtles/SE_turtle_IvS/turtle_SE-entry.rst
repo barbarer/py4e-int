@@ -159,11 +159,11 @@ What to do next
             // console.log("Condition from cookie: " + cond);
 
             // if no prev set cookie: generate random condition and set cookie
-            if (cond != 'ppse' && cond != 'pp'  && cond != 'ppie') {
+            if (cond != 'ppse' && cond != 'ppie') {
             // Generate a random number between 0 and 1
-            var randomIndex = Math.floor(Math.random() * 3);
+            var randomIndex = Math.floor(Math.random() * 2);
             // Define the groups in an array
-            var groups = ['ppse', 'pp', 'ppie'];
+            var groups = ['ppse', 'ppie'];
             // Use the random index to select a group
             var cond = groups[randomIndex];
             setCookie(EXP_COOKIE, cond);
@@ -171,8 +171,6 @@ What to do next
 
             if (cond == 'ppse') {
             a.href = "pp-intro-SE.html"
-            } else if (cond == 'pp') {
-            a.href = "pp-intro-PP.html"
             } else if (cond == 'ppie') {
             a.href = "pp-intro-IE.html"
             }
