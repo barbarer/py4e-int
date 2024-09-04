@@ -33,6 +33,9 @@
         Calls the draw_triangle function with the specified turtle object, side length, and list of colors to draw an equilateral triangle.
 
 
+What to do next
+^^^^^^^^^^^^^^^
+
 .. raw:: html
 
     <p>Click on the following link to finish the next puzzle: <a id="pp4" href="pps-SE-pp4.html"><font size="+1"><b>Mixed-up Puzzle 4</b></font></a></p>

@@ -31,6 +31,8 @@ Practice Problems
     draw_triangle(alex, 50, ["blue", "green", "yellow"])
 
 
+What to do next
+^^^^^^^^^^^^^^^
 
 .. raw:: html
 

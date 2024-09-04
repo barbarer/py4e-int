@@ -33,6 +33,9 @@ Practice Problems
     create_rectangle(alex)
 
 
+What to do next
+^^^^^^^^^^^^^^^
+
 
 .. raw:: html
 

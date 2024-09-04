@@ -22,7 +22,7 @@ Here is an explanation for the completed puzzle
     (5) <b>turtle_obj.penup() -- Lift Pen</b> 
         Use .penup() to lift the turtle's pen to move it without drawing.
     (6) <b>turtle_obj.goto(-width / 2, height / 2) -- Move to Start Position</b> 
-        Moves the turtle to the starting position at the top-left part of the T.
+        Moves the turtle to the starting position at the top-left part of the T, which is the point (-50, 75).
         -width / 2: Moves the turtle half the width to the left of the origin (center of the screen). This ensures the horizontal line of the T is centered horizontally.
         This ensures the horizontal line of the T is centered horizontally.
         height / 2: Moves the turtle to half the height upwards from the origin. 
@@ -39,6 +39,10 @@ Here is an explanation for the completed puzzle
         Rotates the turtle 90 degrees to the clockwise(right) to prepare for drawing the vertical line.
     (11) <b>turtle_obj.forward(height) -- Draw Vertical Line</b>
         Moves the turtle forward by the value of height to draw the vertical line of the T.
+
+
+What to do next
+^^^^^^^^^^^^^^^
 
 .. raw:: html
 

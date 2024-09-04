@@ -3,12 +3,18 @@ Turtle Posttest Problem
 
 * 💻 Please complete the problems below independently without any outside help, including AI tools like ChatGPT.
 
+* There is no feedback for this posttest. You will see the correct answers after the lecture on Thursday.
+
 * Again, you can stop working on a problem after you worked on it for about two minutes without solving it. 
+
+
+One correct option MCQ
+^^^^^^^^^^^^^^^^^^^^^^
 
 
 .. poll:: SE_posttest_mcq_1
     :option_1:  In the turtle module, the method <code>penup()</code> is used to resume drawing when the turtle moves.
-    :option_2:  In the turtle module, the method <code>penup()</code> is used to chance the thickness of the pen.
+    :option_2:  In the turtle module, the method <code>penup()</code> is used to change the thickness of the pen.
     :option_3:  In the turtle module, the method <code>pendown()</code> is used to resume drawing when the turtle moves.
     :option_4:  In the turtle module, the method <code>pendown()</code> and <code>penup()</code> both control the turtle's speed.
 
@@ -18,11 +24,10 @@ Turtle Posttest Problem
 .. poll:: SE_posttest_mcq_2
     :option_1: color() sets the pen color but does not affect the background color.
     :option_2: color() sets the pen color and the background color of the drawing window.
-    :option_3: color() changes the pen color and fill color, but not the background color.
+    :option_3: color() changes the pen color and pen size, but not the background color.
     :option_4: color() affects the fill color and background color, but not the pen color.
 
     <b>One correct option MCQ:</b> Which of the following statements is true regarding the color() method in Python turtle module?
-
 
 
 .. poll:: SE_posttest_mcq_3
@@ -48,6 +53,7 @@ Turtle Posttest Problem
     <code>for i in range(1, 7):</code>
 
 
+
 .. poll:: SE_posttest_mcq_5
     :option_1:  A
     :option_2:  B
@@ -56,67 +62,68 @@ Turtle Posttest Problem
 
     <b>One correct option MCQ:</b> What is the output of the following code snippet?
     <br>
-    .. image:: https://i.postimg.cc/7hH8VnGx/SE-posttest-mcq-5.png
+    <img src="https://i.postimg.cc/4sh8yfsH/SE-posttest-mcq-5.png" width="400">
 
 
-.. mchoice:: SE_posttest_mcq_6
-    :multiple_answers: 
+Fill in all that apply
+^^^^^^^^^^^^^^^^^^^^^^
 
-    Select all that apply: Which of the following statements are true regarding the differences and similarities between the two loops?
+.. fillintheblank:: SE_posttest_mcq_6
+    :practice: F
+
+    **Enter the correct letter(s) in the blanks. More than one answer may be correct.** 
+    
+    Which of the following statements are true regarding the differences and similarities between the two loops? Fill in all that apply.
 
     .. image:: https://i.postimg.cc/4yCs9L3h/SE-posttest-mcq-6.png
+       :width: 600
+       :align: center
 
-    -  The ``for i in range(5)`` loop iterates a fixed number of times, specifically 5 times.
-
-       +   Thank you for answering the question.
+    **A.** The ``for i in range(5)`` loop iterates a fixed number of times, specifically 5 times.
     
-    -  The ``for item in item_list`` loop modifies the original list elements during iteration.
-
-       +   Thank you for answering the question.
+    **B.** The ``for item in item_list`` loop modifies the original list elements during iteration.
     
-    -  Both loops can be used to iterate over a sequence of numbers.
-
-       +   Thank you for answering the question.
-            
-    -  Both code snippets will print out the same sequence of numbers.
-
-       +   Thank you for answering the question.
-
-
-
-.. mchoice:: SE_posttest_mcq_7
-    :multiple_answers: 
-
-    Select all that apply: The following code snippet produces one or more errors. 
+    **C.** Both loops can be used to iterate over a sequence of numbers.
     
+    **D.** Both code snippets will print out the same sequence of numbers.
+
+    - :[\s\S]+:    Thank you for answering the question.
+      :.*: Please fill in the blank
+
+
+
+.. fillintheblank:: SE_posttest_mcq_7
+    :practice: F
+
+    **Enter the correct letter(s) in the blanks. More than one answer may be correct.**
+    
+    The following code snippet produces one or more errors. Fill in all that apply. 
+        
     ``from turtle import all``
 
     ``Turtle()``
 
     ``t = t.color("blue")``
 
-    -  The turtle module is not imported correctly.
-
-       +   Thank you for answering the question.
-
-    -  In this case, Turtle() needs to be assigned to a variable.
-
-       +   Thank you for answering the question.
-
-    -  The color method does not exist.
-
-       +   Thank you for answering the question.
+    **A.** The turtle module is not imported correctly.
     
-    -  The t.color() method should not be used with an argument, such as "blue".
-        
-       +   Thank you for answering the question.
+    **B.** In this case, Turtle() needs to be assigned to a variable.
+    
+    **C.** The color method does not exist.
+    
+    **D.** The t.color() method should not be used with an argument, such as "blue".
+
+    - :[\s\S]+:     Thank you for answering the question.
+      :.*: Please fill in the blank
 
 
+.. fillintheblank:: SE_posttest_mcq_8
+    :practice: F
 
-.. mchoice:: SE_posttest_mcq_8
-    :multiple_answers:
+    **Enter the correct letter(s) in the blanks. More than one answer may be correct.** 
+    
+    Which of the following statements are true regarding the ``t.left(90)`` line in the code? Fill in all that apply.
 
-    **Select all that apply:** Which of the following statements are true regarding the ``t.left(90)`` line in the code? 
 
     ``import turtle``
 
@@ -125,51 +132,33 @@ Turtle Posttest Problem
     ``t.left(90)``
 
 
-    -  The turtle turns 90 degrees to the right.
+    **A.** The turtle turns 90 degrees to the right.
 
-       +   Thank you for answering the question.
+    **B.** The turtle turns 90 degrees to the left.
 
-    -  The turtle turns 90 degrees to the left.
-        
-       +   Thank you for answering the question.
+    **C.** The turtle makes a circle.
 
-    -  The turtle makes a circle.
-        
-       +   Thank you for answering the question.
+    **D.** The turtle's orientation changes, but it doesn't move from its current position.
 
-    -  The turtle's orientation changes, but it doesn't move from its current position.
-            
-       +   Thank you for answering the question.
+    **E.** The turtle moves 90 units to the left.
 
-    -  The turtle turns 180 degrees to the left.
-            
-       +   Thank you for answering the question.
+    - :[\s\S]+:     Thank you for answering the question.
+      :.*: Please fill in the blank
 
 
+.. fillintheblank:: SE_posttest_mcq_9
+    :practice: F
 
+    **Enter the correct letter(s) in the blanks. More than one answer may be correct.** 
+    
+    All code statements that will draw **rectangle** using the turtle module in Python: Fill in all that apply.
+    
+    .. image:: https://i.postimg.cc/09F4kV6x/SE-posttest-mcq-9.png
+       :width: 800
+       :align: center
 
-.. mchoice:: SE_posttest_mcq_9
-    :multiple_answers:
-
-    **Select all that apply:** All code statements that will draw a **rectangle** using the turtle module in Python:
-
-    .. image:: https://i.postimg.cc/s2LcjYCT/SE-posttest-mcq-9.png
-
-    -  A
-
-       +   Thank you for answering the question.
-
-    -  B
-
-       +   Thank you for answering the question.
-
-    -  C
-
-       +   Thank you for answering the question.
-
-    -  D
-
-       +   Thank you for answering the question.
+    - :[\s\S]+:     Thank you for answering the question.
+      :.*: Please fill in the blank
 
 
 
@@ -178,6 +167,7 @@ Turtle Posttest Problem
     What is the purpose of the following line of code in the turtle module?
 
     ``t.goto(100, 100)``
+
 
 
 Turtle Reflective Survey
@@ -197,9 +187,9 @@ Turtle Reflective Survey
     :option_5: Strongly Agree
 
     For each statement, please use the following scale to indicate what is most true for you. Explain the reason for your choice in the comment box below.
+    <br>
+    This practice was useful in improving my <b>problem-solving skill on this topic</b>, e.g. finding the strategy to draw an expected shape using a turtle module.
 
-    This practice was useful in improving my **problem-solving skill on this topic**, e.g. finding the strategy to draw a expected shape.
-    
 
 .. poll:: SE_reflect_2
     :allowcomment:
@@ -210,10 +200,9 @@ Turtle Reflective Survey
     :option_5: Strongly Agree
     
     For each statement, please use the following scale to indicate what is most true for you. Explain the reason for your choice in the comment box below.
-
-    This practice was useful in improving my **understanding of this topic**, e.g. what does different turtle method and for loop do, etc.
+    <br>
+    This practice was useful in improving my <b>understanding of this topic</b>, e.g. what does different turtle method and for loop do, etc.
     
-
 
 .. shortanswer:: SE_opinion
 
