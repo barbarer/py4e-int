@@ -175,7 +175,7 @@ Turtle Reflective Survey
 
 .. shortanswer:: SE_learning
 
-    What did you **learned** from this practice session? 
+    What did you **learn** from this practice session? 
 
 
 .. poll:: SE_reflect_1
