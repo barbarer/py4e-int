@@ -91,7 +91,7 @@ The clicable area are those with a dark gray background and a border around them
 You will then receive a completed explanatoin of the solution you got from solving the mixed-up puzzle.
 
 
-.. image:: https://i.postimg.cc/Hx2cG0wP/SE-introduction.png
+.. image:: https://i.postimg.cc/DvVqXB8F/SE-introduction.png
     :width: 450
     :align: center
 
