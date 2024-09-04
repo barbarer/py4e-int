@@ -87,7 +87,7 @@ Fill in all that apply
     
     **D.** Both code snippets will print out the same sequence of numbers.
 
-    - :[\s\S]:    Thank you for answering the question.
+    - :[\s\S]+:    Thank you for answering the question.
       :.*: Please fill in the blank
 
 
@@ -113,7 +113,7 @@ Fill in all that apply
     
     **D.** The t.color() method should not be used with an argument, such as "blue".
 
-    - :[\s\S]:    Thank you for answering the question.
+    - :[\s\S]+:     Thank you for answering the question.
       :.*: Please fill in the blank
 
 
@@ -142,7 +142,7 @@ Fill in all that apply
 
     **E.** The turtle moves 90 units to the left.
 
-    - :[\s\S]:    Thank you for answering the question.
+    - :[\s\S]+:     Thank you for answering the question.
       :.*: Please fill in the blank
 
 
@@ -157,7 +157,7 @@ Fill in all that apply
        :width: 800
        :align: center
 
-    - :[\s\S]:    Thank you for answering the question.
+    - :[\s\S]+:     Thank you for answering the question.
       :.*: Please fill in the blank
 
 

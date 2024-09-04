@@ -91,8 +91,8 @@ The clicable area are those with a dark gray background and a border around them
 You will then receive a completed explanatoin of the solution you got from solving the mixed-up puzzle.
 
 
-.. image:: https://i.postimg.cc/DvVqXB8F/SE-introduction.png
-    :width: 450
+.. image:: https://i.postimg.cc/SmDGs7mZ/SE-introduction.png
+    :width: 600
     :align: center
 
 Four types of feedback will be provided for each option you select.
