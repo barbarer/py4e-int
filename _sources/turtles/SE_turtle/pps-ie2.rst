@@ -32,6 +32,9 @@ Here is an explanation for the completed puzzle
     (8) <b>create_hexagon(alex) -- Call Hexagon Function</b> 
         Calls the create_hexagon function, passing the Turtle object alex as an argument. This initiates the drawing of the hexagon.
 
+What to do next
+^^^^^^^^^^^^^^^
+
 
 .. raw:: html
 

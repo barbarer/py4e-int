@@ -5,7 +5,7 @@ Practice Problems
     :numbered: left
     :adaptive:
 
-    Create a function called ``create_T`` that takes in ``turtle`` as a parameter and moves the turtle to create the letter T.
+    Create a function called ``create_T`` that takes in ``turtle_obj`` as a parameter and moves the turtle to create the letter T.
     The width of the letter should be 100, and the height of the letter should be 150. 
     -----
     from turtle import *
@@ -30,6 +30,8 @@ Practice Problems
         turtle_obj.forward(height)
 
 
+What to do next
+^^^^^^^^^^^^^^^
 
 .. raw:: html
 

@@ -13,20 +13,27 @@ Practice Problems
     space = Screen()
     alex = Turtle()
     =====
-    def create_hexagon(turtle_obj):
+    def create_hexagon(turtle):
     =====
         for i in range(0, 6):
+            turtle.forward(50)
     =====
-        for i in range(0, 7): #paired
+        for i in range(0, 6):
+            turtle = turtle.forward(50) #paired
     =====
-            turtle_obj.forward(50)
+        for i in range(0, 7):
+            turtle = turtle.forward(50) #paired
     =====
-            turtle_obj = turtle_obj.forward(50) #paired
+            turtle.left(60)
     =====
-            turtle_obj.left(60)
+            turtle = turtle.left(60) #paired
     =====
     create_hexagon(alex)
 
+
+
+What to do next
+^^^^^^^^^^^^^^^
 
 
 .. raw:: html

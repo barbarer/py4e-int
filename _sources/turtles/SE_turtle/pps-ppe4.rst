@@ -3,7 +3,7 @@
     :question: Complete this section to get an explanation for the previous puzzle
     :prim_comp: ASSIGNMENT
     :iscode:
-    :feedback:  (5) Think about the type of loop and how it works. (6) Think about the meaning of .forward(). (9) Think about the last action of each iteration. (12) Think about the correct sequence to call the function to draw a rectangle.
+    :feedback:  (5) Think about the type of loop and how it works. (6) Think about the meaning of .forward(). (9) Think about the last action of each iteration. (10) Think about the correct sequence to call the function to draw a rectangle.
 
 
     Here is a completed function:
@@ -21,7 +21,7 @@
         Defines a function named create_rectangle that takes a single parameter turtle, which is expected to be a Turtle object.
     (5) <b>for i in range(2): -- Loop Through Iterations</b>
         Starts a <b style="background-color:#d9d9d9">[:click-correct:for:endclick: / :click-incorrect:while:endclick:]</b> loop that will iterate <b style="background-color:#d9d9d9">[:click-incorrect:fourth:endclick: / :click-correct:twice:endclick:]</b>. 
-        Each iteration draws <b style="background-color:#d9d9d9">[:click-correct:two:endclick: / :click-incorrect:one:endclick:]</b> sides of the rectangle.
+        Each iteration draws <b style="background-color:#d9d9d9">[:click-correct:two sides:endclick: / :click-incorrect:one side:endclick:]</b> of the rectangle.
     (6) <b>turtle.forward(40) -- Draw Width of Rectangle</b>
         Moves the turtle <b style="background-color:#d9d9d9">[:click-correct:forward:endclick: / :click-incorrect:backward:endclick:]</b> by 40 units to draw one of the shorter sides of the rectangle (width).
     (7) <b>turtle.left(90) -- Turn 90 Degrees Left</b>
@@ -35,6 +35,8 @@
         Calls the create_rectangle function <b style="background-color:#d9d9d9">[:click-correct:after:endclick: / :click-incorrect:before:endclick:]</b> creating it with the specified turtle object alex to draw a rectangle.
 
 
+What to do next
+^^^^^^^^^^^^^^^
 
 .. raw:: html
 

@@ -3,7 +3,7 @@
     :question: Complete this section to get an explanation for the previous puzzle
     :prim_comp: ASSIGNMENT
     :iscode:
-    :feedback: (1) Think about how to import all functions from the Turtle graphics library. (3) Think about the type of alex in the function call. Think about the type of Turtle() from the turtle module. (5) Think about the loop range by start and stop values. (6) Think about the purpose of the left() function.
+    :feedback: (1) Think about how to import all functions from the Turtle graphics library. (3) Think about the type of alex in the function call. Think about the type of Turtle() from the turtle module. (5) Think about the loop range by start and stop values. (7) Think about the purpose of the left() function.
     
     Here is a completed function:
     <img src="https://i.postimg.cc/L6dc4tf7/create-hexagon.png" width="450">
@@ -28,6 +28,10 @@
     (8) <b>create_hexagon(alex) -- Call Hexagon Function</b> 
         Calls the create_hexagon function, passing the Turtle object alex as an argument. This initiates the drawing of the hexagon.
 
+
+
+What to do next
+^^^^^^^^^^^^^^^
 
 .. raw:: html
 

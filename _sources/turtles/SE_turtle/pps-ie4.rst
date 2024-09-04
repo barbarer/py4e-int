@@ -36,6 +36,8 @@ Here is an explanation for the completed puzzle
         Calls the create_rectangle function after creating it with the specified turtle object alex to draw a rectangle.
 
 
+What to do next
+^^^^^^^^^^^^^^^
 
 .. raw:: html
 
