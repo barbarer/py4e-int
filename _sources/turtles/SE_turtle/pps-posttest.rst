@@ -18,27 +18,27 @@ One correct option MCQ
     :option_3:  In the turtle module, the method <code>pendown()</code> is used to resume drawing when the turtle moves.
     :option_4:  In the turtle module, the method <code>pendown()</code> and <code>penup()</code> both control the turtle's speed.
 
-    <b>One correct option MCQ:</b> Which of the following statements is true regarding the penup() and pendown() in Python turtle module?
+    <b>One correct option MCQ:</b> Which of the following statements is true regarding the <code>penup()</code> and <code>pendown()</code> in Python turtle module?
     
      
 .. poll:: SE_posttest_mcq_2
-    :option_1: color() sets the pen color but does not affect the background color.
-    :option_2: color() sets the pen color and the background color of the drawing window.
-    :option_3: color() changes the pen color and pen size, but not the background color.
-    :option_4: color() affects the fill color and background color, but not the pen color.
+    :option_1: <code>color()</code> sets the pen color but does not affect the background color.
+    :option_2: <code>color()</code> sets the pen color and the background color of the drawing window.
+    :option_3: <code>color()</code> changes the pen color and pen size, but not the background color.
+    :option_4: <code>color()</code> affects the fill color and background color, but not the pen color.
 
-    <b>One correct option MCQ:</b> Which of the following statements is true regarding the color() method in Python turtle module?
+    <b>One correct option MCQ:</b> Which of the following statements is true regarding the <code>color()</code> method in Python turtle module?
 
 
 .. poll:: SE_posttest_mcq_3
-    :option_1:  Turtle is a variable, and alex is an object of the class.
-    :option_2:  Turtle is a class, and alex is a variable used to an object of the Turtle class.
-    :option_3:  Turtle is a class, and alex is a method used to initialize it.
-    :option_4:  Turtle is a variable, and alex is a class used to create a new object.
-    :option_5:  Turtle is a instance, and alex is a method used to initialize it.
+    :option_1:  <code>Turtle</code> is a variable, and <code>alex</code> is an object of the class.
+    :option_2:  <code>Turtle</code> is a class, and <code>alex</code> is a variable used to an object of the Turtle class.
+    :option_3:  <code>Turtle</code> is a class, and <code>alex</code> is a method used to initialize it.
+    :option_4:  <code>Turtle</code> is a variable, and <code>alex</code> is a class used to create a new object.
+    :option_5:  <code>Turtle</code> is a instance, and <code>alex</code> is a method used to initialize it.
 
 
-    <b>One correct option MCQ:</b> In the statement <code>alex = Turtle()</code>, what role do the term Turtle and alex play?
+    <b>One correct option MCQ:</b> In the statement <code>alex = Turtle()</code>, what do <code>Turtle</code> and <code>alex</code> mean?
 
 
 
@@ -109,7 +109,7 @@ Fill in all that apply
     
     **B.** In this case, Turtle() needs to be assigned to a variable.
     
-    **C.** The color method does not exist.
+    **C.** The color method does not exist in the turtle module.
     
     **D.** The t.color() method should not be used with an argument, such as "blue".
 
@@ -175,7 +175,7 @@ Turtle Reflective Survey
 
 .. shortanswer:: SE_learning
 
-    What did you **learned** from this practice session? 
+    What did you **learn** from this practice session? 
 
 
 .. poll:: SE_reflect_1
