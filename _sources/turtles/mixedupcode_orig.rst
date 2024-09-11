@@ -372,7 +372,7 @@ Mixed-Up Code Questions
     ~~~~
 
 
-.. parsonsprob:: mixedupcode_turtles_10
+.. parsonsprob:: mixedupcode_turtles_10_v2
     :numbered: left
     :practice: T
     :adaptive:
@@ -388,14 +388,8 @@ Mixed-Up Code Questions
         turtle.goto(xpos, ypos)
     =====
         turtle.left(45)
-    =====
-        turtle.left(90) #paired
-    =====
         turtle.pendown()
-    =====
         turtle.color(color)
-    =====
-        turtle.side(color) #paired
     =====
         turtle.begin_fill()
     =====

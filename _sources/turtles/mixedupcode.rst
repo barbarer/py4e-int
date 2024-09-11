@@ -37,6 +37,6 @@ Mixed-Up Code Questions
    :fromid: mixedupcode_turtles_9, mixedupcode_turtles_9_ac
    :toggle: 
 
-.. selectquestion:: mixedupcode_turtles_10_sq
-   :fromid: mixedupcode_turtles_10, mixedupcode_turtles_10_ac
+.. selectquestion:: mixedupcode_turtles_10_sq_v2
+   :fromid: mixedupcode_turtles_10_v2, mixedupcode_turtles_10_ac
    :toggle: 
