@@ -13,15 +13,6 @@ may need to indent the blocks as well.  There may also be extra blocks that are 
 needed in a correct solution that you can leave on the left side. Click the "Check" button
 to check your solution.
 
-See the video below for an example.
-
-.. youtube:: Rf7oWHlo-e0
-    :divid: iwgex1-parsons1-ppse
-    :optional:
-    :width: 500
-    :height: 415
-    :align: center
-
 Try to solve the following mixed-up code problem.  This problem doesn't require any indentation.
 
 .. parsonsprob:: intro-simple-parsons-ppse-1
@@ -100,21 +91,22 @@ The clicable area are those with a dark gray background and a border around them
 You will then receive a completed explanatoin of the solution you got from solving the mixed-up puzzle.
 
 
-<img src="https://i.postimg.cc/Kzgng2sJ/SE-introduction.png" width="500">
-
+.. image:: https://i.postimg.cc/SmDGs7mZ/SE-introduction.png
+    :width: 600
+    :align: center
 
 Four types of feedback will be provided for each option you select.
 
 👉 Correct / Incorrect feedback
    If you see a feedback message like "You are correct!" or "Incorrect.", it means you have selected the correct or incorrect option.
 
-👉 Detailed feedback on how many options you got correctly or incorrectly.
+👉 Detailed feedback on how many options you got correct or wrong.
    If you see a feedback message like "You clicked on 1 of the 2 correct elements and 0 of the 3 incorrect elements.", it tells you the number of correct and incorrect options you selected.
 
-👉 Hints on how to correct the incorrectly selected options.
+👉 Hints on how to correct the wrong options.
     If you see a feedback message like "Think about the type of the input parameter.", it provides hints on how to correct the incorrect options you selected.
 
-👉 Highlighted incorrectly selected options
+👉 Highlighted incorrect options
     The Incorrect options you selected will be highlighted in pink background with a red border. You need to deselect the incorrect options and select the correct options.
 
 
@@ -127,7 +119,9 @@ Try to solve the following explanation problem. You can click on the options to 
     :feedback: (1) Think about the type of the input parameter. (2) Think about the operator used to concatenate two strings.
 
     Here is a completed function:
-    <img src="https://i.postimg.cc/fTbCh4Rc/join-Strings-solution.png" width="500">
+    <img src="https://i.postimg.cc/fTbCh4Rc/join-Strings-solution.png" width="300">
+
+
 
     (1) <b>Function Definition —— def joinStrings(str1, str2):</b>
         Defines a new function and takes two parameters as inputs: str1 and str2. Both parameters are <b style="background-color:#d9d9d9">[:click-correct:string:endclick: / :click-incorrect:list:endclick:]</b>.

@@ -2,40 +2,42 @@ Here is an explanation for the completed puzzle
 ================================================
 
 .. clickablearea:: IE_tutles_4
-    :question: An explanation for the completed puzzle:
+    :question: Complete the following sections to get an explanation for the completed puzzle:
     :prim_comp: ASSIGNMENT
     :iscode:
-    :feedback: 
-
+    :feedback:  
 
     Here is a completed function:
-    <img src="https://i.postimg.cc/wBBP408t/draw-diamond.png" width="500">
+    <img src="https://i.postimg.cc/0N3YRDTP/create-rectangle.png" width="400">
 
     (1) <b>from turtle import * -- Importing Turtle Graphicss</b>
         Use import * to import all functions, classes, and variables from the Turtle graphics library into the current namespace.
-    (2) <b>def draw_diamond(turtle, xpos, ypos, length, color): -- Function Definition</b>
-        Defines a function named draw_diamond that takes five parameters: turtle (a Turtle object), xpos and ypos (coordinates for position), length (side length of the diamond), and color (color of the diamond).
-    (3) <b>turtle.penup() -- Lift Pen Up</b>
-        Lifts the turtle's pen so that it does now draw while moving to the start position.
-    (4) <b>turtle.goto(xpos, ypos) -- Move to Start Position</b>
-        Use .goto() to move the turtle to the specified (xpos, ypos) coordinates.
-    (5) <b>turtle.left(45) -- Rotate for Diamond Orientation</b>
-        Rotates the turtle left by 45 degrees to orient it for drawing the diamond.
-    (6) <b>turtle.pendown() -- Lower Pen Down</b>
-        Lowers the pen so that the turtle will start drawing when it moves.
-    (7) <b>turtle.color(color) -- Set Pen Color</b> 
-        Sets the color of the turtle’s pen to the specified color stored in the variable color.
-    (8) <b>turtle.begin_fill() -- Start Filling a Shape with a Color</b> 
-        Use .begin_fill() to start the filling process, so the shape will be filled with the specified color when completed.
-    (9) <b>for i in range(4): -- A Loop to Draw the Outline of the Diamond</b> 
-        Starts a loop that will iterate four times to draw the four sides of the diamond.
-    (10) <b>turtle.forward(length) -- Move Forward to Draw the Outline of the Shape</b> 
-        Moves the turtle forward by the specified length to draw one side of the diamond.
-    (11) <b>turtle.left(90) -- Turn 90 Degrees Left</b> 
-        Turns the turtle left by 90 degrees to prepare for drawing the next side.
-    (12) <b>turtle.end_fill() -- End Filling the Shape with the Color</b> 
-        Use .end_fill() to end the filling process, completing the filled shape with the specified color.
+    (2) <b>space = Screen() -- Screen Initialization</b>
+        Initializes a Screen() object named space. This object creates a window where the turtle graphics will be displayed.
+    (3) <b>alex = Turtle() -- Turtle Initialization</b>
+        Initializes a Turtle object named alex using Turtle(). 
+        alex is a variable used to name an object of the Turtle class.
+        This allows you to control and use that specific turtle object to perform various drawing operations.
+    (4) <b>def create_rectangle(turtle): -- Function Definition</b>
+        Defines a function named create_rectangle that takes a single parameter turtle, which is expected to be a Turtle object.
+    (5) <b>for i in range(2): -- Loop Through Iterations</b>
+        Starts a loop that will iterate twice. 
+        Each iteration draws two sides of the rectangle.
+    (6) <b>turtle.forward(40) -- Draw Width of Rectangle</b>
+        Moves the turtle forward by 40 units to draw one of the shorter sides of the rectangle (width).
+    (7) <b>turtle.left(90) -- Turn 90 Degrees Left</b>
+        Turns the turtle left by 90 degrees to prepare for drawing the next side of the rectangle.
+    (8) <b>turtle.forward(90) -- Draw Height of Rectangle</b>
+        Moves the turtle forward by 90 units to draw one of the longer sides of the rectangle (height).
+    (9) <b>turtle.left(90) -- Turn 90 Degrees Left Again</b> 
+        Turns the turtle left by 90 degrees to prepare for drawing the next side. 
+        This completes one iteration of the loop and half of the rectangle.
+    (10) <b>create_rectangle(alex) -- Call Function</b> 
+        Calls the create_rectangle function after creating it with the specified turtle object alex to draw a rectangle.
 
+
+What to do next
+^^^^^^^^^^^^^^^
 
 .. raw:: html
 

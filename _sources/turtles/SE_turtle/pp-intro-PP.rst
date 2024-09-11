@@ -13,15 +13,6 @@ may need to indent the blocks as well.  There may also be extra blocks that are 
 needed in a correct solution that you can leave on the left side. Click the "Check" button
 to check your solution.
 
-See the video below for an example.
-
-.. youtube:: Rf7oWHlo-e0
-    :divid: iwgex1-parsons1-ppnse
-    :optional:
-    :width: 500
-    :height: 415
-    :align: center
-
 Try to solve the following mixed-up code problem.  This problem doesn't require any indentation.
 
 .. parsonsprob:: intro-simple-parsons-ppnse-1

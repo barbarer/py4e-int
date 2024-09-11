@@ -9,14 +9,15 @@ Here is an explanation for the completed puzzle
 
 
     Here is a completed function:
-    <img src="https://i.postimg.cc/L6dc4tf7/create-hexagon.png" width="450">
+    <img src="https://i.postimg.cc/L6dc4tf7/create-hexagon.png" width="400">
 
     (1) <b>from turtle import * -- Importing Turtle Graphicss</b>
         Use import * to import all functions, classes, and variables from the Turtle graphics library into the current namespace.
     (2) <b>space = Screen() -- Screen Initialization</b>
         Initializes a Screen() object named space. This object creates a window where the turtle graphics will be displayed.
     (3) <b>alex = Turtle() -- Turtle Initialization</b>
-        Initializes a Turtle object named alex using Turtle(). alex is a variable used to store an instance of the Turtle class.
+        Initializes a Turtle object named alex using Turtle(). 
+        alex is a variable used to name an object of the Turtle class.
         This allows you to control and use that specific turtle object to perform various drawing operations.
     (4) <b>def create_hexagon(turtle): -- Hexagon Function Definition</b>
         Defines a function called create_hexagon that takes a Turtle object (turtle) as an argument.
@@ -30,6 +31,9 @@ Here is an explanation for the completed puzzle
         After drawing each side, the Turtle object turns 60 degrees to the left, setting up the correct angle for the next side of the hexagon.
     (8) <b>create_hexagon(alex) -- Call Hexagon Function</b> 
         Calls the create_hexagon function, passing the Turtle object alex as an argument. This initiates the drawing of the hexagon.
+
+What to do next
+^^^^^^^^^^^^^^^
 
 
 .. raw:: html
