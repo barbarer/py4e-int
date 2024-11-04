@@ -63,7 +63,7 @@ Look at the code below and predict what will be printed.
 
     What is the last thing (last line of text) that will be printed when the code below runs?
 
-    - :['"]?Attr: None['"]?: The default is to print None if there is no attribute with that name when you use ``.get('name')``.
+    - :['"]?Attr\: None['"]?: The default is to print None if there is no attribute with that name when you use ``.get('name')``.
       :['"]?None['"]?: Something will be printed before the value. Look at the print statement again.
       :.*: What is the default value when there is no attribute with that name?
 
