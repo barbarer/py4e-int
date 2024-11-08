@@ -1,8 +1,8 @@
 Write Code Questions
 ------------------------
 
-.. selectquestion:: bsoup_writecode_1_sq_v2
-   :fromid: bsoup_writecode1q_v2, bsoup_writecode1q_mu
+.. selectquestion:: bsoup_writecode_1_sq_v3
+   :fromid: bsoup_writecode1q_v3, bsoup_writecode1q_mu_v2
    :toggle: lock
 
 .. selectquestion:: bsoup_writecode_2_sq_v2

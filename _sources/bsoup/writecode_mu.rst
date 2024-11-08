@@ -1,7 +1,7 @@
 Write Code Questions
 ---------------------
 
-.. parsonsprob:: bsoup_writecode1q_mu
+.. parsonsprob:: bsoup_writecode1q_mu_v2
   :numbered: left
   :practice: T
   :adaptive:
@@ -19,9 +19,9 @@ Write Code Questions
   =====
       soup = BeautifulSoup(r.text, 'html.parser')
   =====
-      text = soup.find('a', text = "Current Students")
+      text = soup.find('a', string = "Current Students")
   =====
-      text = soup.find_all('a', text = "Current Students")  #paired
+      text = soup.find_all('a', string = "Current Students")  #paired
   =====
       info = text.get('href')
   =====

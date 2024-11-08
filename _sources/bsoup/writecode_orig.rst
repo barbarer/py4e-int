@@ -1,11 +1,11 @@
 Write Code Questions
 ---------------------
 #.
-    .. tabbed:: bsoup_writecode1_v2
+    .. tabbed:: bsoup_writecode1_v3
 
         .. tab:: Question
 
-            .. activecode:: bsoup_writecode1q_v2
+            .. activecode:: bsoup_writecode1q_v3
                 :practice: T
                 :nocodelens:
                 :language: python3
@@ -30,7 +30,7 @@ Write Code Questions
                     soup = BeautifulSoup(r.text, 'html.parser')
 
                     # inspect Current Students to get the details
-                    text = soup.find('a', text = "Current Students")
+                    text = soup.find('a', string = "Current Students")
                     info = text.get('href')
                     all_info = "https://umich.edu" + info
                     return all_info
