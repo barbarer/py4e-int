@@ -83,13 +83,13 @@ The slice operator creates a new list and the assignment makes
 ``t`` refer to it, but none of that has any effect on the list
 that was passed as an argument.
 
-.. mchoice:: listArg_MC_slice
+.. mchoice:: listArg_MC_slice_v2
     :practice: T
     :answer_a: True
     :answer_b: False
     :correct: a
-    :feedback_a: The slice operator creates a new list called "t", but that will not affect the list it was passed.
-    :feedback_b: The slice operator creates a new list called "t", so it will not modify the original list.
+    :feedback_a: The slice operator creates a new list called "lst", but that will not affect the list it was passed.
+    :feedback_b: The slice operator creates a new list called "lst", so it will not modify the original list.
 
     True or False. The following code block will **not** remove the first element from the list argument.
 

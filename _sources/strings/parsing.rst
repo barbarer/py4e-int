@@ -19,10 +19,10 @@ we will use string slicing to extract the portion of the string which we
 are looking for.
 
 .. codelens:: strParsing
-    :question: What is the value of sppos after the line with the red arrow executes?
+    :question: What is the value of spacepos after the line with the red arrow executes?
     :breakline: 4
     :feedback: The second argument in find() is the start position.
-    :correct: globals.sppos
+    :correct: globals.spacepos
 
     data = 'From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008'
     atpos = data.find('@')
