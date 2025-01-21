@@ -49,7 +49,7 @@ words in the line and count each word using a dictionary.
 You will see that we have two ``for`` loops. The outer loop is
 reading the lines of the file and the inner loop is iterating through
 each of the words on that particular line. This is an example of a
-pattern called *nested loops* because one of the loops is
+pattern called a *nested loop* because one of the loops is
 the *outer* loop and the other loop is the *inner* loop.
 
 Because the inner loop executes all of its iterations each time the
@@ -57,10 +57,10 @@ outer loop makes a single iteration, we think of the inner loop as
 iterating "more quickly" and the outer loop as iterating more slowly.
 
 
-The combination of the two nested loops ensures that we will count every
+The combination of the two loops ensures that we will count every
 word on every line of the input file.
 
-.. fillintheblank:: question9_3_1
+.. fillintheblank:: dandf_fitb_1
    :practice: T
 
    A(n) _________ is a pattern consisting of two for loops, where one of the loops is the outer loop and the other is the inner loop.
@@ -71,7 +71,7 @@ word on every line of the input file.
 
 In our ``else`` statement, we use the more compact alternative for incrementing a variable. ``counts[word] += 1`` is equivalent to ``counts[word] = counts[word] + 1``. Either method can be used to change the value of a variable by any desired amount. Similar alternatives exist for ``-=``\ , ``*=``\ , and ``/=``.
 
-.. mchoice:: question9_3_2
+.. mchoice:: dandf_mcq_increment
    :practice: T
    :answer_a: counts[word] = counts[word] + 1
    :answer_b: counts[word] += 1
@@ -105,7 +105,7 @@ It is a bit inconvenient to look through the dictionary to find the most
 common words and their counts, so we need to add some more Python code
 to get us the output that will be more helpful.
 
-.. parsonsprob:: question9_3_3
+.. parsonsprob:: dandf_pp_count_each_letter_rev
    :numbered: left
    :practice: T
    :adaptive:
@@ -116,24 +116,19 @@ to get us the output that will be more helpful.
    =====
    with open(file_to_read, "r") as filename:
    =====
-   with open(file_to_read, "w") as filename: #distractor
+   with open(file_to_read, "w") as filename: #paired
    =====
     lines = filename.readlines()
-   =====
     word_count = {}
-   =====
-    word_count = dictionary() #distractor
    =====
     for line in lines:
    =====
-    for word in lines.split() #distractor
-   =====
      for word in lines.split():
    =====
-      if word not in word_count.keys():
+      if word not in word_count:
    =====
-       word_count[word] = 0
+       word_count[word] = 1
    =====
-      counts[word] += 1
+      word_count[word] += 1
    =====
    print(word_count)

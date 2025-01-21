@@ -36,6 +36,10 @@ zero or one time.
 ``??`` Applies to the immediately preceding character(s) and indicates to
 match zero or one time in "non-greedy mode".
 
+``{n}`` Applies to the immediately preceding character(s) and indicates to match exactly n times.
+
+``{n,m}`` Applies to the immediately preceding character(s) and indicates to match at least n and at most m times.
+
 ``[aeiou]`` Matches a single character as long as that character is in the
 specified set. In this example, it would match "a", "e", "i", "o", or
 "u", but no other characters.

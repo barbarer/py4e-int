@@ -52,7 +52,7 @@ viewer.
 
 .. fillintheblank:: image_header
 
-    The ________ header indicates that the boday of the document is a jpeg image.
+    The ________ header indicates that the body of the document is a jpeg image.
 
     - :Content-Type: Yes, the 'Content-Type' header has value "image/jpeg" to denote its a jpeg image.
       :.*: Try again! This has to be an exact match.

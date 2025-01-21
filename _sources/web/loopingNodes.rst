@@ -98,12 +98,12 @@ Otherwise, Python will not find any desired nodes.
 parent. ``lst2`` looks for ``user`` elements that are not nested within
 the top level ``stuff`` element where there are none.
 
-.. fillintheblank:: webLoop_fill
+.. fillintheblank:: webLoop_fill_rev
     :practice: T
     :casei:
 
     In order for Python to find the desired nodes, it is important to include all ______
-    level elements in the ``findall`` statement expect for the top level element.
+    level elements in the ``findall`` statement except for the top level element.
 
     - :parent: It is important to include all parent level elements. These are the outside elements that contain the other elements.
       :.*: Not the children but the _______.

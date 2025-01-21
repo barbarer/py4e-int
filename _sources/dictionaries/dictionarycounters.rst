@@ -71,24 +71,19 @@ Here's the output of the program:
 The histogram indicates that the letters "a" and "b"
 appear once; "o" appears twice, and so on.
 
-.. parsonsprob:: question9_2_1
+.. parsonsprob:: dict-counter-pp1
    :numbered: left
    :practice: T
    :adaptive:
 
-   Construct a block of code that prints a dictionary containing the amount of times a letter appears in the string 'word'.
+   Construct a block of code that prints a dictionary containing the amount of times a letter appears in the string called 'word'.
    -----
    word = "cheerful"
-   =====
-   d = dictionary() #distractor
-   =====
    d = dict()
    =====
    for char in word:
    =====
-   for char in d: #distractor
-   =====
-    if char in d: #distractor
+   for char in d: #paired
    =====
     if char not in d:
    =====
@@ -114,7 +109,7 @@ For example:
    >>> print(counts.get('tim', 0))
    0
 
-.. mchoice:: question9_2_2
+.. mchoice:: question9_2_2_rev
     :practice: T
     :answer_a: print(names.get('Russell'))
     :answer_b: names.get('Russell')
@@ -123,10 +118,10 @@ For example:
     :correct: c
     :feedback_a: Try again! There is no default value, so it will not print out anything
     :feedback_b: Try again! There is no default value, so it will not return anything. The statement is also not being printed out.
-    :feedback_c: Correct! This line of code uses print so that the number is printed and not just returned, and it makes sure to include the default value in case 'Russell' does not appear in the dictionary.
+    :feedback_c: Correct! This line of code uses print so that the number is printed and not just returned, and it makes sure to include the default value of 0 in case 'Russell' does not appear in the dictionary.
     :feedback_d: Try again! This statement does not print out the number, just returns the number.
 
-    Which use of the get method correctly returns the amount of times the name "Russell" appears in the dictionary names?
+    Which use of the following correctly prints the amount of times the name "Russell" appears in the dictionary names?
 
     .. code-block:: python
 

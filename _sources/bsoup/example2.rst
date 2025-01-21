@@ -26,17 +26,17 @@ But clicking through to gather all those links would be a pain. Fortunately, we 
 
 Run the code below to see what it collects.
 
-.. activecode:: prof_homepages_example
+.. activecode:: prof_homepages_example_rev
    :language: python3
    :nocodelens:
 
-   #Get the webpages
    # Load libraries for web scraping
    from bs4 import BeautifulSoup
    import requests
+
    # Get a soup from multiple URLs
    base_url = 'https://web.archive.org/web/20230128074139/https://www.si.umich.edu/people/'
-   endings = ['barbara-ericson', 'steve-oney', 'paul-resnick']
+   endings = ['barbara-ericson', 'steve-oney']
    for ending in endings:
        url = base_url + ending
        r = requests.get(url)
@@ -45,12 +45,16 @@ Run the code below to see what it collects.
        #Extract info from the page
        # Get first tag of a certain type from the soup
        tag = soup.find('a', class_='item-teaser--heading-link')
-       # Get info from tag
-       info = tag.get('href')
 
-       #Do something with the info
-       # Print the info
-       print(info)
+       # if it was found 
+       if tag:
+
+           # Get info from tag
+           info = tag.get('href')
+
+           #Do something with the info
+           # Print the info
+           print(info)
 
 This code is made up of three plans. Click on each of the plans below to learn more about it.
 

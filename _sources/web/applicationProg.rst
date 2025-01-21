@@ -94,7 +94,7 @@ URL: https://dog-api.kinduff.com/api/facts.
 Try entering that in a browser window.  You can also use Python to the get data
 from an API using a URL as shown below.
 
-.. activecode:: web-api-get-dog-fact
+.. activecode:: web-api-get-dog-fact-rev
     :language: python3
     :caption: Get a dog fact from an API
 
@@ -102,7 +102,7 @@ from an API using a URL as shown below.
     import json
 
     # get the data
-    response = requests.get('https://dog-api.kinduff.com/api/facts')
+    response = requests.get('https://dog-api.kinduff.com/api/facts?number=2')
     data = response.text
     in_dict = json.loads(data)
     print(in_dict.get("facts"))

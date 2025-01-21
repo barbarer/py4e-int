@@ -178,12 +178,12 @@ get the value for an attribute of the tag.  A link or anchor tag looks like
     for tag in tags:
         print(tag.get('href', None))
 
-.. parsonsprob:: bs_print_get_all_href_pp
+.. parsonsprob:: bs_print_get_all_href_pp_rev
    :numbered: left
    :adaptive:
    :order: 4, 3, 7, 8, 0-1, 10, 11, 9, 2, 6, 5
 
-   Put the following blocks in order to find all the link tags and print the href for each one for the Michgian Daily.
+   Put the following blocks in order to find all the link tags and print the href for each one for the New York Times.
    -----
    import requests
    from bs4 import BeautifulSoup
