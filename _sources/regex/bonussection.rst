@@ -35,12 +35,12 @@ regular expression support in ``grep``. As an example,
 notation ``[^ ]``\ , which simply means match a character that is anything
 other than a space.
 
-.. mchoice:: regex_grep_mcq_rev
+.. mchoice:: regex_grep_mcq_rev2
     :multiple_answers:
     :practice: T
     :answer_a: $ grep '\\$[0-9.]+' mbox-short.txt
     :answer_b: $ grep '\\$[0-9]+'
-    :answer_c: $ grep '\\$[/d.]+' mbox-short.txt
+    :answer_c: $ grep '\\$[\\d.]+' mbox-short.txt
     :answer_d: $ grep '$[0-9.]+' mbox-short.txt
     :correct: a,c
     :feedback_a: Correct! This is the correct way to use grep to find prices in a file.
