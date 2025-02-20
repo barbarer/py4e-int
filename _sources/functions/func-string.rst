@@ -61,6 +61,8 @@ String Indices
     # function call
     main()
 
+    ====
+
     from unittest.gui import TestCaseGui
     class myTests(TestCaseGui):
 
