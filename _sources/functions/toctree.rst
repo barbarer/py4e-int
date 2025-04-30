@@ -46,6 +46,7 @@ Functions
    functions_tups_dicts_writecode.rst
    func_Str_Cond.rst
    funcWithListsAndLoops.rst
+   funcWithSetsAndDict.rst
    funcGAI-hw1.rst
    funcGAI-Diss2.rst
 
