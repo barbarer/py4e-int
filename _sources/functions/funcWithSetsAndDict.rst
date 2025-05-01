@@ -23,7 +23,7 @@ Students will know and be able to do the following.
 
 * Predict the output of functions with sets and dictionaries.
 
-Sets
+What is a Set?
 ============================
 
 A set is like a list in that holds items, but it does not hold items in an particular order.  
@@ -148,8 +148,8 @@ Set Methods
 ==============
 You can use the following methods with sets.
 
-* union(other_set) - returns a new set with the all the items in each set
-* intersection(other_set) - returns a new set with just the items in both sets
+* union(other_set) - returns a new set with all the items from each of the sets
+* intersection(other_set) - returns a new set with just the items that are in both sets 
 * difference(other_set) - returns a new set with the items in the first set that are not in the second set
 * issubset(other_set) - returns True if the set is a subset of the other set
 * isdisjoint(other_set) - returns True if the two sets have no items in common
@@ -186,7 +186,7 @@ You can use the following methods with sets.
     # define two sets
     s1 = {1, 2, 3}
     s2 = {3, 4, 5}
-    
+
     print(s1.difference(s2))
     print(s1 - s2)
     print(s2 - s1)
