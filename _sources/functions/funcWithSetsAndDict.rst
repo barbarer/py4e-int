@@ -180,12 +180,12 @@ Set Methods
 ==============
 You can use the following methods with sets.
 
-* set1.union(other_set) - returns a new set with all the items from each of the sets
-* set1.intersection(other_set) - returns a new set with just the items that are in both sets 
-* set1.difference(other_set) - returns a new set with the items in the first set that are not in the second set
-* set1.issubset(other_set) - returns True if the set is a subset of the other set
-* set1.issuperset(other_set) - returns True if the set is a superset of the other set
-* set1.semmantic_difference(other_set) - returns a new set with the items that are in either set, but not both.  This is also known as an exclusive or (XOR).
+* set1.union(other_set) - returns a new set with all the items from ``set1`` and ``other_set``.
+* set1.intersection(other_set) - returns a new set with just the items that are in both ``set1`` and ``other_set``.
+* set1.difference(other_set) - returns a new set with the items in ``set1`` that are not in ``other_set``.
+* set1.issubset(other_set) - returns True if ``set1`` is a subset (has some of the same elements and no other elements) of ``other_set``.
+* set1.issuperset(other_set) - returns True if set1 is a superset (has all the same elments and may have other elements) of ``other_set``.
+* set1.semmantic_difference(other_set) - returns a new set with the items that are in either ``set1`` or ``other_set``, but not both.  This is also known as an exclusive or (XOR).
 
 .. activecode:: func_set_union_int_ac
     :caption: Set methods
@@ -205,9 +205,9 @@ You can use the following methods with sets.
 .. fillintheblank:: funct_set_union_fitb
     :practice: T
 
-    What character can be used to indicate the union of two sets as shown in the code above?
+    What character can be used to get the union of two sets as shown in the code above?
 
-    - :\|: Use a pipe to indicate the union of two sets.
+    - :\|: Use a pipe to get the union of two sets.
       :.*: Which gives the same output as the union method? 
 
 .. activecode:: func_set_diff_sub_ac
@@ -232,9 +232,9 @@ You can use the following methods with sets.
 .. fillintheblank:: funct_set_diff_fitb
     :practice: T
 
-    What character is used to indicate the difference between two sets in the code above?
+    What character is used to get the difference between two sets in the code above?
 
-    - :\-: Use a dash to indicate the difference between two sets.
+    - :\-: Use a dash to get the difference between two sets.
       :.*: Which gives the same output as the difference method?
 
 .. activecode:: func_set_super_exor_ac
@@ -258,7 +258,7 @@ You can use the following methods with sets.
 
     What character is used to find the symmetric difference (exlusive or) between two sets in the code above?
 
-    - :\^: Use a ^ to indicate the symmetric difference between two sets (exclusive or)
+    - :\^: Use a ^ to get the symmetric difference between two sets (exclusive or)
       :.*: Which gives the same output as the symmetric_difference method?
 
 .. dragndrop:: funct_set_methods_dnd
