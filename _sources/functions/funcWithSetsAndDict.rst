@@ -203,6 +203,29 @@ You can use the following methods with sets.
 
     - :\-: Use a dash to indicate the difference between two sets.
       :.*: Which gives the same output as the difference method?
+
+
+Creating Sets
+================
+
+You can innitialize a set with a string, list, or tuple. The set will only contain the unique items from the list or tuple.
+
+.. activecode:: func_set_create_ac
+    :caption: Creating sets
+
+    Run this code to see what it prints.
+    ~~~~
+    # create a set from a string
+    s1 = set("hello")
+    print(s1)
+
+    # create a set from a list
+    s2 = set([1, 2, 3, 2, 5])
+    print(s2)
+
+    # create a set from a tuple
+    s3 = set((6, 6, 9))
+    print(s3)
  
 
 Dictionaries
