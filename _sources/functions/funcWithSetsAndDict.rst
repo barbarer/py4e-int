@@ -34,12 +34,16 @@ You can add items to a set and remove items from a set, just like you can do wit
 
     Run this code to see what it prints.
     ~~~~
-    # function definition
-    s1 = {1, 2, 3}
+    # initialize a set
+    s1 = {1, 4, 8}
     print(s1)
-    s1.add(4)
+
+    # add an item to a set
+    s1.add(3)
     print(s1)
-    s1.remove(2)
+
+    # remove an item from a set
+    s1.remove(8)
     print(s1)
 
 .. fillintheblank:: funct_tuple_test_char
@@ -58,14 +62,22 @@ Sets only Contain Immutable Items
 
     Run this code to see what happens. Then remove any code that causes and error and run it again.
     ~~~~
-    # function definition
+    # create an empty set
     s1 = set()
+
+    # add an integer
     s1.add(1)
     print(s1)
+
+    # add a string
     s1.add("hi")
     print(s1)
+
+    # add a tuple
     s1.add((1, 2))
     print(s1)
+
+    # add a list
     s1.add([1, 3, 2])
     print(s1)
 
@@ -120,9 +132,11 @@ Sets Do Not Allow Duplicates
 
     Run this code to see what it prints.
     ~~~~
-    # function definition
+    # create a set
     s1 = {1, 2, 3}
     print(s1)
+
+    # add an integer
     s1.add(1)
     print(s1)
 
@@ -146,11 +160,13 @@ You can use the following methods with sets.
 
     Run this code to see what it prints.
     ~~~~
-    # function definition
+    # define two sets
     s1 = {1, 2, 3}
     s2 = {3, 4, 5}
+
     print(s1.union(s2))
     print(s1 | s2)
+
     print(s1.intersection(s2))
     print(s1 & s2)
 
@@ -167,12 +183,14 @@ You can use the following methods with sets.
 
     Run this code to see what it prints.
     ~~~~
-    # function definition
+    # define two sets
     s1 = {1, 2, 3}
     s2 = {3, 4, 5}
+    
     print(s1.difference(s2))
     print(s1 - s2)
     print(s2 - s1)
+
     print(s1.issubset(s2))
     print(s1 <= s2)
     s3 = {1, 3}
