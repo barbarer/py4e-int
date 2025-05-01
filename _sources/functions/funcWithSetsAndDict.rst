@@ -27,7 +27,8 @@ What is a Set?
 ============================
 
 A set is like a list in that holds items, but it does not hold items in an particular order.  
-You can add items to a set and remove items from a set, just like you can do with a list. 
+You can add items to a set and remove items from a set, just like you can do with a list. You can
+also check if an item is in a set.
 
 .. activecode:: func_set_add_rem_ac
     :caption: Adding and removing items from a set
@@ -45,6 +46,10 @@ You can add items to a set and remove items from a set, just like you can do wit
     # remove an item from a set
     s1.remove(8)
     print(s1)
+
+    # check if an item is in a set
+    print(1 in s1)
+    print(9 in s1)
 
 .. fillintheblank:: funct_tuple_test_char
     :practice: T
@@ -148,12 +153,12 @@ Set Methods
 ==============
 You can use the following methods with sets.
 
-* union(other_set) - returns a new set with all the items from each of the sets
-* intersection(other_set) - returns a new set with just the items that are in both sets 
-* difference(other_set) - returns a new set with the items in the first set that are not in the second set
-* issubset(other_set) - returns True if the set is a subset of the other set
-* isdisjoint(other_set) - returns True if the two sets have no items in common
-
+* set1.union(other_set) - returns a new set with all the items from each of the sets
+* set1.intersection(other_set) - returns a new set with just the items that are in both sets 
+* set1.difference(other_set) - returns a new set with the items in the first set that are not in the second set
+* set1.issubset(other_set) - returns True if the set is a subset of the other set
+* set1.issuperset(other_set) - returns True if the set is a superset of the other set
+* set1.semmantic_difference(other_set) - returns a new set with the items that are in either set but not both
 
 .. activecode:: func_set_union_int_ac
     :caption: Set methods
@@ -196,6 +201,7 @@ You can use the following methods with sets.
     s3 = {1, 3}
     print(s3.issubset(s1))
 
+
 .. fillintheblank:: funct_set_diff_fitb
     :practice: T
 
@@ -204,11 +210,34 @@ You can use the following methods with sets.
     - :\-: Use a dash to indicate the difference between two sets.
       :.*: Which gives the same output as the difference method?
 
+.. activecode:: func_set_super_exor_ac
+    :caption: Set methods
+
+    Run this code to see what it prints.
+    ~~~~
+    # define two sets
+    s1 = {1, 2, 3}
+    s2 = {3, 4, 5}
+
+    print(s1.issuperset(s3))
+    print(s1 >= s3)
+
+    print(s1.symmetric_difference(s2))
+    print(s1 ^ s2)
+
+.. fillintheblank:: funct_exor_fitb
+    :practice: T
+
+    What character is used to find the symmetric difference between two sets in the code above?
+
+    - :\^: Use a ^ to indicate the symmetric difference between two sets (exclusive or)
+      :.*: Which gives the same output as the symmetric_difference method?
+
 
 Creating Sets
 ================
 
-You can innitialize a set with a string, list, or tuple. The set will only contain the unique items from the list or tuple.
+You can innitialize a set with a string, list, or tuple. The set will only contain the unique items.
 
 .. activecode:: func_set_create_ac
     :caption: Creating sets
@@ -226,6 +255,25 @@ You can innitialize a set with a string, list, or tuple. The set will only conta
     # create a set from a tuple
     s3 = set((6, 6, 9))
     print(s3)
+
+Sorting Sets
+===============
+.. activecode:: func_set_sort_ac
+    :caption: Soring a set and converting to alist
+
+    Run this code to see what it prints.
+    ~~~~
+    # initialize a set
+    s1 = {3, 2, 1}
+    print(s1)
+    l1 = list(s1)
+    print(l1)
+    print(sorted(s1))
+
+    # initalize another set
+    s2 = {"way", "back", "home"}
+    print(s2)
+    print(sorted(s2))
  
 
 Dictionaries
