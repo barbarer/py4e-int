@@ -259,7 +259,7 @@ You can innitialize a set with a string, list, or tuple. The set will only conta
 Sorting Sets
 ===============
 .. activecode:: func_set_sort_ac
-    :caption: Soring a set and converting to alist
+    :caption: Sorting a set and converting a set to  a list
 
     Run this code to see what it prints.
     ~~~~
