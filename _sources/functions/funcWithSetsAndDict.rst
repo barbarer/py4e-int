@@ -256,7 +256,7 @@ You can use the following methods with sets.
 .. fillintheblank:: funct_exor_fitb
     :practice: T
 
-    What character is used to find the symmetric difference between two sets in the code above?
+    What character is used to find the symmetric difference (exlusive or) between two sets in the code above?
 
     - :\^: Use a ^ to indicate the symmetric difference between two sets (exclusive or)
       :.*: Which gives the same output as the symmetric_difference method?
@@ -266,10 +266,9 @@ You can use the following methods with sets.
     :feedback: Read this page and try again.
     :match_1: &||| intersection
     :match_2: <=||| issubset
-    :match_3: \|||| union
-    :match_4: >=||| issuperset
-    :match_5: \-||| difference
-    :match_6: \^||| symmetric_difference
+    :match_3: >=||| issuperset
+    :match_4: -||| difference
+    :match_5: ^||| symmetric_difference
  
     Drag each symbol to the method it is equivalent to.
 
@@ -319,6 +318,36 @@ Sorting Sets
 .. Note::
 
    The function sorted(set) will return a new sorted list in ascending order. 
+
+.. parsonsprob:: func_set_unique_characters_pp
+   :numbered: left
+   :adaptive:
+   :practice: T
+
+   Drag the blocks from the left and put them in the correct order on the right to define a function ``total_even`` that returns the total of the even numbers in the passed list.
+   -----
+   def unique_characters(strings):
+   =====
+       # Initialize an empty set to store unique characters
+       unique_chars = set()
+   =====
+       # Iterate over each string in the list
+       for string in strings:
+   =====
+           # Add all characters of the current string to the set
+           unique_chars.update(string)
+   =====
+           # Add all characters of the current string to the set
+           unique_chars.add(string) #paired
+   =====
+       # Convert the set to a sorted list
+       sorted_unique_chars = sorted(unique_chars) 
+   =====
+       # Convert the set to a sorted list
+       sorted_unique_chars = sort(unique_chars) #paired
+   =====
+       # reurn the sorted list of unique characters
+       return sorted_unique_chars
  
 
 Dictionaries
