@@ -353,7 +353,7 @@ Sorting Sets
 Dictionaries
 ============================
 
-A dictionary stores a value for a key.
+A dictionary stores a value for a key. The keys must be immutable and unique.
 
 .. fillintheblank:: funct_dict_num_t
 
