@@ -45,7 +45,7 @@ You can add items to a set and remove items from a set, just like you can do wit
 .. fillintheblank:: funct_tuple_test_char
     :practice: T
 
-    What characters are used to indicate the inintialize the values in a set in the code above?
+    What characters are used to inintialize the values in a set in the code above?
 
     - :{}|curly braces: Use curly braces to initialize a set with items seperated by commas.
       :.*: What charcaters enclose the set values for s1?  
@@ -86,7 +86,7 @@ Sets only Contain Immutable Items
 
         +   Yes, Tuples are immutable.
 
-     -   Integers
+    -   Integers
 
         +   Yes, Integers are immutable.
 
