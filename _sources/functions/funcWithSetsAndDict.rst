@@ -158,6 +158,7 @@ You can use the following methods with sets.
     :practice: T
 
     What character can be used to indicate the union of two sets as shown in the code above?
+
     - :\|: Use a pipe to indicate the union of two sets.
       :.*: Which gives the same output as the union method? 
 
@@ -171,15 +172,20 @@ You can use the following methods with sets.
     s2 = {3, 4, 5}
     print(s1.difference(s2))
     print(s1 - s2)
+    print(s2 - s1)
     print(s1.issubset(s2))
     print(s1 <= s2)
+    s3 = {1, 3}
+    print(s3.issubset(s1))
 
 .. fillintheblank:: funct_set_diff_fitb
     :practice: T
 
     What character is used to indicate the difference between two sets in the code above?
+
     - :\-: Use a dash to indicate the difference between two sets.
       :.*: Which gives the same output as the difference method?
+ 
 
 Dictionaries
 ============================
@@ -288,7 +294,7 @@ There is another way to update the value for a key that works even if the key is
 
         +   Yes, Tuples are immutable.
 
-     -   Sets
+    -   Sets
 
         -   No, sets can change.
 
