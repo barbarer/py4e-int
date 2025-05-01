@@ -328,26 +328,26 @@ Sorting Sets
    -----
    def unique_characters(strings):
    =====
-       # Initialize an empty set to store unique characters
+       # Init an empty set 
        unique_chars = set()
    =====
-       # Iterate over each string in the list
+       # Loop through the strings
        for string in strings:
    =====
-           # Add all characters of the current string to the set
+           # Add the chars in string 
            unique_chars.update(string)
    =====
-           # Add all characters of the current string to the set
+           # Add the chars in string 
            unique_chars.add(string) #paired
    =====
-       # Convert the set to a sorted list
-       sorted_unique_chars = sorted(unique_chars) 
+       # Convert to a sorted list
+       sorted_chars = sorted(unique_chars) 
    =====
-       # Convert the set to a sorted list
-       sorted_unique_chars = sort(unique_chars) #paired
+       # Convert to a sorted list
+       sorted_chars = sort(unique_chars) #paired
    =====
-       # reurn the sorted list of unique characters
-       return sorted_unique_chars
+       # return the sorted list 
+       return sorted_chars
  
 
 Dictionaries
