@@ -128,7 +128,7 @@ Sets Do Not Allow Duplicates
 
         +  Yes, it ignores the duplicate item.
 
-    -   1, 2, 3, 3 
+    -   1, 2, 3, 1
 
         -   No, sets do not allow duplicate items.
 
@@ -156,7 +156,7 @@ Adding Mutliple Items to a Set
 .. activecode:: func_set_udpate_ac
     :caption: 
 
-    Run this code to see what it prints.
+    Run this code to see what it prints.  You will get an error.  Remove the code that causes the error and run it again.
     ~~~~
     # create the sets 
     s1 = {8, 3, 5}
@@ -174,7 +174,7 @@ Adding Mutliple Items to a Set
 
 .. Note::
 
-   The set method add only adds one item to a set.  To add several items use the set update method.  
+   The set ``add`` method only adds one item to a set.  To add several items use the set ``update`` method.  
 
 Set Methods
 ==============
@@ -185,7 +185,7 @@ You can use the following methods with sets.
 * set1.difference(other_set) - returns a new set with the items in the first set that are not in the second set
 * set1.issubset(other_set) - returns True if the set is a subset of the other set
 * set1.issuperset(other_set) - returns True if the set is a superset of the other set
-* set1.semmantic_difference(other_set) - returns a new set with the items that are in either set but not both
+* set1.semmantic_difference(other_set) - returns a new set with the items that are in either set, but not both.  This is also known as an exclusive or (XOR).
 
 .. activecode:: func_set_union_int_ac
     :caption: Set methods
