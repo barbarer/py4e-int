@@ -118,7 +118,7 @@ Sets Do Not Allow Duplicates
 .. mchoice:: funct_set_add_dup_mc
     :practice: T
 
-    What values will be printed last from the code below?
+    What values will be printed last when the code below is run?    
 
     -   Nothing will print.  You will get an error since you are trying to add a duplicate item to a set.
 
@@ -245,6 +245,7 @@ You can use the following methods with sets.
     # define two sets
     s1 = {1, 2, 3}
     s2 = {3, 4, 5}
+    s3 = {1, 3}
 
     print(s1.issuperset(s3))
     print(s1 >= s3)
@@ -259,6 +260,18 @@ You can use the following methods with sets.
 
     - :\^: Use a ^ to indicate the symmetric difference between two sets (exclusive or)
       :.*: Which gives the same output as the symmetric_difference method?
+
+.. dragndrop:: funct_set_methods_dnd
+    :practice: T
+    :feedback: Read this page and try again.
+    :match_1: &||| intersection
+    :match_2: <=||| issubset
+    :match_3: \|||| union
+    :match_4: >=||| issuperset
+    :match_5: \-||| difference
+    :match_6: \^||| symmetric_difference
+ 
+    Drag each symbol to the method it is equivalent to.
 
 
 Creating Sets
@@ -301,10 +314,11 @@ Sorting Sets
     s2 = {"way", "back", "home"}
     print(s2)
     print(sorted(s2))
+    print(s2)
 
 .. Note::
 
-   The function sorted(set) will return a sorted list in ascending order. 
+   The function sorted(set) will return a new sorted list in ascending order. 
  
 
 Dictionaries
@@ -395,7 +409,7 @@ There is another way to update the value for a key that works even if the key is
     :match_4: {1, 2, 3}||| Set
     :match_5: {"a": 5, "b": 2}|||Dictionary
 
-    Drag each item to its type.
+    Drag each object to its type.
 
 .. mchoice:: funct_set_dict_which_are_immutable_mc
     :practice: T
