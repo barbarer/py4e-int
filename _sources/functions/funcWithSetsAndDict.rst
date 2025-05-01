@@ -215,9 +215,10 @@ You can use the following methods with sets.
 
     Run this code to see what it prints.
     ~~~~
-    # define two sets
+    # define the sets
     s1 = {1, 2, 3}
     s2 = {3, 4, 5}
+    s3 = {1, 3}
 
     print(s1.difference(s2))
     print(s1 - s2)
@@ -225,7 +226,6 @@ You can use the following methods with sets.
 
     print(s1.issubset(s2))
     print(s1 <= s2)
-    s3 = {1, 3}
     print(s3.issubset(s1))
 
 
