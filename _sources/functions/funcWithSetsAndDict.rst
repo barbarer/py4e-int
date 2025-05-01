@@ -59,31 +59,6 @@ You can also check if an item is in a set.
     - :{}|curly braces: Use curly braces to initialize a set with items seperated by commas.
       :.*: What charcaters enclose the set values for s1?  
 
-Adding Mutliple Items to a Set
-=================================
-
-.. activecode:: func_set_udpate_ac
-    :caption: 
-
-    Run this code to see what it prints.
-    ~~~~
-    # create the sets 
-    s1 = {8, 3, 5}
-    s2 = {1, 2, 3}
-   
-    # try to add the sets together 
-    s1.add(s2)
-    print(s1)
-    print(s2)
-
-    # use update to add two sets together
-    s1.update(s2)
-    print(s1)
-    print(s2)
-
-.. Note::
-
-   The set method add only adds one item to a set.  To add several items use the set update method.  
 
 Sets only Contain Immutable Items
 ==================================
@@ -174,6 +149,32 @@ Sets Do Not Allow Duplicates
 .. Note::
 
    Sets only store unique items.  If you try to add a duplicate item to a set it will be ignored.  
+
+Adding Mutliple Items to a Set
+=================================
+
+.. activecode:: func_set_udpate_ac
+    :caption: 
+
+    Run this code to see what it prints.
+    ~~~~
+    # create the sets 
+    s1 = {8, 3, 5}
+    s2 = {1, 2, 3}
+   
+    # try to add the sets together 
+    s1.add(s2)
+    print(s1)
+    print(s2)
+
+    # use update to add two sets together
+    s1.update(s2)
+    print(s1)
+    print(s2)
+
+.. Note::
+
+   The set method add only adds one item to a set.  To add several items use the set update method.  
 
 Set Methods
 ==============
