@@ -110,7 +110,7 @@ Sets only Contain Immutable Items
 
 .. Note::
 
-   Sets can only store immutable items, even though they are mutable (can change).
+   Sets can only store immutable items, even though sets themselves are mutable (can change).
 
 Sets Do Not Allow Duplicates
 =============================
@@ -298,7 +298,7 @@ You can innitialize a set with a string, list, or tuple. The set will only conta
 Sorting Sets
 ===============
 .. activecode:: func_set_sort_ac
-    :caption: Sorting a set and converting a set to  a list
+    :caption: Sorting a set and converting a set to a list
 
     Run this code to see what it prints.
     ~~~~
@@ -317,14 +317,14 @@ Sorting Sets
 
 .. Note::
 
-   The function sorted(set) will return a new sorted list in ascending order. 
+   The function sorted(set) will return a new list sorted in ascending order. 
 
 .. parsonsprob:: func_set_unique_characters_pp
    :numbered: left
    :adaptive:
    :practice: T
 
-   Drag the blocks from the left and put them in the correct order on the right to define a function ``total_even`` that returns the total of the even numbers in the passed list.
+   Drag the blocks from the left and put them in the correct order on the right to define a function ``unique_characters(strings)`` that takes a list of strings and returns a sorted list of all the distinct characters in the strings.
    -----
    def unique_characters(strings):
    =====
