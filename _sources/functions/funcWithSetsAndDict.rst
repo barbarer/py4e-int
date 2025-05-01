@@ -183,7 +183,7 @@ You can use the following methods with sets.
 * set1.union(other_set) - returns a new set with all the items from ``set1`` and ``other_set``.
 * set1.intersection(other_set) - returns a new set with just the items that are in both ``set1`` and ``other_set``.
 * set1.difference(other_set) - returns a new set with the items in ``set1`` that are not in ``other_set``.
-* set1.issubset(other_set) - returns True if ``set1`` is a subset (has some of the same elements and no other elements) of ``other_set``.
+* set1.issubset(other_set) - returns True if ``set1`` is a subset (has some or all of the same elements and no other elements) of ``other_set``.
 * set1.issuperset(other_set) - returns True if set1 is a superset (has all the same elments and may have other elements) of ``other_set``.
 * set1.semmantic_difference(other_set) - returns a new set with the items that are in either ``set1`` or ``other_set``, but not both.  This is also known as an exclusive or (XOR).
 
