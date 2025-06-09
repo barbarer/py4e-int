@@ -1,11 +1,11 @@
 Introduction to Problem Types
-=============================
+===============================
 
 Please read the following, watch the videos, and try to solve the problems.
 
 
 Solving Mixed-up Code Problems
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you see a problem like the one below you will need to put the mixed-up
 code in the correct order on the right side. You
@@ -103,8 +103,8 @@ See the video below for an example.
 .. youtube:: w9hTOJ7iJpE
     :divid: mooc_nested-write-code-video-ex
     :optional:
-    :width: 1020
-    :height: 826
+    :width: 650
+    :height: 415
     :align: center
 
 Finish writing the code for the following problem.
@@ -138,24 +138,11 @@ Finish writing the code for the following problem.
 
     myTests().main()
 
-.. parsonsprob:: intro-sample-puzzle-mooc_nested
-    :numbered: left
-    :adaptive:
-    :practice: T
-
-    Write a function called ``triple(num)`` that takes a number ``num`` and
-        returns the number times 3. For example, ``triple(2)`` should return 6 and
-        ``triple(-1)`` should return -3.   
-    -----
-    def triple(num): 
-    =====
-        return num * 3
-
 
 Solving Write Code Problems with an Adaptive Mixed-up Puzzle as Scaffolding
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 If you see a problem like the one below, you will need to write code. You can go to the **toggle bar** above the problem description to open a mixed-up puzzle that will help you write the code. 
-The mixed-up puzzle will have blocks of code that you can drag and drop to create a solution. You can also use the "Help me" button to get additional assistance if needed.
+The mixed-up puzzle will have blocks of code that you can drag and drop to create a solution. You can also use the "Help me" button to get additional assistance within the puzzle if needed.
 
 .. selectquestion:: intro-sample-toggle-mooc_nested
     :fromid: intro-sample-write-code-triple-mooc_nested, intro-sample-puzzle-mooc_nested
