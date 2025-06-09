@@ -47,15 +47,20 @@ Posttest
 
 Please answer the following questions.
 ::
-    # Here is a short answer question. This is the nested dictionary example you will work with.
+
+    # Here is a short answer question. 
+    # This is the nested dictionary example you will work with.
     employee_dict = {
             'John': {'age': 28, 'position': 'Designer',
-                    'skills': {'soft_skill': 'Creativity', 'technical_skill': 'Figma'}},
+                    'skills': {'soft_skill': 'Creativity', 
+                               'technical_skill': 'Figma'}},
             'Alice': {'age': 34, 'position': 'Developer',
-                    'skills': {'soft_skill': 'Communication', 'technical_skill': 'Python'}}
+                    'skills': {'soft_skill': 'Communication', 
+                               'technical_skill': 'Python'}}
         }
 
-    # Fill in the missing two lines below to print each employee’s name along with their skills using a nested loop.
+    # Fill in the missing two lines below to print each employee’s name 
+    # along with their skills using a nested loop.
 
     __________________
 
@@ -183,7 +188,7 @@ What to do next
 ================
 .. raw:: html
 
-    <p>Click on the following link to the post-survey: <b><a id="post_survey"> <font size="+1">Post-Survey</font></a></b></p>
+    <p>Click on the following link to the final page: <b><a id="post_survey"> <font size="+1">Thank you!</font></a></b></p>
 
 .. raw:: html
 

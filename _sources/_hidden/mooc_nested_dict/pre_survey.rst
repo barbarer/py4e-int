@@ -76,7 +76,7 @@ about the specified concept(s).
     :option_5: I am confident in my ability to use these concepts in complex programs
     :results: instructor
 
-    Familiarity of nested dictionaries in Python (dictionaries within dictionaries) and how they are structured.
+    Familiarity with nested dictionaries in Python (dictionaries within dictionaries) and how they are structured.
 
 .. poll:: mooc_nested-obj-2
     :option_1: I am unfamiliar with these concepts
@@ -86,7 +86,7 @@ about the specified concept(s).
     :option_5: I am confident in my ability to use these concepts in complex programs
     :results: instructor
 
-    Access values in a inner dictionary like <code>value_for_inner_key1 = nested_dict['outer_key']['inner_key1']</code>
+    How to access values in a inner dictionary like <code>value_for_inner_key1 = nested_dict['outer_key']['inner_key1']</code>
 
 
 .. poll:: mooc_nested-obj-3
@@ -97,7 +97,7 @@ about the specified concept(s).
     :option_5: I am confident in my ability to use these concepts in complex programs
     :results: instructor
 
-    Add a new key-value pair to a inner dictionary of the given nested dictionary like <code>nested_dict['outer_key']['new_key'] = 'new_value'</code>
+    How to add a new key-value pair to a inner dictionary of the given nested dictionary like <code>nested_dict['outer_key']['new_key'] = 'new_value'</code>
 
 .. poll:: mooc_nested-obj-4
     :option_1: I am unfamiliar with these concepts
@@ -107,7 +107,7 @@ about the specified concept(s).
     :option_5: I am confident in my ability to use these concepts in complex programs
     :results: instructor
 
-    Loop through the outer items (key-value pairs) of a nested dictionary like for <code>outer_key, outer_value in nested_dict.items():</code>
+    How to loop through the outer items (key-value pairs) of a nested dictionary like for <code>outer_key, outer_value in nested_dict.items():</code>
 
 .. poll:: mooc_nested-obj-5
     :option_1: I am unfamiliar with these concepts
@@ -117,10 +117,10 @@ about the specified concept(s).
     :option_5: I am confident in my ability to use these concepts in complex programs
     :results: instructor
 
-    Loop through the inner items of a nested dictionary like for <code>inner_key, inner_value in nested_dict['outer_key'].items():</code>
+    How to loop through the inner items of a nested dictionary like for <code>inner_key, inner_value in nested_dict['outer_key'].items():</code>
 
 What to do next
-===============
+===================
 
 .. raw:: html
 

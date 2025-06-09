@@ -116,3 +116,17 @@
                 order_totals[person] = {item: quantity}
     =====
         return order_totals
+
+
+.. parsonsprob:: intro-sample-puzzle-mooc_nested
+    :numbered: left
+    :adaptive:
+    :practice: T
+
+    Write a function called ``triple(num)`` that takes a number ``num`` and
+        returns the number times 3. For example, ``triple(2)`` should return 6 and
+        ``triple(-1)`` should return -3.   
+    -----
+    def triple(num): 
+    =====
+        return num * 3
