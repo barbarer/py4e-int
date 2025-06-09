@@ -78,7 +78,7 @@ For example, to loop through the outer items of the `person` dictionary, you wou
 
     for outer_key, outer_value in person.items():
         # This will print each key and its corresponding value in the person dictionary, 
-        # including the nested dictionary under the `address` key.
+        # including the nested dictionary under the "address" key.
         print(f"{outer_key}: {outer_value}")
 
 
