@@ -32,7 +32,7 @@ Practice
                 introLink.addEventListener("click", function(event) {
                     event.preventDefault(); // Stop immediate navigation
 
-                    console.log("User clicked the Introduction link. Saving first...");
+                    console.log("User clicked the posttest link. Saving first...");
 
                     // Trigger Save clicks, then navigate
                     triggerSaveClicks(() => {
