@@ -64,8 +64,8 @@
     Finish the function ``get_vegetarian_menu(menu_items):`` below:
         - It takes a list of tuples ``menu_items`` as input, each tuple contains ``(name, category, price, is_vegetarian)``.
         - It returns a new nested dictionary that only contains the items from  ``menu_items`` where ``is_vegetarian`` is ``True``.
-            - The outer dictionary keys are ``category`` such as "Soup", "Pizza", "Pasta", "Salad".
-            - The inner dictionary keys are ``name`` and values are ``price`` for each vegetarian item of that ``category``.
+        - The outer dictionary keys are ``category`` such as "Soup", "Pizza", "Pasta", "Salad".
+        - The inner dictionary keys are ``name`` and values are ``price`` for each vegetarian item of that ``category``.
     -----
     def get_vegetarian_menu(menu_items):
     =====
@@ -92,8 +92,8 @@
     Finish the function ``get_vegetarian_menu(menu_items):`` below:
         - It takes a list of tuples ``menu_items`` as input, each tuple contains ``(name, category, price, is_vegetarian)``.
         - It returns a new nested dictionary that only contains the items from  ``menu_items`` where ``is_vegetarian`` is ``True``.
-            - The outer dictionary keys are ``category`` such as "Soup", "Pizza", "Pasta", "Salad".
-            - The inner dictionary keys are ``name`` and values are ``price`` for each vegetarian item of that ``category``.
+        - The outer dictionary keys are ``category`` such as "Soup", "Pizza", "Pasta", "Salad".
+        - The inner dictionary keys are ``name`` and values are ``price`` for each vegetarian item of that ``category``.
     -----
     def get_order_totals(orders):
     =====
