@@ -108,35 +108,17 @@ See the video below for an example.
     :align: center
 
 Finish writing the code for the following problem.
+.. writecode:: intro-sample-write-code-double-mooc_nested
+   :numbered: left
+   :adaptive:
+   :practice: T
 
-.. activecode:: intro-sample-write-code-triple-mooc_nested
-    :practice: T
-    :autograde: unittest
-
-    Write a function called ``triple(num)`` that takes a number ``num`` and
-    returns the number times 3. For example, ``triple(2)`` should return 6 and
-    ``triple(-1)`` should return -3.  Look below the code to check for any
-    compiler errors or the results
-    from the test cases.  Be sure to ``return`` the result.
-    ~~~~
-    def triple(num):
-        # write code here
-
-    print(triple(2))
-    print(triple(-1))
-
-    ====
-    from unittest.gui import TestCaseGui
-    class myTests(TestCaseGui):
-
-        def testOne(self):
-            self.assertEqual(triple(2),6,"triple(2)")
-            self.assertEqual(triple(3),9,"triple(3)")
-            self.assertEqual(triple(-1),-3,"triple(-1)")
-            self.assertEqual(triple(0),0,"triple(0)")
-            self.assertEqual(triple(11),33,"triple(11)")
-
-    myTests().main()
+   Write a function called ``double(num)`` that takes a number ``num`` and
+   returns the number times 3. For example, ``double(3)`` should return 6 and ``double(-4)`` should return -8.
+   -----
+   def double(num):
+       # Your code here
+       pass
 
 
 Solving Write Code Problems with an Adaptive Mixed-up Puzzle as Scaffolding

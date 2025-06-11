@@ -1,49 +1,6 @@
 Practice
 =============
 
-.. raw:: html
-
-    <script>
-
-        function triggerSaveClicks(callback) {
-                console.log("Triggering all Save and Save & Run clicks...");
-
-                let saveButtons = document.querySelectorAll('button');
-                let saveCount = 0;
-
-                saveButtons.forEach(button => {
-                    if (button.innerText.includes('Save') || button.innerText.includes('Save & Run')) {
-                        console.log(`Clicking button: ${button.innerText}`);
-                        button.click();  // Simulate button click
-                        saveCount++;
-                    }
-                });
-
-                // Ensure logging is complete before proceeding
-                setTimeout(() => {
-                    console.log(`Triggered ${saveCount} Save clicks. Proceeding...`);
-                    if (callback) callback();
-                }, 1000);  // Wait 1 second for logging to process
-        
-
-        document.addEventListener("DOMContentLoaded", function() {
-            let introLink = document.getElementById('posttest');  // Change ID if needed
-            if (introLink) {
-                introLink.addEventListener("click", function(event) {
-                    event.preventDefault(); // Stop immediate navigation
-
-                    console.log("User clicked the Introduction link. Saving first...");
-
-                    // Trigger Save clicks, then navigate
-                    triggerSaveClicks(() => {
-                        window.location.href = introLink.href;  // Navigate after saving
-                    });
-                });
-            }
-        });
-
-    </script>
-
 .. activecode:: w1-mooc_nested
         :autograde: unittest
         :nocodelens:
