@@ -162,7 +162,7 @@ What to do next
       window.onload = function() {
 
         a = document.getElementById("pre_survey")
-        a.href = "pre_survey.html"
+        a.href = "mc_pre_survey.html"
       };
 
     </script>

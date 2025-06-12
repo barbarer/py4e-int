@@ -170,9 +170,9 @@ What to do next
         }
 
         if (cond == 'wt') {
-           a.href = "nested-wt.html"
+           a.href = "mc_nested-wt.html"
         } else if (cond == 'nt') {
-           a.href = "nested-nt.html"
+           a.href = "mc_nested-nt.html"
         }
      };
    </script>

@@ -83,7 +83,7 @@ What to do next
             }
 
             // If all elements exist, proceed to review.html
-            window.location.href = "review.html";
+            window.location.href = "mc_review.html";
          };
       };
       </script>
