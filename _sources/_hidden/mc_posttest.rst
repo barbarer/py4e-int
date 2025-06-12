@@ -197,7 +197,7 @@ What to do next
       window.onload = function() {
 
         a = document.getElementById("post_survey")
-        a.href = "post_survey.html"
+        a.href = "mc_post_survey.html"
       };
 
     </script>

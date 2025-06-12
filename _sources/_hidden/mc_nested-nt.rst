@@ -216,7 +216,7 @@ What to do next
       window.onload = function() {
 
         a = document.getElementById("posttest")
-        a.href = "posttest.html"
+        a.href = "mc_posttest.html"
       };
 
     </script>
