@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    This file provides the overall configuration for your PreTeXt
+    project. To edit the content of your document, open `source/main.ptx`
+    (default location).
+-->
+<project ptx-version="2" source="pretext">
+  <targets>
+    <!-- To build this target, run `pretext build web` -->
+    <target name="web"
+      format="html"
+      source="main.ptx"
+      publication="publication.ptx"
+      output-dir="output/web" />
+
+    <target name="runestone"
+      format="html"
+      source="main.ptx"
+      publication="publication-academy.ptx"
+      output-dir="output/runestone" />
+
+    <target name="print" 
+      format="pdf"
+      source="main.ptx"
+      publication="publication.ptx"
+      output-dir="output/print" />
+  </targets>
+</project>
