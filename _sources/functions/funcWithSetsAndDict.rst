@@ -51,7 +51,7 @@ You can also check if an item is in a set.
     print(1 in s1)
     print(9 in s1)
 
-.. fillintheblank:: funct_tuple_test_char
+.. fillintheblank:: funct_set_tuple_test_char
     :practice: T
 
     What characters are used to inintialize the values in a set in the code above?
@@ -467,5 +467,5 @@ There is another way to update the value for a key that works even if the key is
 
 If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.
 
-.. groupsub:: func_tuplesanddict_groupsub
+.. groupsub:: func_set_tuplesanddict_groupsub
    :limit: 3
