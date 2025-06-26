@@ -253,7 +253,7 @@ You can use the following methods with sets.
     print(s1.symmetric_difference(s2))
     print(s1 ^ s2)
 
-.. fillintheblank:: funct_exor_fitb
+.. fillintheblank:: funct_set_exor_fitb
     :practice: T
 
     What character is used to find the symmetric difference (exlusive or) between two sets in the code above?
@@ -355,7 +355,7 @@ Dictionaries
 
 A dictionary stores a value for a key. The keys must be immutable and unique.
 
-.. fillintheblank:: funct_dict_num_t
+.. fillintheblank:: funct_set_dict_num_t
 
     What is the first thing the code below prints?
 
@@ -363,7 +363,7 @@ A dictionary stores a value for a key. The keys must be immutable and unique.
       :3: A 'T' is different from a 't'.
       :.*: Try again!
 
-.. activecode:: func_dict_example
+.. activecode:: func_set_dict_example
     :caption: Example with a dictionary
 
     Run this code to see what it prints.
@@ -385,12 +385,12 @@ A dictionary stores a value for a key. The keys must be immutable and unique.
     print(d1)
     print(type(d1))
 
-.. shortanswer:: func_dict_key_error_sa
+.. shortanswer:: func_set_dict_key_error_sa
 
    Look at the Python code below.  What do you think will happen when you run the following code?
 
 
-.. activecode:: func_dict_with_key_error
+.. activecode:: func_set_dict_with_key_error
     :caption: Example with a dictionary
 
     Run this code to see what it prints.
@@ -402,7 +402,7 @@ A dictionary stores a value for a key. The keys must be immutable and unique.
 
 There is another way to update the value for a key that works even if the key isn't in the dictionary already.
 
-.. activecode:: func_dict_example_v2
+.. activecode:: func_set_dict_example_v2
     :caption: Example with a dictionary
 
     Run this code to see what it prints.
