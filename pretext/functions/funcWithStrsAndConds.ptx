@@ -1,41 +1,7 @@
 <?xml version="1.0"?>
-<section xml:id="functions_group-work-functions-with-tuples-and-dictionaries">
-  <title>Group Work: Functions with Tuples and Dictionaries</title>
+<section xml:id="functions_group-work-functions-with-strings-and-conditionals">
+  <title>Group Work: Functions with Strings and Conditionals</title>
   <introduction>
-  <!--
-    <raw format="html" xml:space="preserve">&lt;h2&gt;Please join a research study to help us test new approaches to learning programming!&lt;/h2&gt;
-
-&lt;p&gt;Hi! We are a team of researchers in Professor Ericson's Lab at UMSI!&lt;/p&gt;
-
-&lt;h4&gt;The Project&lt;/h4&gt;
-&lt;p&gt;You are invited to participate in a research study about how Parsons problems (a type of coding puzzle) may help
-CS entry-level learning. You must be at least &lt;b&gt;18&lt;/b&gt; to participate. &lt;br&gt;
-Your participation will help more students become successful in computing courses in a low-cost, scalable, and easily
-adopted way. &lt;br&gt; &lt;/p&gt;
-
-&lt;h4&gt; What Will Occur &lt;/h4&gt;
-&lt;p&gt;This study takes 50 minutes to one hour to finish. The study materials include:&lt;/p&gt;
-&lt;ul&gt;
-    &lt;li&gt;A basic knowledge review about Python basics (~5 mins)&lt;/li&gt;
-    &lt;li&gt;An introduction about our system (~5 mins)&lt;/li&gt;
-    &lt;li&gt;A self-efficacy survey to measure your level of programming self-efficacy (~5 mins)&lt;/li&gt;
-    &lt;li&gt;Four code practice problems (~20 mins)&lt;/li&gt;
-    &lt;li&gt;A short posttest consists of 4 questions (~15 mins)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Each section must be completed in order. After finishing one part, you can click the link provided under &lt;b&gt;"What to do next"&lt;/b&gt; to the next part.&lt;/p&gt;
-
-&lt;h4&gt; Confidentiality of Information &lt;/h4&gt;
-&lt;p&gt;All the data we collect will be de-identified. We will not collect any identifiable data such as demographic information. &lt;/p&gt;
-
-&lt;h4&gt;Who to Contact&lt;/h4&gt;
-&lt;p&gt; If you have any questions about the study, please contact Xinying Hou at xyhou@umich.edu
-with <q>[Parsons Problem Study]</q> included in the email subject. &lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;We greatly appreciate your help!&lt;/p&gt;</raw>
-  <note>
-    <raw format="html" xml:space="preserve">&lt;h4&gt;Click on the following link &#x1F449; &lt;b&gt;&lt;a href="intro-fl-ps.html"&gt;Basic Knowledge Review&lt;/a&gt;&lt;/b&gt; &#x1F448; to start!&lt;/h4&gt;</raw>
-  </note>
-  <transition/> -->
   <p>It is best to use a POGIL approach with the following. In POGIL students work
             in groups on activities and each member has an assigned role.  For more information see <url href="https://cspogil.org/Home" visual="https://cspogil.org/Home">https://cspogil.org/Home</url>.</p>
   <note>
@@ -51,13 +17,37 @@ with <q>[Parsons Problem Study]</q> included in the email subject. &lt;br&gt;&lt
   <p>
     <ul>
       <li>
-        <p>Learn the differences and similarities between strings, lists, tuples, and dictionaries.</p>
+        <p>Learn how to display a value in Python using print.</p>
       </li>
       <li>
-        <p>Predict the output of functions with tuples and dictionaries.</p>
+        <p>Match terms for functions to their definitiions.</p>
       </li>
       <li>
-        <p>Use .get to prevent key errors in dictionaries.</p>
+        <p>Recognize common symbols (:, #), operators (+, -, /), and keywords (def, return) in Python.</p>
+      </li>
+      <li>
+        <p>Recognize strings.</p>
+      </li>
+      <li>
+        <p>Use string indices.</p>
+      </li>
+      <li>
+        <p>Understand how slice works for both positive and negative indices.</p>
+      </li>
+      <li>
+        <p>Use input and convert between strings and numbers.</p>
+      </li>
+      <li>
+        <p>Recognize common string methods.</p>
+      </li>
+      <li>
+        <p>Recognize the keywords used in conditionals in Python (if, elif, else).</p>
+      </li>
+      <li>
+        <p>Predict the output from simple and complex conditionals.</p>
+      </li>
+      <li>
+        <p>Recognize the keywords used in complex conditionals (and, or, not).</p>
       </li>
     </ul>
   </p>
@@ -67,140 +57,129 @@ with <q>[Parsons Problem Study]</q> included in the email subject. &lt;br&gt;&lt
   <p>
     <ul>
       <li>
-        <p>Predict the output of functions with tuples and dictionaries.</p>
+        <p>Learn how to properly indent the body of a function</p>
+      </li>
+      <li>
+        <p>Predict the output from code.</p>
+      </li>
+      <li>
+        <p>Modify code to produce the correct output.</p>
+      </li>
+      <li>
+        <p>Create good test data for functions with conditionals</p>
+      </li>
+      <li>
+        <p>Modify code to use complex conditionals</p>
       </li>
     </ul>
   </p>
 </introduction>
-  <subsection xml:id="functions_tuples">
-    <title>Tuples</title>
-    <p>A tuple is like a list in that holds items in order and those items are separated by commas.  They can be enclosed in <c>()</c>, but don't have to be.</p>
-    <exercise label="funct_tup_test_first">
+  <subsection xml:id="fun_str_cond_funct_intro">
+    <title>Function Example</title>
+    <p>A function is a name for one or more lines of code. You first define a function using the <c>def</c> keyword and then execute 
+       it using <c>function_name(arguments)</c>.  
+    </p>
+    <exercise label="fsc_fitb_print_test_first_line_v3">
       <statement>
-        <p>Q-1: What is the first thing that will be printed when the code below runs? <var/>  </p>
+        <p>What is the first thing that will be printed when the code below runs? <var/>  </p>
       </statement>
       <setup>
         <var>
-          <condition number="1">
+          <condition string="Hello!">
             <feedback>
-              <p>It will print the item at index 0 the first passed tuple.</p>
+              <p>The main function prints this before it calls the test function.</p>
             </feedback>
           </condition>
           <condition string=".*">
             <feedback>
-              <p>What is the item at index 0 in the first passed tuples?</p>
+              <p>The first function that is executed is <c>main</c>. What does that print first?</p>
             </feedback>
           </condition>
         </var>
       </setup>
     </exercise>
-    <exercise label="funct_tup_test_last">
+    <exercise label="fsc_ac_pogil_print_message_v2">
       <statement>
-        <p>Q-2: What is the last thing that will be printed when the code below runs? <var/>  </p>
+        <p>Run the code below to see what it prints and then use it to answer the following questions.</p>
       </statement>
-      <setup>
-        <var>
-          <condition number="4">
-            <feedback>
-              <p>It will print the length (number of items) in the second passed tuple.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>How many items are in the second passed tuple?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
-    </exercise>
-    <exercise label="func_tup_test_ac">
-      <statement>
-        <p>Run this code to see what it prints.</p>
-      </statement>
-      <program xml:id="func_tup_test_ac_editor" interactive="activecode" language="python">
+      <program xml:id="fsc_ac_pogil_print_message_v2_ac_editor" interactive="activecode" language="python">
         <input>
 # function definition
-def tuple_test(tup):
-    print(tup[0])
-    print(type(tup))
-    print(tup[-1])
-    print(tup[1:])
-    print(len(tup))
+    def test(a, b = 2):
+        print("Welcome")
+        print("Learn the power of functions!")
+        print(a + b)
+        print(a - b)
+        print(a * b)
+        print(a / b)
+        print(a // b)
+        a = 5 % 2
+        return a
 
-# function definition
-def main():
-    tuple_test((1, 2, 3))
-    tuple_test(('hi', 'bye', -20, 'run'))
+    # function definition
+    def main():
+        print("Hello!")
 
-# function call
-main()
+        # function call
+        print(test(3))
+
+    # function call
+    main()
         </input>
       </program>
     </exercise>
-    <exercise label="funct_tuple_test_char">
+
+  <note>
+    <p>You do not declare the type of a variable in Python. Python requires that all statements that are part of the body of a function must be indented. Use four spaces to indent.</p>
+  </note>
+
+    <exercise label="fsc_fitb_print_test_value_b">
       <statement>
-        <p>Q-4: What characters are used to indicate the start and end of a tuple in the code above? <var/>  </p>
+        <p>What is the value of <c>b</c> when function <c>test</c> starts executing?</p>
       </statement>
       <setup>
         <var>
-          <condition string="\(\)|\)\(">
+          <condition number="2">
             <feedback>
-              <p>Parenthesis are often used to start and end a tuple, but they are not required.</p>
+              <p>Since the value of <c>b</c> was not specified it defaults to 2 (it was set to 2 as a default in the function definition)</p>
             </feedback>
           </condition>
           <condition string=".*">
             <feedback>
-              <p>Look at the parameter to the function call in the main function.</p>
+              <p>What is the default value specified for <c>b</c> in the function definition?</p>
             </feedback>
           </condition>
         </var>
       </setup>
     </exercise>
-    <exercise label="funct_tuple_first_index">
+    <p>Delete the last line of the test function above and run the code again.</p>
+    <exercise label="fsc_fitb_return_None">
       <statement>
-        <p>Q-5: What index is used to get the first item in a tuple? <var/>  </p>
+        <p>What value is returned from a function that doesn't have a <c>return</c> keyword? <var/>  </p>
       </statement>
       <setup>
         <var>
-          <condition number="0">
+          <condition string="None">
             <feedback>
-              <p>The first item in a list is at index 0.</p>
+              <p>A function without a <c>return</c> still returns the keyword None</p>
             </feedback>
           </condition>
           <condition string=".*">
             <feedback>
-              <p>Try again!</p>
+              <p>What is the last thing that is printed when you run the code above after deleting the return from the test function?</p>
             </feedback>
           </condition>
         </var>
       </setup>
     </exercise>
-    <exercise label="funct_tuple_last_index">
-      <statement>
-        <p>Q-6: What negative index is used to get the last item in a tuple? <var/>  </p>
-      </statement>
-      <setup>
-        <var>
-          <condition number="-1">
-            <feedback>
-              <p>The last item in a list is at index -1, which is the length of the list - 1.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Try again!</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
-    </exercise>
+   
   </subsection>
   <subsection xml:id="functions_tuples-are-immutable">
     <title>Tuples are Immutable</title>
     <p>Unlike lists, tuples are immutable (can not change). This makes them more efficient than lists which can change.</p>
     <exercise label="func_tuple_change_sa">
       <statement>
-        <p>Q-7: Look at the Python code below.  What do you think will happen when you run the following code?</p>
+        <p>Look at the Python code below.  What do you think will happen when you run the following code?</p>
       </statement>
     </exercise>
     <exercise label="func_tuple_change_ac">
@@ -232,7 +211,7 @@ main()
                 The <c>range</c> function also returns an iterator.</p>
     <exercise label="funct_tuple_zip_first_print_fitb">
       <statement>
-        <p>Q-9: What is the first thing the code below prints? <var/>  </p>
+        <p>What is the first thing the code below prints? <var/>  </p>
       </statement>
       <setup>
         <var>
@@ -273,7 +252,7 @@ print(l3)
     <p>A dictionary stores a value for a key.</p>
     <exercise label="funct_dict_num_t">
       <statement>
-        <p>Q-11: What is the first thing the code below prints? <var/>  </p>
+        <p>What is the first thing the code below prints? <var/>  </p>
       </statement>
       <setup>
         <var>
@@ -322,7 +301,7 @@ print(type(d1))
     </exercise>
     <exercise label="func_dict_key_error_sa">
       <statement>
-        <p>Q-13: Look at the Python code below.  What do you think will happen when you run the following code?</p>
+        <p>Look at the Python code below.  What do you think will happen when you run the following code?</p>
       </statement>
     </exercise>
     <exercise label="func_dict_with_key_error">
@@ -396,7 +375,7 @@ print(d1)
     </exercise>
     <exercise label="funct_which_are_immutable_mc">
       <statement>
-        <p>Q-17: Which of the following types are immutable (don't change)?</p>
+        <p>Which of the following types are immutable (don't change)?</p>
       </statement>
       <choices>
         <choice correct="yes">
@@ -434,20 +413,6 @@ print(d1)
       </choices>
     </exercise>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
-    <raw format="html" xml:space="preserve">
-&lt;div class="runestone sqcontainer %(optclass)s"&gt;
-    &lt;div data-component="groupsub" id=func_tuplesanddict_groupsub data-size_limit=3&gt;
-        &lt;div class="col-sm-6"&gt;
-            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
-            &lt;/select&gt;
-        &lt;/div&gt;
-        &lt;div id="groupsub_button" class="col-sm-6"&gt;
-        &lt;/div&gt;
-        &lt;p&gt;The Submit Group button will submit the answer for each each question
-        on this page for each member of your group. It also logs you as the official
-        group submitter.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</raw>
+
   </subsection>
 </section>
