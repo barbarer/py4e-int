@@ -107,26 +107,26 @@
       <program xml:id="fsc_ac_pogil_print_message_v2_ac_editor" interactive="activecode" language="python">
         <input>
 # function definition
-    def test(a, b = 2):
-        print("Welcome")
-        print("Learn the power of functions!")
-        print(a + b)
-        print(a - b)
-        print(a * b)
-        print(a / b)
-        print(a // b)
-        a = 5 % 2
-        return a
+def test(a, b = 2):
+    print("Welcome")
+    print("Learn the power of functions!")
+    print(a + b)
+    print(a - b)
+    print(a * b)
+    print(a / b)
+    print(a // b)
+    a = 5 % 2
+    return a
 
-    # function definition
-    def main():
-        print("Hello!")
-
-        # function call
-        print(test(3))
+# function definition
+def main():
+    print("Hello!")
 
     # function call
-    main()
+    print(test(3))
+
+# function call
+main()
         </input>
       </program>
     </exercise>
@@ -174,7 +174,47 @@
         </var>
       </setup>
     </exercise>
-   
+
+    <exercise label="fsc_pp_print_name_v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
+      <statement>
+        <p>Drag the blocks from the left and put them in the correct order on the right to define a function <c>print_greeting</c> that asks for your name and prints <q>Hello Name</q>. Then define a <c>main</c> function that calls <c>print_greeting</c>.  Be sure to also call the <c>main</c> function. Note that you will have to indent the lines that are in the body of each function.  Click the <em>Check</em> button to check your solution.</p>
+      </statement>
+      <blocks>
+        <block order="5">
+          <choice correct="yes">
+            <cline>def print_greeting():</cline>
+          </choice>
+          <choice>
+            <cline>def print_greeting() </cline>
+          </choice>
+        </block>
+        <block order="8">
+          <cline>    name = input("What is your name?")</cline>
+        </block>
+        <block order="9">
+          <cline>    print("Hello " + name)</cline>
+        </block>
+        <block order="7">
+          <choice correct="yes">
+            <cline>def main():</cline>
+          </choice>
+          <choice>
+            <cline>Def main(): </cline>
+          </choice>
+        </block>
+        <block order="4">
+          <choice correct="yes">
+            <cline>    print_greeting()</cline>
+          </choice>
+          <choice>
+            <cline>    print_greeting </cline>
+          </choice>
+        </block>
+        <block order="3">
+          <cline>main()</cline>
+        </block>
+      </blocks>
+    </exercise>
   </subsection>
 </section>
 </worksheet>
