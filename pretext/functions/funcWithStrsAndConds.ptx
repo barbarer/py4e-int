@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
-<worksheet xml:id="func_strsconds_groupsub" groupwork="yes" groupsize="4" label="funcWithStrsAndConds">
+<worksheet xml:id="fsc_strsconds_groupsub" groupwork="yes" groupsize="4" label="funcWithStrsAndConds">
   <title>Group Work: Functions with Strings and Conditionals</title>
    <p>It is best to use a POGIL approach with the following. In POGIL students work
             in groups on activities and each member has an assigned role.  For more information see <url href="https://cspogil.org/Home" visual="https://cspogil.org/Home">https://cspogil.org/Home</url>.</p>
   <note>
     <p>If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.</p>
   </note>
-<section xml:id="functions_group-work-functions-with-strings-and-conditionals">
+<section xml:id="fsc_group-work-functions-with-strings-and-conditionals">
   <title>Learning Objectives</title>
   <introduction>
   <p>Students will know and be able to do the following.</p>
@@ -73,7 +73,7 @@
     </ul>
   </p>
 </introduction>
-  <subsection xml:id="fun_str_cond_funct_intro">
+  <subsection xml:id="fsc_str_cond_funct_intro">
     <title>Function Example</title>
     <p>A function is a name for one or more lines of code. You first define a function using the <c>def</c> keyword and then execute 
        it using <c>function_name(arguments)</c>.  
@@ -211,6 +211,133 @@ main()
           <cline>main()</cline>
         </block>
       </blocks>
+    </exercise>
+  </subsection>
+<subsection xml:id="fsc_str_cond_string_def">
+    <title>String Definition</title>
+    <p>A <term>string<term> is a sequence of characters enclosed in quotes.  In Python you can use pairs of single
+or double quotes to enclose a string like in <c>"hello"</c> or <c>'hello'</c>. This is especially useful when a string includes a single quote <c>"they're"</c>.  You can even use tripe quotes when
+a string covers more than one line. </p>
+</subsection>
+<subsection xml:id="fsc_str_cond_string_index">
+    <title>String Indices</title>
+    <p>You can get a character from a string at an index (position).</<p>
+    <exercise label="fsc_fitb_pogil_initials">
+      <statement>
+        <p>What is the last thing that will be printed when the code below runs? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="Jk">
+            <feedback>
+              <p>It prints the first letter of the first name and last letter of the last name.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>String indices start with 0 and -1 is the index of the last letter in a string.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="fsc_ac_pogil_initials_v2">
+      <statement>
+        <p>Run the code below to see what it prints.  Then fix it to pass the given test.  It should return a string with the
+                first character of the first name and first character of the last name.</p>
+      </statement>
+      <program xml:id="fsc_ac_pogil_initials_v2_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def get_initials(first, last):
+    return first[0] + last[-1]
+
+# function definition
+def main():
+    print(type("Hello"))
+    print(type('Class'))
+    print(type(42))
+
+    print(get_initials("J'Quan",'Alik'))
+
+
+# function call
+main()
+
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(get_initials("J'Quan",'Alik'),"JA",'''get_initials("J'Quan",'Alik')''')
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+</subsection>
+<subsection xml:id="fsc_string-slices">
+    <title>String Slices</title>
+    <exercise label="fsc_fitb_pogil_short_name">
+      <statement>
+        <p>What is the last thing that will be printed when the code below runs? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="Sibs">
+            <feedback>
+              <p>The last thing it prints are the first two letters of the first name and the last two letters of the last name.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>A slice starts with the first number and ends before the second.  If the second is left off it goes to the end of the string. The last character in a string is at index -1.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="fsc_ac_pogil_short_name">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="fsc_ac_pogil_short_name_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def get_short_name(first, last):
+    print(len(first))
+    print(len(last))
+    return first[:2] + last[-2:]
+
+# function definition
+def main():
+    print(get_short_name('Simona',"Jacobs"))
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+    <note>
+      <p>Use the slice [start:end] operator to get a slice (substring) from a string. It will return a new string starting at the start and including all the characters up to just before the end (end - 1).</p>
+    </note>
+    <exercise label="fsc_fitb_three_char_slice">
+      <statement>
+        <p>Use the slice operator to return the first three characters from the variable <c>dna</c>? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="dna\[0\:3\]|\[:3\]">
+            <feedback>
+              <p>This will return a new string with the characters from index 0 to 2.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Look at the note above and try again.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
     </exercise>
   </subsection>
 </section>
