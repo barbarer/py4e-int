@@ -132,29 +132,29 @@ main()
     <p>You do not declare the type of a variable in Python. Python requires that all statements that are part of the body of a function must be indented. Use four spaces to indent.</p>
   </note>
 
-    <exercise label="fsc_fitb_print_test_value_b">
+  <exercise label="fsc_fitb_value_b">
       <statement>
-        <p>What is the value of <c>b</c> when function <c>test</c> starts executing?</p>
+        <p>What is the value of <c>b</c> when function <c>test</c> starts executing? <var/>  </p>
       </statement>
       <setup>
         <var>
           <condition number="2">
             <feedback>
-              <p>Since the value of <c>b</c> was not specified it defaults to 2 (it was set to 2 as a default in the function definition)</p>
+              <p>Since the value of b was not specified it defaults to 2 (it was set to 2 as a default in the function definition)</p>
             </feedback>
           </condition>
           <condition string=".*">
             <feedback>
-              <p>What is the default value specified for <c>b</c> in the function definition?</p>
+              <p>What is the default value specified for b in the function definition?</p>
             </feedback>
           </condition>
         </var>
       </setup>
     </exercise>
-    <p>Delete the last line of the test function above and run the code again.</p>
+
     <exercise label="fsc_fitb_return_None">
       <statement>
-        <p>What value is returned from a function that doesn't have a <c>return</c> keyword? <var/>  </p>
+        <p>Delete the last line of the function <c>test</c> above and run the code again.  What value is returned from a function that doesn't have a <c>return</c> keyword? <var/>  </p>
       </statement>
       <setup>
         <var>
