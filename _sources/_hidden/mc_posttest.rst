@@ -76,7 +76,6 @@ Please answer the following questions.
 
 
 .. activecode:: posttest-2-mooc_nested
-    :language: python3
     :autograde: unittest
     :nocodelens:
 
@@ -117,23 +116,21 @@ Please answer the following questions.
 
 
     ====
+
     from unittest.gui import TestCaseGui
+    
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(happy_hour_specials([("Classic", "Burger", True, 12), ("Veggie", "Burger", True, 14), ("Fish", "Burger", True, 16), ("Cheese", "Pizza", False, 20)]), {"Burger": {"Classic": 12, "Veggie": 14}})
+            self.assertEqual(happy_hour_specials([("Mango", "Smoothie", True, 8), ("Green", "Smoothie", True, 12), ("Chocolate", "Milkshake", False, 15), ("Vanilla", "Milkshake", False, 18)]), {"Smoothie": {"Mango": 8, "Green": 12}})
+            self.assertEqual(happy_hour_specials([("Spaghetti", "Pasta", True, 10), ("Alfredo", "Pasta", True, 12), ("Bolognese", "Pasta", False, 14), ("Seafood", "Pasta", True, 18)]), {"Pasta": {"Spaghetti": 10, "Alfredo": 12}})
+            self.assertEqual(happy_hour_specials([("Margherita", "Pizza", True, 15), ("Pepperoni", "Pizza", False, 22), ("Hawaiian", "Pizza", True, 10), ("Caesar", "Salad", True, 10)]), {"Pizza": {"Margherita": 15, "Hawaiian": 10}, "Salad": {"Caesar": 10}})
 
-        class myTests(TestCaseGui):
-
-            def testOne(self):
-
-                self.assertEqual(happy_hour_specials([("Classic", "Burger", True, 12), ("Veggie", "Burger", True, 14), ("Fish", "Burger", True, 16), ("Cheese", "Pizza", False, 20)]), {"Burger": {"Classic": 12, "Veggie": 14}})
-                self.assertEqual(happy_hour_specials([("Mango", "Smoothie", True, 8), ("Green", "Smoothie", True, 12), ("Chocolate", "Milkshake", False, 15), ("Vanilla", "Milkshake", False, 18)]), {"Smoothie": {"Mango": 8, "Green": 12}})
-                self.assertEqual(happy_hour_specials([("Spaghetti", "Pasta", True, 10), ("Alfredo", "Pasta", True, 12), ("Bolognese", "Pasta", False, 14), ("Seafood", "Pasta", True, 18)]), {"Pasta": {"Spaghetti": 10, "Alfredo": 12}})
-                self.assertEqual(happy_hour_specials([("Margherita", "Pizza", True, 15), ("Pepperoni", "Pizza", False, 22), ("Hawaiian", "Pizza", True, 10), ("Caesar", "Salad", True, 10)]), {"Pizza": {"Margherita": 15, "Hawaiian": 10}, "Salad": {"Caesar": 10}})
-
-        myTests().main()
+    myTests().main()
 
 
 
 .. activecode:: posttest-3-mooc_nested 
-    :language: python3
     :autograde: unittest
     :nocodelens:
 
