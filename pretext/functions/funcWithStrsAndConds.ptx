@@ -243,7 +243,7 @@ a string covers more than one line. </p>
     </exercise>
     <exercise label="fsc_ac_pogil_initials_v2">
       <statement>
-        <p>Run the code below to see what it prints.  Then fix it to pass the given test.  It should return a string with the
+        <p>Run the code below to see what it prints.  Then fix it to pass the test shown below the code.  It should return a string with the
                 first character of the first name and first character of the last name.</p>
       </statement>
       <program xml:id="fsc_ac_pogil_initials_v2_editor" interactive="activecode" language="python">
@@ -279,6 +279,7 @@ myTests().main()
 <subsection xml:id="fsc_string-slices">
     <title>String Slices</title>
     <exercise label="fsc_fitb_pogil_short_name">
+      <p>You can get a copy of part or all of a string using <c>str_name[start:end]</c>.</p>
       <statement>
         <p>What is the last thing that will be printed when the code below runs? <var/>  </p>
       </statement>
@@ -340,6 +341,324 @@ main()
         </var>
       </setup>
     </exercise>
+
+        <exercise label="fsc_fitb_string_nchars">
+      <statement>
+        <p>What built-in function tells you the number of characters in a string? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="len">
+            <feedback>
+              <p>The len function takes a string and returns the number of characters in it.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Look at the example code above.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    
   </subsection>
+
+   <subsection xml:id="fsc_basic-conditionals-and-tests">
+    <title>Basic Conditionals and Tests</title>
+    <exercise label="fsc_fitb_return_temp_first_line">
+      <statement>
+        <p>What is the first thing (first line of text) that will be printed when the code below runs? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="Baby,\s+its\s+cold\s+outside!">
+            <feedback>
+              <p>Since temp &lt; 32 this will print.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Which conditional is true when temp &lt; 32?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="fsc_ac_pogil_return_temp_desc">
+      <statement>
+        <p>Run this code to see what it prints.</p>
+      </statement>
+      <program xml:id="fsc_ac_pogil_return_temp_desc_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def get_temp_desc(temp):
+    if temp &lt; 32:
+        return "Baby, its cold outside!"
+    elif temp &lt; 70:
+        return "Wear a coat"
+    elif temp &lt; 80:
+        return "Feels great!"
+    else:
+        return "Too hot to handle!"
+
+# function definition
+def main():
+    print(get_temp_desc(20))
+    print(get_temp_desc(85))
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="fsc_fitb_pogil_exec_false">
+      <statement>
+        <p>What keyword specifies the block of statements to execute if a Boolean condition is false? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="else">
+            <feedback>
+              <p>The keyword else is used to execute a blocks of statements if a Boolean condition is false</p>
+            </feedback>
+          </condition>
+          <condition string="Else">
+            <feedback>
+              <p>Most keywords in Python start with a lowercase letter</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Try again!</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="fsc_fitb_pogil_conditional_start">
+      <statement>
+        <p>What keyword starts a conditional statement and is the only required keyword in it? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="if">
+            <feedback>
+              <p>The keyword if is used to start a conditional statement and is the only required keyword.</p>
+            </feedback>
+          </condition>
+          <condition string="If">
+            <feedback>
+              <p>Most keywords in Python start with a lowercase letter</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Try again!</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="fsc_fitb_pogil_multi_conditonal">
+      <statement>
+        <p>What keyword is used in a conditional statement when you want three of more possible outcomes? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="elif">
+            <feedback>
+              <p>The keyword elif is used to provide more than two possible outcomes to a conditional statement.</p>
+            </feedback>
+          </condition>
+          <condition string="Elif">
+            <feedback>
+              <p>Most keywords in Python start with a lowercase letter</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Try again!</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="fsc_ac_pogil_return_temp_desc_v2">
+      <statement>
+        <p>Modify the code in the main method below to test all possible return values from get_temp_desc.</p>
+      </statement>
+      <program xml:id="fsc_ac_pogil_return_temp_desc_v2_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def get_temp_desc(temp):
+    if temp &lt; 32:
+        return "Baby, its cold outside!"
+    elif temp &lt; 70:
+        return "Wear a coat"
+    elif temp &lt; 80:
+        return "Feels great!"
+    else:
+        return "Too hot to handle!"
+
+# function definition
+def main():
+    print(get_temp_desc(20))
+    print(get_temp_desc(85))
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="fsc_pogil_check-guess-Parsons-v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
+      <statement>
+        <p>Put the blocks in order to define the function <c>check_guess</c> which will return <c>'too low'</c> if the guess is less
+                than the passed target, <c>'correct'</c> if they are equal, and <c>'too high'</c> if the guess
+                is greater than the passed target.  For example, <c>check_guess(5,7)</c> returns
+                <c>'too low'</c>, <c>check_guess(7,7)</c> returns <c>'correct'</c>, and <c>check_guess(9,7)</c> returns
+                <c>'too high'</c>. There are three extra blocks that are not needed in a correct solution.</p>
+      </statement>
+      <blocks>
+        <block order="1">
+          <cline>def check_guess(guess, target):</cline>
+        </block>
+        <block order="2">
+          <choice correct="yes">
+            <cline>    if guess &lt; target:</cline>
+          </choice>
+          <choice>
+            <cline>    if guess &lt; target </cline>
+          </choice>
+        </block>
+        <block order="9">
+          <choice correct="yes">
+            <cline>        return 'too low'</cline>
+          </choice>
+          <choice>
+            <cline>        return "too low' </cline>
+          </choice>
+        </block>
+        <block order="8">
+          <choice correct="yes">
+            <cline>    elif guess == target:</cline>
+          </choice>
+          <choice>
+            <cline>    elif guess = target: </cline>
+          </choice>
+        </block>
+        <block order="6">
+          <cline>        return 'correct'</cline>
+        </block>
+        <block order="4">
+          <cline>    else:</cline>
+        </block>
+        <block order="7">
+          <cline>        return 'too high'</cline>
+        </block>
+      </blocks>
+    </exercise>
+    <exercise label="fsc_pogil_get_last_half_v2">
+      <statement>
+        <p>Finish the function <c>last_half(str)</c> which
+                returns the last half of the characters from the passed string <c>str</c>.
+                If <c>str</c> has less than 2 characters then return the empty string <c>""</c>.
+                For example, <c>last_half("a")</c> returns <c>""</c>, <c>last_half("coal")</c> returns <c>"al"</c>, and <c>last_half("bye")</c> returns <c>ye</c>.</p>
+      </statement>
+      <program xml:id="funct_pogil_get_last_half_editor" interactive="activecode" language="python">
+        <input>
+def last_half(str):
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(last_half('a'), '', "last_half('a')")
+        self.assertEqual(last_half('coal'), 'al', "last_half('coal')")
+        self.assertEqual(last_half('bye'), 'ye', "last_half('bye')")
+        self.assertEqual(last_half('abcd'), 'cd', "last_half('abcd')")
+        self.assertEqual(last_half('12345'), '345', "last_half('12345')")
+        self.assertEqual(last_half('123456'), '456', "last_half('123456')")
+        self.assertEqual(last_half('ab'), 'b', "last_half('ab')")
+        self.assertEqual(last_half(''), '', "last_half('')")
+
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="fsc_fitb_cond_predict_grade">
+      <statement>
+        <p>What is the first thing that will be printed when the code below runs? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="D">
+            <feedback>
+              <p>Since every if will execute it will print D.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Remember that every if will execute.  What is the final value of grade?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="fsc_ac_fix_grade_code">
+      <statement>
+        <p>Run this code to see what it prints.  The modify it to work correctly.  Next,
+                add code to the <c>main</c> function to test each possible letter grade.  It
+                should return <c>A</c> if the score is
+                greater than or equal 90, <c>B</c> if greater than or equal 80, <c>C</c> if greater
+                than or equal 70, <c>D</c> if greater than or equal 60, and otherwise <c>E</c>.</p>
+      </statement>
+      <program xml:id="fsc_ac_fix_grade_code_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def get_grade(score):
+    grade = None
+    if score &gt; 90:
+        grade = 'A'
+    if score &gt; 80:
+        grade = 'B'
+    if score &gt; 70:
+        grade = 'C'
+    if score &gt; 60:
+        grade = 'D'
+    else:
+        grade = 'E'
+    return grade
+
+def main():
+    print(get_grade(95))
+
+main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="fsc_fitb_cond_grade_num_tests">
+      <statement>
+        <p>How many test cases do you need to check that the code above works as intended? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="9">
+            <feedback>
+              <p>You need to test greater than and equal for each grade from A to D and also test a value less than 60.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Remember that you should check that it works correctly if the value is greater than or equal the specified value.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    </subsection>
 </section>
 </worksheet>
