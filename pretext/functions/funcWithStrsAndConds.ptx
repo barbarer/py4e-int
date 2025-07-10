@@ -660,5 +660,41 @@ main()
       </setup>
     </exercise>
     </subsection>
+
+    <subsection xml:id="fsc_logical-operators-and-complex-conditionals">
+    <title>Logical Operators and Complex Conditionals</title>
+    <p>The logical operators in Python are <c>and</c>, <c>or</c>, and <c>not</c>. These can be used to create complex conditionals.</p>
+     <exercise label="func_ac_and_complex_cond">
+      <statement>
+        <p>Modify this code to use a complex conditional instead.  It should still pass all tests. It should only take four lines of code or less.</p>
+      </statement>
+      <program xml:id="func_ac_and_complex_cond_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def test(a):
+    if a &gt; 0:
+        if a &lt;= 10:
+            return True
+    return False
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(test(5),True,"test(5)")
+        self.assertEqual(test(0),False,"test(0)")
+        self.assertEqual(test(1),True,"test(1)")
+        self.assertEqual(test(-5),False,"test(-5)")
+        self.assertEqual(test(11),False,"test(11)")
+        self.assertEqual(test(10),True,"test(10)")
+        self.assertEqual(test(9),True,"test(9)")
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+  </subsection>
 </section>
 </worksheet>
