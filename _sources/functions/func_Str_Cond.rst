@@ -445,6 +445,33 @@ The logical operators in Python are ``and``, ``or``, and ``not``. These can be u
 
     myTests().main()
 
+.. activecode:: fsc_ac_or_complex_cond
+    :caption: complex conditional
+
+    Modify this code to use a complex conditional instead.  It should still pass all tests. It should only take four lines of code or less.
+    ~~~~
+    # function definition
+    def either6(a,b):
+        if a == 6:
+            return True
+        if b == 6:
+            return True
+        return False
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(either6(5,2),False,"either6(5,2)")
+            self.assertEqual(either6(6,3),True, "either6(6,3)")
+            self.assertEqual(either6(3,6),True, "either6(3,6)")
+            self.assertEqual(either6(3,-6),False, "either6(3,6)")
+
+    myTests().main()
+
+
 
 If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.
 
