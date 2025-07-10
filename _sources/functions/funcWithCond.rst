@@ -8,7 +8,8 @@ in groups on activities and each member has an assigned role.  For more informat
 
    If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.
 
-**Learning Objectives**
+Learning Objectives
+===============================
 
 Students will know and be able to do the following.
 
