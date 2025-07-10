@@ -1,4 +1,4 @@
-Tuples Mixed-Up Code Questions
+Mixed-Up Code Questions
 ------------------------------
 
 .. selectquestion:: Tups_MixedUpCode_1_sq

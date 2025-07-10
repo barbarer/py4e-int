@@ -1,15 +1,14 @@
 <?xml version="1.0"?>
-<section xml:id="functions_group-work-functions">
+<worksheet xml:id="func_basics_groupsub" groupwork="yes" groupsize="4" label="func-group">
   <title>Group Work: Functions</title>
-  <introduction>
-  <p>It is best to use a POGIL approach with the following. In POGIL students work
+        <p>It is best to use a POGIL approach with the following. In POGIL students work
             in groups on activities and each member has an assigned role.  For more information see <url href="https://cspogil.org/Home" visual="https://cspogil.org/Home">https://cspogil.org/Home</url>.</p>
   <note>
     <p>If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.</p>
   </note>
-  <p>
-    <term>Learning Objectives</term>
-  </p>
+<section xml:id="functions_group-work-functions">
+  <title>Learning Objectives</title>
+  <introduction>
   <p>Students will know and be able to do the following.</p>
   <p>
     <em>Content Objectives:</em>
@@ -44,12 +43,13 @@
     </ul>
   </p>
 </introduction>
+
   <subsection xml:id="functions_print-and-function-basics">
     <title>Print and Function Basics</title>
     <p>Look at the code below and predict what it will print.</p>
     <exercise label="funct_fitb_print_test_first_line_v4">
       <statement>
-        <p>Q-1: What is the first thing that will be printed when the code below runs? <var/>  </p>
+        <p>What is the first thing that will be printed when the code below runs? <var/>  </p>
       </statement>
       <setup>
         <var>
@@ -73,7 +73,7 @@
     </exercise>
     <exercise label="funct_fitb_print_test_second_line_v3">
       <statement>
-        <p>Q-2: What is the second thing that will be printed when the code below runs? <var/>  </p>
+        <p>What is the second thing that will be printed when the code below runs? <var/>  </p>
       </statement>
       <setup>
         <var>
@@ -92,7 +92,7 @@
     </exercise>
     <exercise label="funct_fitb_print_test_last_line_v3">
       <statement>
-        <p>Q-3: What is the last thing that will be printed when the code below runs? <var/>  </p>
+        <p>What is the last thing that will be printed when the code below runs? <var/>  </p>
       </statement>
       <setup>
         <var>
@@ -145,7 +145,7 @@ main()
     </note>
     <exercise label="funct_fitb_print_test_value_b">
       <statement>
-        <p>Q-5: What is the value of <c>b</c> when function <c>test</c> starts executing? <var/>  </p>
+        <p>What is the value of <c>b</c> when function <c>test</c> starts executing? <var/>  </p>
       </statement>
       <setup>
         <var>
@@ -164,7 +164,7 @@ main()
     </exercise>
     <exercise label="funct_fitb_return">
       <statement>
-        <p>Q-6: What keyword in Python is used to return a value from a function? <var/>  </p>
+        <p>What keyword in Python is used to return a value from a function? <var/>  </p>
       </statement>
       <setup>
         <var>
@@ -183,7 +183,7 @@ main()
     </exercise>
     <exercise label="funct_fitb_print">
       <statement>
-        <p>Q-7: What built-in function in Python is used to display a value? <var/>  </p>
+        <p>What built-in function in Python is used to display a value? <var/>  </p>
       </statement>
       <setup>
         <var>
@@ -202,7 +202,7 @@ main()
     </exercise>
     <exercise label="funct_fitb_return_None_v2">
       <statement>
-        <p>Q-8: Delete the last line of the test function above and run the code again. What value is returned from a function that doesn't have a return keyword? <var/>  </p>
+        <p>Delete the last line of the test function above and run the code again. What value is returned from a function that doesn't have a return keyword? <var/>  </p>
       </statement>
       <setup>
         <var>
@@ -366,11 +366,7 @@ def main():
   </subsection>
   <subsection xml:id="functions_function-order">
     <title>Function Order</title>
-    <exercise label="func_sa_call_before_define">
-      <statement>
-        <p>Q-15: Look at the Python code below.  What do you think will happen when you run the following code?</p>
-      </statement>
-    </exercise>
+        <p>Look at the Python code below.  What do you think will happen when you run the following code?</p>
     <exercise label="func_ac_pogil_print_message_main_first">
       <statement>
         <p>Run the code below to see what happens when you try to call a function before it is defined.</p>
@@ -449,7 +445,7 @@ def main():
     <title>Special Characters and Keywords</title>
     <exercise label="funct_fitb_body_char">
       <statement>
-        <p>Q-18: What character indicates that what follows next is the body of the function? <var/>  </p>
+        <p>What character indicates that what follows next is the body of the function? <var/>  </p>
       </statement>
       <setup>
         <var>
@@ -468,7 +464,7 @@ def main():
     </exercise>
     <exercise label="funct_fitb_comment_char">
       <statement>
-        <p>Q-19: What character starts a comment? <var/>  </p>
+        <p>What character starts a comment? <var/>  </p>
       </statement>
       <setup>
         <var>
@@ -487,7 +483,7 @@ def main():
     </exercise>
     <exercise label="funct_fitb_def_fitb">
       <statement>
-        <p>Q-20: What Python keyword is used to start a function definition? <var/>  </p>
+        <p>What Python keyword is used to start a function definition? <var/>  </p>
       </statement>
       <setup>
         <var>
@@ -510,20 +506,7 @@ def main():
       </setup>
     </exercise>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
-    <raw format="html" xml:space="preserve">
-&lt;div class="runestone sqcontainer %(optclass)s"&gt;
-    &lt;div data-component="groupsub" id=func_basics_groupsub data-size_limit=4&gt;
-        &lt;div class="col-sm-6"&gt;
-            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
-            &lt;/select&gt;
-        &lt;/div&gt;
-        &lt;div id="groupsub_button" class="col-sm-6"&gt;
-        &lt;/div&gt;
-        &lt;p&gt;The Submit Group button will submit the answer for each each question
-        on this page for each member of your group. It also logs you as the official
-        group submitter.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</raw>
+  
   </subsection>
 </section>
+</worksheet>

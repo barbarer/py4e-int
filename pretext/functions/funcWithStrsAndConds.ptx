@@ -1,0 +1,687 @@
+<?xml version="1.0"?>
+<worksheet xml:id="fsc_strsconds_groupsub" groupwork="yes" groupsize="4" label="funcWithStrsAndConds">
+  <title>Group Work: Functions with Strings and Conditionals</title>
+   <p>It is best to use a POGIL approach with the following. In POGIL students work
+            in groups on activities and each member has an assigned role.  For more information see <url href="https://cspogil.org/Home" visual="https://cspogil.org/Home">https://cspogil.org/Home</url>.</p>
+  <note>
+    <p>If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.</p>
+  </note>
+<section xml:id="fsc_group-work-functions-with-strings-and-conditionals">
+  <title>Learning Objectives</title>
+  <introduction>
+  <p>Students will know and be able to do the following.</p>
+  <p>
+    <em>Content Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Learn how to display a value in Python using print.</p>
+      </li>
+      <li>
+        <p>Match terms for functions to their definitiions.</p>
+      </li>
+      <li>
+        <p>Recognize common symbols (:, #), operators (+, -, /), and keywords (def, return) in Python.</p>
+      </li>
+      <li>
+        <p>Recognize strings.</p>
+      </li>
+      <li>
+        <p>Use string indices.</p>
+      </li>
+      <li>
+        <p>Understand how slice works for both positive and negative indices.</p>
+      </li>
+      <li>
+        <p>Use input and convert between strings and numbers.</p>
+      </li>
+      <li>
+        <p>Recognize common string methods.</p>
+      </li>
+      <li>
+        <p>Recognize the keywords used in conditionals in Python (if, elif, else).</p>
+      </li>
+      <li>
+        <p>Predict the output from simple and complex conditionals.</p>
+      </li>
+      <li>
+        <p>Recognize the keywords used in complex conditionals (and, or, not).</p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    <em>Process Objectives:</em>
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>Learn how to properly indent the body of a function</p>
+      </li>
+      <li>
+        <p>Predict the output from code.</p>
+      </li>
+      <li>
+        <p>Modify code to produce the correct output.</p>
+      </li>
+      <li>
+        <p>Create good test data for functions with conditionals</p>
+      </li>
+      <li>
+        <p>Modify code to use complex conditionals</p>
+      </li>
+    </ul>
+  </p>
+</introduction>
+  <subsection xml:id="fsc_str_cond_funct_intro">
+    <title>Function Example</title>
+    <p>A function is a name for one or more lines of code. You first define a function using the <c>def</c> keyword and then execute 
+       it using <c>function_name(arguments)</c>.  
+    </p>
+    <exercise label="fsc_fitb_print_test_first_line_v3">
+      <statement>
+        <p>What is the first thing that will be printed when the code below runs? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="Hello!">
+            <feedback>
+              <p>The main function prints this before it calls the test function.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>The first function that is executed is <c>main</c>. What does that print first?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="fsc_ac_pogil_print_message_v2">
+      <statement>
+        <p>Run the code below to see what it prints and then use it to answer the following questions.</p>
+      </statement>
+      <program xml:id="fsc_ac_pogil_print_message_v2_ac_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def test(a, b = 2):
+    print("Welcome")
+    print("Learn the power of functions!")
+    print(a + b)
+    print(a - b)
+    print(a * b)
+    print(a / b)
+    print(a // b)
+    a = 5 % 2
+    return a
+
+# function definition
+def main():
+    print("Hello!")
+
+    # function call
+    print(test(3))
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+
+  <note>
+    <p>You do not declare the type of a variable in Python. Python requires that all statements that are part of the body of a function must be indented. Use four spaces to indent.</p>
+  </note>
+
+  <exercise label="fsc_fitb_value_b">
+      <statement>
+        <p>What is the value of <c>b</c> when function <c>test</c> starts executing? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="2">
+            <feedback>
+              <p>Since the value of b was not specified it defaults to 2 (it was set to 2 as a default in the function definition)</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>What is the default value specified for b in the function definition?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+
+    <exercise label="fsc_fitb_return_None">
+      <statement>
+        <p>Delete the last line of the function <c>test</c> above and run the code again.  What value is returned from a function that doesn't have a <c>return</c> keyword? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="None">
+            <feedback>
+              <p>A function without a <c>return</c> still returns the keyword None</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>What is the last thing that is printed when you run the code above after deleting the return from the test function?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+
+    <exercise label="fsc_pp_print_name_v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
+      <statement>
+        <p>Drag the blocks from the left and put them in the correct order on the right to define a function <c>print_greeting</c> that asks for your name and prints <q>Hello Name</q>. Then define a <c>main</c> function that calls <c>print_greeting</c>.  Be sure to also call the <c>main</c> function. Note that you will have to indent the lines that are in the body of each function.  Click the <em>Check</em> button to check your solution.</p>
+      </statement>
+      <blocks>
+        <block order="5">
+          <choice correct="yes">
+            <cline>def print_greeting():</cline>
+          </choice>
+          <choice>
+            <cline>def print_greeting() </cline>
+          </choice>
+        </block>
+        <block order="8">
+          <cline>    name = input("What is your name?")</cline>
+        </block>
+        <block order="9">
+          <cline>    print("Hello " + name)</cline>
+        </block>
+        <block order="7">
+          <choice correct="yes">
+            <cline>def main():</cline>
+          </choice>
+          <choice>
+            <cline>Def main(): </cline>
+          </choice>
+        </block>
+        <block order="4">
+          <choice correct="yes">
+            <cline>    print_greeting()</cline>
+          </choice>
+          <choice>
+            <cline>    print_greeting </cline>
+          </choice>
+        </block>
+        <block order="3">
+          <cline>main()</cline>
+        </block>
+      </blocks>
+    </exercise>
+  </subsection>
+<subsection xml:id="fsc_str_cond_string_def">
+    <title>String Definition</title>
+    <p>A <term>string</term> is a sequence of characters enclosed in quotes.  In Python you can use pairs of single
+or double quotes to enclose a string like in <c>"hello"</c> or <c>'hello'</c>. This is especially useful when a string includes a single quote <c>"they're"</c>.  You can even use tripe quotes when
+a string covers more than one line. </p>
+</subsection>
+<subsection xml:id="fsc_str_cond_string_index">
+    <title>String Indices</title>
+    <p>You can get a character from a string at an index (position) using <c>string[index]</c>.</p>
+    <exercise label="fsc_fitb_pogil_initials">
+      <statement>
+        <p>What is the last thing that will be printed when the code below runs? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="Jk">
+            <feedback>
+              <p>It prints the first letter of the first name and last letter of the last name.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>String indices start with 0 and -1 is the index of the last letter in a string.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="fsc_ac_pogil_initials_v2">
+      <statement>
+        <p>Run the code below to see what it prints.  Then fix it to pass the test shown below the code.  It should return a string with the
+                first character of the first name and first character of the last name.</p>
+      </statement>
+      <program xml:id="fsc_ac_pogil_initials_v2_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def get_initials(first, last):
+    return first[0] + last[-1]
+
+# function definition
+def main():
+    print(type("Hello"))
+    print(type('Class'))
+    print(type(42))
+
+    print(get_initials("J'Quan",'Alik'))
+
+
+# function call
+main()
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(get_initials("J'Quan",'Alik'),"JA",'''get_initials("J'Quan",'Alik')''')
+
+myTests().main()
+
+        </input>
+      </program>
+    </exercise>
+
+    <note>
+      <p>Use <c>string[index]</c> to get a character from a string.  The first character in a string is at index 0 and the last is at the length of the string minus 1 (also know as index -1 in Python)</p>
+    </note>
+</subsection>
+<subsection xml:id="fsc_string-slices">
+  <title>String Slices</title>
+  <p>You can get a copy of part or all of a string using <c>str_name[start:end]</c>.</p>
+    <exercise label="fsc_fitb_pogil_short_name">
+      <statement>
+        <p>What is the last thing that will be printed when the code below runs? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="Sibs">
+            <feedback>
+              <p>The last thing it prints are the first two letters of the first name and the last two letters of the last name.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>A slice starts with the first number and ends before the second.  If the second is left off it goes to the end of the string. The last character in a string is at index -1.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="fsc_ac_pogil_short_name">
+      <statement>
+        <p>Run the code below to see what it prints.</p>
+      </statement>
+      <program xml:id="fsc_ac_pogil_short_name_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def get_short_name(first, last):
+    print(len(first))
+    print(len(last))
+    return first[:2] + last[-2:]
+
+# function definition
+def main():
+    print(get_short_name('Simona',"Jacobs"))
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+    <note>
+      <p>Use the slice [start:end] operator to get a slice (substring) from a string. It will return a new string starting at the start and including all the characters up to just before the end (end - 1).  If ``start`` is missing the default is 0 and if ``end`` is missing the default value is the length of the string.</p>
+    </note>
+    <exercise label="fsc_fitb_three_char_slice">
+      <statement>
+        <p>Use the slice operator to return the first three characters from the variable <c>dna</c>? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="dna\[0\:3\]|\[:3\]">
+            <feedback>
+              <p>This will return a new string with the characters from index 0 to 2.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Look at the note above and try again.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+
+        <exercise label="fsc_fitb_string_nchars">
+      <statement>
+        <p>What built-in function tells you the number of characters in a string? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="len">
+            <feedback>
+              <p>The len function takes a string and returns the number of characters in it.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Look at the example code above.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    
+  </subsection>
+
+   <subsection xml:id="fsc_basic-conditionals-and-tests">
+    <title>Basic Conditionals and Tests</title>
+    <p>You can execute code only when a condition is true using <c>if</c>.  You can execute one block of code when a condition is true (using <c>if</c>) or false (using <c>else</c>).  You can even speicfy more than two outcomes as shown in the code below.</p>
+    <exercise label="fsc_fitb_return_temp_first_line">
+      <statement>
+        <p>What is the first thing (first line of text) that will be printed when the code below runs? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="Baby,\s+its\s+cold\s+outside!">
+            <feedback>
+              <p>Since temp &lt; 32 this will print.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Which conditional is true when temp &lt; 32?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="fsc_ac_pogil_return_temp_desc2">
+      <statement>
+        <p>Run this code to see what it prints.</p>
+      </statement>
+      <program xml:id="fsc_ac_pogil_return_temp_desc2_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def get_temp_desc(temp):
+    if temp &lt; 32:
+        return "Baby, its cold outside! The temp is " + str(temp)
+    elif temp &lt; 70:
+        return "Wear a coat. The temp is " + str(temp)
+    elif temp &lt; 80:
+        return "Feels great! The temp is " + str(temp)
+    else:
+        return "Too hot to handle! The temp is " + str(temp)
+
+# function definition
+def main():
+    print(get_temp_desc(20))
+    print(get_temp_desc(85))
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+
+    <note>
+      <p>You must first convert a number to a string using <c>str(number)</c> before you add it to a string using <c>+</c>.</p>
+    </note>
+    
+    <exercise label="fsc_fitb_pogil_multi_conditonal">
+      <statement>
+        <p>What keyword is used in a conditional statement when you want three of more possible outcomes? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="elif">
+            <feedback>
+              <p>The keyword elif is used to provide more than two possible outcomes to a conditional statement.</p>
+            </feedback>
+          </condition>
+          <condition string="Elif">
+            <feedback>
+              <p>Most keywords in Python start with a lowercase letter</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Try again!</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="fsc_ac_pogil_return_temp_desc_v2">
+      <statement>
+        <p>Modify the code in the main method below to test all possible return values from get_temp_desc.</p>
+      </statement>
+      <program xml:id="fsc_ac_pogil_return_temp_desc_v2_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def get_temp_desc(temp):
+    if temp &lt; 32:
+        return "Baby, its cold outside!"
+    elif temp &lt; 70:
+        return "Wear a coat"
+    elif temp &lt; 80:
+        return "Feels great!"
+    else:
+        return "Too hot to handle!"
+
+# function definition
+def main():
+    print(get_temp_desc(20))
+    print(get_temp_desc(85))
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="fsc_pogil_check-guess-Parsons-v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
+      <statement>
+        <p>Put the blocks in order to define the function <c>check_guess</c> which will return <c>'too low'</c> if the guess is less
+                than the passed target, <c>'correct'</c> if they are equal, and <c>'too high'</c> if the guess
+                is greater than the passed target.  For example, <c>check_guess(5,7)</c> returns
+                <c>'too low'</c>, <c>check_guess(7,7)</c> returns <c>'correct'</c>, and <c>check_guess(9,7)</c> returns
+                <c>'too high'</c>. There are three extra blocks that are not needed in a correct solution.</p>
+      </statement>
+      <blocks>
+        <block order="1">
+          <cline>def check_guess(guess, target):</cline>
+        </block>
+        <block order="2">
+          <choice correct="yes">
+            <cline>    if guess &lt; target:</cline>
+          </choice>
+          <choice>
+            <cline>    if guess &lt; target </cline>
+          </choice>
+        </block>
+        <block order="9">
+          <choice correct="yes">
+            <cline>        return 'too low'</cline>
+          </choice>
+          <choice>
+            <cline>        return "too low' </cline>
+          </choice>
+        </block>
+        <block order="8">
+          <choice correct="yes">
+            <cline>    elif guess == target:</cline>
+          </choice>
+          <choice>
+            <cline>    elif guess = target: </cline>
+          </choice>
+        </block>
+        <block order="6">
+          <cline>        return 'correct'</cline>
+        </block>
+        <block order="4">
+          <cline>    else:</cline>
+        </block>
+        <block order="7">
+          <cline>        return 'too high'</cline>
+        </block>
+      </blocks>
+    </exercise>
+   
+    <exercise label="fsc_fitb_cond_predict_grade">
+      <statement>
+        <p>What is the first thing that will be printed when the code below runs? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="D">
+            <feedback>
+              <p>Since every if will execute it will print D.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Remember that every if will execute.  What is the final value of grade?</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="fsc_ac_fix_grade_code">
+      <statement>
+        <p>Run this code to see what it prints.  The modify it to work correctly.  Next,
+                add code to the <c>main</c> function to test each possible letter grade.  It
+                should return <c>A</c> if the score is
+                greater than or equal 90, <c>B</c> if greater than or equal 80, <c>C</c> if greater
+                than or equal 70, <c>D</c> if greater than or equal 60, and otherwise <c>E</c>.</p>
+      </statement>
+      <program xml:id="fsc_ac_fix_grade_code_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def get_grade(score):
+    grade = None
+    if score &gt; 90:
+        grade = 'A'
+    if score &gt; 80:
+        grade = 'B'
+    if score &gt; 70:
+        grade = 'C'
+    if score &gt; 60:
+        grade = 'D'
+    else:
+        grade = 'E'
+    return grade
+
+def main():
+    print(get_grade(95))
+
+main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="fsc_fitb_cond_grade_num_tests">
+      <statement>
+        <p>How many test cases do you need to check that the code above works as intended? <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="9">
+            <feedback>
+              <p>You need to test greater than and equal for each grade from A to D and also test a value less than 60.</p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>Remember that you should check that it works correctly if the value is greater than or equal the specified value.</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    </subsection>
+
+    <subsection xml:id="fsc_logical-operators-and-complex-conditionals">
+    <title>Logical Operators and Complex Conditionals</title>
+    <p>The logical operators in Python are <c>and</c>, <c>or</c>, and <c>not</c>. These can be used to create complex conditionals.</p>
+     <exercise label="func_ac_and_complex_cond">
+      <statement>
+        <p>Modify this code to use a complex conditional instead.  It should still pass all tests. It should only take four lines of code or less.</p>
+      </statement>
+      <program xml:id="func_ac_and_complex_cond_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def test(a):
+    if a &gt; 0:
+        if a &lt;= 10:
+            return True
+    return False
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(test(5),True,"test(5)")
+        self.assertEqual(test(0),False,"test(0)")
+        self.assertEqual(test(1),True,"test(1)")
+        self.assertEqual(test(-5),False,"test(-5)")
+        self.assertEqual(test(11),False,"test(11)")
+        self.assertEqual(test(10),True,"test(10)")
+        self.assertEqual(test(9),True,"test(9)")
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+     <exercise label="fsc_ac_or_complex_cond">
+      <statement>
+        <p>Modify this code to use a complex conditional instead.  It should still pass all tests. It should only take four lines of code or less.</p>
+      </statement>
+      <program xml:id="fsc_ac_or_complex_cond_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def either6(a,b):
+    if a == 6:
+        return True
+    if b == 6:
+        return True
+    return False
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(either6(5,2),False,"either6(5,2)")
+        self.assertEqual(either6(6,3),True, "either6(6,3)")
+        self.assertEqual(either6(3,6),True, "either6(3,6)")
+        self.assertEqual(either6(3,-6),False, "either6(3,6)")
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+
+    .. activecode:: fsc_ac_or_complex_cond
+    :caption: complex conditional
+
+    Modify this code to use a complex conditional instead.  It should still pass all tests. It should only take four lines of code or less.
+    ~~~~
+    # function definition
+    def either6(a,b):
+        if a == 6:
+            return True
+        if b == 6:
+            return True
+        return False
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(either6(5,2),False,"either6(5,2)")
+            self.assertEqual(either6(6,3),True, "either6(6,3)")
+            self.assertEqual(either6(3,6),True, "either6(3,6)")
+            self.assertEqual(either6(3,-6),False, "either6(3,6)")
+
+    myTests().main()
+  </subsection>
+</section>
+</worksheet>
