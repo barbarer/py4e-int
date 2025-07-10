@@ -213,7 +213,7 @@ You can get a copy of part or all of a string using ``str_name[start:end]``.
 
 .. note::
 
-   Use the slice ``[start:end]`` operator to get a slice (substring) from a string. It will return a new string starting at the start and including all the characters up to just before the end (end - 1).
+   Use the slice ``[start:end]`` operator to get a slice (substring) from a string. It will return a new string starting at the ``start`` index and include all the characters up to just before the ``end`` (the last character will be from index ``end`` - 1).
    If ``start`` is missing the default is 0 and if ``end`` is missing the default value is the length of the string.
 
 .. fillintheblank:: fsc_fitb_three_char_slice

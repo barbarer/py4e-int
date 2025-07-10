@@ -324,7 +324,7 @@ main()
       </program>
     </exercise>
     <note>
-      <p>Use the slice [start:end] operator to get a slice (substring) from a string. It will return a new string starting at the start and including all the characters up to just before the end (end - 1).  If ``start`` is missing the default is 0 and if ``end`` is missing the default value is the length of the string.</p>
+      <p>Use the slice <c>[start:end]</c> operator to get a slice (substring) from a string. It will return a new string starting at the <c>start</c> index and include all the characters up to just before the <c>end</c> (the last character will be from index <c>end</c> - 1).  If <c>start</c> is missing the default is 0 and if <c>end</c> is missing the default value is the length of the string.</p>
     </note>
     <exercise label="fsc_fitb_three_char_slice">
       <statement>
