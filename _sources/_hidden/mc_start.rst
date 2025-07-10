@@ -74,9 +74,9 @@ What to do next
          reviewLink.href = "#"; // Prevent default navigation for now
 
          reviewLink.onclick = function(event) {
-            const consent = document.getElementById('consent');
+            const consent_sent = document.getElementById('consent_sent');
 
-            if (!consent) {
+            if (!consent_sent) {
             alert('Please check the consent form before moving to the next.');
             event.preventDefault();
             return false;

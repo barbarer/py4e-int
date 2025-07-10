@@ -76,7 +76,6 @@ Please answer the following questions.
 
 
 .. activecode:: posttest-2-mooc_nested
-    :language: python3
     :autograde: unittest
     :nocodelens:
 
@@ -133,7 +132,6 @@ Please answer the following questions.
 
 
 .. activecode:: posttest-3-mooc_nested 
-    :language: python3
     :autograde: unittest
     :nocodelens:
 
