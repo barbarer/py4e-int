@@ -38,6 +38,8 @@ Students will know and be able to do the following.
 Function Example
 ==================
 
+A function is a name for one or more lines of code. You first define a function using the ``def`` keyword and then execute it using ``function_name(arguments)``.
+
 .. fillintheblank:: fsc_fitb_print_test_first_line_v3
 
     What is the first thing that will be printed when the code below runs?
@@ -86,12 +88,10 @@ Run the Python code below and then answer the following questions.
     - :2: Since the value of b was not specified it defaults to 2 (it was set to 2 as a default in the function definition)
       :.*: What is the default value specified for b in the function definition?
 
-Delete the last line of the test function above and run the code again.
-
 .. fillintheblank:: fsc_fitb_return_None
     :practice: T
 
-    What value is returned from a function that doesn't have a return keyword?
+    Delete the last line of the ``test`` function above and run the code again. What value is returned from a function that doesn't have a ``return`` keyword?
 
     - :None: A function without a return still returns the keyword None
       :.*: What is the last thing that is printed when you run the code above after deleting the return from the test function?
