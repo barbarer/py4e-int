@@ -622,6 +622,35 @@ myTests().main()
         </input>
       </program>
     </exercise>
+     <exercise label="fsc_ac_or_complex_cond">
+      <statement>
+        <p>Modify this code to use a complex conditional instead.  It should still pass all tests. It should only take four lines of code or less.</p>
+      </statement>
+      <program xml:id="fsc_ac_or_complex_cond_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def either6(a,b):
+    if a == 6:
+        return True
+    if b == 6:
+        return True
+    return False
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(either6(5,2),False,"either6(5,2)")
+        self.assertEqual(either6(6,3),True, "either6(6,3)")
+        self.assertEqual(either6(3,6),True, "either6(3,6)")
+        self.assertEqual(either6(3,-6),False, "either6(3,6)")
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
   </subsection>
 </section>
 </worksheet>
