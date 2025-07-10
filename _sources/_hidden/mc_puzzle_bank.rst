@@ -91,7 +91,7 @@
     :practice: T
 
     Finish the function ``get_order_totals()``, that takes a list of tuples and returns a nested dictionary with the same information. Each tuple includes 3 values; the first is the person's name, the second is item name, and the third is the quantity.
-    Note that there may be more than one tuple for the same person and item - your dictionary should total all the quantities for the same person and item.
+        - Note that there may be more than one tuple for the same person and item - your dictionary should total all the quantities for the same person and item.
     -----
     def get_order_totals(orders):
     =====
