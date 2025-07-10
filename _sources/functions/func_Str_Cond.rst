@@ -235,6 +235,8 @@ You can get a copy of part or all of a string using ``str_name[start:end]``.
 Basic Conditionals and Tests
 ============================
 
+You can execute code only when a condition is true using ``if``. You can execute one block of code when a condition is true (using ``if``) or false (using ``else``). You can even speicfy more than two outcomes as shown in the code below.
+
 .. fillintheblank:: fsc_fitb_return_temp_first_line
 
     What is the first thing (first line of text) that will be printed when the code below runs?

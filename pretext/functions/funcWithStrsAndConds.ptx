@@ -455,13 +455,13 @@ main()
 # function definition
 def get_temp_desc(temp):
     if temp &lt; 32:
-        return "Baby, its cold outside!"
+        return "Baby, its cold outside! The temp is " + str(temp)
     elif temp &lt; 70:
-        return "Wear a coat"
+        return "Wear a coat The temp is " + str(temp)
     elif temp &lt; 80:
-        return "Feels great!"
+        return "Feels great! The temp is " + str(temp)
     else:
-        return "Too hot to handle!"
+        return "Too hot to handle! The temp is " + str(temp)
 
 # function definition
 def main():
