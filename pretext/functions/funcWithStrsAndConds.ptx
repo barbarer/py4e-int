@@ -221,7 +221,7 @@ a string covers more than one line. </p>
 </subsection>
 <subsection xml:id="fsc_str_cond_string_index">
     <title>String Indices</title>
-    <p>You can get a character from a string at an index (position).</p>
+    <p>You can get a character from a string at an index (position) using <c>string[index]</c>.</p>
     <exercise label="fsc_fitb_pogil_initials">
       <statement>
         <p>What is the last thing that will be printed when the code below runs? <var/>  </p>
@@ -361,6 +361,38 @@ main()
         </var>
       </setup>
     </exercise>
+
+     <exercise label="fsc_pogil_get_last_half_v2">
+      <statement>
+        <p>Finish the function <c>last_half(str)</c> which
+                returns the last half of the characters from the passed string <c>str</c>.
+                If <c>str</c> has less than 2 characters then return the empty string <c>""</c>.
+                For example, <c>last_half("a")</c> returns <c>""</c>, <c>last_half("coal")</c> returns <c>"al"</c>, and <c>last_half("bye")</c> returns <c>ye</c>.</p>
+      </statement>
+      <program xml:id="funct_pogil_get_last_half_editor" interactive="activecode" language="python">
+        <input>
+def last_half(str):
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(last_half('a'), '', "last_half('a')")
+        self.assertEqual(last_half('coal'), 'al', "last_half('coal')")
+        self.assertEqual(last_half('bye'), 'ye', "last_half('bye')")
+        self.assertEqual(last_half('abcd'), 'cd', "last_half('abcd')")
+        self.assertEqual(last_half('12345'), '345', "last_half('12345')")
+        self.assertEqual(last_half('123456'), '456', "last_half('123456')")
+        self.assertEqual(last_half('ab'), 'b', "last_half('ab')")
+        self.assertEqual(last_half(''), '', "last_half('')")
+
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
     
   </subsection>
 
@@ -385,22 +417,22 @@ main()
         </var>
       </setup>
     </exercise>
-    <exercise label="fsc_ac_pogil_return_temp_desc">
+    <exercise label="fsc_ac_pogil_return_temp_desc2">
       <statement>
         <p>Run this code to see what it prints.</p>
       </statement>
-      <program xml:id="fsc_ac_pogil_return_temp_desc_editor" interactive="activecode" language="python">
+      <program xml:id="fsc_ac_pogil_return_temp_desc2_editor" interactive="activecode" language="python">
         <input>
 # function definition
 def get_temp_desc(temp):
     if temp &lt; 32:
-        return "Baby, its cold outside!"
+        return "Baby, its cold outside! The temp is " + str(temp)
     elif temp &lt; 70:
-        return "Wear a coat"
+        return "Wear a coat. The temp is " + str(temp)
     elif temp &lt; 80:
-        return "Feels great!"
+        return "Feels great! The temp is " + str(temp)
     else:
-        return "Too hot to handle!"
+        return "Too hot to handle! The temp is " + str(temp)
 
 # function definition
 def main():
@@ -412,54 +444,11 @@ main()
         </input>
       </program>
     </exercise>
-    <exercise label="fsc_fitb_pogil_exec_false">
-      <statement>
-        <p>What keyword specifies the block of statements to execute if a Boolean condition is false? <var/>  </p>
-      </statement>
-      <setup>
-        <var>
-          <condition string="else">
-            <feedback>
-              <p>The keyword else is used to execute a blocks of statements if a Boolean condition is false</p>
-            </feedback>
-          </condition>
-          <condition string="Else">
-            <feedback>
-              <p>Most keywords in Python start with a lowercase letter</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Try again!</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
-    </exercise>
-    <exercise label="fsc_fitb_pogil_conditional_start">
-      <statement>
-        <p>What keyword starts a conditional statement and is the only required keyword in it? <var/>  </p>
-      </statement>
-      <setup>
-        <var>
-          <condition string="if">
-            <feedback>
-              <p>The keyword if is used to start a conditional statement and is the only required keyword.</p>
-            </feedback>
-          </condition>
-          <condition string="If">
-            <feedback>
-              <p>Most keywords in Python start with a lowercase letter</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Try again!</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
-    </exercise>
+
+    <note>
+      <p>You must first convert a number to a string using <c>str(number)</c> before you add it to a string using <c>+</c>.</p>
+    </note>
+    
     <exercise label="fsc_fitb_pogil_multi_conditonal">
       <statement>
         <p>What keyword is used in a conditional statement when you want three of more possible outcomes? <var/>  </p>
@@ -558,37 +547,7 @@ main()
         </block>
       </blocks>
     </exercise>
-    <exercise label="fsc_pogil_get_last_half_v2">
-      <statement>
-        <p>Finish the function <c>last_half(str)</c> which
-                returns the last half of the characters from the passed string <c>str</c>.
-                If <c>str</c> has less than 2 characters then return the empty string <c>""</c>.
-                For example, <c>last_half("a")</c> returns <c>""</c>, <c>last_half("coal")</c> returns <c>"al"</c>, and <c>last_half("bye")</c> returns <c>ye</c>.</p>
-      </statement>
-      <program xml:id="funct_pogil_get_last_half_editor" interactive="activecode" language="python">
-        <input>
-def last_half(str):
-
-====
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-    def testOne(self):
-        self.assertEqual(last_half('a'), '', "last_half('a')")
-        self.assertEqual(last_half('coal'), 'al', "last_half('coal')")
-        self.assertEqual(last_half('bye'), 'ye', "last_half('bye')")
-        self.assertEqual(last_half('abcd'), 'cd', "last_half('abcd')")
-        self.assertEqual(last_half('12345'), '345', "last_half('12345')")
-        self.assertEqual(last_half('123456'), '456', "last_half('123456')")
-        self.assertEqual(last_half('ab'), 'b', "last_half('ab')")
-        self.assertEqual(last_half(''), '', "last_half('')")
-
-
-myTests().main()
-        </input>
-      </program>
-    </exercise>
+   
     <exercise label="fsc_fitb_cond_predict_grade">
       <statement>
         <p>What is the first thing that will be printed when the code below runs? <var/>  </p>
