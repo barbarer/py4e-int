@@ -361,38 +361,6 @@ main()
         </var>
       </setup>
     </exercise>
-
-     <exercise label="fsc_pogil_get_last_half_v2">
-      <statement>
-        <p>Finish the function <c>last_half(str)</c> which
-                returns the last half of the characters from the passed string <c>str</c>.
-                If <c>str</c> has less than 2 characters then return the empty string <c>""</c>.
-                For example, <c>last_half("a")</c> returns <c>""</c>, <c>last_half("coal")</c> returns <c>"al"</c>, and <c>last_half("bye")</c> returns <c>ye</c>.</p>
-      </statement>
-      <program xml:id="funct_pogil_get_last_half_editor" interactive="activecode" language="python">
-        <input>
-def last_half(str):
-
-====
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-    def testOne(self):
-        self.assertEqual(last_half('a'), '', "last_half('a')")
-        self.assertEqual(last_half('coal'), 'al', "last_half('coal')")
-        self.assertEqual(last_half('bye'), 'ye', "last_half('bye')")
-        self.assertEqual(last_half('abcd'), 'cd', "last_half('abcd')")
-        self.assertEqual(last_half('12345'), '345', "last_half('12345')")
-        self.assertEqual(last_half('123456'), '456', "last_half('123456')")
-        self.assertEqual(last_half('ab'), 'b', "last_half('ab')")
-        self.assertEqual(last_half(''), '', "last_half('')")
-
-
-myTests().main()
-        </input>
-      </program>
-    </exercise>
     
   </subsection>
 
