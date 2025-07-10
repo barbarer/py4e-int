@@ -277,13 +277,13 @@ myTests().main()
     </exercise>
 
     <note>
-      <p>The first character is at index 0 and an index of -1 means the last charater.</p>
+      <p>Use <c>string[index]</c> to get a character from a string.  The first character in a string is at index 0 and the last is at the length of the string minus 1 (also know as index -1 in Python)</p>
     </note>
 </subsection>
 <subsection xml:id="fsc_string-slices">
-    <title>String Slices</title>
+  <title>String Slices</title>
+  <p>You can get a copy of part or all of a string using <c>str_name[start:end]</c>.</p>
     <exercise label="fsc_fitb_pogil_short_name">
-      <p>You can get a copy of part or all of a string using <c>str_name[start:end]</c>.</p>
       <statement>
         <p>What is the last thing that will be printed when the code below runs? <var/>  </p>
       </statement>
@@ -324,7 +324,7 @@ main()
       </program>
     </exercise>
     <note>
-      <p>Use the slice [start:end] operator to get a slice (substring) from a string. It will return a new string starting at the start and including all the characters up to just before the end (end - 1).</p>
+      <p>Use the slice [start:end] operator to get a slice (substring) from a string. It will return a new string starting at the start and including all the characters up to just before the end (end - 1).  If ``start`` is missing the default is 0 and if ``end`` is missing the default value is the length of the string.</p>
     </note>
     <exercise label="fsc_fitb_three_char_slice">
       <statement>
@@ -656,6 +656,32 @@ myTests().main()
         </input>
       </program>
     </exercise>
+
+    .. activecode:: fsc_ac_or_complex_cond
+    :caption: complex conditional
+
+    Modify this code to use a complex conditional instead.  It should still pass all tests. It should only take four lines of code or less.
+    ~~~~
+    # function definition
+    def either6(a,b):
+        if a == 6:
+            return True
+        if b == 6:
+            return True
+        return False
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(either6(5,2),False,"either6(5,2)")
+            self.assertEqual(either6(6,3),True, "either6(6,3)")
+            self.assertEqual(either6(3,6),True, "either6(3,6)")
+            self.assertEqual(either6(3,-6),False, "either6(3,6)")
+
+    myTests().main()
   </subsection>
 </section>
 </worksheet>
