@@ -78,7 +78,7 @@ Practice
             +------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+     
         
         ~~~~
-        def get_average_score(dict_category_item, lst_quantity):
+        def get_average_score(student_information):
             
 
 
@@ -98,6 +98,7 @@ Practice
                 self.assertEqual(get_average_score({"Bob": {"age": 22, "courses": {"Math": 92, "History": 86}}})["Bob"], 89)
 
         myTests().main()
+
 
 
 
