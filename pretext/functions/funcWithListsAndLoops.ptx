@@ -61,6 +61,312 @@
     </ul>
   </p>
 </introduction>
+
+<subsection xml:id="flal_list-indexing-and-slicing">
+    <title>List Indexing and Slicing</title>
+    <p>A list holds items in order and you can get the value at an index, just like you can with strings.  You can also 
+use negative indices, just like you can with strings.  You can use the slice operator <c>[start:end]</c> with lists to get a 
+new list by copying part of a list, just like you can with strings. The new list will include the item at the start index (inclusive) and
+all elements up to the end index - 1. </p>
+ 
+    <exercise label="flal_neg_2_result">
+      <statement>
+        <p>What is the last thing that the following code prints?</p>
+        <program language="python">
+          <input>
+def list_get(lst):
+    print(lst[0])
+    print(lst[:2])
+    return lst[-2]
+l = ["hi", 3, 'buy', 4]
+print(list_get(l))
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>hi</p>
+          </statement>
+          <feedback>
+            <p>This would be true if it was returning the item at index 0 or -4.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>3</p>
+          </statement>
+          <feedback>
+            <p>This would be true if it was returning the item at index 1 or -3.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>buy</p>
+          </statement>
+          <feedback>
+            <p>This is returning the second to the last item, the one at index -2.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>4</p>
+          </statement>
+          <feedback>
+            <p>This would be true if it was returning the item at index 3 or -1.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Nothing, there will be an error.</p>
+          </statement>
+          <feedback>
+            <p>This code will run without any errors.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+
+  </subsection>
+
+  <subsection xml:id="flal_built-in-functions-that-work-on-lists">
+    <title>Built-in Functions That Work on Lists</title>
+    <p>There are several built-in functions in Python that work on lists such as <c>max</c>, <c>min</c>, <c>len</c>, and <c>sum</c>.</p>
+    <exercise label="flal_ll_ac_list_func">
+      <statement>
+        <p>Run this code to see what it prints. You can also step through the code using the "Show Codelens" button. </p>
+      </statement>
+      <program xml:id="flal_ll_ac_list_func_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def list_func(my_list):
+    print("max", max(my_list))
+    print("min", min(my_list))
+    print("len", len(my_list))
+    print("sum", sum(my_list))
+
+# function definition
+def main():
+    list_func([1, 2, 3])
+    list_func([90, 100])
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+    <exercise label="flal_avg_drop_high_and_low">
+      <statement>
+        <p>Write a function <c>avg_with_drop</c> that takes a list, <c>num_list</c> and returns the average of the values in the list, but it does not include the highest or lowest value in the average. For example, <c>avg_with_drop([1,2,3,4])</c> should return <c>2.5</c>.</p>
+      </statement>
+      <program xml:id="flal_avg_drop_high_and_low_editor" interactive="activecode" language="python">
+        <input>
+def avg_with_drop(num_list):
+
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(avg_with_drop([1,2,3,4]), 2.5, 'avg_with_drop([1,2,3,4])')
+        self.assertEqual(avg_with_drop([2,4,6,8]), 5, 'avg_with_drop([2,4,6,8])')
+        self.assertEqual(avg_with_drop([10, 80, 100, 60]), 70, 'avg_with_drop([10, 80, 100, 60])')
+        self.assertEqual(avg_with_drop([-10, 80, 120, 60]), 70, 'avg_with_drop([-10, 80, 120, 60])')
+        self.assertEqual(avg_with_drop([5, 10, 15, 20]), 12.5, 'avg_with_drop([5, 10, 15, 20])')
+
+myTests().main()
+        </input>
+      </program>
+    </exercise>
+  </subsection>
+  
+  <subsection xml:id="flal_list-methods">
+    <title>List Methods</title>
+    <p>Lists are objects of the <c>list</c> class and have methods that operate on list objects using dot notation (<c>name.method()</c>) such as <c>append</c>, <c>pop</c>, and <c>extend</c>.</p>
+    <exercise label="flal_ll_ac_list_methods">
+      <statement>
+        <p>Run this code to see what it prints.  You can also step through the code using the "Show Codelens" button.</p>
+      </statement>
+      <program xml:id="flal_ll_ac_list_methods_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def list_methods(alist):
+    print(type(alist))
+    print(alist)
+    alist.append(3)
+    print(alist)
+    alist.append([2])
+    print(alist)
+    alist.pop(1)
+    print(alist)
+    alist.extend([8, 11])
+    print(alist)
+
+# function definition
+def main():
+    l1 = [1]
+    list_methods(l1)
+    print(l1)
+    l1 = ['hi', 'bye']
+    list_methods(l1)
+    print(l1)
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+
+    
+    <exercise label="flal_list_append_pop_predict">
+      <statement>
+        <p>What would the following code print?</p>
+        <program language="python">
+          <input>
+def list_trans(lst):
+    lst.append(3)
+    lst.pop(2)
+    return lst
+l1 = [2, 5, 7]
+print(list_trans(l1))
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>[2, 5, 7, 3]</p>
+          </statement>
+          <feedback>
+            <p>This is what the list looks like before the pop executes.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>[5, 7, 3]</p>
+          </statement>
+          <feedback>
+            <p>This would be true if pop removed the first value that was passed in, but it takes an index and removes the item at that index.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>[2, 7, 3]</p>
+          </statement>
+          <feedback>
+            <p>This would be true if pop removed the item at index 1, but it removes the item at index 2 and the first item is at index 0.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>[2, 5, 7]</p>
+          </statement>
+          <feedback>
+            <p>This would be true if pop removed the last item, but it removes the one at index 2.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>[2, 5, 3]</p>
+          </statement>
+          <feedback>
+            <p>Correct.  This adds 3 at the end and then removes the item at index 2.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+
+    <note>
+      <p>Lists are mutable (changeable).  List methods like <c>append</c> and <c>pop</c> change the current list.</p>
+    </note>
+    
+      <p>You can also reverse a list or sort it.</p>
+
+      <exercise label="flal_ll_ac_list_methods2">
+      <statement>
+        <p>Run this code to see what it prints.</p>
+      </statement>
+      <program xml:id="flal_ll_ac_list_methods2_editor" interactive="activecode" language="python">
+        <input>
+# function definition
+def list_methods2(alist):
+    print(alist)
+    alist.reverse()
+    print(alist)
+    alist.sort()
+    print(alist)
+    alist.sort(reverse = True)
+    print(alist)
+
+# function definition
+def main():
+    l1 = [-2, 50, -20, 30]
+    list_methods2(l1)
+    print(l1)
+    l1 = ['hi', 'bye', 'apple']
+    list_methods2(l1)
+    print(l1)
+
+# function call
+main()
+        </input>
+      </program>
+    </exercise>
+
+  
+    <exercise label="flal_list_result_of_reverse">
+      <statement>
+        <p>What is the last thing the following code prints?</p>
+        <program language="python">
+          <input>
+def list_trans(lst):
+    r = lst.reverse()
+    print(lst)
+    print(r)
+
+l1 = [2, 5, 7]
+list_trans(l1)
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>None</p>
+          </statement>
+          <feedback>
+            <p>It prints the return value from the reverse method which is None.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>[2, 5, 7]</p>
+          </statement>
+          <feedback>
+            <p>This would be true if it printed the value of</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>[7, 5, 2]]</p>
+          </statement>
+          <feedback>
+            <p>This would be true if pop removed the item at index 1, but it removes the item at index 2 and the first item is at index 0.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Nothing, there will be an error.</p>
+          </statement>
+          <feedback>
+            <p>This would be true if pop removed the last item, but it removes the one at index 2.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+
   <subsection xml:id="flal_the-for-each-loop">
     <title>The For-Each Loop</title>
     <p>A for-each loop in Python will loop though the items in a list starting with the item at index 0, then index 1, and so on till the last item in the list.</p>
