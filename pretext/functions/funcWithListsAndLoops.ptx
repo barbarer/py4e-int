@@ -155,27 +155,30 @@ main()
         </input>
       </program>
     </exercise>
-    <exercise label="flal_avg_drop_high_and_low">
+    
+    <exercise label="flal_ac_sum_first_half">
       <statement>
-        <p>Write a function <c>avg_with_drop</c> that takes a list, <c>num_list</c> and returns the average of the values in the list, but it does not include the highest or lowest value in the average. For example, <c>avg_with_drop([1,2,3,4])</c> should return <c>2.5</c>.</p>
+        <p>Write a function <c>sum_first_half</c> that takes a list and returns a the sum of just the first half of the items.  
+   For example, <c>sum_first_half([1,2,3,4])</c> should return ``3`` (sum of 1 and 2) and <c>first_half([7,8,9])</c> should return ``7``.  </p>
       </statement>
-      <program xml:id="flal_avg_drop_high_and_low_editor" interactive="activecode" language="python">
+      <program xml:id="flal_ac_sum_first_half_editor" interactive="activecode" language="python">
         <input>
-def avg_with_drop(num_list):
+def sum_first_half(alist):
 
 ====
 from unittest.gui import TestCaseGui
 
-class myTests(TestCaseGui):
+   class myTests(TestCaseGui):
 
-    def testOne(self):
-        self.assertEqual(avg_with_drop([1,2,3,4]), 2.5, 'avg_with_drop([1,2,3,4])')
-        self.assertEqual(avg_with_drop([2,4,6,8]), 5, 'avg_with_drop([2,4,6,8])')
-        self.assertEqual(avg_with_drop([10, 80, 100, 60]), 70, 'avg_with_drop([10, 80, 100, 60])')
-        self.assertEqual(avg_with_drop([-10, 80, 120, 60]), 70, 'avg_with_drop([-10, 80, 120, 60])')
-        self.assertEqual(avg_with_drop([5, 10, 15, 20]), 12.5, 'avg_with_drop([5, 10, 15, 20])')
+       def testOne(self):
+           self.assertEqual(sum_first_half([1,2,3,4]), 3, 'sum_first_half([1,2,3,4])')
+           self.assertEqual(sum_first_half([7,8,9]), 7, 'sum_first_half([7,8,9])')
+           self.assertEqual(sum_first_half([]), 0, 'sum_first_half([])')
+           self.assertEqual(sum_first_half([6]), 0, 'sum_first_half([6])')
+           self.assertEqual(sum_first_half([1,2,3,4,5]), 3, 'sum_first_half([1,2,3,4,5])')
+           self.assertEqual(sum_first_half([1,2,3,4,5,6]), 6, 'sum_first_half([1,2,3,4,5,6])')
 
-myTests().main()
+   myTests().main()
         </input>
       </program>
     </exercise>
@@ -234,14 +237,6 @@ print(list_trans(l1))
         </program>
       </statement>
       <choices>
-        <choice>
-          <statement>
-            <p>[2, 5, 7, 3]</p>
-          </statement>
-          <feedback>
-            <p>This is what the list looks like before the pop executes.</p>
-          </feedback>
-        </choice>
         <choice>
           <statement>
             <p>[5, 7, 3]</p>
@@ -370,6 +365,7 @@ list_trans(l1)
   <subsection xml:id="flal_the-for-each-loop">
     <title>The For-Each Loop</title>
     <p>A for-each loop in Python will loop though the items in a list starting with the item at index 0, then index 1, and so on till the last item in the list.</p>
+   
     <exercise label="flal_ll_fitb_count_odd_first">
       <statement>
         <p>What is the first thing that will be printed by the code below? <var/>  </p>
@@ -389,25 +385,8 @@ list_trans(l1)
         </var>
       </setup>
     </exercise>
-    <exercise label="flal_ll_fitb_count_odd_last">
-      <statement>
-        <p>What is the last thing that will be printed by the code below? <var/>  </p>
-      </statement>
-      <setup>
-        <var>
-          <condition number="0">
-            <feedback>
-              <p>It will print the number of values that are odd in the last list which is zero.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Run the code to check.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
-    </exercise>
+
+
     <exercise label="flal_ll_ac_count_odd">
       <statement>
         <p>Run this code to see what it prints.</p>
@@ -533,7 +512,7 @@ main()
     </exercise>
 
     <note>
-      <p>The function range(start, end, by) will return a range object (an iterator) that allows you to loop from start (inclusive) to end (exclusive) and add the value of by after each execution of the loop.</p>
+      <p>The function <c>range(start, end, by)</c> will return a range object (an iterator) that allows you to loop from <c>start</c> (inclusive) to <c>end</c> (exclusive) and add the value of <c>by</c> after each execution of the loop.</p>
     </note>
 
     <exercise label="flal_ll_pp_total_at_odd_indices" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -619,8 +598,7 @@ main()
         </var>
       </setup>
     </exercise>
-    <p>What do you think would happen if you deleted lines 6 and 7 in the above code?</p>
-    
+
     <note>
       <p>A loop that never ends is called an infinite loop.  A while loop should have some way to end.  If you have an infinite loop you may need to refresh the page to stop it.</p>
     </note>
