@@ -116,14 +116,6 @@ print(list_get(l))
             <p>This would be true if it was returning the item at index 3 or -1.</p>
           </feedback>
         </choice>
-        <choice>
-          <statement>
-            <p>Nothing, there will be an error.</p>
-          </statement>
-          <feedback>
-            <p>This code will run without any errors.</p>
-          </feedback>
-        </choice>
       </choices>
     </exercise>
 
@@ -155,7 +147,7 @@ main()
         </input>
       </program>
     </exercise>
-    
+
     <exercise label="flal_ac_sum_first_half">
       <statement>
         <p>Write a function <c>sum_first_half</c> that takes a list and returns a the sum of just the first half of the items.  
@@ -168,17 +160,17 @@ def sum_first_half(alist):
 ====
 from unittest.gui import TestCaseGui
 
-   class myTests(TestCaseGui):
+class myTests(TestCaseGui):
 
-       def testOne(self):
-           self.assertEqual(sum_first_half([1,2,3,4]), 3, 'sum_first_half([1,2,3,4])')
-           self.assertEqual(sum_first_half([7,8,9]), 7, 'sum_first_half([7,8,9])')
-           self.assertEqual(sum_first_half([]), 0, 'sum_first_half([])')
-           self.assertEqual(sum_first_half([6]), 0, 'sum_first_half([6])')
-           self.assertEqual(sum_first_half([1,2,3,4,5]), 3, 'sum_first_half([1,2,3,4,5])')
-           self.assertEqual(sum_first_half([1,2,3,4,5,6]), 6, 'sum_first_half([1,2,3,4,5,6])')
+    def testOne(self):
+        self.assertEqual(sum_first_half([1,2,3,4]), 3, 'sum_first_half([1,2,3,4])')
+        self.assertEqual(sum_first_half([7,8,9]), 7, 'sum_first_half([7,8,9])')
+        self.assertEqual(sum_first_half([]), 0, 'sum_first_half([])')
+        self.assertEqual(sum_first_half([6]), 0, 'sum_first_half([6])')
+        self.assertEqual(sum_first_half([1,2,3,4,5]), 3, 'sum_first_half([1,2,3,4,5])')
+        self.assertEqual(sum_first_half([1,2,3,4,5,6]), 6, 'sum_first_half([1,2,3,4,5,6])')
 
-   myTests().main()
+myTests().main()
         </input>
       </program>
     </exercise>

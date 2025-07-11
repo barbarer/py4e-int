@@ -330,6 +330,10 @@ the built-in ``range`` function to do this.
     # function call
     main()
 
+.. note::
+
+    The function ``range(start, end, by)`` will return a range object (an iterator) that allows you to loop from ``start`` (inclusive) to ``end`` (exclusive) and add the value of ``by`` after each execution of the loop.
+
 .. parsonsprob:: flal_pp_total_at_odd_indices
    :numbered: left
    :adaptive:
