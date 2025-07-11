@@ -77,10 +77,10 @@ There are several built-in functions in Python that work on lists such as ``max`
     ~~~~
     # function definition
     def list_func(my_list):
-        print(max(my_list))
-        print(min(my_list))
-        print(len(my_list))
-        print(sum(my_list))
+        print("max", max(my_list))
+        print("min", min(my_list))
+        print("len", len(my_list))
+        print("sum", sum(my_list))
 
     # function definition
     def main():
