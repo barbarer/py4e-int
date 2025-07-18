@@ -17,7 +17,7 @@ The five parts are:
    - Pre survey (3 mins) - a self-efficacy survey for computing (6 questions) and 5 self-evaluation questions about your familiarity with nested dictionaries.
    - Introduction to the Practice Types (3 mins) - An introduction to the type of practice problems you may see during practice.
    - Practice (32 mins) - Complete 4 write-code practice problems, followed by a survey question if applicable.
-   - Posttest (12 mins) - Help is not available during the posttest. It includes 1 short answer, and 2 write-code problems.
+   - Wrap-Up Check (12 mins) - Help is not available during the wrap-up check. It includes 1 short answer, and 2 write-code problems.
 
 Participant Requirements
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
