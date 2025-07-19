@@ -1,49 +1,5 @@
-Posttest
-========
-
-.. raw:: html
-
-    <script>
-
-        function triggerSaveClicks(callback) {
-                console.log("Triggering all Save and Save & Run clicks...");
-
-                let saveButtons = document.querySelectorAll('button');
-                let saveCount = 0;
-
-                saveButtons.forEach(button => {
-                    if (button.innerText.includes('Save') || button.innerText.includes('Save & Run')) {
-                        console.log(`Clicking button: ${button.innerText}`);
-                        button.click();  // Simulate button click
-                        saveCount++;
-                    }
-                });
-
-                // Ensure logging is complete before proceeding
-                setTimeout(() => {
-                    console.log(`Triggered ${saveCount} Save clicks. Proceeding...`);
-                    if (callback) callback();
-                }, 1000);  // Wait 1 second for logging to process
-        
-
-        document.addEventListener("DOMContentLoaded", function() {
-            let introLink = document.getElementById('thank_you');  // Change ID if needed
-            if (introLink) {
-                introLink.addEventListener("click", function(event) {
-                    event.preventDefault(); // Stop immediate navigation
-
-                    console.log("User clicked the Introduction link. Saving first...");
-
-                    // Trigger Save clicks, then navigate
-                    triggerSaveClicks(() => {
-                        window.location.href = introLink.href;  // Navigate after saving
-                    });
-                });
-            }
-        });
-
-    </script>
-
+Wrap-Up Check
+==============
 
 Please answer the following questions.
 ::
@@ -73,7 +29,8 @@ Please answer the following questions.
     - Recommended Time: Spend at most 2 minutes - Put "I am not sure" and click "Save" if unsure of the answer.
 
     For the code piece above, fill in the missing two lines to print each employee's name along with their skills using a nested loop.
-
+    
+    Note: Be sure to indent the second line correctly.
 
 .. activecode:: posttest-2-mooc_nested
     :autograde: unittest
@@ -185,7 +142,7 @@ What to do next
 ================
 .. raw:: html
 
-    <p>Click on the following link to the final page: <b><a id="post_survey"> <font size="+1">Thank you!</font></a></b></p>
+    <p>Click on the following link to the final page: <b><a id="thank_you"> <font size="+1">Thank you!</font></a></b></p>
 
 .. raw:: html
 
@@ -193,8 +150,8 @@ What to do next
 
       window.onload = function() {
 
-        a = document.getElementById("post_survey")
-        a.href = "mc_post_survey.html"
+        a = document.getElementById("thank_you")
+        a.href = "mc_thank_you.html"
       };
 
     </script>

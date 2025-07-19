@@ -10,19 +10,19 @@
     -----
     def table_reservation(reservation_dict, guest_num):
     =====
-    count = 0
+        count = 0
     =====
-    for time_slot, reservations in reservation_dict.items():
+        for time_slot, reservations in reservation_dict.items():
     =====
-        for reservation in reservations:
+            for reservation in reservations:
     =====
-            for reservation_id, guests in reservation.items():
+                for reservation_id, guests in reservation.items():
     =====
-                if guests == guest_num:
+                    if guests == guest_num:
     =====
-                    count += 1
+                        count += 1
     =====
-    return count
+        return count
 
 
 .. parsonsprob:: p2-mooc_nested
@@ -33,7 +33,7 @@
     Finish the function ``get_average_score(student_information)`` below:
         - It takes a dictionary ``student_information`` representing student data, where the keys are student names, and the values are dictionaries containing information about the student, including their age and a list of courses they took and the grade for each course.
         - You then need to calculate the average grade for each student.
-        - Return a dictionary that stores the students whose average grade is higher than or equal to ``80`` in a dictionary. The keys are student names and the values are their average grade.    -----
+        - Return a dictionary that stores the students whose average grade is higher than or equal to ``80`` in a dictionary. The keys are student names and the values are their average grade.    
     -----
     def get_average_score(student_information):
     =====
