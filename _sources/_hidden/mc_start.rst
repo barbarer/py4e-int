@@ -2,7 +2,7 @@ Python 3 with Nested Dictionaries
 =====================================
 Welcome to the Python 3 with Nested Dictionaries study! 
 This study is part of a research project at the University of Michigan, and your participation will contribute to our understanding of how students learn programming concepts.
-We are researchers at University of Michigan who are trying to improve the teaching and learning of programming.
+We are researchers at the University of Michigan who are trying to improve the teaching and learning of programming.
 
 Purpose of this Study
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
