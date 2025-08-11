@@ -3,26 +3,29 @@
     :adaptive:
     :practice: T
 
-    Finish the function ``table_reservation(reservation_dict, guest_num)`` below:
-        - It takes a nested dictionary ``reservation_dict`` representing a restaurant's current reservation situation for a day and a specific number of guests ``guest_num`` as input.
-        - ``reservation_dict`` is a nested dictionary with outer keys as time slots in a day (e.g., breakfast, lunch, dinner), and values as a list of dictionaries where the inner keys are unique researvation IDs and the values are the number of guests for that reservation.
-        - Your goal is to count and return the number of reservations in ``reservation_dict`` with the same guest number as the input ``guest_num``.
+    Finish the function ``add_quantity(item_dict, quantities)`` that “zips” quantities onto their corresponding items inside each category, returning a nested dictionary:
+        - It takes a dictionary ``item_dict`` and a list ``quantities`` as input, the lengths of ``item_dict`` and ``quantities`` are the same.
+        - For dict ``item_dict``, keys are category names (strings), values are lists of unique item names (strings), each list contains at least one item (no empty lists).
+        - For list ``quantities``, it contains the quantity for each item in ``item_dict``. Quantities are given in the same order as the items appear in item_dict when iterated in insertion order, category by category, left to right.
+        - The total number of quantities equals the total number of items in all categories combined.
+        - The function should return a new nested dictionary where the outer dictionary keys are the category names, the inner dictionary keys are the item names, and the inner dictionary values are the quantities.
     -----
-    def table_reservation(reservation_dict, guest_num):
+    def add_quantity(item_dict, quantities):
     =====
-        count = 0
+        index = 0
+        result = {}
+    =====   
+        for category, items in item_dict.items():
     =====
-        for time_slot, reservations in reservation_dict.items():
+            result[category] = {}
     =====
-            for reservation in reservations:
+            for item in items:
     =====
-                for reservation_id, guests in reservation.items():
+                result[category][item] = quantities[index]
     =====
-                    if guests == guest_num:
+                index += 1
     =====
-                        count += 1
-    =====
-        return count
+        return result
 
 
 .. parsonsprob:: p2-mooc_nested

@@ -5,28 +5,30 @@ Practice
         :autograde: unittest
         :nocodelens:
 
-        Finish the function ``table_reservation(reservation_dict, guest_num)`` below:
-            - It takes a nested dictionary ``reservation_dict`` representing a restaurant's current reservation situation for a day and a specific number of guests ``guest_num`` as input.
-            - ``reservation_dict`` is a nested dictionary with outer keys as time slots in a day (e.g., breakfast, lunch, dinner), and values as a list of dictionaries where the inner keys are unique researvation IDs and the values are the number of guests for that reservation.
-            - Your goal is to count and return the number of reservations in ``reservation_dict`` with the same guest number as the input ``guest_num``.
+        Finish the function ``add_quantity(item_dict, quantities)`` that “zips” quantities onto their corresponding items inside each category, returning a nested dictionary:
+            - It takes a dictionary ``item_dict`` and a list ``quantities`` as input, the lengths of ``item_dict`` and ``quantities`` are the same.
+            - For dict ``item_dict``, keys are category names (strings), values are lists of unique item names (strings), each list contains at least one item (no empty lists).
+            - For list ``quantities``, it contains the quantity for each item in ``item_dict``. Quantities are given in the same order as the items appear in item_dict when iterated in insertion order, category by category, left to right.
+            - The total number of quantities equals the total number of items in all categories combined.
+            - The function should return a new nested dictionary where the outer dictionary keys are the category names, the inner dictionary keys are the item names, and the inner dictionary values are the quantities.
 
         .. table::
-            :name: nested_merge_course_table
+            :name: nested_quantity_table
             :align: left
             :width: 50
 
-            +----------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
-            | Example Input                                                                                                                                                        | Expected Output  |
-            +======================================================================================================================================================================+==================+
-            |``table_reservation({"breakfast": [{"G01": 3}, {"G02": 4}], "lunch": [{"G03": 2}, {"G04": 4}], "happy_hour": [{"G05": 6}], "dinner": [{"G06": 2}, {"G07": 8}]}, 4)``  | ``2``            |
-            +----------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
-            |``table_reservation({"brunch": [{"G01": 2}], "lunch": [{"G02": 2}, {"G03": 4}], "happy_hour": [{"G04": 2}], "dinner": [{"G05": 2}, {"G06": 8}]}, 2)``                 | ``4``            |
-            +----------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
-            |``table_reservation({"breakfast": [{"G01": 1}], "lunch": [{"G02": 2}, {"G03": 4}], "happy_hour": [{"G04": 6}], "dinner": [{"G05": 2}, {"G06": 8}]}, 6)``              | ``1``            |
-            +----------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
+            +--------------------------------------------------------------------------------------+-----------------------------------------------------------------------+
+            | Example Input                                                                        | Expected Output                                                       |
+            +======================================================================================+=======================================================================+
+            |``add_quantity({"Fruits": ["Apples", "Bananas"], "Bakery": ["Bagels"]}, [3, 4, 6])``  | ``{"Fruits": {"Apples": 3, "Bananas": 4}, "Bakery": {"Bagels": 6}}``  |
+            +--------------------------------------------------------------------------------------+-----------------------------------------------------------------------+
+            |``add_quantity({"Drinks": ["Coffee", "Tea", "Juice"]}, [10, 5, 7])``                  | ``	{"Drinks": {"Coffee": 10, "Tea": 5, "Juice": 7}}``                 |
+            +--------------------------------------------------------------------------------------+-----------------------------------------------------------------------+
+            |``add_quantity({"Dairy": ["Milk"]}, [1])``                                            | ``	{"Dairy": {"Milk": 1}}``                                           |
+            +--------------------------------------------------------------------------------------+-----------------------------------------------------------------------+
 
         ~~~~
-        def table_reservation(reservation_dict, guest_num):
+        def add_quantity(item_dict, quantities):
 
 
 
@@ -42,12 +44,10 @@ Practice
         class myTests(TestCaseGui):
 
             def testOne(self):
-                self.assertEqual(table_reservation({"breakfast": [{"G01": 3}, {"G02": 4}], "lunch": [{"G03": 2}, {"G04": 4}], "happy_hour": [{"G05": 6}], "dinner": [{"G06": 2}, {"G07": 8}]}, 4), 2)
-                self.assertEqual(table_reservation({"breakfast": [{"G01": 2}, {"G02": 4}], "lunch": [{"G03": 2}, {"G04": 2}], "happy_hour": [{"G05": 6}], "dinner": [{"G06": 2}, {"G07": 8}]}, 2), 4)
-                self.assertEqual(table_reservation({"breakfast": [{"G01": 2}, {"G02": 4}], "lunch": [{"G03": 2}, {"G04": 2}], "happy_hour": [{"G05": 6}], "dinner": [{"G06": 2}, {"G07": 8}]}, 10), 0)
-                self.assertEqual(table_reservation({"breakfast": [{"G01": 1}, {"G02": 4}]}, 1), 1)
-                self.assertEqual(table_reservation({"lunch": [{"G01": 1}, {"G02": 4}], "happy_hour": [{"G01": 1}, {"G02": 4}]}, 1), 2)
-                self.assertEqual(table_reservation({"breakfast": [{"G02": 4}]}, 9), 0)
+                self.assertEqual(add_quantity({"Fruits": ["Apples", "Bananas"], "Bakery": ["Bagels"]}, [3, 4, 6]), {"Fruits": {"Apples": 3, "Bananas": 4}, "Bakery": {"Bagels": 6}})
+                self.assertEqual(add_quantity({"Drinks": ["Coffee", "Tea", "Juice"]}, [10, 5, 7]), {"Drinks": {"Coffee": 10, "Tea": 5, "Juice": 7}})
+                self.assertEqual(add_quantity({"Bakery": ["Bagel"]}, [12]), {"Bakery": {"Bagel": 12}})
+                self.assertEqual(add_quantity({"Drinks": ["Coffee", "Tea"]}, [12, 1]), {"Drinks": {"Coffee": 12, "Tea": 1}})
         myTests().main()
 
 
@@ -63,7 +63,7 @@ Practice
             - It returns a dictionary ``average_score`` where keys are student names, and values are the average grades for each student.
 
         .. table::
-            :name: item_quantity_table
+            :name: get_average_score_table
             :align: left
             :width: 50
 

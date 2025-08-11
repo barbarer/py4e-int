@@ -160,13 +160,9 @@ What to do next
 
         // if no prev set cookie: generate random condition and set cookie
         if (cond != 'wt' && cond != 'nt') {
-           var v = Math.floor(Math.random() * 2);
-           if (v < 1) {
-               cond = 'wt';
-           } else {
-               cond = 'nt';
-           }
-           setCookie(EXP_COOKIE, cond);
+            var v = Math.random();
+            cond = (v < 0.5) ? 'wt' : 'nt';
+            setCookie(EXP_COOKIE, cond);
         }
 
         if (cond == 'wt') {
