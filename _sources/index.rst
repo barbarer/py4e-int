@@ -56,6 +56,7 @@ Table of Contents
 .. toctree::
    :hidden:
    :maxdepth: 2
+   
    _hidden/student_survey.rst
    _hidden/mc_intro.rst
    _hidden/mc_start.rst
