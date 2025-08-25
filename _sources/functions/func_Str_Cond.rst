@@ -239,9 +239,9 @@ You can execute code only when a condition is true using ``if``. You can execute
 
 .. fillintheblank:: fsc_fitb_return_temp_first_line
 
-    What is the first thing (first line of text) that will be printed when the code below runs?
+    What is the first thing (first line of text before "The temp is") that will be printed when the code below runs?
 
-    - :Baby, its cold outside!: Since temp < 32 this will print.
+    - :^Baby, its cold outside!.*: Since temp < 32 this will print.
       :.*: Which conditional is true when temp < 32?
 
 
