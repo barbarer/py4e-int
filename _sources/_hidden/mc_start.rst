@@ -44,7 +44,7 @@ Rights
 ^^^^^^^^^^^^^^^^^
 Your participation in this study is voluntary. You have the right to withdraw at any time without penalty. Refusal to participate or withdrawal of your consent or discontinued participation in the study will not result in any penalty or loss of benefits or rights to which you might otherwise be entitled.
 
-If you have any questions about the study, please contact the research team at barbarer@umich.edu or xyhou@umich.edu.
+If you have any questions about the study, please contact the research team at barbarer@umich.edu or sethbern@umich.edu or xyhou@umich.edu.
 
 Voluntary Consent
 ^^^^^^^^^^^^^^^^^
@@ -77,7 +77,7 @@ What to do next
             const consent_sent = document.getElementById('consent_sent');
 
             if (!consent_sent) {
-            alert('Please check the consent form before moving to the next.');
+            alert('Please check the consent form before moving to the next. If it already appears as clicked, kindly re-click to confirm.');
             event.preventDefault();
             return false;
             }

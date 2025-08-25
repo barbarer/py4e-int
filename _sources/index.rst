@@ -57,16 +57,8 @@ Table of Contents
    :hidden:
    :maxdepth: 2
    
-   _hidden/student_survey.rst
-   _hidden/mc_intro.rst
    _hidden/mc_start.rst
-   _hidden/mc_nested-nt.rst
-   _hidden/mc_puzzle_bank.rst
-   _hidden/mc_nested-wt.rst
-   _hidden/mc_post_survey.rst
-   _hidden/mc_posttest.rst
-   _hidden/mc_pre_survey.rst
-   _hidden/mc_review.rst
+
 
 Acknowledgements
 ::::::::::::::::
