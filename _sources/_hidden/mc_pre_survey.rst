@@ -124,51 +124,17 @@ What to do next
 
 .. raw:: html
 
-   <p>Click on the following link to go the practice problems: <b><a id="nested-practice"> <font size="+1">Practice</font></a></b></p>
+   <p>Click on the following link to go the practice problems: <b><a id="mc_assign_more_practice"> <font size="+1">Practice</font></a></b></p>
+
 
 .. raw:: html
 
-   <script type="text/javascript">
+    <script type="text/javascript" >
 
-     function getCookie(cname) {
-        let name = cname + "=";
-        let decodedCookie = decodeURIComponent(document.cookie);
-        let ca = decodedCookie.split(';');
-        for(let i = 0; i <ca.length; i++) {
-           let c = ca[i];
-           while (c.charAt(0) == ' ') {
-              c = c.substring(1);
-           }
-           if (c.indexOf(name) == 0) {
-              return c.substring(name.length, c.length);
-           }
-        }
-        return "";
-     }
+      window.onload = function() {
 
-     function setCookie(cname, cvalue) {
-        document.cookie = cname + "=" + cvalue + ";";
-     }
+        a = document.getElementById("mc_assign_more_practice")
+        a.href = "mc_assign_more_practice.html"
+      };
 
-     window.onload = function() {
-
-        a = document.getElementById("nested-practice")
-
-        // get prev set cookie
-        var EXP_COOKIE = 'mooc_nested'
-        var cond = getCookie(EXP_COOKIE);
-
-        // if no prev set cookie: generate random condition and set cookie
-        if (cond != 'wt' && cond != 'nt') {
-            var v = Math.random();
-            cond = (v < 0.5) ? 'wt' : 'nt';
-            setCookie(EXP_COOKIE, cond);
-        }
-
-        if (cond == 'wt') {
-           a.href = "mc_nested-wt.html"
-        } else if (cond == 'nt') {
-           a.href = "mc_nested-nt.html"
-        }
-     };
-   </script>
+    </script>

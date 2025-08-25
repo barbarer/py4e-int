@@ -1,5 +1,6 @@
-Practice
-=============
+Practice Problems
+============================
+
 
 .. activecode:: w1-mooc_nested
         :autograde: unittest
