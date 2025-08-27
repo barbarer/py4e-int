@@ -57,7 +57,7 @@ Table of Contents
    :hidden:
    :maxdepth: 2
    
-   _hidden/mc_start.rst
+   _hidden/student_survey.rst
 
 
 Acknowledgements
