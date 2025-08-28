@@ -8,8 +8,7 @@ Solving Mixed-up Code Problems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you see a problem like the one below you will need to put the mixed-up
-code in the correct order on the right side. You
-may need to indent the blocks as well.  There may also be extra blocks that are not
+code in the correct order on the right side. You may need to indent the blocks as well.  There may also be extra blocks that are not
 needed in a correct solution that you can leave on the left side. Click the "Check" button
 to check your solution.
 
@@ -138,14 +137,24 @@ Finish writing the code for the following problem.
 
 
 
-Solving Write Code Problems with an Adaptive Mixed-up Puzzle as Scaffolding
+Solving Write Code Problems with Pop-Up Mixed-up Code Puzzles to Help
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 If you see a problem like the one below, you will need to write code. You can go to the **toggle bar** above the problem description to open a mixed-up puzzle that will help you write the code. 
 The mixed-up puzzle will have blocks of code that you can drag and drop to create a solution. You can also use the "Help me" button to get additional assistance within the puzzle if needed.
 
+
+.. youtube:: zz4ATp31_vk
+    :optional:
+    :divid: write-code-toggle-mooc_nested
+    :width: 780
+    :height: 498
+    :align: center
+
+
 .. selectquestion:: intro-sample-toggle-mooc_nested
     :fromid: intro-sample-write-code-triple-mooc_nested, intro-sample-puzzle-mooc_nested
     :toggle: lock
+
 
 
 What to do next
