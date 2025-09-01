@@ -391,7 +391,7 @@ Multiple Choice Questions
             for j in range(1,4):
                 print(i, j, end=' ')
 
-.. mchoice:: e5mc16
+.. mchoice:: e5mc16-v2
     :practice: T
     :answer_a: 1018
     :answer_b: 1009
@@ -416,8 +416,4 @@ Multiple Choice Questions
                     total += num
             return total
             
-        mystery([8, 2, 999, 5, 4])
-
-
-
-        print(mystery("walking"))
+        print(mystery([8, 2, 999, 5, 4]))
