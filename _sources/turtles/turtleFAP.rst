@@ -152,12 +152,10 @@ The program below uses the ``goto(x,y)`` to move to the top left corner before d
    from turtle import *
    =====
    space = Screen()
-   =====
-   space = screen() #paired
-   =====
    ella = Turtle()
    =====
-   ella = Turtle #paired
+   space = screen() 
+   ella = turtle() #paired
    =====
    ella.left(60)
    ella.forward(100)
