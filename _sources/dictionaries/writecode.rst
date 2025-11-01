@@ -352,7 +352,7 @@ Below is the romeo3.txt file used in Question 7.
 
 The next two questions are associated with the following text file which has an email address followed by the number of messages from that address.
 
-.. reveal:: mbox-short-txt-file
+.. reveal:: mbox-count-txt-file
    :showtitle: Show
    :hidetitle: Hide
 
@@ -376,13 +376,13 @@ The next two questions are associated with the following text file which has an 
         .. tab:: Question
 
             .. activecode:: dict_writecode9q
-                :datafile: mbox-short.txt
+                :datafile: mbox-count.txt
                 :autograde: unittest
 
                 Add code to the program below to figure out who has the most messages in the file. After all the data has been read and the dictionary ``message_count`` has been created, look through the dictionary using a maximum loop (see Chapter 5: Maximum and minimum loops) to find who has the most messages,
                 and print how many messages the person has. For example, ``message_count['cwen@iupui.edu']`` should be ``5``.
                 ~~~~
-                with open("mbox-short.txt", "r") as filename:
+                with open("mbox-count.txt", "r") as filename:
                     message_count = {}
 
                 ====
@@ -399,34 +399,45 @@ The next two questions are associated with the following text file which has an 
         .. tab:: Answer
 
             .. activecode:: dict_writecode9a
-                :available_files: mbox-short.txt
+                :available_files: mbox-count.txt
                 :optional:
 
                 Add code to the program below to figure out who has the most messages in the file. After all the data has been read and the dictionary ``message_count`` has been created, look through the dictionary using a maximum loop (see Chapter 5: Maximum and minimum loops) to find who has the most messages,
                 and print how many messages the person has. For example, ``message_count['cwen@iupui.edu']`` should be ``5``.
                 ~~~~
                 # Open file in read mode
-                with open("mbox-short.txt", "r") as filename:
+                with open("mbox-count.txt", "r") as filename:
+
                     # Create message_count dictionary
                     message_count = {}
+
                     # Create variable for lines of the file
                     messages = filename.readlines()
+
                     # Iterate through each message (each line)
                     for message in messages:
-                        # Assign the key to the first (0th) element of the message
-                        key = message.split()[0]
-                        # Assign the value to the second element of the message
-                        value = message.split()[1]
-                        # Check if key is already in dictionary
-                        if key not in message_count.keys():
-                            # if not, add key/value pair to dictionary
-                            message_count[key] = value
+
+                        # get the columns
+                        cols = message.split()
+
+                        # Check if there are two columns
+                        if len(cols) == 2:
+
+                            # Assign the key to the first (0th) element of the message
+                            key = cols[0]
+
+                            # Assign the value to the second element of the message
+                            value = cols[1]
+
+                            # add the key and value to the dictionary 
+                            message_count[key] = int(value)
+
                 # Create variable to count emails
                 max_emails = 0
                 # Iterate through keys in dictionary
                 for key in message_count.keys():
                     # Check if key is larger than the max emails
-                    if int(message_count[key]) >= max_emails:
+                    if message_count[key] >= max_emails:
                         # If so, reassign max_emails to that key
                         max_emails = int(message_count[key])
                 print(max_emails)
