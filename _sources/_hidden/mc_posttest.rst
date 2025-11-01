@@ -60,7 +60,7 @@ Please answer the following questions.
     Remember to click 'Save&Run' frequently to save your latest answer.
 
     ~~~~
-    def happy_hour_specials(new_menu_items):
+    def happy_hour_specials(menu_items):
             
         # Click 'Save & Run' frequently to ensure your latest answer is saved. 
         
