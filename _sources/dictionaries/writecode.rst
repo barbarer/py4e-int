@@ -421,7 +421,7 @@ The next two questions are associated with the following text file which has an 
                     # Iterate through each message (each line)
                     for message in messages:
 
-                        # get the columns
+                        # split into columns by spaces
                         cols = message.split()
 
                         # Check if there are two columns
