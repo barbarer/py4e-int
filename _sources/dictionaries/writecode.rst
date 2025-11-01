@@ -352,6 +352,10 @@ Below is the romeo3.txt file used in Question 7.
 
 The next two questions are associated with the following text file which has an email address followed by the number of messages from that address.
 
+.. datafile:: mbox-counttxt
+    :fromfile: mbox-count.txt
+    :hide:
+
 .. reveal:: mbox-count-txt-file
    :showtitle: Show
    :hidetitle: Hide
