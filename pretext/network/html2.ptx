@@ -57,7 +57,7 @@
       <statement>
         <p>Click on the <q>Render</q> button to see the resulting web page.</p>
       </statement>
-      <program xml:id="html_table_ex_editor" interactive="activecode" language="htmlmixed">
+      <program xml:id="html_table_ex_editor" interactive="activecode" language="html" label="html_table_ex_editor">
         <code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -210,11 +210,11 @@
                 The text of the tag is <c>Visit W3Schools.com!</c> which is the actual text of the link when it is displayed.
                 If you click on the link you will be taken to the <c>href</c> value: <c>https://www.w3schools.com/</c>.
                 The <c>&lt;a&gt;</c> tag has a closing <c>&lt;/a&gt;</c> tag.</p>
-    <exercise label="html_link_ac">
+    <exercise label="html_link_ac" xml:id="html_link_ac_ex">
       <statement>
         <p>Render the HTML below.</p>
       </statement>
-      <program xml:id="html_link_ac_editor" interactive="activecode" language="htmlmixed">
+      <program xml:id="html_link_ac_editor" interactive="activecode" language="html">
         <code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -235,11 +235,11 @@
     <title>Image Tag</title>
     <p>Web pages can include images using the &lt;img&gt; tag. The image tag has an attribute <c>src</c> that specifies the URL for the image
                 and can have an <c>alt</c> attribute to specify alternative text that describes the image.</p>
-    <exercise label="html_image_ac">
+    <exercise label="html_image_ac" xml:id="html_image_ac_ex">
       <statement>
         <p>Render the HTML below.</p>
       </statement>
-      <program xml:id="html_image_ac_editor" interactive="activecode" language="htmlmixed">
+      <program xml:id="html_image_ac_editor" interactive="activecode" language="html">
         <code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -340,11 +340,11 @@
     <title>Div and Span tags</title>
     <p>The <c>div</c> tag is used to contain other HTML tags (elements).  It is often used to divide the HTML page into sections. The <c>span</c> tag is used for inline grouping or styling.
                 You can use Cascading Style Sheets (CSS) to change the look of each HTML tag (element).  You can add the CSS directly in the <c>head</c> section using the <c>style</c> tag, but the recommended approach is to use external CSS.</p>
-    <exercise label="html_div_with_css_ac">
+    <exercise label="html_div_with_css_ac" xml:id="html_div_with_css_ac_ex">
       <statement>
         <p>Render the HTML below.</p>
       </statement>
-      <program xml:id="html_div_with_css_ac_editor" interactive="activecode" language="htmlmixed">
+      <program xml:id="html_div_with_css_ac_editor" interactive="activecode" language="html">
         <code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -399,11 +399,11 @@
   <subsection xml:id="network_using-css-classes">
     <title>Using CSS Classes</title>
     <p>You can define one or more classes in CSS and then use them to change the display of the HTML elements.</p>
-    <exercise label="html_div_with_css_classes_ac">
+    <exercise label="html_div_with_css_classes_ac" xml:id="html_div_with_css_classes_ac_ex">
       <statement>
         <p>Render the HTML below.</p>
       </statement>
-      <program xml:id="html_div_with_css_classes_ac_editor" interactive="activecode" language="htmlmixed">
+      <program xml:id="html_div_with_css_classes_ac_editor" interactive="activecode" language="html">
         <code>
 &lt;html&gt;
     &lt;head&gt;

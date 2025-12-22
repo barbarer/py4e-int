@@ -64,7 +64,7 @@
     <statement>
       <p>Click on the <q>Render</q> button to see the resulting web page.</p>
     </statement>
-    <program xml:id="html_my_first_page_ac_editor" interactive="activecode" language="htmlmixed">
+    <program xml:id="html_my_first_page_ac_editor" interactive="activecode" language="html">
       <code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -105,27 +105,27 @@
     </feedback>
     <cardsort>
       <match>
-        <premise>html</premise>
+        <premise order="1">html</premise>
         <response>The root (start) tag for a HTML document.</response>
       </match>
       <match>
-        <premise>head</premise>
+        <premise order="2">head</premise>
         <response>Contains meta data about the document. This information will not be displayed.</response>
       </match>
       <match>
-        <premise>body</premise>
+        <premise order="3">body</premise>
         <response>Contains all the information that will be displayed in the web page.</response>
       </match>
       <match>
-        <premise>title</premise>
+        <premise order="4">title</premise>
         <response>The title for this web page.</response>
       </match>
       <match>
-        <premise>h2</premise>
+        <premise order="5">h2</premise>
         <response>A second-level header.</response>
       </match>
       <match>
-        <premise>p</premise>
+        <premise order="6">p</premise>
         <response>A paragraph.</response>
       </match>
     </cardsort>
@@ -182,7 +182,7 @@
       <statement>
         <p>Fix the errors in the HTML below so that every start tag has an end tag and every end tag has a start tag.</p>
       </statement>
-      <program xml:id="html_fix_page_ac_editor" interactive="activecode" language="htmlmixed">
+      <program xml:id="html_fix_page_ac_editor" interactive="activecode" language="html">
         <code>
 &lt;!DOCTYPE html&gt;
 
@@ -207,7 +207,7 @@
       <statement>
         <p>Render the HTML below.</p>
       </statement>
-      <program xml:id="html_lists_ac_editor" interactive="activecode" language="htmlmixed">
+      <program xml:id="html_lists_ac_editor" interactive="activecode" language="html">
         <code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -240,15 +240,15 @@
       </feedback>
       <cardsort>
         <match>
-          <premise>ul</premise>
+          <premise order="3">ul</premise>
           <response>Tag to define an unordered list.</response>
         </match>
         <match>
-          <premise>ol</premise>
+          <premise order="4">ol</premise>
           <response>Tag to define an ordered list.</response>
         </match>
         <match>
-          <premise>li</premise>
+          <premise order="5">li</premise>
           <response>Tag to define a list item.</response>
         </match>
       </cardsort>
