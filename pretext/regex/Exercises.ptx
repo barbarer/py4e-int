@@ -5,14 +5,14 @@
     <statement>
       <p>11-9-1: What will the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 import re
 hand = open('mbox-short.txt')
 for line in hand:
     line = line.rstrip()
     if re.search('^From:', line):
         print(line)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -132,14 +132,14 @@ for line in hand:
     <statement>
       <p>11-9-4: Which of these lines will be matched when the following code is run?</p>
       <program language="python">
-        <input>
+        <code>
 import re
 hand = open('mbox-short.txt')
 for line in hand:
     line = line.rstrip()
     if re.search('\$.+', line):
         print(line)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -181,12 +181,12 @@ for line in hand:
     <statement>
       <p>11-9-5: True or false? The following code will match only the first email(up to the @ sign) in the string?</p>
       <program language="python">
-        <input>
+        <code>
 import re
 stri = 'From: stephen.a.smith@espn.com, drake@hotmail.com, frenchMontana@gmail.com'
 stri = stri.rstrip()
 print(re.findall('From:.+@', stri))
-</input>
+</code>
       </program>
     </statement>
     <choices>

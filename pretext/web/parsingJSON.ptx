@@ -17,7 +17,7 @@
                 prints.</p>
       </statement>
       <program xml:id="web-parse-json-to-python_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import json
 
 data = '''
@@ -39,7 +39,7 @@ for item in info:
     print('Name', item['name'])
     print('Id', item['id'])
     print('Attribute', item['x'])
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="net_parse_xml_which_method">
@@ -68,7 +68,7 @@ for item in info:
                 prints.</p>
       </statement>
       <program xml:id="web-parse-json-to-python-dictionary_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import json
 data = '''{"employees": [{"name": "Lena", "title": "sales person"},
                      {"name": "Paru", "title": "manager"},
@@ -78,7 +78,7 @@ people_list = d1["employees"]
 print(len(people_list))
 for person in people_list:
     print(person.get('name'))
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="net_json_what_type_returned_data">
@@ -160,13 +160,13 @@ for person in people_list:
                 prints.</p>
       </statement>
       <program xml:id="web-parse-json-to-string_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import json
 d_list = [{'Year': 2022, 'First': 'Barb', 'Last': 'Ericson'}, {'Year': 2018, 'First': 'Mark', 'Last': 'Guzdial'}]
 print(json.dumps(d_list))
 d = d_list[0]
 print(json.dumps(d))
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="net_parse_json_convert_to_string_fitb">

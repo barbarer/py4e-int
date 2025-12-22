@@ -12,7 +12,7 @@
   <p>Here is a JSON encoding of some data. The outermost JSON structure is a dictionary
             and the value for two of the keys (phone and email) are dictionaries as well.</p>
   <program language="json">
-    <input>
+    <code>
 {
  "name" : "Chuck",
  "phone" : {
@@ -23,11 +23,11 @@
     "hide" : "yes"
   }
 }
-</input>
+</code>
   </program>
   <p>Here is the XML equivalent.</p>
   <program language="{.xml}">
-    <input>
+    <code>
 &lt;person&gt;
   &lt;name&gt;Chuck&lt;/name&gt;
   &lt;phone type="intl"&gt;
@@ -35,7 +35,7 @@
   &lt;/phone&gt;
   &lt;email hide="yes" /&gt;
 &lt;/person&gt;
-</input>
+</code>
   </program>
   <p>You will notice some differences. First, in XML, we can add attributes
             like <q>intl</q> to the <q>phone</q> tag. In JSON, we simply have key-value pairs in a dictionary.
@@ -174,7 +174,7 @@
     <introduction><p>The outermost JSON structure can be a dictionary or a list.  Here is an example
         where the outermost JSON structure is a list.  In this case it is a list of dictionaries.</p>
     <program language="json">
-      <input>
+      <code>
 [{
   "id": 1,
   "first_name": "Jeanette",
@@ -188,7 +188,7 @@
   "email": "gfrediani1@senate.gov",
   "gender": "Non-binary",
 }]
-</input>
+</code>
     </program></introduction>
     <exercise label="webJSON_equivalent_xml">
       <statement>

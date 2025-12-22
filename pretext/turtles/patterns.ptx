@@ -13,7 +13,7 @@
       <p>Run the code to see what it draws.</p>
     </statement>
     <program xml:id="Turtle_Spirograph1_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 from turtle import *     # use the turtle library
 from sys import *        # use the system library
 setExecutionLimit(50000) # let this take up to 50 seconds
@@ -30,7 +30,7 @@ for repeats in range(20):     # draw the pattern 20 times
     for sides in range(5):    # repeat 5 times
         zoe.forward(50)       # move forward by 50 unit
         zoe.right(72)         # turn by 72 degrees
-        </input>
+        </code>
     </program>
   </exercise>
   <p>By setting the pen color differently, we can distinguish the part that draws the shape, from the part that draws <em>between</em> the shapes.</p>
@@ -39,7 +39,7 @@ for repeats in range(20):     # draw the pattern 20 times
       <p>Run the code to see what it draws.</p>
     </statement>
     <program xml:id="Turtle_Spirograph2_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 from turtle import *     # use the turtle library
 from sys import *        # use the system library
 setExecutionLimit(50000) # let this take up to 50 seconds
@@ -58,7 +58,7 @@ for repeats in range(20):   # 20 times to draw the pattern
     for sides in range(5):    # repeat 5 times
         zoe.forward(50)         # move forward 50 units
         zoe.right(72)           # turn by 72 degrees
-        </input>
+        </code>
     </program>
   </exercise>
   <p>You can use the coloring in the picture below to help you figure out the correct order of the lines below.</p>
@@ -159,7 +159,7 @@ for repeats in range(20):   # 20 times to draw the pattern
       <p>The following example has 4 errors.  Can you fix the errors so that the code compiles and runs?</p>
     </statement>
     <program xml:id="Turtle_Nested_Error1_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 from turtle import *    # use the turtle library
 from sys import *
 setExecutionLimit(50000)
@@ -177,7 +177,7 @@ for repeats in range(20)
         mateo.Color("blue")
         mateo.forward(50)
         mateo.Right(120)
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Turtle_Nested_Error2">
@@ -185,7 +185,7 @@ for repeats in range(20)
       <p>The following example has 4 errors.  Can you fix the errors so that the code compiles and runs?</p>
     </statement>
     <program xml:id="Turtle_Nested_Error2_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 from turtle import *    # use the turtle library
 from sys import *
 setExecutionLimit(50000)
@@ -203,7 +203,7 @@ for repeats in range(20):
         mateo.color("blue")
         mateo.Forward(50)
         mateo.right(120)
-        </input>
+        </code>
     </program>
   </exercise>
 </section>

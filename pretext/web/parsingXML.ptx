@@ -16,7 +16,7 @@
 
     </statement>
     <program xml:id="xml_parse_person_ac1_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 import xml.etree.ElementTree as ET
 
 data = '''
@@ -31,7 +31,7 @@ data = '''
 tree = ET.fromstring(data)
 print('Name:', tree.find('name').text)
 print('Attr:', tree.find('email').get('hide'))
-        </input>
+        </code>
     </program>
 </exercise>
         <p>The triple single quote (<c>'''</c>), as well as the triple double quote (<c>"""</c>),
@@ -62,7 +62,7 @@ print('Attr:', tree.find('email').get('hide'))
 
     </statement>
     <program xml:id="xml_parse_person_wihtout_attr_ac1_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 import xml.etree.ElementTree as ET
 
 data = '''
@@ -77,7 +77,7 @@ data = '''
 tree = ET.fromstring(data)
 print('Name:', tree.find('name').text)
 print('Attr:', tree.find('email').get('hide'))
-        </input>
+        </code>
     </program>
 </exercise>
             <note>
@@ -95,7 +95,7 @@ print('Attr:', tree.find('email').get('hide'))
 
     </statement>
     <program xml:id="xml_parse_book_data_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 import xml.etree.ElementTree as ET
 
 data = '''
@@ -120,7 +120,7 @@ tree = ET.fromstring(data)
 book = tree.find('book')
 print('Author:', book.find('author').text)
 print('Lang:',book.find('title').get('lang'))
-        </input>
+        </code>
     </program>
 </exercise>
             <conclusion><p>What do you think would happen if we looked for the first &#8216;author' in <c>tree</c> rather than in <c>book</c>?  Modify the code to see what happens.</p></conclusion>
@@ -135,7 +135,7 @@ print('Lang:',book.find('title').get('lang'))
 
     </statement>
     <program xml:id="xml_parse_fix_book_data_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 import xml.etree.ElementTree as ET
 
 data = '''
@@ -154,7 +154,7 @@ book = tree.find('book')
 print('Author:', book.find('author').text)
 print('Title:', book.find('title').text)
 print('Lang:',book.find('title').get('lang'))
-        </input>
+        </code>
     </program>
 </exercise>
 
@@ -164,7 +164,7 @@ print('Lang:',book.find('title').get('lang'))
 
     </statement>
     <program xml:id="xml_parse_fix_note_data_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 import xml.etree.ElementTree as ET
 
 data = '''
@@ -192,7 +192,7 @@ note = tree.find('note')
 print('to:', note.find('to').text)
 print('body:', note.find('body').text)
 print('time region:',note.find('time').get('region'))
-        </input>
+        </code>
     </program>
 </exercise>
         </subexercises>
@@ -205,7 +205,7 @@ print('time region:',note.find('time').get('region'))
 
     </statement>
     <program xml:id="xml_parse_write_code_book_data_ac_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 import xml.etree.ElementTree as ET
 
 data = '''
@@ -217,7 +217,7 @@ data = '''
         &lt;/book&gt;
     &lt;/bookstore&gt;
 '''
-        </input>
+        </code>
     </program>
 </exercise>
 
@@ -227,7 +227,7 @@ data = '''
 
     </statement>
     <program xml:id="xml_parse_write_code_note_data_ac_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 import xml.etree.ElementTree as ET
 
 
@@ -241,7 +241,7 @@ data = '''
             &lt;/body&gt;Don't forget the talk!&lt;/body&gt;
         &lt;/note&gt;
 '''
-        </input>
+        </code>
     </program>
 </exercise>
         </subexercises>

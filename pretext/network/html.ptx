@@ -65,7 +65,7 @@
       <p>Click on the <q>Render</q> button to see the resulting web page.</p>
     </statement>
     <program xml:id="html_my_first_page_ac_editor" interactive="activecode" language="htmlmixed">
-      <input>
+      <code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -79,7 +79,7 @@
         &lt;/p&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-        </input>
+        </code>
     </program>
   </exercise>
   <p>Try adding a <c>h2</c> and <c>h3</c> header to the HTML above after the paragraph.</p>
@@ -103,32 +103,32 @@
     <feedback>
       <p>Read the information above and try again.</p>
     </feedback>
-    <matches>
-      <match order="1">
+    <cardsort>
+      <match>
         <premise>html</premise>
         <response>The root (start) tag for a HTML document.</response>
       </match>
-      <match order="2">
+      <match>
         <premise>head</premise>
         <response>Contains meta data about the document. This information will not be displayed.</response>
       </match>
-      <match order="3">
+      <match>
         <premise>body</premise>
         <response>Contains all the information that will be displayed in the web page.</response>
       </match>
-      <match order="4">
+      <match>
         <premise>title</premise>
         <response>The title for this web page.</response>
       </match>
-      <match order="5">
+      <match>
         <premise>h2</premise>
         <response>A second-level header.</response>
       </match>
-      <match order="6">
+      <match>
         <premise>p</premise>
         <response>A paragraph.</response>
       </match>
-    </matches>
+    </cardsort>
   </exercise>
 </introduction>
   <subexercises xml:id="network_start-and-end-tags">
@@ -183,7 +183,7 @@
         <p>Fix the errors in the HTML below so that every start tag has an end tag and every end tag has a start tag.</p>
       </statement>
       <program xml:id="html_fix_page_ac_editor" interactive="activecode" language="htmlmixed">
-        <input>
+        <code>
 &lt;!DOCTYPE html&gt;
 
     &lt;head&gt;
@@ -196,7 +196,7 @@
         &lt;/p&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-        </input>
+        </code>
       </program>
     </exercise>
   </subexercises>
@@ -208,7 +208,7 @@
         <p>Render the HTML below.</p>
       </statement>
       <program xml:id="html_lists_ac_editor" interactive="activecode" language="htmlmixed">
-        <input>
+        <code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -228,7 +228,7 @@
         &lt;/ul&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="html_list_tag_def_dnd">
@@ -238,20 +238,20 @@
       <feedback>
         <p>Read the information above and try again.</p>
       </feedback>
-      <matches>
-        <match order="3">
+      <cardsort>
+        <match>
           <premise>ul</premise>
           <response>Tag to define an unordered list.</response>
         </match>
-        <match order="4">
+        <match>
           <premise>ol</premise>
           <response>Tag to define an ordered list.</response>
         </match>
-        <match order="5">
+        <match>
           <premise>li</premise>
           <response>Tag to define a list item.</response>
         </match>
-      </matches>
+      </cardsort>
     </exercise>
   </subexercises>
   <subexercises xml:id="network_tag-relationships-parent-child-sibling">

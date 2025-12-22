@@ -73,14 +73,14 @@ all elements up to the end index - 1. </p>
       <statement>
         <p>What is the last thing that the following code prints?</p>
         <program language="python">
-          <input>
+          <code>
 def list_get(lst):
     print(lst[0])
     print(lst[:2])
     return lst[-2]
 l = ["hi", 3, 'buy', 4]
 print(list_get(l))
-</input>
+</code>
         </program>
       </statement>
       <choices>
@@ -129,7 +129,7 @@ print(list_get(l))
         <p>Run this code to see what it prints. You can also step through the code using the "Show Codelens" button. </p>
       </statement>
       <program xml:id="flal_ll_ac_list_func_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def list_func(my_list):
     print("max", max(my_list))
@@ -144,7 +144,7 @@ def main():
 
 # function call
 main()
-        </input>
+        </code>
       </program>
     </exercise>
 
@@ -154,7 +154,7 @@ main()
    For example, <c>sum_first_half([1,2,3,4])</c> should return ``3`` (sum of 1 and 2) and <c>first_half([7,8,9])</c> should return ``7``.  </p>
       </statement>
       <program xml:id="flal_ac_sum_first_half_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 def sum_first_half(alist):
 
 ====
@@ -171,7 +171,7 @@ class myTests(TestCaseGui):
         self.assertEqual(sum_first_half([1,2,3,4,5,6]), 6, 'sum_first_half([1,2,3,4,5,6])')
 
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
   </subsection>
@@ -184,7 +184,7 @@ myTests().main()
         <p>Run this code to see what it prints.  You can also step through the code using the "Show Codelens" button.</p>
       </statement>
       <program xml:id="flal_ll_ac_list_methods_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def list_methods(alist):
     print(type(alist))
@@ -209,7 +209,7 @@ def main():
 
 # function call
 main()
-        </input>
+        </code>
       </program>
     </exercise>
 
@@ -218,14 +218,14 @@ main()
       <statement>
         <p>What would the following code print?</p>
         <program language="python">
-          <input>
+          <code>
 def list_trans(lst):
     lst.append(3)
     lst.pop(2)
     return lst
 l1 = [2, 5, 7]
 print(list_trans(l1))
-</input>
+</code>
         </program>
       </statement>
       <choices>
@@ -275,7 +275,7 @@ print(list_trans(l1))
         <p>Run this code to see what it prints.</p>
       </statement>
       <program xml:id="flal_ll_ac_list_methods2_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def list_methods2(alist):
     print(alist)
@@ -297,7 +297,7 @@ def main():
 
 # function call
 main()
-        </input>
+        </code>
       </program>
     </exercise>
 
@@ -306,7 +306,7 @@ main()
       <statement>
         <p>What is the last thing the following code prints?</p>
         <program language="python">
-          <input>
+          <code>
 def list_trans(lst):
     r = lst.reverse()
     print(lst)
@@ -314,7 +314,7 @@ def list_trans(lst):
 
 l1 = [2, 5, 7]
 list_trans(l1)
-</input>
+</code>
         </program>
       </statement>
       <choices>
@@ -384,7 +384,7 @@ list_trans(l1)
         <p>Run this code to see what it prints.</p>
       </statement>
       <program xml:id="flal_ll_ac_count_odd_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def count_odd(num_list):
     count = 0
@@ -404,7 +404,7 @@ def main():
 
 # function call
 main()
-        </input>
+        </code>
       </program>
     </exercise>
   </subsection>
@@ -438,7 +438,7 @@ main()
         <p>Run this code to see what it prints.</p>
       </statement>
       <program xml:id="flal_ll_ac_count_to_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def print_to(end):
     for x in range(end):
@@ -452,7 +452,7 @@ def main():
 
 # function call
 main()
-        </input>
+        </code>
       </program>
     </exercise>
 
@@ -485,7 +485,7 @@ main()
         <p>Run this code to see what it prints.</p>
       </statement>
       <program xml:id="flal_ll_ac_print_from_to_by_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def print_from_to_by(start, end, by):
     for x in range(start, end, by):
@@ -499,7 +499,7 @@ def main():
 
 # function call
 main()
-        </input>
+        </code>
       </program>
     </exercise>
 
@@ -554,7 +554,7 @@ main()
         <p>Try running the code below.</p>
       </statement>
       <program xml:id="flal_ll_ac_inifite_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 def example():
     count = 0
     while (True):
@@ -567,7 +567,7 @@ def main():
     example()
 
 main()
-        </input>
+        </code>
       </program>
     </exercise>
 

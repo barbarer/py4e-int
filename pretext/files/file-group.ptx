@@ -71,7 +71,7 @@ Dachshunds</pre>
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="file_pogil_read_lines_with_loop_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def print_contents(file):
     file_obj = open(file)
@@ -81,7 +81,7 @@ def print_contents(file):
     file_obj.close()
 
 print_contents("dogs.txt")
-        </input>
+        </code>
       </program>
     </exercise>
     <p>Notice that when you run this code it adds a blank line after each line.
@@ -133,7 +133,7 @@ print_contents("dogs.txt")
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="file_pogil_read_lines_list_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def print_contents(file):
 
@@ -148,7 +148,7 @@ def print_contents(file):
         print(line)
 
 print_contents("dogs.txt")
-        </input>
+        </code>
       </program>
     </exercise>
     <note>
@@ -185,7 +185,7 @@ print_contents("dogs.txt")
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="file_pogil_read_x_lines_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def print_contents(file, num):
     file_obj = open(file)
@@ -196,7 +196,7 @@ def print_contents(file, num):
     file_obj.close()
 
 print_contents("dogs.txt", 2)
-        </input>
+        </code>
       </program>
     </exercise>
     <p>Modify the code above to print 4 lines and run it again.</p>
@@ -210,7 +210,7 @@ print_contents("dogs.txt", 2)
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="file_pogil_read_lines_wrong_file_name_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def print_contents(file):
 
@@ -225,7 +225,7 @@ def print_contents(file):
         print(line)
 
 print_contents("unknown.txt")
-        </input>
+        </code>
       </program>
     </exercise>
     <note>
@@ -236,7 +236,7 @@ print_contents("unknown.txt")
         <p>Run the code below to see what it prints.  When it asks for another file name type in &#x2018;dogs.txt'.</p>
       </statement>
       <program xml:id="file_pogil_read_lines_try_and_catch_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def print_contents(file):
 
@@ -260,7 +260,7 @@ def print_contents(file):
         print(line)
 
 print_contents("unknown.txt")
-        </input>
+        </code>
       </program>
     </exercise>
     <p>You can use <c>try</c> and <c>except</c> to handle code that can cause exceptions. Put the code that can cause the exception in the <c>try</c> block.</p>
@@ -289,7 +289,7 @@ print_contents("unknown.txt")
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="file_pogil_read_lines_list_with_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def print_contents(file):
 
@@ -305,7 +305,7 @@ def print_contents(file):
         print(line)
 
 print_contents("dogs.txt")
-        </input>
+        </code>
       </program>
     </exercise>
     <note>
@@ -397,7 +397,7 @@ print_contents("dogs.txt")
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="file_pogil_dict_count_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def count_first(file):
     b_dict = {}
@@ -409,7 +409,7 @@ def count_first(file):
     return b_dict
 
 print(count_first("dogs.txt"))
-        </input>
+        </code>
       </program>
     </exercise>
     <note>

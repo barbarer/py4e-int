@@ -161,12 +161,12 @@
     <statement>
       <p>csp-10-2-5: What is printed when the following statements execute?</p>
       <program language="python">
-        <input>
+        <code>
 day = "Thursday"
 day = 32.5
 day = 19
 print(day)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -208,11 +208,11 @@ print(day)
     <statement>
       <p>csp-10-2-6: What is printed when the following statements execute?</p>
       <program language="python">
-        <input>
+        <code>
 n = input("Please enter your age: ")
 # user types in 18
 print ( type(n) )
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -254,9 +254,9 @@ print ( type(n) )
     <statement>
       <p>csp-10-2-7: What is the value of the following expression:</p>
       <program language="python">
-        <input>
+        <code>
 16 - 2 * 5 // 3 + 1
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -298,11 +298,11 @@ print ( type(n) )
     <statement>
       <p>csp-10-2-8: After the following statements, what are the values of x and y?</p>
       <program language="python">
-        <input>
+        <code>
 x = 15
 y = x
 x = 22
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -381,24 +381,24 @@ the expression and the type (of the value of the expression).</p>
     <feedback>
       <p>Try running these commands in your terminal window.</p>
     </feedback>
-    <matches>
-      <match order="1">
+    <cardsort>
+      <match>
         <premise>(width//2)</premise>
         <response>8, integer</response>
       </match>
-      <match order="2">
+      <match>
         <premise>(width/2.0)</premise>
         <response>8.5, float</response>
       </match>
-      <match order="3">
+      <match>
         <premise>(height/3)</premise>
         <response>4.0, float</response>
       </match>
-      <match order="4">
+      <match>
         <premise>(1 + 2 * 5)</premise>
         <response>11, integer</response>
       </match>
-    </matches>
+    </cardsort>
   </exercise>
   <exercise label="var-string-var-print-in-quotes">
     <statement>

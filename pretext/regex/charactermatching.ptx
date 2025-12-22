@@ -14,14 +14,14 @@
       <p>This code searches for lines that start with &#x2018;F', follow by 2 characters, followed by &#x2018;m:'</p>
     </statement>
     <program xml:id="re_char_ac1_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 import re
 hand = open('mbox-short.txt')
 for line in hand:
     line = line.rstrip()
     if re.search('^F..m:', line):
         print(line)
-        </input>
+        </code>
     </program>
   </exercise>
   <p>This is particularly powerful when combined with the ability to indicate
@@ -76,14 +76,14 @@ for line in hand:
       <p>This code searches for lines that start with &#x2018;From:' and have an &#x2018;@' symbol.</p>
     </statement>
     <program xml:id="re_char_ac2_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 import re
 hand = open('mbox-short.txt')
 for line in hand:
     line = line.rstrip()
     if re.search('^From:.+@', line):
         print(line)
-        </input>
+        </code>
     </program>
   </exercise>
   <p>The search string <c>^From:.+@</c> will successfully match lines that start
@@ -105,14 +105,14 @@ for line in hand:
       <p>11-9-4: Select <term>all</term> of the lines that will be printed when the following code is run.
             (\$ is used to match the character &#x2018;$')</p>
       <program language="python">
-        <input>
+        <code>
 import re
 hand = open('mbox-short-re2.txt')
 for line in hand:
     line = line.rstrip()
     if re.search('\$.+', line):
         print(line)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -154,9 +154,9 @@ for line in hand:
     <statement>
       <p>11-9-5: Looking at the code-block below, what parts of it will be matched by the regex equation <c>re.search('From:.+@')</c>?</p>
       <program language="python">
-        <input>
+        <code>
 From: stephen.marquard@uct.ac.za, csev@umich.edu, and cwen @iupui.edu
-</input>
+</code>
       </program>
     </statement>
     <choices>

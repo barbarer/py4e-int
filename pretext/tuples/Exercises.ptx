@@ -5,10 +5,10 @@
     <statement>
       <p>11-9-1: Which of the following would complete <c>val =</c> to set <c>val</c> to 20 by slicing <c>aTuple</c>.</p>
       <program language="python">
-        <input>
+        <code>
 aTuple = ("Orange", (10, 20, 30), (5, 15, 25))
 val =
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -73,10 +73,10 @@ val =
     <statement>
       <p>11-9-3: What type will be printed when the following code executes?</p>
       <program language="python">
-        <input>
+        <code>
 aTuple = ("Orange")
 print type(aTuple)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -118,13 +118,13 @@ print type(aTuple)
     <statement>
       <p>11-9-4: What will the following code return?</p>
       <program language="python">
-        <input>
+        <code>
 def practice(tup):
     a, b, c = tup
     return a
 aTuple = "Yellow", 20, "Red"
 practice(aTuple)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -166,14 +166,14 @@ practice(aTuple)
     <statement>
       <p>11-9-5: What will the following code return?</p>
       <program language="python">
-        <input>
+        <code>
 def tuple_indexing(tup):
     tup[1] = 800
     return tup
 
 aTuple = (100, 200, 300, 400, 500)
 print(tuple_indexing(aTuple))
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -215,7 +215,7 @@ print(tuple_indexing(aTuple))
     <statement>
       <p>11-9-6: Which of the following options will produce the same output?</p>
       <program language="python">
-        <input>
+        <code>
     tupl1 = (5, 3, 1, 9, 0)
     # options i, ii, iii, or iv
 
@@ -224,7 +224,7 @@ i) print(tup1[:-1])
 ii) print(tup1[0:5])
 iii) print(tupl1[0:4])
 iv) print(tupl1[-4:])
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -266,14 +266,14 @@ iv) print(tupl1[-4:])
     <statement>
       <p>11-9-7: What is returned when the following code is run?</p>
       <program language="python">
-        <input>
+        <code>
 def tuple_comparison(tup1, tup2):
     return tup1 &lt; tup2
 
 tup1 = (66, 4, 17, 4)
 tup2 = (66, 4, 16, 5)
 tuple_comarison(tup1, tup2)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -299,10 +299,10 @@ tuple_comarison(tup1, tup2)
     <statement>
       <p>11-9-8: What is printed when the following code is run?</p>
       <program language="python">
-        <input>
+        <code>
 a = (1, 2, 3, 4)
 print(a[1:-1])
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -375,7 +375,7 @@ print(a[1:-1])
     <statement>
       <p>11-9-10: What is printed when the following code is run?</p>
       <program language="python">
-        <input>
+        <code>
 def practice(m):
     m = list(m)
     x, y = m
@@ -383,7 +383,7 @@ def practice(m):
 
 m = ('have', 'fun')
 print(practice(m))
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -425,10 +425,10 @@ print(practice(m))
     <statement>
       <p>11-9-11: What is printed when the following code is run?</p>
       <program language="python">
-        <input>
+        <code>
 tup = ('30', '3', '2', '8')
 print(sorted(tup))
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -470,10 +470,10 @@ print(sorted(tup))
     <statement>
       <p>11-9-12: What is printed when the following code is run?</p>
       <program language="python">
-        <input>
+        <code>
 tup = ('30', '3', '2', '8')
 print(sorted(tup), reverse = True)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -515,10 +515,10 @@ print(sorted(tup), reverse = True)
     <statement>
       <p>11-9-13: What is printed when the following code is run?</p>
       <program language="python">
-        <input>
+        <code>
 tup = (30, 3, 2, 8)
 print(sorted(tup), reverse = True)
-</input>
+</code>
       </program>
     </statement>
     <choices>

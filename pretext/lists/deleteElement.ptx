@@ -14,13 +14,13 @@
   <p>There are several ways to delete elements from a list. If you know the
             index of the element you want, you can use <c>pop</c>:</p>
   <program xml:id="listPop" interactive="activecode" language="python">
-    <input>
+    <code>
 t = ['a', 'b', 'c']
 x = t.pop(1)
 print(t)
 
 print(x)
-        </input>
+        </code>
   </program>
   <p><c>pop</c> modifies the list and returns the element that was
             removed. If you don't provide an index, it deletes and returns the last
@@ -105,30 +105,30 @@ print(alist)</pre>
   <p>If you don't need the removed value, you can use the <c>del</c>
             operator:</p>
   <program xml:id="listDel" interactive="activecode" language="python">
-    <input>
+    <code>
 t = ['a', 'b', 'c']
 del t[1]
 print(t)
-        </input>
+        </code>
   </program>
   <p>If you know the element you want to remove (but not the index), you can
             use <c>remove</c>:</p>
   <program xml:id="listRemove" interactive="activecode" language="python">
-    <input>
+    <code>
 t = ['a', 'b', 'c']
 t.remove('b')
 print(t)
-        </input>
+        </code>
   </program>
   <p>The return value from <c>remove</c> is <c>None</c>.</p>
   <p>To remove more than one element, you can use <c>del</c> with a
             slice index:</p>
   <program xml:id="listDelSlice" interactive="activecode" language="python">
-    <input>
+    <code>
 t = ['a', 'b', 'c', 'd', 'e', 'f']
 del t[1:5]
 print(t)
-        </input>
+        </code>
   </program>
   <p>As usual, the slice selects all the elements up to, but not including,
             the second index.</p>
@@ -181,23 +181,23 @@ print(alist)</pre>
     <feedback>
       <p>How does each operator and method work?</p>
     </feedback>
-    <matches>
-      <match order="1">
+    <cardsort>
+      <match>
         <premise>del</premise>
         <response>Gets rid of an element.</response>
       </match>
-      <match order="2">
+      <match>
         <premise>pop</premise>
         <response>Modifies a list and returns the removed element.</response>
       </match>
-      <match order="3">
+      <match>
         <premise>del with a slice</premise>
         <response>Gets rid of more than one element.</response>
       </match>
-      <match order="4">
+      <match>
         <premise>remove</premise>
         <response>Gets rid of an element without using the index.</response>
       </match>
-    </matches>
+    </cardsort>
   </exercise>
 </section>

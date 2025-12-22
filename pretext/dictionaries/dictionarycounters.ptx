@@ -36,7 +36,7 @@
             for the letters that do appear.</p>
   <p>Here is what the code might look like:</p>
   <program xml:id="brontosaurausexample" interactive="activecode" language="python">
-    <input>
+    <code>
 word = 'brontosaurus'
 d = dict()
 for c in word:
@@ -45,7 +45,7 @@ for c in word:
     else:
         d[c] = d[c] + 1
 print(d)
-        </input>
+        </code>
   </program>
   <p>We are effectively computing a <em>histogram</em>, which is a
             statistical term for a set of counters (or frequencies).</p>
@@ -56,9 +56,9 @@ print(d)
             dictionary we increment <title_reference>d[c]</title_reference>.</p>
   <p>Here's the output of the program:</p>
   <program language="python">
-    <input>
+    <code>
 {'a': 1, 'b': 1, 'o': 2, 'n': 1, 's': 2, 'r': 2, 'u': 2, 't': 1}
-</input>
+</code>
   </program>
   <p>The histogram indicates that the letters <q>a</q> and <q>b</q>
             appear once; <q>o</q> appears twice, and so on.</p>
@@ -107,21 +107,21 @@ print(d)
             returns the corresponding value; otherwise it returns the default value.
             For example:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100}
 &gt;&gt;&gt; print(counts.get('jan', 0))
 100
 &gt;&gt;&gt; print(counts.get('tim', 0))
 0
-</input>
+</code>
   </program>
   <exercise label="question9_2_2">
     <statement>
       <p>Q-3: Which use of the get method correctly returns the amount of times the name <q>Russell</q> appears in the dictionary names?</p>
       <program language="python">
-        <input>
+        <code>
 names = {'James' : 10, 'Russell' : 2, 'Kevin' : 27}
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -164,13 +164,13 @@ names = {'James' : 10, 'Russell' : 2, 'Kevin' : 27}
             a key is not in a dictionary, we can reduce four lines down to one and
             eliminate the <c>if</c> statement.</p>
   <program language="python">
-    <input>
+    <code>
 word = 'brontosaurus'
 d = dict()
 for c in word:
     d[c] = d.get(c,0) + 1
 print(d)
-</input>
+</code>
   </program>
   <p>The use of the <c>get</c> method to simplify this counting loop
             ends up being a very commonly used <q>idiom</q> in Python and we will use it
@@ -182,7 +182,7 @@ print(d)
     <statement>
       <p>Q-4: What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 word = "incomprehensible"
 d = dict()
 for char in word:
@@ -191,7 +191,7 @@ for char in word:
     else:
         d[char] = d[char] + 1
 print(d.get('d', 0))
-</input>
+</code>
       </program>
     </statement>
     <choices>

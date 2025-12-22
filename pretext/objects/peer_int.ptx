@@ -5,7 +5,7 @@
     <statement>
       <p>Q-1:  What is the output of this code?</p>
       <program language="python">
-        <input>
+        <code>
 class Thing(object):
 
   def __init__(self, a, b):
@@ -15,7 +15,7 @@ class Thing(object):
 
 t = Thing(4, 5)
 print(t)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -65,7 +65,7 @@ print(t)
     <statement>
       <p>Q-2:  Which of the following would evaluate to True?</p>
       <program language="python">
-        <input>
+        <code>
 class Account(object):
   def __init__(self, val):
       '''(int) -&gt; Account
@@ -76,7 +76,7 @@ class Account(object):
   def __eq__(self, other):
       '''(Account) -&gt; bool'''
       return self.gold == 0 and other.gold == 5
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -126,7 +126,7 @@ class Account(object):
     <statement>
       <p>Q-3:  Which of the following would evaluate to True?</p>
       <program language="python">
-        <input>
+        <code>
 class Account(object):
   def __init__(self, val):
       '''(int) -&gt; Account
@@ -137,7 +137,7 @@ class Account(object):
   def __eq__(self, other):
       '''(Account) -&gt; bool'''
       return self.gold == 0
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -187,7 +187,7 @@ class Account(object):
     <statement>
       <p>Q-4: Which of the following would evaluate to True?</p>
       <program language="python">
-        <input>
+        <code>
 class Point(object):
   '''Two-dimensional points'''
 
@@ -201,7 +201,7 @@ class Point(object):
   def __lt__(self, other):
       return isinstance(other, Point) and (self.x &lt; other.x \
       or (self.x == other.x and self.y &lt; other.y))
-</input>
+</code>
       </program>
     </statement>
     <choices>

@@ -18,9 +18,9 @@
   <p>If you put a space in a variable name, Python thinks it is two operands
             without an operator:</p>
   <program xml:id="var-ac-12-badname" interactive="activecode" language="python">
-    <input>
+    <code>
 bad name = 5
-        </input>
+        </code>
   </program>
   <exercise label="var-debug-mc-name">
     <statement>
@@ -69,19 +69,19 @@ bad name = 5
             that is, trying to use a variable before you have assigned a value. This
             can happen if you spell a variable name wrong:</p>
   <program xml:id="var-ac-13-definition" interactive="activecode" language="python">
-    <input>
+    <code>
 principal = 327.68
 interest = principle * rate
-        </input>
+        </code>
   </program>
   <p>Variables names are case sensitive, so <c>LaTeX</c> is not the
             same as <c>latex</c>.</p>
   <p>At this point, the most likely cause of a semantic error is the order of
     operations. For example, to evaluate <m>1 \over {2\pi }</m> (which is .159), you might be tempted to write</p>
   <program xml:id="var-ac-14-pi" interactive="activecode" language="python">
-    <input>
+    <code>
 print(1.0 / 2.0 * 3.14)
-        </input>
+        </code>
   </program>
   <p>But the division happens first, so you would get <m>\pi \over 2</m>, which is not
             the same thing! There is no way for Python to know what you meant to

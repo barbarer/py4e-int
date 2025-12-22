@@ -13,7 +13,7 @@
             Please only refer to the <term>last</term> execution result for debugging purposes.</p>
     </statement>
     <program xml:id="hparsons_lg_sql_test_bank_post_select_editor" interactive="activecode" language="sql">
-      <input>
+      <code>
 DROP TABLE IF EXISTS goods;
 create table "goods" ("id" INTEGER, "name" TEXT, "type" TEXT, "brand" TEXT, "quantity" INTEGER);
 INSERT INTO goods (id,name,type,brand,quantity) VALUES
@@ -24,7 +24,7 @@ INSERT INTO goods (id,name,type,brand,quantity) VALUES
     (5, 'choco_nuts', 'protein_bar', 'kind', 7);
 ^^^^
 ====
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="hparsons_lg_sql_test_bank_post_update">
@@ -38,7 +38,7 @@ INSERT INTO goods (id,name,type,brand,quantity) VALUES
             Please only refer to the <term>last</term> execution result for debugging purposes.</p>
     </statement>
     <program xml:id="hparsons_lg_sql_test_bank_post_update_editor" interactive="activecode" language="sql">
-      <input>
+      <code>
 DROP TABLE IF EXISTS goods;
 create table "goods" ("id" INTEGER, "name" TEXT, "type" TEXT, "brand" TEXT, "quantity" INTEGER);
 INSERT INTO goods (id,name,type,brand,quantity) VALUES
@@ -54,7 +54,7 @@ INSERT INTO goods (id,name,type,brand,quantity) VALUES
 ;
 SELECT * FROM goods
 ====
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="hparsons_lg_sql_test_bank_post_join">
@@ -72,7 +72,7 @@ SELECT * FROM goods
             Please only refer to the unittest and the <term>last</term> execution result for debugging purposes.</p>
     </statement>
     <program xml:id="hparsons_lg_sql_test_bank_post_join_editor" interactive="activecode" language="sql">
-      <input>
+      <code>
 DROP TABLE IF EXISTS goods;
 create table "goods" ("id" INTEGER, "name" TEXT, "type" TEXT, "brand" TEXT, "quantity" INTEGER);
 INSERT INTO goods (id,name,type,brand,quantity) VALUES
@@ -90,7 +90,7 @@ INSERT INTO transactions (method,goods_id,date) VALUES
     ('cash', '5', '2022-11-15');
 ^^^^
 ====
-        </input>
+        </code>
     </program>
   </exercise>
   <subsection xml:id="database_thank-you">

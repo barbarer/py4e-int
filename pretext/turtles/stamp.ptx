@@ -9,7 +9,7 @@
       <p>Run the code to see what it draws.</p>
     </statement>
     <program xml:id="stampex_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 from turtle import *
 space = Screen()
 tess = Turtle()
@@ -22,7 +22,7 @@ for size in range(5, 60, 2):  # start with size = 5 and grow by 2
     tess.stamp()                # leave an impression on the canvas
     tess.forward(size)          # move tess along
     tess.right(24)              # and turn her
-        </input>
+        </code>
     </program>
   </exercise>
   <p>The list of integers shown under the picture above is created by printing the <c>range(5,60,2)</c> result.  This shows you the distances used to move the turtle forward each time through the <c>for</c> loop.</p>

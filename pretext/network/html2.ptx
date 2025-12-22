@@ -58,7 +58,7 @@
         <p>Click on the <q>Render</q> button to see the resulting web page.</p>
       </statement>
       <program xml:id="html_table_ex_editor" interactive="activecode" language="htmlmixed">
-        <input>
+        <code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -85,7 +85,7 @@
         &lt;/table&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="html_table_tag_def_dnd">
@@ -95,24 +95,24 @@
       <feedback>
         <p>Read the information above and try again.</p>
       </feedback>
-      <matches>
-        <match order="1">
+      <cardsort>
+        <match>
           <premise>table</premise>
           <response>Used to create a table.</response>
         </match>
-        <match order="2">
+        <match>
           <premise>th</premise>
           <response>Used to specify a header (optional first row).</response>
         </match>
-        <match order="3">
+        <match>
           <premise>tr</premise>
           <response>Used to create a row in a table.</response>
         </match>
-        <match order="4">
+        <match>
           <premise>td</premise>
           <response>Used to identify data in a table.</response>
         </match>
-      </matches>
+      </cardsort>
     </exercise>
     <exercise label="html_body_table_unemployment_order" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
@@ -202,9 +202,9 @@
     <p>Web pages can include hyperlinks to other web pages.  They do this by including
                 an anchor <c>a</c> tag which is also known as a <term>link</term> tag as shown below.</p>
     <program language="html">
-      <input>
+      <code>
 &lt;a href="https://www.w3schools.com/"&gt;Visit W3Schools.com!&lt;/a&gt;
-</input>
+</code>
     </program>
     <p>The start tag <c>&lt;a&gt;</c> contains an <term>attribute</term> <c>href</c> and <term>value</term> <c>"https://www.w3schools.com/"</c>.
                 The text of the tag is <c>Visit W3Schools.com!</c> which is the actual text of the link when it is displayed.
@@ -215,7 +215,7 @@
         <p>Render the HTML below.</p>
       </statement>
       <program xml:id="html_link_ac_editor" interactive="activecode" language="htmlmixed">
-        <input>
+        <code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -227,7 +227,7 @@
         &lt;/p&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-        </input>
+        </code>
       </program>
     </exercise>
   </subsection>
@@ -240,7 +240,7 @@
         <p>Render the HTML below.</p>
       </statement>
       <program xml:id="html_image_ac_editor" interactive="activecode" language="htmlmixed">
-        <input>
+        <code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -251,7 +251,7 @@
         &lt;img src="https://i.ibb.co/WfcrzVn/beach.jpg" alt="A picture of a beach"&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-        </input>
+        </code>
       </program>
     </exercise>
     <note>
@@ -264,20 +264,20 @@
       <feedback>
         <p>Read the information above and try again.</p>
       </feedback>
-      <matches>
-        <match order="1">
+      <cardsort>
+        <match>
           <premise>img</premise>
           <response>Tag to include an image.</response>
         </match>
-        <match order="2">
+        <match>
           <premise>div</premise>
           <response>Tag to define a division (section).</response>
         </match>
-        <match order="3">
+        <match>
           <premise>a</premise>
           <response>Tag to define a hyperlink (link)</response>
         </match>
-      </matches>
+      </cardsort>
     </exercise>
     <exercise label="html-anchor-vs-img">
       <statement>
@@ -345,7 +345,7 @@
         <p>Render the HTML below.</p>
       </statement>
       <program xml:id="html_div_with_css_ac_editor" interactive="activecode" language="htmlmixed">
-        <input>
+        <code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -370,7 +370,7 @@
         &lt;/div&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="html_span_div_css">
@@ -380,20 +380,20 @@
       <feedback>
         <p>Read the information above and try again.</p>
       </feedback>
-      <matches>
-        <match order="1">
+      <cardsort>
+        <match>
           <premise>span</premise>
           <response>Tag to define an inline style or order.</response>
         </match>
-        <match order="2">
+        <match>
           <premise>div</premise>
           <response>Tag to define a block or section in an HTML page.</response>
         </match>
-        <match order="3">
+        <match>
           <premise>CSS</premise>
           <response>Is used to define styles to change how HTML elements are displayed.</response>
         </match>
-      </matches>
+      </cardsort>
     </exercise>
   </subsection>
   <subsection xml:id="network_using-css-classes">
@@ -404,7 +404,7 @@
         <p>Render the HTML below.</p>
       </statement>
       <program xml:id="html_div_with_css_classes_ac_editor" interactive="activecode" language="htmlmixed">
-        <input>
+        <code>
 &lt;html&gt;
     &lt;head&gt;
         &lt;style&gt;
@@ -426,7 +426,7 @@
 
   &lt;/body&gt;
 &lt;/html&gt;
-        </input>
+        </code>
       </program>
     </exercise>
     <p>Change the class <c>warning</c> to use an orange color instead and render the HTML again.</p>

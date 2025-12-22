@@ -5,11 +5,11 @@
     <statement>
       <p>Q-1: What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 lst = ['abc', 'def', 'ghi']
 lst[1] = 'wxyz'
 print(len(lst))
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -59,11 +59,11 @@ print(len(lst))
     <statement>
       <p>Q-2: What is the value of <c>a</c> after this code runs?</p>
       <program language="python">
-        <input>
+        <code>
 a = [2, 4, 6, 8]
 a.remove(4)
 a.pop(2)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -113,11 +113,11 @@ a.pop(2)
     <statement>
       <p>Q-3: What is the value of <c>a</c> after this code runs?</p>
       <program language="python">
-        <input>
+        <code>
 a = [2, 4, 6, 8]
 a.pop(2)
 a.remove(4)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -167,11 +167,11 @@ a.remove(4)
     <statement>
       <p>Q-4: What is the value of the list <c>a</c> after the code below runs?</p>
       <program language="python">
-        <input>
+        <code>
 a = [[1, 2, 3], [4, 5]]
 b = a[:]
 b.append(8)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -213,9 +213,9 @@ b.append(8)
     <statement>
       <p>Q-5: Which list is produced by this code?</p>
       <program language="python">
-        <input>
+        <code>
 list(range(2, 7, 3))
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -257,9 +257,9 @@ list(range(2, 7, 3))
     <statement>
       <p>Q-6: Which list is produced by this code?</p>
       <program language="python">
-        <input>
+        <code>
 list(range(4, 9, 4))
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -301,7 +301,7 @@ list(range(4, 9, 4))
     <statement>
       <p>Q-7: What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 lst = [3, 6, 9]
 sum = 0
 counter = 0
@@ -309,7 +309,7 @@ while counter &lt; len(lst):
    sum += counter
    counter += 2
 print(sum)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -359,9 +359,9 @@ print(sum)
     <statement>
       <p>Q-8: What is the maximum segment sum in this list?</p>
       <program language="python">
-        <input>
+        <code>
 [2, -5, 8, -6, 10]
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -411,9 +411,9 @@ print(sum)
     <statement>
       <p>Q-9: What is the maximum segment sum in this list?</p>
       <program language="python">
-        <input>
+        <code>
 [2, -5, 8, -6, 10]
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -464,7 +464,7 @@ print(sum)
       <p>Q-10: [0, 1, 2, 3, 4]
             How many times does Approach A compute the sum 1 + 2 + 3 in the above list?</p>
       <program language="python">
-        <input>
+        <code>
 Approach A:
 
 def max_segment_sum(L):
@@ -479,7 +479,7 @@ def max_segment_sum(L):
             sum = sum + L[i]
       max_so_far = max(max_so_far, sum)
    return max_so_far
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -530,7 +530,7 @@ def max_segment_sum(L):
       <p>Q-11: [0, 1, 2, 3, 4]
             How many times does Approach A compute the sum 0 + 1 + 2 in the above list?</p>
       <program language="python">
-        <input>
+        <code>
 Approach A:
 
 def max_segment_sum(L):
@@ -545,7 +545,7 @@ def max_segment_sum(L):
             sum = sum + L[i]
       max_so_far = max(max_so_far, sum)
    return max_so_far
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -681,9 +681,9 @@ def max_segment_sum(L):
     <statement>
       <p>Q-14: The list below reflects the state of the list after 3 passes of insertion sort. What will be in the list after the next (fourth) pass?</p>
       <program language="python">
-        <input>
+        <code>
 [10, 20, 30, 40, 16, 94, 8, 22]
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -733,9 +733,9 @@ def max_segment_sum(L):
     <statement>
       <p>Q-15: The list below reflects the state of the list after 3 passes of insertion sort. What will be in the list after the next (fourth) pass?</p>
       <program language="python">
-        <input>
+        <code>
 [5, 7, 14, 19, 16, 2, 32, 9]
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -824,9 +824,9 @@ def max_segment_sum(L):
     <statement>
       <p>Q-17: Which of the following matches the contents of the list after one pass of bubble sort?</p>
       <program language="python">
-        <input>
+        <code>
 [5, 9, 0, 4, 6, 8, 2]
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -868,9 +868,9 @@ def max_segment_sum(L):
     <statement>
       <p>Q-18: Which of the following matches the contents of the list after one pass of bubble sort?</p>
       <program language="python">
-        <input>
+        <code>
 [2, 10, 1, 7, 15, 9, 1]
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -912,7 +912,7 @@ def max_segment_sum(L):
     <statement>
       <p>Q-19: Which sort produces the following values on each pass?</p>
       <program language="python">
-        <input>
+        <code>
 [5, 9, 0, 4, 6, 8, 2]
 [5, 9, 0, 4, 6, 8, 2]
 [5, 9, 0, 4, 6, 8, 2]
@@ -921,7 +921,7 @@ def max_segment_sum(L):
 [0, 4, 5, 6, 9, 8, 2]
 [0, 4, 5, 6, 8, 9, 2]
 [0, 2, 4, 5, 6, 8, 9]
-</input>
+</code>
       </program>
     </statement>
     <choices>

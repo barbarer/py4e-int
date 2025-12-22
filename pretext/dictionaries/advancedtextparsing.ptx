@@ -2,7 +2,7 @@
 <section xml:id="dictionaries_advanced-text-parsing">
   <title>Advanced Text Parsing</title>
   <program xml:id="fileOpen2" interactive="activecode" language="python">
-    <input>
+    <code>
 with open("romeo2.txt", "r") as filename:
     lines = filename.readlines()
     counts = {}
@@ -13,7 +13,7 @@ with open("romeo2.txt", "r") as filename:
             else:
                 counts[word] += 1
 print(counts)
-        </input>
+        </code>
   </program>
   <p>In the above example using the file <em>romeo.txt</em>, we made the
             file as simple as possible by removing all punctuation by hand. The
@@ -77,18 +77,18 @@ Who is already sick and pale with grief,</pre>
     </choices>
   </exercise>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; import string
 &gt;&gt;&gt; string.punctuation
 '!"#$%&amp;\'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~'
-</input>
+</code>
   </program>
   <note>
     <p>The parameters used by <c>translate</c> were different in Python 2.0.</p>
   </note>
   <p>We make the following modifications to our program:</p>
   <program xml:id="fileOpen3_v2" interactive="activecode" language="python3">
-    <input>
+    <code>
 import string
 
 with open("romeo-full.txt", "r") as fhand:
@@ -103,7 +103,7 @@ for line in lines:
         else:
             counts[word] += 1
 print(counts)
-        </input>
+        </code>
   </program>
   <exercise label="question9_5_2">
     <statement>

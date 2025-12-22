@@ -12,20 +12,20 @@
             elements that differ. Subsequent elements are not considered (even if
             they're really big).</p>
   <program language="python">
-    <input>
+    <code>
 (0, 1, 2) &lt; (0, 3, 4)
 &gt;&gt;&gt; True
 (0, 1, 2000000) &lt; (0, 3, 4)
 &gt;&gt;&gt; True
-</input>
+</code>
   </program>
   <exercise label="question10_2_1">
     <statement>
       <p>11-9-1: What is returned when the following code is run?</p>
       <program language="python">
-        <input>
+        <code>
 (5, 7, 3) &lt; (7, 4, 2)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -70,25 +70,25 @@
     <feedback>
       <p>Something's wrong! Look up for the definitions.</p>
     </feedback>
-    <matches>
-      <match order="1">
+    <cardsort>
+      <match>
         <premise>Decorate</premise>
         <response>A sequence by building a list of tuples with one or more sort metrics preceding the elements from the sequence.</response>
       </match>
-      <match order="2">
+      <match>
         <premise>Sort</premise>
         <response>The list of tuples using the Python built-in sort.</response>
       </match>
-      <match order="3">
+      <match>
         <premise>Undecorate</premise>
         <response>By extracting the sorted elements of the sequence.</response>
       </match>
-    </matches>
+    </cardsort>
   </exercise>
   <p>For example, suppose you have a list of words and you want to sort them
             from longest to shortest:</p>
   <program xml:id="comparingtuples_exercise_1" interactive="activecode" language="python">
-    <input>
+    <code>
 txt = 'but soft what light in yonder window breaks'
 words = txt.split()
 tupleList = []
@@ -102,7 +102,7 @@ for length, word in tupleList:
     sortedWordsList.append(word)
 
 print(sortedWordsList)
-        </input>
+        </code>
   </program>
   <p>Let's walk through the <em>DSU</em> process:</p>
   <p>The first loop <term>decorates</term> by building a list of tuples, where each tuple is a word

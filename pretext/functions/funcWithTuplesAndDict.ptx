@@ -84,7 +84,7 @@
         <p>Run this code to see what it prints.</p>
       </statement>
       <program xml:id="func_tup_test_ac_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def tuple_test(tup):
     print(tup[0])
@@ -100,7 +100,7 @@ def main():
 
 # function call
 main()
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="funct_tuple_test_char">
@@ -170,7 +170,7 @@ main()
         <p>Run this code to see what it prints.</p>
       </statement>
       <program xml:id="func_tuple_change_ac_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def change_tuple(tup):
     print(tup)
@@ -184,7 +184,7 @@ def main():
 
 # function call
 main()
-        </input>
+        </code>
       </program>
     </exercise>
     <note>
@@ -216,14 +216,14 @@ main()
         <p>Run this code to see what it prints.</p>
       </statement>
       <program xml:id="func_tuple_list_zip_ac_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 l1 = ["Will it be sunny?", "Will I be happy?"]
 l2 = ["No", "Yes"]
 result = zip(l1, l2)
 l3 = list(result)
 print(l3[0][1])
 print(l3)
-        </input>
+        </code>
       </program>
     </exercise>
     <note>
@@ -262,7 +262,7 @@ print(l3)
         <p>Run this code to see what it prints.</p>
       </statement>
       <program xml:id="func_dict_example_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def count_chars(str):
     letter_dict = dict()
@@ -279,7 +279,7 @@ d1 = count_chars("Run, run as fast as you can")
 print(d1['a'])
 print(d1)
 print(type(d1))
-        </input>
+        </code>
       </program>
     </exercise>
         <p>Look at the Python code below.  What do you think will happen when you run the following code?</p>
@@ -288,12 +288,12 @@ print(type(d1))
         <p>Run this code to see what it prints.</p>
       </statement>
       <program xml:id="func_dict_with_key_error_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 d = {}
 d['north'] = "Michigan"
 d['south'] = "Kentucky"
 print(d['east'])
-        </input>
+        </code>
       </program>
     </exercise>
     <p>There is another way to update the value for a key that works even if the key isn't in the dictionary already.</p>
@@ -302,7 +302,7 @@ print(d['east'])
         <p>Run this code to see what it prints.</p>
       </statement>
       <program xml:id="func_dict_example_v2_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def count_chars(str):
     letter_dict = dict()
@@ -319,7 +319,7 @@ print(d1['t'])
 d1 = count_chars("Run, run as fast as you can")
 print(d1['a'])
 print(d1)
-        </input>
+        </code>
       </program>
     </exercise>
     <note>
@@ -333,24 +333,24 @@ print(d1)
       <feedback>
         <p>Read this page and try again.</p>
       </feedback>
-      <matches>
-        <match order="1">
+      <cardsort>
+        <match>
           <premise>["a", "b"]</premise>
           <response> List</response>
         </match>
-        <match order="2">
+        <match>
           <premise>("a", "b")</premise>
           <response>Tuple</response>
         </match>
-        <match order="3">
+        <match>
           <premise>"ab"</premise>
           <response>String</response>
         </match>
-        <match order="4">
+        <match>
           <premise>{"a": 5, "b": 2}</premise>
           <response>Dictionary</response>
         </match>
-      </matches>
+      </cardsort>
     </exercise>
     <exercise label="funct_which_are_immutable_mc">
       <statement>

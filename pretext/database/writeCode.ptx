@@ -9,7 +9,7 @@
                     <c>bike_number</c> <q>W00837</q>.</p>
           </statement>
           <program xml:id="db_writecode_bike1_editor" interactive="activecode" language="sql">
-            <input>
+            <code>
 SELECT bike, duration IN trip_data WHERE bike = W00837
 ====
 assert 0,0 == W00837
@@ -22,7 +22,7 @@ assert 7,0 == W00837
 assert 7,1 == 1836
 assert 13,0 == W00837
 assert 13,1 == 492
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -33,7 +33,7 @@ assert 13,1 == 492
                     all of the rentals that had a <c>duration</c> of more than 85,000.</p>
           </statement>
           <program xml:id="db_writecode_bike2_editor" interactive="activecode" language="sql">
-            <input>
+            <code>
 
 
 ====
@@ -45,7 +45,7 @@ assert 3,0 == W00202
 assert 3,1 == 85102
 assert 7,0 == W00076
 assert 7,1 == 85194
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -56,7 +56,7 @@ assert 7,1 == 85194
                     the rentals from <c>start_station</c> 31105 and limit the results to 5.</p>
           </statement>
           <program xml:id="db_writecode_bike3_editor" interactive="activecode" language="sql">
-            <input>
+            <code>
 
 ====
 assert 0,0 == W01066
@@ -68,7 +68,7 @@ assert 3,0 == W01066
 assert 3,1 == 1210
 assert 4,0 == W00208
 assert 4,1 == 422
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -79,7 +79,7 @@ assert 4,1 == 422
                     the rentals from table <c>trip_data</c> where <c>end_station</c> 31200 and limit the results to 5.</p>
           </statement>
           <program xml:id="db_writecode_bike4_editor" interactive="activecode" language="sql">
-            <input>
+            <code>
 
 ====
 assert 0,0 == W00058
@@ -90,7 +90,7 @@ assert 3,0 == W00540
 assert 3,1 == Member
 assert 4,0 == W00543
 assert 4,1 == Member
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -102,7 +102,7 @@ assert 4,1 == Member
                     them by <c>duration</c> descending.</p>
           </statement>
           <program xml:id="db_writecode_bike5_editor" interactive="activecode" language="sql">
-            <input>
+            <code>
 
 
 ====
@@ -113,7 +113,7 @@ assert 3,0 == W00743
 assert 3,1 == 85318
 assert 7,0 == W00202
 assert 7,1 == 85102
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -125,7 +125,7 @@ assert 7,1 == 85102
                     Limit the results to 5 rows.</p>
           </statement>
           <program xml:id="db_writecode_bike6_editor" interactive="activecode" language="sql">
-            <input>
+            <code>
 
 ====
 assert 0,0 == 513639
@@ -136,7 +136,7 @@ assert 1,1 == 1978
 assert 4,0 == 578726
 assert 4,1 == 1008
 assert 4,11 == open
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -148,7 +148,7 @@ assert 4,11 == open
                     Limit the results to 5 rows.</p>
           </statement>
           <program xml:id="db_writecode_bike7_editor" interactive="activecode" language="sql">
-            <input>
+            <code>
 
 ====
 assert 0,0 == 332
@@ -158,7 +158,7 @@ assert 1,1 == W00775
 assert 4,0 == 1008
 assert 4,1 == W00392
 assert 4,2 == 14th St &amp; Spring Rd NW
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -170,7 +170,7 @@ assert 4,2 == 14th St &amp; Spring Rd NW
                     Limit the results to 5 rows.</p>
           </statement>
           <program xml:id="db_writecode_bike8_editor" interactive="activecode" language="sql">
-            <input>
+            <code>
 
 ====
 assert 0,0 == 332
@@ -181,7 +181,7 @@ assert 1,1 == W00775
 assert 4,0 == 1008
 assert 4,1 == W00392
 assert 4,4 == -77.0327126210449
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -193,7 +193,7 @@ assert 4,4 == -77.0327126210449
                     and where the <c>station_id</c> equals 31101.  Limit the results to 5 rows.</p>
           </statement>
           <program xml:id="db_writecode_bike9_editor" interactive="activecode" language="sql">
-            <input>
+            <code>
 
 ====
 assert 0,0 == W00013
@@ -202,7 +202,7 @@ assert 1,0 == W00719
 assert 1,3 == 31101
 assert 4,0 == W00821
 assert 4,3 == 31101
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -214,7 +214,7 @@ assert 4,3 == 31101
                     and where the <c>member_type</c> equals <q>Casual</q>.  Limit the results to 5 rows.</p>
           </statement>
           <program xml:id="db_writecode_bike10_editor" interactive="activecode" language="sql">
-            <input>
+            <code>
 
 ====
 assert 0,0 == W00775
@@ -223,7 +223,7 @@ assert 1,0 == W00204
 assert 1,3 == 31604
 assert 4,0 == W00568
 assert 4,3 == 31216
-        </input>
+        </code>
           </program>
         </exercise>
 

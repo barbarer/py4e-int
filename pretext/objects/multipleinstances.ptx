@@ -10,7 +10,7 @@
             pass data to the constructors to give each object a different initial
             value:</p>
   <program xml:id="partyanimal_multipleinstances" interactive="codelens" language="python">
-    <input>
+    <code>
 class PartyAnimal:
 
     def __init__(self, nam):
@@ -28,7 +28,7 @@ j = PartyAnimal('Jim')
 s.party(0)
 j.party(0)
 s.party(1)
-    </input>
+    </code>
   </program>
   <p>The constructor has both a <c>self</c> parameter that points to the object instance
             and additional parameters that are passed into the constructor as the

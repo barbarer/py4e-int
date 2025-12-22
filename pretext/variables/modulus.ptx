@@ -9,12 +9,12 @@
             the modulus operator is a percent sign ( <c>%</c> ). The syntax is the same as
             for other operators:</p>
   <program xml:id="var-ac-7-mod" interactive="activecode" language="python">
-    <input>
+    <code>
 quotient = 7 // 3
 print(quotient)
 remainder = 7 % 3
 print(remainder)
-        </input>
+        </code>
   </program>
   <p>So 7 divided by 3 is 2 with 1 left over.</p>
   <p>The modulus operator turns out to be surprisingly useful. For example,
@@ -108,20 +108,20 @@ print(remainder)
     <feedback>
       <p>Try out these expressions in terminal or review the operators and operands section.</p>
     </feedback>
-    <matches>
-      <match order="1">
+    <cardsort>
+      <match>
         <premise>7 / 2</premise>
         <response>division</response>
       </match>
-      <match order="2">
+      <match>
         <premise>90 // 4</premise>
         <response>floored division</response>
       </match>
-      <match order="3">
+      <match>
         <premise>45 % 6</premise>
         <response>remainder</response>
       </match>
-    </matches>
+    </cardsort>
   </exercise>
   <exercise label="var-fitb-6-mod">
     <statement>

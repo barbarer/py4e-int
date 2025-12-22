@@ -7,7 +7,7 @@
             <p>Fix the 4 errors so the following code runs and returns the perimeter of a rectangle. For example, <c>recPerimeter(10, 20)</c> should return <c>60</c>.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="funct-ex-perimeterq_editor">
-            <input>
+            <code>
 def recPerimeter(length, width)
 perimeter = 2 * (length + width)
     Return recPerimeter
@@ -23,7 +23,7 @@ class myTests(TestCaseGui):
         self.assertEqual(recPerimeter(3.0, 2),10.0,"recPerimeter(3.0, 2)")
 
 myTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -32,7 +32,7 @@ myTests().main()
                         Fix the 4 errors so the following code runs and returns the perimeter of a rectangle. For example, recPerimeter(10, 20) should return 60.
 
     
-    <program xml:id="funct-ex-perimetera_editor" language="python"><input>
+    <program xml:id="funct-ex-perimetera_editor" language="python"><code>
 # Function headers end with a colon (:)
 def recPerimeter(length, width):
 
@@ -42,7 +42,7 @@ def recPerimeter(length, width):
     # Keyword return is lowercase
     # Return the variable, not the function name
     return perimeter
-        </input></program>
+        </code></program>
 
                     </solution>
         </exercise>
@@ -52,7 +52,7 @@ def recPerimeter(length, width):
             <p>Fix the 5 errors so the following code runs and returns the area of a square. For example, <c>squareArea(10)</c> should return <c>100</c>.</p>
           </statement>
           <program xml:id="funct_ex_squareq_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 Def squareArea(sideLength)
     area = length * length
     return squareArea
@@ -67,7 +67,7 @@ class myTests(TestCaseGui):
         self.assertEqual(squareArea(23),529,"squareArea(23)")
 
 myTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -77,7 +77,7 @@ myTests().main()
                             and computes its area. Then, write code to call the function and print the result. For example, <c>areaTriangle(12,45)</c> should return <c>270</c>.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="funct_ex_triangleq_editor">
-            <input>
+            <code>
 def areaTriangle():
     base = 5
     height = 4
@@ -92,7 +92,7 @@ class myTests(TestCaseGui):
         self.assertEqual(areaTriangle(5,4),10,"areaTriangle(5,4)")
 
 myTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -102,7 +102,7 @@ myTests().main()
                             and computes its area. Then, write code to call the function and print the result. For example, areaTriangle(12,45) should return 270.
 
     
-    <program xml:id="funct_ex_trianglea_editor" language="python"><input>
+    <program xml:id="funct_ex_trianglea_editor" language="python"><code>
 # Give function base and height arguments
 def areaTriangle(base, height):
     # Set area variable to the formula using arguments
@@ -111,7 +111,7 @@ def areaTriangle(base, height):
     return area
 # Call the function with arguments
 print(areaTriangle(2, 6))
-        </input></program>
+        </code></program>
 
 
                     </solution>
@@ -124,7 +124,7 @@ print(areaTriangle(2, 6))
                     should return the cost of the trip. For example, <c>tripCost(100, 25, 2.24)</c> should return <c>8.96</c>.</p>
           </statement>
           <program xml:id="funct_ex_tripq_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 miles = 500
 milesPerGallon = 26
 numGallons = miles / milesPerGallon
@@ -141,7 +141,7 @@ class myTests(TestCaseGui):
         self.assertAlmostEqual(tripCost(250, 20, 3.01),37.625,3,"tripCost(250, 20, 3.01)")
 
 myTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -152,7 +152,7 @@ myTests().main()
                             <c>"My name is John and I am 18 years old."</c></p>
           </statement>
           <program interactive="activecode" language="python" xml:id="funct_ex_nameq_editor">
-            <input>
+            <code>
 def nameAndAge(nameString, ageInt):
     return(My name is "nameString" and I am + "str(ageInt)" + years old.)
 
@@ -167,7 +167,7 @@ class myTests(TestCaseGui):
         self.assertEqual(nameAndAge("John", 18),"My name is John and I am 18 years old.","nameAndAge('John', 18)")
 
 myTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -178,14 +178,14 @@ myTests().main()
                             "My name is John and I am 18 years old."
 
     
-    <program xml:id="funct_ex_namea_editor" language="python"><input>
+    <program xml:id="funct_ex_namea_editor" language="python"><code>
 def nameAndAge(nameString, ageInt):
     # Use quotes around strings, keep variables outside of quotes
     # Include spacing so variables are not connected to words
     return("My name is " + nameString + " and I am " + str(ageInt) + " years old.")
 
 print(nameAndAge("John", 18))
-        </input></program>
+        </code></program>
                     </solution>
         </exercise>
 
@@ -195,18 +195,18 @@ print(nameAndAge("John", 18))
                     that takes a score as its parameter and returns a string representing a grade. If someone
                     enters a string or a score greater than 1, return <c>'Bad score'</c>. For example, <c>computegrade(.95)</c> should return <c>'A'</c>.</p>
             <program language="python">
-              <input>
+              <code>
 Score    Grade
 &gt;= 0.9     A
 &gt;= 0.8     B
 &gt;= 0.7     C
 &gt;= 0.6     D
 &lt; 0.6      F
-</input>
+</code>
             </program>
           </statement>
           <program xml:id="funct_ex_gradeq_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 def computegrade(score):
     # your code here
 
@@ -223,7 +223,7 @@ class myTests(TestCaseGui):
         self.assertEqual(computegrade(.5),'F',"computegrade(.5)")
 
 myTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -234,7 +234,7 @@ myTests().main()
                             Use this equation to find this sum: (n * (n + 1)) / 2. For example, <c>sumTo(15)</c> should return <c>120.0</c>.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="funct_ex_sumq_editor">
-            <input>
+            <code>
 def sumTo(n):
     # your code here
 
@@ -250,7 +250,7 @@ class myTests(TestCaseGui):
         self.assertAlmostEqual(sumTo(7),28.0,0,"sumTo(7)")
 
 myTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -261,7 +261,7 @@ myTests().main()
                             Use this equation to find this sum: (n * (n + 1)) / 2. For example, sumTo(15) should return 120.0.
 
     
-    <program xml:id="funct_ex_suma_editor" language="python"><input>
+    <program xml:id="funct_ex_suma_editor" language="python"><code>
 def sumTo(n):
     # set result variable to given equation
     result = (n * (n + 1)) / 2
@@ -269,7 +269,7 @@ def sumTo(n):
     return result
     # alternatively, you can accomplish this on one line:
     # return (n * (n + 1)) / 2
-        </input></program>
+        </code></program>
                     </solution>
         </exercise>
 
@@ -280,7 +280,7 @@ def sumTo(n):
                     For example, <c>sumTo(15)</c> should return <c>120</c>.</p>
           </statement>
           <program xml:id="funct_ex_addq_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 def sumTo(n):
     # your code here
 
@@ -295,7 +295,7 @@ class myTests(TestCaseGui):
         self.assertEqual(sumTo(7),28,"sumTo(7)")
 
 myTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -306,7 +306,7 @@ myTests().main()
                             For example, <c>areaOfCircle(31415.926535897932)</c> should return <c>3100627668.0299816</c>.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="funct_ex_circleq_editor">
-            <input>
+            <code>
 def areaOfCircle(r):
     # your code here
 
@@ -322,7 +322,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -333,7 +333,7 @@ myTests().main()
                             For example, areaOfCircle(31415.926535897932) should return 3100627668.0299816.
 
     
-    <program xml:id="funct_ex_circlea_editor" language="python"><input>
+    <program xml:id="funct_ex_circlea_editor" language="python"><code>
 # Import the math module
 import math
 
@@ -342,7 +342,7 @@ def areaOfCircle(r):
     a = r**2 * math.pi
     # Return the area
     return a
-        </input></program>
+        </code></program>
                     </solution>
         </exercise>
 
@@ -353,7 +353,7 @@ def areaOfCircle(r):
                     and <c>get_avg_drop_lowest(4, 3, 10)</c> returns <c>7</c>.</p>
           </statement>
           <program xml:id="funct_avg_drop_lowest_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 def get_avg_drop_lowest(num1, num2, num3):
 
 ====
@@ -369,7 +369,7 @@ class myTests(TestCaseGui):
         self.assertAlmostEqual(get_avg_drop_lowest(75, 83, 90), 86.5, 1, "get_avg_drop_lowest(75, 83, 90)")
 
 myTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -382,7 +382,7 @@ myTests().main()
                             If it is your birthday, your speed can be 5 higher in all cases. For example, <c>caught_speeding(60,False)</c> should return <c>0</c>.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="funct_ex_speedingq_editor">
-            <input>
+            <code>
 def caught_speeding(speed, is_birthday):
 
 ====
@@ -405,7 +405,7 @@ class myTests(TestCaseGui):
         self.assertEqual(caught_speeding(90, False), 2, "caught_speeding(90, False)")
 
 myTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -418,7 +418,7 @@ myTests().main()
                             If it is your birthday, your speed can be 5 higher in all cases. For example, caught_speeding(60,False) should return 0.
 
     
-    <program xml:id="funct_ex_speedinga_editor" language="python"><input>
+    <program xml:id="funct_ex_speedinga_editor" language="python"><code>
 def caught_speeding(speed, is_birthday):
     if is_birthday:
         if speed &lt;= 65:
@@ -434,7 +434,7 @@ def caught_speeding(speed, is_birthday):
             return 1
         else:
             return 2
-        </input></program>
+        </code></program>
                     </solution>
         </exercise>
 
@@ -446,7 +446,7 @@ def caught_speeding(speed, is_birthday):
                     <c>'too low'</c>, <c>check_guess(7, 7)</c> returns <c>'correct'</c>, and <c>check_guess(9, 7)</c> returns <c>'too high'</c>.</p>
           </statement>
           <program xml:id="funct_check_guess_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 def check_guess(guess, target):
 
 ====
@@ -465,7 +465,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -479,7 +479,7 @@ myTests().main()
                             otherwise return <c>"7:00"</c>. For example, <c>alarm_clock(1, False)</c> should return <c>'7:00'</c>.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="funct_ex_alarmq_editor">
-            <input>
+            <code>
 def alarm_clock(day, vacation):
     # your code here
 
@@ -497,7 +497,7 @@ class myTests(TestCaseGui):
         self.assertEqual(alarm_clock(1, True),'10:00',"alarm_clock(1, True)")
 
 myTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -511,7 +511,7 @@ myTests().main()
                             otherwise return "7:00". For example, alarm_clock(1, False) should return '7:00'.
 
     
-    <program xml:id="funct_ex_alarma_editor" language="python"><input>
+    <program xml:id="funct_ex_alarma_editor" language="python"><code>
 def alarm_clock(day, vacation):
     if vacation:
         if (day == 0 or day == 6):
@@ -523,7 +523,7 @@ def alarm_clock(day, vacation):
             return '10:00'
         else:
             return '7:00'
-        </input></program>
+        </code></program>
                     </solution>
         </exercise>
 

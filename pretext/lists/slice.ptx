@@ -17,23 +17,23 @@
 <idx><h>Update</h><h>Slice</h></idx>
   <p>The slice operator also works on lists:</p>
   <program xml:id="listSlice" interactive="activecode" language="python">
-    <input>
+    <code>
 t = ['a', 'b', 'c', 'd', 'e', 'f']
 print(t[1:3])
 
 print(t[:4])
 
 print(t[3:])
-        </input>
+        </code>
   </program>
   <p>If you omit the first index, the slice starts at the beginning. If you
             omit the second, the slice goes to the end. So if you omit both, the
             slice is a copy of the whole list.</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; t[:]
 ['a', 'b', 'c', 'd', 'e', 'f']
-</input>
+</code>
   </program>
   <exercise label="listSlice_MC_4">
     <statement>
@@ -106,11 +106,11 @@ print(alist[:])</pre>
   <p>A slice operator on the left side of an assignment can update multiple
             elements:</p>
   <program xml:id="listSliceLeft" interactive="activecode" language="python">
-    <input>
+    <code>
 t = ['a', 'b', 'c', 'd', 'e', 'f']
 t[1:3] = ['x', 'y']
 print(t)
-        </input>
+        </code>
   </program>
   <exercise label="listSlice_MC_len">
     <statement>

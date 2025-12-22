@@ -6,7 +6,7 @@
       <p>Fix line 2 so that it prints <q>Hi</q> instead of <q>hi</q>.</p>
     </statement>
     <program interactive="activecode" language="python" xml:id="str-ex-hiq_editor">
-      <input>
+      <code>
 s1 = "hi"
 s1.capitalize()
 print(s1)
@@ -19,7 +19,7 @@ class myTests(TestCaseGui):
         self.assertEqual(s1,"Hi")
 
 myTests().main()
-        </input>
+        </code>
     </program>
     <solution>
                 The capitalize() method returns a new string; it doesn't modify the original because strings are immutable. As a result, you need to assign the value of s1.capitalize() to s1.
@@ -29,11 +29,11 @@ myTests().main()
                 Fix line 2 so that it prints <q>Hi</q> instead of <q>hi</q>.
 
     
-    <program xml:id="str-ex-hiA_editor" language="python"><input>
+    <program xml:id="str-ex-hiA_editor" language="python"><code>
 s1 = "hi"
 s1 = s1.capitalize()
 print(s1)
-        </input></program>
+        </code></program>
 
             
                 <p>The <c>capitalize()</c> method returns a new string; it doesn't modify the original because strings are immutable. As a result, you need to assign the value of s1.capitalize() to s1.</p>
@@ -52,9 +52,9 @@ print(s1)
                     and print it. It should print <q>The length is 17</q>.</p>
     </statement>
     <program interactive="activecode" language="python" xml:id="str-ex-eggsq_editor">
-      <input>
+      <code>
 
-        </input>
+        </code>
     </program>
     <solution>
                 You can use the len() method to find the length of a string.
@@ -65,10 +65,10 @@ print(s1)
                     and print it. It should print <q>The length is 17</q>.
 
     
-    <program xml:id="str-ex-eggsa_editor" language="python"><input>
+    <program xml:id="str-ex-eggsa_editor" language="python"><code>
 sentence = 'I like green eggs'
 print('The length is ' + str(len(sentence)))
-        </input></program>
+        </code></program>
 
             
                 <p>You can use the <c>len()</c> method to find the length of a string.</p>
@@ -88,7 +88,7 @@ print('The length is ' + str(len(sentence)))
                     and then use the <c>float</c> function to convert the extracted string into a floating point number called <c>num</c>.</p>
     </statement>
     <program interactive="activecode" language="python" xml:id="str-ex-floatq_editor">
-      <input>
+      <code>
 string = "X-DSPAM-Confidence: 0.8475"
 
 
@@ -100,7 +100,7 @@ class myTests(TestCaseGui):
         self.assertEqual(num,0.8475)
 
 myTests().main()
-        </input>
+        </code>
     </program>
     <solution>
                 The float() function ignores whitespace, so you can begin the slice at the space character after the colon or at the 0 &#x2013; your choice!
@@ -112,12 +112,12 @@ myTests().main()
                     and then use the float function to convert the extracted string into a floating point number called num.
 
     
-    <program xml:id="str-ex-floatA_editor" language="python"><input>
+    <program xml:id="str-ex-floatA_editor" language="python"><code>
 string = "X-DSPAM-Confidence: 0.8475"
 colonpos = string.find(':')
 digit = string[colonpos + 1:]
 num = float(digit)
-        </input></program>
+        </code></program>
 
             
                 <p>The <c>float()</c> function ignores whitespace, so you can begin the slice at the space character after the colon or at the 0 &#x2013; your choice!</p>
@@ -136,7 +136,7 @@ num = float(digit)
       <p>Write a function <c>numDigits</c> that will return the number of digits in an integer <c>n</c>.</p>
     </statement>
     <program interactive="activecode" language="python" xml:id="str-ex-digitsq_editor">
-      <input>
+      <code>
 def numDigits(n):
     # your code here
 
@@ -153,7 +153,7 @@ class myTests(TestCaseGui):
         self.assertEqual(numDigits(444),3,"Tested numDigits on input of 444")
 
 myTests().main()
-        </input>
+        </code>
     </program>
     <solution>
                 Convert the integer to a string, then use the len() method.
@@ -163,7 +163,7 @@ myTests().main()
                 Write a function numDigits that will return the number of digits in an integer n.
 
     
-    <program xml:id="str_ex-digitsa_editor" language="python"><input>
+    <program xml:id="str_ex-digitsa_editor" language="python"><code>
 def numDigits(n):
     n_str = str(n)
     return len(n_str)
@@ -172,7 +172,7 @@ def numDigits(n):
 print(numDigits(50))
 print(numDigits(20000))
 print(numDigits(1))
-        </input></program>
+        </code></program>
 
             
                 <p>Convert the integer to a string, then use the <c>len()</c> method.</p>
@@ -192,9 +192,9 @@ print(numDigits(1))
                     prints the first letter of their name in lowercase.</p>
     </statement>
     <program interactive="activecode" language="python" xml:id="str-ex-nameInputq_editor">
-      <input>
+      <code>
 
-        </input>
+        </code>
     </program>
     <solution>
                 Use the input() function to get the user's input, then use indexing and the lower() method to print the first letter of their name in lowercase.
@@ -205,13 +205,13 @@ print(numDigits(1))
                     prints the first letter of their name in lowercase.
 
     
-    <program xml:id="str-ex-nameInputa_editor" language="python"><input>
+    <program xml:id="str-ex-nameInputa_editor" language="python"><code>
 prompt = "What is your name?"
 name = input(prompt)
 first = name[0]
 lowerFirst = first.lower()
 print(lowerFirst)
-        </input></program>
+        </code></program>
 
             
                 <p>Use the <c>input()</c> function to get the user's input, then use indexing and the <c>lower()</c> method to print the first letter of their name in lowercase.</p>

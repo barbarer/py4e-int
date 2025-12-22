@@ -5,14 +5,14 @@
     <statement>
       <p>Q-1: What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 s = 'pirate ship'
 i = 0
 while(len(s) &gt; i ):
     s = s[i:]
     i = i + 1
     print (s , i )
-</input>
+</code>
       </program>
       <pre>A.
 pirate ship 1
@@ -134,14 +134,14 @@ p 11</pre>
     <statement>
       <p>Q-3:</p>
       <program language="python">
-        <input>
+        <code>
 What is printed by the following code? (Output is on one line to save space.)
 
 x = 6
 while x &gt; 4:
   print(x)
   x = x - 1
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -191,14 +191,14 @@ while x &gt; 4:
     <statement>
       <p>Q-4:</p>
       <program language="python">
-        <input>
+        <code>
 What is printed by the following code? (Output is on one line to save space.)
 
 x = 6
 while x &gt; 4:
   x = x - 1
   print(x)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -248,14 +248,14 @@ while x &gt; 4:
     <statement>
       <p>Q-5:</p>
       <program language="python">
-        <input>
+        <code>
 Which of the following passwords stops the loop?
 
 valid = False
 while not valid:
   s = input ("Enter a password: ")
   valid = len(s) == 5 and s[:2] == 'xy'
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -305,13 +305,13 @@ while not valid:
     <statement>
       <p>Q-6: A valid password is one that is length 5 and starts with xy. Such passwords should get us out of the loop. Which of these does this?</p>
       <program language="python">
-        <input>
+        <code>
 A.
 while True:
     s = input ("Enter a password: ")
     if len(s) == 5 and s[:2] == 'xy':
         break
-</input>
+</code>
       </program>
       <pre>B.
 s = input ("Enter a password: ")
@@ -357,7 +357,7 @@ while len(s) == 5 and s[:2] == 'xy':
     <statement>
       <p>Q-7:</p>
       <program language="python">
-        <input>
+        <code>
 What is the output of this code? (Output is on one line here to save space.)
 
 n = 3
@@ -366,7 +366,7 @@ while n &gt; 0:
         n = -99
     print(n)
     n = n + 1
-</input>
+</code>
       </program>
     </statement>
     <choices>

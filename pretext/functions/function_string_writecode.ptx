@@ -8,7 +8,7 @@
                             <c>start_a('apple')</c> should return <c>True</c>.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="funct-strings-writecode1q_editor">
-            <input>
+            <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -22,7 +22,7 @@ class myTests(TestCaseGui):
         self.assertEqual(start_a('1abc'),False,"start_a('1abc')")
 
 myTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -33,10 +33,10 @@ myTests().main()
                             start_a('apple') should return True.
 
     
-    <program xml:id="funct-strings-writecode1a_editor" language="python"><input>
+    <program xml:id="funct-strings-writecode1a_editor" language="python"><code>
 def start_a(string):
     return string.startswith('a')
-        </input></program>
+        </code></program>
                     </solution>
                     
         </exercise>
@@ -49,7 +49,7 @@ def start_a(string):
                     For example, <c>square_length(36)</c> should return <c>"A square with an area of 36 square feet has a side length of 6.0 feet."</c>.</p>
           </statement>
           <program xml:id="funct-strings-writecode2_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 import math
 
 ====
@@ -62,7 +62,7 @@ class myTests(TestCaseGui):
         self.assertEqual(square_length(0),"A square with an area of 0 square feet has a side length of 0.0 feet.","square_length(0)")
 
 myTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -75,7 +75,7 @@ myTests().main()
                             (Note: Assume both <c>sentence1</c> and <c>sentence2</c> are simple and complete sentences with proper grammar.)</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="funct-strings-writecode3q_editor">
-            <input>
+            <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -87,7 +87,7 @@ class myTests(TestCaseGui):
         self.assertEqual(use_semicolon('Dinner was great.', "How was yours?"),"Dinner was great; how was yours?","use_semicolon('Dinner was great.', 'How was yours?')")
 
 myTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -100,10 +100,10 @@ myTests().main()
                             (Note: Assume both sentence1 and sentence2 are simple and complete sentences with proper grammar.)
 
     
-    <program xml:id="funct-strings-writecode3a_editor" language="python"><input>
+    <program xml:id="funct-strings-writecode3a_editor" language="python"><code>
 def use_semicolon(sentence1, sentence2):
     return sentence1[:-1] + '; ' + sentence2[0].lower() + sentence2[1:]
-        </input></program>
+        </code></program>
                     </solution>
         </exercise>
 
@@ -116,7 +116,7 @@ def use_semicolon(sentence1, sentence2):
                     (Note: Don't worry about accounting for strings that are 4 characters or less.)</p>
           </statement>
           <program xml:id="funct-strings-writecode4_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -130,7 +130,7 @@ class myTests(TestCaseGui):
         self.assertEqual(change('OCTOBER!'),"TobeOCr!","change('OCTOBER!')")
 
 myTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -141,7 +141,7 @@ myTests().main()
                             (Note: Don't worry about accounting for strings that don't have a lowercase &#x2018;a'.)</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="funct-strings-writecode5q_editor">
-            <input>
+            <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -158,7 +158,7 @@ class myTests(TestCaseGui):
         self.assertEqual(first_a_gone('bazaar'),"bzaar","first_a_gone('bazaar')")
 
 myTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -169,11 +169,11 @@ myTests().main()
                             (Note: Don't worry about accounting for strings that don't have a lowercase &#x2018;a'.)
 
     
-    <program xml:id="funct-strings-writecode5a_editor" language="python"><input>
+    <program xml:id="funct-strings-writecode5a_editor" language="python"><code>
 def first_a_gone(string):
     capture_a = string.find('a')
     return string[:capture_a] + string[capture_a + 1:]
-        </input></program>
+        </code></program>
                     </solution>
                     
         </exercise>

@@ -22,14 +22,14 @@
             condition determines which one gets executed. The syntax looks like
             this:</p>
   <program xml:id="cndtnlMod" interactive="codelens" language="python">
-    <input>
+    <code>
 x = 8
 if x % 2 == 0 :
     print('x is even')
 else :
     print('x is odd')
 print('All done.')
-    </input>
+    </code>
   </program>
   <p>If the remainder when <c>x</c> is divided by 2 is 0, then we know
             that <c>x</c> is even, and the program displays a message to that
@@ -48,12 +48,12 @@ print('All done.')
     <statement>
       <p>Q-2: What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 if 4 + 5 == 10:
     print("WEIRD")
 else:
     print("GREAT")
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -96,12 +96,12 @@ else:
     <statement>
       <p>Q-3: What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 x = -10
 if x &lt; 0:
     print("The negative number ",  x, " is not valid here.")
 print("This is always printed")
-</input>
+</code>
       </program>
       <pre>a.
 This is always printed
@@ -153,7 +153,7 @@ The negative number -10 is not valid here</pre>
     <statement>
       <p>Q-4: Will the following code cause an error?</p>
       <program language="python">
-        <input>
+        <code>
 x = -10
 if x &lt; 0:
     print("The negative number ",  x, " is not valid here.")
@@ -161,7 +161,7 @@ else:
     print(x, " is a positive number")
 else:
     print("This is always printed")
-</input>
+</code>
       </program>
     </statement>
     <choices>

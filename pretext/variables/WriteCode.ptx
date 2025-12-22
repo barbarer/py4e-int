@@ -7,11 +7,11 @@
                             without errors. It will print, <q>Her name is Molly and her favorite food is tuna</q>.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="var-wc-syntax_editor">
-            <input>
+            <code>
 food = "tuna'
 name = 'Molly'
 print("Her name is " + name +  and her favorite food is "  food + ".")
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -21,7 +21,7 @@ print("Her name is " + name +  and her favorite food is "  food + ".")
                             without errors. It will print, <q>Her name is Molly and her favorite food is tuna</q>.
 
     
-    <program xml:id="var-wc-syntaxA_editor"  interactive="activecode" language="python"><input>
+    <program xml:id="var-wc-syntaxA_editor"  interactive="activecode" language="python"><code>
 # Each set of quotes needs to be matching
 food = 'tuna'
 name = 'Molly'
@@ -30,12 +30,12 @@ name = 'Molly'
 # Include spaces before and after where variables are printed
 # Add + between strings
 print("Her name is " + name + " and her favorite food is " + food + ".")
-        </input></program>
+        </code></program>
 
                     
 <!--
 <exercise label="var-wc-syntaxA"><statement><p>There are 3 syntax errors in the following code. Fix it to print correctly
-                            without errors. It will print, <q>Her name is Molly and her favorite food is tuna</q>.</p></statement><program xml:id="var-wc-syntaxA_editor" interactive="activecode" language="python"><input>
+                            without errors. It will print, <q>Her name is Molly and her favorite food is tuna</q>.</p></statement><program xml:id="var-wc-syntaxA_editor" interactive="activecode" language="python"><code>
 # Each set of quotes needs to be matching
 food = 'tuna'
 name = 'Molly'
@@ -44,7 +44,7 @@ name = 'Molly'
 # Include spaces before and after where variables are printed
 # Add + between strings
 print("Her name is " + name + " and her favorite food is " + food + ".")
-    </input></program></exercise>-->
+    </code></program></exercise>-->
                     </solution>
         </exercise>
 
@@ -54,7 +54,7 @@ print("Her name is " + name + " and her favorite food is " + food + ".")
                     Modify the program below to calculate the total cost of 4 apples and 3 pears</p>
           </statement>
           <program xml:id="var-wc-fruitq_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 apples = 4
 pears = 3
 totalCost =
@@ -68,7 +68,7 @@ class myTests(TestCaseGui):
         self.assertAlmostEqual(totalCost,3.55, 2, "totalCost should equal 3.55", 0.2)
 
 myTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -79,9 +79,9 @@ myTests().main()
                             one line using <c>print</c>.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="var-wc-rhymeq_editor">
-            <input>
+            <code>
 
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -92,7 +92,7 @@ myTests().main()
                             one line using print.
 
     
-    <program xml:id="var-wc-rhymeA_editor" language="python"><input>
+    <program xml:id="var-wc-rhymeA_editor" language="python"><code>
 # Set each word to its own variable
 word1 = "twinkle"
 word2 = "little"
@@ -104,13 +104,13 @@ print(word1, word1, word2, word3)
 
 #another option is
 #print(word1 + " " + word1 + " " + word2 + " " + word3)
-        </input></program>
+        </code></program>
 
                     
 
 <!--<exercise label="var-wc-rhymeA"><statement><p>Take the phrase: <term>twinkle twinkle little star</term>.
                             Store each word in a separate variable, then print out the sentence on
-                            one line using <c>print</c>.</p></statement><program xml:id="var-wc-rhymeA_editor" interactive="activecode" language="python"><input>
+                            one line using <c>print</c>.</p></statement><program xml:id="var-wc-rhymeA_editor" interactive="activecode" language="python"><code>
 # Set each word to its own variable
 word1 = "twinkle"
 word2 = "little"
@@ -122,7 +122,7 @@ print(word1, word1, word2, word3)
 
 #another option is
 #print(word1 + " " + word1 + " " + word2 + " " + word3)
-    </input></program></exercise>-->
+    </code></program></exercise>-->
                     </solution>
         </exercise>
 
@@ -131,7 +131,7 @@ print(word1, word1, word2, word3)
             <p>Add parentheses to the following code so that the total equals 40.</p>
           </statement>
           <program xml:id="var-wc-order_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 total = 7 + 3 * 6 - 2
 print(total)
 
@@ -143,7 +143,7 @@ class myTests(TestCaseGui):
         self.assertEqual(total,40)
 
 myTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -157,7 +157,7 @@ myTests().main()
                             <em>Using the <c>int()</c> function and modulus operator <c>%</c> could come in handy!</em></p>
           </statement>
           <program interactive="activecode" language="python" xml:id="var-wc-timeq_editor">
-            <input>
+            <code>
 
 current_time =
 waiting_time =
@@ -166,7 +166,7 @@ waiting_time =
 hours =
 
 print()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -180,7 +180,7 @@ print()
                             Using the ``int()`` function and modulus operator ``%`` could come in handy!
 
     
-    <program xml:id="var-wc-timeA_editor" language="python"><input>
+    <program xml:id="var-wc-timeA_editor" language="python"><code>
 
 #prompt the user for the current time
 current_time_string = input("What is the current time (in hours)?")
@@ -199,7 +199,7 @@ timeofday = hours % 24
 
 #print the time of day that the alarm will go off
 print(timeofday)
-        </input></program>
+        </code></program>
 
                     
 <!--
@@ -208,7 +208,7 @@ print(timeofday)
                             Write a Python program to solve the general version of the above problem. Ask the user
                             for the time now (in hours), and then ask for the number of hours to wait for the alarm.
                             Your program should output what the time will be on the clock when the alarm goes off.
-                            <em>Using the ``int()`` function and modulus operator ``%`` could come in handy!</em></p></statement><program xml:id="var-wc-timeA_editor" interactive="activecode" language="python"><input>
+                            <em>Using the ``int()`` function and modulus operator ``%`` could come in handy!</em></p></statement><program xml:id="var-wc-timeA_editor" interactive="activecode" language="python"><code>
 
 #prompt the user for the current time
 current_time_string = input("What is the current time (in hours)?")
@@ -227,7 +227,7 @@ timeofday = hours % 24
 
 #print the time of day that the alarm will go off
 print(timeofday)
-    </input></program></exercise>-->
+    </code></program></exercise>-->
                     </solution>
         </exercise>
 
@@ -240,7 +240,7 @@ print(timeofday)
                     Assign the result of that expression to <c>forAndy</c>.</p>
           </statement>
           <program xml:id="var-wc-dog_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 
 
 
@@ -252,7 +252,7 @@ class myTests(TestCaseGui):
         self.assertEqual(forAndy,3)
 
 myTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -262,9 +262,9 @@ myTests().main()
                             Reminder: there are 12 inches in a foot.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="var-wc-feetq_editor">
-            <input>
+            <code>
 
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -274,7 +274,7 @@ myTests().main()
                             Reminder: there are 12 inches in a foot.
 
     
-    <program xml:id="var-wc-feetA_editor" language="python"><input>
+    <program xml:id="var-wc-feetA_editor" language="python"><code>
 
 #prompt the user for the amount of inches they would like to convert
 inches = input("How many inches would you like to convert?")
@@ -287,12 +287,12 @@ feet = inches_int / 12
 
 #print the amount of feet
 print(feet)
-        </input></program>
+        </code></program>
 
                     
 <!--
 <exercise label="var-wc-feetA"><statement><p>Write a program that will convert inches to feet from user input.
-                            Reminder: there are 12 inches in a foot.</p></statement><program xml:id="var-wc-feetA_editor" interactive="activecode" language="python"><input>
+                            Reminder: there are 12 inches in a foot.</p></statement><program xml:id="var-wc-feetA_editor" interactive="activecode" language="python"><code>
 
 #prompt the user for the amount of inches they would like to convert
 inches = input("How many inches would you like to convert?")
@@ -305,7 +305,7 @@ feet = inches_int / 12
 
 #print the amount of feet
 print(feet)
-    </input></program></exercise>-->
+    </code></program></exercise>-->
                     </solution>
         </exercise>
 
@@ -315,9 +315,9 @@ print(feet)
                     Reminder: there are 12 inches in a foot.</p>
           </statement>
           <program xml:id="var-wc-inch_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -326,13 +326,13 @@ print(feet)
             <p>Combine lines 4 and 5 in the code below to print: <q>270 is 4.0 hours and 30 minutes.</q>.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="var-wc-combine_editor">
-            <input>
+            <code>
 totalMinutes = 270
 numMinutes = totalMinutes % 60
 numHours = (totalMinutes - numMinutes) / 60
 print(numHours)
 print(numMinutes)
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -341,23 +341,23 @@ print(numMinutes)
                         Combine lines 4 and 5 in the code below to print: <q>270 is 4.0 hours and 30 minutes.</q>.
 
     
-    <program xml:id="var-wc-combineA_editor" language="python"><input>
+    <program xml:id="var-wc-combineA_editor" language="python"><code>
 totalMinutes = 270
 numMinutes = totalMinutes % 60
 numHours = (totalMinutes - numMinutes) / 60
 # Use + and correctly spaced " " to write the variables out together
 print(str(totalMinutes) + " is " + str(numHours) + " hours and " + str(numMinutes) + " minutes.")
-        </input></program>
+        </code></program>
 
                     
 <!--
-<exercise label="var-wc-combineA"><statement><p>Combine lines 4 and 5 in the code below to print: <q>270 is 4.0 hours and 30 minutes.</q>.</p></statement><program xml:id="var-wc-combineA_editor" interactive="activecode" language="python"><input>
+<exercise label="var-wc-combineA"><statement><p>Combine lines 4 and 5 in the code below to print: <q>270 is 4.0 hours and 30 minutes.</q>.</p></statement><program xml:id="var-wc-combineA_editor" interactive="activecode" language="python"><code>
 totalMinutes = 270
 numMinutes = totalMinutes % 60
 numHours = (totalMinutes - numMinutes) / 60
 # Use + and correctly spaced " " to write the variables out together
 print(str(totalMinutes) + " is " + str(numHours) + " hours and " + str(numMinutes) + " minutes.")
-    </input></program></exercise>-->
+    </code></program></exercise>-->
                     </solution>
         </exercise>
 
@@ -367,9 +367,9 @@ print(str(totalMinutes) + " is " + str(numHours) + " hours and " + str(numMinute
                     function and output a mad lib (which will use the input to tell a silly story).</p>
           </statement>
           <program xml:id="var-wc-madlibs_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 
-        </input>
+        </code>
           </program>
         </exercise>
 </section>

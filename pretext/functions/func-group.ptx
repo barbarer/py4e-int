@@ -115,7 +115,7 @@
         <p>Run the code below to see what it prints and then use it to answer the following questions.</p>
       </statement>
       <program xml:id="func_ac_pogil_print_message_v2_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def test(a, b = 2):
     print("Welcome")
@@ -137,7 +137,7 @@ def main():
 
 # function call
 main()
-        </input>
+        </code>
       </program>
     </exercise>
     <note>
@@ -296,28 +296,28 @@ main()
       <feedback>
         <p>Read the chapter on functions and try again.</p>
       </feedback>
-      <matches>
-        <match order="1">
+      <cardsort>
+        <match>
           <premise>function definition</premise>
           <response>All of the code that tells the program what to do when the function is executed.  It includes the header and body.</response>
         </match>
-        <match order="2">
+        <match>
           <premise>function header</premise>
           <response>The first line of a function definition</response>
         </match>
-        <match order="3">
+        <match>
           <premise>function body</premise>
           <response>All of the lines in the function after the function header</response>
         </match>
-        <match order="4">
+        <match>
           <premise>function call</premise>
           <response>The name of the function followed by an argument list in ().</response>
         </match>
-        <match order="5">
+        <match>
           <premise>function name</premise>
           <response>Follows the def keyword and is before the list of arguments in ().</response>
         </match>
-      </matches>
+      </cardsort>
     </exercise>
   </subsection>
   <subsection xml:id="functions_writing-function-calls">
@@ -327,7 +327,7 @@ main()
         <p>Modify the code below to print the last two lines twice by only adding one line.  That line can't call the print function.</p>
       </statement>
       <program xml:id="funct_ac_pogil_add_line_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def print_message():
     print("Welcome to Python.")
@@ -342,7 +342,7 @@ def main():
 
 # function call
 main()
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="funct_ac_pogil_add_function_call">
@@ -350,7 +350,7 @@ main()
         <p>Modify the code below to print <q>Hello Students</q> by adding one line and without calling the print function in that line.</p>
       </statement>
       <program xml:id="funct_ac_pogil_add_function_call_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def print_message():
     print("Hello Students")
@@ -360,7 +360,7 @@ def main():
 
     # function call
     print_message()
-        </input>
+        </code>
       </program>
     </exercise>
   </subsection>
@@ -372,7 +372,7 @@ def main():
         <p>Run the code below to see what happens when you try to call a function before it is defined.</p>
       </statement>
       <program xml:id="func_ac_pogil_print_message_main_first_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function call
 main()
 
@@ -387,7 +387,7 @@ def main():
 
     # function call
     print_message()
-        </input>
+        </code>
       </program>
     </exercise>
 <idx>function</idx>

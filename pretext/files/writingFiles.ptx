@@ -9,11 +9,11 @@
   <p>To write a file, you have to open it with mode <q>w</q> as a second
             parameter:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; fout = open('output.txt', 'w')
 &gt;&gt;&gt; print(fout)
 &lt;_io.TextIOWrapper name='output.txt' mode='w' encoding='cp1252'&gt;
-</input>
+</code>
   </program>
   <p>If the file already exists, opening it in write mode clears out the old
             data and starts fresh, so be careful! If the file doesn't exist, a new
@@ -22,11 +22,11 @@
             the file, returning the number of characters written. The default write
             mode is text for writing (and reading) strings.</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; line1 = "This here's the wattle,\n"
 &gt;&gt;&gt; fout.write(line1)
 24
-</input>
+</code>
   </program>
   <p>Again, the file object keeps track of where it is, so if you call
             <c>write</c> again, it adds the new data to the end.</p>
@@ -74,19 +74,19 @@
             The <c>print</c> statement automatically appends a newline, but
             the <c>write</c> method does not add the newline automatically.</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; line2 = 'the emblem of our land.\n'
 &gt;&gt;&gt; fout.write(line2)
 24
-</input>
+</code>
   </program>
   <p>When you are done writing, you have to close the file to make sure that
             the last bit of data is physically written to the disk so it will not be
             lost if the power goes off.</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; fout.close()
-</input>
+</code>
   </program>
   <p>We should close the files which we open for read as well, but we can be a
             little sloppy if we are only opening a few files since Python makes sure

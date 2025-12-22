@@ -121,16 +121,16 @@ conn.close()</pre>
     <feedback>
       <p>Read the section above to determine what a connection and cursor are used for.</p>
     </feedback>
-    <matches>
-      <match order="1">
+    <cardsort>
+      <match>
         <premise>Connection</premise>
         <response>Handles establishing communication with the database, which may be on another server.</response>
       </match>
-      <match order="2">
+      <match>
         <premise>Cursor</premise>
         <response>Handles executing commands on the database such as getting data from the database.</response>
       </match>
-    </matches>
+    </cardsort>
   </exercise>
   <p>Database commands are expressed in a special language that has been
             standardized across many different database vendors to allow us to learn
@@ -190,17 +190,17 @@ conn.close()</pre>
             deletes the table and all of its contents from the database (i.e., there
             is no <q>undo</q>).</p>
   <program language="python">
-    <input>
+    <code>
 cur.execute('DROP TABLE IF EXISTS Tracks ')
-</input>
+</code>
   </program>
   <p>The second command creates a table named <c>Tracks</c> with a text
             column named <c>title</c> and an integer column named
             <c>plays</c>.</p>
   <program language="python">
-    <input>
+    <code>
 cur.execute('CREATE TABLE Tracks (title TEXT, plays INTEGER)')
-</input>
+</code>
   </program>
   <p>Now that we have created a table named <c>Tracks</c>, we can put
             some data into that table using the SQL <c>INSERT</c> operation.

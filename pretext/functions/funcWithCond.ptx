@@ -68,7 +68,7 @@
         <p>Run this code to see what it prints.</p>
       </statement>
       <program xml:id="func_ac_pogil_return_temp_desc_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def get_temp_desc(temp):
     if temp &lt; 32:
@@ -87,7 +87,7 @@ def main():
 
 # function call
 main()
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="funct_fitb_pogil_exec_false">
@@ -167,7 +167,7 @@ main()
         <p>Modify the code in the main method below to test all possible return values from get_temp_desc.</p>
       </statement>
       <program xml:id="func_ac_pogil_return_temp_desc_v2_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def get_temp_desc(temp):
     if temp &lt; 32:
@@ -186,7 +186,7 @@ def main():
 
 # function call
 main()
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="funct_pogil_check-guess-Parsons-v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -244,7 +244,7 @@ main()
                 For example, <c>last_half("a")</c> returns <c>""</c>, <c>last_half("coal")</c> returns <c>"al"</c>, and <c>last_half("bye")</c> returns <c>ye</c>.</p>
       </statement>
       <program xml:id="funct_pogil_get_last_half_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 def last_half(str):
 
 ====
@@ -264,7 +264,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="funct_fitb_cond_predict_grade">
@@ -295,7 +295,7 @@ myTests().main()
                 than or equal 70, <c>D</c> if greater than or equal 60, and otherwise <c>E</c>.</p>
       </statement>
       <program xml:id="func_ac_fix_grade_code_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def get_grade(score):
     grade = None
@@ -315,7 +315,7 @@ def main():
     print(get_grade(95))
 
 main()
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="funct_fitb_cond_grade_num_tests">
@@ -463,7 +463,7 @@ main()
         <p>Modify this code to use a complex conditional instead.  It should still pass all tests. It should only take four lines of code or less.</p>
       </statement>
       <program xml:id="func_ac_or_complex_cond_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def either6(a,b):
     if a == 6:
@@ -484,7 +484,7 @@ class myTests(TestCaseGui):
         self.assertEqual(either6(3,-6),False, "either6(3,6)")
 
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="func_ac_and_complex_cond">
@@ -492,7 +492,7 @@ myTests().main()
         <p>Modify this code to use a complex conditional instead.  It should still pass all tests. It should only take four lines of code or less.</p>
       </statement>
       <program xml:id="func_ac_and_complex_cond_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def test(a):
     if a &gt; 0:
@@ -515,7 +515,7 @@ class myTests(TestCaseGui):
         self.assertEqual(test(9),True,"test(9)")
 
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="funct_pp_pogil_speeding-Parsons" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -588,7 +588,7 @@ myTests().main()
         <p>Write a function that given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, &#x2026;6=Sat, and a Boolean indicating if we are on vacation, return a string of the form <q>7:00</q> indicating when the alarm clock should ring. If you are on vacation then on weekends it should be <q>off</q> and weekdays <q>10:00</q>. Otherwise, on weekends it should be <q>10:00</q> and weekdays <q>7:00</q>.</p>
       </statement>
       <program xml:id="fuct_ac_pogil_alarm_clock_v2_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 def alarm_clock(day, vacation):
 
 ====
@@ -609,7 +609,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="func_pp_pogil_sq_play" numbered="yes" adaptive="yes" indentation="hide" language="python">

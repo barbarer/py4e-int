@@ -12,41 +12,41 @@
             the program stops and waits for the user to type something. When the user presses <c>Return</c> or
             <c>Enter</c>, the program resumes and <c>input</c> returns what the user typed as a string.</p>
   <program xml:id="var-ac-10-input" interactive="activecode" language="python">
-    <input>
+    <code>
 inp = input()
 print(inp)
-        </input>
+        </code>
   </program>
   <p>Before getting input from the user, it is a good idea to print a prompt
             telling the user what to input. You can pass a string to <c>input</c> to
             be displayed to the user before pausing for input:</p>
   <program xml:id="var-ac-11-print-name" interactive="activecode" language="python">
-    <input>
+    <code>
 name = input('What is your name?')
 print(name)
-        </input>
+        </code>
   </program>
   <p>If you expect the user to type an integer, you can try to convert the
             return value to <c>int</c> using the <c>int()</c> function:</p>
   <program xml:id="var-ac-11-swallow" interactive="activecode" language="python">
-    <input>
+    <code>
 prompt = 'What...is the airspeed velocity of an unladen swallow?'
 speed = input(prompt)
 print(int(speed))
 print(int(speed) + 5)
-        </input>
+        </code>
   </program>
   <p>But if the user types something other than a string of digits, you get
             an error:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; prompt = 'What...is the airspeed velocity of an unladen swallow?\n'
 &gt;&gt;&gt; speed = input(prompt)
 What...is the airspeed velocity of an unladen swallow?
 What do you mean, an African or a European swallow?
 &gt;&gt;&gt; int(speed)
 ValueError: invalid literal for int() with base 10:
-</input>
+</code>
   </program>
   <note>
     <p>If you are typing Python code in interpreter you might want to add a new line using <q>\n</q> as shown above.</p>
@@ -133,13 +133,13 @@ ValueError: invalid literal for int() with base 10:
   <p>One limitation in Python is that you can't add (concatenate) a number and a string. You
             must first convert the number to a string using the built-in <c>str</c> method.</p>
   <program xml:id="var-ac-12-birth-year-with-str" interactive="activecode" language="python">
-    <input>
+    <code>
 from datetime import datetime
 today = datetime.today()
 age_str = input('What is your age?\n')
 age = int(age_str)
 birth_year = today.year - age
 print("You were born in " + str(birth_year) + " or " + str(birth_year - 1))
-        </input>
+        </code>
   </program>
 </section>

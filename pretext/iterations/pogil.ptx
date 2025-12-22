@@ -51,12 +51,12 @@
         <p>Run this code to see what it prints.</p>
       </statement>
       <program xml:id="loops_ac_pogil_basicfor_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 print("hello")
 for x in [2, 7, 1]:
     print("the number is", x)
 print("goodbye")
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="loops_MC_pogil_indented">
@@ -160,20 +160,20 @@ print("goodbye")
       <feedback>
         <p>Keep trying!</p>
       </feedback>
-      <matches>
-        <match order="1">
+      <cardsort>
+        <match>
           <premise>1st time</premise>
           <response>x = 2</response>
         </match>
-        <match order="2">
+        <match>
           <premise>2nd time</premise>
           <response>x = 7</response>
         </match>
-        <match order="3">
+        <match>
           <premise>3rd time</premise>
           <response>x = 1</response>
         </match>
-      </matches>
+      </cardsort>
     </exercise>
     <exercise label="loops_dnd_pogil_modifiedlist">
       <statement>
@@ -182,24 +182,24 @@ print("goodbye")
       <feedback>
         <p>Keep trying!</p>
       </feedback>
-      <matches>
-        <match order="1">
+      <cardsort>
+        <match>
           <premise>[5, -7, 0]</premise>
           <response>3 times</response>
         </match>
-        <match order="2">
+        <match>
           <premise>[3, 2, 1, 0]</premise>
           <response>4 times</response>
         </match>
-        <match order="3">
+        <match>
           <premise>[4, 4]</premise>
           <response>2 times</response>
         </match>
-        <match order="4">
+        <match>
           <premise>[8]</premise>
           <response>1 time</response>
         </match>
-      </matches>
+      </cardsort>
     </exercise>
     <p>In general, the length of the list determines the number of times that the loop repeats.
                 The value of the variable <c>x</c> is selected from the list. Each time the loop runs, the
@@ -211,13 +211,13 @@ print("goodbye")
         <p>Run this code to see what it prints.</p>
       </statement>
       <program xml:id="loops_ac_pogil_assigninglist_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 print("hello")
 numbers = [2, 7, 1]
 for x in numbers:
     print("the number is", x)
 print("goodbye")
-        </input>
+        </code>
       </program>
     </exercise>
     <p>In addition, <c>for</c> loops can be used with strings:</p>
@@ -226,10 +226,10 @@ print("goodbye")
         <p>Run this code to see what it prints.</p>
       </statement>
       <program xml:id="loops_ac_pogil_string_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 for c in "Hi!":
     print(c)
-        </input>
+        </code>
       </program>
     </exercise>
     <p>With strings, a <c>for</c> statement iterates over each character in the string.
@@ -246,7 +246,7 @@ for c in "Hi!":
         <p>Run this code to see what it prints.</p>
       </statement>
       <program xml:id="loops_ac_pogil_output_range_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 print(type(range(5)))
 print(range(5))
 print(list(range(5)))
@@ -258,7 +258,7 @@ print(list(range(-3, 4)))
 print(list(range(4, 10, 2)))
 for i in range(5): #this line prints nothing
     print(i)
-        </input>
+        </code>
       </program>
     </exercise>
     <p>The first line of output describes the range as a function, whereas the second line
@@ -427,10 +427,10 @@ for i in range(5): #this line prints nothing
         <p>You can use the built-in function <c>chr</c> to convert integers to their corresponding Unicode characters.</p>
       </statement>
       <program xml:id="loops_ac_pogil_output_printatoz_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 for i in range(65, 91):
     print(chr(i))
-        </input>
+        </code>
       </program>
     </exercise>
   </subsection>
@@ -442,13 +442,13 @@ for i in range(65, 91):
         <p>Run this code to observe the behavior of a basic while loop and answer the questions below.</p>
       </statement>
       <program xml:id="loops_ac_pogil_output_while_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 i = 0
 while i &lt; 3:
     print(i)
     i = i + 1
 print("goodbye")
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="loops_mc_pogil_loopcondition">
@@ -629,7 +629,7 @@ print("goodbye")
         <p>Observe the behavior of this code to see how it answers the the three bullet points above.</p>
       </statement>
       <program xml:id="loops_ac_pogil_output_addn_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 def add(n):
     i = 0
     total = 0
@@ -639,7 +639,7 @@ def add(n):
     print(total)
 
 add(5)
-        </input>
+        </code>
       </program>
     </exercise>
     <p>Before the loop begins, the <c>i</c> variable, which counts how many

@@ -16,21 +16,21 @@
   <p>The most common way to traverse the elements of a list is with a
             <c>for</c> loop. The syntax is the same as for strings:</p>
   <program xml:id="listCheese" interactive="activecode" language="python">
-    <input>
+    <code>
 cheeses = ["Gouda", "Swiss", "Provolone", "Cheddar"]
 for cheese in cheeses:
     print(cheese)
-        </input>
+        </code>
   </program>
   <p>This works well if you only need to read the elements of the list. But
             if you want to write or update the elements, you need the indices. A
             common way to do that is to combine the functions <c>range</c> and
             <c>len</c>:</p>
   <program language="python">
-    <input>
+    <code>
 for i in range(len(numbers)):
     numbers[i] = numbers[i] * 2
-</input>
+</code>
   </program>
   <exercise label="listTrav_MC_iterate">
     <statement>
@@ -82,11 +82,11 @@ for ch in p:
             read the old value of the element and to assign the new value.</p>
   <p>A <c>for</c> loop over an empty list never executes the body:</p>
   <program xml:id="listEmptyLoop" interactive="activecode" language="python">
-    <input>
+    <code>
 empty = []
 for x in empty:
     print('This never happens.')
-        </input>
+        </code>
   </program>
   <exercise label="listTrav_MC_empty">
     <statement>
@@ -130,10 +130,10 @@ for x in empty:
   <p>Although a list can contain another list, the nested list still counts
             as a single element. Check out the length of this list:</p>
   <program xml:id="listNested2" interactive="activecode" language="python">
-    <input>
+    <code>
 bigList = ['spam', 1, ['Brie', 'Roquefort', 'Pol le Veq'], [1, 2, 3]]
 print(len(bigList))
-        </input>
+        </code>
   </program>
   <exercise label="listTrav_MC_nested">
     <statement>

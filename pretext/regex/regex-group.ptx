@@ -52,7 +52,7 @@
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="regex_methods_ex_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import re
 str = "The rain in Spain"
 
@@ -81,7 +81,7 @@ y = re.findall("ai", str)
 print(y)
 y = re.findall("blue", str)
 print(y)
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="regex_findall_return_type_fitb">
@@ -156,7 +156,7 @@ print(y)
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="regex_match_chars_ex_v2_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import re
 
 str1 = "ab abc abcc abcccc abbccc aabbcc"
@@ -178,7 +178,7 @@ print(res4)
 str5 = "ab abc abcc abcccc abbccc aabbcc"
 res5 = re.findall("abc{1,3}", str5)
 print(res5)
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="regex_quant_2_mc">
@@ -251,28 +251,28 @@ print(res5)
       <feedback>
         <p>Look at the code above.</p>
       </feedback>
-      <matches>
-        <match order="1">
+      <cardsort>
+        <match>
           <premise>?</premise>
           <response>Zero to one</response>
         </match>
-        <match order="2">
+        <match>
           <premise>*</premise>
           <response>Zero to many</response>
         </match>
-        <match order="3">
+        <match>
           <premise>+</premise>
           <response>One to many</response>
         </match>
-        <match order="4">
+        <match>
           <premise>{2}</premise>
           <response>Two</response>
         </match>
-        <match order="5">
+        <match>
           <premise>{1,3}</premise>
           <response>One, two, or three</response>
         </match>
-      </matches>
+      </cardsort>
     </exercise>
   </subsection>
   <subsection xml:id="regex_character-sets">
@@ -283,13 +283,13 @@ print(res5)
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="regex_char_sets_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import re
 
 str1 = "ben bean been ban bottom"
 res1 = re.findall("b[ea]n", str1)
 print(res1)
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="regex_char_sets_meaning">
@@ -340,7 +340,7 @@ print(res1)
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="regex_char_ranges-digits_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import re
 
 str1 = "832 3928.23 382.28378 5 92,000 32-928 +32 -32 ABC"
@@ -348,7 +348,7 @@ res1 = re.findall("[0-9.]+", str1)
 print(res1)
 res2 = re.findall("[^0-9.]+", str1)
 print(res1)
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="regex_char_range_digits">
@@ -437,7 +437,7 @@ print(res1)
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="regex_char_classes_v2_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import re
 
 str1 = "mat met m3t m!t m t mitten"
@@ -455,7 +455,7 @@ print(res3)
 str4 = "0013 23 093 000029 320 888"
 res4 = re.findall("0*\d\d", str4)
 print(res4)
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="regex_char_classes_dnd">
@@ -465,31 +465,31 @@ print(res4)
       <feedback>
         <p>Look at the code above.</p>
       </feedback>
-      <matches>
-        <match order="1">
+      <cardsort>
+        <match>
           <premise>.</premise>
           <response>Any single character other than a newline</response>
         </match>
-        <match order="2">
+        <match>
           <premise>\d</premise>
           <response>A digit (0-9)</response>
         </match>
-        <match order="3">
+        <match>
           <premise>\w</premise>
           <response>A word character which is alphanumeric plus underscore</response>
         </match>
-        <match order="4">
+        <match>
           <premise>\s</premise>
           <response>A whitespace character (including space, tab, and newline)</response>
         </match>
-      </matches>
+      </cardsort>
     </exercise>
     <exercise label="regex_char_classes_uppercase">
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="regex_char_classes_uppercase_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import re
 
 str1 = 'From: stephen.marquard@uct.ac.za Sat Jan walk@12  5 09:14:16 2008'
@@ -502,7 +502,7 @@ print(res2)
 
 res3 = re.findall("\D+", str2)
 print(res3)
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="regex_char_classes2_dnd">
@@ -512,20 +512,20 @@ print(res3)
       <feedback>
         <p>Look at the code above.</p>
       </feedback>
-      <matches>
-        <match order="1">
+      <cardsort>
+        <match>
           <premise>\W</premise>
           <response>Any non-word character (not alphanumeric or underscore)</response>
         </match>
-        <match order="2">
+        <match>
           <premise>\S</premise>
           <response>Any non-whitespace character (not space, tab, or newline)</response>
         </match>
-        <match order="3">
+        <match>
           <premise>\D</premise>
           <response>Any non-digit character (not 0-9).</response>
         </match>
-      </matches>
+      </cardsort>
     </exercise>
   </subsection>
   <subsection xml:id="regex_escaping-special-characters">
@@ -537,7 +537,7 @@ print(res3)
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="regex_escape_char_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import re
 
 str1 = "me. you? us. them. when!"
@@ -550,7 +550,7 @@ print(res2)
 str3 = "a + b and c + d"
 res3 = re.findall("\w \+ \w", str3)
 print(res3)
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="regex_num_matches_escape_v2_mc">
@@ -605,7 +605,7 @@ print(res)</pre>
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="regex_greedy_vs_not_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import re
 
 str1 = 'From: Using the : character'
@@ -614,7 +614,7 @@ print(res1)
 
 res2 = re.findall('F.+?:', str1)
 print(res2)
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="regex_not_greedy_char">

@@ -36,7 +36,7 @@
             return <c>"So happy 4 you!"</c>.</p>
     </statement>
     <program xml:id="str-mixed-emotion-ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -51,7 +51,7 @@ class myTests(TestCaseGui):
         self.assertEqual(mood("So glad"), "So glad 4 you!", 'mood("So glad")')
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="str-mixed-book" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -92,7 +92,7 @@ myTests().main()
             For example if <c>item</c> is <q>new book</q> and price is <c>12</c> the function should return <c>"My new book cost $12"</c>.</p>
     </statement>
     <program xml:id="str-mixed-book-ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -105,7 +105,7 @@ class myTests(TestCaseGui):
         self.assertEqual(item_purchase("backpack", "0"), "My backpack cost $0", 'item_purchase("backpack", "0")')
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="str-mixed-code" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -150,7 +150,7 @@ myTests().main()
             returned string should be <c>"Sam likes to code"</c>.  Make sure that <c>person</c> is capitalized and <c>thing</c> is lowercase.</p>
     </statement>
     <program xml:id="str-mixed-code-ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -163,7 +163,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="str-mixed-time" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -206,7 +206,7 @@ myTests().main()
             if <c>hours</c> was <c>3</c> and <c>minutes</c> was <c>13</c>, the returned string should be, <c>"It took us 193 minutes to get home"</c>.</p>
     </statement>
     <program xml:id="str-mixed-time-ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 
 ====
@@ -220,7 +220,7 @@ class myTests(TestCaseGui):
         self.assertEqual(time(1, 23), "It took us 83 minutes to get home", 'time(1, 23)')
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="str-mixed-feeling" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -264,7 +264,7 @@ myTests().main()
             <c>"My favorite food is pizza, but I don't like broccoli"</c>. Be sure to change <c>fave</c> and <c>least_fave</c> to lowercase.</p>
     </statement>
     <program xml:id="str-mixed-feeling-ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -276,7 +276,7 @@ class myTests(TestCaseGui):
         self.assertEqual(food("HAMBURGER", "caRrOts"), "My favorite food is hamburger, but I don't like carrots", 'food("HAMBURGER", "caRrOts")')
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="str-mixed-animal" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -314,7 +314,7 @@ myTests().main()
             be <c>"My sheepdog looks like a Muppet"</c>.</p>
     </statement>
     <program xml:id="str-mixed-animal-ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -326,7 +326,7 @@ class myTests(TestCaseGui):
         self.assertEqual(animal("c a t"), "My c a t looks like a Muppet", 'animal("c a t")')
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="str-mixed-add" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -365,7 +365,7 @@ myTests().main()
             <c>ans</c> return <c>"$30 + $13 + $56 = $99"</c>.</p>
     </statement>
     <program xml:id="str-mixed-add-ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 
 ====
@@ -380,7 +380,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="str-mixed-wizard" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -419,7 +419,7 @@ myTests().main()
             For example, if <c>var1</c> is <q>i am a </q> and <c>var2</c> is <q>CS wizard</q>, the function should return the string, <c>"I am a cs wizard"</c>.</p>
     </statement>
     <program xml:id="str-mixed-wizard-ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -432,7 +432,7 @@ class myTests(TestCaseGui):
         self.assertEqual(combine("I like", "bubbles"), "I like bubbles", 'combine("I like", "bubbles")')
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="str-mixed-colors" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -480,7 +480,7 @@ so is blue</c>.  Be sure to capitalize the first color and lowercase at second.<
 so is blue</c>.  Be sure to capitalize the first color and lowercase the second.</p>
     </statement>
     <program xml:id="str-mixed-colors-ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -495,7 +495,7 @@ class myTests(TestCaseGui):
         self.assertEqual(colors("blue", "RED"), "Blue is a primary color, and so is red", "colors('blue', 'RED')")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="str-mixed-dogs" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -533,7 +533,7 @@ me happier than anything else"</c>.</p>
 me happier than anything else"</c>.</p>
     </statement>
     <program xml:id="str-mixed-dogs-ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -545,7 +545,7 @@ class myTests(TestCaseGui):
         self.assertEqual(fave_animal("Horses"), "Petting Horses makes me happier than anything else", 'fave_animal("Horses")')
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
 </section>

@@ -44,7 +44,7 @@
     <statement>
       <p>Q-2: What does the following code block do?</p>
       <program language="python">
-        <input>
+        <code>
 from image import *
 img = Image('beach.jpg')
 pixels = img.getPixels()
@@ -52,7 +52,7 @@ for p in pixels:
     r = p.getRed()
     p.setGreen(r)
     img.updatePixel(p)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -180,7 +180,7 @@ for p in pixels:
     <statement>
       <p>Q-5: Which code block should you insert in the for loop below to correctly increase the blue by 180%?</p>
       <program language="python">
-        <input>
+        <code>
 from image import *
 
 img = Image("motorcycle.jpg")
@@ -191,38 +191,38 @@ for p in pixels:
     img.updatePixel(p)
 win = ImageWin(img.getWidth(), img.getHeight())
 img.draw(win)
-</input>
+</code>
       </program>
       <program language="python">
-        <input>
+        <code>
 I.
 
 r = p.getRed()
 p.setRed(r * 180)
-</input>
+</code>
       </program>
       <program language="python">
-        <input>
+        <code>
 II.
 
 b = p.getBlue()
 p.setBlue(b * 1.8)
-</input>
+</code>
       </program>
       <program language="python">
-        <input>
+        <code>
 III.
 
 b = p.getBlue()
 p.setBlue(b * 180)
-</input>
+</code>
       </program>
       <program language="python">
-        <input>
+        <code>
 IV.
 
 p.setBlue(b * 1.8)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -303,7 +303,7 @@ p.setBlue(b * 1.8)
     <statement>
       <p>Q-7: Which code block would allow you to copy the bottom half of the image onto the top half?</p>
       <program language="python">
-        <input>
+        <code>
 I.
 
 from image import *
@@ -321,10 +321,10 @@ for x in range(img.getWidth()):
 
 win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
-</input>
+</code>
       </program>
       <program language="python">
-        <input>
+        <code>
 II.
 
 from image import *
@@ -342,10 +342,10 @@ for x in range(halfway):
 
 win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
-</input>
+</code>
       </program>
       <program language="python">
-        <input>
+        <code>
 III.
 
 from image import *
@@ -364,10 +364,10 @@ for x in range(halfway_x):
 
 win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
-</input>
+</code>
       </program>
       <program language="python">
-        <input>
+        <code>
 IV.
 
 from image import *
@@ -385,7 +385,7 @@ for x in range(img.getWidth()):
 
 win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -466,7 +466,7 @@ img.draw(win)
     <statement>
       <p>Q-9: What happens when we run the following code?</p>
       <program language="python">
-        <input>
+        <code>
 from image import *
 img = Image("vangogh.jpg")
 
@@ -479,7 +479,7 @@ for x in range(img.getWidth()):
 
 win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
-</input>
+</code>
       </program>
     </statement>
     <choices>

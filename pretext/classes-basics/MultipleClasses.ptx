@@ -62,7 +62,7 @@
         <p>Run the code below to see what it prints.  You can also use the <q>Show in CodeLens</q> button to step through the code.</p>
       </statement>
       <program xml:id="mult_class_point_and_rectangle_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 class Point:
 
     def __init__(self, initX, initY):
@@ -102,7 +102,7 @@ print(r1.area())
 point3 = Point(-5,-10)
 r2 = Rectangle(point2, point3)
 print(r2.area())
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="mult_class_rectangle_object_methods">
@@ -320,7 +320,7 @@ print(r2.area())
         <p>Run the code below to see what it prints.  You can also use the <q>Show in CodeLens</q> button to step through the code.</p>
       </statement>
       <program xml:id="mult_classes_card_and_deck_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 class Card:
 
     suit_names = ["Clubs", "Diamonds", "Hearts", "Spades"]
@@ -354,7 +354,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-        </input>
+        </code>
       </program>
     </exercise>
     <p>Notice that we have defined a list of <c>suit_names</c> and <c>rank_names</c> in the <c>Card</c> class.  These will be created in the class <c>Card</c> and not in each object of the class <c>Card</c>.  They are called <c>class attributes</c>.
@@ -493,7 +493,7 @@ if __name__ == "__main__":
         <p>Given the <c>Airport</c> class shown below and the class diagram shown above, write the <c>Flight</c> class with an <c>__init__</c> method that takes the object attributes in order from top to bottom in the class diagram (number, departure_date, departure_time, departure_airport, and arrival_airport).</p>
       </statement>
       <program xml:id="classes_flight_and_airport_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 class Airport:
 
     def __init__(self, name, code):
@@ -518,7 +518,7 @@ class myTests(TestCaseGui):
         self.assertEqual(f1.arrival_airport, a2, "test of f1.arrival_airport")
 
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="classes_order_and_item">
@@ -526,7 +526,7 @@ myTests().main()
         <p>Given the <c>Item</c>  and <c>Order</c> classes shown below, write the <c>get_total</c> method in the <c>Order</c> class that returns a total of all of the prices of the items in the order.</p>
       </statement>
       <program xml:id="classes_order_and_item_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 class Item:
 
     def __init__(self, name, price):
@@ -559,7 +559,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="mult_class_relationship_between_classes_sa">

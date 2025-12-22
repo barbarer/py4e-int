@@ -49,7 +49,7 @@
             <c>((-1, -6.2), (-2, -7.2), (-3, -8.2), (0, -5.2), (5, -0.2))</c>.</p>
     </statement>
     <program xml:id="Functions_Tups_Dictionaries_MixedUpCode_1_v2_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -62,7 +62,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Functions_Tups_Dictionaries_MixedUpCode_2" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -119,7 +119,7 @@ myTests().main()
             should return <c>['c']</c>.</p>
     </statement>
     <program xml:id="Functions_Tups_Dictionaries_MixedUpCode_2_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -133,7 +133,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Functions_Tups_Dictionaries_MixedUpCode_3" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -191,7 +191,7 @@ myTests().main()
             <c>dict_to_tup_of_tuples({'a':1, 'b': 2, 'c':7})</c> would return <c>(('a', 1), ('b', 2), ('c', 7))</c>.</p>
     </statement>
     <program xml:id="Functions_Tups_Dictionaries_MixedUpCode_3_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -203,7 +203,7 @@ class myTests(TestCaseGui):
         self.assertEqual(dict_to_tup_of_tuples({2:1, -4: 2, 3.2:7}),((2, 1), (-4, 2), (3.2, 7)),"dict_to_tup_of_tuples({2:1, -4: 2, 3.2:7})")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Functions_Tups_Dictionaries_MixedUpCode_4" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -250,7 +250,7 @@ myTests().main()
             <c>{1: 'a', 2: 'b', 7: 'c'}</c>.</p>
     </statement>
     <program xml:id="Functions_Tups_Dictionaries_MixedUpCode_4_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -262,7 +262,7 @@ class myTests(TestCaseGui):
         self.assertEqual(swap_keys_values({2:1, -4: 2, 3.2:7}),{1: 2, 2: -4, 7: 3.2},"swap_keys_values({2:1, -4: 2, 3.2:7})")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Functions_Tups_Dictionaries_MixedUpCode_5" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -306,7 +306,7 @@ myTests().main()
             <c>common_value_in_tups((1,2,3),(6,4,5))</c> should return <c>False</c>.</p>
     </statement>
     <program xml:id="Functions_Tups_Dictionaries_MixedUpCode_5_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -319,7 +319,7 @@ class myTests(TestCaseGui):
         self.assertEqual(common_value_in_tups((1,2,3.2),(3.2,4,5)),True,"common_value_in_tups((1,2,3.2),(3.2,4,5))")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
 </section>
