@@ -12,11 +12,11 @@
   <p>If <c>a</c> refers to an object and you assign <c>b = a</c>,
             then both variables refer to the same object:</p>
   <program xml:id="listAliasing" interactive="codelens" language="python">
-    <input>
+    <code>
 a = [1, 2, 3]
 b = a
 print(b is a)
-    </input>
+    </code>
   </program>
   <p>The association of a variable with an object is called a
             <em>reference</em>. In this example, there are two references to
@@ -26,22 +26,22 @@ print(b is a)
   <p>If the aliased object is mutable, changes made with one alias affect the
             other:</p>
   <program xml:id="listChange" interactive="codelens" language="python">
-    <input>
+    <code>
 a = [1, 2, 3]
 b = a
 b[0] = 17
 print(a)
-    </input>
+    </code>
   </program>
   <p>Although this behavior can be useful, it is error-prone. In general, it
             is safer to avoid aliasing when you are working with mutable objects.</p>
   <p>For immutable objects like strings, aliasing is not as much of a
             problem. In this example:</p>
   <program language="python">
-    <input>
+    <code>
 a = 'banana'
 b = 'banana'
-</input>
+</code>
   </program>
   <p>it almost never makes a difference whether <c>a</c> and
             <c>b</c> refer to the same string or not.</p>

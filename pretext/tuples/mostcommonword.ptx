@@ -5,7 +5,7 @@
             Act 2, Scene 2, we can write a program using last section's technique to
             print the ten most common words in the text as follows:</p>
   <program xml:id="most_common_words_sort" interactive="activecode" language="python3">
-    <input>
+    <code>
 import string
 
 # Count the words in the file
@@ -27,7 +27,7 @@ sorted_counts = sorted(counts.items(), key = lambda t: t[1], reverse = True)
 # print the top ten
 for t in sorted_counts[:10]:
     print(t)
-        </input>
+        </code>
   </program>
   <p>The first part of the program reads the file and creates/fills in the
             dictionary that maps each word to the amount of times it appears in the document.
@@ -99,10 +99,10 @@ for t in sorted_counts[:10]:
     <statement>
       <p>11-9-3: How will the following code be sorted once this code is run?</p>
       <program language="python">
-        <input>
+        <code>
 weather = {'Reykjavik': 60, 'Buenos Aires': 55, 'Cairo': 96, 'Berlin': 89, 'Caloocan': 78}
 sorted_weather = weather.sort()
-</input>
+</code>
       </program>
     </statement>
     <choices>

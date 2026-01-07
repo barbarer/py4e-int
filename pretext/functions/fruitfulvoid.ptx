@@ -96,26 +96,26 @@
             something with the result; for example, you might assign it to a
             variable or use it as part of an expression:</p>
   <program language="python">
-    <input>
+    <code>
 x = math.cos(radians)
 golden = (math.sqrt(5) + 1) / 2
-</input>
+</code>
   </program>
   <p>When you call a function in interactive mode, Python displays the
             result:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; math.sqrt(5)
 2.23606797749979
-</input>
+</code>
   </program>
   <p>But in a script, if you call a fruitful function and do not store the
             result of the function in a variable, the return value vanishes into the
             mist!</p>
   <program language="python">
-    <input>
+    <code>
 math.sqrt(5)
-</input>
+</code>
   </program>
   <p>This script computes the square root of 5, but since it doesn't store
             the result in a variable or display the result, it is not very useful.</p>
@@ -123,28 +123,28 @@ math.sqrt(5)
             effect, but they don't have a return value. If you try to assign the
             result to a variable, you get a special value called <c>None</c>.</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; result = print_twice('Bing')
 Bing
 Bing
 &gt;&gt;&gt; print(result)
 None
-</input>
+</code>
   </program>
   <p>The value <c>None</c> is not the same as the string <q>None</q>. It
             is a special value that has its own type:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; print(type(None))
 &lt;class 'NoneType'&gt;
-</input>
+</code>
   </program>
   <p>To return a result from a function, we use the <c>return</c>
             statement in our function. For example, we could make a very simple
             function called <c>addtwo</c> that adds two numbers together and
             returns a result.</p>
   <program xml:id="functFruit_codelens" interactive="codelens" language="python">
-    <input>
+    <code>
 def addtwo(a, b):
     added = a + b
     return added
@@ -153,7 +153,7 @@ a = 3
 b = 5
 x = addtwo(a, b)
 print(x)
-    </input>
+    </code>
   </program>
   <p>When this script executes, the <c>print</c> statement will print
             out <q>8</q> because the <c>addtwo</c> function was called with 3 and 5

@@ -51,7 +51,7 @@
             <c>getName</c> method, which returns the <c>name</c> when the method is called.</p>
     </statement>
     <program xml:id="obj_mixedupcode_1_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 
@@ -73,7 +73,7 @@ class myTests(TestCaseGui):
         self.assertEqual(self.Brownie.getName(), "Brownie" ,"self.Brownie.getName()")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="obj_mixedupcode_2_v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -130,7 +130,7 @@ myTests().main()
             Also create the method <c>updateAge</c>, that increases the <c>age</c> by 1 and returns <c>age</c>.</p>
     </statement>
     <program xml:id="obj_mixedupcode_2_v2_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 
@@ -154,7 +154,7 @@ class myTests(TestCaseGui):
         self.assertEqual(self.Tina.updateAge(), 18 ,"self.Tina.updateAge()")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="obj_mixedupcode_3" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -202,7 +202,7 @@ myTests().main()
             the string <c>"Meow"</c>.</p>
     </statement>
     <program xml:id="obj_mixedupcode_3_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 
@@ -226,7 +226,7 @@ class myTests(TestCaseGui):
         self.assertEqual(self.Tink.__str__(), "Name: Tink, Age: 18" ,"self.Tink.__str__()")
         self.assertEqual(self.Pinky.__str__(), "Name: Pinky, Age: 29" ,"self.Pinky.__str__()")
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="obj_mixedupcode_4" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -272,7 +272,7 @@ myTests().main()
             and author.  Then create a <c>__str__</c> method that returns <c>"Title: title, Author: author"</c>.</p>
     </statement>
     <program xml:id="obj_mixedupcode_4_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 
@@ -292,7 +292,7 @@ class myTests(TestCaseGui):
         self.assertEqual(self.newbook.__str__(), "Title: The Odyssey, Author: Homer", "Testing the __str__ method")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="obj_mixedupcode_5_v3" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -351,7 +351,7 @@ myTests().main()
             a new trick to the list.</p>
     </statement>
     <program xml:id="obj_mixedupcode_5_v3_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 
@@ -374,7 +374,7 @@ class myTests(TestCaseGui):
         self.assertEqual(self.Spot.tricks, ['jump', 'sit'], "Testing self.Spot.trick after add 'sit'")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="obj_mixedupcode_6" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -437,7 +437,7 @@ myTests().main()
             with <c>"Length: length"</c>.  Then create an <c>area</c> method that returns the area (<c>length</c> times <c>length</c>).</p>
     </statement>
     <program xml:id="obj_mixedupcode_6_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 
@@ -457,7 +457,7 @@ class myTests(TestCaseGui):
         self.assertEqual(s1.__str__(), "Length: 10", "Testing s1 __str__ method")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="obj_mixedupcode_7_v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -521,7 +521,7 @@ myTests().main()
             with <c>"l: length, w: width"</c>.  Then create an <c>area</c> method that returns the area (<c>length</c> times <c>width</c>).</p>
     </statement>
     <program xml:id="obj_mixedupcode_7_v2_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 
@@ -544,7 +544,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="obj_mixedupcode_8" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -606,7 +606,7 @@ myTests().main()
             The length of a side is the distance between two points.  For example, <c>t = Triangle(Point(0,0), Point(1,0), Point(0,2))</c> would return <c>2.23</c> from <c>base</c>.</p>
     </statement>
     <program xml:id="obj_mixedupcode_8_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 
@@ -634,7 +634,7 @@ class myTests(TestCaseGui):
         t1 = Triangle(Point(-3,-3), Point(0,0), Point(0,3))
         self.assertAlmostEqual(t1.base(), 6.70, 1, "Testing base of 6.7")
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="obj_mixedupcode_9" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -693,7 +693,7 @@ myTests().main()
             Then create an <c>pick</c> method that returns one of the items at random.  You can use the <c>random</c> module's <c>choice</c> method for this.  Next create <c>add(item)</c> that adds the item to the list of items.</p>
     </statement>
     <program xml:id="obj_mixedupcode_9_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 
@@ -716,7 +716,7 @@ class myTests(TestCaseGui):
         self.assertIn(4, p.item_list, "Testing add 4")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="obj_mixedupcode_10" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -771,7 +771,7 @@ myTests().main()
             You can use the <c>random</c> module's <c>randint(start,end)</c> method to return a random number from start to end inclusvie.</p>
     </statement>
     <program xml:id="obj_mixedupcode_10_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 
@@ -793,7 +793,7 @@ class myTests(TestCaseGui):
         self.assertEqual(d.__str__(), "Dice with 6 sides", "Testing __str__ with 6 sides")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
 </section>

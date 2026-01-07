@@ -6,7 +6,7 @@
             follows the rules of the HTTP protocol to request a document and
             display what the server sends back.</p>
   <program xml:id="simplewebbrowser" interactive="activecode" language="python3">
-    <input>
+    <code>
 import socket
 
 mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -21,7 +21,7 @@ while True:
     print(data.decode(),end='')
 
 mysock.close()
-        </input>
+        </code>
   </program>
   <p>First the program makes a connection to port 80 on the server
             <url href="http://www.py4e.com" visual="http://www.py4e.com">www.py4e.com</url>. Since our program is playing the role

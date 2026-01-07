@@ -7,22 +7,22 @@
             viewed in the Python interpreter in interactive mode.</p>
   <p>You can bring up an interactive help system using <c>help()</c>.</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; help()
 
 help&gt; modules
-</input>
+</code>
   </program>
   <p>If you know what module you want to use, you can use the
             <c>dir()</c> command to find the methods in the module as follows:</p>
   <program language="python">
-    <input>
+    <code>
 import re
 dir(re)
 [.. 'compile', 'copy_reg', 'error', 'escape', 'findall',
 'finditer', 'match', 'purge', 'search', 'split', 'sre_compile',
 'sre_parse', 'sub', 'subn', 'sys', 'template']
-</input>
+</code>
   </program>
   <exercise label="re-debug-mc1">
     <statement>
@@ -58,14 +58,14 @@ dir(re)
   <p>You can also get a small amount of documentation on a particular method
             using the dir command.</p>
   <program language="python">
-    <input>
+    <code>
 help (re.search)
 Help on function search in module re:
 
 search(pattern, string, flags=0)
     Scan through string looking for a match to the pattern, returning
     a match object, or None if no match was found.
-</input>
+</code>
   </program>
   <p>The built-in documentation is not very extensive, but it can be helpful
             when you are in a hurry or don't have access to a web browser or search
@@ -75,7 +75,7 @@ search(pattern, string, flags=0)
       <p>Fix the regex equation so that the code matches any dollar sign ($) followed by an integer or float.</p>
     </statement>
     <program xml:id="re-debug-ac1_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 import re
 x = 'The apples cost $9.99, whereas the bananas were only $5 and the oranges were $2.50 each.'
 y = re.findall('$[0_9\.]', x)
@@ -89,7 +89,7 @@ class MyTests(TestCaseGui):
         self.assertEqual(y, ['$9.99', '$5', '$2.50'], "Testing that the regex equation matches the proper parts of the string.")
 
 MyTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
 </section>

@@ -5,7 +5,7 @@
             <c>dir</c> function to examine the capabilities of a variable.  We can also use <c>type</c> and
             <c>dir</c> with the classes that we create.</p>
   <program xml:id="partyanimal_types" interactive="activecode" language="python">
-    <input>
+    <code>
 class PartyAnimal:
     x = 0
 
@@ -18,7 +18,7 @@ print ("Type", type(an))
 print ("Dir ", dir(an))
 print ("Type", type(an))
 print ("Type", type(an.party))
-        </input>
+        </code>
   </program>
   <p>You can see that using the <c>class</c> keyword, we have created a new type.
             From the <c>dir</c> output, you can see both the <c>x</c> integer attribute and the <c>party</c>

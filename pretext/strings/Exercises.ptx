@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
-<exercises xml:id="strings_multiple-choice-questions">
+<section xml:id="strings_multiple-choice-questions">
   <title>Multiple Choice Questions</title>
   <exercise label="str-ex-mc-index">
     <statement>
       <p>11-9-1: What is printed by the following statements?</p>
       <program language="python">
-        <input>
+        <code>
 s = "python rocks"
 print(s[1] * s.index("n"))
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -217,10 +217,10 @@ print("Mali" + " is " + str(Mali))</pre>
     <statement>
       <p>11-9-6: What is printed by the following statements?</p>
       <program language="python">
-        <input>
+        <code>
 s = "python rocks"
 print(s[3])
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -262,10 +262,10 @@ print(s[3])
     <statement>
       <p>11-9-7: What is printed by the following statements?</p>
       <program language="python">
-        <input>
+        <code>
 s = "python is awesome"
 print(s[2] + s[-5])
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -307,10 +307,10 @@ print(s[2] + s[-5])
     <statement>
       <p>11-9-8: What is printed by the following statements?</p>
       <program language="python">
-        <input>
+        <code>
 s = "python rocks"
 print(len(s))
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -352,11 +352,11 @@ print(len(s))
     <statement>
       <p>11-9-9: What is printed by the following statements:</p>
       <program language="python">
-        <input>
+        <code>
 s = "Rose"
 s[1] = "i"
 print(s)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -398,13 +398,13 @@ print(s)
     <statement>
       <p>11-9-10: What is printed by the following statements:</p>
       <program language="python">
-        <input>
+        <code>
 s = "ball"
 r = ""
 for item in s:
     r = item.upper() + r
 print(r)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -446,10 +446,10 @@ print(r)
     <statement>
       <p>11-9-11: What is printed by the following statements?</p>
       <program language="python">
-        <input>
+        <code>
 s = "python rocks"
 print(s[7:11] * 3)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -491,10 +491,10 @@ print(s[7:11] * 3)
     <statement>
       <p>11-9-12: What is printed by the following statements?</p>
       <program language="python">
-        <input>
+        <code>
 animal = "dog"
 print("animal" + animal)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -536,10 +536,10 @@ print("animal" + animal)
     <statement>
       <p>11-9-13: What is printed by the following statements?</p>
       <program language="python">
-        <input>
+        <code>
 animal = "dog"
 print("animal " + "animal")
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -577,4 +577,4 @@ print("animal " + "animal")
       </choice>
     </choices>
   </exercise>
-</exercises>
+</section>

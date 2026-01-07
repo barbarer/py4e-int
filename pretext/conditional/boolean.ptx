@@ -35,23 +35,23 @@
             which compares two operands and produces <c>True</c> if they are
             equal and <c>False</c> otherwise:</p>
   <program xml:id="cond_boolean_equal" interactive="activecode" language="python">
-    <input>
+    <code>
 print(5 == 5)  # is 5 equal to 5? True or False?
 print(5 == 6)  # is 5 equal to 6? True or False?
-        </input>
+        </code>
   </program>
   <p><c>True</c> and <c>False</c> are special values that belong
             to the class <c>bool</c>; they are not strings:</p>
   <program xml:id="cond_boolean_types" interactive="activecode" language="python">
-    <input>
+    <code>
 print(type(True))
 print(type(False))
-        </input>
+        </code>
   </program>
   <p>The <c>==</c> operator is one of the <em>comparison
                 operators</em>; others are:</p>
   <program language="python">
-    <input>
+    <code>
 x != y               # x is not equal to y
 x &gt; y                # x is greater than y
 x &lt; y                # x is less than y
@@ -59,7 +59,7 @@ x &gt;= y               # x is greater than or equal to y
 x &lt;= y               # x is less than or equal to y
 <!--x is y               # x is the same as y
 x is not y           # x is not the same as y-->
-</input>
+</code>
   </program>
   <p>Although these operations are probably familiar to you, the Python
             symbols are different from the mathematical symbols for the same
@@ -313,10 +313,10 @@ x is not y           # x is not the same as y-->
     There are two more comparison operators in Python:
   </p>
     <program language="python">
-    <input>
+    <code>
 x is y          # x is the same object as y
 x is not y      # x is not the same object as y
-</input>
+</code>
 </program>
 
 <p>While these might seem to be just another way of saying <c>x == y</c> and <c>x != y</c>, they are different in a very important way. Explaining that difference would take us into a fairly advanced topic, so we'll leave <c>is</c> and <c>is not</c> for later in the course. For now, use <c>==</c> to ask if two values are equal, and use <c>!=</c> to ask if they are not equal.</p>

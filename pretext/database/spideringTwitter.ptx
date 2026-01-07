@@ -177,7 +177,7 @@ cur.close()</pre>
             in the database and retrieve the friend count (<c>friends</c>) if
             the record exists.</p>
   <program language="python">
-    <input>
+    <code>
 # loop through 5 ids of the friends (to not get too many at once)
 countnew = 0
 countold = 0
@@ -207,7 +207,7 @@ for i in range(num):
         countnew = countnew + 1
 print('New accounts=', countnew, ' revisited=', countold)
 conn.commit()
-</input>
+</code>
   </program>
   <p>Once the cursor executes the <c>SELECT</c> statement, we must
             retrieve the rows. We could do this with a <c>for</c> statement,
@@ -285,7 +285,7 @@ Enter a Twitter screen name, or hit enter, or type quit: quit</pre>
   <p>Since we pressed enter (i.e., we did not specify a Twitter account), the
             following code is executed:</p>
   <program language="python">
-    <input>
+    <code>
 if (len(acct) &lt; 1): # enter so pick someone to visit from the database
 
    # select a screen name that hasn't been visited yet
@@ -295,7 +295,7 @@ if (len(acct) &lt; 1): # enter so pick someone to visit from the database
    except:
        print('No unretrieved Twitter accounts found')
        continue
-</input>
+</code>
   </program>
   <p>We use the SQL <c>SELECT</c> statement to retrieve the name of the
             first (<c>LIMIT 1</c>) user who still has their <q>have we retrieved
@@ -305,14 +305,14 @@ if (len(acct) &lt; 1): # enter so pick someone to visit from the database
   <p>If we successfully retrieved an unprocessed <c>screen_name</c>, we retrieve
             their data as follows:</p>
   <program language="python">
-    <input>
+    <code>
 # Fetch friends for this screen name
 print("Fetching friends for screen name: " + acct)
 idList = api.get_friend_ids(screen_name=acct)
 
 # update the database to show that you have retrieved friends for this one
 cur.execute('UPDATE Twitter SET retrieved=1 WHERE name = ?', (acct, ))
-</input>
+</code>
   </program>
   <p>Once we retrieve the data successfully, we use the <c>UPDATE</c>
             statement to set the <c>retrieved</c> column to 1 to indicate that

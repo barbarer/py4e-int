@@ -12,10 +12,10 @@
   <p>A string is a <em>sequence</em> of characters. You can access
             the characters one at a time with the bracket operator:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; fruit = 'banana'
 &gt;&gt;&gt; letter = fruit[1]
-</input>
+</code>
   </program>
   <p>The second statement extracts the character at index position 1 from the
             <c>fruit</c> variable and assigns it to the <c>letter</c>
@@ -24,22 +24,22 @@
             index indicates which character in the sequence you want.</p>
   <p>But you might not get what you expect:</p>
   <program xml:id="strCharacters" interactive="activecode" language="python">
-    <input>
+    <code>
 fruit = 'banana'
 letter = fruit[1]
 print(letter)
-        </input>
+        </code>
   </program>
   <p>For most people, the first letter of <q>banana</q> is <q>b</q>, not
             <q>a</q>. But in Python, the index of a sequence is equal to its
             offset from the beginning of the string, and the offset of
             the first letter is zero.</p>
   <program xml:id="strFirst" interactive="activecode" language="python">
-    <input>
+    <code>
 fruit = 'banana'
 letter = fruit[0]
 print(letter)
-        </input>
+        </code>
   </program>
   <p>So <q>b</q> is the 0th letter (<q>zero-th</q>) of <q>banana</q>,
             <q>a</q> is the 1th letter (<q>one-th</q>), and <q>n</q> is the
@@ -92,10 +92,10 @@ print(cheer[3])</pre>
             index, but the value of the index has to be an integer. Otherwise you
             get:</p>
   <program xml:id="strFloatIndex" interactive="activecode" language="python">
-    <input>
+    <code>
 fruit = 'banana'
 letter = fruit[1.5]
-        </input>
+        </code>
   </program>
   <exercise label="str-seq-mc-error">
     <statement>

@@ -8,7 +8,7 @@
                     return <c>(10, 9, 8, 7, 6, 5, 4)</c>.</p>
     </statement>
     <program interactive="activecode" language="python" xml:id="tup_writecode1q_editor">
-      <input>
+      <code>
 def tup_creation(start, end):
     # write code here
 
@@ -27,7 +27,7 @@ class MyTests(TestCaseGui):
 
 
 MyTests().main()
-        </input>
+        </code>
     </program>
     <solution>
 
@@ -38,7 +38,7 @@ MyTests().main()
                     return (10, 9, 8, 7, 6, 5, 4).
 
     
-    <program xml:id="tup_writecode1a_editor" language="python"><input>
+    <program xml:id="tup_writecode1a_editor" language="python"><code>
 def tup_creation(start, end):
     lst = []
     if start &gt; end:
@@ -49,7 +49,7 @@ def tup_creation(start, end):
             lst.append(i)
     lst = tuple(lst)
     return lst
-        </input></program>
+        </code></program>
             </solution>
   </exercise>
   <raw format="html" xml:space="preserve">
@@ -68,7 +68,7 @@ def tup_creation(start, end):
                     would return <c>[(3084, 'Computer Science'), (3025, 'Electrical Engineering'), (3020, 'Computer Engineering'), (3027, 'Cybersecurity'), (3068, 'Biometric Systems Engineering')]</c>.</p>
     </statement>
     <program interactive="activecode" language="python" xml:id="tup_writecode3q_editor">
-      <input>
+      <code>
 def find_major(dictionary_val):
     # write code here
 
@@ -84,7 +84,7 @@ class MyTests(TestCaseGui):
 
 
 MyTests().main()
-        </input>
+        </code>
     </program>
     <solution>
 
@@ -97,7 +97,7 @@ MyTests().main()
                     would return [(3084, 'Computer Science'), (3025, 'Electrical Engineering'), (3020, 'Computer Engineering'), (3027, 'Cybersecurity'), (3068, 'Biometric Systems Engineering')].
 
     
-    <program xml:id="tup_writecode3a_editor" language="python"><input>
+    <program xml:id="tup_writecode3a_editor" language="python"><code>
 def find_major(dictionary_val):
     ls1 = []
     ls2 = []
@@ -106,7 +106,7 @@ def find_major(dictionary_val):
         ls2.append(val)
     list_of_tup = list(zip(ls1, ls2))
     return list_of_tup
-        </input></program>
+        </code></program>
             </solution>
   </exercise>
   <raw format="html" xml:space="preserve">
@@ -123,7 +123,7 @@ def find_major(dictionary_val):
                     methods. For example, <c>dict_transform({'Rattata': 19, 'Machop': 66, 'Seel': 86, 'Volbeat': 86, 'Solrock': 126})</c> should return <c>(('Rattata', 19), ('Machop', 66), ('Seel', 86), ('Volbeat', 86), ('Solrock', 126))</c>.</p>
     </statement>
     <program interactive="activecode" language="python" xml:id="tup_writecode5q_editor">
-      <input>
+      <code>
 def dict_transform(dict):
     # write code here
 
@@ -138,7 +138,7 @@ class MyTests(TestCaseGui):
         self.assertEqual(dict_transform({0.1: 'Business', 10: 'Food Science', -9: 'Women's Studies'}),((0.1, 'Business'), (10, 'Food Science'), (-9, 'Women's Studies')), "dict_transform({0.1: 'Business', 10: 'Food Science', -9: 'Women's Studies'})")
 
 MyTests().main()
-        </input>
+        </code>
     </program>
     <solution>
 
@@ -149,7 +149,7 @@ MyTests().main()
                     methods. For example, dict_transform({'Rattata': 19, 'Machop': 66, 'Seel': 86, 'Volbeat': 86, 'Solrock': 126}) should return (('Rattata', 19), ('Machop', 66), ('Seel', 86), ('Volbeat', 86), ('Solrock', 126)).
 
     
-    <program xml:id="tup_writecode5a_editor" language="python"><input>
+    <program xml:id="tup_writecode5a_editor" language="python"><code>
 def dict_transform(dict):
     lst_keys = []
     lst_vals = []
@@ -158,7 +158,7 @@ def dict_transform(dict):
         lst_vals.append(val)
     zipped_tup= tuple(zip(lst_keys, lst_vals))
     return zipped_tup
-        </input></program>
+        </code></program>
             </solution>
   </exercise>
   <raw format="html" xml:space="preserve">
@@ -175,7 +175,7 @@ def dict_transform(dict):
                     [(3,100), (20, -3, 100)].</p>
     </statement>
     <program interactive="activecode" language="python" xml:id="tup_writecode7q_v2_editor">
-      <input>
+      <code>
 def mod_tuples(tup_list):
     # write code here
 
@@ -191,7 +191,7 @@ class MyTests(TestCaseGui):
         self.assertEqual(mod_tuples([(20, 1, 80, 2 )]),[(20, 1, 80, 100)], "mod_tuples([(20, 1, 80, 2 )])")
 
 MyTests().main()
-        </input>
+        </code>
     </program>
     <solution>
 
@@ -202,13 +202,13 @@ MyTests().main()
                     [(3,100), (20, -3, 100)].
 
     
-    <program xml:id="tup_writecode7a_editor" language="python"><input>
+    <program xml:id="tup_writecode7a_editor" language="python"><code>
 def mod_tuples(tup_list):
     # Access the last element of each list (-1) and replace with 100 in each element of the tuple
     updated_list = [tup[:-1] + (100,) for tup in tup_list]
     # return the updated list
     return updated_list
-        </input></program>
+        </code></program>
             </solution>
   </exercise>
   <raw format="html" xml:space="preserve">
@@ -225,7 +225,7 @@ def mod_tuples(tup_list):
                     <c>list_link(['what', 'do', 'you', 'do'], [1,2,3,4])</c> should return <c>{'what': 1, 'do': 4, 'you': 3}</c>.</p>
     </statement>
     <program interactive="activecode" language="python" xml:id="tup_writecode9q_editor">
-      <input>
+      <code>
 def list_link(lst1, lst2):
     #write your code here
 
@@ -238,7 +238,7 @@ class MyTests(TestCaseGui):
         self.assertEqual(list_link(['I', 'love', 'coding'], [2,0,-8]), {'I': 2, 'love': 0, 'coding': -8}, "Testing that the function was properly defined.")
 
 MyTests().main()
-        </input>
+        </code>
     </program>
     <solution>
 
@@ -249,7 +249,7 @@ MyTests().main()
                     list_link(['what', 'do', 'you', 'do'], [1,2,3,4]) should return {'what': 1, 'do': 4, 'you': 3}.
 
     
-    <program xml:id="tup_writecode9a_editor" language="python"><input>
+    <program xml:id="tup_writecode9a_editor" language="python"><code>
 # Define function with 2 lists as arguments
 def list_link(lst1, lst2):
     # Create dictionary
@@ -266,7 +266,7 @@ def list_link(lst1, lst2):
             counter += 1
     # Return the dictionary
     return diction
-        </input></program>
+        </code></program>
             </solution>
   </exercise>
   <raw format="html" xml:space="preserve">

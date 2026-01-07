@@ -5,11 +5,11 @@
             produces some output.  Our elevator conversion program demonstrates a very
             short but complete program showing all three of these steps.</p>
   <program xml:id="startingprograms_elev" interactive="activecode" language="python">
-    <input>
+    <code>
 usf = input('Enter the US Floor Number: ')
 wf = int(usf) - 1
 print('Non-US Floor Number is',wf)
-        </input>
+        </code>
   </program>
   <p>If we think a bit more about this program, there is the <q>outside world</q> and
             the program. The input and output aspects are where the program interacts
@@ -24,7 +24,7 @@ print('Non-US Floor Number is',wf)
             BeautifulSoup library, we can see a program that is constructed by connecting
             different objects together to accomplish a task:</p>
   <program xml:id="urllinksparser" interactive="activecode" language="python3">
-    <input>
+    <code>
 import urllib.request, urllib.parse, urllib.error
 from bs4 import BeautifulSoup
 import ssl
@@ -42,7 +42,7 @@ soup = BeautifulSoup(html, 'html.parser')
 tags = soup('a')
 for tag in tags:
     print(tag.get('href', None))
-        </input>
+        </code>
   </program>
   <p>We pass the url into <c>urllib</c> to retrieve
             the data from the web.  The <c>urllib</c> library uses the <c>socket</c> library to

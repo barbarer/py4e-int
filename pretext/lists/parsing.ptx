@@ -17,7 +17,7 @@
             print out the third word in the line:</p>
 
     <program xml:id="listParsing" interactive="activecode" language="python">
-        <input>
+        <code>
 fhand = open('mboxShort.txt')
 for line in fhand:
     line = line.rstrip()
@@ -26,7 +26,7 @@ for line in fhand:
     print(words[2])
 
 # Continue is used here to skip the rest of the line if it doesn't start with "From "
-        </input>
+        </code>
     </program>
         <p>Later, we will learn increasingly sophisticated techniques for picking
             the lines to work on and how we pull those lines apart to find the exact

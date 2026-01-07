@@ -44,7 +44,7 @@
     <statement>
       <p>Q-2: What code should go in place of the missing code?</p>
       <program language="python">
-        <input>
+        <code>
 def new_sighting(kinds, counts, sighting):
    '''(list of str, list of int, str) -&gt; NoneType
    Add new sighting to parallel lists kinds and counts.
@@ -54,7 +54,7 @@ def new_sighting(kinds, counts, sighting):
       ... missing code
    ind = kinds.index(sighting)
    counts[ind] = counts[ind] + 1
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -96,11 +96,11 @@ def new_sighting(kinds, counts, sighting):
     <statement>
       <p>Q-3: What is dictionary d created by the following code?</p>
       <program language="python">
-        <input>
+        <code>
 d = {3:4}
 d[5] = d.get(4, 8)
 d[4] = d.get(3, 9)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -142,11 +142,11 @@ d[4] = d.get(3, 9)
     <statement>
       <p>Q-4: What is dictionary d created by the following code?</p>
       <program language="python">
-        <input>
+        <code>
 d = {1:5}
 d[2] = d.get(1, 6)
 d[4] = d.get(3, 7)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -227,9 +227,9 @@ d[4] = d.get(3, 7)
     <statement>
       <p>Q-6: What is the best inversion of this dictionary?</p>
       <program language="python">
-        <input>
+        <code>
 {1:4, 2:5, 4:5}
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -279,14 +279,14 @@ d[4] = d.get(3, 7)
     <statement>
       <p>Q-7: Here is a birthday month dictionary. Which month has the most coverage I.e., the month with the most days on which someone has a birthday?</p>
       <program language="python">
-        <input>
+        <code>
 {"December" : {24 : ["Dan", "Joe", "Steph"]},
  "July" : {17 : ["Angelo"],
           16 : ["Chris"],
           1 : ["Canada"]
           }
 }
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -320,10 +320,10 @@ d[4] = d.get(3, 7)
     <statement>
       <p>Q-8: Here is a birthday month dictionary. Which month has the most coverage I.e., the month with the most days on which someone has a birthday?</p>
       <program language="python">
-        <input>
+        <code>
 {"December" : {24 : ["Dan", "Joe"], 23 : ["Steph"]},
 "July" : {17 : ["Angelo"], 16 : ["Chris"]}}
-</input>
+</code>
       </program>
     </statement>
     <choices>

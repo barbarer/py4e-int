@@ -5,7 +5,7 @@
     <statement>
       <p>Q-1: What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 def foo():
         print("Raaarrr I'm a bear")
 
@@ -13,7 +13,7 @@ def bar():
         print("Eeek a bear!")
 
 foo()
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -63,14 +63,14 @@ foo()
     <statement>
       <p>Q-2: What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 def first(a):
    a=8
 
 a = 20
 first(a)
 print(a)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -120,14 +120,14 @@ print(a)
     <statement>
       <p>Q-3: What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 def calculate(w, x, y):
    a=x
    b=w+1
    return a + b + 3
 
 print(calculate(3, 2, 0))
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -177,7 +177,7 @@ print(calculate(3, 2, 0))
     <statement>
       <p>Q-4: Which sets <c>x</c> to the value 5?</p>
       <program language="python">
-        <input>
+        <code>
 def f1():
    return 5
 
@@ -186,7 +186,7 @@ def f2():
 
 def f3():
    return print(5)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -236,13 +236,13 @@ def f3():
     <statement>
       <p>Q-5: Which of the following are true about this code?</p>
       <program language="python">
-        <input>
+        <code>
 def add_one(x):
 return x + 1
 
 x = 2
 x = x + add_one(x)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -292,7 +292,7 @@ x = x + add_one(x)
     <statement>
       <p>Q-6: What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 def odd(y,x):
    y = y +1
    x = x + 1
@@ -303,7 +303,7 @@ def main():
    y = 4
    odd(x,y)
    print(x*y)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -353,7 +353,7 @@ def main():
     <statement>
       <p>Q-7: One of the components of this function is inconsistent with the rest. Which is it?</p>
       <program language="python">
-        <input>
+        <code>
 def sum_eleven(num1, num2, num3):
    '''(int, int, int) -&gt; bool
    Return True iff num1, num2, and num3 sum to 11.
@@ -361,7 +361,7 @@ def sum_eleven(num1, num2, num3):
    11
    '''
    return num1 + num2 + num3 == 11
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -411,7 +411,7 @@ def sum_eleven(num1, num2, num3):
     <statement>
       <p>Q-8: One of the components of this function is inconsistent with the rest. Which is it?</p>
       <program language="python">
-        <input>
+        <code>
 def rightmost_digit(a):
    '''(int) -&gt; bool
    Return the rightmost digit of a.
@@ -419,7 +419,7 @@ def rightmost_digit(a):
    4
    '''
    return a % 10
-</input>
+</code>
       </program>
     </statement>
     <choices>

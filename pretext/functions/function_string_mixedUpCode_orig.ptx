@@ -41,7 +41,7 @@
             For example, <c>joinStrings('he','llo')</c> returns <c>hello</c>.</p>
     </statement>
     <program xml:id="Function_String_MixedUpCode_1_v2_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -53,7 +53,7 @@ class myTests(TestCaseGui):
         self.assertEqual(joinStrings('Walk', 'Away'),"WalkAway","joinStrings('Walk', 'Away')")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Function_String_MixedUpCode_2_v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -99,7 +99,7 @@ myTests().main()
             returns <c>Perimeter of rectangle with width of 5 and height of 10 is 30</c>.</p>
     </statement>
     <program xml:id="Function_String_MixedUpCode_2_v2_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -112,7 +112,7 @@ class myTests(TestCaseGui):
         self.assertEqual(rect_per(1.3, 2.6),"Perimeter of rectangle with width of 1.3 and height of 2.6 is 7.8","rect_per(1.3, 2.6)")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Function_String_MixedUpCode_3" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -151,7 +151,7 @@ myTests().main()
             <c>Cube of (n) is (n cubed)</c>.  For example, <c>cube(4)</c> returns <c>Cube of 4 is 64</c>.</p>
     </statement>
     <program xml:id="Function_String_MixedUpCode_3_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -165,7 +165,7 @@ class myTests(TestCaseGui):
         self.assertEqual(cube(1.5),"Cube of 1.5 is 3.375","cube(1.5)")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Function_String_MixedUpCode_4" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -205,7 +205,7 @@ myTests().main()
             <c>The last letter of Germany is y</c>.</p>
     </statement>
     <program xml:id="Function_String_MixedUpCode_4_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -219,7 +219,7 @@ class myTests(TestCaseGui):
         self.assertEqual(atlas('Ghana'),"The last letter of Ghana is a","atlas('Ghana')")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Function_String_MixedUpCode_5" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -250,7 +250,7 @@ myTests().main()
             For example, <c>dateYear(11/07/2000)</c> should return <c>2000</c>.</p>
     </statement>
     <program xml:id="Function_String_MixedUpCode_5_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -262,7 +262,7 @@ class myTests(TestCaseGui):
         self.assertEqual(dateYear('11/07/2000'),"2000","dateYear('11/07/2000')")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Function_String_MixedUpCode_6" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -298,7 +298,7 @@ myTests().main()
             For example, <c>capitalize('america')</c> would return <c>America</c>.</p>
     </statement>
     <program xml:id="Function_String_MixedUpCode_6_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -311,7 +311,7 @@ class myTests(TestCaseGui):
         self.assertEqual(capitalize('flower'),"Flower","capitalize('flower')")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Function_String_MixedUpCode_7" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -342,7 +342,7 @@ myTests().main()
             For example, <c>mod_password('suspense')</c> returns <c>$u$pen$e</c>.</p>
     </statement>
     <program xml:id="Function_String_MixedUpCode_7_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -356,7 +356,7 @@ class myTests(TestCaseGui):
         self.assertEqual(mod_password('apples'),"apple$","mod_password('apples')")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Function_String_MixedUpCode_8" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -389,7 +389,7 @@ myTests().main()
             For example, <c>first_last('wander')</c> returns <c>waer</c>.</p>
     </statement>
     <program xml:id="Function_String_MixedUpCode_8_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -401,7 +401,7 @@ class myTests(TestCaseGui):
         self.assertEqual(first_last('through'),"thgh","first_last('through')")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
 </section>

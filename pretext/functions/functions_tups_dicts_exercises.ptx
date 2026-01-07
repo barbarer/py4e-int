@@ -52,10 +52,10 @@
     <statement>
       <p>Q-2: Which of the following would change <c>tup_transformation(90, 103, 54, 45)</c> into <c>tup_transformation(5, 45, 54, 90)</c>? (Note: Commas represent line breaks.)</p>
       <program language="python">
-        <input>
+        <code>
 def tup_transformation(tup):
     # line(s)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -105,13 +105,13 @@ def tup_transformation(tup):
     <statement>
       <p>Q-3: What would the output when <c>tup_and_list_transform((16, 7, 100, 0, 27),(84, 99, 78, 200, -7))</c> is called?</p>
       <program language="python">
-        <input>
+        <code>
 def tup_and_list_transform(tup1, tup2):
     list_tup1 = list(tup1)
     list_tup2 = list(tup2)
     list_tup1.reverse()
     return tuple(zip(list_tup1, list_tup2))
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -161,10 +161,10 @@ def tup_and_list_transform(tup1, tup2):
     <statement>
       <p>Q-4: Which of the following return statements will <em>not</em> return a value for the function call <c>transform_dict({'one': 8, 'two': 10, 'three': 0})</c>?</p>
       <program language="python">
-        <input>
+        <code>
 def transform_dict(dictionary):
     # return statement goes here
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -214,13 +214,13 @@ def transform_dict(dictionary):
     <statement>
       <p>Q-5: Which of the following code snippets would cause <c>tup_of_tuples_to_dict((1, 'one'), (5, 'five'))</c> to return <c>{1: 'one', 5: 'five'}</c>?</p>
       <program language="python">
-        <input>
+        <code>
 def tup_of_tuples_to_dict(tup_of_tuples):
     dictionary = {}
     for tup in tup_of_tuples:
         # insert code snippet here
     return dictionary
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -270,11 +270,11 @@ def tup_of_tuples_to_dict(tup_of_tuples):
     <statement>
       <p>Q-6: What are the contents of <c>d</c> after this code executes?</p>
       <program language="python">
-        <input>
+        <code>
 d = {3:4}
 d[5] = d.get(4, 8)
 d[4] = d.get(3, 9)
-</input>
+</code>
       </program>
     </statement>
     <choices>

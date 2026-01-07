@@ -67,10 +67,10 @@ X-DSPAM-Confidence: 0.8475
 X-DSPAM-Probability: 0.0000</pre>
   </hint>
   <program xml:id="fileOpen" interactive="activecode" language="python">
-    <input>
+    <code>
 fhand = open('mbox-short.txt')
 print(fhand)
-        </input>
+        </code>
   </program>
   <exercise label="file-open-fitb-start">
     <statement>
@@ -121,12 +121,12 @@ print(fhand)
   <p>If the file does not exist, <c>open</c> will fail with a traceback
             and you will not get a file handle object.</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; fhand = open('stuff.txt')
 Traceback (most recent call last):
 File "&lt;stdin&gt;", line 1, in &lt;module&gt;
 FileNotFoundError: [Errno 2] No such file or directory: 'stuff.txt'
-</input>
+</code>
   </program>
   <p>Later we will use <c>try</c> and <c>except</c> to deal more
             gracefully with the situation where we attempt to open a file that does

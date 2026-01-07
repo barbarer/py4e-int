@@ -110,7 +110,7 @@
         <p>Write a function <c>is_descending(nums)</c> that returns <c>True</c> if the numbers in the list <c>nums</c> are sorted in descending order and <c>False</c> otherwise. If the list <c>nums</c> has less than two numbers in it return <c>True</c>.  For example, <c>is_descending([3, 2, 1])</c> should return <c>True</c>, <c>is_descending([1])</c> should also return <c>True</c>, and <c>is_descending([1,2,3])</c> should return <c>False</c>.</p>
       </statement>
       <program xml:id="ut_is_descending_ac_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 def is_descending(nums):
 
 
@@ -124,7 +124,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
     <p>Add a test to the <c>testOne</c> function above to test when <c>nums</c> is the empty list.  Add tests to check what happens when all numbers are descending except the first, middle, or last.  Add tests that check that it works for unusual values such as negative numbers or zero.</p>
@@ -134,7 +134,7 @@ myTests().main()
         <p>Write a function <c>temp_cat(value)</c> that returns <c>"low"</c> if <c>value</c> is &lt; 97, <c>normal</c> if <c>value</c> is &gt;= 97 and &lt;= 99, and <c>high</c> if <c>value</c> is &gt; 99.  Add more test cases to check the three possible return values (<c>"low"</c>, <c>"normal"</c>, and <c>"high"</c>).</p>
       </statement>
       <program xml:id="ut_temp_category_ac_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 def temp_cat(value):
 
 
@@ -146,7 +146,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
     <p>Did you check when <c>value</c> equals 97 and is greater than 97?  Did you check when <c>value</c> was equal to 99?  What happens if <c>value</c> is a floating point number like 98.7 or 102.4?</p>
@@ -156,7 +156,7 @@ myTests().main()
         <p>Write a <c>total</c> method in the <c>Order</c> class to return the total of all of the prices for the items in the order.  Then add a test to <c>testTotal</c> to test the total of o2.</p>
       </statement>
       <program xml:id="ut_item_and_order_add_total_ac_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 class Item:
 
     def __init__(self, name, price):
@@ -188,7 +188,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
     <note>
@@ -200,7 +200,7 @@ myTests().main()
         <p>Write a <c>set_name</c> method that changes the current object's name and then add a new method <c>test_set_name</c> to test <c>set_name</c>.</p>
       </statement>
       <program xml:id="ut_item_set_name_set_price_ac_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 class Item:
 
     def __init__(self, name, price):
@@ -230,7 +230,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
     <note>
@@ -242,7 +242,7 @@ myTests().main()
         <p>Create a subclass of the <c>Animal</c> class named <c>Duck</c> that overrides the inherited <c>noise</c> method to return <c>"Quack"</c>.  Also create a test to check that the <c>noise</c> method in <c>Duck</c> returns the correct string.</p>
       </statement>
       <program xml:id="inheritance_pet_duck_ac_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 class Animal:
 
     def noise(self):
@@ -261,7 +261,7 @@ class myTests(TestCaseGui):
         self.assertIsInstance(d, type(a), "Testing Duck inherits from Animal")
 
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>

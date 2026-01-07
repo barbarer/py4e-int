@@ -14,13 +14,13 @@
             Python interpreter will start executing in interactive mode and appear
             somewhat as follows:</p>
   <program language="python">
-    <input>
+    <code>
 Python 3.5.1 (v3.5.1:37a07cee5969, Dec  6 2015, 01:54:25)
 [MSC v.1900 64 bit (AMD64)] on win32
 Type "help", "copyright", "credits" or "license" for more
 information.
 &gt;&gt;&gt;
-</input>
+</code>
   </program>
   <p>The <c>&gt;&gt;&gt;</c> prompt is the Python interpreter's way of asking
             you, <q>What do you want me to do next?</q> Python is ready to have a
@@ -50,14 +50,14 @@ information.
             that astronauts use when they land on a faraway planet and try to speak
             with the inhabitants of the planet:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; I come in peace, please take me to your leader
 File "&lt;stdin&gt;", line 1
   I come in peace, please take me to your leader
        ^
 SyntaxError: invalid syntax
 &gt;&gt;&gt;
-</input>
+</code>
   </program>
   <p>This is not going so well. Unless you think of something quickly, the
             inhabitants of the planet are likely to stab you with their spears, put
@@ -65,14 +65,14 @@ SyntaxError: invalid syntax
   <p>Luckily you brought a copy of this book on your travels, and you thumb
             to this very page and try again:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; print('Hello world!')
 Hello world!
-</input>
+</code>
   </program>
   <p>This is looking much better, so you try to communicate some more:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; print('You must be the legendary god that comes from the sky')
 You must be the legendary god that comes from the sky
 &gt;&gt;&gt; print('We have been waiting for you for a long time')
@@ -85,7 +85,7 @@ File "&lt;stdin&gt;", line 1
                                                    ^
 SyntaxError: Missing parentheses in call to 'print'
 &gt;&gt;&gt;
-</input>
+</code>
   </program>
   <p>The conversation was going so well for a while and then you made the
             tiniest mistake using the Python language and Python brought the spears
@@ -145,7 +145,7 @@ SyntaxError: Missing parentheses in call to 'print'
             should probably know the proper way to say <q>good-bye</q> when interacting
             with the inhabitants of Planet Python:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; good-bye
 Traceback (most recent call last):
 File "&lt;stdin&gt;", line 1, in &lt;module&gt;
@@ -156,7 +156,7 @@ File "&lt;stdin&gt;", line 1
            ^
 SyntaxError: invalid syntax
 &gt;&gt;&gt; quit()
-</input>
+</code>
   </program>
   <p>You will notice that the error is different for the first two incorrect
             attempts. The second error is different because <em>if</em> is a

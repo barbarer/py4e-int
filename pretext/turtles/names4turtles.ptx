@@ -27,14 +27,14 @@
       <p>Click the Run button to see what this code does.  The drawing will happen below the code.</p>
     </statement>
     <program xml:id="Turtle_ex_1_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 from turtle import *  # use the turtle library
 space = Screen()      # create a Screen object named space
 alex = Turtle()       # create a Turtle object named alex
 alex.forward(150)     # ask alex to move forward by 150 units
 alex.left(90)         # ask alex to turn by 90 degrees
 alex.forward(75)      # ask alex to move forward by 75 units
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Turtle_Init_Dir_mc_q1">
@@ -225,7 +225,7 @@ alex.forward(75)      # ask alex to move forward by 75 units
         <p>Click the Run button to see what this code does. The drawing will happen below the code.</p>
         </statement>
       <program xml:id="Turtle_C-editor" language="python" interactive="activecode">
-        <input>from turtle import *    # use the turtle library
+        <code>from turtle import *    # use the turtle library
 space = Screen()        # create a Screen object named space
 alex = Turtle()         # create a Turtle object named alex
 alex.left(180)          # turn alex by 180 degrees
@@ -234,7 +234,7 @@ alex.left(90)           # turn left 90 degrees
 alex.forward(100)       # more forward by 100 units
 alex.left(90)           # turn left 90 degrees
 alex.forward(75)        # move forward by 75 units
-</input>
+</code>
 </program>
 </exercise>
 
@@ -244,13 +244,13 @@ alex.forward(75)        # move forward by 75 units
     <p>The following example has four errors. Can you fix the errors so that the code runs correctly to print a capital L?</p>
   </statement>
   <program xml:id="turtle_error_1_editor" interactive="activecode" language="python">
-<input>from turtle import *    # use the turtle library
+<code>from turtle import *    # use the turtle library
 space = screen()        # create a Screen object named space
 alisha = Turtle         # create a Turtle object named alisha
 alisha.right(90)        # turn alisha south
 alisha.forward          # move forward by 150 units
 alisha.left(90)         # turn to face east
-alisha.Forward(75)      # move forward by 75 units</input>
+alisha.Forward(75)      # move forward by 75 units</code>
 </program>
 </exercise>
 
@@ -259,7 +259,7 @@ alisha.Forward(75)      # move forward by 75 units</input>
 <p>The following example has 4 errors.  Can you fix the errors so that the code runs correctly to print a capital C?</p>
   </statement>
 <program xml:id="turtle_error_2_editor" interactive="activecode" language="python">
-  <input>from turtle Import *    # use the turtle library
+  <code>from turtle Import *    # use the turtle library
 space = Screen()        # create a Screen object named space
 alex = Turtle           # create a Turtle object named alex
 alex.left(180)          # turn alex by 180 degrees
@@ -268,7 +268,7 @@ alex.turn(90)           # turn left 90 degrees
 alex.forward(100)       # more forward by 100 units
 alex.left(90)           # turn left 90 degrees
 alex.forward            # move forward by 75 units
-</input></program>
+</code></program>
 </exercise>
 <note><p>Case matters in Python so <c>screen</c> is not the same as <c>Screen</c>. Also the open and close parentheses are required after every function and procedure call, even if it doesn't take any input.</p></note>
   </subsection>

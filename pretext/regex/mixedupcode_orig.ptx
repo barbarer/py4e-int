@@ -40,7 +40,7 @@
             should return <c>True</c>.</p>
     </statement>
     <program xml:id="re_mixed1_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 import re
 
 ====
@@ -54,7 +54,7 @@ class myTests(TestCaseGui):
         self.assertEqual(greeting_search(['Good Morning!', 'Hello!', 'good morning!']), True, "greeting_search(['Good Morning!', 'Hello!', 'good morning!'])")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="re_mixed2" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -99,7 +99,7 @@ myTests().main()
             should return <c>['Hello!', 'hello.', 'hi']</c>.</p>
     </statement>
     <program xml:id="re_mixed2_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 import re
 
 ====
@@ -113,7 +113,7 @@ class myTests(TestCaseGui):
         self.assertEqual(search_h(['fresh', 'Kahoot']), [], "search_h(['fresh', 'Kahoot'])")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="re_mixed3" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -158,7 +158,7 @@ myTests().main()
             <c>['Hello', 'Good Morning!']</c>.</p>
     </statement>
     <program xml:id="re_mixed3_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 import re
 
 ====
@@ -173,7 +173,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="re_mixed4_v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -216,7 +216,7 @@ myTests().main()
       <p>Write a function called <c>match_word(word, str)</c> that returns True if the string <c>str</c> contains the word <c>word</c>, but not if it is part of another word.  For example, <c>match_word('is', "This was bad")</c> would return False and <c>match_word('is', "This is good")</c> would return True.</p>
     </statement>
     <program xml:id="re_mixed4_v2_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 import re
 
 
@@ -234,7 +234,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="re_mixed5_v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -279,7 +279,7 @@ myTests().main()
             <c>"Not a match!"</c> otherwise. For example, <c>test_pattern('Sincerely1       Molly')</c> should return <c>"Match!"</c>.</p>
     </statement>
     <program xml:id="re_mixed5_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 import re
 
 ====
@@ -304,7 +304,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="re_mixed6_v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -360,7 +360,7 @@ myTests().main()
             should return <c>"$2098.10"</c>.</p>
     </statement>
     <program xml:id="re_mixed6_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 import re
 
 ====
@@ -379,7 +379,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="re_mixed7_v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -414,7 +414,7 @@ myTests().main()
             <c>['pyth_on@umich.edu']</c>.</p>
     </statement>
     <program xml:id="re_mixed7_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 import re
 
 ====
@@ -430,7 +430,7 @@ class myTests(TestCaseGui):
         self.assertEqual(search_email('python'), [], "search_email('python')")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="re_mixed8" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -475,7 +475,7 @@ myTests().main()
             should return <c>['From: Kelly@umich.edu', 'From: Kelly@']</c>.</p>
     </statement>
     <program xml:id="re_mixed8_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 import re
 
 ====
@@ -489,7 +489,7 @@ class myTests(TestCaseGui):
         self.assertEqual(start_from(['From: Kelly','From Kelly','rom Kelly']),[], "start_from(['From: Kelly','From Kelly','rom Kelly'])")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="re_mixed9_v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -537,7 +537,7 @@ myTests().main()
             For example, <c>grab_domain(['python@umich.edu','This is Kelly@umich.gov','123','java@css','jav12a@css.com'])</c> would return <c>['umich.edu', 'umich.gov', 'css.com']</c>.</p>
     </statement>
     <program xml:id="re_mixed9_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 import re
 
 ====
@@ -551,7 +551,7 @@ class myTests(TestCaseGui):
         self.assertEqual(grab_domain(['123@google.com, be@facebook.com']), ['google.com', 'facebook.com'], "grab_domain(['123@google.com, be@facebook.com'])")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="re_mixed10_v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -596,7 +596,7 @@ myTests().main()
             should return <c>'chEEEEEYYEErry'</c>.</p>
     </statement>
     <program xml:id="re_mixed10_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 import re
 
 ====
@@ -613,7 +613,7 @@ class myTests(TestCaseGui):
         self.assertEqual(vowels_in_mid('chEEEEEYYEErry'), 'chEEEEEYYEErry', "vowels_in_mid('chEEEEEYYEErry')")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
 </section>

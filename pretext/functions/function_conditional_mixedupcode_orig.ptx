@@ -74,7 +74,7 @@
             For example, <c>get_grade(90)</c> should return <c>'A'</c>.</p>
     </statement>
     <program xml:id="funct_conditional_mixedupcode_1_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def get_grade(percentage):
     # write code here
 
@@ -96,7 +96,7 @@ class myTests(TestCaseGui):
         self.assertEqual(get_grade(59),"E","get_grade(59)")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="funct_conditional_mixedupcode_2" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -141,7 +141,7 @@ For example, ``even_or_odd(-65)</c> should return <c>"This is odd."</c>. Note: F
 For example, ``even_or_odd(-65)</c> should return <c>"This is odd."</c>. Note: For this function, <c>num</c> is solely an integer.</p>
     </statement>
     <program xml:id="funct_conditional_mixedupcode_2_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def even_or_odd(num):
     # write code here
 
@@ -161,7 +161,7 @@ class myTests(TestCaseGui):
         self.assertEqual(even_or_odd(-43.0),"This is odd.","even_or_odd(-43.0)")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="funct_conditional_mixedupcode_3" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -240,7 +240,7 @@ myTests().main()
             should return <c>"Quadrant 1"</c>.</p>
     </statement>
     <program xml:id="funct_conditional_mixedupcode_3_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def which_quadrant(x, y):
     # write code here
 
@@ -260,7 +260,7 @@ class myTests(TestCaseGui):
         self.assertEqual(which_quadrant(2020.4, -4.5),"Quadrant 4","which_quadrant(2020.4, -4.5)")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="funct_conditional_mixedupcode_4" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -326,7 +326,7 @@ myTests().main()
             For example, <c>axis_or_origin(500, 0)</c> should return <c>"This coordinate is on the x-axis."</c>.</p>
     </statement>
     <program xml:id="funct_conditional_mixedupcode_4_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def axis_or_origin(x, y):
     # write code here
 
@@ -344,7 +344,7 @@ class myTests(TestCaseGui):
         self.assertEqual(axis_or_origin(500, 0),"This coordinate is on the x-axis.","axis_or_origin(500, 0)")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="funct_conditional_mixedupcode_5" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -442,7 +442,7 @@ myTests().main()
             For example, <c>num_to_day(1)</c> should return <c>"This is a weekday, and it's Monday."</c>.</p>
     </statement>
     <program xml:id="funct_conditional_mixedupcode_5_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def num_to_day(num):
     # write code here
 
@@ -465,7 +465,7 @@ class myTests(TestCaseGui):
         self.assertEqual(num_to_day(1001),"The number does not correspond to a day of the week.","num_to_day(1001)")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
 </section>

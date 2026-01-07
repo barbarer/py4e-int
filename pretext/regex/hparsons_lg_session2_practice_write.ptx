@@ -31,7 +31,7 @@
                 Replace <q>YOUR_REGEX</q> with your answer, but do not remove other symbols</p>
       </statement>
       <program xml:id="hparsons_lg_regex_1_write_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import re
 
 def match_word(word):
@@ -48,7 +48,7 @@ class myTests(TestCaseGui):
         self.assertEqual(match_word('grey'), True, 'Should match "grey"')
         self.assertEqual(match_word('gry'), False, 'Should not match "gry"')
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="hparsons_lg_regex_2_write">
@@ -57,7 +57,7 @@ myTests().main()
                 Replace <q>YOUR_REGEX</q> with your answer, but do not remove other symbols.</p>
       </statement>
       <program xml:id="hparsons_lg_regex_2_write_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import re
 
 def match_word(word):
@@ -76,7 +76,7 @@ class myTests(TestCaseGui):
         self.assertEqual(match_word('FRUIT'), False, 'Should not match "FRUIT"')
         self.assertEqual(match_word('vegetable'), False, 'Should not match "vegetable"')
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="hparsons_lg_regex_3_write">
@@ -85,7 +85,7 @@ myTests().main()
                 Replace <q>YOUR_REGEX</q> with your answer, but do not remove other symbols.</p>
       </statement>
       <program xml:id="hparsons_lg_regex_3_write_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import re
 
 def match_number(word):
@@ -105,7 +105,7 @@ class myTests(TestCaseGui):
         self.assertEqual(match_number('12345678'), False, 'Should not match "12345678"')
         self.assertEqual(match_number('words'), False, 'Should not match "words"')
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="hparsons_lg_regex_4_write">
@@ -115,7 +115,7 @@ myTests().main()
                 Replace <q>YOUR_REGEX</q> with your answer, but do not remove other symbols.</p>
       </statement>
       <program xml:id="hparsons_lg_regex_4_write_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import re
 
 def match_word(word):
@@ -135,7 +135,7 @@ class myTests(TestCaseGui):
         self.assertEqual(match_word('apple'), False, 'Should not match "apple"')
         self.assertEqual(match_word('tick'), False, 'Should not match "tick"')
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="hparsons_lg_regex_5_write">
@@ -144,7 +144,7 @@ myTests().main()
                 Note that we are using re.findall(), so please make sure your regex would return the full match string.</p>
       </statement>
       <program xml:id="hparsons_lg_regex_5_write_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import re
 
 def find_price(content):
@@ -159,7 +159,7 @@ class myTests(TestCaseGui):
         self.assertEqual(find_price('I spent $23.32 for the book.'), ['$23.32'], 'I spent $23.32 for the book.')
         self.assertEqual(find_price('The gift cost me $400, and the cake was $40.26.'), ['$400', '$40.26'], 'The gift cost me $400, and the cake was $40.26.')
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="hparsons_lg_regex_6_write">
@@ -170,7 +170,7 @@ myTests().main()
                 Replace <q>YOUR_REGEX</q> with your answer, but do not remove other symbols.</p>
       </statement>
       <program xml:id="hparsons_lg_regex_6_write_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import re
 
 def match_URL(content):
@@ -190,7 +190,7 @@ class myTests(TestCaseGui):
         self.assertEqual(match_URL('abc*.com'), False, 'Should not match "abc*.com"')
         self.assertEqual(match_URL('abc..com'), False, 'Should not match "abc..com"')
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
   </subsection>

@@ -4,7 +4,7 @@
   <p>Below is a selection of images that you can use in the programs in this section.</p>
   <p>We can also change which part of the picture we read and manipulate.  When we are changing several colors at once we can create a new pixel with the desired color using <c>Pixl(red,green,blue)</c> as shown below on line 20.</p>
   <program xml:id="Image_Negate_Quarter" interactive="activecode" language="python">
-    <input>
+    <code>
 # STEP 1: USE THE IMAGE LIBRARY
 from image import *
 
@@ -32,11 +32,11 @@ for x in range(halfWidth):
 # STEP 7: SHOW THE RESULT
 win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
-        </input>
+        </code>
   </program>
   <p>What happens if we skip every other x and y as we manipulate the colors?  Maybe make the green 255 and the blue 0?</p>
   <program xml:id="Image_Every_Other" interactive="activecode" language="python">
-    <input>
+    <code>
 # STEP 1: USE THE IMAGE LIBRARY
 from image import *
 
@@ -60,11 +60,11 @@ for x in range(0,img.getWidth(),2):
 # STEP 7: SHOW THE RESULT
 win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
-        </input>
+        </code>
   </program>
   <p>Let's try side-to-side copying.</p>
   <program xml:id="Image_Copy_Left" interactive="activecode" language="python">
-    <input>
+    <code>
 # STEP 1: USE THE IMAGE LIBRARY
 from image import *
 
@@ -91,7 +91,7 @@ for x in range(halfway):
 # STEP 7: SHOW THE RESULT
 win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
-        </input>
+        </code>
   </program>
   <exercise label="image_6_1_Image_Mirror_Q1">
     <statement>
@@ -140,7 +140,7 @@ img.draw(win)
     <program interactive="" language=""/>
     <solution>
       <program xml:id="image_6_1_WSa" language="python">
-        <input>
+        <code>
 # USE THE IMAGE LIBRARY
 from image import *
 
@@ -168,7 +168,7 @@ for x in range(halfwayWidth):
 # SHOW THE RESULT
 win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
-        </input>
+        </code>
       </program>
     </solution>
   </exercise>

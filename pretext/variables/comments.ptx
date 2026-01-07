@@ -10,17 +10,17 @@
             called <em>comments</em>, and in Python they start with the <c>#</c>
             symbol:</p>
   <program language="python">
-    <input>
+    <code>
 # compute the percentage of the hour that has elapsed
 percentage = (minute * 100) / 60
-</input>
+</code>
   </program>
   <p>In this case, the comment appears on a line by itself. You can also put
             comments at the end of a line:</p>
   <program language="python">
-    <input>
+    <code>
 percentage = (minute * 100) / 60     # percentage of an hour
-</input>
+</code>
   </program>
   <p>Everything from the <c>#</c> to the end of the line is ignored; it
             has no effect on the program.</p>
@@ -68,15 +68,15 @@ percentage = (minute * 100) / 60     # percentage of an hour
   </exercise>
   <p>This comment is redundant with the code and useless:</p>
   <program language="python">
-    <input>
+    <code>
 v = 5     # assign 5 to v
-</input>
+</code>
   </program>
   <p>This comment contains useful information that is not in the code:</p>
   <program language="python">
-    <input>
+    <code>
 v = 5     # velocity in meters/second.
-</input>
+</code>
   </program>
   <p>Good variable names can reduce the need for comments, but long names can
             make complex expressions hard to read, so there is a trade-off.</p>

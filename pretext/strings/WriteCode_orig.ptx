@@ -6,7 +6,7 @@
       <p>Fix line 2 so that it prints <q>Hi</q> instead of <q>hi</q>.</p>
     </statement>
     <program xml:id="str-ex-hiacq_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 s1 = "hi"
 s1.capitalize()
 print(s1)
@@ -19,7 +19,7 @@ class myTests(TestCaseGui):
         self.assertEqual(s1,"Hi")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="str-ex-hiansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -48,7 +48,7 @@ myTests().main()
       <p>Fix the code so that only <q>meow</q> is printed.</p>
     </statement>
     <program xml:id="str-ex-meowacq_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 sentence = "The cat goes meow."
 s2 = [16:13]sentence
 print(s2)
@@ -61,7 +61,7 @@ class myTests(TestCaseGui):
             self.assertEqual(s2,"meow")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="str-ex-meowansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -89,7 +89,7 @@ myTests().main()
             and print it. Save the string as s1. It should print <q>The length is 17</q>.</p>
     </statement>
     <program xml:id="str-ex-eggsacq_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -99,7 +99,7 @@ class myTests(TestCaseGui):
         self.assertEqual(s1,"The length is 17")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="str-ex-eggsansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -129,7 +129,7 @@ myTests().main()
             return <c>3</c>. <em>Hint: use the</em> <c>count</c> <em>method.</em></p>
     </statement>
     <program xml:id="str-ex-countacq_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -142,7 +142,7 @@ class myTests(TestCaseGui):
         self.assertEqual(count('racecar','r'),2,"Tested 'r' in 'racecar'")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="str-ex-countansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -178,7 +178,7 @@ myTests().main()
             and then use the <c>float</c> function to convert the extracted string into a floating point number called <c>num</c>.</p>
     </statement>
     <program xml:id="str-ex-floatacq_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 string = "X-DSPAM-Confidence: 0.8475"
 
 
@@ -190,7 +190,7 @@ class myTests(TestCaseGui):
         self.assertEqual(num,0.8475)
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="str-ex-floatansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -233,13 +233,13 @@ myTests().main()
             Can you fix it?</p>
     </statement>
     <program xml:id="str-ex-ducksacq_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 prefixes = "JKLMNOPQ"
 suffix = "ack"
 
 for letter in prefixes:
     print(letter + suffix)
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="str-ex-ducksansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -279,7 +279,7 @@ for letter in prefixes:
       <p>Write a function <c>numDigits</c> that will return the number of digits in an integer <c>n</c>.</p>
     </statement>
     <program xml:id="str-ex-digitsacq_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def numDigits(n):
     # your code here
 
@@ -294,7 +294,7 @@ class myTests(TestCaseGui):
         self.assertEqual(numDigits(55),2,"Tested numDigits on input of 55")
         self.assertEqual(numDigits(1352),4,"Tested numDigits on input of 1352")
         self.assertEqual(numDigits(444),3,"Tested numDigits on input of 444")
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="str-ex-digitsansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -331,7 +331,7 @@ class myTests(TestCaseGui):
             Name the final string <c>statement</c>.</p>
     </statement>
     <program xml:id="str-ex-nameacq_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 s1 = "hi"
 s2 = "My name is Bob, and he and I love to eat ham."
 
@@ -343,7 +343,7 @@ class myTests(TestCaseGui):
         self.assertEqual(statement,"Hi my name is Bob and I am 2")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="str-ex-nameansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -377,9 +377,9 @@ myTests().main()
             prints the first letter of their name in lowercase.</p>
     </statement>
     <program xml:id="str-ex-nameInputacq_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="str-ex-nameInputansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -421,9 +421,9 @@ myTests().main()
             input in all lowercase, as well as the length of their string.</p>
     </statement>
     <program xml:id="str-ex-loweracq_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="str-ex-loweransw" numbered="yes" adaptive="yes" indentation="hide" language="python">

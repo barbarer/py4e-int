@@ -42,12 +42,12 @@
     <p>For example, to count the number of items in a list, we would write the
                 following <c>for</c> loop:</p>
     <program xml:id="codelens561" interactive="codelens" language="python">
-      <input>
+      <code>
 count = 0
 for itervar in [3, 41, 12, 9, 74, 15]:
     count = count + 1
 print('Count: ', count)
-    </input>
+    </code>
     </program>
     <p>We set the variable <c>count</c> to zero before the loop starts,
                 then we write a <c>for</c> loop to run through the list of
@@ -59,12 +59,12 @@ print('Count: ', count)
       <statement>
         <p>Q-2: Which variable is the iteration variable in the code block?</p>
         <program language="python">
-          <input>
+          <code>
 count = 0
 for itervar in [3, 41, 12, 9, 74, 15]:
     count = count + 1
 print('Count: ', count)
-</input>
+</code>
         </program>
       </statement>
       <choices>
@@ -113,12 +113,12 @@ print('Count: ', count)
     <p>Another similar loop that computes the total of a set of numbers is as
                 follows:</p>
     <program xml:id="codelens562" interactive="codelens" language="python">
-      <input>
+      <code>
 total = 0
 for itervar in [3, 41, 12, 9, 74, 15]:
     total = total + itervar
 print('Total: ', total)
-    </input>
+    </code>
     </program>
     <p>In this loop we <em>do</em> use the <em>iteration variable</em>.
                 Instead of simply adding one to the <c>count</c> as in the
@@ -161,7 +161,7 @@ print('Total: ', total)
     <p>To find the largest value in a list or sequence, we
                 construct the following loop:</p>
     <program xml:id="itr-section6_1" interactive="activecode" language="python">
-      <input>
+      <code>
 largest = None
 print('Before:', largest)
 for itervar in [3, 41, 12, 9, 74, 15]:
@@ -169,7 +169,7 @@ for itervar in [3, 41, 12, 9, 74, 15]:
         largest = itervar
     print('Loop:', itervar, largest)
 print('Largest:', largest)
-        </input>
+        </code>
     </program>
     <p>When the program executes, the output is as follows:</p>
     <pre>Before: None
@@ -244,7 +244,7 @@ Largest: 74</pre>
     <p>To compute the smallest number, the code is very similar with one small
                 change:</p>
     <program xml:id="itr-section6_2" interactive="activecode" language="python">
-      <input>
+      <code>
 smallest = None
 print('Before:', smallest)
 for itervar in [3, 41, 12, 9, 74, 15]:
@@ -252,7 +252,7 @@ for itervar in [3, 41, 12, 9, 74, 15]:
         smallest = itervar
     print('Loop:', itervar, smallest)
 print('Smallest:', smallest)
-        </input>
+        </code>
     </program>
     <p>Again, <c>smallest</c> is the <q>smallest so far</q> before, during,
                 and after the loop executes. When the loop has completed,
@@ -263,7 +263,7 @@ print('Smallest:', smallest)
     <p>The following is a simple version of the Python built-in
                 <c>min()</c> function:</p>
     <program xml:id="itr-section6_3" interactive="activecode" language="python">
-      <input>
+      <code>
 def min(values):
     smallest = None
     for value in values:
@@ -273,7 +273,7 @@ def min(values):
 
 nums = [1,2,3,4,5]
 print(min(nums))
-        </input>
+        </code>
     </program>
     <p>In the function version of the <q>smallest</q> code, we removed all of the
                 <c>print</c> statements so as to be equivalent to the

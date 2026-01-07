@@ -51,7 +51,7 @@
             Then define the <c>__str__</c> method to return the <c>name code</c>.  For example, <c>print(a)</c> when <c>a = Airport("Detroit", "DTW")</c> would print <c>Detroit DTW</c>.</p>
     </statement>
     <program xml:id="Classes_Basic_Airport_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 a = Airport("Detroit", "DTW")
 print(a)
@@ -67,7 +67,7 @@ class myTests(TestCaseGui):
         self.assertEqual(a.__str__(), "Atlanta ATL", "testing __str__ for Atlanta")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Classes_Basic_Song_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -120,7 +120,7 @@ myTests().main()
             Then define the <c>__str__</c> method to return the <c>title, len</c>.  For example, <c>print(s)</c> when <c>s = Song('Respect',150)</c> would print <q>Respect, 150</q>.</p>
     </statement>
     <program xml:id="Classes_Basic_Song_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 s = Song('Respect',150)
 print(s)
@@ -136,7 +136,7 @@ class myTests(TestCaseGui):
         self.assertEqual(s.__str__(), "Truth Hurts, 183", "testing __str__ with Truth Hurts")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Classes_Basic_Cat_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -196,7 +196,7 @@ myTests().main()
             Then define the <c>make_sound</c> method to return <c>"Meow"</c>.</p>
     </statement>
     <program xml:id="Classes_Basic_Cat_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 c = Cat("Fluffy", 3)
 print(c)
@@ -215,7 +215,7 @@ class myTests(TestCaseGui):
         self.assertEqual(d.make_sound(), "Meow", "testing make_sound with Spike")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Classes_Basic_Account_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -231,7 +231,7 @@ myTests().main()
             if <c>a = Account(32, 100)</c> and <c>a.deposit(50)</c> is executed, <c>print(a)</c> should print <q>32, 150</q>.</p>
     </statement>
     <program xml:id="Classes_Basic_Account_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 a = Account(32, 100)
 a.deposit(50)
@@ -252,7 +252,7 @@ class myTests(TestCaseGui):
         self.assertEqual(b.__str__(), "2, 275.75", "testing __str__ on b after deposit")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Classes_Basic_FortuneTeller_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -306,7 +306,7 @@ myTests().main()
       <p>Write a class <c>FortuneTeller</c> with an <c>__init__</c> method that takes a list of fortunes as strings and saves that as an attribute.  Then create a <c>tell_fortune</c> method that returns one of the fortunes in the list at random.</p>
     </statement>
     <program xml:id="Classes_Basic_FortuneTeller_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 f = FortuneTeller(["You will get an A", "You will have a great day", "You will fall", "You will laugh"])
 for i in range(5):
@@ -324,7 +324,7 @@ class myTests(TestCaseGui):
             self.assertIn(s, l, "checking that the fortune in is the list")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Classes_Basic_Student_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -377,7 +377,7 @@ myTests().main()
       <p>Write a class <c>Student</c> with an <c>__init__</c> method that takes a student's name as a string and a list of exam scores as integers. Then create a <c>__str__</c> method that returns the <q>name: average exam score</q> rounded to the nearest integer. For example, <c>print(s)</c> when <c>s = Student("Sarah", [91,92,97])</c> would print <c>Sarah: 93.0</c>.</p>
     </statement>
     <program xml:id="Classes_Basic_Student_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 class Student:
      #write code here
 
@@ -395,7 +395,7 @@ class myTests(TestCaseGui):
         self.assertEqual(s.__str__(), "James: 83.0", "Checking that the Student's average exam score is correct")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Classes_Basic_Encoder_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -466,7 +466,7 @@ myTests().main()
       <p>Write a class <c>Encoder</c> with an initializer method that takes in a sentence as a string. Then create a string method that returns <q>string: length of sentence</q>. Lastly, create a consonants method that returns the sentence without vowels, all lowercase. For example, <c>print(e)</c> when <c>e = Encoder("I love Python")</c> would print <c>I love Python: 13</c> and <c>print(e.consonants())</c> would print `` lv pythn``.</p>
     </statement>
     <program xml:id="Classes_Basic_Encoder_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 class Encoder:
      #write code here
 
@@ -487,7 +487,7 @@ class myTests(TestCaseGui):
         self.assertEqual(c2.consonants(), "brhm lncln ws th 16th prsdnt f th ntd stts.", "Checking that all vowels have been removed from sentence and all chars converted to lowercase")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Classes_Basic_CharFrequency_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -533,7 +533,7 @@ myTests().main()
       <p>Write a class <c>CharFrequency</c> with an initializer method that takes in a sentence as a string. Then create a string method that returns <q>The most common character in the sentence is x.</q> In the case of tiebreakers, return the character that comes last in alphabetical order. For example, <c>print(c)</c> when <c>c = CharFreequency("I love Python")</c> would print <c>The most common character in the sentence is o.</c></p>
     </statement>
     <program xml:id="Classes_Basic_CharFrequency_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 class CharFrequency:
      #write code here
 
@@ -554,7 +554,7 @@ class myTests(TestCaseGui):
         self.assertEqual(m2.__str__(), "The most common character in the sentence is 5.", "Checking that the most common char is returned")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Classes_Basic_Loan_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -605,7 +605,7 @@ myTests().main()
       <p>Write a class <c>Loan</c> with an initializer method that takes in an integer loan_amt, a float interest_rate and integer years. Then write a string method that returns <q>Your loan is &#x2018;'loan_amt'' for &#x2018;'years'' years at an interest rate of &#x2018;'interest_rate''.</q> Write another method called total_payment that calculates the total amount of loan payment based on the interest rate and number of years. Use the formula (loan_amt * (1 + interest_rate/100) ^ years). Also round your total payment to two decimal places. We're assuming that you are paying on an annual basis. For example, <c>print(l)</c> when <c>l = Loan(10000, 5, 10)</c> would print <c>Your loan is $10000 for 10 years at an interest rate of 5%.</c> and <c>print(l.total_payment())</c> would print <c>16288.95</c> as a float.</p>
     </statement>
     <program xml:id="Classes_Basic_Loan_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 class Loan:
      #write code here
 
@@ -628,7 +628,7 @@ class myTests(TestCaseGui):
         self.assertEqual(l1.__str__(), "Your loan is $10000 for 10 years at an interest rate of 5%.", "Checking the string method")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Classes_Basic_Cart1_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -685,7 +685,7 @@ myTests().main()
       <p>Create a class <c>Cart</c> that takes in a dictionary price_dict with keys as product names and values as the product price. The initializer method also creates a new empty list called cart_list that will contain tuples in the format (item, quantity). The class also has an add_item and a calculate_total method. The add_item method will take in an item and quantity you wish to purchase and append those to the cart. The calculate_total method should calculate and return the total amount of your purchase for all of the items in your cart. For example, when <c>c = Cart({<q>Notebook</q>: 1.99, <q>Pen</q>: 2.50, <q>Paper</q>: 1.00})</c> and a user wants to purchase 3 pens by calling c.add_item(<q>Pen</q>, 3), then print(c.calculate_total) would print <c>7.50</c> as a float.</p>
     </statement>
     <program xml:id="Classes_Basic_Cart1_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 class Cart:
      #write code here
 
@@ -705,7 +705,7 @@ class myTests(TestCaseGui):
         self.assertEqual(c.calculate_total(), 5.93, "Checking calculate_total method")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
 </section>

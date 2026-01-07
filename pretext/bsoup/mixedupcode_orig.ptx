@@ -51,7 +51,7 @@
             Since websites are frequently updated, the returned list of image links may change as image links get added and deleted.</p>
     </statement>
     <program xml:id="bsoup_mixedupcode_1_ac_v2_editor" interactive="activecode" language="python3">
-      <input>
+      <code>
 
 
 ====
@@ -69,7 +69,7 @@ class myTests(unittest.TestCase):
         self.assertEqual(img_links('https://en.wikipedia.org/wiki/Michigan_Stadium'),list1,"img_links('https://en.wikipedia.org/wiki/Michigan_Stadium')")
 
 unittest.main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="bsoup_mixedupcode_2" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -119,7 +119,7 @@ unittest.main()
             For example, <c>shapiro_link('https://en.wikipedia.org/wiki/University_of_Michigan')</c> should return <c>"https://en.wikipedia.org/wiki/Shapiro_Undergraduate_Library"</c>.</p>
     </statement>
     <program xml:id="bsoup_mixedupcode_2_ac_v2_editor" interactive="activecode" language="python3">
-      <input>
+      <code>
 
 
 ====
@@ -131,7 +131,7 @@ class myTests(unittest.TestCase):
         self.assertEqual(shapiro_link('https://en.wikipedia.org/wiki/University_of_Michigan'),"https://en.wikipedia.org/wiki/Shapiro_Undergraduate_Library","shapiro_link('https://en.wikipedia.org/wiki/University_of_Michigan')")
 
 unittest.main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="bsoup_mixedupcode_3" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -198,7 +198,7 @@ unittest.main()
             the returned list of links may change as links get added and deleted.</p>
     </statement>
     <program xml:id="bsoup_mixedupcode_3_ac_v2_editor" interactive="activecode" language="python3">
-      <input>
+      <code>
 
 
 ====
@@ -217,7 +217,7 @@ class myTests(unittest.TestCase):
         self.assertEqual(link_or_none('https://umich.edu'),lst,"link_or_none('https://umich.edu')")
 
 unittest.main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="bsoup_mixedupcode_4" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -289,7 +289,7 @@ unittest.main()
             <c>{'106': 'Introduction to programming with a focus on applications in informatics.  Covers the fundamental elements of a modern programming language and how to access data on the internet.  Explores how humans and technology complement one another, including techniques used to coordinate groups of people working together on software development.', '206': 'Students develop their core programming and software development skills, to build competency and literacy in important areas that includes basic data structures, debugging and testing, using distributed code repositories, pattern matching, and programmatic gathering and processing of data. Applications in assignments and labs are oriented around data manipulation.', '330': "Data analysis is crucial to application evaluation, as well as understanding users' information needs.  When the data required are numerous we need an automated way to gather, parse, and summarize the data.  In this course, you will learn to use Python and its modules to accomplish these tasks."}</c>.</p>
     </statement>
     <program xml:id="bsoup_mixedupcode_4_ac_v2_editor" interactive="activecode" language="python3">
-      <input>
+      <code>
 
 
 
@@ -312,7 +312,7 @@ class myTests(unittest.TestCase):
         self.assertEqual(descriptions('https://www.si.umich.edu/programs/courses/', ['106', '206', '330']),dictionary,"descriptions('https://www.si.umich.edu/programs/courses/', ['106', '206', '330'])")
 
 unittest.main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="bsoup_mixedupcode_5" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -367,7 +367,7 @@ unittest.main()
             Since websites are frequently updated, the returned list of links may change as links get added and deleted.</p>
     </statement>
     <program xml:id="bsoup_mixedupcode_5_ac_v2_editor" interactive="activecode" language="python3">
-      <input>
+      <code>
 
 
 ====
@@ -385,7 +385,7 @@ class myTests(unittest.TestCase):
         self.assertEqual(url_links('https://www.si.umich.edu/programs/student-life-umsi'),lst,"url_links('https://www.si.umich.edu/programs/student-life-umsi')")
 
 unittest.main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="bsoup_mixedupcode_6" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -453,7 +453,7 @@ unittest.main()
             the returned number may change as links get added and deleted.</p>
     </statement>
     <program xml:id="bsoup_mixedupcode_6_ac_v2_editor" interactive="activecode" language="python3">
-      <input>
+      <code>
 
 ====
 import unittest
@@ -474,7 +474,7 @@ class myTests(unittest.TestCase):
             self.assertEqual(bsoup_num_links(link),length,"bsoup_num_links(link)")
 
 unittest.main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="bsoup_mixedupcode_7" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -529,7 +529,7 @@ unittest.main()
             using BeautifulSoup. Since websites are frequently updated, the returned list of image links may change as image links get added and deleted.</p>
     </statement>
     <program xml:id="bsoup_mixedupcode_7_ac_v2_editor" interactive="activecode" language="python3">
-      <input>
+      <code>
 
 ====
 import unittest
@@ -548,7 +548,7 @@ class myTests(unittest.TestCase):
             self.assertEqual(img_links(link),list1,"img_links(link)")
 
 unittest.main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="bsoup_mixedupcode_8" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -623,7 +623,7 @@ unittest.main()
             the returned list of dictionaries may change as span tags, attributes, and values get added, deleted, or modified.</p>
     </statement>
     <program xml:id="bsoup_mixedupcode_8_ac_v2_editor" interactive="activecode" language="python3">
-      <input>
+      <code>
 
 ====
 import unittest
@@ -642,7 +642,7 @@ class myTests(unittest.TestCase):
             self.assertEqual(span_attrs(link),list1,"span_attrs(link)")
 
 unittest.main()
-        </input>
+        </code>
     </program>
   </exercise>
 </section>

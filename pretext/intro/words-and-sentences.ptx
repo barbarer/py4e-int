@@ -81,11 +81,13 @@ def       from      nonlocal    while</pre>
             but for now we will focus on the Python equivalent of <q>speak</q> (in
             human-to-dog language). The nice thing about telling Python to speak is
             that we can even tell it what to say by giving it a message in quotes:</p>
-  <program xml:id="intro1-active-hello" interactive="activecode" language="python">
-    <input>
+  <exercise label="hello" xml:id="hello">
+  <program label="intro1-active-hello-prg" xml:id="intro1-active-hello" interactive="activecode" language="python">
+    <code>
 print('Hello world!')
-        </input>
+        </code>
   </program>
+  </exercise>
   <p>And we have even written our first syntactically correct Python
             sentence. Our sentence starts with the function <em>print</em>
             followed by a string of text of our choosing enclosed in single quotes.

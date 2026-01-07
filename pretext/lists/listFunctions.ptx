@@ -8,7 +8,7 @@
   <p>There are a number of built-in functions that can be used on lists that
             allow you to quickly look through a list without writing your own loops:</p>
   <program xml:id="listBuiltIn" interactive="activecode" language="python">
-    <input>
+    <code>
 nums = [3, 41, 12, 9, 74, 15]
 print(len(nums))
 
@@ -19,7 +19,7 @@ print(min(nums))
 print(sum(nums))
 
 print(sum(nums)/len(nums))
-        </input>
+        </code>
   </program>
   <p>The <c>sum()</c> function only works when the list elements are
             numbers. The other functions (<c>max()</c>, <c>len()</c>,
@@ -51,7 +51,7 @@ print(sum(nums)/len(nums))
             of numbers entered by the user using a list.</p>
   <p>First, the program to compute an average without a list:</p>
   <program xml:id="averageNoList" interactive="activecode" language="python">
-    <input>
+    <code>
 total = 0
 count = 0
 while (True):
@@ -63,7 +63,7 @@ while (True):
 
 average = total / count
 print('Average:', average)
-        </input>
+        </code>
   </program>
   <p>In this program, we have <c>count</c> and <c>total</c>
             variables to keep the number and running total of the user's numbers as
@@ -71,7 +71,7 @@ print('Average:', average)
   <p>We could simply remember each number as the user entered it and use
             built-in functions to compute the sum and count at the end.</p>
   <program xml:id="averageList" interactive="activecode" language="python">
-    <input>
+    <code>
 numlist = list()
 while (True):
     inp = input('Enter a number: ')
@@ -81,7 +81,7 @@ while (True):
 
 average = sum(numlist) / len(numlist)
 print('Average:', average)
-        </input>
+        </code>
   </program>
   <p>We make an empty list before the loop starts, and then each time we have
             a number, we append it to the list. At the end of the program, we simply

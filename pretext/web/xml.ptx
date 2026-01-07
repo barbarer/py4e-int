@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<exercises xml:id="web_extensible-markup-language-xml">
+<worksheet xml:id="web_extensible-markup-language-xml">
   <title>eXtensible Markup Language - XML</title>
   <introduction>
 <idx>XML</idx>
@@ -22,7 +22,7 @@
   <p>For more information on XML see <url href="https://www.w3schools.com/xml/default.asp" visual="https://www.w3schools.com/xml/default.asp">https://www.w3schools.com/xml/default.asp</url>.</p>
   <p>Here is a sample of an XML document:</p>
   <program language="{.xml}">
-    <input>
+    <code>
 &lt;person&gt;
   &lt;name&gt;Chuck&lt;/name&gt;
   &lt;phone type="intl"&gt;
@@ -30,7 +30,7 @@
   &lt;/phone&gt;
   &lt;email hide="yes" /&gt;
 &lt;/person&gt;
-</input>
+</code>
   </program>
   <p>Each pair of opening (e.g., <c>&lt;person&gt;</c>) and closing tags
             (e.g., <c>&lt;\person&gt;</c>) represents a <em>element</em> or <em>node</em> with the same
@@ -38,6 +38,8 @@
             some attributes (e.g., <c>hide</c>), and other nested elements. If an XML
             element is empty (i.e., has no content), then it may be depicted by
             a self-closing tag (e.g., <c>&lt;email /&gt;</c>).</p>
+            </introduction>
+            
   <exercise label="webXML_MC_tags">
     <statement>
       <p>csp-10-2-1: In XML, a pair of opening and closing tags (&lt;&gt; and &lt;\&gt;) represent what? Select all that apply.</p>
@@ -174,7 +176,7 @@
       <cline><area correct="no">&lt;/person&gt;</area></cline>
     </areas>
   </exercise>
-</introduction>
+
   <subexercises xml:id="web_properly-formatted-xml">
     <title>Properly Formatted XML</title>
     <p>Solve the next couple of problems and think about what are the rules for properly formatted XML.</p>
@@ -448,4 +450,4 @@
       </choices>
     </exercise>
   </subexercises>
-</exercises>
+</worksheet>

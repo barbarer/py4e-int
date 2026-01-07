@@ -4,7 +4,7 @@
   <p>As we have seen with turtles and words, there are some general patterns in the programs that we write.  With turtles, there was a polygon pattern (based on the Total Turtle Trip Theorem).  When working with words and numbers, we used the accumulator pattern.</p>
   <p>The image processing pattern is shown in the program below.  This program changes the red to the original green, the green to the original blue, and the red to the original green.  But, mostly we are trying to describe a pattern that you can use to create many image effects.</p>
   <program xml:id="Image_Pattern" interactive="activecode" language="python">
-    <input>
+    <code>
 # STEP 1: USE THE IMAGE LIBRARY
 from image import *
 
@@ -31,7 +31,7 @@ for p in pixels:
 # STEP 7: SHOW THE RESULT
 win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
-        </input>
+        </code>
   </program>
   <p>Here are our six steps:</p>
   <p>

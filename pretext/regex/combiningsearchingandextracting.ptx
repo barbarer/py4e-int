@@ -62,14 +62,14 @@ X-DSPAM-Probability: 0.0000</pre>
             and &#x2018;:', followed by a space and any number, where the number can include a decimal</p>
     </statement>
     <program xml:id="re_combo_ac1_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 import re
 hand = open('mbox-short.txt')
 for line in hand:
     line = line.rstrip()
     if re.search('^X\S*: [0-9.]+', line):
         print(line)
-        </input>
+        </code>
     </program>
   </exercise>
   <p>When we run the program, we see the data nicely filtered to show only
@@ -91,14 +91,14 @@ for line in hand:
             and &#x2018;:', followed by a space and any number. The number can contain a decimal</p>
     </statement>
     <program xml:id="re_combo_ac2_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 import re
 s = ['X-DSPAM-Confidence: 0.8475', 'X-DSPAM-Probability: 0.0000', 'X-DSPAM-Confidence: 0.6178', 'X-DSPAM-Probability: 0.0000']
 for item in s:
     x = re.findall('^X\S*: ([0-9.]+)', item)
     if len(x) &gt; 0:
         print(x)
-        </input>
+        </code>
     </program>
   </exercise>
   <p>Instead of calling <c>search()</c>, we add parentheses around the
@@ -120,7 +120,7 @@ for item in s:
             and &#x2018;.' Then print the number if it is greater than zero</p>
     </statement>
     <program xml:id="re_combo_ac3_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 import re
 hand = open('mbox-short.txt')
 for line in hand:
@@ -128,7 +128,7 @@ for line in hand:
     x = re.findall('^Details:.*rev=([0-9.]+)', line)
     if len(x) &gt; 0:
         print(x)
-        </input>
+        </code>
     </program>
   </exercise>
   <p>Translating our regular expression, we are looking for lines that start
@@ -212,7 +212,7 @@ for line in hand:
             digit number between 00 and 99, followed by &#x2018;:'</p>
     </statement>
     <program xml:id="re_combo_ac4_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 import re
 hand = open('mbox-short.txt')
 for line in hand:
@@ -220,7 +220,7 @@ for line in hand:
     x = re.findall('^From .* ([0-9][0-9]):', line)
     if len(x) &gt; 0:
         print(x)
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="re-combo-dnd">
@@ -230,31 +230,31 @@ for line in hand:
     <feedback>
       <p>Look above for references.</p>
     </feedback>
-    <matches>
-      <match order="1">
+    <cardsort>
+      <match>
         <premise>^</premise>
         <response>Matches with the beginning of the line.</response>
       </match>
-      <match order="2">
+      <match>
         <premise>.</premise>
         <response>Matches any character (a wildcard).</response>
       </match>
-      <match order="3">
+      <match>
         <premise>\S</premise>
         <response>Matches a non-whitespace character.</response>
       </match>
-      <match order="4">
+      <match>
         <premise>*</premise>
         <response>Match the previous character(s) zero or more times (greedy).</response>
       </match>
-      <match order="5">
+      <match>
         <premise>+</premise>
         <response>Match the previous character(s) one or more times (greedy).</response>
       </match>
-      <match order="6">
+      <match>
         <premise>()</premise>
         <response>Allow you to extract a particular subset of the matched string rather than the whole string.</response>
       </match>
-    </matches>
+    </cardsort>
   </exercise>
 </section>

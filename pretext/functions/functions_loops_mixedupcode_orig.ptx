@@ -45,7 +45,7 @@
             would return <c>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</c>.</p>
     </statement>
     <program xml:id="Functions_Loops_MixedUpCode_1_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def nums_x_to_y():
     # write code here
 
@@ -59,7 +59,7 @@ class myTests(TestCaseGui):
         self.assertEqual(nums_x_to_y(2,9),[2, 3, 4, 5, 6, 7, 8, 9],"nums_x_to_y(2,9)")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Functions_Loops_MixedUpCode_2" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -108,7 +108,7 @@ myTests().main()
             list with numbers up to <c>y</c> by skip counting by <c>x</c>. For example, <c>count_by_x_to_y(5,20)</c> should return <c>[0, 5, 10, 15, 20]</c>.</p>
     </statement>
     <program xml:id="Functions_Loops_MixedUpCode_2_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def count_by_x_to_y():
     # write code here
 
@@ -123,7 +123,7 @@ class myTests(TestCaseGui):
         self.assertEqual(count_by_x_to_y(5,6),[0, 5],"count_by_x_to_y(5,6)")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Functions_Loops_MixedUpCode_3" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -163,7 +163,7 @@ myTests().main()
             seconds to 1, and then returns that list. Note: <c>seconds</c> must be greater than or equal to 1. For example, <c>countdown(3)</c> would return <c>[3, 2, 1]</c>.</p>
     </statement>
     <program xml:id="Functions_Loops_MixedUpCode_3_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 # write code here
 
 ====
@@ -176,7 +176,7 @@ class myTests(TestCaseGui):
         self.assertEqual(countdown(4),[4, 3, 2, 1],"countdown(4)")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Functions_Loops_MixedUpCode_4" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -234,7 +234,7 @@ myTests().main()
             Then, return <c>result</c>. For example, <c>add_odds_or_floor_division([-3, -5, -2, -9, 7.5, 10001, -5.3])</c> would return -1887.0.</p>
     </statement>
     <program xml:id="Functions_Loops_MixedUpCode_4_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 # write code here
 
 ====
@@ -247,7 +247,7 @@ class myTests(TestCaseGui):
         self.assertAlmostEqual(add_odds_or_floor_division([-3, -5, -2, -9, 7.5, 10001, -5.3]),-1887.0,1,"add_odds_or_floor_division([-3, -5, -2, -9, 7.5, 10001, -5.3])")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Functions_Loops_MixedUpCode_5" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -310,7 +310,7 @@ myTests().main()
             For example, <c>strings_chars_less_than_len(['hello', 'bye', 'me', 'mississippi', 'miss'])</c> would return [&#x2018;bye', &#x2018;me', &#x2018;miss'].</p>
     </statement>
     <program xml:id="Functions_Loops_MixedUpCode_5_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 # write code here
 
 ====
@@ -323,7 +323,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Functions_Loops_MixedUpCode_6" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -378,7 +378,7 @@ myTests().main()
             For example, <c>print_lists([3, 2], [8, 4])</c> would return <c>["Num1: 3, Num2: 8", "Num1: 2, Num2: 4"]</c>.</p>
     </statement>
     <program xml:id="Functions_Loops_MixedUpCode_6_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 # write code here
 
 ====
@@ -392,7 +392,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="Functions_Loops_MixedUpCode_7" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -447,7 +447,7 @@ myTests().main()
             For example, <c>sum_lists([3, 2], [8, 4])</c> would return <c>[11, 6]</c>.</p>
     </statement>
     <program xml:id="Functions_Loops_MixedUpCode_7_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 # write code here
 
 ====
@@ -461,7 +461,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
 </section>

@@ -18,12 +18,12 @@
     </introduction>
     <p>The simplest form of a conditional statement is the <c>if</c> statement:</p>
   <program xml:id="cndtnlPositive" interactive="codelens" language="python">
-    <input>
+    <code>
 x = 2
 if x &gt; 0 :
     print('x is positive')
 print('All done.')
-    </input>
+    </code>
   </program>
   <p>The first line is the <em>header line</em>. The boolean expression after the <c>if</c> keyword is called the
             <em>condition</em>. We end the header line with a
@@ -56,30 +56,30 @@ print('All done.')
             written yet). In that case, you can use the <c>pass</c> statement,
             which does nothing.</p>
   <program xml:id="cndtnlNegative" interactive="codelens" language="python">
-    <input>
+    <code>
 x = -3
 if x &lt; 0:
     pass # need to handle negative values!
 print('All done.')
-    </input>
+    </code>
   </program>
   <p>If you enter an <c>if</c> statement in the Python interpreter, the
             prompt will change from three chevrons to three dots to indicate you are
             in the middle of a block of statements, as shown below:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; x = 3
 &gt;&gt;&gt; if x &lt; 10:
 ...    print('Small')
 ...
 Small
 &gt;&gt;&gt;
-</input>
+</code>
   </program>
   <p>When using the Python interpreter, you must leave a blank line at the end of a
             block; otherwise, Python will return an error:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; x = 3
 &gt;&gt;&gt; if x &lt; 10:
 ...    print('Small')
@@ -88,7 +88,7 @@ Small
     print('Done')
        ^
 SyntaxError: invalid syntax
-</input>
+</code>
   </program>
   <p>A blank line at the end of a block of statements is not necessary when writing
             and executing a script, but it may improve readability of your code.</p>

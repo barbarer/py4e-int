@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<section xml:id="conditional_group-work-conditionals-and-logic">
+<worksheet label="group-work_conditional" xml:id="conditional_group-work-conditionals-and-logic" groupwork="yes" groupsize="4">
   <title>Group Work - Conditionals and Logic</title>
   <introduction>
   <p>It is best to use a POGIL approach with the following. In POGIL students work
@@ -52,7 +52,7 @@
         <p>Run this code to see what it prints. Each line of code may or may not print something.</p>
       </statement>
       <program xml:id="cond_ac_pogil_output_bool_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 print(type(True))
 print(type(3 &lt; 4))
 print(3 &lt; 4)
@@ -65,7 +65,7 @@ print(type(check))
 three = four
 print(three == four)
 # print(three = four)
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="cond_MC_pogil_comment">
@@ -138,20 +138,20 @@ print(three == four)
       <feedback>
         <p>Incorrect - keep trying!</p>
       </feedback>
-      <matches>
-        <match order="1">
+      <cardsort>
+        <match>
           <premise>check</premise>
           <response>Boolean variables</response>
         </match>
-        <match order="2">
+        <match>
           <premise>&lt;, ==, &gt;</premise>
           <response>Boolean operators</response>
         </match>
-        <match order="3">
+        <match>
           <premise>3 &lt; 4, three == four, three &gt; four</premise>
           <response>Boolean expressions</response>
         </match>
-      </matches>
+      </cardsort>
     </exercise>
     <exercise label="cond_MC_pogil_notequal">
       <statement>
@@ -194,14 +194,14 @@ print(three == four)
         <p>Run this code to see what it prints.</p>
       </statement>
       <program xml:id="cond_ac_pogil_output_ifelse_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 number = int(input("Enter an integer: "))
 if number &lt; 0:
     print(number, "is negative")
 else:
     print(number, "is a fine number")
 print("Until next time...")
-        </input>
+        </code>
       </program>
     </exercise>
     <p>Python uses <term>indentation</term> to define the structure of programs. The line indented
@@ -255,10 +255,10 @@ print("Until next time...")
         <p>Modify this code to print <c>(number) is 10</c> if <c>number</c> equals 10, and <c>(number) is not 10</c> otherwise.</p>
       </statement>
       <program xml:id="cond_ac_pogil_isten_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 number = int(input("Enter an integer: "))
 # add your code here
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="cond_MC_pogil_mandatoryelse">
@@ -296,7 +296,7 @@ number = int(input("Enter an integer: "))
         <p>Run this code to see what it prints.</p>
       </statement>
       <program xml:id="cond_ac_pogil_output_booleanops_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 a = 3
 b = 4
 c = 5
@@ -306,7 +306,7 @@ print(a &lt; b and b &gt; c)
 print(a &lt; b or b &gt; c)
 print(not a &lt; b)
 print(a &gt; b or not a &gt; c and b &gt; c)
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="cond_mc_pogil_opsvalue">
@@ -509,11 +509,11 @@ print(a &gt; b or not a &gt; c and b &gt; c)
         <p>Suppose you wanted to print the sum of <c>x</c> and <c>y</c> only when both <c>x</c> and <c>y</c> are positive. Write a block of code to achieve this that uses only one <c>if</c> statement.</p>
       </statement>
       <program xml:id="cond_ac_pogil_arepositive_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 x = int(input("Enter an integer: "))
 y = int(input("Enter an integer: "))
 # add your code here
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="cond_ac_pogil_usingnot">
@@ -521,11 +521,11 @@ y = int(input("Enter an integer: "))
         <p>Rewrite your code from the previous code block using the <c>not</c> operator. Your answer should yield the same result as before, not the opposite, and still only use one <c>if</c> statement. Hint: you'll need to change the &gt; signs!</p>
       </statement>
       <program xml:id="cond_ac_pogil_usingnot_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 x = int(input("Enter an integer: "))
 y = int(input("Enter an integer: "))
 # add your code here
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="cond_ac_pogil_notpositive">
@@ -533,28 +533,14 @@ y = int(input("Enter an integer: "))
         <p>Suppose that you instead wanted to print the sum of <c>x</c> and <c>y</c> <em>except</em> when both <c>x</c> and <c>y</c> are positive. Write a block of code to achieve this that only uses one <c>if</c> statement.</p>
       </statement>
       <program xml:id="cond_ac_pogil_notpositive_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 x = int(input("Enter an integer: "))
 y = int(input("Enter an integer: "))
 # add your code here
-        </input>
+        </code>
       </program>
     </exercise>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
-    <raw format="html" xml:space="preserve">
-&lt;div class="runestone sqcontainer %(optclass)s"&gt;
-    &lt;div data-component="groupsub" id=cond_logic_groupsub data-size_limit=3&gt;
-        &lt;div class="col-sm-6"&gt;
-            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
-            &lt;/select&gt;
-        &lt;/div&gt;
-        &lt;div id="groupsub_button" class="col-sm-6"&gt;
-        &lt;/div&gt;
-        &lt;p&gt;The Submit Group button will submit the answer for each each question
-        on this page for each member of your group. It also logs you as the official
-        group submitter.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</raw>
+    
   </subsection>
-</section>
+</worksheet>

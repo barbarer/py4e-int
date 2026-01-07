@@ -49,7 +49,7 @@
             then finds all the author names for each book and prints each author name.</p>
     </statement>
     <program xml:id="web_get_book_info_xml_editor" interactive="activecode" language="python3">
-      <input>
+      <code>
 import xml.etree.ElementTree as ET
 fh = open("books.xml")
 data = fh.read()
@@ -61,7 +61,7 @@ for book in book_list:
     author_list = book.find('author')
     for author in author_list:
         print(f"Author: {author}")
-        </input>
+        </code>
     </program>
   </exercise>
   <p>Click on the button below to see the contents of news.xml.  It contains
@@ -93,7 +93,7 @@ for book in book_list:
             and prints the headline and date.</p>
     </statement>
     <program xml:id="web_get_news_info_xml_editor" interactive="activecode" language="python3">
-      <input>
+      <code>
 import xml.etree.ElementTree as ET
 fh = open("news.xml")
 data = fh.read()
@@ -106,7 +106,7 @@ body = find(body)
 dateline = body.find('dateline')
 date = dateline.find('date')
 print(date)
-        </input>
+        </code>
     </program>
   </exercise>
   <p>Click on the button below to see the contents of weather.xml.  It contains
@@ -146,13 +146,13 @@ print(date)
             the current_observation.</p>
     </statement>
     <program xml:id="web_get_weather_info_xml_editor" interactive="activecode" language="python3">
-      <input>
+      <code>
 import xml.etree.ElementTree as ET
 fh = open("weather.xml")
 data = fh.read()
 fh.close()
 tree = ET.fromstring(data)
-        </input>
+        </code>
     </program>
   </exercise>
   <p>The file <c>email.json</c> below contains JSON data for people including their first_name, last_name
@@ -195,13 +195,13 @@ tree = ET.fromstring(data)
             address for each person in the list of dictionaries returned from <c>json.loads(data).</c></p>
     </statement>
     <program xml:id="web_email_json_write_editor" interactive="activecode" language="python3">
-      <input>
+      <code>
 import json
 fh = open("email.json")
 data = fh.read()
 fh.close()
 person_list = json.loads(data)
-        </input>
+        </code>
     </program>
   </exercise>
   <p>The file <c>person.json</c> below contains JSON data for a person in a dictionary including their first name,
@@ -243,9 +243,9 @@ person_list = json.loads(data)
             state the person lives in, and their mobile phone number.</p>
     </statement>
     <program xml:id="web_email_person_write_editor" interactive="activecode" language="python3">
-      <input>
+      <code>
 import json
-        </input>
+        </code>
     </program>
   </exercise>
 </section>

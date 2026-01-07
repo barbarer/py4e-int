@@ -31,14 +31,14 @@
       <p>This code uses regular expressions to print lines that contain <q>From:</q>.</p>
     </statement>
     <program xml:id="re_ac1_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 import re
 hand = open('mbox-short.txt')
 for line in hand:
     line = line.rstrip()
     if re.search('From:', line):
         print(line)
-        </input>
+        </code>
     </program>
   </exercise>
   <p>We open the file, loop through each line, and use the regular expression
@@ -98,14 +98,14 @@ for line in hand:
       <p>Using regular expressions to print lines that contain <q>From:</q> at the beginning of the line.</p>
     </statement>
     <program xml:id="re-ac2_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 import re
 hand = open('mbox-short.txt')
 for line in hand:
     line = line.rstrip()
     if re.search('^From:', line):
         print(line)
-        </input>
+        </code>
     </program>
   </exercise>
   <p>Now we will only match lines that <em>start with</em> the string
@@ -118,14 +118,14 @@ for line in hand:
     <statement>
       <p>11-9-4: Which lines will the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 import re
 hand = open('mbox-short.txt')
 for line in hand:
     line = line.rstrip()
     if re.search('b', line):
         print(line)
-</input>
+</code>
       </program>
     </statement>
     <choices>

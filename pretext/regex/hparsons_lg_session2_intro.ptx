@@ -15,7 +15,7 @@
                 Replace <q>YOUR_REGEX</q> with your answer, but do not remove other symbols.</p>
       </statement>
       <program xml:id="hparsons_lg_regex_intro_write_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import re
 
 def match_apple(word):
@@ -32,7 +32,7 @@ class myTests(TestCaseGui):
         self.assertEqual(match_apple('apples'), False, 'Should not match "apples"')
         self.assertEqual(match_apple('Apple'), False, 'Should not match "Apple"')
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
   </subsection>

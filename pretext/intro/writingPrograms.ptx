@@ -2,13 +2,16 @@
 <section xml:id="intro_writing-a-program">
   <title>Writing a program</title>
 <idx>Script</idx>
+<introduction>
   <p>Typing commands into the Python interpreter is a great way to experiment
             with Python's features, but it is not recommended for solving more
             complex problems.</p>
   <p>When we want to write a program, we use a text editor to write the
             Python instructions into a file, which is called a
             <em>script</em>. By convention, Python scripts have names that
-            end with <c>.py</c>.</p>
+            end with <c>.py</c>.
+  </p>
+ </introduction>
   <exercise label="intro-write-fitb-file">
     <statement>
       <p>Q-1: A(n) ______ is a file that holds Python instructions. <var/>  </p>
@@ -37,12 +40,12 @@
             of the file. In a command window, you would type
             <c>python hello.py</c> as follows:</p>
   <program language="bash">
-    <input>
+    <code>
 $ cat hello.py
 print('Hello world!')
 $ python hello.py
 Hello world!
-</input>
+</code>
   </program>
   <p>The <q>$</q> is the operating system prompt, and the <q>cat hello.py</q> is
             showing us that the file <q>hello.py</q> has a one-line Python program to

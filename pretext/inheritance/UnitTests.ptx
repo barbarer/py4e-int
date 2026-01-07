@@ -16,7 +16,7 @@
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="ut_example_test_total_even_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # Return the total of the even numbers in a list of numbers called nums
 def total_even(nums):
     total = 0
@@ -37,7 +37,7 @@ def test():
 
 # function call
 test()
-        </input>
+        </code>
       </program>
     </exercise>
     <p>This type of test is better than just printing out actual output because
@@ -56,7 +56,7 @@ test()
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="ut_example_test_total_even_listc_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # Return the total of the even numbers in a list of numbers called nums
 def total_even(nums):
     evens = [num for num in nums if num % 2 == 0]
@@ -74,7 +74,7 @@ def test():
 
 # function call
 test()
-        </input>
+        </code>
       </program>
     </exercise>
   </subsection>
@@ -98,7 +98,7 @@ test()
         <p>Run the code below to see the unit tests again. See the unit tests after the code. The last unit test compares the result of <c>recPerimeter(3.0, 2)</c> to wrong value.  Fix the value so that all of the tests pass.</p>
       </statement>
       <program xml:id="ut-ex-perimeterq-with-unit-test-vis_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 def recPerimeter(length, width):
     perimeter = 2 * (length + width)
     return perimeter
@@ -113,7 +113,7 @@ class myTests(TestCaseGui):
         self.assertEqual(recPerimeter(3.0, 2),12,"Tested recPerimeter on inputs 3.0 and 2")
 
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
     <p>Look at the unit tests above and answer the questions below.</p>
@@ -161,7 +161,7 @@ myTests().main()
                 test the result when x is higher than y.</p>
       </statement>
       <program xml:id="ut-ex-compare-valuep-ac_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 def checkValue(x, y):
     if x &lt; y:
         return "lower"
@@ -178,7 +178,7 @@ class myTests(TestCaseGui):
         self.assertEqual(checkValue(5, 5), "equal", 'checkValue(5, 5)')
 
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="ut_get_middle_ac_add_test">
@@ -190,7 +190,7 @@ myTests().main()
                 test the result when <c>str</c> has only one or two characters in it.</p>
       </statement>
       <program xml:id="ut_get_middle_ac_add_test_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 def get_middle(str):
     len_s = len(str)
     mid = len_s // 2
@@ -210,7 +210,7 @@ class myTests(TestCaseGui):
         self.assertEqual(get_middle('123456'), '34', "get_middle('123456')")
 
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
     <p>Add tests to check the result when <c>str</c> has one or two letters.</p>
@@ -228,32 +228,32 @@ myTests().main()
       <feedback>
         <p>Read this page and try again.</p>
       </feedback>
-      <matches>
-        <match order="1">
+      <cardsort>
+        <match>
           <premise>assertTrue(x)</premise>
           <response> x == True</response>
         </match>
-        <match order="2">
+        <match>
           <premise>assertIn(a, b)</premise>
           <response>a in b</response>
         </match>
-        <match order="3">
+        <match>
           <premise>assertIsInstance(a, b)</premise>
           <response>isinstance(a, b)</response>
         </match>
-        <match order="4">
+        <match>
           <premise>assertEqual(a, b)</premise>
           <response>a == b</response>
         </match>
-        <match order="5">
+        <match>
           <premise>assertNotEqual(a, b)</premise>
           <response>a != b</response>
         </match>
-        <match order="6">
+        <match>
           <premise>assertFalse(x)</premise>
           <response> x == False</response>
         </match>
-      </matches>
+      </cardsort>
     </exercise>
     <note>
       <p>All of the assert methods can take a third parameter which is a message (string) that explains what was tested.</p>
@@ -299,7 +299,7 @@ myTests().main()
         <p>Fix the code below to run and notice the test results.</p>
       </statement>
       <program xml:id="ut-ex-car-class-unit-tests_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 class Car:
 
     def __init__(self, make, model, color):
@@ -332,7 +332,7 @@ class myTests(TestCaseGui):
         self.assertEqual(self.c1.color, "white", "Test of set color")
 
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
     <p>Modify the code above to add a method in the <c>Car</c> class to set (change) the model name and add a test method to test that the new method works.</p>

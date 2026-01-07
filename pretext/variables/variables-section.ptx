@@ -11,14 +11,14 @@
   <p>An <em>assignment statement</em> creates new variables and gives
             them values:</p>
   <program xml:id="var-ac-4-assign" interactive="activecode" language="python">
-    <input>
+    <code>
 message = 'And now for something completely different'
 n = 17
 pi = 3.1415926535897931
 print(message)
 print(n)
 print(pi)
-        </input>
+        </code>
   </program>
   <p>This example makes three assignments and then prints the value of each of the variables. The first assigns a string to a
             new variable named <c>message</c>; the second assigns the integer
@@ -32,20 +32,20 @@ print(pi)
     <feedback>
       <p>Look at the variable assignments above.</p>
     </feedback>
-    <matches>
-      <match order="1">
+    <cardsort>
+      <match>
         <premise>message</premise>
         <response>string</response>
       </match>
-      <match order="2">
+      <match>
         <premise>n</premise>
         <response>integer</response>
       </match>
-      <match order="3">
+      <match>
         <premise>pi</premise>
         <response>float</response>
       </match>
-    </matches>
+    </cardsort>
   </exercise>
   <exercise label="var-variables-ca-string">
     <statement>

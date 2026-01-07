@@ -21,14 +21,14 @@
             Whitespace errors can be tricky because spaces and tabs are invisible
             and we are used to ignoring them.</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; x = 5
 &gt;&gt;&gt;  y = 6
   File "&lt;stdin&gt;", line 1
     y = 6
     ^
 IndentationError: unexpected indent
-</input>
+</code>
   </program>
   <p>In this example, the problem is that the second line is indented by one
             space. But the error message points to <c>y</c>, which is
@@ -38,7 +38,7 @@ IndentationError: unexpected indent
   <p>In general, error messages tell you where the problem was discovered,
             but that is often not where it was caused.</p>
   <program xml:id="Price_If_Broken" interactive="activecode" language="python">
-    <input>
+    <code>
 weight = 0.5
 if weight &lt; 1:
     price = 1.45
@@ -48,7 +48,7 @@ total = weight * price
 print(weight)
 print(price)
 print(total)
-        </input>
+        </code>
   </program>
   <p>Try different values for weight in the above code and then answer the question below:</p>
   <exercise label="cndtnl-debug-fitb-weight">

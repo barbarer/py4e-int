@@ -76,7 +76,7 @@
                 first character of the first name and first character of the last name.</p>
       </statement>
       <program xml:id="funct_ac_pogil_initials_v2_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def get_initials(first, last):
     return first[0] + last[-1]
@@ -100,7 +100,7 @@ class myTests(TestCaseGui):
         self.assertEqual(get_initials("J'Quan",'Alik'),"JA",'''get_initials("J'Quan",'Alik')''')
 
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
     <note>
@@ -191,7 +191,7 @@ myTests().main()
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="funct_ac_pogil_short_name_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def get_short_name(first, last):
     print(len(first))
@@ -204,7 +204,7 @@ def main():
 
 # function call
 main()
-        </input>
+        </code>
       </program>
     </exercise>
     <note>
@@ -322,7 +322,7 @@ main()
         <p>Write a function <c>join_no_first</c> that takes two strings <c>a</c> and <c>b</c> and returns a new string with all the characters in string <c>a</c> except the first one followed by all the characters in <c>b</c> except the first one.  For example, <c>join_no_first('hi', 'bye')</c> would return <c>'iye'</c>.</p>
       </statement>
       <program xml:id="fuct_ac_list_join_strings_withtout_first_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 def join_no_first(a, b):
 
 ====
@@ -340,7 +340,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
   </subsection>
@@ -351,7 +351,7 @@ myTests().main()
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="funct_ac_pogil_get_name_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 from datetime import datetime
 
 # function definition
@@ -366,7 +366,7 @@ def get_name():
 
 # function call
 get_name()
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="funct_fitb_convert_string_int">
@@ -435,7 +435,7 @@ get_name()
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="funct_ac_pogil_user_name_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def get_user_name(first, last):
     print(first.lower())
@@ -454,7 +454,7 @@ def main():
 
 # function call
 main()
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="funct_fitb_pogil_find_return">
@@ -486,31 +486,31 @@ main()
       <feedback>
         <p>Read the chapter on strings and try again</p>
       </feedback>
-      <matches>
-        <match order="1">
+      <cardsort>
+        <match>
           <premise>replace</premise>
           <response>Returns a new string with all instances of the first specified character replaced with the second specified character.</response>
         </match>
-        <match order="2">
+        <match>
           <premise>lower</premise>
           <response>Returns a new string with all of the characters in lowercase.</response>
         </match>
-        <match order="3">
+        <match>
           <premise>split</premise>
           <response>Returns a list of strings created by splitting the original string at the specified character.</response>
         </match>
-        <match order="4">
+        <match>
           <premise>capitalize</premise>
           <response>Returns a new string with just the first letter capitalized (uppercase).</response>
         </match>
-      </matches>
+      </cardsort>
     </exercise>
     <exercise label="funct_ac_pogil_strip_methods_v2">
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="funct_ac_pogil_strip_methods_v2_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def test(the_string):
     print(len(the_string))
@@ -531,7 +531,7 @@ def main():
 
 # function call
 main()
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="funct_string_methods2_dnd">
@@ -541,24 +541,24 @@ main()
       <feedback>
         <p>Read the chapter on strings and try again</p>
       </feedback>
-      <matches>
-        <match order="1">
+      <cardsort>
+        <match>
           <premise>strip</premise>
           <response>Returns a new string with leading and trailing spaces removed.</response>
         </match>
-        <match order="2">
+        <match>
           <premise>rstrip</premise>
           <response>Returns a new string with trailing spaces removed.</response>
         </match>
-        <match order="3">
+        <match>
           <premise>lstrip</premise>
           <response>Returns a new string with leading spaces removed.</response>
         </match>
-        <match order="4">
+        <match>
           <premise>find</premise>
           <response>Returns the starting index of a target string if found or -1 if not found.</response>
         </match>
-      </matches>
+      </cardsort>
     </exercise>
     <p>For more information on string methods see <url href="https://www.w3schools.com/python/python_ref_string.asp" visual="https://www.w3schools.com/python/python_ref_string.asp">https://www.w3schools.com/python/python_ref_string.asp</url>.</p>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>

@@ -12,12 +12,12 @@
   <p>The <c>max</c> and <c>min</c> functions give us the largest
             and smallest values in a list, respectively:</p>
   <program xml:id="functBuiltin_MaxMin" interactive="activecode" language="python">
-    <input>
+    <code>
 maximum = max(1, 0, -2, 4, 3)
 print(maximum)
 minimum = min(1, 0, -2, 4, 3)
 print(minimum)
-        </input>
+        </code>
   </program>
   <p>The <c>max</c> function gives us the value 4 because it is the largest value
             in the list. The <c>min</c> function, inversely, give us the value -2 because
@@ -26,10 +26,10 @@ print(minimum)
     <statement>
       <p>Q-2: What will be printed as the output of this code?</p>
       <program language="python">
-        <input>
+        <code>
 maximum = max(5, 'fish', True)
 print(maximum)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -71,34 +71,34 @@ print(maximum)
             which tells us how many items are in its argument. If the argument to
             <c>len</c> is a string, it returns the number of characters in the string.</p>
   <program xml:id="functBuiltin_len" interactive="activecode" language="python">
-    <input>
+    <code>
 length_x = len('Hello world')
 print(length_x)
-        </input>
+        </code>
   </program>
   <p>These functions can operate on any set of values, as we will see in
             later chapters.</p>
   <p>You should treat the names of built-in functions as reserved words
             (i.e., avoid using <q>max</q> as a variable name).</p>
   <program xml:id="functBuiltin_codelens_line2" interactive="codelens" language="python">
-    <input>
+    <code>
 city_name = "Detroit"
 num = 10
 if len(city_name) &gt; num:
   print("Long city name")
 else:
   print("Short city name")
-    </input>
+    </code>
   </program>
   <exercise label="functBuiltin_MC_len">
     <statement>
       <p>Q-5: Consider the code block below. What prints?</p>
       <program language="python">
-        <input>
+        <code>
 sentence_a = "Hello, world!"
 length_sentence_a = len(sentence_a)
 print(length_sentence_a)
-</input>
+</code>
       </program>
     </statement>
     <choices>

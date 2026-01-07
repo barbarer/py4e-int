@@ -8,7 +8,7 @@
                             use <c>print(spot)</c> to print the string representation of the object.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="obj_writecode1q_editor">
-            <input>
+            <code>
 class Dog:
 
     def __init__(self, name):
@@ -31,7 +31,7 @@ class myTests(TestCaseGui):
         self.assertEqual(spot.tricks, ['spin', 'sit'], 'Checking that sit and spin are added to the list of tricks.')
         self.assertEqual(spot.__str__(), "Dog(name = Spot, tricks = ['spin', 'sit'])", 'Checking that a Spot prints correctly.')
 myTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -43,7 +43,7 @@ myTests().main()
                             This needs to be done for each trick. Then, using the print function, you can print the dog's tricks and the contents of the __str__ method.
 
     
-    <program xml:id="obj_writecode1a_editor" language="python"><input>
+    <program xml:id="obj_writecode1a_editor" language="python"><code>
 class Dog:
 
     def __init__(self, name):
@@ -72,7 +72,7 @@ class myTests(TestCaseGui):
         self.assertEqual(spot.tricks, ['spin', 'sit'], 'Checking that sit and spin are added to the list of tricks.')
         self.assertEqual(spot.__str__(), "Dog(name = Spot, tricks = ['spin', 'sit'])", 'Checking that a Spot prints correctly.')
 myTests().main()
-        </input></program>
+        </code></program>
                     </solution>
         </exercise>
 
@@ -82,7 +82,7 @@ myTests().main()
                     which appends the <c>attack</c> to the list of attacks.</p>
           </statement>
           <program xml:id="obj_writecode2_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 class Pokemon:
 
     def __init__(self, name, kind):
@@ -108,7 +108,7 @@ class myTests(TestCaseGui):
         self.assertEqual(pikachu.__str__(), "Pokemon name is Pikachu and type is Electric. Attacks include: ['Quick Attack']", "Testing with Pikachu and Quick Attack")
 
 myTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -118,7 +118,7 @@ myTests().main()
                             a class that prints the title and author of a book.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="obj_writecode3q_editor">
-            <input>
+            <code>
 Class Book:
 
     def __init__(title, author):
@@ -139,7 +139,7 @@ class myTests(TestCaseGui):
         self.assertEqual(gatsby.__str__(), "Your book is The Great Gatsby by F. Scott Fitzgerald", "Testing Great Gatsby")
 
 myTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -170,7 +170,7 @@ myTests().main()
                         
 
     
-    <program xml:id="obj_writecode3a_editor" language="python"><input>
+    <program xml:id="obj_writecode3a_editor" language="python"><code>
 class Book:
 
     def __init__(self, title, author):
@@ -192,7 +192,7 @@ class myTests(TestCaseGui):
         self.assertEqual(gatsby.__str__(), "Your book is The Great Gatsby by F. Scott Fitzgerald", "Testing Great Gatsby")
 
 myTests().main()
-        </input></program>
+        </code></program>
                     </solution>
         </exercise>
 
@@ -202,7 +202,7 @@ myTests().main()
                     a class that prints the name the tricks the dog knows.</p>
           </statement>
           <program xml:id="obj_writecode4_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 class Dog
 
     def init(self, name):
@@ -229,7 +229,7 @@ class myTests(TestCaseGui):
         self.assertEqual(dog.tricks, ['catch', 'spin'], 'Checking that catch and spin are added to the list of tricks.')
         self.assertEqual(dog.__str__(), "The new dog is named Toby and his tricks are ['catch', 'spin']", 'Checking that a Toby prints correctly.')
 myTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -239,7 +239,7 @@ myTests().main()
                             the title and a method named <c>getAuthor</c> that returns the &#x2018;author'.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="obj_writecode5q_editor">
-            <input>
+            <code>
 class Book:
 
     def __init__(self, title, author):
@@ -261,7 +261,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -272,7 +272,7 @@ myTests().main()
                             title and author, as needed.
 
     
-    <program xml:id="obj_writecode5a_editor" language="python"><input>
+    <program xml:id="obj_writecode5a_editor" language="python"><code>
 class Book:
 
     def __init__(self, title, author):
@@ -290,7 +290,7 @@ class Book:
 book = Book("The Odyssey", "Homer")
 print(book.getTitle())
 print(book.getAuthor())
-        </input></program>
+        </code></program>
                     </solution>
         </exercise>
 
@@ -300,7 +300,7 @@ print(book.getAuthor())
                     tricks list and a method named <c>getName</c> that returns the name when called.</p>
           </statement>
           <program xml:id="obj_writecode6_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 class Dog:
 
     def __init__(self, name):
@@ -329,7 +329,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -340,7 +340,7 @@ myTests().main()
                             for the Paperback book, reading <c>"Paperback book [TITLE] was written by [AUTHOR]"</c>.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="obj_writecode7q_editor">
-            <input>
+            <code>
 class Book:
 
     def __init__(self, title, author):
@@ -365,7 +365,7 @@ class myTests(TestCaseGui):
         self.assertEqual(gatsby.__str__(), "Paperback book The Great Gatsby was written by F. Scott Fitzgerald", "Testing Great Gatsby")
 
 myTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -376,7 +376,7 @@ myTests().main()
                             Define the __str__ function as usual, using instances from the parent class.
 
     
-    <program xml:id="obj_writecode7a_editor" language="python"><input>
+    <program xml:id="obj_writecode7a_editor" language="python"><code>
 class Book:
 
     def __init__(self, title, author):
@@ -397,7 +397,7 @@ class Paperback(Book):
 
 book = Paperback("The Odyssey", "Homer")
 print(book)
-        </input></program>
+        </code></program>
                     </solution>
         </exercise>
 
@@ -408,7 +408,7 @@ print(book)
                     a new attack, <c>getName</c> returns the name, and <c>getAttacks</c> returns the attacks when called.</p>
           </statement>
           <program xml:id="obj_writecode8_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 class Pokemon:
 
     def __init__(self, name):
@@ -436,7 +436,7 @@ class myTests(TestCaseGui):
         self.assertEqual(horsea.getAttacks(), ['Water Gun', 'Twister'], "Testing that Horsea has new tricks")
 
 myTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -450,7 +450,7 @@ myTests().main()
                     of the object that includes the &#x2018;watertypes' list.</p>
           </statement>
           <program xml:id="obj_writecode10_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 class Pokemon:
 
     def __init__(self,name):
@@ -463,7 +463,7 @@ class Pokemon:
 newWater = WaterType("Magikarp")
 newWater.addPokemons("Krabby")
 print(newWater)
-        </input>
+        </code>
           </program>
         </exercise>
 </section>

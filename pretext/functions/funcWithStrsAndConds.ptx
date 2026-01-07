@@ -102,7 +102,7 @@
         <p>Run the code below to see what it prints and then use it to answer the following questions.</p>
       </statement>
       <program xml:id="fsc_ac_pogil_print_message_v2_ac_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def test(a, b = 2):
     print("Welcome")
@@ -124,7 +124,7 @@ def main():
 
 # function call
 main()
-        </input>
+        </code>
       </program>
     </exercise>
 
@@ -247,7 +247,7 @@ a string covers more than one line. </p>
                 first character of the first name and first character of the last name.</p>
       </statement>
       <program xml:id="fsc_ac_pogil_initials_v2_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def get_initials(first, last):
     return first[0] + last[-1]
@@ -272,7 +272,7 @@ class myTests(TestCaseGui):
 
 myTests().main()
 
-        </input>
+        </code>
       </program>
     </exercise>
 
@@ -307,7 +307,7 @@ myTests().main()
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="fsc_ac_pogil_short_name_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def get_short_name(first, last):
     print(len(first))
@@ -320,7 +320,7 @@ def main():
 
 # function call
 main()
-        </input>
+        </code>
       </program>
     </exercise>
     <note>
@@ -395,7 +395,7 @@ main()
         <p>Run this code to see what it prints.</p>
       </statement>
       <program xml:id="fsc_ac_pogil_return_temp_desc2_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def get_temp_desc(temp):
     if temp &lt; 32:
@@ -414,7 +414,7 @@ def main():
 
 # function call
 main()
-        </input>
+        </code>
       </program>
     </exercise>
 
@@ -451,7 +451,7 @@ main()
         <p>Modify the code in the main method below to test all possible return values from get_temp_desc.</p>
       </statement>
       <program xml:id="fsc_ac_pogil_return_temp_desc_v2_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def get_temp_desc(temp):
     if temp &lt; 32:
@@ -470,7 +470,7 @@ def main():
 
 # function call
 main()
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="fsc_pogil_check-guess-Parsons-v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -549,7 +549,7 @@ main()
                 than or equal 70, <c>D</c> if greater than or equal 60, and otherwise <c>E</c>.</p>
       </statement>
       <program xml:id="fsc_ac_fix_grade_code_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def get_grade(score):
     grade = None
@@ -569,7 +569,7 @@ def main():
     print(get_grade(95))
 
 main()
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="fsc_fitb_cond_grade_num_tests">
@@ -601,7 +601,7 @@ main()
         <p>Modify this code to use a complex conditional instead.  It should still pass all tests. It should only take four lines of code or less.</p>
       </statement>
       <program xml:id="fsc_ac_and_complex_cond_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def test(a):
     if a &gt; 0:
@@ -624,7 +624,7 @@ class myTests(TestCaseGui):
         self.assertEqual(test(9),True,"test(9)")
 
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
      <exercise label="fsc_ac_or_complex_cond">
@@ -632,7 +632,7 @@ myTests().main()
         <p>Modify this code to use a complex conditional instead.  It should still pass all tests. It should only take four lines of code or less.</p>
       </statement>
       <program xml:id="fsc_ac_or_complex_cond_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # function definition
 def either6(a,b):
     if a == 6:
@@ -653,7 +653,7 @@ class myTests(TestCaseGui):
         self.assertEqual(either6(3,-6),False, "either6(3,6)")
 
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
 

@@ -25,7 +25,7 @@
       <p>Run the code to see what it draws.</p>
     </statement>
     <program xml:id="Turtle_For_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 from turtle import *     # use the turtle library
 space = Screen()         # create a turtle space
 alisha = Turtle()        # create a turtle named alisha
@@ -33,7 +33,7 @@ alisha.setheading(90)    # point due north
 for sides in [1,2,3,4]:  # repeat the indented lines 4 times
     alisha.forward(100)    # move forward by 100 units
     alisha.right(90)     # turn by 90 degrees
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="turtle_1_1_Turtle_For_Q1">
@@ -132,7 +132,7 @@ for sides in [1,2,3,4]:  # repeat the indented lines 4 times
       <p>Run the code to see what it draws.</p>
     </statement>
     <program xml:id="Turtle_For_Range_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 from turtle import *   # use the turtle library
 space = Screen()       # create a turtle space
 marcus = Turtle()      # create a turtle named marcus
@@ -142,7 +142,7 @@ marcus.setheading(90)  # point due north
 for sides in range(4):   # repeat the indented lines 4 times
     marcus.forward(100)  # move forward by 100 units
     marcus.right(90)     # turn by 90 degrees
-        </input>
+        </code>
     </program>
   </exercise>
   <p>The <c>range(n)</c> function returns an object (a range object) that produces the value from 0 to n - 1 when you use it in a for-each loop as shown below.</p>
@@ -151,7 +151,7 @@ for sides in range(4):   # repeat the indented lines 4 times
       <p>Run this code to see what it prints.</p>
     </statement>
     <program xml:id="Turtle_Print_Range_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 # print the type (class name)
 print(type(range(4)))
 print() # empty line
@@ -166,7 +166,7 @@ print()
 # print the values in the range from 0 to end - 1
 for i in range(10):
     print(i)
-        </input>
+        </code>
     </program>
   </exercise>
 </section>

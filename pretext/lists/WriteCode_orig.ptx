@@ -8,7 +8,7 @@
             will only be numerical.) Then, return the modified list. For example, <c>itemLister([2,4,6.222,8])</c> would return <c>['First item', 2, 7.22, 8]</c>.</p>
     </statement>
     <program xml:id="list_writeItemsq_v2_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def itemLister(items):
     # write code here
 
@@ -31,7 +31,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="list_writeItemsq_v2_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -79,7 +79,7 @@ myTests().main()
             <c>change_index3([1, 2, 0, -5, 4])</c> would return <c>[1, 2, 0, '200', 4]</c>.</p>
     </statement>
     <program xml:id="list_write23_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def change_index3(lst):
     # write code here
 
@@ -97,7 +97,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="list_write23_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -129,7 +129,7 @@ myTests().main()
             For example, <c>countWords(['hello', 'hi', 'good morning', 'three', 'kitty']</c> should return <c>3</c>.</p>
     </statement>
     <program xml:id="list_write5_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def countWords(lst):
     # write code here
 
@@ -146,7 +146,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="list_write5_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -186,7 +186,7 @@ myTests().main()
             For example, <c>reverse[1,2,3]</c> should return <c>[3, 2, 1]</c>.</p>
     </statement>
     <program xml:id="list_writeReverse_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def reverse(lst):
     # write code here
 ====
@@ -201,7 +201,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="list_writeReverse_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -232,7 +232,7 @@ myTests().main()
             by the length of the strings. For example, <c>sort_by_length(["hello", "hi", "hey", "greetings"])</c> would return <c>['hi', 'hey', 'hello', 'greetings']</c>.</p>
     </statement>
     <program xml:id="list_sortByLen_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def sort_by_length(lst):
     # write code here
 
@@ -248,7 +248,7 @@ class myTests(TestCaseGui):
           self.assertEqual(sort_by_length(['I', 'have', 'four', 'apples']),['I', 'have', 'four', 'apples'],"sort_by_length(['I', 'have', 'four', 'apples'])")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="list_sortByLen_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">

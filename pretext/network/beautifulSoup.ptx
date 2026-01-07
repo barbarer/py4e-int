@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<section xml:id="network_group-work-on-beautifulsoup-with-requests">
+<worksheet xml:id="network_group-work-on-beautifulsoup-with-requests" groupwork="yes" groupsize="4" label="group-work_on-beautifulsoup-with-requests">
   <title>Group Work on BeautifulSoup with Requests</title>
   <introduction>
   <p>It is best to use a POGIL approach with the following. In POGIL students work
@@ -69,7 +69,7 @@
                 It will interpret the tag as HTML and show just the text of the tag.</p>
       </statement>
       <program xml:id="bs_get_print_first_para_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 import requests
 from bs4 import BeautifulSoup
 
@@ -82,7 +82,7 @@ soup = BeautifulSoup(resp.content, 'html.parser')
 
 # Print the first paragraph tag in the soup
 print(soup.find('p'))
-        </input>
+        </code>
       </program>
     </exercise>
     <p>The <c>html.parser</c> is the HTML parser that is included in the standard Python 3 library.
@@ -150,7 +150,7 @@ print(soup.find('p'))
         <p>This will print the text for the site description paragraph.</p>
       </statement>
       <program xml:id="bs_get_text_with_class_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 import requests
 from bs4 import BeautifulSoup
 
@@ -162,7 +162,7 @@ soup = BeautifulSoup(resp.content, 'html.parser')
 # get the headline with the class and print its text
 tag = soup.find("p", class_="site-description")
 print(tag.text)
-        </input>
+        </code>
       </program>
     </exercise>
     <note>
@@ -225,7 +225,7 @@ print(tag.text)
         <p>This will find all of the link tags in the New York Times site and print the href for each of them.</p>
       </statement>
       <program xml:id="bs_get_all_a_tags_and_print_hrefs_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 import requests
 from bs4 import BeautifulSoup
 
@@ -238,7 +238,7 @@ soup = BeautifulSoup(resp.content, 'html.parser')
 tags = soup.find_all('a')
 for tag in tags:
     print(tag.get('href', None))
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="bs_print_get_all_href_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -321,7 +321,7 @@ for tag in tags:
         <p>This will print the first <q>href</q> inside each list item (li) with a class of <q>menu-item-has-children</q>.</p>
       </statement>
       <program xml:id="bs_get_mini_nav_href_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 import requests
 from bs4 import BeautifulSoup
 
@@ -335,7 +335,7 @@ li_list = soup.find_all("li", class_="menu-item-has-children")
 for li in li_list:
     a_tag = li.find('a')
     print(a_tag.get("href",None))
-        </input>
+        </code>
       </program>
     </exercise>
     <note>
@@ -404,7 +404,7 @@ for li in li_list:
                 href values for the <q>a</q> tags in the <q>Most Read</q> section.</p>
       </statement>
       <program xml:id="bs_get_most_read_href_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 import requests
 from bs4 import BeautifulSoup
 
@@ -420,24 +420,10 @@ soup = BeautifulSoup(resp.content, 'html.parser')
 # loop through the li tags
 
     # get the 'a' tag and print the value of the "href" attribute
-        </input>
+        </code>
       </program>
     </exercise>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
-    <raw format="html" xml:space="preserve">
-&lt;div class="runestone sqcontainer %(optclass)s"&gt;
-    &lt;div data-component="groupsub" id=bs_group_work_intro data-size_limit=4&gt;
-        &lt;div class="col-sm-6"&gt;
-            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
-            &lt;/select&gt;
-        &lt;/div&gt;
-        &lt;div id="groupsub_button" class="col-sm-6"&gt;
-        &lt;/div&gt;
-        &lt;p&gt;The Submit Group button will submit the answer for each each question
-        on this page for each member of your group. It also logs you as the official
-        group submitter.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</raw>
+    
   </subsection>
-</section>
+</worksheet>

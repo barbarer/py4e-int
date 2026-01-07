@@ -10,28 +10,28 @@
             three programs are identical in terms of what they accomplish, but very
             different when you read them and try to understand them.</p>
   <program xml:id="var-ac-10-names1" interactive="activecode" language="python">
-    <input>
+    <code>
 a = 35.0
 b = 12.50
 c = a * b
 print(c)
-        </input>
+        </code>
   </program>
   <program xml:id="o2-ac-10-names2" interactive="activecode" language="python">
-    <input>
+    <code>
 hours = 35.0
 rate = 12.50
 pay = hours * rate
 print(pay)
-        </input>
+        </code>
   </program>
   <program xml:id="var-ac-10-names3" interactive="activecode" language="python">
-    <input>
+    <code>
 x1q3z9ahd = 35.0
 x1q3z9afd = 12.50
 x1q3p9afd = x1q3z9ahd * x1q3z9afd
 print(x1q3p9afd)
-        </input>
+        </code>
   </program>
   <p>The Python interpreter sees all three of these programs as <em>exactly the
                 same</em> but humans see and understand these programs quite differently.
@@ -94,10 +94,10 @@ print(x1q3p9afd)
             through some data. We will cover loops soon, but for now try to just
             puzzle through what this means:</p>
   <program language="python">
-    <input>
+    <code>
 for word in words:
     print(word)
-</input>
+</code>
   </program>
   <p>What is happening here? Which of the tokens (for, word, in, etc.) are
             reserved words and which are just variable names? Does Python understand
@@ -107,10 +107,10 @@ for word in words:
             programmer.</p>
   <p>The following code is equivalent to the above code:</p>
   <program language="python">
-    <input>
+    <code>
 for slice in pizza:
     print(slice)
-</input>
+</code>
   </program>
   <p>It is easier for the beginning programmer to look at this code and know
             which parts are reserved words defined by Python and which parts are

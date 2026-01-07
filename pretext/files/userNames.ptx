@@ -10,7 +10,7 @@
   <p>This is quite simple to do by reading the file name from the user using
             <c>input</c> as follows:</p>
   <program language="fileInput">
-    <input>
+    <code>
 fname = input('Enter the file name: ')
 fhand = open(fname)
 count = 0
@@ -19,7 +19,7 @@ for line in fhand:
         count = count + 1
 fhand.close()
 print('There were', count, 'subject lines in', fname)
-</input>
+</code>
   </program>
   <p>We read the file name from the user and place it in a variable named
             <c>fname</c> and open that file. Now we can run the program
@@ -71,7 +71,7 @@ There were 27 subject lines in mbox-short.txt</pre>
     <program interactive="" language=""/>
     <solution>
       <program xml:id="fileOpenInputa" language="python">
-        <input>
+        <code>
 count = 0 # Start counting from zero
 fname = input('Enter the file name: ') # Close parentheses
 fhand = open(fname) # Open the correct file name
@@ -82,7 +82,7 @@ for line in fhand:
         count = count + 1 # Correct indentation.
 fhand.close()
 print('There were', count, 'lines starting with "Received:" in the file', fname)
-        </input>
+        </code>
       </program>
     </solution>
   </exercise>

@@ -26,7 +26,7 @@
             <c>BeautifulSoup</c> to extract the <c>href</c> attributes
             from the anchor (<c>a</c>) tags.</p>
   <program xml:id="urllinks" interactive="activecode" language="python3">
-    <input>
+    <code>
 import urllib.request, urllib.parse, urllib.error
 from bs4 import BeautifulSoup
 import ssl
@@ -44,7 +44,7 @@ soup = BeautifulSoup(html, 'html.parser')
 tags = soup('a')
 for tag in tags:
     print(tag.get('href', None))
-        </input>
+        </code>
   </program>
   <p>The program prompts for a web address, then opens the web page, reads
             the data and passes the data to the BeautifulSoup parser, and then
@@ -56,7 +56,7 @@ for tag in tags:
             requirement in our regular expression.</p>
   <p>You can use also BeautifulSoup to pull out various parts of each tag:</p>
   <program xml:id="urllink2" interactive="activecode" language="python3">
-    <input>
+    <code>
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import ssl
@@ -78,7 +78,7 @@ for tag in tags:
     print('URL:', tag.get('href', None))
     print('Contents:', tag.contents[0])
     print('Attrs:', tag.attrs)
-        </input>
+        </code>
   </program>
   <p><c>html.parser</c> is the HTML parser included in the standard Python 3 library.
             Information on other HTML parsers is available at:</p>

@@ -22,13 +22,13 @@
             logical expression on the <c>while</c> statement is simply the
             logical constant <c>True</c>:</p>
   <program xml:id="codelens531" interactive="codelens" language="python">
-    <input>
+    <code>
 n = 10
 while True:
     print(n, end=' ')
     n = n - 1
 print('Done!')
-    </input>
+    </code>
   </program>
   <p>As you can see above, the Code Lens gives you a warning because it runs for over 1000 steps.
             If you make the mistake of running this code, you will learn quickly how to
@@ -44,14 +44,14 @@ print('Done!')
   <p>For example, suppose you want to take input from the user until they
             type <c>done</c>. You could write:</p>
   <program language="05section3">
-    <input>
+    <code>
 while True:
     line = input('Word: ')
     if line == 'done':
         break
     print(line)
 print ('Done!')
-</input>
+</code>
   </program>
   <p>The loop condition is <c>True</c>, which is always true, so the
             loop runs repeatedly until it hits the break statement.</p>
@@ -97,7 +97,7 @@ Done!</pre>
     <statement>
       <p>Q-3: How many lines are in the body of the while loop in shown above?</p>
       <program language="python">
-        <input>
+        <code>
 while 1==1:
     print ("Looping")
     print ("Forever")
@@ -110,7 +110,7 @@ Looping
 Forever
 Looping
 Forever
-</input>
+</code>
       </program>
     </statement>
     <choices>

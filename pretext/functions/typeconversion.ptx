@@ -13,19 +13,19 @@
             type to another. The <c>int</c> function takes any value and
             converts it to an integer, if it can, or complains otherwise:</p>
   <program xml:id="functType_int" interactive="activecode" language="python">
-    <input>
+    <code>
 print(int('32'))
 print(int('Hello'))
-        </input>
+        </code>
   </program>
   <exercise label="functType_MC_error">
     <statement>
       <p>Q-2: Why would we get an error in the following code block?</p>
       <program language="python">
-        <input>
+        <code>
 print(int('32'))
 print(int('Hello'))
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -58,25 +58,25 @@ print(int('Hello'))
   <p><c>int</c> can convert floating-point values to integers, but it
             doesn't round them &#x2014; it chops off the fraction part (this is called <q>truncating</q>):</p>
   <program xml:id="functType_noFloat" interactive="activecode" language="python">
-    <input>
+    <code>
 print(int(3.99999))
 print(int(-2.3))
-        </input>
+        </code>
   </program>
   <p><c>float</c> converts integers and strings to floating-point
             numbers:</p>
   <program xml:id="functType_float" interactive="activecode" language="python">
-    <input>
+    <code>
 print(float(32))
 print(float('3.14159'))
-        </input>
+        </code>
   </program>
   <p>Finally, <c>str</c> converts its argument to a string:</p>
   <program xml:id="functType_str" interactive="activecode" language="python">
-    <input>
+    <code>
 print(str(32))
 print(str(3.14159))
-        </input>
+        </code>
   </program>
   <exercise label="functType_fill1">
     <statement>
@@ -101,9 +101,9 @@ print(str(3.14159))
     <statement>
       <p>Q-7: Consider the code below. What prints?</p>
       <program language="python">
-        <input>
+        <code>
 print(int(23.865))
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -145,9 +145,9 @@ print(int(23.865))
     <statement>
       <p>Q-8: Consider the code below. What prints?</p>
       <program language="python">
-        <input>
+        <code>
 print(float(23))
-</input>
+</code>
       </program>
     </statement>
     <choices>

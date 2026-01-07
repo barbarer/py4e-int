@@ -53,7 +53,7 @@
           <p>Fix the code below to remove all adjacent duplicate values in the passed list. For example, <c>removeExtras([3, 3, 1])</c> returns <c>[3, 1]</c> and <c>removeExtras([7, 7, 8, 8, 9, 9, 9, 10, 9, 10, 11])</c> returns <c>[7, 8, 9, 10, 9, 10, 11]</c>.</p>
         </statement>
         <program xml:id="removeExtras_fix_timed-p_editor" interactive="activecode" language="python">
-          <input>
+          <code>
 def removeExtras(a_list):
     prev = a_list[0]
     index = 0
@@ -85,7 +85,7 @@ class myTests(TestCaseGui):
         self.assertEqual(removeExtras([2]), [2], 'removeExtras([2]')
 
 myTests().main()
-        </input>
+        </code>
         </program>
       </exercise>
     </TimedNode>
@@ -105,7 +105,7 @@ myTests().main()
           <p>Fix the function <c>two_cats</c> below to return True if there are at least two adjacent <q>cat</q> strings in list <c>pets</c>, otherwise return False.  For example, return <c>True</c> for <c>two_cats(['dog', 'cat', 'cat'])</c> since there are two adjacent items equal to &#x2018;cat' (at index 1 and 2) and <c>False</c> for <c>two_cats(['cat', 'dog', 'cat'])</c> since the &#x2018;cat' strings are not adjacent.</p>
         </statement>
         <program xml:id="find_extras_fix_timed-p_editor" interactive="activecode" language="python">
-          <input>
+          <code>
 def two_cats(pets):
     i = 1
     while i &lt; pets:
@@ -134,7 +134,7 @@ class myTests(TestCaseGui):
         self.assertEqual(two_cats(['cat', 'bird', 'bird', 'cat']), False, "two_cats(['cat', 'bird', 'bird', 'cat'])")
 
 myTests().main()
-        </input>
+        </code>
         </program>
       </exercise>
     </TimedNode>

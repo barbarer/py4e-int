@@ -10,11 +10,11 @@
   <p>Python provides methods that operate on lists. For example,
             <c>append</c> adds a new element to the end of a list:</p>
   <program xml:id="listAppend" interactive="activecode" language="python">
-    <input>
+    <code>
 t = ['a', 'b', 'c']
 t.append('d')
 print(t)
-        </input>
+        </code>
   </program>
   <exercise label="listMethod_MC_append">
     <statement>
@@ -54,21 +54,21 @@ print(alist)</pre>
   <p><c>extend</c> takes a list as an argument and appends all of the
             elements:</p>
   <program xml:id="listExtend" interactive="activecode" language="python">
-    <input>
+    <code>
 t1 = ['a', 'b', 'c']
 t2 = ['d', 'e']
 t1.extend(t2)
 print(t1)
-        </input>
+        </code>
   </program>
   <p>This example leaves <c>t2</c> unmodified.</p>
   <p><c>sort</c> arranges the elements of the list from low to high:</p>
   <program xml:id="listSort" interactive="activecode" language="python">
-    <input>
+    <code>
 t = ['d', 'c', 'e', 'b', 'a']
 t.sort()
 print(t)
-        </input>
+        </code>
   </program>
   <exercise label="listMethod_MC_sort">
     <statement>

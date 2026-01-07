@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<section xml:id="objects_group-work-working-with-multiple-classes">
+<worksheet xml:id="objects_group-work-working-with-multiple-classes" groupwork="yes" groupsize="4" label="group-work_working-with-multiple-classes">
   <title>Group Work - Working with Multiple Classes</title>
   <introduction>
   <p>It is best to use a POGIL approach with the following. In POGIL students work
@@ -64,7 +64,7 @@
         <p>Run the following code</p>
       </statement>
       <program xml:id="mult_class_person_and_employee_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 class Person:
     def __init__(self, first, last):
         self.first = first
@@ -90,7 +90,7 @@ def main():
     print(p2.initials())
 
 main()
-        </input>
+        </code>
       </program>
     </exercise>
     <p>Look at the classes defined above. Then answer the following questions.</p>
@@ -173,24 +173,24 @@ main()
       <feedback>
         <p>Read the chapter on strings and try again</p>
       </feedback>
-      <matches>
-        <match order="1">
+      <cardsort>
+        <match>
           <premise>super().__init__(first, last)</premise>
           <response>Passes the first and last name to the parent class's __init__ method</response>
         </match>
-        <match order="2">
+        <match>
           <premise>class Employee(Person):</premise>
           <response>Defines a new class that inherits from the Person class</response>
         </match>
-        <match order="3">
+        <match>
           <premise>def __init__(self, first, last):</premise>
           <response>Defines an initializer (constructor) method</response>
         </match>
-        <match order="4">
+        <match>
           <premise>def __str__(self):</premise>
           <response>Defines a method that is called when you print an object of this class</response>
         </match>
-      </matches>
+      </cardsort>
     </exercise>
     <exercise label="mult_class_car_sports_car_pp_v3" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
@@ -282,7 +282,7 @@ main()
         <p>Run the following code</p>
       </statement>
       <program xml:id="mult_class_greeter_grumpr_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 class Greeter:
 
     def __init__(self, message = "Good Morning"):
@@ -305,7 +305,7 @@ def main():
     print(g2)
 
 main()
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="mult_class_no_str_method">
@@ -395,7 +395,7 @@ main()
         <p>Run the following code</p>
       </statement>
       <program xml:id="mult_class_override_inherited_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 class Student:
 
     def __init__(self, name):
@@ -419,24 +419,10 @@ def main():
     print(s2.favorite_food())
 
 main()
-        </input>
+        </code>
       </program>
     </exercise>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
-    <raw format="html" xml:space="preserve">
-&lt;div class="runestone sqcontainer %(optclass)s"&gt;
-    &lt;div data-component="groupsub" id=mult_classes_groupsub data-size_limit=3&gt;
-        &lt;div class="col-sm-6"&gt;
-            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
-            &lt;/select&gt;
-        &lt;/div&gt;
-        &lt;div id="groupsub_button" class="col-sm-6"&gt;
-        &lt;/div&gt;
-        &lt;p&gt;The Submit Group button will submit the answer for each each question
-        on this page for each member of your group. It also logs you as the official
-        group submitter.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</raw>
+    
   </subsection>
-</section>
+</worksheet>

@@ -23,12 +23,12 @@ Author: stephen.marquard@uct.ac.za</pre>
       <p>Use findall to find the lines with email addresses in them and print them.</p>
     </statement>
     <program xml:id="extractingdata_exercise_1_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 import re
 s = 'A message from csev@umich.edu to cwen@iupui.edu about meeting @2PM'
 lst = re.findall('\S+@\S+', s)
 print(lst)
-        </input>
+        </code>
     </program>
   </exercise>
   <p>The <c>findall()</c> method searches the string in the second
@@ -91,7 +91,7 @@ print(lst)
       <p>This code searches for lines that have an at-sign (@) between characters.</p>
     </statement>
     <program xml:id="re_data_ac1_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 import re
 hand = open('mbox-short.txt')
 for line in hand:
@@ -99,7 +99,7 @@ for line in hand:
     x = re.findall('\S+@\S+', line)
     if len(x) &gt; 0:
         print(x)
-        </input>
+        </code>
     </program>
   </exercise>
   <p>We read each line and then extract all the substrings that match our
@@ -159,7 +159,7 @@ for line in hand:
       <p>This code searches for lines that have an at-sign (@) between letter or number characters.</p>
     </statement>
     <program xml:id="re_data_ac2_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 import re
 hand = open('mbox-short.txt')
 for line in hand:
@@ -167,7 +167,7 @@ for line in hand:
     x = re.findall('[a-zA-Z0-9]\S+@\S+[a-zA-Z]', line)
     if len(x) &gt; 0:
         print(x)
-        </input>
+        </code>
     </program>
   </exercise>
   <p>Notice that on the <c>source@collab.sakaiproject.org</c> lines, our regular

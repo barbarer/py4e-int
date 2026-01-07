@@ -55,7 +55,7 @@
             is one block that won't be used in the solution!</p>
     </statement>
     <program xml:id="tup_mixedupcode_1_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def length_word(txt):
     # write code here
 
@@ -70,7 +70,7 @@ class myTests(TestCaseGui):
         self.assertEqual(length_word('Hello'), [(5, 'Hello')], "length_word('Hello')")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="tup_mixedupcode_2" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -122,7 +122,7 @@ myTests().main()
             would return <c>[('bye', 3), ('hi', 2)]</c>.</p>
     </statement>
     <program xml:id="tup_mixedupcode_2_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def tuple_word_len(word_list):
     # write code here
 
@@ -137,7 +137,7 @@ class myTests(TestCaseGui):
         self.assertEqual(tuple_word_len(['Hello']), [('Hello', 5)],"tuple_word_len(['Hello'])")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="tup_mixedupcode_3" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -178,7 +178,7 @@ myTests().main()
             <c>swap_values(('Apple', 'Banana', 'Grapefruit', 'Pear', 'Peach'))</c> would return <c>('Apple', 'Pear', 'Grapefruit', 'Banana', 'Peach')</c>.</p>
     </statement>
     <program xml:id="tup_mixedupcode_3_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def swap_values(t):
     # write code here
 
@@ -192,7 +192,7 @@ class myTests(TestCaseGui):
         self.assertEqual(swap_values(('Michigan', 'Go', 'Blue', 'Wolverine', 'Ann Arbor')), ('Michigan', 'Wolverine', 'Blue', 'Go', 'Ann Arbor'), "swap_values(('Michigan', 'Go', 'Blue', 'Wolverine', 'Ann Arbor'))")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="tup_mixedupcode_4" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -238,7 +238,7 @@ myTests().main()
 ``[(1, 'a'), (2, 'b'), (3, 'c'), (4, 'd'), (5, 'e')]</c>.</p>
     </statement>
     <program xml:id="tup_mixedupcode_4_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def dictionary_to_tup_list(d):
     # write code here
 
@@ -252,7 +252,7 @@ class myTests(TestCaseGui):
         self.assertEqual(dictionary_to_tup_list({'a':1,'b':2, 'c':3,'d':4,'e':5}), [('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e', 5)], "dictionary_to_tup_list({'a':1,'b':2, 'c':3,'d':4,'e':5})")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="tup_mixedupcode_5" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -302,7 +302,7 @@ myTests().main()
             <c>count_strs((1, 2, "hi"))</c> should return <c>1.</c></p>
     </statement>
     <program xml:id="tup_mixedupcode_5_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def count_strs(tup):
     #write code here
 
@@ -318,7 +318,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="tup_mixedupcode_6" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -357,7 +357,7 @@ myTests().main()
             <c>[('monkey', 5), ('snake', 3), ('rabbit', 9), ('dragon', 6), ('rooster', 2), ('rat', 10)]</c>.</p>
     </statement>
     <program xml:id="tup_mixedupcode_6_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def dict_to_list(d):
     #write code here
 
@@ -375,7 +375,7 @@ class myTests(TestCaseGui):
         self.assertEqual(dict_to_list({}), [], "dict_to_list({})")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="tup_mixedupcode_7" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -422,7 +422,7 @@ myTests().main()
             example, <c>alphabetical_dict_list({'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10})</c> should return <c>[('dragon', 6), ('monkey', 6), ('rabbit', 6), ('rat', 3), ('rooster', 7), ('snake', 5)]</c>.</p>
     </statement>
     <program xml:id="tup_mixedupcode_7_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def alphabetical_dict_list(d):
     #write code here
 
@@ -439,7 +439,7 @@ class myTests(TestCaseGui):
         self.assertEqual(alphabetical_dict_list({'hi': 'bye', 'Run': 'When', 'Win': 'compare'}), [('Run', 3), ('Win', 3), ('hi', 2)], "alphabetical_dict_list({'hi': 'bye', 'Run': 'When', 'Win': 'compare'})")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="tup_mixedupcode_8" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -485,7 +485,7 @@ myTests().main()
             should return <c>['apples', 'combining', 'twenty-four', 'tmobile']</c>.</p>
     </statement>
     <program xml:id="tup_mixedupcode_8_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def longest_word_lst(lst_tup):
     #write code here
 
@@ -502,7 +502,7 @@ class myTests(TestCaseGui):
         self.assertEqual(longest_word_lst((('2 0 2 0 2','22'), ('1'))), ['2 0 2 0 2', '1'], "longest_word_lst((('2 0 2 0 2','22'), ('1')))")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="tup_mixedupcode_9" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -549,7 +549,7 @@ myTests().main()
             would return <c>['Twice', 'For', 'Apples', 'Regular', 'Combining', 'One', 'Five', 'Twenty', 'Twenty-four', 'Tmobile', 'Sprint', 'At&amp;t']</c>.</p>
     </statement>
     <program xml:id="tup_mixedupcode_9_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def cap(lst_tup):
     #write code here
 
@@ -564,7 +564,7 @@ class myTests(TestCaseGui):
         self.assertEqual(cap([('twice', 'twice')]), ['Twice', 'Twice'], "cap([('twice', 'twice')])")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="tup_mixedupcode_10" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -603,7 +603,7 @@ myTests().main()
             For example, <c>grocery({'chicken': 5, 'lettuce': 3, 'orange juice': 4, 'bagels': 2.50, 'bacon': 4.25, 'bread': 8})</c> should return <c>[('bagels', 2.5), ('lettuce', 3), ('orange juice', 4), ('bacon', 4.25), ('chicken', 5), ('bread', 8)]</c>.</p>
     </statement>
     <program xml:id="tup_mixedupcode_10_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def grocery(d):
     #write code here
 
@@ -618,7 +618,7 @@ class myTests(TestCaseGui):
         self.assertEqual(grocery({'soup': 5, 'peanut butter': 3, 'orange juice': 4.1, 'bagels': 2.50, 'bacon': 4.25, 'bread': 8}), [('bagels', 2.5), ('peanut butter', 3), ('orange juice', 4.1), ('bacon', 4.25), ('soup', 5), ('bread', 8)], "grocery({'soup': 5, 'peanut butter': 3, 'orange juice': 4.1, 'bagels': 2.50, 'bacon': 4.25, 'bread': 8})")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
 </section>

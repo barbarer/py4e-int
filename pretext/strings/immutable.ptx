@@ -13,10 +13,10 @@
   <p>It is tempting to use the operator on the left side of an assignment,
             with the intention of changing a character in a string. For example:</p>
   <program xml:id="str-immutable" interactive="activecode" language="python">
-    <input>
+    <code>
 greeting = 'Hello, world!'
 greeting[0] = 'J'
-        </input>
+        </code>
   </program>
   <p>The <c>greeting</c> string is an example of an <term>object</term> and the character
             you tried to assign is an example of an <term>item</term>. For now, think of an object as a
@@ -26,21 +26,21 @@ greeting[0] = 'J'
             which means that you can't modify an existing string. The best you can do is
             create a new string that is a variation on the original:</p>
   <program xml:id="str-newString" interactive="activecode" language="python">
-    <input>
+    <code>
 greeting = 'Hello, world!'
 new_greeting = 'J' + greeting[1:]
 print(new_greeting)
-        </input>
+        </code>
   </program>
   <p>This example concatenates a new first letter onto a slice of
             <c>greeting</c>. It has no effect on the original string.</p>
   <p>Or, you can reassign an existing variable to a completely new string:</p>
   <program xml:id="str-redefineString" interactive="activecode" language="python">
-    <input>
+    <code>
 greeting = 'Hello, world!'
 greeting = 'Hola, mundo!'
 print(greeting)
-        </input>
+        </code>
   </program>
   <p>This example assigns the <c>greeting</c> variable to represent a new string object.
             The old string object is deleted in the process.</p>
@@ -90,11 +90,11 @@ s1 = s1 + s2 + 'z'</pre>
     <statement>
       <p>11-9-5: What is printed by the following statements:</p>
       <program language="python">
-        <input>
+        <code>
 s = "Ball"
 s[0] = "C"
 print(s)
-</input>
+</code>
       </program>
     </statement>
     <choices>

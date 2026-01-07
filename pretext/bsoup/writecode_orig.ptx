@@ -7,7 +7,7 @@
                             For example, <c>cur_stud_link('https://umich.edu/')</c> should return <c>"https://umich.edu/current-students/"</c>.</p>
 
     </statement><program interactive="activecode" language="python3" xml:id="bsoup_writecode1q_v2_editor">
-        <input>
+        <code>
 from bs4 import BeautifulSoup
 import requests
 
@@ -35,7 +35,7 @@ class myTests(unittest.TestCase):
         self.assertEqual(cur_stud_link(url), f_cur_stud_link(url), f'cur_stud_link({url})')
 
 unittest.main()
-        </input>
+        </code>
     </program><solution>
 
 
@@ -46,7 +46,7 @@ unittest.main()
 
     
     <program xml:id="bsoup_writecode1a_v2_editor" language="python3">
-        <input>
+        <code>
 from bs4 import BeautifulSoup
 import requests
 
@@ -61,7 +61,7 @@ def cur_stud_link(url):
     return all_info
 
 print(cur_stud_link('https://umich.edu/'))
-        </input>
+        </code>
     </program>
                     </solution></exercise>
 
@@ -74,7 +74,7 @@ print(cur_stud_link('https://umich.edu/'))
 
     </statement>
     <program xml:id="bsoup_writecode2q_v2_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 from bs4 import BeautifulSoup
 import requests
 
@@ -103,7 +103,7 @@ class myTests(unittest.TestCase):
         self.assertEqual(headings(url),f_headings(url),f"headings({url})")
 
 unittest.main()
-        </input>
+        </code>
     </program>
 </exercise>
 
@@ -113,7 +113,7 @@ unittest.main()
                             should return a dictionary like: <c>{'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', 'United Kingdom': '4.4%', 'Spain': '4.0%', 'Canada': '3.6%', 'Australia': '2.3%', 'Russia': '2.2%', 'Rest of world': '41.9%'}</c>.  Since we are scraping a live site the actual values may be different.</p>
 
     </statement><program interactive="activecode" language="python3" xml:id="bsoup_writecode3q_v2_editor">
-        <input>
+        <code>
 from bs4 import BeautifulSoup
 import requests
 
@@ -144,7 +144,7 @@ class myTests(unittest.TestCase):
         self.assertEqual(coursera_dict(url), f_coursera_dict(url), f'coursera_dict({url})')
 
 unittest.main()
-        </input>
+        </code>
     </program><solution>
 
 
@@ -155,7 +155,7 @@ unittest.main()
 
     
     <program xml:id="bsoup_writecode3a_v2_editor" language="python3">
-        <input>
+        <code>
 from bs4 import BeautifulSoup
 import requests
 
@@ -173,7 +173,7 @@ def coursera_dict(url):
     return coursera_enrollees
 
 print(coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course'))
-        </input>
+        </code>
     </program>
 
                     
@@ -186,7 +186,7 @@ print(coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course'))
 
     </statement>
     <program xml:id="bsoup_writecode3a_v2_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 from bs4 import BeautifulSoup
 import requests
 
@@ -204,7 +204,7 @@ def coursera_dict(url):
     return coursera_enrollees
 
 print(coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course'))
-        </input>
+        </code>
     </program>
 </exercise>
                     </solution></exercise>
@@ -218,7 +218,7 @@ print(coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course'))
 
     </statement>
     <program xml:id="bsoup_writecode4q_v2_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 from bs4 import BeautifulSoup
 import requests
 
@@ -250,7 +250,7 @@ class myTests(unittest.TestCase):
         self.assertEqual(types(url), f_types(url), f'types({url})')
 
 unittest.main()
-        </input>
+        </code>
     </program>
 </exercise>
 
@@ -260,7 +260,7 @@ unittest.main()
                             should return a list of restaurants like: <c>['1. Salt Springs Brewery', "2. Knight's Steakhouse", '3. The Last Word', "4. Krazy Jim's Blimpy Burger", '5. Blue Llama Jazz Club', '6. Spencer', '7. Miss Kim', "8. Zingerman's Delicatessen", '9. Tomukun Noodle Bar', '10. Ricewood', '11. Bellflower', "12. Ma Lou's Fried Chicken"]</c>.  Since we are scraping a live site the actual values may be different.</p>
 
     </statement><program interactive="activecode" language="python3" xml:id="bsoup_writecode5q_v2_editor">
-        <input>
+        <code>
 from bs4 import BeautifulSoup
 import requests
 
@@ -287,7 +287,7 @@ class myTests(unittest.TestCase):
         self.assertEqual(restaurants_list(url), f_restaurants_list(url), f"restaurants_list({url})")
 
 unittest.main()
-        </input>
+        </code>
     </program><solution>
 
 
@@ -298,7 +298,7 @@ unittest.main()
 
     
     <program xml:id="bsoup_writecode5a_v2_editor" language="python3">
-        <input>
+        <code>
 from bs4 import BeautifulSoup
 import requests
 
@@ -312,7 +312,7 @@ def restaurants_list(url):
     return r_list
 
 print(restaurants_list('https://detroit.eater.com/maps/best-ann-arbor-restaurants'))
-        </input>
+        </code>
     </program>
 
                     
@@ -325,7 +325,7 @@ print(restaurants_list('https://detroit.eater.com/maps/best-ann-arbor-restaurant
 
     </statement>
     <program xml:id="bsoup_writecode5a_v2_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 from bs4 import BeautifulSoup
 import requests
 
@@ -339,7 +339,7 @@ def restaurants_list(url):
     return r_list
 
 print(restaurants_list('https://detroit.eater.com/maps/best-ann-arbor-restaurants'))
-        </input>
+        </code>
     </program>
 </exercise>
                     </solution></exercise>
@@ -353,7 +353,7 @@ print(restaurants_list('https://detroit.eater.com/maps/best-ann-arbor-restaurant
 
     </statement>
     <program xml:id="bsoup_writecode6q_v2_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 from bs4 import BeautifulSoup
 import requests
 import re
@@ -381,7 +381,7 @@ class myTests(unittest.TestCase):
         self.assertEqual(bsi_list(url),f_bsi_list(url),f'bsi_list({url}),'
 
 unittest.main()
-        </input>
+        </code>
     </program>
 </exercise>
 
@@ -392,7 +392,7 @@ unittest.main()
                             Since we are scraping a live site the actual values may be different.</p>
 
     </statement><program interactive="activecode" language="python3" xml:id="bsoup_writecode7q_v2_editor">
-        <input>
+        <code>
 from bs4 import BeautifulSoup
 import requests
 import re
@@ -424,7 +424,7 @@ class myTests(unittest.TestCase):
         self.assertEqual(bsi_dict(url),f_bsi_dict(url), f'bsi_dict({url})')
 
 unittest.main()
-        </input>
+        </code>
     </program><solution>
 
 
@@ -436,7 +436,7 @@ unittest.main()
 
     
     <program xml:id="bsoup_writecode7a_v2_editor" language="python3">
-        <input>
+        <code>
 from bs4 import BeautifulSoup
 import requests
 import re
@@ -455,7 +455,7 @@ def bsi_dict(url):
     return bsi_dict
 
 print(bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information'))
-        </input>
+        </code>
     </program>
 
                     
@@ -469,7 +469,7 @@ print(bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information')
 
     </statement>
     <program xml:id="bsoup_writecode7a_v2_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 from bs4 import BeautifulSoup
 import requests
 import re
@@ -488,7 +488,7 @@ def bsi_dict(url):
     return bsi_dict
 
 print(bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information'))
-        </input>
+        </code>
     </program>
 </exercise>
                     </solution></exercise>
@@ -501,7 +501,7 @@ print(bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information')
 
     </statement>
     <program xml:id="bsoup_writecode8q_v2_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 from bs4 import BeautifulSoup
 import requests
 
@@ -529,7 +529,7 @@ class myTests(unittest.TestCase):
         self.assertEqual(envelope_address(url), f_envelope_address(url), f'envelope_address({url})')
 
 unittest.main()
-        </input>
+        </code>
     </program>
 </exercise>
 
@@ -539,7 +539,7 @@ unittest.main()
                             should return <c>{'Paul Edwards': 'pne@umich.edu', 'Ron Eglash': 'eglash@umich.edu', 'Nicole Ellison': 'enicole@umich.edu', 'Barbara Ericson': 'barbarer@umich.edu'}</c>.</p>
 
     </statement><program interactive="activecode" language="python3" xml:id="bsoup_writecode9q_v2_editor">
-        <input>
+        <code>
 from bs4 import BeautifulSoup
 import requests
 
@@ -578,7 +578,7 @@ class myTests(unittest.TestCase):
         self.assertEqual(name_email(url), f_name_email(url), "test of name_email")
 
 unittest.main()
-        </input>
+        </code>
     </program><solution>
 
 
@@ -589,7 +589,7 @@ unittest.main()
 
     
     <program xml:id="bsoup_writecode9a_v2_editor" language="python3">
-        <input>
+        <code>
 from bs4 import BeautifulSoup
 import requests
 
@@ -619,7 +619,7 @@ def name_email(url):
     return name_email_dict
 
 print(name_email('https://www.si.umich.edu/people/directory/faculty/e'))
-        </input>
+        </code>
     </program>
 
                     
@@ -632,7 +632,7 @@ print(name_email('https://www.si.umich.edu/people/directory/faculty/e'))
 
     </statement>
     <program xml:id="bsoup_writecode9a_v2_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 from bs4 import BeautifulSoup
 import requests
 
@@ -662,7 +662,7 @@ def name_email(url):
     return name_email_dict
 
 print(name_email('https://www.si.umich.edu/people/directory/faculty/e'))
-        </input>
+        </code>
     </program>
 </exercise>
                     </solution></exercise>
@@ -675,7 +675,7 @@ print(name_email('https://www.si.umich.edu/people/directory/faculty/e'))
 
     </statement>
     <program xml:id="bsoup_writecode10q_v2_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 from bs4 import BeautifulSoup
 import requests
 
@@ -707,7 +707,7 @@ class myTests(unittest.TestCase):
         self.assertEqual(program_email(url), f_program_email(url), 'test of program_email')
 
 unittest.main()
-        </input>
+        </code>
     </program>
 </exercise>
 

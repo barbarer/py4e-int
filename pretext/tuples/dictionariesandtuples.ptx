@@ -8,21 +8,21 @@
             a <q>view object,</q> but using it as the parameter in Python's <c>list()</c>
             constructor converts it into a list.)</p>
   <program xml:id="dictionariesandtuples_exercise_1" interactive="activecode" language="python">
-    <input>
+    <code>
 d = {'a':10, 'b':1, 'c':22}
 t = list(d.items())
 print(t)
-        </input>
+        </code>
   </program>
   <exercise label="question10_4_1">
     <statement>
       <p>11-9-2: True or false? The following code will correctly output the items of the dictionary t.</p>
       <program language="python">
-        <input>
+        <code>
 name_dictionary = {'Bob': 5, 'Melissa': 3, 'John': 7, 'Kim': 5}
 t = list(name_dictionary.items)
 print(t)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -50,13 +50,13 @@ print(t)
             tuples is a way for us to output the contents of a dictionary sorted by
             key:</p>
   <program xml:id="dictionariesandtuples_exercise_2" interactive="activecode" language="python">
-    <input>
+    <code>
 d = {'b':1, 'a': 10, 'c':22}
 t = list(d.items())
 print(t) #should print [('b', 1), ('a', 10), ('c', 22)]
 t.sort()
 print(t) #should print [('a', 10), ('b', 1), ('c', 22)]
-        </input>
+        </code>
   </program>
   <p>(If you need a reminder, the <c>sort</c> method sorts a list in alphabetical order.)</p>
   <p>The resulting list is sorted in ascending alphabetical order by the key value.</p>
@@ -64,11 +64,11 @@ print(t) #should print [('a', 10), ('b', 1), ('c', 22)]
     <statement>
       <p>11-9-4: How will the list below be sorted (if there is any order at all)?</p>
       <program language="python">
-        <input>
+        <code>
 grocery_dict = {'apple': 5, 'pineapple': 3, 'chicken': 8, 'kiwi': 7}
 grocery_list = list(grocery_dict.items())
 grocery_list.sort()
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -109,19 +109,19 @@ grocery_list.sort()
   <p>The <c>sort</c> method also has an optional parameter, <c>reverse</c>, whose value can
             tell <c>sort</c> to sort in descending order.</p>
   <program xml:id="dictionariesandtuples_exercise_3" interactive="activecode" language="python">
-    <input>
+    <code>
 grocery_dict = {'apple': 5, 'pineapple': 3, 'chicken': 8, 'kiwi': 7}
 grocery_list = list(grocery_dict.items())
 grocery_list.sort(reverse=True)
 print(grocery_list) #should print [('pineapple', 3), ('kiwi', 7), ('chicken', 8), ('apple', 5)]
-        </input>
+        </code>
   </program>
   <exercise label="question10_4_3_v2">
     <statement>
       <p>Write code that will transform dictionary d into a list of tuples, called tup_list, sorted by the keys in descending order.</p>
     </statement>
     <program xml:id="question10_4_3_v2_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 d = {'a': 10, 'b': 2, 'c': 27, 'd': 15, 'e': 30, 'f': 3}
 
 ====
@@ -134,7 +134,7 @@ class myTests(TestCaseGui):
         self.assertEqual(len(tup_list), 6, "Checking to make sure no values were added or deleted.")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
 </section>

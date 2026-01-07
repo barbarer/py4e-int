@@ -24,7 +24,7 @@
       <p>Run the code to see what it draws.</p>
 
     <program xml:id="Turtle_shape_1_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 from turtle import *        # use the turtle library
 space = Screen()            # create a turtle screen (space)
 zari = Turtle()             # create a turtle named zari
@@ -37,7 +37,7 @@ zari.forward(100)           # tell zari to move forward by 100 units
 zari.right(90)              # turn right by 90 degrees
 zari.forward(100)           # tell zari to move forward by 100 units
 zari.right(90)              # turn right by 90 degrees
-        </input>
+        </code>
     </program>
 
   <exercise label="turtle_shape2_draw_fitb">
@@ -64,7 +64,7 @@ zari.right(90)              # turn right by 90 degrees
       <p>Run the code to see what it draws.</p>
   <!--</statement>-->
     <program xml:id="Turtle_Names2_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 from turtle import *        # use the turtle library
 space = Screen()            # create a turtle screen (space)
 zari = Turtle()             # create a turtle named zari
@@ -75,7 +75,7 @@ zari.forward(100)           # tell zari to move forward by 100 units
 zari.right(120)             # turn right by 120 degrees
 zari.forward(100)           # tell zari to move forward by 100 units
 zari.right(120)             # turn right by 120 degrees
-        </input>
+        </code>
     </program>
     <!--</exercise>-->
   <p>This works because <c>zari</c> is a turtle, and each statement gets executed, one right after the other.  If we introduce another turtle and another name, it doesn't work the same</p>
@@ -84,7 +84,7 @@ zari.right(120)             # turn right by 120 degrees
       <p>Run the code to see what it draws.</p>
     </statement>
     <program xml:id="Two_Turtles_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 from turtle import *        # use the turtle library
 space = Screen()            # create a turtle screen (space)
 zari = Turtle()             # create a turtle named zari
@@ -97,7 +97,7 @@ chad = Turtle()             # create a new turtle named chad
 chad.color("orange")        # change the color chad draws with
 chad.forward(100)           # tell chad to move forward by 100 units
 chad.right(120)             # turn chad by 120 degrees
-        </input>
+        </code>
     </program>
   </exercise>
   <p>Every turtle object has its own attributes like its current position and color.  So, when we created chad his position was different from zari's.  Turtles start off in the center of the drawing space when they are first created.</p>

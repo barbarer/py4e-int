@@ -16,29 +16,29 @@
             <em>items</em>.</p>
         <p>There are several ways to create a new list; the simplest is to enclose
             the elements in square brackets (<q>[</q> and <q>]</q>):</p>
-        <program language="python"><input>
+        <program language="python"><code>
 [10, 20, 30, 40]
 ['crunchy frog', 'ram bladder', 'lark vomit']
-</input></program>
+</code></program>
         <p>The first example is a list of four integers. The second is a list of
             three strings. The elements of a list don't have to be the same type.
             The following list contains a string, a float, an integer, and (lo!)
             another list:</p>
-        <program language="python"><input>
+        <program language="python"><code>
 ['spam', 2.0, 5, [10, 20]]
-</input></program>
+</code></program>
         <p>A list within another list is <em>nested</em>.</p>
         <p>A list that contains no elements is called an empty list; you can create
             one with empty brackets, <c>[]</c>.</p>
         <p>As you might expect, you can assign list values to variables:</p>
 
     <program xml:id="listExamples" interactive="activecode" language="python">
-        <input>
+        <code>
 cheeses = ['Cheddar', 'Edam', 'Gouda']
 numbers = [17, 123]
 empty = []
 print(cheeses, numbers, empty)
-        </input>
+        </code>
     </program>
 
     <exercise label="listSeq_MC_tf">

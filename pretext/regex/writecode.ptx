@@ -9,7 +9,7 @@
                             followed by an underscore followed by one or more lowercase letters.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="regex_writecode1q_editor">
-            <input>
+            <code>
 ### re
 def text_match(text):
     pattern = '[###]_[###]+'
@@ -30,7 +30,7 @@ class MyTests(TestCaseGui):
         self.assertEqual(text_match("word_A"), "Not matched!", 'text_match("word_A")')
         self.assertEqual(text_match("myZ_oo"), "Found a match!", 'text_match("myZ_oo")')
 MyTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -40,7 +40,7 @@ MyTests().main()
                             followed by an underscore followed by one or more lowercase letters.
 
     
-    <program xml:id="regex_writecode1a_editor" language="python"><input>
+    <program xml:id="regex_writecode1a_editor" language="python"><code>
 # Line 1: import re
 # Line 3: [A-Z] matches uppercase letter characters and [a-z] matches lowercase letter characters
 # Line 4: Use the pattern variable to search the text
@@ -65,7 +65,7 @@ class MyTests(TestCaseGui):
         self.assertEqual(text_match("word_A"), "Not matched!", 'text_match("word_A")')
         self.assertEqual(text_match("myZ_oo"), "Found a match!", 'text_match("myZ_oo")')
 MyTests().main()
-        </input></program>
+        </code></program>
                     </solution>
         </exercise>
 
@@ -75,7 +75,7 @@ MyTests().main()
                     return <q>Found a match!</q>, if not return <q>Not matched!</q> Replace the ### with your code.</p>
           </statement>
           <program xml:id="regex_writecode2_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 import ###
 def text_match(text):
     pattern = ###    # Your regex pattern here
@@ -97,7 +97,7 @@ class MyTests(TestCaseGui):
 
 
 MyTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -107,7 +107,7 @@ MyTests().main()
                             string starts with 4 followed by zero to many other digits and False if it does not.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="regex_writecode3q_editor">
-            <input>
+            <code>
 ====
 from unittest.gui import TestCaseGui
 
@@ -119,7 +119,7 @@ class MyTests(TestCaseGui):
         self.assertEqual(match_four("4"), True, 'match_four("4")')
         self.assertEqual(match_four("786328042"), False, 'match_four("786328042")')
 MyTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -129,7 +129,7 @@ MyTests().main()
                             string starts with 4 followed by zero to many other digits and False if it does not.
 
     
-    <program xml:id="regex_writecode3a_editor" language="python"><input>
+    <program xml:id="regex_writecode3a_editor" language="python"><code>
 # First import the regex library (re), then define the match_four function.
 # Within the function, create the regex pattern to match if the string starts with '4'
 # Use an if statement to check for a match in the string.
@@ -152,7 +152,7 @@ class MyTests(TestCaseGui):
         self.assertEqual(match_four("4"), True, 'match_four("4")')
         self.assertEqual(match_four("786328042"), False, 'match_four("786328042")')
 MyTests().main()
-        </input></program>
+        </code></program>
                     </solution>
         </exercise>
 
@@ -162,7 +162,7 @@ MyTests().main()
                     string matches cat, Cat, CAT, cAt, etc and False if it does not.</p>
           </statement>
           <program xml:id="regex_writecode4_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -177,7 +177,7 @@ class MyTests(TestCaseGui):
         self.assertEqual(match_cat("caT"), True, "Testing caT.")
         self.assertEqual(match_cat("Cats"), True, "Testing Cats.")
 MyTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -188,7 +188,7 @@ MyTests().main()
                             there is not a <c>z</c>.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="regex_writecode5q_editor">
-            <input>
+            <code>
 import re
 def match_z(string):
 
@@ -204,7 +204,7 @@ class MyTests(TestCaseGui):
         self.assertEqual(match_z("abc"), "Not matched!", 'match_z("abc")')
 
 MyTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -215,7 +215,7 @@ MyTests().main()
                             there is not a z.
 
     
-    <program xml:id="regex_writecode5a_editor" language="python"><input>
+    <program xml:id="regex_writecode5a_editor" language="python"><code>
 # In the function definition, create a regex pattern to find 'z'
 # Search the string with that pattern using re.search()
 # If found, return "Found a match!"
@@ -239,7 +239,7 @@ class MyTests(TestCaseGui):
         self.assertEqual(match_z("abc"), "Not matched!", 'match_z("abc")')
 
 MyTests().main()
-        </input></program>
+        </code></program>
                     </solution>
         </exercise>
 
@@ -250,7 +250,7 @@ MyTests().main()
                     in the string and <q>Not matched!</q> if there is not a z.</p>
           </statement>
           <program xml:id="regex_writecode6_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 import re
 def matchMiddle_z(string):
 
@@ -266,7 +266,7 @@ class MyTests(TestCaseGui):
         self.assertEqual(matchMiddle_z("buzz"), "Found a match!", 'matchMiddle_z("buzz")')
 
 MyTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -275,7 +275,7 @@ MyTests().main()
             <p>Finish the code below to find all of the emails in <q>mbox-short.txt</q> and add them to a list and return the list.  An email starts with an alphanumeric character followed by one or more non white space characters and then <q>@</q> followed by one or more non white space characters with one alphabetic character at the end.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="regex_writecode7q_editor">
-            <input>
+            <code>
 import re
 hand = open('mbox-short.txt')
 ====
@@ -285,7 +285,7 @@ class MyTests(TestCaseGui):
     def testOne(self):
         self.assertEqual(email_list, [['gopal.ramasammycook@gmail.com'], ['louis@media.berkeley.edu'], ['cwen@iupui.edu'], ['antranig@caret.cam.ac.uk'], ['rjlowe@iupui.edu'], ['gsilver@umich.edu'], ['david.horwitz@uct.ac.za'], ['wagnermr@iupui.edu'], ['zqian@umich.edu'], ['stephen.marquard@uct.ac.za'], ['ray@media.berkeley.edu']], "Testing that all the emails were matched.")
 MyTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -294,7 +294,7 @@ MyTests().main()
                         Finish the code below to find all of the emails in <q>mbox-short.txt</q> and add them to a list and return the list.  An email starts with an alphanumeric character followed by one or more non white space characters and then <q>@</q> followed by one or more non white space characters with one alphabetic character at the end.
 
     
-    <program xml:id="regex_writecode7a_editor" language="python"><input>
+    <program xml:id="regex_writecode7a_editor" language="python"><code>
 # First import regex (re) and create a handle for the file.
 # Initialize a list to hold the emails.
 # Iterate through each line in the file, using rstrip() to remove whitespace and findall() with a regex expression to find the emails.
@@ -316,7 +316,7 @@ class MyTests(TestCaseGui):
     def testOne(self):
         self.assertEqual(email_list, [['gopal.ramasammycook@gmail.com'], ['louis@media.berkeley.edu'], ['cwen@iupui.edu'], ['antranig@caret.cam.ac.uk'], ['rjlowe@iupui.edu'], ['gsilver@umich.edu'], ['david.horwitz@uct.ac.za'], ['wagnermr@iupui.edu'], ['zqian@umich.edu'], ['stephen.marquard@uct.ac.za'], ['ray@media.berkeley.edu']], "Testing that all the emails were matched.")
 MyTests().main()
-        </input></program>
+        </code></program>
                     </solution>
         </exercise>
 
@@ -327,7 +327,7 @@ MyTests().main()
                     this would locate the string <q>umich.edu</q>.</p>
           </statement>
           <program xml:id="regex_writecode8_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 import re
 hand = open('mbox-short.txt')
 domains = []
@@ -339,7 +339,7 @@ class MyTests(TestCaseGui):
     def testOne(self):
         self.assertEqual(domains, ['@gmail.com', '@media.berkeley.edu', '@iupui.edu', '@caret.cam.ac.uk', '@iupui.edu', '@umich.edu', '@uct.ac.za', '@iupui.edu', '@umich.edu', '@uct.ac.za', '@media.berkeley.edu'], "Testing that all domains were matched.")
 MyTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -351,7 +351,7 @@ MyTests().main()
                             &#x2018;total_emails'. Use the () character to capture and return the number.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="regex_writecode9q_editor">
-            <input>
+            <code>
 hand = open('mbox-short.txt')
 ====
 from unittest.gui import TestCaseGui
@@ -361,7 +361,7 @@ class MyTests(TestCaseGui):
         self.assertEqual(total_emails, 27, "Testing that the average was calculated properly.")
 
 MyTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -373,7 +373,7 @@ MyTests().main()
                             &#x2018;total_emails'. Use the () character to capture and return the number.
 
     
-    <program xml:id="regex_writecode9a_editor" language="python"><input>
+    <program xml:id="regex_writecode9a_editor" language="python"><code>
 # Import regex (re), create a variable for the total number of emails, and create a handle to access the file.
 # Iterate through lines in the file, remove trailing whitespace with rstrip(), and create a regex expression to use with findall() to return a list of email matches.
 # Finally, increment the total_emails variable for each email in the list
@@ -395,7 +395,7 @@ class MyTests(TestCaseGui):
         self.assertEqual(total_emails, 27, "Testing that the average was calculated properly.")
 
 MyTests().main()
-        </input></program>
+        </code></program>
                     </solution>
         </exercise>
 
@@ -406,7 +406,7 @@ MyTests().main()
                     this would locate the string <q>noname</q>.</p>
           </statement>
           <program xml:id="regex_writecode10_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -415,7 +415,7 @@ class MyTests(TestCaseGui):
     def testOne(self):
         self.assertEqual(usernames, ['gopal.ramasammycook', 'louis', 'cwen', 'antranig', 'rjlowe', 'gsilver', 'david.horwitz', 'wagnermr', 'zqian', 'stephen.marquard', 'ray'], "Testing that all usernames were matched.")
 MyTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 </section>

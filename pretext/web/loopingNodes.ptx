@@ -13,7 +13,7 @@
             prints.</p>
     </statement>
     <program xml:id="net_parse_users_ac1_editor" interactive="activecode" language="python3">
-      <input>
+      <code>
 import xml.etree.ElementTree as ET
 
 input = '''
@@ -27,7 +27,7 @@ for item in lst:
     print('Name', item.find('name').text)
     print('Id', item.find('id').text)
     print('Attribute', item.get('x'))
-        </input>
+        </code>
     </program>
   </exercise>
   <p>The <c>findall</c> method retrieves a Python list of subtrees that
@@ -63,7 +63,7 @@ for item in lst:
             prints.</p>
     </statement>
     <program xml:id="net_parse_users_ac2_editor" interactive="activecode" language="python3">
-      <input>
+      <code>
 import xml.etree.ElementTree as ET
 
 input = '''
@@ -76,7 +76,7 @@ print('User count:', len(lst))
 
 lst2 = stuff.findall('user')
 print('User count:', len(lst2))
-        </input>
+        </code>
     </program>
   </exercise>
   <p><c>lst</c> stores all <c>user</c> elements that are nested within their <c>users</c>

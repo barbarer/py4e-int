@@ -11,7 +11,7 @@
   <p>If we want our object to be aware of these moments of construction and destruction,
             we add specially named methods to our object:</p>
   <program xml:id="partyanimal_lifecycle" interactive="activecode" language="python">
-    <input>
+    <code>
 class PartyAnimal:
 
     def __init__(self):
@@ -31,7 +31,7 @@ an.party(1)
 an.party(2)
 an = 42
 print('an contains',an)
-        </input>
+        </code>
   </program>
   <p>As Python constructs our object, it calls our <c>__init__</c> method to
             give us a chance to set up some default or initial values for the object.

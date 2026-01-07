@@ -5,13 +5,13 @@
     <statement>
       <p>Q-1: What would <c>list_transformation([0, -2, 5.2, 1])</c> return?</p>
       <program language="python">
-        <input>
+        <code>
 def list_transformation(lst):
     lst.sort()
     sum_of_lst = sum(lst)
     lst.append(sum_of_lst)
     return lst
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -61,11 +61,11 @@ def list_transformation(lst):
     <statement>
       <p>Q-2: Which values of <c>num</c> would not return an error if <c>lst</c> were <c>[0, 4, -4, 2.5]</c>?</p>
       <program language="python">
-        <input>
+        <code>
 def popping_removal(lst, num):
     lst.pop(num)
     return lst
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -115,13 +115,13 @@ def popping_removal(lst, num):
     <statement>
       <p>Q-3: What would the function <c>extend_and_append</c> output if <c>lst</c> were <c>[0, 200, 5.6, -2, 4, 5]</c>?</p>
       <program language="python">
-        <input>
+        <code>
 def extend_and_append(lst):
     new_list = lst[-4:-1]
     lst.append(new_list)
     lst.extend(new_list)
     return lst
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -171,7 +171,7 @@ def extend_and_append(lst):
     <statement>
       <p>Q-4: Which of the following would correctly replace the else statement?</p>
       <program language="python">
-        <input>
+        <code>
 def comparing_lengths(lst1, lst2):
     if len(lst1) &gt; len(lst2):
         return "The length of lst1 is greater than the length of lst1"
@@ -179,7 +179,7 @@ def comparing_lengths(lst1, lst2):
         return "The length of lst2 is greater than the length of lst1"
     else:
         return "The length of lst1 and the length of lst2 are equal"
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -229,10 +229,10 @@ def comparing_lengths(lst1, lst2):
     <statement>
       <p>Q-5: Which of the following line(s) of code would properly return a reversed list? (Note: Commas represent line breaks)</p>
       <program language="python">
-        <input>
+        <code>
 def reverse_list(lst):
     # line(s)
-</input>
+</code>
       </program>
     </statement>
     <choices>

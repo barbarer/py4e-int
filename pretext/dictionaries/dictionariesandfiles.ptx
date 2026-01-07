@@ -17,7 +17,7 @@ Who is already sick and pale with grief</pre>
             break each line into a list of words, and then loop through each of the
             words in the line and count each word using a dictionary.</p>
   <program xml:id="dictionariesandfiles_example_1" interactive="activecode" language="python">
-    <input>
+    <code>
 fname = input('Enter the file name: ')
 try:
     fhand = open(fname)
@@ -35,7 +35,7 @@ for line in fhand:
             counts[word] += 1
 
 print(counts)
-        </input>
+        </code>
   </program>
   <p>You will see that we have two <c>for</c> loops. The outer loop is
             reading the lines of the file and the inner loop is iterating through

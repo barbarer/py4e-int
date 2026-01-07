@@ -9,7 +9,7 @@
   <p>Pulling together the code fragments from the previous section, the whole
             program looks like this:</p>
   <program xml:id="functDef_lyrics" interactive="activecode" language="python">
-    <input>
+    <code>
 def print_lyrics():
     print("I'm a lumberjack, and I'm okay.")
     print('I sleep all night and I work all day.')
@@ -19,7 +19,7 @@ def repeat_lyrics():
     print_lyrics()
 
 repeat_lyrics()
-        </input>
+        </code>
   </program>
   <p>This program contains two function definitions: <c>print_lyrics</c> and
             <c>repeat_lyrics</c>. Function definitions get executed just like other
@@ -31,7 +31,7 @@ repeat_lyrics()
             before the first time it is called.</p>
   <p>If we move the function call above the definition we will get an error.</p>
   <program xml:id="functDef_callFirst" interactive="activecode" language="python">
-    <input>
+    <code>
 repeat_lyrics()
 
 def print_lyrics():
@@ -41,7 +41,7 @@ def print_lyrics():
 def repeat_lyrics():
     print_lyrics()
     print_lyrics()
-        </input>
+        </code>
   </program>
   <exercise label="functDef_MC_error">
     <statement>
@@ -85,7 +85,7 @@ def repeat_lyrics():
   <p>See what happens if we move the function definitions around so that <c>repeat_lyrics</c> is defined before
             <c>print_lyrics</c>.</p>
   <program xml:id="functDef_codelens" interactive="codelens" language="python">
-    <input>
+    <code>
 def repeat_lyrics():
     print_lyrics()
     print_lyrics()
@@ -95,13 +95,13 @@ def print_lyrics():
     print('I sleep all night and I work all day.')
 
 repeat_lyrics()
-    </input>
+    </code>
   </program>
   <exercise label="functDef_MC_order">
     <statement>
       <p>Q-5: Consider the code block below. What happens when you run this program?</p>
       <program language="python">
-        <input>
+        <code>
 def repeat_lyrics():
     print_lyrics()
     print_lyrics()
@@ -111,7 +111,7 @@ def print_lyrics():
     print('I sleep all night and I work all day.')
 
 repeat_lyrics()
-</input>
+</code>
       </program>
     </statement>
     <choices>

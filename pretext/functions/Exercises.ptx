@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
-<exercises xml:id="functions_multiple-choice-questions">
+<section xml:id="functions_multiple-choice-questions">
   <title>Multiple Choice Questions</title>
   <exercise label="functEx_1_v2">
     <statement>
       <p>Q-1: What will be printed when the following code executes?</p>
       <program language="python">
-        <input>
+        <code>
 def test(a, b = 5):
     print(a, b)
 
 test(-3)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -60,7 +60,7 @@ test(-3)
     <statement>
       <p>Q-2: What will the following Python program print out? (Given that each word will actually print on a new line)</p>
       <program language="python">
-        <input>
+        <code>
 def fred():
     print("Zap")
 
@@ -70,7 +70,7 @@ def jane():
 jane()
 fred()
 jane()
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -120,7 +120,7 @@ jane()
     <statement>
       <p>Q-3: What value is printed when the following code is executed?</p>
       <program language="python">
-        <input>
+        <code>
 name = "Jane Doe"
 def myFunction(parameter):
     value = "First"
@@ -128,7 +128,7 @@ def myFunction(parameter):
     print (value)
 
 myFunction("Second")
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -225,7 +225,7 @@ myFunction("Second")
     <statement>
       <p>Q-5: What will the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 def pow(b, p):
     y = b ** p
     return y
@@ -237,7 +237,7 @@ def square(x):
 n = 5
 result = square(n)
 print(result)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -287,12 +287,12 @@ print(result)
     <statement>
       <p>Q-6: Consider the following Python code. What does this code print?</p>
       <program language="python">
-        <input>
+        <code>
 def rem(a, b):
     return a % b
 
 print(rem(3,7))
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -373,9 +373,9 @@ print(rem(3,7))
     <statement>
       <p>Q-8: Consider the code below. What prints?</p>
       <program language="python">
-        <input>
+        <code>
 print(int(33.7))
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -417,10 +417,10 @@ print(int(33.7))
     <statement>
       <p>Q-9: Consider the code below. Line 1 is called&#x2026;</p>
       <program language="python">
-        <input>
+        <code>
 def printWeather():
     print("It is sunny!")
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -462,7 +462,7 @@ def printWeather():
     <statement>
       <p>Q-10: Consider the code block below. What happens when you run this program?</p>
       <program language="python">
-        <input>
+        <code>
 repeat_lyrics()
 
 def repeat_lyrics():
@@ -472,7 +472,7 @@ def repeat_lyrics():
 def print_lyrics():
     print("I'm a lumberjack, and I'm okay.")
     print('I sleep all night and I work all day.')
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -510,4 +510,4 @@ def print_lyrics():
       </choice>
     </choices>
   </exercise>
-</exercises>
+</section>

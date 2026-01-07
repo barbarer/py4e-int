@@ -32,13 +32,13 @@
             you get the next number in a long series. To see a sample, run this
             loop:</p>
   <program xml:id="functRandom_float" interactive="activecode" language="python">
-    <input>
+    <code>
 import random
 
 for i in range(10):
     x = random.random()
     print(x)
-        </input>
+        </code>
   </program>
   <p>This program produces the following list of 10 random numbers between
             0.0 and up to but not including 1.0. Notice how the numbers you ran above
@@ -61,23 +61,23 @@ for i in range(10):
             parameters <c>low</c> and <c>high</c>, and returns an
             integer between <c>low</c> and <c>high</c> (including both).</p>
   <program xml:id="functRandom_randint" interactive="activecode" language="python">
-    <input>
+    <code>
 import random
 
 print(random.randint(5, 10))
 print(random.randint(5, 10))
-        </input>
+        </code>
   </program>
   <p>To choose an element from a sequence at random, you can use
             <c>choice</c>:</p>
   <program xml:id="functRandom_choice" interactive="activecode" language="python">
-    <input>
+    <code>
 import random
 
 t = [1, 2, 3]
 print(random.choice(t))
 print(random.choice(t))
-        </input>
+        </code>
   </program>
   <p>The <c>random</c> module also provides functions to generate
             random values from continuous distributions including Gaussian,

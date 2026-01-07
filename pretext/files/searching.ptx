@@ -16,13 +16,13 @@
             <em>startswith</em> to select only those lines with the desired
             prefix:</p>
   <program xml:id="fileFrom" interactive="activecode" language="python">
-    <input>
+    <code>
 fhand = open('mbox-short.txt')
 for line in fhand:
     if line.startswith('From:'):
         print(line)
 fhand.close()
-        </input>
+        </code>
   </program>
   <p>The output looks great since the only lines we are seeing are those
             which start with <q>From:</q>, but why are we seeing the extra blank lines?
@@ -35,14 +35,14 @@ fhand.close()
             simpler approach is to use the <em>rstrip</em> method which
             strips whitespace from the right side of a string as follows:</p>
   <program xml:id="filerstrip" interactive="activecode" language="python">
-    <input>
+    <code>
 fhand = open('mbox-short.txt')
 for line in fhand:
     line = line.rstrip()
     if line.startswith('From:'):
         print(line)
 fhand.close()
-        </input>
+        </code>
   </program>
   <exercise label="file-search-mc-rstrip">
     <statement>
@@ -75,7 +75,7 @@ fhand.close()
   <p>We can structure the loop to follow the pattern of skipping
             uninteresting lines as follows:</p>
   <program xml:id="fileInteresting" interactive="activecode" language="python">
-    <input>
+    <code>
 fhand = open('mbox-short.txt')
 for line in fhand:
     line = line.rstrip()
@@ -85,7 +85,7 @@ for line in fhand:
         # Process our 'interesting' line
     print(line)
 fhand.close()
-        </input>
+        </code>
   </program>
   <p>The output of the program is the same. In English, the uninteresting
             lines are those which do not start with <q>From:</q>, which we skip using
@@ -99,7 +99,7 @@ fhand.close()
             which contain the string <q>@uct.ac.za</q> (i.e., they come from the
             University of Cape Town in South Africa):</p>
   <program xml:id="fileFind" interactive="activecode" language="python">
-    <input>
+    <code>
 fhand = open('mbox-short.txt')
 for line in fhand:
     line = line.rstrip()
@@ -107,7 +107,7 @@ for line in fhand:
         continue
     print(line)
 fhand.close()
-        </input>
+        </code>
   </program>
   <exercise label="file-search-mc-find">
     <statement>

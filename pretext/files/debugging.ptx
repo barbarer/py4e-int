@@ -11,19 +11,19 @@
             whitespace. These errors can be hard to debug because spaces, tabs, and
             newlines are normally invisible:</p>
   <program xml:id="fileWhiteSpace" interactive="activecode" language="python">
-    <input>
+    <code>
 s = '1 2\t 3\n 4'
 print(s)
-        </input>
+        </code>
   </program>
   <p>The built-in function <c>repr</c> can help. It takes any object as
             an argument and returns a string representation of the object. For
             strings, it represents whitespace characters with backslash sequences:</p>
   <program xml:id="fileRepr" interactive="activecode" language="python">
-    <input>
+    <code>
 s = '1 2\t 3\n 4'
 print(repr(s))
-        </input>
+        </code>
   </program>
   <p>This can be helpful for debugging.</p>
   <exercise label="fileDebugFITBrepr">

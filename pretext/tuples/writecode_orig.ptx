@@ -8,7 +8,7 @@
             would return <c>[3.3, -3, 0]</c>.</p>
     </statement>
     <program xml:id="tup_writecode2_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def check_third_element(lst_tups):
     # write code here
 
@@ -25,7 +25,7 @@ class MyTests(TestCaseGui):
 
 
 MyTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="tup_writecode2_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -63,7 +63,7 @@ MyTests().main()
             For example, <c>interchange_values(("LeBron", "James"))</c> would return <c>("James", "LeBron")</c>.</p>
     </statement>
     <program xml:id="tup_writecode4_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def interchange_values(t):
     # write code here
 
@@ -78,7 +78,7 @@ class MyTests(TestCaseGui):
         self.assertEqual(interchange_values((True, False)), (False, True), "interchange_values((True, False))")
 
 MyTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="tup_writecode4_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -112,7 +112,7 @@ MyTests().main()
             the integer in the parameter. For example, <c>my_data(99)</c> would return <c>(99,)</c>.</p>
     </statement>
     <program xml:id="tup_writecode6_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def my_data(int_value):
     # write code here
 
@@ -126,7 +126,7 @@ class MyTests(TestCaseGui):
         self.assertEqual(my_data(-1), (-1,), "my_data(-1)")
 
 MyTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="tup_writecode6_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -158,7 +158,7 @@ MyTests().main()
             should return <c>('Troy', 24, 1996, 'Sophomore', 'Ann Arbor')</c>.</p>
     </statement>
     <program xml:id="tup_writecode8_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def info(name, age, birth_year, year_in_college, hometown):
     # write code here
 
@@ -171,7 +171,7 @@ class MyTests(TestCaseGui):
         self.assertEqual(info('Jane', 18, 2002, 'Freshman', 'Manhattan'), ('Jane', 18, 2002, 'Freshman', 'Manhattan'), "Testing that the function correctly outputs the tuple.")
 
 MyTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="tup_writecode8_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -203,7 +203,7 @@ MyTests().main()
             For example, <c>tuplize('Stephen', 'Curry')</c> would return <c>('Stephen', 'Curry')</c>.</p>
     </statement>
     <program xml:id="tup_writecode10_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def tuplize(val1, val2):
     # write code here
 ====
@@ -215,7 +215,7 @@ class MyTests(TestCaseGui):
         self.assertEqual(tuplize(1, 2), (1, 2), "Testing that the function creates the correct tuple.")
 
 MyTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="tup_writecode10_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">

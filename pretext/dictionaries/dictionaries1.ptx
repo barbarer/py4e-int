@@ -23,26 +23,26 @@
             Because <c>dict</c> is the name of a built-in function, you should
             avoid using it as a variable name.</p>
   <program xml:id="dict_print_new_dict" interactive="activecode" language="python">
-    <input>
+    <code>
 d1 = dict()
 print(d1)
 d2 = {}
 print(d2)
-        </input>
+        </code>
   </program>
   <p>The curly brackets, <c>{}</c>, represent an empty dictionary. To add items to
             the dictionary, you can use square brackets:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; eng2sp['one'] = 'uno'
-</input>
+</code>
   </program>
   <exercise label="dict_example1">
     <statement>
       <p>Write code that adds the key &#x2018;two' with a value of &#x2018;dos' to the dictionary eng2sp.</p>
     </statement>
     <program xml:id="dict_example1_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 eng2sp = {'one':'uno'}
 
 ====
@@ -54,26 +54,26 @@ class myTests(TestCaseGui):
        self.assertEqual(eng2sp['two'], 'dos', "Testing if the key 'two' maps to 'dos'.")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <p>This line creates an item that maps from the key <c>'one'</c> to
             the value <q>uno</q>. If we print the dictionary again, we see a key-value
             pair with a colon between the key and value:</p>
   <program language="python">
-    <input>
+    <code>
 eng2sp = {'one':'uno'}
 print(eng2sp)
 {'one':'uno'}
-</input>
+</code>
   </program>
   <p>This output format is also an input format. For example, you can create
             a new dictionary with three items.  But if you print <c>eng2sp</c>, you might be surprised:</p>
   <program xml:id="Dict_example2" interactive="activecode" language="python">
-    <input>
+    <code>
 eng2sp = {'one': 'uno', 'two': 'dos', 'three': 'tres'}
 print(eng2sp)
-        </input>
+        </code>
   </program>
   <p>The order of the key-value pairs is not the same. In fact, if you type
             the same example on your computer, you might get a different result. In
@@ -82,47 +82,47 @@ print(eng2sp)
             indexed with integer indices. Instead, you use the keys to look up the
             corresponding values:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; print(eng2sp['two'])
 'dos'
-</input>
+</code>
   </program>
   <p>The key <c>'two'</c> always maps to the value <q>dos</q> so the order
             of the items doesn't matter.</p>
   <p>If the key isn't in the dictionary, you get an exception:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; print(eng2sp['four'])
 KeyError: 'four'
-</input>
+</code>
   </program>
   <p>The <c>len</c> function works on dictionaries; it returns the
             number of key-value pairs:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; len(eng2sp)
 3
-</input>
+</code>
   </program>
   <p>The <c>in</c> operator works on dictionaries; it tells you whether
             something appears as a <em>key</em> in the dictionary (appearing as a value is
             not good enough).</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; 'one' in eng2sp
 True
 &gt;&gt;&gt; 'uno' in eng2sp
 False
-</input>
+</code>
   </program>
   <exercise label="question9_1_2">
     <statement>
       <p>Q-4: What is printed after the following code is run?</p>
       <program language="python">
-        <input>
+        <code>
 pokemon_name_n_type = {'Squirtle': 'Water', 'Charmander': 'Fire', 'Bulbasaur' : 'Grass'}
 print('Water' in pokemon_name_n_type)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -148,11 +148,11 @@ print('Water' in pokemon_name_n_type)
             the method <c>values</c>, which returns the values as a list, and
             then use the <c>in</c> operator:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; vals = list(eng2sp.values())
 &gt;&gt;&gt; 'uno' in vals
 True
-</input>
+</code>
   </program>
   <p>The <c>in</c> operator uses different algorithms for lists and
             dictionaries. For lists, it uses a linear search algorithm. As the list
@@ -167,10 +167,10 @@ True
     <statement>
       <p>Q-5: What is the value of fruits[&#x2018;apples'] when the code finishes running?</p>
       <program language="python">
-        <input>
+        <code>
 fruits = {'apples': 1, 'bananas': 4, 'pears': 17, 'oranges': 14}
 fruits['apples'] += fruits['bananas']
-</input>
+</code>
       </program>
     </statement>
     <choices>

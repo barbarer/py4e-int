@@ -40,7 +40,7 @@
             function, the program might have to execute yet another function!</p>
   <p>Observe below, where one function calls another function, which calls another.</p>
   <program xml:id="functFlow_codelens" interactive="codelens" language="python">
-    <input>
+    <code>
 def firstPrint():
     print("First")
     secondPrint()
@@ -53,7 +53,7 @@ def thirdPrint():
     print("Third")
 
 firstPrint()
-    </input>
+    </code>
   </program>
   <p>Fortunately, Python is good at keeping track of where it is, so each
             time a function completes, the program picks up where it left off in the

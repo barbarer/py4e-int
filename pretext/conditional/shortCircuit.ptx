@@ -21,7 +21,7 @@
             to a clever technique called the <em>guardian pattern</em>.
             Consider the following code sequence in the Python interpreter:</p>
   <program xml:id="cndtnlShortCircuit" interactive="activecode" language="python">
-    <input>
+    <code>
 x = 6
 y = 2
 print(x &gt;= 2 and (x/y) &gt; 2)
@@ -33,7 +33,7 @@ print(x &gt;= 2 and (x/y) &gt; 2)
 x = 6
 y = 0
 print(x &gt;= 2 and (x/y) &gt; 2)
-        </input>
+        </code>
   </program>
   <p>The third calculation failed because Python was evaluating
             <c>(x/y)</c> and <c>y</c> was zero, which causes a runtime
@@ -45,7 +45,7 @@ print(x &gt;= 2 and (x/y) &gt; 2)
             <em>guard</em> evaluation just before the evaluation that might
             cause an error as follows:</p>
   <program xml:id="cndtnlGuardian" interactive="activecode" language="python">
-    <input>
+    <code>
 x = 1
 y = 0
 print(x &gt;= 2 and y != 0 and (x/y) &gt; 2)
@@ -57,7 +57,7 @@ print(x &gt;= 2 and y != 0 and (x/y) &gt; 2)
 x = 6
 y = 0
 print(x &gt;= 2 and (x/y) &gt; 2 and y != 0)
-        </input>
+        </code>
   </program>
   <p>In the first logical expression, <c>x &gt;= 2</c> is
             <c>False</c> so the evaluation stops at the <c>and</c>.</p>
@@ -140,22 +140,22 @@ print(x &gt;= 2 and (x/y) &gt; 2 and y != 0)
     <feedback>
       <p>What is the purpose of each term?</p>
     </feedback>
-    <matches>
-      <match order="1">
+    <cardsort>
+      <match>
         <premise>guardian pattern</premise>
         <response>A logical expression with additional comparisons to take advantage
 of the short circuit behavior.</response>
       </match>
-      <match order="2">
+      <match>
         <premise>short circuit</premise>
         <response>When Python is part-way through evaluating a logical expression and stops
 the evaluation because Python knows the final value for the expression without needing to
 evaluate the rest of the expression.</response>
       </match>
-      <match order="3">
+      <match>
         <premise>guard</premise>
         <response> A comparison put in place to cause short circuit behavior and avoid a runtime error.</response>
       </match>
-    </matches>
+    </cardsort>
   </exercise>
 </section>

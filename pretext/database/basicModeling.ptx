@@ -50,16 +50,16 @@ relationships between them is called __________. <var/>  </p>
             we create a new table that keeps track of pairs of friends. The
             following is a simple way of making such a table:</p>
   <program language="{.sql}">
-    <input>
+    <code>
 CREATE TABLE Pals (from_friend TEXT, to_friend TEXT)
-</input>
+</code>
   </program>
   <p>Each time we encounter a person who <c>drchuck</c> is following,
             we would insert a row of the form:</p>
   <program language="{.sql}">
-    <input>
+    <code>
 INSERT INTO Pals (from_friend,to_friend) VALUES ('drchuck', 'lhawthorn')
-</input>
+</code>
   </program>
   <p>As we are processing the 20 friends from the <c>drchuck</c> Twitter feed, we will
             insert 20 records with <q>drchuck</q> as the first parameter so we will end up duplicating
@@ -109,10 +109,10 @@ KEY</c>).</p>
   <p>We can create the <c>People</c> table with this additional
             <c>id</c> column as follows:</p>
   <program language="{.sql}">
-    <input>
+    <code>
 CREATE TABLE People
     (id INTEGER PRIMARY KEY, name TEXT UNIQUE, retrieved INTEGER)
-</input>
+</code>
   </program>
   <p>Notice that we are no longer maintaining a friend count in each row of
             the <c>People</c> table. When we select <c>INTEGER PRIMARY
@@ -127,10 +127,10 @@ KEY</c> as the type of our <c>id</c> column, we are indicating
             <c>from_id</c> and <c>to_id</c> must be unique in this table (i.e., we cannot
             insert duplicate rows) in our database.</p>
   <program language="{.sql}">
-    <input>
+    <code>
 CREATE TABLE Follows
     (from_id INTEGER, to_id INTEGER, UNIQUE(from_id, to_id) )
-</input>
+</code>
   </program>
   <p>When we add <c>UNIQUE</c> clauses to our tables, we are
             communicating a set of rules that we are asking the database to enforce

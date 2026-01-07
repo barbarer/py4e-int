@@ -9,13 +9,13 @@
   <p>All objects keep a reference to the class that created them and every class has a reference to its parent class.
             You can get an object that represents the parent class using <c>super()</c> and then call a method on that object.</p>
   <program language="python">
-    <input>
+    <code>
  class LabeledPoint(Point):
 
      def __init__(self, initX, initY, label):
          super().__init__(initX, initY)
          self.label = label
-</input>
+</code>
   </program>
   <p>In this example, line 4 invokes the <c>__init__()</c> method in <c>Point</c>,
             passing the values of <c>initX</c> and <c>initY</c>
@@ -24,7 +24,7 @@
             of <c>__str__()</c> for <c>LabeledPoint</c> that invokes its parent's implementation
             using <c>super()</c> to avoid duplicating the functionality provided in <c>Point</c>.</p>
   <program xml:id="combined_pts_1" interactive="activecode" language="python">
-    <input>
+    <code>
 class Point:
 
     def __init__(self, initX, initY):
@@ -49,11 +49,11 @@ class LabeledPoint(Point):
 p = LabeledPoint(7,6,"Here")
 print(p)
 print(p.distanceFromOrigin())
-        </input>
+        </code>
   </program>
   <p>Finish the code for the <c>Student</c> class below.  In the <c>__init__</c> method for <c>Student</c> call the <c>__init__</c> method for <c>Person</c> and pass in a first and last name.  Then also set the id. In the <c>__str__</c> method for <c>Student</c> return the id in the form (id: actual_id,) followed by the string returned from the <c>__str__</c> method in <c>Person</c>.  For example, if <c>s = Student("Abby", "Lane", 1)</c> then <c>print(s)</c> should print <q>id: 1, name: Abby Lane</q>.</p>
   <program xml:id="inherit_person_student_super_ac" interactive="activecode" language="python">
-    <input>
+    <code>
 class Person:
 
     def __init__(self, first, last):
@@ -86,6 +86,6 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
   </program>
 </section>

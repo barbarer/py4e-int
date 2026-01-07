@@ -29,7 +29,7 @@
     <image source="pictures/Figures/arch.jpg" width="50%" alt="A picture of an arch"/>
   </figure>
   <program xml:id="Image_Remove_Red" interactive="activecode" language="python">
-    <input>
+    <code>
 from image import *
 
 # CREATE AN IMAGE FROM A FILE
@@ -48,7 +48,7 @@ for p in pixelList:
 # SHOW THE RESULT
 win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
-        </input>
+        </code>
   </program>
   <p>The program above can take several minutes to execute on the <c>arch.jpg</c> picture.  But we're not stuck using just the arch image.  You can
             change the file name in the program above to the URL for any small photo that is on the internet.</p>

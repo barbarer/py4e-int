@@ -5,7 +5,7 @@
     <statement>
       <p>Q-1: Which of the following creates a function <c>min(a, b, c)</c> that takes in integers a, b, c and returns the smallest.</p>
       <program language="python">
-        <input>
+        <code>
 A.
 def min(a, b, c):
     smallest = a
@@ -14,7 +14,7 @@ def min(a, b, c):
     if (c &lt; smallest):
         smallest = c
     return smallest
-</input>
+</code>
       </program>
       <pre>B.
 
@@ -90,7 +90,7 @@ def min(a, b, c):
     <statement>
       <p>Q-2: What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 def woot(x):
       print (x)
       yar(x + 1)
@@ -111,7 +111,7 @@ def main():
       woot (3)
 
 main()
-</input>
+</code>
       </program>
       <pre>A.
 3
@@ -180,13 +180,13 @@ main()
     <statement>
       <p>Q-3: What will the following code return from <c>fact(3)</c>?</p>
       <program language="python">
-        <input>
+        <code>
 def fact(n):
     if (n == 1):
         return 1
     else:
         return n * fact(n - 1)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -236,14 +236,14 @@ def fact(n):
     <statement>
       <p>Q-4: What will the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 def num(x):
     print(x)
     num(x - 1)
     print(x)
 
 num(4)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -293,7 +293,7 @@ num(4)
     <statement>
       <p>Q-5: What will the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 def num(x):
     if x &gt; 0:
         print(x)
@@ -302,7 +302,7 @@ def num(x):
         print(x)
 
 num(4)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -352,7 +352,7 @@ num(4)
     <statement>
       <p>Q-6: What is the value of <c>y</c> after the following code runs?</p>
       <program language="python">
-        <input>
+        <code>
 def noob(x):
     if x &lt; 2:
         return 1
@@ -362,7 +362,7 @@ def noob(x):
         return a + b
 
 y = noob(4)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -412,12 +412,12 @@ y = noob(4)
     <statement>
       <p>Q-7: Which answer is correct?</p>
       <program language="python">
-        <input>
+        <code>
 A.
 
 def fac(x):
     return x * fac(x - 1)
-</input>
+</code>
       </program>
       <pre>B.
 
@@ -480,13 +480,13 @@ def fac(x):
     <statement>
       <p>Q-8: Will this code return <c>True</c> when <c>x</c> is a palidrome (a string that reads the same backwards as forwards like abba)?</p>
       <program language="python">
-        <input>
+        <code>
 def pal(x):
     if x[0] != x[len(x) - 1]:
         return False
     else:
         return pal(x[1:len(x) - 1])
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -520,7 +520,7 @@ def pal(x):
     <statement>
       <p>Q-9: Which answer is correct?</p>
       <program language="python">
-        <input>
+        <code>
 A.
 
 def pal(x):
@@ -529,7 +529,7 @@ def pal(x):
     elif x[0] != x[len(x) - 1]:
         return False
     else return pal(x)
-</input>
+</code>
       </program>
       <pre>B.
 
@@ -601,13 +601,13 @@ def pal(x):
     <statement>
       <p>Q-10: Which of the following contains a function call?</p>
       <program language="python">
-        <input>
+        <code>
 (1) type(4.5)
 (2) def add_one(x):
         return x + 1
 (3) area(2, 9)
 (4) print("Hello")
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -649,14 +649,14 @@ def pal(x):
     <statement>
       <p>Q-11: What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 def calculate(w, x, y):
   a = x
   b = w + 1
   return a + b + 3
 
 print(calculate(3, 2, 0))
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -698,14 +698,14 @@ print(calculate(3, 2, 0))
     <statement>
       <p>Q-12: What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 def calculate(w, x, y):
   a = x
   b = w + 1
   return a + b + w
 
 print(calculate(1, 2, 0))
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -747,13 +747,13 @@ print(calculate(1, 2, 0))
     <statement>
       <p>Q-13: Which of the following are true about this code.</p>
       <program language="python">
-        <input>
+        <code>
 def add_one(x):
 return x + 1
 
 x = 2
 x = x + add_one(x)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -795,7 +795,7 @@ x = x + add_one(x)
     <statement>
       <p>Q-14: What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 def first(a):
   a = 8
   return a
@@ -803,7 +803,7 @@ def first(a):
 a = 20
 first(a)
 print(a)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -853,7 +853,7 @@ print(a)
     <statement>
       <p>Q-15: What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 def first(a):
   a = 8
   return a
@@ -861,7 +861,7 @@ def first(a):
 a = 20
 a= first(a)
 print(a)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -887,14 +887,14 @@ print(a)
     <statement>
       <p>Q-16: Which of the following sets <c>x</c> to 5 if <c>x</c> is set to the result from calling the function?</p>
       <program language="python">
-        <input>
+        <code>
 def f1():
   return 5
 def f2():
   print(5)
 def f3():
   return print(5)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -944,7 +944,7 @@ def f3():
     <statement>
       <p>Q-17: What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 def a(num):
   num = 4
   return 2
@@ -954,7 +954,7 @@ def b(val):
   print(a(1))
 
 b(2)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -1004,7 +1004,7 @@ b(2)
     <statement>
       <p>Q-18: What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 def a(num):
   num = 4
   return 2
@@ -1014,7 +1014,7 @@ def b(val):
   print(a(1))
 
 b(2)
-</input>
+</code>
       </program>
     </statement>
     <choices>

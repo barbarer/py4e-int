@@ -39,7 +39,7 @@ Details: http://source.sakaiproject.org/viewsvn/?view=rev&amp;rev=39772
             the string, but when we use <c>print</c> to show the string, we
             see the string broken into two lines by the newline character.</p>
   <program xml:id="fileNewLine" interactive="activecode" language="python">
-    <input>
+    <code>
 stuff = 'Hello World!'
 print(stuff)
 stuff = 'Hello\nWorld!'
@@ -47,7 +47,7 @@ print(stuff)
 stuff = 'X\nY'
 print(stuff)
 len(stuff)
-        </input>
+        </code>
   </program>
   <p>You can also see that the length of the string <c>X\nY</c> is <em>three</em>
             characters because the newline character is a single character.</p>
