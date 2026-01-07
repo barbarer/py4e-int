@@ -1,16 +1,18 @@
 <?xml version="1.0"?>
-<section xml:id="web_what-is-json">
+<worksheet xml:id="web_what-is-json">
   <title>What is JSON?</title>
   <introduction>
   <p>JSON stands for JavaScript Object Notation.  It is a format for sharing data.
             You can read a JSON string from a file or from a URL and convert it into a Python dictionary or list.
             You can also convert a Python dictionary or list into a JSON string.</p>
         </introduction>
-  <subsection xml:id="web_converting-a-json-string-into-a-python-object">
+       
+  <subexercises xml:id="web_converting-a-json-string-into-a-python-object">
     <title>Converting a JSON String into a Python Object</title>
 <idx>JSON</idx>
     <p>In the following program, we use the built-in <c>json</c>
                 library to parse the JSON string and return a Python list of dictionaries.</p>
+
     <exercise label="web-parse-json-to-python">
       <statement>
         <p>What do you think this code will print?  Run it to see what it actually
@@ -150,8 +152,8 @@ for person in people_list:
         </choice>
       </choices>
     </exercise>
-  </subsection>
-  <subsection xml:id="web_converting-a-python-object-into-a-json-string">
+  </subexercises>
+  <subexercises xml:id="web_converting-a-python-object-into-a-json-string">
     <title>Converting a Python object into a JSON string</title>
     <p>You can also convert a Python list or dictionary to a JSON string.</p>
     <exercise label="web-parse-json-to-string">
@@ -188,5 +190,6 @@ print(json.dumps(d))
         </var>
       </setup>
     </exercise>
-  </subsection>
-</section>
+  </subexercises>
+  
+</worksheet>

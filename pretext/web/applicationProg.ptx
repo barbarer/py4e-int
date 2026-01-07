@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<exercises xml:id="web_application-programming-interfaces">
+<worksheet xml:id="web_application-programming-interfaces">
   <title>Application Programming Interfaces</title>
   <introduction>
 <idx>API</idx>
@@ -17,6 +17,8 @@
             makes a set of <em>services</em> available for use by other
             applications and publishes the APIs (i.e., the <q>rules</q>) that must be
             followed to access the services provided by the program.</p>
+  </introduction>
+
   <exercise label="webAPI_fill1">
     <statement>
       <p>csp-10-2-1: APIs are ________ between applications that exchange data using HTTP and representing complex data using XML or JSON. <var/>  </p>
@@ -126,7 +128,7 @@
       </choice>
     </choices>
   </exercise>
-</introduction>
+
   <subexercises xml:id="web_getting-json-data-from-an-api">
     <title>Getting JSON Data From an API</title>
     <p>There is a listing of free APIs that you can use
@@ -171,4 +173,5 @@ print(in_dict.get("fact"))
         </code>
     </program>
   </subexercises>
-</exercises>
+
+</worksheet>

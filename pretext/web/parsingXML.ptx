@@ -1,15 +1,26 @@
-<exercises xml:id="web_parsing-xml">
+<?xml version="1.0"?>
+<worksheet xml:id="web_parsing-xml">
         <title>Parsing XML</title>
         
-        <introduction>
+        
 <idx>Element Tree</idx>
-        <p>Look at the code below and predict what will be printed.</p>
 
+   
+     <introduction>
+        <p>Look at the code below and predict what will be printed.</p>
+</introduction>
         <exercise label="xml_parse_last_printed_when_no_attr">
             <statement>
-    <p>csp-10-2-1: What is the last thing (last line of text) that will be printed when the code below runs? <var/>  </p></statement><setup><var><condition string="['&quot;]?Attr"><feedback><p>['"]?yes['"]?: It prints <q>Attr: </q> plus the value of the hide attribute in the email tag.</p></feedback></condition><condition string="['&quot;]?yes['&quot;]?"><feedback><p>Something will be printed before the value. Look at the print statement again.</p></feedback></condition><condition string=".*"><feedback><p>What is the value of the hide attribute?</p></feedback></condition></var></setup></exercise>        <p>Here is a simple application that parses some XML and extracts some data
+    <p>csp-10-2-1: What is the last thing (last line of text) that will be printed when the code below runs? <var/>  </p>
+    </statement><setup><var><condition string="['&quot;]?Attr">
+    <feedback><p>['"]?yes['"]?: It prints <q>Attr: </q> plus the value of the hide attribute in the email tag.</p></feedback></condition>
+    <condition string="['&quot;]?yes['&quot;]?"><feedback><p>Something will be printed before the value. Look at the print statement again.</p></feedback></condition>
+    <condition string=".*"><feedback><p>What is the value of the hide attribute?</p></feedback></condition></var>
+    </setup></exercise>        
+    
+    <p>Here is a simple application that parses some XML and extracts some data
             elements from the XML:</p>
-
+ 
 <exercise label="xml_parse_person_ac1">
     <statement>
         <p>Run this to see what it prints.</p>
@@ -33,6 +44,7 @@ print('Name:', tree.find('name').text)
 print('Attr:', tree.find('email').get('hide'))
         </code>
     </program>
+    
 </exercise>
         <p>The triple single quote (<c>'''</c>), as well as the triple double quote (<c>"""</c>),
             allow for the creation of strings in Python that span multiple lines.</p>
@@ -47,12 +59,13 @@ print('Attr:', tree.find('email').get('hide'))
             are many rules regarding valid XML, and using <c>ElementTree</c>
             allows us to extract data from XML without worrying about the rules of
             XML syntax.</p>
-    </introduction>
+   
         <subexercises xml:id="web_using-get-to-get-the-value-of-an-attribute">
             <title>Using <c>get</c> to get the value of an attribute</title>
+            <introduction>
             <p>Why do we use <c>get</c> to get the value of an attribute?</p>
             <p>Look at the code below and predict what will be printed.</p>
-
+            </introduction>
         <exercise label="xml_parse_last_printed">
             <statement>
     <p>csp-10-2-3: What is the last thing (last line of text) that will be printed when the code below runs? <var/>  </p></statement><setup><var><condition string="['&quot;]?Attr"><feedback><p>None[""]?: The default is to print None if there is no attribute with that name when you use <c>.get('name')</c>.</p></feedback></condition><condition string="['&quot;]?None['&quot;]?"><feedback><p>Something will be printed before the value. Look at the print statement again.</p></feedback></condition><condition string=".*"><feedback><p>What is the default value when there is no attribute with that name?</p></feedback></condition></var></setup></exercise>
@@ -79,11 +92,13 @@ print('Name:', tree.find('name').text)
 print('Attr:', tree.find('email').get('hide'))
         </code>
     </program>
+
 </exercise>
-            <note>
+        </subexercises>
+        <note>
                 <p>Just like with dictionaries we can use <c>get</c> to get the value of an attribute and if the attribute isn't there the default is to return <c>None</c>.</p>
             </note>
-        </subexercises>
+            
         <subexercises xml:id="web_getting-data-from-the-first-element-of-a-type-in-xml">
             <title>Getting Data from the First Element of a Type in XML</title>
             <introduction><p>You can use <c>find</c> to get the first element of the XML of a specified type.
@@ -122,9 +137,12 @@ print('Author:', book.find('author').text)
 print('Lang:',book.find('title').get('lang'))
         </code>
     </program>
+
+  
 </exercise>
-            <conclusion><p>What do you think would happen if we looked for the first &#8216;author' in <c>tree</c> rather than in <c>book</c>?  Modify the code to see what happens.</p></conclusion>
-        </subexercises>
+             </subexercises>
+             <p>What do you think would happen if we looked for the first &#8216;author' in <c>tree</c> rather than in <c>book</c>?  Modify the code to see what happens.</p>
+     
         <subexercises xml:id="web_fixing-errors-in-xml">
             <title>Fixing Errors in XML</title>
             <introduction><p>If your XML has errors, what do you think will happen?</p></introduction>
@@ -245,5 +263,6 @@ data = '''
     </program>
 </exercise>
         </subexercises>
-    </exercises>
+        
+    </worksheet>
 
