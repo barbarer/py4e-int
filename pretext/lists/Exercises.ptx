@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
-<exercises xml:id="lists_multiple-choice-questions">
+<section xml:id="lists_multiple-choice-questions">
   <title>Multiple Choice Questions</title>
   <exercise label="listEx_MC1">
     <statement>
       <p>Q-1: What is returned by the following function?</p>
       <program language="python">
-        <input>
+        <code>
 def slice_exercise():
     alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
     print(alist[2:4])
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -51,11 +51,11 @@ def slice_exercise():
     <statement>
       <p>Q-2: What is returned by the following function?</p>
       <program language="python">
-        <input>
+        <code>
 def len_of_list():
     alist = [3, 67, "cat", 3.14, False]
     return len(alist)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -97,11 +97,11 @@ def len_of_list():
     <statement>
       <p>Q-3: What is returned by the following function?</p>
       <program language="python">
-        <input>
+        <code>
 def indexing_and_upper():
     alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
     return alist[2].upper()
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -143,11 +143,11 @@ def indexing_and_upper():
     <statement>
       <p>Q-4: What is returned by the following function?</p>
       <program language="python">
-        <input>
+        <code>
 def list_within_list():
     alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
     return alist[2][0]
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -189,13 +189,13 @@ def list_within_list():
     <statement>
       <p>Q-5: What is returned by the following function?</p>
       <program language="python">
-        <input>
+        <code>
 def list_transformation():
     alist = [4, 2, 8, 6, 5]
     blist = [alist] * 2
     alist[3] = 999
     return blist
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -237,14 +237,14 @@ def list_transformation():
     <statement>
       <p>Q-6: What is returned by the following function?</p>
       <program language="python">
-        <input>
+        <code>
 def list_transformation():
     alist = [4, 2, 8, 6, 5]
     blist = [ ]
     for item in alist:
         blist.append(item+5)
     return blist
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -366,39 +366,39 @@ def list_transformation():
       <ol marker="I">
         <li>
       <program language="python">
-        <input>
+        <code>
 def find_sum():
     nums = [4, 5, 2, 93, 3, 5]
     s = 0
     for n in nums:
         s = s + 1
     return s
-</input>
+</code>
       </program>
     </li>
     <li>
       <program language="python">
-        <input>
+        <code>
 def find_sum():
     nums = [4, 5, 2, 93, 3, 5]
     s = 0
     for n in nums:
         s = n + n
     return s
-</input>
+</code>
       </program>
     </li>
     <li>
       
       <program language="python">
-        <input>
+        <code>
 def find_sum():
     nums = [4, 5, 2, 93, 3, 5]
     s = 0
     for n in nums:
         s = s + n
     return s
-</input>
+</code>
       </program>
     </li>
   </ol>
@@ -444,19 +444,19 @@ def find_sum():
       <ol marker="1">
         <li>
       <program language="python">
-        <input>
+        <code>
 def num_of_strings():
     lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
     s = 0
     for n in lst:
         s = s + n
     return s
-</input>
+</code>
       </program>
     </li>
     <li>
       <program language="python">
-        <input>
+        <code>
 def num_of_strings():
     lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
     for item in lst:
@@ -464,31 +464,31 @@ def num_of_strings():
         if isinstance(item, str):
             s = s + 1
     return s
-</input>
+</code>
       </program>
     </li>
     <li>
       <program language="python">
-        <input>
+        <code>
 def num_of_strings():
     lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
     s = ""
     for n in lst:
         s = s + n
     return s
-</input>
+</code>
       </program>
     </li>
     <li>
       <program language="python">
-        <input>
+        <code>
 def num_of_strings():
     lst = ['plan', 'answer', 5, 9.29, 'order, items', [4]]
     s = 0
     for item in lst:
         if isinstance(item, str):
             s = s + 1
-</input>
+</code>
       </program>
     </li>
   </ol>
@@ -539,7 +539,7 @@ def num_of_strings():
   <exercise label="listEx_MC11">
     <statement>
       <p>Q-11: What will the following code print?</p>
-      <program language="python"><input>def mystery(num_list):
+      <program language="python"><code>def mystery(num_list):
     index = 0
     while index &lt; len(num_list):
         num = num_list[index]
@@ -549,7 +549,7 @@ def num_of_strings():
 
 list1 = [3, 0, 2, 0, 0]
 mystery(list1)
-print(list1)</input></program>
+print(list1)</code></program>
     </statement>
     <choices>
       <choice>
@@ -589,7 +589,7 @@ print(list1)</input></program>
   <exercise label="listEx_MC12">
     <statement>
       <p>Q-12: What will the following code print?</p>
-      <program language="python"><input>def mystery(num_list):
+      <program language="python"><code>def mystery(num_list):
     sum = 0
     for i in range(0, len(num_list), 2):
         num = num_list[i]
@@ -597,7 +597,7 @@ print(list1)</input></program>
         return sum
 
 list1 = [1, 2, 3, 4, 5]
-print(mystery(list1))</input></program>
+print(mystery(list1))</code></program>
     </statement>
     <choices>
       <choice correct="yes">
@@ -637,14 +637,14 @@ print(mystery(list1))</input></program>
   <exercise label="listEx_MC13">
     <statement>
       <p>Q-13: What will the following code print?</p>
-      <program language="python"><input>def mystery(num_list):
+      <program language="python"><code>def mystery(num_list):
     for num in num_list:
         if num &lt; 0:
             return False
         else:
             return True
 
-print(mystery([3, -1, 2]))</input></program>
+print(mystery([3, -1, 2]))</code></program>
     </statement>
     <choices>
       <choice correct="yes">
@@ -684,7 +684,7 @@ print(mystery([3, -1, 2]))</input></program>
   <exercise label="listEx_MC14">
     <statement>
       <p>Q-14: What will the following code print?</p>
-      <program><input>def mystery(num_list):
+      <program><code>def mystery(num_list):
     out = []
     for num in num_list:
         if num &gt; 10:
@@ -692,7 +692,7 @@ print(mystery([3, -1, 2]))</input></program>
     return out
 
 
-print(mystery([5, 10, 15, 20]))</input></program>
+print(mystery([5, 10, 15, 20]))</code></program>
     </statement>
     <choices>
       <choice>
@@ -732,7 +732,7 @@ print(mystery([5, 10, 15, 20]))</input></program>
   <exercise label="listEx_MC15">
     <statement>
       <p>Q-15: What will the following code print?</p>
-      <program><input>def mystery(num_list):
+      <program><code>def mystery(num_list):
     out = []
     for i in range(len(num_list) - 1,0,-1):
         num = num_list[i]
@@ -740,7 +740,7 @@ print(mystery([5, 10, 15, 20]))</input></program>
     return out
 
 
-print(mystery([5, 10, 15, 20]))</input></program>
+print(mystery([5, 10, 15, 20]))</code></program>
     </statement>
     <choices>
       <choice>
@@ -777,4 +777,4 @@ print(mystery([5, 10, 15, 20]))</input></program>
       </choice>
     </choices>
   </exercise>
-</exercises>
+</section>

@@ -10,7 +10,7 @@
             However, the indention is wrong on 4 lines. Fix these errors to find the estimate.</p>
     </statement>
     <program xml:id="itr-ex-root_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 target = 6
     guess = 2
 guessSquared = guess * guess
@@ -19,7 +19,7 @@ while abs(target-guessSquared) &gt; 0.01:
 guess = (guess + closer) / 2.0
         guessSquared = guess * guess
     print("Square root of", target, "is", guess)
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="itr-ex-root_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -56,7 +56,7 @@ guess = (guess + closer) / 2.0
       <p>Rewrite the following code to use a while loop instead of a for loop to calcultae the value of the ten factorial.</p>
     </statement>
     <program xml:id="int-ex-while_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 product = 1  # Start out with nothing
 numbers = range(1,11)
 for number in numbers:
@@ -71,7 +71,7 @@ class myTests(TestCaseGui):
         self.assertEqual(product, 3628800)
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="int-ex-while_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">

@@ -11,16 +11,16 @@
             <c>first</c>, and <c>number</c>, we could write a dictionary
             assignment statement as follows:</p>
   <program language="python">
-    <input>
+    <code>
 directory[last, first] = number
-</input>
+</code>
   </program>
   <exercise label="question10_7_1">
     <statement>
       <p>Write code to create a dictionary called &#x2018;d1', and in it give the tuple (1, &#x2018;a') a value of <q>tuple</q>.</p>
     </statement>
     <program xml:id="question10_7_1_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -31,7 +31,7 @@ class MyTests(TestCaseGui):
         self.assertEqual(d1[(1, "a")], "tuple", "Checking to make sure the key has the correct value.")
 
 MyTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="question10_7_2">
@@ -84,10 +84,10 @@ MyTests().main()
   <p>The expression in brackets is a tuple. We could use tuple assignment in
             a <c>for</c> loop to traverse this dictionary.</p>
   <program language="python">
-    <input>
+    <code>
 for last, first in directory:
     print(first, last, directory[last, first])
-</input>
+</code>
   </program>
   <p>This loop traverses the keys in <c>directory</c>, which are
             tuples. It assigns the elements of each tuple to <c>last</c> and
@@ -97,10 +97,10 @@ for last, first in directory:
     <statement>
       <p>11-9-3: Which of the following lines of code correctly prints the value associated with (&#x2018;Go', &#x2018;Blue')? Select all that apply.</p>
       <program language="python">
-        <input>
+        <code>
 my_dict = {}
 my_dict[('Go', 'Blue')] = True
-</input>
+</code>
       </program>
     </statement>
     <choices>

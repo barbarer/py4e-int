@@ -10,7 +10,7 @@
   <p>For example, look at the program which we used to demonstrate the
             <c>while</c> loop in the chapter on iteration:</p>
   <program language="python">
-    <input>
+    <code>
 while True:
     line = input('&gt; ')
     if line[0] == '#':
@@ -19,11 +19,11 @@ while True:
         break
     print(line)
 print('Done!')
-</input>
+</code>
   </program>
   <p>Look what happens when the user enters an empty line of input:</p>
   <program language="python">
-    <input>
+    <code>
 &gt; hello there
 hello there
 &gt; # don't print this
@@ -34,7 +34,7 @@ Traceback (most recent call last):
   File "copytildone.py", line 3, in &lt;module&gt;
     if line[0] == '#':
 IndexError: string index out of range
-</input>
+</code>
   </program>
   <exercise label="str-debug-fitb-error">
     <statement>
@@ -61,9 +61,9 @@ IndexError: string index out of range
   <p>One possibility is to simply use the <c>startswith</c> method,
             which returns <c>False</c> if the string is empty.</p>
   <program language="python">
-    <input>
+    <code>
 if line.startswith('#'):
-</input>
+</code>
   </program>
   <exercise label="str-debug-fitb-string">
     <statement>
@@ -89,9 +89,9 @@ if line.startswith('#'):
             expression is evaluated only where there is at least one character in
             the string:</p>
   <program language="python">
-    <input>
+    <code>
 if len(line) &gt; 0 and line[0] == '#':
-</input>
+</code>
   </program>
   <exercise label="str-debug-fitb-safe">
     <statement>

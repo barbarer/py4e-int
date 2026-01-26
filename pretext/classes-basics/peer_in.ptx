@@ -52,7 +52,7 @@
     <statement>
       <p>Q-2: What does this code output?</p>
       <program language="python">
-        <input>
+        <code>
 class Point:
 
    def __init__ (self):
@@ -65,7 +65,7 @@ p1.y = p1.x + 3
 p2 = Point()
 p2.x = p2.x + 4
 print(p2.x, p2.y)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -115,11 +115,11 @@ print(p2.x, p2.y)
     <statement>
       <p>Q-3: If <c>t</c> is an object of class <c>Thing</c> and <c>d</c>, <c>e</c>, and <c>f</c> are defined, what is the proper way to call <c>do_it</c>?</p>
       <program language="python">
-        <input>
+        <code>
 class Thing(object):
    def do_it(self, a, b, c):
       ...
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -169,7 +169,7 @@ class Thing(object):
     <statement>
       <p>Q-4: What does this code output?</p>
       <program language="python">
-        <input>
+        <code>
 class Thing(object):
 
    def __init__(self, a, b):
@@ -180,7 +180,7 @@ class Thing(object):
 
 t = Thing(4, 5)
 print(t)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -230,13 +230,13 @@ print(t)
     <statement>
       <p>Q-5: What does this code output?</p>
       <program language="python">
-        <input>
+        <code>
 class Account(object):
    def __init__(self, val):
       self.gold = val
    def __eq__(self, other):
       return self.gold==0 and other.gold==5
-</input>
+</code>
       </program>
     </statement>
     <choices>

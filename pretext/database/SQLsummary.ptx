@@ -16,16 +16,16 @@
             columns generally have a type such as text, numeric, or date data. When
             we create a table, we indicate the names and types of the columns:</p>
   <program language="{.sql}">
-    <input>
+    <code>
 CREATE TABLE Tracks (title TEXT, plays INTEGER)
-</input>
+</code>
   </program>
   <p>To insert a row into a table, we use the SQL <c>INSERT</c>
             command:</p>
   <program language="{.sql}">
-    <input>
+    <code>
 INSERT INTO Tracks (title, plays) VALUES ('My Way', 15)
-</input>
+</code>
   </program>
   <p>The <c>INSERT</c> statement specifies the table name, then a list
             of the fields/columns that you would like to set in the new row, and
@@ -38,9 +38,9 @@ INSERT INTO Tracks (title, plays) VALUES ('My Way', 15)
             optional <c>ORDER BY</c> clause to control the sorting of the
             returned rows.</p>
   <program language="{.sql}">
-    <input>
+    <code>
 SELECT * FROM Tracks WHERE title = 'My Way'
-</input>
+</code>
   </program>
   <exercise label="dbSQL_fill">
     <statement>
@@ -101,25 +101,25 @@ SELECT * FROM Tracks WHERE title = 'My Way'
   <p>You can request that the returned rows be sorted by one of the fields as
             follows:</p>
   <program language="{.sql}">
-    <input>
+    <code>
 SELECT title,plays FROM Tracks ORDER BY title
-</input>
+</code>
   </program>
   <p>To remove a row, you need a <c>WHERE</c> clause on an SQL
             <c>DELETE</c> statement. The <c>WHERE</c> clause determines
             which rows are to be deleted:</p>
   <program language="{.sql}">
-    <input>
+    <code>
 DELETE FROM Tracks WHERE title = 'My Way'
-</input>
+</code>
   </program>
   <p>It is possible to <c>UPDATE</c> a column or columns within one or
             more rows in a table using the SQL <c>UPDATE</c> statement as
             follows:</p>
   <program language="{.sql}">
-    <input>
+    <code>
 UPDATE Tracks SET plays = 16 WHERE title = 'My Way'
-</input>
+</code>
   </program>
   <p>The <c>UPDATE</c> statement specifies a table and then a list of
             fields and values to change after the <c>SET</c> keyword and then
@@ -137,23 +137,23 @@ UPDATE Tracks SET plays = 16 WHERE title = 'My Way'
     <feedback>
       <p>Check above to see what each command does.</p>
     </feedback>
-    <matches>
-      <match order="1">
+    <cardsort>
+      <match>
         <premise>INSERT</premise>
         <response> Tries to add a new row of information to a table</response>
       </match>
-      <match order="2">
+      <match>
         <premise>SELECT</premise>
         <response> Tries to get information from a database</response>
       </match>
-      <match order="3">
+      <match>
         <premise>UPDATE</premise>
         <response> Tries to change information in a database</response>
       </match>
-      <match order="4">
+      <match>
         <premise>DELETE</premise>
         <response> Tries to remove information from a database</response>
       </match>
-    </matches>
+    </cardsort>
   </exercise>
 </section>

@@ -16,10 +16,10 @@
   <p>The following is an example of a <c>SELECT</c> with a
             <c>JOIN</c> clause:</p>
   <program language="{.sql}">
-    <input>
+    <code>
 SELECT * FROM Follows JOIN People
     ON Follows.from_id = People.id WHERE People.id = 1
-</input>
+</code>
   </program>
   <p>The <c>JOIN</c> clause indicates that the fields we are selecting
             come from the <c>Follows</c> and <c>People</c> tables. The
@@ -202,7 +202,7 @@ Connections for id=2:
             It will also limit the results to 5 rows.</p>
     </statement>
     <program xml:id="db_select_bike_join_ex1_editor" interactive="activecode" language="sql">
-      <input>
+      <code>
 SELECT trip_data.bike_number, bikeshare_stations.name
 FROM trip_data JOIN bikeshare_stations
 ON trip_data.start_station = bikeshare_stations.station_id
@@ -212,7 +212,7 @@ assert 0,0 == W00058
 assert 1,0 == W00775
 assert 4,0 == W00392
 assert 3,1 == 3rd &amp; H St NE
-        </input>
+        </code>
     </program>
   </exercise>
   <p>You can also add a <c>WHERE</c> clause.</p>
@@ -224,7 +224,7 @@ assert 3,1 == 3rd &amp; H St NE
             and where the duration is greater than 85,000.</p>
     </statement>
     <program xml:id="db_select_bike_join_with_where_ex1_editor" interactive="activecode" language="sql">
-      <input>
+      <code>
 SELECT trip_data.bike_number, trip_data.duration, bikeshare_stations.name
 FROM trip_data JOIN bikeshare_stations
 ON trip_data.start_station = bikeshare_stations.station_id
@@ -236,7 +236,7 @@ assert 1,0 == W00930
 assert 3,0 == W00202
 assert 3,1 == 85102
 assert 3,2 == 14th &amp; G St NW
-        </input>
+        </code>
     </program>
   </exercise>
 </section>

@@ -11,7 +11,7 @@
             <c>int</c> functions to read and parse an integer number entered
             by the user. We also saw how treacherous doing this could be:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; prompt = "What is the air velocity of an unladen swallow?\n"
 &gt;&gt;&gt; speed = input(prompt)
 What is the air velocity of an unladen swallow?
@@ -19,7 +19,7 @@ What do you mean, an African or a European swallow?
 &gt;&gt;&gt; int(speed)
 ValueError: invalid literal for int() with base 10:
 &gt;&gt;&gt;
-</input>
+</code>
   </program>
   <p>When we are executing these statements in the Python interpreter, we get
             a new prompt from the interpreter, think <q>oops</q>, and move on to our next
@@ -30,12 +30,12 @@ ValueError: invalid literal for int() with base 10:
   <p>Here is a sample program to convert a Fahrenheit temperature to a
             Celsius temperature:</p>
   <program xml:id="cndtnlTemp" interactive="activecode" language="python">
-    <input>
+    <code>
 input_str = input('Enter Fahrenheit Temperature: ')
 fahrenheit = float(input_str)
 celsius = (fahrenheit - 32.0) * 5.0 / 9.0
 print('That is', celsius, 'degrees Celsius.')
-        </input>
+        </code>
   </program>
   <p>Example:</p>
   <pre>Enter Fahrenheit Temperature:72
@@ -77,7 +77,7 @@ or unexpected errors in your code.</p>
   </exercise>
   <p>We can rewrite our temperature converter as follows:</p>
   <program xml:id="cndtnlTempTry" interactive="activecode" language="python">
-    <input>
+    <code>
 input_str = input('Enter Fahrenheit Temperature:')
 try:
     fahrenheit = float(input_str)
@@ -85,7 +85,7 @@ try:
     print('That is', celsius, 'degrees Celsius.')
 except:
     print('Please enter a number.')
-        </input>
+        </code>
   </program>
   <p>Python starts by executing the sequence of statements in the
             <c>try</c> block. If all goes well, it skips the

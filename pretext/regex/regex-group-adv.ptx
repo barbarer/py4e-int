@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<section xml:id="regex_group-work-more-regular-expressions-regex">
+<worksheet xml:id="regex_group-work-more-regular-expressions-regex" groupwork="yes" groupsize="4" label="group-work_more-regular-expressions-regex">
   <title>Group Work: More Regular Expressions (Regex)</title>
   <introduction>
   <p>It is best to use a POGIL approach with the following. In POGIL students work
@@ -43,14 +43,14 @@
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="regex_logical_or_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import re
 str = "The dates were 9/11/2022, 10/15/2022, 11/20/2022, and 12/01/2022"
 
 # get the dates
 dates = re.findall("([1-9]|1[0-2])/\d{2}/\d{4}", str)
 print(dates)
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="regex_match_0_before_digit_on_month">
@@ -101,7 +101,7 @@ print(dates)
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="regex_return_part_match_ac_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import re
 
 str1 = 'From: stephen.marquard@uct.ac.za Sat Jan walk@12  5 09:14:16 2008'
@@ -114,7 +114,7 @@ print(res2)
 
 res3 = re.findall('^From: (\S+@\S+)', str1)
 print(res3)
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="regex_extract_symbols_fitb">
@@ -148,14 +148,14 @@ print(res3)
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="regex_logical_or_with_non_capture_group_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import re
 str = "The dates were 9/11/2022, 10/15/2022, 11/20/2022, and 12/01/2022"
 
 # get the dates
 dates = re.findall("(?:[1-9]|1[0-2])/\d{2}/\d{4}", str)
 print(dates)
-        </input>
+        </code>
       </program>
     </exercise>
     <p>Another approach is to enclose everything in a set of outer parentheses if you have any inner parentheses.</p>
@@ -164,14 +164,14 @@ print(dates)
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="regex_logical_or_with_outer_paren_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import re
 str = "The dates were 9/11/2022, 10/15/2022, 11/20/2022, and 12/01/2022"
 
 # try the search method
 matches = re.findall("(([1-9]|1[0-2])/\d{2}/\d{4})", str)
 print(matches)
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="regex_get_date_from_match">
@@ -229,7 +229,7 @@ for match in matches:
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="regex_bound_caret_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import re
 str = "From: aadarsh, From: carl, From: zihan"
 str2 = "A list: From: aadarsh, From: carl, From: zihan"
@@ -241,7 +241,7 @@ print(matches)
 # find matches
 matches = re.findall("^From: \w+",str2)
 print(matches)
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="regex_match_caret_mc">
@@ -288,14 +288,14 @@ print(matches)
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="regex_bound_dollar_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import re
 str = "$32.99 42.29 24.42"
 
 # find matches
 matches = re.findall("\d+\.\d{2}$",str)
 print(matches)
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="regex_match_dollar_mc">
@@ -345,14 +345,14 @@ print(matches)
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="regex_word_boundary_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import re
 str = "The rain in Spain falls on the plain."
 
 # find matches
 matches = re.findall(r"\bin\b",str)
 print(matches)
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="regex_match_slach_b_mc">
@@ -406,7 +406,7 @@ print(matches)
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="regex_negate_char_set_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import re
 
 def passwordChecker(str):
@@ -422,7 +422,7 @@ print(passwordChecker('Yhmah!23'))
 print(passwordChecker('123456'))
 print(passwordChecker('password'))
 print(passwordChecker('{hi}'))
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="regex_password_checker_mc">
@@ -471,40 +471,26 @@ print(passwordChecker('{hi}'))
       <feedback>
         <p>Look at the code above.</p>
       </feedback>
-      <matches>
-        <match order="1">
+      <cardsort>
+        <match>
           <premise>$</premise>
           <response>Match only at the end of the string</response>
         </match>
-        <match order="2">
+        <match>
           <premise>^</premise>
           <response>Match only at the beginning of the string</response>
         </match>
-        <match order="3">
+        <match>
           <premise>\b</premise>
           <response>Match if a whole word (not part of a word)</response>
         </match>
-        <match order="4">
+        <match>
           <premise>[^]</premise>
           <response>Match the opposite of the character set</response>
         </match>
-      </matches>
+      </cardsort>
     </exercise>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share answers.</p>
-    <raw format="html" xml:space="preserve">
-&lt;div class="runestone sqcontainer %(optclass)s"&gt;
-    &lt;div data-component="groupsub" id=regex_adv_groupsub data-size_limit=3&gt;
-        &lt;div class="col-sm-6"&gt;
-            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
-            &lt;/select&gt;
-        &lt;/div&gt;
-        &lt;div id="groupsub_button" class="col-sm-6"&gt;
-        &lt;/div&gt;
-        &lt;p&gt;The Submit Group button will submit the answer for each each question
-        on this page for each member of your group. It also logs you as the official
-        group submitter.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</raw>
+    
   </subsection>
-</section>
+</worksheet>

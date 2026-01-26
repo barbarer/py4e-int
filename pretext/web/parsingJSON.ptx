@@ -1,23 +1,25 @@
 <?xml version="1.0"?>
-<section xml:id="web_what-is-json">
+<worksheet xml:id="web_what-is-json">
   <title>What is JSON?</title>
   <introduction>
   <p>JSON stands for JavaScript Object Notation.  It is a format for sharing data.
             You can read a JSON string from a file or from a URL and convert it into a Python dictionary or list.
             You can also convert a Python dictionary or list into a JSON string.</p>
         </introduction>
-  <subsection xml:id="web_converting-a-json-string-into-a-python-object">
+       
+  <subexercises xml:id="web_converting-a-json-string-into-a-python-object">
     <title>Converting a JSON String into a Python Object</title>
 <idx>JSON</idx>
     <p>In the following program, we use the built-in <c>json</c>
                 library to parse the JSON string and return a Python list of dictionaries.</p>
+
     <exercise label="web-parse-json-to-python">
       <statement>
         <p>What do you think this code will print?  Run it to see what it actually
                 prints.</p>
       </statement>
       <program xml:id="web-parse-json-to-python_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import json
 
 data = '''
@@ -39,7 +41,7 @@ for item in info:
     print('Name', item['name'])
     print('Id', item['id'])
     print('Attribute', item['x'])
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="net_parse_xml_which_method">
@@ -68,7 +70,7 @@ for item in info:
                 prints.</p>
       </statement>
       <program xml:id="web-parse-json-to-python-dictionary_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import json
 data = '''{"employees": [{"name": "Lena", "title": "sales person"},
                      {"name": "Paru", "title": "manager"},
@@ -78,7 +80,7 @@ people_list = d1["employees"]
 print(len(people_list))
 for person in people_list:
     print(person.get('name'))
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="net_json_what_type_returned_data">
@@ -150,8 +152,8 @@ for person in people_list:
         </choice>
       </choices>
     </exercise>
-  </subsection>
-  <subsection xml:id="web_converting-a-python-object-into-a-json-string">
+  </subexercises>
+  <subexercises xml:id="web_converting-a-python-object-into-a-json-string">
     <title>Converting a Python object into a JSON string</title>
     <p>You can also convert a Python list or dictionary to a JSON string.</p>
     <exercise label="web-parse-json-to-string">
@@ -160,13 +162,13 @@ for person in people_list:
                 prints.</p>
       </statement>
       <program xml:id="web-parse-json-to-string_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 import json
 d_list = [{'Year': 2022, 'First': 'Barb', 'Last': 'Ericson'}, {'Year': 2018, 'First': 'Mark', 'Last': 'Guzdial'}]
 print(json.dumps(d_list))
 d = d_list[0]
 print(json.dumps(d))
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="net_parse_json_convert_to_string_fitb">
@@ -188,5 +190,6 @@ print(json.dumps(d))
         </var>
       </setup>
     </exercise>
-  </subsection>
-</section>
+  </subexercises>
+  
+</worksheet>

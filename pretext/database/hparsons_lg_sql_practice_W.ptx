@@ -19,7 +19,7 @@
                 Please only refer to the unittest and the <term>last</term> execution result for debugging purposes.</p>
       </statement>
       <program xml:id="hparsons_lg_sql_practice_1_wr_editor" interactive="activecode" language="sql">
-        <input>
+        <code>
 DROP TABLE IF EXISTS grades;
 create table "grades" ("student_id" INTEGER, "test_name" TEXT, "english" INTEGER, "math" INTEGER);
 INSERT INTO grades (student_id,test_name,english,math) VALUES
@@ -34,7 +34,7 @@ assert 0,0 == 2
 assert 0,1 == midterm
 assert 1,0 == 3
 assert 1,1 == midterm
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="hparsons_lg_sql_practice_2_wr">
@@ -47,7 +47,7 @@ assert 1,1 == midterm
                 Please only refer to the unittest and the <term>last</term> execution result for debugging purposes.</p>
       </statement>
       <program xml:id="hparsons_lg_sql_practice_2_wr_editor" interactive="activecode" language="sql">
-        <input>
+        <code>
 DROP TABLE IF EXISTS grades;
 create table "grades" ("student_id" INTEGER, "test_name" TEXT, "english" INTEGER, "math" INTEGER);
 INSERT INTO grades (student_id,test_name,english,math) VALUES
@@ -66,7 +66,7 @@ SELECT * FROM grades
 assert 1,1 == final
 assert 1,3 == 90
 assert 3,3 == 99
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="hparsons_lg_sql_practice_3_wr">
@@ -80,7 +80,7 @@ assert 3,3 == 99
                 Please only refer to the unittest and the <term>last</term> execution result for debugging purposes.</p>
       </statement>
       <program xml:id="hparsons_lg_sql_practice_3_wr_editor" interactive="activecode" language="sql">
-        <input>
+        <code>
 DROP TABLE IF EXISTS grades;
 create table "grades" ("student_id" INTEGER, "test_name" TEXT, "english" INTEGER, "math" INTEGER);
 INSERT INTO grades (student_id,test_name,english,math) VALUES
@@ -101,7 +101,7 @@ assert 1,2 == 70
 assert 2,2 == 60
 assert 3,2 == 80
 assert 4,2 == 65
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="hparsons_lg_sql_practice_4_wr">
@@ -118,7 +118,7 @@ assert 4,2 == 65
                 Please only refer to the unittest and the <term>last</term> execution result for debugging purposes.</p>
       </statement>
       <program xml:id="hparsons_lg_sql_practice_4_wr_editor" interactive="activecode" language="sql">
-        <input>
+        <code>
 DROP TABLE IF EXISTS grades;
 create table "grades" ("student_id" INTEGER, "test_name" TEXT, "english" INTEGER, "math" INTEGER);
 INSERT INTO grades (student_id,test_name,english,math) VALUES
@@ -137,7 +137,7 @@ INSERT INTO students (id,name) VALUES
 ====
 assert 0,2 == Alex
 assert 3,2 == Blake
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="hparsons_lg_sql_practice_5_wr">
@@ -154,7 +154,7 @@ assert 3,2 == Blake
                 Please only refer to the unittest and the <term>last</term> execution result for debugging purposes.</p>
       </statement>
       <program xml:id="hparsons_lg_sql_practice_5_wr_editor" interactive="activecode" language="sql">
-        <input>
+        <code>
 DROP TABLE IF EXISTS grades;
 create table "grades" ("student_id" INTEGER, "test_name" TEXT, "english" INTEGER, "math" INTEGER);
 INSERT INTO grades (student_id,test_name,english,math) VALUES
@@ -173,7 +173,7 @@ INSERT INTO tests (name,date) VALUES
 assert 0,0 == 2022-10-15
 assert 0,1 == midterm
 assert 0,2 == 1
-        </input>
+        </code>
       </program>
     </exercise>
   </subsection>

@@ -58,7 +58,7 @@ objects. <var/>  </p>
       <p>Run the code below.</p>
     </statement>
     <program xml:id="partyanimal_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 class PartyAnimal:
 
     def party(self, x):
@@ -71,7 +71,7 @@ an.party(1)
 an.party(2)
 an.party(3)
 PartyAnimal.party(an, 12)
-        </input>
+        </code>
     </program>
   </exercise>
   <p>Each method looks like a function, starting with the <c>def</c> keyword and
@@ -91,9 +91,9 @@ PartyAnimal.party(an, 12)
   <p>If we continue through this sample program, we see the first executable line of
             code:</p>
   <program language="python">
-    <input>
+    <code>
 an = PartyAnimal()
-</input>
+</code>
   </program>
   <p>This is where we instruct Python to construct (i.e., create) an <em>object</em> or
             <em>instance</em> of the class <c>PartyAnimal</c>. It looks like a function call to the
@@ -102,9 +102,9 @@ an = PartyAnimal()
             In a way this is quite similar to the following line which we have
             been using all along:</p>
   <program language="python">
-    <input>
+    <code>
 counts = dict()
-</input>
+</code>
   </program>
   <p>Here we instruct Python to construct an object using the <c>dict</c> template
             (already present in Python), return the instance of dictionary,
@@ -115,26 +115,26 @@ counts = dict()
   <p>Each Partyanimal object/instance contains within it a variable <c>x</c>
             and a method/function named <c>party</c>. We call the <c>party</c> method in this line:</p>
   <program language="python">
-    <input>
+    <code>
 an.party()
-</input>
+</code>
   </program>
   <p>When the <c>party</c> method is called, the first parameter (which we call by convention <c>self</c>)
             points to the particular instance of the PartyAnimal object that <c>party</c> is called from.
             Within the <c>party</c> method, we see the line:</p>
   <program language="python">
-    <input>
+    <code>
 self.x = self.x + 1
-</input>
+</code>
   </program>
   <p>This syntax using the <em>dot</em> operator is saying &#x2018;the x within self.' Each time <c>party()</c> is
             called, the internal <c>x</c> value is incremented by 1 and the value is printed out.</p>
   <p>The following line is another way to call the <c>party</c> method within the <c>an</c>
             object:</p>
   <program language="python">
-    <input>
+    <code>
 PartyAnimal.party(an)
-</input>
+</code>
   </program>
   <p>In this variation, we access the code from within the class and explicitly
             pass the object pointer <c>an</c> as the first parameter (i.e., <c>self</c> within the method).

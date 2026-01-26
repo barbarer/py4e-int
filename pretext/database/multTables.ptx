@@ -130,12 +130,12 @@ cur.close()</pre>
                 making mistakes and introducing incorrect data into out tables. When we
                 create our tables:</p>
     <program language="python">
-      <input>
+      <code>
 cur.execute('''CREATE TABLE IF NOT EXISTS People
     (id INTEGER PRIMARY KEY, name TEXT UNIQUE, retrieved INTEGER)''')
 cur.execute('''CREATE TABLE IF NOT EXISTS Follows
     (from_id INTEGER, to_id INTEGER, UNIQUE(from_id, to_id))''')
-</input>
+</code>
     </program>
     <p>We indicate that the <c>name</c> column in the <c>People</c>
                 table must be <c>UNIQUE</c>. We also indicate that the combination
@@ -144,10 +144,10 @@ cur.execute('''CREATE TABLE IF NOT EXISTS Follows
                 the same relationship more than once.</p>
     <p>We can take advantage of these constraints in the following code:</p>
     <program language="python">
-      <input>
+      <code>
 cur.execute('''INSERT OR IGNORE INTO People (name, retrieved)
     VALUES ( ?, 0)''', ( friend, ) )
-</input>
+</code>
     </program>
     <p>We add the <c>OR IGNORE</c> clause to our <c>INSERT</c>
                 statement to indicate that if this particular <c>INSERT</c> would
@@ -158,10 +158,10 @@ cur.execute('''INSERT OR IGNORE INTO People (name, retrieved)
     <p>Similarly, the following code ensures that we don't add the exact same
                 <c>Follows</c> relationship twice.</p>
     <program language="python">
-      <input>
+      <code>
 cur.execute('''INSERT OR IGNORE INTO Follows
     (from_id, to_id) VALUES (?, ?)''', (id, friend_id) )
-</input>
+</code>
     </program>
     <p>Again, we simply tell the database to ignore our attempted
                 <c>INSERT</c> if it would violate the uniqueness constraint that
@@ -212,7 +212,7 @@ cur.execute('''INSERT OR IGNORE INTO Follows
                 will fail and control will transfer into the <c>except</c>
                 section.</p>
     <program language="python">
-      <input>
+      <code>
 friend = api.get_user(user_id=currId)
 screenName = friend.screen_name
 
@@ -235,7 +235,7 @@ except:
         continue
     friend_id = cur.lastrowid
     countnew = countnew + 1
-</input>
+</code>
     </program>
     <p>If we end up in the <c>except</c> code, it simply means that the
                 row was not found, so we must insert the row. We use <c>INSERT OR
@@ -277,10 +277,10 @@ IGNORE</c> just to avoid errors and then call <c>conn.commit()</c>
                 the JSON, it is a simple matter to insert the two numbers into the
                 <c>Follows</c> table with the following code:</p>
     <program language="python">
-      <input>
+      <code>
 cur.execute('''INSERT OR IGNORE INTO Follows (from_id, to_id)
                VALUES (?, ?)''', (id, friend_id))
-</input>
+</code>
     </program>
     <p>Notice that we let the database take care of keeping us from
                 <q>double-inserting</q> a relationship by creating the table with a

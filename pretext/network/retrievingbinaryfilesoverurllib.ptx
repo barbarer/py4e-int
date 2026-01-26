@@ -10,14 +10,14 @@
             (<c>img</c>) then write that information to a local file as
             follows:</p>
   <program xml:id="curl1" interactive="activecode" language="python3">
-    <input>
+    <code>
 import urllib.request, urllib.parse, urllib.error
 
 img = urllib.request.urlopen('http://data.pr4e.org/cover3.jpg').read()
 fhand = open('cover3.jpg', 'wb')
 fhand.write(img)
 fhand.close()
-        </input>
+        </code>
   </program>
   <p>This program reads all of the data in at once across the network and
             stores it in the variable <c>img</c> in the main memory of your
@@ -55,7 +55,7 @@ fhand.close()
             the next block. This way the program can read any size file without
             using up all of the memory you have in your computer.</p>
   <program xml:id="curl2" interactive="activecode" language="python3">
-    <input>
+    <code>
 import urllib.request, urllib.parse, urllib.error
 
 img = urllib.request.urlopen('http://data.pr4e.org/cover3.jpg')
@@ -69,7 +69,7 @@ while True:
 
 print(size, 'characters copied.')
 fhand.close()
-        </input>
+        </code>
   </program>
   <p>In this example, we read only 100,000 characters at a time and then
             write those characters to the <c>cover.jpg</c> file before

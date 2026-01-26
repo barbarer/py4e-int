@@ -2,10 +2,10 @@
 <section xml:id="variables_order-of-operations">
   <title>Order of operations</title>
   <program xml:id="Expression_Order1" interactive="activecode" language="python">
-    <input>
+    <code>
 result = 4 + -2 * 3
 print(result)
-        </input>
+        </code>
   </program>
   <p>When more than one operator appears in an expression, the order of
             evaluation depends on the <em>rules of precedence</em>. For
@@ -125,10 +125,10 @@ print(result)</pre>
   </exercise>
   <p>Try running the code below as is, then add parentheses around <c>4 + -2</c> to see how the order of operations changes.</p>
   <program xml:id="Expression_Order" interactive="activecode" language="python">
-    <input>
+    <code>
 result = 4 + -2 * 3
 print(result)
-        </input>
+        </code>
   </program>
   <p>When in doubt, always put parentheses in your expressions to make sure
             the computations are performed in the order you intend.</p>

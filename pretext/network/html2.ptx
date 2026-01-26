@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<section xml:id="network_group-work-more-html">
+<worksheet label="group-work-more-html" xml:id="network_group-work-more-html" groupwork="yes" groupsize="4">
+
   <title>Group Work: More HTML</title>
   <introduction>
   <p>It is best to use a POGIL approach with the following. In POGIL students work
@@ -57,8 +58,8 @@
       <statement>
         <p>Click on the <q>Render</q> button to see the resulting web page.</p>
       </statement>
-      <program xml:id="html_table_ex_editor" interactive="activecode" language="htmlmixed">
-        <input>
+      <program xml:id="html_table_ex_editor" interactive="activecode" language="html" label="html_table_ex_editor">
+        <code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -85,7 +86,7 @@
         &lt;/table&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="html_table_tag_def_dnd">
@@ -95,24 +96,24 @@
       <feedback>
         <p>Read the information above and try again.</p>
       </feedback>
-      <matches>
-        <match order="1">
+      <cardsort>
+        <match>
           <premise>table</premise>
           <response>Used to create a table.</response>
         </match>
-        <match order="2">
+        <match>
           <premise>th</premise>
           <response>Used to specify a header (optional first row).</response>
         </match>
-        <match order="3">
+        <match>
           <premise>tr</premise>
           <response>Used to create a row in a table.</response>
         </match>
-        <match order="4">
+        <match>
           <premise>td</premise>
           <response>Used to identify data in a table.</response>
         </match>
-      </matches>
+      </cardsort>
     </exercise>
     <exercise label="html_body_table_unemployment_order" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
@@ -202,20 +203,20 @@
     <p>Web pages can include hyperlinks to other web pages.  They do this by including
                 an anchor <c>a</c> tag which is also known as a <term>link</term> tag as shown below.</p>
     <program language="html">
-      <input>
+      <code>
 &lt;a href="https://www.w3schools.com/"&gt;Visit W3Schools.com!&lt;/a&gt;
-</input>
+</code>
     </program>
     <p>The start tag <c>&lt;a&gt;</c> contains an <term>attribute</term> <c>href</c> and <term>value</term> <c>"https://www.w3schools.com/"</c>.
                 The text of the tag is <c>Visit W3Schools.com!</c> which is the actual text of the link when it is displayed.
                 If you click on the link you will be taken to the <c>href</c> value: <c>https://www.w3schools.com/</c>.
                 The <c>&lt;a&gt;</c> tag has a closing <c>&lt;/a&gt;</c> tag.</p>
-    <exercise label="html_link_ac">
+    <exercise label="html_link_ac" xml:id="html_link_ac_ex">
       <statement>
         <p>Render the HTML below.</p>
       </statement>
-      <program xml:id="html_link_ac_editor" interactive="activecode" language="htmlmixed">
-        <input>
+      <program xml:id="html_link_ac_editor" interactive="activecode" language="html">
+        <code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -227,7 +228,7 @@
         &lt;/p&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-        </input>
+        </code>
       </program>
     </exercise>
   </subsection>
@@ -235,12 +236,12 @@
     <title>Image Tag</title>
     <p>Web pages can include images using the &lt;img&gt; tag. The image tag has an attribute <c>src</c> that specifies the URL for the image
                 and can have an <c>alt</c> attribute to specify alternative text that describes the image.</p>
-    <exercise label="html_image_ac">
+    <exercise label="html_image_ac" xml:id="html_image_ac_ex">
       <statement>
         <p>Render the HTML below.</p>
       </statement>
-      <program xml:id="html_image_ac_editor" interactive="activecode" language="htmlmixed">
-        <input>
+      <program xml:id="html_image_ac_editor" interactive="activecode" language="html">
+        <code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -251,7 +252,7 @@
         &lt;img src="https://i.ibb.co/WfcrzVn/beach.jpg" alt="A picture of a beach"&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-        </input>
+        </code>
       </program>
     </exercise>
     <note>
@@ -264,20 +265,20 @@
       <feedback>
         <p>Read the information above and try again.</p>
       </feedback>
-      <matches>
-        <match order="1">
+      <cardsort>
+        <match>
           <premise>img</premise>
           <response>Tag to include an image.</response>
         </match>
-        <match order="2">
+        <match>
           <premise>div</premise>
           <response>Tag to define a division (section).</response>
         </match>
-        <match order="3">
+        <match>
           <premise>a</premise>
           <response>Tag to define a hyperlink (link)</response>
         </match>
-      </matches>
+      </cardsort>
     </exercise>
     <exercise label="html-anchor-vs-img">
       <statement>
@@ -340,12 +341,12 @@
     <title>Div and Span tags</title>
     <p>The <c>div</c> tag is used to contain other HTML tags (elements).  It is often used to divide the HTML page into sections. The <c>span</c> tag is used for inline grouping or styling.
                 You can use Cascading Style Sheets (CSS) to change the look of each HTML tag (element).  You can add the CSS directly in the <c>head</c> section using the <c>style</c> tag, but the recommended approach is to use external CSS.</p>
-    <exercise label="html_div_with_css_ac">
+    <exercise label="html_div_with_css_ac" xml:id="html_div_with_css_ac_ex">
       <statement>
         <p>Render the HTML below.</p>
       </statement>
-      <program xml:id="html_div_with_css_ac_editor" interactive="activecode" language="htmlmixed">
-        <input>
+      <program xml:id="html_div_with_css_ac_editor" interactive="activecode" language="html">
+        <code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -370,7 +371,7 @@
         &lt;/div&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="html_span_div_css">
@@ -380,31 +381,31 @@
       <feedback>
         <p>Read the information above and try again.</p>
       </feedback>
-      <matches>
-        <match order="1">
+      <cardsort>
+        <match>
           <premise>span</premise>
           <response>Tag to define an inline style or order.</response>
         </match>
-        <match order="2">
+        <match>
           <premise>div</premise>
           <response>Tag to define a block or section in an HTML page.</response>
         </match>
-        <match order="3">
+        <match>
           <premise>CSS</premise>
           <response>Is used to define styles to change how HTML elements are displayed.</response>
         </match>
-      </matches>
+      </cardsort>
     </exercise>
   </subsection>
   <subsection xml:id="network_using-css-classes">
     <title>Using CSS Classes</title>
     <p>You can define one or more classes in CSS and then use them to change the display of the HTML elements.</p>
-    <exercise label="html_div_with_css_classes_ac">
+    <exercise label="html_div_with_css_classes_ac" xml:id="html_div_with_css_classes_ac_ex">
       <statement>
         <p>Render the HTML below.</p>
       </statement>
-      <program xml:id="html_div_with_css_classes_ac_editor" interactive="activecode" language="htmlmixed">
-        <input>
+      <program xml:id="html_div_with_css_classes_ac_editor" interactive="activecode" language="html">
+        <code>
 &lt;html&gt;
     &lt;head&gt;
         &lt;style&gt;
@@ -426,7 +427,7 @@
 
   &lt;/body&gt;
 &lt;/html&gt;
-        </input>
+        </code>
       </program>
     </exercise>
     <p>Change the class <c>warning</c> to use an orange color instead and render the HTML again.</p>
@@ -470,20 +471,6 @@
       </choices>
     </exercise>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
-    <raw format="html" xml:space="preserve">
-&lt;div class="runestone sqcontainer %(optclass)s"&gt;
-    &lt;div data-component="groupsub" id=html_more_groupsub data-size_limit=3&gt;
-        &lt;div class="col-sm-6"&gt;
-            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
-            &lt;/select&gt;
-        &lt;/div&gt;
-        &lt;div id="groupsub_button" class="col-sm-6"&gt;
-        &lt;/div&gt;
-        &lt;p&gt;The Submit Group button will submit the answer for each each question
-        on this page for each member of your group. It also logs you as the official
-        group submitter.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</raw>
+    
   </subsection>
-</section>
+</worksheet>

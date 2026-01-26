@@ -6,7 +6,7 @@
   <p>One conditional can also be nested within another. We could have written
             the three-branch example like this:</p>
   <program xml:id="cndtnlNested" interactive="codelens" language="python">
-    <input>
+    <code>
 x = 5
 y = 6
 if x == y:
@@ -17,7 +17,7 @@ else:
     else:
         print('x is greater than y')
 print('All done.')
-    </input>
+    </code>
   </program>
   
     <p>The outer conditional contains two branches. The first branch contains a
@@ -31,7 +31,7 @@ print('All done.')
     <statement>
       <p>Q-2: Will the following code cause an error?</p>
       <program language="python">
-        <input>
+        <code>
 x = -10
 if x &lt; 0:
     print("The negative number ",  x, " is not valid here.")
@@ -40,7 +40,7 @@ else:
         print(x, " is a positive number")
     else:
         print(x," is 0")
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -69,22 +69,22 @@ else:
             statements. For example, we can rewrite the following code using a
             single conditional:</p>
   <program xml:id="cndtnlNestedPositive" interactive="activecode" language="python">
-    <input>
+    <code>
 x = 2
 if 0 &lt; x:
     if x &lt; 10:
         print('x is a positive single-digit number.')
-        </input>
+        </code>
   </program>
   <p>The first <c>print</c> statement is executed only if we make it past
             both conditionals, so we can get the same effect with the
             <c>and</c> operator:</p>
   <program xml:id="cndtnlNestedAnd" interactive="activecode" language="python">
-    <input>
+    <code>
 x = 3
 if 0 &lt; x and x &lt; 10:
     print('x is a positive single-digit number.')
-        </input>
+        </code>
   </program>
   
   <p>There are, however, cases where a nested <c>if</c> is very useful. This will usually happen when you have tests on two different variables (unlike the preceding example, where both conditions involve <c>x</c>).</p>
@@ -105,7 +105,7 @@ if 0 &lt; x and x &lt; 10:
   <p>Here is the program, using a nested <c>if</c>.  Run it several times, entering different values for <c>age</c> and <c>hour</c> to see what output you get.</p>
   
   <program xml:id="cndtnl-nested-movie" interactive="activecode" language="python">
-    <input>age_str = input("Enter age in years:")
+    <code>age_str = input("Enter age in years:")
 age = int(age_str)
 
 hour_str = input("Enter start hour in 24-hour time:")
@@ -119,13 +119,13 @@ if age &lt; 65:
 else:
     price = 9
     
-print("Ticket price:", price, "dollars.")</input>
+print("Ticket price:", price, "dollars.")</code>
 </program>
   <exercise label="cndtnl-nest-mc-chain">
     <statement>
       <p>Q-5: Which of I, II, and III below gives the same result as the following nested if?</p>
       <program language="python">
-        <input>
+        <code>
 # nested if-else statement
 x = -10
 if x &lt; 0:
@@ -135,10 +135,10 @@ else:
         print(x, " is a positive number")
     else:
         print(x, " is 0")
-</input>
+</code>
       </program>
       <program language="python">
-        <input>
+        <code>
 I.
 
 if x &lt; 0:
@@ -147,10 +147,10 @@ else x &gt; 0:
     print(x, " is a positive number")
 else:
     print(x, " is 0")
-</input>
+</code>
       </program>
       <program language="python">
-        <input>
+        <code>
 II.
 
 if x &lt; 0:
@@ -159,10 +159,10 @@ elif x &gt; 0:
     print(x, " is a positive number")
 else:
     print(x, " is 0")
-</input>
+</code>
       </program>
       <program language="python">
-        <input>
+        <code>
 III.
 
 if x &lt; 0:
@@ -171,7 +171,7 @@ if x &gt; 0:
     print(x, " is a positive number")
 else:
     print(x, " is 0")
-</input>
+</code>
       </program>
     </statement>
     <choices>

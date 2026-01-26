@@ -18,7 +18,7 @@
             we will use string slicing to extract the portion of the string which we
             are looking for.</p>
   <program xml:id="strParsing" interactive="codelens" language="python">
-    <input>
+    <code>
 data = 'From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008'
 atpos = data.find('@')
 print(atpos)
@@ -26,7 +26,7 @@ spacepos = data.find(' ', atpos)
 print(spacepos)
 host = data[atpos + 1:spacepos]
 print(host)
-    </input>
+    </code>
   </program>
   <p>We use a version of the <c>find</c> method which allows us to
             specify a position in the string where we want <c>find</c> to

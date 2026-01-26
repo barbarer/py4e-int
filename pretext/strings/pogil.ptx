@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<section xml:id="strings_group-work-strings">
+<worksheet xml:id="strings_group-work-strings"  groupwork="yes" groupsize="4" label="group-work_strings">
         <title>Group Work - Strings</title>
         <introduction>
         <p>It is best to use a POGIL approach with the following. In POGIL students work
@@ -44,7 +44,7 @@
 
     </statement>
     <program xml:id="strings_ac_pogil_output_indexingandslicing_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 sentence = 'I_am_smart' # This line prints nothing
 print(type(sentence))
 print(len(sentence))
@@ -61,7 +61,7 @@ print(sentence[:-5])
 print(sentence[-5:])
 triplet = sentence[-4:-1] # This line prints nothing
 print(triplet)
-        </input>
+        </code>
     </program>
 </exercise>
 
@@ -234,7 +234,7 @@ print(triplet)
 
     </statement>
     <program xml:id="strings_ac_pogil_output_methods_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 dna = 'CTGACGACCT' # This line prints nothing
 print(dna.lower())
 print(dna)
@@ -253,7 +253,7 @@ print(dna[0])
 print(type(dna[0]))
 print(dna[0].replace('C', 'g'))
 print(dna)
-        </input>
+        </code>
     </program>
 </exercise>
 
@@ -485,7 +485,7 @@ print(dna)
 <exercise label="strings_dnd_pogil_methods">
     <statement><p>Match each string method to a description of what it does.</p></statement>
     <feedback><p>Keep trying! Run the code block above if you need more help.</p></feedback>
-<matches><match order="1"><premise>split</premise><response>Returns a list of substrings which were separated by a specific character/string.</response></match><match order="2"><premise>lower</premise><response>Returns a new string with all letters changed to lowercase.</response></match><match order="3"><premise>replace</premise><response>Returns a new string with all occurences of a specific substring substituted with another string.</response></match><match order="4"><premise>capitalize</premise><response>Returns a new string with the first letter changed to uppercase.</response></match></matches></exercise><exercise label="strings_parsons_pogil_methods" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
+<cardsort><match><premise>split</premise><response>Returns a list of substrings which were separated by a specific character/string.</response></match><match><premise>lower</premise><response>Returns a new string with all letters changed to lowercase.</response></match><match><premise>replace</premise><response>Returns a new string with all occurences of a specific substring substituted with another string.</response></match><match><premise>capitalize</premise><response>Returns a new string with the first letter changed to uppercase.</response></match></cardsort></exercise><exercise label="strings_parsons_pogil_methods" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
             <p>The code blocks below have been mixed up! Rearrange them so that the program prints <q>Georgington</q>. Watch out - there are three code blocks that are unused in the solution!</p>
 </statement>
 <blocks><block order="1">
@@ -505,21 +505,7 @@ print(dna)
                 <url href="https://docs.python.org/3/library/stdtypes.html#string-methods" visual="https://docs.python.org/3/library/stdtypes.html#string-methods">https://docs.python.org/3/library/stdtypes.html#string-methods</url>
                 to learn about more! They can be <em>very</em> helpful.</p>
             <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
-            <raw format="html" xml:space="preserve">
-&lt;div class="runestone sqcontainer %(optclass)s"&gt;
-    &lt;div data-component="groupsub" id=strings_groupsub data-size_limit=3&gt;
-        &lt;div class="col-sm-6"&gt;
-            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
-            &lt;/select&gt;
-        &lt;/div&gt;
-        &lt;div id="groupsub_button" class="col-sm-6"&gt;
-        &lt;/div&gt;
-        &lt;p&gt;The Submit Group button will submit the answer for each each question
-        on this page for each member of your group. It also logs you as the official
-        group submitter.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</raw>
+            
         </subsection>
-    </section>
+    </worksheet>
 

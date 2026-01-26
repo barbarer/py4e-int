@@ -17,10 +17,10 @@
             with, like a letter or a number. You can print values in Python.  See what happens
             when you run the following code.</p>
   <program xml:id="var-ac-1-vars2" interactive="activecode" language="python">
-    <input>
+    <code>
 print(17)
 print('Hello World!')
-        </input>
+        </code>
   </program>
   <p>These values belong to different <em>types</em>: 17
             is an integer, and <q>Hello World!</q> is a <em>string</em>, so
@@ -28,11 +28,11 @@ print('Hello World!')
             they are enclosed in quotation marks.</p>
   <p>If you are not sure what type a value has, use the type function to find out.</p>
   <program xml:id="var-ac-2-var-types" interactive="activecode" language="python">
-    <input>
+    <code>
 print(type('Hello, World!'))
 print(type(17))
 print(type(3.2))
-        </input>
+        </code>
   </program>
   <p>Not surprisingly, strings belong to the type <c>str</c> and
             integers belong to the type <c>int</c>. Less obviously, numbers
@@ -82,18 +82,18 @@ print(type(3.2))
   </exercise>
   <p>They're strings. We can check this using the active codeblock below.</p>
   <program xml:id="var-ac-2-num-strs" interactive="activecode" language="python">
-    <input>
+    <code>
 print(type('17'))
 print(type('3.2'))
-        </input>
+        </code>
   </program>
   <p>When you type a large integer, you might be tempted to use commas
             between groups of three digits, as in 1,000,000. This is
             not a legal integer in Python, but it is legal:</p>
   <program xml:id="var-ac-3-num-commas" interactive="activecode" language="python">
-    <input>
+    <code>
 print(1,000,000)
-        </input>
+        </code>
   </program>
   <p>Well, that's probably not what you expected! Python interprets
             1,000,000 as a comma-separated sequence of integers, which
@@ -147,27 +147,27 @@ print(1,000,000)
     <feedback>
       <p>Try using type(x) in terminal or your python interpreter.</p>
     </feedback>
-    <matches>
-      <match order="1">
+    <cardsort>
+      <match>
         <premise>"Hello, World!"</premise>
         <response>string (str)</response>
       </match>
-      <match order="2">
+      <match>
         <premise>17</premise>
         <response>integer (int)</response>
       </match>
-      <match order="3">
+      <match>
         <premise>3.2</premise>
         <response>float</response>
       </match>
-      <match order="4">
+      <match>
         <premise>a</premise>
         <response>character (char)</response>
       </match>
-      <match order="5">
+      <match>
         <premise>True</premise>
         <response>boolean (bool)</response>
       </match>
-    </matches>
+    </cardsort>
   </exercise>
 </section>

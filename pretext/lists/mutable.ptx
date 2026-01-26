@@ -24,21 +24,21 @@
             expression inside the brackets specifies the index. Remember that the
             indices start at 0:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; print(cheeses[0])
 Cheddar
-</input>
+</code>
   </program>
   <p>Unlike strings, lists are mutable because you can change the order of
             items in a list or reassign an item in a list. When the bracket operator
             appears on the left side of an assignment, it identifies the element of
             the list that will be assigned.</p>
   <program xml:id="listReassign" interactive="codelens" language="python">
-    <input>
+    <code>
 numbers = [17, 123]
 numbers[1] = 5
 print(numbers)
-    </input>
+    </code>
   </program>
   <p>The one-th element of <c>numbers</c>, which used to be 123, is
             now 5.</p>
@@ -63,11 +63,11 @@ print(numbers)
   </p>
   <p>The <c>in</c> operator also works on lists.</p>
   <program xml:id="listIn" interactive="activecode" language="python">
-    <input>
+    <code>
 cheeses = ['Cheddar', 'Edam', 'Gouda']
 print('Edam' in cheeses)
 print('Brie' in cheeses)
-        </input>
+        </code>
   </program>
   <exercise label="listMut_MC_alist">
     <statement>

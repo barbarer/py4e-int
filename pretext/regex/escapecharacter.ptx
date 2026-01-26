@@ -9,12 +9,12 @@
             that character with a backslash. For example, we can find money amounts
             with the following regular expression.</p>
   <program xml:id="re-escape-ac1" interactive="activecode" language="python">
-    <input>
+    <code>
 import re
 x = 'We just received $10.00 for cookies.'
 y = re.findall('\$[0-9.]+',x)
 print(y)
-        </input>
+        </code>
   </program>
   <p>Since we prefix the dollar sign with a backslash, it actually matches
             the dollar sign in the input string instead of matching the <q>end of
@@ -30,7 +30,7 @@ print(y)
       <p>Change the regex equation so that it matches with the math equation in the given string &#x2018;x'.</p>
     </statement>
     <program xml:id="re-escape-ac2_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 import re
 x = 'We learned in school today that 5 + 6 is 11!'
 y = re.findall('[0-9]+ [\D]', x)
@@ -43,7 +43,7 @@ class MyTests(TestCaseGui):
         self.assertEqual(y, ['5 + 6'], "Testing that the regex equation matches correctly.")
 
 MyTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="re-escape-mc-period">

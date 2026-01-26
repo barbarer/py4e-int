@@ -231,7 +231,7 @@
         <p>Run the code below to find the date with the highest value at the close.</p>
       </statement>
       <program xml:id="csv_file_stocks_find_date_with_highest_close_ac_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # get the lines from the file
 with open("stocks.txt") as inFile:
     lines = inFile.readlines()
@@ -256,7 +256,7 @@ for line in lines:
         max_date = date
 
 print(f"Max close {max_close} on {max_date}")
-        </input>
+        </code>
       </program>
     </exercise>
     <note>
@@ -288,7 +288,7 @@ print(f"Max close {max_close} on {max_date}")
         <p>Run the code below to find the date with the highest value at the close and the date with the lowest value at the close.</p>
       </statement>
       <program xml:id="csv_file_stocks_read_into_dictionary_ac_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 def get_dict(file):
     """ return a nested dictionary from the file """
 
@@ -366,7 +366,7 @@ max_close, max_date = get_date_max_close(date_d)
 print(f"Max close {max_close} on {max_date}")
 min_close, min_date = get_date_min_close(date_d)
 print(f"Min close {min_close} on {min_date}")
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="csv_file_dnd_string_and_conversion_functions_dnd">
@@ -377,28 +377,28 @@ print(f"Min close {min_close} on {min_date}")
       <feedback>
         <p>What do each of these do?</p>
       </feedback>
-      <matches>
-        <match order="1">
+      <cardsort>
+        <match>
           <premise>str.rstrip()</premise>
           <response>Returns a new string without trailing white space (including new lines).</response>
         </match>
-        <match order="2">
+        <match>
           <premise>float(value)</premise>
           <response>Returns a floating point value from a string.</response>
         </match>
-        <match order="3">
+        <match>
           <premise>str.split(",")</premise>
           <response>Returns a list of items created by splitting the string at commas.</response>
         </match>
-        <match order="4">
+        <match>
           <premise>str.strip()</premise>
           <response>Returns a new string without leading or trailing white space.</response>
         </match>
-        <match order="5">
+        <match>
           <premise>int(value)</premise>
           <response>Returns an integer value from a string.</response>
         </match>
-      </matches>
+      </cardsort>
     </exercise>
     <exercise label="csv_file_strip_with_params_mcq">
       <statement>
@@ -515,7 +515,7 @@ print(f"Min close {min_close} on {min_date}")
         <p>Run the code below.  It is supposed to print the nested dictionary and then the total number of passengers (in thousands) for 1958, but there are errors.  Fix the errors so that all tests pass.</p>
       </statement>
       <program xml:id="csv_file_airtravel_get_toal_for_year_ac_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 def get_dict(file):
 
     d = {}
@@ -574,7 +574,7 @@ class myTests(TestCaseGui):
       self.assertEqual(get_total_for_year(travel_d, "1960"), 5714, 'get_total_for_year(travel_d, "1960")')
 
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
     <exercise label="csv_file_air_travel_most_month_1958_fitb">
@@ -601,7 +601,7 @@ myTests().main()
         <p>Fix the code below to work correctly.  It should print the month with the highest number of passengers in 1958.</p>
       </statement>
       <program xml:id="csv_file_airtravel_get_max_month_ac_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 def get_dict(file):
 
     d = {}
@@ -661,7 +661,7 @@ class myTests(TestCaseGui):
       self.assertEqual(get_max_month(travel_d, "1960")[0], "JUL", 'get_max_month(travel_d, "1960")[0]')
 
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
     <p>Here is another sample example CSV file.  It contains the Oscar winners for Best Actress from 1928 to 2016.  It has a header row to explain the data in each column.</p>
@@ -763,7 +763,7 @@ myTests().main()
         <p>Run the code below.  It should read all the data into a list of dictionaries.  Then it should create a new dictionary where the key is the age and the value is the number of actresses who won at that age. It should sort the items in the dictionary by the number of winners descending and return the top five tuples. However, some of the movie titles have commas in them.  Fix the code to handle this problem and pass the unit tests.</p>
       </statement>
       <program xml:id="csv_file_oscar_actress_age_dictionary_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 def get_list(file):
 
     l = []
@@ -830,7 +830,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
       </program>
     </exercise>
     <p>Change the code above to read from the file for the best actor.  Are the results different?</p>

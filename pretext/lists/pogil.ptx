@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<section xml:id="lists_group-work-lists">
+<worksheet xml:id="lists_group-work-lists" groupwork="yes" groupsize="4" label="group-work_lists">
   <title>Group Work: Lists</title>
   <p>It is best to use a POGIL approach with the following. In POGIL students work
             in groups on activities and each member has an assigned role.  For more information see <url href="https://cspogil.org/Home" visual="https://cspogil.org/Home">https://cspogil.org/Home</url>.</p>
@@ -55,12 +55,12 @@
       <p>Edit the code below to answer the following questions.</p>
     </statement>
     <program xml:id="list_methods_digit_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 digits = [1, 2, 0, 5, 4, 3, 6, 9, 8, 7]
 media = ["facebook", "twitter", "instagram", "snapchat"]
 studentData = [['Ethan', 13], ['Ashley', 14], ['Jalen', 12], ['Avery', 13]]
 print(len(digits))
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="listOp_MC_list">
@@ -158,10 +158,10 @@ print(len(digits))
       <p>Run this code to see what it prints. Feel free to edit!</p>
     </statement>
     <program xml:id="listRepeat1_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 areaCode = [3, 1, 2]
 print(areaCode * 3)
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="listOp_MC_plus312">
@@ -301,13 +301,13 @@ print(areaCode * 3)
       <p>Run this code to see what it prints. Feel free to edit!</p>
     </statement>
     <program xml:id="list_methods_lucky_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 bigCities = ["Chicago", "Detroit", "Houston", "New York"]
 print(bigCities)
 for x in bigCities:
     print(x, end = " ")
 print()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="list_print_out">
@@ -407,43 +407,29 @@ print()
     <feedback>
       <p>Read the chapter on lists and try again.</p>
     </feedback>
-    <matches>
-      <match order="1">
+    <cardsort>
+      <match>
         <premise>count</premise>
         <response>Returns the number of times a specified value appears in the list</response>
       </match>
-      <match order="2">
+      <match>
         <premise>append</premise>
         <response>Adds a value to the end of a list.</response>
       </match>
-      <match order="3">
+      <match>
         <premise>len</premise>
         <response>Returns the number of items in a list.</response>
       </match>
-      <match order="4">
+      <match>
         <premise>remove</premise>
         <response>Removes an item from a list.</response>
       </match>
-      <match order="5">
+      <match>
         <premise>type</premise>
         <response>Returns the class name (type) of the current object.</response>
       </match>
-    </matches>
+    </cardsort>
   </exercise>
   <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
-  <raw format="html" xml:space="preserve">
-&lt;div class="runestone sqcontainer %(optclass)s"&gt;
-    &lt;div data-component="groupsub" id=lists_intro_groupsub data-size_limit=3&gt;
-        &lt;div class="col-sm-6"&gt;
-            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
-            &lt;/select&gt;
-        &lt;/div&gt;
-        &lt;div id="groupsub_button" class="col-sm-6"&gt;
-        &lt;/div&gt;
-        &lt;p&gt;The Submit Group button will submit the answer for each each question
-        on this page for each member of your group. It also logs you as the official
-        group submitter.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</raw>
-</section>
+  
+</worksheet>

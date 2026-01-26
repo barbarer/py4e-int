@@ -52,7 +52,7 @@ we call the original class the <BlankNode/> class and the new class the <BlankNo
         print(self.name,'party count',self.x)</pre>
   </hint>
   <program xml:id="inherit_cricketfan" interactive="activecode" language="python3">
-    <input>
+    <code>
 from party import PartyAnimal
 
 class CricketFan(PartyAnimal):
@@ -68,7 +68,7 @@ j = CricketFan("Jim")
 j.party()
 j.six()
 print(dir(j))
-        </input>
+        </code>
   </program>
   <p>When we define the <c>CricketFan</c> class, we indicate that we are extending
             the <c>PartyAnimal</c> class.  This means that all of the variables (<c>x</c>) and methods

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<exercises xml:id="conditional_write-code-questions">
+<section xml:id="conditional_write-code-questions">
   <title>Write Code Questions</title>
 
         <exercise>
@@ -8,13 +8,13 @@
                             <q>The number is 5</q> when the number is 5, and should print <q>The number is NOT 5</q> when it is not.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="cndtnl-wc-fiveq_editor">
-            <input>
+            <code>
 x = 5
 if x == 5:
 print("The number is 5")
 if x != 5:
 print("The number is NOT 5")
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -24,7 +24,7 @@ print("The number is NOT 5")
                             <q>The number is 5</q> when the number is 5, and should print <q>The number is NOT 5</q> when it is not.
 
     
-    <program xml:id="cndtnl-wc-fivea_editor" language="python"><input>
+    <program xml:id="cndtnl-wc-fivea_editor" language="python"><code>
 # Initialize x and set condition for when x = 5
 x = 5
 if x == 5:
@@ -34,7 +34,7 @@ if x == 5:
 else:
     # Indent the body of else statement
     print("The number is NOT 5")
-        </input></program>
+        </code></program>
                     </solution>
         </exercise>
 
@@ -44,10 +44,10 @@ else:
                     equal 3 and <q>Hello</q> is printed otherwise.</p>
           </statement>
           <program xml:id="cndtnl-wc-hiq_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 x = 4
 if x
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -58,7 +58,7 @@ if x
                             amount an employee would be paid for working 45 hours.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="cndtnl-wc-payq_editor">
-            <input>
+            <code>
 hours = 45
 rate = 10
 overtimeRate =  #your code here
@@ -78,7 +78,7 @@ class myTests(TestCaseGui):
         self.assertEqual(grossPay, 475.0)
 
 myTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -89,7 +89,7 @@ myTests().main()
                             amount an employee would be paid for working 45 hours.
 
     
-    <program xml:id="cndtnl-wc-paya_editor" language="python"><input>
+    <program xml:id="cndtnl-wc-paya_editor" language="python"><code>
 # Initializing variables
 hours = 45
 rate = 10
@@ -109,7 +109,7 @@ else:
     grossPay = (rate * 40) + (overTime * overtimeRate)
 # Print the final pay
 print(grossPay)
-        </input></program>
+        </code></program>
 
                     
 
@@ -129,9 +129,9 @@ Error, please enter numeric input</pre>
 Error, please enter numeric input</pre>
           </statement>
           <program xml:id="cndtnl-wc-pay2q_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -142,7 +142,7 @@ Error, please enter numeric input</pre>
                             than 12 miles the cost is $1.50 a mile. Assign the final cost to the variable <c>total</c>.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="cndtnl-wc-distanceq_editor">
-            <input>
+            <code>
 distance = 14
 
 ====
@@ -153,7 +153,7 @@ class myTests(TestCaseGui):
         self.assertEqual(total, 21.0)
 
 myTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -164,7 +164,7 @@ myTests().main()
                             than 12 miles the cost is $1.50 a mile. Assign the final cost to the variable total.
 
     
-    <program xml:id="cndtnl-wc-distancea_editor" language="python"><input>
+    <program xml:id="cndtnl-wc-distancea_editor" language="python"><code>
 # distance variable given
 distance = 14
 # Set conditions
@@ -178,7 +178,7 @@ if distance &gt; 12:
 total = distance * rate
 # Print final statement
 print("Total cost of trip: " + str(total))
-        </input></program>
+        </code></program>
                     </solution>
         </exercise>
 
@@ -197,9 +197,9 @@ print("Total cost of trip: " + str(total))
 A</pre>
           </statement>
           <program xml:id="cndtnl-wc-scoreq_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -208,7 +208,7 @@ A</pre>
             <p>Fix the example such that the cost of frozen yogurt is 0 if you pour exactly 1 lb. in your cup.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="cndtnl-wc-weightq_editor">
-            <input>
+            <code>
 weight = 0.5
 if weight &lt; 1:
     price = 1.45
@@ -218,7 +218,7 @@ total = weight * price
 print(weight)
 print(price)
 print(total)
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -227,7 +227,7 @@ print(total)
                         Fix the example such that the cost of frozen yogurt is 0 if you pour exactly 1 lb. in your cup.
 
     
-    <program xml:id="cndtnl-wc-weighta_editor" language="python"><input>
+    <program xml:id="cndtnl-wc-weighta_editor" language="python"><code>
 # Initial weight is given
 weight = 0.5
 # Set conditionals
@@ -247,7 +247,7 @@ total = weight * price
 print(weight)
 print(price)
 print(total)
-        </input></program>
+        </code></program>
 
  
                     </solution>
@@ -260,9 +260,9 @@ print(total)
                     print <q>Get more money</q>.</p>
           </statement>
           <program xml:id="cndtnl-wc-walletq_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -286,9 +286,9 @@ print(total)
                             leap year, <c>False</c> otherwise. (use a few different years to test your work)</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="cndtnl-wc-leapYearq_editor">
-            <input>
+            <code>
 
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -310,7 +310,7 @@ print(total)
                             leap year, False otherwise. (use a few different years to test your work)
 
     
-    <program xml:id="cndtnl-wc-leapYeara_editor" language="python"><input>
+    <program xml:id="cndtnl-wc-leapYeara_editor" language="python"><code>
 year = 1900 #TEST WITH ANY YEAR
 # Initializing leapYear to False since most years are not leap years
 leapYear = False
@@ -337,7 +337,7 @@ if year % 400 == 0:
 elif year % 4 == 0 and year % 100 != 0:
     leapYear = True
 print(leapYear)
-        </input></program>
+        </code></program>
                     </solution>
         </exercise>
 
@@ -347,10 +347,10 @@ print(leapYear)
                     number is an <term>even number</term> (evenly divisible by two) and <c>False</c> if it is <term>odd</term>. Note: use the modulo operator.</p>
           </statement>
           <program xml:id="cndtnl-wc-evenq_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 n = input("Enter a number")
-        </input>
+        </code>
           </program>
         </exercise>
 
-</exercises>
+</section>

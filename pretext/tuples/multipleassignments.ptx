@@ -6,10 +6,10 @@
             you can make a nice code pattern for traversing the keys and values of a
             dictionary in a single loop:</p>
   <program language="python">
-    <input>
+    <code>
 for key, val in list(d.items()):
     print(val, key)
-</input>
+</code>
   </program>
   <p>This loop has two iteration variables because
             <c>items</c> returns a list of tuples and <c>key, val</c> is
@@ -27,13 +27,13 @@ for key, val in list(d.items()):
     <statement>
       <p>11-9-1: How will the contents of list <q>lst</q> be ordered after the following code is run?</p>
       <program language="python">
-        <input>
+        <code>
 d = {'a': 10, 'b': 15, 'c': 17, 'd': 4}
 lst = []
 for key, val in d.items():
     lst.append( (val, key) )
 print(lst)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -72,7 +72,7 @@ print(lst)
             tuples, it is a simple matter to sort the list in reverse order and
             print out the new, sorted list.</p>
   <program xml:id="multipleassignments_exercise_1" interactive="activecode" language="python">
-    <input>
+    <code>
 d = {'a':10, 'b':1, 'c':22}
 lst = list()
 for key, val in d.items():
@@ -80,7 +80,7 @@ for key, val in d.items():
 print(lst) #should print [(10, 'a'), (1, 'b'), (22, 'c')]
 lst.sort(reverse=True)
 print(lst) #should print [(22, 'c'), (10, 'a'), (1, 'b')]
-        </input>
+        </code>
   </program>
   <p>By carefully constructing the list of tuples so that the value is the
             first element of each tuple and the key is the second element, we can sort
@@ -121,7 +121,7 @@ print(lst) #should print [(22, 'c'), (10, 'a'), (1, 'b')]
       <p>Write code to create a list called &#x2018;lst' and add the key-value pairs of dictionary d to list lst as tuples. Sort list lst by the values in descending order.</p>
     </statement>
     <program xml:id="question10_5_3_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 d = {'monkey': 5, 'snake': 3, 'rabbit': 9, 'dragon': 6, 'rooster': 2, 'rat': 10}
 
 ====
@@ -133,7 +133,7 @@ class myTests(TestCaseGui):
         self.assertEqual(lst, [('rat', 10), ('rabbit', 9), ('dragon', 6), ('monkey', 5), ('snake', 3), ('rooster', 2)], "Making sure the list was sorted correctly.")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
 </section>

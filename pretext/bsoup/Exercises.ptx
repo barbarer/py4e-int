@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<exercises xml:id="bsoup_multiple-choice-questions">
+<section xml:id="bsoup_multiple-choice-questions">
   <title>Multiple Choice Questions</title>
   <exercise label="Exercises_bsoup_mc1">
     <statement>
       <p>Q-1: Given the below html, how would this tag type be described in web scraping code?</p>
       <program language="python">
-        <input>
+        <code>
 &lt;h1 class='sports'&gt;Sports News&lt;/h1&gt;
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -49,10 +49,10 @@
     <statement>
       <p>Q-2: Which line of code correctly gets the first item in <c>items</c> and makes the most sense following the below code snippet?</p>
       <program language="python">
-        <input>
+        <code>
 soup = BeautifulSoup(response.content, 'html.parser')
 items = soup.find_all(class_='items')
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -375,7 +375,7 @@ items = soup.find_all(class_='items')
     <statement>
       <p>Q-10: Given the below html, after importing re, what will be returned after <c>for tag in soup.find_all(re.compile("t")): print(tag.name)</c> is run?</p>
       <program language="python">
-        <input>
+        <code>
 &lt;html&gt;
    &lt;head&gt;
       &lt;title&gt;Site&lt;/title&gt;
@@ -384,7 +384,7 @@ items = soup.find_all(class_='items')
       &lt;p&gt;There is lots of content.&lt;/p&gt;
    &lt;/body&gt;
 &lt;/html&gt;
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -502,4 +502,4 @@ for tag in tags:
       </choice>
     </choices>
   </exercise>
-</exercises>
+</section>

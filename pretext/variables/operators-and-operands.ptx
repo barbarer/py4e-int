@@ -17,37 +17,37 @@
             <c>**</c> perform addition, subtraction, multiplication, division,
             and exponentiation, as in the following examples:</p>
   <program xml:id="var-ac-6-print-operators" interactive="activecode" language="python">
-    <input>
+    <code>
 print(20+32)
 print(75-1)
 print(5**2)
 print((5+9)*(15-7))
-        </input>
+        </code>
   </program>
   <p>There was a change in the division operator between Python 2.x
             and Python 3.x.  In Python 3.x, the result of this division is a
             floating point result:</p>
   <program xml:id="var-ac-6-print-vars2" interactive="activecode" language="python">
-    <input>
+    <code>
 minute = 59
 print(minute/60)
-        </input>
+        </code>
   </program>
   <p>The division operator in Python 2.0 would divide two integers and
             truncate the result to an integer:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; minute = 59
 &gt;&gt;&gt; minute/60
 0
-</input>
+</code>
   </program>
   <p>To obtain the same answer in Python 3.0 use floored ( <c>//</c> integer) division.</p>
   <program xml:id="var-ac-6-print-vars3" interactive="activecode" language="python">
-    <input>
+    <code>
 minute = 59
 print(minute//60)
-        </input>
+        </code>
   </program>
   <p>In Python 3.0 integer division functions much more as you would expect
             if you entered the expression on a calculator.</p>
@@ -121,35 +121,35 @@ print(minute//60)
     <feedback>
       <p>Try assigning values to these variables and testing out the espressions in your python interpreter.</p>
     </feedback>
-    <matches>
-      <match order="1">
+    <cardsort>
+      <match>
         <premise>x + y</premise>
         <response>addition</response>
       </match>
-      <match order="2">
+      <match>
         <premise>x - y</premise>
         <response>subtraction</response>
       </match>
-      <match order="3">
+      <match>
         <premise>x * y</premise>
         <response>multiplication</response>
       </match>
-      <match order="4">
+      <match>
         <premise>x / y</premise>
         <response>division</response>
       </match>
-      <match order="5">
+      <match>
         <premise>x % y</premise>
         <response>remainder (modulus)</response>
       </match>
-      <match order="6">
+      <match>
         <premise>x // y</premise>
         <response>floored division</response>
       </match>
-      <match order="7">
+      <match>
         <premise>x ** y</premise>
         <response>exponentiation</response>
       </match>
-    </matches>
+    </cardsort>
   </exercise>
 </section>

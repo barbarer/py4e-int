@@ -11,7 +11,7 @@
                             (order does not matter). For example, <c>mail_count['Mon']</c> should be <c>2</c>.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="dict_writecode1q_editor">
-            <input>
+            <code>
 mail = ['From stephen.marquard@uct.ac.za Sat Jan  7', 'From gopal.ramasammycook@gmail.com Thurs Jan  5', 'From louis@media.berkeley.edu Tues Jan  3', 'From antranig@caret.cam.ac.uk Sat Jan  7', 'From david.horwitz@uct.ac.za Wed Jan  4', 'From ray@media.berkeley.edu Mon Jan  2', 'From stephen.marquard@uct.ac.za Mon Jan 2', 'From wagnermr@iupui.edu Fri Jan  6']
 
 ====
@@ -25,7 +25,7 @@ class myTests(TestCaseGui):
         self.assertEqual(mail_count.get('Sun', 0), 0, "mail_count.get('Sun', 0)")
 
 myTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -38,7 +38,7 @@ myTests().main()
                             (order does not matter). For example, mail_count['Mon'] should be 2.
 
     
-    <program xml:id="dict_writecode1a_editor" language="python"><input>
+    <program xml:id="dict_writecode1a_editor" language="python"><code>
 # mail list was given
 mail = ['From stephen.marquard@uct.ac.za Sat Jan  7', 'From gopal.ramasammycook@gmail.com Thurs Jan  5', 'From louis@media.berkeley.edu Tues Jan  3', 'From antranig@caret.cam.ac.uk Sat Jan  7', 'From david.horwitz@uct.ac.za Wed Jan  4', 'From ray@media.berkeley.edu Mon Jan  2', 'From stephen.marquard@uct.ac.za Mon Jan 2', 'From wagnermr@iupui.edu Fri Jan  6']
 
@@ -56,7 +56,7 @@ for email in mail:
     mail_count[key] += 1
 # Print final count
 print(mail_count)
-        </input></program>
+        </code></program>
                     </solution>
         </exercise>
 
@@ -65,7 +65,7 @@ print(mail_count)
             <p>Write a program to read through a mail log, build the dictionary <c>user_count</c> to count how many messages have come from each email address, and print the dictionary. For example, <c>user_count['stephen.marquard@uct.ac.za']</c> should be <c>4</c>.</p>
           </statement>
           <program xml:id="dict_writecode2_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 mail_log = ['From stephen.marquard@uct.ac.za Sat Jan  7', 'From gopal.ramasammycook@gmail.com Thurs Jan  5', 'From stephen.marquard@uct.ac.za Sat Feb  7', 'From louis@media.berkeley.edu Tues Jan  3', 'From stephen.marquard@uct.ac.za Sat Nov  6', 'From antranig@caret.cam.ac.uk Sat Jan  7', 'From david.horwitz@uct.ac.za Wed Jan  4', 'From ray@media.berkeley.edu Mon Jan  2', 'From stephen.marquard@uct.ac.za Mon Jan 2', 'From wagnermr@iupui.edu Fri Jan  6', 'From gopal.ramasammycook@gmail.com Thurs Dec  5', 'From louis@media.berkeley.edu Tues April  1']
 
 ====
@@ -77,7 +77,7 @@ class myTests(TestCaseGui):
         self.assertEqual(user_count['stephen.marquard@uct.ac.za'], 4, "user_count['stephen.marquard@uct.ac.za']")
 
 myTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -89,7 +89,7 @@ myTests().main()
                             sure to account for each letter in its lowercase form. For example, <c>e_counter</c> should be <c>10</c>, and <c>letter_count['e']</c> should be <c>10</c>.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="dict_writecode3q_editor">
-            <input>
+            <code>
 phrase = "Exeggcute evolves into Exeggutor which are two extraordinary Pokemon"
 
 ====
@@ -103,7 +103,7 @@ class myTests(TestCaseGui):
         self.assertEqual(letter_count['e'], 10, "letter_count['e']")
 
 myTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -115,7 +115,7 @@ myTests().main()
                             sure to account for each letter in its lowercase form. For example, e_counter should be 10, and letter_count['e'] should be 10.
 
     
-    <program xml:id="dict_writecode3a_editor" language="python"><input>
+    <program xml:id="dict_writecode3a_editor" language="python"><code>
 # phrase string is given
 phrase = "Exeggcute evolves into Exeggutor which are two extraordinary Pokemon"
 
@@ -135,7 +135,7 @@ for word in phrase.split():
         letter_count[letter] += 1
 # Create e_counter to see how many are in the phrase
 e_counter = letter_count['e']
-        </input></program>
+        </code></program>
                     </solution>
         </exercise>
 
@@ -146,7 +146,7 @@ e_counter = letter_count['e']
                     check whether the string is in the dictionary. For example, <c>word_dictionary['Writing']</c> should be <c>1</c>. (Note: &#x2018;Writing' and &#x2018;writing' would be counted as two separate words for this question.)</p>
           </statement>
           <program xml:id="dict_writecode4_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 phrase = "Writing programs or programming is a very creative and rewarding activity  You can write programs for many reasons ranging from making your living to solving a difficult data analysis problem to having fun to helping someone else solve a problem  This book assumes that {\em everyone} needs to know how to program and that once you know how to program, you will figure out what you want to do with your newfound skills"
 
 ====
@@ -160,7 +160,7 @@ class myTests(TestCaseGui):
         self.assertEqual(word_dictionary['a'], 3, "word_dictionary['a']")
 
 myTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -199,7 +199,7 @@ and mind-numbing</pre>
                             in the file. Watch out for repetition using the .lower() function. For example, <c>word_count['and']</c> should be <c>5</c>.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="dict_writecode5q_editor">
-            <input>
+            <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -212,7 +212,7 @@ class myTests(TestCaseGui):
         self.assertEqual(word_count['what'], 3, "word_count['what']")
 
 myTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -223,7 +223,7 @@ myTests().main()
                             in the file. Watch out for repetition using the .lower() function. For example, word_count['and'] should be 5.
 
     
-    <program xml:id="dict_writecode5a_editor" language="python"><input>
+    <program xml:id="dict_writecode5a_editor" language="python"><code>
 # Open the file in "read" mode
 with open("words.txt", "r") as filename:
     # Create dictionary to count words
@@ -242,7 +242,7 @@ with open("words.txt", "r") as filename:
             word_count[word] += 1
 # Print final count
 print(word_count)
-        </input></program>
+        </code></program>
                     </solution>
         </exercise>
 
@@ -254,7 +254,7 @@ print(word_count)
                     For example, <c>word_dictionary.get('Writing', 0)</c> should be <c>0</c>, and <c>word_dictionary['writing']</c> should be <c>1</c>.</p>
           </statement>
           <program xml:id="dict_writecode6_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 phrase = "Writing programs or programming is a very creative and rewarding activity  You can write programs for many reasons ranging from making your living to solving a difficult data analysis problem to having fun to helping someone else solve a problem  This book assumes that {\em everyone} needs to know how to program and that once you know how to program, you will figure out what you want to do with your newfound skills"
 
 ====
@@ -269,7 +269,7 @@ class myTests(TestCaseGui):
         self.assertEqual(word_dictionary.get('Writing', 0), 0, "word_dictionary.get('Writing', 0)")
 
 myTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -288,7 +288,7 @@ Who is already sick and pale with grief</pre>
                             the dictionary <c>counts</c>. For example, <c>counts['is']</c> should be <c>3</c>.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="dict_writecode7q_editor">
-            <input>
+            <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -301,7 +301,7 @@ class myTests(TestCaseGui):
         self.assertEqual(counts['arise'], 1, "counts['arise']")
 
 myTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -312,7 +312,7 @@ myTests().main()
                             the dictionary counts. For example, counts['is'] should be 3.
 
     
-    <program xml:id="dict_writecode7a_editor" language="python"><input>
+    <program xml:id="dict_writecode7a_editor" language="python"><code>
 # Open file in "read" mode
 with open("romeo.txt", "r") as filename:
     # Separate and read lines
@@ -330,7 +330,7 @@ with open("romeo.txt", "r") as filename:
                 counts[word] = 0
             # Update word
             counts[word] += 1
-        </input></program>
+        </code></program>
                     </solution>
         </exercise>
 
@@ -339,7 +339,7 @@ with open("romeo.txt", "r") as filename:
             <p>Write code that adds the key &#x2018;two' with a value of &#x2018;dos' to the dictionary <c>eng2sp</c>. For example, <c>eng2sp['two']</c> should be <c>'dos'</c>.</p>
           </statement>
           <program xml:id="dict_writecode8_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 eng2sp = {'one':'uno'}
 
 ====
@@ -351,7 +351,7 @@ class myTests(TestCaseGui):
         self.assertEqual(eng2sp['two'], 'dos', "eng2sp['two']")
 
 myTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -376,7 +376,7 @@ ray@media.berkeley.edu 1</pre>
                             and print how many messages the person has. For example, <c>message_count['cwen@iupui.edu']</c> should be <c>5</c>.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="dict_writecode9q_editor">
-            <input>
+            <code>
 with open("mbox-short.txt", "r") as filename:
     message_count = {}
 
@@ -390,7 +390,7 @@ class myTests(TestCaseGui):
         self.assertEqual(len(message_count), 11, "len(message_count)")
 
 myTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -400,7 +400,7 @@ myTests().main()
                             and print how many messages the person has. For example, message_count['cwen@iupui.edu'] should be 5.
 
     
-    <program xml:id="dict_writecode9a_editor" language="python"><input>
+    <program xml:id="dict_writecode9a_editor" language="python"><code>
 # Open file in read mode
 with open("mbox-short.txt", "r") as filename:
     # Create message_count dictionary
@@ -426,7 +426,7 @@ for key in message_count.keys():
         # If so, reassign max_emails to that key
         max_emails = int(message_count[key])
 print(max_emails)
-        </input></program>
+        </code></program>
                     </solution>
         </exercise>
 
@@ -436,7 +436,7 @@ print(max_emails)
                     The domains should be the keys of the dictionary, and the counts of the domains should be the values of the dictionary. For example, <c>message_count['iupui.edu']</c> should be <c>8</c>.</p>
           </statement>
           <program xml:id="dict_writecode10_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 with open("mbox-short.txt", "r") as filename:
     message_count = {}
 
@@ -450,7 +450,7 @@ class myTests(TestCaseGui):
         self.assertEqual(len(message_count), 6, "len(message_count)")
 
 myTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 </section>

@@ -20,24 +20,24 @@
             mathematical functions. Before we can use the module, we have to import
             it:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; import math
-</input>
+</code>
   </program>
   <p>This statement creates a <em>module object</em> named math. If
             you print the module object, you get some information about it:</p>
   <program xml:id="functMath_module" interactive="activecode" language="python">
-    <input>
+    <code>
 import math
 print(math)
-        </input>
+        </code>
   </program>
   <p>The module object contains the functions and variables defined in the
             module. To access one of the functions, you have to specify the name of
             the module and the name of the function, separated by a dot (also known
             as a period). This format is called <em>dot notation</em>.</p>
   <program xml:id="functMath_logSin" interactive="activecode" language="python">
-    <input>
+    <code>
 import math
 
 signal_power = 10
@@ -49,7 +49,7 @@ print(decibels)
 radians = 0.7
 height = math.sin(radians)
 print(height)
-        </input>
+        </code>
   </program>
   <p>The first example computes the logarithm base 10 of the signal-to-noise
             ratio. The math module also provides a function called <c>log</c>
@@ -60,14 +60,14 @@ print(height)
             radians. To convert from degrees to radians, divide by 360 and multiply
             by 2pi:</p>
   <program xml:id="functMath_sinPi" interactive="activecode" language="python">
-    <input>
+    <code>
 import math
 
 degrees = 45
 radians = degrees / 360.0 * 2 * math.pi
 result = math.sin(radians)
 print(result)
-        </input>
+        </code>
   </program>
   <p>The expression <c>math.pi</c> gets the variable <c>pi</c>
             from the math module. The value of this variable is an approximation of
@@ -75,12 +75,12 @@ print(result)
   <p>If you know your trigonometry, you can check the previous result by
             comparing it to the square root of two divided by two:</p>
   <program xml:id="functMath_sqrt" interactive="activecode" language="python">
-    <input>
+    <code>
 import math
 
 result = math.sqrt(2) / 2.0
 print(result)
-        </input>
+        </code>
   </program>
   <exercise label="functMath_MC_statement">
     <statement>
@@ -180,11 +180,11 @@ print(result)
     </setup>
   </exercise>
   <program xml:id="functMath_codelens1" interactive="codelens" language="python">
-    <input>
+    <code>
 import math
 num = 2.0
 result = math.sqrt(4) / num
 print(result)
-    </input>
+    </code>
   </program>
 </section>

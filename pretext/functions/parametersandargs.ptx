@@ -18,11 +18,11 @@
             <em>parameters</em>. Here is an example of a user-defined
             function that takes an argument:</p>
   <program language="python">
-    <input>
+    <code>
 def print_twice(bruce):
     print(bruce)
     print(bruce)
-</input>
+</code>
   </program>
   <p>This function assigns the argument to a parameter named
             <c>bruce</c>. When the function is called, it prints the value of
@@ -48,7 +48,7 @@ def print_twice(bruce):
   </exercise>
   <p>This function works with any value that can be printed.</p>
   <program xml:id="functParam_codelens1" interactive="codelens" language="python">
-    <input>
+    <code>
 import math
 
 def print_twice(bruce):
@@ -58,13 +58,13 @@ def print_twice(bruce):
 print_twice('Spam')
 print_twice(17)
 print_twice(math.pi)
-    </input>
+    </code>
   </program>
   <p>The same rules of composition that apply to built-in functions also
             apply to user-defined functions, so we can use any kind of expression as
             an argument for <c>print_twice</c>:</p>
   <program xml:id="functParam_codelens2" interactive="codelens" language="python">
-    <input>
+    <code>
 import math
 
 def print_twice(bruce):
@@ -73,21 +73,21 @@ def print_twice(bruce):
 
 print_twice('Spam '*4)
 print_twice(math.cos(math.pi))
-    </input>
+    </code>
   </program>
   <p>The argument is evaluated before the function is called, so in the
             examples the expressions <c>'Spam '*4</c> and <c>math.cos(math.pi)</c>
             are only evaluated once.</p>
   <p>You can also use a variable as an argument:</p>
   <program xml:id="functParam_codelens3" interactive="codelens" language="python">
-    <input>
+    <code>
 def print_twice(bruce):
     print(bruce)
     print(bruce)
 
 michael = 'Python is cool.'
 print_twice(michael)
-    </input>
+    </code>
   </program>
   <p>The name of the variable we pass as an argument (<c>michael</c>)
             has nothing to do with the name of the parameter (<c>bruce</c>).
@@ -97,7 +97,7 @@ print_twice(michael)
     <statement>
       <p>Q-5: Consider the code block below. What prints?</p>
       <program language="python">
-        <input>
+        <code>
 def add_two(num):
     num = num + 2
     print(num)
@@ -109,7 +109,7 @@ def add_three(nums):
 hi = 4
 add_two(hi)
 add_three(hi)
-</input>
+</code>
       </program>
     </statement>
     <choices>

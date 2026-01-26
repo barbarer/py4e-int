@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<exercises xml:id="intro_exercises">
+<section xml:id="intro_exercises">
   <title>Exercises</title>
   <exercise label="intro-MC-secondaryMem">
     <statement>
@@ -146,9 +146,9 @@
     <statement>
       <p>Q-5: Where in the computer is a variable such as <q>x</q> stored after the following Python line executes?</p>
       <program language="python">
-        <input>
+        <code>
 x = 123
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -198,11 +198,11 @@ x = 123
     <statement>
       <p>Q-6: What will the following program print out:</p>
       <program language="python">
-        <input>
+        <code>
 x = 43
 x = x + 1
 print(x)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -373,17 +373,17 @@ print(x)
   <exercise label="intro_writeEx">
     <statement><p>Try running the following code.  Can you tell what is wrong with it and fix it?</p></statement>
     <program xml:id="intro-AC-fix" interactive="activecode" language="python">
-      <input>primt 'Hello world!'
-          </input>
+      <code>primt 'Hello world!'
+          </code>
         </program>
     <solution>
       <program xml:id="intro-AC-answer" language="python">
-        <input>
+        <code>
 # The print function is spelled incorrectly
 # and needs parentheses around its contents
 print('Hello world!')
-        </input>
+        </code>
       </program>
     </solution>
   </exercise>
-</exercises>
+</section>

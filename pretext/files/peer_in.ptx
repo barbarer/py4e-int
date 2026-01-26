@@ -60,14 +60,14 @@
       </blockquote>
       <p>f refers to this file and has just been opened. What does skip return?</p>
       <program language="python">
-        <input>
+        <code>
 def skip(f):
    line = f.readline()
    line = f.readline()
    while line.startswith('#' ):
       line = f.readline()
    return f.readline()
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -125,14 +125,14 @@ def skip(f):
       </blockquote>
       <p>f refers to this file and has just been opened. What does skip return?</p>
       <program language="python">
-        <input>
+        <code>
 def skip(f):
    line = f.readline()
    line = f.readline()
    while line.startswith('#' ):
       line = f.readline()
    return line
-</input>
+</code>
       </program>
     </statement>
     <choices>

@@ -13,11 +13,11 @@
   <p>A segment of a string is called a <em>slice</em>. Selecting a
             slice is similar to selecting a character:</p>
   <program xml:id="str-slice" interactive="activecode" language="python">
-    <input>
+    <code>
 s = 'Monty Python'
 print(s[0:5])
 print(s[6:12])
-        </input>
+        </code>
   </program>
   <p>The operator returns the part of the string from the <q>n-th</q> character
             to the <q>m-th</q> character, including the first but excluding the last.</p>
@@ -25,19 +25,19 @@ print(s[6:12])
             beginning of the string. If you omit the second index, the slice goes to
             the end of the string:</p>
   <program xml:id="str-colonSlices" interactive="activecode" language="python">
-    <input>
+    <code>
 fruit = 'orange'
 print(fruit[:3])
 print(fruit[3:])
-        </input>
+        </code>
   </program>
   <p>If the first index is greater than or equal to the second the result is
             an <em>empty string</em>, represented by two quotation marks:</p>
   <program xml:id="str-emptyString" interactive="activecode" language="python">
-    <input>
+    <code>
 fruit = 'orange'
 print(fruit[3:3])
-        </input>
+        </code>
   </program>
   <p>An empty string contains no characters and has length 0, but other than
             that, it is the same as any other string.</p>
@@ -64,11 +64,11 @@ print(fruit[3:3])
     <statement>
       <p>11-9-5: How many times is the word HELLO printed by the following statements?</p>
       <program language="python">
-        <input>
+        <code>
 s = "pomegranate"
 for ch in s[3:8]:
     print("HELLO")
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -152,10 +152,10 @@ print(str)</pre>
     <statement>
       <p>11-9-7: What is printed by the following statements?</p>
       <program language="python">
-        <input>
+        <code>
 s = "python rocks"
 print(s[3:8])
-</input>
+</code>
       </program>
     </statement>
     <choices>

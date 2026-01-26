@@ -13,7 +13,7 @@
             Please only refer to the unittest and the <term>last</term> execution result for debugging purposes.</p>
     </statement>
     <program xml:id="hparsons_lg_sql_test_bank_pre_select_editor" interactive="activecode" language="sql">
-      <input>
+      <code>
 DROP TABLE IF EXISTS equipment;
 create table "equipment" ("id" INTEGER, "name" TEXT, "sport" TEXT, "brand" TEXT, "quantity" INTEGER);
 INSERT INTO equipment (id,name,sport,brand,quantity) VALUES
@@ -28,7 +28,7 @@ assert 0,0 == table_tennis_racket
 assert 0,1 == stiga
 assert 1,0 == table_tennis_ball
 assert 1,1 == dhs
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="hparsons_lg_sql_test_bank_pre_update">
@@ -42,7 +42,7 @@ assert 1,1 == dhs
             Please only refer to the unittest and the <term>last</term> execution result for debugging purposes.</p>
     </statement>
     <program xml:id="hparsons_lg_sql_test_bank_pre_update_editor" interactive="activecode" language="sql">
-      <input>
+      <code>
 DROP TABLE IF EXISTS equipment;
 create table "equipment" ("id" INTEGER, "name" TEXT, "sport" TEXT, "brand" TEXT, "quantity" INTEGER);
 INSERT INTO equipment (id,name,sport,brand,quantity) VALUES
@@ -63,7 +63,7 @@ assert 1,4 == 11
 assert 2,4 == 10
 assert 3,4 == 10
 assert 4,4 == 7
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="hparsons_lg_sql_test_bank_pre_join">
@@ -82,7 +82,7 @@ assert 4,4 == 7
             Please only refer to the unittest and the <term>last</term> execution result for debugging purposes.</p>
     </statement>
     <program xml:id="hparsons_lg_sql_test_bank_pre_join_editor" interactive="activecode" language="sql">
-      <input>
+      <code>
 DROP TABLE IF EXISTS equipment;
 create table "equipment" ("id" INTEGER, "name" TEXT, "sport" TEXT, "brand" TEXT, "quantity" INTEGER);
 INSERT INTO equipment (id,name,sport,brand,quantity) VALUES
@@ -102,7 +102,7 @@ INSERT INTO rental (name,equipment_id,date) VALUES
 ====
 assert 2,1 == Charlie
 assert 3,1 == Dale
-        </input>
+        </code>
     </program>
   </exercise>
 </section>

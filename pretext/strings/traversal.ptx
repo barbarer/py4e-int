@@ -14,14 +14,14 @@
             processing is called a <em>traversal</em>. One way to write a
             traversal is with a <c>while</c> loop:</p>
   <program xml:id="stringWhileLoop" interactive="codelens" language="python">
-    <input>
+    <code>
 fruit = "fruit"
 index = 0
 while index &lt; len(fruit):
     letter = fruit[index]
     print(letter)
     index = index + 1
-    </input>
+    </code>
   </program>
   <p>This loop traverses the string and displays each letter on a line by
             itself. The loop condition is <c>index &lt; len(fruit)</c>, so when
@@ -35,11 +35,11 @@ while index &lt; len(fruit):
   </exercise>
   <p>Another way to write a traversal is with a <c>for</c> loop:</p>
   <program xml:id="string-forLoop" interactive="activecode" language="python">
-    <input>
+    <code>
 fruit = "peach"
 for char in fruit:
     print(char)
-        </input>
+        </code>
   </program>
   <p>Each time through the loop, the next character in the string is assigned
             to the variable <c>char</c>. The loop continues until no
@@ -48,13 +48,13 @@ for char in fruit:
     <statement>
       <p>11-9-4: How many times is the letter &#x2018;r' printed by the following statements?</p>
       <program language="python">
-        <input>
+        <code>
 s = "strawberry"
 idx = 1
 while idx &lt; len(s):
     print(s[idx])
     idx = idx + 2
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -96,11 +96,11 @@ while idx &lt; len(s):
     <statement>
       <p>11-9-5: How many times is the word HELLO printed by the following statements?</p>
       <program language="python">
-        <input>
+        <code>
 s = "green grapes"
 for ch in s:
     print("HELLO")
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -142,12 +142,12 @@ for ch in s:
     <statement>
       <p>11-9-6: How many times is the letter i printed by the following statements?</p>
       <program language="python">
-        <input>
+        <code>
 s = "mississippi"
 for idx in range(len(s)):
     if idx % 2 == 0:
         print(s[idx])
-</input>
+</code>
       </program>
     </statement>
     <choices>

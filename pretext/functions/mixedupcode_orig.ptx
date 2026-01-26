@@ -37,7 +37,7 @@
       <p>Write  a function <c>len_str</c> that uses a built-in function to return the number of characters in the passed string <c>str</c>. Then print the result of a call to <c>len_str</c> passing in the string <c>I love Python!</c>.  It should return 14.</p>
     </statement>
     <program xml:id="functEx1muc_v2_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 
 ====
@@ -52,7 +52,7 @@ class myTests(TestCaseGui):
         self.assertEqual(len_str("I love Python!"),14,"len_str('I love Python!')")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="functEx2muc" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -83,7 +83,7 @@ myTests().main()
       <p>Write a function called <c>bmi</c> that takes <c>height</c> (in inches) and <c>weight</c> (in pounds) as parameters. It should calculate the &#x2018;'bmi'' by squaring the height then dividing the weight by the height squared and then converting to metric by multiplying by 703.</p>
     </statement>
     <program xml:id="functEx2muc_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def bmi(height, weight):
 
 ====
@@ -100,7 +100,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="functEx3muc" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -136,7 +136,7 @@ myTests().main()
       <p>Write two functions. The first is <c>square(x)</c>, which returns <c>x</c> squared. The second function is <c>sum_of_squares(x,y,z)</c>, which returns the sum of the squares of three numbers <c>z</c>, <c>y</c>, and <c>z</c>.  For example, <c>square(2)</c> should return <c>4</c> and <c>sum_of_squares(2, 4, 6)</c> should return 56.</p>
     </statement>
     <program xml:id="functEx3muc_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def square(x):
 
 def sum_of_squares(x, y, z):
@@ -152,7 +152,7 @@ class myTests(TestCaseGui):
         self.assertEqual(sum_of_squares(2, 4, 6), 56, "sum_of_squares(2, 4, 6)")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="functEx4muc_v5" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -190,7 +190,7 @@ myTests().main()
       <p>Write a function called <c>average(num1, num2)</c>, which finds the average of two numbers <c>num1</c> and <c>num2</c>.  For example, <c>average(10,4)</c> should return <c>7.0</c>.</p>
     </statement>
     <program xml:id="functEx4muc_v5_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def average(num1, num2):
 
 ====
@@ -206,7 +206,7 @@ class myTests(TestCaseGui):
         self.assertAlmostEqual(average(3,19),11,1, "average(3,19)")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="functEx5muc_v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -242,7 +242,7 @@ myTests().main()
       <p>Write a function called <c>swapValues(val1, val2)</c> , which takes two values and swaps them. It then returns val1.  For example, <c>swapValues(8,2)</c> should return <c>2</c></p>
     </statement>
     <program xml:id="functEx5muc_v2_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def swapValues(val1, val2):
 
 ====
@@ -258,7 +258,7 @@ class myTests(TestCaseGui):
         self.assertEqual(swapValues(5,5), 5, "swapValues(5, 5)")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="functEx6muc" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -308,7 +308,7 @@ myTests().main()
       <p>Write a function called <c>get_avg_drop_lowest(num_list)</c> which returns the average of a list of numbers, ignoring the lowest value. However, if the list only contains one value, then return that. For example, <c>get_avg_drop_lowest([90])</c> returns <c>90</c>, <c>get_avg_drop_lowest([90, 10])</c> also returns <c>90</c>, and <c>get_avg_drop_lowest([90, 10, 0])</c> returns <c>50</c>.</p>
     </statement>
     <program xml:id="functEx6muc_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def get_avg_drop_lowest(num_list):
 
 
@@ -323,7 +323,7 @@ class myTests(TestCaseGui):
         self.assertEqual(get_avg_drop_lowest([74,25,6]), 49.5, "get_avg_drop_lowest([74,25,6])")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="functEx7muc_v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -364,7 +364,7 @@ myTests().main()
       <p>Write a function called <c>compare(p1, p2)</c> which returns whichever is greater of its two parameters.</p>
     </statement>
     <program xml:id="functEx7muc_v2_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def compare(p1, p2):
 
 
@@ -381,7 +381,7 @@ class myTests(TestCaseGui):
         self.assertEqual(compare(-1,-1), -1, "compare(-1,-1)")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="functEx8muc" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -452,7 +452,7 @@ myTests().main()
       <p>You are driving a little too fast, and a police officer stops you. Write a function called <c>caught_speeding(speed, is_birthday)</c> which returns the type of ticket the police officer will give you. If <c>speed</c> is 60 or less, the result is <c>"no ticket"</c>. If speed is between 61 and 80 inclusive, the result is <c>"minor ticket"</c>. If speed is 81 or more, the result is <c>"major ticket"</c>. All this is true, unless it is your birthday &#x2013; on that day, your speed can be 5 higher in all cases.</p>
     </statement>
     <program xml:id="functEx8muc_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def caught_speeding(speed, is_birthday):
 
 ====
@@ -471,7 +471,7 @@ class myTests(TestCaseGui):
         self.assertEqual(caught_speeding(97,True), "major ticket", "caught_speeding(97,True)")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="functEx9muc" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -529,7 +529,7 @@ myTests().main()
             <c>'too low'</c>, <c>check_guess(7, 7)</c> returns <c>'correct'</c>, and <c>check_guess(9, 7)</c> returns <c>'too high'</c>.</p>
     </statement>
     <program xml:id="functEx9muc_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def check_guess(guess, target):
 
 ====
@@ -543,7 +543,7 @@ class myTests(TestCaseGui):
         self.assertEqual(check_guess(7,5), 'too high', "check_guess(7,5)")
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="functEx10muc" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -606,7 +606,7 @@ myTests().main()
       <p>Write the function <c>alarm_clock</c>. It will be given a day of the week encoded as 0 = Sun, 1 = Mon, 2 = Tue, &#x2026;6 = Sat, and a boolean indicating if we are on vacation, and will return a string indicating when the alarm clock should ring. If we are on vacation and it is a weekend (0 = Saturday or 6 = Sunday), it should return <c>"off"</c>, and otherwise return <c>"10:00"</c>. If we are not on vacation and it is a weekend, it should return <c>"10:00"</c>, and otherwise return <c>"7:00"</c>.</p>
     </statement>
     <program xml:id="functEx10muc_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def alarm_clock(day, vacation):
 
 ====
@@ -628,7 +628,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="functEx11muc" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -666,7 +666,7 @@ myTests().main()
       <p>First write a function called  <c>square_it</c> which squares the parameter <c>n</c> and returns the result. Then, write a function called <c>cube_it</c> which cubes the parameter <c>n</c> and returns the result.</p>
     </statement>
     <program xml:id="functEx11muc_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 
 ====
@@ -683,7 +683,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="functEx12muc_v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -736,7 +736,7 @@ myTests().main()
             The function <c>math.pow(a,b)</c> returns <c>a</c> raised to the <c>b</c> power.  The function <c>math.sqrt(a)</c> returns the square root of <c>a</c>.</p>
     </statement>
     <program xml:id="functEx12muc_v2_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 import math
 
 def distance(x1, y1, x2, y2):
@@ -756,7 +756,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
 </section>

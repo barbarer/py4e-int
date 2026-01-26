@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<exercises xml:id="files_write-code-questions">
+<section xml:id="files_write-code-questions">
   <title>Write Code Questions</title>
   <introduction>
   <p>The following data file <c>uspoll.txt</c> is used in some of the questions in this section. The data
@@ -393,7 +393,7 @@ Yuma, AZ :14 :9
         <exercise>
           <statement><p>Fix errors in the code below so that the code runs correctly and prints the pollution
               for all cities that start with the letter A.</p></statement>
-            <program interactive="activecode" language="python"><input>inFile = open("uspoll.txt","r)
+            <program interactive="activecode" language="python"><code>inFile = open("uspoll.txt","r)
 
 for line in inFile
     values = line.split(":")
@@ -402,10 +402,10 @@ for line in inFile
         print('City: ' city)
         print("Pollution values:",values[1],values[2])
 
-inFile.close()</input></program>
+inFile.close()</code></program>
           <solution>
             
-    <program xml:id="file_ex_pollErrora" language="python"><input>
+    <program xml:id="file_ex_pollErrora" language="python"><code>
 # Close quotations around "r"
 inFile = open("uspoll.txt","r")
 
@@ -419,7 +419,7 @@ for line in inFile:
         print("Pollution values:",values[1],values[2])
 
 inFile.close()
-        </input></program>
+        </code></program>
                     
         <p>The program was missing a close double quote after the r on line 1.  It was missing a colon
               at the end of line 3.  It was missing a comma or plus sign between the values on line 7.</p>
@@ -433,7 +433,7 @@ inFile.close()
                     print 11.33333333333333.</p>
           </statement>
           <program xml:id="file_ex_pmErrorq_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 def avg_PM25(state)
 
     # get the lines from the file
@@ -457,24 +457,24 @@ def avg_PM25(state)
         return total / count
 
 print(avg_PM25('OH'))
-        </input>
+        </code>
           </program>
         </exercise>
 
         <exercise>
           <statement><p>The code below prints all the lines that have a city that starts with an “A”. Change it so that it prints out all lines that have a city that starts with “A” or “B”.</p></statement>
-          <program xml:id="file_ex_bad_AorBa" interactive="activecode" language="python"><input>inFile = open("uspoll.txt","r")
+          <program xml:id="file_ex_bad_AorBa" interactive="activecode" language="python"><code>inFile = open("uspoll.txt","r")
 lines = inFile.readlines()
 inFile.close()
 
 for line in lines:
     if line[0] == "A":
         print(line)
-        </input></program>
+        </code></program>
     
           <solution>
             <program xml:id="file_ex_AorBa" language="python">
-              <input>
+              <code>
 # Read all the lines
 inFile = open("uspoll.txt","r")
 lines = inFile.readlines()
@@ -486,7 +486,7 @@ for line in lines:
     # Be sure to close parentheses to separate phrases
     if (line[0] == "A") | (line[0] == "B"):
         print(line)
-        </input>
+        </code>
             </program>
           </solution>
         </exercise>
@@ -497,7 +497,7 @@ for line in lines:
                     It should print <c>Smallest PM 2.5  4.0  in  Bellingham, WA</c>.</p>
           </statement>
           <program xml:id="file_ex_valueCity_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 inFile = open("uspoll.txt","r")
 lines = inFile.readlines()
 inFile.close()
@@ -511,7 +511,7 @@ if new25 &lt; min25:
 minCity = values[0]
 min25 = new25
 print("Smallest PM 2.5 ",min25," in ",minCity)
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -523,15 +523,15 @@ bill 23 16 19 22
 sue 8 22 17 14 32 17 24 21 2 9 11 17
 grace 12 28 21 45 26 10
 john 14 32 25 16 89</pre></statement>
-            <program interactive="activecode" language="python" xml:id="file_student_ex_start"><input># Hint: first see if you can write a program that just
+            <program interactive="activecode" language="python" xml:id="file_student_ex_start"><code># Hint: first see if you can write a program that just
 # prints out the number of scores on each line
 # Then, make it print the number only if the number is at least six
 # Then, switch it to printing the name instead of the number
-</input></program>
+</code></program>
 
           <solution>
             <program xml:id="file_student_ex_solution" language="python">
-              <input>
+              <code>
 # Open the file in "read" mode
 f = open("studentdata.txt", "r")
 
@@ -546,7 +546,7 @@ for aline in f:
         print(items[0])
 # Close the file
 f.close()
-        </input>
+        </code>
             </program>
           </solution>
         </exercise>
@@ -569,7 +569,7 @@ Nervous anxious jittery jumpy tense uneasy apprehensive</pre>
                     that begins with the letter <q>j</q>.  After the code executes <c>j_emotions</c> should be <c>['joyous', 'jittery', 'jumpy']</c></p>
           </statement>
           <program xml:id="file_ex_emotionq_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 
 
 =====
@@ -582,7 +582,7 @@ class myTests(TestCaseGui):
       self.assertEqual(j_emotions, ['joyous', 'jittery', 'jumpy'], "Testing that j_emotions was created correctly.")
 
 myTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 
@@ -755,7 +755,7 @@ myTests().main()
   </hint>
   <p>Complete the code at the # so that it prints out the date with the biggest loss from open to close. Each line has: Date, Open, High, Low, and Close. It should print 3-Aug-98 loss 1329.030000000001.</p>
 </statement>
-<program interactive="activecode" language="python"><input>def biggestLoss(file):
+<program interactive="activecode" language="python"><code>def biggestLoss(file):
     maxLoss = 0
     lines = file.readlines()
     for line in #:
@@ -770,10 +770,10 @@ myTests().main()
 
 file = open("stocks.txt", "r")
 biggestLoss(file)
-</input></program>
+</code></program>
           <solution>
             <program xml:id="file_ex_biggestLossA" language="python">
-              <input>
+              <code>
 def biggestLoss(file):
     maxLoss = 0
     lines = file.readlines()
@@ -794,7 +794,7 @@ def biggestLoss(file):
 
 file = open("stocks.txt", "r")
 biggestLoss(file)
-        </input>
+        </code>
             </program>
           </solution>
         </exercise>
@@ -807,7 +807,7 @@ biggestLoss(file)
                     There should be 22 dates.</p>
           </statement>
           <program xml:id="file_ex_300_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 def pointGain():
     file = open("stocks.txt", "r")
     date_list = []
@@ -834,23 +834,23 @@ class myTests(TestCaseGui):
         self.assertEqual(res[1],"2-Apr-01")
 
 myTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
         
         <exercise>
           <statement><p>The code below prints all the dates and high price for dates that occur on the first day of the month (i.e. January 1, February 1…). Each line has: Date, Open, High, Low, and Close. Change it so that it prints the date and low price for all the dates that occur in June.</p></statement>
-          <program interactive="activecode" language="python" xml:id="file_ex_June_start"><input>file = open("stocks.txt", "r")
+          <program interactive="activecode" language="python" xml:id="file_ex_June_start"><code>file = open("stocks.txt", "r")
 lines = file.readlines()
 for line in lines:
     values = line.split(",")
     date = values[0]
     if date[0] == "1":
         print(date + " had a high value of " + values[2])
-        </input></program>
+        </code></program>
           <solution>
             <program xml:id="file_ex_Junea" language="python">
-              <input>
+              <code>
 file = open("stocks.txt", "r")
 lines = file.readlines()
 for line in lines:
@@ -860,7 +860,7 @@ for line in lines:
     # if these are the letters for June, print the statement
     if date[2:5] == "Jun":
         print(date + " had a low value of " + values[3])
-        </input>
+        </code>
             </program>
           </solution>
         </exercise>
@@ -875,7 +875,7 @@ for line in lines:
                     is just the first three letters of the month.</p>
           </statement>
           <program xml:id="file_ex_abbrq_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 
 
 =====
@@ -896,8 +896,8 @@ class myTests(TestCaseGui):
         self.assertEqual(int(avg_month_close(self.lines,"Nov")), 6043, "Testing Jun = 6043")
 
 myTests().main()
-        </input>
+        </code>
           </program>
         </exercise>
 
-</exercises>
+</section>

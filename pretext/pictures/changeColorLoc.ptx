@@ -13,7 +13,7 @@
     <image source="pictures/Figures/colOrder.png" width="50%"/>
   </figure>
   <program xml:id="Nested_Loop_Clear_Red" interactive="activecode" language="python">
-    <input>
+    <code>
 # STEP 1: USE THE IMAGE LIBRARY
 from image import *
 
@@ -36,11 +36,11 @@ for x in range(img.getWidth()):
 # STEP 7: SHOW THE RESULT
 win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
-        </input>
+        </code>
   </program>
   <p>We don't always have to modify the pixel color.  Sometimes we can just change the color at a different (x,y) location than the current pixel. This time we will skip step 5 (changing the color) and change step 6 to get the pixel at (x,y) and copy the color from that pixel to the pixel at location (y,x).  So this will copy the color from (0,2) to (2,0).  Later it will also copy the color from (2,0) to (0,2), since this loops through all the pixels in the image, but that will just copy back the original color.</p>
   <program xml:id="Image_Location_Change" interactive="activecode" language="python">
-    <input>
+    <code>
 # STEP 1: USE THE IMAGE LIBRARY
 from image import *
 
@@ -61,7 +61,7 @@ for x in range(last):
 # STEP 7: SHOW THE RESULT
 win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
-        </input>
+        </code>
   </program>
   <p>Try the program above on some of the other images as well by changing the file name on line 5. Does it always have the same effect?</p>
   <exercise label="image_5_1_Image_YX_Q1">
@@ -105,7 +105,7 @@ img.draw(win)
   </exercise>
   <p>This one does a little math with the x and y.</p>
   <program xml:id="image_5_2_Image_Flip_Both" interactive="activecode" language="python">
-    <input>
+    <code>
 # STEP 1: USE THE IMAGE LIBRARY
 from image import *
 
@@ -127,7 +127,7 @@ for x in range(img.getWidth()):
 # STEP 7: SHOW THE RESULT
 win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
-        </input>
+        </code>
   </program>
   <p>Try the program above on some of the other images as well by changing the file name on line 5.   Which picture looks the best after you run the program?</p>
 </section>

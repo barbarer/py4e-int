@@ -5,10 +5,10 @@
 <idx><h>Parsing</h><h>List</h></idx>
   <p>If we execute these assignment statements:</p>
   <program language="python">
-    <input>
+    <code>
 a = 'banana'
 b = 'banana'
-</input>
+</code>
   </program>
   <p>we know that <c>a</c> and <c>b</c> both refer to a string,
             but we don't know whether they refer to the <em>same</em> string. There are two
@@ -22,11 +22,11 @@ b = 'banana'
   <p>To check whether two variables refer to the same object, you can use the
             <c>is</c> operator.</p>
   <program xml:id="listStringIs" interactive="activecode" language="python">
-    <input>
+    <code>
 a = 'banana'
 b = 'banana'
 print(a is b)
-        </input>
+        </code>
   </program>
   <exercise label="listOb_fill1">
     <statement>
@@ -51,11 +51,11 @@ print(a is b)
             <c>a</c> and <c>b</c> refer to it.</p>
   <p>But when you create two lists, you get two objects:</p>
   <program xml:id="listIs" interactive="activecode" language="python">
-    <input>
+    <code>
 a = [1, 2, 3]
 b = [1, 2, 3]
 print(a is b)
-        </input>
+        </code>
   </program>
   <p>In this case we would say that the two lists are
             <em>equivalent</em>, because they have the same elements, but
@@ -98,15 +98,15 @@ print(a is b)
     <feedback>
       <p>Try again.</p>
     </feedback>
-    <matches>
-      <match order="1">
+    <cardsort>
+      <match>
         <premise>Equivalent</premise>
         <response> a = [1, 2, 3] b = [1, 2, 3]</response>
       </match>
-      <match order="2">
+      <match>
         <premise>Identical</premise>
         <response> a = [1, 2, 3] b = a</response>
       </match>
-    </matches>
+    </cardsort>
   </exercise>
 </section>

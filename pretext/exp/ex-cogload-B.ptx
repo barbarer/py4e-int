@@ -6,7 +6,7 @@
       <p>Finish the function <c>has22</c> below to return <c>True</c> if there are at least two items in the list <c>nums</c> that are adjacent and both equal to 2, otherwise return <c>False</c>.  For example, return <c>True</c> for <c>has22([1, 2, 2])</c> since there are two adjacent items equal to 2 (at index 1 and 2) and <c>False</c> for <c>has22([2, 1, 2])</c> since the 2's are not adjacent.</p>
     </statement>
     <program xml:id="exp1_q1_write_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def has22(nums):
 
 ====
@@ -26,7 +26,7 @@ class myTests(TestCaseGui):
         self.assertEqual(has22([1, 4, 4]), False, 'has22([1, 4, 4])')
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise runestone="exp1_q1_write_poll"/>
@@ -89,7 +89,7 @@ myTests().main()
       <p>Finish the function <c>diffMaxMin</c> to return the difference between the largest and smallest value in the passed list of numbers (<c>nums</c>). For example, <c>diffMaxMin([1,2,3])</c> should return 2 since the difference between 3 and 1 is 2.</p>
     </statement>
     <program xml:id="exp1_q3_write_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def diffMaxMin(nums):
 
 ====
@@ -108,7 +108,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise runestone="exp1_q3_write_poll"/>
@@ -155,7 +155,7 @@ myTests().main()
       <p>Finish the function <c>get_names</c> that takes a list of dictionaries and returns a list of strings with the names from the dictionaries.  The key for the first name is &#x2018;first' and the key for the last name is &#x2018;last'.  Return a list of the full names (first last) as a string.  If the &#x2018;first' or &#x2018;last' key is missing in the dictionary use &#x2018;Unknown'.  For example, <c>[{'first': 'Ann', 'last': 'Brown'}, {'first': 'Darius'}]</c> should return <c>['Ann Brown', 'Darius Unknown']</c>..</p>
     </statement>
     <program xml:id="exp1_q5_write_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def get_names(d_list):
 
 ====
@@ -180,7 +180,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise runestone="exp1_q5_write_poll"/>

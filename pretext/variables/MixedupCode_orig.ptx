@@ -44,7 +44,7 @@
       <p>Write code that sets the variable <c>x</c> to 3, the variable <c>y</c> to the string <q>hello</q>, and the variable <c>z</c> to the string <q>Python</q>. Then set <c>x_type</c>, <c>y_type</c>, and <c>z_type</c> to the types of each of these variables. For example, x_type = int.</p>
     </statement>
     <program xml:id="var-mixed-ac-1q_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -58,7 +58,7 @@ class myTests(TestCaseGui):
         self.assertEqual(y_type, type("hello"), "Testing that 'y_type' holds the type of 'y'")
         self.assertEqual(z_type, type("hello"), "Testing that 'z_type' holds the type of 'z'")
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="var-mixed-2" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -91,7 +91,7 @@ myTests().main()
       <p>Write code that sets <c>Carla</c> to the the sentence <q>Carla ate 4 apples.</q>. Use the variables <c>number</c> and <c>fruit</c>.</p>
     </statement>
     <program xml:id="var-mixed-ac-2q_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 number = 4
 fruit = "apples"
 
@@ -102,7 +102,7 @@ class myTests(TestCaseGui):
     def testOne(self):
         self.assertEqual(Carla, "Carla ate 4 apples.","Testing that 'Carla' contains the sentence 'Carla ate 4 apples.'")
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="var-mixed-hours-3" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -143,7 +143,7 @@ myTests().main()
       <p>Write code that calculates John's gross pay for a certain week and inputs it into <c>grossPay</c> given that he worked 45 hours that week, earned 10 dollars per hour, and recieved a 5 percent bonus of his salary that week. Hint: gross pay is equal to the number of hours worked times pay rate.</p>
     </statement>
     <program xml:id="var-mixed-ac-3q_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 
 ====
@@ -153,7 +153,7 @@ class myTests(TestCaseGui):
     def testOne(self):
         self.assertEqual(grossPay, 1.05 * (45 * 10),"Testing that 'grossPay' contains the correct value")
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="var-mixed-price-4" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -182,7 +182,7 @@ myTests().main()
       <p>Write code that stores the cost of each shirt in the variable <c>pricePerShirt</c> if John purchases 2 shirts and gets the third free with each shirt originally costing $45. Use the variable <c>price</c>.</p>
     </statement>
     <program xml:id="var-mixed-ac-4q_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 price = 45
 
 ====
@@ -192,7 +192,7 @@ class myTests(TestCaseGui):
     def testOne(self):
         self.assertEqual(pricePerShirt, 30,"Testing that 'pricePerShirt' contains the value 30")
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="var-mixed-tip-5" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -226,7 +226,7 @@ myTests().main()
       <p>Write code that assigns the cost per person for a dinner to <c>perPersonCost</c>. The bill is 45 dollars and the tip is 19 percent of the bill. The cost per person will be divided equally.</p>
     </statement>
     <program xml:id="var-mixed-ac-5q_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 bill = 45
 
 ====
@@ -236,7 +236,7 @@ class myTests(TestCaseGui):
     def testOne(self):
         self.assertEqual(perPersonCost, (45 + 0.19 * (45)) / 3,"Testing that 'perPersonCost' contains the correct value")
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="var-mixed-switch-6" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -270,7 +270,7 @@ myTests().main()
       <p>Write code that swaps the values of <c>x</c> and <c>y</c> using a temporary variable.</p>
     </statement>
     <program xml:id="var-mixed-switch-ac-6q_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 x = 2
 y = 4
 
@@ -282,7 +282,7 @@ class myTests(TestCaseGui):
         self.assertEqual(y, 2,"Testing that 'y' holds 2")
         self.assertEqual(x, 4,"Testing that 'x' holds 4")
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="var-mixed-discount-7" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -317,7 +317,7 @@ myTests().main()
       <p>Write code that assigns the final price you will have to pay for an item that is 60% off the original price of $52.99 to <c>finalPrice</c>.</p>
     </statement>
     <program xml:id="var-mixed-discount-ac-7q_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -326,7 +326,7 @@ class myTests(TestCaseGui):
     def testOne(self):
         self.assertEqual(finalPrice, 21.196,"Testing that 'finalPrice' holds the correct value")
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="var-mixed-cookies-8" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -360,7 +360,7 @@ myTests().main()
       <p>Write code that sets <c>cookies</c> to the sentence <q>Chris likes baking cookies more than anything.</q>. Use the variables <c>var1</c> and <c>var2</c>.</p>
     </statement>
     <program xml:id="var-mixed-cookies-ac-8q_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 var1 = "Chris likes baking "
 var2 = " more " + "than anything."
 
@@ -371,7 +371,7 @@ class myTests(TestCaseGui):
     def testOne(self):
         self.assertEqual(cookies, "Chris likes baking cookies more than anything.","Testing that 'cookies' contains the sentence 'Chris likes baking cookies more than anything.'")
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="var-mixed-camp-9" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -407,7 +407,7 @@ myTests().main()
       <p>Write code that sets <c>var</c> to the sentence <q>It takes us 165 minutes to get home from camp.</q>. Then append the sentence <q>165 minutes is also 2 hours and 45 minutes.</q> to the variable. Use the variables <c>numHours</c> and <c>numMinutes</c>.</p>
     </statement>
     <program xml:id="var-mixed-camp-ac-9q_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 numHours = 2
 numMinutes = 45
 
@@ -418,7 +418,7 @@ class myTests(TestCaseGui):
     def testOne(self):
         self.assertEqual(var, "It takes us 165 minutes to get home from camp. 165 minutes is also 2 hours and 45 minutes.","Testing that 'var' contains the sentence 'It takes us 165 minutes to get home from camp. 165 minutes is also 2 hours and 45 minutes.'")
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="var-mixed-numbers-10" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -448,7 +448,7 @@ myTests().main()
       <p>Write code that sets <c>num_quarters</c> to the maximum number of quarters you can provide as change if your friend owed you 17.42 dollars but gave you 20 dollars.</p>
     </statement>
     <program xml:id="var-mixed-numbers-ac-10q_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 
 ====
@@ -458,7 +458,7 @@ class myTests(TestCaseGui):
     def testOne(self):
         self.assertEqual(num_quarters, 10,"Testing that 'num_quarters' contains 10")
 myTests().main()
-        </input>
+        </code>
     </program>
   </exercise>
 </section>

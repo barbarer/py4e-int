@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <program xml:id="sqlTEST" interactive="activecode" language="sql">
-  <input>
+  <code>
 select bike_number, max(duration)
 from trip_data
 group by bike_number
@@ -11,5 +11,5 @@ limit 4;
 assert 0,0 == W00379
 assert 0,1 == 86355
 assert 2,1 == 86336
-        </input>
+        </code>
 </program>

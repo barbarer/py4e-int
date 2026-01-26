@@ -71,7 +71,7 @@ FileNotFoundError: [Errno 2] No such file or directory: 'na na boo boo'</pre>
             assume that the <c>open</c> call might fail and add recovery code
             when the <c>open</c> fails as follows (creating a new file <em>search7.py</em>):</p>
   <program language="fileInputTry">
-    <input>
+    <code>
 fname = input('Enter the file name: ')
 try:
     fhand = open(fname)
@@ -84,7 +84,7 @@ for line in fhand:
         count = count + 1
 fhand.close()
 print('There were', count, 'subject lines in', fname)
-</input>
+</code>
   </program>
   <p>The <c>exit</c> function terminates the program. It is a function
             that we call that never returns. Now when our user (or QA team) types in

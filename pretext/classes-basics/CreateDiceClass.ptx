@@ -15,7 +15,7 @@
   <p>We would expect to be able to roll a die and get the value from the last roll.  When we roll a dice we pick a random number from 1 to 6.
             Let's store all the values that were rolled in a list, <c>roll_history</c>. We will add each <c>value</c> rolled to the end of the <c>roll_history</c> list and return the <c>value</c> from the <c>roll</c> method.</p>
   <program xml:id="diceClass" interactive="activecode" language="python">
-    <input>
+    <code>
 import random
 
 class Die:
@@ -36,6 +36,6 @@ def main():
     my_die = Die()
     for i in range(10):
         print(my_die.roll())
-        </input>
+        </code>
   </program>
 </section>

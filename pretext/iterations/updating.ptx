@@ -11,9 +11,9 @@
   <p>Commonly, assignment statements are used to update a variable, where the
             new value of the variable depends on the old.</p>
   <program language="python">
-    <input>
+    <code>
 x = x + 1
-</input>
+</code>
   </program>
   <p>This means <q>get the current value of <c>x</c>, add 1, and then
             update <c>x</c> with the new value.</q></p>
@@ -21,19 +21,19 @@ x = x + 1
             because Python evaluates the right side before it assigns a value to
             <c>x</c>:</p>
   <program xml:id="itr-section1_1" interactive="activecode" language="python">
-    <input>
+    <code>
 x = x + 1
 print(x)
-        </input>
+        </code>
   </program>
   <p>Before you can update a variable, you have to
             <em>initialize</em> it, usually with a simple assignment:</p>
   <program xml:id="itr-section1_2" interactive="activecode" language="python">
-    <input>
+    <code>
 x = 0
 x = x + 1
 print(x)
-        </input>
+        </code>
   </program>
   <p>When you update a variable by adding 1 it's called an <em>increment</em>;
             subtracting 1 is called a <em>decrement</em>.</p>
@@ -79,11 +79,11 @@ print(x)
     <statement>
       <p>Q-5: Consider the code block below. What happens when you run this program?</p>
       <program language="python">
-        <input>
+        <code>
 y = 1
 x = x + 1
 print(x)
-</input>
+</code>
       </program>
     </statement>
     <choices>

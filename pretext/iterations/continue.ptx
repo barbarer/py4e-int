@@ -14,7 +14,7 @@
   <p>Here is a sample run of this new program with <c>continue</c>
             added:</p>
   <program xml:id="itr-section4_1" interactive="activecode" language="python">
-    <input>
+    <code>
 while True:
     line = input('&gt; ')
     if line[0] == '#' :
@@ -24,11 +24,11 @@ while True:
     else:
         print(line)
 print ('Done!')
-        </input>
+        </code>
   </program>
   <p>Try the code block above using the input below as well as your own input.</p>
   <program language="python">
-    <input>
+    <code>
 &gt; hello there
 hello there
 &gt; # don't print this
@@ -36,7 +36,7 @@ hello there
 print this!
 &gt; done
 Done!
-</input>
+</code>
   </program>
   <p>All the lines are printed except the one that starts with the hash sign
             because when the <c>continue</c> is executed, it ends the current
@@ -46,7 +46,7 @@ Done!
     <statement>
       <p>Q-2: What prints if the user's input is &#x2018;done'?</p>
       <program language="python">
-        <input>
+        <code>
 while True:
     line = input('&gt; ')
     if line[0] == '#' :
@@ -56,7 +56,7 @@ while True:
     else:
         print(line)
 print ('Done!')
-</input>
+</code>
       </program>
     </statement>
     <choices>

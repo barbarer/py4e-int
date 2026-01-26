@@ -31,7 +31,7 @@
       <p>Write code to create a database file &#x2018;music.db' and add a table <c>Tracks`</c> with two columns.</p>
     </statement>
     <program xml:id="db-mixed1_ac_editor" interactive="activecode" language="python3">
-      <input>
+      <code>
 
 ====
 import unittest
@@ -47,7 +47,7 @@ class myTests(unittest.TestCase):
         self.assertEqual(field_names[1], "plays", "test2")
 
 unittest.main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="db-mixed-2" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -87,7 +87,7 @@ unittest.main()
       <p>Write code to connect to the database file &#x2018;chinook.db' which contains a table <c>albums</c> with three columns <c>AlbumID</c>, <c>Title`</c> and <c>ArtistID</c>. Insert 2 tracks into the table. The first track has an albumID of 348, title <q>Thunderstruck</q>, and ArtistID of 300. The second track has an albumID 349, title <q>My Way</q> with 301 ArtistID.</p>
     </statement>
     <program xml:id="db-mixed2_ac_editor" interactive="activecode" language="python3">
-      <input>
+      <code>
 ====
 import unittest
 
@@ -101,7 +101,7 @@ class myTests(unittest.TestCase):
         self.assertEqual(cur[1][0], 349, "Testing that the INSERT statements worked correctly")
 
 unittest.main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="db-mixed-3" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -136,7 +136,7 @@ unittest.main()
             Set the variable <c>count_rows</c> to the total number of rows returned from the query, before closing the cursor.</p>
     </statement>
     <program xml:id="db-mixed3_ac_editor" interactive="activecode" language="python3">
-      <input>
+      <code>
 ====
 import unittest
 
@@ -145,7 +145,7 @@ class myTests(unittest.TestCase):
         self.assertEqual(count_rows, 144, "Testing that count rows has the correct value")
 
 unittest.main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="db-mixed-4" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -193,7 +193,7 @@ unittest.main()
       <p>Write code to create a connection to the database &#x2018;pets.sqlite' and add a table <c>Dogs</c> with two columns, <c>name</c> and <c>breed</c>. Insert 2 dogs into the table. The first dog is named Penelope and is a Doberman. The second dog is named Milo and is a Springer Spaniel. Commit the change, then select the name(s) of the dogs of breed Springer Spaniel.</p>
     </statement>
     <program xml:id="db-mixed4-ac_editor" interactive="activecode" language="python3">
-      <input>
+      <code>
 
 ====
 import unittest
@@ -212,7 +212,7 @@ class myTests(unittest.TestCase):
                     self.assertEqual(rows, 2, 'Checking the new data was correctly added to the database')
 
 unittest.main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="db-mixed-5" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -252,7 +252,7 @@ unittest.main()
             Set the variable <c>count_rows</c> to the total number of rows returned from the query, before closing the cursor.</p>
     </statement>
     <program xml:id="db-mixed5_ac_editor" interactive="activecode" language="python3">
-      <input>
+      <code>
 ====
 import unittest
 
@@ -261,7 +261,7 @@ class myTests(unittest.TestCase):
         self.assertEqual(count_rows, 6, "test1")
 
 unittest.main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="db-mixed-6" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -304,7 +304,7 @@ unittest.main()
       <p>Write code to create a connection to the &#x2018;chinook.db' database. Select rows <c>LastName</c> and <c>FirstName`</c> in the table <c>customers</c> in alphabetical order by <c>LastName</c>. Set the variable count_rows to the total number of rows returned from the query, before closing the cursor.</p>
     </statement>
     <program xml:id="db-mixed6-ac_editor" interactive="activecode" language="python3">
-      <input>
+      <code>
 
 ====
 import unittest
@@ -314,7 +314,7 @@ class myTests(unittest.TestCase):
     def testOne(self):
         self.assertEqual(count_rows, 59, 'Testing that all rows were selected from the query')
 unittest.main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="db-mixed-7" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -352,7 +352,7 @@ unittest.main()
             Set the variable <c>count_rows</c> to the total number of rows returned from the query, before closing the cursor.</p>
     </statement>
     <program xml:id="db-mixed7_ac_editor" interactive="activecode" language="python3">
-      <input>
+      <code>
 ====
 import unittest
 
@@ -361,7 +361,7 @@ class myTests(unittest.TestCase):
         self.assertEqual(count_rows, 21, "test1")
 
 unittest.main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="db-mixed-8" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -399,7 +399,7 @@ unittest.main()
       <p>Write code to connect to the &#x2018;chinook.db' database. Then, join tables &#x2018;albums' and &#x2018;artists' on &#x2018;artistId'. Then, set the variables <c>title</c> and <c>artist</c> equal to the title name and artist name in row 185.</p>
     </statement>
     <program xml:id="db-mixed8-ac_editor" interactive="activecode" language="python3">
-      <input>
+      <code>
 
 ====
 import unittest
@@ -411,7 +411,7 @@ class myTests(unittest.TestCase):
         self.assertEqual(artist, 'Queen', 'Testing that row 185 has the correct artist')
 
 unittest.main()
-        </input>
+        </code>
     </program>
   </exercise>
   <exercise label="db-mixed-9" numbered="yes" adaptive="yes" indentation="hide" language="python">
@@ -456,7 +456,7 @@ unittest.main()
             Set the variable <c>count_rows</c> to the total number of rows returned from the query, before closing the cursor.</p>
     </statement>
     <program xml:id="db-mixed9_ac_editor" interactive="activecode" language="python3">
-      <input>
+      <code>
 ====
 import unittest
 
@@ -465,7 +465,7 @@ class myTests(unittest.TestCase):
         self.assertEqual(count_rows, 14, "test1")
 
 unittest.main()
-        </input>
+        </code>
     </program>
   </exercise>
 </section>
