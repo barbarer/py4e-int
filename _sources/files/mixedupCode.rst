@@ -460,10 +460,8 @@ you can hide it again by clicking on the Hide button.
     # for each line in the file
     for line in inFile:
     =====
-        # split at the :
+        # split at the : and get city name
         v = line.split(":")
-
-        # get the city
         city = v[0]
     =====
         # if city starts with an D print info
@@ -614,11 +612,9 @@ you can hide it again by clicking on the Hide button.
         # if found state
         if cityState[1].find(state) >= 0:
     =====
-            # convert to float and add the current to the sum
+            # convert to float, add current to sum
             new25 = float(values[2])
             total25 = total25 + new25
-
-            # increment the count
             count = count + 1
     =====
     # print the average
