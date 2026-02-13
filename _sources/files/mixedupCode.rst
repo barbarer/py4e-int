@@ -614,7 +614,7 @@ you can hide it again by clicking on the Hide button.
         # if found state
         if cityState[1].find(state) >= 0:
     =====
-            # add the current to the sum
+            # convert to float and add the current to the sum
             new25 = float(values[2])
             total25 = total25 + new25
 
