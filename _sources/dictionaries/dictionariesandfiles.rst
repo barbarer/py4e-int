@@ -105,7 +105,7 @@ It is a bit inconvenient to look through the dictionary to find the most
 common words and their counts, so we need to add some more Python code
 to get us the output that will be more helpful.
 
-.. parsonsprob:: dandf_pp_count_each_letter_rev2
+.. parsonsprob:: dandf_pp_count_each_letter_rev3
    :numbered: left
    :practice: T
    :adaptive:
@@ -123,7 +123,7 @@ to get us the output that will be more helpful.
    =====
     for line in lines:
    =====
-     for word in lines.split():
+     for word in line.split():
    =====
       if word not in word_count:
    =====
