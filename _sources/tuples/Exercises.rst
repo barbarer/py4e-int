@@ -95,7 +95,7 @@ Multiple Choice Questions
       aTuple = (100, 200, 300, 400, 500)
       print(tuple_indexing(aTuple))
 
-.. mchoice:: TupleExquestion10_6
+.. mchoice:: TupleExquestion10_6_v2
    :practice: T
    :answer_a: i, ii
    :answer_b: ii, iv
@@ -115,12 +115,12 @@ Multiple Choice Questions
           # options i, ii, iii, or iv
 
 
-      i) print(tup1[:-1])
-      ii) print(tup1[0:5])
+      i) print(tupl1[:-1])
+      ii) print(tupl1[0:5])
       iii) print(tupl1[0:4])
       iv) print(tupl1[-4:])
 
-.. mchoice:: TupleExquestion10_7
+.. mchoice:: TupleExquestion10_7_v2
    :practice: T
    :answer_a: True
    :answer_b: False
@@ -137,7 +137,7 @@ Multiple Choice Questions
 
       tup1 = (66, 4, 17, 4)
       tup2 = (66, 4, 16, 5)
-      tuple_comarison(tup1, tup2)
+      tuple_comparison(tup1, tup2)
 
 .. mchoice:: TupleExquestion10_8
    :practice: T

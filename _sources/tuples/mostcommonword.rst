@@ -104,7 +104,7 @@ good choice as a language for exploring information.
       weather = {'Reykjavik': 60, 'Buenos Aires': 55, 'Cairo': 96, 'Berlin': 89, 'Caloocan': 78}
       sorted_weather = weather.sort()
 
-.. parsonsprob:: question10_6_3_v2
+.. parsonsprob:: question10_6_3_v3
    :numbered: left
    :practice: T
    :adaptive:
@@ -122,9 +122,9 @@ good choice as a language for exploring information.
    =====
        for word in line.split():
    =====
-   		 for word in lines.split(): #paired
+       for word in lines.split(): #paired
    =====
-   		     counter[word] = counter.get(word, 0) + 1
+           counter[word] = counter.get(word, 0) + 1
    =====
    sorted_counts = sorted(counter.items(), key = lambda t: t[1], reverse = True)
    =====
