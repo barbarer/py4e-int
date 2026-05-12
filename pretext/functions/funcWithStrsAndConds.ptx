@@ -172,11 +172,11 @@ main()
       </setup>
     </exercise>
 
-    <exercise label="fsc_pp_print_name_v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <exercise label="fsc_pp_print_name_v2" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Drag the blocks from the left and put them in the correct order on the right to define a function <c>print_greeting</c> that asks for your name and prints <q>Hello Name</q>. Then define a <c>main</c> function that calls <c>print_greeting</c>.  Be sure to also call the <c>main</c> function. Note that you will have to indent the lines that are in the body of each function.  Click the <em>Check</em> button to check your solution.</p>
       </statement>
-      <blocks>
+      <blocks numbered="left">
         <block order="5">
           <choice correct="yes">
             <cline>def print_greeting():</cline>
@@ -377,7 +377,7 @@ main()
       </statement>
       <setup>
         <var>
-          <condition string="Baby,\s+its\s+cold\s+outside!">
+          <condition string="Baby,\sits\scold\soutside!\sThe\stemp\sis\s20">
             <feedback>
               <p>Since temp &lt; 32 this will print.</p>
             </feedback>
