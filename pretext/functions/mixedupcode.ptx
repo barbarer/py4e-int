@@ -6,7 +6,7 @@
     <statement>
       <p>Create a function <c>len_str</c> that uses a built-in function to return the number of characters in the passed string <c>str</c>. Then print the result of a call to <c>len_str</c> passing in the string <c>I love Python!</c>.  It should return 14.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="3">
         <choice correct="yes">
           <cline>def len_str(str):</cline>
@@ -39,7 +39,7 @@
       <p>Create a function called <c>bmi</c> that takes <c>height</c> (in inches) and <c>weight</c> (in pounds) as parameters. It should calculate the &#x2018;'bmi'' by squaring the height then dividing the weight by the height squared and then converting to metric by multiplying by 703.
             Watch your indentation!</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="3">
         <cline>def bmi(height, weight):</cline>
       </block>
@@ -63,7 +63,7 @@
       <p>Write two functions. The first is <c>square(x)</c>, which returns <c>x</c> squared. The second function is <c>sum_of_squares(x,y,z)</c>, which returns the sum of the squares of three numbers <c>z</c>, <c>y</c>, and <c>z</c>.  For example, <c>square(2)</c> should return <c>4</c> and <c>sum_of_squares(2, 4, 6)</c> should return 56.
             For example, <c>square(2)</c> should return <c>4</c> and <c>sum_of_squares(2, 4, 6)</c> should return 56.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="5">
         <cline>def square(x):</cline>
       </block>
@@ -92,7 +92,7 @@
       <p>Create a function called <c>average(num1, num2)</c>, which finds the average of two numbers <c>num1</c> and <c>num2</c>.  For example, <c>average(10,4)</c> should return <c>7.0</c>.
             Note: there are two extra code blocks, and watch your indentation!</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="3">
         <choice correct="yes">
           <cline>def average(num1, num2):</cline>
@@ -124,7 +124,7 @@
             It then returns val1. For example, <c>swapValues(8,2)</c> should return <c>2</c>.  Note: there is an extra code block, and
             watch your indentation!</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="6">
         <cline>def swapValues(val1, val2):</cline>
       </block>
@@ -151,7 +151,7 @@
     <statement>
       <p>Create a function called <c>get_avg_drop_lowest(num_list)</c> which returns the average of a list of numbers, ignoring the lowest value. However, if the list only contains one value, then return that. For example, <c>get_avg_drop_lowest([90])</c> returns <c>90</c>, <c>get_avg_drop_lowest([90, 10])</c> also returns <c>90</c>, and <c>get_avg_drop_lowest([90, 10, 0])</c> returns <c>50</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="1">
         <choice correct="yes">
           <cline>def get_avg_drop_lowest(num_list):</cline>
@@ -195,7 +195,7 @@
       <p>Create a function called <c>compare(p1, p2)</c> which returns whichever is greater of its two parameters. Note:
             there are two unused code blocks.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="5">
         <choice correct="yes">
           <cline>def compare(p1, p2):</cline>
@@ -233,7 +233,7 @@
             is true, unless it is your birthday &#x2013; on that day, your speed can be 5 higher in all cases.
             Note: there are two extra code blocks and lots of indentation to watch out for!</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="6">
         <cline>def caught_speeding(speed, is_birthday):</cline>
       </block>
@@ -296,7 +296,7 @@
             <c>'too low'</c>, <c>check_guess(7, 7)</c> returns <c>'correct'</c>, and <c>check_guess(9, 7)</c> returns <c>'too high'</c>.
             Note: there are three extra code blocks, and watch your indentation!</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="2">
         <choice correct="yes">
           <cline>def check_guess(guess, target):</cline>
@@ -345,7 +345,7 @@
             on vacation and it is a weekend, it should return <c>"10:00"</c>, and otherwise return
             <c>"7:00"</c>. Note: there are two extra code blocks, and watch your indentation!</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="13">
         <choice correct="yes">
           <cline>def alarm_clock(day, vacation):</cline>
@@ -398,7 +398,7 @@
             squares the parameter <c>n</c> and returns the result. Then, create a function called <c>cube_it</c> which cubes
             the parameter <c>n</c> and returns the result. Note : there are three extra code blocks, and watch your indentation!</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="7">
         <cline>def square_it(n):</cline>
       </block>
@@ -429,7 +429,7 @@
             the distance formula: d = &#x221A;((x_2 - x_1)&#xB2; + (y_2 - y_1)&#xB2;).  Use two functions in Python's math module (<c>math.pow</c>, <c>math.sqrt</c>).
             The function <c>math.pow(a,b)</c> returns <c>a</c> raised to the <c>b</c> power.  The function <c>math.sqrt(a)</c> returns the square root of <c>a</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="4">
         <cline>import math</cline>
       </block>

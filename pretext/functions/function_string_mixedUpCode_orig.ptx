@@ -7,7 +7,7 @@
             as parameters, <c>str1</c> and <c>str2</c>, and returns them as one string with <c>str1</c> before <c>str2</c>.
             For example, <c>joinStrings('he','llo')</c> returns <c>hello</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="6">
         <choice correct="yes">
           <cline>def joinStrings(str1, str2):</cline>
@@ -62,7 +62,7 @@ myTests().main()
             and return a string in the form - <c>Perimeter of rectangle with width of (w) and height of (h) is (perimeter)</c>.  For example, <c>rect_per(5,10)</c>
             returns <c>Perimeter of rectangle with width of 5 and height of 10 is 30</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="7">
         <choice correct="yes">
           <cline>def rect_per(w, h):</cline>
@@ -120,7 +120,7 @@ myTests().main()
       <p>Create a function <c>cube(n)</c> that takes a number, <c>n</c>, and cubes it and returns a string in the form
             <c>Cube of (n) is (n cubed)</c>.  For example, <c>cube(4)</c> returns <c>Cube of 4 is 64</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="4">
         <cline>def cube(n):</cline>
       </block>
@@ -168,14 +168,14 @@ myTests().main()
         </code>
     </program>
   </exercise>
-  <exercise label="Function_String_MixedUpCode_4" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <exercise label="Function_String_MixedUpCode_4" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>atlas(c_name)</c> that takes a country name, <c>c_name</c>,
             as a parameter and returns a string in the form of
             <c>The last letter of (c_name) is (last)</c>.  For example, <c>atlas('Germany')</c> returns
             <c>The last letter of Germany is y</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="4">
         <cline>def atlas(c_name):</cline>
       </block>
@@ -227,7 +227,7 @@ myTests().main()
       <p>Create a function <c>dateYear(date)</c> that takes a string, <c>date</c>, in the format MM/DD/YYYY and returns the year.
             For example, <c>dateYear(11/07/2000)</c> should return <c>2000</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="2">
         <cline>def dateYear(date):</cline>
       </block>
@@ -270,7 +270,7 @@ myTests().main()
       <p>Create a function <c>capitalize(str)</c>, that takes a string, <c>str</c>, and returns the string with the first letter capitalized.
             For example, <c>capitalize('america')</c> would return <c>America</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="3">
         <choice correct="yes">
           <cline>def capitalize(str):</cline>
@@ -319,7 +319,7 @@ myTests().main()
       <p>Create a function <c>mod_password(password)</c>, that takes a string, <c>password</c>, and returns a new string that replaces all <c>'s'</c> in the string with <c>'$'</c>.
             For example, <c>mod_password('suspense')</c> returns <c>$u$pen$e</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="1">
         <cline>def mod_password(password):</cline>
       </block>
@@ -365,7 +365,7 @@ myTests().main()
             followed by the last two characters. Assume <c>str</c> is four characters or more.
             For example, <c>first_last('wander')</c> returns <c>waer</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="4">
         <cline>def first_last(str):</cline>
       </block>

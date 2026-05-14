@@ -473,7 +473,7 @@ main()
         </code>
       </program>
     </exercise>
-    <exercise label="fsc_pogil_check-guess-Parsons-v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <exercise label="fsc_pogil_check-guess-Parsons-v2" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Put the blocks in order to define the function <c>check_guess</c> which will return <c>'too low'</c> if the guess is less
                 than the passed target, <c>'correct'</c> if they are equal, and <c>'too high'</c> if the guess
@@ -481,7 +481,7 @@ main()
                 <c>'too low'</c>, <c>check_guess(7,7)</c> returns <c>'correct'</c>, and <c>check_guess(9,7)</c> returns
                 <c>'too high'</c>. There are three extra blocks that are not needed in a correct solution.</p>
       </statement>
-      <blocks>
+      <blocks numbered="left">
         <block order="1">
           <cline>def check_guess(guess, target):</cline>
         </block>

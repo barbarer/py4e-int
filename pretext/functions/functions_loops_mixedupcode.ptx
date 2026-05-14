@@ -8,7 +8,7 @@
             return a list with numbers <c>x</c> to <c>y</c>. Note: ignore cases when <c>y</c> is not larger than <c>x</c>. For example, <c>nums_x_to_y(1,10)</c>
             would return <c>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="1">
         <choice correct="yes">
           <cline>def nums_x_to_y(x,y):</cline>
@@ -46,7 +46,7 @@
             a list with numbers <c>x</c> to <c>y</c>. Note: ignore cases when <c>y</c> is not larger than <c>x</c>. Use a for loop to create and return a
             list with numbers up to <c>y</c> by skip counting by <c>x</c>. For example, <c>count_by_x_to_y(5,20)</c> should return <c>[0, 5, 10, 15, 20]</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="1">
         <choice correct="yes">
           <cline>def count_by_x_to_y(x,y):</cline>
@@ -85,7 +85,7 @@
       <p>Create a function called <c>countdown</c> that takes in one integer parameter <c>seconds</c> and creates a list of numbers that counts down from
             seconds to 1, and then returns that list. Note: <c>seconds</c> must be greater than or equal to 1. For example, <c>countdown(3)</c> would return <c>[3, 2, 1]</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="6">
         <choice correct="yes">
           <cline>def countdown(seconds):</cline>
@@ -118,7 +118,7 @@
             If the number in <c>num_list</c> is odd, it gets added to <c>result</c>. Otherwise, it gets divided from the <c>result</c>, having the <c>result</c> be the floor value.
             Then, return <c>result</c>. For example, <c>add_odds_or_floor_division([-3, -5, -2, -9, 7.5, 10001, -5.3])</c> would return -1887.0.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="4">
         <choice correct="yes">
           <cline>def add_odds_or_floor_division(num_list):</cline>
@@ -167,7 +167,7 @@
             and returns a sorted new list with strings that are shorter in length than the original list.
             For example, <c>strings_chars_less_than_len(['hello', 'bye', 'me', 'mississippi', 'miss'])</c> would return [&#x2018;bye', &#x2018;me', &#x2018;miss'].</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="6">
         <choice correct="yes">
           <cline>def strings_chars_less_than_len(strings_list):</cline>
@@ -221,7 +221,7 @@
             and returns a list of strings in the form: <q>Num1: num1, Num2: num2</q> for each pair of items in the two lists.
             For example, <c>print_lists([3, 2], [8, 4])</c> would return <c>["Num1: 3, Num2: 8", "Num1: 2, Num2: 4"]</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="7">
         <cline>def print_lists(nums1, nums2):</cline>
       </block>
@@ -267,7 +267,7 @@
             and returns a list of the totals of the two numbers for each pair of items in the two lists.
             For example, <c>sum_lists([3, 2], [8, 4])</c> would return <c>[11, 6]</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="6">
         <cline>def sum_lists(nums1, nums2):</cline>
       </block>

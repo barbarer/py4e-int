@@ -7,7 +7,7 @@
             and uses BeautifulSoup to return the URL that links to Current Students in the Navigation Bar.
             For example, <c>cur_stud_link('https://umich.edu/')</c> should return <c>"https://umich.edu/current-students/"</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="8">
         <cline>import requests</cline>
         <cline>from bs4 import BeautifulSoup</cline>
@@ -51,7 +51,7 @@
             Contents box (History, Emergence of MOOC providers, Student experience and pedagogy, etc.). For example, <c>headings('https://en.wikipedia.org/wiki/Massive_open_online_course')</c>
             should return <c>['History', 'Emergence of MOOC providers', 'Student experience and pedagogy', 'Information architecture', 'Industry', 'Benefits', 'Challenges and criticisms', 'See also', 'References', 'Further reading', 'External links']</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="4">
         <cline>import requests</cline>
         <cline>from bs4 import BeautifulSoup</cline>
@@ -102,7 +102,7 @@
             and returns a dictionary with Country as keys and Percentage as values. For example, <c>coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course')</c>
             should return <c>{'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', 'United Kingdom': '4.4%', 'Spain': '4.0%', 'Canada': '3.6%', 'Australia': '2.3%', 'Russia': '2.2%', 'Rest of world': '41.9%'}</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="1">
         <cline>from bs4 import BeautifulSoup</cline>
         <cline>import requests</cline>
@@ -157,7 +157,7 @@
             and returns a list of the types. For example, <c>types('https://en.wikipedia.org/wiki/Python_(programming_language)')</c>
             should return <c>['bool', 'bytearray', 'bytes', 'complex', 'dict', 'ellipsis', 'float', 'frozenset', 'int', 'list', 'NoneType', 'NotImplementedType', 'range', 'set', 'str', 'tuple']</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="6">
         <cline>import requests</cline>
         <cline>from bs4 import BeautifulSoup</cline>
@@ -215,7 +215,7 @@
             and returns a list of the 12 best Ann Arbor restaurants in 2019. For example, <c>restaurants_list('https://detroit.eater.com/maps/best-ann-arbor-restaurants')</c>
             should return <c>["1. Knight's Steakhouse", '2. The Last Word', "3. Krazy Jim's Blimpy Burger", '4. Blue Llama Jazz Club', '5. Spencer', '6. Miss Kim', "7. Zingerman's Delicatessen", '8. Tomukun Noodle Bar', '9. Seoul Street', '10. Ricewood', '11. Bellflower', "12. Ma Lou's Fried Chicken"]</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="1">
         <cline>from bs4 import BeautifulSoup</cline>
         <cline>import requests</cline>
@@ -260,7 +260,7 @@
             and returns a list of the section names and subsection names under Programs Bachelor of Science in Information. For example, <c>bsi_list('https://www.si.umich.edu/programs/bachelor-science-information')</c>
             should return <c>['How do I apply?', 'Current U-M students', 'Transfer students', 'High school students', 'New transfers', 'UMSI Community College Summer Institute', 'Curriculum', 'Career outcomes', 'Internships', 'F-1 visa holders', 'Career development resources', 'Engaged learning', 'Tuition and funding', 'Connect with us', 'Study abroad for undergraduates', 'Exchange student information']</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="5">
         <cline>import requests</cline>
         <cline>from bs4 import BeautifulSoup</cline>
@@ -300,7 +300,7 @@
             and creates another list that contains the full urls of the named sections and subsections. Then, return a dictionary that contains the names as keys and their full urls as values. For example, <c>bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information')</c>
             should return <c>{'How do I apply?': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply', 'Current U-M students': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/cross-campus-transfer', 'Transfer students': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/new-transfer-students-bsi', 'High school students': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/preferred-admissions', 'New transfers': 'https://www.si.umich.edu/programs/bachelor-science-information/new-transfers', 'UMSI Community College Summer Institute': 'https://www.si.umich.edu/programs/bachelor-science-information/new-transfers/umsi-community-college-summer-institute', 'Curriculum': 'https://www.si.umich.edu/programs/bachelor-science-information/curriculum', 'Career outcomes': 'https://www.si.umich.edu/programs/bachelor-science-information/career-outcomes', 'Internships': 'https://www.si.umich.edu/programs/bachelor-science-information/internships', 'F-1 visa holders': 'https://www.si.umich.edu/programs/bachelor-science-information/internships/f-1-visa-holders', 'Career development resources': 'https://www.si.umich.edu/programs/bachelor-science-information/career-development-resources', 'Engaged learning': 'https://www.si.umich.edu/programs/bachelor-science-information/engaged-learning', 'Tuition and funding': 'https://www.si.umich.edu/programs/bachelor-science-information/tuition-and-funding', 'Connect with us': 'https://www.si.umich.edu/programs/bachelor-science-information/connect-us', 'Study abroad for undergraduates': 'https://www.si.umich.edu/programs/bachelor-science-information/study-abroad-undergraduates', 'Exchange student information': 'https://www.si.umich.edu/programs/bachelor-science-information/exchange-student-information'}</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="7">
         <cline>from bs4 import BeautifulSoup</cline>
         <cline>import requests</cline>
@@ -348,7 +348,7 @@
       <p>Create a function called <c>envelope_address</c> that takes in a parameter <c>url</c> and uses BeautifulSoup to web scrape and return the address text in the footer as a list. For example, <c>envelope_address('https://www.si.umich.edu/programs/bachelor-science-information')</c>
             should return a list like: <c>['School of Information', 'University of Michigan', '105 S State St.', 'Ann Arbor, MI 48109-1285']</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="1">
         <cline>import requests</cline>
         <cline>from bs4 import BeautifulSoup</cline>
@@ -401,7 +401,7 @@
             and returns a dictionary with the names as keys and the email addresses as values. Use the string replace method while web scraping. For example, <c>name_email('https://www.si.umich.edu/people/directory/faculty/e')</c>
             should return <c>{'Paul Edwards': 'pne@umich.edu', 'Ron Eglash': 'eglash@umich.edu', 'Nicole Ellison': 'enicole@umich.edu', 'Barbara Ericson': 'barbarer@umich.edu'}</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="1">
         <choice correct="yes">
           <cline>from bs4 import BeautifulSoup</cline>
@@ -473,7 +473,7 @@
             and Admissions (BSI program, MSI program, etc.) and their associated email addresses, and returns a dictionary with the program names as keys and the email addresses as values.
             For example, <c>program_email('https://www.si.umich.edu/about-umsi/contact-us')</c> should return something like <c>{'BSI program': 'umsi.undergrad@umich.edu', 'MSI program': 'umsi.admissions@umich.edu', 'MHI program': 'hi.admissions@umich.edu', 'MADS program': 'umsi.mads@umich.edu', 'Doctoral program': 'umsi.phd.admissions@umich.edu'}</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="8">
         <cline>import requests</cline>
         <cline>from bs4 import BeautifulSoup</cline>

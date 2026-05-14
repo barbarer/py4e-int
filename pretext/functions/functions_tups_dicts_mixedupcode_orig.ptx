@@ -8,7 +8,7 @@
             For example, <c>addition_tup([1,2,3], 5)</c> should return <c>((1, 6), (2, 7), (3, 8))</c> and <c>addition_tup([-1,-2, -3, 0, 5], -5.2)</c> should return
             <c>((-1, -6.2), (-2, -7.2), (-3, -8.2), (0, -5.2), (5, -0.2))</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="4">
         <cline>def addition_tup(lst, num):</cline>
       </block>
@@ -71,7 +71,7 @@ myTests().main()
             correspond to values in the <c>dictionary</c> that are greater than 5.  For example, <c>greater_than_five({'a':1, 'b': 2, 'c':7})</c>
             should return <c>['c']</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="4">
         <cline>def greater_than_five(dictionary):</cline>
       </block>
@@ -142,7 +142,7 @@ myTests().main()
             tuples with the first value being the keys of the <c>dictionary</c> and the second being the values of the <c>dictionary</c>.  For example,
             <c>dict_to_tup_of_tuples({'a':1, 'b': 2, 'c':7})</c> would return <c>(('a', 1), ('b', 2), ('c', 7))</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="5">
         <cline>def dict_to_tup_of_tuples(dictionary):</cline>
       </block>
@@ -212,7 +212,7 @@ myTests().main()
             swaps the keys and values of the passed in <c>dictionary</c>. For example, <c>swap_keys_values({'a':1, 'b': 2, 'c':7})</c> would return
             <c>{1: 'a', 2: 'b', 7: 'c'}</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="1">
         <cline>def swap_keys_values(dictionary):</cline>
       </block>
@@ -271,7 +271,7 @@ myTests().main()
             returns <c>True</c> if any of the values in both tuples match and <c>False</c> otherwise. (Note: Disregard position of values.)  For example,
             <c>common_value_in_tups((1,2,3),(6,4,5))</c> should return <c>False</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="7">
         <cline>def common_value_in_tups(tup1, tup2):</cline>
       </block>

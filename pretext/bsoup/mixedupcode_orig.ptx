@@ -6,7 +6,7 @@
       <p>Create a function called <c>img_links</c> that takes in a parameter <c>url</c> and returns a list of all urls for all the images on the page.
             Since websites are frequently updated, the returned list of image links may change as image links get added and deleted.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="9">
         <cline>import requests</cline>
         <cline>from bs4 import BeautifulSoup</cline>
@@ -78,7 +78,7 @@ unittest.main()
             and returns the URL from the University of Michigan wikipedia page that links to the Shapiro Undergraduate Library.
             For example, <c>shapiro_link('https://en.wikipedia.org/wiki/University_of_Michigan')</c> should return <c>"https://en.wikipedia.org/wiki/Shapiro_Undergraduate_Library"</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="5">
         <cline>import requests</cline>
       </block>
@@ -141,7 +141,7 @@ unittest.main()
             with the class <c>column</c> and id <c>news-items</c>, have None take its place in the list. Since websites are frequently updated,
             the returned list of links may change as links get added and deleted.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="6">
         <cline>from bs4 import BeautifulSoup</cline>
         <cline>import requests</cline>
@@ -229,7 +229,7 @@ unittest.main()
             For example, as of 2021, <c>descriptions('https://www.si.umich.edu/programs/courses/', ['106', '206', '330'])</c> should return
             <c>{'106': 'Introduction to programming with a focus on applications in informatics.  Covers the fundamental elements of a modern programming language and how to access data on the internet.  Explores how humans and technology complement one another, including techniques used to coordinate groups of people working together on software development.', '206': 'Students develop their core programming and software development skills, to build competency and literacy in important areas that includes basic data structures, debugging and testing, using distributed code repositories, pattern matching, and programmatic gathering and processing of data. Applications in assignments and labs are oriented around data manipulation.', '330': "Data analysis is crucial to application evaluation, as well as understanding users' information needs.  When the data required are numerous we need an automated way to gather, parse, and summarize the data.  In this course, you will learn to use Python and its modules to accomplish these tasks."}</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="2">
         <cline>from bs4 import BeautifulSoup</cline>
         <cline>import requests</cline>
@@ -320,7 +320,7 @@ unittest.main()
       <p>Create a function called <c>url_links</c> that takes in a parameter <c>url</c> and returns a list of all url links from the <c>url</c>.
             Since websites are frequently updated, the returned list of links may change as links get added and deleted.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="4">
         <cline>import requests</cline>
         <cline>from bs4 import BeautifulSoup</cline>
@@ -394,7 +394,7 @@ unittest.main()
             attributes that start with &#x2018;http' using BeautifulSoup. Since websites are frequently updated,
             the returned number may change as links get added and deleted.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="9">
         <cline>import requests</cline>
         <cline>from bs4 import BeautifulSoup</cline>
@@ -482,7 +482,7 @@ unittest.main()
       <p>Create a function called <c>img_links</c> that takes in a parameter <c>url</c> and returns a list that contains all image links
             using BeautifulSoup. Since websites are frequently updated, the returned list of image links may change as image links get added and deleted.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="10">
         <cline>import requests</cline>
         <cline>from bs4 import BeautifulSoup</cline>
@@ -558,7 +558,7 @@ unittest.main()
             and the values of the dictionary are the values of the attributes. Since websites are frequently updated,
             the returned list of dictionaries may change as span tags, attributes, and values get added, deleted, or modified.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="8">
         <cline>import requests</cline>
         <cline>from bs4 import BeautifulSoup</cline>
