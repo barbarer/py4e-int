@@ -7,7 +7,7 @@
             that has one parameter, <c>name</c>. Then define the <c>getName</c> method, which returns the
             <c>name</c> when the method is called.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="9">
         <choice correct="yes">
           <cline>class Dog:</cline>
@@ -81,7 +81,7 @@ myTests().main()
       <p>Create a class named <c>Dog</c>. Define the <c>__init__</c> method with two parameters, <c>name</c> and <c>age</c>.
             Also create the method <c>updateAge</c>, that increases the <c>age</c> by 1 and returns <c>age</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="3">
         <choice correct="yes">
           <cline>class Dog:</cline>
@@ -164,7 +164,7 @@ myTests().main()
             <c>"Name: name, Age: age"</c>. Then define the <c>make_sound</c> method, which should return
             the string <c>"Meow"</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="8">
         <cline>class Cat:</cline>
       </block>
@@ -234,7 +234,7 @@ myTests().main()
       <p>Create a class named <c>Book</c> that has an <c>__init__</c> method with the parameters <c>title</c>
             and <c>author</c>.  Then create a <c>__str__</c> method that returns <c>"Title: title, Author: author"</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="4">
         <choice correct="yes">
           <cline>class Book:</cline>
@@ -302,7 +302,7 @@ myTests().main()
             with <c>"Name: name"</c>.  Then create a method, <c>updateTricks</c>, that adds
             a new trick to the list.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="1">
         <cline>class Dog:</cline>
       </block>
@@ -382,7 +382,7 @@ myTests().main()
       <p>Create a class named <c>Square</c> with the <c>__init__</c> method taking the length, <c>len</c>, with a default of <c>10</c> if it is not specified.  Then create a <c>__str__</c> method that returns a string
             with <c>"Length: length"</c>.  Then create an <c>area</c> method that returns the area (<c>length</c> times <c>length</c>).</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="11">
         <choice correct="yes">
           <cline>class Square:</cline>
@@ -465,7 +465,7 @@ myTests().main()
       <p>Create a class named <c>Rectangle</c> with the <c>__init__</c> method taking a <c>length</c>, and <c>width</c>.  Then create a <c>__str__</c> method that returns a string
             with <c>"l: length, w: width"</c>.  Then create an <c>area</c> method that returns the area (<c>length</c> times <c>width</c>).</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="1">
         <choice correct="yes">
           <cline>class Rectangle:</cline>
@@ -553,7 +553,7 @@ myTests().main()
             Then create an <c>base</c> method that returns length of the longest side.
             The length of a side is the distance between two points.  For example, <c>t = Triangle(Point(0,0), Point(1,0), Point(0,2))</c> would return <c>2.23</c> from <c>base</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="10">
         <cline>class Triangle:</cline>
       </block>
@@ -642,7 +642,7 @@ myTests().main()
       <p>Create a class named <c>PickItem</c> with the <c>__init__</c> method taking a list of items.
             Then create an <c>pick</c> method that returns one of the items at random.  You can use the <c>random</c> module's <c>choice</c> method for this.  Next create <c>add(item)</c> that adds the item to the list of items.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="7">
         <cline>import random</cline>
         <cline>class PickItem:</cline>
@@ -726,7 +726,7 @@ myTests().main()
             Next create an <c>roll</c> method that picks a random value from one to the number of sides, adds the value to the end of the <c>history</c> list, and returns it.
             You can use the <c>random</c> module's <c>randint(start,end)</c> method to return a random number from start to end inclusvie.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="6">
         <cline>import random</cline>
       </block>

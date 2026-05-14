@@ -26,7 +26,7 @@ myTests().main()
     <statement>
       <p>Fix line 2 so that it prints <q>Hi</q> instead of <q>hi</q>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="3">
         <cline>s1 = "hi"</cline>
       </block>
@@ -68,7 +68,7 @@ myTests().main()
     <statement>
       <p>Fix the code so that only <q>meow</q> is printed.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="2">
         <cline>sentence = "The cat goes meow."</cline>
       </block>
@@ -107,7 +107,7 @@ myTests().main()
       <p>Write code to evaluate the length of the string <q>I like green eggs</q>
             and print it. It should print <q>The length is 17</q>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="2">
         <cline>sentence = 'I like green eggs'</cline>
       </block>
@@ -152,7 +152,7 @@ myTests().main()
             For example, if the function call was <c>count("banana", "a")</c> it would
             return <c>3</c>. <em>Hint: use the</em> <c>count</c> <em>method.</em></p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="2">
         <choice correct="yes">
           <cline>def count(str, letter):</cline>
@@ -199,7 +199,7 @@ myTests().main()
             Use <c>find</c> and string slicing to extract the portion of the string after the colon character
             and then use the <c>float</c> function to convert the extracted string into a floating point number called <c>num</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="3">
         <cline>string = "X-DSPAM-Confidence: 0.8475"</cline>
       </block>
@@ -250,7 +250,7 @@ for letter in prefixes:
             Of course, that's not quite right because Ouack and Quack are misspelled.
             Can you fix it?</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="5">
         <cline>prefixes = "JKLMNOPQ"</cline>
         <cline>suffix = "ack"</cline>
@@ -301,7 +301,7 @@ class myTests(TestCaseGui):
     <statement>
       <p>Write a function <c>numDigits</c> that will return the number of digits in an integer <c>n</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="3">
         <choice correct="yes">
           <cline>def numDigits(n):</cline>
@@ -353,7 +353,7 @@ myTests().main()
             string literals.
             Name the final string <c>statement</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="1">
         <cline>s1 = "hi"</cline>
         <cline>s2 = "My name is Bob, and he and I love to eat ham."</cline>
@@ -387,7 +387,7 @@ myTests().main()
       <p>Write a program that asks a user for their name and from the input
             prints the first letter of their name in lowercase.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="7">
         <cline>prompt = "What is your name?"</cline>
       </block>
@@ -431,7 +431,7 @@ myTests().main()
       <p>Write a program that asks for user input and prints their
             input in all lowercase, as well as the length of their string.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="3">
         <cline>user_input = input("Enter a string: ")</cline>
       </block>

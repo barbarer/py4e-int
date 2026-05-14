@@ -7,7 +7,7 @@
             has <q>Good Morning!</q> in it and <c>False</c> otherwise. For example, <c>greeting_search(["Hello!", "Good Morning!", "good morning!"])</c>
             should return <c>True</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="4">
         <cline>import re</cline>
       </block>
@@ -63,7 +63,7 @@ myTests().main()
             starting with an <q>H</q> or an <q>h</q> to a new list and returns that new list. For example, <c>search_h(["Hello!", "hello.", "Morning!", "hi"])</c>
             should return <c>['Hello!', 'hello.', 'hi']</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="3">
         <cline>import re</cline>
       </block>
@@ -122,7 +122,7 @@ myTests().main()
             that have a lowercase <q>o</q> to a new list and returns that new list. For example, <c>search_o(['Hello', 'Good Morning!', 'hi'])</c> should return
             <c>['Hello', 'Good Morning!']</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="2">
         <cline>import re</cline>
       </block>
@@ -180,7 +180,7 @@ myTests().main()
     <statement>
       <p>Create a function called <c>match_word(word, str)</c> that returns True if the string <c>str</c> contains the word <c>word</c>, but not if it is part of another word.  For example, <c>match_word('is', "This was bad")</c> would return False and <c>match_word('is', "This is good")</c> would return True.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="7">
         <choice correct="yes">
           <cline>import re</cline>
@@ -243,7 +243,7 @@ myTests().main()
             of at least one letter, number, or underscore, at least one space, and at least one letter, number, or underscore again. Return <c>"Match!"</c> if <c>sequence</c> matches the pattern, and
             <c>"Not a match!"</c> otherwise. For example, <c>test_pattern('Sincerely1       Molly')</c> should return <c>"Match!"</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="4">
         <cline>import re</cline>
       </block>
@@ -314,7 +314,7 @@ myTests().main()
             If there isn't a price in the <c>string</c>, return <c>'No price'</c>. For example, <c>first_price('We just received $2098.10 for cookies and $209 for brownies.')</c>
             should return <c>"$2098.10"</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="9">
         <cline>import re</cline>
       </block>
@@ -389,7 +389,7 @@ myTests().main()
             and the email domain (which includes a period). For example, <c>search_email('His email is pyth_on@umich.edu and her email is java@css.')</c> should return
             <c>['pyth_on@umich.edu']</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="2">
         <cline>import re</cline>
       </block>
@@ -439,7 +439,7 @@ myTests().main()
             with <q>From:</q> and is followed by one or more characters and an <q>@</q> sign. For example, <c>start_from(['From: Kelly@umich.edu','From: Kelly@',': Kelly@'])</c>
             should return <c>['From: Kelly@umich.edu', 'From: Kelly@']</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="5">
         <cline>import re</cline>
       </block>
@@ -497,7 +497,7 @@ myTests().main()
       <p>Create a function called <c>grab_domain</c> that takes in a list of strings, <c>lst</c>, as a parameter and returns a new list with the domains of the emails, if they exist.
             For example, <c>grab_domain(['python@umich.edu','This is Kelly@umich.gov','123','java@css','jav12a@css.com'])</c> would return <c>['umich.edu', 'umich.gov', 'css.com']</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="7">
         <cline>import re</cline>
       </block>
@@ -560,7 +560,7 @@ myTests().main()
             that contains two to four vowels, and it does not start nor end with a vowel. Otherwise, return <c>'Does not exist'</c>. For example, <c>vowels_in_mid('chEEEEEYYEErry')</c>
             should return <c>'chEEEEEYYEErry'</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="2">
         <cline>import re</cline>
       </block>

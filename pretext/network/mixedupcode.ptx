@@ -8,7 +8,7 @@
             the contents of the <c>link</c> using urllib. Between each word, there should be a space. Also, a space at the end is okay.
             For example, <c>decode('http://data.pr4e.org/romeo.txt')</c> should return <c>'But soft what light through yonder window breaks It is the east and Juliet is the sun Arise fair sun and kill the envious moon Who is already sick and pale with grief '</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="3">
         <cline>import urllib.request</cline>
       </block>
@@ -49,7 +49,7 @@
             and writes the contents of the <c>link</c> to a file called <c>'clown.txt'</c>. For example, <c>write_txt('http://data.pr4e.org/clown.txt')</c> should create
             a file called <c>'clown.txt'</c> that has the string <c>'the clown ran after the car and the car ran into the tent and the tent fell down on the clown and the car'</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="5">
         <cline>import urllib.request</cline>
         <cline>import os</cline>
@@ -83,7 +83,7 @@
             returns a dictionary with words as keys and the number of times they appear in the <c>link</c> as values. For example, <c>count_words('http://data.pr4e.org/romeo.txt')</c>
             should return <c>{'But': 1, 'soft': 1, 'what': 1, 'light': 1, 'through': 1, 'yonder': 1, 'window': 1, 'breaks': 1, 'It': 1, 'is': 3, 'the': 3, 'east': 1, 'and': 3, 'Juliet': 1, 'sun': 2, 'Arise': 1, 'fair': 1, 'kill': 1, 'envious': 1, 'moon': 1, 'Who': 1, 'already': 1, 'sick': 1, 'pale': 1, 'with': 1, 'grief': 1}</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="4">
         <cline>import urllib.request</cline>
       </block>
@@ -133,7 +133,7 @@
             and writes the contents of the <c>img_link</c> to a file called <c>'cover.jpg'</c>. For example, <c>write_jpg('http://data.pr4e.org/cover3.jpg')</c> should create
             a file called <c>'cover.jpg'</c> that has an image of the cover for <c>"PYTHON FOR EVERYBODY"</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="8">
         <cline>import urllib.request</cline>
         <cline>import os</cline>
@@ -170,7 +170,7 @@
             returns the number of characters in <c>link</c> in the format <c>"(num) characters"</c>. For example, <c>num_chars('http://data.pr4e.org/romeo-full.txt')</c>
             should return <c>"8864 characters"</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="5">
         <cline>import urllib.request</cline>
       </block>
@@ -208,7 +208,7 @@
             the contents of the <c>link</c> (specifically 10000 characters). For example, <c>contents('http://data.pr4e.org/clown.txt')</c> should return
             <c>"HTTP/1.1 200 OK\nDate: Thu, 12 Aug 2021 01:24:15 GMT\nServer: Apache/2.4.18 (Ubuntu)\nLast-Modified: Sat, 13 May 2017 11:22:22 GMT\nETag: '6a-54f6609240717'\nAccept-Ranges: bytes\nContent-Length: 106\nCache-Control: max-age=0, no-cache, no-store, must-revalidate\nPragma: no-cache\nExpires: Wed, 11 Jan 1984 05:00:00 GMT\nConnection: close\nContent-Type: text/plain\n\nthe clown ran after the car and the car ran into the tent and the tent fell down on the clown and the car\n"</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="4">
         <cline>import socket</cline>
       </block>
@@ -263,7 +263,7 @@
             attributes that start with &#x2018;http' using regular expressions. Since websites are frequently updated,
             the returned number may change as links get added and deleted.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="4">
         <cline>import urllib.request</cline>
         <cline>import re</cline>
@@ -299,7 +299,7 @@
             attributes that start with &#x2018;http' using BeautifulSoup. Since websites are frequently updated,
             the returned number may change as links get added and deleted.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="4">
         <cline>import requests</cline>
         <cline>from bs4 import BeautifulSoup</cline>
@@ -357,7 +357,7 @@
       <p>Create a function called <c>img_links</c> that takes in a parameter <c>url</c> and returns a list that contains all image links
             using BeautifulSoup. Since websites are frequently updated, the returned list of image links may change as image links get added and deleted.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="6">
         <cline>import requests</cline>
         <cline>from bs4 import BeautifulSoup</cline>
@@ -406,7 +406,7 @@
             and the values of the dictionary are the values of the attributes. Since websites are frequently updated,
             the returned list of dictionaries may change as span tags, attributes, and values get added, deleted, or modified.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="4">
         <cline>import requests</cline>
         <cline>from bs4 import BeautifulSoup</cline>

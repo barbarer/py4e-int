@@ -5,7 +5,7 @@
     <statement>
       <p>Create a database file &#x2018;music.db' and add a table <c>Tracks</c> with two columns.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="6">
         <cline>import sqlite3</cline>
       </block>
@@ -54,7 +54,7 @@ unittest.main()
     <statement>
       <p>Create code to connect to the database file &#x2018;chinook.db' which contains a table <c>albums</c> with three columns <c>AlbumID</c>, <c>Title`</c> and <c>ArtistID</c>. Insert 2 tracks into the table. The first track has an albumID of 348, title <q>Thunderstruck</q>, and ArtistID of 300. The second track has an albumID 349, title <q>My Way</q> with 301 ArtistID.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="2">
         <cline>import sqlite3</cline>
       </block>
@@ -109,7 +109,7 @@ unittest.main()
       <p>Create code to connect to a database file &#x2018;bikeshare.db'. Then selects all of the rows in the table <c>bikeshare_stations</c>.
             Set the variable <c>count_rows</c> to the total number of rows returned from the query, before closing the cursor.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="5">
         <cline>import sqlite3</cline>
       </block>
@@ -152,7 +152,7 @@ unittest.main()
     <statement>
       <p>Create a connection to the database &#x2018;pets.sqlite' and add a table <c>Dogs</c> with two columns, <c>name</c> and <c>breed</c>. Insert 2 dogs into the table. The first dog is named Penelope and is a Doberman. The second dog is named Milo and is a Springer Spaniel. Commit the change, then select the name(s) of the dogs of breed Springer Spaniel.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="3">
         <cline>import sqlite3</cline>
       </block>
@@ -220,7 +220,7 @@ unittest.main()
       <p>Create code to connect to a database file &#x2018;bikeshare.db'. Then only selects the rows in the table <c>bikeshare_stations</c> that have a <c>status</c> of closed.
             Set the variable <c>count_rows</c> to the total number of rows returned from the query, before closing the cursor.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="4">
         <cline>import sqlite3</cline>
       </block>
@@ -268,7 +268,7 @@ unittest.main()
     <statement>
       <p>Create a connection to the &#x2018;chinook.db' database. Select rows <c>LastName</c> and <c>FirstName`</c> in the table <c>customers</c> in alphabetical order by <c>LastName</c>. Set the variable count_rows to the total number of rows returned from the query, before closing the cursor.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="1">
         <cline>import sqlite3</cline>
       </block>
@@ -322,7 +322,7 @@ unittest.main()
       <p>Create code to connect to a database file &#x2018;chinook.db'. Join tables <c>albums</c> and <c>artists</c>. Then, select the artist <c>Name</c> where <c>ArtistID`</c> is 90.
             Set the variable <c>count_rows</c> to the total number of rows returned from the query, before closing the cursor.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="2">
         <cline>import sqlite3</cline>
       </block>
@@ -368,7 +368,7 @@ unittest.main()
     <statement>
       <p>Create a connection to the &#x2018;chinook.db' database. Then, join tables &#x2018;albums' and &#x2018;artists' on &#x2018;artistId'. Then, set the variables <c>title</c> and <c>artist</c> equal to the title name and artist name in row 185.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="1">
         <cline>import sqlite3</cline>
         <cline>conn = sqlite3.connect('chinook.db')</cline>
@@ -419,7 +419,7 @@ unittest.main()
       <p>Create code to connect to a database file &#x2018;chinook.db'. Select the name of all rows of data where the genre Name is &#x2018;Pop' and MediaTypeID is 1. In order to do this, first join tables <c>tracks</c> and <c>genres</c>.
             Set the variable <c>count_rows</c> to the total number of rows returned from the query, before closing the cursor.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="2">
         <cline>import sqlite3</cline>
       </block>

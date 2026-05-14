@@ -96,7 +96,7 @@ print(soup.find('p'))
         <p>Put the following blocks in order to print the second paragraph from the Michigan Daily website.  It uses the <c>find_all</c> method on
                 BeautifulSoup to get a list of all of the paragraphs.</p>
       </statement>
-      <blocks>
+      <blocks numbered="left">
         <block order="1">
           <choice correct="yes">
             <cline>import requests</cline>
@@ -174,7 +174,7 @@ print(tag.text)
         <p>Put the following blocks in order to print the text for span tag which
                 is a child of a h3 tag with a class of css-1pjbq1w.</p>
       </statement>
-      <blocks>
+      <blocks numbered="left">
         <block order="9">
           <cline>import requests</cline>
           <cline>from bs4 import BeautifulSoup</cline>
@@ -245,7 +245,7 @@ for tag in tags:
       <statement>
         <p>Put the following blocks in order to find all the link tags and print the href for each one for the Michgian Daily.</p>
       </statement>
-      <blocks>
+      <blocks numbered="left">
         <block order="9">
           <cline>import requests</cline>
           <cline>from bs4 import BeautifulSoup</cline>
@@ -347,7 +347,7 @@ for li in li_list:
         <p>Put the following blocks in order to print the href for the first &#x2018;a' tag
                 in each h2 tag with a class of <q>entry-title</q></p>
       </statement>
-      <blocks>
+      <blocks numbered="left">
         <block order="10">
           <cline>import requests</cline>
           <cline>from bs4 import BeautifulSoup</cline>

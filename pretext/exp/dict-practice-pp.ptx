@@ -8,7 +8,7 @@
     <statement>
       <p>Put the blocks in order to define the function <c>make_dir</c> that takes two lists (<c>l1</c> and <c>l2</c>) of equal length and returns a dictionary where the items in <c>l1</c> are the keys and the items in <c>l2</c> are the values. For example, <c>make_dir([&#x2018;a', &#x2018;c'], [5, 0])</c> returns <c>{&#x2018;a': 5, &#x2018;c': 0}</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="2">
         <cline>def make_dir(l1, l2):</cline>
       </block>
@@ -49,7 +49,7 @@
     <statement>
       <p>Put the blocks in order to define the function <c>make_dir</c> which takes a list of tuples (<c>tuple_list</c>) and returns a dictionary where the first item in each tuple is the key and the second is the value. For example, <c>make_dir([(&#x2018;gray', -3), (&#x2018;blue', 2)])</c> returns <c>{&#x2018;gray': -3, &#x2018;blue': 2}</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="7">
         <cline>def make_dir(tuple_list):</cline>
       </block>
@@ -86,7 +86,7 @@
     <statement>
       <p>Put the blocks in order to define the function <c>get_tuple</c> which takes a dictionary <c>dict</c> and a <c>key</c> and if the <c>key</c> is found in the dictionary it returns <c>(key, value)</c> otherwise it returns <c>(key, &#x2018;Not Found')</c>. For example, <c>get_tuple({&#x2018;a': 0}, &#x2018;c')</c> returns <c>(&#x2018;c', &#x2018;Not Found')</c>, and <c>get_tuple({&#x2018;a': 0}, &#x2018;a')</c> returns <c>(&#x2018;a', 0)</c></p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="3">
         <choice correct="yes">
           <cline>def get_tuple(dict, key):</cline>
@@ -119,7 +119,7 @@
             that contains only the key-value pairs where the value is greater than
             or equal to the cutoff.   For example, <c>greater_dict({&#x2018;a': 20, &#x2018;b': 10}, 15)</c> returns <c>{&#x2018;a': 20}</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="2">
         <choice correct="yes">
           <cline>def greater_dictionary(d, cutoff):</cline>
@@ -164,7 +164,7 @@
     <statement>
       <p>Put the blocks in order to define the function <c>get_counts</c> which takes a list of strings <c>s_list</c> and returns a dictionary that has the number of times each unique string appears in the list. For example, <c>get_counts([&#x2018;a','b','a'])</c> returns <c>{&#x2018;a':2, &#x2018;b':1}</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="5">
         <choice correct="yes">
           <cline>def get_counts(s_list):</cline>
