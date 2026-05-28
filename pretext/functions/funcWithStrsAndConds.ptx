@@ -172,12 +172,21 @@ main()
       </setup>
     </exercise>
 
-    <exercise label="fsc_pp_print_name_v2" adaptive="yes" indentation="hide" language="python">
+    <exercise label="fsc_pp_print_name_v2">
       <statement>
-        <p>Drag the blocks from the left and put them in the correct order on the right to define a function <c>print_greeting</c> that asks for your name and prints <q>Hello Name</q>. Then define a <c>main</c> function that calls <c>print_greeting</c>.  Be sure to also call the <c>main</c> function. Note that you will have to indent the lines that are in the body of each function.  Click the <em>Check</em> button to check your solution.</p>
+        <p>Drag the blocks from the left and put them in the correct order on the right.</p>
+         <ul>
+           <li>First define the function <c>print_greeting</c></li>
+           <li>Ask for the user's name</li>
+           <li>Print "Hello " followed by the name</li>
+           <li>Define a main function</li>
+           <li>Call print_greeting in the main function</li>
+           <li>Call the main function</li>
+         </ul> 
+       <p>Note that you will have to indent the lines that are in the body of each function.  Click the <em>Check</em> button to check your solution.</p>
       </statement>
-      <blocks numbered="left">
-        <block order="5">
+      <blocks numbered="left" random = "no" adaptive="yes" indentation="hide" language="python">
+        <block order="6">
           <choice correct="yes">
             <cline>def print_greeting():</cline>
           </choice>
@@ -185,13 +194,13 @@ main()
             <cline>def print_greeting() </cline>
           </choice>
         </block>
-        <block order="8">
+        <block order="3">
           <cline>    name = input("What is your name?")</cline>
         </block>
-        <block order="9">
+        <block order="5">
           <cline>    print("Hello " + name)</cline>
         </block>
-        <block order="7">
+        <block order="2">
           <choice correct="yes">
             <cline>def main():</cline>
           </choice>
@@ -207,7 +216,7 @@ main()
             <cline>    print_greeting </cline>
           </choice>
         </block>
-        <block order="3">
+        <block order="1">
           <cline>main()</cline>
         </block>
       </blocks>
