@@ -174,7 +174,7 @@ main()
 
     <exercise label="fsc_pp_print_name_v2">
       <statement>
-        <p>Drag the blocks from the left and put them in the correct order on the right.</p>
+        <p>Drag the blocks from the left and put them in the correct order on the right to do the following:</p>
          <ul>
            <li>First define the function <c>print_greeting</c></li>
            <li>Ask for the user's name</li>
@@ -482,19 +482,22 @@ main()
         </code>
       </program>
     </exercise>
-    <exercise label="fsc_pogil_check-guess-Parsons-v2" adaptive="yes" indentation="hide" language="python">
+    <exercise label="fsc_pogil_check-guess-Parsons-v2">
       <statement>
-        <p>Put the blocks in order to define the function <c>check_guess</c> which will return <c>'too low'</c> if the guess is less
-                than the passed target, <c>'correct'</c> if they are equal, and <c>'too high'</c> if the guess
-                is greater than the passed target.  For example, <c>check_guess(5,7)</c> returns
-                <c>'too low'</c>, <c>check_guess(7,7)</c> returns <c>'correct'</c>, and <c>check_guess(9,7)</c> returns
-                <c>'too high'</c>. There are three extra blocks that are not needed in a correct solution.</p>
+        <p>Put the blocks in order on the right to do the following:</p>
+          <ul>
+           <li>First define the function <c>check_guess</c></li>
+           <li>Then check if the guess is too low and if so return "too low"</li>
+           <li>Otherwise check if the guess is correct and if so return "correct" </li>
+           <li>Else return 'too high'</li>
+         </ul> 
+       <p>There are extra blocks that are not needed in a correct solution.</p>
       </statement>
-      <blocks numbered="left">
-        <block order="1">
+      <blocks numbered="left" random = "no" adaptive="yes" indentation="hide" language="python">
+        <block order="6">
           <cline>def check_guess(guess, target):</cline>
         </block>
-        <block order="2">
+        <block order="4">
           <choice correct="yes">
             <cline>    if guess &lt; target:</cline>
           </choice>
@@ -502,7 +505,7 @@ main()
             <cline>    if guess &lt; target </cline>
           </choice>
         </block>
-        <block order="9">
+        <block order="1">
           <choice correct="yes">
             <cline>        return 'too low'</cline>
           </choice>
@@ -510,7 +513,7 @@ main()
             <cline>        return "too low' </cline>
           </choice>
         </block>
-        <block order="8">
+        <block order="3">
           <choice correct="yes">
             <cline>    elif guess == target:</cline>
           </choice>
@@ -518,13 +521,13 @@ main()
             <cline>    elif guess = target: </cline>
           </choice>
         </block>
-        <block order="6">
+        <block order="5">
           <cline>        return 'correct'</cline>
         </block>
-        <block order="4">
+        <block order="7">
           <cline>    else:</cline>
         </block>
-        <block order="7">
+        <block order="2">
           <cline>        return 'too high'</cline>
         </block>
       </blocks>
