@@ -203,13 +203,57 @@ myTests().main()
             </solution>
   </exercise>
 
-  <raw format="html" xml:space="preserve">
-&lt;div class="runestone sqcontainer %(optclass)s"&gt;
-&lt;div data-component="selectquestion" id=iterations_writecode6 data-questionlist='itr-ex-root_ac, itr-ex-root_pp'         data-toggleoptions="toggle, lock" data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
-    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: itr-ex-root_ac, itr-ex-root_pp&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</raw>
+   <exercise label="itr-ex-root_ac" xml:id="itr-ex-root_ac">
+    <statement>
+      <p>The code below is supposed to print an estimate of the square root of a number (target). You are given an initial guess of 2.
+            However, the indention is wrong on 4 lines. Fix these errors to find the estimate.</p>
+    </statement>
+    <program xml:id="itr-ex-root_ac_editor" interactive="activecode" language="python">
+      <code>
+target = 6
+    guess = 2
+guessSquared = guess * guess
+while abs(target-guessSquared) &gt; 0.01:
+    closer = target / guess
+guess = (guess + closer) / 2.0
+        guessSquared = guess * guess
+    print("Square root of", target, "is", guess)
+        </code>
+    </program>
+  </exercise>
+  <exercise label="itr-ex-root_pp" xml:id="itr-ex-root_pp">
+    <statement>
+      <p>Create code to print an estimate of the square root of a number (target). You are given an initial guess of 2.</p>
+    </statement>
+    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
+      <block order="6">
+        <cline>target = 6</cline>
+        <cline>guess = 2</cline>
+      </block>
+      <block order="2">
+        <cline>guessSquared = guess * guess</cline>
+      </block>
+      <block order="7">
+        <cline>while abs(target-guessSquared) &gt; 0.01:</cline>
+      </block>
+      <block order="3">
+        <cline>    closer = target / guess</cline>
+      </block>
+      <block order="4">
+        <cline>    guess = (guess + closer) / 2.0</cline>
+      </block>
+      <block order="1">
+        <cline>    guessSquared = guess * guess</cline>
+      </block>
+      <block order="5">
+        <cline>print("Square root of", target, "is", guess)</cline>
+      </block>
+    </blocks>
+  </exercise>
+  <exercise label="iterations_writecode6">
+      <select grade="first" questions="itr-ex-root_ac itr-ex-root_pp"/>
+  </exercise>
+
   <exercise>
     <statement>
       <p>This function currently takes a start and stop argument and uses a for loop to find the sum of all the numbers between them (inclusive).
@@ -320,7 +364,7 @@ for x in range(1, 4):
 
   <exercise label="int-ex-while_ac" xml:id = "int-ex-while_ac">
     <statement>
-      <p>Rewrite the following code to use a while loop instead of a for loop to calcultae the value of the ten factorial.</p>
+      <p>Rewrite the following code to use a while loop instead of a for loop to calculate the value of the ten factorial.</p>
     </statement>
     <program xml:id="int-ex-while_ac_editor" interactive="activecode" language="python">
       <code>
@@ -341,12 +385,11 @@ myTests().main()
         </code>
     </program>
   </exercise>
-
-  <exercise xml:id="int-ex-while_pp" label="int-ex-while_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <exercise xml:id="int-ex-while_pp" label="int-ex-while_pp" >
     <statement>
       <p>Using the blocks below, create code to calculate the value of the ten factorial.</p>
     </statement>
-    <blocks numbered="left">
+    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
       <block order="5">
         <cline>product = 1</cline>
         <cline>number = 1</cline>
@@ -370,7 +413,6 @@ myTests().main()
       </block>
     </blocks>
   </exercise>
-
   <!-- Eva's First Fix Iteration
     I'm not sure how it will render but I kept the clines I think this is how we use the toggle as well to give them the option
   -->
