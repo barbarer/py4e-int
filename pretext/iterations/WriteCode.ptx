@@ -362,35 +362,6 @@ for x in range(1, 4):
       </program>
     </solution>
   </exercise>
-    <exercise label="itr-ex-root_pp" xml:id="itr-ex-root_pp">
-    <statement>
-      <p>Create code to print an estimate of the square root of a number (target). You are given an initial guess of 2.</p>
-    </statement>
-    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
-      <block order="6">
-        <cline>target = 6</cline>
-        <cline>guess = 2</cline>
-      </block>
-      <block order="2">
-        <cline>guessSquared = guess * guess</cline>
-      </block>
-      <block order="7">
-        <cline>while abs(target-guessSquared) &gt; 0.01:</cline>
-      </block>
-      <block order="3">
-        <cline>    closer = target / guess</cline>
-      </block>
-      <block order="4">
-        <cline>    guess = (guess + closer) / 2.0</cline>
-      </block>
-      <block order="1">
-        <cline>    guessSquared = guess * guess</cline>
-      </block>
-      <block order="5">
-        <cline>print("Square root of", target, "is", guess)</cline>
-      </block>
-    </blocks>
-  </exercise>
 
   <exercise label="int-ex-while_ac" xml:id="int-ex-while_ac">
     <statement>
