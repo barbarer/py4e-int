@@ -4,7 +4,7 @@
   <warning>
     <p>Be careful not to create infinite loops, as they will cause the page to freeze.</p>
   </warning>
-  <exercise label="itr-ex-root_ac">
+  <exercise label="itr-ex-root_ac" xml:id="itr-ex-root_ac">
     <statement>
       <p>The code below is supposed to print an estimate of the square root of a number (target). You are given an initial guess of 2.
             However, the indention is wrong on 4 lines. Fix these errors to find the estimate.</p>
@@ -22,11 +22,11 @@ guess = (guess + closer) / 2.0
         </code>
     </program>
   </exercise>
-  <exercise label="itr-ex-root_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <exercise label="itr-ex-root_pp" xml:id="itr-ex-root_pp">
     <statement>
       <p>Create code to print an estimate of the square root of a number (target). You are given an initial guess of 2.</p>
     </statement>
-    <blocks numbered="left">
+    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
       <block order="6">
         <cline>target = 6</cline>
         <cline>guess = 2</cline>
@@ -51,7 +51,7 @@ guess = (guess + closer) / 2.0
       </block>
     </blocks>
   </exercise>
-  <exercise label="int-ex-while_ac">
+  <exercise label="int-ex-while_ac" xml:id="int-ex-while_ac">
     <statement>
       <p>Rewrite the following code to use a while loop instead of a for loop to calcultae the value of the ten factorial.</p>
     </statement>
@@ -74,11 +74,11 @@ myTests().main()
         </code>
     </program>
   </exercise>
-  <exercise label="int-ex-while_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <exercise label="int-ex-while_pp" xml:id="int-ex-while_pp">
     <statement>
       <p>Using the blocks below, create code to calculate the value of the ten factorial.</p>
     </statement>
-    <blocks numbered="left">
+    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
       <block order="5">
         <cline>product = 1</cline>
         <cline>number = 1</cline>
