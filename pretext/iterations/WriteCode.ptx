@@ -317,6 +317,87 @@ for x in range(1, 4):
     </solution>
   </exercise>
 
+  <exercise label="int-ex-while_ac">
+    <statement>
+      <p>Rewrite the following code to use a while loop instead of a for loop to calcultae the value of the ten factorial.</p>
+    </statement>
+    <program xml:id="int-ex-while_ac_editor" interactive="activecode" language="python">
+      <code>
+product = 1  # Start out with nothing
+numbers = range(1,11)
+for number in numbers:
+    product = product * number
+print(product)
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(product, 3628800)
+
+myTests().main()
+        </code>
+    </program>
+  </exercise>
+  <exercise label="int-ex-while_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Using the blocks below, create code to calculate the value of the ten factorial.</p>
+    </statement>
+    <blocks numbered="left">
+      <block order="5">
+        <cline>product = 1</cline>
+        <cline>number = 1</cline>
+      </block>
+      <block order="4">
+        <cline>while number &lt; 11:</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    product = product * number</cline>
+        </choice>
+        <choice>
+          <cline>    product = number * number </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    number = number + 1</cline>
+      </block>
+      <block order="2">
+        <cline>print(product)</cline>
+      </block>
+    </blocks>
+  </exercise>
+
+    <exercise label="int-ex-while_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Using the blocks below, create code to calculate the value of the ten factorial.</p>
+    </statement>
+    <blocks numbered="left">
+      <block order="5">
+        <cline>product = 1</cline>
+        <cline>number = 1</cline>
+      </block>
+      <block order="4">
+        <cline>while number &lt; 11:</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    product = product * number</cline>
+        </choice>
+        <choice>
+          <cline>    product = number * number </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    number = number + 1</cline>
+      </block>
+      <block order="2">
+        <cline>print(product)</cline>
+      </block>
+    </blocks>
+  </exercise>
+
  <!-- Eva's First Fix Iteration
     I'm not sure how it will render but I kept the clines I think this is how we use the toggle as well to give them the option
   -->
