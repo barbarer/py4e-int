@@ -189,7 +189,7 @@ main()
         </code>
       </program>
     </exercise>
-    <exercise label="funct_pogil_check-guess-Parsons-v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <exercise label="funct_pogil_check-guess-Parsons-v2" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Put the blocks in order to define the function <c>check_guess</c> which will return <c>'too low'</c> if the guess is less
                 than the passed target, <c>'correct'</c> if they are equal, and <c>'too high'</c> if the guess
@@ -197,7 +197,7 @@ main()
                 <c>'too low'</c>, <c>check_guess(7,7)</c> returns <c>'correct'</c>, and <c>check_guess(9,7)</c> returns
                 <c>'too high'</c>. There are three extra blocks that are not needed in a correct solution.</p>
       </statement>
-      <blocks numbered="left">
+      <blocks randomize="no" numbered="left">
         <block order="1">
           <cline>def check_guess(guess, target):</cline>
         </block>
@@ -525,7 +525,7 @@ myTests().main()
                 birthday then if the speed is less than or equal 60 return 0, else if it is less than or equal 80
                 return 1 and otherwise return 2.</p>
       </statement>
-      <blocks numbered="left">
+      <blocks randomize="no" numbered="left">
         <block order="1">
           <cline>def caught_speeding(speed, is_birthday):</cline>
         </block>
@@ -616,7 +616,7 @@ myTests().main()
       <statement>
         <p>Drag the blocks from the left and put them in the correct order on the right to define a function <c>squirrel_play</c> that takes a <c>temp</c> (the temperature) and Boolean <c>is_summer</c> that indicates if it is summer or not and returns <c>True</c> if it is summer and the temperature is between 60 and 100 (inclusive).  It also returns <c>True</c> if it isn't summer and the temperature is between 60 and 90 (inclusive).  Otherwise, it returns <c>False</c>.</p>
       </statement>
-      <blocks numbered="left">
+      <blocks randomize="no" numbered="left">
         <block order="2">
           <cline>def squirrel_play(temp, is_summer):</cline>
         </block>
