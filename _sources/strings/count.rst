@@ -87,6 +87,7 @@ r's.
 	In line 5, the variable name should be changed to ``lettercount``. In line 6, the return statement should be indented.
 
         .. activecode:: str-count-fixa
+            :optional:
             :nocodelens:
 
             def count(text, aChar):
