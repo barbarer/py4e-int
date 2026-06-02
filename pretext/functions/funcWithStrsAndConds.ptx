@@ -88,8 +88,12 @@
               <strcmp use-answer="yes"/>
               <feedback><p>The <c>main</c> function is called first and it will print <c>Hello!</c></p></feedback>
            </test>
-           <test correct="yes">
-              <strcmp value="Welcome"/>
+           <test>
+              <strcmp use-answer="yes" case="insensitive"/>
+              <feedback><p>Some of the characters used the wrong case.</p></feedback>
+           </test>
+           <test>
+              <strcmp>.*</strcmp>
               <feedback><p>Which function is called first?</p></feedback>
            </test>
          </evaluate>
