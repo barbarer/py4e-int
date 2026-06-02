@@ -565,22 +565,19 @@ main()
 
     <activity label="flal_ll_fitb_while_break">
       <statement>
-        <p>What keyword is used to stop the loop in the above code? <fillin width="20" mode="string" answer=""/>  </p>
+        <p>What keyword is used to stop the loop in the above code? <fillin width="20" mode="string" answer="break"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="break">
-            <feedback>
-              <p>The break keyword will stop the enclosing loop.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>How does the code stop above?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+         <evaluate>
+            <test correct="yes">
+               <strcmp use-answer="yes"/>
+               <feedback><p>The break keyword will stop the enclosing loop.</p></feedback>
+            </test>
+            <test>
+              <feedback><p>How does the code stop above?</p></feedback>
+           </test>
+        </evaluate>
+      </evaluation>
     </activity>
 
     <note>
