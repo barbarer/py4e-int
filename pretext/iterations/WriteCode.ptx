@@ -10,32 +10,32 @@
     </statement>
     <program interactive="activecode" language="python" xml:id="itr-ex-countdownq_editor">
       <code>
-def countdown():
-    counter = 10
-    answer = ""
-    while Counter &gt; 0:
-        answer = answer + str(counter) + " "
-        counter = counter + 1
-    Return answer
-countDown()
+        def countdown():
+            counter = 10
+            answer = ""
+            while Counter &gt; 0:
+                answer = answer + str(counter) + " "
+                counter = counter + 1
+            Return answer
+        countDown()
+      </code>
 
-====
-from unittest.gui import TestCaseGui
-class myTests(TestCaseGui):
-    def testOne(self):
-        output = countdown()
-        self.assertEqual(output,"10 9 8 7 6 5 4 3 2 1 0 ")
-myTests().main()
-        </code>
+      
+      <tests>
+        from unittest.gui import TestCaseGui
+
+        class myTests(TestCaseGui):
+            
+            def testOne(self):
+                output = countdown()
+                self.assertEqual(output,"10 9 8 7 6 5 4 3 2 1 0 ")
+        myTests().main()
+      </tests>
     </program>
     <solution>
-
-
-    
-                Fix the 5 errors in the code below to return a countdown of the numbers from 10 to 0, including 0.
-
-    
-    <program xml:id="itr-ex-countdowna_editor" language="python"><code>
+      <p>Fix the 5 errors in the code below to return a countdown of the numbers from 10 to 0, including 0.</p>
+      <program xml:id="itr-ex-countdowna_editor" language="python">
+        <code>
 def countdown():
     counter = 10
     answer = ""
@@ -53,17 +53,13 @@ def countdown():
 
 # Call correct function name (countdown)
 countdown()
-
-====
-from unittest.gui import TestCaseGui
-class myTests(TestCaseGui):
-    def testOne(self):
-        output = countdown()
-        self.assertEqual(output,"10 9 8 7 6 5 4 3 2 1 0 ")
-myTests().main()
-        </code></program>
-            </solution>
+        </code>
+      </program>
+    </solution>
   </exercise>
+  
+
+
   <exercise label="itr-ex-100Loopq">
     <statement>
       <p>The following code will loop way too many times. Change one line to
