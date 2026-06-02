@@ -80,22 +80,20 @@
     </p>
     <activity label="fsc_fitb_print_test_first_line_v3">
       <statement>
-        <p>What is the first thing that will be printed when the code below runs? <var/>  </p>
+        <p>What is the first thing that will be printed when the code below runs? <fillin width="20" mode="string" answer="Hello!"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="Hello!">
-            <feedback>
-              <p>The main function prints this before it calls the test function.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>The first function that is executed is <c>main</c>. What does that print first?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+         <evaluate>
+           <test correct="yes"/>
+              <strcmp use-answer="yes"/>
+              <feedback><p>The <c>main</c> function is called first and it will print <c>Hello!</c></p></feedback>
+           </test>
+           <test correct="yes"/>
+              <strcmp value="Welcome"/>
+              <feedback><p>Which function is called first?</p></feedback>
+           </test>
+         </evaluate>
+      </evaluation>
     </activity>
     <activity label="fsc_ac_pogil_print_message_v2">
       <statement>
