@@ -80,7 +80,7 @@
     </p>
     <activity label="fsc_fitb_print_test_first_line_v3">
       <statement>
-        <p>What is the first thing that will be printed when the code below runs? <fillin width="20" mode="string" answer="Hello!"/>  </p>
+        <p>What is the first thing that will be printed when the code below runs? <fillin width="20" mode="string" answer="Hello!"/></p>
       </statement>
       <evaluation>
          <evaluate>
@@ -136,42 +136,38 @@ main()
 
   <activity label="fsc_fitb_value_b">
       <statement>
-        <p>What is the value of <c>b</c> when function <c>test</c> starts executing? <var/>  </p>
+        <p>What is the value of <c>b</c> when function <c>test</c> starts executing? <fillin width="5" mode="string" answer="2"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition number="2">
-            <feedback>
-              <p>Since the value of b was not specified it defaults to 2 (it was set to 2 as a default in the function definition)</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>What is the default value specified for b in the function definition?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+         <evaluate>
+            <test correct="yes">
+               <strcmp use-answer="yes"/>
+               <feedback><p>Since the value of <c>b</c> was not specified it defaults to 2 (it was set to 2 as a default in the function definition)</p></feedback>
+            </test>
+            <test>
+              <strcmp>.*</strcmp>
+              <feedback><p>What is the default value specified for <c>b</c> in the function definition?</p></feedback>
+           </test>
+        </evaluate>
+      </evaluation>
     </activity>
 
     <activity label="fsc_fitb_return_None">
       <statement>
-        <p>Delete the last line of the function <c>test</c> above and run the code again.  What value is returned from a function that doesn't have a <c>return</c> keyword? <var/>  </p>
+        <p>Delete the last line of the function <c>test</c> above and run the code again.  What value is returned from a function that doesn't have a <c>return</c> keyword? <fillin width="10" mode="string" answer="None"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="None">
-            <feedback>
-              <p>A function without a <c>return</c> still returns the keyword None</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>What is the last thing that is printed when you run the code above after deleting the return from the test function?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+         <evaluate>
+            <test correct="yes">
+               <strcmp use-answer="yes"/>
+               <feedback><p>A function without a <c>return</c> still returns the keyword <c>None</c></p></feedback>
+            </test>
+            <test>
+              <strcmp>.*</strcmp>
+              <feedback><p>What is the last thing that is printed when you run the code above after deleting the return from the test function?</p></feedback>
+           </test>
+        </evaluate>
+      </evaluation>
     </activity>
 
     <activity label="fsc_pp_print_name_v2" adaptive="yes" indentation="hide" language="python">
@@ -235,22 +231,20 @@ a string covers more than one line. </p>
     <p>You can get a character from a string at an index (position) using <c>string[index]</c>.</p>
     <activity label="fsc_fitb_pogil_initials">
       <statement>
-        <p>What is the last thing that will be printed when the code below runs? <var/>  </p>
+        <p>What is the last thing that will be printed when the code below runs? <fillin width="10" mode="string" answer="Jk"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="Jk">
-            <feedback>
-              <p>It prints the first letter of the first name and last letter of the last name.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>String indices start with 0 and -1 is the index of the last letter in a string.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+         <evaluate>
+            <test correct="yes">
+               <strcmp use-answer="yes"/>
+               <feedback><p>It prints the first letter of the first name and last letter of the last name.</p></feedback>
+            </test>
+            <test>
+              <strcmp>.*</strcmp>
+              <feedback><p>String indices start with 0 and -1 is the index of the last letter in a string.</p></feedback>
+           </test>
+        </evaluate>
+      </evaluation>
     </activity>
     <activity label="fsc_ac_pogil_initials_v2">
       <statement>
@@ -296,22 +290,20 @@ myTests().main()
   <p>You can get a copy of part or all of a string using <c>str_name[start:end]</c>.</p>
     <activity label="fsc_fitb_pogil_short_name">
       <statement>
-        <p>What is the last thing that will be printed when the code below runs? <var/>  </p>
+        <p>What is the last thing that will be printed when the code below runs? <fillin width="20" mode="string" answer="Sibs"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="Sibs">
-            <feedback>
-              <p>The last thing it prints are the first two letters of the first name and the last two letters of the last name.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>A slice starts with the first number and ends before the second.  If the second is left off it goes to the end of the string. The last character in a string is at index -1.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+         <evaluate>
+            <test correct="yes">
+               <strcmp use-answer="yes"/>
+               <feedback><p>The last thing it prints are the first two letters of the first name and the last two letters of the last name.</p></feedback>
+            </test>
+            <test>
+              <strcmp>.*</strcmp>
+              <feedback><p>A slice starts with the first number and ends before the second.  If the second is left off it goes to the end of the string. The last character in a string is at index -1.</p></feedback>
+           </test>
+        </evaluate>
+      </evaluation>
     </activity>
     <activity label="fsc_ac_pogil_short_name">
       <statement>
@@ -339,42 +331,38 @@ main()
     </note>
     <activity label="fsc_fitb_three_char_slice">
       <statement>
-        <p>Use the slice operator to return the first three characters from the variable <c>dna</c>? <var/>  </p>
+        <p>Use the slice operator to return the first three characters from the variable <c>dna</c>?  <fillin width="20" mode="string" answer="dna[0:3]"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="dna\[0\:3\]|\[:3\]">
-            <feedback>
-              <p>This will return a new string with the characters from index 0 to 2.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Look at the note above and try again.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+         <evaluate>
+            <test correct="yes">
+               <strcmp>dna[0:3]|dna[:3]</strcmp>
+               <feedback><p>This will return a new string with the characters from index 0 to 2.</p></feedback>
+            </test>
+            <test>
+              <strcmp>.*</strcmp>
+              <feedback><p>Look at the note above and try again.</p></feedback>
+           </test>
+        </evaluate>
+      </evaluation>
     </activity>
 
         <activity label="fsc_fitb_string_nchars">
       <statement>
-        <p>What built-in function tells you the number of characters in a string? <var/>  </p>
+        <p>What built-in function tells you the number of characters in a string? <fillin width="10" mode="string" answer="len"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="len">
-            <feedback>
-              <p>The len function takes a string and returns the number of characters in it.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Look at the example code above.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+         <evaluate>
+            <test correct="yes">
+               <strcmp use-answer="yes"/>
+               <feedback><p>The <c>len</c> function takes a string and returns the number of characters in it.</p></feedback>
+            </test>
+            <test>
+              <strcmp>.*</strcmp>
+              <feedback><p>Look at the example code above.</p></feedback>
+           </test>
+        </evaluate>
+      </evaluation>
     </activity>
     
   </subsection>
@@ -384,22 +372,20 @@ main()
     <p>You can execute code only when a condition is true using <c>if</c>.  You can execute one block of code when a condition is true (using <c>if</c>) or false (using <c>else</c>).  You can even speicfy more than two outcomes as shown in the code below.</p>
     <activity label="fsc_fitb_return_temp_first_line">
       <statement>
-        <p>What is the first thing (first line of text) that will be printed when the code below runs? <var/>  </p>
+        <p>What is the first thing (first line of text) that will be printed when the code below runs? <fillin width="20" mode="string" answer="Baby,\sits\scold\soutside!\sThe\stemp\sis\s20"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="Baby,\sits\scold\soutside!\sThe\stemp\sis\s20">
-            <feedback>
-              <p>Since temp &lt; 32 this will print.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Which conditional is true when temp &lt; 32?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+        <evaluation>
+          <evaluate>
+            <test correct="yes">
+              <strcmp use-answer="yes"/>
+              <feedback><p>Since temp &lt; 32 this will print.</p></feedback>
+            </test>
+            <test>
+              <strcmp>.*</strcmp>
+              <feedback><p>Which conditional is true when temp &lt; 32?</p></feedback>
+            </test>
+          </evaluate>
+        </evaluation>
     </activity>
     <activity label="fsc_ac_pogil_return_temp_desc2">
       <statement>
@@ -435,27 +421,20 @@ main()
     
     <activity label="fsc_fitb_pogil_multi_conditonal">
       <statement>
-        <p>What keyword is used in a conditional statement when you want three of more possible outcomes? <var/>  </p>
+        <p>What keyword is used in a conditional statement when you want three of more possible outcomes? <fillin width="10" mode="string" answer="elif">  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="elif">
-            <feedback>
-              <p>The keyword elif is used to provide more than two possible outcomes to a conditional statement.</p>
-            </feedback>
-          </condition>
-          <condition string="Elif">
-            <feedback>
-              <p>Most keywords in Python start with a lowercase letter</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Try again!</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+         <evaluate>
+            <test correct="yes">
+               <strcmp use-answer="yes"/>
+               <feedback><p>The keyword <c>elif</c> is used to provide more than two possible outcomes to a conditional statement.</p></feedback>
+            </test>
+            <test>
+              <strcmp>.*</strcmp>
+              <feedback><p>Try again!</p></feedback>
+           </test>
+        </evaluate>
+      </evaluation>
     </activity>
     <activity label="fsc_ac_pogil_return_temp_desc_v2">
       <statement>
