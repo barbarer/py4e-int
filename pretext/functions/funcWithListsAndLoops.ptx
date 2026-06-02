@@ -69,7 +69,7 @@ use negative indices, just like you can with strings.  You can use the slice ope
 new list by copying part of a list, just like you can with strings. The new list will include the item at the start index (inclusive) and
 all elements up to the end index - 1. </p>
  
-    <exercise label="flal_neg_2_result">
+    <activity label="flal_neg_2_result">
       <statement>
         <p>What is the last thing that the following code prints?</p>
         <program language="python">
@@ -117,14 +117,14 @@ print(list_get(l))
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
 
   </subsection>
 
   <subsection xml:id="flal_built-in-functions-that-work-on-lists">
     <title>Built-in Functions That Work on Lists</title>
     <p>There are several built-in functions in Python that work on lists such as <c>max</c>, <c>min</c>, <c>len</c>, and <c>sum</c>.</p>
-    <exercise label="flal_ll_ac_list_func">
+    <activity label="flal_ll_ac_list_func">
       <statement>
         <p>Run this code to see what it prints. You can also step through the code using the "Show Codelens" button. </p>
       </statement>
@@ -146,9 +146,9 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
+    </activity>
 
-    <exercise label="flal_ac_sum_first_half">
+    <activity label="flal_ac_sum_first_half">
       <statement>
         <p>Write a function <c>sum_first_half</c> that takes a list and returns a the sum of just the first half of the items.  
    For example, <c>sum_first_half([1,2,3,4])</c> should return ``3`` (sum of 1 and 2) and <c>first_half([7,8,9])</c> should return ``7``.  </p>
@@ -173,13 +173,13 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
       </program>
-    </exercise>
+    </activity>
   </subsection>
   
   <subsection xml:id="flal_list-methods">
     <title>List Methods</title>
     <p>Lists are objects of the <c>list</c> class and have methods that operate on list objects using dot notation (<c>name.method()</c>) such as <c>append</c>, <c>pop</c>, and <c>extend</c>.</p>
-    <exercise label="flal_ll_ac_list_methods">
+    <activity label="flal_ll_ac_list_methods">
       <statement>
         <p>Run this code to see what it prints.  You can also step through the code using the "Show Codelens" button.</p>
       </statement>
@@ -211,10 +211,10 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
+    </activity>
 
     
-    <exercise label="flal_list_append_pop_predict">
+    <activity label="flal_list_append_pop_predict">
       <statement>
         <p>What would the following code print?</p>
         <program language="python">
@@ -262,7 +262,7 @@ print(list_trans(l1))
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
 
     <note>
       <p>Lists are mutable (changeable).  List methods like <c>append</c> and <c>pop</c> change the current list.</p>
@@ -270,7 +270,7 @@ print(list_trans(l1))
     
       <p>You can also reverse a list or sort it.</p>
 
-      <exercise label="flal_ll_ac_list_methods2">
+      <activity label="flal_ll_ac_list_methods2">
       <statement>
         <p>Run this code to see what it prints.</p>
       </statement>
@@ -299,10 +299,10 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
+    </activity>
 
   
-    <exercise label="flal_list_result_of_reverse">
+    <activity label="flal_list_result_of_reverse">
       <statement>
         <p>What is the last thing the following code prints?</p>
         <program language="python">
@@ -351,35 +351,32 @@ list_trans(l1)
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
   </subsection>
 
   <subsection xml:id="flal_the-for-each-loop">
     <title>The For-Each Loop</title>
     <p>A for-each loop in Python will loop though the items in a list starting with the item at index 0, then index 1, and so on till the last item in the list.</p>
    
-    <exercise label="flal_ll_fitb_count_odd_first">
+    <activity label="flal_ll_fitb_count_odd_first">
       <statement>
-        <p>What is the first thing that will be printed by the code below? <var/>  </p>
+        <p>What is the first thing that will be printed by the code below? <fillin width="20" mode="string" answer="1"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition number="1">
-            <feedback>
-              <p>It will print the number of values that are odd in the first list, which is one.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Run the code to check.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
-    </exercise>
+      <evaluation>
+         <evaluate>
+            <test correct="yes">
+               <strcmp use-answer="yes"/>
+               <feedback><p>It will print the number of values that are odd in the first list, which is one.</p></feedback>
+            </test>
+            <test>
+              <feedback><p>Run the code to check.</p></feedback>
+           </test>
+        </evaluate>
+      </evaluation>   
+    </activity>
 
 
-    <exercise label="flal_ll_ac_count_odd">
+    <activity label="flal_ll_ac_count_odd">
       <statement>
         <p>Run this code to see what it prints.</p>
       </statement>
@@ -406,7 +403,7 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
+    </activity>
   </subsection>
 
   <subsection xml:id="flal_range-and-for">
@@ -414,26 +411,23 @@ main()
     <p>How do you loop just a set number of times?  You can use
                 the built-in <c>range</c> function to do this.</p>
     
-    <exercise label="flal_ll_fitb_print_to_last">
+    <activity label="flal_ll_fitb_print_to_last">
       <statement>
-        <p>What is last value that that following code prints? <var/>  </p>
+        <p>What is last value that that following code prints? <fillin width="20" mode="string" answer="2"/> </p>
       </statement>
-      <setup>
-        <var>
-          <condition number="2">
-            <feedback>
-              <p>The code prints from 0 to the passed end (exclusive).  The end is 3 which means the last value is 2.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>What is the parameter in the second call to count_to?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
-    </exercise>
-    <exercise label="flal_ll_ac_count_to">
+      <evaluation>
+         <evaluate>
+            <test correct="yes">
+               <strcmp use-answer="yes"/>
+               <feedback><p>The code prints from 0 to the passed end (exclusive).  The end is 3 which means the last value is 2.</p></feedback>
+            </test>
+            <test>
+              <feedback><p>What is the parameter in the second call to count_to?</p></feedback>
+           </test>
+        </evaluate>
+      </evaluation>
+    </activity>
+    <activity label="flal_ll_ac_count_to">
       <statement>
         <p>Run this code to see what it prints.</p>
       </statement>
@@ -454,33 +448,30 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
+    </activity>
 
     <note>
       <p>The <c>range(end)</c> function will produce values from 0 to end - 1.</p>
     </note>
 
-    <exercise label="flal_ll_fitb_print_from_to_by_last">
+    <activity label="flal_ll_fitb_print_from_to_by_last">
       <statement>
-        <p>What is last value that that following code prints? <var/>  </p>
+        <p>What is last value that that following code prints? <fillin width="20" mode="string" answer="9"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition number="9">
-            <feedback>
-              <p>The code prints from start (inclusive) which is 1 to the passed end (exclusive) which is 10 and changes by 2 each time so the end is 9.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Run the code and see.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
-    </exercise>
+      <evaluation>
+         <evaluate>
+            <test correct="yes">
+               <strcmp use-answer="yes"/>
+               <feedback><p>The code prints from start (inclusive) which is 1 to the passed end (exclusive) which is 10 and changes by 2 each time so the end is 9.</p></feedback>
+            </test>
+            <test>
+              <feedback><p>Run the code and see.</p></feedback>
+           </test>
+        </evaluate>
+      </evaluation>
+    </activity>
 
-    <exercise label="flal_ll_ac_print_from_to_by">
+    <activity label="flal_ll_ac_print_from_to_by">
       <statement>
         <p>Run this code to see what it prints.</p>
       </statement>
@@ -501,18 +492,18 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
+    </activity>
 
     <note>
       <p>The function <c>range(start, end, by)</c> will return a range object (an iterator) that allows you to loop from <c>start</c> (inclusive) to <c>end</c> (exclusive) and add the value of <c>by</c> after each execution of the loop.</p>
     </note>
 
-    <exercise label="flal_ll_pp_total_at_odd_indices" adaptive="yes" indentation="hide" language="python">
+    <activity label="flal_ll_pp_total_at_odd_indices" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Drag the blocks from the left and put them in the correct order on the right to define a function <c>total_at_odd_indices</c> that returns the total of the numbers at odd indices in the passed list.</p>
       </statement>
       <blocks randomize = "no" numbered="left">
-        <block order="3">
+        <block order="5">
           <choice correct="yes">
             <cline>def total_at_odd_indices(alist):</cline>
           </choice>
@@ -520,36 +511,37 @@ main()
             <cline>def total_at_odd_indices(alist) </cline>
           </choice>
         </block>
-        <block order="4">
+        <block order="3">
           <cline>     total = 0</cline>
         </block>
         <block order="1">
-          <choice correct="yes">
-            <cline>     for i in range(1,len(alist),2):</cline>
-          </choice>
           <choice>
             <cline>     for i in range(1,len(alist)): </cline>
           </choice>
+          <choice correct="yes">
+            <cline>     for i in range(1,len(alist),2):</cline>
+          </choice>
         </block>
         <block order="2">
-          <choice correct="yes">
-            <cline>         total += alist[i]</cline>
-          </choice>
           <choice>
             <cline>         total += i </cline>
           </choice>
+          <choice correct="yes">
+            <cline>         total += alist[i]</cline>
+          </choice>
+          
         </block>
-        <block order="5">
+        <block order="4">
           <cline>     return total</cline>
         </block>
       </blocks>
-    </exercise>
+    </activity>
   </subsection>
 
   <subsection xml:id="flal_while-loops">
     <title>While Loops</title>
     <p>A while loop repeats while a Boolean expression is True.</p>
-    <exercise label="flal_ll_ac_inifite">
+    <activity label="flal_ll_ac_inifite">
       <statement>
         <p>Try running the code below.</p>
       </statement>
@@ -569,11 +561,11 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
+    </activity>
 
-    <exercise label="flal_ll_fitb_while_break">
+    <activity label="flal_ll_fitb_while_break">
       <statement>
-        <p>What keyword is used to stop the loop in the above code? <var/>  </p>
+        <p>What keyword is used to stop the loop in the above code? <fillin width="20" mode="string" answer=""/>  </p>
       </statement>
       <setup>
         <var>
@@ -589,7 +581,7 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
 
     <note>
       <p>A loop that never ends is called an infinite loop.  A while loop should have some way to end.  If you have an infinite loop you may need to refresh the page to stop it.</p>
