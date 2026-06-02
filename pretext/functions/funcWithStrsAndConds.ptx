@@ -93,7 +93,6 @@
               <feedback><p>Some of the characters used the wrong case.</p></feedback>
            </test>
            <test>
-              <strcmp>.*</strcmp>
               <feedback><p>Which function is called first?</p></feedback>
            </test>
          </evaluate>
@@ -145,7 +144,6 @@ main()
                <feedback><p>Since the value of <c>b</c> was not specified it defaults to 2 (it was set to 2 as a default in the function definition)</p></feedback>
             </test>
             <test>
-              <strcmp>.*</strcmp>
               <feedback><p>What is the default value specified for <c>b</c> in the function definition?</p></feedback>
            </test>
         </evaluate>
@@ -163,7 +161,10 @@ main()
                <feedback><p>A function without a <c>return</c> still returns the keyword <c>None</c></p></feedback>
             </test>
             <test>
-              <strcmp>.*</strcmp>
+              <strcmp use-answer="yes" case="insensitive"/>
+              <feedback><p>Some of the characters used the wrong case.  Remember that Python is case sensitive.</p></feedback>
+           </test>
+            <test>
               <feedback><p>What is the last thing that is printed when you run the code above after deleting the return from the test function?</p></feedback>
            </test>
         </evaluate>
@@ -240,7 +241,10 @@ a string covers more than one line. </p>
                <feedback><p>It prints the first letter of the first name and last letter of the last name.</p></feedback>
             </test>
             <test>
-              <strcmp>.*</strcmp>
+              <strcmp use-answer="yes" case="insensitive"/>
+              <feedback><p>Some of the characters used the wrong case.  Remember that Python is case sensitive.</p></feedback>
+           </test>
+            <test>
               <feedback><p>String indices start with 0 and -1 is the index of the last letter in a string.</p></feedback>
            </test>
         </evaluate>
@@ -299,7 +303,10 @@ myTests().main()
                <feedback><p>The last thing it prints are the first two letters of the first name and the last two letters of the last name.</p></feedback>
             </test>
             <test>
-              <strcmp>.*</strcmp>
+              <strcmp use-answer="yes" case="insensitive"/>
+              <feedback><p>Some of the characters used the wrong case.  Remember that Python is case sensitive.</p></feedback>
+           </test>
+            <test>
               <feedback><p>A slice starts with the first number and ends before the second.  If the second is left off it goes to the end of the string. The last character in a string is at index -1.</p></feedback>
            </test>
         </evaluate>
@@ -340,7 +347,10 @@ main()
                <feedback><p>This will return a new string with the characters from index 0 to 2.</p></feedback>
             </test>
             <test>
-              <strcmp>.*</strcmp>
+              <strcmp use-answer="yes" case="insensitive"/>
+              <feedback><p>Some of the characters used the wrong case.  Remember that Python is case sensitive.</p></feedback>
+           </test>
+            <test>
               <feedback><p>Look at the note above and try again.</p></feedback>
            </test>
         </evaluate>
@@ -358,7 +368,10 @@ main()
                <feedback><p>The <c>len</c> function takes a string and returns the number of characters in it.</p></feedback>
             </test>
             <test>
-              <strcmp>.*</strcmp>
+              <strcmp use-answer="yes" case="insensitive"/>
+              <feedback><p>Some of the characters used the wrong case.  Remember that Python is case sensitive.</p></feedback>
+           </test>
+            <test>
               <feedback><p>Look at the example code above.</p></feedback>
            </test>
         </evaluate>
@@ -381,7 +394,10 @@ main()
               <feedback><p>Since temp &lt; 32 this will print.</p></feedback>
             </test>
             <test>
-              <strcmp>.*</strcmp>
+              <strcmp use-answer="yes" case="insensitive"/>
+              <feedback><p>Some of the characters used the wrong case.  Remember that Python is case sensitive.</p></feedback>
+           </test>
+            <test>
               <feedback><p>Which conditional is true when temp &lt; 32?</p></feedback>
             </test>
           </evaluate>
@@ -430,7 +446,10 @@ main()
                <feedback><p>The keyword <c>elif</c> is used to provide more than two possible outcomes to a conditional statement.</p></feedback>
             </test>
             <test>
-              <strcmp>.*</strcmp>
+              <strcmp use-answer="yes" case="insensitive"/>
+              <feedback><p>Some of the characters used the wrong case.  Remember that Python is case sensitive.</p></feedback>
+           </test>
+            <test>
               <feedback><p>Try again!</p></feedback>
            </test>
         </evaluate>
@@ -525,7 +544,10 @@ main()
                <feedback><p>Since every <c>if</c> will execute it will print <c>D</c>.</p></feedback>
             </test>
             <test>
-              <strcmp>.*</strcmp>
+              <strcmp use-answer="yes" case="insensitive"/>
+              <feedback><p>Some of the characters used the wrong case.  Remember that Python is case sensitive.</p></feedback>
+           </test>
+            <test>
               <feedback><p>Remember that every <c>if</c> will execute.  What is the final value of <c>grade</c>?</p></feedback>
            </test>
         </evaluate>
@@ -574,7 +596,6 @@ main()
                <feedback><p>You need to test greater than and equal for each grade from A to D and also test a value less than 60.</p></feedback>
             </test>
             <test>
-              <strcmp>.*</strcmp>
               <feedback><p>Remember that you should check that it works correctly if the value is either greater than or equal to the specified value.</p></feedback>
            </test>
         </evaluate>
