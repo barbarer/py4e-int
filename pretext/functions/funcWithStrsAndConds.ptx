@@ -516,22 +516,20 @@ main()
    
     <activity label="fsc_fitb_cond_predict_grade">
       <statement>
-        <p>What is the first thing that will be printed when the code below runs? <var/>  </p>
+        <p>What is the first thing that will be printed when the code below runs? <fillin width="5" mode="string" answer="D"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="D">
-            <feedback>
-              <p>Since every if will execute it will print D.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Remember that every if will execute.  What is the final value of grade?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+         <evaluate>
+            <test correct="yes">
+               <strcmp use-answer="yes"/>
+               <feedback><p>Since every if will execute it will print D.</p></feedback>
+            </test>
+            <test>
+              <strcmp>.*</strcmp>
+              <feedback><p>Remember that every if will execute.  What is the final value of grade?</p></feedback>
+           </test>
+        </evaluate>
+      </evaluation>      
     </activity>
     <activity label="fsc_ac_fix_grade_code">
       <statement>
@@ -567,22 +565,20 @@ main()
     </activity>
     <activity label="fsc_fitb_cond_grade_num_tests">
       <statement>
-        <p>How many test cases do you need to check that the code above works as intended? <var/>  </p>
+        <p>How many test cases do you need to check that the code above works as intended? <fillin width="20" mode="string" answer="9"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition number="9">
-            <feedback>
-              <p>You need to test greater than and equal for each grade from A to D and also test a value less than 60.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Remember that you should check that it works correctly if the value is greater than or equal the specified value.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+         <evaluate>
+            <test correct="yes">
+               <strcmp use-answer="yes"/>
+               <feedback><p>You need to test greater than and equal for each grade from A to D and also test a value less than 60.</p></feedback>
+            </test>
+            <test>
+              <strcmp>.*</strcmp>
+              <feedback><p>Remember that you should check that it works correctly if the value is either greater than or equal to the specified value.</p></feedback>
+           </test>
+        </evaluate>
+      </evaluation>  
     </activity>
     </subsection>
 
