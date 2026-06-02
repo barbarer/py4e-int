@@ -336,7 +336,7 @@ main()
       <evaluation>
          <evaluate>
             <test correct="yes">
-               <strcmp>dna[0:3]|dna[:3]</strcmp>
+               <strcmp>dna\[0?:3\]</strcmp>
                <feedback><p>This will return a new string with the characters from index 0 to 2.</p></feedback>
             </test>
             <test>
@@ -372,7 +372,7 @@ main()
     <p>You can execute code only when a condition is true using <c>if</c>.  You can execute one block of code when a condition is true (using <c>if</c>) or false (using <c>else</c>).  You can even speicfy more than two outcomes as shown in the code below.</p>
     <activity label="fsc_fitb_return_temp_first_line">
       <statement>
-        <p>What is the first thing (first line of text) that will be printed when the code below runs? <fillin width="20" mode="string" answer="Baby,\sits\scold\soutside!\sThe\stemp\sis\s20"/>  </p>
+        <p>What is the first thing (first line of text) that will be printed when the code below runs? <fillin width="20" mode="string" answer="Baby, its cold outside! The temp is N"/>  </p>
       </statement>
         <evaluation>
           <evaluate>
