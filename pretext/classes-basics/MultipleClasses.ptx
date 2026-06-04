@@ -57,7 +57,7 @@
                 and the other is the bottom right.  That means the width of a rectangle is the difference
                 between the x values and the height is the difference between the y values.
                 The area of a rectangle is the width times the height.</p>
-    <exercise label="mult_class_point_and_rectangle">
+    <activity label="mult_class_point_and_rectangle">
       <statement>
         <p>Run the code below to see what it prints.  You can also use the <q>Show in CodeLens</q> button to step through the code.</p>
       </statement>
@@ -105,7 +105,7 @@ print(r2.area())
         </code>
       </program>
     </activity>
-    <exercise label="mult_class_rectangle_object_methods">
+    <activity label="mult_class_rectangle_object_methods">
       <statement>
         <p>Q-2: Look at the code above.  What are the object methods in the <c>Rectangle</c> class?  Pick all that apply.</p>
       </statement>
@@ -144,7 +144,7 @@ print(r2.area())
         </choice>
       </choices>
     </activity>
-    <exercise label="mult_class_point_rect_mcq2">
+    <activity label="mult_class_point_rect_mcq2">
       <statement>
         <p>Q-3: Look at the code above.  What type of thing (class) is <c>p1</c> in the <c>__init__</c> method in the <c>Rectangle</c> class?</p>
       </statement>
@@ -175,7 +175,7 @@ print(r2.area())
         </choice>
       </choices>
     </activity>
-    <exercise label="mult_class_point_attributes">
+    <activity label="mult_class_point_attributes">
       <statement>
         <p>Q-4: Look at the code above.  What are the object attributes in the <c>Point</c> class?  Pick all that apply.</p>
       </statement>
@@ -224,7 +224,7 @@ print(r2.area())
     </note>
     <p>How would you create software for a simple card game?  Play the Aces and Twos card game at <url href="https://www.mathsisfun.com/games/card-match-game.html" visual="https://www.mathsisfun.com/games/card-match-game.html">https://www.mathsisfun.com/games/card-match-game.html</url></p>
     <p>When the game starts all of the cards are all face down in rows and columns.  You click on a card to select it and it turns over to show the suit and rank (value).  Then you click another card to select it and it also turns face up.  If the two cards match (have the same rank and value) then the cards stay facing up.  Otherwise they both turn down and you take another turn.  You win when you have found all of the matches.  The game keeps track of the total time it took you to find all of the matches.</p>
-    <exercise label="mult_class_card_game_classes">
+    <activity label="mult_class_card_game_classes">
       <statement>
         <p>Q-5: Look at explanation of the game above.  Which of the following nouns could be classes?</p>
       </statement>
@@ -263,7 +263,7 @@ print(r2.area())
         </choice>
       </choices>
     </activity>
-    <exercise label="mult_class_card_game_bevaiors">
+    <activity label="mult_class_card_game_bevaiors">
       <statement>
         <p>Q-6: Look at explanation of the game above.  Which of the following verbs could be methods (behaviors)?</p>
       </statement>
@@ -315,7 +315,7 @@ print(r2.area())
     <figure align="">
       <image source="images/cardAndDeck.png" width="50%" alt="Class diagram for Card and Deck"/>
     </figure>
-    <exercise label="mult_classes_card_and_deck">
+    <activity label="mult_classes_card_and_deck">
       <statement>
         <p>Run the code below to see what it prints.  You can also use the <q>Show in CodeLens</q> button to step through the code.</p>
       </statement>
@@ -359,7 +359,7 @@ if __name__ == "__main__":
     </activity>
     <p>Notice that we have defined a list of <c>suit_names</c> and <c>rank_names</c> in the <c>Card</c> class.  These will be created in the class <c>Card</c> and not in each object of the class <c>Card</c>.  They are called <c>class attributes</c>.
                 Each object of the <c>Card</c> class doesn't need to have its own copy of these lists.  That would be a waste of space. Instead they are created in the class and all objects of the class have access to it.</p>
-    <exercise label="mult_class_attribute_fitb">
+    <activity label="mult_class_attribute_fitb">
       <statement>
         <p>Q-8: Use <BlankNode/>.rank_names to access the class attribute <c>rank_names</c> in the <c>Card</c> class. <var/>  </p>
       </statement>
@@ -378,7 +378,7 @@ if __name__ == "__main__":
         </var>
       </setup>
     </activity>
-    <exercise label="mult-classes-card-attributes-vs-class">
+    <activity label="mult-classes-card-attributes-vs-class">
       <statement>
         <p>Q-9: Look at class <c>Card</c> above.  Which of the following are object attributes?  Select all that apply.</p>
       </statement>
@@ -417,12 +417,12 @@ if __name__ == "__main__":
         </choice>
       </choices>
     </activity>
-    <exercise label="mult_class_diff_class_and_object_attribute">
+    <activity label="mult_class_diff_class_and_object_attribute">
       <statement>
         <p>Q-10: How can you tell if an attribute is a class or object attribute?</p>
       </statement>
     </activity>
-    <exercise label="mult_class_deck_who_creates_cards_fitb">
+    <activity label="mult_class_deck_who_creates_cards_fitb">
       <statement>
         <p>Q-11: The <BlankNode/> function in class <BlankNode/> creates all of the card objects in the deck object. <var/>  <var/>  </p>
       </statement>
@@ -457,7 +457,7 @@ if __name__ == "__main__":
     <figure align="">
       <image source="images/flightAndAirport.png" width="50%" alt="class diagram of a Flight and Airport class"/>
     </figure>
-    <exercise label="mult-classes-flight-airport-mcq1">
+    <activity label="mult-classes-flight-airport-mcq1">
       <statement>
         <p>Q-12: Look at class diagram for <c>Flight</c> and <c>Airport</c> above.  How many object attributes does a <c>Flight</c> object have?</p>
       </statement>
@@ -488,7 +488,7 @@ if __name__ == "__main__":
         </choice>
       </choices>
     </activity>
-    <exercise label="classes_flight_and_airport">
+    <activity label="classes_flight_and_airport">
       <statement>
         <p>Given the <c>Airport</c> class shown below and the class diagram shown above, write the <c>Flight</c> class with an <c>__init__</c> method that takes the object attributes in order from top to bottom in the class diagram (number, departure_date, departure_time, departure_airport, and arrival_airport).</p>
       </statement>
@@ -521,7 +521,7 @@ myTests().main()
         </code>
       </program>
     </activity>
-    <exercise label="classes_order_and_item">
+    <activity label="classes_order_and_item">
       <statement>
         <p>Given the <c>Item</c>  and <c>Order</c> classes shown below, write the <c>get_total</c> method in the <c>Order</c> class that returns a total of all of the prices of the items in the order.</p>
       </statement>
@@ -562,7 +562,7 @@ myTests().main()
         </code>
       </program>
     </activity>
-    <exercise label="mult_class_relationship_between_classes_sa">
+    <activity label="mult_class_relationship_between_classes_sa">
       <statement>
         <p>Q-15: What is the relationship between the example classes on this page, such as <c>Point</c> and <c>Rectangle</c> or <c>Item</c> and <c>Order</c>?  How do they relate to each other?</p>
       </statement>

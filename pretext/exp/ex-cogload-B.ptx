@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="exp_questions-for-cognitive-load-experiment-b">
   <title>Questions for Cognitive Load Experiment - B</title>
-  <exercise label="exp1_q1_write">
+  <activity label="exp1_q1_write">
     <statement>
       <p>Finish the function <c>has22</c> below to return <c>True</c> if there are at least two items in the list <c>nums</c> that are adjacent and both equal to 2, otherwise return <c>False</c>.  For example, return <c>True</c> for <c>has22([1, 2, 2])</c> since there are two adjacent items equal to 2 (at index 1 and 2) and <c>False</c> for <c>has22([2, 1, 2])</c> since the 2's are not adjacent.</p>
     </statement>
@@ -29,8 +29,8 @@ myTests().main()
         </code>
     </program>
   </activity>
-  <exercise runestone="exp1_q1_write_poll"/>
-  <exercise label="Count_Target_In_Range_Order" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity runestone="exp1_q1_write_poll"/>
+  <activity label="Count_Target_In_Range_Order" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Put the code in order to define <c>countInRange</c> that returns a count of the number of times that a <c>target</c> value appears in a list between the <c>start</c> and <c>end</c> indices (inclusive).  For example, <c>countInRange(1,2,4,[1, 2, 1, 1, 1, 1])</c> should return <c>3</c> since there are three 1's between index 2 and 4 inclusive.</p>
     </statement>
@@ -83,8 +83,8 @@ myTests().main()
       </block>
     </blocks>
   </activity>
-  <exercise runestone="Count_Target_In_Range_Order_poll"/>
-  <exercise label="exp1_q3_write">
+  <activity runestone="Count_Target_In_Range_Order_poll"/>
+  <activity label="exp1_q3_write">
     <statement>
       <p>Finish the function <c>diffMaxMin</c> to return the difference between the largest and smallest value in the passed list of numbers (<c>nums</c>). For example, <c>diffMaxMin([1,2,3])</c> should return 2 since the difference between 3 and 1 is 2.</p>
     </statement>
@@ -111,8 +111,8 @@ myTests().main()
         </code>
     </program>
   </activity>
-  <exercise runestone="exp1_q3_write_poll"/>
-  <exercise label="Total_Dict_Values_PP" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity runestone="exp1_q3_write_poll"/>
+  <activity label="Total_Dict_Values_PP" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Put the code in order to define <c>total_values</c> that takes a dictionary (<c>dict</c>) and returns the total of the values in the dictionary.  For example, <c>total_values({'red': 3, 'blue': 2, 'green': 20})</c> would return <c>25</c>.</p>
     </statement>
@@ -149,8 +149,8 @@ myTests().main()
       </block>
     </blocks>
   </activity>
-  <exercise runestone="Total_Dict_Values_PP_poll"/>
-  <exercise label="exp1_q5_write">
+  <activity runestone="Total_Dict_Values_PP_poll"/>
+  <activity label="exp1_q5_write">
     <statement>
       <p>Finish the function <c>get_names</c> that takes a list of dictionaries and returns a list of strings with the names from the dictionaries.  The key for the first name is &#x2018;first' and the key for the last name is &#x2018;last'.  Return a list of the full names (first last) as a string.  If the &#x2018;first' or &#x2018;last' key is missing in the dictionary use &#x2018;Unknown'.  For example, <c>[{'first': 'Ann', 'last': 'Brown'}, {'first': 'Darius'}]</c> should return <c>['Ann Brown', 'Darius Unknown']</c>..</p>
     </statement>
@@ -183,5 +183,5 @@ myTests().main()
         </code>
     </program>
   </activity>
-  <exercise runestone="exp1_q5_write_poll"/>
+  <activity runestone="exp1_q5_write_poll"/>
 </section>

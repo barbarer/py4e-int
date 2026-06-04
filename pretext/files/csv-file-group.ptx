@@ -206,7 +206,7 @@
 1-Feb-89,2342.32,2369.29,2232.14,2258.39
 3-Jan-89,2168.39,2350.18,2127.14,2342.32</pre>
     </hint>
-    <exercise label="csv_file_stocks_max_close_fitb">
+    <activity label="csv_file_stocks_max_close_fitb">
       <statement>
         <p>Q-1: What is the highest closing value in the file above?  The closing value is the last value on each line. <var/>  </p>
       </statement>
@@ -226,7 +226,7 @@
       </setup>
     </activity>
     <p>We can write Python code to read the data and find the date with the highest value at the close.</p>
-    <exercise label="csv_file_stocks_find_date_with_highest_close_ac">
+    <activity label="csv_file_stocks_find_date_with_highest_close_ac">
       <statement>
         <p>Run the code below to find the date with the highest value at the close.</p>
       </statement>
@@ -264,7 +264,7 @@ print(f"Max close {max_close} on {max_date}")
     </note>
     <p>What if you want to find several things from the data? You wouldn't want to read the data from the file in every function.  You could read all the data into a nested dictionary and then pass the dictionary to every function. A nested dictionary is a dictionary that has dictionaries for the values.  In this case we can use the date as the key for the outer dictionary and use <q>open</q>, <q>high</q>, <q>low</q> and <q>close</q>
                 as the keys for each inner dictionary.</p>
-    <exercise label="csv_file_stocks_min_close_fitb">
+    <activity label="csv_file_stocks_min_close_fitb">
       <statement>
         <p>Q-3: What is the lowest closing value in the stocks.txt file above? <var/>  </p>
       </statement>
@@ -283,7 +283,7 @@ print(f"Max close {max_close} on {max_date}")
         </var>
       </setup>
     </activity>
-    <exercise label="csv_file_stocks_read_into_dictionary_ac">
+    <activity label="csv_file_stocks_read_into_dictionary_ac">
       <statement>
         <p>Run the code below to find the date with the highest value at the close and the date with the lowest value at the close.</p>
       </statement>
@@ -369,7 +369,7 @@ print(f"Min close {min_close} on {min_date}")
         </code>
       </program>
     </activity>
-    <exercise label="csv_file_dnd_string_and_conversion_functions_dnd">
+    <activity label="csv_file_dnd_string_and_conversion_functions_dnd">
       <statement>
         <p>
 </p>
@@ -400,7 +400,7 @@ print(f"Min close {min_close} on {min_date}")
         </match>
       </cardsort>
     </activity>
-    <exercise label="csv_file_strip_with_params_mcq">
+    <activity label="csv_file_strip_with_params_mcq">
       <statement>
         <p>Q-6: What is output from the following code?</p>
         <pre>print(' "1958"'.strip('"'))</pre>
@@ -440,7 +440,7 @@ print(f"Min close {min_close} on {min_date}")
         </choice>
       </choices>
     </activity>
-    <exercise label="csv_file_stocks_max_close_for_year_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <activity label="csv_file_stocks_max_close_for_year_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Create a function, <c>get_max_close(date_d, year)</c>, that takes a nested dictionary <c>d</c> with the stock data and a two digit <c>year</c> and returns a tuple with the max close value and date of that max value for the given year.</p>
       </statement>
@@ -510,7 +510,7 @@ print(f"Min close {min_close} on {min_date}")
 "DEC",  337,  405,  432</pre>
     </hint>
     <p>We can read the data from the file and store it in a nested dictionary. In this case the outer dictionary will use the month as the key and the inner dictionary will use the years as the keys.  It will use the data from the header row for the year keys.</p>
-    <exercise label="csv_file_airtravel_get_toal_for_year_ac">
+    <activity label="csv_file_airtravel_get_toal_for_year_ac">
       <statement>
         <p>Run the code below.  It is supposed to print the nested dictionary and then the total number of passengers (in thousands) for 1958, but there are errors.  Fix the errors so that all tests pass.</p>
       </statement>
@@ -577,7 +577,7 @@ myTests().main()
         </code>
       </program>
     </activity>
-    <exercise label="csv_file_air_travel_most_month_1958_fitb">
+    <activity label="csv_file_air_travel_most_month_1958_fitb">
       <statement>
         <p>Q-9: Which month had the most passengers travelling by air in 1958?  Enter the three letter code from the file for the month. <var/>  </p>
       </statement>
@@ -596,7 +596,7 @@ myTests().main()
         </var>
       </setup>
     </activity>
-    <exercise label="csv_file_airtravel_get_max_month_ac">
+    <activity label="csv_file_airtravel_get_max_month_ac">
       <statement>
         <p>Fix the code below to work correctly.  It should print the month with the highest number of passengers in 1958.</p>
       </statement>
@@ -758,7 +758,7 @@ myTests().main()
 89, 2016, 26, "Brie Larson", "Room"</pre>
     </hint>
     <p>We can read the data from the file and store it in a list of dictionaires where the keys in the dictionary are &#x2018;year', &#x2018;age', &#x2018;name', and &#x2018;movie'.</p>
-    <exercise label="csv_file_oscar_actress_age_dictionary">
+    <activity label="csv_file_oscar_actress_age_dictionary">
       <statement>
         <p>Run the code below.  It should read all the data into a list of dictionaries.  Then it should create a new dictionary where the key is the age and the value is the number of actresses who won at that age. It should sort the items in the dictionary by the number of winners descending and return the top five tuples. However, some of the movie titles have commas in them.  Fix the code to handle this problem and pass the unit tests.</p>
       </statement>

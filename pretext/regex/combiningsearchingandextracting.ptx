@@ -9,7 +9,7 @@ X-DSPAM-Probability: 0.0000</pre>
             want to extract numbers from lines that have the above syntax.</p>
   <p>We can construct the following regular expression to select the lines:</p>
   <pre>^X-.*: [0-9.]+</pre>
-  <exercise label="re-combo-mc-match">
+  <activity label="re-combo-mc-match">
     <statement>
       <p>11-9-1: Which of the following options will the regular expression <c>^X-.*: [0-9.]+</c> match with? Select all that apply.</p>
     </statement>
@@ -56,7 +56,7 @@ X-DSPAM-Probability: 0.0000</pre>
             (i.e., it is not a wildcard between the square brackets).</p>
   <p>This is a very tight expression that will pretty much match only the
             lines we are interested in as follows:</p>
-  <exercise label="re_combo_ac1">
+  <activity label="re_combo_ac1">
     <statement>
       <p>Search for lines that start with &#x2018;X', followed by any non-whitespace characters
             and &#x2018;:', followed by a space and any number, where the number can include a decimal</p>
@@ -85,7 +85,7 @@ for line in hand:
             you only are interested in extracting a portion of the substring that
             matches the regular expression.</p>
   <p>So we make the following change to our program:</p>
-  <exercise label="re_combo_ac2">
+  <activity label="re_combo_ac2">
     <statement>
       <p>Search for lines that start with &#x2018;X', followed by any non-whitespace characters
             and &#x2018;:', followed by a space and any number. The number can contain a decimal</p>
@@ -114,7 +114,7 @@ for item in s:
   <p>If we wanted to extract all of the revision numbers (the integer number
             at the end of these lines) using the same technique as above, we could
             write the following program:</p>
-  <exercise label="re_combo_ac3">
+  <activity label="re_combo_ac3">
     <statement>
       <p>Search for lines that start with &#x2018;Details: rev=' followed by numbers
             and &#x2018;.' Then print the number if it is greater than zero</p>
@@ -141,7 +141,7 @@ for line in hand:
             <q>greedy</q> behavior is why we get all five digits for each number. The
             regular expression library expands in both directions until it
             encounters a non-digit, or the beginning or the end of a line.</p>
-  <exercise label="re-combo-mc-a">
+  <activity label="re-combo-mc-a">
     <statement>
       <p>11-9-5: Which of these strings would be returned by re.findall(&#x2018;a+', string)? Select all that apply.</p>
     </statement>
@@ -206,7 +206,7 @@ for line in hand:
             parentheses around the two digits as follows:</p>
   <pre>^From .* ([0-9][0-9]):</pre>
   <p>This results in the following program:</p>
-  <exercise label="re_combo_ac4">
+  <activity label="re_combo_ac4">
     <statement>
       <p>Search for lines that start with From and a character followed by a two
             digit number between 00 and 99, followed by &#x2018;:'</p>
@@ -223,7 +223,7 @@ for line in hand:
         </code>
     </program>
   </activity>
-  <exercise label="re-combo-dnd">
+  <activity label="re-combo-dnd">
     <statement>
       <p> Match the following symbols with their function in a regular expression equation.</p>
     </statement>

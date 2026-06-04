@@ -27,7 +27,7 @@ SELECT * FROM Follows JOIN People
             Take the rows from <c>Follows</c> and append the row from
             <c>People</c> where the field <c>from_id</c> in <c>Follows</c> is
             the same the <c>id</c> value in the <c>People</c> table.</p>
-  <exercise label="dbJoin_fill1">
+  <activity label="dbJoin_fill1">
     <statement>
       <p>Q-1: Which SQL clause can be used to return data from two tables? <var/>  </p>
     </statement>
@@ -46,7 +46,7 @@ SELECT * FROM Follows JOIN People
       </var>
     </setup>
   </activity>
-  <exercise label="dbJoin_on_fill1">
+  <activity label="dbJoin_on_fill1">
     <statement>
       <p>Q-2: Fill in the blank in the following: SELECT * FROM Follows JOIN People <BlankNode/> Follows.from_id = People.id LIMIT 5 <var/>  </p>
     </statement>
@@ -74,7 +74,7 @@ SELECT * FROM Follows JOIN People
             <c>id</c> field from <c>People</c> and the <c>from_id</c> from
             <c>People</c>, then JOIN creates a metarow for <em>each</em> of the
             matching pairs of rows, duplicating data as needed.</p>
-  <exercise label="dbJoin_MC_metarow">
+  <activity label="dbJoin_MC_metarow">
     <statement>
       <p>Q-3: True or False? A <q>metarow</q> only contains the first set of matching data.</p>
     </statement>
@@ -170,7 +170,7 @@ Connections for id=2:
             five from the <c>People</c> table. You can also see that the
             second column (<c>Follows.to_id</c>) matches the third column
             (<c>People.id</c>) in each of the joined-up <q>metarows</q>.</p>
-  <exercise label="dbJoin_MC_titles">
+  <activity label="dbJoin_MC_titles">
     <statement>
       <p>Q-4: True or False? When using JOIN on two tables, you can join on columns that have different names.</p>
     </statement>
@@ -194,7 +194,7 @@ Connections for id=2:
     </choices>
   </activity>
   <p>You can use <c>table_name.field_name</c> to specify the column that you want from each table.</p>
-  <exercise label="db_select_bike_join_ex1">
+  <activity label="db_select_bike_join_ex1">
     <statement>
       <p>The following code will select the <c>bike_number</c> from <c>trip_data</c>
             and <c>name</c> from <c>bikeshare_stations</c>
@@ -216,7 +216,7 @@ assert 3,1 == 3rd &amp; H St NE
     </program>
   </activity>
   <p>You can also add a <c>WHERE</c> clause.</p>
-  <exercise label="db_select_bike_join_with_where_ex1">
+  <activity label="db_select_bike_join_with_where_ex1">
     <statement>
       <p>The following code will select the <c>bike_number</c> and <c>duration</c> from <c>trip_data</c>
             and <c>name</c> from <c>bikeshare_stations</c>

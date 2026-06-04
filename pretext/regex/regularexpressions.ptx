@@ -26,7 +26,7 @@
             your program before you can use it. The simplest use of the regular
             expression library is the <c>search()</c> function. The following
             program demonstrates a trivial use of the search function.</p>
-  <exercise label="re_ac1">
+  <activity label="re_ac1">
     <statement>
       <p>This code uses regular expressions to print lines that contain <q>From:</q>.</p>
     </statement>
@@ -46,7 +46,7 @@ for line in hand:
             <q>From:</q>. This program does not use the real power of regular
             expressions, since we could have just as easily used
             <c>line.find()</c> to accomplish the same result.</p>
-  <exercise label="re_mc_import">
+  <activity label="re_mc_import">
     <statement>
       <p>11-9-2: Which of the following correctly imports the regex library?</p>
     </statement>
@@ -93,7 +93,7 @@ for line in hand:
   <p>For example, the caret character is used in regular expressions to match
             <q>the beginning</q> of a line. We could change our program to only match
             lines where <q>From:</q> was at the beginning of the line as follows:</p>
-  <exercise label="re-ac2">
+  <activity label="re-ac2">
     <statement>
       <p>Using regular expressions to print lines that contain <q>From:</q> at the beginning of the line.</p>
     </statement>
@@ -114,7 +114,7 @@ for line in hand:
             library. But it serves to introduce the notion that regular expressions
             contain special action characters that give us more control as to what
             will match the regular expression.</p>
-  <exercise label="re_mc_startswith">
+  <activity label="re_mc_startswith">
     <statement>
       <p>11-9-4: Which lines will the following code print?</p>
       <program language="python">
@@ -163,7 +163,7 @@ for line in hand:
       </choice>
     </choices>
   </activity>
-  <exercise label="re-pp-wolverines-v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="re-pp-wolverines-v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Construct a block of code that loops reading lines from a file, removes whitespace on the right of the line, and prints out any line starting with &#x2018;Wolverines'.</p>
     </statement>

@@ -63,7 +63,7 @@
                 create a <c>BeautifulSoup</c> object from the HTML content in the response,
                 use <c>find</c> to find the first paragraph tag, and then
                 print the first paragraph tag.</p>
-    <exercise label="bs_get_print_first_para">
+    <activity label="bs_get_print_first_para">
       <statement>
         <p>This will find and print the first paragraph tag from the Michigan Daily site.
                 It will interpret the tag as HTML and show just the text of the tag.</p>
@@ -91,7 +91,7 @@ print(soup.find('p'))
     <p>
       <url href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser" visual="http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser">http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser</url>
     </p>
-    <exercise label="bs_print_first_paragraph_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <activity label="bs_print_first_paragraph_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Put the following blocks in order to print the second paragraph from the Michigan Daily website.  It uses the <c>find_all</c> method on
                 BeautifulSoup to get a list of all of the paragraphs.</p>
@@ -145,7 +145,7 @@ print(soup.find('p'))
     <title>Getting text from a tag</title>
     <p>Some tags have text like a paragraph tag or a span tag.  You can use <c>tagName.text</c> to get the text.
                 You can also find a tag with a particular CSS class.</p>
-    <exercise label="bs_get_text_with_class">
+    <activity label="bs_get_text_with_class">
       <statement>
         <p>This will print the text for the site description paragraph.</p>
       </statement>
@@ -169,7 +169,7 @@ print(tag.text)
       <p>When you specify a CSS class you must use <c>class_</c> as the keyword.  This is becuase <c>class</c> is already
                     a keyword that is used to define a new class in Python.</p>
     </note>
-    <exercise label="bs_get_tag_text_with_class_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <activity label="bs_get_tag_text_with_class_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Put the following blocks in order to print the text for span tag which
                 is a child of a h3 tag with a class of css-1pjbq1w.</p>
@@ -220,7 +220,7 @@ print(tag.text)
     <p>Some tags have attribute and value pairs like the link (anchor) tag.  You can
                 get the value for an attribute of the tag.  A link or anchor tag looks like
                 <c>&lt;a href="url"&gt;link text&lt;/a&gt;</c>. An example is <c>&lt;a href="https://www.w3schools.com"&gt;W3Schools&lt;/a&gt;</c>.</p>
-    <exercise label="bs_get_all_a_tags_and_print_hrefs">
+    <activity label="bs_get_all_a_tags_and_print_hrefs">
       <statement>
         <p>This will find all of the link tags in the New York Times site and print the href for each of them.</p>
       </statement>
@@ -241,7 +241,7 @@ for tag in tags:
         </code>
       </program>
     </activity>
-    <exercise label="bs_print_get_all_href_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <activity label="bs_print_get_all_href_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Put the following blocks in order to find all the link tags and print the href for each one for the Michgian Daily.</p>
       </statement>
@@ -316,7 +316,7 @@ for tag in tags:
                 in the nagivation bar in the Michigan Daily webpage.
                 Use <em>find_all</em> to get all the <q>li</q> tags and then loop through those tags and use <em>find</em> to get the
                 first <q>a</q> tag in each <q>li</q> tag.</p>
-    <exercise label="bs_get_mini_nav_href">
+    <activity label="bs_get_mini_nav_href">
       <statement>
         <p>This will print the first <q>href</q> inside each list item (li) with a class of <q>menu-item-has-children</q>.</p>
       </statement>
@@ -342,7 +342,7 @@ for li in li_list:
       <p>You don't have to use all the classes that a tag has.  Try to find a class
                     that is specific to the tags you are looking for.</p>
     </note>
-    <exercise label="bs_find_all_and_find" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <activity label="bs_find_all_and_find" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Put the following blocks in order to print the href for the first &#x2018;a' tag
                 in each h2 tag with a class of <q>entry-title</q></p>
@@ -398,7 +398,7 @@ for li in li_list:
     <p>The Michigan Daily has a <q>Most Read</q> section. It is in a <q>div</q> tag with a
                 class of <q>jetpack_top_posts_widget</q>.  Inside that tag there are <q>li</q> (list item)
                 tags.  In each <q>li</q> tag is an <q>a</q> tag.</p>
-    <exercise label="bs_get_most_read_href">
+    <activity label="bs_get_most_read_href">
       <statement>
         <p>Complete the code below to print the
                 href values for the <q>a</q> tags in the <q>Most Read</q> section.</p>

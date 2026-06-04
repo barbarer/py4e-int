@@ -23,7 +23,7 @@
   <idx><h>functions</h><h>turtle</h></idx>
   <idx><h>turtle</h><h>functions</h></idx>
   <p>Here is code that draws a square with a turtle using a <c>for</c> loop with <c>range</c>.</p>
-  <exercise label="Turtle_square_orig_ac">
+  <activity label="Turtle_square_orig_ac">
     <statement>
       <p>Run the code to see what it draws.</p>
     </statement>
@@ -62,7 +62,7 @@ for sides in range(4):   # repeat the indented lines 4 times
   <p>When we execute <c>square(alisha)</c> the local variable <c>turtle</c> is set to
             the same object as <c>alisha</c>.  Notice that we still need to import the library, create the screen object,
             create the turtle object, and call the function.</p>
-  <exercise label="Turtle_square_function_ac">
+  <activity label="Turtle_square_function_ac">
     <statement>
       <p>Run the code to see what it draws.</p>
     </statement>
@@ -84,7 +84,7 @@ square(alisha)           # call the square function
   </activity>
   <p>We can change the <c>square</c> function to take a <c>length</c> to make it more reusable.  We can
             change the <c>length</c> when we call the function to draw different squares. We can even set a default value for length in case a value isn't specified for it.</p>
-  <exercise label="Turtle_square_function_with_length">
+  <activity label="Turtle_square_function_with_length">
     <statement>
       <p>Run the code to see what it draws.</p>
     </statement>
@@ -113,7 +113,7 @@ square(alisha)           # draw another square
     </program>
   </activity>
   <p>Let's practice creating reusable functions from code that draws a shape with a <c>turtle</c> object.</p>
-  <exercise label="Turtle_triangle_orig_ac">
+  <activity label="Turtle_triangle_orig_ac">
     <statement>
       <p>Run the code first to see what it draws and then modify it to create a <c>triangle</c> function and pass in the <c>length</c> of each side. Then draw several triangles with the function.</p>
     </statement>
@@ -130,7 +130,7 @@ for sides in range(3):   # repeat the indented lines 3 times
     </program>
   </activity>
   <p>We can add even more parameters to set the fill color.  We can make the default fill color green. Use <c>begin_fill()</c> to start the shape you want to fill and <c>end_fill()</c> after the shape is finished.</p>
-  <exercise label="Turtle_square_function_with_color">
+  <activity label="Turtle_square_function_with_color">
     <statement>
       <p>Run the code to see what it draws.</p>
     </statement>
@@ -162,7 +162,7 @@ square(alisha,100, 'blue') # draw another square
     </program>
   </activity>
   <p>You can change the size of the screen object, set a background color for the screen, and set the code to not exit until you click the window.  You need to do this when you run turtle code outside of the ebook otherwise the program will run but exit before you can even see the result.</p>
-  <exercise label="Turtle_square_function_with_screen_methods">
+  <activity label="Turtle_square_function_with_screen_methods">
     <statement>
       <p>Run the code to see what it draws.</p>
     </statement>
@@ -195,7 +195,7 @@ square(alisha,100, 'blue') # draw another square
         </code>
     </program>
   </activity>
-  <exercise label="Turtle_draw_house">
+  <activity label="Turtle_draw_house">
     <statement>
       <p>Add a function to draw an equilateral triangle and then write a function
             to draw a simple house by calling the functions to draw a triangle and a square.</p>

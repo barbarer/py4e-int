@@ -32,9 +32,9 @@ for line in fhand:
             the lines to work on and how we pull those lines apart to find the exact
             bit of information we are looking for.</p>
 
-        <exercise label="listPars_fill1">
+        <activity label="listPars_fill1">
             <statement>
-    <p>Q-2: When reading lines from a file, what list method can be used to select or print parts of a line? <var/>  </p></statement><setup><var><condition string="[Ss]plit(\(\))*"><feedback><p>The split method can be used to separate interesting parts of a line.</p></feedback></condition><condition string=".*"><feedback><p>Try again.</p></feedback></condition></var></setup></activity><exercise label="listPars_PP_file" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
+    <p>Q-2: When reading lines from a file, what list method can be used to select or print parts of a line? <var/>  </p></statement><setup><var><condition string="[Ss]plit(\(\))*"><feedback><p>The split method can be used to separate interesting parts of a line.</p></feedback></condition><condition string=".*"><feedback><p>Try again.</p></feedback></condition></var></setup></activity><activity label="listPars_PP_file" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
         <p>The following code should open a file and read through the lines, splitting them when a line starts
             with <q>Hello</q>, then printing the second word in the line. Watch out for extra pieces of code and
             indentation.</p>

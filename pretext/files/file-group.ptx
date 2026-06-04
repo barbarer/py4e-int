@@ -66,7 +66,7 @@ Poodle
 Rottweiler
 Dachshunds</pre>
     </hint>
-    <exercise label="file_pogil_read_lines_with_loop">
+    <activity label="file_pogil_read_lines_with_loop">
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
@@ -87,7 +87,7 @@ print_contents("dogs.txt")
     <p>Notice that when you run this code it adds a blank line after each line.
                 That is because when you read a line from a file the line contains the newline character (<c>\n</c>).
                 When you print a line you add another newline character which prints as a blank line.</p>
-    <exercise label="file_remove_newline">
+    <activity label="file_remove_newline">
       <statement>
         <p>Q-2: What string method can you use to remove the newline character from the end of a line? <var/>  </p>
       </statement>
@@ -107,7 +107,7 @@ print_contents("dogs.txt")
       </setup>
     </activity>
     <p>Modify the code above to remove the newline from each line after it is read in.</p>
-    <exercise label="file_obj_type_fitb">
+    <activity label="file_obj_type_fitb">
       <statement>
         <p>Q-3: What type of thing is <c>file_obj</c> in the code above? <var/>  </p>
       </statement>
@@ -128,7 +128,7 @@ print_contents("dogs.txt")
     </activity>
     <p>You can also read all the lines from a file at once into a list.  One advantage
                 to this is that you can immediately close the file after that.  This makes it easier to remember to close the file.</p>
-    <exercise label="file_pogil_read_lines_list">
+    <activity label="file_pogil_read_lines_list">
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
@@ -154,7 +154,7 @@ print_contents("dogs.txt")
     <note>
       <p>You can use either <c>open(file,"r")</c> or just <c>open(file)</c> to read from a file.</p>
     </note>
-    <exercise label="line_file_close_fitb">
+    <activity label="line_file_close_fitb">
       <statement>
         <p>Q-5: What method do you use to close a file that you have opened? <var/>  </p>
       </statement>
@@ -173,14 +173,14 @@ print_contents("dogs.txt")
         </var>
       </setup>
     </activity>
-    <exercise label="file_read_all_lines_at_once_sa">
+    <activity label="file_read_all_lines_at_once_sa">
       <statement>
         <p>Q-6: When would it not be best to read all of the lines in a file into a list at once?</p>
       </statement>
     </activity>
     <p>You can also just read some of the lines from a file using the <c>readline</c> method.  This can be handy
                 if you just want to see what type of data is in a file, but don't need to see the entire file.</p>
-    <exercise label="file_pogil_read_x_lines">
+    <activity label="file_pogil_read_x_lines">
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
@@ -200,12 +200,12 @@ print_contents("dogs.txt", 2)
       </program>
     </activity>
     <p>Modify the code above to print 4 lines and run it again.</p>
-    <exercise label="file_read_lines_no_file">
+    <activity label="file_read_lines_no_file">
       <statement>
         <p>Q-8: What do you think will happen when you try to run the code below?</p>
       </statement>
     </activity>
-    <exercise label="file_pogil_read_lines_wrong_file_name">
+    <activity label="file_pogil_read_lines_wrong_file_name">
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
@@ -231,7 +231,7 @@ print_contents("unknown.txt")
     <note>
       <p>If the file that you try to open is not found, you will get an error.</p>
     </note>
-    <exercise label="file_pogil_read_lines_try_and_catch">
+    <activity label="file_pogil_read_lines_try_and_catch">
       <statement>
         <p>Run the code below to see what it prints.  When it asks for another file name type in &#x2018;dogs.txt'.</p>
       </statement>
@@ -264,7 +264,7 @@ print_contents("unknown.txt")
       </program>
     </activity>
     <p>You can use <c>try</c> and <c>except</c> to handle code that can cause exceptions. Put the code that can cause the exception in the <c>try</c> block.</p>
-    <exercise label="line_file_open_except_fitb">
+    <activity label="line_file_open_except_fitb">
       <statement>
         <p>Q-11: What keyword do you use to specify code to execute if there is an error when the code in the body of the <c>try</c> executes? <var/>  </p>
       </statement>
@@ -284,7 +284,7 @@ print_contents("unknown.txt")
       </setup>
     </activity>
     <p>You can also use <c>with open(file) as name</c> which will automatically close the file after the code block ends. It is particularly important to close the file when you write data to a file.</p>
-    <exercise label="file_pogil_read_lines_list_with">
+    <activity label="file_pogil_read_lines_list_with">
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
@@ -311,7 +311,7 @@ print_contents("dogs.txt")
     <note>
       <p>When you use <c>with open(file) as name:</c> the file is closed automatically when you leave the block (indented area).</p>
     </note>
-    <exercise label="file_char_count_with_open" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <activity label="file_char_count_with_open" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Create a function, <c>num_chars(filename)</c>, that returns the number of total characters (including new lines) in the file with the passed file name.  Initialize a count then open the file and loop through all of the lines in the file and add the length of each line to the count.  Close the file.  Then return the count.  There are extra blocks that are not needed in the solution.</p>
       </statement>
@@ -342,7 +342,7 @@ print_contents("dogs.txt")
         </block>
       </blocks>
     </activity>
-    <exercise label="file_char_count_open" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <activity label="file_char_count_open" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Create a function, <c>num_chars(filename)</c>, that returns the number of total characters (including new lines) in the file with the passed file name.  Initialize a count then open the file and loop through all of the lines in the file and add the length of each line to the count.  Close the file.  Then return the count.  There is an extra block that is not needed in the solution.</p>
       </statement>
@@ -373,7 +373,7 @@ print_contents("dogs.txt")
         </block>
       </blocks>
     </activity>
-    <exercise label="file_pogil_line_count_type_returned">
+    <activity label="file_pogil_line_count_type_returned">
       <statement>
         <p>Q-15: What type of thing is returned from the function below? <var/>  </p>
       </statement>
@@ -392,7 +392,7 @@ print_contents("dogs.txt")
         </var>
       </setup>
     </activity>
-    <exercise label="file_pogil_dict_count">
+    <activity label="file_pogil_dict_count">
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>

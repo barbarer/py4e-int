@@ -18,7 +18,7 @@ Author: stephen.marquard@uct.ac.za</pre>
             and slicing differently for each line. This following program uses
             <c>findall()</c> to find the lines with email addresses in them
             and extract one or more addresses from each of those lines.</p>
-  <exercise label="extractingdata_exercise_1">
+  <activity label="extractingdata_exercise_1">
     <statement>
       <p>Use findall to find the lines with email addresses in them and print them.</p>
     </statement>
@@ -37,7 +37,7 @@ print(lst)
             non-whitespace character (<c>\S</c>).</p>
   <p>The output of the program is:</p>
   <pre>['csev@umich.edu', 'cwen@iupui.edu']</pre>
-  <exercise label="re_data_mc_s">
+  <activity label="re_data_mc_s">
     <statement>
       <p>11-9-2: What does \S match with when using regular expressions?</p>
     </statement>
@@ -86,7 +86,7 @@ print(lst)
             are no non-blank characters <em>before</em> the at-sign. We can
             use this regular expression in a program to read all the lines in a file
             and print out anything that looks like an email address as follows:</p>
-  <exercise label="re_data_ac1">
+  <activity label="re_data_ac1">
     <statement>
       <p>This code searches for lines that have an at-sign (@) between characters.</p>
     </statement>
@@ -118,7 +118,7 @@ for line in hand:
             little more explicit in terms of the characters we will match.</p>
   <p>Here is our new regular expression:</p>
   <pre>[a-zA-Z0-9]\S*@\S*[a-zA-Z]</pre>
-  <exercise label="re_data_fitb">
+  <activity label="re_data_fitb">
     <statement>
       <p>11-9-4: <BlankNode/> are used to indicate a set of multiple acceptable characters we are willing to consider matching. <var/>  </p>
     </statement>
@@ -154,7 +154,7 @@ for line in hand:
             non-blank character. Remember that the <c>*</c> or <c>+</c> applies to the single
             character immediately to the left of the plus or asterisk.</p>
   <p>If we use this expression in our program, our data is much cleaner:</p>
-  <exercise label="re_data_ac2">
+  <activity label="re_data_ac2">
     <statement>
       <p>This code searches for lines that have an at-sign (@) between letter or number characters.</p>
     </statement>
@@ -177,7 +177,7 @@ for line in hand:
             parser finds must end with a letter. So when it sees the <q>&gt;</q> at the end of
             <q>sakaiproject.org&gt;;</q> it simply stops at the last <q>matching</q> letter it
             found (i.e., the <q>g</q> was the last good match).</p>
-  <exercise label="re_data_mc_findall">
+  <activity label="re_data_mc_findall">
     <statement>
       <p>11-9-6: What does [a-zA-Z0-9] match with when used in the findall() method?</p>
     </statement>

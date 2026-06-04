@@ -47,7 +47,7 @@ print(counts)
             iterating <q>more quickly</q> and the outer loop as iterating more slowly.</p>
   <p>The combination of the two nested loops ensures that we will count every
             word on every line of the input file.</p>
-  <exercise label="question9_3_1">
+  <activity label="question9_3_1">
     <statement>
       <p>Q-2: A(n) _________ is a pattern consisting of two for loops, where one of the loops is the outer loop and the other is the inner loop. <var/>  </p>
     </statement>
@@ -67,7 +67,7 @@ print(counts)
     </setup>
   </activity>
   <p>In our <c>else</c> statement, we use the more compact alternative for incrementing a variable. <c>counts[word] += 1</c> is equivalent to <c>counts[word] = counts[word] + 1</c>. Either method can be used to change the value of a variable by any desired amount. Similar alternatives exist for <c>-=</c>, <c>*=</c>, and <c>/=</c>.</p>
-  <exercise label="question9_3_2">
+  <activity label="question9_3_2">
     <statement>
       <p>Q-3: Which of these answers (if any) will increment a key's value in the dictionary counts by 1?</p>
     </statement>
@@ -120,7 +120,7 @@ Enter the file name: romeo.txt
   <p>It is a bit inconvenient to look through the dictionary to find the most
             common words and their counts, so we need to add some more Python code
             to get us the output that will be more helpful.</p>
-  <exercise label="question9_3_3" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="question9_3_3" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Construct a block of code to read through the lines of a file, break each line into a list of words, and then loop through each of the words in the line and count each word using a dictionary.</p>
     </statement>

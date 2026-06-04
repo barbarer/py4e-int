@@ -38,7 +38,7 @@
     <title>Using a logical <q>or</q></title>
     <p>What if you want to match a month from 1 to 12 in MM/DD/YYYY? You can't use [1-12] since it matches a character at a time. You have to match either a digit from 1 to 9 or a 1 followed by 0, 1, or 2.
                 To use a logical <em>or</em> to match one of two expressions use <c>(left|right)</c>. This will match either the expression on the left or the one on the right.</p>
-    <exercise label="regex_logical_or">
+    <activity label="regex_logical_or">
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
@@ -53,7 +53,7 @@ print(dates)
         </code>
       </program>
     </activity>
-    <exercise label="regex_match_0_before_digit_on_month">
+    <activity label="regex_match_0_before_digit_on_month">
       <statement>
         <p>11-9-2: Sometimes dates have a leading zero if the month is from 1 to 9.  Which of the following would match that case as well but still match if there isn't a 0?</p>
       </statement>
@@ -96,7 +96,7 @@ print(dates)
   <subsection xml:id="regex_specifying-what-to-extract-matching-groups">
     <title>Specifying What to Extract - Matching Groups</title>
     <p>There are times when you want to return just part of what was matched.</p>
-    <exercise label="regex_return_part_match_ac">
+    <activity label="regex_return_part_match_ac">
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
@@ -117,7 +117,7 @@ print(res3)
         </code>
       </program>
     </activity>
-    <exercise label="regex_extract_symbols_fitb">
+    <activity label="regex_extract_symbols_fitb">
       <statement>
         <p>11-9-4: Which symbols are used to specify the part of the match to return? <var/>  </p>
       </statement>
@@ -143,7 +143,7 @@ print(res3)
   <subsection xml:id="regex_specifying-what-to-extract-non-matching-groups">
     <title>Specifying What to Extract - Non-Matching Groups</title>
     <p>What if we need the parentheses because we are using a logical <em>or</em> but want the whole match to be returned?  We can add a <q>?:</q> after the first parenthesis to group items for the logical <em>or</em> but return the entire match.</p>
-    <exercise label="regex_logical_or_with_non_capture_group">
+    <activity label="regex_logical_or_with_non_capture_group">
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
@@ -159,7 +159,7 @@ print(dates)
       </program>
     </activity>
     <p>Another approach is to enclose everything in a set of outer parentheses if you have any inner parentheses.</p>
-    <exercise label="regex_logical_or_with_outer_paren">
+    <activity label="regex_logical_or_with_outer_paren">
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
@@ -174,7 +174,7 @@ print(matches)
         </code>
       </program>
     </activity>
-    <exercise label="regex_get_date_from_match">
+    <activity label="regex_get_date_from_match">
       <statement>
         <p>11-9-7: Given the following code which of the following would you use to get the current date and add it to the list?</p>
         <pre>import re
@@ -224,7 +224,7 @@ for match in matches:
   </subsection>
   <subsection xml:id="regex_boundary-or-anchor-characters">
     <title>Boundary or Anchor Characters</title>
-    <exercise label="regex_bound_caret">
+    <activity label="regex_bound_caret">
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
@@ -244,7 +244,7 @@ print(matches)
         </code>
       </program>
     </activity>
-    <exercise label="regex_match_caret_mc">
+    <activity label="regex_match_caret_mc">
       <statement>
         <p>11-9-9: What does the &#x2018;^' do?</p>
       </statement>
@@ -283,7 +283,7 @@ print(matches)
         </choice>
       </choices>
     </activity>
-    <exercise label="regex_bound_dollar">
+    <activity label="regex_bound_dollar">
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
@@ -298,7 +298,7 @@ print(matches)
         </code>
       </program>
     </activity>
-    <exercise label="regex_match_dollar_mc">
+    <activity label="regex_match_dollar_mc">
       <statement>
         <p>11-9-11: What does the &#x2018;$' do?</p>
       </statement>
@@ -340,7 +340,7 @@ print(matches)
     <note>
       <p>Since &#x2018;$' is an anchor character if you want to match a &#x2018;$' use &#x2018;\$'.</p>
     </note>
-    <exercise label="regex_word_boundary">
+    <activity label="regex_word_boundary">
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
@@ -355,7 +355,7 @@ print(matches)
         </code>
       </program>
     </activity>
-    <exercise label="regex_match_slach_b_mc">
+    <activity label="regex_match_slach_b_mc">
       <statement>
         <p>11-9-13: What does the &#x2018;\b' do?</p>
       </statement>
@@ -401,7 +401,7 @@ print(matches)
   <subsection xml:id="regex_negating-a-character-set">
     <title>Negating a Character Set</title>
     <p>You can negate a character set using the &#x2018;^' after the &#x2018;[&#x2018;.</p>
-    <exercise label="regex_negate_char_set">
+    <activity label="regex_negate_char_set">
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
@@ -425,7 +425,7 @@ print(passwordChecker('{hi}'))
         </code>
       </program>
     </activity>
-    <exercise label="regex_password_checker_mc">
+    <activity label="regex_password_checker_mc">
       <statement>
         <p>11-9-15: Which of the following best describes when <c>passwordChecker</c> returns true?</p>
       </statement>
@@ -464,7 +464,7 @@ print(passwordChecker('{hi}'))
         </choice>
       </choices>
     </activity>
-    <exercise label="regex_match_adv_symbols">
+    <activity label="regex_match_adv_symbols">
       <statement>
         <p>Drag each symbol to what it matches.</p>
       </statement>

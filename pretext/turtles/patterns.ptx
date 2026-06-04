@@ -8,7 +8,7 @@
   <note>
     <p>The outer <c>for</c> loop in the code below on line 8 executes 20 times and the inner <c>for</c> loop on line 13 executes 5 times <em>for each</em> of the outer loop values, 5 times when the outer loop value is 0, 5 times when the outer loop value is 1, 5 times when the outer loop value is 2, and so on.  The inner loop is executed a total of 20 * 5 = 100 times.  The turtle can take a long time to finish drawing this pattern.  Normally code in the browser is limited to only running in 10 seconds or less.  But, we can use the <c>sys</c> library (short for system) <c>setExecutionLimit(milliseconds)</c> procedure which will let the code run for up to the specified number of milliseconds.  One second is 1,000 milliseconds, so 50,0000 milliseconds is 50 seconds.</p>
   </note>
-  <exercise label="Turtle_Spirograph1">
+  <activity label="Turtle_Spirograph1">
     <statement>
       <p>Run the code to see what it draws.</p>
     </statement>
@@ -34,7 +34,7 @@ for repeats in range(20):     # draw the pattern 20 times
     </program>
   </activity>
   <p>By setting the pen color differently, we can distinguish the part that draws the shape, from the part that draws <em>between</em> the shapes.</p>
-  <exercise label="Turtle_Spirograph2">
+  <activity label="Turtle_Spirograph2">
     <statement>
       <p>Run the code to see what it draws.</p>
     </statement>
@@ -62,7 +62,7 @@ for repeats in range(20):   # 20 times to draw the pattern
     </program>
   </activity>
   <p>You can use the coloring in the picture below to help you figure out the correct order of the lines below.</p>
-  <exercise label="turtle_3_1_Turtle_Spiro" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="turtle_3_1_Turtle_Spiro" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>There is a way of arranging the statements below such that this image is created. The turtle will draw many triangles.  Move the needed pieces of the program from the left into the space on the right.  Indent lines as needed.</p>
       <image source="turtles/Figures/BlueTrianglesRedCircle.png" width="200px%"/>
@@ -109,7 +109,7 @@ for repeats in range(20):   # 20 times to draw the pattern
     </blocks>
   </activity>
   <p>You can use the coloring in the picture below to help you figure out the correct order of the lines below.</p>
-  <exercise label="turtle_3_2_Turtle_Spiro_Blue_Red" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="turtle_3_2_Turtle_Spiro_Blue_Red" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>There is a way of arranging the statements below such that this image is created. The turtle will draw many triangles. Move the needed pieces of the program from the left into the space on the right.  Indent lines as needed.</p>
       <image source="turtles/Figures/RedTrianglesBlueCircle.png" width="200px%"/>
@@ -154,7 +154,7 @@ for repeats in range(20):   # 20 times to draw the pattern
       </block>
     </blocks>
   </activity>
-  <exercise label="Turtle_Nested_Error1">
+  <activity label="Turtle_Nested_Error1">
     <statement>
       <p>The following example has 4 errors.  Can you fix the errors so that the code compiles and runs?</p>
     </statement>
@@ -180,7 +180,7 @@ for repeats in range(20)
         </code>
     </program>
   </activity>
-  <exercise label="Turtle_Nested_Error2">
+  <activity label="Turtle_Nested_Error2">
     <statement>
       <p>The following example has 4 errors.  Can you fix the errors so that the code compiles and runs?</p>
     </statement>

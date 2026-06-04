@@ -7,7 +7,7 @@
   <p>Often the XML has multiple nodes and we need to write a loop to process
             all of the nodes. In the following program, we loop through all of the
             <c>user</c> nodes:</p>
-  <exercise label="net_parse_users_ac1">
+  <activity label="net_parse_users_ac1">
     <statement>
       <p>What do you think this code will print?  Run it to see what it actually
             prints.</p>
@@ -35,7 +35,7 @@ for item in lst:
             write a <c>for</c> loop that looks at each of the user nodes, and
             prints the <c>name</c> and <c>id</c> text elements as well
             as the <c>x</c> attribute from the <c>user</c> node.</p>
-  <exercise label="webLoop_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="webLoop_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Put the following blocks in order to use a loop to process nodes in an XML program, like the one seen above.</p>
     </statement>
@@ -57,7 +57,7 @@ for item in lst:
   <p>It is important to include all parent level elements in the <c>findall</c>
             statement except for the top level element (e.g., <c>users/user</c>).
             Otherwise, Python will not find any desired nodes.</p>
-  <exercise label="net_parse_users_ac2">
+  <activity label="net_parse_users_ac2">
     <statement>
       <p>What do you think this code will print?  Run it to see what it actually
             prints.</p>
@@ -82,7 +82,7 @@ print('User count:', len(lst2))
   <p><c>lst</c> stores all <c>user</c> elements that are nested within their <c>users</c>
             parent. <c>lst2</c> looks for <c>user</c> elements that are not nested within
             the top level <c>stuff</c> element where there are none.</p>
-  <exercise label="webLoop_fill">
+  <activity label="webLoop_fill">
     <statement>
       <p>csp-10-2-4: In order for Python to find the desired nodes, it is important to include all ______
 level elements in the <c>findall</c> statement expect for the top level element. <var/>  </p>

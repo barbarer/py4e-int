@@ -201,7 +201,7 @@
 3-Jan-89,2168.39,2350.18,2127.14,2342.32</pre>
     </hint>
     <p>We can write Python code to read the data using a csv reader and find the date with the highest value at the close.</p>
-    <exercise label="csv_reader_file_stocks_find_date_with_highest_close_ac">
+    <activity label="csv_reader_file_stocks_find_date_with_highest_close_ac">
       <statement>
         <p>Run the code below to find the date with the highest value at the close.</p>
       </statement>
@@ -234,7 +234,7 @@ print(f"Max close {max_close} on {max_date}")
         </code>
       </program>
     </activity>
-    <exercise label="csv_reader_type_of_row">
+    <activity label="csv_reader_type_of_row">
       <statement>
         <p>Q-2: What type of thing is <c>row</c> in the code above?</p>
       </statement>
@@ -273,7 +273,7 @@ print(f"Max close {max_close} on {max_date}")
         </choice>
       </choices>
     </activity>
-    <exercise label="csv_reader_steps_mcq">
+    <activity label="csv_reader_steps_mcq">
       <statement>
         <p>Q-3: Which of these must you do to use a csv reader to read a csv file?</p>
       </statement>
@@ -332,7 +332,7 @@ print(f"Max close {max_close} on {max_date}")
 "DEC",  337,  405,  432</pre>
     </hint>
     <p>We can read the data from the file and store it in a nested dictionary. In this case the outer dictionary will use the month as the key and the inner dictionary will use the years as the keys.  It will use the data from the header row for the year keys.</p>
-    <exercise label="csv_reader_airtravel_get_toal_for_year_ac">
+    <activity label="csv_reader_airtravel_get_toal_for_year_ac">
       <statement>
         <p>Run the code below.  It is supposed to print the nested dictionary and then the total number of passengers (in thousands) for 1958, but there are errors.  Fix the errors so that all tests pass.</p>
       </statement>
@@ -397,7 +397,7 @@ unittest.main()
         </code>
       </program>
     </activity>
-    <exercise label="csv_reader_read_one_row">
+    <activity label="csv_reader_read_one_row">
       <statement>
         <p>Q-5: What function can you use to read just one row from a csv reader? <var/>  </p>
       </statement>
@@ -416,7 +416,7 @@ unittest.main()
         </var>
       </setup>
     </activity>
-    <exercise label="csv_reader_airtravel_get_max_month_ac">
+    <activity label="csv_reader_airtravel_get_max_month_ac">
       <statement>
         <p>Fix the code below to work correctly.  It should print the month with the highest number of passengers in 1958.</p>
       </statement>
@@ -577,7 +577,7 @@ unittest.main()
 89, 2016, 26, "Brie Larson", "Room"</pre>
     </hint>
     <p>We can read the data from the file and store it in a list of dictionaires where the keys in the dictionary are &#x2018;year', &#x2018;age', &#x2018;name', and &#x2018;movie'.</p>
-    <exercise label="csv_reader_oscar_actress_age_dictionary">
+    <activity label="csv_reader_oscar_actress_age_dictionary">
       <statement>
         <p>Fix the code below.  It should read all the data into a list of dictionaries.  Then it should create a new dictionary where the key is the age and the value is the number of actresses who won at that age. It should sort the items in the dictionary by the number of winners descending and return the top five tuples. Then it will write the data to a csv file using a csv writer.</p>
       </statement>
@@ -660,7 +660,7 @@ unittest.main()
         </code>
       </program>
     </activity>
-    <exercise label="csv_reader_what_can_be_spec">
+    <activity label="csv_reader_what_can_be_spec">
       <statement>
         <p>Q-8: What type of things can be specified when you create the csv reader?</p>
       </statement>
@@ -699,7 +699,7 @@ unittest.main()
         </choice>
       </choices>
     </activity>
-    <exercise label="csv_write_diff_with_file_writer">
+    <activity label="csv_write_diff_with_file_writer">
       <statement>
         <p>Q-9: How is a csv writer different from a file writer?</p>
       </statement>

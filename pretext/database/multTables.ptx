@@ -166,7 +166,7 @@ cur.execute('''INSERT OR IGNORE INTO Follows
     <p>Again, we simply tell the database to ignore our attempted
                 <c>INSERT</c> if it would violate the uniqueness constraint that
                 we specified for the <c>Follows</c> rows.</p>
-    <exercise label="dbMult_MC_tf1">
+    <activity label="dbMult_MC_tf1">
       <statement>
         <p>Q-1: True or False? You can instruct SQL to ignore a command.</p>
       </statement>
@@ -247,7 +247,7 @@ IGNORE</c> just to avoid errors and then call <c>conn.commit()</c>
     <p>If the <c>INSERT</c> is successful, we can look at
                 <c>cur.lastrowid</c> to find out what value the database assigned
                 to the <c>id</c> column in our newly created row.</p>
-    <exercise label="dbMult_MC_tf2">
+    <activity label="dbMult_MC_tf2">
       <statement>
         <p>Q-2: True or False? SQL will automatically check if something already exists in your data.</p>
       </statement>

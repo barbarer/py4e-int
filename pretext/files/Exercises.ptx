@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="files_multiple-choice-questions">
   <title>Multiple Choice Questions</title>
-  <exercise label="fileEx_read_v2">
+  <activity label="fileEx_read_v2">
     <statement>
       <p>Q-1: Which of the following can be used to open a file called <c>myText.txt</c> in read-only mode?</p>
     </statement>
@@ -40,7 +40,7 @@
       </choice>
     </choices>
   </activity>
-  <exercise label="fileEx_write_v2">
+  <activity label="fileEx_write_v2">
     <statement>
       <p>Q-2: Which of the following can be used to open a file called <c>myText.txt</c> in write-only mode?</p>
     </statement>
@@ -79,7 +79,7 @@
       </choice>
     </choices>
   </activity>
-  <exercise label="fileEx_close_v2">
+  <activity label="fileEx_close_v2">
     <statement>
       <p>Q-3: Which command below closes the already open file <c>myText.txt</c> if the following code has already been written?</p>
       <pre>ref_file = open("myText.txt", "r")</pre>
@@ -119,7 +119,7 @@
       </choice>
     </choices>
   </activity>
-  <exercise label="fileEx_writeLine">
+  <activity label="fileEx_writeLine">
     <statement>
       <p>Q-4: Which of the commands below is used to add the following string to the end of a file object <c>filevar</c>?</p>
       <pre>somestring = "my Sentence"</pre>
@@ -159,7 +159,7 @@
       </choice>
     </choices>
   </activity>
-  <exercise label="fileEx_printNames">
+  <activity label="fileEx_printNames">
     <statement>
       <p>Q-5: The contents of <c>names.txt</c> is listed here:</p>
       <pre>Moana
@@ -220,7 +220,7 @@ for line in names:
       </choice>
     </choices>
   </activity>
-  <exercise label="fileEx_catch_v2">
+  <activity label="fileEx_catch_v2">
     <statement>
       <p>Q-6: What keyword do you use to specify code to execute if there is an error when the body of the <c>try</c> executes?</p>
     </statement>
@@ -259,7 +259,7 @@ for line in names:
       </choice>
     </choices>
   </activity>
-  <exercise label="fileEx_how_many_errors">
+  <activity label="fileEx_how_many_errors">
     <statement>
       <p>Q-7: How many errors are in the code below?  It should open the file in read-only mode, read each line and print each line and then close the file.</p>
       <pre>def print_contents(file)

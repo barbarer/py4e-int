@@ -9,7 +9,7 @@
      <introduction>
         <p>Look at the code below and predict what will be printed.</p>
 </introduction>
-        <exercise label="xml_parse_last_printed_when_no_attr">
+        <activity label="xml_parse_last_printed_when_no_attr">
             <statement>
     <p>csp-10-2-1: What is the last thing (last line of text) that will be printed when the code below runs? <var/>  </p>
     </statement><setup><var><condition string="['&quot;]?Attr">
@@ -21,7 +21,7 @@
     <p>Here is a simple application that parses some XML and extracts some data
             elements from the XML:</p>
  
-<exercise label="xml_parse_person_ac1">
+<activity label="xml_parse_person_ac1">
     <statement>
         <p>Run this to see what it prints.</p>
 
@@ -66,10 +66,10 @@ print('Attr:', tree.find('email').get('hide'))
             <p>Why do we use <c>get</c> to get the value of an attribute?</p>
             <p>Look at the code below and predict what will be printed.</p>
             </introduction>
-        <exercise label="xml_parse_last_printed">
+        <activity label="xml_parse_last_printed">
             <statement>
     <p>csp-10-2-3: What is the last thing (last line of text) that will be printed when the code below runs? <var/>  </p></statement><setup><var><condition string="['&quot;]?Attr"><feedback><p>None[""]?: The default is to print None if there is no attribute with that name when you use <c>.get('name')</c>.</p></feedback></condition><condition string="['&quot;]?None['&quot;]?"><feedback><p>Something will be printed before the value. Look at the print statement again.</p></feedback></condition><condition string=".*"><feedback><p>What is the default value when there is no attribute with that name?</p></feedback></condition></var></setup></activity>
-<exercise label="xml_parse_person_wihtout_attr_ac1">
+<activity label="xml_parse_person_wihtout_attr_ac1">
     <statement>
             <p>Run this to see what it prints.</p>
 
@@ -104,7 +104,7 @@ print('Attr:', tree.find('email').get('hide'))
             <introduction><p>You can use <c>find</c> to get the first element of the XML of a specified type.
                 You can the use <c>find</c> on that element to get children tags of that element.</p></introduction>
 
-<exercise label="xml_parse_book_data">
+<activity label="xml_parse_book_data">
     <statement>
             <p>Run the code to see what this prints.</p>
 
@@ -147,7 +147,7 @@ print('Lang:',book.find('title').get('lang'))
             <title>Fixing Errors in XML</title>
             <introduction><p>If your XML has errors, what do you think will happen?</p></introduction>
 
-<exercise label="xml_parse_fix_book_data">
+<activity label="xml_parse_fix_book_data">
     <statement>
             <p>The following XML has errors.  Try to run the code first to see what happens and then fix the XML so that the code runs correctly.</p>
 
@@ -176,7 +176,7 @@ print('Lang:',book.find('title').get('lang'))
     </program>
 </activity>
 
-<exercise label="xml_parse_fix_note_data">
+<activity label="xml_parse_fix_note_data">
     <statement>
             <p>The following XML has errors.  Try to run the code first to see what happens and then fix the XML so that the code runs correctly.</p>
 
@@ -217,7 +217,7 @@ print('time region:',note.find('time').get('region'))
         <subexercises xml:id="web_write-code-to-process-xml">
             <title>Write Code to Process XML</title>
 
-<exercise label="xml_parse_write_code_book_data_ac">
+<activity label="xml_parse_write_code_book_data_ac">
     <statement>
             <p>Write code to print the book title, category, author, and year.</p>
 
@@ -239,7 +239,7 @@ data = '''
     </program>
 </activity>
 
-<exercise label="xml_parse_write_code_note_data_ac">
+<activity label="xml_parse_write_code_note_data_ac">
     <statement>
             <p>Write code to print the note's to, from, body, and time (with region).</p>
 

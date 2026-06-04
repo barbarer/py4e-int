@@ -46,7 +46,7 @@
   <subsection xml:id="iterations_for-statements">
     <title>for Statements</title>
     <p>A <c>for</c> loop executes the same block of code <q>for each item in a sequence.</q></p>
-    <exercise label="loops_ac_pogil_basicfor">
+    <activity label="loops_ac_pogil_basicfor">
       <statement>
         <p>Run this code to see what it prints.</p>
       </statement>
@@ -59,7 +59,7 @@ print("goodbye")
         </code>
       </program>
     </activity>
-    <exercise label="loops_MC_pogil_indented">
+    <activity label="loops_MC_pogil_indented">
       <statement>
         <p>Q-2: How many times does the indented line of code execute under the <c>for</c> loop?</p>
       </statement>
@@ -106,7 +106,7 @@ print("goodbye")
         </choice>
       </choices>
     </activity>
-    <exercise label="loops_MC_pogil_notindented">
+    <activity label="loops_MC_pogil_notindented">
       <statement>
         <p>Q-3: How many times does the line of code NOT indented execute after the <c>for</c> loop?</p>
       </statement>
@@ -153,7 +153,7 @@ print("goodbye")
         </choice>
       </choices>
     </activity>
-    <exercise label="loops_dnd_pogil_xvalue">
+    <activity label="loops_dnd_pogil_xvalue">
       <statement>
         <p>Match each execution of Line 3 to the value "x" has after Line 3 is executed.</p>
       </statement>
@@ -175,7 +175,7 @@ print("goodbye")
         </match>
       </cardsort>
     </activity>
-    <exercise label="loops_dnd_pogil_modifiedlist">
+    <activity label="loops_dnd_pogil_modifiedlist">
       <statement>
         <p>Imagine that the list [2, 7, 1] from the code above was modified to one of the lists below. Match each new list to the amount of times it would make the "for" loop execute.</p>
       </statement>
@@ -206,7 +206,7 @@ print("goodbye")
                 next value from the list is assigned to <c>x</c>.</p>
     <p>Before your <c>for</c> statement, you can assign your list to a variable and your program
                 will run the same way:</p>
-    <exercise label="loops_ac_pogil_assigninglist">
+    <activity label="loops_ac_pogil_assigninglist">
       <statement>
         <p>Run this code to see what it prints.</p>
       </statement>
@@ -221,7 +221,7 @@ print("goodbye")
       </program>
     </activity>
     <p>In addition, <c>for</c> loops can be used with strings:</p>
-    <exercise label="loops_ac_pogil_string">
+    <activity label="loops_ac_pogil_string">
       <statement>
         <p>Run this code to see what it prints.</p>
       </statement>
@@ -241,7 +241,7 @@ for c in "Hi!":
     <title>The range Function</title>
     <p>The Python <c>range</c> function will generate a list of numbers. The <c>range</c> function
                 can take up to three numbers as arguments.</p>
-    <exercise label="loops_ac_pogil_output_range">
+    <activity label="loops_ac_pogil_output_range">
       <statement>
         <p>Run this code to see what it prints.</p>
       </statement>
@@ -266,7 +266,7 @@ for i in range(5): #this line prints nothing
     <p>If the argument of the <c>range</c> function specifies a single number, like <c>range(x)</c>,
                 the first number listed will be 0, the last number listed will be x - 1, and there
                 will be x numbers in the list.</p>
-    <exercise label="loops_fitb_pogil_oneparamrange">
+    <activity label="loops_fitb_pogil_oneparamrange">
       <statement>
         <p>Q-9: Use the <c>range</c> function with one parameter to generate the sequence 0, 1, 2, 3. <var/>  </p>
       </statement>
@@ -293,7 +293,7 @@ for i in range(5): #this line prints nothing
     <p>If the argument of the <c>range</c> function specifies two numbers, like <c>range(x, y)</c>,
                 the first number listed will be x, the last number listed will be y - 1, and there will
                 be y - x numbers in the list.</p>
-    <exercise label="loops_fitb_pogil_twoparamrange">
+    <activity label="loops_fitb_pogil_twoparamrange">
       <statement>
         <p>Q-10: Use the <c>range</c> function with two parameters to generate the sequence 1, 2, 3, 4. <var/>  </p>
       </statement>
@@ -322,7 +322,7 @@ for i in range(5): #this line prints nothing
                 argument represents how much to increment the number by each time. To calculate how many
                 numbers will be in the list, take the result of (y - x) / z and round it up to the nearest
                 whole number.</p>
-    <exercise label="loops_fitb_pogil_threeparamrange">
+    <activity label="loops_fitb_pogil_threeparamrange">
       <statement>
         <p>Q-11: Use the <c>range</c> function with three parameters to generate the sequence 1, 3, 5, 7. <var/>  </p>
       </statement>
@@ -341,7 +341,7 @@ for i in range(5): #this line prints nothing
         </var>
       </setup>
     </activity>
-    <exercise label="loops_MC_pogil_whichtype1">
+    <activity label="loops_MC_pogil_whichtype1">
       <statement>
         <p>Q-12: If you wanted to execute a loop 100 times, which type of <c>for</c> statement should you use?</p>
       </statement>
@@ -380,7 +380,7 @@ for i in range(5): #this line prints nothing
         </choice>
       </choices>
     </activity>
-    <exercise label="loops_MC_pogil_whichtype2">
+    <activity label="loops_MC_pogil_whichtype2">
       <statement>
         <p>Q-13: If you wanted to use each item of an existing list inside the loop, which type of <c>for</c> statement should you use?</p>
       </statement>
@@ -422,7 +422,7 @@ for i in range(5): #this line prints nothing
     <p>The arguments to <c>range</c> must be integers, so <c>range</c> does not work with strings.
                 However, if you wanted to print the letters A to Z in a loop, you could do something
                 like this:</p>
-    <exercise label="loops_ac_pogil_output_printatoz">
+    <activity label="loops_ac_pogil_output_printatoz">
       <statement>
         <p>You can use the built-in function <c>chr</c> to convert integers to their corresponding Unicode characters.</p>
       </statement>
@@ -437,7 +437,7 @@ for i in range(65, 91):
   <subsection xml:id="iterations_while-statements">
     <title>while Statements</title>
     <p>A more general looping structure is the <c>while</c> statement.</p>
-    <exercise label="loops_ac_pogil_output_while">
+    <activity label="loops_ac_pogil_output_while">
       <statement>
         <p>Run this code to observe the behavior of a basic while loop and answer the questions below.</p>
       </statement>
@@ -451,7 +451,7 @@ print("goodbye")
         </code>
       </program>
     </activity>
-    <exercise label="loops_mc_pogil_loopcondition">
+    <activity label="loops_mc_pogil_loopcondition">
       <statement>
         <p>Q-16: What must the value of the Boolean expression (after the <c>while</c>) be in order
                 for the first <c>print</c> statement to execute?</p>
@@ -479,7 +479,7 @@ print("goodbye")
                 is executed. Because the value of <c>i</c> steadily grows, the <q>loop condition</q> (the
                 Boolean expression after the <c>while</c>) eventually becomes false when i = 3, which
                 causes the loop body to stop executing.</p>
-    <exercise label="loops_mc_pogil_swappedlines">
+    <activity label="loops_mc_pogil_swappedlines">
       <statement>
         <p>Q-17: Imagine that lines 3 and 4 in the above code were swapped. What is the new output of the code?</p>
       </statement>
@@ -526,7 +526,7 @@ print("goodbye")
         </choice>
       </choices>
     </activity>
-    <exercise label="loops_mc_pogil_twice">
+    <activity label="loops_mc_pogil_twice">
       <statement>
         <p>Q-18: Which of these modifications would make the loop in the above code only run twice? There are one or more answers.</p>
       </statement>
@@ -569,7 +569,7 @@ print("goodbye")
                 The first part initializes the variable or condition, the second part tests
                 whether the end has been reached, and the third part updates the variable or
                 condition.</p>
-    <exercise label="loops_mc_pogil_noincrement">
+    <activity label="loops_mc_pogil_noincrement">
       <statement>
         <p>Q-19: If you deleted line 4 of the code above, what would print?</p>
       </statement>
@@ -624,7 +624,7 @@ print("goodbye")
                 values. For example, when <c>add(5)</c> is called, the user is
                 asked to input five numbers. If the user inputs 3, 1, 5, 2, and
                 4, the function would return the value 15.</p>
-    <exercise label="loops_ac_pogil_output_addn">
+    <activity label="loops_ac_pogil_output_addn">
       <statement>
         <p>Observe the behavior of this code to see how it answers the the three bullet points above.</p>
       </statement>

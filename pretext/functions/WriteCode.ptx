@@ -2,7 +2,7 @@
 <section xml:id="functions_write-code-questions">
   <title>Write Code Questions</title>
 
-        <exercise label="funct-ex-perimeterq">
+        <activity label="funct-ex-perimeterq">
           <statement>
             <p>Fix the 4 errors so the following code runs and returns the perimeter of a rectangle. For example, <c>recPerimeter(10, 20)</c> should return <c>60</c>.</p>
           </statement>
@@ -47,7 +47,7 @@ def recPerimeter(length, width):
                     </solution>
         </activity>
 
-        <exercise label="funct_ex_squareq">
+        <activity label="funct_ex_squareq">
           <statement>
             <p>Fix the 5 errors so the following code runs and returns the area of a square. For example, <c>squareArea(10)</c> should return <c>100</c>.</p>
           </statement>
@@ -71,7 +71,7 @@ myTests().main()
           </program>
         </activity>
 
-        <exercise label="funct_ex_triangle">
+        <activity label="funct_ex_triangle">
           <statement>
             <p>Change the code so that <c>areaTriangle</c> takes parameters for the base and height of a triangle
                             and computes its area. Then, write code to call the function and print the result. For example, <c>areaTriangle(12,45)</c> should return <c>270</c>.</p>
@@ -117,7 +117,7 @@ print(areaTriangle(2, 6))
                     </solution>
         </activity>
 
-        <exercise label="funct_ex_tripq">
+        <activity label="funct_ex_tripq">
           <statement>
             <p>Change the code below to create a function <c>tripCost</c> that calculates the cost of a trip.
                     It should take the <c>miles</c>, <c>milesPerGallon</c>, and <c>pricePerGallon</c> as parameters and
@@ -145,7 +145,7 @@ myTests().main()
           </program>
         </activity>
 
-        <exercise label="funct_ex_name">
+        <activity label="funct_ex_name">
           <statement>
             <p>Fix the errors on line 2 so the function <c>nameAndAge</c> returns
                             the string <q>My name is <c>nameString</c> and I am <c>ageInt</c> years old.</q> For example, <c>nameAndAge("John", 18)</c> should return
@@ -189,7 +189,7 @@ print(nameAndAge("John", 18))
                     </solution>
         </activity>
 
-        <exercise label="funct_ex_gradeq">
+        <activity label="funct_ex_gradeq">
           <statement>
             <p>Rewrite the grade program from the previous chapter using a function called <c>computegrade</c>
                     that takes a score as its parameter and returns a string representing a grade. If someone
@@ -227,7 +227,7 @@ myTests().main()
           </program>
         </activity>
 
-        <exercise label="funct_ex_sumq">
+        <activity label="funct_ex_sumq">
           <statement>
             <p>Write a fruitful function <c>sumTo(n)</c> that returns the sum of all integer numbers up to and
                             including <c>n</c>. For example, <c>sumTo(10)</c> would compute 1 + 2 + 3 + &#x2026; + 10 and return the value <c>55</c>.
@@ -273,7 +273,7 @@ def sumTo(n):
                     </solution>
         </activity>
 
-        <exercise label="funct_ex_addq">
+        <activity label="funct_ex_addq">
           <statement>
             <p>Rewrite the function <c>sumTo(n)</c> that returns the sum of all integer
                     numbers up to and including <c>n</c>. This time, print your answer before you return it.
@@ -299,7 +299,7 @@ myTests().main()
           </program>
         </activity>
 
-        <exercise label="funct_ex_circleq">
+        <activity label="funct_ex_circleq">
           <statement>
             <p>Write a function <c>areaOfCircle(r)</c> which returns the area of a circle of radius <c>r</c>.
                             Make sure you import the math module in your solution to obtain an accurate value of pi.
@@ -346,7 +346,7 @@ def areaOfCircle(r):
                     </solution>
         </activity>
 
-        <exercise label="funct_avg_drop_lowest">
+        <activity label="funct_avg_drop_lowest">
           <statement>
             <p>Finish the function to return the average of three numbers, but drop the lowest value.
                     For example, <c>get_avg_drop_lowest(100, 10, 0)</c> returns <c>55</c>
@@ -373,7 +373,7 @@ myTests().main()
           </program>
         </activity>
 
-        <exercise label="funct_ex_speedingq">
+        <activity label="funct_ex_speedingq">
           <statement>
             <p>You are driving a little too fast, and a police officer stops you. Write code to
                             compute the kind of ticket you'll receive, encoded as an int value: 0 = no ticket, 1 =
@@ -438,7 +438,7 @@ def caught_speeding(speed, is_birthday):
                     </solution>
         </activity>
 
-        <exercise label="funct_check_guess">
+        <activity label="funct_check_guess">
           <statement>
             <p>Write the <c>check_guess</c> function below which computes if a guess is too low, too high, or correct.
                     Return <c>'too low'</c> if <c>guess</c> is less than <c>target</c>, <c>'correct'</c> if they are equal, and
@@ -469,7 +469,7 @@ myTests().main()
           </program>
         </activity>
 
-        <exercise label="funct_ex_alarmq">
+        <activity label="funct_ex_alarmq">
           <statement>
             <p>Write a function called <c>alarm_clock</c> that has parameters <c>day</c> and <c>vacation</c>. Given a <c>day</c> of the week encoded as 0 = Sun, 1 = Mon, 2 = Tue, &#x2026; 6 = Sat and a
                             boolean indicating if we are on <c>vacation</c>, return a string indicating when the

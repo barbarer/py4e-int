@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="bsoup_multiple-choice-questions">
   <title>Multiple Choice Questions</title>
-  <exercise label="Exercises_bsoup_mc1">
+  <activity label="Exercises_bsoup_mc1">
     <statement>
       <p>Q-1: Given the below html, how would this tag type be described in web scraping code?</p>
       <program language="python">
@@ -45,7 +45,7 @@
       </choice>
     </choices>
   </activity>
-  <exercise label="Exercises_bsoup_mc2">
+  <activity label="Exercises_bsoup_mc2">
     <statement>
       <p>Q-2: Which line of code correctly gets the first item in <c>items</c> and makes the most sense following the below code snippet?</p>
       <program language="python">
@@ -98,7 +98,7 @@ items = soup.find_all(class_='items')
       </choice>
     </choices>
   </activity>
-  <exercise label="Exercises_bsoup_mc3">
+  <activity label="Exercises_bsoup_mc3">
     <statement>
       <p>Q-3: How does one parse the HTML into a <c>BeautifulSoup</c> object given a <c>response</c> object?</p>
     </statement>
@@ -129,7 +129,7 @@ items = soup.find_all(class_='items')
       </choice>
     </choices>
   </activity>
-  <exercise label="Exercises_bsoup_mc4">
+  <activity label="Exercises_bsoup_mc4">
     <statement>
       <p>Q-4: Which of the following is the best way to get the value for the <c>id</c> in the first <c>p</c> tag?</p>
     </statement>
@@ -168,7 +168,7 @@ items = soup.find_all(class_='items')
       </choice>
     </choices>
   </activity>
-  <exercise label="Exercises_bsoup_mc5">
+  <activity label="Exercises_bsoup_mc5">
     <statement>
       <p>Q-5: How does one get the first header 1 tag after creating a <c>soup</c> object?</p>
     </statement>
@@ -207,7 +207,7 @@ items = soup.find_all(class_='items')
       </choice>
     </choices>
   </activity>
-  <exercise label="Exercises_bsoup_mc6">
+  <activity label="Exercises_bsoup_mc6">
     <statement>
       <p>Q-6: Which of the following gets the first link tag and returns a dictionary of all attributes and values for that link tag?</p>
     </statement>
@@ -246,7 +246,7 @@ items = soup.find_all(class_='items')
       </choice>
     </choices>
   </activity>
-  <exercise label="Exercises_bsoup_mc7">
+  <activity label="Exercises_bsoup_mc7">
     <statement>
       <p>Q-7: Which of the following finds all link tags?</p>
     </statement>
@@ -293,7 +293,7 @@ items = soup.find_all(class_='items')
       </choice>
     </choices>
   </activity>
-  <exercise label="Exercises_bsoup_mc8">
+  <activity label="Exercises_bsoup_mc8">
     <statement>
       <p>Q-8: Which of the following finds all paragraph tags with <c>class b-soup</c>?</p>
     </statement>
@@ -332,7 +332,7 @@ items = soup.find_all(class_='items')
       </choice>
     </choices>
   </activity>
-  <exercise label="Exercises_bsoup_mc9">
+  <activity label="Exercises_bsoup_mc9">
     <statement>
       <p>Q-9: After creating an empty dictionary and getting a list of all link tags, how does one put the <c>link_tag</c> text as keys and the <c>link_tag</c> <c>href</c> attribute as values for the dictionary?</p>
     </statement>
@@ -371,7 +371,7 @@ items = soup.find_all(class_='items')
       </choice>
     </choices>
   </activity>
-  <exercise label="Exercises_bsoup_mc10">
+  <activity label="Exercises_bsoup_mc10">
     <statement>
       <p>Q-10: Given the below html, after importing re, what will be returned after <c>for tag in soup.find_all(re.compile("t")): print(tag.name)</c> is run?</p>
       <program language="python">
@@ -422,7 +422,7 @@ items = soup.find_all(class_='items')
       </choice>
     </choices>
   </activity>
-  <exercise label="Exercises_bsoup_mc11">
+  <activity label="Exercises_bsoup_mc11">
     <statement>
       <p>Q-11: What does the following block of code do?</p>
       <pre>url = "https://www.nytimes.com"
@@ -456,7 +456,7 @@ soup = BeautifulSoup(html, 'html.parser')</pre>
       </choice>
     </choices>
   </activity>
-  <exercise label="Exercises_bsoup_mc12">
+  <activity label="Exercises_bsoup_mc12">
     <statement>
       <p>Q-12: What does the following block of code print?</p>
       <pre>url = "https://www.nytimes.com/"

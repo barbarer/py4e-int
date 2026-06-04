@@ -17,7 +17,7 @@
             <em>column</em>. When the database software knows the type of
             data in each column, it can choose the most efficient way to store and
             look up the data based on the type of data.</p>
-  <exercise label="db_MC_tableTF">
+  <activity label="db_MC_tableTF">
     <statement>
       <p>Q-1: True or False? Python dictionaries require less defined structure than databases.</p>
     </statement>
@@ -73,7 +73,7 @@ conn.close()</pre>
   <figure align="">
     <image source="images/cursor.svg" width="50%" alt="A Database Cursor"/>
   </figure>
-  <exercise label="dbCreate_MC_cursor">
+  <activity label="dbCreate_MC_cursor">
     <statement>
       <p>Q-2: A cursor that we create to perform operations on the data within the database is very similar to which of the following?</p>
     </statement>
@@ -114,7 +114,7 @@ conn.close()</pre>
   </activity>
   <p>Once we have the cursor, we can begin to execute commands on the
             contents of the database using the <c>execute()</c> method.</p>
-  <exercise label="db_connection_vs_cursor_dd">
+  <activity label="db_connection_vs_cursor_dd">
     <statement>
       <p>Match the term to its definition</p>
     </statement>
@@ -140,7 +140,7 @@ conn.close()</pre>
   <p>
     <url href="http://en.wikipedia.org/wiki/SQL" visual="http://en.wikipedia.org/wiki/SQL">http://en.wikipedia.org/wiki/SQL</url>
   </p>
-  <exercise label="dbCreate_MC_SQL">
+  <activity label="dbCreate_MC_SQL">
     <statement>
       <p>Q-4: SQL stands for ___________.</p>
     </statement>
@@ -271,7 +271,7 @@ cur.close()</pre>
             program repeatedly. After the <c>DELETE</c> is performed, we also
             call <c>commit()</c> to force the data to be removed from the
             database.</p>
-  <exercise label="dbCreate_PP" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="dbCreate_PP" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Put the following code in order to create a cursor, make a table called <q>Cats</q> with
             two text columns (<q>Name</q> and <q>Breed</q>). Then add the rows for Whiskers, Ruby, and Milo in

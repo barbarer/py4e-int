@@ -42,7 +42,7 @@
 
 &amp;#60;/bookstore&amp;#62;</raw>
   </hint>
-  <exercise label="web_get_book_info_xml">
+  <activity label="web_get_book_info_xml">
     <statement>
       <p>Fix the errors in the code below so that it reads the data from books.xml
             and finds all of the book data and prints the title for each book and
@@ -87,7 +87,7 @@ for book in book_list:
     &amp;#60;/body&amp;#62;
 &amp;#60;/nitf&amp;#62;</raw>
   </hint>
-  <exercise label="web_get_news_info_xml">
+  <activity label="web_get_news_info_xml">
     <statement>
       <p>Fix the errors in the code below so that it reads the data from news.xml
             and prints the headline and date.</p>
@@ -139,7 +139,7 @@ print(date)
 
 &amp;#60;/current_observation&amp;#62;</raw>
   </hint>
-  <exercise label="web_get_weather_info_xml">
+  <activity label="web_get_weather_info_xml">
     <statement>
       <p>Finish the code below so that it reads the data from weather.xml
             into a tree and then prints the location, temp_f, and windchill_f for
@@ -189,7 +189,7 @@ tree = ET.fromstring(data)
   "ip_address": "67.76.188.26"
 }]</raw>
   </hint>
-  <exercise label="web_email_json_write">
+  <activity label="web_email_json_write">
     <statement>
       <p>Finish the code below so that it prints the first name, last name and email
             address for each person in the list of dictionaries returned from <c>json.loads(data).</c></p>
@@ -237,7 +237,7 @@ person_list = json.loads(data)
   "spouse": null
 }</raw>
   </hint>
-  <exercise label="web_email_person_write">
+  <activity label="web_email_person_write">
     <statement>
       <p>Finish the code below so that it prints the first name, last name, the
             state the person lives in, and their mobile phone number.</p>
