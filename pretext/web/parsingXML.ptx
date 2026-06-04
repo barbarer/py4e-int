@@ -16,7 +16,7 @@
     <feedback><p>['"]?yes['"]?: It prints <q>Attr: </q> plus the value of the hide attribute in the email tag.</p></feedback></condition>
     <condition string="['&quot;]?yes['&quot;]?"><feedback><p>Something will be printed before the value. Look at the print statement again.</p></feedback></condition>
     <condition string=".*"><feedback><p>What is the value of the hide attribute?</p></feedback></condition></var>
-    </setup></exercise>        
+    </setup></activity>        
     
     <p>Here is a simple application that parses some XML and extracts some data
             elements from the XML:</p>
@@ -45,7 +45,7 @@ print('Attr:', tree.find('email').get('hide'))
         </code>
     </program>
     
-</exercise>
+</activity>
         <p>The triple single quote (<c>'''</c>), as well as the triple double quote (<c>"""</c>),
             allow for the creation of strings in Python that span multiple lines.</p>
         <p>Calling <c>fromstring</c> converts the string representation of
@@ -68,7 +68,7 @@ print('Attr:', tree.find('email').get('hide'))
             </introduction>
         <exercise label="xml_parse_last_printed">
             <statement>
-    <p>csp-10-2-3: What is the last thing (last line of text) that will be printed when the code below runs? <var/>  </p></statement><setup><var><condition string="['&quot;]?Attr"><feedback><p>None[""]?: The default is to print None if there is no attribute with that name when you use <c>.get('name')</c>.</p></feedback></condition><condition string="['&quot;]?None['&quot;]?"><feedback><p>Something will be printed before the value. Look at the print statement again.</p></feedback></condition><condition string=".*"><feedback><p>What is the default value when there is no attribute with that name?</p></feedback></condition></var></setup></exercise>
+    <p>csp-10-2-3: What is the last thing (last line of text) that will be printed when the code below runs? <var/>  </p></statement><setup><var><condition string="['&quot;]?Attr"><feedback><p>None[""]?: The default is to print None if there is no attribute with that name when you use <c>.get('name')</c>.</p></feedback></condition><condition string="['&quot;]?None['&quot;]?"><feedback><p>Something will be printed before the value. Look at the print statement again.</p></feedback></condition><condition string=".*"><feedback><p>What is the default value when there is no attribute with that name?</p></feedback></condition></var></setup></activity>
 <exercise label="xml_parse_person_wihtout_attr_ac1">
     <statement>
             <p>Run this to see what it prints.</p>
@@ -93,7 +93,7 @@ print('Attr:', tree.find('email').get('hide'))
         </code>
     </program>
 
-</exercise>
+</activity>
         </subexercises>
         <note>
                 <p>Just like with dictionaries we can use <c>get</c> to get the value of an attribute and if the attribute isn't there the default is to return <c>None</c>.</p>
@@ -139,7 +139,7 @@ print('Lang:',book.find('title').get('lang'))
     </program>
 
   
-</exercise>
+</activity>
              </subexercises>
              <p>What do you think would happen if we looked for the first &#8216;author' in <c>tree</c> rather than in <c>book</c>?  Modify the code to see what happens.</p>
      
@@ -174,7 +174,7 @@ print('Title:', book.find('title').text)
 print('Lang:',book.find('title').get('lang'))
         </code>
     </program>
-</exercise>
+</activity>
 
 <exercise label="xml_parse_fix_note_data">
     <statement>
@@ -212,7 +212,7 @@ print('body:', note.find('body').text)
 print('time region:',note.find('time').get('region'))
         </code>
     </program>
-</exercise>
+</activity>
         </subexercises>
         <subexercises xml:id="web_write-code-to-process-xml">
             <title>Write Code to Process XML</title>
@@ -237,7 +237,7 @@ data = '''
 '''
         </code>
     </program>
-</exercise>
+</activity>
 
 <exercise label="xml_parse_write_code_note_data_ac">
     <statement>
@@ -261,7 +261,7 @@ data = '''
 '''
         </code>
     </program>
-</exercise>
+</activity>
         </subexercises>
         
     </worksheet>

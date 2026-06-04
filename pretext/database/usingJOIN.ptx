@@ -45,7 +45,7 @@ SELECT * FROM Follows JOIN People
         </condition>
       </var>
     </setup>
-  </exercise>
+  </activity>
   <exercise label="dbJoin_on_fill1">
     <statement>
       <p>Q-2: Fill in the blank in the following: SELECT * FROM Follows JOIN People <BlankNode/> Follows.from_id = People.id LIMIT 5 <var/>  </p>
@@ -64,7 +64,7 @@ SELECT * FROM Follows JOIN People
         </condition>
       </var>
     </setup>
-  </exercise>
+  </activity>
   <p>
     <term>Connecting Tables Using JOIN</term>
   </p>
@@ -96,7 +96,7 @@ SELECT * FROM Follows JOIN People
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>The following code demonstrates the data that we will have in the
             database after the multi-table Twitter spider program (above) has been
             run several times.</p>
@@ -192,7 +192,7 @@ Connections for id=2:
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>You can use <c>table_name.field_name</c> to specify the column that you want from each table.</p>
   <exercise label="db_select_bike_join_ex1">
     <statement>
@@ -214,7 +214,7 @@ assert 4,0 == W00392
 assert 3,1 == 3rd &amp; H St NE
         </code>
     </program>
-  </exercise>
+  </activity>
   <p>You can also add a <c>WHERE</c> clause.</p>
   <exercise label="db_select_bike_join_with_where_ex1">
     <statement>
@@ -238,5 +238,5 @@ assert 3,1 == 85102
 assert 3,2 == 14th &amp; G St NW
         </code>
     </program>
-  </exercise>
+  </activity>
 </section>

@@ -59,7 +59,7 @@
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="funct_tup_test_last">
       <statement>
         <p>What is the last thing that will be printed when the code below runs? <var/>  </p>
@@ -78,7 +78,7 @@
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="func_tup_test_ac">
       <statement>
         <p>Run this code to see what it prints.</p>
@@ -102,7 +102,7 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="funct_tuple_test_char">
       <statement>
         <p>What characters are used to indicate the start and end of a tuple in the code above? <var/>  </p>
@@ -121,7 +121,7 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="funct_tuple_first_index">
       <statement>
         <p>What index is used to get the first item in a tuple? <var/>  </p>
@@ -140,7 +140,7 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="funct_tuple_last_index">
       <statement>
         <p>What negative index is used to get the last item in a tuple? <var/>  </p>
@@ -159,7 +159,7 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="functions_tuples-are-immutable">
     <title>Tuples are Immutable</title>
@@ -186,7 +186,7 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
+    </activity>
     <note>
       <p>Tuples are immutable (not changeable), so you will get an error if you try to change them.</p>
     </note>
@@ -210,7 +210,7 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="func_tuple_list_zip_ac">
       <statement>
         <p>Run this code to see what it prints.</p>
@@ -225,7 +225,7 @@ print(l3[0][1])
 print(l3)
         </code>
       </program>
-    </exercise>
+    </activity>
     <note>
       <p>The <c>zip</c> function takes two lists and returns an <c>iterator</c>. You can convert this iterator to a list of tuples using the <c>list</c> function.  Each tuple has an element from list1 and an element from list2 in order.</p>
     </note>
@@ -256,7 +256,7 @@ print(l3)
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="func_dict_example">
       <statement>
         <p>Run this code to see what it prints.</p>
@@ -281,7 +281,7 @@ print(d1)
 print(type(d1))
         </code>
       </program>
-    </exercise>
+    </activity>
         <p>Look at the Python code below.  What do you think will happen when you run the following code?</p>
     <exercise label="func_dict_with_key_error">
       <statement>
@@ -295,7 +295,7 @@ d['south'] = "Kentucky"
 print(d['east'])
         </code>
       </program>
-    </exercise>
+    </activity>
     <p>There is another way to update the value for a key that works even if the key isn't in the dictionary already.</p>
     <exercise label="func_dict_example_v2">
       <statement>
@@ -321,7 +321,7 @@ print(d1['a'])
 print(d1)
         </code>
       </program>
-    </exercise>
+    </activity>
     <note>
       <p>The better way to increment a count at a key is to use
                     <c>dict[key] = dict.get(key,0) + 1</c>.  This will avoid a key error if the key isn't in the dictionary and the code is shorter.</p>
@@ -351,7 +351,7 @@ print(d1)
           <response>Dictionary</response>
         </match>
       </cardsort>
-    </exercise>
+    </activity>
     <exercise label="funct_which_are_immutable_mc">
       <statement>
         <p>Which of the following types are immutable (don't change)?</p>
@@ -390,7 +390,7 @@ print(d1)
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
   </subsection>
 </section>

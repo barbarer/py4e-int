@@ -4,7 +4,7 @@
   <warning>
     <p>Be careful not to create infinite loops, as they will cause the page to freeze.</p>
   </warning>
-  <exercise>
+  <activity>
     <statement>
       <p>Fix the 5 errors in the code below to return a countdown of the numbers from 10 to 0, including 0.</p>
     </statement>
@@ -56,7 +56,7 @@ countdown()
         </code>
       </program>
     </solution>
-  </exercise>
+  </activity>
   
 
 
@@ -73,8 +73,8 @@ while x &lt; 100:
     x = x + 1
         </code>
     </program>
-  </exercise>
-  <exercise>
+  </activity>
+  <activity>
     <statement>
       <p>Make 5 changes to the code below to correctly print a count up from -10 to 0, including 0.</p>
     </statement>
@@ -127,7 +127,7 @@ class myTests(TestCaseGui):
 myTests().main()
         </code></program>
             </solution>
-  </exercise>
+  </activity>
   <exercise label="itr-ex-allValuesq">
     <statement>
       <p>Finish lines 1 and 5 so that the following code correctly prints every integer from -5 to -1, including -1.</p>
@@ -149,8 +149,8 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
     </program>
-  </exercise>
-  <exercise>
+  </activity>
+  <activity>
     <statement>
       <p>Complete the code on lines 4 and 6 so that it prints the number 6.</p>
     </statement>
@@ -197,7 +197,7 @@ myTests().main()
         </code></program>
 
             </solution>
-  </exercise>
+  </activity>
 
   <exercise label="itr-ex-root_ac" xml:id="itr-ex-root_ac">
     <statement>
@@ -216,7 +216,7 @@ guess = (guess + closer) / 2.0
     print("Square root of", target, "is", guess)
         </code>
     </program>
-  </exercise>
+  </activity>
   <exercise label="itr-ex-root_pp" xml:id="itr-ex-root_pp">
     <statement>
       <p>Create code to print an estimate of the square root of a number (target). You are given an initial guess of 2.</p>
@@ -245,13 +245,13 @@ guess = (guess + closer) / 2.0
         <cline>print("Square root of", target, "is", guess)</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 
   <exercise label="iterations_writecode6">
       <select grade="first" questions="itr-ex-root_ac itr-ex-root_pp"/>
-  </exercise>
+  </activity>
 
-  <exercise>
+  <activity>
     <statement>
       <p>This function currently takes a start and stop argument and uses a for loop to find the sum of all the numbers between them (inclusive).
                     Change the for loop to a while loop while still using the same parameters.</p>
@@ -312,7 +312,7 @@ class myTests(TestCaseGui):
 myTests().main()
         </code></program>
             </solution>
-  </exercise>
+  </activity>
   <exercise label="int-ex-timesq">
     <statement>
       <p>The program below is supposed to print the times tables from 1 to 3, but
@@ -325,8 +325,8 @@ for x in range(1, 3):
         print(str(x) + " * " str(y) + " = " x * y)
         </code>
     </program>
-  </exercise>
-  <exercise>
+  </activity>
+  <activity>
     <statement>
       <p>The following code prints the times tables for 1 to 3 using two for loops.
                     Rewrite the program to use a while and a for loop instead.</p>
@@ -357,7 +357,7 @@ for x in range(1, 4):
         </code>
       </program>
     </solution>
-  </exercise>
+  </activity>
 
   <exercise label="int-ex-while_ac" xml:id="int-ex-while_ac">
     <statement>
@@ -381,7 +381,7 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
     </program>
-  </exercise>
+  </activity>
 
   <exercise label="int-ex-while_pp" xml:id="int-ex-while_pp">
     <statement>
@@ -410,10 +410,10 @@ myTests().main()
         <cline>print(product)</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 
   <exercise label="iterations_writecode10">
       <select grade="first" questions="int-ex-while_ac int-ex-while_pp"/>
-  </exercise>
+  </activity>
 
 </section>

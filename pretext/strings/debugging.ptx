@@ -54,7 +54,7 @@ IndexError: string index out of range
         </condition>
       </var>
     </setup>
-  </exercise>
+  </activity>
   <p>The code works fine until it is presented with an empty line. In that case, there is
             no zero-th character, so we get a traceback. There are two solutions to
             make line three <q>safe,</q> even if the line is empty.</p>
@@ -83,7 +83,7 @@ if line.startswith('#'):
         </condition>
       </var>
     </setup>
-  </exercise>
+  </activity>
   <p>Another way is to safely write the <c>if</c> statement using the
             <em>guardian</em> pattern and make sure the second logical
             expression is evaluated only where there is at least one character in
@@ -111,5 +111,5 @@ if len(line) &gt; 0 and line[0] == '#':
         </condition>
       </var>
     </setup>
-  </exercise>
+  </activity>
 </section>

@@ -83,7 +83,7 @@ y = re.findall("blue", str)
 print(y)
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="regex_findall_return_type_fitb">
       <statement>
         <p>11-9-2: What type of thing does <c>findall</c> return? <var/>  </p>
@@ -102,7 +102,7 @@ print(y)
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="regex_search_not_found_return_fitb">
       <statement>
         <p>11-9-3: What does <c>search</c> return if no match is found? <var/>  </p>
@@ -126,7 +126,7 @@ print(y)
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="regex_search_fitb">
       <statement>
         <p>11-9-4: Which method returns information about the first match as an object? <var/>  </p>
@@ -145,7 +145,7 @@ print(y)
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="regex_quantifiers">
     <title>Quantifiers</title>
@@ -180,7 +180,7 @@ res5 = re.findall("abc{1,3}", str5)
 print(res5)
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="regex_quant_2_mc">
       <statement>
         <p>11-9-6: How many c's must there be in a row for c{2} to match at least part of the string?</p>
@@ -219,7 +219,7 @@ print(res5)
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <exercise label="regex_digit_fitb">
       <statement>
         <p>11-9-7: What characters are used to match a digit? <var/>  </p>
@@ -243,7 +243,7 @@ print(res5)
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="regex_quant_v2_dnd">
       <statement>
         <p>Drag each symbol to the number of items it matches.</p>
@@ -273,7 +273,7 @@ print(res5)
           <response>One, two, or three</response>
         </match>
       </cardsort>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="regex_character-sets">
     <title>Character Sets</title>
@@ -291,7 +291,7 @@ res1 = re.findall("b[ea]n", str1)
 print(res1)
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="regex_char_sets_meaning">
       <statement>
         <p>11-9-10: What does <c>[ea]</c> mean?</p>
@@ -330,7 +330,7 @@ print(res1)
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="regex_character-ranges">
     <title>Character Ranges</title>
@@ -350,7 +350,7 @@ res2 = re.findall("[^0-9.]+", str1)
 print(res1)
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="regex_char_range_digits">
       <statement>
         <p>11-9-12: What does <c>[0-9.]+</c> mean?</p>
@@ -389,7 +389,7 @@ print(res1)
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <exercise label="regex_neg_char_range_digits">
       <statement>
         <p>11-9-13: What does <c>[^0-9.]+</c> mean?</p>
@@ -428,7 +428,7 @@ print(res1)
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="regex_character-classes">
     <title>Character Classes</title>
@@ -457,7 +457,7 @@ res4 = re.findall("0*\d\d", str4)
 print(res4)
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="regex_char_classes_dnd">
       <statement>
         <p>Drag each item to what it matches</p>
@@ -483,7 +483,7 @@ print(res4)
           <response>A whitespace character (including space, tab, and newline)</response>
         </match>
       </cardsort>
-    </exercise>
+    </activity>
     <exercise label="regex_char_classes_uppercase">
       <statement>
         <p>Run the code below to see what it prints.</p>
@@ -504,7 +504,7 @@ res3 = re.findall("\D+", str2)
 print(res3)
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="regex_char_classes2_dnd">
       <statement>
         <p>Drag each item to what it matches</p>
@@ -526,7 +526,7 @@ print(res3)
           <response>Any non-digit character (not 0-9).</response>
         </match>
       </cardsort>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="regex_escaping-special-characters">
     <title>Escaping Special Characters</title>
@@ -552,7 +552,7 @@ res3 = re.findall("\w \+ \w", str3)
 print(res3)
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="regex_num_matches_escape_v2_mc">
       <statement>
         <p>11-9-19: How many items will be in the list that the following code prints?</p>
@@ -595,7 +595,7 @@ print(res)</pre>
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="regex_greedy-and-non-greedy-matching">
     <title>Greedy and Non-Greedy Matching</title>
@@ -616,7 +616,7 @@ res2 = re.findall('F.+?:', str1)
 print(res2)
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="regex_not_greedy_char">
       <statement>
         <p>11-9-21: What character can you add after a quantifier like &#x2018;+' or &#x2018;*' to make it not greedy? <var/>  </p>
@@ -635,7 +635,7 @@ print(res2)
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share answers.</p>
     
   </subsection>

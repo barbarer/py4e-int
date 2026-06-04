@@ -69,7 +69,7 @@
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="funct_ac_pogil_initials_v2">
       <statement>
         <p>Run the code below to see what it prints.  Then fix it to pass the given test.  It should return a string with the
@@ -102,7 +102,7 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
       </program>
-    </exercise>
+    </activity>
     <note>
       <p>Use [index] to get a character from a string.  The first character in a string is at index 0 and the last is at the length of the string minus 1 (also know as index -1 in Python).  Also note that you can use pairs of single quotes or double quotes to create a string.  This is useful when the string includes a single quote.</p>
     </note>
@@ -125,7 +125,7 @@ myTests().main()
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="funct_fitb_42_type">
       <statement>
         <p>What type of thing is 42, i.e. what class does it belong to? <var/>  </p>
@@ -144,7 +144,7 @@ myTests().main()
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="funct_fitb_add_strings">
       <statement>
         <p>What is the symbol that is used to append (concatenate) strings together? <var/>  </p>
@@ -163,7 +163,7 @@ myTests().main()
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="functions_string-slices">
     <title>String Slices</title>
@@ -185,7 +185,7 @@ myTests().main()
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="funct_ac_pogil_short_name">
       <statement>
         <p>Run the code below to see what it prints.</p>
@@ -206,7 +206,7 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
+    </activity>
     <note>
       <p>Use the slice [start:end] operator to get a slice (substring) from a string. It will return a new string starting at the start and including all the characters up to just before the end (end - 1).</p>
     </note>
@@ -228,7 +228,7 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="funct_fitb_last_three_char_slice">
       <statement>
         <p>Use the slice operator to return a new string with just the last three characters from the variable named <c>dna</c> using a negative index? <var/>  </p>
@@ -247,7 +247,7 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="funct_fitb_start_slice_def">
       <statement>
         <p>What index will the slice (substring) start with if the start index isn't specified? <var/>  </p>
@@ -266,7 +266,7 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="funt_mc_end_slice">
       <statement>
         <p>What index is the default end index if it isn't specified in a slice?</p>
@@ -297,7 +297,7 @@ main()
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <exercise label="funct_fitb_string_nchars">
       <statement>
         <p>What built-in function tells you the number of characters in a string? <var/>  </p>
@@ -316,7 +316,7 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="fuct_ac_list_join_strings_without_first">
       <statement>
         <p>Write a function <c>join_no_first</c> that takes two strings <c>a</c> and <c>b</c> and returns a new string with all the characters in string <c>a</c> except the first one followed by all the characters in <c>b</c> except the first one.  For example, <c>join_no_first('hi', 'bye')</c> would return <c>'iye'</c>.</p>
@@ -342,7 +342,7 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
       </program>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="functions_input-and-converting-between-strings-and-numbers">
     <title>Input and Converting Between Strings and Numbers</title>
@@ -368,7 +368,7 @@ def get_name():
 get_name()
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="funct_fitb_convert_string_int">
       <statement>
         <p>What is the name of the built-in function that will convert a string to an integer? <var/>  </p>
@@ -387,7 +387,7 @@ get_name()
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="funct_fitb_convert_int_string">
       <statement>
         <p>What is the name of the built-in function that will convert an integer to a string? <var/>  </p>
@@ -406,7 +406,7 @@ get_name()
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="functions_string-methods">
     <title>String Methods</title>
@@ -429,7 +429,7 @@ get_name()
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="funct_ac_pogil_user_name">
       <statement>
         <p>Run the code below to see what it prints.</p>
@@ -456,7 +456,7 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="funct_fitb_pogil_find_return">
       <statement>
         <p>What does the function <c>find</c> return if the character is not found in the string? <var/>  </p>
@@ -475,7 +475,7 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <note>
       <p>Strings are immutable, which means that they do not change.  String methods that appear to change a string return a new string.</p>
     </note>
@@ -504,7 +504,7 @@ main()
           <response>Returns a new string with just the first letter capitalized (uppercase).</response>
         </match>
       </cardsort>
-    </exercise>
+    </activity>
     <exercise label="funct_ac_pogil_strip_methods_v2">
       <statement>
         <p>Run the code below to see what it prints.</p>
@@ -533,7 +533,7 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="funct_string_methods2_dnd">
       <statement>
         <p>Drag each string method to the description of what it does.</p>
@@ -559,7 +559,7 @@ main()
           <response>Returns the starting index of a target string if found or -1 if not found.</response>
         </match>
       </cardsort>
-    </exercise>
+    </activity>
     <p>For more information on string methods see <url href="https://www.w3schools.com/python/python_ref_string.asp" visual="https://www.w3schools.com/python/python_ref_string.asp">https://www.w3schools.com/python/python_ref_string.asp</url>.</p>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
   </subsection>

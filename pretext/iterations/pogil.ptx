@@ -58,7 +58,7 @@ for x in [2, 7, 1]:
 print("goodbye")
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="loops_MC_pogil_indented">
       <statement>
         <p>Q-2: How many times does the indented line of code execute under the <c>for</c> loop?</p>
@@ -105,7 +105,7 @@ print("goodbye")
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <exercise label="loops_MC_pogil_notindented">
       <statement>
         <p>Q-3: How many times does the line of code NOT indented execute after the <c>for</c> loop?</p>
@@ -152,7 +152,7 @@ print("goodbye")
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <exercise label="loops_dnd_pogil_xvalue">
       <statement>
         <p>Match each execution of Line 3 to the value "x" has after Line 3 is executed.</p>
@@ -174,7 +174,7 @@ print("goodbye")
           <response>x = 1</response>
         </match>
       </cardsort>
-    </exercise>
+    </activity>
     <exercise label="loops_dnd_pogil_modifiedlist">
       <statement>
         <p>Imagine that the list [2, 7, 1] from the code above was modified to one of the lists below. Match each new list to the amount of times it would make the "for" loop execute.</p>
@@ -200,7 +200,7 @@ print("goodbye")
           <response>1 time</response>
         </match>
       </cardsort>
-    </exercise>
+    </activity>
     <p>In general, the length of the list determines the number of times that the loop repeats.
                 The value of the variable <c>x</c> is selected from the list. Each time the loop runs, the
                 next value from the list is assigned to <c>x</c>.</p>
@@ -219,7 +219,7 @@ for x in numbers:
 print("goodbye")
         </code>
       </program>
-    </exercise>
+    </activity>
     <p>In addition, <c>for</c> loops can be used with strings:</p>
     <exercise label="loops_ac_pogil_string">
       <statement>
@@ -231,7 +231,7 @@ for c in "Hi!":
     print(c)
         </code>
       </program>
-    </exercise>
+    </activity>
     <p>With strings, a <c>for</c> statement iterates over each character in the string.
                 The length of the string determines how many times the body of the loop will run.</p>
     <p><c>for</c> loops can also handle many other data types, like tuples and dictionaries.
@@ -260,7 +260,7 @@ for i in range(5): #this line prints nothing
     print(i)
         </code>
       </program>
-    </exercise>
+    </activity>
     <p>The first line of output describes the range as a function, whereas the second line
                 shows the actual range of values as a list by using the <c>list</c> function.</p>
     <p>If the argument of the <c>range</c> function specifies a single number, like <c>range(x)</c>,
@@ -289,7 +289,7 @@ for i in range(5): #this line prints nothing
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <p>If the argument of the <c>range</c> function specifies two numbers, like <c>range(x, y)</c>,
                 the first number listed will be x, the last number listed will be y - 1, and there will
                 be y - x numbers in the list.</p>
@@ -316,7 +316,7 @@ for i in range(5): #this line prints nothing
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <p>If the argument of the <c>range</c> function specifies three numbers, like <c>range(x, y, z)</c>,
                 the first number listed will still be x, just like the two parameter version. The third
                 argument represents how much to increment the number by each time. To calculate how many
@@ -340,7 +340,7 @@ for i in range(5): #this line prints nothing
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="loops_MC_pogil_whichtype1">
       <statement>
         <p>Q-12: If you wanted to execute a loop 100 times, which type of <c>for</c> statement should you use?</p>
@@ -379,7 +379,7 @@ for i in range(5): #this line prints nothing
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <exercise label="loops_MC_pogil_whichtype2">
       <statement>
         <p>Q-13: If you wanted to use each item of an existing list inside the loop, which type of <c>for</c> statement should you use?</p>
@@ -418,7 +418,7 @@ for i in range(5): #this line prints nothing
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <p>The arguments to <c>range</c> must be integers, so <c>range</c> does not work with strings.
                 However, if you wanted to print the letters A to Z in a loop, you could do something
                 like this:</p>
@@ -432,7 +432,7 @@ for i in range(65, 91):
     print(chr(i))
         </code>
       </program>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="iterations_while-statements">
     <title>while Statements</title>
@@ -450,7 +450,7 @@ while i &lt; 3:
 print("goodbye")
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="loops_mc_pogil_loopcondition">
       <statement>
         <p>Q-16: What must the value of the Boolean expression (after the <c>while</c>) be in order
@@ -474,7 +474,7 @@ print("goodbye")
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <p>In the above code, the variable <c>i</c> is incremented by 1 each time the loop body
                 is executed. Because the value of <c>i</c> steadily grows, the <q>loop condition</q> (the
                 Boolean expression after the <c>while</c>) eventually becomes false when i = 3, which
@@ -525,7 +525,7 @@ print("goodbye")
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <exercise label="loops_mc_pogil_twice">
       <statement>
         <p>Q-18: Which of these modifications would make the loop in the above code only run twice? There are one or more answers.</p>
@@ -564,7 +564,7 @@ print("goodbye")
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <p>A <c>while</c> loop has three parts that control the number of times it executes.
                 The first part initializes the variable or condition, the second part tests
                 whether the end has been reached, and the third part updates the variable or
@@ -607,7 +607,7 @@ print("goodbye")
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <p>When writing a <c>while</c> loop, it's helpful to answer a few
                 questions before you start:</p>
     <p>
@@ -641,7 +641,7 @@ def add(n):
 add(5)
         </code>
       </program>
-    </exercise>
+    </activity>
     <p>Before the loop begins, the <c>i</c> variable, which counts how many
                 times the loop runs, must be initialized. However, the <c>total</c>
                 variable must also be initialized outside of the <c>while</c> loop,

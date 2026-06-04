@@ -30,7 +30,7 @@ lst = re.findall('\S+@\S+', s)
 print(lst)
         </code>
     </program>
-  </exercise>
+  </activity>
   <p>The <c>findall()</c> method searches the string in the second
             argument and returns a list of all of the strings that look like email
             addresses. We are using a two-character sequence that matches a
@@ -75,7 +75,7 @@ print(lst)
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>Translating the regular expression, we are looking for substrings that
             have at least one non-whitespace character, followed by an at-sign,
             followed by at least one more non-whitespace character. The
@@ -101,7 +101,7 @@ for line in hand:
         print(x)
         </code>
     </program>
-  </exercise>
+  </activity>
   <p>We read each line and then extract all the substrings that match our
             regular expression. Since <c>findall()</c> returns a list, we
             simply check if the number of elements in our returned list is more than
@@ -141,7 +141,7 @@ for line in hand:
         </condition>
       </var>
     </setup>
-  </exercise>
+  </activity>
   <p>This is getting a little complicated and you can begin to see why
             regular expressions are their own little language unto themselves.
             Translating this regular expression, we are looking for substrings that
@@ -169,7 +169,7 @@ for line in hand:
         print(x)
         </code>
     </program>
-  </exercise>
+  </activity>
   <p>Notice that on the <c>source@collab.sakaiproject.org</c> lines, our regular
             expression eliminated two letters at the end of the string (<q>&gt;;</q>).
             This is because when we append <c>[a-zA-Z]</c> to the end of our regular
@@ -215,7 +215,7 @@ for line in hand:
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>Also note that the output of the program is a Python list that has a
             string as the single element in the list.</p>
 </section>

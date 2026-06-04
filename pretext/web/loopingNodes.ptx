@@ -29,7 +29,7 @@ for item in lst:
     print('Attribute', item.get('x'))
         </code>
     </program>
-  </exercise>
+  </activity>
   <p>The <c>findall</c> method retrieves a Python list of subtrees that
             represent the <c>user</c> structures in the XML tree. Then we can
             write a <c>for</c> loop that looks at each of the user nodes, and
@@ -53,7 +53,7 @@ for item in lst:
         <cline>    Print the x attribute from the user node using get</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
   <p>It is important to include all parent level elements in the <c>findall</c>
             statement except for the top level element (e.g., <c>users/user</c>).
             Otherwise, Python will not find any desired nodes.</p>
@@ -78,7 +78,7 @@ lst2 = stuff.findall('user')
 print('User count:', len(lst2))
         </code>
     </program>
-  </exercise>
+  </activity>
   <p><c>lst</c> stores all <c>user</c> elements that are nested within their <c>users</c>
             parent. <c>lst2</c> looks for <c>user</c> elements that are not nested within
             the top level <c>stuff</c> element where there are none.</p>
@@ -101,5 +101,5 @@ level elements in the <c>findall</c> statement expect for the top level element.
         </condition>
       </var>
     </setup>
-  </exercise>
+  </activity>
 </section>

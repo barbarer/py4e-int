@@ -47,7 +47,7 @@ X-DSPAM-Probability: 0.0000</pre>
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>Translating this, we are saying, we want lines that start with <c>X-</c>,
             followed by zero or more characters (<c>.*</c>), followed by a colon (<c>:</c>)
             and then a space. After the space we are looking for one or more
@@ -71,7 +71,7 @@ for line in hand:
         print(line)
         </code>
     </program>
-  </exercise>
+  </activity>
   <p>When we run the program, we see the data nicely filtered to show only
             the lines we are looking for.</p>
   <p>But now we have to solve the problem of extracting the numbers. While it
@@ -100,7 +100,7 @@ for item in s:
         print(x)
         </code>
     </program>
-  </exercise>
+  </activity>
   <p>Instead of calling <c>search()</c>, we add parentheses around the
             part of the regular expression that represents the floating-point number
             to indicate we only want <c>findall()</c> to give us back the
@@ -130,7 +130,7 @@ for line in hand:
         print(x)
         </code>
     </program>
-  </exercise>
+  </activity>
   <p>Translating our regular expression, we are looking for lines that start
             with <c>Details:</c>, followed by any number of characters (<c>.*</c>), followed
             by <c>rev=</c>, and then by one or more digits. We want to find lines that
@@ -179,7 +179,7 @@ for line in hand:
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>Now we can use regular expressions to redo an exercise from earlier in
             the book where we were interested in the time of day of each mail
             message. We looked for lines of the form:</p>
@@ -222,7 +222,7 @@ for line in hand:
         print(x)
         </code>
     </program>
-  </exercise>
+  </activity>
   <exercise label="re-combo-dnd">
     <statement>
       <p> Match the following symbols with their function in a regular expression equation.</p>
@@ -256,5 +256,5 @@ for line in hand:
         <response>Allow you to extract a particular subset of the matched string rather than the whole string.</response>
       </match>
     </cardsort>
-  </exercise>
+  </activity>
 </section>

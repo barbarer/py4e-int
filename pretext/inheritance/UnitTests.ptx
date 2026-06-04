@@ -39,7 +39,7 @@ def test():
 test()
         </code>
       </program>
-    </exercise>
+    </activity>
     <p>This type of test is better than just printing out actual output because
                 then you have to think about what the correct value should be.  It lets you
                 quickly compare the expected value and the actual value.  However, you have
@@ -76,7 +76,7 @@ def test():
 test()
         </code>
       </program>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="inheritance_creating-test-cases">
     <title>Creating Test Cases</title>
@@ -115,7 +115,7 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
       </program>
-    </exercise>
+    </activity>
     <p>Look at the unit tests above and answer the questions below.</p>
     <exercise label="ut_fitb_test_class">
       <statement>
@@ -135,7 +135,7 @@ myTests().main()
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="ut_fitb_test_parent">
       <statement>
         <p>Q-5: What class does the defined class inherit from? <var/>  </p>
@@ -154,7 +154,7 @@ myTests().main()
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="ut-ex-compare-valuep-ac">
       <statement>
         <p>Run the code below to see what the unit tests do and then add another test to
@@ -180,7 +180,7 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="ut_get_middle_ac_add_test">
       <statement>
         <p>Fix the function below to return the middle characters from the passed string.
@@ -212,7 +212,7 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
       </program>
-    </exercise>
+    </activity>
     <p>Add tests to check the result when <c>str</c> has one or two letters.</p>
     <note>
       <p>Unit tests in this ebook must include the line <c>from unittest.gui import TestCaseGui</c>
@@ -254,7 +254,7 @@ myTests().main()
           <response> x == False</response>
         </match>
       </cardsort>
-    </exercise>
+    </activity>
     <note>
       <p>All of the assert methods can take a third parameter which is a message (string) that explains what was tested.</p>
     </note>
@@ -334,7 +334,7 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
       </program>
-    </exercise>
+    </activity>
     <p>Modify the code above to add a method in the <c>Car</c> class to set (change) the model name and add a test method to test that the new method works.</p>
     <exercise label="ut-pp-test-lower" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
@@ -384,6 +384,6 @@ myTests().main()
           <cline>        self.assertEqual(p2i, "KW", "p2.initials()")</cline>
         </block>
       </blocks>
-    </exercise>
+    </activity>
   </subsection>
 </section>

@@ -40,7 +40,7 @@ for line in hand:
         print(line)
         </code>
     </program>
-  </exercise>
+  </activity>
   <p>We open the file, loop through each line, and use the regular expression
             <c>search()</c> to only print out lines that contain the string
             <q>From:</q>. This program does not use the real power of regular
@@ -84,7 +84,7 @@ for line in hand:
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>The power of the regular expressions comes when we add special
             characters to the search string that allow us to more precisely control
             which lines match the string. Adding these special characters to our
@@ -107,7 +107,7 @@ for line in hand:
         print(line)
         </code>
     </program>
-  </exercise>
+  </activity>
   <p>Now we will only match lines that <em>start with</em> the string
             <q>From:</q>. This is still a very simple example that we could have done
             equivalently with the <c>startswith()</c> method from the string
@@ -162,7 +162,7 @@ for line in hand:
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <exercise label="re-pp-wolverines-v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Construct a block of code that loops reading lines from a file, removes whitespace on the right of the line, and prints out any line starting with &#x2018;Wolverines'.</p>
@@ -197,5 +197,5 @@ for line in hand:
         <cline>            print(line)</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 </section>

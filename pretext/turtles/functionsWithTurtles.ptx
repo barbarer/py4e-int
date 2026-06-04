@@ -38,7 +38,7 @@ for sides in range(4):   # repeat the indented lines 4 times
     alisha.right(90)     # turn by 90 degrees
         </code>
     </program>
-  </exercise>
+  </activity>
   <p>We can create a function out of the code that draws the square.</p>
   <p>
     <ul>
@@ -81,7 +81,7 @@ alisha = Turtle()        # create a turtle named alisha
 square(alisha)           # call the square function
         </code>
     </program>
-  </exercise>
+  </activity>
   <p>We can change the <c>square</c> function to take a <c>length</c> to make it more reusable.  We can
             change the <c>length</c> when we call the function to draw different squares. We can even set a default value for length in case a value isn't specified for it.</p>
   <exercise label="Turtle_square_function_with_length">
@@ -111,7 +111,7 @@ alisha.pendown()         # put down the pen
 square(alisha)           # draw another square
         </code>
     </program>
-  </exercise>
+  </activity>
   <p>Let's practice creating reusable functions from code that draws a shape with a <c>turtle</c> object.</p>
   <exercise label="Turtle_triangle_orig_ac">
     <statement>
@@ -128,7 +128,7 @@ for sides in range(3):   # repeat the indented lines 3 times
     alisha.right(120)    # turn by 120 degrees
         </code>
     </program>
-  </exercise>
+  </activity>
   <p>We can add even more parameters to set the fill color.  We can make the default fill color green. Use <c>begin_fill()</c> to start the shape you want to fill and <c>end_fill()</c> after the shape is finished.</p>
   <exercise label="Turtle_square_function_with_color">
     <statement>
@@ -160,7 +160,7 @@ alisha.pendown()           # put down the pen
 square(alisha,100, 'blue') # draw another square
         </code>
     </program>
-  </exercise>
+  </activity>
   <p>You can change the size of the screen object, set a background color for the screen, and set the code to not exit until you click the window.  You need to do this when you run turtle code outside of the ebook otherwise the program will run but exit before you can even see the result.</p>
   <exercise label="Turtle_square_function_with_screen_methods">
     <statement>
@@ -194,7 +194,7 @@ alisha.pendown()           # put down the pen
 square(alisha,100, 'blue') # draw another square
         </code>
     </program>
-  </exercise>
+  </activity>
   <exercise label="Turtle_draw_house">
     <statement>
       <p>Add a function to draw an equilateral triangle and then write a function
@@ -217,5 +217,5 @@ space = Screen()         # create a turtle space
 t1 = Turtle()            # create a turtle named t1
         </code>
     </program>
-  </exercise>
+  </activity>
 </section>

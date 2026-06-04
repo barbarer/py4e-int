@@ -51,7 +51,7 @@ while True:
 
                     
 
-                    </solution></exercise>
+                    </solution></activity>
 
 <exercise label="writingcode_network_2">
     <statement>
@@ -88,7 +88,7 @@ fhand.write(picture)
 fhand.close()
         </code>
     </program>
-</exercise>
+</activity>
         <exercise ><statement>
                 <p>Complete the following code that retrieves the text from
                     &#8216;<url href="http://data.pr4e.org/clown.txt" visual="http://data.pr4e.org/clown.txt">http://data.pr4e.org/clown.txt</url>', prints it and also prints the
@@ -121,7 +121,7 @@ for line in fhand:
 print(counts)
         </code>
     </program>
-            </solution></exercise>
+            </solution></activity>
 
 <exercise label="writingcode_network_4">
     <statement>
@@ -134,7 +134,7 @@ print(counts)
 import urllib.request
         </code>
     </program>
-</exercise>
+</activity>
 
         <exercise ><statement>
                 <p>Write a program to store image file from &#8216;<url href="http://data.pr4e.org/cover.jpg" visual="http://data.pr4e.org/cover.jpg">http://data.pr4e.org/cover.jpg</url>'
@@ -162,7 +162,7 @@ fhand.write(img)
 fhand.close()
         </code>
     </program>
-            </solution></exercise>
+            </solution></activity>
 
 <exercise label="writingcode_network_6">
     <statement>
@@ -179,7 +179,7 @@ html = _______________________
 links = _______(b'href="(http[s]?://.*?)"', html)
         </code>
     </program>
-</exercise>
+</activity>
         <exercise ><statement>
                 <p>Write a program that retrives a txt file from
                     &#8216;<url href="https://www.gutenberg.org/files/1342/1342-0.txt" visual="https://www.gutenberg.org/files/1342/1342-0.txt">https://www.gutenberg.org/files/1342/1342-0.txt</url>' in several blocks
@@ -223,7 +223,7 @@ print(size, 'characters copied.')
 fhand.close()
         </code>
     </program>
-            </solution></exercise>
+            </solution></activity>
 
 <exercise label="writingcode_network_8">
     <statement>
@@ -238,7 +238,7 @@ fhand.close()
 import urllib.request, urllib.parse, urllib.error
         </code>
     </program>
-</exercise>
+</activity>
         <exercise ><statement>
                 <p>Complete the following code to print all the image sources from
                     the webpage. Use &#8216;img' and &#8216;src' as tags.</p>
@@ -273,7 +273,7 @@ for tag in tags:
     print(tag.get('src', None))
         </code>
     </program>
-            </solution></exercise>
+            </solution></activity>
 
 <exercise label="writingcode_network_10">
     <statement>
@@ -288,6 +288,6 @@ import requests
 from bs4 import BeautifulSoup
         </code>
     </program>
-</exercise>
+</activity>
     </section>
 

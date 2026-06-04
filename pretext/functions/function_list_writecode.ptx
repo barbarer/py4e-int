@@ -2,7 +2,7 @@
 <section xml:id="functions_functions-and-lists-write-code-questions">
   <title>Functions and Lists Write Code Questions</title>
 
-        <exercise>
+        <activity>
           <statement>
             <p>Write a function called <c>average_of_num_list</c> that takes in a parameter <c>num_list</c> and returns the average of all the numbers in num_list.
                             For example, <c>average_of_num_list([0, 20.8, 80, 5])</c> would return <c>26.45</c>.</p>
@@ -39,7 +39,7 @@ def average_of_num_list(num_list):
     return sum(num_list) / len(num_list)
         </code></program>
                     </solution>
-        </exercise>
+        </activity>
 
         <exercise label="funct_list_writecode2q">
           <statement>
@@ -63,9 +63,9 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
           </program>
-        </exercise>
+        </activity>
 
-        <exercise>
+        <activity>
           <statement>
             <p>Write a function called <c>remove_min_value</c> that takes in a parameter <c>num_list</c> and returns a <c>num_list</c> without the
                             minimum value from <c>num_list</c>. For example, <c>remove_min_value([20, 4, 1203, 7482, 3])</c> would return <c>[20, 4, 1203, 7482]</c>.</p>
@@ -103,7 +103,7 @@ def remove_min_value(num_list):
         </code></program>
                     </solution>
                     
-        </exercise>
+        </activity>
 
         <exercise label="funct_list_writecode4q">
           <statement>
@@ -131,9 +131,9 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
           </program>
-        </exercise>
+        </activity>
 
-        <exercise>
+        <activity>
           <statement>
             <p>Write a function called <c>remove_indices_after_first_max_value</c> that takes in a parameter <c>num_list</c> and
                             returns a <c>new_num_list</c> with values up to the max value of the list. For example, <c>remove_indices_after_first_max_value([200, 10, 5, 200])</c>
@@ -175,7 +175,7 @@ def remove_indices_after_first_max_value(num_list):
         </code></program>
                     </solution>
                     
-        </exercise>
+        </activity>
 
         <exercise label="funct_list_writecode6q">
           <statement>
@@ -206,5 +206,5 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
           </program>
-        </exercise>
+        </activity>
 </section>

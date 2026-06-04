@@ -24,7 +24,7 @@
         <response> Returns the data from the title and length fields from the Tracks table</response>
       </match>
     </cardsort>
-  </exercise>
+  </activity>
   <p>There are other keywords that you can use with SELECT. <idx><h>SQL</h><h>SELECT COUNT</h></idx>
     <idx><h>SELECT COUNT</h><h>SQL</h></idx> Run the following to see what they do.</p>
   <exercise label="db_bike_sel_count">
@@ -37,7 +37,7 @@ SELECT bike_number, duration FROM trip_data LIMIT 5;
 SELECT COUNT(bike_number) FROM trip_data;
         </code>
     </program>
-  </exercise>
+  </activity>
   <exercise label="db_bike_max_count">
     <statement>
       <p>Run the following to see what MAX does</p>
@@ -48,7 +48,7 @@ SELECT bike_number FROM trip_data LIMIT 10;
 SELECT MAX(bike_number) FROM trip_data;
         </code>
     </program>
-  </exercise>
+  </activity>
   <exercise label="db_bike_order_by">
     <statement>
       <p>Run the following to see what ORDER BY does</p>
@@ -58,7 +58,7 @@ SELECT MAX(bike_number) FROM trip_data;
 SELECT * FROM trip_data ORDER BY bike_number LIMIT 20
         </code>
     </program>
-  </exercise>
+  </activity>
   <exercise label="db_bike_order_by_desc">
     <statement>
       <p>Run the following to see what ORDER BY does</p>
@@ -68,7 +68,7 @@ SELECT * FROM trip_data ORDER BY bike_number LIMIT 20
 SELECT * FROM trip_data ORDER BY bike_number DESC LIMIT 15
         </code>
     </program>
-  </exercise>
+  </activity>
   <exercise label="db_SQL_sel_more">
     <statement>
       <p>Match each SQL option to what it does</p>
@@ -98,7 +98,7 @@ SELECT * FROM trip_data ORDER BY bike_number DESC LIMIT 15
         <response> Returns the data sorted in descending order by the specified field.</response>
       </match>
     </cardsort>
-  </exercise>
+  </activity>
   <exercise label="db_test_more_select_ac">
     <statement>
       <p>Given a database of bike share information write a SELECT statement to
@@ -121,6 +121,6 @@ assert 4,0 == W01117
 assert 4,1 == 980
         </code>
     </program>
-  </exercise>
+  </activity>
   <p>What happens if you try to limit the number of items returned before you specify how to sort the data in the SQL above?</p>
 </section>

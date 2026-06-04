@@ -52,7 +52,7 @@ dates = re.findall("([1-9]|1[0-2])/\d{2}/\d{4}", str)
 print(dates)
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="regex_match_0_before_digit_on_month">
       <statement>
         <p>11-9-2: Sometimes dates have a leading zero if the month is from 1 to 9.  Which of the following would match that case as well but still match if there isn't a 0?</p>
@@ -91,7 +91,7 @@ print(dates)
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="regex_specifying-what-to-extract-matching-groups">
     <title>Specifying What to Extract - Matching Groups</title>
@@ -116,7 +116,7 @@ res3 = re.findall('^From: (\S+@\S+)', str1)
 print(res3)
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="regex_extract_symbols_fitb">
       <statement>
         <p>11-9-4: Which symbols are used to specify the part of the match to return? <var/>  </p>
@@ -135,7 +135,7 @@ print(res3)
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <note>
       <p>Parentheses are used to define a capture group - only what is in the parentheses will be returned.</p>
     </note>
@@ -157,7 +157,7 @@ dates = re.findall("(?:[1-9]|1[0-2])/\d{2}/\d{4}", str)
 print(dates)
         </code>
       </program>
-    </exercise>
+    </activity>
     <p>Another approach is to enclose everything in a set of outer parentheses if you have any inner parentheses.</p>
     <exercise label="regex_logical_or_with_outer_paren">
       <statement>
@@ -173,7 +173,7 @@ matches = re.findall("(([1-9]|1[0-2])/\d{2}/\d{4})", str)
 print(matches)
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="regex_get_date_from_match">
       <statement>
         <p>11-9-7: Given the following code which of the following would you use to get the current date and add it to the list?</p>
@@ -220,7 +220,7 @@ for match in matches:
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="regex_boundary-or-anchor-characters">
     <title>Boundary or Anchor Characters</title>
@@ -243,7 +243,7 @@ matches = re.findall("^From: \w+",str2)
 print(matches)
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="regex_match_caret_mc">
       <statement>
         <p>11-9-9: What does the &#x2018;^' do?</p>
@@ -282,7 +282,7 @@ print(matches)
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <exercise label="regex_bound_dollar">
       <statement>
         <p>Run the code below to see what it prints.</p>
@@ -297,7 +297,7 @@ matches = re.findall("\d+\.\d{2}$",str)
 print(matches)
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="regex_match_dollar_mc">
       <statement>
         <p>11-9-11: What does the &#x2018;$' do?</p>
@@ -336,7 +336,7 @@ print(matches)
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <note>
       <p>Since &#x2018;$' is an anchor character if you want to match a &#x2018;$' use &#x2018;\$'.</p>
     </note>
@@ -354,7 +354,7 @@ matches = re.findall(r"\bin\b",str)
 print(matches)
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="regex_match_slach_b_mc">
       <statement>
         <p>11-9-13: What does the &#x2018;\b' do?</p>
@@ -393,7 +393,7 @@ print(matches)
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <note>
       <p>Since &#x2018;\b' usually represents a backspace in a Python string you must use &#x2018;r' before the string to treat it as a raw string. You only need to add the r in front of the string if the expression has a &#x2018;\b' in it.</p>
     </note>
@@ -424,7 +424,7 @@ print(passwordChecker('password'))
 print(passwordChecker('{hi}'))
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="regex_password_checker_mc">
       <statement>
         <p>11-9-15: Which of the following best describes when <c>passwordChecker</c> returns true?</p>
@@ -463,7 +463,7 @@ print(passwordChecker('{hi}'))
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <exercise label="regex_match_adv_symbols">
       <statement>
         <p>Drag each symbol to what it matches.</p>
@@ -489,7 +489,7 @@ print(passwordChecker('{hi}'))
           <response>Match the opposite of the character set</response>
         </match>
       </cardsort>
-    </exercise>
+    </activity>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share answers.</p>
     
   </subsection>

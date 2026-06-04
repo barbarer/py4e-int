@@ -104,7 +104,7 @@ r2 = Rectangle(point2, point3)
 print(r2.area())
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="mult_class_rectangle_object_methods">
       <statement>
         <p>Q-2: Look at the code above.  What are the object methods in the <c>Rectangle</c> class?  Pick all that apply.</p>
@@ -143,7 +143,7 @@ print(r2.area())
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <exercise label="mult_class_point_rect_mcq2">
       <statement>
         <p>Q-3: Look at the code above.  What type of thing (class) is <c>p1</c> in the <c>__init__</c> method in the <c>Rectangle</c> class?</p>
@@ -174,7 +174,7 @@ print(r2.area())
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <exercise label="mult_class_point_attributes">
       <statement>
         <p>Q-4: Look at the code above.  What are the object attributes in the <c>Point</c> class?  Pick all that apply.</p>
@@ -213,7 +213,7 @@ print(r2.area())
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="classes-basics_object-oriented-analysis-and-design">
     <title>Object-Oriented Analysis and Design</title>
@@ -262,7 +262,7 @@ print(r2.area())
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <exercise label="mult_class_card_game_bevaiors">
       <statement>
         <p>Q-6: Look at explanation of the game above.  Which of the following verbs could be methods (behaviors)?</p>
@@ -301,7 +301,7 @@ print(r2.area())
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="classes-basics_uml-diagrams">
     <title>UML Diagrams</title>
@@ -356,7 +356,7 @@ if __name__ == "__main__":
     main()
         </code>
       </program>
-    </exercise>
+    </activity>
     <p>Notice that we have defined a list of <c>suit_names</c> and <c>rank_names</c> in the <c>Card</c> class.  These will be created in the class <c>Card</c> and not in each object of the class <c>Card</c>.  They are called <c>class attributes</c>.
                 Each object of the <c>Card</c> class doesn't need to have its own copy of these lists.  That would be a waste of space. Instead they are created in the class and all objects of the class have access to it.</p>
     <exercise label="mult_class_attribute_fitb">
@@ -377,7 +377,7 @@ if __name__ == "__main__":
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="mult-classes-card-attributes-vs-class">
       <statement>
         <p>Q-9: Look at class <c>Card</c> above.  Which of the following are object attributes?  Select all that apply.</p>
@@ -416,12 +416,12 @@ if __name__ == "__main__":
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <exercise label="mult_class_diff_class_and_object_attribute">
       <statement>
         <p>Q-10: How can you tell if an attribute is a class or object attribute?</p>
       </statement>
-    </exercise>
+    </activity>
     <exercise label="mult_class_deck_who_creates_cards_fitb">
       <statement>
         <p>Q-11: The <BlankNode/> function in class <BlankNode/> creates all of the card objects in the deck object. <var/>  <var/>  </p>
@@ -452,7 +452,7 @@ if __name__ == "__main__":
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <p>Use the following UML class diagram to answer the next few questions.</p>
     <figure align="">
       <image source="images/flightAndAirport.png" width="50%" alt="class diagram of a Flight and Airport class"/>
@@ -487,7 +487,7 @@ if __name__ == "__main__":
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <exercise label="classes_flight_and_airport">
       <statement>
         <p>Given the <c>Airport</c> class shown below and the class diagram shown above, write the <c>Flight</c> class with an <c>__init__</c> method that takes the object attributes in order from top to bottom in the class diagram (number, departure_date, departure_time, departure_airport, and arrival_airport).</p>
@@ -520,7 +520,7 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="classes_order_and_item">
       <statement>
         <p>Given the <c>Item</c>  and <c>Order</c> classes shown below, write the <c>get_total</c> method in the <c>Order</c> class that returns a total of all of the prices of the items in the order.</p>
@@ -561,12 +561,12 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="mult_class_relationship_between_classes_sa">
       <statement>
         <p>Q-15: What is the relationship between the example classes on this page, such as <c>Point</c> and <c>Rectangle</c> or <c>Item</c> and <c>Order</c>?  How do they relate to each other?</p>
       </statement>
-    </exercise>
+    </activity>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
     
   </subsection>

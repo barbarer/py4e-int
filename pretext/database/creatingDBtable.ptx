@@ -39,7 +39,7 @@
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>You can look at the various data types supported by SQLite at the
             following url:</p>
   <p>
@@ -111,7 +111,7 @@ conn.close()</pre>
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>Once we have the cursor, we can begin to execute commands on the
             contents of the database using the <c>execute()</c> method.</p>
   <exercise label="db_connection_vs_cursor_dd">
@@ -131,7 +131,7 @@ conn.close()</pre>
         <response>Handles executing commands on the database such as getting data from the database.</response>
       </match>
     </cardsort>
-  </exercise>
+  </activity>
   <p>Database commands are expressed in a special language that has been
             standardized across many different database vendors to allow us to learn
             a single database language. The database language is called
@@ -178,7 +178,7 @@ conn.close()</pre>
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>In our example, we are executing two SQL commands in our database. As a
             convention, we will show the SQL keywords in uppercase and the parts of
             the command that we are adding (such as the table and column names) will
@@ -310,5 +310,5 @@ cur.close()</pre>
         <cline>cur.close()</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 </section>

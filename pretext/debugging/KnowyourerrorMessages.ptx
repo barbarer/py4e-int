@@ -66,7 +66,7 @@ print(final_time_int)
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <conclusion>
   <p>In writing and using this book over the last few years, we have collected a lot of statistics about the programs in this book.  Here are some statistics about error messages for the exercise we have been looking at.</p>
   <table>
@@ -259,7 +259,7 @@ print(final_time_int)
 </code></program>
 <p>Since the error message points us to line 4, this might be a bit confusing.  If you look at line 4 carefully, you will see that there is no problem with the syntax.  So, in this case the next step should be to back up and look at the previous line.  In this case if you look at line 2 carefully you will see that there is a missing right parenthesis at the end of the line.  Remember that parentheses must be balanced.  Since Python allows statements to continue over multiple lines inside parentheses, Python will continue to scan subsequent lines looking for the balancing right parenthesis.  However, in this case it finds the name <c>current_time_int</c> and it will want to interpret that as another parameter to the <c>input</c> function.  But there is not a comma to separate the previous string from the variable, so as far as Python is concerned, the error here is a missing comma.  From your perspective it's a missing parenthesis.</p>
                 </solution>
-    </exercise>
+    </activity>
     <p><term>Finding Clues</term>  How can you help yourself find these problems?  One trick that can be very valuable in this situation is to simply start by commenting out the line number that is flagged as having the error.  If you comment out line four, the error message now changes to point to line 5.  Now you ask yourself, am I really that bad that I have two lines in a row that have errors on them?  Maybe, so taken to the extreme, you could comment out all of the remaining lines in the program. Now the error message changes to <c>TokenError: EOF in multi-line statement</c>  This is a very technical way of saying that Python got to the end of file (EOF) while it was still looking for something.  In this case a right parenthesis.</p>
     <exercise label="db_ex3_7">
       <statement><p>Find and fix the error in the following code.</p></statement>
@@ -285,7 +285,7 @@ print(final_time_int)
 </code></program>
                     <p>The error message points you to line 1, and in this case that is exactly where the error occurs. In this case your biggest clue is to notice the difference in  highlighting on the line.  Notice that the words <q>current time</q> are a different color than those around them.  Why is this?  Because <q>current time</q> is in double quotes inside another pair of double quotes, Python thinks that you are finishing off one string, then you have some other names, and finally another string.  But you haven't separated these names or strings by commas, and you haven't added them together with the concatenation operator (+).  So, there are several corrections you could make.  First you could make the argument to input be as follows:  <c>"What is the 'current time' (in hours 0-23)"</c>  Notice that here we have correctly used single quotes inside double quotes.   Another option is to simply remove the extra double quotes.  Why were you quoting <q>current time</q> anyway?  <c>"What is the current time (in hours 0-23)"</c></p>
                 </solution>
-    </exercise>
+    </activity>
     <p><term>Finding Clues</term>  If you follow the same advice as for the last problem, comment out line one, you will immediately get a different error message.  Here's where you need to be very careful and not panic.  The error message you get now is: <c>NameError: name 'current_time_str' is not defined on line 4</c>.  You might be very tempted to think that this is somehow related to the earlier problem and immediately conclude that there is something wrong with the variable name <c>current_time_str</c> but if you reflect for a minute you will see that by commenting out line one you have caused a new and unrelated error.  That is, you have commented out the creation of the name <c>current_time_str</c>.  When you want to convert it to an <c>int</c>, you will get the NameError.  Yes, this can be confusing, but it will become much easier with experience.  It's also important to keep calm and evaluate each new clue carefully so you don't waste time chasing problems that are not really there.</p>
     <p>Uncomment line 1 and you are back to the ParseError.  Another approach is to eliminate a possible source of error.  Rather than commenting out the entire line you might just try to assign <c>current_time_str</c> to a constant value.  For example you might make line one look like this:  <c>current_time_str = "10"  #input("What is the "current time" (in hours 0-23)?")</c>.  Now you have assigned <c>current_time_str</c> to the string 10, and commented out the input statement.  And now the program works!  So you conclude that the problem must have something to do with the input function.</p>
   </subsection>f

@@ -23,7 +23,7 @@ for line in hand:
         print(line)
         </code>
     </program>
-  </exercise>
+  </activity>
   <p>This is particularly powerful when combined with the ability to indicate
             that a character can be repeated any number of times using the <c>*</c> or
             <c>+</c> characters in your regular expression. These special characters mean
@@ -68,7 +68,7 @@ for line in hand:
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>We can further narrow down the lines that we match using a repeated
             <em>wild card</em> character in the following example:</p>
   <exercise label="re_char_ac2">
@@ -85,7 +85,7 @@ for line in hand:
         print(line)
         </code>
     </program>
-  </exercise>
+  </activity>
   <p>The search string <c>^From:.+@</c> will successfully match lines that start
             with <q>From:</q>, followed by one or more characters (<c>.+</c>), followed by an
             at-sign. So this will match the following line:</p>
@@ -149,7 +149,7 @@ for line in hand:
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <exercise label="re_char_mc_matchAbove">
     <statement>
       <p>11-9-5: Looking at the code-block below, what parts of it will be matched by the regex equation <c>re.search('From:.+@')</c>?</p>
@@ -193,5 +193,5 @@ From: stephen.marquard@uct.ac.za, csev@umich.edu, and cwen @iupui.edu
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
 </section>

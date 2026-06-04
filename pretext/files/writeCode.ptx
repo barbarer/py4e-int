@@ -390,7 +390,7 @@ Yuma, AZ :14 :9
 </pre>
   </hint>
 </introduction>
-        <exercise>
+        <activity>
           <statement><p>Fix errors in the code below so that the code runs correctly and prints the pollution
               for all cities that start with the letter A.</p></statement>
             <program interactive="activecode" language="python"><code>inFile = open("uspoll.txt","r)
@@ -424,7 +424,7 @@ inFile.close()
         <p>The program was missing a close double quote after the r on line 1.  It was missing a colon
               at the end of line 3.  It was missing a comma or plus sign between the values on line 7.</p>
                     </solution>
-        </exercise>
+        </activity>
 
         <exercise label="file_ex_pmErrorq">
           <statement>
@@ -459,9 +459,9 @@ def avg_PM25(state)
 print(avg_PM25('OH'))
         </code>
           </program>
-        </exercise>
+        </activity>
 
-        <exercise>
+        <activity>
           <statement><p>The code below prints all the lines that have a city that starts with an “A”. Change it so that it prints out all lines that have a city that starts with “A” or “B”.</p></statement>
           <program xml:id="file_ex_bad_AorBa" interactive="activecode" language="python"><code>inFile = open("uspoll.txt","r")
 lines = inFile.readlines()
@@ -489,7 +489,7 @@ for line in lines:
         </code>
             </program>
           </solution>
-        </exercise>
+        </activity>
 
         <exercise label="file_ex_valueCity">
           <statement>
@@ -513,9 +513,9 @@ min25 = new25
 print("Smallest PM 2.5 ",min25," in ",minCity)
         </code>
           </program>
-        </exercise>
+        </activity>
 
-        <exercise>
+        <activity>
           <statement>
             <p>The following sample file called <c>studentdata.txt</c> contains one line for each student in an imaginary class. The student's name is the first thing on each line, followed by some exam scores. The number of scores might be different for each student.</p>
             <pre>joe 10 15 20 30 40
@@ -549,7 +549,7 @@ f.close()
         </code>
             </program>
           </solution>
-        </exercise>
+        </activity>
 
 
  
@@ -584,11 +584,11 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
           </program>
-        </exercise>
+        </activity>
 
   
  
-        <exercise>
+        <activity>
           <statement><p>The rest of the questions gather their data from the file <c>stocks.txt</c>, which shows the monthly Dow
             Jones averages from 1989 to 2001. The data is in the order: Date, Open, High, Low, and Close. The first
             line is <c>3-Dec-01,9848.93,10220.78,9651.87,10021.57</c>.  The Date is in the format <c>day-month-yy</c>.  The month
@@ -797,7 +797,7 @@ biggestLoss(file)
         </code>
             </program>
           </solution>
-        </exercise>
+        </activity>
  
         <exercise label="file_ex_300">
           <statement>
@@ -836,9 +836,9 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
           </program>
-        </exercise>
+        </activity>
         
-        <exercise>
+        <activity>
           <statement><p>The code below prints all the dates and high price for dates that occur on the first day of the month (i.e. January 1, February 1…). Each line has: Date, Open, High, Low, and Close. Change it so that it prints the date and low price for all the dates that occur in June.</p></statement>
           <program interactive="activecode" language="python" xml:id="file_ex_June_start"><code>file = open("stocks.txt", "r")
 lines = file.readlines()
@@ -863,7 +863,7 @@ for line in lines:
         </code>
             </program>
           </solution>
-        </exercise>
+        </activity>
 
         <exercise label="file_ex_abbrq">
           <statement>
@@ -898,6 +898,6 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
           </program>
-        </exercise>
+        </activity>
 
 </section>

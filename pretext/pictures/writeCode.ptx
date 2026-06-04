@@ -4,7 +4,7 @@
   <introduction><note>
     <p>Remember that it can take a bit of time to process all the pixels in a picture!  Check for errors below the code if it is taking a long time, but if you don't see any errors just wait.</p>
     </note></introduction>
-  <exercise>
+  <activity>
     <statement>
       <p>Fix 4 syntax errors in the code below so that it correctly sets the red in all pixels to 0.</p>
     </statement>
@@ -59,8 +59,8 @@ img.draw(win)
 
 
                 </solution>
-  </exercise>
-  <exercise>
+  </activity>
+  <activity>
     <statement>
       <p>The code below makes the image have a green-blue tint. Change 1 thing in order to make it have a red tint instead.</p>
     </statement>
@@ -111,8 +111,8 @@ win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
         </code></program>
                 </solution>
-  </exercise>
-  <exercise>
+  </activity>
+  <activity>
     <statement>
       <p>Fix the indention below to correctly set the red to the green, the green to the blue, and the blue to the red.</p>
     </statement>
@@ -176,8 +176,8 @@ win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
         </code></program>
                 </solution>
-  </exercise>
-  <exercise>
+  </activity>
+  <activity>
     <statement>
       <p>Fix the 5 errors in the code, so that the red pixels get the value of the green, the green get the value of blue, and the blue get the value of the red. (The cat should look purple and gray)</p>
     </statement>
@@ -247,8 +247,8 @@ img.draw(win)
         </code></program>
 
                 </solution>
-  </exercise>
-  <exercise>
+  </activity>
+  <activity>
     <statement>
       <p>Fill in the missing code on lines 9, 12, and 18 below to set the red to half the original value in all pixels in the picture.</p>
     </statement>
@@ -306,9 +306,9 @@ win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
         </code></program>
                 </solution>
-  </exercise>
+  </activity>
  
-    <exercise>
+    <activity>
       <statement>
         <p>Complete the code in order to set the blue value to an eighth of the green value plus an eighth of the red value.</p>
       </statement>
@@ -370,9 +370,9 @@ win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
         </code></program>
                     </solution>
-    </exercise>
+    </activity>
 
-  <exercise>
+  <activity>
     <statement>
       <p>Fix the indention in the code below so that it correctly increases the red in each pixel in the picture by 1.5.</p>
     </statement>
@@ -428,8 +428,8 @@ win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
         </code></program>
                 </solution>
-  </exercise>
-  <exercise>
+  </activity>
+  <activity>
     <statement>
       <p>Fix the code (without adding anything new) to make the picture completely black.</p>
     </statement>
@@ -491,8 +491,8 @@ win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
         </code></program>
                 </solution>
-  </exercise>
-  <exercise>
+  </activity>
+  <activity>
     <statement>
       <p>Fix the code below to correctly set the green and blue values to 0.75 times their current values.</p>
     </statement>
@@ -547,8 +547,8 @@ win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
         </code></program>
                 </solution>
-  </exercise>
-  <exercise>
+  </activity>
+  <activity>
     <statement>
       <p>The code below sets all the pixels to half their original values with one for loop. Change the code so it uses 2 for loops that utilize the range function (1 for loop should be nested in the other).</p>
     </statement>
@@ -618,8 +618,8 @@ win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
         </code></program>
                 </solution>
-  </exercise>
-  <exercise>
+  </activity>
+  <activity>
     <statement>
       <p>Change the following code to set the red to 0 for all pixels in the left half of the picture.</p>
     </statement>
@@ -673,8 +673,8 @@ win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
         </code></program>
                 </solution>
-  </exercise>
-  <exercise>
+  </activity>
+  <activity>
     <statement>
       <p>The code below makes the whole image have a blue-green tint. Change the code so that it makes an only blue tint in the bottom left corner.</p>
     </statement>
@@ -728,8 +728,8 @@ win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
         </code></program>
                 </solution>
-  </exercise>
-  <exercise>
+  </activity>
+  <activity>
     <statement>
       <p>Change the code below to set the red value in the pixels in the bottom half of the picture to 0.</p>
     </statement>
@@ -782,8 +782,8 @@ win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
         </code></program>
                 </solution>
-  </exercise>
-  <exercise>
+  </activity>
+  <activity>
     <statement>
       <p>The code below makes the whole image seem red. Change it, so that only every 5 pixels get changed, so that it will look like a red grid.</p>
     </statement>
@@ -841,8 +841,8 @@ win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
         </code></program>
                 </solution>
-  </exercise>
-  <exercise>
+  </activity>
+  <activity>
     <statement>
       <p>Change the following code into a procedure to keep only the green values in all pixels in a picture.</p>
     </statement>
@@ -893,7 +893,7 @@ win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
         </code></program>
                 </solution>
-  </exercise>
+  </activity>
   <!--
   <raw format="html" xml:space="preserve">
 &lt;div class="runestone sqcontainer %(optclass)s"&gt;
@@ -930,7 +930,7 @@ img.draw(win)
 &lt;/div&gt;
 &lt;/div&gt;
   </raw>-->
-  <exercise>
+  <activity>
     <statement>
       <p>Write code to create a subclass of the Image class with three different image effect functions and use each effect on a different part of the image.  For example, you could turn the image into grayscale, keep only the green values, swap the red and green values, negate the image, etc. This is one possible solution. For example, the image shown below has one image effect on the first third of the image (negate), one on the second third (clear blue), and one on the final third (reduce red).  It is using the image <c>gal2.jpg</c></p>
     </statement>
@@ -993,5 +993,5 @@ def main():
 main()
         </code></program>
                 </solution>
-  </exercise>
+  </activity>
 </section>

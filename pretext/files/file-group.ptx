@@ -83,7 +83,7 @@ def print_contents(file):
 print_contents("dogs.txt")
         </code>
       </program>
-    </exercise>
+    </activity>
     <p>Notice that when you run this code it adds a blank line after each line.
                 That is because when you read a line from a file the line contains the newline character (<c>\n</c>).
                 When you print a line you add another newline character which prints as a blank line.</p>
@@ -105,7 +105,7 @@ print_contents("dogs.txt")
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <p>Modify the code above to remove the newline from each line after it is read in.</p>
     <exercise label="file_obj_type_fitb">
       <statement>
@@ -125,7 +125,7 @@ print_contents("dogs.txt")
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <p>You can also read all the lines from a file at once into a list.  One advantage
                 to this is that you can immediately close the file after that.  This makes it easier to remember to close the file.</p>
     <exercise label="file_pogil_read_lines_list">
@@ -150,7 +150,7 @@ def print_contents(file):
 print_contents("dogs.txt")
         </code>
       </program>
-    </exercise>
+    </activity>
     <note>
       <p>You can use either <c>open(file,"r")</c> or just <c>open(file)</c> to read from a file.</p>
     </note>
@@ -172,12 +172,12 @@ print_contents("dogs.txt")
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="file_read_all_lines_at_once_sa">
       <statement>
         <p>Q-6: When would it not be best to read all of the lines in a file into a list at once?</p>
       </statement>
-    </exercise>
+    </activity>
     <p>You can also just read some of the lines from a file using the <c>readline</c> method.  This can be handy
                 if you just want to see what type of data is in a file, but don't need to see the entire file.</p>
     <exercise label="file_pogil_read_x_lines">
@@ -198,13 +198,13 @@ def print_contents(file, num):
 print_contents("dogs.txt", 2)
         </code>
       </program>
-    </exercise>
+    </activity>
     <p>Modify the code above to print 4 lines and run it again.</p>
     <exercise label="file_read_lines_no_file">
       <statement>
         <p>Q-8: What do you think will happen when you try to run the code below?</p>
       </statement>
-    </exercise>
+    </activity>
     <exercise label="file_pogil_read_lines_wrong_file_name">
       <statement>
         <p>Run the code below to see what it prints.</p>
@@ -227,7 +227,7 @@ def print_contents(file):
 print_contents("unknown.txt")
         </code>
       </program>
-    </exercise>
+    </activity>
     <note>
       <p>If the file that you try to open is not found, you will get an error.</p>
     </note>
@@ -262,7 +262,7 @@ def print_contents(file):
 print_contents("unknown.txt")
         </code>
       </program>
-    </exercise>
+    </activity>
     <p>You can use <c>try</c> and <c>except</c> to handle code that can cause exceptions. Put the code that can cause the exception in the <c>try</c> block.</p>
     <exercise label="line_file_open_except_fitb">
       <statement>
@@ -282,7 +282,7 @@ print_contents("unknown.txt")
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <p>You can also use <c>with open(file) as name</c> which will automatically close the file after the code block ends. It is particularly important to close the file when you write data to a file.</p>
     <exercise label="file_pogil_read_lines_list_with">
       <statement>
@@ -307,7 +307,7 @@ def print_contents(file):
 print_contents("dogs.txt")
         </code>
       </program>
-    </exercise>
+    </activity>
     <note>
       <p>When you use <c>with open(file) as name:</c> the file is closed automatically when you leave the block (indented area).</p>
     </note>
@@ -341,7 +341,7 @@ print_contents("dogs.txt")
           <cline>    return count</cline>
         </block>
       </blocks>
-    </exercise>
+    </activity>
     <exercise label="file_char_count_open" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Create a function, <c>num_chars(filename)</c>, that returns the number of total characters (including new lines) in the file with the passed file name.  Initialize a count then open the file and loop through all of the lines in the file and add the length of each line to the count.  Close the file.  Then return the count.  There is an extra block that is not needed in the solution.</p>
@@ -372,7 +372,7 @@ print_contents("dogs.txt")
           <cline>    return count</cline>
         </block>
       </blocks>
-    </exercise>
+    </activity>
     <exercise label="file_pogil_line_count_type_returned">
       <statement>
         <p>Q-15: What type of thing is returned from the function below? <var/>  </p>
@@ -391,7 +391,7 @@ print_contents("dogs.txt")
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="file_pogil_dict_count">
       <statement>
         <p>Run the code below to see what it prints.</p>
@@ -411,7 +411,7 @@ def count_first(file):
 print(count_first("dogs.txt"))
         </code>
       </program>
-    </exercise>
+    </activity>
     <note>
       <p>Notice how the code above handles the case when the key isn't yet in the dictionary.  The <c>get(key, alternative)</c> method on a dictionary will return the value for the key if it is in the dictionary, otherwise it return return the alternative.</p>
     </note>

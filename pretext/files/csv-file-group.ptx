@@ -224,7 +224,7 @@
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <p>We can write Python code to read the data and find the date with the highest value at the close.</p>
     <exercise label="csv_file_stocks_find_date_with_highest_close_ac">
       <statement>
@@ -258,7 +258,7 @@ for line in lines:
 print(f"Max close {max_close} on {max_date}")
         </code>
       </program>
-    </exercise>
+    </activity>
     <note>
       <p>Remember to remove the end of line character and convert the string values to integers or floating point numbers before comparing them or using them in calculations.</p>
     </note>
@@ -282,7 +282,7 @@ print(f"Max close {max_close} on {max_date}")
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="csv_file_stocks_read_into_dictionary_ac">
       <statement>
         <p>Run the code below to find the date with the highest value at the close and the date with the lowest value at the close.</p>
@@ -368,7 +368,7 @@ min_close, min_date = get_date_min_close(date_d)
 print(f"Min close {min_close} on {min_date}")
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="csv_file_dnd_string_and_conversion_functions_dnd">
       <statement>
         <p>
@@ -399,7 +399,7 @@ print(f"Min close {min_close} on {min_date}")
           <response>Returns an integer value from a string.</response>
         </match>
       </cardsort>
-    </exercise>
+    </activity>
     <exercise label="csv_file_strip_with_params_mcq">
       <statement>
         <p>Q-6: What is output from the following code?</p>
@@ -439,7 +439,7 @@ print(f"Min close {min_close} on {min_date}")
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <exercise label="csv_file_stocks_max_close_for_year_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Create a function, <c>get_max_close(date_d, year)</c>, that takes a nested dictionary <c>d</c> with the stock data and a two digit <c>year</c> and returns a tuple with the max close value and date of that max value for the given year.</p>
@@ -489,7 +489,7 @@ print(f"Min close {min_close} on {min_date}")
           <cline>    return (max, max_date)</cline>
         </block>
       </blocks>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="files_comma-separated-values-csv-files-with-a-header-row">
     <title>Comma-Separated Values (CSV) Files with a Header Row</title>
@@ -576,7 +576,7 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
       </program>
-    </exercise>
+    </activity>
     <exercise label="csv_file_air_travel_most_month_1958_fitb">
       <statement>
         <p>Q-9: Which month had the most passengers travelling by air in 1958?  Enter the three letter code from the file for the month. <var/>  </p>
@@ -595,7 +595,7 @@ myTests().main()
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <exercise label="csv_file_airtravel_get_max_month_ac">
       <statement>
         <p>Fix the code below to work correctly.  It should print the month with the highest number of passengers in 1958.</p>
@@ -663,7 +663,7 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
       </program>
-    </exercise>
+    </activity>
     <p>Here is another sample example CSV file.  It contains the Oscar winners for Best Actress from 1928 to 2016.  It has a header row to explain the data in each column.</p>
     <hint>
       <pre>"Index", "Year", "Age", "Name", "Movie"
@@ -832,7 +832,7 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
       </program>
-    </exercise>
+    </activity>
     <p>Change the code above to read from the file for the best actor.  Are the results different?</p>
     <hint>
       <pre>"Index", "Year", "Age", "Name", "Movie"
