@@ -126,6 +126,27 @@ to do exactly what you have asked.
 
     Which of the following is a semantic error?
 
+.. mchoice:: intro-gowrong-mc-runtime
+    :practice: T
+    :answer_a: Logic error
+    :answer_b: Semantic error
+    :answer_c: Syntax error
+    :answer_d: Runtime error
+    :answer_e: No error
+    :correct: d
+    :feedback_a: Try again! This will not cause a logic error - something is wrong with the code.
+    :feedback_b: Try again! This will not cause a semantic error - something is wrong with the code.
+    :feedback_c: Try again! This will not cause a syntax error - something is wrong with the code.
+    :feedback_d: The programmer intended to use the ``name`` variable, but misspelled it in the print statement.
+    :feedback_e: This will throw an error.
+
+    What time of error would this code produce?
+
+    ::
+
+      name = input("What is your name? ")
+      print("Hello", naem)
+
 .. mchoice:: intro-gowrong-mc-syntax
     :practice: T
     :answer_a: The programmer

@@ -170,6 +170,55 @@ SyntaxError: invalid syntax
       </choice>
     </choices>
   </activity>
+  <activity label="intro-gowrong-mc-runtime">
+    <statement>
+      <p>Q-3: What time of error would this code produce?</p>
+      <pre>name = input("What is your name? ")
+print("Hello", naem)</pre>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Logic error</p>
+        </statement>
+        <feedback>
+          <p>Try again! This will not cause a logic error - something is wrong with the code.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Semantic error</p>
+        </statement>
+        <feedback>
+          <p>Try again! This will not cause a semantic error - something is wrong with the code.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Syntax error</p>
+        </statement>
+        <feedback>
+          <p>Try again! This will not cause a syntax error - something is wrong with the code.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Runtime error</p>
+        </statement>
+        <feedback>
+          <p>The programmer intended to use the ``name`` variable, but misspelled it in the print statement.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>No error</p>
+        </statement>
+        <feedback>
+          <p>This will throw an error.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </activity>
   <activity label="intro-gowrong-mc-syntax">
     <statement>
       <p>Q-3: Who/what finds syntax errors?</p>
