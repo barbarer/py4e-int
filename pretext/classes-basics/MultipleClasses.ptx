@@ -424,34 +424,30 @@ if __name__ == "__main__":
     </activity>
     <activity label="mult_class_deck_who_creates_cards_fitb">
       <statement>
-        <p>Q-11: The <BlankNode/> function in class <BlankNode/> creates all of the card objects in the deck object. <var/>  <var/>  </p>
+        <p>Q-11: The <fillin width="20" mode="string" answer="__init__"/> function in class <fillin width="20" mode="string" answer="Deck"/> creates all of the card objects in the deck object.</p>
       </statement>
-      <setup>
-        <var>
-          <condition string="__init__">
-            <feedback>
-              <p>The __init__ function creates all 52 cards</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>An object of a class is created with Class()</p>
-            </feedback>
-          </condition>
-        </var>
-        <var>
-          <condition string="Deck">
-            <feedback>
-              <p>The Deck class creates the 52 cards when you create a new deck</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Which class creates multiple cards?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+         <evaluate>
+            <test correct="yes">
+               <strcmp use-answer="yes"/>
+               <feedback><p>The __init__ function creates all 52 cards</p></feedback>
+            </test>
+            <test>
+              <feedback><p>An object of a class is created with Class()</p></feedback>
+           </test>
+        </evaluate>
+      </evaluation>
+      <evaluation>
+         <evaluate>
+            <test correct="yes">
+               <strcmp use-answer="yes"/>
+               <feedback><p>The Deck class creates the 52 cards when you create a new deck</p></feedback>
+            </test>
+            <test>
+              <feedback><p>Which class creates multiple cards?</p></feedback>
+           </test>
+        </evaluate>
+      </evaluation>
     </activity>
     <p>Use the following UML class diagram to answer the next few questions.</p>
     <figure align="">
