@@ -4,7 +4,7 @@
   <warning>
     <p>Be careful not to create infinite loops, as they will cause the page to freeze.</p>
   </warning>
-  <exercise>
+  <activity>
     <statement>
       <p>Fix the 5 errors in the code below to return a countdown of the numbers from 10 to 0, including 0.</p>
     </statement>
@@ -56,11 +56,11 @@ countdown()
         </code>
       </program>
     </solution>
-  </exercise>
+  </activity>
   
 
 
-  <exercise label="itr-ex-100Loopq">
+  <activity label="itr-ex-100Loopq">
     <statement>
       <p>The following code will loop way too many times. Change one line to
             make the loop only have five iterations.</p>
@@ -73,8 +73,8 @@ while x &lt; 100:
     x = x + 1
         </code>
     </program>
-  </exercise>
-  <exercise>
+  </activity>
+  <activity>
     <statement>
       <p>Make 5 changes to the code below to correctly print a count up from -10 to 0, including 0.</p>
     </statement>
@@ -127,8 +127,8 @@ class myTests(TestCaseGui):
 myTests().main()
         </code></program>
             </solution>
-  </exercise>
-  <exercise label="itr-ex-allValuesq">
+  </activity>
+  <activity label="itr-ex-allValuesq">
     <statement>
       <p>Finish lines 1 and 5 so that the following code correctly prints every integer from -5 to -1, including -1.</p>
     </statement>
@@ -149,8 +149,8 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
     </program>
-  </exercise>
-  <exercise>
+  </activity>
+  <activity>
     <statement>
       <p>Complete the code on lines 4 and 6 so that it prints the number 6.</p>
     </statement>
@@ -197,15 +197,61 @@ myTests().main()
         </code></program>
 
             </solution>
-  </exercise>
-  <raw format="html" xml:space="preserve">
-&lt;div class="runestone sqcontainer %(optclass)s"&gt;
-&lt;div data-component="selectquestion" id=iterations_writecode6 data-questionlist='itr-ex-root_ac, itr-ex-root_pp'         data-toggleoptions="toggle, lock" data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
-    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: itr-ex-root_ac, itr-ex-root_pp&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</raw>
-  <exercise>
+  </activity>
+
+  <activity label="itr-ex-root_ac" xml:id="itr-ex-root_ac">
+    <statement>
+      <p>The code below is supposed to print an estimate of the square root of a number (target). You are given an initial guess of 2.
+            However, the indention is wrong on 4 lines. Fix these errors to find the estimate.</p>
+    </statement>
+    <program xml:id="itr-ex-root_ac_editor" interactive="activecode" language="python">
+      <code>
+target = 6
+    guess = 2
+guessSquared = guess * guess
+while abs(target-guessSquared) &gt; 0.01:
+    closer = target / guess
+guess = (guess + closer) / 2.0
+        guessSquared = guess * guess
+    print("Square root of", target, "is", guess)
+        </code>
+    </program>
+  </activity>
+  <activity label="itr-ex-root_pp" xml:id="itr-ex-root_pp">
+    <statement>
+      <p>Create code to print an estimate of the square root of a number (target). You are given an initial guess of 2.</p>
+    </statement>
+    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
+      <block order="6">
+        <cline>target = 6</cline>
+        <cline>guess = 2</cline>
+      </block>
+      <block order="2">
+        <cline>guessSquared = guess * guess</cline>
+      </block>
+      <block order="7">
+        <cline>while abs(target-guessSquared) &gt; 0.01:</cline>
+      </block>
+      <block order="3">
+        <cline>    closer = target / guess</cline>
+      </block>
+      <block order="4">
+        <cline>    guess = (guess + closer) / 2.0</cline>
+      </block>
+      <block order="1">
+        <cline>    guessSquared = guess * guess</cline>
+      </block>
+      <block order="5">
+        <cline>print("Square root of", target, "is", guess)</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="iterations_writecode6">
+      <select grade="first" questions="itr-ex-root_ac itr-ex-root_pp"/>
+  </activity>
+
+  <activity>
     <statement>
       <p>This function currently takes a start and stop argument and uses a for loop to find the sum of all the numbers between them (inclusive).
                     Change the for loop to a while loop while still using the same parameters.</p>
@@ -266,8 +312,8 @@ class myTests(TestCaseGui):
 myTests().main()
         </code></program>
             </solution>
-  </exercise>
-  <exercise label="int-ex-timesq">
+  </activity>
+  <activity label="int-ex-timesq">
     <statement>
       <p>The program below is supposed to print the times tables from 1 to 3, but
             there are 6 errors.  Fix the errors.</p>
@@ -279,8 +325,8 @@ for x in range(1, 3):
         print(str(x) + " * " str(y) + " = " x * y)
         </code>
     </program>
-  </exercise>
-  <exercise>
+  </activity>
+  <activity>
     <statement>
       <p>The following code prints the times tables for 1 to 3 using two for loops.
                     Rewrite the program to use a while and a for loop instead.</p>
@@ -311,20 +357,14 @@ for x in range(1, 4):
         </code>
       </program>
     </solution>
-  </exercise>
- <!-- Eva's First Fix Iteration
-    I'm not sure how it will render but I kept the clines I think this is how we use the toggle as well to give them the option
-  -->
-  <exercise label="iterations_writecode10">
-    <select grade="first" questions="int-ex-while_ac int-ex-while_pp"/>
-</exercise>
+  </activity>
 
-<exercise label="int-ex-while_ac">
+  <activity label="int-ex-while_ac" xml:id="int-ex-while_ac">
     <statement>
-        <p>Rewrite the following code to use a while loop instead of a for loop to calculate the value of the ten factorial.</p>
+      <p>Rewrite the following code to use a while loop instead of a for loop to calculate the value of ten factorial.</p>
     </statement>
     <program xml:id="int-ex-while_ac_editor" interactive="activecode" language="python">
-        <code>
+      <code>
 product = 1  # Start out with nothing
 numbers = range(1,11)
 for number in numbers:
@@ -341,33 +381,39 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
     </program>
-</exercise>
+  </activity>
 
-<exercise label="int-ex-while_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="int-ex-while_pp" xml:id="int-ex-while_pp">
     <statement>
-        <p>Using the blocks below, create code to calculate the value of the ten factorial.</p>
+      <p>Using the blocks below, create code to calculate the value of ten factorial.</p>
     </statement>
-    <blocks numbered="left">
-        <block order="5">
-            <cline>product = 1</cline>
-            <cline>number = 1</cline>
-        </block>
-        <block order="4">
-            <cline>while number &lt; 11:</cline>
-        </block>
-        <block order="1">
-            <choice correct="yes">
-                <cline>    product = product * number</cline>
-            </choice>
-            <choice>
-                <cline>    product = number * number</cline>
-            </choice>
-        </block>
-        <block order="6">
-            <cline>    number = number + 1</cline>
-        </block>
-        <block order="2">
-            <cline>print(product)</cline>
-        </block>
+    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
+      <block order="5">
+        <cline>product = 1</cline>
+        <cline>number = 1</cline>
+      </block>
+      <block order="4">
+        <cline>while number &lt; 11:</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    product = product * number</cline>
+        </choice>
+        <choice>
+          <cline>    product = number * number </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    number = number + 1</cline>
+      </block>
+      <block order="2">
+        <cline>print(product)</cline>
+      </block>
     </blocks>
-</exercise>
+  </activity>
+
+  <activity label="iterations_writecode10">
+      <select grade="first" questions="int-ex-while_ac int-ex-while_pp"/>
+  </activity>
+
+</section>

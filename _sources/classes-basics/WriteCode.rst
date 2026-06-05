@@ -27,6 +27,7 @@ Exercises
         .. tab:: Answer
 
             .. activecode:: ch_cl_ex_1_answer
+                :optional:
 
                 import math
 
@@ -93,6 +94,7 @@ Exercises
         .. tab:: Answer
 
             .. activecode:: ch_cl_ex_3_answer
+                :optional:
 
                 class Point:
                     """ Point class for representing and manipulating x,y coordinates. """
@@ -162,6 +164,7 @@ Exercises
         .. tab:: Answer
 
             .. activecode:: ch_cl_05_answer
+                :optional:
 
                 class Point:
                     """ Point class for representing and manipulating x,y coordinates. """

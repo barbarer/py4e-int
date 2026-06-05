@@ -55,7 +55,7 @@ delimiter = '-'
 print(s.split(delimiter))
         </code>
   </program>
-  <exercise label="listString_MC_poe">
+  <activity label="listString_MC_poe">
     <statement>
       <p>Q-4: What is printed by the following statements?</p>
       <pre>myname = "Edgar Allan Poe"
@@ -99,7 +99,7 @@ print(init)</pre>
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p><c>join</c> is the inverse of <c>split</c>. It takes a list
             of strings and concatenates the elements. <c>join</c> is a string
             method, so you have to invoke it on the delimiter and pass the list as a
@@ -114,7 +114,7 @@ print(delimiter.join(t))
   <p>In this case the delimiter is a space character, so <c>join</c>
             puts a space between words. To concatenate strings without spaces, you
             can use the empty string, <q/>, as a delimiter.</p>
-  <exercise label="listString_MC_join">
+  <activity label="listString_MC_join">
     <statement>
       <p>Q-6: What would print when the following code executes?</p>
       <pre>mylist = ['Hannah', 'Grace', 'Olivia', 'Ruth']
@@ -155,8 +155,8 @@ print(delimiter.join(mylist))</pre>
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="listString_MC_split">
+  </activity>
+  <activity label="listString_MC_split">
     <statement>
       <p>Q-7: What would print when the following code executes?</p>
       <pre>input = "Pat,Smith,girl,65 Elm Street,eat"
@@ -205,5 +205,5 @@ print(pieces[3])</pre>
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
 </section>

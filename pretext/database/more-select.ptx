@@ -3,7 +3,7 @@
   <title>More SELECT Keywords</title>
   <p>So far we have covered selecting the data from all fields from a table, from
             just one specified field, and from a list of fields.</p>
-  <exercise label="db_SQL_three_types_of_select">
+  <activity label="db_SQL_three_types_of_select">
     <statement>
       <p>Match each SQL statement with what it does.</p>
     </statement>
@@ -24,10 +24,10 @@
         <response> Returns the data from the title and length fields from the Tracks table</response>
       </match>
     </cardsort>
-  </exercise>
+  </activity>
   <p>There are other keywords that you can use with SELECT. <idx><h>SQL</h><h>SELECT COUNT</h></idx>
     <idx><h>SELECT COUNT</h><h>SQL</h></idx> Run the following to see what they do.</p>
-  <exercise label="db_bike_sel_count">
+  <activity label="db_bike_sel_count">
     <statement>
       <p>Run the following to see what COUNT and LIMIT do.</p>
     </statement>
@@ -37,8 +37,8 @@ SELECT bike_number, duration FROM trip_data LIMIT 5;
 SELECT COUNT(bike_number) FROM trip_data;
         </code>
     </program>
-  </exercise>
-  <exercise label="db_bike_max_count">
+  </activity>
+  <activity label="db_bike_max_count">
     <statement>
       <p>Run the following to see what MAX does</p>
     </statement>
@@ -48,8 +48,8 @@ SELECT bike_number FROM trip_data LIMIT 10;
 SELECT MAX(bike_number) FROM trip_data;
         </code>
     </program>
-  </exercise>
-  <exercise label="db_bike_order_by">
+  </activity>
+  <activity label="db_bike_order_by">
     <statement>
       <p>Run the following to see what ORDER BY does</p>
     </statement>
@@ -58,8 +58,8 @@ SELECT MAX(bike_number) FROM trip_data;
 SELECT * FROM trip_data ORDER BY bike_number LIMIT 20
         </code>
     </program>
-  </exercise>
-  <exercise label="db_bike_order_by_desc">
+  </activity>
+  <activity label="db_bike_order_by_desc">
     <statement>
       <p>Run the following to see what ORDER BY does</p>
     </statement>
@@ -68,8 +68,8 @@ SELECT * FROM trip_data ORDER BY bike_number LIMIT 20
 SELECT * FROM trip_data ORDER BY bike_number DESC LIMIT 15
         </code>
     </program>
-  </exercise>
-  <exercise label="db_SQL_sel_more">
+  </activity>
+  <activity label="db_SQL_sel_more">
     <statement>
       <p>Match each SQL option to what it does</p>
     </statement>
@@ -98,8 +98,8 @@ SELECT * FROM trip_data ORDER BY bike_number DESC LIMIT 15
         <response> Returns the data sorted in descending order by the specified field.</response>
       </match>
     </cardsort>
-  </exercise>
-  <exercise label="db_test_more_select_ac">
+  </activity>
+  <activity label="db_test_more_select_ac">
     <statement>
       <p>Given a database of bike share information write a SELECT statement to
             retrieve the <c>bike_number</c> and <c>duration</c> from table <c>trip_data</c> but
@@ -121,6 +121,6 @@ assert 4,0 == W01117
 assert 4,1 == 980
         </code>
     </program>
-  </exercise>
+  </activity>
   <p>What happens if you try to limit the number of items returned before you specify how to sort the data in the SQL above?</p>
 </section>

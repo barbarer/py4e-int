@@ -41,7 +41,7 @@
   <subsection xml:id="functions_tuples">
     <title>Tuples</title>
     <p>A tuple is like a list in that holds items in order and those items are separated by commas.  They can be enclosed in <c>()</c>, but don't have to be.</p>
-    <exercise label="funct_tup_test_first">
+    <activity label="funct_tup_test_first">
       <statement>
         <p>What is the first thing that will be printed when the code below runs? <var/>  </p>
       </statement>
@@ -59,8 +59,8 @@
           </condition>
         </var>
       </setup>
-    </exercise>
-    <exercise label="funct_tup_test_last">
+    </activity>
+    <activity label="funct_tup_test_last">
       <statement>
         <p>What is the last thing that will be printed when the code below runs? <var/>  </p>
       </statement>
@@ -78,8 +78,8 @@
           </condition>
         </var>
       </setup>
-    </exercise>
-    <exercise label="func_tup_test_ac">
+    </activity>
+    <activity label="func_tup_test_ac">
       <statement>
         <p>Run this code to see what it prints.</p>
       </statement>
@@ -102,8 +102,8 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
-    <exercise label="funct_tuple_test_char">
+    </activity>
+    <activity label="funct_tuple_test_char">
       <statement>
         <p>What characters are used to indicate the start and end of a tuple in the code above? <var/>  </p>
       </statement>
@@ -121,8 +121,8 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
-    <exercise label="funct_tuple_first_index">
+    </activity>
+    <activity label="funct_tuple_first_index">
       <statement>
         <p>What index is used to get the first item in a tuple? <var/>  </p>
       </statement>
@@ -140,8 +140,8 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
-    <exercise label="funct_tuple_last_index">
+    </activity>
+    <activity label="funct_tuple_last_index">
       <statement>
         <p>What negative index is used to get the last item in a tuple? <var/>  </p>
       </statement>
@@ -159,13 +159,13 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="functions_tuples-are-immutable">
     <title>Tuples are Immutable</title>
     <p>Unlike lists, tuples are immutable (can not change). This makes them more efficient than lists which can change.</p>
         <p>Look at the Python code below.  What do you think will happen when you run the following code?</p>
-    <exercise label="func_tuple_change_ac">
+    <activity label="func_tuple_change_ac">
       <statement>
         <p>Run this code to see what it prints.</p>
       </statement>
@@ -186,13 +186,13 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
+    </activity>
     <note>
       <p>Tuples are immutable (not changeable), so you will get an error if you try to change them.</p>
     </note>
     <p>Some functions that work on lists return an <term>iterator</term> (an object that you can loop through the values of) which you can convert to a list of tuples using the <c>list</c> function.
                 The <c>range</c> function also returns an iterator.</p>
-    <exercise label="funct_tuple_zip_first_print_fitb">
+    <activity label="funct_tuple_zip_first_print_fitb">
       <statement>
         <p>What is the first thing the code below prints? <var/>  </p>
       </statement>
@@ -210,8 +210,8 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
-    <exercise label="func_tuple_list_zip_ac">
+    </activity>
+    <activity label="func_tuple_list_zip_ac">
       <statement>
         <p>Run this code to see what it prints.</p>
       </statement>
@@ -225,7 +225,7 @@ print(l3[0][1])
 print(l3)
         </code>
       </program>
-    </exercise>
+    </activity>
     <note>
       <p>The <c>zip</c> function takes two lists and returns an <c>iterator</c>. You can convert this iterator to a list of tuples using the <c>list</c> function.  Each tuple has an element from list1 and an element from list2 in order.</p>
     </note>
@@ -233,7 +233,7 @@ print(l3)
   <subsection xml:id="functions_dictionaries">
     <title>Dictionaries</title>
     <p>A dictionary stores a value for a key.</p>
-    <exercise label="funct_dict_num_t">
+    <activity label="funct_dict_num_t">
       <statement>
         <p>What is the first thing the code below prints? <var/>  </p>
       </statement>
@@ -256,8 +256,8 @@ print(l3)
           </condition>
         </var>
       </setup>
-    </exercise>
-    <exercise label="func_dict_example">
+    </activity>
+    <activity label="func_dict_example">
       <statement>
         <p>Run this code to see what it prints.</p>
       </statement>
@@ -281,9 +281,9 @@ print(d1)
 print(type(d1))
         </code>
       </program>
-    </exercise>
+    </activity>
         <p>Look at the Python code below.  What do you think will happen when you run the following code?</p>
-    <exercise label="func_dict_with_key_error">
+    <activity label="func_dict_with_key_error">
       <statement>
         <p>Run this code to see what it prints.</p>
       </statement>
@@ -295,9 +295,9 @@ d['south'] = "Kentucky"
 print(d['east'])
         </code>
       </program>
-    </exercise>
+    </activity>
     <p>There is another way to update the value for a key that works even if the key isn't in the dictionary already.</p>
-    <exercise label="func_dict_example_v2">
+    <activity label="func_dict_example_v2">
       <statement>
         <p>Run this code to see what it prints.</p>
       </statement>
@@ -321,12 +321,12 @@ print(d1['a'])
 print(d1)
         </code>
       </program>
-    </exercise>
+    </activity>
     <note>
       <p>The better way to increment a count at a key is to use
                     <c>dict[key] = dict.get(key,0) + 1</c>.  This will avoid a key error if the key isn't in the dictionary and the code is shorter.</p>
     </note>
-    <exercise label="funct_dict_symbol_dnd">
+    <activity label="funct_dict_symbol_dnd">
       <statement>
         <p>Drag the item to its type.</p>
       </statement>
@@ -351,8 +351,8 @@ print(d1)
           <response>Dictionary</response>
         </match>
       </cardsort>
-    </exercise>
-    <exercise label="funct_which_are_immutable_mc">
+    </activity>
+    <activity label="funct_which_are_immutable_mc">
       <statement>
         <p>Which of the following types are immutable (don't change)?</p>
       </statement>
@@ -390,7 +390,7 @@ print(d1)
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
   </subsection>
 </section>

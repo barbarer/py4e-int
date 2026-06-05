@@ -38,7 +38,7 @@
                 characters. In fact, all types of sequences (including <c>list</c>
                 and <c>tuple</c>) support indexing and slicing.</p>
 
-<exercise label="strings_ac_pogil_output_indexingandslicing">
+<activity label="strings_ac_pogil_output_indexingandslicing">
     <statement>
             <p>Run this code to see what it prints. Its output will help you answer the questions below.</p>
 
@@ -63,9 +63,9 @@ triplet = sentence[-4:-1] # This line prints nothing
 print(triplet)
         </code>
     </program>
-</exercise>
+</activity>
 
-    <exercise label="strings_MC_pogil_positiveindex">
+    <activity label="strings_MC_pogil_positiveindex">
         <statement>
 
             <p>11-9-2: What is the <em>positive</em> index of the first character in the <c>sentence</c> string? What about the last?</p>
@@ -110,9 +110,9 @@ print(triplet)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="strings_MC_pogil_negativeindex">
+    <activity label="strings_MC_pogil_negativeindex">
         <statement>
 
             <p>11-9-3: What is the <em>negative</em> index of the first character in the <c>sentence</c> string? What about the last?</p>
@@ -157,9 +157,9 @@ print(triplet)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="strings_MC_pogil_posandneg">
+    <activity label="strings_MC_pogil_posandneg">
         <statement>
 
             <p>11-9-4: What is <c>sentence[2]</c>? What about <c>sentence[-2]</c>?</p>
@@ -204,7 +204,7 @@ print(triplet)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>Let's take a look at how the <c>:</c> operator works for slicing
                 a string. Consider the example <c>sentence[m:n]</c>. The value at
                 <c>m</c> is the first character in the slice. It is the same value
@@ -216,19 +216,19 @@ print(triplet)
                 end.</q> The slice <c>[:n]</c> means <q>from the beginning to the index
                 just before <c>n</c></q> (i.e., the first <c>n</c> characters).</p>
 
-        <exercise label="strings_fitb_pogil_smarpos">
+        <activity label="strings_fitb_pogil_smarpos">
             <statement>
-    <p>11-9-5: Write a Python expression that slices <q>smar</q> from <c>sentence</c> using only <em>positive</em> indexes. Reminder: <c>sentence</c> = <q>I_am_smart</q>. <var/>  </p></statement><setup><var><condition string="sentence\[5:9\]"><feedback><p>Correct! This slice starts at &#8216;s', which is index 5, and stops after including &#8216;r' at index 8, which is one index before 9.</p></feedback></condition><condition string="sentence\[5:8\]"><feedback><p>Incorrect! The second number in the slice is the index after the index of the last character you want to include. Try again.</p></feedback></condition><condition string=".*"><feedback><p>Incorrect! Write your answer in the form <q>sentence[m:n]</q>. Try again.</p></feedback></condition></var></setup></exercise>
-        <exercise label="strings_fitb_pogil_smarneg">
+    <p>11-9-5: Write a Python expression that slices <q>smar</q> from <c>sentence</c> using only <em>positive</em> indexes. Reminder: <c>sentence</c> = <q>I_am_smart</q>. <var/>  </p></statement><setup><var><condition string="sentence\[5:9\]"><feedback><p>Correct! This slice starts at &#8216;s', which is index 5, and stops after including &#8216;r' at index 8, which is one index before 9.</p></feedback></condition><condition string="sentence\[5:8\]"><feedback><p>Incorrect! The second number in the slice is the index after the index of the last character you want to include. Try again.</p></feedback></condition><condition string=".*"><feedback><p>Incorrect! Write your answer in the form <q>sentence[m:n]</q>. Try again.</p></feedback></condition></var></setup></activity>
+        <activity label="strings_fitb_pogil_smarneg">
             <statement>
-    <p>11-9-6: Write a Python expression that slices <q>smar</q> from <c>sentence</c> using only <em>negative</em> indexes. Reminder: <c>sentence</c> = <q>I_am_smart</q>. <var/>  </p></statement><setup><var><condition string="sentence\[-5:-1\]"><feedback><p>Correct! This slice starts at &#8216;s', which is index -5, and stops after including &#8216;r' at index -2, which is one index before -1.</p></feedback></condition><condition string="sentence\[-5:0\]"><feedback><p>Incorrect! Remember, the last character in the string has the index -1. Try again.</p></feedback></condition><condition string=".*"><feedback><p>Incorrect! Write your answer in the form <q>sentence[-m:-n]</q>. Try again.</p></feedback></condition></var></setup></exercise>        </subsection>
+    <p>11-9-6: Write a Python expression that slices <q>smar</q> from <c>sentence</c> using only <em>negative</em> indexes. Reminder: <c>sentence</c> = <q>I_am_smart</q>. <var/>  </p></statement><setup><var><condition string="sentence\[-5:-1\]"><feedback><p>Correct! This slice starts at &#8216;s', which is index -5, and stops after including &#8216;r' at index -2, which is one index before -1.</p></feedback></condition><condition string="sentence\[-5:0\]"><feedback><p>Incorrect! Remember, the last character in the string has the index -1. Try again.</p></feedback></condition><condition string=".*"><feedback><p>Incorrect! Write your answer in the form <q>sentence[-m:-n]</q>. Try again.</p></feedback></condition></var></setup></activity>        </subsection>
         <subsection xml:id="strings_common-string-methods">
             <title>Common String Methods</title>
             <p>Strings have <term>methods</term> (built-in functions) that can be called
                 using dot notation. See <url href="https://docs.python.org/3/library/stdtypes.html#string-methods" visual="https://docs.python.org/3/library/stdtypes.html#string-methods">https://docs.python.org/3/library/stdtypes.html#string-methods</url>
                 for a list of Python string methods.</p>
 
-<exercise label="strings_ac_pogil_output_methods">
+<activity label="strings_ac_pogil_output_methods">
     <statement>
             <p>Run this code to see what it prints. Its output will help you answer the questions below.</p>
 
@@ -255,9 +255,9 @@ print(dna[0].replace('C', 'g'))
 print(dna)
         </code>
     </program>
-</exercise>
+</activity>
 
-    <exercise label="strings_MC_pogil_lower">
+    <activity label="strings_MC_pogil_lower">
         <statement>
 
             <p>11-9-8: True or false: the <c>lower</c> method changes the contents of the string it is called on.</p>
@@ -284,9 +284,9 @@ print(dna)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="strings_MC_pogil_replace">
+    <activity label="strings_MC_pogil_replace">
         <statement>
 
             <p>11-9-9: What does the <c>replace</c> method do? Assume it is called with two arguments.</p>
@@ -331,7 +331,7 @@ print(dna)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>You may have noticed that it isn't possible to call the
                 <c>replace</c> method on <c>dna</c>, but calling it on <c>dna[0]</c>
                 is okay. This is because the <q>list</q> data type does not
@@ -341,7 +341,7 @@ print(dna)
                 For this reason, strings are referred to as <term>immutable</term>
                 (i.e., the value never changes).</p>
 
-    <exercise label="strings_MC_pogil_capitalize">
+    <activity label="strings_MC_pogil_capitalize">
         <statement>
 
             <p>11-9-10: The <c>capitalize</c> method capitalizes the first character of a string. If I wanted to capitalize the first letter of the string <c>name = "robby"</c>, <em>and change the value of</em> <c>name</c>, what line of code would I write?</p>
@@ -386,9 +386,9 @@ print(dna)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="strings_MC_pogil_capitalizesubstr">
+    <activity label="strings_MC_pogil_capitalizesubstr">
         <statement>
 
             <p>11-9-11: If I wanted to create a new string, <c>nofirst</c>, whose value equals <q>Obby</q>, what line of code would I write? Reminder: <c>name = "robby"</c>.</p>
@@ -433,9 +433,9 @@ print(dna)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="strings_MC_pogil_replacesubstr">
+    <activity label="strings_MC_pogil_replacesubstr">
         <statement>
 
             <p>11-9-12: The string <c>nofirst</c> now equals <q>Obby</q>. What line of code would I write if I wanted to change its value to <q>ObOb</q>?</p>
@@ -480,12 +480,12 @@ print(dna)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-<exercise label="strings_dnd_pogil_methods">
+<activity label="strings_dnd_pogil_methods">
     <statement><p>Match each string method to a description of what it does.</p></statement>
     <feedback><p>Keep trying! Run the code block above if you need more help.</p></feedback>
-<cardsort><match><premise>split</premise><response>Returns a list of substrings which were separated by a specific character/string.</response></match><match><premise>lower</premise><response>Returns a new string with all letters changed to lowercase.</response></match><match><premise>replace</premise><response>Returns a new string with all occurences of a specific substring substituted with another string.</response></match><match><premise>capitalize</premise><response>Returns a new string with the first letter changed to uppercase.</response></match></cardsort></exercise><exercise label="strings_parsons_pogil_methods" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
+<cardsort><match><premise>split</premise><response>Returns a list of substrings which were separated by a specific character/string.</response></match><match><premise>lower</premise><response>Returns a new string with all letters changed to lowercase.</response></match><match><premise>replace</premise><response>Returns a new string with all occurences of a specific substring substituted with another string.</response></match><match><premise>capitalize</premise><response>Returns a new string with the first letter changed to uppercase.</response></match></cardsort></activity><activity label="strings_parsons_pogil_methods" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
             <p>The code blocks below have been mixed up! Rearrange them so that the program prints <q>Georgington</q>. Watch out - there are three code blocks that are unused in the solution!</p>
 </statement>
 <blocks numbered="left">
@@ -501,7 +501,7 @@ print(dna)
 <cline>print(president = president.capitalize()) </cline>
 </block><block order="2">
 <cline>print(president.capitalize())</cline>
-</block></blocks></exercise>            <p>There are dozens of other string methods not shown in this
+</block></blocks></activity>            <p>There are dozens of other string methods not shown in this
                 section of the ebook. Read Python's online documentation at
                 <url href="https://docs.python.org/3/library/stdtypes.html#string-methods" visual="https://docs.python.org/3/library/stdtypes.html#string-methods">https://docs.python.org/3/library/stdtypes.html#string-methods</url>
                 to learn about more! They can be <em>very</em> helpful.</p>

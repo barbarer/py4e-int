@@ -38,7 +38,7 @@ def print_lyrics():
   <p>The empty parentheses after the name indicate that this function doesn't
             take any arguments. Later we will build functions that take arguments as
             their inputs.</p>
-  <exercise label="functAdd_MC_empty">
+  <activity label="functAdd_MC_empty">
     <statement>
       <p>Q-1: What does it means when there are empty parentheses after a function name?</p>
     </statement>
@@ -76,12 +76,12 @@ def print_lyrics():
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>The first line of the function definition is called the <em>header</em>; the rest
             is called the <em>body</em>. The header has to end with a colon and the body has
             to be indented. By convention, the indentation is always four spaces. The
             body can contain any number of statements.</p>
-  <exercise label="functAdd_MC_firstLine">
+  <activity label="functAdd_MC_firstLine">
     <statement>
       <p>Q-2: What is the first line of a function definition called? What is every line after the first line called?</p>
     </statement>
@@ -119,7 +119,7 @@ def print_lyrics():
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>If you type a function definition in interactive mode, the interpreter
             prints ellipses (&#x2026;) to let you know that the definition isn't
             complete:</p>
@@ -146,7 +146,7 @@ print(type(print_lyrics))
   </program>
   <p>The value of <c>print_lyrics</c> is a <em>function object</em>, which
             has type <q>function</q>.</p>
-  <exercise label="functAdd_MC_weather">
+  <activity label="functAdd_MC_weather">
     <statement>
       <p>Q-4: Consider the code below. Which statement is true?</p>
       <program language="python">
@@ -190,7 +190,7 @@ def printWeather():
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>The syntax for calling the new function is the same as for built-in
             functions:</p>
   <program xml:id="functAdd_call" interactive="activecode" language="python">
@@ -219,7 +219,7 @@ repeat_lyrics()
         </code>
   </program>
   <p>But that's not really how the song goes.</p>
-  <exercise label="functAdd_PP_menu" adaptive="yes" indentation="hide" language="python">
+  <activity label="functAdd_PP_menu" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Construct a block of code that correctly creates a function called <q>printMenu</q>
             that prints the menu and prices, then call the function. Watch your indentation!</p>
@@ -258,8 +258,8 @@ repeat_lyrics()
         </choice>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="functAdd_PP_price" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="functAdd_PP_price" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>The following code should define the function printPrice, that prints items and their prices,
             and define a second function printReceipt, that uses  printPrice to print a receipt. Then,
@@ -314,5 +314,5 @@ repeat_lyrics()
         </choice>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 </section>

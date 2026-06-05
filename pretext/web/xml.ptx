@@ -40,7 +40,7 @@
             a self-closing tag (e.g., <c>&lt;email /&gt;</c>).</p>
             </introduction>
             
-  <exercise label="webXML_MC_tags">
+  <activity label="webXML_MC_tags">
     <statement>
       <p>csp-10-2-1: In XML, a pair of opening and closing tags (&lt;&gt; and &lt;\&gt;) represent what? Select all that apply.</p>
     </statement>
@@ -78,14 +78,14 @@
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>Often it is helpful to think of an XML document as a tree structure
             where there is a top/root element (here: <c>person</c>), and other tags (e.g.,
             <c>phone</c>) are drawn as <em>children</em> of their <em>parent</em> elements.</p>
   <figure align="">
     <image source="images/xmlTree-fixed.png" width="80%" alt="A Tree Representation of XML"/>
   </figure>
-  <exercise label="webXML_email_sibling_tag">
+  <activity label="webXML_email_sibling_tag">
     <statement>
       <p>csp-10-2-2: What are the sibling tags of the email tag?</p>
     </statement>
@@ -123,8 +123,8 @@
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="xml_person_self_closing_tags_clicka">
+  </activity>
+  <activity label="xml_person_self_closing_tags_clicka">
     <statement>
       <p>Click on all of the self-closing tags in the XML below.</p>
     </statement>
@@ -140,8 +140,8 @@
       <cline>    <area correct="yes">&lt;email hide="yes" /&gt;</area></cline>
       <cline><area correct="no">&lt;/person&gt;</area></cline>
     </areas>
-  </exercise>
-  <exercise label="xml_food_tag_text_clicka">
+  </activity>
+  <activity label="xml_food_tag_text_clicka">
     <statement>
       <p>Click on all of the text in the XML tags below.</p>
     </statement>
@@ -158,8 +158,8 @@
       <cline>    <area correct="no">&lt;calories&gt;</area><area correct="yes">600</area><area correct="no">&lt;/calories&gt;</area></cline>
       <cline><area correct="no">&lt;/food&gt;</area></cline>
     </areas>
-  </exercise>
-  <exercise label="xml_person_attributes_clicka">
+  </activity>
+  <activity label="xml_person_attributes_clicka">
     <statement>
       <p>Click on all of the attribute names in the XML below.</p>
     </statement>
@@ -175,12 +175,12 @@
       <cline>    <area correct="no">&lt;email </area> <area correct="yes">hide</area>=<area correct="no">"yes" /&gt;</area></cline>
       <cline><area correct="no">&lt;/person&gt;</area></cline>
     </areas>
-  </exercise>
+  </activity>
 
   <subexercises xml:id="web_properly-formatted-xml">
     <title>Properly Formatted XML</title>
     <p>Solve the next couple of problems and think about what are the rules for properly formatted XML.</p>
-    <exercise label="xml_note_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <activity label="xml_note_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Put the blocks into order to define just the body of simple XML document that defines a note. A note has a date, subject, and a body in that order. Indent the blocks to show the structure (parent and child).</p>
       </statement>
@@ -216,8 +216,8 @@
           </choice>
         </block>
       </blocks>
-    </exercise>
-    <exercise label="xml_message_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    </activity>
+    <activity label="xml_message_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Put the blocks into order to define just the body of simple XML document that stores information for a message: to, from, time, subject, and body in that order.  Indent the blocks to show the structure (parent and child).</p>
       </statement>
@@ -259,8 +259,8 @@
           <cline>&lt;/message&gt;</cline>
         </block>
       </blocks>
-    </exercise>
-    <exercise label="webXML_proper_format">
+    </activity>
+    <activity label="webXML_proper_format">
       <statement>
         <p>csp-10-2-8: Select all of the following that are true about XML.</p>
       </statement>
@@ -298,8 +298,8 @@
           </feedback>
         </choice>
       </choices>
-    </exercise>
-    <exercise label="xml_book_end_tags_clicka">
+    </activity>
+    <activity label="xml_book_end_tags_clicka">
       <statement>
         <p>Click on all of the end tags in the XML below.</p>
       </statement>
@@ -323,8 +323,8 @@
         <cline>    <area correct="yes">&lt;/book&gt;</area></cline>
         <cline><area correct="yes">&lt;/bookstore&gt;</area></cline>
       </areas>
-    </exercise>
-    <exercise label="webXML_child_tag_bookstore">
+    </activity>
+    <activity label="webXML_child_tag_bookstore">
       <statement>
         <p>csp-10-2-10: Select the child tag of the bookstore tag.</p>
       </statement>
@@ -362,8 +362,8 @@
           </feedback>
         </choice>
       </choices>
-    </exercise>
-    <exercise label="webXML_bookstore_attr_names">
+    </activity>
+    <activity label="webXML_bookstore_attr_names">
       <statement>
         <p>csp-10-2-11: Select all of the attribute values in the example XML for a bookstore.</p>
       </statement>
@@ -401,8 +401,8 @@
           </feedback>
         </choice>
       </choices>
-    </exercise>
-    <exercise label="webXML_MC_tf">
+    </activity>
+    <activity label="webXML_MC_tf">
       <statement>
         <p>csp-10-2-12: Select all of the following that are true.</p>
       </statement>
@@ -448,6 +448,6 @@
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
   </subexercises>
 </worksheet>

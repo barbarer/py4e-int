@@ -61,7 +61,7 @@
   </note>
 </introduction>
 
-  <exercise label="html_my_first_page_ac">
+  <activity label="html_my_first_page_ac">
     <statement>
       <p>Click on the <q>Render</q> button to see the resulting web page.</p>
     </statement>
@@ -82,13 +82,13 @@
 &lt;/html&gt;
         </code>
     </program>
-  </exercise>
+  </activity>
   <p>Try adding a <c>h2</c> and <c>h3</c> header to the HTML above after the paragraph.</p>
-  <exercise label="html-headers-short-answer">
+  <activity label="html-headers-short-answer">
     <statement>
       <p>Q-2: What happens to the text as the header level increases (h1, h2, h3)?</p>
     </statement>
-  </exercise>
+  </activity>
   <p>The first tag, <c>&lt;!DOCTYPE html&gt;</c>, indicates that this is an HTML document.
             While it is best to include this tag, the page will typically display
             fine even if you don't include it.</p>
@@ -97,7 +97,7 @@
   <p>The <c>body</c> tag contains the items that will be displayed.</p>
   <p>The <c>h1</c> tag is for a first-level (most important) header.  There are additional types of headers: <c>h2</c>, <c>h3</c>, etc.</p>
   <p>The <c>p</c> tag indicates a paragraph of text.</p>
-  <exercise label="html_basic_tag_def_dnd">
+  <activity label="html_basic_tag_def_dnd">
     <statement>
       <p>Match each tag to its definition.</p>
     </statement>
@@ -130,14 +130,14 @@
         <response>A paragraph.</response>
       </match>
     </cardsort>
-  </exercise>
+  </activity>
 
   <subexercises xml:id="network_start-and-end-tags">
     <title>Start and End Tags</title>
     <introduction><p>Most HTML elements have start tags and end tags. The page is started with
                 the start tag  <c>&lt;html&gt;</c> and ends with the end tag <c>&lt;/html&gt;</c>.  Indentation
                 isn't required, but makes it easier to read the HTML.</p></introduction>
-    <exercise label="html_start_tags_clicka">
+    <activity label="html_start_tags_clicka">
       <statement>
         <p>Click on all of the start tags in the HTML below.</p>
       </statement>
@@ -157,8 +157,8 @@
         <cline>    <area correct="no">&lt;/body&gt;</area></cline>
         <cline><area correct="no">&lt;/html&gt;</area></cline>
       </areas>
-    </exercise>
-    <exercise label="html_end_tags_clicka">
+    </activity>
+    <activity label="html_end_tags_clicka">
       <statement>
         <p>Click on all of the end tags in the HTML below.</p>
       </statement>
@@ -178,8 +178,8 @@
         <cline>    <area correct="yes">&lt;/body&gt;</area></cline>
         <cline><area correct="yes">&lt;/html&gt;</area></cline>
       </areas>
-    </exercise>
-    <exercise label="html_fix_page_ac">
+    </activity>
+    <activity label="html_fix_page_ac">
       <statement>
         <p>Fix the errors in the HTML below so that every start tag has an end tag and every end tag has a start tag.</p>
       </statement>
@@ -199,12 +199,12 @@
 &lt;/html&gt;
         </code>
       </program>
-    </exercise>
+    </activity>
   </subexercises>
   <subexercises xml:id="network_list-tags">
     <title>List Tags</title>
     <introduction><p>You can include both ordered (numbered) and unordered (bulleted) lists in HTML.</p></introduction>
-    <exercise label="html_lists_ac">
+    <activity label="html_lists_ac">
       <statement>
         <p>Render the HTML below.</p>
       </statement>
@@ -231,8 +231,8 @@
 &lt;/html&gt;
         </code>
       </program>
-    </exercise>
-    <exercise label="html_list_tag_def_dnd">
+    </activity>
+    <activity label="html_list_tag_def_dnd">
       <statement>
         <p>Match each tag to its definition.</p>
       </statement>
@@ -253,7 +253,7 @@
           <response>Tag to define a list item.</response>
         </match>
       </cardsort>
-    </exercise>
+    </activity>
   </subexercises>
   <subexercises xml:id="network_tag-relationships-parent-child-sibling">
     <title>Tag Relationships: Parent, Child, Sibling</title>
@@ -262,7 +262,7 @@
                 two children tags: <c>&lt;head&gt;</c> and <c>&lt;body&gt;</c>.  The head contains meta information
                 about the page including the page title.  The body contains the elements
                 that are displayed in the page such as the headers and paragraphs.</p></introduction>
-    <exercise label="html_pp_my_first_page_v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <activity label="html_pp_my_first_page_v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Put the blocks into order to define a simple HTML page. Indent the blocks to show the structure.</p>
       </statement>
@@ -295,8 +295,8 @@
           <cline>&lt;/html&gt;</cline>
         </block>
       </blocks>
-    </exercise>
-    <exercise label="html_pp_my_second_page" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    </activity>
+    <activity label="html_pp_my_second_page" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Put the blocks into order to define a simple HTML page with a header and a paragraph in that order. Indent the blocks to show the structure.</p>
       </statement>
@@ -329,7 +329,7 @@
           <cline>&lt;/html&gt;</cline>
         </block>
       </blocks>
-    </exercise>
+    </activity>
     <p>In an HTML page the <em>root</em> element is the <q>html</q> tag. A <em>root</em> is the start of a structure.  This type of structure
                 is called a tree. The <c>html</c> tag has two <em>children</em>
                 elements: the <c>head</c> and <c>body</c> tags. These tags are called <em>sibling</em> tags since they share the same parent tag.
@@ -338,7 +338,7 @@
     <figure align="">
       <image source="images/html-tree.png" width="50%" alt="A Tree Representation of an HTML page"/>
     </figure>
-    <exercise label="html_parent_a">
+    <activity label="html_parent_a">
       <statement>
         <p>Q-11: Which tag is the parent of the <c>a</c> (hyperlink) tag in the above structure?</p>
       </statement>
@@ -376,8 +376,8 @@
           </feedback>
         </choice>
       </choices>
-    </exercise>
-    <exercise label="html_parent_title">
+    </activity>
+    <activity label="html_parent_title">
       <statement>
         <p>Q-12: Which tag is the parent of the <c>title</c> tag in the above structure?</p>
       </statement>
@@ -415,7 +415,7 @@
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     
   </subexercises>
   <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>

@@ -2,7 +2,7 @@
 <section xml:id="files_mixed-up-code-questions">
   <title>Mixed-up Code Questions</title>
 
-  <exercise label="file_write_line_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="file_write_line_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>write_line(file, output)</c> that writes the contents of the string <c>output</c> to <c>file</c>.  Be sure to add a newline character <c>"\n"</c> when you write <c>output</c> to the file.</p>
     </statement>
@@ -35,9 +35,9 @@
         </choice>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 
-  <exercise label="file_read_n_lines_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="file_read_n_lines_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>read_n_lines(file, n)</c> that reads the first <c>n</c> lines from <c>file</c> and returns them in a list. Be sure to remove the end of line character from each line before you add it to the list and close the file after you have read the lines.</p>
     </statement>
@@ -75,9 +75,9 @@
         <cline>    return out</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 
-  <exercise label="file_count_words_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="file_count_words_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>count_words(file)</c> that returns the number of words in the passed file. First create a variable <c>num</c> and initialize it.  Then open the
             file. Loop reading a line from the file. Break the line at spaces and add the length of the resulting list to <c>num</c>. After you have read all the lines, close the file and return <c>num</c>.
@@ -124,9 +124,9 @@
         <cline>    return(num)</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 
-  <exercise label="file_count_lines_starting_with_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="file_count_lines_starting_with_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>count_starting_with(file, str)</c> that returns the number of lines in the passed <c>file</c> that start with the characters in <c>str</c>.  Be sure to close the file.</p>
     </statement>
@@ -166,9 +166,9 @@
         <cline>    return(num)</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 
-  <exercise label="file_write_squares_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="file_write_squares_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>write_squares(file)</c> which writes the squares of 1 (inclusive) to 10 (inclusive) with each one on a single line to <c>file</c>.
       </p>
@@ -213,7 +213,7 @@
         </choice>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 
   <!--
   <raw format="html" xml:space="preserve">
@@ -252,7 +252,7 @@
 &lt;/div&gt;
 </raw>
   -->
-  <exercise label="file_mixed_olympics" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="file_mixed_olympics" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>The following program should split the lines of <q>olympics.txt</q>, then print the name,
             team, and event of each athlete in a sentence. Unfortunately the code is mixed up.
@@ -289,7 +289,7 @@
         </choice>
       </block>
     </blocks>
-  </exercise>
+  </activity>
   <p>The next 5 questions refer to pollution data in the US from the following file. It
             contains a city, state :PM10 :PM2.5 where PM is the particulate matter and PM10 is
             particulate matter that is course and 2.5 to 10 micrometers in diameter such as
@@ -680,7 +680,7 @@ Yuba City, CA :12 :7
 Yuma, AZ :14 :9
 &lt;/pre&gt;</raw>
   </hint>
-  <exercise label="file_mixed_pollution" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="file_mixed_pollution" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>The following program prints the pollution information for all cities that start with a <c>D</c>,
             but the code is mixed up. Drag the blocks of statements from the left column to the right column
@@ -712,8 +712,8 @@ Yuma, AZ :14 :9
         <cline>inFile.close()</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="file_mixed_largest" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="file_mixed_largest" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>PM 2.5 is an air pollutant that is harmful at high levels. The following program
             prints the maximum PM 2.5 pollution found, but the code is mixed up. Drag the blocks
@@ -756,8 +756,8 @@ Yuma, AZ :14 :9
         <cline>print("Largest is ",max25," in ",maxCity)</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="file_mixed_lowest" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="file_mixed_lowest" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>The following program prints the minimum PM 2.5 pollution found, but the code is mixed up.
             Drag the blocks of statements from the left column to the right column and put them in the
@@ -799,8 +799,8 @@ Yuma, AZ :14 :9
         <cline>print("Smallest PM 2.5 ",min25," in ",minCity)</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="file_mixed_average" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="file_mixed_average" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>The following program prints the average PM 2.5 pollution found, but the code is
             mixed up. Drag the blocks of statements from the left column to the right column
@@ -838,8 +838,8 @@ Yuma, AZ :14 :9
         <cline>print("Average PM 2.5 value is ",total25/count)</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="file_mixed_stateav" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="file_mixed_stateav" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>The following program prints the average PM 2.5 pollution for a state, but the code is
             mixed up. Drag the blocks of statements from the left column to the right column and put
@@ -885,5 +885,5 @@ Yuma, AZ :14 :9
         <cline>print("Avg for " , state, " is ", avg)</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 </section>

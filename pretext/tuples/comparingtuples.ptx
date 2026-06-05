@@ -19,7 +19,7 @@
 &gt;&gt;&gt; True
 </code>
   </program>
-  <exercise label="question10_2_1">
+  <activity label="question10_2_1">
     <statement>
       <p>11-9-1: What is returned when the following code is run?</p>
       <program language="python">
@@ -54,7 +54,7 @@
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p><c>sort()</c> is a list method that can be helpful when managing a list of tuples. When sorting, it compares the
             first element of each tuple, but in the case of a tie, it compares their second elements, and
             so on.</p>
@@ -63,7 +63,7 @@
   <p><term>Decorate</term> a sequence by building a list of tuples with one or more sort metrics preceding the elements from the sequence.</p>
   <p><term>Sort</term> the list of tuples using Python's built-in <c>sort</c> method.</p>
   <p><term>Undecorate</term> by extracting the sorted elements of the sequence.</p>
-  <exercise label="question10_2_2">
+  <activity label="question10_2_2">
     <statement>
       <p>Match the steps of DSU with their definitions.</p>
     </statement>
@@ -84,7 +84,7 @@
         <response>By extracting the sorted elements of the sequence.</response>
       </match>
     </cardsort>
-  </exercise>
+  </activity>
   <p>For example, suppose you have a list of words and you want to sort them
             from longest to shortest:</p>
   <program xml:id="comparingtuples_exercise_1" interactive="activecode" language="python">
@@ -117,7 +117,7 @@ print(sortedWordsList)
   <pre>['yonder', 'window', 'breaks', 'light', 'what', 'soft', 'but', 'in']</pre>
   <p>Of course, the line loses much of its poetic impact when turned into a
             Python list and sorted in descending word length order.</p>
-  <exercise label="question10_2_3" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="question10_2_3" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Move the code blocks around to create a program that sorts the words in word_list by length from longest to shortest and adds them to sorted_word_list. Hint: remember DSU!</p>
     </statement>
@@ -151,5 +151,5 @@ print(sortedWordsList)
         <cline>   sorted_word_list.append(word)</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 </section>

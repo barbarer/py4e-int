@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="lists_write-code-questions">
   <title>Write Code Questions</title>
-  <exercise label="list_writeItemsq_v2_ac">
+  <activity label="list_writeItemsq_v2_ac">
     <statement>
       <p>Write a function <c>item_lister</c> that takes in a list of at least three values, <c>items</c>, as a parameter. Set the first value to <q>First item</q>, set
             the second value to the original first value, and set the third value to its current value plus one (rounded to two decimals). (Note: the third value of <c>items</c>
@@ -33,8 +33,8 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
     </program>
-  </exercise>
-  <exercise label="list_writeItemsq_v2_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="list_writeItemsq_v2_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>item_lister</c> that takes in a list of at least three values, <c>items</c>, as a parameter. Set the first value to <q>First item</q>, set
             the second value to the original first value, and set the third value to its current value plus one (rounded to two decimals). (Note: the third value of <c>items</c>
@@ -71,8 +71,8 @@ myTests().main()
         <cline>    return new_list</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="list_write23_ac">
+  </activity>
+  <activity label="list_write23_ac">
     <statement>
       <p>Write the function <c>change_index3</c> that takes in one parameter, <c>lst</c>, and assigns the value at index 3 of <c>lst</c> to &#x2018;200' and then returns <c>lst</c>.
             For example, <c>change_index3(['hi', 'goodbye', 'python', '106', '506'])</c> would return <c>['hi', 'goodbye', 'python', '200', '506']</c> and
@@ -99,8 +99,8 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
     </program>
-  </exercise>
-  <exercise label="list_write23_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="list_write23_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create the function <c>change_index3</c> that takes in one parameter, <c>lst</c>, and assigns the value at index 3 of <c>lst</c> to &#x2018;200' and then returns <c>lst</c>.
             For example, <c>change_index3(['hi', 'goodbye', 'python', '106', '506'])</c> would return <c>['hi', 'goodbye', 'python', '200', '506']</c> and
@@ -122,8 +122,8 @@ myTests().main()
         <cline>    return lst</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="list_write5_ac">
+  </activity>
+  <activity label="list_write5_ac">
     <statement>
       <p>Write a function <c>countWords</c> that takes in a list, <c>lst</c>, as a parameter, and returns the amount of words that have a length of 5.
             For example, <c>countWords(['hello', 'hi', 'good morning', 'three', 'kitty']</c> should return <c>3</c>.</p>
@@ -148,8 +148,8 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
     </program>
-  </exercise>
-  <exercise label="list_write5_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="list_write5_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>countWords</c> that takes in a list, <c>lst</c>, as a parameter, and returns the amount of words that have a length of 5.
             For example, <c>countWords(['hello', 'hi', 'good morning', 'three', 'kitty']</c> should return <c>3</c>.</p>
@@ -179,8 +179,8 @@ myTests().main()
         <cline>    return count</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="list_writeReverse_ac">
+  </activity>
+  <activity label="list_writeReverse_ac">
     <statement>
       <p>Write a function <c>reverse</c> that takes in one parameter, <c>lst</c>, and returns the reverse of a passed list.
             For example, <c>reverse[1,2,3]</c> should return <c>[3, 2, 1]</c>.</p>
@@ -203,8 +203,8 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
     </program>
-  </exercise>
-  <exercise label="list_writeReverse_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="list_writeReverse_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>reverse</c> that takes in one parameter, <c>lst</c>, and returns the reverse of a passed list.
             For example, <c>reverse[1,2,3]</c> should return <c>[3, 2, 1]</c>.</p>
@@ -225,8 +225,8 @@ myTests().main()
         <cline>    return lst</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="list_sortByLen_ac">
+  </activity>
+  <activity label="list_sortByLen_ac">
     <statement>
       <p>Write a function <c>sort_by_length</c> that takes in one parameter, a list of strings, <c>lst</c>, and returns the list sorted
             by the length of the strings. For example, <c>sort_by_length(["hello", "hi", "hey", "greetings"])</c> would return <c>['hi', 'hey', 'hello', 'greetings']</c>.</p>
@@ -250,8 +250,8 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
     </program>
-  </exercise>
-  <exercise label="list_sortByLen_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="list_sortByLen_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>reverse</c> that takes in one parameter, <c>lst</c>, and returns the reverse of a passed list.
             For example, <c>reverse[1,2,3]</c> should return <c>[3, 2, 1]</c>.</p>
@@ -267,5 +267,5 @@ myTests().main()
         <cline>    return lst</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 </section>

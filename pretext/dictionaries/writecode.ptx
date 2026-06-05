@@ -2,7 +2,7 @@
 <section xml:id="dictionaries_write-code-questions">
   <title>Write Code Questions</title>
 
-        <exercise>
+        <activity>
           <statement>
             <p>Write a program that categorizes each mail message by which day of the week
                             the commit was done. To do this, look for lines that start with <q>From</q>. Then,
@@ -58,9 +58,9 @@ for email in mail:
 print(mail_count)
         </code></program>
                     </solution>
-        </exercise>
+        </activity>
 
-        <exercise label="dict_writecode2">
+        <activity label="dict_writecode2">
           <statement>
             <p>Write a program to read through a mail log, build the dictionary <c>user_count</c> to count how many messages have come from each email address, and print the dictionary. For example, <c>user_count['stephen.marquard@uct.ac.za']</c> should be <c>4</c>.</p>
           </statement>
@@ -79,9 +79,9 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
           </program>
-        </exercise>
+        </activity>
 
-        <exercise>
+        <activity>
           <statement>
             <p>Write a program that creates a dictionary <c>letter_count</c> that keeps track
                             of the amount of times each letter appears in the given phrase. Assign the
@@ -137,9 +137,9 @@ for word in phrase.split():
 e_counter = letter_count['e']
         </code></program>
                     </solution>
-        </exercise>
+        </activity>
 
-        <exercise label="dict_writecode4">
+        <activity label="dict_writecode4">
           <statement>
             <p>Write a program that reads the words in the string <c>phrase</c> and counts how many times each word appears.
                     Store the words as keys in the dictionary <c>word_dictionary</c>, and then use the in operator as a fast way to
@@ -162,7 +162,7 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
           </program>
-        </exercise>
+        </activity>
 
         <!--</p>-->
   <hint>
@@ -192,7 +192,7 @@ are often the kinds of things that we humans find boring
 and mind-numbing</pre>
   </hint>
 
-        <exercise>
+        <activity>
           <statement>
             <p>Write code that reads in the text from the file words.txt and uses
                             the dictionary <c>word_count</c> to count the amount of times a word appears
@@ -244,9 +244,9 @@ with open("words.txt", "r") as filename:
 print(word_count)
         </code></program>
                     </solution>
-        </exercise>
+        </activity>
 
-        <exercise label="dict_writecode6">
+        <activity label="dict_writecode6">
           <statement>
             <p>Write a program that reads the words in the string <c>phrase</c> and counts how many times each word appears.
                     Store the words as keys in the dictionary <c>word_dictionary</c>, and then use the in operator as a fast way to
@@ -271,7 +271,7 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
           </program>
-        </exercise>
+        </activity>
 
   <p>Below is the romeo3.txt file used in Question 7.</p>
   <hint>
@@ -281,7 +281,7 @@ Arise fair sun and kill the envious moon
 Who is already sick and pale with grief</pre>
   </hint>
  
-        <exercise>
+        <activity>
           <statement>
             <p>Write code to read through the lines of the file, break each line into a list of
                             words, and then loop through each of the words in the line and count each word using
@@ -332,9 +332,9 @@ with open("romeo.txt", "r") as filename:
             counts[word] += 1
         </code></program>
                     </solution>
-        </exercise>
+        </activity>
 
-        <exercise label="dict_writecode8">
+        <activity label="dict_writecode8">
           <statement>
             <p>Write code that adds the key &#x2018;two' with a value of &#x2018;dos' to the dictionary <c>eng2sp</c>. For example, <c>eng2sp['two']</c> should be <c>'dos'</c>.</p>
           </statement>
@@ -353,7 +353,7 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
           </program>
-        </exercise>
+        </activity>
 
   <p>The next two questions are associated with the following text file which has an email address followed by the number of messages from that address.</p>
   <hint>
@@ -370,7 +370,7 @@ stephen.marquard@uct.ac.za 2
 ray@media.berkeley.edu 1</pre>
   </hint>
 
-        <exercise>
+        <activity>
           <statement>
             <p>Add code to the program below to figure out who has the most messages in the file. After all the data has been read and the dictionary <c>message_count</c> has been created, look through the dictionary using a maximum loop (see Chapter 5: Maximum and minimum loops) to find who has the most messages,
                             and print how many messages the person has. For example, <c>message_count['cwen@iupui.edu']</c> should be <c>5</c>.</p>
@@ -428,9 +428,9 @@ for key in message_count.keys():
 print(max_emails)
         </code></program>
                     </solution>
-        </exercise>
+        </activity>
 
-        <exercise label="dict_writecode10">
+        <activity label="dict_writecode10">
           <statement>
             <p>Write a program to record in the dictionary <c>message_count</c> the total number of messages from each domain name (not the whole address, just the part after the @ and before the space). At the end of the program, print out the contents of your dictionary.
                     The domains should be the keys of the dictionary, and the counts of the domains should be the values of the dictionary. For example, <c>message_count['iupui.edu']</c> should be <c>8</c>.</p>
@@ -452,5 +452,5 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
           </program>
-        </exercise>
+        </activity>
 </section>

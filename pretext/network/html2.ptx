@@ -54,7 +54,7 @@
   <subsection xml:id="network_table-tags">
     <title>Table Tags</title>
     <p>HTML pages can include tables.  Use the <c>&lt;table&gt;</c> tag.</p>
-    <exercise label="html_table_ex">
+    <activity label="html_table_ex">
       <statement>
         <p>Click on the <q>Render</q> button to see the resulting web page.</p>
       </statement>
@@ -88,8 +88,8 @@
 &lt;/html&gt;
         </code>
       </program>
-    </exercise>
-    <exercise label="html_table_tag_def_dnd">
+    </activity>
+    <activity label="html_table_tag_def_dnd">
       <statement>
         <p>Match each tag to its definition.</p>
       </statement>
@@ -114,8 +114,8 @@
           <response>Used to identify data in a table.</response>
         </match>
       </cardsort>
-    </exercise>
-    <exercise label="html_body_table_unemployment_order" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    </activity>
+    <activity label="html_body_table_unemployment_order" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Put the blocks into order to define just the body of simple HTML page with a table. The table has a header row and one row of data. Indent the blocks to show the structure.</p>
       </statement>
@@ -155,8 +155,8 @@
           <cline>&lt;/body&gt;</cline>
         </block>
       </blocks>
-    </exercise>
-    <exercise label="html_body_table_order_two_data" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    </activity>
+    <activity label="html_body_table_order_two_data" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Put the blocks into order to define just the body of simple HTML page with a table. The table has two rows of data.  The first row is data about the United Kingdom and the second is data about India. Indent the blocks to show the structure.</p>
       </statement>
@@ -196,7 +196,7 @@
           <cline>&lt;/body&gt;</cline>
         </block>
       </blocks>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="network_link-tag">
     <title>Link Tag</title>
@@ -211,7 +211,7 @@
                 The text of the tag is <c>Visit W3Schools.com!</c> which is the actual text of the link when it is displayed.
                 If you click on the link you will be taken to the <c>href</c> value: <c>https://www.w3schools.com/</c>.
                 The <c>&lt;a&gt;</c> tag has a closing <c>&lt;/a&gt;</c> tag.</p>
-    <exercise label="html_link_ac" xml:id="html_link_ac_ex">
+    <activity label="html_link_ac" xml:id="html_link_ac_ex">
       <statement>
         <p>Render the HTML below.</p>
       </statement>
@@ -230,13 +230,13 @@
 &lt;/html&gt;
         </code>
       </program>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="network_image-tag">
     <title>Image Tag</title>
     <p>Web pages can include images using the &lt;img&gt; tag. The image tag has an attribute <c>src</c> that specifies the URL for the image
                 and can have an <c>alt</c> attribute to specify alternative text that describes the image.</p>
-    <exercise label="html_image_ac" xml:id="html_image_ac_ex">
+    <activity label="html_image_ac" xml:id="html_image_ac_ex">
       <statement>
         <p>Render the HTML below.</p>
       </statement>
@@ -254,11 +254,11 @@
 &lt;/html&gt;
         </code>
       </program>
-    </exercise>
+    </activity>
     <note>
       <p>An image tag, <c>&lt;img&gt;</c>, does not have an end tag.  All of the information is in the start tag.</p>
     </note>
-    <exercise label="html_other_tags_def_dnd">
+    <activity label="html_other_tags_def_dnd">
       <statement>
         <p>Match each tag to its definition.</p>
       </statement>
@@ -279,18 +279,18 @@
           <response>Tag to define a hyperlink (link)</response>
         </match>
       </cardsort>
-    </exercise>
-    <exercise label="html-anchor-vs-img">
+    </activity>
+    <activity label="html-anchor-vs-img">
       <statement>
         <p>Q-8: List the differences between the <c>img</c> tag and the <c>a</c> tag?</p>
       </statement>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="network_attributes">
     <title>Attributes</title>
     <p>All HTML tags can have attributes.  Attributes provide additional information about the tag such as the alternative text to use for an image as shown above by the <c>alt</c> attribute of the <c>img</c> tag.
                 Attributes are specified by name and value pairs.  The value should be in quotes.</p>
-    <exercise label="html_a_tag_attribute_names">
+    <activity label="html_a_tag_attribute_names">
       <statement>
         <p>Click on all of the attribute names in the example HTML below.</p>
       </statement>
@@ -312,8 +312,8 @@
         <cline>    <area correct="no">&lt;/body&gt;</area></cline>
         <cline><area correct="no">&lt;/html&gt;</area></cline>
       </areas>
-    </exercise>
-    <exercise label="html_a_tag_attribute_values">
+    </activity>
+    <activity label="html_a_tag_attribute_values">
       <statement>
         <p>Click on all of the attribute values in the example HTML below.</p>
       </statement>
@@ -335,13 +335,13 @@
         <cline>    <area correct="no">&lt;/body&gt;</area></cline>
         <cline><area correct="no">&lt;/html&gt;</area></cline>
       </areas>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="network_div-and-span-tags">
     <title>Div and Span tags</title>
     <p>The <c>div</c> tag is used to contain other HTML tags (elements).  It is often used to divide the HTML page into sections. The <c>span</c> tag is used for inline grouping or styling.
                 You can use Cascading Style Sheets (CSS) to change the look of each HTML tag (element).  You can add the CSS directly in the <c>head</c> section using the <c>style</c> tag, but the recommended approach is to use external CSS.</p>
-    <exercise label="html_div_with_css_ac" xml:id="html_div_with_css_ac_ex">
+    <activity label="html_div_with_css_ac" xml:id="html_div_with_css_ac_ex">
       <statement>
         <p>Render the HTML below.</p>
       </statement>
@@ -373,8 +373,8 @@
 &lt;/html&gt;
         </code>
       </program>
-    </exercise>
-    <exercise label="html_span_div_css">
+    </activity>
+    <activity label="html_span_div_css">
       <statement>
         <p>Match each term to its definition.</p>
       </statement>
@@ -395,12 +395,12 @@
           <response>Is used to define styles to change how HTML elements are displayed.</response>
         </match>
       </cardsort>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="network_using-css-classes">
     <title>Using CSS Classes</title>
     <p>You can define one or more classes in CSS and then use them to change the display of the HTML elements.</p>
-    <exercise label="html_div_with_css_classes_ac" xml:id="html_div_with_css_classes_ac_ex">
+    <activity label="html_div_with_css_classes_ac" xml:id="html_div_with_css_classes_ac_ex">
       <statement>
         <p>Render the HTML below.</p>
       </statement>
@@ -429,9 +429,9 @@
 &lt;/html&gt;
         </code>
       </program>
-    </exercise>
+    </activity>
     <p>Change the class <c>warning</c> to use an orange color instead and render the HTML again.</p>
-    <exercise label="html_true_items">
+    <activity label="html_true_items">
       <statement>
         <p>Q-14: Which of the follow are true?</p>
       </statement>
@@ -469,7 +469,7 @@
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
     
   </subsection>

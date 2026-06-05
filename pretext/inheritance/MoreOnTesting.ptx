@@ -105,7 +105,7 @@
     <title>Writing Unit Tests</title>
     <p>When you create tests you want to test the usual things as well as edge cases (unusual things).  For example, when working with lists what is the result when the list is empty? When working with numbers be sure to test positive and negative numbers.</p>
     <p>Read the description of the function below.  How many test cases do you need to test this function?</p>
-    <exercise label="ut_is_descending_ac">
+    <activity label="ut_is_descending_ac">
       <statement>
         <p>Write a function <c>is_descending(nums)</c> that returns <c>True</c> if the numbers in the list <c>nums</c> are sorted in descending order and <c>False</c> otherwise. If the list <c>nums</c> has less than two numbers in it return <c>True</c>.  For example, <c>is_descending([3, 2, 1])</c> should return <c>True</c>, <c>is_descending([1])</c> should also return <c>True</c>, and <c>is_descending([1,2,3])</c> should return <c>False</c>.</p>
       </statement>
@@ -126,10 +126,10 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
       </program>
-    </exercise>
+    </activity>
     <p>Add a test to the <c>testOne</c> function above to test when <c>nums</c> is the empty list.  Add tests to check what happens when all numbers are descending except the first, middle, or last.  Add tests that check that it works for unusual values such as negative numbers or zero.</p>
     <p>Read the description of the function below.  How many test cases do you need to test this function?</p>
-    <exercise label="ut_temp_category_ac">
+    <activity label="ut_temp_category_ac">
       <statement>
         <p>Write a function <c>temp_cat(value)</c> that returns <c>"low"</c> if <c>value</c> is &lt; 97, <c>normal</c> if <c>value</c> is &gt;= 97 and &lt;= 99, and <c>high</c> if <c>value</c> is &gt; 99.  Add more test cases to check the three possible return values (<c>"low"</c>, <c>"normal"</c>, and <c>"high"</c>).</p>
       </statement>
@@ -148,10 +148,10 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
       </program>
-    </exercise>
+    </activity>
     <p>Did you check when <c>value</c> equals 97 and is greater than 97?  Did you check when <c>value</c> was equal to 99?  What happens if <c>value</c> is a floating point number like 98.7 or 102.4?</p>
     <p>Use <c>assertEqual</c> if the values you are comparing are integers or strings.  Use <c>assertAlmostEqual</c> if the values are floating point numbers (especially if they are calculated by the computer).  This method takes the two items to compare, the number of decimal places to compare (the default is 7), and a string describing the test.</p>
-    <exercise label="ut_item_and_order_add_total_ac">
+    <activity label="ut_item_and_order_add_total_ac">
       <statement>
         <p>Write a <c>total</c> method in the <c>Order</c> class to return the total of all of the prices for the items in the order.  Then add a test to <c>testTotal</c> to test the total of o2.</p>
       </statement>
@@ -190,12 +190,12 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
       </program>
-    </exercise>
+    </activity>
     <note>
       <p>Remember that the <c>setUp</c> method is called before every method of the class <c>myTests</c> and that the methods are not called in the order they are written.</p>
     </note>
     <p>It is easy to test a function or method that returns a value, but how do you test when no value is returned?  For example, the <c>set_price</c> method below doesn't return anything, but it should change the price.  You can test that the price changed from the original value as shown below.</p>
-    <exercise label="ut_item_set_name_set_price_ac">
+    <activity label="ut_item_set_name_set_price_ac">
       <statement>
         <p>Write a <c>set_name</c> method that changes the current object's name and then add a new method <c>test_set_name</c> to test <c>set_name</c>.</p>
       </statement>
@@ -232,12 +232,12 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
       </program>
-    </exercise>
+    </activity>
     <note>
       <p>To test a method or function in a test method be sure to call the method or function.</p>
     </note>
     <p>Testing with inheritance.  If you have asked someone to create a class that inherits from another class you might want to check that they specified the inheritance correctly.  You can use <c>assertIsInstance</c> to check if an object is an instance of a class.</p>
-    <exercise label="inheritance_pet_duck_ac">
+    <activity label="inheritance_pet_duck_ac">
       <statement>
         <p>Create a subclass of the <c>Animal</c> class named <c>Duck</c> that overrides the inherited <c>noise</c> method to return <c>"Quack"</c>.  Also create a test to check that the <c>noise</c> method in <c>Duck</c> returns the correct string.</p>
       </statement>
@@ -263,7 +263,7 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
       </program>
-    </exercise>
+    </activity>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
     <raw format="html" xml:space="preserve">
 &lt;div class="runestone sqcontainer %(optclass)s"&gt;

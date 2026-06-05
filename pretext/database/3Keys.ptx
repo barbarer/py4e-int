@@ -21,7 +21,7 @@
                     world, it makes little sense to allow multiple rows with the same
                     value in the table.</p>
 
-        <exercise label="dbKeys_fill1">
+        <activity label="dbKeys_fill1">
           <statement>
             <p>Q-1: What constraint is often used with logical keys? <var/>  </p>
           </statement>
@@ -39,7 +39,7 @@
               </condition>
             </var>
           </setup>
-        </exercise>
+        </activity>
 
         <p>A <em>primary key</em> is usually a number that is assigned
                     automatically by the database. It generally has no meaning outside
@@ -49,7 +49,7 @@
                     find the row. Since primary keys are integer numbers, they take up
                     very little storage and can be compared or sorted very quickly. In
                     our data model, the <c>id</c> field is an example of a primary key.</p>
-        <exercise label="dbKeys_MC_tf">
+        <activity label="dbKeys_MC_tf">
           <statement>
             <p>Q-2: True or False? A primary key is usually a number</p>
           </statement>
@@ -71,7 +71,7 @@
               </feedback>
             </choice>
           </choices>
-        </exercise>
+        </activity>
 
         <p>A <em>foreign key</em> is usually a number that points to
                     the primary key of an associated row in a different table. An
@@ -80,7 +80,7 @@
   <p>We are using a naming convention of always calling the primary key field
             name <c>id</c> and appending the suffix <c>_id</c> to any field name
             that is a foreign key.</p>
-  <exercise label="dbKeys_fill">
+  <activity label="dbKeys_fill">
     <statement>
       <p>Q-3: How many kinds of keys are generally used in a database model? <var/>  </p>
     </statement>
@@ -98,5 +98,5 @@
         </condition>
       </var>
     </setup>
-  </exercise>
+  </activity>
 </section>

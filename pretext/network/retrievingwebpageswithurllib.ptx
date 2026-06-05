@@ -7,7 +7,7 @@
   <p>Using <c>urllib</c>, you can treat a web page much like a file.
             You simply indicate which web page you would like to retrieve and
             <c>urllib</c> handles all of the HTTP protocol and header details.</p>
-  <exercise label="network_retrieve_fitb">
+  <activity label="network_retrieve_fitb">
     <statement>
       <p>Q-1: The _______ library is used to simplify sending and receiving data from a web page. <var/>  </p>
     </statement>
@@ -25,7 +25,7 @@
         </condition>
       </var>
     </setup>
-  </exercise>
+  </activity>
   <p>The equivalent code to read the <em>romeo.txt</em> file from the web
             using <c>urllib</c> is as follows:</p>
   <program xml:id="urllib1" interactive="activecode" language="python3">
@@ -43,7 +43,7 @@ for line in fhand:
   <p>When the program runs, we only see the output of the contents of the
             file. The headers are still sent, but the <c>urllib</c> code
             consumes the headers and only returns the data to us.</p>
-  <exercise label="network_retrieve_tf">
+  <activity label="network_retrieve_tf">
     <statement>
       <p>Q-3: True or False? The program above shows the headers and contents of the file.</p>
     </statement>
@@ -65,7 +65,7 @@ for line in fhand:
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>As an example, we can write a program to retrieve the data for
             <c>romeo.txt</c> and compute the frequency of each word in the
             file as follows:</p>
@@ -85,7 +85,7 @@ print(counts)
   </program>
   <p>Again, once we have opened the web page, we can read it like a local
             file.</p>
-  <exercise label="network_retrieve_tf2">
+  <activity label="network_retrieve_tf2">
     <statement>
       <p>Q-5: True or False? The urllib library opens a web page and allows it to be read like a file.</p>
     </statement>
@@ -107,5 +107,5 @@ print(counts)
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
 </section>

@@ -2,7 +2,7 @@
 <section xml:id="functions_functions-and-conditionals-write-code-questions">
   <title>Functions and Conditionals Write Code Questions</title>
 
-        <exercise>
+        <activity>
           <statement>
             <p>Write a function called <c>cropped_photo</c> that takes the <c>height</c> and <c>width</c> of a photo.
                             If the <c>height</c> and <c>width</c> are equal, then the function returns <c>"Cropped Photo"</c>. Otherwise,
@@ -45,9 +45,9 @@ def cropped_photo(height, width):
         return "The photo needs to be cropped."
         </code></program>
                     </solution>
-        </exercise>
+        </activity>
 
-        <exercise label="funct_conditional_writecode2q">
+        <activity label="funct_conditional_writecode2q">
           <statement>
             <p>Write a function called <c>bonus</c> that takes two parameters, <c>years</c> and <c>quality</c>.
                     If <c>years</c> is more than 5, then the person gets a bonus.
@@ -79,9 +79,9 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
           </program>
-        </exercise>
+        </activity>
 
-        <exercise>
+        <activity>
           <statement>
             <p>Write a function called <c>move_elevator</c> that takes two parameters, <c>current_floor</c> and <c>next_floor</c>. If the elevator moves
                             to a floor above, then it should return <c>"Up"</c>. Otherwise, it should return <c>"Down"</c>. Also, if <c>next_floor</c> is the same as <c>current_floor</c>, it should return 0.
@@ -124,9 +124,9 @@ def move_elevator(current_floor, next_floor):
         return 0
         </code></program>
                     </solution>
-        </exercise>
+        </activity>
 
-        <exercise label="funct_conditional_writecode4q">
+        <activity label="funct_conditional_writecode4q">
           <statement>
             <p>Write a function called <c>lunch_break</c> that takes a parameter <c>class_standing</c> and determines how long a lunch break will be based on
                     the student's class standing. If a person is a &#x2018;Freshman', return <c>40</c>. If a person is a &#x2018;Sophomore', return <c>30</c>.
@@ -153,9 +153,9 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
           </program>
-        </exercise>
+        </activity>
 
-        <exercise>
+        <activity>
           <statement>
             <p>Write a function called <c>pay_rent</c> that takes in one parameter,
                             <c>units</c>. If <c>units</c> is less than 200, return <c>"$100"</c>.
@@ -206,9 +206,9 @@ def pay_rent(units):
         return "$300"
         </code></program>
                     </solution>
-        </exercise>
+        </activity>
 
-        <exercise label="funct_conditional_writecode6q">
+        <activity label="funct_conditional_writecode6q">
           <statement>
             <p>Write a function called <c>play_weather</c> that takes the string <c>weather</c> as a parameter and
                     returns if one should play or not. If the <c>weather</c> is &#x2018;sunny' or &#x2018;cloudy', then the function
@@ -237,5 +237,5 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
           </program>
-        </exercise>
+        </activity>
 </section>

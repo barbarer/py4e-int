@@ -22,7 +22,7 @@
   <p>In some contexts, like a <c>return</c> statement, it is syntactically simpler to create a tuple than a list. In other contexts, you might prefer a list.</p>
   <p>If you want to use a sequence as a dictionary key, you have to use an immutable type like a tuple or string.</p>
   <p>If you are passing a sequence as an argument to a function, using tuples reduces the potential for unexpected behavior due to aliasing.</p>
-  <exercise label="fitb-sequence-key">
+  <activity label="fitb-sequence-key">
     <statement>
       <p>11-9-1: When using a sequence as a dictionary key, it is best to use a ______ because it is immutable. <var/>  </p>
     </statement>
@@ -40,13 +40,13 @@
         </condition>
       </var>
     </setup>
-  </exercise>
+  </activity>
   <p>Because tuples are immutable, they don't provide methods like
             <c>sort</c> and <c>reverse</c>, which modify existing lists.
             However Python provides the built-in functions <c>sorted</c> and
             <c>reversed</c>, which take any sequence as a parameter and return
             a new sequence with the same elements in a different order.</p>
-  <exercise label="question10_8_2">
+  <activity label="question10_8_2">
     <statement>
       <p>11-9-2: Which of the following objects are mutable? Select all that apply.</p>
     </statement>
@@ -84,8 +84,8 @@
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="question10_8_3">
+  </activity>
+  <activity label="question10_8_3">
     <statement>
       <p>11-9-3: The following are the parameters for the sorted() function. Which are optional?</p>
     </statement>
@@ -115,5 +115,5 @@
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
 </section>

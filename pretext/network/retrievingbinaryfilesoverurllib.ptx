@@ -25,7 +25,7 @@ fhand.close()
             out to your disk. The <c>wb</c> argument for <c>open()</c> opens a binary file
             for writing only. This program will work if the size of the file is less than
             the size of the memory of your computer.</p>
-  <exercise label="network_binary_tf">
+  <activity label="network_binary_tf">
     <statement>
       <p>Q-2: True or False? The <c>wb</c> argument opens a binary file for writing only.</p>
     </statement>
@@ -47,7 +47,7 @@ fhand.close()
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>However if this is a large audio or video file, this program may crash
             or at least run extremely slowly when your computer runs out of memory.
             In order to avoid running out of memory, we retrieve the data in blocks
@@ -74,7 +74,7 @@ fhand.close()
   <p>In this example, we read only 100,000 characters at a time and then
             write those characters to the <c>cover.jpg</c> file before
             retrieving the next 100,000 characters of data from the web.</p>
-  <exercise label="network_binary_mc">
+  <activity label="network_binary_mc">
     <statement>
       <p>Q-4: What is the purpose of the line <c>info = img.read(100000)</c> in the following code?</p>
       <pre>img = urllib.request.urlopen('http://data.pr4e.org/cover3.jpg')
@@ -120,5 +120,5 @@ while True:
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
 </section>

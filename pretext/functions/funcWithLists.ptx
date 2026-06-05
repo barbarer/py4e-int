@@ -45,7 +45,7 @@
   <subsection xml:id="functions_list-indexing">
     <title>List Indexing</title>
     <p>A list holds items in order and you can get the value at an index, just like you can with strings.</p>
-    <exercise label="funct_ll_list_check_start_last_line_v2">
+    <activity label="funct_ll_list_check_start_last_line_v2">
       <statement>
         <p>What is the last thing that will be printed when the code below runs? <var/>  </p>
       </statement>
@@ -63,8 +63,8 @@
           </condition>
         </var>
       </setup>
-    </exercise>
-    <exercise label="func_ll_ac_list_check_start">
+    </activity>
+    <activity label="func_ll_ac_list_check_start">
       <statement>
         <p>Run this code to see what it prints.</p>
       </statement>
@@ -83,8 +83,8 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
-    <exercise label="func_ll_ac_list_check">
+    </activity>
+    <activity label="func_ll_ac_list_check">
       <statement>
         <p>Run this code to see what it prints.</p>
       </statement>
@@ -105,8 +105,8 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
-    <exercise label="funct_ll_list_char">
+    </activity>
+    <activity label="funct_ll_list_char">
       <statement>
         <p>What characters are used to indicate the start and end of a list? <var/>  </p>
       </statement>
@@ -124,8 +124,8 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
-    <exercise label="funct_ll_last_index">
+    </activity>
+    <activity label="funct_ll_last_index">
       <statement>
         <p>What negative index is used to get the last item in a list? <var/>  </p>
       </statement>
@@ -143,8 +143,8 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
-    <exercise label="list_neg_2_result">
+    </activity>
+    <activity label="list_neg_2_result">
       <statement>
         <p>What will the following code print?</p>
         <program language="python">
@@ -198,18 +198,18 @@ print(list_get(l))
           </feedback>
         </choice>
       </choices>
-    </exercise>
-    <exercise label="list_index_negative_indices">
+    </activity>
+    <activity label="list_index_negative_indices">
       <statement>
         <p>Describe in your own words how negative indices work.</p>
       </statement>
       <response />
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="functions_built-in-functions-that-work-on-lists">
     <title>Built-in Functions That Work on Lists</title>
     <p>There are several built-in functions in Python that work on lists.</p>
-    <exercise label="func_ll_ac_list_func">
+    <activity label="func_ll_ac_list_func">
       <statement>
         <p>Run this code to see what it prints.</p>
       </statement>
@@ -232,8 +232,8 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
-    <exercise label="avg_drop_high_and_low">
+    </activity>
+    <activity label="avg_drop_high_and_low">
       <statement>
         <p>Write a function <c>avg_with_drop</c> that takes a list, <c>num_list</c> and returns the average of the values in the list, but it does not include the highest or lowest value in the average. For example, <c>avg_with_drop([1,2,3,4])</c> should return <c>2.5</c>.</p>
       </statement>
@@ -256,12 +256,12 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
       </program>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="functions_list-methods">
     <title>List Methods</title>
     <p>Lists are objects of the <c>list</c> class and have methods that operate on list objects.</p>
-    <exercise label="func_ll_ac_list_methods">
+    <activity label="func_ll_ac_list_methods">
       <statement>
         <p>Run this code to see what it prints.</p>
       </statement>
@@ -293,8 +293,8 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
-    <exercise label="funct_ll_list_type">
+    </activity>
+    <activity label="funct_ll_list_type">
       <statement>
         <p>What class (type) is a list? <var/>  </p>
       </statement>
@@ -312,8 +312,8 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
-    <exercise label="funct_list_append_pop_predict">
+    </activity>
+    <activity label="funct_list_append_pop_predict">
       <statement>
         <p>What would the following code print?</p>
         <program language="python">
@@ -369,11 +369,11 @@ print(list_trans(l1))
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <note>
       <p>Lists are mutable (changeable).  List methods like append and pop change the current list.</p>
     </note>
-    <exercise label="func_ll_ac_list_methods2">
+    <activity label="func_ll_ac_list_methods2">
       <statement>
         <p>Run this code to see what it prints.</p>
       </statement>
@@ -402,8 +402,8 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
-    <exercise label="funct_list_result_of_reverse">
+    </activity>
+    <activity label="funct_list_result_of_reverse">
       <statement>
         <p>What is the last thing the following code prints?</p>
         <program language="python">
@@ -452,8 +452,8 @@ list_trans(l1)
           </feedback>
         </choice>
       </choices>
-    </exercise>
-    <exercise label="func_ll_dnd_func_methods">
+    </activity>
+    <activity label="func_ll_dnd_func_methods">
       <statement>
         <p>Drag each built-in function name to what it does.</p>
       </statement>
@@ -482,12 +482,12 @@ list_trans(l1)
           <response>Reverses the contents of the list.</response>
         </match>
       </cardsort>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="functions_using-the-slice-operator">
     <title>Using the Slice Operator</title>
     <p>You can use the slice operator[n:m] with lists to get a new list just like you can with strings.</p>
-    <exercise label="func_ll_ac_list_slice">
+    <activity label="func_ll_ac_list_slice">
       <statement>
         <p>Run this code to see what it prints.</p>
       </statement>
@@ -515,8 +515,8 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
-    <exercise label="funct_ll_fitb_slice_def_first">
+    </activity>
+    <activity label="funct_ll_fitb_slice_def_first">
       <statement>
         <p>In <c>[:2]</c> what is the start index? <var/>  </p>
       </statement>
@@ -534,11 +534,11 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <note>
       <p>The slice operator always returns a new object.  It doesn't change the current object (list or string).</p>
     </note>
-    <exercise label="funct_list_neg_slice">
+    <activity label="funct_list_neg_slice">
       <statement>
         <p>What does the following code print?</p>
         <program language="python">
@@ -591,8 +591,8 @@ print(l2)
           </feedback>
         </choice>
       </choices>
-    </exercise>
-    <exercise label="fuct_ac_list_first_half">
+    </activity>
+    <activity label="fuct_ac_list_first_half">
       <statement>
         <p>Write a function <c>first_half</c> that takes a list and returns a new list (use the slice operator) with just the items from the first half of the original list.  For example, first_half([1,2,3,4]) would return [1, 2] and first_half([7,8,9]) should return [7].</p>
       </statement>
@@ -616,7 +616,7 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
       </program>
-    </exercise>
+    </activity>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
   </subsection>
 </section>

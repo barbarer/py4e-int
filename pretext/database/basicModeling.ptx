@@ -16,7 +16,7 @@
   <p>
     <url href="http://en.wikipedia.org/wiki/Relational_model" visual="http://en.wikipedia.org/wiki/Relational_model">http://en.wikipedia.org/wiki/Relational_model</url>
   </p>
-  <exercise label="dbModel_fill1">
+  <activity label="dbModel_fill1">
     <statement>
       <p>Q-1: Deciding how to break up your application data into tables and creating the
 relationships between them is called __________. <var/>  </p>
@@ -40,7 +40,7 @@ relationships between them is called __________. <var/>  </p>
         </condition>
       </var>
     </setup>
-  </exercise>
+  </activity>
   <p>Let's say for our Twitter spider application, instead of just counting a
             person's friends, we wanted to keep a list of all of the incoming
             relationships so we could find a list of everyone who is following a
@@ -70,7 +70,7 @@ INSERT INTO Pals (from_friend,to_friend) VALUES ('drchuck', 'lhawthorn')
             we need the data more than once, we create a numeric
             <em>key</em> for the data and reference the actual data using
             this key.</p>
-  <exercise label="dbModel_MC_tf">
+  <activity label="dbModel_MC_tf">
     <statement>
       <p>Q-2: True or False? Database normalization is the practice of inserting the same string data into a database more than once.</p>
     </statement>
@@ -92,7 +92,7 @@ INSERT INTO Pals (from_friend,to_friend) VALUES ('drchuck', 'lhawthorn')
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>In practical terms, a string takes up a lot more space than an integer
             on the disk and in the memory of our computer, and takes more processor
             time to compare and sort. If we only have a few hundred entries, the
@@ -142,7 +142,7 @@ CREATE TABLE Follows
             modelling a <q>relationship</q> where one person <q>follows</q> someone else and
             representing it with a pair of numbers indicating that (a) the people
             are connected and (b) the direction of the relationship.</p>
-  <exercise label="dbModel_MC_clause">
+  <activity label="dbModel_MC_clause">
     <statement>
       <p>Q-3: Which of the following SQL clauses asks the database to keep each identifier that is unique?</p>
     </statement>
@@ -180,5 +180,5 @@ CREATE TABLE Follows
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
 </section>

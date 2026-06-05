@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="functions_functions-and-strings-write-code-questions">
   <title>Functions and Strings Write Code Questions</title>
-        <exercise>
+        <activity>
           <statement>
             <p>Write a function called <c>start_a</c> that takes in <c>string</c> as a parameter and
                             returns <c>True</c> if the <c>string</c> starts with a lowercase a and <c>False</c> otherwise. For example,
@@ -39,9 +39,9 @@ def start_a(string):
         </code></program>
                     </solution>
                     
-        </exercise>
+        </activity>
 
-        <exercise label="funct-strings-writecode2">
+        <activity label="funct-strings-writecode2">
           <statement>
             <p>Write a function called <c>square_length</c> that takes in <c>area</c> as a parameter and
                     returns <c>"A square with an area of (area) square feet has a side length of (side length) feet."</c>. The side length is
@@ -64,9 +64,9 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
           </program>
-        </exercise>
+        </activity>
 
-        <exercise>
+        <activity>
           <statement>
             <p>Write a function called <c>use_semicolon</c> that takes in <c>sentence1</c> and <c>sentence2</c> as parameters and
                             returns both sentences joined by a semicolon with the correct grammar. This means that <c>sentence1</c> shouldn't have a terminal punctuation mark,
@@ -105,9 +105,9 @@ def use_semicolon(sentence1, sentence2):
     return sentence1[:-1] + '; ' + sentence2[0].lower() + sentence2[1:]
         </code></program>
                     </solution>
-        </exercise>
+        </activity>
 
-        <exercise label="funct-strings-writecode4">
+        <activity label="funct-strings-writecode4">
           <statement>
             <p>Write a function called <c>change</c> that takes in <c>string</c> as a parameter and
                     returns a new string with the first two characters uppercased, the last two characters lowercased,
@@ -132,9 +132,9 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
           </program>
-        </exercise>
+        </activity>
 
-        <exercise>
+        <activity>
           <statement>
             <p>Write a function called <c>first_a_gone</c> that takes in <c>string</c> as a parameter and
                             returns a new string without the first lowercase &#x2018;a'. For example, <c>first_a_gone('australia')</c> should return <c>"ustralia"</c>.
@@ -176,5 +176,5 @@ def first_a_gone(string):
         </code></program>
                     </solution>
                     
-        </exercise>
+        </activity>
 </section>

@@ -17,7 +17,7 @@
             <em>column</em>. When the database software knows the type of
             data in each column, it can choose the most efficient way to store and
             look up the data based on the type of data.</p>
-  <exercise label="db_MC_tableTF">
+  <activity label="db_MC_tableTF">
     <statement>
       <p>Q-1: True or False? Python dictionaries require less defined structure than databases.</p>
     </statement>
@@ -39,7 +39,7 @@
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>You can look at the various data types supported by SQLite at the
             following url:</p>
   <p>
@@ -73,7 +73,7 @@ conn.close()</pre>
   <figure align="">
     <image source="images/cursor.svg" width="50%" alt="A Database Cursor"/>
   </figure>
-  <exercise label="dbCreate_MC_cursor">
+  <activity label="dbCreate_MC_cursor">
     <statement>
       <p>Q-2: A cursor that we create to perform operations on the data within the database is very similar to which of the following?</p>
     </statement>
@@ -111,10 +111,10 @@ conn.close()</pre>
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>Once we have the cursor, we can begin to execute commands on the
             contents of the database using the <c>execute()</c> method.</p>
-  <exercise label="db_connection_vs_cursor_dd">
+  <activity label="db_connection_vs_cursor_dd">
     <statement>
       <p>Match the term to its definition</p>
     </statement>
@@ -131,7 +131,7 @@ conn.close()</pre>
         <response>Handles executing commands on the database such as getting data from the database.</response>
       </match>
     </cardsort>
-  </exercise>
+  </activity>
   <p>Database commands are expressed in a special language that has been
             standardized across many different database vendors to allow us to learn
             a single database language. The database language is called
@@ -140,7 +140,7 @@ conn.close()</pre>
   <p>
     <url href="http://en.wikipedia.org/wiki/SQL" visual="http://en.wikipedia.org/wiki/SQL">http://en.wikipedia.org/wiki/SQL</url>
   </p>
-  <exercise label="dbCreate_MC_SQL">
+  <activity label="dbCreate_MC_SQL">
     <statement>
       <p>Q-4: SQL stands for ___________.</p>
     </statement>
@@ -178,7 +178,7 @@ conn.close()</pre>
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>In our example, we are executing two SQL commands in our database. As a
             convention, we will show the SQL keywords in uppercase and the parts of
             the command that we are adding (such as the table and column names) will
@@ -271,7 +271,7 @@ cur.close()</pre>
             program repeatedly. After the <c>DELETE</c> is performed, we also
             call <c>commit()</c> to force the data to be removed from the
             database.</p>
-  <exercise label="dbCreate_PP" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="dbCreate_PP" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Put the following code in order to create a cursor, make a table called <q>Cats</q> with
             two text columns (<q>Name</q> and <q>Breed</q>). Then add the rows for Whiskers, Ruby, and Milo in
@@ -310,5 +310,5 @@ cur.close()</pre>
         <cline>cur.close()</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 </section>

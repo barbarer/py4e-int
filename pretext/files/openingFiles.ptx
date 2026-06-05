@@ -72,7 +72,7 @@ fhand = open('mbox-short.txt')
 print(fhand)
         </code>
   </program>
-  <exercise label="file-open-fitb-start">
+  <activity label="file-open-fitb-start">
     <statement>
       <p>Q-2: Complete this line to open the file for reading: fhand = ______(&#x2018;mbox-short.txt') <var/>  </p>
     </statement>
@@ -90,7 +90,7 @@ print(fhand)
         </condition>
       </var>
     </setup>
-  </exercise>
+  </activity>
   <p>If the <c>open</c> is successful, the operating system returns
             a <em>file handle</em> object. The file handle object is not the actual data
             contained in the file, but instead it is a <q>handle</q> that we can use to
@@ -99,7 +99,7 @@ print(fhand)
   <figure align="">
     <image source="images/handle.svg" width="50%" alt="A File Handle"/>
   </figure>
-  <exercise label="file-open-fitb-object">
+  <activity label="file-open-fitb-object">
     <statement>
       <p>Q-3: A file <BlankNode/> is an object that is used to read or modify a file, not the actual data in a file. <var/>  </p>
     </statement>
@@ -117,7 +117,7 @@ print(fhand)
         </condition>
       </var>
     </setup>
-  </exercise>
+  </activity>
   <p>If the file does not exist, <c>open</c> will fail with a traceback
             and you will not get a file handle object.</p>
   <program language="python">
@@ -131,7 +131,7 @@ FileNotFoundError: [Errno 2] No such file or directory: 'stuff.txt'
   <p>Later we will use <c>try</c> and <c>except</c> to deal more
             gracefully with the situation where we attempt to open a file that does
             not exist.</p>
-  <exercise label="file-open-mc-exist">
+  <activity label="file-open-mc-exist">
     <statement>
       <p>Q-4: What will happen if you try to open a file that does not exist?</p>
     </statement>
@@ -169,5 +169,5 @@ FileNotFoundError: [Errno 2] No such file or directory: 'stuff.txt'
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
 </section>

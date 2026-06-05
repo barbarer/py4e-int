@@ -97,6 +97,7 @@ eyes of our users?"
     .. tab:: Answer
 
         .. activecode:: fileOpenInputa
+            :optional:
 
             count = 0 # Start counting from zero
             fname = input('Enter the file name: ') # Close parentheses

@@ -4,7 +4,7 @@
   <p>Try to solve the following mixed up code problems. You can use the <q>Help Me</q> button
             to make the problem easier if you have made at least three attempts to solve the
             problem.  After you solve each problem, please answer the poll as well.</p>
-  <exercise label="exp1_pp1a_orig" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="exp1_pp1a_orig" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Put the blocks in order to define the function has22 to return True if there are at least two items in the list nums that are adjacent and both equal to 2, otherwise return False. For example, return True for [1, 2, 2] since there are two adjacent items equal to 2 (at index 1 and 2) and False for [2, 1, 2] since the 2's are not adjacent.</p>
     </statement>
@@ -40,9 +40,9 @@
         <cline>    return False</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise runestone="exp1_pp1a_poll_orig"/>
-  <exercise label="exp1_q2_write_orig">
+  </activity>
+  <activity runestone="exp1_pp1a_poll_orig"/>
+  <activity label="exp1_q2_write_orig">
     <statement>
       <p>Finish the function to define <c>countInRange</c> that returns a count of the number of times that a <c>target</c> value appears in a list between the <c>start</c> and <c>end</c> indices (inclusive). For example, <c>countInRange(1,2,4,[1, 2, 1, 1, 1, 1])</c> should return 3 since there are three 1's between index 2 and 4 inclusive.</p>
     </statement>
@@ -67,9 +67,9 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
     </program>
-  </exercise>
-  <exercise runestone="exp1_q2_write_poll_orig"/>
-  <exercise label="exp1_pp3_orig" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity runestone="exp1_q2_write_poll_orig"/>
+  <activity label="exp1_pp3_orig" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Put the blocks in order to define the function <c>diffMaxMin</c> to return the difference between the largest and smallest value in the passed list of numbers (<c>nums</c>). For example, <c>diffMaxMin([1,2,3])</c> should return <c>2</c> since the difference between 3 and 1 is 2.</p>
     </statement>
@@ -95,9 +95,9 @@ myTests().main()
         </choice>
       </block>
     </blocks>
-  </exercise>
-  <exercise runestone="exp1_pp3_poll_orig"/>
-  <exercise label="exp1_q4_total_values_orig">
+  </activity>
+  <activity runestone="exp1_pp3_poll_orig"/>
+  <activity label="exp1_q4_total_values_orig">
     <statement>
       <p>Finish the function <c>total_values</c> that takes a dictionary (<c>dict</c>) and returns the total of the values in the dictionary. For example, <c>total_dict_values({'red': 3, 'blue': 2, 'green': 20})</c> would return 25.</p>
     </statement>
@@ -120,9 +120,9 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
     </program>
-  </exercise>
-  <exercise runestone="exp1_q4_total_values_poll_orig"/>
-  <exercise label="exp1_q5_pp_orig" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity runestone="exp1_q4_total_values_poll_orig"/>
+  <activity label="exp1_q5_pp_orig" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Put the blocks in order to define the function <c>get_names</c> that takes a list of dictionaries and returns a list of strings with the names from the dictionaries. The key for the first name is <c>first</c> and the key for the last name is <c>last</c>. Return a list of the full names (first last) as a string. If the <c>first</c> or <c>last</c> key is missing in the dictionary use <c>Unknown</c>.  For example, <c>[{'first': 'Ann', 'last': 'Brown'}, {'first': 'Darius'}]</c> should return <c>['Ann Brown', 'Darius Unknown']</c>.</p>
     </statement>
@@ -161,6 +161,6 @@ myTests().main()
         <cline> return name_list</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise runestone="exp1_q5_pp_poll_orig"/>
+  </activity>
+  <activity runestone="exp1_q5_pp_poll_orig"/>
 </section>

@@ -44,7 +44,7 @@
 
   <subsection xml:id="functions_basic-conditionals-and-tests">
     <title>Basic Conditionals and Tests</title>
-    <exercise label="funct_fitb_return_temp_first_line">
+    <activity label="funct_fitb_return_temp_first_line">
       <statement>
         <p>What is the first thing (first line of text) that will be printed when the code below runs? <var/>  </p>
       </statement>
@@ -62,8 +62,8 @@
           </condition>
         </var>
       </setup>
-    </exercise>
-    <exercise label="func_ac_pogil_return_temp_desc">
+    </activity>
+    <activity label="func_ac_pogil_return_temp_desc">
       <statement>
         <p>Run this code to see what it prints.</p>
       </statement>
@@ -89,8 +89,8 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
-    <exercise label="funct_fitb_pogil_exec_false">
+    </activity>
+    <activity label="funct_fitb_pogil_exec_false">
       <statement>
         <p>What keyword specifies the block of statements to execute if a Boolean condition is false? <var/>  </p>
       </statement>
@@ -113,8 +113,8 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
-    <exercise label="funct_fitb_pogil_conditional_start">
+    </activity>
+    <activity label="funct_fitb_pogil_conditional_start">
       <statement>
         <p>What keyword starts a conditional statement and is the only required keyword in it? <var/>  </p>
       </statement>
@@ -137,8 +137,8 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
-    <exercise label="funct_fitb_pogil_multi_conditonal">
+    </activity>
+    <activity label="funct_fitb_pogil_multi_conditonal">
       <statement>
         <p>What keyword is used in a conditional statement when you want three of more possible outcomes? <var/>  </p>
       </statement>
@@ -161,8 +161,8 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
-    <exercise label="func_ac_pogil_return_temp_desc_v2">
+    </activity>
+    <activity label="func_ac_pogil_return_temp_desc_v2">
       <statement>
         <p>Modify the code in the main method below to test all possible return values from get_temp_desc.</p>
       </statement>
@@ -188,8 +188,8 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
-    <exercise label="funct_pogil_check-guess-Parsons-v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    </activity>
+    <activity label="funct_pogil_check-guess-Parsons-v2" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Put the blocks in order to define the function <c>check_guess</c> which will return <c>'too low'</c> if the guess is less
                 than the passed target, <c>'correct'</c> if they are equal, and <c>'too high'</c> if the guess
@@ -197,7 +197,7 @@ main()
                 <c>'too low'</c>, <c>check_guess(7,7)</c> returns <c>'correct'</c>, and <c>check_guess(9,7)</c> returns
                 <c>'too high'</c>. There are three extra blocks that are not needed in a correct solution.</p>
       </statement>
-      <blocks numbered="left">
+      <blocks randomize="no" numbered="left">
         <block order="1">
           <cline>def check_guess(guess, target):</cline>
         </block>
@@ -235,8 +235,8 @@ main()
           <cline>        return 'too high'</cline>
         </block>
       </blocks>
-    </exercise>
-    <exercise label="funct_pogil_get_last_half_v2">
+    </activity>
+    <activity label="funct_pogil_get_last_half_v2">
       <statement>
         <p>Finish the function <c>last_half(str)</c> which
                 returns the last half of the characters from the passed string <c>str</c>.
@@ -266,8 +266,8 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
       </program>
-    </exercise>
-    <exercise label="funct_fitb_cond_predict_grade">
+    </activity>
+    <activity label="funct_fitb_cond_predict_grade">
       <statement>
         <p>What is the first thing that will be printed when the code below runs? <var/>  </p>
       </statement>
@@ -285,8 +285,8 @@ myTests().main()
           </condition>
         </var>
       </setup>
-    </exercise>
-    <exercise label="func_ac_fix_grade_code">
+    </activity>
+    <activity label="func_ac_fix_grade_code">
       <statement>
         <p>Run this code to see what it prints.  The modify it to work correctly.  Next,
                 add code to the <c>main</c> function to test each possible letter grade.  It
@@ -317,8 +317,8 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
-    <exercise label="funct_fitb_cond_grade_num_tests">
+    </activity>
+    <activity label="funct_fitb_cond_grade_num_tests">
       <statement>
         <p>How many test cases do you need to check that the code above works as intended? <var/>  </p>
       </statement>
@@ -336,12 +336,12 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="functions_logical-operators-and-complex-conditionals">
     <title>Logical Operators and Complex Conditionals</title>
     <p>The logical operators in Python are <c>and</c>, <c>or</c>, and <c>not</c>. These can be used to create complex conditionals.</p>
-    <exercise label="funt_mc_and">
+    <activity label="funt_mc_and">
       <statement>
         <p>Which of the following tests if x is both greater than 10 and less than or equal to 20?</p>
       </statement>
@@ -379,8 +379,8 @@ main()
           </feedback>
         </choice>
       </choices>
-    </exercise>
-    <exercise label="funt_mc_or">
+    </activity>
+    <activity label="funt_mc_or">
       <statement>
         <p>Which of the following returns true if <c>have_ride</c> is true or <c>can_walk</c> is true?</p>
       </statement>
@@ -418,8 +418,8 @@ main()
           </feedback>
         </choice>
       </choices>
-    </exercise>
-    <exercise label="funt_complex_cond_mc_not">
+    </activity>
+    <activity label="funt_complex_cond_mc_not">
       <statement>
         <p>Which of the following returns true if <c>is_raining</c> is false?  Pick all that are correct.</p>
       </statement>
@@ -457,8 +457,8 @@ main()
           </feedback>
         </choice>
       </choices>
-    </exercise>
-    <exercise label="func_ac_or_complex_cond">
+    </activity>
+    <activity label="func_ac_or_complex_cond">
       <statement>
         <p>Modify this code to use a complex conditional instead.  It should still pass all tests. It should only take four lines of code or less.</p>
       </statement>
@@ -486,8 +486,8 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
       </program>
-    </exercise>
-    <exercise label="func_ac_and_complex_cond">
+    </activity>
+    <activity label="func_ac_and_complex_cond">
       <statement>
         <p>Modify this code to use a complex conditional instead.  It should still pass all tests. It should only take four lines of code or less.</p>
       </statement>
@@ -517,15 +517,15 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
       </program>
-    </exercise>
-    <exercise label="funct_pp_pogil_speeding-Parsons" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    </activity>
+    <activity label="funct_pp_pogil_speeding-Parsons" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Put the code below in order to first check if it is your birthday and if so then if the speed is less than or equal 65
                 return 0, else if it is less than or equal 85 return 1 and otherwise return 2.  If it isn't your
                 birthday then if the speed is less than or equal 60 return 0, else if it is less than or equal 80
                 return 1 and otherwise return 2.</p>
       </statement>
-      <blocks numbered="left">
+      <blocks randomize="no" numbered="left">
         <block order="1">
           <cline>def caught_speeding(speed, is_birthday):</cline>
         </block>
@@ -582,8 +582,8 @@ myTests().main()
           <cline>            return 2</cline>
         </block>
       </blocks>
-    </exercise>
-    <exercise label="fuct_ac_pogil_alarm_clock_v2">
+    </activity>
+    <activity label="fuct_ac_pogil_alarm_clock_v2">
       <statement>
         <p>Write a function that given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, &#x2026;6=Sat, and a Boolean indicating if we are on vacation, return a string of the form <q>7:00</q> indicating when the alarm clock should ring. If you are on vacation then on weekends it should be <q>off</q> and weekdays <q>10:00</q>. Otherwise, on weekends it should be <q>10:00</q> and weekdays <q>7:00</q>.</p>
       </statement>
@@ -611,12 +611,12 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
       </program>
-    </exercise>
-    <exercise label="func_pp_pogil_sq_play" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    </activity>
+    <activity label="func_pp_pogil_sq_play" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Drag the blocks from the left and put them in the correct order on the right to define a function <c>squirrel_play</c> that takes a <c>temp</c> (the temperature) and Boolean <c>is_summer</c> that indicates if it is summer or not and returns <c>True</c> if it is summer and the temperature is between 60 and 100 (inclusive).  It also returns <c>True</c> if it isn't summer and the temperature is between 60 and 90 (inclusive).  Otherwise, it returns <c>False</c>.</p>
       </statement>
-      <blocks numbered="left">
+      <blocks randomize="no" numbered="left">
         <block order="2">
           <cline>def squirrel_play(temp, is_summer):</cline>
         </block>
@@ -659,7 +659,7 @@ myTests().main()
           </choice>
         </block>
       </blocks>
-    </exercise>
+    </activity>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
   </subsection>
 </section>

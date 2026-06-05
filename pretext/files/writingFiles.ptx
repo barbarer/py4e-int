@@ -30,7 +30,7 @@
   </program>
   <p>Again, the file object keeps track of where it is, so if you call
             <c>write</c> again, it adds the new data to the end.</p>
-  <exercise label="fileWriteMC">
+  <activity label="fileWriteMC">
     <statement>
       <p>Q-1: Which of the following methods will put data into a file?</p>
     </statement>
@@ -68,7 +68,7 @@
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>We must make sure to manage the ends of lines as we write to the file by
             explicitly inserting the newline character when we want to end a line.
             The <c>print</c> statement automatically appends a newline, but
@@ -93,7 +93,7 @@
             that all open files are closed when the program ends. When we are
             writing files, we want to explicitly close the files so as to leave
             nothing to chance.</p>
-  <exercise label="fileWritePP" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="fileWritePP" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Put the following pieces of code in order so a file is opened for writing,
             two lines are defined, two lines are
@@ -130,8 +130,8 @@
         <cline>fout.close()</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="fileWriteCA">
+  </activity>
+  <activity label="fileWriteCA">
     <statement>
       <p>Click the errors in this code block. It should open a file, write a line, and close the file.</p>
     </statement>
@@ -144,5 +144,5 @@
       <cline><area correct="yes">file</area><area correct="no">.write</area>(<area correct="yes">line2</area>)</cline>
       <cline><area correct="no">fout.close</area><area correct="yes">[]</area>:</cline>
     </areas>
-  </exercise>
+  </activity>
 </section>

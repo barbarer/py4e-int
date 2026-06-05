@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="network_write-code-exercises">
         <title>Write Code Exercises</title>
-                <exercise ><statement>
+                <activity ><statement>
                         <p>Complete the following code that retrieves the file &#8216;romeo.txt' from.
                             Make changes to line 4 and 5.</p>
 
@@ -51,9 +51,9 @@ while True:
 
                     
 
-                    </solution></exercise>
+                    </solution></activity>
 
-<exercise label="writingcode_network_2">
+<activity label="writingcode_network_2">
     <statement>
         <p>Complete the following code to extract an image &#8216;cover3.jpg' from the URL
             &#8216;<url href="http://data.pr4e.org/cover3.jpg" visual="http://data.pr4e.org/cover3.jpg">http://data.pr4e.org/cover3.jpg</url>' and host &#8216;data.pr4e.org'. There are 5 empty spaces.</p>
@@ -88,8 +88,8 @@ fhand.write(picture)
 fhand.close()
         </code>
     </program>
-</exercise>
-        <exercise ><statement>
+</activity>
+        <activity ><statement>
                 <p>Complete the following code that retrieves the text from
                     &#8216;<url href="http://data.pr4e.org/clown.txt" visual="http://data.pr4e.org/clown.txt">http://data.pr4e.org/clown.txt</url>', prints it and also prints the
                     frequency of each word.</p>
@@ -121,9 +121,9 @@ for line in fhand:
 print(counts)
         </code>
     </program>
-            </solution></exercise>
+            </solution></activity>
 
-<exercise label="writingcode_network_4">
+<activity label="writingcode_network_4">
     <statement>
         <p>Write a program to retrieve and print text from <q><url href="http://data.pr4e.org/intro-short.txt" visual="http://data.pr4e.org/intro-short.txt">http://data.pr4e.org/intro-short.txt</url></q>
             and print it.</p>
@@ -134,9 +134,9 @@ print(counts)
 import urllib.request
         </code>
     </program>
-</exercise>
+</activity>
 
-        <exercise ><statement>
+        <activity ><statement>
                 <p>Write a program to store image file from &#8216;<url href="http://data.pr4e.org/cover.jpg" visual="http://data.pr4e.org/cover.jpg">http://data.pr4e.org/cover.jpg</url>'
                     to your disk.</p>
 
@@ -162,9 +162,9 @@ fhand.write(img)
 fhand.close()
         </code>
     </program>
-            </solution></exercise>
+            </solution></activity>
 
-<exercise label="writingcode_network_6">
+<activity label="writingcode_network_6">
     <statement>
         <p>Complete the following program to extract all url from the webpage using regex.</p>
 
@@ -179,8 +179,8 @@ html = _______________________
 links = _______(b'href="(http[s]?://.*?)"', html)
         </code>
     </program>
-</exercise>
-        <exercise ><statement>
+</activity>
+        <activity ><statement>
                 <p>Write a program that retrives a txt file from
                     &#8216;<url href="https://www.gutenberg.org/files/1342/1342-0.txt" visual="https://www.gutenberg.org/files/1342/1342-0.txt">https://www.gutenberg.org/files/1342/1342-0.txt</url>' in several blocks
                     of 100,000 characters, joins them and saves as &#8216;prideandprejudice.txt'
@@ -223,9 +223,9 @@ print(size, 'characters copied.')
 fhand.close()
         </code>
     </program>
-            </solution></exercise>
+            </solution></activity>
 
-<exercise label="writingcode_network_8">
+<activity label="writingcode_network_8">
     <statement>
         <p>Write a program that retrives a txt file from
             &#8216;<url href="https://www.gutenberg.org/files/16/16-0.txt" visual="https://www.gutenberg.org/files/16/16-0.txt">https://www.gutenberg.org/files/16/16-0.txt</url>' in several blocks of 100,000
@@ -238,8 +238,8 @@ fhand.close()
 import urllib.request, urllib.parse, urllib.error
         </code>
     </program>
-</exercise>
-        <exercise ><statement>
+</activity>
+        <activity ><statement>
                 <p>Complete the following code to print all the image sources from
                     the webpage. Use &#8216;img' and &#8216;src' as tags.</p>
 
@@ -273,9 +273,9 @@ for tag in tags:
     print(tag.get('src', None))
         </code>
     </program>
-            </solution></exercise>
+            </solution></activity>
 
-<exercise label="writingcode_network_10">
+<activity label="writingcode_network_10">
     <statement>
         <p>Write code that extracts data from several parts of the &#8216;a' tag from
             <q><url href="http://www.dr-chuck.com/page1.htm" visual="http://www.dr-chuck.com/page1.htm">http://www.dr-chuck.com/page1.htm</url></q> using BeautifulSoup and html.parser and
@@ -288,6 +288,6 @@ import requests
 from bs4 import BeautifulSoup
         </code>
     </program>
-</exercise>
+</activity>
     </section>
 

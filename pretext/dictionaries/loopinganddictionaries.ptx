@@ -38,7 +38,7 @@ for key in counts:
   <pre>jan 100
 annie 42</pre>
   <p>We see only the entries with a value above 10.</p>
-  <exercise label="question9_4_1">
+  <activity label="question9_4_1">
     <statement>
       <p>Q-1: What is printed after the following code is run?</p>
       <program language="python">
@@ -79,7 +79,7 @@ print(achievements)
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>If you want to print the keys in alphabetical order, you first make a
             list of the keys in the dictionary using the <c>keys</c> method
             available in dictionary objects, and then sort that list and loop
@@ -103,7 +103,7 @@ jan 100</pre>
   <p>First you see the list of keys in unsorted order that we get from the
             <c>keys</c> method. Then we see the key-value pairs in order from
             the <c>for</c> loop.</p>
-  <exercise label="question9_4_2">
+  <activity label="question9_4_2">
     <statement>
       <p>Write code to add the keys of dictionary wordCount into a list named MoreThan5 if the keys' value is greater than 5.</p>
     </statement>
@@ -122,8 +122,8 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
     </program>
-  </exercise>
-  <exercise label="question9_4_3" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="question9_4_3" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Construct a block of code that adds the items in a dictionary to a list, where the items' values are greater than or equal to 8, and prints said list.</p>
     </statement>
@@ -156,5 +156,5 @@ myTests().main()
         <cline>print(list_o_books)</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 </section>

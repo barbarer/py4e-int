@@ -4,7 +4,7 @@
   <p>Try to solve the following mixed up code problems. You can use the <q>Help Me</q> button
             to make the problem easier if you have made at least three attempts to solve the
             problem.  After you solve each problem, please answer the poll as well.</p>
-  <exercise label="dp_two_list_to_dict">
+  <activity label="dp_two_list_to_dict">
     <statement>
       <p>Finish the function <c>make_dir</c> below which takes two lists (<c>l1</c> and <c>l2</c>) of equal length and returns a dictionary where the items in <c>l1</c> are the keys and the items in <c>l2</c> are the values.  For example, <c>make_dir(['a', 'c'], [5, 0])</c> returns <c>{'a': 5, 'c': 0}</c>.</p>
     </statement>
@@ -26,8 +26,8 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
     </program>
-  </exercise>
-  <exercise label="dp_list_of_tuples_to_dict">
+  </activity>
+  <activity label="dp_list_of_tuples_to_dict">
     <statement>
       <p>Finish the function <c>make_dir</c> below which takes a list of tuples <c>tuple_list</c> and returns a dictionary where the first item in each tuple is the key and the second is the value. For example, <c>make_dir([('gray', -3), ('blue', 2)])</c> returns <c>{'gray': -3, 'blue': 2}</c>.</p>
     </statement>
@@ -50,8 +50,8 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
     </program>
-  </exercise>
-  <exercise label="dp_get_tuple_from_dict">
+  </activity>
+  <activity label="dp_get_tuple_from_dict">
     <statement>
       <p>Finish the function <c>get_tuple</c> below which takes a dictionary <c>dict</c> and a <c>key</c> and if the <c>key</c> is found in the dictionary it returns <c>(key, value)</c> otherwise it returns <c>(key, 'Not Found')</c>.  For example, <c>get_tuple({'a': 0}, 'c')</c> returns <c>('c', 'Not Found')</c>, and <c>get_tuple({'a': 0}, 'a')</c> returns <c>('a', 0)</c>.</p>
     </statement>
@@ -75,8 +75,8 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
     </program>
-  </exercise>
-  <exercise label="dp_greater_dict">
+  </activity>
+  <activity label="dp_greater_dict">
     <statement>
       <p>Finish the function <c>greater_dict</c> below which takes a dictionary <c>d</c> and an integer <c>cutoff</c> and returns a new dictionary that contains only the key-value pairs where the value is greater than or equal to the cutoff.  For example, <c>greater_dict({'a': 20, 'b': 10}, 15)</c> returns <c>{'a': 20}</c>.</p>
     </statement>
@@ -99,8 +99,8 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
     </program>
-  </exercise>
-  <exercise label="dp_get_counts_dict">
+  </activity>
+  <activity label="dp_get_counts_dict">
     <statement>
       <p>Finish the <c>get_counts</c> function below which takes a list of strings <c>s_list</c> and returns a dictionary that has the number of times each unique string appears in the list.  For example, <c>get_counts(['a','b','a'])</c> returns <c>{'a':2, 'b':1}</c>.</p>
     </statement>
@@ -124,5 +124,5 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
     </program>
-  </exercise>
+  </activity>
 </section>

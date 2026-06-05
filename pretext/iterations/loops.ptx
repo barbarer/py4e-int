@@ -55,7 +55,7 @@ print('Count: ', count)
                 <c>itervar</c> and while we do not use <c>itervar</c> in the
                 loop, it does control the loop and cause the loop body to be executed
                 once for each of the values in the list.</p>
-    <exercise label="inLoops_MC_itVar">
+    <activity label="inLoops_MC_itVar">
       <statement>
         <p>Q-2: Which variable is the iteration variable in the code block?</p>
         <program language="python">
@@ -101,7 +101,7 @@ print('Count: ', count)
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <p>In the body of the loop, we add 1 to the current value of
                 <c>count</c> for each of the values in the list. While the loop is
                 executing, the value of <c>count</c> is the number of values we
@@ -132,7 +132,7 @@ print('Total: ', total)
     <p>As the loop executes, <c>total</c> accumulates the sum of the
                 elements; a variable used this way is sometimes called an
                 <em>accumulator</em>.</p>
-    <exercise label="itLoops_fill1">
+    <activity label="itLoops_fill1">
       <statement>
         <p>Q-4: The variable that counts the sum of elements in a loop is called a(n) ________ <var/>  </p>
       </statement>
@@ -150,7 +150,7 @@ print('Total: ', total)
           </condition>
         </var>
       </setup>
-    </exercise>
+    </activity>
     <p>Neither the counting loop nor the summing loop are particularly useful
                 in practice because there are built-in functions <c>len()</c> and
                 <c>sum()</c> that compute the number of items in a list and the
@@ -185,7 +185,7 @@ Largest: 74</pre>
                 to the constant <c>None</c>. <c>None</c> is a special
                 constant value which we can store in a variable to mark the variable as
                 <q>empty</q>.</p>
-    <exercise label="inLoops_MC_none_v2">
+    <activity label="inLoops_MC_none_v2">
       <statement>
         <p>Q-6: Which of the following is <em>not</em> true about <c>None</c>?</p>
       </statement>
@@ -223,7 +223,7 @@ Largest: 74</pre>
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <p>Before the loop starts, the largest value we have seen so far is
                 <c>None</c> since we have not yet seen any values. While the loop
                 is executing, if <c>largest</c> is <c>None</c> then we take

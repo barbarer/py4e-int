@@ -36,7 +36,7 @@ Traceback (most recent call last):
 IndexError: string index out of range
 </code>
   </program>
-  <exercise label="str-debug-fitb-error">
+  <activity label="str-debug-fitb-error">
     <statement>
       <p>11-9-1: What kind of error will come from trying to access a nonexistent element or one that is out of range? <var/>  </p>
     </statement>
@@ -54,7 +54,7 @@ IndexError: string index out of range
         </condition>
       </var>
     </setup>
-  </exercise>
+  </activity>
   <p>The code works fine until it is presented with an empty line. In that case, there is
             no zero-th character, so we get a traceback. There are two solutions to
             make line three <q>safe,</q> even if the line is empty.</p>
@@ -65,7 +65,7 @@ IndexError: string index out of range
 if line.startswith('#'):
 </code>
   </program>
-  <exercise label="str-debug-fitb-string">
+  <activity label="str-debug-fitb-string">
     <statement>
       <p>11-9-2: What string method is used to prevent errors? <var/>  </p>
     </statement>
@@ -83,7 +83,7 @@ if line.startswith('#'):
         </condition>
       </var>
     </setup>
-  </exercise>
+  </activity>
   <p>Another way is to safely write the <c>if</c> statement using the
             <em>guardian</em> pattern and make sure the second logical
             expression is evaluated only where there is at least one character in
@@ -93,7 +93,7 @@ if line.startswith('#'):
 if len(line) &gt; 0 and line[0] == '#':
 </code>
   </program>
-  <exercise label="str-debug-fitb-safe">
+  <activity label="str-debug-fitb-safe">
     <statement>
       <p>11-9-3: What kind of pattern is used to prevent errors? <var/>  </p>
     </statement>
@@ -111,5 +111,5 @@ if len(line) &gt; 0 and line[0] == '#':
         </condition>
       </var>
     </setup>
-  </exercise>
+  </activity>
 </section>

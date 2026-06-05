@@ -35,7 +35,7 @@
     <title>Inheritance</title>
     <p>One class can inherit attributes and behavior from another class. The class that is inherited from
                 is called the <term>parent</term> or <term>base class</term>.  The one that is inheriting is called the <term>child</term> or <term>derived class</term>.</p>
-    <exercise label="mult_class_emp_second_output">
+    <activity label="mult_class_emp_second_output">
       <statement>
         <p>Q-1: What is the last thing that the following code will print? <var/>  </p>
       </statement>
@@ -58,8 +58,8 @@
           </condition>
         </var>
       </setup>
-    </exercise>
-    <exercise label="mult_class_person_and_employee">
+    </activity>
+    <activity label="mult_class_person_and_employee">
       <statement>
         <p>Run the following code</p>
       </statement>
@@ -92,9 +92,9 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
+    </activity>
     <p>Look at the classes defined above. Then answer the following questions.</p>
-    <exercise label="mult_class_emp_num_attrs">
+    <activity label="mult_class_emp_num_attrs">
       <statement>
         <p>Q-3: How many attributes does an employee object have? <var/>  </p>
       </statement>
@@ -117,8 +117,8 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
-    <exercise label="mult_class_emp_initials">
+    </activity>
+    <activity label="mult_class_emp_initials">
       <statement>
         <p>Q-4: Which class defines the initials method? <var/>  </p>
       </statement>
@@ -141,8 +141,8 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
-    <exercise label="mult_class_emp_child">
+    </activity>
+    <activity label="mult_class_emp_child">
       <statement>
         <p>Q-5: Which class is the child class? <var/>  </p>
       </statement>
@@ -165,8 +165,8 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
-    <exercise label="mult_class_first_class_dnd">
+    </activity>
+    <activity label="mult_class_first_class_dnd">
       <statement>
         <p>Drag the code to the description of what it does</p>
       </statement>
@@ -191,8 +191,8 @@ main()
           <response>Defines a method that is called when you print an object of this class</response>
         </match>
       </cardsort>
-    </exercise>
-    <exercise label="mult_class_car_sports_car_pp_v3" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    </activity>
+    <activity label="mult_class_car_sports_car_pp_v3" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Drag the blocks from the left and put them in the correct order on the right to define two classes: <c>Car</c> and <c>SportsCar</c> that inherits from <c>Car</c>. Add an <c>__init__</c> method to the <c>Car</c> class that takes a <c>make</c> and sets the current object's <c>make</c>.  Add a <c>__str__</c> method to the <c>Car</c> class and return a string with the <c>make</c>.  Add an <c>__init__</c> method to the <c>SportsCar</c> class that calls the parent class <c>__init__</c> method.</p>
       </statement>
@@ -237,9 +237,9 @@ main()
           </choice>
         </block>
       </blocks>
-    </exercise>
+    </activity>
     <p>Look at the code below and answer the following questions.</p>
-    <exercise label="mult_class_greeter_first_line">
+    <activity label="mult_class_greeter_first_line">
       <statement>
         <p>Q-8: What is the first thing that the following code will print? <var/>  </p>
       </statement>
@@ -257,8 +257,8 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
-    <exercise label="mult_class_greeter_last_line">
+    </activity>
+    <activity label="mult_class_greeter_last_line">
       <statement>
         <p>Q-9: What is the last thing that the following code will print? <var/>  </p>
       </statement>
@@ -276,8 +276,8 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
-    <exercise label="mult_class_greeter_grumpr">
+    </activity>
+    <activity label="mult_class_greeter_grumpr">
       <statement>
         <p>Run the following code</p>
       </statement>
@@ -307,8 +307,8 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
-    <exercise label="mult_class_no_str_method">
+    </activity>
+    <activity label="mult_class_no_str_method">
       <statement>
         <p>Q-11: What happens when a class doesn't have a __str__ method and you print an object?</p>
       </statement>
@@ -346,13 +346,13 @@ main()
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <p>Modify the code above to add a __str__ method to the Greeter class that returns the self.message and run the code again.</p>
   </subsection>
   <subsection xml:id="objects_overriding-an-inherited-method">
     <title>Overriding an Inherited Method</title>
     <p>The child class can override an inherited method.  This means it provides the same method name and parameter list as an inherited method.</p>
-    <exercise label="mult_class_student_first_fitb">
+    <activity label="mult_class_student_first_fitb">
       <statement>
         <p>Q-12: What is the first thing that will be printed when the code runs below? <var/>  </p>
       </statement>
@@ -370,8 +370,8 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
-    <exercise label="mult_class_student_last_fitb">
+    </activity>
+    <activity label="mult_class_student_last_fitb">
       <statement>
         <p>Q-13: What is the last thing that will be printed when the code runs below? <var/>  </p>
       </statement>
@@ -389,8 +389,8 @@ main()
           </condition>
         </var>
       </setup>
-    </exercise>
-    <exercise label="mult_class_override_inherited">
+    </activity>
+    <activity label="mult_class_override_inherited">
       <statement>
         <p>Run the following code</p>
       </statement>
@@ -421,7 +421,7 @@ def main():
 main()
         </code>
       </program>
-    </exercise>
+    </activity>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
     
   </subsection>

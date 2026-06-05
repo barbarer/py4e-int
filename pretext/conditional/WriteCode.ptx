@@ -2,7 +2,7 @@
 <section xml:id="conditional_write-code-questions">
   <title>Write Code Questions</title>
 
-        <exercise>
+        <activity>
           <statement>
             <p>Fix the errors in the code, and change it to use only <term>one</term> if statement. The code should print
                             <q>The number is 5</q> when the number is 5, and should print <q>The number is NOT 5</q> when it is not.</p>
@@ -36,9 +36,9 @@ else:
     print("The number is NOT 5")
         </code></program>
                     </solution>
-        </exercise>
+        </activity>
 
-        <exercise label="cndtnl-wc-hiq">
+        <activity label="cndtnl-wc-hiq">
           <statement>
             <p>Complete the conditional below so the word <q>Hi</q> is printed if x does not
                     equal 3 and <q>Hello</q> is printed otherwise.</p>
@@ -49,9 +49,9 @@ x = 4
 if x
         </code>
           </program>
-        </exercise>
+        </activity>
 
-        <exercise>
+        <activity>
           <statement>
             <p>Complete the pay computation to give the employee 1.5 times the hourly rate for hours worked
                             above 40 hours, if the regular pay rate is $10 an hour. Then set <c>grossPay</c> equal to the
@@ -115,9 +115,9 @@ print(grossPay)
 
 
                     </solution>
-        </exercise>
+        </activity>
 
-        <exercise label="cndtnl-wc-pay2q">
+        <activity label="cndtnl-wc-pay2q">
           <statement>
             <p>Rewrite your pay program using <c>try</c> and <c>except</c> so that your program handles non-numeric
                     input gracefully by printing a message and exiting the program. The following shows two
@@ -133,9 +133,9 @@ Error, please enter numeric input</pre>
 
         </code>
           </program>
-        </exercise>
+        </activity>
 
-        <exercise>
+        <activity>
           <statement>
             <p>Write the code to calculate and print the cost of a 14 mile cab ride. If the distance traveled
                             is less than or equal to 12 miles the cost is $2.00 a mile, and if the distance traveled is more
@@ -180,9 +180,9 @@ total = distance * rate
 print("Total cost of trip: " + str(total))
         </code></program>
                     </solution>
-        </exercise>
+        </activity>
 
-        <exercise label="cndtnl-wc-scoreq">
+        <activity label="cndtnl-wc-scoreq">
           <statement>
             <p>Write a program to prompt for a score between 0.0 and 1.0. If the score is out of range,
                     print an error message. If the score is between 0.0 and 1.0, print a grade using the
@@ -201,9 +201,9 @@ A</pre>
 
         </code>
           </program>
-        </exercise>
+        </activity>
 
-        <exercise>
+        <activity>
           <statement>
             <p>Fix the example such that the cost of frozen yogurt is 0 if you pour exactly 1 lb. in your cup.</p>
           </statement>
@@ -251,9 +251,9 @@ print(total)
 
  
                     </solution>
-        </exercise>
+        </activity>
 
-        <exercise label="cndtnl-wc-walletq">
+        <activity label="cndtnl-wc-walletq">
           <statement>
             <p>Write a procedure that takes 2 ints, total price, and amount in wallet. Print <q>You have enough
                     money</q> if the difference between the wallet and price is 0 or greater; otherwise,
@@ -264,9 +264,9 @@ print(total)
 
         </code>
           </program>
-        </exercise>
+        </activity>
 
-        <exercise>
+        <activity>
           <statement>
             <p>3 criteria must be taken into account to identify leap years:</p>
             <p>
@@ -339,9 +339,9 @@ elif year % 4 == 0 and year % 100 != 0:
 print(leapYear)
         </code></program>
                     </solution>
-        </exercise>
+        </activity>
 
-        <exercise label="cndtnl-wc-evenq">
+        <activity label="cndtnl-wc-evenq">
           <statement>
             <p>Finish the following code. It first sets <c>n</c> to a number input by a user.  Convert the number from a string to an integer and set <c>result</c> to <c>True</c> if the
                     number is an <term>even number</term> (evenly divisible by two) and <c>False</c> if it is <term>odd</term>. Note: use the modulo operator.</p>
@@ -351,6 +351,6 @@ print(leapYear)
 n = input("Enter a number")
         </code>
           </program>
-        </exercise>
+        </activity>
 
 </section>

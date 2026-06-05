@@ -47,7 +47,7 @@ fhand.close()
             (<c>image/jpeg</c>). Once the program completes, you can view the
             image data by opening the file <c>stuff.jpg</c> in an image
             viewer.</p>
-  <exercise label="image_header">
+  <activity label="image_header">
     <statement>
       <p>Q-2: The ________ header indicates that the body of the document is a jpeg image. <var/>  </p>
     </statement>
@@ -65,7 +65,7 @@ fhand.close()
         </condition>
       </var>
     </setup>
-  </exercise>
+  </activity>
   <p>As the program runs, you can see that we don't get 5120 characters each
             time we call the <c>recv()</c> method. We get as many characters
             as have been transferred across the network to us by the web server at
@@ -90,7 +90,7 @@ fhand.close()
             the buffer in the socket and be forced to pause until our program starts
             to empty the buffer. The pausing of either the sending application or
             the receiving application is called <q>flow control.</q></p>
-  <exercise label="jpeg_slow">
+  <activity label="jpeg_slow">
     <statement>
       <p>Q-3: Which of the following methods will slow down the requests made in the program above?</p>
     </statement>
@@ -128,5 +128,5 @@ fhand.close()
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
 </section>
