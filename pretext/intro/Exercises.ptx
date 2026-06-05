@@ -81,27 +81,31 @@
   </activity>
   <activity label="intro-fitb-line-by-line">
     <statement>
-      <p>Q-3: A __________ is a program that can analyze and execute a program line by line. <var/>  </p>
+      <p>Q-3: A <fillin width="15" mode="string" answer="interpreter" />
+        is a program that can analyze and execute a program line by line.
+      </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Ii]nterpreter">
+    <evaluation>
+      <evaluate>
+        <test correct="yes">
+          <strcmp case="insensitive" use-answer="yes" />
           <feedback>
             <p>An interpreter is a program that can analyze and execute a program line by line.</p>
           </feedback>
-        </condition>
-        <condition string="[Cc]ompiler">
+        </test>
+        <test>
+          <strcmp case="insensitive">compiler</strcmp>
           <feedback>
             <p>A compiler translates a program into machine language from a file and saves it for later execution.</p>
           </feedback>
-        </condition>
-        <condition string=".*">
+        </test>
+        <test>
           <feedback>
             <p>Try again!</p>
           </feedback>
-        </condition>
-      </var>
-    </setup>
+        </test>
+      </evaluate>
+    </evaluation>
   </activity>
   <activity label="intro-MC-machineCode">
     <statement>
@@ -281,94 +285,110 @@ print(x)
   </activity>
   <activity label="intro-fitb-explainBrain">
     <statement>
-      <p>Q-8: A brain is the human equivalent to what in your computer? <var/>  </p>
+      <p>Q-8: A brain is the human equivalent to what in your computer?
+        <fillin width="20" mode="string" answer="(CPU)|(central\s+processing\s+unit)" />
+      </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="(CPU)|([Cc]entral\s+[Pp]rocessing\s+[Uu]nit)">
+    <evaluation>
+      <evaluate>
+        <test correct="yes">
+          <strcmp case="insensitive" use-answer="yes" />
           <feedback>
             <p>The Central Processing Unit is very similar to a brain for your computer.</p>
           </feedback>
-        </condition>
-        <condition string=".*">
+        </test>
+        <test>
           <feedback>
             <p>Try again!</p>
           </feedback>
-        </condition>
-      </var>
-    </setup>
+        </test>
+      </evaluate>
+    </evaluation>
   </activity>
   <activity label="intro-fitb-keyboard">
     <statement>
-      <p>Q-9: A keyboard is an example of an Input or Output device? <var/>  </p>
+      <p>Q-9: A keyboard is an example of an Input or Output device?
+        <fillin width="15" mode="string" answer="input" />
+      </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Ii]nput">
+    <evaluation>
+      <evaluate>
+        <test correct="yes">
+          <strcmp case="insensitive" use-answer="yes" />
           <feedback>
             <p>A keyboard connects to your computer and provides information that your computer reads <b>in</b>.</p>
           </feedback>
-        </condition>
-        <condition string="[Oo]utput">
+        </test>
+        <test>
+          <strcmp case="insensitive">[Oo]utput</strcmp>
           <feedback>
             <p>Try again!</p>
           </feedback>
-        </condition>
-        <condition string=".*">
+        </test>
+        <test>
           <feedback>
             <p>Try again!</p>
           </feedback>
-        </condition>
-      </var>
-    </setup>
+        </test>
+      </evaluate>
+    </evaluation>
   </activity>
   <activity label="intro-fitb-speaker">
     <statement>
-      <p>Q-10: A speaker is an example of an Input or Output device? <var/>  </p>
+      <p>Q-10: A speaker is an example of an Input or Output device?
+        <fillin width="15" mode="string" answer="output" />
+      </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Oo]utput">
+    <evaluation>
+      <evaluate>
+        <test correct="yes">
+          <strcmp case="insensitive" use-answer="yes" />
           <feedback>
             <p>A speaker connects to your computer, which provides information that the speaker sends <b>out</b>.</p>
           </feedback>
-        </condition>
-        <condition string="[Ii]nput">
+        </test>
+        <test>
+          <strcmp case="insensitive">input</strcmp>
           <feedback>
             <p>Try again!</p>
           </feedback>
-        </condition>
-        <condition string=".*">
+        </test>
+        <test>
           <feedback>
             <p>Try again!</p>
           </feedback>
-        </condition>
-      </var>
-    </setup>
+        </test>
+      </evaluate>
+    </evaluation>
   </activity>
   <activity label="intro-SA-typeOfError">
     <statement>
-      <p>Q-11: The Python interpreter or complier will tell you if your code has a __________ Error. <var/>  </p>
+      <p>Q-11: The Python interpreter or complier will tell you if your code has a 
+        <fillin width="15" mode="string" answer="syntax" /> Error.
+      </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Ss]yntax">
+    <evaluation>
+      <evaluate>
+        <test correct="yes">
+          <strcmp case="insensitive" use-answer="yes" />
           <feedback>
             <p>If your code doesn't follow the <q>grammar rules</q> of Python, it will let you know.</p>
           </feedback>
-        </condition>
-        <condition string="[Ss]emantic">
+        </test>
+        <test>
+          <strcmp case="insensitive">semantic</strcmp>
           <feedback>
             <p>Try again! Semantic Errors will not trigger an error message.</p>
           </feedback>
-        </condition>
-        <condition string="[Ll]ogic">
+        </test>
+        <test>
+          <strcmp case="insensitive">logic</strcmp>
           <feedback>
             <p>Try again! Logic Errors will not trigger an error message.</p>
           </feedback>
-        </condition>
-      </var>
-    </setup>
+        </test>
+      </evaluate>
+    </evaluation>
   </activity>
   <activity label="intro_writeEx">
     <statement><p>Try running the following code.  Can you tell what is wrong with it and fix it?</p></statement>

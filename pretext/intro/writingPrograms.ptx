@@ -12,29 +12,32 @@
             end with <c>.py</c>.
   </p>
  </introduction>
-  <activity label="intro-write-fitb-file">
+ <activity label="intro-write-fitb-file">
     <statement>
-      <p>Q-1: A(n) ______ is a file that holds Python instructions. <var/>  </p>
+      <p>Q-1: A(n) <fillin width="15" mode="string" answer="script" /> is a file that holds Python instructions.
+      </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Ss]cript">
+    <evaluation>
+      <evaluate>
+        <test correct="yes">
+          <strcmp case="insensitive" use-answer="yes" />
           <feedback>
             <p>A script is a file that holds Python instructions.</p>
           </feedback>
-        </condition>
-        <condition string="[Ff]ile">
+        </test>
+        <test>
+          <strcmp case="insensitive">file</strcmp>
           <feedback>
             <p>What is this type of file called?</p>
           </feedback>
-        </condition>
-        <condition string=".*">
+        </test>
+        <test>
           <feedback>
             <p>Try again.</p>
           </feedback>
-        </condition>
-      </var>
-    </setup>
+        </test>
+      </evaluate>
+    </evaluation>
   </activity>
   <p>To execute the script, you have to tell the Python interpreter the name
             of the file. In a command window, you would type
@@ -59,22 +62,25 @@ Hello world!
             of the file.</p>
   <activity label="intro-write-fitb-end">
     <statement>
-      <p>Q-2: Files containing Python instructions end with what two letters? <var/>  </p>
+      <p>Q-2: Files containing Python instructions end with what two letters?
+        <fillin width="15" mode="string" answer="\.?py" />
+      </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="\.?[Pp][Yy]">
+    <evaluation>
+      <evaluate>
+        <test correct="yes">
+          <strcmp case="insensitive" use-answer="yes" />
           <feedback>
             <p>.py at the end of a file implies that it is a script containing Python instructions.</p>
           </feedback>
-        </condition>
-        <condition string=".*">
+        </test>
+        <test>
           <feedback>
             <p>Try again.</p>
           </feedback>
-        </condition>
-      </var>
-    </setup>
+        </test>
+      </evaluate>
+    </evaluation>
   </activity>
   <activity label="intro-write-mc-end">
     <statement>

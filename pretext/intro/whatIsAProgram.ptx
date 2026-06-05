@@ -9,27 +9,31 @@
             definition, it is a Python program.</p>
   <activity label="intro-what-fitb-statements">
     <statement>
-      <p>Q-1: A(n) _______ is a sequence of statements that have been crafted to do something. <var/>  </p>
+      <p>Q-1: A(n) <fillin width="15" mode="string" answer="program" />
+        is a sequence of statements that have been crafted to do something.
+      </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Pp]rogram">
+    <evaluation>
+      <evaluate>
+        <test correct="yes">
+          <strcmp case="insensitive" use-answer="yes" />
           <feedback>
             <p>A program is a sequence of statements that have been crafted to do something.</p>
           </feedback>
-        </condition>
-        <condition string="[Cc]omputer">
+        </test>
+        <test>
+          <strcmp case="insensitive">computer</strcmp>
           <feedback>
             <p>Not quite.</p>
           </feedback>
-        </condition>
-        <condition string=".*">
+        </test>
+        <test>
           <feedback>
             <p>Try again.</p>
           </feedback>
-        </condition>
-      </var>
-    </setup>
+        </test>
+      </evaluate>
+    </evaluation>
   </activity>
   <p>It might be easiest to understand what a program is by thinking about a
             problem that a program might be built to solve, and then looking at a

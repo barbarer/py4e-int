@@ -64,53 +64,62 @@
             something that is useful to its users.</p>
   <p>The word counting program from the previous section directly uses all of these patterns
             except for one.</p>
-          <activity label="intro-bb-fitb-CDwrite">>
-    <statement>
-      <p>Q-1: When writing content to a CD, the CD is an example of ________. <var/>  </p>
-    </statement>
-    <setup>
-      <var>
-        <condition string="[Oo]utput">
-          <feedback>
-            <p>A CD displays the results of a program when the disc is played.</p>
-          </feedback>
-        </condition>
-        <condition string="[Ii]nput">
-          <feedback>
-            <p>Not quite. Is the CD being read from or written to?</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
-  </activity>
-  <activity label="intro-bb-fitb-CDread">
-    <statement>
-      <p>Q-2: When reading content from a CD, the CD is an example of ________. <var/>  </p>
-    </statement>
-    <setup>
-      <var>
-        <condition string="[Ii]nput">
-          <feedback>
-            <p>A CD holds information that the program reads.</p>
-          </feedback>
-        </condition>
-        <condition string="[Oo]utput">
+<activity label="intro-bb-fitb-CDwrite">
+  <statement>
+    <p>
+      Q-1: When writing content to a CD, the CD is an example of
+        <fillin width="15" mode="string" answer="output"/>.
+    </p>
+  </statement>
+  <evaluation>
+      <evaluate>
+        <test correct="yes">
+            <strcmp case="insensitive" use-answer="yes"/>
+            <feedback>
+              <p>A CD displays the results of a program when the disc is played.</p>
+            </feedback>
+        </test>
+        <test>
+          <strcmp case="insensitive">output</strcmp>
           <feedback>
             <p>Not quite. Is the CD being read from or written to?</p>
           </feedback>
-        </condition>
-        <condition string=".*">
+        </test>
+        <test>
           <feedback>
             <p>Try again.</p>
           </feedback>
-        </condition>
-      </var>
-    </setup>
+        </test>
+      </evaluate>
+  </evaluation>
+</activity>
+<activity label="intro-bb-fitb-CDread">
+    <statement>
+      <p>Q-2: When reading content from a CD, the CD is an example of 
+        <fillin width="15" mode="string" answer="input"/>.
+      </p>
+    </statement>
+    <evaluation>
+         <evaluate>
+            <test correct="yes">
+               <strcmp case="insensitive" use-answer="yes"/>
+               <feedback>
+                  <p>A CD holds information that the program reads.</p>
+               </feedback>
+            </test>
+            <test>
+              <strcmp case="insensitive">output</strcmp>
+              <feedback>
+                <p>Not quite. Is the CD being read from or written to?</p>
+              </feedback>
+            </test>
+            <test>
+              <feedback>
+                <p>Try again.</p>
+              </feedback>
+            </test>
+          </evaluate>
+      </evaluation>
   </activity>
   <activity label="intro-bb-dbd-terms">
     <statement>

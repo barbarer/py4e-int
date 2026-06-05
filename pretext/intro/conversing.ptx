@@ -28,22 +28,25 @@ information.
             language.</p>
   <activity label="intro-convo-fitb-prompt">
     <statement>
-      <p>Q-1: What symbol is the Python interpreter's prompt for <q>What do you want me to do next?</q> <var/>  </p>
+      <p>Q-1: What symbol is the Python interpreter's prompt for <q>What do you want me to do next?</q>
+        <fillin width="15" mode="string" answer="&gt;&gt;&gt;" />
+      </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="&gt;&gt;&gt;">
+    <evaluation>
+      <evaluate>
+        <test correct="yes">
+          <strcmp case="insensitive" use-answer="yes" />
           <feedback>
             <p>Correct! &gt;&gt;&gt; is the prompt from the Python interpreter.</p>
           </feedback>
-        </condition>
-        <condition string=".*">
+        </test>
+        <test>
           <feedback>
             <p>Try again. Open your Python interpreter using the command <q>python</q> and see what you are prompted with.</p>
           </feedback>
-        </condition>
-      </var>
-    </setup>
+        </test>
+      </evaluate>
+    </evaluation>
   </activity>
   <p>Let's say for example that you did not know even the simplest Python
             language words or sentences. You might want to use the standard line
@@ -168,21 +171,24 @@ SyntaxError: invalid syntax
             one, so having a book handy probably will turn out to be helpful.</p>
   <activity label="intro-convo-fitb-leave-Python">
     <statement>
-      <p>Q-3: What do you type to leave the Python interpreter? <var/>  </p>
+      <p>Q-3: What do you type to leave the Python interpreter?
+        <fillin width="15" mode="string" answer="quit(\(\))*" />
+      </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="quit(\(\))*">
+    <evaluation>
+      <evaluate>
+        <test correct="yes">
+          <strcmp case="insensitive" use-answer="yes" />
           <feedback>
             <p>Correct!</p>
           </feedback>
-        </condition>
-        <condition string=".*">
+        </test>
+        <test>
           <feedback>
             <p>Try again.</p>
           </feedback>
-        </condition>
-      </var>
-    </setup>
+        </test>
+      </evaluate>
+    </evaluation>
   </activity>
 </section>

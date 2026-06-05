@@ -78,27 +78,31 @@
             for later execution.</p>
   <activity label="intro-terminology-fitb-translate">
     <statement>
-      <p>Q-1: A(n) ________ translates a program into machine language from a file and saves it for later execution. <var/>  </p>
+      <p>Q-1: A(n) <fillin width="15" mode="string" answer="compiler" />
+        translates a program into machine language from a file and saves it for later execution.
+      </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Cc]ompiler">
+    <evaluation>
+      <evaluate>
+        <test correct="yes">
+          <strcmp case="insensitive" use-answer="yes" />
           <feedback>
             <p>Correct! A compiler translates a program into machine language from a file.</p>
           </feedback>
-        </condition>
-        <condition string="[Ii]nterpreter">
+        </test>
+        <test>
+          <strcmp case="insensitive">interpreter</strcmp>
           <feedback>
             <p>An interpreter reads and processes code immediately.</p>
           </feedback>
-        </condition>
-        <condition string=".*">
+        </test>
+        <test>
           <feedback>
             <p>Try again!</p>
           </feedback>
-        </condition>
-      </var>
-    </setup>
+        </test>
+      </evaluate>
+    </evaluation>
   </activity>
   <p>If you have a Windows system, often these executable machine language
             programs have a suffix of <q>.exe</q> or <q>.dll</q> which stand for <q>executable</q>

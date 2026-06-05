@@ -144,21 +144,25 @@ print('Hello world!')
   </activity>
   <activity label="intro-words-fitb-words">
     <statement>
-      <p>Q-4: ________ words have only one meeting in Python and cannot be used as variable names. <var/>  </p>
+      <p>Q-4: <fillin width="15" mode="string" answer="reserved" />
+        words have only one meeting in Python and cannot be used as variable names.
+      </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Rr]eserved">
+    <evaluation>
+      <evaluate>
+        <test correct="yes">
+          <strcmp case="insensitive" use-answer="yes" />
           <feedback>
             <p>Reserved words already have a meaning in Python that cannot be changed, like <b>print</b> or <b>for</b>.</p>
           </feedback>
-        </condition>
-        <condition string=".*">
+        </test>
+        <test>
           <feedback>
             <p>Try again!</p>
           </feedback>
-        </condition>
-      </var>
-    </setup>
+        </test>
+      </evaluate>
+    </evaluation>
   </activity>
+
 </section>
