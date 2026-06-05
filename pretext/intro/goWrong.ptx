@@ -4,6 +4,7 @@
 <idx>Syntax Error</idx>
 <idx>Semantic Error</idx>
 <idx>Logic Error</idx>
+<idx>Runtime Error</idx>
   <p>As we saw in our earliest conversations with Python, we must communicate
             very precisely when we write Python code. The smallest deviation or
             mistake will cause Python to give up looking at your program.</p>
@@ -50,7 +51,7 @@ SyntaxError: invalid syntax
             just don't understand what you meant, but please keep talking to me
             (<c>&gt;&gt;&gt;</c>).</q></p>
   <p>As your programs become increasingly sophisticated, you will encounter
-            three general types of errors:</p>
+            four general types of errors:</p>
   <p>
         <dl>
           <li>
@@ -94,10 +95,22 @@ SyntaxError: invalid syntax
                                 while my instructions were syntactically correct, they sadly
                                 contained a small but undetected semantic error.</q>.</p>
           </li>
+          <li>
+            <title>Runtime errors</title>
+            <p>A runtime error is when your program's syntax is correct, but something 
+                                happens when you run the program that causes it to crash (abruptly stops running). 
+                                For example, if you have a program that asks the user for a number that is used to 
+                                divide another number, and the user enters 0, the program will crash 
+                                because division by zero is not defined mathematically. Another example of a runtime 
+                                error is when you declare a variable name such as <c>total</c>, but later in the program 
+                                when you try to use that variable you misspell it as <c>totla</c>. Python doesn't know
+                                that you really meant to use <c>total</c>. It's just trying to access a variable named
+                                <c>totla</c>, but there is no variable in the program with that name assigned a value.</p>
+          </li>
         </dl>
 
   </p>
-  <p>Again in all three types of errors, Python is merely trying its hardest
+  <p>Again in all four types of errors, Python is merely trying its hardest
             to do exactly what you have asked.</p>
   <activity label="intro-gowrong-mc-error">
     <statement>

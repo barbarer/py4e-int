@@ -4,6 +4,7 @@ What could possibly go wrong?
     single: Syntax Error
     single: Semantic Error
     single: Logic Error
+    single: Runtime Error
 
 As we saw in our earliest conversations with Python, we must communicate
 very precisely when we write Python code. The smallest deviation or
@@ -55,7 +56,7 @@ just don't understand what you meant, but please keep talking to me
 (\ ``>>>``\ )."
 
 As your programs become increasingly sophisticated, you will encounter
-three general types of errors:
+four general types of errors:
 
 * Syntax errors
     These are the first errors you will make and the easiest to fix. A
@@ -93,7 +94,18 @@ three general types of errors:
     while my instructions were syntactically correct, they sadly
     contained a small but undetected semantic error.".
 
-Again in all three types of errors, Python is merely trying its hardest
+* Runtime errors
+    A runtime error is when your program's syntax is correct, but something 
+    happens when you run the program that causes it to crash (abruptly stops running). 
+    For example, if you have a program that asks the user for a number that is used to 
+    divide another number, and the user enters 0, the program will crash 
+    because division by zero is not defined mathematically. Another example of a runtime 
+    error is when you declare a variable name such as ``total``, but later in the program 
+    when you try to use that variable you misspell it as ``totla``. Python doesn't know
+    that you really meant to use ``total``. It's just trying to access a variable named
+    ``totla``, but there is no variable in the program with that name assigned a value.
+
+Again in all four types of errors, Python is merely trying its hardest
 to do exactly what you have asked.
 
 .. mchoice:: intro-gowrong-mc-error
