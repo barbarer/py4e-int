@@ -95,15 +95,21 @@ four general types of errors:
     contained a small but undetected semantic error.".
 
 * Runtime errors
-    A runtime error is when your program's syntax is correct, but something 
-    happens when you run the program that causes it to crash (abruptly stops running). 
-    For example, if you have a program that asks the user for a number that is used to 
-    divide another number, and the user enters 0, the program will crash 
-    because division by zero is not defined mathematically. Another example of a runtime 
-    error is when you declare a variable name such as ``total``, but later in the program 
-    when you try to use that variable you misspell it as ``totla``. Python doesn't know
-    that you really meant to use ``total``. It's just trying to access a variable named
-    ``totla``, but there is no variable in the program with that name assigned a value.
+    A runtime error is a type of error that occurs when the program is syntactically
+    correct, but something goes wrong while the program is *running* that causes it to stop 
+    immediately, or "crash". For example, if you have a program that asks the user for 
+    a number that is used to divide another number, and the user enters 0, it causes 
+    the program to crash because division by zero is not defined mathematically. 
+
+    Another example is trying to add a number and a string. For example, the statement
+    ``total = 20 + "five"`` is syntactically correct, so Python is able to parse the code.
+    However, when Python attempts to run this statement, it does not know how to add 
+    a number and a string together, so the program stops with an error.
+
+    Runtime errors differ from syntax errors because Python cannot detect them until 
+    the program is actually running. When a runtime error occurs, Python displays an 
+    error message that includes the name of the error. Common examples are ``ValueError``,
+    ``TypeError``, and ``NameError``.
 
 Again in all four types of errors, Python is merely trying its hardest
 to do exactly what you have asked.
@@ -138,26 +144,14 @@ to do exactly what you have asked.
 
     Which of the following is a semantic error?
 
-.. mchoice:: intro-gowrong-mc-runtime
+.. fillintheblank:: intro-gowrong-mc-error-type
     :practice: T
-    :answer_a: Logic error
-    :answer_b: Semantic error
-    :answer_c: Syntax error
-    :answer_d: Runtime error
-    :answer_e: No error
-    :correct: d
-    :feedback_a: Try again! This will not cause a logic error - something is wrong with the code.
-    :feedback_b: Try again! This will not cause a semantic error - something is wrong with the code.
-    :feedback_c: Try again! This will not cause a syntax error - something is wrong with the code.
-    :feedback_d: The programmer intended to use the ``name`` variable, but misspelled it in the print statement.
-    :feedback_e: This will throw an error.
 
-    What time of error would this code produce?
+    A ``ValueError`` is an example of a ________ error.
 
-    ::
-
-      name = input("What is your name? ")
-      print("Hello", naem)
+    - :[Rr]untime: A runtime error is an error that occurs while the program is running, and it causes the program to stop immediately.
+      :[Ss]yntax: A syntax error is an error that occurs when the code does not follow the grammar rules of Python, and it prevents the program from running at all.
+      :.*: Try again!
 
 .. mchoice:: intro-gowrong-mc-syntax
     :practice: T
