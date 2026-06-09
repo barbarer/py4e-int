@@ -109,7 +109,7 @@ four general types of errors:
     Runtime errors differ from syntax errors because Python cannot detect them until 
     the program is actually running. When a runtime error occurs, Python displays an 
     error message that includes the name of the error. Common examples are ``ValueError``,
-    ``TypeError``, and ``NameError``.
+    ``TypeError``, and ``NameError``. You will learn more about these in later chapters.
 
 Again in all four types of errors, Python is merely trying its hardest
 to do exactly what you have asked.

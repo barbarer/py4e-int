@@ -97,15 +97,21 @@ SyntaxError: invalid syntax
           </li>
           <li>
             <title>Runtime errors</title>
-            <p>A runtime error is when your program's syntax is correct, but something 
-                                happens when you run the program that causes it to crash (abruptly stops running). 
-                                For example, if you have a program that asks the user for a number that is used to 
-                                divide another number, and the user enters 0, the program will crash 
-                                because division by zero is not defined mathematically. Another example of a runtime 
-                                error is when you declare a variable name such as <c>total</c>, but later in the program 
-                                when you try to use that variable you misspell it as <c>totla</c>. Python doesn't know
-                                that you really meant to use <c>total</c>. It's just trying to access a variable named
-                                <c>totla</c>, but there is no variable in the program with that name assigned a value.</p>
+            <p>A runtime error is a type of error that occurs when the program is syntactically
+              correct, but something goes wrong while the program is <em>running</em> that causes it to stop 
+              immediately, or "crash". For example, if you have a program that asks the user for 
+              a number that is used to divide another number, and the user enters 0, it causes 
+              the program to crash because division by zero is not defined mathematically. </p>
+
+              <p>Another example is trying to add a number and a string. For example, the statement
+              <c>total = 20 + "five"</c> is syntactically correct, so Python is able to parse the code.
+              However, when Python attempts to run this statement, it does not know how to add 
+              a number and a string together, so the program stops with an error.</p>
+
+              <p>Runtime errors differ from syntax errors because Python cannot detect them until 
+              the program is actually running. When a runtime error occurs, Python displays an 
+              error message that includes the name of the error. Common examples are  <c>ValueError</c>,
+              <c>TypeError</c>, and <c>NameError</c>. You will learn more about these in later chapters.</p>
           </li>
         </dl>
 
@@ -183,54 +189,34 @@ SyntaxError: invalid syntax
       </choice>
     </choices>
   </activity>
-  <activity label="intro-gowrong-mc-runtime">
+<activity label="intro-gowrong-fitb-error-type">
     <statement>
-      <p>Q-3: What time of error would this code produce?</p>
-      <pre>name = input("What is your name? ")
-print("Hello", naem)</pre>
+      <p>A <c>ValueError</c> is an example of a <fillin width="15" mode="string" answer="runtime" /> error.
+      </p>
     </statement>
-    <choices>
-      <choice>
-        <statement>
-          <p>Logic error</p>
-        </statement>
-        <feedback>
-          <p>Try again! This will not cause a logic error - something is wrong with the code.</p>
-        </feedback>
-      </choice>
-      <choice>
-        <statement>
-          <p>Semantic error</p>
-        </statement>
-        <feedback>
-          <p>Try again! This will not cause a semantic error - something is wrong with the code.</p>
-        </feedback>
-      </choice>
-      <choice>
-        <statement>
-          <p>Syntax error</p>
-        </statement>
-        <feedback>
-          <p>Try again! This will not cause a syntax error - something is wrong with the code.</p>
-        </feedback>
-      </choice>
-      <choice correct="yes">
-        <statement>
-          <p>Runtime error</p>
-        </statement>
-        <feedback>
-          <p>The programmer intended to use the ``name`` variable, but misspelled it in the print statement.</p>
-        </feedback>
-      </choice>
-      <choice>
-        <statement>
-          <p>No error</p>
-        </statement>
-        <feedback>
-          <p>This will throw an error.</p>
-        </feedback>
-      </choice>
-    </choices>
+    <evaluation>
+      <evaluate>
+        <test correct="yes">
+          <strcmp case="insensitive" use-answer="yes" />
+          <feedback>
+            <p>A runtime error is an error that occurs while the program is running, 
+              and it causes the program to stop immediately.</p>
+          </feedback>
+        </test>
+        <test>
+          <strcmp case="insensitive">syntax</strcmp>
+          <feedback>
+            <p>A syntax error is an error that occurs when the code does not follow the grammar 
+              rules of Python, and it prevents the program from running at all.</p>
+          </feedback>
+        </test>
+        <test>
+          <feedback>
+            <p>Try again.</p>
+          </feedback>
+        </test>
+      </evaluate>
+    </evaluation>
   </activity>
   <activity label="intro-gowrong-mc-syntax">
     <statement>
