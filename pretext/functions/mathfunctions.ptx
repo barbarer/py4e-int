@@ -84,7 +84,7 @@ print(result)
   </program>
   <activity label="functMath_MC_statement">
     <statement>
-      <p>Q-5: Which statement allows you to use the math module in Python?</p>
+      <p>Which statement allows you to use the math module in Python?</p>
     </statement>
     <choices>
       <choice correct="yes">
@@ -123,7 +123,7 @@ print(result)
   </activity>
   <activity label="functMath_MC_access">
     <statement>
-      <p>Q-6: To access a function in a module, we must use&#x2026;</p>
+      <p>To access a function in a module, we must use&#x2026;</p>
     </statement>
     <choices>
       <choice>
@@ -162,22 +162,19 @@ print(result)
   </activity>
   <activity label="functMath_fill1">
     <statement>
-      <p>Q-7: When we use the <q>import math</q> statement, a __________ called math is created. <var/>  </p>
+      <p>When we use the <q>import math</q> statement, a <fillin width="20" mode="string" answer="module object"/> called math is created. </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Mm]odule\s+[Oo]bject">
-          <feedback>
-            <p>A module object is created when we import math.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Incorrect! What type of object is created? Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>A module object is created when we import math.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Incorrect! What type of object is created? Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <program xml:id="functMath_codelens1" interactive="codelens" language="python">
     <code>

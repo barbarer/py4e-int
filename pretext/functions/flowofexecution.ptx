@@ -10,22 +10,19 @@
             Statements are executed one at a time, in order from top to bottom.</p>
   <activity label="functFlow_Fill1">
     <statement>
-      <p>Q-1: The order in which statements are executed is called the __________________. <var/>  </p>
+      <p>The order in which statements are executed is called the <fillin width="20" mode="string" answer="flow of execution"/>. </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Ff]low\s+[Oo]f\s+[Ee]xecution">
-          <feedback>
-            <p>Correct! The flow of execution is the order in which statements are executed.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Incorrect! Hint: it's the name of this section. Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive" />
+                    <feedback><p>Correct! The flow of execution is the order in which statements are executed.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Incorrect! Hint: it's the name of this section. Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>Function <em>definitions</em> do not alter the flow of execution of the
             program, but remember that statements inside the function are not
@@ -64,7 +61,7 @@ firstPrint()
             you follow the flow of execution and read functions as they are called.</p>
   <activity label="functFlow_MC_begin">
     <statement>
-      <p>Q-3: Where does the execution of a program always begin?</p>
+      <p>Where does the execution of a program always begin?</p>
     </statement>
     <choices>
       <choice>
@@ -95,7 +92,7 @@ firstPrint()
   </activity>
   <activity label="functFlow_MC_read">
     <statement>
-      <p>Q-4: When you read a program, you&#x2026;</p>
+      <p>When you read a program, you&#x2026;</p>
     </statement>
     <choices>
       <choice>

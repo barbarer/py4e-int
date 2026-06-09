@@ -47,21 +47,18 @@ Sally party count 2</pre>
   <activity label="multipleinstances">
     <statement>
       <p>Q-2: When using multiple instances, we can set different initial values for the instances by using a
-<BlankNode/>. <var/>  </p>
+<fillin width="20" mode="string" answer="constructor"/>.</p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Cc]onstructor">
-          <feedback>
-            <p>Yes, constructors can be used to initialize objects with initial values.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes" case="insensitive">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>Yes, constructors can be used to initialize objects with initial values.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
 </section>

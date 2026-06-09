@@ -24,7 +24,7 @@ bad name = 5
   </program>
   <activity label="var-debug-mc-name">
     <statement>
-      <p>csp-10-2-2: Which error will you get if you name a variable <q>bad name</q>?</p>
+      <p>Which error will you get if you name a variable <q>bad name</q>?</p>
     </statement>
     <choices>
       <choice>
@@ -89,26 +89,23 @@ print(1.0 / 2.0 * 3.14)
             wrong answer. <em>Try adding parentheses to the code above to return the correct answer.</em></p>
   <activity label="var-fitb-error-fix">
     <statement>
-      <p>csp-10-2-5: ________ is the process of fixing errors in your code. <var/>  </p>
+      <p><fillin width="20" mode="string" answer="debugging"/> is the process of fixing errors in your code.   </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Dd]ebugging">
-          <feedback>
-            <p>Debugging is the process of fixing errors in your code.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Debugging is the process of fixing errors in your code.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="var-debug-mc-equation">
     <statement>
-      <p>csp-10-2-6: Which error will you get if you use the equation 1/2*3.14 instead of 1/(2*3.14)?</p>
+      <p>Which error will you get if you use the equation 1/2*3.14 instead of 1/(2*3.14)?</p>
     </statement>
     <choices>
       <choice>

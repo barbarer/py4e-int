@@ -20,7 +20,7 @@ print(int('Hello'))
   </program>
   <activity label="functType_MC_error">
     <statement>
-      <p>Q-2: Why would we get an error in the following code block?</p>
+      <p>Why would we get an error in the following code block?</p>
       <program language="python">
         <code>
 print(int('32'))
@@ -80,26 +80,23 @@ print(str(3.14159))
   </program>
   <activity label="functType_fill1">
     <statement>
-      <p>Q-6: The _______ function takes any value and converts it to a floating-point number. <var/>  </p>
+      <p>The <fillin width="20" mode="string" answer="float"/> function takes any value and converts it to a floating-point number.  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="float">
-          <feedback>
-            <p>Correct! The float function takes any value and converts it to a floating point number.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Incorrect! The function has an intuitive name. Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>Correct! The <c>float</c> function takes any value and converts it to a floating point number.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Incorrect! The function has an intuitive name. Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="functType_MC_int">
     <statement>
-      <p>Q-7: Consider the code below. What prints?</p>
+      <p>Consider the code below. What prints?</p>
       <program language="python">
         <code>
 print(int(23.865))
@@ -143,7 +140,7 @@ print(int(23.865))
   </activity>
   <activity label="functType_MC_float">
     <statement>
-      <p>Q-8: Consider the code below. What prints?</p>
+      <p>Consider the code below. What prints?</p>
       <program language="python">
         <code>
 print(float(23))

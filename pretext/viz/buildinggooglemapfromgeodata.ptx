@@ -18,22 +18,19 @@
             times. So we break the problem into two phases.</p>
   <activity label="viz-google-fitb-phases">
     <statement>
-      <p>csp-10-2-1: How many phases do we break the first problem of this project into? <var/>  </p>
+      <p>How many phases do we break the first problem of this project into? <fillin width="20" mode="string" answer="2"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="2|([Two])">
-          <feedback>
-            <p>We break this problem into two phases.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp>2|Two|two</strcmp>
+                    <feedback><p>We break this problem into two phases.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>In the first phase we take our input <q>survey</q> data in the file
             <em>where.data</em> and read it one line at a time, and retrieve
@@ -45,22 +42,19 @@
             Google for the same data twice.</p>
   <activity label="viz-google-fitb-db">
     <statement>
-      <p>csp-10-2-2: The database in this program functions as a local ______ of our geocoding data. <var/>  </p>
+      <p>The database in this program functions as a local <fillin width="20" mode="string" answer="cache"/> of our geocoding data.  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Cc]ache">
-          <feedback>
-            <p>The database acts as a local cache of that data to make sure we never ask Google for repeat data.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>The database acts as a local cache of that data to make sure we never ask Google for repeat data.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>You can restart the process at any time by removing the file
             <em>geodata.sqlite</em>.</p>
@@ -101,7 +95,7 @@ Retrieved 1749 characters {    "results" : [
             your input.</p>
   <activity label="viz-google-mc-tf">
     <statement>
-      <p>csp-10-2-3: True or False? The geoload.py program can be stopped.</p>
+      <p>True or False? The geoload.py program can be stopped.</p>
     </statement>
     <choices>
       <choice correct="yes">
@@ -161,7 +155,7 @@ myData = [
             to check the JavaScript or developer console for your browser.</p>
   <activity label="viz-google-mc-language">
     <statement>
-      <p>csp-10-2-4: Which of the following languages are used or produced by this program? Select all that apply.</p>
+      <p>Which of the following languages are used or produced by this program? Select all that apply.</p>
     </statement>
     <choices>
       <choice correct="yes">

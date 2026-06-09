@@ -49,65 +49,51 @@
     <p>Look at the code below and predict what it will print.</p>
     <activity label="funct_fitb_print_test_first_line_v4">
       <statement>
-        <p>What is the first thing that will be printed when the code below runs? <var/>  </p>
+        <p>What is the first thing that will be printed when the code below runs? <fillin width="20" mode="string" answer="Hello!"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="Hello!">
-            <feedback>
-              <p>The main function prints this before it calls the test function. The main function is called at the end of the example code.</p>
-            </feedback>
-          </condition>
-          <condition string="Welcome">
-            <feedback>
-              <p>Execution starts by calling the main function at the bottom of the example.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Execution starts by calling the main function at the bottom of the example. </p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The <c>main</c> function prints this before it calls the <c>test</c> function. The <c>main</c> function is called at the end of the example code.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Execution starts by calling the <c>main</c> function at the bottom of the example. </p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="funct_fitb_print_test_second_line_v3">
       <statement>
-        <p>What is the second thing that will be printed when the code below runs? <var/>  </p>
+        <p>What is the second thing that will be printed when the code below runs? <fillin width="20" mode="string" answer="Welcome"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="Welcome">
-            <feedback>
-              <p>This is the first thing printed in the test function.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Run the code and check.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>This is the first thing printed in the <c>test</c> function.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Run the code and check.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="funct_fitb_print_test_last_line_v3">
       <statement>
-        <p>What is the last thing that will be printed when the code below runs? <var/>  </p>
+        <p>What is the last thing that will be printed when the code below runs? <fillin width="20" mode="string" answer="1"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition number="1">
-            <feedback>
-              <p>Prints the value returned from the function test which is the remainder of 5 divided by 2 which is one.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>What is the remainder of 5 divided by 2?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>Prints the value returned from the function <c>test</c> which is the remainder of 5 divided by 2 which is one.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>What is the remainder of 5 divided by 2?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <p>Run the Python code below and then answer the following questions.</p>
     <activity label="func_ac_pogil_print_message_v2">
@@ -145,79 +131,67 @@ main()
     </note>
     <activity label="funct_fitb_print_test_value_b">
       <statement>
-        <p>What is the value of <c>b</c> when function <c>test</c> starts executing? <var/>  </p>
+        <p>What is the value of <c>b</c> when function <c>test</c> starts executing? <fillin width="20" mode="string" answer="2"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition number="2">
-            <feedback>
-              <p>Since the value of b was not specified it defaults to 2 (it was set to 2 as a default in the function definition)</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>What is the default value specified for b in the function definition?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>Since the value of <c>b</c> was not specified it defaults to 2 (it was set to 2 as a default in the function definition)</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>What is the default value specified for <c>b</c> in the function definition?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="funct_fitb_return">
       <statement>
-        <p>What keyword in Python is used to return a value from a function? <var/>  </p>
+        <p>What keyword in Python is used to return a value from a function? <fillin width="20" mode="string" answer="return"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="return">
-            <feedback>
-              <p>The return keyword is used to return a value from a function</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>What word starts the last line of the test function?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The return keyword is used to return a value from a function</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>What word starts the last line of the test function?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="funct_fitb_print">
       <statement>
-        <p>What built-in function in Python is used to display a value? <var/>  </p>
+        <p>What built-in function in Python is used to display a value? <fillin width="20" mode="string" answer="print"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="print">
-            <feedback>
-              <p>The print function will display a value in Python.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Look at the example Python code above.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The print function will display a value in Python.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Look at the example Python code above.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="funct_fitb_return_None_v2">
       <statement>
-        <p>Delete the last line of the test function above and run the code again. What value is returned from a function that doesn't have a return keyword? <var/>  </p>
+        <p>Delete the last line of the test function above and run the code again. What value is returned from a function that doesn't have a return keyword? <fillin width="20" mode="string" answer="None"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="None">
-            <feedback>
-              <p>A function without a return still returns the keyword None</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>What is the last thing that is printed when you run the code above after deleting the return from the test function?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>A function without a return still returns the keyword None</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>What is the last thing that is printed when you run the code above after deleting the return from the test function?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="funct_order_first_example" adaptive="yes" indentation="hide" language="python">
       <statement>
@@ -445,65 +419,55 @@ def main():
     <title>Special Characters and Keywords</title>
     <activity label="funct_fitb_body_char">
       <statement>
-        <p>What character indicates that what follows next is the body of the function? <var/>  </p>
+        <p>What character indicates that what follows next is the body of the function? <fillin width="20" mode="string" answer=":"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="\:">
-            <feedback>
-              <p>A : is used to indicate the start of the body of a function.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>It is the last character on the function header.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp>:|colon</strcmp>
+                      <feedback><p>A colon (:) is used to indicate the start of the body of a function.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>It is the last character on the function header.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="funct_fitb_comment_char">
       <statement>
-        <p>What character starts a comment? <var/>  </p>
+        <p>What character starts a comment? <fillin width="20" mode="string" answer="#"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="#">
-            <feedback>
-              <p>A # is used to start a comment.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Comments explain the code, try again</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>A # is used to start a comment.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Comments explain the code, try again</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="funct_fitb_def_fitb">
       <statement>
-        <p>What Python keyword is used to start a function definition? <var/>  </p>
+        <p>What Python keyword is used to start a function definition? <fillin width="20" mode="string" answer="def"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="def">
-            <feedback>
-              <p>Use def to start a function definition.</p>
-            </feedback>
-          </condition>
-          <condition string="Def">
-            <feedback>
-              <p>Remember that case matters in Python.  All keywords start with a lower case letter.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Try again!</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>Use def to start a function definition.</p></feedback>
+                  </test>
+                  <test>
+                  <strcmp>Def</strcmp>
+                      <feedback><p>Remember that case matters in Python.  All keywords start with a lower case letter.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Try again!</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
   

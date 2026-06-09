@@ -28,34 +28,28 @@ $ wget http://www.py4e.com/cover.jpg
             simple task.</p>
   <activity label="network_bonus_fitb">
     <statement>
-      <p>Q-1: The <BlankNode/> command is short for <q>copy URL</q> and <BlankNode/> command is short for <q>World Wide Web get.</q>
-Both commands are used on Linux computers to retrieve plain text and binary files. <var/>  <var/>  </p>
+      <p>Q-1: The <fillin width="20" mode="string" answer="curl"/> command is short for <q>copy URL</q> and <fillin width="20" mode="string" answer="wget"/> command is short for <q>World Wide Web get.</q>
+Both commands are used on Linux computers to retrieve plain text and binary files.</p>
     </statement>
-    <setup>
-      <var>
-        <condition string="curl">
-          <feedback>
-            <p>Correct. curl is short for copy URL.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try combining the words it is short for and using all lowercase.</p>
-          </feedback>
-        </condition>
-      </var>
-      <var>
-        <condition string="wget">
-          <feedback>
-            <p>Correct. wget is short for web get.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try combining the words it is short for and using all lowercase.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>Correct. curl is short for copy URL.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try combining the words it is short for and using all lowercase.</p></feedback>
+                </test>
+        </evaluate>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>Correct. wget is short for web get.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try combining the words it is short for and using all lowercase.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
 </section>

@@ -23,7 +23,7 @@ print(x)
   <p>The assignment statement produces no output.</p>
   <activity label="var-state-mc-var3">
     <statement>
-      <p>csp-10-2-2: What is the value of var3 after the following code executes?</p>
+      <p>What is the value of var3 after the following code executes?</p>
       <pre>var1 = "cat"
 var2 = "dog"
 var3 = "bird"
@@ -68,7 +68,7 @@ var2 = "fish"</pre>
   </activity>
   <activity label="var-state-mc-var2">
     <statement>
-      <p>csp-10-2-3: What is the value of var2 after the following code executes?</p>
+      <p>What is the value of <c>var2</c> after the following code executes?</p>
       <pre>var1 = "cat"
 var2 = "dog"
 var3 = "bird"
@@ -113,22 +113,19 @@ var2 = "fish"</pre>
   </activity>
   <activity label="var-state-fitb-give-value">
     <statement>
-      <p>csp-10-2-4: The process of giving value to a variable is called a(n) <var/>  </p>
+      <p>The process of giving value to a variable is called a(n) <fillin width="20" mode="string" answer="assignment"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="^assignment$|^Assignment$|^ASSIGNMENT$">
-          <feedback>
-            <p>The process of giving value to a variable is called an assignment.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>The process of giving value to a variable is called an assignment.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="var-state-ca-assign">
     <statement>

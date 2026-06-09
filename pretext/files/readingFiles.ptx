@@ -40,22 +40,19 @@ print('Line Count:', count)
             line is read, counted, and then discarded.</p>
   <activity label="file-read-fitb-lines">
     <statement>
-      <p>Q-2: When using a for loop to read lines, how many lines are read at a time? <var/>  </p>
+      <p>When using a for loop to read lines, how many lines are read at a time? <fillin width="20" mode="string" answer="1"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="([Oo]ne)|1">
-          <feedback>
-            <p>When using a for loop, the program reads each line individually.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes" case="insensitive">
+                    <strcmp>1|one</strcmp>
+                    <feedback><p>When using a for loop, the program reads each line individually.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>If you know the file is relatively small compared to the size of your
             main memory, you can read the whole file into one string using the

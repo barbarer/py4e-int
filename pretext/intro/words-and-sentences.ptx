@@ -32,7 +32,7 @@ def       from      nonlocal    while</pre>
             you say <q>try</q>, Python will try every time you say it without fail.</p>
   <activity label="intro-words-mc-reserved">
     <statement>
-      <p>Q-1: Which of the following are reserved words? Select all that apply.</p>
+      <p>Which of the following are reserved words? Select all that apply.</p>
     </statement>
     <choices>
       <choice>
@@ -97,7 +97,7 @@ print('Hello world!')
             apostrophe) appears in the string.</p>
   <activity label="intro-words-mc-quotes">
     <statement>
-      <p>Q-3: What is the difference between single and double quotes in Python?</p>
+      <p>What is the difference between single and double quotes in Python?</p>
     </statement>
     <choices>
       <choice>
@@ -144,21 +144,18 @@ print('Hello world!')
   </activity>
   <activity label="intro-words-fitb-words">
     <statement>
-      <p>Q-4: ________ words have only one meeting in Python and cannot be used as variable names. <var/>  </p>
+      <p><fillin width="20" mode="string" answer="reserved"/> words have only one meeting in Python and cannot be used as variable names. </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Rr]eserved">
-          <feedback>
-            <p>Reserved words already have a meaning in Python that cannot be changed, like <b>print</b> or <b>for</b>.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Reserved words already have a meaning in Python that cannot be changed, like <b>print</b> or <b>for</b>.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
 </section>

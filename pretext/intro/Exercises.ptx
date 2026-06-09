@@ -3,7 +3,7 @@
   <title>Exercises</title>
   <activity label="intro-MC-secondaryMem">
     <statement>
-      <p>Q-1: What is the function of the secondary memory in a computer?</p>
+      <p>What is the function of the secondary memory in a computer?</p>
     </statement>
     <choices>
       <choice>
@@ -42,7 +42,7 @@
   </activity>
   <activity label="intro-MC-prog">
     <statement>
-      <p>Q-2: When talking about computers and code, which of the following is a program?</p>
+      <p>When talking about computers and code, which of the following is a program?</p>
     </statement>
     <choices>
       <choice correct="yes">
@@ -81,31 +81,26 @@
   </activity>
   <activity label="intro-fitb-line-by-line">
     <statement>
-      <p>Q-3: A __________ is a program that can analyze and execute a program line by line. <var/>  </p>
+      <p>A <fillin width="20" mode="string" answer="interpreter"/> is a program that can analyze and execute a program line by line. </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Ii]nterpreter">
-          <feedback>
-            <p>An interpreter is a program that can analyze and execute a program line by line.</p>
-          </feedback>
-        </condition>
-        <condition string="[Cc]ompiler">
-          <feedback>
-            <p>A compiler translates a program into machine language from a file and saves it for later execution.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>An interpreter is a program that can analyze and execute a program line by line.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>A compiler translates a program into machine language from a file and saves it for later execution.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="intro-MC-machineCode">
     <statement>
-      <p>Q-4: Which of the following creates or contains <q>machine code</q>?</p>
+      <p>Which of the following creates or contains <q>machine code</q>?</p>
     </statement>
     <choices>
       <choice correct="yes">
@@ -144,7 +139,7 @@
   </activity>
   <activity label="intro-MC-whereStored">
     <statement>
-      <p>Q-5: Where in the computer is a variable such as <q>x</q> stored after the following Python line executes?</p>
+      <p>Where in the computer is a variable such as <q>x</q> stored after the following Python line executes?</p>
       <program language="python">
         <code>
 x = 123
@@ -196,7 +191,7 @@ x = 123
   </activity>
   <activity label="intro-MC-printVal">
     <statement>
-      <p>Q-6: What will the following program print out:</p>
+      <p>What will the following program print out:</p>
       <program language="python">
         <code>
 x = 43
@@ -242,7 +237,7 @@ print(x)
   </activity>
   <activity label="intro-MC-replace">
     <statement>
-      <p>Q-7: Pick the best replacements for 1 and 2 in the following sentence: When comparing compilers and interpreters, a compiler is like 1 while an interpreter is like 2.</p>
+      <p>Pick the best replacements for 1 and 2 in the following sentence: When comparing compilers and interpreters, a compiler is like 1 while an interpreter is like 2.</p>
     </statement>
     <choices>
       <choice>
@@ -281,94 +276,76 @@ print(x)
   </activity>
   <activity label="intro-fitb-explainBrain">
     <statement>
-      <p>Q-8: A brain is the human equivalent to what in your computer? <var/>  </p>
+      <p>A brain is the human equivalent to what in your computer? <fillin width="20" mode="string" answer="cpu"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="(CPU)|([Cc]entral\s+[Pp]rocessing\s+[Uu]nit)">
-          <feedback>
-            <p>The Central Processing Unit is very similar to a brain for your computer.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp case="insensitive">CPU)|(central processing unit</strcmp>
+                    <feedback><p>The Central Processing Unit is very similar to a brain for your computer.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="intro-fitb-keyboard">
     <statement>
-      <p>Q-9: A keyboard is an example of an Input or Output device? <var/>  </p>
+      <p>A keyboard is an example of an Input or Output device? <fillin width="20" mode="string" answer="input"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Ii]nput">
-          <feedback>
-            <p>A keyboard connects to your computer and provides information that your computer reads <b>in</b>.</p>
-          </feedback>
-        </condition>
-        <condition string="[Oo]utput">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>A keyboard connects to your computer and provides information that your computer reads <b>in</b>.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="intro-fitb-speaker">
     <statement>
-      <p>Q-10: A speaker is an example of an Input or Output device? <var/>  </p>
+      <p>A speaker is an example of an Input or Output device? <fillin width="20" mode="string" answer="output"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Oo]utput">
-          <feedback>
-            <p>A speaker connects to your computer, which provides information that the speaker sends <b>out</b>.</p>
-          </feedback>
-        </condition>
-        <condition string="[Ii]nput">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>A speaker connects to your computer, which provides information that the speaker sends <b>out</b>.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="intro-SA-typeOfError">
     <statement>
-      <p>Q-11: The Python interpreter or complier will tell you if your code has a __________ Error. <var/>  </p>
+      <p>The Python interpreter or complier will tell you if your code has a <fillin width="20" mode="string" answer="syntax"/> Error.  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Ss]yntax">
-          <feedback>
-            <p>If your code doesn't follow the <q>grammar rules</q> of Python, it will let you know.</p>
-          </feedback>
-        </condition>
-        <condition string="[Ss]emantic">
-          <feedback>
-            <p>Try again! Semantic Errors will not trigger an error message.</p>
-          </feedback>
-        </condition>
-        <condition string="[Ll]ogic">
-          <feedback>
-            <p>Try again! Logic Errors will not trigger an error message.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>If your code doesn't follow the <q>grammar rules</q> of Python, it will let you know.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again! Semantic Errors will not trigger an error message.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again! Logic Errors will not trigger an error message.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="intro_writeEx">
     <statement><p>Try running the following code.  Can you tell what is wrong with it and fix it?</p></statement>

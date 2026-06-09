@@ -57,23 +57,20 @@ ValueError: could not convert string to float: 'fifty'</pre>
             Python as an <q>insurance policy</q> on a sequence of statements.</p>
   <activity label="cndtnl-try-fitb-equivalent">
     <statement>
-      <p>Q-2: The <c>try / except</c> feature is more or less a(n) _______ for your code. <var/>  </p>
+      <p>The <c>try / except</c> feature is more or less a(n) _______ for your code. <fillin width="20" mode="string" answer="insurance policy"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Ii]nsurance\s+[Pp]olicy">
-          <feedback>
-            <p>Try / except acts as an insurance policy to catch expected
-or unexpected errors in your code.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Check the previous paragraph for some help!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Try / except acts as an insurance policy to catch expected
+or unexpected errors in your code.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Check the previous paragraph for some help!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>We can rewrite our temperature converter as follows:</p>
   <program xml:id="cndtnlTempTry" interactive="activecode" language="python">
@@ -106,22 +103,19 @@ Please enter a number.</pre>
             least end the program gracefully.</p>
   <activity label="cndtnl-try-fitb-meaning">
     <statement>
-      <p>Q-4: The <c>try/except</c> feature is used to catch ________. <var/>  </p>
+      <p>The <c>try/except</c> feature is used to catch ________. <fillin width="20" mode="string" answer="exception"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Ee]xception">
-          <feedback>
-            <p>When using try/except you are trying to catch an exception and give the computer a different way to handle it.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>When using try/except you are trying to catch an exception and give the computer a different way to handle it.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="cndtnl-try-pp-temp" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>

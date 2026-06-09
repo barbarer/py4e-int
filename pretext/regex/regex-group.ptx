@@ -86,65 +86,55 @@ print(y)
     </activity>
     <activity label="regex_findall_return_type_fitb">
       <statement>
-        <p>11-9-2: What type of thing does <c>findall</c> return? <var/>  </p>
+        <p>What type of thing does <c>findall</c> return? <fillin width="20" mode="string" answer="list"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="list">
-            <feedback>
-              <p>The findall method returns a list of items that matched</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>What type of thing was last printed?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The findall method returns a list of items that matched</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>What type of thing was last printed?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="regex_search_not_found_return_fitb">
       <statement>
-        <p>11-9-3: What does <c>search</c> return if no match is found? <var/>  </p>
+        <p>What does <c>search</c> return if no match is found? <fillin width="20" mode="string" answer="None"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="None">
-            <feedback>
-              <p>The search method returns None if no match was found</p>
-            </feedback>
-          </condition>
-          <condition string="none">
-            <feedback>
-              <p>Remember that this keyword starts with a capital letter</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>What was the second thing printed?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The search method returns None if no match was found</p></feedback>
+                  </test>
+                  <test>
+                      <strcmp>none</strcmp>
+                      <feedback><p>Remember that this keyword starts with a capital letter</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>What was the second thing printed?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="regex_search_fitb">
       <statement>
-        <p>11-9-4: Which method returns information about the first match as an object? <var/>  </p>
+        <p>Which method returns information about the first match as an object? <fillin width="20" mode="string" answer="search"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="search">
-            <feedback>
-              <p>The search method returns a MatchObject</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Look at the code above.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The <c>search</c> method returns a <c>MatchObject</c></p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Look at the code above.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
   </subsection>
   <subsection xml:id="regex_quantifiers">
@@ -183,7 +173,7 @@ print(res5)
     </activity>
     <activity label="regex_quant_2_mc">
       <statement>
-        <p>11-9-6: How many c's must there be in a row for c{2} to match at least part of the string?</p>
+        <p>How many c's must there be in a row for c{2} to match at least part of the string?</p>
       </statement>
       <choices>
         <choice>
@@ -222,27 +212,23 @@ print(res5)
     </activity>
     <activity label="regex_digit_fitb">
       <statement>
-        <p>11-9-7: What characters are used to match a digit? <var/>  </p>
+        <p>What characters are used to match a digit? <fillin width="20" mode="string" answer="\d"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="\\d">
-            <feedback>
-              <p>The backslash d is used to match any digit</p>
-            </feedback>
-          </condition>
-          <condition string="d">
-            <feedback>
-              <p>You are missing something before the d</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Run the code above</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The backslash d is used to match any digit</p></feedback>
+                  </test>
+                  <test>
+                      <strcmp>d</strcmp>
+                      <feedback><p>You are missing something before the d</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Run the code above</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="regex_quant_v2_dnd">
       <statement>
@@ -294,7 +280,7 @@ print(res1)
     </activity>
     <activity label="regex_char_sets_meaning">
       <statement>
-        <p>11-9-10: What does <c>[ea]</c> mean?</p>
+        <p>What does <c>[ea]</c> mean?</p>
       </statement>
       <choices>
         <choice correct="yes">
@@ -353,7 +339,7 @@ print(res1)
     </activity>
     <activity label="regex_char_range_digits">
       <statement>
-        <p>11-9-12: What does <c>[0-9.]+</c> mean?</p>
+        <p>What does <c>[0-9.]+</c> mean?</p>
       </statement>
       <choices>
         <choice>
@@ -392,7 +378,7 @@ print(res1)
     </activity>
     <activity label="regex_neg_char_range_digits">
       <statement>
-        <p>11-9-13: What does <c>[^0-9.]+</c> mean?</p>
+        <p>What does <c>[^0-9.]+</c> mean?</p>
       </statement>
       <choices>
         <choice>
@@ -555,7 +541,7 @@ print(res3)
     </activity>
     <activity label="regex_num_matches_escape_v2_mc">
       <statement>
-        <p>11-9-19: How many items will be in the list that the following code prints?</p>
+        <p>How many items will be in the list that the following code prints?</p>
         <pre>import re
 str = "302.33 64.52 204.24 532.2 1.23 323.320"
 res = re.findall("\d{3}\.\d{2}",str)
@@ -619,22 +605,19 @@ print(res2)
     </activity>
     <activity label="regex_not_greedy_char">
       <statement>
-        <p>11-9-21: What character can you add after a quantifier like &#x2018;+' or &#x2018;*' to make it not greedy? <var/>  </p>
+        <p>What character can you add after a quantifier like &#x2018;+' or &#x2018;*' to make it not greedy? <fillin width="20" mode="string" answer="?"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="\?">
-            <feedback>
-              <p>Adding the ? will make it not greedy</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Look at the code above.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>Adding the ? will make it not greedy</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Look at the code above.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share answers.</p>
     

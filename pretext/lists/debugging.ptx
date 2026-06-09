@@ -43,22 +43,19 @@ t = t.sort()           # WRONG!
             </p>
             <activity label="listDebug_fillMethods">
               <statement>
-                <p>Q-1: Most list methods return ______, where string methods generally return a new string. <var/>  </p>
+                <p>Most list methods return <fillin width="20" mode="string" answer="None"/>, where string methods generally return a new string.  </p>
               </statement>
-              <setup>
-                <var>
-                  <condition string="[Nn]one">
-                    <feedback>
-                      <p>Most list methods modify the argument and return <q>None</q>.</p>
-                    </feedback>
-                  </condition>
-                  <condition string=".*">
-                    <feedback>
-                      <p>Try again.</p>
-                    </feedback>
-                  </condition>
-                </var>
-              </setup>
+              <evaluation>
+                  <evaluate>
+                          <test correct="yes">
+                              <strcmp use-answer="yes"/>
+                              <feedback><p>Most list methods modify the argument and return <q>None</q>.</p></feedback>
+                          </test>
+                          <test>
+                              <feedback><p>Try again.</p></feedback>
+                          </test>
+                  </evaluate>
+              </evaluation>
             </activity>
           </paragraphs>
           
@@ -135,7 +132,7 @@ t.sort()
 
   <activity label="listDebug_MC_tf">
     <statement>
-      <p>Q-3: True or False? The built-in function sorted affects the original list.</p>
+      <p>True or False? The built-in function sorted affects the original list.</p>
     </statement>
     <choices>
       <choice>
@@ -187,7 +184,7 @@ for line in fhand:
                                 But is it better?</p>
             <activity label="listDebug_MC_error">
               <statement>
-                <p>Q-5: What kind of error will caused by the code above?</p>
+                <p>What kind of error will caused by the code above?</p>
               </statement>
               <choices>
                 <choice>

@@ -46,22 +46,19 @@ for item in info:
     </activity>
     <activity label="net_parse_xml_which_method">
       <statement>
-        <p>csp-10-2-2: Which method of the json library is used to convert a JSON string into a Python object? <var/>  </p>
+        <p>csp-10-2-2: Which method of the json library is used to convert a JSON string into a Python object? <fillin width="20" mode="string" answer="loads"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="loads">
-            <feedback>
-              <p>The loads method takes a JSON string and returns a list or dictionary.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Which method was called in the code above?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The <c>loads</c> method takes a JSON string and returns a list or dictionary.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Which method was called in the code above?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <p>Here is another example.  Run the code to see what it does.</p>
     <activity label="web-parse-json-to-python-dictionary">
@@ -85,45 +82,39 @@ for person in people_list:
     </activity>
     <activity label="net_json_what_type_returned_data">
       <statement>
-        <p>csp-10-2-4: What type of thing (class name) is <c>data</c> in the code above? <var/>  </p>
+        <p>What type of thing (class name) is <c>data</c> in the code above? <fillin width="20" mode="string" answer="str"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="str|string">
-            <feedback>
-              <p>It is an object of the str (string) class</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Try again</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp>str|string</strcmp>
+                      <feedback><p>It is an object of the <c>str</c> (string) class</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Try again</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="net_json_what_type_returned_d1">
       <statement>
-        <p>csp-10-2-5: What type of thing (class name) is <c>d1</c> in the code above? <var/>  </p>
+        <p>cWhat type of thing (class name) is <c>d1</c> in the code above? <fillin width="20" mode="string" answer="dict"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="dict|dictionary">
-            <feedback>
-              <p>It is an object of the dict (dictionary) class.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Try again</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp>dict|dictionary</strcmp>
+                      <feedback><p>It is an object of the <c>dict</c> (dictionary) class.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Try again</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="webParsingJSON_MC_construct">
       <statement>
-        <p>csp-10-2-6: Once you convert a JSON string to Python what are the two possible types for the Python object?</p>
+        <p> Once you convert a JSON string to Python what are the two possible types for the Python object?</p>
       </statement>
       <choices>
         <choice>
@@ -173,22 +164,19 @@ print(json.dumps(d))
     </activity>
     <activity label="net_parse_json_convert_to_string_fitb">
       <statement>
-        <p>csp-10-2-8: Which method of the json library is used to convert a Python object to a JSON string? <var/>  </p>
+        <p>Which method of the json library is used to convert a Python object to a JSON string? <fillin width="20" mode="string" answer="dumps"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="dumps">
-            <feedback>
-              <p>The dumps method takes a Python object and returns a JSON string.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Which method was called in the code above?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The <c>dumps</c> method takes a Python object and returns a JSON string.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Which method was called in the code above?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
   </subexercises>
   

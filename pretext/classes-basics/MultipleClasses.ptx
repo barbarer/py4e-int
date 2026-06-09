@@ -361,22 +361,19 @@ if __name__ == "__main__":
                 Each object of the <c>Card</c> class doesn't need to have its own copy of these lists.  That would be a waste of space. Instead they are created in the class and all objects of the class have access to it.</p>
     <activity label="mult_class_attribute_fitb">
       <statement>
-        <p>Q-8: Use <BlankNode/>.rank_names to access the class attribute <c>rank_names</c> in the <c>Card</c> class. <var/>  </p>
+        <p>Q-8: Use <fillin width="20" mode="string" answer="Card"/>.rank_names to access the class attribute <c>rank_names</c> in the <c>Card</c> class.</p>
       </statement>
-      <setup>
-        <var>
-          <condition string="Card">
-            <feedback>
-              <p>Use the name of the class to access a class attribute</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Look at the __init__ method in the Deck class</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>Use the name of the class to access a class attribute</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Look at the __init__ method in the Deck class</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="mult-classes-card-attributes-vs-class">
       <statement>
@@ -427,25 +424,25 @@ if __name__ == "__main__":
         <p>Q-11: The <fillin width="20" mode="string" answer="__init__"/> function in class <fillin width="20" mode="string" answer="Deck"/> creates all of the card objects in the deck object.</p>
       </statement>
       <evaluation>
-         <evaluate>
-            <test correct="yes">
-               <strcmp use-answer="yes"/>
-               <feedback><p>The __init__ function creates all 52 cards</p></feedback>
-            </test>
-            <test>
-              <feedback><p>What function is called when an object is first created?</p></feedback>
-           </test>
-        </evaluate>
-         <evaluate>
-            <test correct="yes">
-               <strcmp use-answer="yes"/>
-               <feedback><p>The Deck class creates the 52 cards when you create a new deck</p></feedback>
-            </test>
-            <test>
-              <feedback><p>Which class creates multiple cards?</p></feedback>
-           </test>
-        </evaluate>
-      </evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The __init__ function in the Deck class creates all 52 cards</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>An object of a class is created with Class()</p></feedback>
+                  </test>
+          </evaluate>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The Deck class creates the 52 cards when you create a new deck</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Which class creates multiple cards?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <p>Use the following UML class diagram to answer the next few questions.</p>
     <figure align="">

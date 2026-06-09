@@ -39,45 +39,39 @@ print(x)
             subtracting 1 is called a <em>decrement</em>.</p>
   <activity id="itUpdate_fill1">
     <statement>
-      <p>Q-3: Before you can update a variable, you have to ________ it. <var/>  </p>
+      <p>Before you can update a variable, you have to <fillin width="20" mode="string" answer="initialize"/>it. </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Ii]nitialize">
-          <feedback>
-            <p>Before updating a variable, you need to initialize the variable.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Incorrect! Hint: what are you doing to variable &#x2018;x' when you say &#x2018;x = 0'? Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Before updating a variable, you need to initialize the variable.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Incorrect! Hint: what are you doing to variable &#x2018;x' when you say &#x2018;x = 0'? Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="itUpdate_fill2">
     <statement>
-      <p>Q-4: When you subtract 1 from a variable, you ________ it. <var/>  </p>
+      <p>When you subtract 1 from a variable, you <fillin width="20" mode="string" answer="decrement"/>  it.  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Dd]ecrement">
-          <feedback>
-            <p>Subtracting 1 from a varaible is called decrementing, the opposite of adding 1 (incrementing).</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Incorrect! Hint: the answer is the opposite of <q>increment</q>. Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Subtracting 1 from a varaible is called decrementing, the opposite of adding 1 (incrementing).</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Incorrect! Hint: the answer is the opposite of <q>increment</q>. Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="itUpdate_MC_y">
     <statement>
-      <p>Q-5: Consider the code block below. What happens when you run this program?</p>
+      <p>Consider the code block below. What happens when you run this program?</p>
       <program language="python">
         <code>
 y = 1

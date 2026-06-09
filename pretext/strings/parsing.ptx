@@ -36,7 +36,7 @@ print(host)
   <p><url href="https://docs.python.org/library/stdtypes.html#string-methods" visual="https://docs.python.org/library/stdtypes.html#string-methods">https://docs.python.org/library/stdtypes.html#string-methods</url>.</p>
   <activity label="str-parse-mc-return">
     <statement>
-      <p>11-9-2: True or false? <q>Parsing</q> refers to the process of looking into a string.</p>
+      <p>True or false? <q>Parsing</q> refers to the process of looking into a string.</p>
     </statement>
     <choices>
       <choice>
@@ -59,21 +59,18 @@ print(host)
   </activity>
   <activity label="str-parse-fitb-select">
     <statement>
-      <p>11-9-3: What string method is used to parse through and select segments of a string? <var/>  </p>
+      <p>What string method is used to parse through and select segments of a string? <fillin width="20" mode="string" answer="find"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Ff]ind">
-          <feedback>
-            <p>Correct! <c>find</c> is used to search through a string and select a specific substring.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Incorrect! You can <em>find</em> the answer by rereading this section. Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>Correct! <c>find</c> is used to search through a string and select a specific substring.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Incorrect! You can <em>find</em> the answer by rereading this section. Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
 </section>

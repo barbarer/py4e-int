@@ -84,22 +84,19 @@ print(random.choice(t))
             exponential, gamma, and a few more.</p>
   <activity label="functRandom_fill1">
     <statement>
-      <p>Q-4: The ________ module provides functions that generate pseudorandom numbers <var/>  </p>
+      <p>The <fillin width="20" mode="string" answer="random"/> module provides functions that generate pseudorandom numbers  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Rr]andom">
-          <feedback>
-            <p>Correct! Some functions include <c>random</c>, <c>randint</c>, <c>choice</c>, and more.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Incorrect! What is the word that comes before the period in these function calls? Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Correct! Some functions include <c>random</c>, <c>randint</c>, <c>choice</c>, and more.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Incorrect! What is the word that comes before the period in these function calls? Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="functRandom_pp_100" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>

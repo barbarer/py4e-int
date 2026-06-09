@@ -49,27 +49,24 @@ print(counts)
             word on every line of the input file.</p>
   <activity label="question9_3_1">
     <statement>
-      <p>Q-2: A(n) _________ is a pattern consisting of two for loops, where one of the loops is the outer loop and the other is the inner loop. <var/>  </p>
+      <p>A(n) <fillin width="20" mode="string" answer="nested loop"/> is a pattern consisting of two for loops, where one of the loops is the outer loop and the other is the inner loop.</p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Nn]ested\s+[Ll]oop">
-          <feedback>
-            <p>Correct! A nested loop contains two for loops where the inner loop executes all its iterations every time the outer loop completes one loop.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Correct! A nested loop contains two for loops where the inner loop executes all its iterations every time the outer loop completes one loop.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>In our <c>else</c> statement, we use the more compact alternative for incrementing a variable. <c>counts[word] += 1</c> is equivalent to <c>counts[word] = counts[word] + 1</c>. Either method can be used to change the value of a variable by any desired amount. Similar alternatives exist for <c>-=</c>, <c>*=</c>, and <c>/=</c>.</p>
   <activity label="question9_3_2">
     <statement>
-      <p>Q-3: Which of these answers (if any) will increment a key's value in the dictionary counts by 1?</p>
+      <p>Which of these answers (if any) will increment a key's value in the dictionary counts by 1?</p>
     </statement>
     <choices>
       <choice>

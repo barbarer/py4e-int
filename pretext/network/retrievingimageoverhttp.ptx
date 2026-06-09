@@ -49,22 +49,19 @@ fhand.close()
             viewer.</p>
   <activity label="image_header">
     <statement>
-      <p>Q-2: The ________ header indicates that the body of the document is a jpeg image. <var/>  </p>
+      <p>The <fillin width="20" mode="string" answer="Content-Type"/> header indicates that the body of the document is a jpeg image.</p>
     </statement>
-    <setup>
-      <var>
-        <condition string="Content-Type">
-          <feedback>
-            <p>Yes, the &#x2018;Content-Type' header has value <q>image/jpeg</q> to denote its a jpeg image.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again! This has to be an exact match.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>Yes, the &#x2018;Content-Type' header has value <q>image/jpeg</q> to denote its a jpeg image.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again! This has to be an exact match.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>As the program runs, you can see that we don't get 5120 characters each
             time we call the <c>recv()</c> method. We get as many characters
@@ -92,7 +89,7 @@ fhand.close()
             the receiving application is called <q>flow control.</q></p>
   <activity label="jpeg_slow">
     <statement>
-      <p>Q-3: Which of the following methods will slow down the requests made in the program above?</p>
+      <p>Which of the following methods will slow down the requests made in the program above?</p>
     </statement>
     <choices>
       <choice correct="yes">

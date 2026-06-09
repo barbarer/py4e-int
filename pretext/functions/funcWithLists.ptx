@@ -47,22 +47,19 @@
     <p>A list holds items in order and you can get the value at an index, just like you can with strings.</p>
     <activity label="funct_ll_list_check_start_last_line_v2">
       <statement>
-        <p>What is the last thing that will be printed when the code below runs? <var/>  </p>
+        <p>What is the last thing that will be printed when the code below runs? <fillin width="20" mode="string" answer="hi"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="'?hi'?">
-            <feedback>
-              <p>It will print the first item in the second list.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>What is the first item in the list in the second call?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>It will print the first item in the second list.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>What is the first item in the list in the second call?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="func_ll_ac_list_check_start">
       <statement>
@@ -108,41 +105,35 @@ main()
     </activity>
     <activity label="funct_ll_list_char">
       <statement>
-        <p>What characters are used to indicate the start and end of a list? <var/>  </p>
+        <p>What characters are used to indicate the start and end of a list? <fillin width="20" mode="string" answer="[]"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="\[\]|\]\[">
-            <feedback>
-              <p>Square brackets are used at the start and end of a list.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Look at the parameter to the function call in the code above.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes" >
+                      <strcmp>[]|square brackets</strcmp>
+                      <feedback><p>Square brackets are used at the start and end of a list.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Look at the parameter to the function call in the code above.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="funct_ll_last_index">
       <statement>
-        <p>What negative index is used to get the last item in a list? <var/>  </p>
+        <p>What negative index is used to get the last item in a list? <fillin width="20" mode="string" answer="-1"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition number="-1">
-            <feedback>
-              <p>The last item in a list is at index -1, which is the length of the list - 1.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Try again!</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The last item in a list is at index -1, which is the length of the list - 1.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Try again!</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="list_neg_2_result">
       <statement>
@@ -296,22 +287,19 @@ main()
     </activity>
     <activity label="funct_ll_list_type">
       <statement>
-        <p>What class (type) is a list? <var/>  </p>
+        <p>What class (type) is a list? <fillin width="20" mode="string" answer="list"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="list">
-            <feedback>
-              <p>A list is of the class <c>list</c>.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>What is the first thing printed from the code above?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>A list is of the class <c>list</c>.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>What is the first thing printed from the code above?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="funct_list_append_pop_predict">
       <statement>
@@ -518,22 +506,19 @@ main()
     </activity>
     <activity label="funct_ll_fitb_slice_def_first">
       <statement>
-        <p>In <c>[:2]</c> what is the start index? <var/>  </p>
+        <p>In <c>[:2]</c> what is the start index? <fillin width="20" mode="string" answer="0"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition number="0">
-            <feedback>
-              <p>If the start index isn't specified it is 0.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Run the code above to check.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>If the start index isn't specified it is 0.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Run the code above to check.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <note>
       <p>The slice operator always returns a new object.  It doesn't change the current object (list or string).</p>

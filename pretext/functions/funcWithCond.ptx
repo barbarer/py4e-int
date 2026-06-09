@@ -46,22 +46,19 @@
     <title>Basic Conditionals and Tests</title>
     <activity label="funct_fitb_return_temp_first_line">
       <statement>
-        <p>What is the first thing (first line of text) that will be printed when the code below runs? <var/>  </p>
+        <p>What is the first thing (first line of text) that will be printed when the code below runs? <fillin width="20" mode="string" answer="Baby, its cold outside!"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="Baby,\s+its\s+cold\s+outside!">
-            <feedback>
-              <p>Since temp &lt; 32 this will print.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Which conditional is true when temp &lt; 32?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>Since temp &lt; 32 this will print.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Which conditional is true when temp &lt; 32?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="func_ac_pogil_return_temp_desc">
       <statement>
@@ -92,75 +89,63 @@ main()
     </activity>
     <activity label="funct_fitb_pogil_exec_false">
       <statement>
-        <p>What keyword specifies the block of statements to execute if a Boolean condition is false? <var/>  </p>
+        <p>What keyword specifies the block of statements to execute if a Boolean condition is false? <fillin width="20" mode="string" answer="else"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="else">
-            <feedback>
-              <p>The keyword else is used to execute a blocks of statements if a Boolean condition is false</p>
-            </feedback>
-          </condition>
-          <condition string="Else">
-            <feedback>
-              <p>Most keywords in Python start with a lowercase letter</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Try again!</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The keyword else is used to execute a blocks of statements if a Boolean condition is false</p></feedback>
+                  </test>
+                  <test>
+                      <strcmp>Else</strcmp>
+                      <feedback><p>Most keywords in Python start with a lowercase letter</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Try again!</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="funct_fitb_pogil_conditional_start">
       <statement>
-        <p>What keyword starts a conditional statement and is the only required keyword in it? <var/>  </p>
+        <p>What keyword starts a conditional statement and is the only required keyword in it <fillin width="20" mode="string" answer="if"/>?  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="if">
-            <feedback>
-              <p>The keyword if is used to start a conditional statement and is the only required keyword.</p>
-            </feedback>
-          </condition>
-          <condition string="If">
-            <feedback>
-              <p>Most keywords in Python start with a lowercase letter</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Try again!</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The keyword if is used to start a conditional statement and is the only required keyword.</p></feedback>
+                  </test>
+                  <test>
+                      <strcmp>If</strcmp>
+                      <feedback><p>Most keywords in Python start with a lowercase letter</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Try again!</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="funct_fitb_pogil_multi_conditonal">
       <statement>
-        <p>What keyword is used in a conditional statement when you want three of more possible outcomes? <var/>  </p>
+        <p>What keyword is used in a conditional statement when you want three of more possible outcomes? <fillin width="20" mode="string" answer="elif"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="elif">
-            <feedback>
-              <p>The keyword elif is used to provide more than two possible outcomes to a conditional statement.</p>
-            </feedback>
-          </condition>
-          <condition string="Elif">
-            <feedback>
-              <p>Most keywords in Python start with a lowercase letter</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Try again!</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The keyword elif is used to provide more than two possible outcomes to a conditional statement.</p></feedback>
+                  </test>
+                  <test>
+                      <strcmp>Elif</strcmp>
+                      <feedback><p>Most keywords in Python start with a lowercase letter</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Try again!</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="func_ac_pogil_return_temp_desc_v2">
       <statement>
@@ -269,22 +254,19 @@ myTests().main()
     </activity>
     <activity label="funct_fitb_cond_predict_grade">
       <statement>
-        <p>What is the first thing that will be printed when the code below runs? <var/>  </p>
+        <p>What is the first thing that will be printed when the code below runs? <fillin width="20" mode="string" answer="D"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="D">
-            <feedback>
-              <p>Since every if will execute it will print D.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Remember that every if will execute.  What is the final value of grade?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>Since every if will execute it will print D.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Remember that every if will execute.  What is the final value of grade?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="func_ac_fix_grade_code">
       <statement>
@@ -320,22 +302,19 @@ main()
     </activity>
     <activity label="funct_fitb_cond_grade_num_tests">
       <statement>
-        <p>How many test cases do you need to check that the code above works as intended? <var/>  </p>
+        <p>How many test cases do you need to check that the code above works as intended? <fillin width="20" mode="string" answer="9"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition number="9">
-            <feedback>
-              <p>You need to test greater than and equal for each grade from A to D and also test a value less than 60.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Remember that you should check that it works correctly if the value is greater than or equal the specified value.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>You need to test greater than and equal for each grade from A to D and also test a value less than 60.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Remember that you should check that it works correctly if the value is greater than or equal the specified value.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
   </subsection>
   <subsection xml:id="functions_logical-operators-and-complex-conditionals">

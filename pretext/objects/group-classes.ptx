@@ -106,104 +106,89 @@ main()
     <p>Look at the class definition.  It starts with the keyword <c>class</c>.  Then answer the following questions.</p>
     <activity label="class_fitb_whats_class_name">
       <statement>
-        <p>Q-2: What is the name of this class? <var/>  </p>
+        <p>What is the name of this class? <fillin width="20" mode="string" answer="Book"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="Book">
-            <feedback>
-              <p>Good job!  The class name follows the class keyword.</p>
-            </feedback>
-          </condition>
-          <condition string="book">
-            <feedback>
-              <p>The class name is usually upper case.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>The class name is after the keyword class and before the :</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>Good job!  The class name follows the class keyword.</p></feedback>
+                  </test>
+                  <test>
+                      <strcmp>book</strcmp>
+                      <feedback><p>The class name is usually upper case.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>The class name is after the keyword class and before the :</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="class_fitb_create_method">
       <statement>
-        <p>Q-3: What is the name of the method that is always called when an object is created? <var/>  </p>
+        <p>What is the name of the method that is always called when an object is created? <fillin width="20" mode="string" answer="__init__"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="__init__">
-            <feedback>
-              <p>Good job!  The __init__ method is always called when an object is created.</p>
-            </feedback>
-          </condition>
-          <condition string="init">
-            <feedback>
-              <p>Almost.  The method name includes underscores.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>This method initializes the object's attributes</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>Good job!  The __init__ method is always called when an object is created.</p></feedback>
+                  </test>
+                  <test>
+                      <strcmp>init|_init_</strcmp>
+                      <feedback><p>Almost.  The method name includes two underscores before and after letters.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>This method initializes the object's attributes</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="class_what_is_init">
       <statement>
-        <p>Q-4: Describe in your own words what the <c>__init__</c> method does.</p>
+        <p>Describe in your own words what the <c>__init__</c> method does.</p>
       </statement>
     </activity>
     <activity label="class_fitb_print_method">
       <statement>
-        <p>Q-5: What is the name of the method that is called when the object is printed? <var/>  </p>
+        <p>What is the name of the method that is called when the object is printed? <fillin width="20" mode="string" answer="__str__"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="__str__">
-            <feedback>
-              <p>Good job!  This method is called when you print an object of a class.</p>
-            </feedback>
-          </condition>
-          <condition string="str">
-            <feedback>
-              <p>Not quite, the name of the method includes underscores.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>This method returns a string with the values of the attributes</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>Good job!  This method is called when you print an object of a class.</p></feedback>
+                  </test>
+                  <test>
+                      <strcmp>str|_str_</strcmp>
+                      <feedback><p>Not quite, the name of the method includes two underscores before and after letters.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>This method returns a string with the values of the attributes</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="class_what_is_str">
       <statement>
-        <p>Q-6: Describe in your own words what the <c>__str__</c> method does.</p>
+        <p>Describe in your own words what the <c>__str__</c> method does.</p>
       </statement>
     </activity>
     <activity label="class_fitb_attribute_num">
       <statement>
-        <p>Q-7: How many attributes does an object of the Book class have? <var/>  </p>
+        <p>How many attributes does an object of the Book class have? <fillin width="20" mode="string" answer="2"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="2|two|Two|TWO">
-            <feedback>
-              <p>Good Job!  The attributes are initialized in the __init__ method (also known as the constructor).</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Attributes are initialized in the __init__ method</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp case="insensitive">2|two</strcmp>
+                      <feedback><p>Good Job!  The attributes are initialized in the __init__ method (also known as the constructor).</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Attributes are initialized in the __init__ method</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="class_ca_book_method_names">
       <statement>
@@ -237,27 +222,24 @@ main()
     </activity>
     <activity label="class_diff_function_method">
       <statement>
-        <p>Q-9: Describe in your own words what is/are the difference(s) between a function and a method.</p>
+        <p>Describe in your own words what is/are the difference(s) between a function and a method.</p>
       </statement>
     </activity>
     <activity label="class_fitb_first_paramter">
       <statement>
-        <p>Q-10: What is the name of the first parameter in all of the methods? <var/>  </p>
+        <p>What is the name of the first parameter in all of the methods? <fillin width="20" mode="string" answer="self"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="self">
-            <feedback>
-              <p>Good job!</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>The parameters are in () after the method name</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>Good job!</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>The parameters are in () after the method name</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="class-pp-person" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
@@ -307,7 +289,7 @@ main()
     </activity>
     <activity label="class_what_is_self">
       <statement>
-        <p>Q-12: Describe in your own words what <c>self</c> means.</p>
+        <p>Describe in your own words what <c>self</c> means.</p>
       </statement>
     </activity>
   </subsection>

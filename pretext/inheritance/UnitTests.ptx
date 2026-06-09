@@ -119,41 +119,35 @@ myTests().main()
     <p>Look at the unit tests above and answer the questions below.</p>
     <activity label="ut_fitb_test_class">
       <statement>
-        <p>Q-4: What is the class that is defined in the unit test code? <var/>  </p>
+        <p>What is the class that is defined in the unit test code? <fillin width="20" mode="string" answer="myTests"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="myTests">
-            <feedback>
-              <p>This defines the class myTests</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>What is the name after the class keyword?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>This defines the class myTests</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>What is the name after the class keyword?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="ut_fitb_test_parent">
       <statement>
-        <p>Q-5: What class does the defined class inherit from? <var/>  </p>
+        <p>What class does the defined class inherit from? <fillin width="20" mode="string" answer="TestCaseGui"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="TestCaseGui">
-            <feedback>
-              <p>The parent is TestCaseGui</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>What is the name in the () after the class name?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The parent is <c>TestCaseGui</c></p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>What is the name in the () after the class name?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="ut-ex-compare-valuep-ac">
       <statement>

@@ -43,41 +43,35 @@
     <p>A tuple is like a list in that holds items in order and those items are separated by commas.  They can be enclosed in <c>()</c>, but don't have to be.</p>
     <activity label="funct_tup_test_first">
       <statement>
-        <p>What is the first thing that will be printed when the code below runs? <var/>  </p>
+        <p>What is the first thing that will be printed when the code below runs? <fillin width="20" mode="string" answer="1"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition number="1">
-            <feedback>
-              <p>It will print the item at index 0 the first passed tuple.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>What is the item at index 0 in the first passed tuples?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>It will print the item at index 0 the first passed tuple.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>What is the item at index 0 in the first passed tuples?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="funct_tup_test_last">
       <statement>
-        <p>What is the last thing that will be printed when the code below runs? <var/>  </p>
+        <p>What is the last thing that will be printed when the code below runs? <fillin width="20" mode="string" answer="4"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition number="4">
-            <feedback>
-              <p>It will print the length (number of items) in the second passed tuple.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>How many items are in the second passed tuple?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>It will print the length (number of items) in the second passed tuple.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>How many items are in the second passed tuple?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="func_tup_test_ac">
       <statement>
@@ -105,60 +99,51 @@ main()
     </activity>
     <activity label="funct_tuple_test_char">
       <statement>
-        <p>What characters are used to indicate the start and end of a tuple in the code above? <var/>  </p>
+        <p>What characters are used to indicate the start and end of a tuple in the code above? <fillin width="20" mode="string" answer="()"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="\(\)|\)\(">
-            <feedback>
-              <p>Parenthesis are often used to start and end a tuple, but they are not required.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Look at the parameter to the function call in the main function.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp>\(\)|\)\(</strcmp>
+                      <feedback><p>Parenthesis are often used to start and end a tuple, but they are not required.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Look at the parameter to the function call in the main function.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="funct_tuple_first_index">
       <statement>
-        <p>What index is used to get the first item in a tuple? <var/>  </p>
+        <p>What index is used to get the first item in a tuple? <fillin width="20" mode="string" answer="0"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition number="0">
-            <feedback>
-              <p>The first item in a list is at index 0.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Try again!</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The first item in a tuple is at index 0.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Try again!</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="funct_tuple_last_index">
       <statement>
-        <p>What negative index is used to get the last item in a tuple? <var/>  </p>
+        <p>What negative index is used to get the last item in a tuple? <fillin width="20" mode="string" answer="-1"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition number="-1">
-            <feedback>
-              <p>The last item in a list is at index -1, which is the length of the list - 1.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Try again!</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The last item in a tuple is at index -1, which is the length of the tuple - 1.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Try again!</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
   </subsection>
   <subsection xml:id="functions_tuples-are-immutable">
@@ -194,22 +179,19 @@ main()
                 The <c>range</c> function also returns an iterator.</p>
     <activity label="funct_tuple_zip_first_print_fitb">
       <statement>
-        <p>What is the first thing the code below prints? <var/>  </p>
+        <p>What is the first thing the code below prints? <fillin width="20" mode="string" answer="No"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="&quot;?No&quot;?">
-            <feedback>
-              <p>It prints the item at index 1 in the first tuple.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Try again!</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>It prints the item at index 1 in the first tuple.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Try again!</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="func_tuple_list_zip_ac">
       <statement>
@@ -235,27 +217,23 @@ print(l3)
     <p>A dictionary stores a value for a key.</p>
     <activity label="funct_dict_num_t">
       <statement>
-        <p>What is the first thing the code below prints? <var/>  </p>
+        <p>What is the first thing the code below prints? <fillin width="20" mode="string" answer="2"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition number="2">
-            <feedback>
-              <p>It prints the number of t's in the string.</p>
-            </feedback>
-          </condition>
-          <condition number="3">
-            <feedback>
-              <p>A &#x2018;T' is different from a &#x2018;t'.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Try again!</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>It prints the number of t's in the string.</p></feedback>
+                  </test>
+                  <test>
+                      <strcmp>3</strcmp>
+                      <feedback><p>A &#x2018;T' is different from a &#x2018;t'.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Try again!</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="func_dict_example">
       <statement>

@@ -72,27 +72,24 @@
   </activity>
   <activity label="db_fill_what">
     <statement>
-      <p>Q-2: Database software uses _________ to keep track of data as it is added and allow the computer to
-jump to a particular entry. <var/>  </p>
+      <p>Database software uses <fillin width="20" mode="string" answer="indices"/> to keep track of data as it is added and allow the computer to
+jump to a particular entry.   </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="indexes|indices">
-          <feedback>
-            <p>Much like dictionaries, databases use indexes to locate and keep track of data as it is inserted.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again! Databases function similarly to dictionaries in this way!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes" >
+                    <strcmp case="insensitive">indexes|indices</strcmp>
+                    <feedback><p>Much like dictionaries, databases use indexes to locate and keep track of data as it is inserted.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again! Databases function similarly to dictionaries in this way!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="db_MC_what_dbSystem">
     <statement>
-      <p>Q-3: Which database system are we using in this book?</p>
+      <p>Which database system are we using in this book?</p>
     </statement>
     <choices>
       <choice>

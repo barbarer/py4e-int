@@ -38,22 +38,19 @@ IndexError: string index out of range
   </program>
   <activity label="str-debug-fitb-error">
     <statement>
-      <p>11-9-1: What kind of error will come from trying to access a nonexistent element or one that is out of range? <var/>  </p>
+      <p>What kind of error will come from trying to access a nonexistent element or one that is out of range? <fillin width="20" mode="string" answer="index error"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Ii]ndex([Ee]rror)?">
-          <feedback>
-            <p>Correct! Try to access an index that isn't there causes a index error.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Incorrect! Read the error message above for the answer. Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Correct! Try to access an index that isn't there causes a index error.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Incorrect! Read the error message above for the answer. Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>The code works fine until it is presented with an empty line. In that case, there is
             no zero-th character, so we get a traceback. There are two solutions to
@@ -67,22 +64,19 @@ if line.startswith('#'):
   </program>
   <activity label="str-debug-fitb-string">
     <statement>
-      <p>11-9-2: What string method is used to prevent errors? <var/>  </p>
+      <p>What string method is used to prevent errors? <fillin width="20" mode="string" answer="startswith"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="(\.)?startswith(\(\))?">
-          <feedback>
-            <p>Correct! The string method startswith can be used as an extra check to prevent errors.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Incorrect! Watch your capitalization (methods don't use camelCase). Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp>(\.)?startswith(\(\))?</strcmp>
+                    <feedback><p>Correct! The string method <c>startswith</c> can be used as an extra check to prevent errors.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Incorrect! Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>Another way is to safely write the <c>if</c> statement using the
             <em>guardian</em> pattern and make sure the second logical
@@ -95,21 +89,18 @@ if len(line) &gt; 0 and line[0] == '#':
   </program>
   <activity label="str-debug-fitb-safe">
     <statement>
-      <p>11-9-3: What kind of pattern is used to prevent errors? <var/>  </p>
+      <p>What kind of pattern is used to prevent errors? <fillin width="20" mode="string" answer="guardian pattern"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Gg]uardian(\s+[Pp]attern)?">
-          <feedback>
-            <p>Correct! A guardian pattern can be used as an extra check to prevent errors.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Incorrect! Make sure you spelled it correctly. Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Correct! A guardian pattern can be used as an extra check to prevent errors.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Incorrect! Make sure you spelled it correctly. Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
 </section>

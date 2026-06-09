@@ -57,27 +57,23 @@ print ('Done!')
             loop runs repeatedly until it hits the break statement.</p>
   <activity label="itInfinite_fill1">
     <statement>
-      <p>Q-2: At what word will the while loop pictured above terminate? <var/>  </p>
+      <p>At what word will the while loop pictured above terminate? <fillin width="20" mode="string" answer="done"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="done">
-          <feedback>
-            <p>The while loop will end when the user types <q>done</q></p>
-          </feedback>
-        </condition>
-        <condition string="Done">
-          <feedback>
-            <p>Incorrect! The conditions of the while loop are case specific. Try again.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Incorrect! Look closely at the code above. Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>The while loop will end when the user types <q>done</q></p></feedback>
+                </test>
+                <test>
+                    <strcmp>Done</strcmp>
+                    <feedback><p>Incorrect! The conditions of the while loop are case specific. Try again.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Incorrect! Look closely at the code above. Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>Each time through, it prompts the user with <c>Word:</c>. If the
             user types <c>done</c>, the <c>break</c> statement exits the
@@ -95,7 +91,7 @@ Done!</pre>
             rather than negatively (<q>keep going until that happens.</q>).</p>
   <activity label="itInfinite_MC_forever">
     <statement>
-      <p>Q-3: How many lines are in the body of the while loop in shown above?</p>
+      <p>How many lines are in the body of the while loop in shown above?</p>
       <program language="python">
         <code>
 while 1==1:

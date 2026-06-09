@@ -61,7 +61,7 @@ print("goodbye")
     </activity>
     <activity label="loops_MC_pogil_indented">
       <statement>
-        <p>Q-2: How many times does the indented line of code execute under the <c>for</c> loop?</p>
+        <p>How many times does the indented line of code execute under the <c>for</c> loop?</p>
       </statement>
       <choices>
         <choice>
@@ -108,7 +108,7 @@ print("goodbye")
     </activity>
     <activity label="loops_MC_pogil_notindented">
       <statement>
-        <p>Q-3: How many times does the line of code NOT indented execute after the <c>for</c> loop?</p>
+        <p>How many times does the line of code NOT indented execute after the <c>for</c> loop?</p>
       </statement>
       <choices>
         <choice>
@@ -268,54 +268,46 @@ for i in range(5): #this line prints nothing
                 will be x numbers in the list.</p>
     <activity label="loops_fitb_pogil_oneparamrange">
       <statement>
-        <p>Q-9: Use the <c>range</c> function with one parameter to generate the sequence 0, 1, 2, 3. <var/>  </p>
+        <p>Use the <c>range</c> function with one parameter to generate the sequence 0, 1, 2, 3. <fillin width="20" mode="string" answer="range(4)"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="range\(4\)">
-            <feedback>
-              <p>Correct! With one parameter, the sequence will start at 0 and end at one less than the specified value.</p>
-            </feedback>
-          </condition>
-          <condition string="range\(3\)">
-            <feedback>
-              <p>Incorrect! The last number of the sequence is equal to the specified value - 1. Try again.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Incorrect! Make sure you only use one parameter and write your answer in the form <q>range(x)</q>. Try again.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>Correct! With one parameter, the sequence will start at 0 and end at one less than the specified value.</p></feedback>
+                  </test>
+                  <test>
+                      <strcmp>range(3)</strcmp>
+                      <feedback><p>Incorrect! The last number of the sequence is equal to the specified value - 1. Try again.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Incorrect! Make sure you only use one parameter and write your answer in the form <q>range(x)</q>. Try again.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <p>If the argument of the <c>range</c> function specifies two numbers, like <c>range(x, y)</c>,
                 the first number listed will be x, the last number listed will be y - 1, and there will
                 be y - x numbers in the list.</p>
     <activity label="loops_fitb_pogil_twoparamrange">
       <statement>
-        <p>Q-10: Use the <c>range</c> function with two parameters to generate the sequence 1, 2, 3, 4. <var/>  </p>
+        <p>Use the <c>range</c> function with two parameters to generate the sequence 1, 2, 3, 4. <fillin width="20" mode="string" answer="range(1,5)"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="range\(1,\s+5\)|range\(1,5\)">
-            <feedback>
-              <p>Correct! The sequence will start at 1 and end at one less than the second value.</p>
-            </feedback>
-          </condition>
-          <condition string="range\(1,\s+5\)|range\(1,4\)">
-            <feedback>
-              <p>Incorrect! Remember that the range starts at the first value but ends before the second value.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Incorrect! Make sure you use two parameters and write your answer in the form <q>range(x, y)</q>. Try again.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>Correct! The sequence will start at 1 and end at one less than the second value.</p></feedback>
+                  </test>
+                  <test>
+                      <strcmp>range(1,4)</strcmp>
+                      <feedback><p>Incorrect! Remember that the range starts at the first value but ends before the second value.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Incorrect! Make sure you use two parameters and write your answer in the form <q>range(x, y)</q>. Try again.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <p>If the argument of the <c>range</c> function specifies three numbers, like <c>range(x, y, z)</c>,
                 the first number listed will still be x, just like the two parameter version. The third
@@ -324,26 +316,23 @@ for i in range(5): #this line prints nothing
                 whole number.</p>
     <activity label="loops_fitb_pogil_threeparamrange">
       <statement>
-        <p>Q-11: Use the <c>range</c> function with three parameters to generate the sequence 1, 3, 5, 7. <var/>  </p>
+        <p>Use the <c>range</c> function with three parameters to generate the sequence 1, 3, 5, 7. <fillin width="20" mode="string" answer="range(1, 8, 2)"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="range\(1,\s+8,\s+2\)|range\(1,\s+9,\s+2\)|range\(1,8,2\)|range\(1,9,2\)">
-            <feedback>
-              <p>Correct! With three parameters, the sequence will start at 1 and increment by 2 until it lists 7.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Incorrect! Make sure you use three parameters and write your answer in the form <q>range(x, y, z)</q>. Try again.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp>range\(1,\s+8,\s+2\)|range\(1,\s+9,\s+2\)|range\(1,8,2\)|range\(1,9,2\)</strcmp>
+                      <feedback><p>Correct! With three parameters, the sequence will start at 1 and increment by 2 until it lists 7.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Incorrect! Make sure you use three parameters and write your answer in the form <q>range(x, y, z)</q>. Try again.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="loops_MC_pogil_whichtype1">
       <statement>
-        <p>Q-12: If you wanted to execute a loop 100 times, which type of <c>for</c> statement should you use?</p>
+        <p>If you wanted to execute a loop 100 times, which type of <c>for</c> statement should you use?</p>
       </statement>
       <choices>
         <choice correct="yes">
@@ -382,7 +371,7 @@ for i in range(5): #this line prints nothing
     </activity>
     <activity label="loops_MC_pogil_whichtype2">
       <statement>
-        <p>Q-13: If you wanted to use each item of an existing list inside the loop, which type of <c>for</c> statement should you use?</p>
+        <p>If you wanted to use each item of an existing list inside the loop, which type of <c>for</c> statement should you use?</p>
       </statement>
       <choices>
         <choice>
@@ -453,7 +442,7 @@ print("goodbye")
     </activity>
     <activity label="loops_mc_pogil_loopcondition">
       <statement>
-        <p>Q-16: What must the value of the Boolean expression (after the <c>while</c>) be in order
+        <p>What must the value of the Boolean expression (after the <c>while</c>) be in order
                 for the first <c>print</c> statement to execute?</p>
       </statement>
       <choices>
@@ -481,7 +470,7 @@ print("goodbye")
                 causes the loop body to stop executing.</p>
     <activity label="loops_mc_pogil_swappedlines">
       <statement>
-        <p>Q-17: Imagine that lines 3 and 4 in the above code were swapped. What is the new output of the code?</p>
+        <p>Imagine that lines 3 and 4 in the above code were swapped. What is the new output of the code?</p>
       </statement>
       <choices>
         <choice>
@@ -528,7 +517,7 @@ print("goodbye")
     </activity>
     <activity label="loops_mc_pogil_twice">
       <statement>
-        <p>Q-18: Which of these modifications would make the loop in the above code only run twice? There are one or more answers.</p>
+        <p>Which of these modifications would make the loop in the above code only run twice? There are one or more answers.</p>
       </statement>
       <choices>
         <choice correct="yes">
@@ -571,7 +560,7 @@ print("goodbye")
                 condition.</p>
     <activity label="loops_mc_pogil_noincrement">
       <statement>
-        <p>Q-19: If you deleted line 4 of the code above, what would print?</p>
+        <p>If you deleted line 4 of the code above, what would print?</p>
       </statement>
       <choices>
         <choice>

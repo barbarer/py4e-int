@@ -236,7 +236,7 @@ print(f"Max close {max_close} on {max_date}")
     </activity>
     <activity label="csv_reader_type_of_row">
       <statement>
-        <p>Q-2: What type of thing is <c>row</c> in the code above?</p>
+        <p>What type of thing is <c>row</c> in the code above?</p>
       </statement>
       <choices>
         <choice>
@@ -275,7 +275,7 @@ print(f"Max close {max_close} on {max_date}")
     </activity>
     <activity label="csv_reader_steps_mcq">
       <statement>
-        <p>Q-3: Which of these must you do to use a csv reader to read a csv file?</p>
+        <p>Which of these must you do to use a csv reader to read a csv file?</p>
       </statement>
       <choices>
         <choice correct="yes">
@@ -399,22 +399,19 @@ unittest.main()
     </activity>
     <activity label="csv_reader_read_one_row">
       <statement>
-        <p>Q-5: What function can you use to read just one row from a csv reader? <var/>  </p>
+        <p>What function can you use to read just one row from a csv reader? <fillin width="20" mode="string" answer="next"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="next\(?\)?">
-            <feedback>
-              <p>Use the function <c>next</c> to read a single row</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Look at the code above. How do we read the header row?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp>next\(?\)?</strcmp>
+                      <feedback><p>Use the function <c>next</c> to read a single row</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Look at the code above. How do we read the header row?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="csv_reader_airtravel_get_max_month_ac">
       <statement>
@@ -662,7 +659,7 @@ unittest.main()
     </activity>
     <activity label="csv_reader_what_can_be_spec">
       <statement>
-        <p>Q-8: What type of things can be specified when you create the csv reader?</p>
+        <p>What type of things can be specified when you create the csv reader?</p>
       </statement>
       <choices>
         <choice correct="yes">
@@ -701,7 +698,7 @@ unittest.main()
     </activity>
     <activity label="csv_write_diff_with_file_writer">
       <statement>
-        <p>Q-9: How is a csv writer different from a file writer?</p>
+        <p>How is a csv writer different from a file writer?</p>
       </statement>
       <choices>
         <choice>
