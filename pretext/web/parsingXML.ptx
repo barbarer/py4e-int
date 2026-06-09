@@ -11,7 +11,7 @@
 </introduction>
         <activity label="xml_parse_last_printed_when_no_attr">
             <statement>
-    <p>csp-10-2-1: What is the last thing (last line of text) that will be printed when the code below runs? <var/>  </p>
+    <p> What is the last thing (last line of text) that will be printed when the code below runs? <var/>  </p>
     </statement><setup><var><condition string="['&quot;]?Attr">
     <feedback><p>['"]?yes['"]?: It prints <q>Attr: </q> plus the value of the hide attribute in the email tag.</p></feedback></condition>
     <condition string="['&quot;]?yes['&quot;]?"><feedback><p>Something will be printed before the value. Look at the print statement again.</p></feedback></condition>
@@ -68,7 +68,7 @@ print('Attr:', tree.find('email').get('hide'))
             </introduction>
         <activity label="xml_parse_last_printed">
             <statement>
-    <p>csp-10-2-3: What is the last thing (last line of text) that will be printed when the code below runs? <var/>  </p></statement><setup><var><condition string="['&quot;]?Attr"><feedback><p>None[""]?: The default is to print None if there is no attribute with that name when you use <c>.get('name')</c>.</p></feedback></condition><condition string="['&quot;]?None['&quot;]?"><feedback><p>Something will be printed before the value. Look at the print statement again.</p></feedback></condition><condition string=".*"><feedback><p>What is the default value when there is no attribute with that name?</p></feedback></condition></var></setup></activity>
+    <p> What is the last thing (last line of text) that will be printed when the code below runs? <var/>  </p></statement><setup><var><condition string="['&quot;]?Attr"><feedback><p>None[""]?: The default is to print None if there is no attribute with that name when you use <c>.get('name')</c>.</p></feedback></condition><condition string="['&quot;]?None['&quot;]?"><feedback><p>Something will be printed before the value. Look at the print statement again.</p></feedback></condition><condition string=".*"><feedback><p>What is the default value when there is no attribute with that name?</p></feedback></condition></var></setup></activity>
 <activity label="xml_parse_person_wihtout_attr_ac1">
     <statement>
             <p>Run this to see what it prints.</p>
