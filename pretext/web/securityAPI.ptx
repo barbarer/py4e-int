@@ -14,22 +14,19 @@
             of POST data or perhaps as a parameter on the URL when calling the API.</p>
   <activity label="webSecurity_fill">
     <statement>
-      <p>csp-10-2-1: An API ____ is typically needed to use and access an API with the vendor's services. <var/>  </p>
+      <p>An API <fillin width="20" mode="string" answer="key"/> is typically needed to use and access an API with the vendor's services. </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Kk]ey">
-          <feedback>
-            <p>An API key can be a parameter in the URL when calling the API or part of POST data.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again. What would you need if access to the API is considered to be <q>locked</q>?</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>An API key can be a parameter in the URL when calling the API or part of POST data.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again. What would you need if access to the API is considered to be <q>locked</q>?</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>Other times, the vendor wants increased assurance of the source of the
             requests and so they expect you to send cryptographically signed
@@ -45,7 +42,7 @@
             libraries.</p>
   <activity label="webSecurity_MC_OAuth">
     <statement>
-      <p>csp-10-2-2: OAuth is a technology used to ________?</p>
+      <p>OAuth is a technology used to ________?</p>
     </statement>
     <choices>
       <choice>

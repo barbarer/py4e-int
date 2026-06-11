@@ -29,22 +29,19 @@ def print_twice(bruce):
             the parameter (whatever it is) twice.</p>
   <activity label="functParam_fill1">
     <statement>
-      <p>Q-1: Inside the function, the arguments are assigned to variables called ___________. <var/>  </p>
+      <p>Inside the function, the arguments are assigned to variables called <fillin width="20" mode="string" answer="parameters*"/>. </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Pp]arameters*">
-          <feedback>
-            <p>Inside the function, the arguments are assigned to variables called parameters.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Incorrect! Reread the beginning of this section and try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Inside the function, the arguments are assigned to variables called parameters.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Incorrect! Reread the beginning of this section and try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>This function works with any value that can be printed.</p>
   <program xml:id="functParam_codelens1" interactive="codelens" language="python">
@@ -95,7 +92,7 @@ print_twice(michael)
             here in <c>print_twice</c>, we call everybody <c>bruce</c>.</p>
   <activity label="functParam_MC_add">
     <statement>
-      <p>Q-5: Consider the code block below. What prints?</p>
+      <p>Consider the code block below. What prints?</p>
       <program language="python">
         <code>
 def add_two(num):

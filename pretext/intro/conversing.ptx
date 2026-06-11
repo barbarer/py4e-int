@@ -28,22 +28,19 @@ information.
             language.</p>
   <activity label="intro-convo-fitb-prompt">
     <statement>
-      <p>Q-1: What symbol is the Python interpreter's prompt for <q>What do you want me to do next?</q> <var/>  </p>
+      <p>What symbol is the Python interpreter's prompt for <q>What do you want me to do next?</q> <fillin width="20" mode="string" answer=">>>"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="&gt;&gt;&gt;">
-          <feedback>
-            <p>Correct! &gt;&gt;&gt; is the prompt from the Python interpreter.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again. Open your Python interpreter using the command <q>python</q> and see what you are prompted with.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>Correct! &gt;&gt;&gt; is the prompt from the Python interpreter.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again. Open your Python interpreter using the command <q>python</q> and see what you are prompted with.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>Let's say for example that you did not know even the simplest Python
             language words or sentences. You might want to use the standard line
@@ -92,7 +89,7 @@ SyntaxError: Missing parentheses in call to 'print'
             back out.</p>
   <activity label="intro-convo-mc-print">
     <statement>
-      <p>Q-2: What is missing from this print statement?</p>
+      <p>What is missing from this print statement?</p>
       <pre>print 'We will have a feast tonight unless you say'</pre>
     </statement>
     <choices>
@@ -168,21 +165,18 @@ SyntaxError: invalid syntax
             one, so having a book handy probably will turn out to be helpful.</p>
   <activity label="intro-convo-fitb-leave-Python">
     <statement>
-      <p>Q-3: What do you type to leave the Python interpreter? <var/>  </p>
+      <p>What do you type to leave the Python interpreter? <fillin width="20" mode="string" answer="quit"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="quit(\(\))*">
-          <feedback>
-            <p>Correct!</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp>quit\(?\)?</strcmp>
+                    <feedback><p>Correct!</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
 </section>

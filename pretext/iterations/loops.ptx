@@ -57,7 +57,7 @@ print('Count: ', count)
                 once for each of the values in the list.</p>
     <activity label="inLoops_MC_itVar">
       <statement>
-        <p>Q-2: Which variable is the iteration variable in the code block?</p>
+        <p> Which variable is the iteration variable in the code block?</p>
         <program language="python">
           <code>
 count = 0
@@ -134,22 +134,19 @@ print('Total: ', total)
                 <em>accumulator</em>.</p>
     <activity label="itLoops_fill1">
       <statement>
-        <p>Q-4: The variable that counts the sum of elements in a loop is called a(n) ________ <var/>  </p>
+        <p> The variable that counts the sum of elements in a loop is called a(n) <fillin width="20" mode="string" answer="accumulator"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="[Aa]ccumulator">
-            <feedback>
-              <p>An accumulator is a variable used to keep track of the sum of elements in a loop.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Incorrect! Reread the text above this question if you need help. Try again.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes" case="insensitive"/>
+                      <feedback><p>An accumulator is a variable used to keep track of the sum of elements in a loop.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Incorrect! Reread the text above this question if you need help. Try again.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <p>Neither the counting loop nor the summing loop are particularly useful
                 in practice because there are built-in functions <c>len()</c> and
@@ -187,7 +184,7 @@ Largest: 74</pre>
                 <q>empty</q>.</p>
     <activity label="inLoops_MC_none_v2">
       <statement>
-        <p>Q-6: Which of the following is <em>not</em> true about <c>None</c>?</p>
+        <p> Which of the following is <em>not</em> true about <c>None</c>?</p>
       </statement>
       <choices>
         <choice>

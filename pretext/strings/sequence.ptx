@@ -49,7 +49,7 @@ print(letter)
   </figure>
   <activity label="str-seq-mc-cheer">
     <statement>
-      <p>11-9-3: What is printed by the following statements?</p>
+      <p>What is printed by the following statements?</p>
       <pre>cheer = "Go Blue!"
 print(cheer[3])</pre>
     </statement>
@@ -99,7 +99,7 @@ letter = fruit[1.5]
   </program>
   <activity label="str-seq-mc-error">
     <statement>
-      <p>11-9-5: The following code would cause what kind of error?</p>
+      <p>The following code would cause what kind of error?</p>
       <pre>fruit = 'papaya'
 letter = fruit[1.5]</pre>
     </statement>
@@ -140,7 +140,7 @@ letter = fruit[1.5]</pre>
   </activity>
   <activity label="str-seq-mc-name">
     <statement>
-      <p>11-9-6: What is printed by the following statements?</p>
+      <p>What is printed by the following statements?</p>
       <pre>hello = "Hi, my name is Olivia."
 hello = hello[15]
 print(hello)</pre>
@@ -182,22 +182,19 @@ print(hello)</pre>
   </activity>
   <activity label="str-seq-fitb-brackets-expr">
     <statement>
-      <p>11-9-7: The expression in brackets that indicates which character you want to get from a sequence is called a(n) ______. <var/>  </p>
+      <p>The expression in brackets that indicates which character you want to get from a sequence is called a(n) <fillin width="20" mode="string" answer="index"/>.  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Ii]ndex">
-          <feedback>
-            <p>Correct! An index is an integer value used to select an item in a sequence, such as a
-character in a string.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Incorrect! Hint: its value has to be an integer. Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Correct! An index is an integer value used to select an item in a sequence, such as a
+character in a string.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Incorrect! Hint: its value has to be an integer. Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
 </section>

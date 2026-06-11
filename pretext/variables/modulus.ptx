@@ -25,7 +25,7 @@ print(remainder)
             last two digits.</p>
   <activity label="var-mod-mc-18-mod-5">
     <statement>
-      <p>csp-10-2-2: What is the result of <c>18 % 5</c>?</p>
+      <p>What is the result of <c>18 % 5</c>?</p>
     </statement>
     <choices>
       <choice>
@@ -64,7 +64,7 @@ print(remainder)
   </activity>
   <activity label="var-mod-mc-2-mod-3">
     <statement>
-      <p>csp-10-2-3: What is the result of <c>2 % 3</c>?</p>
+      <p>What is the result of <c>2 % 3</c>?</p>
     </statement>
     <choices>
       <choice correct="yes">
@@ -125,31 +125,24 @@ print(remainder)
   </activity>
   <activity label="var-fitb-6-mod">
     <statement>
-      <p>csp-10-2-5: What is the result of <c>25 % 4</c>? <var/>  </p>
+      <p>What is the result of <c>25 % 4</c>? <fillin width="20" mode="string" answer="1"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition number="1">
-          <feedback>
-            <p>25 % 4 has a remainder of 1.</p>
-          </feedback>
-        </condition>
-        <condition number="6">
-          <feedback>
-            <p>6 is the result of 25 // 4, try using modulus in terminal.</p>
-          </feedback>
-        </condition>
-        <condition number="6.25">
-          <feedback>
-            <p>6.25 is the result of 25 / 4, try using modulus in terminal.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Not quite, try using modulus in terminal.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>25 % 4 has a remainder of 1.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>6 is the result of 25 // 4, try using modulus in terminal.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>6.25 is the result of 25 / 4, try using modulus in terminal.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Not quite, try using modulus in terminal.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
 </section>

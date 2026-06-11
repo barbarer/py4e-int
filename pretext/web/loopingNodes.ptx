@@ -84,22 +84,19 @@ print('User count:', len(lst2))
             the top level <c>stuff</c> element where there are none.</p>
   <activity label="webLoop_fill">
     <statement>
-      <p>csp-10-2-4: In order for Python to find the desired nodes, it is important to include all ______
-level elements in the <c>findall</c> statement expect for the top level element. <var/>  </p>
+      <p>In order for Python to find the desired nodes, it is important to include all <fillin width="20" mode="string" answer="parent"/> 
+level elements in the <c>findall</c> statement expect for the top level element.  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="parent">
-          <feedback>
-            <p>It is important to include all parent level elements. These are the outside elements that contain the other elements.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Not the children but the _______.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>It is important to include all parent level elements. These are the outside elements that contain the other elements.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Not the children but the _______.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
 </section>

@@ -54,51 +54,43 @@ ValueError: invalid literal for int() with base 10:
   <p>We will see how to handle this kind of error later.</p>
   <activity label="var-convert-str-fitb">
     <statement>
-      <p>csp-10-2-4: What function is used to convert string values to integers? <var/>  </p>
+      <p>What function is used to convert string values to integers? <fillin width="20" mode="string" answer="int"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="int(\(\))*">
-          <feedback>
-            <p>int() converts values to integers</p>
-          </feedback>
-        </condition>
-        <condition string="integer">
-          <feedback>
-            <p>Close, but not quite!</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>The <c>int</c> function converts values to integers</p></feedback>
+                </test>
+                <test>
+                    <strcmp>integer</strcmp>
+                    <feedback><p>Close, but not quite!</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="var-input-fitb-newline">
     <statement>
-      <p>csp-10-2-5: What sequence is used to create a newline at the end of statements? <var/>  </p>
+      <p>What sequence is used to create a newline at the end of statements? <fillin width="20" mode="string" answer="\n"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="\\n">
-          <feedback>
-            <p>n creates a newline.</p>
-          </feedback>
-        </condition>
-        <condition string="n">
-          <feedback>
-            <p>Close, but there is a symbol that goes with it.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>n creates a newline.</p></feedback>
+                </test>
+                <test>
+                    <strcmp>n</strcmp>
+                    <feedback><p>Close, but there is a symbol that goes with it.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="var-input-pp-prompt" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>

@@ -9,27 +9,19 @@
             definition, it is a Python program.</p>
   <activity label="intro-what-fitb-statements">
     <statement>
-      <p>Q-1: A(n) _______ is a sequence of statements that have been crafted to do something. <var/>  </p>
+      <p>A(n) <fillin width="20" mode="string" answer="program"/> is a sequence of statements that have been crafted to do something./>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Pp]rogram">
-          <feedback>
-            <p>A program is a sequence of statements that have been crafted to do something.</p>
-          </feedback>
-        </condition>
-        <condition string="[Cc]omputer">
-          <feedback>
-            <p>Not quite.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>A program is a sequence of statements that have been crafted to do something.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>It might be easiest to understand what a program is by thinking about a
             problem that a program might be built to solve, and then looking at a
@@ -79,7 +71,7 @@ print(bigword, bigcount)</pre>
             code from <url href="http://www.py4e.com/code3/" visual="http://www.py4e.com/code3/">http://www.py4e.com/code3/</url> and run it.</p>
   <activity label="intro-what-mc-words">
     <statement>
-      <p>Q-2: In the program <em>words.py</em> are you the programmer or the user?</p>
+      <p>In the program <em>words.py</em> are you the programmer or the user?</p>
     </statement>
     <choices>
       <choice>
@@ -109,7 +101,7 @@ print(bigword, bigcount)</pre>
             <em>through</em> Python.</p>
   <activity label="intro-what-sa-program">
     <statement>
-      <p>Q-3: What is a problem in your life that a program could solve?</p>
+      <p>What is a problem in your life that a program could solve?</p>
     </statement>
     <response/>
   </activity>

@@ -30,22 +30,19 @@ print(a is b)
   </program>
   <activity label="listOb_fill1">
     <statement>
-      <p>Q-2: What operator can be used to see if two variables refer to the same object? <var/>  </p>
+      <p>What operator can be used to see if two variables refer to the same object? <fillin width="20" mode="string" answer="is"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Ii]s">
-          <feedback>
-            <p>The is operator will check if two variables refer to the same object.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>The <c>is</c> operator will check if two variables refer to the same object.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>In this example, Python only created one string object, and both
             <c>a</c> and <c>b</c> refer to it.</p>
@@ -64,27 +61,22 @@ print(a is b)
             equivalent, they are not necessarily identical.</p>
   <activity label="listOb_fill2">
     <statement>
-      <p>Q-4: When two lists have the same elements, but are different objects we say they are __________. <var/>  </p>
+      <p>When two lists have the same elements, but are different objects we say they are <fillin width="20" mode="string" answer="equivalent"/>.  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Ee]quivalent">
-          <feedback>
-            <p>These lists are equivalent because they look the same, but actually refer to different objects.</p>
-          </feedback>
-        </condition>
-        <condition string="[Ii]dentical">
-          <feedback>
-            <p>In order for lists to be identical, they must refer to the same object. For example, a = [1, 2, 3] and b = a</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>These lists are equivalent because they look the same, but actually refer to different objects.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>In order for lists to be identical, they must refer to the same object. For example, a = [1, 2, 3] and b = a</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>Until now, we have been using <q>object</q> and <q>value</q> interchangeably, but
             it is more precise to say that an object has a value. If you execute

@@ -3,22 +3,19 @@
   <title>Single and Multiple Turtles</title>
   <activity label="turtle_shape_draw_fitb">
     <statement>
-      <p>csp-5-4-1: What shape will the following code draw? <var/>  </p>
+      <p>What shape will the following code draw? <fillin width="20" mode="string" answer="square"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="square">
-          <feedback>
-            <p>Correct!</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try to follow the directions as if you are the turtle</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Correct!</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try to follow the directions as if you are the turtle</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   
       <p>Run the code to see what it draws.</p>
@@ -42,22 +39,19 @@ zari.right(90)              # turn right by 90 degrees
 
   <activity label="turtle_shape2_draw_fitb">
     <statement>
-      <p>csp-5-4-3: What shape will the program below draw when you click on the Run button? <var/>  </p>
+      <p>What shape will the program below draw when you click on the Run button? <fillin width="20" mode="string" answer="triangle"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="triangle">
-          <feedback>
-            <p>Correct!</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try to follow the directions as if you are the turtle</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Correct!</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try to follow the directions as if you are the turtle</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <!--<activity label="Turtle_Names2">
   <statement>-->

@@ -55,7 +55,7 @@ print(dates)
     </activity>
     <activity label="regex_match_0_before_digit_on_month">
       <statement>
-        <p>11-9-2: Sometimes dates have a leading zero if the month is from 1 to 9.  Which of the following would match that case as well but still match if there isn't a 0?</p>
+        <p>Sometimes dates have a leading zero if the month is from 1 to 9.  Which of the following would match that case as well but still match if there isn't a 0?</p>
       </statement>
       <choices>
         <choice>
@@ -119,22 +119,19 @@ print(res3)
     </activity>
     <activity label="regex_extract_symbols_fitb">
       <statement>
-        <p>11-9-4: Which symbols are used to specify the part of the match to return? <var/>  </p>
+        <p>Which symbols are used to specify the part of the match to return? <fillin width="20" mode="string" answer="()"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="\(\)">
-            <feedback>
-              <p>Parenthesis are used to specify the part of the match to return.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Look at the code above.  What symbols were used to specify the part to return?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp case="insensitive">()|parenthesis</strcmp>
+                      <feedback><p>Parenthesis are used to specify the part of the match to return.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Look at the code above.  What symbols were used to specify the part to return?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <note>
       <p>Parentheses are used to define a capture group - only what is in the parentheses will be returned.</p>
@@ -176,7 +173,7 @@ print(matches)
     </activity>
     <activity label="regex_get_date_from_match">
       <statement>
-        <p>11-9-7: Given the following code which of the following would you use to get the current date and add it to the list?</p>
+        <p>Given the following code which of the following would you use to get the current date and add it to the list?</p>
         <pre>import re
 str = "The dates were 9/11/2022, 10/15/2022, 11/20/2022, and 12/01/2022"
 
@@ -246,7 +243,7 @@ print(matches)
     </activity>
     <activity label="regex_match_caret_mc">
       <statement>
-        <p>11-9-9: What does the &#x2018;^' do?</p>
+        <p>What does the &#x2018;^' do?</p>
       </statement>
       <choices>
         <choice>
@@ -300,7 +297,7 @@ print(matches)
     </activity>
     <activity label="regex_match_dollar_mc">
       <statement>
-        <p>11-9-11: What does the &#x2018;$' do?</p>
+        <p>What does the &#x2018;$' do?</p>
       </statement>
       <choices>
         <choice>
@@ -357,7 +354,7 @@ print(matches)
     </activity>
     <activity label="regex_match_slach_b_mc">
       <statement>
-        <p>11-9-13: What does the &#x2018;\b' do?</p>
+        <p>What does the &#x2018;\b' do?</p>
       </statement>
       <choices>
         <choice>
@@ -427,7 +424,7 @@ print(passwordChecker('{hi}'))
     </activity>
     <activity label="regex_password_checker_mc">
       <statement>
-        <p>11-9-15: Which of the following best describes when <c>passwordChecker</c> returns true?</p>
+        <p>Which of the following best describes when <c>passwordChecker</c> returns true?</p>
       </statement>
       <choices>
         <choice>

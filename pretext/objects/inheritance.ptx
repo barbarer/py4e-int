@@ -7,35 +7,29 @@
             <em>child class</em>.</p>
   <activity label="inheritance_extendclass">
     <statement>
-      <p>Q-1: A new class can be created by extending an exisiting class. When extending a class,
-we call the original class the <BlankNode/> class and the new class the <BlankNode/> class. <var/>  <var/>  </p>
+      <p> A new class can be created by extending an exisiting class. When extending a class,
+we call the original class the <fillin width="20" mode="string" answer="parent"/> class and the new class the <fillin width="20" mode="string" answer="child"/> class.</p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Pp]arent">
-          <feedback>
-            <p>Yes, the original class is the &#x2018;parent' class.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-      <var>
-        <condition string="[Cc]hild">
-          <feedback>
-            <p>Yes, the extending class is the &#x2018;child' class.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes" case="insensitive">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>Yes, the original class is the &#x2018;parent' class.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+        <evaluate>
+                <test correct="yes" case="insensitive">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>Yes, the extending class is the &#x2018;child' class.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>For this example, we move our <c>PartyAnimal</c> class into its own file.
             Then, we can &#x2018;import' the <c>PartyAnimal</c> class in a new file and extend it, as follows:</p>

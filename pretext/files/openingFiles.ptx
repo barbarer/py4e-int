@@ -74,22 +74,19 @@ print(fhand)
   </program>
   <activity label="file-open-fitb-start">
     <statement>
-      <p>Q-2: Complete this line to open the file for reading: fhand = ______(&#x2018;mbox-short.txt') <var/>  </p>
+      <p>Complete this line to open the file for reading: fhand = <fillin width="20" mode="string" answer="open('mbox-short.txt')"/> </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="open">
-          <feedback>
-            <p>Yes, <q>open</q> is used to open a file.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp>open\('mbox-short.txt'\)|open\("mbox-short.txt"\)</strcmp>
+                    <feedback><p>Yes, <q>open</q> is used to open a file.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>If the <c>open</c> is successful, the operating system returns
             a <em>file handle</em> object. The file handle object is not the actual data
@@ -101,22 +98,19 @@ print(fhand)
   </figure>
   <activity label="file-open-fitb-object">
     <statement>
-      <p>Q-3: A file <BlankNode/> is an object that is used to read or modify a file, not the actual data in a file. <var/>  </p>
+      <p>A file <fillin width="20" mode="string" answer="handle"/> is an object that is used to read or modify a file, not the actual data in a file.</p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Hh]andle">
-          <feedback>
-            <p>A file handle is used to read the data of a file.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>A file handle is used to read the data of a file.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>If the file does not exist, <c>open</c> will fail with a traceback
             and you will not get a file handle object.</p>
@@ -133,7 +127,7 @@ FileNotFoundError: [Errno 2] No such file or directory: 'stuff.txt'
             not exist.</p>
   <activity label="file-open-mc-exist">
     <statement>
-      <p>Q-4: What will happen if you try to open a file that does not exist?</p>
+      <p>What will happen if you try to open a file that does not exist?</p>
     </statement>
     <choices>
       <choice>

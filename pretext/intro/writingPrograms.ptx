@@ -14,27 +14,19 @@
  </introduction>
   <activity label="intro-write-fitb-file">
     <statement>
-      <p>Q-1: A(n) ______ is a file that holds Python instructions. <var/>  </p>
+      <p>A(n) <fillin width="20" mode="string" answer="script"/> is a file that holds Python instructions.</p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Ss]cript">
-          <feedback>
-            <p>A script is a file that holds Python instructions.</p>
-          </feedback>
-        </condition>
-        <condition string="[Ff]ile">
-          <feedback>
-            <p>What is this type of file called?</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>A script is a file that holds Python instructions.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>What is this type of file called?</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>To execute the script, you have to tell the Python interpreter the name
             of the file. In a command window, you would type
@@ -59,26 +51,23 @@ Hello world!
             of the file.</p>
   <activity label="intro-write-fitb-end">
     <statement>
-      <p>Q-2: Files containing Python instructions end with what two letters? <var/>  </p>
+      <p>Files containing Python instructions end with what two letters? <fillin width="20" mode="string" answer="py"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="\.?[Pp][Yy]">
-          <feedback>
-            <p>.py at the end of a file implies that it is a script containing Python instructions.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>.py at the end of a file implies that it is a script containing Python instructions.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="intro-write-mc-end">
     <statement>
-      <p>Q-3: How does a Python program stop when reading from a file?</p>
+      <p>How does a Python program stop when reading from a file?</p>
     </statement>
     <choices>
       <choice>
