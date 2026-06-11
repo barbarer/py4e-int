@@ -3,3 +3,8 @@
 .runestone_caption {
   display: block;
 }
+
+/* fix to adding line numbers causing the blocks not to fit in the source */
+.ptx-runestone-container .left-label, .runestone-sphinx .left-label {
+    padding: 0.0em 0.2em 0.0em .0em;
+}
