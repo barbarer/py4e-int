@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <section xml:id="files_mixed-up-code-questions">
   <title>Mixed-up Code Questions</title>
-
   <activity label="file_write_line_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>write_line(file, output)</c> that writes the contents of the string <c>output</c> to <c>file</c>.  Be sure to add a newline character <c>"\n"</c> when you write <c>output</c> to the file.</p>
@@ -295,10 +294,10 @@
             particulate matter that is course and 2.5 to 10 micrometers in diameter such as
             dust from vehicles on the road. PM2.5 is particulate matter that is 2.5 micrometers
             in diameter or smaller which are produced by combustion from things like gas-powered vehicles or forest fires.
-            If you want to see all of the data click on the Show button below. Once it appears,
-            you can hide it again by clicking on the Hide button.</p>
-  <hint>
-    <raw format="html" xml:space="preserve">&lt;pre id="uspoll.txt"&gt;
+            </p>
+<aside xml:id="polution-data-view">
+  <title>Click to view all the polution data</title>
+<pre>
 Aberdeen, SD :13 :8
 Adrian, MI :15 :9
 Akron, OH :18 :11
@@ -678,8 +677,8 @@ York-Hanover, PA :20 :12
 Youngstown-Warren-Boardman, OH-PA :23 :14
 Yuba City, CA :12 :7
 Yuma, AZ :14 :9
-&lt;/pre&gt;</raw>
-  </hint>
+</pre>
+</aside>
   <activity label="file_mixed_pollution" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>The following program prints the pollution information for all cities that start with a <c>D</c>,
