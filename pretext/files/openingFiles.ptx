@@ -13,12 +13,13 @@
             find the file by name and make sure the file exists. In this example, we
             open the file <em>mbox.txt</em>, which should be stored in the same
             folder that you are in when you start Python. You can download this file
-            from <url href="http://www.py4e.com/code3/mbox.txt" visual="http://www.py4e.com/code3/mbox.txt">www.py4e.com/code3/mbox.txt</url>
+            from <url href="http://www.py4e.com/code3/mbox.txt" visual="http://www.py4e.com/code3/mbox.txt">www.py4e.com/code3/mbox.txt</url>.
             For learning purposes, we are using the shortened version of this file
-            <c>mbox-short.txt</c> This file can be found and downloaded from
-            <url href="http://www.py4e.com/code3/mbox-short.txt" visual="http://www.py4e.com/code3/mbox-short.txt">www.py4e.com/code3/mbox-short.txt</url></p>
-  <p>Click on the button to show the first lines from this file.</p>
-  <hint>
+            <dataurl filename="mbox-short.txt" source="files/mbox-short.txt">mbox-short.txt</dataurl>.
+  </p>
+  <p>Click <dataurl filename="mbox-short.txt" source="files/mbox-short.txt">here to view the mbox-short.txt data file</dataurl> in a new browser tab.</p>
+  <aside xml:id="mbox-short-view">
+  <title>Click to view the first lines of the mbox-short.txt mail file</title>
     <pre>From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
 Return-Path: &lt;postmaster@collab.sakaiproject.org&gt;
 Received: from murder (mail.umich.edu [141.211.14.90])
@@ -65,16 +66,21 @@ X-DSPAM-Result: Innocent
 X-DSPAM-Processed: Sat Jan  5 09:14:16 2008
 X-DSPAM-Confidence: 0.8475
 X-DSPAM-Probability: 0.0000</pre>
-  </hint>
-  <program xml:id="fileOpen" interactive="activecode" language="python">
+  </aside>
+
+<activity label="file-open-mbox-short">
+  <!-- codelens issue: open() not supported in python tutor -->
+  <program xml:id="fileOpen" interactive="activecode" codelens="no" language="python" add-files="mbox-short-open-id">
     <code>
 fhand = open('mbox-short.txt')
 print(fhand)
-        </code>
+    </code>
   </program>
+</activity>
+
   <activity label="file-open-fitb-start">
     <statement>
-      <p>Complete this line to open the file for reading: fhand = <fillin width="20" mode="string" answer="open('mbox-short.txt')"/> </p>
+      <p>Complete this line to open the file for reading: fhand = <fillin width="20" mode="string" answer="open('mbox-short.txt'\"/> </p>
     </statement>
     <evaluation>
         <evaluate>
@@ -164,4 +170,8 @@ FileNotFoundError: [Errno 2] No such file or directory: 'stuff.txt'
       </choice>
     </choices>
   </activity>
+  <!-- causes data to brief flash on the page -->
+  <datafile xml:id="mbox-short-open-id" label="mbox-short-open-id" filename="mbox-short.txt" hide="yes">
+      <pre source="files/mbox-short.txt"></pre>
+  </datafile>
 </section>
