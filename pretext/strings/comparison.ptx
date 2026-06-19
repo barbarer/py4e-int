@@ -15,7 +15,9 @@ if word == 'banana':
   </program>
   <p>Other comparison operations are useful for putting words in alphabetical
             order:</p>
-  <program xml:id="strComparisonCodelens" interactive="codelens" language="python">
+  <listing xml:id="strComparisonCodelens">
+  <title>Click the Next button to step through the code</title>
+   <program label="strComparisonCodelens" interactive="codelens" language="python">
     <code>
 word = "Pineapple"
 if word &lt; 'banana':
@@ -26,6 +28,7 @@ else:
     print('All right, bananas.')
     </code>
   </program>
+  </listing>
   <p>Python does not handle uppercase and lowercase letters the same way that
             people do. All uppercase letters come before all lowercase letters, so
             <q>Pineapple</q> is less than <q>banana</q>, even though <q>pineapple</q> is greater than <q>banana</q>.</p>
