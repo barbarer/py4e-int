@@ -164,9 +164,21 @@ print(line.lower().startswith('h'))
             starts with the letter <q>h</q>. As long as we are careful with the order, we
             can make multiple method calls in a single expression.</p>
   <activity>
-    <statement/>
-    <program interactive="" language=""/>
-  </activity>
+  <statement>
+    <p>
+      Fix the following function. It should use the string method <c>count</c> to count the number of times a
+      double s (ss) appears in a word. There are 3 mistakes to fix.
+    </p>
+  </statement>
+
+  <program xml:id="countss" interactive="codelens" language="python">
+    <code>
+def countSS(word):
+  counter == count(word, 'ss'):
+  return counter
+    </code>
+  </program>
+</activity>
   <activity label="str-method-mc-cheer">
     <statement>
       <p>11-9-9: What is printed by the following statements?</p>
