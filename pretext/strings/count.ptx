@@ -23,7 +23,7 @@ print(count)
             <em>counter</em>. The variable <c>count</c> is initialized
             to 0 and then incremented each time an <q>r</q> is found. When the
             loop exits, <c>count</c> contains the result: the total number of
-            r's.</p>
+            rs.</p>
   <activity label="str-count-mc-t">
     <statement>
       <p>11-9-2: What is printed by the following:</p>
@@ -74,25 +74,24 @@ print(count)
     </choices>
   </activity>
   <activity>
-    <statement/>
-    <program interactive="" language=""/>
-    <solution>
-                In line 2, lettercount should be initialized to 0. In line 4, there should be a ==, not a =.
-                    In line 5, the variable name should be changed to lettercount. In line 6, the return statement should be indented.
+  <statement>
+    <p>
+      Write a function that takes a string and a character as arguments and
+      returns the count of the character within the string.
+    </p>
+  </statement>
 
-    <program xml:id="str-count-fixa" language="python"><code>
+  <program xml:id="stringCount" interactive="codelens" language="python">
+
+    <code>
 def count(text, aChar):
-    lettercount = 0
+    count = 0
     for c in text:
         if c == aChar:
-            lettercount = lettercount + 1
-    return lettercount
-        </code></program>
-            
-                <p>In line 2, <c>lettercount</c> should be initialized to 0. In line 4, there should be a <c>==</c>, not a <c>=</c>.
-                    In line 5, the variable name should be changed to <c>lettercount</c>. In line 6, the return statement should be indented.</p>
+            count += 1
+    return count
+    </code>
 
-    
-            </solution>
-  </activity>
+  </program>
+</activity>
 </section>
