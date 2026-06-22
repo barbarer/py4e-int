@@ -29,10 +29,19 @@ while index &lt; len(fruit):
             is false, and the body of the loop is not executed. The last character
             accessed is the one with the index <c>len(fruit)-1</c>, which is
             the last character in the string.</p>
-  <activity>
-    <statement/>
-    <program interactive="" language=""/>
-  </activity>
+ <activity>
+  <statement/>
+  <program xml:id="stringWhileLoop" interactive="codelens" language="python">
+    <code>
+fruit = "fruit"
+index = len(fruit)
+
+while index > 0:
+    print(fruit[index-1])
+    index -= 1
+    </code>
+  </program>
+</activity>
   <p>Another way to write a traversal is with a <c>for</c> loop:</p>
   <program xml:id="string-forLoop" interactive="activecode" language="python">
     <code>
