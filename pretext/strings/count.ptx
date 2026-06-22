@@ -9,7 +9,7 @@
 <idx>Encapsulation</idx>
   <p>The following program counts the number of times the letter
             <q>r</q> appears in a string:</p>
-  <program xml:id="strCount" interactive="codelens" language="python">
+  <program xml:id="strCount" label="strCount" interactive="codelens" language="python">
     <code>
 word = 'raspberry'
 count = 0
@@ -73,25 +73,4 @@ print(count)
       </choice>
     </choices>
   </activity>
-  <activity>
-  <statement>
-    <p>
-      Write a function that takes a string and a character as arguments and
-      returns the count of the character within the string.
-    </p>
-  </statement>
-
-  <program xml:id="stringCount" interactive="codelens" language="python">
-
-    <code>
-def count(text, aChar):
-    count = 0
-    for c in text:
-        if c == aChar:
-            count += 1
-    return count
-    </code>
-
-  </program>
-</activity>
 </section>
