@@ -21,22 +21,19 @@
 
   <activity label="webAPI_fill1">
     <statement>
-      <p>csp-10-2-1: APIs are ________ between applications that exchange data using HTTP and representing complex data using XML or JSON. <var/>  </p>
+      <p>APIs are <fillin width="20" mode="string" answer="contracts"/> between applications that exchange data using HTTP and representing complex data using XML or JSON. </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Cc]ontract(s)*">
-          <feedback>
-            <p>An API is the general name for an application to application contract.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>An API is an agreement between the two applications, also known as&#x2026;.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>An API is the general name for an application to application contract.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>An API is an agreement between the two applications, also known as&#x2026;.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>When we begin to build our programs where the functionality of our
             program includes access to services provided by other programs, we call
@@ -47,7 +44,7 @@
             code necessary to implement the application.</p>
   <activity label="webAPI_MC_tf">
     <statement>
-      <p>csp-10-2-2: True or False? A service-oriented architecture makes use of other applications' services.</p>
+      <p>True or False? A service-oriented architecture makes use of other applications' services.</p>
     </statement>
     <choices>
       <choice>
@@ -91,7 +88,7 @@
             the web, we call these <em>web services</em>.</p>
   <activity label="webAPI_MC_soa">
     <statement>
-      <p>csp-10-2-3: Which of the following is <term>not</term> an advantage of a service oriented architecture?</p>
+      <p>Which of the following is <term>not</term> an advantage of a service oriented architecture?</p>
     </statement>
     <choices>
       <choice>

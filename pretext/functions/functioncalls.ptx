@@ -42,21 +42,18 @@ print(result)
   </activity>
   <activity label="functCall_fill1">
     <statement>
-      <p>Q-4: A _________ is a named sequence of statements that performs a computation. <var/>  </p>
+      <p>A <fillin width="20" mode="string" answer="function"/> is a named sequence of statements that performs a computation.   </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Ff]unction">
-          <feedback>
-            <p>Correct! A function is a named sequence of statements that performs a computation.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Incorrect! <c>type</c> is an example of one of these. Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive" />
+                    <feedback><p>Correct! A function is a named sequence of statements that performs a computation.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Incorrect! <c>type</c> is an example of one of these. Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
 </section>

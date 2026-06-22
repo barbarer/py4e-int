@@ -58,7 +58,7 @@
   </p>
   <activity label="intro-hardware-mc-storage">
     <statement>
-      <p>Q-1: Which of the following will keep information stored without a power source?</p>
+      <p>Which of the following will keep information stored without a power source?</p>
     </statement>
     <choices>
       <choice>
@@ -116,27 +116,22 @@
             and getting the instructions to be correct <em>programming</em>.</p>
   <activity label="intro-hardware-stored-instructions">
     <statement>
-      <p>Q-2: A set of stored instructions used to direct your computer's central processing unit is called a ________. <var/>  </p>
+      <p>A set of stored instructions used to direct your computer's central processing unit is called a <fillin width="20" mode="string" answer="program"/>.  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Pp]rogram">
-          <feedback>
-            <p>A program holds the instructions that answer the CPU's <q>What next</q> question.</p>
-          </feedback>
-        </condition>
-        <condition string="[Pp]rogramming">
-          <feedback>
-            <p>Programming is the process of creating and editing these instructions.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>A program holds the instructions that answer the CPU's <q>What next</q> question.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Programming is the process of creating and editing these instructions.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="intro-hardware-dnd-memory">
     <statement>

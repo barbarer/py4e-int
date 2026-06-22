@@ -203,22 +203,19 @@ alex.forward(75)      # ask alex to move forward by 75 units
 
     <activity label="var-draw-letter-fitb">
       <statement>
-        <p>What letter (like A, B, C, d, etc.) will the program below draw in block style when you click the Run button? <var/>  </p>
+        <p>What letter (like A, B, C, d, etc.) will the program below draw in block style when you click the Run button? <fillin width="20" mode="string" answer="C"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="c|C">
-            <feedback>
-              <p>That's correct!</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Try to follow the directions as if you are the turtle.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp>c|C</strcmp>
+                      <feedback><p>That's correct!</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Try to follow the directions as if you are the turtle.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="Turtle_C">
       <statement>
@@ -239,7 +236,7 @@ alex.forward(75)        # move forward by 75 units
 </activity>
 
 
-<activity label="Turtle_Error1)">
+<activity label="Turtle_Error1">
   <statement>
     <p>The following example has four errors. Can you fix the errors so that the code runs correctly to print a capital L?</p>
   </statement>
@@ -254,7 +251,7 @@ alisha.Forward(75)      # move forward by 75 units</code>
 </program>
 </activity>
 
-<activity label="Turtle_Error2)">
+<activity label="Turtle_Error2">
   <statement>
 <p>The following example has 4 errors.  Can you fix the errors so that the code runs correctly to print a capital C?</p>
   </statement>

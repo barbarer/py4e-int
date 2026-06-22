@@ -66,9 +66,33 @@ There were 27 subject lines in mbox-short.txt</pre>
             friendly user do that would cause our nice little program to
             ungracefully exit with a traceback, making us look not-so-cool in the
             eyes of our users?</q></p>
-  <activity>
-    <statement/>
-    <program interactive="" language=""/>
+  <activity label="file-user-names-received">
+    <statement>
+      <p>There are five errors in the code below.
+      Fix the code to ask a user for a file, open "mbox-short.txt", 
+      and count the lines that start with <c>Received:</c>.</p>
+    </statement>
+    <program interactive="activecode" language="python" codelens="yes" add-files="mbox-short-usernames-id">
+      <code>
+        count = 1
+        fname = input('Enter the file name: '
+        fhand = open(file)
+        for line in fhand:
+            if line.endswith('Received:'):
+            count = count + 1
+        fhand.close()
+        print('There were', count, 'lines starting with "Received:" in the file', fname)
+
+        =====
+        from unittest.gui import TestCaseGui
+        class myTests(TestCaseGui):
+
+            def testOne(self):
+                self.assertEqual(count,243,"Remember to start counting from zero")
+
+        myTests().main()
+      </code>
+    </program>
     <solution>
       <program xml:id="fileOpenInputa" language="python">
         <code>
@@ -86,4 +110,9 @@ print('There were', count, 'lines starting with "Received:" in the file', fname)
       </program>
     </solution>
   </activity>
+  <!-- causes data to brief flash on the page -->
+  <datafile xml:id="mbox-short-usernames-id" label="mbox-short-usernames-id" filename="mbox-short.txt" hide="yes">
+    <pre source="files/mbox-short.txt"></pre>
+  </datafile>
+
 </section>

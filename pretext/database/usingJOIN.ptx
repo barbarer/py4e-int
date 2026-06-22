@@ -29,41 +29,35 @@ SELECT * FROM Follows JOIN People
             the same the <c>id</c> value in the <c>People</c> table.</p>
   <activity label="dbJoin_fill1">
     <statement>
-      <p>Q-1: Which SQL clause can be used to return data from two tables? <var/>  </p>
+      <p>Which SQL clause can be used to return data from two tables? <fillin width="20" mode="string" answer="join"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="join">
-          <feedback>
-            <p>JOIN returns data from two tables based on rows selected to join them on.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>JOIN returns data from two tables based on rows selected to join them on.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="dbJoin_on_fill1">
     <statement>
-      <p>Q-2: Fill in the blank in the following: SELECT * FROM Follows JOIN People <BlankNode/> Follows.from_id = People.id LIMIT 5 <var/>  </p>
+      <p>Fill in the blank in the following: SELECT * FROM Follows JOIN People <fillin width="20" mode="string" answer="on"/> Follows.from_id = People.id LIMIT 5</p>
     </statement>
-    <setup>
-      <var>
-        <condition string="on">
-          <feedback>
-            <p>Use ON to specify what column to join the data on.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Use ON to specify what column to join the data on.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>
     <term>Connecting Tables Using JOIN</term>
@@ -76,7 +70,7 @@ SELECT * FROM Follows JOIN People
             matching pairs of rows, duplicating data as needed.</p>
   <activity label="dbJoin_MC_metarow">
     <statement>
-      <p>Q-3: True or False? A <q>metarow</q> only contains the first set of matching data.</p>
+      <p>True or False? A <q>metarow</q> only contains the first set of matching data.</p>
     </statement>
     <choices>
       <choice>
@@ -172,7 +166,7 @@ Connections for id=2:
             (<c>People.id</c>) in each of the joined-up <q>metarows</q>.</p>
   <activity label="dbJoin_MC_titles">
     <statement>
-      <p>Q-4: True or False? When using JOIN on two tables, you can join on columns that have different names.</p>
+      <p> True or False? When using JOIN on two tables, you can join on columns that have different names.</p>
     </statement>
     <choices>
       <choice correct="yes">

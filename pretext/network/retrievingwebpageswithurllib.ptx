@@ -9,22 +9,19 @@
             <c>urllib</c> handles all of the HTTP protocol and header details.</p>
   <activity label="network_retrieve_fitb">
     <statement>
-      <p>Q-1: The _______ library is used to simplify sending and receiving data from a web page. <var/>  </p>
+      <p>The <fillin width="20" mode="string" answer="urllib"/> library is used to simplify sending and receiving data from a web page.</p>
     </statement>
-    <setup>
-      <var>
-        <condition string="urllib">
-          <feedback>
-            <p>The urllib library treats a web page like a file and makes it much easier to parse the page.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again! What python library would be most useful for parsing a web page?</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>The urllib library treats a web page like a file and makes it much easier to parse the page.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again! What python library would be most useful for parsing a web page?</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>The equivalent code to read the <em>romeo.txt</em> file from the web
             using <c>urllib</c> is as follows:</p>
@@ -45,7 +42,7 @@ for line in fhand:
             consumes the headers and only returns the data to us.</p>
   <activity label="network_retrieve_tf">
     <statement>
-      <p>Q-3: True or False? The program above shows the headers and contents of the file.</p>
+      <p>True or False? The program above shows the headers and contents of the file.</p>
     </statement>
     <choices>
       <choice>
@@ -87,7 +84,7 @@ print(counts)
             file.</p>
   <activity label="network_retrieve_tf2">
     <statement>
-      <p>Q-5: True or False? The urllib library opens a web page and allows it to be read like a file.</p>
+      <p>True or False? The urllib library opens a web page and allows it to be read like a file.</p>
     </statement>
     <choices>
       <choice correct="yes">

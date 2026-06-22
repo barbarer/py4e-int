@@ -1,4 +1,12 @@
+
 if (allTraceData === undefined) {
- var allTraceData = {};
- }
- allTraceData["rs-listChange"] = {"code": "a = [1, 2, 3]\nb = a\nb[0] = 17\nprint(a)\n\n", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"a": ["REF", 1]}, "ordered_globals": ["a"], "stack_to_render": [], "heap": {"1": ["LIST", 1, 2, 3]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"a": ["REF", 1], "b": ["REF", 1]}, "ordered_globals": ["a", "b"], "stack_to_render": [], "heap": {"1": ["LIST", 1, 2, 3]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"a": ["REF", 1], "b": ["REF", 1]}, "ordered_globals": ["a", "b"], "stack_to_render": [], "heap": {"1": ["LIST", 17, 2, 3]}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "<module>", "globals": {"a": ["REF", 1], "b": ["REF", 1]}, "ordered_globals": ["a", "b"], "stack_to_render": [], "heap": {"1": ["LIST", 17, 2, 3]}, "stdout": "[17, 2, 3]\n"}]}
+    var allTraceData = {};
+}
+(function() { // IIFE to avoid variable collision
+    let codelensID = "rs-listChange";  //fallback
+    let partnerCodelens = document.currentScript.parentElement.querySelector(".pytutorVisualizer");
+    if (partnerCodelens) {
+        codelensID = partnerCodelens.id;
+    }
+    allTraceData[codelensID] = {"code": "a = [1, 2, 3]\nb = a\nb[0] = 17\nprint(a)\n", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {"a": ["REF", 1]}, "ordered_globals": ["a"], "stack_to_render": [], "heap": {"1": ["LIST", 1, 2, 3]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"a": ["REF", 1], "b": ["REF", 1]}, "ordered_globals": ["a", "b"], "stack_to_render": [], "heap": {"1": ["LIST", 1, 2, 3]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"a": ["REF", 1], "b": ["REF", 1]}, "ordered_globals": ["a", "b"], "stack_to_render": [], "heap": {"1": ["LIST", 17, 2, 3]}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "<module>", "globals": {"a": ["REF", 1], "b": ["REF", 1]}, "ordered_globals": ["a", "b"], "stack_to_render": [], "heap": {"1": ["LIST", 17, 2, 3]}, "stdout": "[17, 2, 3]\n"}], "startingInstruction": 0};
+})();

@@ -12,40 +12,34 @@
             onto your computer and execute.</p>
   <activity>
     <statement>
-      <p>csp-10-2-1: How many complete applications are used in this chapter to visualize data? <var/>  </p>
+      <p> How many complete applications are used in this chapter to visualize data? <fillin width="20" mode="string" answer="3"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="3|([Tt]hree)">
-          <feedback>
-            <p>In this chapter, we look at three complete applicatins to visualize data.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp>3|[Tt]hree</strcmp>
+                    <feedback><p>In this chapter, we look at three complete applicatins to visualize data.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity>
     <statement>
-      <p>csp-10-2-2: What type of downloadable file are the applications? <var/>  </p>
+      <p> What type of downloadable file are the applications? <fillin width="20" mode="string" answer="zip"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Zz][Ii][Pp]">
-          <feedback>
-            <p>Each application is a ZIP file that can be downloaded and extracted.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Each application is a ZIP file that can be downloaded and extracted.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
 </section>

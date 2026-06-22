@@ -14,44 +14,38 @@
             and methods (code).</p>
   <activity label="object_contents">
     <statement>
-      <p>Q-1: An object can contain a number of functions as well as <BlankNode/> that is used by
-those functions. <var/>  </p>
+      <p> An object can contain a number of functions as well as <fillin width="20" mode="string" answer="data"/> that is used by
+those functions.</p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Dd]ata">
-          <feedback>
-            <p>Correct, these data can be initialized within the class or when object
-is constructed.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes" case="insensitive">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>Correct, these data can be initialized within the class or when object
+is constructed.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="keyword_object">
     <statement>
-      <p>Q-2: The <BlankNode/> keyword is used to define the data and code that will make up each of the
-objects. <var/>  </p>
+      <p> The <fillin width="20" mode="string" answer="[c]lass"/> keyword is used to define the data and code that will make up each of the
+objects.</p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[c]lass">
-          <feedback>
-            <p>Correct, we use the keyword &#x2018;class'.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again! Note that keywords are case-sensitive.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>Correct, we use the keyword &#x2018;class'.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again! Note that keywords are case-sensitive.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="partyanimal">
     <statement>

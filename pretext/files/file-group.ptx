@@ -89,42 +89,36 @@ print_contents("dogs.txt")
                 When you print a line you add another newline character which prints as a blank line.</p>
     <activity label="file_remove_newline">
       <statement>
-        <p>Q-2: What string method can you use to remove the newline character from the end of a line? <var/>  </p>
+        <p>What string method can you use to remove the newline character from the end of a line? <fillin width="20" mode="string" answer="rstrip"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="rstrip|strip">
-            <feedback>
-              <p>You can use rstrip or strip to remove the newline character.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>What method removes whitespace from the right side of a string?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp>rstrip|strip</strcmp>
+                      <feedback><p>You can use rstrip or strip to remove the newline character.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>What method removes whitespace from the right side of a string?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <p>Modify the code above to remove the newline from each line after it is read in.</p>
     <activity label="file_obj_type_fitb">
       <statement>
-        <p>Q-3: What type of thing is <c>file_obj</c> in the code above? <var/>  </p>
+        <p>What type of thing is <c>file_obj</c> in the code above? <fillin width="20" mode="string" answer="file"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="'?file'?">
-            <feedback>
-              <p>It is an object of the file class.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>What is the class name that was printed?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>It is an object of the file class.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>What is the class name that was printed?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <p>You can also read all the lines from a file at once into a list.  One advantage
                 to this is that you can immediately close the file after that.  This makes it easier to remember to close the file.</p>
@@ -156,26 +150,23 @@ print_contents("dogs.txt")
     </note>
     <activity label="line_file_close_fitb">
       <statement>
-        <p>Q-5: What method do you use to close a file that you have opened? <var/>  </p>
+        <p>What method do you use to close a file that you have opened? <fillin width="20" mode="string" answer="close"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="close">
-            <feedback>
-              <p>This will close the file object.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Look at the example Python code above.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>This will close the file object.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Look at the example Python code above.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="file_read_all_lines_at_once_sa">
       <statement>
-        <p>Q-6: When would it not be best to read all of the lines in a file into a list at once?</p>
+        <p>When would it not be best to read all of the lines in a file into a list at once?</p>
       </statement>
     </activity>
     <p>You can also just read some of the lines from a file using the <c>readline</c> method.  This can be handy
@@ -202,7 +193,7 @@ print_contents("dogs.txt", 2)
     <p>Modify the code above to print 4 lines and run it again.</p>
     <activity label="file_read_lines_no_file">
       <statement>
-        <p>Q-8: What do you think will happen when you try to run the code below?</p>
+        <p>What do you think will happen when you try to run the code below?</p>
       </statement>
     </activity>
     <activity label="file_pogil_read_lines_wrong_file_name">
@@ -266,22 +257,19 @@ print_contents("unknown.txt")
     <p>You can use <c>try</c> and <c>except</c> to handle code that can cause exceptions. Put the code that can cause the exception in the <c>try</c> block.</p>
     <activity label="line_file_open_except_fitb">
       <statement>
-        <p>Q-11: What keyword do you use to specify code to execute if there is an error when the code in the body of the <c>try</c> executes? <var/>  </p>
+        <p>What keyword do you use to specify code to execute if there is an error when the code in the body of the <c>try</c> executes? <fillin width="20" mode="string" answer="except"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="except">
-            <feedback>
-              <p>The code specified in the body of the except will run if there is an exception when the code in the body fo the try runs.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Look at the example Python code above.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The code specified in the body of the except will run if there is an exception when the code in the body fo the try runs.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Look at the example Python code above.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <p>You can also use <c>with open(file) as name</c> which will automatically close the file after the code block ends. It is particularly important to close the file when you write data to a file.</p>
     <activity label="file_pogil_read_lines_list_with">
@@ -375,22 +363,19 @@ print_contents("dogs.txt")
     </activity>
     <activity label="file_pogil_line_count_type_returned">
       <statement>
-        <p>Q-15: What type of thing is returned from the function below? <var/>  </p>
+        <p>What type of thing is returned from the function below? <fillin width="20" mode="string" answer="dictionary"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="dictionary">
-            <feedback>
-              <p>It will return a dictionary with the counts of the number of lines in the file that start with a character.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>What type of thing is b_dict?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>It will return a dictionary with the counts of the number of lines in the file that start with a character.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>What type of thing is b_dict?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="file_pogil_dict_count">
       <statement>

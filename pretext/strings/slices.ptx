@@ -43,26 +43,23 @@ print(fruit[3:3])
             that, it is the same as any other string.</p>
   <activity label="str-slice-fitb-fruit">
     <statement>
-      <p>11-9-4: Given that <c>fruit</c> is a string, how many characters does <c>fruit[:]</c> select? <var/>  </p>
+      <p>Given that <c>fruit</c> is a string, how many characters does <c>fruit[:]</c> select? <fillin width="20" mode="string" answer="5"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="([Aa]ll)|5|([Ff]ive)">
-          <feedback>
-            <p>[:] Correct! It selects the entire string.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Incorrect! It could be helpful to run this in an activecode block. Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp>([Aa]ll)|5|([Ff]ive)</strcmp>
+                    <feedback><p>[:] Correct! It selects the entire string.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Incorrect! It could be helpful to run this in an activecode block. Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="str-slice-mc-hello">
     <statement>
-      <p>11-9-5: How many times is the word HELLO printed by the following statements?</p>
+      <p>How many times is the word HELLO printed by the following statements?</p>
       <program language="python">
         <code>
 s = "pomegranate"
@@ -108,7 +105,7 @@ for ch in s[3:8]:
   </activity>
   <activity label="str-slice-mc-end">
     <statement>
-      <p>11-9-6: What will be printed when the following executes?</p>
+      <p>What will be printed when the following executes?</p>
       <pre>str = "Python is cool"
 str = str[1:4]
 print(str)</pre>
@@ -150,7 +147,7 @@ print(str)</pre>
   </activity>
   <activity label="str-slice-mc-38">
     <statement>
-      <p>11-9-7: What is printed by the following statements?</p>
+      <p>What is printed by the following statements?</p>
       <program language="python">
         <code>
 s = "python rocks"

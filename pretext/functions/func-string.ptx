@@ -53,22 +53,19 @@
     <title>String Indices</title>
     <activity label="funct_fitb_pogil_initials_v2">
       <statement>
-        <p>What is the last thing that will be printed when the code below runs? <var/>  </p>
+        <p>What is the last thing that will be printed when the code below runs? <fillin width="20" mode="string" answer="Jk"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="Jk">
-            <feedback>
-              <p>It prints the first letter of the first name and last letter of the last name.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>String indices start with 0 and -1 is the index of the last letter in a string.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>It prints the first letter of the first name and last letter of the last name.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>String indices start with 0 and -1 is the index of the last letter in a string.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="funct_ac_pogil_initials_v2">
       <statement>
@@ -109,82 +106,70 @@ myTests().main()
     <p>Fix the function <c>get_initials</c> above to return a string with the first letter of the first name followed by the first letter of the last name.</p>
     <activity label="funct_fitb_hello_type">
       <statement>
-        <p>What type of thing is <q>Hello</q>, i.e. what class does it belong to? <var/>  </p>
+        <p>What type of thing is <q>Hello</q>, i.e. what class does it belong to? <fillin width="20" mode="string" answer="str"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="'?str'?">
-            <feedback>
-              <p>A string in Python is an object of the str class.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>What is the class name printed by print(type(<q>Hello</q>))?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>A string in Python is an object of the <c>str</c> class.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>What is the class name printed by print(type(<q>Hello</q>))?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="funct_fitb_42_type">
       <statement>
-        <p>What type of thing is 42, i.e. what class does it belong to? <var/>  </p>
+        <p>What type of thing is 42, i.e. what class does it belong to? <fillin width="20" mode="string" answer="int"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="'?int'?">
-            <feedback>
-              <p>An integer in Python is an object of the int class.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>What is the class name printed by print(type(42))?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>An integer in Python is an object of the <c>int</c> class.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>What is the class name printed by <c>print(type(42))</c>?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="funct_fitb_add_strings">
       <statement>
-        <p>What is the symbol that is used to append (concatenate) strings together? <var/>  </p>
+        <p>What is the symbol that is used to append (concatenate) strings together? <fillin width="20" mode="string" answer="+"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="\+">
-            <feedback>
-              <p>Use + to append one string after another in Python.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Check the code above and try again.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>Use + to append one string after another in Python.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Check the code above and try again.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
   </subsection>
   <subsection xml:id="functions_string-slices">
     <title>String Slices</title>
     <activity label="funct_fitb_pogil_short_name">
       <statement>
-        <p>What is the last thing that will be printed when the code below runs? <var/>  </p>
+        <p>What is the last thing that will be printed when the code below runs? <fillin width="20" mode="string" answer="Sibs"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="Sibs">
-            <feedback>
-              <p>The last thing it prints are the first two letters of the first name and the last two letters of the last name.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>A slice starts with the first number and ends before the second.  If the second is left off it goes to the end of the string. The last character in a string is at index -1.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The last thing it prints are the first two letters of the first name and the last two letters of the last name.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>A slice starts with the first number and ends before the second.  If the second is left off it goes to the end of the string. The last character in a string is at index -1.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="funct_ac_pogil_short_name">
       <statement>
@@ -212,60 +197,51 @@ main()
     </note>
     <activity label="funct_fitb_three_char_slice">
       <statement>
-        <p>Use the slice operator to return the first three characters from the variable <c>dna</c>? <var/>  </p>
+        <p>Use the slice operator to return the first three characters from the variable <c>dna</c>? <fillin width="20" mode="string" answer="dna[0:3]"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="dna\[0\:3\]|\[:3\]">
-            <feedback>
-              <p>This will return a new string with the characters from index 0 to 2.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Look at the note above and try again.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp>dna\[0\:3\]|\[:3\]</strcmp>
+                      <feedback><p>This will return a new string with the characters from index 0 to 2.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Look at the note above and try again.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="funct_fitb_last_three_char_slice">
       <statement>
-        <p>Use the slice operator to return a new string with just the last three characters from the variable named <c>dna</c> using a negative index? <var/>  </p>
+        <p>Use the slice operator to return a new string with just the last three characters from the variable named <c>dna</c> using a negative index? <fillin width="20" mode="string" answer="dna[-3:]"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="dna\[-3\:\]">
-            <feedback>
-              <p>This will return a new string with the last three characters in it.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Read about negative indicies in Python and try again.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp>dna\[-3\:\]</strcmp>
+                      <feedback><p>This will return a new string with the last three characters in it.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Read about negative indicies in Python and try again.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="funct_fitb_start_slice_def">
       <statement>
-        <p>What index will the slice (substring) start with if the start index isn't specified? <var/>  </p>
+        <p>What index will the slice (substring) start with if the start index isn't specified? <fillin width="20" mode="string" answer="0"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition number="0">
-            <feedback>
-              <p>A slice starts at index 0 if the start isn't specified.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Look at the code above and try again.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>A slice starts at index 0 if the start isn't specified.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Look at the code above and try again.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="funt_mc_end_slice">
       <statement>
@@ -300,22 +276,19 @@ main()
     </activity>
     <activity label="funct_fitb_string_nchars">
       <statement>
-        <p>What built-in function tells you the number of characters in a string? <var/>  </p>
+        <p>What built-in function tells you the number of characters in a string? <fillin width="20" mode="string" answer="len"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="len">
-            <feedback>
-              <p>The len function takes a string and returns the number of characters in it.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Look at the example code above.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The <c>len</c> function takes a string and returns the number of characters in it.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Look at the example code above.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="fuct_ac_list_join_strings_without_first">
       <statement>
@@ -371,41 +344,35 @@ get_name()
     </activity>
     <activity label="funct_fitb_convert_string_int">
       <statement>
-        <p>What is the name of the built-in function that will convert a string to an integer? <var/>  </p>
+        <p>What is the name of the built-in function that will convert a string to an integer? <fillin width="20" mode="string" answer="int"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="int">
-            <feedback>
-              <p>This will convert a string to an integer</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Look at the code above and try again.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>This will convert a string to an integer</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Look at the code above and try again.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="funct_fitb_convert_int_string">
       <statement>
-        <p>What is the name of the built-in function that will convert an integer to a string? <var/>  </p>
+        <p>What is the name of the built-in function that will convert an integer to a string? <fillin width="20" mode="string" answer="str"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="str">
-            <feedback>
-              <p>This will convert a number to a string.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Look at the code above and try again.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>This will convert a number to a string.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Look at the code above and try again.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
   </subsection>
   <subsection xml:id="functions_string-methods">
@@ -413,22 +380,19 @@ get_name()
     <p>Strings have methods (functions) that operate on a string object using <term>dot-notation</term> as shown in the example code below.</p>
     <activity label="funct_fitb_string_method_pred">
       <statement>
-        <p>What will be returned from the <c>get_user_name</c> function below? <var/>  </p>
+        <p>What will be returned from the <c>get_user_name</c> function below? <fillin width="20" mode="string" answer="malana_coffy"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="malana_coffy">
-            <feedback>
-              <p>This will return the first name in lowercase followed by a _ and then the last name in lowercase.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Remember that string methods don't change the original string.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>This will return the first name in lowercase followed by a _ and then the last name in lowercase.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Remember that string methods don't change the original string.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="funct_ac_pogil_user_name">
       <statement>
@@ -459,22 +423,19 @@ main()
     </activity>
     <activity label="funct_fitb_pogil_find_return">
       <statement>
-        <p>What does the function <c>find</c> return if the character is not found in the string? <var/>  </p>
+        <p>What does the function <c>find</c> return if the character is not found in the string? <fillin width="20" mode="string" answer="-1"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition number="-1">
-            <feedback>
-              <p>If the character isn't in the string find returns -1.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Check the output of find(&#x2018;z') above</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>If the character isn't in the string <c>find</c> returns -1.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Check the output of <c>find(&#x2018;z')</c> above</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <note>
       <p>Strings are immutable, which means that they do not change.  String methods that appear to change a string return a new string.</p>

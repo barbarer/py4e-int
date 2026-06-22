@@ -1,0 +1,14 @@
+/* For displaying exercise ids */
+.ptx-content .runestone_caption,
+.runestone_caption {
+  display: block;
+}
+
+/* 
+    Work-around Parsons block overflow issue in source box when line numbering enabled.
+    Reported issue: https://github.com/RunestoneInteractive/rs/issues/1214
+ */
+.parsons .block-label.left-label {
+    font-size: 0.5em;
+    padding: .0em .5em .0em .2em; 
+}

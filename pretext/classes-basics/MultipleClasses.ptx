@@ -107,7 +107,7 @@ print(r2.area())
     </activity>
     <activity label="mult_class_rectangle_object_methods">
       <statement>
-        <p>Q-2: Look at the code above.  What are the object methods in the <c>Rectangle</c> class?  Pick all that apply.</p>
+        <p> Look at the code above.  What are the object methods in the <c>Rectangle</c> class?  Pick all that apply.</p>
       </statement>
       <choices>
         <choice>
@@ -146,7 +146,7 @@ print(r2.area())
     </activity>
     <activity label="mult_class_point_rect_mcq2">
       <statement>
-        <p>Q-3: Look at the code above.  What type of thing (class) is <c>p1</c> in the <c>__init__</c> method in the <c>Rectangle</c> class?</p>
+        <p> Look at the code above.  What type of thing (class) is <c>p1</c> in the <c>__init__</c> method in the <c>Rectangle</c> class?</p>
       </statement>
       <choices>
         <choice correct="yes">
@@ -177,7 +177,7 @@ print(r2.area())
     </activity>
     <activity label="mult_class_point_attributes">
       <statement>
-        <p>Q-4: Look at the code above.  What are the object attributes in the <c>Point</c> class?  Pick all that apply.</p>
+        <p> Look at the code above.  What are the object attributes in the <c>Point</c> class?  Pick all that apply.</p>
       </statement>
       <choices>
         <choice correct="yes">
@@ -226,7 +226,7 @@ print(r2.area())
     <p>When the game starts all of the cards are all face down in rows and columns.  You click on a card to select it and it turns over to show the suit and rank (value).  Then you click another card to select it and it also turns face up.  If the two cards match (have the same rank and value) then the cards stay facing up.  Otherwise they both turn down and you take another turn.  You win when you have found all of the matches.  The game keeps track of the total time it took you to find all of the matches.</p>
     <activity label="mult_class_card_game_classes">
       <statement>
-        <p>Q-5: Look at explanation of the game above.  Which of the following nouns could be classes?</p>
+        <p> Look at explanation of the game above.  Which of the following nouns could be classes?</p>
       </statement>
       <choices>
         <choice correct="yes">
@@ -265,7 +265,7 @@ print(r2.area())
     </activity>
     <activity label="mult_class_card_game_bevaiors">
       <statement>
-        <p>Q-6: Look at explanation of the game above.  Which of the following verbs could be methods (behaviors)?</p>
+        <p> Look at explanation of the game above.  Which of the following verbs could be methods (behaviors)?</p>
       </statement>
       <choices>
         <choice correct="yes">
@@ -361,26 +361,23 @@ if __name__ == "__main__":
                 Each object of the <c>Card</c> class doesn't need to have its own copy of these lists.  That would be a waste of space. Instead they are created in the class and all objects of the class have access to it.</p>
     <activity label="mult_class_attribute_fitb">
       <statement>
-        <p>Q-8: Use <BlankNode/>.rank_names to access the class attribute <c>rank_names</c> in the <c>Card</c> class. <var/>  </p>
+        <p> Use <fillin width="20" mode="string" answer="Card"/>.rank_names to access the class attribute <c>rank_names</c> in the <c>Card</c> class.</p>
       </statement>
-      <setup>
-        <var>
-          <condition string="Card">
-            <feedback>
-              <p>Use the name of the class to access a class attribute</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Look at the __init__ method in the Deck class</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>Use the name of the class to access a class attribute</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Look at the __init__ method in the Deck class</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="mult-classes-card-attributes-vs-class">
       <statement>
-        <p>Q-9: Look at class <c>Card</c> above.  Which of the following are object attributes?  Select all that apply.</p>
+        <p> Look at class <c>Card</c> above.  Which of the following are object attributes?  Select all that apply.</p>
       </statement>
       <choices>
         <choice>
@@ -419,33 +416,33 @@ if __name__ == "__main__":
     </activity>
     <activity label="mult_class_diff_class_and_object_attribute">
       <statement>
-        <p>Q-10: How can you tell if an attribute is a class or object attribute?</p>
+        <p> How can you tell if an attribute is a class or object attribute?</p>
       </statement>
     </activity>
     <activity label="mult_class_deck_who_creates_cards_fitb">
       <statement>
-        <p>Q-11: The <fillin width="20" mode="string" answer="__init__"/> function in class <fillin width="20" mode="string" answer="Deck"/> creates all of the card objects in the deck object.</p>
+        <p> The <fillin width="20" mode="string" answer="__init__"/> function in class <fillin width="20" mode="string" answer="Deck"/> creates all of the card objects in the deck object.</p>
       </statement>
       <evaluation>
-         <evaluate>
-            <test correct="yes">
-               <strcmp use-answer="yes"/>
-               <feedback><p>The __init__ function creates all 52 cards</p></feedback>
-            </test>
-            <test>
-              <feedback><p>An object of a class is created with Class()</p></feedback>
-           </test>
-        </evaluate>
-         <evaluate>
-            <test correct="yes">
-               <strcmp use-answer="yes"/>
-               <feedback><p>The Deck class creates the 52 cards when you create a new deck</p></feedback>
-            </test>
-            <test>
-              <feedback><p>Which class creates multiple cards?</p></feedback>
-           </test>
-        </evaluate>
-      </evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The __init__ function in the Deck class creates all 52 cards</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>An object of a class is created with Class()</p></feedback>
+                  </test>
+          </evaluate>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The Deck class creates the 52 cards when you create a new deck</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Which class creates multiple cards?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <p>Use the following UML class diagram to answer the next few questions.</p>
     <figure align="">
@@ -453,7 +450,7 @@ if __name__ == "__main__":
     </figure>
     <activity label="mult-classes-flight-airport-mcq1">
       <statement>
-        <p>Q-12: Look at class diagram for <c>Flight</c> and <c>Airport</c> above.  How many object attributes does a <c>Flight</c> object have?</p>
+        <p> Look at class diagram for <c>Flight</c> and <c>Airport</c> above.  How many object attributes does a <c>Flight</c> object have?</p>
       </statement>
       <choices>
         <choice>
@@ -558,7 +555,7 @@ myTests().main()
     </activity>
     <activity label="mult_class_relationship_between_classes_sa">
       <statement>
-        <p>Q-15: What is the relationship between the example classes on this page, such as <c>Point</c> and <c>Rectangle</c> or <c>Item</c> and <c>Order</c>?  How do they relate to each other?</p>
+        <p> What is the relationship between the example classes on this page, such as <c>Point</c> and <c>Rectangle</c> or <c>Item</c> and <c>Order</c>?  How do they relate to each other?</p>
       </statement>
     </activity>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>

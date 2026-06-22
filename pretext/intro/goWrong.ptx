@@ -4,6 +4,7 @@
 <idx>Syntax Error</idx>
 <idx>Semantic Error</idx>
 <idx>Logic Error</idx>
+<idx>Runtime Error</idx>
   <p>As we saw in our earliest conversations with Python, we must communicate
             very precisely when we write Python code. The smallest deviation or
             mistake will cause Python to give up looking at your program.</p>
@@ -50,7 +51,7 @@ SyntaxError: invalid syntax
             just don't understand what you meant, but please keep talking to me
             (<c>&gt;&gt;&gt;</c>).</q></p>
   <p>As your programs become increasingly sophisticated, you will encounter
-            three general types of errors:</p>
+            four general types of errors:</p>
   <p>
         <dl>
           <li>
@@ -94,14 +95,32 @@ SyntaxError: invalid syntax
                                 while my instructions were syntactically correct, they sadly
                                 contained a small but undetected semantic error.</q>.</p>
           </li>
+          <li>
+            <title>Runtime errors</title>
+            <p>A runtime error is a type of error that occurs when the program is syntactically
+              correct, but something goes wrong while the program is <em>running</em> that causes it to stop 
+              immediately, or "crash". For example, if you have a program that asks the user for 
+              a number that is used to divide another number, and the user enters 0, it causes 
+              the program to crash because division by zero is not defined mathematically. </p>
+
+              <p>Another example is trying to add a number and a string. For example, the statement
+              <c>total = 20 + "five"</c> is syntactically correct, so Python is able to parse the code.
+              However, when Python attempts to run this statement, it does not know how to add 
+              a number and a string together, so the program stops with an error.</p>
+
+              <p>Runtime errors differ from syntax errors because Python cannot detect them until 
+              the program is actually running. When a runtime error occurs, Python displays an 
+              error message that includes the name of the error. Common examples are  <c>ValueError</c>,
+              <c>TypeError</c>, and <c>NameError</c>. You will learn more about these in later chapters.</p>
+          </li>
         </dl>
 
   </p>
-  <p>Again in all three types of errors, Python is merely trying its hardest
+  <p>Again in all four types of errors, Python is merely trying its hardest
             to do exactly what you have asked.</p>
   <activity label="intro-gowrong-mc-error">
     <statement>
-      <p>Q-1: What type of error would this code produce?</p>
+      <p> What type of error would this code produce?</p>
       <pre>print "Hello world!"</pre>
     </statement>
     <choices>
@@ -141,7 +160,7 @@ SyntaxError: invalid syntax
   </activity>
   <activity label="intro-gowrong-mc-semantic">
     <statement>
-      <p>Q-2: Which of the following is a semantic error?</p>
+      <p> Which of the following is a semantic error?</p>
     </statement>
     <choices>
       <choice correct="yes">
@@ -170,9 +189,38 @@ SyntaxError: invalid syntax
       </choice>
     </choices>
   </activity>
+<activity label="intro-gowrong-fitb-error-type">
+    <statement>
+      <p>A <c>ValueError</c> is an example of a <fillin width="15" mode="string" answer="runtime" /> error.
+      </p>
+    </statement>
+    <evaluation>
+      <evaluate>
+        <test correct="yes">
+          <strcmp case="insensitive" use-answer="yes" />
+          <feedback>
+            <p>A runtime error is an error that occurs while the program is running, 
+              and it causes the program to stop immediately.</p>
+          </feedback>
+        </test>
+        <test>
+          <strcmp case="insensitive">syntax</strcmp>
+          <feedback>
+            <p>A syntax error is an error that occurs when the code does not follow the grammar 
+              rules of Python, and it prevents the program from running at all.</p>
+          </feedback>
+        </test>
+        <test>
+          <feedback>
+            <p>Try again.</p>
+          </feedback>
+        </test>
+      </evaluate>
+    </evaluation>
+  </activity>
   <activity label="intro-gowrong-mc-syntax">
     <statement>
-      <p>Q-3: Who/what finds syntax errors?</p>
+      <p> Who/what finds syntax errors?</p>
     </statement>
     <choices>
       <choice>

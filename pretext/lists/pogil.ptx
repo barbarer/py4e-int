@@ -65,7 +65,7 @@ print(len(digits))
   </activity>
   <activity label="listOp_MC_list">
     <statement>
-      <p>Q-2: Which of the lists in the code have the most number of items?</p>
+      <p>Which of the lists in the code have the most number of items?</p>
     </statement>
     <choices>
       <choice correct="yes">
@@ -104,41 +104,35 @@ print(len(digits))
   </activity>
   <activity label="list_len_digit">
     <statement>
-      <p>Q-3: What is printed by line 4? <var/>  </p>
+      <p>What is printed by line 4? <fillin width="20" mode="string" answer="10"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition number="10">
-          <feedback>
-            <p>Nice job! len(list) returns the number of items in the list</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!  How many items are in digits at this point?</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>Nice job! The code <c>len(list)</c> returns the number of items in the list</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!  How many items are in digits at this point?</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="index_last_studentData">
     <statement>
-      <p>Q-4: What is the index of the last item in studentData at line 3? <var/>  </p>
+      <p>What is the index of the last item in studentData at line 3? <fillin width="20" mode="string" answer="3"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition number="3">
-          <feedback>
-            <p>The last item is at the length of the list minus one.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Remember that the first item is at index 0.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>The last item is at the length of the list minus one.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Remember that the first item is at index 0.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="par_ex_group1" indentation="hide" language="python">
     <statement>
@@ -166,7 +160,7 @@ print(areaCode * 3)
   </activity>
   <activity label="listOp_MC_plus312">
     <statement>
-      <p>Q-7: What is printed by the following code?</p>
+      <p>What is printed by the following code?</p>
     </statement>
     <choices>
       <choice>
@@ -205,26 +199,23 @@ print(areaCode * 3)
   </activity>
   <activity label="list_area_code">
     <statement>
-      <p>Q-8: What is the index of 3 in the list areaCode? <var/>  </p>
+      <p>What is the index of 3 in the list <c>areaCode</c>? <fillin width="20" mode="string" answer="0"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition number="0">
-          <feedback>
-            <p>Correct! 3 is at the begininng of the list.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try Again! Use .index() to hel find where the index of 3 is.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>Correct! The 3 is at the begininng of the list.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try Again! Use .index() to hel find where the index of 3 is.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="listOp_MC_plus773">
     <statement>
-      <p>Q-9:  Which of the following lines could you use to add 7 to the list to become [3, 1, 2, 7,]?</p>
+      <p>Which of the following lines could you use to add 7 to the list to become [3, 1, 2, 7,]?</p>
     </statement>
     <choices>
       <choice correct="yes">
@@ -312,26 +303,23 @@ print()
   </activity>
   <activity label="list_print_out">
     <statement>
-      <p>Q-12: How many items are in the list <c>bigCities</c>? <var/>  </p>
+      <p>How many items are in the list <c>bigCities</c>? <fillin width="20" mode="string" answer="4"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition number="4">
-          <feedback>
-            <p>Yes! there are four items in this list.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try Again! use len() to find the size of the list.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>Yes! there are four items in this list.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try Again! use len() to find the size of the list.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="listOp_MC_idx">
     <statement>
-      <p>Q-13: What is the index of <q>Detroit</q> in the list <c>bigCities</c>?</p>
+      <p>What is the index of <q>Detroit</q> in the list <c>bigCities</c>?</p>
     </statement>
     <choices>
       <choice>

@@ -208,22 +208,19 @@
     </hint>
     <activity label="csv_file_stocks_max_close_fitb">
       <statement>
-        <p>Q-1: What is the highest closing value in the file above?  The closing value is the last value on each line. <var/>  </p>
+        <p>What is the highest closing value in the file above?  The closing value is the last value on each line. <fillin width="20" mode="string" answer="11497.12"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition number="11497.12">
-            <feedback>
-              <p>This is the highest value at the close.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Look at the last value on each line and find the highest value.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>This is the highest value at the close.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Look at the last value on each line and find the highest value.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <p>We can write Python code to read the data and find the date with the highest value at the close.</p>
     <activity label="csv_file_stocks_find_date_with_highest_close_ac">
@@ -266,22 +263,19 @@ print(f"Max close {max_close} on {max_date}")
                 as the keys for each inner dictionary.</p>
     <activity label="csv_file_stocks_min_close_fitb">
       <statement>
-        <p>Q-3: What is the lowest closing value in the stocks.txt file above? <var/>  </p>
+        <p>What is the lowest closing value in the stocks.txt file above? <fillin width="20" mode="string" answer="2258.39"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition number="2258.39">
-            <feedback>
-              <p>This is the lowest value at the close.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Look at the last value on each line and find the lowest value.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>This is the lowest value at the close.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Look at the last value on each line and find the lowest value.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="csv_file_stocks_read_into_dictionary_ac">
       <statement>
@@ -402,7 +396,7 @@ print(f"Min close {min_close} on {min_date}")
     </activity>
     <activity label="csv_file_strip_with_params_mcq">
       <statement>
-        <p>Q-6: What is output from the following code?</p>
+        <p>What is output from the following code?</p>
         <pre>print(' "1958"'.strip('"'))</pre>
       </statement>
       <choices>
@@ -579,22 +573,19 @@ myTests().main()
     </activity>
     <activity label="csv_file_air_travel_most_month_1958_fitb">
       <statement>
-        <p>Q-9: Which month had the most passengers travelling by air in 1958?  Enter the three letter code from the file for the month. <var/>  </p>
+        <p>Which month had the most passengers travelling by air in 1958?  Enter the three letter code from the file for the month. <fillin width="20" mode="string" answer="AUG"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="AUG">
-            <feedback>
-              <p>August 1958 had the highest number of passengers.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Look at the values for 1958 in the file.  What is the highest number?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>August 1958 had the highest number of passengers.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Look at the values for 1958 in the file.  What is the highest number?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="csv_file_airtravel_get_max_month_ac">
       <statement>

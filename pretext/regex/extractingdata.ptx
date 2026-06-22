@@ -120,27 +120,22 @@ for line in hand:
   <pre>[a-zA-Z0-9]\S*@\S*[a-zA-Z]</pre>
   <activity label="re_data_fitb">
     <statement>
-      <p>11-9-4: <BlankNode/> are used to indicate a set of multiple acceptable characters we are willing to consider matching. <var/>  </p>
+      <p>11-9-4: <fillin width="20" mode="string" answer="[]]"/> are used to indicate a set of multiple acceptable characters we are willing to consider matching.</p>
     </statement>
-    <setup>
-      <var>
-        <condition string="(?:square\s+brackets|\[\])">
-          <feedback>
-            <p>Correct! Square brackets are used when matching multiple sets of characters.</p>
-          </feedback>
-        </condition>
-        <condition string="brackets">
-          <feedback>
-            <p>What type?</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp>(?:[Ss]quare\s+brackets|\[\])</strcmp>
+                    <feedback><p>Correct! Square brackets are used when matching multiple sets of characters.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>What type?</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>This is getting a little complicated and you can begin to see why
             regular expressions are their own little language unto themselves.
