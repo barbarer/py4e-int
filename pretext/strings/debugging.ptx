@@ -38,7 +38,7 @@ IndexError: string index out of range
   </program>
   <activity label="str-debug-fitb-error">
     <statement>
-      <p>What kind of error will come from trying to access a nonexistent element or one that is out of range? <fillin width="20" mode="string" answer="index error"/>  </p>
+      <p>What kind of error will come from trying to access a nonexistent element or one that is out of range? <fillin width="20" mode="string" answer="IndexError"/>  </p>
     </statement>
     <evaluation>
         <evaluate>
@@ -94,7 +94,7 @@ if len(line) &gt; 0 and line[0] == '#':
     <evaluation>
         <evaluate>
                 <test correct="yes">
-                    <strcmp use-answer="yes" case="insensitive"/>
+                    <strcmp case="insensitive">guardian pattern|guardian</strcmp>
                     <feedback><p>Correct! A guardian pattern can be used as an extra check to prevent errors.</p></feedback>
                 </test>
                 <test>
