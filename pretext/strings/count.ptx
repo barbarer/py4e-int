@@ -73,25 +73,34 @@ print(count)
       </choice>
     </choices>
   </activity>
-  <activity>
-  <statement>
-    <p>
-      Write a function that takes a string and a character as arguments and
-      returns the count of the character within the string.
-    </p>
-  </statement>
 
-  <program xml:id="stringCount" interactive="codelens" language="python">
+  <activity label="str-count-errors">
+    <statement>
+      <p>
+        There are four errors in the following code. Fix the function so it takes 
+        a string and a character as arguments and returns the count of the character 
+        within the string.
+      </p>
+    </statement>
 
-    <code>
+    <program xml:id="stringCount" interactive="codelens" language="python">
+      <code>
 def count(text, aChar):
-    count = 0
-    for c in text:
-        if c == aChar:
-            count += 1
-    return count
-    </code>
+  count = 0
+  for c in text:
+    if c == aChar:
+      count = count + 1
+  return count
+      </code>
+    </program>
 
-  </program>
-</activity>
+    <solution>
+      <p>
+        To fix the function, ensure that the four syntax or logic errors are corrected: 
+        properly initialize the count variable to 0, use the correct loop syntax to 
+        iterate through the string, check for equality using the == operator, and 
+        properly increment the count before returning the final total.
+      </p>
+    </solution>
+  </activity>
 </section>
