@@ -20,24 +20,14 @@ class myTests(TestCaseGui):
 myTests().main()
       </code>
     </program>
-    <blocks xml:id="str-ex-hiansw" submission="program">
-      <block order="1">
-        <cline>s1 = "hi"</cline>
-      </block>
-      <block order="2">
-        <choice correct="yes">
-          <cline>s1 = s1.capitalize()</cline>
-        </choice>
-        <choice>
-          <cline>s1.capitalize()</cline>
-        </choice>
-      </block>
-      <block order="3">
-        <cline>print(s1)</cline>
-      </block>
-    </blocks>
     <solution>
       <p>Strings are immutable, meaning method alterations like <c>.capitalize()</c> do not modify the string in place. You must assign the result back to <c>s1</c>.</p>
+       <code>
+s1 = "hi"
+s1 = s1.capitalize()
+print(s1)
+
+      </code>
     </solution>
   </exercise>
 
@@ -70,9 +60,6 @@ myTests().main()
         <cline>print(s2)</cline>
       </block>
     </blocks>
-    <solution>
-      <p>Using string slicing notation <c>[start:end]</c>, the index for <c>m</c> is 13 and the index following <c>w</c> is 17.</p>
-    </solution>
   </exercise>
 
   <exercise label="str-ex-eggs-toggle">
@@ -90,21 +77,12 @@ class myTests(TestCaseGui):
 myTests().main()
       </code>
     </program>
-    <blocks xml:id="str-ex-eggsansw" submission="program">
-      <block order="1">
-        <cline>sentence = 'I like green eggs'</cline>
-      </block>
-      <block order="2">
-        <cline>print('The length is ' + str(len(sentence)))</cline>
-      </block>
-    </blocks>
     <solution>
       <p>Wrap <c>len()</c> inside <c>str()</c> to safely concatenate it with the leading literal descriptor.</p>
       <code>
 s1 = "I like green eggs"
 print("The length is " + str(len(s1)))
       </code>
-
     </solution>
   </exercise>
 
@@ -114,8 +92,7 @@ print("The length is " + str(len(s1)))
     </statement>
     <program xml:id="str-ex-countacq" interactive="activecode" language="python">
       <code>
-def count(text, letter):
-    return text.count(letter)
+
 
 ====
 from unittest.gui import TestCaseGui
@@ -134,9 +111,6 @@ myTests().main()
         <cline>    return str.count(letter)</cline>
       </block>
     </blocks>
-    <solution>
-      <p>Define the signature mapping two parameters, and forward evaluation using Python's native <c>.count()</c> string tool.</p>
-    </solution>
   </exercise>
 
   <exercise label="str-ex-float-toggle">
@@ -146,8 +120,6 @@ myTests().main()
     <program xml:id="str-ex-floatacq" interactive="activecode" language="python">
       <code>
 string = "X-DSPAM-Confidence: 0.8475"
-colonpos = string.find(':')
-num = float(string[colonpos+1:])
 
 ====
 from unittest.gui import TestCaseGui
@@ -157,19 +129,13 @@ class myTests(TestCaseGui):
 myTests().main()
       </code>
     </program>
-    <blocks xml:id="str-ex-floatansw" submission="program">
-      <block order="1">
-        <cline>string = "X-DSPAM-Confidence: 0.8475"</cline>
-      </block>
-      <block order="2">
-        <cline>colonpos = string.find(':')</cline>
-      </block>
-      <block order="3">
-        <cline>num = float(string[colonpos + 1:])</cline>
-      </block>
-    </blocks>
     <solution>
       <p>Isolate the colon position index dynamically, slice safely forward from that marker, and run type casting via <c>float()</c>.</p>
+      <code>
+string = "X-DSPAM-Confidence: 0.8475"
+colonpos = string.find(':')
+num = float(string[colonpos+1:])
+      </code>
     </solution>
   </exercise>
 
