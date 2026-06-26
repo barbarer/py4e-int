@@ -91,6 +91,19 @@ def count(text, aChar):
     if c == aChar:
       count = count + 1
   return count
+
+  from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        # Format: self.assertEqual(actual_expression, expected_value, feedback_string)
+        self.assertEqual(count('banana', 'a'), 3, "Tested 'a' in 'banana'")
+        self.assertEqual(count('pineapple', 'a'), 1, "Tested 'a' in 'pineapple'")
+        self.assertEqual(count('pepperoni pizza', 'p'), 4, "Tested 'p' in 'pepperoni pizza'")
+        self.assertEqual(count('racecar', 'r'), 2, "Tested 'r' in 'racecar'")
+
+myTests().main()
+      </code>
       </code>
     </program>
 
