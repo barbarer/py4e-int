@@ -34,7 +34,7 @@
                 quotes ("). Depending on the application, we can treat a string as
                 a single value (e.g., <c>sentence</c>), or we can access individual
                 characters using square brackets (e.g., <c>sentence[0]</c>). We can also
-                use <term>slice notation</term> (e.g., <c>sentece[4:8]</c>) to refer to a range of
+                use <term>slice notation</term> (e.g., <c>sentence[4:8]</c>) to refer to a range of
                 characters. In fact, all types of sequences (including <c>list</c>
                 and <c>tuple</c>) support indexing and slicing.</p>
 
@@ -216,12 +216,67 @@ print(triplet)
                 end.</q> The slice <c>[:n]</c> means <q>from the beginning to the index
                 just before <c>n</c></q> (i.e., the first <c>n</c> characters).</p>
 
-        <activity label="strings_fitb_pogil_smarpos">
-            <statement>
-    <p>11-9-5: Write a Python expression that slices <q>smar</q> from <c>sentence</c> using only <em>positive</em> indexes. Reminder: <c>sentence</c> = <q>I_am_smart</q>. <var/>  </p></statement><setup><var><condition string="sentence\[5:9\]"><feedback><p>Correct! This slice starts at &#8216;s', which is index 5, and stops after including &#8216;r' at index 8, which is one index before 9.</p></feedback></condition><condition string="sentence\[5:8\]"><feedback><p>Incorrect! The second number in the slice is the index after the index of the last character you want to include. Try again.</p></feedback></condition><condition string=".*"><feedback><p>Incorrect! Write your answer in the form <q>sentence[m:n]</q>. Try again.</p></feedback></condition></var></setup></activity>
-        <activity label="strings_fitb_pogil_smarneg">
-            <statement>
-    <p>11-9-6: Write a Python expression that slices <q>smar</q> from <c>sentence</c> using only <em>negative</em> indexes. Reminder: <c>sentence</c> = <q>I_am_smart</q>. <var/>  </p></statement><setup><var><condition string="sentence\[-5:-1\]"><feedback><p>Correct! This slice starts at &#8216;s', which is index -5, and stops after including &#8216;r' at index -2, which is one index before -1.</p></feedback></condition><condition string="sentence\[-5:0\]"><feedback><p>Incorrect! Remember, the last character in the string has the index -1. Try again.</p></feedback></condition><condition string=".*"><feedback><p>Incorrect! Write your answer in the form <q>sentence[-m:-n]</q>. Try again.</p></feedback></condition></var></setup></activity>        </subsection>
+<activity label="strings_fitb_pogil_smarpos">
+  <statement>
+    <p>11-9-5: Write a Python expression that slices <q>smar</q> from <c>sentence</c> using only <em>positive</em> indexes. Reminder: <c>sentence</c> = <q>I_am_smart</q>. 
+    <fillin width="20" mode="string" answer="sentence[5:9]"/>  </p>
+  </statement>
+  <evaluation>
+    <evaluate>
+      <test correct="yes">
+        <strcmp use-answer="yes" case="insensitive"/>
+        <feedback>
+          <p>Correct! This slice starts at ‘s', which is index 5, and stops after including ‘r' at index 8, which is one index before 9.</p>
+        </feedback>
+      </test>
+      
+      <test>
+        <strcmp case="insensitive">sentence[5:8]</strcmp>
+        <feedback>
+          <p>Incorrect! The second number in the slice is the index after the index of the last character you want to include. Try again.</p>
+        </feedback>
+      </test>
+      
+      <test>
+        <feedback>
+          <p>Incorrect! Write your answer in the form <q>sentence[m:n]</q>. Try again.</p>
+        </feedback>
+      </test>
+    </evaluate>
+  </evaluation>
+</activity>
+
+<activity label="strings_fitb_pogil_smarneg">
+  <statement>
+    <p>11-9-6: Write a Python expression that slices <q>smar</q> from <c>sentence</c> using only <em>negative</em> indexes. Reminder: <c>sentence</c> = <q>I_am_smart</q>. 
+    <fillin width="20" mode="string" answer="sentence[-5:-1]"/>  </p>
+  </statement>
+  <evaluation>
+    <evaluate>
+      <test correct="yes">
+        <strcmp use-answer="yes" case="insensitive"/>
+        <feedback>
+          <p>Correct! This slice starts at ‘s', which is index -5, and stops after including ‘r' at index -2, which is one index before -1.</p>
+        </feedback>
+      </test>
+      
+      <test>
+        <strcmp case="insensitive">sentence[-5:0]</strcmp>
+        <feedback>
+          <p>Incorrect! Remember, the last character in the string has the index -1. Try again.</p>
+        </feedback>
+      </test>
+      
+      <test>
+        <feedback>
+          <p>Incorrect! Write your answer in the form <q>sentence[-m:-n]</q>. Try again.</p>
+        </feedback>
+      </test>
+    </evaluate>
+  </evaluation>
+</activity>
+</subsection>
+
         <subsection xml:id="strings_common-string-methods">
             <title>Common String Methods</title>
             <p>Strings have <term>methods</term> (built-in functions) that can be called
