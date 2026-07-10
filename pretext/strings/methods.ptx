@@ -163,7 +163,7 @@ print(line.lower().startswith('h'))
             use <c>startswith</c> to see if the resulting lowercase string
             starts with the letter <q>h</q>. As long as we are careful with the order, we
             can make multiple method calls in a single expression.</p>
-  <activity>
+  <activity xml:id="countss" label="countss" >
   <statement>
     <p>
       Fix the following function. It should use the string method <c>count</c> to count the number of times a
@@ -171,7 +171,7 @@ print(line.lower().startswith('h'))
     </p>
   </statement>
 
-  <program xml:id="countss" interactive="codelens" language="python">
+  <program interactive="codelens" language="python">
     <code>
 def countSS(word):
   counter == count(word, 'ss'):
