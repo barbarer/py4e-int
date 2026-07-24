@@ -14,14 +14,9 @@ print("Her name is " + name +  and her favorite food is "  food + ".")
         </code>
           </program>
           <solution>
-
-
-    
-                        There are 3 syntax errors in the following code. Fix it to print correctly
-                            without errors. It will print, <q>Her name is Molly and her favorite food is tuna</q>.
-
-    
-    <program xml:id="var-wc-syntaxA_editor"  interactive="activecode" language="python"><code>
+            <statement><p>There are 3 syntax errors in the following code. Fix it to print correctly
+                            without errors. It will print, <q>Her name is Molly and her favorite food is tuna</q>.</p>
+<program xml:id="var-wc-syntaxA_editor"  interactive="activecode" language="python"><code>
 # Each set of quotes needs to be matching
 food = 'tuna'
 name = 'Molly'
@@ -31,21 +26,8 @@ name = 'Molly'
 # Add + between strings
 print("Her name is " + name + " and her favorite food is " + food + ".")
         </code></program>
+</solution>          
 
-                    
-<!--
-<activity label="var-wc-syntaxA"><statement><p>There are 3 syntax errors in the following code. Fix it to print correctly
-                            without errors. It will print, <q>Her name is Molly and her favorite food is tuna</q>.</p></statement><program xml:id="var-wc-syntaxA_editor" interactive="activecode" language="python"><code>
-# Each set of quotes needs to be matching
-food = 'tuna'
-name = 'Molly'
-
-# Place full sets of quotes around strings to be printed
-# Include spaces before and after where variables are printed
-# Add + between strings
-print("Her name is " + name + " and her favorite food is " + food + ".")
-    </code></program></activity>-->
-                    </solution>
         </activity>
 
         <activity label="var-wc-fruitq" exercise-interactive="coding">
@@ -84,14 +66,11 @@ myTests().main()
         </code>
           </program>
           <solution>
-
-
-    
-                        Take the phrase: twinkle twinkle little star.
+            <statement>
+              <p>Take the phrase: twinkle twinkle little star.
                             Store each word in a separate variable, then print out the sentence on
-                            one line using print.
-
-    
+                            one line using print.</p>
+            </statement>
     <program xml:id="var-wc-rhymeA_editor" language="python"><code>
 # Set each word to its own variable
 word1 = "twinkle"
@@ -105,25 +84,9 @@ print(word1, word1, word2, word3)
 #another option is
 #print(word1 + " " + word1 + " " + word2 + " " + word3)
         </code></program>
+        </solution>
 
-                    
-
-<!--<activity label="var-wc-rhymeA"><statement><p>Take the phrase: <term>twinkle twinkle little star</term>.
-                            Store each word in a separate variable, then print out the sentence on
-                            one line using <c>print</c>.</p></statement><program xml:id="var-wc-rhymeA_editor" interactive="activecode" language="python"><code>
-# Set each word to its own variable
-word1 = "twinkle"
-word2 = "little"
-word3 = "star"
-
-# Print each word in succession
-# Using commas automaticallly inserts spaces
-print(word1, word1, word2, word3)
-
-#another option is
-#print(word1 + " " + word1 + " " + word2 + " " + word3)
-    </code></program></activity>-->
-                    </solution>
+                  
         </activity>
 
         <activity label="var-wc-order">
