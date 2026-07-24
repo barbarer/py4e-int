@@ -27,7 +27,18 @@ print(spacepos)
 host = data[atpos + 1:spacepos]
 print(host)
     </code>
-  </program>
+<question break-at="4" type="shortanswer">
+<statement>
+  <p>What is the value of spacepos after the line with the red arrow executes?</p>
+</statement>
+<answer>
+  <value>31</value>
+</answer>
+<feedback>
+  <p>Correct! The find method starts looking at index 21 (the '@') and finds the next space character at index 31.</p>
+</feedback>
+</question>
+</program>
   <p>We use a version of the <c>find</c> method which allows us to
             specify a position in the string where we want <c>find</c> to
             start looking. When we slice, we extract the characters from one beyond
