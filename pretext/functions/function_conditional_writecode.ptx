@@ -2,14 +2,14 @@
 <section xml:id="functions_functions-and-conditionals-write-code-questions">
   <title>Functions and Conditionals Write Code Questions</title>
 
-        <activity>
+        <activity xml:id="funct_conditional_writecode1q_editor">
           <statement>
             <p>Write a function called <c>cropped_photo</c> that takes the <c>height</c> and <c>width</c> of a photo.
                             If the <c>height</c> and <c>width</c> are equal, then the function returns <c>"Cropped Photo"</c>. Otherwise,
                             it returns <c>"The photo needs to be cropped."</c> Assume <c>height</c> and <c>width</c> are positive. For example,
                             <c>cropped_photo(23.2, 23.2)</c> should return <c>"Cropped Photo"</c>.</p>
           </statement>
-          <program interactive="activecode" language="python" xml:id="funct_conditional_writecode1q_editor">
+          <program interactive="activecode" language="python">
             <code>
 def cropped_photo(height, width):
     # write code here
@@ -27,27 +27,18 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
           </program>
-          <solution>
-
-
-    
-                        Write a function called cropped_photo that takes the height and width of a photo.
+          <solution><p>Write a function called cropped_photo that takes the height and width of a photo.
                             If the height and width are equal, then the function returns "Cropped Photo". Otherwise,
                             it returns "The photo needs to be cropped." Assume height and width are positive. For example,
-                            cropped_photo(23.2, 23.2) should return "Cropped Photo".
-
-    
-    <program xml:id="funct_conditional_writecode1a_editor" language="python"><code>
+                            cropped_photo(23.2, 23.2) should return "Cropped Photo".</p><program language="python" interactive="activecode"><code>
 def cropped_photo(height, width):
     if height == width:
         return "Cropped Photo"
     else:
         return "The photo needs to be cropped."
-        </code></program>
-                    </solution>
-        </activity>
+        </code></program></solution></activity>
 
-        <activity label="funct_conditional_writecode2q">
+        <activity label="funct_conditional_writecode2q" xml:id="funct_conditional_writecode2q_editor">
           <statement>
             <p>Write a function called <c>bonus</c> that takes two parameters, <c>years</c> and <c>quality</c>.
                     If <c>years</c> is more than 5, then the person gets a bonus.
@@ -56,7 +47,7 @@ def cropped_photo(height, width):
                     If the person is eligible for a bonus, return <c>"Eligible for Bonus"</c>. Otherwise, return <c>"Ineligible for Bonus"</c>.
                     For example, <c>bonus(3, 81)</c> should return <c>"Eligible for Bonus"</c>.</p>
           </statement>
-          <program xml:id="funct_conditional_writecode2q_editor" interactive="activecode" language="python">
+          <program interactive="activecode" language="python">
             <code>
 def bonus(years, quality):
     # write code here
@@ -81,13 +72,13 @@ myTests().main()
           </program>
         </activity>
 
-        <activity>
+        <activity xml:id="funct_conditional_writecode3q_editor">
           <statement>
             <p>Write a function called <c>move_elevator</c> that takes two parameters, <c>current_floor</c> and <c>next_floor</c>. If the elevator moves
                             to a floor above, then it should return <c>"Up"</c>. Otherwise, it should return <c>"Down"</c>. Also, if <c>next_floor</c> is the same as <c>current_floor</c>, it should return 0.
                             Assume there are no 0 or negative floors. For example, <c>move_elevator(5, 8)</c> should return <c>"Up"</c>.</p>
           </statement>
-          <program interactive="activecode" language="python" xml:id="funct_conditional_writecode3q_editor">
+          <program interactive="activecode" language="python">
             <code>
 def move_elevator(current_floor, next_floor):
     # write code here
@@ -105,16 +96,9 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
           </program>
-          <solution>
-
-
-    
-                        Write a function called move_elevator that takes two parameters, current_floor and next_floor. If the elevator moves
+          <solution><p>Write a function called move_elevator that takes two parameters, current_floor and next_floor. If the elevator moves
                             to a floor above, then it should return "Up". Otherwise, it should return "Down". Also, if next_floor is the same as current_floor, it should return 0.
-                            Assume there are no 0 or negative floors. For example, move_elevator(5, 8) should return "Up".
-
-    
-    <program xml:id="funct_conditional_writecode3a_editor" language="python"><code>
+                            Assume there are no 0 or negative floors. For example, move_elevator(5, 8) should return "Up".</p><program language="python" interactive="activecode"><code>
 def move_elevator(current_floor, next_floor):
     if next_floor &lt; current_floor:
         return "Down"
@@ -122,18 +106,16 @@ def move_elevator(current_floor, next_floor):
         return "Up"
     else:
         return 0
-        </code></program>
-                    </solution>
-        </activity>
+        </code></program></solution></activity>
 
-        <activity label="funct_conditional_writecode4q">
+        <activity label="funct_conditional_writecode4q" xml:id="funct_conditional_writecode4q_editor">
           <statement>
             <p>Write a function called <c>lunch_break</c> that takes a parameter <c>class_standing</c> and determines how long a lunch break will be based on
-                    the student's class standing. If a person is a &#x2018;Freshman', return <c>40</c>. If a person is a &#x2018;Sophomore', return <c>30</c>.
-                    If a person is a &#x2018;Junior', return <c>20</c>. If a person is a &#x2018;Senior', return <c>15</c>. If a person is none of these, return <c>0</c>.
+                    the student's class standing. If a person is a ‘Freshman', return <c>40</c>. If a person is a ‘Sophomore', return <c>30</c>.
+                    If a person is a ‘Junior', return <c>20</c>. If a person is a ‘Senior', return <c>15</c>. If a person is none of these, return <c>0</c>.
                     For example, <c>lunch_break('Alumni')</c> should return <c>0</c>.</p>
           </statement>
-          <program xml:id="funct_conditional_writecode4q_editor" interactive="activecode" language="python">
+          <program interactive="activecode" language="python">
             <code>
 def lunch_break(class_standing):
     # write code here
@@ -155,14 +137,14 @@ myTests().main()
           </program>
         </activity>
 
-        <activity>
+        <activity xml:id="funct_conditional_writecode5q_editor">
           <statement>
             <p>Write a function called <c>pay_rent</c> that takes in one parameter,
                             <c>units</c>. If <c>units</c> is less than 200, return <c>"$100"</c>.
                             If <c>units</c> is less than 500 and greater than or equal to 200, return <c>"$200"</c>. Otherwise, return <c>"$300"</c>.
                             For example, <c>pay_rent(175)</c> should return <c>"$100"</c>.</p>
           </statement>
-          <program interactive="activecode" language="python" xml:id="funct_conditional_writecode5q_editor">
+          <program interactive="activecode" language="python">
             <code>
 def pay_rent(units):
     # write code here
@@ -186,17 +168,10 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
           </program>
-          <solution>
-
-
-    
-                        Write a function called pay_rent that takes in one parameter,
+          <solution><p>Write a function called pay_rent that takes in one parameter,
                             units. If units is less than 200, return "$100".
                             If units is less than 500 and greater than or equal to 200, return "$200". Otherwise, return "$300".
-                            For example, pay_rent(175) should return "$100".
-
-    
-    <program xml:id="funct_conditional_writecode5a_editor" language="python"><code>
+                            For example, pay_rent(175) should return "$100".</p><program language="python" interactive="activecode"><code>
 def pay_rent(units):
     if units &lt; 200:
         return "$100"
@@ -204,19 +179,17 @@ def pay_rent(units):
         return "$200"
     else:
         return "$300"
-        </code></program>
-                    </solution>
-        </activity>
+        </code></program></solution></activity>
 
-        <activity label="funct_conditional_writecode6q">
+        <activity label="funct_conditional_writecode6q" xml:id="funct_conditional_writecode6q_editor">
           <statement>
             <p>Write a function called <c>play_weather</c> that takes the string <c>weather</c> as a parameter and
-                    returns if one should play or not. If the <c>weather</c> is &#x2018;sunny' or &#x2018;cloudy', then the function
-                    should return <c>"The person should play"</c>. If the <c>weather</c> is &#x2018;rainy', &#x2018;windy' or &#x2018;snowy',
+                    returns if one should play or not. If the <c>weather</c> is ‘sunny' or ‘cloudy', then the function
+                    should return <c>"The person should play"</c>. If the <c>weather</c> is ‘rainy', ‘windy' or ‘snowy',
                     then the function should return <c>"The person should not play"</c>. If the <c>weather</c> is none of these, the
                     function should return <c>"It is not safe to go outside"</c>. For example, <c>play_weather('sunny')</c> should return <c>"The person should play"</c>.</p>
           </statement>
-          <program xml:id="funct_conditional_writecode6q_editor" interactive="activecode" language="python">
+          <program interactive="activecode" language="python">
             <code>
 def play_weather(weather):
     # write code here

@@ -2,7 +2,7 @@
 <section xml:id="dictionaries_write-code-questions">
   <title>Write Code Questions</title>
 
-        <activity>
+        <activity xml:id="dict_writecode1q_editor">
           <statement>
             <p>Write a program that categorizes each mail message by which day of the week
                             the commit was done. To do this, look for lines that start with <q>From</q>. Then,
@@ -10,7 +10,7 @@
                             At the end of the program, print out the contents of the dictionary <c>mail_count</c>
                             (order does not matter). For example, <c>mail_count['Mon']</c> should be <c>2</c>.</p>
           </statement>
-          <program interactive="activecode" language="python" xml:id="dict_writecode1q_editor">
+          <program interactive="activecode" language="python">
             <code>
 mail = ['From stephen.marquard@uct.ac.za Sat Jan  7', 'From gopal.ramasammycook@gmail.com Thurs Jan  5', 'From louis@media.berkeley.edu Tues Jan  3', 'From antranig@caret.cam.ac.uk Sat Jan  7', 'From david.horwitz@uct.ac.za Wed Jan  4', 'From ray@media.berkeley.edu Mon Jan  2', 'From stephen.marquard@uct.ac.za Mon Jan 2', 'From wagnermr@iupui.edu Fri Jan  6']
 
@@ -27,18 +27,11 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
           </program>
-          <solution>
-
-
-    
-                        Write a program that categorizes each mail message by which day of the week
-                            the commit was done. To do this, look for lines that start with <q>From</q>. Then,
+          <solution><p>Write a program that categorizes each mail message by which day of the week
+                            the commit was done. To do this, look for lines that start with From . Then,
                             look for the third word, and keep a running count of each of the days of the week.
                             At the end of the program, print out the contents of the dictionary mail_count
-                            (order does not matter). For example, mail_count['Mon'] should be 2.
-
-    
-    <program xml:id="dict_writecode1a_editor" language="python"><code>
+                            (order does not matter). For example, mail_count['Mon'] should be 2.</p><program language="python" interactive="activecode"><code>
 # mail list was given
 mail = ['From stephen.marquard@uct.ac.za Sat Jan  7', 'From gopal.ramasammycook@gmail.com Thurs Jan  5', 'From louis@media.berkeley.edu Tues Jan  3', 'From antranig@caret.cam.ac.uk Sat Jan  7', 'From david.horwitz@uct.ac.za Wed Jan  4', 'From ray@media.berkeley.edu Mon Jan  2', 'From stephen.marquard@uct.ac.za Mon Jan 2', 'From wagnermr@iupui.edu Fri Jan  6']
 
@@ -56,15 +49,13 @@ for email in mail:
     mail_count[key] += 1
 # Print final count
 print(mail_count)
-        </code></program>
-                    </solution>
-        </activity>
+        </code></program></solution></activity>
 
-        <activity label="dict_writecode2">
+        <activity label="dict_writecode2" xml:id="dict_writecode2_editor">
           <statement>
             <p>Write a program to read through a mail log, build the dictionary <c>user_count</c> to count how many messages have come from each email address, and print the dictionary. For example, <c>user_count['stephen.marquard@uct.ac.za']</c> should be <c>4</c>.</p>
           </statement>
-          <program xml:id="dict_writecode2_editor" interactive="activecode" language="python">
+          <program interactive="activecode" language="python">
             <code>
 mail_log = ['From stephen.marquard@uct.ac.za Sat Jan  7', 'From gopal.ramasammycook@gmail.com Thurs Jan  5', 'From stephen.marquard@uct.ac.za Sat Feb  7', 'From louis@media.berkeley.edu Tues Jan  3', 'From stephen.marquard@uct.ac.za Sat Nov  6', 'From antranig@caret.cam.ac.uk Sat Jan  7', 'From david.horwitz@uct.ac.za Wed Jan  4', 'From ray@media.berkeley.edu Mon Jan  2', 'From stephen.marquard@uct.ac.za Mon Jan 2', 'From wagnermr@iupui.edu Fri Jan  6', 'From gopal.ramasammycook@gmail.com Thurs Dec  5', 'From louis@media.berkeley.edu Tues April  1']
 
@@ -81,14 +72,14 @@ myTests().main()
           </program>
         </activity>
 
-        <activity>
+        <activity xml:id="dict_writecode3q_editor">
           <statement>
             <p>Write a program that creates a dictionary <c>letter_count</c> that keeps track
                             of the amount of times each letter appears in the given phrase. Assign the
                             number of times <q>e</q> appears in the phrase to the variable <c>e_counter</c>. Make
                             sure to account for each letter in its lowercase form. For example, <c>e_counter</c> should be <c>10</c>, and <c>letter_count['e']</c> should be <c>10</c>.</p>
           </statement>
-          <program interactive="activecode" language="python" xml:id="dict_writecode3q_editor">
+          <program interactive="activecode" language="python">
             <code>
 phrase = "Exeggcute evolves into Exeggutor which are two extraordinary Pokemon"
 
@@ -105,17 +96,10 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
           </program>
-          <solution>
-
-
-    
-                        Write a program that creates a dictionary letter_count that keeps track
+          <solution><p>Write a program that creates a dictionary letter_count that keeps track
                             of the amount of times each letter appears in the given phrase. Assign the
-                            number of times <q>e</q> appears in the phrase to the variable e_counter. Make
-                            sure to account for each letter in its lowercase form. For example, e_counter should be 10, and letter_count['e'] should be 10.
-
-    
-    <program xml:id="dict_writecode3a_editor" language="python"><code>
+                            number of times e appears in the phrase to the variable e_counter. Make
+                            sure to account for each letter in its lowercase form. For example, e_counter should be 10, and letter_count['e'] should be 10.</p><program language="python" interactive="activecode"><code>
 # phrase string is given
 phrase = "Exeggcute evolves into Exeggutor which are two extraordinary Pokemon"
 
@@ -135,17 +119,15 @@ for word in phrase.split():
         letter_count[letter] += 1
 # Create e_counter to see how many are in the phrase
 e_counter = letter_count['e']
-        </code></program>
-                    </solution>
-        </activity>
+        </code></program></solution></activity>
 
-        <activity label="dict_writecode4">
+        <activity label="dict_writecode4" xml:id="dict_writecode4_editor">
           <statement>
             <p>Write a program that reads the words in the string <c>phrase</c> and counts how many times each word appears.
                     Store the words as keys in the dictionary <c>word_dictionary</c>, and then use the in operator as a fast way to
-                    check whether the string is in the dictionary. For example, <c>word_dictionary['Writing']</c> should be <c>1</c>. (Note: &#x2018;Writing' and &#x2018;writing' would be counted as two separate words for this question.)</p>
+                    check whether the string is in the dictionary. For example, <c>word_dictionary['Writing']</c> should be <c>1</c>. (Note: ‘Writing' and ‘writing' would be counted as two separate words for this question.)</p>
           </statement>
-          <program xml:id="dict_writecode4_editor" interactive="activecode" language="python">
+          <program interactive="activecode" language="python">
             <code>
 phrase = "Writing programs or programming is a very creative and rewarding activity  You can write programs for many reasons ranging from making your living to solving a difficult data analysis problem to having fun to helping someone else solve a problem  This book assumes that {\em everyone} needs to know how to program and that once you know how to program, you will figure out what you want to do with your newfound skills"
 
@@ -164,7 +146,7 @@ myTests().main()
           </program>
         </activity>
 
-        <!--</p>-->
+        
   <hint>
     <pre>Writing programs or programming is a very creative
 and rewarding activity  You can write programs for
@@ -192,13 +174,13 @@ are often the kinds of things that we humans find boring
 and mind-numbing</pre>
   </hint>
 
-        <activity>
+        <activity xml:id="dict_writecode5q_editor">
           <statement>
             <p>Write code that reads in the text from the file words.txt and uses
                             the dictionary <c>word_count</c> to count the amount of times a word appears
                             in the file. Watch out for repetition using the .lower() function. For example, <c>word_count['and']</c> should be <c>5</c>.</p>
           </statement>
-          <program interactive="activecode" language="python" xml:id="dict_writecode5q_editor">
+          <program interactive="activecode" language="python">
             <code>
 
 ====
@@ -214,16 +196,9 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
           </program>
-          <solution>
-
-
-    
-                        Write code that reads in the text from the file words.txt and uses
+          <solution><p>Write code that reads in the text from the file words.txt and uses
                             the dictionary word_count to count the amount of times a word appears
-                            in the file. Watch out for repetition using the .lower() function. For example, word_count['and'] should be 5.
-
-    
-    <program xml:id="dict_writecode5a_editor" language="python"><code>
+                            in the file. Watch out for repetition using the .lower() function. For example, word_count['and'] should be 5.</p><program language="python" interactive="activecode"><code>
 # Open the file in "read" mode
 with open("words.txt", "r") as filename:
     # Create dictionary to count words
@@ -242,18 +217,16 @@ with open("words.txt", "r") as filename:
             word_count[word] += 1
 # Print final count
 print(word_count)
-        </code></program>
-                    </solution>
-        </activity>
+        </code></program></solution></activity>
 
-        <activity label="dict_writecode6">
+        <activity label="dict_writecode6" xml:id="dict_writecode6_editor">
           <statement>
             <p>Write a program that reads the words in the string <c>phrase</c> and counts how many times each word appears.
                     Store the words as keys in the dictionary <c>word_dictionary</c>, and then use the in operator as a fast way to
                     check whether the string is in the dictionary. Make sure to turn all letters in words into lowercase letters in order to avoid any repetition.
                     For example, <c>word_dictionary.get('Writing', 0)</c> should be <c>0</c>, and <c>word_dictionary['writing']</c> should be <c>1</c>.</p>
           </statement>
-          <program xml:id="dict_writecode6_editor" interactive="activecode" language="python">
+          <program interactive="activecode" language="python">
             <code>
 phrase = "Writing programs or programming is a very creative and rewarding activity  You can write programs for many reasons ranging from making your living to solving a difficult data analysis problem to having fun to helping someone else solve a problem  This book assumes that {\em everyone} needs to know how to program and that once you know how to program, you will figure out what you want to do with your newfound skills"
 
@@ -281,13 +254,13 @@ Arise fair sun and kill the envious moon
 Who is already sick and pale with grief</pre>
   </hint>
  
-        <activity>
+        <activity xml:id="dict_writecode7q_editor">
           <statement>
             <p>Write code to read through the lines of the file, break each line into a list of
                             words, and then loop through each of the words in the line and count each word using
                             the dictionary <c>counts</c>. For example, <c>counts['is']</c> should be <c>3</c>.</p>
           </statement>
-          <program interactive="activecode" language="python" xml:id="dict_writecode7q_editor">
+          <program interactive="activecode" language="python">
             <code>
 
 ====
@@ -303,16 +276,9 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
           </program>
-          <solution>
-
-
-    
-                        Write code to read through the lines of the file, break each line into a list of
+          <solution><p>Write code to read through the lines of the file, break each line into a list of
                             words, and then loop through each of the words in the line and count each word using
-                            the dictionary counts. For example, counts['is'] should be 3.
-
-    
-    <program xml:id="dict_writecode7a_editor" language="python"><code>
+                            the dictionary counts. For example, counts['is'] should be 3.</p><program language="python" interactive="activecode"><code>
 # Open file in "read" mode
 with open("romeo.txt", "r") as filename:
     # Separate and read lines
@@ -330,15 +296,13 @@ with open("romeo.txt", "r") as filename:
                 counts[word] = 0
             # Update word
             counts[word] += 1
-        </code></program>
-                    </solution>
-        </activity>
+        </code></program></solution></activity>
 
-        <activity label="dict_writecode8">
+        <activity label="dict_writecode8" xml:id="dict_writecode8_editor">
           <statement>
-            <p>Write code that adds the key &#x2018;two' with a value of &#x2018;dos' to the dictionary <c>eng2sp</c>. For example, <c>eng2sp['two']</c> should be <c>'dos'</c>.</p>
+            <p>Write code that adds the key ‘two' with a value of ‘dos' to the dictionary <c>eng2sp</c>. For example, <c>eng2sp['two']</c> should be <c>'dos'</c>.</p>
           </statement>
-          <program xml:id="dict_writecode8_editor" interactive="activecode" language="python">
+          <program interactive="activecode" language="python">
             <code>
 eng2sp = {'one':'uno'}
 
@@ -370,12 +334,12 @@ stephen.marquard@uct.ac.za 2
 ray@media.berkeley.edu 1</pre>
   </hint>
 
-        <activity>
+        <activity xml:id="dict_writecode9q_editor">
           <statement>
             <p>Add code to the program below to figure out who has the most messages in the file. After all the data has been read and the dictionary <c>message_count</c> has been created, look through the dictionary using a maximum loop (see Chapter 5: Maximum and minimum loops) to find who has the most messages,
                             and print how many messages the person has. For example, <c>message_count['cwen@iupui.edu']</c> should be <c>5</c>.</p>
           </statement>
-          <program interactive="activecode" language="python" xml:id="dict_writecode9q_editor">
+          <program interactive="activecode" language="python">
             <code>
 with open("mbox-short.txt", "r") as filename:
     message_count = {}
@@ -392,15 +356,8 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
           </program>
-          <solution>
-
-
-    
-                        Add code to the program below to figure out who has the most messages in the file. After all the data has been read and the dictionary message_count has been created, look through the dictionary using a maximum loop (see Chapter 5: Maximum and minimum loops) to find who has the most messages,
-                            and print how many messages the person has. For example, message_count['cwen@iupui.edu'] should be 5.
-
-    
-    <program xml:id="dict_writecode9a_editor" language="python"><code>
+          <solution><p>Add code to the program below to figure out who has the most messages in the file. After all the data has been read and the dictionary message_count has been created, look through the dictionary using a maximum loop (see Chapter 5: Maximum and minimum loops) to find who has the most messages,
+                            and print how many messages the person has. For example, message_count['cwen@iupui.edu'] should be 5.</p><program language="python" interactive="activecode"><code>
 # Open file in read mode
 with open("mbox-short.txt", "r") as filename:
     # Create message_count dictionary
@@ -426,16 +383,14 @@ for key in message_count.keys():
         # If so, reassign max_emails to that key
         max_emails = int(message_count[key])
 print(max_emails)
-        </code></program>
-                    </solution>
-        </activity>
+        </code></program></solution></activity>
 
-        <activity label="dict_writecode10">
+        <activity label="dict_writecode10" xml:id="dict_writecode10_editor">
           <statement>
             <p>Write a program to record in the dictionary <c>message_count</c> the total number of messages from each domain name (not the whole address, just the part after the @ and before the space). At the end of the program, print out the contents of your dictionary.
                     The domains should be the keys of the dictionary, and the counts of the domains should be the values of the dictionary. For example, <c>message_count['iupui.edu']</c> should be <c>8</c>.</p>
           </statement>
-          <program xml:id="dict_writecode10_editor" interactive="activecode" language="python">
+          <program interactive="activecode" language="python">
             <code>
 with open("mbox-short.txt", "r") as filename:
     message_count = {}

@@ -3,12 +3,12 @@
   <title>Write Code Questions</title>
   <p>Some of the questions use the data file mbox</p>
   
-        <activity>
+        <activity xml:id="regex_writecode1q_editor">
           <statement>
             <p>Modify the ### to find sequences with one uppercase letter
                             followed by an underscore followed by one or more lowercase letters.</p>
           </statement>
-          <program interactive="activecode" language="python" xml:id="regex_writecode1q_editor">
+          <program interactive="activecode" language="python">
             <code>
 ### re
 def text_match(text):
@@ -32,15 +32,8 @@ class MyTests(TestCaseGui):
 MyTests().main()
         </code>
           </program>
-          <solution>
-
-
-    
-                        Modify the ### to find sequences with one uppercase letter
-                            followed by an underscore followed by one or more lowercase letters.
-
-    
-    <program xml:id="regex_writecode1a_editor" language="python"><code>
+          <solution><p>Modify the ### to find sequences with one uppercase letter
+                            followed by an underscore followed by one or more lowercase letters.</p><program language="python" interactive="activecode"><code>
 # Line 1: import re
 # Line 3: [A-Z] matches uppercase letter characters and [a-z] matches lowercase letter characters
 # Line 4: Use the pattern variable to search the text
@@ -65,16 +58,14 @@ class MyTests(TestCaseGui):
         self.assertEqual(text_match("word_A"), "Not matched!", 'text_match("word_A")')
         self.assertEqual(text_match("myZ_oo"), "Found a match!", 'text_match("myZ_oo")')
 MyTests().main()
-        </code></program>
-                    </solution>
-        </activity>
+        </code></program></solution></activity>
 
-        <activity label="regex_writecode2">
+        <activity label="regex_writecode2" xml:id="regex_writecode2_editor">
           <statement>
             <p>Complete the code below to check if a string begins with a word character. If it does,
                     return <q>Found a match!</q>, if not return <q>Not matched!</q> Replace the ### with your code.</p>
           </statement>
-          <program xml:id="regex_writecode2_editor" interactive="activecode" language="python">
+          <program interactive="activecode" language="python">
             <code>
 import ###
 def text_match(text):
@@ -101,12 +92,12 @@ MyTests().main()
           </program>
         </activity>
 
-        <activity>
+        <activity xml:id="regex_writecode3q_editor">
           <statement>
             <p>Define the function <q>match_four</q> that takes a string and uses regex to return True if the
                             string starts with 4 followed by zero to many other digits and False if it does not.</p>
           </statement>
-          <program interactive="activecode" language="python" xml:id="regex_writecode3q_editor">
+          <program interactive="activecode" language="python">
             <code>
 ====
 from unittest.gui import TestCaseGui
@@ -121,15 +112,8 @@ class MyTests(TestCaseGui):
 MyTests().main()
         </code>
           </program>
-          <solution>
-
-
-    
-                        Define the function <q>match_four</q> that takes a string and uses regex to return True if the
-                            string starts with 4 followed by zero to many other digits and False if it does not.
-
-    
-    <program xml:id="regex_writecode3a_editor" language="python"><code>
+          <solution><p>Define the function match_four that takes a string and uses regex to return True if the
+                            string starts with 4 followed by zero to many other digits and False if it does not.</p><program language="python" interactive="activecode"><code>
 # First import the regex library (re), then define the match_four function.
 # Within the function, create the regex pattern to match if the string starts with '4'
 # Use an if statement to check for a match in the string.
@@ -152,16 +136,14 @@ class MyTests(TestCaseGui):
         self.assertEqual(match_four("4"), True, 'match_four("4")')
         self.assertEqual(match_four("786328042"), False, 'match_four("786328042")')
 MyTests().main()
-        </code></program>
-                    </solution>
-        </activity>
+        </code></program></solution></activity>
 
-        <activity label="regex_writecode4">
+        <activity label="regex_writecode4" xml:id="regex_writecode4_editor">
           <statement>
             <p>Define the function <q>match_cat</q> that uses regex to return True if a
                     string matches cat, Cat, CAT, cAt, etc and False if it does not.</p>
           </statement>
-          <program xml:id="regex_writecode4_editor" interactive="activecode" language="python">
+          <program interactive="activecode" language="python">
             <code>
 
 ====
@@ -181,13 +163,13 @@ MyTests().main()
           </program>
         </activity>
 
-        <activity>
+        <activity xml:id="regex_writecode5q_editor">
           <statement>
             <p>Define the function <c>match_z</c> to match a word containing a lowercase letter <c>z</c>.
                             Return <c>"Found a match!"</c> if <c>z</c> is in the string and <c>"Not matched!"</c> if
                             there is not a <c>z</c>.</p>
           </statement>
-          <program interactive="activecode" language="python" xml:id="regex_writecode5q_editor">
+          <program interactive="activecode" language="python">
             <code>
 import re
 def match_z(string):
@@ -206,16 +188,9 @@ class MyTests(TestCaseGui):
 MyTests().main()
         </code>
           </program>
-          <solution>
-
-
-    
-                        Define the function match_z to match a word containing a lowercase letter z.
+          <solution><p>Define the function match_z to match a word containing a lowercase letter z.
                             Return "Found a match!" if z is in the string and "Not matched!" if
-                            there is not a z.
-
-    
-    <program xml:id="regex_writecode5a_editor" language="python"><code>
+                            there is not a z.</p><program language="python" interactive="activecode"><code>
 # In the function definition, create a regex pattern to find 'z'
 # Search the string with that pattern using re.search()
 # If found, return "Found a match!"
@@ -239,17 +214,15 @@ class MyTests(TestCaseGui):
         self.assertEqual(match_z("abc"), "Not matched!", 'match_z("abc")')
 
 MyTests().main()
-        </code></program>
-                    </solution>
-        </activity>
+        </code></program></solution></activity>
 
-        <activity label="regex_writecode6">
+        <activity label="regex_writecode6" xml:id="regex_writecode6_editor">
           <statement>
             <p>Define the function matchMiddle_z to match a word containing the letter z,
                     but not at the beginning or end of a word. Return <q>Found a match!</q> if z is
                     in the string and <q>Not matched!</q> if there is not a z.</p>
           </statement>
-          <program xml:id="regex_writecode6_editor" interactive="activecode" language="python">
+          <program interactive="activecode" language="python">
             <code>
 import re
 def matchMiddle_z(string):
@@ -270,11 +243,11 @@ MyTests().main()
           </program>
         </activity>
 
-        <activity>
+        <activity xml:id="regex_writecode7q_editor">
           <statement>
             <p>Finish the code below to find all of the emails in <q>mbox-short.txt</q> and add them to a list and return the list.  An email starts with an alphanumeric character followed by one or more non white space characters and then <q>@</q> followed by one or more non white space characters with one alphabetic character at the end.</p>
           </statement>
-          <program interactive="activecode" language="python" xml:id="regex_writecode7q_editor">
+          <program interactive="activecode" language="python">
             <code>
 import re
 hand = open('mbox-short.txt')
@@ -287,14 +260,7 @@ class MyTests(TestCaseGui):
 MyTests().main()
         </code>
           </program>
-          <solution>
-
-
-    
-                        Finish the code below to find all of the emails in <q>mbox-short.txt</q> and add them to a list and return the list.  An email starts with an alphanumeric character followed by one or more non white space characters and then <q>@</q> followed by one or more non white space characters with one alphabetic character at the end.
-
-    
-    <program xml:id="regex_writecode7a_editor" language="python"><code>
+          <solution><p>Finish the code below to find all of the emails in mbox-short.txt and add them to a list and return the list.  An email starts with an alphanumeric character followed by one or more non white space characters and then @ followed by one or more non white space characters with one alphabetic character at the end.</p><program language="python" interactive="activecode"><code>
 # First import regex (re) and create a handle for the file.
 # Initialize a list to hold the emails.
 # Iterate through each line in the file, using rstrip() to remove whitespace and findall() with a regex expression to find the emails.
@@ -316,17 +282,15 @@ class MyTests(TestCaseGui):
     def testOne(self):
         self.assertEqual(email_list, [['gopal.ramasammycook@gmail.com'], ['louis@media.berkeley.edu'], ['cwen@iupui.edu'], ['antranig@caret.cam.ac.uk'], ['rjlowe@iupui.edu'], ['gsilver@umich.edu'], ['david.horwitz@uct.ac.za'], ['wagnermr@iupui.edu'], ['zqian@umich.edu'], ['stephen.marquard@uct.ac.za'], ['ray@media.berkeley.edu']], "Testing that all the emails were matched.")
 MyTests().main()
-        </code></program>
-                    </solution>
-        </activity>
+        </code></program></solution></activity>
 
-        <activity label="regex_writecode8">
+        <activity label="regex_writecode8" xml:id="regex_writecode8_editor">
           <statement>
             <p>Using <q>mbox-short.txt</q>, extract the email domains from each email address
                     using regex and add them to the list <q>domains</q>. For the email <url href="mailto:noname@umich.edu" visual="mailto:noname@umich.edu">noname@umich.edu</url>,
                     this would locate the string <q>umich.edu</q>.</p>
           </statement>
-          <program xml:id="regex_writecode8_editor" interactive="activecode" language="python">
+          <program interactive="activecode" language="python">
             <code>
 import re
 hand = open('mbox-short.txt')
@@ -343,14 +307,14 @@ MyTests().main()
           </program>
         </activity>
 
-        <activity>
+        <activity xml:id="regex_writecode9q_editor">
           <statement>
             <p>Using <q>mbox-short.txt</q>, extract the number next to each email (the
                             amount of emails each person has sent) using a regex equation, and
                             calculate the total amount of emails sent. Save this to the variable
-                            &#x2018;total_emails'. Use the () character to capture and return the number.</p>
+                            ‘total_emails'. Use the () character to capture and return the number.</p>
           </statement>
-          <program interactive="activecode" language="python" xml:id="regex_writecode9q_editor">
+          <program interactive="activecode" language="python">
             <code>
 hand = open('mbox-short.txt')
 ====
@@ -363,17 +327,10 @@ class MyTests(TestCaseGui):
 MyTests().main()
         </code>
           </program>
-          <solution>
-
-
-    
-                        Using <q>mbox-short.txt</q>, extract the number next to each email (the
+          <solution><p>Using mbox-short.txt , extract the number next to each email (the
                             amount of emails each person has sent) using a regex equation, and
                             calculate the total amount of emails sent. Save this to the variable
-                            &#x2018;total_emails'. Use the () character to capture and return the number.
-
-    
-    <program xml:id="regex_writecode9a_editor" language="python"><code>
+                            ‘total_emails'. Use the () character to capture and return the number.</p><program language="python" interactive="activecode"><code>
 # Import regex (re), create a variable for the total number of emails, and create a handle to access the file.
 # Iterate through lines in the file, remove trailing whitespace with rstrip(), and create a regex expression to use with findall() to return a list of email matches.
 # Finally, increment the total_emails variable for each email in the list
@@ -395,17 +352,15 @@ class MyTests(TestCaseGui):
         self.assertEqual(total_emails, 27, "Testing that the average was calculated properly.")
 
 MyTests().main()
-        </code></program>
-                    </solution>
-        </activity>
+        </code></program></solution></activity>
 
-        <activity label="regex_writecode10">
+        <activity label="regex_writecode10" xml:id="regex_writecode10_editor">
           <statement>
             <p>Using <q>mbox-short.txt</q>, extract the usernames from each email address
                     using regex and add them to the list <q>usernames</q>. For the email <url href="mailto:noname@umich.edu" visual="mailto:noname@umich.edu">noname@umich.edu</url>,
                     this would locate the string <q>noname</q>.</p>
           </statement>
-          <program xml:id="regex_writecode10_editor" interactive="activecode" language="python">
+          <program interactive="activecode" language="python">
             <code>
 
 ====

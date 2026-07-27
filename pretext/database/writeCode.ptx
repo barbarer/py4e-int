@@ -2,13 +2,13 @@
 <section xml:id="database_write-code-questions">
   <title>Write Code Questions</title>
 
-        <activity label="db_writecode_bike1">
+        <activity label="db_writecode_bike1" xml:id="db_writecode_bike1_editor">
           <statement>
             <p>Given a database of bike share information fix the SELECT statement to
                     retrieve the <c>bike_number</c> and <c>duration</c> from table <c>trip_data</c> for
                     <c>bike_number</c> <q>W00837</q>.</p>
           </statement>
-          <program xml:id="db_writecode_bike1_editor" interactive="activecode" language="sql">
+          <program interactive="activecode" language="python">
             <code>
 SELECT bike, duration IN trip_data WHERE bike = W00837
 ====
@@ -26,13 +26,13 @@ assert 13,1 == 492
           </program>
         </activity>
 
-        <activity label="db_writecode_bike2">
+        <activity label="db_writecode_bike2" xml:id="db_writecode_bike2_editor">
           <statement>
             <p>Given a database of bike share information write a SELECT statement below that
                     retrieves the <c>bike_number</c> and <c>duration</c> from table <c>trip_data</c> for
                     all of the rentals that had a <c>duration</c> of more than 85,000.</p>
           </statement>
-          <program xml:id="db_writecode_bike2_editor" interactive="activecode" language="sql">
+          <program interactive="activecode" language="python">
             <code>
 
 
@@ -49,13 +49,13 @@ assert 7,1 == 85194
           </program>
         </activity>
 
-        <activity label="db_writecode_bike3">
+        <activity label="db_writecode_bike3" xml:id="db_writecode_bike3_editor">
           <statement>
             <p>Given a database of bike share information write a SELECT statement below that
                     retrieves the <c>bike_number</c>, <c>duration</c>, and <c>start_date</c> from table <c>trip_data</c> for all of
                     the rentals from <c>start_station</c> 31105 and limit the results to 5.</p>
           </statement>
-          <program xml:id="db_writecode_bike3_editor" interactive="activecode" language="sql">
+          <program interactive="activecode" language="python">
             <code>
 
 ====
@@ -72,13 +72,13 @@ assert 4,1 == 422
           </program>
         </activity>
 
-        <activity label="db_writecode_bike4">
+        <activity label="db_writecode_bike4" xml:id="db_writecode_bike4_editor">
           <statement>
             <p>Given a database of bike share information write a SELECT statement below that
                     retrieves the <c>bike_number</c> and <c>member_type</c> for all of
                     the rentals from table <c>trip_data</c> where <c>end_station</c> 31200 and limit the results to 5.</p>
           </statement>
-          <program xml:id="db_writecode_bike4_editor" interactive="activecode" language="sql">
+          <program interactive="activecode" language="python">
             <code>
 
 ====
@@ -94,14 +94,14 @@ assert 4,1 == Member
           </program>
         </activity>
 
-        <activity label="db_writecode_bike5">
+        <activity label="db_writecode_bike5" xml:id="db_writecode_bike5_editor">
           <statement>
             <p>Given a database of bike share information write a SELECT statement below that
                     retrieves the <c>bike_number</c> and <c>duration</c> from table <c>trip_data</c> for
                     all of the rentals that had a <c>duration</c> of more than 85,000 and order
                     them by <c>duration</c> descending.</p>
           </statement>
-          <program xml:id="db_writecode_bike5_editor" interactive="activecode" language="sql">
+          <program interactive="activecode" language="python">
             <code>
 
 
@@ -117,14 +117,14 @@ assert 7,1 == 85102
           </program>
         </activity>
 
-        <activity label="db_writecode_bike6">
+        <activity label="db_writecode_bike6" xml:id="db_writecode_bike6_editor">
           <statement>
             <p>Given a database of bike share information write a SELECT statement to
                     retrieve all the rows from tables <c>trip_data</c> and <c>bikeshare_stations</c>
                     where the <c>start_station</c> in <c>trip_data</c> is the same as the <c>station_id</c> in <c>bikeshare_stations</c>.
                     Limit the results to 5 rows.</p>
           </statement>
-          <program xml:id="db_writecode_bike6_editor" interactive="activecode" language="sql">
+          <program interactive="activecode" language="python">
             <code>
 
 ====
@@ -140,14 +140,14 @@ assert 4,11 == open
           </program>
         </activity>
 
-        <activity label="db_writecode_bike7">
+        <activity label="db_writecode_bike7" xml:id="db_writecode_bike7_editor">
           <statement>
             <p>Given a database of bike share information write a SELECT statement to
                     retrieve the <c>duration</c> and <c>bike_number</c> from <c>trip_data</c> and the <c>name</c> from <c>bikeshare_stations</c>
                     where the <c>start_station</c> in <c>trip_data</c> is the same as the <c>station_id</c> in <c>bikeshare_stations</c>.
                     Limit the results to 5 rows.</p>
           </statement>
-          <program xml:id="db_writecode_bike7_editor" interactive="activecode" language="sql">
+          <program interactive="activecode" language="python">
             <code>
 
 ====
@@ -162,14 +162,14 @@ assert 4,2 == 14th St &amp; Spring Rd NW
           </program>
         </activity>
 
-        <activity label="db_writecode_bike8">
+        <activity label="db_writecode_bike8" xml:id="db_writecode_bike8_editor">
           <statement>
             <p>Given a database of bike share information write a SELECT statement to
                     retrieve the <c>duration</c> and <c>bike_number</c> from <c>trip_data</c> and the <c>name</c>, <c>latitude</c>, and <c>longitude</c> from <c>bikeshare_stations</c>
                     where the <c>start_station</c> in <c>trip_data</c> is the same as the <c>station_id</c> in <c>bikeshare_stations</c>.
                     Limit the results to 5 rows.</p>
           </statement>
-          <program xml:id="db_writecode_bike8_editor" interactive="activecode" language="sql">
+          <program interactive="activecode" language="python">
             <code>
 
 ====
@@ -185,14 +185,14 @@ assert 4,4 == -77.0327126210449
           </program>
         </activity>
 
-        <activity label="db_writecode_bike9">
+        <activity label="db_writecode_bike9" xml:id="db_writecode_bike9_editor">
           <statement>
             <p>Given a database of bike share information write a SELECT statement to
                     retrieve the <c>bike_number</c>, <c>start_date</c>, and <c>end_date</c> from <c>trip_data</c> and the <c>station_id</c> and <c>name</c> from <c>bikeshare_stations</c>
                     where the <c>start_station</c> in <c>trip_data</c> is the same as the <c>station_id</c> in <c>bikeshare_stations</c>
                     and where the <c>station_id</c> equals 31101.  Limit the results to 5 rows.</p>
           </statement>
-          <program xml:id="db_writecode_bike9_editor" interactive="activecode" language="sql">
+          <program interactive="activecode" language="python">
             <code>
 
 ====
@@ -206,14 +206,14 @@ assert 4,3 == 31101
           </program>
         </activity>
 
-        <activity label="db_writecode_bike10">
+        <activity label="db_writecode_bike10" xml:id="db_writecode_bike10_editor">
           <statement>
             <p>Given a database of bike share information write a SELECT statement to
                     retrieve the <c>bike_number</c>, <c>start_date</c>, and <c>end_date</c> from <c>trip_data</c> and the <c>station_id</c> and <c>name</c> from <c>bikeshare_stations</c>
                     where the <c>start_station</c> in <c>trip_data</c> is the same as the <c>station_id</c> in <c>bikeshare_stations</c>
                     and where the <c>member_type</c> equals <q>Casual</q>.  Limit the results to 5 rows.</p>
           </statement>
-          <program xml:id="db_writecode_bike10_editor" interactive="activecode" language="sql">
+          <program interactive="activecode" language="python">
             <code>
 
 ====
