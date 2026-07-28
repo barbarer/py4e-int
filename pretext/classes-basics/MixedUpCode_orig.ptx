@@ -70,7 +70,7 @@ myTests().main()
         </code>
     </program>
   </activity>
-  <activity label="Classes_Basic_Song_pp" xml:id="Classes_Basic_Song_pp" >
+  <activity label="Classes_Basic_Song_pp" xml:id="Classes_Basic_Song_pp">
     <statement>
       <p>Create a class <c>Song</c> with an <c>__init__</c> method that takes a <c>title</c> as a string and <c>len</c> as a number and initializes these attributes in the current object.
             Then define the <c>__str__</c> method to return the <c>title, len</c>.  For example, <c>print(s)</c> when <c>s = Song('Respect',150)</c> would print <q>Respect, 150</q>.</p>
@@ -139,7 +139,7 @@ myTests().main()
         </code>
     </program>
   </activity>
-  <activity label="Classes_Basic_Cat_pp" xml:id="Classes_Basic_Cat_pp" >
+  <activity label="Classes_Basic_Cat_pp" xml:id="Classes_Basic_Cat_pp">
     <statement>
       <p>Create a class Cat with an <c>__init__</c> method that takes
             <c>name</c> as a string and <c>age</c> as a number and initializes these attributes in the current object.  Next create the <c>__str__</c> method that returns
@@ -557,7 +557,7 @@ myTests().main()
         </code>
     </program>
   </activity
-  ><activity label="Classes_Basic_Loan_pp" xml:id="Classes_Basic_Loan_pp" >
+  ><activity label="Classes_Basic_Loan_pp" xml:id="Classes_Basic_Loan_pp">
   
     <statement>
       <p>Create a class <c>Loan</c> with an initializer method that takes in an integer loan_amt, a float interest_rate and integer years. Then create a string method that returns <q>Your loan is &#x2018;'loan_amt'' for &#x2018;'years'' years at an interest rate of &#x2018;'interest_rate''.</q> Create another method called total_payment that calculates the total amount of loan payment based on the interest rate and number of years. Use the formula (loan_amt * (1 + interest_rate/100) ^ years). Also round your total payment to two decimal places. We're assuming that you are paying on an annual basis. For example, <c>print(l)</c> when <c>l = Loan(10000, 5, 10)</c> would print <c>Your loan is $10000 for 10 years at an interest rate of 5%.</c> and <c>print(l.total_payment())</c> would print <c>16288.95</c> as a float.</p>

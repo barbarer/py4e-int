@@ -1,7 +1,7 @@
 <section xml:id="bsoup_write-code-questions-orig" component="source-for-select-questions">
         <title>Write Code Questions</title>
         
-                <activity ><statement>
+                <activity><statement>
                         <p>Write a function called <c>cur_stud_link</c> that takes in a parameter <c>url</c>
                             and uses BeautifulSoup to return the URL that links to Current Students in the Navigation Bar.
                             For example, <c>cur_stud_link('https://umich.edu/')</c> should return <c>"https://umich.edu/current-students/"</c>.</p>
@@ -107,7 +107,7 @@ unittest.main()
     </program>
 </activity>
 
-                <activity ><statement>
+                <activity><statement>
                         <p>Write a function called <c>coursera_dict</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the Coursera enrollees table,
                             and returns a dictionary with Country as keys and Percentage as values. For example, <c>coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course')</c>
                             should return a dictionary like: <c>{'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', 'United Kingdom': '4.4%', 'Spain': '4.0%', 'Canada': '3.6%', 'Australia': '2.3%', 'Russia': '2.2%', 'Rest of world': '41.9%'}</c>.  Since we are scraping a live site the actual values may be different.</p>
@@ -254,7 +254,7 @@ unittest.main()
     </program>
 </activity>
 
-                <activity ><statement>
+                <activity><statement>
                         <p>Write a function called <c>restaurants_list</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the 12 essential Ann Arbor restaurants,
                             and returns a list of the 12 best Ann Arbor restaurants. For example, <c>restaurants_list('https://detroit.eater.com/maps/best-ann-arbor-restaurants')</c>
                             should return a list of restaurants like: <c>['1. Salt Springs Brewery', "2. Knight's Steakhouse", '3. The Last Word', "4. Krazy Jim's Blimpy Burger", '5. Blue Llama Jazz Club', '6. Spencer', '7. Miss Kim', "8. Zingerman's Delicatessen", '9. Tomukun Noodle Bar', '10. Ricewood', '11. Bellflower', "12. Ma Lou's Fried Chicken"]</c>.  Since we are scraping a live site the actual values may be different.</p>
@@ -385,7 +385,7 @@ unittest.main()
     </program>
 </activity>
 
-                <activity ><statement>
+                <activity><statement>
                         <p>Write a function called <c>bsi_dict</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape and create a list of the section names and subsection names under Programs Bachelor of Science in Information,
                             and returns a dictionary that contains the names as keys and their full urls as values. For example, <c>bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information')</c>
                             should return a dictionary like: <c>{'How do I apply?': 'https://www.si.umich.edu//programs/bachelor-science-information/how-do-i-apply', 'Current U-M students': 'https://www.si.umich.edu//programs/bachelor-science-information/how-do-i-apply/cross-campus-transfer', 'Transfer students': 'https://www.si.umich.edu//programs/bachelor-science-information/how-do-i-apply/new-transfer-students-bsi', 'High school students': 'https://www.si.umich.edu//programs/bachelor-science-information/how-do-i-apply/preferred-admissions', ... 'Exchange student information': 'https://www.si.umich.edu//programs/bachelor-science-information/exchange-student-information'}</c>.
@@ -533,7 +533,7 @@ unittest.main()
     </program>
 </activity>
 
-                <activity ><statement>
+                <activity><statement>
                         <p>Write a function called <c>name_email</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the names and email addresses,
                             and returns a dictionary with the names as keys and the email addresses as values. Use the string replace method while web scraping to get rid of <q></q>n n</q>. For example, <c>name_email('https://www.si.umich.edu/people/directory/faculty/e')</c>
                             should return <c>{'Paul Edwards': 'pne@umich.edu', 'Ron Eglash': 'eglash@umich.edu', 'Nicole Ellison': 'enicole@umich.edu', 'Barbara Ericson': 'barbarer@umich.edu'}</c>.</p>
