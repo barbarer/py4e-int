@@ -70,7 +70,7 @@ myTests().main()
               <p>Take the phrase: twinkle twinkle little star.
                             Store each word in a separate variable, then print out the sentence on
                             one line using print.</p>
-    <program interactive="activecode" language="python"><code>
+    <program interactive="activecode" language="python" label="var-wc-rhymeq-sol"><code>
 # Set each word to its own variable
 word1 = "twinkle"
 word2 = "little"
@@ -137,7 +137,7 @@ print()
                             for the time now (in hours), and then ask for the number of hours to wait for the alarm.
                             Your program should output what the time will be on the clock when the alarm goes off.
                             Using the ``int()`` function and modulus operator ``%`` could come in handy!</p>
-    <program interactive="activecode" language="python"><code>
+    <program interactive="activecode" language="python" label="var-wc-timeq-sol"><code>
 
 #prompt the user for the current time
 current_time_string = input("What is the current time (in hours)?")
@@ -197,7 +197,7 @@ myTests().main()
           </program>
           <solution>
               <p>Write a program that will convert a user entered number of inches to feet.  Reminder: there are 12 inches in a foot.</p>
-    <program interactive="activecode"  language="python"><code>
+    <program interactive="activecode"  language="python" label="var-wc-feetq-sol"><code>
 
 #prompt the user for the amount of inches they would like to convert
 inches = input("How many inches would you like to convert?")
@@ -242,7 +242,7 @@ print(numMinutes)
           </program>
           <solution>
               <p>Combine lines 4 and 5 in the code below to print: <q>270 is 4.0 hours and 30 minutes.</q>.</p>
-    <program interactive="activecode"  language="python"><code>
+    <program interactive="activecode"  language="python" label="var-wc-combine-sol"><code>
 totalMinutes = 270
 numMinutes = totalMinutes % 60
 numHours = (totalMinutes - numMinutes) / 60
