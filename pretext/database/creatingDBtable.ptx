@@ -271,13 +271,13 @@ cur.close()</pre>
             program repeatedly. After the <c>DELETE</c> is performed, we also
             call <c>commit()</c> to force the data to be removed from the
             database.</p>
-  <activity label="dbCreate_PP" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="dbCreate_PP">
     <statement>
       <p>Put the following code in order to create a cursor, make a table called <q>Cats</q> with
             two text columns (<q>Name</q> and <q>Breed</q>). Then add the rows for Whiskers, Ruby, and Milo in
             the table and commit that change.  Finally select all the rows and print them before closing the cursor.</p>
     </statement>
-    <blocks numbered="left">
+    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
       <block order="7">
         <cline>import sqlite3</cline>
         <cline>conn = sqlite3.connect('pets.sqlite')</cline>

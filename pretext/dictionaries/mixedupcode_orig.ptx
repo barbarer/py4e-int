@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
-<section xml:id="dictionaries_mixed-up-code-questions-orig">
+<section xml:id="dictionaries_mixed-up-code-questions-orig" component="source-for-select-questions">
   <title>Mixed-Up Code Questions</title>
-  <activity label="dictionaries_mixedupcode_question10_1" xml:id="dictionaries_mixedupcode_question10_1" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="dictionaries_mixedupcode_question10_1" xml:id="dictionaries_mixedupcode_question10_1">
     <statement>
       <p>Create a function <c>letter_dict</c> that takes in <c>string</c> as a parameter and returns a dictionary containing the amount of times letters appear in the given <c>string</c>.
             For example, <c>letter_dict('It is')</c> should return <c>{'i': 2, 't': 1, 's': 1}</c>. (Note: Pretend the <c>string</c> doesn't have any punctuation besides spaces.)</p>
     </statement>
-    <blocks numbered="left">
+    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
       <block order="12">
         <cline>def letter_dict(string):</cline>
       </block>
@@ -84,12 +84,12 @@ myTests().main()
         </code>
     </program>
   </activity>
-  <activity label="dictionaries_mixedupcode_question10_2" xml:id="dictionaries_mixedupcode_question10_2" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="dictionaries_mixedupcode_question10_2" xml:id="dictionaries_mixedupcode_question10_2">
     <statement>
       <p>Create a function <c>word_dict</c> that takes in <c>string</c> as a parameter and returns a dictionary containing the amount of times a word appears in the given <c>string</c>.
             For example, <c>word_dict('HELLO heLlo there  ')</c> should return <c>{'hello': 2, 'there': 1}</c>. (Note: Pretend the <c>string</c> doesn't have any punctuation besides spaces.)</p>
     </statement>
-    <blocks numbered="left">
+    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
       <block order="2">
         <cline>def word_dict(string):</cline>
       </block>
@@ -141,12 +141,12 @@ myTests().main()
         </code>
     </program>
   </activity>
-  <activity label="dictionaries_mixedupcode_question10_3" xml:id="dictionaries_mixedupcode_question10_3" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="dictionaries_mixedupcode_question10_3" xml:id="dictionaries_mixedupcode_question10_3">
     <statement>
       <p>Create a function <c>a_counter</c> that takes in <c>string</c> as a parameter, creates a <c>dictionary</c>, and returns the amount of a's in the given <c>string</c> using the <c>dictionary</c>.
             For example, <c>a_counter('Alice and Apples')</c> should return <c>3</c>.</p>
     </statement>
-    <blocks numbered="left">
+    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
       <block order="6">
         <cline>def a_counter(string):</cline>
       </block>
@@ -201,13 +201,13 @@ myTests().main()
         </code>
     </program>
   </activity>
-  <activity label="dictionaries_mixedupcode_question10_4" xml:id="dictionaries_mixedupcode_question10_4" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="dictionaries_mixedupcode_question10_4" xml:id="dictionaries_mixedupcode_question10_4">
     <statement>
       <p>Create a function called <c>sales_tax</c> that takes in a <c>list_of_costs</c> (floating point values) as a parameter and
             returns a dictionary with the original costs as keys and the final costs after the sales tax of 6 percent as values.
             The final costs should be rounded to the hundredths place. For example, <c>sales_tax([1.25, 8, 5])</c> returns <c>{1.25: 1.33, 8: 8.48, 5: 5.3}</c>.</p>
     </statement>
-    <blocks numbered="left">
+    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
       <block order="2">
         <cline>def sales_tax(list_of_costs):</cline>
       </block>
@@ -260,13 +260,13 @@ myTests().main()
         </code>
     </program>
   </activity>
-  <activity label="dictionaries_mixedupcode_question10_5" xml:id="dictionaries_mixedupcode_question10_5" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="dictionaries_mixedupcode_question10_5" xml:id="dictionaries_mixedupcode_question10_5">
     <statement>
       <p>Create a function called <c>discount_and_tax</c> that takes in a <c>list_of_costs</c> (floating point values) and a <c>discount</c> percentage as parameters and
             returns a dictionary with the original costs as keys and the final costs after applying the <c>discount</c> (first) and the sales tax of 6 percent (second) as values.
             The final costs should be rounded to the hundredths place. For example, <c>discount_and_tax([1.25, 8, 5], 20)</c> should return <c>{1.25: 1.06, 8: 6.78, 5: 4.24}</c>.</p>
     </statement>
-    <blocks numbered="left">
+    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
       <block order="4">
         <cline>def discount_and_tax(list_of_costs, discount):</cline>
       </block>
@@ -323,13 +323,13 @@ myTests().main()
         </code>
     </program>
   </activity>
-  <activity label="dictionaries_mixedupcode_question10_6" xml:id="dictionaries_mixedupcode_question10_6" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="dictionaries_mixedupcode_question10_6" xml:id="dictionaries_mixedupcode_question10_6">
     <statement>
       <p>Create a function called <c>create_dictionary</c> that takes in <c>keys_list</c> and <c>values_list</c> as parameters
             and returns a dictionary with the <c>keys_list</c> as keys and the <c>values_list</c> as values. Assume <c>keys_list</c> and <c>values_list</c> are the same length, and
             they only contain numbers and strings. For example, <c>create_dictionary(['one', 'two', 'three'], [1, 2, 3])</c> should return <c>{'one': 1, 'two': 2, 'three': 3}</c>.</p>
     </statement>
-    <blocks numbered="left">
+    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
       <block order="7">
         <cline>def create_dictionary(keys_list, values_list):</cline>
       </block>
@@ -381,12 +381,12 @@ myTests().main()
         </code>
     </program>
   </activity>
-  <activity label="dictionaries_mixedupcode_question10_7" xml:id="dictionaries_mixedupcode_question10_7" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="dictionaries_mixedupcode_question10_7" xml:id="dictionaries_mixedupcode_question10_7">
     <statement>
       <p>Create a function called <c>lowest_value_keys</c> that takes in <c>dictionary</c> as a parameter and returns a list of the keys containing the lowest value of all the keys in the dictionary.
             Assume all values of the <c>dictionary</c> are integers or floats. For example, <c>lowest_value_keys({'pizza': 11, 'fruits': 0, 'toys': 0, 'rice bags': 1.9, 'ice': 1.8})</c> should return <c>['fruits', 'toys']</c>.</p>
     </statement>
-    <blocks numbered="left">
+    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
       <block order="2">
         <cline>def lowest_value_keys(dictionary):</cline>
       </block>
@@ -452,12 +452,12 @@ myTests().main()
         </code>
     </program>
   </activity>
-  <activity label="dictionaries_mixedupcode_question10_8" xml:id="dictionaries_mixedupcode_question10_8" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="dictionaries_mixedupcode_question10_8" xml:id="dictionaries_mixedupcode_question10_8">
     <statement>
       <p>Create a function called <c>duplicated_data</c> that takes in <c>dictionary1</c> and <c>dictionary2</c> as parameters and returns a dictionary with key-value pairs that are
             in both dictionaries. For example, <c>duplicated_data({'Ten': 10, 'Twenty' : 20, 'Thirty' : 30}, {'Ten': 10, 'Twenty' : 20})</c> should return <c>{'Ten': 10, 'Twenty': 20}</c>.</p>
     </statement>
-    <blocks numbered="left">
+    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
       <block order="2">
         <cline>def duplicated_data(dictionary1, dictionary2):</cline>
       </block>
@@ -515,13 +515,13 @@ myTests().main()
         </code>
     </program>
   </activity>
-  <activity label="dictionaries_mixedupcode_question10_9" xml:id="dictionaries_mixedupcode_question10_9" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="dictionaries_mixedupcode_question10_9" xml:id="dictionaries_mixedupcode_question10_9">
     <statement>
       <p>Create a function called <c>total_price</c> that takes in <c>quantity_dict</c> and <c>price_dict</c> and returns the total cost of all items.
             Assume keys in both dictionaries are the same, and the values in <c>quantity_dict</c> are integers.
             For example, <c>total_price({'fries': 7, 'hot dogs': 9, 'soda': 9}, {'fries': 1.5, 'hot dogs': 1, 'soda': 1.1})</c> should return <c>29.4</c>.</p>
     </statement>
-    <blocks numbered="left">
+    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
       <block order="1">
         <cline>def total_price(quantity_dict, price_dict):</cline>
       </block>
@@ -573,13 +573,13 @@ myTests().main()
         </code>
     </program>
   </activity>
-  <activity label="dictionaries_mixedupcode_question10_10" xml:id="dictionaries_mixedupcode_question10_10" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="dictionaries_mixedupcode_question10_10" xml:id="dictionaries_mixedupcode_question10_10">
     <statement>
       <p>Create a function called <c>scale_recipe</c> that takes in <c>quantity_dict</c> and <c>scale_factor</c> as parameters and
             returns a dictionary with <c>quantity_dict</c> scaled by the <c>scale_factor</c>.
             For example, <c>scale_recipe({'fries': 7, 'hot dogs': 9, 'soda': 8}, 4)</c> should return <c>{'fries': 28, 'hot dogs': 36, 'soda': 32}</c>.</p>
     </statement>
-    <blocks numbered="left">
+    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
       <block order="3">
         <cline>def scale_recipe(quantity_dict, scale_factor):</cline>
       </block>
