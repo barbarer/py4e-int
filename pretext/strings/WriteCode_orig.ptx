@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<section xml:id="strings_write-code-questions">
+<section xml:id="strings_write-code-questions-orig" component="source-for-select-questions">
   <title>Write Code Questions</title>
 
-  <exercise label="str-ex-hi-toggle">
+  <activity xml:id="str-ex-hi-wc" label="str-ex-hi-wc">
     <statement>
       <p>Fix line 2 so that it prints <q>Hi</q> instead of <q>hi</q>.</p>
     </statement>
@@ -28,9 +28,9 @@ print(s1)
 
       </code>
     </solution>
-  </exercise>
+  </activity>
 
-  <exercise label="str-ex-meow-toggle">
+  <activity label="str-ex-meow-toggle">
     <statement>
       <p>Fix the code so that only <q>meow</q> is printed.</p>
     </statement>
@@ -43,7 +43,10 @@ print(s2)
 
       </code>
     </program>
-    <blocks xml:id="str-ex-meowansw" submission="program">
+  </activity>
+
+  <activity xml:id="str-ex-meow-pp">
+    <blocks submission="program" language="python">
       <block order="1">
         <cline>sentence = "The cat goes meow."</cline>
       </block>
@@ -54,9 +57,9 @@ print(s2)
         <cline>print(s2)</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 
-  <exercise label="str-ex-eggs-toggle">
+  <activity label="str-ex-eggs-toggle">
     <statement>
       <p>Write code to evaluate the length of the string <q>I like green eggs</q> and print it. It should print <q>The length is 17</q>.</p>
     </statement>
@@ -71,9 +74,9 @@ sentence = "I like green eggs"
 print("The length is " + str(len(sentence)))
       </code>
     </solution>
-  </exercise>
+  </activity>
 
-  <exercise label="str-ex-count-toggle">
+  <activity label="str-ex-count-toggle">
     <statement>
       <p>Create a function named <c>count</c> that accepts a string and a letter as arguments, then returns the count of that letter in the string. For example, if the function call was <c>count("banana", "a")</c> it would return <c>3</c>. Hint: use the <c>count</c> method.</p>
     </statement>
@@ -93,7 +96,7 @@ class myTests(TestCaseGui):
 myTests().main()
       </code>
     </program>
-    <blocks xml:id="str-ex-countansw" submission="program">
+    <blocks xml:id="str-ex-countansw" submission="program" language="python">>
       <block order="1">
         <cline>def count(str, letter):</cline>
       </block>
@@ -101,9 +104,9 @@ myTests().main()
         <cline>    return str.count(letter)</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 
-  <exercise label="str-ex-float-toggle">
+  <activity label="str-ex-float-toggle">
     <statement>
       <p>Take the following Python code that stores this string: <c>string = "X-DSPAM-Confidence: 0.8475"</c>. Use <c>find</c> and string slicing to extract the portion of the string after the colon character and then use the <c>float</c> function to convert the extracted string into a floating point number called <c>num</c>.</p>
     </statement>
@@ -126,9 +129,9 @@ colonpos = string.find(':')
 num = float(string[colonpos+1:])
       </code>
     </solution>
-  </exercise>
+  </activity>
 
-  <exercise label="str-ex-ducks-toggle">
+  <activity label="str-ex-ducks-toggle">
     <statement>
       <p>In Robert McCloskey’s book Make Way for Ducklings, the names of the ducklings are Jack, Kack, Lack, Mack, Nack, Ouack, Pack, and Quack. The following loop tries to output these names in order. Of course, that’s not quite right because Ouack and Quack are misspelled. Can you fix it?</p>
     </statement>
@@ -142,7 +145,7 @@ for letter in prefixes:
 
       </code>
     </program>
-    <blocks xml:id="str-ex-ducksansw" submission="program">
+    <blocks xml:id="str-ex-ducksansw" submission="program" language="python">>
       <block order="1">
         <cline>prefixes = "JKLMNOPQ"</cline>
         <cline>suffix = "ack"</cline>
@@ -159,9 +162,9 @@ for letter in prefixes:
         <cline>        print(letter + suffix)</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 
-  <exercise label="str-ex-digits-toggle">
+  <activity label="str-ex-digits-toggle">
     <statement>
       <p>Write a function <c>numDigits</c> that will return the number of digits in an integer <c>n</c>.</p>
     </statement>
@@ -187,9 +190,9 @@ def numDigits(n):
   return len(str(n))
       </code>
     </solution>
-  </exercise>
+  </activity>
 
-  <exercise label="str-ex-name-toggle">
+  <activity label="str-ex-name-toggle">
     <statement>
       <p>Write code to print out the statement “Hi my name is Bob and I am 2” using only string methods or string slicing. You must get every part of the new string from the given strings, not by using string literals. Name the final string <c>statement</c>.</p>
     </statement>
@@ -206,7 +209,7 @@ class myTests(TestCaseGui):
 myTests().main()
       </code>
     </program>
-    <blocks xml:id="str-ex-nameansw" submission="program">
+    <blocks xml:id="str-ex-nameansw" submission="program" language="python">
       <block order="1">
         <cline>s1 = "hi"</cline>
         <cline>s2 = "My name is Bob, and he and I love to eat ham."</cline>
@@ -215,9 +218,9 @@ myTests().main()
         <cline>statement = s1.capitalize() + s2[2:3] + s2.lower()[0:3] + s2[3:14] + s2[22:29] + s2[4:6] + s2[2:3] + str(len(s1))</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 
-  <exercise label="str-ex-nameInput-standalone">
+  <activity label="str-ex-nameInput-standalone">
     <statement>
       <p>Write a program that asks a user for their name and from the input prints the first letter of their name in lowercase.</p>
     </statement>
@@ -235,9 +238,9 @@ lowerFirst = first.lower()
 print(lowerFirst)    
       </code>
     </solution>
-  </exercise>
+  </activity>
 
-  <exercise label="str-ex-lower-standalone">
+  <activity label="str-ex-lower-standalone">
     <statement>
       <p>Write a program that asks for user input and prints their input in all lowercase, as well as the length of their string.</p>
     </statement>
@@ -246,7 +249,7 @@ print(lowerFirst)
 
       </code>
     </program>
-    <blocks xml:id="str-ex-loweransw" submission="program">
+    <blocks xml:id="str-ex-loweransw" submission="program" language="python">>
       <block order="1">
         <cline>user_input = input("Enter a string: ")</cline>
       </block>
@@ -254,5 +257,5 @@ print(lowerFirst)
         <cline>print(user_input.lower() + " " + str(len(user_input)))</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 </section>
