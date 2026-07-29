@@ -1,12 +1,13 @@
 <?xml version="1.0"?>
 <section xml:id="lists_write-code-questions">
   <title>Write Code Questions</title>
-  <activity>
+
+  <activity xml:id="list_writeMyListq_editor">
     <statement>
       <p>Write a function <c>add_to_new_list</c> that takes in a list of strings, <c>lst</c>, as a parameter and creates a new list with the length
                     of <c>lst</c> and the first element of <c>lst</c> three times. For example, <c>add_to_new_list(["1","2","3"])</c> would return <c>[3, '111']</c>.</p>
     </statement>
-    <program interactive="activecode" language="python" xml:id="list_writeMyListq_editor">
+    <program interactive="activecode" language="python">
       <code>
 def add_to_new_list(lst):
     # write code here
@@ -26,14 +27,11 @@ myTests().main()
         </code>
     </program>
     <solution>
-
-
-    
+        <p>
                 Write a function add_to_new_list that takes in a list of strings, lst, as a parameter and creates a new list with the length
-                    of lst and the first element of lst three times. For example, add_to_new_list(["1","2","3"]) would return [3, '111'].
-
-    
-    <program xml:id="list_writeMyListA_editor" language="python"><code>
+                    of lst and the first element of lst three times. For example, add_to_new_list(["1","2","3"]) would return [3, '111']
+        </p>
+    <program xml:id="list_writeMyListq_edito-sol" interactive="activecode" language="python"><code>
 def add_to_new_list(lst):
     new_list = []
     new_list.append(len(lst))
@@ -56,19 +54,15 @@ myTests().main()
         </code></program>
             </solution>
   </activity>
-  <raw format="html" xml:space="preserve">
-&lt;div class="runestone sqcontainer %(optclass)s"&gt;
-&lt;div data-component="selectquestion" id=lists_writecode2 data-questionlist='list_writeItemsq_v2_ac, list_writeItemsq_v2_pp'         data-toggleoptions="toggle, lock" data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
-    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: list_writeItemsq_v2_ac, list_writeItemsq_v2_pp&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</raw>
-  <activity>
+  
+<activity label="list_writeItemsq_v2_sq"><select grade="first" questions="list_writeItemsq_v2_ac list_writeItemsq_v2_pp"/></activity>
+
+  <activity xml:id="list_writeAvgq_editor">
     <statement>
       <p>Write a function <c>average</c> that takes in a list of integers, <c>aList</c>, as a parameter and returns the average of
                     all of the integers, rounded to one decimal place. For example, <c>average([99, 100, 74, 63, 100, 100])</c> would return <c>89.3</c>.</p>
     </statement>
-    <program interactive="activecode" language="python" xml:id="list_writeAvgq_editor">
+    <program interactive="activecode" language="python">
       <code>
 def average(aList):
     # write code here
@@ -89,14 +83,9 @@ myTests().main()
         </code>
     </program>
     <solution>
-
-
-    
-                Write a function average that takes in a list of integers, aList, as a parameter and returns the average of
-                    all of the integers, rounded to one decimal place. For example, average([99, 100, 74, 63, 100, 100]) would return 89.33.
-
-    
-    <program xml:id="list_writeAvgA_editor" language="python"><code>
+                <p>Write a function average that takes in a list of integers, aList, as a parameter and returns the average of
+                    all of the integers, rounded to one decimal place. For example, average([99, 100, 74, 63, 100, 100]) would return 89.33.</p>
+    <program xml:id="list_writeAvgq_editor-sol" interactive="activecode" language="python"><code>
 def average(aList):
     sum = 0
     for num in aList:
@@ -120,19 +109,15 @@ myTests().main()
         </code></program>
             </solution>
   </activity>
-  <raw format="html" xml:space="preserve">
-&lt;div class="runestone sqcontainer %(optclass)s"&gt;
-&lt;div data-component="selectquestion" id=lists_writecode4 data-questionlist='list_write23_ac, list_write23_pp'         data-toggleoptions="toggle, lock" data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
-    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: list_write23_ac, list_write23_pp&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</raw>
-  <activity>
+
+  <activity label="list_write23_sq"><select grade="first" questions="list_write23_ac list_write23_pp"/></activity>
+
+  <activity xml:id="list_capitalize_q_editor">
     <statement>
       <p>Write a function <c>capitalize</c> that takes in a list of lists of strings, <c>lst</c>, and makes the first letter of each element capitalized and adds
                     it to a new list and returns that new list. For example, <c>capitalize([["hi"],["hello", "hey"]])</c> would return <c>['Hi', 'Hello', 'Hey']</c>.</p>
     </statement>
-    <program interactive="activecode" language="python" xml:id="list_capitalize_q_editor">
+    <program interactive="activecode" language="python">
       <code>
 def capitalize(lst):
     # write code here
@@ -153,14 +138,10 @@ myTests().main()
         </code>
     </program>
     <solution>
-
-
-    
-                Write a function capitalize that takes in a list of lists of strings, lst, and makes the first letter of each element capitalized and adds
+            <p>Write a function capitalize that takes in a list of lists of strings, lst, and makes the first letter of each element capitalized and adds
                     it to a new list and returns that new list. For example, capitalize([["hi"],["hello", "hey"]]) would return ['Hi', 'Hello', 'Hey'].
-
-    
-    <program xml:id="list_capitalize_a_editor" language="python"><code>
+                </p>
+    <program xml:id="list_capitalize_a_sol" interactive="activecode" language="python"><code>
 def capitalize(lst):
     new_list = []
     for i in lst:
@@ -183,19 +164,15 @@ myTests().main()
         </code></program>
             </solution>
   </activity>
-  <raw format="html" xml:space="preserve">
-&lt;div class="runestone sqcontainer %(optclass)s"&gt;
-&lt;div data-component="selectquestion" id=lists_writecode6 data-questionlist='list_write5_ac, list_write5_pp'         data-toggleoptions="toggle, lock" data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
-    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: list_write5_ac, list_write5_pp&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</raw>
-  <activity>
+
+  <activity label="list_write5_sq"><select grade="first" questions="list_write5_ac list_write5_pp"/></activity>
+
+  <activity xml:id="list_writeChopq_editor">
     <statement>
       <p>Write a function <c>chop</c> that takes a list, <c>lst</c>, and modifies it, removing the first and last elements.
                     For example, <c>chop([1,2,3,4,5]</c> should return <c>[2,3,4]</c>.</p>
     </statement>
-    <program interactive="activecode" language="python" xml:id="list_writeChopq_editor">
+    <program interactive="activecode" language="python" >
       <code>
 def chop(lst):
     # write code here
@@ -216,14 +193,9 @@ myTests().main()
         </code>
     </program>
     <solution>
-
-
-    
-                Write a function chop that takes a list, lst, and modifies it, removing the first and last elements.
-                    For example, chop([1,2,3,4,5] should return [2,3,4].
-
-    
-    <program xml:id="list_writeChopa_editor" language="python"><code>
+            <p>Write a function chop that takes a list, lst, and modifies it, removing the first and last elements.
+                    For example, chop([1,2,3,4,5] should return [2,3,4].</p>
+    <program xml:id="list_writeChopa_editor-sol" interactive="activecode" language="python"><code>
 def chop(lst):
     lst.pop(0)
     lst.pop(-1)
@@ -244,20 +216,16 @@ myTests().main()
         </code></program>
             </solution>
   </activity>
-  <raw format="html" xml:space="preserve">
-&lt;div class="runestone sqcontainer %(optclass)s"&gt;
-&lt;div data-component="selectquestion" id=lists_writecode8 data-questionlist='list_writeReverse_ac, list_writeReverse_pp'         data-toggleoptions="toggle, lock" data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
-    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: list_writeReverse_ac, list_writeReverse_pp&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</raw>
-  <activity>
+
+  <activity label="list_writeReverse_sq"><select grade="first" questions="list_writeReverse_ac list_writeReverse_pp"/></activity>
+
+  <activity xml:id="list_writeSumq_editor">
     <statement>
       <p>Write a function <c>sumUntilEven</c> that takes in one parameter, <c>lst</c>, and returns the sum of all the
                     elements in the <c>lst</c> up to but not including the first even number. For example, <c>sumUntilEven([1,2,3,4,5]</c>
                     should return <c>1</c> and <c>sumUntilEven([1,3,5,7,9]</c> should return <c>25</c>.</p>
     </statement>
-    <program interactive="activecode" language="python" xml:id="list_writeSumq_editor">
+    <program interactive="activecode" language="python" >
       <code>
 def sumUntilEven(lst):
     # write code here
@@ -276,15 +244,11 @@ myTests().main()
         </code>
     </program>
     <solution>
-
-
-    
-                Write a function called sumUntilEven that takes in one parameter, lst, and returns the sum of all the
+        <p>Write a function called sumUntilEven that takes in one parameter, lst, and returns the sum of all the
                     elements in the lst up to but not including the first even number. For example, sumUntilEven([1,2,3,4,5]
                     should return 1 and sumUntilEven([1,3,5,7,9] should return 25.
-
-    
-    <program xml:id="list_writeSuma_editor" language="python"><code>
+        </p>
+    <program xml:id="list_writeSuma_editor-sol" interactive="activecode" language="python"><code>
 def sumUntilEven(lst):
     total = 0
     element = 0
@@ -307,19 +271,15 @@ myTests().main()
         </code></program>
             </solution>
   </activity>
-  <raw format="html" xml:space="preserve">
-&lt;div class="runestone sqcontainer %(optclass)s"&gt;
-&lt;div data-component="selectquestion" id=lists_writecode10 data-questionlist='list_sortByLen_ac, list_sortByLen_pp'         data-toggleoptions="toggle, lock" data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
-    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: list_sortByLen_ac, list_sortByLen_pp&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</raw>
-  <activity label="list_loop_two_lists">
+
+<activity label="list_sortByLen_sq"><select grade="first" questions="list_sortByLen_ac list_sortByLen_pp"/></activity>
+
+  <activity xml:id="list_loop_two_lists_editor" label="list_loop_two_lists">
     <statement>
       <p>Write a function <c>combine(names, ages)</c> that takes in two lists, <c>names</c> and <c>ages</c> and returns a list of strings in the format <c>"Name: name, age: age"</c>.  For example,
             <c>combine(["Claire", "Jennifer"],[23, 19])</c> would return <c>["Name: Claire, age: 23", "Name: Jennfier, age: 19"]</c>.</p>
     </statement>
-    <program xml:id="list_loop_two_lists_editor" interactive="activecode" language="python">
+    <program interactive="activecode" language="python">
       <code>
 def combine(names, ages):
 

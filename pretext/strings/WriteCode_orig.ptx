@@ -9,7 +9,7 @@
     <program interactive="activecode" language="python">
       <code>
 sentence = "The cat goes meow."
-s2 = sentence[16:13]
+s2 = sentence[0:17]
 print(s2)
       </code>
     </program>
@@ -24,7 +24,12 @@ print(s2)
         <cline>sentence = "The cat goes meow."</cline>
       </block>
       <block order="2">
-        <cline>s2 = sentence[16:13]</cline>
+        <choice correct="yes">
+          <cline>s2 = sentence[13:17]</cline>
+        </choice>
+        <choice>
+          <cline>s2 = sentence[0:17]</cline>
+        </choice>
       </block>
       <block order="3">
         <cline>print(s2)</cline>
@@ -60,10 +65,20 @@ myTests().main()
     </statement>
     <blocks numbered="left">
       <block order="1">
-        <cline>def count(str, letter):</cline>
+        <choice correct="yes">
+           <cline>def count(str, letter):</cline>
+        </choice>
+        <choice>
+          <cline>def count(str, letter)</cline>
+        </choice>
       </block>
       <block order="2">
+        <choice correct="yes">
         <cline>    return str.count(letter)</cline>
+        </choice>
+        <choice>
+          <cline>    return count(letter)</cline>
+        </choice>
       </block>
     </blocks>
   </activity>
@@ -84,6 +99,9 @@ for letter in prefixes:
   </activity>
 
   <activity xml:id="str-ex-ducksansw" label="str-ex-ducksansw" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>In Robert McCloskey’s book Make Way for Ducklings, the names of the ducklings are Jack, Kack, Lack, Mack, Nack, Ouack, Pack, and Quack. The following loop tries to output these names in order. Of course, that’s not quite right because Ouack and Quack are misspelled. Can you put the blocks in order to fix it?</p>
+    </statement>
     <blocks numbered="left">
       <block order="1">
         <cline>prefixes = "JKLMNOPQ"</cline>
@@ -93,8 +111,14 @@ for letter in prefixes:
         <cline>for letter in prefixes:</cline>
       </block>
       <block order="3">
-        <cline>    if letter == 'O' or letter == 'Q':</cline>
-        <cline>        print(letter + "u" + suffix)</cline>
+        <choice correct="yes">
+          <cline>    if letter == 'O' or letter == 'Q':</cline>
+          <cline>        print(letter + "u" + suffix)</cline>
+        </choice>
+        <choice>
+          <cline>    if letter == 'o' or letter == 'Q':</cline>
+          <cline>        print(letter + "u" + suffix)</cline>
+        </choice>
       </block>
       <block order="4">
         <cline>    else:</cline>
@@ -105,7 +129,7 @@ for letter in prefixes:
 
   <activity xml:id="str-ex-nameacq" label="str-ex-nameacq">
     <statement>
-      <p>Write code to print out the statement “Hi my name is Bob and I am 2” using only string methods or string slicing. You must get every part of the new string from the given strings, not by using string literals. Name the final string <c>statement</c>.</p>
+      <p>Write code to print out the statement “Hi my name is Bob2” using only string methods or string slicing. You must get every part of the new string from the given strings, not by using string literals. Name the final string <c>statement</c>.</p>
     </statement>
     <program  interactive="activecode" language="python">
       <code>
@@ -116,25 +140,31 @@ s2 = "My name is Bob, and he and I love to eat ham."
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
     def testOne(self):
-        self.assertEqual(statement, "Hi my name is Bob and I am 2")
+        self.assertEqual(statement, "Hi my name is Bob2")
 myTests().main()
       </code>
     </program>
   </activity>
 
   <activity xml:id="str-ex-nameansw" label="str-ex-nameansw" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Create code to print out the statement “Hi my name is Bob2” using only string methods or string slicing. You must get every part of the new string from the given strings, not by using string literals. Name the final string <c>statement</c>.</p>
+    </statement>
     <blocks numbered="left">
       <block order="1">
         <cline>s1 = "hi"</cline>
         <cline>s2 = "My name is Bob, and he and I love to eat ham."</cline>
       </block>
       <block order="2">
-        <cline>statement = s1.capitalize() + s2[2:3] + s2.lower()[0:3] + s2[3:14] + s2[22:29] + s2[4:6] + s2[2:3] + str(len(s1))</cline>
+        <choice correct="yes">
+          <cline>statement = s1.capitalize() + s2[2:3] + s2.lower()[0:13] + str(len(s1))</cline>
+        </choice>
+        <choice>
+          <cline>statement = s1.capitalize() + s2.[0:13] + len(s1)</cline>
+        </choice>
       </block>
     </blocks>
   </activity>
-
-
 
   <activity xml:id="str-ex-loweracq" label="str-ex-loweracq">
     <statement>
@@ -148,12 +178,20 @@ myTests().main()
   </activity>
 
   <activity xml:id="str-ex-loweransw" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Create a program that asks for user input and prints their input in all lowercase, as well as the length of their string.</p>
+    </statement>
     <blocks numbered="left">
       <block order="1">
         <cline>user_input = input("Enter a string: ")</cline>
       </block>
       <block order="2">
-        <cline>print(user_input.lower() + " " + str(len(user_input)))</cline>
+        <choice correct="yes">
+          <cline>print(user_input.lower() + " " + str(len(user_input)))</cline>
+        </choice>
+        <choice>
+          <cline>print(user_input.lower() + " " + len(user_input))</cline>
+        </choice>
       </block>
     </blocks>
   </activity>
