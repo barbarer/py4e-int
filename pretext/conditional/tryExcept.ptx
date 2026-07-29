@@ -117,13 +117,13 @@ Please enter a number.</pre>
         </evaluate>
     </evaluation>
   </activity>
-  <activity label="cndtnl-try-pp-temp">
+  <activity label="cndtnl-try-pp-temp" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>The following program should get a temperature in Fahrenheit from the user, then print out the
             temperature in Celsius. If the input is not a number, it should ask the user to enter a
             number again. Be sure to indent correctly!</p>
     </statement>
-    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
+    <blocks numbered="left">
       <block order="6">
         <cline>input_str = input('Enter Fahrenheit Temperature:')</cline>
       </block>

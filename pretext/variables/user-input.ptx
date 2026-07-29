@@ -92,12 +92,12 @@ ValueError: invalid literal for int() with base 10:
         </evaluate>
     </evaluation>
   </activity>
-  <activity label="var-input-pp-prompt">
+  <activity label="var-input-pp-prompt" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Construct a block of code that asks the user for a number and prints three times that number.
             There is extra code to watch out for.</p>
     </statement>
-    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
+    <blocks numbered="left">
       <block order="5">
         <cline>prompt = 'Please enter a number\n'</cline>
       </block>

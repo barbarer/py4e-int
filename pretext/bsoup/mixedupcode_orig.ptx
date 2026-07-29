@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <section xml:id="bsoup_mixed-up-code-questions_orig" component="source-for-select-questions">
   <title>Mixed-Up Code Questions</title>
-  <activity label="bsoup_mixedupcode_1" xml:id="bsoup_mixedupcode_1">
+  <activity label="bsoup_mixedupcode_1" xml:id="bsoup_mixedupcode_1" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function called <c>img_links</c> that takes in a parameter <c>url</c> and returns a list of all urls for all the images on the page.
             Since websites are frequently updated, the returned list of image links may change as image links get added and deleted.</p>
     </statement>
-    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
+    <blocks numbered="left">
       <block order="9">
         <cline>import requests</cline>
         <cline>from bs4 import BeautifulSoup</cline>
@@ -72,13 +72,13 @@ unittest.main()
         </code>
     </program>
   </activity>
-  <activity label="bsoup_mixedupcode_2" xml:id="bsoup_mixedupcode_2">
+  <activity label="bsoup_mixedupcode_2" xml:id="bsoup_mixedupcode_2" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function called <c>shapiro_link</c> that takes in a parameter <c>url</c>
             and returns the URL from the University of Michigan wikipedia page that links to the Shapiro Undergraduate Library.
             For example, <c>shapiro_link('https://en.wikipedia.org/wiki/University_of_Michigan')</c> should return <c>"https://en.wikipedia.org/wiki/Shapiro_Undergraduate_Library"</c>.</p>
     </statement>
-    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
+    <blocks numbered="left">
       <block order="5">
         <cline>import requests</cline>
       </block>
@@ -134,14 +134,14 @@ unittest.main()
         </code>
     </program>
   </activity>
-  <activity label="bsoup_mixedupcode_3" xml:id="bsoup_mixedupcode_3">
+  <activity label="bsoup_mixedupcode_3" xml:id="bsoup_mixedupcode_3" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function called <c>link_or_none</c> that takes in a parameter <c>url</c> and returns a list of all the links in the <c>a tags</c>
             that are in a <c>div tag</c> with the class <c>column</c> and id <c>news-items</c>. If there isn't a link in the <c>a tag</c> that's in a <c>div tag</c>
             with the class <c>column</c> and id <c>news-items</c>, have None take its place in the list. Since websites are frequently updated,
             the returned list of links may change as links get added and deleted.</p>
     </statement>
-    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
+    <blocks numbered="left">
       <block order="6">
         <cline>from bs4 import BeautifulSoup</cline>
         <cline>import requests</cline>
@@ -220,7 +220,7 @@ unittest.main()
         </code>
     </program>
   </activity>
-  <activity label="bsoup_mixedupcode_4" xml:id="bsoup_mixedupcode_4">
+  <activity label="bsoup_mixedupcode_4" xml:id="bsoup_mixedupcode_4" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function called <c>descriptions</c> that takes in parameters <c>base_url</c> and <c>endings</c>
             and returns a dictionary with each ending as keys and their description as values. For this question,
@@ -229,7 +229,7 @@ unittest.main()
             For example, as of 2021, <c>descriptions('https://www.si.umich.edu/programs/courses/', ['106', '206', '330'])</c> should return
             <c>{'106': 'Introduction to programming with a focus on applications in informatics.  Covers the fundamental elements of a modern programming language and how to access data on the internet.  Explores how humans and technology complement one another, including techniques used to coordinate groups of people working together on software development.', '206': 'Students develop their core programming and software development skills, to build competency and literacy in important areas that includes basic data structures, debugging and testing, using distributed code repositories, pattern matching, and programmatic gathering and processing of data. Applications in assignments and labs are oriented around data manipulation.', '330': "Data analysis is crucial to application evaluation, as well as understanding users' information needs.  When the data required are numerous we need an automated way to gather, parse, and summarize the data.  In this course, you will learn to use Python and its modules to accomplish these tasks."}</c>.</p>
     </statement>
-    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
+    <blocks numbered="left">
       <block order="2">
         <cline>from bs4 import BeautifulSoup</cline>
         <cline>import requests</cline>
@@ -315,12 +315,12 @@ unittest.main()
         </code>
     </program>
   </activity>
-  <activity label="bsoup_mixedupcode_5" xml:id="bsoup_mixedupcode_5">
+  <activity label="bsoup_mixedupcode_5" xml:id="bsoup_mixedupcode_5" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function called <c>url_links</c> that takes in a parameter <c>url</c> and returns a list of all url links from the <c>url</c>.
             Since websites are frequently updated, the returned list of links may change as links get added and deleted.</p>
     </statement>
-    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
+    <blocks numbered="left">
       <block order="4">
         <cline>import requests</cline>
         <cline>from bs4 import BeautifulSoup</cline>
@@ -388,13 +388,13 @@ unittest.main()
         </code>
     </program>
   </activity>
-  <activity label="bsoup_mixedupcode_6" xml:id="bsoup_mixedupcode_6">
+  <activity label="bsoup_mixedupcode_6" xml:id="bsoup_mixedupcode_6" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function called <c>bsoup_num_links</c> that takes in a parameter <c>url</c> and returns the number of &#x2018;href'
             attributes that start with &#x2018;http' using BeautifulSoup. Since websites are frequently updated,
             the returned number may change as links get added and deleted.</p>
     </statement>
-    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
+    <blocks numbered="left">
       <block order="9">
         <cline>import requests</cline>
         <cline>from bs4 import BeautifulSoup</cline>
@@ -477,12 +477,12 @@ unittest.main()
         </code>
     </program>
   </activity>
-  <activity label="bsoup_mixedupcode_7" xml:id="bsoup_mixedupcode_7">
+  <activity label="bsoup_mixedupcode_7" xml:id="bsoup_mixedupcode_7" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function called <c>img_links</c> that takes in a parameter <c>url</c> and returns a list that contains all image links
             using BeautifulSoup. Since websites are frequently updated, the returned list of image links may change as image links get added and deleted.</p>
     </statement>
-    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
+    <blocks numbered="left">
       <block order="10">
         <cline>import requests</cline>
         <cline>from bs4 import BeautifulSoup</cline>
@@ -551,14 +551,14 @@ unittest.main()
         </code>
     </program>
   </activity>
-  <activity label="bsoup_mixedupcode_8" xml:id="bsoup_mixedupcode_8">
+  <activity label="bsoup_mixedupcode_8" xml:id="bsoup_mixedupcode_8" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function called <c>span_attrs</c> that takes in a parameter <c>url</c> and returns a list of dictionaries using BeautifulSoup.
             Each dictionary is equivalent to each span tag. The keys of the dictionary are the attributes of the span tag,
             and the values of the dictionary are the values of the attributes. Since websites are frequently updated,
             the returned list of dictionaries may change as span tags, attributes, and values get added, deleted, or modified.</p>
     </statement>
-    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
+    <blocks numbered="left">
       <block order="8">
         <cline>import requests</cline>
         <cline>from bs4 import BeautifulSoup</cline>
