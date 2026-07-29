@@ -80,6 +80,7 @@ myTests().main()
 string = "X-DSPAM-Confidence: 0.8475"
 colonpos = string.find(':')
 num = float(string[colonpos+1:])
+print(num)
       </code>
     </program>
     </solution>
@@ -113,6 +114,8 @@ myTests().main()
       <code>
 def numDigits(n):
   return len(str(n))
+print(numDigits(420328))
+print(numDigits(5))
       </code>
     </program>
     </solution>
