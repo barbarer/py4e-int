@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 <section xml:id="pictures_changing-step-5-increasing-and-decreasing-color-values">
   <title>Changing Step 5: Increasing and decreasing color values</title>
+
+  <datafile label="change_color_beach" filename="beach.jpg" hide="yes">
+    <image source="pictures/Figures/beach.jpg" alt="A picture of a beach in Hawaii"/>
+  </datafile>
+
   <p>First example: Let's change STEP 5, so that we decrease the red by 50%.</p>
   <program xml:id="Image_Decrease_Red" interactive="activecode" language="python">
     <code>
@@ -57,6 +62,15 @@ img.draw(win)
         </code>
   </program>
   <p>Try the program above on some of the other images by changing the name of the image file on line 5.   What effect does it always have? Is this what you expected when you increase the red?  What happens if you increase two colors at the same time?</p>
+
+    <datafile label="change_color_puppy" filename="puppy.jpg">
+    <image source="pictures/Figures/puppy.jpg" alt="A picture of a puppy and wrapped presents."/>
+  </datafile>
+
+  <datafile label="change_color_arch" filename="arch.jpg">
+    <image source="pictures/Figures/arch.jpg" alt="A picture of a stone arch from Oxford."/>
+  </datafile>
+
   <activity label="Image_Decrease_GB" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Another way to get a similar effect to increasing the red, is to decrease the green and blue.  Figure out how to do that in the program above and then use that information to drag the code blocks below from the left to the right in the correct order with the correct indention.</p>
@@ -90,12 +104,8 @@ img.draw(win)
         <cline>img.draw(win)</cline>
       </block>
     </blocks>
-  </activity>
-  <activity>
-    <statement/>
-    <program interactive="" language=""/>
     <solution>
-      <program xml:id="image_4_1_WSa" language="python">
+      <program xml:id="image_4_1_WSa" interactive="activecode" language="python">
         <code>
 # STEP 1: USE THE IMAGE LIBRARY
 from image import *

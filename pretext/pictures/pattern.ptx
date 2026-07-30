@@ -3,6 +3,14 @@
   <title>A Pattern for Image Processing</title>
   <p>As we have seen with turtles and words, there are some general patterns in the programs that we write.  With turtles, there was a polygon pattern (based on the Total Turtle Trip Theorem).  When working with words and numbers, we used the accumulator pattern.</p>
   <p>The image processing pattern is shown in the program below.  This program changes the red to the original green, the green to the original blue, and the red to the original green.  But, mostly we are trying to describe a pattern that you can use to create many image effects.</p>
+ 
+  <figure align="center" xml:id="fig_beach">
+    <caption>Figure: A picture of a beach in Hawaii</caption>
+  <datafile label="pattern-beach" filename="beach.jpg">
+    <image source="pictures/Figures/beach.jpg" alt="A picture of a beach in Hawaii"/>
+  </datafile>
+</figure>
+ 
   <program xml:id="Image_Pattern" interactive="activecode" language="python">
     <code>
 # STEP 1: USE THE IMAGE LIBRARY
@@ -59,5 +67,24 @@ img.draw(win)
       </li>
     </ol>
   </p>
-  <p>You can use other files in this chapter: kitten.jpg, puppy.jpg, baby.jpg, swan.jpg, motorcycle.jpg, gal2.jpg, guy1.jpg.</p>
+  <p>You can use other files in the exercises on this page: kitten.jpg, puppy.jpg, swan.jpg, motorcycle.jpg, gal2.jpg, guy1.jpg.</p>
+  <datafile label="kitten" filename="kitten.jpg">
+    <image source="pictures/Figures/kitten.jpg" alt="A picture of a black and white striped kitten with some green plants behind it."/>
+  </datafile>
+  <datafile label="puppy" filename="puppy.jpg">
+    <image source="pictures/Figures/puppy.jpg" alt="A picture of a puppy and wrapped presents."/>
+  </datafile>
+  <datafile label="swan" filename="swan.jpg">
+    <image source="pictures/Figures/swan.jpg" alt="A picture of a white swan in a pond."/>
+  </datafile>
+  <datafile label="motorcycle" filename="motorcycle.jpg">
+    <image source="pictures/Figures/motorcycle.jpg" alt="A picture of an orange and gray motorcycle on a white background."/>
+  </datafile>
+  <datafile label="gal2" filename="gal2.jpg">
+    <image source="pictures/Figures/gal2.jpg" alt="A picture of a young woman in a red t-shirt."/>
+  </datafile>
+   <datafile label="guy1" filename="guy1.jpg">
+    <image source="pictures/Figures/guy1.jpg" alt="A picture of a young man in a yellow shirt."/>
+  </datafile>
+
 </section>

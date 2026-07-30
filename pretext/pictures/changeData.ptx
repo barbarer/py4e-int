@@ -3,6 +3,15 @@
   <title>Changing Step 3: Changing which data we use</title>
   <p>Below is a selection of images that you can use in the programs in this section.</p>
   <p>We can also change which part of the picture we read and manipulate.  When we are changing several colors at once we can create a new pixel with the desired color using <c>Pixl(red,green,blue)</c> as shown below on line 20.</p>
+
+  <figure align="center" xml:id="fig_change_data_van_gogh">
+    <caption>Figure: A picture of a man and woman dancing cheek to cheek from Vincent van Gogh</caption>
+   <datafile label="change_data_vangogh" filename="vangogh.jpg">
+    <image source="pictures/Figures/vangogh.jpg" alt="A picture of a man and woman dancing cheek to cheek from van Gogh"/>
+  </datafile>
+</figure>
+
+
   <program xml:id="Image_Negate_Quarter" interactive="activecode" language="python">
     <code>
 # STEP 1: USE THE IMAGE LIBRARY
@@ -133,13 +142,13 @@ img.draw(win)
     </choices>
   </activity>
   <figure align="center">
-    <image source="pictures/Figures/ImageCopy.png" width="150px%" alt=""/>
+    <image source="pictures/Figures/ImageCopy.png" width="50%" alt=""/>
   </figure>
   <activity>
     <statement/>
     <program interactive="" language=""/>
     <solution>
-      <program xml:id="image_6_1_WSa" language="python">
+      <program xml:id="image_6_1_WSa" interactive="activecode" language="python">
         <code>
 # USE THE IMAGE LIBRARY
 from image import *
