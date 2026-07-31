@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="classes-basics_exercises">
   <title>Write Code Questions</title>
-  <activity xml:id="classes_q1_editor">
+  <activity xml:id="classes_q1">
     <statement>
       <p>Add a <c>distanceFromPoint</c> method that works similar to <c>distanceFromOrigin</c> except that it
                         takes a <c>Point</c> as a parameter and
@@ -16,7 +16,7 @@
       <p>Add a <c>distanceFromPoint</c> method that works similar to <c>distanceFromOrigin</c> except that it
                         takes a <c>Point</c> as a parameter and
                         computes the distance between that point and self.</p>
-      <program language="python" interactive="activecode">
+      <program xml:id="classes_q1_sol" language="python" interactive="activecode">
         <code>
 import math
 
@@ -47,7 +47,7 @@ q = Point(6, 7)
 print(p.distanceFromPoint(q))
         </code>
       </program></solution></activity>
-  <activity label="ch_cl_02" xml:id="ch_cl_02_editor">
+  <activity label="ch_cl_02" xml:id="ch_cl_02">
     <statement>
       <p>Add a method <c>reflect_x</c> to Point which returns a new Point, one which is the
                 reflection of the point about the x-axis.</p>
@@ -58,7 +58,7 @@ print(p.distanceFromPoint(q))
         </code>
     </program>
   </activity>
-  <activity xml:id="classes_q3_editor">
+  <activity xml:id="classes_q3">
     <statement>
       <p>Add a method <c>slope_from_origin</c> which returns the slope of the line joining the origin
                         to the point.   For example,</p>
@@ -74,7 +74,7 @@ print(p.distanceFromPoint(q))
     <solution>
       <p>Add a method <c>slope_from_origin</c> which returns the slope of the line joining the origin
                         to the point.   For example,</p>
-      <program language="python" interactive="activecode">
+      <program xml:id="classes_q3_sol" language="python" interactive="activecode">
         <code>
 class Point:
     """ Point class for representing and manipulating x,y coordinates. """
@@ -104,7 +104,7 @@ p = Point(4, 10)
 print(p.slope_from_origin())
         </code>
       </program></solution></activity>
-  <activity label="ch_cl_04" xml:id="ch_cl_04_editor">
+  <activity label="ch_cl_04" xml:id="ch_cl_04">
     <statement>
       <p>The equation of a straight line is  <q>y = ax + b</q>, (or perhaps <q>y = mx + c</q>).
                 The coefficients a and b completely describe the line.  Write a method in the
@@ -122,7 +122,7 @@ print(p.slope_from_origin())
         </code>
     </program>
   </activity>
-  <activity xml:id="classes_q5_editor">
+  <activity xml:id="classes_q5">
     <statement>
       <p>Add a method called <c>move</c> that will take two parameters, call them <c>dx</c> and <c>dy</c>.  The method will
                         cause the point to move in the x and y direction the number of units given. (Hint: you will change the values of the
@@ -137,7 +137,7 @@ print(p.slope_from_origin())
       <p>Add a method called <c>move</c> that will take two parameters, call them <c>dx</c> and <c>dy</c>.  The method will
                         cause the point to move in the x and y direction the number of units given. (Hint: you will change the values of the
                         state of the point)</p>
-      <program language="python" interactive="activecode">
+      <program xml:id="classes_q5_sol" language="python" interactive="activecode">
         <code>
 class Point:
     """ Point class for representing and manipulating x,y coordinates. """
@@ -170,7 +170,7 @@ p.move(5, 10)
 print(p)
         </code>
       </program></solution></activity>
-  <activity label="classes_q6" xml:id="classes_q6_editor">
+  <activity label="classes_q6" xml:id="classes_q6">
     <statement>
       <p>Given three points that fall on the circumference of a circle, find the center and radius of the circle.</p>
     </statement>

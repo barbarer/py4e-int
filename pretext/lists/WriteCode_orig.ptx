@@ -13,6 +13,7 @@
 def itemLister(items):
     # write code here
 
+print(itemLister([2,4,6.222,8]))
 =====
 
 from unittest.gui import TestCaseGui
@@ -86,7 +87,7 @@ myTests().main()
 def change_index3(lst):
     # write code here
 
-
+print(change_index3(['hi', 'goodbye', 'python', '106', '506']))
 =====
 
 from unittest.gui import TestCaseGui
@@ -131,13 +132,14 @@ myTests().main()
   <activity xml:id="list_write5_ac" label="list_write5_ac">
     <statement>
       <p>Write a function <c>countWords</c> that takes in a list, <c>lst</c>, as a parameter, and returns the amount of words that have a length of 5.
-            For example, <c>countWords(['hello', 'hi', 'good morning', 'three', 'kitty']</c> should return <c>3</c>.</p>
+            For example, <c>countWords(['hello', 'hi', 'good morning', 'three', 'kitty'])</c> should return <c>3</c>.</p>
     </statement>
     <program xml:id="list_write5_ac_editor" interactive="activecode" language="python">
       <code>
 def countWords(lst):
     # write code here
 
+print(countWords(['hello', 'hi', 'good morning', 'three', 'kitty']))
 ====
 from unittest.gui import TestCaseGui
 
@@ -188,12 +190,14 @@ myTests().main()
   <activity xml:id="list_writeReverse_ac" label="list_writeReverse_ac">
     <statement>
       <p>Write a function <c>reverse</c> that takes in one parameter, <c>lst</c>, and returns the reverse of a passed list.
-            For example, <c>reverse[1,2,3]</c> should return <c>[3, 2, 1]</c>.</p>
+            For example, <c>reverse([1,2,3])</c> should return <c>[3, 2, 1]</c>.</p>
     </statement>
     <program interactive="activecode" language="python">
       <code>
 def reverse(lst):
     # write code here
+
+print(reverse([1,2,3]))
 ====
 from unittest.gui import TestCaseGui
 
@@ -212,7 +216,7 @@ myTests().main()
   <activity xml:id="list_writeReverse_pp"  label="list_writeReverse_pp" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>reverse</c> that takes in one parameter, <c>lst</c>, and returns the reverse of a passed list.
-            For example, <c>reverse[1,2,3]</c> should return <c>[3, 2, 1]</c>.</p>
+            For example, <c>reverse([1,2,3])</c> should return <c>[3, 2, 1]</c>.</p>
     </statement>
     <blocks numbered="left">
       <block order="3">
@@ -241,6 +245,7 @@ myTests().main()
 def sort_by_length(lst):
     # write code here
 
+print(sort_by_length(["hello", "hi", "hey", "greetings"]))
 ====
 
 from unittest.gui import TestCaseGui
@@ -259,7 +264,7 @@ myTests().main()
   <activity xml:id="list_sortByLen_pp" label="list_sortByLen_pp" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>reverse</c> that takes in one parameter, <c>lst</c>, and returns the reverse of a passed list.
-            For example, <c>reverse[1,2,3]</c> should return <c>[3, 2, 1]</c>.</p>
+            For example, <c>reverse([1,2,3])</c> should return <c>[3, 2, 1]</c>.</p>
     </statement>
     <blocks numbered="left">
       <block order="3">
