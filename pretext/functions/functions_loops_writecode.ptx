@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="functions_functions-and-loops-write-code-questions">
   <title>Functions and Loops Write Code Questions</title>
-        <activity xml:id="funct_loops_writecode1q_editor">
+        <activity xml:id="funct_loops_writecode1q">
           <statement>
             <p>Write a function called <c>list_starts_with_a</c> that takes in <c>lst</c> as a parameter and returns a
                             new list with the words from <c>lst</c> that start with <q>a</q>. For example, <c>list_starts_with_a(["alphabet", "apple", "banana", "coding", "amazing"])</c>
@@ -29,7 +29,8 @@ myTests().main()
           </program>
           <solution><p>Write a function called list_starts_with_a that takes in lst as a parameter and returns a
                             new list with the words from lst that start with a . For example, list_starts_with_a(["alphabet", "apple", "banana", "coding", "amazing"])
-                            would return ["alphabet", "apple", "amazing"].</p><program language="python" interactive="activecode"><code>
+                            would return ["alphabet", "apple", "amazing"].</p>
+                            <program xml:id="funct_loops_writecode1q_sol" language="python" interactive="activecode"><code>
 def list_starts_with_a(lst):
     list_a = []
     for word in lst:
@@ -41,7 +42,7 @@ print(list_starts_with_a(["alphabet", "apple", "banana", "coding", "amazing"]))
         </code></program></solution></activity>
 
         
-        <activity label="funct_loops_writecode2q" xml:id="funct_loops_writecode2q_editor">
+        <activity label="funct_loops_writecode2q" xml:id="funct_loops_writecode2q">
           <statement>
             <p>Write a function called <c>sentence_without_vowels</c> that takes in <c>string</c> as a parameter and returns a new
                     string that consists of only characters that are not vowels. For example, <c>sentence_without_vowels('apple')</c> would return <c>"ppl"</c>.</p>
@@ -67,7 +68,7 @@ myTests().main()
           </program>
         </activity>
 
-        <activity xml:id="funct_loops_writecode3q_editor">
+        <activity xml:id="funct_loops_writecode3q">
           <statement>
             <p>Write a function called <c>draw_square</c> that takes in <c>num</c> as a parameter and returns a
                             string that consists of a square made of <q>*</q> with the dimensions <c>num</c> times <c>num</c>. Note:
@@ -94,7 +95,8 @@ myTests().main()
           <solution><p>Write a function called draw_square that takes in num as a parameter and returns a
                             string that consists of a square made of * with the dimensions num times num. Note:
                             ignore values that are less than or equal to zero. For example, draw_square(4) would return
-                            "****\n****\n****\n****".</p><program language="python" interactive="activecode"><code>
+                            "****\n****\n****\n****".</p>
+                            <program xml:id="funct_loops_writecode3q_sol" language="python" interactive="activecode"><code>
 def draw_square(num):
     string1 = ""
     for i in range(num):
@@ -107,7 +109,7 @@ def draw_square(num):
 print(draw_square(4))
         </code></program></solution></activity>
 
-        <activity label="funct_loops_writecode4q" xml:id="funct_loops_writecode4q_editor">
+        <activity label="funct_loops_writecode4q" xml:id="funct_loops_writecode4q">
           <statement>
             <p>Write a function called <c>check_prime_num</c> that takes in <c>num</c> as a parameter and returns <c>True</c> if <c>num</c> is a prime number
                     and <c>False</c> otherwise. For the purposes of this question, there is no need to test for values of <c>num</c> that are less than two.
@@ -135,7 +137,7 @@ myTests().main()
           </program>
         </activity>
 
-        <activity xml:id="funct_loops_writecode5q_editor">
+        <activity xml:id="funct_loops_writecode5q">
           <statement>
             <p>Write a function called <c>factorial</c> that takes in <c>num</c> as a parameter and returns the factorial value.
                             Ignore checking numbers that are less than 1. For example, <c>factorial(5)</c> would return <c>120</c>.</p>
@@ -160,7 +162,8 @@ myTests().main()
         </code>
           </program>
           <solution><p>Write a function called factorial that takes in num as a parameter and returns the factorial value.
-                            Ignore checking numbers that are less than 1. For example, factorial(5) would return 120.</p><program language="python" interactive="activecode"><code>
+                            Ignore checking numbers that are less than 1. For example, factorial(5) would return 120.</p>
+                              <program xml:id="funct_loops_writecode5q_sol" language="python" interactive="activecode"><code>
 def factorial(num):
     total = num
     while num &gt; 1:

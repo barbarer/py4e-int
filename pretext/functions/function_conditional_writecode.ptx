@@ -2,7 +2,7 @@
 <section xml:id="functions_functions-and-conditionals-write-code-questions">
   <title>Functions and Conditionals Write Code Questions</title>
 
-        <activity xml:id="funct_conditional_writecode1q_editor">
+        <activity xml:id="funct_conditional_writecode1q">
           <statement>
             <p>Write a function called <c>cropped_photo</c> that takes the <c>height</c> and <c>width</c> of a photo.
                             If the <c>height</c> and <c>width</c> are equal, then the function returns <c>"Cropped Photo"</c>. Otherwise,
@@ -30,7 +30,8 @@ myTests().main()
           <solution><p>Write a function called cropped_photo that takes the height and width of a photo.
                             If the height and width are equal, then the function returns "Cropped Photo". Otherwise,
                             it returns "The photo needs to be cropped." Assume height and width are positive. For example,
-                            cropped_photo(23.2, 23.2) should return "Cropped Photo".</p><program language="python" interactive="activecode"><code>
+                            cropped_photo(23.2, 23.2) should return "Cropped Photo".</p>
+                            <program xml:id="funct_conditional_writecode1q_sol" language="python" interactive="activecode"><code>
 def cropped_photo(height, width):
     if height == width:
         return "Cropped Photo"
@@ -38,7 +39,7 @@ def cropped_photo(height, width):
         return "The photo needs to be cropped."
         </code></program></solution></activity>
 
-        <activity label="funct_conditional_writecode2q" xml:id="funct_conditional_writecode2q_editor">
+        <activity label="funct_conditional_writecode2q" xml:id="funct_conditional_writecode2q">
           <statement>
             <p>Write a function called <c>bonus</c> that takes two parameters, <c>years</c> and <c>quality</c>.
                     If <c>years</c> is more than 5, then the person gets a bonus.
@@ -72,7 +73,7 @@ myTests().main()
           </program>
         </activity>
 
-        <activity xml:id="funct_conditional_writecode3q_editor">
+        <activity xml:id="funct_conditional_writecode3q">
           <statement>
             <p>Write a function called <c>move_elevator</c> that takes two parameters, <c>current_floor</c> and <c>next_floor</c>. If the elevator moves
                             to a floor above, then it should return <c>"Up"</c>. Otherwise, it should return <c>"Down"</c>. Also, if <c>next_floor</c> is the same as <c>current_floor</c>, it should return 0.
@@ -98,7 +99,8 @@ myTests().main()
           </program>
           <solution><p>Write a function called move_elevator that takes two parameters, current_floor and next_floor. If the elevator moves
                             to a floor above, then it should return "Up". Otherwise, it should return "Down". Also, if next_floor is the same as current_floor, it should return 0.
-                            Assume there are no 0 or negative floors. For example, move_elevator(5, 8) should return "Up".</p><program language="python" interactive="activecode"><code>
+                            Assume there are no 0 or negative floors. For example, move_elevator(5, 8) should return "Up".</p>
+                            <program xml:id="funct_conditional_writecode3q_sol" language="python" interactive="activecode"><code>
 def move_elevator(current_floor, next_floor):
     if next_floor &lt; current_floor:
         return "Down"
@@ -108,7 +110,7 @@ def move_elevator(current_floor, next_floor):
         return 0
         </code></program></solution></activity>
 
-        <activity label="funct_conditional_writecode4q" xml:id="funct_conditional_writecode4q_editor">
+        <activity label="funct_conditional_writecode4q" xml:id="funct_conditional_writecode4q">
           <statement>
             <p>Write a function called <c>lunch_break</c> that takes a parameter <c>class_standing</c> and determines how long a lunch break will be based on
                     the student's class standing. If a person is a ‘Freshman', return <c>40</c>. If a person is a ‘Sophomore', return <c>30</c>.
@@ -137,7 +139,7 @@ myTests().main()
           </program>
         </activity>
 
-        <activity xml:id="funct_conditional_writecode5q_editor">
+        <activity xml:id="funct_conditional_writecode5q">
           <statement>
             <p>Write a function called <c>pay_rent</c> that takes in one parameter,
                             <c>units</c>. If <c>units</c> is less than 200, return <c>"$100"</c>.
@@ -171,7 +173,8 @@ myTests().main()
           <solution><p>Write a function called pay_rent that takes in one parameter,
                             units. If units is less than 200, return "$100".
                             If units is less than 500 and greater than or equal to 200, return "$200". Otherwise, return "$300".
-                            For example, pay_rent(175) should return "$100".</p><program language="python" interactive="activecode"><code>
+                            For example, pay_rent(175) should return "$100".</p>
+                            <program xml:id="funct_conditional_writecode5q_sol" language="python" interactive="activecode"><code>
 def pay_rent(units):
     if units &lt; 200:
         return "$100"
@@ -181,7 +184,7 @@ def pay_rent(units):
         return "$300"
         </code></program></solution></activity>
 
-        <activity label="funct_conditional_writecode6q" xml:id="funct_conditional_writecode6q_editor">
+        <activity label="funct_conditional_writecode6q" xml:id="funct_conditional_writecode6q">
           <statement>
             <p>Write a function called <c>play_weather</c> that takes the string <c>weather</c> as a parameter and
                     returns if one should play or not. If the <c>weather</c> is ‘sunny' or ‘cloudy', then the function
