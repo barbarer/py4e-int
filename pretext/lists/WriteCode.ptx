@@ -11,6 +11,8 @@
       <code>
 def add_to_new_list(lst):
     # write code here
+
+print(add_to_new_list(["1","2","3"]))
 =====
 
 from unittest.gui import TestCaseGui
@@ -38,6 +40,7 @@ def add_to_new_list(lst):
     new_list.append(lst[0] * 3)
     return new_list
 
+print(add_to_new_list(["1","2","3"]))
 =====
 
 from unittest.gui import TestCaseGui
@@ -67,6 +70,8 @@ myTests().main()
 def average(aList):
     # write code here
 
+print(average([99, 100, 74, 63, 100, 100]))
+
 =====
 
 from unittest.gui import TestCaseGui
@@ -93,6 +98,7 @@ def average(aList):
     avg = round(sum / len(aList),2)
     return avg
 
+print(average([99, 100, 74, 63, 100, 100]))
 =====
 
 from unittest.gui import TestCaseGui
@@ -122,7 +128,7 @@ myTests().main()
 def capitalize(lst):
     # write code here
 
-
+print(capitalize([["hi"],["hello", "hey"]]))
 =====
 
 from unittest.gui import TestCaseGui
@@ -149,6 +155,7 @@ def capitalize(lst):
             new_list.append(j.capitalize())
     return new_list
 
+print(capitalize([["hi"],["hello", "hey"]]))
 =====
 
 from unittest.gui import TestCaseGui
@@ -170,14 +177,14 @@ myTests().main()
   <activity xml:id="list_writeChopq_editor">
     <statement>
       <p>Write a function <c>chop</c> that takes a list, <c>lst</c>, and modifies it, removing the first and last elements.
-                    For example, <c>chop([1,2,3,4,5]</c> should return <c>[2,3,4]</c>.</p>
+                    For example, <c>chop([1,2,3,4,5])</c> should return <c>[2,3,4]</c>.</p>
     </statement>
     <program interactive="activecode" language="python" >
       <code>
 def chop(lst):
     # write code here
 
-
+print(chop([1,2,3,4,5]))
 =====
 
 from unittest.gui import TestCaseGui
@@ -201,6 +208,7 @@ def chop(lst):
     lst.pop(-1)
     return(lst)
 
+print(chop([1,2,3,4,5]))
 =====
 
 from unittest.gui import TestCaseGui
@@ -222,13 +230,15 @@ myTests().main()
   <activity xml:id="list_writeSumq_editor">
     <statement>
       <p>Write a function <c>sumUntilEven</c> that takes in one parameter, <c>lst</c>, and returns the sum of all the
-                    elements in the <c>lst</c> up to but not including the first even number. For example, <c>sumUntilEven([1,2,3,4,5]</c>
-                    should return <c>1</c> and <c>sumUntilEven([1,3,5,7,9]</c> should return <c>25</c>.</p>
+                    elements in the <c>lst</c> up to but not including the first even number. For example, <c>sumUntilEven([1,2,3,4,5])</c>
+                    should return <c>1</c> and <c>sumUntilEven([1,3,5,7,9])</c> should return <c>25</c>.</p>
     </statement>
     <program interactive="activecode" language="python" >
       <code>
 def sumUntilEven(lst):
     # write code here
+
+print(sumUntilEven([1,2,3,4,5]))
 
 ====
 from unittest.gui import TestCaseGui
@@ -257,6 +267,7 @@ def sumUntilEven(lst):
         element += 1
     return total
 
+print(sumUntilEven([1,2,3,4,5]))
 ====
 from unittest.gui import TestCaseGui
 
@@ -282,6 +293,8 @@ myTests().main()
     <program interactive="activecode" language="python">
       <code>
 def combine(names, ages):
+
+print(combine(["Claire", "Jennifer"],[23, 19]))
 
 ====
 
