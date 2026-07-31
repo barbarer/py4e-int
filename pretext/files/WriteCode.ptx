@@ -27,7 +27,8 @@
       </code>
   </program>
   <solution><p>The program was missing a close double quote after the r on line 1.  It was missing a colon
-              at the end of line 3.  It was missing a comma or plus sign between the values on line 7.</p><program interactive="activecode" language="python" add-files="files-write-uspoll-id">
+              at the end of line 3.  It was missing a comma or plus sign between the values on line 7.</p>
+              <program xml:id="files-write-code-sol" interactive="activecode" language="python" add-files="files-write-uspoll-id">
       <code>
         # Close quotations around "r"
         inFile = open("uspoll.txt","r")
@@ -80,7 +81,7 @@ print(avg_PM25('OH'))
           </program>
         </activity>
 
-        <activity xml:id="file_ex_bad_AorBa">
+        <activity xml:id="file_ex_bad_AorBa" label="file_ex_bad_AorBa">
           <statement><p>The code below prints all the lines that have a city that starts with an “A”. Change it so that it prints out all lines that have a city that starts with “A” or “B”.</p></statement>
           <program interactive="activecode" language="python" add-files="files-write-uspoll-id">
             <code>inFile = open("uspoll.txt","r")
@@ -93,7 +94,7 @@ for line in lines:
         </code></program>
     
           <solution><p>See the changes on line 10.</p>
-            <program interactive="activecode" language="python" add-files="files-write-uspoll-id">
+            <program xml:id="file_ex_bad_AorBa-sol" interactive="activecode" language="python" add-files="files-write-uspoll-id">
               <code>
 # Read all the lines
 inFile = open("uspoll.txt","r")
@@ -133,7 +134,7 @@ print("Smallest PM 2.5 ",min25," in ",minCity)
           </program>
         </activity>
 
-        <activity label="file-write-studentdata" xml:id="file_student_ex_start">
+        <activity label="file-write-studentdata" xml:id="file-write-studentdata">
           <statement>
             <p>The <dataurl filename="studentdata.txt" source="files/studentdata.txt">studentdata.txt</dataurl>
                file shown below contains one line for each student in an imaginary class.
@@ -156,7 +157,7 @@ print("Smallest PM 2.5 ",min25," in ",minCity)
           <solution>
             <p>
               First see if you can write a program that just prints out the number of scores on each line.  Then, make it print the number only if the number is at least six.  Then, switch it to printing the name instead of the number</p>
-            <program interactive="activecode" language="python" add-files="files-write-studentdata-id">
+            <program xml:id="file-write-studentdata-sol" interactive="activecode" language="python" add-files="files-write-studentdata-id">
               <code>
 # Open the file in "read" mode
 f = open("studentdata.txt", "r")
@@ -175,7 +176,7 @@ f.close()
         </code>
             </program></solution></activity>
 
-        <activity label="file_ex_emotionq" xml:id="file_ex_emotionq_editor">
+        <activity label="file_ex_emotionq" xml:id="file_ex_emotionq">
           <statement>
               <p>The <dataurl filename="emotion_words.txt" source="files/emotion_words.txt">emotion_words.txt</dataurl> file
                 shown below contains a set of emotions that will be used in the next question.
@@ -254,7 +255,7 @@ biggestLoss(file)
 </program>
           <solution>
  <p>Complete the code at the # so that it prints out the date with the biggest loss from open to close. Each line has: Date, Open, High, Low, and Close. It should print 3-Aug-98 loss 1329.030000000001.</p>
-            <program interactive="activecode" language="python" add-files="files-write-stocks-id">
+            <program xml:id="file_ex_biggestLoss_sol" interactive="activecode" language="python" add-files="files-write-stocks-id">
               <code>
 def biggestLoss(file):
     maxLoss = 0
@@ -330,7 +331,7 @@ for line in lines:
         </code></program>
           <solution>
             <p>The code below prints all the dates and high price for dates that occur on the first day of the month (i.e. January 1, February 1…). Each line has: Date, Open, High, Low, and Close. Change it so that it prints the date and low price for all the dates that occur in June.</p>
-            <program interactive="activecode" language="python" add-files="files-write-stocks-id">
+            <program xml:id="file_ex_June_start_sol" interactive="activecode" language="python" add-files="files-write-stocks-id">
               <code>
 file = open("stocks.txt", "r")
 lines = file.readlines()
