@@ -59,17 +59,15 @@ print(tup_creation(-8,3))
       <p>Write a function called <c>find_majors</c> that takes in a dictionary as a parameter, <c>majors</c>, that has a major code as the key and
                     the name of a major as the value. Return a list of tuples of size two, in which the first element of the tuple is the major code and
                     the second element of the tuple is the name of the major. For example,
-                    <c>find_major({3084: 'Computer Science', 3025: 'Electrical Engineering', 3020: 'Computer Engineering', 3027: 'Cybersecurity'})</c>
-                    would return <c>[(3084, 'Computer Science'), (3025, 'Electrical Engineering'), (3020, 'Computer Engineering'), (3027, 'Cybersecurity')]</c>.</p>
+                    <c>find_major({3084: 'Comp Sci', 3025: 'Elec Eng', 3020: 'Comp Eng', 3027: 'Cybersecurity'})</c>
+                    would return <c>[(3084, 'Comp Sci'), (3025, 'Elec Eng'), (3020, 'Comp Eng'), (3027, 'Cybersecurity')]</c>.</p>
     </statement>
     <program interactive="activecode" language="python">
       <code>
 def find_major(dictionary_val):
     # write code here
 
-print(find_major({3084: 'Computer Science', 3025: 'Electrical Engineering', 
-                  3020: 'Computer Engineering', 3027: 'Cybersecurity'})) 
-
+print(find_major({3084: 'Comp Sci', 3025: 'Elec Eng', 3020: 'Comp Eng', 3027: 'Cybersecurity'}))
 ====
 from unittest.gui import TestCaseGui
 
@@ -85,12 +83,11 @@ MyTests().main()
         </code>
     </program>
     <solution>
-                <p>Write a function called find_majors that takes in a dictionary as a parameter, majors, that has a major code as the key and
+                 <p>Write a function called <c>find_majors</c> that takes in a dictionary as a parameter, <c>majors</c>, that has a major code as the key and
                     the name of a major as the value. Return a list of tuples of size two, in which the first element of the tuple is the major code and
                     the second element of the tuple is the name of the major. For example,
-                    find_major({3084: 'Computer Science', 3025: 'Electrical Engineering', 3020: 'Computer Engineering', 3027: 'Cybersecurity', 3068: 'Biometric Systems Engineering'})
-                    would return [(3084, 'Computer Science'), (3025, 'Electrical Engineering'), (3020, 'Computer Engineering'), (3027, 'Cybersecurity'), (3068, 'Biometric Systems Engineering')].
-                </p>
+                    <c>find_major({3084: 'Comp Sci', 3025: 'Elec Eng', 3020: 'Comp Eng', 3027: 'Cybersecurity'})</c>
+                    would return <c>[(3084, 'Comp Sci'), (3025, 'Elec Eng'), (3020, 'Comp Eng'), (3027, 'Cybersecurity')]</c>.</p>
     <program xml:id="tup_writecode3a_sol" interactive="activecode" language="python"><code>
 def find_major(dictionary_val):
     ls1 = []
@@ -101,9 +98,7 @@ def find_major(dictionary_val):
     list_of_tup = list(zip(ls1, ls2))
     return list_of_tup
 
-print(find_major({3084: 'Computer Science', 3025: 'Electrical Engineering', 
-                  3020: 'Computer Engineering', 3027: 'Cybersecurity', 3068: 
-                  'Biometric Systems Engineering'})) 
+print(find_major({3084: 'Comp Sci', 3025: 'Elec Eng', 3020: 'Comp Eng', 3027: 'Cybersecurity'}))
         </code></program>
             </solution>
   </activity>

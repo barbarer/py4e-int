@@ -150,9 +150,10 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
           </program>
-          <solution><p>Write a function called remove_indices_after_first_max_value that takes in a parameter num_list and
-                            returns a new_num_list with values up to the max value of the list. The returned list should include the max value. For example, remove_indices_after_first_max_value([200, 10, 5, 200])
-                            would return [5, 10, 5, 200].</p>
+          <solution>
+            <p>Write a function called <c>remove_indices_after_first_max_value</c> that takes in a parameter <c>num_list</c> and
+                            returns a <c>new_num_list</c> with values up to the max value of the list.  The returned list should include the max value. For example, <c>remove_indices_after_first_max_value([10, 200 5, 200])</c>
+                            would return <c>[10, 200]</c>.</p>
                             <program xml:id="funct_list_writecode5q_sol" language="python" interactive="activecode"><code>
 def remove_indices_after_first_max_value(num_list):
     index_value = num_list.index(max(num_list)) + 1
