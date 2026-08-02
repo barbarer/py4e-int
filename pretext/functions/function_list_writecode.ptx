@@ -127,15 +127,15 @@ myTests().main()
         <activity xml:id="funct_list_writecode5q">
           <statement>
             <p>Write a function called <c>remove_indices_after_first_max_value</c> that takes in a parameter <c>num_list</c> and
-                            returns a <c>new_num_list</c> with values up to the max value of the list. For example, <c>remove_indices_after_first_max_value([200, 10, 5, 200])</c>
-                            would return <c>[5, 10, 5, 200]</c>.</p>
+                            returns a <c>new_num_list</c> with values up to the max value of the list.  The returned list should include the max value. For example, <c>remove_indices_after_first_max_value([10, 200 5, 200])</c>
+                            would return <c>[10, 200]</c>.</p>
           </statement>
           <program interactive="activecode" language="python">
             <code>
 def remove_indices_after_first_max_value(num_list):
     # write code here
 
-print(remove_indices_after_first_max_value([200, 10, 5, 200]))
+print(remove_indices_after_first_max_value([10, 200, 5, 200]))
 ====
 from unittest.gui import TestCaseGui
 
@@ -151,7 +151,7 @@ myTests().main()
         </code>
           </program>
           <solution><p>Write a function called remove_indices_after_first_max_value that takes in a parameter num_list and
-                            returns a new_num_list with values up to the max value of the list. For example, remove_indices_after_first_max_value([200, 10, 5, 200])
+                            returns a new_num_list with values up to the max value of the list. The returned list should include the max value. For example, remove_indices_after_first_max_value([200, 10, 5, 200])
                             would return [5, 10, 5, 200].</p>
                             <program xml:id="funct_list_writecode5q_sol" language="python" interactive="activecode"><code>
 def remove_indices_after_first_max_value(num_list):
@@ -159,7 +159,7 @@ def remove_indices_after_first_max_value(num_list):
     new_num_list = num_list[:index_value]
     return new_num_list
 
-print(remove_indices_after_first_max_value([200, 10, 5, 200]))
+print(remove_indices_after_first_max_value([10, 200, 5, 200]))
         </code></program></solution></activity>
 
         <activity label="funct_list_writecode6q" xml:id="funct_list_writecode6q">
