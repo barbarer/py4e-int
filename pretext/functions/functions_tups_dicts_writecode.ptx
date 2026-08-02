@@ -81,7 +81,7 @@ myTests().main()
             <p>Write a function <c>squared_converter</c> that takes in a list of numbers, <c>num_list</c>, and returns a dictionary with the numbers as keys
                             and their squared value as values.  For example, <c>squared_converter([1,2])</c> should return <c>{1: 1, 2: 4}</c>.</p>
           </statement>
-          <program xml:id="funct-tups-dicts-writecode3q-sol" interactive="activecode" language="python">
+          <program interactive="activecode" language="python">
             <code>
 def squared_converter(num_list):
     # write code here
@@ -101,7 +101,8 @@ myTests().main()
         </code>
           </program>
           <solution><p>Write a function squared_converter that takes in a list of numbers, num_list, and returns a dictionary with the numbers as keys
-                            and their squared value as values.  For example, squared_converter([1,2]) should return {1: 1, 2: 4}.</p><program language="python" interactive="activecode"><code>
+                            and their squared value as values.  For example, squared_converter([1,2]) should return {1: 1, 2: 4}.</p>
+                            <program xml:id="funct-tups-dicts-writecode3q-sol" language="python" interactive="activecode"><code>
 def squared_converter(num_list):
     squared_dict = {}
     for num in num_list:

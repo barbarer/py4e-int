@@ -12,6 +12,7 @@
 def average_of_num_list(num_list):
     # write code here
 
+print(average_of_num_list([0, 20.8, 80, 5]))
 ====
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
@@ -31,6 +32,8 @@ myTests().main()
                             <program xml:id="funct_list_writecode1q_sol" language="python" interactive="activecode"><code>
 def average_of_num_list(num_list):
     return sum(num_list) / len(num_list)
+
+print(average_of_num_list([0, 20.8, 80, 5]))
         </code></program></solution></activity>
 
         <activity label="funct_list_writecode2q" xml:id="funct_list_writecode2q">
@@ -43,6 +46,7 @@ def average_of_num_list(num_list):
 def names(name_list):
     # write code here
 
+print(names(['Susan', 'Sara', 'Sammy', 'Sarah']))
 ====
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
@@ -67,6 +71,7 @@ myTests().main()
 def remove_min_value(num_list):
     # write code here
 
+print(remove_min_value([20, 4, 1203, 7482, 3]))
 ====
 from unittest.gui import TestCaseGui
 
@@ -86,6 +91,8 @@ myTests().main()
 def remove_min_value(num_list):
     num_list.remove(min(num_list))
     return num_list
+
+print(remove_min_value([20, 4, 1203, 7482, 3]))
         </code></program></solution></activity>
 
         <activity label="funct_list_writecode4q" xml:id="funct_list_writecode4q">
@@ -99,6 +106,7 @@ def remove_min_value(num_list):
 def range_given_list(list_of_nums):
     # write code here
 
+print( range_given_list([20, 100, 2000, 15, 3, 12]))
 ====
 from unittest.gui import TestCaseGui
 
@@ -127,6 +135,7 @@ myTests().main()
 def remove_indices_after_first_max_value(num_list):
     # write code here
 
+print(remove_indices_after_first_max_value([200, 10, 5, 200]))
 ====
 from unittest.gui import TestCaseGui
 
@@ -149,6 +158,8 @@ def remove_indices_after_first_max_value(num_list):
     index_value = num_list.index(max(num_list)) + 1
     new_num_list = num_list[:index_value]
     return new_num_list
+
+print(remove_indices_after_first_max_value([200, 10, 5, 200]))
         </code></program></solution></activity>
 
         <activity label="funct_list_writecode6q" xml:id="funct_list_writecode6q">
@@ -163,6 +174,7 @@ def remove_indices_after_first_max_value(num_list):
 def transform_and_combine(list_one, list_two):
     # write code here
 
+print(transform_and_combine([5, 20, 3, 15, 200, 0, 17], ['Hello', 'Bye', 'How are you?']))
 ====
 from unittest.gui import TestCaseGui
 
