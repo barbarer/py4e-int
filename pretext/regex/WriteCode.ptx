@@ -19,6 +19,7 @@ def text_match(text):
             return('Not matched!')
 
 print(text_match("aab_cbbbc"))
+print(text_match("B_cbbbc"))
 ====
 from unittest.gui import TestCaseGui
 
@@ -48,6 +49,7 @@ def text_match(text):
             return('Not matched!')
 
 print(text_match("aab_cbbbc"))
+print(text_match("B_cbbbc"))
 ====
 from unittest.gui import TestCaseGui
 
@@ -75,6 +77,7 @@ def text_match(text):
         return(###)
     else:
         return(###)
+
 print(text_match("The quick brown fox jumps over the lazy dog."))
 ====
 from unittest.gui import TestCaseGui
@@ -100,6 +103,10 @@ MyTests().main()
           </statement>
           <program interactive="activecode" language="python">
             <code>
+# write code here
+
+match_four(“468”)
+match_four(“648”)
 ====
 from unittest.gui import TestCaseGui
 
@@ -127,6 +134,9 @@ def match_four(string):
         return True
     else:
         return False
+
+match_four(“468”)
+match_four(“648”)
 ====
 from unittest.gui import TestCaseGui
 
@@ -147,6 +157,10 @@ MyTests().main()
           </statement>
           <program interactive="activecode" language="python">
             <code>
+
+# write code here
+print(match_cat('CAT'))
+print(match_cat('dog'))
 
 ====
 from unittest.gui import TestCaseGui
@@ -175,7 +189,10 @@ MyTests().main()
             <code>
 import re
 def match_z(string):
+    # write code here
 
+print( match_z("exit"))
+print( match_z("zip"))
 ====
 from unittest.gui import TestCaseGui
 
@@ -205,6 +222,9 @@ def match_z(text):
         return 'Found a match!'
     else:
         return('Not matched!')
+
+print( match_z("exit"))
+print( match_z("zip"))
 ====
 from unittest.gui import TestCaseGui
 
@@ -230,6 +250,8 @@ MyTests().main()
 import re
 def matchMiddle_z(string):
 
+print(matchMiddle_z('zebra'))
+print(matchMiddle_z('pizza'))
 ====
 from unittest.gui import TestCaseGui
 
@@ -254,6 +276,7 @@ MyTests().main()
             <code>
 import re
 hand = open('mbox-short.txt')
+
 ====
 from unittest.gui import TestCaseGui
 
