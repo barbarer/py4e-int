@@ -9,7 +9,9 @@
           </statement>
           <program interactive="activecode" language="python">
             <code>
+# write code here
 
+print(start_a('apple'))
 ====
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
@@ -30,6 +32,8 @@ myTests().main()
                             <program xml:id="funct-strings-writecode1q-sol" language="python" interactive="activecode"><code>
 def start_a(string):
     return string.startswith('a')
+
+print(start_a('apple'))
         </code></program></solution></activity>
 
         <activity label="funct-strings-writecode2" xml:id="funct-strings-writecode2">
@@ -43,6 +47,7 @@ def start_a(string):
             <code>
 import math
 
+print(square_length(36))
 ====
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
@@ -68,6 +73,9 @@ myTests().main()
           <program interactive="activecode" language="python">
             <code>
 
+# write code here
+
+print(use_semicolon('The sun is bright.', "Let's go outside."))
 ====
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
@@ -88,6 +96,8 @@ myTests().main()
                             <program xml:id="funct-strings-writecode3q-sol" language="python" interactive="activecode"><code>
 def use_semicolon(sentence1, sentence2):
     return sentence1[:-1] + '; ' + sentence2[0].lower() + sentence2[1:]
+
+print(use_semicolon('The sun is bright.', "Let's go outside."))
         </code></program></solution></activity>
 
         <activity label="funct-strings-writecode4" xml:id="funct-strings-writecode4">
@@ -100,6 +110,10 @@ def use_semicolon(sentence1, sentence2):
           </statement>
           <program interactive="activecode" language="python">
             <code>
+
+# write code here
+
+print(change('hello'))
 
 ====
 from unittest.gui import TestCaseGui
@@ -125,7 +139,9 @@ myTests().main()
           </statement>
           <program interactive="activecode" language="python">
             <code>
+# write code here
 
+print(first_a_gone('australia'))
 ====
 from unittest.gui import TestCaseGui
 
@@ -150,5 +166,7 @@ myTests().main()
 def first_a_gone(string):
     capture_a = string.find('a')
     return string[:capture_a] + string[capture_a + 1:]
+    
+print(first_a_gone('australia'))
         </code></program></solution></activity>
 </section>

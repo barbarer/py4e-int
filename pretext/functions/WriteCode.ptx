@@ -12,6 +12,8 @@ def recPerimeter(length, width)
 perimeter = 2 * (length + width)
     Return recPerimeter
 
+print(recPerimeter(10, 20))
+
 ====
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
@@ -37,6 +39,8 @@ def recPerimeter(length, width):
     # Keyword return is lowercase
     # Return the variable, not the function name
     return perimeter
+
+print(recPerimeter(10, 20))
         </code></program>
 
                     </solution>
@@ -52,7 +56,7 @@ Def squareArea(sideLength)
     area = length * length
     return squareArea
 
-
+print(squareArea(10))
 ====
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
@@ -78,6 +82,7 @@ def areaTriangle():
     height = 4
     return (5 * 4) / 2
 
+print(areaTriangle(12,45))
 ====
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
@@ -99,6 +104,7 @@ def areaTriangle(base, height):
     area = (base * height) / 2
     # Return the calculated area
     return area
+
 # Call the function with arguments
 print(areaTriangle(2, 6))
         </code></program>
@@ -178,7 +184,7 @@ print(nameAndAge("John", 18))
           <statement>
             <p>Rewrite the grade program from the previous chapter using a function called <c>computegrade</c>
                     that takes a score as its parameter and returns a string representing a grade. If someone
-                    enters a string or a score greater than 1, return <c>'Bad score'</c>. For example, <c>computegrade(.95)</c> should return <c>'A'</c>.</p>
+                    enters a string or a score greater than 1, return <c>'Bad score'</c>. For example, <c>computegrade(95)</c> should return <c>'A'</c>.</p>
             <program language="python">
               <code>
 Score    Grade
@@ -195,6 +201,7 @@ Score    Grade
 def computegrade(score):
     # your code here
 
+print(omputegrade(95))
 ====
 from unittest.gui import TestCaseGui
 
@@ -223,6 +230,7 @@ myTests().main()
 def sumTo(n):
     # your code here
 
+print(print(sumTo(10)))
 ====
 from unittest.gui import TestCaseGui
 
@@ -249,6 +257,8 @@ def sumTo(n):
     return result
     # alternatively, you can accomplish this on one line:
     # return (n * (n + 1)) / 2
+
+print(print(sumTo(10)))
         </code></program>
                     </solution>
         </activity>
@@ -264,6 +274,7 @@ def sumTo(n):
 def sumTo(n):
     # your code here
 
+print(sumTo(15))
 ====
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
@@ -290,6 +301,7 @@ myTests().main()
 def areaOfCircle(r):
     # your code here
 
+print(areaOfCircle(31415.926535897932))
 ====
 from unittest.gui import TestCaseGui
 
@@ -317,6 +329,8 @@ def areaOfCircle(r):
     a = r**2 * math.pi
     # Return the area
     return a
+
+print(areaOfCircle(31415.926535897932))
         </code></program>
                     </solution>
         </activity>
@@ -330,7 +344,9 @@ def areaOfCircle(r):
           <program interactive="activecode" language="python">
             <code>
 def get_avg_drop_lowest(num1, num2, num3):
+    # add code here
 
+print(get_avg_drop_lowest(100, 10, 0))
 ====
 from unittest.gui import TestCaseGui
 
@@ -359,7 +375,9 @@ myTests().main()
           <program interactive="activecode" language="python">
             <code>
 def caught_speeding(speed, is_birthday):
+    # add code here
 
+print(caught_speeding(60,False))
 ====
 from unittest.gui import TestCaseGui
 
@@ -404,6 +422,8 @@ def caught_speeding(speed, is_birthday):
             return 1
         else:
             return 2
+
+print(caught_speeding(60,False))
         </code></program>
                     </solution>
         </activity>
@@ -418,7 +438,9 @@ def caught_speeding(speed, is_birthday):
           <program interactive="activecode" language="python">
             <code>
 def check_guess(guess, target):
+    # add code here
 
+print(check_guess(5, 7))
 ====
 from unittest.gui import TestCaseGui
 
@@ -453,6 +475,7 @@ myTests().main()
 def alarm_clock(day, vacation):
     # your code here
 
+print(alarm_clock(1, False))
 ====
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
@@ -488,6 +511,8 @@ def alarm_clock(day, vacation):
             return '10:00'
         else:
             return '7:00'
+
+print(alarm_clock(1, False))
         </code></program>
                     </solution>
         </activity>

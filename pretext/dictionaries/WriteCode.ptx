@@ -151,33 +151,11 @@ myTests().main()
           </program>
         </activity>
 
+ <datafile xml:id="words_id" label="words_id" filename='words.txt'>
+      <pre source="dictionaries/words.txt"></pre>
+</datafile>
+
         
-  <hint>
-    <pre>Writing programs or programming is a very creative
-and rewarding activity  You can write programs for
-many reasons ranging from making your living to solving
-a difficult data analysis problem to having fun to helping
-someone else solve a problem  This book assumes that
-{\em everyone} needs to know how to program and that once
-you know how to program, you will figure out what you want
-to do with your newfound skills
-
-We are surrounded in our daily lives with computers ranging
-from laptops to cell phones  We can think of these computers
-as our personal assistants who can take care of many things
-on our behalf  The hardware in our current-day computers
-is essentially built to continuously ask us the question
-What would you like me to do next
-
-Our computers are fast and have vasts amounts of memory and
-could be very helpful to us if we only knew the language to
-speak to explain to the computer what we would like it to
-do next If we knew this language we could tell the
-computer to do tasks on our behalf that were reptitive
-Interestingly, the kinds of things computers can do best
-are often the kinds of things that we humans find boring
-and mind-numbing</pre>
-  </hint>
 
         <activity xml:id="dict_writecode5q" label="dict_writecode5q">
           <statement>
@@ -185,7 +163,7 @@ and mind-numbing</pre>
                             the dictionary <c>word_count</c> to count the amount of times a word appears
                             in the file. Watch out for repetition using the .lower() function. For example, <c>word_count['and']</c> should be <c>5</c>.</p>
           </statement>
-          <program interactive="activecode" language="python">
+          <program interactive="activecode" language="python" add-files="words_id">
             <code>
 
 ====
@@ -204,7 +182,7 @@ myTests().main()
           <solution><p>Write code that reads in the text from the file words.txt and uses
                             the dictionary word_count to count the amount of times a word appears
                             in the file. Watch out for repetition using the .lower() function. For example, word_count['and'] should be 5.</p>
-                            <program ml:id="dict_writecode5q_sol" language="python" interactive="activecode"><code>
+                            <program xml:id="dict_writecode5q_sol" language="python" interactive="activecode"><code>
 # Open the file in "read" mode
 with open("words.txt", "r") as filename:
     # Create dictionary to count words
@@ -252,13 +230,11 @@ myTests().main()
           </program>
         </activity>
 
-  <p>Below is the romeo3.txt file used in Question 7.</p>
-  <hint>
-    <pre>But soft what light through yonder window breaks
-It is the east and Juliet is the sun
-Arise fair sun and kill the envious moon
-Who is already sick and pale with grief</pre>
-  </hint>
+  <p>Below is the romeo.txt file used in Question 7.</p>
+
+  <datafile xml:id="romeo_id" label="romeo_id" filename='romeo.txt'>
+      <pre source="dictionaries/romeo.txt"></pre>
+  </datafile>
  
         <activity xml:id="dict_writecode7q" label="dict_writecode7q">
           <statement>
@@ -266,7 +242,7 @@ Who is already sick and pale with grief</pre>
                             words, and then loop through each of the words in the line and count each word using
                             the dictionary <c>counts</c>. For example, <c>counts['is']</c> should be <c>3</c>.</p>
           </statement>
-          <program interactive="activecode" language="python">
+          <program interactive="activecode" language="python" add-files="romeo_id">
             <code>
 
 ====
@@ -327,26 +303,19 @@ myTests().main()
         </activity>
 
   <p>The next two questions are associated with the following text file which has an email address followed by the number of messages from that address.</p>
-  <hint>
-    <pre>gopal.ramasammycook@gmail.com 1
-louis@media.berkeley.edu 3
-cwen@iupui.edu 5
-antranig@caret.cam.ac.uk 1
-rjlowe@iupui.edu 2
-gsilver@umich.edu 3
-david.horwitz@uct.ac.za 4
-wagnermr@iupui.edu 1
-zqian@umich.edu 4
-stephen.marquard@uct.ac.za 2
-ray@media.berkeley.edu 1</pre>
-  </hint>
+
+
+
+ <datafile xml:id="mbox_count_id" label="mbox_count_id" filename='mbox-short.txt'>
+      <pre source="dictionaries/mbox-count.txt"></pre>
+  </datafile>
 
         <activity xml:id="dict_writecode9q" label="dict_writecode9q">
           <statement>
             <p>Add code to the program below to figure out who has the most messages in the file. After all the data has been read and the dictionary <c>message_count</c> has been created, look through the dictionary using a maximum loop (see Chapter 5: Maximum and minimum loops) to find who has the most messages,
                             and print how many messages the person has. For example, <c>message_count['cwen@iupui.edu']</c> should be <c>5</c>.</p>
           </statement>
-          <program interactive="activecode" language="python">
+          <program interactive="activecode" language="python" add-files="mbox_count_id">
             <code>
 with open("mbox-short.txt", "r") as filename:
     message_count = {}

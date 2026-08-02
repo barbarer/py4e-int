@@ -10,6 +10,10 @@
           <program interactive="activecode" language="python">
             <code>
 
+# write code here
+
+print(remainder(5))
+
 ====
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
@@ -46,6 +50,7 @@ def remainder(x, y = 4):
           <program interactive="activecode" language="python">
             <code>
 
+print(remainder(5))
 ====
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
@@ -68,7 +73,9 @@ myTests().main()
           </statement>
           <program interactive="activecode" language="python">
             <code>
+# write code here
 
+print(welcome_message('Aurora'))
 ====
 from unittest.gui import TestCaseGui
 
@@ -86,6 +93,8 @@ myTests().main()
                             <program xml:id="funct_writecode3q_sol" language="python" interactive="activecode"><code>
 def welcome_message(name):
     return "Hello " + name + "! We hope that you will enjoy this course. :)"
+
+print(welcome_message('Aurora'))
         </code></program></solution></activity>
 
         <activity label="funct_writecode4q" xml:id="funct_writecode4q">
@@ -96,6 +105,9 @@ def welcome_message(name):
           <program interactive="activecode" language="python">
             <code>
 
+# write code here
+
+print(birthday(11, 17, 1990))
 ====
 from unittest.gui import TestCaseGui
 
@@ -120,6 +132,10 @@ myTests().main()
           <program interactive="activecode" language="python">
             <code>
 
+# write code here
+
+print(address('Seattle', 'WA', '98105'))
+
 ====
 from unittest.gui import TestCaseGui
 
@@ -141,6 +157,8 @@ myTests().main()
 def address(city, state, zip):
     user_address = city + ", " + state + ", " + zip
     return user_address
+
+print(address('Seattle', 'WA', '98105'))
         </code></program></solution></activity>
 
         <activity label="funct_writecode6q" xml:id="funct_writecode6q">
@@ -187,6 +205,8 @@ def subtractNumbers(x, y):
 
 def calculate(a, b, c):
     # your code here
+
+print(calculate(2,3,4))
 
 ====
 from unittest.gui import TestCaseGui
@@ -235,5 +255,7 @@ def calculate(a, b, c):
     finalResult = subtractNumbers(result, c)
     # Returns the finalResult
     return finalResult
+
+print(calculate(2,3,4))
         </code></program></solution></activity>
 </section>

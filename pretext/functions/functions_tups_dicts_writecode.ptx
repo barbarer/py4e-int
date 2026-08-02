@@ -14,6 +14,7 @@
 def index_tup(tup):
     # write code here
 
+print(index_tup(("peppermint", "athlete", "business", "everyone", "rhyme", "athlete")))
 ====
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
@@ -43,6 +44,8 @@ def index_tup(tup):
         else:
             return str1
     return str1
+
+print(index_tup(("peppermint", "athlete", "business", "everyone", "rhyme", "athlete")))
         </code></program></solution></activity>
 
         <activity label="funct-tups-dicts-writecode2" xml:id="funct-tups-dicts-writecode2">
@@ -55,7 +58,7 @@ def index_tup(tup):
 def list_tups_into_dict(list_of_tups):
     # write code here
 
-
+print(>list_tups_into_dict([('red', 3), ('blue', 2)]))
 ====
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
@@ -83,6 +86,7 @@ myTests().main()
 def squared_converter(num_list):
     # write code here
 
+print(squared_converter([1,2]))
 ====
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
@@ -104,6 +108,8 @@ def squared_converter(num_list):
         squared_dict[num] = num * num
 
     return squared_dict
+
+print(squared_converter([1,2]))
         </code></program></solution></activity>
 
         <activity label="funct-tups-dicts-writecode4" xml:id="funct-tups-dicts-writecode4">
@@ -115,6 +121,8 @@ def squared_converter(num_list):
             <code>
 def ordered_nums_tup(tup):
     # write code here
+
+print(ordered_nums_tup(("hello", 5, 1)))
 ====
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
@@ -139,7 +147,9 @@ myTests().main()
           <program interactive="activecode" language="python">
             <code>
 def triple_values(num_list)
+    # write code here
 
+print(triple_values([1, 2]))
 ====
 from unittest.gui import TestCaseGui
 
@@ -170,6 +180,8 @@ def triple_values(num_list):
 
     return triple_values_dict
 
+print(triple_values([1, 2]))
+
 ====
 from unittest.gui import TestCaseGui
 
@@ -186,11 +198,15 @@ myTests().main()
 
         <activity label="funct-tups-dicts-writecode6" xml:id="funct-tups-dicts-writecode6">
           <statement>
-            <p>Write a function <c>count_chars</c> that takes a string, <c>str1</c>, and returns a list of tuples ordered by the number of times each character appears in the string in descending order.  For example, <c>count_chars("babby")</c> should return <c>[('b': 3), ('a':1), ('y': 1)]</c>.</p>
+            <p>Write a function <c>count_chars</c> that takes a string, <c>str1</c>, and returns a list of tuples ordered by the number of times each character appears in the string in descending order.  
+              For example, <c>count_chars("babby")</c> should return <c>[('b': 3), ('a':1), ('y': 1)]</c>.</p>
           </statement>
           <program interactive="activecode" language="python">
             <code>
 
+# write code here
+
+print(count_chars("babby"))
 ====
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
