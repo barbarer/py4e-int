@@ -14,6 +14,7 @@
             <code>
 mail = ['From stephen.marquard@uct.ac.za Sat Jan  7', 'From gopal.ramasammycook@gmail.com Thurs Jan  5', 'From louis@media.berkeley.edu Tues Jan  3', 'From antranig@caret.cam.ac.uk Sat Jan  7', 'From david.horwitz@uct.ac.za Wed Jan  4', 'From ray@media.berkeley.edu Mon Jan  2', 'From stephen.marquard@uct.ac.za Mon Jan 2', 'From wagnermr@iupui.edu Fri Jan  6']
 
+print(mail_count['Mon'])
 ====
 from unittest.gui import TestCaseGui
 
@@ -48,8 +49,9 @@ for email in mail:
         mail_count[key] = 0
     # Update key
     mail_count[key] += 1
-# Print final count
-print(mail_count)
+
+# Print final count for Mon
+print(mail_count['Mon'])
         </code></program></solution></activity>
 
         <activity label="dict_writecode2" xml:id="dict_writecode2">
@@ -60,6 +62,7 @@ print(mail_count)
             <code>
 mail_log = ['From stephen.marquard@uct.ac.za Sat Jan  7', 'From gopal.ramasammycook@gmail.com Thurs Jan  5', 'From stephen.marquard@uct.ac.za Sat Feb  7', 'From louis@media.berkeley.edu Tues Jan  3', 'From stephen.marquard@uct.ac.za Sat Nov  6', 'From antranig@caret.cam.ac.uk Sat Jan  7', 'From david.horwitz@uct.ac.za Wed Jan  4', 'From ray@media.berkeley.edu Mon Jan  2', 'From stephen.marquard@uct.ac.za Mon Jan 2', 'From wagnermr@iupui.edu Fri Jan  6', 'From gopal.ramasammycook@gmail.com Thurs Dec  5', 'From louis@media.berkeley.edu Tues April  1']
 
+print(user_count['stephen.marquard@uct.ac.za'])
 ====
 from unittest.gui import TestCaseGui
 
@@ -85,7 +88,7 @@ myTests().main()
 phrase = "Exeggcute evolves into Exeggutor which are two extraordinary Pokemon"
 
 print(e_counter)
-
+print(letter_count['e'])
 ====
 from unittest.gui import TestCaseGui
 
@@ -121,9 +124,10 @@ for word in phrase.split():
             letter_count[letter] = 0
         # Update letter
         letter_count[letter] += 1
+
 # Create e_counter to see how many are in the phrase
-e_counter = letter_count['e']
 print(e_counter)
+print(letter_count['e'])
         </code></program></solution></activity>
 
         <activity label="dict_writecode4" xml:id="dict_writecode4">
@@ -136,6 +140,7 @@ print(e_counter)
             <code>
 phrase = "Writing programs or programming is a very creative and rewarding activity  You can write programs for many reasons ranging from making your living to solving a difficult data analysis problem to having fun to helping someone else solve a problem  This book assumes that {\em everyone} needs to know how to program and that once you know how to program, you will figure out what you want to do with your newfound skills"
 
+print( word_dictionary['Writing'])
 ====
 from unittest.gui import TestCaseGui
 
@@ -150,6 +155,8 @@ myTests().main()
         </code>
           </program>
         </activity>
+
+<p>Below is the words.txt file used in Question 5.</p>
 
  <datafile xml:id="words_id" label="words_id" filename='words.txt'>
       <pre source="dictionaries/words.txt"></pre>
@@ -166,6 +173,9 @@ myTests().main()
           <program interactive="activecode" language="python" add-files="words_id">
             <code>
 
+# write the code here
+
+print(word_count['and'])
 ====
 from unittest.gui import TestCaseGui
 
@@ -200,7 +210,7 @@ with open("words.txt", "r") as filename:
             # Update word
             word_count[word] += 1
 # Print final count
-print(word_count)
+print(word_count['and'])
         </code></program></solution></activity>
 
         <activity label="dict_writecode6" xml:id="dict_writecode6">
@@ -214,6 +224,8 @@ print(word_count)
             <code>
 phrase = "Writing programs or programming is a very creative and rewarding activity  You can write programs for many reasons ranging from making your living to solving a difficult data analysis problem to having fun to helping someone else solve a problem  This book assumes that {\em everyone} needs to know how to program and that once you know how to program, you will figure out what you want to do with your newfound skills"
 
+print(word_dictionary.get('Writing', 0))
+print(word_dictionary['writing'])
 ====
 from unittest.gui import TestCaseGui
 
@@ -230,7 +242,7 @@ myTests().main()
           </program>
         </activity>
 
-  <p>Below is the romeo.txt file used in Question 7.</p>
+  <p>Below is the romeo.txt file used in Question 7.  It contains some of the words that Romeo speaks in Romeo and Juliet.</p>
 
   <datafile xml:id="romeo_id" label="romeo_id" filename='romeo.txt'>
       <pre source="dictionaries/romeo.txt"></pre>
