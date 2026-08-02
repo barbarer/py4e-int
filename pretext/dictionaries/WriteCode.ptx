@@ -78,16 +78,14 @@ myTests().main()
 
         <activity xml:id="dict_writecode3q" label="dict_writecode3q">
           <statement>
-            <p>Write a program that creates a dictionary <c>letter_count</c> that keeps track
-                            of the amount of times each letter appears in the given phrase. Assign the
-                            number of times <q>e</q> appears in the phrase to the variable <c>e_counter</c>. Make
-                            sure to account for each letter in its lowercase form. For example, <c>e_counter</c> should be <c>10</c>, and <c>letter_count['e']</c> should be <c>10</c>.</p>
+            <p>Write a program that creates a dictionary letter_count that keeps track
+                            of the amount of times each letter appears in the given phrase.  Make
+                            sure to account for each letter in its lowercase form. For example letter_count['e'] should be 10.</p>
           </statement>
           <program interactive="activecode" language="python">
             <code>
 phrase = "Exeggcute evolves into Exeggutor which are two extraordinary Pokemon"
 
-print(e_counter)
 print(letter_count['e'])
 ====
 from unittest.gui import TestCaseGui
@@ -103,9 +101,8 @@ myTests().main()
         </code>
           </program>
           <solution><p>Write a program that creates a dictionary letter_count that keeps track
-                            of the amount of times each letter appears in the given phrase. Assign the
-                            number of times e appears in the phrase to the variable e_counter. Make
-                            sure to account for each letter in its lowercase form. For example, e_counter should be 10, and letter_count['e'] should be 10.</p>
+                            of the amount of times each letter appears in the given phrase.  Make
+                            sure to account for each letter in its lowercase form. For example letter_count['e'] should be 10.</p>
                             <program xml:id="ddict_writecode3q_sol" language="python" interactive="activecode"><code>
 # phrase string is given
 phrase = "Exeggcute evolves into Exeggutor which are two extraordinary Pokemon"
@@ -125,8 +122,6 @@ for word in phrase.split():
         # Update letter
         letter_count[letter] += 1
 
-# Create e_counter to see how many are in the phrase
-print(e_counter)
 print(letter_count['e'])
         </code></program></solution></activity>
 
