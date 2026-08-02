@@ -78,9 +78,9 @@ myTests().main()
 
         <activity xml:id="dict_writecode3q" label="dict_writecode3q">
           <statement>
-            <p>Write a program that creates a dictionary letter_count that keeps track
+            <p>Write a program that creates a dictionary <c>letter_count</c> that keeps track
                             of the amount of times each letter appears in the given phrase.  Make
-                            sure to account for each letter in its lowercase form. For example letter_count['e'] should be 10.</p>
+                            sure to account for each letter in its lowercase form. For example <c>letter_count['e']</c> should be 10.</p>
           </statement>
           <program interactive="activecode" language="python">
             <code>
@@ -94,15 +94,14 @@ class myTests(TestCaseGui):
 
     def testOne(self):
         self.assertEqual(len(letter_count), 21, "len(letter_count)")
-        self.assertEqual(e_counter, 10, "e_counter")
         self.assertEqual(letter_count['e'], 10, "letter_count['e']")
 
 myTests().main()
         </code>
           </program>
-          <solution><p>Write a program that creates a dictionary letter_count that keeps track
+          <solution><p>Write a program that creates a dictionary <c>letter_count</c> that keeps track
                             of the amount of times each letter appears in the given phrase.  Make
-                            sure to account for each letter in its lowercase form. For example letter_count['e'] should be 10.</p>
+                            sure to account for each letter in its lowercase form. For example <c>letter_count['e']</c> should be 10.</p>
                             <program xml:id="ddict_writecode3q_sol" language="python" interactive="activecode"><code>
 # phrase string is given
 phrase = "Exeggcute evolves into Exeggutor which are two extraordinary Pokemon"
