@@ -2,10 +2,7 @@
 <section xml:id="web_write-code-questions">
   <title>Write Code Questions</title>
   
-  <aside xml:id="xml-book" type="note">
-   <title>Click here to see the contents of books.xml.  It contains
-            xml tags to define the books in a bookstore. Click here again to hide it</title>
-
+<datafile xml:id="xml-book" label="xml-book" filename="books.xml">
     <pre>
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;bookstore&gt;
@@ -44,7 +41,7 @@
 
 &lt;/bookstore&gt;
        </pre>
-  </aside>
+      </datafile>
 
   <activity label="web_get_book_info_xml" xml:id="web_get_book_info_xml_editor">
     <statement>
@@ -52,7 +49,7 @@
             and finds all of the book data and prints the title for each book and
             then finds all the author names for each book and prints each author name.</p>
     </statement>
-    <program interactive="activecode" language="python3">
+    <program interactive="activecode" language="python3" add-files="xml-book">
       <code>
 import xml.etree.ElementTree as ET
 fh = open("books.xml")
@@ -69,10 +66,8 @@ for book in book_list:
     </program>
   </activity>
   
-  <aside xml:id="xml-news" type="note">
-    <title>Click here to see the contents of news.xml.  It contains
-            xml tags to define news stories</title>
-    <pre>
+    <datafile xml:id="xml-news" label="xml-news" filename="news.xml">
+            <pre>
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;nitf&gt;
     &lt;head&gt;
@@ -92,13 +87,13 @@ for book in book_list:
     &lt;/body&gt;
 &lt;/nitf&gt;
     </pre>
-  </aside>
+  </datafile>
   <activity label="web_get_news_info_xml" xml:id="web_get_news_info_xml_editor">
     <statement>
       <p>Fix the errors in the code below so that it reads the data from news.xml
             and prints the headline and date.</p>
     </statement>
-    <program interactive="activecode" language="python3">
+    <program interactive="activecode" language="python3" add-files="xml-news">
       <code>
 import xml.etree.ElementTree as ET
 fh = open("news.xml")
@@ -116,10 +111,7 @@ print(date)
     </program>
   </activity>
 
-  
-  <aside xml:id="xml-weather" type="note">
-    <title>Click here below to see the contents of weather.xml.  It contains
-            xml tags to define weather observations</title>
+  <datafile xml:id="xml-weather" label="xml-weather" filename="weather.xml">
      <pre>
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;current_observation&gt;
@@ -147,14 +139,14 @@ print(date)
 
 &lt;/current_observation&gt;
     </pre>
-  </aside>
+  </datafile>
   <activity label="web_get_weather_info_xml" xml:id="web_get_weather_info_xml_editor">
     <statement>
       <p>Finish the code below so that it reads the data from weather.xml
             into a tree and then prints the location, temp_f, and windchill_f for
             the current_observation.</p>
     </statement>
-    <program interactive="activecode" language="python3">
+    <program interactive="activecode" language="python3" add-files="xml-weather">
       <code>
 import xml.etree.ElementTree as ET
 fh = open("weather.xml")
@@ -165,9 +157,7 @@ tree = ET.fromstring(data)
     </program>
   </activity>
   
-  <aside xml:id="json-people" type="note">
-  <title>Click here to show the contents of the  file <c>email.json</c>.  It contains JSON data for people including their first_name, last_name
-            and email address</title>
+<datafile xml:id="json-person" label="json-person" filename="email.json">
     <pre>
 [{
   "id": 1,
@@ -198,13 +188,13 @@ tree = ET.fromstring(data)
   "gender": "Male",
   "ip_address": "67.76.188.26"
 }]</pre>
-  </aside>
+</datafile>
   <activity label="web_email_json_write" xml:id="web_email_json_write_editor">
     <statement>
       <p>Finish the code below so that it prints the first name, last name and email
             address for each person in the list of dictionaries returned from <c>json.loads(data).</c></p>
     </statement>
-    <program interactive="activecode" language="python3">
+    <program interactive="activecode" language="python3" add-files="json-person">
       <code>
 import json
 fh = open("email.json")
@@ -215,9 +205,7 @@ person_list = json.loads(data)
     </program>
   </activity>
 
-  <aside xml:id="json-person" type="note">
-     <title>Click here to show the contents of the JSON file <c>person.json</c>.  It contains data for a person in a dictionary including their first name,
-            last name, address, and phone numbers</title>
+<datafile xml:id="json-person2" label="json-person2" filename="person.json">
     <pre>
 {
   "firstName": "John",
@@ -247,13 +235,13 @@ person_list = json.loads(data)
   "children": [],
   "spouse": null
 }</pre>
-  </aside>
+</datafile>
   <activity label="web_email_person_write" xml:id="web_email_person_write">
     <statement>
       <p>Finish the code below so that it prints the first name, last name, the
             state the person lives in, and their mobile phone number.</p>
     </statement>
-    <program interactive="activecode" language="python3">
+    <program interactive="activecode" language="python3" add-files="json-person2">
       <code>
 import json
         </code>
