@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="web_write-code-questions">
   <title>Write Code Questions</title>
-  
+  <p>The file "books.xml" has information for the books in a bookstore.</<p>
 <datafile xml:id="xml-book" label="xml-book" filename="books.xml">
     <pre>
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -66,6 +66,7 @@ for book in book_list:
     </program>
   </activity>
   
+  <p>The file "news.xml" has information for news stories.</p>
     <datafile xml:id="xml-news" label="xml-news" filename="news.xml">
             <pre>
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -111,6 +112,7 @@ print(date)
     </program>
   </activity>
 
+  <p>The following file "weather.xml" has information for the weather for a particular day and time at an airport.</<p>
   <datafile xml:id="xml-weather" label="xml-weather" filename="weather.xml">
      <pre>
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -157,6 +159,7 @@ tree = ET.fromstring(data)
     </program>
   </activity>
   
+<p>The following file "email.json" has first name, last name, email, gender, and ip_address information for people.</<p>
 <datafile xml:id="json-person" label="json-person" filename="email.json">
     <pre>
 [{
@@ -205,6 +208,7 @@ person_list = json.loads(data)
     </program>
   </activity>
 
+<p>The following file "person.json" has first name, last name, a flag if they are alive, age, address, phone numbers, spouse, and a list of children information for people.</<p>
 <datafile xml:id="json-person2" label="json-person2" filename="person.json">
     <pre>
 {
