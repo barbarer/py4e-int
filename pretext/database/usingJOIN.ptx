@@ -15,7 +15,7 @@
             reconnect the rows between the tables.</p>
   <p>The following is an example of a <c>SELECT</c> with a
             <c>JOIN</c> clause:</p>
-  <program language="{.sql}">
+  <program language="sql">
     <code>
 SELECT * FROM Follows JOIN People
     ON Follows.from_id = People.id WHERE People.id = 1
@@ -195,7 +195,7 @@ Connections for id=2:
             where the <c>start_station</c> in <c>trip_data</c> is the same as the <c>station_id</c> in <c>bikeshare_stations</c>.
             It will also limit the results to 5 rows.</p>
     </statement>
-    <program xml:id="db_select_bike_join_ex1_editor" interactive="activecode" language="sql">
+    <program xml:id="db_select_bike_join_ex1_editor" interactive="activecode" language="sql" database="database/bikeshare.db">
       <code>
 SELECT trip_data.bike_number, bikeshare_stations.name
 FROM trip_data JOIN bikeshare_stations
@@ -217,7 +217,7 @@ assert 3,1 == 3rd &amp; H St NE
             where the <c>start_station</c> in <c>trip_data</c> is the same as the <c>station_id</c> in <c>bikeshare_stations</c>
             and where the duration is greater than 85,000.</p>
     </statement>
-    <program xml:id="db_select_bike_join_with_where_ex1_editor" interactive="activecode" language="sql">
+    <program xml:id="db_select_bike_join_with_where_ex1_editor" interactive="activecode" language="sql" database="database/bikeshare.db">
       <code>
 SELECT trip_data.bike_number, trip_data.duration, bikeshare_stations.name
 FROM trip_data JOIN bikeshare_stations
