@@ -2,13 +2,17 @@
 <section xml:id="database_write-code-questions">
   <title>Write Code Questions</title>
 
+  <datafile xml:id="bikeshare_id" label="bikeshare_id" filename='rbikeshare.db' hide="yes">
+      <pre source="databases/bikeshare.db"></pre>
+  </datafile>
+
         <activity label="db_writecode_bike1" xml:id="db_writecode_bike1_editor">
           <statement>
             <p>Given a database of bike share information fix the SELECT statement to
                     retrieve the <c>bike_number</c> and <c>duration</c> from table <c>trip_data</c> for
                     <c>bike_number</c> <q>W00837</q>.</p>
           </statement>
-          <program interactive="activecode" language="python">
+          <program interactive="activecode" language="python" add-files="bikeshare_id">
             <code>
 SELECT bike, duration IN trip_data WHERE bike = W00837
 ====
@@ -32,7 +36,7 @@ assert 13,1 == 492
                     retrieves the <c>bike_number</c> and <c>duration</c> from table <c>trip_data</c> for
                     all of the rentals that had a <c>duration</c> of more than 85,000.</p>
           </statement>
-          <program interactive="activecode" language="python">
+          <program interactive="activecode" language="python" add-files="bikeshare_id">
             <code>
 
 
@@ -55,7 +59,7 @@ assert 7,1 == 85194
                     retrieves the <c>bike_number</c>, <c>duration</c>, and <c>start_date</c> from table <c>trip_data</c> for all of
                     the rentals from <c>start_station</c> 31105 and limit the results to 5.</p>
           </statement>
-          <program interactive="activecode" language="python">
+          <program interactive="activecode" language="python" add-files="bikeshare_id">
             <code>
 
 ====
@@ -78,7 +82,7 @@ assert 4,1 == 422
                     retrieves the <c>bike_number</c> and <c>member_type</c> for all of
                     the rentals from table <c>trip_data</c> where <c>end_station</c> 31200 and limit the results to 5.</p>
           </statement>
-          <program interactive="activecode" language="python">
+          <program interactive="activecode" language="python" add-files="bikeshare_id">
             <code>
 
 ====
@@ -101,7 +105,7 @@ assert 4,1 == Member
                     all of the rentals that had a <c>duration</c> of more than 85,000 and order
                     them by <c>duration</c> descending.</p>
           </statement>
-          <program interactive="activecode" language="python">
+          <program interactive="activecode" language="python" add-files="bikeshare_id">
             <code>
 
 
@@ -124,7 +128,7 @@ assert 7,1 == 85102
                     where the <c>start_station</c> in <c>trip_data</c> is the same as the <c>station_id</c> in <c>bikeshare_stations</c>.
                     Limit the results to 5 rows.</p>
           </statement>
-          <program interactive="activecode" language="python">
+          <program interactive="activecode" language="python" add-files="bikeshare_id">
             <code>
 
 ====
@@ -147,7 +151,7 @@ assert 4,11 == open
                     where the <c>start_station</c> in <c>trip_data</c> is the same as the <c>station_id</c> in <c>bikeshare_stations</c>.
                     Limit the results to 5 rows.</p>
           </statement>
-          <program interactive="activecode" language="python">
+          <program interactive="activecode" language="python" add-files="bikeshare_id">
             <code>
 
 ====
@@ -169,7 +173,7 @@ assert 4,2 == 14th St &amp; Spring Rd NW
                     where the <c>start_station</c> in <c>trip_data</c> is the same as the <c>station_id</c> in <c>bikeshare_stations</c>.
                     Limit the results to 5 rows.</p>
           </statement>
-          <program interactive="activecode" language="python">
+          <program interactive="activecode" language="python" add-files="bikeshare_id">
             <code>
 
 ====
@@ -192,7 +196,7 @@ assert 4,4 == -77.0327126210449
                     where the <c>start_station</c> in <c>trip_data</c> is the same as the <c>station_id</c> in <c>bikeshare_stations</c>
                     and where the <c>station_id</c> equals 31101.  Limit the results to 5 rows.</p>
           </statement>
-          <program interactive="activecode" language="python">
+          <program interactive="activecode" language="python" add-files="bikeshare_id">
             <code>
 
 ====
@@ -213,7 +217,7 @@ assert 4,3 == 31101
                     where the <c>start_station</c> in <c>trip_data</c> is the same as the <c>station_id</c> in <c>bikeshare_stations</c>
                     and where the <c>member_type</c> equals <q>Casual</q>.  Limit the results to 5 rows.</p>
           </statement>
-          <program interactive="activecode" language="python">
+          <program interactive="activecode" language="python" add-files="bikeshare_id">
             <code>
 
 ====
