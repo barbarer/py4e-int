@@ -98,7 +98,7 @@ MyTests().main()
 
         <activity xml:id="regex_writecode3q" label="regex_writecode3q">
           <statement>
-            <p>Define the function <q>match_four</q> that takes a string and uses regex to return True if the
+            <p>Define the function <c>match_four</c> that takes a string and uses regex to return True if the
                             string starts with 4 followed by zero to many other digits and False if it does not.</p>
           </statement>
           <program interactive="activecode" language="python">
@@ -120,7 +120,7 @@ class MyTests(TestCaseGui):
 MyTests().main()
         </code>
           </program>
-          <solution><p>Define the function match_four that takes a string and uses regex to return True if the
+          <solution><p>Define the function <c>match_four</c> that takes a string and uses regex to return True if the
                             string starts with 4 followed by zero to many other digits and False if it does not.</p>
                             <program xml:id="regex_writecode3q_sol" language="python" interactive="activecode"><code>
 # First import the regex library (re), then define the match_four function.
@@ -152,7 +152,7 @@ MyTests().main()
 
         <activity label="regex_writecode4" xml:id="regex_writecode4">
           <statement>
-            <p>Define the function <q>match_cat</q> that uses regex to return True if a
+            <p>Define the function <c>match_cat</c> that uses regex to return True if a
                     string matches cat, Cat, CAT, cAt, etc and False if it does not.</p>
           </statement>
           <program interactive="activecode" language="python">
@@ -207,7 +207,7 @@ class MyTests(TestCaseGui):
 MyTests().main()
         </code>
           </program>
-          <solution><p>Define the function match_z to match a word containing a lowercase letter z.
+          <solution><p>Define the function <c>match_z</c> to match a word containing a lowercase letter z.
                             Return "Found a match!" if z is in the string and "Not matched!" if
                             there is not a z.</p>
           <program xml:id="regex_writecode5q_sol" language="python" interactive="activecode"><code>
@@ -241,7 +241,7 @@ MyTests().main()
 
         <activity label="regex_writecode6" xml:id="regex_writecode6">
           <statement>
-            <p>Define the function matchMiddle_z to match a word containing the letter z,
+            <p>Define the function <c>matchMiddle_z</c> to match a word containing the letter z,
                     but not at the beginning or end of a word. Return <q>Found a match!</q> if z is
                     in the string and <q>Not matched!</q> if there is not a z.</p>
           </statement>
@@ -277,7 +277,7 @@ MyTests().main()
 
         <activity xml:id="regex_writecode7q" label="regex_writecode7q">
           <statement>
-            <p>Finish the code below to find all of the emails in <q>mbox-short.txt</q> and add them to a list <c>email_list)</c> 
+            <p>Finish the code below to find all of the emails in <q>mbox-short.txt</q> and add them to a list <c>email_list</c> 
               and then print the list.  An email starts with an alphanumeric character followed by one or more non white space 
               characters and then <q>@</q> followed by one or more non white space characters with one alphabetic character at the end.</p>
           </statement>
@@ -296,7 +296,7 @@ class MyTests(TestCaseGui):
 MyTests().main()
         </code>
           </program>
-          <solution><p>Finish the code below to find all of the emails in <q>mbox-short.txt</q> and add them to a list <c>email_list)</c> 
+          <solution><p>Finish the code below to find all of the emails in <q>mbox-short.txt</q> and add them to a list <c>email_list</c> 
               and then print the list.  An email starts with an alphanumeric character followed by one or more non white space 
               characters and then <q>@</q> followed by one or more non white space characters with one alphabetic character at the end.</p>
             <program xml:id="regex_writecode7q_sol" language="python" interactive="activecode" add-files="regex-mbox-short-id"><code>
@@ -326,7 +326,7 @@ MyTests().main()
         <activity label="regex_writecode8" xml:id="regex_writecode8">
           <statement>
             <p>Using <q>mbox-short.txt</q>, extract the email domains from each email address
-                    using regex and add them to the list <q>domains</q>. For the email <url href="mailto:noname@umich.edu" visual="mailto:noname@umich.edu">noname@umich.edu</url>,
+                    using regex and add them to the list <c>domains</c>. For the email <url href="mailto:noname@umich.edu" visual="mailto:noname@umich.edu">noname@umich.edu</url>,
                     this would locate the string <q>umich.edu</q>.</p>
           </statement>
           <program interactive="activecode" language="python" add-files="regex-mbox-short-id">
@@ -351,7 +351,7 @@ MyTests().main()
           <statement>
             <p>Using <q>mbox-short.txt</q>, extract the number next to each email (the
                             amount of emails each person has sent) using a regex equation, and
-                            calculate the total amount of emails sent in the variable <c>total_emails</c>.  Use () to capture and return the number.</p>
+                            calculate the total amount of emails sent in the variable <c>total_emails</c>.  Use <c>()</c> to capture and return the number.</p>
           </statement>
           <program interactive="activecode" language="python" add-files="regex-mbox-short-id">
             <code>
@@ -368,10 +368,10 @@ class MyTests(TestCaseGui):
 MyTests().main()
         </code>
           </program>
-          <solution><p>Using mbox-short.txt , extract the number next to each email (the
+          <solution>
+            <p>Using <q>mbox-short.txt</q>, extract the number next to each email (the
                             amount of emails each person has sent) using a regex equation, and
-                            calculate the total amount of emails sent. Save this to the variable
-                            ‘total_emails'. Use the () character to capture and return the number.</p>
+                            calculate the total amount of emails sent in the variable <c>total_emails</c>.  Use <c>()</c> to capture and return the number.</p>
                             <program xml:id="regex_writecode9q_sol" language="python" interactive="activecode" add-files="regex-mbox-short-id"><code>
 # Import regex (re), create a variable for the total number of emails, and create a handle to access the file.
 # Iterate through lines in the file, remove trailing whitespace with rstrip(), and create a regex expression to use with findall() to return a list of email matches.

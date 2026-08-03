@@ -2,7 +2,7 @@
 <section xml:id="web_write-code-questions">
   <title>Write Code Questions</title>
   
-  <aside xml:id="xml-book">
+  <aside xml:id="xml-book" type="note">
    <title>Click here to see the contents of books.xml.  It contains
             xml tags to define the books in a bookstore. Click here again to hide it</title>
 
@@ -52,7 +52,7 @@
             and finds all of the book data and prints the title for each book and
             then finds all the author names for each book and prints each author name.</p>
     </statement>
-    <program interactive="activecode" language="python">
+    <program interactive="activecode" language="python3">
       <code>
 import xml.etree.ElementTree as ET
 fh = open("books.xml")
@@ -69,7 +69,7 @@ for book in book_list:
     </program>
   </activity>
   
-  <aside xml:id="xml-news">
+  <aside xml:id="xml-news" type="note">
     <title>Click here to see the contents of news.xml.  It contains
             xml tags to define news stories</title>
     <pre>
@@ -98,7 +98,7 @@ for book in book_list:
       <p>Fix the errors in the code below so that it reads the data from news.xml
             and prints the headline and date.</p>
     </statement>
-    <program interactive="activecode" language="python">
+    <program interactive="activecode" language="python3">
       <code>
 import xml.etree.ElementTree as ET
 fh = open("news.xml")
@@ -115,8 +115,9 @@ print(date)
         </code>
     </program>
   </activity>
+
   
-  <aside xml:id="xml-weather">
+  <aside xml:id="xml-weather" type="note">
     <title>Click here below to see the contents of weather.xml.  It contains
             xml tags to define weather observations</title>
      <pre>
@@ -153,7 +154,7 @@ print(date)
             into a tree and then prints the location, temp_f, and windchill_f for
             the current_observation.</p>
     </statement>
-    <program interactive="activecode" language="python">
+    <program interactive="activecode" language="python3">
       <code>
 import xml.etree.ElementTree as ET
 fh = open("weather.xml")
@@ -164,7 +165,7 @@ tree = ET.fromstring(data)
     </program>
   </activity>
   
-  <aside xml:id="json-people">
+  <aside xml:id="json-people" type="note">
   <title>Click here to show the contents of the  file <c>email.json</c>.  It contains JSON data for people including their first_name, last_name
             and email address</title>
     <pre>
@@ -203,7 +204,7 @@ tree = ET.fromstring(data)
       <p>Finish the code below so that it prints the first name, last name and email
             address for each person in the list of dictionaries returned from <c>json.loads(data).</c></p>
     </statement>
-    <program interactive="activecode" language="python">
+    <program interactive="activecode" language="python3">
       <code>
 import json
 fh = open("email.json")
@@ -213,8 +214,8 @@ person_list = json.loads(data)
         </code>
     </program>
   </activity>
- 
-  <aside xml:id="json-person">
+
+  <aside xml:id="json-person" type="note">
      <title>Click here to show the contents of the JSON file <c>person.json</c>.  It contains data for a person in a dictionary including their first name,
             last name, address, and phone numbers</title>
     <pre>
@@ -247,12 +248,12 @@ person_list = json.loads(data)
   "spouse": null
 }</pre>
   </aside>
-  <activity label="web_email_person_write" xml:id="web_email_person_write_editor">
+  <activity label="web_email_person_write" xml:id="web_email_person_write">
     <statement>
       <p>Finish the code below so that it prints the first name, last name, the
             state the person lives in, and their mobile phone number.</p>
     </statement>
-    <program interactive="activecode" language="python">
+    <program interactive="activecode" language="python3">
       <code>
 import json
         </code>
