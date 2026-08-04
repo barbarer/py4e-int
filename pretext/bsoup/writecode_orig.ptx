@@ -44,7 +44,7 @@ unittest.main()
     <statement>
                 <p>Write a function called <c>headings</c> that takes in a parameter <c>url</c> and uses BeautifulSoup to return a list of all heading names (not subheadings) from the
                     Contents box (History, Emergence of MOOC providers, Student experience and pedagogy, etc.). For example, <c>headings('https://en.wikipedia.org/wiki/Massive_open_online_course')</c>
-                    should return a list of headings like: <c>['History', 'Emergence of MOOC providers', 'Student experience and pedagogy', 'Information architecture', 'Industry', 'Benefits', 'Challenges and criticisms', 'See also', 'References', 'Further reading', 'External links']</c>.
+                    should return a list of headings like: <c>['History', 'Emergence of MOOC providers', 'Student experience and pedagogy', ...]</c>. 
                     Since we are scraping a live site the actual values may be different.</p>
     </statement>
     <program interactive="activecode" language="python3">
@@ -85,7 +85,7 @@ unittest.main()
                     <statement>
                         <p>Write a function called <c>coursera_dict</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the Coursera enrollees table,
                             and returns a dictionary with Country as keys and Percentage as values. For example, <c>coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course')</c>
-                            should return a dictionary like: <c>{'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', 'United Kingdom': '4.4%', 'Spain': '4.0%', 'Canada': '3.6%', 'Australia': '2.3%', 'Russia': '2.2%', 'Rest of world': '41.9%'}</c>.  Since we are scraping a live site the actual values may be different.</p>
+                            should return a dictionary like: <c>{'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', ...}</c>.  Since we are scraping a live site the actual values may be different.</p>
 
     </statement><program interactive="activecode" language="python3" >
         <code>
@@ -128,7 +128,7 @@ unittest.main()
     <statement>
                 <p>Write a function called <c>types</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the Summary of Python 3's built-in types table,
                     and returns a list of the types. For example, <c>types('https://en.wikipedia.org/wiki/Python_(programming_language)')</c>
-                    should return a list of string like: <c>['bool', 'bytearray', 'bytes', 'complex', 'dict', 'types.EllipsisType', 'float', 'frozenset', 'int', 'list', 'types.NoneType', 'types.NotImplementedType', 'range', 'set', 'str', 'tuple']</c>.  Since we are scraping a live site the actual values may be different.</p>
+                    should return a list of string like: <c>['bool', 'bytearray', 'bytes', ...]</c>.  Since we are scraping a live site the actual values may be different.</p>
 
     </statement>
     <program interactive="activecode" language="python3">
@@ -172,7 +172,7 @@ unittest.main()
                     <statement>
                         <p>Write a function called <c>restaurants_list</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the 12 essential Ann Arbor restaurants,
                             and returns a list of the 12 best Ann Arbor restaurants. For example, <c>restaurants_list('https://detroit.eater.com/maps/best-ann-arbor-restaurants')</c>
-                            should return a list of restaurants like: <c>['1. Salt Springs Brewery', "2. Knight's Steakhouse", '3. The Last Word', "4. Krazy Jim's Blimpy Burger", '5. Blue Llama Jazz Club', '6. Spencer', '7. Miss Kim', "8. Zingerman's Delicatessen", '9. Tomukun Noodle Bar', '10. Ricewood', '11. Bellflower', "12. Ma Lou's Fried Chicken"]</c>.  Since we are scraping a live site the actual values may be different.</p>
+                            should return a list of restaurants like: <c>['1. Salt Springs Brewery', "2. Knight's Steakhouse", '3. The Last Word', ...]</c>.  Since we are scraping a live site the actual values may be different.</p>
 
     </statement><program interactive="activecode" language="python3" >
         <code>
@@ -211,8 +211,7 @@ unittest.main()
     <statement>
                 <p>Write a function called <c>bsi_list</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the section names and subsection names under Programs Bachelor of Science in Information,
                     and returns a list of the section names and subsection names under Programs Bachelor of Science in Information. For example, <c>bsi_list('https://www.si.umich.edu/programs/bachelor-science-information')</c>
-                    should return a list like: <c>['How do I apply?', 'Current U-M students', 'Transfer students', 'High school students', 'New transfers', 'Curriculum', 'Career outcomes', 'Internships', 'Career development resources', 'Engaged learning', 'Tuition and funding', 'Connect with us', "Accelerated Master's Degree Program", 'Study abroad for undergraduates', 'Exchange student information']</c>.
-                    Since we are scraping a live site the actual values may be different.</p>
+                    should return a list like: <c>['How do I apply?', 'Current U-M students', 'Transfer students', 'High school students', 'New transfers', ...]</c>. Since we are scraping a live site the actual values may be different.</p>
 
     </statement>
     <program  interactive="activecode" language="python3">
@@ -252,7 +251,7 @@ unittest.main()
     <statement>
                         <p>Write a function called <c>bsi_dict</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape and create a list of the section names and subsection names under Programs Bachelor of Science in Information,
                             and returns a dictionary that contains the names as keys and their full urls as values. For example, <c>bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information')</c>
-                            should return a dictionary like: <c>{'How do I apply?': 'https://www.si.umich.edu//programs/bachelor-science-information/how-do-i-apply', 'Current U-M students': 'https://www.si.umich.edu//programs/bachelor-science-information/how-do-i-apply/cross-campus-transfer', 'Transfer students': 'https://www.si.umich.edu//programs/bachelor-science-information/how-do-i-apply/new-transfer-students-bsi', 'High school students': 'https://www.si.umich.edu//programs/bachelor-science-information/how-do-i-apply/preferred-admissions', ... 'Exchange student information': 'https://www.si.umich.edu//programs/bachelor-science-information/exchange-student-information'}</c>.
+                            should return a dictionary like: <c>{'How do I apply?': 'https://www.si.umich.edu//programs/bachelor-science-information/how-do-i-apply', ...}</c>.
                             Since we are scraping a live site the actual values may be different.</p>
 
     </statement><program interactive="activecode" language="python3" >
@@ -297,7 +296,7 @@ unittest.main()
 <activity xml:id="bsoup_writecode8q_v2" label="bsoup_writecode8q_v2">
     <statement>
                 <p>Write a function called <c>envelope_address</c> that takes in a parameter <c>url</c> and uses BeautifulSoup to web scrape and return the address text in the footer as a list. For example, <c>envelope_address('https://www.si.umich.edu/programs/bachelor-science-information')</c>
-                    should return a list like: <c>['School of Information', 'University of Michigan', '105 S State St.', 'Ann Arbor, MI 48109-1285']</c>.  Since we are scraping a live site the actual values may be different.</p>
+                    should return a list like: <c>['School of Information', 'University of Michigan', '105 S State St.', ...]</c>.  Since we are scraping a live site the actual values may be different.</p>
 
     </statement>
     <program xml:id="bsoup_writecode8q_v2_editor" interactive="activecode" language="python3">
@@ -337,7 +336,7 @@ unittest.main()
     <statement>
                         <p>Write a function called <c>name_email</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the names and email addresses,
                             and returns a dictionary with the names as keys and the email addresses as values. Use the string replace method while web scraping to get rid of <q>n</q>. For example, <c>name_email('https://www.si.umich.edu/people/directory/faculty/e')</c>
-                            should return <c>{'Paul Edwards': 'pne@umich.edu', 'Ron Eglash': 'eglash@umich.edu', 'Nicole Ellison': 'enicole@umich.edu', 'Barbara Ericson': 'barbarer@umich.edu'}</c>.</p>
+                            should return <c>{'Paul Edwards': 'pne@umich.edu', 'Ron Eglash': 'eglash@umich.edu', ...'}</c>.  Since we are scraping a live site the actual values may be different.</p>
 
     </statement><program interactive="activecode" language="python3" >
         <code>
@@ -387,7 +386,7 @@ unittest.main()
     <statement>
                 <p>Write a function called <c>program_email</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the program names under Email Addresses
                     and Admissions (BSI program, MSI program, etc.) and their associated email addresses, and returns a dictionary with the program names as keys and the email addresses as values.
-                    For example, <c>program_email('https://www.si.umich.edu/about-umsi/contact-us')</c> should return something like <c>{'BSI program': 'umsi.undergrad@umich.edu', 'MSI program': 'umsi.admissions@umich.edu', 'MHI program': 'hi.admissions@umich.edu', 'MADS program': 'umsi.mads@umich.edu', 'Doctoral program': 'umsi.phd.admissions@umich.edu'}</c>.</p>
+                    For example, <c>program_email('https://www.si.umich.edu/about-umsi/contact-us')</c> should return something like <c>{'BSI program': 'umsi.undergrad@umich.edu', 'MHI program': 'hi.admissions@umich.edu', ...}</c>. Since we are scraping a live site the actual values may be different.</p>
 
     </statement>
     <program  interactive="activecode" language="python3">

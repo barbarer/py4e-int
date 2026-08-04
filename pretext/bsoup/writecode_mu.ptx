@@ -298,7 +298,7 @@
     <statement>
       <p>Create a function called <c>bsi_dict</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape and create a list of the section names and subsection names under Programs Bachelor of Science in Information,
             and creates another list that contains the full urls of the named sections and subsections. Then, return a dictionary that contains the names as keys and their full urls as values. For example, <c>bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information')</c>
-            should return <c>{'How do I apply?': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply', 'Current U-M students': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/cross-campus-transfer', 'Transfer students': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/new-transfer-students-bsi', 'High school students': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/preferred-admissions', 'New transfers': 'https://www.si.umich.edu/programs/bachelor-science-information/new-transfers', 'UMSI Community College Summer Institute': 'https://www.si.umich.edu/programs/bachelor-science-information/new-transfers/umsi-community-college-summer-institute', 'Curriculum': 'https://www.si.umich.edu/programs/bachelor-science-information/curriculum', 'Career outcomes': 'https://www.si.umich.edu/programs/bachelor-science-information/career-outcomes', 'Internships': 'https://www.si.umich.edu/programs/bachelor-science-information/internships', 'F-1 visa holders': 'https://www.si.umich.edu/programs/bachelor-science-information/internships/f-1-visa-holders', 'Career development resources': 'https://www.si.umich.edu/programs/bachelor-science-information/career-development-resources', 'Engaged learning': 'https://www.si.umich.edu/programs/bachelor-science-information/engaged-learning', 'Tuition and funding': 'https://www.si.umich.edu/programs/bachelor-science-information/tuition-and-funding', 'Connect with us': 'https://www.si.umich.edu/programs/bachelor-science-information/connect-us', 'Study abroad for undergraduates': 'https://www.si.umich.edu/programs/bachelor-science-information/study-abroad-undergraduates', 'Exchange student information': 'https://www.si.umich.edu/programs/bachelor-science-information/exchange-student-information'}</c>.</p>
+            should return <c>{'How do I apply?': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply', ...}</c>. Since we are scraping a live site the results may be different.</p>
     </statement>
     <blocks numbered="left">
       <block order="7">
@@ -346,7 +346,7 @@
   <activity xml:id="bsoup_writecode8q_mu" label="bsoup_writecode8q_mu" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function called <c>envelope_address</c> that takes in a parameter <c>url</c> and uses BeautifulSoup to web scrape and return the address text in the footer as a list. For example, <c>envelope_address('https://www.si.umich.edu/programs/bachelor-science-information')</c>
-            should return a list like: <c>['School of Information', 'University of Michigan', '105 S State St.', 'Ann Arbor, MI 48109-1285']</c>.</p>
+            should return a list like: <c>['School of Information', 'University of Michigan', ...]</c>. Since we are scraping a live site the results may be different.</p>
     </statement>
     <blocks numbered="left">
       <block order="1">
