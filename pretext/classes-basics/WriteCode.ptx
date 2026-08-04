@@ -5,17 +5,40 @@
     <statement>
       <p>Add a <c>distanceFromPoint</c> method that works similar to <c>distanceFromOrigin</c> except that it
                         takes a <c>Point</c> as a parameter and
-                        computes the distance between that point and self.</p>
+                        computes the distance between that point and self.  For example, print(p.distanceFromPoint(q)) should print <c>5.0</c>. </p>
     </statement>
     <program interactive="activecode" language="python">
       <code>
+import math
 
+class Point:
+    """ Point class for representing and manipulating x,y coordinates. """
+
+    def __init__(self, initX, initY):
+        """ Create a new point at the given coordinates. """
+        self.x = initX
+        self.y = initY
+
+    def getX(self):
+        return self.x
+
+    def getY(self):
+        return self.y
+
+    def distanceFromOrigin(self):
+        return ((self.x ** 2) + (self.y ** 2)) ** 0.5
+
+    # write code here
+
+p = Point(3, 3)
+q = Point(6, 7)
+print(p.distanceFromPoint(q))
         </code>
     </program>
     <solution>
       <p>Add a <c>distanceFromPoint</c> method that works similar to <c>distanceFromOrigin</c> except that it
                         takes a <c>Point</c> as a parameter and
-                        computes the distance between that point and self.</p>
+                        computes the distance between that point and self.  For example, print(p.distanceFromPoint(q)) should print <c>5.0</c>. </p>
       <program xml:id="classes_q1_sol" language="python" interactive="activecode">
         <code>
 import math
@@ -50,30 +73,68 @@ print(p.distanceFromPoint(q))
   <activity label="ch_cl_02" xml:id="ch_cl_02">
     <statement>
       <p>Add a method <c>reflect_x</c> to Point which returns a new Point, one which is the
-                reflection of the point about the x-axis.</p>
+                reflection of the point about the x-axis. For example, <c>print(q.refect_x())</c> should print <c>(-6, 7)</c>.</p>
     </statement>
     <program interactive="activecode" language="python">
       <code>
+class Point:
+    """ Point class for representing and manipulating x,y coordinates. """
 
+    def __init__(self, initX, initY):
+        """ Create a new point at the given coordinates. """
+        self.x = initX
+        self.y = initY
+        
+    def __str__(self):
+        return f"({self.x}, {self.y})"
+
+    def getX(self):
+        return self.x
+
+    def getY(self):
+        return self.y
+
+    # add code here
+    
+q = Point(6, 7)
+print(q.reflect_x())
         </code>
     </program>
   </activity>
   <activity xml:id="classes_q3">
     <statement>
       <p>Add a method <c>slope_from_origin</c> which returns the slope of the line joining the origin
-                        to the point.   For example,</p>
-      <pre>&gt;&gt;&gt; Point(4, 10).slope_from_origin()
-2.5</pre>
-      <p>What cases will cause your method to fail? Return None when it happens.</p>
+                        to the point.   For example, <c>print(p.slope_from_origin())</c> should print <c>2.5</c></p>
+      <p>What cases will cause your method to fail? Return <c>None</c> when it happens.</p>
     </statement>
     <program interactive="activecode" language="python">
       <code>
+class Point:
+    """ Point class for representing and manipulating x,y coordinates. """
 
+    def __init__(self, initX, initY):
+        """ Create a new point at the given coordinates. """
+        self.x = initX
+        self.y = initY
+        
+    def __str__(self):
+        return f"({self.x}, {self.y})"
+
+    def getX(self):
+        return self.x
+
+    def getY(self):
+        return self.y
+
+    # add code here
+    
+p = Point(4, 10)
+print(p.slope_from_origin())
         </code>
     </program>
     <solution>
       <p>Add a method <c>slope_from_origin</c> which returns the slope of the line joining the origin
-                        to the point.   For example,</p>
+                        to the point.   For example, <c>print(p.slope_from_origin())</c> should print <c>2.5</c></p>
       <program xml:id="classes_q3_sol" language="python" interactive="activecode">
         <code>
 class Point:
@@ -89,9 +150,6 @@ class Point:
 
     def getY(self):
         return self.y
-
-    def distanceFromOrigin(self):
-        return ((self.x ** 2) + (self.y ** 2)) ** 0.5
 
     def slope_from_origin(self):
         if self.x == 0:
@@ -118,6 +176,26 @@ print(p.slope_from_origin())
     </statement>
     <program interactive="activecode" language="python">
       <code>
+class Point:
+    """ Point class for representing and manipulating x,y coordinates. """
+
+    def __init__(self, initX, initY):
+        """ Create a new point at the given coordinates. """
+        self.x = initX
+        self.y = initY
+        
+    def __str__(self):
+        return f"({self.x}, {self.y})"
+
+    def getX(self):
+        return self.x
+
+    def getY(self):
+        return self.y
+
+    # add code here
+
+print(Point(4, 11).get_line_to(Point(6, 15)))
 
         </code>
     </program>
@@ -126,17 +204,39 @@ print(p.slope_from_origin())
     <statement>
       <p>Add a method called <c>move</c> that will take two parameters, call them <c>dx</c> and <c>dy</c>.  The method will
                         cause the point to move in the x and y direction the number of units given. (Hint: you will change the values of the
-                        state of the point)</p>
+                        state of the point).  So for a point <c>p</c> at <c>(7,6)</c> <c>p.move(5, 10)</c> should change the x and y to <c>(12,16)</c></p>
     </statement>
     <program interactive="activecode" language="python">
       <code>
+class Point:
+    """ Point class for representing and manipulating x,y coordinates. """
+
+    def __init__(self, initX, initY):
+        """ Create a new point at the given coordinates. """
+        self.x = initX
+        self.y = initY
+
+    def __str__(self):
+        return f"({self.x}, {self.y})"
+
+    def getX(self):
+        return self.x
+
+    def getY(self):
+        return self.y
+
+    # add code here
+
+p = Point(7, 6)
+p.move(5, 10)
+print(p)
 
         </code>
     </program>
     <solution>
-      <p>Add a method called <c>move</c> that will take two parameters, call them <c>dx</c> and <c>dy</c>.  The method will
+       <p>Add a method called <c>move</c> that will take two parameters, call them <c>dx</c> and <c>dy</c>.  The method will
                         cause the point to move in the x and y direction the number of units given. (Hint: you will change the values of the
-                        state of the point)</p>
+                        state of the point).  So for a point <c>p</c> at <c>(7,6)</c> <c>p.move(5, 10)</c> should change the x and y to <c>(12,16)</c></p>
       <program xml:id="classes_q5_sol" language="python" interactive="activecode">
         <code>
 class Point:
@@ -147,21 +247,18 @@ class Point:
         self.x = initX
         self.y = initY
 
+    def __str__(self):
+        return f"({self.x}, {self.y})"
+
     def getX(self):
         return self.x
 
     def getY(self):
         return self.y
 
-    def distanceFromOrigin(self):
-        return ((self.x ** 2) + (self.y ** 2)) ** 0.5
-
     def move(self, dx, dy):
         self.x = self.x + dx
         self.y = self.y + dy
-
-    def __str__(self):
-        return str(self.x) + "," + str(self.y)
 
 
 p = Point(7, 6)
@@ -170,14 +267,4 @@ p.move(5, 10)
 print(p)
         </code>
       </program></solution></activity>
-  <activity label="classes_q6" xml:id="classes_q6">
-    <statement>
-      <p>Given three points that fall on the circumference of a circle, find the center and radius of the circle.</p>
-    </statement>
-    <program interactive="activecode" language="python">
-      <code>
-
-        </code>
-    </program>
-  </activity>
 </section>

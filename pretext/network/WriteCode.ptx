@@ -5,7 +5,7 @@
                         <p>Complete the following code that retrieves the file ‘romeo.txt' from.
                             Make changes to line 4 and 5.</p>
 
-    </statement><program interactive="activecode" language="python">
+    </statement><program interactive="activecode" language="python3">
         <code>
 import socket
 
@@ -24,7 +24,7 @@ mysock.close()
         </code>
     </program><solution><p>Complete the following code that retrieves the file ‘romeo.txt' from.
                             Make changes to line 4 and 5.</p>
-                            <program xml:id="network_writecode1q_sol" language="python" interactive="activecode">
+                            <program xml:id="network_writecode1q_sol" language="python3" interactive="activecode">
         <code>
 import socket
 
@@ -49,7 +49,7 @@ while True:
             ‘<url href="http://data.pr4e.org/cover3.jpg" visual="http://data.pr4e.org/cover3.jpg">http://data.pr4e.org/cover3.jpg</url>' and host ‘data.pr4e.org'. There are 5 empty spaces.</p>
 
     </statement>
-    <program interactive="activecode" language="python">
+    <program interactive="activecode" language="python3">
         <code>
 import socket
 
@@ -84,7 +84,7 @@ fhand.close()
                     ‘<url href="http://data.pr4e.org/clown.txt" visual="http://data.pr4e.org/clown.txt">http://data.pr4e.org/clown.txt</url>', prints it and also prints the
                     frequency of each word.</p>
 
-    </statement><program interactive="activecode" language="python">
+    </statement><program interactive="activecode" language="python3">
         <code>
 import urllib.request
 
@@ -92,7 +92,7 @@ fhand = urllib.request.urlopen('_________________')
         </code>
     </program><solution><p>Complete the following code that retrieves the text from
                     ‘http://data.pr4e.org/clown.txt' and prints the frequency of each word.</p>
-                    <program xml:id="writingcode_network_3_sol" language="python" interactive="activecode">
+                    <program xml:id="writingcode_network_3_sol" language="python3" interactive="activecode">
         <code>
 import urllib.request
 
@@ -112,7 +112,7 @@ print(counts)
             and print it.</p>
 
     </statement>
-    <program interactive="activecode" language="python">
+    <program interactive="activecode" language="python3">
         <code>
 import urllib.request
         </code>
@@ -123,13 +123,13 @@ import urllib.request
                 <p>Write a program to store image file from ‘<url href="http://data.pr4e.org/cover.jpg" visual="http://data.pr4e.org/cover.jpg">http://data.pr4e.org/cover.jpg</url>'
                     to your disk.</p>
 
-    </statement><program interactive="activecode" language="python">
+    </statement><program interactive="activecode" language="python3">
         <code>
 import urllib.request, urllib.parse, urllib.error
         </code>
     </program><solution><p>Write a program to store image file from ‘http://data.pr4e.org/cover.jpg'
                     to your disk.</p>
-                    <program xml:id="writingcode_network_5_sol" language="python" interactive="activecode">
+                    <program xml:id="writingcode_network_5_sol" language="python3" interactive="activecode">
         <code>
 import urllib.request, urllib.parse, urllib.error
 
@@ -145,7 +145,7 @@ fhand.close()
         <p>Complete the following program to extract all url from the webpage using regex.</p>
 
     </statement>
-    <program interactive="activecode" language="python">
+    <program interactive="activecode" language="python3">
         <code>
 import urllib.request, urllib.parse, urllib.error
 import re
@@ -162,7 +162,7 @@ links = _______(b'href="(http[s]?://.*?)"', html)
                     of 100,000 characters, joins them and saves as ‘prideandprejudice.txt'
                     to disk and prints number of characters.</p>
 
-    </statement><program interactive="activecode" language="python">
+    </statement><program interactive="activecode" language="python3">
         <code>
 import urllib.request, urllib.parse, urllib.error
 
@@ -176,7 +176,7 @@ while True:
         </code>
     </program><solution><p>Write a program that retrives a txt file from
                     ‘https://www.gutenberg.org/files/1342/1342-0.txt' in several blocks of 100,000 characters, joins them and saves as ‘prideandprejudice.txt' to disk and prints number of characters.</p>
-                        <program xml:id="writingcode_network_7_sol" language="python" interactive="activecode">
+                        <program xml:id="writingcode_network_7_sol" language="python3" interactive="activecode">
         <code>
 import urllib.request, urllib.parse, urllib.error
 
@@ -202,7 +202,7 @@ fhand.close()
             of characters.</p>
 
     </statement>
-    <program interactive="activecode" language="python">
+    <program interactive="activecode" language="python3">
         <code>
 import urllib.request, urllib.parse, urllib.error
         </code>
@@ -212,7 +212,7 @@ import urllib.request, urllib.parse, urllib.error
                 <p>Complete the following code to print all the image sources from
                     the webpage. Use ‘img' and ‘src' as tags.</p>
 
-    </statement><program interactive="activecode" language="python">
+    </statement><program interactive="activecode" language="python3">
         <code>
 import requests
 from bs4 import BeautifulSoup
@@ -222,7 +222,7 @@ resp = requests.get(url)
 soup = BeautifulSoup(resp.content, 'html.parser')
         </code>
     </program><solution><p>Complete the following code to print all the image sources from the webpage. Use ‘img' and ‘src' as tags.</p>
-        <program xml:id="writingcode_network_9_sol" language="python" interactive="activecode">
+        <program xml:id="writingcode_network_9_sol" language="python3" interactive="activecode">
         <code>
 import requests
 from bs4 import BeautifulSoup
@@ -244,7 +244,7 @@ for tag in tags:
             print the tag, href, contents as well as all the attributes.</p>
 
     </statement>
-    <program interactive="activecode" language="python">
+    <program interactive="activecode" language="python3">
         <code>
 import requests
 from bs4 import BeautifulSoup
