@@ -5,7 +5,7 @@
     <statement>
       <p>Add a <c>distanceFromPoint</c> method that works similar to <c>distanceFromOrigin</c> except that it
                         takes a <c>Point</c> as a parameter and
-                        computes the distance between that point and self.  For example, print(p.distanceFromPoint(q)) should print <c>5.0</c>. </p>
+                        computes the distance between that point and self.  For example, <c>print(p.distanceFromPoint(q))</c> should print <c>5.0</c>. </p>
     </statement>
     <program interactive="activecode" language="python">
       <code>
@@ -38,7 +38,7 @@ print(p.distanceFromPoint(q))
     <solution>
       <p>Add a <c>distanceFromPoint</c> method that works similar to <c>distanceFromOrigin</c> except that it
                         takes a <c>Point</c> as a parameter and
-                        computes the distance between that point and self.  For example, print(p.distanceFromPoint(q)) should print <c>5.0</c>. </p>
+                        computes the distance between that point and self.  For example, <c>print(p.distanceFromPoint(q))</c> should print <c>5.0</c>. </p>
       <program xml:id="classes_q1_sol" language="python" interactive="activecode">
         <code>
 import math
@@ -104,7 +104,7 @@ print(q.reflect_x())
   <activity xml:id="classes_q3">
     <statement>
       <p>Add a method <c>slope_from_origin</c> which returns the slope of the line joining the origin
-                        to the point.   For example, <c>print(p.slope_from_origin())</c> should print <c>2.5</c></p>
+                        to the point.   For example, <c>print(p.slope_from_origin())</c> should print <c>2.5</c> when <c>p</c> is <c>(4, 10)</c></p>
       <p>What cases will cause your method to fail? Return <c>None</c> when it happens.</p>
     </statement>
     <program interactive="activecode" language="python">
@@ -134,7 +134,8 @@ print(p.slope_from_origin())
     </program>
     <solution>
       <p>Add a method <c>slope_from_origin</c> which returns the slope of the line joining the origin
-                        to the point.   For example, <c>print(p.slope_from_origin())</c> should print <c>2.5</c></p>
+                        to the point.   For example, <c>print(p.slope_from_origin())</c> should print <c>2.5</c> when <c>p</c> is <c>(4, 10)</c></p>
+      <p>What cases will cause your method to fail? Return <c>None</c> when it happens.</p>
       <program xml:id="classes_q3_sol" language="python" interactive="activecode">
         <code>
 class Point:
@@ -262,7 +263,6 @@ class Point:
 
 
 p = Point(7, 6)
-print(p)
 p.move(5, 10)
 print(p)
         </code>
