@@ -23,10 +23,10 @@
       </block>
       <block order="3">
         <choice correct="yes">
-          <cline>    text = soup.find('a', text = "Current Students")</cline>
+          <cline>    text = soup.find('a', string = "Current Students")</cline>
         </choice>
         <choice>
-          <cline>    text = soup.find_all('a', text = "Current Students")  </cline>
+          <cline>    text = soup.find_all('a', string = "Current Students")  </cline>
         </choice>
       </block>
       <block order="5">

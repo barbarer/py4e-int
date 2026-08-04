@@ -87,7 +87,7 @@ fhand.close()
     </statement><program interactive="activecode" language="python3">
         <code>
 import urllib.request
-
+counts = {}
 fhand = urllib.request.urlopen('_________________')
         </code>
     </program><solution><p>Complete the following code that retrieves the text from
@@ -95,7 +95,7 @@ fhand = urllib.request.urlopen('_________________')
                     <program xml:id="writingcode_network_3_sol" language="python3" interactive="activecode">
         <code>
 import urllib.request
-
+counts = {}
 fhand = urllib.request.urlopen('http://data.pr4e.org/clown.txt')
 for line in fhand:
     words = line.decode().strip()
