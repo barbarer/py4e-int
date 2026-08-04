@@ -24,7 +24,7 @@ def f_cur_stud_link(url):
     soup = BeautifulSoup(r.text, 'html.parser')
 
     # inspect Current Students to get the details
-    text = soup.find('a', text = "Current Students")
+    text = soup.find('a', string = "Current Students")
     info = text.get('href')
     all_info = "https://umich.edu" + info
     return all_info

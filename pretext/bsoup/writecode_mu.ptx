@@ -49,7 +49,7 @@
     <statement>
       <p>Create a function called <c>headings</c> that takes in a parameter <c>url</c> and uses BeautifulSoup to return a list of all heading names (not subheadings) from the
             Contents box (History, Emergence of MOOC providers, Student experience and pedagogy, etc.). For example, <c>headings('https://en.wikipedia.org/wiki/Massive_open_online_course')</c>
-            should return <c>['History', 'Emergence of MOOC providers', 'Student experience and pedagogy', 'Information architecture', 'Industry', 'Benefits', 'Challenges and criticisms', 'See also', 'References', 'Further reading', 'External links']</c>.</p>
+            should return <c>['History', 'Emergence of MOOC providers', 'Student experience and pedagogy', ...].  Since we are scraping a live site the results may be different.</c>.</p>
     </statement>
     <blocks numbered="left">
       <block order="4">
@@ -100,7 +100,7 @@
     <statement>
       <p>Create a function called <c>coursera_dict</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the Coursera enrollees table,
             and returns a dictionary with Country as keys and Percentage as values. For example, <c>coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course')</c>
-            should return <c>{'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', 'United Kingdom': '4.4%', 'Spain': '4.0%', 'Canada': '3.6%', 'Australia': '2.3%', 'Russia': '2.2%', 'Rest of world': '41.9%'}</c>.</p>
+            should return <c>{'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', ...}</c>. Since we are scraping a live site the results may be different.</p>
     </statement>
     <blocks numbered="left">
       <block order="1">
@@ -155,7 +155,7 @@
     <statement>
       <p>Create a function called <c>types</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the Summary of Python 3's built-in types table,
             and returns a list of the types. For example, <c>types('https://en.wikipedia.org/wiki/Python_(programming_language)')</c>
-            should return <c>['bool', 'bytearray', 'bytes', 'complex', 'dict', 'ellipsis', 'float', 'frozenset', 'int', 'list', 'NoneType', 'NotImplementedType', 'range', 'set', 'str', 'tuple']</c>.</p>
+            should return <c>['bool', 'bytearray', 'bytes', 'complex', 'dict', ...]</c>. Since we are scraping a live site the results may be different.</p>
     </statement>
     <blocks numbered="left">
       <block order="6">
@@ -213,7 +213,7 @@
     <statement>
       <p>Create a function called <c>restaurants_list</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the 12 essential Ann Arbor restaurants' names,
             and returns a list of the 12 best Ann Arbor restaurants in 2019. For example, <c>restaurants_list('https://detroit.eater.com/maps/best-ann-arbor-restaurants')</c>
-            should return <c>["1. Knight's Steakhouse", '2. The Last Word', "3. Krazy Jim's Blimpy Burger", '4. Blue Llama Jazz Club', '5. Spencer', '6. Miss Kim', "7. Zingerman's Delicatessen", '8. Tomukun Noodle Bar', '9. Seoul Street', '10. Ricewood', '11. Bellflower', "12. Ma Lou's Fried Chicken"]</c>.</p>
+            should return <c>["1. Knight's Steakhouse", '2. The Last Word', "3. Krazy Jim's Blimpy Burger", ...]</c>. Since we are scraping a live site the results may be different.</p>
     </statement>
     <blocks numbered="left">
       <block order="1">
@@ -258,7 +258,7 @@
     <statement>
       <p>Create a function called <c>bsi_list</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the section names and subsection names under Programs Bachelor of Science in Information,
             and returns a list of the section names and subsection names under Programs Bachelor of Science in Information. For example, <c>bsi_list('https://www.si.umich.edu/programs/bachelor-science-information')</c>
-            should return <c>['How do I apply?', 'Current U-M students', 'Transfer students', 'High school students', 'New transfers', 'UMSI Community College Summer Institute', 'Curriculum', 'Career outcomes', 'Internships', 'F-1 visa holders', 'Career development resources', 'Engaged learning', 'Tuition and funding', 'Connect with us', 'Study abroad for undergraduates', 'Exchange student information']</c>.</p>
+            should return <c>['How do I apply?', 'Current U-M students', 'Transfer students', ...]</c>. Since we are scraping a live site the results may be different.</p>
     </statement>
     <blocks numbered="left">
       <block order="5">
@@ -399,7 +399,7 @@
     <statement>
       <p>Create a function called <c>name_email</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the names and email addresses,
             and returns a dictionary with the names as keys and the email addresses as values. Use the string replace method while web scraping. For example, <c>name_email('https://www.si.umich.edu/people/directory/faculty/e')</c>
-            should return <c>{'Paul Edwards': 'pne@umich.edu', 'Ron Eglash': 'eglash@umich.edu', 'Nicole Ellison': 'enicole@umich.edu', 'Barbara Ericson': 'barbarer@umich.edu'}</c>.</p>
+            should return <c>{'Paul Edwards': 'pne@umich.edu', 'Ron Eglash': 'eglash@umich.edu', ...}</c>. Since we are scraping a live site the results may be different.</p>
     </statement>
     <blocks numbered="left">
       <block order="1">
@@ -471,7 +471,7 @@
     <statement>
       <p>Create a function called <c>program_email</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the program names under Email Addresses
             and Admissions (BSI program, MSI program, etc.) and their associated email addresses, and returns a dictionary with the program names as keys and the email addresses as values.
-            For example, <c>program_email('https://www.si.umich.edu/about-umsi/contact-us')</c> should return something like <c>{'BSI program': 'umsi.undergrad@umich.edu', 'MSI program': 'umsi.admissions@umich.edu', 'MHI program': 'hi.admissions@umich.edu', 'MADS program': 'umsi.mads@umich.edu', 'Doctoral program': 'umsi.phd.admissions@umich.edu'}</c>.</p>
+            For example, <c>program_email('https://www.si.umich.edu/about-umsi/contact-us')</c> should return something like <c>{'BSI program': 'umsi.undergrad@umich.edu', 'MSI program': 'umsi.admissions@umich.edu', ...}</c>. Since we are scraping a live site the results may be different.</p>
     </statement>
     <blocks numbered="left">
       <block order="8">
