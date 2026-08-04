@@ -49,7 +49,7 @@
     <statement>
       <p>Create a function called <c>headings</c> that takes in a parameter <c>url</c> and uses BeautifulSoup to return a list of all heading names (not subheadings) from the
             Contents box (History, Emergence of MOOC providers, Student experience and pedagogy, etc.). For example, <c>headings('https://en.wikipedia.org/wiki/Massive_open_online_course')</c>
-            should return <c>['History', 'Emergence of MOOC providers', 'Student experience and pedagogy', ...].  Since we are scraping a live site the results may be different.</c>.</p>
+            should return <c>['History', 'Emergence of MOOC providers', 'Student experience and pedagogy', ...]</c>. Since we are scraping a live site the results may be different.</p>
     </statement>
     <blocks numbered="left">
       <block order="4">
@@ -298,7 +298,7 @@
     <statement>
       <p>Create a function called <c>bsi_dict</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape and create a list of the section names and subsection names under Programs Bachelor of Science in Information,
             and creates another list that contains the full urls of the named sections and subsections. Then, return a dictionary that contains the names as keys and their full urls as values. For example, <c>bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information')</c>
-            should return <c>{'How do I apply?': 'https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply', ...}</c>. Since we are scraping a live site the results may be different.</p>
+            should return <c>{'How do I apply?': 'https://www.si.umich.edu/.../how-do-i-apply', ...}</c>. Since we are scraping a live site the results may be different.</p>
     </statement>
     <blocks numbered="left">
       <block order="7">

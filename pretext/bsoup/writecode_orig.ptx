@@ -211,7 +211,7 @@ unittest.main()
     <statement>
                 <p>Write a function called <c>bsi_list</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the section names and subsection names under Programs Bachelor of Science in Information,
                     and returns a list of the section names and subsection names under Programs Bachelor of Science in Information. For example, <c>bsi_list('https://www.si.umich.edu/programs/bachelor-science-information')</c>
-                    should return a list like: <c>['How do I apply?', 'Current U-M students', 'Transfer students', 'High school students', 'New transfers', ...]</c>. Since we are scraping a live site the actual values may be different.</p>
+                    should return a list like: <c>['How do I apply?', 'Current U-M students', 'Transfer students', ...]</c>. Since we are scraping a live site the actual values may be different.</p>
 
     </statement>
     <program  interactive="activecode" language="python3">
@@ -251,7 +251,7 @@ unittest.main()
     <statement>
                         <p>Write a function called <c>bsi_dict</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape and create a list of the section names and subsection names under Programs Bachelor of Science in Information,
                             and returns a dictionary that contains the names as keys and their full urls as values. For example, <c>bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information')</c>
-                            should return a dictionary like: <c>{'How do I apply?': 'https://www.si.umich.edu//programs/bachelor-science-information/how-do-i-apply', ...}</c>.
+                            should return a dictionary like: <c>{'How do I apply?': 'https://www.si.umich.edu//.../how-do-i-apply', ...}</c>.
                             Since we are scraping a live site the actual values may be different.</p>
 
     </statement><program interactive="activecode" language="python3" >
