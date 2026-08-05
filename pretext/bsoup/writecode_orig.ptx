@@ -40,29 +40,32 @@ unittest.main()
     </program>
 </activity>
 
+
+<datafile xml:id="MOOC-wikip-id" label="MOOC-wikip-id" filename='MOOC-Wikipedia.html'>
+      <pre>
+       <pre source="bsoup/MOOC-Wikipedia.html"></pre>
+      </pre>
+</datafile>
+
 <activity xml:id="bsoup_writecode2q_v2" label="bsoup_writecode2q_v2">
     <statement>
-                <p>Write a function called <c>headings</c> that takes in a parameter <c>url</c> and uses BeautifulSoup to return a list of all heading names (not subheadings) from the
-                    Contents box (History, Emergence of MOOC providers, Student experience and pedagogy, etc.). For example, <c>headings('https://en.wikipedia.org/wiki/Massive_open_online_course')</c>
-                    should return a list of headings like: <c>['History', 'Emergence of MOOC providers', 'Student experience and pedagogy', ...]</c>. 
-                    Since we are scraping a live site the actual values may be different.</p>
+                <p>Write a function called <c>headings(soup)</c> that takes in a parameter <c>soup</c> and uses BeautifulSoup to return a list of all heading names (not subheadings) from the file 'MOOC-Wikipedia.html'.  
+                    For example, <c>headings(soup)</c> should return a list of headings: <c>['History', 'Emergence of MOOC providers', 'Student experience and pedagogy', ...]</c>. </p>
     </statement>
-    <program interactive="activecode" language="python3">
+    <program interactive="activecode" language="python3" add-files="MOOC-wikip-id">
         <code>
 from bs4 import BeautifulSoup
 import requests
 
-def headings(url):
+def headings(soup):
 
 ====
 import unittest
 import requests
 from bs4 import BeautifulSoup
 
-def f_headings(url):
+def f_headings(soup):
     h_list = []
-    r = requests.get(url)
-    soup = BeautifulSoup(r.text, 'html.parser')
     hs = soup.find_all('li', class_='toclevel-1')
     for tag in hs:
         a_tag = tag.find('a')
@@ -73,8 +76,11 @@ def f_headings(url):
 class myTests(unittest.TestCase):
 
     def testOne(self):
-        url = 'https://en.wikipedia.org/wiki/Massive_open_online_course'
-        self.assertEqual(headings(url),f_headings(url),f"headings({url})")
+        fh = open('MOOC-Wikipedia.html')
+        text = fh.read()
+        fh.close()
+        soup = BeautifulSoup(text, 'html.parser')
+        self.assertEqual(headings(soup),f_headings(soup))
 
 unittest.main()
         </code>
