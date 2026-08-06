@@ -21,7 +21,7 @@
                 execution</em>, in which there are two possibilities and the
             condition determines which one gets executed. The syntax looks like
             this:</p>
-  <program xml:id="cndtnlMod" interactive="codelens" language="python">
+  <program xml:id="cndtnlMod" label="cndtnlMod" interactive="codelens" language="python">
     <code>
 x = 8
 if x % 2 == 0 :
@@ -44,7 +44,7 @@ print('All done.')
             alternatives will be executed. The alternatives are called <em>branches</em>,
             because they are branches in the flow of execution.</p>
           
-  <activity label="cndtnl-altex-mc-print">
+  <activity label="cndtnl-altex-mc-print" xml:id="cndtnl-altex-mc-print">
     <statement>
       <p> What does the following code print?</p>
       <program language="python">
@@ -92,10 +92,10 @@ else:
     </choices>
   </activity>
   
-  <activity label="cndtnl-altex-mc-negative">
+  <activity label="cndtnl-altex-mc-negative" xml:id="cndtnl-altex-mc-negative">
     <statement>
       <p> What does the following code print?</p>
-      <program language="python">
+      <program language="python" label="cndtnl-altex-mc-negative-p">
         <code>
 x = -10
 if x &lt; 0:
@@ -152,7 +152,7 @@ The negative number -10 is not valid here</pre>
   <activity label="cndtnl-altex-mc-error">
     <statement>
       <p> Will the following code cause an error?</p>
-      <program language="python">
+      <program language="python" label="cndtnl-altex-mc-error-p">
         <code>
 x = -10
 if x &lt; 0:

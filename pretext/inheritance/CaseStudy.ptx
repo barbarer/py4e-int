@@ -209,7 +209,7 @@ class USPostalAddress(BasePostalAddress):
     <title>A List of Addresses</title>
     <p>Now, let's construct a list containing both US and Irish addresses,
                 and display them using a loop:</p>
-    <program xml:id="postal_list_ac" interactive="activecode" language="python">
+    <program xml:id="postal_list_ac" label="postal_list_ac" interactive="activecode" language="python">
       <code>
 addrList = [IrishPostalAddress("Alf Jones", "A26F4G9"),
             USPostalAddress("Abe Jones", "103 Anywhere Ln",
@@ -247,7 +247,7 @@ for addr in addrList:
     <p>Let's try something else with our list of addresses. Suppose
                 we wanted to display all addresses with a given city.
                 We might write some code like this:</p>
-    <program language="python">
+    <program language="python" label="">
       <code>
 for addr in addrList:
     if addr.city == 'Greenville':
