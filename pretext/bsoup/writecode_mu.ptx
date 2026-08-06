@@ -47,52 +47,49 @@
   </activity>
   <activity xml:id="bsoup_writecode2qv2_mu" label="bsoup_writecode2qv2_mu" adaptive="yes" indentation="hide" language="python">
     <statement>
-      <p>Create a function called <c>headings</c> that takes in a parameter <c>url</c> and uses BeautifulSoup to return a list of all heading names (not subheadings) from the
-            Contents box (History, Emergence of MOOC providers, Student experience and pedagogy, etc.). For example, <c>headings('https://en.wikipedia.org/wiki/Massive_open_online_course')</c>
-            should return <c>['History', 'Emergence of MOOC providers', 'Student experience and pedagogy', ...]</c>. Since we are scraping a live site the results may be different.</p>
+    <p>Write a function called <c>headings(soup)</c> that takes in a file name as <c>file</c> and uses BeautifulSoup to return a list of the text from all <c>h2</c> tags in the file 'MOOC-Wikipedia.html'.  
+                    For example, <c>headings('MOOC-Wikipedia.html')</c> should return a list of 14 headings starting with <c>['Content', 'History', 'Emergence of MOOC providers', 'Student experience and pedagogy', ...]</c>. </p>
     </statement>
     <blocks numbered="left">
       <block order="4">
         <cline>import requests</cline>
         <cline>from bs4 import BeautifulSoup</cline>
       </block>
-      <block order="12">
-        <cline>def headings(url):</cline>
-        <cline>    h_list = []</cline>
+      <block order="7">
+        <cline>def headings(file):</cline>
+        <cline>    out_list = []</cline>
       </block>
       <block order="1">
-        <cline>    r = requests.get(url)</cline>
+        <cline>    fh = open(file)</cline>
+        <cline>    text = fh.read()</cline>
+        <cline>    fh.close()</cline>
       </block>
       <block order="5">
-        <cline>    soup = BeautifulSoup(r.text, 'html.parser')</cline>
+        <cline>    soup = BeautifulSoup(text, 'html.parser')</cline>
       </block>
       <block order="2">
         <choice correct="yes">
-          <cline>    hs = soup.find_all('li', class_='toclevel-1')</cline>
+          <cline>  h_list = soup.find_all("h2")</cline>
         </choice>
         <choice>
-          <cline>    hs = soup.find('li', class_='toclevel-1') </cline>
+          <cline>  h_list = soup.find("h2")   </cline>
         </choice>
       </block>
       <block order="6">
-        <cline>    for tag in hs:</cline>
+        <cline>    for h_tag in h_list:</cline>
       </block>
       <block order="8">
-        <cline>        a_tag = tag.find('a')</cline>
+        <choice correct="yes">
+          <cline>      out_list.append(h_tag.text)</cline>
+        </choice>
+        <choice>
+          <cline>      out_list.append(h_tag) </cline>
+        </choice>
       </block>
       <block order="3">
         <choice correct="yes">
-          <cline>        h = a_tag.find('span', class_='toctext').text</cline>
+          <cline>  return out_list</cline>
         </choice>
-        <choice>
-          <cline>        h = a_tag.find('span', class='toctext').text </cline>
-        </choice>
-      </block>
-      <block order="7">
-        <cline>        h_list.append(h)</cline>
-      </block>
-      <block order="11">
-        <cline>    return h_list</cline>
       </block>
     </blocks>
   </activity>

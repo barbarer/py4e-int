@@ -14,6 +14,7 @@ import requests
 
 def cur_stud_link(url):
 
+print(cur_stud_link('https://umich.edu/'))
 ====
 import unittest
 import requests
@@ -40,28 +41,35 @@ unittest.main()
     </program>
 </activity>
 
-
-<datafile xml:id="MOOC-wikip-id" label="MOOC-wikip-id" filename='MOOC-Wikipedia.html' hide="yes">
+    <datafile xml:id="MOOC-wikip-id" label="MOOC-wikip-id" filename='MOOC-Wikipedia.html' hide="yes">
        <pre source="bsoup/MOOC-Wikipedia.html"></pre>
-</datafile>
+    </datafile>
 
 <activity xml:id="bsoup_writecode2q_v2" label="bsoup_writecode2q_v2">
     <statement>
-                <p>Write a function called <c>headings(soup)</c> that takes in a parameter <c>soup</c> and uses BeautifulSoup to return a list of the text from all <c>h2</c> from the file 'MOOC-Wikipedia.html'.  
-                    For example, <c>headings(soup)</c> should return a list of headings starting with <c>['History', 'Emergence of MOOC providers', 'Student experience and pedagogy', ...]</c>. </p>
+                <p>Write a function called <c>headings(soup)</c> that takes in a file name as <c>file</c> and uses BeautifulSoup to return a list of the text from all <c>h2</c> tags in the file 'MOOC-Wikipedia.html'.  
+                    For example, <c>headings('MOOC-Wikipedia.html')</c> should return a list of 14 headings starting with <c>['Content', 'History', 'Emergence of MOOC providers', 'Student experience and pedagogy', ...]</c>. </p>
     </statement>
     <program interactive="activecode" language="python3" add-files="MOOC-wikip-id">
         <code>
 from bs4 import BeautifulSoup
 import requests
 
-fh = open('MOOC-Wikipedia.html')
-text = fh.read()
-fh.close()
-soup = BeautifulSoup(text, 'html.parser')
-print(soup.text)
-h_list = soup.find_all("h2")
-print(len(h_list))
+def headings(file)
+    # write code here
+
+print(headings('MOOC-Wikipedia.html'))
+====
+import unittest
+from bs4 import BeautifulSoup
+import requests
+
+class myTests(unittest.TestCase):
+
+    def testOne(self):
+        self.assertEqual(headings('MOOC-Wikipedia.html'), ['Contents', 'History', 'Equity and access', 'Emergence of MOOC providers', 'Instructor role and quality assurance', 'Student experience and pedagogy', 'Industry', 'Benefits', 'Criticisms and challenges', 'Curation', 'See also', 'References', 'Further reading', 'External links'])
+
+unittest.main()
 
 
         </code>
