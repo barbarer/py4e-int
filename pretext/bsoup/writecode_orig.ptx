@@ -41,48 +41,29 @@ unittest.main()
 </activity>
 
 
-<datafile xml:id="MOOC-wikip-id" label="MOOC-wikip-id" filename='MOOC-Wikipedia.html'>
-      <pre>
+<datafile xml:id="MOOC-wikip-id" label="MOOC-wikip-id" filename='MOOC-Wikipedia.html' hide="yes">
        <pre source="bsoup/MOOC-Wikipedia.html"></pre>
-      </pre>
 </datafile>
 
 <activity xml:id="bsoup_writecode2q_v2" label="bsoup_writecode2q_v2">
     <statement>
-                <p>Write a function called <c>headings(soup)</c> that takes in a parameter <c>soup</c> and uses BeautifulSoup to return a list of all heading names (not subheadings) from the file 'MOOC-Wikipedia.html'.  
-                    For example, <c>headings(soup)</c> should return a list of headings: <c>['History', 'Emergence of MOOC providers', 'Student experience and pedagogy', ...]</c>. </p>
+                <p>Write a function called <c>headings(soup)</c> that takes in a parameter <c>soup</c> and uses BeautifulSoup to return a list of the text from all <c>h2</c> from the file 'MOOC-Wikipedia.html'.  
+                    For example, <c>headings(soup)</c> should return a list of headings starting with <c>['History', 'Emergence of MOOC providers', 'Student experience and pedagogy', ...]</c>. </p>
     </statement>
     <program interactive="activecode" language="python3" add-files="MOOC-wikip-id">
         <code>
 from bs4 import BeautifulSoup
 import requests
 
-def headings(soup):
+fh = open('MOOC-Wikipedia.html')
+text = fh.read()
+fh.close()
+soup = BeautifulSoup(text, 'html.parser')
+print(soup.text)
+h_list = soup.find_all("h2")
+print(len(h_list))
 
-====
-import unittest
-import requests
-from bs4 import BeautifulSoup
 
-def f_headings(soup):
-    h_list = []
-    hs = soup.find_all('li', class_='toclevel-1')
-    for tag in hs:
-        a_tag = tag.find('a')
-        h = a_tag.find('span', class_='toctext').text
-        h_list.append(h)
-    return h_list
-
-class myTests(unittest.TestCase):
-
-    def testOne(self):
-        fh = open('MOOC-Wikipedia.html')
-        text = fh.read()
-        fh.close()
-        soup = BeautifulSoup(text, 'html.parser')
-        self.assertEqual(headings(soup),f_headings(soup))
-
-unittest.main()
         </code>
     </program>
 </activity>
