@@ -77,42 +77,35 @@ unittest.main()
     </program>
 </activity>
 
-<activity xml:id="bsoup_writecode3q_v2" label="bsoup_writecode3q_v2">
+<datafile xml:id="MOOC-2018-wikip-id" label="MOOC-2018-wikip-id" filename='MOOC-Jan-12-2018-Wikipedia.html' hide="yes">
+       <pre source="bsoup/MOOC-Jan-12-2018-Wikipedia.html"></pre>
+</datafile>
+
+<activity xml:id="bsoup_writecode3q_v2" label="bsoup_writecode3q_v2" add-files="MOOC-2018-wikip-id">
                     <statement>
-                        <p>Write a function called <c>coursera_dict</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the Coursera enrollees table,
-                            and returns a dictionary with Country as keys and Percentage as values. For example, <c>coursera_dict('https://en.wikipedia.org/wiki/Massive_open_online_course')</c>
-                            should return a dictionary like: <c>{'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', ...}</c>.  Since we are scraping a live site the actual values may be different.</p>
+                        <p>Write a function called <c>coursera_dict</c> that takes in a parameter <c>file</c>, uses BeautifulSoup to web scrape the Coursera enrollees table,
+                            and returns a dictionary with Country as keys and Percentage as values. For example, <c>coursera_dict('MOOC-Jan-12-2018-Wikipedia.html')</c>.  The data is from <q>2. https://web.archive.org/web/20180112035358/https://en.wikipedia.org/wiki/Massive_open_online_course</q>
+                            should return a dictionary like: <c>{'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', ...}</c>.</p>
 
     </statement><program interactive="activecode" language="python3" >
         <code>
 from bs4 import BeautifulSoup
 import requests
 
-def coursera_dict(url):
+def coursera_dict(file):
+
+print(coursera_dict('MOOC-Jan-12-2018-Wikipedia.html'))
 
 ====
 import unittest
 from bs4 import BeautifulSoup
 import requests
 
-def f_coursera_dict(url):
-    coursera_enrollees = {}
-    r = requests.get(url)
-    soup = BeautifulSoup(r.text, 'html.parser')
-    tag = soup.find('table', class_='wikitable')
-    rows = tag.find_all('tr')
-    for row in rows[1:]:
-        cols = row.find_all("td")
-        key = cols[0].text
-        value = cols[1].text.rstrip()
-        coursera_enrollees[key] = value
-    return coursera_enrollees
-
 class myTests(unittest.TestCase):
 
     def testOne(self):
-        url = 'https://en.wikipedia.org/wiki/Massive_open_online_course'
-        self.assertEqual(coursera_dict(url), f_coursera_dict(url), f'coursera_dict({url})')
+        file = 'OOC-Jan-12-2018-Wikipedia.html'
+        self.assertEqual(coursera_dict(file),{'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%'})
 
 unittest.main()
         </code>
