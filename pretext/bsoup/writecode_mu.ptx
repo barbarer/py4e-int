@@ -169,10 +169,12 @@
         <cline>    types = []</cline>
       </block>
       <block order="1">
-        <cline>    r = requests.get(url)</cline>
+        <cline>    fh = open(file)</cline>
+        <cline>    text = fh.read()</cline>
+        <cline>    fh.close()</cline>
       </block>
       <block order="10">
-        <cline>    soup = BeautifulSoup(r.text, 'html.parser')</cline>
+        <cline>    soup = BeautifulSoup(text, 'html.parser')</cline>
       </block>
       <block order="12">
         <choice correct="yes">
