@@ -75,28 +75,26 @@
         <cline>    soup = BeautifulSoup(text, 'html.parser')</cline>
       </block>
       <block order="2">
-        <choice correct="yes">
-          <cline>  h_list = soup.find_all("h2")</cline>
-        </choice>
         <choice>
           <cline>  h_list = soup.find("h2")   </cline>
+        </choice>
+        <choice correct="yes">
+          <cline>  h_list = soup.find_all("h2")</cline>
         </choice>
       </block>
       <block order="6">
         <cline>    for h_tag in h_list:</cline>
       </block>
       <block order="8">
-        <choice correct="yes">
-          <cline>      out_list.append(h_tag.text)</cline>
-        </choice>
         <choice>
           <cline>      out_list.append(h_tag) </cline>
         </choice>
+        <choice correct="yes">
+          <cline>      out_list.append(h_tag.text)</cline>
+        </choice>
       </block>
       <block order="3">
-        <choice correct="yes">
           <cline>  return out_list</cline>
-        </choice>
       </block>
     </blocks>
   </activity>
@@ -125,11 +123,11 @@
         <cline>    soup = BeautifulSoup(text, 'html.parser')</cline>
       </block>
       <block order="13">
-         <choice>
-          <cline>   tables = soup.find('table', class_='wikitable') </cline>
-        </choice>
         <choice correct="yes">
           <cline>   tables = soup.find_all('table', class_='wikitable')</cline>
+        </choice>
+         <choice>
+          <cline>   tables = soup.find('table', class_='wikitable') </cline>
         </choice>
       </block>
       <block order="12">
@@ -188,11 +186,11 @@
         <cline>    rows = table.find_all('tr')</cline>
       </block>
       <block order="3">
-        <choice correct="yes">
-          <cline>    for row in rows[1:]:</cline>
-        </choice>
         <choice>
           <cline>    for row in rows: </cline>
+        </choice>
+        <choice correct="yes">
+          <cline>    for row in rows[1:]:</cline>
         </choice>
       </block>
       <block order="14">
@@ -288,11 +286,11 @@
         <cline>    for section in sections[:-2]:</cline>
       </block>
       <block order="9">
-        <choice correct="yes">
-          <cline>        list1.append(section.text.strip("\n").strip())</cline>
-        </choice>
         <choice>
           <cline>        list1.append(section.strip("\n").strip()) </cline>
+        </choice>
+        <choice correct="yes">
+          <cline>        list1.append(section.text.strip("\n").strip())</cline>
         </choice>
       </block>
       <block order="3">
@@ -370,19 +368,19 @@
         <cline>    soup = BeautifulSoup(r.text, 'html.parser')</cline>
       </block>
       <block order="6">
-        <choice correct="yes">
-          <cline>    address = soup.find('div', class_ = 'footer--address').text.strip()</cline>
-        </choice>
         <choice>
           <cline>    address = soup.find('div', class = 'footer--address').text.strip() </cline>
         </choice>
+        <choice correct="yes">
+          <cline>    address = soup.find('div', class_ = 'footer--address').text.strip()</cline>
+        </choice>
       </block>
       <block order="5">
-        <choice correct="yes">
-          <cline>    add_list = address.split("\n")</cline>
-        </choice>
         <choice>
           <cline>    add_list = address.split() </cline>
+        </choice>
+        <choice correct="yes">
+          <cline>    add_list = address.split("\n")</cline>
         </choice>
       </block>
       <block order="9">
@@ -434,19 +432,19 @@
         </choice>
       </block>
       <block order="7">
-        <choice correct="yes">
-          <cline>    names = soup.find_all(class_="research-person-profile__name")</cline>
-        </choice>
         <choice>
           <cline>    names = soup.find_all(class="research-person-profile__name") </cline>
         </choice>
+        <choice correct="yes">
+          <cline>    names = soup.find_all(class_="research-person-profile__name")</cline>
+        </choice>
       </block>
       <block order="10">
-        <choice correct="yes">
-          <cline>    emails = soup.find_all("a", target="_blank")</cline>
-        </choice>
         <choice>
           <cline>    emails = soup.find_all("link", target="_blank") </cline>
+        </choice>
+        <choice correct="yes">
+          <cline>    emails = soup.find_all("a", target="_blank")</cline>
         </choice>
       </block>
       <block order="9">
@@ -515,11 +513,11 @@
         <cline>        program_name = split_name_email[0]</cline>
       </block>
       <block order="4">
-        <choice correct="yes">
-          <cline>        program_email = split_name_email[1].replace("\xa0", "")</cline>
-        </choice>
         <choice>
           <cline>        program_email = split_name_email[0].replace("\xa0", "") </cline>
+        </choice>
+        <choice correct="yes">
+          <cline>        program_email = split_name_email[1].replace("\xa0", "")</cline>
         </choice>
       </block>
       <block order="3">
