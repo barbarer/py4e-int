@@ -1,15 +1,15 @@
 <section xml:id="bsoup_write-code-questions-orig" component="source-for-select-questions">
     <title>Write Code Questions</title>
-<!--
+
     <datafile xml:id="umich-id" label="umich-id" filename='UMich-8-16-2026.html' hide="yes">
        <pre source="bsoup/UMich-8-16-2026.html"></pre>
     </datafile>
         
     <activity xml:id="bsoup_writecode1q_v2" label="bsoup_writecode1q_v2"> 
                     <statement>
-                        <p>Write a function called <c>cur_stud_link(file)</c> that uses BeautifulSoup to return the URL that links to Current Students in the Navigation Bar.
-                            For example, <c>cur_stud_link('UMich-8-16-2026.html')</c> should return <c>"https://umich.edu/current-students/"</c>.  The file is a saved version from 2026 which can be seen at 
-                            <q>http://web.archive.org/web/20260808043645/https://umich.edu/</q>
+                       <p>Write a function called <c>cur_stud_link(file)</c> that uses BeautifulSoup to return the URL that links to Current Students in the Navigation Bar.
+                            For example, <c>cur_stud_link('UMich-8-16-2026.html')</c> should return <c>"https://umich.edu/current-students/"</c>.  The file is a saved version from 2026 which can be seen 
+                            by clicking the following link: <url href="http://web.archive.org/web/20260808043645/https://umich.edu/">link</url>.
                         </p>
 
     </statement><program interactive="activecode" language="python3" add-files='umich-id'>
@@ -35,7 +35,7 @@ unittest.main()
         </code>
     </program>
 </activity>
--->
+
 
     <datafile xml:id="MOOC-wikip-id" label="MOOC-wikip-id" filename='WikipediaMOOC-Aug-7-2026.html' hide="yes">
        <pre source="bsoup/WikipediaMOOC-Aug-7-2026.html"></pre>
@@ -44,9 +44,10 @@ unittest.main()
 <activity xml:id="bsoup_writecode2q_v2" label="bsoup_writecode2q_v2">
     <statement>
                  <p>Write a function called <c>headings(file)</c> that uses BeautifulSoup to return a list of the text from all <c>h2</c> tags in the passed file.
-                    The file 'WikipediaMOOC-Aug-7-2026.html' is a saved version of <q>https://en.wikipedia.org/wiki/Massive_open_online_course</q> from 2026.  See <q>http://web.archive.org/web/20260807063804/https://en.wikipedia.org/wiki/Massive_open_online_course</q> for the source.
+      The file 'WikipediaMOOC-Aug-7-2026.html' is a saved version of <q>https://en.wikipedia.org/wiki/Massive_open_online_course</q> from 2026. Click on the 
+      following link to view the source: <url href="http://web.archive.org/web/20260807063804/https://en.wikipedia.org/wiki/Massive_open_online_course">link</url>
 
-                    For example, <c>headings('WikipediaMOOC-Aug-7-2026.html')</c> should return a list of 14 headings starting with <c>['Content', 'History', 'Emergence of MOOC providers', 'Student experience and pedagogy', ...]</c>. </p>
+      For example, <c>headings('WikipediaMOOC-Aug-7-2026.html')</c> should return a list of 14 headings starting with <c>['Content', 'History', 'Emergence of MOOC providers', 'Student experience and pedagogy', ...]</c>. </p>
     </statement>
     <program interactive="activecode" language="python3" add-files="MOOC-wikip-id">
         <code>
@@ -74,16 +75,17 @@ unittest.main()
     </program>
 </activity>
 
-<!--
+
 <datafile xml:id="MOOC-2018-wikip-id" label="MOOC-2018-wikip-id" filename='WikipediaMOOC-Jan-12-2018.html' hide="yes">
        <pre source="bsoup/WikipediaMOOC-Jan-12-2018.html"></pre>
 </datafile>
 
 <activity xml:id="bsoup_writecode3q_v2" label="bsoup_writecode3q_v2" add-files="MOOC-2018-wikip-id">
                     <statement>
-                        <p>Write a function called <c>coursera_dict(file)</c> that takes in a parameter <c>file</c>, uses BeautifulSoup to web scrape the Coursera enrollees table,
+                       <p>Write a function called <c>coursera_dict(file)</c> that takes in a parameter <c>file</c>, uses BeautifulSoup to web scrape the Coursera enrollees table,
                             and returns a dictionary with Country as keys and Percentage as values. For example, <c>coursera_dict('MOOC-Jan-12-2018-Wikipedia.html')</c>
-                            should return a dictionary like: <c>{'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', ...}</c>.  The file is a saved version from 2018 which can be seen at <q>https://web.archive.org/web/20180112035358/https://en.wikipedia.org/wiki/Massive_open_online_course</q></p>
+                            should return a dictionary like: <c>{'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', ...}</c>.  Click on the following link to view the 
+                            source: <url href="https://web.archive.org/web/20180112035358/https://en.wikipedia.org/wiki/Massive_open_online_course">link</url></p>
     </statement><program interactive="activecode" language="python3" >
         <code>
 from bs4 import BeautifulSoup
@@ -119,10 +121,11 @@ unittest.main()
 
 <activity xml:id="bsoup_writecode4q_v2" label="bsoup_writecode4q_v2">
     <statement>
-                <p>Write a function called <c>types(file)</c> that uses BeautifulSoup to web scrape the Summary of Python 3's built-in types table,
+                 <p>Write a function called <c>types(file)</c> that uses BeautifulSoup to web scrape the Summary of Python 3's built-in types table,
                     and returns a list of the types. For example, <c>types('WikipediaPython-Aug-7-2026.html')</c>
-                    should return a list of string like: <c>['bool', 'bytearray', 'bytes', ...]</c>. We are using a saved version from 2026. See <q>http://web.archive.org/web/20260807102502/https://en.wikipedia.org/wiki/Python_(programming_language)</q> for the source.
-                </p>
+                    should return a list of string like: <c>['bool', 'bytearray', 'bytes', ...]</c>. We are using a saved version from 2026. 
+                    Click on the following link to view the source: <url href="http://web.archive.org/web/20260807102502/https://en.wikipedia.org/wiki/Python_(programming_language)">link</url>.
+                 </p>
     </statement>
     <program interactive="activecode" language="python3">
         <code>
@@ -402,6 +405,5 @@ unittest.main()
         </code>
     </program>
 </activity>
--->
 </section>
 
