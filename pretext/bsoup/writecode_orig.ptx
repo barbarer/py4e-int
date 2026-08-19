@@ -29,7 +29,7 @@ class myTests(unittest.TestCase):
 
     def testOne(self):
         file = 'UMich-8-16-2026.html'
-        self.assertEqual(cur_stud_link(file), 'https://umich.edu/web/20260808043645/https://umich.edu/current-students/)
+        self.assertEqual(cur_stud_link(file), 'https://umich.edu/web/20260808043645/https://umich.edu/current-students/')
 
 unittest.main()
         </code>
@@ -37,7 +37,7 @@ unittest.main()
 </activity>
 
 
-    <datafile xml:id="MOOC-wikip-id" label="MOOC-wikip-id" filename='WikipediaMOOC-Aug-7-2026.html' hide="yes">
+    <datafile xml:id="MOOC-2026-wikip-id" label="MOOC-2026-wikip-id" filename='WikipediaMOOC-Aug-7-2026.html' hide="yes">
        <pre source="bsoup/WikipediaMOOC-Aug-7-2026.html"></pre>
     </datafile>
 
@@ -49,7 +49,7 @@ unittest.main()
 
       For example, <c>headings('WikipediaMOOC-Aug-7-2026.html')</c> should return a list of 14 headings starting with <c>['Content', 'History', 'Emergence of MOOC providers', 'Student experience and pedagogy', ...]</c>. </p>
     </statement>
-    <program interactive="activecode" language="python3" add-files="MOOC-wikip-id">
+    <program interactive="activecode" language="python3" add-files="MOOC-2026-wikip-id">
         <code>
 from bs4 import BeautifulSoup
 import requests
@@ -86,7 +86,7 @@ unittest.main()
                             and returns a dictionary with Country as keys and Percentage as values. For example, <c>coursera_dict('MOOC-Jan-12-2018-Wikipedia.html')</c>
                             should return a dictionary like: <c>{'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', ...}</c>.  Click on the following link to view the 
                             source: <url href="https://web.archive.org/web/20180112035358/https://en.wikipedia.org/wiki/Massive_open_online_course">link</url></p>
-    </statement><program interactive="activecode" language="python3" >
+    </statement><program interactive="activecode" language="python3" add-files="MOOC-2018-wikip-id">
         <code>
 from bs4 import BeautifulSoup
 import requests
@@ -127,7 +127,7 @@ unittest.main()
                     Click on the following link to view the source: <url href="http://web.archive.org/web/20260807102502/https://en.wikipedia.org/wiki/Python_(programming_language)">link</url>.
                  </p>
     </statement>
-    <program interactive="activecode" language="python3">
+    <program interactive="activecode" language="python3" add-files="bs-python-id">
         <code>
 from bs4 import BeautifulSoup
 import requests
