@@ -126,19 +126,14 @@
       </block>
       <block order="13">
          <choice>
-          <cline>   tag = soup.find_all('table', class_='wikitable') </cline>
+          <cline>   tables = soup.find('table', class_='wikitable') </cline>
         </choice>
         <choice correct="yes">
-          <cline>   tag = soup.find('table', class_='wikitable')</cline>
+          <cline>   tables = soup.find_all('table', class_='wikitable')</cline>
         </choice>
       </block>
       <block order="12">
-        <choice correct="yes">
-          <cline>   rows = tag.find_all('tr')</cline>
-        </choice>
-        <choice>
-          <cline>   rows = table.find_all('td') </cline>
-        </choice>
+          <cline>   rows = tables[1].find_all('tr')</cline>
       </block>
       <block order="9">
         <cline>     for row in rows[1:]:</cline>
