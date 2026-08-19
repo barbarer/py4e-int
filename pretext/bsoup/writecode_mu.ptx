@@ -17,7 +17,7 @@
         <cline>def cur_stud_link(file):</cline>
       </block>
       <block order="6">
-        <cline>.   fh = open(file)</cline>
+        <cline>    fh = open(file)</cline>
         <cline>    text = fh.read()</cline>
         <cline>    fh.close()</cline>
       </block>
@@ -26,7 +26,7 @@
       </block>
       <block order="3">
          <choice>
-          <cline>.   text = soup.find_all('a', string="Current Students")  </cline>
+          <cline>    text = soup.find_all('a', string="Current Students")  </cline>
         </choice>
         <choice correct="yes">
           <cline>    text = soup.find('a', string="Current Students")</cline>

@@ -1,6 +1,6 @@
 <section xml:id="bsoup_write-code-questions-orig" component="source-for-select-questions">
     <title>Write Code Questions</title>
-
+<!--
     <datafile xml:id="umich-id" label="umich-id" filename='UMich-8-16-2026.html' hide="yes">
        <pre source="bsoup/UMich-8-16-2026.html"></pre>
     </datafile>
@@ -35,6 +35,7 @@ unittest.main()
         </code>
     </program>
 </activity>
+-->
 
     <datafile xml:id="MOOC-wikip-id" label="MOOC-wikip-id" filename='WikipediaMOOC-Aug-7-2026.html' hide="yes">
        <pre source="bsoup/WikipediaMOOC-Aug-7-2026.html"></pre>
@@ -73,6 +74,7 @@ unittest.main()
     </program>
 </activity>
 
+<!--
 <datafile xml:id="MOOC-2018-wikip-id" label="MOOC-2018-wikip-id" filename='WikipediaMOOC-Jan-12-2018.html' hide="yes">
        <pre source="bsoup/WikipediaMOOC-Jan-12-2018.html"></pre>
 </datafile>
@@ -110,6 +112,7 @@ unittest.main()
     </program>
 </activity>    
 
+
 <datafile xml:id="bs-python-id" label="bs-python-id" filename='WikipediaPython-Aug-7-2026.html' hide="yes">
        <pre source="bsoup/WikipediaPython-Aug-7-2026.html"></pre>
 </datafile>
@@ -121,7 +124,7 @@ unittest.main()
                     should return a list of string like: <c>['bool', 'bytearray', 'bytes', ...]</c>. We are using a saved version from 2026. See <q>http://web.archive.org/web/20260807102502/https://en.wikipedia.org/wiki/Python_(programming_language)</q> for the source.
                 </p>
     </statement>
-    <program interactive="activecode" language="python3" add-files="bs-python-id">
+    <program interactive="activecode" language="python3">
         <code>
 from bs4 import BeautifulSoup
 import requests
@@ -266,8 +269,6 @@ unittest.main()
         </code>
     </program>
 </activity>
-            
-
 
 <activity xml:id="bsoup_writecode8q_v2" label="bsoup_writecode8q_v2">
     <statement>
@@ -290,7 +291,7 @@ from bs4 import BeautifulSoup
 def f_envelope_address(url):
     r = requests.get(url)
     soup = BeautifulSoup(r.text, 'html.parser')
-    address = soup.find('div', class_ = 'footer--address').text
+    address = soup.find('div', class_ = 'footer-address').text // for now use - needs to be double
     add_list = address.strip().split("\n")
     out_list = []
     for add_line in add_list:
@@ -401,5 +402,6 @@ unittest.main()
         </code>
     </program>
 </activity>
+-->
 </section>
 
