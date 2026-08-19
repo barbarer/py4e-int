@@ -29,7 +29,7 @@ class myTests(unittest.TestCase):
 
     def testOne(self):
         file = 'UMich-8-16-2026.html'
-        self.assertEqual(cur_stud_link(file), 'https://umich.edu/current-students/')
+        self.assertEqual(cur_stud_link(file), 'https://umich.edu/web/20260808043645/https://umich.edu/current-students/)
 
 unittest.main()
         </code>
@@ -152,15 +152,18 @@ unittest.main()
     </program>
 </activity>
 
-<datafile xml:id="bs-rest-id" label="bs-rest-id" filename='AnnArborBestRestaurants2026.html' hide="yes">
-       <pre source="bsoup/AnnArborBestRestaurants2026.html"></pre>
+<!--
+<datafile xml:id="bs-rest-id" label="bs-rest-id" filename='AnnArborBest Restaurants_Aug_1_2026.html' hide="yes">
+       <pre source="AnnArborBest Restaurants_Aug_1_2026.html"></pre>
 </datafile>
 
 <activity xml:id="bsoup_writecode5q_v2" label="bsoup_writecode5q_v2">
                     <statement>
-                        <p>Write a function called <c>restaurants_list</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the 12 essential Ann Arbor restaurants,
-                            and returns a list of the 12 best Ann Arbor restaurants. For example, <c>restaurants_list('https://detroit.eater.com/maps/best-ann-arbor-restaurants')</c>
-                            should return a list of restaurants like: <c>['1. Salt Springs Brewery', "2. Knight's Steakhouse", '3. The Last Word', ...]</c>.  Since we are scraping a live site the actual values may be different.</p>
+                        <p>Write a function called <c>restaurants_list(file)</c> that uses BeautifulSoup to web scrape the 13 essential Ann Arbor restaurants from <q>https://detroit.eater.com/maps/best-ann-arbor-restaurants</q>
+                            and returns a list of the restaurants. 
+                            For example, <c>restaurants_list('AnnArborBest Restaurants_Aug_1_2026.html')</c> shouild return a list like [“Sava’s”, “Knight’s Steakhouse”, “Mani Osteria and Bar”, …]. We are using a saved link from Aug 1, 2026 of the website.  
+                            Click on the following link to view the source: <url href="http://web.archive.org/web/20260801120205/https://detroit.eater.com/maps/best-ann-arbor-restaurants">link</url>.
+                            </p>
 
     </statement><program interactive="activecode" language="python3" >
         <code>
@@ -169,7 +172,7 @@ import requests
 
 def restaurants_list(file):
 
-print(restaurants_list('AnnArborBestRestaurants2026.html'))
+print(restaurants_list('AnnArborBest Restaurants_Aug_1_2026.html'))
 
 ====
 import unittest
@@ -180,15 +183,17 @@ import requests
 class myTests(unittest.TestCase):
 
     def testOne(self):
-        file = 'AnnArborBestRestaurants2026.html'
-        self.assertEqual(len(restaurants_list(file)), 13)
+        file = 'AnnArborBest Restaurants_Aug_1_2026.html'
+        list = restaurants_list(file)
+        self.assertEqual(len(), 13)
+        self.assertEqual(list[0], "Sava's")
 
 unittest.main()
         </code>
     </program>
 </activity>
                     
-
+-->
 <activity xml:id="bsoup_writecode6q_v2" label="bsoup_writecode6q_v2" >
     <statement>
                 <p>Write a function called <c>bsi_list</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the section names and subsection names under Programs Bachelor of Science in Information,

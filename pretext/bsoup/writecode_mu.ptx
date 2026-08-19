@@ -4,7 +4,8 @@
   <activity xml:id="bsoup_writecode1q_mu" label="bsoup_writecode1q_mu" adaptive="yes" indentation="hide" language="python">
     <statement>
        <p>Create a function called <c>cur_stud_link(file)</c> that uses BeautifulSoup to return the URL that links to Current Students in the Navigation Bar.
-                            For example, <c>cur_stud_link('UMich-8-16-2026.html')</c> should return <c>"https://umich.edu/current-students/"</c>.  The file is a saved version from 2026 which can be seen 
+                            For example, <c>cur_stud_link('UMich-8-16-2026.html')</c> should return <c>"https://umich.edu/web/20260808043645/https://umich.edu/current-students/"</c>.  
+                            The file is a saved version from 2026 which can be seen 
                             by clicking the following link: <url href="http://web.archive.org/web/20260808043645/https://umich.edu/">link</url>.
                         </p>
     </statement>
@@ -22,7 +23,7 @@
         <cline>    fh.close()</cline>
       </block>
       <block order="1">
-        <cline>    soup = BeautifulSoup(r.text, 'html.parser')</cline>
+        <cline>    soup = BeautifulSoup(text, 'html.parser')</cline>
       </block>
       <block order="3">
          <choice>
@@ -247,10 +248,10 @@
       </block>
       <block order="4">
          <choice>
-          <cline>    rest_list = soup.find('h2') </cline>
+          <cline>    rest_list = soup.find('h2', class_="hkfm3h5") </cline>
         </choice>
         <choice correct="yes">
-          <cline>    rest_list = soup.find_all("h2")</cline>
+          <cline>    rest_list = soup.find_all("h2", class_="hkfm3h5")</cline>
         </choice>
       </block>
       <block order="3">
