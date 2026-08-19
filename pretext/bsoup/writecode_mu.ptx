@@ -3,9 +3,10 @@
   <title>Write Code Questions - Parsons for Select</title>
   <activity xml:id="bsoup_writecode1q_mu" label="bsoup_writecode1q_mu" adaptive="yes" indentation="hide" language="python">
     <statement>
-      <p>Create a function called <c>cur_stud_link</c> that takes in a parameter <c>url</c>
-            and uses BeautifulSoup to return the URL that links to Current Students in the Navigation Bar.
-            For example, <c>cur_stud_link('https://umich.edu/')</c> should return <c>"https://umich.edu/current-students/"</c>.</p>
+       <p>Create a function called <c>cur_stud_link(file)</c> that uses BeautifulSoup to return the URL that links to Current Students in the Navigation Bar.
+                            For example, <c>cur_stud_link('UMich-8-16-2026.html')</c> should return <c>"https://umich.edu/current-students/"</c>.  The file is a saved version from 2026 which can be seen at 
+                            <q>http://web.archive.org/web/20260808043645/https://umich.edu/</q>
+                        </p>
     </statement>
     <blocks numbered="left">
       <block order="8">
@@ -13,20 +14,22 @@
         <cline>from bs4 import BeautifulSoup</cline>
       </block>
       <block order="10">
-        <cline>def cur_stud_link(url):</cline>
+        <cline>def cur_stud_link(file):</cline>
       </block>
       <block order="6">
-        <cline>    r = requests.get(url)</cline>
+        <cline>.   fh = open(file)</cline>
+        <cline>    text = fh.read()</cline>
+        <cline>    fh.close()</cline>
       </block>
       <block order="1">
         <cline>    soup = BeautifulSoup(r.text, 'html.parser')</cline>
       </block>
       <block order="3">
-        <choice correct="yes">
-          <cline>    text = soup.find('a', string = "Current Students")</cline>
+         <choice>
+          <cline>.   text = soup.find_all('a', string="Current Students")  </cline>
         </choice>
-        <choice>
-          <cline>    text = soup.find_all('a', string = "Current Students")  </cline>
+        <choice correct="yes">
+          <cline>    text = soup.find('a', string="Current Students")</cline>
         </choice>
       </block>
       <block order="5">
@@ -47,10 +50,10 @@
   </activity>
   <activity xml:id="bsoup_writecode2qv2_mu" label="bsoup_writecode2qv2_mu" adaptive="yes" indentation="hide" language="python">
     <statement>
-            <p>Write a function called <c>headings(soup)</c> that takes in a file name as <c>file</c> and uses BeautifulSoup to return a list of the text from all <c>h2</c> tags in the file 'MOOC-Wikipedia.html'.  
-                    It is a saved version of <q>https://en.wikipedia.org/wiki/Massive_open_online_course</q>.
+      <p>Write a function called <c>headings(file)</c> that uses BeautifulSoup to return a list of the text from all <c>h2</c> tags in the passed file.
+      The file 'WikipediaMOOC-Aug-7-2026.html' is a saved version of <q>https://en.wikipedia.org/wiki/Massive_open_online_course</q> from 2026.  See <q>http://web.archive.org/web/20260807063804/https://en.wikipedia.org/wiki/Massive_open_online_course</q> for the source.
 
-                    For example, <c>headings('MOOC-Wikipedia.html')</c> should return a list of 14 headings starting with <c>['Content', 'History', 'Emergence of MOOC providers', 'Student experience and pedagogy', ...]</c>. </p>
+      For example, <c>headings('WikipediaMOOC-Aug-7-2026.html')</c> should return a list of 14 headings starting with <c>['Content', 'History', 'Emergence of MOOC providers', 'Student experience and pedagogy', ...]</c>. </p>
     </statement>
     <blocks numbered="left">
       <block order="4">
@@ -97,9 +100,9 @@
   </activity>
   <activity xml:id="bsoup_writecode3q_mu" label="bsoup_writecode3q_mu" adaptive="yes" indentation="hide" language="python">
     <statement>
-       <p>Write a function called <c>coursera_dict</c> that takes in a parameter <c>file</c>, uses BeautifulSoup to web scrape the Coursera enrollees table,
-                            and returns a dictionary with Country as keys and Percentage as values. For example, <c>coursera_dict('MOOC-Jan-12-2018-Wikipedia.html')</c>.  The data is from <q>2. https://web.archive.org/web/20180112035358/https://en.wikipedia.org/wiki/Massive_open_online_course</q>
-                            should return a dictionary like: <c>{'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', ...}</c>.</p>
+       <p>Write a function called <c>coursera_dict(file)</c> that takes in a parameter <c>file</c>, uses BeautifulSoup to web scrape the Coursera enrollees table,
+                            and returns a dictionary with Country as keys and Percentage as values. For example, <c>coursera_dict('MOOC-Jan-12-2018-Wikipedia.html')</c>
+                            should return a dictionary like: <c>{'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', ...}</c>.  The file is a saved version from 2018 which can be seen at <q>https://web.archive.org/web/20180112035358/https://en.wikipedia.org/wiki/Massive_open_online_course</q></p>
     </statement>
     <blocks numbered="left">
       <block order="2">
@@ -119,11 +122,11 @@
         <cline>    soup = BeautifulSoup(text, 'html.parser')</cline>
       </block>
       <block order="13">
+         <choice>
+          <cline>   tag = soup.find_all('table', class_='wikitable') </cline>
+        </choice>
         <choice correct="yes">
           <cline>   tag = soup.find('table', class_='wikitable')</cline>
-        </choice>
-        <choice>
-          <cline>   tag = soup.find_all('table', class_='wikitable') </cline>
         </choice>
       </block>
       <block order="12">
@@ -154,9 +157,10 @@
   </activity>
   <activity xml:id="bsoup_writecode4q_mu" label="bsoup_writecode4q_mu" adaptive="yes" indentation="hide" language="python">
     <statement>
-      <p>Create a function called <c>types</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the Summary of Python 3's built-in types table,
-            and returns a list of the types. For example, <c>types('https://en.wikipedia.org/wiki/Python_(programming_language)')</c>
-            should return <c>['bool', 'bytearray', 'bytes', 'complex', 'dict', ...]</c>. Since we are scraping a live site the results may be different.</p>
+     <p>Write a function called <c>types(file)</c> that uses BeautifulSoup to web scrape the Summary of Python 3's built-in types table,
+                    and returns a list of the types. For example, <c>types('WikipediaPython-Aug-7-2026.html')</c>
+                    should return a list of string like: <c>['bool', 'bytearray', 'bytes', ...]</c>. We are using a saved version from 2026. See <q>http://web.archive.org/web/20260807102502/https://en.wikipedia.org/wiki/Python_(programming_language)</q> for the source.
+     </p>
     </statement>
     <blocks numbered="left">
       <block order="6">
@@ -212,9 +216,9 @@
   </activity>
   <activity xml:id="bsoup_writecode5q_mu" label="bsoup_writecode5q_mu" adaptive="yes" indentation="hide" language="python">
     <statement>
-      <p>Create a function called <c>restaurants_list</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the 12 essential Ann Arbor restaurants' names,
-            and returns a list of the 12 best Ann Arbor restaurants in 2019. For example, <c>restaurants_list('https://detroit.eater.com/maps/best-ann-arbor-restaurants')</c>
-            should return <c>["1. Knight's Steakhouse", '2. The Last Word', "3. Krazy Jim's Blimpy Burger", ...]</c>. Since we are scraping a live site the results may be different.</p>
+      <p>Create a function called <c>restaurants_list(file)</c> that takes in a file name as <c>file</c>, uses BeautifulSoup to web scrape the 13 best restaurants in Ann Arbor as of 2026,
+          For example, <c>restaurants_list('AnnArborBestRestaurants2026.html')</c>
+            should return <c>['Sava’s', 'Knight’s Steakhouse', 'Mani Osteria and Bar', ...]</c>. The current url is 'https://detroit.eater.com/maps/best-ann-arbor-restaurants'.</p>
     </statement>
     <blocks numbered="left">
       <block order="1">
@@ -222,11 +226,13 @@
         <cline>import requests</cline>
       </block>
       <block order="9">
-        <cline>def restaurants_list(url):</cline>
+        <cline>def restaurants_list(file):</cline>
         <cline>    r_list = []</cline>
       </block>
-      <block order="7">
-        <cline>    r = requests.get(url)</cline>
+      <block order="2">
+        <cline>    fh = open(file)</cline>
+        <cline>    text = fh.read()</cline>
+        <cline>    fh.close()</cline>
       </block>
       <block order="5">
         <choice correct="yes">
@@ -236,21 +242,21 @@
           <cline>    soup = BeautifulSoup(r.text, 'xml') </cline>
         </choice>
       </block>
-      <block order="10">
-        <choice correct="yes">
-          <cline>    rest_list = soup.find_all('div', class_ = "c-mapstack__card-hed")</cline>
+      <block order="4">
+         <choice>
+          <cline>    rest_list = soup.find('h2') </cline>
         </choice>
-        <choice>
-          <cline>    rest_list = soup.find_all('div', class = "c-mapstack__card-hed") </cline>
+        <choice correct="yes">
+          <cline>    rest_list = soup.find_all("h2")</cline>
         </choice>
       </block>
       <block order="3">
         <cline>    for rest in rest_list:</cline>
       </block>
       <block order="6">
-        <cline>        r_list.append(rest.text.strip().rstrip("Copy Link").rstrip())</cline>
+        <cline>        r_list.append(rest.text.strip())</cline>
       </block>
-      <block order="4">
+      <block order="10">
         <cline>    return r_list</cline>
       </block>
     </blocks>
