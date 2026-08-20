@@ -217,7 +217,9 @@
     <statement>
       <p>Create a function called <c>restaurants_list(file)</c> that takes in a file name as <c>file</c>, uses BeautifulSoup to web scrape the 13 best restaurants in Ann Arbor as of 2026,
           For example, <c>restaurants_list('AnnArborBestRestaurants2026.html')</c>
-            should return <c>['Sava’s', 'Knight’s Steakhouse', 'Mani Osteria and Bar', ...]</c>. The current url is 'https://detroit.eater.com/maps/best-ann-arbor-restaurants'.</p>
+            should return <c>['Sava’s', 'Knight’s Steakhouse', 'Mani Osteria and Bar', ...]</c>. The current url is <q>https://detroit.eater.com/maps/best-ann-arbor-restaurants<q>. We are using a saved version of that site from Aug 1 2026.
+              Click on the following link to view the source <url href="http://web.archive.org/web/20260801120205/https://detroit.eater.com/maps/best-ann-arbor-restaurants">link</url>.</p>
+            </p>
     </statement>
     <blocks numbered="left">
       <block order="1">
@@ -235,10 +237,10 @@
       </block>
       <block order="5">
         <choice correct="yes">
-          <cline>    soup = BeautifulSoup(r.text, 'html.parser')</cline>
+          <cline>    soup = BeautifulSoup(text, 'html.parser')</cline>
         </choice>
         <choice>
-          <cline>    soup = BeautifulSoup(r.text, 'xml') </cline>
+          <cline>    soup = BeautifulSoup(text, 'xml') </cline>
         </choice>
       </block>
       <block order="4">

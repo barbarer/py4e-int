@@ -141,18 +141,16 @@ unittest.main()
     </program>
 </activity>
 
-<!--
 <datafile xml:id="bs-rest-id" label="bs-rest-id" filename='AnnArborBest Restaurants_Aug_1_2026.html' hide="yes">
        <pre source="AnnArborBest Restaurants_Aug_1_2026.html"></pre>
 </datafile>
 
 <activity xml:id="bsoup_writecode5q_v2" label="bsoup_writecode5q_v2">
                     <statement>
-                        <p>Write a function called <c>restaurants_list(file)</c> that uses BeautifulSoup to web scrape the 13 essential Ann Arbor restaurants from <q>https://detroit.eater.com/maps/best-ann-arbor-restaurants</q>
-                            and returns a list of the restaurants. 
-                            For example, <c>restaurants_list('AnnArborBest Restaurants_Aug_1_2026.html')</c> shouild return a list like [“Sava’s”, “Knight’s Steakhouse”, “Mani Osteria and Bar”, …]. We are using a saved link from Aug 1, 2026 of the website.  
-                            Click on the following link to view the source: <url href="http://web.archive.org/web/20260801120205/https://detroit.eater.com/maps/best-ann-arbor-restaurants">link</url>.
-                            </p>
+                              <p>Write a function called <c>restaurants_list(file)</c> that takes in a file name as <c>file</c>, uses BeautifulSoup to web scrape the 13 best restaurants in Ann Arbor as of 2026,
+          For example, <c>restaurants_list('AnnArborBestRestaurants2026.html')</c>
+            should return <c>['Sava’s', 'Knight’s Steakhouse', 'Mani Osteria and Bar', ...]</c>. The current url is <q>https://detroit.eater.com/maps/best-ann-arbor-restaurants<q>. We are using a saved version of that site from Aug 1 2026.
+              Click on the following link to view the source <url href="http://web.archive.org/web/20260801120205/https://detroit.eater.com/maps/best-ann-arbor-restaurants">link</url>.</p>
 
     </statement><program interactive="activecode" language="python3" >
         <code>
@@ -182,7 +180,6 @@ unittest.main()
     </program>
 </activity>
                     
--->
 <activity xml:id="bsoup_writecode6q_v2" label="bsoup_writecode6q_v2" >
     <statement>
                 <p>Write a function called <c>bsi_list</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the section names and subsection names under Programs Bachelor of Science in Information,
