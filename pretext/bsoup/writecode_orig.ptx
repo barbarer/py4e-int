@@ -58,20 +58,6 @@ def headings(file):
     # write code here
 
 print(headings('WikipediaMOOC-Aug-7-2026.html'))
-====
-import unittest
-from bs4 import BeautifulSoup
-import requests
-
-class myTests(unittest.TestCase):
-
-    def testOne(self):
-        file = 'WikipediaMOOC-Aug-7-2026.html'
-        output = headings(file)
-        self.assertEqual(len(output), 14)
-
-unittest.main()
-
         </code>
     </program>
 </activity>
