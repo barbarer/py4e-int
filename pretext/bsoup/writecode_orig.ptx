@@ -44,10 +44,10 @@ unittest.main()
 <activity xml:id="bsoup_writecode2q_v2" label="bsoup_writecode2q_v2">
     <statement>
                  <p>Write a function called <c>headings(file)</c> that uses BeautifulSoup to return a list of the text from all <c>h2</c> tags in the passed file.
-      The file 'WikipediaMOOC-Aug-7-2026.html' is a saved version of <q>https://en.wikipedia.org/wiki/Massive_open_online_course</q> from 2026. Click on the 
+      The file 'MOOC-Wikipedia-8-20-2026.html' is a saved version of <q>https://en.wikipedia.org/wiki/Massive_open_online_course</q> from 2026. Click on the 
       following link to view the source: <url href="http://web.archive.org/web/20260807063804/https://en.wikipedia.org/wiki/Massive_open_online_course">link</url>
 
-      For example, <c>headings('WikipediaMOOC-Aug-7-2026.html')</c> should return a list of 14 headings starting with <c>['Content', 'History', 'Emergence of MOOC providers', 'Student experience and pedagogy', ...]</c>. </p>
+      For example, <c>headings('MOOC-Wikipedia-8-20-2026.html')</c> should return a list of 14 headings starting with <c>['Contents', 'History', 'Equity and access', 'Emergence of MOOC providers', ...]</c>. </p>
     </statement>
     <program interactive="activecode" language="python3" add-files="MOOC-2026-wikip-id">
         <code>
@@ -69,10 +69,10 @@ class myTests(unittest.TestCase):
         file = 'MOOC-Wikipedia-8-20-2026.html'
         output = headings(file)
         self.assertEqual(len(output), 14)
-        self.assertEqual(output[0], 'Content')
+        self.assertEqual(output[0], 'Contents')
         self.assertEqual(output[1], 'History')
-        self.assertEqual(output[2], 'Emergence of MOOC providers')
-        self.assertEqual(output[3], 'Student experience and pedagogy')
+        self.assertEqual(output[2], '')
+        self.assertEqual(output[3], 'Emergence of MOOC providers')
 
 unittest.main()
 
