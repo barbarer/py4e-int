@@ -3,10 +3,9 @@
   <title>Write Code Questions - Parsons for Select</title>
   <activity xml:id="bsoup_writecode1q_mu" label="bsoup_writecode1q_mu" adaptive="yes" indentation="hide" language="python">
     <statement>
-       <p>Create a function called <c>cur_stud_link(file)</c> that uses BeautifulSoup to return the URL that links to Current Students in the Navigation Bar.
-                            For example, <c>cur_stud_link('UMich-8-16-2026.html')</c> should return <c>"https://umich.edu/web/20260808043645/https://umich.edu/current-students/"</c>.  
-                            The file is a saved version from 2026 which can be seen 
-                            by clicking the following link: <url href="http://web.archive.org/web/20260808043645/https://umich.edu/">link</url>.
+       <p>Create a function called <c>cur_stud_link(soup)</c> that uses the passed soup object to return the URL that links to Current Students in the Navigation Bar.
+                        The soup object is created from the file <c>UMich-8-16-2026.html</c> which is a saved version of <q>https://umich.edu/</q> from 2026.
+                        Click on the following link to view the source:<url href="http://web.archive.org/web/20260808043645/https://umich.edu/">link</url>.
                         </p>
     </statement>
     <blocks numbered="left">
@@ -15,15 +14,7 @@
         <cline>from bs4 import BeautifulSoup</cline>
       </block>
       <block order="10">
-        <cline>def cur_stud_link(file):</cline>
-      </block>
-      <block order="6">
-        <cline>    fh = open(file)</cline>
-        <cline>    text = fh.read()</cline>
-        <cline>    fh.close()</cline>
-      </block>
-      <block order="1">
-        <cline>    soup = BeautifulSoup(text, 'html.parser')</cline>
+        <cline>def cur_stud_link(soup):</cline>
       </block>
       <block order="3">
          <choice>
@@ -51,11 +42,13 @@
   </activity>
   <activity xml:id="bsoup_writecode2qv2_mu" label="bsoup_writecode2qv2_mu" adaptive="yes" indentation="hide" language="python">
     <statement>
-      <p>Create a function called <c>headings(file)</c> that uses BeautifulSoup to return a list of the text from all <c>h2</c> tags in the passed file.
-      The file 'WikipediaMOOC-Aug-7-2026.html' is a saved version of <q>https://en.wikipedia.org/wiki/Massive_open_online_course</q> from 2026. Click on the 
+       <p>Create a function called <c>headings(soup)</c> that uses a passed soup object to return a list of the text from all <c>h2</c> tags in the soup.
+                    The soup object is created from the file <c>MOOC-Wikipedia-8-20-2026.html</c> which is a saved version of <q>https://en.wikipedia.org/wiki/Massive_open_online_course</q> from 2026. 
+      Click on the 
       following link to view the source: <url href="http://web.archive.org/web/20260807063804/https://en.wikipedia.org/wiki/Massive_open_online_course">link</url>
 
-      For example, <c>headings('WikipediaMOOC-Aug-7-2026.html')</c> should return a list of 14 headings starting with <c>['Content', 'History', 'Emergence of MOOC providers', 'Student experience and pedagogy', ...]</c>. </p>
+      For example, <c>headings('soup')</c> should return a list of 14 headings starting with <c>['Contents', 'History', 'Equity and access', 'Emergence of MOOC providers', ...]</c>. 
+    </p>
     </statement>
     <blocks numbered="left">
       <block order="4">
@@ -63,16 +56,8 @@
         <cline>from bs4 import BeautifulSoup</cline>
       </block>
       <block order="7">
-        <cline>def headings(file):</cline>
+        <cline>def headings(soup):</cline>
         <cline>    out_list = []</cline>
-      </block>
-      <block order="1">
-        <cline>    fh = open(file)</cline>
-        <cline>    text = fh.read()</cline>
-        <cline>    fh.close()</cline>
-      </block>
-      <block order="5">
-        <cline>    soup = BeautifulSoup(text, 'html.parser')</cline>
       </block>
       <block order="2">
         <choice>

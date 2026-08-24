@@ -7,9 +7,9 @@
         
     <activity xml:id="bsoup_writecode1q_v2" label="bsoup_writecode1q_v2"> 
                     <statement>
-                       <p>Write a function called <c>cur_stud_link(file)</c> that uses BeautifulSoup to return the URL that links to Current Students in the Navigation Bar.
-                            For example, <c>cur_stud_link('UMich-8-16-2026.html')</c> should return <c>"https://umich.edu/web/20260808043645/https://umich.edu/current-students/"</c>.  The file is a saved version from 2026 which can be seen 
-                            by clicking the following link: <url href="http://web.archive.org/web/20260808043645/https://umich.edu/">link</url>.
+                       <p>Write a function called <c>cur_stud_link(soup)</c> that uses the passed soup object to return the URL that links to Current Students in the Navigation Bar.
+                        The soup object is created from the file <c>UMich-8-16-2026.html</c> which is a saved version of <q>https://umich.edu/</q> from 2026.
+                        Click on the following link to view the source:<url href="http://web.archive.org/web/20260808043645/https://umich.edu/">link</url>.
                         </p>
 
     </statement><program interactive="activecode" language="python3" add-files='umich-id'>
@@ -19,7 +19,15 @@ import requests
 
 def cur_stud_link(file):
 
-print(cur_stud_link('UMich-8-16-2026.html'))
+
+# read the saved file
+fh = open('UMich-8-16-2026.html')
+text = fh.read()
+fh.close()
+
+# create the soup object and print the results
+soup = BeautifulSoup(text, 'html.parser')
+print(cur_stud_link(soup))
 ====
 import unittest
 import requests
@@ -28,8 +36,11 @@ from bs4 import BeautifulSoup
 class myTests(unittest.TestCase):
 
     def testOne(self):
-        file = 'UMich-8-16-2026.html'
-        self.assertEqual(cur_stud_link(file), 'https://umich.edu/web/20260808043645/https://umich.edu/current-students/')
+        fh = open('UMich-8-16-2026.html')         
+        text = fh.read()
+        fh.close()
+        soup = BeautifulSoup(text, 'html.parser')
+        self.assertEqual(cur_stud_link(soup), 'https://umich.edu/web/20260808043645/https://umich.edu/current-students/')
 
 unittest.main()
         </code>
@@ -43,21 +54,31 @@ unittest.main()
 
 <activity xml:id="bsoup_writecode2q_v2" label="bsoup_writecode2q_v2">
     <statement>
-                 <p>Write a function called <c>headings(file)</c> that uses BeautifulSoup to return a list of the text from all <c>h2</c> tags in the passed file.
-      The file 'MOOC-Wikipedia-8-20-2026.html' is a saved version of <q>https://en.wikipedia.org/wiki/Massive_open_online_course</q> from 2026. Click on the 
+                 <p>Write a function called <c>headings(soup)</c> that uses a passed soup object to return a list of the text from all <c>h2</c> tags in the soup.
+                    The soup object is created from the file <c>MOOC-Wikipedia-8-20-2026.html</c> which is a saved version of <q>https://en.wikipedia.org/wiki/Massive_open_online_course</q> from 2026. 
+      Click on the 
       following link to view the source: <url href="http://web.archive.org/web/20260807063804/https://en.wikipedia.org/wiki/Massive_open_online_course">link</url>
 
-      For example, <c>headings('MOOC-Wikipedia-8-20-2026.html')</c> should return a list of 14 headings starting with <c>['Contents', 'History', 'Equity and access', 'Emergence of MOOC providers', ...]</c>. </p>
+      For example, <c>headings('soup')</c> should return a list of 14 headings starting with <c>['Contents', 'History', 'Equity and access', 'Emergence of MOOC providers', ...]</c>. 
+    </p>
     </statement>
     <program interactive="activecode" language="python3" add-files="MOOC-2026-wikip-id">
         <code>
 from bs4 import BeautifulSoup
 import requests
 
-def headings(file):
+
+def headings(soup):
     # write code here
 
-print(headings('MOOC-Wikipedia-8-20-2026.html"'))
+# read the saved file
+fh = open('MOOC-Wikipedia-8-20-2026.html')
+text = fh.read()
+fh.close()
+
+# create the soup object and print the results
+soup = BeautifulSoup(text, 'html.parser')
+print(headings(soup))
 ====
 import unittest
 from bs4 import BeautifulSoup
@@ -67,6 +88,10 @@ class myTests(unittest.TestCase):
 
     def testOne(self):
         file = 'MOOC-Wikipedia-8-20-2026.html'
+        fh = open(file)
+        text = fh.read()
+        fh.close()
+        soup = BeautifulSoup(text, 'html.parser')
         output = headings(file)
         self.assertEqual(len(output), 14)
         self.assertEqual(output[0], 'Contents')
