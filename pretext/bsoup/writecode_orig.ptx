@@ -61,7 +61,7 @@ unittest.main()
       Click on the 
       following link to view the source: <url href="http://web.archive.org/web/20260807063804/https://en.wikipedia.org/wiki/Massive_open_online_course">link</url>
 
-      For example, <c>headings('soup')</c> should return a list of 14 headings starting with <c>['Contents', 'History', 'Equity and access', 'Emergence of MOOC providers', ...]</c>. 
+      For example, <c>headings(soup)</c> should return a list of 14 headings starting with <c>['Contents', 'History', 'Equity and access', 'Emergence of MOOC providers', ...]</c>. 
     </p>
     </statement>
     <program interactive="activecode" language="python3" add-files="MOOC-2026-wikip-id">
@@ -97,7 +97,7 @@ class myTests(unittest.TestCase):
         self.assertEqual(len(output), 14)
         self.assertEqual(output[0], 'Contents')
         self.assertEqual(output[1], 'History')
-        self.assertEqual(output[2], '')
+        self.assertEqual(output[2], 'Equity and access')
         self.assertEqual(output[3], 'Emergence of MOOC providers')
 
 unittest.main()

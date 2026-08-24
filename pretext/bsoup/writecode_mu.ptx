@@ -49,7 +49,7 @@
       Click on the 
       following link to view the source: <url href="http://web.archive.org/web/20260807063804/https://en.wikipedia.org/wiki/Massive_open_online_course">link</url>
 
-      For example, <c>headings('soup')</c> should return a list of 14 headings starting with <c>['Contents', 'History', 'Equity and access', 'Emergence of MOOC providers', ...]</c>. 
+      For example, <c>headings(soup)</c> should return a list of 14 headings starting with <c>['Contents', 'History', 'Equity and access', 'Emergence of MOOC providers', ...]</c>. 
     </p>
     </statement>
     <blocks numbered="left">
@@ -107,30 +107,30 @@
       </block>
       <block order="13">
         <choice correct="yes">
-          <cline>   tables = soup.find_all('table', class_='wikitable')</cline>
+          <cline>    tables = soup.find_all('table', class_='wikitable')</cline>
         </choice>
          <choice>
-          <cline>   tables = soup.find('table', class_='wikitable') </cline>
+          <cline>    tables = soup.find('table', class_='wikitable') </cline>
         </choice>
       </block>
       <block order="12">
-          <cline>   rows = tables[1].find_all('tr')</cline>
+          <cline>    rows = tables[1].find_all('tr')</cline>
       </block>
       <block order="9">
-        <cline>     for row in rows[1:]:</cline>
+          <cline>    for row in rows[1:]:</cline>
       </block>
       <block order="7">
-        <cline>         both_columns = row.find_all("td")</cline>
+           <cline>          both_columns = row.find_all("td")</cline>
       </block>
       <block order="8">
-        <cline>          key = both_columns[0].text</cline>
-        <cline>          value = both_columns[1].text.rstrip("\n")</cline>
+           <cline>          key = both_columns[0].text</cline>
+           <cline>          value = both_columns[1].text.rstrip("\n")</cline>
       </block>
       <block order="6">
-        <cline>          coursera_enrollees[key] = value</cline>
+           <cline>          coursera_enrollees[key] = value</cline>
       </block>
       <block order="5">
-        <cline>    return coursera_enrollees</cline>
+           <cline>    return coursera_enrollees</cline>
       </block>
     </blocks>
   </activity>
