@@ -8,8 +8,10 @@
     <activity xml:id="bsoup_writecode1q_v2" label="bsoup_writecode1q_v2"> 
                     <statement>
                        <p>Write a function called <c>cur_stud_link(soup)</c> that uses the passed soup object to return the URL that links to Current Students in the Navigation Bar.
-                        The soup object is created from the file <c>UMich-8-16-2026.html</c> which is a saved version of <q>https://umich.edu/</q> from 2026.
+                        The soup object is created from the file <c>UMich-8-16-2026.html</c> which is a saved version of <q>https://umich.edu/</q> from 2026. 
                         Click on the following link to view the source:<url href="http://web.archive.org/web/20260808043645/https://umich.edu/">link</url>.
+
+                        For example, <c>cur_stud_link(soup)</c> should return <c>'https://umich.edu/web/20260808043645/https://umich.edu/current-students/'</c>.
                         </p>
 
     </statement><program interactive="activecode" language="python3" add-files='umich-id'>
@@ -17,7 +19,7 @@
 from bs4 import BeautifulSoup
 import requests
 
-def cur_stud_link(file):
+def cur_stud_link(soup):
 
 
 # read the saved file
@@ -67,7 +69,6 @@ unittest.main()
 from bs4 import BeautifulSoup
 import requests
 
-
 def headings(soup):
     # write code here
 
@@ -92,7 +93,7 @@ class myTests(unittest.TestCase):
         text = fh.read()
         fh.close()
         soup = BeautifulSoup(text, 'html.parser')
-        output = headings(file)
+        output = headings(soup)
         self.assertEqual(len(output), 14)
         self.assertEqual(output[0], 'Contents')
         self.assertEqual(output[1], 'History')
@@ -112,18 +113,30 @@ unittest.main()
 
 <activity xml:id="bsoup_writecode3q_v2" label="bsoup_writecode3q_v2" add-files="MOOC-2018-wikip-id">
                     <statement>
-                       <p>Write a function called <c>coursera_dict(file)</c> that takes in a parameter <c>file</c>, uses BeautifulSoup to web scrape the Coursera enrollees table,
-                            and returns a dictionary with Country as keys and Percentage as values. For example, <c>coursera_dict('MOOC-Jan-12-2018-Wikipedia.html')</c>
-                            should return a dictionary like: <c>{'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', ...}</c>.  Click on the following link to view the 
-                            source: <url href="https://web.archive.org/web/20180112035358/https://en.wikipedia.org/wiki/Massive_open_online_course">link</url></p>
+                       <p>Write a function called <c>coursera_dict(soup)</c> that uses the passed soup object to return a dictionary with Country as keys and Percentage as values. 
+                        The soup object is created from the file 
+                        'WikipediaMOOC-Jan-12-2018.html' which is a saved version of <q>https://en.wikipedia.org/wiki/Massive_open_online_course</q> from 2018.
+                        Click on the following link to view the 
+                            source: <url href="https://web.archive.org/web/20180112035358/https://en.wikipedia.org/wiki/Massive_open_online_course">link</url>
+
+                         For example, <c>coursera_dict(soup)</c>
+                            should return a dictionary like: <c>{'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', ...}</c>.</p>
     </statement><program interactive="activecode" language="python3" add-files="MOOC-2018-wikip-id">
         <code>
 from bs4 import BeautifulSoup
 import requests
 
-def coursera_dict(file):
+def coursera_dict(soup):
+    # write code here
 
-print(coursera_dict('WikipediaMOOC-Jan-12-2018.html'))
+# read the saved file
+fh = open('WikipediaMOOC-Jan-12-2018.html')
+text = fh.read()
+fh.close()
+
+# create the soup object and print the results
+soup = BeautifulSoup(text, 'html.parser')
+print(coursera_dict(soup))
 
 ====
 import unittest
@@ -134,7 +147,11 @@ class myTests(unittest.TestCase):
 
     def testOne(self):
         file = 'WikipediaMOOC-Jan-12-2018.html'
-        output = coursera_dict(file)
+        fh = open(file)
+        text = fh.read()
+        fh.close()
+        soup = BeautifulSoup(text, 'html.parser')
+        output = coursera_dict(soup)
         self.assertEqual(len(output), 9)
         self.assertEqual(output["United States"], "27.7%")
         self.assertEqual(output["India"], "8.8%")
@@ -147,14 +164,14 @@ unittest.main()
 </activity>    
 
 
-<datafile xml:id="bs-python-id" label="bs-python-id" filename='WikipediaPython-Aug-7-2026.html' hide="yes">
-       <pre source="bsoup/WikipediaPython-Aug-7-2026.html"></pre>
+<datafile xml:id="bs-python-id" label="bs-python-id" filename='PythonKeywords.html' hide="yes">
+       <pre source="bsoup/PythonKeywords.html"></pre>
 </datafile>
 
 <activity xml:id="bsoup_writecode4q_v2" label="bsoup_writecode4q_v2">
     <statement>
-                 <p>Write a function called <c>types(file)</c> that uses BeautifulSoup to web scrape the Summary of Python 3's built-in types table,
-                    and returns a list of the types. For example, <c>types('WikipediaPython-Aug-7-2026.html')</c>
+                 <p>Write a function called <c>types(soup)</c> that uses BeautifulSoup to web scrape the Summary of Python 3's built-in types table,
+                    and returns a list of the types. For example, <c>types('PythonKeywords.html')</c>
                     should return a list of string like: <c>['bool', 'bytearray', 'bytes', ...]</c>. We are using a saved version from 2026. 
                     Click on the following link to view the source: <url href="http://web.archive.org/web/20260807102502/https://en.wikipedia.org/wiki/Python_(programming_language)">link</url>.
                  </p>
@@ -166,7 +183,7 @@ import requests
 
 def types(file):
 
-print(types('WikipediaPython-Aug-7-2026.html'))
+print(types('PythonKeywords.html'))
 ====
 import unittest
 from bs4 import BeautifulSoup
@@ -176,7 +193,7 @@ import requests
 class myTests(unittest.TestCase):
 
     def testOne(self):
-        file = 'WikipediaPython-Aug-7-2026.html'
+        file = 'PythonKeywords.html'
         self.assertEqual(types(file)[0:3],['bool', 'bytearray', 'bytes'])
 
 unittest.main()

@@ -4,8 +4,10 @@
   <activity xml:id="bsoup_writecode1q_mu" label="bsoup_writecode1q_mu" adaptive="yes" indentation="hide" language="python">
     <statement>
        <p>Create a function called <c>cur_stud_link(soup)</c> that uses the passed soup object to return the URL that links to Current Students in the Navigation Bar.
-                        The soup object is created from the file <c>UMich-8-16-2026.html</c> which is a saved version of <q>https://umich.edu/</q> from 2026.
+                        The soup object is created from the file <c>UMich-8-16-2026.html</c> which is a saved version of <q>https://umich.edu/</q> from 2026. 
                         Click on the following link to view the source:<url href="http://web.archive.org/web/20260808043645/https://umich.edu/">link</url>.
+
+                         For example, <c>cur_stud_link(soup)</c> should return <c>'https://umich.edu/web/20260808043645/https://umich.edu/current-students/'</c>.
                         </p>
     </statement>
     <blocks numbered="left">
@@ -61,10 +63,10 @@
       </block>
       <block order="2">
         <choice>
-          <cline>  h_list = soup.find("h2")   </cline>
+        <cline>    h_list = soup.find("h2")   </cline>
         </choice>
         <choice correct="yes">
-          <cline>  h_list = soup.find_all("h2")</cline>
+        <cline>    h_list = soup.find_all("h2")</cline>
         </choice>
       </block>
       <block order="6">
@@ -72,10 +74,10 @@
       </block>
       <block order="8">
         <choice>
-          <cline>      out_list.append(h_tag) </cline>
+          <cline>        out_list.append(h_tag) </cline>
         </choice>
         <choice correct="yes">
-          <cline>      out_list.append(h_tag.text)</cline>
+          <cline>        out_list.append(h_tag.text)</cline>
         </choice>
       </block>
       <block order="3">
@@ -85,10 +87,14 @@
   </activity>
   <activity xml:id="bsoup_writecode3q_mu" label="bsoup_writecode3q_mu" adaptive="yes" indentation="hide" language="python">
     <statement>
-       <p>Create a function called <c>coursera_dict(file)</c> that takes in a parameter <c>file</c>, uses BeautifulSoup to web scrape the Coursera enrollees table,
-                            and returns a dictionary with Country as keys and Percentage as values. For example, <c>coursera_dict('MOOC-Jan-12-2018-Wikipedia.html')</c>
-                            should return a dictionary like: <c>{'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', ...}</c>.  Click on the following link to view the 
-                            source: <url href="https://web.archive.org/web/20180112035358/https://en.wikipedia.org/wiki/Massive_open_online_course">link</url></p>
+       <p>Create a function called <c>coursera_dict(soup)</c> that uses the passed soup object to return a dictionary with Country as keys and Percentage as values. 
+                        The soup object is created from the file 
+                        'WikipediaMOOC-Jan-12-2018.html' which is a saved version of <q>https://en.wikipedia.org/wiki/Massive_open_online_course</q> from 2018.
+                        Click on the following link to view the 
+                            source: <url href="https://web.archive.org/web/20180112035358/https://en.wikipedia.org/wiki/Massive_open_online_course">link</url>
+                                
+                         For example, <c>coursera_dict(soup)</c>
+                            should return a dictionary like: <c>{'United States': '27.7%', 'India': '8.8%', 'Brazil': '5.1%', ...}</c>.</p>
     </statement>
     <blocks numbered="left">
       <block order="2">
@@ -96,16 +102,8 @@
         <cline>import requests</cline>
       </block>
       <block order="1">
-        <cline>def coursera_dict(file):</cline>
+        <cline>def coursera_dict(soup):</cline>
         <cline>    coursera_enrollees = {}</cline>
-      </block>
-      <block order="4">
-        <cline>    fh = open(file)</cline>
-        <cline>    text = fh.read()</cline>
-        <cline>    fh.close()</cline>
-      </block>
-      <block order="3">
-        <cline>    soup = BeautifulSoup(text, 'html.parser')</cline>
       </block>
       <block order="13">
         <choice correct="yes">
