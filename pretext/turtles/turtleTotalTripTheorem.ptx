@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<section xml:id="turtles_total-turtle-trip-theorem">
+    <title>Total Turtle Trip Theorem</title>
+    <p>That last piece of code is actually a <term>pattern</term> for a wide variety of geometric shapes. Here’s the code to draw a triangle. It may not be obvious why we turn 120 in this program, but it will be soon.</p>
+
+    <activity xml:id="turtle-draw-triangle" label="turtle-draw-triangle">
+      <statement><p>Run the code to see what it draws.</p></statement>
+      <program label="turtle-draw-triangle-editor" interactive="activecode" language="python">
+        <code>
+from turtle import *    # use the turtle library
+space = Screen()        # create a turtle space
+avery = Turtle()        # create a turtle named avery
+avery.setheading(90)    # point due north
+for sides in range(3):  # repeat the indented lines 3 times
+    avery.forward(100)  # move forward by 100 units
+    avery.right(120)    # turn by 120 degrees
+        </code>
+      </program>
+    </activity>
+
+    <p>And here’s the code to draw a pentagon.</p>
+
+    <activity xml:id="turtle-draw-pentagon" label="turtle-draw-pentagon">
+      <statement><p>Run the code to see what it draws.</p></statement>
+      <program label="turtle-draw-pentagon-editor" interactive="activecode" language="python">
+        <code>
+from turtle import *    # use the turtle library
+space = Screen()        # create a turtle space
+will = Turtle()         # create a turtle named will
+will.setheading(90)     # point due north
+for sides in range(5):  # repeat the indented lines 5 times
+    will.forward(100)   # move forward by 100 units
+    will.right(72)      # turn by 72 degrees
+        </code>
+      </program>
+    </activity>
+
+    <p>The <term>Total Turtle Trip Theorem</term> states that the turtle will draw a closed figure with <c>n</c> sides when the sum of the angles turned 
+      is a multiple of 360. In the triangle example, <c>3 \times 120 = 360</c> and in the pentagon example, <c>5 \times 72 = 360</c>.</p>
+
+    <p>Change the <c>??</c> in line 7 below to the amount to turn each time to draw a 12-sided polygon, which is called a dodecagon. 
+      If you get it right the turtle will draw a 12-sided closed polygon.</p>
+
+    <activity xml:id="turtle-draw-dodecagon" label="turtle-draw-dodecagon">
+      <statement><p>You will need to replace the '??' on line 7 to have the code correctly draw a dodecagon (a polygon with 12 sides).</p></statement>
+      <program label="turtle-draw-dodecagon-editor" interactive="activecode" language="python">
+        <code>
+from turtle import *  # use the turtle library
+space = Screen()      # create a turtle space
+mia = Turtle()        # create a turtle named maria
+mia.setheading(90)    # point due north
+for sides in range(12):  # repeat the indented lines 12 times
+    mia.forward(40)      # move forward by 40 units
+    mia.right(??)        # change ?? to the amount to turn
+        </code>
+      </program>
+    </activity>
+
+
+    <activity xml:id="turtle-draw-polygon" label="turtle-draw-polygon">
+      <statement><p>Write a function <c>polygon</c> which takes in a turtle object and the number of sides as parameters to draw a polygon. 
+        Call the function to test it.</p></statement>
+      <program label="turtle-draw-polygon-editor" interactive="activecode" language="python">
+        <code>
+        </code>
+      </program>
+    </activity>
+  </section>
+  
