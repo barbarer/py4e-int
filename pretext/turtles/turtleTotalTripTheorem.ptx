@@ -3,7 +3,7 @@
     <title>Total Turtle Trip Theorem</title>
     <p>That last piece of code is actually a <term>pattern</term> for a wide variety of geometric shapes. Here’s the code to draw a triangle. It may not be obvious why we turn 120 in this program, but it will be soon.</p>
 
-    <activity xml:id="turtle-draw-triangle" label="turtle-draw-triangle">
+    <activity xml:id="Turtle_Triangle" label="Turtle_Triangle">
       <statement><p>Run the code to see what it draws.</p></statement>
       <program label="turtle-draw-triangle-editor" interactive="activecode" language="python">
         <code>
@@ -20,7 +20,7 @@ for sides in range(3):  # repeat the indented lines 3 times
 
     <p>And here’s the code to draw a pentagon.</p>
 
-    <activity xml:id="turtle-draw-pentagon" label="turtle-draw-pentagon">
+    <activity xml:id="Turtle_Pentagon" label="Turtle_Pentagon">
       <statement><p>Run the code to see what it draws.</p></statement>
       <program label="turtle-draw-pentagon-editor" interactive="activecode" language="python">
         <code>
@@ -41,7 +41,7 @@ for sides in range(5):  # repeat the indented lines 5 times
     <p>Change the <c>??</c> in line 7 below to the amount to turn each time to draw a 12-sided polygon, which is called a dodecagon. 
       If you get it right the turtle will draw a 12-sided closed polygon.</p>
 
-    <activity xml:id="turtle-draw-dodecagon" label="turtle-draw-dodecagon">
+    <activity xml:id="Turtle_Dodecagon" label="Turtle_Dodecagon">
       <statement><p>You will need to replace the '??' on line 7 to have the code correctly draw a dodecagon (a polygon with 12 sides).</p></statement>
       <program label="turtle-draw-dodecagon-editor" interactive="activecode" language="python">
         <code>
@@ -55,6 +55,48 @@ for sides in range(12):  # repeat the indented lines 12 times
         </code>
       </program>
     </activity>
+
+
+<activity label="turtle_2_1_Turtle_Dodecagon_Q1" xml:id="turtle_2_1_Turtle_Dodecagon_Q1">
+    <statement>
+     <p>How much does <c>mia</c> need to turn in the program above to create a closed dodecagon (12-sided figure)? Only one of these works.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>15</p>
+        </statement>
+        <feedback>
+          <p>This one will not close</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>30</p>
+        </statement>
+        <feedback>
+          <p>Exactly! 12 * 30 = 360</p>
+        </feedback>
+      </choice>
+       <choice>
+        <statement>
+          <p>12</p>
+        </statement>
+        <feedback>
+          <p> No, 12 * 12 is 144, which is not a multiple of 360</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>90</p>
+        </statement>
+        <feedback>
+          <p>This one will generate a square, three times. 12 * 90 = 1080 = 360 * 3</p>
+        </feedback>
+      </choice>
+      </choices>
+  </activity>
+ 
 
 
     <activity xml:id="turtle-draw-polygon" label="turtle-draw-polygon">
