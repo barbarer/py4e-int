@@ -3,7 +3,7 @@
   <title>Write Code Questions - Parsons for Select</title>
   <activity xml:id="bsoup_writecode1q_mu" label="bsoup_writecode1q_mu" adaptive="yes" indentation="hide" language="python">
     <statement>
-       <p>Create a function called <c>cur_stud_link(soup)</c> that uses the passed soup object to return the URL that links to Current Students in the Navigation Bar.
+       <p>Create a function called <c>cur_stud_link(soup)</c> that takes a soup object and returns the URL that links to Current Students in the Navigation Bar.
                         The soup object is created from the file <c>UMich-8-16-2026.html</c> which is a saved version of <q>https://umich.edu/</q> from 2026. 
                         Click on the following link to view the source:<url href="http://web.archive.org/web/20260808043645/https://umich.edu/">link</url>.
 
@@ -44,7 +44,7 @@
   </activity>
   <activity xml:id="bsoup_writecode2qv2_mu" label="bsoup_writecode2qv2_mu" adaptive="yes" indentation="hide" language="python">
     <statement>
-       <p>Create a function called <c>headings(soup)</c> that uses a passed soup object to return a list of the text from all <c>h2</c> tags in the soup.
+       <p>Create a function called <c>headings(soup)</c> that takes a soup object and returns a list of the text from all <c>h2</c> tags in the soup.
                     The soup object is created from the file <c>MOOC-Wikipedia-8-20-2026.html</c> which is a saved version of <q>https://en.wikipedia.org/wiki/Massive_open_online_course</q> from 2026. 
       Click on the 
       following link to view the source: <url href="http://web.archive.org/web/20260807063804/https://en.wikipedia.org/wiki/Massive_open_online_course">link</url>
@@ -87,7 +87,7 @@
   </activity>
   <activity xml:id="bsoup_writecode3q_mu" label="bsoup_writecode3q_mu" adaptive="yes" indentation="hide" language="python">
     <statement>
-       <p>Create a function called <c>coursera_dict(soup)</c> that uses the passed soup object to return a dictionary with Country as keys and Percentage as values. 
+       <p>Create a function called <c>coursera_dict(soup)</c> that takes a soup object and returns a dictionary with Country as keys and Percentage as values. 
                         The soup object is created from the file 
                         'WikipediaMOOC-Jan-12-2018.html' which is a saved version of <q>https://en.wikipedia.org/wiki/Massive_open_online_course</q> from 2018.
                         Click on the following link to view the 
@@ -136,11 +136,12 @@
   </activity>
   <activity xml:id="bsoup_writecode4q_mu" label="bsoup_writecode4q_mu" adaptive="yes" indentation="hide" language="python">
     <statement>
-     <p>Create a function called <c>types(file)</c> that uses BeautifulSoup to web scrape the Summary of Python 3's built-in types table,
-                    and returns a list of the types. For example, <c>types('WikipediaPython-Aug-7-2026.html')</c>
-                    should return a list of string like: <c>['bool', 'bytearray', 'bytes', ...]</c>. We are using a saved version from 2026. 
-                    Click on the following link to view the source: <url href="http://web.archive.org/web/20260807102502/https://en.wikipedia.org/wiki/Python_(programming_language)">link</url>.
-     </p>
+     <p>Create a function called <c>keywords(soup)</c> that takes a soup object and returns a list of Python keywords.
+                    The soup object is created from the file <c>PythonKeywords.html</c> which is a saved version of 
+                    <q>https://www.w3schools.com/python/python_ref_keywords.asp</q> from 2026.
+                       Click on the following link to view the source: <url href="http://web.archive.org/web/20260723003533/https://www.w3schools.com/python/python_ref_keywords.asp">link</url>.
+                    For example, keywords(soup) should return a list that starts with: <c>['and', 'as', 'assert', ...]</c>.
+                 </p>
     </statement>
     <blocks numbered="left">
       <block order="6">
@@ -148,27 +149,19 @@
         <cline>from bs4 import BeautifulSoup</cline>
       </block>
       <block order="2">
-        <cline>def types(url):</cline>
-        <cline>    types = []</cline>
-      </block>
-      <block order="1">
-        <cline>    fh = open(file)</cline>
-        <cline>    text = fh.read()</cline>
-        <cline>    fh.close()</cline>
-      </block>
-      <block order="10">
-        <cline>    soup = BeautifulSoup(text, 'html.parser')</cline>
+        <cline>def keywords(soup):</cline>
+        <cline>    keywords = []</cline>
       </block>
       <block order="12">
         <choice correct="yes">
-          <cline>    table = soup.find('table', class_ = 'wikitable')</cline>
+          <cline>    table = soup.find('table', class_="ws-table-all")</cline>
         </choice>
         <choice>
-          <cline>    table = soup.find(table, class_ = 'wikitable') </cline>
+          <cline>    table = soup.find(table)</cline>
         </choice>
       </block>
       <block order="4">
-        <cline>    rows = table.find_all('tr')</cline>
+          <cline>    rows = table.find_all('tr')</cline>
       </block>
       <block order="3">
         <choice>
@@ -179,20 +172,16 @@
         </choice>
       </block>
       <block order="14">
-        <cline>        all_columns = row.find_all("td")</cline>
+        <cline>        data = row.find("td")</cline>
       </block>
       <block order="11">
-        <cline>        p_type = all_columns[0]</cline>
-      </block>
-      <block order="9">
-        <cline>        code = p_type.find('code')</cline>
-        <cline>        one_type = code.text.rstrip("\n")</cline>
+        <cline>        keyword = data.find('a').text</cline>
       </block>
       <block order="13">
-        <cline>        types.append(one_type)</cline>
+        <cline>        keywords.append(keyword)</cline>
       </block>
       <block order="8">
-        <cline>    return types</cline>
+        <cline>    return keywords</cline>
       </block>
     </blocks>
   </activity>

@@ -7,7 +7,7 @@
         
     <activity xml:id="bsoup_writecode1q_v2" label="bsoup_writecode1q_v2"> 
                     <statement>
-                       <p>Write a function called <c>cur_stud_link(soup)</c> that uses the passed soup object to return the URL that links to Current Students in the Navigation Bar.
+                       <p>Write a function called <c>cur_stud_link(soup)</c> that takes asoup object and returns the URL that links to Current Students in the Navigation Bar.
                         The soup object is created from the file <c>UMich-8-16-2026.html</c> which is a saved version of <q>https://umich.edu/</q> from 2026. 
                         Click on the following link to view the source:<url href="http://web.archive.org/web/20260808043645/https://umich.edu/">link</url>.
 
@@ -56,7 +56,7 @@ unittest.main()
 
 <activity xml:id="bsoup_writecode2q_v2" label="bsoup_writecode2q_v2">
     <statement>
-                 <p>Write a function called <c>headings(soup)</c> that uses a passed soup object to return a list of the text from all <c>h2</c> tags in the soup.
+                 <p>Write a function called <c>headings(soup)</c> that takes a soup object and returns a list of the text from all <c>h2</c> tags in the soup.
                     The soup object is created from the file <c>MOOC-Wikipedia-8-20-2026.html</c> which is a saved version of <q>https://en.wikipedia.org/wiki/Massive_open_online_course</q> from 2026. 
       Click on the 
       following link to view the source: <url href="http://web.archive.org/web/20260807063804/https://en.wikipedia.org/wiki/Massive_open_online_course">link</url>
@@ -113,7 +113,7 @@ unittest.main()
 
 <activity xml:id="bsoup_writecode3q_v2" label="bsoup_writecode3q_v2" add-files="MOOC-2018-wikip-id">
                     <statement>
-                       <p>Write a function called <c>coursera_dict(soup)</c> that uses the passed soup object to return a dictionary with Country as keys and Percentage as values. 
+                       <p>Write a function called <c>coursera_dict(soup)</c> that takes a soup object and returns a dictionary with Country as keys and Percentage as values. 
                         The soup object is created from the file 
                         'WikipediaMOOC-Jan-12-2018.html' which is a saved version of <q>https://en.wikipedia.org/wiki/Massive_open_online_course</q> from 2018.
                         Click on the following link to view the 
@@ -170,7 +170,7 @@ unittest.main()
 
 <activity xml:id="bsoup_writecode4q_v2" label="bsoup_writecode4q_v2">
     <statement>
-                 <p>Write a function called <c>keywords(soup)</c> that uses BeautifulSoup to return a list of Python keywords.
+                 <p>Write a function called <c>keywords(soup)</c> that takes a soup object and returns a list of Python keywords.
                     The soup object is created from the file <c>PythonKeywords.html</c> which is a saved version of 
                     <q>https://www.w3schools.com/python/python_ref_keywords.asp</q> from 2026.
                        Click on the following link to view the source: <url href="http://web.archive.org/web/20260723003533/https://www.w3schools.com/python/python_ref_keywords.asp">link</url>.
