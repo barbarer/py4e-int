@@ -61,7 +61,7 @@ unittest.main()
       Click on the 
       following link to view the source: <url href="http://web.archive.org/web/20260807063804/https://en.wikipedia.org/wiki/Massive_open_online_course">link</url>
 
-      For example, <c>headings(soup)</c> should return a list of 14 headings starting with <c>['Contents', 'History', 'Equity and access', 'Emergence of MOOC providers', ...]</c>. 
+      For example, <c>headings(soup)</c> should return a list of 14 headings starting with <c>['Contents', 'History', 'Equity and access', ...]</c>. 
     </p>
     </statement>
     <program interactive="activecode" language="python3" add-files="MOOC-2026-wikip-id">
@@ -174,7 +174,7 @@ unittest.main()
                     The soup object is created from the file <c>PythonKeywords.html</c> which is a saved version of 
                     <q>https://www.w3schools.com/python/python_ref_keywords.asp</q> from 2026.
                        Click on the following link to view the source: <url href="http://web.archive.org/web/20260723003533/https://www.w3schools.com/python/python_ref_keywords.asp">link</url>.
-                    For example, keywords(soup) should return a list that starts with: <c>['and', 'as', 'assert', ...]</c>.
+                    For example, keywords(soup) should return a list that starts with: <c>['and', 'as', ...]</c>.
                  </p>
     </statement>
     <program interactive="activecode" language="python3" add-files="bs-python-keywords-id">
@@ -207,7 +207,9 @@ class myTests(unittest.TestCase):
 
         # create the soup object and print the results
         soup = BeautifulSoup(text, 'html.parser')
-        self.assertEqual(keywords(soup), ['and', 'as', 'assert'])
+        keywords_list = keywords(soup)
+        self.assertEqual(keywords_list[0:3], ['and', 'as', 'assert'])
+        self.assertEqual(len(keywords_list), 37)
 
 unittest.main()
         </code>
