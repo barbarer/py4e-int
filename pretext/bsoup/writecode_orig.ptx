@@ -164,37 +164,50 @@ unittest.main()
 </activity>    
 
 
-<datafile xml:id="bs-python-id" label="bs-python-id" filename='PythonKeywords.html' hide="yes">
+<datafile xml:id="bs-python-keywords-id" label="bs-python-keywords--id" filename='PythonKeywords.html' hide="yes">
        <pre source="bsoup/PythonKeywords.html"></pre>
 </datafile>
 
 <activity xml:id="bsoup_writecode4q_v2" label="bsoup_writecode4q_v2">
     <statement>
-                 <p>Write a function called <c>types(soup)</c> that uses BeautifulSoup to web scrape the Summary of Python 3's built-in types table,
-                    and returns a list of the types. For example, <c>types('PythonKeywords.html')</c>
-                    should return a list of string like: <c>['bool', 'bytearray', 'bytes', ...]</c>. We are using a saved version from 2026. 
-                    Click on the following link to view the source: <url href="http://web.archive.org/web/20260807102502/https://en.wikipedia.org/wiki/Python_(programming_language)">link</url>.
+                 <p>Write a function called <c>keywords(soup)</c> that uses BeautifulSoup to return a list of Python keywords.
+                    The soup object is created from the file <c>PythonKeywords.html</c> which is a saved version of 
+                    <q>https://www.w3schools.com/python/python_ref_keywords.asp</q> from 2026.
+                       Click on the following link to view the source: <url href="http://web.archive.org/web/20260723003533/https://www.w3schools.com/python/python_ref_keywords.asp">link</url>.
+                    For example, keywords(soup) should return a list that starts with: <c>['and', 'as', 'assert', ...]</c>.
                  </p>
     </statement>
-    <program interactive="activecode" language="python3" add-files="bs-python-id">
+    <program interactive="activecode" language="python3" add-files="bs-python-keywords-id">
         <code>
 from bs4 import BeautifulSoup
 import requests
 
-def types(file):
+def keywords(soup):
+    # write code here
 
-print(types('PythonKeywords.html'))
+# read the saved file
+fh = open('PythonKeywords.html')
+text = fh.read()
+fh.close()
+
+# create the soup object and print the results
+soup = BeautifulSoup(text, 'html.parser')
+print(keywords(soup))
 ====
 import unittest
 from bs4 import BeautifulSoup
 import requests
 
-
 class myTests(unittest.TestCase):
 
-    def testOne(self):
-        file = 'PythonKeywords.html'
-        self.assertEqual(types(file)[0:3],['bool', 'bytearray', 'bytes'])
+    def testOne(self):   
+        fh = open('PythonKeywords.html')
+        text = fh.read()
+        fh.close()
+
+        # create the soup object and print the results
+        soup = BeautifulSoup(text, 'html.parser')
+        self.assertEqual(keywords(soup), ['and', 'as', 'assert'])
 
 unittest.main()
         </code>

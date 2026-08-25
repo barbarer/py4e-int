@@ -219,20 +219,20 @@ myTests().main()
           </program>
         </activity>
 
-  
- 
-        <activity label="file_ex_biggestLoss" xml:id="file_ex_biggestLoss">
-          <statement>
-            <p>The rest of the questions gather their data from the file 
+        <p>The rest of the questions gather their data from the file 
             <dataurl filename="stocks.txt" source="files/stocks.txt">stocks.txt</dataurl>, 
             which shows the monthly Dow Jones averages from 1989 to 2001.
             The data is in the order: Date, Open, High, Low, and Close.
             The first line is <c>3-Dec-01,9848.93,10220.78,9651.87,10021.57</c>.  
             The Date is in the format <c>day-month-yy</c>.  
             The month is the first three letters of the month.
-          </p>
-          <p>Click <dataurl filename="stocks.txt" source="files/stocks.txt">here to view the stocks.txt data file</dataurl> in a new browser tab.</p>
+        </p>
+        <p>Click <dataurl filename="stocks.txt" source="files/stocks.txt">here to view the stocks.txt data file</dataurl> in a new browser tab.</p>
 
+  
+ 
+        <activity label="file_ex_biggestLoss" xml:id="file_ex_biggestLoss">
+          <statement>
   <p>Complete the code at the # so that it prints out the date with the biggest loss from open to close. Each line has: Date, Open, High, Low, and Close. It should print 3-Aug-98 loss 1329.030000000001.</p>
 </statement>
 <program interactive="activecode" language="python" add-files="files-write-stocks-id">
