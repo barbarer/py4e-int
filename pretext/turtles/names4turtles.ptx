@@ -22,11 +22,11 @@
   <p>Today, we can play with virtual turtles in a fully-graphical and non-robotic way. Below is a Python program that first creates a Screen object (object of the Screen class) for the turtle to draw on and then creates a Turtle object (object of the Turtle class).
             The program asks the turtle object to perform some of its behaviors (methods) like moving forward a set amount and turning. The turtle draws as it moves.</p>
   </introduction>
-  <activity label="Turtle_ex_1">
+  <activity label="Turtle_ex_1" xml:id="Turtle_ex_1">
     <statement>
       <p>Click the Run button to see what this code does.  The drawing will happen below the code.</p>
     </statement>
-    <program xml:id="Turtle_ex_1_editor" interactive="activecode" language="python">
+    <program label="Turtle_ex_1_editor" interactive="activecode" language="python">
       <code>
 from turtle import *  # use the turtle library
 space = Screen()      # create a Screen object named space

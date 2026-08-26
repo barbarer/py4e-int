@@ -36,10 +36,11 @@ for sides in range(5):  # repeat the indented lines 5 times
     </activity>
 
     <p>The <term>Total Turtle Trip Theorem</term> states that the turtle will draw a closed figure with <c>n</c> sides when the sum of the angles turned 
-      is a multiple of 360. In the triangle example, <c>3 \times 120 = 360</c> and in the pentagon example, <c>5 \times 72 = 360</c>.</p>
+      is a multiple of 360. In the triangle example, <c>3 * 120 = 360</c> and in the pentagon example, <c>5 * 72 = 360</c>.</p>
 
     <p>Change the <c>??</c> in line 7 below to the amount to turn each time to draw a 12-sided polygon, which is called a dodecagon. 
       If you get it right the turtle will draw a 12-sided closed polygon.</p>
+
 
     <activity xml:id="Turtle_Dodecagon" label="Turtle_Dodecagon">
       <statement><p>You will need to replace the '??' on line 7 to have the code correctly draw a dodecagon (a polygon with 12 sides).</p></statement>
@@ -55,7 +56,6 @@ for sides in range(12):  # repeat the indented lines 12 times
         </code>
       </program>
     </activity>
-
 
 <activity label="turtle_2_1_Turtle_Dodecagon_Q1" xml:id="turtle_2_1_Turtle_Dodecagon_Q1">
     <statement>
@@ -96,9 +96,57 @@ for sides in range(12):  # repeat the indented lines 12 times
       </choice>
       </choices>
   </activity>
+
+     <activity label="turtle_2_2_Triangle" xml:id="turtle_2_2_Triangle" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>The following program uses a turtle to draw a triangle as shown below, but the lines are mixed up. The program should do all 
+        necessary set-up and create the turtle. After that, iterate (loop) 3 times, and each time through the loop the turtle should 
+        go forward 100 pixels, and then turn left 120 degrees. Drag the needed blocks of statements from the left column to the right 
+        column and put them in the right order with the correct indention. There may be additional blocks that are not needed 
+        in a correct solution. Click on Check to see if you are right. You will be told if any of the lines are in the wrong order 
+        or are the wrong blocks.</p>
+    </statement>
+     <figure align="center" xml:id="fig_turtle_triangle_id1">
+    <caption>An equilateral triangle drawn by a turtle</caption>
+    <image source="turtles/Figures/TurtleTriangle.png" width="40%" alt="An equilateral triangle drawn by a turtle with the left side at the center of the window and points towards the west, north, and east.  A turtle is at the left side pointing east."/>
+    </figure>
+    <blocks numbered="left">
+      <block order="11">
+        <cline>from turtle import *</cline>
+      </block>
+      <block order="5">
+        <cline>space = Screen()</cline>
+      </block>
+      <block order="8">
+        <cline>marie = Turtle()</cline>
+      </block>
+        <block order="2">
+        <choice>
+          <cline>for i in range(3)</cline>
+        </choice>
+        <choice correct="yes">
+          <cline>for i in range(3):</cline>
+        </choice>
+      </block>
+         <block order="6">
+        <choice>
+          <cline>    marie.forward(100</cline>
+        </choice>
+        <choice correct="yes">
+          <cline>    marie.forward(100)</cline>
+        </choice>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    marie.left(120)</cline>
+        </choice>
+        <choice>
+          <cline>    marie.turn(120)</cline>
+        </choice>
+      </block>
+    </blocks>
+  </activity>
  
-
-
     <activity xml:id="turtle-draw-polygon" label="turtle-draw-polygon">
       <statement><p>Write a function <c>polygon</c> which takes in a turtle object and the number of sides as parameters to draw a polygon. 
         Call the function to test it.</p></statement>
