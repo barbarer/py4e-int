@@ -2,7 +2,7 @@
 <section xml:id="inheritance_introduction-to-inheritance-point-and-labeledpoint">
   <title>Introduction to Inheritance - Point and LabeledPoint</title>
   <p>Recall the Point class from earlier in the book:</p>
-  <program label="pointclass_1" interactive="activecode" language="python">
+  <program label="pointclass_1" xml:id="pointclass_1" interactive="activecode" language="python">
     <code>
 class Point:
 
@@ -88,7 +88,7 @@ dist = p.distanceFromOrigin()
   </activity>
   <p>Now, let's refine LabeledPoint so that it holds a label, along with the x and y
             coordinates:</p>
-  <program label="labeledpoint_2" interactive="activecode" language="python" include="pointclass_1">
+  <program label="labeledpoint_2" xml:id="labeledpoint_2" interactive="activecode" language="python" include="pointclass_1">
     <code>
 class LabeledPoint(Point):
 
