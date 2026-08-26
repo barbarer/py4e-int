@@ -54,23 +54,18 @@
     <title>Reading from Files</title>
     <p>To read from a file, open the file which returns a file object and loop through
                 the lines in a file.  Remember to close the file when you are done reading from it!</p>
-    <hint>
-      <pre>Labrador Retriever
-German Shepherd
-Golden Retriever
-Beagle
-Bulldog
-Yorkshire Terrier
-Boxer
-Poodle
-Rottweiler
-Dachshunds</pre>
-    </hint>
+
+    <p>Below is the dogs.txt file used in several activities on this page.</p>
+
+ <datafile xml:id="dogs_id" label="dogs_id" filename='dogs.txt'>
+      <pre source="files/dogs.txt"></pre>
+</datafile>
+
     <activity label="file_pogil_read_lines_with_loop">
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
-      <program xml:id="file_pogil_read_lines_with_loop_editor" interactive="activecode" language="python">
+      <program xml:id="file_pogil_read_lines_with_loop_editor" interactive="activecode" language="python" add-files="dogs_id">
         <code>
 # function definition
 def print_contents(file):
@@ -126,7 +121,7 @@ print_contents("dogs.txt")
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
-      <program xml:id="file_pogil_read_lines_list_editor" interactive="activecode" language="python">
+      <program xml:id="file_pogil_read_lines_list_editor" interactive="activecode" language="python" add-files="dogs_id">
         <code>
 # function definition
 def print_contents(file):
@@ -175,7 +170,7 @@ print_contents("dogs.txt")
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
-      <program xml:id="file_pogil_read_x_lines_editor" interactive="activecode" language="python">
+      <program xml:id="file_pogil_read_x_lines_editor" interactive="activecode" language="python" add-files="dogs_id">
         <code>
 # function definition
 def print_contents(file, num):
@@ -226,7 +221,7 @@ print_contents("unknown.txt")
       <statement>
         <p>Run the code below to see what it prints.  When it asks for another file name type in &#x2018;dogs.txt'.</p>
       </statement>
-      <program xml:id="file_pogil_read_lines_try_and_catch_editor" interactive="activecode" language="python">
+      <program xml:id="file_pogil_read_lines_try_and_catch_editor" interactive="activecode" language="python" add-files="dogs_id">
         <code>
 # function definition
 def print_contents(file):
@@ -276,7 +271,7 @@ print_contents("unknown.txt")
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
-      <program xml:id="file_pogil_read_lines_list_with_editor" interactive="activecode" language="python">
+      <program xml:id="file_pogil_read_lines_list_with_editor" interactive="activecode" language="python" add-files="dogs_id">
         <code>
 # function definition
 def print_contents(file):
@@ -381,7 +376,7 @@ print_contents("dogs.txt")
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
-      <program xml:id="file_pogil_dict_count_editor" interactive="activecode" language="python">
+      <program xml:id="file_pogil_dict_count_editor" interactive="activecode" language="python" add-files="dogs_id">
         <code>
 # function definition
 def count_first(file):
