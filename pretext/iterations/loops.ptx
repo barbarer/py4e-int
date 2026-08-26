@@ -41,7 +41,7 @@
     <title>Counting and summing loops</title>
     <p>For example, to count the number of items in a list, we would write the
                 following <c>for</c> loop:</p>
-    <program xml:id="codelens561" interactive="codelens" language="python">
+    <program label="codelens561" interactive="codelens" language="python">
       <code>
 count = 0
 for itervar in [3, 41, 12, 9, 74, 15]:
@@ -112,7 +112,7 @@ print('Count: ', count)
                 finishes.</p>
     <p>Another similar loop that computes the total of a set of numbers is as
                 follows:</p>
-    <program xml:id="codelens562" interactive="codelens" language="python">
+    <program label="codelens562" interactive="codelens" language="python">
       <code>
 total = 0
 for itervar in [3, 41, 12, 9, 74, 15]:
@@ -157,7 +157,7 @@ print('Total: ', total)
     <title>Maximum and minimum loops</title>
     <p>To find the largest value in a list or sequence, we
                 construct the following loop:</p>
-    <program xml:id="itr-section6_1" interactive="activecode" language="python">
+    <program label="itr-section6_1" interactive="activecode" language="python">
       <code>
 largest = None
 print('Before:', largest)
@@ -240,7 +240,7 @@ Largest: 74</pre>
                 list.</p>
     <p>To compute the smallest number, the code is very similar with one small
                 change:</p>
-    <program xml:id="itr-section6_2" interactive="activecode" language="python">
+    <program label="itr-section6_2" interactive="activecode" language="python">
       <code>
 smallest = None
 print('Before:', smallest)
@@ -259,7 +259,7 @@ print('Smallest:', smallest)
                 unnecessary.</p>
     <p>The following is a simple version of the Python built-in
                 <c>min()</c> function:</p>
-    <program xml:id="itr-section6_3" interactive="activecode" language="python">
+    <program label="itr-section6_3" interactive="activecode" language="python">
       <code>
 def min(values):
     smallest = None

@@ -39,7 +39,7 @@ print(p.distanceFromPoint(q))
       <p>Add a <c>distanceFromPoint</c> method that works similar to <c>distanceFromOrigin</c> except that it
                         takes a <c>Point</c> as a parameter and
                         computes the distance between that point and self.  For example, <c>print(p.distanceFromPoint(q))</c> should print <c>5.0</c>. </p>
-      <program xml:id="classes_q1_sol" language="python" interactive="activecode">
+      <program label="classes_q1_sol" language="python" interactive="activecode">
         <code>
 import math
 
@@ -136,7 +136,7 @@ print(p.slope_from_origin())
       <p>Add a method <c>slope_from_origin</c> which returns the slope of the line joining the origin
                         to the point.   For example, <c>print(p.slope_from_origin())</c> should print <c>2.5</c> when <c>p</c> is <c>(4, 10)</c></p>
       <p>What cases will cause your method to fail? Return <c>None</c> when it happens.</p>
-      <program xml:id="classes_q3_sol" language="python" interactive="activecode">
+      <program label="classes_q3_sol" language="python" interactive="activecode">
         <code>
 class Point:
     """ Point class for representing and manipulating x,y coordinates. """
@@ -238,7 +238,7 @@ print(p)
        <p>Add a method called <c>move</c> that will take two parameters, call them <c>dx</c> and <c>dy</c>.  The method will
                         cause the point to move in the x and y direction the number of units given. (Hint: you will change the values of the
                         state of the point).  So for a point <c>p</c> at <c>(7,6)</c> <c>p.move(5, 10)</c> should change to <c>(12,16)</c></p>
-      <program xml:id="classes_q5_sol" language="python" interactive="activecode">
+      <program label="classes_q5_sol" language="python" interactive="activecode">
         <code>
 class Point:
     """ Point class for representing and manipulating x,y coordinates. """

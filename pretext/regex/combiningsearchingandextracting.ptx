@@ -61,7 +61,7 @@ X-DSPAM-Probability: 0.0000</pre>
       <p>Search for lines that start with &#x2018;X', followed by any non-whitespace characters
             and &#x2018;:', followed by a space and any number, where the number can include a decimal</p>
     </statement>
-    <program xml:id="re_combo_ac1_editor" interactive="activecode" language="python">
+    <program label="re_combo_ac1_editor" interactive="activecode" language="python">
       <code>
 import re
 hand = open('mbox-short.txt')
@@ -90,7 +90,7 @@ for line in hand:
       <p>Search for lines that start with &#x2018;X', followed by any non-whitespace characters
             and &#x2018;:', followed by a space and any number. The number can contain a decimal</p>
     </statement>
-    <program xml:id="re_combo_ac2_editor" interactive="activecode" language="python">
+    <program label="re_combo_ac2_editor" interactive="activecode" language="python">
       <code>
 import re
 s = ['X-DSPAM-Confidence: 0.8475', 'X-DSPAM-Probability: 0.0000', 'X-DSPAM-Confidence: 0.6178', 'X-DSPAM-Probability: 0.0000']
@@ -119,7 +119,7 @@ for item in s:
       <p>Search for lines that start with &#x2018;Details: rev=' followed by numbers
             and &#x2018;.' Then print the number if it is greater than zero</p>
     </statement>
-    <program xml:id="re_combo_ac3_editor" interactive="activecode" language="python">
+    <program label="re_combo_ac3_editor" interactive="activecode" language="python">
       <code>
 import re
 hand = open('mbox-short.txt')
@@ -211,7 +211,7 @@ for line in hand:
       <p>Search for lines that start with From and a character followed by a two
             digit number between 00 and 99, followed by &#x2018;:'</p>
     </statement>
-    <program xml:id="re_combo_ac4_editor" interactive="activecode" language="python">
+    <program label="re_combo_ac4_editor" interactive="activecode" language="python">
       <code>
 import re
 hand = open('mbox-short.txt')

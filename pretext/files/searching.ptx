@@ -16,7 +16,7 @@
             <em>startswith</em> to select only those lines with the desired
             prefix:</p>
   <activity label="search-file-from">
-  <program xml:id="fileFrom" interactive="activecode" language="python" codelens="no" add-files="mbox-short-search-id">
+  <program label="fileFrom" interactive="activecode" language="python" codelens="no" add-files="mbox-short-search-id">
     <code>
 fhand = open('mbox-short.txt')
 for line in fhand:
@@ -37,7 +37,7 @@ fhand.close()
             simpler approach is to use the <em>rstrip</em> method which
             strips whitespace from the right side of a string as follows:</p>
   <activity label="file-rstrip">
-  <program xml:id="filerstrip" interactive="activecode" language="python" codelens="no" add-files="mbox-short-search-id">
+  <program label="filerstrip" interactive="activecode" language="python" codelens="no" add-files="mbox-short-search-id">
     <code>
 fhand = open('mbox-short.txt')
 for line in fhand:
@@ -79,7 +79,7 @@ fhand.close()
   <p>We can structure the loop to follow the pattern of skipping
             uninteresting lines as follows:</p>
   <activity label="file-starts-with-from">
-  <program xml:id="fileInteresting" interactive="activecode" language="python" codelens="no" add-files="mbox-short-search-id">
+  <program label="fileInteresting" interactive="activecode" language="python" codelens="no" add-files="mbox-short-search-id">
     <code>
 fhand = open('mbox-short.txt')
 for line in fhand:
@@ -105,7 +105,7 @@ fhand.close()
             which contain the string <q>@uct.ac.za</q> (i.e., they come from the
             University of Cape Town in South Africa):</p>
   <activity label="file-find">
-  <program xml:id="fileFind" interactive="activecode" language="python">
+  <program label="fileFind" interactive="activecode" language="python">
     <code>
 fhand = open('mbox-short.txt')
 for line in fhand:

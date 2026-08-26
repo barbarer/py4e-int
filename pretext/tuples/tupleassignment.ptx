@@ -10,7 +10,7 @@
   <p>In this example we have a two-element list (which is a sequence) and
             assign the first and second elements of the sequence to the variables
             <c>x</c> and <c>y</c> in a single statement.</p>
-  <program xml:id="tuplesassignment_exercise_1" interactive="activecode" language="python">
+  <program label="tuplesassignment_exercise_1" interactive="activecode" language="python">
     <code>
 m = [ 'have', 'fun' ]
 x, y = m
@@ -20,7 +20,7 @@ print(y) #should print 'fun'
   </program>
   <p>This isn't magic! Python <em>roughly</em> translates the tuple assignment syntax
             to the following:</p>
-  <program xml:id="tupleassignment_exercise_2" interactive="activecode" language="python">
+  <program label="tupleassignment_exercise_2" interactive="activecode" language="python">
     <code>
 m = [ 'have', 'fun' ]
 x = m[0]
@@ -34,7 +34,7 @@ print(y) #should print 'fun'
   <p>Stylistically, when we use a tuple on the left side of the assignment
             statement, we omit the parentheses, but the following is an equally
             valid syntax:</p>
-  <program xml:id="tupleassignment_exercise_3" interactive="activecode" language="python">
+  <program label="tupleassignment_exercise_3" interactive="activecode" language="python">
     <code>
 m = [ 'have', 'fun' ]
 (x, y) = m
@@ -103,7 +103,7 @@ ValueError: too many values to unpack
     <statement>
       <p>Write code to swap the values of tuple t.</p>
     </statement>
-    <program xml:id="question10_3_2_editor" interactive="activecode" language="python">
+    <program label="question10_3_2_editor" interactive="activecode" language="python">
       <code>
 t = ('Antetokounmpo', 'Giannis')
 

@@ -31,7 +31,7 @@
             1.0 (including 0.0 but not 1.0). Each time you call <c>random</c>,
             you get the next number in a long series. To see a sample, run this
             loop:</p>
-  <program xml:id="functRandom_float" interactive="activecode" language="python">
+  <program label="functRandom_float" interactive="activecode" language="python">
     <code>
 import random
 
@@ -60,7 +60,7 @@ for i in range(10):
             handle random numbers. The function <c>randint</c> takes the
             parameters <c>low</c> and <c>high</c>, and returns an
             integer between <c>low</c> and <c>high</c> (including both).</p>
-  <program xml:id="functRandom_randint" interactive="activecode" language="python">
+  <program label="functRandom_randint" interactive="activecode" language="python">
     <code>
 import random
 
@@ -70,7 +70,7 @@ print(random.randint(5, 10))
   </program>
   <p>To choose an element from a sequence at random, you can use
             <c>choice</c>:</p>
-  <program xml:id="functRandom_choice" interactive="activecode" language="python">
+  <program label="functRandom_choice" interactive="activecode" language="python">
     <code>
 import random
 

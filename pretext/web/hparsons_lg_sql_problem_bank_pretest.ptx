@@ -12,7 +12,7 @@
       <p>note: When you run the code, there will be several execution results.
             Please only refer to the unittest and the <term>last</term> execution result for debugging purposes.</p>
     </statement>
-    <program xml:id="hparsons_lg_sql_test_bank_pre_select_editor" interactive="activecode" language="sql">
+    <program label="hparsons_lg_sql_test_bank_pre_select_editor" interactive="activecode" language="sql">
       <code>
 DROP TABLE IF EXISTS equipment;
 create table "equipment" ("id" INTEGER, "name" TEXT, "sport" TEXT, "brand" TEXT, "quantity" INTEGER);
@@ -41,7 +41,7 @@ assert 1,1 == dhs
       <p>note: When you run the code, there will be several execution results.
             Please only refer to the unittest and the <term>last</term> execution result for debugging purposes.</p>
     </statement>
-    <program xml:id="hparsons_lg_sql_test_bank_pre_update_editor" interactive="activecode" language="sql">
+    <program label="hparsons_lg_sql_test_bank_pre_update_editor" interactive="activecode" language="sql">
       <code>
 DROP TABLE IF EXISTS equipment;
 create table "equipment" ("id" INTEGER, "name" TEXT, "sport" TEXT, "brand" TEXT, "quantity" INTEGER);
@@ -81,7 +81,7 @@ assert 4,4 == 7
       <p>note: When you run the code, there will be several execution results.
             Please only refer to the unittest and the <term>last</term> execution result for debugging purposes.</p>
     </statement>
-    <program xml:id="hparsons_lg_sql_test_bank_pre_join_editor" interactive="activecode" language="sql">
+    <program label="hparsons_lg_sql_test_bank_pre_join_editor" interactive="activecode" language="sql">
       <code>
 DROP TABLE IF EXISTS equipment;
 create table "equipment" ("id" INTEGER, "name" TEXT, "sport" TEXT, "brand" TEXT, "quantity" INTEGER);

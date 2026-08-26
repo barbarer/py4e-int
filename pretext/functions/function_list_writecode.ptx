@@ -29,7 +29,7 @@ myTests().main()
           </program>
           <solution><p>Write a function called average_of_num_list that takes in a parameter num_list and returns the average of all the numbers in num_list.
                             For example, average_of_num_list([0, 20.8, 80, 5]) would return 26.45.</p>
-                            <program xml:id="funct_list_writecode1q_sol" language="python" interactive="activecode"><code>
+                            <program label="funct_list_writecode1q_sol" language="python" interactive="activecode"><code>
 def average_of_num_list(num_list):
     return sum(num_list) / len(num_list)
 
@@ -87,7 +87,7 @@ myTests().main()
           </program>
           <solution><p>Write a function called remove_min_value that takes in a parameter num_list and returns a num_list without the
                             minimum value from num_list. For example, remove_min_value([20, 4, 1203, 7482, 3]) would return [20, 4, 1203, 7482].</p>
-                            <program xml:id="funct_list_writecode3q_sol" language="python" interactive="activecode"><code>
+                            <program label="funct_list_writecode3q_sol" language="python" interactive="activecode"><code>
 def remove_min_value(num_list):
     num_list.remove(min(num_list))
     return num_list
@@ -154,7 +154,7 @@ myTests().main()
             <p>Write a function called <c>remove_indices_after_first_max_value</c> that takes in a parameter <c>num_list</c> and
                             returns a <c>new_num_list</c> with values up to the max value of the list.  The returned list should include the max value. For example, <c>remove_indices_after_first_max_value([10, 200 5, 200])</c>
                             would return <c>[10, 200]</c>.</p>
-                            <program xml:id="funct_list_writecode5q_sol" language="python" interactive="activecode"><code>
+                            <program label="funct_list_writecode5q_sol" language="python" interactive="activecode"><code>
 def remove_indices_after_first_max_value(num_list):
     index_value = num_list.index(max(num_list)) + 1
     new_num_list = num_list[:index_value]

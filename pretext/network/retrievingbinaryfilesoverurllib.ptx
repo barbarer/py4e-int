@@ -9,7 +9,7 @@
             entire contents of the document into a string variable
             (<c>img</c>) then write that information to a local file as
             follows:</p>
-  <program xml:id="curl1" interactive="activecode" language="python3">
+  <program label="curl1" interactive="activecode" language="python3">
     <code>
 import urllib.request, urllib.parse, urllib.error
 
@@ -54,7 +54,7 @@ fhand.close()
             (or buffers) and then write each block to your disk before retrieving
             the next block. This way the program can read any size file without
             using up all of the memory you have in your computer.</p>
-  <program xml:id="curl2" interactive="activecode" language="python3">
+  <program label="curl2" interactive="activecode" language="python3">
     <code>
 import urllib.request, urllib.parse, urllib.error
 

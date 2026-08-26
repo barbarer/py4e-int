@@ -12,7 +12,7 @@
 <idx>Concatenation</idx>
   <p>It is tempting to use the operator on the left side of an assignment,
             with the intention of changing a character in a string. For example:</p>
-  <program xml:id="str-immutable" interactive="activecode" language="python">
+  <program label="str-immutable" interactive="activecode" language="python">
     <code>
 greeting = 'Hello, world!'
 greeting[0] = 'J'
@@ -25,7 +25,7 @@ greeting[0] = 'J'
   <p>The reason for the error is that strings are <term>immutable</term>,
             which means that you can't modify an existing string. The best you can do is
             create a new string that is a variation on the original:</p>
-  <program xml:id="str-newString" interactive="activecode" language="python">
+  <program label="str-newString" interactive="activecode" language="python">
     <code>
 greeting = 'Hello, world!'
 new_greeting = 'J' + greeting[1:]
@@ -35,7 +35,7 @@ print(new_greeting)
   <p>This example concatenates a new first letter onto a slice of
             <c>greeting</c>. It has no effect on the original string.</p>
   <p>Or, you can reassign an existing variable to a completely new string:</p>
-  <program xml:id="str-redefineString" interactive="activecode" language="python">
+  <program label="str-redefineString" interactive="activecode" language="python">
     <code>
 greeting = 'Hello, world!'
 greeting = 'Hola, mundo!'

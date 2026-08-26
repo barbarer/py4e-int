@@ -23,7 +23,7 @@
   <p>The expression in brackets is called an <em>index</em>. The
             index indicates which character in the sequence you want.</p>
   <p>But you might not get what you expect:</p>
-  <program xml:id="strCharacters" interactive="activecode" language="python">
+  <program label="strCharacters" interactive="activecode" language="python">
     <code>
 fruit = 'banana'
 letter = fruit[1]
@@ -34,7 +34,7 @@ print(letter)
             <q>a</q>. But in Python, the index of a sequence is equal to its
             offset from the beginning of the string, and the offset of
             the first letter is zero.</p>
-  <program xml:id="strFirst" interactive="activecode" language="python">
+  <program label="strFirst" interactive="activecode" language="python">
     <code>
 fruit = 'banana'
 letter = fruit[0]
@@ -91,7 +91,7 @@ print(cheer[3])</pre>
   <p>You can use any expression, including variables and operators, as an
             index, but the value of the index has to be an integer. Otherwise you
             get:</p>
-  <program xml:id="strFloatIndex" interactive="activecode" language="python">
+  <program label="strFloatIndex" interactive="activecode" language="python">
     <code>
 fruit = 'banana'
 letter = fruit[1.5]

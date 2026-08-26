@@ -12,7 +12,7 @@
       <p>note: When you run the code, there will be several execution results.
             Please only refer to the <term>last</term> execution result for debugging purposes.</p>
     </statement>
-    <program xml:id="hparsons_lg_sql_test_bank_post_select_editor" interactive="activecode" language="sql">
+    <program label="hparsons_lg_sql_test_bank_post_select_editor" interactive="activecode" language="sql">
       <code>
 DROP TABLE IF EXISTS goods;
 create table "goods" ("id" INTEGER, "name" TEXT, "type" TEXT, "brand" TEXT, "quantity" INTEGER);
@@ -37,7 +37,7 @@ INSERT INTO goods (id,name,type,brand,quantity) VALUES
       <p>note: When you run the code, there will be several execution results.
             Please only refer to the <term>last</term> execution result for debugging purposes.</p>
     </statement>
-    <program xml:id="hparsons_lg_sql_test_bank_post_update_editor" interactive="activecode" language="sql">
+    <program label="hparsons_lg_sql_test_bank_post_update_editor" interactive="activecode" language="sql">
       <code>
 DROP TABLE IF EXISTS goods;
 create table "goods" ("id" INTEGER, "name" TEXT, "type" TEXT, "brand" TEXT, "quantity" INTEGER);
@@ -71,7 +71,7 @@ SELECT * FROM goods
       <p>note: When you run the code, there will be several execution results.
             Please only refer to the unittest and the <term>last</term> execution result for debugging purposes.</p>
     </statement>
-    <program xml:id="hparsons_lg_sql_test_bank_post_join_editor" interactive="activecode" language="sql">
+    <program label="hparsons_lg_sql_test_bank_post_join_editor" interactive="activecode" language="sql">
       <code>
 DROP TABLE IF EXISTS goods;
 create table "goods" ("id" INTEGER, "name" TEXT, "type" TEXT, "brand" TEXT, "quantity" INTEGER);

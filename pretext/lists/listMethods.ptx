@@ -9,7 +9,7 @@
 <idx><h>Repetition</h><h>List</h></idx>
   <p>Python provides methods that operate on lists. For example,
             <c>append</c> adds a new element to the end of a list:</p>
-  <program xml:id="listAppend" interactive="activecode" language="python">
+  <program label="listAppend" interactive="activecode" language="python">
     <code>
 t = ['a', 'b', 'c']
 t.append('d')
@@ -53,7 +53,7 @@ print(alist)</pre>
   </activity>
   <p><c>extend</c> takes a list as an argument and appends all of the
             elements:</p>
-  <program xml:id="listExtend" interactive="activecode" language="python">
+  <program label="listExtend" interactive="activecode" language="python">
     <code>
 t1 = ['a', 'b', 'c']
 t2 = ['d', 'e']
@@ -63,7 +63,7 @@ print(t1)
   </program>
   <p>This example leaves <c>t2</c> unmodified.</p>
   <p><c>sort</c> arranges the elements of the list from low to high:</p>
-  <program xml:id="listSort" interactive="activecode" language="python">
+  <program label="listSort" interactive="activecode" language="python">
     <code>
 t = ['d', 'c', 'e', 'b', 'a']
 t.sort()

@@ -15,7 +15,7 @@
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
-      <program xml:id="ut_example_test_total_even_editor" interactive="activecode" language="python">
+      <program label="ut_example_test_total_even_editor" interactive="activecode" language="python">
         <code>
 # Return the total of the even numbers in a list of numbers called nums
 def total_even(nums):
@@ -55,7 +55,7 @@ test()
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
-      <program xml:id="ut_example_test_total_even_listc_editor" interactive="activecode" language="python">
+      <program label="ut_example_test_total_even_listc_editor" interactive="activecode" language="python">
         <code>
 # Return the total of the even numbers in a list of numbers called nums
 def total_even(nums):
@@ -97,7 +97,7 @@ test()
       <statement>
         <p>Run the code below to see the unit tests again. See the unit tests after the code. The last unit test compares the result of <c>recPerimeter(3.0, 2)</c> to wrong value.  Fix the value so that all of the tests pass.</p>
       </statement>
-      <program xml:id="ut-ex-perimeterq-with-unit-test-vis_editor" interactive="activecode" language="python">
+      <program label="ut-ex-perimeterq-with-unit-test-vis_editor" interactive="activecode" language="python">
         <code>
 def recPerimeter(length, width):
     perimeter = 2 * (length + width)
@@ -154,7 +154,7 @@ myTests().main()
         <p>Run the code below to see what the unit tests do and then add another test to
                 test the result when x is higher than y.</p>
       </statement>
-      <program xml:id="ut-ex-compare-valuep-ac_editor" interactive="activecode" language="python">
+      <program label="ut-ex-compare-valuep-ac_editor" interactive="activecode" language="python">
         <code>
 def checkValue(x, y):
     if x &lt; y:
@@ -183,7 +183,7 @@ myTests().main()
                 <c>'b'</c> and <c>get_middle('abcd')</c> returns <c>'bc'</c>.  Also add tests cases to
                 test the result when <c>str</c> has only one or two characters in it.</p>
       </statement>
-      <program xml:id="ut_get_middle_ac_add_test_editor" interactive="activecode" language="python">
+      <program label="ut_get_middle_ac_add_test_editor" interactive="activecode" language="python">
         <code>
 def get_middle(str):
     len_s = len(str)
@@ -292,7 +292,7 @@ myTests().main()
       <statement>
         <p>Fix the code below to run and notice the test results.</p>
       </statement>
-      <program xml:id="ut-ex-car-class-unit-tests_editor" interactive="activecode" language="python">
+      <program label="ut-ex-car-class-unit-tests_editor" interactive="activecode" language="python">
         <code>
 class Car:
 

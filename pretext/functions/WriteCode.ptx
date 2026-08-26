@@ -29,7 +29,7 @@ myTests().main()
           </program>
           <solution>
                         <p>Fix the 4 errors so the following code runs and returns the perimeter of a rectangle. For example, recPerimeter(10, 20) should return 60.</p>
-    <program xml:id="funct-ex-perimeterq-sol" interactive="activecode" language="python"><code>
+    <program label="funct-ex-perimeterq-sol" interactive="activecode" language="python"><code>
 # Function headers end with a colon (:)
 def recPerimeter(length, width):
 
@@ -97,7 +97,7 @@ myTests().main()
           <solution>
                         <p>Change the code so that areaTriangle takes parameters for the base and height of a triangle
                             and computes its area. Then, write code to call the function and print the result. For example, areaTriangle(12,45) should return 270.</p>
-    <program xml:id="funct_ex_triangleq_sol" interactive="activecode" language="python"><code>
+    <program label="funct_ex_triangleq_sol" interactive="activecode" language="python"><code>
 # Give function base and height arguments
 def areaTriangle(base, height):
     # Set area variable to the formula using arguments
@@ -169,7 +169,7 @@ myTests().main()
                       <p>Fix the errors on line 2 so the function nameAndAge returns
                             the string <q>My name is nameString and I am ageInt years old.</q> For example, nameAndAge("John", 18) should return
                             "My name is John and I am 18 years old."</p>
-    <program xml:id="funct_ex_nameq_sol" interactive="activecode" language="python"><code>
+    <program label="funct_ex_nameq_sol" interactive="activecode" language="python"><code>
 def nameAndAge(nameString, ageInt):
     # Use quotes around strings, keep variables outside of quotes
     # Include spacing so variables are not connected to words
@@ -249,7 +249,7 @@ myTests().main()
                       <p>Write a fruitful function sumTo(n) that returns the sum of all integer numbers up to and
                             including n. For example, sumTo(10) would compute 1 + 2 + 3 + &#x2026; + 10 and return the value 55.
                             Use this equation to find this sum: (n * (n + 1)) / 2. For example, sumTo(15) should return 120.0.</p>
-    <program xml:id="funct_ex_sumq_sol" interactive="activecode" language="python"><code>
+    <program label="funct_ex_sumq_sol" interactive="activecode" language="python"><code>
 def sumTo(n):
     # set result variable to given equation
     result = (n * (n + 1)) / 2
@@ -320,7 +320,7 @@ myTests().main()
                         <p>Write a function areaOfCircle(r) which returns the area of a circle of radius r.
                             Make sure you import the math module in your solution to obtain an accurate value of pi.
                             For example, areaOfCircle(31415.926535897932) should return 3100627668.0299816.</p>
-    <program xml:id="funct_ex_circleq_sol" interactive="activecode" language="python"><code>
+    <program label="funct_ex_circleq_sol" interactive="activecode" language="python"><code>
 # Import the math module
 import math
 
@@ -406,7 +406,7 @@ myTests().main()
                             small ticket, and 2 = big ticket. If speed is 60 or less, return 0. If speed
                             is between 61 and 80 inclusive, return 1. If speed is 81 or more, return 2.
                             If it is your birthday, your speed can be 5 higher in all cases. For example, caught_speeding(60,False) should return 0.</p>
-    <program xml:id="funct_ex_speedingq_sol" interactive="activecode" language="python"><code>
+    <program label="funct_ex_speedingq_sol" interactive="activecode" language="python"><code>
 def caught_speeding(speed, is_birthday):
     if is_birthday:
         if speed &lt;= 65:
@@ -499,7 +499,7 @@ myTests().main()
                             or 6 = Sunday), it should return "off", and otherwise return "10:00". If
                             we are not on vacation and it is a weekend, it should return "10:00", and
                             otherwise return "7:00". For example, alarm_clock(1, False) should return '7:00'.</p>
-    <program xml:id="funct_ex_alarmq_sol" interactive="activecode" language="python"><code>
+    <program label="funct_ex_alarmq_sol" interactive="activecode" language="python"><code>
 def alarm_clock(day, vacation):
     if vacation:
         if (day == 0 or day == 6):

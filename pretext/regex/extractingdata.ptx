@@ -22,7 +22,7 @@ Author: stephen.marquard@uct.ac.za</pre>
     <statement>
       <p>Use findall to find the lines with email addresses in them and print them.</p>
     </statement>
-    <program xml:id="extractingdata_exercise_1_editor" interactive="activecode" language="python">
+    <program label="extractingdata_exercise_1_editor" interactive="activecode" language="python">
       <code>
 import re
 s = 'A message from csev@umich.edu to cwen@iupui.edu about meeting @2PM'
@@ -90,7 +90,7 @@ print(lst)
     <statement>
       <p>This code searches for lines that have an at-sign (@) between characters.</p>
     </statement>
-    <program xml:id="re_data_ac1_editor" interactive="activecode" language="python">
+    <program label="re_data_ac1_editor" interactive="activecode" language="python">
       <code>
 import re
 hand = open('mbox-short.txt')
@@ -153,7 +153,7 @@ for line in hand:
     <statement>
       <p>This code searches for lines that have an at-sign (@) between letter or number characters.</p>
     </statement>
-    <program xml:id="re_data_ac2_editor" interactive="activecode" language="python">
+    <program label="re_data_ac2_editor" interactive="activecode" language="python">
       <code>
 import re
 hand = open('mbox-short.txt')

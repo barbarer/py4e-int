@@ -71,7 +71,7 @@
       <statement>
         <p>Run the code below to find the date with the highest value at the close.</p>
       </statement>
-      <program xml:id="csv_file_stocks_find_date_with_highest_close_ac_editor" interactive="activecode" language="python" add-files="stocks_id">
+      <program label="csv_file_stocks_find_date_with_highest_close_ac_editor" interactive="activecode" language="python" add-files="stocks_id">
         <code>
 # get the lines from the file
 with open("stocks.txt") as inFile:
@@ -125,7 +125,7 @@ print(f"Max close {max_close} on {max_date}")
       <statement>
         <p>Run the code below to find the date with the highest value at the close and the date with the lowest value at the close.</p>
       </statement>
-      <program xml:id="csv_file_stocks_read_into_dictionary_ac_editor" interactive="activecode" language="python" add-files="stocks_id">
+      <program label="csv_file_stocks_read_into_dictionary_ac_editor" interactive="activecode" language="python" add-files="stocks_id">
         <code>
 def get_dict(file):
     """ return a nested dictionary from the file """
@@ -340,7 +340,7 @@ print(f"Min close {min_close} on {min_date}")
       <statement>
         <p>Run the code below.  It is supposed to print the nested dictionary and then the total number of passengers (in thousands) for 1958, but there are errors.  Fix the errors so that all tests pass.</p>
       </statement>
-      <program xml:id="csv_file_airtravel_get_toal_for_year_ac_editor" interactive="activecode" language="python" add-files="airtravel_id">
+      <program label="csv_file_airtravel_get_toal_for_year_ac_editor" interactive="activecode" language="python" add-files="airtravel_id">
         <code>
 def get_dict(file):
 
@@ -423,7 +423,7 @@ myTests().main()
       <statement>
         <p>Fix the code below to work correctly.  It should print the month with the highest number of passengers in 1958.</p>
       </statement>
-      <program xml:id="csv_file_airtravel_get_max_month_ac_editor" interactive="activecode" language="python" add-files="airtravel_id">
+      <program label="csv_file_airtravel_get_max_month_ac_editor" interactive="activecode" language="python" add-files="airtravel_id">
         <code>
 def get_dict(file):
 
@@ -496,7 +496,7 @@ myTests().main()
       <statement>
         <p>Run the code below.  It should read all the data into a list of dictionaries.  Then it should create a new dictionary where the key is the age and the value is the number of actresses who won at that age. It should sort the items in the dictionary by the number of winners descending and return the top five tuples. However, some of the movie titles have commas in them.  Fix the code to handle this problem and pass the unit tests.</p>
       </statement>
-      <program xml:id="csv_file_oscar_actress_age_dictionary_editor" interactive="activecode" language="python" add-fiels="oscar_age_actress_id, oscar_age_actor_id">
+      <program label="csv_file_oscar_actress_age_dictionary_editor" interactive="activecode" language="python" add-fiels="oscar_age_actress_id, oscar_age_actor_id">
         <code>
 def get_list(file):
 

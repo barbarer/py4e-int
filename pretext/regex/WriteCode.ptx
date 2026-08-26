@@ -35,7 +35,7 @@ MyTests().main()
           </program>
           <solution><p>Modify the ### to find sequences with one uppercase letter
                             followed by an underscore followed by one or more lowercase letters.</p>
-                            <program xml:id="regex_writecode1q_sol" language="python" interactive="activecode"><code>
+                            <program label="regex_writecode1q_sol" language="python" interactive="activecode"><code>
 # Line 1: import re
 # Line 3: [A-Z] matches uppercase letter characters and [a-z] matches lowercase letter characters
 # Line 4: Use the pattern variable to search the text
@@ -122,7 +122,7 @@ MyTests().main()
           </program>
           <solution><p>Define the function <c>match_four</c> that takes a string and uses regex to return True if the
                             string starts with 4 followed by zero to many other digits and False if it does not.</p>
-                            <program xml:id="regex_writecode3q_sol" language="python" interactive="activecode"><code>
+                            <program label="regex_writecode3q_sol" language="python" interactive="activecode"><code>
 # First import the regex library (re), then define the match_four function.
 # Within the function, create the regex pattern to match if the string starts with '4'
 # Use an if statement to check for a match in the string.
@@ -210,7 +210,7 @@ MyTests().main()
           <solution><p>Define the function <c>match_z</c> to match a word containing a lowercase letter z.
                             Return "Found a match!" if z is in the string and "Not matched!" if
                             there is not a z.</p>
-          <program xml:id="regex_writecode5q_sol" language="python" interactive="activecode"><code>
+          <program label="regex_writecode5q_sol" language="python" interactive="activecode"><code>
 # In the function definition, create a regex pattern to find 'z'
 # Search the string with that pattern using re.search()
 # If found, return "Found a match!"
@@ -299,7 +299,7 @@ MyTests().main()
           <solution><p>Finish the code below to find all of the emails in <q>mbox-short.txt</q> and add them to a list <c>email_list</c> 
               and then print the list.  An email starts with an alphanumeric character followed by one or more non white space 
               characters and then <q>@</q> followed by one or more non white space characters with one alphabetic character at the end.</p>
-            <program xml:id="regex_writecode7q_sol" language="python" interactive="activecode" add-files="regex-mbox-short-id"><code>
+            <program label="regex_writecode7q_sol" language="python" interactive="activecode" add-files="regex-mbox-short-id"><code>
 # First import regex (re) and create a handle for the file.
 # Initialize a list to hold the emails.
 # Iterate through each line in the file, using rstrip() to remove whitespace and findall() with a regex expression to find the emails.
@@ -372,7 +372,7 @@ MyTests().main()
             <p>Using <q>mbox-short.txt</q>, extract the number next to each email (the
                             amount of emails each person has sent) using a regex equation, and
                             calculate the total amount of emails sent in the variable <c>total_emails</c>.  Use <c>()</c> to capture and return the number.</p>
-                            <program xml:id="regex_writecode9q_sol" language="python" interactive="activecode" add-files="regex-mbox-short-id"><code>
+                            <program label="regex_writecode9q_sol" language="python" interactive="activecode" add-files="regex-mbox-short-id"><code>
 # Import regex (re), create a variable for the total number of emails, and create a handle to access the file.
 # Iterate through lines in the file, remove trailing whitespace with rstrip(), and create a regex expression to use with findall() to return a list of email matches.
 # Finally, increment the total_emails variable for each email in the list

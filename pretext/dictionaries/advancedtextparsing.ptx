@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="dictionaries_advanced-text-parsing">
   <title>Advanced Text Parsing</title>
-  <program xml:id="fileOpen2" interactive="activecode" language="python">
+  <program label="fileOpen2" interactive="activecode" language="python">
     <code>
 with open("romeo2.txt", "r") as filename:
     lines = filename.readlines()
@@ -87,7 +87,7 @@ Who is already sick and pale with grief,</pre>
     <p>The parameters used by <c>translate</c> were different in Python 2.0.</p>
   </note>
   <p>We make the following modifications to our program:</p>
-  <program xml:id="fileOpen3_v2" interactive="activecode" language="python3">
+  <program label="fileOpen3_v2" interactive="activecode" language="python3">
     <code>
 import string
 

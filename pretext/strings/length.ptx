@@ -8,7 +8,7 @@
 <idx><h>Negative</h><h>Index</h></idx>
   <p><c>len()</c> is a built-in function that returns the number of
             characters in a string:</p>
-  <program xml:id="string-fruit" interactive="activecode" language="python">
+  <program label="string-fruit" interactive="activecode" language="python">
     <code>
 fruit = "banana"
 print(len(fruit))
@@ -57,7 +57,7 @@ print(len(street))</pre>
   </activity>
   <p>To get the last letter of a string, you might be tempted to try
             something like this:</p>
-  <program xml:id="string-last" interactive="activecode" language="python">
+  <program label="string-last" interactive="activecode" language="python">
     <code>
 fruit = "banana"
 length = len(fruit)
@@ -68,7 +68,7 @@ last = fruit[length]
             <q>banana</q> with the index 6. Since we started counting at
             zero, the six letters are numbered 0 to 5. To get the last character,
             you have to subtract 1 from <c>length</c>:</p>
-  <program xml:id="string-len" interactive="activecode" language="python">
+  <program label="string-len" interactive="activecode" language="python">
     <code>
 fruit = 'banana'
 length = len(fruit)

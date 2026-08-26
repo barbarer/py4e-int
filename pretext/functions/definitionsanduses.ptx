@@ -8,7 +8,7 @@
 
   <p>Pulling together the code fragments from the previous section, the whole
             program looks like this:</p>
-  <program xml:id="functDef_lyrics" interactive="activecode" language="python">
+  <program label="functDef_lyrics" interactive="activecode" language="python">
     <code>
 def print_lyrics():
     print("I'm a lumberjack, and I'm okay.")
@@ -30,7 +30,7 @@ repeat_lyrics()
             execute it. In other words, the function definition has to be executed
             before the first time it is called.</p>
   <p>If we move the function call above the definition we will get an error.</p>
-  <program xml:id="functDef_callFirst" interactive="activecode" language="python">
+  <program label="functDef_callFirst" interactive="activecode" language="python">
     <code>
 repeat_lyrics()
 
@@ -84,7 +84,7 @@ def repeat_lyrics():
   </activity>
   <p>See what happens if we move the function definitions around so that <c>repeat_lyrics</c> is defined before
             <c>print_lyrics</c>.</p>
-  <program xml:id="functDef_codelens" interactive="codelens" language="python">
+  <program label="functDef_codelens" interactive="codelens" language="python">
     <code>
 def repeat_lyrics():
     print_lyrics()

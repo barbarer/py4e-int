@@ -30,7 +30,7 @@ myTests().main()
           <solution><p>Write a function called list_starts_with_a that takes in lst as a parameter and returns a
                             new list with the words from lst that start with a . For example, list_starts_with_a(["alphabet", "apple", "banana", "coding", "amazing"])
                             would return ["alphabet", "apple", "amazing"].</p>
-                            <program xml:id="funct_loops_writecode1q_sol" language="python" interactive="activecode"><code>
+                            <program label="funct_loops_writecode1q_sol" language="python" interactive="activecode"><code>
 def list_starts_with_a(lst):
     list_a = []
     for word in lst:
@@ -98,7 +98,7 @@ myTests().main()
                             string that consists of a square made of * with the dimensions num times num. Note:
                             ignore values that are less than or equal to zero. For example, draw_square(4) would return
                             "****\n****\n****\n****".</p>
-                            <program xml:id="funct_loops_writecode3q_sol" language="python" interactive="activecode"><code>
+                            <program label="funct_loops_writecode3q_sol" language="python" interactive="activecode"><code>
 def draw_square(num):
     string1 = ""
     for i in range(num):
@@ -167,7 +167,7 @@ myTests().main()
           </program>
           <solution><p>Write a function called factorial that takes in num as a parameter and returns the factorial value.
                             Ignore checking numbers that are less than 1. For example, factorial(5) would return 120.</p>
-                              <program xml:id="funct_loops_writecode5q_sol" language="python" interactive="activecode"><code>
+                              <program label="funct_loops_writecode5q_sol" language="python" interactive="activecode"><code>
 def factorial(num):
     total = num
     while num &gt; 1:

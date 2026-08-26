@@ -33,7 +33,7 @@ myTests().main()
                             look for the third word, and keep a running count of each of the days of the week.
                             At the end of the program, print out the contents of the dictionary mail_count
                             (order does not matter). For example, mail_count['Mon'] should be 2.</p>
-            <program xml:id="dict_writecode1q_sol" language="python" interactive="activecode"><code>
+            <program label="dict_writecode1q_sol" language="python" interactive="activecode"><code>
 # mail list was given
 mail = ['From stephen.marquard@uct.ac.za Sat Jan  7', 'From gopal.ramasammycook@gmail.com Thurs Jan  5', 'From louis@media.berkeley.edu Tues Jan  3', 'From antranig@caret.cam.ac.uk Sat Jan  7', 'From david.horwitz@uct.ac.za Wed Jan  4', 'From ray@media.berkeley.edu Mon Jan  2', 'From stephen.marquard@uct.ac.za Mon Jan 2', 'From wagnermr@iupui.edu Fri Jan  6']
 
@@ -102,7 +102,7 @@ myTests().main()
           <solution><p>Write a program that creates a dictionary <c>letter_count</c> that keeps track
                             of the amount of times each letter appears in the given phrase.  Make
                             sure to account for each letter in its lowercase form. For example <c>letter_count['e']</c> should be 10.</p>
-                            <program xml:id="ddict_writecode3q_sol" language="python" interactive="activecode"><code>
+                            <program label="ddict_writecode3q_sol" language="python" interactive="activecode"><code>
 # phrase string is given
 phrase = "Exeggcute evolves into Exeggutor which are two extraordinary Pokemon"
 
@@ -186,7 +186,7 @@ myTests().main()
           <solution><p>Write code that reads in the text from the file words.txt and uses
                             the dictionary word_count to count the amount of times a word appears
                             in the file. Watch out for repetition using the .lower() function. For example, word_count['and'] should be 5.</p>
-                            <program xml:id="dict_writecode5q_sol" language="python" interactive="activecode"><code>
+                            <program label="dict_writecode5q_sol" language="python" interactive="activecode"><code>
 # Open the file in "read" mode
 with open("words.txt", "r") as filename:
     # Create dictionary to count words
@@ -272,7 +272,7 @@ myTests().main()
           <solution><p>Write code to read through the lines of the file romeo.txt, break each line into a list of
                             words, and then loop through each of the words in the line and count each word using
                             the dictionary counts. For example, counts['is'] should be 3.</p>
-                            <program xml:id="dict_writecode7q_sol" language="python" interactive="activecode"><code>
+                            <program label="dict_writecode7q_sol" language="python" interactive="activecode"><code>
 # Open file in "read" mode
 with open("romeo.txt", "r") as filename:
     # Separate and read lines
@@ -349,7 +349,7 @@ myTests().main()
           </program>
           <solution><p>Add code to the program below to figure out who has the most messages in the file. After all the data has been read and the dictionary message_count has been created, look through the dictionary using a maximum loop (see Chapter 5: Maximum and minimum loops) to find who has the most messages,
                             and print how many messages the person has. For example, message_count['cwen@iupui.edu'] should be 5.</p>
-                            <program xml:id="dict_writecode9q_sol" language="python" interactive="activecode"><code>
+                            <program label="dict_writecode9q_sol" language="python" interactive="activecode"><code>
 # Open file in read mode
 with open("mbox-short.txt", "r") as filename:
     # Create message_count dictionary

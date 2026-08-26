@@ -12,7 +12,7 @@
 <idx><h>Slice</h><h>Copy</h></idx>
   <p>A segment of a string is called a <em>slice</em>. Selecting a
             slice is similar to selecting a character:</p>
-  <program xml:id="str-slice" interactive="activecode" language="python">
+  <program label="str-slice" interactive="activecode" language="python">
     <code>
 s = 'Monty Python'
 print(s[0:5])
@@ -24,7 +24,7 @@ print(s[6:12])
   <p>If you omit the first index (before the colon), the slice starts at the
             beginning of the string. If you omit the second index, the slice goes to
             the end of the string:</p>
-  <program xml:id="str-colonSlices" interactive="activecode" language="python">
+  <program label="str-colonSlices" interactive="activecode" language="python">
     <code>
 fruit = 'orange'
 print(fruit[:3])
@@ -33,7 +33,7 @@ print(fruit[3:])
   </program>
   <p>If the first index is greater than or equal to the second the result is
             an <em>empty string</em>, represented by two quotation marks:</p>
-  <program xml:id="str-emptyString" interactive="activecode" language="python">
+  <program label="str-emptyString" interactive="activecode" language="python">
     <code>
 fruit = 'orange'
 print(fruit[3:3])

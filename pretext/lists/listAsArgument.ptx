@@ -22,7 +22,7 @@
             list. If the function modifies a list parameter, the caller sees the
             change. For example, <c>delete_head</c> removes the first element from a
             list and is used like this:</p>
-  <program xml:id="listArgument" interactive="activecode" language="python">
+  <program label="listArgument" interactive="activecode" language="python">
     <code>
 def delete_head(t):
     del t[0]
@@ -67,7 +67,7 @@ print(mylist)</pre>
             operations that create new lists. For example, the <c>append</c>
             method modifies a list, but the <c>+</c> operator creates a new
             list:</p>
-  <program xml:id="listArgumentAppend" interactive="activecode" language="python">
+  <program label="listArgumentAppend" interactive="activecode" language="python">
     <code>
 t1 = [1, 2]
 t2 = t1.append(3)
@@ -119,7 +119,7 @@ def bad_delete_head(t):
   <p>An alternative is to write a function that creates and returns a new
             list. For example, <c>tail</c> returns all but the first element
             of a list and leaves the original list unmodified. Here's how it is used:</p>
-  <program xml:id="listArgumentTail" interactive="activecode" language="python">
+  <program label="listArgumentTail" interactive="activecode" language="python">
     <code>
 def tail(t):
     return t[1:]

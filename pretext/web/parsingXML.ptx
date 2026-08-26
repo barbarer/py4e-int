@@ -26,7 +26,7 @@
         <p>Run this to see what it prints.</p>
 
     </statement>
-    <program xml:id="xml_parse_person_ac1_editor" interactive="activecode" language="python3">
+    <program label="xml_parse_person_ac1_editor" interactive="activecode" language="python3">
         <code>
 import xml.etree.ElementTree as ET
 
@@ -74,7 +74,7 @@ print('Attr:', tree.find('email').get('hide'))
             <p>Run this to see what it prints.</p>
 
     </statement>
-    <program xml:id="xml_parse_person_wihtout_attr_ac1_editor" interactive="activecode" language="python3">
+    <program label="xml_parse_person_wihtout_attr_ac1_editor" interactive="activecode" language="python3">
         <code>
 import xml.etree.ElementTree as ET
 
@@ -109,7 +109,7 @@ print('Attr:', tree.find('email').get('hide'))
             <p>Run the code to see what this prints.</p>
 
     </statement>
-    <program xml:id="xml_parse_book_data_editor" interactive="activecode" language="python3">
+    <program label="xml_parse_book_data_editor" interactive="activecode" language="python3">
         <code>
 import xml.etree.ElementTree as ET
 
@@ -152,7 +152,7 @@ print('Lang:',book.find('title').get('lang'))
             <p>The following XML has errors.  Try to run the code first to see what happens and then fix the XML so that the code runs correctly.</p>
 
     </statement>
-    <program xml:id="xml_parse_fix_book_data_editor" interactive="activecode" language="python3">
+    <program label="xml_parse_fix_book_data_editor" interactive="activecode" language="python3">
         <code>
 import xml.etree.ElementTree as ET
 
@@ -181,7 +181,7 @@ print('Lang:',book.find('title').get('lang'))
             <p>The following XML has errors.  Try to run the code first to see what happens and then fix the XML so that the code runs correctly.</p>
 
     </statement>
-    <program xml:id="xml_parse_fix_note_data_editor" interactive="activecode" language="python3">
+    <program label="xml_parse_fix_note_data_editor" interactive="activecode" language="python3">
         <code>
 import xml.etree.ElementTree as ET
 
@@ -222,7 +222,7 @@ print('time region:',note.find('time').get('region'))
             <p>Write code to print the book title, category, author, and year.</p>
 
     </statement>
-    <program xml:id="xml_parse_write_code_book_data_ac_editor" interactive="activecode" language="python3">
+    <program label="xml_parse_write_code_book_data_ac_editor" interactive="activecode" language="python3">
         <code>
 import xml.etree.ElementTree as ET
 
@@ -244,7 +244,7 @@ data = '''
             <p>Write code to print the note's to, from, body, and time (with region).</p>
 
     </statement>
-    <program xml:id="xml_parse_write_code_note_data_ac_editor" interactive="activecode" language="python3">
+    <program label="xml_parse_write_code_note_data_ac_editor" interactive="activecode" language="python3">
         <code>
 import xml.etree.ElementTree as ET
 

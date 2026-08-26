@@ -25,7 +25,7 @@
   </activity>
   <p>The equivalent code to read the <em>romeo.txt</em> file from the web
             using <c>urllib</c> is as follows:</p>
-  <program xml:id="urllib1" interactive="activecode" language="python3">
+  <program label="urllib1" interactive="activecode" language="python3">
     <code>
 import urllib.request
 
@@ -66,7 +66,7 @@ for line in fhand:
   <p>As an example, we can write a program to retrieve the data for
             <c>romeo.txt</c> and compute the frequency of each word in the
             file as follows:</p>
-  <program xml:id="urlwords" interactive="activecode" language="python3">
+  <program label="urlwords" interactive="activecode" language="python3">
     <code>
 import urllib.request, urllib.parse, urllib.error
 

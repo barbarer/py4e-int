@@ -68,7 +68,7 @@
         <p>This will find and print the first paragraph tag from the Michigan Daily site.
                 It will interpret the tag as HTML and show just the text of the tag.</p>
       </statement>
-      <program xml:id="bs_get_print_first_para_editor" interactive="activecode" language="python3">
+      <program label="bs_get_print_first_para_editor" interactive="activecode" language="python3">
         <code>
 import requests
 from bs4 import BeautifulSoup
@@ -149,7 +149,7 @@ print(soup.find('p'))
       <statement>
         <p>This will print the text for the site description paragraph.</p>
       </statement>
-      <program xml:id="bs_get_text_with_class_editor" interactive="activecode" language="python3">
+      <program label="bs_get_text_with_class_editor" interactive="activecode" language="python3">
         <code>
 import requests
 from bs4 import BeautifulSoup
@@ -224,7 +224,7 @@ print(tag.text)
       <statement>
         <p>This will find all of the link tags in the New York Times site and print the href for each of them.</p>
       </statement>
-      <program xml:id="bs_get_all_a_tags_and_print_hrefs_editor" interactive="activecode" language="python3">
+      <program label="bs_get_all_a_tags_and_print_hrefs_editor" interactive="activecode" language="python3">
         <code>
 import requests
 from bs4 import BeautifulSoup
@@ -320,7 +320,7 @@ for tag in tags:
       <statement>
         <p>This will print the first <q>href</q> inside each list item (li) with a class of <q>menu-item-has-children</q>.</p>
       </statement>
-      <program xml:id="bs_get_mini_nav_href_editor" interactive="activecode" language="python3">
+      <program label="bs_get_mini_nav_href_editor" interactive="activecode" language="python3">
         <code>
 import requests
 from bs4 import BeautifulSoup
@@ -403,7 +403,7 @@ for li in li_list:
         <p>Complete the code below to print the
                 href values for the <q>a</q> tags in the <q>Most Read</q> section.</p>
       </statement>
-      <program xml:id="bs_get_most_read_href_editor" interactive="activecode" language="python3">
+      <program label="bs_get_most_read_href_editor" interactive="activecode" language="python3">
         <code>
 import requests
 from bs4 import BeautifulSoup

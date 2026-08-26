@@ -31,7 +31,7 @@
     <statement>
       <p>Run the following to see what COUNT and LIMIT do.</p>
     </statement>
-    <program xml:id="db_bike_sel_count_editor" interactive="activecode" language="sql" database="database/bikeshare.db">
+    <program label="db_bike_sel_count_editor" interactive="activecode" language="sql" database="database/bikeshare.db">
       <code>
 SELECT bike_number, duration FROM trip_data LIMIT 5;
 SELECT COUNT(bike_number) FROM trip_data;
@@ -42,7 +42,7 @@ SELECT COUNT(bike_number) FROM trip_data;
     <statement>
       <p>Run the following to see what MAX does</p>
     </statement>
-    <program xml:id="db_bike_max_count_editor" interactive="activecode" language="sql" database="database/bikeshare.db">
+    <program label="db_bike_max_count_editor" interactive="activecode" language="sql" database="database/bikeshare.db">
       <code>
 SELECT bike_number FROM trip_data LIMIT 10;
 SELECT MAX(bike_number) FROM trip_data;
@@ -53,7 +53,7 @@ SELECT MAX(bike_number) FROM trip_data;
     <statement>
       <p>Run the following to see what ORDER BY does</p>
     </statement>
-    <program xml:id="db_bike_order_by_editor" interactive="activecode" language="sql" database="database/bikeshare.db">
+    <program label="db_bike_order_by_editor" interactive="activecode" language="sql" database="database/bikeshare.db">
       <code>
 SELECT * FROM trip_data ORDER BY bike_number LIMIT 20
         </code>
@@ -63,7 +63,7 @@ SELECT * FROM trip_data ORDER BY bike_number LIMIT 20
     <statement>
       <p>Run the following to see what ORDER BY does</p>
     </statement>
-    <program xml:id="db_bike_order_by_desc_editor" interactive="activecode" language="sql" database="database/bikeshare.db">
+    <program label="db_bike_order_by_desc_editor" interactive="activecode" language="sql" database="database/bikeshare.db">
       <code>
 SELECT * FROM trip_data ORDER BY bike_number DESC LIMIT 15
         </code>
@@ -105,7 +105,7 @@ SELECT * FROM trip_data ORDER BY bike_number DESC LIMIT 15
             retrieve the <c>bike_number</c> and <c>duration</c> from table <c>trip_data</c> but
             order the data by <c>bike_number</c> in descending order and limit the number of items returned to 5.</p>
     </statement>
-    <program xml:id="db_test_more_select_ac_editor" interactive="activecode" language="sql" database="database/bikeshare.db">
+    <program label="db_test_more_select_ac_editor" interactive="activecode" language="sql" database="database/bikeshare.db">
       <code>
 
 ====

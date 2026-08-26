@@ -30,7 +30,7 @@ myTests().main()
           <solution><p>Write a function called remainder that takes in parameters x and y (where y defaults to 4) and
                             returns the remainder of x divided by y. Ignore cases for when x is negative or y is less than or equal to 0.
                             For example, remainder(5) should return 1.</p>
-<program xml:id="funct_writecode1q_sol" language="python" interactive="activecode"><code>
+<program label="funct_writecode1q_sol" language="python" interactive="activecode"><code>
 # Function headers end with a colon (:) and a default value for y
 def remainder(x, y = 4):
 
@@ -93,7 +93,7 @@ myTests().main()
           <solution><p>Write a function called welcome_message that takes in a parameter name and
                             returns "Hello (name)! We hope that you will enjoy this course. :)". For example,
                             welcome_message('Aurora') should return "Hello Aurora! We hope that you will enjoy this course. :)".</p>
-                            <program xml:id="funct_writecode3q_sol" language="python" interactive="activecode"><code>
+                            <program label="funct_writecode3q_sol" language="python" interactive="activecode"><code>
 def welcome_message(name):
     return "Hello " + name + "! We hope that you will enjoy this course. :)"
 
@@ -156,7 +156,7 @@ myTests().main()
           </program>
           <solution><p>Write a function called address that combines 3 different string address parameters (city, state, and zip) and returns a user's address.
                             After the city and state inputs, add a comma and a space. For example, address('Seattle', 'WA', '98105') should return "Seattle, WA, 98105".</p>
-                            <program xml:id="funct_writecode5q_sol" language="python" interactive="activecode"><code>
+                            <program label="funct_writecode5q_sol" language="python" interactive="activecode"><code>
 def address(city, state, zip):
     user_address = city + ", " + state + ", " + zip
     return user_address
@@ -240,7 +240,7 @@ myTests().main()
                             Lastly, define a function called calculate that takes three numbers (a, b, and c) and uses
                             addNumbers and subtractNumbers to add a and b and subtract c. The value should be returned. For example,
                             calculate(2,3,4) should return 1.</p>
-                            <program xml:id="funct_writecode7q_sol" language="python" interactive="activecode"><code>
+                            <program label="funct_writecode7q_sol" language="python" interactive="activecode"><code>
 def addNumbers(x, y):
 
     # Return the value of adding x and y together

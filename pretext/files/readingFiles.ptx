@@ -11,7 +11,7 @@
             through and count each of the lines in a file:</p>
   <activity label="file-read-mbox-short">
   <!-- codelens issue: open() not supported in python tutor -->
-  <program xml:id="fileLines" interactive="activecode" language="python" codelens="no" add-files="mbox-short-read-id">
+  <program label="fileLines" interactive="activecode" language="python" codelens="no" add-files="mbox-short-read-id">
     <code>
 fhand = open('mbox-short.txt')
 count = 0
@@ -61,7 +61,7 @@ print('Line Count:', count)
             main memory, you can read the whole file into one string using the
             <c>read</c> method on the file handle.</p>
   <activity label="file-read-and-slice">
-  <program xml:id="fileSlice" interactive="activecode" language="python" codelens="no" add-files="mbox-short-read-id">
+  <program label="fileSlice" interactive="activecode" language="python" codelens="no" add-files="mbox-short-read-id">
     <code>
 fhand = open('mbox-short.txt')
 inp = fhand.read()

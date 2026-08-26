@@ -91,7 +91,7 @@ t = t + x              # WRONG!
     <statement>
       <p>Fix the following code to correctly add x, y, and z to the end of lst in that order.</p>
     </statement>
-    <program xml:id="listDebug_ac_fix_editor" interactive="activecode" language="python">
+    <program label="listDebug_ac_fix_editor" interactive="activecode" language="python">
       <code>
 lst = [1, 1, 2, 3, 5, 8, 13]
 x = 21
@@ -170,7 +170,7 @@ t.sort()
                                 of the line to determine if we are interested in the line at all. We
                                 can use <c>continue</c> to skip lines that don't have <q>From</q>
                                 as the first word as follows:</p>
-            <program xml:id="listDebug_ac_print" interactive="activecode" language="python">
+            <program label="listDebug_ac_print" interactive="activecode" language="python">
               <code>
 fhand = open('mboxShort.txt')
 for line in fhand:
@@ -274,7 +274,7 @@ Details: http://source.sakaiproject.org/viewsvn/?view=rev&amp;rev=39772</pre>
                                 the first word is not there. There are many ways to protect this
                                 code; we will choose to check the number of words we have before we
                                 look at the first word:</p>
-            <program xml:id="listDebug_file" interactive="activecode" language="python">
+            <program label="listDebug_file" interactive="activecode" language="python">
               <code>
 fhand = open('mboxShort1.txt')
 count = 0

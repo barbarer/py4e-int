@@ -26,7 +26,7 @@
   </program>
   <p>This statement creates a <em>module object</em> named math. If
             you print the module object, you get some information about it:</p>
-  <program xml:id="functMath_module" interactive="activecode" language="python">
+  <program label="functMath_module" interactive="activecode" language="python">
     <code>
 import math
 print(math)
@@ -36,7 +36,7 @@ print(math)
             module. To access one of the functions, you have to specify the name of
             the module and the name of the function, separated by a dot (also known
             as a period). This format is called <em>dot notation</em>.</p>
-  <program xml:id="functMath_logSin" interactive="activecode" language="python">
+  <program label="functMath_logSin" interactive="activecode" language="python">
     <code>
 import math
 
@@ -59,7 +59,7 @@ print(height)
             functions (<c>cos</c>, <c>tan</c>, etc.) take arguments in
             radians. To convert from degrees to radians, divide by 360 and multiply
             by 2pi:</p>
-  <program xml:id="functMath_sinPi" interactive="activecode" language="python">
+  <program label="functMath_sinPi" interactive="activecode" language="python">
     <code>
 import math
 
@@ -74,7 +74,7 @@ print(result)
             pi, accurate to about 15 digits.</p>
   <p>If you know your trigonometry, you can check the previous result by
             comparing it to the square root of two divided by two:</p>
-  <program xml:id="functMath_sqrt" interactive="activecode" language="python">
+  <program label="functMath_sqrt" interactive="activecode" language="python">
     <code>
 import math
 
@@ -176,7 +176,7 @@ print(result)
         </evaluate>
     </evaluation>
   </activity>
-  <program xml:id="functMath_codelens1" interactive="codelens" language="python">
+  <program label="functMath_codelens1" interactive="codelens" language="python">
     <code>
 import math
 num = 2.0

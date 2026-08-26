@@ -15,7 +15,7 @@
     
     One way to express a computation like that is a
             <em>chained conditional</em>:</p>
-  <program xml:id="cndtnl_elif" interactive="codelens" language="python">
+  <program label="cndtnl_elif" interactive="codelens" language="python">
     <code>
 x = 12
 y = 12.0
@@ -41,7 +41,7 @@ print('All done.')
   <p>There is no limit on the number of <c>elif</c> statements in a chain. If
             there is an <c>else</c> clause, it has to be at the end, but there
             doesn't have to be one. Try running the following program to see what it does.</p>
-  <program xml:id="elif_example" interactive="activecode" language="python">
+  <program label="elif_example" interactive="activecode" language="python">
     <code>
 choice = 'b'
 if choice == 'a':

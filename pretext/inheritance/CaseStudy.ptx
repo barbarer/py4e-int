@@ -58,7 +58,7 @@
                 information for an address? One approach would be to store the parts of the address that
                 are consistent, such as the recipient name and the country, in instance variables, and
                 store the rest of the address as a list of address lines:</p>
-    <program xml:id="address_class_1" interactive="activecode" language="python">
+    <program label="address_class_1" interactive="activecode" language="python">
       <code>
 class Address:
     def __init__(self, recipient, addressLines, country):
@@ -77,7 +77,7 @@ print(addr)
                 since information such as city and zip code is mashed together in an unstructured
                 address line along with the state abbreviation.</p>
     <p>An approach that stores addresses as structured pieces of information might look like this:</p>
-    <program xml:id="structured_addr_1" interactive="activecode" language="python">
+    <program label="structured_addr_1" interactive="activecode" language="python">
       <code>
 class StructuredAddress:
     def __init__(self, country, recipient, street, city, state, postalCode):
@@ -147,7 +147,7 @@ def display(self):
     <p>Let's apply inheritance to the problem of managing structured postal addresses.
                 We will define a base class that contains the attributes in common to all
                 postal addresses: recipient and country.</p>
-    <program xml:id="base_postal" interactive="activecode" language="python">
+    <program label="base_postal" interactive="activecode" language="python">
       <code>
 class BasePostalAddress:
     def __init__(self, country, recipient):
@@ -169,7 +169,7 @@ class BasePostalAddress:
                 information is present and of an appropriate length.</p>
     <p>Next, we build on BasePostalAddress by creating a separate class for each
                 country that inherits from it:</p>
-    <program xml:id="international_postal" interactive="activecode" language="python">
+    <program label="international_postal" interactive="activecode" language="python">
       <code>
 class IrishPostalAddress(BasePostalAddress):
     def __init__(self, recipient, postalCode):

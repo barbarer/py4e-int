@@ -11,7 +11,7 @@
 <idx><h>Immutable</h><h>String</h></idx>
   <p>If <c>a</c> refers to an object and you assign <c>b = a</c>,
             then both variables refer to the same object:</p>
-  <program xml:id="listAliasing" interactive="codelens" language="python">
+  <program label="listAliasing" interactive="codelens" language="python">
     <code>
 a = [1, 2, 3]
 b = a
@@ -25,7 +25,7 @@ print(b is a)
             that the object is <em>aliased</em>.</p>
   <p>If the aliased object is mutable, changes made with one alias affect the
             other:</p>
-  <program xml:id="listChange" interactive="codelens" language="python">
+  <program label="listChange" interactive="codelens" language="python">
     <code>
 a = [1, 2, 3]
 b = a

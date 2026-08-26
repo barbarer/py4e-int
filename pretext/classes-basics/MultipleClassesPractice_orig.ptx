@@ -6,7 +6,7 @@
     <statement>
       <p>Given a <c>Song</c> class that has object attributes of <c>name</c> and <c>length</c> as shown below, finish a <c>Album</c> class with an <c>__init__</c> method that takes a name and list of <c>Song</c> objects.  Then write a <c>length</c> method in the <c>Album</c> class that returns the total length for the album based on the length of the songs in the album.  Given the objects created below it should print 242.</p>
     </statement>
-    <program xml:id="mult_class_track_and_album_len_ac_editor" interactive="activecode" language="python">
+    <program label="mult_class_track_and_album_len_ac_editor" interactive="activecode" language="python">
       <code>
 class Song:
 
@@ -170,7 +170,7 @@ myTests().main()
     <statement>
       <p>Given a <c>Point</c> class below with a <c>distance</c> object method that takes another point and returns the distance between the two points, create a <c>Triangle</c> class with an <c>__init__</c> method that takes three points.  Also write the <c>perimeter</c> method in the <c>Triangle</c> class to return the sum of the lengths of the sides of the triangle. Use the <c>distance</c> method in the <c>Point</c> class to calculate the distance between two points.</p>
     </statement>
-    <program xml:id="mult_class_point_and_triangle_practice_ac_editor" interactive="activecode" language="python">
+    <program label="mult_class_point_and_triangle_practice_ac_editor" interactive="activecode" language="python">
       <code>
 import math
 class Point:
@@ -273,7 +273,7 @@ myTests().main()
     <statement>
       <p>Given the <c>Item</c> and <c>OrderLine</c> classes shown below, write an <c>Order</c> class with an <c>__init__</c> method that takes a list of <c>OrderLine</c> objects and a <c>total</c> method that returns the total for the order.</p>
     </statement>
-    <program xml:id="mult_class_item_order_line_order_practice_ac_editor" interactive="activecode" language="python">
+    <program label="mult_class_item_order_line_order_practice_ac_editor" interactive="activecode" language="python">
       <code>
 class Item:
 
@@ -367,7 +367,7 @@ myTests().main()
     <statement>
       <p>Write a <c>shuffle</c> method in the <c>Deck</c> class that splits the list of cards in half and creates a new list of cards with a card from the first list followed by a card from the second list.  For example, if the list of cards was {a, b, c, d, e, f} it would reset the list to {a, d, b, e, c, f}.  If the list of cards was {a, b, c, d, e} it would reset the list to {a, c, b, d, e}.</p>
     </statement>
-    <program xml:id="mult_class_card_and_deck_practice_ac_editor" interactive="activecode" language="python">
+    <program label="mult_class_card_and_deck_practice_ac_editor" interactive="activecode" language="python">
       <code>
 class Card:
 

@@ -4,7 +4,7 @@
   <p>As it turns out, we have been using objects all along in this book. Python
             provides us with many built-in objects. Here is some simple code
             where the first few lines should feel very simple and natural to you.</p>
-  <program xml:id="usingobjects" interactive="activecode" language="python">
+  <program label="usingobjects" interactive="activecode" language="python">
     <code>
 stuff = list()
 stuff.append('python')
@@ -44,7 +44,7 @@ print (list.__getitem__(stuff,0))
             a particular position in a list.</p>
   <p>We can take a look at the capabilities of an object by
             looking at the output of the <c>dir()</c> function:</p>
-  <program xml:id="dir_activecode" interactive="activecode" language="python">
+  <program label="dir_activecode" interactive="activecode" language="python">
     <code>
 stuff = list()
 print(dir(stuff))

@@ -17,7 +17,7 @@
             characters.</p>
   <p>If you put a space in a variable name, Python thinks it is two operands
             without an operator:</p>
-  <program xml:id="var-ac-12-badname" interactive="activecode" language="python">
+  <program label="var-ac-12-badname" interactive="activecode" language="python">
     <code>
 bad name = 5
         </code>
@@ -68,7 +68,7 @@ bad name = 5
   <p>The runtime error you are most likely to make is a <q>use before def;</q>
             that is, trying to use a variable before you have assigned a value. This
             can happen if you spell a variable name wrong:</p>
-  <program xml:id="var-ac-13-definition" interactive="activecode" language="python">
+  <program label="var-ac-13-definition" interactive="activecode" language="python">
     <code>
 principal = 327.68
 interest = principle * rate
@@ -78,7 +78,7 @@ interest = principle * rate
             same as <c>latex</c>.</p>
   <p>At this point, the most likely cause of a semantic error is the order of
     operations. For example, to evaluate <m>1 \over {2\pi }</m> (which is .159), you might be tempted to write</p>
-  <program xml:id="var-ac-14-pi" interactive="activecode" language="python">
+  <program label="var-ac-14-pi" interactive="activecode" language="python">
     <code>
 print(1.0 / 2.0 * 3.14)
         </code>

@@ -11,7 +11,7 @@
             whitespace. These errors can be hard to debug because spaces, tabs, and
             newlines are normally invisible:</p>
   <activity label="file_dbg_whitespace">
-  <program xml:id="fileWhiteSpace" interactive="activecode" language="python">
+  <program label="fileWhiteSpace" interactive="activecode" language="python">
     <code>
 s = '1 2\t 3\n 4'
 print(s)
@@ -22,7 +22,7 @@ print(s)
             an argument and returns a string representation of the object. For
             strings, it represents whitespace characters with backslash sequences:</p>
   <activity label="file_dbg_repr">
-  <program xml:id="fileRepr" interactive="activecode" language="python">
+  <program label="fileRepr" interactive="activecode" language="python">
     <code>
 s = '1 2\t 3\n 4'
 print(repr(s))

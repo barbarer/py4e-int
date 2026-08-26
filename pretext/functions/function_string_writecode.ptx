@@ -29,7 +29,7 @@ myTests().main()
           <solution><p>Write a function called start_a that takes in string as a parameter and
                             returns True if the string starts with a lowercase a and False otherwise. For example,
                             start_a('apple') should return True.</p>
-                            <program xml:id="funct-strings-writecode1q-sol" language="python" interactive="activecode"><code>
+                            <program label="funct-strings-writecode1q-sol" language="python" interactive="activecode"><code>
 def start_a(string):
     return string.startswith('a')
 
@@ -93,7 +93,7 @@ myTests().main()
                             there should be a space after the semicolon, and sentence2 should start with a lowercase letter.
                             For example, use_semicolon('The sun is bright.', "Let's go outside.") should return "The sun is bright; let's go outside.".
                             (Note: Assume both sentence1 and sentence2 are simple and complete sentences with proper grammar.)</p>
-                            <program xml:id="funct-strings-writecode3q-sol" language="python" interactive="activecode"><code>
+                            <program label="funct-strings-writecode3q-sol" language="python" interactive="activecode"><code>
 def use_semicolon(sentence1, sentence2):
     return sentence1[:-1] + '; ' + sentence2[0].lower() + sentence2[1:]
 
@@ -162,7 +162,7 @@ myTests().main()
           <solution><p>Write a function called first_a_gone that takes in string as a parameter and
                             returns a new string without the first lowercase ‘a'. For example, first_a_gone('australia') should return "ustralia".
                             (Note: Don't worry about accounting for strings that don't have a lowercase ‘a'.)</p>
-                            <program xml:id="funct-strings-writecode5q-sol" language="python" interactive="activecode"><code>
+                            <program label="funct-strings-writecode5q-sol" language="python" interactive="activecode"><code>
 def first_a_gone(string):
     capture_a = string.find('a')
     return string[:capture_a] + string[capture_a + 1:]

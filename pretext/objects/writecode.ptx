@@ -37,7 +37,7 @@ myTests().main()
                             Be sure to include a name when constructing the instance! This works similar to a function.
                             To update the dog's tricks, use the instance and dot notation to call the method, with the name of the trick as the argument.
                             This needs to be done for each trick. Then, using the print function, you can print the dog's tricks and the contents of the __str__ method.</p>
-                            <program xml:id="obj_writecode1q_sol" language="python" interactive="activecode"><code>
+                            <program label="obj_writecode1q_sol" language="python" interactive="activecode"><code>
 class Dog:
 
     def __init__(self, name):
@@ -152,7 +152,7 @@ myTests().main()
                             
                             
                                 Use the correct class name, in this case it is Book not new Book.</p>
-                                <program xml:id="obj_writecode3q_sol" language="python" interactive="activecode"><code>
+                                <program label="obj_writecode3q_sol" language="python" interactive="activecode"><code>
 class Book:
 
     def __init__(self, title, author):
@@ -246,7 +246,7 @@ myTests().main()
           <solution><p>Create the getTitle and getAuthor methods just as you would define a function.
                             Include the self parameter and use the self instance with dot notation to access
                             title and author, as needed.</p>
-                            <program xml:id="obj_writecode5q_sol" language="python" interactive="activecode"><code>
+                            <program label="obj_writecode5q_sol" language="python" interactive="activecode"><code>
 class Book:
 
     def __init__(self, title, author):
@@ -342,7 +342,7 @@ myTests().main()
           <solution><p>Create the Paperback class just as you did the Book class, but
                             use the Book class as the parameter.
                             Define the __str__ function as usual, using instances from the parent class.</p>
-                            <program xml:id="obj_writecode7q_sol" language="python" interactive="activecode"><code>
+                            <program label="obj_writecode7q_sol" language="python" interactive="activecode"><code>
 class Book:
 
     def __init__(self, title, author):

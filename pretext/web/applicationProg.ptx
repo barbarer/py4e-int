@@ -134,7 +134,7 @@
                 URL: <url href="https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1" visual="https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1">https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1</url>.
                 Try entering that in a browser window.  You can also use Python to the get data
                 from an API using a URL as shown below.</p>
-    <program xml:id="web-api-get-dog-fact" interactive="activecode" language="python3">
+    <program label="web-api-get-dog-fact" interactive="activecode" language="python3">
       <code>
 import requests
 import json
@@ -155,7 +155,7 @@ print(in_dict.get("fact"))
                 create a dictionary
                 with all the parameter names and values and then pass the dictionary to the
                 <c>requests.get</c> after the URL as shown below.</p>
-    <program xml:id="web-api-get-dog-fact-with-parms-dict" interactive="activecode" language="python3">
+    <program label="web-api-get-dog-fact-with-parms-dict" interactive="activecode" language="python3">
       <code>
 import requests
 import json

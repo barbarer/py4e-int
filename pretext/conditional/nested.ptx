@@ -5,7 +5,7 @@
       <idx><h>Conditional</h><h>Nested</h></idx>
   <p>One conditional can also be nested within another. We could have written
             the three-branch example like this:</p>
-  <program xml:id="cndtnlNested" interactive="codelens" language="python">
+  <program label="cndtnlNested" interactive="codelens" language="python">
     <code>
 x = 5
 y = 6
@@ -68,7 +68,7 @@ else:
   <p>Logical operators often provide a way to simplify nested conditional
             statements. For example, we can rewrite the following code using a
             single conditional:</p>
-  <program xml:id="cndtnlNestedPositive" interactive="activecode" language="python">
+  <program label="cndtnlNestedPositive" interactive="activecode" language="python">
     <code>
 x = 2
 if 0 &lt; x:
@@ -79,7 +79,7 @@ if 0 &lt; x:
   <p>The first <c>print</c> statement is executed only if we make it past
             both conditionals, so we can get the same effect with the
             <c>and</c> operator:</p>
-  <program xml:id="cndtnlNestedAnd" interactive="activecode" language="python">
+  <program label="cndtnlNestedAnd" interactive="activecode" language="python">
     <code>
 x = 3
 if 0 &lt; x and x &lt; 10:
@@ -104,7 +104,7 @@ if 0 &lt; x and x &lt; 10:
   
   <p>Here is the program, using a nested <c>if</c>.  Run it several times, entering different values for <c>age</c> and <c>hour</c> to see what output you get.</p>
   
-  <program xml:id="cndtnl-nested-movie" interactive="activecode" language="python">
+  <program label="cndtnl-nested-movie" interactive="activecode" language="python">
     <code>age_str = input("Enter age in years:")
 age = int(age_str)
 
