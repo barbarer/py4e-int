@@ -6,7 +6,7 @@
     <statement>
       <p>Fix line 2 so that it prints <q>Hi</q> instead of <q>hi</q>.</p>
     </statement>
-    <program interactive="activecode" language="python">
+    <program interactive="activecode" language="python" codetailor="all" codetailor-fallback="str-ex-hiA-pp">
       <code>
 s1 = "hi"
 s1.capitalize()
@@ -20,48 +20,72 @@ class myTests(TestCaseGui):
 myTests().main()
       </code>
     </program>
-    <solution>
-      <p>Fix line 2 so that it prints <q>Hi</q> instead of <q>hi</q>.</p>
-      <program label="str-ex-hiA-sol" interactive="activecode" language="python">
-        <code>
-s1 = "hi"
-s1 = s1.capitalize()
-print(s1)
-        </code>
-      </program>
-    </solution>
   </activity>
 
-  <activity label="str-ex-meow_sq"><select grade="first" questions="str-ex-meowacq str-ex-meowansw"/></activity>
+  <activity xml:id="str-ex-meow" label="str-ex-meow">
+    <statement>
+      <p>Fix the code so that only <q>meow</q> is printed.</p>
+    </statement>
+    <program interactive="activecode" language="python" codetailor="incorrect" codetailor-fallback="str-ex-meowansw">
+      <code>
+sentence = "The cat goes meow."
+s2 = sentence[0:17]
+print(s2)
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(s2, "meow")
+myTests().main()
+      </code>
+    </program>
+  </activity>
 
   <activity label="str-ex-eggs" xml:id="str-ex-eggs">
     <statement>
-      <p>Write code to evaluate the length of the string <q>I like green eggs</q> and print it. It should print <q>The length is 17</q>.</p>
+      <p>Write code to evaluate the length of the string <q>I like green eggs</q> and print it. It should print <q>The length is 17</q>. Store the length in a variable named <c>length</c>.</p>
     </statement>
-    <program interactive="activecode" language="python">
+    <program interactive="activecode" language="python" codetailor="all" codetailor-fallback="str-ex-eggs-pp">
       <code>
 
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(length, 17)
+myTests().main()
       </code>
     </program>
-    <solution>
-       <p>Write code to evaluate the length of the string <q>I like green eggs</q> and print it. It should print <q>The length is 17</q>.</p>
-       <program label="str-ex-eggsacq-sol" interactive="activecode" language="python">
-        <code>
-sentence = "I like green eggs"
-print("The length is " + str(len(sentence)))
-        </code>
-       </program>
-    </solution>
   </activity>
 
 
-  <activity label="str-ex-count-sq"><select grade="first" questions="str-ex-countacq str-ex-countansw"/></activity>
+  <activity xml:id="str-ex-count" label="str-ex-count">
+    <statement>
+      <p>Create a function named <c>count</c> that accepts a string and a letter as arguments, then returns the count of that letter in the string. For example, if the function call was <c>count("banana", "a")</c> it would return <c>3</c>. Hint: use the <c>count</c> method.</p>
+    </statement>
+    <program interactive="activecode" language="python" codetailor="incorrect" codetailor-fallback="str-ex-countansw">
+      <code>
+
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(count('banana','a'), 3, "Tested 'a' in 'banana'")
+        self.assertEqual(count('pineapple','s'),0,"Tested 's' in 'pineapple'")
+        self.assertEqual(count('pepperoni pizza','p'),4,"Tested 'p' in 'pepperoni pizza'")
+        self.assertEqual(count('racecar','r'),2,"Tested 'r' in 'racecar'")
+
+myTests().main()
+      </code>
+    </program>
+  </activity>
 
   <activity label="str-ex-floatq" xml:id="str-ex-floatq">
     <statement>
       <p>Take the following Python code that stores this string: <c>string = "X-DSPAM-Confidence: 0.8475"</c>. Use <c>find</c> and string slicing to extract the portion of the string after the colon character and then use the <c>float</c> function to convert the extracted string into a floating point number called <c>num</c>.</p>
     </statement>
-    <program interactive="activecode" language="python">
+    <program interactive="activecode" language="python" codetailor="all" codetailor-fallback="str-ex-floatq-pp">
       <code>
 string = "X-DSPAM-Confidence: 0.8475"
 
@@ -73,26 +97,35 @@ class myTests(TestCaseGui):
 myTests().main()
       </code>
     </program>
-    <solution>
-      <p>Take the following Python code that stores this string: <c>string = "X-DSPAM-Confidence: 0.8475"</c>. Use <c>find</c> and string slicing to extract the portion of the string after the colon character and then use the <c>float</c> function to convert the extracted string into a floating point number called <c>num</c>.</p>
-      <program label="str-ex-floatq-sol" interactive="activecode" language="python">
-      <code>
-string = "X-DSPAM-Confidence: 0.8475"
-colonpos = string.find(':')
-num = float(string[colonpos+1:])
-print(num)
-      </code>
-    </program>
-    </solution>
   </activity>
 
-  <activity label="tr-ex-ducks-sq"><select grade="first" questions="str-ex-ducksacq str-ex-ducksansw"/></activity>
+  <activity xml:id="tr-ex-ducks" label="tr-ex-ducks">
+    <statement>
+      <p>In Robert McCloskey’s book Make Way for Ducklings, the names of the ducklings are Jack, Kack, Lack, Mack, Nack, Ouack, Pack, and Quack. The following loop tries to output these names in order. Of course, that’s not quite right because Ouack and Quack are misspelled. Can you fix it?</p>
+    </statement>
+    <program interactive="activecode" language="python" codetailor="incorrect" codetailor-fallback="str-ex-ducksansw">
+      <code>
+prefixes = "JKLMNOPQ"
+suffix = "ack"
+
+for letter in prefixes:
+    print(letter + suffix)
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+    def testOne(self):
+        expected = "\n".join(["Jack", "Kack", "Lack", "Mack", "Nack", "Ouack", "Pack", "Quack"])
+        self.assertEqual(self.getOutput().strip(), expected)
+myTests().main()
+      </code>
+    </program>
+  </activity>
 
   <activity label="str-ex-digitsq" xml:id="str-ex-digitsq">
     <statement>
       <p>Write a function <c>numDigits</c> that will return the number of digits in an integer <c>n</c>.</p>
     </statement>
-    <program interactive="activecode" language="python">
+    <program interactive="activecode" language="python" codetailor="all" codetailor-fallback="str-ex-digitsq-pp">
       <code>
 def numDigits(n):
     # your code here
@@ -109,46 +142,62 @@ class myTests(TestCaseGui):
 myTests().main()
       </code>
     </program>
-    <solution>
-      <p>Write a function <c>numDigits</c> that will return the number of digits in an integer <c>n</c>.</p>
-      <program label="str-ex-digitsacq-sol" interactive="activecode" language="python">
-      <code>
-def numDigits(n):
-  return len(str(n))
-print(numDigits(420328))
-print(numDigits(5))
-      </code>
-    </program>
-    </solution>
   </activity>
 
-  <activity label="tr-ex-name-sq"><select grade="first" questions="str-ex-nameacq str-ex-nameansw"/></activity>
+  <activity xml:id="tr-ex-name" label="tr-ex-name">
+    <statement>
+      <p>Write code to print out the statement “Hi my name is Bob2” using only string methods or string slicing. You must get every part of the new string from the given strings, not by using string literals. Name the final string <c>statement</c>.</p>
+    </statement>
+    <program interactive="activecode" language="python" codetailor="incorrect" codetailor-fallback="str-ex-nameansw">
+      <code>
+s1 = "hi"
+s2 = "My name is Bob, and he and I love to eat ham."
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(statement, "Hi my name is Bob2")
+myTests().main()
+      </code>
+    </program>
+  </activity>
 
 
     <activity xml:id="str-ex-nameInputq"  label="str-ex-nameInputq">
     <statement>
-      <p>Write a program that asks a user for their name and from the input prints the first letter of their name in lowercase.</p>
+      <p>Write a program that asks a user for their name (store the input in a variable named <c>name</c>) and from the input prints the first letter of their name in lowercase (store it in a variable named <c>lowerFirst</c>).</p>
     </statement>
-    <program  interactive="activecode" language="python">
+    <program  interactive="activecode" language="python" codetailor="all" codetailor-fallback="str-ex-nameInputq-pp">
       <code>
 
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+    def testOne(self):
+        self.assertEqual(lowerFirst, name[0].lower())
+myTests().main()
       </code>
     </program>
-    <solution>
-      <p>Write a program that asks a user for their name and from the input prints the first letter of their name in lowercase.</p>
-      <program label="str-ex-nameacq-sol" interactive="activecode" language="python">
-      <code>
-prompt = "What is your name?"
-name = input(prompt)
-first = name[0]
-lowerFirst = first.lower()
-print(lowerFirst)    
-      </code>
-    </program>
-    </solution>
   </activity>
 
-  <activity label="str-ex-lower-sq"><select grade="first" questions="str-ex-loweracq str-ex-loweransw"/></activity>
+  <activity xml:id="str-ex-lower" label="str-ex-lower">
+    <statement>
+      <p>Write a program that asks for user input (store it in a variable named <c>user_input</c>) and prints their input in all lowercase, as well as the length of their string.</p>
+    </statement>
+    <program interactive="activecode" language="python" codetailor="incorrect" codetailor-fallback="str-ex-loweransw">
+      <code>
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+    def testOne(self):
+        expected = user_input.lower() + " " + str(len(user_input))
+        self.assertIn(expected, self.getOutput())
+myTests().main()
+      </code>
+    </program>
+  </activity>
 
 
 </section>
