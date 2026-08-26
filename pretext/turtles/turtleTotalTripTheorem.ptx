@@ -18,7 +18,7 @@ for sides in range(3):  # repeat the indented lines 3 times
       </program>
     </activity>
 
-    <p>And here’s the code to draw a pentagon.</p>
+    <p>What shape do you think the following code will draw?</p>
 
     <activity xml:id="Turtle_Pentagon" label="Turtle_Pentagon">
       <statement><p>Run the code to see what it draws.</p></statement>
@@ -41,22 +41,7 @@ for sides in range(5):  # repeat the indented lines 5 times
     <p>Change the <c>??</c> in line 7 below to the amount to turn each time to draw a 12-sided polygon, which is called a dodecagon. 
       If you get it right the turtle will draw a 12-sided closed polygon.</p>
 
-
-    <activity xml:id="Turtle_Dodecagon" label="Turtle_Dodecagon">
-      <statement><p>You will need to replace the '??' on line 7 to have the code correctly draw a dodecagon (a polygon with 12 sides).</p></statement>
-      <program label="turtle-draw-dodecagon-editor" interactive="activecode" language="python">
-        <code>
-from turtle import *  # use the turtle library
-space = Screen()      # create a turtle space
-mia = Turtle()        # create a turtle named maria
-mia.setheading(90)    # point due north
-for sides in range(12):  # repeat the indented lines 12 times
-    mia.forward(40)      # move forward by 40 units
-    mia.right(??)        # change ?? to the amount to turn
-        </code>
-      </program>
-    </activity>
-
+    
 <activity label="turtle_2_1_Turtle_Dodecagon_Q1" xml:id="turtle_2_1_Turtle_Dodecagon_Q1">
     <statement>
      <p>How much does <c>mia</c> need to turn in the program above to create a closed dodecagon (12-sided figure)? Only one of these works.</p>
@@ -97,7 +82,25 @@ for sides in range(12):  # repeat the indented lines 12 times
       </choices>
   </activity>
 
-     <activity label="turtle_2_2_Triangle" xml:id="turtle_2_2_Triangle" adaptive="yes" indentation="hide" language="python">
+
+    <activity xml:id="Turtle_Dodecagon" label="Turtle_Dodecagon">
+      <statement><p>You will need to replace the '??' on line 7 to have the code correctly draw a dodecagon (a polygon with 12 sides).</p></statement>
+      <program label="turtle-draw-dodecagon-editor" interactive="activecode" language="python">
+        <code>
+from turtle import *  # use the turtle library
+space = Screen()      # create a turtle space
+mia = Turtle()        # create a turtle named maria
+mia.setheading(90)    # point due north
+for sides in range(12):  # repeat the indented lines 12 times
+    mia.forward(40)      # move forward by 40 units
+    mia.right(??)        # change ?? to the amount to turn
+        </code>
+      </program>
+    </activity>
+
+
+
+     <activity label="turtle_equilateral_triangle" xml:id="turtle_equilateral_triangle" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>The following program uses a turtle to draw a triangle as shown below, but the lines are mixed up. The program should do all 
         necessary set-up and create the turtle. After that, iterate (loop) 3 times, and each time through the loop the turtle should 
@@ -105,11 +108,12 @@ for sides in range(12):  # repeat the indented lines 12 times
         column and put them in the right order with the correct indention. There may be additional blocks that are not needed 
         in a correct solution. Click on Check to see if you are right. You will be told if any of the lines are in the wrong order 
         or are the wrong blocks.</p>
+
+      <figure align="center" xml:id="fig_turtle_triangle_id1">
+        <caption>An equilateral triangle drawn by a turtle</caption>
+        <image source="turtles/Figures/TurtleTriangle.png" width="40%" alt="An equilateral triangle drawn by a turtle with the left side at the center of the window and points towards the west, north, and east.  A turtle is at the left side pointing east."/>
+      </figure>
     </statement>
-     <figure align="center" xml:id="fig_turtle_triangle_id1">
-    <caption>An equilateral triangle drawn by a turtle</caption>
-    <image source="turtles/Figures/TurtleTriangle.png" width="40%" alt="An equilateral triangle drawn by a turtle with the left side at the center of the window and points towards the west, north, and east.  A turtle is at the left side pointing east."/>
-    </figure>
     <blocks numbered="left">
       <block order="11">
         <cline>from turtle import *</cline>

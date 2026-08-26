@@ -11,7 +11,7 @@
   <idx><h>library</h><h>turtle</h></idx>
   <p>The idea of a virtual turtle, dates back to the 1960's.  Seymour Papert and his group at MIT created the programming language LOGO which could control a robot turtle with a physical pen in it.  Kids would steer the robot around, and it would draw as it moved. Seymour said that the Turtle was, <q>an object to think with</q>.  Many modern programming languages support Turtles, including Python.</p>
   <figure align="center" xml:id="fig_names_turtles_id1">
-    <caption>Figure 3: Children playing with a Logo turtle robot that could draw with a pen</caption>
+    <caption>Children playing with a Logo turtle robot that could draw with a pen</caption>
     <image source="turtles/Figures/mindstorms_turtle.jpg" width="50%" alt="Children playing with a Logo turtle robot that can draw with a pen"/>
   </figure>
 </introduction>
@@ -76,18 +76,18 @@ alex.forward(75)      # ask alex to move forward by 75 units
       </choice>
     </choices>
   </activity>
-  <conclusion>
+  <!--<conclusion>-->
   <note xml:id="turtles_index-1">
-    <p>Notice that we tell <c>alex</c> the turtle what to do in the code above using <term>dot notation</term>: <c>alex.forward(150)</c>,  <c>alex.left(90)</c>, and <c>alex.forward(75)</c>. <idx>dot notation</idx> That is how you communicate with an object.  You use the name of the turtle object followed by a <c>.</c> and then the name of the method that you want to execute.</p>
+    <p>Notice that we tell <c>alex</c> the turtle what to do in the code above using <term>dot notation</term>: <c>alex.forward(150)</c>,  <c>alex.left(90)</c>, and <c>alex.forward(75)</c>. <idx>dot notation</idx> That is how you communicate with an object.  You use the name of the turtle object followed by a <c>. (dot or period)</c> and then the name of the method that you want to execute.</p>
   </note>
   <p>Just by going forward and turning we can have a turtle object draw many things.</p>
-</conclusion>
+<!--</conclusion>-->
 </subsection>
   <subsection xml:id="turtles_what-does-a-left-turn-of-90-mean">
     <title>What does a left turn of 90 mean?</title>
     <p>When we ask a turtle to turn left, it will turn left based on the direction it is currently heading. A turtle object keeps track of its heading (direction it is facing). Use the figure below to help you understand how much the turtle will turn if asked to turn left 90 degrees and it is currently heading east (0 degrees).</p>
     <figure align="center" xml:id="fig_names_turtles_id2">
-      <caption>Figure 1: The amount of turn for specified degrees for left and right turns</caption>
+      <caption>The amount of turn for specified degrees for left and right turns</caption>
       <image source="turtles/Figures/turnDegrees.png" width="60%" alt="shows what a turn of each degrees means for left and right turns"/>
     </figure>
   </subsection>
