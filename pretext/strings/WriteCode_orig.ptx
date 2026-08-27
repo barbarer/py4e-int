@@ -157,7 +157,7 @@ myTests().main()
       </block>
       <block order="2">
         <choice correct="yes">
-          <cline>statement = s1.capitalize() + s2[2:3] + s2.lower()[0:13] + str(len(s1))</cline>
+          <cline>statement = s1.capitalize() + s2[2:3] + s2[0:1].lower() + s2[1:14] + str(len(s1))</cline>
         </choice>
         <choice>
           <cline>statement = s1.capitalize() + s2.[0:13] + len(s1)</cline>
@@ -192,6 +192,130 @@ myTests().main()
         <choice>
           <cline>print(user_input.lower() + " " + len(user_input))</cline>
         </choice>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity xml:id="str-ex-hiA-pp" label="str-ex-hiA-pp" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Arrange the blocks to fix the code so that it prints <q>Hi</q> instead of <q>hi</q>.</p>
+    </statement>
+    <blocks numbered="left">
+      <block order="1">
+        <cline>s1 = "hi"</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>s1 = s1.capitalize()</cline>
+        </choice>
+        <choice>
+          <cline>s1.capitalize()</cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>print(s1)</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity xml:id="str-ex-eggs-pp" label="str-ex-eggs-pp" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Arrange the blocks to evaluate the length of the string <q>I like green eggs</q>, store it in a variable named <c>length</c>, and print it, so that it prints <q>The length is 17</q>.</p>
+    </statement>
+    <blocks numbered="left">
+      <block order="1">
+        <cline>sentence = "I like green eggs"</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>length = len(sentence)</cline>
+        </choice>
+        <choice>
+          <cline>length = str(sentence)</cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>print("The length is " + str(length))</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity xml:id="str-ex-floatq-pp" label="str-ex-floatq-pp" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Arrange the blocks to use <c>find</c> and string slicing to extract the portion of <c>string</c> after the colon character and convert it into a floating point number called <c>num</c>.</p>
+    </statement>
+    <blocks numbered="left">
+      <block order="1">
+        <cline>string = "X-DSPAM-Confidence: 0.8475"</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>colonpos = string.find(':')</cline>
+        </choice>
+        <choice>
+          <cline>colonpos = string.find(".")</cline>
+        </choice>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>num = float(string[colonpos+1:])</cline>
+        </choice>
+        <choice>
+          <cline>num = float(string[colonpos:])</cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>print(num)</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity xml:id="str-ex-digitsq-pp" label="str-ex-digitsq-pp" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Arrange the blocks to define a function <c>numDigits</c> that returns the number of digits in an integer <c>n</c>.</p>
+    </statement>
+    <blocks numbered="left">
+      <block order="1">
+        <choice correct="yes">
+          <cline>def numDigits(n):</cline>
+        </choice>
+        <choice>
+          <cline>def numDigits(n)</cline>
+        </choice>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    return len(str(n))</cline>
+        </choice>
+        <choice>
+          <cline>    return len(n)</cline>
+        </choice>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity xml:id="str-ex-nameInputq-pp" label="str-ex-nameInputq-pp" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Arrange the blocks to ask the user for their name and print the first letter of their name in lowercase.</p>
+    </statement>
+    <blocks numbered="left">
+      <block order="1">
+        <cline>prompt = "What is your name?"</cline>
+        <cline>name = input(prompt)</cline>
+      </block>
+      <block order="2">
+        <cline>first = name[0]</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>lowerFirst = first.lower()</cline>
+        </choice>
+        <choice>
+          <cline>lowerFirst = first.upper()</cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>print(lowerFirst)</cline>
       </block>
     </blocks>
   </activity>
